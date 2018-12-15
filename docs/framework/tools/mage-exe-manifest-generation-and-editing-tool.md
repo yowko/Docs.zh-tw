@@ -1,16 +1,16 @@
 ---
 title: Mage.exe (資訊清單產生和編輯工具)
-ms.date: 03/30/2017
+ms.date: 12/06/2018
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 3eb1c665067d08a86fd4128381139c6829ebfd89
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 86aec7bbdc7b57b43e9b547aabd36f808d84d05e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46009769"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146192"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (資訊清單產生和編輯工具)
 
@@ -24,7 +24,7 @@ ms.locfileid: "46009769"
 
 ## <a name="syntax"></a>語法
 
-```
+```console
 Mage [commands] [commandOptions]
 ```
 
@@ -32,29 +32,32 @@ Mage [commands] [commandOptions]
 
 下表顯示 *Mage.exe* 所支援的命令。 如需這些命令所支援選項的詳細資訊，請參閱[新增和更新命令選項](#new-and-update-command-options)和 [Sign 命令選項](#sign-command-options)。
 
-|命令|描述|
+|命令|說明|
 |-------------|-----------------|
 |**-cc, ClearApplicationCache**|清除所有僅供線上使用之應用程式的已下載應用程式快取。|
 |**-n, -New** *fileType [newOptions]*|建立指定類型的新檔案。 有效的類型如下：<br /><br /> -   `Deployment`：建立新的部署資訊清單。<br />-   `Application`：建立新的應用程式資訊清單。<br /><br /> 如果這個命令沒有指定額外的參數，就會以適當的預設標記和屬性值，建立適當類型的檔案。<br /><br /> 使用 **-ToFile** 選項 (見下表) 可以指定新檔案的檔案名稱和路徑。<br /><br /> 使用 **-FromDirectory** 選項 (見下表) 可以建立應用程式資訊清單，並在此資訊清單的 \<相依性> 區段中新增應用程式的所有組件。|
 |**-u, -Update** *[filePath] [updateOptions]*|對資訊清單檔案進行一項或多項變更。 您不必指定要編輯的檔案類型。 Mage.exe 會使用一組啟發學習法來檢查檔案並判斷它是部署資訊清單或應用程式資訊清單。<br /><br /> 如果您已經使用憑證簽署檔案， **-Update** 會移除金鑰簽章區塊。 這是因為金鑰簽章含有檔案的雜湊，修改檔案會使得雜湊變成無效。<br /><br /> 使用 **-ToFile** 選項 (見下表) 可以指定新檔案名稱和路徑，而不會覆寫現有檔案。|
 |**-s, -Sign** `[signOptions]`|使用金鑰組或 X509 憑證簽署檔案。 簽章會以 XML 項目的形式插入檔案內。<br /><br /> 簽署指定 **-TimestampUri** 值的資訊清單時，您必須連線到網際網路。|
+|**-ver, -Verify** *[manifest-filename]*|確認已正確簽署資訊清單。 無法與其他命令合併。 <br/><br/>**適用於 .NET Framework 4.7 和更新版本。**|
 |**-h, -?, -Help** *[verbose]*|描述所有可用命令及其選項。 指定 `verbose` 可取得詳細的說明。|
 
 ## <a name="new-and-update-command-options"></a>新增和更新命令選項
 
 下表顯示 `-New` 和 `-Update` 命令支援的選項：
 
-|選項|預設值|適用於|描述|
+|選項|預設值|適用於|說明|
 |-------------|-------------------|----------------|-----------------|
 |**-a, -Algorithm**|sha1RSA|應用程式資訊清單。<br /><br /> 部署資訊清單。|指定產生相依性摘要的演算法。 值必須是 "sha256RSA" 或 "sha1RSA"。<br /><br /> 搭配 "-Update" 選項一起使用。 這個選項在使用 "-Sign" 選項時會被忽略。|
 |**-appc, -AppCodeBase** `manifestReference`||部署資訊清單。|插入應用程式資訊清單檔案的 URL 或檔案路徑參考。 這個值必須是應用程式資訊清單的完整路徑。|
 |**-appm, -AppManifest** `manifestPath`||部署資訊清單。|將部署的應用程式資訊清單參考插入其部署資訊清單中。<br /><br /> `manifestPath` 所表示的檔案必須存在，否則 *Mage.exe* 會發出錯誤訊息。 如果 `manifestPath` 所參考的檔案不是應用程式資訊清單，*Mage.exe* 會發出錯誤訊息。|
-|**-cf, -CertFile** `filePath`||所有檔案類型。|指定為資訊清單簽署之 X509 數位憑證的位置。 如果憑證需要密碼，這個選項就可以與 **-Password** 選項搭配使用。<br/><br/>從 .NET Framework 4.6.2 SDK 開始，此 SDK 與 Visual Studio、Windows SDK 和 .NET Framework 4.6.2 開發人員套件一起發佈，*Mage.exe* 會簽署 CNG 的資訊清單以及 CAPI 憑證。|
+|**-cf, -CertFile** `filePath`||所有檔案類型。|指定用來簽署資訊清單或授權檔案之 X509 數位憑證的位置。 如果憑證需要適用於個人資訊交換 (PFX) 檔案的密碼，這個選項就可以與 **-Password** 選項搭配使用。 從 .NET Framework 4.7 開始，如果檔案不包含私用金鑰，則需要 **-CryptoProvider** 和 **-KeyContainer** 選項的組合。<br/><br/>從 .NET Framework 4.6.2 開始，*Mage.exe* 會使用 CNG 以及 CAPI 憑證來簽署資訊清單。|
 |**-ch, -CertHash** `hashSignature`||所有檔案類型。|數位憑證的雜湊儲存在用戶端電腦的個人憑證存放區內。 它對應到數位憑證的指模字串，此字串可以從 Windows 憑證主控台檢視。<br /><br /> `hashSignature` 大小寫都可，提供的格式可以是單一字串，或是將整個指模以引號括起來 (指模中每八個位元組以空格隔開)。|
+|**-csp, -CryptoProvider** `provider-name`||所有檔案類型。|指定包含私密金鑰容器的密碼編譯服務提供者 (CSP) 名稱。 這個選項需要 **-KeyContainer** 選項。<br/><br/>從 .NET Framework 4.7 開始提供此選項。|
 |**-fd, -FromDirectory** `directoryPath`||應用程式資訊清單。|將 `directoryPath`中找到的所有組件和檔案的描述，填入應用程式資訊清單中，包括所有的子目錄，其中 `directoryPath` 是您想部署應用程式所在的目錄。 *Mage.exe* 會判斷目錄中的每個檔案是組件還是靜態檔。 如果是組件，它會在應用程式中加入 `<dependency>` 標記和 `installFrom` 屬性，以及這個組件的名稱、程式碼基底和版本。 如果是靜態檔案，它會加入 `<file>` 標記。 *Mage.exe* 也會使用一組簡單的啟發學習法來偵測應用程式的主要可執行檔，並在資訊清單中將它標示為 ClickOnce 應用程式的進入點。<br /><br /> *Mage.exe* 不會自動將檔案標示為「資料」檔。 您必須手動標示。 如需詳細資訊，請參閱 [How to: Include a Data File in a ClickOnce Application](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)。<br /><br /> *Mage.exe* 也會依據每個檔案的大小來產生雜湊。 ClickOnce 使用這些雜湊來確保自從建立資訊清單後，沒有遭他人修改過這個部署的檔案。 如果部署中的任何檔案有所變更，您可以搭配使用 **-Update** 命令和 **-FromDirectory** 選項來執行 *Mage.exe*，以更新所有參考檔案的雜湊和組件版本。<br /><br /> **-FromDirectory** 會包含 `directoryPath`內所有子目錄的全部檔案。<br /><br /> 如果您搭配 **-FromDirectory** 使用 *-Update* 命令，**Mage.exe** 會從應用程式資訊清單中移除已不在目錄中的檔案。|
 |**-if, -IconFile**  `filePath`||應用程式資訊清單。|指定 .ICO 圖示檔的完整路徑。 這個圖示會出現在 [開始] 功能表中您的應用程式名稱旁，以及 [新增或移除程式] 項目中。 如果沒有提供圖示，就會使用預設圖示。|
 |**-ip, -IncludeProviderURL**  `url`|true|部署資訊清單。|指出部署資訊清單是否包括由 **-ProviderURL**設定的更新位置值。|
 |**-i, -Install** `willInstall`|true|部署資訊清單。|指出 ClickOnce 應用程式是否要安裝到本機電腦上，或者它是否要從 Web 執行安裝。 應用程式在安裝後會出現在 Windows [ **開始** ] 功能表中。 有效值為 "true" (或 "t") 和 "false" (或 "f")。<br /><br /> 如果您指定 **-MinVersion** 選項，但使用者擁有的版本低於所安裝的 **-MinVersion** ，這時會強制應用程式進行安裝，不管您傳遞至 **-Install**的值為何。<br /><br /> 這個選項無法與 **-BrowserHosted** 選項搭配使用。 嘗試在相同的資訊清單同時指定這兩個選項會導致錯誤。|
+|**-kc, -KeyContainer** `name`||所有檔案類型。|指定包含私密金鑰名稱的金鑰容器。 這個選項需要 **CyproProvider** 選項。<br/><br/>從 .NET Framework 4.7 開始提供此選項。|
 |**-mv, -MinVersion**  `[version]`|列於 ClickOnce 部署資訊清單中，由 **-Version** 旗標指定的版本。|部署資訊清單。|使用者可以執行的應用程式最小版本。 這個旗標可讓應用程式的具名版本成為必要的更新項目。 如果您發行的產品版本具有重大變更的更新或嚴重的安全性問題，即可使用這個旗標，指定必須安裝這個更新項目，且使用者不可再繼續執行舊版。<br /><br /> `version` 的語意與 **-Version** 旗標的引數相同。|
 |**-n, -Name** `nameString`|部署|所有檔案類型。|用來識別應用程式的名稱。 ClickOnce 會使用這個名稱來識別 [開始] 功能表 (如果應用程式是設定為自行安裝) 和 [使用權限提高] 對話方塊中的應用程式。 **注意：** 如果您要更新現有的資訊清單，但未使用此選項來指定發行者名稱，*Mage.exe* 會更新含電腦上定義之組織名稱的資訊清單。 若要使用不同的名稱，請務必使用這個選項，並指定所需的發行者名稱。|
 |**-pwd, -Password** `passwd`||所有檔案類型。|以數位憑證替資訊清單簽章時所使用的密碼。 必須與 **-CertFile** 選項搭配使用。|
@@ -73,10 +76,12 @@ Mage [commands] [commandOptions]
 
 下表顯示 `-Sign` 命令支援的選項，這些選項可以套用至所有類型的檔案。
 
-|選項|描述|
+|選項|說明|
 |-------------|-----------------|
-|**-cf, -CertFile** `filePath`|指定為資訊清單簽署之數位憑證的位置。 這個選項可以與 **-Password** 選項搭配使用。|
+|**-cf, -CertFile** `filePath`|指定為資訊清單簽署之數位憑證的位置。 如果憑證需要適用於個人資訊交換 (PFX) 檔案的密碼，這個選項就可以與 **-Password** 選項搭配使用。 從 .NET Framework 4.7 開始，如果檔案不包含私用金鑰，則需要 **-CryptoProvider** 和 **-KeyContainer** 選項的組合。<br/><br/>從 .NET Framework 4.6.2 開始，*Mage.exe* 會使用 CNG 以及 CAPI 憑證來簽署資訊清單。|
 |**-ch, -CertHash** `hashSignature`|數位憑證的雜湊儲存在用戶端電腦的個人憑證存放區內。 它對應到數位憑證的 Thumbprint 屬性，此屬性可以從 Windows 憑證主控台檢視。<br /><br /> `hashSignature` 大小寫都可，提供的格式可以是單一字串，或是將整個指模以引號括起來 (指模中每八個位元組以空格隔開)。|
+**-csp, -CryptoProvider** `provider-name`|指定包含私密金鑰容器的密碼編譯服務提供者 (CSP) 名稱。 這個選項需要 **-KeyContainer** 選項。<br/><br/>從 .NET Framework 4.7 開始提供此選項。|
+|**-kc, -KeyContainer** `name`|指定包含私密金鑰名稱的金鑰容器。 這個選項需要 **CyproProvider** 選項。<br/><br/>從 .NET Framework 4.7 開始提供此選項。|
 |**-pwd, -Password** `passwd`|以數位憑證替資訊清單簽章時所使用的密碼。 必須與 **-CertFile** 選項搭配使用。|
 |**-t, -ToFile** `filePath`|指定已建立或已修改之檔案的輸出路徑。|
 
@@ -86,7 +91,7 @@ Mage [commands] [commandOptions]
 
 搭配 **-Sign** 命令使用的所有引數，也隨時都能搭配 **-New** 或 **-Update** 命令使用。 下列命令是相同的。
 
-```
+```console
 mage -Sign c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ```
@@ -146,58 +151,70 @@ Visual Studio 2017 包含 *Mage.exe* 的 4.6.1 版。 使用此版本的 *Mage.e
 
 下列範例會開啟 Mage (*MageUI.exe*) 的使用者介面。
 
-```
+```console
 mage
 ```
 
 下列範例會建立預設部署資訊清單和應用程式資訊清單。 這些檔案都在目前工作目錄中建立，名稱分別是 deploy.application 和 application.exe.manifest。
 
-```
+```console
 mage -New Deployment
 mage -New Application
 ```
 
-下列範例會建立應用程式資訊清單，其中將填入目前目錄的所有組件和資源檔案。
+下列範例會建立應用程式資訊清單，其中將填入目前目錄中的所有組件和資源檔。
 
-```
+```console
 mage -New Application -FromDirectory . -Version 1.0.0.0
 ```
 
 下列範例延續前一個範例，其中會指定部署名稱和目標微處理器。 此外也會指定 URL，讓 ClickOnce 從該位置檢查是否有更新。
 
-```
+```console
 mage -New Application -FromDirectory . -Name "Hello, World! Application" -Version 1.0.0.0 -Processor "x86" -ProviderUrl http://internalserver/HelloWorld/
 ```
 
 下列範例示範如何建立一組資訊清單，以部署裝載在 Internet Explorer 中的 WPF 應用程式。
 
-```
+```console
 mage -New Application -FromDirectory . -Version 1.0.0.0 -WPFBrowserApp true
 mage -New Deployment -AppManifest 1.0.0.0\application.manifest -WPFBrowserApp true
 ```
 
+下列範例會建立應用程式資訊清單，其中將填入目前目錄中的所有組件和資源檔，並進行簽署。
+
+```console
+mage -New Application -FromDirectory . -Version 1.0.0.0 -KeyContainer keypair.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
+```
+
 下列範例會以應用程式資訊清單的資訊來更新部署資訊清單，並針對應用程式資訊清單的位置設定程式碼基底。
 
-```
+```console
 mage -Update HelloWorld.deploy -AppManifest 1.0.0.0\application.manifest -AppCodeBase http://internalserver/HelloWorld.deploy
 ```
 
 下列範例會編輯部署資訊清單，以強制更新使用者所安裝的版本。
 
-```
+```console
 mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -MinVersion 1.1.0.0
 ```
 
 下列範例會告知部署資訊清單從另一個目錄擷取應用程式資訊清單。
 
-```
+```console
 mage -Update HelloWorld.deploy -AppCodeBase http://anotherserver/HelloWorld/1.1.0.0/
 ```
 
 下列範例會使用目前工作目錄中的數位憑證，替現有的部署資訊清單簽章。
 
-```
+```console
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
+```
+
+下列範例會使用目前工作目錄中的數位憑證和私密金鑰，來簽署現有的部署資訊清單。
+
+```console
+mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enghanced Cryptographic Provider v1.0"
 ```
 
 ## <a name="see-also"></a>另請參閱

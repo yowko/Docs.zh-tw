@@ -1,19 +1,20 @@
 ---
-title: 組織專案以支援 .NET Framework 及 .NET Core
+title: 組織適用於.NET Framework 和.NET Core 的專案
 description: 協助想要同時針對 .NET Framework 及 .NET Core 編譯解決方案的專案擁有者。
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: cfb3670bda887792389c7cee3f65397e649304d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512262"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146923"
 ---
-# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>組織專案以支援 .NET Framework 及 .NET Core
+# <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>組織專案以同時支援 .NET Framework 及 .NET Core
 
-本文可協助想要同時針對 .NET Framework 及 .NET Core 編譯解決方案的專案擁有者。 它提供數個選項，組織專案以協助開發人員達成此目標。 下列清單提供當您決定如何使用 .NET Core 設定專案配置時，要考量的一些典型案例。 此清單不一定涵蓋您想要的所有項目，根據專案需求決定優先順序。
+了解如何建立一個並行編譯 .NET Framework 和 .NET Core 的解決方案。 請參閱數個選項，以組織專案來協助開發人員達成此目標。 以下是當您決定如何使用 .NET Core 設定專案配置時，要考量的一些典型案例。 此清單不一定涵蓋您想要的所有項目，根據專案需求決定優先順序。
 
 * [**將現有的專案和 .NET Core 專案合併成單一專案**][option-csproj]
 

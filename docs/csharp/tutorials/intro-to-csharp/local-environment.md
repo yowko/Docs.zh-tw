@@ -2,12 +2,12 @@
 title: C# 簡介 - 熟悉開發工具
 description: 此文章提供您將用來在電腦上開發 C# 與 .NET 應用程式的工具基本簡介。
 ms.date: 10/23/2018
-ms.openlocfilehash: ec7e55fbf2a89a8ec45db956fc575edeb2283f56
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cf5bf68c1497bf62826656aa9cd2bd981128d3a2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200145"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129983"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>熟悉 .NET 開發工具
 
@@ -22,7 +22,7 @@ ms.locfileid: "50200145"
 
 其他會用到的命令為用來建置可執行檔的 [`dotnet build`](../../../core/tools/dotnet-build.md)，以及用來執行可執行檔的 [`dotnet run`](../../../core/tools/dotnet-run.md)。
 
-## <a name="pick-your-turorial"></a>挑選教學課程
+## <a name="pick-your-tutorial"></a>挑選教學課程
 
 您可以從下列任何一個教學課程開始：
 

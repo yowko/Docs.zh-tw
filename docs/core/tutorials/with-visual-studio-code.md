@@ -3,13 +3,13 @@ title: C# 與 Visual Studio Code 使用者入門 - C# 指南
 description: 了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您的第一個 .NET Core 應用程式。
 author: kendrahavens
 ms.author: mairaw
-ms.date: 09/27/2017
-ms.openlocfilehash: 74fdd9ce122482a027931405cc9a94011a9c13bb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/05/2018
+ms.openlocfilehash: fde2d8a324f3435438a4a92843a9d5b7b0def443
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192575"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129593"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 與 Visual Studio Code 使用者入門
 
@@ -81,12 +81,56 @@ ms.locfileid: "50192575"
 6. 若要開始偵錯，請選取 <kbd>F5</kbd> 或綠色箭頭。 當偵錯程式到達您在上一個步驟中設定的中斷點時，它會停止您程式的執行。
     * 進行偵錯時，您可以在左上角窗格中檢視您的本機變數或使用偵錯主控台。
 
-    ![執行和偵錯](media/with-visual-studio-code/rundebug.png)
+7. 選取頂端的藍色箭頭以繼續偵錯，或選取頂端的紅色正方形以停止偵錯。
 
-7. 選取頂端的綠色箭頭以繼續偵錯，或者選取頂端的紅色正方形以停止偵錯。
+    ![執行和偵錯](media/with-visual-studio-code/rundebug.png)
 
 > [!TIP]
 > 如需在 Visual Studio Code 中使用 OmniSharp 進行 .NET Core 偵錯的詳細資訊與疑難排解祕訣，請參閱 [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (設定 .NET Core 偵錯工具的指示)。
+
+## <a name="add-a-class"></a>新增類別
+
+1. 若要新增類別，請在「VSCode 總管」中按一下滑鼠右鍵，然後選取 [新增檔案]。 這會在您於 VSCode 中開啟的資料夾內新增檔案。
+2. 將檔案命名為 `Class1.cs`。 您必須在結尾加上 `.cs` 副檔名來儲存它，系統才能將它辨識為 csharp 檔案。
+3. 新增下方程式碼來建立您的第一個類別。 請務必包含正確的命名空間，如此您才能夠從 `Program.cs` 檔案參考它。
+``` csharp
+using System;
+
+namespace HelloWorld
+{
+    public class Class1
+    {
+        public string ReturnMessage()
+        {
+            return "Happy coding!";
+        }
+    }
+}
+```
+
+4. 新增下方程式碼以從 `Program.cs` 中的主要方法呼叫您的新類別。
+
+```csharp
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Class1 c1 = new Class1();
+            Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+        }
+    }
+}
+```
+
+5. 儲存變更，然後重新執行您的程式。 應該會顯示含有所附加字串的新訊息。
+```console
+> dotnet run
+Hello World! Happy coding!
+```
 
 ## <a name="faq"></a>常見問題集
 

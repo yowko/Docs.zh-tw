@@ -4,12 +4,12 @@ description: 了解任何 .NET 專案或檔案類型的自訂範本。
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4e5dd11df8204d86009b0ece108ef877dc54f23e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525963"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126259"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
@@ -43,7 +43,7 @@ ms.locfileid: "43525963"
 
 *template.json* 檔案放在範本根目錄的 *.template.config* 資料夾中。 檔案向範本引擎提供組態資訊。 最小的組態需要下表顯示的成員，這即足以建立具有功能的範本。
 
-| 成員            | 類型          | 描述 |
+| 成員            | 類型          | 說明 |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* 檔案的 JSON 結構描述。 支援 JSON 結構描述的編輯器，會在指定結構描述時，啟用 JSON 編輯功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 需要此成員才能啟用 IntelliSense。 使用 `http://json.schemastore.org/template` 的值。 |
 | `author`          | 字串        | 範本的作者。 |
@@ -81,7 +81,7 @@ dotnet new -l
 
 將專案資料夾的內容及其 *.template.config/template.json* 檔案放入名為 *content* 的資料夾中。 在 *content* 資料夾旁邊，新增 [*nuspec* 檔案](/nuget/create-packages/creating-a-package)，它是 XML 資訊清單檔案，描述套件的內容及驅動建立 NuGet 套件的程序。 在 *nuspec* 檔案的 **\<packageTypes>** 項目內，包含 `name` 屬性值為 `Template` 的 **\<packageType>** 項目。 *content* 資料夾和 *nuspec* 檔案都應該位於相同的目錄中。 下表顯示將範本製作為 NuGet 套件所需之最小的 *nuspec* 檔案項目。
 
-| 元素            | 類型   | 描述 |
+| 元素            | 類型   | 說明 |
 | ------------------ | ------ | ----------- |
 | **\<作者>**     | 字串 | 以逗號分隔的套件作者清單，與 nuget.org 上的設定檔名稱相符。這些作者會顯示在 nuget.org 的 NuGet 組件庫中，並用來交互參照相同作者的其他套件。 |
 | **\<描述>** | 字串 | UI 顯示中的套件詳細描述。 |
@@ -129,7 +129,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-local-nupkg-file"></a>從本機 nupkg 檔案解除安裝範本
 
-當您想要解除安裝範本時，請勿嘗試使用 *nupkg* 檔案的路徑。 *嘗試使用 `dotnet new -u <PATH_TO_NUPKG_FILE>` 解除安裝範本失敗。* 依套件的 `id` 參考套件：
+若要將範本解除安裝，請勿嘗試使用 *nupkg* 檔案的路徑。 使用 `dotnet new -u <PATH_TO_NUPKG_FILE>` 來嘗試將範本解除安裝會失敗。 依套件的 `id` 參考套件：
 
 ```console
 dotnet new -u <NUGET_PACKAGE_ID>
@@ -137,7 +137,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-file-system-directory"></a>從檔案系統目錄解除安裝範本
 
-`FILE_SYSTEM_DIRECTORY` 是包含專案和 *.template.config* 資料夾的專案資料夾：
+`FILE_SYSTEM_DIRECTORY` 是包含專案和 *.template.config* 資料夾的專案資料夾。 提供的路徑必須是絕對路徑。 使用相對路徑來嘗試將範本解除安裝會失敗。 如需詳細資訊，請參閱 [dotnet new](dotnet-new.md) 一文。
 
 ```console
 dotnet new -u <FILE_SYSTEM_DIRECTORY>
@@ -153,8 +153,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>另請參閱
 
-* [建立 dotnet new 的自訂範本 (教學課程)](../tutorials/create-custom-template.md)  
-* [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki) (維基百科：dotnet/templating GitHub 存放庫)  
-* [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples) (dotnet/dotnet-template-samples GitHub 存放庫)  
-* [如何建立您自己的 dotnet new 範本](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-* [JSON 結構描述保存區的 *template.json* 結構描述](http://json.schemastore.org/template)  
+* [建立 dotnet new 的自訂範本 (教學課程)](../tutorials/create-custom-template.md)
+* [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki) (維基百科：dotnet/templating GitHub 存放庫)
+* [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples) (dotnet/dotnet-template-samples GitHub 存放庫)
+* [如何建立您自己的 dotnet new 範本](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+* [JSON 結構描述保存區的 *template.json* 結構描述](http://json.schemastore.org/template)

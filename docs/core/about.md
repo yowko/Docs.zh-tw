@@ -4,12 +4,12 @@ description: 了解 .NET Core。
 author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: fc4b76df8b71865b14caf27c7e21906cccc88d07
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93619fce58a3b3aa94e6c14fc7cfeb1b0bf48272
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197648"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126974"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -25,7 +25,7 @@ ms.locfileid: "50197648"
 
 ## <a name="languages"></a>語言
 
-C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式庫。 這些語言已經或者能夠整合至您最慣用的文字編輯器與 IDE，包括 [Visual Studio](https://visualstudio.microsoft.com/vs/)、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text 和 Vim。 此整合有部分由 [OmniSharp](https://www.omnisharp.net/) 及 [Ionide](http://ionide.io) 專案的優秀人士提供。
+C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式庫。 這些語言已經或者能夠整合至您最慣用的文字編輯器與 IDE，包括 [Visual Studio](https://visualstudio.microsoft.com/vs/)、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text 和 Vim。 這項整合有部分由 [OmniSharp](https://www.omnisharp.net/) 及 [Ionide](http://ionide.io) 專案的優秀人士提供。
 
 ## <a name="apis"></a>API
 
@@ -37,11 +37,11 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 - 資料類型，例如 <xref:System.Data.DataSet?displayProperty=nameWithType> 與 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) \(英文\)。
 - 高效能類型，例如 <xref:System.Numerics.Vector?displayProperty=nameWithType> 與 [Pipelines](https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/)\(英文\)。
 
-透過實作 [.NET Standard](../standard/net-standard.md) 規格，.NET Core 可提供與 NET Framework 及 Mono API 的相容性。
+藉由實作 [.NET Standard](../standard/net-standard.md) 規格，.NET Core 可提供與 NET Framework 及 Mono API 的相容性。
 
 ## <a name="frameworks"></a>架構
 
-已在 .NET Core 上建置多個架構：
+已在 .NET Core 上建置多項架構：
 
 - [ASP.NET Core](/aspnet/core/)
 - [Windows 10 通用 Windows 平台 (UWP)](https://developer.microsoft.com/windows)

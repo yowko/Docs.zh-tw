@@ -1,19 +1,19 @@
 ---
 title: 在 Visual Studio 2017 中使用 .NET Standard 類別庫
-description: 了解如何使用 Visual Studio 2017 來呼叫類別庫中的成員。
+description: 使用 Visual Studio 2017 來建置會呼叫另一個類別庫之成員的 .NET Core 應用程式。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52ec46c23bb928b49f034270ed1d510d1acf992e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 424933f4d221492b3127d0b847249821fee86b10
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518161"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147316"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Standard 類別庫
 
@@ -57,7 +57,7 @@ ms.locfileid: "45518161"
 1. 必要時，變更工具列以編譯 `ShowCase` 專案的 [偵錯] 版本。 選取 **ShowCase** 按鈕上的綠色箭號，以編譯並執行程式。
 
    ![Image](./media/consuming-library-with-visual-studio/toolbar.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. 開啟您[在 Visual Studio 2017 中使用 .NET Core 建置類別庫](vb-library-with-visual-studio.md)主題中建立的 `ClassLibraryProjects` 解決方案。 在方案總管 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案，然後從內容功能表中，選取 [新增]  >  [新增專案]。
 
 1. 在 [新增專案] 對話方塊中，展開 [Visual Basic] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 [名稱] 文字方塊中，輸入 "ShowCase"，然後選取 [確定] 按鈕。

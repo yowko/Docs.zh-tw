@@ -1,27 +1,28 @@
 ---
-title: 移植到 .NET Core - 分析協力廠商相依性
-description: 了解如何分析協力廠商相依性，以將您的專案從 .NET Framework 移植到 .NET Core。
+title: 分析相依性以將程式碼移植到 .NET Core
+description: 了解如何分析外部相依性，以將您的專案從 .NET Framework 移植到 .NET Core。
 author: cartermp
 ms.author: mairaw
-ms.date: 02/15/2018
-ms.openlocfilehash: 06d8d36d8369680c54af4d16513b2b871b57079c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.date: 12/04/2018
+ms.custom: seodec18
+ms.openlocfilehash: 7d18d4c52a37878e160f71aeea4cfd00045fe6b4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000995"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146871"
 ---
-# <a name="analyze-your-third-party-dependencies"></a>分析協力廠商相依性
+# <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>分析您的相依性以將程式碼移植到 .NET Core
 
-如果您想要將程式碼移植到 .NET Core 或 .NET Standard，移植程序的第一個步驟是了解您的協力廠商相依性。 協力廠商相依性是您在專案中參考的 [NuGet 套件](#analyze-referenced-nuget-packages-on-your-project)或 [DLL](#analyze-dependencies-that-arent-nuget-packages)。 評估每個相依性，並針對與 .NET Core 不相容的相依性開發應變計劃。 本文示範如何判斷相依性是否與 .NET Core 相容。
+要將程式碼移植到 .NET Core 或 .NET Standard，您必須了解您的相依性。 外部依賴項是您在專案中參考的 [NuGet 套件](#analyze-referenced-nuget-packages-on-your-project)或 [DLL](#analyze-dependencies-that-arent-nuget-packages)，但您不建置它們。 評估每個相依性，並針對與 .NET Core 不相容的相依性開發應變計劃。 以下是如何判斷相依性是否與 .NET Core 相容。
 
-## <a name="analyze-referenced-nuget-packages-in-your-project"></a>分析專案中參考的 NuGet 套件
+## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>分析專案中參考的 NuGet 套件
 
 如果您在專案中參考 NuGet 套件，您需要確認其是否與 .NET Core 相容。
 有兩種方法可達成該目標：
 
-* [使用 NuGet 套件總管應用程式](#analyze-nuget-packages-using-nuget-package-explorer) (最可靠的方法)。
-* [使用 nuget.org 網站](#analyze-nuget-packages-using-nugetorg)。
+* [使用 NuGet 套件總管應用程式](#analyze-nuget-packages-using-nuget-package-explorer)
+* [使用 nuget.org 網站](#analyze-nuget-packages-using-nugetorg)
 
 分析套件之後，如果這些套件與 .NET Core 不相容並只以 .NET Framework 為目標，您可以檢查 [.NET Framework 相容性模式](#net-framework-compatibility-mode)是否可以協助您的移植程序。
 
@@ -52,6 +53,7 @@ netcoreapp1.0
 netcoreapp1.1
 netcoreapp2.0
 netcoreapp2.1
+netcoreapp2.2
 portable-net45-win8
 portable-win8-wpa8
 portable-net451-win81
@@ -63,24 +65,6 @@ portable-net45-win8-wpa8-wpa81
 > [!IMPORTANT]
 > 查看套件支援的 TFM 時，請注意，`netcoreapp*` 雖然相容，但只適用於 .NET Core 專案而不適用於 .NET Standard 專案。
 > 其他 .NET Core 應用程式只可取用以 `netcoreapp*` (而不是 `netstandard*`) 為目標的程式庫。
-
-還有在 .NET Core 發行前版本中使用的一些舊版 TFM 也可能是相容的：
-
-```
-dnxcore50
-dotnet5.0
-dotnet5.1
-dotnet5.2
-dotnet5.3
-dotnet5.4
-dotnet5.5
-```
-
-雖然這些 TFM 可能適合您的程式碼使用，但不保證相容性。 有這些 TFM 的封裝過去是使用發行前版本的 .NET Core 封裝建置的。 記下使用這些 TFM 的套件何時 (或是否) 更新為以 .NET Standard 為基礎。
-
-> [!NOTE]
-> 若要使用以傳統 PCL 或發行前版本 .NET Core 目標為目標的套件，您必須在專案檔案中使用 `PackageTargetFallback` MSBuild 項目。
-> 如需此 MSBuild 項目的詳細資訊，請參閱 [`PackageTargetFallback`](../tools/csproj.md#packagetargetfallback)。
 
 ### <a name="analyze-nuget-packages-using-nugetorg"></a>使用 nuget.org 分析 NuGet 套件
 
@@ -109,6 +93,12 @@ dotnet5.5
 ```
 
 如需如何在 Visual Studio 中隱藏編譯器警告的詳細資訊，請參閱[隱藏 NuGet 套件的警告](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages)。
+
+### <a name="port-your-packages-to-packagereference"></a>將您的套件移植到 `PackageReference`
+
+.NET Core 使用 [PackageReference](/nuget/consume-packages/package-references-in-project-files) 來指定套件相依性。 如果您使用 [packages.config](/nuget/reference/packages-config) 指定您的套件，則需要轉換成 `PackageReference`。
+
+您可以在[從 packages.config 移轉至 PackageReference](/nuget/reference/migrate-packages-config-to-package-reference) 深入了解。
 
 ### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 封裝相依性在 .NET Core 上不執行時該怎麼辦
 

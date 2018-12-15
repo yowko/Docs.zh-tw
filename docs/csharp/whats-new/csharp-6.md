@@ -3,12 +3,12 @@ title: C# 6 的新功能 - C# 指南
 description: 了解 C# 第 6 版的新功能
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6aa070d54bb1b571d4fa51538b0521a554073cbc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194029"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146735"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 的新功能
 
@@ -23,7 +23,7 @@ C# 6.0 版包含許多功能，能提升開發人員的產能。 本版的功能
 * [使用靜態](#using-static)：
     - 您可以將單一類別的所有方法都匯入目前的命名空間。
 * [Null 條件運算子](#null-conditional-operators)：
-    - 您可以精確且安全地存取物件的成員，同時仍然以 Null 條件運算子檢查 Null。
+    - 您可以精確且安全地存取物件的成員，同時仍然以 null 條件運算子檢查 null。
 * [字串插補](#string-interpolation)：
     - 您可以使用內嵌運算式而非位置引數來撰寫字串格式化運算式。
 * [例外狀況篩選條件](#exception-filters)：
@@ -43,7 +43,7 @@ C# 6.0 版包含許多功能，能提升開發人員的產能。 本版的功能
 
 這些功能的整體影響是您可撰寫更簡潔且更具可讀性的程式碼，。 語法包含許多常見做法的較少繁瑣細節。 繁瑣細節較少時比較容易看出設計目的。 充分了解這些功能，您將更具生產力、撰寫更具可讀性的程式碼，並且更專注於您的核心功能，而不是語言的建構。
 
-本主題的其餘部分提供這些功能每一個的詳細資料。
+本主題的其餘部分提供這些功能每一項的詳細資料。
 
 ## <a name="auto-property-enhancements"></a>Auto 屬性增強功能
 
@@ -86,7 +86,7 @@ public class Student
 }
 ```
 
-此功能可真正達到建立不可變類型的語言支援，並使用更精簡且方便的 Auto 屬性語法。
+這項功能可真正達到建立不可變類型的語言支援，並使用更精簡且方便的 Auto 屬性語法。
 
 如果新增這個語法不會移除可存取的方法，那麼這就是[二進位相容變更](version-update-considerations.md#binary-compatible-changes)。
 
@@ -94,9 +94,9 @@ public class Student
 
 「Auto 屬性初始設定式」可以讓您宣告 Auto 屬性的初始值作為屬性宣告的一部分。  在舊版中，這些屬性必須有 setter，且您必須使用該 setter 來初始化支援欄位所使用的資料存放區。 請針對學生考慮此類別，其中包含學生的姓名和成績清單︰
 
-[!code-csharp[Construction](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Construction)]
+[!code-csharp[Student](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Student)]
  
-隨著這個類別成長，您可以包括其他建構函式。 每個建構函式必須初始化這個欄位，否則您將會導致發生錯誤。
+隨著這個類別成長，您可以包括其他建構函式。 每個建構函式都必須將 Grades 屬性初始化，否則您將會導致發生錯誤。
 
 C# 6 可讓您在 Auto 屬性宣告中指派 Auto 屬性所使用的儲存體初始值︰
 
@@ -104,7 +104,7 @@ C# 6 可讓您在 Auto 屬性宣告中指派 Auto 屬性所使用的儲存體初
 
 `Grades` 成員會在宣告的位置初始化。 這可讓您更輕鬆地只執行初始化一次。 初始化是屬性宣告的一部分，如此能更容易讓儲存區配置與 `Student` 物件的公用介面相等。
 
-屬性初始設定式可以與讀取/寫入屬性一起使用，也可以與唯讀屬性一起使用，如下所示。
+屬性初始設定式可以與唯讀屬性搭配使用 (如上所示)，也可以與讀取/寫入屬性搭配使用 (如此處所示)。
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 
@@ -130,7 +130,7 @@ C# 6 可讓您在 Auto 屬性宣告中指派 Auto 屬性所使用的儲存體初
 
 [!code-csharp[UsingStaticMath](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStaticMath)]
 
-現在，您可以使用 <xref:System.Math> 類別中的任何靜態方法，而不需限定 <xref:System.Math> 類別。 <xref:System.Math> 類別是此功能很棒的使用案例，因為它不包含任何執行個體方法。 您也可以使用 `using static` 為同時具有靜態和執行個體方法的類別匯入類別的靜態方法。 其中一個最有用的範例是 <xref:System.String>
+現在，您可以使用 <xref:System.Math> 類別中的任何靜態方法，而不需限定 <xref:System.Math> 類別。 <xref:System.Math> 類別是這項功能很棒的使用案例，因為它不包含任何執行個體方法。 您也可以使用 `using static` 為同時具有靜態和執行個體方法的類別匯入類別的靜態方法。 其中一個最有用的範例是 <xref:System.String>
 
 [!code-csharp[UsingStatic](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStatic)]
 
@@ -153,10 +153,10 @@ C# 6 可讓您在 Auto 屬性宣告中指派 Auto 屬性所使用的儲存體初
 
 [!code-csharp[UsingStaticLinqMethod](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStaticLinkMethod)]
 
-此決策是因為擴充方法通常使用擴充方法引動運算式來呼叫。 在少數情況下，它們是使用靜態方法呼叫語法來呼叫時，用於解決模稜兩可。
+這項決策是因為擴充方法通常使用擴充方法引動運算式來呼叫。 在少數情況下，它們是使用靜態方法呼叫語法來呼叫時，用於解決模稜兩可。
 要求在引動過程中使用類別名稱，似乎是明智的做法。
 
-`static using` 有最後一個功能。 `static using` 指示詞也會匯入任何巢狀型別。 那讓您能參照任何巢狀型別而無限定性條件。
+`static using` 有最後一項功能。 `static using` 指示詞也會匯入任何巢狀型別。 那讓您能參照任何巢狀型別而無限定性條件。
 
 ## <a name="null-conditional-operators"></a>Null 條件運算子
 
@@ -221,7 +221,7 @@ C# 6 包含新的語法，可從字串和可評估的內嵌運算式撰寫字串
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-這個範例將屬性運算式用於替代的運算式。 您可以展開此語法，即能使用任何運算式。 例如，您可能在內插補點的過程中計算某學生的平均成積點︰
+這個範例將屬性運算式用於替代的運算式。 您可以展開此語法，即能使用任何運算式。 比方說，您可能在內插補點的過程中計算某學生的平均成積點︰
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
@@ -304,13 +304,13 @@ C# 6 的另一個新功能是「例外狀況篩選條件」。 例外狀況篩�
 
 [!code-csharp[HandleNotChanged](../../../samples/snippets/csharp/new-in-6/NetworkClient.cs#HandleNotChanged)]
 
-另一種建議的模式有助於避免 catch 子句在附加偵錯工具時，處理例外狀況。 此技術可讓您執行應用程式及偵錯工具，並在擲回例外狀況時停止執行。
+另一種建議的模式有助於避免 catch 子句在附加偵錯工具時，處理例外狀況。 這項技術可讓您執行應用程式及偵錯工具，並在擲回例外狀況時停止執行。
 
 在您的程式碼中，新增例外狀況篩選條件，使得只有在未附加偵錯工具時，才會執行任何復原程式碼︰
 
 [!code-csharp[LogExceptionDebugger](../../../samples/snippets/csharp/new-in-6/program.cs#LogExceptionDebugger)]
 
-在程式碼中新增此項目之後，您可以設定偵錯工具以在所有未處理的例外狀況處中斷。 在偵錯工具中執行程式，偵錯工具會在 `PerformFailingOperation()` 擲回 `RecoverableException` 時便中斷。
+在程式碼中新增這項之後，您可以設定偵錯工具以在所有未處理的例外狀況處中斷。 在偵錯工具中執行程式，偵錯工具會在 `PerformFailingOperation()` 擲回 `RecoverableException` 時便中斷。
 偵錯工具會中斷您的程式，因為 catch 子句不會執行，因為例外狀況篩選條件傳回 false。
 
 ## <a name="the-nameof-expression"></a>`nameof` 運算式
@@ -325,7 +325,7 @@ C# 6 的另一個新功能是「例外狀況篩選條件」。 例外狀況篩�
 
 [!code-csharp[nameofNotify](../../../samples/snippets/csharp/new-in-6/viewmodel.cs#nameofNotify)]
 
-使用 `nameof` 運算子相較於常數字串而言的優點，是工具可以了解符號。 如果您使用重整工具來重新命名符號，它會在 `nameof` 運算式中將它重新命名。 常數字串沒有該優點。 您可以在喜好的編輯器中自行嘗試︰重新命名變數，任何 `nameof` 運算式將會一併更新。
+使用 `nameof` 運算子相較於常數字串而言的優點，是工具可以了解符號。 如果您使用重整工具來重新命名符號，它會在 `nameof` 運算式中將它重新命名。 常數字串沒有這項優點。 您可以在喜好的編輯器中自行嘗試︰重新命名變數，任何 `nameof` 運算式將會一併更新。
 
 `nameof` 運算式會產生其引數的非限定名稱 (上述範例中的 `LastName`)，即使您使用引數的完整格式名稱︰
 
@@ -359,15 +359,15 @@ C# 5 對於您可以放置 `await` 運算式的位置有數個限制。
 
 [!code-csharp[DictionaryInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#DictionaryInitializer)]
 
-此功能表示可以使用類似於已可供數個版本的序列容器使用的語法，將關聯容器初始化。
+這項功能表示可以使用類似於已可供數個版本的序列容器使用的語法，將關聯容器初始化。
 
 ## <a name="extension-add-methods-in-collection-initializers"></a>集合初始設定式中的擴充 `Add` 方法
 
-能夠輕鬆進行集合初始設定的另一個功能，是可以針對 `Add` 方法使用「擴充方法」。 新增此功能是為了與 Visual Basic 相當。 
+能夠輕鬆進行集合初始設定的另一個功能，是可以針對 `Add` 方法使用「擴充方法」。 新增這項功能是為了與 Visual Basic 相當。 
 
 當您的自訂集合類別具有不同名稱的方法，可以在語意上新增項目時，此功能最實用。
 
-例如，請考慮如下的學生集合︰
+比方說，請考慮如下的學生集合︰
 
 [!code-csharp[Enrollment](../../../samples/snippets/csharp/new-in-6/enrollment.cs#Enrollment)]
 
@@ -380,11 +380,11 @@ C# 5 對於您可以放置 `await` 運算式的位置有數個限制。
 
 [!code-csharp[ExtensionAdd](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAdd)]
 
-您使用此功能做的事，是藉由建立擴充方法，將任何新增項目到集合的方法對應至名為 `Add` 的方法。
+您使用這項功能做的事，是藉由建立擴充方法，將任何新增項目到集合的方法對應至名為 `Add` 的方法。
 
 ## <a name="improved-overload-resolution"></a>改進的多載解析
 
-您可能不會發現最後這個功能。 在有些建構中，舊版 C# 編譯器可能會發現一些涉及 Lambda 運算式的方法呼叫為模稜兩可。 請參考下列方法：
+您可能不會發現最後這項功能。 在有些建構中，舊版 C# 編譯器可能會發現一些涉及 Lambda 運算式的方法呼叫為模稜兩可。 請參考下列方法：
 
 [!code-csharp[AsyncMethod](../../../samples/snippets/csharp/new-in-6/overloads.cs#AsyncMethod)]
 

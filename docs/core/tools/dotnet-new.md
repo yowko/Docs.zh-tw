@@ -4,12 +4,12 @@ description: dotnet new 命令會根據指定的範本建立新的 .NET Core 專
 author: mairaw
 ms.author: mairaw
 ms.date: 10/24/2018
-ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a8d486f569f31d68d5659ac6a80d615474ef2506
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188194"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131478"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -49,7 +49,7 @@ dotnet new [-h|--help]
 
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet new` 命令提供便利的方式來初始化有效的 .NET Core 專案。
 
@@ -71,6 +71,7 @@ dotnet new [-h|--help]
 | 類別庫                                | `classlib`       | [C#], F#, VB  |
 | 單元測試專案                            | `mstest`         | [C#], F#, VB  |
 | xUnit 測試專案                           | `xunit`          | [C#], F#, VB  |
+| NUnit 測試專案                           | `nunit`          | [C#], F#, VB  |
 | Razor 頁面                                   | `page`           | [C#]          |
 | MVC ViewImports                              | `viewimports`    | [C#]          |
 | MVC ViewStart                                | `viewstart`      | [C#]          |
@@ -306,15 +307,15 @@ dotnet new [-h|--help]
 - `SingleOrg` - 單一租用戶的組織驗證。
 - `Windows` - Windows 驗證。
 
-`--aad-b2c-instance <INSTANCE>` - 要連接的 Azure Active Directory B2C 執行個體。 搭配 `IndividualB2C` 驗證使用。 預設值是 `https://login.microsoftonline.com/tfp/`。
+`--aad-b2c-instance <INSTANCE>` - 要連接的 Azure Active Directory B2C 執行個體。 搭配 `IndividualB2C` 驗證使用。 預設值為 `https://login.microsoftonline.com/tfp/`。
 
 `-ssp|--susi-policy-id <ID>` - 此專案的登入及註冊原則識別碼。 搭配 `IndividualB2C` 驗證使用。
 
-`--aad-instance <INSTANCE>` - 要連接的 Azure Active Directory 執行個體。 搭配 `SingleOrg` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
+`--aad-instance <INSTANCE>` - 要連接的 Azure Active Directory 執行個體。 搭配 `SingleOrg` 驗證使用。 預設值為 `https://login.microsoftonline.com/`。
 
 `--client-id <ID>` - 此專案的用戶端識別碼。 搭配 `IndividualB2C` 或 `SingleOrg` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
 
-`--domain <DOMAIN>` - 目錄租用戶的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `qualified.domain.name`。
+`--domain <DOMAIN>` - 目錄租用戶的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值為 `qualified.domain.name`。
 
 `--tenant-id <ID>` - 要連接的目錄 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
 
@@ -339,7 +340,7 @@ dotnet new [-h|--help]
 - `MultiOrg` - 多個租用戶的組織驗證。
 - `Windows` - Windows 驗證。
 
-`--aad-b2c-instance <INSTANCE>` - 要連接的 Azure Active Directory B2C 執行個體。 搭配 `IndividualB2C` 驗證使用。 預設值是 `https://login.microsoftonline.com/tfp/`。
+`--aad-b2c-instance <INSTANCE>` - 要連接的 Azure Active Directory B2C 執行個體。 搭配 `IndividualB2C` 驗證使用。 預設值為 `https://login.microsoftonline.com/tfp/`。
 
 `-ssp|--susi-policy-id <ID>` - 此專案的登入及註冊原則識別碼。 搭配 `IndividualB2C` 驗證使用。
 
@@ -347,13 +348,13 @@ dotnet new [-h|--help]
 
 `-ep|--edit-profile-policy-id <ID>` - 此專案的編輯設定檔原則識別碼。 搭配 `IndividualB2C` 驗證使用。
 
-`--aad-instance <INSTANCE>` - 要連接的 Azure Active Directory 執行個體。 搭配 `SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
+`--aad-instance <INSTANCE>` - 要連接的 Azure Active Directory 執行個體。 搭配 `SingleOrg` 或 `MultiOrg` 驗證使用。 預設值為 `https://login.microsoftonline.com/`。
 
-`--client-id <ID>` - 此專案的用戶端識別碼。 搭配 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
+`--client-id <ID>` - 此專案的用戶端識別碼。 搭配 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 驗證使用。 預設值為 `11111111-1111-1111-11111111111111111`。
 
-`--domain <DOMAIN>` - 目錄租用戶的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `qualified.domain.name`。
+`--domain <DOMAIN>` - 目錄租用戶的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值為 `qualified.domain.name`。
 
-`--tenant-id <ID>` - 要連接的目錄 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
+`--tenant-id <ID>` - 要連接的目錄 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值為 `22222222-2222-2222-2222-222222222222`。
 
 `--callback-path <PATH>` - 重新導向 URI 的應用程式基底路徑內的要求路徑。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `/signin-oidc`。
 
@@ -377,7 +378,7 @@ dotnet new [-h|--help]
 
 **viewimports**
 
-`-na|--namespace <NAMESPACE_NAME>` - 所產生程式碼的命名空間。 預設值是 `MyApp.Namespace`。
+`-na|--namespace <NAMESPACE_NAME>` - 所產生程式碼的命名空間。 預設值為 `MyApp.Namespace`。
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
@@ -387,7 +388,7 @@ dotnet new [-h|--help]
 
 **classlib**
 
-`-f|--framework <FRAMEWORK>` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp2.0` 建立 .NET Core 類別庫或 `netstandard2.0` 建立 .NET Standard 類別庫。 預設值是 `netstandard2.0`。
+`-f|--framework <FRAMEWORK>` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp2.0` 建立 .NET Core 類別庫或 `netstandard2.0` 建立 .NET Standard 類別庫。 預設值為 `netstandard2.0`。
 
 `--no-restore` - 專案建立期間不執行隱含還原。
 
@@ -422,11 +423,11 @@ dotnet new [-h|--help]
 
 `--aad-instance <INSTANCE>` - 要連接的 Azure Active Directory 執行個體。 搭配 `SingleOrg` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
 
-`--client-id <ID>` - 此專案的用戶端識別碼。 搭配 `IndividualB2C` 或 `SingleOrg` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
+`--client-id <ID>` - 此專案的用戶端識別碼。 搭配 `IndividualB2C` 或 `SingleOrg` 驗證使用。 預設值為 `11111111-1111-1111-11111111111111111`。
 
 `--domain <DOMAIN>` - 目錄租用戶的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `qualified.domain.name`。
 
-`--tenant-id <ID>` - 要連接的目錄 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
+`--tenant-id <ID>` - 要連接的目錄 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值為 `22222222-2222-2222-2222-222222222222`。
 
 `-r|--org-read-access` - 允許此應用程式對目錄的讀取權限。 僅適用於 `SingleOrg` 或 `MultiOrg` 驗證。
 
@@ -459,11 +460,11 @@ dotnet new [-h|--help]
 
 `--client-id <ID>` - 此專案的用戶端識別碼。 搭配 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
 
-`--domain <DOMAIN>` - 目錄租用戶的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `qualified.domain.name`。
+`--domain <DOMAIN>` - 目錄租用戶的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值為 `qualified.domain.name`。
 
-`--tenant-id <ID>` - 要連接的目錄 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
+`--tenant-id <ID>` - 要連接的目錄 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值為 `22222222-2222-2222-2222-222222222222`。
 
-`--callback-path <PATH>` - 重新導向 URI 的應用程式基底路徑內的要求路徑。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `/signin-oidc`。
+`--callback-path <PATH>` - 重新導向 URI 的應用程式基底路徑內的要求路徑。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值為 `/signin-oidc`。
 
 `-r|--org-read-access` - 允許此應用程式對目錄的讀取權限。 僅適用於 `SingleOrg` 或 `MultiOrg` 驗證。
 
@@ -477,7 +478,7 @@ dotnet new [-h|--help]
 
 **PAGE**
 
-`-na|--namespace <NAMESPACE_NAME>` - 所產生程式碼的命名空間。 預設值是 `MyApp.Namespace`。
+`-na|--namespace <NAMESPACE_NAME>` - 所產生程式碼的命名空間。 預設值為 `MyApp.Namespace`。
 
 `-np|--no-pagemodel` - 不使用 PageModel 建立頁面。
 
@@ -489,19 +490,19 @@ dotnet new [-h|--help]
 
 **console、xunit、mstest、web、webapi**
 
-`-f|--framework` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp1.0` 或 `netcoreapp1.1`。 預設值是 `netcoreapp1.0`。
+`-f|--framework` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp1.0` 或 `netcoreapp1.1`。 預設值為 `netcoreapp1.0`。
 
 **classlib**
 
-`-f|--framework` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp1.0`、`netcoreapp1.1`，或 `netstandard1.0` 到 `netstandard1.6`。 預設值是 `netstandard1.4`。
+`-f|--framework` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp1.0`、`netcoreapp1.1`，或 `netstandard1.0` 到 `netstandard1.6`。 預設值為 `netstandard1.4`。
 
 **mvc**
 
-`-f|--framework` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp1.0` 或 `netcoreapp1.1`。 預設值是 `netcoreapp1.0`。
+`-f|--framework` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp1.0` 或 `netcoreapp1.1`。 預設值為 `netcoreapp1.0`。
 
-`-au|--auth` - 要使用的驗證類型。 值：`None` 或 `Individual`。 預設值是 `None`。
+`-au|--auth` - 要使用的驗證類型。 值：`None` 或 `Individual`。 預設值為 `None`。
 
-`-uld|--use-local-db` - 指定是否要使用 LocalDB，而不是 SQLite。 值：`true` 或 `false`。 預設值是 `false`。
+`-uld|--use-local-db` - 指定是否要使用 LocalDB，而不是 SQLite。 值：`true` 或 `false`。 預設值為 `false`。
 
 ---
 

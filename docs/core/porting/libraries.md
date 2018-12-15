@@ -1,19 +1,20 @@
 ---
-title: 移轉到 .NET Core - 程式庫
+title: 將程式庫移植到 .NET Core
 description: 了解如何將程式庫專案從 .NET Framework 移植到 .NET Core。
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: eb6b8506d8df218a053242cd0b8d3097fa6d9fd3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 2701027ce606c215ca9c2bd4bc665bc0600342dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199847"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143580"
 ---
-# <a name="porting-to-net-core---libraries"></a>移轉到 .NET Core - 程式庫
+# <a name="port-net-framework-libraries-to-net-core"></a>將 .NET Framework 程式庫移植到 .NET Core
 
-本文討論將程式庫程式碼移植到 .NET Core 來使它能跨平台執行。
+了解如何將.NET Framework 程式庫程式碼移植到 .NET Core，以執行跨平台並擴展使用它的應用程式的範圍。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -73,34 +74,17 @@ AppDomain 可將應用程式互相隔離。 AppDomain 需要執行階段支援�
 
 使用由作業系統提供的安全性界線 (例如虛擬化、容器或使用者帳戶) 來以最少的權限集合執行處理序。
 
-## <a name="converting-a-pcl-project"></a>轉換 PCL 專案
+## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>將您的 .NET Framework 程式碼目標重新設定為 .NET Framework 4.7.2
 
-您可以透過在 Visual Studio 2017 中載入程式庫並執行下列步驟，以將 PCL 專案的目標轉換至 .NET Standard：
-
-1. 以滑鼠右鍵按一下專案檔，並選取 [屬性]。
-1. 在 [程式庫] 底下，選取 [目標 .NET 平台標準]。
-
-如果您的套件支援 NuGet 3.0，專案會將目標重新設定為 .NET Standard。
-
-如果您的套件不支援 NuGet 3.0，Visual Studio 將會顯示對話方塊，告知您將目前的套件解除安裝。 如果收到此通知，請執行下列步驟：
-
-1. 以滑鼠右鍵按一下專案，選取 [管理 NuGet 套件]。
-1. 記下該專案的套件。
-1. 將套件逐一解除安裝。
-1. 您可能需要重新啟動 Visual Studio 以完成解除安裝程序。 如果需要重新啟動，可以使用 [NuGet 套件管理員] 視窗中所顯示的 [重新啟動] 按鈕。
-1. 當專案重新載入時，它會以 .NET Standard 為目標。 新增先前要求您解除安裝的套件。
-
-## <a name="retargeting-your-net-framework-code-to-net-framework-462"></a>將您的 .NET Framework 程式碼目標重新設定為 .NET Framework 4.6.2
-
-如果您的程式碼目標不是 .NET Framework 4.6.2，建議您將目標重新設定為 .NET Framework 4.6.2。 這可確保在 .NET Standard 不支援現有 API 的情況下，仍可以使用最新的 API 替代項目。
+如果您的程式碼目標不是 .NET Framework 4.7.2，建議您將目標重新設定為 .NET Framework 4.7.2。 這可確保在 .NET Standard 不支援現有 API 的情況下，仍可以使用最新的 API 替代項目。
 
 針對您想要移轉的每個 Visual Studio 專案，執行下列作業︰
 
 1. 以滑鼠右鍵按一下專案並選取 [屬性]。
-1. 在 [目標 Framework] 下拉式清單中，選取 [.NET Framework 4.6.2]。
+1. 在 [目標 Framework] 下拉式清單中，選取 [.NET Framework 4.7.2]。
 1. 重新編譯您的專案。
 
-因為您的專案現在是以 .NET Framework 4.6.2 為目標，請使用該版本的 .NET Framework 作為基礎移植程式碼。
+因為您的專案現在是以 .NET Framework 4.7.2 為目標，請使用該版本的 .NET Framework 作為基礎移植程式碼。
 
 ## <a name="determining-the-portability-of-your-code"></a>判斷程式碼的可攜性
 
@@ -151,7 +135,7 @@ AppDomain 可將應用程式互相隔離。 AppDomain 需要執行階段支援�
  
 分析階段可能需要一些時間，視您的程式碼基底大小而定。 在這個階段花時間徹底了解所需的變更範圍並開發計畫，通常能為未來省下許多時間，特別是在您程式碼基底較為複雜的情況下。
 
-您的計劃可能涉及在對程式碼基底進行重大變更時仍要以 .NET Framework 4.6.2 為目標，讓它成為前一種方法更有條理的版本。 執行計畫的方式須視程式碼基底而定。
+您的計劃可能涉及在對程式碼基底進行重大變更時仍要以 .NET Framework 4.7.2 為目標，讓它成為前一種方法更有條理的版本。 執行計畫的方式須視程式碼基底而定。
 
 ### <a name="mixing-approaches"></a>混合方法
 

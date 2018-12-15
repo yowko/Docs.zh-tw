@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 2950d92f877a7e99734267a3071b2bcb25ce1023
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 124cc98b6f73b6014ab845ce5b9331e9f5292757
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509274"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146833"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指標類型 (C# 程式設計手冊)
 
@@ -20,10 +20,10 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-指標類型中的 `*` 之前指定的類型稱為**參考型別**。 下列任何一種類型都可能是參考型別：
+在指標型別中的 `*` 之前指定的型別稱為**參考型別**。 下列任一種型別都可能是參考型別：
 
 - 任何整數類型：[sbyte](../../language-reference/keywords/sbyte.md)、[byte](../../language-reference/keywords/byte.md)、[short](../../language-reference/keywords/short.md)、[ushort](../../language-reference/keywords/ushort.md)、[int](../../language-reference/keywords/int.md)、[uint](../../language-reference/keywords/uint.md)、[long](../../language-reference/keywords/long.md)、[ulong](../../language-reference/keywords/ulong.md)。
-- 任何浮點類型： [float](../../language-reference/keywords/float.md)、[double](../../language-reference/keywords/double.md)。
+- 任何浮點類型：[float](../../language-reference/keywords/float.md)、[double](../../language-reference/keywords/double.md)。
 - [char](../../language-reference/keywords/char.md)。
 - [bool](../../language-reference/keywords/bool.md)。
 - [decimal](../../language-reference/keywords/decimal.md)。
@@ -33,7 +33,7 @@ void* identifier; //allowed but not recommended
 
 指標型別不會從 [object](../../language-reference/keywords/object.md) 繼承，而且指標型別與 `object` 之間無法進行轉換。 此外，boxing 和 unboxing 不支援指標。 不過，不同的指標類型之間以及指標類型與整數類資料類型之間可以進行轉換。
 
-當您在相同的宣告中宣告多個指標時，星號 (*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如: 
+當您在相同的宣告中宣告多個指標時，星號 (*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如：
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -44,7 +44,7 @@ int *p1, *p2, *p3;   // Invalid in C#
 
 `myType*` 類型的指標變數值是 `myType` 類型變數的位址。 以下是指標類型宣告的範例：
 
-|範例|描述|
+|範例|說明|
 |-------------|-----------------|
 |`int* p`|`p` 為整數的指標。|
 |`int** p`|`p` 為整數指標的指標。|

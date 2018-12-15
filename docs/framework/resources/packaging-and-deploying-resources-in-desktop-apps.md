@@ -1,5 +1,5 @@
 ---
-title: 在桌面應用程式中封裝和部署資源
+title: 在 .NET 應用程式中封裝和部署資源
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -28,14 +28,14 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aca04c191234686de5a15cb3dc1336080a3a344
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b2f0ceced1749f42d57094a09f768c192b49ff4e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485699"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131530"
 ---
-# <a name="packaging-and-deploying-resources-in-desktop-apps"></a>在桌面應用程式中封裝和部署資源
+# <a name="packaging-and-deploying-resources-in-net-apps"></a>在 .NET 應用程式中封裝和部署資源
 應用程式會依賴 <xref:System.Resources.ResourceManager> 類別所代表的 .NET Framework Resource Manager，來擷取當地語系化的資源。 Resource Manager 假設使用中樞和支點模型來封裝和部署資源。 中樞是主要組件，其中包含未當地語系化的可執行程式碼以及稱為中性或預設文化特性之單一文化特性的資源。 預設文化特性是應用程式的後援文化特性；如果找不到當地語系化的資源，則它是使用其資源的文化特性。 每個支點都會連線至附屬組件，其中包含單一文化特性但未包含任何程式碼的資源。  
   
  這個模型有數個優點：  
@@ -64,16 +64,17 @@ ms.locfileid: "43485699"
   
  若要改善查閱效能，請將 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性套用至主要組件，並將使用主要組件之中性語言的名稱傳遞給它。  
   
+### <a name="net-framework-resource-fallback-process"></a>.NET Framework 資源後援處理序
+ .NET Framework 資源後援處理序包含下列步驟：
+
 > [!TIP]
 >  您可以使用 [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 組態項目最佳化資源後援處理序，以及執行階段探查資源組件的處理序。 如需詳細資訊，請參閱[最佳化資源後援處理序](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)一節。  
-  
- 資源後援程序包含下列步驟：  
   
 1.  執行階段會先檢查[全域組件快取](../../../docs/framework/app-domains/gac.md)是否有符合應用程式之所要求文化特性的組件。  
   
      全域組件快取可以儲存多個應用程式所共用的資源組件。 這可讓您不需要在所建立之每個應用程式的目錄結構中包括特定資源集。 如果執行階段找到組件的參考，則會搜尋所要求資源的組件。 如果在組件中找到項目，則會使用所要求的資源。 如果找不到項目，會繼續搜尋。  
   
-2.  執行階段接著會檢查目前執行中組件的目錄中是否有符合所要求文化特性的目錄。 如果它找到目錄，則會搜尋該目錄是否有所要求文化特性的有效附屬組件。 執行階段接著會搜尋所要求資源的附屬組件。 如果在組件中找到資源，則會使用它。 如果找不到資源，會繼續搜尋。  
+2.  執行階段接下來會檢查目前執行中組件的目錄中是否有符合所要求文化特性的子目錄。 如果它找到子目錄，則會搜尋該子目錄中是否有所要求文化特性的有效附屬組件。 執行階段接著會搜尋所要求資源的附屬組件。 如果在組件中找到資源，則會使用它。 如果找不到資源，會繼續搜尋。
   
 3.  執行階段接下來會查詢 Windows Installer，以判斷是否依需求安裝附屬組件。 如果是這樣，它會處理安裝、載入組件，並搜尋它或所要求的資源。 如果在組件中找到資源，則會使用它。 如果找不到資源，會繼續搜尋。  
   
@@ -81,7 +82,7 @@ ms.locfileid: "43485699"
   
 5.  執行階段接下來會重新搜尋全域組件快取，這一次則會搜尋所要求文化特性的父組件。 如果父組件位於全域組件快取中，則執行階段會搜尋所要求資源的組件。  
   
-     父文化特性會定義為適當的後援文化特性。 請將父項視為後援候選項目，因為最好提供任何資源以擲回例外狀況。 此程序也可讓您重複使用資源。 只有在子文化特性不需要當地語系化所要求的資源時，才應該包括父層級的特定資源。 例如，如果您提供 en (中性英文)、en-GB (英式英文) 和 en-US (美式英文) 的附屬組件，則 en 附屬組件會包含一般術語，而且 en-GB 和 en-US 附屬組件可以僅提供這些不同詞彙的覆寫。  
+     父文化特性會定義為適當的後援文化特性。 請將父項視為後援候選項目，因為最好提供任何資源以擲回例外狀況。 此程序也可讓您重複使用資源。 只有在子文化特性不需要當地語系化所要求的資源時，才應該包括父層級的特定資源。 例如，如果您提供適用於 `en` (中性英文)、`en-GB` (英式英文) 和 `en-US` (美式英文) 的附屬組件，`en` 附屬組件就會包含一般術語，而 `en-GB` 和 `en-US` 附屬組件可以僅針對那些不同的詞彙提供覆寫。
   
 6.  執行階段接著會檢查目前執行中組件的目錄，以查看它是否包含上層目錄。 如果已有上層目錄，則執行階段會搜尋目錄中是否有父文化特性的有效附屬組件。 如果找到組件，則執行階段會搜尋所要求資源的組件。 如果找到資源，則會使用它。 如果找不到資源，會繼續搜尋。  
   
@@ -94,14 +95,14 @@ ms.locfileid: "43485699"
 10. 如果已搜尋原先指定的文化特性和所有父項，但仍然找不到資源，則會使用預設 (後援) 文化特性的資源。 通常，主要應用程式組件中會包含預設文化特性的資源。 不過，您可以指定 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性 (attribute) 之 <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> 屬性 (property) 的 <xref:System.Resources.UltimateResourceFallbackLocation.Satellite> 值，指出資源的最終後援位置是附屬組件，而不是主要組件。  
   
     > [!NOTE]
-    >  預設資源是可使用主要組件進行編譯的唯一資源。 除非您使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性指定附屬組件，否則它是最終後援 (最終父項)。 因此，建議您一律在主要組件中包括預設一組資源。 這樣有助於防止擲回例外狀況。 透過包括預設資源檔，您可以提供所有資源的後援，並確保使用者至少一律有一個資源，即使不是文化特性特有的也是一樣。  
+    >  預設資源是可使用主要組件進行編譯的唯一資源。 除非您使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性指定附屬組件，否則它是最終後援 (最終父項)。 因此，建議您一律在主要組件中包括預設一組資源。 這樣有助於防止擲回例外狀況。 透過包括預設資源檔，您就能為所有資源提供後援，並確保使用者一律至少有一個資源，即使該資源不是文化特性特有的也一樣。
   
 11. 最後，如果執行階段找不到預設 (後援) 文化特性的資源，則會擲回 <xref:System.Resources.MissingManifestResourceException> 或 <xref:System.Resources.MissingSatelliteAssemblyException> 例外狀況，指出找不到資源。  
   
- 例如，假設應用程式要求墨西哥西班牙文 (es-MX 文化特性) 的當地語系化資源。 執行階段會先搜尋符合 es-MX 之組件的全域組件快取，但找不到它。 執行階段接著會搜尋目前執行中組件的目錄是否有 es-MX 目錄。 如果失敗，則執行階段會重新搜尋全域組件快取中是否有父組件可反映適當的後援文化特性；在此情況下為 es (西班牙文)。 如果找不到父組件，執行階段會搜尋 es-MX 文化特性之父組件的所有可能層級，直到找到對應的資源。 如果找不到資源，執行階段會使用預設文化特性的資源。  
+ 例如，假設應用程式要求已針對西班牙文 (墨西哥) (`es-MX` 文化特性) 進行當地語系化的資源。 執行階段會先在全域組件快取中搜尋符合 `es-MX` 的組件，但找不到。 執行階段接著會在目前執行中組件的目錄內搜尋 `es-MX` 目錄。 如果失敗，執行階段就會在全域組件快取中重新搜尋可反映適當後援文化特性的父組件，在此案例中為 `es` (西班牙文)。 如果找不到父組件，執行階段就會搜尋 `es-MX` 文化特性之父組件的所有可能層級，直到找到對應的資源為止。 如果找不到資源，執行階段會使用預設文化特性的資源。
   
 <a name="Optimizing"></a>   
-### <a name="optimizing-the-resource-fallback-process"></a>最佳化資源後援處理序  
+#### <a name="optimizing-the-net-framework-resource-fallback-process"></a>將 .NET Framework 資源後援處理序最佳化
  在下列情況中，您可以最佳化執行階段用來搜尋附屬組件中資源的程序。  
   
 -   附屬組件會部署在與程式碼組件相同的位置中。 如果程式碼組件安裝在[全域組件快取](../../../docs/framework/app-domains/gac.md)中，則也會將附屬組件安裝在全域組件快取中。 如果程式碼組件安裝在目錄中，則附屬組件會安裝在該目錄的文化特性特定資料夾中。  
@@ -128,10 +129,44 @@ ms.locfileid: "43485699"
   
 -   如果探查特定資源組件失敗，則執行階段不會引發 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。  
   
+
+### <a name="net-core-resource-fallback-process"></a>.NET Core 資源後援處理序
+ .NET Core 資源後援處理序包含下列步驟：
+
+1.  執行階段會嘗試載入所要求文化特性的附屬組件。
+     * 檢查目前執行中組件的目錄中是否有符合所要求文化特性的子目錄。 如果它找到子目錄，則會在該子目錄內搜尋所要求文化特性的有效附屬組件並載入它。
+
+       > [!NOTE]
+       >  在具備區分大小寫之檔案系統的作業系統 (也就是 Linux 和 macOS) 上，文化特性名稱子目錄搜尋會區分大小寫。  子目錄名稱必須完全符合 <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> 的大小寫 (例如 `es` 或 `es-MX`)。
+
+       > [!NOTE]
+       > 如果程式設計師已從 <xref:System.Runtime.Loader.AssemblyLoadContext> 衍生了自訂組件載入內容，則情況很複雜。  如果已將執行中組件載入到自訂內容，執行階段就會將附屬組件載入到自訂內容。  詳細資料不在本文的範圍內。  請參閱 <xref:System.Runtime.Loader.AssemblyLoadContext>。
+
+     * 如果找不到附屬組件，<xref:System.Runtime.Loader.AssemblyLoadContext> 就會引發 <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> 事件，指出找不到附屬組件。 如果您選擇處理事件，則您的事件處理常式可以載入並傳回附屬組件的參考。
+     * 如果仍然找不到附屬組件，AssemblyLoadContext 就會導致 AppDomain 觸發 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件，指出它找不到附屬組件。 如果您選擇處理事件，則您的事件處理常式可以載入並傳回附屬組件的參考。
+
+2. 如果找到了附屬組件，執行階段就會在其中搜尋所要求的資源。 如果在組件中找到資源，則會使用它。 如果找不到資源，會繼續搜尋。
+
+     > [!NOTE]
+     >  為了在附屬組件內尋找資源，執行階段會搜尋目前 <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> 的 <xref:System.Resources.ResourceManager> 所要求的資源檔。  它會在資源檔內搜尋所要求的資源名稱。  如果找不到任一個，就會將資源視為找不到。
+
+3. 執行階段接下來會透過許多可能的層級搜尋父文化特性組件，每次均會重複執行步驟 1 和 2。
+
+     父文化特性會定義為適當的後援文化特性。 請將父項視為後援候選項目，因為最好提供任何資源以擲回例外狀況。 此程序也可讓您重複使用資源。 只有在子文化特性不需要當地語系化所要求的資源時，才應該包括父層級的特定資源。 例如，如果您提供適用於 `en` (中性英文)、`en-GB` (英式英文) 和 `en-US` (美式英文) 的附屬組件，`en` 附屬組件就會包含一般術語，而 `en-GB` 和 `en-US` 附屬組件僅會針對那些不同的詞彙提供覆寫。
+
+     每個文化特性都只有 <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType> 屬性所定義的一個父代，但是父代可能有其本身的父代。 當文化特性的 <xref:System.Globalization.CultureInfo.Parent%2A> 屬性傳回 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 時，即會停止搜尋父文化特性。 針對資源後援，不會將不因文化特性而異視為父文化特性或可擁有資源的文化特性。
+
+4. 如果已搜尋原先指定的文化特性和所有父項，但仍然找不到資源，則會使用預設 (後援) 文化特性的資源。 通常，主要應用程式組件中會包含預設文化特性的資源。 不過，您可以指定 <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> 屬性的 <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty.nameWithType> 值，指出資源的最終後援位置是附屬組件，而不是主要組件。
+
+    > [!NOTE]
+    >  預設資源是可使用主要組件進行編譯的唯一資源。 除非您使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性指定附屬組件，否則它是最終後援 (最終父項)。 因此，建議您一律在主要組件中包括預設一組資源。 這樣有助於防止擲回例外狀況。 透過包括預設資源檔，您就能為所有資源提供後援，並確保使用者一律至少有一個資源，即使該資源不是文化特性特有的也一樣。
+
+5. 最後，如果執行階段找不到預設 (後援) 文化特性的資源檔，即會擲回 <xref:System.Resources.MissingManifestResourceException> 或 <xref:System.Resources.MissingSatelliteAssemblyException> 例外狀況，指出找不到資源。  如果找到了資源檔，但所要求的資源不存在，要求就會傳回 `null`。
+
 ### <a name="ultimate-fallback-to-satellite-assembly"></a>附屬組件的最終後援  
  您可以選擇性地從主要組件中移除資源，並指定執行階段應該從對應至特定文化特性的附屬組件中載入最終後援資源。 若要控制後援程序，請使用 <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> 建構函式，並提供 <xref:System.Resources.UltimateResourceFallbackLocation> 參數的值，而此參數指定 Resource Manager 應該從主要組件還是附屬組件擷取後援資源。  
   
- 下列範例會使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性，將應用程式的後援資源儲存在法文 (fr) 語言的附屬組件中。  此範例有兩個文字型資源檔案定義名為 `Greeting` 的單一字串資源。 首先，resources.fr.txt 包含法文語言資源。  
+ 下列 .NET Framework 範例會使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性，將應用程式的後援資源儲存在法文 (`fr`) 語言的附屬組件中。  此範例有兩個文字型資源檔案定義名為 `Greeting` 的單一字串資源。 首先，resources.fr.txt 包含法文語言資源。
   
 ```  
 Greeting=Bon jour!  
@@ -183,7 +218,6 @@ vbc Example1.vb
 ```  
 Bon jour!  
 ```  
-  
 ## <a name="suggested-packaging-alternative"></a>建議的封裝替代方式  
  時間或預算限制可能會讓您無法針對應用程式所支援的每個子文化特性建立一組資源。 相反地，您可以建立所有相關子文化特性可使用之父文化特性的單一附屬組件。 例如，您可以提供要求地區特定英文資源之使用者所擷取的單一英文附屬組件 (en)，以及要求地區特定德文資源之使用者的單一德文附屬組件 (de)。 例如，德國德文 (de-DE)、奧地利德文 (de-AT) 和瑞士德文 (de-CH) 的要求會改為使用德文附屬組件 (de)。 預設資源是最終後援，因此應該是大部分應用程式使用者所要求的資源，請小心選擇這些資源。 這種方式所部署的資源具有較少的特定文化特性，但可以大幅減少您應用程式的當地語系化成本。  
   

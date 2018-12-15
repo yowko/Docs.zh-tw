@@ -1,15 +1,13 @@
 ---
 title: dotnet pack 命令 - .NET Core CLI
 description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
-author: mairaw
-ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: 434f1c97af24d1417cd79edd52b63814fd4c6512
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/04/2018
+ms.openlocfilehash: 77770e715ef11595e8c95bb40be960138cd7ec61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840466"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149597"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -35,7 +33,7 @@ dotnet pack [-h|--help]
 ```
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet pack` 命令會建置專案，並建立 NuGet 套件。 此命令的結果是 NuGet 套件。 如果有 `--include-symbols` 選項，會建立另一個包含偵錯符號的套件。
 
@@ -49,65 +47,65 @@ dotnet pack [-h|--help]
 
 ## <a name="arguments"></a>引數
 
-`PROJECT`
+* **`PROJECT`**
 
-要封裝的專案。 它可以是 [csproj 檔案](csproj.md)或目錄的路徑。 如果未指定，則會預設為目前目錄。
+  要封裝的專案。 它可以是 [csproj 檔案](csproj.md)或目錄的路徑。 如果未指定，則會預設為目前目錄。
 
 ## <a name="options"></a>選項
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-定義組建組態。 預設值是 `Debug`。
+  定義組建組態。 預設值是 `Debug`。
 
-`--force`
+* **`--force`**
 
-即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。
+  即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。
 
-`-h|--help`
+* **`-h|--help`**
 
-印出命令的簡短說明。
+  印出命令的簡短說明。
 
-`--include-source`
+* **`--include-source`**
 
-將原始程式檔納入 NuGet 套件。 原始程式檔包含在 `nupkg` 中的 `src` 資料夾。
+  將原始程式檔納入 NuGet 套件。 原始程式檔包含在 `nupkg` 中的 `src` 資料夾。
 
-`--include-symbols`
+* **`--include-symbols`**
 
-產生符號 `nupkg`。
+  產生符號 `nupkg`。
 
-`--no-build`
+* **`--no-build`**
 
-不會在封裝前建置專案。 它也會隱含設定 `--no-restore` 旗標。
+  不會在封裝前建置專案。 它也會隱含設定 `--no-restore` 旗標。
 
-`--no-dependencies`
+* **`--no-dependencies`**
 
-忽略專案對專案參考，並且只還原根專案。
+  忽略專案對專案參考，並且只還原根專案。
 
-`--no-restore`
+* **`--no-restore`**
 
-執行命令時，不會執行隱含還原。
+  執行命令時，不會執行隱含還原。
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-將已建置的套件放置在指定的目錄中。
+  將已建置的套件放置在指定的目錄中。
 
-`--runtime <RUNTIME_IDENTIFIER>`
+* **`--runtime <RUNTIME_IDENTIFIER>`**
 
-指定要還原套件的目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
+  指定要還原套件的目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
 
-`-s|--serviceable`
+* **`-s|--serviceable`**
 
-在套件中設定可提供服務的旗標。 如需詳細資訊，請參閱 [.NET 部落格︰.NET 4.5.1 支援適用於 .NET NuGet 程式庫的 Microsoft 安全性更新 (英文)](https://aka.ms/nupkgservicing)。
+  在套件中設定可提供服務的旗標。 如需詳細資訊，請參閱 [.NET 部落格︰.NET 4.5.1 支援適用於 .NET NuGet 程式庫的 Microsoft 安全性更新 (英文)](https://aka.ms/nupkgservicing)。
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-在專案中定義 `$(VersionSuffix)` MSBuild 屬性的值。
+  在專案中定義 `$(VersionSuffix)` MSBuild 屬性的值。
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
 > [!NOTE]
 > Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新增至您的 .csproj 檔案：
@@ -119,74 +117,96 @@ dotnet pack [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-定義組建組態。 預設值是 `Debug`。
+  定義組建組態。 預設值為 `Debug`。
 
-`-h|--help`
+* **`-h|--help`**
 
-印出命令的簡短說明。
+  印出命令的簡短說明。
 
-`--include-source`
+* **`--include-source`**
 
-將原始程式檔納入 NuGet 套件。 原始程式檔包含在 `nupkg` 中的 `src` 資料夾。
+  將原始程式檔納入 NuGet 套件。 原始程式檔包含在 `nupkg` 中的 `src` 資料夾。
 
-`--include-symbols`
+* **`--include-symbols`**
 
-產生符號 `nupkg`。
+  產生符號 `nupkg`。
 
-`--no-build`
+* **`--no-build`**
 
-不會在封裝前建置專案。
+  不會在封裝前建置專案。
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-將已建置的套件放置在指定的目錄中。
+  將已建置的套件放置在指定的目錄中。
 
-`-s|--serviceable`
+* **`-s|--serviceable`**
 
-在套件中設定可提供服務的旗標。 如需詳細資訊，請參閱 [.NET 部落格︰.NET 4.5.1 支援適用於 .NET NuGet 程式庫的 Microsoft 安全性更新 (英文)](https://aka.ms/nupkgservicing)。
+  在套件中設定可提供服務的旗標。 如需詳細資訊，請參閱 [.NET 部落格︰.NET 4.5.1 支援適用於 .NET NuGet 程式庫的 Microsoft 安全性更新 (英文)](https://aka.ms/nupkgservicing)。
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-在專案中定義 `$(VersionSuffix)` MSBuild 屬性的值。
+  在專案中定義 `$(VersionSuffix)` MSBuild 屬性的值。
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
 ---
 
 ## <a name="examples"></a>範例
 
-封裝目前目錄中的專案：
+* 封裝目前目錄中的專案：
 
-`dotnet pack`
+  ```console
+  dotnet pack
+  ```
 
-封裝 `app1` 專案：
+* 封裝 `app1` 專案：
 
-`dotnet pack ~/projects/app1/project.csproj`
+  ```console
+  dotnet pack ~/projects/app1/project.csproj
+  ```
 
-封裝目前目錄中的專案，並將產生的套件放置到 `nupkgs` 資料夾中：
+* 封裝目前目錄中的專案，並將產生的套件放置到 `nupkgs` 資料夾中：
 
-`dotnet pack --output nupkgs`
+  ```console
+  dotnet pack --output nupkgs
+  ```
 
-將目前目錄中的專案封裝到 `nupkgs` 資料夾，並略過建置步驟︰
+* 將目前目錄中的專案封裝到 `nupkgs` 資料夾，並略過建置步驟︰
 
-`dotnet pack --no-build --output nupkgs`
+  ```console
+  dotnet pack --no-build --output nupkgs
+  ```
 
-在 *.csproj* 檔案中將專案的版本尾碼設定為 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`，封裝目前的專案並使用指定尾碼更新產生的套件版本︰
+* 在 *.csproj* 檔案中將專案的版本尾碼設定為 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`，封裝目前的專案並使用指定尾碼更新產生的套件版本︰
 
-`dotnet pack --version-suffix "ci-1234"`
+  ```console
+  dotnet pack --version-suffix "ci-1234"
+  ```
 
-使用 `PackageVersion` MSBuild 屬性將封裝版本設定為 `2.1.0`：
+* 使用 `PackageVersion` MSBuild 屬性將封裝版本設定為 `2.1.0`：
 
-`dotnet pack -p:PackageVersion=2.1.0`
+  ```console
+  dotnet pack -p:PackageVersion=2.1.0
+  ```
 
-將專案針對特定[目標 Framework](../../standard/frameworks.md) 進行封裝：
+* 將專案針對特定[目標 Framework](../../standard/frameworks.md) 進行封裝：
 
-`dotnet pack -p:TargetFrameworks=net45`
+  ```console
+  dotnet pack -p:TargetFrameworks=net45
+  ```
 
-封裝專案，並使用特定的執行階段 (Windows 10) 進行還原作業 (.NET Core SDK 2.0 及更新版本)：
+* 封裝專案，並使用特定的執行階段 (Windows 10) 進行還原作業 (.NET Core SDK 2.0 及更新版本)：
 
-`dotnet pack --runtime win10-x64`
+  ```console
+  dotnet pack --runtime win10-x64
+  ```
+
+* 使用 [.nuspec 檔案](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)來封裝專案：
+
+  ```console
+  dotnet pack  ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  ```

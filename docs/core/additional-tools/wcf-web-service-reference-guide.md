@@ -1,18 +1,18 @@
 ---
-title: Microsoft WCF Web Service Reference Provider 工具
+title: 新增 WCF Web Service Reference - .NET Core
 description: 新增 .NET Core 和 ASP.NET Core 專案功能的 Microsoft WCF Web Service Reference Provider 工具概觀，與 .NET Framework 專案的「新增服務參考」類似。
 author: mlacouture
 ms.author: johalex
 ms.date: 04/19/2018
-ms.custom: mvc
-ms.openlocfilehash: 416ca4dbedcf6e610aa5307c87934c0cb18be749
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: a1c5f389a5928a34ce1cbf13b2ef27a95b18d031
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215374"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148778"
 ---
-# <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Microsoft WCF Web Service Reference Provider 工具
+# <a name="use-the-wcf-web-service-reference-provider-tool"></a>使用 WCF Web Service Reference Provider 工具
 
 多年來，許多 Visual Studio 開發人員都享受[**新增服務參考**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)工具在其 .NET Framework 專案需要存取 Web 服務時所提供的生產力。  **WCF Web Service Reference** 工具是 Visual Studio 連線服務延伸模組，以針對 .NET Core 和 ASP.NET Core 專案提供「新增服務參考」功能這類體驗。 此工具可從目前方案中的 Web 服務、網路位置或 WSDL 檔案擷取中繼資料，且能產生與 .NET Core 相容的來源檔案，其中包含的 Windows Communication Foundation (WCF) 用戶端 Proxy 程式碼可讓您用於存取 Web 服務。
 
@@ -37,11 +37,11 @@ ms.locfileid: "33215374"
 
 [已連線的服務] 頁面隨即顯示 (如下圖所示)：
 
-![已連線的服務索引標籤](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
+![適用於 .NET Core 的 [Visual Studio 連線服務] 索引標籤](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
 
 2. 在 [已連線的服務] 頁面上，按一下 [Microsoft WCF Web Service Reference Provider]。 這會啟動 [設定 WCF Web 服務參考精靈]：
 
-![服務端點索引標籤](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
+![適用於 .NET Core 的 [Visual Studio 服務端點] 索引標籤](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
 
 3. 選取服務。
 
@@ -58,7 +58,7 @@ ms.locfileid: "33215374"
 
 4. [資料類型選項] 表單可讓您精簡所產生的服務參考組態設定：
 
-![資料類型選項索引標籤](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
+![適用於 .NET Core 的 [Visual Studio 資料類型選項] 索引標籤](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
 
 > [!NOTE]
 > 其中一個專案的參考組件內定義服務參考程式碼產生所需的資料類型時，[重複使用參考組件中的類型] 核取方塊選項十分有用。  請務必重複使用這些現有資料類型，避免造成編譯時期類型衝突或執行階段問題。
@@ -74,7 +74,7 @@ ms.locfileid: "33215374"
 * 在名為 *reference.cs* 的檔案中產生服務參考程式碼，並將它新增至 [已連線的服務] 節點下方的專案。 
 * 使用在目標平台上編譯和執行所需的 NuGet 套件參考來更新專案檔 (.csproj)。
 
-![進度視窗](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
+![Visual Studio 進度視窗](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
 完成這些程序時，您可以建立已產生 WCF 用戶端類型的執行個體，並叫用服務作業。
 

@@ -1,15 +1,13 @@
 ---
 title: dotnet msbuild 命令 - .NET Core CLI
 description: dotnet msbuild 命令提供對 MSBuild 命令列的存取。
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 76165590478b0e76d19d546c87e012da4716b6db
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.date: 12/03/2018
+ms.openlocfilehash: 93471ded9614502ab89d5afb19dd9992f068ef80
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583702"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128043"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
@@ -23,26 +21,36 @@ ms.locfileid: "48583702"
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet msbuild` 命令可存取完整功能的 MSBuild。
 
-命令與現有的 MSBuild 命令列用戶端具有完全相同的功能。 選項完全一樣。 如需可用選項的詳細資訊，請參閱 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。
+此命令與現有的 MSBuild 命令列用戶端僅針對 SDK 樣式專案具有完全相同的功能。 選項完全一樣。 如需可用選項的詳細資訊，請參閱 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。
+
+[dotnet build](dotnet-build.md) 命令等同於 `dotnet msbuild -restore -target:Build`。 `dotnet build` 較常用來建置專案，但 `dotnet msbuild` 可提供您較多的控制權。 例如，如果您有想要執行的特定目標 (但不執行建置目標)，您可能會想要使用 `dotnet msbuild`。
 
 ## <a name="examples"></a>範例
 
-建置專案和其相依性：
+* 建置專案和其相依性：
 
-`dotnet msbuild`
+  ```console
+  dotnet msbuild
+  ```
 
-使用發行組態來建置專案和其相依性︰
+* 使用發行組態來建置專案和其相依性︰
 
-`dotnet msbuild -p:Configuration=Release`
+  ```console
+  dotnet msbuild -p:Configuration=Release
+  ```
 
-執行發行目標並針對 `osx.10.11-x64` RID 發行：
+* 執行發行目標並針對 `osx.10.11-x64` RID 發行：
 
-`dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64`
+  ```console
+  dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64
+  ```
 
-查看整個專案和 SDK 包含的所有目標：
+* 查看整個專案和 SDK 包含的所有目標：
 
-`dotnet msbuild -pp`
+  ```console
+  dotnet msbuild -pp
+  ```

@@ -5,19 +5,20 @@ author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: adadfc0358814f4600255aac7076f9ba6fbb4feb
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f8088dadbe92c10e2aad9cd5c3ce289612bd1a28
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308401"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131504"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>使用 dotnet test 與 NUnit 為 .NET Core 中的 F# 程式庫進行單元測試
 
 本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>必要條件 
-- [.NET Core SDK 2.1 (2.1.400 版)](https://www.microsoft.com/net/download) 或更新版本。 
+## <a name="prerequisites"></a>必要條件
+
+- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更新版本。
 - 您選擇的文字編輯器或程式碼編輯器。
 
 ## <a name="creating-the-source-project"></a>建立來源專案
@@ -75,7 +76,7 @@ dotnet sln add .\MathService\MathService.fsproj
 dotnet new nunit -lang F#
 ```
 
-這樣會建立將 NUnit 用作為測試架構的測試專案。 產生的範本會在 *MathServiceTests.fsproj* 中設定測試執行器：
+如此會建立將 NUnit 用作為測試架構的測試專案。 產生的範本會在 *MathServiceTests.fsproj* 中設定測試執行器：
 
 ```xml
 <ItemGroup>

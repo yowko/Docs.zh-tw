@@ -1,20 +1,21 @@
 ---
-title: 使用 CLI 工具部署.NET Core 應用程式
-description: 了解使用命令列介面 (CLI) 工具的 .NET Core 應用程式部署
+title: 使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
+description: 了解使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454443"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151092"
 ---
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
+# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
 
 您可以將 .NET Core 應用程式部署為「與 Framework 相依的部署」，其中包含您的應用程式二進位檔，但取決於目標系統上是否有 .NET Core 存在，也可以部署為「自封式部署」，其中包含您的應用程式和 .NET Core 二進位檔。 如需概觀，請參閱 [.NET Core 應用程式部署](index.md)。
 

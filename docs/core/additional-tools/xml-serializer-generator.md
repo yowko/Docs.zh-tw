@@ -1,17 +1,17 @@
 ---
-title: 在 .NET Core 上使用 Microsoft XML 序列化程式產生器
-description: Microsoft XML 序列化程式產生器的概觀。
+title: Microsoft XML 序列化程式產生器 - .NET Core
+description: Microsoft XML 序列化程式產生器的概觀。 您可以使用 XML 序列化程式產生器，為專案中包含的類型產生 XML 序列化組件。
 author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 98d85821784757db903c97e240c55a3d7bb656d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 3712ac35a9e08b04a0f555642f43055e9e6232e2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214552"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151755"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程式產生器
 
@@ -30,7 +30,7 @@ ms.locfileid: "33214552"
 
 完成本教學課程：
 
-* 安裝 [.NET Core SDK 2.1.3 或更新版本](https://www.microsoft.com/net/download)
+* 安裝 [.NET Core 2.1 SDK 或更新版本](https://www.microsoft.com/net/download)。
 * 如果您還沒有這麼做，請安裝您慣用的程式碼編輯器。
 
 > [!TIP]

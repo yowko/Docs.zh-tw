@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "50195966"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
@@ -114,6 +114,8 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 請注意，在這兩個範例中，`ref` 關鍵字必須用在兩個位置，否則編譯器會產生錯誤 CS8172「無法使用值將傳址變數初始化」。
 
+從 C# 7.3 開始，`foreach` 陳述式的反覆運算變數可以是 ref 區域變數或 ref readonly 區域變數。 如需詳細資訊，請參閱 [foreach 陳述式](foreach-in.md)一文。
+
 ## <a name="ref-readonly-locals"></a>ref readonly 區域變數
 
 ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref readonly` 且使用 `return ref` 的方法或屬性傳回)。 `ref readonly` 區域變數結合了 `ref` 區域變數的屬性和 `readonly` 變數：它是受指派之儲存體的別名，且無法修改。 
@@ -152,6 +154,9 @@ ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref re
 ## <a name="see-also"></a>另請參閱
 
 - [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)  
+- [ref 傳回值和 ref 區域變數](../../programming-guide/classes-and-structs/ref-returns.md)
+- [條件 ref 運算式](../operators/conditional-operator.md#conditional-ref-expression)
+- [ref 指派運算子](../operators/assignment-operator.md#ref-assignment-operator)
 - [傳遞參數](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [方法參數](method-parameters.md)  
 - [C# 參考](../index.md)  

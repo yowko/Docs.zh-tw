@@ -3,12 +3,12 @@ title: 利用 NUnit 與 .NET Core 進行 C# 單元測試
 description: 使用 dotnet test 與 NUnit 逐步建置解決方案範例的互動式體驗，了解 C# 與 .NET Core 中的單元測試概念。
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 253e07c16740a39566cf37ee5742a32342c78c49
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d33a223a5cfc7f40f251175a4e88076976bd63ed
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746740"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146940"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>利用 NUnit 與 .NET Core 進行 C# 單元測試
 
@@ -16,7 +16,7 @@ ms.locfileid: "45746740"
 
 ## <a name="prerequisites"></a>必要條件
 
-- [.NET Core SDK 2.1 (2.1.400 版)](https://www.microsoft.com/net/download) 或更新版本。
+- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更新版本。
 - 您選擇的文字編輯器或程式碼編輯器。
 
 ## <a name="creating-the-source-project"></a>建立來源專案

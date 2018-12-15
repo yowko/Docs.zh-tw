@@ -1,17 +1,18 @@
 ---
-title: .NET Core 版本選取
-description: 了解 .NET Core 如何尋找及選擇適合您程式的執行階段版本。
+title: 選取要使用的 .NET Core 版本
+description: 了解 .NET Core 如何自動為您的程式尋找及選擇執行階段版本。 此外，本文還會教導您如何強制使用特定版本。
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841536"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127234"
 ---
-# <a name="net-core-version-selection"></a>.NET Core 版本選取
+# <a name="select-the-net-core-version-to-use"></a>選取要使用的 .NET Core 版本
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
@@ -80,7 +81,7 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 
 ## <a name="framework-dependent-apps-roll-forward"></a>架構相依應用程式向前復原
 
-您可以透過 [`dotnet run`](../tools/dotnet-run.md) 從原始檔執行應用程式。 `dotnet run` 會同時建置及執行應用程式。 `dotnet` 可執行檔是開發環境中應用程式的**主機**。
+當您使用 [`dotnet run`](../tools/dotnet-run.md) 從來源執行應用程式、使用 [`dotnet myapp.dll`](../tools/dotnet.md#description) 從[**架構相依部署**](../deploying/index.md#framework-dependent-deployments-fdd)執行應用程式，或使用 `myapp.exe` 從[**架構相依可執行檔**](../deploying/index.md#framework-dependent-executables-fde)執行應用程式時，`dotnet` 可執行檔會是該應用程式的**主機**。
 
 該主機會選擇電腦上最新安裝的修補程式版本。 例如，如果您在專案檔中指定 `netcoreapp2.0`，且 `2.0.4` 是最新安裝的 .NET 執行階段，則會使用 `2.0.4` 執行階段。
 
@@ -104,7 +105,7 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 
 您可以將應用程式發佈為[**獨立散發**](../deploying/index.md#self-contained-deployments-scd)。 此方法會將 .NET Core 執行階段和程式庫與您的應用程式配套。 獨立部署不會相依於執行階段環境。 執行階段版本選取發生於發佈時，而不是執行時。
 
-發佈過程會選取指定執行階段系列的最新修補程式版本。 例如，如果 .NET Core 2.0.4 是 .NET Core 2.0 執行階段系列中的最新修補程式版本，`dotnet publish` 會選取此版本。 目標 Framework (包括最新安裝的安全性修補程式) 會隨著應用程式封裝。
+發佈過程會選取指定執行階段系列的最新修補程式版本。 例如，如果 .NET Core 2.0.4 是 .NET Core 2.0 執行階段系列中的最新修補程式版本，`dotnet publish` 會選取此版本。 目標 Framework (包括最新安裝的安全性修補程式) 會封裝於應用程式。
 
 如果不符合針對應用程式指定的最低版本，就會發生錯誤。 `dotnet publish` 會繫結至最新的執行階段修補程式版本 (指定的主要.次要版本系列內)。 `dotnet publish` 不支援 `dotnet run` 的向前復原語意。 如需修補程式和獨立部署的詳細資訊，請參閱部署 .NET Core 應用程式中有關[執行階段修補程式選取](../deploying/runtime-patch-selection.md)的文章。
 

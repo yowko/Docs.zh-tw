@@ -1,17 +1,18 @@
 ---
-title: Microsoft WCF dotnet-svcutil 工具
+title: WCF svcutil 工具概觀 - .NET Core
 description: Microsoft WCF dotnet-svcutil 工具的概觀，此工具可新增 .NET Core 和 ASP.NET Core 專案功能，與 .NET Framework 專案的 WCF svcutil 工具類似。
 author: mlacouture
 ms.author: jralexander
 ms.date: 08/20/2018
-ms.openlocfilehash: bb4d8e5f3997318b720535b0f1e07fc33d13338a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 7372d88a9c1d77ec0b77e9d82fe5b24ebc357a74
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511882"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126012"
 ---
-# <a name="microsoft-wcf-dotnet-svcutil-tool"></a>Microsoft WCF dotnet-svcutil 工具
+# <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>適用於 .NET Core 的 WCF dotnet-svcutil 工具
 
 Windows Communication Foundation (WCF) **dotnet-svcutil** 工具是一種 .NET Core CLI 工具，可從網路位置上的 Web 服務或從 WSDL 檔案擷取中繼資料，並產生包含可用來存取 Web 服務作業的用戶端 Proxy 方法的 WCF 類別。
 
@@ -24,7 +25,7 @@ Windows Communication Foundation (WCF) **dotnet-svcutil** 工具是一種 .NET C
 
 ## <a name="prerequisites"></a>必要條件
 
-* [.NET Core SDK](https://www.microsoft.com/net/download) \(英文\) 1.0.4 版或更新版本
+* [.NET Core SDK](https://dotnet.microsoft.com/download) \(英文\) 1.0.4 版或更新版本
 * 您慣用的程式碼編輯器
 
 ## <a name="getting-started"></a>使用者入門

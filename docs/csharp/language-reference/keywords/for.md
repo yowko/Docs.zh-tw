@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6584889f527e1459090bea322720f0cd8d9694f6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511724"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149233"
 ---
 # <a name="for-c-reference"></a>for (C# 參考)
 
-指定的運算式評估為 `true` 時，`for` 陳述式會執行陳述式或陳述式區塊。
+當指定的布林運算式評估為 `true` 時，`for` 陳述式會執行某個陳述式或陳述式區塊。
 
 您可以在 `for` 陳述式區塊內的任何位置，使用 [break](break.md) 陳述式跳出迴圈，或使用 [continue](continue.md) 陳述式逐步執行到迴圈中的下一個反覆運算。 您也可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 陳述式結束 `for` 迴圈。
 
@@ -105,14 +105,12 @@ i++
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的 [for 陳述式](~/_csharplang/spec/statements.md#the-for-statement)一節。
 
 ## <a name="see-also"></a>另請參閱
 
-- [for 陳述式 (C# 語言規格)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [foreach、in](foreach-in.md)
-- [for 陳述式 (C++)](/cpp/cpp/for-statement-cpp)
 - [反覆運算陳述式](iteration-statements.md)
+- [foreach、in](foreach-in.md)

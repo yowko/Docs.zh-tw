@@ -2,19 +2,19 @@
 title: 了解如何使用一般清單類型管理資料收集
 metadata:
   title: 資料收集 - C# 互動式教學課程簡介
-  description: 在此教學課程中，您將使用瀏覽器以互動方式學習 C#。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。
+  description: 在本教學課程中，您將使用瀏覽器以互動方式學習 C#。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。
   audience: Developer
   ms.custom: mvc
   ms.date: 10/23/2018
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 6b7a00a0d7ea17ab48e673b735bdd1a77328c099
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: 1d4ae646dfc4c96db77bee69d0b7fe0876cce85d
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200148"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53129008"
 items:
 - durationInMinutes: 1
   content: >
@@ -199,7 +199,13 @@ items:
   durationInMinutes: 3
   content: "您是否有得到與下列程式碼類似的內容？\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\n在迴圈每次反覆運算時，您都必須取清單中的最後兩個整數，將它們加總，並將該值新增至清單。 迴圈會持續重複，直到將 20 個項目新增至清單為止。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - content: >-
-    您已經完成清單教學課程。 此教學課程是最後的互動式教學課程。 您可以在自己的開發環境中，繼續進行這些教學課程。 了解[本機開發](local-environment.md)的基本概念，然後選擇一個教學課程。 您可以嘗試這個相同的練習、直接移至下一個教學課程，或從 [C# 中的數字](numbers-in-csharp-local.md)教學課程重新開始。
+    您已經完成清單互動式教學課程。 那是對於 C# 互動式教學課程的最終簡介。 您可以瀏覽 [.NET 網站](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) \(英文\) 以下載 .NET Core SDK、在您的機器上建立專案，並繼續撰寫程式碼。 「繼續學習」步驟會帶您回到這些教學課程，以便在您的機器上建置專案。
 
 
-    您可以在關於[集合](../../../standard/collections/index.md)的 [.NET 指南](../../../standard/index.md)主題中，深入了解 `List` 類型的使用方式。 您也能學習到許多其他的集合類型。
+    您可以在下列主題中深入了解 [.NET 集合](../../../standard/collections/index.md)：
+
+    - [選取集合型別](../../../standard/collections/selecting-a-collection-class.md)
+
+    - [常用的集合型別](../../../standard/collections/commonly-used-collection-types.md)
+
+    - [何時使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)

@@ -2,7 +2,7 @@
 title: 透過分支和迴圈陳述式了解條件式邏輯
 metadata:
   title: 分支和迴圈 - C# 互動式教學課程簡介
-  description: 在此教學課程中，您將使用瀏覽器以互動方式學習有關 C# 的分支和迴圈。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看編譯和執行程式碼的結果。
+  description: 在本教學課程中，您將使用瀏覽器以互動方式學習有關 C# 的分支和迴圈。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看編譯和執行程式碼的結果。
   audience: Developer
   level: Beginner
   ms.custom: mvc
@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: interpolated-strings.yml
   nextTutorialTitle: C# 中的字串插補
-  ms.openlocfilehash: 492922177cf213400629fac79da30a51bdbf46e5
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: a3db445f522bc3360629c17386cad4423fcd1b43
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50201660"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53147157"
 items:
 - durationInMinutes: 1
   content: >
@@ -29,10 +29,10 @@ items:
   content: "\n若要在 True 和 False 分支中執行不同的程式碼，則必須建立可在條件為 False 時執行的 `else` 分支。 試試這個：\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n只有當測試的條件為 `false` 時，才會執行 `else` 關鍵字之後的陳述式。 將 `if` 和 `else` 結合布林值條件，就可提供您需要的所有功能。\n\n> [!IMPORTANT]\n> `if` 和 `else` 陳述式之下的縮排是為了方便人類閱讀。\n> C# 語言不會將縮排或空白字元視為有意義的內容。 `if` 或 `else` 關鍵字之後的陳述式將會根據條件來執行。 此教學課程中的所有範例都遵循常見的實務，根據陳述式的控制流程縮排程式碼行。\n\n因為縮排沒有意義，當您要依條件執行的區塊中有超過一個陳述式時，就需要使用 `{` 和 `}` 來表示。 C# 程式設計人員通常會在所有的 `if` 和 `else` 子句上使用這些大括號。 下列範例與您剛剛所建立的內容相同。 試試看。\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> 本教學課程的其餘部分，程式碼範例都會遵循常見的做法，在程式碼中包含大括號。\n\n您可以測試更複雜的條件：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a > b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is greater than the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not greater than the second\");\n}\n```\n\n`&&` 代表「且」。 這表示兩個條件都必須為 True，才會執行 True 分支中的陳述式。  這些範例也示範在每個條件式分支中可以有多個陳述式，前提是必須將陳述式放在 `{` 和 `}` 之中。\n\n您也可以使用 `||` 來代表「或」：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a > b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is greater than the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not greater than the second\");\n}\n```\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: 使用迴圈重複執行作業
   durationInMinutes: 6
-  content: "若要建立較大型的程式，另一個重要的概念是**迴圈**。 您將使用迴圈來重複要執行一次以上的陳述式。 在互動式視窗中嘗試這個程式碼：\n\n```csharp\nint counter = 0;\nwhile (counter < 10)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n}\n```\n\n`while` 陳述式會檢查條件，並執行 `while` 之後的陳述式。 它會重複檢查條件並執行那些陳述式，直到條件為 False 為止。\n\n在此範例中有一個新的運算子。 `counter` 變數之後的 `++` 是**遞增**運算子。 它會將 1 加到 counter (計數器) 上，並將該值儲存在 counter 變數中。\n\n> [!IMPORTANT]\n> 請確定 `while` 迴圈條件在您執行程式碼時會切換至 False。 否則，您建立的**無限迴圈**程式永遠不會結束。 我們不會示範這個部分，因為執行程式碼的引擎將會逾時，而您不會看到程式有任何輸出。\n\n`while` 迴圈會先測試條件，然後才執行 `while` 之後的程式碼。 `do` ... `while` 迴圈會先執行程式碼，然後才檢查條件。 程式碼看起來像這樣：\n\n```csharp\nint counter = 0;\ndo\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n} while (counter < 10);\n```\n\n此 `do` 迴圈和稍早的 `while` 迴圈有相同的功能。 \n\n讓我們繼續至最後一個迴圈陳述式。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+  content: "若要建立較大型的程式，另一項重要的概念是**迴圈**。 您將使用迴圈來重複要執行一次以上的陳述式。 在互動式視窗中嘗試這個程式碼：\n\n```csharp\nint counter = 0;\nwhile (counter < 10)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n}\n```\n\n`while` 陳述式會檢查條件，並執行 `while` 之後的陳述式。 它會重複檢查條件並執行那些陳述式，直到條件為 False 為止。\n\n在此範例中有一個新的運算子。 `counter` 變數之後的 `++` 是**遞增**運算子。 它會將 1 加到 counter (計數器) 上，並將該值儲存在 counter 變數中。\n\n> [!IMPORTANT]\n> 請確定 `while` 迴圈條件在您執行程式碼時會切換至 False。 否則，您建立的**無限迴圈**程式永遠不會結束。 我們不會示範這個部分，因為執行程式碼的引擎將會逾時，而您不會看到程式有任何輸出。\n\n`while` 迴圈會先測試條件，然後才執行 `while` 之後的程式碼。 `do` ... `while` 迴圈會先執行程式碼，然後才檢查條件。 程式碼看起來像這樣：\n\n```csharp\nint counter = 0;\ndo\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n} while (counter < 10);\n```\n\n此 `do` 迴圈和稍早的 `while` 迴圈有相同的功能。 \n\n讓我們繼續至最後一個迴圈陳述式。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: 使用 for 迴圈
   durationInMinutes: 5
-  content: "您在 C# 程式碼中常看到的另一個迴圈陳述式是 `for` 迴圈。 在互動式視窗中嘗試這個程式碼：\n\n```csharp\nfor(int counter = 0; counter < 10; counter++)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n} \n```\n\n這與先前使用的 `while` 迴圈和 `do` 迴圈有相同的功能。 `for` 陳述式有三個部分來控制其運作方式。 \n\n第一個部分是 **for 初始設定式**：`for counter = 0;` 宣告 `counter` 是迴圈變數，然後將它的初始值設為 `0`。\n\n中間的部分是 **for 條件**：`counter < 10` 宣告此 `for` 迴圈只要 counter (計數器) 的值小於 10，就會繼續執行。\n\n最後一個部分是 **for 迭代器**：`counter++` 會指定在執行 `for` 陳述式之後的區塊後，如何修改迴圈變數。 在這裡，它指定 `counter` 應該在每次執行區塊之後遞增 1。\n\n您可以自行實驗這些部分。 請嘗試下列各項：\n\n- 變更初始設定式，以不同的值開始。\n- 變更條件，以不同的值停止。\n\n當您完成後，我們會繼續使用您學到的內容來撰寫一些程式碼。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+  content: "您在 C# 程式碼中常看到的另一個迴圈陳述式是 `for` 迴圈。 在互動式視窗中嘗試這個程式碼：\n\n```csharp\nfor(int counter = 0; counter < 10; counter++)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n} \n```\n\n這與先前使用的 `while` 迴圈和 `do` 迴圈有相同的功能。 `for` 陳述式有三個部分來控制其運作方式。 \n\n第一個部分是 **for 初始設定式**：`int counter = 0;` 宣告 `counter` 是迴圈變數，然後將它的初始值設為 `0`。\n\n中間的部分是 **for 條件**：`counter < 10` 宣告此 `for` 迴圈只要 counter (計數器) 的值小於 10，就會繼續執行。\n\n最後一個部分是 **for 迭代器**：`counter++` 會指定在執行 `for` 陳述式之後的區塊後，如何修改迴圈變數。 在這裡，它指定 `counter` 應該在每次執行區塊之後遞增 1。\n\n您可以自行實驗這些部分。 請嘗試下列各項：\n\n- 變更初始設定式，以不同的值開始。\n- 變更條件，以不同的值停止。\n\n當您完成後，我們會繼續使用您學到的內容來撰寫一些程式碼。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: 結合分支和迴圈
   durationInMinutes: 12
   content: >
@@ -80,4 +80,17 @@ items:
 
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - title: 恭喜您！
-  content: "您已經完成＜分支和迴圈＞教學課程。 \n\n您可以在自己的開發環境中，繼續進行這些教學課程。 了解[本機開發](local-environment.md)的基本概念，然後選擇一個教學課程。 您可以嘗試這個相同的練習、直接移至下一個教學課程，或從系列開頭的 [C# 中的數字](numbers-in-csharp-local.md)教學課程重新開始。\n\n您可以在下列主題中深入了解這些概念：\n\n[If 和 else 陳述式](../../language-reference/keywords/if-else.md)   \n[While 陳述式](../../language-reference/keywords/while.md)   \n[Do 陳述式](../../language-reference/keywords/do.md)   \n[For 陳述式](../../language-reference/keywords/for.md)"
+  content: >-
+    您已經完成＜分支和迴圈＞互動式教學課程。 您可以按一下以下的**內插字串**連結來啟動下一個互動式教學課程，或者您可以瀏覽 [.NET 網站](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) \(英文\) 以下載 .NET Core SDK、在您的機器上建立專案，並繼續撰寫程式碼。 「繼續學習」步驟會帶您回到這些教學課程。
+
+
+    您可以在下列主題中深入了解這些概念：
+
+
+    - [If 和 else 陳述式](../../language-reference/keywords/if-else.md)
+
+    - [While 陳述式](../../language-reference/keywords/while.md)
+
+    - [Do 陳述式](../../language-reference/keywords/do.md)
+
+    - [For 陳述式](../../language-reference/keywords/for.md)

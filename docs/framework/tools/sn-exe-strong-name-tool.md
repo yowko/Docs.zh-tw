@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5169a0d0c28be4337bb57f8bcc70e78b40e4fa9e
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: 213c27a4ddfa6134c4aaa8a76c71309a6496998d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270470"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151131"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (強式名稱工具)
 強式名稱工具 (Sn.exe) 可幫助您使用[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署組件。 Sn.exe 提供了金鑰管理、簽章產生和簽章驗證的選項。  
@@ -28,9 +28,9 @@ ms.locfileid: "36270470"
  如需強式命名和強式名稱組件的詳細資訊，請參閱[強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)和[如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。  
   
  強式名稱工具會隨 Visual Studio 自動安裝。 若要啟動這項工具，請使用開發人員命令提示字元 (或 Windows 7 中的 Visual Studio 命令提示字元)。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
-  
+
 > [!NOTE]
->  在 64 位元電腦上，請使用 Visual Studio 命令提示字元執行 Sn.exe 的 32 位元版本，並且使用 Visual Studio x64 Win64 命令提示字元執行 64 位元版本。  
+>  在 64 位元電腦上，請使用 Visual Studio 命令提示字元執行 Sn.exe 的 32 位元版本，並且使用 Visual Studio x64 Win64 命令提示字元執行 64 位元版本。 
   
  在命令提示字元下輸入下列命令：  
   
@@ -42,7 +42,7 @@ sn [-quiet][option [parameter(s)]]
   
 #### <a name="parameters"></a>參數  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**-a** *identityKeyPairFile* *signaturePublicKeyFile*|產生 <xref:System.Reflection.AssemblySignatureKeyAttribute> 資料，將識別金鑰從檔案移轉到簽章金鑰。|  
 |**-ac** *identityPublicKeyFile* *identityKeyPairContainer* *signaturePublicKeyFile*|產生 <xref:System.Reflection.AssemblySignatureKeyAttribute> 資料，將識別金鑰從金鑰容器移轉到簽章金鑰。|  
@@ -85,6 +85,8 @@ sn [-quiet][option [parameter(s)]]
 > [!NOTE]
 >  若為寫入像是登錄這類受保護資源的參數 (例如，–**Vr)**，請以系統管理員身分執行 SN.exe。  
   
+強式名稱工具假設會使用 `AT_SIGNATURE` 演算法識別碼來產生公開/私密金鑰組。 使用 `AT_KEYEXCHANGE` 演算法產生的公開/私密金鑰組會產生錯誤。 
+
 ## <a name="examples"></a>範例  
  下列命令會建立新的隨機金鑰組，並將它存放到 `keyPair.snk` 中。  
   

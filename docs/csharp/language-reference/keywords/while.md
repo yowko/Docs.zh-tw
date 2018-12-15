@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: e3e9493b5371fbd6f53a779ba73743efc6d6e05b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f465bc98c0348c3b3522c062cf3be5ed90ee414a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514056"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143502"
 ---
 # <a name="while-c-reference"></a>while (C# 參考)
 
-指定的運算式評估為 `true` 時，`while` 陳述式會執行陳述式或陳述式區塊。 運算式是在每次執行迴圈之前評估，因此 `while` 迴圈會執行零次以上。 這與 [do](do.md) 迴圈不同，此迴圈會執行一次或多次。
+當指定的布林運算式評估為 `true` 時，`while` 陳述式會執行某個陳述式或陳述式區塊。 運算式是在每次執行迴圈之前評估，因此 `while` 迴圈會執行零次以上。 這與 [do](do.md) 迴圈不同，此迴圈會執行一次或多次。
 
 您可以使用 [break](break.md) 陳述式在 `while` 陳述式區塊的任一點中斷迴圈。
 
@@ -32,13 +32,12 @@ ms.locfileid: "43514056"
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的 [while 陳述式](~/_csharplang/spec/statements.md#the-while-statement)一節。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)  
 - [C# 程式設計指南](../../programming-guide/index.md)  
 - [C# 關鍵字](index.md)  
-- [while 陳述式 (C++)](/cpp/cpp/while-statement-cpp)  
 - [反覆運算陳述式](iteration-statements.md)  
 - [do 陳述式](do.md)  

@@ -4,12 +4,12 @@ description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f2ab476ee20ae90a84de7a6ccc76ce72738c1343
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203952"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143697"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -65,7 +65,7 @@ ms.locfileid: "50203952"
 ```
 將此屬性設定為 `false` 會覆寫隱含包含項目，而且其行為會還原成必須在專案中指定預設 Glob 的舊版 SDK。 
 
-此變更不會修改其他包含項目的主要機制。 不過，如果您想要指定某些檔案由應用程式發行，您仍然可以使用 *csproj* 中已知的機制來執行此作業 (例如 `<Content>` 項目)。
+這項變更不會修改其他包含項目的主要機制。 不過，如果您想要指定某些檔案由應用程式發行，您仍然可以使用 *csproj* 中已知的機制來執行這項作業 (例如 `<Content>` 項目)。
 
 `<EnableDefaultCompileItems>` 只會停用 `Compile` GLOB，而不會影響隱含 `None` GLOB 這類其他 GLOB，後者也會套用至 \*.cs 項目。 因此，方案總管會繼續將 \*.cs 項目顯示為包含為 `None` 項目之專案的一部分。 透過類似的方式，您可以使用 `<EnableDefaultNoneItems>` 停用隱含 `None` GLOB。
 
@@ -75,9 +75,6 @@ ms.locfileid: "50203952"
     <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
-
-### <a name="recommendation"></a>建議
-使用 csproj 時，建議您從專案中移除預設 Glob，並只使用 Glob 新增您的應用程式/程式庫在各種情況下 (例如執行階段與 NuGet 套件) 所需之成品的檔案路徑。
 
 ## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>如何以 MSBuild 查看專案的方式查看整個專案
 
@@ -178,10 +175,10 @@ ms.locfileid: "50203952"
 ```
 
 ## <a name="nuget-metadata-properties"></a>NuGet 中繼資料屬性
-隨著改為使用 MSbuild，我們已經將套件 NuGet 套件時使用的輸入中繼資料從 *project.json* 移動到 *.csproj* 檔。 此輸入是 MSBuild 屬性，因此必須移至 `<PropertyGroup>` 群組。 使用 `dotnet pack` 命令或屬於 SDK 一部分的 `Pack` MSBuild 目標時，會將下列的屬性清單當成封裝處理序的輸入使用。 
+隨著改為使用 MSbuild，我們已經將封裝 NuGet 套件時使用的輸入中繼資料從 *project.json* 移動到 *.csproj* 檔。 此輸入是 MSBuild 屬性，因此必須移至 `<PropertyGroup>` 群組。 使用 `dotnet pack` 命令或屬於 SDK 一部分的 `Pack` MSBuild 目標時，會將下列的屬性清單當成封裝處理序的輸入使用。 
 
 ### <a name="ispackable"></a>IsPackable
-布林值，指定是否可封裝專案。 預設值是 `true`。 
+布林值，指定是否可封裝專案。 預設值為 `true`。 
 
 ### <a name="packageversion"></a>PackageVersion
 指定所產生之套件的版本。 接受所有形式的 NuGet 版本字串。 預設為 `$(Version)` 的值，也就是專案中的屬性 `Version`。 
@@ -195,8 +192,12 @@ ms.locfileid: "50203952"
 ### <a name="authors"></a>作者
 以分號分隔的套件作者清單，與 nuget.org 上的設定檔名稱相符。這些名稱會顯示在 nuget.org 的 NuGet 組件庫中，並用來交互參照相同作者的其他套件。
 
-### <a name="description"></a>描述
+### <a name="packagedescription"></a>PackageDescription
+
 UI 顯示中的套件詳細描述。
+
+### <a name="description"></a>說明
+組件的完整描述。 如果未指定 `PackageDescription`，則此屬性也會用來作為套件的描述。
 
 ### <a name="copyright"></a>Copyright
 套件的著作權詳細資料。

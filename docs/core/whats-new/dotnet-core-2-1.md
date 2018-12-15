@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120943"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127546"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -69,7 +69,7 @@ ms.locfileid: "49120943"
 
 .NET Core 2.1 支援*通用工具*，亦即從命令列以通用方式提供的自訂工具。 舊版 .NET Core 的擴充性模型，只能透過使用 [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) 來使自訂工具可供每個專案使用。
 
-若要安裝通用工具，您需使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如: 
+若要安裝通用工具，您需使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如：
 
 ```console
 dotnet tool install -g dotnetsay
@@ -79,7 +79,7 @@ dotnet tool install -g dotnetsay
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>使用 `dotnet tool` 命令來管理工具
 
-在 .NET Core SDK 2.1 (2.1.300 版) 中，所有工具作業都是使用 `dotnet tool` 命令。 有下列選項可供使用：
+在 .NET Core 2.1 SDK 中，所有工具作業都使用 `dotnet tool` 命令。 有下列選項可供使用：
 
 - 使用 [`dotnet tool install`](../tools/dotnet-tool-install.md) 來安裝工具。
 
@@ -122,7 +122,7 @@ dotnet tool install -g dotnetsay
 
 獨立發佈會仰賴 NuGet.org 上的執行階段版本。您的電腦上不需要有服務執行階段。
 
-使用 .NET Core 2.0 SDK 時，獨立應用程式會搭配 .NET Core 2.0.0 執行階段一起發佈，除非有透過 `RuntimeFrameworkVersion` 屬性指定其他版本。 透過這個新行為，您將不再需要設定此屬性來為獨立應用程式選取較新的執行階段版本。 從現在起，最簡單的方法將會是一律搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈。
+使用 .NET Core 2.0 SDK 時，獨立應用程式會搭配 .NET Core 2.0.0 執行階段一起發佈，除非有透過 `RuntimeFrameworkVersion` 屬性指定其他版本。 藉由這項新行為，您將不再需要設定此屬性來為獨立應用程式選取較新的執行階段版本。 從現在起，最簡單的方法將會是一律搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈。
 
 如需詳細資訊，請參閱[獨立式部署執行階段向前復原](../deploying/runtime-patch-selection.md)。
 ## <a name="windows-compatibility-pack"></a>Windows 相容性套件
@@ -133,7 +133,7 @@ dotnet tool install -g dotnetsay
 
 .NET Core 併入新的 JIT 編譯器技術，稱為「階層式編譯」(也稱為「調適型最佳化」)，可大幅地提升效能。 階層式編譯是可選擇加入的設定。
 
-由 JIT 編譯器所執行的其中一個重要工作，是將程式碼的執行最佳化。 不過，針對很少使用的程式碼路徑，編譯器將程式碼最佳化的時間，可能會比執行階段執行未最佳化程式碼的時間還要久。 階層式編譯會在 JIT 編譯中引入兩個階段：
+由 JIT 編譯器所執行的其中一項重要工作，是將程式碼的執行最佳化。 不過，針對很少使用的程式碼路徑，編譯器將程式碼最佳化的時間，可能會比執行階段執行未最佳化程式碼的時間還要久。 階層式編譯會在 JIT 編譯中引入兩個階段：
 
 - **第一層**：盡快產生程式碼。
 

@@ -1,21 +1,21 @@
 ---
-title: 建置 .NET Core Docker 映像
-description: 了解 Docker 映像和 .NET Core
+title: Docker 映像概觀 - .NET Core
+description: 了解如何使用 Docker 登錄中已發佈的 .NET Core Docker 映像。 您也將學習如何提取映像，並建置您自己的映像。
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 675b6821588f8d0dd9495346a13665a32986f060
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 34ff6ce7d990412fa0ac4896d1e2e39b307681f0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841160"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145828"
 ---
-# <a name="building-docker-images-for-net-core-applications"></a>建置 .NET Core 應用程式的 Docker 映像
+# <a name="learn-about-docker-images-for-net-core"></a>了解 .NET Core 的 Docker 映像
 
- 在本教學課程中，著重在如何於 Docker 上使用 .NET Core。 首先，我們會探討 Microsoft 所提供及維護的不同 Docker 映像，以及使用案例。 我們接著會了解如何建置和 Docker 化 ASP.NET Core 應用程式。
+在本教學課程中，著重在如何於 Docker 上使用 .NET Core。 首先，我們會探討 Microsoft 所提供及維護的不同 Docker 映像，以及使用案例。 我們接著會了解如何建置和 Docker 化 ASP.NET Core 應用程式。
 
 您會在本教學課程中了解︰
 > [!div class="checklist"]
@@ -210,7 +210,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 * 開啟另一個命令提示字元。
 * 執行 `docker ps` 以查看您的執行中容器。 其中應該會有 "aspnetcore_sample" 容器。
 * 執行 `docker exec aspnetcore_sample ipconfig`。
-* 複製容器 IP 位址，並將它貼入瀏覽器 (例如，172.29.245.43)。
+* 複製容器 IP 位址，並將其貼入瀏覽器 (例如，172.29.245.43)。
 
 > [!NOTE]
 > Docker exec 支援使用名稱或雜湊來識別容器。 在我們的範例中，使用名稱 (aspnetcore_sample)。

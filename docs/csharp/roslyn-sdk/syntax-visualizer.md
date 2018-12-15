@@ -3,12 +3,12 @@ title: 在 Visual Studio 中使用 Roslyn 語法視覺化檢視瀏覽程式碼
 description: 語法視覺化檢視提供了視覺化工具來瀏覽 .NET 編譯器平台 SDK 為程式碼產生的模型。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 97a058eed8c0babebd3a41ec91875bef83ac3527
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45750202"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143556"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>在 Visual Studio 中使用 Roslyn 語法視覺化檢視瀏覽程式碼
 
@@ -32,7 +32,7 @@ ms.locfileid: "45750202"
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![視覺化 C# 語法樹狀目錄](media/syntax-visualizer/visualize-csharp.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 ![視覺化 VB 語法樹狀目錄](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
@@ -62,7 +62,7 @@ ms.locfileid: "45750202"
 視覺化檢視會顯示子樹狀結構的圖形表示法，其根目錄位在選取的項目。 針對在 C# 範例中對應至 `Main()`方法的 **ethodDeclaration** 節點，嘗試這些步驟。 視覺化檢視會顯示看似如下的語法圖：
 
 ![檢視 C# 語法圖](media/syntax-visualizer/csharp-syntax-graph.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
 針對上述 VB 範例中，對應至 `Main()` 方法的 **SubBlock** 節點，嘗試相同步驟。 視覺化檢視會顯示看似如下的語法圖：
 
@@ -128,7 +128,7 @@ End Module
 
 上述 VB 範例可以輕鬆地用 C# 複寫。 輸入 `using C = System.Console;` 取代 `Imports C = System.Console`作為別名。 C# 的上述步驟會在視覺化檢視視窗中產生相同的結果。
 
-只能在節點上使用語意檢查作業。 它們不適用於語彙基元或邏輯。 並非所有節點都有有趣的語意資訊可以檢查。 當節點沒有有趣的語意資訊時，按一下 [檢視 * 符號 (如果有的話)] 會顯示空白的屬性方格。
+只能在節點上使用語意檢查作業。 它們不適用於語彙基元或邏輯。 並非所有節點都有有趣的語意資訊可以檢查。 當節點不具有趣的語意資訊時，按一下 [檢視 \* 符號 (如果有的話)] 會顯示空白的屬性方格。
 
 您可以在[使用語意](work-with-semantics.md)概觀文件閱讀更多執行語意分析的 API 內容。
 

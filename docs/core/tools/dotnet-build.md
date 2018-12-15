@@ -1,15 +1,13 @@
 ---
 title: dotnet build 命令 - .NET Core CLI
 description: dotnet build 命令會建置專案和其所有相依性。
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: c9d1478e3d3e298b01e707242cc7ad5cd924a9b3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 5d47fdfca14d20b3f2a134a8e734f76b1c86c498
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200546"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149155"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -37,7 +35,7 @@ dotnet build [-h|--help]
 ```
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔將專案程式碼包含在副檔名為 *.dll* 的中繼語言 (IL) 檔案中，以及副檔名為 *.pdb* 且用於偵錯的符號檔。 產生相依性的 JSON 檔案 (*\*.deps.json*)，其中列出應用程式的相依性。 產生 *\*.runtimeconfig.json* 檔案，其中指定應用程式的共用執行階段及其版本。
 
@@ -46,10 +44,6 @@ dotnet build [-h|--help]
 建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 檔案會在 [`dotnet restore`](dotnet-restore.md) 執行時建立。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。 以前使用 .NET Core 1.x SDK 時，您需要先明確執行 `dotnet restore` 再執行 `dotnet build`。 自 .NET Core 2.0 SDK 開始，`dotnet restore` 會在您執行 `dotnet build` 時以隱含方式執行。 如果您想要在執行 build 命令時停用隱含還原，您可以跳過 `--no-restore` 選項。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
-
-`dotnet build` 使用 MSBuild 來建置專案，因此同時支援平行和累加建置。 如需詳細資訊，請參閱[累加建置](/visualstudio/msbuild/incremental-builds)。
-
-除了其選項，`dotnet build` 命令也接受 MSBuild 選項，例如用於設定屬性的 `-p`，以及用於定義記錄器的 `-l`。 如需這些選項的詳細資訊，請參閱 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。
 
 專案是否為可執行檔可透過專案檔中的 `<OutputType>` 屬性來判斷。 下列範例顯示會產生可執行程式碼的專案：
 
@@ -61,6 +55,14 @@ dotnet build [-h|--help]
 
 若要產生程式庫，只要省略 `<OutputType>` 屬性即可。 建置輸出的主要差別在於，程式庫的 IL DLL 不包含進入點，而且無法執行。
 
+### <a name="msbuild"></a>MSBuild
+
+`dotnet build` 使用 MSBuild 來建置專案，因此同時支援平行和累加建置。 如需詳細資訊，請參閱[累加建置](/visualstudio/msbuild/incremental-builds)。
+
+除了其選項，`dotnet build` 命令也接受 MSBuild 選項，例如用於設定屬性的 `-p`，以及用於定義記錄器的 `-l`。 如需這些選項的詳細資訊，請參閱 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。 或者，您也可以使用 [dotnet msbuild](dotnet-msbuild.md) 命令。
+
+執行 `dotnet build` 相當於 `dotnet msbuild -restore -target:Build`。
+
 ## <a name="arguments"></a>引數
 
 `PROJECT | SOLUTION`
@@ -71,104 +73,118 @@ dotnet build [-h|--help]
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-定義組建組態。 預設值是 `Debug`。
+  定義組建組態。 預設值為 `Debug`。
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-針對特定[架構](../../standard/frameworks.md)進行編譯。 架構必須定義於[專案檔](csproj.md)中。
+  針對特定[架構](../../standard/frameworks.md)進行編譯。 架構必須定義於[專案檔](csproj.md)中。
 
-`--force`
+* **`--force`**
 
-即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。
+  即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。
 
-`-h|--help`
+* **`-h|--help`**
 
-印出命令的簡短說明。
+  印出命令的簡短說明。
 
-`--no-dependencies`
+* **`--no-dependencies`**
 
-忽略專案對專案 (P2P) 參考，並且只建置指定的根專案。
+  忽略專案對專案 (P2P) 參考，並且只建置指定的根專案。
 
-`--no-incremental`
+* **`--no-incremental`**
 
-針對累加建置，將建置標示為不安全。 此旗標會關閉累加編譯，並強制全新重建專案的相依性關係圖。
+  針對累加建置，將建置標示為不安全。 此旗標會關閉累加編譯，並強制全新重建專案的相依性關係圖。
 
-`--no-restore`
+* **`--no-restore`**
 
-建置期間不會執行隱含還原。
+  建置期間不會執行隱含還原。
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-在其中放置已建置的二進位檔的目錄。 當您指定這個選項時，也需要定義 `--framework`。
+  在其中放置已建置的二進位檔的目錄。 當您指定這個選項時，也需要定義 `--framework`。 如果未指定，則預設路徑為 `./bin/<configuration>/<framework>/`。
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-指定目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
+  指定目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-定義專案檔版本欄位中星號 (`*`) 的版本尾碼。 格式遵循 NuGet 的版本指導方針。
+  定義專案檔版本欄位中星號 (`*`) 的版本尾碼。 格式遵循 NuGet 的版本指導方針。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-定義組建組態。 預設值是 `Debug`。
+  定義組建組態。 預設值為 `Debug`。
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-針對特定[架構](../../standard/frameworks.md)進行編譯。 架構必須定義於[專案檔](csproj.md)中。
+  針對特定[架構](../../standard/frameworks.md)進行編譯。 架構必須定義於[專案檔](csproj.md)中。
 
-`-h|--help`
+* **`-h|--help`**
 
-印出命令的簡短說明。
+  印出命令的簡短說明。
 
-`--no-dependencies`
+* **`--no-dependencies`**
 
-忽略專案對專案 (P2P) 參考，並且只建置指定的根專案。
+  忽略專案對專案 (P2P) 參考，並且只建置指定的根專案。
 
-`--no-incremental`
+* **`--no-incremental`**
 
-針對累加建置，將建置標示為不安全。 此旗標會關閉累加編譯，並強制全新重建專案的相依性關係圖。
+  針對累加建置，將建置標示為不安全。 此旗標會關閉累加編譯，並強制全新重建專案的相依性關係圖。
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-在其中放置已建置的二進位檔的目錄。 當您指定這個選項時，也需要定義 `--framework`。
+  在其中放置已建置的二進位檔的目錄。 當您指定這個選項時，也需要定義 `--framework`。
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-指定目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
+  指定目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-定義專案檔版本欄位中星號 (`*`) 的版本尾碼。 格式遵循 NuGet 的版本指導方針。
+  定義專案檔版本欄位中星號 (`*`) 的版本尾碼。 格式遵循 NuGet 的版本指導方針。
 
 ---
 
 ## <a name="examples"></a>範例
 
-建置專案和其相依性：
+* 建置專案和其相依性：
 
-`dotnet build`
+  ```console
+  dotnet build
+  ```
 
-使用發行組態來建置專案和其相依性︰
+* 使用發行組態來建置專案和其相依性︰
 
-`dotnet build --configuration Release`
+  ```console
+  dotnet build --configuration Release
+  ```
 
-針對特定執行階段，建置專案和其相依性 (在此範例中為 Ubuntu 16.04)：
+* 針對特定執行階段，建置專案和其相依性 (在此範例中為 Ubuntu 16.04)：
 
-`dotnet build --runtime ubuntu.16.04-x64`
+  ```console
+  dotnet build --runtime ubuntu.16.04-x64
+  ```
 
-建置專案，並於還原作業期間使用指定的 NuGet 套件來源 (.NET Core SDK 2.0 及更新版本)：
+* 建置專案，並在還原作業期間使用指定的 NuGet 套件來源 (.NET Core 2.0 SDK 和更新版本)：
 
-`dotnet build --source c:\packages\mypackages`
+  ```console
+  dotnet build --source c:\packages\mypackages
+  ```
+
+* 建置專案並設定 1.2.3.4 版本作為建置參數：
+
+  ```console
+  dotnet build -p:Version=1.2.3.4
+  ```

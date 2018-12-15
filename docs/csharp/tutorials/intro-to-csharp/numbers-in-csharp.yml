@@ -2,7 +2,7 @@
 title: 在 C# 中操作整數和浮點數數字
 metadata:
   title: C# 中的數字 - C# 互動式教學課程簡介
-  description: 在此教學課程中，您將使用瀏覽器以互動方式學習有關 C# 的數字型別。 您將要撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。
+  description: 在本教學課程中，您將使用瀏覽器以互動方式學習有關 C# 的數字型別。 您將要撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。
   audience: Developer
   ms.custom: mvc
   ms.date: 08/24/2018
@@ -11,19 +11,19 @@ metadata:
   nextTutorialTitle: C# 中的分支與迴圈
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7edc39e6b9d45a0f6707adf48199c9a096b8992d
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: d29fae5aa5a34d7a8e91e53f2005178740464827
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50198562"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53131244"
 items:
 - durationInMinutes: 1
   content: >
     此教學課程會以互動方式讓您使用瀏覽器撰寫 C#，並查看編譯及執行程式碼的結果，以了解 C# 中有關數字型別的資訊。 內容包含一系列探索 C# 中數字和數學運算的課程。 這些課程會教導您 C# 語言的基本概念。
 - title: 探索整數運算
   durationInMinutes: 4
-  content: "在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入下列程式碼區塊，並按一下 [執行] 按鈕：\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\n您看到的只是一種基本的整數數學運算。 `int` 型別代表**整數**，也就是正整數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：\n\n- `-` 用於減法\n- `*` 用於乘法\n- `/` 用於除法\n\n> [!TIP]\n> 在整個互動式教學課程中，您可以修改在互動式視窗中撰寫的程式碼，以自行探索各種變化。 此教學課程在每個步驟都有供您嘗試的範例。\n\n讓我們開始探索這些不同的運算。 修改第三行來嘗試每種運算。 在每次編輯之後，按一下 [執行] 按鈕。\n\n減法：\n\n```csharp\nint c = a - b;\n```\n\n乘法：\n\n```csharp\nint c = a * b;\n```\n\n除法： \n\n```csharp\nint c = a / b;\n```\n\n如果您想要的話，也可以試著在同一行中執行多個數學運算。\n\n> [!TIP]\n> 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 **編譯器**會找出那些錯誤並回報給您。 當輸出包含錯誤訊息時，請仔細查看範例程式碼以及互動式視窗中的程式碼，看看有哪些可以修正。\n> 該練習將有助於您了解 C# 程式碼的結構。     \n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+  content: "在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入下列程式碼區塊，並按一下 [執行] 按鈕：\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\n您看到的只是一種基本的整數數學運算。 `int` 型別代表**整數**，也就是正整數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：\n\n- `-` 用於減法\n- `*` 用於乘法\n- `/` 用於除法\n\n> [!TIP]\n> 在整個互動式教學課程中，您可以修改在互動式視窗中撰寫的程式碼，以自行探索各種變化。 本教學課程在每個步驟都有供您嘗試的範例。\n\n讓我們開始探索這些不同的運算。 修改第三行來嘗試每種運算。 在每次編輯之後，按一下 [執行] 按鈕。\n\n減法：\n\n```csharp\nint c = a - b;\n```\n\n乘法：\n\n```csharp\nint c = a * b;\n```\n\n除法： \n\n```csharp\nint c = a / b;\n```\n\n如果您想要的話，也可以試著在同一行中執行多個數學運算。\n\n> [!TIP]\n> 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 **編譯器**會找出那些錯誤並回報給您。 當輸出包含錯誤訊息時，請仔細查看範例程式碼以及互動式視窗中的程式碼，看看有哪些可以修正。\n> 該練習將有助於您了解 C# 程式碼的結構。     \n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: 探索運算的順序
   durationInMinutes: 7
   content: >
@@ -63,7 +63,7 @@ items:
 
     int c = 2;
 
-    int d = (a  + b) * c;
+    int d = (a + b) * c;
 
     Console.WriteLine(d);
 
@@ -200,4 +200,19 @@ items:
     > [!NOTE]
 
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
-- content: "您已經完成＜C# 中的數字＞互動式教學課程。 \n\n您可以在自己的開發環境中，繼續進行這些教學課程。 了解[本機開發](local-environment.md)的基本概念，然後選擇一個教學課程。 您可以直接移至下一個教學課程，或從 [C# 中的數字](numbers-in-csharp-local.md)教學課程重新開始。\n\n您可以在下列主題中深入了解 C# 中的數字：\n\n[整數類型表](../../language-reference/keywords/integral-types-table.md)   \n[浮點類型表](../../language-reference/keywords/floating-point-types-table.md)   \n[內建類型表](../../language-reference/keywords/built-in-types-table.md)   \n[隱含數值轉換表](../../language-reference/keywords/implicit-numeric-conversions-table.md)   \n[明確數值轉換表](../../language-reference/keywords/explicit-numeric-conversions-table.md)"
+- content: >-
+    您已經完成＜C# 中的數字＞互動式教學課程。 您可以按一下以下的**分支和迴圈**連結來啟動下一個互動式教學課程，或者您可以瀏覽 [.NET 網站](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) \(英文\) 以下載 .NET Core SDK、在您的機器上建立專案，並繼續撰寫程式碼。 「繼續學習」步驟會帶您回到這些教學課程。
+
+
+    您可以在下列主題中深入了解 C# 中的數字：
+
+
+    - [整數型別表](../../language-reference/keywords/integral-types-table.md)
+
+    - [浮點型別表](../../language-reference/keywords/floating-point-types-table.md)
+
+    - [內建型別表](../../language-reference/keywords/built-in-types-table.md)
+
+    - [隱含數值轉換表](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+
+    - [明確數值轉換表](../../language-reference/keywords/explicit-numeric-conversions-table.md)

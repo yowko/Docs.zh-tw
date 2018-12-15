@@ -1,20 +1,20 @@
 ---
-title: 在 Visual Studio 2017 中使用 .NET Core 和 Visual Basic 建置 Hello World 應用程式
+title: 在 Visual Studio 2017 中使用 Visual Basic 來建置 .NET Core Hello World 應用程式
 description: 了解如何使用 Visual Studio 2017 以 Visual Basic 建置簡單的 .NET Core 主控台應用程式。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: d6b58e491b2857f83fe9b2e55ed35630c42b79ed
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 612de47c4d40d1272eb330a0343302109040f434
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969872"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149376"
 ---
-# <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式
+# <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>在 Visual Studio 2017 中建置 .NET Core Visual Basic Hello World 應用程式
 
 本主題提供使用 Visual Studio 2017 的 Visual Basic，針對簡單 .NET Core 主控台應用程式進行建置、偵錯及發行的逐步指示。 Visual Studio 2017 提供功能完整的開發環境來建置 .NET Core 應用程式。 只要應用程式沒有平台特定的相依性，應用程式就可以在 .NET Core 的任何目標平台，以及安裝 .NET Core 的任何系統上執行。
 

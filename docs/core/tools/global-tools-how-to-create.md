@@ -4,12 +4,12 @@ description: 描述如何建立通用工具。 通用工具是透過 .NET Core C
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 3860aad5e2c13714298d50bb9ac10daec3aadf01
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e544ab51920015e0f1ea48ad83ba9b637d98aa0c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47231205"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144574"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>使用 .NET Core CLI 建立 .NET Core 通用工具
 
@@ -162,7 +162,7 @@ dotnet run -- hello from the bot
 dotnet pack
 ```
 
-`botsay.1.0.0.nupkg` 檔案是在資料夾 (由 `botsay.csproj` 檔案中的 `<PackageOutputPath>` XML 值識別) 中建立的，在此範例中是 `./nupkg` 資料夾。 這可讓您輕鬆地安裝和測試。 當您想要公開發行工具時，請將它上傳至 [https://www.nuget.org](https://www.nuget.org)。
+`botsay.1.0.0.nupkg` 檔案是在資料夾 (由 `botsay.csproj` 檔案中的 `<PackageOutputPath>` XML 值識別) 中建立的，在此範例中是 `./nupkg` 資料夾。 這可讓您輕鬆地安裝和測試。 當您想要公開發行工具時，請將它上傳至 [https://www.nuget.org](https://www.nuget.org)。在工具於 NuGet 上可供使用之後，開發人員便可使用 [dotnet tool install](dotnet-tool-install.md) 命令的 `--global` 選項來為所有使用者安裝該工具。
 
 既然您已經有了套件，請從該套件安裝工具： 
 

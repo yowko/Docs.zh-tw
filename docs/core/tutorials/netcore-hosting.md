@@ -1,17 +1,18 @@
 ---
-title: 裝載 .NET Core
-description: 從機器碼裝載 .NET Core 執行階段
+title: 撰寫自訂 .NET Core 執行階段主機
+description: 了解如何從原生程式碼裝載 .NET Core 執行階段，以支援需要控制 .NET Core 執行階段運作方式的進階案例。
 author: mjrousos
 ms.author: mairaw
-ms.date: 2/3/2017
-ms.openlocfilehash: 96f51c8480bf75b1d7f824a8c87d2cdd6c7f9dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 02/03/2017
+ms.custom: seodec18
+ms.openlocfilehash: 7e30536a27408c529743ef623aa1bb837c327f96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218602"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146941"
 ---
-# <a name="hosting-net-core"></a>裝載 .NET Core
+# <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>撰寫自訂 .NET Core 主機以從原生程式碼控制 .NET 執行階段
 
 如同所有 Managed 程式碼，.NET Core 應用程式是由主機執行。 該主機會負責啟動執行階段 (包括 JIT 和記憶體回收行程等元件)、建立 AppDomain 及叫用 Managed 進入點。
 
@@ -82,7 +83,6 @@ AppDomain 旗標會指定與安全性和 Interop 相關的 AppDomain 行為。 �
 *  `APP_NI_PATHS`：此清單與 APP_PATHS 非常類似，不同之處在於其用途是作為探查原生影像的路徑。
 *  `NATIVE_DLL_SEARCH_DIRECTORIES`：此屬性是想要透過 p/invoke 呼叫原生 DLL 時，載入器應探查的路徑清單。
 *  `PLATFORM_RESOURCE_ROOTS`：此清單包含要在其中探查資源附屬組件的路徑 (位於文化特性專屬子目錄中)。
-*  `AppDomainCompatSwitch`：此字串指定針對沒有明確目標 Framework Moniker (指出組件要執行之架構的組件層級屬性) 的組件，所應使用的相容性 Quirks。 一般而言，這應該設定為 `"UseLatestBehaviorWhenTFMNotSpecified"`，但某些主機可能會想要改為取得舊版 Silverlight 或 Windows Phone 相容性 Quirks。
 
 在我們的[簡單範例主機](https://github.com/dotnet/samples/tree/master/core/hosting)中，這些屬性會設定如下：
 

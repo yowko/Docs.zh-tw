@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 2041182dffa0330ea601b30e047c0b09731618f2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a5a5fa37905df9fb9369e9c0c26a2e39d03353f2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042396"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128319"
 ---
 # <a name="bool-c-reference"></a>bool (C# 參考)
 
-`bool` 關鍵字是 <xref:System.Boolean?displayProperty=nameWithType> 的別名。 它是用來宣告可儲存布林值 [true](../../../csharp/language-reference/keywords/true.md) 和 [false](../../../csharp/language-reference/keywords/false.md) 的變數。
+`bool` 關鍵字是 <xref:System.Boolean?displayProperty=nameWithType> 的別名。 它會用來宣告可儲存布林值 [true](true-literal.md) 和 [false](false-literal.md) 的變數。
 
 > [!NOTE]
-> 如果您需要也可以有 `null` 值的布林值變數，請使用 `bool?`。 如需詳細資訊，請參閱[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)。
+> 如果您需要也可以有 `null` 值的布林值變數，請使用 `bool?`。 如需詳細資訊，請參閱[使用可為 Null 的型別](../../programming-guide/nullable-types/using-nullable-types.md)一文的 [bool? 型別](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type)一節。
 
 ## <a name="literals"></a>常值
 

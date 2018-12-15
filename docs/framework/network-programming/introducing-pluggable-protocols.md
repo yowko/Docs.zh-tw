@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: a0a50af2d773a9489d9e908b751ba2035b9ba626
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 213a714a04c31954b0091071b0625449916d154d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194016"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146910"
 ---
 # <a name="introducing-pluggable-protocols"></a>可插式通訊協定簡介
 Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Managed 實作，可以迅速而簡易地整合到您的應用程式。 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空間中的網際網路存取類別，可用來實作 Web 架構和以網際網路為基礎的應用程式。  
@@ -40,7 +40,7 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  用戶端應用程式透過識別要求的網際網路資源以及用於要求和回應的通訊協定，提出要求。 必要時，用戶端也會提供完成要求所需的任何其他資料，例如 Proxy 位置或驗證資訊 (使用者名稱、密碼等等)。 一旦形成要求，就可將要求傳送到伺服器。  
   
 ## <a name="identifying-resources"></a>識別資源  
- .NET Framework 使用統一資源識別碼 (URI)，識別所要求的網際網路資源與通訊協定。 URI 包含至少三個片段，可能四個：配置識別碼，識別要求和回應的通訊協定；伺服器識別碼，由網域名稱系統 (DNS) 主機名稱，或在網際網路上可唯一識別伺服器的 TCP 位址；路徑識別碼，找出伺服器上要求的資訊；以及選擇性查詢字串，將資訊從用戶端傳遞至伺服器。 例如，URI `http://www.contoso.com/whatsnew.aspx?date=today` 的構成為配置識別碼 "http"、伺服器識別碼 "www.contoso.com"、路徑 "/whatsnew.aspx" 和查詢字串 "?date=today"。  
+ .NET Framework 使用統一資源識別碼 (URI)，識別所要求的網際網路資源與通訊協定。 URI 包含至少三個片段，可能四個：配置識別碼，識別要求和回應的通訊協定；伺服器識別碼，由網域名稱系統 (DNS) 主機名稱，或在網際網路上可唯一識別伺服器的 TCP 位址；路徑識別碼，找出伺服器上要求的資訊；以及選擇性查詢字串，將資訊從用戶端傳遞至伺服器。 例如，URI `http://www.contoso.com/whatsnew.aspx?date=today` 的構成為配置識別碼 `http`、伺服器識別碼 `www.contoso.com`、路徑 `/whatsnew.aspx` 和查詢字串 `?date=today`。  
   
  伺服器收到要求並處理回應之後，它會將回應傳回到用戶端應用程式。 此回應包含補充資訊，例如內容類型 (例如，未經處理文字或 XML 資料)。  
   

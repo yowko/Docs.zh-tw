@@ -1,19 +1,20 @@
 ---
 title: 執行階段套件存放區
-description: 本主題說明 .NET Core 所使用的執行階段套件存放區和目標資訊清單。
+description: 了解如何使用 .NET Core 所使用的執行階段套件存放區和目標資訊清單。
 author: bleroy
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: df2776ac2e4a2eed7f54b3031f13ab41fc714aae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: b9daac6f50008bf661ae0c727d3a3e0e53a0d6b4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511580"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145211"
 ---
 # <a name="runtime-package-store"></a>執行階段套件存放區
 
-從 .NET Core 2.0 開始，可針對目標環境中存在的已知套件集合封裝和部署應用程式。 優點是部署更快、磁碟使用空間較少，而且啟動效能在某些情況下有所改善。
+從 .NET Core 2.0 開始，可針對目標環境中存在的已知套件集合封裝和部署應用程式。 優點是部署更快、磁碟空間使用量較少，而且啟動效能在某些情況下有所改善。
 
 這項功能實作為「執行階段套件存放區」，這是套件儲存所在磁碟的目錄 (通常在 macOS/Linux 是 */usr/local/share/dotnet/store*，在 Windows 是 *C:/Program Files/dotnet/store*)。 在此目錄下，有架構和[目標 Framework](../../standard/frameworks.md) 的子目錄。 檔案配置類似於[磁碟上的 NuGet 資產配置](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure)方式：
 

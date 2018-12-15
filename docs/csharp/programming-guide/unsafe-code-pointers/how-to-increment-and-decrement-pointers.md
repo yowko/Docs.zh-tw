@@ -1,21 +1,22 @@
 ---
-title: 如何：遞增和遞減指標 (C# 程式設計手冊)
+title: 操作說明：遞增和遞減指標 (C# 程式設計手冊)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-ms.openlocfilehash: 39cefc5dcebf1331a5e0ac0fadb8284e9041eb27
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c75432d88a1e96742573a6e69a4e035066a387c4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44206467"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128332"
 ---
-# <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>如何：遞增和遞減指標 (C# 程式設計手冊)
-使用遞增和遞減運算子 (`++` 和 `--`)，依指標類型的類型指標的 [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) 變更指標位置*。 遞增和遞減運算式的格式如下：  
+# <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>操作說明：遞增和遞減指標 (C# 程式設計手冊)
+
+針對型別 `pointer-type*` 的指標，使用遞增和遞減運算子 (`++` 和 `--`)，依 `sizeof(pointer-type)` 變更指標位置。 遞增和遞減運算式的格式如下：  
   
-```  
+```csharp
 ++p;  
 p++;  
 --p;  
@@ -24,9 +25,9 @@ p--;
   
  遞增和遞減運算子可以套用至任何類型的指標，類型 `void*` 除外。  
   
- 將遞增運算子套用至類型 `pointer-type` 指標的效果，是包含在指標變數中的位址加上 [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`)。  
+ 將遞增運算子套用至型別 `pointer-type*` 之指標的效果，是將 `sizeof(pointer-type)` 加入至指標變數內含的位址。  
   
- 將遞減運算子套用至類型 `pointer-type` 指標的效果，是包含在指標變數中的位址減去 `sizeof` (`pointer-type`)。  
+ 將遞減運算子套用至型別 `pointer-type*` 之指標的效果，是從指標變數內含的位址中減去 `sizeof(pointer-type)`。  
   
  如果運算讓指標的定義域溢位，而且結果取決於實作，則不會產生任何例外狀況。  
   
@@ -43,7 +44,7 @@ p--;
 **值：3 @ 位址：12860284**
 **值：4 @ 位址：12860288**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
 - [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
@@ -54,3 +55,4 @@ p--;
 - [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)  
 - [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)  
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+- [sizeof](../../../csharp/language-reference/keywords/sizeof.md)

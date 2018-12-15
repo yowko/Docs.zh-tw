@@ -1,19 +1,20 @@
 ---
-title: 移植到 .NET Core - 使用 Windows 相容性套件
+title: 使用 Windows 相容性套件將程式碼移植到 .NET Core
 description: 了解 Windows 相容性套件，以及如何使用它將現有的 .NET Framework 程式碼移植到 .NET Core
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.openlocfilehash: 51b96d7828285964c1b0cbb835b8eb5ed92c47d6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.custom: seodec18
+ms.openlocfilehash: 42c2c2a0b9b00436fa5c17d3825c720561b3f122
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566169"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144607"
 ---
-# <a name="using-the-windows-compatibility-pack"></a>使用 Windows 相容性套件
+# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>使用 Windows 相容性套件將程式碼移植到 .NET Core
 
-開發人員將其現有的程式碼移植到 .NET Core 時最常面對的問題之一，是他依賴的 API 和技術只存在於 .NET Framework 中。 「Windows 相容性套件」即將提供許多這些技術，以便使用現有程式碼來建置 .NET Core 應用程式以及 .NET Standard 程式庫更為可行。
+將現有程式碼移植到 .NET Core 時發現的一些最常見問題，是僅在 .NET Framework 中找到的 API 和技術相依性。 *Windows 相容性套件*提供許多這些技術，因此建置 .NET Core 應用程式和 .NET Standard 程式庫很容易。
 
 此套件是邏輯的 [.NET Standard 2.0 延伸模組](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)，可大幅增加 API 集和現有的程式碼編譯，幾乎不需要修改。 但為信守 .NET Standard 的承諾 (「它是所有 .NET 實作提供的 API 集」)，這不包括無法跨所有平台的技術，例如登錄、Windows Management Instrumentation (WMI) 或反映發出 API。
 
@@ -27,7 +28,7 @@ ms.locfileid: "34566169"
 
 * 字碼頁
 * CodeDom
-* 組態
+* Configuration
 * 目錄服務
 * 繪圖
 * ODBC

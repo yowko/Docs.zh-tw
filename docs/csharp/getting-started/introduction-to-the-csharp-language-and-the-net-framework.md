@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 75ef14032ee2211d3b8d355f050ced67b4a04930
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ff0845f7d15a7b65cee755110d26a1e56a9b94af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46579842"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153939"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
 
@@ -38,7 +38,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
 - [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 可跨各種資料來源提供內建查詢功能。  
   
- 如果您必須和 COM 物件或原生 Win32 DLL 等其他 Windows 軟體互動，您可以透過稱為 "Interop" 的處理序來達到此目的。 Interop 幾乎可讓 C# 程式執行大部分原生 C++ 應用程式的功能。 對於直接記憶體存取是絕對必要的情況，C# 甚至支援指標和「不安全」的程式碼概念。  
+ 如果您必須與 COM 物件或原生 Win32 DLL 等其他 Windows 軟體互動，您可以在 C# 中透過稱為 "Interop" 的處理序來達到此目的。 Interop 幾乎可讓 C# 程式執行大部分原生 C++ 應用程式的功能。 對於直接記憶體存取是絕對必要的情況，C# 甚至支援指標和「不安全」的程式碼概念。  
   
  相較於 C 和 C++，C# 建置流程相當簡單，也比 Java 更有彈性。 沒有個別標頭檔，也不需要以特定順序宣告方法和型別。 C# 原始程式檔可以定義數目不拘的類別、結構、介面及事件。  
   

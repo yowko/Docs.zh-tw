@@ -2,12 +2,12 @@
 title: C# 7.2 的新功能
 description: C# 7.2 新功能的概觀。
 ms.date: 08/16/2017
-ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181169"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148171"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 的新功能
 
@@ -28,6 +28,8 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
   - 數值常值的任何列印數字之前，現都可加上前置底線。
 * [`private protected` 存取修飾詞](#private-protected-access-modifier)
   - 您可利用 `private protected` 存取修飾詞，存取相同組件中的衍生類別。
+* [`ref` 條件運算式](#conditional-ref-expressions)
+  - 條件運算式 (`?:`) 的結果現在可以是參考。
 
 ## <a name="safe-efficient-code-enhancements"></a>安全、有效率的程式碼增強功能
 
@@ -56,6 +58,18 @@ int binaryValue = 0b_0101_0101;
 
 ## <a name="private-protected-access-modifier"></a>_private protected_ 存取修飾詞
 
-最後是新的複合存取修飾詞：`private protected` 可指示包含類別或相同組件中的衍生類別，皆可存取成員。 `protected internal` 允許衍生類別或相同組件中的類別進行存取，而 `private protected` 則限制在相同組件中宣告的衍生類型進行存取。
+新的複合存取修飾詞：`private protected` 指出可藉由包含類別或在相同組件中宣告的衍生類別來存取成員。 `protected internal` 允許衍生類別或相同組件中的類別進行存取，而 `private protected` 則限制在相同組件中宣告的衍生類型進行存取。
 
 如需詳細資訊，請參閱語言參考中的[存取修飾詞](../language-reference/keywords/access-modifiers.md)。
+
+## <a name="conditional-ref-expressions"></a>`ref` 條件運算式
+
+最後，條件運算式可能會產生參考結果，而不是實值結果。 例如，您可以撰寫下列程式碼，在兩個陣列的其中一個上，擷取對第一個元素的參考：
+
+```csharp
+ref var r = ref (arr != null ? ref arr[0] : ref otherArr[0]);
+```
+
+變數 `r` 是 `arr` 或 `otherArr` 中對第一個值的參考。
+
+如需詳細資訊，請參閱語言參考中的[條件運算子 (?:)](../language-reference/operators/conditional-operator.md)。

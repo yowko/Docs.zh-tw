@@ -1,20 +1,20 @@
 ---
 title: 完成項 (C# 程式設計手冊)
-ms.date: 05/10/2017
+ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: b98d5eac29f498672000a7b0354734c15fd7400c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2b24884d2650a5e799eda630bc65f3c5a5c2508a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526031"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127260"
 ---
 # <a name="finalizers-c-programming-guide"></a>完成項 (C# 程式設計手冊)
-完成項是用來解構類別的執行個體。  
+完成項 (也稱為**解構函式**) 可在記憶體回收行程收集類別執行個體時，用來執行任何必要的最後清除。  
   
 ## <a name="remarks"></a>備註  
   
@@ -83,9 +83,10 @@ protected override void Finalize()
  [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)的[解構函式](~/_csharplang/spec/classes.md#destructors)一節。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IDisposable>  
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  

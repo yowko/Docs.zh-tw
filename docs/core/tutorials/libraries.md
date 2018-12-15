@@ -1,15 +1,16 @@
 ---
 title: 使用跨平台工具開發程式庫
-description: 了解如何使用 .NET Core CLI 工具建立 .NET 程式庫。
+description: 了解如何使用 .NET Core CLI 工具來建立 .NET Core 程式庫。 您將建立支援多個架構的程式庫。
 author: cartermp
 ms.author: mairaw
 ms.date: 05/01/2017
-ms.openlocfilehash: a6db7a15c484122600afd54814d19ea11bd1abc1
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.custom: seodec18
+ms.openlocfilehash: a8028883b3424588d0fb926dcb73f400a8c620dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256192"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148531"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>使用跨平台工具開發程式庫
 
@@ -19,9 +20,9 @@ ms.locfileid: "43256192"
 
 您需要在電腦上安裝 [.NET Core SDK 和 CLI](https://www.microsoft.com/net/core)。
 
-針對這份文件中處理 .NET Framework 版本的一節，您需要在 Windows 電腦上安裝 [.NET Framework](http://getdotnet.azurewebsites.net/)。
+針對這份文件中處理 .NET Framework 版本的一節，您需要在 Windows 電腦上安裝 [.NET Framework](https://dotnet.microsoft.com)。
 
-此外，如果您想要支援較舊的 .NET Framework 目標，則需要從 [.NET target platforms](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html) 頁面安裝較舊 Framework 版本的目標/開發人員套件。 請參閱這張表格︰
+此外，如果您想要支援較舊的 .NET Framework 目標，則需要從 [.NET 下載封存頁面](https://dotnet.microsoft.com/download/archives)安裝較舊架構版本的目標/開發人員套件。 請參閱這張表格︰
 
 | .NET Framework 版本 | 要下載的項目                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -39,7 +40,7 @@ ms.locfileid: "43256192"
 
 在該文中，有一張將 .NET Standard 版本對應至各種實作的表格︰
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
 以下是這個資料表在建立程式庫時的意義︰
 
@@ -136,7 +137,7 @@ ms.locfileid: "43256192"
 
 建置系統會得知 `#if` 指示詞中所使用的下列前置處理器符號︰
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../../includes/preprocessor-symbols.md)]
 
 以下是利用個別目標之條件式編譯的範例︰
 
@@ -167,7 +168,7 @@ namespace MultitargetLib
         // .NET Framework 4.0 does not have async/await
         public string GetDotNetCount()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             var uri = new Uri(url);
 
@@ -187,7 +188,7 @@ namespace MultitargetLib
         // .NET 4.5+ can use async/await!
         public async Task<string> GetDotNetCountAsync()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             // HttpClient is thread-safe, so no need to explicitly lock here
             var result = await _client.GetStringAsync(url);
@@ -213,7 +214,7 @@ netstandard1.4/
 
 ## <a name="how-to-test-libraries-on-net-core"></a>如何測試 .NET Core 上的程式庫
 
-重要的是一定要可以跨平台進行測試。 您可以使用現成的 [xUnit](http://xunit.github.io/) 或 MSTest。 兩者都完全適用於在 .NET Core 上對程式庫進行單元測試。 如何設定具有測試專案的方案，將取決於[方案結構](#structuring-a-solution)。 下列範例假設測試及來源目錄位於相同的最上層目錄中。
+重要的是一定要可以跨平台進行測試。 您可以使用現成的 [xUnit](https://xunit.github.io/) 或 MSTest。 兩者都完全適用於在 .NET Core 上對程式庫進行單元測試。 如何設定具有測試專案的方案，將取決於[方案結構](#structuring-a-solution)。 下列範例假設測試及來源目錄位於相同的最上層目錄中。
 
 > [!NOTE]
 > 這會使用某些 [.NET Core CLI 命令](../tools/index.md)。 如需詳細資訊，請參閱 [dotnet new](../tools/dotnet-new.md) 及 [dotnet sln](../tools/dotnet-sln.md)。
@@ -253,7 +254,7 @@ netstandard1.4/
    dotnet build
    ```
 
-   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. 執行 `dotnet test` 命令，確認已執行 xUnit。 如果您選擇使用 MSTest，則應該會改為執行 MSTest 主控台執行器。
     

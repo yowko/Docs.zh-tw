@@ -1,15 +1,13 @@
 ---
 title: dotnet-install 指令碼
 description: 了解如何使用 dotnet-install 指令碼來安裝 .NET Core CLI 工具和共用執行階段。
-author: blackdwarf
-ms.author: mairaw
-ms.date: 09/11/2017
-ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 11/15/2018
+ms.openlocfilehash: 0f565fee3e4ff4bec65bd196f635e9e9601485c2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837072"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148313"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
@@ -21,13 +19,13 @@ ms.locfileid: "48837072"
 
 Windows：
 
-`dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture] [-SharedRuntime] [-DryRun] [-NoPath] [-AzureFeed] [-ProxyAddress] [--Verbose] [--Help]`
+`dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture] [-SharedRuntime] [-Runtime] [-DryRun] [-NoPath] [-Verbose] [-AzureFeed] [-UncachedFeed] [-NoCdn] [-FeedCredential] [-ProxyAddress] [-ProxyUseDefaultCredentials] [-SkipNonVersionedFiles] [-Help]`
 
 macOS/Linux：
 
-`dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--shared-runtime] [--dry-run] [--no-path] [--azure-feed] [--verbose] [--help]`
+`dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential] [--runtime-id] [--skip-non-versioned-files] [--help]`
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet-install` 指令碼可用來執行 .NET Core SDK 的非系統管理安裝，其中包含了 .NET Core CLI 工具和共用執行階段。
 
@@ -36,7 +34,7 @@ macOS/Linux：
 * <https://dot.net/v1/dotnet-install.sh> (bash、UNIX)
 * <https://dot.net/v1/dotnet-install.ps1> (Powershell、Windows)
 
-這些指令碼對於自動化案例和非系統管理員安裝非常有幫助。 指令碼有兩種：一種是在 Windows 上使用的 PowerShell 指令碼。 另一個指令碼是可在 Linux/macOS 上運作的 bash 指令碼。 這兩個指令碼有相同的行為。 Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 參數使用 Linux/macOS 系統上的指令碼。
+這些指令碼對於自動化案例和非系統管理員安裝非常有幫助。 有兩個指令碼：一個是在 Windows 上運作的 PowerShell 指令碼，另一個是在 Linux/macOS 上運作的 Bash 指令碼。 這兩個指令碼有相同的行為。 Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 參數使用 Linux/macOS 系統上的指令碼。
 
 安裝指令碼會從 CLI 組建放置區下載 ZIP/tarball 檔案，並且繼續將它安裝在預設位置或 `-InstallDir|--install-dir` 所指定的位置。 根據預設，安裝指令碼會下載並安裝 SDK。 如果您想要只取得共用執行階段，請指定 `--shared-runtime` 引數。
 
@@ -44,108 +42,161 @@ macOS/Linux：
 
 執行指令碼之前，請安裝所有必要的[相依性 (英文)](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)。
 
-您可以使用 `--version` 引數安裝特定版本。 必須以三段式版本的格式指定版本 (例如，1.0.0-13232)。 如果省略，就會使用 `latest` 版本。
+您可以使用 `--version` 引數安裝特定版本。 指定版本時，必須以三段式版本格式指定 (例如 1.0.0-13232)。 如果未提供，就會使用 `latest` 版本。
 
 ## <a name="options"></a>選項
 
-`-Channel <CHANNEL>`
+* **`-Channel <CHANNEL>`**
 
-指定安裝的來源通道。 可能值為：
+  指定安裝的來源通道。 可能值為：
 
-- `Current` - 目前的版本
-- `LTS` - 長期支援通道 (目前支援的版本)
-- X.Y 格式的兩部分版本代表特定版本 (例如 `2.0` 或 `1.0`)
-- 分支名稱 [例如 `release/2.0.0`、`release/2.0.0-preview2`，或針對最新 `master` 分支的 `master` (「高度風險」每日更新版)]
+  * `Current` - 最新版本。
+  * `LTS` - 長期支援通道 (最新的支援版本)。
+  * 代表特定版本的 X.Y 格式兩段式版本 (例如 `2.0` 或 `1.0`)。
+  * 分支名稱。 例如 `release/2.0.0`、`release/2.0.0-preview2` 或 `master` (適用於夜間版本)。
 
-預設值是 `LTS`。 如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援週期](https://www.microsoft.com/net/core/support) \(英文\) 主題。
+  預設值為 `LTS`。 如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援政策](https://www.microsoft.com/net/platform/support-policy#dotnet-core) \(英文\) 頁面。
 
-`-Version <VERSION>`
+* **`-Version <VERSION>`**
 
-代表特定的組建版本。 可能值為：
+  代表特定的組建版本。 可能值為：
 
-- `latest` - 通道上的最新組建 (搭配 `-Channel` 選項來使用)
-- `coherent` - 通道上的最新一致性組建，使用最新的穩定套件組合 (搭配分支名稱 `-Channel` 選項來使用)
-- 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如： `2.0.0-preview2-006120`
+  * `latest` - 通道上的最新組建 (與 `-Channel` 選項搭配使用)。
+  * `coherent` - 通道上的最新一致性組建；使用最新的穩定套件組合 (與分支名稱 `-Channel` 選項搭配使用)。
+  * 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如：`2.0.0-preview2-006120`。
 
-如果省略，`-Version` 預設會設為 `latest`。
+  如果未指定，`-Version` 會預設為 `latest`。
 
-`-InstallDir <DIRECTORY>`
+* **`-InstallDir <DIRECTORY>`**
 
-指定安裝路徑。 如果目錄不存在，則會建立它。 預設值為 *%LocalAppData%\.dotnet*。 請注意，二進位檔會直接放置在目錄中。
+  指定安裝路徑。 如果目錄不存在，則會建立它。 預設值是 *%LocalAppData%\Microsoft\dotnet*。 二進位檔會直接放在此目錄中。
 
-`-Architecture <ARCHITECTURE>`
+* **`-Architecture <ARCHITECTURE>`**
 
-要安裝的 .NET Core 二進位檔的架構。 可能的值為 `auto`、`x64` 和 `x86`。 預設值為 `auto`，代表目前正在執行的 OS 架構。
+  要安裝的 .NET Core 二進位檔的架構。 可能的值為 `auto`、`x64` 和 `x86`。 預設值為 `auto`，代表目前正在執行的 OS 架構。
 
-`-SharedRuntime`
+* **`-SharedRuntime`**
 
-如果設定，則此參數會限制在共用執行階段的安裝。 尚未安裝整個 SDK。
+  > [!NOTE]
+  > 此參數已被淘汰，在未來的指令碼版本中可能會將其移除。 建議的替代方案是 `Runtime` 選項。
 
-`-DryRun`
+  只安裝共用執行階段位元，而不是整個 SDK。 這相當於指定 `-Runtime dotnet`。
 
-如果設定，指令碼將不會執行安裝，而是會顯示以一致的方式安裝目前要求的 .NET Core CLI 版本時所要使用的命令列。 例如，如果您指定 `latest` 版本，則會顯示特定版本的連結，以便可在建置指令碼中明確使用此命令。 如果您想要自行進行安裝或下載，它也會顯示二進位檔位置。
+* **`-Runtime <RUNTIME>`**
 
-`-NoPath`
+  只安裝共用執行階段，而不是整個 SDK。 可能值為：
 
-如果設定，則不會將 prefix/installdir 匯出至目前工作階段的路徑。 根據預設，指令碼將會修改此路徑，以在安裝後立即提供 CLI 工具。
+  * `dotnet` - `Microsoft.NETCore.App` 共用執行階段。
+  * `aspnetcore` - `Microsoft.AspNetCore.App` 共用執行階段。
 
-`-AzureFeed`
+* **`-DryRun`**
 
-指定給安裝程式的 Azure 摘要 URL。 不建議您變更這個值。 預設為 `https://dotnetcli.azureedge.net/dotnet`。
+  如果設定，指令碼將不會執行安裝。 取而代之的是，會顯示以一致方式安裝目前所要求的 .NET Core CLI 版本時，所要使用的命令列。 例如，如果您指定 `latest` 版本，就會顯示特定版本的連結，以便在建置指令碼中以決定性方式使用此命令。 如果您想要自行進行安裝或下載，它也會顯示二進位檔位置。
 
-`-ProxyAddress`
+* **`-NoPath`**
 
-如果設定，安裝程式會使用此 Proxy 進行 Web 要求。 (只適用於 Windows)
+  如果設定，就不會將安裝資料夾匯出至目前工作階段的路徑。 指令碼預設會修改此路徑，以讓 CLI 工具在安裝後立即可供使用。
 
-`--verbose`
+* **`-Verbose`**
 
-顯示診斷資訊。
+  顯示診斷資訊。
 
-`--help`
+* **`-AzureFeed`**
 
-印出指令碼的說明。
+  指定給安裝程式的 Azure 摘要 URL。 建議您不要變更這個值。 預設值是 `https://dotnetcli.azureedge.net/dotnet`。
+
+* **`-UncachedFeed`**
+
+  允許變更此安裝程式所使用之未快取摘要的 URL。 建議您不要變更這個值。
+
+* **`-NoCdn`**
+
+  不允許從 [Azure 內容傳遞網路 (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) 下載，而直接使用未快取的摘要。
+
+* **`-FeedCredential`**
+
+  用來作為要附加至 Azure 摘要的查詢字串。 這可允許變更 URL 以使用非公用 Blob 儲存體帳戶。
+
+* **`-ProxyAddress`**
+
+  如果設定，安裝程式會使用此 Proxy 進行 Web 要求。 (只適用於 Windows)
+
+* **`ProxyUseDefaultCredentials`**
+
+  如果設定，當使用 Proxy 位址時，安裝程式會使用目前使用者的認證。 (只適用於 Windows)
+
+* **`-SkipNonVersionedFiles`**
+
+  如果已經有非版本控制的檔案 (例如 *dotnet.exe*) 存在，便略過其安裝。
+
+* **`-Help`**
+
+  印出指令碼的說明。
 
 ## <a name="examples"></a>範例
 
-將最新的長期支援 (LTS) 版本安裝至預設位置︰
+* 將最新的長期支援 (LTS) 版本安裝至預設位置︰
 
-Windows：
+  Windows：
 
-`./dotnet-install.ps1 -Channel LTS`
+  ```powershell
+  ./dotnet-install.ps1 -Channel LTS
+  ```
 
-macOS/Linux：
+  macOS/Linux：
 
-`./dotnet-install.sh --channel LTS`
+  ```bash
+  ./dotnet-install.sh --channel LTS
+  ```
 
-將來自 2.0 通道的最新版本安裝至指定的位置︰
+* 將來自 2.0 通道的最新版本安裝至指定的位置︰
 
-Windows：
+  Windows：
 
-`./dotnet-install.ps1 -Channel 2.0 -InstallDir C:\cli`
+  ```powershell
+  ./dotnet-install.ps1 -Channel 2.0 -InstallDir C:\cli
+  ```
 
-macOS/Linux：
+  macOS/Linux：
 
-`./dotnet-install.sh --channel 2.0 --install-dir ~/cli`
+  ```bash
+  ./dotnet-install.sh --channel 2.0 --install-dir ~/cli
+  ```
 
-安裝共用執行階段 1.1.0 版本：
+* 安裝共用執行階段 1.1.0 版本：
 
-Windows：
+  Windows：
 
-`./dotnet-install.ps1 -SharedRuntime -Version 1.1.0`
+  ```powershell
+  ./dotnet-install.ps1 -SharedRuntime -Version 1.1.0
+  ```
 
-macOS/Linux：
+  macOS/Linux：
 
-`./dotnet-install.sh --shared-runtime --version 1.1.0`
+  ```bash
+  ./dotnet-install.sh --shared-runtime --version 1.1.0
+  ```
 
-取得指令碼並安裝 .NET Core CLI 單行範例：
+* 取得指令碼並在公司 Proxy 後方安裝 2.1.2 版本 (僅適用於 Windows)：
 
-Windows：
+  ```powershell
+  Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -Proxy $env:HTTP_PROXY -ProxyUseDefaultCredentials -OutFile 'dotnet-install.ps1';
+  ./dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '2.1.2' -ProxyAddress $env:HTTP_PROXY -ProxyUseDefaultCredentials;
+  ```
 
-`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
+* 取得指令碼並安裝 .NET Core CLI 單行範例：
 
-macOS/Linux：
+  Windows：
 
-`curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>`
+  ```powershell
+  @powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"
+  ```
+
+  macOS/Linux：
+
+  ```bash
+  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  ```
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,15 +1,16 @@
 ---
-title: 資料轉換
+title: ML.NET 中的資料轉換
 description: 探索 ML.NET 中支援的不同資料轉換。
+author: JRAlexander
 ms.date: 10/16/2018
-ms.openlocfilehash: 5df4598de6fcd08689d72c378f51d792860ef49c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c169319937dac13747935e451952bd75d4cc174d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187737"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143944"
 ---
-# <a name="data-transforms"></a>資料轉換
+# <a name="data-transforms-in-mlnet"></a>ML.NET 中的資料轉換
 
 下列表格包含 ML.NET 支援的所有資料轉換相關資訊 (選取資料轉換類型以巡覽至對應的表格)：
 
@@ -57,7 +58,7 @@ ms.locfileid: "50187737"
 
 | 資料轉換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.HashConverter> | 將資料行值轉換成雜湊。 此轉換接受數值及文字輸入，也接受單一及向量值資料行。 |
+| <xref:Microsoft.ML.Legacy.Transforms.HashConverter> | 將資料行值轉換成雜湊。 這項轉換接受數值及文字輸入，也接受單一及向量值資料行。 |
 | <xref:Microsoft.ML.Legacy.Transforms.TreeLeafFeaturizer> | 訓練整體樹狀或從檔案載入，然後將數值特徵向量對應至三個輸出：1. 包含整體樹狀中個別樹狀輸出的向量。 2. 指出整體樹狀中特徵向量所在分葉的向量。 3. 指出整體樹狀中特徵向量所在路徑的向量。 若同時指定模型檔案及訓練員，則向量會使用模型檔案。 若兩者皆未指定，則向量會訓練預設 FastTree 模型。 這可透過訓練針對其選擇性排列索引的迴歸模型，來處理索引鍵標籤。 |
 
 ## <a name="label-parsing"></a>標籤剖析

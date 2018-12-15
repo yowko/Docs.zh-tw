@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: c81332307542608e2c7a3f3a5fa89900862f1e84
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44260067"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145591"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>建立和擲回例外狀況 (C# 程式設計手冊)
 例外狀況是用來表示執行程式時發生錯誤。 建立描述錯誤的例外狀況物件，然後使用 [throw](../../../csharp/language-reference/keywords/throw.md) 關鍵字「擲回」。 執行階段接著會搜尋最相容的例外狀況處理常式。  
@@ -41,7 +41,7 @@ ms.locfileid: "44260067"
   
  所有例外狀況包含名為 <xref:System.Exception.Message%2A> 的屬性。 此字串應該設為說明例外狀況的原因。 請注意，安全性敏感資訊不應該放在訊息文字中。 除了 <xref:System.Exception.Message%2A> 之外，<xref:System.ArgumentException> 還會包含一個名為 <xref:System.ArgumentException.ParamName%2A> 的屬性，該屬性應設定為導致擲回例外狀況的引數名稱。 如果是屬性 setter，則 <xref:System.ArgumentException.ParamName%2A> 應設定為 `value`。  
   
- 只要 public 和 protected 方法成員無法完成其預期函式，應該就會擲回例外狀況。 擲回的例外狀況類別應該是可符合錯誤狀況的最特定例外狀況。 這些例外狀況應該記錄為類別功能的一部分，而且原始類別的衍生類別或更新應該會保留相同的行為，以進行回溯相容性。  
+ 只要 public 和 protected 方法無法完成其預期函式，應該就會擲回例外狀況。 擲回的例外狀況類別應該是可符合錯誤狀況的最特定例外狀況。 這些例外狀況應該記錄為類別功能的一部分，而且原始類別的衍生類別或更新應該會保留相同的行為，以進行回溯相容性。  
   
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>要在擲回例外狀況時避免的事項  
  下列清單識別要在擲回例外狀況時避免的做法︰  
@@ -55,7 +55,7 @@ ms.locfileid: "44260067"
 -   請不要建立可在偵錯模式中擲回的例外狀況，而不是釋放模式。 若要在開發階段期間識別執行階段錯誤，請改用「偵錯判斷提示」。  
   
 ## <a name="defining-exception-classes"></a>定義例外狀況類別  
- 程式可以擲回 <xref:System> 命名空間中預先定義的例外狀況類別 (但先前註明的項目除外)，或藉由衍生自 <xref:System.Exception> 來建立自己的例外狀況類別。 衍生類別應該定義至少四個建構函式︰一個預設建構函式、一個設定訊息屬性的建構函式，以及同時設定 <xref:System.Exception.Message%2A> 和 <xref:System.Exception.InnerException%2A> 屬性的建構函式。 第四個建構函式是用來序列化例外狀況。 新的例外狀況類別應為可序列化。 例如:   
+ 程式可以擲回 <xref:System> 命名空間中預先定義的例外狀況類別 (但先前註明的項目除外)，或藉由衍生自 <xref:System.Exception> 來建立自己的例外狀況類別。 衍生類別應該定義至少四個建構函式︰一個預設建構函式、一個設定訊息屬性的建構函式，以及同時設定 <xref:System.Exception.Message%2A> 和 <xref:System.Exception.InnerException%2A> 屬性的建構函式。 第四個建構函式是用來序列化例外狀況。 新的例外狀況類別應為可序列化。 例如：  
   
  [!code-csharp[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_4.cs)]  
   

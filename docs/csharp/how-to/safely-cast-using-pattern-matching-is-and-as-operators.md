@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 88289099864293b3b19da62155d58ba4797948bd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4e0eb53a44a6348d0f5154a0a08222da90985864
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216169"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149311"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-is-and-as-operators"></a>如何：使用模式比對、is 和 as 運算子，安全地進行轉換
 
@@ -23,7 +23,7 @@ ms.locfileid: "44216169"
 
 [!code-csharp-interactive[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
 
-上述範例示範模式比對語法的一些功能。 `if (a is Mammal m)` 和 `if (o is Mammal m)` 陳述式使用初始化指派來合併測試。 只有在測試成功時，才會發生指派。 變數 `m` 僅會在已指派的內嵌 `if` 陳述式範圍內。 您隨後無法使用相同的方法存取 `m`。 請於互動式視窗嘗試。
+上述範例示範模式比對語法的一些功能。 `if (a is Mammal m)` 和 `if (o is Mammal m)` 陳述式使用初始化指派來合併測試。 只有在測試成功時，才會進行指派。 變數 `m` 僅會在已指派的內嵌 `if` 陳述式範圍內。 您隨後無法使用相同的方法存取 `m`。 請於互動式視窗嘗試。
 
 如果[可為 Null 的型別](../programming-guide/nullable-types/index.md)具有值，您也可以使用相同的語法進行測試，如下列範例程式碼所示：
 

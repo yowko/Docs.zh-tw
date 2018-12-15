@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 9950bb0e32787306dc34e2c006099332c06bda2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd81c0c36cb88b971539e843e3e1f2096a73d40e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199964"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152772"
 ---
 # <a name="volatile-c-reference"></a>volatile (C# 參考)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50199964"
 
 其他型別，包括 `double` 與 `long`，不能標示為 `volatile`，因為對這些型別之欄位的讀取和寫入不保證是不可部分完成。 若要保護對這些型別之欄位的多執行緒存取，請使用 <xref:System.Threading.Interlocked> 類別成員，或使用 [`lock` ](lock-statement.md) 陳述式來保護存取。
 
-volatile 關鍵字只能套用至 `class` 或 `struct` 的欄位。 區域變數不可以宣告為 `volatile`。
+`volatile` 關鍵字只能套用至 `class` 或 `struct` 的欄位。 區域變數不可以宣告為 `volatile`。
   
 ## <a name="example"></a>範例
 
@@ -37,7 +37,7 @@ volatile 關鍵字只能套用至 `class` 或 `struct` 的欄位。 區域變數
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
 
-下列範例示範如何建立和使用輔助或背景工作執行緒，以運用主執行緒的輔助或背景工作執行緒來執行平行處理。 如需多執行緒的背景資訊，請參閱 [Managed 執行緒處理](../../../standard/threading/index.md)和[執行緒處理 (C#)](../../programming-guide/concepts/threading/index.md)。  
+下列範例示範如何建立和使用輔助或背景工作執行緒，以運用主執行緒的輔助或背景工作執行緒來執行平行處理。 如需有關多執行緒的詳細資訊，請參閱 [Managed 執行緒處理](../../../standard/threading/index.md)。
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
 
@@ -47,7 +47,7 @@ volatile 關鍵字只能套用至 `class` 或 `struct` 的欄位。 區域變數
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 語言規格：volatile 關鍵字](../../../../_csharplang/spec/classes.md#volatile-fields)
 - [C# 參考](../index.md)

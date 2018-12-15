@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98423e6c103f7eb93b4bfa35ef19b6551c0df0e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 806ccb1d33d9a7b66c740099864decd651c9213f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399590"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144880"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (全域組件快取工具)
 全域組件快取工具可以讓您檢視和操作全域組件快取和下載快取的內容。  
@@ -41,13 +41,13 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
   
 #### <a name="parameters"></a>參數  
   
-|引數|描述|  
+|引數|說明|  
 |--------------|-----------------|  
 |*assemblyName*|組件的名稱。 您可以提供如 `myAssembly` 的部分指定組件名稱，或如 `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5` 的完整指定組件名稱。|  
 |*assemblyPath*|含有組件資訊清單 (Assembly Manifest) 的檔案名稱。|  
 |*assemblyListFile*|列出要安裝或解除安裝之組件的 ANSI 文字檔路徑。 若要使用文字檔安裝組件，請在檔案的個別行上指定每個組件的路徑。 這個工具會解譯相對路徑 (相對於 *assemblyListFile* 的位置)。 若要使用文字檔來解除安裝組件，請在檔案的個別行上為每個組件指定完整的組件名稱。 請參閱本主題稍後的 *assemblyListFile* 內容範例。|  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/cdl**|刪除下載快取的內容。|  
 |**/f**|請使用 **/** 或 **/il** 選項指定這個選項，以強制進行組件的重新安裝。 如果具有相同名稱的組件已存在於全域組件快取中，則這個工具會覆寫它。|  
@@ -93,7 +93,23 @@ myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 ```  
-  
+
+> [!NOTE]
+>  嘗試安裝檔案名稱超過 79 到 91 個字元 (不含副檔名) 的組件，可能導致下列錯誤：
+> ```
+> Failure adding assembly to the cache:   The file name is too long.
+> ```
+> 這是因為 Gacutil.exe 在內部建構的路徑超過 MAX_PATH 個字元，其中包含下列元素：
+> - GAC 根目錄 - 34 個字元 (即 `C:\Windows\Microsoft.NET\assembly\`)
+> - 架構 - 7 或 9 個字元 (即 `GAC_32\`、`GAC_64\`、`GAC_MSIL`)
+> - AssemblyName - 最多 91 個字元，根據其他元素的大小而定 (例如 `System.Xml.Linq\`)
+> - AssemblyInfo - 31 到 48 個字元或以上，其中包含下列元素：
+>   - Framework - 5 個字元 (例如 `v4.0_`)
+>   - AssemblyVersion - 8 到 24 個字元 (例如 `9.0.1000.0_`)
+>   - AssemblyLanguage - 1 到 8 個字元 (例如 `de_`、`sr-Cyrl_`)
+>   - PublicKey - 17 個字元 (例如 `31bf3856ad364e35\`)
+> - DllFileName - 最多 91 + 4 個字元 (即 `<AssemblyName>.dll`)
+
 ## <a name="examples"></a>範例  
  下列命令會將 `mydll.dll` 組件安裝到全域組件快取中。  
   

@@ -2,7 +2,7 @@
 title: 使用字串插補來建構格式化的字串
 metadata:
   title: 字串插補 - C# 互動式教學課程
-  description: 在此教學課程中，您會使用瀏覽器，以互動方式探索 C# 字串插補功能。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。
+  description: 在本教學課程中，您使用瀏覽器，以互動方式探索 C# 字串插補功能。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。
   audience: Developer
   ms.custom: mvc
   ms.date: 08/24/2018
@@ -11,22 +11,22 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: C# 中的集合
-  ms.openlocfilehash: f1262beab39b78966d2be10fc983dfe1d4be998b
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: c8f93bd922b1003aafd50d5e95d92bcb492106c1
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200156"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53149207"
 items:
 - durationInMinutes: 2
   content: >
     此教學課程將教您如何使用[字串插補](../../language-reference/tokens/interpolated.md)在單一字串中插入值。 您也會了解如何控制結果字串的文字格式。 您使用瀏覽器撰寫並執行 C# 程式碼，而且可以立即查看結果。
 - title: 建立插入字串
   durationInMinutes: 2
-  content: "在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入程式碼 (將 `<name>`取代為您的名稱)，然後選取 [執行]：\n\n```csharp\nvar name = \"<name>\";\nConsole.WriteLine($\"Hello, {name}. It's a pleasure to meet you!\");\n```\n\n當您執行程式時，[輸出] 會顯示問候語中包含您名稱的字串。 <xref:System.Console.WriteLine%2A> 方法呼叫的字串引數是「插入字串」。 它是一種範本，可讓您從包含內嵌程式碼的字串建構單一字串 (稱為「結果字串」)。 插入字串特別適用於將值插入至字串或將數個字串串連 (聯結在一起)。 \n\n上面的範例包含每個插入字串都必須要有的兩個元素： \n\n- 左引號字元之前開頭為 `$` 字元的字串常值。 `$` 符號與引號字元之間不能有任何空格。 (如果您想要查看包含空格時會發生什麼情況，請在互動式視窗中於 `$` 字元後面插入空格，然後執行已更新的程式碼。 C# 編譯器抱怨「未預期的字元 '$'」)。 \n\n- 一或多個「插入運算式」。 插入運算式是以左右大括號 (`{` 和 `}`) 指出。 您可以放置任何 C# 運算式，以傳回大括號內的值 (包含 `null`)。 \n\n嘗試更多包含一些其他資料類型的字串插補範例。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+  content: "在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中鍵入程式碼 (將 `<name>`取代為您的名稱)，然後選取 [執行]：\n\n```csharp\nvar name = \"<name>\";\nConsole.WriteLine($\"Hello, {name}. It's a pleasure to meet you!\");\n```\n\n當您執行程式時，[輸出] 會顯示問候語中包含您名稱的字串。 <xref:System.Console.WriteLine%2A> 方法呼叫的字串引數是「插入字串」。 它是一種範本，可讓您從包含內嵌程式碼的字串建構單一字串 (稱為「結果字串」)。 插入字串特別適用於將值插入至字串或將數個字串串連 (聯結在一起)。 \n\n上面的範例包含每個插入字串都必須要有的兩個項目： \n\n- 左引號字元之前開頭為 `$` 字元的字串常值。 `$` 符號與引號字元之間不能有任何空格。 (如果您想要查看包含空格時會發生什麼情況，請在互動式視窗中於 `$` 字元後面插入空格，然後執行已更新的程式碼。 C# 編譯器抱怨「未預期的字元 '$'」)。 \n\n- 一或多個「插入運算式」。 插入運算式是以左右大括號 (`{` 和 `}`) 指出。 您可以放置任何 C# 運算式，以傳回大括號內的值 (包含 `null`)。 \n\n嘗試更多包含一些其他資料類型的字串插補範例。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: 包含不同的資料類型
   durationInMinutes: 5
-  content: "在前一個步驟中，您使用字串插補將某個字串插入至另一個字串內部。 不過，插入運算式的結果可以是任意資料類型。 請包含插入字串中各種資料類型的值。 \n\n在下列範例中，我們先定義具有 `Name` [屬性](../../properties.md)與 `ToString` [方法](../../methods.md)的[類別](../../programming-guide/classes-and-structs/classes.md)資料類型 `Vegetable`，它會[覆寫](../../language-reference/keywords/override.md) <xref:System.Object.ToString?displayProperty=nameWithType> 方法的行為。 [`public` 存取修飾詞](../../language-reference/keywords/public.md)會使該方法可用於取得任何用戶端程式碼，以取得 `Vegetable` 執行個體的字串表示。 在此範例中，`Vegetable.ToString` 方法會傳回 `Name` 屬性的值，此屬性會在 `Vegetable` [建構函式](../../programming-guide/classes-and-structs/constructors.md)中初始化：`Vegetable(string name) => Name = name;`。 接著，我們使用 [ `new`關鍵字](../../language-reference/keywords/new-operator.md)並提供建構函式名稱 `Vegetable`，建立名為 `item` 的 `Vegetable` 類別執行個體。 最後，我們將該執行個體併入插入字串，而此插入字串包含 <xref:System.DateTime> 值、<xref:System.Decimal> 值和 `Unit` [enumeration](../../programming-guide/enumeration-types.md) 值。 在互動式視窗中執行下列程式碼：\n\n```csharp\npublic class Vegetable\n{\n   public Vegetable(string name) => Name = name;\n\n   public string Name { get; }\n\n   public override string ToString() => Name;\n}\n\npublic enum Unit { item, kilogram, gram, dozen };\n\nvar item = new Vegetable(\"eggplant\");\nvar date = DateTime.Now;\nvar price = 1.99m;\nvar unit = Unit.item;\nConsole.WriteLine($\"On {date}, the price of {item} was {price} per {unit}.\");\n```\n\n請注意，插入字串中的插入運算式 `item` 會解析為結果字串中的文字 \"eggplant\"。 原因是，運算式結果的型別不是字串時，會使用下列方式將結果解析為字串：\n\n- 如果插入運算式評估為 `null`，則會使用空字串 (\"\"，或 <xref:System.String.Empty?displayProperty=nameWithType>)。\n\n- 如果插入運算式未評估為 `null`，一般會呼叫結果類型的 `ToString` 方法。 測試此作業的方式是更新 `Vegetable.ToString` 方法的實作。 您甚至可能不需要實作 `ToString` 方法，因為每個類型都有這個方法的某種實作。 若要測試此作業，請將範例中 `Vegetable.ToString` 方法的定義註解化 (作法是在其前面放置註解符號 `//`)。 在輸出中，字串 \"eggplant\" 會取代為完整類型名稱 (C# REPL 所定義的命名空間與類型名稱)，這是 <xref:System.Object.ToString?displayProperty=nameWithType> 方法的預設行為。 列舉值 `ToString` 方法的預設行為是傳回該值的字串表示。    \n\n在此範例的輸出中，日期太過精確 (eggplant 價格不會因第二個而變更)，而價格值未指出貨幣單位。 在下一個步驟中，您將學習如何控制運算式結果的字串表示格式來修正這些問題。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+  content: "在前一個步驟中，您使用字串插補將某個字串插入至另一個字串內部。 不過，插入運算式的結果可以是任意資料類型。 請包含插入字串中各種資料類型的值。 \n\n在下列範例中，我們先定義具有 `Name` [屬性](../../properties.md)與 `ToString` [方法](../../methods.md)的[類別](../../programming-guide/classes-and-structs/classes.md)資料類型 `Vegetable`，它會[覆寫](../../language-reference/keywords/override.md) <xref:System.Object.ToString?displayProperty=nameWithType> 方法的行為。 [`public` 存取修飾詞](../../language-reference/keywords/public.md)會使該方法可用於取得任何用戶端程式碼，以取得 `Vegetable` 執行個體的字串表示。 在此範例中，`Vegetable.ToString` 方法會傳回 `Name` 屬性的值，此屬性會在 `Vegetable` [建構函式](../../programming-guide/classes-and-structs/constructors.md)中初始化：`Vegetable(string name) => Name = name;`。 接著，我們使用 [ `new`關鍵字](../../language-reference/keywords/new-operator.md)並提供建構函式名稱 `Vegetable`，建立名為 `item` 的 `Vegetable` 類別執行個體。 最後，我們將該執行個體併入插入字串，而此插入字串包含 <xref:System.DateTime> 值、<xref:System.Decimal> 值和 `Unit` [enumeration](../../programming-guide/enumeration-types.md) 值。 在互動式視窗中執行下列程式碼：\n\n```csharp\npublic class Vegetable\n{\n   public Vegetable(string name) => Name = name;\n\n   public string Name { get; }\n\n   public override string ToString() => Name;\n}\n\npublic enum Unit { item, kilogram, gram, dozen };\n\nvar item = new Vegetable(\"eggplant\");\nvar date = DateTime.Now;\nvar price = 1.99m;\nvar unit = Unit.item;\nConsole.WriteLine($\"On {date}, the price of {item} was {price} per {unit}.\");\n```\n\n請注意，插入字串中的插入運算式 `item` 會解析為結果字串中的文字 \"eggplant\"。 原因是，運算式結果的型別不是字串時，會使用下列方式將結果解析為字串：\n\n- 如果插入運算式評估為 `null`，則會使用空字串 (\"\"，或 <xref:System.String.Empty?displayProperty=nameWithType>)。\n\n- 如果插入運算式未評估為 `null`，一般會呼叫結果類型的 `ToString` 方法。 測試這項作業的方式是更新 `Vegetable.ToString` 方法的實作。 您甚至可能不需要實作 `ToString` 方法，因為每個類型都有這個方法的某種實作。 若要測試此作業，請將範例中 `Vegetable.ToString` 方法的定義註解化 (作法是在其前面放置註解符號 `//`)。 在輸出中，字串 \"eggplant\" 會取代為完整類型名稱 (C# REPL 所定義的命名空間與類型名稱)，這是 <xref:System.Object.ToString?displayProperty=nameWithType> 方法的預設行為。 列舉值 `ToString` 方法的預設行為是傳回該值的字串表示。    \n\n在此範例的輸出中，日期太過精確 (eggplant 價格不會因第二個而變更)，而價格值未指出貨幣單位。 在下一個步驟中，您將學習如何控制運算式結果的字串表示格式來修正這些問題。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: 控制插入運算式的格式
   durationInMinutes: 5
   content: >
@@ -49,7 +49,7 @@ items:
     嘗試修改範例中的格式字串，以查看它們對日期和時間以及數值格式的影響。 將 `{date:d}` 中的 "d" 變更為 "t" (顯示簡短時間格式)、"y" (顯示年份和月份) 以及 "yyyy" (將年份顯示為四位數)。 將 `{price:C2}` 中的 "C2" 變更為 "e" (適用於指數標記法) 和 "F3" (適用於小數點後面有三位數的數值)。
 
 
-    除了控制格式之外，您也可以控制結果字串中所含格式化字串的欄位寬度和對齊方式。 在下一步，您將學習如何執行此作業。
+    除了控制格式之外，您也可以控制結果字串中所含格式化字串的欄位寬度和對齊方式。 在下一步，您將學習如何執行這項作業。
 
 
     > [!NOTE]
@@ -96,4 +96,8 @@ items:
     > [!NOTE]
 
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
-- content: "您已完成字串插補快速入門。 \n\n您可以在自己的本機開發環境中繼續進行這些快速入門。 了解[本機開發](local-environment.md)的基本概念，然後選擇一個快速入門。 您可以嘗試這個相同的快速入門、直接移至下一個快速入門，或從 [C# 中的數字](numbers-in-csharp-local.md)快速入門重新開始。\n\n如需詳細資訊，請參閱[字串插補](../../language-reference/tokens/interpolated.md)主題和 [C# 中的字串插補](../../tutorials/string-interpolation.md)教學課程。"
+- content: >-
+    您已完成字串內插補點互動式教學課程。 您可以按一下以下的 **C# 中的集合**連結來啟動下一個互動式教學課程，或者您可以瀏覽 [.NET 網站](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) \(英文\) 以下載 .NET Core SDK、在您的機器上建立專案，並繼續撰寫程式碼。 「繼續學習」步驟會帶您回到這些教學課程。
+
+
+    如需詳細資訊，請參閱[字串內插補點](../../language-reference/tokens/interpolated.md)。

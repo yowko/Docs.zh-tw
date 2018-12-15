@@ -1,18 +1,18 @@
 ---
-title: 在 Visual Studio 2017 中使用 .NET Core 和 C# 建置 Hello World 應用程式
+title: 在 Visual Studio 2017 中使用 .NET Core 來建置 C# Hello World 應用程式
 description: 了解如何使用 Visual Studio 2017 以 C# 建置簡單的 .NET Core 主控台應用程式。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 031c0a433391fbe4cdd40f6ce648f476787baf48
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 9b28c1523196650c30a54ccaa86fe23ed60e96f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003018"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129619"
 ---
-# <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式
+# <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 來建置 C# Hello World 應用程式
 
 本主題提供在 Visual Studio 2017 中使用 C# 建置、偵錯及發行簡單 .NET Core 主控台應用程式的逐步指示。 Visual Studio 2017 提供功能完整的開發環境來建置 .NET Core 應用程式。 只要應用程式沒有平台特定的相依性，應用程式就可以在 .NET Core 的任何目標平台，以及安裝 .NET Core 的任何系統上執行。
 

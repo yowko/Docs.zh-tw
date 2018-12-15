@@ -1,20 +1,18 @@
 ---
-title: 使用 Visual Studio 2017 來為您的 C# 或 Visual Basic Hello World .NET Core 應用程式進行偵錯
+title: 使用 Visual Studio 2017 針對您的 Hello World .NET Core 應用程式進行偵錯
 description: 了解如何使用 Visual Studio 2017 對以 C# 或 Visual Basic 撰寫的 Hello World 應用程式進行偵錯。
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/15/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 53e4549f4790bc0756cd0ad0b903b3dc25d2f66a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: df153740e492b33c91b4cfc2f148a4113f1ab5d0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200120"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147524"
 ---
-# <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 針對您的 Hello World 應用程式進行偵錯
+# <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>使用 Visual Studio 2017 針對您的 C# 或 Visual Basic .NET Core Hello World 應用程式進行偵錯
 
-截至目前為止，您已遵循[在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](.\with-visual-studio.md)或[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](vb-with-visual-studio.md)中的步驟，建立並執行簡單的主控台應用程式。 在您撰寫並編譯應用程式之後，便可以開始測試它。 Visual Studio 包含一組完整的偵錯工具，可供您在針對應用程式進行測試和疑難排解時使用。
+截至目前為止，您已遵循[在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](with-visual-studio.md)或[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](vb-with-visual-studio.md)中的步驟，建立並執行簡單的主控台應用程式。 在您撰寫並編譯應用程式之後，便可以開始測試它。 Visual Studio 包含一組完整的偵錯工具，可供您在針對應用程式進行測試和疑難排解時使用。
 
 ## <a name="debugging-in-debug-mode"></a>在偵錯模式下進行偵錯
 
@@ -228,4 +226,4 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 通常�
 
 當您按 F5 或從 [組建] 功能表中選擇 [組置方案] 時，Visual Studio 就會編譯您主控台應用程式的發行版本。 您可以測試該版本，就像您對應用程式的偵錯版本所做的一樣。
 
-完成應用程式偵錯之後，下一個步驟就是發行可部署的應用程式版本。 如需如何執行此操作的資訊，請參閱[使用 Visual Studio 2017 發佈 Hello World 應用程式](./publishing-with-visual-studio.md)。
+完成應用程式偵錯之後，下一個步驟就是發行可部署的應用程式版本。 如需如何執行這項操作的資訊，請參閱[使用 Visual Studio 2017 發佈 Hello World 應用程式](publishing-with-visual-studio.md)。
