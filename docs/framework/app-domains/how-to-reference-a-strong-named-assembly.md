@@ -64,7 +64,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  您可以使用下列[強式名稱 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令，列印特定組件之公開金鑰和公開金鑰權杖的十六進位格式：  
   
- **sn -Tp \<** 組件**>**  
+ **sn-Tp \<**  *組件* **>**  
   
  如果您有公開金鑰檔案，則可以改用下列命令 (請注意命令列選項上的大小寫差異)：  
   

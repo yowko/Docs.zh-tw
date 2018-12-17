@@ -154,7 +154,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
 ## <a name="additional-resources"></a>其他資源
 
--   **使用 .NET Core 2.1 中的 HttpClientFactory **
+-   **使用 .NET Core 2.1 中的 HttpClientFactory**
     [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 
