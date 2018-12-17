@@ -1,16 +1,17 @@
 ---
-title: 使用可為 Null 的型別 (C# 程式設計指南)
+title: 使用可為 Null 的型別 - C# 程式設計手冊
+ms.custom: seodec18
 description: 了解如何使用可為 Null 的型別
 ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 9c9ab5c3ca1dd49f011bf9c980945fa9da0d8cfc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d2c6f2f78ed71558b71adcc1d4d8cc9a6f459d75
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148349"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235211"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>使用可為 Null 的型別 (C# 程式設計指南)
 
@@ -62,7 +63,7 @@ ms.locfileid: "53148349"
   
 ## <a name="operators"></a>運算子
 
-預先定義的一元和二元運算子，以及針對實值型別而存在的任何使用者定義的運算子，也能為可為 Null 的型別所用。 若其中一或兩個運算元皆為 Null，這些運算子便會產生 Null 值；否則，運算子會使用包含的值來計算結果。 例如:   
+預先定義的一元和二元運算子，以及針對實值型別而存在的任何使用者定義的運算子，也能為可為 Null 的型別所用。 若其中一或兩個運算元皆為 Null，這些運算子便會產生 Null 值；否則，運算子會使用包含的值來計算結果。 例如：  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
   

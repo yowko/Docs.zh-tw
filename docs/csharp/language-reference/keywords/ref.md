@@ -1,5 +1,6 @@
 ---
-title: ref 關鍵字 (C# 參考)
+title: ref 關鍵字 - C# 參考
+ms.custom: seodec18
 ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "50195966"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236315"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -62,7 +63,7 @@ class CS0663_Example
 - 使用 [async](async.md) 修飾詞定義的 async 方法。  
 - 迭代器方法，其包括 [yield return](yield.md) 或 `yield break` 陳述式。  
 
-## <a name="passing-an-argument-by-reference-an-example"></a>以傳參考方式傳遞引數：範例
+## <a name="passing-an-argument-by-reference-an-example"></a>以傳址方式傳遞引數：範例
 
 先前的範例會以傳參考方式傳遞實值型別。 您也可以使用 `ref` 關鍵字，以傳參考方式傳遞參考型別。 以傳參考方式傳遞參考型別，可讓已呼叫方法取代參考參數在呼叫者中所參考的物件。 物件的儲存位置會以參考參數值的方式，傳遞至方法。 如果您變更參數儲存位置中的值 (指向新的物件)，則也會變更呼叫端所參考的儲存位置。 下列範例會以 `ref` 參數，傳遞參考類型的執行個體。
   

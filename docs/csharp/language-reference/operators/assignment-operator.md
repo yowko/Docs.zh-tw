@@ -1,17 +1,18 @@
 ---
-title: = 運算子 (C# 參考)
+title: = 運算子 - C# 參考
+ms.custom: seodec18
 ms.date: 11/26/2018
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 123674f37d17db6dcfe6ae9d45c7176bdff1eda7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2c999e76a9238e6401e89af0faa81967b13a3995
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149220"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244384"
 ---
 # <a name="-operator-c-reference"></a>= 運算子 (C# 參考)
 
@@ -23,7 +24,7 @@ ms.locfileid: "53149220"
 a = b = c
 ```
 
-會評估為
+評估為
 
 ```csharp
 a = (b = c)

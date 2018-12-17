@@ -3,16 +3,28 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145328"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245596"
 ---
 # <a name="the-history-of-c"></a>C# 的歷史 #
 
-最早的語言版本有哪些內容？ 而在那之後的幾年有什麼演變？
+此文章提供了 C# 語言每個主要版本的歷史。 C# 小組將持續創新並加入新功能。 您可以在ˋ GitHub 上的 [dotnet/roslyn 存放庫repository](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) 存放庫中找到詳細語言功能狀態 (包括針對未來版本考慮加入的功能)。
+
+> [!IMPORTANT]
+> C# 語言中的部分功能仰賴 C#規格定義為「標準程式庫」中的型別和方法。 .NET 平台在許多套件中會提供那些類型與方法。 例外狀況處理便是其中一個例子。 每個 `throw` 陳述式或運算式都會受到檢查，以確保擲回衍生自 <xref:System.Exception> 的物件。 每個 `catch` 也一樣會受到檢查，以確保攔截到衍生自 <xref:System.Exception> 的型別。 每個版本都可能會加入新的需求。 若要在較舊的環境中使用最新的語言功能，可能需要安裝特定的程式庫。 每個特定版本的頁面中會記載這些相依性。 若要知道此相依性的背景，可深入了解[語言和程式庫之間的關係](relationships-between-language-and-library.md)。
+
+C# 建置工具將最新的主要語言版本視為預設語言版本。 主要版本之間可能存在單點發行版本，此節的其他文章對此進行了詳細介紹。 若要使用小數點版本中的最新功能，您需要[設定編譯器語言版本](../language-reference/configure-language-version.md)並選取該版本。 自 C# 7.0 以來已經有三個單點發行版本：
+
+* [C# 7.3](csharp-7-3.md)：
+  - [Visual Studio 2017 15.7 版](https://visualstudio.microsoft.com/vs/whatsnew/)和 [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md) 目前提供 C# 7.3。
+* [C# 7.2](csharp-7-2.md):
+  - [Visual Studio 2017 15.5 版](https://visualstudio.microsoft.com/vs/whatsnew/)和 [.NET Core 2.0 SDK](../../core/whats-new/index.md) 目前提供 C# 7.2。
+* [C# 7.1](csharp-7-1.md)：
+  - [Visual Studio 2017 15.3 版](https://visualstudio.microsoft.com/vs/whatsnew/)和 [.NET Core 2.0 SDK](../../core/whats-new/index.md) 已新增這些功能。
 
 ## <a name="c-version-10"></a>C# 1.0 版
 
@@ -106,14 +118,14 @@ C# 4.0 版要堅守 3.0 版的奠基狀態會很困難。 3.0 版開始，C# 讓
 
 ## <a name="c-version-50"></a>C# 5.0 版
 
-C# 5.0 版是該語言的一個聚焦版本。 幾乎該版本的所有心血都投入了另一項奠基的語言概念：非同步程式設計的 `async` 和 `await` 模型。  以下是主要的功能清單：
+C# 5.0 版是該語言的一個聚焦版本。 幾乎該版本的所有心血都投入了另一個奠基的語言概念：非同步程式設計的 `async` 和 `await` 模型。  以下是主要的功能清單：
 
 - [非同步成員](../async.md)
 - [呼叫端資訊屬性](../programming-guide/concepts/caller-information.md)
 
 ### <a name="see-also"></a>請參閱
 
-* [程式碼專案：C# 5.0 中的呼叫端資訊屬性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+* [Code Project：C# 5.0 的呼叫端資訊屬性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 呼叫端資訊屬性可讓您輕鬆地擷取您正在執行的內容，而不必依賴大量的未定案反映程式碼。 它在診斷和記錄工作方面有許多用途。
 

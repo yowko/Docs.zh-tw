@@ -1,5 +1,6 @@
 ---
-title: '?: 運算子 (C# 參考)'
+title: ?:運算子 - C# 參考
+ms.custom: seodec18
 ms.date: 11/20/2018
 f1_keywords:
 - ?:_CSharpKeyword
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: cc9bde1d60a3272e2f24cfc05761171a31029c75
-ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
+ms.openlocfilehash: ca61ee323d98ece1236d9072e14d02385fbdf9f8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "50980618"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241784"
 ---
-# <a name="-operator-c-reference"></a>?: 運算子 (C# 參考)
+# <a name="-operator-c-reference"></a>?:運算子 (C# 參考)
 
 條件運算子 `?:` (通稱為三元條件運算子) 會評估布林運算式，然後根據布林運算式評估為 `true` 或 `false`，傳回評估兩個運算式其中之一的結果。 從 C# 7.2 開始，[條件 ref 運算式](#conditional-ref-expression)會傳回兩個運算式其中之一結果的參考。
 
@@ -36,7 +37,7 @@ condition ? consequence : alternative
 a ? b : c ? d : e
 ```
 
-會評估為
+評估為
 
 ```csharp
 a ? b : (c ? d : e)

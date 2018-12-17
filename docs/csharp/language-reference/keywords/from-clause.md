@@ -1,5 +1,6 @@
 ---
-title: from 子句 (C# 參考)
+title: from 子句 - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - from_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: 9af24d9c2a99a9c763c6ad3aac9895e7dddcf8ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ab0602f9ed353cf3959516e285086ab5af98c9f8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129034"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236800"
 ---
 # <a name="from-clause-c-reference"></a>from 子句 (C# 參考)
 
@@ -31,7 +32,7 @@ ms.locfileid: "53129034"
 
 ## <a name="the-range-variable"></a>範圍變數
 
-當資料來源實作 <xref:System.Collections.Generic.IEnumerable%601> 時，編譯器會推斷範圍變數的類型。 例如，如果來源有類型 `IEnumerable<Customer>`，則範圍變數推斷為 `Customer`。 必須明確指定類型的時機，是當來源為非泛型的 `IEnumerable` 類型時，如 <xref:System.Collections.ArrayList>。 如需詳細資訊，請參閱[如何：使用 LINQ 查詢 ArrayList](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)。
+當資料來源實作 <xref:System.Collections.Generic.IEnumerable%601> 時，編譯器會推斷範圍變數的類型。 例如，如果來源有類型 `IEnumerable<Customer>`，則範圍變數推斷為 `Customer`。 必須明確指定類型的時機，是當來源為非泛型的 `IEnumerable` 類型時，如 <xref:System.Collections.ArrayList>。 如需詳細資訊，請參閱[＜How to：使用 LINQ 查詢 ArrayList](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)。
 
 在前例中，`num` 推斷為類型 `int`。 因為範圍變數是強型別，所以您可以對它呼叫方法，或在其他作業中使用它。 例如，不寫入 `select num`，而是可以寫入 `select num.ToString()` 讓查詢運算式傳回一串字串，不是整數序列。 或者可以寫入 `select num + 10` 讓運算式傳回 14、11、13、12、10 序列。 如需詳細資訊，請參閱 [select 子句](select-clause.md)。
 

@@ -3,20 +3,20 @@ title: 處理 LINQ
 description: 本教學課程會教導您如何使用 LINQ 產生序列、撰寫用於 LINQ 查詢的方法，並區分立即和延遲評估。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 02456ed0d545aa0740f70d96c25b24ee9bc5120c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b7faa75234dec62be63e96c0f15f97c6d2aa4c99
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126314"
+ms.locfileid: "53170804"
 ---
 # <a name="working-with-linq"></a>處理 LINQ
 
 ## <a name="introduction"></a>簡介
 
-本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。 您將了解：
+此教學課程會教導您 .NET Core 和 C# 語言中的功能。 您將了解：
 
-*   如何使用 LINQ 產生序列
+*   如何使用 LINQ 產生序列。
 *   如何撰寫可輕鬆用於 LINQ 查詢的方法。
 *   如何區分立即和延遲評估。
 

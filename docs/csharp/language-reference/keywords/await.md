@@ -1,5 +1,6 @@
 ---
-title: await (C# 參考)
+title: await - C# 參考
+ms.custom: seodec18
 ms.date: 05/22/2017
 f1_keywords:
 - await_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: deae39781b000aa8e08fa3bda29519d280aadb79
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c80d6598540700fdb8559497f10c66726c384519
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147381"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239679"
 ---
 # <a name="await-c-reference"></a>await (C# 參考)
 `await` 運算子會套用至非同步方法中的工作，以在執行方法中插入暫停點，直到等候的工作完成為止。 工作代表進行中的工作。  
@@ -30,7 +31,7 @@ ms.locfileid: "53147381"
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  如需完整範例，請參閱[逐步解說：使用 async 和 await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以從 Microsoft 網站的[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) 下載此範例。 此範例位於 AsyncWalkthrough_HttpClient 專案中。  
+>  如需完整的範例，請參閱[逐步解說：使用 Async 和 Await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以從 Microsoft 網站的[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) 下載此範例。 此範例位於 AsyncWalkthrough_HttpClient 專案中。  
   
 如先前範例所示，如果將 `await` 套用至傳回 `Task<TResult>` 之方法呼叫的結果，則 `await` 運算式的類型為 `TResult`。 如果將 `await` 套用至傳回 `Task` 之方法呼叫的結果，則 `await` 運算式的類型為 `void`。 下列範例會說明其間的差異。  
   

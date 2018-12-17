@@ -1,17 +1,18 @@
 ---
-title: 運算子 (C# 程式設計手冊)
+title: 運算子 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: bf453d5770967f26999b8537339f1b690646b97d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e9518dcf2a9facfdc46c2f6245184ea2da95b819
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150963"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238997"
 ---
 # <a name="operators-c-programming-guide"></a>運算子 (C# 程式設計手冊)
 在 C# 中，「 *運算子* 」(Operator) 是程式的元素，這類元素會套用至運算式或陳述式中的一個或多個「 *運算元* 」(Operand)。 只使用一個運算元的運算子稱為`++`「一元」 `new`(Unary) 運算子，例如遞增運算子 ( *) 或* 。 使用兩個運算元的運算子稱為`+`「二元」`-`(Binary) 運算子，例如算術運算子 (`*`、`/`、 *及* )。 還有一種運算子稱為條件運算子 (`?:`)，它會使用三個運算元而且是 C# 中唯一的三元運算子。  

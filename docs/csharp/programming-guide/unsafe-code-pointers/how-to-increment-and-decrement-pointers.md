@@ -1,16 +1,17 @@
 ---
-title: 操作說明：遞增和遞減指標 (C# 程式設計手冊)
+title: 操作說明：遞增和遞減指標 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-ms.openlocfilehash: c75432d88a1e96742573a6e69a4e035066a387c4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f28fc4f86e4ff01f90bfd49714f38eee7040f9d1
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128332"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242282"
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>操作說明：遞增和遞減指標 (C# 程式設計手冊)
 

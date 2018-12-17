@@ -1,16 +1,17 @@
 ---
-title: 搭配陣列使用 foreach (C# 程式設計手冊)
+title: 搭配陣列使用 foreach - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 05/23/2018
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: 217408600e40d2ce5197f207c007b858ff3145d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a290cd709dd6491981658f467fa0163011290128
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147040"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238464"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>搭配陣列使用 foreach (C# 程式設計手冊)
 
