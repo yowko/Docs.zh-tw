@@ -1,5 +1,6 @@
 ---
-title: 規則運算式中的錨點
+title: .NET 規則運算式中的錨點
+description: 了解如何在規則運算式模式中使用錨點。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.custom: seodec18
+ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085182"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155034"
 ---
 # <a name="anchors-in-regular-expressions"></a>規則運算式中的錨點
 <a name="top"></a> 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。 當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。 例如， `^` 指定必須從行首或字串的開頭開始比對。 因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。 下表列出 .NET 中此規則運算式所支援的錨點。  
   
-|錨點|描述|  
+|錨點|說明|  
 |------------|-----------------|  
 |`^`|根據預設，比對必須發生在字串的開頭；在多行模式中，它必須發生在一行的開頭。 如需詳細資訊，請參閱 [字串開頭或行首](#Start)。|  
 |`$`|根據預設，比對必須發生在字串的結尾或字串結尾的 `\n` 之前；在多行模式中，它必須發生在一行的結尾，或一行結尾的 `\n` 之前。 如需詳細資訊，請參閱 [字串結尾或行尾](#End)。|  
@@ -46,14 +48,14 @@ ms.locfileid: "44085182"
   
 -   在符合規則運算式模式的輸入字串中，對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> 多載的呼叫只會尋找其中的第一個子字串。  
   
--   對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> 參數的呼叫 (`options` 參數設為 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>) 會尋找所有五個子字串。  
+-   對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> 參數的呼叫 ( `options` 參數設為 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> ) 會尋找所有五個子字串。  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring1.vb#1)]  
   
  規則運算式模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` 的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`^`|開始在輸入字串的開頭比對 (如果是使用 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項來呼叫此方法，則從行首開始比對)。|  
 |`((\w+(\s?)){2,}`|比對一個或多個文字字元，後面接零，或接一個空格剛好兩次。 這是第一個擷取群組。 此運算式也定義了第二個和第三個擷取群組：第二個包含所擷取的文字，第三個則包含擷取到的空格。|  
@@ -73,7 +75,7 @@ ms.locfileid: "44085182"
   
  如果您將 `$` 與 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項搭配使用，則該比對也會在行尾發生。 請注意， `$` 會比對 `\n` ，但不會比對 `\r\n` (歸位字元與新行字元的組合，亦即 CR/LF)。 若要比對 CR/LF 字元組合，請在規則運算式模式中包含 `\r?$` 。  
   
- 下列範例會將 `$` 錨點加入 [字串開頭或行首](#Start) 一節中範例所使用的規則運算式模式。 當與原始的輸入字串 (包括五行文字) 搭配使用時，<xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法會找不到相符項目，因為第一行的結尾不符合 `$` 模式。 當原始的輸入字串分割成字串陣列時，<xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法會成功地比對這五行。 當呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法且 `options` 參數設定為 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 時，會找不到相符項目，因為規則運算式模式並不考慮歸位字元項目 (\u+000D)。 不過，在將 `$` 取代為 `\r?$` 來修改規則運算式模式時，將 `options` 參數再次設定為 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 來呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法，則會找出五個相符項目。  
+ 下列範例會將 `$` 錨點加入 [字串開頭或行首](#Start) 一節中範例所使用的規則運算式模式。 當與原始的輸入字串 (包括五行文字) 搭配使用時， <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法會找不到相符項目，因為第一行的結尾不符合 `$` 模式。 當原始的輸入字串分割成字串陣列時， <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法會成功地比對這五行。 當呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法且 `options` 參數設定為 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 時，會找不到相符項目，因為規則運算式模式並不考慮歸位字元項目 (\u+000D)。 不過，在將 `$` 取代為 `\r?$`來修改規則運算式模式時，將 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 參數再次設定為 `options` 來呼叫 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 方法，則會找出五個相符項目。  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]  
@@ -126,7 +128,7 @@ ms.locfileid: "44085182"
   
  規則運算式 `\G(\w+\s?\w*),?` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\G`|從上一次比對結束的地方開始。|  
 |`\w+`|比對一個或多個文字字元。|  
@@ -148,7 +150,7 @@ ms.locfileid: "44085182"
   
  規則運算式模式的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`are`|比對子字串 "are"。|  
@@ -168,7 +170,7 @@ ms.locfileid: "44085182"
   
  規則運算式模式的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\B`|不要在字邊界開始比對。|  
 |`qu`|比對子字串 "qu"。|  

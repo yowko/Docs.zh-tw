@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308587"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152771"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -33,7 +33,7 @@ app.UseMvc(routes =>;
 
 在此範例中，已將名為 "default" 的路由新增至路由表。 它定義一個路由範本，其中包含 _controller_、_action_ 和 _id_ 的預留位置。controller 和 action 預留位置已指定預設值 (分別是 "Home" 和 "Index")，而 id 預留位置則是選擇性的 (由於已套用 "?")。 此處定義的慣例指出要求的第一個部分應該對應至控制器的名稱，第二個部分對應至動作，而第三個部分 (如果需要) 則會代表 id 參數。 慣例路由通常是在應用程式的一個位置定義，例如在啟動類別的 Configure 方法中。
 
-屬性路由會直接套用至控制器和動作，而不是全域指定。 其優點在於當您想要查看特定方法時，會更容易搜尋到這些路由，但也表示路由資訊不會保留在應用程式的一個位置。 透過屬性路由，您可以輕鬆地為一個動作指定多個路由，並合併控制器與動作之間的路由。 例如: 
+屬性路由會直接套用至控制器和動作，而不是全域指定。 其優點在於當您想要查看特定方法時，會更容易搜尋到這些路由，但也表示路由資訊不會保留在應用程式的一個位置。 透過屬性路由，您可以輕鬆地為一個動作指定多個路由，並合併控制器與動作之間的路由。 例如：
 
 ```csharp
 [Route("Home")]
@@ -64,7 +64,7 @@ public class ProductsController : Controller
 
 如果您使用模型驗證，請務必檢查模型是否有效，再執行任何狀態改變命令，以確保您的應用程式不會遭到無效資料損毀。 您可以使用[篩選條件](/aspnet/core/mvc/controllers/filters)，避免需要在每個動作中新增程式碼來執行此作業。 ASP.NET Core MVC 篩選條件可讓您攔截要求群組，以便可根據目標套用一般原則和跨領域關注。 您可以將篩選條件套用至個別動作、整個控制器，或針對應用程式全域套用。
 
-對於 Web API，ASP.NET Core MVC 支援[「內容交涉」](/aspnet/core/mvc/models/formatting)，可讓要求指定回應的格式化方式。 根據要求中提供的標頭，傳回資料的動作會將回應格式化為 XML、JSON 或其他支援的格式。 此功能可讓具有不同資料格式需求的多個用戶端使用相同的 API。
+對於 Web API，ASP.NET Core MVC 支援[「內容交涉」](/aspnet/core/mvc/models/formatting)，可讓要求指定回應的格式化方式。 根據要求中提供的標頭，傳回資料的動作會將回應格式化為 XML、JSON 或其他支援的格式。 這項功能可讓具有不同資料格式需求的多個用戶端使用相同的 API。
 
 > ### <a name="references--mapping-requests-to-responses"></a>參考資料 - 將要求對應至回應
 >
@@ -79,11 +79,11 @@ public class ProductsController : Controller
 
 ## <a name="working-with-dependencies"></a>使用相依性
 
-ASP.NET Core 已內建支援，並在內部使用稱為[相依性插入](/aspnet/core/fundamentals/dependency-injection)的技術。 相依性插入是在應用程式的不同組件之間啟用鬆散結合的一個技術。 建議您啟用鬆散結合，因為它可讓您更輕鬆地隔離應用程式組件，以便進行測試或取代。 此外，變更應用程式的某個組件，也較不可能會對應用程式的其他地方造成非預期的影響。 相依性插入是以相依性反轉準則為基礎，而且通常是實現開啟/關閉準則的關鍵。 當您評估應用程式搭配其相依性的運作情況時，請注意[靜態黏貼](https://deviq.com/static-cling/)程式碼異味，並記住「[New 就是黏附](https://ardalis.com/new-is-glue)」此一箴言。
+ASP.NET Core 已內建支援，並在內部使用稱為[相依性插入](/aspnet/core/fundamentals/dependency-injection)的技術。 相依性插入是在應用程式的不同組件之間啟用鬆散結合的一項技術。 建議您啟用鬆散結合，因為它可讓您更輕鬆地隔離應用程式組件，以便進行測試或取代。 此外，變更應用程式的某個組件，也較不可能會對應用程式的其他地方造成非預期的影響。 相依性插入是以相依性反轉準則為基礎，而且通常是實現開啟/關閉準則的關鍵。 當您評估應用程式搭配其相依性的運作情況時，請注意[靜態黏貼](https://deviq.com/static-cling/)程式碼異味，並記住「[New 就是黏附](https://ardalis.com/new-is-glue)」此一箴言。
 
 靜態黏貼發生於您的類別呼叫靜態方法或存取靜態屬性時，並對基礎結構具有副作用或相依性。 例如，如果您有一個方法呼叫靜態方法，而該方法接著寫入資料庫，則您的方法會與資料庫緊密結合。 任何中斷資料庫呼叫的項目都會中斷您的方法。 測試這類方法眾所周知很困難，因為這類測試需要商用模擬程式庫來模擬靜態呼叫，或只能透過適當的測試資料庫進行測試。 未相依於基礎結構的靜態呼叫 (特別是完全無狀態的呼叫) 可安心呼叫，不會影響結合或可測試性 (將程式碼結合到靜態呼叫本身除外)。
 
-許多開發人員了解靜態黏貼和全域狀態的風險，但仍透過直接具現化將其程式碼緊密結合到特定實作。 「New 就是黏附」是為了提醒此結合，而不是一味譴責使用 New 關鍵字。 如同靜態方法呼叫，沒有外部相依性之類型的新執行個體，通常不會將程式碼緊密結合到實作詳細資料或讓測試更困難。 但每次具現化類別，請花點時間想一想，將該特定位置中的特定執行個體進行硬式編碼是否合理，還是最好設計成將執行個體當作相依性來要求。
+許多開發人員了解靜態黏貼和全域狀態的風險，但仍透過直接具現化將其程式碼緊密結合到特定實作。 「New 就是黏附」是為了提醒此結合，而不是一味譴責使用 `new` 關鍵字。 如同靜態方法呼叫，沒有外部相依性之類型的新執行個體，通常不會將程式碼緊密結合到實作詳細資料或讓測試更困難。 但每次具現化類別，請花點時間想一想，將該特定位置中的特定執行個體進行硬式編碼是否合理，還是最好設計成將執行個體當作相依性來要求。
 
 ### <a name="declare-your-dependencies"></a>宣告您的相依性
 
@@ -559,5 +559,5 @@ _如需 Azure 部署選項的詳細資訊，請參閱[第 10 章](development-pr
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[上一頁](common-client-side-web-technologies.md)
-[下一頁](work-with-data-in-asp-net-core-apps.md)
+>[上一頁](common-client-side-web-technologies.md)
+>[下一頁](work-with-data-in-asp-net-core-apps.md)

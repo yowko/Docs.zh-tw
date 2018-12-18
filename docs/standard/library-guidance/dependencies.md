@@ -4,11 +4,11 @@ description: 在 .NET 程式庫中管理 NuGet 相依性的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: c5df30c606e77c9ef44387233b0072ab890f612f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 5566ab83040ce5dc23520401e3fc4bb619af4ec4
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "49400526"
 ---
 # <a name="dependencies"></a>相依性
@@ -60,7 +60,7 @@ NuGet 用來解決相依性的規則非常[複雜](/nuget/consume-packages/depen
 
 **❌ 請勿**使用沒有最小版本的 NuGet 套件參考。
 
-**❌ 請避免**要求明確版本的 NuGet 套件參考。
+**❌ 避免**要求明確版本的 NuGet 套件參考。
 
 **❌ 請避免**使用具有版本較高限制的 NuGet 套件參考。
 
@@ -92,10 +92,12 @@ NuGet 用來解決相依性的規則非常[複雜](/nuget/consume-packages/depen
 
 > 共用來源類型會編譯為參考組件，且不能跨越組件界線進行交換。 例如，某個專案中的共用來源 `IRepository` 類型，與另一個專案中相同的共用來源 `IRepository` 將會是完全不同的類型。 共用來源套件中的類型應該僅具有 `internal` 可見性。
 
-**❌ 請勿**將共用的來源套件發佈至 nuget.org。
+**❌ 請勿**將共用的來源套件發佈至 NuGet.org。
 
 > 共用的來源套件包含原始程式碼，而且只能用於具有相同語言類型的專案。 例如，以 F# 撰寫的應用程式將無法使用以 C# 撰寫的共用來源套件。
+>
+> 將共用原始碼套件發佈至[本機摘要或 MyGet](./publish-nuget-package.md)，以在專案內部取用它們。
 
 >[!div class="step-by-step"]
-[上一頁](./nuget.md)
-[下一頁](./sourcelink.md)
+>[上一頁](nuget.md)
+>[下一頁](sourcelink.md)

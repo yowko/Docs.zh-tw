@@ -1,5 +1,6 @@
 ---
 title: 一般類型系統
+description: 了解 .NET 中的型別系統。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.custom: seodec18
+ms.openlocfilehash: e35ddc0346f73eafaece1bd17ab52e1b847e8e11
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204198"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151222"
 ---
 # <a name="common-type-system"></a>一般類型系統
 一般型別系統定義如何在 Common Language Runtime 中宣告、使用和管理型別，同時也是執行階段支援跨語言整合中很重要的一部分。 一般型別系統可執行下列功能：  
@@ -71,7 +73,7 @@ ms.locfileid: "47204198"
   
  下表將說明類別可以具有的某些特性。 每一個支援執行階段的語言都會提供一種方式，指出類別或類別成員具有這些其中一個或多個特性。 然而，以 .NET 為目標的程式設計語言則無法使用所有這些特性。  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |sealed|指定無法從這個型別衍生出其他類別。|  
 |實作|指出類別會以提供介面成員實作的方式來使用一個或多個介面。|  
@@ -190,7 +192,7 @@ ms.locfileid: "47204198"
 ### <a name="type-accessibility"></a>型別存取範圍  
  所有型別都具有修飾詞 (Modifier)，負責控制其他型別的存取範圍。 下表說明執行階段所支援的型別存取範圍。  
   
-|協助工具選項|描述|  
+|協助工具選項|說明|  
 |-------------------|-----------------|  
 |public|型別可供所有組件存取|  
 |組件|型別只能在本身的組件中存取|  
@@ -295,7 +297,7 @@ ms.locfileid: "47204198"
 ## <a name="characteristics-of-type-members"></a>型別成員的特性  
  一般型別系統允許型別成員具有各種特性，但是所使用的語言並不需要支援所有特性。 下表將描述成員特性。  
   
-|特性|適用於|描述|  
+|特性|適用於|說明|  
 |--------------------|------------------|-----------------|  
 |abstract|方法、屬性和事件|型別不提供方法的實作。 繼承或實作抽象方法的型別必須提供方法的實作。 唯一的例外狀況 (Exception) 是當衍生型別本身也是抽象型別時。 所有抽象方法都是虛擬的。|  
 |private、family、assembly、family 和 assembly、family 或 assembly 或是 public|全部|定義成員的存取範圍：<br /><br /> private<br /> 只能在與成員相同的型別或巢狀型別中存取。<br /><br /> family<br /> 可在與成員相同的型別和從它繼承而來的衍生型別中存取。<br /><br /> 組件<br /> 只能在已定義型別的組件中存取。<br /><br /> family 和 assembly<br /> 只能從同時限定家族和組件存取的型別中存取。<br /><br /> family 或 assembly<br /> 只能從限定家族或組件之一存取的型別中存取。<br /><br /> public<br /> 可從任何型別中存取。|  

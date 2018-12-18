@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 在開發期�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 560120db35ae190bdef1f95d72ac1e5de697124e
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6f5dfbb53b99fec4d7cc66c528fe866c71c2172f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105942"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143866"
 ---
 # <a name="storing-application-secrets-safely-during-development"></a>在開發期間安全地儲存應用程式祕密
 
@@ -39,7 +39,7 @@ ms.locfileid: "37105942"
 
 ## <a name="storing-secrets-using-the-aspnet-core-secret-manager"></a>使用 ASP.NET Core Secret Manager 儲存秘密
 
-ASP.NET Core [Secret Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) 工具提供另一種方法來將秘密與原始程式碼分開保存。 若要使用 Secret Manager 工具，請在您的專案檔中包含 Microsoft.Extensions.SecretManager.Tools 封裝的工具參考 (DotNetCliToolReference)。 一旦該相依性存在並已還原，即可使用 dotnet user-secrets 命令從命令列設定秘密的值。 這些秘密會儲存在使用者設定檔目錄中的 JSON 檔案中 (細目會因 OS 而異)，並遠離原始程式碼。
+ASP.NET Core [Secret Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) 工具提供另一種方法來將秘密與原始程式碼分開保存。 若要使用 Secret Manager 工具，請在您的專案檔中包含 Microsoft.Extensions.SecretManager.Tools 封裝的工具參考 (DotNetCliToolReference)。 一旦該相依性存在並已還原，即可使用 dotnet user-secrets 命令從命令列設定祕密的值。 這些秘密會儲存在使用者設定檔目錄中的 JSON 檔案中 (細目會因 OS 而異)，並遠離原始程式碼。
 
 Secret Manager 工具所設定的秘密會依使用秘密之專案的 UserSecretsId 屬性來組織。 因此，您必須確定在專案檔中設定 UserSecretsId 屬性 (如下列程式碼片段所示)。 識別碼只要在專案中是唯一的，所使用的實際字串並不重要。
 
@@ -53,5 +53,5 @@ Secret Manager 工具所設定的秘密會依使用秘密之專案的 UserSecret
 
 
 >[!div class="step-by-step"]
-[上一頁](authorization-net-microservices-web-applications.md)
-[下一頁](azure-key-vault-protects-secrets.md)
+>[上一頁](authorization-net-microservices-web-applications.md)
+>[下一頁](azure-key-vault-protects-secrets.md)

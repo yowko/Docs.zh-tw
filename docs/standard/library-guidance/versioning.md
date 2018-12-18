@@ -4,12 +4,12 @@ description: .NET 程式庫版本控制的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: f95c8ade1f91af5c13184b839b327c9397c6fe5a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187854"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144555"
 ---
 # <a name="versioning"></a>版本控制
 
@@ -63,7 +63,7 @@ Windows.NET Framework CLR 會要求完全相符，以載入強式名稱組件。
 
 > AssemblyVersion 包含在向使用者顯示的一些參考用訊息中，例如，例外狀況訊息中的組件名稱與組件限定類型名稱。 維護版本之間的關聯性，可為開發人員提供有關他們使用之版本的詳細資訊。
 
-**請勿**使用固定的 AssemblyVersion。
+**❌ 請勿**使用固定的 AssemblyVersion。
 
 > 雖然不會變更的 AssemblyVersion 避免了繫結重新導向的需要，但這表示只能在全域組件快取 (GAC) 中安裝單一版本的組件。 此外，如果另一個應用程式使用中斷性變更更新 GAC 組件，則參考 GAC 中組件的應用程式將中斷。
 
@@ -92,10 +92,10 @@ Windows.NET Framework CLR 會要求完全相符，以載入強式名稱組件。
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
 ```
 
-**避免**設定您自己的組件資訊版本。
+**❌ 避免**自行設定組件資訊版本。
 
 > 允許 SourceLink 自動產生包含 NuGet 與原始檔控制中繼資料的版本。
 
 >[!div class="step-by-step"]
-[上一頁](./publish-nuget-package.md)
-[下一頁](./breaking-changes.md)
+>[上一頁](publish-nuget-package.md)
+>[下一頁](breaking-changes.md)

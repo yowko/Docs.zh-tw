@@ -1,6 +1,6 @@
 ---
 title: Managed 執行緒處理的最佳實施方針
-ms.date: 11/30/2017
+ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: ab33474fa8f3d62fb21c86a0699bbfcb75e7a270
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562368"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150611"
 ---
-# <a name="managed-threading-best-practices"></a>Managed 執行緒處理的最佳實施方針
+# <a name="managed-threading-best-practices"></a>受控執行緒處理最佳做法
 在為多執行緒功能設計程式時需要非常小心。 您可以藉由將要求排入佇列以供執行緒集區的執行緒執行，來降低大部分工作的複雜性。 本主題要解決的是更困難的情況，例如協調多個執行緒的工作，或處理封鎖起來的執行緒。  
   
 > [!NOTE]
 > 從 .NET Framework 4 開始，工作平行程式庫和 PLINQ 會提供 API，來為多執行緒的程式設計工作降低一定的複雜度和風險。 如需詳細資訊，請參閱 [.NET 的平行程式設計](../../../docs/standard/parallel-programming/index.md)。  
   
-## <a name="deadlocks-and-race-conditions"></a>死結和競爭情形  
+## <a name="deadlocks-and-race-conditions"></a>死結和競爭條件  
  多執行緒可透過輸送量和回應性來解決問題，但這麼做又會引發新的問題︰死結和競爭情形。  
   
 ### <a name="deadlocks"></a>死結  
@@ -59,7 +59,7 @@ else {
 }  
 ```  
   
-### <a name="race-conditions"></a>追蹤條件  
+### <a name="race-conditions"></a>競爭條件  
  當程式的結果取決於兩個以上的執行緒何者先到達特定程式碼區塊時，系統便會發生競爭情形這個錯誤。 執行程式多次會產生不同的結果，因而讓系統無法預測當回執行的結果。  
   
  遞增欄位值的作業就是簡單的競爭情形範例。 假設某個類別具有 **static** 私用欄位 (在 Visual Basic 中是 **Shared**)，每當該類別建立了執行個體，該欄位就會使用 `objCt++;` (C#) 或 `objCt += 1` (Visual Basic) 之類的程式碼來遞增值。 這項作業需要將 `objCt` 的值載入到暫存器、將值遞增，然後儲存在 `objCt` 中。  
@@ -70,37 +70,18 @@ else {
   
  當您同步處理多個執行緒的活動時，系統也會發生競爭情形。 每當您編寫一行程式碼時，您必須考慮如果某個執行緒在執行該行程式碼之前 (或在構成該行程式碼的個別電腦指令之前) 就讓其他執行緒先佔，而且另一個執行緒超過該執行緒時，系統可能會發生什麼狀況。  
   
-## <a name="number-of-processors"></a>處理器數目  
- 現今大多數的電腦都有多個處理器 (也稱為核心)，即使是小如平板電腦和手機的裝置也是如此。 如果您知道您要開發的軟體也會在單一處理器的電腦上執行，您應該了解多執行緒可為單一處理器電腦和多處理器電腦解決不同的問題。  
-  
-### <a name="multiprocessor-computers"></a>多處理器電腦  
- 多執行緒可提供更大的輸送量。 十個處理器可以執行的工作是一個處理器的十倍，但前提是該項工作必須分割，方能讓十個處理器可以同時工作；執行緒可讓您輕鬆地分割工作，並利用額外的處理能力。 如果您在多處理器電腦上使用多執行緒︰  
-  
--   可以同時執行的執行緒數目受限於處理器數目。  
-  
--   執行中的前景執行緒數目小於處理器數目時，背景執行緒才會執行。  
-  
--   當您在執行緒上呼叫 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法時，該執行緒不一定會立即開始執行，一切視處理器數目和目前等待執行的執行緒數目而定。  
-  
--   之所以會發生競爭情形，不僅是因為執行緒意外讓其他執行緒先佔，還因為在不同處理器上執行的兩個執行緒可能會競相到達相同的程式碼區塊。  
-  
-### <a name="single-processor-computers"></a>單一處理器電腦  
- 多執行緒可為電腦使用者提供更高的回應性，並且會使用閒置時間來處理背景工作。 如果您在單一處理器電腦上使用多執行緒︰  
-  
--   不論何時都只會有一個執行緒執行。  
-  
--   只有當主要的使用者執行緒閒置時，背景執行緒才會執行。 持續執行的前景執行緒會讓背景執行緒無法獲得半點處理器時間。  
-  
--   當您在執行緒上呼叫 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法時，該執行緒要等到目前的執行緒退讓或讓作業系統先佔後才會開始執行。  
-  
--   競爭情形的一般發生原因是，程式設計人員實際上未預期到執行緒會在棘手的時機讓其他執行緒先佔，這有時會讓其他執行緒先到達程式碼區塊。  
-  
-## <a name="static-members-and-static-constructors"></a>Static 成員和 Static 建構函式  
+## <a name="static-members-and-static-constructors"></a>靜態成員和靜態建構函式  
  類別要等到其類別建構函式 (C# 中是 `static` 建構函式，Visual Basic 中是 `Shared Sub New`) 執行完畢後才會初始化。 為避免程式碼在未初始化的型別上執行，通用語言執行平台會在類別建構函式執行完畢前，封鎖其他執行緒對該類別之 `static` 成員 (Visual Basic 中是 `Shared` 成員) 的所有呼叫。  
   
  例如，如果類別建構函式會開始新的執行緒，而執行緒程序會呼叫該類別的 `static` 成員，則新的執行緒會封鎖起來，直到類別建構函式完成。  
   
  這適用於任何可以具有 `static` 建構函式的型別。  
+
+## <a name="number-of-processors"></a>處理器數目
+
+系統上無論有多個處理器或只有一個處理器，都會影響多執行緒的架構。 如需詳細資訊，請參閱 [Number of Processors](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors) (處理器數目)。
+
+使用 <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> 屬性來判斷執行階段可用的處理器數目。
   
 ## <a name="general-recommendations"></a>一般建議  
  在使用多執行緒時，請考慮下列指導方針︰  
@@ -145,7 +126,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  在 .NET Framework 2.0 版中，<xref:System.Threading.Interlocked.Add%2A> 方法會在增量大於 1 時提供不可部分完成的更新。  
+    > 在 .NET Framework 2.0 和更新版本中，為大於 1 的不可部分完成增量使用 <xref:System.Threading.Interlocked.Add%2A> 方法。  
   
      在第二個範例中，只有當參考型別變數是 Null 參考 (在 Visual Basic 中是 `Nothing`) 時，該變數才會更新。  
   
@@ -183,7 +164,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  在 .NET Framework 2.0 版中，<xref:System.Threading.Interlocked.CompareExchange%2A> 方法具有泛型多載，可用於任何參考類型的類型安全取代。  
+    > 從 .NET Framework 2.0 開始，<xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> 方法多載會為參考型別提供型別安全的替代方法。
   
 ## <a name="recommendations-for-class-libraries"></a>類別庫的建議  
  在設計類別庫的多執行緒功能時，請考慮下列指導方針︰  

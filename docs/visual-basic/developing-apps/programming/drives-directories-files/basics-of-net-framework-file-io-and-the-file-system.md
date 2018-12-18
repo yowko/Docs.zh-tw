@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: c978f79571494d9b716df4e8a42e7f40d20766f6
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332947"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155021"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)
 <xref:System.IO> 命名空間中的類別是用來處理磁碟機、檔案和目錄。  
@@ -32,7 +32,7 @@ ms.locfileid: "39332947"
 ## <a name="stream-operations"></a>資料流作業  
  資料流中所包含的資料可能來自記憶體、檔案或 TCP/IP 通訊端。 資料流具有可套用至它們的基本作業︰  
   
--   讀取。 您可以讀取資料流，方法是將資料從資料流傳送至資料結構 (例如字串或位元組陣列)。  
+-   **讀取**。 您可以讀取資料流，方法是將資料從資料流傳送至資料結構 (例如字串或位元組陣列)。  
   
 -   **撰寫**。 將資料從資料來源傳送至資料流，即可寫入資料流。  
   
@@ -101,5 +101,5 @@ ms.locfileid: "39332947"
 ## <a name="see-also"></a>請參閱  
  [撰寫資料流](../../../../standard/io/composing-streams.md)  
  [檔案和資料流 I/O](../../../../standard/io/index.md)  
- [非同步檔案 I/O](../../../../standard/io/asynchronous-file-i-o.md)  
+ [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
  [用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

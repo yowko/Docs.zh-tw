@@ -1,6 +1,6 @@
 ---
 title: Visual Basic 的新功能
-ms.date: 10/04/2018
+ms.date: 10/24/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e77dca6f87e5039f4aa668a8e08ec112c9eb1b9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194055"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146153"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
@@ -21,10 +21,13 @@ ms.locfileid: "50194055"
   
 ## <a name="current-version"></a>目前版本
 
-Visual Basic 15.5 / Visual Studio 2017 15.5 版  
-如需了解新功能，請參閱 [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15.8 / Visual Studio 2017 15.8 版  
+如需了解新功能，請參閱 [Visual Basic 15.8](#visual-basic-158)
 
 ## <a name="previous-versions"></a>舊版本
+
+Visual Basic 15.5 / Visual Studio 2017 15.5 版  
+如需了解新功能，請參閱 [Visual Basic 15.5](#visual-basic-155)
 
 Visual Basic 15.3 / Visual Studio 2017 15.3 版  
 如需了解新功能，請參閱 [Visual Basic 15.3](#visual-basic-153)
@@ -55,6 +58,39 @@ Visual Basic / Visual Studio .NET 2003
 
 Visual Basic / Visual Studio .NET 2002   
 第一版的 Visual Basic .NET
+
+## <a name="visual-basic-158"></a>Visual Basic 15.8
+
+**最佳化的浮點數至整數轉換**
+
+在舊版的 Visual Basic 中，將 [Double](../language-reference/data-types/double-data-type.md) 和 [Single](../language-reference/data-types/single-data-type.md) 值轉換成整數會提供相對較差的效能。 當您將下列任一方法所傳回的值傳遞至其中一個[內建的 Visual Basic 整數轉換函式](../language-reference/functions/type-conversion-functions.md)(CByte、CShort、CInt、CLng、CSByte、CUShort、CUInt、CULng) 時，或在 [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) 設定為 `Off` 的情況下，將下列任一方法所傳回的值隱含地轉換成整數類型時，Visual Basic 15.8 可大幅增強浮點數轉換成整數的效能：
+
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Single)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Single)?displayProperty=nameWithType>
+- <xref:System.Math.Ceiling(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Floor(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
+
+這項最佳化可讓程式碼執行速度更快，對於執行大量轉換 (目標為整數類型) 的程式碼，速度最快提高為兩倍。 下列範例說明一些受這項最佳化影響的簡單方法呼叫：
+
+```vb
+Dim s As Single = 173.7619
+Dim d As Double = s 
+
+Dim i1 As Integer = CInt(Fix(s))               ' Result: 173
+Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
+Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
+Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
+Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
+
+```
+
+請注意，這會截斷而不是四捨五入浮點值。
 
 ## <a name="visual-basic-155"></a>Visual Basic 15.5
 
@@ -103,7 +139,7 @@ Visual Basic 命令列編譯器現在支援 [**-refout**](../reference/command-l
 
 [**Tuple**](../programming-guide/language-features/data-types/tuples.md)
 
-Tuple 是輕量的資料結構，最常用於從單一方法呼叫傳回多個值。 通常要從方法傳回多個值，您必須執行下列其中一個項目︰
+Tuple 是輕量的資料結構，最常用於從單一方法呼叫傳回多個值。 通常要從方法傳回多個值，您必須執行下列其中一項︰
 
 - 定義自訂類型 (`Class` 或 `Structure`)。 這是重量級解決方案。
 
@@ -150,7 +186,7 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
 [Nameof](../../csharp/language-reference/keywords/nameof.md)  
- 您可以取得用於錯誤訊息之類型或成員的未限定字串名稱，而不需要對字串進行硬式編碼。  這可讓您的程式碼在重構時保持正確。  此功能也可用來連接模型檢視控制器 MVC 連結，以及引發屬性已變更事件。  
+ 您可以取得用於錯誤訊息之類型或成員的未限定字串名稱，而不需要對字串進行硬式編碼。  這可讓您的程式碼在重構時保持正確。  這項功能也可用來連接模型檢視控制器 MVC 連結，以及引發屬性已變更事件。  
   
 [字串內插補點](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  您可以使用字串插值運算式來建構字串。  字串插值運算式類似包含運算式的範本字串。  對於引數而言，字串插值比[複合格式](../../standard/base-types/composite-format.md)更容易了解。  

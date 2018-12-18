@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 2ef25c3d7db3f445ddf7f925eb73c85760f34dc5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 492542743b27c709901267d5fd4e066a65158b85
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211927"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129632"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>事件架構非同步模式概觀
 要同時執行許多工作，還能繼續回應使用者互動，這樣的應用程式通常都需要可以使用多執行緒的設計。 <xref:System.Threading> 命名空間提供建立高效能多執行緒應用程式的所有必要工具，但是要有效地使用這些工具，需要具備多執行緒軟體工程的豐富經驗。 對於較簡單的多執行緒應用程式，<xref:System.ComponentModel.BackgroundWorker> 元件提供了簡單明瞭的方案。 如果是較為複雜精細的非同步應用程式，請考慮實作遵守事件架構非同步模式的類別。  
@@ -36,7 +36,7 @@ ms.locfileid: "44211927"
   
 -   使用熟悉的事件和委派模型，與暫止的非同步作業通訊。 如需使用事件處理常式和委派的詳細資訊，請參閱[事件](../../../docs/standard/events/index.md)。  
   
- 支援事件架構非同步模式的類別，會有一個或多個名為 *MethodName*Async的方法。這些方法可能鏡像在目前執行緒上執行相同作業的同步版本。這個類別可能也具有 MethodName***Completed* 事件，並且具有 MethodName***AsyncCancel* (或簡單地說 **CancelAsync**) 方法。  
+ 支援事件架構非同步模式的類別，會有一或多個名為 _MethodName_**Async** 的方法。 這些方法可能鏡像在目前執行緒上執行相同作業的同步版本。 這個類別可能也具有 _MethodName_**Completed** 事件，且具有 _MethodName_**AsyncCancel** (或簡稱 **CancelAsync**) 方法。  
   
  <xref:System.Windows.Forms.PictureBox> 是支援事件架構非同步模式的一般元件。 您可以呼叫影像的 <xref:System.Windows.Forms.PictureBox.Load%2A> 方法以同步下載影像，不過如果影像非常龐大或是網路連接相當緩慢，在下載作業完成且對 <xref:System.Windows.Forms.PictureBox.Load%2A> 的呼叫傳回之前，應用程式都會是停止 (「擱置」) 狀態。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "44211927"
 >  產生 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 要求時剛好完成下載也是可能發生的，因此 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> 可能無法反映取消的要求。 這種情況稱為「競爭情形」(Race Condition)，這是多執行緒程式設計中的常見問題。 如需多執行緒程式設計問題的詳細資訊，請參閱[受控執行緒處理的最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>事件架構非同步模式的特性  
- 事件架構非同步模式可能會採用數種格式，需視特定類別所支援作業的複雜度而定。 最簡單的類別可以有單一的 MethodName***Async* 方法和對應的 MethodName***Completed* 事件。 比較複雜的類別則可以有數個 MethodName***Async* 方法，每一個方法都有對應的 MethodName***Completed* 事件，以及這些方法的同步版本。 這些類別可以選擇性地支援每個非同步方法的取消、進度報告和累加結果。  
+ 事件架構非同步模式可能會採用數種格式，需視特定類別所支援作業的複雜度而定。 最簡單的類別可以有單一的 _MethodName_**Async** 方法和對應的 _MethodName_**Completed** 事件。 比較複雜的類別則可以有數個 _MethodName_**Async** 方法，每一個方法都有對應的 _MethodName_**Completed** 事件，以及這些方法的同步版本。 這些類別可以選擇性地支援每個非同步方法的取消、進度報告和累加結果。  
   
  非同步方法也可以支援多次暫止呼叫 (多個並行引動過程)，讓您的程式碼能在完成其他暫止作業之前，對這種方法呼叫任意次數。 要正確地處理這種情況，您的應用程式可能需要追蹤每個作業的完成狀態。  
   
@@ -118,14 +118,14 @@ public class AsyncExample
 >  在對多個引動過程多載的呼叫中，請務必謹慎地為 `userState` 提供唯一值。 非唯一的工作 ID 將會使非同步類別擲回 <xref:System.ArgumentException>。  
   
 ### <a name="canceling-pending-operations"></a>取消暫止的作業  
- 在非同步作業完成之前，隨時都能取消這些作業是非常重要的。 實作事件架構非同步模式的類別會具有 `CancelAsync` 方法 (如果只有一個非同步方法) 或 MethodName***AsyncCancel* 方法 (如果有多個非同步方法)。  
+ 在非同步作業完成之前，隨時都能取消這些作業是非常重要的。 實作事件架構非同步模式的類別會具有 `CancelAsync` 方法 (如果只有一個非同步方法) 或 _MethodName_**AsyncCancel** 方法 (如果有多個非同步方法)。  
   
  允許多個引動過程的方法使用 `userState` 參數，該參數可用於追蹤每個工作的存留期。 `CancelAsync` 使用 `userState` 參數，該參數可讓您取消特定的暫止工作。  
   
  您無法取消一次只能支援一個暫止作業的方法 (例如 `Method1Async(string param)`)。  
   
 ### <a name="receiving-progress-updates-and-incremental-results"></a>接收進度更新和累加結果  
- 遵守事件架構非同步模式的類別，可能會選擇性地提供用來追蹤進度和累加結果的事件。 這個事件通常會命名為 `ProgressChanged` 或 *MethodName*ProgressChanged，並且它的對應事件處理常式將會使用 <xref:System.ComponentModel.ProgressChangedEventArgs> 參數。  
+ 遵守事件架構非同步模式的類別，可能會選擇性地提供用來追蹤進度和累加結果的事件。 這個事件通常會命名為 `ProgressChanged` 或 _MethodName_**ProgressChanged**，且它的對應事件處理常式將會使用 <xref:System.ComponentModel.ProgressChangedEventArgs> 參數。  
   
  `ProgressChanged` 事件的事件處理常式可以檢查 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> 屬性，以判斷已經完成非同步工作的百分比。 這個屬性的範圍會介於 0 到 100 之間，並且可以用來更新 <xref:System.Windows.Forms.ProgressBar.Value%2A> 的 <xref:System.Windows.Forms.ProgressBar> 屬性。 如果正在暫止多個非同步作業，您可以使用 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> 屬性來區別哪個作業在報告進度。  
   

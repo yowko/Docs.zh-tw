@@ -1,5 +1,6 @@
 ---
-title: .NET Framework 中的基本字串作業
+title: .NET 中的基本字串作業
+description: 了解您可以對字串執行的基本作業。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,11 +9,13 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f7692251a00c712f93b649d4cd6fc153bb248f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seadec18
+ms.openlocfilehash: 8621e79ad6e305f3859dc269965ecd216081f695
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150676"
 ---
 # <a name="basic-string-operations-in-net"></a>.NET 中的基本字串作業
 應用程式通常是以根據使用者輸入建構訊息的方式來回應使用者。 例如，網站就經常以包含使用者姓名的特殊問候語來回應新登入的使用者。 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別中有數個方法，可讓您以動態方式建構要在使用者介面中顯示的自訂字串。 這些方法也可協助您執行一些基本字串作業，例如從位元組陣列建立新的字串、比較字串值，以及修改現有的字串。  

@@ -1,6 +1,6 @@
 ---
 title: 例外狀況的最佳作法
-ms.date: 03/30/2017
+ms.date: 12/05.2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -9,26 +9,22 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b6aa1049c531550687a2c6289ccd87e763ca2f58
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199626"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149584"
 ---
 # <a name="best-practices-for-exceptions"></a>例外狀況的最佳做法
 
 設計良好的應用程式可處理例外狀況和錯誤，防止應用程式損毀。 本節說明處理和建立例外狀況的最佳做法。
 
-## <a name="use-trycatchfinally-blocks"></a>使用 try/catch/finally 區塊
+## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>使用 try/catch/finally 區塊從錯誤中復原或釋放資源
 
-使用 `try`/`catch`/`finally` 區塊括住程式碼可能會產生例外狀況。 
+在可能產生例外狀況的程式碼周圍使用 `try`/`catch` 區塊，「且」您的程式碼即可從該例外狀況復原。 在 `catch` 區塊中，一律將例外狀況從最具衍生性的排列到最不具衍生性。 所有例外狀況皆衍生自 <xref:System.Exception>。 前有基底例外狀況類別 catch 子句的 catch 子句，不會處理最具衍生性的例外狀況。 當您的程式碼無法從例外狀況復原時，請不要攔截該例外狀況。 如果可能，請啟用方法讓呼叫堆疊盡可能修復。
 
-在 `catch` 區塊中，一律將例外狀況從最特殊的排列到最不特殊的。
-
-不論您是否可以復原，使用 `finally` 區塊都可清除資源。
+清除配置了 `using` 陳述式或 `finally` 區塊的資源。 擲回例外狀況時，偏好使用 `using` 陳述式來自動清除資源。 使用 `finally` 區塊清除不會實作 <xref:System.IDisposable> 的資源。 就算擲回例外狀況，也一律執行 `finally` 子句中的程式碼。
 
 ## <a name="handle-common-conditions-without-throwing-exceptions"></a>處理常見的狀況，而不擲回例外狀況
 
@@ -58,11 +54,11 @@ ms.locfileid: "50199626"
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]  
 
-另一個避免例外狀況的方法是針對很常見的錯誤案例傳回 null，而不擲回例外狀況。 相當普遍的錯誤案例可視為一般控制流程。 針對這些案例傳回 null，就能盡量降低對應用程式效能的影響。
+另一個避免例外狀況的方法，是針對很常見的錯誤案例傳回 `null`，而不擲回例外狀況。 相當普遍的錯誤案例可視為一般控制流程。 在這些案例中傳回 `null`，您就能盡量降低對應用程式效能的影響。
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>擲回例外狀況來代替傳回錯誤碼
 
-例外狀況可確保不會發生未通知失敗的情況，因為呼叫程式碼並不會檢查傳回碼。 
+例外狀況可確保不會發生未通知失敗的情況，因為呼叫程式碼並不會檢查傳回碼。
 
 ## <a name="use-the-predefined-net-exception-types"></a>使用預先定義的 .NET 例外狀況類型
 
@@ -74,7 +70,7 @@ ms.locfileid: "50199626"
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>使用字組 `Exception` 作為例外狀況類別名稱的結尾
 
-如需自訂例外狀況，請適當地加以命名，並從 <xref:System.Exception>加以衍生。 例如: 
+如需自訂例外狀況，請適當地加以命名，並從 <xref:System.Exception>加以衍生。 例如：
 
 [!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -124,7 +120,7 @@ ms.locfileid: "50199626"
 
 ## <a name="use-exception-builder-methods"></a>使用例外狀況產生器方法
 
-類別在它的實作中從不同的地方擲回相同的例外狀況是很常見的。 若要避免過多的程式碼，請使用 Helper 方法，以建立例外狀況並將它傳回。 例如: 
+類別在它的實作中從不同的地方擲回相同的例外狀況是很常見的。 若要避免過多的程式碼，請使用 Helper 方法，以建立例外狀況並將它傳回。 例如：
 
 [!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
@@ -132,7 +128,7 @@ ms.locfileid: "50199626"
   
 在某些情況下，使用例外狀況的建構函式來建置例外狀況會更適當。 範例為全域例外狀況類別 <xref:System.ArgumentException>。
 
-## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>在擲回例外狀況時清除中繼結果
+## <a name="restore-state-when-methods-dont-complete-due-to-exceptions"></a>當方法因為例外狀況而未完成時還原狀態
 
 呼叫端應該能夠假設，從方法擲回例外狀況時不會產生副作用。 例如，如果您有用來轉帳的程式碼，會從某個帳戶提款再存入另一個帳戶，而且在執行存款時擲回例外狀況，則您不想要讓提款仍有效。
 
@@ -144,6 +140,8 @@ public void TransferFunds(Account from, Account to, decimal amount)
     to.Deposit(amount);
 }
 ```
+
+上述的方法不直接擲回任何例外狀況，但必須以自我防禦的方式寫入，以便存款作業失敗時可以撤銷付款。
 
 處理這種情況的一個方式是攔截存款交易所擲回的任何例外狀況，並復原提款。
 
@@ -172,8 +170,8 @@ catch (Exception ex)
     throw new TransferFundsException("Withdrawal failed", innerException: ex)
     {
         From = from,
-    To = to,
-    Amount = amount
+        To = to,
+        Amount = amount
     };
 }
 ```

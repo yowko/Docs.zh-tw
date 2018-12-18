@@ -1,5 +1,6 @@
 ---
-title: 規則運算式中的反向參考建構
+title: .NET 規則運算式中的反向參考建構
+desription: Learn how to identify repeated text elements by using backreference constructs in a regular expression.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.custom: seodec18
+ms.openlocfilehash: 0b3de774159e528ea782d8b450f9e596aeb0daca
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672027"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144776"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>規則運算式中的反向參考建構
 反向參考提供便利的方式來識別字串內的重複字元或子字串。 例如，如果輸入字串包含多次出現的任意子字串，您可以比對第一個出現的子字串與擷取的群組，接著使用反向參考來比對隨後出現的子字串。  
@@ -49,7 +51,7 @@ ms.locfileid: "52672027"
   
  下列範例會在字串中尋找雙字組字元。 它會定義由下列項目組成的規則運算式 `(\w)\1`。  
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |`(\w)`|比對文字字元，並將其指派給第一個擷取群組。|  
 |`\1`|比對與第一個擷取群組之值相同的下一個字元。|  
@@ -70,7 +72,7 @@ ms.locfileid: "52672027"
   
  下列範例會在字串中尋找雙字組字元。 它會定義由下列項目組成的規則運算式 `(?<char>\w)\k<char>`。  
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |`(?<char>\w)`|比對字組字元，並將其指派給名為 `char` 的擷取群組。|  
 |`\k<char>`|比對下一個與 `char` 擷取群組值相同的字元。|  
@@ -100,7 +102,7 @@ ms.locfileid: "52672027"
   
  下列範例包含規則運算式模式 `(?<1>a)(?<1>\1b)*`，此模式可重新定義 \1 具名群組。 下表說明規則運算式中的每個模式。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`(?<1>a)`|比對字元 "a"，並將結果指派給名為 `1` 的擷取群組。|  
 |`(?<1>\1b)*`|比對 0 或多次出現名為 `1` 和 "b" 之群組的情況，並將結果指派給名為 `1` 的擷取群組。|  
@@ -120,7 +122,7 @@ ms.locfileid: "52672027"
   
  如果群組沒有擷取任何子字串，該群組的反向參考會是未定義的，而且永遠不會進行比對。 這可由定義如下的規則運算式模式 `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` 來說明：  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字邊界比對。|  
 |`(\p{Lu}{2})`|比對兩個大寫字母。 這是第一個擷取群組。|  

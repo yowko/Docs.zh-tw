@@ -1,19 +1,19 @@
 ---
 title: 用戶端驗證 (展示層中的驗證)
-description: 容器化 .NET 應用程式的 .NET 微服務架構 | 用戶端驗證 (展示層中的驗證)
+description: .NET 微服務：容器化 .NET 應用程式的架構 | 探索用戶端驗證的重要概念。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.date: 10/08/2018
+ms.openlocfilehash: 3ec8ca932924c1b1b6750dd30750e3c1e56b7538
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582420"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130074"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>用戶端驗證 (展示層中的驗證)
 
-即使事實來源是領域模型，而且您最終必須有領域模型層級的驗證，驗證仍可在領域模型層級 (伺服器端) 和用戶端處理。
+即使事實來源是領域模型，而且您最終必須有領域模型層級的驗證，驗證仍可在領域模型層級 (伺服器端) 和 UI (用戶端) 處理。
 
 用戶端驗證對使用者而言很方便。 它為使用者省下花在等候可能傳回驗證錯誤之伺服器往返的時間。 對商務而言，即便是幾秒，若每天乘上好幾百倍，也可能讓您花上許多時間和費用，而倍感挫折。 直接和立即驗證可讓使用者更有效率地工作，並產生更佳品質的輸入和輸出。
 
@@ -29,27 +29,27 @@ ms.locfileid: "48582420"
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Xamarin 行動應用程式中的驗證
 
--   **驗證文字輸入，並顯示錯誤**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+- **驗證文字輸入並顯示錯誤** \
+  [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **驗證回呼**
-    [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+- **驗證回呼** \
+  [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>ASP.NET Core 應用程式中的驗證
 
--   **Rick Anderson，新增驗證**
-    [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+- **Rick Anderson，新增驗證** \
+  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA Web 應用程式中的驗證 (Angular 2、TypeScript、JavaScript)
 
--   **Ado Kukic：Angular 2 表單驗證**
-    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+- **Ado Kukic：Angular 2 表單驗證** \
+  [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **表單驗證 **
-    [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+- **表單驗證**  \
+  [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
--   **Validation (驗證)，** Breeze 文件，
-    [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
+- **Validation (驗證)，** Breeze 文件， \
+  [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
 
 總而言之，這些是對於驗證而言最重要的概念：
 
@@ -59,10 +59,8 @@ ms.locfileid: "48582420"
 
 - 如果您需要建立數個相關的物件 (例如彙總)，而且這些物件只有在全部建立之後才有效，請考慮使用 Factory 模式。
 
-- 驗證架構是最適合用於特定層級，例如展示層或應用程式/服務層，但通常不適合用於領域模型層，因為您必須強烈依賴基礎結構架構。
-
 - 在許多情況下，在用戶端重複驗證是不錯的做法，因為應用程式可以採取主動。
 
 >[!div class="step-by-step"]
-[上一頁](domain-model-layer-validations.md)
-[下一頁](domain-events-design-implementation.md)
+>[上一頁](domain-model-layer-validations.md)
+>[下一頁](domain-events-design-implementation.md)

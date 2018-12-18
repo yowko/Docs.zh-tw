@@ -1,17 +1,17 @@
 ---
 title: 在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方法
-description: 容器化 .NET 應用程式的 .NET 微服務架構 | 在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方法
+description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 CQRS 在 eShopOnContainers 訂購微服務中的實作。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: fdca8d38157d5c5b62bd077e5d715ca22ac9780f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106745"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143632"
 ---
-# <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方法
+# <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方式
 
 eShopOnContainers 參考應用程式中訂購微服務的設計是基於 CQRS 準則。 然而，它使用了最簡單的方法，即單純將查詢與命令分開，以及針對這兩個動作使用相同的資料庫。
 
@@ -23,7 +23,7 @@ eShopOnContainers 參考應用程式中訂購微服務的設計是基於 CQRS �
 
 其中一個模式便是彙總模式，我們會在稍後的章節中檢查。 簡而言之，在彙總模式中，您會將許多領域物件視為其在領域內關聯性結果的單一單位。 您不一定會想要在查詢中利用這種模式，因為它可能會增加查詢邏輯的複雜度。 針對唯讀查詢，您無法藉由將多個物件視為單一彙總而取得好處。 您只會增加複雜度。
 
-如圖 9-2 中所示，本指南建議您只在您微服務的交易/更新區域內使用 DDD 模式 (即使用命令觸發)。 查詢可遵循更簡單的方法，並且與命令分離，遵循 CQRS 方法。
+如圖 7-2 所示，本指南建議您只在微服務的交易/更新區域中使用 DDD 模式 (即透過命令觸發)。 查詢可遵循更簡單的方法，並且與命令分離，遵循 CQRS 方法。
 
 若要實作「查詢端」，您可以從您完全成熟的 ORM，像是 EF Core、AutoMapper 投影、預存程序、檢視、具體化檢視或微型 ORM 等許多方法中選擇。
 
@@ -41,28 +41,27 @@ eShopOnContainers 參考應用程式中訂購微服務的設計是基於 CQRS �
 
 ####  <a name="additional-resources"></a>其他資源
 
--   **Martin Fowler：CQRS**
-    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
+- **Martin Fowler：CQRS** \
+  [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
--   **Greg Young。CQS 與CQRS**
-    [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
+- **Greg Young。CQS 與CQRS** \
+  [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young。CQRS 文件**
-    [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf) \(英文\)
+- **Greg Young。CQRS Documents** \ (CQRS 文件)
+  [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Greg Young。CQRS，以工作為基礎的 UI 和事件來源**
-    [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
+- **Greg Young。CQRS, Task Based UIs and Event Sourcing** \ (CQRS，以工作為基礎的 UI 和事件來源)
+  [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
--   **Udi Dahan.已釐清的 CQRS**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **Udi Dahan.Clarified CQRS** \ (已釐清的 CQRS)
+  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **CQRS**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **CQRS** \
+  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **事件來源 (ES)**
-    [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
-
+- **Event-Sourcing (ES)** \ (事件來源 (ES))
+  [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 >[!div class="step-by-step"]
-[上一頁](apply-simplified-microservice-cqrs-ddd-patterns.md)
-[下一頁](cqrs-microservice-reads.md)
+>[上一頁](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[下一頁](cqrs-microservice-reads.md)

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 官方 .NET D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 5d42ec77958e056b75b0e379f8ab520ac926c72a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075565"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131374"
 ---
 # <a name="official-net-docker-images"></a>官方 .NET Docker 映像
 
@@ -50,7 +50,6 @@ ms.locfileid: "47075565"
 | microsoft/dotnet:**2.1-aspnetcore-runtime** | Linux 和 Windows 上的 ASP.NET Core，具有僅執行階段和 ASP.NET Core 最佳化 (多架構) |
 | microsoft/dotnet:**2.1-sdk**                | Linux 和 Windows 上的 .NET Core，包含 SDK (多架構)                                  |
 
-
 >[!div class="step-by-step"]
-[上一頁](net-container-os-targets.md)
-[下一頁](../architect-microservice-container-applications/index.md)
+>[上一頁](net-container-os-targets.md)
+>[下一頁](../architect-microservice-container-applications/index.md)

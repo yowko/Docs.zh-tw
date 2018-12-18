@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 術語
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 39a3c0e0aac2980e67a1c87a472d1a77baed6113
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8bf26087564e4f592d5f89afc6da211c5d1cff57
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47216847"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150650"
 ---
 # <a name="docker-terminology"></a>Docker 術語
 
@@ -51,7 +51,6 @@ ms.locfileid: "47216847"
 
 **協調器**：可簡化叢集和 Docker 主機管理的工具。 協調器可讓您透過命令列介面 (CLI) 或圖形化 UI 來管理其映像、容器和主機。 您可以管理容器網路功能、組態、負載平衡、服務探索、高可用性、Docker 主機組態等等。 協調器會負責跨節點集合執行、散發、擴充及修復工作負載。 一般而言，協調器產品與提供叢集基礎結構的產品相同，例如在市場中其他供應項目之間的 Kubernetes 和 Azure Service Fabric。 
 
-
 >[!div class="step-by-step"]
-[上一頁](docker-defined.md)
-[下一頁](docker-containers-images-registries.md)
+>[上一頁](docker-defined.md)
+>[下一頁](docker-containers-images-registries.md)

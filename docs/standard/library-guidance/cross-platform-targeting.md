@@ -1,15 +1,15 @@
 ---
-title: 跨平台目標設定
+title: .NET 程式庫的跨平台目標設定
 description: 建立跨平台 .NET 程式庫的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 72fa891d5b1054af485a98d89b4efb11d6b0018b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202812"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129710"
 ---
 # <a name="cross-platform-targeting"></a>跨平台目標設定
 
@@ -33,7 +33,7 @@ ms.locfileid: "50202812"
 
 > 大部分的一般用途程式庫應該不需要 .NET Standard 2.0 以外的 API。 所有新式平台都支援 .NET Standard 2.0，而且是以一個目標支援多個平台的建議方法。
 
-**避免**包含 `netstandard1.x` 目標。
+**❌ 避免**包含 `netstandard1.x` 目標。
 
 > .NET standard 1.x 是以一組精細的 NuGet 套件形式發佈，它建立了一個大型的套件相依性圖形，並導致開發人員在建置時下載了大量的套件。 新式 .NET 平台，包括 .NET Framework 4.6.1、UWP 與 Xamarin，全都支援 .NET Standard 2.0。 如果您特別需要以較舊的平台為目標，則應僅將目標設為 .NET Standard 1.x。
 
@@ -41,7 +41,7 @@ ms.locfileid: "50202812"
 
 > 所有支援 .NET Standard 2.0 的平台都將使用 `netstandard2.0` 目標，並從較小的套件圖形中受益，而較舊的平台仍會運作，並改為使用 `netstandard1.x` 目標。
 
-**請勿** 包含 .NET Standard 目標 (如果程式庫依賴平台特定應用程式模型)。
+**❌ 請勿**包含 .NET Standard 目標 (如果程式庫依賴平台特定應用程式模型)。
 
 > 例如，UWP 控制項工具組程式庫相依於只有 UWP 上可用的應用程式模型。 .NET Standard 中將不提供應用程式模型特定 API。
 
@@ -59,7 +59,7 @@ ms.locfileid: "50202812"
 >
 > 執行此動作時，請不要捨棄 .NET Standard 的支援。 相反地，從實作擲回並提供功能API。 這樣，您的程式庫便能任何地方使用，並支援執行階段啟動功能。
 
-**避免**搭配 .NET Standard 使用多目標 (如果您的程式碼適用於所有目標)。
+**❌ 避免**使用多目標以及 .NET Standard 目標設定 (如果您的原始程式碼也適用於所有目標)。
 
 > NuGet 將自動使用 .NET Standard 組件。 將單一 .NET 實作設為目標會增加 `*.nupkg` 大小，沒有任何好處。
 
@@ -67,7 +67,7 @@ ms.locfileid: "50202812"
 
 > 使用 .NET Framework 中的 .NET Standard 2.0，會有一些在 .NET Framework 4.7.2 中已經解決的問題。 您可以透過為仍在 .NET Framework 4.6.1 - 4.7.1 上的開發人員提供針對 .NET Framework 4.6.1 建置的二進位檔，以改善其體驗。
 
-**✔️ 請務必**使用 NuGet 套件散發您的程式庫。
+**✔️ 優先**使用 NuGet 套件散發您的程式庫。
 
 > NuGet 將為開發人員選取最佳目標，並讓他們不需要挑選適當的實作。
 
@@ -88,12 +88,12 @@ ms.locfileid: "50202812"
 
 .NET 支援長期不支援的 .NET Framework 的目標版本，以及不再常用的平台。 雖然使您的程式庫在儘可能多的目標上運作是有價值的，但是必須針對 API 遺漏問題找出因應措施會增加重大額外負荷。 考慮到其範圍與限制，我們認為特定架構已不再值得設為目標。
 
-**請勿**包含可攜式類別庫 (PCL) 目標。 例如，`portable-net45+win8+wpa81+wp8`。
+**❌ 請勿**包含可攜式類別庫 (PCL) 目標。 例如，`portable-net45+win8+wpa81+wp8`。
 
 > .NET Standard 是支援跨平台 .NET 程式庫並取代 PCL 的新式方法。
 
-**請勿**包含不再支援之 .NET 平台的目標。 例如，`SL4`、`WP`。
+**❌ 請勿**包含不再支援之 .NET 平台的目標。 例如，`SL4`、`WP`。
 
 >[!div class="step-by-step"]
-[上一頁](./get-started.md)
-[下一頁](./strong-naming.md)
+>[上一頁](get-started.md)
+>[下一頁](strong-naming.md)

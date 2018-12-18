@@ -1,17 +1,17 @@
 ---
 title: 使用 Entity Framework Core 實作基礎結構持續層
-description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用 Entity Framework Core 實作基礎結構持續層
+description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用 Entity Framework Core 探索基礎結構持續層的實作詳細資料。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 663515e0a863ef703006df0f96b4bc8a2976ca78
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 5e0e7adad7ad2d679ccff2f1c6a421922ce2523d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205291"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151014"
 ---
-# <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 實作基礎結構持續層
+# <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 實作基礎結構持續層
 
 當您使用例如 SQL Server、Oracle 或 PostgreSQL 等關聯式資料庫時，建議的方法是根據 Entity Framework (EF) 來實作持續層。 EF 支援 LINQ，並為您的模型提供強型別的物件，以及資料庫的簡化持續性。
 
@@ -25,17 +25,17 @@ Entity Framework (EF) Core 是常見 Entity Framework 資料存取技術的輕�
 
 #### <a name="additional-resources"></a>其他資源
 
--   **Entity Framework Core**
-    [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
+- **Entity Framework Core** \
+  [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
 
--   **使用 Visual Studio 的 ASP.NET Core 與 Entity Framework Core 使用者入門**
-    [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
+- **使用 Visual Studio 的 ASP.NET Core 與 Entity Framework Core 使用者入門** \
+  [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
--   **DbContext 類別**
-    [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
+- **DbContext 類別** \
+  [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
 
--   **比較 EF Core 與 EF6.x**
-    [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
+- **比較 EF Core 與 EF6.x** \
+  [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>DDD 觀點的 Entity Framework Core 基礎結構
 
@@ -82,7 +82,7 @@ public class Order : Entity
 
 請注意，`OrderItems` 屬性只可以使用 `IReadOnlyCollection<OrderItem>` 以唯讀方式存取。 此類型為唯讀，因此它會受到保護，可避免定期的外部更新。 
 
-EF Core 可用來將網域模型對應至實體資料庫，而不含「破壞」網域模型。 它是純粹的 POCO.NET 程式碼，因為對應動作在持續層中實作。 在該對應動作中，您需要設定欄位到資料庫的對應。 在下列 OnModelCreating 方法範例中，反白顯示的程式碼會告知 EF Core 透過其欄位存取 OrderItems 屬性。
+EF Core 可用來將網域模型對應至實體資料庫，而不含「破壞」網域模型。 它是純粹的 POCO.NET 程式碼，因為對應動作在持續層中實作。 在該對應動作中，您需要設定欄位到資料庫的對應。 在下列來自 `OrderingContext` 和 `OrderEntityTypeConfiguration` 類別的 `OnModelCreating` 方法範例中，呼叫 `SetPropertyAccessMode` 通知 EF Core 透過其欄位存取 `OrderItems` 屬性。
 
 ```csharp
 // At OrderingContext.cs from eShopOnContainers
@@ -112,9 +112,9 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-當您使用欄位而非屬性時，會保存 OrderItem 實體，就如同它有一個 List&lt;OrderItem&gt; 屬性。 不過，它會公開單一存取子，亦即 `AddOrderItem` 方法以便將項目新增至順序中。 因此，行為和資料會繫結在一起，且將在使用網域模型的任何應用程式程式碼中都一致。
+當您使用欄位而不使用屬性時，會保存 `OrderItem` 實體，就好像它有 `List<OrderItem>` 屬性一樣。 不過，它會公開單一存取子，亦即 `AddOrderItem` 方法，將新的項目新增至訂單中。 因此，行為和資料會繫結在一起，且將在使用網域模型的任何應用程式程式碼中都一致。
 
-## <a name="implementing-custom-repositories-with-entity-framework-core"></a>使用 Entity Framework Core 實作自訂存放庫
+## <a name="implement-custom-repositories-with-entity-framework-core"></a>使用 Entity Framework Core 實作自訂存放庫
 
 在實作層級，存放庫只是具有資料持續性程式碼的類別，在執行更新時會由工作單位 (EF Core 中的 DBContext) 所協調，如下列類別中所示：
 
@@ -158,11 +158,11 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 
 請注意，IBuyerRepository 介面以合約的方式來自網域模型層。 不過，存放庫實作是在持續層和基礎結構層進行。
 
-EF DbContext 是透過相依性插入而通過建構函式。 它在相同 HTTP 要求範圍內，在多個存放庫之間共用，這點受惠於 IoC 容器 (也可以明確使用 services.AddDbContext&lt;&gt; 設定) 中的預設存留時間 (ServiceLifetime.Scoped)。
+EF DbContext 是透過相依性插入而通過建構函式。 它會在相同 HTTP 要求範圍內的多個存放庫之間共用，這點受惠於 IoC 容器 (也可以明確使用 `services.AddDbContext<>` 設定) 中的預設存留期 (`ServiceLifetime.Scoped`)。
 
 ### <a name="methods-to-implement-in-a-repository-updates-or-transactions-versus-queries"></a>要在存放庫實作的方法 (更新或交易與查詢)
 
-在每個存放庫類別中，您應該放置更新其相關彙總所包含之實體狀態的持續性方法。 請記住，彙總與它相關存放庫之間有一對一的關聯性。 請考慮彙總根實體物件可能會在其 EF 圖形內有內嵌的子實體。 例如，買方可能會有多個付款方法，作為相關的子實體。
+在每個存放庫類別中，您應該放置更新其相關彙總所包含之實體狀態的持續性方法。 請記住，彙總與它相關存放庫之間有一對一的關聯性。 請考慮彙總根實體物件在其 EF 圖形內可能會有內嵌的子實體。 例如，買方可能會有多個付款方法，作為相關的子實體。
 
 由於 eShopOnContainers 中排序微服務的方法也是基於 CQS/CQRS，大多數的查詢不會在自訂存放庫中實作。 開發人員可以自由地為展示層建立所需的查詢和聯結，而且一般而言沒有彙總、關於彙總的自訂存放庫以及 DDD 等所加諸的限制。 本指南所建議的大部分自訂存放庫都有數個更新或交易式的方法，但只有查詢方法必須取得資料以便更新。 例如，BuyerRepository 存放庫會實作 FindAsync 方法，因為應用程式必須知道特定買方是否存在，然後才能建立與訂單相關的新買方。
 
@@ -174,11 +174,11 @@ Entity Framework DbContext 類別是根據工作單位和存放庫模式，並�
 
 不過，實作自訂存放庫在實作更複雜的微服務或應用程式時提供數個優點。 工作單位和存放庫模式是要用來封裝基礎結構持續層，因此它會與應用程式和網域模型層分開。 實作這些模式，可以方便使用模擬資料庫存取權的模擬存放庫。
 
-在圖 9-18 中，您可以看到不使用存放庫 (直接使用 EF DbContext)，與使用存放庫來簡單模擬存放庫，這二種方式之間的差異。
+在圖 7-18 中，您可以看到不使用存放庫 (直接使用 EF DbContext)，與使用存放庫來簡單模擬存放庫，這二種方式之間的差異。
 
-![](./media/image19.png)
+![比較使用自訂存放庫與一般 DbContext：自訂存放庫會新增一個抽象層，可模擬存放庫用以簡化測試。](./media/image19.png)
 
-**圖 9-18**. 使用自訂存放庫與一般 DbContext
+**圖 7-18**。 使用自訂存放庫與一般 DbContext
 
 在模擬時有多種替代方式。 您可以只模擬存放庫，或是模擬整個工作單位。 通常只模擬存放庫便已足夠，通常不需要抽象與模擬整個工作單位的複雜性。
 
@@ -186,13 +186,13 @@ Entity Framework DbContext 類別是根據工作單位和存放庫模式，並�
 
 簡單地說，自訂存放庫可讓您更輕鬆地使用不受資料層狀態影響的單元測試來測試程式碼。 如果您執行的測試也會透過 Entity Framework 存取實際資料庫，它們便不是單元測試而是整合測試，速度會慢上許多。
 
-如果您直接使用 DbContext，唯一的選擇是使用記憶體中的 SQL Server 和單元測試的可預測資料，來執行單元測試。 您將無法如同在存放庫層級一樣地來控制模擬物件和假資料。 當然，您一律可以測試 MVC 控制器。
+如果直接使用 DbContext，您可能必須模擬它，或使用記憶體內部的 SQL Server 和單元測試的可預測資料，來執行單元測試。 但是模擬 DbContext 或控制假資料，所需工作量比存放庫層級的模擬還大。 當然，您一律可以測試 MVC 控制器。
 
 ## <a name="ef-dbcontext-and-iunitofwork-instance-lifetime-in-your-ioc-container"></a>IoC 容器中的 EF DbContext 和 IUnitOfWork 執行個體存留期
 
-DbContext 物件 (公開為 IUnitOfWork 物件) 可能需要在相同 HTTP 要求範圍內的多個存放庫之間共用。 比方說，當正在執行的作業必須處理多個彙總時，或是因為您正在使用多個存放庫執行個體時，便是如此。 很重要的一點是，IUnitOfWork 介面是網域層的一部分，而不是 EF Core 類型。
+`DbContext` 物件 (公開為 `IUnitOfWork` 物件) 應在相同 HTTP 要求範圍內的多個存放庫之間共用。 比方說，當正在執行的作業必須處理多個彙總時，或是因為您正在使用多個存放庫執行個體時，便是如此。 還有一點也很重要，`IUnitOfWork` 介面是網域層的一部分，不是 EF Core 類型。
 
-若要這樣做，DbContext 物件的執行個體必須將其服務存留期設定為 ServiceLifetime.Scoped。 這是在您的 ASP.NET Core Web API 專案中，從 Startup.cs 檔案的 ConfigureServices 方法，在 IoC 容器中向 services.AddDbContext 註冊 DbContext 時的預設存留時間。 以下的程式碼可說明這點。
+為了這樣做，`DbContext` 物件的執行個體必須將其服務存留期設定為 ServiceLifetime.Scoped。 這是在您的 ASP.NET Core Web API 專案中，從 `Startup.cs` 檔案的 ConfigureServices 方法，在 IoC 容器中向 `services.AddDbContext` 登錄 `DbContext` 時的預設存留期。 以下的程式碼可說明這點。
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -234,20 +234,20 @@ builder.RegisterType<OrderRepository>()
 
 #### <a name="additional-resources"></a>其他資源
 
--   **在 ASP.NET MVC 應用程式中實作存放庫與工作單位模式**
-    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+- **在 ASP.NET MVC 應用程式中實作存放庫與工作單位模式** \
+  [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
--   **Jonathan Allen.利用 Entity Framework、Dapper 及 Chain，實作存放庫模式的策略**
-    [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
+- **Jonathan Allen.使用 Entity Framework、Dapper 及 Chain 實作存放庫模式策略** \
+  [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
--   **Cesar de la Torre：比較 ASP.NET Core IoC 容器服務生命週期與 Autofac IoC 容器執行個體範圍**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+- **Cesar de la Torre：比較 ASP.NET Core IoC 容器服務存留期與 Autofac IoC 容器執行個體範圍** \
+  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>資料表對應
 
 資料表對應會識別要從中查詢的資料表資料，並儲存到資料庫。 先前您已看到如何使用網域實體 (例如產品或訂單網域) 來產生相關的資料庫結構描述。 EF 的設計高度圍繞著「慣例」的概念。 慣例處理的問題例如「資料表的名稱是什麼？」 或「主索引鍵是哪個屬性？」 慣例通常依據傳統的名稱 — 例如，主索引鍵通常是以 Id 為結尾的屬性。
 
-依照慣例，每個實體將會設定成對應至名稱與 DbSet&lt;TEntity&gt; 屬性相同的資料表，該屬性會在衍生內容上公開實體。 如果未提供指定實體的 DbSet&lt;TEntity&gt;，則會使用類別名稱。
+依照慣例，每個實體都會設定成對應至與 `DbSet<TEntity>` 屬性同名的資料表，該屬性會在衍生內容上公開實體。 如不為指定的實體提供 `DbSet<TEntity>` 值，即使用類別名稱。
 
 ### <a name="data-annotations-versus-fluent-api"></a>資料註解與 Fluent API
 
@@ -257,7 +257,7 @@ builder.RegisterType<OrderRepository>()
 
 ### <a name="fluent-api-and-the-onmodelcreating-method"></a>Fluent API 和 OnModelCreating 方法
 
-如前所述，為了變更慣例和對應，您可以在 DbContext 類別中使用 OnModelCreating 方法。 
+如前所述，為了變更慣例和對應，您可以在 DbContext 類別中使用 OnModelCreating 方法。
 
 eShopOnContainers 中的排序微服務，會視需要實作明確的對應和設定，如下列程式碼所示。
 
@@ -294,7 +294,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
             orderConfiguration.Property<string>("Description").IsRequired(false);
 
             var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
-            
+
             // DDD Patterns comment:
             //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
             navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
@@ -321,39 +321,39 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 
 範例中的程式碼顯示一些明確宣告和對應。 不過，EF Core 慣例會自動執行許多對應，因此在您的案例中需要的實際程式碼可能會較小。
 
-
 ### <a name="the-hilo-algorithm-in-ef-core"></a>EF Core 中的 Hi/Lo 演算法
 
 上述範例中的程式碼有一個有趣的層面是，它會使用[Hi/Lo 演算法](https://vladmihalcea.com/the-hilo-algorithm/)作為金鑰產生策略。
 
-Hi/Lo 演算法適用於您需要唯一索引鍵時。 總而言之，Hi-Lo 演算法會將唯一識別碼指派給資料表資料列，而不依賴將資料列立即儲存在資料庫中。 這可讓您立即開始使用識別碼，如同一般循序資料庫識別碼那樣。
+當您需要唯一索引鍵才能認可變更時，Hi/Lo 演算法十分有用。 總而言之，Hi-Lo 演算法會將唯一識別碼指派給資料表資料列，而不依賴將資料列立即儲存在資料庫中。 這可讓您立即開始使用識別碼，如同一般循序資料庫識別碼那樣。
 
-Hi/Lo 演算法描述用來在用戶端而非在資料庫中產生安全識別碼的機制。 在此處「安全」意指沒有衝突。 基於這些理由，這個演算法是有趣的：
+Hi/Lo 演算法描述從相關的料庫序列取得一批唯一識別碼的機制。 這些識別碼沒有使用的安全顧慮，因為資料庫可保證唯一性，所以使用者之間不會發生衝突。 基於這些理由，這個演算法是有趣的：
 
--   它不會中斷工作單位模式。
+- 它不會中斷工作單位模式。
 
--   它不需要像順序產生器在其他 DBMS 中那樣地往返。
+- 它會分批取得序列識別碼，減少對資料庫的反覆存取。
 
--   它會產生人類可閱讀的識別碼，而不像使用 GUID 的技術。
+- 它會產生人類可閱讀的識別碼，而不像使用 GUID 的技術。
 
 EF Core 以 ForSqlServerUseSequenceHiLo 方法支援 [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm)，如上述範例所示。
 
-### <a name="mapping-fields-instead-of-properties"></a>對應欄位，而不是對應屬性
+### <a name="map-fields-instead-of-properties"></a>對應欄位，而不是對應屬性
 
-利用此功能 (從 EF Core 1.1 開始提供)，您可以直接將資料行對應至欄位。 您可以不在實體類別中使用屬性，而只是將資料行從資料表對應至欄位。 常見的用途是不需要從實體外部存取之任何內部狀態的私用欄位。 
+利用此功能 (從 EF Core 1.1 開始提供)，您可以直接將資料行對應至欄位。 您可以不在實體類別中使用屬性，而只是將資料行從資料表對應至欄位。 常見的用途是不需要從實體外部存取之任何內部狀態的私用欄位。
 
 您可以使用單一欄位或集合 (例如 `List<>` 欄位) 來這麼做。 當我們稍早討論模型化網域模型類別時已提到此點，但在這裡您可以藉由先前程式碼中反白顯示的 `PropertyAccessMode.Field`　組態，看到該對應的執行方式。
 
-### <a name="using-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>使用 EF Core 中的陰影屬性 (隱藏在基礎結構層)
+### <a name="use-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>使用隱藏在基礎結構層之 EF Core 的陰影屬性
 
 在 EF Core 中，陰影屬性是不存在於您實體類別模型的屬性。 這些屬性的值和狀態會單純地在基礎結構層的 [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) 類別中維護。
 
+## <a name="implement-the-query-specification-pattern"></a>實作查詢規格模式
 
-## <a name="implementing-the-specification-pattern"></a>實作規格模式
+如稍早在設計一節中所介紹，查詢規格模式是網域導向的設計模式，設計成您可以放置查詢定義以及選擇性排序和分頁邏輯的位置。
 
-如稍早在設計一節中所介紹，規格模式 (全名為查詢規格模式) 是網域導向設計模式，設計成您可以放置查詢定義以及選擇性排序和分頁邏輯的位置。 規格模式會定義物件中的查詢。 例如，若要封裝搜尋一些產品的分頁查詢，您可以建立 PagedProduct 規格來接受必要的輸入參數 (pageNumber、pageSize、filter 等)。 然後，任何存放庫的方法中 (通常是 List() 多載) 會接受 ISpecification 並根據規格執行預期的查詢。
+查詢規格模式會定義物件中的查詢。 例如，若要封裝搜尋一些產品的分頁查詢，您可以建立 PagedProduct 規格來接受必要的輸入參數 (pageNumber、pageSize、filter 等)。 然後，在任何存放庫方法中 (通常是 List() 多載)，它會接受 IQuerySpecification，並根據該規格執行預期的查詢。
 
-泛型規格介面的一個例子是來自 [eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb) 的下列程式碼。 
+泛型規格介面的一個例子是來自 [eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb) 的下列程式碼。
 
 ```csharp
 // GENERIC SPECIFICATION INTERFACE
@@ -444,32 +444,30 @@ public IEnumerable<T> List(ISpecification<T> spec)
                     .AsEnumerable();
 }
 ```
-除了封裝篩選邏輯，規格還可以指定要傳回的資料形式，包括要填入的屬性。 
+除了封裝篩選邏輯，規格還可以指定要傳回的資料形式，包括要填入的屬性。
 
-雖然我們不建議從存放庫傳回 IQueryable，但在存放庫中使用它們來建立一組結果完全沒有問題。 您可以在上述的 List 方法中看到使用此方式，它使用中繼 IQueryable 運算式來建置查詢的包含清單，然後才執行查詢，在最後一行則為規格的準則。
-
+雖然我們不建議從存放庫傳回 IQueryable，但在存放庫中使用它們建立一組結果完全沒有問題。 您可以在上述的 List 方法中看到使用此方式，它使用中繼 IQueryable 運算式來建置查詢的包含清單，然後才執行查詢，在最後一行則為規格的準則。
 
 #### <a name="additional-resources"></a>其他資源
 
--   **資料表對應**
-    [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
+- **資料表對應** \
+  [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
--   **使用 HiLo 配合 Entity Framework Core 產生金鑰**
-    [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
+- **使用 HiLo 配合 Entity Framework Core 產生金鑰** \
+  [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
--   **支援欄位**
-    [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
+- **支援欄位** \
+  [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
--   **Steve Smith.Entity Framework Core 中的封裝式集合**
-    [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
+- **Steve Smith.Entity Framework Core 中的封裝式集合** \
+  [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
--   **陰影屬性**
-    [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+- **陰影屬性** \
+  [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **規格模式**
-    [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
-    
+- **規格模式** \
+  [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
 
 >[!div class="step-by-step"]
-[上一頁](infrastructure-persistence-layer-design.md)
-[下一頁](nosql-database-persistence-infrastructure.md)
+>[上一頁](infrastructure-persistence-layer-design.md)
+>[下一頁](nosql-database-persistence-infrastructure.md)

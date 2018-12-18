@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 1b5099c73264f3175aa05094f4460c1c97774533
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743959"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143372"
 ---
 # <a name="framework-libraries"></a>Framework 程式庫
 
@@ -53,7 +53,8 @@ BCL 提供最基本的類型和公用程式功能，是所有其他 .NET 類別�
 
 *   <xref:System.Net.Http.HttpClient> - 此 API 可用於傳送 HTTP 要求，以及從 URI 所識別的資源接收 HTTP 回應。
 *   <xref:System.Xml.Linq.XDocument> - 此 API 可用於載入，以及使用 LINQ 查詢 XML 文件。
-*   <xref:System.IO.StreamReader> - 此 API 可用於讀取檔案 (<xref:System.IO.StringWriter> 可用來寫入檔案)。
+*   <xref:System.IO.StreamReader> - 此 API 可用於讀取檔案。 
+*   <xref:System.IO.StreamWriter> - 此 API 可用於寫入檔案。
 
 ## <a name="app-model-apis"></a>應用程式模型 API
 

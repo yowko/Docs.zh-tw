@@ -4,12 +4,12 @@ description: .NET 程式庫強式命名的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 6f5743c7a8c6fdbdcdcf3aa80d2f92f2e04621f2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99905a795c4cdb3c79884716b39ed4e38cfe39d6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201448"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128995"
 ---
 # <a name="strong-naming"></a>強式命名
 
@@ -62,14 +62,14 @@ ms.locfileid: "50201448"
 
 > 深入了解[版本控制與組件版本](./versioning.md#assembly-version)。
 
-**請勿**新增、移除或變更強式命名金鑰。
+**❌ 請不要**新增、移除或變更強式命名金鑰。
 
 > 修改組件的強式命名金鑰會變更組件的身分識別，並且中斷使用它的編譯程式碼。 如需詳細資訊，請參閱[二進位中斷性變更](./breaking-changes.md#binary-breaking-change)。
 
-**禁止**發行程式庫的強式名稱和非強式名稱版本。 例如，`Contoso.Api` 與 `Contoso.Api.StrongNamed`。
+**❌ 禁止**發行程式庫的強式名稱和非強式名稱版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
 > 發佈兩個套件會派生您的開發人員生態系統。 此外，如果應用程式最後根據這兩個套件，開發人員可能會遇到類型名稱衝突。 就 .NET 而言，它們在不同的組件中是不同的類型。
 
 >[!div class="step-by-step"]
-[上一頁](./cross-platform-targeting.md)
-[下一頁](./nuget.md)
+>[上一頁](cross-platform-targeting.md)
+>[下一頁](nuget.md)

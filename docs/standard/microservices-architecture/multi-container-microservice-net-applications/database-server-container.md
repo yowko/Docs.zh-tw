@@ -1,33 +1,32 @@
 ---
 title: 使用作為容器執行的資料庫伺服器
-description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用作為容器執行的資料庫伺服器
+description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用作為容器執行的資料庫伺服器？只適用於開發！ 了解原因。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/30/2017
-ms.openlocfilehash: 42b0bf43ace00b1eb4b48c39604b89ea76c99220
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 347e6d36b7e838082f47d39c5ae67c219ec11d45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106145"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127715"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>使用作為容器執行的資料庫伺服器
 
-您可將資料庫 (SQL Server、PostgreSQL、MySQL 等等) 放在一般的獨立伺服器、內部部署叢集，或如 Azure SQL DB 等雲端 PaaS 服務上。 不過，若為開發和測試環境，將資料庫執行為容器會很方便，因為您沒有任何外部相依性，只要執行 docker-compose 命令即可啟動整個應用程式。 將這些資料庫當作容器也非常適合整合測試，因為資料庫是在容器中啟動，而且一律填入相同的範例資料，所以測試會更容易預測。
+您可將資料庫 (SQL Server、PostgreSQL、MySQL 等等) 放在一般的獨立伺服器、內部部署叢集，或如 Azure SQL DB 等雲端 PaaS 服務上。 不過，若為開發和測試環境，將資料庫執行為容器會很方便，因為您沒有任何外部相依性，只要執行 `docker-compose up` 命令即可啟動整個應用程式。 將這些資料庫當作容器也非常適合整合測試，因為資料庫是在容器中啟動，而且一律填入相同的範例資料，所以測試會更容易預測。
 
 ### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>SQL Server 執行為附微服務相關資料庫的容器
 
 eShopOnContainers 中有個容器名為 sql.data，在 [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) 檔案中定義，此檔案執行 SQL Server for Linux 及微服務需要的所有 SQL Server 資料庫。 (您也可以每個資料庫各一個 SQL Server 容器，但這樣就需要指派更多的記憶體給 Docker。)微服務有一個重點是每項微服務擁有自己的相關資料，在本例中為其相關的 SQL 資料庫。 但是這些資料庫可以位在任何位置。
 
-範例應用程式中的 SQL Server 容器，是在 docker-compose.yml 檔案中使用下列 YAML 程式碼設定，它會在您啟動 Docker Compose 時執行。 請注意 YAML 程式碼已合併來自泛型 docker-compose.yml 檔案和 docker-compose.override.yml 檔案的組態資訊。 (通常您會將環境設定從 SQL Server 映像相關的基底或靜態資訊中分離出來。)
+範例應用程式中的 SQL Server 容器，是在 docker-compose.yml 檔案中使用下列 YAML 程式碼設定，它會在您執行 `docker-compose up` 時執行。 請注意 YAML 程式碼已合併來自泛型 docker-compose.yml 檔案和 docker-compose.override.yml 檔案的組態資訊。 (通常您會將環境設定從 SQL Server 映像相關的基底或靜態資訊中分離出來。)
 
 ```yml
   sql.data:
-    image: microsoft/mssql-server-linux
+    image: microsoft/mssql-server-linux:2017-latest
     environment:
-      - MSSQL_SA_PASSWORD=Pass@word
+      - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
-      - MSSQL_PID=Developer
     ports:
       - "5434:1433"
 ```
@@ -35,10 +34,10 @@ eShopOnContainers 中有個容器名為 sql.data，在 [docker-compose.yml](http
 以類似的方式，而不是使用 `docker-compose`，下列 `docker run` 命令可以執行該容器：
 
 ```
-  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD= your@password' -p 1433:1433 -d microsoft/mssql-server-linux
+  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
-不過，如果您要部署多容器應用程式，例如 eShopOnContainers，使用 docker-compose up 命令會更方便，以部署應用程式需要的所有容器。
+不過，如果您要部署多容器應用程式，例如 eShopOnContainers，使用 `docker-compose up` 命令會更方便，其會部署應用程式需要的所有容器。
 
 當您第一次啟動此 SQL Server 容器時，容器會使用您提供的密碼初始化 SQL Server。 一旦 SQL Server 執行為容器，您就可以透過任何一般 SQL 連線來連線至資料庫來加以更新，例如從 SQL Server Management Studio、Visual Studio 或 C\# 程式碼。
 
@@ -48,10 +47,10 @@ eShopOnContainers 應用程式會在啟動時，將範例資料與資料一起�
 
 #### <a name="additional-resources"></a>其他資源
 
--   **在 Linux、Mac 或 Windows 上執行 SQL Server Docker 映像**
+-   **在 Linux、Mac 或 Windows 上執行 SQL Server Docker 映像** <br/>
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **使用 sqlcmd 連線及查詢 Linux 上的 SQL Server**
+-   **使用 sqlcmd 連線及查詢 Linux 上的 SQL Server** <br/>
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>在 Web 應用程式啟動時植入測試資料
@@ -166,7 +165,7 @@ public class Startup
 
 Redis 提供使用 Redis 的 Docker 映像。 該映像可從位於此 URL 的 Docker Hub 取得：
 
-<https://hub.docker.com/_/redis/>
+[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
 
 您可以在命令提示字元中執行下列 Docker CLI 命令，直接執行 Docker Redis 容器：
 
@@ -199,7 +198,8 @@ docker-compose.yml 的這段程式碼會根據 redis 映像，定義名為 baske
       - EventBusConnection=rabbitmq
 ```
 
+如前所述，docker 的內部網路 DNS 會解析微服務 "basket.data" 的名稱。
 
 >[!div class="step-by-step"]
-[上一頁](multi-container-applications-docker-compose.md)
-[下一頁](integration-event-based-microservice-communications.md)
+>[上一頁](multi-container-applications-docker-compose.md)
+>[下一頁](integration-event-based-microservice-communications.md)

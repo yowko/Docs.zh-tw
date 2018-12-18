@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201594"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146572"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步處理原始物件概觀
 
@@ -79,9 +79,9 @@ ms.locfileid: "50201594"
 
 ### <a name="readerwriterlockslim-class"></a>ReaderWriterLockSlim 類別
 
-<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> 類別會授與對共用資源進行寫入的獨佔存取權，並允許多個執行緒同時存取該資源以進行讀取。 您應該使用 <xref:System.Threading.ReaderWriterLockSlim> 來同步對支援安全執行緒讀取作業，但需要獨佔存取以執行寫入作業之共用資料結構的存取。 當執行緒要求獨佔存取權 (例如，透過呼叫 <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> 方法)，後續的讀取器要求會封鎖直到所有現有讀取器都結束鎖定，且寫入器已進入並離開鎖定為止。
+<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> 類別會授與對共用資源進行寫入的獨佔存取權，並允許多個執行緒同時存取該資源以進行讀取。 您應該使用 <xref:System.Threading.ReaderWriterLockSlim> 來同步對支援安全執行緒讀取作業，但需要獨佔存取以執行寫入作業之共用資料結構的存取。 當執行緒要求獨佔存取權 (例如，透過呼叫 <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> 方法) 時，後續的讀取器和寫入器要求會封鎖直到所有現有讀取器都結束鎖定，且寫入器已進入並離開鎖定為止。
   
-如需詳細資訊，請參閱 [Reader-Writer 鎖定](reader-writer-locks.md)文章與 <xref:System.Threading.ReaderWriterLockSlim> API 參考。
+如需詳細資訊，請參閱 <xref:System.Threading.ReaderWriterLockSlim> API 參考。
 
 ### <a name="semaphore-and-semaphoreslim-classes"></a>旗號與 SemaphoreSlim 類別
 
@@ -134,7 +134,7 @@ ms.locfileid: "50201594"
 
 <xref:System.Threading.Interlocked?displayProperty=nameWithType> 類別可提供能針對變數執行簡易不可部分完成之作業的靜態方法。 那些不可部分完成的作業包括對 64 位元整數值的相加、遞增和遞減、根據比較的交換和條件式交換，以及讀取作業。
 
-如需詳細資訊，請參閱 [Interlocked 作業](interlocked-operations.md)文章與 <xref:System.Threading.Interlocked> API 參考。
+如需詳細資訊，請參閱 <xref:System.Threading.Interlocked> API 參考。
 
 ## <a name="spinwait-structure"></a>SpinWait 結構
 
@@ -146,4 +146,4 @@ ms.locfileid: "50201594"
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [安全執行緒集合](../collections/thread-safe/index.md)
-- [執行緒物件與功能](threading-objects-and-features.md)
+- [執行緒物件和功能](threading-objects-and-features.md)

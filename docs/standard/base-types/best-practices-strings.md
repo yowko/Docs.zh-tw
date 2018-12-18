@@ -1,5 +1,6 @@
 ---
 title: 在 .NET 中使用字串的最佳做法
+description: 了解如何在 .NET 應用程式中有效地使用字串。
 ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.custom: seodec18
+ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080334"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150969"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>在 .NET 中使用字串的最佳做法
 <a name="top"></a> .NET 可廣泛支援當地語系化和全球化應用程式的開發作業，使您在執行一般作業 (例如排序和顯示字串) 時，可輕鬆套用目前的文化特性或文化特性特定的慣例。 但是，排序或比較字串並不一定是區分文化特性的作業。 例如，應用程式內部使用的字串，通常應該跨所有文化特性皆進行相同處理。 若將與文化特性無關的字串資料 (例如 XML 標記、HTML 標記、使用者名稱、檔案路徑和系統物件的名稱) 進行區分文化特性的解譯時，應用程式程式碼可能會出現細微的 Bug、效能不佳，甚至在某些情況下，會產生安全性問題。  
@@ -85,7 +87,7 @@ ms.locfileid: "47080334"
 ## <a name="specifying-string-comparisons-explicitly"></a>明確指定字串比較  
  在 .NET 中的字串操作方法大多都是多載。 一般而言，您可讓一或多個多載接受預設值，而其他不接受預設值的多載，則定義用來比較或操作字串的精確方式。 大部分不依賴預設值的方法都會包含 <xref:System.StringComparison>類型的參數，其為一種列舉類型，可明確指定依據文化特性和大小寫進行字串比較的規則。 下表說明 <xref:System.StringComparison> 列舉類型成員。  
   
-|StringComparison 成員|描述|  
+|StringComparison 成員|說明|  
 |-----------------------------|-----------------|  
 |<xref:System.StringComparison.CurrentCulture>|使用目前文化特性執行區分大小寫的比較。|  
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|使用目前文化特性執行不區分大小寫的比較。|  
@@ -146,13 +148,13 @@ ms.locfileid: "47080334"
   
 -   <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 多載。  
   
--   預設的 <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> 方法和含有 `null`<xref:System.Globalization.CultureInfo> 參數的 <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法。  
+-   預設的 <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> 方法和含有 <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> null `null`<xref:System.Globalization.CultureInfo> 多載。  
   
--   預設的 <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> 方法和含有 `null`<xref:System.Globalization.CultureInfo> 參數的 <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法。  
+-   預設的 <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> 方法和含有 <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> null `null`<xref:System.Globalization.CultureInfo> 多載。  
   
--   可接受 <xref:System.String> 做為搜尋參數且不含 <xref:System.StringComparison> 參數的 <xref:System.String.IndexOf%2A?displayProperty=nameWithType> 多載。  
+-   可接受<xref:System.String.IndexOf%2A?displayProperty=nameWithType> 做為搜尋參數且不含 <xref:System.String> 參數的 <xref:System.StringComparison> 多載。  
   
--   可接受 <xref:System.String> 做為搜尋參數且不含 <xref:System.StringComparison> 參數的 <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> 多載。  
+-   可接受<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> 做為搜尋參數且不含 <xref:System.String> 參數的 <xref:System.StringComparison> 多載。  
   
  在任何情況下，都建議您呼叫具有 <xref:System.StringComparison> 參數的多載，以讓呼叫方法的目的更清晰。  
   
@@ -252,14 +254,14 @@ ms.locfileid: "47080334"
  下列各節描述字串比較最常用的方法。  
   
 ### <a name="stringcompare"></a>String.Compare  
- 預設解譯：<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
+ 預設解譯： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
   
  由於是字串解譯最主要的作業，這些方法呼叫的所有執行個體都應該經過檢查，以決定字串應該根據目前文化特性來解譯，還是與文化特性分開 (符號形式)。 通常是後者，所以應該改用 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 比較。  
   
  由 <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 屬性傳回的 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> 類別也包含 <xref:System.Globalization.CompareInfo.Compare%2A> 方法，這個方法透過 <xref:System.Globalization.CompareOptions> 旗標列舉，提供大量比對選項 (序數、忽略空白字元、忽略假名類型等)。  
   
 ### <a name="stringcompareto"></a>String.CompareTo  
- 預設解譯：<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
+ 預設解譯： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
   
  這個方法目前未提供任何指定 <xref:System.StringComparison> 類型的多載。 通常可以將這個方法轉換成建議的 <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 形式。  
   
@@ -269,12 +271,12 @@ ms.locfileid: "47080334"
  [!code-vb[Conceptual.Strings.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/api1.vb#6)]  
   
 ### <a name="stringequals"></a>String.Equals  
- 預設解譯：<xref:System.StringComparison.Ordinal?displayProperty=nameWithType>。  
+ 預設解譯： <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>。  
   
  <xref:System.String> 類別可讓您呼叫靜態或執行個體 <xref:System.String.Equals%2A> 方法多載，或使用靜態等號比較運算子，以測試是否相等。 多載和運算子預設會使用序數比較。 然而，即使您想要執行序數比較，我們還是建議您呼叫明確指定 <xref:System.StringComparison> 型別的多載，這樣可以很輕鬆在程式碼中搜尋特定的字串解譯。  
   
 ### <a name="stringtoupper-and-stringtolower"></a>String.ToUpper 和 String.ToLower  
- 預設解譯：<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
+ 預設解譯： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
   
  請小心使用這些方法，因為強制將字串轉換為大寫或小寫，通常是做為比較不區分大小寫字串時的輕微正規化。 如果是這樣，請考慮使用不區分大小寫的比較。  
   
@@ -283,7 +285,7 @@ ms.locfileid: "47080334"
  特定文化特性中，也可以使用多載將表示該文化特性的 <xref:System.Globalization.CultureInfo> 物件傳遞至這個方法，以轉換為大寫和小寫。  
   
 ### <a name="chartoupper-and-chartolower"></a>Char.ToUpper 和 Char.ToLower  
- 預設解譯：<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
+ 預設解譯： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
   
  這些方法的運作類似於上一節描述的 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 方法。  
   
@@ -293,7 +295,7 @@ ms.locfileid: "47080334"
  根據預設，這兩個方法都會執行區分文化特性的比較。  
   
 ### <a name="stringindexof-and-stringlastindexof"></a>String.IndexOf 和 String.LastIndexOf  
- 預設解譯：<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
+ 預設解譯： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
   
  這些方法的預設多載在執行比較時，作法並不一致。 所有包含 <xref:System.Char> 參數的 <xref:System.String.IndexOf%2A?displayProperty=nameWithType> 和 <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> 方法都執行序數比較，但包含 <xref:System.String> 參數的預設 <xref:System.String.IndexOf%2A?displayProperty=nameWithType> 和 <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> 方法會執行區分文化特性的比較。  
   
@@ -318,7 +320,7 @@ ms.locfileid: "47080334"
 -   不區分大小寫的序數比較。 這個 <xref:System.StringComparer> 物件是由 <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> 屬性傳回。  
   
 ### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort 和 Array.BinarySearch  
- 預設解譯：<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
+ 預設解譯： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
   
  當您將任何資料儲存在集合中，或從檔案或資料庫將保存的資料讀入集合時，切換目前文化特性會使集合中的非變異失效。 <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 方法假設要搜尋之陣列中的項目已排序。 若要排序陣列中的任何字串項目，<xref:System.Array.Sort%2A?displayProperty=nameWithType> 方法會呼叫 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法來排序個別項目。 從排序陣列到搜尋其內容這段時間當中，如果文化特性變更，則使用區分文化特性的比較子可能會有危險。 例如，在下列程式碼中，儲存和擷取作業在 `Thread.CurrentThread.CurrentCulture` 屬性。 如果文化特性在呼叫 `StoreNames` 和 `DoesNameExist`之間可能變更，尤其是如果陣列內容在這兩個方法呼叫之間保存在某處，則二進位搜尋可能會失敗。  
   

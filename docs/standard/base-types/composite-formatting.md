@@ -1,6 +1,6 @@
 ---
 title: 複合格式
-ms.date: 03/30/2017
+ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,31 +15,34 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397929"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126857"
 ---
 # <a name="composite-formatting"></a>複合格式
+
 .NET 複合格式功能會採用物件清單和複合格式字串作為輸入。 複合格式字串是由混合索引替代符號 (Placeholder) 的固定文字所組成 (這些符號稱為對應至清單內物件的格式項目)。 格式作業產生的結果字串是由原始固定文字所組成，這些固定文字混合了清單中代表物件的字串。  
   
- 下列方法支援複合格式功能：  
+> [!IMPORTANT]
+> 如果您使用的語言和語言版本支援，您可以使用「內插字串」，而不使用複合格式字串。 內插字串是包含「插入運算式」的字串。 每個插值的運算式會以運算式的值解析，且在字串指派時，包含在結果字串中。 如需詳細資訊，請參閱[字串內插補點 (C# 參考)](../../csharp/language-reference/tokens/interpolated.md) 和[字串內插補點 (Visual Basic 參考)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)。
+
+下列方法支援複合格式功能：  
   
--   <xref:System.String.Format%2A?displayProperty=nameWithType>，傳回格式化的結果字串。  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>，傳回格式化的結果字串。  
   
--   <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>，將格式化的結果字串附加至 <xref:System.Text.StringBuilder> 物件。  
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>，將格式化的結果字串附加至 <xref:System.Text.StringBuilder> 物件。   
+- <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法的部分多載，對主控台顯示格式化的結果字串。  
   
--   <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法的部分多載，對主控台顯示格式化的結果字串。  
+- <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> 方法的部分多載，將格式化的結果字串寫入至資料流或檔案。 衍生自 <xref:System.IO.TextWriter> 的類別，例如 <xref:System.IO.StreamWriter> 和 <xref:System.Web.UI.HtmlTextWriter>，也會共用這項功能。  
   
--   <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> 方法的部分多載，將格式化的結果字串寫入至資料流或檔案。 衍生自 <xref:System.IO.TextWriter> 的類別，例如 <xref:System.IO.StreamWriter> 和 <xref:System.Web.UI.HtmlTextWriter>，也會共用這項功能。  
+- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>，將格式化的訊息輸出至追蹤接聽項。  
   
--   <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>，將格式化的訊息輸出至追蹤接聽項。  
+- <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法，將格式化的訊息輸出至追蹤接聽項。  
   
--   <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法，將格式化的訊息輸出至追蹤接聽項。  
-  
--   <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法，將告知性方法寫入至追蹤接聽項。  
+- <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法，將告知性方法寫入至追蹤接聽項。  
   
 ## <a name="composite-format-string"></a>複合格式字串  
  複合格式字串和物件清單會當做支援複合格式功能之方法的引數來使用。 複合格式字串是由零個或更多段與一個或多個格式項目混合的固定文字所組成， 固定文字是您選擇的任何文字，而每個格式項目都會對應到清單內的一個物件或 boxed 結構。 複合格式功能將會傳回新的結果字串，其中每一個格式項目都會由清單內對應物件的字串表示來取代。  

@@ -1,19 +1,19 @@
 ---
 title: 設計微服務領域模型
-description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計微服務領域模型
+description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解設計 DDD 導向領域模型時的重要概念。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/09/2017
-ms.openlocfilehash: 9a54679fc28bb2adf803a38fe5e43f67048a4cfd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: d98d0f0fee0692bb447779e7f62750931a9773ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048472"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143600"
 ---
-# <a name="designing-a-microservice-domain-model"></a>設計微服務領域模型
+# <a name="design-a-microservice-domain-model"></a>設計微服務領域模型
 
-*為每個商務微服務或限定內容定義一個豐富領域模型*
+為每個商務微服務或限定內容定義一個豐富領域模型。
 
 您的目標是為每個商務微服務或限定內容 (BC) 建立單一內聚領域模型。 不過請記住，BC 或商務微服務有時候可能是由共用單一領域模型的多個實體服務所組成。 領域模型必須擷取單一限定內容或其代表之商務微服務的規則、行為、商務語言和限定式。
 
@@ -23,19 +23,19 @@ ms.locfileid: "50048472"
 
 *實體的識別身分可跨多個微服務或限定內容。*
 
-您可以在多個限定內容或微服務之間建立相同身分識別 (但不同實體) 的模型。 不過，這並不表示會在多個限定內容中實作具有相同屬性和邏輯的相同實體。 相反地，每個限定內容中的實體會將其屬性和行為，限制為該限定內容的領域中所需的屬性和行為。
+您可以在多個限定內容或微服務之間，建立相同身分識別 (也就是相同的 `Id` 值) 但可能不同領域實體的模型。 不過，這並不表示會在多個限定內容中實作具有相同屬性和邏輯的相同實體。 相反地，每個限定內容中的實體會將其屬性和行為，限制為該限定內容的領域中所需的屬性和行為。
 
 例如，購買者實體可能會在設定檔或身分識別微服務的使用者實體中定義某個人的大部分屬性，包括身分識別。 但訂購微服務中的購買者實體可能有較少的屬性，因為只有特定購買者資料會與訂購流程相關。 每個微服務或限定內容的內容會影響其領域模型。
 
-*除了實作資料屬性，領域實體必須實作行為*
+除了實作資料屬性，領域實體還必須實作行為。
 
 DDD 中的領域實體必須實作與實體資料 (從記憶體存取的物件) 相關的領域邏輯或行為。 例如，作為訂單實體類別的一部分，您必須將商務邏輯和作業實作為工作的方法，例如新增訂單項目、資料驗證和總計算。 實體的方法會處理實體的不變式和規則，而不是跨應用程式層散佈這些規則。
 
-圖 9-8 所顯示的領域實體不只會實作資料屬性，還會實作含有相關領域邏輯的作業或方法。
+圖 7-8 所顯示的領域實體不只會實作資料屬性，還會實作具有相關領域邏輯的作業或方法。
 
-![](./media/image9.png)
+![領域模型實體會透過方法實作行為，也就是它不是 "Anemic" 模型。](./media/image9.png)
 
-**圖 9-8**： 實作資料加上行為的領域實體設計範例
+**圖 7-8**。 實作資料加上行為的領域實體設計範例
 
 當然，有時候您可以有未實作任何邏輯作為實體類別一部分的實體。 如果子實體沒有任何特殊邏輯，彙總內的子實體就可能會發生這種情況，因為彙總根中已定義大部分邏輯。 如果您有一個複雜的微服務在服務類別 (而不是領域實體) 中實作許多邏輯，則可能會落入 Anemic 領域模型中，如下一節中所述。
 
@@ -57,15 +57,14 @@ Anemic 領域模型只是程序樣式設計。 Anemic 實體物件不是真正�
 
 #### <a name="additional-resources"></a>其他資源
 
--   **DevIQ。Domain Entity (網域實體)**
-    [*https://deviq.com/entity/*](https://deviq.com/entity/)
+- **DevIQ。Domain Entity** \ (網域實體)
+  [*https://deviq.com/entity/*](https://deviq.com/entity/)
 
--   **Martin Fowler：The Domain Model (網域模型)**
-    [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
+- **Martin Fowler：The Domain Model** \ (網域模型)
+  [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
--   **Martin Fowler：The Anemic Domain Model (Anemic 領域模型)**
-
-    <https://martinfowler.com/bliki/AnemicDomainModel.html>
+- **Martin Fowler：The Anemic Domain Model** \ (Anemic 領域模型)
+  [*https://martinfowler.com/bliki/AnemicDomainModel.html*](https://martinfowler.com/bliki/AnemicDomainModel.html)
 
 ### <a name="the-value-object-pattern"></a>值物件模式
 
@@ -79,18 +78,20 @@ Eric Evans 提到，「許多物件沒有概念性身分識別。 這些物件�
 
 值物件在關聯式資料庫和 EF 等 ORM 中很難管理，但在文件導向資料庫中則更容易實作和使用。
 
+EF Core 2.0 包含[擁有的實體](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)功能，可更輕鬆地處理值物件，我們將於稍後看到詳細的說明。
+
 #### <a name="additional-resources"></a>其他資源
 
--   **Martin Fowler：Value Object pattern (值物件模式)**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+- **Martin Fowler：Value Object pattern (值物件模式)**
+  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Value Object (值物件)**
-    [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
+- **Value Object (值物件)**
+  [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
--   **Value Objects in Test-Driven Development (測試導向開發中的值物件)**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+- **Value Objects in Test-Driven Development (測試導向開發中的值物件)**
+  [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Eric Evans：Domain-Driven Design: Tackling Complexity in the Heart of Software.** (書籍；包括值物件的探討) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans：Domain-Driven Design: Tackling Complexity in the Heart of Software.** (書籍；包括值物件的探討) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>彙總模式
 
@@ -104,15 +105,15 @@ Eric Evans 提到，「許多物件沒有概念性身分識別。 這些物件�
 
 彙總至少是由一個實體所組成，那就是彙總根，也稱為根實體或主要實體。 此外，它可以有多個子實體和值物件，所有實體和物件會共同實作必要的行為和交易。
 
-彙總根的目的是確保彙總的一致性，它應該是透過彙總根類別中的方法或作業對彙總進行更新的唯一進入點。 您只能透過彙總根變更彙總內的實體。 它可確保彙總的一致性，並考慮到您可能需要在彙總中遵守的所有不定式和一致性規則。 如果您獨立變更子實體或值物件，彙總根無法確保彙總處於有效狀態。 就像是桌子鬆了桌腳一樣。 維護一致性是彙總根的主要目的。
+彙總根的目的是確保彙總的一致性，它應該是透過彙總根類別中的方法或作業對彙總進行更新的唯一進入點。 您只能透過彙總根變更彙總內的實體。 它可確保彙總的一致性，並考慮您可能需要在彙總中遵守的所有變異和一致性規則。 如果您獨立變更子實體或值物件，彙總根無法確保彙總處於有效狀態。 就像是桌子鬆了桌腳一樣。 維護一致性是彙總根的主要目的。
 
-在圖 9-9 中，您會看到購買者彙總之類的範例彙總，其中包含單一實體 (彙總根購買者)。 訂單彙總包含多個實體和值物件。
+在圖 7-9 中，您會看到購買者彙總之類的範例彙總，其中包含單一實體 (彙總根購買者)。 訂單彙總包含多個實體和值物件。
 
-![](./media/image10.png)
+![DDD 領域模型由彙總組成，彙總可以只有一個實體或多個實體，而且也可以包含值物件。](./media/image10.png)
 
-**圖 9-9**： 具有多個或單一實體的彙總範例
+**圖 7-9**。 具有多個或單一實體的彙總範例
 
-請注意，視您的領域而定，購買者彙總可能會有其他子實體，就像是在 eShopOnContainers 參考應用程式中的訂購微服務一樣。 圖 9 9 只會描述購買者具有單一實體的情況，例如只包含彙總根的彙總。
+請注意，視您的領域而定，購買者彙總可能會有其他子實體，就像是在 eShopOnContainers 參考應用程式中的訂購微服務一樣。 圖 7-9 只會描述購買者具有單一實體的情況，例如只包含彙總根的彙總。
 
 若要維持彙總分離並保持彙總之間的清楚界限，建議在 DDD 領域模型中，不要允許在彙總之間直接瀏覽，而只具有外部索引鍵 (FK) 欄位，如 eShopOnContainers 的[訂購微服務領域模型](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)中所實作。 訂單實體只具有購買者的 FK 欄位，但不具有 EF Core 瀏覽屬性，如下列程式碼所示：
 
@@ -133,24 +134,24 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>其他資源
 
--   **Vaughn Vernon：Effective Aggregate Design - Part I: Modeling a Single Aggregate (有效彙總設計 - 第一部分：建立單一彙總模型)**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Vaughn Vernon：Effective Aggregate Design - Part I: Modeling a Single Aggregate** \ (有效彙總設計 - 第一部分：建立單一彙總模型)
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon：Effective Aggregate Design - Part II: Making Aggregates Work Together (有效彙總設計 - 第二部分：使彙總共同作業)**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Vaughn Vernon：Effective Aggregate Design - Part II: Making Aggregates Work Together** \ (有效彙總設計 - 第二部分：使彙總共同作業)
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
 
--   **Vaughn Vernon:Effective Aggregate Design - Part III: Gaining Insight Through Discovery (有效彙總設計 - 第三部分：透過探索取得見解)**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Vaughn Vernon：Effective Aggregate Design - Part III: Gaining Insight Through Discovery** \ (有效彙總設計 - 第三部分：透過探索取得見解)
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
 
--   **Sergey Grybniak：DDD Tactical Design Patterns (DDD 戰術設計模式)**
-    [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+- **Sergey Grybniak：DDD Tactical Design Patterns** \ (DDD 戰術設計模式)
+  [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson：Developing Transactional Microservices Using Aggregates (使用彙總開發交易微服務)**
-    [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+- **Chris Richardson：Developing Transactional Microservices Using Aggregates** \ (使用彙總開發交易微服務)
+  [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ。The Aggregate pattern (彙總模式)**
-    [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
+- **DevIQ。The Aggregate pattern** \ (彙總模式)
+  [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
 
 >[!div class="step-by-step"]
-[上一頁](ddd-oriented-microservice.md)
-[下一頁](net-core-microservice-domain-model.md)
+>[上一頁](ddd-oriented-microservice.md)
+>[下一頁](net-core-microservice-domain-model.md)

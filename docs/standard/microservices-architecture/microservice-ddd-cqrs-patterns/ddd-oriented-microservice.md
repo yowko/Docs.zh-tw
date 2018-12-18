@@ -1,17 +1,17 @@
 ---
 title: 設計 DDD 導向微服務
-description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計 DDD 導向微服務
+description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 DDD 導向的訂購微服務及其應用程式層的設計。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/06/2017
-ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 65a1a58d0c70c7e788aea420006c1ad617628f93
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183499"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145604"
 ---
-# <a name="designing-a-ddd-oriented-microservice"></a>設計 DDD 導向微服務
+# <a name="design-a-ddd-oriented-microservice"></a>設計 DDD 導向微服務
 
 網域驅動設計 (DDD) 支援以與您的使用案例相關之商務實際情況建立模型。 在建置應用程式的內容中，DDD 會將問題作為領域討論。 它將獨立問題區域描述為限定內容 (每個限定內容都與一個微服務相互關聯)，並強調討論這些問題的通用語言。 它也提出了許多技術概念和模式，像是帶有豐富模型的領域實體 (無 [anemic-domain 模型](https://martinfowler.com/bliki/AnemicDomainModel.html))、值物件、彙總及彙總根 (或根實體) 規則，來支援內部實作。 本節將介紹這些內部模式的設計及實作。
 
@@ -33,21 +33,21 @@ ms.locfileid: "50183499"
 
 例如，實體可從資料庫載入。 然後該資訊的一部份，或是包含從其他實體取得之額外資料的資訊彙總，便可透過 REST Web API 傳送至用戶端 UI。 重點在於領域實體是包含在領域模型層中，不應散佈到其不屬於的其他區域，例如展示層。
 
-此外，您需要讓彙總根 (根實體) 控制永遠有效的實體 (請參閱[在領域模型層中設計驗證](#designing-validations-in-the-domain-model-layer)一節)。 因此，實體不應繫結於用戶端檢視，因為在 UI 層級中，有些資料可能尚未驗證。 這便是 ViewModel 存在的目的。 ViewModel 是一種僅針對展示層需求的資料模型。 領域實體不直接屬於 ViewModel。 相反地，您需要在 ViewModel 和領域實體之間進行轉換，反之亦然。
+此外，您需要讓彙總根 (根實體) 控制永遠有效的實體 (請參閱[在領域模型層中設計驗證](domain-model-layer-validations.md)一節)。 因此，實體不應繫結於用戶端檢視，因為在 UI 層級中，有些資料可能尚未驗證。 這便是 ViewModel 存在的目的。 ViewModel 是一種僅針對展示層需求的資料模型。 領域實體不直接屬於 ViewModel。 相反地，您需要在 ViewModel 和領域實體之間進行轉換，反之亦然。
 
 當處理複雜性時，擁有由確認所有與該實體群組 (彙總) 相關的不區分及規則都是透過單一進入點或閘道 (彙總根) 執行的彙總根控制的領域模型是非常重要的。
 
-圖 9-5 顯示了分層設計在 eShopOnContainer 應用程式中實作的方式。
+圖 7-5 顯示分層設計在 eShopOnContainer 應用程式中的實作方式。
 
-![](./media/image6.png)
+![訂購等 DDD 微服務中的三層。 每一層都是 VS 專案：應用程式層是 Ordering.API、領域層是 Ordering.Domain，而基礎結構層是 Ordering.Infrastructure。](./media/image6.png)
 
-**圖 9-5**。 eShopOnContainers 訂購微服務中的 DDD 層
+**圖 7-5**。 eShopOnContainers 訂購微服務中的 DDD 層
 
-您會希望將系統設計成每一個層都只會跟特定的其他層通訊。 若層是作為不同的類別程式庫實作的，這會比較容易強制執行，因為您可以清楚的識別程式庫之間設定了哪些相依性。 例如，領域模型層不應該相依於任何其他的層 (領域模型類別應為簡單的 CLR 物件 ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) 類別)。 如圖 9-6 中所示，**Ordering.Domain** 層程式庫只在 .NET Core 程式庫或 NuGet 套件上具有相依性，在任何其他自訂程式庫 (例如資料程式庫或永續性程式庫) 上則不具有相依性。
+您會希望將系統設計成每一個層都只會跟特定的其他層通訊。 若層是作為不同的類別程式庫實作的，這會比較容易強制執行，因為您可以清楚的識別程式庫之間設定了哪些相依性。 例如，領域模型層不應該相依於任何其他的層 (領域模型類別應為簡單的 CLR 物件 ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) 類別)。 如圖 7-6 所示，**Ordering.Domain** 層程式庫只在 .NET Core 程式庫或 NuGet 套件上具有相依性，在任何其他自訂程式庫 (例如資料程式庫或永續性程式庫) 上則不具有相依性。
 
-![](./media/image7.PNG)
+![Ordering.Domain 相依性的 [方案總管] 檢視，顯示它只相依於 .NET Core 程式庫。](./media/image7.png)
 
-**圖 9-6**。 作為程式庫實作的層允許對層之間的相依性進行更佳的控制
+**圖 7-6**。 作為程式庫實作的層允許對層之間的相依性進行更佳的控制
 
 ### <a name="the-domain-model-layer"></a>領域模型層
 
@@ -85,26 +85,25 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://d
 
 根據先前提到的[永續性無知](https://deviq.com/persistence-ignorance/)與[基礎結構無知](https://ayende.com/blog/3137/infrastructure-ignorance)準則，基礎結構層不可「污染」領域模型層。 您必須透過使其對架構不具有硬式相依性，來讓領域模型實體類別保持無從得知您用來永續保存資料的基礎結構 (EF 或其他任何架構)。 您的領域模型層類別庫應僅具有您的領域程式碼，即只有實作您軟體核心的 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)，並且完全與基礎技術分開。
 
-因此，您的層或類別庫及專案最後應相依於您的領域模型層 (程式庫)，並且不是反之亦然，如圖 9-7 所示。
+因此，您的層或類別庫及專案最後應相依於您的領域模型層 (程式庫)，而不是反過來也一樣，如圖 7-7 所示。
 
-![](./media/image8.png)
+![DDD 服務中的相依性，應用程式層相依於領域和基礎結構，基礎結構相依於網域，但網域不相依於任一層。](./media/image8.png)
 
-**圖 9-7**。 DDD 中層之間的相依性
+**圖 7-7**。 DDD 中層之間的相依性
 
 針對每一個微服務，此層應獨立設計。 如前文所述，您可以遵循 DDD 模式來實作最複雜的微服務，同時卻能以更簡單的方式實作更簡單的資料驅動微服務 (於單一層中的簡單 CRUD)。
 
 #### <a name="additional-resources"></a>其他資源
 
--   **DevIQ。持續性無知準則**
-    [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
+- **DevIQ。Persistence Ignorance principle** \ (持續性無知準則)
+  [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
 
--   **Oren Eini。基礎結構無知**
-    [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
+- **Oren Eini。Infrastructure Ignorance** \ (基礎結構無知)
+  [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez。網域導向設計中的分層架構**
-    [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
-
+- **Angel Lopez。Layered Architecture In Domain-Driven Design** \ (領域導向設計中的分層架構)
+  [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 >[!div class="step-by-step"]
-[上一頁](cqrs-microservice-reads.md)
-[下一頁](microservice-domain-model.md)
+>[上一頁](cqrs-microservice-reads.md)
+>[下一頁](microservice-domain-model.md)

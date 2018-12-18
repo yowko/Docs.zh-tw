@@ -1,15 +1,15 @@
 ---
 title: 微服務可定址性和服務登錄
-description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務可定址性和服務登錄
+description: 了解容器映像登錄在微服務架構中的角色。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: ec0617c5a5c1861f3596e12f3d7a7017a448239e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.date: 09/20/2018
+ms.openlocfilehash: 60afb2e06c0c9a37104a82a74de016da5c134a61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865563"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145841"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>微服務可定址性和服務登錄
 
@@ -17,22 +17,21 @@ ms.locfileid: "43865563"
 
 [服務登錄模式](https://microservices.io/patterns/service-registry.html)是服務探索的主要部分。 登錄是包含服務執行個體之網路位置的資料庫。 服務登錄必須高度可用且處於最新狀態。 用戶端可以快取從服務登錄取得的網路位置。 不過，該資訊最終會過期，此時用戶端將無法再探索服務執行個體。 因此，服務登錄是由伺服器叢集所組成，這些伺服器使用複寫通訊協定來維護一致性。
 
-在某些微服務部署環境中 (稱為叢集，本節稍後將會討論)，服務探索是內建的。 例如，在 Azure Container Service 環境中，Kubernetes 和 DC/OS 搭配 MarathonKubernetes 可以處理服務執行個體註冊和取消註冊。 它們也會在扮演伺服器端探索路由器角色的每部叢集主機上執行 Proxy。 另一個例子是 Azure Service Fabric，它也會透過現成的 Naming Service 來提供服務登錄。
+在某些微服務部署環境中 (稱為叢集，本節稍後將會討論)，服務探索是內建的。 例如，Azure Container Service with Kubernetes (AKS) 環境可以處理服務執行個體註冊和取消註冊。 它也會在扮演伺服器端探索路由器角色的每部叢集主機上執行 Proxy。 另一個例子是 Azure Service Fabric，它也會透過現成的 Naming Service 來提供服務登錄。
 
 請注意，服務登錄與 API 閘道模式之間一定會有重疊，因此也可協助解決此問題。 例如，[Service Fabric 反向 Proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) 是一種 API 閘道實作類型，該類型是以 Service Fabric 命名服務為基礎，並可協助將位址解析加以解析為內部服務。
 
 ## <a name="additional-resources"></a>其他資源
 
--   **Chris Richardson：模式：服務登錄**
-    *https://microservices.io/patterns/service-registry.html*
+- **Chris Richardson：Pattern: Service registry** \ (模式：服務登錄)
+  [*https://microservices.io/patterns/service-registry.html*](https://microservices.io/patterns/service-registry.html)
 
--   **Auth0：服務登錄**
-    [*https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/*](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
+- **Auth0：The Service Registry** \ (服務登錄)
+  [*https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/*](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
 
--   **Gabriel Schenker：服務探索**
-    [*https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/*](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
-
+- **Gabriel Schenker：Service discovery** \ (服務探索)
+  [*https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/*](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
 
 >[!div class="step-by-step"]
-[上一頁](maintain-microservice-apis.md)
-[下一頁](microservice-based-composite-ui-shape-layout.md)
+>[上一頁](maintain-microservice-apis.md)
+>[下一頁](microservice-based-composite-ui-shape-layout.md)

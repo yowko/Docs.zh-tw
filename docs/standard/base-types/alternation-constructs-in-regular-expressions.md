@@ -1,5 +1,6 @@
 ---
-title: 規則運算式中的替代建構
+title: .NET 規則運算式中的替代建構
+description: 了解如何在規則運算式中使用條件式比對的替代建構。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b653972fad71ce3a89c35598513b94f71fb4bf0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 6d9761d2e9904e865e7f6a17526327e1b04a1597
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839747"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142921"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>規則運算式中的替代建構
 <a name="top"></a> 交替建構會修改規則運算式來啟用二選一或條件式比對。 .NET 支援下列三種替代建構：  
@@ -43,7 +45,7 @@ ms.locfileid: "48839747"
   
  使用 `|` 字元的規則運算式 `\bgr(a|e)y\b`的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|從字緣開始。|  
 |`gr`|比對字元 "gr"。|  
@@ -57,7 +59,7 @@ ms.locfileid: "48839747"
   
  規則運算式 `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|從字緣開始。|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|比對下列其中一項：兩個十進位數字後接連字號再後接七個十進位數字，或是三個十進位數字、連字號、兩個十進位數字、另一個連字號及四個十進位數字。|  
@@ -87,7 +89,7 @@ ms.locfileid: "48839747"
   
  規則運算式模式 `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|從字緣開始。|  
 |`(?(\d{2}-)`|判斷接下來三個字元是否為兩個數字後接連字號。|  
@@ -118,7 +120,7 @@ ms.locfileid: "48839747"
   
  規則運算式模式 `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|從字緣開始。|  
 |`(?<n2>\d{2}-)?`|比對出現零次或一次且後接連字號的兩個數字。 將此擷取群組命名為 `n2`。|  

@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: b6c881a445f5848829ab5ccc6ce8547a390d89f3
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 96a004cc49773346eeb8f88e2ba99beebf8598bf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404615"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154199"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
@@ -219,7 +219,7 @@ public class LocalFileImageServiceGetImageBytesById
 
 對於 ASP.NET Core 應用程式，TestServer 類別可使功能測試很容易撰寫。 直接使用 WebHostBuilder 設定 TestServer (就像您平常設定應用程式一樣)，或使用 WebApplicationFactory 類型 (2.1 中有提供)。 您應該盡可能讓測試主機幾乎與生產主機完全一樣，如此一來，測試的執行行為會與應用程式實際在生產環境中的執行行為類似。 WebApplicationFactory 類別有助於設定 TestServer 的 ContentRoot，ASP.NET Core 用它來找到靜態資源 (如 Views)。
 
-建立簡單功能測試的方法是，建立實作 IClassFixture < WebApplicationFactory<TEntry>> 的測試類別，其中 TEntry 是 Web 應用程式的啟動類別。 準備好測試類別之後，測試固件可以使用處理站的 CreateClient 方法來建立用戶端：
+建立簡單功能測試的方法是，建立實作 IClassFixture\<WebApplicationFactory\<TEntry>> 的測試類別，其中 TEntry 是 Web 應用程式的啟動類別。 準備好測試類別之後，測試固件可以使用處理站的 CreateClient 方法來建立用戶端：
 
 ```cs
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
@@ -347,5 +347,5 @@ namespace FunctionalTests.WebRazorPages
 此功能測試將執行完整的 ASP.NET Core MVC / Razor Pages 應用程式堆疊，包括可能存在的所有中介軟體、篩選器、繫結器等等。 它會確認指定的路由 ("/") 會傳回預期的成功狀態碼和 HTML 輸出。 因並未設定真實的網頁伺服器，所以避免了使用真實的網頁伺服器進行測試之脆弱度 (例如防火牆設定的問題)。 針對 TestServer 執行的功能測試通常比整合與單元測試要慢，但比在網路上執行測試之網頁伺服器的測試要快得多。 您應該使用功能測試以確保應用程式的前端堆疊可如預期運作。 當您在控制器或頁面中找到重複項目並透過新增篩選器來處理這些項目時，這些測試會特別有用。 在理想情況下，這種重構並不會變更應用程式的行為，而一整套功能測試將驗證這種情況。
 
 >[!div class="step-by-step"]
-[上一頁](work-with-data-in-asp-net-core-apps.md)
-[下一頁](development-process-for-azure.md)
+>[上一頁](work-with-data-in-asp-net-core-apps.md)
+>[下一頁](development-process-for-azure.md)
