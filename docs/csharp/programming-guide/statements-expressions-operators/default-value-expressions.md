@@ -1,16 +1,17 @@
 ---
-title: 預設值運算式 (C# 程式設計指南)
+title: 預設值運算式- C# 程式設計指南
+ms.custom: seodec18
 description: 預設值運算式會為任何參考型別或實值型別產生預設值
 ms.date: 04/25/2018
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-ms.openlocfilehash: 94866f22fb3ad921a834cffb16fe17e44cef5965
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4b14714a55f77763425299ffc13ba579ead57810
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47192624"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237281"
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>預設值運算式 (C# 程式設計指南)
 

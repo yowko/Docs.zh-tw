@@ -1,19 +1,20 @@
 ---
-title: 如何：了解傳遞結構和傳遞類別參考給方法之間的差異 (C# 程式設計手冊)
+title: HOW TO：了解傳遞結構和傳遞類別參考給方法之間的差異 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], passing as method parameter
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 670dfad3b9fc22709a0ad7f8048a0468bce54a2e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c5963f45ee233f4413c4281a063c9c3d2a4c2a93
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45594720"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245450"
 ---
-# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>如何：了解傳遞結構和傳遞類別參考給方法之間的差異 (C# 程式設計手冊)
+# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>HOW TO：了解傳遞結構和傳遞類別參考給方法之間的差異 (C# 程式設計手冊)
 下例示範將 [struct](../../../csharp/language-reference/keywords/struct.md) 傳遞給方法，與將 [class](../../../csharp/language-reference/keywords/class.md) 執行個體傳遞給方法有何不同。 在此範例中，兩個引數 (struct 和 class 執行個體) 都是以傳值方式傳遞，而且兩種方法都會變更引數其中一個欄位的值。 不過，兩個方法的結果不相同，因為傳遞 struct 時所傳送內容，和傳遞 class 執行個體時所傳送的內容不同。  
   
  因為 struct 是[實值型別](../../../csharp/language-reference/keywords/value-types.md)，所以當您[以傳值方式傳遞 struct](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md) 給方法時，方法會收到 struct 引數的複本並在其上運作。 方法無法存取呼叫方法中的原始 struct，因此無法以任何方式變更它。 方法只能變更複本。  

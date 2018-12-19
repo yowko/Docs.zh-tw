@@ -1,5 +1,6 @@
 ---
-title: 預設值表 (C# 參考)
+title: 預設值表 - C# 參考
+ms.custom: seodec18
 description: 了解 C# 實值型別的預設值是什麼。
 ms.date: 08/23/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - variables [C#], value types
 - constructors [C#], default constructor
 - types [C#], default constructor return values
-ms.openlocfilehash: 184a9f42ddd3654a81aef0b7ce35e404de2d4bb9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 19e9e4f94ab573f2313c185a08192d89103b98fd
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43737979"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237034"
 ---
 # <a name="default-values-table-c-reference"></a>預設值表 (C# 參考)
 

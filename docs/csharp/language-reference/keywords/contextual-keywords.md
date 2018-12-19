@@ -1,20 +1,21 @@
 ---
-title: 內容關鍵字 (C# 參考)
+title: 內容關鍵字 - C# 參考
+ms.custom: seodec18
 ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 7b5f79f41306d6e4a8d2f1aa432ba6c2e0879f74
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3b8f9f124943d2092b65718f5dbf17831252a4a5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47232946"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241392"
 ---
 # <a name="contextual-keywords-c-reference"></a>內容關鍵字 (C# 參考)
 內容關鍵字可用來在程式碼中提供特定的意義，但它不是 C# 中的保留字。 本節介紹下列內容關鍵字︰  
   
-|關鍵字|描述|  
+|關鍵字|說明|  
 |-------------|-----------------|  
 |[add](../../../csharp/language-reference/keywords/add.md)|定義用戶端程式碼訂閱事件時所叫用的自訂事件存取子。|  
 |[async](../../../csharp/language-reference/keywords/async.md)|指出修改的方法、Lambda 運算式或匿名方法為非同步。|  

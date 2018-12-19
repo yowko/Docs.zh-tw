@@ -1,19 +1,20 @@
 ---
-title: 如何：建立列舉類型的新方法 (C# 程式設計手冊)
+title: HOW TO：建立列舉類型的新方法 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [C#]
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 3e153dbbe80ed850705ddaea4a9a3d5aba570fe0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f8495cd747cf895c4da34c216ba9285182890af1
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508943"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238725"
 ---
-# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>如何：建立列舉類型的新方法 (C# 程式設計手冊)
+# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>HOW TO：建立列舉類型的新方法 (C# 程式設計手冊)
 您可以使用擴充方法來新增專屬於特定列舉類型的功能。  
   
 ## <a name="example"></a>範例  

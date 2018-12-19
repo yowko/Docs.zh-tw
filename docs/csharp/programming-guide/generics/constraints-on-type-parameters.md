@@ -1,23 +1,24 @@
 ---
-title: 型別參數的條件約束 (C# 程式設計手冊)
+title: 型別參數的條件約束 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: daad986a1e62fe3b1d28fc25d3ebf6d2960d8b1d
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47232712"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244261"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型別參數的條件約束 (C# 程式設計手冊)
 
 條件約束會通知編譯器有關型別引數必須要有的功能。 如果沒有任何條件約束，則型別引數可以是任何型別。 編譯器只能採用 <xref:System.Object?displayPropety=nameWithType> 成員，這是任何 .NET 型別的最終基底類別。 如需詳細資訊，請參閱[為什麼使用條件約束](#why-use-constraints)。 如果用戶端程式碼嘗試使用條件約束不允許的類型來具現化類別，則結果是編譯時間錯誤。 條件約束是使用 `where` 內容關鍵字所指定。 下表列出七種類型的條件約束：
 
-|條件約束|描述|
+|條件約束|說明|
 |----------------|-----------------|
 |`where T : struct`|型別引數必須是實值型別。 您可以指定 <xref:System.Nullable%601> 以外的任何實值型別。 如需可為 Null 型別的詳細資訊，請參閱[可為 Null 的型別](../nullable-types/index.md)。|
 |`where T : class`|型別引數必須是參考型別。 此條件約束也適用於任何類別、介面、委派或陣列型別。|

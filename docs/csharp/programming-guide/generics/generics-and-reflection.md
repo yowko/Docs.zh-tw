@@ -1,16 +1,17 @@
 ---
-title: 泛型和反映 (C# 程式設計手冊)
+title: 泛型和反映 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 9bbf08161162c2d0776a066098e40b57a415da6d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 752c44bcd4ded82fb2144dca684482f30371b6aa
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187133"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244921"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>泛型和反映 (C# 程式設計手冊)
 由於 Common Language Runtime (CLR) 可在執行階段存取泛型型別資訊，因此您可以使用反映取得泛型型別的相關資訊，方法和取得非泛型型別的資訊相同。 如需詳細資訊，請參閱[執行階段中的泛型](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)。  
@@ -19,7 +20,7 @@ ms.locfileid: "44187133"
   
  如需泛型反映中所使用之規範的恆成立條件清單，請參閱 <xref:System.Type.IsGenericType%2A> 屬性備註。  
   
-|System.Type 成員名稱|描述|  
+|System.Type 成員名稱|說明|  
 |-----------------------------|-----------------|  
 |<xref:System.Type.IsGenericType%2A>|如果類型是泛型，則傳回 true。|  
 |<xref:System.Type.GetGenericArguments%2A>|傳回 `Type` 物件的陣列，代表提供給建構類型的型別引數，或泛型型別定義的型別參數。|  
@@ -35,7 +36,7 @@ ms.locfileid: "44187133"
   
  此外，<xref:System.Reflection.MethodInfo> 類別的成員會啟用泛型方法的執行階段資訊。 如需用來在泛型方法上反映之規範的恆成立條件清單，請參閱 <xref:System.Reflection.MethodBase.IsGenericMethod%2A> 屬性備註。  
   
-|System.Reflection.MemberInfo 成員名稱|描述|  
+|System.Reflection.MemberInfo 成員名稱|說明|  
 |----------------------------------------------|-----------------|  
 |<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|如果方法是泛型，則傳回 true。|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|傳回 Type 物件的陣列，這些物件代表所建構泛型方法的型別引數，或泛型方法定義的型別參數。|  

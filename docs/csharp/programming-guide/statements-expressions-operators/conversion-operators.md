@@ -1,5 +1,6 @@
 ---
-title: 轉換運算子 (C# 程式設計手冊)
+title: 轉換運算子 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, conversion operators
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: cbf6a83d43a1b3a69e82a35d5d0875f62422cd3f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a55a2148ce161deca79d8ba8e64a217e474f0284
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44183310"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236813"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>轉換運算子 (C# 程式設計手冊)
 C# 可讓程式設計人員宣告類別或結構轉換，使類別或結構能夠與其他類別、結構或基本類型相互轉換。 轉換的定義方式類似運算子，並會以轉換的目標類型命名。 在引數所要轉換的目標類型或轉換的結果類型中，必須有一個是包含類型，但不能兩者都是。  

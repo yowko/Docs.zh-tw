@@ -1,17 +1,18 @@
 ---
-title: 使用屬性 (C# 程式設計手冊)
+title: 使用屬性 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 50dda6a27081762a4e8b407ca5af94659b47da45
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dd5d85feb520e10a5d89cf91878d092695efb13a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515850"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243058"
 ---
 # <a name="using-properties-c-programming-guide"></a>使用屬性 (C# 程式設計手冊)
 屬性會合併欄位和方法的各個層面。 對物件的使用者而言，屬性會呈現為欄位，而存取屬性需要相同的語法。 對於類別的實作器而言，屬性是一或兩個程式碼區塊，代表 [get](../../../csharp/language-reference/keywords/get.md) 存取子和 (或) [set](../../../csharp/language-reference/keywords/set.md) 存取子。 讀取屬性時，會執行 `get` 存取子的程式碼區塊；指派屬性的新值時，會執行 `set` 存取子的程式碼區塊。 沒有 `set` 存取子的屬性會視為唯讀。 沒有 `get` 存取子的屬性則視為唯寫。 具有這兩個存取子的屬性是讀寫。  
@@ -20,7 +21,7 @@ ms.locfileid: "43515850"
   
  屬性有許多用途：它們可以先驗證資料，再允許變更；它們會以透明方式公開類別上的資料，而該資料實際是從某個其他來源 (例如資料庫) 所擷取；資料變更時 (例如，引發事件，或變更其他欄位的值)，它們可以採取動作。  
   
- 在類別區塊中宣告屬性的方式是指定欄位存取層級，其後依序接著屬性類型、屬性名稱，以及宣告 `get` 存取子和 (或) `set` 存取子的程式碼區塊。 例如:   
+ 在類別區塊中宣告屬性的方式是指定欄位存取層級，其後依序接著屬性類型、屬性名稱，以及宣告 `get` 存取子和 (或) `set` 存取子的程式碼區塊。 例如：  
   
  [!code-csharp[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
   
@@ -33,7 +34,7 @@ ms.locfileid: "43515850"
   
  [!code-csharp[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
   
- 當您參考指派目標以外的屬性時，會叫用 `get` 存取子來讀取屬性的值。 例如:   
+ 當您參考指派目標以外的屬性時，會叫用 `get` 存取子來讀取屬性的值。 例如：  
   
  [!code-csharp[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
   
@@ -54,7 +55,7 @@ ms.locfileid: "43515850"
   
  [!code-csharp[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_6.cs)]  
   
- 當您指派屬性的值時，會使用提供新值的引數來叫用 `set` 存取子。 例如:   
+ 當您指派屬性的值時，會使用提供新值的引數來叫用 `set` 存取子。 例如：  
   
  [!code-csharp[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
   

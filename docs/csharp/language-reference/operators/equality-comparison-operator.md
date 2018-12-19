@@ -1,5 +1,6 @@
 ---
-title: == 運算子 (C# 參考)
+title: == 運算子 - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ==_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - == operator [C#]
 - equality operator [C#]
 ms.assetid: 34c6b597-caa2-4855-a7cd-38ecdd11bd07
-ms.openlocfilehash: d9d7dcf3b38939e681fb51d6c674151cee78b3d0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c6f93be4d422fe42787e36f5b86e2cccbfc645b7
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43779155"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239010"
 ---
 # <a name="-operator-c-reference"></a>== 運算子 (C# 參考)
 對於預先定義的實值型別，等號比較運算子 (`==`) 在運算元相等時傳回 true；否則傳回 `false`。 對於 [string](../../../csharp/language-reference/keywords/string.md) 以外的參考型別，若兩個運算元參考到同一物件，`==` 會傳回 `true`。 對於 `string` 類型，`==` 會比較字串的值。  

@@ -1,17 +1,18 @@
 ---
-title: 如何：實作和呼叫自訂擴充方法 (C# 程式設計手冊)
+title: HOW TO：實作和呼叫自訂擴充方法 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 7a09fa34b88c024bdaa0197bf82471a6bd6c2ae8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9f1f7994043288f8896b48a3f12d1c7ee93c3661
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739229"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245544"
 ---
-# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>如何：實作和呼叫自訂擴充方法 (C# 程式設計手冊)
+# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>HOW TO：實作和呼叫自訂擴充方法 (C# 程式設計手冊)
 本主題示範如何針對任何 .NET 類型實作您自己的延伸模組方法。 用戶端程式碼可以使用您的擴充方法，方法是將參考新增至包含這些方法的 DLL，然後新增 [using](../../../csharp/language-reference/keywords/using-directive.md) 指示詞，以指定會在其中定義擴充方法的命名空間。  
   
 ## <a name="to-define-and-call-the-extension-method"></a>定義和呼叫擴充方法  

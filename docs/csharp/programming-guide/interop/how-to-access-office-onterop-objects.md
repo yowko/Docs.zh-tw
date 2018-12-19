@@ -1,5 +1,6 @@
 ---
-title: 如何：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
+title: HOW TO：使用 Visual C# 功能存取 Office Interop 物件 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 9d07f8e7b2f4c31af572829256065cf6aa3383bb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 803c3bd4099b838ddc71fea530565f26bd4142df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260213"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236566"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>如何：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>HOW TO：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
 Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名引數和選擇性引數、稱為 `dynamic` 的新類型，以及傳遞引數以像是實值參數的形式，參考 COM 方法中參數的能力。  
   
  在本主題中，您將使用新的功能撰寫可建立及顯示 Microsoft Office Excel 工作表的程式碼。 接著，您將要撰寫可加入 Office Word 文件的程式碼，而該文件包含連結至 Excel 工作表的圖示。  
@@ -49,7 +50,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
 1.  在方案總管中，於專案名稱上按一下滑鼠右鍵，然後按一下 [新增參考]。 [加入參考] 對話方塊隨即出現。  
   
-2.  在 [組件] 頁面的 [元件名稱] 清單中，選取 [Microsoft.Office.Interop.Word]，然後按住 CTRL 鍵並選取 [Microsoft.Office.Interop.Excel]。  如果看不到組件，則可能需要確定它們已安裝並已顯示 (請參閱[如何：安裝 Office 主要 Interop 組件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))。  
+2.  在 [組件] 頁面的 [元件名稱] 清單中，選取 [Microsoft.Office.Interop.Word]，然後按住 CTRL 鍵並選取 [Microsoft.Office.Interop.Excel]。  如果看不到組件，則可能需要確定組件已安裝及顯示 (請參閱[如何：安裝 Office 主要 Interop 組件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))  
   
 3.  按一下 [確定 **Deploying Office Solutions**]。  
   
@@ -137,7 +138,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
 ## <a name="to-set-the-embed-interop-types-property"></a>設定內嵌 Interop 類型屬性  
   
-1.  當您在執行階段呼叫不需要主要 Interop 組件 (PIA) 的 COM 類型時，可以使用其他增強功能。 移除與 PIA 的相依性，可達成版本獨立且更容易進行部署。 如需沒有 PIA 的程式設計優點的詳細資訊，請參閱[逐步解說：從 Managed 組件內嵌類型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。  
+1.  當您在執行階段呼叫不需要主要 Interop 組件 (PIA) 的 COM 類型時，可以使用其他增強功能。 移除與 PIA 的相依性，可達成版本獨立且更容易進行部署。 如需沒有 PIA 的程式設計優點詳細資訊，請參閱[逐步解說：從 Managed 組件內嵌類型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。  
   
      此外，程式設計會更為容易，因為 COM 方法所需和所傳回的類型可以使用類型 `dynamic` 而非 `Object` 加以呈現。 除非處於執行階段，否則不會評估類型為 `dynamic` 的變數，如此即無須明確轉型。 如需詳細資訊，請參閱[使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)。  
   

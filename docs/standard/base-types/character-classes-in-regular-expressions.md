@@ -1,5 +1,6 @@
 ---
-title: 規則運算式中的字元類別
+title: .NET 規則運算式中的字元類別
+description: 了解如何使用字元類別來代表 .NET 規則運算式中的一組字元。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b1a40c5c178f87bb5037ce356d345a2f3db997a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.custom: seodec18
+ms.openlocfilehash: c82d4aac75fb31ec7741338fde046daefc754394
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44180146"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131465"
 ---
 # <a name="character-classes-in-regular-expressions"></a>規則運算式中的字元類別
 <a name="Top"></a> 字元類別會定義一組字元，其中任何字元都可在輸入字串中出現，以便讓比對成功。 .NET 中的規則運算式語言支援下列字元類別：  
@@ -70,7 +72,7 @@ ms.locfileid: "44180146"
   
  下表列出一些包含正字元類別的常見規則運算式模式。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`[aeiou]`|比對所有母音。|  
 |`[\p{P}\d]`|比對所有標點符號和十進位數字字元。|  
@@ -83,7 +85,7 @@ ms.locfileid: "44180146"
   
  規則運算式 `gr[ae]y\s\S+?[\s|\p{P}]` 定義如下：  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`gr`|比對常值字元 "gr"。|  
 |`[ae]`|比對 "a" 或 "e"。|  
@@ -98,7 +100,7 @@ ms.locfileid: "44180146"
   
  規則運算式 `\b[A-Z]\w*\b` 的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|從字緣開始。|  
 |`[A-Z]`|比對從 A 到 Z 的任何大寫字元。|  
@@ -132,7 +134,7 @@ ms.locfileid: "44180146"
   
  下表列出一些包含負字元群組的常見規則運算式模式。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`[^aeiou]`|比對除了母音之外的所有字元。|  
 |`[^\p{P}\d]`|比對標點符號和十進位數字字元之外的所有字元。|  
@@ -144,7 +146,7 @@ ms.locfileid: "44180146"
   
  規則運算式 `\bth[^o]\w+\b` 的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|從字緣開始。|  
 |`th`|比對常值字元 "th"。|  
@@ -158,7 +160,7 @@ ms.locfileid: "44180146"
 ## <a name="any-character-"></a>任何字元：  
  句號字元 (.) 會比對 `\n` (新行字元 \u000A) 以外任何具有下列兩項資格的字元：  
   
--   如果 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項修改了規則運算式模式，或是 `.` 選項修改了模式中包含 `s` 字元類別的部分，`.` 就會符合任何字元。 如需詳細資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。  
+-   如果 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項修改了規則運算式模式，或是 `.` 選項修改了模式中包含 `s` 字元類別的部分，`.` 就會符合任何字元。 如需詳細資訊，請參閱 [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md)。  
   
      下列範例將示範 `.` 字元類別的預設行為與使用 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項的行為有何不同。 規則運算式 `^.+` 會從字串開頭開始，比對每一個字元。 根據預設，比對會在第一行結尾結束。規則運算式模式會比對歸位字元 `\r` 或 \u000D，但不會比對 `\n`。 由於 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項會將整個輸入字串解譯為單行，因此它會比對輸入字串中的每個字元，包括 `\n`。  
   
@@ -174,7 +176,7 @@ ms.locfileid: "44180146"
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  由於它會比對任何字元，因此如果規則運算式模式嘗試多次比對任何字元，`.` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+>  由於它會比對任何字元，因此如果規則運算式模式嘗試多次比對任何字元，`.` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  [回到頁首](#Top)  
   
@@ -195,7 +197,7 @@ ms.locfileid: "44180146"
   
  規則運算式 `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` 的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|從字緣開始。|  
 |`\p{IsGreek}+`|比對一個或多個希臘字元。|  
@@ -232,7 +234,7 @@ ms.locfileid: "44180146"
 ## <a name="word-character-w"></a>文字字元：\w  
  `\w` 會比對任何文字字元。 文字字元是下表中所列的任何 Unicode 分類的成員。  
   
-|分類|描述|  
+|分類|說明|  
 |--------------|-----------------|  
 |Ll|字母、小寫|  
 |Lu|字母、大寫|  
@@ -246,11 +248,11 @@ ms.locfileid: "44180146"
  如果指定了符合 ECMAScript 的行為，`\w` 就等於 `[a-zA-Z_0-9]`。 如需 ECMAScript 規則運算式的資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)中的＜ECMAScript 相符行為＞一節。  
   
 > [!NOTE]
->  由於它會比對任何文字字元，因此，如果規則運算式模式嘗試多次比對任何文字字元且後面接著特定文字字元，`\w` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+>  由於它會比對任何文字字元，因此，如果規則運算式模式嘗試多次比對任何文字字元且後面接著特定文字字元，`\w` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  下列範例會使用 `\w` 語言項目比對文字中重複的字元。 這個範例會定義規則運算式模式 `(\w)\1`，該模式解譯如下。  
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |(\w)|比對文字字元。 這是第一個擷取群組。|  
 |\1|比對第一個擷取的值。|  
@@ -270,7 +272,7 @@ ms.locfileid: "44180146"
   
  換句話說，它會比對下表所列 Unicode 分類中字元以外的所有字元。  
   
-|分類|描述|  
+|分類|說明|  
 |--------------|-----------------|  
 |Ll|字母、小寫|  
 |Lu|字母、大寫|  
@@ -284,11 +286,11 @@ ms.locfileid: "44180146"
  如果指定了符合 ECMAScript 的行為，`\W` 就等於 `[^a-zA-Z_0-9]`。 如需 ECMAScript 規則運算式的資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)中的＜ECMAScript 相符行為＞一節。  
   
 > [!NOTE]
->  由於它會比對任何非文字字元，因此，如果規則運算式模式嘗試多次比對任何非文字字元，且後面接著特定非文字字元，`\W` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+>  由於它會比對任何非文字字元，因此，如果規則運算式模式嘗試多次比對任何非文字字元，且後面接著特定非文字字元，`\W` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  以下範例將說明 `\W` 字元類別。  它會定義規則運算式模式 `\b(\w+)(\W){1,2}`，該模式會比對後面接一個或多個非文字字元的文字，例如空白字元或標點符號。 規則運算式的解譯方式如下表所示。  
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |\b|開始字緣比對。|  
 |(\w+)|比對一個或多個文字字元。 這是第一個擷取群組。|  
@@ -305,7 +307,7 @@ ms.locfileid: "44180146"
 ## <a name="white-space-character-s"></a>空白字元：\s  
  `\s` 會比對任何空白字元。 它相當於下表列出的逸出序列和 Unicode 分類。  
   
-|分類|描述|  
+|分類|說明|  
 |--------------|-----------------|  
 |`\f`|換頁字元 \u000C。|  
 |`\n`|新行字元 \u000A。|  
@@ -319,7 +321,7 @@ ms.locfileid: "44180146"
   
  以下範例將說明 `\s` 字元類別。 它會定義規則運算式模式 `\b\w+(e)?s(\s|$)`，該模式會比對結尾為 "s" 或 "es" 且後面加上空白字元或是輸入字串結尾的文字。 規則運算式的解譯方式如下表所示。  
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |\b|開始字緣比對。|  
 |\w+|比對一個或多個文字字元。|  
@@ -340,7 +342,7 @@ ms.locfileid: "44180146"
   
  下列範例將說明 `\S` 語言項目。 規則運算式模式 `\b(\S+)\s?` 會比對以空白字元分隔的字串。 在比對之 <xref:System.Text.RegularExpressions.GroupCollection> 物件中的第二個項目包含相符的字串。 規則運算式的解譯方式如下表所示。  
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`(\S+)`|比對一個或多個非空白字元。 這是第一個擷取群組。|  
@@ -359,7 +361,7 @@ ms.locfileid: "44180146"
   
  下列範例將說明 `\d` 語言項目。 它會測試輸入字串是否表示美國和加拿大的有效電話號碼。 規則運算式模式 `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` 的定義如下表所示。  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`^`|在輸入字串的開頭開始比對。|  
 |`\(?`|比對零個或一個常值 "(" 字元。|  
@@ -383,7 +385,7 @@ ms.locfileid: "44180146"
   
  下列範例將說明 \D 語言項目。 它會測試像是組件編號這類字串，是否由十進位和非十進位字元的適當組合所構成。 規則運算式模式 `^\D\d{1,5}\D*$` 的定義如下表所示。  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`^`|在輸入字串的開頭開始比對。|  
 |`\D`|比對非數字字元。|  
@@ -400,7 +402,7 @@ ms.locfileid: "44180146"
 ## <a name="supported-unicode-general-categories"></a>支援的 Unicode 一般分類  
  Unicode 定義了下表中所列的一般類別。 如需詳細資訊，請參閱 [Unicode Character Database](https://www.unicode.org/reports/tr44/) 中的 "UCD File Format" 和 "General Category Values" 副標題。  
   
-|分類|描述|  
+|分類|說明|  
 |--------------|-----------------|  
 |`Lu`|字母、大寫|  
 |`Ll`|字母、小寫|  
@@ -581,7 +583,7 @@ ms.locfileid: "44180146"
   
  下列範例會定義規則運算式 (`^[0-9-[2468]]+$`)，該運算式會比對輸入字串中的零和奇數數字。  規則運算式的解譯方式如下表所示。  
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |^|從輸入字串開頭開始比對。|  
 |`[0-9-[2468]]+`|比對 0 到 9 中不包括 2、4、6 和 8 的任何出現一次或多次的字元。 換句話說，就是比對出現一次或多次的零或奇數。|  

@@ -1,5 +1,5 @@
 ---
-title: 如何：為 Visual Studio 命令列設定環境變數
+title: HOW TO：為 Visual Studio 命令列設定環境變數
 ms.date: 09/29/2017
 f1_keywords:
 - cs.build.commandline
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 77375e428fe0563c0b533ca97abd21070e850682
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3563f668dfd4610e1c5cd7d7f8633943c654f193
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857845"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286438"
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>如何：為 Visual Studio 命令列設定環境變數
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>HOW TO：為 Visual Studio 命令列設定環境變數
 
-VsDevCmd.bat 檔案可設定適當的環境變數，以啟用命令列組建。 如需 VsDevCmd.bat 的詳細資訊，請參閱[知識庫文章 Q248802](https://support.microsoft.com/help/248802/you-receive-the-out-of-environment-space-error-message-when-you-execut)。  
+VsDevCmd.bat 檔案可設定適當的環境變數，以啟用命令列組建。
 
 > [!NOTE]
 > VsDevCmd.bat 檔是隨附於 Visual Studio 2017 的新檔案。 Visual Studio 2015 及更早的版本則使用 VSVARS32.bat 作為相同用途。 此檔案的儲存位置為 \Program Files\Microsoft Visual Studio\\*Version*\Common7\Tools or Program Files (x86)\Microsoft Visual Studio\\*Version*\Common7\Tools。
@@ -41,7 +41,14 @@ VsDevCmd.bat 檔案可設定適當的環境變數，以啟用命令列組建。 
   
     > [!CAUTION]
     >  在不同的電腦上，VsDevCmd.bat 檔案可能也不同。 請勿使用另一部電腦的 VsDevCmd.bat 來取代遺失或損毀的 VsDevCmd.bat 檔案。 請重新執行安裝程式以取代遺失的檔案。  
-  
+
+### <a name="available-options-for-vsdevcmdbat"></a>適用於 VsDevCmd.BAT 的可用選項
+
+若要查看適用於 VsDevCmd.BAT 的可用選項，請搭配 `-help` 選項執行命令：
+```console
+VsDevCmd.bat -help
+```
+
 ## <a name="see-also"></a>請參閱  
 
 - [使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

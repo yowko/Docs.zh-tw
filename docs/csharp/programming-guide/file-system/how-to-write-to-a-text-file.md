@@ -1,5 +1,6 @@
 ---
-title: 如何：寫入文字檔 (C# 程式設計手冊)
+title: HOW TO：寫入文字檔 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - TextWriter.WriteLine
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: ca08651bfce1a92f65a3e6fec7da3411a22bffb2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e753f10acd33234d7f5e0c1a4203125ab880e2ae
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43780070"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237138"
 ---
-# <a name="how-to-write-to-a-text-file-c-programming-guide"></a>如何：寫入文字檔 (C# 程式設計手冊)
+# <a name="how-to-write-to-a-text-file-c-programming-guide"></a>HOW TO：寫入文字檔 (C# 程式設計手冊)
 在下列這些範例中，會示範幾個將文字寫入檔案的方法。 前兩個範例會在 <xref:System.IO.File?displayProperty=nameWithType> 類別上使用靜態便利方法，將任何 `IEnumerable<string>` 和字串的每個項目和字串寫入文字檔。 範例 3 中會示範寫入檔案時，如何在需要分別處理每一行時，將文字加入至檔案。 範例 1-3 會覆寫檔案中所有現有的內容，但是範例 4 將示範如何將文字附加至現有的檔案。  
   
  這些範例全都會將字串常值寫入至檔案。 如果您想要格式化寫入檔案的文字，請使用 <xref:System.String.Format%2A> 方法或 C# [字串內插補點](../../../csharp/language-reference/tokens/interpolated.md)功能。  

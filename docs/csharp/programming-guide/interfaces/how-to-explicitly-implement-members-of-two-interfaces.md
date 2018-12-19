@@ -1,18 +1,19 @@
 ---
-title: 如何：明確實作兩個介面的成員 (C# 程式設計手冊)
+title: HOW TO：明確實作兩個介面的成員 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [C#], explicitly implementing interface members
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
-ms.openlocfilehash: 6c02585b57acef654c6613bef1a276a433763af6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3e03e80279db8c36cb975715f390ff6899d593cb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514669"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238321"
 ---
-# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>如何：明確實作兩個介面的成員 (C# 程式設計手冊)
+# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>HOW TO：明確實作兩個介面的成員 (C# 程式設計指南)
 明確的[介面](../../../csharp/language-reference/keywords/interface.md)實作也可讓程式設計人員實作具有相同成員名稱的兩個介面，並提供每個介面成員不同的實作。 此範例會顯示方塊尺寸的計量和英制單位。 Box [類別](../../../csharp/language-reference/keywords/class.md)實作 IEnglishDimensions 和 IMetricDimensions 兩個介面，代表不同的量值系統。 這兩個介面具有相同的成員名稱，Length 和 Width。  
   
 ## <a name="example"></a>範例  

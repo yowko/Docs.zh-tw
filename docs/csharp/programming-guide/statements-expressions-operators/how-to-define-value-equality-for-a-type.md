@@ -1,5 +1,6 @@
 ---
-title: 如何：定義類型的實值相等 (C# 程式設計手冊)
+title: HOW TO：定義類型的實值相等 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 8abcace9c648ba2132d2b6849ae1c9d347d6fd29
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a2d71994647e50afc8d343725e639b6e9d24831f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126779"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244423"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>如何：定義類型的實值相等 (C# 程式設計手冊)
+# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>HOW TO：定義類型的實值相等 (C# 程式設計指南)
 當您定義類別或結構時，需判斷是否有必要為類型建立實值相等 (或等價) 的自訂定義。 通常，當該類型的物件必須新增至某種集合，或物件的主要目的是為了儲存一組欄位或屬性時，就會實作實值相等。 您可以根據對該類型中所有欄位和屬性的比較來定義實值相等，也可以根據子集來進行定義。 不論使用哪種方法，在類別和結構中，您的實作都必須遵循下列五項等價保證：  
   
 1.  `x.Equals(x)` 會傳回 `true`。 這稱為自反屬性。  
@@ -36,11 +37,11 @@ ms.locfileid: "53126779"
   
 2.  透過提供類型專屬的 `Equals` 方法實作 <xref:System.IEquatable%601?displayProperty=nameWithType> 介面。 實際的等價比較是在這裡執行。 例如，您可能決定只比較類型中的一個或兩個欄位，以定義相等。 不會從 `Equals` 擲回例外狀況。 僅適用於類別：此方法只會檢查在類別中宣告的欄位。 它應該呼叫 `base.Equals` 以檢查基底類別中的欄位 (如果類型直接繼承自 <xref:System.Object>，請不要這樣做，因為 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 的 <xref:System.Object> 實作會執行參考相等檢查。)  
   
-3.  選用但為建議動作︰多載 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 和 [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 運算子。  
+3.  選擇性但建議使用：將 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 和 [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 運算子多載。  
   
 4.  覆寫 <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>，以便有實值相等的兩個物件產生相同的雜湊碼。  
   
-5.  選用︰若要支援「大於」或「小於」的定義，請為類型實作 <xref:System.IComparable%601> 介面，並同時多載 [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) 和 [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) 運算子。  
+5.  選擇項：若要支援「大於」或「小於」的定義，請為類型實作 <xref:System.IComparable%601> 介面，並同時多載 [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) 和 [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) 運算子。  
   
  接下來的第一個範例示範類別實作。 第二個範例示範結構實作。  
   

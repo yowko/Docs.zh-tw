@@ -1,23 +1,24 @@
 ---
-title: 成員 (C# 程式設計手冊)
+title: 成員 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: dbfd0c48dc59b094af49e65d2ed4fcd4e2a70ff0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e8429df6ef633f11df50ee5526496f9688f845ea
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087551"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245099"
 ---
 # <a name="members-c-programming-guide"></a>成員 (C# 程式設計手冊)
 類別和結構的成員可表示其資料與行為。 類別的成員包含在所有類別中宣告的成員，以及在其繼承階層架構之所有類別中宣告的所有成員 (建構函式和完成項除外)。 基底類別中的私用成員可繼承衍生類別，但卻無法從衍生類別進行存取。  
   
  下表列出類別或結構可以包含的成員類型：  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |[欄位](../../../csharp/programming-guide/classes-and-structs/fields.md)|欄位是在類別範圍中宣告的變數。 欄位可以是內建的數字類型或其他類別的執行個體。 例如，行事曆類別可能包含目前日期的欄位。|  
 |[常數](../../../csharp/programming-guide/classes-and-structs/constants.md)|常數是欄位或屬性，其值於編譯時期設定且無法變更。|  

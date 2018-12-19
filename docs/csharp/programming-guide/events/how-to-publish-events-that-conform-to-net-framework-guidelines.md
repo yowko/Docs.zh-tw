@@ -1,17 +1,18 @@
 ---
-title: 如何：發行符合 .NET Framework 方針的事件 (C# 程式設計手冊)
+title: HOW TO：發行符合 .NET Framework 方針的事件 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 9a17aaec20b03325abadfcc168f7ac4653f300df
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8269c976f161ba6ae11bee8cbef44b2f7c878e61
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030589"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242889"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>如何：發行符合 .NET Framework 方針的事件 (C# 程式設計手冊)
+# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>HOW TO：發行符合 .NET Framework 方針的事件 (C# 程式設計手冊)
 下列程序示範如何將遵循標準 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 模式的事件，新增至您的類別和結構。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Class Library 中的所有事件都是以定義如下的 <xref:System.EventHandler> 委派為基礎：  
   
 ```csharp  

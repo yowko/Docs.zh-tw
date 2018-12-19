@@ -1,17 +1,18 @@
 ---
-title: 如何：在結構之間實作使用者定義的轉換 (C# 程式設計手冊)
+title: HOW TO：在結構之間實作使用者定義的轉換 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
-ms.openlocfilehash: cff85d60c1b59f4d1ca028f8fc02fee5728fa3d6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 85345203982679c0ab8dc9a6ae899312204c3230
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46696648"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241570"
 ---
-# <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>如何：在結構之間實作使用者定義的轉換 (C# 程式設計手冊)
+# <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>HOW TO：在結構之間實作使用者定義的轉換 (C# 程式設計指南)
 這個範例會定義兩個結構 `RomanNumeral` 和 `BinaryNumeral`，並示範它們的轉換。  
   
 ## <a name="example"></a>範例  

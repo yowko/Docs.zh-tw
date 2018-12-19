@@ -1,16 +1,17 @@
 ---
-title: 處理 XML 檔案 (C# 程式設計手冊)
+title: 處理 XML 檔案 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 1cc5925f33c2d06054e7a88c6c6f90ef026f4dee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b5699535553629fb22e4e5789538fd9d598c9f88
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506024"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235081"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>處理 XML 檔案 (C# 程式設計手冊)
 編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 (如需如何標記程式碼的相關資訊，請參閱[建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md))。識別碼字串可唯一識別此建構。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應該識別碼且適用於該文件的 .NET Framework 中繼資料/反映項目。  
@@ -23,7 +24,7 @@ ms.locfileid: "43506024"
   
 -   識別碼字串的第一個部分會識別所識別的成員類型，格式為單一字元後面接著一個冒號。 使用的成員類型如下：  
   
-    |字元|描述|  
+    |字元|說明|  
     |---------------|-----------------|  
     |N|namespace<br /><br /> 您無法將文件註解新增至命名空間，但可讓 cref 參考它們 (如果支援)。|  
     |T|型別︰類別、介面、建構、列舉、委派|  
@@ -69,7 +70,7 @@ ms.locfileid: "43506024"
   
 -   僅針對轉換運算子 (op_Implicit 和 op_Explicit)，此方法的傳回值會編碼為 ' ~'，後面接著傳回類型，如上述編碼所示。  
   
--   針對泛型類型，類型的名稱後面會接著反引號，然後是表示泛型類型參數數目的數字。 例如: 
+-   針對泛型類型，類型的名稱後面會接著反引號，然後是表示泛型類型參數數目的數字。 例如：
   
      ``<member name="T:SampleClass`2">`` 是類型的標籤，定義為 `public class SampleClass<T, U>`。  
   

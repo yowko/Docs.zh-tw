@@ -1,17 +1,18 @@
 ---
-title: 如何：使用 foreach 存取命令列引數 (C# 程式設計手冊)
+title: HOW TO：使用 foreach 存取命令列引數 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 89c3e335-3f5b-4e24-8c5a-b8036561fe8a
-ms.openlocfilehash: 811ee09aec7afac70f3f2c2fe5fb002232935028
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79c798bb6ec16fc639d37defc40da5af770e5bba
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511332"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242428"
 ---
-# <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>如何：使用 foreach 存取命令列引數 (C# 程式設計手冊)
+# <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>HOW TO：使用 foreach 存取命令列引數 (C# 程式設計指南)
 逐一查看陣列的另一種方法是使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式，如本例所示。 `foreach` 陳述式可用來逐一查看陣列、.NET Framework 集合類別，或實作 <xref:System.Collections.IEnumerable> 介面的任何類別或結構。  
   
 > [!NOTE]

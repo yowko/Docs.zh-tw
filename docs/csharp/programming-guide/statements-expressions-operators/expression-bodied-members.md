@@ -1,17 +1,18 @@
 ---
-title: 運算式主體成員 (C# 程式設計手冊)
+title: 運算式主體成員 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e58afadae78d3f6b15a8e859edc8d554d84c393
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 36f71352dca584c107af4f45850ce21bb016ba01
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911902"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238113"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>運算式主體成員 (C# 程式設計手冊)
 運算式主體定義可讓您以極為簡潔且可讀的形式提供成員的實作。 只要任何所支援成員 (例如方法或屬性) 的邏輯包含單一運算式，就可以使用運算式主體定義。 運算式主體定義的一般語法如下︰

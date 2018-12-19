@@ -1,5 +1,6 @@
 ---
-title: char 關鍵字 (C# 參考)
+title: char 關鍵字 - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - char
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 4d4e4719eabf7dbe31a59cc2e1e3d3d9019f080d
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 6acb40117c4f59deb084965cb3db9e4a96f7f61a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43742022"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242343"
 ---
 # <a name="char-c-reference"></a>char (C# 參考)
 

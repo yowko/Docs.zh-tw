@@ -1,16 +1,17 @@
 ---
-title: 一維陣列 (C# 程式設計手冊)
+title: 一維陣列 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: e9243ff8b55970ebab6ecbe42cb3ed8ebcaecfe3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027124"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238568"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>一維陣列 (C# 程式設計手冊)
 
@@ -20,7 +21,7 @@ ms.locfileid: "48027124"
   
  這個陣列包含從 `array[0]` 到 `array[4]` 的項目。 [new](../../../csharp/language-reference/keywords/new.md) 運算子是用來建立陣列，並將陣列元素初始化為其預設值。 在此範例中，所有陣列元素都會初始化為零。  
   
- 儲存字串項目的陣列可以使用相同的方式進行宣告。 例如:   
+ 儲存字串項目的陣列可以使用相同的方式進行宣告。 例如：  
   
  [!code-csharp[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
   
@@ -38,7 +39,7 @@ ms.locfileid: "48027124"
   
  [!code-csharp[csProgGuideArrays#8](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_5.cs)]  
   
- 您可以在不進行初始化的情況下宣告陣列變數，但必須在將陣列指派給變數時使用 `new` 運算子。 例如:   
+ 您可以在不進行初始化的情況下宣告陣列變數，但必須在將陣列指派給變數時使用 `new` 運算子。 例如：  
   
  [!code-csharp[csProgGuideArrays#9](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_6.cs)]  
   

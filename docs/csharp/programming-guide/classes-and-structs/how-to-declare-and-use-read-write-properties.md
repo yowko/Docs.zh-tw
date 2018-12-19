@@ -1,5 +1,6 @@
 ---
-title: 如何：宣告及使用讀寫屬性 (C# 程式設計指南)
+title: HOW TO：宣告及使用讀寫屬性 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - get accessor [C#], declaring properties
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 77db2841d6ef9af21d38736f39e6041699ca13d5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 348fcf6605030396095a2d94970ffe46e8d19357
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44180252"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241836"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>如何：宣告及使用讀寫屬性 (C# 程式設計指南)
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>HOW TO：宣告及使用讀寫屬性 (C# 程式設計指南)
 屬性會提供公用資料成員的便利性，卻沒有不受保護、控制和驗證存取物件資料所附帶的風險。 這是透過「存取子」完成的：從基礎資料成員指派和擷取值的特殊方法。 [set](../../../csharp/language-reference/keywords/set.md) 存取子可讓資料成員被指派，而 [get](../../../csharp/language-reference/keywords/get.md) 存取子可擷取資料成員值。  
   
  這個範例會示範有兩個屬性的 `Person` 類別：`Name` (字串) 和 `Age` (整數)。 這兩個屬性都提供 `get` 和 `set` 存取子，所以它們被視為讀取/寫入屬性。  

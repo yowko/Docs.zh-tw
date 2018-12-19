@@ -1,5 +1,6 @@
 ---
-title: event (C# 參考)
+title: event - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - event
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 35a42692bc87da63c69d7ccbce1b49396a84f5a2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: a0729324131c5b3d5c49618c715fc4081af40964
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259697"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240524"
 ---
 # <a name="event-c-reference"></a>event (C# 參考)
 `event` 關鍵字用來在發行者類別中宣告事件。  
@@ -31,7 +32,7 @@ ms.locfileid: "44259697"
 ## <a name="keywords-and-events"></a>關鍵字和事件  
  下列關鍵字適用於事件。  
   
-|關鍵字|描述|如需詳細資訊|  
+|關鍵字|說明|如需詳細資訊|  
 |-------------|-----------------|--------------------------|  
 |[static](../../../csharp/language-reference/keywords/static.md)|隨時向呼叫端提供事件，即使沒有任何類別執行個體存在。|[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|允許衍生類別使用 [override](../../../csharp/language-reference/keywords/override.md) 關鍵字覆寫事件行為。|[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)|  

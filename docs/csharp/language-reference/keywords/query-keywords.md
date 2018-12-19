@@ -1,16 +1,17 @@
 ---
-title: 查詢關鍵字 (C# 參考)
+title: 查詢關鍵字 - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 9ec163e1de018bd87348a5b39a1f34654d7d6d84
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: e5010c7e9f3550c79c86c6cab4579a0fb15eef10
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028728"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239481"
 ---
 # <a name="query-keywords-c-reference"></a>查詢關鍵字 (C# 參考)
 
@@ -18,7 +19,7 @@ ms.locfileid: "48028728"
 
 ## <a name="in-this-section"></a>本節內容
 
-|子句|描述|
+|子句|說明|
 |------------|-----------------|
 |[from](from-clause.md)|指定資料來源和範圍變數 (與反覆運算變數類似)。|
 |[where](where-clause.md)|根據以邏輯 AND 和 OR 運算子區隔的一或多個布林運算式，以篩選來源項目 (`&&` 或 <code>&#124;&#124;</code>)。|

@@ -1,5 +1,6 @@
 ---
-title: Boxing 和 Unboxing (C# 程式設計手冊)
+title: Boxing 和 Unboxing - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.boxing
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: ded8840231c4860d538eeb8c24d1472c60426087
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 4fdaea6a9b69f50fa61ee40a43bf34953e72cef1
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084817"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237326"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing 和 Unboxing (C# 程式設計手冊)
 Boxing 是將[實值型別](../../../csharp/language-reference/keywords/value-types.md)轉換為 `object` 類型或是由這個實值型別實作之任何介面類型的程序。 當 CLR Box 處理實值類型時，它會將值包裝在 System.Object 內，並儲存到 Managed 堆積上。 Unbox 處理則會從物件中擷取實值類型。 Boxing 是隱含處理，unboxing 則是明確處理。 Boxing 和 unboxing 的概念是 C# 類型系統統一檢視的基礎，其中任何類型的值都可視為物件。  
@@ -54,7 +55,7 @@ Boxing 轉換
   
  [!code-csharp[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_6.cs)]  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>說明  
  這個範例會使用 Boxing 將整數變數 `i` 轉換為物件 `o`。 接著，儲存在變數 `i` 中的值就會從 `123` 變更為 `456`。 這個範例顯示，原始實值類型以及經過 Box 處理的物件分別使用不同的記憶體位置，因此可以儲存不同的值。  
   
 ## <a name="example"></a>範例  

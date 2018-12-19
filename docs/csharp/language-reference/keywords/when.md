@@ -1,5 +1,6 @@
 ---
-title: when (C# 參考)
+title: when - C# 參考
+ms.custom: seodec18
 ms.date: 03/07/2017
 f1_keywords:
 - when_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: ab533bc6b8bcff54774d849510c66ec3436ad3b5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 103309b5e5a121647576ce120f4353b4ceef08c4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146942"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235523"
 ---
  # <a name="when-c-reference"></a>when (C# 參考)
 

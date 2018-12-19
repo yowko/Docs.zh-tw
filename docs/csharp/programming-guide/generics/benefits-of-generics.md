@@ -1,15 +1,16 @@
 ---
-title: 泛型的優點 (C# 程式設計手冊)
+title: 泛型的優點 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: 2770f8bc7fc4242beb02bf9e0555b5cbb8db0180
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f97d3ce7a67638719d02c31879c00679405118bc
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503790"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245008"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>泛型的優點 (C# 程式設計手冊)
 泛型提供舊版 Common Language Runtime 限制的解決方案，以及透過在通用基底類型 <xref:System.Object> 間來回轉換達成一般化的 C# 語言。 您可以藉由建立泛型類別，在編譯時期建立類型安全的集合。  

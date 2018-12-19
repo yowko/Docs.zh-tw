@@ -1,5 +1,6 @@
 ---
-title: 在規則運算式中執行字元逸出
+title: .NET 規則運算式中的字元逸出
+description: 了解 .NET 規則運算式中的特殊字元和逸出字元。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837163"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152356"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>在規則運算式中執行字元逸出
 規則運算式中的反斜線 (\\) 表示下列其中之一：  
@@ -36,7 +38,7 @@ ms.locfileid: "48837163"
 ## <a name="character-escapes-in-net"></a>.NET 中的逸出字元  
  下表列出 .NET 中的規則運算式所支援的逸出字元。  
   
-|字元或序列|描述|  
+|字元或序列|說明|  
 |---------------------------|-----------------|  
 |下列字元以外的所有字元：<br /><br /> 。 $ ^ { [ ( &#124; ) * + ? \ |不同於列在 [字元或序列] 資料行中的其他字元在規則運算式中沒有任何特殊的意義；它們符合其本身。<br /><br /> [字元或序列] 資料行中所包含的字元是規則運算式的特殊語言項目。 若要在規則運算式中進行比對，它們必須逸出或包含在[正字元群組](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，規則運算式 `\$\d+` 或 `[$]\d+` 符合「$1200」。|  
 |`\a`|符合警鈴 (警示) 字元 `\u0007`。|  
@@ -61,7 +63,7 @@ ms.locfileid: "48837163"
   
  規則運算式 `\G(.+)[\t|\u007c](.+)\r?\n` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\G`|從最後比對結束之處開始比對。|  
 |`(.+)`|一或多次比對任何字元。 這是第一個擷取群組。|  

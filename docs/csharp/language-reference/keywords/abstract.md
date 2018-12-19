@@ -1,5 +1,6 @@
 ---
-title: abstract (C# 參考)
+title: abstract - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - abstract
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: d0a51afe61e75b750ed8bf336ca4636cb58dfbba
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 43497d3680917917894f1d904852d787fce0888c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45742241"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240446"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# 參考)
 `abstract` 修飾詞表示要修改的項目具有遺失或不完整的實作。 抽象修飾詞可以與類別、方法、屬性、索引子和事件搭配使用。 在類別宣告中使用 `abstract` 修飾詞，來表示某一類別只是要作為其他類別的基底類別。 標記為抽象或包括在抽象類別中的成員，必須由衍生自抽象類別的類別所實作。  
@@ -40,7 +41,7 @@ ms.locfileid: "45742241"
   
 -   只有在抽象類別中才允許抽象方法宣告。  
   
--   因為抽象方法宣告未提供實際實作，所以沒有方法主體；方法宣告的結尾就是分號，而且簽章後面沒有大括號 ({ })。 例如:   
+-   因為抽象方法宣告未提供實際實作，所以沒有方法主體；方法宣告的結尾就是分號，而且簽章後面沒有大括號 ({ })。 例如：  
   
     ```csharp  
     public abstract void MyMethod();  
@@ -60,7 +61,7 @@ ms.locfileid: "45742241"
   
  抽象類別必須提供所有介面成員的實作。  
   
- 實作介面的抽象類別可能會將介面方法對應至抽象方法。 例如:   
+ 實作介面的抽象類別可能會將介面方法對應至抽象方法。 例如：  
   
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   

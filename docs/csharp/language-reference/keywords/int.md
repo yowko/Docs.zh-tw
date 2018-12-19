@@ -1,5 +1,6 @@
 ---
-title: int (C# 參考)
+title: int - C# 參考
+ms.custom: seodec18
 ms.date: 03/14/2017
 f1_keywords:
 - int_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-ms.openlocfilehash: 95ac267bc70d2e7873593c08e0b10cb50fefd8c8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3436d2ceeec9eed80f346c28231ba376cf6d5fb6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524040"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243812"
 ---
 # <a name="int-c-reference"></a>int (C# 參考)
 
@@ -51,7 +52,7 @@ ms.locfileid: "43524040"
 在上述範例中，常值 90946 為 `int` 類型。
   
 ## <a name="conversions"></a>轉換  
- 有一項從 `int` 轉換為 [long](../../../csharp/language-reference/keywords/long.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 之預先定義的隱含轉換。 例如:   
+ 有一項從 `int` 轉換為 [long](../../../csharp/language-reference/keywords/long.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 之預先定義的隱含轉換。 例如：  
   
 ```csharp  
 // '123' is an int, so an implicit conversion takes place here:  
@@ -76,7 +77,8 @@ int y = (int)3.0;    // OK: explicit conversion.
  如需混合浮點類型和整數型別之算術運算式的詳細資訊，請參閱 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[整數型別](~/_csharplang/spec/types.md#integral-types)。 語言規格是 C# 語法及用法的限定來源。
   
 ## <a name="see-also"></a>請參閱
 

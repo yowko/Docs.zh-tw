@@ -1,17 +1,18 @@
 ---
-title: where (泛型類型條件約束) (C# 參考)
+title: where (泛型類型條件約束) - C# 參考
+ms.custom: seodec18
 ms.date: 04/12/2018
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 34246824fb8ff28e47ea424c78eca38e999a30b6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8d6c1fba87ef1c4344bd150b2af2f5d1ad019695
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500820"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235709"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (泛型類型條件約束) (C# 參考)
 

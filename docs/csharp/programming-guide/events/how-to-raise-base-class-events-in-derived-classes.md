@@ -1,17 +1,18 @@
 ---
-title: 如何：在衍生類別中引發基底類別事件 (C# 程式設計手冊)
+title: HOW TO：在衍生類別中引發基底類別事件 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: 51bc6621d49bbb16313c900a92b539c30eb61ff0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 11f34e230a1f953ba3d886e416f1ece4253e3c8d
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525195"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239614"
 ---
-# <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>如何：在衍生類別中引發基底類別事件 (C# 程式設計手冊)
+# <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>HOW TO：在衍生類別中引發基底類別事件 (C# 程式設計手冊)
 下列簡單的範例示範在基底類別中宣告事件的標準方式，讓事件也可以從衍生類別引發。 這個模式會在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 類別庫的 Windows Forms 類別中廣泛使用。  
   
  當您建立可作為其他類別之基底類別的類別時，您應該考慮到事件其實是一種特殊的委派類型，只能在宣告事件的類別內予以叫用。 衍生類別無法直接叫用在基底類別內宣告的事件。 雖然有時您可能需要只能由基底類別引發的事件，但大多時候，您應該啟用衍生類別來叫用基底類別事件。 若要這樣做，您可以在包裝事件的基底類別中建立受保護的叫用方法。 藉由呼叫或覆寫這個叫用方法，衍生類別便能夠間接叫用該事件。  

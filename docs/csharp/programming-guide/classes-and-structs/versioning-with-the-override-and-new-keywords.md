@@ -1,16 +1,17 @@
 ---
-title: 使用 Override 和 New 關鍵字進行版本控制 (C# 程式設計手冊)
+title: 使用 Override 和 New 關鍵字進行版本控制 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 5dfed1c4a7e68bbe112a136260bf95ba0826392d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ddb34fd32d13224faed92bd8ba01933ca19c04a9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178373"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241531"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>使用 Override 和 New 關鍵字進行版本控制 (C# 程式設計手冊)
 C# 語言的設計，就是讓不同文件庫的[基底](../../../csharp/language-reference/keywords/base.md)和衍生類別的版本控制能夠發展兼具回溯相容性。 例如，這表示 C# 完全支援在基底[類別](../../../csharp/language-reference/keywords/class.md)中引入與衍生類別成員同名的新成員，不會導致非預期的行為。 這也表示，類別必須明確指出方法是打算覆寫繼承的方法，還是方法是一種新方法，會隱藏名稱相似的繼承方法。  
@@ -68,11 +69,11 @@ C# 語言的設計，就是讓不同文件庫的[基底](../../../csharp/languag
   
  [!code-csharp[csProgGuideInheritance#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_7.cs)]  
   
- 在 `Derived` 的執行個體上呼叫 `DoWork` 時，C# 編譯器會先嘗試進行與 `DoWork` 版本相容的呼叫，此版本原是在 `Derived` 上宣告。 覆寫方法不視為在類別中宣告，它們是基底類別中所宣告方法的新實作。 只有當 C# 編譯器無法比對方法呼叫和 `Derived` 中的原始方法時，才會嘗試比對具有相同名稱和相容參數的覆寫方法呼叫。 例如:   
+ 在 `Derived` 的執行個體上呼叫 `DoWork` 時，C# 編譯器會先嘗試進行與 `DoWork` 版本相容的呼叫，此版本原是在 `Derived` 上宣告。 覆寫方法不視為在類別中宣告，它們是基底類別中所宣告方法的新實作。 只有當 C# 編譯器無法比對方法呼叫和 `Derived` 中的原始方法時，才會嘗試比對具有相同名稱和相容參數的覆寫方法呼叫。 例如：  
   
  [!code-csharp[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_8.cs)]  
   
- 因為變數 `val` 可以隱含方式轉換為 double，所以 C# 編譯器會呼叫 `DoWork(double)`，不是呼叫 `DoWork(int)`。 有兩種方式可避免這種情況。 首先，避免使用和虛擬方法相同的名稱宣告新方法。 第二，您可以將 `Derived` 執行個體轉換成 `Base`，讓 C# 編譯器搜尋基底類別方法清單，指示它呼叫虛擬方法。 因為方法是虛擬的，所以會在 `Derived` 呼叫 `DoWork(int)` 實作。 例如:   
+ 因為變數 `val` 可以隱含方式轉換為 double，所以 C# 編譯器會呼叫 `DoWork(double)`，不是呼叫 `DoWork(int)`。 有兩種方式可避免這種情況。 首先，避免使用和虛擬方法相同的名稱宣告新方法。 第二，您可以將 `Derived` 執行個體轉換成 `Base`，讓 C# 編譯器搜尋基底類別方法清單，指示它呼叫虛擬方法。 因為方法是虛擬的，所以會在 `Derived` 呼叫 `DoWork(int)` 實作。 例如：  
   
  [!code-csharp[csProgGuideInheritance#34](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_9.cs)]  
   

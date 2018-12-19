@@ -1,16 +1,17 @@
 ---
-title: 隱含類型區域變數 (C# 程式設計手冊)
+title: 隱含類型區域變數 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 2e678886162196c3a0fe4762bf766596cdc02225
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 68c0ff055c91f4f1deca6fcfada0f14577439731
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501399"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237008"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隱含類型區域變數 (C# 程式設計手冊)
 您可以宣告區域變數而不提供明確類型。 `var` 關鍵字會指示編譯器從初始化陳述式右側的運算式推斷變數的類型。 推斷類型可能是內建類型、匿名型別、使用者定義型別，或 .NET Framework 類別庫中定義的類型。 如需如何使用 `var` 初始化陣列的詳細資訊，請參閱[隱含型別陣列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
@@ -43,7 +44,7 @@ ms.locfileid: "43501399"
     using (var file = new StreamReader("C:\\myfile.txt")) {...}  
     ```  
   
- 如需詳細資訊，請參閱[如何：在查詢運算式中使用隱含型別區域變數和陣列](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。  
+ 如需詳細資訊，請參閱[＜How to：在查詢運算式中使用隱含型別區域變數和陣列](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。  
   
 ## <a name="var-and-anonymous-types"></a>var 和匿名型別  
  在許多情況下，使用 `var` 是選擇性的，只是為了在語法上便於使用。 不過，當變數以匿名型別初始化時，如果您稍後需要存取物件的屬性，則必須宣告該變數為 `var`。 這是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式中的常見案例。 如需詳細資訊，請參閱[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  

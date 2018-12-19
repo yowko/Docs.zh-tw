@@ -1,5 +1,6 @@
 ---
-title: lock 陳述式 (C# 參考)
+title: lock 陳述式 - C# 參考
+ms.custom: seodec18
 description: 使用 C# lock 陳述式，來同步處理執行緒對共用資源的存取
 ms.date: 10/01/2018
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: cacc703e40f268c1dbca4174dc866ecae83cbd6c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 63fadd3c37c7533211e7bd0ac07952ca99fd6a79
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125752"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244255"
 ---
 # <a name="lock-statement-c-reference"></a>lock 陳述式 (C# 參考)
 

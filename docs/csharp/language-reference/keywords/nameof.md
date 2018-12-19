@@ -1,16 +1,17 @@
 ---
-title: nameof (C# 參考)
+title: nameof - C# 參考
+ms.custom: seodec18
 ms.date: 06/16/2017
 f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 01c87f8d63264aa342b04b8d3fcfc7e6f38db44b
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 61c0744168a6fef0f8c8cfb589602e7aeff0c48b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50744345"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241482"
 ---
 # <a name="nameof-c-reference"></a>nameof (C# 參考)
 
@@ -108,7 +109,7 @@ class Test {
   
  由於引數必須是運算式語法，因此不允許使用許多對清單沒有幫助的項目。  下列項目可能會產生錯誤，值得留意：預先定義的類型 (例如 `int` 或 `void`)、可為 Null 的類型 (`Point?`)、陣列類型 (`Customer[,]`)、指標類型 (`Buffer*`)、限定別名 (`A::B`)、未繫結的泛型類型 (`Dictionary<,>`)、前置處理符號 (`DEBUG`)，以及標籤 (`loop:`)。  
   
- 如果您需要取得完整限定名稱，您可以搭配使用 `typeof` 運算式和 `nameof`。  例如: 
+ 如果您需要取得完整限定名稱，您可以搭配使用 `typeof` 運算式和 `nameof`。  例如：
 ```csharp  
 class C {
     void f(int i) {  

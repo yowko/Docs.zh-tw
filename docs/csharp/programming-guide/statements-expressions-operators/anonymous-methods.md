@@ -1,17 +1,18 @@
 ---
-title: 匿名方法 (C# 程式設計手冊)
+title: 匿名方法 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous methods [C#]
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 26d4b7f46783b9aa41035775928a4fe322d0af44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f7eb71b6208b1991044b770a3c42cc05d8fb721
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506653"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243971"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>匿名方法 (C# 程式設計手冊)
 在 C# 2.0 版之前，宣告[委派](../../../csharp/language-reference/keywords/delegate.md)的唯一方式是使用[具名方法](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)。 C# 2.0 引入了匿名方法，而在 C# 3.0 和更新版本中，則是以 lambda 運算式取代匿名方法，成為撰寫程式碼內嵌的慣用方式。 不過，本主題中的匿名方法相關資訊也適用於 lambda 運算式。 有一種情況，是匿名方法提供了 lambda 運算式沒有的功能。 匿名方法能讓您省略參數清單。 這表示，匿名方法可以轉換成有各種不同簽章的委派。 這在 lambda 運算式是不可能的。 如需專門針對 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  

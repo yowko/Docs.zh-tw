@@ -1,16 +1,17 @@
 ---
-title: 介面屬性 (C# 程式設計手冊)
+title: 介面屬性 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: 619b9167b9b96be2908d833403379e4c2fe78ba5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c51064f9bb5e834648e0086fd8d28f9c0bd84b61
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43746914"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241583"
 ---
 # <a name="interface-properties-c-programming-guide"></a>介面屬性 (C# 程式設計手冊)
 屬性可以宣告於 [interface](../../../csharp/language-reference/keywords/interface.md) 上。 介面屬性存取子的範例如下：  

@@ -1,5 +1,6 @@
 ---
-title: decimal 關鍵字 (C# 參考)
+title: decimal 關鍵字 - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - decimal_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: c9d40238ca4c34238d5663185f93afbce73195cf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f26d812d8f4da8fae73ebbaee15441cd88860d04
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506515"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239455"
 ---
 # <a name="decimal-c-reference"></a>decimal (C# 參考)
 
@@ -42,7 +43,7 @@ decimal myMoney = 300.5m;
 decimal myMoney = 300;
 ```
 
-其他浮點類型和 `decimal` 類型之間沒有隱含轉換，因此，這兩種類型之間必須使用轉換進行轉換。 例如: 
+其他浮點類型和 `decimal` 類型之間沒有隱含轉換，因此，這兩種類型之間必須使用轉換進行轉換。 例如：
 
 ```csharp
 decimal myMoney = 99.9m;
@@ -104,4 +105,4 @@ Console.WriteLine((double)dec + dub);
 - [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
 - [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
 - [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)

@@ -1,5 +1,6 @@
 ---
-title: 使用轉換運算子 (C# 程式設計手冊)
+title: 使用轉換運算子 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [C#], operators
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - implicit conversion operators [C#]
 - explicit conversion operators [C#]
 ms.assetid: caf36e89-c6c0-4b87-9f9e-85780a45c9a4
-ms.openlocfilehash: 17a722f7160ae9cd03caa2dff9c4436fcf0f9d9e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 908067c3ad6cae34dd223bd608a74ba1cd7a88a3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845911"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236865"
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>使用轉換運算子 (C# 程式設計手冊)
 您可以使用比較容易上手的 `implicit` 轉換運算子，或者使用可以向任何人清楚指出您要轉換程式碼的 `explicit` 轉換運算子。 本主題將示範這兩種類型的轉換運算子。  
   
 > [!NOTE]
->  如需簡單類型轉換的資訊，請參閱[如何：將字串轉換為數值](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)、[如何：將位元組陣列轉換成整數](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)、[如何：在十六進位字串和數字類型間轉換](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)或 <xref:System.Convert>。  
+>  如需簡單類型轉換的詳細資訊，請參閱[如何：將字串轉換為數值](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)、[如何：將位元組陣列轉換成整數](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)、[如何：在十六進位字串和數字類型間轉換](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)或 <xref:System.Convert>。  
   
 ## <a name="example"></a>範例  
  這是明確轉換運算子範例。 這個運算子會從 <xref:System.Byte> 類型轉換成稱為 `Digit` 的實值型別。 因為並非所有位元組都可以轉換成數字，所以會明確進行轉換，這表示必須使用轉型，如 `Main` 方法所示。  

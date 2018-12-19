@@ -1,5 +1,6 @@
 ---
-title: 整數型別表 (C# 參考)
+title: 整數型別表 - C# 參考
+ms.custom: seodec18
 description: 內建 C# 整數型別的概觀
 ms.date: 08/20/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 4ac16d185a52cdb03fcb22f57ebf7506f2fb2745
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1815f057e5cf26d64e5ff151f161cc56214efc1b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078844"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237983"
 ---
 # <a name="integral-types-table-c-reference"></a>整數型別表 (C# 參考)
 

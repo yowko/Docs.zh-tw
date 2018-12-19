@@ -1,5 +1,6 @@
 ---
-title: '&gt;&gt;= 運算子 (C# 參考)'
+title: '&gt;&gt;= 運算子 - C# 參考'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '>>=_CSharpKeyword'
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: f2bac6a4320980d80a9b6c2597dcf8dc6f08ac70
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: aebc92ffb007db7b4950313874ebc2bf3c40615f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865019"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239442"
 ---
 # <a name="gtgt-operator-c-reference"></a>&gt;&gt;= 運算子 (C# 參考)
 右移指派運算子。  

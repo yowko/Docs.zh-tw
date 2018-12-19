@@ -1,5 +1,6 @@
 ---
 title: .NET 中規則運算式的最佳做法
+description: 了解如何在 .NET 中建立有效率且有效的規則運算式。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.custom: serodec18
+ms.openlocfilehash: 02847a813566c4675f7df2c88fa2e4e1f6138ecb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925720"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152808"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中規則運算式的最佳做法
 <a name="top"></a> .NET 中的規則運算式引擎是一項強大且功能完整的工具，會依據模式比對而非比較與比對常值文字的方式處理文字。 在大部分情況下，它會快速且有效率地執行模式比對。 不過，在某些情況下，規則運算式引擎速度可能變得相當慢。 而只有鮮少情況下，它甚至可能在處理相對小的輸入卻耗費數小時甚至數天時停止回應。  
@@ -115,7 +117,7 @@ ms.locfileid: "42925720"
   
  這個範例中使用的規則運算式 `\p{Sc}+\s*\d+` 會驗證輸入字串是否包含貨幣符號和至少一個十進位數字。 模式的定義方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\p{Sc}+`|比對 [Unicode Symbol, Currency] 分類中的一個或多個字元。|  
 |`\s*`|比對零個以上的空白字元。|  
@@ -123,9 +125,9 @@ ms.locfileid: "42925720"
   
 <a name="Interpreted"></a>   
 ### <a name="interpreted-vs-compiled-regular-expressions"></a>解譯與編譯的規則運算式  
- 未透過指定 <xref:System.Text.RegularExpressions.RegexOptions.Compiled> 選項繫結至規則運算式引擎的規則運算式模式會加以解譯。 具現化規則運算式物件時，規則運算式引擎會將規則運算式轉換成一組作業程式碼。 呼叫執行個體方法時，作業程式碼會轉換成 MSIL 並且由 JIT 編譯器執行。 同樣地，當呼叫靜態規則運算式方法而快取中找不到規則運算式時，規則運算式引擎會將規則運算式轉換成一組作業程式碼，並且將它們儲存到快取中。 然後引擎會將這些作業程式碼轉換成 MSIL，JIT 編譯器就可以執行這些作業程式碼。 解譯的規則運算式會藉由放慢執行時間來縮短啟動時間。 因此，在少數方法呼叫中使用規則運算式時，或是雖然不知道規則運算式方法呼叫的確實數目，但是期望數目很少時，最適合使用解譯的規則運算式。 隨著方法呼叫的數目增加，放慢執行速度就會壓縮掉縮短啟動時間所獲得的效能。  
+ 未透過指定 <xref:System.Text.RegularExpressions.RegexOptions.Compiled> 選項繫結程序至規則運算式引擎的規則運算式模式會加以解譯。 具現化規則運算式物件時，規則運算式引擎會將規則運算式轉換成一組作業程式碼。 呼叫執行個體方法時，作業程式碼會轉換成 MSIL 並且由 JIT 編譯器執行。 同樣地，當呼叫靜態規則運算式方法而快取中找不到規則運算式時，規則運算式引擎會將規則運算式轉換成一組作業程式碼，並且將它們儲存到快取中。 然後引擎會將這些作業程式碼轉換成 MSIL，JIT 編譯器就可以執行這些作業程式碼。 解譯的規則運算式會藉由放慢執行時間來縮短啟動時間。 因此，在少數方法呼叫中使用規則運算式時，或是雖然不知道規則運算式方法呼叫的確實數目，但是期望數目很少時，最適合使用解譯的規則運算式。 隨著方法呼叫的數目增加，放慢執行速度就會壓縮掉縮短啟動時間所獲得的效能。  
   
- 透過指定 <xref:System.Text.RegularExpressions.RegexOptions.Compiled> 選項繫結至規則運算式引擎的規則運算式模式會加以編譯。 這表示，當具現化規則運算式物件，或是當呼叫靜態規則運算式方法而快取中找不到規則運算式時，規則運算式引擎會將規則運算式轉換成一組中繼的作業程式碼，然後將這些程式碼轉換成 MSIL。 呼叫方法時，JIT 編譯器會執行 MSIL。 與解譯的規則運算式相反的是，編譯的規則運算式會延長啟動時間，但加快執行個別模式比對方法的速度。 因此，編譯規則運算式所獲得的效能優勢會與呼叫的規則運算式方法數目成比例。  
+ 透過指定 <xref:System.Text.RegularExpressions.RegexOptions.Compiled> 選項繫結程序至規則運算式引擎的規則運算式模式會加以編譯。 這表示，當具現化規則運算式物件，或是當呼叫靜態規則運算式方法而快取中找不到規則運算式時，規則運算式引擎會將規則運算式轉換成一組中繼的作業程式碼，然後將這些程式碼轉換成 MSIL。 呼叫方法時，JIT 編譯器會執行 MSIL。 與解譯的規則運算式相反的是，編譯的規則運算式會延長啟動時間，但加快執行個別模式比對方法的速度。 因此，編譯規則運算式所獲得的效能優勢會與呼叫的規則運算式方法數目成比例。  
   
  簡言之，我們建議您在呼叫含有相對較不常用之特定規則運算式的規則運算式方法時，使用解譯的規則運算式。 而當您呼叫含有相對較常用之特定規則運算式的規則運算式方法時，則應該使用編譯的規則運算式。 無論是放慢解譯的規則運算式執行速度所提升的效能超過縮短的啟動時間，或是放慢編譯的規則運算式啟動時間所提升的效能超過加快執行速度，都不容易判斷出其確實的臨界值。 因為臨界值取決於各種不同的因素，包括規則運算式及其處理之特定資料的複雜度。 若要判斷究竟是解譯或編譯的規則運算式能為您的特殊應用程式案例提供最佳效能，您可以使用 <xref:System.Diagnostics.Stopwatch> 類別比較兩者的執行時間。  
   
@@ -136,7 +138,7 @@ ms.locfileid: "42925720"
   
  範例中所使用規則運算式模式 `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]` 的定義方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`\w+`|比對一個或多個文字字元。|  
@@ -181,7 +183,7 @@ ms.locfileid: "42925720"
   
  儘管回溯並不是比對的要件，應用程式常常會因為使用回溯而影響效能。 例如，規則運算式 `\b\p{Lu}\w*\b` 會比對所有開頭為大寫字元的文字，如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-|-|  
 |`\b`|開始字緣比對。|  
 |`\p{Lu}`|比對大寫字元。|  
@@ -204,7 +206,7 @@ ms.locfileid: "42925720"
   
  在這類情況下，您可以移除巢狀數量詞，並且將外部子運算式取代為零寬度的右合樣或左合樣判斷提示，藉此最佳化規則運算式的效能。 右合樣和左合樣判斷提示是錨點，它們不會移動輸入字串中的指標，而是向右或向左合樣，以檢查是否符合指定的條件。 例如，零件編號規則運算式可以重寫為 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`。 這個規則運算式模式的定義方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`^`|在輸入字串的開頭開始比對。|  
 |`[0-9A-Z]`|比對英數字元。 零件編號必須至少包含這個字元。|  
@@ -218,9 +220,9 @@ ms.locfileid: "42925720"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]  
   
- .NET 中的規則運算式語言包括下列語言項目，可讓您用來消除巢狀數量詞。 如需詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+ .NET 中的規則運算式語言包括下列語言項目，可讓您用來消除巢狀數量詞。 如需詳細資訊，請參閱 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
-|語言項目|描述|  
+|語言項目|說明|  
 |----------------------|-----------------|  
 |`(?=` `subexpression` `)`|零寬度右合樣。 從目前的位置向右合樣，判斷 `subexpression` 是否符合輸入字串。|  
 |`(?!` `subexpression` `)`|零寬度右不合樣。 從目前的位置向右合樣，判斷 `subexpression` 是否不符合輸入字串。|  
@@ -258,7 +260,7 @@ ms.locfileid: "42925720"
   
  通常在規則運算式中使用群組建構的目的在於能夠套用數量詞，而且後續不會使用這些子運算式擷取的群組。 例如，規則運算式 `\b(\w+[;,]?\s?)+[.?!]` 是設計用來擷取整個句子。 下表描述這個規則運算式模式中的語言項目，及其對於 <xref:System.Text.RegularExpressions.Match> 物件的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合造成的影響。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`\w+`|比對一個或多個文字字元。|  
@@ -283,7 +285,7 @@ ms.locfileid: "42925720"
   
 -   使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 選項。 這個選項會停用規則運算式模式中的所有未命名或隱含擷取。 當您使用這個選項時，只會擷取符合 `(?<name>subexpression)` 語言元素所定義之具名群組的子字串。 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 旗標可以傳遞至 `options` 類別建構函式的 <xref:System.Text.RegularExpressions.Regex> 參數，或是 `options` 靜態比對方法的 <xref:System.Text.RegularExpressions.Regex> 參數。  
   
--   在 `n` 語言項目中使用 `(?imnsx)` 選項。 這個選項會從規則運算式模式中出現該項目的位置開始，停用所有未命名或隱含擷取。 在到達模式結尾或 `(-n)` 選項啟用未命名或隱含擷取之前，擷取都會是停用狀態。 如需詳細資訊，請參閱[其他建構](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)。  
+-   在 `n` 語言項目中使用 `(?imnsx)` 選項。 這個選項會從規則運算式模式中出現該項目的位置開始，停用所有未命名或隱含擷取。 在到達模式結尾或 `(-n)` 選項啟用未命名或隱含擷取之前，擷取都會是停用狀態。 如需詳細資訊，請參閱 [Miscellaneous Constructs](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)。  
   
 -   在 `n` 語言項目中使用 `(?imnsx:subexpression)` 選項。 這個選項會停用 `subexpression` 中的所有未命名或隱含擷取。 任何未命名或隱含巢狀擷取群組所進行的擷取也都會停用。  
   
@@ -292,7 +294,7 @@ ms.locfileid: "42925720"
 <a name="RelatedTopics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[規則運算式行為的詳細資訊](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|檢查 .NET 中規則運算式引擎的實作。 本主題將強調規則運算式的靈活度，並且說明開發人員應負責確保規則運算式引擎有效率且穩定地運作。|  
 |[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|說明何謂回溯以及回溯如何影響規則運算式的效能，並且檢查提供回溯之替代方式的語言項目。|  

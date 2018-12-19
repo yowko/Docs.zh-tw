@@ -1,5 +1,6 @@
 ---
-title: string (C# 參考)
+title: string - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - string
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: 66b1729363878f69f868b8b8fd6e9e7011426f27
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f6c76f8effc5aef82803014b9a7257c2ad6865b8
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153120"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286477"
 ---
 # <a name="string-c-reference"></a>string (C# 參考)
 
@@ -55,6 +56,18 @@ b += "ello";
 string str = "test";
 char x = str[2];  // x = 's';
 ```
+
+類似地，[] 運算子也可以用來逐一查看 `string` 中的每個字元：
+
+```csharp
+string str = "test";
+
+for (int i = 0; i < str.Length; i++)
+{
+  Console.Write(str[i] + " ");
+}
+// Output: t e s t
+``` 
 
 字串常值的類型是 `string`，可以撰寫為兩種形式：quoted 和 @-quoted。 以引號括住的字串常值是以雙引號 (") 括住：
 

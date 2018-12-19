@@ -1,15 +1,16 @@
 ---
-title: 欄位 (C# 程式設計手冊)
+title: 欄位 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 708bd4e768e795397624bcac6e5bc2594bff93f5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: af5a342b83608d6a149879de8dec80a1e1746b76
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210334"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242697"
 ---
 # <a name="fields-c-programming-guide"></a>欄位 (C# 程式設計手冊)
 「欄位」是任意類型的變數，可在[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)中直接宣告。 欄位是其包含類型的「成員」。  
@@ -20,11 +21,11 @@ ms.locfileid: "44210334"
   
  這些欄位通常會儲存必須可供多個類別方法存取的資料，以及其儲存時間必須比任何一個方法的存留期都還要長的資料。 例如，表示行事曆日期的類別可能會有三個整數欄位，分別代表月、日和年。 未在單一方法以外範圍使用的變數，應在方法主體本身內宣告為「區域變數」。  
   
- 請依序指定欄位的存取層級、欄位的類型和欄位的名稱，以在類別區塊中宣告欄位。 例如:   
+ 請依序指定欄位的存取層級、欄位的類型和欄位的名稱，以在類別區塊中宣告欄位。 例如：  
   
  [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
- 若要存取物件中的欄位，請在物件名稱後面加上句號，再加上欄位的名稱，就像是 `objectname.fieldname`。 例如:   
+ 若要存取物件中的欄位，請在物件名稱後面加上句號，再加上欄位的名稱，就像是 `objectname.fieldname`。 例如：  
   
  [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   

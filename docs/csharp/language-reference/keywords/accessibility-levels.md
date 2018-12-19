@@ -1,16 +1,17 @@
 ---
-title: 存取範圍層級 (C# 參考)
+title: 存取範圍層級 - C# 參考
+ms.custom: seodec18
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 4679fd2564454e7f1ade5cb4813729b65f433012
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1bd4c063afe175b5585e5f732ebddbe1a271c8b3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617039"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243773"
 ---
 # <a name="accessibility-levels-c-reference"></a>存取範圍層級 (C# 參考)
 

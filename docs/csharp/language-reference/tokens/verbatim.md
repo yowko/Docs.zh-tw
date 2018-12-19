@@ -1,5 +1,6 @@
 ---
-title: '@ (C# 參考)'
+title: '@ - C# 參考'
+ms.custom: seodec18
 ms.date: 02/09/2017
 f1_keywords:
 - '@_CSharpKeyword'
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d6da87159e3ec9184eaa76ad069102204e2fcfc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b9575f408da351ac3715e1969d601c0cc73da286
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841563"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244163"
 ---
 # <a name="-c-reference"></a>@ (C# 參考)
 

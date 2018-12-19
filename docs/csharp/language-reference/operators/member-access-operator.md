@@ -1,5 +1,6 @@
 ---
-title: 。 運算子 (C# 參考)
+title: 。 運算子 - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ._CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-ms.openlocfilehash: a092c1a916e3dc4bf6d96660c532540945e57554
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f5048761973e10bec9650469383e2f52cee74da4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520704"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235042"
 ---
 # <a name="-operator-c-reference"></a>。 運算子 (C# 參考)
 點運算子 (`.`) 是用於成員存取。 點運算子可指定型別或命名空間的成員。 例如，點運算子可用來存取 .NET Framework 類別庫中的特定方法：  

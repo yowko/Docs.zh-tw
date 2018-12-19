@@ -1,17 +1,18 @@
 ---
-title: C# 編碼慣例 (C# 程式設計手冊)
+title: C# 編碼慣例 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 430cf3f1bc5e0b5ebe1a05530059516f36a473a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 598f0e75a96a43162d0c626d00320effb418c7fd
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209455"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241427"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 編碼慣例 (C# 程式設計手冊)
  編碼慣例有下列用途：  
@@ -162,7 +163,7 @@ ms.locfileid: "44209455"
   
 ### <a name="static-members"></a>靜態成員  
   
--   使用類別名稱 *ClassName.StaticMember*，呼叫 [static](../../../csharp/language-reference/keywords/static.md) 成員。 這種作法可讓靜態存取更加清晰，從而讓程式碼更易於閱讀。  請勿使用衍生類別的名稱，限定在基底類別中定義的靜態成員。  編譯該程式碼時，如果將具有相同名稱的靜態成員加入衍生類別，則會破壞程式碼的清楚程度，且程式碼之後可能會在中斷。  
+-   使用類別名稱呼叫 [static](../../../csharp/language-reference/keywords/static.md) 成員：*ClassName.StaticMember*。 這種作法可讓靜態存取更加清晰，從而讓程式碼更易於閱讀。  請勿使用衍生類別的名稱，限定在基底類別中定義的靜態成員。  編譯該程式碼時，如果將具有相同名稱的靜態成員加入衍生類別，則會破壞程式碼的清楚程度，且程式碼之後可能會在中斷。  
   
 ### <a name="linq-queries"></a>LINQ 查詢  
   

@@ -1,17 +1,18 @@
 ---
-title: '#pragma (C# 參考)'
+title: '#pragma - C# 參考'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma'
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: 5ae397cc61e0c6b58ed2079369131ebb7e352eae
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 65867bc441711193f93142d1c65122b6bc60c25d
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43747479"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241823"
 ---
 # <a name="pragma-c-reference"></a>#pragma (C# 參考)
 `#pragma` 將編譯編譯器所在檔案的特殊指示提供給編譯器。 編譯器必須支援指示。 換句話說，您不能使用 `#pragma` 來建立自訂前置處理指示。 Microsoft C# 編譯器支援下列兩個 `#pragma` 指示：  

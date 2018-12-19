@@ -1,5 +1,6 @@
 ---
-title: 如何：在十六進位字串和數字類型間轉換 (C# 程式設計手冊)
+title: HOW TO：在十六進位字串和數字型別間轉換 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - hexadecimal strings [C#], converting to numeric type
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 5acbfd121698cf0d2b6d78ccea810baf624c7981
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d61d48ca05e93743ef3afa894ad0cbc98d6d2ab0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076040"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237164"
 ---
-# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>如何：在十六進位字串和數字類型間轉換 (C# 程式設計手冊)
+# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>HOW TO：在十六進位字串和數字型別間轉換 (C# 程式設計指南)
 這些範例示範如何執行下列工作：  
   
 -   取得[字串](../../../csharp/language-reference/keywords/string.md)中每個字元的十六進位值。  
@@ -54,6 +55,6 @@ ms.locfileid: "44076040"
   
 ## <a name="see-also"></a>請參閱
 
-- [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)  
+- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)  
 - [型別](../../../csharp/programming-guide/types/index.md)  
-- [如何：判斷字串是否表示數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [如何：判斷字串是否代表數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

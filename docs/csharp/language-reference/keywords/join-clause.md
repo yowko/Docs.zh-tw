@@ -1,5 +1,6 @@
 ---
-title: join 子句 (C# 參考)
+title: join 子句 - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - join
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: dee11c1ab754e515c69f330a5919776cbcb1e775
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9052b4b0f1feac5aa56a7fe6745745f1afb5740
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237159"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236280"
 ---
 # <a name="join-clause-c-reference"></a>join 子句 (C# 參考)
 

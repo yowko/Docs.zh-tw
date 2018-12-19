@@ -1,15 +1,16 @@
 ---
-title: 使用索引子 (C# 程式設計手冊)
+title: 使用索引子 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 0bb7b848f5484b78e8dae0c40320e7945b78eea0
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ad5c6f68f5eb2f62d7c6f389e374e1b2db5417c6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873451"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241914"
 ---
 # <a name="using-indexers-c-programming-guide"></a>使用索引子 (C# 程式設計手冊)
 
@@ -32,7 +33,7 @@ public int this[int index]    // Indexer declaration
   
  索引子的簽章包含其型式參數的數目和類型。 它不包含索引子類型或正式參數的名稱。 如果您在相同的類別中宣告多個索引子，則它們必須具有不同的簽章。  
   
- 索引子值不會分類為變數；因此，您無法以 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 參數形式傳遞索引子值。  
+ 索引子值不會分類為變數；因此，您無法將索引子值傳遞為 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 參數。  
   
  若要以其他語言可使用的名稱提供索引子，請使用 <xref:System.Runtime.CompilerServices.IndexerNameAttribute?displayProperty=nameWithType>，如下列範例所示：  
 
@@ -68,7 +69,7 @@ C# 不會將索引型別限制為整數。 例如，搭配使用字串與索引�
 
  有兩種主要的方式可以改善索引子的安全性和可靠性：  
   
-- 請務必包含某種類型的錯誤處理策略來處理用戶端程式碼傳入無效索引值的機會。 在此主題稍早的第一個範例中，TempRecord 類別提供 Length 屬性，以讓用戶端程式碼先確認輸入，再將其傳遞給索引子。 您也可以將錯誤處理程式碼放在索引子本身內。 請務必為使用者記載您在索引子存取子內擲回的任何例外狀況。  
+- 請務必包含某種類型的錯誤處理策略來處理用戶端程式碼傳入無效索引值的機會。 在本主題稍早的第一個範例中，TempRecord 類別提供 Length 屬性，以讓用戶端程式碼先確認輸入，再將其傳遞給索引子。 您也可以將錯誤處理程式碼放在索引子本身內。 請務必為使用者記載您在索引子存取子內擲回的任何例外狀況。  
   
 - 將 [get](../../../csharp/language-reference/keywords/get.md) 與 [set](../../../csharp/language-reference/keywords/set.md) 存取子的存取範圍設定為合理限制。 這對 `set` 存取子特別重要。 如需詳細資訊，請參閱[限制存取子的存取範圍](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)。  
   

@@ -1,16 +1,17 @@
 ---
-title: 多型 (C# 程式設計手冊)
+title: 多型 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 25192d57955d15c5707816ee6c4a515893891507
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 489fdf87f973de6137587fc2280ef0fa72ab78ba
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523389"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286451"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多型 (C# 程式設計手冊)
 多型通常是指物件導向程式設計的第三個重要部分，其重要性僅次於封裝和繼承。 多型在希臘文中表示「多種形狀」，可分成下列兩方面：  
@@ -53,11 +54,11 @@ ms.locfileid: "43523389"
  虛擬方法和屬性可讓衍生類別不需要使用方法的基底類別實作，即可擴充基底類別。 如需詳細資訊，請參閱[使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)。 介面是用來定義將其實作保留給衍生類別之一個方法或一組方法的另一種做法。 如需詳細資訊，請參閱[介面](../../../csharp/programming-guide/interfaces/index.md)。  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>使用新成員隱藏基底類別成員  
- 如果您想讓衍生成員使用與基底類別中成員相同的名稱，但不想讓該成員參與虛擬引動過程，則可以使用 [new](../../../csharp/language-reference/keywords/new.md) 關鍵字。 `new` 關鍵字會放置在要取代之類別成員的傳回類型前面。 下列程式碼提供一個範例：  
+ 如果您想讓衍生成員使用與基底類別中成員相同的名稱，但不想讓該成員參與虛擬引動過程，則可以使用 [new](../../../csharp/language-reference/keywords/new.md) 關鍵字。 `new` 關鍵字會放置在要取代之類別成員的傳回型別前面。 下列程式碼提供一個範例：  
   
  [!code-csharp[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
- 您仍然可以透過將衍生類別執行個體轉換成基底類別執行個體，從用戶端程式碼存取隱藏的基底類別成員。 例如:   
+ 您仍然可以透過將衍生類別執行個體轉換成基底類別執行個體，從用戶端程式碼存取隱藏的基底類別成員。 例如：  
   
  [!code-csharp[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   
@@ -96,8 +97,7 @@ ms.locfileid: "43523389"
   
 ## <a name="see-also"></a>請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
 - [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
 - [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  

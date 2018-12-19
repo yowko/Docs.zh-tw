@@ -1,16 +1,17 @@
 ---
-title: 介面中的索引子 (C# 程式設計手冊)
+title: 介面中的索引子 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: c3ddb48590087d49402482e8cbf3760027da1a2a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ff636691ea2f4dacd13fbd2a336f0023ed65750b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799459"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235654"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>介面中的索引子 (C# 程式設計手冊)
 索引子可以宣告於 [interface](../../../csharp/language-reference/keywords/interface.md) 上。 介面索引子的存取子在下列方面與[類別](../../../csharp/language-reference/keywords/class.md)索引子的存取子不同：  
@@ -32,7 +33,7 @@ ms.locfileid: "43799459"
   
  [!code-csharp[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
   
- 在上述範例中，您可以使用介面成員的完整名稱來使用明確介面成員實作。 例如:   
+ 在上述範例中，您可以使用介面成員的完整名稱來使用明確介面成員實作。 例如：  
   
 ```  
 string ISomeInterface.this[int index]   

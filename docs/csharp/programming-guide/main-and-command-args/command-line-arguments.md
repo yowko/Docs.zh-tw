@@ -1,15 +1,16 @@
 ---
-title: 命令列引數 (C# 程式設計手冊)
+title: 命令列引數 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: a55e40a4a4880c39c74186c55b0886e06dc33bcb
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 5bc73ece0560abfde7966678518ff57a8af3733f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083945"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236072"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令列引數 (C# 程式設計手冊)
 您可以使用下列其中一種方式，透過定義方法以將引數傳送給 `Main` 方法：  
@@ -71,7 +72,7 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 >  在 Visual Studio 中執行應用程式時，您可以在[專案設計工具、偵錯頁面](/visualstudio/ide/reference/debug-page-project-designer)中指定命令列引數。  
   
- 如需如何使用命令列引數的其他範例，請參閱[如何：使用命令列建立和使用組件](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
+ 如需如何使用命令列引數的詳細資訊，請參閱[如何：使用命令列建立和使用組件](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
 ## <a name="see-also"></a>請參閱
 

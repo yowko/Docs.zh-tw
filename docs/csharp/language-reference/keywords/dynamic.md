@@ -1,5 +1,6 @@
 ---
-title: dynamic (C# 參考)
+title: dynamic - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - dynamic_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-ms.openlocfilehash: 840ecd6ab929b00e1be96c23eb06ccf362380f8e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7ac9c04da277af6a03a6a8994763451146adefc8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44195344"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243305"
 ---
 # <a name="dynamic-c-reference"></a>dynamic (C# 參考)
 

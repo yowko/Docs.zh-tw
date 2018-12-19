@@ -1,5 +1,6 @@
 ---
-title: '* 運算子 (C# 參考)'
+title: '* 運算子 - C# 參考'
+ms.custom: seodec18
 ms.date: 04/04/2018
 f1_keywords:
 - '*_CSharpKeyword'
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-ms.openlocfilehash: 873cc1dc0d81425117f1784353acf08b35158133
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 24ac4a99c48f1e8204b821bfbf5f7fbc0a2b2f1d
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45596971"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237346"
 ---
 # <a name="-operator-c-reference"></a>* 運算子 (C# 參考)
 乘法運算子 (`*`)，它會計算其運算元的乘積。 所有數字類型都有預先定義的乘法運算子。  

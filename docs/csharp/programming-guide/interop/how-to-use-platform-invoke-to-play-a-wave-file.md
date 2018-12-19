@@ -1,5 +1,6 @@
 ---
-title: 如何：使用平台叫用播放 WAV 檔 (C# 程式設計手冊)
+title: HOW TO：使用平台叫用播放 WAV 檔 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - platform invoke, sound files
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: a83d0a11aacac3676aa78d9952f24f505949d24c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 101cd6fa044e181cf6f993fbea642c9dffe04008
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522549"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236852"
 ---
-# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>如何：使用平台叫用播放 WAV 檔 (C# 程式設計手冊)
+# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>HOW TO：使用平台叫用播放 WAV 檔 (C# 程式設計指南)
 下列 C# 程式碼範例說明如何在 Windows 作業系統上使用平台叫用服務來播放 .wav 音效檔。  
   
 ## <a name="example"></a>範例  

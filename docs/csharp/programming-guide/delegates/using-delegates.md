@@ -1,22 +1,23 @@
 ---
-title: 使用委派 (C# 程式設計手冊)
+title: 使用委派 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 07bc0e38455335e068719137c349daf65f8fab6b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 71285057a465cd7fa09ae8290a7b74a3c6d6407c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042201"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238841"
 ---
 # <a name="using-delegates-c-programming-guide"></a>使用委派 (C# 程式設計手冊)
 [委派](../../../csharp/language-reference/keywords/delegate.md)是可以安全封裝方法的類型，類似於 C 和 C++ 中的函式指標。 與 C 函式指標不同之處在於，委派為物件導向且類型安全，同時安全性較佳。 委派的類型由委派的名稱所定義。 下列範例宣告名為 `Del` 的委派，其可封裝採用[字串](../../../csharp/language-reference/keywords/string.md)作為引數並傳回 [void](../../../csharp/language-reference/keywords/void.md) 的方法：  
   
  [!code-csharp[csProgGuideDelegates#21](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_1.cs)]  
   
- 通常透過提供委派將包裝的方法名稱，或使用[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)，來建構委派物件。 一旦對委派執行個體化之後，該委派即會將該委派的方法呼叫，傳遞至該方法。 由呼叫端傳遞至委派的參數，會傳遞至該方法，而從該方法傳回的值（如果有的話）會由該委派傳回至呼叫端。 這稱為叫用委派。 執行個體化的委派的叫用方法，就像其自身為包裝的方法一樣。 例如:   
+ 通常透過提供委派將包裝的方法名稱，或使用[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)，來建構委派物件。 一旦對委派執行個體化之後，該委派即會將該委派的方法呼叫，傳遞至該方法。 由呼叫端傳遞至委派的參數，會傳遞至該方法，而從該方法傳回的值（如果有的話）會由該委派傳回至呼叫端。 這稱為叫用委派。 執行個體化的委派的叫用方法，就像其自身為包裝的方法一樣。 例如：  
   
  [!code-csharp[csProgGuideDelegates#22](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_2.cs)]  
   
@@ -44,11 +45,11 @@ ms.locfileid: "44042201"
   
  連同先前所示的靜態 `DelegateMethod`，我們現在有三種方法，可以由 `Del` 執行個體進行包裝。  
   
- 叫用委派時，可以呼叫一個以上的方法。 這稱為多點傳送。 若要將一個額外的方法加入委派的方法清單 (引動過程清單)，只需使用加法或加法指派運算子 ('+' 或 '+ =')，相加兩個委派即可。 例如:   
+ 叫用委派時，可以呼叫一個以上的方法。 這稱為多點傳送。 若要將一個額外的方法加入委派的方法清單 (引動過程清單)，只需使用加法或加法指派運算子 ('+' 或 '+ =')，相加兩個委派即可。 例如：  
   
  [!code-csharp[csProgGuideDelegates#27](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_7.cs)]  
   
- 此時，`allMethodsDelegate` 在其引動過程清單中包含三種方法：`Method1`、`Method2` 和 `DelegateMethod`。 原始的三個委派 `d1`、`d2` 和 `d3` 維持不變。 當叫用 `allMethodsDelegate` 時，會依序呼叫所有三個方法。 如果委派使用參考參數，則參考會依序傳入這三個方法中的每一個，而且任一方法所做的任何變更，下一個方法都看得到。 當任一方法擲回未在該方法內攔截到例外狀況時，該例外狀況會傳遞至委派的呼叫端，且不會呼叫引動過程清單中的任何後續方法。 如果委派具有傳回值和 (或) 輸出參數，則它會傳回所叫用之最後一個方法的傳回值與參數。 若要移除引動過程清單中的方法，請使用遞減或遞減指派運算子 ('-' 或 '-= ')。 例如:   
+ 此時，`allMethodsDelegate` 在其引動過程清單中包含三種方法：`Method1`、`Method2` 和 `DelegateMethod`。 原始的三個委派 `d1`、`d2` 和 `d3` 維持不變。 當叫用 `allMethodsDelegate` 時，會依序呼叫所有三個方法。 如果委派使用參考參數，則參考會依序傳入這三個方法中的每一個，而且任一方法所做的任何變更，下一個方法都看得到。 當任一方法擲回未在該方法內攔截到例外狀況時，該例外狀況會傳遞至委派的呼叫端，且不會呼叫引動過程清單中的任何後續方法。 如果委派具有傳回值和 (或) 輸出參數，則它會傳回所叫用之最後一個方法的傳回值與參數。 若要移除引動過程清單中的方法，請使用遞減或遞減指派運算子 ('-' 或 '-= ')。 例如：  
   
  [!code-csharp[csProgGuideDelegates#28](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_8.cs)]  
   
@@ -60,7 +61,7 @@ ms.locfileid: "44042201"
   
  多點傳送委派常用於事件處理。 事件來源物件會將事件通知傳送給已註冊希望收到該事件的收件者物件。 若要註冊接收事件，收件者會建立旨在處理事件的方法，然後建立該方法的委派，並將該委派傳遞至事件來源。 在發生事件時，來源會呼叫委派。 接著，委派會呼叫收件者的事件處理方法，傳遞事件資料。 指定的事件之委派類型，由事件來源定義。 如需詳細資訊，請參閱[事件](../../../csharp/programming-guide/events/index.md)。  
   
- 比較兩個在編譯時間所指定的不同類型之委派，會導致編譯錯誤。 如果委派執行個體是靜態類型的 `System.Delegate`，則允許比較，但會在執行階段傳回 false。 例如:   
+ 比較兩個在編譯時間所指定的不同類型之委派，會導致編譯錯誤。 如果委派執行個體是靜態類型的 `System.Delegate`，則允許比較，但會在執行階段傳回 false。 例如：  
   
  [!code-csharp[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
   

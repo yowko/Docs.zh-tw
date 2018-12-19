@@ -1,17 +1,18 @@
 ---
-title: 如何：在查詢中傳回項目屬性的子集 (C# 程式設計手冊)
+title: HOW TO：在查詢中傳回項目屬性的子集 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 22b6cc8fc8c8d9ffd1c2cf4063994ce94cea8e45
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 27f0df14fef7c261828040d905c9f624f02eddfe
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520839"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243825"
 ---
-# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>如何：在查詢中傳回項目屬性的子集 (C# 程式設計手冊)
+# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>HOW TO：在查詢中傳回項目屬性的子集 (C# 程式設計手冊)
 如果下列兩個條件都成立，請在查詢運算式中使用匿名型別：  
   
 -   您只要傳回每個來源項目的部分屬性。  

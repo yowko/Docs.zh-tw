@@ -1,21 +1,22 @@
 ---
-title: new 修飾詞 (C# 參考)
+title: new 修飾詞 - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 496339a7c3b95f16fd13479b096d90058b0799d4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 07986ac0c49387422aa334711b6997b159151e79
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702669"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244957"
 ---
 # <a name="new-modifier-c-reference"></a>new 修飾詞 (C# 參考)
 
 `new` 關鍵字做為宣告修飾詞使用時，會明確隱藏繼承自基底類別的成員。 當您隱藏繼承的成員時，該成員的衍生版本就會取代基底類別版本。 雖然您可以在不使用 `new` 修飾詞的情況下隱藏成員，但是編譯器會發出警告。 如果您使用 `new` 明確隱藏成員，它會隱藏這個警告。
 
-若要隱藏繼承的成員，請在衍生類別中使用相同的成員名稱宣告該成員，並且使用 `new` 關鍵讚加以修飾。 例如: 
+若要隱藏繼承的成員，請在衍生類別中使用相同的成員名稱宣告該成員，並且使用 `new` 關鍵讚加以修飾。 例如：
 
 [!code-csharp[csrefKeywordsOperator#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#8)]
 

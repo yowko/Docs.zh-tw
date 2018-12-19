@@ -1,17 +1,18 @@
 ---
-title: Null 條件運算子 (C# 參考)
+title: Null 條件運算子 - C# 參考
+ms.custom: seodec18
 ms.date: 04/03/2015
 helpviewer_keywords:
 - null-conditional operators [C#]
 - ?. operator [C#]
 - ?[] operator [C#]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: 823b9dc886bf2448ca9da4ac640bfe56f90d3ff3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4189b07fd280192a4cb39400e4e77cef702c9d08
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194848"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239549"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. and ?[] Null 條件運算子 (C# 和 Visual Basic)
 在執行成員存取 (`?.`) 或索引 (`?[]`) 運算之前，測試左運算元的值是否為 null；如果左運算元評估為 `null`，則傳回 `null`。 
@@ -49,9 +50,10 @@ PropertyChanged?.Invoke(…)
  新的方法可以保障執行緒安全，因為編譯器產生的程式碼只會評估 `PropertyChanged` 一次，並將結果保留在暫存變數中。 由於沒有 Null 條件式委派引動過程語法 `PropertyChanged?(e)`，因此您必須明確呼叫 `Invoke` 方法。  
   
 ## <a name="language-specifications"></a>語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的 [Null 條件運算子](~/_csharplang/spec/expressions.md#null-conditional-operator)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [?? (Null 聯合運算子)](null-coalescing-operator.md)  
 - [C# 參考](../../../csharp/language-reference/index.md)  

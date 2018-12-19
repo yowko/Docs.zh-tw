@@ -1,15 +1,16 @@
 ---
-title: C# 程式的一般結構 (C# 程式設計手冊)
+title: C# 程式的一般結構 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 3e2718d932506f261ea32e7289a3191bca7c22e8
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: a9e20d0020b82973fb95e422c30f87421adedd5c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "45698152"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236891"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>C# 程式的一般結構 (C# 程式設計手冊)
 C# 程式可以包含一或多個檔案。 每個檔案可以包含零個或多個命名空間。 命名空間可以包含類別、結構、介面、列舉和委派等類型，以及他命名空間。 以下是 C# 程式的基本架構，其中包含上述所有項目。  

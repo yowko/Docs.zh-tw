@@ -1,17 +1,18 @@
 ---
-title: '#pragma 總和檢查碼 (C# 參考)'
+title: '#pragma 總和檢查碼 - C# 參考'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 28a9ccfb9d36e648304a177294904ab1b7f18892
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 83cc6c56f18e5ce284d9e10294f3b3974578fc91
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024541"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235615"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma 總和檢查碼 (C# 參考)
 產生來源檔案的總和檢查碼協助偵錯[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]頁面。  
@@ -27,7 +28,7 @@ ms.locfileid: "48024541"
  需要監視是否有變更或更新的檔案名稱。  
   
  `"{guid}"`  
- 雜湊演算法的全域唯一識別碼 (GUID)。  
+ 雜湊演算法的全域唯一識別碼 (GUID)。  
   
  `"checksum_bytes"`  
  代表總和檢查碼位元組的十六進位數字字串。 必須是偶數的十六進位數字。 奇數的數字會導致編譯時期警告，並且忽略指示詞。  

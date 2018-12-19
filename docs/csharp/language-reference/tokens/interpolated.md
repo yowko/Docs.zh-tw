@@ -1,5 +1,6 @@
 ---
-title: $ - 字串內插補點 (C# 參考)
+title: $ - 字串內插補點 - C# 參考
+ms.custom: seodec18
 description: 字串內插補點提供比傳統字串複合格式化更容易讀取且方便的語法來格式化字串輸出。
 ms.date: 03/26/2018
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 2758a724b7e1e410fd1e1ba262db451b7f994164
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6cac2b31f9ec1fd4775d4ed2ec2e9382502a0cc
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196985"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244800"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字串內插補點 (C# 參考)
 
-`$` 特殊字元會將字串常值識別為「字串內插補點」。 插入字串是可能包含「插入運算式」的字串常值。 將插入字串解析為結果字串時，會將具有插入運算式的項目取代為運算式結果的字串表示。 C# 6 和更新版本的語言中有提供此功能。
+`$` 特殊字元會將字串常值識別為「字串內插補點」。 插入字串是可能包含「插入運算式」的字串常值。 將插入字串解析為結果字串時，會將具有插入運算式的項目取代為運算式結果的字串表示。 C# 6 和更新版本的語言中有提供這項功能。
 
 字串插補在建立格式化字串時，是比[字串複合格式化](../../../standard/base-types/composite-formatting.md)功能更容易理解且方便的語法。 下列範例會使用這兩項功能，產生相同的輸出：
 
@@ -37,9 +38,9 @@ ms.locfileid: "50196985"
 {<interpolatedExpression>[,<alignment>][:<formatString>]}
 ```
 
-在方括弧中的元素是選擇性的元素。 下表說明每個元素：
+在方括號中的元素是選擇性的元素。 下表說明每個元素：
 
-|元素|描述|
+|元素|說明|
 |-------------|-----------------|
 |`interpolatedExpression`|產生要格式化之結果的運算式。 `null` 結果的字串表示是 <xref:System.String.Empty?displayProperty=nameWithType>。|
 |`alignment`|常數的運算式，其值定義插值運算式結果的字串表示的字元數下限。 如果是正數，則字串表示是靠右對齊；如果是負數，它是靠左對齊。 如需詳細資訊，請參閱[對齊元件](../../../standard/base-types/composite-formatting.md#alignment-component)。|
@@ -68,7 +69,7 @@ ms.locfileid: "50196985"
 
 有三個來自插入字串的隱含轉換：
 
-1. 將字串內插補點轉換成字串內插補點解析結果的 <xref:System.String> 執行個體，且插值運算式項目取代為其結果的格式正確字串表示。 此轉換會使用目前文化特性。
+1. 將字串內插補點轉換成字串內插補點解析結果的 <xref:System.String> 執行個體，且插值運算式項目取代為其結果的格式正確字串表示。 這項轉換會使用目前文化特性。
 
 1. 將插入字串轉換成 <xref:System.FormattableString> 執行個體，以代表複合格式字串，並將運算式結果格式化。 那可讓您從單一 <xref:System.FormattableString> 執行個體建立多個具有特定文化特性內容的結果字串。 若要執行此工作，請呼叫下列的其中一個方法：
 

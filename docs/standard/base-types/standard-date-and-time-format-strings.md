@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ca6109a61fb32cd148e69081da0772277743b6e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f4c6d10fad075a70d80bf6e5aa32edf0f89c42dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873728"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151287"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準日期和時間格式字串
 標準日期和時間格式字串使用單一格式規範，定義日期和時間值的文字表示。 任何包含一個以上字元 (包括空白字元) 的日期和時間格式字串都會解譯為自訂日期和時間格式字串；如需詳細資訊，請參閱[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 標準或自訂格式字串有兩種使用方式：  
@@ -39,7 +39,7 @@ ms.locfileid: "48873728"
 
 <a name="table"></a>下表描述標準日期和時間的格式規範。 除非特別註明，否則特定標準日期和時間格式規範會產生相同的字串表示，無論是與 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值搭配使用。 如需使用標準日期和時間格式字串的詳細資訊，請參閱[備註](#Notes)一節。  
   
-|格式規範|描述|範例|  
+|格式規範|說明|範例|  
 |----------------------|-----------------|--------------|  
 |"d"|簡短日期模式。<br /><br /> 詳細資訊：[簡短日期 ("d") 格式規範](#ShortDate)。|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|  
 |"D"|完整日期模式。<br /><br /> 詳細資訊：[完整日期 ("D") 格式規範](#LongDate)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15 Juni 2009 (de-DE)|  
@@ -103,7 +103,7 @@ ms.locfileid: "48873728"
   
  下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定義結果字串的整體格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|定義分隔日期之年份、月份和日期元件的字串。|  
@@ -121,7 +121,7 @@ ms.locfileid: "48873728"
   
  下表列出 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性，這些屬性控制傳回之字串的格式設定。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|定義結果字串的整體格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定義可顯示在結果字串中的當地語系化日期名稱。|  
@@ -140,7 +140,7 @@ ms.locfileid: "48873728"
   
  結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|定義結果字串之日期元件的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定義結果字串之時間元件的格式。|  
@@ -163,7 +163,7 @@ ms.locfileid: "48873728"
   
  下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|定義結果字串的整體格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定義可顯示在結果字串中的當地語系化日期名稱。|  
@@ -185,7 +185,7 @@ ms.locfileid: "48873728"
   
  結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定義結果字串之日期元件的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定義結果字串之時間元件的格式。|  
@@ -207,7 +207,7 @@ ms.locfileid: "48873728"
   
  結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定義結果字串之日期元件的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|定義結果字串之時間元件的格式。|  
@@ -229,7 +229,7 @@ ms.locfileid: "48873728"
   
  下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|定義結果字串的整體格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定義可顯示在結果字串中的當地語系化月份名稱。|  
@@ -255,7 +255,7 @@ ms.locfileid: "48873728"
   
 -   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 日期和時間值沒有時區資訊。  
   
- 因為 "O" 或 "o" 標準格式規範符合國際標準，所以使用該規範的或剖析作業一律使用不因國別而異的文化特性和西曆。  
+ 因為 "O" 或 "o" 標準格式規範符合國際標準，所以使用該規範的格式化或剖析作業一律使用不因國別而異的文化特性和西曆。  
   
  傳遞至 `Parse` 和 `TryParse` 的 `ParseExact`、`TryParseExact`、<xref:System.DateTime> 和 <xref:System.DateTimeOffset> 方法的字串如果是這些格式，就可以使用 "O" 或 "o" 格式規範來剖析。 在 <xref:System.DateTime> 物件的案例中，您呼叫的剖析多載應該也要包含 `styles` 參數，且值為 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>。 請注意，如果您呼叫剖析方法時，使用對應於 "O" 或 "o" 格式規範的自訂格式字串，將不會取得與 "O" 或 "o" 相同的結果。 這是因為使用自訂格式字串的剖析方法，無法剖析缺少時區元件或使用 "Z" 來指示 UTC 之日期和時間值的字串表示法。  
   
@@ -277,7 +277,7 @@ ms.locfileid: "48873728"
   
  在表示不因文化特性而異之 <xref:System.Globalization.DateTimeFormatInfo> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType> 物件中，有下列屬性會影響結果字串。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|定義結果字串的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|定義可顯示在結果字串中的縮寫日期名稱。|  
@@ -313,7 +313,7 @@ ms.locfileid: "48873728"
   
  結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定義結果字串之時間元件的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定義分隔時間之小時、分鐘和秒鐘元件的字串。|  
@@ -333,7 +333,7 @@ ms.locfileid: "48873728"
   
  下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|定義結果字串之時間元件的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定義分隔時間之小時、分鐘和秒鐘元件的字串。|  
@@ -366,7 +366,7 @@ ms.locfileid: "48873728"
   
  下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|定義結果字串的整體格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定義可顯示在結果字串中的當地語系化日期名稱。|  
@@ -390,7 +390,7 @@ ms.locfileid: "48873728"
   
  下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|定義結果字串的整體格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定義可顯示在結果字串中的當地語系化月份名稱。|  

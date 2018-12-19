@@ -1,5 +1,6 @@
 ---
-title: '&lt;= 運算子 (C# 參考)'
+title: '&lt;= 運算子 - C# 參考'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <=_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - less than or equal to operator (<=) [C#]
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
-ms.openlocfilehash: afbb932c1be010790236bec73a36acf0f01b97f4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 950ba3fc02e015f2574d123d1fd9adc116aae045
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45595053"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243448"
 ---
 # <a name="lt-operator-c-reference"></a>&lt;= 運算子 (C# 參考)
 如果第一個運算元小於或等於第二個運算元，則所有數值和列舉類型都會定義「小於或等於」關係運算子 (`<=`) 以傳回 `true`否則為 `false`。  

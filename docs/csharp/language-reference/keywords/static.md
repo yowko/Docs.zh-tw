@@ -1,5 +1,6 @@
 ---
-title: static 修飾詞 (C# 參考)
+title: static 修飾詞 - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - static
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: f07dfa1f4354f9aa132ad6b06f9f502f495cc5b1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 90b043fa13f1737db81518151daaeceabf930c5c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187045"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239146"
 ---
 # <a name="static-c-reference"></a>static (C# 參考)
 
@@ -51,7 +52,7 @@ Console.WriteLine(MyBaseC.MyStruct.x);
 
 ## <a name="example"></a>範例
 
-這個範例會讀取新員工的名稱和識別碼，並將員工計數器遞加一，然後顯示新員工和新員工人數的資訊。 為求簡單，此程式會從鍵盤讀取目前的員工人數。 在實際的應用程式中，應該從檔案讀取此資訊。
+這個範例會讀取新員工的名稱和識別碼，並將員工計數器遞加一，然後顯示新員工和新員工人數的資訊。 為求簡單，此程式會從鍵盤讀取目前的員工人數。 在實際的應用程式中，應該從檔案讀取這項資訊。
 
 [!code-csharp[csrefKeywordsModifiers#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#20)]  
 

@@ -1,17 +1,18 @@
 ---
-title: 如何：明確實作介面成員 (C# 程式設計手冊)
+title: HOW TO：明確實作介面成員 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 30ea58b7ef3edd757c450b9fca1cc810ff9d17c1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 11ef4eb3e4da0166ae4753b8028edb217f2a487e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861019"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236924"
 ---
-# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>如何：明確實作介面成員 (C# 程式設計手冊)
+# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>HOW TO：明確實作介面成員 (C# 程式設計指南)
 這個範例會宣告[介面](../../../csharp/language-reference/keywords/interface.md) (`IDimensions`) 和類別 (`Box`)，它會明確實作介面成員 `getLength` 和 `getWidth`。 成員是透過介面執行個體 `dimensions` 存取。  
   
 ## <a name="example"></a>範例  

@@ -1,5 +1,6 @@
 ---
-title: 格式化數值結果表 (C# 參考)
+title: 格式化數值結果表 - C# 參考
+ms.custom: seodec18
 description: 深入了解 C# 標準數值格式字串
 ms.date: 09/20/2018
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 6f1cb5b49139cf9661e678cfc0ecc884a2749622
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 12fe89e3aa63e9d3d8c3f102fe5a01a5f2225375
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "47863698"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239965"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>格式化數值結果表 (C# 參考)
 
 下表顯示用來格式化數值結果的支援格式規範。 最後一個資料行中的格式化結果會對應至 "en-US" <xref:System.Globalization.CultureInfo>。
 
-|格式規範|描述|範例|結果|  
+|格式規範|說明|範例|結果|  
 |----------------------|-----------------|--------------|------------|  
 |C 或 c|貨幣|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
 |D 或 d|Decimal|`string s = $"{25:D5}";`|00025|  

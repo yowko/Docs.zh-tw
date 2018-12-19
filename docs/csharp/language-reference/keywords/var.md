@@ -1,5 +1,6 @@
 ---
-title: var (C# 參考)
+title: var - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - var
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
-ms.openlocfilehash: ab49a4f4fcbc990a1fd21139397d70fa9fbf5dd8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f0e8b0e416cb32a57a83224ab6627c9ad520ec80
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088059"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240212"
 ---
 # <a name="var-c-reference"></a>var (C# 參考)
 從 Visual C# 3.0 開始，在方法範圍內宣告的變數可以使用隱含的「類型」`var`。 隱含型別區域變數如同您自己宣告的類型一樣是強型別，但是編譯器會判斷類型。 下列兩個 `i` 宣告的功能相同：  

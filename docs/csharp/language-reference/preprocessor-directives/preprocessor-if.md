@@ -1,21 +1,22 @@
 ---
-title: '#if 前置處理器指示詞 (C# 參考)'
+title: '#if 前置處理器指示詞 - C# 參考'
+ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: c54a1fe0dba5f6d57b03b2ffeb4f1737fadfe039
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: df1b26b0e06d4fff81627ec633ce97f9d6ca036f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510228"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239627"
 ---
 # <a name="if-c-reference"></a>#if (C# 參考)
 
-當 C# 編譯器遇到 `#if` 指示詞，且其後接著 [#endif](preprocessor-endif.md) 指示詞時，只有在定義了指定的符號時，它才會編譯指示詞之間的程式碼。 不同於 C 和 C++，您無法將數值指派給符號。 C# 中的 #if 陳述式是布林值，且只測試是否已經定義符號。 例如: 
+當 C# 編譯器遇到 `#if` 指示詞，且其後接著 [#endif](preprocessor-endif.md) 指示詞時，只有在定義了指定的符號時，它才會編譯指示詞之間的程式碼。 不同於 C 和 C++，您無法將數值指派給符號。 C# 中的 #if 陳述式是布林值，且只測試是否已經定義符號。 例如：
 
 ```csharp
 #if DEBUG

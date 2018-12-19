@@ -1,18 +1,19 @@
 ---
-title: 如何：將位元組陣列轉換成整數 (C# 程式設計手冊)
+title: HOW TO：將位元組陣列轉換成整數 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 0da6cbc6967f5e495bacfb9e032a403b4a39791b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5688e71c49309c3f879eda4fd6df8ba75b327426
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43741756"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241518"
 ---
-# <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>如何：將位元組陣列轉換成整數 (C# 程式設計手冊)
+# <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>HOW TO：將位元組陣列轉換成整數 (C# 程式設計指南)
 本例示範如何使用 <xref:System.BitConverter> 類別將位元組陣列轉換成 [int](../../../csharp/language-reference/keywords/int.md)，再回復成位元組陣列。 例如，在讀取網路位元組後，您可能必須從位元組轉換成內建資料類型。 除了範例中的 [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) 方法外，下表會列出 <xref:System.BitConverter> 類別中可將位元組轉換成其他內建類型的方法。  
   
 |傳回的類型|方法|  

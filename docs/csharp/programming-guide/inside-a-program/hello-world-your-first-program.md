@@ -1,5 +1,6 @@
 ---
-title: Hello World -- 您的第一個程式 (C# 程式設計手冊)
+title: Hello World -- 您的第一個程式 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.program
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 40c869d267dcabf4bd209b2ee86085f899a93231
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45593041"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236384"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一個程式 (C# 程式設計手冊)
 下列程序會建立 C# 版本的傳統 "Hello World!" 程式。 此程式會顯示字串 `Hello World!`  
@@ -42,7 +43,7 @@ ms.locfileid: "45593041"
   
      [!code-csharp[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
-7.  選擇 F5 鍵執行執行專案。 包含 `Hello World!` 一行的命令提示字元視窗隨即出現  
+7.  選擇 F5 鍵以執行專案。 包含 `Hello World!` 一行的命令提示字元視窗隨即出現  
   
  接下來，會檢查此程式的重要部分。  
   
@@ -78,7 +79,7 @@ ms.locfileid: "45593041"
   
  `Main` 方法的參數 `args`，是包含用來叫用程式的命令列引數的 `string` 陣列。 不像在 C++ 中，陣列不包含可執行檔 (exe) 的檔案名稱。  
   
- 如需如何使用命令列引數的詳細資訊，請參閱 [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)以及[如何：使用命令列建立和使用組件](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
+ 如需如何使用命令列引數的詳細資訊，請參閱 [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)和[如何：使用命令列建立和使用組件](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
  在 `Main` 方法的結尾呼叫 <xref:System.Console.ReadKey%2A>，可讓您在按下 F5 以於偵錯模式中執行程式時，防止主控台視窗在您有機會讀取輸出之前關閉。  
   

@@ -1,15 +1,16 @@
 ---
-title: 泛型方法 (C# 程式設計手冊)
+title: 泛型方法 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: c6846b28813273cf99334b0427e304651e4cf5ee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 28ce14eca4398a359061a54b7c6cc74ed69b87b1
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187162"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244813"
 ---
 # <a name="generic-methods-c-programming-guide"></a>泛型方法 (C# 程式設計手冊)
 泛型方法是使用型別參數宣告的方法，如下所示：  

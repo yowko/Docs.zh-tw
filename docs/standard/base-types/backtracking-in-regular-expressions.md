@@ -1,5 +1,6 @@
 ---
-title: 規則運算式中的回溯
+title: .NET 規則運算式中的回溯
+description: 了解如何控制回溯規則運算式模式比對。
 ms.date: 11/12/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,12 +19,13 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 343249f5411d4e5c2335446e7c892b989c8033f2
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.custom: seodec18
+ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297346"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130087"
 ---
 # <a name="backtracking-in-regular-expressions"></a>規則運算式中的回溯
 <a name="top"></a> 回溯 (Backtracking) 會在規則運算式模式包含選擇性的 [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)，且規則運算式引擎返回之前儲存的狀態繼續搜尋相符項目時發生。 回溯是規則運算式的核心能力，可讓運算式功能強大且靈活，並且比對非常複雜的模式。 但同時，這項強大功能需付出相當的代價。 回溯經常是影響規則運算式引擎之效能最重要的一項因素。 幸好開發人員能夠掌控規則運算式引擎的行為，以及其使用回溯的方式。 本主題將說明回溯運作的方式，以及如何進行控制。  
@@ -162,7 +164,7 @@ ms.locfileid: "52297346"
   
  第一個規則運算式模式 `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`^`|從字串的開頭開始比對。|  
 |`[0-9A-Z]`|比對英數字元。 這項比較不區分大小寫，因為 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 選項呼叫。|  
@@ -173,7 +175,7 @@ ms.locfileid: "52297346"
   
  第二個規則運算式模式 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`使用左合樣判斷提示。 其定義方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`^`|從字串的開頭開始比對。|  
 |`[0-9A-Z]`|比對英數字元。 這項比較不區分大小寫，因為 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 選項呼叫。|  
@@ -194,7 +196,7 @@ ms.locfileid: "52297346"
   
  第一個規則運算式模式 `^(([A-Z]\w*)+\.)*[A-Z]\w*$`的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`^`|從字串的開頭開始比對。|  
 |`([A-Z]\w*)+\.`|比對後面接著零個或多個文字字元的字母字元 (A-Z) 一次或多次，後面接著句號。 這項比較不區分大小寫，因為 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 選項呼叫。|  
@@ -204,7 +206,7 @@ ms.locfileid: "52297346"
   
  第二個規則運算式模式 `^((?=[A-Z])\w+\.)*[A-Z]\w*$`使用右合樣判斷提示。 其定義方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`^`|從字串的開頭開始比對。|  
 |`(?=[A-Z])`|如果是字母 (A-Z)，則向右合樣至第一個字元並繼續比對。 這項比較不區分大小寫，因為 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 選項呼叫。|  
