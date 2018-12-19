@@ -1,5 +1,6 @@
 ---
-title: '&lt;typeparamref&gt; (C# 程式設計手冊)'
+title: '&lt;typeparamref&gt; - C# 程式設計指南'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - typeparamref
@@ -7,35 +8,35 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: c14b3f788c474f2e345f8325d45b942d0f3008da
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bbe9bed5a32e463424b98f4066e95374401931e2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530152"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243916"
 ---
-# <a name="lttypeparamrefgt-c-programming-guide"></a><span data-ttu-id="4a038-102">&lt;typeparamref&gt; (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="4a038-102">&lt;typeparamref&gt; (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="4a038-103">語法</span><span class="sxs-lookup"><span data-stu-id="4a038-103">Syntax</span></span>  
+# <a name="lttypeparamrefgt-c-programming-guide"></a><span data-ttu-id="b1b70-102">&lt;typeparamref&gt; (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="b1b70-102">&lt;typeparamref&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="b1b70-103">語法</span><span class="sxs-lookup"><span data-stu-id="b1b70-103">Syntax</span></span>  
   
 ```xml  
 <typeparamref name="name"/>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4a038-104">參數</span><span class="sxs-lookup"><span data-stu-id="4a038-104">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b1b70-104">參數</span><span class="sxs-lookup"><span data-stu-id="b1b70-104">Parameters</span></span>  
  `name`  
- <span data-ttu-id="4a038-105">型別參數的名稱。</span><span class="sxs-lookup"><span data-stu-id="4a038-105">The name of the type parameter.</span></span> <span data-ttu-id="4a038-106">以雙引號 (" ") 括住名稱。</span><span class="sxs-lookup"><span data-stu-id="4a038-106">Enclose the name in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="b1b70-105">型別參數的名稱。</span><span class="sxs-lookup"><span data-stu-id="b1b70-105">The name of the type parameter.</span></span> <span data-ttu-id="b1b70-106">以雙引號 (" ") 括住名稱。</span><span class="sxs-lookup"><span data-stu-id="b1b70-106">Enclose the name in double quotation marks (" ").</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4a038-107">備註</span><span class="sxs-lookup"><span data-stu-id="4a038-107">Remarks</span></span>  
- <span data-ttu-id="4a038-108">如需泛型型別和方法中型別參數的詳細資訊，請參閱[泛型](../../../csharp/programming-guide/generics/index.md)。</span><span class="sxs-lookup"><span data-stu-id="4a038-108">For more information on type parameters in generic types and methods, see [Generics](../../../csharp/programming-guide/generics/index.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b1b70-107">備註</span><span class="sxs-lookup"><span data-stu-id="b1b70-107">Remarks</span></span>  
+ <span data-ttu-id="b1b70-108">如需泛型型別和方法中型別參數的詳細資訊，請參閱[泛型](../../../csharp/programming-guide/generics/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b1b70-108">For more information on type parameters in generic types and methods, see [Generics](../../../csharp/programming-guide/generics/index.md).</span></span>  
   
- <span data-ttu-id="4a038-109">使用這個標記，讓文件檔案的取用者以某種明顯方式格式化單字，例如斜體。</span><span class="sxs-lookup"><span data-stu-id="4a038-109">Use this tag to enable consumers of the documentation file to format the word in some distinct way, for example in italics.</span></span>  
+ <span data-ttu-id="b1b70-109">使用這個標記，讓文件檔案的取用者以某種明顯方式格式化單字，例如斜體。</span><span class="sxs-lookup"><span data-stu-id="b1b70-109">Use this tag to enable consumers of the documentation file to format the word in some distinct way, for example in italics.</span></span>  
   
- <span data-ttu-id="4a038-110">編譯搭配 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。</span><span class="sxs-lookup"><span data-stu-id="4a038-110">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="b1b70-110">編譯搭配 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。</span><span class="sxs-lookup"><span data-stu-id="b1b70-110">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4a038-111">範例</span><span class="sxs-lookup"><span data-stu-id="4a038-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b1b70-111">範例</span><span class="sxs-lookup"><span data-stu-id="b1b70-111">Example</span></span>  
  [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparamref_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="4a038-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="4a038-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1b70-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="b1b70-112">See Also</span></span>
 
-- [<span data-ttu-id="4a038-113">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="4a038-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="4a038-114">建議使用的文件註解標籤</span><span class="sxs-lookup"><span data-stu-id="4a038-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="b1b70-113">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="b1b70-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="b1b70-114">建議使用的文件註解標籤</span><span class="sxs-lookup"><span data-stu-id="b1b70-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

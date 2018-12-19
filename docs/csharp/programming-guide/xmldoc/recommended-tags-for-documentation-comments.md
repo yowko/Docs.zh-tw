@@ -1,49 +1,50 @@
 ---
-title: 建議使用的文件註解標籤 (C# 程式設計手冊)
+title: 建議使用的文件註解標籤 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: ef7ba44c0c3a8c660df9627361eb1cabdd9098a0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fb4d8d4dde38d7cbe1b0434c290dd922b2e328a3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43741942"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245583"
 ---
-# <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a><span data-ttu-id="5da47-102">建議使用的文件註解標籤 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="5da47-102">Recommended Tags for Documentation Comments (C# Programming Guide)</span></span>
-<span data-ttu-id="5da47-103">C# 編譯器會處理程式碼中的文件註解，並將其在 **/doc** 命令列選項中指定其名稱的檔案中格式化為 XML。</span><span class="sxs-lookup"><span data-stu-id="5da47-103">The C# compiler processes documentation comments in your code and formats them as XML in a file whose name you specify in the **/doc** command-line option.</span></span> <span data-ttu-id="5da47-104">若要依據編譯器產生的檔案來建立最終文件，您可以建立自訂工具，或者是使用 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類工具。</span><span class="sxs-lookup"><span data-stu-id="5da47-104">To create the final documentation based on the compiler-generated file, you can create a custom tool, or use a tool such as [Sandcastle](https://github.com/EWSoftware/SHFB).</span></span>  
+# <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a><span data-ttu-id="5341a-102">建議使用的文件註解標籤 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="5341a-102">Recommended Tags for Documentation Comments (C# Programming Guide)</span></span>
+<span data-ttu-id="5341a-103">C# 編譯器會處理程式碼中的文件註解，並將其在 **/doc** 命令列選項中指定其名稱的檔案中格式化為 XML。</span><span class="sxs-lookup"><span data-stu-id="5341a-103">The C# compiler processes documentation comments in your code and formats them as XML in a file whose name you specify in the **/doc** command-line option.</span></span> <span data-ttu-id="5341a-104">若要依據編譯器產生的檔案來建立最終文件，您可以建立自訂工具，或者是使用 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類工具。</span><span class="sxs-lookup"><span data-stu-id="5341a-104">To create the final documentation based on the compiler-generated file, you can create a custom tool, or use a tool such as [Sandcastle](https://github.com/EWSoftware/SHFB).</span></span>  
   
- <span data-ttu-id="5da47-105">標記是在類型和類型成員這類程式碼建構上處理。</span><span class="sxs-lookup"><span data-stu-id="5da47-105">Tags are processed on code constructs such as types and type members.</span></span>  
+ <span data-ttu-id="5341a-105">標記是在類型和類型成員這類程式碼建構上處理。</span><span class="sxs-lookup"><span data-stu-id="5341a-105">Tags are processed on code constructs such as types and type members.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5da47-106">文件註解不能套用至命名空間。</span><span class="sxs-lookup"><span data-stu-id="5da47-106">Documentation comments cannot be applied to a namespace.</span></span>  
+>  <span data-ttu-id="5341a-106">文件註解不能套用至命名空間。</span><span class="sxs-lookup"><span data-stu-id="5341a-106">Documentation comments cannot be applied to a namespace.</span></span>  
   
- <span data-ttu-id="5da47-107">編譯器會處理任何為有效 XML 的標記。</span><span class="sxs-lookup"><span data-stu-id="5da47-107">The compiler will process any tag that is valid XML.</span></span> <span data-ttu-id="5da47-108">下列標記提供使用者文件中的常用功能。</span><span class="sxs-lookup"><span data-stu-id="5da47-108">The following tags provide generally used functionality in user documentation.</span></span>  
+ <span data-ttu-id="5341a-107">編譯器會處理任何為有效 XML 的標記。</span><span class="sxs-lookup"><span data-stu-id="5341a-107">The compiler will process any tag that is valid XML.</span></span> <span data-ttu-id="5341a-108">下列標記提供使用者文件中的常用功能。</span><span class="sxs-lookup"><span data-stu-id="5341a-108">The following tags provide generally used functionality in user documentation.</span></span>  
   
-## <a name="tags"></a><span data-ttu-id="5da47-109">Tags</span><span class="sxs-lookup"><span data-stu-id="5da47-109">Tags</span></span>  
+## <a name="tags"></a><span data-ttu-id="5341a-109">Tags</span><span class="sxs-lookup"><span data-stu-id="5341a-109">Tags</span></span>  
   
 ||||  
 |---|---|---|  
-|[<span data-ttu-id="5da47-110">\<c></span><span class="sxs-lookup"><span data-stu-id="5da47-110">\<c></span></span>](../../../csharp/programming-guide/xmldoc/code-inline.md)|[<span data-ttu-id="5da47-111">\<para></span><span class="sxs-lookup"><span data-stu-id="5da47-111">\<para></span></span>](../../../csharp/programming-guide/xmldoc/para.md)|<span data-ttu-id="5da47-112">[\<see>](../../../csharp/programming-guide/xmldoc/see.md)\*</span><span class="sxs-lookup"><span data-stu-id="5da47-112">[\<see>](../../../csharp/programming-guide/xmldoc/see.md)\*</span></span>|  
-|[<span data-ttu-id="5da47-113">\<code></span><span class="sxs-lookup"><span data-stu-id="5da47-113">\<code></span></span>](../../../csharp/programming-guide/xmldoc/code.md)|<span data-ttu-id="5da47-114">[\<param>](../../../csharp/programming-guide/xmldoc/param.md)\*</span><span class="sxs-lookup"><span data-stu-id="5da47-114">[\<param>](../../../csharp/programming-guide/xmldoc/param.md)\*</span></span>|<span data-ttu-id="5da47-115">[\<seealso>](../../../csharp/programming-guide/xmldoc/seealso.md)\*</span><span class="sxs-lookup"><span data-stu-id="5da47-115">[\<seealso>](../../../csharp/programming-guide/xmldoc/seealso.md)\*</span></span>|  
-|[<span data-ttu-id="5da47-116">\<example></span><span class="sxs-lookup"><span data-stu-id="5da47-116">\<example></span></span>](../../../csharp/programming-guide/xmldoc/example.md)|[<span data-ttu-id="5da47-117">\<paramref></span><span class="sxs-lookup"><span data-stu-id="5da47-117">\<paramref></span></span>](../../../csharp/programming-guide/xmldoc/paramref.md)|[<span data-ttu-id="5da47-118">\<summary></span><span class="sxs-lookup"><span data-stu-id="5da47-118">\<summary></span></span>](../../../csharp/programming-guide/xmldoc/summary.md)|  
-|<span data-ttu-id="5da47-119">[\<exception>](../../../csharp/programming-guide/xmldoc/exception.md)\*</span><span class="sxs-lookup"><span data-stu-id="5da47-119">[\<exception>](../../../csharp/programming-guide/xmldoc/exception.md)\*</span></span>|<span data-ttu-id="5da47-120">[\<permission>](../../../csharp/programming-guide/xmldoc/permission.md)\*</span><span class="sxs-lookup"><span data-stu-id="5da47-120">[\<permission>](../../../csharp/programming-guide/xmldoc/permission.md)\*</span></span>|<span data-ttu-id="5da47-121">[\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)\*</span><span class="sxs-lookup"><span data-stu-id="5da47-121">[\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)\*</span></span>|  
-|<span data-ttu-id="5da47-122">[\<include>](../../../csharp/programming-guide/xmldoc/include.md)\*</span><span class="sxs-lookup"><span data-stu-id="5da47-122">[\<include>](../../../csharp/programming-guide/xmldoc/include.md)\*</span></span>|[<span data-ttu-id="5da47-123">\<remarks></span><span class="sxs-lookup"><span data-stu-id="5da47-123">\<remarks></span></span>](../../../csharp/programming-guide/xmldoc/remarks.md)|[<span data-ttu-id="5da47-124">\<typeparamref></span><span class="sxs-lookup"><span data-stu-id="5da47-124">\<typeparamref></span></span>](../../../csharp/programming-guide/xmldoc/typeparamref.md)|  
-|[<span data-ttu-id="5da47-125">\<list></span><span class="sxs-lookup"><span data-stu-id="5da47-125">\<list></span></span>](../../../csharp/programming-guide/xmldoc/list.md)|[<span data-ttu-id="5da47-126">\<returns></span><span class="sxs-lookup"><span data-stu-id="5da47-126">\<returns></span></span>](../../../csharp/programming-guide/xmldoc/returns.md)|[<span data-ttu-id="5da47-127">\<value></span><span class="sxs-lookup"><span data-stu-id="5da47-127">\<value></span></span>](../../../csharp/programming-guide/xmldoc/value.md)|  
+|[<span data-ttu-id="5341a-110">\<c></span><span class="sxs-lookup"><span data-stu-id="5341a-110">\<c></span></span>](../../../csharp/programming-guide/xmldoc/code-inline.md)|[<span data-ttu-id="5341a-111">\<para></span><span class="sxs-lookup"><span data-stu-id="5341a-111">\<para></span></span>](../../../csharp/programming-guide/xmldoc/para.md)|<span data-ttu-id="5341a-112">[\<see>](../../../csharp/programming-guide/xmldoc/see.md)\*</span><span class="sxs-lookup"><span data-stu-id="5341a-112">[\<see>](../../../csharp/programming-guide/xmldoc/see.md)\*</span></span>|  
+|[<span data-ttu-id="5341a-113">\<code></span><span class="sxs-lookup"><span data-stu-id="5341a-113">\<code></span></span>](../../../csharp/programming-guide/xmldoc/code.md)|<span data-ttu-id="5341a-114">[\<param>](../../../csharp/programming-guide/xmldoc/param.md)\*</span><span class="sxs-lookup"><span data-stu-id="5341a-114">[\<param>](../../../csharp/programming-guide/xmldoc/param.md)\*</span></span>|<span data-ttu-id="5341a-115">[\<seealso>](../../../csharp/programming-guide/xmldoc/seealso.md)\*</span><span class="sxs-lookup"><span data-stu-id="5341a-115">[\<seealso>](../../../csharp/programming-guide/xmldoc/seealso.md)\*</span></span>|  
+|[<span data-ttu-id="5341a-116">\<example></span><span class="sxs-lookup"><span data-stu-id="5341a-116">\<example></span></span>](../../../csharp/programming-guide/xmldoc/example.md)|[<span data-ttu-id="5341a-117">\<paramref></span><span class="sxs-lookup"><span data-stu-id="5341a-117">\<paramref></span></span>](../../../csharp/programming-guide/xmldoc/paramref.md)|[<span data-ttu-id="5341a-118">\<summary></span><span class="sxs-lookup"><span data-stu-id="5341a-118">\<summary></span></span>](../../../csharp/programming-guide/xmldoc/summary.md)|  
+|<span data-ttu-id="5341a-119">[\<exception>](../../../csharp/programming-guide/xmldoc/exception.md)\*</span><span class="sxs-lookup"><span data-stu-id="5341a-119">[\<exception>](../../../csharp/programming-guide/xmldoc/exception.md)\*</span></span>|<span data-ttu-id="5341a-120">[\<permission>](../../../csharp/programming-guide/xmldoc/permission.md)\*</span><span class="sxs-lookup"><span data-stu-id="5341a-120">[\<permission>](../../../csharp/programming-guide/xmldoc/permission.md)\*</span></span>|<span data-ttu-id="5341a-121">[\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)\*</span><span class="sxs-lookup"><span data-stu-id="5341a-121">[\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)\*</span></span>|  
+|<span data-ttu-id="5341a-122">[\<include>](../../../csharp/programming-guide/xmldoc/include.md)\*</span><span class="sxs-lookup"><span data-stu-id="5341a-122">[\<include>](../../../csharp/programming-guide/xmldoc/include.md)\*</span></span>|[<span data-ttu-id="5341a-123">\<remarks></span><span class="sxs-lookup"><span data-stu-id="5341a-123">\<remarks></span></span>](../../../csharp/programming-guide/xmldoc/remarks.md)|[<span data-ttu-id="5341a-124">\<typeparamref></span><span class="sxs-lookup"><span data-stu-id="5341a-124">\<typeparamref></span></span>](../../../csharp/programming-guide/xmldoc/typeparamref.md)|  
+|[<span data-ttu-id="5341a-125">\<list></span><span class="sxs-lookup"><span data-stu-id="5341a-125">\<list></span></span>](../../../csharp/programming-guide/xmldoc/list.md)|[<span data-ttu-id="5341a-126">\<returns></span><span class="sxs-lookup"><span data-stu-id="5341a-126">\<returns></span></span>](../../../csharp/programming-guide/xmldoc/returns.md)|[<span data-ttu-id="5341a-127">\<value></span><span class="sxs-lookup"><span data-stu-id="5341a-127">\<value></span></span>](../../../csharp/programming-guide/xmldoc/value.md)|  
   
- <span data-ttu-id="5da47-128">(\* 表示編譯器會驗證語法。)</span><span class="sxs-lookup"><span data-stu-id="5da47-128">(\* denotes that the compiler verifies syntax.)</span></span>  
+ <span data-ttu-id="5341a-128">(\* 表示編譯器會驗證語法。)</span><span class="sxs-lookup"><span data-stu-id="5341a-128">(\* denotes that the compiler verifies syntax.)</span></span>  
   
- <span data-ttu-id="5da47-129">如果您想要括弧出現在文件註解文字中，請使用 `<` 和 `>`，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="5da47-129">If you want angle brackets to appear in the text of a documentation comment, use `<` and `>`, as shown in the following example.</span></span>  
+ <span data-ttu-id="5341a-129">如果您想要括弧出現在文件註解文字中，請使用 `<` 和 `>`，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="5341a-129">If you want angle brackets to appear in the text of a documentation comment, use `<` and `>`, as shown in the following example.</span></span>  
   
 ```xml  
 /// <summary cref="C < T >">  
 /// </summary>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5da47-130">請參閱</span><span class="sxs-lookup"><span data-stu-id="5da47-130">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5341a-130">請參閱</span><span class="sxs-lookup"><span data-stu-id="5341a-130">See Also</span></span>
 
-- [<span data-ttu-id="5da47-131">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="5da47-131">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="5da47-132">/doc (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="5da47-132">/doc (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
-- [<span data-ttu-id="5da47-133">XML 文件註解</span><span class="sxs-lookup"><span data-stu-id="5da47-133">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [<span data-ttu-id="5341a-131">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="5341a-131">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="5341a-132">/doc (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="5341a-132">/doc (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [<span data-ttu-id="5341a-133">XML 文件註解</span><span class="sxs-lookup"><span data-stu-id="5341a-133">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

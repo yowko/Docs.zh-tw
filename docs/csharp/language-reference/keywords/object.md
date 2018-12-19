@@ -1,5 +1,6 @@
 ---
-title: object (C# 參考)
+title: object - C# 參考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - object_CSharpKeyword
@@ -7,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - object keyword [C#]
 ms.assetid: 93f60c0b-e17a-40a9-9362-cca5fb77b0e7
-ms.openlocfilehash: b36703828e6027a89297ac88edaf2b55ec18f42e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a1917a7925d4ed90ede40248fa394f9c45d09b4e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849891"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238960"
 ---
-# <a name="object-c-reference"></a><span data-ttu-id="5b801-102">object (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="5b801-102">object (C# Reference)</span></span>
+# <a name="object-c-reference"></a><span data-ttu-id="0e0e1-102">object (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="0e0e1-102">object (C# Reference)</span></span>
 
-<span data-ttu-id="5b801-103">`object` 類型是 <xref:System.Object> 在 .NET 中的別名。</span><span class="sxs-lookup"><span data-stu-id="5b801-103">The `object` type is an alias for <xref:System.Object> in .NET.</span></span> <span data-ttu-id="5b801-104">在 C# 的統一型別系統中，所有類型 (預先定義和使用者定義的、參考型別和實值型別) 都會直接或間接繼承自 <xref:System.Object>。</span><span class="sxs-lookup"><span data-stu-id="5b801-104">In the unified type system of C#, all types, predefined and user-defined, reference types and value types, inherit directly or indirectly from <xref:System.Object>.</span></span> <span data-ttu-id="5b801-105">您可以將任何型別的值指派給 `object` 型別的變數。</span><span class="sxs-lookup"><span data-stu-id="5b801-105">You can assign values of any type to variables of type `object`.</span></span> <span data-ttu-id="5b801-106">當實值型別的變數轉換成物件時，即稱之為 *Boxed*。</span><span class="sxs-lookup"><span data-stu-id="5b801-106">When a variable of a value type is converted to object, it is said to be *boxed*.</span></span> <span data-ttu-id="5b801-107">當型別物件的變數轉換成實值型別時，即稱之為 *Unboxed*。</span><span class="sxs-lookup"><span data-stu-id="5b801-107">When a variable of type object is converted to a value type, it is said to be *unboxed*.</span></span> <span data-ttu-id="5b801-108">如需詳細資訊，請參閱 [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)。</span><span class="sxs-lookup"><span data-stu-id="5b801-108">For more information, see [Boxing and Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md).</span></span>
+<span data-ttu-id="0e0e1-103">`object` 類型是 <xref:System.Object> 在 .NET 中的別名。</span><span class="sxs-lookup"><span data-stu-id="0e0e1-103">The `object` type is an alias for <xref:System.Object> in .NET.</span></span> <span data-ttu-id="0e0e1-104">在 C# 的統一型別系統中，所有類型 (預先定義和使用者定義的、參考型別和實值型別) 都會直接或間接繼承自 <xref:System.Object>。</span><span class="sxs-lookup"><span data-stu-id="0e0e1-104">In the unified type system of C#, all types, predefined and user-defined, reference types and value types, inherit directly or indirectly from <xref:System.Object>.</span></span> <span data-ttu-id="0e0e1-105">您可以將任何型別的值指派給 `object` 型別的變數。</span><span class="sxs-lookup"><span data-stu-id="0e0e1-105">You can assign values of any type to variables of type `object`.</span></span> <span data-ttu-id="0e0e1-106">當實值型別的變數轉換成物件時，即稱之為 *Boxed*。</span><span class="sxs-lookup"><span data-stu-id="0e0e1-106">When a variable of a value type is converted to object, it is said to be *boxed*.</span></span> <span data-ttu-id="0e0e1-107">當型別物件的變數轉換成實值型別時，即稱之為 *Unboxed*。</span><span class="sxs-lookup"><span data-stu-id="0e0e1-107">When a variable of type object is converted to a value type, it is said to be *unboxed*.</span></span> <span data-ttu-id="0e0e1-108">如需詳細資訊，請參閱 [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)。</span><span class="sxs-lookup"><span data-stu-id="0e0e1-108">For more information, see [Boxing and Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="5b801-109">範例</span><span class="sxs-lookup"><span data-stu-id="5b801-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="0e0e1-109">範例</span><span class="sxs-lookup"><span data-stu-id="0e0e1-109">Example</span></span>
 
-<span data-ttu-id="5b801-110">以下範例示範 `object` 類型的變數如何接受任何資料類型的值，以及 `object` 類型的變數如何從 .NET Framework 對 <xref:System.Object> 使用方法。</span><span class="sxs-lookup"><span data-stu-id="5b801-110">The following sample shows how variables of type `object` can accept values of any data type and how variables of type `object` can use methods on <xref:System.Object> from the .NET Framework.</span></span>
+<span data-ttu-id="0e0e1-110">以下範例示範 `object` 類型的變數如何接受任何資料類型的值，以及 `object` 類型的變數如何從 .NET Framework 對 <xref:System.Object> 使用方法。</span><span class="sxs-lookup"><span data-stu-id="0e0e1-110">The following sample shows how variables of type `object` can accept values of any data type and how variables of type `object` can use methods on <xref:System.Object> from the .NET Framework.</span></span>
 
 [!code-csharp[csrefKeywordsTypes#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#16)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="5b801-111">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="5b801-111">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="0e0e1-111">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="0e0e1-111">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="5b801-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5b801-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0e0e1-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0e0e1-112">See also</span></span>
 
-- [<span data-ttu-id="5b801-113">C# 參考</span><span class="sxs-lookup"><span data-stu-id="5b801-113">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="5b801-114">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="5b801-114">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="5b801-115">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="5b801-115">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="5b801-116">參考型別</span><span class="sxs-lookup"><span data-stu-id="5b801-116">Reference Types</span></span>](reference-types.md)
-- [<span data-ttu-id="5b801-117">實值型別</span><span class="sxs-lookup"><span data-stu-id="5b801-117">Value Types</span></span>](value-types.md)
+- [<span data-ttu-id="0e0e1-113">C# 參考</span><span class="sxs-lookup"><span data-stu-id="0e0e1-113">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="0e0e1-114">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="0e0e1-114">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="0e0e1-115">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="0e0e1-115">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="0e0e1-116">參考型別</span><span class="sxs-lookup"><span data-stu-id="0e0e1-116">Reference Types</span></span>](reference-types.md)
+- [<span data-ttu-id="0e0e1-117">實值型別</span><span class="sxs-lookup"><span data-stu-id="0e0e1-117">Value Types</span></span>](value-types.md)
