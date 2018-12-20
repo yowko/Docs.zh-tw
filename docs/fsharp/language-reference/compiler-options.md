@@ -4,7 +4,7 @@ description: 使用F#編譯器的命令列選項，以控制編譯您F#應用程
 ms.date: 12/10/2018
 ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
 ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53170869"
@@ -25,7 +25,7 @@ ms.locfileid: "53170869"
 |`--baseaddress:address`|指定載入 DLL 時慣用的基底位址。<br /><br />這個編譯器選項相當於C#編譯器選項相同的名稱。 如需詳細資訊，請參閱 < [ &#47;a &#40;C&#35;編譯器選項&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx)。|
 |`--codepage:id`|指定如果必要的頁面不是系統目前的預設字碼頁，在編譯時使用的字碼頁。<br /><br />這個編譯器選項相當於C#編譯器選項相同的名稱。 如需詳細資訊，請參閱 < [&#47;字碼頁&#40;C&#35;編譯器選項&#41;](../../csharp/language-reference/compiler-options/codepage-compiler-option.md)。|
 |`--consolecolors`|指定的錯誤和警告以色彩標示的文字的主控台上使用。|
-|'-crossoptimize [+|-]`|啟用或停用跨模組最佳化。|
+|`--crossoptimize[+|-]`|啟用或停用跨模組最佳化。|
 |<code>--delaysign[+&#124;-]</code>|延遲簽署組件使用強式名稱金鑰的公開部分。<br /><br />這個編譯器選項相當於C#編譯器選項相同的名稱。 如需詳細資訊，請參閱 < [ &#47;delaysign &#40;C&#35;編譯器選項&#41;](https://msdn.microsoft.com/library/ta1sxwy8.aspx)。|
 |<code>--checked[+&#124;-]</code>|啟用或停用產生溢位檢查。<br /><br />這個編譯器選項相當於C#編譯器選項相同的名稱。 如需詳細資訊，請參閱 < [&#47;核取&#40;C&#35;編譯器選項&#41;](https://msdn.microsoft.com/library/h25wtyxf.aspx)。|
 |<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|啟用或停用產生偵錯的詳細資訊，或指定要產生的偵錯資訊類型。 預設值為 full，以便附加至執行中的程式。 選擇**pdbonly**取得儲存在 pdb （程式資料庫） 檔中的有限偵錯資訊。<br /><br />相當於C#編譯器選項相同的名稱。 如需詳細資訊，請參閱<br /><br />[&#47;偵錯&#40;C&#35;編譯器選項&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx)。|
