@@ -33,7 +33,7 @@ Copyright © 2018 by Microsoft Corporation
 
 此處所描述的一些範例僅供說明，純屬虛構。 任何實際關聯或連結純屬巧合。
 
-Microsoft 與列於 https://www.microsoft.com「商標」網頁的商標是 Microsoft 集團的商標。
+Microsoft 與列於 https://www.microsoft.com 「商標」網頁的商標是 Microsoft 集團的商標。
 
 Mac 與 macOS 是 Apple Inc. 的商標。
 
