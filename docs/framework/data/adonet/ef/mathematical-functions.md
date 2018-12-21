@@ -384,8 +384,8 @@ ms.locfileid: "53143671"
 
 如需 SqlClient 支援之數學函式的詳細資訊，請參閱 SqlClient 提供者資訊清單中所指定之 SQL Server 版本的說明文件：  
   
-**SQL Server 2005:**[數學函數 & Amp;#40;transact-SQL&AMP;#41](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
-**SQL Server 2008：**[數學函數 & Amp;#40;transact-SQL&AMP;#41](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
-**SQL Server 2012 和更新版本：**[數學函數 & Amp;#40;transact-SQL&AMP;#41](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+**SQL Server 2005:**[數學函數 (transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
+**SQL Server 2008：**[數學函數 (transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
+**SQL Server 2012 和更新版本：**[數學函數 (transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
  [適用於 Entity Framework 的 SqlClient 函式](sqlclient-for-ef-functions.md)
