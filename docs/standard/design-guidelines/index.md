@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
-ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2317ed0dbe8a6e69452ac0721ffed1b9da50a907
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147602"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396925"
 ---
 # <a name="framework-design-guidelines"></a>Framework 設計方針
 本章節提供指導方針來設計擴充並與其互動 .NET Framework 的程式庫。 目標是要協助確保 API 一致性和易用性，藉由提供統一的程式設計模型，用於開發的程式設計語言無關的程式庫設計人員。 我們建議您遵循這些設計指導方針，開發可擴充.NET Framework 的類別和元件時。 不一致的程式庫設計造成不良影響開發人員的生產力，並防止採用。  
@@ -42,7 +42,7 @@ ms.locfileid: "53147602"
  描述使用常見的類型，例如陣列、 屬性和集合、 支援序列化，以及多載等號比較運算子的指導方針。  
   
  [一般設計模式](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- 提供指導方針選擇並實作相依性屬性和處置模式。  
+ 提供指導方針選擇並實作相依性屬性。  
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   

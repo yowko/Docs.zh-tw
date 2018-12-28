@@ -1,17 +1,17 @@
 ---
 title: 停用 Visual Studio 中的 DPI 感知
 description: 討論在 HDPI 監視器上的 Windows Form 設計工具，以及如何執行 Visual Studio 做為 DPI 感知的處理序的限制。
-ms.date: 08/14/2018
+ms.date: 12/17/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 2d3466476c33a3e5faa8be96d63f1d11442c5d70
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151261"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655994"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>停用 Visual Studio 中的 DPI 感知
 
@@ -29,7 +29,7 @@ Visual Studio 是為 dots per inch (DPI) 感知應用程式，這表示顯示標
 
 訊息讀取**主顯示器上的縮放比例設為 200%(192 dpi)。設計師視窗中，這可能造成轉譯問題。**
 
-如果您不使用設計工具中，而且不需要調整表單的配置，您可以略過的資訊列，並繼續運作，在程式碼編輯器，或在其他類型的設計工具。 只有**Windows Form 設計工具**會受到影響。 如果您需要在中運作**Windows Form 設計工具**下, 一節可協助您[解決此問題](#to-resolve-the-problem)。
+如果您不使用設計工具中，而且不需要調整表單的配置，您可以略過的資訊列，並繼續運作，在程式碼編輯器，或在其他類型的設計工具。 (您也可以[停用通知](#disable-notifications)這樣的資訊列不會持續顯示。)只有**Windows Form 設計工具**會受到影響。 如果您需要在中運作**Windows Form 設計工具**下, 一節可協助您[解決此問題](#to-resolve-the-problem)。
 
 ## <a name="to-resolve-the-problem"></a>若要解決此問題
 
@@ -68,6 +68,16 @@ Visual Studio 執行時做為 DPI 感知的處理序，設計工具的版面配�
 若要設定您 Windows 10 中的縮放比例設定為 100%的顯示，請輸入**顯示設定**在 [搜尋] 方塊中，然後選取工作列**變更顯示設定**。 在 **設定**視窗中，將**變更的文字、 應用程式和其他項目大小**來**100%**。
 
 設定您的顯示器設為 100%縮放比例可能不想要因為它可以讓使用者介面太小而無法使用。
+
+## <a name="disable-notifications"></a>停用通知
+
+您可以選擇不會收到通知的 DPI 縮放問題，在 Visual Studio 中。 您可能想要停用通知，如果您不在設計師中，例如。
+
+若要停用通知，請選擇**工具** > **選項**以開啟**選項**對話方塊。 然後選擇  **Windows Form 設計工具** > **一般**，並將**DPI 縮放比例通知**至**False**。
+
+![DPI 縮放比例通知選項，在 Visual Studio 中](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+
+如果您想要稍後重新啟用調整的通知，將屬性設定為 **，則為 True**。
 
 ## <a name="troubleshoot"></a>疑難排解
 

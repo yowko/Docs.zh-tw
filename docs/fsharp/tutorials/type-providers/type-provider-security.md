@@ -1,17 +1,17 @@
 ---
 title: 型別提供者安全性
-description: 了解 F#，包括如何變更型別提供者的信任設定中的型別提供者安全性。
+description: 深入了解中的型別提供者安全性F#，包括如何變更型別提供者的信任設定。
 ms.date: 05/16/2016
-ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861903"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611187"
 ---
 # <a name="type-provider-security"></a>型別提供者安全性
 
-型別提供者是組件 (Dll) 由您的 F# 專案或指令碼參考包含連接至外部資料來源，並呈現此類型資訊至 F# 類型環境的程式碼。 一般而言，當您編譯和接著執行程式碼 （或指令碼時，將程式碼傳送至 F# 互動） 時，是只執行參考組件中的程式碼。 不過，型別提供者組件會執行在 Visual Studio 中，當程式碼只是已在編輯器中瀏覽。 這是因為型別提供者需要執行額外的資訊，加入編輯器，例如 快速諮詢工具提示，IntelliSense 完成等等。 如此一來，有一些額外的安全性考量的型別提供者組件，因為它們會自動在 Visual Studio 處理序內執行。
+型別提供者是所參考組件 (Dll) 您F#專案或指令碼包含連接至外部資料來源，並呈現此型別資訊的程式碼F#類型的環境。 一般而言，參考組件中的程式碼才會執行當您編譯和接著執行程式碼 (或在指令碼的情況下傳送的程式碼F#互動式)。 不過，型別提供者組件會執行在 Visual Studio 中，當程式碼只是已在編輯器中瀏覽。 這是因為型別提供者需要執行額外的資訊，加入編輯器，例如 快速諮詢工具提示，IntelliSense 完成等等。 如此一來，有一些額外的安全性考量的型別提供者組件，因為它們會自動在 Visual Studio 處理序內執行。
 
 ## <a name="security-warning-dialog"></a>安全性警告對話方塊
 

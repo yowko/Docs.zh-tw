@@ -1,13 +1,13 @@
 ---
-title: 編譯器選項 (F#)
+title: 編譯器選項
 description: 使用F#編譯器的命令列選項，以控制編譯您F#應用程式和程式庫。
 ms.date: 12/10/2018
-ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
+ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170869"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614489"
 ---
 # <a name="compiler-options"></a>編譯器選項
 
@@ -67,10 +67,9 @@ ms.locfileid: "53170869"
 |`--warnon:warning-number-list`|啟用可能預設為關閉，或另一個命令列選項停用特定警告。 在F#3.0 中，只有 1182 （未使用的變數） 警告預設為關閉。|
 |<code>--warnaserror[+&#124;-] [warning-number-list]</code>|啟用或停用警告報告為錯誤的選項。 您可以提供特定的警告編號，以停用或啟用。 稍後的命令列選項覆寫稍早在命令列中的選項。 例如，若要指定您不想回報為錯誤的警告，指定`--warnaserror+` `--warnaserror-:warning-number-list`。<br /><br />這個編譯器選項相當於C#編譯器選項相同的名稱。 如需詳細資訊，請參閱 < [ &#47;/warnaserror &#40;C&#35;編譯器選項&#41;](https://msdn.microsoft.com/library/406xhdz3.aspx)。|
 |`--win32manifest:manifest-filename`|將 Win32 資訊清單檔加入至編譯。 這個編譯器選項相當於C#編譯器選項相同的名稱。 如需詳細資訊，請參閱 < [ &#47;win32manifest &#40;C&#35;編譯器選項&#41;](https://msdn.microsoft.com/library/bb545961.aspx)。|
-|`--win32res:resource-filename`|將 Win32 資源檔加入至編譯。<br /><br />這個編譯器選項相當於C#編譯器選項相同的名稱。 如需詳細資訊，請參閱 < [ &#47;win32res (&#40;c&#35);編譯器選項&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx)。|
+|`--win32res:resource-filename`|將 Win32 資源檔加入至編譯。<br /><br />這個編譯器選項相當於C#編譯器選項相同的名稱。 如需詳細資訊，請參閱 < [ &#47;win32res (&#40;C&#35;) 編譯器選項&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx)。|
 
 ## <a name="related-articles"></a>相關文章
-
 
 |標題|描述|
 |-----|-----------|
