@@ -1,13 +1,13 @@
 ---
-title: 簽章檔 （F#）
-description: 了解如何使用 F# 簽章檔案，以保存公開金鑰的簽章的相關資訊，例如類型、 命名空間和模組的 F# 程式項目，一組。
+title: 簽章檔案
+description: 了解如何使用F#來保存一組的公開金鑰的簽章的相關資訊的簽章檔案F#的程式項目，例如類型、 命名空間和模組。
 ms.date: 06/15/2018
-ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991229"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613410"
 ---
 # <a name="signatures"></a>簽章
 
@@ -29,6 +29,7 @@ ms.locfileid: "45991229"
 |---------|-----------|
 |`[<Sealed>]`|用於沒有任何抽象成員的類型，或不應該擴充的類型。|
 |`[<Interface>]`|用於介面類型。|
+
 如果實作檔案之簽章和宣告間的屬性不一致，編譯器就會發生錯誤。
 
 使用關鍵字 `val` 建立值或函式值的簽章。 關鍵字 `type` 引進類型簽章。

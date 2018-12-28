@@ -1,13 +1,13 @@
 ---
-title: 類型擴充 (F#)
-description: 了解 F# 類型擴充功能如何讓您將新成員加入先前定義的物件類型。
+title: 類型擴充
+description: 了解如何F#類型擴充功能可讓您將新成員加入先前定義的物件類型。
 ms.date: 07/20/2018
-ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43874975"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614046"
 ---
 # <a name="type-extensions"></a>類型擴充功能
 
@@ -127,7 +127,7 @@ type IEnumerable<'T> with
 
 ## <a name="extension-methods"></a>擴充方法
 
-最後，（有時稱為 「 C# 樣式擴充成員 」） 的擴充方法可以宣告在 F# 中為靜態成員方法的類別上。
+最後，擴充方法 (有時稱為 「C#樣式擴充成員 」) 可以宣告在F#如同類別的靜態成員方法。
 
 擴充方法可用於當您想要將會限制型別變數的泛型型別上定義擴充功能。 例如: 
 
@@ -163,7 +163,7 @@ type IEnumerableExtensions() =
 * 類型擴充功能不能定義於[類型縮寫](type-abbreviations.md)。
 * 類型擴充功能不一定適用於`byref<'T>`（不過它們可以宣告）。
 * 類型擴充功能不適用於屬性 （不過它們可以宣告）。
-* 您可以定義多載相同名稱的其他方法的擴充功能，但 F# 編譯器可讓非擴充方法的喜好設定時，不會模稜兩可的呼叫。
+* 您可以定義多載相同名稱的其他方法的擴充功能，但F#如果有模稜兩可的呼叫，編譯器會產生非擴充方法的喜好設定。
 
 最後，如果多個內建類型擴充功能有一種類型，所有成員必須都是唯一的。 對於選擇性類型擴充成相同類型的不同類型擴充中的成員可以有相同的名稱。 只有當用戶端程式碼會開啟兩個不同的領域，定義了相同成員名稱，則會發生模稜兩可錯誤。
 

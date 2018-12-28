@@ -1,14 +1,14 @@
 ---
-title: 複製和更新記錄運算式 （F#）
+title: 複製和更新記錄運算式
 description: 了解如何撰寫 '複製和更新記錄運算式'，複製現有的記錄，更新指定的欄位，並傳回更新的記錄。
 author: ChrSteinert
 ms.date: 06/04/2016
-ms.openlocfilehash: d2b089e8a7fc5c7ee26139003e23d2eaa8a3174e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 5f9b13ebf6c456aff73872b7522d7670c068dd88
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45990839"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613306"
 ---
 # <a name="copy-and-update-record-expressions"></a>複製和更新記錄運算式
 

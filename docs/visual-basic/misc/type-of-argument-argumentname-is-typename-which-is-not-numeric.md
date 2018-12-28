@@ -1,17 +1,17 @@
 ---
-title: 引數型別&#39;&lt;引數名稱&gt;&#39;是&#39; &lt;typename&gt;&#39;，不是數值
+title: 引數的類型 '&lt;argumentname&gt;'is'&lt;typename&gt;'，不是數字
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_NotNumericType2
 ms.assetid: 6eca32a6-9a44-4f05-8791-abdb4cb316d2
-ms.openlocfilehash: 887f2cc78e900b8ede93de8260b5fbd16ae4d37e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3dc902efc379d121395130b6a1aa59364ca1be04
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33639607"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53781228"
 ---
-# <a name="type-of-argument-39ltargumentnamegt39-is-39lttypenamegt39-which-is-not-numeric"></a>引數型別&#39;&lt;引數名稱&gt;&#39;是&#39; &lt;typename&gt;&#39;，不是數值
+# <a name="type-of-argument-ltargumentnamegt-is-lttypenamegt-which-is-not-numeric"></a>引數的類型 '&lt;argumentname&gt;'is'&lt;typename&gt;'，不是數字
 在必須要有數值引數的情況下，會發生非數值引數。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

@@ -1,17 +1,17 @@
 ---
-title: '&#39;StrConv.LinguisticCasing&#39;需要&#39;有 StrConv.LowerCase&#39;或&#39;StrConv.UpperCase&#39;'
+title: "'StrConv.LinguisticCasing' 必須有 'StrConv.Lowercase' 或 'StrConv.Uppercase'"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrLinguisticRequirements
 ms.assetid: 99cdb11d-9488-460b-84fb-a27f43da8be4
-ms.openlocfilehash: fc117c6b8993619e0610d5f51287e0fd0369729f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4ba166d499e722fcebba2a0f2d751bcfe2857304
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45741848"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53770542"
 ---
-# <a name="39strconvlinguisticcasing39-requires-39strconvlowercase39-or-39strconvuppercase39"></a>&#39;StrConv.LinguisticCasing&#39;需要&#39;有 StrConv.LowerCase&#39;或&#39;StrConv.UpperCase&#39;
+# <a name="strconvlinguisticcasing-requires-strconvlowercase-or-strconvuppercase"></a>'StrConv.LinguisticCasing' 必須有 'StrConv.Lowercase' 或 'StrConv.Uppercase'
 您嘗試使用 `StrConv.LinguisticCasing`，但這只適用於搭配 `StrConv.LowerCase` 或 `StrConv.UpperCase`。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

@@ -1,17 +1,17 @@
 ---
-title: 引數&#39;&lt;引數名稱&gt;&#39;無法轉換成輸入&#39;&lt;類型名稱&gt;&#39;
+title: 引數 '&lt;argumentname&gt;'無法轉換為類型'&lt;typename&gt;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidValueType2
 ms.assetid: 5b83a9cf-296b-479f-aa17-df655b8f51a0
-ms.openlocfilehash: cc1ca2a25deea48fe65540636549c1c23d30f93e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 770666462bba2a827fdfcce54cf16f03a08aa876
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599043"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53778979"
 ---
-# <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-type-39lttypenamegt39"></a>引數&#39;&lt;引數名稱&gt;&#39;無法轉換成輸入&#39;&lt;類型名稱&gt;&#39;
+# <a name="argument-ltargumentnamegt-cannot-be-converted-to-type-lttypenamegt"></a>引數 '&lt;argumentname&gt;'無法轉換為類型'&lt;typename&gt;'
 轉換會嘗試將引數變更成無效的類型。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
