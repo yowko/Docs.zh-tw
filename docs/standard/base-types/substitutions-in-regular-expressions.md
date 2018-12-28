@@ -23,7 +23,7 @@ ms.lasthandoff: 09/25/2018
 ms.locfileid: "47087326"
 ---
 # <a name="substitutions-in-regular-expressions"></a>在規則運算式中執行替代
-<a name="Top"></a> 替代是指只有在取代模式內才能辨識的語言項目。 這些項目使用規則運算式模式定義要取代輸入字串中相符文字的全部或部分文字。 取代模式可以包含一個或多個替代，以及常值字元。 取代模式會提供給具有 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 參數的 `replacement` 方法多載，以及提供給 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法。 這些方法會將符合的模式取代為 `replacement` 參數所定義的模式。  
+<a name="Top"></a> 替代是指只有在取代模式內才能辨識的語言項目。 這些項目使用規則運算式模式定義要取代輸入字串中相符文字的全部或部分文字。 取代模式可以包含一個或多個替代，以及常值字元。 取代模式會提供給具有 `replacement` 參數的 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法多載，以及提供給 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法。 這些方法會將符合的模式取代為 `replacement` 參數所定義的模式。  
   
  .NET Framework 會定義下表列出的替代項目。  
   
