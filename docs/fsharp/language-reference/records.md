@@ -1,17 +1,17 @@
 ---
-title: 資料錄 (F#)
-description: 了解 F# 記錄代表具名的值，並選擇性地使用成員的簡單彙總的方式。
+title: 資料錄
+description: 了解如何F#記錄代表具名的值，並選擇性地使用成員的簡單彙總。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48261286"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656137"
 ---
 # <a name="records"></a>資料錄
 
-記錄表示具名值的簡單彙總，並選擇性地搭配成員。  從 F# 4.1 開始，它們可以是結構或參考類型。  它們是預設的參考型別。
+記錄表示具名值的簡單彙總，並選擇性地搭配成員。  開頭為F#4.1，它們可以是結構或參考類型。  它們是預設的參考型別。
 
 ## <a name="syntax"></a>語法
 
@@ -89,6 +89,29 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 // and leave the rest with default values.
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
+
+## <a name="creating-mutually-recursive-records"></a>建立相互遞迴記錄
+
+一段時間建立時的記錄，您可以將它取決於您想要定義之後的另一個類型。 這是編譯錯誤，除非您定義要相互遞迴的記錄類型。
+
+使用者相互定義遞迴記錄利用`and`關鍵字。 這可讓您將 2 個或更多記錄類型連結在一起。
+
+例如，下列程式碼定義`Person`和`Address`相互遞迴類型：
+
+```fsharp
+// Create a Person type and use the Address type that is not defined
+type Person =
+  { Name: string
+    Age: int
+    Address: Address }
+// Define the Address type which is used in the Person record
+and Address =
+  { Line1: string
+    Line2: string
+    PostCode: string }
+```
+
+如果您要定義不含先前的範例`and`關鍵字，則不進行編譯。 `and`關鍵字是為了相互遞迴定義。
 
 ## <a name="pattern-matching-with-records"></a>模式比對與記錄
 

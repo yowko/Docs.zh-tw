@@ -1,13 +1,13 @@
 ---
-title: 例外狀況：raise 函式 (F#)
-description: 了解 F# 'raise' 函式用來指示已發生錯誤或例外狀況。
+title: 例外狀況：raise 函式
+description: 了解如何F#'raise' 函式用來表示已發生錯誤或例外狀況。
 ms.date: 05/16/2016
-ms.openlocfilehash: 537d274659d29404380bfdd56310ac267372bb98
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 87773ead7773c62a325c7e7ff105c729e10dd69c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43778255"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610147"
 ---
 # <a name="exceptions-the-raise-function"></a>例外狀況：raise 函式
 
@@ -37,7 +37,7 @@ raise (expression)
 
 - [例外狀況處理](index.md)
 - [例外狀況類型](exception-types.md)
-- [例外狀況：`try...with` 運算式](the-try-with-expression.md)
-- [例外狀況：`try...finally` 運算式](the-try-finally-expression.md)
-- [例外狀況：`failwith` 函式](the-failwith-function.md)
-- [例外狀況：`invalidArg` 函式](the-invalidArg-function.md)
+- [例外狀況：`try...with`運算式](the-try-with-expression.md)
+- [例外狀況：`try...finally`運算式](the-try-finally-expression.md)
+- [例外狀況：`failwith`函式](the-failwith-function.md)
+- [例外狀況：`invalidArg`函式](the-invalidArg-function.md)

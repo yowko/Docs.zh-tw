@@ -1,17 +1,17 @@
 ---
-title: 沒有預設成員找到型別的&#39;&lt;類型名稱&gt;&#39;
+title: 沒有預設成員找到類型 '&lt;typename&gt;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_NoDefaultMemberFound1
 ms.assetid: 1869ecb8-7c6a-422f-86ac-5da96c6adc66
-ms.openlocfilehash: 89d03a9c3aa760e4e9dd26ba652bf80437fb5152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5829476642573b8dc250a1e29b7a21471014e97
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33637500"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53770607"
 ---
-# <a name="no-default-member-found-for-type-39lttypenamegt39"></a>沒有預設成員找到型別的&#39;&lt;類型名稱&gt;&#39;
+# <a name="no-default-member-found-for-type-lttypenamegt"></a>沒有預設成員找到類型 '&lt;typename&gt;'
 已嘗試晚期繫結索引 `Get` 或 `Set` 呼叫。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

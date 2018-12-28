@@ -1,5 +1,5 @@
 ---
-title: 如何：建立 ListView 的自訂檢視模式
+title: HOW TO：建立 ListView 的自訂檢視模式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: 239fb2e9a364bd0265ff7cf644ee296878280cf3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d39f8829e7bdc89c05cda0f586298518908683f5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081804"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613020"
 ---
-# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>如何：建立 ListView 的自訂檢視模式
+# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>HOW TO：建立 ListView 的自訂檢視模式
 此範例示範如何建立自訂<xref:System.Windows.Controls.ListView.View%2A>模式<xref:System.Windows.Controls.ListView>控制項。  
   
 ## <a name="example"></a>範例  
@@ -40,7 +40,7 @@ ms.locfileid: "44081804"
  [!code-csharp[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml.cs#listviewtileviewmode)]
  [!code-vb[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/window1.xaml.vb#listviewtileviewmode)]  
   
- 如需完整的範例，請參閱[具有多個檢視範例的 ListView](https://go.microsoft.com/fwlink/?LinkID=160013)。  
+ 如需完整的範例，請參閱[具有多個檢視的 ListView (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp)或[與多個 Views(Visual Basic) ListView](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.ListView>  

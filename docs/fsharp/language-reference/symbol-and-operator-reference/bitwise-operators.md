@@ -1,21 +1,21 @@
 ---
-title: 位元運算子 (F#)
-description: 深入了解 F# 程式設計語言中可用的位元運算子。
+title: 位元運算子
+description: 深入了解可用於位元運算子F#程式設計語言。
 ms.date: 07/20/2018
-ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 01c68be485525b49eb3121dfaea6dce0adfe3972
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48581504"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611967"
 ---
 # <a name="bitwise-operators"></a>位元運算子
 
-本主題說明 F# 語言中可用的位元運算子。
+本主題說明中所提供的位元運算子F#語言。
 
 ## <a name="summary-of-bitwise-operators"></a>位元運算子的摘要
 
-下表描述支援 F# 語言中的 unboxed 整數類資料類型的位元運算子。
+下表描述中的 unboxed 整數類資料類型都支援的位元運算子F#語言。
 
 |運算子|注意|
 |--------|-----|

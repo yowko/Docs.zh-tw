@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e5e33cd3d250b26f0a83a87c4f7ce438af22e96
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d4189efbab9bfc85b6a992934604d5071a767163
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745886"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612539"
 ---
 # <a name="ltdisablefusionupdatesfromadmanagergt-element"></a>&lt;disableFusionUpdatesFromADManager&gt;項目
 指定是否停用預設行為 (亦即允許執行階段主機覆寫應用程式網域的組態設定)。  
   
- \<設定 > 項目  
-\<runtime > 項目  
+ \<組態 > 項目  
+\<執行階段 > 項目  
 \<disableFusionUpdatesFromADManager >  
   
 ## <a name="syntax"></a>語法  
@@ -34,16 +34,16 @@ ms.locfileid: "32745886"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|enabled|必要屬性。<br /><br /> 指定是否要停用覆寫融合設定的預設功能。|  
+|enabled|必要屬性。<br /><br /> 指定是否要停用覆寫 Fusion 設定的預設功能。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|0|請勿停用覆寫融合設定的功能。 這是預設行為，開頭[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]。|  
-|1|停用覆寫融合設定的功能。 這會還原為舊版.NET Framework 的行為。|  
+|0|請勿停用覆寫 Fusion 設定的功能。 這是預設行為，從開始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]。|  
+|1|停用覆寫 Fusion 設定的功能。 這會還原為舊版.NET Framework 的行為。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -54,18 +54,18 @@ ms.locfileid: "32745886"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 從開始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，預設行為是允許<xref:System.AppDomainManager>物件來覆寫使用的組態設定<xref:System.AppDomainSetup.ConfigurationFile%2A>屬性或<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法<xref:System.AppDomainSetup>物件傳遞至您的實作<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>方法，在您的子類別<xref:System.AppDomainManager>。 預設應用程式定義域中，您所變更的設定覆寫應用程式組態檔所指定的設定。 其他應用程式定義域，它們會覆寫的組態設定，傳遞給<xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType>或<xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType>方法。  
+ 開頭[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，預設行為是允許<xref:System.AppDomainManager>覆寫組態設定所使用的物件<xref:System.AppDomainSetup.ConfigurationFile%2A>屬性或有<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法<xref:System.AppDomainSetup>物件會傳遞至您的實作，<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>方法，在您的子類別的<xref:System.AppDomainManager>。 針對預設應用程式定義域中，您所變更的設定覆寫所指定的應用程式組態檔的設定。 其他應用程式定義域中，它們會覆寫的組態設定，已傳遞給<xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType>或<xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType>方法。  
   
- 您可以傳遞新組態資訊，或傳遞 null (`Nothing`在 Visual Basic 中) 若要消除傳入的組態資訊。  
+ 您可以將新的組態資訊傳遞，或傳遞 null (`Nothing` Visual Basic 中) 以消除傳入的組態資訊。  
   
- 不要將組態資訊傳遞給兩者<xref:System.AppDomainSetup.ConfigurationFile%2A>屬性和<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法。 如果您同時將組態資訊，資訊您傳遞給<xref:System.AppDomainSetup.ConfigurationFile%2A>屬性會被忽略，因為<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法會覆寫來自應用程式組態檔的組態資訊。 如果您使用<xref:System.AppDomainSetup.ConfigurationFile%2A>屬性，您可以將傳遞 null (`Nothing`在 Visual Basic 中) 以<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法，以排除指定的呼叫中的任何組態位元組<xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType>或<xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType>方法。  
+ 請勿將組態資訊傳遞至兩者<xref:System.AppDomainSetup.ConfigurationFile%2A>屬性和<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法。 如果您將組態資訊傳遞給兩者時，資訊您傳遞給<xref:System.AppDomainSetup.ConfigurationFile%2A>屬性會被忽略，因為<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法會覆寫來自應用程式組態檔的組態資訊。 如果您使用<xref:System.AppDomainSetup.ConfigurationFile%2A>屬性，您可以將傳遞 null (`Nothing` Visual Basic 中) 要<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法，以排除指定的呼叫中的任何組態位元組<xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType>或<xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType>方法。  
   
- 除了設定資訊，您可以變更下列設定<xref:System.AppDomainSetup>物件傳遞至您的實作<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>方法： <xref:System.AppDomainSetup.ApplicationBase%2A>， <xref:System.AppDomainSetup.ApplicationName%2A>， <xref:System.AppDomainSetup.CachePath%2A>， <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>， <xref:System.AppDomainSetup.DisallowBindingRedirects%2A><xref:System.AppDomainSetup.DisallowCodeDownload%2A>， <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>， <xref:System.AppDomainSetup.DynamicBase%2A>， <xref:System.AppDomainSetup.LoaderOptimization%2A>， <xref:System.AppDomainSetup.PrivateBinPath%2A>， <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>， <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>，和<xref:System.AppDomainSetup.ShadowCopyFiles%2A>。  
+ 除了組態資訊，您可以變更下列設定，在<xref:System.AppDomainSetup>傳遞至您實作的物件<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>方法： <xref:System.AppDomainSetup.ApplicationBase%2A>， <xref:System.AppDomainSetup.ApplicationName%2A>， <xref:System.AppDomainSetup.CachePath%2A>， <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>， <xref:System.AppDomainSetup.DisallowBindingRedirects%2A><xref:System.AppDomainSetup.DisallowCodeDownload%2A>， <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>， <xref:System.AppDomainSetup.DynamicBase%2A>， <xref:System.AppDomainSetup.LoaderOptimization%2A>， <xref:System.AppDomainSetup.PrivateBinPath%2A>， <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>， <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>，以及<xref:System.AppDomainSetup.ShadowCopyFiles%2A>。  
   
- 做為使用替代`<disableFusionUpdatesFromADManager>`項目，您可以停用的預設行為建立登錄設定，或設定環境變數。 在登錄中，建立名為的 DWORD 值`COMPLUS_disableFusionUpdatesFromADManager`下`HKCU\Software\Microsoft\.NETFramework`或`HKLM\Software\Microsoft\.NETFramework`，並將值設定為 1。 在命令列中，設定環境變數`COMPLUS_disableFusionUpdatesFromADManager`設為 1。  
+ 若要使用替代`<disableFusionUpdatesFromADManager>`項目，您可以停用的預設行為所建立的登錄設定，或藉由設定環境變數。 在登錄中，建立名為 DWORD 值`COMPLUS_disableFusionUpdatesFromADManager`底下`HKCU\Software\Microsoft\.NETFramework`或`HKLM\Software\Microsoft\.NETFramework`，並將值設定為 1。 在命令列設定環境變數`COMPLUS_disableFusionUpdatesFromADManager`為 1。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何停用的功能使用覆寫融合設定`<disableFusionUpdatesFromADManager>`項目。  
+ 下列範例示範如何停用的功能使用覆寫 Fusion 設定`<disableFusionUpdatesFromADManager>`項目。  
   
 ```xml  
 <configuration>  
@@ -76,6 +76,6 @@ ms.locfileid: "32745886"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

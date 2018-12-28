@@ -1,16 +1,17 @@
 ---
-title: 方法&#39; &lt;methodname&gt; &#39;沒有名稱為參數&#39;&lt;參數名稱&gt;&#39;
+title: 方法 '&lt;methodname&gt;'具有名為無參數'&lt;parametername&gt;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidNamedArg2
 ms.assetid: b4346b6a-87da-4e65-a2de-ee5239c671f8
-ms.openlocfilehash: 5174f1a7b80c2bab0f3bd54ff088595eaf96308b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fa231f21953adc102a58322e3e5f535db16ea69
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53761039"
 ---
-# <a name="method-39ltmethodnamegt39-has-no-parameter-named-39ltparameternamegt39"></a>方法&#39; &lt;methodname&gt; &#39;沒有名稱為參數&#39;&lt;參數名稱&gt;&#39;
+# <a name="method-ltmethodnamegt-has-no-parameter-named-ltparameternamegt"></a>方法 '&lt;methodname&gt;'具有名為無參數'&lt;parametername&gt;'
 提供的具名引數不符合目標方法的任何引數。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

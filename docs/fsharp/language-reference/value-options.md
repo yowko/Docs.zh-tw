@@ -1,22 +1,22 @@
 ---
-title: 值的選項 （F#）
-description: 深入了解 F# 值選項類型，也就是結構類型版本的選項。
+title: 值的選項
+description: 深入了解F#值的選項類型，這是結構類型版本的選項。
 ms.date: 06/16/2018
-ms.openlocfilehash: 978bd1713c16f7c050ccb097cb134973d10ef6f5
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: d5209e620d53e12e9344faea09321f640af21491
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50185832"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613423"
 ---
 # <a name="value-options"></a>值的選項
 
-在下列兩種情況下保存時，會使用 F# 中的值選項類型：
+中的值選項類型F#在下列兩種情況下保存時，會使用：
 
-1. 案例是適用於[F# 選項](options.md)。
+1. 案例是適用於[ F#  選項](options.md)。
 2. 使用結構可提供效能優勢，在您的案例。
 
-並非所有效能敏感的狀況下會 「 都解決 」 使用結構。 您必須考慮複製時使用它們，而不參考類型的額外成本。 不過，大型的 F# 程式通常具現化許多選擇性類型流經忙碌的路徑，因為結構有時可以產生更好的整體效能程式存留期。
+並非所有效能敏感的狀況下會 「 都解決 」 使用結構。 您必須考慮複製時使用它們，而不參考類型的額外成本。 不過，大型F#程式通常具現化許多選擇性類型流經忙碌的路徑，因為結構有時可以產生更好的整體效能，程式的存留期。
 
 ## <a name="definition"></a>定義
 

@@ -1,21 +1,21 @@
 ---
-title: 自動產生 (F#)
-description: 了解如何 F# 自動一般化的引數和類型的函式，讓它們能夠具有多個類型，可能的話。
+title: 自動一般化
+description: 了解如何F#，讓它們能夠具有多個類型，可能的話，會自動一般化的引數和類型的函式。
 ms.date: 05/16/2016
-ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43855773"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611707"
 ---
 # <a name="automatic-generalization"></a>自動一般化
 
-F# 使用類型推斷來評估函式和運算式的類型。 本主題描述如何 F# 自動一般化的引數和類型的函式，讓它們能夠具有多個類型如果這麼做。
+F#使用型別推斷，來評估函式和運算式的類型。 本主題描述如何F#，讓它們能夠具有多個類型時，這會自動一般化的引數和類型的函式。
 
 ## <a name="automatic-generalization"></a>自動一般化
 
-F# 編譯器，函式上執行型別推斷時決定是否指定的參數可以是泛型。 編譯器會檢查每個參數，並判斷函數是否有該參數的特定類型的相依性。 如果不存在，會推斷型別為泛型。
+F#編譯器，函式上執行型別推斷時決定是否指定的參數可以是泛型。 編譯器會檢查每個參數，並判斷函數是否有該參數的特定類型的相依性。 如果不存在，會推斷型別為泛型。
 
 下列程式碼範例會說明編譯器會推斷為泛型的函式。
 
@@ -58,7 +58,7 @@ let biggestIntFloat = max 2.0 3
 
 - 下列程式碼範例將說明每個案例。
 
-案例 1： 太複雜的運算式。 在此範例中，清單`counter`就是要`int option ref`，但它並未定義為簡單的不可變值。
+案例 1:運算式太複雜。 在此範例中，清單`counter`就是要`int option ref`，但它並未定義為簡單的不可變值。
 
 ```fsharp
 let counter = ref None
@@ -66,7 +66,7 @@ let counter = ref None
 let counter : int option ref = ref None
 ```
 
-案例 2： 使用 nongeneralizable 建構來定義的泛型函式。 在此範例中，建構會是 nongeneralizable，因為它牽涉到部分套用函式引數。
+案例 2:您可以使用 nongeneralizable 建構，定義的泛型函式。 在此範例中，建構會是 nongeneralizable，因為它牽涉到部分套用函式引數。
 
 ```fsharp
 let maxhash = max << hash
@@ -74,7 +74,7 @@ let maxhash = max << hash
 let maxhash obj = (max << hash) obj
 ```
 
-案例 3： 新增額外的、 未使用的參數。 因為此運算式不是簡單的一般化，編譯器會發出值限制的錯誤。
+案例 3:新增額外的、 未使用的參數。 因為此運算式不是簡單的一般化，編譯器會發出值限制的錯誤。
 
 ```fsharp
 let emptyList10 = Array.create 10 []
@@ -82,7 +82,7 @@ let emptyList10 = Array.create 10 []
 let emptyList10 () = Array.create 10 []
 ```
 
-案例 4： 加入型別參數。
+案例 4:加入類型參數。
 
 ```fsharp
 let arrayOf10Lists = Array.create 10 []

@@ -1,5 +1,5 @@
 ---
-title: 很抱歉，我們不&#39;此 Visual Basic 錯誤沒有詳細資料
+title: 很抱歉，我們沒有此 Visual Basic 錯誤的相關細節
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30234
@@ -3044,14 +3044,14 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: e3d3ac14c51ef5665aba0879a85e03e662174e68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a3af5e519b263b5b151640ac9c3d0576905eddb9
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192781"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53781735"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>很抱歉，我們不&#39;此 Visual Basic 錯誤沒有詳細資料
+# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>很抱歉，我們沒有此 Visual Basic 錯誤的相關細節
 很抱歉，我們沒有任何有關此錯誤的特定資訊。 您可以搜尋錯誤號碼與訊息文字，以在網路上尋找資訊。 或者，您可以要求其他開發人員使用這些論壇的其中一個：  
   
  [Visual Basic 語言](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  

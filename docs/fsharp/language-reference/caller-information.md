@@ -1,13 +1,13 @@
 ---
-title: 呼叫端資訊 （F#）
+title: 呼叫端資訊
 description: 描述如何使用呼叫端資訊引數屬性來取得方法的呼叫端資訊。
 ms.date: 04/25/2017
-ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9c6b2a92a15e12d016a153b401f166c8fd1efe93
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47216366"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613813"
 ---
 # <a name="caller-information"></a>呼叫端資訊
 
@@ -72,6 +72,6 @@ type Tracer() =
 
 ## <a name="see-also"></a>另請參閱
 
-- [屬性](attributes.md)  
-- [具名引數](parameters-and-arguments.md#named-arguments)  
-- [選擇性參數](parameters-and-arguments.md#optional-parameters)  
+- [屬性](attributes.md)
+- [具名引數](parameters-and-arguments.md#named-arguments)
+- [選擇性參數](parameters-and-arguments.md#optional-parameters)

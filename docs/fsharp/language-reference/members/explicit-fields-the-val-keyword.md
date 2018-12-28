@@ -1,15 +1,15 @@
 ---
-title: 明確欄位：val 關鍵字 (F#)
-description: 深入了解 F# 'val' 關鍵字，用來宣告類別或結構類型中儲存的值，而不會初始化類型的位置。
+title: 明確欄位：Val 關鍵字
+description: 深入了解F#'val' 關鍵字，用來宣告類別或結構類型中儲存的值，而不會初始化類型的位置。
 ms.date: 05/16/2016
-ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45746359"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773623"
 ---
-# <a name="explicit-fields-the-val-keyword"></a>明確欄位：val 關鍵字
+# <a name="explicit-fields-the-val-keyword"></a>明確欄位：Val 關鍵字
 
 `val` 關鍵字用來宣告位置以儲存類別中或結構類型中的值，但不初始化。 這種方式宣告的儲存體位置稱為*明確欄位*。 `val` 關鍵字的另一種用法是搭配 `member` 關鍵字來宣告自動實作的屬性。 如需有關自動實作屬性的詳細資訊，請參閱[屬性](properties.md)。
 
@@ -64,6 +64,10 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 
 輸出為 `11 xyz`。
+
+**請注意**，如果您要初始化您的結構與`mutable`而不需要欄位`mutable`關鍵字，您指派可在一份結構將會被捨棄之後指派, 上運作。 因此不會變更您的結構。
+
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
 平常不適合使用明確欄位。 一般而言，可能的話，應該在類別中使用 `let` 繫結，而不是明確欄位。 在某些互通性案例中，例如您需要定義結構供平台叫用呼叫原生 API，或在 COM interop 案例中，明確欄位很有用。 如需詳細資訊，請參閱 <<c0> [ 外部函式](../functions/external-functions.md)。 另一種情況是您使用 F# 程式碼產生器來產生沒有主要建構函式的類別，這時也可能需要明確欄位。 對於執行緒靜態變數或類似的建構，明確欄位也很有用。 如需詳細資訊，請參閱`System.ThreadStaticAttribute`。
 
