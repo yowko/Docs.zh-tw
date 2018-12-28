@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8c73f1a4373583530d5afde113c5c4ec049bcea4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195888"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613514"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 本文針對大型 .NET Framework 應用程式或處理大量資料 (例如檔案或資料庫) 的應用程式，提供可提升其效能的提示。 這些提示來自於以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，本文包含數個 C# 編譯器的實際範例。 
@@ -28,20 +28,20 @@ ms.locfileid: "50195888"
 ## <a name="just-the-facts"></a>認清事實  
  調整效能和建立回應能力佳的 .NET Framework 應用程式時，請考慮下列幾點事實。 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>事實 1：不要太早進行最佳化  
+### <a name="fact-1-dont-prematurely-optimize"></a>事實 1:不要太早進行最佳化  
  撰寫比所需還要複雜的程式碼，會產生維護、偵錯和修改成本。 有經驗的程式設計人員直覺便知道如何解決程式碼問題，以及如何撰寫更有效率的程式碼。 不過，他們有時會太早最佳化程式碼。 例如，他們可能會在簡單陣列便已足夠的情況下，使用雜湊資料表；或者使用可能會造成記憶體流失的複雜快取，而不直接重新計算值。 即使您是有經驗的程式設計人員，仍應測試效能，並在發現問題時分析程式碼。 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>事實 2：未經測量，不過是臆測  
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>事實 2:如果未經測量，不過臆測  
  程式碼剖析和測量資料不會說謊。 程式碼剖析顯示 CPU 是否滿載，或者磁碟 I/O 是否發生封鎖的情況。 程式碼剖析告訴您目前配置的記憶體類型和數量，以及您的 CPU 是否花很多時間在[記憶體回收](../../../docs/standard/garbage-collection/index.md) (GC)。 
   
  您應該為應用程式中的關鍵客戶體驗或案例設定效能目標，並撰寫測試以測量效能。 應用科學方法來調查失敗的測試：使用程式碼剖析來引導您、假設可能的問題，以及透過實驗或變更程式碼來測試您的假設。 透過定期測試建立一段時間的基準效能測量資料，以便您隔離出導致效能降低的變更。 當您以嚴謹的方式來處理效能工作時，便可避免浪費時間在不必要的程式碼更新。 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>事實 3：使用良好工具的成果大不相同  
+### <a name="fact-3-good-tools-make-all-the-difference"></a>事實 3:好的工具可讓所有的差異  
  良好工具可讓您快速鑽研最大的效能問題 (CPU、記憶體或磁碟)，並協助您找出導致這些瓶頸的程式碼。 Microsoft 提供各種效能工具，例如 [Visual Studio 程式碼剖析工具](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone 分析工具](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)和 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。 
   
  PerfView 是非常強大的免費工具，可協助您專注於深入的問題，例如磁碟 I/O、GC 事件和記憶體。 您可以擷取與效能相關的 [Windows 事件追蹤](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) 事件，並輕鬆檢視每種應用程式、處理序、堆疊和執行緒的資訊。 PerfView 顯示您的應用程式配置的記憶體數量和類型，以及哪些函式或呼叫堆疊佔用了多少記憶體配置。 如需詳細資訊，請參閱工具隨附的豐富說明主題、示範和影片 (例如 Channel 9 上的 [PerfView Tutorial](https://channel9.msdn.com/Series/PerfView-Tutorial) (PerfView 教學課程)。 
   
-### <a name="fact-4-its-all-about-allocations"></a>事實 4：重點在於配置  
+### <a name="fact-4-its-all-about-allocations"></a>事實 4:它是重點在於配置  
  您可能會認為建置回應能力佳的 .NET Framework 應用程式的重點在於演算法，例如使用快速排序取代反昇排序，但實際上卻不然。 配置記憶體才是建置回應能力佳的應用程式的最大要素，特別是當您的應用程式很龐大或處理大量資料時。 
   
  使用新編譯器應用程式開發介面建置回應能力佳的 IDE 體驗的幾乎所有工作，都與避免配置和管理快取策略相關。 PerfView 追蹤顯示新的 C# 和 Visual Basic 編譯器的效能很少佔用龐大的 CPU 資源。 當編譯器讀取數十萬或數百萬行程式碼、讀取中繼資料或發出產生的程式碼時，可能會受限於 I/O。 UI 執行緒延遲幾乎全部都是由於記憶體回收所造成。 .NET Framework GC 為了效能而高度調整，並在應用程式的程式碼執行同時執行大部分的工作。 但是，單一配置可能會觸發耗費大量資源的[gen2](../../../docs/standard/garbage-collection/fundamentals.md) 收集，並停止所有執行緒。 
@@ -197,7 +197,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
   
  `WriteFormattedDocComment()` 的第一個版本已配置一個陣列、數個子字串、經修剪的子字串，以及空的 `params` 陣列。 它也會檢查"/ / 」。 修訂過的程式碼只會使用索引，而不會進行任何配置。 它會找到第一個字元不是空白字元，並接著會逐字元檢查以查看是否以"/ / 」 開頭的字串。 新的程式碼會使用`IndexOfFirstNonWhiteSpaceChar`而不是<xref:System.String.TrimStart%2A>後，傳回第一個索引 （指定的起始索引） 發生非空格字元。 此修正並不完整，不過您可以查看如何套用類似的修正以取得完整的解決方法。 您可以在整個程式碼中應用此方法，來移除 `WriteFormattedDocComment()` 中的所有配置。 
   
- **範例 4：StringBuilder**  
+ **範例 4︰StringBuilder**  
   
  此範例使用 <xref:System.Text.StringBuilder> 物件。 下列函式會為泛型類型產生完整的類型名稱：  
   
@@ -278,7 +278,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
 ### <a name="linq-and-lambdas"></a>LINQ 和 Lambdas  
 Language Integrated Query (LINQ)，搭配使用 lambda 運算式是產能功能的範例。 不過，它的使用可能會對經過一段時間，效能的重大的影響，而且您可能會發現您需要重寫程式碼。
   
- **範例 5：Lambdas、List\<T> 和 IEnumerable\<T>**  
+ **範例 5:清單的 lambda\<T >，和 IEnumerable\<T >**  
   
  這個範例會使用 [LINQ 和功能樣式程式碼](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx)來找出編譯器模型中的符號，並指定名稱字串：  
   
@@ -361,7 +361,8 @@ public Symbol FindMatchingSymbol(string name)
  此程式碼不使用 LINQ 擴充方法、Lambdas 或列舉值，並且不會造成配置。 由於編譯器會將 `symbols` 集合視為 <xref:System.Collections.Generic.List%601>，並且可以將列舉值 (結構) 繫結至具有正確類型的區域變數，以避免 Boxing，因此不會有配置。 此函式的原始版本即為展示 C# 能力和 .NET Framework 生產力的絕佳範例。 此新的和更有效率的版本會保留這些品質，但不會加入要維護的任何複雜程式碼。 
   
 ### <a name="async-method-caching"></a>非同步方法快取  
- 下一個範例顯示當您嘗試在[非同步](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)方法中使用快取的結果時，所發生的常見問題。 
+
+下一個範例顯示當您嘗試在[非同步](../../csharp/programming-guide/concepts/async/index.md)方法中使用快取的結果時，所發生的常見問題。
   
  **範例 6：在非同步方法中快取**  
   

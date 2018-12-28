@@ -1,5 +1,5 @@
 ---
-title: '&lt;bypassTrustedAppStrongNames&gt;項目'
+title: '&lt;Bypasstrustedappstrongnames>&gt;項目'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - strong-name bypass feature
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6988be28e3129748ee7f7996a66c728ccde3c70b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 59fe6beb359575c818131e1ae502fdebcec5096c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745379"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613748"
 ---
-# <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;bypassTrustedAppStrongNames&gt;項目
-指定是否略過強式名稱的完全信任組件載入至完全信任的驗證<xref:System.AppDomain>。  
+# <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;Bypasstrustedappstrongnames>&gt;項目
+指定是否略過載入至完全信任的完全信任組件的強式名稱的驗證<xref:System.AppDomain>。  
   
  \<configuration>  
 \<執行階段 >  
-\<bypassTrustedAppStrongNames >  
+\<Bypasstrustedappstrongnames> >  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +37,16 @@ ms.locfileid: "32745379"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指定是否啟用不驗證完全信任組件的強式名稱略過功能。 啟用這項功能時，強式名稱不會驗證正確載入組件時。 預設值為 `true`。|  
+|`enabled`|必要屬性。<br /><br /> 指定是否啟用可避免驗證完全信任組件的強式名稱略過功能。 啟用這項功能時，強式名稱不會驗證正確載入的組件時。 預設為 `true`。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`true`|載入至完全信任組件時，不會驗證完整信任組件的強式名稱簽章<xref:System.AppDomain>。 這是預設值。|  
-|`false`|在完全信任組件的強式名稱簽章會驗證載入至完全信任組件時<xref:System.AppDomain>。 強式名稱簽章只會檢查簽章正確。它不會與另一個的強式名稱的相符項目。|  
+|`true`|載入至完全信任組件時，不會驗證在完全信任組件的強式名稱簽章<xref:System.AppDomain>。 這是預設值。|  
+|`false`|在完全信任組件的強式名稱簽章會驗證載入至完全信任組件時<xref:System.AppDomain>。 強式名稱簽章只會檢查簽章正確性;它不是相較於另一個比對的強式名稱。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -57,11 +57,11 @@ ms.locfileid: "32745379"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 強式名稱略過功能可以避免完全信任組件的強式名稱簽章驗證的額外負荷。  
+ 強式名稱略過功能可避免完全信任組件的強式名稱簽章驗證的額外負荷。  
   
  略過功能適用於任何以強式名稱簽署並具有下列特性的組件：  
   
--   不完全受信任<xref:System.Security.Policy.StrongName>辨識項 (例如，具有`MyComputer`區域辨識項)。  
+-   而不需要完全信任<xref:System.Security.Policy.StrongName>辨識項 (例如，具有`MyComputer`區域辨識項)。  
   
 -   載入到完全信任的 <xref:System.AppDomain>。  
   
@@ -70,10 +70,10 @@ ms.locfileid: "32745379"
 -   不延遲簽署。  
   
 > [!NOTE]
->  如果略過功能已關閉的電腦上的所有應用程式使用的登錄機碼，此組態檔設定沒有任何作用。 如需詳細資訊，請參閱[如何： 停用強式名稱略過功能](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
+>  如果略過功能已關閉的電腦上的所有應用程式所使用的登錄機碼，此組態檔設定沒有任何作用。 如需詳細資訊，請參閱[＜How to：停用強式名稱略過功能](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何指定會在完全信任組件的強式名稱簽章驗證的行為。  
+ 下列範例示範如何指定驗證完全信任組件的強式名稱簽章的行為。  
   
 ```xml  
 <configuration>  
@@ -84,6 +84,6 @@ ms.locfileid: "32745379"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [如何：停用強式名稱略過功能](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [如何：停用強式名稱略過功能](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

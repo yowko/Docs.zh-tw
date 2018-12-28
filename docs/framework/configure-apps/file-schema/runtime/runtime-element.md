@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: 5ab9fafeb6c836f1561752a8e2bdfddb97296399
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863620"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610668"
 ---
 # <a name="ltruntimegt-element"></a>&lt;執行階段&gt;項目
 提供 common language runtime 用來設定應用程式的資訊。  
@@ -92,5 +92,5 @@ ms.locfileid: "47863620"
  中的項目[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)區段將會自動讀取 common language runtime 在應用程式啟動。 您也可以藉由提供其名稱來定義的非預設應用程式定義域的組態檔<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>屬性，其設定讀取自動載入應用程式定義域的時機。 您應該很少，是否需要直接讀取中的設定[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)在您的應用程式組態檔中的區段。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

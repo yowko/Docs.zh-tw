@@ -1,5 +1,5 @@
 ---
-title: '&lt;gcAllowVeryLargeObjects&gt;項目'
+title: '&lt;Gcallowverylargeobjects>&gt;項目'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - gcAllowVeryLargeObjects element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 750b0dbc925ec484dd80e1796ba991435e354709
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5e0a443f86848a446a7233a2c2e80f693cae9be
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745223"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611408"
 ---
-# <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;gcAllowVeryLargeObjects&gt;項目
+# <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;Gcallowverylargeobjects>&gt;項目
 在 64 位元平台上，啟用總大小大於 2 GB 的陣列。  
   
- \<設定 > 項目  
-\<runtime > 項目  
-\<gcAllowVeryLargeObjects > 項目  
+ \<組態 > 項目  
+\<執行階段 > 項目  
+\<Gcallowverylargeobjects> > 項目  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,10 +41,10 @@ ms.locfileid: "32745223"
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|不會啟用大於 2 GB 的總大小的陣列。 這是預設值。|  
-|`true`|在 64 位元平台時啟用大於 2 GB 的總大小的陣列。|  
+|`false`|陣列大於 2 GB 的大小總計不會啟用。 這是預設值。|  
+|`true`|陣列大於 2 GB 的總大小是 64 位元平台上啟用。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -55,19 +55,19 @@ ms.locfileid: "32745223"
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 在應用程式組態檔中使用這個項目可讓陣列是大於 2 GB 的大小，但不會變更其他物件的大小或陣列大小的限制：  
+ 使用您的應用程式組態檔中此項目會啟用大於 2 GB 大小的陣列，但不會變更的物件大小或陣列大小的其他限制：  
   
--   陣列中元素的數目上限是<xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
+-   陣列中的項目數目上限是<xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
   
--   2,147,483,591 (0x7FFFFFC7) 的位元組陣列和陣列的單一位元組結構，而其他類型的 2,146,435,071 (0X7FEFFFFF) 中任何單一維度的最大索引。  
+-   2,147,483,591 (0x7FFFFFC7) 的位元組陣列與單一位元組結構的陣列和其他類型的 2,146,435,071 (0X7FEFFFFF) 中任何單一維度的最大的索引。  
   
 -   字串和其他非陣列物件的大小上限不會變更。  
   
 > [!CAUTION]
->  之前啟用此功能，請確定您的應用程式不包含假設所有陣列都都小於 2 GB 大小的 unsafe 程式碼。 例如，使用陣列做為緩衝區的 unsafe 程式碼可能容易受到緩衝區滿溢如果撰寫假設陣列將不會超過 2 GB。  
+>  之前啟用這項功能，請確定您的應用程式不包含不安全的程式碼假設所有陣列都是小於 2 GB 的大小。 例如，陣列做為緩衝區的 unsafe 程式碼可能容易發生緩衝區溢位如果寫入假設陣列不會超過 2 GB。  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何為應用程式啟用此功能。  
+ 下列範例示範如何啟用此功能的應用程式。  
   
 ```xml  
 <configuration>  
@@ -78,5 +78,5 @@ ms.locfileid: "32745223"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

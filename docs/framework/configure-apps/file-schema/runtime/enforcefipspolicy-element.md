@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9040bf2548964cf6df5f4fd87ee9f6d979c7df1e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0bffe72a4bcadb4a36a9ac54263d55e242ffc4d4
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746211"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612006"
 ---
 # <a name="ltenforcefipspolicygt-element"></a>&lt;enforceFIPSPolicy&gt;項目
 指定是否強制執行電腦設定需求，以便讓密碼編譯演算法符合美國聯邦資訊處理標準 (FIPS) 的規範。  
   
- \<設定 > 項目  
-\<runtime > 項目  
+ \<組態 > 項目  
+\<執行階段 > 項目  
 \<enforceFIPSPolicy > 項目  
   
 ## <a name="syntax"></a>語法  
@@ -36,16 +36,16 @@ ms.locfileid: "32746211"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|enabled|必要屬性。<br /><br /> 指定是否要啟用 強制執行密碼編譯演算法必須與 FIPS 相容的電腦設定需求。|  
+|enabled|必要屬性。<br /><br /> 指定是否要啟用 強制執行密碼編譯演算法必須是符合 FIPS 規範的電腦設定需求。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`true`|如果您的電腦設定為需要與 FIPS 相容的密碼編譯演算法時，會強制執行這項需求。 如果類別實作的演算法不會符合 FIPS，建構函式或`Create`該電腦上執行時，該類別的方法擲回例外狀況。 這是預設值。|  
-|`false`|密碼編譯演算法所使用的應用程式不一定要符合 FIPS，不論電腦組態。|  
+|`true`|如果您的電腦設定為需要與 FIPS 相容的密碼編譯演算法，會強制執行這項需求。 如果類別實作不符合 FIPS，建構函式是演算法或`Create`在該電腦上執行時，該類別的方法擲回例外狀況。 這是預設值。|  
+|`false`|密碼編譯演算法所使用的應用程式不一定要符合 FIPS 規範，不論電腦設定。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -56,12 +56,12 @@ ms.locfileid: "32746211"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 從.NET Framework 2.0 開始，實作密碼編譯演算法之類別的建立是由電腦的設定所控制。 如果電腦已設定為需要演算法，以符合 FIPS，類別會實作與 FIPS 不相容的演算法，任何嘗試建立該類別的執行個體就會擲回例外狀況。 建構函式會擲回<xref:System.InvalidOperationException>例外狀況，以及`Create`方法會擲回<xref:System.Reflection.TargetInvocationException>例外狀況，並傳回內部<xref:System.InvalidOperationException>例外狀況。  
+ 從.NET Framework 2.0 開始，實作密碼編譯演算法之類別的建立是由電腦的設定所控制。 如果電腦已設定為需要演算法，以符合 FIPS，類別會實作不會符合 FIPS 規範的演算法，任何嘗試建立該類別的執行個體就會擲回例外狀況。 建構函式會擲回<xref:System.InvalidOperationException>例外狀況，並`Create`方法會擲回<xref:System.Reflection.TargetInvocationException>例外狀況，並傳回內部<xref:System.InvalidOperationException>例外狀況。  
   
- 如果您的應用程式在其設定，都需要使用 FIPS，相容性的電腦上執行您的應用程式會使用與 FIPS 不相容的演算法，您可以防止 common language runtime (CLR) 來自組態檔中使用這個項目強制使用 FIPS 相容性。 中引進這個項目[!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)]。  
+ 如果您的應用程式在其組態需要 fips，合規性的電腦上執行您的應用程式會使用與 FIPS 不相容的演算法，您可以使用您的組態檔的這個項目以防止從的 common language runtime (CLR)強制執行的 FIPS 合規性。 這個項目中導入[!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)]。  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何防止 CLR 強制使用 FIPS 相容性。  
+ 下列範例示範如何防止 CLR 強制 FIPS 合規性。  
   
 ```xml  
 <configuration>  
@@ -72,6 +72,6 @@ ms.locfileid: "32746211"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [加密模型](../../../../../docs/standard/security/cryptography-model.md)
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [加密模型](../../../../../docs/standard/security/cryptography-model.md)

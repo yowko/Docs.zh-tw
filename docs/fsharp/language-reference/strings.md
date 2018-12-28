@@ -1,13 +1,13 @@
 ---
-title: 字串 (F#)
+title: 字串
 description: 了解如何F#'string' 類型以一連串的 Unicode 字元表示不可變的文字。
 ms.date: 05/16/2016
-ms.openlocfilehash: 158e30224fe50c2324e40d550b75e6abaf843597
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5b55b0c87b6636346677b973e093e7bcba324e98
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127676"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610654"
 ---
 # <a name="strings"></a>字串
 

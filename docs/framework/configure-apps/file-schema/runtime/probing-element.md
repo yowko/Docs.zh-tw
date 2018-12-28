@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cab16e83466b5954bfebac07dd79c9a8b5e4594
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5b9be3050da21c0a99931ca70cf990b0b8bf1fe
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744999"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612297"
 ---
 # <a name="ltprobinggt-element"></a>&lt;探查&gt;項目
-指定 common language runtime 載入組件時所要搜尋的應用程式基底的子目錄。  
+指定應用程式基底的 common language runtime 載入組件時所要搜尋的子目錄。  
   
  \<configuration>  
 \<執行階段 >  
-\<assemblyBinding >  
+\<assemblyBinding>  
 \<探查 >  
   
 ## <a name="syntax"></a>語法  
@@ -39,9 +39,9 @@ ms.locfileid: "32744999"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`privatePath`|必要屬性。<br /><br /> 指定的應用程式可能包含組件的基底目錄的子目錄。 分隔每個以分號的子目錄。|  
+|`privatePath`|必要屬性。<br /><br /> 指定的應用程式可能會包含組件的基底目錄的子目錄。 每個子目錄，以分號字元進行分隔。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -53,7 +53,7 @@ ms.locfileid: "32744999"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何指定執行階段應該搜尋組件的應用程式基底子目錄。  
+ 下列範例示範如何指定應用程式基底的子目錄，執行階段應該搜尋組件。  
   
 ```xml  
 <configuration>  
@@ -66,7 +66,7 @@ ms.locfileid: "32744999"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [指定組件的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
- [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [指定組件的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+- [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

@@ -1,21 +1,21 @@
 ---
-title: 模式比對 (F#)
-description: 了解模式如何在 F# 中用來比較具有邏輯結構的資料、 將資料分解為構成部分，或從資料擷取資訊。
+title: 模式比對
+description: 了解模式可用於F#來比較具有邏輯結構的資料，將資料分解為構成部分，或從資料擷取資訊。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991420"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613579"
 ---
 # <a name="pattern-matching"></a>模式比對
 
-模式是轉換輸入的資料的規則。 它們可在 F# 語言比較具有邏輯結構或結構的資料、 將資料分解為構成部分，或以各種方式從資料擷取資訊。
+模式是轉換輸入的資料的規則。 它們用在整個F#語言來比較資料的邏輯結構或結構，將資料分解為構成部分，或以各種方式從資料擷取資訊。
 
 ## <a name="remarks"></a>備註
 
-模式可用於許多語言建構，例如`match`運算式。 您正在處理中的函式的引數時，它們會使用`let`繫結、 lambda 運算式，並與相關聯的例外狀況處理常式中`try...with`運算式。 如需詳細資訊，請參閱 <<c0> [ 比對運算式](match-expressions.md)， [let 繫結](functions/let-bindings.md)， [Lambda 運算式：`fun`關鍵字](functions/lambda-expressions-the-fun-keyword.md)，以及[例外狀況： `try...with`運算式](exception-handling/the-try-with-expression.md)。
+模式可用於許多語言建構，例如`match`運算式。 您正在處理中的函式的引數時，它們會使用`let`繫結、 lambda 運算式，並與相關聯的例外狀況處理常式中`try...with`運算式。 如需詳細資訊，請參閱 <<c0> [ 比對運算式](match-expressions.md)， [let 繫結](functions/let-bindings.md)， [Lambda 運算式：`fun`關鍵字](functions/lambda-expressions-the-fun-keyword.md)，和[例外狀況：`try...with`運算式](exception-handling/the-try-with-expression.md)。
 
 例如，在`match`運算式*模式*是什麼位於管道符號後面。
 

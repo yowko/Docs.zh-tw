@@ -1,13 +1,13 @@
 ---
 title: 型別提供者疑難排解
-description: 探索可能的解決方案，您最有可能在 F# 中使用型別提供者時，會遇到的問題。
+description: 若要使用時遇到最常見的問題中，輸入中的提供者探索可能的解決方案F#。
 ms.date: 05/16/2016
-ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6c675720e0b7c306a2916c94d8096d2f09c0daca
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48873212"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610329"
 ---
 # <a name="troubleshooting-type-providers"></a>型別提供者疑難排解
 

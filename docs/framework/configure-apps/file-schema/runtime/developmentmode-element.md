@@ -11,11 +11,12 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71b4eb1dfb50774cea2f7a50d5e5350b0338f41e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 982bc04e362f82760226b1cd2b8b3febe9cc7107
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612045"
 ---
 # <a name="ltdevelopmentmodegt-element"></a>&lt;developmentMode&gt;項目
 指定執行階段是否要在 DEVPATH 環境變數所指定的目錄中搜尋組件。  
@@ -43,10 +44,10 @@ ms.lasthandoff: 05/03/2018
   
 |值|描述|  
 |-----------|-----------------|  
-|**true**|搜尋 DEVPATH 環境變數所指定的目錄中的組件。|  
+|**true**|DEVPATH 環境變數所指定的目錄中的組件的搜尋。|  
 |**false**|不會搜尋 DEVPATH 環境變數所指定的目錄中的組件。 這是預設值|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -57,10 +58,10 @@ ms.lasthandoff: 05/03/2018
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 使用此設定只在開發階段。 執行階段不會檢查 DEVPATH 中找到的強式名稱組件上的版本。 它只會使用第一個找到的組件。  
+ 使用此設定只在開發階段。 執行階段不會檢查在 DEVPATH 中找到的強式名稱組件的版本。 它會直接使用第一個找到的組件。  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何使執行階段 DEVPATH 環境變數所指定的目錄中搜尋組件。  
+ 下列範例示範如何讓執行階段搜尋 DEVPATH 環境變數所指定的目錄中的組件。  
   
 ```xml  
 <configuration>  
@@ -71,6 +72,6 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [如何：使用 DEVPATH 找出組件](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [如何：使用 DEVPATH 找出組件](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

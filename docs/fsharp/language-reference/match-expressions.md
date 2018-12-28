@@ -1,13 +1,13 @@
 ---
-title: 比對運算式 （F#）
-description: 了解如何將 F# 比對運算式提供分支運算式的比較，使用一組模式為基礎的控制項。
+title: 比對運算式
+description: 了解如何F#比對運算式提供分支運算式的比較，使用一組模式為基礎的控制項。
 ms.date: 04/19/2018
-ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44221840"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611564"
 ---
 # <a name="match-expressions"></a>比對運算式
 
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>另請參閱
 
-- [F# 語言參考](index.md)  
-- [使用中模式](active-patterns.md)  
-- [模式比對](pattern-matching.md)  
+- [F# 語言參考](index.md)
+- [使用中模式](active-patterns.md)
+- [模式比對](pattern-matching.md)

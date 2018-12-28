@@ -1,13 +1,13 @@
 ---
-title: 迴圈：for...to 運算式 (F#)
-description: 請參閱如何 F# for...in...運算式用來在迴圈中逐一查看某個範圍的迴圈變數的值。
+title: 迴圈：for...to 運算式
+description: 請參閱如何F#for...in...運算式用來在迴圈中逐一查看某個範圍的迴圈變數的值。
 ms.date: 05/16/2016
-ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43800465"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612318"
 ---
 # <a name="loops-forto-expression"></a>迴圈：for...to 運算式
 

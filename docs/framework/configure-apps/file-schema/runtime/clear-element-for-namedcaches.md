@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 17043cdd4bcabf2e5e14c7b9c31b8c1747d2c866
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: dd521e3afa7584cadb28829028a5ecfd1cb55a92
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171942"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612293"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;清除&gt;項目&lt;namedCaches&gt;
 清除所有`namedCache`中的項目`namedCaches`記憶體快取的集合。  
@@ -53,4 +53,4 @@ ms.locfileid: "47171942"
  `clear`項目清除所有`namedCache`記憶體內部快取的具名快取集合中的項目。 您可以使用`clear`項目才能使用`add`項目將加入新的具名快取項目，才能確定有沒有其他具名集合中的快取。  
   
 ## <a name="see-also"></a>另請參閱  
- [\<namedCaches > 項目 （快取設定）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > 項目 （快取設定）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b17f521be31fa4082d9418c7dad734e37994bbb5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cf56a2720ab407d05b8356280913445c15a17020
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752815"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611070"
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt;項目
-決定是否日期和時間剖析方法使用調整過的一組規則剖析日期字串，包含日、 月、 小時和 AM/PM 指示項。  
+決定日期和時間剖析方法使用一組調整過的規則來剖析日期字串，包含日期、 月份、 小時和 AM/PM 指示項。  
   
  \<configuration>  
  \<執行階段 >  
@@ -31,16 +31,16 @@ ms.locfileid: "32752815"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指定是否日期和時間剖析方法使用調整過的一組規則剖析日期字串，包含只日、 月、 小時和 AM/PM 指示項。|  
+|`enabled`|必要屬性。<br /><br /> 指定是否日期和時間剖析方法使用調整過的一組規則來剖析日期字串，包含日期、 月份、 小時和 AM/PM 指示項。|  
   
 ### <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|0|日期和時間剖析方法請勿用於調整的規則剖析日期字串，包含只日、 月、 小時和 AM/PM 指示項。|  
-|1|日期和時間剖析方法可用於調整的規則剖析日期字串，包含只日、 月、 小時和 AM/PM 指示項。|  
+|0|日期和時間剖析方法不要使用調整過的規則來剖析日期字串，包含日期、 月份、 小時和 AM/PM 指示項。|  
+|1|日期和時間剖析方法使用調整過的規則來剖析日期字串，包含日期、 月份、 小時和 AM/PM 指示項。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -51,7 +51,7 @@ ms.locfileid: "32752815"
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
   
 ## <a name="remarks"></a>備註  
- `<EnableAmPmParseAdjustment>`項目會控制下列方法如何剖析日期字串，包含數值的日期和月份，後面接著一小時和 AM/PM 指示項，（例如"4/10 6 AM"):  
+ `<EnableAmPmParseAdjustment>`元素可讓您控制下列方法如何剖析日期字串，其中包含數值的日期和月份，後面接著一小時的時間和 AM/PM 指示項，（例如"4/10 6 AM"):  
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
@@ -65,22 +65,22 @@ ms.locfileid: "32752815"
   
  會不影響任何其他的模式。  
   
- `<EnableAmPmParseAdjustment>`項目沒有任何作用<xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>， <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>， <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>，和<xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>方法。  
+ `<EnableAmPmParseAdjustment>`項目並不會影響<xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>， <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>， <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>，和<xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>方法。  
   
 > [!IMPORTANT]
->  在.NET Core 和.NET 原生，預設會啟用已調整的 AM/PM 剖析規則。  
+>  在.NET Core 和.NET Native，預設會啟用已調整的 AM/PM 剖析規則。  
   
- 剖析的調整規則未啟用，如果第一個數字的字串會解譯為 12 小時制的小時，除了 AM/PM 指示項的字串的其餘部分會被忽略。 日期和時間剖析方法傳回包含目前的日期和從日期字串擷取當天的小時。  
+ 如果未啟用剖析的調整規則，字串的第一個數字會解譯為 12 小時制時鐘的小時，除了 AM/PM 指示項的字串的其餘部分會被忽略。 日期和時間剖析方法傳回包含目前的日期和日期字串中擷取當天的小時。  
   
- 如果剖析的調整規則已啟用，剖析方法解譯的日期和月份為屬於目前的年份，並解譯在 12 小時制的小時與時間。  
+ 如果啟用剖析的調整規則，則剖析方法解譯日期和月份為屬於目前的年份，並解譯為 12 小時制的小時的時間。  
   
- 下表說明中的差異<xref:System.DateTime>值時<xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType>方法用來剖析字串""4/10 6 AM"與`<EnableAmPmParseAdjustment>`項目的`enabled`屬性設定為"0"或"1"。 假設今天的日期是 2017 年 1 月 5，並且如同它使用指定的文化特性"G"格式字串來格式化顯示的日期。  
+ 下表說明中的差異<xref:System.DateTime>值時<xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType>方法來剖析字串""4/10 6 AM"與`<EnableAmPmParseAdjustment>`項目的`enabled`屬性設定為"0"或"1"。 假設今天的日期為 2017 年 1 月 5 日，並且如同即會使用指定的文化特性"G"格式字串格式化顯示的日期。  
   
 |文化特性名稱|已啟用 ="0"|已啟用 ="1"|  
 |------------------|------------------|------------------|  
-|zh-TW|2017 年 1/5/4:00:00 AM|2017 年 4/10/6:00:00 AM|  
+|en-US|2017 年 1 月 5 日上午 4:00:00|2017 年 4 月 10 日上午 6:00:00|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>另請參閱  
- [\<runtime > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
- [\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
+- [\<執行階段 > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
+- [\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

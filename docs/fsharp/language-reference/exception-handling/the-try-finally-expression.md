@@ -1,15 +1,15 @@
 ---
-title: 例外狀況：try...finally 運算式 (F#)
-description: 了解如何在 F# 'try...最後' 運算式可讓您執行清除程式碼，即使程式碼區塊擲回例外狀況。
+title: '例外狀況: try...finally 運算式'
+description: 了解如何F#'try...最後' 運算式可讓您執行清除程式碼，即使程式碼區塊擲回例外狀況。
 ms.date: 05/16/2016
-ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 24613185818c8ea30b27dcf639b22af320c4b401
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45970314"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611616"
 ---
-# <a name="exceptions-the-tryfinally-expression"></a>例外狀況：try...finally 運算式
+# <a name="exceptions-the-tryfinally-expression"></a>例外狀況: try...finally 運算式
 
 `try...finally`運算式可讓您執行清除程式碼，即使程式碼區塊擲回例外狀況。
 
@@ -50,4 +50,4 @@ Exception handled.
 ## <a name="see-also"></a>另請參閱
 
 - [例外狀況處理](index.md)
-- [例外狀況：`try...with` 運算式](the-try-with-expression.md)
+- [例外狀況：`try...with`運算式](the-try-with-expression.md)

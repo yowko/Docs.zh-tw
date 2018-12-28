@@ -1,13 +1,13 @@
 ---
-title: 函式 (F#)
-description: 深入了解以 F# 和 F# 如何支援常見的函式程式設計建構函式。
+title: 函式
+description: 深入了解中的函式F#以及F#支援常見的函式程式設計建構。
 ms.date: 05/16/2016
-ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839564"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610914"
 ---
 # <a name="functions"></a>函式
 
@@ -142,7 +142,7 @@ let vol = cylinderVolume 2.0 3.0
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-您可以透過 `fun` 關鍵字定義 Lambda 運算式。 Lambda 運算式類似函式定義，但是它使用 `->` 語彙基元來分隔引數清單與函式主體，而不是 `=` 語彙基元。 如同一般函式定義，您可以推斷或明確指定引數類型，而 Lambda 運算式的傳回型別是從主體中最後一個運算式的類型來推斷。 如需詳細資訊，請參閱 [Lambda 運算式：`fun` 關鍵字](../functions/lambda-expressions-the-fun-keyword.md)。
+您可以透過 `fun` 關鍵字定義 Lambda 運算式。 Lambda 運算式類似函式定義，但是它使用 `->` 語彙基元來分隔引數清單與函式主體，而不是 `=` 語彙基元。 如同一般函式定義，您可以推斷或明確指定引數類型，而 Lambda 運算式的傳回型別是從主體中最後一個運算式的類型來推斷。 如需詳細資訊，請參閱[Lambda 運算式：`fun`關鍵字](../functions/lambda-expressions-the-fun-keyword.md)。
 
 ## <a name="function-composition-and-pipelining"></a>函式組合和管線
 

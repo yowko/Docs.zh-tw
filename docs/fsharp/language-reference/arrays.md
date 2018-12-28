@@ -1,13 +1,13 @@
 ---
-title: 陣列 (F#)
+title: 陣列
 description: 了解如何建立和使用中的陣列F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0f72718988ee401631c53b74f02948030e83aac1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9670f2a61ed5c254493806501120552be9caecdf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129970"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614554"
 ---
 # <a name="arrays"></a>陣列
 
@@ -418,4 +418,4 @@ Found an element 4096 with square root 64 and cube root 16.
 ## <a name="see-also"></a>另請參閱
 
 - [F# 語言參考](index.md)
-- [F#;型別](fsharp-types.md)
+- [F# 類型](fsharp-types.md)

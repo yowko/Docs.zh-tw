@@ -1,13 +1,13 @@
 ---
-title: 列舉 (F#)
-description: 了解如何使用 F# 列舉型別取代常值，讓程式碼，更容易讀取與維護。
+title: 列舉
+description: 了解如何使用F#列舉型別取代常值，讓程式碼，更容易讀取與維護。
 ms.date: 05/16/2016
-ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8839b73de074f62606b70ffe969a53b3db753bf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46003161"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611726"
 ---
 # <a name="enumerations"></a>列舉
 
@@ -40,7 +40,7 @@ type enum-name =
 
 列舉型別可以有下列的基礎類型的其中一個： `sbyte`， `byte`， `int16`， `uint16`， `int32`， `uint32`， `int64`， `uint16`， `uint64`，以及`char`。 列舉型別以.NET framework 型別繼承自`System.Enum`，接著繼承自`System.ValueType`。 因此，它們是位於堆疊或內嵌在所包含的物件的實值型別，並且基礎型別的任何值是列舉的有效值。 這是重大時模式比對列舉值，因為您必須提供一種模式，會攔截未命名的數值。
 
-`enum` F# 文件庫中的函式可用來產生列舉值，即使值以外的值預先定義，其中一項名為值。 您使用`enum`函式，如下所示。
+`enum`函式中F#程式庫可以用來產生列舉值，即使值以外的值預先定義，其中一項名為值。 您使用`enum`函式，如下所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 

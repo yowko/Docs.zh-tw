@@ -1,13 +1,13 @@
 ---
-title: 類別中的 do 繫結 (F#)
-description: 了解如何使用 F# 'do' 在類別定義中，這會執行動作，或第一次使用的型別時，物件建構的繫結。
+title: 類別中的 do 繫結
+description: 了解如何使用F#'do' 在類別定義中，這會執行動作，或第一次使用的型別時，物件建構的繫結。
 ms.date: 05/16/2016
-ms.openlocfilehash: e54a5bde52bf6973cc338c929ba99e6fd5b53127
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0ddf2b5ca458d0950c2e07bf2c37c205877e2173
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43801517"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613111"
 ---
 # <a name="do-bindings-in-classes"></a>類別中的 do 繫結
 

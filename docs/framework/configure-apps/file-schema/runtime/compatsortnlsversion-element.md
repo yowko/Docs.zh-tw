@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e78106c4df2e1c414d00f18871566dd5906c54f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9d505dd7433978e3a5908757a1d9569fe31f49b
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745704"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614402"
 ---
 # <a name="ltcompatsortnlsversiongt-element"></a>&lt;CompatSortNLSVersion&gt;項目
 指定執行階段在執行字串比較時，應使用舊版排序次序。  
@@ -46,7 +46,7 @@ ms.locfileid: "32745704"
 |-----------|-----------------|  
 |4096|表示替代排序次序的地區設定 ID。 在這個案例中，4096 表示 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] (含) 以前版本的排序次序。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -57,7 +57,7 @@ ms.locfileid: "32745704"
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 因為由執行字串比較、 排序和大小寫作業<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>類別[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]例如符合 Unicode 5.1 標準，字串比較方法結果<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>可能不同舊版.NET Framework 中。 如果您的應用程式依賴舊版的行為，您可以藉由在應用程式的組態檔中包含 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 項目的方式，還原 `<CompatSortNLSVersion>` (含) 以前版本中使用的字串比較和排序規則。  
+ 因為由執行字串比較、 排序和大小寫作業<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>類別內[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]這類符合 Unicode 5.1 標準，字串比較方法的結果<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>可能不同於舊版.NET Framework 中。 如果您的應用程式依賴舊版的行為，您可以藉由在應用程式的組態檔中包含 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 項目的方式，還原 `<CompatSortNLSVersion>` (含) 以前版本中使用的字串比較和排序規則。  
   
 > [!IMPORTANT]
 >  還原舊版字串比較和排序規則也必須要有可在本機系統上提供的 sort00001000.dll 動態連結程式庫。  
@@ -94,5 +94,5 @@ sta equals a in the sort order.
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

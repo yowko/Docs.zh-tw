@@ -1,13 +1,13 @@
 ---
-title: 建構函式 (F#)
-description: 了解如何定義及使用 F# 中的建構函式，來建立和初始化類別和結構的物件。
+title: 建構函式
+description: 了解如何定義和使用的建構函式F#建立和初始化類別和結構的物件。
 ms.date: 05/16/2016
-ms.openlocfilehash: ff2463f890034cce0bbaa85d9a5c93e50427cd03
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 34989e2877b29f6f9fe1f6cc05e3fd7c90a1306a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45743913"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612071"
 ---
 # <a name="constructors"></a>建構函式
 
@@ -42,7 +42,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
-如需詳細資訊，請參閱 <<c0> [ 明確欄位：`val`關鍵字](explicit-fields-the-val-keyword.md)。
+如需詳細資訊，請參閱[明確欄位：`val`關鍵字](explicit-fields-the-val-keyword.md)。
 
 ## <a name="executing-side-effects-in-constructors"></a>建構函式中執行的副作用
 

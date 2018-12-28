@@ -1,17 +1,17 @@
 ---
-title: 物件不&#39;t 支援目前的地區設定 (Visual Basic)
+title: 物件不支援目前的地區設定 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID447
 ms.assetid: 580a26bc-479a-4569-9246-10dcf0251bcb
-ms.openlocfilehash: c31b2cd0c3933a6568e7c80c7f2aee3ec740ecc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7ca818c0c83e6493b8df7411f0f3c1ae368ed40
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636793"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53759843"
 ---
-# <a name="object-doesn39t-support-current-locale-setting-visual-basic"></a>物件不&#39;t 支援目前的地區設定 (Visual Basic)
+# <a name="object-doesnt-support-current-locale-setting-visual-basic"></a>物件不支援目前的地區設定 (Visual Basic)
 您嘗試存取不支援目前專案地區設定的物件。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

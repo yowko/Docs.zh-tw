@@ -1,13 +1,13 @@
 ---
-title: 繼承 (F#)
-description: 了解如何指定 F# 繼承關聯性使用 'inherit' 關鍵字。
+title: 繼承
+description: 了解如何指定F#使用 'inherit' 關鍵字的繼承關聯性。
 ms.date: 05/16/2016
-ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 775ee52039caf4c4ab65f82fa21d4e536135a12a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43864465"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610134"
 ---
 # <a name="inheritance"></a>繼承
 
@@ -34,7 +34,7 @@ type MyDerived(...) =
 
 ## <a name="virtual-methods-and-overrides"></a>虛擬方法和覆寫
 
-虛擬方法 （和屬性） 運作方式稍有不同 F# 中相較於其他.NET 語言。 若要宣告新的虛擬成員，您使用`abstract`關鍵字。 要這麼做，不論您是否提供該方法的預設實作。 因此基底類別中的虛擬方法的完整定義會遵循下列模式：
+虛擬方法 （和屬性） 運作方式稍有不同的F#相較於其他.NET 語言。 若要宣告新的虛擬成員，您使用`abstract`關鍵字。 要這麼做，不論您是否提供該方法的預設實作。 因此基底類別中的虛擬方法的完整定義會遵循下列模式：
 
 ```fsharp
 abstract member [method-name] : [type]
@@ -62,7 +62,7 @@ override [self-identifier].[method-name] [argument-list] = [method-body]
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
 
-在多個建構函式的情況下可以使用下列程式碼。 在衍生的類別建構函式的第一行會`inherit`子句和欄位會顯示為使用宣告的明確欄位`val`關鍵字。 如需詳細資訊，請參閱 <<c0> [ 明確欄位：`val`關鍵字](members/explicit-fields-the-val-keyword.md)。
+在多個建構函式的情況下可以使用下列程式碼。 在衍生的類別建構函式的第一行會`inherit`子句和欄位會顯示為使用宣告的明確欄位`val`關鍵字。 如需詳細資訊，請參閱[明確欄位：`val`關鍵字](members/explicit-fields-the-val-keyword.md)。
 
 ```fsharp
 type BaseClass =

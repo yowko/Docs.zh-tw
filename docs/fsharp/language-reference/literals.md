@@ -1,13 +1,13 @@
 ---
-title: 常值 (F#)
+title: 常值
 description: 深入了解中的常值型別F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a531cd63c5a4dc1123834d481fc998216b0d82d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dfc02f0ff8ac3ad8600be5f3b6c9359f02bd25be
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131335"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612448"
 ---
 # <a name="literals"></a>常值
 

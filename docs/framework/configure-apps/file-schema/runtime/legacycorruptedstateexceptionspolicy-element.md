@@ -7,14 +7,15 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6228aaf4c7da70337d9d1a99adcb78f71a0039b2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bdf2e69b307d55f778a5cb54f8cc77bc3c69a185
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613488"
 ---
 # <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a>&lt;legacyCorruptedStateExceptionsPolicy&gt;項目
-指定 common language runtime 是否允許受管理的程式碼，以擷取存取違規和其他損毀的狀態例外狀況。  
+指定 common language runtime 是否允許 managed 程式碼攔截存取違規和其他損毀的狀態例外狀況。  
   
  \<configuration>  
 \<執行階段 >  
@@ -33,16 +34,16 @@ ms.lasthandoff: 05/03/2018
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指定應用程式將會攔截損毀狀態例外狀況失敗，例如存取違規。|  
+|`enabled`|必要屬性。<br /><br /> 指定應用程式會攔截損毀狀態例外狀況失敗，例如存取違規。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|應用程式不會抓取損毀狀態例外狀況失敗，例如存取違規。 這是預設值。|  
-|`true`|應用程式將會攔截損毀狀態例外狀況失敗，例如存取違規。|  
+|`false`|應用程式不會攔截損毀狀態例外狀況失敗，例如存取違規。 這是預設值。|  
+|`true`|應用程式會攔截損毀狀態例外狀況失敗，例如存取違規。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -53,20 +54,20 @@ ms.lasthandoff: 05/03/2018
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 在.NET Framework 3.5 或更早版本中，通用語言執行平台允許 managed 程式碼來攔截已損毀處理序狀態所引發的例外狀況。 存取違規是這種類型的例外狀況的範例。  
+ 在.NET Framework 3.5 和更早版本中，通用語言執行平台允許受管理的程式碼，以擷取損毀處理序狀態已引發的例外狀況。 存取違規是這種類型的例外狀況的範例。  
   
- 從開始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、 managed 程式碼不再攔截這些類型中的例外狀況的`catch`區塊。 不過，您可以覆寫這項變更，並維護兩種方式中的損毀的狀態例外狀況的處理：  
+ 開頭[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]受管理的程式碼不會再會攔截這些類型中的例外狀況的`catch`區塊。 不過，您可以覆寫這項變更，並維護兩種方式中的損毀的狀態例外狀況的處理：  
   
--   設定`<legacyCorruptedStateExceptionsPolicy>`項目的`enabled`屬性`true`。 此組態設定會套用的 processwide，而且會影響所有方法。  
+-   設定`<legacyCorruptedStateExceptionsPolicy>`項目的`enabled`屬性設定為`true`。 此組態設定會套用的 processwide，而且會影響所有方法。  
   
  -或-  
   
--   套用<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>包含例外狀況的方法，此屬性`catch`區塊。  
+-   適用於<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>屬性設定為包含例外狀況的方法`catch`區塊。  
   
  這個組態項目是僅適用於[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]和更新版本。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何指定應用程式應該還原成之前的行為[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，並攔截所有損毀狀態例外狀況失敗。  
+ 下列範例示範如何指定應用程式應該還原成之前的行為[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，並擷取所有損毀狀態例外狀況失敗。  
   
 ```xml  
 <configuration>  
@@ -77,6 +78,6 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>  
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

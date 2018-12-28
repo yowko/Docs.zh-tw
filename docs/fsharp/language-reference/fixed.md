@@ -1,17 +1,17 @@
 ---
-title: Fixed 的關鍵字 （F#）
-description: 了解如何在您可以 [pin] 若要避免使用 F# 集合至堆疊本機 'fixed' 關鍵字。
+title: Fixed 的關鍵字
+description: 了解如何 [pin] 以防止具有集合至堆疊上的本機F#'fixed' 關鍵字。
 ms.date: 04/24/2017
-ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7fdf66560f3e2ab7584b00c7e4584d7f6c161858
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45624505"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614327"
 ---
 # <a name="the-fixed-keyword"></a>Fixed 的關鍵字
 
-F# 4.1 導入了`fixed`關鍵字，可讓您 「 釘選 」 到堆疊上的本機可防止它們所收集或在記憶體回收期間移動。  它用於低層級的程式設計案例。
+F#4.1 導入了`fixed`關鍵字，可讓您 「 釘選 」 到堆疊上的本機可防止它們所收集或在記憶體回收期間移動。  它用於低層級的程式設計案例。
 
 ## <a name="syntax"></a>語法
 

@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a8858059159edddb4456561719c572fb9268be7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509479"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611395"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt;項目
 指定是否從遠端來源載入的組件，應該就會具有完全信任，在.NET Framework 4 和更新版本。
   
 > [!NOTE]
->  如果您已導向至本主題，因為 Visual Studio 專案的錯誤清單或建置錯誤中的錯誤訊息，請參閱[如何： 使用 Visual Studio 中的 從 Web 組件](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)。  
+>  如果您已導向至本主題，因為 Visual Studio 專案的錯誤清單或建置錯誤中的錯誤訊息，請參閱[How to:使用 Visual Studio 中的 從 Web 組件](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)。  
   
  \<configuration>  
 \<執行階段 >  
@@ -74,7 +74,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 若要載入的組件，並執行其程式碼，您必須使用下列其中一個：
 
-- 組件明確建立沙箱 (請參閱[如何： 執行部分信任程式碼在沙箱中](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md))。
+- 組件明確建立沙箱 (請參閱[How to:在沙箱中執行部分信任程式碼](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md))。
 
 - 以完全信任執行組件的程式碼。 您可以設定`<loadFromRemoteSources>`項目。 它可讓您指定在舊版.NET Framework 中的部分信任中執行的組件現在在.NET Framework 4 及更新版本中的完全信任中執行。
 
@@ -117,8 +117,8 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 ## <a name="see-also"></a>另請參閱
 
-[更為隱含的 CAS 原則用法： loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-[如何：在沙箱中執行部分信任的程式碼](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-[執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-[組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [更為隱含的 CAS 原則用法： loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
+- [如何：在沙箱中執行部分信任程式碼](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  

@@ -1,13 +1,13 @@
 ---
-title: 介面 (F#)
-description: 了解 F# 介面指定一組相關的其他類別所實作的成員的方式。
+title: 介面
+description: 了解如何F#介面會指定一組相關的其他類別所實作的成員。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 85b5506d96c26be5e52670c0c62d27cae047d1a6
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47231436"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610550"
 ---
 # <a name="interfaces"></a>介面
 
@@ -47,7 +47,7 @@ let class-name (argument-list) =
 
 介面的預設存取範圍是`public`。
 
-您可以選擇性地每個方法的名稱命名參數使用一般的 F# 語法：
+您可以選擇性地提供每個方法參數名稱使用一般F#語法：
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
 

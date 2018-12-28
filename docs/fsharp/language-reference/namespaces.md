@@ -1,13 +1,13 @@
 ---
-title: 命名空間 (F#)
+title: 命名空間
 description: 了解如何F#命名空間可讓您將組織成相關功能的程式碼，方法是讓您將名稱附加到的程式項目群組。
 ms.date: 12/08/2018
-ms.openlocfilehash: ad5cca8947d09d8480bfa418b003c84546edc29b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 526d7a07e4804751811c15fa91b0c74c1954d591
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169017"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613436"
 ---
 # <a name="namespaces"></a>命名空間
 

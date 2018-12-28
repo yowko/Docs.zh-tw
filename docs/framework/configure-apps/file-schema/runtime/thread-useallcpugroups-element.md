@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47d8bcdb9bbb7ec6f5a5386a5ac5951ad8891c28
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8a3984d594d0739d4b8f2b7b165aab434e10ab80
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745587"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611005"
 ---
 # <a name="ltthreaduseallcpugroupsgt-element"></a>&lt;Thread_UseAllCpuGroups&gt;項目
 指定執行階段是否會將 Managed 執行緒分散到所有 CPU 群組。  
@@ -38,10 +38,10 @@ ms.locfileid: "32745587"
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|執行階段不將多個 CPU 群組受管理的執行緒。 這是預設值。|  
-|`true`|執行階段受管理將執行緒分配給多個 CPU 群組，如果電腦中有多個 CPU 群組和[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)項目啟用。|  
+|`false`|執行階段不會跨多個 CPU 群組分配 managed 的執行緒。 這是預設值。|  
+|`true`|執行階段會分散到多個 CPU 群組，managed 的執行緒如果電腦有多個 CPU 群組及[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)項目已啟用。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -52,10 +52,10 @@ ms.locfileid: "32745587"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 當電腦有多個 CPU 群組時，則啟用這個項目會導致執行階段散發 managed 的執行緒的所有 CPU 群組。 若要使用這項功能，您也必須啟用[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)元素，其會延伸到所有的 CPU 群組記憶體回收並考量所有核心建立和平衡堆積時。 啟用[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)項目時，必須啟用[ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)項目。 如果這些項目未啟用，啟用`<Thread_UseAllCpuGroups>`項目沒有任何作用。  
+ 當電腦具有多個 CPU 群組時，啟用這個項目會導致執行階段的所有 CPU 群組分配 managed 的執行緒。 若要使用這項功能，您也必須啟用[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)元素，其記憶體回收會延伸到所有 CPU 群組並考量所有的核心建立，並平衡堆積時。 啟用[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)項目時，必須啟用[ \<Gcserver> >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)項目。 如果未啟用這些項目，則啟用`<Thread_UseAllCpuGroups>`項目沒有任何作用。  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何啟用支援多個 CPU 的群組。  
+ 下列範例示範如何啟用多個 CPU 群組的支援。  
   
 ```xml  
 <configuration>  
@@ -68,6 +68,6 @@ ms.locfileid: "32745587"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<GCCpuGroup > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [\<GCCpuGroup > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)

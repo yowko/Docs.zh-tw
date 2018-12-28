@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d31caf88e1376025484ed6d65d5277c015e70b5e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838217"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613735"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;移除&gt;項目&lt;namedCaches&gt;
 從記憶體快取的 `namedCaches` 集合移除具名快取項目。  
@@ -53,4 +53,4 @@ ms.locfileid: "48838217"
  `remove`項目移除`namedCache`從記憶體快取的具名快取集合的項目。  
   
 ## <a name="see-also"></a>另請參閱  
- [\<namedCaches > 項目 （快取設定）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > 項目 （快取設定）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

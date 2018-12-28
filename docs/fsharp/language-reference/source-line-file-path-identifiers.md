@@ -1,13 +1,13 @@
 ---
-title: 原始碼程式行、檔案與路徑識別項 (F#)
-description: 了解如何使用內建 F# 識別項值可讓您存取原始程式碼行號、 目錄和檔案名稱，在您的程式碼。
+title: 原始碼程式行、檔案與路徑識別項
+description: 了解如何使用內建的F#可讓您存取來源的識別碼值行編號、 目錄和檔案名稱，在您的程式碼。
 ms.date: 05/16/2016
-ms.openlocfilehash: 14f710d1412c3420ec627dc30216ba2e89f16bcd
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 4b145fe1fe20e3d7f868558e33bab26204fb0125
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865123"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656007"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>原始碼程式行、檔案與路徑識別項
 
@@ -25,13 +25,14 @@ __SOURCE_FILE__
 
 每個這些值都有型別`string`。
 
-下表摘要說明原始程式行、 檔案和可在 F# 中的路徑識別項。 這些識別項不是前置處理器巨集;它們是編譯器可辨識的內建值。
+下表摘要說明中所提供的來源行、 檔案和路徑識別碼F#。 這些識別項不是前置處理器巨集;它們是編譯器可辨識的內建值。
 
 |預先定義的識別項|描述|
 |---------------------|-----------|
 |`__LINE__`|評估為目前的行號，考慮`#line`指示詞。|
 |`__SOURCE_DIRECTORY__`|評估為目前的完整路徑的來源目錄中，考慮`#line`指示詞。|
 |`__SOURCE_FILE__`|評估為目前的來源檔案名稱和其路徑中，考慮`#line`指示詞。|
+
 如需詳細資訊`#line`指示詞，請參閱[編譯器指示詞](compiler-directives.md)。
 
 ## <a name="example"></a>範例

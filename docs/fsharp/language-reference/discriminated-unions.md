@@ -1,13 +1,13 @@
 ---
-title: 已區分的聯集 (F#)
+title: 已區分的聯集
 description: 了解如何使用F#差別聯集。
 ms.date: 05/16/2016
-ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1bb6dc06fb727f85eb5500719b175fc29090450b
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154407"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611863"
 ---
 # <a name="discriminated-unions"></a>已區分的聯集
 

@@ -1,13 +1,13 @@
 ---
-title: 參照儲存格 (F#)
-description: 了解 F# 參考儲存格的儲存體位置，可讓您以參考語意建立可變值的方式。
+title: 參考儲存格
+description: 了解如何F#參考儲存格是可讓您以參考語意建立可變值的儲存位置。
 ms.date: 05/16/2016
-ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44192251"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612760"
 ---
 # <a name="reference-cells"></a>參考儲存格
 
@@ -57,6 +57,7 @@ let ref x = { contents = x }
 |`ref` (運算子)|將值封裝至新的參考儲存格。|`'a -> 'a ref`|`let ref x = { contents = x }`|
 |`Value` (屬性)|取得或設定基礎值。|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (記錄欄位)|取得或設定基礎值。|`'a`|`let ref x = { contents = x }`|
+
 有數個方式可以存取基礎值。 取值運算子 (`!`) 傳回的值不是可指派的值。 因此如果您要修改基礎值，則必須改用指派運算子 (`:=`)。
 
 `Value` 屬性和 `contents` 欄位都是可指派的值。 因此，您可以使用它們來存取或變更基礎值，如下列程式碼所示。
@@ -74,7 +75,7 @@ let ref x = { contents = x }
 
 `contents` 欄位是針對與其他 ML 版本相容而提供，而且會在編譯期間產生警告。 若要停用這個警告，請使用 `--mlcompatibility` 編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。
 
-C# 程式設計人員應該要知道`ref`C# 中不是一樣`ref`F# 中。 F# 中對等的建構[byref](byrefs.md)，這是不同的概念，從參考儲存格。
+C#程式設計人員應該要知道`ref`在C#不是與相同的工作`ref`在F#。 中的對等項目建構F#會[byref](byrefs.md)，這是不同的概念，從參考儲存格。
 
 值將會標示`mutable`可能會自動升級為`'a ref`如果擷取的 closure; 請參閱[值](values/index.md)。
 

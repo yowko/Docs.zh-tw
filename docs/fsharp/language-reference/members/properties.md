@@ -1,13 +1,13 @@
 ---
-title: 屬性 (F#)
-description: 深入了解 F# 屬性，也就是成員代表與物件相關聯的值。
+title: 屬性
+description: 深入了解F#屬性，也就是成員代表與物件相關聯的值。
 ms.date: 05/16/2016
-ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8e74e0bc0850b5f07c4697f624d5393813bec6e0
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50197921"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614502"
 ---
 # <a name="properties"></a>屬性
 

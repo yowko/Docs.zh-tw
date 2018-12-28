@@ -1,5 +1,5 @@
 ---
-title: 如何：在沙箱中執行部分信任的程式碼
+title: HOW TO：在沙箱中執行部分信任程式碼
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05ab0874c980d9e6138ae2bfd720c6d89628613c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5728bac27ae7de649806a3e026bb16560fffefa
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393269"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613215"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>如何：在沙箱中執行部分信任的程式碼
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>HOW TO：在沙箱中執行部分信任程式碼
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  沙箱是指在受限制的安全性環境中執行程式碼的做法，這會限制授與程式碼的存取權限。 例如，如果您有來自不完全信任來源的 Managed 程式庫，則不應該以完全信任的方式執行。 相反地，您應該將程式碼放在沙箱，限制其權限為您所預期它會需要的權限 (例如，<xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 權限)。  
@@ -30,7 +30,7 @@ ms.locfileid: "33393269"
   
  此多載具有下列簽章：  
   
-```  
+```csharp
 AppDomain.CreateDomain( string friendlyName,  
                         Evidence securityInfo,  
                         AppDomainSetup info,  
@@ -50,7 +50,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 1.  建立要授與給不受信任的應用程式之授權集。 您可以授與的最小權限是 <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 權限。 您也可授與其他您認為對不受信任的程式碼可能安全的權限；例如 <xref:System.Security.Permissions.IsolatedStorageFilePermission>。 下列程式碼會建立新的權限集合，其中只有 <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 權限。  
   
-    ```  
+    ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
     permSet.AddPermission(new SecurityPermission(SecurityPermissionFlag.Execution));  
     ```  
@@ -67,7 +67,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 2.  簽署包含裝載類別 (在此範例中名為 `Sandboxer`) 的組件，該類別會呼叫不受信任的程式碼。 加入 <xref:System.Security.Policy.StrongName>，這會用來簽署組件給 <xref:System.AppDomain.CreateDomain%2A> 呼叫的 `fullTrustAssemblies` 參數之 <xref:System.Security.Policy.StrongName> 陣列。 裝載的類別必須以完全信任方式執行，以啟用部分信任程式碼的執行，或提供服務給部分信任應用程式。 這就是您讀取組件 <xref:System.Security.Policy.StrongName> 的方式。  
   
-    ```  
+    ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
     ```  
   
@@ -75,7 +75,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 3.  初始化 <xref:System.AppDomain.CreateDomain%2A> 方法的 <xref:System.AppDomainSetup> 參數。 使用這個參數，您可以控制許多新的 <xref:System.AppDomain> 設定。 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性是重要的設定，而且應該不同於裝載應用程式的 <xref:System.AppDomain> 之 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性。 如果 <xref:System.AppDomainSetup.ApplicationBase%2A> 設定相同，則部分信任應用程式可取得裝載的應用程式，以載入 (以完全信任方式) 它所定義的例外狀況，因而加以利用。 這是為什麼不建議使用 catch (例外狀況) 的另一個原因。 將主機的應用程式基底設定為不同於沙箱應用程式的應用程式基底，可減少惡意探索的風險。  
   
-    ```  
+    ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
@@ -84,7 +84,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      此方法的簽章是：  
   
-    ```  
+    ```csharp
     public static AppDomain CreateDomain(string friendlyName,   
         Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,   
         params StrongName[] fullTrustAssemblies)  
@@ -102,7 +102,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     -   若要建立應用程式定義域的程式碼是：  
   
-    ```  
+    ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
@@ -118,7 +118,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     -   您可以在 <xref:System.Security.CodeAccessPermission.Assert%2A> 之下建立完全信任 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)，這可讓您建立關鍵類別的執行個體。 (每當您的組件不具有透明度標記，且以完全信任方式載入時就會發生)。因此您應特別小心，只能建立您信任此函式的程式碼，我們建議您在新的應用程式定義域中只建立完全信任類別的執行個體。  
   
-    ```  
+    ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
     newDomain, typeof(Sandboxer).Assembly.ManifestModule.FullyQualifiedName,  
            typeof(Sandboxer).FullName );  
@@ -126,53 +126,53 @@ AppDomain.CreateDomain( string friendlyName,
   
      請注意若要在新的定義域中建立類別的執行個體，此類別必須擴充 <xref:System.MarshalByRefObject> 類別  
   
-    ```  
+    ```csharp
     class Sandboxer:MarshalByRefObject  
     ```  
   
 6.  解除包裝新定義域之執行個體至此定義域的參考。 這個參考用來執行不受信任的程式碼。  
   
-    ```  
+    ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
 7.  請在您剛建立的 `Sandboxer` 類別之執行個體中呼叫 `ExecuteUntrustedCode` 方法。  
   
-    ```  
+    ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
     ```  
   
      這個呼叫會在沙箱應用程式定義域中執行，具有受限制的使用權限。  
   
-    ```  
+    ```csharp
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
+    {  
+        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
+        //you can use Assembly.EntryPoint to get to the entry point in an executable.  
+        MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
+        try  
         {  
-            //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
-            //you can use Assembly.EntryPoint to get to the entry point in an executable.  
-            MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
-            try  
-            {  
-                // Invoke the method.  
-                target.Invoke(null, parameters);  
-            }  
-            catch (Exception ex)  
-            {  
-            //When information is obtained from a SecurityException extra information is provided if it is   
-            //accessed in full-trust.  
-                (new PermissionSet(PermissionState.Unrestricted)).Assert();  
-                Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
-    CodeAccessPermission.RevertAssert();  
-                Console.ReadLine();  
-            }  
+            // Invoke the method.  
+            target.Invoke(null, parameters);  
         }  
+        catch (Exception ex)  
+        {  
+        //When information is obtained from a SecurityException extra information is provided if it is   
+        //accessed in full-trust.  
+            new PermissionSet(PermissionState.Unrestricted).Assert();  
+            Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
+            CodeAccessPermission.RevertAssert();  
+            Console.ReadLine();  
+        }  
+    }  
     ```  
   
      <xref:System.Reflection> 用來在部分信任組件中取得方法的控制代碼。 控制代碼可用來以安全的方式搭配最小權限執行程式碼。  
   
      在先前的程式碼中，請先注意完全信任權限的 <xref:System.Security.PermissionSet.Assert%2A>，然後才列印 <xref:System.Security.SecurityException>。  
   
-    ```  
-    new PermissionSet(PermissionState.Unrestricted)).Assert()  
+    ```csharp
+    new PermissionSet(PermissionState.Unrestricted).Assert()  
     ```  
   
      完全信任的判斷提示用來從 <xref:System.Security.SecurityException> 取得擴充的資訊。 在沒有 <xref:System.Security.PermissionSet.Assert%2A> 的情況下，<xref:System.Security.SecurityException> 的 <xref:System.Security.SecurityException.ToString%2A> 方法會在堆疊上探索部分信任程式碼，並且限制傳回的資訊。 如果部分信任程式碼可能讀取該資訊，則這可能會造成安全性問題，但不授與 <xref:System.Security.Permissions.UIPermission> 可降低風險。 應該謹慎使用完全信任的判斷提示，而且僅當您確定不允許部分信任程式碼提升為完全信任時才能使用。 在相同的函式中，以及為了完全信任而呼叫判斷提示之後，通常請不要呼叫您不信任的程式碼。 當您使用完畢後，一律將判斷提示還原會是最佳的做法。  
@@ -180,7 +180,7 @@ AppDomain.CreateDomain( string friendlyName,
 ## <a name="example"></a>範例  
  下列範例會實作上一節中的程序。 在此範例中，Visual Studio 方案裡名為 `Sandboxer` 的專案還包含一個名為 `UntrustedCode` 的專案，這會實作 `UntrustedClass` 類別。 此案例假定您已下載包含方法的程式庫組件，該方法預期會傳回 `true` 或 `false` 來指出您提供的數字是否為費式數列。 相反地，該方法會嘗試從您的電腦讀取檔案。 下列範例顯示未受信任的程式碼。  
   
-```  
+```csharp
 using System;  
 using System.IO;  
 namespace UntrustedCode  
@@ -200,7 +200,7 @@ namespace UntrustedCode
   
  下列範例顯示執行不受信任程式碼的 `Sandboxer` 應用程式之程式碼。  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -264,7 +264,7 @@ class Sandboxer : MarshalByRefObject
         {  
             // When we print informations from a SecurityException extra information can be printed if we are   
             //calling it with a full-trust stack.  
-            (new PermissionSet(PermissionState.Unrestricted)).Assert();  
+            new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
             CodeAccessPermission.RevertAssert();  
             Console.ReadLine();  

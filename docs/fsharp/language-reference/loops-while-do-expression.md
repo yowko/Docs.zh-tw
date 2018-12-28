@@ -1,13 +1,13 @@
 ---
-title: 迴圈：while...do 運算式 (F#)
+title: 迴圈：while...do 運算式
 description: 請參閱如何時...執行運算式用來執行反覆執行 （迴圈），而指定的測試條件為 true。
 ms.date: 05/16/2016
-ms.openlocfilehash: 43e2098ad6c7f103babc2471aebe987040feb989
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d2a77e0bfefe3b6b026012e6b2938ba670326bcf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127273"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613007"
 ---
 # <a name="loops-whiledo-expression"></a>迴圈：while...do 運算式
 

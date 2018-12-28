@@ -1,17 +1,17 @@
 ---
-title: 進入點 (F#)
-description: 了解如何設定為 編譯為可執行檔，正式開始執行 F# 程式的進入點。
+title: 進入點
+description: 了解如何將進入點設定為F#會編譯為可執行檔，正式開始執行的程式。
 ms.date: 05/16/2016
-ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 915ab17b9a4fc7fd4d0ae344cb273b1d348a02f1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45698372"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614340"
 ---
 # <a name="entry-point"></a>進入點
 
-本主題說明您使用 F# 程式中設定的進入點方法。
+本主題說明的方法，您將進入點設定為使用F#程式。
 
 ## <a name="syntax"></a>語法
 
@@ -24,7 +24,7 @@ let-function-binding
 
 在先前的語法*可讓函式繫結*中的函式的定義`let`繫結。
 
-會編譯為可執行檔是正式開始執行的程式進入點。 將套用指定的 F# 應用程式的進入點`EntryPoint`屬性的程式`main`函式。 此函式 (使用建立`let`繫結) 必須是最後一個編譯檔案中的最後一個函式。 專案中的最後一個檔案或傳遞至命令列的最後一個檔案的最後一個編譯的檔案。
+會編譯為可執行檔是正式開始執行的程式進入點。 您指定的進入點F#應用程式藉由套用`EntryPoint`屬性的程式`main`函式。 此函式 (使用建立`let`繫結) 必須是最後一個編譯檔案中的最後一個函式。 專案中的最後一個檔案或傳遞至命令列的最後一個檔案的最後一個編譯的檔案。
 
 進入點函式具有類型`string array -> int`。 在命令列上提供的引數傳遞至`main`函式中的字串陣列。 陣列的第一個項目是第一個引數;可執行檔的名稱不會包含在陣列中，因為它在其他程式設計語言。 傳回值用於程序結束代碼。 零通常表示成功，非零值表示發生錯誤。 不沒有特定的意義，非零的傳回碼; 的任何慣例傳回碼的意義是特定應用程式。
 

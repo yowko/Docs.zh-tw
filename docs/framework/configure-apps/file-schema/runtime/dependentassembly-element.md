@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54036baee6fc2d7af49e818a1c112dec8eac80aa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5b0d3bfb7e4db2fec39f37c9fb794731cdf5bbc
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744908"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613293"
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt;項目
 封裝每一個組件的繫結原則和組件位置。 使用其中一個`dependentAssembly`每個組件的項目。  
   
  \<configuration>  
 \<執行階段 >  
-\<assemblyBinding >  
-\<y >  
+\<assemblyBinding>  
+\<dependentAssembly>  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,12 +39,12 @@ ms.locfileid: "32744908"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|`assemblyIdentity`|包含有關組件的識別資訊。 這個項目必須包含在每個`dependentAssembly`項目。|  
-|`codeBase`|指定執行階段可以找到位置共用的組件如果它不會安裝在電腦上。|  
+|`assemblyIdentity`|包含組件的識別資訊。 這個項目必須包含在每個`dependentAssembly`項目。|  
+|`codeBase`|指定執行階段可以找到共用的組件如果它不會安裝在電腦上。|  
 |`bindingRedirect`|將一個組件版本重新導向至另一個版本。|  
 |`publisherPolicy`|指定執行階段是否套用發行者原則，這個組件。|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "32744908"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何將封裝的兩個組件的組件資訊。  
+ 下列範例示範如何將封裝的兩個組件的組件資訊。  
   
 ```xml  
 <configuration>  
@@ -81,6 +81,6 @@ ms.locfileid: "32744908"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

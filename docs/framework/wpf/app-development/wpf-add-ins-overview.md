@@ -12,21 +12,21 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 2e5d133a4744124723c0373e3d5974b505936190
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402097"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397029"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 增益集概觀
-<a name="Introduction"></a>[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 包含開發人員可用來建立支援增益集擴充性的應用程式增益集模型。 此增益集模型可讓您建立增益集，整合並擴充應用程式的功能。 在某些情況下，應用程式也需要顯示增益集提供的 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。本主題說明 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 如何擴大 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型來啟用這些案例、其背後的架構、其優點及其限制。  
+<a name="Introduction"></a> .NET Framework 包含開發人員可用來建立支援增益集擴充性的應用程式增益集模型。 此增益集模型可讓您建立增益集，整合並擴充應用程式的功能。 在某些情況下，應用程式也需要顯示增益集所提供的使用者介面。本主題說明 WPF 擴大.NET Framework 增益集模型以啟用這些案例、 架構、 其優點，以及其限制背後的方式。  
   
 
   
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>必要條件  
- 熟悉 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型是必要的。 如需詳細資訊，請參閱[增益集和擴充性](../../../../docs/framework/add-ins/index.md)。  
+ 需要熟悉.NET Framework 增益集模型。 如需詳細資訊，請參閱[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。  
   
 <a name="AddInsOverview"></a>   
 ## <a name="add-ins-overview"></a>增益集概觀  
@@ -48,48 +48,48 @@ ms.locfileid: "43402097"
   
  為能使用增益集，主應用程式需要在執行階段找到並載入它們。 因此，支援增益集的應用程式有下列額外的責任︰  
   
--   **探索**︰尋找遵守主應用程式所支援合約的增益集。  
+-   **探索**:尋找增益集遵守主應用程式所支援的合約。  
   
--   **啟用**︰載入、執行及建立與增益集的通訊。  
+-   **啟用**:正在載入、 執行及建立與增益集的通訊。  
   
--   **隔離**︰使用應用程式定義域或處理程序來建立隔離界限，保護應用程式不受增益集的潛在安全性和執行問題影響。  
+-   **隔離**:若要建立隔離界限，防範潛在的安全性和增益集的執行問題的應用程式中使用應用程式定義域或處理程序。  
   
--   **通訊**︰透過呼叫方法及傳送資料，讓增益集及主應用程式跨越隔離界限互相通訊。  
+-   **通訊**:讓增益集和主應用程式之間的通訊方式跨越隔離界限呼叫方法，並將資料傳送。  
   
--   **存留期管理**︰以簡潔、可預測的方式載入和卸載應用程式定義域和處理程序 (請參閱[應用程式定義域](../../../../docs/framework/app-domains/application-domains.md))。  
+-   **存留期管理**:載入和卸載應用程式定義域和處理程序簡潔、 可預測的方式 (請參閱[應用程式定義域](../../../../docs/framework/app-domains/application-domains.md))。  
   
--   **版本控制**︰確保建立任一新版本時，主應用程式和增益集仍可通訊。  
+-   **版本控制**:確保，主應用程式和增益集仍可進行通訊時，會建立為新版本。  
   
- 最後，開發強固的增益集模型是重要的工作。 因此，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 提供基礎結構以建置增益集模型。  
+ 最後，開發強固的增益集模型是重要的工作。 基於這個理由，.NET Framework 提供基礎結構建置增益集模型。  
   
 > [!NOTE]
->  如需增益集的詳細資訊，請參閱[增益集和擴充性](../../../../docs/framework/add-ins/index.md)。  
+>  如需增益集的詳細資訊，請參閱[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。  
   
 <a name="NETFrameworkAddInModelOverview"></a>   
 ## <a name="net-framework-add-in-model-overview"></a>.NET Framework 增益集模型概觀  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]增益集模型中，位於<xref:System.AddIn>命名空間，包含一組專為簡化增益集擴充性的開發工作的類型。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型的基本單位是「合約」，它會定義主應用程式和增益集彼此如何通訊。 合約會向使用合約主應用程式特定「檢視」的主應用程式公開。 同樣地，合約的增益集專用「檢視」也會向增益集公開。 「配接器」用以讓主應用程式和增益集在其各自的合約檢視間進行通訊。 合約、檢視和配接器稱為區段，一組相關的區段構成「管線」。 管線是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型支援探索、啟動、安全性隔離、執行隔離 (使用應用程式定義域和處理程序)、通訊、生命週期管理和版本控制的基礎。  
+ 在中找到.NET Framework 增益集模型，<xref:System.AddIn>命名空間，包含一組專為簡化增益集擴充性的開發工作的類型。 .NET Framework 增益集模型的基本單位是*合約*、 定義如何主應用程式和增益集彼此通訊。 合約會向使用合約主應用程式特定「檢視」的主應用程式公開。 同樣地，合約的增益集專用「檢視」也會向增益集公開。 「配接器」用以讓主應用程式和增益集在其各自的合約檢視間進行通訊。 合約、檢視和配接器稱為區段，一組相關的區段構成「管線」。 管線是在其.NET Framework 增益集模型支援探索、 啟用、 安全性隔離、 執行隔離 （使用應用程式定義域和處理程序）、 通訊、 生命週期管理和版本控制的基礎。  
   
- 這項支援的要點是讓開發人員建置增益集，整合主應用程式的功能。 不過，某些情況下需要主應用程式顯示增益集所提供的 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。因為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中每種簡報技術都有用以實作 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 的自有模型，所以 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型不支援任何特定的簡報技術。 而是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會擴充 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型與增益集 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]支援。  
+ 這項支援的要點是讓開發人員建置增益集，整合主應用程式的功能。 不過，某些情況下需要主應用程式顯示增益集所提供的使用者介面。因為.NET Framework 中的每種簡報技術都有自己的模型，來實作使用者介面，.NET Framework 增益集模型不支援任何特定的簡報技術。 相反地，WPF 會擴充.NET Framework 增益集模型與增益集的 UI 支援。  
   
 <a name="WPFAddInModel"></a>   
 ## <a name="wpf-add-ins"></a>WPF 增益集  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 聯合 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型，可讓您處理需要主應用程式從增益集顯示 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 的各種情況。特別是，這些案例是由 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 與下面兩個程式設計模型所解決︰  
+ WPF 中，搭配.NET Framework 增益集模型，可讓您解決各種需要主應用程式顯示使用者介面增益集的案例。特別是，這些案例中討論的 wpf 使用下列兩種程式設計模型：  
   
-1.  **增益集傳回 UI**。 增益集透過方法呼叫將 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 傳回主應用程式，如合約所定義。 此案例用於下列情況︰  
+1.  **增益集傳回 UI**。 增益集傳回 UI 主應用程式透過方法呼叫，如合約所定義。 此案例用於下列情況︰  
   
-    -   增益集傳回的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 外觀相依於只存在於執行階段的資料或條件，例如動態產生的報表。  
+    -   UI 的增益集所傳回的外觀取決於資料，或已存在的條件只會在執行階段，例如動態產生的報告。  
   
-    -   增益集所提供服務的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 不同於可使用增益集之主應用程式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
+    -   可以使用增益集主應用程式的 UI 與不同的 UI 的增益集所提供的服務。  
   
-    -   增益集主要執行主應用程式服務，並向具有 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的主應用程式報告狀態。  
+    -   增益集主要執行主應用程式的服務，並將狀態回報給主應用程式 ui。  
   
-2.  **增益集為 UI**。 增益集是 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，如合約所定義。 此案例用於下列情況︰  
+2.  **增益集為 UI**。 增益集為 UI 中，合約所定義。 此案例用於下列情況︰  
   
     -   增益集不提供顯示以外的服務，例如廣告。  
   
-    -   增益集所提供服務的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 對可以使用該增益集的主應用程式而言很普通，例如計算機或色彩選擇器。  
+    -   UI 的增益集所提供的服務是通用於所有的裝載應用程式可以使用該增益集，例如計算機或色彩選擇器。  
   
- 這些案例需要 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 物件能在主應用程式和增益集應用程式定義域之間傳遞。 因為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型仰賴應用程式定義域之間的遠端通訊，所以在它們之間傳遞的物件必須可遠端處理。  
+ 這些案例需要 UI 物件，可以在主應用程式和增益集應用程式定義域之間傳遞。 .NET Framework 增益集模型仰賴的遠端應用程式定義域之間通訊的情況下，因為它們之間傳遞的物件必須可遠端處理。  
   
  可在遠端處理的物件是執行下列一或多個工作的類別執行個體︰  
   
@@ -100,13 +100,13 @@ ms.locfileid: "43402097"
 -   具有<xref:System.SerializableAttribute>套用的屬性。  
   
 > [!NOTE]
->  如需建立可遠端處理之 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件的詳細資訊，請參閱[讓物件變成可遠端處理](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)。  
+>  如需建立可遠端處理.NET Framework 物件的詳細資訊，請參閱[讓物件變成可遠端處理](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 類型不能從遠端處理。 為解決此問題，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會擴充 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型，從主應用程式顯示增益集建立的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 這項支援由提供[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]由兩種類型：<xref:System.AddIn.Contract.INativeHandleContract>介面和實作的兩個靜態方法<xref:System.AddIn.Pipeline.FrameworkElementAdapters>類別：<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>和<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 概括而言，這些類型和方法的使用方式如下︰  
+ WPF UI 型別不是可遠端處理。 若要解決此問題，WPF 會擴充.NET Framework 增益集模型可讓 WPF UI 增益集所建立要顯示從主應用程式。 這項支援由兩種類型的 WPF 所提供：<xref:System.AddIn.Contract.INativeHandleContract>介面和實作的兩個靜態方法<xref:System.AddIn.Pipeline.FrameworkElementAdapters>類別：<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>和<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 概括而言，這些類型和方法的使用方式如下︰  
   
-1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 要求[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]所提供增益集是直接或間接衍生自的類別<xref:System.Windows.FrameworkElement>，例如圖形、 控制項、 使用者控制項、 版面配置面板和頁面。  
+1.  WPF 可讓您需要增益集所提供的使用者介面會直接或間接衍生自的類別<xref:System.Windows.FrameworkElement>，例如圖形、 控制項、 使用者控制項、 版面配置面板和頁面。  
   
-2.  只要合約宣告 UI，將增益集與主應用程式之間傳遞，它必須宣告為<xref:System.AddIn.Contract.INativeHandleContract>(不<xref:System.Windows.FrameworkElement>);<xref:System.AddIn.Contract.INativeHandleContract>增益集可遠端處理表示[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]可以在跨越隔離界限傳遞。  
+2.  只要合約宣告 UI，將增益集與主應用程式之間傳遞，它必須宣告為<xref:System.AddIn.Contract.INativeHandleContract>(不<xref:System.Windows.FrameworkElement>);<xref:System.AddIn.Contract.INativeHandleContract>是可以跨隔離界限傳遞增益集 UI 可從遠端表示。  
   
 3.  從增益集的應用程式定義域中，在傳遞之前<xref:System.Windows.FrameworkElement>會封裝成<xref:System.AddIn.Contract.INativeHandleContract>藉由呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。  
   
@@ -116,27 +116,27 @@ ms.locfileid: "43402097"
   
 <a name="ReturnUIFromAddInContract"></a>   
 ## <a name="add-in-returns-a-user-interface"></a>增益集傳回使用者介面  
- 為使增益集將 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 傳回至主應用程式，需要︰  
+ 增益集來傳回主應用程式的 UI，需要下列條件：  
   
-1.  您必須建立主應用程式、增益集和管線，如[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)][增益集和擴充性](../../../../docs/framework/add-ins/index.md)一文所述。  
+1.  主應用程式、 增益集和管線必須建立，由.NET Framework 所述[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文件。  
   
-2.  合約必須實作<xref:System.AddIn.Contract.IContract>並傳回[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，合約必須宣告具有型別的傳回值的方法<xref:System.AddIn.Contract.INativeHandleContract>。  
+2.  合約必須實作<xref:System.AddIn.Contract.IContract>，返回 UI，合約必須宣告具有型別的傳回值的方法<xref:System.AddIn.Contract.INativeHandleContract>。  
   
-3.  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]傳遞增益集與主機之間的應用程式必須直接或間接衍生自<xref:System.Windows.FrameworkElement>。  
+3.  UI 的增益集與主應用程式之間傳遞必須直接或間接衍生自<xref:System.Windows.FrameworkElement>。  
   
-4.  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]傳回的增益集必須轉換從<xref:System.Windows.FrameworkElement>到<xref:System.AddIn.Contract.INativeHandleContract>跨越隔離界限之前。  
+4.  必須從轉換由增益集 UI<xref:System.Windows.FrameworkElement>至<xref:System.AddIn.Contract.INativeHandleContract>跨越隔離界限之前。  
   
-5.  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]傳回必須從轉換<xref:System.AddIn.Contract.INativeHandleContract>到<xref:System.Windows.FrameworkElement>跨越隔離界限之後。  
+5.  必須從轉換的 UI 中，會傳回<xref:System.AddIn.Contract.INativeHandleContract>至<xref:System.Windows.FrameworkElement>跨越隔離界限之後。  
   
 6.  主應用程式會顯示傳回<xref:System.Windows.FrameworkElement>。  
   
- 如需示範如何實作會傳回 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的增益集範例，請參閱[建立傳回 UI 的增益集](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)。  
+ 如需示範如何實作傳回 UI 的增益集的範例，請參閱 <<c0> [ 建立增益集傳回 UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)。  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>增益集是使用者介面  
- 當增益集是 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 時，需要︰  
+ 當增益集 UI，需要下列條件：  
   
-1.  您必須建立主應用程式、增益集和管線，如[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)][增益集和擴充性](../../../../docs/framework/add-ins/index.md)一文所述。  
+1.  主應用程式、 增益集和管線必須建立，由.NET Framework 所述[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文件。  
   
 2.  增益集的合約介面必須實作<xref:System.AddIn.Contract.INativeHandleContract>。  
   
@@ -148,11 +148,11 @@ ms.locfileid: "43402097"
   
 6.  主應用程式會顯示傳回<xref:System.Windows.FrameworkElement>。  
   
- 如需示範如何實作本身即為 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的增益集範例，請參閱[建立本身為 UI 的增益集](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)。  
+ 如需示範如何實作本身為 UI 的增益集的範例，請參閱 <<c0> [ 增益集也就是建立 UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)。  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>從增益集傳回多個 UI  
- 增益集通常會提供多個 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 供主應用程式顯示。 例如，增益集是向主應用程式提供狀態資訊的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，也是 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 像這樣的增益集的實作方法是，使用[增益集傳回使用者介面](#ReturnUIFromAddInContract)和[增益集是使用者介面](#AddInIsAUI)模型這兩種技術的組合。  
+ 增益集通常會提供多個主應用程式顯示使用者介面。 例如，請考慮為也會提供裝載應用程式的狀態資訊也做為 UI 的 UI 的增益集。 像這樣的增益集的實作方法是，使用[增益集傳回使用者介面](#ReturnUIFromAddInContract)和[增益集是使用者介面](#AddInIsAUI)模型這兩種技術的組合。  
   
 <a name="AddInsAndXBAPs"></a>   
 ## <a name="add-ins-and-xaml-browser-applications"></a>增益集和 XAML 瀏覽器應用程式  
@@ -171,7 +171,7 @@ ms.locfileid: "43402097"
   
  因此，第一個步驟是設定每個管線組件和增益集組件專案的組建輸出，組建 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 專案根目錄的管線和增益集組件。 下表顯示管線組件專案及增益集組件專案的組建輸出路徑，這些專案和裝載 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 專案位在相同的解決方案和根資料夾中。  
   
- 表 1：XBAP 裝載之管線組件的組建輸出路徑  
+ 表 1:Xbap 裝載之管線組件建置輸出路徑  
   
 |管線組件專案|建置輸出路徑|  
 |-------------------------------|-----------------------|  
@@ -194,7 +194,7 @@ ms.locfileid: "43402097"
 2.  在 [應用程式檔案] 對話方塊中，將每個管線和增益集 DLL 的 [發行狀態] 設成 [Include (Auto)] (包含 (自動))，並將每個管線和增益集 DLL 的 [下載群組] 設成 [(必要項)]。  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>使用來自應用程式基底的管線和增益集  
- 針對 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]部署設定管線和增益集時，它們會下載到和 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 相同的 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 快取資料夾。 若要使用來自 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的管線和增益集，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 程式碼必須從應用程式基底取得它們。 使用管線和增益集的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型各種類型和成員為此狀況提供特殊支援。 首先，會識別路徑<xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>列舉值。 您使用此值與相關增益集成員的多載處理使用包含下列各項的管線︰  
+ 針對 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]部署設定管線和增益集時，它們會下載到和 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 相同的 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 快取資料夾。 若要使用來自 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的管線和增益集，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 程式碼必須從應用程式基底取得它們。 不同的類型和成員的.NET Framework 增益集模型使用管線和增益集提供特殊支援此案例中。 首先，會識別路徑<xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>列舉值。 您使用此值與相關增益集成員的多載處理使用包含下列各項的管線︰  
   
 -   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
@@ -209,82 +209,82 @@ ms.locfileid: "43402097"
   
 <a name="WPFAddInModelArchitecture"></a>   
 ## <a name="wpf-add-in-architecture"></a>WPF 增益集架構  
- 在最高的層級，如我們所見，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可讓[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]增益集來實作[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)](直接或間接衍生自<xref:System.Windows.FrameworkElement>) 使用<xref:System.AddIn.Contract.INativeHandleContract>，<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>並<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>。 結果是主應用程式會傳回<xref:System.Windows.FrameworkElement>顯示從[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]主應用程式。  
+ 在最高的層級，如我們所見，WPF 會讓.NET Framework 增益集來實作使用者介面 (直接或間接衍生自<xref:System.Windows.FrameworkElement>) 使用<xref:System.AddIn.Contract.INativeHandleContract>，<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>和<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>。 結果是主應用程式會傳回<xref:System.Windows.FrameworkElement>所顯示從 UI 的主應用程式。  
   
- 若為簡單的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 增益集案例，這是開發人員需要的最詳細資料。 若為更複雜的案例，特別是嘗試使用其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 服務，例如版面配置、資源及資料繫結，需要更深入瞭解 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 如何擴充 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型與 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 支援，以瞭解其優點和限制。  
+ 簡單 UI 增益集的情況下，這是開發人員需要盡可能詳細的資料。 更複雜的情況下，特別是嘗試使用其他的 WPF 服務，例如版面配置、 資源和資料繫結，更深入了解 WPF 如何擴充.NET Framework 增益集模型與 UI 支援，才能了解它的優點和限制。  
   
- 基本上，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 不會從增益集將 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 傳送到主應用程式；而是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 互通性傳送 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的 Win32 視窗控制代碼。 因此，當 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 從增益集傳遞至主應用程式時，會發生下列情況︰  
+ 基本上，WPF 未通過 UI 的增益集主應用程式;相反地，WPF 會將傳遞的 Win32 視窗控制代碼的 ui 使用 WPF 互通性。 因此，UI 的增益集從傳遞至主應用程式時，會發生下列情況：  
   
--   在增益集端，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 取得主應用程式會顯示之 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的視窗控制代碼。 視窗控制代碼會封裝的內部[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]類別衍生自<xref:System.Windows.Interop.HwndSource>並實作<xref:System.AddIn.Contract.INativeHandleContract>。 此類別的執行個體由<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>並且從增益集的應用程式定義域中主應用程式的應用程式定義域來封送處理。  
+-   在增益集端，WPF 會將顯示在主應用程式的 ui 取得視窗控制代碼。 視窗控制代碼會封裝由內部的 WPF 類別衍生自<xref:System.Windows.Interop.HwndSource>並實作<xref:System.AddIn.Contract.INativeHandleContract>。 此類別的執行個體由<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>並且從增益集的應用程式定義域中主應用程式的應用程式定義域來封送處理。  
   
--   在主機應用程式端， [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] repackages<xref:System.Windows.Interop.HwndSource>為內部[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]類別衍生自<xref:System.Windows.Interop.HwndHost>並取用<xref:System.AddIn.Contract.INativeHandleContract>。 此類別的執行個體由<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>主應用程式。  
+-   在主機應用程式端，WPF repackages<xref:System.Windows.Interop.HwndSource>做為內部的 WPF 類別衍生自<xref:System.Windows.Interop.HwndHost>，並取用<xref:System.AddIn.Contract.INativeHandleContract>。 此類別的執行個體由<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>主應用程式。  
   
- <xref:System.Windows.Interop.HwndHost> 顯示存在於[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]，從視窗控制代碼，識別[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。 如需詳細資訊，請參閱 [WPF 和 Win32 互通](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)。  
+ <xref:System.Windows.Interop.HwndHost> 用以顯示視窗控制代碼，WPF 使用者介面中所識別的使用者介面。 如需詳細資訊，請參閱 [WPF 和 Win32 互通](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)。  
   
- 在 [摘要] <xref:System.AddIn.Contract.INativeHandleContract>， <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>，並<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>存在以允許的視窗控制代碼[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]要從增益集傳遞至主應用程式，它會封裝由<xref:System.Windows.Interop.HwndHost>並顯示主應用程式應用程式的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
+ 在 [摘要] <xref:System.AddIn.Contract.INativeHandleContract>， <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>，並<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>存在以允許從傳遞的增益集主應用程式，它會封裝由 WPF UI 的視窗控制代碼<xref:System.Windows.Interop.HwndHost>並顯示主應用程式的 UI。  
   
 > [!NOTE]
 >  因為主應用程式取得<xref:System.Windows.Interop.HwndHost>，主應用程式無法轉換所傳回的物件<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>型別實作藉由增益集 (比方說， <xref:System.Windows.Controls.UserControl>)。  
   
- 本質上，<xref:System.Windows.Interop.HwndHost>有某些限制，會影響主應用程式如何使用它們。 不過，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]擴充<xref:System.Windows.Interop.HwndHost>與增益集案例的幾項功能。 下文說明這些優點與限制。  
+ 本質上，<xref:System.Windows.Interop.HwndHost>有某些限制，會影響主應用程式如何使用它們。 不過，WPF 擴充<xref:System.Windows.Interop.HwndHost>與增益集案例的幾項功能。 下文說明這些優點與限制。  
   
 <a name="WPFAddInModelBenefits"></a>   
 ## <a name="wpf-add-in-benefits"></a>WPF 增益集的優點  
- 因為[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]增益集[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]會顯示從主應用程式使用的內部類別衍生自<xref:System.Windows.Interop.HwndHost>，這些[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]會受限於各種<xref:System.Windows.Interop.HwndHost>相對於[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]服務，例如版面配置、 轉譯、 資料繫結、 樣式、 範本和資源。 不過，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]擴大其內部<xref:System.Windows.Interop.HwndHost>子類別與其他功能，包括下列：  
+ 因為 WPF 增益集使用者介面會顯示從主應用程式使用的內部類別衍生自<xref:System.Windows.Interop.HwndHost>，這些使用者介面會受限於各種<xref:System.Windows.Interop.HwndHost>對於 WPF UI 服務，例如版面配置，轉譯、 資料繫結、 樣式、 範本和資源。 不過，WPF 擴大其內部<xref:System.Windows.Interop.HwndHost>子類別與其他功能，包括下列：  
   
--   切換主應用程式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 和增益集的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 請注意，「 增益集[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]」 程式設計模型需使用增益集端配接器，來覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>以啟用定位處理，無論增益集是完全受信任或部分信任的。  
+-   主應用程式的 UI 和增益集 UI 之間使用 tab 鍵。 請注意，「 增益 」 UI 的程式設計模型需使用增益集端配接器，來覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>以啟用定位處理，無論增益集是完全受信任或部分信任的。  
   
--   接受從主應用程式 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 顯示的增益集 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 的協助工具需求。  
+-   接受主機應用程式使用者介面中顯示的增益集使用者介面的協助工具需求。  
   
--   讓 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式在多個應用程式定義域情況下安全執行。  
+-   啟用 WPF 應用程式安全地在執行多個應用程式網域的案例。  
   
--   在增益集使用安全性隔離執行時 (即部分信任安全性沙箱)，防止不合法存取增益集 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 視窗控制代碼。 呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>可確保此安全性：  
+-   防止不合法存取增益集 UI 視窗控制代碼時使用安全性隔離 （也就是部分信任安全性沙箱） 中執行增益集。 呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>可確保此安全性：  
   
-    -   針對 「 增益集傳回[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]」 程式設計模型、 傳遞增益集的視窗控制代碼的唯一辦法[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]跨越隔離界限就是呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。  
+    -   「 增益集傳回 UI 」 程式設計模型，跨越隔離界限傳遞增益集 UI 的視窗控制代碼的唯一方式是呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。  
   
-    -   「 增益集是[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]」 程式設計模型，覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>增益集端配接器和呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>（如上述範例所示） 是必要的因為呼叫增益集端配接器的`QueryContract`實作從主應用程式端配接器。  
+    -   「 增益 」 UI 程式設計模型，覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>上為增益集端配接器並呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>（如上述範例所示） 是必要的因為呼叫增益集端配接器的`QueryContract`實作主應用程式端配接器。  
   
--   提供多個應用程式定義域執行保護。 由於應用程式定義域的限制，增益集應用程式定義域中擲回的未處理例外狀況會導致整個應用程式當機，即使有隔離界限。 不過，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 和 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型提供簡單的方式來解決這個問題，並改善應用程式穩定性。 A[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]增益集，會顯示[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]會建立<xref:System.Windows.Threading.Dispatcher>執行緒上，如果主應用程式執行的應用程式定義域[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式。 您可以偵測應用程式定義域處理會發生的所有未處理例外狀況<xref:System.Windows.Threading.Dispatcher.UnhandledException>事件的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]增益集的<xref:System.Windows.Threading.Dispatcher>。 您可以取得<xref:System.Windows.Threading.Dispatcher>從<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>屬性。  
+-   提供多個應用程式定義域執行保護。 由於應用程式定義域的限制，增益集應用程式定義域中擲回的未處理例外狀況會導致整個應用程式當機，即使有隔離界限。 不過，WPF 和.NET Framework 增益集模型提供簡單的方式來解決這個問題，並改善應用程式穩定性。 顯示使用者介面的 WPF 增益集建立<xref:System.Windows.Threading.Dispatcher>執行緒上，如果主應用程式是 WPF 應用程式執行的應用程式定義域。 您可以偵測應用程式定義域處理會發生的所有未處理例外狀況<xref:System.Windows.Threading.Dispatcher.UnhandledException>WPF 增益集的事件<xref:System.Windows.Threading.Dispatcher>。 您可以取得<xref:System.Windows.Threading.Dispatcher>從<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>屬性。  
   
 <a name="WPFAddInModelLimitations"></a>   
 ## <a name="wpf-add-in-limitations"></a>WPF 增益集限制  
- 優點之外，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]加入所提供的預設行為<xref:System.Windows.Interop.HwndSource>， <xref:System.Windows.Interop.HwndHost>，和視窗控制代碼，也會在為增益集的限制[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]，會顯示從主應用程式：  
+ WPF 會將所提供的預設行為的優點之外<xref:System.Windows.Interop.HwndSource>， <xref:System.Windows.Interop.HwndHost>，和視窗控制代碼，也會顯示從主應用程式的增益集使用者介面的限制：  
   
--   從主應用程式顯示的增益集 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 不遵守主應用程式的裁剪行為。  
+-   從主應用程式中顯示的增益集使用者介面不遵守主應用程式的裁剪行為。  
   
 -   互通性案例中的「空間」概念也適用於增益集 (請參閱[技術領域概觀](../../../../docs/framework/wpf/advanced/technology-regions-overview.md))。  
   
--   主應用程式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 服務，例如資源繼承、資料繫結和命令，不會自動提供給增益集 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。 若要向增益集提供這些服務，您需要更新管線。  
+-   主應用程式的 UI 服務，例如資源繼承、 資料繫結和命令，不會自動提供給增益集使用者介面。 若要向增益集提供這些服務，您需要更新管線。  
   
--   增益集 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 不能進行旋轉、縮放、扭曲，也不會受到轉換影響 (請參閱[轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md))。  
+-   增益集 UI 無法旋轉、 縮放、 扭曲，或會受到轉換 (請參閱[轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md))。  
   
--   增益集內的內容[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]藉由繪製作業轉譯<xref:System.Drawing>命名空間可以包含 alpha 混色。 不過，包含它的增益集 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 和主應用程式 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，兩者都必須是 100% 不透明；換句話說，兩者的 `Opacity` 屬性都必須設為 1。  
+-   藉由繪製作業轉譯的增益集使用者介面內的內容<xref:System.Drawing>命名空間可以包含 alpha 混色。 不過，增益集 UI 和主應用程式 UI，其中包含它必須是 100%透明的。換句話說，`Opacity`屬性都必須設定為 1。  
   
--   如果<xref:System.Windows.Window.AllowsTransparency%2A>屬性中包含的增益集主應用程式的視窗[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]設定為`true`，增益集是不可見。 即使增益集 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 是 100% 不透明 (也就是 `Opacity` 屬性值為 1) 也一樣。  
+-   如果<xref:System.Windows.Window.AllowsTransparency%2A>主應用程式，其中包含增益集 UI 視窗的屬性設定為`true`，增益集是不可見。 這是 true，即使此增益集 UI 是 100%不透明 (也就是`Opacity`屬性具有值為 1)。  
   
--   增益集 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 必須出現在相同最上層視窗中其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 項目的上方。  
+-   增益集 UI 必須出現在 WPF 中其他項目相同的最上層視窗之上。  
   
--   增益集的任何部分[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]可以使用轉譯<xref:System.Windows.Media.VisualBrush>。 增益集反倒可能採用所產生之 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的快照集建立點陣圖，它可以傳遞至使用合約所定義方法的主應用程式。  
+-   可以使用轉譯的增益集 UI 沒有部分<xref:System.Windows.Media.VisualBrush>。 相反地，增益集可能需要建立點陣圖，可以傳遞至主應用程式使用合約所定義的方法產生的 UI 的快照集。  
   
--   無法從播放媒體檔案<xref:System.Windows.Controls.MediaElement>增益集中[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
+-   無法從播放媒體檔案<xref:System.Windows.Controls.MediaElement>增益集的 UI 中。  
   
--   主應用程式不接收也不引發針對增益集 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 產生的滑鼠事件，而主應用程式 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的 `IsMouseOver` 屬性有值 `false`。  
+-   增益集 ui 所產生的滑鼠事件會不接收也不引發主應用程式，而`IsMouseOver`主應用程式 UI 屬性的值為`false`。  
   
--   當焦點在增益集 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的控制項之間移動時，主應用程式不接收也不引發 `GotFocus` 和 `LostFocus` 事件。  
+-   當焦點在增益集 UI 的控制項之間移動`GotFocus`和`LostFocus`事件不是接收也不引發由主應用程式。  
   
--   包含增益集 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的主應用程式在列印時有部分會出現白色。  
+-   包含增益集 UI 的主應用程式的部分會出現白色列印時。  
   
--   所有 dispatcher (請參閱<xref:System.Windows.Threading.Dispatcher>) 建立的增益集[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]必須手動關閉的擁有者增益集卸載之前如果主應用程式會繼續執行。 合約可以實作讓主應用程式先通知增益集再卸載增益集的方法，藉此讓增益集 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 關閉其 Dispatcher。  
+-   所有 dispatcher (請參閱<xref:System.Windows.Threading.Dispatcher>) 建立的增益集 UI 必須手動關閉的擁有者增益集卸載之前如果主應用程式會繼續執行。 合約可以實作方法，可讓主應用程式，以表示增益集，增益集卸載之前，藉此讓增益集 UI 關閉其 dispatcher。  
   
--   如果增益集[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]已<xref:System.Windows.Controls.InkCanvas>，或包含<xref:System.Windows.Controls.InkCanvas>，您不能卸載增益集。  
+-   如果增益集 UI <xref:System.Windows.Controls.InkCanvas> ，或包含<xref:System.Windows.Controls.InkCanvas>，您不能卸載增益集。  
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>效能最佳化  
- 根據預設，當使用多個應用程式定義域時，每個應用程式需要的各種 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 組件都會載入該應用程式定義域。 如此一來，建立新應用程式定義域以及從其中啟動應用程式所需的時間，可能會影響效能。 不過，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 會提供方法讓您降低啟動時間，如已載入，指示應用程式在各應用程式定義域間共用組件。 您可以使用<xref:System.LoaderOptimizationAttribute>屬性，它必須套用至進入點方法 (`Main`)。 在此情況下，您必須只使用程式碼實作您的應用程式定義 (請參閱[應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md))。  
+ 根據預設，當使用多個應用程式定義域時，每個應用程式所需的各種.NET Framework 組件全部載入該應用程式定義域。 如此一來，建立新應用程式定義域以及從其中啟動應用程式所需的時間，可能會影響效能。 不過，.NET Framework 可讓您降低啟動時間，指示應用程式定義域間共用組件，如果已載入的應用程式。 您可以使用<xref:System.LoaderOptimizationAttribute>屬性，它必須套用至進入點方法 (`Main`)。 在此情況下，您必須只使用程式碼實作您的應用程式定義 (請參閱[應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md))。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.LoaderOptimizationAttribute>  
- [增益集和擴充性](../../../../docs/framework/add-ins/index.md)  
+ [增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
  [應用程式定義域](../../../../docs/framework/app-domains/application-domains.md)  
  [.NET framework 遠端處理概觀](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
  [讓物件變成可遠端處理](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  

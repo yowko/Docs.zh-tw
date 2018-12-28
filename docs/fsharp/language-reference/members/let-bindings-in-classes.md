@@ -1,17 +1,17 @@
 ---
-title: 類別中的 let 繫結 (F#)
-description: 了解如何在類別定義中使用 'let' 的繫結來定義私用欄位和 F# 類別的私用函式。
+title: 類別中的 let 繫結
+description: 了解如何定義私用欄位和私用的函式，如F#類別使用 'let' 在類別定義的繫結。
 ms.date: 05/16/2016
-ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 03dd583a141971284e6a8ddaad02272236cd1e4c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48033216"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611122"
 ---
 # <a name="let-bindings-in-classes"></a>類別中的 let 繫結
 
-您可以定義私用欄位和 F# 類別的私用函式使用`let`類別定義中的繫結。
+您可以定義私用欄位和私用的函式，如F#使用的類別`let`類別定義中的繫結。
 
 ## <a name="syntax"></a>語法
 
@@ -45,7 +45,7 @@ A`let`繫結，不是靜態的執行個體稱為`let`繫結。 執行個體`let`
 
 ## <a name="alternative-ways-to-create-fields"></a>若要建立欄位的替代方式
 
-您也可以使用`val`關鍵字來建立私用欄位。 當使用`val`關鍵字，欄位未指定值，當物件建立時，但改為使用預設值初始化。 如需詳細資訊，請參閱 <<c0> [ 明確欄位： val 關鍵字](explicit-fields-the-val-keyword.md)。
+您也可以使用`val`關鍵字來建立私用欄位。 當使用`val`關鍵字，欄位未指定值，當物件建立時，但改為使用預設值初始化。 如需詳細資訊，請參閱[明確欄位：Val 關鍵字](explicit-fields-the-val-keyword.md)。
 
 您也可以定義類別中私用欄位，藉由使用成員定義，以及加入關鍵字`private`的定義。 這可以是成員的很有用，如果您預期要變更存取範圍，而不需要重新撰寫程式碼。 如需詳細資訊，請參閱[存取控制](../access-control.md)。
 

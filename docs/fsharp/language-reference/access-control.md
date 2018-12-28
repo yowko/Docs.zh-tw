@@ -1,13 +1,13 @@
 ---
-title: 存取控制 (F#)
+title: 存取控制
 description: 了解如何控制存取權的程式設計項目，例如類型、 方法和函式中，F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 136eba5ec33fa6128e677b614fc0ace3c71d17df
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8db178b26f3beb6ce95bff84ccad9ac9e8c40ce7
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153705"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612801"
 ---
 # <a name="access-control"></a>存取控制
 

@@ -1,21 +1,21 @@
 ---
-title: Boolean 運算子 (F#)
-description: 深入了解可在 F# 程式設計語言中使用布林運算子。
+title: Boolean 運算子
+description: 深入了解可用於布林運算子F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 5353b6ec6a0bd610f3446761a1d28f01f0403302
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45638476"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612734"
 ---
 # <a name="boolean-operators"></a>Boolean 運算子
 
-本主題說明 F# 語言中的布林運算子的支援。
+本主題說明中的布林運算子的支援F#語言。
 
 ## <a name="summary-of-boolean-operators"></a>布林運算子的摘要
 
-下表摘要說明可在 F# 語言中使用布林運算子。 唯一支援這些運算子的類型是`bool`型別。
+下表摘要說明可用於布林運算子F#語言。 唯一支援這些運算子的類型是`bool`型別。
 
 |運算子|描述|
 |--------|-----------|

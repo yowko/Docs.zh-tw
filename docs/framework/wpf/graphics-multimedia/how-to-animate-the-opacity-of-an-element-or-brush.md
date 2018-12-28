@@ -1,18 +1,18 @@
 ---
-title: 如何：建立項目或筆刷不透明效果的動畫
+title: HOW TO：建立項目或筆刷不透明效果的動畫
 ms.date: 03/30/2017
 helpviewer_keywords:
 - opacity [WPF], animating
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
-ms.openlocfilehash: 549d3eab0d6d75403e962eeb146be8d7995cc931
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 659b051fe63c113bf1a4488b1fab12bbee75b1e3
+ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525849"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53451244"
 ---
-# <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>如何：建立項目或筆刷不透明效果的動畫
+# <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>HOW TO：建立項目或筆刷不透明效果的動畫
 若要讓架構元素淡出畫面，您可以以動畫顯示其<xref:System.Windows.UIElement.Opacity%2A>屬性，或者您可以建立動畫<xref:System.Windows.Media.Brush.Opacity%2A>屬性<xref:System.Windows.Media.Brush>（或筆刷） 用來繪製它。 建立的項目不透明度動畫可讓和其子系淡出畫面，但以動畫顯示筆刷，用來繪製項目可讓您更謹慎選擇哪些項目的部分淡。 例如，您無法以動畫顯示用來繪製按鈕背景的筆刷的不透明度。 這會導致按鈕的背景淡出放大檢視，同時保留它的文字完全不透明。  
   
 > [!NOTE]
@@ -23,4 +23,4 @@ ms.locfileid: "43525849"
 ## <a name="example"></a>範例  
  [!code-xaml[timingbehaviors_snip#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/OpacityAnimationExample.xaml#10)]  
   
- 此範例中，已省略的程式碼。 完整的範例也會示範如何以動畫顯示的不透明度<xref:System.Windows.Media.Color>內<xref:System.Windows.Media.LinearGradientBrush>。  如需完整的範例，請參閱[建立項目範例的不透明度動畫](https://go.microsoft.com/fwlink/?LinkID=159968)。
+ 此範例中，已省略的程式碼。 完整的範例也會示範如何以動畫顯示的不透明度<xref:System.Windows.Media.Color>內<xref:System.Windows.Media.LinearGradientBrush>。  如需完整的範例，請參閱[建立項目範例的不透明度動畫](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/OpacityAnimation)。

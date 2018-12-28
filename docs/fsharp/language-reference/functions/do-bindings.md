@@ -1,13 +1,13 @@
 ---
-title: do 繫結 (F#)
-description: 了解如何將 F# 'do' 繫結用來執行程式碼未定義的函式或值。
+title: do 繫結
+description: 了解如何F#'do' 繫結用來執行程式碼，而不需定義的函式或值。
 ms.date: 05/16/2016
-ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: d29f8557fda06097d2e85748ab6286f0415730b3
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45973140"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614515"
 ---
 # <a name="do-bindings"></a>do 繫結
 
