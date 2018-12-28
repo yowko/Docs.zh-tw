@@ -1,21 +1,22 @@
 ---
-title: 無法將引數轉換&#39;&lt;引數名稱&gt;&#39;型別的&#39; &lt;type1&gt; &#39;輸入&#39; &lt;type2&gt;&#39;
+title: 無法轉換引數 '&lt;argumentname&gt;'的類型'&lt;type1&gt;' 為 type'&lt;type2&gt;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_ConvertToType3
 ms.assetid: fdf6c571-9c6c-4db2-8960-f394720b01e5
-ms.openlocfilehash: 0a241150870397591da8cbc04ad334b6e5d72741
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc8cf34180a48e47ec32af06e740323cbfa94f22
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53781332"
 ---
-# <a name="cannot-convert-argument-39ltargumentnamegt39-of-type-39lttype1gt39-to-type-39lttype2gt39"></a><span data-ttu-id="bfbaf-102">無法將引數轉換&#39;&lt;引數名稱&gt;&#39;型別的&#39; &lt;type1&gt; &#39;輸入&#39; &lt;type2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="bfbaf-102">Cannot convert argument &#39;&lt;argumentname&gt;&#39; of type &#39;&lt;type1&gt;&#39; to type &#39;&lt;type2&gt;&#39;</span></span>
-<span data-ttu-id="bfbaf-103">轉換作業嘗試將引數轉換為不相容的類型。</span><span class="sxs-lookup"><span data-stu-id="bfbaf-103">A conversion operation attempts to convert an argument to an incompatible type.</span></span>  
+# <a name="cannot-convert-argument-ltargumentnamegt-of-type-lttype1gt-to-type-lttype2gt"></a><span data-ttu-id="0a01e-102">無法轉換引數 '&lt;argumentname&gt;'的類型'&lt;type1&gt;' 為 type'&lt;type2&gt;'</span><span class="sxs-lookup"><span data-stu-id="0a01e-102">Cannot convert argument '&lt;argumentname&gt;' of type '&lt;type1&gt;' to type '&lt;type2&gt;'</span></span>
+<span data-ttu-id="0a01e-103">轉換作業嘗試將引數轉換為不相容的類型。</span><span class="sxs-lookup"><span data-stu-id="0a01e-103">A conversion operation attempts to convert an argument to an incompatible type.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="bfbaf-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="bfbaf-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0a01e-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="0a01e-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="bfbaf-105">確定您嘗試轉換引數的目標類型有效。</span><span class="sxs-lookup"><span data-stu-id="bfbaf-105">Ensure that the type to which you are trying to convert the argument is valid.</span></span>  
+1.  <span data-ttu-id="0a01e-105">確定您嘗試轉換引數的目標類型有效。</span><span class="sxs-lookup"><span data-stu-id="0a01e-105">Ensure that the type to which you are trying to convert the argument is valid.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bfbaf-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bfbaf-106">See Also</span></span>  
- [<span data-ttu-id="bfbaf-107">在 Visual Basic 中的型別轉換</span><span class="sxs-lookup"><span data-stu-id="bfbaf-107">Type Conversions in Visual Basic</span></span>](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="0a01e-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0a01e-106">See Also</span></span>  
+ [<span data-ttu-id="0a01e-107">在 Visual Basic 中的類型轉換</span><span class="sxs-lookup"><span data-stu-id="0a01e-107">Type Conversions in Visual Basic</span></span>](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
