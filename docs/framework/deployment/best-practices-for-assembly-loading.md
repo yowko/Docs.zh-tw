@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201578"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397042"
 ---
 # <a name="best-practices-for-assembly-loading"></a>組件載入的最佳作法
 本文討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型身分識別的問題。 本文討論下列建議：  
@@ -44,7 +44,7 @@ ms.locfileid: "50201578"
   
 -   載入來源內容包含從載入器未搜尋的位置中載入的組件。 例如，增益集可能安裝在不在應用程式路徑下的目錄。 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>、<xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> 和 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> 是依路徑載入之方法的範例。  
   
--   僅限反映的內容包含使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法所載入的組件。 無法執行此內容中的程式碼，因此此處不予討論。 如需詳細資訊，請參閱[如何：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
+-   僅限反映的內容包含使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法所載入的組件。 無法執行此內容中的程式碼，因此此處不予討論。 如需詳細資訊，請參閱[＜How to：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
   
 -   如果您已使用反映發出來產生暫時性動態組件，則組件不會在任何內容中。 此外，使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法所載入的大部分組件在載入時都沒有內容，而且從位元組陣列載入的組件在載入時沒有內容，除非它們在套件原則之後所建立的身分識別位於全域組件快取中。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "50201578"
  如果不可能將您的所有組件放在探查路徑中，請考慮使用替代項目，例如使用 .NET Framework 增益集模型、將組件放入全域組件快取中，或建立應用程式定義域。  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>考慮使用 .NET Framework 增益集模型  
- 如果您使用載入來源內容來實作通常不會安裝在應用程式基底中的增益集，請使用 .NET Framework 增益集模型。 此模型會提供應用程式定義域或處理序層級的隔離，而不需要您自行管理應用程式定義域。 如需增益集模型的資訊，請參閱[增益集和擴充性](../../../docs/framework/add-ins/index.md)。  
+ 如果您使用載入來源內容來實作通常不會安裝在應用程式基底中的增益集，請使用 .NET Framework 增益集模型。 此模型會提供應用程式定義域或處理序層級的隔離，而不需要您自行管理應用程式定義域。 如需增益集模型的資訊，請參閱[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>考慮使用全域組件快取  
  將組件放入全域組件快取以受益於應用程式基底外部的共用組件路徑，而不會遺失預設載入內容的優點或造成其他內容的缺點。  
@@ -170,4 +170,3 @@ ms.locfileid: "50201578"
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
-- [增益集和擴充性](../../../docs/framework/add-ins/index.md)

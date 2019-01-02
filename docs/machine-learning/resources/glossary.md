@@ -2,13 +2,13 @@
 title: 機器學習字彙 - ML.NET
 description: 對於您在 ML.NET 中建置自訂模型來說，相當實用的重要機器學習詞彙。
 ms.custom: seodec18
-ms.date: 12/06/2018
-ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/20/2018
+ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150572"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53760389"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機器學習詞彙的重要字詞
 
@@ -24,8 +24,6 @@ ms.locfileid: "53150572"
 
 在[二元分類](#binary-classification)中，作為曲線下面積值的評估計量，此面積會繪製出真陽性率 (Y 軸上) 與偽陽性率 (X 軸上) 的對比。 範圍為 0.5 (最差) 到 1 (最佳)。 這也稱為 ROC 曲線 (亦即 Receiver Operating Characteristic Curve (接收者操作特徵曲線)) 下的面積。 如需詳細資訊，請參閱維基百科上的[接收者操作特徵](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) \(英文\) 一文。
 
-相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>。
-
 ## <a name="binary-classification"></a>二元分類
 
 [標籤](#label)僅來自兩個類別其中之一的[分類](#classification)案例。 如需詳細資訊，請參閱[機器學習工作](tasks.md)主題的[二元分類](tasks.md#binary-classification)一節。
@@ -37,8 +35,6 @@ ms.locfileid: "53150572"
 ## <a name="coefficient-of-determination"></a>決定係數
 
 在[迴歸](#regression)中，指出資料與模型相符程度的評估計量。 範圍為 0 到 1。 值為 0 時，表示資料為隨機資料，或與模型不相符。 值為 1 時，表示模型與資料完全相符。 這通常稱為r<sup>2</sup>R<sup>2</sup> 或 R 平方。
-
-相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>。
 
 ## <a name="feature"></a>功能
 
@@ -52,8 +48,6 @@ ms.locfileid: "53150572"
 
 在[分類](#classification)中，用來平衡[精準率](#precision)和[召回率](#recall)的評估計量。
 
-相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>。
-
 ## <a name="hyperparameter"></a>超參數
 
 機器學習演算法的參數。 範例包括決策樹系中要學習的樹數目，或梯度下降演算法中的步階大小。 「超參數」的值是在將模型定型之前設定的，並且會控管尋找預測函式之參數 (例如決策樹中的比較點或線性迴歸模型中的加權) 的程序。 如需詳細資訊，請參閱維基百科上的[超參數](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) \(英文\) 一文。
@@ -66,13 +60,9 @@ ms.locfileid: "53150572"
 
 在[分類](#classification)中，描述分類器準確率特性的評估計量。 對數損失越小，分類器的準確率就越高。
 
-相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>。
-
 ## <a name="mean-absolute-error-mae"></a>平均絕對誤差 (MAE)
 
 在[迴歸](#regression)中，作為所有模型誤差平均值的評估計量，其中模型誤差係指所預測[標籤](#label)值與正確標籤值之間的差距。
-
-相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>。
 
 ## <a name="model"></a>型號
 
@@ -104,8 +94,6 @@ ms.locfileid: "53150572"
 
 在[分類](#classification)中，類別的召回率係指正確預測為屬於該類別的項目數，除以實際屬於該類別的項目總數後，所得出的值。
 
-相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>、<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>。
-
 ## <a name="regression"></a>迴歸
 
 輸出為實際值 (例如雙精度浮點數) 的[機器學習](#supervised-machine-learning)工作。 範例包括預測股價。 如需詳細資訊，請參閱[機器學習工作](tasks.md)主題的[迴歸](tasks.md#regression)一節。
@@ -121,8 +109,6 @@ ms.locfileid: "53150572"
 ## <a name="root-of-mean-squared-error-rmse"></a>均方根誤差 (RMSE)
 
 在[迴歸](#regression)中，此評估計量是誤差平方值之平均值的平方根。
-
-相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>。
 
 ## <a name="supervised-machine-learning"></a>監督式機器學習
 

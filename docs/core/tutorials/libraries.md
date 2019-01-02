@@ -2,15 +2,14 @@
 title: 使用跨平台工具開發程式庫
 description: 了解如何使用 .NET Core CLI 工具來建立 .NET Core 程式庫。 您將建立支援多個架構的程式庫。
 author: cartermp
-ms.author: mairaw
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: a8028883b3424588d0fb926dcb73f400a8c620dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148531"
+ms.locfileid: "53169361"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>使用跨平台工具開發程式庫
 

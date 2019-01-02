@@ -2,14 +2,14 @@
 title: 從 DNX 移轉到 .NET Core CLI
 description: 從使用 DNX 工具移轉為 .NET Core CLI 工具。
 author: blackdwarf
-ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: dd3c31b88b619799e6b2e2596127d64d84918ca0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.custom: seodec18
+ms.openlocfilehash: 26cf812bdce565b5278b00c6965a61b6135e3df7
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388770"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170700"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>從 DNX 移轉到 .NET Core CLI (project.json)
 
@@ -49,7 +49,7 @@ CLI 工具已透過兩種主要方式進行封裝：
 下表顯示 DNX/DNU 命令和 CLI 對應項目之間的對應。
 
 
-| DNX 命令                       | CLI 命令       | 描述                                                                                                       |
+| DNX 命令                       | CLI 命令       | 說明                                                                                                       |
 |--------------------------------   |----------------   |-----------------------------------------------------------------------------------------------------------------  |
 | dnx run                           | dotnet run        | 從來源執行程式碼。                                                                                             |
 | dnu build                         | dotnet build      | 建置您程式碼的 IL 二進位檔。                                                                                  |

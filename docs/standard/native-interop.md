@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 2f427eb5d8f41f730d4263425e268213db92236d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 14dfe7639a160af64e925018a4fd9e2bd44d4fe1
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143178"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396808"
 ---
 # <a name="native-interoperability"></a>原生互通性
 
@@ -260,7 +260,7 @@ namespace PInvokeSamples {
 
 當類型要跨 Managed 界限進入原生類型時，**封送處理**為轉換類型的程序，反之亦然。
 
-因為 Managed 和 Unmanaged 程式碼中的類型不同，所以需要封送處理。 例如，在 Managed 程式碼中會有 `String`，而在 Unmanaged 程式碼中，字串可以是 Unicode (「寬」)、非 Unicode、以 null 終止的及 ASCII 等等。根據預設，P/Invoke 子系統會嘗試執行以[預設行為](../../docs/framework/interop/default-marshaling-behavior.md)為基礎的正確動作。 不過，在您需要進行額外控制的情況下，您可以運用 [MarshalAs](xref:System.Runtime.InteropServicxes.MarshalAs) 屬性來指定非受控端的預期類型。 比方說，如果我們想要用以 null 終止的 ANSI 字串形式來傳送字串，我們可以下列方式執行它︰
+因為 Managed 和 Unmanaged 程式碼中的類型不同，所以需要封送處理。 例如，在 Managed 程式碼中會有 `String`，而在 Unmanaged 程式碼中，字串可以是 Unicode (「寬」)、非 Unicode、以 null 終止的及 ASCII 等等。根據預設，P/Invoke 子系統會嘗試執行以[預設行為](../../docs/framework/interop/default-marshaling-behavior.md)為基礎的正確動作。 不過，在您需要進行額外控制的情況下，您可以運用 [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 屬性來指定非受控端的預期類型。 比方說，如果我們想要用以 null 終止的 ANSI 字串形式來傳送字串，我們可以下列方式執行它︰
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

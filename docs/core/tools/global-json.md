@@ -1,16 +1,14 @@
 ---
 title: global.json 概觀
 description: 了解如何使用 global.json 檔案來設定執行.NET Core CLI 命令時的 NET Core SDK 版本。
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2018
-ms.custom: updateeachrelease
-ms.openlocfilehash: 7cb118c16460ed593d210f5e816b2a6fd5af2ee3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: updateeachrelease, seodec18
+ms.openlocfilehash: e0f929a049812cac6f62e5218629c9b0add83de8
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150846"
+ms.locfileid: "53170765"
 ---
 # <a name="globaljson-overview"></a>global.json 概觀
 

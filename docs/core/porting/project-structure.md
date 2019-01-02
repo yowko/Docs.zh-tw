@@ -2,15 +2,14 @@
 title: 組織適用於.NET Framework 和.NET Core 的專案
 description: 協助想要同時針對 .NET Framework 及 .NET Core 編譯解決方案的專案擁有者。
 author: conniey
-ms.author: mairaw
 ms.date: 04/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: cfb3670bda887792389c7cee3f65397e649304d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 97673e1ccaeb094bf8c7cb835a84ae9389fac502
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146923"
+ms.locfileid: "53169127"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>組織專案以同時支援 .NET Framework 及 .NET Core
 

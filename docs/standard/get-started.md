@@ -6,16 +6,16 @@ ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 341cea349984afd404c2a3b79e864e016fc6a95c
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 825d7d950726c4f416624653704a51fb405325e3
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "33571991"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53765212"
 ---
 # <a name="get-started"></a>開始使用
 
-開始使用 .NET 的方法有好幾種。  由於 .NET 是大規模的平台，因此本文中提供多份文章，從不同的觀點為您示範開始使用 .NET 的方法。
+開始使用 .NET 的方法有好幾種。 由於 .NET 是大規模的平台，因此本文中提供多份文章，從不同的觀點為您示範開始使用 .NET 的方法。
 
 ## <a name="get-started-using-net-languages"></a>開始使用 .NET 語言
 

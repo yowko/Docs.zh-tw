@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 9b28c1523196650c30a54ccaa86fe23ed60e96f9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 455058ad0a9155b8c6d2a267259783c2a7cc9815
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129619"
+ms.locfileid: "53168919"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 來建置 C# Hello World 應用程式
 
@@ -28,11 +28,11 @@ ms.locfileid: "53129619"
 
 1. 啟動 Visual Studio 2017。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案]* 對話方塊中，選取後面跟著 [.NET Core] 節點的 [Visual C#] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "HelloWorld"。 選取 [確定] 按鈕。
 
-   ![已選取 [主控台應用程式] 的 [新增專案] 對話方塊](./media/with-visual-studio/newproject.png)
+   ![已選取 [主控台應用程式] 的 [新增專案] 對話方塊](./media/with-visual-studio/visual-studio-new-project.png)
    
 1. Visual Studio 使用範本建立專案。 .NET Core 的 C# 主控台應用程式範本會自動定義一個 `Program` 類別，該類別具有採用 <xref:System.String> 陣列為引數的單一 `Main` 方法。 `Main` 是應用程式進入點，是執行階段在啟動應用程式時會自動呼叫的方法。 在應用程式啟動時所提供的所有命令列引數，都會在 *args* 陣列中提供。
 
-   ![Visual Studio 和新的 HelloWorld 專案](./media/with-visual-studio/devenv.png)
+   ![Visual Studio 和新的 HelloWorld 專案](./media/with-visual-studio/visual-studio-main-window.png)
 
    此範本會建立簡單的 "Hello World" 應用程式。 它會呼叫 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法，以在主控台視窗中顯示常值字串 "Hello World!" 。 透過使用工具列上的綠色箭頭選取 **HelloWorld** 按鈕，您可以 [偵錯] 模式執行程式。 不過，如果您這樣做，主控台視窗將會在簡短顯示之後關閉。 這是因為在 `Main` 方法中的單一陳述式執行完畢之後，`Main` 方法會立即終止，而應用程式會立即結束。
 
@@ -48,7 +48,7 @@ ms.locfileid: "53129619"
 
 1. 透過使用工具列上的綠色箭頭選取 **HelloWorld** 按鈕來執行程式。
 
-   ![主控台視窗顯示 Hello World，請按任意鍵以繼續](./media/with-visual-studio/helloworld1.png)
+   ![主控台視窗顯示 Hello World，請按任意鍵以繼續](./media/with-visual-studio/hello-world-console.png)
 
 1. 按任意鍵以關閉主控台視窗。
 
@@ -62,7 +62,7 @@ ms.locfileid: "53129619"
 
    此程式碼取代現有的 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>、<xref:System.Console.Write%2A?displayProperty=nameWithType> 和 <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> 陳述式。
 
-   ![含有已更新之 Main 方法的 Visual Studio 程式 c-sharp 檔案](./media/with-visual-studio/codewindow.png)
+   ![含有已更新之 Main 方法的 Visual Studio 程式 c-sharp 檔案](./media/with-visual-studio/visual-csharp-code-window.png)
 
    此程式碼會在主控台中顯示「What is your name?」， 然後等待使用者輸入字串並按 Enter 鍵。 它會將此字串儲存至名為 `name` 的變數。 此程式碼也會擷取 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性的值，其中包含目前的當地時間，並將它指派至名稱為 `date` 的變數。 最後，使用[字串插值](../../csharp/language-reference/tokens/interpolated.md)在主控台視窗中顯示這些值。
 
@@ -70,7 +70,7 @@ ms.locfileid: "53129619"
 
 1. 在 Visual Studio 中以 [偵錯] 模式執行程式，方法為選取工具列上的綠色箭頭，按 F5，或是選擇 [偵錯]  >  [開始偵錯] 功能表項目。 輸入名稱並按 Enter 鍵來回應提示。
 
-   ![含有已修改程式輸出的主控台視窗](./media/with-visual-studio/helloworld2.png)
+   ![含有已修改程式輸出的主控台視窗](./media/with-visual-studio/hello-world-update.png)
 
 1. 按任意鍵以關閉主控台視窗。
 
