@@ -1,3 +1,3 @@
 
 > [!IMPORTANT]
-> <span data-ttu-id="37d5b-101">下表僅列出 .NET Framework 發行版本的索引碼。</span><span class="sxs-lookup"><span data-stu-id="37d5b-101">The following table lists the keys of released versions of the .NET Framework only.</span></span> <span data-ttu-id="37d5b-102">它不會列出預覽或發行前版本的索引碼。</span><span class="sxs-lookup"><span data-stu-id="37d5b-102">It doesn't list the keys of preview or pre-release versions.</span></span>
+> <span data-ttu-id="fdcf4-101">下表僅列出 .NET Framework 發行版本的索引碼。</span><span class="sxs-lookup"><span data-stu-id="fdcf4-101">The following table lists the keys of released versions of the .NET Framework only.</span></span> <span data-ttu-id="fdcf4-102">它不會列出預覽或發行前版本的索引碼。</span><span class="sxs-lookup"><span data-stu-id="fdcf4-102">It doesn't list the keys of preview or pre-release versions.</span></span>
