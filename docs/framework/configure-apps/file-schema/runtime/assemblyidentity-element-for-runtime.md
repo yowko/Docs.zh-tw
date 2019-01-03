@@ -70,7 +70,7 @@ culture="assembly culture"/>
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 每隔 **\<dependentAssembly >** 項目必須有一個**\<組件識別 >** 子項目。  
+ 每隔 **\<dependentAssembly >** 項目必須有一個 **\<組件識別>** 子項目。  
   
  如果`processorArchitecture`屬性，就`<assemblyIdentity>`項目僅適用於具有對應的處理器架構的組件。 如果`processorArchitecture`屬性不存在，`<assemblyIdentity>`項目可以套用至組件的任何處理器架構。  
   

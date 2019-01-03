@@ -72,7 +72,7 @@ ms.locfileid: "53144867"
 |`Action`|取得或設定安全性動作。 繼承自 <xref:System.Security.Permissions.SecurityAttribute>。|  
 |`AllowBlankPassword`|啟用或停用在連接字串中使用空白密碼。 有效值為 `true` (表示啟用空白密碼) 和 `false` (表示停用空白密碼)。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
 |`ConnectionString`|識別允許的連接字串。 可識別多個連接字串。 **注意：** 不要在連接字串中包含使用者 ID 或密碼。 在這個發行版本中，您無法使用 .NET Framework 組態工具變更連接字串限制。 <br /><br /> 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
-|`KeyRestrictions`|識別是否為允許的連接字串參數。 在表單中所識別的連接字串參數*\<參數名稱 > =*。 也可以指定多個參數，只要以分號 (;) 將其分隔即可。 **注意：** 如果您沒有指定 `KeyRestrictions`，卻將 `KeyRestrictionBehavior` 屬性設為 `AllowOnly` 或 `PreventUsage`，則不允許使用其他連接字串參數。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
+|`KeyRestrictions`|識別是否為允許的連接字串參數。 在表單中所識別的連接字串參數*\<參數名稱>=* 。 也可以指定多個參數，只要以分號 (;) 將其分隔即可。 **注意：** 如果您沒有指定 `KeyRestrictions`，卻將 `KeyRestrictionBehavior` 屬性設為 `AllowOnly` 或 `PreventUsage`，則不允許使用其他連接字串參數。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
 |`KeyRestrictionBehavior`|將連接字串參數識別為唯一允許的其他參數 (`AllowOnly`)，或識別不允許的其他參數 (`PreventUsage`)。 `AllowOnly` 是預設值。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
 |`TypeID`|在衍生類別中實作時，取得唯一識別項。 繼承自 <xref:System.Attribute>。|  
 |`Unrestricted`|指示是否針對資源，宣告不受限的使用權限。 繼承自 <xref:System.Security.Permissions.SecurityAttribute>。|  
