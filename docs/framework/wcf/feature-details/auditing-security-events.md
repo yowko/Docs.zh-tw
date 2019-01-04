@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 70bd756c9de2cf6ffb43479b0b28a6d51340f905
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198078"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030564"
 ---
 # <a name="auditing-security-events"></a>稽核安全性事件
 建立使用 Windows Communication Foundation (WCF) 的應用程式可以使用稽核功能記錄安全性事件 （成功、 失敗或兩者）。 事件會寫入至 Windows 系統事件記錄檔，並且可以使用 [事件檢視器] 加以檢查。  
@@ -28,7 +28,7 @@ ms.locfileid: "50198078"
  您可以檢查兩種稽核層級為成功或失敗，我們稱之為*稽核行為*。  
   
 ## <a name="audit-log-location"></a>稽核記錄檔的位置  
- 決定稽核層級和行為後，您 (或系統管理員) 就可以指定稽核記錄檔的位置。 您有三種選擇，包括：預設、應用程式和安全性。 指定為 [預設] 時，實際的記錄檔取決於您所使用的系統，以及該系統是否支援寫入至安全性記錄檔。 如需詳細資訊，請參閱本主題稍後的 「 作業系統 」 一節。  
+ 決定稽核層級和行為後，您 (或系統管理員) 就可以指定稽核記錄檔的位置。 包含三個選項：預設值、 應用程式和安全性。 指定為 [預設] 時，實際的記錄檔取決於您所使用的系統，以及該系統是否支援寫入至安全性記錄檔。 如需詳細資訊，請參閱本主題稍後的 「 作業系統 」 一節。  
   
  若要寫入安全性記錄檔，您必須具備 `SeAuditPrivilege`。 根據預設，只有本機系統帳戶和網路服務帳戶具有此權限。 若要管理安全性記錄函式 `read` 和 `delete`，您必須具備 `SeSecurityPrivilege`。 根據預設，只有系統管理員具有此權限。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "50198078"
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|指定要在服務層級上稽核哪種服務授權事件的類型。 這些選擇有 `None`、`Failure`、`Success` 和 `SuccessOrFailure`。|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|指定當稽核失敗時，用戶端要求會產生什麼變化。 例如，當服務嘗試寫入安全性記錄檔，但不具有 `SeAuditPrivilege` 時。 `true` 的預設值表示忽略該失敗，並且正常處理用戶端要求。|  
   
- 如需設定記錄稽核事件的應用程式的範例，請參閱[How to： 稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
+ 如需設定記錄稽核事件的應用程式的範例，請參閱[How to:稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
   
 ### <a name="configuration"></a>組態  
  您也可以使用組態來指定稽核行為，藉由新增[ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)之下[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)。 您必須新增項目底下[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)如下列程式碼所示。  
@@ -61,7 +61,7 @@ ms.locfileid: "50198078"
   <system.serviceModel>  
     <behaviors>  
       <behavior>  
-        <!— auditLogLocation="Application" or "Security" -—>  
+        <!-- auditLogLocation="Application" or "Security" -->  
         <serviceSecurityAudit  
                   auditLogLocation="Application"  
                   suppressAuditFailure="true"  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: a1006816168e405d0d79786b8430b802f1ec0928
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a4c0a137da74b276b1238d500057ce96756a1ae1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999438"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030369"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 物件概觀
 本主題說明如何有效地使用，並建立<xref:System.Windows.Freezable>提供特殊功能，可協助您改善應用程式效能的物件。 Freezable 物件的範例包括筆刷、 畫筆、 轉換、 幾何和動畫。  
@@ -126,7 +126,7 @@ mc:Ignorable="PresentationOptions"
   
 -   執行緒安全： 凍結<xref:System.Windows.Freezable>可以跨執行緒共用。  
   
--   詳細的變更通知： 不同於其他<xref:System.Windows.DependencyObject>s，Freezable 物件變更通知時提供子屬性值變更。  
+-   詳細的變更通知：不同於其他<xref:System.Windows.DependencyObject>s，Freezable 物件變更通知時提供子屬性值變更。  
   
 -   輕鬆複製： Freezable 的類別已實作數種方法，產生深層複製品。  
   
@@ -154,7 +154,7 @@ mc:Ignorable="PresentationOptions"
   
 -   呼叫<xref:System.Windows.Freezable.WritePostscript%2A>方法，然後再結束寫入非相依性屬性資料成員的方法。  
   
- 如果您的類別會包含非相依性屬性資料成員，則<xref:System.Windows.DependencyObject>物件，您還必須呼叫<xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A>方法變更其值，即使您正在設定之成員每次`null`。  
+ 如果您的類別會包含非相依性屬性資料成員，則<xref:System.Windows.DependencyObject>物件，您還必須呼叫<xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A>方法每次您變更其中一個其值，即使您正在設定之成員`null`。  
   
 > [!NOTE]
 >  它是非常重要的是，您會開始每個<xref:System.Windows.Freezable>您覆寫基底實作呼叫的方法。  

@@ -2,12 +2,12 @@
 title: 設定 Net.TCP Port Sharing Service
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 7232fc587aa7f63167034f7474d6c5e7476048ed
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3afc4cf50ac0dda0198ca8986177fd3028f9837e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153471"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029355"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>設定 Net.TCP Port Sharing Service
 使用 Net.TCP 傳輸的自我裝載服務可以控制好幾項進階設定，例如 `ListenBacklog` 和 `MaxPendingAccepts`，這些設定掌管網路通訊時使用的基礎 TCP 通訊端行為。 但是，如果傳輸繫結已經停用連接埠共用 (預設為啟用)，則每個通訊端的這些設定只能套用在繫結層級中。  
@@ -27,10 +27,10 @@ ms.locfileid: "53153471"
 ```xml  
 <configuration>  
    <system.serviceModel.activation>  
-       <net.tcp listenBacklog="16" <!—16 * # of processors -->  
-          maxPendingAccepts="4"<!— 4 * # of processors -->  
+       <net.tcp listenBacklog="16" <!--16 * # of processors -->  
+          maxPendingAccepts="4"<!-- 4 * # of processors -->  
           maxPendingConnections="100"  
-          receiveTimeout="00:00:30" <!—30 seconds -->  
+          receiveTimeout="00:00:30" <!--30 seconds -->  
           teredoEnabled="false">  
           <allowAccounts>  
              <!-- LocalSystem account -->  

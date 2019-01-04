@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: e463a087516dc45cb4bd879c77aef6fbeba2b546
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f3fa70673c7ae5819346ab152b74acf93a164c
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542011"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029836"
 ---
 # <a name="annotations-schema"></a>附註結構描述
 本主題說明 Microsoft Annotations Framework 用來儲存和擷取使用者註釋資料的 XML 結構描述定義 (XSD)。  
@@ -24,13 +24,13 @@ ms.locfileid: "33542011"
   
 -   註釋 XML 基底結構描述 (基底結構描述)。  
   
- 核心結構描述定義的主要 XML 結構<xref:System.Windows.Annotations.Annotation>。  大部分的核心結構描述中定義的 XML 項目對應到以<xref:System.Windows.Annotations>命名空間。  核心結構描述會公開三個擴充點，應用程式可以在其中新增它們自己的 XML 資料。  這些擴充點包含<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和 「 內容 」。  (內容項目中的形式提供<xref:System.Xml.XmlElement>清單。)  
+ 核心結構描述定義的主要 XML 結構<xref:System.Windows.Annotations.Annotation>。  大部分的核心結構描述中定義的 XML 項目對應中的型別<xref:System.Windows.Annotations>命名空間。  核心結構描述會公開三個擴充點，應用程式可以在其中新增它們自己的 XML 資料。  這些擴充點包含<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和 「 內容 」。  (內容項目中的形式提供<xref:System.Xml.XmlElement>清單。)  
   
- 本主題中所述的基底結構描述定義的延伸<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和內容類型包含在初始 Windows Presentation Foundation (WPF) 版本。  
+ 本主題中所述的基底結構描述定義的擴充功能<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和內容類型隨附的初版的 Windows Presentation Foundation (WPF)。  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>註釋 XML 核心結構描述  
- 註解 XML 核心結構描述會定義用來儲存的 XML 結構<xref:System.Windows.Annotations.Annotation>物件。  
+ 註釋 XML 核心結構描述定義用來儲存的 XML 結構<xref:System.Windows.Annotations.Annotation>物件。  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -182,7 +182,7 @@ ms.locfileid: "33542011"
   
 <a name="BaseSchema"></a>   
 ## <a name="annotations-xml-base-schema"></a>註釋 XML 基底結構描述  
- 基底結構描述會定義在核心結構描述 – 中定義的三個抽象元素的 XML 結構<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和<xref:System.Windows.Annotations.AnnotationResource.Contents%2A>。  
+ 基底結構描述會定義三個抽象項目的核心結構描述中定義的 XML 結構<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和<xref:System.Windows.Annotations.AnnotationResource.Contents%2A>。  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -429,11 +429,11 @@ ms.locfileid: "33542011"
     </xsd:complexContent>  
   </xsd:complexType>  
   
-  <-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
-  *  page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
-  *   conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
-  *   page are the coordinates defined in the FixedTextRange.  
-  *   Example of a PageNumber ContentLocatorPart:  
+  <!-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
+  *    page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
+  *    conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
+  *    page are the coordinates defined in the FixedTextRange.  
+  *    Example of a PageNumber ContentLocatorPart:  
   *     
   *       <anb:PageNumber>  
   *         <anc:Item Name="Value" Value="1" />  
@@ -464,8 +464,8 @@ ms.locfileid: "33542011"
   <xsd:element name="Text" type="anb:TextContentType"  
                substitutionGroup="anc:Content"/>  
   
-  <-- Ink – contains XAML representing Sticky Note ink.  
-  *   Used in annotations of type InkStickyNote. -->  
+  <!-- Ink – contains XAML representing Sticky Note ink.  
+  *    Used in annotations of type InkStickyNote. -->  
   <xsd:complexType name="InkContentType">  
     <!-- See XAML schema for Ink content -->  
   </xsd:complexType>  
@@ -493,7 +493,7 @@ ms.locfileid: "33542011"
   
 <a name="SampleXML"></a>   
 ## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>註釋 XmlStreamStore 所產生的 XML 範例  
- XML 程式碼，顯示註釋的輸出<xref:System.Windows.Annotations.Storage.XmlStreamStore>和範例檔案，其中包含三個註解-反白顯示文字自黏便箋，筆跡搖桿便箋的組織。  
+ 以下 XML 顯示註釋的輸出<xref:System.Windows.Annotations.Storage.XmlStreamStore>和範例檔案，其中包含三個註解-反白顯示、 文字自黏便箋和筆跡黏便箋的組織。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

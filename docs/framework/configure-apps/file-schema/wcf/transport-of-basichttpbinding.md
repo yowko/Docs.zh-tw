@@ -2,12 +2,12 @@
 title: '&lt;basicHttpBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: f4e37281539106fef93dc4ab566d94d781c39d29
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 01fe2bc98326e3cef2b3df8bdf4aa03055df5e65
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845662"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030330"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; 的 &lt;transport&gt;
 定義可控制 HTTP 傳輸之驗證參數的屬性。  
@@ -67,8 +67,8 @@ ms.locfileid: "48845662"
 |值|描述|  
 |-----------|-----------------|  
 |無|訊息在傳輸期間並未受到保護。|  
-|基本|指定依照 RFC 2617 – HTTP Authentication: Basic and Digest Authentication 所定義的基本驗證。|  
-|摘要|指定依照 RFC 2617 – HTTP Authentication: Basic and Digest Authentication 所定義的摘要式驗證。|  
+|基本|指定基本驗證，所定義的 RFC 2617 – HTTP Authentication:基本和摘要式驗證。|  
+|摘要|指定摘要式驗證，所定義的 RFC 2617 – HTTP Authentication:基本和摘要式驗證。|  
 |Ntlm|指定可能的情況下以及 Windows 驗證失敗時的 NTLM 驗證。|  
 |Windows|指定 Windows 整合式驗證。|  
 |憑證|使用憑證執行用戶端驗證。 這個選項只有在父 `Mode` 項目的 `security` 屬性設為 Transport 時才能使用，如果該屬性設為 TransportCredentialOnly，則無法使用。|  
@@ -99,8 +99,8 @@ ms.locfileid: "48845662"
    </services>  
     <bindings>  
         <basicHttpBinding>  
-        <!-- Configure basicHttpBinding with Transport security -- >  
-        <!-- mode and clientCredentialType set to None.-->  
+        <!-- Configure basicHttpBinding with Transport security -->  
+        <!-- mode and clientCredentialType set to None. -->  
            <binding name="Binding1">  
                <security mode="Transport">  
                    <transport clientCredentialType="None"  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c4c96b874456297ede61c96e46fee8d90ebcafb6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 67c94eeaa295b19e99f870780f555baff936889f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123614"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030123"
 ---
 # <a name="redirecting-assembly-versions"></a>重新導向組件版本
 
@@ -67,7 +67,7 @@ ms.locfileid: "49123614"
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-如果您的應用程式以舊版.NET Framework 為目標，您可以啟用自動繫結重新導向。 藉由在 app.config 檔案中的繫結重新導向資訊提供任何組件，或關閉繫結重新導向功能，您可以覆寫此預設行為。 如需有關如何開啟或關閉這項功能的資訊，請參閱 <<c0> [ 如何： 啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。
+如果您的應用程式以舊版.NET Framework 為目標，您可以啟用自動繫結重新導向。 藉由在 app.config 檔案中的繫結重新導向資訊提供任何組件，或關閉繫結重新導向功能，您可以覆寫此預設行為。 如需有關如何開啟或關閉這項功能的資訊，請參閱[How to:啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>略過發行者原則
@@ -142,11 +142,11 @@ ms.locfileid: "49123614"
 
 ```xml
 <assemblyBinding xmlns="..." appliesTo="v3.5 ">
-  <!—.NET Framework version 3.5 redirects here -->
+  <!--.NET Framework version 3.5 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="..." appliesTo="v4.0.30319">
-  <!—.NET Framework version 4.0 redirects here -->
+  <!--.NET Framework version 4.0 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="...">

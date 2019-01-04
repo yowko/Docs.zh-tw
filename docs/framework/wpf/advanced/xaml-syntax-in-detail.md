@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485725"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030291"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 語法詳細資料
 本主題定義詞彙，用來說明 XAML 語法的項目。 這些詞彙常用的本文件中，WPF 文件的其餘具體來說，並使用 XAML 或啟用 System.Xaml 層級的 XAML 語言支援的基本 XAML 概念的架構。 本主題會詳述主題所介紹的基本術語[XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
@@ -288,7 +288,7 @@ ms.locfileid: "43485725"
   
 <a name="optional_and_nonrecommended_xaml_usages"></a>   
 ## <a name="optional-and-nonrecommended-xaml-usages"></a>選擇性的而且非建議的 XAML 用法  
- 下列各節說明 XAML 用法就技術上而言由 XAML 處理器支援，但會產生詳細資訊或其他干擾剩餘人類看得懂的時機的 XAML 檔案的美學問題您開發包含 XAML 來源的應用程式.  
+ 下列各節說明 XAML 用法就技術上而言由 XAML 處理器支援，但會產生詳細資訊或其他美觀的問題可能會影響當您開發包含 XAML 來源應用程式時，剩餘人類看得懂的 XAML 檔案。  
   
 ### <a name="optional-property-element-usages"></a>選擇性的屬性項目使用方式  
  選擇性的屬性項目使用方式包括明確地寫出項目內容的屬性，XAML 處理器會將視為隱含。 例如，當您宣告的內容<xref:System.Windows.Controls.Menu>，您可以選擇明確宣告<xref:System.Windows.Controls.ItemsControl.Items%2A>的集合<xref:System.Windows.Controls.Menu>作為`<Menu.Items>`屬性項目標記，以及發生每個<xref:System.Windows.Controls.MenuItem>內`<Menu.Items>`，而不是比使用隱含的 XAML 處理器行為的所有子項目的<xref:System.Windows.Controls.Menu>必須是<xref:System.Windows.Controls.MenuItem>放在<xref:System.Windows.Controls.ItemsControl.Items%2A>集合。 有時候以視覺化方式在標記中所示，釐清物件結構的選擇性的使用方式可以幫助。 或者，有時明確的屬性項目使用方式可以避免技術上正常運作，但在視覺上令人困惑，例如屬性值內的巢狀的標記延伸的標記。  
@@ -317,7 +317,7 @@ ms.locfileid: "43485725"
   
 ## <a name="see-also"></a>另請參閱  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XAML 命名空間 (x:) 語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [XAML 命名空間 （x:）語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [WPF XAML 延伸](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
  [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [TypeConverter 和 XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  

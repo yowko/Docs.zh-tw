@@ -2,12 +2,12 @@
 title: F#風格指南
 description: 了解的良好的五個原則F#程式碼。
 ms.date: 12/10/2018
-ms.openlocfilehash: 7718df596bde9004fb9ba6143146f1f475d25683
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9f47257626e04b09b546de2ae315d48d791678be
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168949"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030265"
 ---
 # <a name="f-style-guide"></a>F#風格指南
 
@@ -21,7 +21,7 @@ ms.locfileid: "53168949"
 
 1. **良好F#程式碼是簡潔、 易懂且可組合**
 
-    F#有許多功能可讓您在短短幾行程式碼的動作，並重複使用的一般功能。 F#核心程式庫也包含許多有用的型別及使用資料的常見集合功能。 撰寫您自己的函式和中的F#核心程式庫 （或其他程式庫） 是慣用的例行工作F#程式設計。 一般而言，如果您可以在短短幾行程式碼的問題的解決方案來表示其他開發人員 （或您未來的自助） 會令人激賞。 此外，強烈建議您使用的程式庫，例如 FSharp.Core， [vast 的.NET 程式庫](https://docs.microsoft.com/dotnet/api/)，F#上，執行或第三方封裝上的[NuGet](https://www.nuget.org/)當您需要執行重要工作。
+    F#有許多功能可讓您在短短幾行程式碼的動作，並重複使用的一般功能。 F#核心程式庫也包含許多有用的型別及使用資料的常見集合功能。 撰寫您自己的函式和中的F#核心程式庫 （或其他程式庫） 是慣用的例行工作F#程式設計。 一般而言，如果您可以在短短幾行程式碼的問題的解決方案來表示其他開發人員 （或您未來的自助） 會令人激賞。 此外，強烈建議您使用的程式庫，例如 FSharp.Core， [vast 的.NET 程式庫](../../../api/index.md)，F#上，執行或第三方封裝上的[NuGet](https://www.nuget.org/)當您需要執行重要工作。
 
 2. **良好F#程式碼可互通**
 

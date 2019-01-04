@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873715"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030525"
 ---
 # <a name="data-contract-schema-reference"></a>資料合約結構描述參考
 本主題說明 <xref:System.Runtime.Serialization.DataContractSerializer> 用來描述 XML 序列化之 Common Language Runtime (CLR) 型別的 XML 結構描述 (XSD) 子集。  
@@ -202,7 +202,7 @@ ms.locfileid: "48873715"
   
  \* 使用時`simpleType`和`complexType,`匿名型別對應是與非匿名型別相同，只不過沒有任何的匿名資料合約，因此建立具名的資料合約時，產生的名稱衍生自項目名稱。 下表為匿名型別的規則：  
   
--   WCF 實作詳細資料： 如果`xs:element`名稱不包含句號，則匿名型別會對應至外部資料合約型別的內部型別。 如果名稱包含句點，則結果的資料合約型別是獨立的 (不是內部型別)。  
+-   WCF 實作詳細資料：如果`xs:element`名稱不包含句號，則匿名型別會對應至外部資料合約型別的內部型別。 如果名稱包含句點，則結果的資料合約型別是獨立的 (不是內部型別)。  
   
 -   產生之內部型別的資料合約名稱為外部型別的資料合約名稱，後面並跟著句點、項目名稱，以及字串 "Type"。  
   
@@ -290,15 +290,14 @@ ms.locfileid: "48873715"
   
  下列程式碼將示範 C# 列舉類別。  
   
-```  
+```csharp  
 public enum MyEnum  
 {  
-   first = 3,  
-   second = 4,  
-   third =5  
+  first = 3,  
+  second = 4,  
+  third =5  
+}  
 ```  
-  
- }  
   
  此類別會透過 `DataContractSerializer`對應至下列結構描述。 如果列舉值從 1 開始，則不會產生 `xs:annotation` 區塊。  
   
@@ -349,7 +348,7 @@ public enum MyEnum
   
  例如，下列程式碼會為列舉型別加上旗標。  
   
-```  
+```csharp  
 [Flags]  
 public enum AuthFlags  
 {    
@@ -402,7 +401,7 @@ rialization/">64</EnumerationValue>
   
  例如，下列程式碼為資料合約。  
   
-```  
+```csharp  
 [DataContract]  
 public class Person  
 {  
@@ -619,7 +618,7 @@ public class Employee : Person
 ## <a name="importing-non-datacontract-schemas"></a>匯入非 DataContract 結構描述  
  `DataContractSerializer` 具有 `ImportXmlTypes` 選項，可允許匯入不符合 `DataContractSerializer` XSD 設定檔的結構描述 (請參閱 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> 屬性)。 將此選項設為 `true` 可允許接受不符的結構描述型別，並將之對應至下列實作： <xref:System.Xml.Serialization.IXmlSerializable> 包裝 <xref:System.Xml.XmlNode> 的陣列 (只有類別名稱不同)。  
   
-```  
+```csharp  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  
 [System.Xml.Serialization.XmlSchemaProviderAttribute("ExportSchema")]  
 [System.Xml.Serialization.XmlRootAttribute(IsNullable=false)]  
