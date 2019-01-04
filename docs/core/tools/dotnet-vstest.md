@@ -1,15 +1,14 @@
 ---
-title: dotnet vstest 命令 - .NET Core CLI
+title: dotnet vstest 命令
 description: dotnet vstest 命令會建置專案和其所有相依性。
 author: guardrex
-ms.author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: 84b9d9eebfbf20fefe8153dd3ae9bec0f34986c8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: cafd862f6107be9173aad6d610cf6f8fd62e1489
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696334"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169012"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -42,7 +41,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 ```
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet-vstest` 命令會執行 `VSTest.Console` 命令列應用程式，以執行自動化單元以及自動程式化 UI 應用程式測試。
 
