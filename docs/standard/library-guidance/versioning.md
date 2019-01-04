@@ -3,13 +3,13 @@ title: 版本控制與 .NET 程式庫
 description: .NET 程式庫版本控制的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144555"
+ms.locfileid: "53169595"
 ---
 # <a name="versioning"></a>版本控制
 
@@ -77,12 +77,13 @@ Windows.NET Framework CLR 會要求完全相符，以載入強式名稱組件。
 
 ![Windows 檔案總管](./media/versioning/win-properties.png "Windows 檔案總管")
 
-> [!NOTE]
-> 如果此版本未遵循格式 `Major.Minor.Build.Revision`，則會引發無害的建置警告。 您可以安心略過該警告。
-
 **✔️ 考慮**包括持續整合組建編號作為 AssemblyFileVersion 修訂。
 
 > 例如，您正在建置版本 1.0.0 的專案，且持續整合組建編號是 99，因此您的 AssemblyFileVersion 是 1.0.0.99。
+
+**✔️ 針對檔案版本，請**使用 `Major.Minor.Build.Revision` 格式。
+
+> 雖然 .NET 永遠不會使用檔案版本，但 [Windows 預期檔案版本](/windows/desktop/menurc/versioninfo-resource)的格式為 `Major.Minor.Build.Revision`。 如果版本未遵循此格式，則會引發警告。
 
 ### <a name="assembly-informational-version"></a>組件資訊版本
 
@@ -91,6 +92,9 @@ Windows.NET Framework CLR 會要求完全相符，以載入強式名稱組件。
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
 ```
+
+> [!NOTE]
+> 如果此版本未遵循 `Major.Minor.Build.Revision` 格式，則舊版的 Visual Studio 會引發建置警告。 您可以安心略過該警告。
 
 **❌ 避免**自行設定組件資訊版本。
 

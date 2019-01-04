@@ -1,13 +1,13 @@
 ---
-title: dotnet build-server 命令 - .NET Core CLI
+title: dotnet build-server 命令
 description: dotnet build-server 命令會與組建所啟動的伺服器互動。
 ms.date: 12/04/2018
-ms.openlocfilehash: 2746ade12cc819089258483e84a8c0f02a64c755
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7f78a0cae6e3297f3084754dc56b0da4eac38caf
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125674"
+ms.locfileid: "53169650"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 

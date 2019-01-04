@@ -1,15 +1,16 @@
 ---
 title: 使用 dotnet vstest 測試已發行的輸出
-description: 了解如何使用 dotnet vstest 命令在已發行的輸出上執行測試。
+description: 了解如何使用 dotnet vstest 命令在已發行的程式庫 (而不是原始程式碼) 上執行測試。
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.openlocfilehash: e99000996f5dfa9f9d4f9b823e36ecbe325da835
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 9d842f26336d0ddf5375d49676523086bb632684
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508129"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239523"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>使用 dotnet vstest 測試已發行的輸出
 
@@ -21,7 +22,9 @@ dotnet vstest <MyPublishedTests>.dll
 
 其中 `<MyPublishedTests>` 是已發行測試專案的名稱。
 
-## <a name="example-of-running-tests-on-a-published-dll"></a>在已發行的 DLL 上執行測試的範例
+## <a name="example"></a>範例
+
+下列命令示範如何在已發行的 DLL 上執行測試。
 
 ```
 dotnet new mstest -o MyProject.Tests
@@ -31,7 +34,7 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> 注意：如果您的應用程式是以 `netcoreapp` 以外的架構為目標，您仍然能以架構旗標傳入目標架構，來執行 `dotnet vstest` 命令。 例如，`dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`。 在 Visual Studio 2017 Update 5 中，系統會自動偵測所需架構。
+> 注意:如果您的應用程式是以 `netcoreapp` 以外的架構為目標，您仍然能以架構旗標傳入目標架構，來執行 `dotnet vstest` 命令。 例如，`dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`。 在 Visual Studio 2017 Update 5 中，系統會自動偵測所需架構。
 
 ## <a name="see-also"></a>另請參閱
 - [使用 dotnet test 及 xUnit 執行單元測試](unit-testing-with-dotnet-test.md)

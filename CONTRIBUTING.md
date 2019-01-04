@@ -66,7 +66,9 @@
             /porting-overview
                 portability_report.png
 
-**步驟 4：** 從您的分支將「提取要求」(PR) 提交至 `dotnet/docs/master`。
+**步驟 4：** 將提取要求 (PR) 從您的分支提交至 `dotnet/docs/master`。
+
+您的 PR 應「一律」以主分支為目標。 您「永遠不得」開啟以即時分支為目標的 PR。
 
 每個 PR 通常應該一次處理一個問題。 PR 可以修改一或多個檔案。 如果您要處理不同檔案上的多個修正，建議您使用個別的 PR。
 

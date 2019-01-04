@@ -1,5 +1,5 @@
 ---
-title: 如何：判斷安裝的 .NET Framework 版本
+title: HOW TO：判斷安裝的 .NET Framework 版本
 ms.date: 04/10/2018
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b77775fdc7f552e6433e6364f153c5bde32d9e0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 890ce1e9a23d57121cd714252444e5ff1caa6b19
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151040"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396873"
 ---
-# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：判斷安裝的 .NET Framework 版本
+# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>HOW TO：判斷安裝的 .NET Framework 版本
 
 使用者可以在電腦上安裝及執行多個版本的 .NET Framework。 當您開發或部署應用程式時，您可能需要知道使用者電腦上安裝的 .NET Framework 版本。 請注意，.NET Framework 包含兩個主要元件，這兩個元件的版本控制會分開處理：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "53151040"
  [使用 Clrver 工具](#clr_a)  
  [使用程式碼查詢 System.Environment 類別](#clr_b)  
   
- 如需偵測每一版 .NET Framework 已安裝之更新的資訊，請參閱[如何：判斷安裝的 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。 如需安裝 .NET Framework 的資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
+ 如需偵測每一版 .NET Framework 已安裝更新的資訊，請參閱[如何：判斷安裝的 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。 如需安裝 .NET Framework 的資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
   
 <a name="net_a"></a>   
 ## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>藉由檢視登錄尋找 .NET Framework 版本 (.NET Framework 1-4)  
@@ -92,12 +92,12 @@ ms.locfileid: "53151040"
     |378675|隨 Windows 8.1 或 Windows Server 2012 R2 安裝的 .NET Framework 4.5.1|
     |378758|Windows 8、Windows 7 SP1 或 Windows Vista SP2 上安裝的 .NET Framework 4.5.1|
     |379893|.NET Framework 4.5.2|
-    |僅限 Windows 10 系統：393295<br /><br /> 所有其他作業系統版本：393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
-    |僅限 Windows 10 11 月更新系統：394254<br /><br /> 所有其他作業系統版本：394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |Windows 10 年度更新版及 Windows Server 2016：394802<br /><br /> 所有其他作業系統版本：394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
-    |僅限 Windows 10 Creators Update：460798<br/><br/> 所有其他作業系統版本：460805 | .NET Framework 4.7 |
-    |僅限 Windows 10 Fall Creators Update：461308<br/><br/> 所有其他作業系統版本：461310 | .NET Framework 4.7.1 |
-    |僅限 Windows 10 2018 年 10 月更新：461814<br/><br/> 僅限 Windows 10 2018 4 月更新：461808<br/><br/> 所有其他作業系統版本：461814| .NET Framework 4.7.2 |
+    |僅限 Windows 10 系統：393295<br /><br /> 所有其他 OS 版本：393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
+    |僅限 Windows 10 11 月更新系統：394254<br /><br /> 所有其他 OS 版本：394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
+    |Windows 10 年度更新版及 Windows Server 2016：394802<br /><br /> 所有其他 OS 版本：394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |僅限 Windows 10 Creators Update：460798<br/><br/> 所有其他 OS 版本：460805 | .NET Framework 4.7 |
+    |僅限 Windows 10 Fall Creators Update：461308<br/><br/> 所有其他 OS 版本：461310 | .NET Framework 4.7.1 |
+    |僅限 Windows 10 2018 年 4 月更新：461808<br/><br/> 所有其他 OS 版本，包括 Windows 10 2018 年 10 月更新：461814| .NET Framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>藉由查詢程式碼中的登錄尋找 .NET Framework 版本 (.NET Framework 1-4)
@@ -230,6 +230,6 @@ ms.locfileid: "53151040"
 
 ## <a name="see-also"></a>另請參閱
 
-[操作說明：判斷安裝的 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
+[如何：判斷安裝的 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
 [安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)  
 [版本和相依性](~/docs/framework/migration-guide/versions-and-dependencies.md)  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dab1474454f8169d8d0d80413c6fb95677fb4bf
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: dc929aba10d8a18e2a084707b69d3fef5f91a701
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453385"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656358"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>屬性化程式設計模型概觀 (MEF)
 在 Managed Extensibility Framework (MEF) 中， *「程式設計模型」* (Programming Model) 是定義 MEF 藉以運作之一組概念性物件的特定方法。 這些概念性物件包含組件、匯入和匯出。 MEF 使用這些物件，但不會指定這些物件的表示方式。 因此，各種程式設計模型都有可能，包括自訂的程式設計模型在內。  
@@ -548,7 +548,7 @@ Public Class User
         logger = Nothing  
   
         For Each Plugin As Lazy(Of IPlugin, IPluginMetadata) In plugins  
-            If (Plugin.Metadata.Name = "Logger") Then  
+            If Plugin.Metadata.Name = "Logger" Then  
                 logger = Plugin.Value  
             End If  
         Next  
@@ -564,13 +564,14 @@ public class User
     [ImportMany]  
     public IEnumerable<Lazy<IPlugin, IPluginMetadata>> plugins;  
   
-    public IPlugin InstantiateLogger ()  
+    public IPlugin InstantiateLogger()  
     {  
         IPlugin logger = null;  
   
         foreach (Lazy<IPlugin, IPluginMetadata> plugin in plugins)  
         {  
-            if (plugin.Metadata.Name = "Logger") logger = plugin.Value;  
+            if (plugin.Metadata.Name == "Logger")
+                logger = plugin.Value;  
         }  
         return logger;  
     }  
@@ -957,5 +958,5 @@ public class PartSeven
  `IPartImportsSatisfiedNotification` 包含一個名為 `OnImportsSatisfied`的方法。 當組合完成且組件的匯入可開始使用時，組合容器會對任何實作介面的組件呼叫這個方法。 組合引擎會建立組件，以填入其他組件的匯入。 設定組件的匯入之前，您無法在組件建構函式中執行任何依賴或操作匯入值的初始設定，除非已使用 `ImportingConstructor` 屬性指定這些值做為必要條件。 這通常是比較好的方法，但在某些情況下，可能無法插入建構函式。 在這些情況下，您可以在 `OnImportsSatisfied`中執行初始設定，並且組件應該實作 `IPartImportsSatisfiedNotification`。  
   
 ## <a name="see-also"></a>請參閱  
- [Channel 9 影片：透過 Managed Extensibility Framework 擴充應用程式](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328) \(英文\)  
- [Channel 9 影片：Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20) \(英文\)
+ [Channel 9 影片：Open Up Your Applications with the Managed Extensibility Framework (透過 Managed Extensibility Framework 開展應用程式)](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
+ [Channel 9 影片：Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

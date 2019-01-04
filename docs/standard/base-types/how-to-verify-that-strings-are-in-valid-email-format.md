@@ -1,6 +1,6 @@
 ---
-title: 如何：確認字串是否為有效的電子郵件格式
-ms.date: 08/10/2018
+title: HOW TO：確認字串是否為有效的電子郵件格式
+ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1fe0ead93d1ff2b7867a52d80cf812e2850ea7b3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9ed0721f2bfa8e272822740cf26173c1592de428
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836293"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236644"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何：確認字串是否為有效的電子郵件格式
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>HOW TO：確認字串是否為有效的電子郵件格式
 下列範例會使用規則運算式來確認字串是否為有效的電子郵件格式。  
 
 ## <a name="example"></a>範例  
@@ -35,7 +35,7 @@ ms.locfileid: "48836293"
   
  為了驗證電子郵件地址是否有效， `IsValidEmail` 方法會以 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> 規則運算式模式呼叫 `(@)(.+)$` 方法，從電子郵件地址分離出網域名稱。 第三個參數是 <xref:System.Text.RegularExpressions.MatchEvaluator> 委派，用於表示處理並取代相符文字的方法。 規則運算式模式解譯如下。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`(@)`|比對 @ 字元。 這是第一個擷取群組。|  
 |`(.+)`|比對出現一次或多次的任何字元。 這是第二個擷取群組。|  
@@ -52,7 +52,7 @@ ms.locfileid: "48836293"
   
  在這個範例中，規則運算式模式 ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` 會依下表所示的方式解譯。 請注意，規則運算式是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 旗標所編譯。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`^`|在字串開頭開始比對。|  
 |`(?(")`|判斷第一個字元是否為引號。 `(?(")` 是交替建構的開頭。|  

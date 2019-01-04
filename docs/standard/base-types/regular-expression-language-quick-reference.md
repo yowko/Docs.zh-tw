@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041612"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779382"
 ---
 # <a name="regular-expression-language---quick-reference"></a>規則運算式語言 - 快速參考
 <a name="top"></a>規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。  如需簡介，請參閱 [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。  
@@ -30,7 +30,7 @@ ms.locfileid: "44041612"
   
  [逸出字元](#character_escapes)  
  [字元類別](#character_classes)  
- [錨點](#atomic_zerowidth_assertions)  
+ [錨點](#anchors)  
  [群組建構](#grouping_constructs)  
  [數量詞](#quantifiers)  
  [反向參考建構](#backreference_constructs)  
@@ -41,14 +41,14 @@ ms.locfileid: "44041612"
   
  我們也有用兩種格式提供此資訊，可讓您下載及列印，以方便參考。  
   
- [下載 Word (.docx) 格式](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [以 Word (.docx) 格式下載](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [下載 PDF (.pdf) 格式](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 <a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>逸出字元  
  規則運算式中的反斜線字元 (\\) 表示接在後面的字元是特殊字元 (如下表所示)，或應該解譯為常值。 如需詳細資訊，請參閱[逸出字元](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)。  
   
-|逸出的字元|描述|模式|符合|  
+|逸出的字元|說明|模式|符合|  
 |-----------------------|-----------------|-------------|-------------|  
 |`\a`|比對警示字元 \u0007。|`\a`|"Error!" 中的 "\u0007" + '\u0007'|  
 |`\b`|在字元類別中，比對退格鍵 \u0008。|`[\b]{3,}`|"\b\b\b\b" 中的 "\b\b\b\b"|  
@@ -70,11 +70,11 @@ ms.locfileid: "44041612"
 ## <a name="character-classes"></a>字元類別  
  字元類別會比對一組字元中的任何一個字元。 字元類別包含下表列出的語言項目。 如需詳細資訊，請參閱 [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。  
   
-|字元類別|描述|模式|符合|  
+|字元類別|說明|模式|符合|  
 |---------------------|-----------------|-------------|-------------|  
 |`[` *character_group* `]`|比對 *character_group*中的任何單一字元。 根據預設，比對會區分大小寫。|`[ae]`|"gray" 中的 "a"<br /><br /> "lane" 中的 "a"、"e"|  
-|`[^` *character_group* `]`|否定：比對不在 *character_group*中的任何單一字元。 根據預設， *character_group* 中的字元會區分大小寫。|`[^aei]`|"reign" 中的 "r"、"g"、"n"|  
-|`[` *第一* `-` *last* `]`|字元範圍：比對從 *first* 至 *last*範圍內的任何單一字元。|`[A-Z]`|"AB123" 中的 "A"、"B"|  
+|`[^` *character_group* `]`|否定：比對不在 *character_group* 中的任何單一字元。 根據預設， *character_group* 中的字元會區分大小寫。|`[^aei]`|"reign" 中的 "r"、"g"、"n"|  
+|`[` *第一* `-` *last* `]`|字元範圍：比對從 *first* 至 *last* 範圍內的任何單一字元。|`[A-Z]`|"AB123" 中的 "A"、"B"|  
 |`.`|萬用字元：比對除 \n 以外的任何單一字元。<br /><br /> 若要比對常值句號字元 (. 或 `\u002E`)，您必須在前面加上逸出字元 (`\.`)。|`a.e`|"nave" 中的 "ave"<br /><br /> "water" 中的 "ate"|  
 |`\p{` *name* `}`|比對 Unicode 一般分類中或 *name*指定之具名區塊中的任何單一字元。|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"City Lights" 中的 "C"、"L"<br /><br /> "ДЖem" 中的 "Д"、"Ж"|  
 |`\P{` *name* `}`|比對不在 Unicode 一般分類中或 *name*所指定之具名區塊中的任何單一字元。|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|"City" 中的 "i"、"t"、"y"<br /><br /> "ДЖem" 中的 "e"、"m"|  
@@ -87,11 +87,10 @@ ms.locfileid: "44041612"
   
  [回到頁首](#top)  
   
-<a name="atomic_zerowidth_assertions"></a>   
 ## <a name="anchors"></a>錨點  
  錨點 (即原子零寬度判斷提示) 會造成根據字串中的目前位置來決定比對成功或失敗，但不會造成引擎在字串中前進或是取用字元。 下表列出的 metacharacter 是錨點。 如需詳細資訊，請參閱 [錨點](../../../docs/standard/base-types/anchors-in-regular-expressions.md)。  
   
-|判斷提示|描述|模式|符合|  
+|判斷提示|說明|模式|符合|  
 |---------------|-----------------|-------------|-------------|  
 |`^`|根據預設，比對必須在字串的開頭開始；在多行模式中，它必須在一行的開頭開始。|`^\d{3}`|"901-" 中的<br /><br /> "901-333-"|  
 |`$`|根據預設，比對必須發生在字串的結尾或字串結尾的 `\n` 之前；在多行模式中，它必須發生在一行的結尾之前，或一行結尾的 `\n` 之前。|`-\d{3}$`|"-333" 中的<br /><br /> "-333"|  
@@ -108,7 +107,7 @@ ms.locfileid: "44041612"
 ## <a name="grouping-constructs"></a>群組建構  
  群組建構會描寫規則運算式的子運算式，而且通常會擷取輸入字串的子字串。 群組建構包含下表列出的語言項目。 如需詳細資訊，請參閱 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)。  
   
-|群組建構|描述|模式|符合|  
+|群組建構|說明|模式|符合|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *子運算式* `)`|擷取符合的子運算式，並指派以一為起始的序號給它。|`(\w)\1`|"deep" 中的 "ee"|  
 |`(?<` *name* `>` *子運算式* `)`|將符合的子運算式擷取到具名群組中。|`(?<double>\w)\k<double>`|"deep" 中的 "ee"|  
@@ -127,7 +126,7 @@ ms.locfileid: "44041612"
 ## <a name="quantifiers"></a>數量詞  
  數量詞指定上一個項目 (可能是字元、群組或字元類別) 必須在輸入字串中出現多少次，才算符合。 數量詞包含下表列出的語言項目。 如需詳細資訊，請參閱 [Quantifiers](quantifiers-in-regular-expressions.md)。  
   
-|數量詞|描述|模式|符合|  
+|數量詞|說明|模式|符合|  
 |----------------|-----------------|-------------|-------------|  
 |`*`|比對上一個項目零次或多次。|`\d*\.\d`|".0"、"19.9"、"219.9"|  
 |`+`|比對上一個項目一次或多次。|`"be+"`|"been" 中的 "bee"、"bent" 中的 "be"|  
@@ -148,7 +147,7 @@ ms.locfileid: "44041612"
 ## <a name="backreference-constructs"></a>反向參考建構  
  反向參考可於後來在相同規則運算式中再識別先前符合的子運算式。 下表列出 .NET 中規則運算式所支援的反向參考建構。 如需詳細資訊，請參閱 [Backreference Constructs](backreference-constructs-in-regular-expressions.md)。  
   
-|反向參考建構|描述|模式|符合|  
+|反向參考建構|說明|模式|符合|  
 |-----------------------------|-----------------|-------------|-------------|  
 |`\` *數字*|反向參考。 比對編號子運算式的值。|`(\w)\1`|"seek" 中的 "ee"|  
 |`\k<` *name* `>`|命名的反向參考。 比對具名運算式的值。|`(?<char>\w)\k<char>`|"seek" 中的 "ee"|  
@@ -159,7 +158,7 @@ ms.locfileid: "44041612"
 ## <a name="alternation-constructs"></a>交替建構  
  交替建構會修改規則運算式來啟用二選一比對。 這些建構包含下表列出的語言項目。 如需詳細資訊，請參閱 [Alternation Constructs](alternation-constructs-in-regular-expressions.md)。  
   
-|交替建構|描述|模式|符合|  
+|交替建構|說明|模式|符合|  
 |---------------------------|-----------------|-------------|-------------|  
 |<code>&#124;</code>|比對由分隔號 (&#124;) 字元所隔開的任何一個元素。|<code>th(e&#124;is&#124;at)</code>|後面這個字串中的 "the"、"this"："this is the day. "|  
 |`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|如果 *expression* 所指定的規則運算式模式相符，則比對 *yes* ，否則比對選擇性的 *no* 部分。 *expression* 會解譯為零寬度判斷提示。|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10 C103 910" 中的 "A10"、"910"|  
@@ -171,7 +170,7 @@ ms.locfileid: "44041612"
 ## <a name="substitutions"></a>替代  
  替代是取代模式中支援的規則運算式語言項目。 如需詳細資訊，請參閱 [Substitutions](substitutions-in-regular-expressions.md)。 下表列出的 metacharacter 是原子零寬度判斷提示。  
   
-|字元|描述|模式|取代模式|輸入字串|結果字串|  
+|字元|說明|模式|取代模式|輸入字串|結果字串|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
 |`$` number|替代群組 *number*所比對的子字串。|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
 |`${` *name* `}`|替代具名群組 *name*所比對的子字串。|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
@@ -179,7 +178,7 @@ ms.locfileid: "44041612"
 |`$&`|替代整個符合項目的複本。|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
 |<code>$`</code>|替代輸入字串中符合字串前面的所有文字。|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
 |`$'`|替代輸入字串中符合字串後面的所有文字。|`B+`|`$'`|"AABBCC"|"AACCCC"|  
-|`$+`|替代已擷取的最後一個群組。|`B+(C+)`|`$+`|"AABBCCDD"|AACCDD|  
+|`$+`|替代已擷取的最後一個群組。|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|替代整個輸入字串。|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
   
  [回到頁首](#top)  
@@ -196,7 +195,7 @@ ms.locfileid: "44041612"
   
  .NET 規則運算式引擎支援下列內嵌選項。  
   
-|選項|描述|模式|符合|  
+|選項|說明|模式|符合|  
 |------------|-----------------|-------------|-------------|  
 |`i`|使用不區分大小寫的比對方式。|`\b(?i)a(?-i)a\w+\b`|"aardvark AAAuto aaaAuto Adam breakfast" 中的 "aardvark"、"aaaAuto"|  
 |`m`|使用多行模式。 `^` 和 `$` 符合行的開頭與結尾，而不是字串的開始和結尾。|如需範例，請參閱 [Regular Expression Options](regular-expression-options.md)中的＜多行模式＞一節。||  

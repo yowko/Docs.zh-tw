@@ -1,17 +1,16 @@
 ---
-title: Microsoft XML 序列化程式產生器 - .NET Core
+title: Microsoft XML 序列化程式產生器
 description: Microsoft XML 序列化程式產生器的概觀。 您可以使用 XML 序列化程式產生器，為專案中包含的類型產生 XML 序列化組件。
 author: mlacouture
-ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3712ac35a9e08b04a0f555642f43055e9e6232e2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9070c42a7cef389a2a13f6be6f26f7dafd7f25e2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151755"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244774"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程式產生器
 
@@ -22,7 +21,7 @@ ms.locfileid: "53151755"
 > * 如何新增 Microsoft.XmlSerializer.Generator 套件的參考
 > * 如何編輯 MyApp.csproj 以新增相依性
 > * 如何新增類別和 XmlSerializer
-> * 如何建置和執行應用程式 
+> * 如何建置和執行應用程式
 
 [Microsoft.XmlSerializer.Generator NuGet 套件](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator)類似於 [XML 序列化程式產生器 (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md)，是 .NET Core 和 .NET Standard 專案的對等項目。 此套件能夠為組件中包含的類型建立 XML 序列化組件，可在將這些類型的物件序列化或還原序列化時，使用 <xref:System.Xml.Serialization.XmlSerializer> 來提升 XML 序列化的啟動效能。
 
@@ -30,8 +29,8 @@ ms.locfileid: "53151755"
 
 完成本教學課程：
 
-* 安裝 [.NET Core 2.1 SDK 或更新版本](https://www.microsoft.com/net/download)。
-* 如果您還沒有這麼做，請安裝您慣用的程式碼編輯器。
+* [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更新版本
+* 您慣用的程式碼編輯器。
 
 > [!TIP]
 > 需要安裝程式碼編輯器嗎？ 試用 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)！
@@ -53,11 +52,11 @@ dotnet new console
 使用 [`dotnet add package`](../tools//dotnet-add-package.md) 命令，在專案中新增參考。 
 
 類型：
- 
- ```console
- dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
- ```
- 
+
+```console
+dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
+```
+
 ### <a name="verify-changes-to-myappcsproj-after-adding-the-package"></a>在新增套件之後驗證 MyApp.csproj 變更
 
 開啟程式碼編輯器，並讓我們開始吧！ 我們仍然從在其中建置應用程式的 *MyApp* 目錄中工作。
@@ -71,17 +70,17 @@ dotnet new console
     <PackageReference Include="Microsoft.XmlSerializer.Generator" Version="1.0.0" />
  </ItemGroup>
  ```
- 
+
 ### <a name="add-another-itemgroup-section-for-net-core-cli-tool-support"></a>新增 .NET Core CLI 工具支援的另一個 ItemGroup 區段
- 
- 在檢查的 `ItemGroup` 區段後面新增下列數行：
- 
+
+在檢查的 `ItemGroup` 區段後面新增下列數行：
+
  ```xml
  <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.XmlSerializer.Generator" Version="1.0.0" />
  </ItemGroup>
  ```
- 
+
 ### <a name="add-a-class-in-the-application"></a>在應用程式中新增類別
 
 在文字編輯器中，開啟 *Program.cs*。 在 *Program.cs* 中，新增名為 *MyClass* 的類別。
@@ -107,9 +106,10 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 
 在主控台視窗中，鍵入下列命令：
 
- ```console
- $ dotnet run
- ```
+```console
+$ dotnet run
+```
+
 > [!NOTE]
 > [`dotnet run`](../tools/dotnet-run.md) 呼叫 [`dotnet build`](../tools/dotnet-build.md) 以確保建置目標已經建置好，然後呼叫 `dotnet <assembly.dll>` 執行目標應用程式。
 
@@ -118,15 +118,13 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 
 如果所有項目都成功，則會在輸出資料夾中產生名為 *MyApp.XmlSerializers.dll* 的組件。 
 
-
-
 恭喜您！ 您已：
 > [!div class="checklist"]
 > * 建立 .NET Core 應用程式。
 > * 新增 Microsoft.XmlSerializer.Generator 套件的參考。
 > * 編輯 MyApp.csproj 以新增相依性。
 > * 新增類別和 XmlSerializer。
-> * 建置和執行應用程式。 
+> * 建置和執行應用程式。
 
 ## <a name="related-resources"></a>相關資源
 

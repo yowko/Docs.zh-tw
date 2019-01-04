@@ -2,16 +2,15 @@
 title: 使用 .NET Core 命令列介面 (CLI) 工具建立 NuGet 套件
 description: 了解如何使用 'dotnet pack' 命令建立 NuGet 套件。
 author: cartermp
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 406db6c9841aa9152ea4d4b1b3fb9fad80d69ce8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 14e3dc265991634b4ef4814fb149f0aaebbcfab6
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125544"
+ms.locfileid: "53170050"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>如何使用 .NET Core 命令列介面 (CLI) 工具建立 NuGet 套件
 
@@ -72,4 +71,4 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 ## <a name="see-also"></a>另請參閱
 
-- [快速入門：建立及發佈套件](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
+- [快速入門：建立及發行套件](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)

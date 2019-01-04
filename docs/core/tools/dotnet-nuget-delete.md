@@ -1,14 +1,14 @@
 ---
-title: dotnet nuget delete 命令 - .NET Core CLI
+title: dotnet nuget delete 命令
 description: dotnet-nuget-delete 命令會從伺服器刪除或取消列出套件。
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: 451352ea652b77e44dcaf731d5b6cce230d1ef78
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 827d295d7a52b6c9c82adbcf3d25281bd1cc98fd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126831"
+ms.locfileid: "53168308"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 

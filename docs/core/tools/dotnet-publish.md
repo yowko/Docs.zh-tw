@@ -1,15 +1,13 @@
 ---
-title: dotnet publish 命令 - .NET Core CLI
+title: dotnet publish 命令
 description: dotnet publish 命令會將 .NET Core 專案發行到目錄中。
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 17bacc92eea90072b95b2d42a87cb57e9fa0be67
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 353adfcbb0479e4a951b900f06327e23a3414225
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43511420"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169776"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -41,7 +39,7 @@ dotnet publish [-h|--help]
 ```
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet publish` 會編譯應用程式，讀取在其專案檔中指定的相依性，然後將產生的一組檔案發行到目錄中。 此輸出包含下列資產：
 
@@ -66,7 +64,7 @@ dotnet publish [-h|--help]
 
 `-c|--configuration {Debug|Release}`
 
-定義組建組態。 預設值是 `Debug`。
+定義組建組態。 預設值為 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -121,7 +119,7 @@ dotnet publish [-h|--help]
 
 `-c|--configuration {Debug|Release}`
 
-定義組建組態。 預設值是 `Debug`。
+定義組建組態。 預設值為 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -172,7 +170,7 @@ dotnet publish [-h|--help]
 
 `-c|--configuration {Debug|Release}`
 
-定義組建組態。 預設值是 `Debug`。
+定義組建組態。 預設值為 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 

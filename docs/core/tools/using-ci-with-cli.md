@@ -1,15 +1,15 @@
 ---
-title: 在持續整合 (CI) 中使用 .NET Core SDK 和工具 - .NET Core CLI
+title: 在持續整合 (CI) 中使用 .NET Core SDK 和工具
 description: 如何在組建伺服器上使用 .NET Core SDK 和其工具的相關資訊。
 author: guardrex
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 7891430654b416a2b55fa837f276d991b56370cc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4c651983bb900d000de37a0e413ef9ab0f7893c9
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131387"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611551"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持續整合 (CI) 中使用 .NET Core SDK 和工具
 
@@ -124,7 +124,7 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 您可以將 [Travis CI](https://travis-ci.org/) \(英文\) 設定成使用 `csharp` 語言和 `dotnet` 索引鍵來安裝 .NET Core SDK。 如需詳細資訊，請參閱有關[建置 C#、F# 或 Visual Basic 專案](https://docs.travis-ci.com/user/languages/csharp/) \(英文\) 的官方 Travis CI 文件。 在您存取 Travis CI 資訊時，請留意這個由社群維護的 `language: csharp` 語言識別碼可適用於所有 .NET 語言，包括 F# 和 Mono。
 
-Travis CI 會在「建置矩陣」中執行 macOS 和 Linux 作業，您可以在該矩陣中指定執行階段、環境及排除項/包含項的組合，以涵蓋應用程式的組建組合。 如需詳細資訊，請參閱 Travis CI 文件中的 [.travis.yml 範例](https://github.com/dotnet/docs/blob/master/.travis.yml) \(英文\) 檔案和[自訂組建](https://docs.travis-ci.com/user/customizing-the-build) \(英文\)。 MSBuild 型工具會在套件中包含 LTS (1.0.x) 和目前 (1.1.x) 執行階段，所以透過安裝 SDK，您就能獲得進行建置所需的一切項目。
+Travis CI 會在「建置矩陣」中執行 macOS 和 Linux 作業，您可以在該矩陣中指定執行階段、環境及排除項/包含項的組合，以涵蓋應用程式的組建組合。 如需詳細資訊，請參閱 Travis CI 文件中的 [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) (自訂組建) 一文。 MSBuild 型工具會在套件中包含 LTS (1.0.x) 和目前 (1.1.x) 執行階段，所以透過安裝 SDK，您就能獲得進行建置所需的一切項目。
 
 ### <a name="appveyor"></a>AppVeyor
 

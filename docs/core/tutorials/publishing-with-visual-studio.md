@@ -4,13 +4,13 @@ description: 發行會建立一組執行您的應用程式所需的檔案。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: e44ae69c9cd8f0767e369791737cef9b4c33f963
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 8d6d5cc7766334e10e7ae3a70af0c309c05bc98b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036301"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169114"
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 發行您的 Hello World 應用程式
 
@@ -18,16 +18,16 @@ ms.locfileid: "48036301"
 
 編譯和執行您的應用程式： 
 
-1. 請確定 Visual Studio 正在組置您應用程式的發行版本。 如有必要，請將工具列上的組建組態設定從 [偵錯] 變更為 [發行]。
+1. 請確定 Visual Studio 正在組置您應用程式的發行版本。 如有必要，請將工具列上的組建組態設定從 **[偵錯]** 變更為 **[發行]**。
 
-   ![Visual Studio 工具列](media/publishing-with-visual-studio/toolbar.png)
+   ![選取 [發行] 組建的 Visual Studio 工具列](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
 1. 在 **HelloWorld** 專案 (而非 HelloWorld 方案) 上按一下滑鼠右鍵，然後從功能表選取 [發行]。 您也可以從主要的 Visual Studio **[建置]** 功能表，選取 **[發行 HelloWorld]**。
 
-   ![Visual Studio 工具列](media/publishing-with-visual-studio/publish1.png)
+   ![Visual Studio [發行] 操作功能表](media/publishing-with-visual-studio/publish-context-menu.png)
 
 
-   ![Visual Studio 工具列](media/publishing-with-visual-studio/publishwindow.png)
+   ![Visual Studio [發行] 視窗](media/publishing-with-visual-studio/publish-settings-window.png)
 
 1. 開啟主控台視窗。 例如，在 Windows 工作列的 [Type here to search] (在這裡鍵入要搜尋的文字) 文字方塊中，輸入 `Command Prompt` (或 `cmd` 簡稱)，然後選取 [命令提示字元] 桌面應用程式，或按 Enter 鍵 (如果已在搜尋結果中選取該應用程式) 來開啟主控台視窗。
 
@@ -49,7 +49,7 @@ ms.locfileid: "48036301"
 
          應用程式的執行階段組態檔。 它會識別建置您應用程式以在其上執行的 .NET Core 版本。 如需詳細資訊，請參閱[執行階段組態檔](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。  
 
-   ![主控台視窗顯示已發行的檔案](media/publishing-with-visual-studio/publishedfiles.png)
+   ![主控台視窗顯示已發行的檔案](media/publishing-with-visual-studio/published-files-output.png)
 
 發行程序會建立與 Framework 相依的部署，在這種部署類型中，只要 .NET Core 安裝在系統上，發行的應用程式即可以在 .NET Core 支援的任何平台上執行。 使用者可以從主控台視窗發出 `dotnet HelloWorld.dll` 命令來執行您的應用程式。
 

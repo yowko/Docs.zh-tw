@@ -1,15 +1,16 @@
 ---
-title: 非同步程式設計
+title: 非同步程式設計 - C#
 description: 深入了解 .NET Core 提供之 C# 語言層級的非同步程式設計模型。
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126493"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612123"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
@@ -29,7 +30,7 @@ C# 具有語言層級非同步程式設計模型，可輕鬆撰寫非同步程�
 
 有其他方法可以達成上面所連結 TAP 文章中所述的 `async` 和 `await` 以外的非同步程式碼，但本文件著重在從這點開始的語言層級建構。
 
-### <a name="io-bound-example-downloading-data-from-a-web-service"></a>I/O 繫結範例︰從 Web 服務下載資料
+### <a name="io-bound-example-downloading-data-from-a-web-service"></a>I/O 繫結範例：從 Web 服務下載資料
 
 您可能需要在按下按鈕時從 Web 服務下載一些資料，但不想要封鎖 UI 執行緒。 只要使用下列項目，即可達成這項作業：
 
@@ -264,5 +265,5 @@ LINQ 中的 Lambda 運算式會使用延後執行，這表示程式碼可以在�
 ## <a name="other-resources"></a>其他資源
 
 * [深入了解非同步](../standard/async-in-depth.md)提供工作運作方式的詳細資訊。
-* [使用 async 和 await 進行非同步程式設計 (C#)](../csharp/programming-guide/concepts/async/index.md)
+* [使用 async 和 await 進行非同步程式設計 (C#)](./programming-guide/concepts/async/index.md)
 * Lucian Wischik 的 [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) (非同步的六個必要祕訣) 是進行非同步程式設計的不錯資源。

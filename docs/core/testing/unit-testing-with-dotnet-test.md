@@ -4,12 +4,13 @@ description: 透過逐步使用 dotnet test 和 xUnit 建置範例方案的互�
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: af2ae5e1b0f9e6146975c6838cca8b22837bb012
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507826"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168984"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 .NET Core 中的 C# 進行單元測試
 
@@ -151,7 +152,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="adding-more-features"></a>新增更多功能
 
-現在，您已經讓一個測試順利通過，您可以撰寫更多測試。 還有一些其他適用於質數 0、-1 的簡單案例。 您可以使用 `[Fact]` 屬性將那些案例新增為新測試，但很快就會單調乏味。 另有其他 xUnit 屬性可供您撰寫類似測試的套件：
+現在，您已經讓一個測試順利通過，您可以撰寫更多測試。 還有一些其他適用於下列質數的簡單案例：0、-1。 您可以使用 `[Fact]` 屬性將那些案例新增為新測試，但很快就會單調乏味。 另有其他 xUnit 屬性可供您撰寫類似測試的套件：
 
 - `[Theory]` 代表執行相同程式碼但具有不同輸入引數的測試套件。
 

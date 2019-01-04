@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fa1387eba60b4bf181df254e00bb3fdbe55bdaf6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 04d866c0615d299fe3df72553bafce2514a1c121
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144698"
+ms.locfileid: "53168828"
 ---
 # <a name="build-a-class-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core SDK 來建置類別庫
 
@@ -29,9 +29,9 @@ ms.locfileid: "53144698"
 
 1. 在 Visual Studio 功能表列上，選擇 [檔案]  >  [新增]   >  [專案]。
 
-1. 在 **[新增專案]** 對話方塊中，展開 **[其他專案類型]** 節點，並選取 **[Visual Studio 方案]**。 將方案命名為 "ClassLibraryProjects"，然後選取 [確定] 按鈕。
+1. 在 **[新增專案]** 對話方塊中，展開 **[其他專案類型]** 節點，並選取 **[Visual Studio 方案]**。 將方案命名為 "ClassLibraryProjects"，然後選取 **[確定]** 按鈕。
 
-   ![[新增專案] 對話方塊](./media/library-with-visual-studio/newproject.png)
+   ![Visual Studio 建立新的測試專案對話方塊](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>建立類別庫專案
 
@@ -41,15 +41,15 @@ ms.locfileid: "53144698"
 
 1. 在 [新增專案] 對話方塊中，展開 [Visual Basic] 節點，然後選取後面跟著 [類別庫 (.NET Standard)] 專案範本的 [.NET Standard] 節點。 在 [名稱] 文字方塊中，輸入 "StringLibrary" 作為專案名稱。 選取 [確定] 以建立類別庫專案。
 
-   ![[新增專案] 對話方塊](./media/vb-library-with-visual-studio/libproject.png)
+   ![Visual Studio 新增程式庫專案對話方塊](./media/vb-library-with-visual-studio/create-new-library-project.png)
 
    然後在 Visual Studio 開發環境中開啟程式碼視窗。 
  
-   ![Visual Studio 應用程式視窗顯示預設的類別庫範本程式碼](./media/vb-library-with-visual-studio/stringlibrary.png)
+   ![Visual Studio 應用程式視窗顯示預設的類別庫範本程式碼](./media/vb-library-with-visual-studio/visual-studio-library.png)
 
 1. 請檢查以確定程式庫以正確的 .NET Standard 版本為目標。 在**方案總管**視窗中，以滑鼠右鍵按一下程式庫專案，然後選取 [屬性]。 [目標 Framework] 文字方塊顯示我們的目標是 .NET Standard 2.0。
 
-   ![類別庫的專案屬性](./media/library-with-visual-studio/properties.png)
+   ![類別庫的專案屬性](./media/library-with-visual-studio/library-project-properties.png)
 
 1. 此外，在 [屬性] 對話方塊中，清除 [根命名空間] 文字方塊中的文字。 Visual Basic 會自動為每個專案建立對應專案名稱的命名空間，而在原始程式碼檔案中定義的任何命名空間都是該命名空間的父代。 我們想要使用 [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) 關鍵字定義最上層命名空間。
   
@@ -61,7 +61,7 @@ ms.locfileid: "53144698"
 
 1. 在功能表列中，選取 [組建]  >  [組建方案]。 專案應該會編譯而不會發生錯誤。
 
-   ![輸出窗格顯示組建成功](./media/library-with-visual-studio/buildsucceeds.png)
+   ![輸出窗格顯示組建成功](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 
 

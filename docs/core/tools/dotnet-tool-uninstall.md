@@ -1,15 +1,13 @@
 ---
-title: dotnet tool uninstall 命令 - .NET Core CLI
+title: dotnet tool uninstall 命令
 description: dotnet tool uninstall 命令會從您的電腦中解除安裝指定的 .NET Core 通用工具。
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 93a43e19df4c7f220ac1e2d2db397cba4d791e83
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2ac0046d012fcf4a4be1c9bfa2e942e35b2c7290
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43738165"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168347"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -27,7 +25,7 @@ dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
 dotnet tool uninstall <-h|--help>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet tool uninstall` 命令可讓您從電腦中解除安裝 .NET Core 通用工具。 若要使用此命令，您必須使用 `--global` 選項指定您要移除使用者範圍工具，或使用 `--tool-path` 選項指定安裝工具的路徑。
 

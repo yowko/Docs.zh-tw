@@ -2,14 +2,14 @@
 title: .NET Core 發佈封裝
 description: 了解如何封裝、命名以及建立 .NET Core 版本以進行發佈。
 author: bleroy
-ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: be5767351ad1cdac15c73f718f67a0d120cf65b0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145643"
+ms.locfileid: "53170414"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 發佈封裝
 
@@ -68,7 +68,7 @@ ms.locfileid: "53145643"
 
 .NET Core 版本設定是以執行階段元件 `[major].[minor]` 版本號碼為基礎。
 SDK 版本會使用相同的 `[major].[minor]`，並且具有合併 SDK 功能及修補程式語意的獨立 `[patch]`。
-例如：SDK 2.2.302 版是支援 2.2 執行階段的 SDK 之第 3 個功能版本的第 2 個修補程式版本。
+例如：SDK 2.2.302 版是支援 2.2 執行階段之 SDK 第 3 個功能版本的第 2 個修補程式版本。
 
 部分套件的名稱包含版本號碼部分。 這可讓使用者安裝特定版本。
 版本的其餘部分不會納入版本名稱中。 這可讓 OS 套件管理員更新套件 (例如自動安裝安全性修正)。

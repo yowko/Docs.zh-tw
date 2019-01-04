@@ -1,16 +1,14 @@
 ---
-title: Docker 簡介 - .NET Core
+title: Docker 簡介
 description: 本文在 .NET Core 應用程式內容中提供了 Docker 的簡介及概觀。
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 1655d4652c4e9b48c48a2a22c2a1bf6cdd459088
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 54bad8fcb34e46700fedf508bbc84ad846b05d76
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148863"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656163"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 
@@ -28,7 +26,7 @@ ms.locfileid: "53148863"
 
 ### <a name="further-reading-and-watching"></a>延伸閱讀 (及觀賞)
 
-* [Windows 型容器：具企業級控制的新式應用程式開發。](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be) \(英文\)
+* [Windows-based containers:Modern app development with enterprise-grade control](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be) (Windows 型容器：具企業級控制的新式應用程式開發)。
 * [Docker 概觀](https://docs.docker.com/engine/docker-overview/) \(英文\)
 * [Windows 容器上的 Dockerfile](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [撰寫 Dockerfile 的最佳做法](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/) \(英文\)

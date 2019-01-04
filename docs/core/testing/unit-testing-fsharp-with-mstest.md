@@ -1,17 +1,18 @@
 ---
-title: 使用 dotnet test 與 MSTest 為 .NET Core 中的 F# 程式庫進行單元測試
+title: 使用 dotnet test 與 MSTest 為 .NET Core 中的 F# 進行單元測試
 description: 透過逐步使用 dotnet test 和 MSTest 建置範例方案的互動式體驗，了解 .NET Core 中 F# 的單元測試概念。
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 dev_langs:
 - fsharp
-ms.openlocfilehash: 14e1ac54cb966e0e38c962e92cceb764fd8e9b42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: dacf820e8e49a337792fa927838fe4b262712e41
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218854"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240082"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>使用 dotnet test 與 MSTest 為 .NET Core 中的 F# 程式庫進行單元測試
 

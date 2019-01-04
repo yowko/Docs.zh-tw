@@ -2,14 +2,14 @@
 title: 建立 dotnet new 的自訂範本
 description: 了解如何在此好玩的教學課程中建立 dotnet new 命令的自訂範本。
 author: guardrex
-ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: 2377d894bcbf54a9c96eae1093d891080e6d11c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 63f8c8a4d029285a02255637c8a79358e5ef0095
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516649"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169725"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>建立 dotnet new 的自訂範本
 
@@ -64,11 +64,11 @@ ms.locfileid: "43516649"
 1. 將專案資料夾的內容以及其 *.template.config/template.json* 檔案複製到您建立的 *content* 資料夾。
 1. 在 *content* 資料夾的旁邊，新增 [*nuspec* 檔案](/nuget/create-packages/creating-a-package)。 nuspec 檔案是 XML 資訊清單檔案，描述套件的內容及驅動建立 NuGet 套件的程序。
 
-   ![目錄結構顯示 NuGet 套件的配置](./media/create-custom-template/nugetdirectorylayout.png)
+   ![目錄結構顯示 NuGet 套件的配置](./media/create-custom-template/nuget-directory-layout.png)
 
 1. 在 *nuspec* 檔案的 **\<packageTypes>** 項目內，包含 `name` 屬性值為 `Template` 的 **\<packageType>** 項目。 *content* 資料夾和 *nuspec* 檔案都應該位於相同的目錄中。 下表顯示將範本製作為 NuGet 套件所需之最小的 *nuspec* 檔案項目。
 
-   | 元素            | 類型   | 描述 |
+   | 元素            | 類型   | 說明 |
    | ------------------ | ------ | ----------- |
    | **\<作者>**     | 字串 | 以逗號分隔的套件作者清單，與 nuget.org 上的設定檔名稱相符。這些作者會顯示在 nuget.org 的 NuGet 組件庫中，並用來交互參照相同作者的其他套件。 |
    | **\<描述>** | 字串 | UI 顯示中的套件詳細描述。 |
@@ -136,7 +136,7 @@ dotnet new -i NUnit3.DotNetNew.Template
 
 當您列出範本與 `dotnet new -l` 時，您會在範本清單中看到 *NUnit 3 測試專案*的簡短名稱 *nunit*。 您已準備好在下一節中使用範本。
 
-![顯示與其他已安裝範本一起列出之 NUnit 範本的主控台視窗](./media/create-custom-template/nunit1.png)
+![顯示 NUnit 範本和其他範本的主控台視窗](./media/create-custom-template/nunit-template-console-window.png)
 
 ### <a name="create-a-project-from-the-template"></a>從範本建立專案
 
@@ -148,7 +148,7 @@ dotnet new nunit
 
 主控台會顯示專案已建立，且專案套件已還原。 命令執行之後，專案即可供使用。
 
-![主控台視窗會在建立 NUnit 專案，以及還原專案相依性時，顯示 dotnet new 命令的輸出。](./media/create-custom-template/nunit2.png)
+![主控台視窗顯示 dotnet new nunit 的輸出，包括還原專案相依性](./media/create-custom-template/dotnet-new-nunit-console-output.png)
 
 ### <a name="to-uninstall-a-template-from-a-nuget-package-stored-at-nugetorg"></a>從儲存在 nuget.org 的 NuGet 套件解除安裝範本
 

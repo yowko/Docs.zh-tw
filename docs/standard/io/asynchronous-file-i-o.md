@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c6e1db7d1edacfd0ce8770b9cc7b7f3f9c8ca2a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7bfa35b8361f154fcbaa2ea7d7f8ddff5321003d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025317"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610424"
 ---
 # <a name="asynchronous-file-io"></a>非同步檔案 I/O
 
@@ -40,7 +40,7 @@ C# 和 Visual Basic 各有兩個進行非同步程式設計的關鍵字：
 
 - `Await` (Visual Basic) 或 `await` (C#) 運算子，會套用至非同步方法的結果。
 
-若要實作非同步 I/O 作業，請搭配非同步方法使用這些關鍵字，如下列範例所示。 如需詳細資訊，請參閱[使用 Async 和 Await 進行非同步程式設計](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)。
+若要實作非同步 I/O 作業，請搭配非同步方法使用這些關鍵字，如下列範例所示。 如需詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計 (C#)](../../csharp/programming-guide/concepts/async/index.md) 或[使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)。
 
 下列範例示範如何使用兩個 <xref:System.IO.FileStream> 物件，以非同步方式將檔案從一個目錄複製到另一個目錄。 請注意， <xref:System.Web.UI.WebControls.Button.Click> 控制項的 <xref:System.Windows.Controls.Button> 事件處理常式由於會呼叫非同步方法，因此會以 `async` 修飾詞標記。
 
@@ -62,5 +62,6 @@ C# 和 Visual Basic 各有兩個進行非同步程式設計的關鍵字：
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.Stream>
-- [檔案和資料流 I/O](../../../docs/standard/io/index.md)
-- [使用 Async 和 Await 進行非同步程式設計](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)
+- [檔案和資料流 I/O](index.md)
+- [使用 async 和 await 進行非同步程式設計 (C#)](../../csharp/programming-guide/concepts/async/index.md)
+- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)

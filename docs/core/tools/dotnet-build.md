@@ -1,13 +1,13 @@
 ---
-title: dotnet build 命令 - .NET Core CLI
+title: dotnet build 命令
 description: dotnet build 命令會建置專案和其所有相依性。
 ms.date: 12/04/2018
-ms.openlocfilehash: 5d47fdfca14d20b3f2a134a8e734f76b1c86c498
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1e5e05d51f98394b2b77e3a8fc645cf9712b0a0f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149155"
+ms.locfileid: "53169687"
 ---
 # <a name="dotnet-build"></a>dotnet build
 

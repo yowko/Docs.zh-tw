@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cb33ffbbd735a015b58fe4fd6b9f7f70282cba1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c8717d00b706edf37ce1112bc6d96048d6daa9cd
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45625310"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53781072"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解
 
@@ -24,14 +24,14 @@ ms.locfileid: "45625310"
 > [!IMPORTANT]
 > 因為 .NET Framework 4.x 版是就地更新，所以您無法在已安裝更新版本的系統上安裝舊版 .NET Framework 4.x。 例如，在 Windows 10 Fall Creators Update 系統上，您無法安裝 .NET Framework 4.6.2，因為作業系統已預先安裝 .NET Framework 4.7.1。
 
-您可以判斷系統上所安裝之 .NET Framework 的版本。 如需詳細資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
+您可以判斷系統上所安裝之 .NET Framework 的版本。 請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)以取得詳細資訊。
 
 下表中的 4.5.*x* 是指 .NET Framework 4.5 和其點發行版本，4.5.1 和 4.5.2、4.6.*x* 是指 .NET Framework 4.6 和其點發行版本 4.6.1 和 4.6.2，而 4.7.*x* 是指 .NET Framework 4.7 和其點發行版本 4.7.1 和 4.7.2。
 
 |封鎖訊息|如需詳細資訊或解決這個問題|  
 |----------------------|--------------------------------------------------|  
 |解除安裝 Microsoft .NET Framework 可能會導致某些應用程式停止運作。|一般而言，您不應該解除安裝電腦上已安裝的任何 .NET Framework 版本，因為您使用的應用程式可能相依於特定的 .NET Framework 版本。 如需詳細資訊，請參閱*使用者入門*指南中的[適用於使用者的 .NET Framework](../../../docs/framework/get-started/index.md#ForUsers)。|  
-|這部電腦已安裝 .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (繁體中文) 或更新版本。|不需要採取任何動作。<br /><br /> 若要判斷系統上所安裝之 .NET Framework 的版本，請參閱[如何：判斷所安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。|  
+|這部電腦已安裝 .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (繁體中文) 或更新版本。|不需要採取任何動作。<br /><br /> 若要判斷系統上所安裝的 .NET Framework 版本，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (「語言」) 需要 .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*。 請從下載中心安裝 .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*，並重新執行安裝程式。|在安裝語言套件之前，必須安裝指定 .NET Framework 版本的英文版本。 如需詳細資訊，請參閱《安裝指南》中的[安裝語言套件](../../../docs/framework/install/guide-for-developers.md#to-install-language-packs)一節。|  
 |無法安裝 .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*。 電腦上的其他應用程式與這個程式不相容。<br /><br /> -或-<br /><br /> 電腦上的其他應用程式與這個程式不相容。|這個訊息最可能的原因是安裝了 .NET Framework 的預覽或 RC 版本。 解除安裝預覽版本或 RC 版本，並重新執行安裝程式。|  
 |無法使用這個套件將 .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* 解除安裝。 若要從電腦將 .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* 解除安裝，請移至 [控制台]，依序選擇 [程式和功能]、[檢視安裝的更新]、[Microsoft Windows (KB2828152) 更新]，然後選擇 [解除安裝]。|您要安裝的套件無法解除安裝 .NET Framework 的預覽版本或 RC 版本。<br /><br /> 請從 [控制台] 解除安裝預覽版本或 RC 版本。|  
@@ -46,8 +46,8 @@ ms.locfileid: "45625310"
 |安裝程式無法執行，因為這部電腦沒有可用的 Windows Installer 服務。|請參閱 Microsoft 支援服務網站上的 [Windows Installer Service error when installing or updating programs](https://go.microsoft.com/fwlink/p/?LinkId=248684)(安裝或更新程式時發生 Windows Installer 服務錯誤)。|  
 |安裝程式無法正確執行，因為這部電腦沒有可用的 Windows Update 服務。|電腦可能是設定為使用 Windows Server Update Services (WSUS)，而不是使用 Microsoft Windows Update。 如需詳細資訊，請參閱[當您嘗試在 Windows 8 或 Windows Server 2012 安裝 .NET Framework 3.5 時產生錯誤碼](https://support.microsoft.com/kb/2734782)中的錯誤碼 0x800F0906 一節。<br /><br /> 另外，請參閱 Microsoft 支援服務網站上的[如何取得最新版的 Windows Update 代理程式以幫助管理電腦更新](https://go.microsoft.com/fwlink/p/?LinkId=248437)。|  
 |安裝程式無法正確執行，因為這部電腦沒有可用的背景智慧型傳送服務 (BITS)。|請參閱 Microsoft 支援服務網站上的 [An update to prevent a Background Intelligent Transfer Service (BITS) crash on a Windows Vista-based computer](https://go.microsoft.com/fwlink/p/?LinkId=248680) (可防止背景智慧型傳送服務 (BITS) 在 Windows Vista 電腦上損毀的更新)。|  
-|因為 Windows Update 發生錯誤並顯示錯誤碼 0x80070643 或 0x643，所以安裝程式可能無法正常執行。|請參閱 Microsoft 支援服務網站上的 [.NET Framework 更新安裝錯誤："0x80070643" 或 "0x643"](https://support.microsoft.com/kb/976982)。|  
-|.NET Framework 4.5.*.x*/4.6 *.x*/4.7 *.x* 已是這個作業系統的一部分。 您不必安裝 .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* 可轉散發套件。|不需執行任何動作。<br /><br /> 若要判斷系統上所安裝之 .NET Framework 的版本，請參閱[如何：判斷所安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。 如需支援的作業系統，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。|  
+|因為 Windows Update 發生錯誤並顯示錯誤碼 0x80070643 或 0x643，所以安裝程式可能無法正常執行。|請參閱 [.NET Framework 更新安裝錯誤："0x80070643" 或 "0x643"](https://support.microsoft.com/kb/976982) (Microsoft 支援網站上)。|  
+|.NET Framework 4.5.*.x*/4.6 *.x*/4.7 *.x* 已是這個作業系統的一部分。 您不必安裝 .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* 可轉散發套件。|不需執行任何動作。<br /><br /> 若要判斷系統上所安裝的 .NET Framework 版本，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。 如需支援的作業系統，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。|  
 |此作業系統不支援 .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*。|如需支援的作業系統，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。<br /><br /> 若是 .NET framework 在 Windows 7 上安裝失敗，此訊息通常表示未安裝 Windows 7 SP1。 在 Windows 7 系統中，.NET Framework 需要 Windows 7 SP1。 若您使用 Windows 7 而尚未安裝 Service Pack 1，就必須先加以安裝，才能安裝 .NET Framework。 如需安裝 Windows 7 SP1 的資訊，請參閱[了解如何安裝 Windows 7 Service Pack 1 (SP1)](https://windows.microsoft.com/en-us/windows7/install-windows-7-service-pack-1)。|  
 |您的電腦目前執行的是 Windows Server 2008 作業系統的 Server Core 安裝。 .NET Framework 4.5.*x* 需要完整版的作業系統或 Server Core 2008 R2 SP1。 請安裝 Windows Server 2008 SP2 或 Windows Server 2008 R2 SP1 或 Server Core 2008 R2 SP1 的完整版本，並重新執行 .NET Framework 4.5.*x* 安裝程式。|Windows Server 2008 R2 SP1 (含) 以後版本的 Server Core 角色才有支援 .NET Framework。 請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。|  
 |.NET Framework 4.5.*x* 已是這個作業系統的一部分，但目前處於關閉狀態 (僅限 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)])。|請參閱 Windows 網站上的[開啟或關閉 Windows 功能](https://go.microsoft.com/fwlink/p/?LinkId=248438)。|  

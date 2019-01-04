@@ -3,12 +3,12 @@ title: 使用 Visual Studio 2017 針對您的 Hello World .NET Core 應用程式
 description: 了解如何使用 Visual Studio 2017 對以 C# 或 Visual Basic 撰寫的 Hello World 應用程式進行偵錯。
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: df153740e492b33c91b4cfc2f148a4113f1ab5d0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147524"
+ms.locfileid: "53170661"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>使用 Visual Studio 2017 針對您的 C# 或 Visual Basic .NET Core Hello World 應用程式進行偵錯
 
@@ -18,7 +18,7 @@ ms.locfileid: "53147524"
 
 [偵錯] 和 [發行] 是 Visual Studio 其中兩個預設的組建組態。 目前的組建組態會顯示在工具列上。 下列工具列影像顯示 Visual Studio 已設定為在 [偵錯] 模式下編譯您的應用程式。
 
-   ![Visual Studio 工具列](./media/debugging-with-visual-studio/toolbar1.png)
+   ![醒目提示 [偵錯] 的預設 Visual Studio 工具列](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
 
 您應該一律從在 [偵錯] 模式下進行程式測試開始。 [偵錯] 模式會關閉大多數的編譯器最佳化，並可在組置程序期間提供更豐富的資訊。
 
@@ -31,7 +31,7 @@ ms.locfileid: "53147524"
 
    在程式碼視窗左邊界中按一下顯示 `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` 的這一行，以將中斷點設定在該行，或在已選取該行的情況下選擇 [偵錯]  >  [切換中斷點] 功能表項目。 如下圖所示，Visual Studio 會以醒目提示並在左邊界顯示一個紅色圓圈的方式，指出已設定中斷點的行。
 
-   ![已設定中斷點的 Visual Studio 程式視窗](./media/debugging-with-visual-studio/setbreakpoint.png)
+   ![已設定中斷點的 Visual Studio 程式視窗](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
 
 1. 在 [偵錯] 模式下執行程式，方法是選取工具列上帶有綠色箭號的 **HelloWorld** 按鈕、按 F5，或選擇 [偵錯]  >  [開始偵錯]。
 
@@ -49,11 +49,11 @@ ms.locfileid: "53147524"
 
    此 [即時運算視窗] 會顯示字串變數的值和 <xref:System.DateTime> 值的屬性。 此外，[自動變數] 和 [區域變數] 視窗中變數的值也會更新。
 
-   ![[自動變數] 視窗和 [即時運算] 視窗](./media/debugging-with-visual-studio/autosimmediate.png)
+   ![[自動變數] 視窗和 [即時運算] 視窗](./media/debugging-with-visual-studio/autos-immediate-window.png)
 
 1. 選取工具列中的 [繼續] 按鈕，或選取 [偵錯]  >  [繼續] 功能表項目，以繼續程式執行。 主控台視窗中顯示的值會與您在 [即時運算視窗] 中所做的變更對應。
 
-   ![主控台視窗顯示在 [What is your name?] 提示字元上的輸入值 Jack，後面接著 Hello Gracie ，時間：11/1/2016 上午 11:59](./media/debugging-with-visual-studio/changed.png)
+   ![主控台視窗，在 What is your name? 提示字元處顯示值 Jack，後面接著 Hello Gracie](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. 按任意鍵以結束應用程式並結束 [偵錯] 模式。
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
@@ -61,7 +61,7 @@ ms.locfileid: "53147524"
 
    在程式碼視窗左邊界中按一下顯示 `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` 的這一行，以將中斷點設定在該行，或在已選取該行的情況下選擇 [偵錯]  >  [切換中斷點] 功能表項目。 如下圖所示，Visual Studio 會以醒目提示並在左邊界顯示一個紅色圓圈的方式，指出已設定中斷點的行。
 
-   ![已設定中斷點的 Visual Studio 程式視窗](./media/debugging-with-visual-studio/vb-setbreakpoint.png)
+   ![已設定中斷點的 Visual Studio 程式視窗](./media/debugging-with-visual-studio/vb-set-breakpoint-in-editor.png)
 
 1. 在 [偵錯] 模式下執行程式，方法是選取工具列上帶有綠色箭號的 **HelloWorld** 按鈕、按 F5，或選擇 [偵錯]  >  [開始偵錯]。
 
@@ -69,7 +69,7 @@ ms.locfileid: "53147524"
 
 1. 程式會在到達中斷點且在 `Console.WriteLine` 方法執行之前，停止執行。 [自動變數] 視窗會顯示目前行附近所使用變數的值。 [區域變數] 視窗 (按一下 [區域變數] 索引標籤即可檢視) 會顯示目前正在執行的方法中所定義變數的值。
 
-   ![Visual Studio Application Insights](./media/debugging-with-visual-studio/vb-break.png)
+   ![位於中斷點的 Visual Studio 應用程式視窗](./media/debugging-with-visual-studio/vb-stop-at-breakpoint.png)
 
 1. 您可以變更變數的值，以了解它會如何影響我們的程式。 如果看不到 [即時運算視窗]，請選擇 [偵錯]  >  [視窗]  >  [即時運算] 功能表項目。 [即時運算視窗] 可讓您與正在進行偵錯的應用程式互動。
 
@@ -79,7 +79,7 @@ ms.locfileid: "53147524"
 
 1. 選取工具列中的 [繼續] 按鈕，或選取 [偵錯]  >  [繼續] 功能表項目，以繼續程式執行。 主控台視窗中顯示的值會與您在 [即時運算視窗] 中所做的變更對應。
 
-   ![顯示在即時運算視窗中所輸入變更值的主控台視窗](./media/debugging-with-visual-studio/changed.png)
+   ![顯示在即時運算視窗中所輸入變更值的主控台視窗](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. 按任意鍵以結束應用程式並結束 [偵錯] 模式。
 ---
@@ -93,7 +93,7 @@ ms.locfileid: "53147524"
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. 在代表中斷點的紅點上按一下滑鼠右鍵。 在內容功能表上，選取 [條件] 以開啟 [中斷點設定] 對話方塊。 核取 [條件] 的方塊。
 
-   ![中斷點設定面板](./media/debugging-with-visual-studio/breakpointsettings.png)
+   ![顯示中斷點設定面板的編輯器 - C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
 
 1. 對於 [條件運算式]，請以下列內容取代 "e.g. x == 5"：
 
@@ -119,7 +119,7 @@ ms.locfileid: "53147524"
    ? name == String.Empty
    ```
 
-   ![[即時運算視窗] 在執行陳述式之後傳回值 true](./media/debugging-with-visual-studio/emptystring.png)
+   ![[即時運算視窗] 在執行陳述式之後傳回值 true - C#](./media/debugging-with-visual-studio/immediate-window-output.png)
 
 1. 選取工具列上的 [繼續] 按鈕以繼續程式執行。
 
@@ -129,7 +129,7 @@ ms.locfileid: "53147524"
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. 在代表中斷點的紅點上按一下滑鼠右鍵。 在內容功能表上，選取 [條件] 以開啟 [中斷點設定] 對話方塊。 核取 [條件] 的方塊。
 
-   ![中斷點設定面板](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
+   ![顯示中斷點設定面板的編輯器 - Visual Basic](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
 
 1. 對於 [條件運算式]，請以下列內容取代 "e.g. x == 5"：
 
@@ -154,7 +154,7 @@ ms.locfileid: "53147524"
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
-  ![[即時運算視窗] 在執行陳述式之後傳回值 true](./media/debugging-with-visual-studio/vb-emptystring.png)
+  ![[即時運算視窗] 在執行陳述式之後傳回值 true - Visual Basic](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. 選取工具列上的 [繼續] 按鈕以繼續程式執行。
 
@@ -169,13 +169,13 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 通常�
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. 在功能表列上，選擇 [偵錯]  >  [逐步執行]，或按 F11 鍵。 Visual Studio 會醒目提示要執行的下一行，並在該行旁邊顯示一個箭頭。
 
-   ![Visual Studio 視窗](./media/debugging-with-visual-studio/stepinto1.png)
+   ![Visual Studio 逐步執行方法 - C#](./media/debugging-with-visual-studio/step-into-method.png)
 
    此時，[自動變數] 視窗會顯示您的程式只有定義一個變數 `args`。 由於您尚未將任何命令行引數傳遞給程式，因此其值是空的字串陣列。 此外，Visual Studio 已開啟一個空白主控台視窗。
 
 1. 選取 [偵錯]  >  [逐步執行]，或按 F11 鍵。 Visual Studio 現在會醒目提示要執行的下一行。 如圖所示，執行上一個陳述式與這個陳述式之間的程式碼所花費的時間少於一毫秒。 `args` 仍是唯一的已宣告變數，而主控台視窗會保留空白。
 
-   ![Visual Studio 視窗](./media/debugging-with-visual-studio/stepinto2.png)
+   ![Visual Studio 逐步執行方法原始檔 - C#](./media/debugging-with-visual-studio/step-into-source-method.png)
 
 1. 選取 [偵錯]  >  [逐步執行]，或按 F11 鍵。 Visual Studio 會醒目提示包含 `name` 變數指派的陳述式。 [自動變數] 視窗會顯示 `name` 是 `null`，而主控台視窗則會顯示 "What is your name?" 字串。
 
@@ -193,13 +193,13 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 通常�
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. 在功能表列上，選擇 [偵錯]  >  [逐步執行]，或按 F11 鍵。 Visual Studio 會醒目提示要執行的下一行，並在該行旁邊顯示一個箭頭。
 
-   ![Visual Studio 視窗](./media/debugging-with-visual-studio/vb-stepinto1.png)
+   ![Visual Studio 逐步執行方法 - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
 
    此時，因為您尚未將任何命令列引數傳遞至程式，[自動變數] 視窗顯示的 `args` 變數值是空白的字串陣列。 此外，Visual Studio 已開啟一個空白主控台視窗。
 
 1. 選取 [偵錯]  >  [逐步執行]，或按 F11 鍵。 Visual Studio 現在會醒目提示要執行的下一行。 如圖所示，執行上一個陳述式與這個陳述式之間的程式碼所花費的時間少於一毫秒。 `args` 仍是唯一的已宣告變數，而主控台視窗會保留空白。
 
-   ![Visual Studio 視窗](./media/debugging-with-visual-studio/vb-stepinto2.png)
+   ![Visual Studio 逐步執行方法原始檔 - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
 
 1. 選取 [偵錯]  >  [逐步執行]，或按 F11 鍵。 Visual Studio 會醒目提示包含 `name` 變數指派的陳述式。 [自動變數] 視窗會顯示 `name` 是 `Nothing`，而主控台視窗則會顯示 "What is your name?" 字串。
 
@@ -222,7 +222,7 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 通常�
 
 若要組置並測試您主控台應用程式的發行版本，請將工具列上的組建組態從 [偵錯] 變更為 [發行]。
 
-![Image](./media/debugging-with-visual-studio/toolbar2.png)
+![醒目提示 [偵錯] 的預設 Visual Studio 工具列](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
 
 當您按 F5 或從 [組建] 功能表中選擇 [組置方案] 時，Visual Studio 就會編譯您主控台應用程式的發行版本。 您可以測試該版本，就像您對應用程式的偵錯版本所做的一樣。
 

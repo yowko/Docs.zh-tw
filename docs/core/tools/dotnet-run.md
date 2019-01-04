@@ -1,15 +1,13 @@
 ---
-title: dotnet run 命令 - .NET Core CLI
+title: dotnet run 命令
 description: dotnet run 命令提供方便的選項，以透過原始程式碼來執行應用程式。
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: f560e6f795f00488818647a4b5c711dcf9d59dcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: effca44db19e512a01f858e7a149e3fc4fe076a2
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235490"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170245"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -40,7 +38,7 @@ dotnet run [-h|--help]
 ```
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet run` 命令提供方便的選項，以使用一個命令透過原始程式碼來執行應用程式。 可用於在命令列中快速進行反覆開發。 此命令仰賴 [`dotnet build`](dotnet-build.md) 命令來建置程式碼。 建置的任何需求 (例如必須先還原專案) 也同樣適用於 `dotnet run`。
 
@@ -70,7 +68,7 @@ dotnet myapp.dll
 
 `-c|--configuration {Debug|Release}`
 
-定義組建組態。 預設值是 `Debug`。
+定義組建組態。 預設值為 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -124,7 +122,7 @@ dotnet myapp.dll
 
 `-c|--configuration {Debug|Release}`
 
-定義組建組態。 預設值是 `Debug`。
+定義組建組態。 預設值為 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -174,7 +172,7 @@ dotnet myapp.dll
 
 `-c|--configuration {Debug|Release}`
 
-定義組建組態。 預設值是 `Debug`。
+定義組建組態。 預設值為 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 

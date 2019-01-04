@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cfc830f50f2e77b85e46ebaf91e3c8658aa86c48
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50186066"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613592"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -35,7 +35,7 @@ ms.locfileid: "50186066"
 
 1. 尋找指出要作為您執行位置之 .NET 實作的資料列。
 2. 在該資料列中，由左到右尋找指出您版本的資料行。
-3. 資料行標題會指出您目標所支援的 .NET Standard 版本 (而所有較舊的 .NET Standard 版本也都會支援它)。
+3. 資料行標題會指出您目標所支援的 .NET Standard 版本。 您也可以將目標設為任何較低的 .NET Standard 版本。 較高的 .NET Standard 版本也會支援您的實作。
 4. 針對您想要作為目標的每個平台重複此程序。 如果您有多個目標平台，應該從中挑選最舊的版本。 例如，如果您想要在 .NET Framework 4.5 和 .NET Core 1.0 上執行，則可以使用的最新 .NET Standard 版本是 .NET Standard 1.1。
 
 ### <a name="which-net-standard-version-to-target"></a>要以哪個 .NET Standard 版本作為目標
@@ -57,7 +57,7 @@ ms.locfileid: "50186066"
 有兩個主要的版本控制規則：
 
 - 累加：.NET Standard 版本就邏輯而言是同心圓：較新的版本會包含來自較舊版本的所有 API。 版本之間並沒有任何重大變更。
-- 固定：.NET Standard 在出貨後，版本即凍結。 新的 API 將先在特定的 .NET 實作 (例如 .NET Core) 中提供。 如果 .NET Standard 審查委員會認為應該為所有 .NET 實作，提供新的 API，即會在新的 .NET Standard 版本中加入這些 API。
+- 固定：.NET Standard 在交付後，版本便已凍結。 新的 API 將先在特定的 .NET 實作 (例如 .NET Core) 中提供。 如果 .NET Standard 審查委員會認為應該為所有 .NET 實作，提供新的 API，即會在新的 .NET Standard 版本中加入這些 API。
 
 ## <a name="specification"></a>規格
 
@@ -79,7 +79,7 @@ ms.locfileid: "50186066"
 - [Markdown 中的 API 清單](https://github.com/dotnet/standard/tree/master/docs/versions)
 - 以 [NuGet 套件](../core/packages.md)散發並由 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) 中繼套件參考的參考組件。
 
-### <a name="package-representation"></a>套件表示
+### <a name="package-representation"></a>封裝表示
 
 .NET Standard 參考組件的主要散發工具是 [NuGet 套件](../core/packages.md)。 傳遞實作的方法有許多種，各自適合每種 .NET 實作。
 

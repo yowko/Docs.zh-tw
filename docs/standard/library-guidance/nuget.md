@@ -4,12 +4,12 @@ description: 針對 .NET 程式庫搭配 NuGet 進行封裝的最佳做法建議
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 8ac01046f25176b781240baeba8bf1efb9376689
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129606"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614541"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -44,7 +44,7 @@ NuGet 套件相依性已詳述於[相依性](./dependencies.md)一文中。
 
 ## <a name="important-nuget-package-metadata"></a>重要的 NuGet 套件中繼資料
 
-NuGet 套件能支援許多[中繼資料屬性](/nuget/reference/nuspec)。 下表包含所有開放原始碼專案都應提供的核心中繼資料：
+NuGet 套件能支援許多[中繼資料屬性](/nuget/reference/nuspec)。 下表包含 NuGet.org 上所有套件都應提供的核心中繼資料：
 
 | MSBuild 屬性名稱              | Nuspec 名稱              | 說明  |
 | ---------------------------------- | ------------------------ | ------------ |
@@ -56,14 +56,12 @@ NuGet 套件能支援許多[中繼資料屬性](/nuget/reference/nuspec)。 下�
 | `PackageTags`                      | `tags`                     | 以空格分隔的標記與關鍵字清單，能描述套件。 標記會在搜尋套件時使用。             |
 | `PackageIconUrl`                   | `iconUrl`                  | 要作為套件圖示使用之影像的 URL。 URL 應為 HTTPS 且影像大小應為 64x64 並具有透明背景。             |
 | `PackageProjectUrl`                | `projectUrl`               | 專案首頁或來源存放庫的 URL。             |
-| `PackageLicenseUrl`                | `licenseUrl`               | 專案授權的 URL。 可以是原始檔控制中 `LICENSE` 檔案的 URL。             |
-
-**✔️ 請考慮**選擇具有符合 NuGet 的前置詞保留[準則](/nuget/reference/id-prefix-reservation)之前置詞的 NuGet 套件名稱。
-
-**✔️ 請考慮**使用原始檔控制中的 `LICENSE` 檔案作為 `LicenseUrl`。 例如 [LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md) \(英文\)。
+| `PackageLicenseExpression`         | `license`                  | 專案授權的 [SPDX 識別碼](https://spdx.org/licenses/)。 只有 OSI 和 FSF 核准的授權可以使用識別碼。 其他授權應該使用 `PackageLicenseFile`。 閱讀更多 [`license` 中繼資料](/nuget/reference/nuspec#license)的相關資訊。 |
 
 > [!IMPORTANT]
-> 沒有授權的專案預設會具有[專屬著作權](https://choosealicense.com/no-permission/) \(英文\)，這會使其他人無法使用它。
+> 沒有授權的專案預設會具有[專屬著作權](https://choosealicense.com/no-permission/)，這會使其他人無法合法使用它。
+
+**✔️ 請考慮**選擇具有符合 NuGet 的前置詞保留[準則](/nuget/reference/id-prefix-reservation)之前置詞的 NuGet 套件名稱。
 
 **✔️ 請務必**為您的套件圖示使用 HTTPS href。
 
@@ -73,9 +71,7 @@ NuGet 套件能支援許多[中繼資料屬性](/nuget/reference/nuspec)。 下�
 
 **✔️ 請考慮**設定 [SourceLink](./sourcelink.md) 以將原始程式碼控制中繼資料新增到您的組件與 NuGet 套件。
 
-> SourceLink 會自動將 `RepositoryUrl` 和 `RepositoryType` 中繼資料新增到 NuGet 套件。
-> SourceLink 也會新增套件建置所根據確切原始碼的相關資訊。
-> 例如，從 Git 存放庫建立的套件將會新增認可雜湊作為中繼資料。
+> SourceLink 會自動將 `RepositoryUrl` 和 `RepositoryType` 中繼資料新增到 NuGet 套件。 SourceLink 也會新增套件建置所根據確切原始碼的相關資訊。 例如，從 Git 存放庫建立的套件將會新增認可雜湊作為中繼資料。
 
 ## <a name="pre-release-packages"></a>發行前套件
 

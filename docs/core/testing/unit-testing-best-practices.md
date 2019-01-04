@@ -1,23 +1,24 @@
 ---
 title: 撰寫單元測試的最佳做法
-description: 了解撰寫單元測試的最佳做法，提高程式碼品質和復原功能
+description: 了解撰寫單元測試的最佳做法，提高 .NET Core 和 .NET Standard 專案的程式碼品質和復原功能。
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 00a0b999c9a08b04cb33bcb3a332513292beb363
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 7db37fd4fcb76d4bfcfb21204a191fd43c9bb6b6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143404"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240719"
 ---
-# <a name="unit-testing-best-practices"></a>單元測試最佳做法
+# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 的單元測試最佳做法
 
-作者：[John Reese](http://reesespieces.io) (特別感謝 [Roy Osherove](http://osherove.com/))
-
-撰寫單元測試有許多優點；運用迴歸加以協助、提供文件，並增進良好的設計。 不過，難以閱讀且容易損毀的單元測試可能會破壞程式碼基底。
+撰寫單元測試有許多優點；運用迴歸加以協助、提供文件，並增進良好的設計。 不過，難以閱讀且容易損毀的單元測試可能會破壞程式碼基底。 本文描述有關為 .NET Core 和 .NET Standard 專案設計單元測試的一些最佳做法。
 
 本指南中，您將了解一些撰寫單元測試時的最佳做法，讓您的測試保有復原能力且易於了解。
+
+作者：[John Reese](http://reesespieces.io) (特別感謝 [Roy Osherove](http://osherove.com/))
 
 ## <a name="why-unit-test"></a>為何選擇單元測試？
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a94f9c650927aee0f120ee3c0b1199b6c977ef0e
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129814"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53776730"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 系統管理員部署手冊
 這篇逐步解說文章將描述系統管理員如何使用 Microsoft System Center Configuration Manager，在整個網路上部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系統相依性。 本文章假設所有目標用戶端電腦都符合 .NET Framework 的最低需求。 如需安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的軟體和硬體需求清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。  
@@ -177,7 +177,7 @@ ms.locfileid: "53129814"
 9. 在精靈的 [使用者經驗] 頁面上，使用預設值並選擇 [下一步]。  
   
 > [!WARNING]
-> 您的實際執行環境可能有一些原則，而且這些原則需要不同的部署排程選項。 如需這些選項的詳細資訊，請參閱[公告名稱屬性：排程索引標籤](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29) \(英文\)。
+> 您的實際執行環境可能有一些原則，而且這些原則需要不同的部署排程選項。 如需這些選項的資訊，請參閱 [Advertisement Name Properties:Schedule Tab](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29) (公告名稱屬性：排程索引標籤)。
   
 10. 在精靈的 [發佈點] 頁面上，使用預設值並選擇 [下一步]。  
   

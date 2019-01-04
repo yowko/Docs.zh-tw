@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 3fb926683de90516bcf67d99026a0134d82cb683
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3d4aa5e60ab9bb134716bddcf90b6fc6b07c2ea0
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152195"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656150"
 ---
 # <a name="delegates-and-lambdas"></a>委派和 Lambda
 
@@ -154,6 +154,8 @@ public MainWindow()
     };
 }
 ```
+
+在此內容中使用 `+=` 運算子來訂閱[事件](../../docs/csharp/language-reference/keywords/event.md)。 如需詳細資訊，請參閱[＜How to：訂閱及取消訂閱事件](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="further-reading-and-resources"></a>延伸閱讀和資源
 

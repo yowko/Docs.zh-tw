@@ -1,15 +1,15 @@
 ---
-title: 使用 Docker 將應用程式容器化 - .NET Core
+title: 使用 Docker 將應用程式容器化
 description: 本教學課程會教導如何建立基本的.NET Core 應用程式，並使用 Docker 對其進行容器化。
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 8f08936142b0cc44baf268f100e228f68920b69d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126364"
+ms.locfileid: "53169582"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>如何將 .NET Core 應用程式容器化
 

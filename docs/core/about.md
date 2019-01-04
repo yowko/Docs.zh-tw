@@ -2,25 +2,24 @@
 title: 關於 .NET Core
 description: 了解 .NET Core。
 author: richlander
-ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: 93619fce58a3b3aa94e6c14fc7cfeb1b0bf48272
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126974"
+ms.locfileid: "53170401"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
 .NET Core 有以下特性：
 
 - **跨平台：** 可在 Windows、macOS 及 Linux [作業系統](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)上執行。
-- **在各架構間皆保持一致：** 在多個架構上 (包括 x64、x86 及 ARM) 可使用相同的行為執行程式碼。
+- **在各架構間皆保持一致：** 在多個架構上 (包括 x64、x86 及 ARM) 可使用相同的行為來執行程式碼。
 - **命令列工具：** 包含易用的命令列工具，可用於本機開發及持續整合案例。
-- **彈性的部署︰** 可以包含在應用程式內，或任何人、任何機器都可並行安裝。 可搭配 [Docker 容器](docker/index.md)使用。
+- **彈性部署：** 可以包含在應用程式內，或任何使用者、任何機器都可並行安裝。 可搭配 [Docker 容器](docker/index.md)使用。
 - **相容：**.NET Core 可透過 [.NET Standard](../standard/net-standard.md) 與 .NET Framework、Xamarin 及 Mono 相容。
-- **開放原始碼︰** NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
+- **開放原始碼：**.NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
 - **受 Microsoft 支援：**.NET Core 根據 [.NET Core 支援](https://www.microsoft.com/net/core/support/)受 Microsoft 支援。
 
 ## <a name="languages"></a>語言
@@ -76,7 +75,7 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 
 如以下圖表所示，[CoreFX](https://github.com/dotnet/corefx) 絕大部分是跨所有平台共用的非平台相關程式碼。 非平台相關程式碼可以實作為單一的可攜式組件，用在所有平台上。
 
-![CoreFX︰每個平台各有程式碼行](../images/corefx-platforms-loc.png)
+![CoreFX：每個平台各有程式碼行](../images/corefx-platforms-loc.png)
 
 Windows 與 Unix 實作大小相近。 因為 CoreFX 實作一些 Windows 專屬的功能，例如 [Microsoft.Win32.Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry)，所以 Windows 的實作較大，但尚未實作很多 Unix 專屬的概念。 您也會看到大多數的 Linux 和 macOS 實作會跨 Unix 實作共用，因此 Linux 和 macOS 特定實作的大小差相彷彿。
 

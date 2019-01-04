@@ -4,12 +4,12 @@ description: HttpClientFactory 是意向明確的處理站，自 .NET Core 2.1 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0ae4dadd6921a71217b50757ede19b8d54910185
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145107"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611031"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
@@ -71,7 +71,7 @@ services.AddHttpClient<IOrderingService, OrderingService>();
 
 ### <a name="httpclient-lifetimes"></a>HttpClient 存留期
 
-每次您從 IHttpClientFactory 取得 `HttpClient` 物件時，就會傳回一個新的 `HttpClient` 執行個體。 每個具名或具型別用戶端都會有一個 HttpMessageHandler**。 `IHttpClientFactory` 會將處理站建立的 HttpMessageHandler 執行個體集合到集區以減少資源耗用量。 建立新的 `HttpClient` 執行個體時，如果集區中的 HttpMessageHandler 執行個體存留期尚未過期，則可重複使用它。
+每次您從 IHttpClientFactory 取得 `HttpClient` 物件時，就會傳回一個新的 `HttpClient` 執行個體。 每個具名或具型別用戶端都會有一個 **HttpMessageHandler**。 `IHttpClientFactory` 會將處理站建立的 HttpMessageHandler 執行個體集合到集區以減少資源耗用量。 建立新的 `HttpClient` 執行個體時，如果集區中的 HttpMessageHandler 執行個體存留期尚未過期，則可重複使用它。
 
 處理常式的集合是需要的做法，因為每個處理常式通常會管理自己的基礎 HTTP 連線；建立比所需數目更多的處理常式可能會導致連線延遲。 有些處理常式也會保持連線無限期地開啟，這可能導致處理常式無法對 DNS 變更回應。
 

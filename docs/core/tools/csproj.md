@@ -2,14 +2,13 @@
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 author: blackdwarf
-ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: f2ab476ee20ae90a84de7a6ccc76ce72738c1343
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bc81dc5c201fea6caa752248c2b59636bd7465ec
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143697"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286568"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -175,7 +174,7 @@ ms.locfileid: "53143697"
 ```
 
 ## <a name="nuget-metadata-properties"></a>NuGet 中繼資料屬性
-隨著改為使用 MSbuild，我們已經將封裝 NuGet 套件時使用的輸入中繼資料從 *project.json* 移動到 *.csproj* 檔。 此輸入是 MSBuild 屬性，因此必須移至 `<PropertyGroup>` 群組。 使用 `dotnet pack` 命令或屬於 SDK 一部分的 `Pack` MSBuild 目標時，會將下列的屬性清單當成封裝處理序的輸入使用。 
+隨著改為使用 MSBuild，我們已經將封裝 NuGet 套件時使用的輸入中繼資料從 *project.json* 移動到 *.csproj* 檔。 此輸入是 MSBuild 屬性，因此必須移至 `<PropertyGroup>` 群組。 使用 `dotnet pack` 命令或屬於 SDK 一部分的 `Pack` MSBuild 目標時，會將下列的屬性清單當成封裝處理序的輸入使用。 
 
 ### <a name="ispackable"></a>IsPackable
 布林值，指定是否可封裝專案。 預設值為 `true`。 
@@ -297,7 +296,7 @@ UI 顯示中的套件詳細描述。
 * `Configuration` 與所有建置程序共用，並且是透過 `dotnet` 命令的 `--configuration` 參數來設定。
 
 ### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo 
-布林值，啟用或停用所有 AssemblyInfo 產生。 預設值是 `true`。 
+布林值，啟用或停用所有 AssemblyInfo 產生。 預設值為 `true`。 
 
 ### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile 
 產生組件資訊檔案的路徑。 預設為 `$(IntermediateOutputPath)` (obj) 目錄中的檔案。
