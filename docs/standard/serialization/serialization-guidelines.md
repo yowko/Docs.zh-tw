@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: b47be45f00ee03d400383dd45dc6776cff3f816d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2a372ba995f409fc3dd12492e21af80b93d20b8c
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742482"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058590"
 ---
 # <a name="serialization-guidelines"></a>序列化方針
 本文件列出在設計要序列化的 API 時所要考量的指導方針。  
@@ -99,7 +99,7 @@ ms.locfileid: "45742482"
   
 1.  請避免專門為了 XML 序列化來設計型別，除非您有非常強烈的理由為了控制所產生之 XML 的形狀。 這項序列化技術已經由前一節所討論的資料合約序列化所取代。  
   
-     換句話說，請勿將 <xref:System.Runtime.Serialization> 命名空間中的屬性套用至新的型別，除非您知道此型別將會搭配 XML 序列化使用。 下列範例示範如何使用 **System.Xml.Serialization** 來控制所產生 XML 的圖形。  
+     換句話說，請勿將 <xref:System.Xml.Serialization> 命名空間中的屬性套用至新的型別，除非您知道此型別將會搭配 XML 序列化使用。 下列範例示範如何使用 **System.Xml.Serialization** 來控制所產生 XML 的圖形。  
   
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
