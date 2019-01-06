@@ -5,16 +5,16 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3fdacd5beb2c6cbfc631d58e99a8741f7a6b233c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f3054ca74efbd09449f43e0654734bfe10e3a7c0
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243970"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058330"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 與 .NET Standard 中的單元測試
 
-.NET Core 使單元測試的建立便得更加輕鬆。 此文章會介紹單元測試，並示範它們和其他種類測試之間的差異。 接近頁面底部的連結資源，會向您示範如何將測試專案新增到解決方案。 在您設定好測試專案後，就能使用命令列或 Visual Studio 來執行單元測試。
+.NET Core 使單元測試的建立便得更加輕鬆。 本文會介紹單元測試，並示範它們和其他種類測試之間的差異。 接近頁面底部的連結資源，會向您示範如何將測試專案新增到解決方案。 在您設定好測試專案後，就能使用命令列或 Visual Studio 來執行單元測試。
 
 .NET Core 2.0 和最新的版本均支援 [.NET Standard 2.0](../../standard/net-standard.md)，而我們將使用它的程式庫來示範單元測試。
 
@@ -43,7 +43,7 @@ ms.locfileid: "53243970"
 您也可以選擇使用：
 * [xUnit](https://xunit.github.io) 
 * [NUnit](https://nunit.org)
-* [MSTest](https://github.com/Microsoft/vstest-docs)
+* [MSTest](https://github.com/Microsoft/testfx-docs)
 
 您可以從以下逐步解說學到更多：
 
