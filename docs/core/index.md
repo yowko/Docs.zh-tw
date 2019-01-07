@@ -4,12 +4,12 @@ description: .NET Core 是 .NET 的模組化、高效能實作，可用於建立
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: ffa58600bea1f5514b25c18aa00e6d36679f2fd9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170259"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030278"
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
@@ -19,15 +19,15 @@ ms.locfileid: "53170259"
 
 查看 [.NET Core 教學課程](tutorials/index.md) 以了解如何建立簡單的 .NET Core 應用程式。 只需要幾分鐘，您就可以啟動並執行您的第一個應用程式。 若要在您的瀏覽器中嘗試 .NET Core，請查看 [C# 中的數字](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml)線上教學課程。
 
-## <a name="download-net-core-21"></a>下載 .NET Core 2.1
+## <a name="download-net-core-22"></a>下載 .NET Core 2.2
 
-下載 [.NET Core  2.1 SDK](https://www.microsoft.com/net/download) 以在您的 Windows、macOS 或 Linux 電腦上嘗試 .NET Core。 若偏好使用 Docker 容器，請瀏覽 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/)。
+下載 [.NET Core  2.2 SDK](https://www.microsoft.com/net/download) 以在您的 Windows、macOS 或 Linux 電腦上嘗試 .NET Core。 若偏好使用 Docker 容器，請瀏覽 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/)。
 
 若您要尋找另一個 .NET Core 版本，所有 .NET Core 版本都可以在 [.NET Core 下載 ](https://www.microsoft.com/net/download/archives)找到。
 
-## <a name="net-core-21"></a>.NET Core 2.1
+## <a name="net-core-22"></a>.NET Core 2.2
 
-最新版本是 [.NET Core 2.1](whats-new/dotnet-core-2-1.md)。 新功能包括：全域工具、高效能 API (例如 <xref:System.Span%601?displayProperty=nameWithType>)、分層式 JIT 編譯、[建置](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/)與[執行階段效能改進](https://blogs.msdn.microsoft.com/dotnet/2018/04/18/performance-improvements-in-net-core-2-1/)，以及對 Alpine 與 ARM32 的支援。
+最新版本是最新版本是 [.NET Core 2.2](whats-new/dotnet-core-2-2.md)。 新功能包括：架構相機部署、啟動攔截程序、使用 Azure SQL 的 AAD 驗證，以及對 Windows ARM32 的支援。
 
 ## <a name="create-your-first-application"></a>建立您的第一個應用程式
 

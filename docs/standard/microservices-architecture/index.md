@@ -4,18 +4,18 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務是�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 52435c31e77e7139b982829ae4ab33a5e0f9f045
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152678"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030434"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務：容器化 .NET 應用程式的架構
 
 ![書籍封面](./media/cover-small.png)
 
-**版本 v2.1.02** - 更新至 ASP.NET Core 2.1
+**版本 v2.1.03** - 更新至 ASP.NET Core 2.1
 
 本指南介紹如何開發微服務應用程式及使用容器進行管理， 並討論使用 .NET Core 和 Docker 容器的架構設計和實作方法。 
 
@@ -43,7 +43,7 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 本指南介紹如何開發微服務應用程式及使用容器進行管理， 並討論使用 .NET Core 和 Docker 容器的架構設計和實作方法。 為了讓您更輕鬆地開始使用容器和微服務，本指南將重點放在您可以探索的容器化和微服務應用程式。 此範例應用程式位於 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub 存放庫中。
 
-本指南提供主要在開發環境層級的基本開發和架構指引，並著重於兩項技術：Docker 和 .NET Core。 我們的用意是讓您在思考應用程式設計，但不想要將重點放在生產環境的基礎結構 (雲端或內部部署) 時，可以閱讀本指南。 稍後，當您建立可實際執行的應用程式時，您將會制定基礎結構的相關決策。 因此，本指南與基礎結構無關，而是偏重開發環境。
+此指南提供主要在開發環境層級的基本開發和架構指引，並著重於兩項技術：Docker 與 .NET Core。 我們的用意是讓您在思考應用程式設計，但不想要將重點放在生產環境的基礎結構 (雲端或內部部署) 時，可以閱讀本指南。 稍後，當您建立可實際執行的應用程式時，您將會制定基礎結構的相關決策。 因此，本指南與基礎結構無關，而是偏重開發環境。
 
 研讀本指南之後，您的下一個步驟是了解 Microsoft Azure 上可實際執行的微服務。
 
@@ -88,9 +88,9 @@ eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考
 
 共同作者：
 
-> **Cesar de la Torre**, Sr.，Microsoft Corp. .NET 產品小組 PM
+> **Cesar de la Torre**，Sr. Microsoft Corp. .NET 產品小組 PM
 >
-> **Bill Wagner**, Sr.，Microsoft Corp. C+E 內容開發人員
+> **Bill Wagner**，Sr. Microsoft Corp. C+E 內容開發人員
 >
 > **Mike Rousos**，Microsoft DevDiv CAT 小組首席軟體工程師
 
@@ -110,15 +110,15 @@ eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考
 >
 > **Jimmy Nilsson**，Factor10 共同創辦人暨執行長
 >
-> **Glenn Condron**, Sr.，ASP.NET 小組程式經理
+> **Glenn Condron**，Sr. ASP.NET 小組計畫經理
 >
 > **Mark Fussell**，Microsoft Azure Service Fabric 小組 PM 主管
 >
 > **Diego Vega**，Microsoft Entity Framework 小組 PM 主管
 >
-> **Barry Dorrans**, Sr.，安全性程式經理
+> **Barry Dorrans**，Sr. 安全性計畫經理
 >
-> **Rowan Miller**, Sr.，Microsoft 程式經理
+> **Rowan Miller**，Sr. Microsoft 計畫經理
 >
 > **Ankit Asthana**，Microsoft .NET 小組 PM 總經理
 >
@@ -140,13 +140,13 @@ eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考
 >
 > **Javier Valero**，Grupo Solutio 營運長
 >
-> **Pierre Millet**, Sr.，Microsoft 顧問
+> **Pierre Millet**，Sr. Microsoft 顧問
 >
 > **Michael Friis**，Docker Inc. 產品經理
 >
 > **Charles Lowell**，Microsoft VS CAT 小組軟體工程師
 >
-> **Miguel Veloso**，Turing Challenge 資深顧問
+> **Miguel Veloso**，Sr. 圖靈挑戰顧問
 
 
 ## <a name="copyright"></a>Copyright
@@ -171,7 +171,7 @@ Copyright © 2018 by Microsoft Corporation
 
 此處所描述的一些範例僅供說明，純屬虛構。 任何實際關聯或連結純屬巧合。
 
-Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Microsoft 集團的商標。
+Microsoft 與列於 <https://www.microsoft.com> 「商標」網頁的商標是 Microsoft 集團的商標。
 
 Mac 與 macOS 是 Apple Inc. 的商標。
 
