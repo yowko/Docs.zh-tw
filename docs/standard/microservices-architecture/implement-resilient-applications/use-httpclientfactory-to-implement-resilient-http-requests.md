@@ -4,12 +4,12 @@ description: HttpClientFactory 是意向明確的處理站，自 .NET Core 2.1 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 0ae4dadd6921a71217b50757ede19b8d54910185
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 0d08346dc59b6f6227e719658909c174e67d4a61
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611031"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030356"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
@@ -21,7 +21,7 @@ ms.locfileid: "53611031"
 
 第一個問題是，這個類別是可處置項目，將它與 `using` 陳述式搭配使用不是最好的選擇，因為即使您處置 `HttpClient` 物件，底層通訊端也不會立即釋出，而且可能會導致所謂「通訊端耗盡」的嚴重問題。 如需有關此問題的詳細資訊，請參閱[您使用 HttpClient 的方法錯誤而導致軟體不穩定](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) \(英文\) 部落格文章。
 
-因此，您應該將 `HttpClient` 具現化一次，然後在整個應用程式生命週期中重複使用。 為每個要求具現化 `HttpClient` 類別將會在負載過重時耗盡可用的通訊端數目。 該問題會導致 `SocketException` 錯誤。 解決該問題的可能方法為建立 `HttpClient` 物件做為單一物件或靜態物件，如 [Microsoft 關於 HttpClient 用法的文章](https://docs.microsoft.com/dotnet/csharp/tutorials/console-webapiclient)中所述。 
+因此，您應該將 `HttpClient` 具現化一次，然後在整個應用程式生命週期中重複使用。 為每個要求具現化 `HttpClient` 類別將會在負載過重時耗盡可用的通訊端數目。 該問題會導致 `SocketException` 錯誤。 解決該問題的可能方法為建立 `HttpClient` 物件做為單一物件或靜態物件，如 [Microsoft 關於 HttpClient 用法的文章](../../../csharp/tutorials/console-webapiclient.md)中所述。 
 
 但是將 `HttpClient` 做為單一物件或靜態物件時會出現第二個問題。 在此案例中，單一或靜態 `HttpClient` 不會理會 DNS 變更，如 [.NET Core GitHub 存放庫提及的問題](https://github.com/dotnet/corefx/issues/11224)中所述。 
 

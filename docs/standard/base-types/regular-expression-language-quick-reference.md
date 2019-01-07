@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53779382"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030395"
 ---
 # <a name="regular-expression-language---quick-reference"></a>規則運算式語言 - 快速參考
 <a name="top"></a>規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。  如需簡介，請參閱 [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。  
@@ -93,10 +93,10 @@ ms.locfileid: "53779382"
 |判斷提示|說明|模式|符合|  
 |---------------|-----------------|-------------|-------------|  
 |`^`|根據預設，比對必須在字串的開頭開始；在多行模式中，它必須在一行的開頭開始。|`^\d{3}`|"901-" 中的<br /><br /> "901-333-"|  
-|`$`|根據預設，比對必須發生在字串的結尾或字串結尾的 `\n` 之前；在多行模式中，它必須發生在一行的結尾之前，或一行結尾的 `\n` 之前。|`-\d{3}$`|"-333" 中的<br /><br /> "-333"|  
+|`$`|根據預設，比對必須發生在字串的結尾或字串結尾的 `\n` 之前；在多行模式中，它必須發生在一行的結尾之前，或一行結尾的 `\n` 之前。|`-\d{3}$`|"-333" 中的<br /><br /> "-901-333"|  
 |`\A`|比對必須發生在字串開頭。|`\A\d{3}`|"901-" 中的<br /><br /> "901-333-"|  
 |`\Z`|比對必須發生在字串結尾，或發生在字串結尾的 `\n` 之前。|`-\d{3}\Z`|"-333" 中的<br /><br /> "-901-333"|  
-|`\z`|比對必須發生在字串結尾。|`-\d{3}\z`|"-333-333-" 中的<br /><br /> "-901-333"|  
+|`\z`|比對必須發生在字串結尾。|`-\d{3}\z`|"-333" 中的<br /><br /> "-901-333"|  
 |`\G`|比對必須發生在先前比對結束的位置。|`\G\(\d\)`|"(1)(3)(5)[7](9\)" 中的 "(1)"、"(3)"、"(5)"|  
 |`\b`|比對必須發生在 `\w` (英數) 和 `\W` (非英數) 字元之間的界限上。|`\b\w+\s\w+\b`|"them theme them them" 中的 "them theme"、"them them"|  
 |`\B`|比對不可以發生在 `\b` 界限上。|`\Bend\w*\b`|"end sends endure lender" 中的 "ends"、"ender"|  
@@ -176,7 +176,7 @@ ms.locfileid: "53779382"
 |`${` *name* `}`|替代具名群組 *name*所比對的子字串。|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
 |`$$`|替代常值 "$"。|`\b(\d+)\s?USD`|`$$$1`|"103 USD"|"$103"|  
 |`$&`|替代整個符合項目的複本。|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
-|<code>$`</code>|替代輸入字串中符合字串前面的所有文字。|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
+|``$` ``|替代輸入字串中符合字串前面的所有文字。|`B+`|``$` ``|"AABBCC"|"AAAACC"|  
 |`$'`|替代輸入字串中符合字串後面的所有文字。|`B+`|`$'`|"AABBCC"|"AACCCC"|  
 |`$+`|替代已擷取的最後一個群組。|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|替代整個輸入字串。|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解如何�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 31f4807c956a8b4fb9381145f8e9b5eaffafe698
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 72a3e7ef8043e0016cefb45a4182b5c2e3061753
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149493"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029706"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>使用列舉類別，而非列舉類型
 
@@ -17,7 +17,7 @@ ms.locfileid: "53149493"
 
 相反地，您可以建立列舉類別，以便利用物件導向語言的所有豐富功能。
 
-不過，這個主題並不重要，而且在許多情況下，為了方便作業，您仍然可以使用標準[列舉類型](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/enum) (如果偏好這樣做)。 無論如何，使用列舉類別與商務相關概念比較有關。
+不過，這個主題並不重要，而且在許多情況下，為了方便作業，您仍然可以使用標準[列舉類型](../../../csharp/language-reference/keywords/enum.md) (如果偏好這樣做)。 無論如何，使用列舉類別與商務相關概念比較有關。
 
 ## <a name="implement-an-enumeration-base-class"></a>實作列舉基底類別
 

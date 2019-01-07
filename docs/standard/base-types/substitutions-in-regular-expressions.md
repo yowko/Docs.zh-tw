@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087326"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030150"
 ---
 # <a name="substitutions-in-regular-expressions"></a>在規則運算式中執行替代
 <a name="Top"></a> 替代是指只有在取代模式內才能辨識的語言項目。 這些項目使用規則運算式模式定義要取代輸入字串中相符文字的全部或部分文字。 取代模式可以包含一個或多個替代，以及常值字元。 取代模式會提供給具有 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 參數的 `replacement` 方法多載，以及提供給 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法。 這些方法會將符合的模式取代為 `replacement` 參數所定義的模式。  
   
  .NET Framework 會定義下表列出的替代項目。  
   
-|替代|描述|  
+|替代|說明|  
 |------------------|-----------------|  
 |`$` *數字*|包括在取代字串中與 *數字*所指定之擷取群組相符的最後一個子字串，其中 *數字* 是十進位值。 如需詳細資訊，請參閱 [替代編號群組](#Numbered)。|  
 |`${` *name* `}`|包括在取代字串中與 `(?<`*名稱*`> )` 所指定之具名群組相符的最後一個子字串。 如需詳細資訊，請參閱 [替代具名群組](#Named)。|  
 |`$$`|取代字串中包括單一 "$" 常值。 如需詳細資訊，請參閱 [替代 "$" 符號](#DollarSign)。|  
 |`$&`|取代字串中包括整個相符項目的複本。 如需詳細資訊，請參閱 [替代整個相符項目](#EntireMatch)。|  
-|<code>$\`</code>|取代字串中包括輸入字串中相符項目之前的所有文字。 如需詳細資訊，請參閱 [替代相符項目前的文字](#BeforeMatch)。|  
+|``$` ``|取代字串中包括輸入字串中相符項目之前的所有文字。 如需詳細資訊，請參閱 [替代相符項目前的文字](#BeforeMatch)。|  
 |`$'`|取代字串中包括輸入字串中相符項目之後的所有文字。 如需詳細資訊，請參閱 [替代相符項目後的文字](#AfterMatch)。|  
 |`$+`|取代字串中包括最後擷取的群組。 如需詳細資訊，請參閱 [替代最後擷取的群組](#LastGroup)。|  
 |`$_`|取代字串中包括整個輸入字串。 如需詳細資訊，請參閱 [替代整個輸入字串](#EntireString)。|  
@@ -63,7 +63,7 @@ ms.locfileid: "47087326"
   
  規則運算式模式 `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` 的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\p{Sc}*`|比對零個或多個貨幣符號字元。|  
 |`\s?`|比對零個或一個空白字元。|  
@@ -89,7 +89,7 @@ ms.locfileid: "47087326"
   
  規則運算式模式 `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` 的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\p{Sc}*`|比對零個或多個貨幣符號字元。|  
 |`\s?`|比對零個或一個空白字元。|  
@@ -111,7 +111,7 @@ ms.locfileid: "47087326"
   
  規則運算式模式 `\b(\d+)(\.(\d+))?` 的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|在字邊界的開頭開始比對。|  
 |`(\d+)`|比對一個或多個十進位數字。 這是第一個擷取群組。|  
@@ -130,7 +130,7 @@ ms.locfileid: "47087326"
   
  規則運算式模式 `^(\w+\s?)+$` 的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`^`|在輸入字串的開頭開始比對。|  
 |`(\w+\s?)+`|一次或多次比對一個或多個文字字元後面接著零或一個空白字元的模式。|  
@@ -142,14 +142,14 @@ ms.locfileid: "47087326"
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>替代相符項目前的文字  
- <code>$\`</code> 替代會將相符的字串取代為相符項目前的整個輸入字串。 也就是說，它在移除相符文字的同時，也會複製輸入字串直到相符項目前。 在結果字串中，相符文字後面接著的任何文字都會保持不變。 如果在輸入字串中有多個相符項目，取代文字就會衍生自原始輸入字串，而非其中文字已經由先前的相符項目取代的字串  \(這個範例將提供說明。\)如果沒有相符項目，<code>$\`</code> 替代就不會有任何作用。  
+ ``$` `` 替代會將相符的字串取代為相符項目前的整個輸入字串。 也就是說，它在移除相符文字的同時，也會複製輸入字串直到相符項目前。 在結果字串中，相符文字後面接著的任何文字都會保持不變。 如果在輸入字串中有多個相符項目，取代文字就會衍生自原始輸入字串，而非其中文字已經由先前的相符項目取代的字串  \(這個範例將提供說明。\)如果沒有相符項目， ``$` `` 替代就不會有任何作用。  
   
- 下列範例會使用規則運算式模式 `\d+` ，比對輸入字串中的一或多個十進位數字序列。 取代字串 <code>$`</code> 會以相符文字前的文字取代這些數字。  
+ 下列範例會使用規則運算式模式 `\d+` ，比對輸入字串中的一或多個十進位數字序列。 取代字串 ``$` `` 會以相符文字前的文字取代這些數字。  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/before1.cs#4)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/before1.vb#4)]  
   
- 在這個範例中，輸入字串 `"aa1bb2cc3dd4ee5"` 包含五個相符項目。 下表將說明 <code>$`</code> 替代如何使規則運算式引擎取代輸入字串中的每個相符項目。 插入的文字會以粗體顯示在結果資料行中。  
+ 在這個範例中，輸入字串 `"aa1bb2cc3dd4ee5"` 包含五個相符項目。 下表將說明 ``$` `` 替代如何使規則運算式引擎取代輸入字串中的每個相符項目。 插入的文字會以粗體顯示在結果資料行中。  
   
 |比對|位置|相符項目前的字串|結果字串|  
 |-----------|--------------|-------------------------|-------------------|  
@@ -184,7 +184,7 @@ ms.locfileid: "47087326"
   
 <a name="LastGroup"></a>   
 ## <a name="substituting-the-last-captured-group"></a>替代最後擷取的群組  
- `$+` 替代會以最後擷取的群組取代相符的字串。 如果沒有擷取的群組，或者最後一個擷取群組的值是 <xref:System.String.Empty?displayProperty=nameWithType>，`$+` 替代就不會有任何作用。  
+ `$+` 替代會以最後擷取的群組取代相符的字串。 如果沒有擷取的群組，或者最後一個擷取群組的值是 <xref:System.String.Empty?displayProperty=nameWithType>， `$+` 替代就不會有任何作用。  
   
  下列範例會識別字串中的重複文字，並使用 `$+` 替代將這些文字取代為出現的單一文字。 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 選項是用來確保只有大小寫不同的相同單字，都會視為重複項目。  
   
@@ -193,7 +193,7 @@ ms.locfileid: "47087326"
   
  規則運算式模式 `\b(\w+)\s\1\b` 的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`(\w+)`|比對一個或多個文字字元。 這是第一個擷取群組。|  
