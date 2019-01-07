@@ -3,12 +3,12 @@ title: 主控台應用程式
 description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 9255ad9b1fefc828e767fb8e6ccc62b2eaf23fd6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dfd8124eb79690286e5cd876de57394a4d741328
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183616"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058395"
 ---
 # <a name="console-application"></a>主控台應用程式
 
@@ -303,6 +303,8 @@ private static async Task GetInput(TelePrompterConfig config)
                 config.UpdateDelay(-10);
             else if (key.KeyChar == '<')
                 config.UpdateDelay(10);
+            else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+                config.SetDone();
         } while (!config.Done);
     };
     await Task.Run(work);
@@ -318,6 +320,6 @@ RunTeleprompter().Wait();
 ## <a name="conclusion"></a>結論
 
 本教學課程示範一些與在主控台應用程式中工作有關的 C# 語言和 .NET Core 程式庫相關功能。
-您可以利用此知識作為基礎，進一步探索這裡介紹的語言和類別。 您已經了解檔案和主控台 I/O 的基本概念、以工作為基礎的非同步程式設計的封鎖和非封鎖用法、C# 語言和 C# 程式組織方式的教學課程，以及「.NET Core 命令列介面」與工具。
+您可以利用這項知識作為基礎，進一步探索這裡介紹的語言和類別。 您已經了解檔案和主控台 I/O 的基本概念、以工作為基礎的非同步程式設計的封鎖和非封鎖用法、C# 語言和 C# 程式組織方式的教學課程，以及「.NET Core 命令列介面」與工具。
 
 如需檔案 I/O 的詳細資訊，請參閱[檔案和資料流 I/O](../../standard/io/index.md) 主題。 如需本教學課程中所使用非同步程式設計模型的詳細資訊，請參閱[以工作為基礎的非同步程式設計](../..//standard/parallel-programming/task-based-asynchronous-programming.md)主題和[非同步程式設計](../async.md)主題。

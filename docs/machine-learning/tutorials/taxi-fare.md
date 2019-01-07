@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 36da24f0cd2d2b9c4884101d97026307174f4130
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 630cbcac954b9fcda67eef38f54241a81b831fc3
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236345"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030252"
 ---
 # <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>教學課程：透過 ML.NET 使用迴歸學習工具預測紐約計程車費用
 
@@ -99,7 +99,9 @@ ms.locfileid: "53236345"
 
 ## <a name="define-data-and-model-paths"></a>定義資料和模型路徑
 
-在 *Program.cs* 檔案頂端新增下列額外的 `using` 陳述式：[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
+在 *Program.cs* 檔案頂端新增下列額外的 `using` 陳述式：
+
+[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
 您必須建立三個欄位，保存含有資料集的檔案與用來儲存模型之檔案的檔案路徑，以及 `TextLoader` 的全域變數：
 

@@ -39,7 +39,7 @@
 
 您也可以查看我們的[待處理問題](https://github.com/dotnet/docs/issues) \(英文\) 清單，然後自願處理您有興趣的問題。 我們使用 [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) \(開放取用\) 標籤來標記開放參與的問題。 
 
-**步驟 2：** 視需要將 `/dotnet/docs`、`dotnet/samples` 或 `dotnet/dotnet-api-docs` 存放庫分叉，然後為您的變更建立分支。
+**步驟 2：** 視需要將 `dotnet/docs`、`dotnet/samples` 或 `dotnet/dotnet-api-docs` 存放庫分叉，然後為您的變更建立分支。
 
 若是進行少量變更，您可以使用 GitHub 的 Web 介面。 只需在您想要變更的檔案上按一下 [Edit the file in your fork of this project] \(編輯此專案分叉中的檔案\) 即可。 GitHub 會在您提交變更時，為您建立新的分支。
 
@@ -101,7 +101,7 @@
 隨著 docs 存放庫新增新的內容，我們可能會擴充這些目錄。 舉例來說，我們將會新增 Xamarin 目錄，例如 `xamarin-ios` 和 `xamarin-android` 目錄。
 
 您所建立的每個完整範例都應該包含 *readme.md* 檔案。 此檔案應該包含範例的簡短描述 (一或兩個段落)。 您的 *readme.md* 應該告訴使用者探索此範例將可學習到什麼。 *readme.md* 檔案應該包含一個 [.NET 文件網站](https://docs.microsoft.com/dotnet/welcome)上即時文件的連結。
-若要決定存放庫中指定檔案與該網站對應的位置，請以 `http://docs.microsoft.com/dotnet/articles` 取代存放庫路徑中的 `/docs`。
+若要決定存放庫中指定檔案與該網站對應的位置，請以 `https://docs.microsoft.com/dotnet` 取代存放庫路徑中的 `/docs`。
 
 您的主題也會包含範例的連結。 請直接連結至 GitHub 上範例的資料夾。
 

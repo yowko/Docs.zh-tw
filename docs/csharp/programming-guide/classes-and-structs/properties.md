@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: ec34d6f49a538ac106196c342a7ff0f9dad8b6d8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c37a273b4091d98ccc202f7d98859333658ccf7f
+ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242772"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53451205"
 ---
 # <a name="properties-c-programming-guide"></a>屬性 (C# 程式設計手冊)
 
@@ -34,7 +34,7 @@ ms.locfileid: "53242772"
 
 實作屬性的一種基本模式需要使用私用支援欄位，來設定和擷取屬性值。 `get` 存取子會傳回私用欄位的值，而 `set` 存取子則可能會執行一些資料驗證，再將值指派給私用欄位。 這兩個存取子也可能會對資料執行一些轉換或計算，再儲存或傳回資料。
 
-下列範例將示範這個模式。 在此範例中，`TimePeriod` 類別代表時間間隔。 就內部而言，此類別會將時間間隔 (秒) 儲存在名為 `seconds` 的私用欄位中。 名為 `Hours` 的讀寫屬性可讓客戶以小時為單位指定時間間隔。 `get` 和 `set` 存取子都會執行小時與秒之間的必要轉換。 此外，`set` 存取子會驗證資料，並在小時數無效時擲回 <xref:System.ArgumentOutOfRangeException>。 
+下列範例將示範這個模式。 在此範例中，`TimePeriod` 類別代表時間間隔。 就內部而言，此類別會將時間間隔 (秒) 儲存在名為 `_seconds` 的私用欄位中。 名為 `Hours` 的讀寫屬性可讓客戶以小時為單位指定時間間隔。 `get` 和 `set` 存取子都會執行小時與秒之間的必要轉換。 此外，`set` 存取子會驗證資料，並在小時數無效時擲回 <xref:System.ArgumentOutOfRangeException>。 
    
  [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   

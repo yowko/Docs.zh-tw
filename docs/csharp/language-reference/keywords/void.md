@@ -8,14 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
-ms.openlocfilehash: 87ccc3a18f0956ffe800ae97598e621e5ca72480
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce52e4d19335db0e21637b87bbd1589c86c06ae1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238373"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613124"
 ---
 # <a name="void-c-reference"></a>void (C# 參考)
+
 當 `void` 作為方法的傳回型別時，其可指定方法不要傳回值。
 
 方法的參數清單中不允許 `void`。 如果某方法不採用任何參數，且不傳回任何值，其宣告方法如下所示：
@@ -27,19 +28,20 @@ public void SampleMethod()
 }
 ```
 
-`void` 也可用於不安全的內容中，以宣告未知類型的指標。 如需詳細資訊，請參閱[指標類型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)。
+`void` 也可用於不安全的內容中，以宣告未知類型的指標。 如需詳細資訊，請參閱[指標類型](../../programming-guide/unsafe-code-pointers/pointer-types.md)。
 
 `void` 是 .NET Framework <xref:System.Void?displayProperty=nameWithType> 類型的別名。
 
 ## <a name="c-language-specification"></a>C# 語言規格
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
-- [參考型別](../../../csharp/language-reference/keywords/reference-types.md)  
-- [實值型別](../../../csharp/language-reference/keywords/value-types.md)  
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 關鍵字](index.md)
+- [參考型別](reference-types.md)
+- [實值型別](value-types.md)
+- [方法](../../programming-guide/classes-and-structs/methods.md)
+- [Unsafe 程式碼和指標](../../programming-guide/unsafe-code-pointers/index.md)
