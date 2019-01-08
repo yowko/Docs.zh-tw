@@ -4,14 +4,14 @@ description: 本文描述如何為適用於 PowerShell、Bash 和 zsh 的 .NET C
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 10b2e13aad9821295efc5c36d1cad04f1a95477c
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 783868fb8300dd4a25c62a108c1c0f7a485721df
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53784388"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029602"
 ---
-# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>如何為 .NET Core CLI 啟用 TAB 鍵自動完成
+# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>如何為 .NET Core CLI 啟用 TAB 鍵自動完成
 
 從 .NET Core 2.0 SDK 開始，.NET Core CLI 支援 tab 鍵自動完成。 本文描述如何為 PowerShell、Bash 和 zsh 等三種殼層設定 tab 鍵自動完成。 其他殼層可能支援自動完成。 請參閱其文件以了解如何設定自動完成，其中的步驟應該會類似於本文中所述的步驟。
 
@@ -28,7 +28,7 @@ migrate
 pack
 ```
 
-如果該命令無法運作，請確定已安裝 .NET Core 2.0 SDK 或更新版本。 如果已安裝，但該命令仍無法運作，請確定 `dotnet` 命令會解析為 .NET Core 2.0 版和更新版本。 使用 `dotnet --version` 命令來查看目前路徑將解析為哪個 `dotnet` 版本。 如需詳細資訊，請參閱[選取要使用的 .NET Core 版本](../versions/selection.md)。
+如果該命令無法運作，請確定已安裝 .NET Core 2.0 SDK 或更新版本。 如果已安裝，但該命令仍無法運作，請確定 `dotnet` 命令會解析為 .NET Core 2.0 SDK 版和更新版本。 使用 `dotnet --version` 命令來查看目前路徑將解析為哪個 `dotnet` 版本。 如需詳細資訊，請參閱[選取要使用的 .NET Core 版本](../versions/selection.md)。
 
 ### <a name="examples"></a>範例
 

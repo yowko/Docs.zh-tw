@@ -3,12 +3,12 @@ title: 關於 .NET Core
 description: 了解 .NET Core。
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170401"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058551"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -95,7 +95,7 @@ Windows 與 Unix 實作大小相近。 因為 CoreFX 實作一些 Windows 專屬
 
 .NET Core 和 .NET Framework 的主要差異︰
 
-- **應用程式模型** -- .NET Core 並不支援所有的 .NET Framwork 應用程式模型。 尤其不支援 ASP.NET Web Form 及 MVC。 已宣布 [.NET Core 3 將會支援 WPF 和 Windows Forms](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/)。
+- **應用程式模型** -- .NET Core 並不支援所有的 .NET Framwork 應用程式模型。 尤其不支援 ASP.NET Web Forms 和 ASP.NET MVC，但支援 ASP.NET Core MVC。 已宣布 [.NET Core 3 將會支援 WPF 和 Windows Forms](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/)。
 - **API** -- .NET Core 包含大型的 .NET Framework 基底類別庫，但構成方式不同 (組件名稱不同；於類型上公開的成員在重要案例中也不同)。 這些差異在某些情況下需要將連接埠來源變更為 .NET Core (請參閱 [microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport))。 .NET Core 會實作 [.NET Standard](../standard/net-standard.md) API 規格。
 - **子系統**：.NET Core 在 .NET Framework 中實作子系統的子集，目標是更簡單的實作和程式設計模型。 例如，不支援程式碼存取安全性 (CAS)，但支援反映。
 - **平台**：.NET Framework 支援 Windows 和 Windows Server，但 .NET Core 也支援 macOS 及 Linux。
