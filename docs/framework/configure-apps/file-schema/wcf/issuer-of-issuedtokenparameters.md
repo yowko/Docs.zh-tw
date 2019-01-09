@@ -2,12 +2,12 @@
 title: '&lt;issuedTokenParameters&gt; 的 &lt;issuer&gt;'
 ms.date: 03/30/2017
 ms.assetid: d6a95f32-d58c-40fc-8658-dd92564d3c90
-ms.openlocfilehash: 459f2f43d3ef9426fbce7e0a0dd067250eb2cc4b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aa647f448bad74e25ffce4a5622c7489274996c7
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748568"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151133"
 ---
 # <a name="ltissuergt-of-ltissuedtokenparametersgt"></a>&lt;issuedTokenParameters&gt; 的 &lt;issuer&gt;
 指定發行安全性權杖的安全性權杖服務 (STS)。  
@@ -17,13 +17,13 @@ ms.locfileid: "32748568"
 \<customBinding>  
 \<繫結 >  
 \<安全性 >  
-\<>  
+\<issuedTokenParameters >  
 \<簽發者 >  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<issuer address="Uri" />  
+<issuer address="Uri" />
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -35,7 +35,7 @@ ms.locfileid: "32748568"
 |---------------|-----------------|  
 |address|必要的字串。 STS 的 URL。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -60,5 +60,5 @@ ms.locfileid: "32748568"
  [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [如何：使用 SecurityBindingElement 建立自訂繫結](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [如何：建立自訂繫結使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

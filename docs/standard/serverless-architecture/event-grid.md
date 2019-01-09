@@ -4,16 +4,16 @@ description: Azure Event Grid 是可靠的事件傳遞和路由事件支付每�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143658"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145865"
 ---
 # <a name="event-grid"></a>Event Grid
 
-[Azure Event Grid](/azure-event-grid/overview)事件為基礎的應用程式提供無伺服器的基礎結構。 您可以從任何來源發佈至 Event Grid，並從任何平台取用訊息。 Event Grid 也有內建支援來簡化您的應用程式與整合的 Azure 資源的事件。 例如，您可以訂閱通知您的應用程式，當檔案上傳的 blob 儲存體事件。 然後，您的應用程式可以發佈的自訂事件格線訊息由其他雲端或內部應用程式。 Event Grid 是建置成能夠可靠處理大規模。 您會獲得發佈和訂閱訊息，無需額外設定必要的基礎結構的優點。
+[Azure Event Grid](/azure/event-grid/overview)事件為基礎的應用程式提供無伺服器的基礎結構。 您可以從任何來源發佈至 Event Grid，並從任何平台取用訊息。 Event Grid 也有內建支援來簡化您的應用程式與整合的 Azure 資源的事件。 例如，您可以訂閱通知您的應用程式，當檔案上傳的 blob 儲存體事件。 然後，您的應用程式可以發佈的自訂事件格線訊息由其他雲端或內部應用程式。 Event Grid 是建置成能夠可靠處理大規模。 您會獲得發佈和訂閱訊息，無需額外設定必要的基礎結構的優點。
 
 ![事件格線標誌](./media/event-grid-logo.png)
 

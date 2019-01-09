@@ -2,12 +2,12 @@
 title: '&lt;claimTypeRequirements&gt; 項目的 &lt;remove&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8ef05bc4-1950-4ee4-95c5-1c6a394eff7e
-ms.openlocfilehash: 5d1f9c963792336f0938113beefbdef770831e9d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7610a8e95996f15133ae58ec33c4afd9e2309cac
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753237"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146208"
 ---
 # <a name="ltremovegt-of-ltclaimtyperequirementsgt-element"></a>&lt;claimTypeRequirements&gt; 項目的 &lt;remove&gt;
 指定聯合認證中要移除的宣告型別。  
@@ -18,14 +18,14 @@ ms.locfileid: "32753237"
 \<繫結 >  
 \<安全性 >  
 \<message>  
-\<q >  
+\<claimTypeRequirements >  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<claimTypeRequirements>  
-      <remove claimType="URI" />  
-</claimTypeRequirements>  
+<claimTypeRequirements>
+  <remove claimType="URI" />
+</claimTypeRequirements>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -37,7 +37,7 @@ ms.locfileid: "32753237"
 |---------------|-----------------|  
 |claimType|定義要移除之宣告型別的 URI。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

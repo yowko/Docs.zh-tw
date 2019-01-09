@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: a3d60747400d570a3e5a930377e9be9c0aca4f35
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: f1ccb2f2e297ecac8f5ac96c0af42ff6bfb9363b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982707"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146039"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort 資料類型 (Visual Basic)
 
@@ -66,7 +66,7 @@ Dim number = &H_5826us
   
 -   **負數的數字。** 因為`UShort`是不帶正負號的型別，它無法表示負數。 如果您使用一元減號 (`-`) 運算子的運算式，評估為類型`UShort`，Visual Basic 會將轉換的運算式`Integer`第一次。  
   
--   **CLS 合規性。** `UShort`資料類型不是屬於[Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) （cls） 標準，所以符合 CLS 標準的程式碼無法取用使用它的元件。
+-   **CLS 合規性。** `UShort`資料類型不是屬於[Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) （cls） 標準，所以符合 CLS 標準的程式碼無法取用使用它的元件。
   
 -   **擴展。** `UShort`資料類型可擴展為`Integer`， `UInteger`， `Long`， `ULong`， `Decimal`， `Single`，以及`Double`。 這表示您可以將轉換`UShort`任何一種類型，而不會發生<xref:System.OverflowException?displayProperty=nameWithType>時發生錯誤。  
   
@@ -79,5 +79,5 @@ Dim number = &H_5826us
  [資料類型](../../../visual-basic/language-reference/data-types/index.md)  
  [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [操作說明：呼叫使用不帶正負號類型的 Windows 函式](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [如何：呼叫使用不帶正負號類型的 Windows 函式](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

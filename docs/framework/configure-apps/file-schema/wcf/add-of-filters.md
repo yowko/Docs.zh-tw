@@ -2,12 +2,12 @@
 title: '&lt;filters&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 2a26a94c01fdb04b8a9e2d381a28cc909bbdac8f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fe9ce8bc2a0efb9e20800189cd9f948d5e6a2232
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754606"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150743"
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;filters&gt; 的 &lt;add&gt;
 XPath 篩選條件，指定要記錄的訊息類型。  
@@ -21,9 +21,9 @@ XPath 篩選條件，指定要記錄的訊息類型。
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<filters>  
-   <add filter="String"/>  
-</filters>  
+<filters>
+  <add filter="String" />
+</filters>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -35,7 +35,7 @@ XPath 篩選條件，指定要記錄的訊息類型。
 |---------------|-----------------|  
 |篩選|字串，指定查詢由 XPath 1.0 運算式定義的 XML 文件。 如需詳細資訊，請參閱<xref:System.ServiceModel.Dispatcher.XPathMessageFilter>。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -57,15 +57,17 @@ XPath 篩選條件，指定要記錄的訊息類型。
  下列範例示範如何設定只記錄含有 SOAP 標頭區段之訊息的篩選條件。  
   
 ```xml  
-<messageLogging logEntireMessage="true"  
-     logMalformedMessages="true" logMessagesAtServiceLevel="true"  
-     logMessagesAtTransportLevel="true" maxMessagesToLog="420">  
-     <filters>  
-        <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">  
-                        /soap:Envelope/soap:Headers  
-        </add>  
-     </filters>  
-</messageLogging>  
+<messageLogging logEntireMessage="true"
+                logMalformedMessages="true"
+                logMessagesAtServiceLevel="true"
+                logMessagesAtTransportLevel="true"
+                maxMessagesToLog="420">
+  <filters>
+    <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+      /soap:Envelope/soap:Headers
+    </add>
+  </filters>
+</messageLogging>
 ```  
   
 ## <a name="see-also"></a>另請參閱  

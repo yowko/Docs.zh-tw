@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 734af2951572d01d78edd44deee7fc5803169c83
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129359"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147690"
 ---
 # <a name="datamemberlisteditor-class"></a>DataMemberListEditor 類別
 
@@ -32,7 +32,7 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberListEditor`類別是內部，而不是直接在您的程式碼中使用它們。
+> `DataMemberListEditor`類別是內部，而且不適合直接在您的程式碼中使用。
 > 
 > Microsoft 不支援在生產環境應用程式中任何情況下使用這個類別。
   

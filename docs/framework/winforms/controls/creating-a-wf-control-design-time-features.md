@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: aa30842ca72bb50767513cf387f59e29e40574e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cb102ec9b3a7eb4673f42c2ca5ad876e049ff59c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865861"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146273"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項
 撰寫相關聯的自訂設計工具，可以增強自訂控制項的設計階段體驗。  
@@ -60,7 +60,7 @@ ms.locfileid: "43865861"
   
  ![可能的 marqueecontrol 可能排列](../../../../docs/framework/winforms/controls/media/demomarqueecontrol.gif "DemoMarqueeControl")  
   
- 如需完整的程式碼清單，請參閱[如何： 建立 Windows Form 控制項，會利用的設計階段功能](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。  
+ 如需完整的程式碼清單，請參閱[How to:建立採用設計階段功能的 Windows Form 控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -84,18 +84,18 @@ ms.locfileid: "43865861"
   
 1.  將 Windows Form 控制項程式庫專案加入方案。 將專案命名為"MarqueeControlLibrary。 」  
   
-2.  使用**方案總管 中**，藉由刪除原始程式檔，視您選擇的語言而定，名為"UserControl1.cs 」 或 「 UserControl1.vb"，刪除專案的預設控制項。 如需詳細資訊，請參閱 < [NIB： 如何： 移除、 Delete 和排除項目](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+2.  使用**方案總管 中**，藉由刪除原始程式檔，視您選擇的語言而定，名為"UserControl1.cs 」 或 「 UserControl1.vb"，刪除專案的預設控制項。 如需詳細資訊，請參閱[＜How to：移除，請刪除，並排除項目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))。  
   
 3.  加入新<xref:System.Windows.Forms.UserControl>項目`MarqueeControlLibrary`專案。 提供新的原始程式檔的基底名稱的"Marqueecontrol 可能"。  
   
-4.  使用**方案總管**，建立新的資料夾中`MarqueeControlLibrary`專案。 如需詳細資訊，請參閱 < [NIB： 如何： 加入新的專案項目](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 將新資料夾命名為 「 設計 」。  
+4.  使用**方案總管**，建立新的資料夾中`MarqueeControlLibrary`專案。 如需詳細資訊，請參閱[＜How to：加入新的專案項目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))。 將新資料夾命名為 「 設計 」。  
   
 5.  以滑鼠右鍵按一下**設計**資料夾，並加入新的類別。 提供的原始程式檔的基底名稱的"MarqueeControlRootDesigner。 」  
   
 6.  您必須使用從 System.Design 組件的類型，因此將新增此參考以`MarqueeControlLibrary`專案。  
   
     > [!NOTE]
-    >  若要使用 System.Design 組件，您的專案必須為目標.NET Framework 中，而非.NET Framework Client Profile 的完整的版本。 若要變更目標 framework，請參閱[如何： 以.NET framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。  
+    >  若要使用 System.Design 組件，您的專案必須為目標.NET Framework 中，而非.NET Framework Client Profile 的完整的版本。 若要變更目標 framework，請參閱[How to:以一個 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。  
   
 ## <a name="referencing-the-custom-control-project"></a>參考自訂控制項專案  
  您將使用`MarqueeControlTest`專案來測試自訂控制項。 當您新增的專案參考時，測試專案將會察覺自訂控制項的`MarqueeControlLibrary`組件。  
@@ -168,7 +168,7 @@ using MarqueeControlLibrary;
 5.  建置專案。  
   
 ## <a name="setting-up-the-project-for-design-time-debugging"></a>設定設計階段偵錯的專案  
- 當您開發自訂的設計階段經驗時，它必須偵錯您的控制項和元件。 沒有簡單的方式來設定您的專案，才能在設計階段偵錯。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 在設計階段偵錯自訂 Windows Forms 控制項](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)。  
+ 當您開發自訂的設計階段經驗時，它必須偵錯您的控制項和元件。 沒有簡單的方式來設定您的專案，才能在設計階段偵錯。 如需詳細資訊，請參閱[逐步解說：在設計階段偵錯自訂的 Windows Form 控制項](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)。  
   
 #### <a name="to-set-up-the-project-for-design-time-debugging"></a>若要設定設計階段偵錯的專案  
   
@@ -219,9 +219,9 @@ using MarqueeControlLibrary;
 ## <a name="creating-a-child-control-for-your-custom-control"></a>建立您的自訂控制項的子控制項  
  `MarqueeControl`將裝載之子控制項的兩種類型：`MarqueeBorder`控制項和`MarqueeText`控制項。  
   
--   `MarqueeBorder`： 這個控制項繪製"號誌"其邊緣的框線。 燈號閃爍在順序中，讓它們呈現為框線周圍移動。 由呼叫屬性控制的燈號閃爍的速度`UpdatePeriod`。 其他幾個自訂屬性決定控制項的外觀的其他層面。 兩種方法，稱為`StartMarquee`和`StopMarquee`，控制動畫何時啟動和停止。  
+-   `MarqueeBorder`：此控制項會繪製"號誌"其邊緣的框線。 燈號閃爍在順序中，讓它們呈現為框線周圍移動。 由呼叫屬性控制的燈號閃爍的速度`UpdatePeriod`。 其他幾個自訂屬性決定控制項的外觀的其他層面。 兩種方法，稱為`StartMarquee`和`StopMarquee`，控制動畫何時啟動和停止。  
   
--   `MarqueeText`： 這個控制項繪製閃爍的字串。 像是`MarqueeBorder`控制項，由控制文字的閃爍速度`UpdatePeriod`屬性。 `MarqueeText`控制項也有`StartMarquee`並`StopMarquee`方法與`MarqueeBorder`控制項。  
+-   `MarqueeText`：此控制項會繪製閃爍的字串。 像是`MarqueeBorder`控制項，由控制文字的閃爍速度`UpdatePeriod`屬性。 `MarqueeText`控制項也有`StartMarquee`並`StopMarquee`方法與`MarqueeBorder`控制項。  
   
  在設計階段`MarqueeControlRootDesigner`使得這些兩個控制項型別新增至`MarqueeControl`的任意組合。  
   
@@ -459,7 +459,7 @@ using MarqueeControlLibrary;
 ## <a name="adding-designer-verbs-to-your-custom-designer"></a>將設計工具動詞命令加入至您的自訂設計工具  
  設計工具動詞命令是連結至事件處理常式的功能表命令。 在設計階段，設計工具動詞命令會新增至元件之捷徑功能表。 如需詳細資訊，請參閱<xref:System.ComponentModel.Design.DesignerVerb>。  
   
- 您將加入您的設計工具中的兩個設計工具動詞命令：**執行測試**並**停止測試**。 這些動詞命令可讓您檢視的執行階段行為`MarqueeControl`在設計階段。 這些動詞命令會加入至`MarqueeControlRootDesigner`。  
+ 您會在設計工具中加入兩個設計工具動詞命令：**執行測試**並**停止測試**。 這些動詞命令可讓您檢視的執行階段行為`MarqueeControl`在設計階段。 這些動詞命令會加入至`MarqueeControlRootDesigner`。  
   
  當**執行測試**會叫用，動詞命令的事件處理常式會呼叫`StartMarquee`方法`MarqueeControl`。 當**停止測試**會叫用，動詞命令的事件處理常式會呼叫`StopMarquee`方法`MarqueeControl`。 實作`StartMarquee`並`StopMarquee`方法會呼叫這些方法上包含的控制項，可實作`IMarqueeWidget`，因此任何包含`IMarqueeWidget`控制項也會參與測試。  
   
@@ -476,7 +476,7 @@ using MarqueeControlLibrary;
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]  
   
 ## <a name="creating-a-custom-uitypeeditor"></a>建立自訂的 UITypeEditor  
- 當您建立使用者的自訂設計階段經驗時，它通常會建立自訂的互動，使用 [屬性] 視窗。 您可以完成這藉由建立<xref:System.Drawing.Design.UITypeEditor>。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立 UI 類型編輯器](https://msdn.microsoft.com/library/292c6e33-8d85-4012-9b51-05835a6f6dfd)。  
+ 當您建立使用者的自訂設計階段經驗時，它通常會建立自訂的互動，使用 [屬性] 視窗。 您可以完成這藉由建立<xref:System.Drawing.Design.UITypeEditor>。 如需詳細資訊，請參閱[＜How to：建立 UI 類型編輯器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120))。  
   
  `MarqueeBorder`控制項會公開在 [屬性] 視窗中的數個屬性。 這些屬性，其中兩個`MarqueeSpinDirection`和`MarqueeLightShape`都由列舉型別。 為了說明 UI 類型編輯器，使用`MarqueeLightShape`屬性會有相關聯<xref:System.Drawing.Design.UITypeEditor>類別。  
   
@@ -628,19 +628,19 @@ private void stopButton_Click(object sender, System.EventArgs e)
   
 -   進一步自訂設計階段經驗。 您可以嘗試遮蔽其他屬性，但是<xref:System.Windows.Forms.Control.Enabled%2A>和<xref:System.Windows.Forms.Control.Visible%2A>，然後加入新的屬性。 加入新的設計工具動詞命令，以簡化常見工作，像是停駐子控制項。  
   
--   授權`MarqueeControl`。 如需詳細資訊，請參閱 <<c0> [ 如何： 授權元件和控制項](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)。  
+-   授權`MarqueeControl`。 如需詳細資訊，請參閱[＜How to：授權元件和控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))。  
   
 -   控制如何序列化您的控制項，並為其產生程式碼的方式。 如需詳細資訊，請參閱 <<c0> [ 動態原始程式碼的產生和編譯](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.UserControl>  
- <xref:System.Windows.Forms.Design.ParentControlDesigner>  
- <xref:System.Windows.Forms.Design.DocumentDesigner>  
- <xref:System.ComponentModel.Design.IRootDesigner>  
- <xref:System.ComponentModel.Design.DesignerVerb>  
- <xref:System.Drawing.Design.UITypeEditor>  
- <xref:System.ComponentModel.BackgroundWorker>  
- [如何：建立採用設計階段功能的 Windows Forms 控制項](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)  
- [擴充設計階段支援](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [自訂設計工具](https://msdn.microsoft.com/library/ca11988e-d38e-44d8-a05d-71362ae7844d)  
- [.NET 圖形程式庫： 簡單的設計工具](http://windowsforms.net/articles/shapedesigner.aspx)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Windows.Forms.UserControl>
+- <xref:System.Windows.Forms.Design.ParentControlDesigner>
+- <xref:System.Windows.Forms.Design.DocumentDesigner>
+- <xref:System.ComponentModel.Design.IRootDesigner>
+- <xref:System.ComponentModel.Design.DesignerVerb> 
+- <xref:System.Drawing.Design.UITypeEditor>
+- <xref:System.ComponentModel.BackgroundWorker>
+- [如何：建立採用設計階段功能的 Windows Form 控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [擴充設計階段支援](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) 
+- [自訂設計工具](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h51z5c0x(v=vs.120))

@@ -2,12 +2,12 @@
 title: '&lt;pnrpPeerResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: f0874d38c3432f066d1bec5cc84f53e1f3730180
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 882974ea29804c7218d4c6c21da2b9ddd7551c54
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747976"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150134"
 ---
 # <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
 指定對等名稱解析通訊協定 (Peer Name Resolution Protocol，PNRP) 解析程式做為解析程式使用。 這是一個選擇性的項目，因為 PNRP 是預設的解析程式。  
@@ -21,7 +21,7 @@ ms.locfileid: "32747976"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<pnrpResolver resolverType="String" />  
+<pnrpResolver resolverType="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -33,7 +33,7 @@ ms.locfileid: "32747976"
 |---------------|-----------------|  
 |resolverType|字串，指定要使用的解析程式。 這是一個選擇性的屬性。 如果未設定，或如果設定為空字串，則使用 PNRP。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  
@@ -45,7 +45,7 @@ ms.locfileid: "32747976"
 ## <a name="example"></a>範例  
   
 ```xml  
-<pnrpResolver resolverType="" />  
+<pnrpResolver resolverType="String" />
 ```  
   
 ## <a name="see-also"></a>另請參閱  

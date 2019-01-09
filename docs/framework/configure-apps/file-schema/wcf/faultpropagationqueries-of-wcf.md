@@ -2,12 +2,12 @@
 title: WCF 的 &lt;faultPropagationQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: d85f66a7-e7b0-4dbb-83cc-89fa06fc9161
-ms.openlocfilehash: 1db99a8d80fad5c0eca93777d87047b43371d048
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 77a38f8474b5e2ac8634d6ea91bc80c6044ff3ed
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202116"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144960"
 ---
 # <a name="ltfaultpropagationqueriesgt-of-wcf"></a>WCF 的 &lt;faultPropagationQueries&gt;
 
@@ -24,7 +24,7 @@ ms.locfileid: "50202116"
   
 ## <a name="syntax"></a>語法  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -36,9 +36,9 @@ ms.locfileid: "50202116"
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
+</tracking>
+```  
+  
 ## <a name="attributes-and-elements"></a>屬性和元素
 
 下列章節說明屬性、子元素和父元素。

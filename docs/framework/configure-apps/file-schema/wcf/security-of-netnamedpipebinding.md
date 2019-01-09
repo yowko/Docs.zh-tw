@@ -2,12 +2,12 @@
 title: '&lt;netNamedPipeBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: 4a80a8337a5b98ff30de60afbe4438e0d91b946b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0079cb9e62abed42a36b67fed935f883473ebbb8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185676"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147820"
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; 的 &lt;security&gt;
 定義繫結的安全性設定。  
@@ -21,13 +21,13 @@ ms.locfileid: "50185676"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<netNamedPipeBinding>  
-      <binding>  
-            <security mode="None/Transport">  
-                        <transport protectionLevel="None/Sign/EncryptAndSign" />  
-            </security>  
-      </binding>  
-</netNamedPipeBinding>  
+<netNamedPipeBinding>
+  <binding>
+    <security mode="None/Transport">
+      <transport protectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+  </binding>
+</netNamedPipeBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -37,7 +37,7 @@ ms.locfileid: "50185676"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|模式|指定套用至這個繫結的安全性類型。 有效值包括以下的值：<br /><br /> -None： 這會停用安全性。<br />-傳輸： 安全性被提供使用基礎傳輸型安全性。 可使用這個模式控制保護層級。<br />-預設值是傳輸。 此屬性的型別為 <xref:System.ServiceModel.NetNamedPipeSecurityMode>。|  
+|模式|指定套用至這個繫結的安全性類型。 有效值包括以下的值：<br /><br /> -None:這會停用安全性。<br />-傳輸：使用基礎傳輸型安全性來提供安全性。 可使用這個模式控制保護層級。<br />-預設值是傳輸。 此屬性的型別為 <xref:System.ServiceModel.NetNamedPipeSecurityMode>。|  
   
 ### <a name="child-elements"></a>子元素  
   

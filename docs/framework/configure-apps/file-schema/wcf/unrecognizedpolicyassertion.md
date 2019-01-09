@@ -2,12 +2,12 @@
 title: '&lt;unrecognizedPolicyAssertion&gt;'
 ms.date: 03/30/2017
 ms.assetid: 043c3c8f-f263-4ac7-a1af-945d03413f0b
-ms.openlocfilehash: 0c1d39c6891b1160dab3b22e76c48e514a493d9f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 27ec88c5e59170e4dea087747d196aa0291f13c8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766916"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150990"
 ---
 # <a name="ltunrecognizedpolicyassertiongt"></a>&lt;unrecognizedPolicyAssertion&gt;
 表示指定原則判斷提示的繫結項目。 這個項目沒有屬性，並呈現為空白 switch。  
@@ -21,7 +21,7 @@ ms.locfileid: "32766916"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<unrecognizedPolicyAssertion/>  
+<unrecognizedPolicyAssertion />
 ```  
   
 ## <a name="type"></a>類型  
@@ -33,7 +33,7 @@ ms.locfileid: "32766916"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  

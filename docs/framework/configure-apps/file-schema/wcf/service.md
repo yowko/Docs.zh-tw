@@ -2,12 +2,12 @@
 title: '&lt;服務&gt;'
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 6e83e988920d24c6fe7615e40334919caf21652e
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: ef0ae70440323c1ede5deca60e88f29861760e68
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34059026"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145506"
 ---
 # <a name="ltservicegt"></a>&lt;服務&gt;
 `service` 項目包含 Windows Communication Foundation (WCF) 服務的設定。 它也包含公開服務的端點。  
@@ -19,9 +19,9 @@ ms.locfileid: "34059026"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<service behaviorConfiguration=String"  
-        name="String">  
-</service>  
+<service behaviorConfiguration="String"
+         name="String">
+</service>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -34,12 +34,12 @@ ms.locfileid: "34059026"
 |behaviorConfiguration|字串，其中包含要用於產生服務實體之行為的行為名稱。 行為名稱必須在定義服務之處的範圍內。 預設值為空字串。|  
 |name|必要的字串屬性，其中指定要具現化的服務型別。 這個設定必須等同於有效的型別。 格式應該為 `Namespace.Class.`。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
 |[\<端點 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|公開此服務之 `endpoint` 項目的集合。|  
-|[\<主機 >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定這個服務執行個體的主機。 此項目的型別為 <xref:System.ServiceModel.Configuration.HostElement>。|  
+|[\<主控件 >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定這個服務執行個體的主機。 此項目的型別為 <xref:System.ServiceModel.Configuration.HostElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -58,15 +58,14 @@ ms.locfileid: "34059026"
  這是服務組態的範例。  
   
 ```xml  
-<service behaviorConfiguration="testChannelBehavior"   
-     name="HelloWorld">  
-     <endpoint   
-        address="/HelloWorld2/"  
-        name="test"  
-        bindingNamespace="http://www.cohowinery.com/"  
-        binding="basicHttpBinding"  
-        contract="IHelloWorld" />  
-</service>  
+<service behaviorConfiguration="testChannelBehavior"
+         name="HelloWorld">
+  <endpoint address="/HelloWorld2/"
+            name="test"
+            bindingNamespace="http://www.cohowinery.com/"
+            binding="basicHttpBinding"
+            contract="IHelloWorld" />
+</service>
 ```  
   
 ## <a name="see-also"></a>另請參閱  

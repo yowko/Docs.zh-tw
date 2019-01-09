@@ -2,12 +2,12 @@
 title: '&lt;serviceSecurityAudit&gt;'
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 36215709f0ede32c25739ea47f2f285e4122f098
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3202b5055d16f0daa1bd829aa53ff6662a687b5d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144427"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150249"
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 指定在服務作業期間啟用安全性事件稽核的設定。  
@@ -21,11 +21,10 @@ ms.locfileid: "53144427"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<serviceSecurityAudit   
-   auditLogLocation="Default/Application/Security"  
-   messageAuthenticationAuditLevel= None/Success/Failure/SuccessOrFailure"   serviceAuthorizationAuditLevel="None/Success/Failure/SuccessOrFailure"  
-   suppressAuditFailure="Boolean"  
-/>  
+<serviceSecurityAudit auditLogLocation="Default/Application/Security"
+                      messageAuthenticationAuditLevel="None/Success/Failure/SuccessOrFailure"
+                      serviceAuthorizationAuditLevel="None/Success/Failure/SuccessOrFailure"
+                      suppressAuditFailure="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -65,16 +64,18 @@ ms.locfileid: "53144427"
 ## <a name="example"></a>範例  
   
 ```xml  
-<system.serviceModel>  
-   <serviceBehaviors>  
-      <behavior name="NewBehavior">  
-         <serviceSecurityAudit auditLogLocation="Application"   
-             suppressAuditFailure="true"  
-             serviceAuthorizationAuditLevel="Success"   
-             messageAuthenticationAuditLevel="Success" />  
-      </behavior>  
-   </serviceBehaviors>  
-</behaviors>  
+<system.serviceModel>
+  <behaviors>
+    <serviceBehaviors>
+      <behavior name="NewBehavior">
+        <serviceSecurityAudit auditLogLocation="Application"
+                              suppressAuditFailure="true"
+                              serviceAuthorizationAuditLevel="Success"
+                              messageAuthenticationAuditLevel="Success" />
+      </behavior>
+    </serviceBehaviors>
+  </behaviors>
+</system.serviceModel>
 ```  
   
 ## <a name="see-also"></a>另請參閱  
@@ -82,5 +83,5 @@ ms.locfileid: "53144427"
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [稽核](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [操作說明：稽核安全性事件](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [如何：稽核安全性事件](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [服務稽核行為](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)

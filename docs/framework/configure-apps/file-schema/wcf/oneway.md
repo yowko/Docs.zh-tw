@@ -2,12 +2,12 @@
 title: '&lt;oneWay&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: f9a5631501b3879463606f526485314efd5eff2b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5f3d534ee98100347acaa485e60a3c74f82ee0b9
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746718"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150574"
 ---
 # <a name="ltonewaygt"></a>&lt;oneWay&gt;
 針對自訂繫結啟用封包路由和使用單向方法。  
@@ -21,15 +21,11 @@ ms.locfileid: "32746718"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<oneWay packetRoutable="Boolean">  
-        <channelPoolSettings  
-           idleTimeout"TimeSpan"  
-          leaseTimeout"TimeSpan"  
-          maxOutboundConnectionsPerEndpopint="Integer" />  
-```  
-  
-```xml  
-</oneWay>  
+<oneWay packetRoutable="Boolean">
+  <channelPoolSettings idleTimeout="TimeSpan"
+                       leaseTimeout="TimeSpan"
+                       maxOutboundConnectionsPerEndpopint="Integer" />
+</oneWay>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -42,7 +38,7 @@ ms.locfileid: "32746718"
 |`packetRoutable`|布林值，指定是否啟用封包路由。 預設為 `false`。|  
 |`MaxAcceptedChannels`|整數，指定可接受的通道數目上限。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  

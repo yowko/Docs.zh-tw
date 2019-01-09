@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceCredentials&gt;'
+title: '&lt;ServiceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 96db336c-4f7a-4193-81a5-910b8ffd804f
-ms.openlocfilehash: a3d63e3d01c009834717a80a9ed9536fd1bdf838
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b9e32509a5e182301455eaf0e602a03c51fbc23a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750397"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150769"
 ---
-# <a name="ltservicecredentialsgt"></a>&lt;serviceCredentials&gt;
+# <a name="ltservicecredentialsgt"></a>&lt;ServiceCredentials&gt;
 指定要用於驗證 (Authenticate) 服務的認證，以及用戶端認證的驗證 (Validation) 相關設定。  
   
  \<system.ServiceModel>  
@@ -21,22 +21,22 @@ ms.locfileid: "32750397"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<serviceCredentials type="String">  
-   <clientCertificate>  
-   </clientCertificate>  
-   <issuedTokenAuthentication>  
-   </issuedTokenAuthentication>  
-   <peer>  
-   </peer>  
-   <secureConversationAuthentication>  
-   </secureConversationAuthentication>  
-   <serviceCertificate>  
-   </serviceCertificate>  
-   <userNameAuthentication>  
-   </userNameAuthentication>  
-   <windowsAuthentication>  
-   </windowsAuthentication>  
-</serviceCredentials>  
+<serviceCredentials type="String">
+  <clientCertificate>
+  </clientCertificate>
+  <issuedTokenAuthentication>
+  </issuedTokenAuthentication>
+  <peer>
+  </peer>
+  <secureConversationAuthentication>
+  </secureConversationAuthentication>
+  <serviceCertificate>
+  </serviceCertificate>
+  <userNameAuthentication>
+  </userNameAuthentication>
+  <windowsAuthentication>
+  </windowsAuthentication>
+</serviceCredentials>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -48,7 +48,7 @@ ms.locfileid: "32750397"
 |---------------|-----------------|  
 |`type`|字串，指定這個組態項目的型別。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -56,9 +56,9 @@ ms.locfileid: "32750397"
 |[\<issuedTokenAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)|指定這個服務的目前發行的權杖。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>。|  
 |[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|指定對等節點的目前認證。 此項目的型別為 <xref:System.ServiceModel.Configuration.PeerCredentialElement>。|  
 |[\<s >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationauthentication-of-servicecredential.md)|指定安全對話的目前認證。 此項目的型別為 <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>。|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|指定服務用來識別本身的憑證。 此項目的型別為 <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>。|  
+|[\<v >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|指定服務用來識別本身的憑證。 此項目的型別為 <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>。|  
 |[\<userNameAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)|指定使用者名稱密碼驗證的設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.UserNameServiceElement>。|  
-|[\<windows 驗證 >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsauthentication-of-servicecredentials.md)|指定 Windows 認證驗證的設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.WindowsServiceElement>。|  
+|[\<windowsAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsauthentication-of-servicecredentials.md)|指定 Windows 認證驗證的設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.WindowsServiceElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   

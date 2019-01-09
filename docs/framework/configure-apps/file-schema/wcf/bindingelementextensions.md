@@ -2,12 +2,12 @@
 title: '&lt;bindingElementExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: a93474a4f86fac2a6b211652e3ddc86901cf197f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ee67df95de715f0b21250bbf5739f84b4945d719
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747745"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151439"
 ---
 # <a name="ltbindingelementextensionsgt"></a>&lt;bindingElementExtensions&gt;
 這個區段會啟用電腦或應用程式組態檔中自訂繫結項目的使用。 您可以透過使用 `add` 關鍵字，將項目的 `type` 屬性設定為繫結項目延伸，以及將 `name` 屬性設定為自訂繫結項目，來將自訂繫結項目加入至這個集合。  
@@ -17,14 +17,15 @@ ms.locfileid: "32747745"
  下列範例使用 `add` 項目，以及 `name` 屬性，將繫結延伸加入至組態檔的 `bindingElementExtensions` 區段中。  
   
 ```xml  
-<system.serviceModel>  
-    <extensions>  
-        <bindingElementExtensions>  
-           <add name="udpTransport" type="Microsoft.ServiceModel.Samples.UdpTransportSection, UdpTransport,  
-                Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
-        </bindingElementExtensions>  
-    </extensions>  
-</system.serviceModel>  
+<system.serviceModel>
+  <extensions>
+    <bindingElementExtensions>
+      <add name="udpTransport"
+           type="Microsoft.ServiceModel.Samples.UdpTransportSection, UdpTransport,
+                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </bindingElementExtensions>
+  </extensions>
+</system.serviceModel>
 ```  
   
  若要將組態功能加入至項目，使用者必須寫入並註冊 `bindingElementExtensionSection` 項目。 如需這方面的詳細資訊，請參閱 <xref:System.Configuration>。  
@@ -32,13 +33,14 @@ ms.locfileid: "32747745"
  在定義項目及其組態型別後，延伸即可做為自訂繫結的一部分，如下列範例所示。  
   
 ```xml  
-<customBinding>  
-     <binding name="test2">  
-         <udpTransport />  
-         <binaryMessageEncoding maxReadPoolSize="211" maxWritePoolSize="2132"  
-             maxSessionSize="3141" />  
-         </binding>  
-</customBinding>  
+<customBinding>
+  <binding name="test2">
+    <udpTransport />
+    <binaryMessageEncoding maxReadPoolSize="211"
+                           maxWritePoolSize="2132"
+                           maxSessionSize="3141" />
+  </binding>
+</customBinding>
 ```  
   
 ## <a name="see-also"></a>另請參閱  

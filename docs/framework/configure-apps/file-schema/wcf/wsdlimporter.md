@@ -2,11 +2,12 @@
 title: '&lt;wsdlImporter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
-ms.openlocfilehash: 33c2b0e4286ce746f745e4aebe10fd4bbd96810f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 43c1a50c740cd9c75ee641e4ac4d0fa8ea3ca36b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144986"
 ---
 # <a name="ltwsdlimportergt"></a>&lt;wsdlImporter&gt;
 指定所有 WSDL 匯入工具，此工具會使用 WS-Policy 附件匯入 Web 服務描述語言 (WSDL) 1.1 中繼資料。  
@@ -20,11 +21,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<metadata>  
-  <wsdlImporters>  
-    <wsdlImporter type="string" />  
-  </wsdlImporters>  
-</metadata>  
+<metadata>
+  <wsdlImporters>
+    <wsdlImporter type="string" />
+  </wsdlImporters>
+</metadata>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 |---------------|-----------------|  
 |`type`|此項目的型別。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

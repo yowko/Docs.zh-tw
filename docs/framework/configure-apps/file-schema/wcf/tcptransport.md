@@ -2,12 +2,12 @@
 title: '&lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 39fb57af6ad97c1a0e51a2c5dcf06245ddf293ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 21b63ab0b4546dc2f4d46c40b02c55fb639320f6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152459"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151172"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 定義 TCP 傳輸，通道可使用此傳輸來傳輸自訂繫結的訊息。  
@@ -21,27 +21,25 @@ ms.locfileid: "53152459"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<tcpTransport   
-      channelInitializationTimeout="TimeSpan"   
-      connectionBufferSize="Integer"   
-      hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"  
-      listenBacklog="Integer"  
-      manualAddressing="Boolean"   
-      maxBufferPoolSize="Integer"  
-      maxBufferSize="Integer"  
-      maxOutputDelay="TimeSpan"  
-      maxPendingAccepts="Integer"   
-      maxPendingConnections="Integer"  
-      maxReceivedMessageSize="Integer"   
-      portSharingEnabled="Boolean"  
-      teredoEnabled="Boolean"  
-      transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse" >  
-      <connectionPoolSettings  
-            groupName="String"  
-            idleTimeout"TimeSpan"  
-            leaseTimeout="TimeSpan"  
-            maxOutboundConnectionsPerEndpopint="Integer" />  
-</tcpTransport>  
+<tcpTransport channelInitializationTimeout="TimeSpan"
+              connectionBufferSize="Integer"
+              hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"
+              listenBacklog="Integer"
+              manualAddressing="Boolean"
+              maxBufferPoolSize="Integer"
+              maxBufferSize="Integer"
+              maxOutputDelay="TimeSpan"
+              maxPendingAccepts="Integer"
+              maxPendingConnections="Integer"
+              maxReceivedMessageSize="Integer"
+              portSharingEnabled="Boolean"
+              teredoEnabled="Boolean"
+              transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse" >
+  <connectionPoolSettings groupName="String"
+                          idleTimeout="TimeSpan"
+                          leaseTimeout="TimeSpan"
+                          maxOutboundConnectionsPerEndpopint="Integer" />
+</tcpTransport>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  

@@ -2,12 +2,12 @@
 title: '&lt;中繼資料&gt;'
 ms.date: 03/30/2017
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
-ms.openlocfilehash: 7e314ae56ed7a1b532bb8946fbb28802e72d3e20
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 119cd4d5b63f8d957bc6db9dd6aabdf9e2beeb64
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747849"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147365"
 ---
 # <a name="ltmetadatagt"></a>&lt;中繼資料&gt;
 指定如何處理服務中繼資料。  
@@ -18,18 +18,18 @@ ms.locfileid: "32747849"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<system.serviceModel>  
-    <client>  
-        <metadata>  
-                   <policyImporters>  
-                          <policyImporter type="string" />  
-                   </policyImporters  
-                 <wsdlImporters>  
-                      <wsdlImporter type="string" />  
-                 </wsdlImporters>  
-        </metadata>  
-    </client>  
-</system.serviceModel>  
+<system.serviceModel>
+  <client>
+    <metadata>
+      <policyImporters>
+        <policyImporter type="string" />
+      </policyImporters>
+      <wsdlImporters>
+        <wsdlImporter type="string" />
+      </wsdlImporters>
+    </metadata>
+  </client>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -38,7 +38,7 @@ ms.locfileid: "32747849"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  

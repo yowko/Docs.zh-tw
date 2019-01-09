@@ -2,17 +2,17 @@
 title: '&lt;identity&gt; 的 &lt;certificate&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: e7d8e7abbc95521d85dc5999c36687f9becea9fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0b65157aea84760f3e52bc294f7559967fc308f1
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749279"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146910"
 ---
 # <a name="ltcertificategt-for-ltidentitygt"></a>&lt;identity&gt; 的 &lt;certificate&gt;
 指定向用戶端驗證伺服器時使用的 X.509 憑證。  
   
- 如需有關設定項目值的詳細資訊，請參閱[服務識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 如需設定項目值的詳細資訊，請參閱 <<c0> [ 服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
  \<身分識別 >  
 \<憑證 >  
@@ -20,7 +20,7 @@ ms.locfileid: "32749279"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<certificate encodedValue = "String" />  
+<certificate encodedValue = "String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -32,7 +32,7 @@ ms.locfileid: "32749279"
 |---------------|-----------------|  
 |encodedValue|憑證的 Base64 編碼。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -45,9 +45,9 @@ ms.locfileid: "32749279"
  下列程式碼會指定用來向用戶端驗證伺服器之憑證的編碼表示方式。  
   
 ```xml  
-<identity>  
-  <certificate encodedValue = " MIIBxjCCAXSgAwIBAgIQmXJgyu9tro1M98GifjtuoDAJBgUrDgMCHQUAMBYxFDASBgNVBAMTC1Jvb3QgQWdlbmN5MB4XDTA2MDUxNzIxNDQyNVoXDTM5MTIzMTIzNTk1OVowKTEQMA4GA1UEChMHQ29udG9zbzEVMBMGA1UEAxMMaWRlbnRpdHkuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBmivcb8hYbh11hqVoDuB7zmJ2y230f" />  
-</identity>  
+<identity>
+  <certificate encodedValue="MIIBxjCCAXSgAwIBAgIQmXJgyu9tro1M98GifjtuoDAJBgUrDgMCHQUAMBYxFDASBgNVBAMTC1Jvb3QgQWdlbmN5MB4XDTA2MDUxNzIxNDQyNVoXDTM5MTIzMTIzNTk1OVowKTEQMA4GA1UEChMHQ29udG9zbzEVMBMGA1UEAxMMaWRlbnRpdHkuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBmivcb8hYbh11hqVoDuB7zmJ2y230f" />
+</identity>
 ```  
   
 ## <a name="see-also"></a>另請參閱  

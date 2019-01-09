@@ -1,16 +1,16 @@
 ---
-title: 開始使用 Azure 資料表儲存體使用 F#
+title: 開始使用 Azure 資料表儲存體使用F#
 description: 使用 Azure 資料表儲存體或 Azure Cosmos DB 在雲端中儲存結構化的資料。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2d793ba8653833ff384f1824e303b08e05aba69b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43519531"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152069"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和 Azure Cosmos DB 資料表 API 使用 F# # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和 Azure Cosmos DB 資料表 API 使用F# # 
 
 Azure 資料表儲存體是一項服務，將結構化的 NoSQL 資料儲存在雲端中。 資料表儲存體是具有無結構描述設計的索引鍵/屬性存放區。 資料表儲存體沒有結構描述，因為很容易就能隨著應用程式發展需求改寫資料。 快速且符合成本效益的所有類型的應用程式資料的存取。 資料表儲存體通常是大幅降低成本比傳統 SQL 類似的磁碟區的資料。
 
@@ -30,16 +30,16 @@ Azure Cosmos DB 會提供資料表 API 應用程式，會寫入 Azure 表格儲�
 
 ## <a name="about-this-tutorial"></a>關於本教學課程
 
-本教學課程會示範如何撰寫 F# 程式碼來執行一些常見的工作，使用 Azure 資料表儲存體或 Azure Cosmos DB 資料表 API，包括建立和刪除資料表並插入、 更新、 刪除和查詢資料表資料。
+本教學課程示範如何撰寫F#如何使用 Azure 資料表儲存體或 Azure Cosmos DB 資料表 API，包括建立和刪除資料表並插入、 更新、 刪除和查詢資料表資料的一些常見工作的程式碼。
 
 ## <a name="prerequisites"></a>必要條件
 
 若要使用本指南，您必須先[建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)或是[Azure Cosmos DB 帳戶](https://azure.microsoft.com/try/cosmosdb/)。
 
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>建立 F# 指令碼，並開始 F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>建立F#指令碼，然後啟動F#互動
 
-這篇文章中的範例可以用於 F# 應用程式或 F# 指令碼。 若要建立 F# 指令碼，建立的檔案`.fsx`擴充功能，例如`tables.fsx`，F# 開發環境中。
+這篇文章中的範例可以用於在F#應用程式或F#指令碼。 若要建立F#指令碼，建立的檔案`.fsx`擴充功能，例如`tables.fsx`，請在您F#開發環境。
 
 接下來，使用[套件管理員](package-management.md)這類[Paket](https://fsprojects.github.io/Paket/)或是[NuGet](https://www.nuget.org/)安裝`WindowsAzure.Storage`封裝和參考`WindowsAzure.Storage.dll`使用指令碼中`#r`指示詞。 請勿重新`Microsoft.WindowsAzure.ConfigurationManager`才能取得 Microsoft.Azure 命名空間。
 
@@ -196,7 +196,7 @@ Azure Cosmos DB 會提供資料表 API 應用程式，會寫入 Azure 表格儲�
 
 - [Azure Cosmos DB 資料表 API 簡介](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
 - [For.NET 參考資料的儲存體用戶端程式庫](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
-- [Azure 儲存體類型提供者](http://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Azure 儲存體類型提供者](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure 儲存體團隊部落格](https://blogs.msdn.com/b/windowsazurestorage/)
 - [設定連接字串](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
 - [Getting Started with.NET 中的 Azure 資料表儲存體](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

@@ -1,15 +1,15 @@
 ---
-title: '&lt;channelPoolSettings&gt;'
+title: '&lt;ChannelPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: ad722fbc34617ef7f424d5f1c4418e1e1cb45344
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e55d3a989ae35d6e29062337cc79114a204608bb
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747232"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149094"
 ---
-# <a name="ltchannelpoolsettingsgt"></a>&lt;channelPoolSettings&gt;
+# <a name="ltchannelpoolsettingsgt"></a>&lt;ChannelPoolSettings&gt;
 指定自訂繫結的通道集區設定。  
   
  \<system.serviceModel>  
@@ -22,10 +22,9 @@ ms.locfileid: "32747232"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<channelPoolSettings  
-    idleTimeout"TimeSpan"  
-        leaseTimeout"TimeSpan"  
-    maxOutboundConnectionsPerEndpopint="Integer" />  
+<channelPoolSettings idleTimeout="TimeSpan"
+                     leaseTimeout="TimeSpan"
+                     maxOutboundConnectionsPerEndpopint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -39,7 +38,7 @@ ms.locfileid: "32747232"
 |`leaseTimeout`|<xref:System.TimeSpan>，指定已傳回到集區之通道多久之後將關閉的間隔時間。 預設為 00:10:00。|  
 |`maxOutboundChannelsPerEndpoint`|正整數，指定每個遠端端點可儲存在集區中的最大通道數目。 預設值為 10。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

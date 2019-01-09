@@ -2,12 +2,12 @@
 title: '&lt;persistenceProvider&gt;'
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-ms.openlocfilehash: 3c7fd74a84184ddbf8cc8db90141174ed84e5774
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ba02977a7df44931ae195040949e9a8eb0c141b5
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746653"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152017"
 ---
 # <a name="ltpersistenceprovidergt"></a>&lt;persistenceProvider&gt;
 指定要使用的持續性提供者實作型別，以及持續性作業所使用的逾時。  
@@ -21,8 +21,8 @@ ms.locfileid: "32746653"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<persistenceProvider persistenceOperationTimeout="TimeSpan"  
-   type="String" />  
+<persistenceProvider persistenceOperationTimeout="TimeSpan"
+                     type="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -35,7 +35,7 @@ ms.locfileid: "32746653"
 |persistenceOperationTimeout|<xref:System.TimeSpan> 值，此值會指定用於持續性作業的逾時。 預設值是"00: 00:30"。|  
 |類型|字串，指定要使用的持續性提供者處理站之型別。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

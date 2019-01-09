@@ -2,12 +2,12 @@
 title: '&lt;netTcpBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 0405d3fa8e2155d21fd7bf5b20df39ff3db86b02
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8416701ce4e787a49ee0a4bdd4829c6592cde94c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835790"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147326"
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; 的 &lt;transport&gt;
 定義設定之端點的訊息層級安全性需求的型別[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
@@ -22,21 +22,21 @@ ms.locfileid: "48835790"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<netTcpBinding>  
-    <binding>  
-        <security  
-         mode="None|Transport|Message|TransportWithMessageCredential">  
-            <transport clientCredentialType="None|Windows|Certificate"  
-             protectionLevel="None|Sign|EncryptAndSign"             sslProtocols="Tls|Tls11|Tls12">  
-                <extendedProtectionPolicy  
-                     policyEnforcement="Never|WhenSupported|Always"  
-                     protectionScenario="TransportSelected|TrustedProxy">  
-                    <customServiceNames></customServiceNames>  
-                        </extendedProtectionPolicy>  
-            </transport>  
-        </security>  
-    </binding>  
-</netTcpBinding>  
+<netTcpBinding>
+  <binding>
+    <security mode="None|Transport|Message|TransportWithMessageCredential">
+      <transport clientCredentialType="None|Windows|Certificate"
+                 protectionLevel="None|Sign|EncryptAndSign"
+                 sslProtocols="Tls|Tls11|Tls12">
+        <extendedProtectionPolicy policyEnforcement="Never|WhenSupported|Always"
+                                  protectionScenario="TransportSelected|TrustedProxy">
+          <customServiceNames>
+          </customServiceNames>
+        </extendedProtectionPolicy>
+      </transport>
+    </security>
+  </binding>
+</netTcpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -47,7 +47,7 @@ ms.locfileid: "48835790"
 |屬性|描述|  
 |---------------|-----------------|  
 |clientCredentialType|選擇項。 指定當使用傳輸安全性執行用戶端驗證時，要使用的認證類型。<br /><br /> -預設值是`Windows`。<br />-此屬性為類型<xref:System.ServiceModel.TcpClientCredentialType>。|  
-|protectionLevel|選擇項。 定義 TCP 傳輸層級的安全性。 簽章訊息可降低訊息在傳輸期間遭第三方竄改的風險。 加密會提供傳輸期間的資料層級隱私權。<br /><br /> 預設值是 `EncryptAndSign`。|  
+|protectionLevel|選擇項。 定義 TCP 傳輸層級的安全性。 簽章訊息可降低訊息在傳輸期間遭第三方竄改的風險。 加密會提供傳輸期間的資料層級隱私權。<br /><br /> 預設值為 `EncryptAndSign`。|  
 |sslProtocols|SslProtocols 列舉旗標值，可指定所支援的 SslProtocols。 預設值是 Tls&#124;Tls11&#124;Tls12。|  
 |policyEnforcement|此列舉指定了應該強制執行 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 的時間。<br /><br /> 1.Never：絕不強制執行此原則 (延伸保護已停用)。<br />2.WhenSupported：只有當用戶端支援延伸保護時，才強制執行此原則。<br />3.Always：一律強制執行此原則。 不支援延伸保護的用戶端將無法驗證。|  
   

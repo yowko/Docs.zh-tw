@@ -2,12 +2,12 @@
 title: '&lt;client&gt; 的 &lt;endpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: f9a69483ab058823fd419edc84868e801b91d2c9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 47b3599ed2d0868fcbc4a04a28936bcfe1c9c3f1
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748057"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147001"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;client&gt; 的 &lt;endpoint&gt;
 指定通道端點的合約、繫結和位址屬性，用戶端會使用該通道端點連線至伺服器上的服務端點。  
@@ -19,13 +19,15 @@ ms.locfileid: "32748057"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<endpoint address="String"  
-   behaviorConfiguration="String"  
-   binding="String"  
-   bindingConfiguration="String"  
-   contract="String"   endpointConfiguration="String"   kind="String"  
-   name="String"  
-</endpoint>  
+<endpoint address="String"
+          behaviorConfiguration="String"
+          binding="String"
+          bindingConfiguration="String"
+          contract="String"
+          endpointConfiguration="String"
+          kind="String"
+          name="String">
+</endpoint>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -44,7 +46,7 @@ ms.locfileid: "32748057"
 |kind|字串，這個字串會指定所套用之標準端點的型別。 型別必須要在 `<extensions>` 區段或 machine.config 中註冊。如果未指定任何內容，則會建立一般通道端點。|  
 |name|選擇性字串屬性。 這個屬性可唯一識別指定合約的端點。 您可以為指定的合約類型定義多個用戶端。 每個定義必須使用唯一組態名稱來區別。 如果省略這個屬性，就會使用對應端點做為與所指定合約類型相關聯的預設端點。 預設為空字串。<br /><br /> 繫結的 `name` 屬性用於透過 WSDL 進行的定義匯出。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -61,12 +63,12 @@ ms.locfileid: "32748057"
  這是通道端點組態的範例。  
   
 ```xml  
-<endpoint address="/HelloWorld/"  
-    bindingConfiguration="usingDefaults"  
-    name="MyBinding"  
-    binding="customBinding"  
-    contract="HelloWorld">  
-</endpoint>  
+<endpoint address="/HelloWorld/"
+          bindingConfiguration="usingDefaults"
+          name="MyBinding"
+          binding="customBinding"
+          contract="HelloWorld">
+</endpoint>
 ```  
   
 ## <a name="see-also"></a>另請參閱  

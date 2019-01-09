@@ -2,15 +2,15 @@
 title: '&lt;webHttp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f9d0754-d41e-44ce-a298-e51cb3096c64
-ms.openlocfilehash: 1dce767d1cb6705084f0776b8ba8a168031fcb04
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9ba54dc1744751efe4efad04f829cccce1244e0d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767488"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145666"
 ---
 # <a name="ltwebhttpgt"></a>&lt;webHttp&gt;
-此項目透過組態指定端點上的 <xref:System.ServiceModel.Description.WebHttpBehavior>。 此行為，當搭配[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)標準繫結，可讓 Windows Communication Foundation (WCF) 服務的 Web 程式設計模型。  
+此項目透過組態指定端點上的 <xref:System.ServiceModel.Description.WebHttpBehavior>。 這項行為，當搭配[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)標準繫結，可讓 Windows Communication Foundation (WCF) 服務的 Web 程式設計模型。  
   
  \<system.ServiceModel>  
 \<行為 >  
@@ -21,7 +21,7 @@ ms.locfileid: "32767488"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<webHttp />  
+<webHttp />
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -32,12 +32,12 @@ ms.locfileid: "32767488"
 |屬性|描述|  
 |---------------|-----------------|  
 |automaticFormatSelectionEnabled|當此屬性設定為 `true` 時，WCF 基礎結構會判斷要使用的最佳格式。 為了提供回溯相容性，自動格式選取預設為停用。 自動格式選取可以透過程式設計方式或透過組態啟用。|  
-|defaultBodyStyle|指定傳回訊息的預設本文樣式。 如需詳細資訊，請參閱<xref:System.ServiceModel.Web.WebMessageBodyStyle>和[WCF Web HTTP 格式化](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。|  
-|defaultOutgoingResponseFormat|指定訊息的預設傳出回應格式。 如需詳細資訊，請參閱[WCF Web HTTP 格式化](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。|  
-|faultExceptionEnabled|取得或設定旗標，指定內部伺服器錯誤 (HTTP 狀態碼：500) 發生時，是否產生 FaultException。|  
+|defaultBodyStyle|指定傳回訊息的預設本文樣式。 如需詳細資訊，請參閱 <<c0> <xref:System.ServiceModel.Web.WebMessageBodyStyle> 並[WCF Web HTTP 格式化](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。|  
+|defaultOutgoingResponseFormat|指定訊息的預設傳出回應格式。 如需詳細資訊，請參閱 < [WCF Web HTTP 格式化](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。|  
+|faultExceptionEnabled|取得或設定旗標，指定是否要在內部伺服器錯誤 (HTTP 狀態碼：500) 發生時產生 FaultException。|  
 |helpEnabled|取得或設定值，這個值會判斷是否已啟用說明頁面。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

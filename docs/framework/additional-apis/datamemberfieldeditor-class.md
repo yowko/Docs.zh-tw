@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 898da3136bef51d0f8541da3829e55598b16781c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452949"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145701"
 ---
 # <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor 類別
 
@@ -32,7 +32,7 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberFieldEditor`類別是內部，而不是直接在您的程式碼中使用它們。
+> `DataMemberFieldEditor`類別是內部，而且不適合直接在您的程式碼中使用。
 > 
 > Microsoft 不支援在生產環境應用程式中任何情況下使用這個類別。
 
@@ -42,7 +42,7 @@ internal class DataMemberFieldEditor : UITypeEditor
   
 **組件：** System.Design （在 System.Design.dll)  
   
-**.NET framework 版本：** 自 2.0 可用。  
+**.NET framework 版本：** 自 2.0 起可用。  
   
 ## <a name="see-also"></a>另請參閱
 

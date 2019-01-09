@@ -2,12 +2,12 @@
 title: '&lt;netPeerTcpBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 62ba3b27b10afe182623f3be0f6738940e194579
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9793f3ce101129b1eea8202d41104555e2b16536
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836611"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149380"
 ---
 # <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt; 的 &lt;transport&gt;
 使用時，指定傳輸層級安全性設定[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。  
@@ -22,13 +22,13 @@ ms.locfileid: "48836611"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<netPeerTcpBinding>  
-    <binding>  
-        <security>  
-            <transport credentialType="Certificate/Password" />  
-        </security>         
-    </binding>  
-</netPeerTcpBinding>  
+<netPeerTcpBinding>
+  <binding>
+    <security>
+      <transport credentialType="Certificate/Password" />
+    </security>
+  </binding>
+</netPeerTcpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  

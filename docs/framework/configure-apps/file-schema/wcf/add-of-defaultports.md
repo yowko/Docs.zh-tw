@@ -2,11 +2,12 @@
 title: '&lt;defaultPorts&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-ms.openlocfilehash: 28ddc98bd66c1f74f857448aa710d3998ddbd3dc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0932ef9afacb6278c4857dcfd6ba545595ff8f9d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147716"
 ---
 # <a name="ltaddgt-of-ltdefaultportsgt"></a>&lt;defaultPorts&gt; 的 &lt;add&gt;
 預設通訊端點，用戶端應用程式會接聽這個端點。  
@@ -22,7 +23,12 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<useRequestHeadersForMetadataAddress>   <defaultPorts>      <add port="Integer" scheme="String" />   </defaultPorts></useRequestHeadersForMetadataAddress>  
+<useRequestHeadersForMetadataAddress>
+  <defaultPorts>
+    <add port="Integer"
+         scheme="String" />
+  </defaultPorts>
+</useRequestHeadersForMetadataAddress>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -35,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 |連接埠|指定預設通訊埠編號的整數。|  
 |scheme|指定與通訊連接埠相關之通訊協定設定群組的字串。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

@@ -1,29 +1,30 @@
 ---
-title: '&lt;v&gt;'
+title: '&lt;serviceActivations&gt;'
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: c62f2bd1a34aca31ea9f9d5de17840f2967b269c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 82422716482eafe996534e3bf1a94b4c7a604a6d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145116"
 ---
-# <a name="ltserviceactivationsgt"></a>&lt;v&gt;
-組態項目，可讓您新增設定，以定義虛擬服務啟用設定對應至您的 Windows Communication Foundation (WCF) 服務類型。 如此一來，不需 .svc 檔案也能啟動裝載於 WAS/IIS 中的服務。  
+# <a name="ltserviceactivationsgt"></a>&lt;serviceActivations&gt;
+組態項目，可讓您新增定義虛擬服務啟用設定對應至您的 Windows Communication Foundation (WCF) 服務類型。 如此一來，不需 .svc 檔案也能啟動裝載於 WAS/IIS 中的服務。  
   
  \<system.ServiceModel>  
 \<serviceHostingEnvironment >  
-\<v >  
+\<serviceActivations >  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<serviceHostingEnvironment>   
-   <serviceActivations>  
-      <add factory="String"  
-           service="String"/>  
-   </serviceActivations>  
-</serviceHostingEnvironment>  
+<serviceHostingEnvironment>
+  <serviceActivations>
+    <add factory="String"
+         service="String" />
+  </serviceActivations>
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -48,15 +49,15 @@ ms.lasthandoff: 05/03/2018
  下列範例示範如何在您的 web.config 檔案中設定啟動設定。  
   
 ```xml  
-<configuration>  
-  <system.serviceModel>  
-    <serviceHostingEnvironment>  
-      <serviceActivations>  
-        <add service="GreetingService"/>  
-      </serviceActivations>  
-    </serviceHostingEnvironment>  
-  </system.serviceModel>  
-</configuration>  
+<configuration>
+  <system.serviceModel>
+    <serviceHostingEnvironment>
+      <serviceActivations>
+        <add service="GreetingService" />
+      </serviceActivations>
+    </serviceHostingEnvironment>
+  </system.serviceModel>
+</configuration>
 ```  
   
  使用這個組態時，您不需要使用 .svc 檔案也可以啟動 GreetingService。  

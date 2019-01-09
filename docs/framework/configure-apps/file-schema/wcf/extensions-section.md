@@ -2,12 +2,12 @@
 title: '&lt;extensions&gt; 區段'
 ms.date: 03/30/2017
 ms.assetid: 53a59fb6-dede-47ec-9384-b3c2e8f0c1fa
-ms.openlocfilehash: 09cabfc6c03602c3b6de343a29b5b25755f2cf0f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 92dd3c528290344d9537c51fccf7c13c74c1984a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750134"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145311"
 ---
 # <a name="ltextensionsgt-section"></a>&lt;extensions&gt; 區段
 這個組態區段包含延伸的集合，可讓使用者建立使用者定義的繫結程序、行為和其他方面的延伸。  
@@ -17,18 +17,18 @@ ms.locfileid: "32750134"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<system.serviceModel>  
-  <extensions>  
-    <bindingExtensions>  
-    </bindingExtensions>  
-    <behaviorExtensions>  
-    </behaviorExtensions>  
-    <bindingElementExtensions>  
+<system.serviceModel>
+  <extensions>
+    <bindingExtensions>
+    </bindingExtensions>
+    <behaviorExtensions>
+    </behaviorExtensions>
+    <bindingElementExtensions>
     </bindingElementExtensions>
     <endpointExtensions>
     </endpointExtensions>
-  </extensions>  
-</system.serviceModel>  
+  </extensions>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -37,7 +37,7 @@ ms.locfileid: "32750134"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  

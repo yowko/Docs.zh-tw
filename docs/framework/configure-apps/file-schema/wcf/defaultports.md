@@ -1,15 +1,15 @@
 ---
-title: '&lt;a d d&gt;'
+title: '&lt;defaultPorts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
-ms.openlocfilehash: 2f7de066a1b91e9fa22fbe0213e221c6f4bbe617
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7ddfddaa13778ce98bd93b6d8029438377fc7e94
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747170"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145181"
 ---
-# <a name="ltdefaultportsgt"></a>&lt;a d d&gt;
+# <a name="ltdefaultportsgt"></a>&lt;defaultPorts&gt;
 預設連接埠的集合，這些連接埠會接聽用戶端應用程式所接聽的預設通訊端點。  
   
 \<system.ServiceModel>  
@@ -24,9 +24,10 @@ ms.locfileid: "32747170"
 ```xml  
 <useRequestHeadersForMetadataAddress>
   <defaultPorts>
-    <add scheme="http" port="integer" />
+    <add scheme="http"
+         port="integer" />
   </defaultPorts>
-</useRequestHeadersForMetadataAddress>  
+</useRequestHeadersForMetadataAddress>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -35,7 +36,7 @@ ms.locfileid: "32747170"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  

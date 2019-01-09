@@ -1,15 +1,15 @@
 ---
-title: '&lt;discoveryClient&gt;'
+title: '&lt;DiscoveryClient&gt;'
 ms.date: 03/30/2017
 ms.assetid: a78f74c3-1152-4149-ab29-3f12d316caeb
-ms.openlocfilehash: 8c69104b9eb1097ef5dc94c9aae7352d4949668f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9aef599ebf8068a383fd093b126a6bde1670b291
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753163"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151393"
 ---
-# <a name="ltdiscoveryclientgt"></a>&lt;discoveryClient&gt;
+# <a name="ltdiscoveryclientgt"></a>&lt;DiscoveryClient&gt;
 組態項目，用於建立自訂繫結，該繫結可讓用戶端應用程式自動搜尋可探索的服務，並且在執行階段時尋找其位址。  
   
 \<system.serviceModel>  
@@ -21,17 +21,20 @@ ms.locfileid: "32753163"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<discoveryClient discoveryEndpoint="String" >
-  <findCriteria duration="TimeSpan" maxResults="Integer" scopeMatchBy="Uri">
+<discoveryClient discoveryEndpoint="String">
+  <findCriteria duration="TimeSpan"
+                maxResults="Integer"
+                scopeMatchBy="Uri">
     <contractTypeNames>
-      <add name="String" namespace="String" />
-    <contractTypeNames>
+      <add name="String"
+           namespace="String" />
+    </contractTypeNames>
     <extensions />
     <scopes>
       <add scope="URI"/>
     </scopes>
   </findCriteria>
-</discoveryClient>  
+</discoveryClient>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -43,11 +46,11 @@ ms.locfileid: "32753163"
 |---------------|-----------------|  
 |discoveryEndpoint|字串，其中包含探索端點的名稱，該探索端點可讓用戶端應用程式自動搜尋可探索的服務，並且在執行階段時尋找其位址。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Kind >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|組態項目，該項目提供一組用戶端應用程式搜尋探索服務時所用的準則。 條件可以分組為搜尋準則 （指定您要尋找的服務），並且尋找終止準則 （搜尋應時間長短）。|  
+|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|組態項目，該項目提供一組用戶端應用程式搜尋探索服務時所用的準則。 準則可以分組為搜尋準則 （指定您要尋找的服務），以及尋找終止準則 （搜尋應持續多久）。|  
   
 ### <a name="parent-elements"></a>父項目  
   

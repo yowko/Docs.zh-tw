@@ -2,12 +2,12 @@
 title: '&lt;messageLogging&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: e137070b71cf8a481eef3ea16260c135e29b4932
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cfc5f23e58c5a428ecb4541ccfc0ada5b190fb36
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750683"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150444"
 ---
 # <a name="ltmessagelogginggt"></a>&lt;messageLogging&gt;
 這個項目會定義 Windows Communication Foundation (WCF) 的訊息記錄功能設定。  
@@ -19,20 +19,20 @@ ms.locfileid: "32750683"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<system.serviceModel>  
-   <diagnostics>  
-       <messageLogging logEntireMessage="Boolean"  
-          logMalformedMessages="Boolean"  
-          logMessagesAtServiceLevel="Boolean"  
-          logMessagesAtTransportLevel="Boolean"  
-                    maxMessagesToLog="Integer"  
-          maxSizeOfMessageToLog="Integer" >  
-          <filters>  
-                            <clear />  
-          </filters>  
-       </messageLogging>  
-   </diagnostics>  
-</system.serviceModel>  
+<system.serviceModel>
+  <diagnostics>
+    <messageLogging logEntireMessage="Boolean"
+                    logMalformedMessages="Boolean"
+                    logMessagesAtServiceLevel="Boolean"
+                    logMessagesAtTransportLevel="Boolean"
+                    maxMessagesToLog="Integer"
+                    maxSizeOfMessageToLog="Integer">
+      <filters>
+        <clear />
+      </filters>
+    </messageLogging>
+  </diagnostics>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -49,7 +49,7 @@ ms.locfileid: "32750683"
 |`maxMessagesToLog`|正整數，指定要記錄的訊息數目上限。 預設值為 1000。|  
 |`maxSizeOfMessageToLog`|正整數，指定要記錄之訊息的大小上限 (以位元組為單位)。 大於限制的訊息將不會記錄。 這個設定會影響所有的追蹤層級。 預設為 262144(0x4000)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -69,51 +69,56 @@ ms.locfileid: "32750683"
  您必須建立追蹤接聽程式，以啟動訊息追蹤。 接聽程式本身可以是與 <xref:System.Diagnostics> 追蹤架構搭配使用的任何接聽程式。 下列範例示範如何建立這類接聽程式。  
   
 ```xml  
-<system.diagnostics>  
-    <sources>  
-          <source name="System.ServiceModel" switchValue="Verbose">  
-              <listeners>  
-                    <clear />  
-                    <add type="System.Diagnostics.DefaultTraceListener" name="Default"  
-                        traceOutputOptions="None" />  
-                    <add name="ServiceModel Listener" traceOutputOptions="None" />  
-               </listeners>  
-        </source>  
-            <source name="System.ServiceModel.MessageLogging">  
-                <listeners>  
-                    <clear />  
-                    <add type="System.Diagnostics.DefaultTraceListener" name="Default"  
-                        traceOutputOptions="None" />  
-                    <add name="MessageLogging Listener" traceOutputOptions="None"/>  
-               </listeners>  
-        </source>  
-    </sources>  
-     <sharedListeners>  
-            <add initializeData="C:\ItProTools\TraceLog.xml"  
-                    type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
-                    name="ServiceModel Listener"  
-                    traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />  
-            <add initializeData="C:\ItProTools\MessageLog.log"  
-                    type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
-                   name="MessageLogging Listener"  
-                   traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />  
-    </sharedListeners>  
-</system.diagnostics>  
+<system.diagnostics>
+  <sources>
+    <source name="System.ServiceModel"
+            switchValue="Verbose">
+      <listeners>
+        <clear />
+        <add type="System.Diagnostics.DefaultTraceListener"
+             name="Default"
+             traceOutputOptions="None" />
+        <add name="ServiceModel Listener"
+             traceOutputOptions="None" />
+      </listeners>
+    </source>
+    <source name="System.ServiceModel.MessageLogging">
+      <listeners>
+        <clear />
+        <add type="System.Diagnostics.DefaultTraceListener"
+             name="Default"
+             traceOutputOptions="None" />
+        <add name="MessageLogging Listener"
+             traceOutputOptions="None" />
+      </listeners>
+    </source>
+  </sources>
+  <sharedListeners>
+    <add initializeData="C:\ItProTools\TraceLog.xml"
+         type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+         name="ServiceModel Listener"
+         traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />
+    <add initializeData="C:\ItProTools\MessageLog.log"
+         type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+         name="MessageLogging Listener"
+         traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />
+  </sharedListeners>
+</system.diagnostics>
 ```  
   
 ## <a name="example"></a>範例  
   
 ```xml  
-<messageLogging logEntireMessage="true"  
-    logMalformedMessages="true"  
-    logMessagesAtServiceLevel="true"  
-    logMessagesAtTransportLevel="true"  
-    maxMessagesToLog="42"  
-    maxSizeOfMessageToLog="42">  
-     <filters>  
-         <clear />  
-     </filters>  
- </messageLogging>  
+<messageLogging logEntireMessage="true"
+                logMalformedMessages="true"
+                logMessagesAtServiceLevel="true"
+                logMessagesAtTransportLevel="true"
+                maxMessagesToLog="42"
+                maxSizeOfMessageToLog="42">
+  <filters>
+    <clear />
+  </filters>
+</messageLogging>
 ```  
   
 ## <a name="see-also"></a>另請參閱  

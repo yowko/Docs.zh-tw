@@ -2,15 +2,15 @@
 title: WCF 的 &lt;bookmarkResumptionQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: d2b3365f3793c114003bbd9b9da664448bbac243
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba8c98557a859f4bd37b9aaca80a44c393429da4
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147641"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146078"
 ---
 # <a name="ltbookmarkresumptionqueriesgt-of-wcf"></a>WCF 的 &lt;bookmarkResumptionQueries&gt;
-
+  
 代表查詢的集合，這個集合可用來追蹤工作流程執行個體中的書籤繼續。 追蹤參與者必須要具備查詢，才能訂閱書籤繼續記錄。  
   
 如需有關追蹤設定檔查詢的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。
@@ -25,7 +25,7 @@ ms.locfileid: "53147641"
   
 ## <a name="syntax"></a>語法  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -36,15 +36,15 @@ ms.locfileid: "53147641"
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
-## <a name="attributes-and-elements"></a>屬性和元素
-
+</tracking>
+```  
+  
+## <a name="attributes-and-elements"></a>屬性和元素  
+  
 下列章節說明屬性、子元素和父元素。  
   
-### <a name="attributes"></a>屬性
-
+### <a name="attributes"></a>屬性  
+  
 無。  
   
 ### <a name="child-elements"></a>子元素  
