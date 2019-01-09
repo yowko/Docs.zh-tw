@@ -5,18 +5,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
-ms.openlocfilehash: ea11fabd7974c67b1f1b3af017db1f34178bfae8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d43640cbde856ac1df8b5034f904da75de6b077c
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238594"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334778"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (泛型修飾詞) (C# 參考)
 
 若為泛型型別參數，`in` 關鍵字會指定型別參數是 Contravariant。 您可以在泛型介面及委派中使用 `in` 關鍵字。
 
-反變數可讓您使用比泛型參數指定的衍生程度更低的衍生類型。 這可隱含轉換實作 variant 介面的類別和隱含轉換委派類型。 參考型別支援在泛型型別參數中使用共變數和反變數，但實值型別則不支援。
+反變數可讓您使用比泛型參數指定的衍生程度更低的衍生類型。 這可隱含轉換實作 Contravariant 介面的類別和隱含轉換委派類型。 參考型別支援在泛型型別參數中使用共變數和反變數，但實值型別則不支援。
 
 只有當某一類型會定義方法參數的類型，且並非為方法的傳回類型時，才可在泛型介面或委派中，將類型宣告為 Contravariant。 `In`、`ref` 及 `out` 參數不得變更，這表示它們都不會是 covariant 或 contravariant。
 

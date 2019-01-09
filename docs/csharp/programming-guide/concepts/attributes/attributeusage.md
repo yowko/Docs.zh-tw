@@ -1,18 +1,18 @@
 ---
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
-ms.openlocfilehash: 37657a0611180d5b4c48b3e1778d33861afa5a74
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 081a8f6edcddd5e87d3d9750b91ff42a72b92886
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500568"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656345"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
 決定如何使用自訂屬性類別。 <xref:System.AttributeUsageAttribute> 是您套用至自訂屬性定義的屬性。 `AttributeUsage` 屬性可讓您控制：
 
-- 屬性可能套用至哪些程式元素。 除非您限制使用方式，否則屬性可能會套用至下列任一程式元素：
+- 屬性可能套用至哪些程式元素。 除非您限制其使用方式，否則屬性可能會套用至下列任一程式元素：
   - 組件
   - name
   - Field - 欄位
@@ -49,7 +49,7 @@ ms.locfileid: "43500568"
 
 在此情況下，因為 `AllowMultiple` 設為 `true`，所以可以重複套用 `MultiUseAttribute`。 套用多個屬性所顯示的兩種格式都有效。
 
-如果 <xref:System.AttributeUsageAttribute.Inherited> 為 `false`，則衍生自屬性化類別的類別不會繼承此屬性。 例如: 
+如果 <xref:System.AttributeUsageAttribute.Inherited> 為 `false`，則衍生自屬性化類別的類別不會繼承此屬性。 例如：
 
 [!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/NonInheritedAttribute.cs#1)]
 

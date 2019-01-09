@@ -1,27 +1,27 @@
 ---
-title: 如何：比較字串 - C# 手冊
+title: HOW TO：比較字串 - C# 指南
 description: 了解如何比較和排序字串值，不論大小寫、不論文化特性特定的順序
 ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 36529414d5b51e9e4ade7447ff6e5e908e5153ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5b62dd37474dc0afb186c65d1f55f7ccaf7266ec
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188569"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334830"
 ---
 # <a name="how-to-compare-strings-in-c"></a>如何：在 C\# 比較字串
 
-比較字串來回答兩個問題的其中一個：「這兩個字串相等嗎？」 或「這些字串在排序時應該以何種順序放置？」
+您可以比較字串來回答兩個問題的其中一個：「這兩個字串相等嗎？」 或「這些字串在排序時應該以何種順序放置？」
 
 這兩個問題會因為影響字串比較的因素而變複雜：
 
 - 您可以選擇序數或語言比較。
 - 您可以選擇大小寫是否重要。
-- 您可以選擇文化特性特定的比較。
-- 語言比較視文化特性與平台而異。
+- 您可以選擇文化特性 (Culture) 特定的比較。
+- 語言比較視文化特性 (Culture) 與平台而異。
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -29,27 +29,31 @@ ms.locfileid: "50188569"
 
 ## <a name="default-ordinal-comparisons"></a>預設的序數比較
 
-最常見的作業，<xref:System.String.CompareTo%2A?displayProperty=nameWithType> 和 <xref:System.String.Equals%2A?displayProperty=nameWithType> 或 <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 使用序數比較、區分大小寫的比較，並使用目前文化特性。 下列範例將顯示結果。
+測試是否相等的最常見方法為，<xref:System.String.Equals%2A?displayProperty=nameWithType> 及 <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 使用區分大小寫的序數比較。 下列範例將顯示結果。
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-序數比較在比較字串時不會考慮語言規則。 它們會逐字元地比較字串。 區分大小寫的比較會在其比較中使用大小寫。 有關這些預設比較方法最重要的一點是，因為它們會使用目前的文化特性，所以結果取決於它們執行所在電腦的地區設定和語言設定。 這些比較不適合於比較順序應該跨電腦或位置保持一致的比較情況。
+比較字串時，預設序數比較不會考慮語言規則。 其會在兩個字串中比較各 <xref:System.Char> 物件的二進位值。 如此一來，預設序數比較也會區分大小寫。 
+
+請注意，使用 <xref:System.String.Equals%2A?displayProperty=nameWithType> 及 <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 測試是否相等與使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 及 <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> 方法的字串比較不同。 當相等測試執行區分大小寫的序數比較時，比較方法會使用目前的文化特性 (Culture) 執行區分大小寫、區分文化的比較。 因為預設比較方法時常執行不同類型的比較，所以建議您皆透過呼叫明確指定要執行比較之類型的多載，以讓程式碼的意圖更加明確。
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>不區分大小寫的序數比較
 
-<xref:System.String.Equals%2A?displayProperty=nameWithType> 方法可讓您指定 <xref:System.StringComparison> 值 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>，
-指定不區分大小寫的比較。 也有靜態 <xref:System.String.Compare%2A> 方法，包含布林值的引數來指定不區分大小寫的比較。 如下列程式碼所示：
+<xref:System.String.Equals(System.String,System.StringComparison)?displayProperty=nameWithType> 方法可讓您指定 <xref:System.StringComparison> 值 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>，
+對於不區分大小寫的序數比較。 若為 <xref:System.StringComparison> 引數指定 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 的值，另外也有執行不區分大小寫序數比較的靜態 <xref:System.String.Compare(System.String,System.String,System.StringComparison)?displayProperty=nameWithType> 方法。 如下列程式碼所示：
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
+
+當執行區分大小寫的序數比較時，這些方法會使用[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的大小寫慣例。
 
 ## <a name="linguistic-comparisons"></a>語言比較
 
 字串也可以使用目前文化特性的語言規則來排序。
-這有時候稱為「字組排序次序」。 當您執行語言比較時，部分非英數字元的 Unicode 字元可能會被指派特殊的權重。 例如，連字號 "-" 可能會被指派很小的權重，以便 "co-op" 和 "coop" 在排序次序中會出現在彼此旁邊。 此外，某些 Unicode 字元可能會相當於一連串的英數字元。 下列範例使用該片語 "They dance in the street"。 具有德文的 "ss" 和 'ß'。 在語言方面 (在 Windows 中)，"ss" 等於 "en-US" 和 "de-DE" 文化特性中的德文 Essetz: 'β' 字元。
+這有時候稱為「字組排序次序」。 當您執行語言比較時，部分非英數字元的 Unicode 字元可能會被指派特殊的權重。 例如，連字號 "-" 可能會被指派很小的權重，以便 "co-op" 和 "coop" 在排序次序中會出現在彼此旁邊。 此外，某些 Unicode 字元可能會相等於 <xref:System.Char> 執行個體的順序。 下列範例使用該片語 "They dance in the street"。 以下使用德文「他們在街道上跳舞」為例，並在其中一個字串使用 "ss" (U+0073 U+0073)，而另一個則使用 'ß' (U+00DF)。 在語言方面 (在 Windows 中)，"ss" 等於 "en-US" 和 "de-DE" 文化特性中的德文 Essetz: 'β' 字元。
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
-這個範例會示範語言比較相依於作業系統的本質。 互動式視窗的主機是 Linux 主機。 語言和序數比較會產生相同的結果。 如果您在 Windows 主機上執行相同的範例，您會看到下列輸出：
+這個範例會示範語言比較之作業系統相依的本質。 互動式視窗的主機是 Linux 主機。 語言和序數比較會產生相同的結果。 如果您在 Windows 主機上執行相同的範例，您會看到下列輸出：
 
 ```console
 <coop> is less than <co-op> using invariant culture
@@ -64,8 +68,8 @@ ms.locfileid: "50188569"
 
 ## <a name="comparisons-using-specific-cultures"></a>使用特定文化特性的比較
 
-這個範例會儲存目前文化特性的 <xref:System.Globalization.CultureInfo>。
-可以在目前的執行緒物件上設定及擷取原始的文化特性。 比較是使用 <xref:System.StringComparison.CurrentCulture> 值執行，以確保特定文化特性的比較。
+此範例會儲存 en-US 及 de-DE 文化特性 (Culture) 的 <xref:System.Globalization.CultureInfo> 物件。
+比較是使用 <xref:System.Globalization.CultureInfo> 物件執行，以確保文化特性 (Culture) 特定的比較。
 
 使用的文化特性會影響語言比較。 下列範例會顯示使用 "en-US" 文化特性和 "de-DE" 文化特性比較兩個德文句子的結果：
 
@@ -118,6 +122,8 @@ ms.locfileid: "50188569"
 
 > [!NOTE]
 > 當您測試字串是否相等時，您應該使用明確指定打算執行比較型別的方法。 您的程式碼會更容易維護及閱讀。 請使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Array?displayProperty=nameWithType> 類別的方法多載，接受 <xref:System.StringComparison> 列舉參數。 您指定要執行的比較型別。 測試是否相等時，請避免使用 `==` 和 `!=` 運算子。 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 執行個體方法一律會執行區分大小寫的序數比較。 它們主要適用於依字母順序排序字串。
+
+您可以透過呼叫 <xref:System.String.Intern%2A?displayProperty=nameWithType> 方法實習字串或擷取參考到現有的已實習字串。 若要判斷字串是否已實習，請呼叫 <xref:System.String.IsInterned%2A?displayProperty=nameWithType> 方法。
 
 ## <a name="see-also"></a>另請參閱
 

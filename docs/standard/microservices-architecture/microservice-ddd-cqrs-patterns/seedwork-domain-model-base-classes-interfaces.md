@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用 seed
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 9a7ddbc8a15e4064b4446ff322148720312e7937
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3804ac13580a967bc95617acbce86a3a0c8e7292
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152217"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058538"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (網域模型的可重複使用基底類別和介面)
 
@@ -17,7 +17,7 @@ ms.locfileid: "53152217"
 
 圖 7-12 顯示了組成 Ordering 微服務中領域模型 seedwork 的類別。 它有幾個自訂的基底類別，像是 Entity、ValueObject 及 Enumeration，以及其他幾個介面。 這些介面 (IRepository 和 IUnitOfWork) 會通知基礎結構層需要實作的內容。 這些介面也會透過來自應用程式層的相依性插入使用。
 
-![SeedWork 資料夾的詳細內容，包含基底類別和介面：Entity.cs、Enumeration.cs、IAggregateRoot.cs、IRepository.cs、IUnitOfWork.cs，及 ValueObject.cs](./media/image13.PNG)
+![SeedWork 資料夾的詳細內容包含基底類別及介面：Entity.cs、Enumeration.cs、IAggregateRoot.cs、IRepository.cs、IUnitOfWork.cs 及 ValueObject.cs](./media/image13.PNG)
 
 **圖 7-12**。 領域模型 “seedwork" 基底類別與介面的範例組
 
@@ -25,7 +25,7 @@ ms.locfileid: "53152217"
 
 ## <a name="the-custom-entity-base-class"></a>自訂 Entity 基底類別
 
-下列程式碼是 Entity 基底類別的範例，您可以在其中放置可由任何領域實體透過相同方式使用的程式碼，例如實體識別碼、[等號比較運算子](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-comparison-operator)、每的實體的領域事件清單等。
+下列程式碼是 Entity 基底類別的範例，您可以在其中放置可由任何領域實體透過相同方式使用的程式碼，例如實體識別碼、[等號比較運算子](~/docs/csharp/language-reference/operators/equality-comparison-operator.md)、每的實體的領域事件清單等。
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)

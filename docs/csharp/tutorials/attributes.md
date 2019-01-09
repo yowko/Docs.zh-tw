@@ -4,12 +4,12 @@ description: 了解 C# 中屬性的運作方式。
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: db6db50ac59e804225bdc11c435fef3d53fa685e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 38d22e707dd8c9877183feb8446407c20a21b416
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390515"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029823"
 ---
 # <a name="using-attributes-in-c"></a>在 C# 中使用屬性 #
 
@@ -110,7 +110,7 @@ ms.locfileid: "43390515"
 
 為了尋找屬性並對其採取行動，通常需要[反射](../programming-guide/concepts/reflection.md)。 我在本教學課程中不會深入介紹「反射」，但基本概念是「反射」可讓您在 C# 中撰寫檢查其他程式碼的程式碼。
 
-比方說，您可以使用「反射」來取得類別的相關資訊︰ 
+比方說，您可以使用 Reflection 取得類別的相關資訊 (在程式碼的前端新增 `using System.Reflection;`)： 
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 

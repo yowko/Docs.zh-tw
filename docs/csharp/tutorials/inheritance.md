@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 15e2ddd7e103857054973d6c4ed7401d6f91af0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1938876bcf72fccd7582ede332d052fb3d759395
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502160"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656189"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
 
@@ -33,7 +33,7 @@ ms.locfileid: "43502160"
 
 1. 輸入 [dotnet run](../../core/tools/dotnet-run.md) 命令來編譯和執行範例。
 
-## <a name="background-what-is-inheritance"></a>背景︰什麼是繼承？
+## <a name="background-what-is-inheritance"></a>背景：什麼是繼承？
 
 「繼承」是物件導向程式設計的其中一個基本屬性。 它可讓您定義子類別，重複使用 (繼承)、擴充或修改父類別行為。 其成員可供繼承的類別稱為「基底類別」。 繼承基底類別成員的類別則稱為「衍生類別」。
 
@@ -98,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-繼承只適用於類別和介面。 其他型別分類 (結構、委派及列舉) 均不支援繼承。 由於這些規則，嘗試編譯如下列範例所示的程式碼會產生編譯器錯誤 CS0527：「介面清單中的類型 'ValueType' 不是介面」。 錯誤訊息指出，雖然您可以定義結構實作的介面，但不支援繼承。
+繼承只適用於類別和介面。 其他型別分類 (結構、委派及列舉) 均不支援繼承。 因為這些規則，所以嘗試編譯如以下範例中的程式碼會產生編譯器錯誤 CS0527：「介面清單中的類型 'ValueType' 不是介面。」 錯誤訊息指出，雖然您可以定義結構實作的介面，但不支援繼承。
 
 ```csharp
 using System;
@@ -143,7 +143,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 | 型別分類 | 隱含繼承自                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
 | Class - 類別         | <xref:System.Object>                                                          |
-| struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
+| struct        | <xref:System.ValueType>、 <xref:System.Object>                                 |
 | enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
 | Delegate - 委派      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
 
@@ -152,7 +152,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 在正常情況下，繼承用來表示基底類別與一或多個衍生類別之間的「是」關聯性，其中的衍生類別是基底類別的特殊版本；衍生類別是基底類別的一種型別。 例如，`Publication` 類別代表任何類型的發行物，而 `Book` 和 `Magazine` 類別代表特定發行物型別。
 
 > [!NOTE]
-> 類別或結構可以再實作另一個介面。 介面實作通常以單一繼承的因應措施或搭配結構使用繼承的方式呈現，但其目的在表達介面與其實作型別之間和繼承不同的關聯性 (「可以執行」關聯性)。 介面會定義一組其實作型別可以使用的功能子集 (例如測試相等、比較或排序物件，或支援區分文化特性剖析和格式化的能力)。
+> 類別或結構可以實作一或多個介面。 介面實作通常以單一繼承的因應措施或搭配結構使用繼承的方式呈現，但其目的在表達介面與其實作型別之間和繼承不同的關聯性 (「可以執行」關聯性)。 介面會定義一組其實作型別可以使用的功能子集 (例如測試相等、比較或排序物件，或支援區分文化特性剖析和格式化的能力)。
 
 請注意，「是」也在表達型別與其特定具現化型別之間的關聯性。 在下列範例中，`Automobile` 類別有三個唯一的唯讀屬性︰ `Make`為汽車製造商、`Model`為汽車種類以及 `Year`為其製造年份。 您的 `Automobile` 類別還有一個建構函式，會將其引數指派給屬性值，並會覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法以產生可唯一識別 `Automobile` 執行個體的字串，而不是 `Automobile` 類別。
 
@@ -249,7 +249,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 兩個建構函式
 
-  這兩個 `Book` 建構函式共用三個常見參數。 *title* 和 *publisher* 這兩個會對應至 `Publication` 建構函式的參數。 第三個為 *author*，其會儲存至私用 `authorName` 欄位。 一個建構函式包含 *isbn* 參數，其會儲存在 `ISBN` Auto 屬性中。
+  這兩個 `Book` 建構函式共用三個常見參數。 *title* 和 *publisher* 這兩個會對應至 `Publication` 建構函式的參數。 第三個為 *author*，其會儲存至公用固定 `Author` 屬性。 一個建構函式包含 *isbn* 參數，其會儲存在 `ISBN` Auto 屬性中。
 
   第一個建構函式會使用 [this](../language-reference/keywords/this.md) 關鍵字來呼叫另一個建構函式。 建構函式鏈結是定義建構函式的常見模式。 呼叫參數個數最多的建構函式時，參數個數較少的建構函式會提供預設值。
 
@@ -257,11 +257,11 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 唯讀 `ISBN` 屬性，會傳回 `Book` 物件的國際標準書號，一組有 10 或 13 位數的唯一數字。 ISBN 會作為引數提供給其中一個 `Book` 建構函式。 ISBN 會儲存在由編譯器自動產生的私用支援欄位中。
 
-- 唯讀 `Author` 屬性。 作者名稱會做為引數提供給那兩個 `Book` 建構函式，並會儲存在私用 `authorName` 欄位。
+- 唯讀 `Author` 屬性。 作者名稱會做為引數提供給那兩個 `Book` 建構函式，並會儲存在屬性中。
 
-- 兩個價格相關的唯讀屬性，`Price` 和 `Currency`。 其值將在 `SetPrice` 方法呼叫中做為引數提供。 該價格會儲存在私用欄位 `bookPrice` 中。 `Currency` 屬性是三位數的 ISO 貨幣符號 (例如 USD 代表美元)，而且會儲存在私用 `ISOCurrencySymbol` 欄位。 ISO 貨幣符號可從 <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> 屬性擷取。
+- 兩個價格相關的唯讀屬性，`Price` 和 `Currency`。 其值將在 `SetPrice` 方法呼叫中做為引數提供。 `Currency` 屬性是三位數的 ISO 貨幣符號 (例如 USD 代表美元)。 ISO 貨幣符號可從 <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> 屬性擷取。 這兩個屬性皆為外部唯讀，但兩者皆可透過 `Book` 類別中的程式碼設定。
 
-- `SetPrice` 方法會設定 `bookPrice` 和 `ISOCurrencySymbol` 欄位的值。 這些值是由 `Price` 和 `Currency` 屬性所傳回。
+- `SetPrice` 方法會設定 `Price` 和 `Currency` 屬性的值。 那些值是由相同的屬性傳回。
 
 - 覆寫 `ToString` 方法 (繼承自`Publication`)，以及 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 與 <xref:System.Object.GetHashCode%2A> 方法 (繼承自<xref:System.Object>)。
 

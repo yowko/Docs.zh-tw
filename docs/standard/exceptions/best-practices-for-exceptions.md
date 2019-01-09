@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 220e43ed6aadbcc443f4cf06310fe12e970abcf2
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149584"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030421"
 ---
 # <a name="best-practices-for-exceptions"></a>例外狀況的最佳做法
 
@@ -62,7 +62,7 @@ ms.locfileid: "53149584"
 
 ## <a name="use-the-predefined-net-exception-types"></a>使用預先定義的 .NET 例外狀況類型
 
-只有在預先定義的類型不適用時，才引進新的例外狀況類別。 例如: 
+只有在預先定義的類型不適用時，才引進新的例外狀況類別。 例如：
 
 - 如果屬性集或方法呼叫對於物件的目前狀態而言並不適當，就會擲回 <xref:System.InvalidOperationException> 例外狀況。
 
@@ -86,7 +86,7 @@ ms.locfileid: "53149584"
   
 * <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>，它會接受字串訊息和內部例外狀況。  
   
-如需範例，請參閱[如何：建立使用者定義的例外狀況](how-to-create-user-defined-exceptions.md)。
+如需範例，請參閱[如何：建立使用者定義例外狀況](how-to-create-user-defined-exceptions.md)。
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>確保從遠端執行程式碼時可以使用例外狀況資料
 

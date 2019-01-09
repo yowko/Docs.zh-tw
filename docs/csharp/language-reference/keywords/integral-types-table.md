@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 1815f057e5cf26d64e5ff151f161cc56214efc1b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7f8e4a9dabb3e24293ae7fcc724e8787dd6d4cf5
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237983"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396782"
 ---
 # <a name="integral-types-table-c-reference"></a>整數型別表 (C# 參考)
 
@@ -36,7 +36,7 @@ ms.locfileid: "53237983"
   
 如果整數常值所代表的值超出 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，就會發生編譯錯誤 [CS1021](../../misc/cs1021.md)。
 
-使用 <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 類別表示任意大、帶正負號的整數。
+使用 <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 結構表示任意大、帶正負號的整數。
   
 ## <a name="see-also"></a>另請參閱
 
@@ -48,3 +48,4 @@ ms.locfileid: "53237983"
 - [預設值表](default-values-table.md)
 - [格式化數值結果表](formatting-numeric-results-table.md)
 - [內建型別表](built-in-types-table.md)
+- [.NET 中的數值](../../../standard/numerics.md)

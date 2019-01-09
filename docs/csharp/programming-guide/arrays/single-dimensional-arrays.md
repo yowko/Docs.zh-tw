@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: e9243ff8b55970ebab6ecbe42cb3ed8ebcaecfe3
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 316f8f59b86294b1f344b31f7355017ebd992362
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238568"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334752"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>一維陣列 (C# 程式設計手冊)
 
@@ -27,7 +27,7 @@ ms.locfileid: "53238568"
   
 ## <a name="array-initialization"></a>陣列初始化
 
- 可以在宣告時初始化陣列，在此情況下，不需要陣序規範，因為它已由初始化清單中的項目數所提供。 例如:   
+ 您可以在宣告時將陣列初始化，在此情況下，因為長度規範已由初始化清單中的項目數所提供，所以不需要長度規範。 例如：  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
   

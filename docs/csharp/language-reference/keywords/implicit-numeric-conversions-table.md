@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 98774a0f7ad86e43178c6d0216e29e7b4767f3f2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ab6506e619c675ddd68237c4ddca870e9e14098f
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235250"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058460"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>隱含數值轉換表 (C# 參考)
 
@@ -23,14 +23,14 @@ ms.locfileid: "53235250"
 |----------|--------|  
 |[sbyte](sbyte.md)|`short`、`int`、`long`、`float`、`double` 或 `decimal`|  
 |[byte](byte.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double` 或 `decimal`|  
+|[char](char.md)|`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double` 或 `decimal`|  
 |[short](short.md)|`int`、`long`、`float`、`double` 或 `decimal`|  
 |[ushort](ushort.md)|`int`、`uint`、`long`、`ulong`、`float`、`double` 或 `decimal`。|  
 |[int](int.md)|`long`、`float`、`double` 或 `decimal`|  
 |[uint](uint.md)|`long`、`ulong`、`float`、`double` 或 `decimal`|  
 |[long](long.md)|`float`、 `double`或 `decimal`|  
-|[char](char.md)|`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double` 或 `decimal`|  
-|[float](float.md)|`double`|  
 |[ulong](ulong.md)|`float`、 `double`或 `decimal`|  
+|[float](float.md)|`double`|  
   
 ## <a name="remarks"></a>備註  
 
@@ -38,9 +38,11 @@ ms.locfileid: "53235250"
 
 - 從 `int`、`uint`、`long` 或 `ulong` 轉換為 `float`，以及從 `long` 或 `ulong` 轉換為 `double` 時，可能會遺失精確度，但不會遺失大小。  
   
-- `char` 類型沒有隱含轉換。  
+- `char`、`byte` 及 `sbyte` 類型沒有隱含轉換。  
+
+- 沒有來自 `char`、`double` 及 `decimal` 類型的隱含轉換。
   
-- `float` 和 `double` 類型以及 `decimal` 類型之間沒有隱含轉換。  
+- `decimal` 類型和 `float` 或 `double` 類型之間沒有隱含轉換。  
   
 - 類型 `int` 常數運算式的值 (例如整數常值所代表的值) 可以轉換成 `sbyte`、`byte`、`short`、`ushort`、`uint` 或 `ulong`，前提是其在目的地類型的範圍內：
 
