@@ -1,7 +1,7 @@
 ---
 title: '!= 運算子 - C# 參考'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 12/14/2018
 f1_keywords:
 - '!=_CSharpKeyword'
 helpviewer_keywords:
@@ -9,26 +9,32 @@ helpviewer_keywords:
 - not equals operator (!=) [C#]
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
-ms.openlocfilehash: 15f1b5930117e608644a58343fb855562f36b21c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 939b5664dba4345e62a43fb2f8d4d5379659d6aa
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237814"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610173"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="a228d-102">!= 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="a228d-102">!= Operator (C# Reference)</span></span>
-<span data-ttu-id="a228d-103">不等比較運算子 (`!=`) 會在其運算元相等時傳回 false，否則傳回 true。</span><span class="sxs-lookup"><span data-stu-id="a228d-103">The inequality operator (`!=`) returns false if its operands are equal, true otherwise.</span></span> <span data-ttu-id="a228d-104">所有類型 (包括字串和物件) 已預先定義不等比較運算子。</span><span class="sxs-lookup"><span data-stu-id="a228d-104">Inequality operators are predefined for all types, including string and object.</span></span> <span data-ttu-id="a228d-105">使用者定義型別可以多載 `!=` 運算子。</span><span class="sxs-lookup"><span data-stu-id="a228d-105">User-defined types can overload the `!=` operator.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="a228d-106">備註</span><span class="sxs-lookup"><span data-stu-id="a228d-106">Remarks</span></span>  
- <span data-ttu-id="a228d-107">對於預先定義的實值型別，不等比較運算子 (`!=`) 在其運算元的值不同時傳回 true；否則傳回 false。</span><span class="sxs-lookup"><span data-stu-id="a228d-107">For predefined value types, the inequality operator (`!=`) returns true if the values of its operands are different, false otherwise.</span></span> <span data-ttu-id="a228d-108">對於 `string` 以外的參考型別，若 `!=` 的兩個運算元參考不同物件，則會傳回 true。</span><span class="sxs-lookup"><span data-stu-id="a228d-108">For reference types other than `string`, `!=` returns true if its two operands refer to different objects.</span></span> <span data-ttu-id="a228d-109">對於 `string` 類型，`!=` 會比較字串的值。</span><span class="sxs-lookup"><span data-stu-id="a228d-109">For the `string` type, `!=` compares the values of the strings.</span></span>  
-  
- <span data-ttu-id="a228d-110">使用者定義的實值型別可以多載 `!=` 運算子 (請參閱 [operator](../../../csharp/language-reference/keywords/operator.md))。</span><span class="sxs-lookup"><span data-stu-id="a228d-110">User-defined value types can overload the `!=` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="a228d-111">使用者定義的參考型別也可以，不過 `!=` 對預先定義和使用者定義之參考型別的預設運作方式會如上所述。</span><span class="sxs-lookup"><span data-stu-id="a228d-111">So can user-defined reference types, although by default `!=` behaves as described above for both predefined and user-defined reference types.</span></span> <span data-ttu-id="a228d-112">如果多載 `!=`，也必須多載 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="a228d-112">If `!=` is overloaded, [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) must also be overloaded.</span></span> <span data-ttu-id="a228d-113">整數類資料類型上的作業通常允許用於列舉型別。</span><span class="sxs-lookup"><span data-stu-id="a228d-113">Operations on integral types are generally allowed on enumeration.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="a228d-114">範例</span><span class="sxs-lookup"><span data-stu-id="a228d-114">Example</span></span>  
- [!code-csharp[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/CSharp/not-equal-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="a228d-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="a228d-115">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="9874a-102">!= 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="9874a-102">!= Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="a228d-116">C# 參考</span><span class="sxs-lookup"><span data-stu-id="a228d-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="a228d-117">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="a228d-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="a228d-118">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="a228d-118">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="9874a-103">不等比較運算子 `!=` 會在其運算元不相等時傳回 `true`，否則傳回 `false`。</span><span class="sxs-lookup"><span data-stu-id="9874a-103">The inequality operator `!=` returns `true` if its operands are not equal, `false` otherwise.</span></span> <span data-ttu-id="9874a-104">對於[內建類型](../keywords/built-in-types-table.md)的運算元，運算式 `x != y` 會產生與運算式 `!(x == y)` 相同的結果。</span><span class="sxs-lookup"><span data-stu-id="9874a-104">For the operands of the [built-in types](../keywords/built-in-types-table.md), the expression `x != y` produces the same result as the expression `!(x == y)`.</span></span> <span data-ttu-id="9874a-105">如需詳細資訊，請參閱 [== 運算子](equality-comparison-operator.md)一文。</span><span class="sxs-lookup"><span data-stu-id="9874a-105">For more information, see the [== Operator](equality-comparison-operator.md) article.</span></span>
+
+<span data-ttu-id="9874a-106">下列範例示範 `!=` 運算子的用法：</span><span class="sxs-lookup"><span data-stu-id="9874a-106">The following example demonstrates the usage of the `!=` operator:</span></span>
+
+[!code-csharp-interactive[non-equality examples](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#NonEquality)]
+
+## <a name="operator-overloadability"></a><span data-ttu-id="9874a-107">運算子是否可多載</span><span class="sxs-lookup"><span data-stu-id="9874a-107">Operator overloadability</span></span>
+
+<span data-ttu-id="9874a-108">使用者定義型別可以[多載](../keywords/operator.md) `!=` 運算子。</span><span class="sxs-lookup"><span data-stu-id="9874a-108">User-defined types can [overload](../keywords/operator.md) the `!=` operator.</span></span> <span data-ttu-id="9874a-109">若類型多載不等比較運算子 `!=`，其必須也多載[等號比較運算子](equality-comparison-operator.md) `==`。</span><span class="sxs-lookup"><span data-stu-id="9874a-109">If a type overloads the inequality operator `!=`, it must also overload the [equality operator](equality-comparison-operator.md) `==`.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="9874a-110">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="9874a-110">C# language specification</span></span>
+
+<span data-ttu-id="9874a-111">如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[關係及類型測試運算子](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators)一節。</span><span class="sxs-lookup"><span data-stu-id="9874a-111">For more information, see the [Relational and type-testing operators](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="9874a-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9874a-112">See also</span></span>
+
+- [<span data-ttu-id="9874a-113">C# 參考</span><span class="sxs-lookup"><span data-stu-id="9874a-113">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="9874a-114">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="9874a-114">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="9874a-115">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="9874a-115">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="9874a-116">相等比較</span><span class="sxs-lookup"><span data-stu-id="9874a-116">Equality comparisons</span></span>](../../programming-guide/statements-expressions-operators/equality-comparisons.md)
