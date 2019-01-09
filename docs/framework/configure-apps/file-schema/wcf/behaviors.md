@@ -2,59 +2,59 @@
 title: '&lt;行為&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0e5da4e6-1aa5-466c-924e-f10efee57f0b
-ms.openlocfilehash: ca9cf5daa6590c14d4b5fd15c502d67af1f93b52
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4396aefd982dd29c6a9c9f2be9f2af43d00671b2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745964"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150093"
 ---
-# <a name="ltbehaviorsgt"></a><span data-ttu-id="7b615-102">&lt;行為&gt;</span><span class="sxs-lookup"><span data-stu-id="7b615-102">&lt;behaviors&gt;</span></span>
-<span data-ttu-id="7b615-103">這個項目會定義兩個名稱為 `endpointBehaviors` 和 `serviceBehaviors` 的子集合。</span><span class="sxs-lookup"><span data-stu-id="7b615-103">This element defines two child collections named `endpointBehaviors` and `serviceBehaviors`.</span></span>  <span data-ttu-id="7b615-104">每個集合會定義分別由端點和服務使用的行為項目。</span><span class="sxs-lookup"><span data-stu-id="7b615-104">Each collection defines behavior elements consumed by endpoints and services respectively.</span></span> <span data-ttu-id="7b615-105">每個行為項目都由其唯一的 `name` 屬性所識別。</span><span class="sxs-lookup"><span data-stu-id="7b615-105">Each behavior element is identified by its unique `name` attribute.</span></span> <span data-ttu-id="7b615-106">從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。</span><span class="sxs-lookup"><span data-stu-id="7b615-106">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="7b615-107">如需有關預設組態沒有名稱繫結和行為的詳細資訊，請參閱[簡化的組態](../../../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。</span><span class="sxs-lookup"><span data-stu-id="7b615-107">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
+# <a name="ltbehaviorsgt"></a><span data-ttu-id="f1832-102">&lt;行為&gt;</span><span class="sxs-lookup"><span data-stu-id="f1832-102">&lt;behaviors&gt;</span></span>
+<span data-ttu-id="f1832-103">這個項目會定義兩個名稱為 `endpointBehaviors` 和 `serviceBehaviors` 的子集合。</span><span class="sxs-lookup"><span data-stu-id="f1832-103">This element defines two child collections named `endpointBehaviors` and `serviceBehaviors`.</span></span>  <span data-ttu-id="f1832-104">每個集合會定義分別由端點和服務使用的行為項目。</span><span class="sxs-lookup"><span data-stu-id="f1832-104">Each collection defines behavior elements consumed by endpoints and services respectively.</span></span> <span data-ttu-id="f1832-105">每個行為項目都由其唯一的 `name` 屬性所識別。</span><span class="sxs-lookup"><span data-stu-id="f1832-105">Each behavior element is identified by its unique `name` attribute.</span></span> <span data-ttu-id="f1832-106">從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。</span><span class="sxs-lookup"><span data-stu-id="f1832-106">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="f1832-107">如需有關預設組態和無名稱繫結和行為的詳細資訊，請參閱 < [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md)並[Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。</span><span class="sxs-lookup"><span data-stu-id="f1832-107">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
- <span data-ttu-id="7b615-108">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="7b615-108">\<system.ServiceModel></span></span>  
+ <span data-ttu-id="f1832-108">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="f1832-108">\<system.ServiceModel></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7b615-109">語法</span><span class="sxs-lookup"><span data-stu-id="7b615-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1832-109">語法</span><span class="sxs-lookup"><span data-stu-id="f1832-109">Syntax</span></span>  
   
 ```xml  
-<behaviors>  
-   <serviceBehaviors>  
-   </serviceBehaviors>  
-   <endpointBehaviors>  
-   </endpointBehaviors>  
-</behaviors>  
+<behaviors>
+  <serviceBehaviors>
+  </serviceBehaviors>
+  <endpointBehaviors>
+  </endpointBehaviors>
+</behaviors>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7b615-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="7b615-110">Attributes and Elements</span></span>  
- <span data-ttu-id="7b615-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="7b615-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f1832-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="f1832-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="f1832-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="f1832-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7b615-112">屬性</span><span class="sxs-lookup"><span data-stu-id="7b615-112">Attributes</span></span>  
- <span data-ttu-id="7b615-113">無</span><span class="sxs-lookup"><span data-stu-id="7b615-113">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f1832-112">屬性</span><span class="sxs-lookup"><span data-stu-id="f1832-112">Attributes</span></span>  
+ <span data-ttu-id="f1832-113">無</span><span class="sxs-lookup"><span data-stu-id="f1832-113">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="7b615-114">子項目</span><span class="sxs-lookup"><span data-stu-id="7b615-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f1832-114">子元素</span><span class="sxs-lookup"><span data-stu-id="f1832-114">Child Elements</span></span>  
   
-|<span data-ttu-id="7b615-115">項目</span><span class="sxs-lookup"><span data-stu-id="7b615-115">Element</span></span>|<span data-ttu-id="7b615-116">描述</span><span class="sxs-lookup"><span data-stu-id="7b615-116">Description</span></span>|  
+|<span data-ttu-id="f1832-115">項目</span><span class="sxs-lookup"><span data-stu-id="f1832-115">Element</span></span>|<span data-ttu-id="f1832-116">描述</span><span class="sxs-lookup"><span data-stu-id="f1832-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="7b615-117">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="7b615-117">\<endpointBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)|<span data-ttu-id="7b615-118">這個組態區段表示為特定端點定義的所有行為。</span><span class="sxs-lookup"><span data-stu-id="7b615-118">This configuration section represents all the behaviors defined for a specific endpoint.</span></span>|  
-|[<span data-ttu-id="7b615-119">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="7b615-119">\<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)|<span data-ttu-id="7b615-120">這個組態區段表示為特定服務定義的所有行為。</span><span class="sxs-lookup"><span data-stu-id="7b615-120">This configuration section represents all the behaviors defined for a specific service.</span></span>|  
+|[<span data-ttu-id="f1832-117">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="f1832-117">\<endpointBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)|<span data-ttu-id="f1832-118">這個組態區段表示為特定端點定義的所有行為。</span><span class="sxs-lookup"><span data-stu-id="f1832-118">This configuration section represents all the behaviors defined for a specific endpoint.</span></span>|  
+|[<span data-ttu-id="f1832-119">\<v ></span><span class="sxs-lookup"><span data-stu-id="f1832-119">\<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)|<span data-ttu-id="f1832-120">這個組態區段表示為特定服務定義的所有行為。</span><span class="sxs-lookup"><span data-stu-id="f1832-120">This configuration section represents all the behaviors defined for a specific service.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="7b615-121">父項目</span><span class="sxs-lookup"><span data-stu-id="7b615-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f1832-121">父項目</span><span class="sxs-lookup"><span data-stu-id="f1832-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="7b615-122">項目</span><span class="sxs-lookup"><span data-stu-id="7b615-122">Element</span></span>|<span data-ttu-id="7b615-123">描述</span><span class="sxs-lookup"><span data-stu-id="7b615-123">Description</span></span>|  
+|<span data-ttu-id="f1832-122">項目</span><span class="sxs-lookup"><span data-stu-id="f1832-122">Element</span></span>|<span data-ttu-id="f1832-123">描述</span><span class="sxs-lookup"><span data-stu-id="f1832-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="7b615-124">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="7b615-124">\<system.serviceModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|<span data-ttu-id="7b615-125">所有 Windows Communication Foundation (WCF) 組態項目的根項目。</span><span class="sxs-lookup"><span data-stu-id="7b615-125">The root element of all Windows Communication Foundation (WCF) configuration elements.</span></span>|  
+|[<span data-ttu-id="f1832-124">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="f1832-124">\<system.serviceModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|<span data-ttu-id="f1832-125">所有 Windows Communication Foundation (WCF) 組態項目的根項目。</span><span class="sxs-lookup"><span data-stu-id="f1832-125">The root element of all Windows Communication Foundation (WCF) configuration elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7b615-126">備註</span><span class="sxs-lookup"><span data-stu-id="7b615-126">Remarks</span></span>  
- <span data-ttu-id="7b615-127">您可以使用 `<remove>` 項目移除集合中的特定行為。</span><span class="sxs-lookup"><span data-stu-id="7b615-127">You can use the `<remove>` element to remove a particular behavior from the collection.</span></span> <span data-ttu-id="7b615-128">若要這麼做，只需在 `name` 項目的 `<remove>` 屬性中提供要移除之行為的名稱。</span><span class="sxs-lookup"><span data-stu-id="7b615-128">To do so, simply supply the name of the behavior to remove in the `name` attribute of the `<remove>` element.</span></span>  <span data-ttu-id="7b615-129">您也可以使用 `<clear>` 項目來清除行為集合的所有內容，確保該行為集合在啟始時就是空的。</span><span class="sxs-lookup"><span data-stu-id="7b615-129">You can also use the `<clear>` element to insure that a behavior collection starts empty by clearing out all the content of the collection.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f1832-126">備註</span><span class="sxs-lookup"><span data-stu-id="f1832-126">Remarks</span></span>  
+ <span data-ttu-id="f1832-127">您可以使用 `<remove>` 項目移除集合中的特定行為。</span><span class="sxs-lookup"><span data-stu-id="f1832-127">You can use the `<remove>` element to remove a particular behavior from the collection.</span></span> <span data-ttu-id="f1832-128">若要這麼做，只需在 `name` 項目的 `<remove>` 屬性中提供要移除之行為的名稱。</span><span class="sxs-lookup"><span data-stu-id="f1832-128">To do so, simply supply the name of the behavior to remove in the `name` attribute of the `<remove>` element.</span></span>  <span data-ttu-id="f1832-129">您也可以使用 `<clear>` 項目來清除行為集合的所有內容，確保該行為集合在啟始時就是空的。</span><span class="sxs-lookup"><span data-stu-id="f1832-129">You can also use the `<clear>` element to insure that a behavior collection starts empty by clearing out all the content of the collection.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7b615-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7b615-130">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f1832-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1832-130">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.BehaviorsSection>  
  <xref:System.ServiceModel.Configuration.EndpointBehaviorElementCollection>  
  <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>  
- [<span data-ttu-id="7b615-131">使用行為來設定與擴充執行階段</span><span class="sxs-lookup"><span data-stu-id="7b615-131">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)  
- [<span data-ttu-id="7b615-132">設定用戶端行為</span><span class="sxs-lookup"><span data-stu-id="7b615-132">Configuring Client Behaviors</span></span>](../../../../../docs/framework/wcf/configuring-client-behaviors.md)  
- [<span data-ttu-id="7b615-133">指定用端執行階段行為</span><span class="sxs-lookup"><span data-stu-id="7b615-133">Specifying Client Run-Time Behavior</span></span>](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
- [<span data-ttu-id="7b615-134">指定服務執行階段行為</span><span class="sxs-lookup"><span data-stu-id="7b615-134">Specifying Service Run-Time Behavior</span></span>](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)  
- [<span data-ttu-id="7b615-135">安全性行為</span><span class="sxs-lookup"><span data-stu-id="7b615-135">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+ [<span data-ttu-id="f1832-131">使用行為來設定與擴充執行階段</span><span class="sxs-lookup"><span data-stu-id="f1832-131">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)  
+ [<span data-ttu-id="f1832-132">設定用戶端行為</span><span class="sxs-lookup"><span data-stu-id="f1832-132">Configuring Client Behaviors</span></span>](../../../../../docs/framework/wcf/configuring-client-behaviors.md)  
+ [<span data-ttu-id="f1832-133">指定用端執行階段行為</span><span class="sxs-lookup"><span data-stu-id="f1832-133">Specifying Client Run-Time Behavior</span></span>](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
+ [<span data-ttu-id="f1832-134">指定服務執行階段行為</span><span class="sxs-lookup"><span data-stu-id="f1832-134">Specifying Service Run-Time Behavior</span></span>](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)  
+ [<span data-ttu-id="f1832-135">安全性行為</span><span class="sxs-lookup"><span data-stu-id="f1832-135">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

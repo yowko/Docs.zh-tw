@@ -2,55 +2,55 @@
 title: '&lt;webHttpEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: 46691a36b62898583132b5668b06de5659926d66
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ee14ce23370675782f4c25385c1786fdce11eba0
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767085"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151965"
 ---
-# <a name="ltwebhttpendpointgt"></a><span data-ttu-id="cd886-102">&lt;webHttpEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="cd886-102">&lt;webHttpEndpoint&gt;</span></span>
-<span data-ttu-id="cd886-103">此組態元素定義具有固定的標準端點[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)繫結，會自動加入[ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)行為。</span><span class="sxs-lookup"><span data-stu-id="cd886-103">This configuration element defines a standard endpoint with a fixed [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) binding that automatically adds the [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) behavior.</span></span> <span data-ttu-id="cd886-104">撰寫 REST 服務時，請使用這個端點。</span><span class="sxs-lookup"><span data-stu-id="cd886-104">Use this endpoint when writing a REST service.</span></span>  
+# <a name="ltwebhttpendpointgt"></a><span data-ttu-id="21ec1-102">&lt;webHttpEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="21ec1-102">&lt;webHttpEndpoint&gt;</span></span>
+<span data-ttu-id="21ec1-103">此組態元素定義具有固定的標準端點[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)繫結，會自動加入[ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)行為。</span><span class="sxs-lookup"><span data-stu-id="21ec1-103">This configuration element defines a standard endpoint with a fixed [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) binding that automatically adds the [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) behavior.</span></span> <span data-ttu-id="21ec1-104">撰寫 REST 服務時，請使用這個端點。</span><span class="sxs-lookup"><span data-stu-id="21ec1-104">Use this endpoint when writing a REST service.</span></span>  
   
-<span data-ttu-id="cd886-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="cd886-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="cd886-106">\<Kind ></span><span class="sxs-lookup"><span data-stu-id="cd886-106">\<standardEndpoints></span></span>  
+<span data-ttu-id="21ec1-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="21ec1-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="21ec1-106">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="21ec1-106">\<standardEndpoints></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cd886-107">語法</span><span class="sxs-lookup"><span data-stu-id="cd886-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="21ec1-107">語法</span><span class="sxs-lookup"><span data-stu-id="21ec1-107">Syntax</span></span>  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <webHttpEndpoint>
-      <standardEndpoint automaticFormatSelectionEnabled="String" 
-                        defaultOutgoingResponseFormat="Xml/Json" 
-                        helpEnabled="Boolean" 
-                        webEndpointType="String"/>
+      <standardEndpoint automaticFormatSelectionEnabled="String"
+                        defaultOutgoingResponseFormat="Xml/Json"
+                        helpEnabled="Boolean"
+                        webEndpointType="String" />
     </webHttpEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="cd886-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="cd886-108">Attributes and Elements</span></span>  
- <span data-ttu-id="cd886-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="cd886-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="21ec1-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="21ec1-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="21ec1-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="21ec1-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="cd886-110">屬性</span><span class="sxs-lookup"><span data-stu-id="cd886-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="21ec1-110">屬性</span><span class="sxs-lookup"><span data-stu-id="21ec1-110">Attributes</span></span>  
   
-|<span data-ttu-id="cd886-111">屬性</span><span class="sxs-lookup"><span data-stu-id="cd886-111">Attribute</span></span>|<span data-ttu-id="cd886-112">描述</span><span class="sxs-lookup"><span data-stu-id="cd886-112">Description</span></span>|  
+|<span data-ttu-id="21ec1-111">屬性</span><span class="sxs-lookup"><span data-stu-id="21ec1-111">Attribute</span></span>|<span data-ttu-id="21ec1-112">描述</span><span class="sxs-lookup"><span data-stu-id="21ec1-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="cd886-113">automaticFormatSelectionEnabled</span><span class="sxs-lookup"><span data-stu-id="cd886-113">automaticFormatSelectionEnabled</span></span>|<span data-ttu-id="cd886-114">布林值，指出是否啟用自動格式化選取範圍。</span><span class="sxs-lookup"><span data-stu-id="cd886-114">A Boolean value that indicates whether automatic format selection is enabled.</span></span><br /><br /> <span data-ttu-id="cd886-115">啟用自動格式化選取範圍時，基礎結構會剖析要求訊息的 `Accept` 標頭，並且判斷最適合的回應格式。</span><span class="sxs-lookup"><span data-stu-id="cd886-115">When automatic format selection is enabled, the infrastructure parses the `Accept` header of the request message and determines the most appropriate response format.</span></span> <span data-ttu-id="cd886-116">如果 `Accept` 標頭未指定適合的回應格式，基礎結構會使用要求訊息的 `Content-Type` 或作業的預設回應格式。</span><span class="sxs-lookup"><span data-stu-id="cd886-116">If the `Accept` header does not specify a suitable response format, the infrastructure uses the `Content-Type` of the request message or the default response format of the operation.</span></span>|  
-|<span data-ttu-id="cd886-117">defaultOutgoingResponseFormat</span><span class="sxs-lookup"><span data-stu-id="cd886-117">defaultOutgoingResponseFormat</span></span>|<span data-ttu-id="cd886-118">屬性，用來指定預設的傳出回應格式。</span><span class="sxs-lookup"><span data-stu-id="cd886-118">An attribute that specifies the default outgoing response format.</span></span> <span data-ttu-id="cd886-119">此屬性的型別為 <xref:System.ServiceModel.Web.WebMessageFormat>。</span><span class="sxs-lookup"><span data-stu-id="cd886-119">This attribute is of the <xref:System.ServiceModel.Web.WebMessageFormat> type</span></span>|  
-|<span data-ttu-id="cd886-120">helpEnabled</span><span class="sxs-lookup"><span data-stu-id="cd886-120">helpEnabled</span></span>|<span data-ttu-id="cd886-121">布林值，指出是否啟用端點的 HTTP 說明頁。</span><span class="sxs-lookup"><span data-stu-id="cd886-121">A Boolean value that indicates whether the HTTP help page is enabled for the endpoint.</span></span>|  
-|<span data-ttu-id="cd886-122">webEndpointType</span><span class="sxs-lookup"><span data-stu-id="cd886-122">webEndpointType</span></span>|<span data-ttu-id="cd886-123">字串，指定端點的型別。</span><span class="sxs-lookup"><span data-stu-id="cd886-123">A string that specifies the type of the endpoint.</span></span>|  
+|<span data-ttu-id="21ec1-113">automaticFormatSelectionEnabled</span><span class="sxs-lookup"><span data-stu-id="21ec1-113">automaticFormatSelectionEnabled</span></span>|<span data-ttu-id="21ec1-114">布林值，指出是否啟用自動格式化選取範圍。</span><span class="sxs-lookup"><span data-stu-id="21ec1-114">A Boolean value that indicates whether automatic format selection is enabled.</span></span><br /><br /> <span data-ttu-id="21ec1-115">啟用自動格式化選取範圍時，基礎結構會剖析要求訊息的 `Accept` 標頭，並且判斷最適合的回應格式。</span><span class="sxs-lookup"><span data-stu-id="21ec1-115">When automatic format selection is enabled, the infrastructure parses the `Accept` header of the request message and determines the most appropriate response format.</span></span> <span data-ttu-id="21ec1-116">如果 `Accept` 標頭未指定適合的回應格式，基礎結構會使用要求訊息的 `Content-Type` 或作業的預設回應格式。</span><span class="sxs-lookup"><span data-stu-id="21ec1-116">If the `Accept` header does not specify a suitable response format, the infrastructure uses the `Content-Type` of the request message or the default response format of the operation.</span></span>|  
+|<span data-ttu-id="21ec1-117">defaultOutgoingResponseFormat</span><span class="sxs-lookup"><span data-stu-id="21ec1-117">defaultOutgoingResponseFormat</span></span>|<span data-ttu-id="21ec1-118">屬性，用來指定預設的傳出回應格式。</span><span class="sxs-lookup"><span data-stu-id="21ec1-118">An attribute that specifies the default outgoing response format.</span></span> <span data-ttu-id="21ec1-119">此屬性的型別為 <xref:System.ServiceModel.Web.WebMessageFormat>。</span><span class="sxs-lookup"><span data-stu-id="21ec1-119">This attribute is of the <xref:System.ServiceModel.Web.WebMessageFormat> type</span></span>|  
+|<span data-ttu-id="21ec1-120">helpEnabled</span><span class="sxs-lookup"><span data-stu-id="21ec1-120">helpEnabled</span></span>|<span data-ttu-id="21ec1-121">布林值，指出是否啟用端點的 HTTP 說明頁。</span><span class="sxs-lookup"><span data-stu-id="21ec1-121">A Boolean value that indicates whether the HTTP help page is enabled for the endpoint.</span></span>|  
+|<span data-ttu-id="21ec1-122">webEndpointType</span><span class="sxs-lookup"><span data-stu-id="21ec1-122">webEndpointType</span></span>|<span data-ttu-id="21ec1-123">字串，指定端點的型別。</span><span class="sxs-lookup"><span data-stu-id="21ec1-123">A string that specifies the type of the endpoint.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="cd886-124">子項目</span><span class="sxs-lookup"><span data-stu-id="cd886-124">Child Elements</span></span>  
- <span data-ttu-id="cd886-125">無。</span><span class="sxs-lookup"><span data-stu-id="cd886-125">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="21ec1-124">子元素</span><span class="sxs-lookup"><span data-stu-id="21ec1-124">Child Elements</span></span>  
+ <span data-ttu-id="21ec1-125">無。</span><span class="sxs-lookup"><span data-stu-id="21ec1-125">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="cd886-126">父項目</span><span class="sxs-lookup"><span data-stu-id="cd886-126">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="21ec1-126">父項目</span><span class="sxs-lookup"><span data-stu-id="21ec1-126">Parent Elements</span></span>  
   
-|<span data-ttu-id="cd886-127">項目</span><span class="sxs-lookup"><span data-stu-id="cd886-127">Element</span></span>|<span data-ttu-id="cd886-128">描述</span><span class="sxs-lookup"><span data-stu-id="cd886-128">Description</span></span>|  
+|<span data-ttu-id="21ec1-127">項目</span><span class="sxs-lookup"><span data-stu-id="21ec1-127">Element</span></span>|<span data-ttu-id="21ec1-128">描述</span><span class="sxs-lookup"><span data-stu-id="21ec1-128">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="cd886-129">\<Kind ></span><span class="sxs-lookup"><span data-stu-id="cd886-129">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="cd886-130">標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。</span><span class="sxs-lookup"><span data-stu-id="cd886-130">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[<span data-ttu-id="21ec1-129">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="21ec1-129">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="21ec1-130">標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。</span><span class="sxs-lookup"><span data-stu-id="21ec1-130">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="cd886-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd886-131">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="21ec1-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="21ec1-131">See Also</span></span>  
  <xref:System.ServiceModel.Description.WebHttpEndpoint>  
  <xref:System.ServiceModel.Configuration.WebHttpEndpointElement>

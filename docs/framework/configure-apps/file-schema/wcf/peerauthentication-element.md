@@ -2,114 +2,112 @@
 title: '&lt;peerAuthentication&gt; 項目'
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 4fb8cc4989313afa3ef16c90b54e0feae1ccb71d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 8937df6a2fcab305a519d566f7d666a3d94b4061
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517550"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149712"
 ---
-# <a name="ltpeerauthenticationgt-element"></a><span data-ttu-id="18eb0-102">&lt;peerAuthentication&gt; 項目</span><span class="sxs-lookup"><span data-stu-id="18eb0-102">&lt;peerAuthentication&gt; Element</span></span>
-<span data-ttu-id="18eb0-103">指定對等用戶端的驗證選項。</span><span class="sxs-lookup"><span data-stu-id="18eb0-103">Specifies authentication options for peer-to-peer clients.</span></span>  
+# <a name="ltpeerauthenticationgt-element"></a><span data-ttu-id="2e689-102">&lt;peerAuthentication&gt; 項目</span><span class="sxs-lookup"><span data-stu-id="2e689-102">&lt;peerAuthentication&gt; Element</span></span>
+<span data-ttu-id="2e689-103">指定對等用戶端的驗證選項。</span><span class="sxs-lookup"><span data-stu-id="2e689-103">Specifies authentication options for peer-to-peer clients.</span></span>  
   
- <span data-ttu-id="18eb0-104">如需端對端程式設計的詳細資訊，請參閱[對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。</span><span class="sxs-lookup"><span data-stu-id="18eb0-104">For more information about peer-to-peer programming, see [Peer-to-Peer Networking](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).</span></span>  
+ <span data-ttu-id="2e689-104">如需端對端程式設計的詳細資訊，請參閱[對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。</span><span class="sxs-lookup"><span data-stu-id="2e689-104">For more information about peer-to-peer programming, see [Peer-to-Peer Networking](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).</span></span>  
   
- <span data-ttu-id="18eb0-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="18eb0-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="18eb0-106">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="18eb0-106">\<behaviors></span></span>  
-<span data-ttu-id="18eb0-107">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="18eb0-107">\<endpointBehaviors></span></span>  
-<span data-ttu-id="18eb0-108">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="18eb0-108">\<behavior></span></span>  
-<span data-ttu-id="18eb0-109">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="18eb0-109">\<clientCredentials></span></span>  
-<span data-ttu-id="18eb0-110">\<對等電腦 ></span><span class="sxs-lookup"><span data-stu-id="18eb0-110">\<peer></span></span>  
-<span data-ttu-id="18eb0-111">\<peerAuthentication ></span><span class="sxs-lookup"><span data-stu-id="18eb0-111">\<PeerAuthentication></span></span>  
+ <span data-ttu-id="2e689-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="2e689-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="2e689-106">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="2e689-106">\<behaviors></span></span>  
+<span data-ttu-id="2e689-107">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="2e689-107">\<endpointBehaviors></span></span>  
+<span data-ttu-id="2e689-108">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="2e689-108">\<behavior></span></span>  
+<span data-ttu-id="2e689-109">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="2e689-109">\<clientCredentials></span></span>  
+<span data-ttu-id="2e689-110">\<對等電腦 ></span><span class="sxs-lookup"><span data-stu-id="2e689-110">\<peer></span></span>  
+<span data-ttu-id="2e689-111">\<peerAuthentication ></span><span class="sxs-lookup"><span data-stu-id="2e689-111">\<PeerAuthentication></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="18eb0-112">語法</span><span class="sxs-lookup"><span data-stu-id="18eb0-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2e689-112">語法</span><span class="sxs-lookup"><span data-stu-id="2e689-112">Syntax</span></span>  
   
 ```xml  
-<peerAuthentication  
-customCertificateValidatorType = "namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"  
-certificateValidationMode = "ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"  
-revocationMode="NoCheck/Online/Offline"  
-trustedStoreLocation="CurrentUser/LocalMachine"   
-/>  
+<peerAuthentication customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"
+                    certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"
+                    revocationMode="NoCheck/Online/Offline"
+                    trustedStoreLocation="CurrentUser/LocalMachine" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="18eb0-113">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="18eb0-113">Attributes and Elements</span></span>  
- <span data-ttu-id="18eb0-114">下列各節說明屬性、子元素和父元素</span><span class="sxs-lookup"><span data-stu-id="18eb0-114">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2e689-113">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="2e689-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="2e689-114">下列各節說明屬性、子元素和父元素</span><span class="sxs-lookup"><span data-stu-id="2e689-114">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="18eb0-115">屬性</span><span class="sxs-lookup"><span data-stu-id="18eb0-115">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2e689-115">屬性</span><span class="sxs-lookup"><span data-stu-id="2e689-115">Attributes</span></span>  
   
-|<span data-ttu-id="18eb0-116">屬性</span><span class="sxs-lookup"><span data-stu-id="18eb0-116">Attribute</span></span>|<span data-ttu-id="18eb0-117">描述</span><span class="sxs-lookup"><span data-stu-id="18eb0-117">Description</span></span>|  
+|<span data-ttu-id="2e689-116">屬性</span><span class="sxs-lookup"><span data-stu-id="2e689-116">Attribute</span></span>|<span data-ttu-id="2e689-117">描述</span><span class="sxs-lookup"><span data-stu-id="2e689-117">Description</span></span>|  
 |---------------|-----------------|  
-|`customCertificateValidatorType`|<span data-ttu-id="18eb0-118">選擇性字串。</span><span class="sxs-lookup"><span data-stu-id="18eb0-118">Optional string.</span></span> <span data-ttu-id="18eb0-119">用來驗證自訂型別的型別和組件。</span><span class="sxs-lookup"><span data-stu-id="18eb0-119">A type and assembly used to validate a custom type.</span></span> <span data-ttu-id="18eb0-120">當 `certificateValidationMode` 設定為 `Custom` 時，必須設定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="18eb0-120">This attribute must be set when `certificateValidationMode` is set to `Custom`.</span></span>|  
-|`certifcateValidationMode`|<span data-ttu-id="18eb0-121">選擇性列舉。</span><span class="sxs-lookup"><span data-stu-id="18eb0-121">Optional enumeration.</span></span> <span data-ttu-id="18eb0-122">指定用來驗證認證之三個模式的其中一個。</span><span class="sxs-lookup"><span data-stu-id="18eb0-122">Specifies one of three modes used to validate credentials.</span></span> <span data-ttu-id="18eb0-123">如果設定為 `Custom`，也必須提供 `customCertificateValidator`。</span><span class="sxs-lookup"><span data-stu-id="18eb0-123">If set to `Custom`, then a `customCertificateValidator` must also be supplied.</span></span> <span data-ttu-id="18eb0-124">預設為 `ChainTrust`。</span><span class="sxs-lookup"><span data-stu-id="18eb0-124">The default is `ChainTrust`.</span></span>|  
-|`revocationMode`|<span data-ttu-id="18eb0-125">選擇性列舉。</span><span class="sxs-lookup"><span data-stu-id="18eb0-125">Optional enumeration.</span></span> <span data-ttu-id="18eb0-126">用於檢查撤銷憑證清單 (CRL) 的模式之一。</span><span class="sxs-lookup"><span data-stu-id="18eb0-126">One of the modes used to check for a revoked certificate lists (CRL).</span></span> <span data-ttu-id="18eb0-127">預設為 `Online`。</span><span class="sxs-lookup"><span data-stu-id="18eb0-127">The default is `Online`.</span></span>|  
-|`trustedStoreLocation`|<span data-ttu-id="18eb0-128">選擇性列舉。</span><span class="sxs-lookup"><span data-stu-id="18eb0-128">Optional enumeration.</span></span> <span data-ttu-id="18eb0-129">兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。</span><span class="sxs-lookup"><span data-stu-id="18eb0-129">One of the two system store locations: `LocalMachine` or `CurrentUser`.</span></span> <span data-ttu-id="18eb0-130">當與用戶端交涉服務憑證時，會使用這個值。</span><span class="sxs-lookup"><span data-stu-id="18eb0-130">This value is used when a service certificate is negotiated to the client.</span></span> <span data-ttu-id="18eb0-131">針對執行驗證**受信任的人**將儲存在指定的存放區位置。</span><span class="sxs-lookup"><span data-stu-id="18eb0-131">Validation is performed against the **Trusted People** store in the specified store location.</span></span> <span data-ttu-id="18eb0-132">預設為 `CurrentUser`。</span><span class="sxs-lookup"><span data-stu-id="18eb0-132">The default is `CurrentUser`.</span></span>|  
+|`customCertificateValidatorType`|<span data-ttu-id="2e689-118">選擇性字串。</span><span class="sxs-lookup"><span data-stu-id="2e689-118">Optional string.</span></span> <span data-ttu-id="2e689-119">用來驗證自訂型別的型別和組件。</span><span class="sxs-lookup"><span data-stu-id="2e689-119">A type and assembly used to validate a custom type.</span></span> <span data-ttu-id="2e689-120">當 `certificateValidationMode` 設定為 `Custom` 時，必須設定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="2e689-120">This attribute must be set when `certificateValidationMode` is set to `Custom`.</span></span>|  
+|`certifcateValidationMode`|<span data-ttu-id="2e689-121">選擇性列舉。</span><span class="sxs-lookup"><span data-stu-id="2e689-121">Optional enumeration.</span></span> <span data-ttu-id="2e689-122">指定用來驗證認證之三個模式的其中一個。</span><span class="sxs-lookup"><span data-stu-id="2e689-122">Specifies one of three modes used to validate credentials.</span></span> <span data-ttu-id="2e689-123">如果設定為 `Custom`，也必須提供 `customCertificateValidator`。</span><span class="sxs-lookup"><span data-stu-id="2e689-123">If set to `Custom`, then a `customCertificateValidator` must also be supplied.</span></span> <span data-ttu-id="2e689-124">預設為 `ChainTrust`。</span><span class="sxs-lookup"><span data-stu-id="2e689-124">The default is `ChainTrust`.</span></span>|  
+|`revocationMode`|<span data-ttu-id="2e689-125">選擇性列舉。</span><span class="sxs-lookup"><span data-stu-id="2e689-125">Optional enumeration.</span></span> <span data-ttu-id="2e689-126">用於檢查撤銷憑證清單 (CRL) 的模式之一。</span><span class="sxs-lookup"><span data-stu-id="2e689-126">One of the modes used to check for a revoked certificate lists (CRL).</span></span> <span data-ttu-id="2e689-127">預設為 `Online`。</span><span class="sxs-lookup"><span data-stu-id="2e689-127">The default is `Online`.</span></span>|  
+|`trustedStoreLocation`|<span data-ttu-id="2e689-128">選擇性列舉。</span><span class="sxs-lookup"><span data-stu-id="2e689-128">Optional enumeration.</span></span> <span data-ttu-id="2e689-129">兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。</span><span class="sxs-lookup"><span data-stu-id="2e689-129">One of the two system store locations: `LocalMachine` or `CurrentUser`.</span></span> <span data-ttu-id="2e689-130">當與用戶端交涉服務憑證時，會使用這個值。</span><span class="sxs-lookup"><span data-stu-id="2e689-130">This value is used when a service certificate is negotiated to the client.</span></span> <span data-ttu-id="2e689-131">針對執行驗證**受信任的人**將儲存在指定的存放區位置。</span><span class="sxs-lookup"><span data-stu-id="2e689-131">Validation is performed against the **Trusted People** store in the specified store location.</span></span> <span data-ttu-id="2e689-132">預設為 `CurrentUser`。</span><span class="sxs-lookup"><span data-stu-id="2e689-132">The default is `CurrentUser`.</span></span>|  
   
-## <a name="customcertificatevalidatortype-attribute"></a><span data-ttu-id="18eb0-133">customCertificateValidatorType 屬性</span><span class="sxs-lookup"><span data-stu-id="18eb0-133">customCertificateValidatorType Attribute</span></span>  
+## <a name="customcertificatevalidatortype-attribute"></a><span data-ttu-id="2e689-133">customCertificateValidatorType 屬性</span><span class="sxs-lookup"><span data-stu-id="2e689-133">customCertificateValidatorType Attribute</span></span>  
   
-|<span data-ttu-id="18eb0-134">值</span><span class="sxs-lookup"><span data-stu-id="18eb0-134">Value</span></span>|<span data-ttu-id="18eb0-135">描述</span><span class="sxs-lookup"><span data-stu-id="18eb0-135">Description</span></span>|  
+|<span data-ttu-id="2e689-134">值</span><span class="sxs-lookup"><span data-stu-id="2e689-134">Value</span></span>|<span data-ttu-id="2e689-135">描述</span><span class="sxs-lookup"><span data-stu-id="2e689-135">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="18eb0-136">String</span><span class="sxs-lookup"><span data-stu-id="18eb0-136">String</span></span>|<span data-ttu-id="18eb0-137">指定型別名稱和組件以及用來尋找此型別的其他資料。</span><span class="sxs-lookup"><span data-stu-id="18eb0-137">Specifies the type name and assembly and other data used to find the type.</span></span> <span data-ttu-id="18eb0-138">至少需要命名空間和型別名稱。</span><span class="sxs-lookup"><span data-stu-id="18eb0-138">At minimum, a namespace and type name are required.</span></span> <span data-ttu-id="18eb0-139">選擇性的資訊包括：組件名稱、版本號碼、文化特性和公開金鑰權杖。</span><span class="sxs-lookup"><span data-stu-id="18eb0-139">Optional information includes: assembly name, version number, culture, and public key token.</span></span>|  
+|<span data-ttu-id="2e689-136">String</span><span class="sxs-lookup"><span data-stu-id="2e689-136">String</span></span>|<span data-ttu-id="2e689-137">指定型別名稱和組件以及用來尋找此型別的其他資料。</span><span class="sxs-lookup"><span data-stu-id="2e689-137">Specifies the type name and assembly and other data used to find the type.</span></span> <span data-ttu-id="2e689-138">至少需要命名空間和型別名稱。</span><span class="sxs-lookup"><span data-stu-id="2e689-138">At minimum, a namespace and type name are required.</span></span> <span data-ttu-id="2e689-139">選擇性的資訊包括：組件名稱、版本號碼、文化特性和公開金鑰權杖。</span><span class="sxs-lookup"><span data-stu-id="2e689-139">Optional information includes: assembly name, version number, culture, and public key token.</span></span>|  
   
-## <a name="certificatevalidationmode-attribute"></a><span data-ttu-id="18eb0-140">certificateValidationMode 屬性</span><span class="sxs-lookup"><span data-stu-id="18eb0-140">certificateValidationMode Attribute</span></span>  
+## <a name="certificatevalidationmode-attribute"></a><span data-ttu-id="2e689-140">certificateValidationMode 屬性</span><span class="sxs-lookup"><span data-stu-id="2e689-140">certificateValidationMode Attribute</span></span>  
   
-|<span data-ttu-id="18eb0-141">值</span><span class="sxs-lookup"><span data-stu-id="18eb0-141">Value</span></span>|<span data-ttu-id="18eb0-142">描述</span><span class="sxs-lookup"><span data-stu-id="18eb0-142">Description</span></span>|  
+|<span data-ttu-id="2e689-141">值</span><span class="sxs-lookup"><span data-stu-id="2e689-141">Value</span></span>|<span data-ttu-id="2e689-142">描述</span><span class="sxs-lookup"><span data-stu-id="2e689-142">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="18eb0-143">列舉</span><span class="sxs-lookup"><span data-stu-id="18eb0-143">Enumeration</span></span>|<span data-ttu-id="18eb0-144">下列其中一個值：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom`。</span><span class="sxs-lookup"><span data-stu-id="18eb0-144">One of the following values: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`.</span></span> <span data-ttu-id="18eb0-145">預設為 `ChainTrust`。</span><span class="sxs-lookup"><span data-stu-id="18eb0-145">The default is `ChainTrust`.</span></span><br /><br /> <span data-ttu-id="18eb0-146">如需詳細資訊，請參閱 < [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。</span><span class="sxs-lookup"><span data-stu-id="18eb0-146">For more information, see [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>|  
+|<span data-ttu-id="2e689-143">列舉</span><span class="sxs-lookup"><span data-stu-id="2e689-143">Enumeration</span></span>|<span data-ttu-id="2e689-144">下列其中一個值：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom`。</span><span class="sxs-lookup"><span data-stu-id="2e689-144">One of the following values: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`.</span></span> <span data-ttu-id="2e689-145">預設為 `ChainTrust`。</span><span class="sxs-lookup"><span data-stu-id="2e689-145">The default is `ChainTrust`.</span></span><br /><br /> <span data-ttu-id="2e689-146">如需詳細資訊，請參閱 < [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。</span><span class="sxs-lookup"><span data-stu-id="2e689-146">For more information, see [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>|  
   
-## <a name="revocationmode-attribute"></a><span data-ttu-id="18eb0-147">revocationMode 屬性</span><span class="sxs-lookup"><span data-stu-id="18eb0-147">revocationMode Attribute</span></span>  
+## <a name="revocationmode-attribute"></a><span data-ttu-id="2e689-147">revocationMode 屬性</span><span class="sxs-lookup"><span data-stu-id="2e689-147">revocationMode Attribute</span></span>  
   
-|<span data-ttu-id="18eb0-148">值</span><span class="sxs-lookup"><span data-stu-id="18eb0-148">Value</span></span>|<span data-ttu-id="18eb0-149">描述</span><span class="sxs-lookup"><span data-stu-id="18eb0-149">Description</span></span>|  
+|<span data-ttu-id="2e689-148">值</span><span class="sxs-lookup"><span data-stu-id="2e689-148">Value</span></span>|<span data-ttu-id="2e689-149">描述</span><span class="sxs-lookup"><span data-stu-id="2e689-149">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="18eb0-150">列舉</span><span class="sxs-lookup"><span data-stu-id="18eb0-150">Enumeration</span></span>|<span data-ttu-id="18eb0-151">下列其中一個值：`NoCheck`、`Online`、`Offline`。</span><span class="sxs-lookup"><span data-stu-id="18eb0-151">One of the following values: `NoCheck`, `Online`, `Offline`.</span></span> <span data-ttu-id="18eb0-152">預設為 `Online`。</span><span class="sxs-lookup"><span data-stu-id="18eb0-152">The default is `Online`.</span></span><br /><br /> <span data-ttu-id="18eb0-153">如需詳細資訊，請參閱 < [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。</span><span class="sxs-lookup"><span data-stu-id="18eb0-153">For more information, see [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>|  
+|<span data-ttu-id="2e689-150">列舉</span><span class="sxs-lookup"><span data-stu-id="2e689-150">Enumeration</span></span>|<span data-ttu-id="2e689-151">下列其中一個值：`NoCheck`、`Online`、`Offline`。</span><span class="sxs-lookup"><span data-stu-id="2e689-151">One of the following values: `NoCheck`, `Online`, `Offline`.</span></span> <span data-ttu-id="2e689-152">預設為 `Online`。</span><span class="sxs-lookup"><span data-stu-id="2e689-152">The default is `Online`.</span></span><br /><br /> <span data-ttu-id="2e689-153">如需詳細資訊，請參閱 < [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。</span><span class="sxs-lookup"><span data-stu-id="2e689-153">For more information, see [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>|  
   
-## <a name="trustedstorelocation-attribute"></a><span data-ttu-id="18eb0-154">trustedStoreLocation 屬性</span><span class="sxs-lookup"><span data-stu-id="18eb0-154">trustedStoreLocation Attribute</span></span>  
+## <a name="trustedstorelocation-attribute"></a><span data-ttu-id="2e689-154">trustedStoreLocation 屬性</span><span class="sxs-lookup"><span data-stu-id="2e689-154">trustedStoreLocation Attribute</span></span>  
   
-|<span data-ttu-id="18eb0-155">值</span><span class="sxs-lookup"><span data-stu-id="18eb0-155">Value</span></span>|<span data-ttu-id="18eb0-156">描述</span><span class="sxs-lookup"><span data-stu-id="18eb0-156">Description</span></span>|  
+|<span data-ttu-id="2e689-155">值</span><span class="sxs-lookup"><span data-stu-id="2e689-155">Value</span></span>|<span data-ttu-id="2e689-156">描述</span><span class="sxs-lookup"><span data-stu-id="2e689-156">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="18eb0-157">列舉</span><span class="sxs-lookup"><span data-stu-id="18eb0-157">Enumeration</span></span>|<span data-ttu-id="18eb0-158">下列其中一個值：`LocalMachine` 或 `CurrentUser`。</span><span class="sxs-lookup"><span data-stu-id="18eb0-158">One of the following values: `LocalMachine` or `CurrentUser`.</span></span> <span data-ttu-id="18eb0-159">預設為 `CurrentUser`。</span><span class="sxs-lookup"><span data-stu-id="18eb0-159">The default is `CurrentUser`.</span></span> <span data-ttu-id="18eb0-160">如果用戶端應用程式是在系統帳戶下執行，則憑證通常位於 `LocalMachine` 之下。</span><span class="sxs-lookup"><span data-stu-id="18eb0-160">If the client application is running under a system account then the certificate is typically under `LocalMachine`.</span></span> <span data-ttu-id="18eb0-161">如果用戶端應用程式是在使用者帳戶下執行，則憑證通常位於 `CurrentUser`。</span><span class="sxs-lookup"><span data-stu-id="18eb0-161">If the client application is running under a user account then the certificate is typically in `CurrentUser`.</span></span>|  
+|<span data-ttu-id="2e689-157">列舉</span><span class="sxs-lookup"><span data-stu-id="2e689-157">Enumeration</span></span>|<span data-ttu-id="2e689-158">下列其中一個值：`LocalMachine` 或 `CurrentUser`。</span><span class="sxs-lookup"><span data-stu-id="2e689-158">One of the following values: `LocalMachine` or `CurrentUser`.</span></span> <span data-ttu-id="2e689-159">預設為 `CurrentUser`。</span><span class="sxs-lookup"><span data-stu-id="2e689-159">The default is `CurrentUser`.</span></span> <span data-ttu-id="2e689-160">如果用戶端應用程式是在系統帳戶下執行，則憑證通常位於 `LocalMachine` 之下。</span><span class="sxs-lookup"><span data-stu-id="2e689-160">If the client application is running under a system account then the certificate is typically under `LocalMachine`.</span></span> <span data-ttu-id="2e689-161">如果用戶端應用程式是在使用者帳戶下執行，則憑證通常位於 `CurrentUser`。</span><span class="sxs-lookup"><span data-stu-id="2e689-161">If the client application is running under a user account then the certificate is typically in `CurrentUser`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="18eb0-162">子元素</span><span class="sxs-lookup"><span data-stu-id="18eb0-162">Child Elements</span></span>  
- <span data-ttu-id="18eb0-163">無。</span><span class="sxs-lookup"><span data-stu-id="18eb0-163">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2e689-162">子元素</span><span class="sxs-lookup"><span data-stu-id="2e689-162">Child Elements</span></span>  
+ <span data-ttu-id="2e689-163">無。</span><span class="sxs-lookup"><span data-stu-id="2e689-163">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="18eb0-164">父項目</span><span class="sxs-lookup"><span data-stu-id="18eb0-164">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2e689-164">父項目</span><span class="sxs-lookup"><span data-stu-id="2e689-164">Parent Elements</span></span>  
   
-|<span data-ttu-id="18eb0-165">項目</span><span class="sxs-lookup"><span data-stu-id="18eb0-165">Element</span></span>|<span data-ttu-id="18eb0-166">描述</span><span class="sxs-lookup"><span data-stu-id="18eb0-166">Description</span></span>|  
+|<span data-ttu-id="2e689-165">項目</span><span class="sxs-lookup"><span data-stu-id="2e689-165">Element</span></span>|<span data-ttu-id="2e689-166">描述</span><span class="sxs-lookup"><span data-stu-id="2e689-166">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="18eb0-167">\<peer></span><span class="sxs-lookup"><span data-stu-id="18eb0-167">\<peer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|<span data-ttu-id="18eb0-168">指定向對等服務驗證用戶端時所使用的認證。</span><span class="sxs-lookup"><span data-stu-id="18eb0-168">Specifies a credential used for authenticating the client to a peer service.</span></span>|  
+|[<span data-ttu-id="2e689-167">\<peer></span><span class="sxs-lookup"><span data-stu-id="2e689-167">\<peer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|<span data-ttu-id="2e689-168">指定向對等服務驗證用戶端時所使用的認證。</span><span class="sxs-lookup"><span data-stu-id="2e689-168">Specifies a credential used for authenticating the client to a peer service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="18eb0-169">備註</span><span class="sxs-lookup"><span data-stu-id="18eb0-169">Remarks</span></span>  
- <span data-ttu-id="18eb0-170">`<authentication>` 項目對應至 <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> 類別。</span><span class="sxs-lookup"><span data-stu-id="18eb0-170">The `<authentication>` element corresponds to the <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> class.</span></span> <span data-ttu-id="18eb0-171">這個項目會指定驗證程式，當網狀結構中進行鄰居對鄰居驗證時，就會叫用此驗證程式。</span><span class="sxs-lookup"><span data-stu-id="18eb0-171">This element specifies a validator, which is invoked during neighbor-to-neighbor authentication in the mesh.</span></span> <span data-ttu-id="18eb0-172">當新對等嘗試建立鄰居連線時，它會將自己的認證傳遞至對應的對等。</span><span class="sxs-lookup"><span data-stu-id="18eb0-172">When a new peer tries to establish a neighbor connection, it passes its own credential to the responding peer.</span></span> <span data-ttu-id="18eb0-173">會叫用回應程式的驗證器來驗證遠端方的認證。</span><span class="sxs-lookup"><span data-stu-id="18eb0-173">The validator of the responder is invoked to verify the credential of the remote party.</span></span> <span data-ttu-id="18eb0-174">每次在網狀結構中建立對等連線時，對等的兩方會互相驗證，亦即會叫用兩端的驗證程式。</span><span class="sxs-lookup"><span data-stu-id="18eb0-174">Whenever a peer connection is established in the mesh, both peers are mutually authenticated, meaning validators on both ends are invoked.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2e689-169">備註</span><span class="sxs-lookup"><span data-stu-id="2e689-169">Remarks</span></span>  
+ <span data-ttu-id="2e689-170">`<authentication>` 項目對應至 <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> 類別。</span><span class="sxs-lookup"><span data-stu-id="2e689-170">The `<authentication>` element corresponds to the <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> class.</span></span> <span data-ttu-id="2e689-171">這個項目會指定驗證程式，當網狀結構中進行鄰居對鄰居驗證時，就會叫用此驗證程式。</span><span class="sxs-lookup"><span data-stu-id="2e689-171">This element specifies a validator, which is invoked during neighbor-to-neighbor authentication in the mesh.</span></span> <span data-ttu-id="2e689-172">當新對等嘗試建立鄰居連線時，它會將自己的認證傳遞至對應的對等。</span><span class="sxs-lookup"><span data-stu-id="2e689-172">When a new peer tries to establish a neighbor connection, it passes its own credential to the responding peer.</span></span> <span data-ttu-id="2e689-173">會叫用回應程式的驗證器來驗證遠端方的認證。</span><span class="sxs-lookup"><span data-stu-id="2e689-173">The validator of the responder is invoked to verify the credential of the remote party.</span></span> <span data-ttu-id="2e689-174">每次在網狀結構中建立對等連線時，對等的兩方會互相驗證，亦即會叫用兩端的驗證程式。</span><span class="sxs-lookup"><span data-stu-id="2e689-174">Whenever a peer connection is established in the mesh, both peers are mutually authenticated, meaning validators on both ends are invoked.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="18eb0-175">範例</span><span class="sxs-lookup"><span data-stu-id="18eb0-175">Example</span></span>  
- <span data-ttu-id="18eb0-176">下列程式碼會將憑證驗證模式設定為 `PeerOrChainTrust`。</span><span class="sxs-lookup"><span data-stu-id="18eb0-176">The following code sets the certificate validation mode to `PeerOrChainTrust`.</span></span>  
+## <a name="example"></a><span data-ttu-id="2e689-175">範例</span><span class="sxs-lookup"><span data-stu-id="2e689-175">Example</span></span>  
+ <span data-ttu-id="2e689-176">下列程式碼會將憑證驗證模式設定為 `PeerOrChainTrust`。</span><span class="sxs-lookup"><span data-stu-id="2e689-176">The following code sets the certificate validation mode to `PeerOrChainTrust`.</span></span>  
   
 ```xml  
-<behaviors>  
- <endpointBehaviors>  
-  <behavior name="MyEndpointBehavior">  
-   <clientCredentials>  
-    <peer>  
-     <certificate findValue="www.contoso.com"   
-                   storeLocation="LocalMachine"  
-                   x509FindType="FindByIssuerName" />  
-     <peerAuthentication   
-          certificateValidationMode="PeerOrChainTrust" />  
-     <messageSenderAuthentication certificateValidationMode="None" />  
-    </peer>  
-   </clientCredentials>  
-  </behavior>  
-</endpointBehaviors>  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="MyEndpointBehavior">
+      <clientCredentials>
+        <peer>
+          <certificate findValue="www.contoso.com"
+                       storeLocation="LocalMachine"
+                       x509FindType="FindByIssuerName" />
+          <peerAuthentication certificateValidationMode="PeerOrChainTrust" />
+          <messageSenderAuthentication certificateValidationMode="None" />
+        </peer>
+      </clientCredentials>
+    </behavior>
+  </endpointBehaviors>
+</behaviors>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="18eb0-177">另請參閱</span><span class="sxs-lookup"><span data-stu-id="18eb0-177">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2e689-177">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2e689-177">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
  <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>  
  <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>  
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
- [<span data-ttu-id="18eb0-178">使用憑證</span><span class="sxs-lookup"><span data-stu-id="18eb0-178">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [<span data-ttu-id="18eb0-179">對等網路</span><span class="sxs-lookup"><span data-stu-id="18eb0-179">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [<span data-ttu-id="18eb0-180">對等通道訊息驗證</span><span class="sxs-lookup"><span data-stu-id="18eb0-180">Peer Channel Message Authentication</span></span>](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [<span data-ttu-id="18eb0-181">對等通道自訂驗證</span><span class="sxs-lookup"><span data-stu-id="18eb0-181">Peer Channel Custom Authentication</span></span>](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [<span data-ttu-id="18eb0-182">保護對等通道應用程式的安全</span><span class="sxs-lookup"><span data-stu-id="18eb0-182">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+ [<span data-ttu-id="2e689-178">使用憑證</span><span class="sxs-lookup"><span data-stu-id="2e689-178">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="2e689-179">對等網路</span><span class="sxs-lookup"><span data-stu-id="2e689-179">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [<span data-ttu-id="2e689-180">對等通道訊息驗證</span><span class="sxs-lookup"><span data-stu-id="2e689-180">Peer Channel Message Authentication</span></span>](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [<span data-ttu-id="2e689-181">對等通道自訂驗證</span><span class="sxs-lookup"><span data-stu-id="2e689-181">Peer Channel Custom Authentication</span></span>](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [<span data-ttu-id="2e689-182">保護對等通道應用程式的安全</span><span class="sxs-lookup"><span data-stu-id="2e689-182">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
