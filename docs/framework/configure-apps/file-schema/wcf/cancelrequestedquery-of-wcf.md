@@ -2,12 +2,12 @@
 title: WCF 的 &lt;cancelRequestedQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: 3943d604b586eec37a1d153f10ac049fc9bd5747
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 6b41721dcc0c489377c59bfccdd0b1a617f551b0
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347563"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149068"
 ---
 # <a name="ltcancelrequestedquerygt-of-wcf"></a>WCF 的 &lt;cancelRequestedQuery&gt;
 
@@ -25,21 +25,21 @@ ms.locfileid: "49347563"
   
 ## <a name="syntax"></a>語法  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
       <workflow>
         <cancelRequestedQueries>
           <cancelRequestedQuery activityName="String"
-                              childActivityName="String"/>
+                                childActivityName="String" />
         </cancelRequestedQueries>
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
+</tracking>
+```  
+  
 ## <a name="attributes-and-elements"></a>屬性和元素
 
 下列章節說明屬性、子元素和父元素。

@@ -2,12 +2,12 @@
 title: '&lt;transactedBatching&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: f0cf0b78ddcbd3214e30a36ce7641d115275a265
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f56751ea3f8bdc9ecbeff57db835e5fc2edbb73e
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749708"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148444"
 ---
 # <a name="lttransactedbatchinggt"></a>&lt;transactedBatching&gt;
 指定是否支援接收作業的異動批次處理。  
@@ -21,7 +21,7 @@ ms.locfileid: "32749708"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<transactedBatching maxBatchSize="Integer" />  
+<transactedBatching maxBatchSize="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -33,7 +33,7 @@ ms.locfileid: "32749708"
 |---------------|-----------------|  
 |`maxBatchSize`|整數，指定可在一個交易中批次處理的接收作業數目上限。 預設值為 0。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -49,41 +49,38 @@ ms.locfileid: "32749708"
  下列範例會示範如何在組態檔中將交易的批次處理行為加入至服務。  
   
 ```xml  
-<system.serviceModel>  
-  <services>  
-    <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
-             behaviorConfiguration="CalculatorServiceBehavior">  
-      <host>  
-        <baseAddresses>  
-          <add baseAddress="http://localhost:8000/ServiceModelSamples/service"/>  
-        </baseAddresses>  
-      </host>  
-  
-      <!-- Define NetMsmqEndpoint -->  
-      <endpoint address="net.msmq://localhost/private/ServiceModelSamples"  
-                binding="netMsmqBinding"  
-                contract="Microsoft.ServiceModel.Samples.IQueueCalculator" />  
-  
-      <!-- the mex endpoint is explosed at http://localhost:8000/ServiceModelSamples/service/mex -->  
-      <endpoint address="mex"  
-                binding="mexHttpBinding"  
-                contract="IMetadataExchange" />  
-    </service>  
-  </services>  
-  
-  <behaviors>  
-    <endpointBehaviors>  
-      <behavior name="endpointBehavior">  
-        <transactedBatching maxBatchSize="10" />  
-      </behavior>  
-    </endpointBehaviors>  
-    <serviceBehaviors>  
-      <behavior name="CalculatorServiceBehavior">  
-        <serviceMetadata httpGetEnabled="true" />  
-      </behavior>  
-    </serviceBehaviors>  
-  </behaviors>  
-</system.serviceModel>  
+<system.serviceModel>
+  <services>
+    <service name="Microsoft.ServiceModel.Samples.CalculatorService"
+             behaviorConfiguration="CalculatorServiceBehavior">
+      <host>
+        <baseAddresses>
+          <add baseAddress="http://localhost:8000/ServiceModelSamples/service" />
+        </baseAddresses>
+      </host>
+      <!-- Define NetMsmqEndpoint -->
+      <endpoint address="net.msmq://localhost/private/ServiceModelSamples"
+                binding="netMsmqBinding"
+                contract="Microsoft.ServiceModel.Samples.IQueueCalculator" />
+      <!-- the mex endpoint is explosed at http://localhost:8000/ServiceModelSamples/service/mex -->
+      <endpoint address="mex"
+                binding="mexHttpBinding"
+                contract="IMetadataExchange" />
+    </service>
+  </services>
+  <behaviors>
+    <endpointBehaviors>
+      <behavior name="endpointBehavior">
+        <transactedBatching maxBatchSize="10" />
+      </behavior>
+    </endpointBehaviors>
+    <serviceBehaviors>
+      <behavior name="CalculatorServiceBehavior">
+        <serviceMetadata httpGetEnabled="true" />
+      </behavior>
+    </serviceBehaviors>
+  </behaviors>
+</system.serviceModel>
 ```  
   
 ## <a name="see-also"></a>另請參閱  

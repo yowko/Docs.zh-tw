@@ -10,17 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-robots: noindex,nofollow
-ms.openlocfilehash: fbbd8d33ea163efaad1417ab4a1435df729e4897
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f490ccb4675a434e3f3336723e321f256b10093d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752197"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149172"
 ---
 # <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes 欄位
 
-此私用欄位在`System.Windows.Diagnostics.VisualDiagnostics`類別可由 Visual Studio 來判斷是否要執行的內部檢查作用中的偵錯工具。
+在此私用欄位`System.Windows.Diagnostics.VisualDiagnostics`類別可由 Visual Studio 來判斷是否要執行的內部檢查作用中的偵錯工具。
 
 ## <a name="syntax"></a>語法
   
@@ -29,14 +28,14 @@ private static bool s_isDebuggerCheckDisabledForTestPurposes
 ```
   
 > [!WARNING]
->  API 中的`System.Windows.Diagnostics.VisualDiagnostics`偵錯工具下執行應用程式時，才可以使用類別。 設定`s_isDebuggerCheckDisabledForTestPurposes`至`true`存取偵錯工具外部的 Api。  
+>  API 在`System.Windows.Diagnostics.VisualDiagnostics`偵錯工具下執行應用程式時，才可用類別。 設定`s_isDebuggerCheckDisabledForTestPurposes`至`true`來存取偵錯工具外部 Api。  
 >   
->  Microsoft 不支援在實際執行應用程式在任何情況下使用此欄位。  
+>  Microsoft 不支援在生產環境應用程式中任何情況下使用此欄位。  
 
 ## <a name="requirements"></a>需求
 
-**命名空間：** <xref:System.Windows.Diagnostics>
+**命名空間︰** <xref:System.Windows.Diagnostics>
 
-**組件：** PresentationCore （在 PresentationCore.dll)
+**組件：** PresentationCore （在 PresentationCore.dll 中)
 
 **.NET framework 版本：** 自 4.6 起可用。

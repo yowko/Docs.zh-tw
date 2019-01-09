@@ -4,12 +4,12 @@ description: 了解各種不同的無伺服器架構，排程和事件為基礎�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146702"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149673"
 ---
 # <a name="serverless-design-examples"></a>無伺服器設計範例
 
@@ -65,7 +65,7 @@ HTTP 呼叫所觸發的無伺服器端點可用來處理 API 要求。 例如，
 
 ## <a name="stream-processing"></a>Stream 處理
 
-裝置與感應器通常必須處理的資料流的即時產生。 有數種技術，可以擷取訊息和來自資料流[事件中樞](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)並[IoT 中樞](https://docs.microsoft.com/azure/iot-hub)來[服務匯流排](/service-bus)。 不論傳輸，無伺服器是理想的機制，它們會在處理訊息和資料流。 無伺服器可快速調整以滿足需求的大型資料磁碟區。 無伺服器程式碼可以套用商務邏輯來剖析的資料和動作和分析的結構化格式的輸出。
+裝置與感應器通常必須處理的資料流的即時產生。 有數種技術，可以擷取訊息和來自資料流[事件中樞](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)並[IoT 中樞](https://docs.microsoft.com/azure/iot-hub)來[服務匯流排](https://docs.microsoft.com/azure/service-bus)。 不論傳輸，無伺服器是理想的機制，它們會在處理訊息和資料流。 無伺服器可快速調整以滿足需求的大型資料磁碟區。 無伺服器程式碼可以套用商務邏輯來剖析的資料和動作和分析的結構化格式的輸出。
 
 ![無伺服器串流處理](./media/serverless-stream-processing.png)
 

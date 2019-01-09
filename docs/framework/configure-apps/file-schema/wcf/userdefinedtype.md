@@ -2,12 +2,12 @@
 title: '&lt;userDefinedType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: ffa9480312c278097ae110c686fb507209c117e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7c8b8e0403fe108f4e8d25dd1de274acc40c9fcc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755275"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148730"
 ---
 # <a name="ltuserdefinedtypegt"></a>&lt;userDefinedType&gt;
 表示要包含在服務合約中的使用者定義型別 (User Defined Type，UDT)。  
@@ -20,17 +20,17 @@ ms.locfileid: "32755275"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<comContracts>  
-  <comContract>  
-      <userDefinedTypes>  
-         <userDefinedType name="string"  
-            typeLibID="string"  
-            typeLibVersion="string"  
-            typeDefID="string">  
-         </userDefinedType>  
-      </userDefinedTypes>  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract>
+    <userDefinedTypes>
+      <userDefinedType name="String"
+                       typeLibID="String"
+                       typeLibVersion="String"
+                       typeDefID="String">
+      </userDefinedType>
+    </userDefinedTypes>
+  </comContract>
+</comContracts>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -45,7 +45,7 @@ ms.locfileid: "32755275"
 |`TypeLibID`|GUID 字串，識別定義此型別的已註冊型別程式庫。|  
 |`TypeLibVersion`|字串，識別定義此型別的型別程式庫版本。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -62,31 +62,30 @@ ms.locfileid: "32755275"
  下列範例將示範如何將兩個特定的 UDT 新增至組態檔的 <`userDefinedTypes`> 區段，以達成這個目的。  
   
 ```xml  
-<comContracts>  
-  <comContract  
-      contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"  
-      namespace="http://tempuri.org/5163B1E7-F0CF-4B6A-9A02-4AB654F34284"  
-      name="_Broker"  
-      requireSession="true">  
-      <userDefinedTypes>  
-         <userDefinedType name="CustomerType"  
-            typeLibID="{91DC728C-4F1A-45de-A9B6-B538E209CEA6}"  
-            typeLibVersion="1.0"  
-            typeDefID="{D129765C-F211-434e-825A-9A63198C41F2}">  
-         </userDefinedType>  
-         <userDefinedType name="AddressType"  
-            typeLibID="{91DC728C-4F1A-45de-A9B6-B538E209CEA6}"  
-            typeLibVersion="1.0"  
-            typeDefID="{4616AE0D-687A-43B7-BC63-141AE3DFD099}">  
-         </userDefinedType>  
-      </userDefinedTypes>  
-      <exposedMethods>  
-         <exposedMethod name="BuyStock" />  
-         <exposedMethod name="SellStock" />  
-         <exposedMethod name="ExecuteTransaction" />  
-      </exposedMethods>  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"
+               namespace="http://tempuri.org/5163B1E7-F0CF-4B6A-9A02-4AB654F34284"
+               name="_Broker"
+               requireSession="true">
+    <userDefinedTypes>
+      <userDefinedType name="CustomerType"
+                       typeLibID="{91DC728C-4F1A-45de-A9B6-B538E209CEA6}"
+                       typeLibVersion="1.0"
+                       typeDefID="{D129765C-F211-434e-825A-9A63198C41F2}">
+      </userDefinedType>
+      <userDefinedType name="AddressType"
+                       typeLibID="{91DC728C-4F1A-45de-A9B6-B538E209CEA6}"
+                       typeLibVersion="1.0"
+                       typeDefID="{4616AE0D-687A-43B7-BC63-141AE3DFD099}">
+      </userDefinedType>
+    </userDefinedTypes>
+    <exposedMethods>
+      <exposedMethod name="BuyStock" />
+      <exposedMethod name="SellStock" />
+      <exposedMethod name="ExecuteTransaction" />
+    </exposedMethods>
+  </comContract>
+</comContracts>
 ```  
   
  當初始化服務時，整合執行階段會查詢指定的型別，並將它們加入做為指定合約的已知型別集合。  
@@ -97,4 +96,4 @@ ms.locfileid: "32755275"
  <xref:System.ServiceModel.Configuration.ComUdtElement>  
  [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
  [整合 COM 應用程式](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [如何：設定 COM+ 服務設定](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+ [如何：設定 COM + 服務設定](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

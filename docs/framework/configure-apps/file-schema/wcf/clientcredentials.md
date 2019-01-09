@@ -1,14 +1,15 @@
 ---
-title: '&lt;clientCredentials&gt;'
+title: '&lt;ClientCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: 5e2dc6c2737b06d76bad6cfc51531b9ca9e02ca5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3f70a4e6e27507c3820e1b67f49664e538ac736f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145741"
 ---
-# <a name="ltclientcredentialsgt"></a>&lt;clientCredentials&gt;
+# <a name="ltclientcredentialsgt"></a>&lt;ClientCredentials&gt;
 指定用來對服務驗證用戶端的認證。  
   
  \<system.ServiceModel>  
@@ -20,21 +21,21 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<clientCredentials type="String"  
-      supportInteractive="Boolean" >  
-   <clientCertificate>  
-   </clientCertificate>  
-   <digest>  
-   </digest>  
-   <isuedToken>  
-   </isuedToken>  
-   <peer>  
-   </peer>  
-   <serviceCertificate>  
-   </serviceCertificate>  
-   <windowsAuthentication>  
-   </windowsAuthentication>  
-</clientCredentials>  
+<clientCredentials type="String"
+                   supportInteractive="Boolean" >
+  <clientCertificate>
+  </clientCertificate>
+  <digest>
+  </digest>
+  <isuedToken>
+  </isuedToken>
+  <peer>
+  </peer>
+  <serviceCertificate>
+  </serviceCertificate>
+  <windowsAuthentication>
+  </windowsAuthentication>
+</clientCredentials>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 |`supportInteractive`|布林值，指定互動式使用者是否可以在執行階段選取用戶端認證。 預設值是 `true`。|  
 |`type`|字串，指定這個組態項目的型別。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 |[\<httpDigest >](../../../../../docs/framework/configure-apps/file-schema/wcf/httpdigest-element.md)|指定用來對服務驗證用戶端的摘要。 此項目的型別為 <xref:System.ServiceModel.Configuration.HttpDigestClientElement>。|  
 |[\<issuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|指定用來對安全性權杖服務 (STS) 驗證用戶端的自訂權杖型別。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>。|  
 |[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|指定目前的對等認證。 此項目的型別為 <xref:System.ServiceModel.Configuration.PeerCredentialElement>。|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|指定用來對用戶端驗證服務的憑證，並提供設定憑證選項的結構。 當超出服務至用戶端的範圍時，就必須提供此憑證。 此項目的型別為 <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>。|  
+|[\<v >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|指定用來對用戶端驗證服務的憑證，並提供設定憑證選項的結構。 當超出服務至用戶端的範圍時，就必須提供此憑證。 此項目的型別為 <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>。|  
 |[\<windows >](../../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)|指定 Windows 認證。 預設為目前執行緒的認證。 此項目的型別為 <xref:System.ServiceModel.Configuration.WindowsClientElement>。|  
   
 ### <a name="parent-elements"></a>父項目  

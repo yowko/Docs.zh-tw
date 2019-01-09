@@ -1,15 +1,15 @@
 ---
-title: '&lt;r&gt;'
+title: '&lt;IssuedTokenParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: 550b3412b193b996b8de800856d6833369fc4bc7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2060f98e94cec9e656420ac073204a82bc592b92
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749383"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149237"
 ---
-# <a name="ltissuedtokenparametersgt"></a>&lt;r&gt;
+# <a name="ltissuedtokenparametersgt"></a>&lt;IssuedTokenParameters&gt;
 指定在聯合安全性案例中發行之安全性權杖的參數。  
   
  \<system.serviceModel>  
@@ -17,26 +17,25 @@ ms.locfileid: "32749383"
 \<customBinding>  
 \<繫結 >  
 \<安全性 >  
-\<>  
+\<issuedTokenParameters >  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<issuedTokenParameters   
-      DefaultMessageSecurityVersion="System.ServiceModel.MessageSecurityVersion"  
-      inclusionMode="AlwaysToInitiator/AlwaysToRecipient/Never/Once"  
-      keySize="Integer"  
-   keyType="AsymmetricKey/BearerKey/SymmetricKey"  
-      tokenType="String" >  
-   <additionalRequestParameters />  
-      <claimTypeRequirements>  
-            <add claimType="URI"  
-           isOptional="Boolean" />  
-      </claimTypeRequirements>  
-      <issuer address="String"   
-                      binding=" " />  
-      <issuerMetadata address="String" />   
-</issuedTokenParameters>  
+<issuedTokenParameters defaultMessageSecurityVersion="System.ServiceModel.MessageSecurityVersion"
+                       inclusionMode="AlwaysToInitiator/AlwaysToRecipient/Never/Once"
+                       keySize="Integer"
+                       keyType="AsymmetricKey/BearerKey/SymmetricKey"
+                       tokenType="String">
+  <additionalRequestParameters />
+  <claimTypeRequirements>
+    <add claimType="URI"
+         isOptional="Boolean" />
+  </claimTypeRequirements>
+  <issuer address="String"
+          binding="" />
+  <issuerMetadata address="String" />
+</issuedTokenParameters>
 ```  
   
 ## <a name="type"></a>類型  
@@ -53,9 +52,9 @@ ms.locfileid: "32749383"
 |inclusionMode|指定權杖內含需求。 此屬性的型別為 <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>。|  
 |keySize|指定權杖金鑰大小的整數。 預設值為 256。|  
 |keyType|指定金鑰型別之 <xref:System.IdentityModel.Tokens.SecurityKeyType> 的有效值。 預設為 `SymmetricKey`。|  
-|tokenType|指定權杖型別的字串。 預設值為「http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML」。|  
+|tokenType|指定權杖型別的字串。 預設值為「 http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML」。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -80,7 +79,7 @@ ms.locfileid: "32749383"
  [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [如何：使用 SecurityBindingElement 建立自訂繫結](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [如何：建立自訂繫結使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)  
  [服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [同盟與發行的權杖](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  

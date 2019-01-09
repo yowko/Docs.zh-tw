@@ -2,12 +2,12 @@
 title: WCF 的 &lt;bookmarkResumptionQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: f0721e7e14d543b1ff212fe59ed6a2de0a8a9968
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6463404e17edff8eb1efe3f96e44b5b9997ffca3
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308404"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147807"
 ---
 # <a name="ltbookmarkresumptionquerygt-of-wcf"></a>WCF 的 &lt;bookmarkResumptionQuery&gt;
 
@@ -25,7 +25,7 @@ ms.locfileid: "49308404"
   
 ## <a name="syntax"></a>語法  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -36,9 +36,9 @@ ms.locfileid: "49308404"
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
+</tracking>
+```  
+  
 ## <a name="attributes-and-elements"></a>屬性和元素
 
 下列章節說明屬性、子元素和父元素。  

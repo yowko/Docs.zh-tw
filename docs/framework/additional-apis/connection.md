@@ -12,16 +12,16 @@ api_type:
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 7423136ab8e04c076e3e5e33efdf010f36d02242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed1fce1d16f9ddbe3a3ede91fecb1a3ca6b3d407
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349629"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146533"
 ---
 # <a name="connection-class"></a>Connection 類別
 
-`Connection`類別剖析伺服器回應、 佇列要求，以及管線要求。
+`Connection`類別剖析伺服器回應、 佇列要求，以及管線的要求。
 
 ## <a name="syntax"></a>語法
   
@@ -30,14 +30,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> `Connection`類別是內部，不會直接在您的程式碼中使用它們。
+> `Connection`類別是內部，而且不適合直接在您的程式碼中使用。
 > 
-> Microsoft 不支援在實際執行應用程式在任何情況下使用這個類別。
+> Microsoft 不支援在生產環境應用程式中任何情況下使用這個類別。
 
 ## <a name="requirements"></a>需求
 
-**命名空間：** <xref:System.Net>
+**命名空間︰** <xref:System.Net>
 
-**組件：** 系統 （在 System.dll)
+**組件：**（在 System.dll) 的系統
 
 **.NET framework 版本：** 自 2.0 起可用。
