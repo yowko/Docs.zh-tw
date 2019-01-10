@@ -2,12 +2,12 @@
 title: C# 教學課程
 description: 探索這些 C# 教學課程以了解如何建置 C# 程式，並了解 C# 語言功能。
 ms.date: 10/25/2018
-ms.openlocfilehash: 2e7981c0b958e6ff4682dc502b83766f56d6c528
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195121"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084663"
 ---
 # <a name="c-tutorials"></a>C# 教學課程
 
@@ -47,20 +47,18 @@ ms.locfileid: "50195121"
 
 在您自己的本機開發環境中，即可使用 Hello World 課程後的所有簡介教學課程。 在每個教學課程結束時，您可以決定要在線上還是在自己的電腦上繼續進行下一個課程。 有些連結可幫助您設定環境，並在您的電腦上繼續進行下一個教學課程。
 
+## <a name="explore-new-features-in-c"></a>探索 C# 中的新功能 #
+
+在此[互動式探索](exploration/csharp-6.yml)中嘗試 [C# 6](../whats-new/csharp-6.md) 中的新功能。
+
 ## <a name="general-tutorials"></a>一般教學課程
 
 下列教學課程可讓您使用 [.NET Core](../../core/index.md) 建置 C# 程式：
 
 * [主控台應用程式](console-teleprompter.md)：示範主控台 I/O、主控台應用程式的結構，以及以工作為基礎之非同步程式設計模型的基本概念。
-
 * [REST 用戶端](console-webapiclient.md)：示範 Web 通訊、JSON 序列化，以及 C# 語言中的物件導向功能。
-
 * [C# 和.NET 中的繼承](inheritance.md)︰示範 C# 中的繼承，包括使用繼承來定義基底類別、抽象基底類別和衍生類別。
-
 * [使用 LINQ](working-with-linq.md)：示範 LINQ 的許多功能和支援的語言元素。
-
-* [裝載於 Docker 的微服務](microservices.md)：示範如何建置 ASP.NET Core 微服務並將其裝載於 Docker 中。
-
 * [字串插值](string-interpolation.md)：示範如何使用字串插值在 C# 中建立格式化的字串。
-
 * [使用屬性](attributes.md)：示範如何在 C# 中建立及使用屬性。
+* [可為 Null 的參考型別](nullable-reference-types.md)：示範如何使用可為 Null 的參考型別來表示您的 Null 參考意圖。

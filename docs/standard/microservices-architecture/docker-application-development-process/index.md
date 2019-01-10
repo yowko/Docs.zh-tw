@@ -1,15 +1,15 @@
 ---
 title: Docker 應用程式的開發程序
-description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 應用程式的開發程序
+description: 提供 Docker 型應用程式開發選項的高層級概觀。 使用您選擇的 Visual Studio for Windows、Visual Studio for Mac 或適用於多平台支援 (Windows、Mac 與 Linux) 的 Visual Studio Code。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: 7736c1fe4cb1a2a4553ba36cecceab37e2fe90c4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 09/27/2018
+ms.openlocfilehash: eb87f9a214dbffe71dae1e1739f2563c08fac280
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144464"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084923"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker 應用程式的開發程序
 
@@ -21,24 +21,24 @@ ms.locfileid: "53144464"
 
 不論您偏好使用完整且強大的 IDE，還是輕量型的敏捷式編輯器，Microsoft 都有相關工具可供您用來開發 Docker 應用程式。
 
-**Visual Studio (適用於 Windows)**. 若要開發以 Docker 為基礎的應用程式，請使用隨附已內建 Docker 工具的 Visual Studio 2017 或更新版本。 Docker 工具可讓您直接在目標 Docker 環境中開發、執行和驗證應用程式。 您可以按 F5 鍵，直接在 Docker 主機中執行並偵錯您的應用程式 (單一容器或多個容器)，或按 CTRL+F5 來編輯及重新整理您的應用程式，而不需要重建容器。 這是以 Docker 為基礎之應用程式的最強大開發選擇。
+**Visual Studio (適用於 Windows)。** 使用 Visual Studio 開發 Docker 型應用程式時，建議使用 Visual Studio 2017 15.7 版或更新版本，這隨附於已內建的 Docker 工具。 Docker 工具可讓您直接在目標 Docker 環境中開發、執行和驗證應用程式。 您可以按 F5 鍵，直接在 Docker 主機中執行並偵錯您的應用程式 (單一容器或多個容器)，或按 CTRL+F5 來編輯及重新整理您的應用程式，而不需要重建容器。 這是以 Docker 為基礎之應用程式的最強大開發選擇。
 
-**Visual Studio for Mac**. 它是在 macOS 上執行的 IDE (即 Xamarin Studio 的演進)，並支援以 Docker 為基礎的應用程式開發。 針對在 Mac 電腦上工作同時想要使用功能強大之 IDE 的開發人員，這應該是偏好選項。
+**Visual Studio for Mac。** 它是一個 IDE，為 Xamarin Studio 的演進版，在 macOS 中執行並從 2017 年中開始支援 Docker。 針對在 Mac 電腦上工作同時想要使用功能強大之 IDE 的開發人員，這應該是偏好選項。
 
-**Visual Studio Code 和 Docker CLI**。 如果您偏好使用支援任何開發語言之輕量型且跨平台的編輯器，您可以使用 Microsoft Visual Studio Code (VS Code) 和 Docker CLI。 這是適用於 Mac、Linux 和 Windows 的跨平台開發方法。
+**Visual Studio Code 和 Docker CLI**。 如果您偏好使用支援任何開發語言之輕量型且跨平台的編輯器，您可以使用 Microsoft Visual Studio Code (VS Code) 和 Docker CLI。 這是適用於 Mac、Linux 和 Windows 的跨平台開發方法。 此外，Visual Studio Code 支援 Docker 的延伸模組 (例如適用於 Dockerfile 的 IntelliSense)，以及可從編輯器執行 Docker 命令的捷徑工作。
 
-藉由安裝 [Docker Community Edition (CE)](https://www.docker.com/community-edition) 工具，您可以使用單一 Docker CLI 來建置 Windows 和 Linux 應用程式。 此外，Visual Studio Code 支援 Docker 的延伸模組 (例如適用於 Dockerfile 的 IntelliSense)，以及可從編輯器執行 Docker 命令的捷徑工作。
+藉由安裝 [Docker Community Edition (CE)](https://www.docker.com/community-edition) 工具，您可以使用單一 Docker CLI 來建置 Windows 和 Linux 應用程式。
 
 ### <a name="additional-resources"></a>其他資源
 
--   **Visual Studio Tools for Docker**
-    [*https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker*](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
+- **Visual Studio**。 官方網站。 \
+  [*https://visualstudio.microsoft.com/vs/*](https://visualstudio.microsoft.com/vs/)
 
--   **Visual Studio Code**。 官方網站。
-    [*https://code.visualstudio.com/download*](https://code.visualstudio.com/download)
+- **Visual Studio Code**。 官方網站。 \
+  [*https://code.visualstudio.com/download*](https://code.visualstudio.com/download)
 
--   **適用於 Mac 和 Windows 的 Docker Community Edition (CE)**
-    [*https://www.docker.com/community-editions*](https://www.docker.com/community-edition)
+- **適用於 Mac 和 Windows 的 Docker Community Edition (CE)** \
+  [*https://www.docker.com/community-editions*](https://www.docker.com/community-edition)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>Docker 容器的 .NET 語言和 Framework
 
