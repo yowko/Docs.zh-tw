@@ -2,12 +2,12 @@
 title: X.509 憑證驗證程式
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: f8bc5c1976e61cbb81d0bc8463a57cfad750a2a7
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 369f9a98b5d12e3fd06ccf519516184e98272d9d
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030304"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222307"
 ---
 # <a name="x509-certificate-validator"></a>X.509 憑證驗證程式
 這個範例會示範如何實作自訂 X.509 憑證驗證程式。 當內建的 X.509 憑證驗證程式模式都不符合應用程式需求時，這個驗證程式就很有用。 這個範例示範的服務具有可接受自動發行之憑證的自訂驗證程式。 用戶端會使用這類憑證來向服務驗證。
@@ -329,21 +329,21 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 4.  將用戶端程式檔複製到用戶端電腦上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
   
-5.  在伺服器上，於使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 `setup.bat service`。 執行`setup.bat`與`service`引數會建立服務憑證的完整網域名稱的電腦匯出為名為 Service.cer 的檔案的服務憑證。  
+5.  在伺服器上，執行`setup.bat service`在開發人員命令提示字元適用於 Visual Studio 開啟系統管理員權限。 執行`setup.bat`與`service`引數會建立服務憑證的完整網域名稱的電腦匯出為名為 Service.cer 的檔案的服務憑證。  
   
 6.  編輯 Service.exe.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 做為電腦的完整網域名稱相同。 也會變更中的電腦名稱\<服務 > /\<baseAddresses > 從本機主機服務電腦的完整名稱的項目。  
   
 7.  從服務目錄中將 Service.cer 檔案複製至用戶端電腦上的用戶端目錄。  
   
-8.  在用戶端上，於使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 `setup.bat client`。 使用 `setup.bat` 引數來執行 `client`，就會建立名稱為 client.com 的用戶端憑證，並且會將用戶端憑證匯出為名為 Client.cer 的檔案。  
+8.  在用戶端，執行`setup.bat client`在開發人員命令提示字元適用於 Visual Studio 開啟系統管理員權限。 使用 `setup.bat` 引數來執行 `client`，就會建立名稱為 client.com 的用戶端憑證，並且會將用戶端憑證匯出為名為 Client.cer 的檔案。  
   
 9. 在用戶端電腦上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。 若要這麼做，請使用伺服器的完整網域名稱取代 localhost。  
   
 10. 從用戶端目錄將 Client.cer 檔案複製到伺服器上的服務目錄中。  
   
-11. 在用戶端上，於使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 ImportServiceCert.bat。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
+11. 在用戶端，以系統管理員權限開啟的 Visual studio 中開發人員命令提示字元執行 ImportServiceCert.bat。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
   
-12. 在伺服器上，於使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 ImportClientCert.bat。 這樣便會從 Client.cer 檔將用戶端憑證匯入至 LocalMachine - TrustedPeople 存放區中。  
+12. 在伺服器上，以系統管理員權限開啟的 Visual studio 中開發人員命令提示字元執行 ImportClientCert.bat。 這樣便會從 Client.cer 檔將用戶端憑證匯入至 LocalMachine - TrustedPeople 存放區中。  
   
 13. 在伺服器電腦上，從命令提示字元視窗啟動 Service.exe。  
   

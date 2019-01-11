@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: 3b19886b11def5c15425fc27f907b10314c73e0c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 376106ff6c5c19c517c9e116112319b6e9d08c51
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181562"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222294"
 ---
 # <a name="message-security-certificate"></a>訊息安全性憑證
 這個範例會示範如何實作應用程式，該應用程式會對用戶端使用搭配 X.509 v3 憑證驗證的 WS-Security，並要求使用伺服器之 X.509 v3 憑證進行驗證的伺服器。 這個範例會使用預設的設定值，使所有在用戶端與伺服器之間的應用程式訊息進行簽署與加密。 此樣本根據[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)和用戶端主控台程式和網際網路資訊服務 (IIS) 裝載的服務程式庫所組成。 服務會實作定義要求-回覆通訊模式的合約。  
@@ -202,7 +202,7 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- 「訊息安全性」範例中所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定用戶端與伺服器，以執行需要憑證安全性的裝載應用程式。 此批次檔可以執行於三種模式。 若要在單一電腦模式類型中執行**setup.bat**在 Visual Studio 命令提示字元，服務模式型別的**setup.bat service**; 和用戶端模式類型**setup.bat client**. 當跨電腦執行範例時，會使用用戶端與伺服器模式。 如需詳細資訊，請參閱本主題結尾的安裝程序。 下面提供批次檔的各區段簡要概觀，讓批次檔得以修改為在適當的組態下執行：  
+ 「訊息安全性」範例中所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定用戶端與伺服器，以執行需要憑證安全性的裝載應用程式。 此批次檔可以執行於三種模式。 若要在單一電腦模式類型中執行**setup.bat**中開發人員命令提示字元中的 Visual Studio; 服務模式類型**setup.bat service**; 以及用戶端模式類型**setup.bat client**. 當跨電腦執行範例時，會使用用戶端與伺服器模式。 如需詳細資訊，請參閱本主題結尾的安裝程序。 下面提供批次檔的各區段簡要概觀，讓批次檔得以修改為在適當的組態下執行：  
   
 -   建立用戶端憑證。  
   
@@ -269,7 +269,7 @@ Press <ENTER> to terminate client.
     >  如果您使用的是非美式英文版的 Windows，就必須編輯 Setup.bat 檔案，並以適用您所在地區的對等帳戶來取代 "NT AUTHORITY\NETWORK SERVICE" 帳戶名稱。  
   
 > [!NOTE]
->  在這個批次檔中使用的工具位於 C:\Program Files\Microsoft Visual Studio 8\Common7\tools 或 C:\Program Files\Microsoft SDKs\Windows\v6.0\bin。 上述其中一種目錄一定會出現在您的系統路徑中。 如果您已安裝 Visual Studio，在路徑中取得此目錄最簡單的方式就是開啟 [Visual Studio 命令提示字元]。 按一下 **開始**，然後選取**所有程式**， **Visual Studio 2012**，**工具**。 這個命令提示字元包含已設定的適當路徑。 否則，您必須手動將適當目錄新增至您的路徑。  
+>  在這個批次檔中使用的工具位於 C:\Program Files\Microsoft Visual Studio 8\Common7\tools 或 C:\Program Files\Microsoft SDKs\Windows\v6.0\bin。 上述其中一種目錄一定會出現在您的系統路徑中。 如果您已安裝的 Visual Studio，在路徑中取得此目錄最簡單的方式就是適用於 Visual Studio 中開啟開發人員命令提示字元。 按一下 **開始**，然後選取**所有程式**， **Visual Studio 2012**，**工具**。 這個命令提示字元包含已設定的適當路徑。 否則，您必須手動將適當目錄新增至您的路徑。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續：  
@@ -288,10 +288,10 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例  
   
-1.  使用系統管理員權限來開啟 Visual Studio 命令提示字元，然後執行範例安裝資料夾中的 Setup.bat。 這會安裝執行範例所需的所有憑證。  
+1.  系統管理員權限開啟 Visual Studio 的開發人員命令提示字元並執行範例安裝資料夾中的 Setup.bat。 這會安裝執行範例所需的所有憑證。  
   
     > [!NOTE]
-    >  Setup.bat 批次檔被設計來執行從 Visual Studio 命令提示字元。 它要求 path 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Visual Studio 命令提示字元 (2010) 中設定。  
+    >  Setup.bat 批次檔被設計來從開發人員命令提示字元執行適用於 Visual Studio。 它要求 path 環境變數指向安裝 SDK 的目錄。 這個環境變數會自動設定在開發人員命令提示字元中，適用於 Visual Studio (2010)。  
   
 2.  驗證的存取權的服務使用瀏覽器輸入位址 `http://localhost/servicemodelsamples/service.svc` 。  
   
@@ -309,21 +309,21 @@ Press <ENTER> to terminate client.
   
 4.  將用戶端程式檔複製到用戶端電腦上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
   
-5.  在伺服器上，執行**setup.bat service** Visual Studio 命令提示字元，以系統管理員權限。 執行**setup.bat**具有**服務**引數會建立具有電腦完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
+5.  在伺服器上，執行**setup.bat service**在開發人員命令提示字元 for Visual Studio 系統管理員權限。 執行**setup.bat**具有**服務**引數會建立具有電腦完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
   
 6.  編輯 Web.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 做為電腦的完整網域名稱相同。  
   
 7.  從服務目錄中將 Service.cer 檔案複製至用戶端電腦上的用戶端目錄。  
   
-8.  在用戶端，執行**setup.bat client** Visual Studio 命令提示字元，以系統管理員權限。 執行**setup.bat**具有**用戶端**引數會建立名為 client.com 的用戶端憑證，並將用戶端憑證匯出為名為 Client.cer 的檔案。  
+8.  在用戶端，執行**setup.bat client**在開發人員命令提示字元 for Visual Studio 系統管理員權限。 執行**setup.bat**具有**用戶端**引數會建立名為 client.com 的用戶端憑證，並將用戶端憑證匯出為名為 Client.cer 的檔案。  
   
 9. 在用戶端電腦上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。 若要這麼做，請使用伺服器的完整網域名稱取代 localhost。  
   
 10. 從用戶端目錄將 Client.cer 檔案複製到伺服器上的服務目錄中。  
   
-11. 在用戶端上，使用系統管理權限，在 Visual Studio 命令提示字元中，執行 ImportServiceCert.bat。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
+11. 在用戶端，執行 ImportServiceCert.bat 在開發人員命令提示字元中適用於 Visual Studio 以系統管理權限。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
   
-12. 在伺服器上，使用系統管理權限，在 Visual Studio 命令提示字元中，執行 ImportClientCert.bat。 這樣便會從 Client.cer 檔將用戶端憑證匯入至 LocalMachine - TrustedPeople 存放區中。  
+12. 在伺服器上，執行 ImportClientCert.bat 在開發人員命令提示字元中適用於 Visual Studio 以系統管理權限。 這樣便會從 Client.cer 檔將用戶端憑證匯入至 LocalMachine - TrustedPeople 存放區中。  
   
 13. 在用戶端電腦上，從命令提示字元視窗啟動 Client.exe。 如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
@@ -332,6 +332,6 @@ Press <ENTER> to terminate client.
 -   當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 Windows Communication Foundation (WCF) 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+    >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 Windows Communication Foundation (WCF) 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。 若要這樣做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 ## <a name="see-also"></a>另請參閱

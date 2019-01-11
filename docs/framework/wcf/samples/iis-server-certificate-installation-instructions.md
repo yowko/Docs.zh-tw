@@ -2,18 +2,18 @@
 title: 網際網路資訊服務 (IIS) 伺服器憑證安裝指示
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: ae1f90a68acc4b1217c46a6570031a88e60c6e88
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a89d907b9be25c83a74f0c5d60d184637552f297
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838243"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221098"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>網際網路資訊服務 (IIS) 伺服器憑證安裝指示
 若要執行能與網際網路資訊服務 (IIS) 安全通訊的範例，您必須建立並安裝伺服器憑證。  
   
 ## <a name="step-1-creating-certificates"></a>步驟 1： 建立憑證  
- 若要建立電腦的憑證，請使用系統管理員權限來開啟 Visual Studio 命令提示字元，然後執行每個使用安全通訊搭配 IIS 之範例中包含的 Setup.bat。 請先確定路徑有將 Makecert.exe 上一層的資料夾包含在內，再執行此批次 (Batch) 檔。 下列命令是用來建立 Setup.bat 中的憑證。  
+ 若要建立您的電腦的憑證，以系統管理員權限開啟 Visual Studio 開發人員命令提示字元並執行 Setup.bat，它包含在每個使用安全通訊搭配 IIS 使用的範例。 請先確定路徑有將 Makecert.exe 上一層的資料夾包含在內，再執行此批次 (Batch) 檔。 下列命令是用來建立 Setup.bat 中的憑證。  
   
 ```  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  

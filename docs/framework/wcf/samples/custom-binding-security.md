@@ -2,12 +2,12 @@
 title: 自訂繫結安全性
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 72812c23bca5cd5c61f906cfd98f1929b0edee1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 56c3ed4be894a265635c747373e0b79599ce129d
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192885"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221696"
 ---
 # <a name="custom-binding-security"></a>自訂繫結安全性
 這個範例會示範如何使用自訂繫結來設定安全性。 它會顯示如何使用自訂繫結同時啟用訊息層級安全性和安全傳輸。 當在用戶端和服務之間傳輸訊息需要安全傳輸，且同時必須保護訊息層級上訊息的安全時，這是相當有用的。 系統提供的繫結不支援這個組態。
@@ -113,7 +113,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例
 
-1.  使用系統管理員權限來開啟 Visual Studio 命令提示字元視窗，然後執行範例安裝資料夾中的 Setup.bat。 這會安裝執行範例所需的所有憑證。
+1.  以系統管理員權限開啟 Visual Studio 視窗的開發人員命令提示字元並執行範例安裝資料夾中的 Setup.bat。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
     >  Setup.bat 批次檔被設計來從 Visual Studio 2012 命令提示字元執行。 路徑環境變數設定在 Visual Studio 2012 命令提示字元會指向包含 Setup.bat 指令碼所需的可執行檔的目錄。  
@@ -134,7 +134,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     3.  將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
   
-    4.  執行下列命令在 Visual Studio 命令提示字元開啟系統管理員權限： `Setup.bat service`。 這會建立服務憑證，其主體名稱與批次檔執行於其中之電腦的名稱相符。  
+    4.  以系統管理員權限開啟 Visual Studio 中開發人員命令提示字元執行下列命令： `Setup.bat service`。 這會建立服務憑證，其主體名稱與批次檔執行於其中之電腦的名稱相符。  
   
         > [!NOTE]
         >  Setup.bat 批次檔是設計用來從 Visual Studio 2010 命令提示字元執行。 它要求 path 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Visual Studio 2010 命令提示字元中設定。
@@ -149,7 +149,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     2.  執行 Cleanup.bat，移除先前範例的任何舊憑證。
 
-    3.  匯出服務的憑證，方法是使用系統管理權限來開啟 Visual Studio 命令提示字元，然後在服務電腦上執行下列命令 (將 `%SERVER_NAME%` 取代成執行此服務之電腦的完整名稱)：
+    3.  匯出服務的憑證，以系統管理權限開啟 Visual studio 的開發人員命令提示字元，並在服務電腦上執行下列命令 (取代`%SERVER_NAME%`完整電腦名稱與位置服務正在執行）：
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -157,7 +157,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     4.  將 %SERVER_NAME%.cer 複製到用戶端電腦 (將 %SERVER_NAME% 取代成執行此服務之電腦的完整名稱)。
 
-    5.  匯入服務的憑證，方法是使用系統管理權限來開啟 Visual Studio 命令提示字元，然後在用戶端電腦上執行下列命令 (將 %SERVER_NAME% 取代成執行此服務之電腦的完整名稱)：
+    5.  以系統管理權限開啟 Visual studio 的開發人員命令提示字元，並在用戶端電腦上執行下列命令匯入服務的憑證 (取代 %server_name%取代成完整名稱的電腦，服務正在執行）：
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople

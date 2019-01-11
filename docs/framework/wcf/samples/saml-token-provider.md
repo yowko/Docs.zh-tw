@@ -2,12 +2,12 @@
 title: SAML 權杖提供者
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: dfd693e262e7566c865d5b9faed5b9e00a8cfec9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 59bd76c99adf778f2aa2a2d891ca79657033296e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308522"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222910"
 ---
 # <a name="saml-token-provider"></a>SAML 權杖提供者
 這個範例會示範如何實作自訂的用戶端 SAML 權杖提供者。 Windows Communication Foundation (WCF) 中的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的 「 認證管理員權杖提供者。 WCF 也隨附[!INCLUDE[infocard](../../../../includes/infocard-md.md)]權杖提供者。 自訂權杖提供者適用於下列情況：
@@ -379,7 +379,7 @@ ms.locfileid: "49308522"
   
 2.  將服務程式檔複製到服務電腦上的服務目錄。 同時，將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
   
-3.  您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。 此 Service.exe.config 檔必須更新以反映這個新憑證名稱。 您可以修改 Setup.bat 批次檔來建立伺服器憑證。 請注意，您必須在使用系統管理員權限開啟的 Visual Studio 命令提示字元視窗中，執行 Setup.bat 檔案。 您必須將 `%SERVER_NAME%` 變數設定為用來裝載服務之電腦的完整主機名稱。  
+3.  您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。 此 Service.exe.config 檔必須更新以反映這個新憑證名稱。 您可以修改 Setup.bat 批次檔來建立伺服器憑證。 請注意，在開發人員命令提示字元使用系統管理員權限開啟的 Visual Studio 視窗必須執行 setup.bat 檔案。 您必須將 `%SERVER_NAME%` 變數設定為用來裝載服務之電腦的完整主機名稱。  
   
 4.  將伺服器憑證複製到用戶端的 CurrentUser-TrustedPeople 存放區中。 當伺服器憑證是由用戶端信任的簽發者發行時，就不需要這個步驟。  
   

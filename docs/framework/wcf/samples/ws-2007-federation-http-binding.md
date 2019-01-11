@@ -2,12 +2,12 @@
 title: WS 2007 聯合 HTTP 繫結
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 53f2cb893476cdfa0517bd6586f38951dff1f2af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7dffe56cf5593f1cd59cccd7ea9b6b0e173e0c2c
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513058"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221280"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 聯合 HTTP 繫結
 這個範例會示範使用 <xref:System.ServiceModel.WS2007FederationHttpBinding>，這是能夠用來建置支援 WS-Trust 規格 1.3 版之聯合案例的標準繫結。  
@@ -112,7 +112,7 @@ Press <ENTER> to terminate client.
   
 1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  使用系統管理員權限來開啟 Visual Studio 命令提示字元，然後執行 Setup.bat 檔案，以便建立必要的憑證。  
+2.  開啟 Visual studio 的開發人員命令提示字元，系統管理員權限，並執行 Setup.bat 檔案，以建立所需的憑證。  
   
  這個批次檔會使用隨 Windows SDK 發佈的 Certmgr.exe 和 Makecert.exe。 但是，您必須從 Visual Studio 命令提示字元中執行 Setup.bat，以便讓這段指令碼尋找這些工具。  
   

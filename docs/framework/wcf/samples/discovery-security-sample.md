@@ -2,12 +2,12 @@
 title: 探索安全性範例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9435afa7324ad9e0f2bf994b2f3ed5e54e5e2e7e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129346"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223100"
 ---
 # <a name="discovery-security-sample"></a>探索安全性範例
 探索規格不會要求參與探索程序的端點是安全的。 增強探索訊息的安全性會減少各種攻擊 (訊息變更、阻斷服務、重新執行、詐騙)。 此範例使用精簡簽章格式 (如 WS-Discovery 規格的第 8.2 節所述) 實作計算與驗證訊息簽章的自訂通道。 此範例同時支援[2005年探索規格](https://go.microsoft.com/fwlink/?LinkId=177912)並[1.1 版](https://go.microsoft.com/fwlink/?LinkId=179677)。  
@@ -49,7 +49,7 @@ ms.locfileid: "53129346"
   
 -   **DiscoverySecurityChannels**:會公開安全繫結程式庫。 此程式庫會計算與驗證傳出/傳入訊息的精簡簽章。  
   
--   **服務**:公開 ICalculatorService 合約，自我裝載服務。 此服務會標示為可搜尋。 使用者會透過指定存放位置和名稱、憑證的主體名稱或其他唯一識別碼，以及用戶端憑證所在的存放位置 (用來檢查傳入訊息之簽章的憑證)，指定簽署訊息所使用之憑證的詳細資料。 根據這些詳細資料，就會建立並使用具有額外安全性的 UdpDiscoveryEndpoint。  
+-   **服務**：公開 ICalculatorService 合約，自我裝載服務。 此服務會標示為可搜尋。 使用者會透過指定存放位置和名稱、憑證的主體名稱或其他唯一識別碼，以及用戶端憑證所在的存放位置 (用來檢查傳入訊息之簽章的憑證)，指定簽署訊息所使用之憑證的詳細資料。 根據這些詳細資料，就會建立並使用具有額外安全性的 UdpDiscoveryEndpoint。  
   
 -   **用戶端**:此類別會嘗試探索 ICalculatorService 並呼叫服務上的方法。 同樣地，系統會建立並使用具有額外安全性的 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 來簽署與驗證訊息。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "53129346"
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1.  從 Visual Studio 命令提示字元執行 Setup.bat 指令碼。 此範例會使用憑證來簽署與驗證訊息。 指令碼會使用 Makecert.exe 建立憑證，然後使用 Certmgr.exe 進行安裝。 此指令碼必須以系統管理員權限的身分來執行。  
+1.  Visual Studio 執行 Setup.bat 指令碼從開發人員命令提示字元。 此範例會使用憑證來簽署與驗證訊息。 指令碼會使用 Makecert.exe 建立憑證，然後使用 Certmgr.exe 進行安裝。 此指令碼必須以系統管理員權限的身分來執行。  
   
 2.  若要建置並執行範例，在 Visual Studio 中開啟的 Security.sln 檔案，然後選擇**Rebuild All**。 更新方案屬性以啟動多個專案： 選取**啟動**discoverysecurechannels 的所有專案。 按照一般方式執行方案。  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: e1d06085b4edb5c1e102eaab766ec7636194b991
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6b7db8182b5764e3df65ccbdef3b54330c1ee64a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402694"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223001"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>逐步解說：當地語系化混合應用程式
 
@@ -48,7 +48,7 @@ ms.locfileid: "47402694"
 
 2.  新增[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl>項目稱為`SimpleControl`至專案。
 
-3.  使用<xref:System.Windows.Forms.Integration.ElementHost>放置控制項`SimpleControl`表單上的項目。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 裝載 Windows Forms 中的 3d WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)。
+3.  使用<xref:System.Windows.Forms.Integration.ElementHost>放置控制項`SimpleControl`表單上的項目。 如需詳細資訊，請參閱[逐步解說：裝載 Windows Forms 中的 3d WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)。
 
 ## <a name="adding-localizable-content"></a>新增可當地語系化的內容
 
@@ -118,7 +118,7 @@ Windows Forms 設計工具提供在附屬組件中啟用當地語系化的設定
 
 ### <a name="to-assign-resource-identifiers"></a>指派資源識別碼
 
-1.  從 [開始] 功能表中，開啟 Visual Studio 命令提示字元。
+1.  從 [開始] 功能表中，開啟 Visual Studio 開發人員命令提示字元。
 
 2.  使用下列命令，將資源識別碼指派給可當地語系化的內容。
 
@@ -177,5 +177,5 @@ Windows Forms 設計工具提供在附屬組件中啟用當地語系化的設定
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [將應用程式當地語系化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
-- [逐步解說： 當地語系化 Windows Forms](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+- [逐步解說：將 Windows Form 當地語系化](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

@@ -2,12 +2,12 @@
 title: 招聘程序
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520634"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223217"
 ---
 # <a name="hiring-process"></a>招聘程序
 此範例示範如何使用傳訊活動和裝載為工作流程服務的兩個工作流程來實作商務程序。 這些工作流程是虛擬公司 Contoso, Inc. 的 IT 基礎結構的一部分。  
@@ -114,7 +114,7 @@ ms.locfileid: "43520634"
 |工作流程服務|包含程序定義的流程圖會裝載於服務中 (在此範例中，此服務會裝載於主控台應用程式內)。|HiringRequestService|  
 |訊息活動|此流程圖會以兩種方式使用訊息活動：<br /><br /> -若要取得使用者 （用來在每一個核准步驟中接收決策與相關的資訊） 的資訊。<br />-若要與其他現有的服務 （InboxService 和 OrgDataService 透過服務參考） 互動。|HiringRequestService|  
 |以內容為主的相互關聯|核准訊息會依招聘申請的 ID 屬性建立相互關聯性：<br /><br /> -當程序啟動時，就會使用申請的 ID 初始化相互關聯控制代碼。<br />-傳入的核准訊息相互關聯 （每一個核准訊息的第一個參數是要求的識別碼） 其識別碼。|HiringRequestService / ResumeRequestService|  
-|自訂活動 (宣告式和以程式碼為主)|此範例中有幾個自訂活動：<br /><br /> -   `SaveActionTracking`： 這個活動會發出自訂<xref:System.Activities.Tracking.TrackingRecord>(使用<xref:System.Activities.NativeActivityContext.Track%2A>)。 這個活動已經使用命令式程式碼擴充 <xref:System.Activities.NativeActivity> 來撰寫。<br />-   `GetEmployeesByPositionTypes`： 這個活動會接收職位類型 Id 的清單，並傳回一份已在 Contoso 中的該位置的人員。 此活動已經以宣告方式撰寫 (使用活動設計工具)。<br />-   `SaveHiringRequestInfo`： 這個活動會將資訊儲存`HiringRequest`(使用`HiringRequestRepository.Save`)。 這個活動已經使用命令式程式碼擴充 <xref:System.Activities.CodeActivity> 來撰寫。|HiringRequestService|  
+|自訂活動 (宣告式和以程式碼為主)|此範例中有幾個自訂活動：<br /><br /> -   `SaveActionTracking`:此活動會發出自訂<xref:System.Activities.Tracking.TrackingRecord>(使用<xref:System.Activities.NativeActivityContext.Track%2A>)。 這個活動已經使用命令式程式碼擴充 <xref:System.Activities.NativeActivity> 來撰寫。<br />-   `GetEmployeesByPositionTypes`:這個活動會接收職位類型 Id 的清單，並傳回一份已在 Contoso 中的該位置的人員。 此活動已經以宣告方式撰寫 (使用活動設計工具)。<br />-   `SaveHiringRequestInfo`:此活動會將資訊儲存`HiringRequest`(使用`HiringRequestRepository.Save`)。 這個活動已經使用命令式程式碼擴充 <xref:System.Activities.CodeActivity> 來撰寫。|HiringRequestService|  
 |系統提供的 SQL Server 持續性|裝載流程圖程序定義的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 執行個體會設定為使用系統提供的 SQL Server 持續性。|HiringRequestService / ResumeRequestService|  
 |自訂追蹤|此範例包含的自訂追蹤參與者會儲存 `HiringRequestProcess` 的記錄 (這樣會記錄已經執行的動作、動作執行者與執行時間)。 原始程式碼位於 HiringRequestService 的 Tracking 資料夾中。|HiringRequestService|  
 |ETW 追蹤|系統提供的 ETW 追蹤會設定於 HiringRequestService 服務的 App.config 檔案中。|HiringRequestService|  
@@ -131,13 +131,13 @@ ms.locfileid: "43520634"
 ## <a name="data-storage"></a>資料儲存  
  資料會儲存在名為 `ContosoHR` 的 SQL Server 資料庫中 (用來建立此資料庫的指令碼位於 `DbSetup` 資料夾中)。 工作流程執行個體會儲存在名為 `InstanceStore` 的 SQL Server 資料庫中 (用來建立執行個體存放區的指令碼屬於 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 散發的一部分)。  
   
- 從 Visual Studio 命令提示字元執行 Setup.cmd 指令碼會建立兩個資料庫。  
+ 適用於 Visual Studio 從開發人員命令提示字元執行 Setup.cmd 指令碼會建立兩個資料庫。  
   
 ## <a name="running-the-sample"></a>執行範例  
   
 #### <a name="to-create-the-databases"></a>若要建立資料庫  
   
-1.  開啟 Visual Studio 命令提示字元。  
+1.  開啟 Visual Studio 開發人員命令提示字元。  
   
 2.  巡覽至範例資料夾。  
   

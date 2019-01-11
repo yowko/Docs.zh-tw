@@ -2,12 +2,12 @@
 title: 權杖驗證器
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 198994acb322ece374ba0e04bc4d15cb2754f995
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d9eeee3e69d053fba9afb03e4e938cbe02c7a303
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582641"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222892"
 ---
 # <a name="token-authenticator"></a>權杖驗證器
 這個範例示範如何實作自訂權杖驗證器。 Windows Communication Foundation (WCF) 中的權杖驗證器用來驗證語彙基元，用訊息，確認它是前後一致，而且驗證身分識別相關聯的語彙基元。
@@ -339,7 +339,7 @@ static void DisplayIdentityInformation()
   
 3.  從 \client\bin 啟動 client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4.  如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2.  將服務程式檔複製到服務電腦上的服務目錄。 同時，將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
   
-3.  您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。 必須更新服務 App.config 檔以反映這個新憑證名稱。 只要將 `%SERVER_NAME%` 變數設定為服務執行所在之電腦的完整主機名稱，就可以使用 Setup.bat 建立憑證。 請注意，您必須在使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 Setup.bat 檔案。  
+3.  您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。 必須更新服務 App.config 檔以反映這個新憑證名稱。 只要將 `%SERVER_NAME%` 變數設定為服務執行所在之電腦的完整主機名稱，就可以使用 Setup.bat 建立憑證。 請注意，setup.bat 檔必須從開發人員命令提示字元執行適用於 Visual Studio 開啟系統管理員權限。  
   
 4.  將伺服器憑證複製到用戶端的 CurrentUser-TrustedPeople 存放區中。 只有在伺服器憑證是由用戶端受信任的簽發者發行時才需要這麼做。  
   
@@ -361,7 +361,7 @@ static void DisplayIdentityInformation()
   
 9. 在用戶端電腦上，從命令提示字元啟動 Client.exe。  
   
-10. 如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

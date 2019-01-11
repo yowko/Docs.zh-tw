@@ -2,12 +2,12 @@
 title: 成員資格和角色提供者
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: bff100189c904706f3c7c886945383252ce7bfcb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 716aeeb57dc78ea9ff9205f75880b974d63fe39b
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864024"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221241"
 ---
 # <a name="membership-and-role-provider"></a>成員資格和角色提供者
 「成員資格和角色提供者」範例會示範服務如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格和角色提供者來驗證及授權用戶端。  
@@ -114,7 +114,7 @@ ms.locfileid: "43864024"
 </system.serviceModel>  
 ```  
   
- 當您執行範例時，用戶端會在三個不同的使用者帳戶之下呼叫各種服務作業：Alice、Bob 和 Charlie。 作業要求和回應會顯示在用戶端主控台視窗中。 所有四個以使用者 "Alice" 所進行的呼叫應該都會成功。 使用者 "Bob" 在嘗試呼叫 Divide 方法時，應該會收到拒絕存取錯誤。 使用者 "Charlie" 在嘗試呼叫 Multiply 方法時，應該會收到拒絕存取錯誤。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
+ 當您執行範例時，用戶端呼叫各種服務作業在三個不同的使用者帳戶：Alice、 Bob 和 Charlie。 作業要求和回應會顯示在用戶端主控台視窗中。 所有四個以使用者 "Alice" 所進行的呼叫應該都會成功。 使用者 "Bob" 在嘗試呼叫 Divide 方法時，應該會收到拒絕存取錯誤。 使用者 "Charlie" 在嘗試呼叫 Multiply 方法時，應該會收到拒絕存取錯誤。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
@@ -134,11 +134,11 @@ ms.locfileid: "43864024"
   
 1.  確認路徑中包含 Makecert.exe 所在的資料夾。  
   
-2.  在使用系統管理員權限執行的 Visual Studio 命令提示字元中，執行範例安裝資料夾中的 Setup.bat。 這會安裝執行範例所需的服務憑證。  
+2.  以系統管理員權限執行 Visual studio，從範例安裝資料夾中開發人員命令提示字元執行 Setup.bat。 這會安裝執行範例所需的服務憑證。  
   
 3.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4.  如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -150,7 +150,7 @@ ms.locfileid: "43864024"
   
 4.  將用戶端程式檔複製到用戶端電腦上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
   
-5.  在伺服器上，使用系統管理權限來開啟 Visual Studio 命令提示字元，然後執行 `setup.bat service`。 執行`setup.bat`與`service`引數會建立具有電腦完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
+5.  在伺服器上，以系統管理權限開啟 Visual Studio 開發人員命令提示字元，並執行`setup.bat service`。 執行`setup.bat`與`service`引數會建立具有電腦完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
   
 6.  編輯 Web.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md))，這是電腦的完整網域名稱相同。  
   
@@ -158,16 +158,16 @@ ms.locfileid: "43864024"
   
 8.  在用戶端電腦上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。  
   
-9. 在用戶端上，使用系統管理權限來開啟 Visual Studio 命令提示字元，然後執行 ImportServiceCert.bat。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
+9. 在用戶端，以系統管理權限開啟 Visual Studio 開發人員命令提示字元，然後執行 ImportServiceCert.bat。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
   
-10. 在用戶端電腦上，從命令提示字元啟動 Client.exe。 如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 在用戶端電腦上，從命令提示字元啟動 Client.exe。 如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 -   當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
 > [!NOTE]
->  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 Windows Communication Foundation (WCF) 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+>  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 Windows Communication Foundation (WCF) 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。 若要這樣做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 ## <a name="the-setup-batch-file"></a>設定批次檔  
  本範例中所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要伺服器憑證安全性的自我裝載應用程式。 這個批次檔必須經過修改才能跨電腦運作，或在非裝載的情況下運作。  

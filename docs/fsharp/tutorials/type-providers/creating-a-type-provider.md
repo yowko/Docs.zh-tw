@@ -2,12 +2,12 @@
 title: 教學課程：建立型別提供者
 description: 了解如何建立您自己F#型別中的提供者F#3.0 藉由檢查幾個簡單的型別提供者，來說明基本概念。
 ms.date: 05/16/2016
-ms.openlocfilehash: c5a68df5f0b89fe9496ad86ab88208e0ec4bcdc9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b16981b70db0896805754c60afa96a07623a1263
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614528"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223204"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教學課程：建立型別提供者
 
@@ -156,7 +156,7 @@ let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-若要使用 Visual Studio 偵錯此提供者、 系統管理認證，以開啟 Visual Studio 命令提示字元並執行下列命令：
+若要使用 Visual Studio 偵錯此提供者，使用系統管理認證，開啟適用於 Visual Studio 的開發人員命令提示字元並執行下列命令：
 
 ```fsharp
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx

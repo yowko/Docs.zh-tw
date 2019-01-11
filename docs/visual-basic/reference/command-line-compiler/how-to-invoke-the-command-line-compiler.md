@@ -1,5 +1,5 @@
 ---
-title: 如何：叫用命令列編譯器 (Visual Basic)
+title: HOW TO：叫用命令列編譯器 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 0b835bb5654574a5aa6f32eede1e942b11e7dcb0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d2d193f8c3d483ff87fe719919982e8c3473ec0b
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932150"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221839"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>如何：叫用命令列編譯器 (Visual Basic)
-您可以叫用命令列編譯器，命令列中，也稱為 MS-DOS 命令提示字元中輸入的可執行檔名稱。 如果您從預設的 Windows 命令提示字元進行編譯，您必須輸入可執行檔的完整的路徑。 若要覆寫此預設行為，您可以使用 Visual Studio 命令提示字元，，或修改的 PATH 環境變數。 兩者都可讓您只要鍵入編譯器名稱從任何目錄進行編譯。  
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>HOW TO：叫用命令列編譯器 (Visual Basic)
+您可以叫用命令列編譯器，命令列中，也稱為 MS-DOS 命令提示字元中輸入的可執行檔名稱。 如果您從預設的 Windows 命令提示字元進行編譯，您必須輸入可執行檔的完整的路徑。 若要覆寫此預設行為，您可以使用 Visual Studio 中，開發人員命令提示字元，或修改 PATH 環境變數。 兩者都可讓您只要鍵入編譯器名稱從任何目錄進行編譯。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-invoke-the-compiler-using-the-visual-studio-command-prompt"></a>若要叫用編譯器使用 Visual Studio 命令提示字元  
+### <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>若要叫用編譯器使用 for Visual Studio 的開發人員命令提示字元  
   
 1.  開啟 Microsoft Visual Studio 程式群組中的 Visual Studio Tools 程式資料夾。  
   
-2.  如果已安裝 Visual Studio，您可以使用 Visual Studio 命令提示字元存取編譯器從任何目錄，您的電腦。  
+2.  如果已安裝 Visual Studio，您可以使用 Visual Studio 開發人員命令提示字元存取編譯器從任何目錄，您的電腦。  
   
-3.  叫用 Visual Studio 命令提示字元。  
+3.  叫用 Visual studio 的開發人員命令提示字元。  
   
 4.  在命令列中，輸入`vbc.exe` *sourceFileName*然後按 ENTER 鍵。  
   

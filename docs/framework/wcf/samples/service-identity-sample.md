@@ -2,12 +2,12 @@
 title: 服務身分識別範例
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 341e4922089634c3e46929d6cdb474b2dfbd0666
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 64adee14c3c0a0ba8071bbaca35b8712280e10b4
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152714"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221956"
 ---
 # <a name="service-identity-sample"></a>服務身分識別範例
 這個服務身分識別範例示範如何設定服務的身分識別。 在設計階段，用戶端可以使用服務的中繼資料擷取身分識別，然後在執行階段，用戶端就可以驗證服務的身分識別。 服務身分識別的概念主要是允許用戶端在呼叫任何作業之前驗證服務，從而保護用戶端以免遭到未經驗證的呼叫。 在安全連線上，服務還會在允許用戶端存取之前驗證其認證，但這不是本範例的重點。 請參閱中的範例[用戶端](../../../../docs/framework/wcf/samples/client.md)，示範伺服器驗證。
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例
 
-1.  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 或 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用 MMC 嵌入式管理單元工具，將身分識別方案資料夾中的 Identity.pfx 憑證檔匯入至 LocalMachine/My (Personal) 憑證存放區。 這個檔案有密碼保護。 它會在匯入時要求您提供密碼。 型別`xyz`在密碼方塊。 如需詳細資訊，請參閱[How to:使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主題。 完成這個動作之後，請使用系統管理員權限，在 Visual Studio 命令提示字元中執行 Setup.bat，這會將此憑證複製到 CurrentUser/Trusted People 存放區，以供用戶端使用。
+1.  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 或 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用 MMC 嵌入式管理單元工具，將身分識別方案資料夾中的 Identity.pfx 憑證檔匯入至 LocalMachine/My (Personal) 憑證存放區。 這個檔案有密碼保護。 它會在匯入時要求您提供密碼。 型別`xyz`在密碼方塊。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主題。 完成之後，執行 Setup.bat 在開發人員命令提示字元中適用於 Visual Studio 系統管理員權限，可將此憑證複製到 CurrentUser/Trusted People 存放區可用於用戶端上。
 
 2.  在  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，從範例安裝資料夾，在 Visual Studio 2012 的命令提示字元，以系統管理員權限執行 Setup.bat。 這會安裝執行範例所需的所有憑證。
 
@@ -140,13 +140,13 @@ class CustomIdentityVerifier : IdentityVerifier
   
 5.  將用戶端程式檔複製到用戶端電腦上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
   
-6.  在服務上，於使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 `setup.bat service`。 執行`setup.bat`與`service`引數會建立具有電腦完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
+6.  在服務上，執行`setup.bat service`在開發人員命令提示字元適用於 Visual Studio 開啟系統管理員權限。 執行`setup.bat`與`service`引數會建立具有電腦完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
   
 7.  從服務目錄中將 Service.cer 檔案複製至用戶端電腦上的用戶端目錄。  
   
 8.  在用戶端電腦上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。 其中會有多個必須加以變更的執行個體。  
   
-9. 在用戶端上，於使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 ImportServiceCert.bat。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
+9. 在用戶端，以系統管理員權限開啟的 Visual studio 中開發人員命令提示字元執行 ImportServiceCert.bat。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
   
 10. 在服務電腦上，從命令提示字元啟動 Service.exe。  
   
