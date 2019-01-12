@@ -74,7 +74,7 @@ ms.locfileid: "54030395"
 |---------------------|-----------------|-------------|-------------|  
 |`[` *character_group* `]`|比對 *character_group*中的任何單一字元。 根據預設，比對會區分大小寫。|`[ae]`|"gray" 中的 "a"<br /><br /> "lane" 中的 "a"、"e"|  
 |`[^` *character_group* `]`|否定：比對不在 *character_group* 中的任何單一字元。 根據預設， *character_group* 中的字元會區分大小寫。|`[^aei]`|"reign" 中的 "r"、"g"、"n"|  
-|`[` *第一* `-` *last* `]`|字元範圍：比對從 *first* 至 *last* 範圍內的任何單一字元。|`[A-Z]`|"AB123" 中的 "A"、"B"|  
+|`[` *first* `-` *last* `]`|字元範圍：比對從 *first* 至 *last* 範圍內的任何單一字元。|`[A-Z]`|"AB123" 中的 "A"、"B"|  
 |`.`|萬用字元：比對除 \n 以外的任何單一字元。<br /><br /> 若要比對常值句號字元 (. 或 `\u002E`)，您必須在前面加上逸出字元 (`\.`)。|`a.e`|"nave" 中的 "ave"<br /><br /> "water" 中的 "ate"|  
 |`\p{` *name* `}`|比對 Unicode 一般分類中或 *name*指定之具名區塊中的任何單一字元。|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"City Lights" 中的 "C"、"L"<br /><br /> "ДЖem" 中的 "Д"、"Ж"|  
 |`\P{` *name* `}`|比對不在 Unicode 一般分類中或 *name*所指定之具名區塊中的任何單一字元。|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|"City" 中的 "i"、"t"、"y"<br /><br /> "ДЖem" 中的 "e"、"m"|  
@@ -110,7 +110,7 @@ ms.locfileid: "54030395"
 |群組建構|說明|模式|符合|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *子運算式* `)`|擷取符合的子運算式，並指派以一為起始的序號給它。|`(\w)\1`|"deep" 中的 "ee"|  
-|`(?<` *name* `>` *子運算式* `)`|將符合的子運算式擷取到具名群組中。|`(?<double>\w)\k<double>`|"deep" 中的 "ee"|  
+|`(?<` *名稱* `>` *子運算式* `)`|將符合的子運算式擷取到具名群組中。|`(?<double>\w)\k<double>`|"deep" 中的 "ee"|  
 |`(?<` *名稱1* `-` *名稱2* `>` *子運算式* `)`|定義對稱群組定義。 如需詳細資訊，請參閱 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)中的＜對稱群組定義＞一節。|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"3+2^((1-3)\*(3-1))" 中的 "((1-3)\*(3-1))"|  
 |`(?:` *子運算式* `)`|定義非擷取型群組。|`Write(?:Line)?`|"Console.WriteLine()" 中的 "WriteLine"<br /><br /> "Console.Write(value)" 中的 "Write"|  
 |`(?imnsx-imnsx:` *子運算式* `)`|套用或停用 *subexpression*內指定的選項。 如需詳細資訊，請參閱 [Regular Expression Options](regular-expression-options.md)。|`A\d{2}(?i:\w+)\b`|"A12xl A12XL a12xl" 中的 "A12xl"、"A12XL"|  
