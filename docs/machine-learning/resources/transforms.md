@@ -4,12 +4,12 @@ description: 探索 ML.NET 中支援的特徵工程元件。
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 72e4077151d35b9bff661c28c9a20626098a5c69
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451088"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249121"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>機器學習資料轉換 - ML.NET
 
@@ -103,7 +103,6 @@ ms.locfileid: "53451088"
 | <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | 捨棄資料行中的遺失值。 |
 | <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | 使用相同數量的位置作為輸入資料行建立布林值輸出資料行，並在遺失輸入資料行中的值時，將輸出值設為 true。 |
 | <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | 透過使用預設值或平均值/最小值/最大值取代遺失值，來處理遺失值 (僅限非文字資料行)。 |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | 使用相同數量的位置作為輸入資料行建立布林值輸出資料行，並在遺失輸入資料行中的值時，將輸出值設為 true。 |
 
 ## <a name="normalization"></a>正規化
 

@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用 Enti
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5e0e7adad7ad2d679ccff2f1c6a421922ce2523d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 01e326b049ab8bb8d9c7f8c78acfc272d1d57ae9
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151014"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146130"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 實作基礎結構持續層
 
@@ -454,7 +454,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
   [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
 - **使用 HiLo 配合 Entity Framework Core 產生金鑰** \
-  [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
+  [*https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
 - **支援欄位** \
   [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)

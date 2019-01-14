@@ -51,7 +51,7 @@ ms.locfileid: "53150741"
 
 第一個步驟是建立應用程式基礎結構，包括應用程式定義、 兩個頁面，以及映像。
 
-1. 在 Visual Basic 或 Visual C# 中名為建立新的 WPF 應用程式專案**`ExpenseIt`**:
+1. 在 Visual Basic 或 Visual C# 中名為建立新的 WPF 應用程式專案 **`ExpenseIt`**:
 
    1. 開啟 Visual Studio，然後選取**檔案** > **新增** > **專案**。
 
@@ -132,15 +132,15 @@ ms.locfileid: "53150741"
 
 在本節中，您要在應用程式中加入兩頁網頁和一個影像。
 
-1. 將新的 WPF 頁面新增至專案，並將它命名*`ExpenseItHome.xaml`*:
+1. 將新的 WPF 頁面新增至專案，並將它命名 *`ExpenseItHome.xaml`* :
 
    1. 在 [**方案總管] 中**，以滑鼠右鍵按一下**`ExpenseIt`** 專案節點，然後選擇**新增** > **頁面**。
 
-   1. 在 [**加入新項目**] 對話方塊中，**頁面 (WPF)** 已選取範本。 輸入名稱**`ExpenseItHome`**，然後選取**新增**。
+   1. 在 [**加入新項目**] 對話方塊中，**頁面 (WPF)** 已選取範本。 輸入名稱 **`ExpenseItHome`** ，然後選取**新增**。
 
     此頁面是應用程式啟動時顯示的第一頁。 它會顯示一份可供選取，以顯示其費用報表的人員。
 
-2. 開啟*`ExpenseItHome.xaml`*。
+2. 開啟 *`ExpenseItHome.xaml`* 。
 
 3. 設定<xref:System.Windows.Controls.Page.Title%2A>到 「`ExpenseIt - Home`"。
 
@@ -156,7 +156,7 @@ ms.locfileid: "53150741"
 
 5. 設定<xref:System.Windows.Navigation.NavigationWindow.Source%2A>上的屬性<xref:System.Windows.Navigation.NavigationWindow>到 「`ExpenseItHome.xaml`"。
 
-    這會設定*`ExpenseItHome.xaml`* 是第一頁開啟 應用程式啟動時。 在 Visual Basic 中，您的 XAML 應該看起來如下：
+    這會設定 *`ExpenseItHome.xaml`* 是第一頁開啟 應用程式啟動時。 在 Visual Basic 中，您的 XAML 應該看起來如下：
 
     [!code-xaml[ExpenseIt#7_A](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml#7_a)]
 
@@ -171,11 +171,11 @@ ms.locfileid: "53150741"
 
 6. 將另一個新的 WPF 頁面新增至專案，並將它命名*ExpenseReportPage.xaml*::
 
-   1. 在 [**方案總管] 中**，以滑鼠右鍵按一下**`ExpenseIt`** 專案節點，然後選擇**新增** > **頁面**。
+   1. 在 [**方案總管] 中**，以滑鼠右鍵按一下 **`ExpenseIt`** 專案節點，然後選擇**新增** > **頁面**。
 
    1. 在 [**加入新項目**] 對話方塊中，**頁面 (WPF)** 已選取範本。 輸入名稱**ExpenseReportPage**，然後選取**新增**。
 
-    此頁面會顯示在所選取之人員的費用報表**`ExpenseItHome`** 頁面。
+    此頁面會顯示在所選取之人員的費用報表 **`ExpenseItHome`** 頁面。
 
 7. 開啟 *ExpenseReportPage.xaml*。
 
@@ -193,7 +193,7 @@ ms.locfileid: "53150741"
 
     當您建立新的分頁檔時，Visual Studio 會自動建立*程式碼後置*檔案。 這些程式碼後置檔案會處理用於回應使用者輸入的邏輯。
 
-    您的程式碼應該看起來像這樣的**`ExpenseItHome`**:
+    您的程式碼應該看起來像這樣的 **`ExpenseItHome`** :
 
     [!code-csharp[ExpenseIt#2_5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml.cs#2_5)]
     [!code-vb[ExpenseIt#2_5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseItHome.xaml.vb#2_5)]
@@ -235,9 +235,9 @@ ms.locfileid: "53150741"
 > [!TIP]
 > 如需詳細資訊<xref:System.Windows.Controls.Panel>項目，請參閱[面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)。 如需有關配置的詳細資訊，請參閱[版面配置](../../../../docs/framework/wpf/advanced/layout.md)。
 
-在區段中，您建立單欄資料表具有三個資料列和 10 個像素邊界添加資料行和資料列的定義，以便<xref:System.Windows.Controls.Grid>中*`ExpenseItHome.xaml`*。
+在區段中，您建立單欄資料表具有三個資料列和 10 個像素邊界添加資料行和資料列的定義，以便<xref:System.Windows.Controls.Grid>中 *`ExpenseItHome.xaml`* 。
 
-1. 開啟*`ExpenseItHome.xaml`*。
+1. 開啟 *`ExpenseItHome.xaml`* 。
 
 2. 設定<xref:System.Windows.FrameworkElement.Margin%2A>屬性上的<xref:System.Windows.Controls.Grid>"10,0,10,10 」，其對應到左、 上、 右和下邊界的項目：
 
@@ -264,7 +264,7 @@ ms.locfileid: "53150741"
 
 在本節中，您會更新 UI，讓使用者可以從選取以顯示費用報表的人員清單中的 [首頁] 頁面。 控制項是可讓使用者與您應用程式互動的 UI 物件。 如需詳細資訊，請參閱 [控制項](../../../../docs/framework/wpf/controls/index.md)。
 
-若要建立此 UI，您會新增下列項目，來*`ExpenseItHome.xaml`*:
+若要建立此 UI，您會新增下列項目，來 *`ExpenseItHome.xaml`* :
 
 - <xref:System.Windows.Controls.ListBox> （適用於的人員清單）。
 - <xref:System.Windows.Controls.Label> （適用於清單標頭）。
@@ -272,7 +272,7 @@ ms.locfileid: "53150741"
 
 每個控制項都會在資料列<xref:System.Windows.Controls.Grid>藉由設定<xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType>附加屬性。 如需有關附加屬性的詳細資訊，請參閱[附加屬性概觀](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。
 
-1. 開啟*`ExpenseItHome.xaml`*。
+1. 開啟 *`ExpenseItHome.xaml`* 。
 
 2. 加入下列 XAML 某處之間<xref:System.Windows.Controls.Grid>標記：
 
@@ -291,7 +291,7 @@ ms.locfileid: "53150741"
 
 在本節中，您將使用影像和網頁標題更新在首頁 UI。
 
-1. 開啟*`ExpenseItHome.xaml`*。
+1. 開啟 *`ExpenseItHome.xaml`* 。
 
 2. 新增另一個資料行<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>具有固定<xref:System.Windows.Controls.ColumnDefinition.Width%2A>230 像素的：
 
@@ -325,7 +325,7 @@ ms.locfileid: "53150741"
 
 ## <a name="add-code-to-handle-events"></a>加入程式碼來處理事件
 
-1. 開啟*`ExpenseItHome.xaml`*。
+1. 開啟 *`ExpenseItHome.xaml`* 。
 
 2. 新增<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式來<xref:System.Windows.Controls.Button>項目。 如需詳細資訊，請參閱[＜How to：建立簡單的事件處理常式](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)。
 
@@ -340,7 +340,7 @@ ms.locfileid: "53150741"
 
 ## <a name="create-the-ui-for-expensereportpage"></a>建立 ExpenseReportPage 的 UI
 
-*ExpenseReportPage.xaml*上選取的人員顯示的經費支出報表**`ExpenseItHome`** 頁面。 在本節中，您將建立的 UI **ExpenseReportPage**。 您也將新增的背景和填滿色彩，以各種不同的 UI 項目。
+*ExpenseReportPage.xaml*上選取的人員顯示的經費支出報表 **`ExpenseItHome`** 頁面。 在本節中，您將建立的 UI **ExpenseReportPage**。 您也將新增的背景和填滿色彩，以各種不同的 UI 項目。
 
 1. 開啟 *ExpenseReportPage.xaml*。
 
@@ -389,7 +389,7 @@ ms.locfileid: "53150741"
 
     請注意，樣式是資源和子系<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>屬性項目。 在這裡，樣式會套用至應用程式中的所有元素。 如需在.NET Framework 應用程式中使用資源的範例，請參閱[使用應用程式資源](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)。
 
-3. 開啟*`ExpenseItHome.xaml`*。
+3. 開啟 *`ExpenseItHome.xaml`* 。
 
 4. 取代之間的所有內容<xref:System.Windows.Controls.Grid>具有下列的 XAML 項目：
 
@@ -409,7 +409,7 @@ ms.locfileid: "53150741"
 
 在本節中，您將建立 XML 資料繫結至不同的控制項。
 
-1. 開啟*`ExpenseItHome.xaml`*。
+1. 開啟 *`ExpenseItHome.xaml`* 。
 
 2. 在開啟之後<xref:System.Windows.Controls.Grid>項目，加入下列 XAML 來建立<xref:System.Windows.Data.XmlDataProvider>包含的每個人資料：
 
@@ -435,7 +435,7 @@ ms.locfileid: "53150741"
 
 ## <a name="connect-data-to-controls"></a>連接至控制項的資料
 
-接下來，您要在其中加入程式碼，以擷取名稱上選取**`ExpenseItHome`** 頁面上，並將它傳遞給建構函式**ExpenseReportPage**。 **ExpenseReportPage**設定其資料內容，與傳遞的項目，它是由控制項的定義中*ExpenseReportPage.xaml*繫結至。
+接下來，您要在其中加入程式碼，以擷取名稱上選取 **`ExpenseItHome`** 頁面上，並將它傳遞給建構函式**ExpenseReportPage**。 **ExpenseReportPage**設定其資料內容，與傳遞的項目，它是由控制項的定義中*ExpenseReportPage.xaml*繫結至。
 
 1. 開啟 *ExpenseReportPage.xaml.vb* 或 *ExpenseReportPage.xaml.cs*。
 
@@ -444,7 +444,7 @@ ms.locfileid: "53150741"
     [!code-csharp[ExpenseIt#26](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseReportPage.xaml.cs#26)]
     [!code-vb[ExpenseIt#26](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt8/ExpenseReportPage.xaml.vb#26)]
 
-3. 開啟*`ExpenseItHome.xaml.vb`* 或是*`ExpenseItHome.xaml.cs`*。
+3. 開啟 *`ExpenseItHome.xaml.vb`* 或是 *`ExpenseItHome.xaml.cs`* 。
 
 4. 變更<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式呼叫新的建構函式傳遞所選人員的費用報表資料。
 

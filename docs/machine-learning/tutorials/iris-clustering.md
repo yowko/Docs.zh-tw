@@ -3,15 +3,15 @@ title: 使用叢集學習工具建立鳶尾花叢集 - ML.NET
 description: 了解如何在群集案例中使用 ML.NET
 author: pkulikov
 ms.author: johalex
-ms.date: 12/17/2018
+ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 012cea471c69f66ad9a61db858b4575606b31f74
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: ab888a2cd9469d5ce0131ba2b17f7c134cf2855c
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656319"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249069"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>教學課程：ML.NET 的使用叢集學習工具建立鳶尾花叢集
 
@@ -56,7 +56,7 @@ ms.locfileid: "53656319"
 
 ## <a name="prepare-the-data"></a>準備資料
 
-1. 下載 [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 資料集，並將它儲存到上一個步驟中建立的 *Data* 資料夾。 如需有關鳶尾花資料集的詳細資訊，請參閱[鳶尾花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)維基百科頁面和[鳶尾花資料集](http://archive.ics.uci.edu/ml/datasets/Iris)頁面 (也就是資料集的來源)。
+1. 下載 [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 資料集，並將它儲存到上一個步驟中建立的 *Data* 資料夾。 如需有關鳶尾花資料集的詳細資訊，請參閱[鳶尾花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)維基百科頁面和[鳶尾花資料集](https://archive.ics.uci.edu/ml/datasets/Iris)頁面 (也就是資料集的來源)。
 
 1. 以滑鼠右鍵按一下 [方案總管] 中的 *iris.data* 檔案，然後選取 [內容]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
 
@@ -84,9 +84,9 @@ ms.locfileid: "53656319"
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` 是輸入資料類別，它含有資料集中每個特徵的定義。 請使用 [Column](xref:Microsoft.ML.Runtime.Api.ColumnAttribute) 屬性來指定資料集檔案中來源資料行的索引。
+`IrisData` 是輸入資料類別，它含有資料集中每個特徵的定義。 請使用 [Column](xref:Microsoft.ML.Data.ColumnAttribute) 屬性來指定資料集檔案中來源資料行的索引。
 
-`ClusterPrediction` 類別代表套用至 `IrisData` 執行個體的群集模型結果。 使用 [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) 屬性分別將 `PredictedClusterId` 和 `Distances` 欄位繫結至 **PredictedLabel** 和 **Score** 資料行。 群集這些資料行的工作具有下列意義：
+`ClusterPrediction` 類別代表套用至 `IrisData` 執行個體的群集模型結果。 使用 [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) 屬性分別將 `PredictedClusterId` 和 `Distances` 欄位繫結至 **PredictedLabel** 和 **Score** 資料行。 群集這些資料行的工作具有下列意義：
 
 - **PredictedLabel** 資料行包含預測群集的 ID。
 - **Score** 資料行包含平方歐幾里得距離到群集矩心的陣列。 陣列長度等於群集數目。
@@ -127,9 +127,9 @@ ms.locfileid: "53656319"
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-請注意，資料行名稱和索引會符合 `IrisData` 類別所定義的結構描述。 <xref:Microsoft.ML.Runtime.Data.DataKind.R4?displayProperty=nameWithType> 值指定 `float` 類型。
+請注意，資料行名稱和索引會符合 `IrisData` 類別所定義的結構描述。 <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> 值指定 `float` 類型。
 
-使用具現化的 <xref:Microsoft.ML.Runtime.Data.TextLoader> 執行個體來建立 <xref:Microsoft.ML.Runtime.Data.IDataView> 執行個體，以表示定型資料集的資料來源：
+使用具現化的 <xref:Microsoft.ML.Data.TextLoader> 執行個體來建立 <xref:Microsoft.ML.Data.IDataView> 執行個體，以表示定型資料集的資料來源：
 
 [!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 
@@ -160,7 +160,7 @@ ms.locfileid: "53656319"
 
 ## <a name="use-the-model-for-predictions"></a>使用模型來進行預測
 
-為了進行預測，請使用 <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> 類別，其帶領輸入類型的執行個體通過轉換程式管線，並產生輸出類型的執行個體。 將下列程式碼行新增至 `Main` 方法，以建立該類別的執行個體：
+為了進行預測，請使用 <xref:Microsoft.ML.PredictionEngine%602> 類別，其帶領輸入類型的執行個體通過轉換程式管線，並產生輸出類型的執行個體。 將下列程式碼行新增至 `Main` 方法，以建立該類別的執行個體：
 
 [!code-csharp[Create predictor](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Predictor)]
 

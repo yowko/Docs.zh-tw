@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: d360db7b9b740bef997327dda9b628c1edab0f35
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6e485bc80a213be6a5d0da8a00c8ca718f867efb
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242564"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222932"
 ---
 # <a name="while-c-reference"></a>while (C# 參考)
 
@@ -37,8 +37,8 @@ ms.locfileid: "53242564"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)  
-- [C# 程式設計指南](../../programming-guide/index.md)  
-- [C# 關鍵字](index.md)  
-- [反覆運算陳述式](iteration-statements.md)  
-- [do 陳述式](do.md)  
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 關鍵字](index.md)
+- [反覆運算陳述式](iteration-statements.md)
+- [do 陳述式](do.md)

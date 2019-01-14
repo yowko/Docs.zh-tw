@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解領�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: f348e1dbb65f37f625c1dec243364af683c99b8a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d48c78e6ea63ea1a2f3dbfea6b9fec646493c751
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153679"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148067"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>設計領域模型層中的驗證
 
@@ -103,7 +103,7 @@ public void SetAddress(string line1, string line2,
   [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
 - **Colin Jack：領域模型驗證** \
-  [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+  [*https://colinjack.blogspot.com/2008/03/domain-model-validation.html*](https://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
 - **Jimmy Bogard：DDD 世界中的驗證** \
   [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)

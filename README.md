@@ -10,7 +10,7 @@
 
 歡迎您參與協助我們改進及完成 .NET 文件。若要參與，請參閱 [.NET 社群參與者專案](https://github.com/dotnet/docs/projects/35)進行了解。 [參與指南](CONTRIBUTING.md)包含所用程序的指示。 除此之外，您也可以查看[問題清單](https://github.com/dotnet/docs/issues)，從中尋找您關注的工作。
 
-我們期望 [Xamarin](https://docs.microsoft.com/xamarin)、[Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) 及 [Unity](http://docs.unity3d.com/Manual/index.html) 也能使用此文件。
+我們期望 [Xamarin](https://docs.microsoft.com/xamarin)、[Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) 及 [Unity](https://docs.unity3d.com/Manual/index.html) 也能使用此文件。
 
 此專案採納了 Contributor Covenant 定義的行為守則來規範社群中的行為。
 如需詳細資訊，請參閱 [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct) (.NET Foundation 行為守則)。

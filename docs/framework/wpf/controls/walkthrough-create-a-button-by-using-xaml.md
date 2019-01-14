@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 96d54efbabbd95a24f1fb7118305ddbff4dfd110
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a28a027e3b804de8e40d8c7831e7556cc7f55188
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525347"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249147"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>逐步解說：使用 XAML 建立按鈕
 本逐步解說的目的是要了解如何在 Windows Presentation Foundation (WPF) 應用程式中建立動畫的按鈕，供使用。 本逐步解說會使用樣式和範本來建立自訂的按鈕資源可讓您重複使用程式碼及從按鈕宣告按鈕的邏輯分隔開來。 本逐步解說完全在撰寫[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -28,9 +28,9 @@ ms.locfileid: "43525347"
   
 1.  啟動 Visual Studio。  
   
-2.  **建立新的 WPF 專案：** 上**檔案**功能表上，指向**新增**，然後按一下**專案**。 尋找**Windows 應用程式 (WPF)** 範本並將專案命名為"AnimatedButton 」。 這會建立應用程式的基本架構。  
+2.  **建立新的 WPF 專案：** 在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。 尋找**Windows 應用程式 (WPF)** 範本並將專案命名為"AnimatedButton 」。 這會建立應用程式的基本架構。  
   
-3.  **加入基本的預設按鈕：** 對於此逐步解說所需的所有檔案所都提供的範本。 按一下方案總管 中按兩下，開啟 Window1.xaml 檔案。 根據預設，沒有<xref:System.Windows.Controls.Grid>Window1.xaml 中的項目。 移除<xref:System.Windows.Controls.Grid>項目並將幾個按鈕加入[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]式輸入或複製並貼上下列反白顯示的程式碼，以 Window1.xaml 頁面：  
+3.  **新增基本的預設按鈕：** 範本會提供本逐步解說所需的所有檔案。 按一下方案總管 中按兩下，開啟 Window1.xaml 檔案。 根據預設，沒有<xref:System.Windows.Controls.Grid>Window1.xaml 中的項目。 移除<xref:System.Windows.Controls.Grid>項目並將幾個按鈕加入[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]式輸入或複製並貼上下列反白顯示的程式碼，以 Window1.xaml 頁面：  
   
     ```xaml  
     <Window x:Class="AnimatedButton.Window1"  
@@ -121,7 +121,7 @@ ms.locfileid: "43525347"
   
 #### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>若要使用的範本定義按鈕的外觀  
   
-1.  **將範本設定：** 控制項，例如因為<xref:System.Windows.Controls.Button>有<xref:System.Windows.Controls.Control.Template%2A>屬性，您可以定義範本的屬性值，如同我們已在中設定的其他屬性值<xref:System.Windows.Style>使用<xref:System.Windows.Setter>。 按鈕樣式中加入下列反白顯示的標記。  
+1.  **將範本設定：** 因為控制項，例如<xref:System.Windows.Controls.Button>有<xref:System.Windows.Controls.Control.Template%2A>屬性，您可以定義範本的屬性值，就像我們已在中設定的其他屬性值一樣<xref:System.Windows.Style>使用<xref:System.Windows.Setter>。 按鈕樣式中加入下列反白顯示的標記。  
   
     ```xaml
     <Application.Resources>  
@@ -144,7 +144,7 @@ ms.locfileid: "43525347"
     </Application.Resources>  
     ```  
   
-2.  **Alter 按鈕簡報：** 這個時候，您需要定義範本。 新增下列醒目提示的標記。 此標記會指定兩個<xref:System.Windows.Shapes.Rectangle>具有圓角邊緣、 項目後面<xref:System.Windows.Controls.DockPanel>。 <xref:System.Windows.Controls.DockPanel>用來裝載<xref:System.Windows.Controls.ContentPresenter>的按鈕。 A<xref:System.Windows.Controls.ContentPresenter>顯示按鈕的內容。 在本逐步解說中，內容會是文字 （"按鈕 1 」、 「 按鈕 2 」、 「 按鈕 3 」）。 所有範本的元件 (矩形， <xref:System.Windows.Controls.DockPanel>) 內的配置<xref:System.Windows.Controls.Grid>。  
+2.  **Alter 按鈕簡報：** 此時，您需要定義範本。 新增下列醒目提示的標記。 此標記會指定兩個<xref:System.Windows.Shapes.Rectangle>具有圓角邊緣、 項目後面<xref:System.Windows.Controls.DockPanel>。 <xref:System.Windows.Controls.DockPanel>用來裝載<xref:System.Windows.Controls.ContentPresenter>的按鈕。 A<xref:System.Windows.Controls.ContentPresenter>顯示按鈕的內容。 在本逐步解說中，內容會是文字 （"按鈕 1 」、 「 按鈕 2 」、 「 按鈕 3 」）。 所有範本的元件 (矩形， <xref:System.Windows.Controls.DockPanel>) 內的配置<xref:System.Windows.Controls.Grid>。  
   
     ```xaml  
     <Setter.Value>  
@@ -167,7 +167,7 @@ ms.locfileid: "43525347"
   
      ![](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
-3.  **新增至範本的 glasseffect:** 接下來您將在其中加入半透明效果。 首先，您會建立一些建立透明的漸層效果的資源。 漸層停駐將這些資源加入任何位置內`Application.Resources`區塊：  
+3.  **將 glasseffect 新增到範本：** 接下來您要加入半透明效果。 首先，您會建立一些建立透明的漸層效果的資源。 漸層停駐將這些資源加入任何位置內`Application.Resources`區塊：  
   
     ```xaml  
     <Application.Resources>  
@@ -187,7 +187,7 @@ ms.locfileid: "43525347"
   
      這些資源用做<xref:System.Windows.Shapes.Shape.Fill%2A>我們插入矩形<xref:System.Windows.Controls.Grid>的 [按鈕] 範本。 將下列反白顯示的標記加入至範本。  
   
-    ```  
+    ```xaml
     <Setter.Value>  
       <ControlTemplate TargetType="{x:Type Button}">  
         <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"  
@@ -249,13 +249,13 @@ ms.locfileid: "43525347"
 ## <a name="create-button-interactivity"></a>建立按鈕互動性  
  在本節中，您將建立屬性觸發程序和事件觸發程序來變更屬性值，執行動畫，以回應使用者動作，例如將滑鼠指標移到按鈕上方，然後按一下。  
   
- 加入互動功能 （滑鼠停留、 滑鼠離開，按一下，等等） 的簡單方法是定義您的範本或樣式中的觸發程序。 若要建立<xref:System.Windows.Trigger>，例如將"condition"屬性定義: [] 按鈕<xref:System.Windows.UIElement.IsMouseOver%2A>屬性值等於`true`。 然後，您會定義觸發程序條件為 true 時，會發生的 setter （動作）。  
+ 加入互動功能 （滑鼠停留、 滑鼠離開，按一下，等等） 的簡單方法是定義您的範本或樣式中的觸發程序。 若要建立<xref:System.Windows.Trigger>，例如將"condition"屬性定義：[] 按鈕<xref:System.Windows.UIElement.IsMouseOver%2A>屬性值等於`true`。 然後，您會定義觸發程序條件為 true 時，會發生的 setter （動作）。  
   
 #### <a name="to-create-button-interactivity"></a>若要建立按鈕互動性  
   
 1.  **新增範本觸發程序：** 將反白顯示的標記新增至您的範本。  
   
-    ```  
+    ```xaml
     <Setter.Value>  
       <ControlTemplate TargetType="{x:Type Button}">  
         <Grid Width="{TemplateBinding Width}"   
@@ -320,7 +320,7 @@ ms.locfileid: "43525347"
   
 2.  **新增屬性觸發程序：** 反白顯示將標記新增至`ControlTemplate.Triggers`區塊：  
   
-    ```  
+    ```xaml
     <ControlTemplate.Triggers>  
   
       <!-- Set properties when mouse pointer is over the button. -->   <Trigger Property="IsMouseOver" Value="True">     <!-- Below are three property settings that occur when the           condition is met (user mouses over button).  -->     <!-- Change the color of the outer rectangle when user           mouses over it. -->     <Setter Property ="Rectangle.Stroke" TargetName="outerRectangle"       Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />     <!-- Sets the glass opacity to 1, therefore, the           glass "appears" when user mouses over it. -->     <Setter Property="Rectangle.Opacity" Value="1" TargetName="glassCube" />     <!-- Makes the text slightly blurry as though you           were looking at it through blurry glass. -->     <Setter Property="ContentPresenter.BitmapEffect"        TargetName="myContentPresenter">       <Setter.Value>         <BlurBitmapEffect Radius="1" />       </Setter.Value>     </Setter>   </Trigger>  
@@ -330,9 +330,9 @@ ms.locfileid: "43525347"
   
      按 f5 鍵執行應用程式，並查看效果，當您執行到按鈕的滑鼠指標。  
   
-3.  **新增焦點的觸發程序：** 接下來，我們要在其中加入一些類似的 setter 來處理的情況，當按鈕具有焦點 （例如，在使用者按一下它之後）。  
+3.  **新增焦點觸發程序：** 接下來，我們將新增一些類似的 setter 來處理的情況，當按鈕具有焦點 （例如，在使用者按一下它之後）。  
   
-    ```  
+    ```xaml  
     <ControlTemplate.Triggers>  
   
       <!-- Set properties when mouse pointer is over the button. -->  
@@ -361,9 +361,9 @@ ms.locfileid: "43525347"
   
      按 f5 鍵執行應用程式，然後按一下其中一個按鈕。 請注意，[] 按鈕之後會保持反白顯示您按一下它因為它仍具有焦點。 如果您按一下另一個按鈕時，[新增] 按鈕時的最後一個會失去它，就會取得焦點。  
   
-4.  **新增動畫**<xref:System.Windows.UIElement.MouseEnter> **並** <xref:System.Windows.UIElement.MouseLeave> **:** 接下來我們將一些動畫新增至觸發程序。 新增下列任何一處內的標記`ControlTemplate.Triggers`區塊。  
+4.  **新增動畫**<xref:System.Windows.UIElement.MouseEnter> **並** <xref:System.Windows.UIElement.MouseLeave> **:** 接下來我們加入一些動畫觸發程序。 新增下列任何一處內的標記`ControlTemplate.Triggers`區塊。  
   
-    ```  
+    ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
     <EventTrigger RoutedEvent="Mouse.MouseEnter">  
       <EventTrigger.Actions>  
@@ -398,9 +398,9 @@ ms.locfileid: "43525347"
   
      第二個事件觸發程序 (<xref:System.Windows.UIElement.MouseLeave>) 只會停止第一個。 當您停止<xref:System.Windows.Media.Animation.Storyboard>，所有動畫的屬性會傳回為其預設值。 因此，當使用者移出按鈕的指標，按鈕會回到之前的滑鼠游標移到按鈕的方式。 如需動畫的詳細資訊，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
   
-5.  **新增按一下按鈕時的動畫：** 最後一個步驟是新增當使用者按一下按鈕的觸發程序。 新增下列任何一處內的標記`ControlTemplate.Triggers`區塊：  
+5.  **加入按一下按鈕時的動畫：** 最後一個步驟是新增的觸發程序，當使用者按一下按鈕。 新增下列任何一處內的標記`ControlTemplate.Triggers`區塊：  
   
-    ```  
+    ```xaml
     <!-- Animation fires when button is clicked, causing glass to spin.  -->  
     <EventTrigger RoutedEvent="Button.Click">  
       <EventTrigger.Actions>  

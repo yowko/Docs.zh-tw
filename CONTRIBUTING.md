@@ -140,7 +140,7 @@ C# 互動式體驗改變了我們使用範例的方式。 訪客可以執行範�
 
 ## <a name="contributor-license-agreement"></a>參與者授權合約
 
-您必須先簽署 [.NET Foundation 貢獻授權合約 (CLA)](https://cla.dotnetfoundation.org)，才能合併您的 PR。 這是針對 .NET Foundation 中專案的單次要求。 您可於 Wikipedia 上閱讀更多關於[貢獻授權合約 (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement) 的資訊。
+您必須先簽署 [.NET Foundation 貢獻授權合約 (CLA)](https://cla.dotnetfoundation.org)，才能合併您的 PR。 這是針對 .NET Foundation 中專案的單次要求。 您可於 Wikipedia 上閱讀更多關於[貢獻授權合約 (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) 的資訊。
 
 合約：[net-foundation-contribution-license-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 
