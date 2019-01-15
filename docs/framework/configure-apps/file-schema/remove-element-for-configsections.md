@@ -1,5 +1,5 @@
 ---
-title: '&lt;移除&gt;元素&lt;c&gt;'
+title: '&lt;移除&gt;項目&lt;configSections&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/remove
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 6555981edeb6f7f088fb12c710d0146cf58d5be1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 11a930120c375616d73faae68a6d6807c2f633cb
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752412"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307223"
 ---
-# <a name="remove-element-for-configsections"></a>\<移除 > 項目\<c >
+# <a name="remove-element-for-configsections"></a>\<移除 > 項目\<configSections >
 
-預先定義的區段或區段群組中移除。
+移除預先定義的區段或區段群組。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<c >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<移除 >**
+&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>語法
 
@@ -34,27 +34,27 @@ ms.locfileid: "32752412"
 
 |           | 描述 |
 | --------- | ----------- |
-| **name**  | 必要屬性。<br><br>指定區段或要移除的區段群組的名稱。 |
+| **name**  | 必要屬性。<br><br>指定要移除的區段群組之區段的名稱。 |
 
 ## <a name="parent-element"></a>父項目
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<c >** 項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
+| [**\<configSections >** 項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
 
-# <a name="child-elements"></a>子元素
+## <a name="child-elements"></a>子元素
 
 無
 
 ## <a name="remarks"></a>備註
 
-您可以使用**\<移除 >** 項目區段或區段群組中移除您已在組態檔階層架構中較高層級定義的應用程式。
+您可以使用**\<移除 >** 區段和區段群組中移除您的應用程式組態檔階層架構中較高層級所定義的項目。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用**\<移除 >** 應用程式組態檔移除電腦組態檔中預先定義的區段中的項目。
+下列範例示範如何使用**\<移除 >** 應用程式組態檔，以移除先前在電腦組態檔中定義的區段中的項目。
 
-下列的機器組態檔案程式碼會宣告區段 **\<sampleSection >**:
+下列的機器組態檔案程式碼會宣告一節 **\<sampleSection >**:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ ms.locfileid: "32752412"
 </configuration>
 ```
 
-下列應用程式組態檔程式碼會移除 **\<sampleSection >** > 一節。 移除後，應用程式無法擷取中的設定 **\<sampleSection >**。
+下列應用程式組態檔程式碼中移除 **\<sampleSection >** 一節。 移除後，應用程式無法擷取中的設定 **\<sampleSection >**。
 
 ```xml
 <!-- Application configuration file -->
@@ -82,8 +82,8 @@ ms.locfileid: "32752412"
 
 ## <a name="configuration-file"></a>組態檔
 
-此項目可以用於應用程式組態檔中，電腦組態檔 (*Machine.config*)，和*Web.config*不在應用程式目錄層級的檔案。
+這個項目可用的應用程式組態檔中，電腦組態檔 (*Machine.config*)，以及*Web.config*不在應用程式的目錄層級的檔案。
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
+[適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

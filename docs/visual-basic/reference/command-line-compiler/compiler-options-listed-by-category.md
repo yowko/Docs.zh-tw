@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 2723104de8a583dc09f2fcfdd91a4119c5dec6d9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 55127a1a4afd8a677ef72d79ebf00debc15404e7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200962"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307548"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>依分類列出 Visual Basic 編譯器選項
 Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 (IDE) 內編譯程式的替代方案。 以下是 Visual Basic 命令列編譯器選項，依功能分類排序的清單。  
@@ -83,7 +83,7 @@ Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 
   
 |選項|用途|  
 |---|---|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定語言版本： 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0。|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定語言版本：9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|強制執行變數的明確宣告。|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|強制執行嚴格類型語意。|  
 |[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|指定字串比較是否應為二進位，或是使用地區設定特定的文字語意。|  
@@ -124,10 +124,10 @@ Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 
 |[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|指定編譯器在編譯時不應使用 Visual Basic 執行階段程式庫的參考，或應使用特定執行階段程式庫的參考。|  
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|識別要內嵌到專案的可攜式執行檔 (PE) 中的使用者定義 Win32 應用程式資訊清單檔。|  
 |`-parallel[+&#124;-]`|指定是否要使用並行組建 (+)。|  
-|`-checksumalgorithm:<alg>`|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設值) 或 SHA256。|  
+|`-checksumalgorithm:<alg>`|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 （預設值） 或 SHA256。|  
   
 ## <a name="see-also"></a>另請參閱  
  [依字母順序列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [專案設計工具簡介](https://msdn.microsoft.com/en-us/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
+ [專案設計工具簡介](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
  [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)
