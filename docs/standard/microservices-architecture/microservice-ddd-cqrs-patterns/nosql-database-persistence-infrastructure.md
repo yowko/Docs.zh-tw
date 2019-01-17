@@ -134,14 +134,14 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 Cosmos DB 資料庫支援 MongoDB API for .NET 以及原生 MongoDB 有線通訊協定。 這表示使用現有的驅動程式，針對 MongoDB 所撰寫的應用程式現在可以與 Cosmos DB 通訊，且使用 Cosmos DB 資料庫，而不是使用 MongoDB 資料庫，如圖 7-20 所示。
 
 ![Cosmos DB 支援 MongoDB API for .NET 和 MongoDB 有線通訊協定，您可以輕鬆地從 MongoDb 切換至 Cosmos DB](./media/image19.2.png)
-** 圖 7-20**。 使用 MongoDB API 和通訊協定存取 Azure Cosmos DB
+**圖 7-20**。 使用 MongoDB API 和通訊協定存取 Azure Cosmos DB
 
 這是含 Linux 容器之 Docker 環境中概念證明的極方便使用方法，因為 [MongoDB Docker 映像](https://hub.docker.com/r/_/mongo/)是支援 Docker Linux 容器和 Docker Windows 容器的多架構映像。
 
 如下圖所示，使用 MongoDB API，eShopOnContainers 可支援 MongoDB Linux 和 Windows 容器開發本機環境，但您接著只要[變更 MongoDB 連接字串以指向 Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)，就可以移至可擴充的 PaaS 雲端解決方案作為 Azure Cosmos DB。
 
 ![eShopOnContainers 中的位置微服務使用 MongoDB 實作，但只要變更連接字串就可以切換到 Cosmos DB。](./media/image20-bis.png)
-** 圖 7-21**。 將 MongoDB 容器用於開發環境或將 Azure Cosmos DB 用於生產環境的 eShopOnContainers
+**圖 7-21**。 將 MongoDB 容器用於開發環境或將 Azure Cosmos DB 用於生產環境的 eShopOnContainers
 
 生產 Azure Cosmos DB 將會以 PaaS 和可擴充服務形式執行於 Azure 的雲端。
 

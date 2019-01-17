@@ -113,7 +113,7 @@ Assert 方法 | 功能
 
    請注意，您在 `TestStartsWithUpper` 方法中的大寫字元測試包含希臘文大寫字母 alpha (U+0391) 和斯拉夫文大寫字母 EM (U+041C)，`TestDoesNotStartWithUpper` 方法中的小寫字元測試包含希臘文小寫字母 alpha (U+03B1) 和斯拉夫文小寫字母 Ghe (U+0433)。
 
-1. 在功能表列上，選取 [檔案] >  [將 UnitTest1.cs As 另存為]。 在 **[另存新檔]** 對話方塊中，選擇 **[儲存]** 按鈕旁的箭號，然後選擇 **[以編碼方式儲存]***。
+1. 在功能表列上，選取 [檔案] >  [將 UnitTest1.cs As 另存為]。 在 **[另存新檔]** 對話方塊中，選擇 **[儲存]** 按鈕旁的箭號，然後選擇 **[以編碼方式儲存]**。
 
    ![Visual Studio [另存新檔] 對話方塊 - C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
@@ -123,7 +123,7 @@ Assert 方法 | 功能
 
    請注意，您在 `TestStartsWithUpper` 方法中的大寫字元測試包含希臘文大寫字母 alpha (U+0391) 和斯拉夫文大寫字母 EM (U+041C)，`TestDoesNotStartWithUpper` 方法中的小寫字元測試包含希臘文小寫字母 alpha (U+03B1) 和斯拉夫文小寫字母 Ghe (U+0433)。
 
-1. 在功能表列上，選取 [檔案] > [將 UnitTest1.vb 另存為]。 在 **[另存新檔]** 對話方塊中，選擇 **[儲存]** 按鈕旁的箭號，然後選擇 **[以編碼方式儲存]***。
+1. 在功能表列上，選取 [檔案] > [將 UnitTest1.vb 另存為]。 在 **[另存新檔]** 對話方塊中，選擇 **[儲存]** 按鈕旁的箭號，然後選擇 **[以編碼方式儲存]**。
 
    ![Visual Studio [另存新檔] 對話方塊 - Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 ---
