@@ -1,9 +1,10 @@
-# [快速入門](index.md)
-## [C# 語言和 .NET Framework 簡介](introduction-to-the-csharp-language-and-the-net-framework.md)
-## [在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](../../core/tutorials/with-visual-studio.md)
-### [使用 Visual Studio 2017 針對您的 C# Hello World 應用程式進行偵錯](../../core/tutorials/debugging-with-visual-studio.md)
-### [使用 Visual Studio 2017 發行您的 Hello World 應用程式](../../core/tutorials/publishing-with-visual-studio.md)
-## [在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](../../core/tutorials/library-with-visual-studio.md)
-### [在 Visual Studio 2017 中使用 .NET Core 測試類別庫](../../core/tutorials/testing-library-with-visual-studio.md)
-### [使用 Visual Studio 2017 中的 .NET Standard 程式庫](../../core/tutorials/consuming-library-with-visual-studio.md)
-## [C# 與 Visual Studio Code 使用者入門](../../core/tutorials/with-visual-studio-code.md)
+---
+ms.openlocfilehash: 899f6c8a4b6ee8bfb09ce7f380cfa08c2f93b2e1
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362823"
+---
+# [Getting Started](index.md)
+## [Introduction to the C# language and the .NET framework](introduction-to-the-csharp-language-and-the-net-framework.md)
