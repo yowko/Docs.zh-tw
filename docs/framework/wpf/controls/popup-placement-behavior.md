@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 6f1fb6fa7702d36aa7ddf4c12fe4a370f4e66e23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99875de320d6728fdacb55c153064c5c1267efdf
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528788"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362921"
 ---
 # <a name="popup-placement-behavior"></a>快顯功能表放置行為
 A<xref:System.Windows.Controls.Primitives.Popup>控制項會顯示在不同的視窗會漂浮在應用程式的內容。 您可以指定的位置<xref:System.Windows.Controls.Primitives.Popup>相對於控制項、 滑鼠或使用螢幕<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>， <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>， <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，和<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>屬性。  若要讓您靈活地指定的位置，這些屬性一起運作<xref:System.Windows.Controls.Primitives.Popup>。  
@@ -36,7 +36,7 @@ A<xref:System.Windows.Controls.Primitives.Popup>控制項會顯示在不同的�
  這個簡單的範例示範如何設定<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>並<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>屬性，但使用<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，和<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>屬性，您可以更多控制的位置<xref:System.Windows.Controls.Primitives.Popup>位於。  
   
 <a name="Definitions"></a>   
-## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>詞彙定義︰快顯剖析  
+## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>詞彙的定義：快顯剖析  
  下列詞彙可協助您了解如何<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>， <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>， <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，並<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>相互關聯屬性和<xref:System.Windows.Controls.Primitives.Popup>:  
   
 -   目標物件  
@@ -228,4 +228,4 @@ Placement 為 Mouse 且快顯遇到畫面下邊緣
  您可以設定連線，來自訂目標原點和快顯對齊點<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>屬性設<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>。 然後定義<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>傳回一組可能的位置點和主要軸 （依偏好順序） 的委派<xref:System.Windows.Controls.Primitives.Popup>。 顯示的最大部分的點<xref:System.Windows.Controls.Primitives.Popup>已選取。  位置<xref:System.Windows.Controls.Primitives.Popup>會自動調整，如果<xref:System.Windows.Controls.Primitives.Popup>畫面邊緣遮住。 如需範例，請參閱[指定自訂快顯位置](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [快顯位置範例](https://go.microsoft.com/fwlink/?LinkID=160032)
+ [快顯位置範例](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)
