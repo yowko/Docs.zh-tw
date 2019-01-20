@@ -2,12 +2,12 @@
 title: 選取 Visual Basic 語言版本
 description: 設定編譯器執行特定編譯器版本搭配使用的語法驗證。
 ms.date: 05/24/2018
-ms.openlocfilehash: 7628b5a7c27f5b26171d42e44a58598ef3d5d49f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194718"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415100"
 ---
 # <a name="select-the-visual-basic-language-version"></a>選取 Visual Basic 語言版本
 
@@ -60,7 +60,7 @@ Visual Basic 編譯器會預設為最新的主要版本已發行的語言。 您
 </Project>
 ```
 
-現在，每個子目錄包含該檔案的目錄中的組建將會使用 Visual Basic 15.5 版語法。 如需詳細資訊，請參閱[自訂組建](/visualstudio/msbuild/customize-your-build.md)。
+現在，每個子目錄包含該檔案的目錄中的組建將會使用 Visual Basic 15.5 版語法。 如需詳細資訊，請參閱[自訂組建](/visualstudio/msbuild/customize-your-build)。
 
 ## <a name="set-the-langversion-compiler-option"></a>設定 langversion 編譯器選項
 

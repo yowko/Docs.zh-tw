@@ -2,12 +2,12 @@
 title: 從 .NET 遠端處理移轉到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245674"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415971"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>從 .NET 遠端處理移轉到 WCF
 此文章說明如何將使用 .NET 遠端處理的應用程式移轉為使用 Windows Communication Foundation (WCF)。 此文章會先比較這這些產品的類似概念，再說明如何在 WCF 中完成幾個常見的遠端處理案例。  
@@ -307,9 +307,9 @@ catch (FaultException<CustomerServiceFault> fault)
   
  將遠端處理應用程式移轉至 WCF 之後，還必須移除與 .NET 遠端處理的相依性。 如此可確保移除應用程式中的任何遠端處理安全性弱點。 這些步驟包括：  
   
--   **停用 MarshalByRefObject。** MarshalByRefObject 類型只適用於遠端處理，而且不會由 WCF 使用。 任何具有子類別 MarshalByRefObject 的應用程式類型都應予以移除或變更。 MarshalByRefObject 類型只適用於遠端處理，而且不會由 WCF 使用。 任何具有子類別 MarshalByRefObject 的應用程式類型都應予以移除或變更。  
+-   **停用 MarshalByRefObject。** MarshalByRefObject 類型只適用於遠端處理，而且不會由 WCF 使用。 任何具有子類別 MarshalByRefObject 的應用程式類型都應予以移除或變更。  
   
--   **停止使用 [Serializable] 與 ISerializable。** [Serializable] 屬性與 ISerializable 介面原本是為了在信任的環境中序列化類型所設計，而且由遠端處理使用。 WCF 序列化必須以 [DataContract] 與 [DataMember] 來標記類型。 應用程式所使用的資料類型應該修改為使用 [DataContract]，而不是使用 ISerializable 或 [Serializable]。 [Serializable] 屬性與 ISerializable 介面原本是為了在信任的環境中序列化類型所設計，而且由遠端處理使用。 WCF 序列化必須以 [DataContract] 與 [DataMember] 來標記類型。 應用程式所使用的資料類型應該修改為使用 [DataContract]，而不是使用 ISerializable 或 [Serializable]。  
+-   **停止使用 [Serializable] 與 ISerializable。** [Serializable] 屬性與 ISerializable 介面原本是為了在信任的環境中序列化類型所設計，而且由遠端處理使用。 WCF 序列化必須以 [DataContract] 與 [DataMember] 來標記類型。 應用程式所使用的資料類型應該修改為使用 [DataContract]，而不是使用 ISerializable 或 [Serializable]。  
   
 ### <a name="migration-scenarios"></a>移轉案例  
  現在我們來看看如何在 WCF 中完成下列常見的遠端處理案例：  

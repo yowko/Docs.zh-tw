@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b81e7c2ffabdee78af34d00c48fb29c7525dea08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410464"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415945"
 ---
 # <a name="debugging-enumerations"></a>偵錯列舉
 本節說明偵錯 API 所使用的 Unmanaged 列舉。  
@@ -44,13 +44,13 @@ ms.locfileid: "33410464"
  提供可用的呼叫中的其他偵錯選項[icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)方法。  
   
  [CorDebugDebugEventKind 列舉](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
- 表示由解碼其資訊的事件類型[DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)方法。  
+ 表示的事件解碼其資訊的型別[DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)方法。  
   
  [CorDebugDecodeEventFlagsWindows 列舉](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
  提供 Windows 平台上之偵錯事件的其他資訊。  
   
  CorDebugExceptionCallbackType  
- 表示從進行的回呼類型[icordebugmanagedcallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。  
+ 表示一種從進行的回呼[ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。  
   
  [CorDebugExceptionFlags 列舉](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)  
  提供例外狀況的其他相關資訊。  
@@ -83,7 +83,7 @@ ms.locfileid: "33410464"
  包含會影響 Managed Just-In-Time (JIT) 編譯器行為的值。  
   
  [CorDebugJITCompilerFlagsDeprecated 列舉](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflagsdeprecated-enumeration.md)  
- 已過時。 使用`CORDEBUG_JIT_DEFAULT`隸屬[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列舉改為。  
+ 已過時。 使用`CORDEBUG_JIT_DEFAULT`隸屬[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列舉改。  
   
  CorDebugMappingResult  
  提供如何取得指令指標 (IP) 值的詳細資料。  
@@ -134,11 +134,13 @@ ms.locfileid: "33410464"
  指出在切換偵錯/追蹤時所執行的作業。  
   
  [VariableLocationType 列舉](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)  
- 表示變數的原生的位置類型。  
+ 表示變數的原生位置型別。  
   
  [WriteableMetadataUpdateMode 列舉](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
- 提供值來指定偵錯工具是否可以看見對中繼資料的記憶體中更新。  
-  
+ 提供值來指定偵錯工具是否可以看見對中繼資料的記憶體中更新。 
+
+ [ClrDataSourceType 列舉](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)提供 CLRDATA_IL_ADDRESS_MAP 結構所使用的值。
+
 ## <a name="related-sections"></a>相關章節  
  [偵錯 Coclass](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   

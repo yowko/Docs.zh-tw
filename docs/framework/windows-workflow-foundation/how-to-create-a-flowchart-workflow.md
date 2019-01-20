@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 185d46d041ee342962c624ad6a3592e5a426cc6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502147"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415243"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>HOW TO：建立流程圖工作流程
-工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步解說如何建立這類使用內建活動的工作流程<xref:System.Activities.Statements.Flowchart>活動和自訂活動，從先前[How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
+工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步解說如何建立這類使用內建活動的工作流程<xref:System.Activities.Statements.Flowchart>活動，並從先前的自訂活動[How to:建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
   
 > [!NOTE]
->  「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成本主題，您必須先完成[How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)。  
+>  「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成本主題，您必須先完成[How to:建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)。  
   
 > [!NOTE]
->  若要下載教學課程的完整的版本，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  若要下載教學課程的完整版本，請參閱 [Windows Workflow Foundation (WF45) - 快速入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ### <a name="to-create-the-workflow"></a>建立工作流程  
   
@@ -67,7 +67,7 @@ ms.locfileid: "43502147"
 1.  拖曳**指派**活動，從**基本型別**一節**工具箱**並將滑鼠移至**啟動**節點，也就是在頂端流程圖。 當**指派**活動是透過**開始**節點，周圍，就會出現三個三角形**啟動**節點。 卸除**指派**下方的三角形上的活動**開始**節點。 這會連結兩個項目在一起，並指定**指派**為第一個活動，在流程圖中的活動。  
   
     > [!NOTE]
-    >  您也可以手動連結活動與啟動節點，指定活動為工作流程中的啟動活動。 若要這樣做，請將滑鼠移**開始**節點中，按一下上方有滑鼠時，會顯示該矩形**開始**節點，然後拖曳連接向所需的活動，並將它放在其中一個出現的矩形。 您也可以指定和活動的啟動活動，以滑鼠右鍵按一下 it 選擇**設為開始節點**。  
+    >  您也可以手動連結活動與啟動節點，指定活動為工作流程中的啟動活動。 若要這樣做，請將滑鼠移**開始**節點中，按一下上方有滑鼠時，會顯示該矩形**開始**節點，然後拖曳連接向所需的活動，並將它放在其中一個出現的矩形。 您也可以指定做為起始的活動的活動，以滑鼠右鍵按一下 it 選擇**設為開始節點**。  
   
 2.  型別`Target`成**要** 方塊中，下列運算式**輸入 C# 運算式**或**輸入 VB 運算式** 方塊中。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "43502147"
   
 1.  按下 CTRL+SHIFT+B 以建置方案。  
   
-     如需有關如何執行工作流程，指示，請參閱下一個主題中，[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。 如果您已完成[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)步驟來搭配另一個樣式的工作流程並想要使用此步驟的流程圖工作流程執行，請直接跳到[以建置並執行應用程式](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)一節[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。  
+     如需有關如何執行工作流程，指示，請參閱下一個主題中， [How to:執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。 如果您已經完成[How to:執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)步驟來搭配另一個樣式的工作流程並想要使用此步驟的流程圖工作流程執行，請直接跳到[以建置並執行應用程式](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)一節[How to:執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Activities.Statements.Flowchart>  
