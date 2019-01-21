@@ -3,12 +3,12 @@ title: 機器學習字彙 - ML.NET
 description: 對於您在 ML.NET 中建置自訂模型來說，相當實用的重要機器學習詞彙。
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53760389"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415373"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機器學習詞彙的重要字詞
 
@@ -17,8 +17,6 @@ ms.locfileid: "53760389"
 ## <a name="accuracy"></a>準確率
 
 在[分類](#classification)中，準確率係指正確分類的項目數，除以測試集內的項目總數後，所得出的值。 範圍為 0 (最不準確) 到 1 (最準確)。 準確率是您模型效能的其中一個評估計量。 請將它與[精確率](#precision)、[召回率](#recall)及 [F 分數](#f-score)一起考量。
-
-相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>。
 
 ## <a name="area-under-the-curve-auc"></a>曲線下的面積 (AUC)
 
@@ -87,8 +85,6 @@ ms.locfileid: "53760389"
 ## <a name="precision"></a>精確度
 
 在[分類](#classification)中，類別的精確率係指正確預測為屬於該類別的項目數，除以預測為屬於該類別的項目總數後，所得出的值。
-
-相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>、<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>。
 
 ## <a name="recall"></a>召回率
 

@@ -1,13 +1,13 @@
 ---
 title: dotnet-install 指令碼
 description: 了解如何使用 dotnet-install 指令碼來安裝 .NET Core CLI 工具和共用執行階段。
-ms.date: 11/15/2018
-ms.openlocfilehash: 0f565fee3e4ff4bec65bd196f635e9e9601485c2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/16/2019
+ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148313"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362818"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
@@ -73,7 +73,7 @@ macOS/Linux：
 
 * **`-Architecture <ARCHITECTURE>`**
 
-  要安裝的 .NET Core 二進位檔的架構。 可能的值為 `auto`、`x64` 和 `x86`。 預設值為 `auto`，代表目前正在執行的 OS 架構。
+  要安裝的 .NET Core 二進位檔的架構。 可能的值為 `<auto>`、`amd64`、`x64`、`x86`、`arm64` 和 `arm`。 預設值為 `<auto>`，代表目前正在執行的 OS 架構。
 
 * **`-SharedRuntime`**
 
@@ -103,7 +103,7 @@ macOS/Linux：
 
 * **`-AzureFeed`**
 
-  指定給安裝程式的 Azure 摘要 URL。 建議您不要變更這個值。 預設值是 `https://dotnetcli.azureedge.net/dotnet`。
+  指定給安裝程式的 Azure 摘要 URL。 建議您不要變更這個值。 預設值為 `https://dotnetcli.azureedge.net/dotnet`。
 
 * **`-UncachedFeed`**
 

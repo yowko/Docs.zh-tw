@@ -3,13 +3,13 @@ title: 機器學習資料轉換 - ML.NET
 description: 探索 ML.NET 中支援的特徵工程元件。
 author: JRAlexander
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.date: 01/14/2019
+ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249121"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415347"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>機器學習資料轉換 - ML.NET
 
@@ -23,11 +23,6 @@ ms.locfileid: "54249121"
 | 資料轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.GroupTransform> | 將純量資料行的值組成以連續群組識別碼為基礎的向量。 |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureCombiner> | 將所有功能合併為一個功能資料行。 |
-| <xref:Microsoft.ML.Legacy.Transforms.ManyHeterogeneousModelCombiner> | 將 TransformModels 和 PredictorModel 的序列合併成單一 PredictorModel。 |
-| <xref:Microsoft.ML.Legacy.Transforms.ModelCombiner> | 將 TransformModels 序列合併成單一模型。 |
-| <xref:Microsoft.ML.Legacy.Transforms.Segregator> | 取消向量資料行的群組並分成資料列序列；Group 轉換的相反。 |
-| <xref:Microsoft.ML.Legacy.Transforms.TwoHeterogeneousModelCombiner> | 將 TransformModels 和 PredictorModel 合併成單一 PredictorModel。 |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | 取消向量資料行的群組並分成資料列序列；Group 轉換的相反。 |
 
 ## <a name="conversions"></a>轉換 
@@ -35,7 +30,6 @@ ms.locfileid: "54249121"
 | 資料轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | 雜湊處理單一值資料行或向量資料行。 針對向量資料行，它會個別雜湊處理每個位置。 它可以雜湊處理文字值或索引鍵值。 |
-| <xref:Microsoft.ML.Legacy.Transforms.HashConverter> | 將資料行值轉換成雜湊。 這項轉換接受數值及文字輸入，也接受單一及向量值資料行。 |
 | <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | 將多個資料行值轉換成雜湊。 這項轉換接受數值及文字輸入，也接受單一及向量值資料行。 |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToBinaryVectorMappingTransformer> | 將索引鍵轉換成二進位向量資料行。 |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToValueMappingTransformer > | 利用 KeyValues 中繼資料，將索引鍵索引對應至 KeyValues 中繼資料中的對應值。 |
@@ -56,10 +50,10 @@ ms.locfileid: "54249121"
 | 資料轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | 透過比較個別語彙基元 (不區分大小寫的比較) 與停用字詞，來移除指定的停用字詞清單。| 
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageGrayscaleTransform> | 擷取一或多個 ImageType 資料行，並將其轉換成相同影像的灰階表示。|
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageLoaderTransform> | 擷取一或多個 ReadOnlyMemory 資料行，並以 ImageType 形式載入。 |
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImagePixelExtractorTransform> | 擷取一或多個 ImageType 資料行，並將其轉換成向量表示。|
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageResizerTransform> | 擷取一或多個 ImageType 資料行，並將其大小調整為提供的高度和寬度。|
+| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | 擷取一或多個 ImageType 資料行，並將其轉換成相同影像的灰階表示。|
+| <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | 擷取一或多個 ReadOnlyMemory 資料行，並以 ImageType 形式載入。 |
+| <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | 擷取一或多個 ImageType 資料行，並將其轉換成向量表示。|
+| <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | 擷取一或多個 ImageType 資料行，並將其大小調整為提供的高度和寬度。|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | 實作 LightLDA，這是隱含狄利克雷分布 (Latent Dirichlet Allocation) 的最新實作。|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | 從指定的模型檔載入特定轉換。 可讓您從序列化鏈結進行「揀選」轉換，或將預先定型的轉換套用至不同 (但仍相容) 的資料檢視。 |
 | <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | 在指定的索引鍵向量中產生一袋 ngrams 計數 (長度為 1-n 的連續值序列)。 它會透過建置 ngrams 字典，並在袋中使用字典內的識別碼作為索引，來進行此動作。 | 
@@ -70,7 +64,6 @@ ms.locfileid: "54249121"
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | 計算特徵向量在低順位子空間上的投影。 |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | 使用預先訓練的情感模型來為輸入字串計分。 |
 | <xref:Microsoft.ML.Transforms.Text.StopWordsRemovingTransformer> | 透過比較個別語彙基元 (不區分大小寫的比較) 與停用字詞，來移除特定語言的停用字詞清單 (最常見的字組)。 |
-| <xref:Microsoft.ML.Transforms.Categorical.TermLookupTransformer> | 使用透過其引數所提供的對應資料集，將文字值資料行對應至新的資料行。 |
 | <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | 在指定的文字中產生一袋 n 元語法計數 (連續字組序列)。 它會透過建置 ngrams 字典，並在袋中使用字典內的識別碼作為索引，來進行此動作。 |
 | <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | 在指定的文字中產生一袋 n 元語法計數 (長度為 1-n 的連續字組序列)。 它會透過雜湊處理每個 n 元語法，並使用雜湊值作為袋中的索引，來進行此動作。 |
 | <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | 使用分隔字元，將文字分隔為字組。 |
@@ -89,12 +82,8 @@ ms.locfileid: "54249121"
 
 | 資料轉換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.Dictionarizer> | 將輸入值 (文字、數字等) 轉換成字典中的索引。 |
-| <xref:Microsoft.ML.Legacy.Transforms.LabelColumnKeyBooleanConverter> | 將標籤轉換成索引鍵或布林值，使其適合用於分類。 |
 | <xref:Microsoft.ML.Transforms.LabelConvertTransform> |  轉換標籤。 |
 | <xref:Microsoft.ML.Transforms.LabelIndicatorTransform> | 將多元分類標籤重新對應至二進位 True、False 標籤，主要用於 OVA。|
-| <xref:Microsoft.ML.Legacy.Transforms.LabelToFloatConverter> | 將標籤轉換成浮點數，使其適合用於迴歸。 |
-| <xref:Microsoft.ML.Legacy.Transforms.PredictedLabelColumnOriginalValueConverter> | 將預測的標籤資料行轉換為其原始值 (除非其類型為布林值)。 |
 
 ## <a name="missing-values"></a>遺失值
 
@@ -112,7 +101,6 @@ ms.locfileid: "54249121"
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | 計算向量值資料行的平均數和變異數。 它會追蹤目前平均數和 M2 (平均數值差的總平方和)、NAN 數目和非零項目數目。 |
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarSngAggregator> | 計算向量值資料行的平均數和變異數。 它會追蹤目前平均數和 M2 (平均數值差的總平方和)、NAN 數目和非零項目數目。 |
 | <xref:Microsoft.ML.Transforms.Normalizers.MinMaxDblAggregator> | 追蹤向量值資料行的最小值、最大值、非疏鬆值數目 (vCount) 和 ProcessValue() 呼叫數目 (trainCount)。 |
-| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxSngAggregator> | 追蹤向量值資料行的最小值、最大值、非疏鬆值數目 (vCount) 和 ProcessValue() 呼叫數目 (trainCount)。 |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizeTransform> | 標準化特徵範圍。 |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizingTransformer> |標準化特徵範圍。 |
 
@@ -147,7 +135,6 @@ ms.locfileid: "54249121"
 | <xref:Microsoft.ML.Transforms.ColumnCopyingTransformer> | 從資料集複製資料行。|
 | <xref:Microsoft.ML.Transforms.ColumnSelectingTransformer> | 從所指定輸入中選取要捨棄或保留的一組資料行。 |
 | <xref:Microsoft.ML.Transforms.FeatureSelection.SlotsDroppingTransformer> | 捨棄資料行中的位置。|
-| <xref:Microsoft.ML.Legacy.Transforms.KeyToTextConverter> | KeyToValueTransform 會利用 KeyValues 中繼資料，將索引鍵索引對應至 KeyValues 中繼資料中的對應值。 |
 | <xref:Microsoft.ML.Transforms.OptionalColumnTransform> | 使用指定的類型和預設值建立新資料行。 |
 | <xref:Microsoft.ML.Transforms.RangeFilter> | 在類型為 Single、Double 或 Key (連續) 的資料行上篩選 dataview。 保留位於指定最小值/最大值範圍中的值。 一律會篩選掉 NaN。若輸入為 Key 類型，則最小值/最大值會視為百分比，代表該百分比包含的值數。 |
 
@@ -168,15 +155,15 @@ ms.locfileid: "54249121"
 
 | 資料轉換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.ExponentialAverageTransform> | 取得所有值的加權平均：ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1))。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidChangePointDetector> | 根據自適性核心密度估計和隨機過程， 實作 i.i.d. 序列 (隨機樣本) 的變點檢測器轉換。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidSpikeDetector> | 根據自適性核心密度估計， 實作 i.i.d. 序列 (隨機樣本) 的峰點檢測器轉換。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.MovingAverageTransform> | 提供滑動視窗值的加權平均。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PercentileThresholdTransform> | 決定時間序列現值是否屬於滑動視窗臨界數值百分位數。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PValueTransform> | 根據滑動視窗中的其他值，計算序列現值的經驗 p 值。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SlidingWindowTransform> | 輸出 Single 類型時間序列上的滑動視窗。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaChangePointDetector> | 根據時間序列的奇異譜 (Singular Spectrum) 模型，實作變點檢測器轉換。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaSpikeDetector> | 根據時間序列的奇異譜 (Singular Spectrum) 模型，實作峰值檢測器轉換。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | 取得所有值的加權平均：ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1))。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidChangePointDetector> | 根據自適性核心密度估計和隨機過程， 實作 i.i.d. 序列 (隨機樣本) 的變點檢測器轉換。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidSpikeDetector> | 根據自適性核心密度估計， 實作 i.i.d. 序列 (隨機樣本) 的峰點檢測器轉換。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.MovingAverageTransform> | 提供滑動視窗值的加權平均。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PercentileThresholdTransform> | 決定時間序列現值是否屬於滑動視窗臨界數值百分位數。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PValueTransform> | 根據滑動視窗中的其他值，計算序列現值的經驗 p 值。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SlidingWindowTransform> | 輸出 Single 類型時間序列上的滑動視窗。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaChangePointDetector> | 根據時間序列的奇異譜 (Singular Spectrum) 模型，實作變點檢測器轉換。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaSpikeDetector> | 根據時間序列的奇異譜 (Singular Spectrum) 模型，實作峰值檢測器轉換。 |
 
 ## <a name="miscellaneous"></a>其他
 
@@ -187,4 +174,3 @@ ms.locfileid: "54249121"
 | <xref:Microsoft.ML.Transforms.GenerateNumberTransform> | 使用產生的數字序列新增資料行。 |
 | <xref:Microsoft.ML.Transforms.ProduceIdTransform> | 產生以資料指標識別碼作為資料行的資料行。 |
 | <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | 產生亂數。 |
-| <xref:Microsoft.ML.Transforms.ScoringTransformer> | 結合來自多個預測性模型的資訊，利用已定型模型中的分數在管線中產生新模型。 |

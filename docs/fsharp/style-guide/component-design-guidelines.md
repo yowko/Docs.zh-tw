@@ -2,12 +2,12 @@
 title: F#元件設計方針
 description: 了解進行寫入的指導方針F#是供取用，其他呼叫端的元件。
 ms.date: 05/14/2018
-ms.openlocfilehash: bc8d4908912c4630f649ba30593d43a557278efa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d72bfac1de5a57d5cce86f996f144af4bc181463
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145669"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415633"
 ---
 # <a name="f-component-design-guidelines"></a>F#元件設計方針
 
@@ -47,7 +47,7 @@ ms.locfileid: "53145669"
 type Point =
 
     /// Computes the distance between this point and another
-    member DistanceTo : otherPoint:Point -> float
+    member DistanceTo: otherPoint:Point -> float
 ```
 
 您可以使用其中一個的簡短形式 XML 註解 (`/// comment`)，或標準的 XML 註解 (`///<summary>comment</summary>`)。
@@ -83,7 +83,7 @@ type Point =
 | 命名空間 | PascalCase | | Microsoft.FSharp.Core | 通常會使用`<Organization>.<Technology>[.<Subnamespace>]`，不過卸除的組織，如果組織的技術無關。 |
 | 參數 | camelCase | 名詞 |  類型名稱、 轉換、 範圍 | |
 | 讓值 （內部） | camelCase 或 PascalCase | 名詞 / 動詞命令 |  getValue myTable |
-| 讓值 （外部） | camelCase 或 PascalCase | 名詞/動詞命令  | List.map Dates.Today | let 繫結值通常是公用的遵循傳統的功能性設計模式時。 不過，通常使用 PascalCase 的識別碼可以使用其他.NET 語言時。 |
+| 讓值 （外部） | camelCase 或 PascalCase | 名詞/動詞命令  | List.map, Dates.Today | let 繫結值通常是公用的遵循傳統的功能性設計模式時。 不過，通常使用 PascalCase 的識別碼可以使用其他.NET 語言時。 |
 | 屬性  | PascalCase  | 名詞 / 形容詞  | IsEndOfFile，背景色彩  | 布林值屬性通常不使用，因為可以且應該是肯定的如同 IsEndOfFile，不 IsNotEndOfFile。
 
 #### <a name="avoid-abbreviations"></a>避免縮寫
@@ -191,16 +191,16 @@ type Counter() =
 
 ```fsharp
 type Serializer =
-    abstract Serialize<'T> : preserveRefEq: bool -> value: 'T -> string
-    abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
+    abstract Serialize<'T>: preserveRefEq: bool -> value: 'T -> string
+    abstract Deserialize<'T>: preserveRefEq: bool -> pickle: string -> 'T
 ```
 
 在到：
 
 ```fsharp
 type Serializer<'T> = {
-    Serialize : bool -> 'T -> string
-    Deserialize : bool -> string -> 'T
+    Serialize: bool -> 'T -> string
+    Deserialize: bool -> string -> 'T
 }
 ```
 
@@ -243,13 +243,13 @@ module CollectionType =
 有時候類別用來建立模型的數學建構，例如向量。 正在模型化的網域有已知的運算子，定義為 「 內建函式類別的成員時，很有幫助。
 
 ```fsharp
-type Vector(x:float) =
+type Vector(x: float) =
 
     member v.X = x
 
-    static member (*) (vector:Vector, scalar:float) = Vector(vector.X * scalar)
+    static member (*) (vector: Vector, scalar: float) = Vector(vector.X * scalar)
 
-    static member (+) (vector1:Vector, vector2:Vector) = Vector(vector1.X + vector2.X)
+    static member (+) (vector1: Vector, vector2: Vector) = Vector(vector1.X + vector2.X)
 
 let v = Vector(5.0)
 
@@ -306,7 +306,7 @@ type Logger() =
 以下是使用 tuple，傳回的型別中的理想範例：
 
 ```fsharp
-val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
+val divrem: BigInteger -> BigInteger -> BigInteger * BigInteger
 ```
 
 傳回類型，而且包含許多元件，或在單一的識別實體相關的元件，請考慮使用具名型別，而不 tuple。
@@ -317,9 +317,9 @@ val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
 
 ```fsharp
 type SomeType =
-    member this.Compute(x:int) : int =
+    member this.Compute(x:int): int =
         ...
-    member this.AsyncCompute(x:int) : Async<int> =
+    member this.AsyncCompute(x:int): Async<int> =
         ...
 
 type System.ServiceModel.Channels.IInputChannel with
@@ -503,13 +503,13 @@ F#記錄類型編譯為一個簡單的.NET 類別。 這些是適用於 Api 中�
 
 例如，下列F#的程式碼公開至公用 APIC#取用者：
 
-F#:
+F#：
 
 ```fsharp
 [<NoEquality; NoComparison>]
 type MyRecord =
-    { FirstThing : int
-        SecondThing : string }
+    { FirstThing: int
+        SecondThing: string }
 ```
 
 C#: 
@@ -574,7 +574,7 @@ type MyBadType() =
     [<CLIEvent>]
     member this.MyEvent = myEv.Publish
 
-type MyEventArgs(x:int) =
+type MyEventArgs(x: int) =
     inherit System.EventArgs()
     member this.X = x
 
@@ -596,7 +596,7 @@ type MyGoodType() =
 /// A type in a component designed for use from other .NET languages
 type MyType() =
 
-    let compute (x: int) : Async<int> = async { ... }
+    let compute (x: int): Async<int> = async { ... }
 
     member this.ComputeAsync(x) = compute x |> Async.StartAsTask
 ```
@@ -606,7 +606,7 @@ type MyType() =
 ```fsharp
 /// A type in a component designed for use from other .NET languages
 type MyType() =
-    let compute(x:int) : Async<int> = async { ... }
+    let compute(x: int): Async<int> = async { ... }
     member this.ComputeAsTask(x, cancellationToken) = Async.StartAsTask(compute x, cancellationToken)
 ```
 
@@ -617,14 +617,14 @@ type MyType() =
 而不是這個：
 
 ```fsharp
-member this.Transform(f:int->int) =
+member this.Transform(f: int->int) =
     ...
 ```
 
 請執行：
 
 ```fsharp
-member this.Transform(f:Func<int,int>) =
+member this.Transform(f: Func<int,int>) =
     ...
 ```
 
@@ -639,18 +639,18 @@ F#函式類型會顯示為`class FSharpFunc<T,U>`用於其他.NET 語言，因�
 ```fsharp
 member this.ReturnOption() = Some 3
 
-member this.ReturnBoolAndOut(outVal : byref<int>) =
+member this.ReturnBoolAndOut(outVal: byref<int>) =
     outVal <- 3
     true
 
-member this.ParamOption(x : int, y : int option) =
+member this.ParamOption(x: int, y: int option) =
     match y with
     | Some y2 -> x + y2
     | None -> x
 
-member this.ParamOverload(x : int) = x
+member this.ParamOverload(x: int) = x
 
-member this.ParamOverload(x : int, y : int) = x + y
+member this.ParamOverload(x: int, y: int) = x + y
 ```
 
 #### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>使用.NET 集合介面型別 IEnumerable\<T\>和 IDictionary\<索引鍵、 值\>參數和傳回值
@@ -660,14 +660,14 @@ member this.ParamOverload(x : int, y : int) = x + y
 而不是F#會列出：
 
 ```fsharp
-member this.PrintNames(names : string list) =
+member this.PrintNames(names: string list) =
     ...
 ```
 
 使用F#序列：
 
 ```fsharp
-member this.PrintNames(names : seq<string>) =
+member this.PrintNames(names: seq<string>) =
     ...
 ```
 
@@ -678,13 +678,13 @@ member this.PrintNames(names : seq<string>) =
 ```fsharp
 ✔ member this.NoArguments() = 3
 
-✔ member this.ReturnVoid(x : int) = ()
+✔ member this.ReturnVoid(x: int) = ()
 ```
 
 這是不正確：
 
 ```fsharp
-member this.WrongUnit( x:unit, z:int) = ((), ())
+member this.WrongUnit( x: unit, z: int) = ((), ())
 ```
 
 #### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>檢查開啟了香草的.NET API 界限上的 null 值

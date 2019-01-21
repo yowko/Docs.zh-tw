@@ -4,16 +4,16 @@ description: 了解如何分析外部相依性，以將您的專案從 .NET Fram
 author: cartermp
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: dce8e6cd4986b15cf926154b378964db4beef398
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 6451099bfc7f3afa5c9c1585862403a0a9fb2186
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170312"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415217"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>分析您的相依性以將程式碼移植到 .NET Core
 
-要將程式碼移植到 .NET Core 或 .NET Standard，您必須了解您的相依性。 外部依賴項是您在專案中參考的 [NuGet 套件](#analyze-referenced-nuget-packages-on-your-project)或 [DLL](#analyze-dependencies-that-arent-nuget-packages)，但您不建置它們。 評估每個相依性，並針對與 .NET Core 不相容的相依性開發應變計劃。 以下是如何判斷相依性是否與 .NET Core 相容。
+要將程式碼移植到 .NET Core 或 .NET Standard，您必須了解您的相依性。 外部依賴項是您在專案中參考的 [NuGet 套件](#analyze-referenced-nuget-packages-in-your-projects)或 [DLL](#analyze-dependencies-that-arent-nuget-packages)，但您不建置它們。 評估每個相依性，並針對與 .NET Core 不相容的相依性開發應變計劃。 以下是如何判斷相依性是否與 .NET Core 相容。
 
 ## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>分析專案中參考的 NuGet 套件
 
@@ -77,7 +77,7 @@ portable-net45-win8-wpa8-wpa81
 
 從 .NET Standard 2.0 開始，引進了 .NET Framework 相容性模式。 此相容性模式可讓 .NET Standard 和 .NET Core 專案參考 .NET Framework 程式庫。 並非所有專案都適合參考 .NET Framework 程式庫 (例如，如果程式庫使用 Windows Presentation Foundation (WPF) API)，但它確實會解決許多移植案例。
 
-當您在專案中參考以 .NET Framework 為目標的 NuGet 套件時 (例如 [Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections))，您會收到類似下列範例的套件後援警告 ([NU1701](/nuget/reference/errors-and-warnings#nu1701))：
+當您在專案中參考以 .NET Framework 為目標的 NuGet 套件時 (例如 [Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections))，您會收到類似下列範例的套件後援警告 ([NU1701](/nuget/reference/errors-and-warnings/nu1701))：
 
 `NU1701: Package ‘Huitian.PowerCollections 1.0.0’ was restored using ‘.NETFramework,Version=v4.6.1’ instead of the project target framework ‘.NETStandard,Version=v2.0’. This package may not be fully compatible with your project.`
 
@@ -91,7 +91,7 @@ portable-net45-win8-wpa8-wpa81
 </ItemGroup>
 ```
 
-如需如何在 Visual Studio 中隱藏編譯器警告的詳細資訊，請參閱[隱藏 NuGet 套件的警告](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages)。
+如需如何在 Visual Studio 中隱藏編譯器警告的詳細資訊，請參閱[隱藏 NuGet 套件的警告](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages)。
 
 ### <a name="port-your-packages-to-packagereference"></a>將您的套件移植到 `PackageReference`
 
