@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: b6cac2b31f9ec1fd4775d4ed2ec2e9382502a0cc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 97c8580b5573348e58acb85b7368eb23927cde17
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244800"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307171"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字串內插補點 (C# 參考)
 
@@ -95,6 +95,7 @@ ms.locfileid: "53244800"
 - <xref:System.FormattableString?displayProperty=nameWithType>
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - [複合格式](../../../standard/base-types/composite-formatting.md)
+- [格式化數值結果表](../keywords/formatting-numeric-results-table.md)
 - [字串](../../programming-guide/strings/index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 特殊字元](index.md)

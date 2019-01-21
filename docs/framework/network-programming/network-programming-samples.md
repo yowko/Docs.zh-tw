@@ -2,54 +2,54 @@
 title: 網路程式設計範例
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: b9b53085cccf834c6c2e5dcce63b12bd29eff7a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 55d4403f1b51674a6ee5a58eebdbeaffef1cd857
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50181640"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307301"
 ---
 # <a name="network-programming-samples"></a>網路程式設計範例
 本節包含可下載網路程式設計範例的描述和連結，而這些範例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相關命名空間中的類別。 
   
 > [!NOTE]
-> 所有範例均可從 [.NET Framework SDK 2.0 版範例下載](https://www.microsoft.com/en-us/download/confirmation.aspx?id=22181)中取得，此連結是針對 .NET Framework 2.0 所發行，且可能會過時。
+> 所有範例均可從 [.NET Framework SDK 2.0 版範例下載](https://www.microsoft.com/download/confirmation.aspx?id=22181)中取得，此連結是針對 .NET Framework 2.0 所發行，且可能會過時。
 
 ## <a name="in-this-section"></a>本節內容  
- [下載進度指示器技術範例](https://msdn.microsoft.com/en-us/library/t8w6294a(v=vs.85).aspx)  
+ [下載進度指示器技術範例](https://msdn.microsoft.com/library/t8w6294a(v=vs.85).aspx)  
  示範如何顯示檔案下載進度。  
   
- [FTP 用戶端技術範例](https://msdn.microsoft.com/en-us/library/b7810t5c(v=vs.85).aspx)  
+ [FTP 用戶端技術範例](https://msdn.microsoft.com/library/b7810t5c(v=vs.85).aspx)  
  示範如何在 FTP 伺服器中上傳和下載檔案。  
   
- [HttpListener 技術範例](https://msdn.microsoft.com/en-us/library/y7cbb2y2(v=vs.85).aspx)  
+ [HttpListener 技術範例](https://msdn.microsoft.com/library/y7cbb2y2(v=vs.85).aspx)  
  示範如何處理應用程式中的 HTTP 要求。  
  
  [HttpListener ASPX 主機應用程式範例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
  示範如何使用 <xref:System.Net.HttpListener?displayProperty=nameWithType> 類別的功能來建立 HTTP 伺服器，以將呼叫路由傳送至裝載的 ASP.NET 應用程式。
   
- [Mailer 技術範例](https://msdn.microsoft.com/en-us/library/whw7xbk2(v=vs.85).aspx)  
+ [Mailer 技術範例](https://msdn.microsoft.com/library/whw7xbk2(v=vs.85).aspx)  
  示範如何從用戶端應用程式傳送電子郵件訊息。  
   
- [NetStat 工具技術範例](https://msdn.microsoft.com/en-us/library/ks32hs88(v=vs.85).aspx)  
+ [NetStat 工具技術範例](https://msdn.microsoft.com/library/ks32hs88(v=vs.85).aspx)  
  示範 NCLNetStat 網路資訊工具。  
   
- [Network Information Technology Sample](https://msdn.microsoft.com/en-us/library/2xatedhd(v=vs.85).aspx) (網路資訊技術範例)  
+ [Network Information Technology Sample](https://msdn.microsoft.com/library/2xatedhd(v=vs.85).aspx) (網路資訊技術範例)  
  示範如何監視和顯示網路資訊。  
   
- [Ping 用戶端技術範例](https://msdn.microsoft.com/en-us/library/5253acs7(v=vs.85).aspx)  
+ [Ping 用戶端技術範例](https://msdn.microsoft.com/library/5253acs7(v=vs.85).aspx)  
  示範可 Ping 遠端主機的用戶端應用程式。  
   
- [WebClient 技術範例](https://msdn.microsoft.com/en-us/library/fxk992zc(v=vs.85).aspx)  
+ [WebClient 技術範例](https://msdn.microsoft.com/library/fxk992zc(v=vs.85).aspx)  
  示範如何執行一般作業，例如上傳或下載檔案或資料。  
   
- [安全資料流範例](https://msdn.microsoft.com/en-us/library/ms180980(v=vs.85).aspx)  
+ [安全資料流範例](https://msdn.microsoft.com/library/ms180980(v=vs.85).aspx)  
  示範如何使用安全資料流以在用戶端與伺服器之間進行通訊。  
   
- [IPv6 通訊端範例](https://msdn.microsoft.com/en-us/library/ms180981(v=vs.85).aspx)  
+ [IPv6 通訊端範例](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)  
  示範如何在啟用 IPv6 時使用通訊端。  
   
- [FTP 總管技術範例](https://msdn.microsoft.com/en-us/library/ms233623(v=vs.85).aspx)  
+ [FTP 總管技術範例](https://msdn.microsoft.com/library/ms233623(v=vs.85).aspx)  
  示範如何列出 FTP 伺服器的內容。  
   
   
