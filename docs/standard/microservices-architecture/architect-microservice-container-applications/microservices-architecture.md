@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 微服務�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: dc96c5570ea829802c94c817ebd4910a090632ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cac40c0a6e5f31087296416616c8a8b9e54b528
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145734"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145246"
 ---
 # <a name="microservices-architecture"></a>微服務架構
 
@@ -45,14 +45,14 @@ ms.locfileid: "53145734"
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Mark Russinovich：Microservices: An application revolution powered by the cloud**  \(微服務：採用雲端技術的應用程式變革)
+- **Mark Russinovich：Microservices:An application revolution powered by the cloud (微服務：採用雲端技術的應用程式變革)** \
   [*https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/*](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
 
 - **Martin Fowler：Microservices** \ (微服務)
-  [*http://www.martinfowler.com/articles/microservices.html*](http://www.martinfowler.com/articles/microservices.html)
+  [*https://www.martinfowler.com/articles/microservices.html*](https://www.martinfowler.com/articles/microservices.html)
 
 - **Martin Fowler：Microservice Prerequisites** \ (微服務先決條件)
-  [*http://martinfowler.com/bliki/MicroservicePrerequisites.html*](http://martinfowler.com/bliki/MicroservicePrerequisites.html)
+  [*https://martinfowler.com/bliki/MicroservicePrerequisites.html*](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
 
 - **Jimmy Nilsson：Chunk Cloud Computing** \ (區塊雲端運算)
   [*https://www.infoq.com/articles/CCC-Jimmy-Nilsson*](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)

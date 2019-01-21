@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 890ce1e9a23d57121cd714252444e5ff1caa6b19
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: d1a0ee772618b89d3b8cf6efc9400e3dcf4804da
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396873"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223178"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>HOW TO：判斷安裝的 .NET Framework 版本
 
@@ -197,7 +197,7 @@ ms.locfileid: "53396873"
 
 - 使用 CLR 版本工具 (Clrver.exe) 判斷電腦上安裝了哪些通用語言執行平台 (CLR) 版本。
 
-     在 Visual Studio 命令提示字元中輸入 `clrver`。 這個命令產生的輸出類似下面所述：
+     從 Visual Studio 開發人員命令提示字元輸入 `clrver`。 這個命令產生的輸出類似下面所述：
 
     ```
     Versions installed on the machine:

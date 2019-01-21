@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 213c27a4ddfa6134c4aaa8a76c71309a6496998d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 127a059865250642c604288b0296b4152cf91f52
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151131"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221644"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (強式名稱工具)
 強式名稱工具 (Sn.exe) 可幫助您使用[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署組件。 Sn.exe 提供了金鑰管理、簽章產生和簽章驗證的選項。  
@@ -30,7 +30,7 @@ ms.locfileid: "53151131"
  強式名稱工具會隨 Visual Studio 自動安裝。 若要啟動這項工具，請使用開發人員命令提示字元 (或 Windows 7 中的 Visual Studio 命令提示字元)。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
 
 > [!NOTE]
->  在 64 位元電腦上，請使用 Visual Studio 命令提示字元執行 Sn.exe 的 32 位元版本，並且使用 Visual Studio x64 Win64 命令提示字元執行 64 位元版本。 
+>  在 64 位元電腦上，請使用 Visual Studio 開發人員命令提示字元執行 Sn.exe 的 32 位元版本，且使用 Visual Studio x64 Win64 命令提示字元執行 64 位元版本。 
   
  在命令提示字元下輸入下列命令：  
   

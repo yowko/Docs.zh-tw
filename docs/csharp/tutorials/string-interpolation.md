@@ -3,16 +3,16 @@ title: C# 中的字串插補
 description: 了解如何使用字串插補，在 C# 的結果字串中包含已格式化的運算式結果。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 1a5d451f6fef926f0f142c7f09f564ce95618b39
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ef4358ff61cde43998fc0dc4ba174dc0f06bc2bd
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188634"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222489"
 ---
 # <a name="string-interpolation-in-c"></a>C# 中的字串插補 #
 
-本教學課程會示範如何使用[字串插補](../language-reference/tokens/interpolated.md)進行格式化，並將運算式結果包含在結果字串中。 這些範例假設您熟悉 C# 基本概念和 .NET 類型格式設定。 如果您不熟悉字串插補或 .NET 類型格式設定，請先參閱[互動式字串插補教學課程](../tutorials/intro-to-csharp/interpolated-strings.yml)。 如需在 .NET 中格式化類型的詳細資訊，請參閱[在 .NET 中將類型格式化](../../standard/base-types/formatting-types.md)主題。
+本教學課程會示範如何使用[字串插補](../language-reference/tokens/interpolated.md)進行格式化，並將運算式結果包含在結果字串中。 這些範例假設您熟悉 C# 基本概念和 .NET 類型格式設定。 如果您不熟悉字串插補或 .NET 類型格式設定，請先參閱[互動式字串插補教學課程](../tutorials/intro-to-csharp/interpolated-strings.yml)。 如需在 .NET 中格式化類型的詳細資訊，請參閱[在 .NET 中格式化類型](../../standard/base-types/formatting-types.md)主題。
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -31,6 +31,8 @@ ms.locfileid: "50188634"
 ```
 
 在編譯時期，插入字串通常會轉換成 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法呼叫。 這也可讓[字串複合格式](../../standard/base-types/composite-formatting.md)功能的所有功能供您與插入字串一起使用。
+
+如果分析的行為相當於串連，編譯器可以用 <xref:System.String.Format%2A?displayProperty=nameWithType> 替換 <xref:System.String.Concat%2A?displayProperty=nameWithType>。
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>如何指定插入運算式的格式字串
 
@@ -106,7 +108,7 @@ ms.locfileid: "50188634"
 
 本教學課程描述了使用字串插補的常見案例。 如需字串插補的詳細資訊，請參閱[字串插補](../language-reference/tokens/interpolated.md)主題。 如需在 .NET 中格式化類型的詳細資訊，請參閱[在 .NET 中格式化類型](../../standard/base-types/formatting-types.md)和[複合格式](../../standard/base-types/composite-formatting.md)主題。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.String.Format%2A?displayProperty=nameWithType>  
 - <xref:System.FormattableString?displayProperty=nameWithType>  

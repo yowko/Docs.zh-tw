@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - set keyword [C#]
 ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
-ms.openlocfilehash: 3020badc8b7873d7feb0b8133d3a181e1c051cbd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0322f1bb94174dd3a0cdd2089c8626d25a80cc1c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243734"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147989"
 ---
 # <a name="set-c-reference"></a>set (C# 參考)
 
@@ -23,7 +23,7 @@ ms.locfileid: "53243734"
 
 [!code-csharp[set#1](~/samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]
 
-`set` 存取子通常是由傳回值的單一陳述式所組成，如上述範例所示。 從 C# 7.0 開始，您可以將 `set` 存取子實作為運算式主體成員。 下列範例會將 `get` 和 `set` 存取子實作為運算式主體成員。
+`set` 存取子通常是由指派值的單一陳述式所組成，如上述範例所示。 從 C# 7.0 開始，您可以將 `set` 存取子實作為運算式主體成員。 下列範例會將 `get` 和 `set` 存取子實作為運算式主體成員。
 
 [!code-csharp[set#3](~/samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]
   

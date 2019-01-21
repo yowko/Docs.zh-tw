@@ -1,5 +1,5 @@
 ---
-title: 如何：安裝及解除安裝服務
+title: HOW TO：安裝和解除安裝服務
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 265ee152bf106d0f97cca83552fe9a3e75fb4165
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 937c559130ea70ab125935ce26ecc5f9bd315ad1
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349000"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221215"
 ---
-# <a name="how-to-install-and-uninstall-services"></a>如何：安裝及解除安裝服務
+# <a name="how-to-install-and-uninstall-services"></a>HOW TO：安裝和解除安裝服務
 如果您正在使用 .NET Framework 開發 Windows 服務，您可以使用稱為 InstallUtil.exe 的命令列公用程式來快速安裝服務應用程式。 如果您是開發人員並且想發行使用者可安裝及解除安裝的 Windows 服務，則應該使用 InstallShield。 請參閱 [Windows Installer 部署](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0) \(機器翻譯\)。  
   
 > [!WARNING]
@@ -36,7 +36,7 @@ ms.locfileid: "49349000"
   
 1.  在 Windows 的 [開始] 功能表或 [開始] 畫面上，依序選擇 [Visual Studio]、[Visual Studio Tools] 和 [開發人員命令提示字元]。  
   
-     Visual Studio 命令提示字元隨即出現。  
+     隨即顯示 Visual Studio 開發人員命令提示字元。  
   
 2.  存取您的專案已編譯之可執行檔所在的目錄。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "49349000"
     installutil <yourproject>.exe  
     ```  
   
-     如果您使用 Visual Studio 命令提示字元，InstallUtil.exe 應該在系統路徑中。 如果不在，您可以將這個檔案加入路徑，或使用完整路徑來叫用這個檔案。 這個工具會隨 .NET Framework 安裝，且其路徑為 `%WINDIR%\Microsoft.NET\Framework[64]\<framework_version>`。 例如，針對 32 位元版本的 .NET Framework 4 或 4.5.*，如果您的 Windows 安裝目錄是 C:\Windows，則路徑為 `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`。 針對 64 位元版本的 .NET Framework 4 或 4.5.\*，預設路徑為 `C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe`。  
+     如果您使用 Visual Studio 開發人員命令提示字元，InstallUtil.exe 應該位在系統路徑中。 如果不在，您可以將這個檔案加入路徑，或使用完整路徑來叫用這個檔案。 這個工具會隨 .NET Framework 安裝，且其路徑為 `%WINDIR%\Microsoft.NET\Framework[64]\<framework_version>`。 例如，針對 32 位元版本的 .NET Framework 4 或 4.5.*，如果您的 Windows 安裝目錄是 C:\Windows，則路徑為 `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`。 針對 64 位元版本的 .NET Framework 4 或 4.5.\*，預設路徑為 `C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe`。  
   
 ### <a name="to-uninstall-your-service-manually"></a>以手動方式解除安裝您的服務  
   
 1.  在 Windows 的 [開始] 功能表或 [開始] 畫面上，依序選擇 [Visual Studio]、[Visual Studio Tools] 和 [開發人員命令提示字元]。  
   
-     Visual Studio 命令提示字元隨即出現。  
+     隨即顯示 Visual Studio 開發人員命令提示字元。  
   
 2.  從命令提示字元，以您專案的輸出做為參數來執行 InstallUtil.exe：  
   
@@ -65,5 +65,5 @@ ms.locfileid: "49349000"
 ## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [如何：將 Installer 新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
  [Installutil.exe (安裝程式工具)](../../../docs/framework/tools/installutil-exe-installer-tool.md)

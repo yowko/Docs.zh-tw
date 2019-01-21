@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8b69544b2d8041a3aa4cb566867b6c14b29f0f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ee829893d251b536448ba2ee78ea13e0d22ae41
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409106"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221735"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 反組譯工具)
 
 IL 反組譯工具是 IL 組譯工具 (*Ilasm.exe*) 的附屬工具。 *Ildasm.exe* 採用包含中繼語言 (IL) 程式碼的可攜式執行檔 (PE)，並建立適合用作 *Ilasm.exe* 輸入的文字檔。
 
-此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] \(或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
 
 在命令提示字元下輸入下列命令：
 
@@ -36,7 +36,7 @@ ildasm [options] [PEfilename] [options]
 
 下列選項可用於 *.exe*、*.dll*、*.obj*、*.lib* 和 *.winmd* 檔案。
 
-| 選項 | 描述 |
+| 選項 | 說明 |
 | ------ | ----------- |
 |**/out=** `filename`|建立具有指定 `filename` 的輸出檔案，而不是在圖形化使用者介面中顯示結果。|
 |**/rtf**|產生 Rich Text Format (RTF) 格式的輸出。 使用 **/text** 選項時無效。|
@@ -46,7 +46,7 @@ ildasm [options] [PEfilename] [options]
 
 下列其他選項可用於 *.exe*、*.dll* 和 *.winmd* 檔案。
 
-| 選項 | 描述 |
+| 選項 | 說明 |
 | ------ | ----------- |
 |**/bytes**|顯示十六進位格式的實際位元組做為指令註解。|
 |**/caverbal**|以動詞化格式產生自訂屬性 BLOB。 預設為二進位格式。|
@@ -63,7 +63,7 @@ ildasm [options] [PEfilename] [options]
 
 下列選項只對檔案或主控台輸出的 *.exe*、*.dll* 和 *.winmd* 檔案有效。
 
-| 選項 | 描述 |
+| 選項 | 說明 |
 | ------ | ----------- |
 |**/all**|指定 **/header**、**/bytes**、**/stats**、**/classlist** 與 **/tokens** 選項的組合。|
 |**/classlist**|包括模組中定義的類別清單。|
@@ -78,13 +78,13 @@ ildasm [options] [PEfilename] [options]
 
 下列選項只對檔案或主控台輸出的 *.exe*、*.dll*、*.obj*、*.lib* 和 *.winmd* 檔案有效。
 
-| 選項 | 描述 |
+| 選項 | 說明 |
 | ------ | ----------- |
 |**/metadata**[=`specifier`]|顯示中繼資料，其中 `specifier` 是：<br /><br /> **MDHEADER**：顯示中繼資料的標頭資訊和大小。<br /><br /> **HEX**：使用十六進位和文字顯示資訊。<br /><br /> **CSV**：顯示記錄計數和堆積大小。<br /><br /> **UNREX**：顯示無法解析的外部符號。<br /><br /> **SCHEMA**：顯示中繼資料的標頭和結構描述資訊。<br /><br /> **RAW**：顯示原始中繼資料表。<br /><br /> **HEAPS**：顯示原始的堆積。<br /><br /> **VALIDATE**：驗證中繼資料的一致性。<br /><br /> 您可以多次指定 **/metadata**，每次使用不同的 `specifier` 值。|
 
 下列選項只對檔案或主控台輸出的 *.lib* 檔案有效。
 
-| 選項 | 描述 |
+| 選項 | 說明 |
 | ------ | ----------- |
 |**/objectfile**=`filename`|顯示所指定程式庫中單一物件檔案的中繼資料。|
 
@@ -155,7 +155,7 @@ ildasm MyFile.exe /output:MyFile.il
 ildasm MyFile.exe /text
 ```
 
-如果檔案 `MyApp.exe` 包含內嵌的 Managed 和 Unmanaged 資源，則下列命令會產生四個檔案：*MyApp.il*、*MyApp.res*、*Icons.resources*和 *Message.resources*：
+如果檔案 `MyApp.exe` 包含內嵌的受控和非受控資源，則下列命令會產生四個檔案：*MyApp.il*、*MyApp.res*、*Icons.resources* 和 *Message.resources*：
 
 ```console
 ildasm MyApp.exe /output:MyApp.il

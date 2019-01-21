@@ -1,5 +1,5 @@
 ---
-title: 如何：在資料流程區塊收到資料時執行動作
+title: HOW TO：在資料流程區塊收到資料時執行動作
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd5963fee985633d843cc60f521b66000b84e55e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 369559feca4edab6de587a3494588973e0c2e1b7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217187"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221059"
 ---
-# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>如何：在資料流程區塊收到資料時執行動作
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>HOW TO：在資料流程區塊收到資料時執行動作
 「執行資料流程區塊」(Execution Dataflow Block) 類型會在收到資料時呼叫使用者提供的委派。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> 類別都是執行資料流程區塊類型。 當您將工作函式提供給執行資料流程區塊時，可以使用 `delegate` 關鍵字 (在 Visual Basic 中為 `Sub`)、<xref:System.Action%601>、<xref:System.Func%602> 或 Lambda 運算式。 本文件將說明如何使用 <xref:System.Func%602> 和 Lambda 運算式在執行區塊中執行動作。  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "44217187"
  [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)文件的＜委派類型摘要＞一節將摘要說明您可提供給 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件的委派類型。 表中也會指出委派類型是以同步或非同步方式運作。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `DataflowExecutionBlocks.cs` 的檔案中 (在 Visual Basic 中為 `DataflowExecutionBlocks.vb`)，然後在 Visual Studio 的 [命令提示字元] 視窗中執行下列命令。  
+ 請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `DataflowExecutionBlocks.cs` 的檔案中 (在 Visual Basic 中為 `DataflowExecutionBlocks.vb`)，然後在 Visual Studio 開發人員命令提示字元視窗中執行下列命令。  
   
  Visual C#  
   

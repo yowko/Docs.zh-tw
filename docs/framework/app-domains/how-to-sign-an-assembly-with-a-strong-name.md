@@ -1,5 +1,5 @@
 ---
-title: 如何：使用強式名稱簽署組件
+title: HOW TO：使用強式名稱簽署組件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c7edfc7cf3a55dc8d789b20540af6a4ad9b91299
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191060"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221254"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用強式名稱簽署組件
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>HOW TO：使用強式名稱簽署組件
 以下是幾種以強式名稱簽署組件的方式：  
   
 -   使用 Visual Studio 中，專案之 [ **屬性** ] 對話方塊中的 [ **簽署** ] 索引標籤。 這是最簡單、最方便以強式名稱簽署組件的方式。  
@@ -31,7 +31,7 @@ ms.locfileid: "50191060"
   
 -   使用編譯器選項。  
   
- 您必須使用密碼編譯金鑰組將組件簽署為強式名稱。 如需建立金鑰組 (Key Pair) 的詳細資訊，請參閱[如何：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)。  
+ 您必須使用密碼編譯金鑰組將組件簽署為強式名稱。 如需建立金鑰組的詳細資訊，請參閱[如何：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)。  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>若要使用 Visual Studio 建立組件並以強式名稱簽署組件  
   
@@ -45,7 +45,7 @@ ms.locfileid: "50191060"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>若要使用組件連結器建立組件並以強式名稱簽署組件  
   
--   在 [Visual Studio 命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)中輸入下列命令：  
+-   在 [Visual Studio 開發人員命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)中鍵入下列命令：  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   

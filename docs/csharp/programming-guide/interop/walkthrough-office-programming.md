@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 997affa2f4cc5332339a49450d68ab3aaadffc4b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 76d48b588db17a712ac698b604828520e38776a9
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084796"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223152"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>逐步解說：Office 程式設計 (C# 和 Visual Basic)
 Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式設計的功能。 有助益的 C# 功能包括具名和選擇性引數以及類型為 `dynamic` 的傳回值。 在 COM 程式設計中，您可以省略 `ref` 關鍵字並存取索引的屬性。 Visual Basic 中的功能包含自動實作的屬性、Lambda 運算式中的陳述式，以及集合初始設定式。
 
-這兩種語言都會啟用類型資訊的內嵌，以允許部署與 COM 元件互動的組件，而不需要將主要 Interop 組件 (PIA) 部署至使用者電腦。 如需詳細資訊，請參閱[逐步解說：從 Managed 組件內嵌類型 (C# 和 Visual Basic)](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。  
+這兩種語言都會啟用類型資訊的內嵌，以允許部署與 COM 元件互動的組件，而不需要將主要 Interop 組件 (PIA) 部署至使用者電腦。 如需詳細資訊，請參閱[逐步解說：從 Managed 組件內嵌類型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。  
   
 這個逐步解說會示範 Office 程式設計內容中的這些功能，但其中大部分也適用於一般的程式設計。 在這個逐步解說中，您會使用 Excel 增益集應用程式來建立 Excel 活頁簿。 接著，建立含有活頁簿連結的 Word 文件。 最後，了解如何啟用和停用 PIA 相依性。  
   
@@ -53,7 +53,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
 1.  在方案總管中，於專案名稱上按一下滑鼠右鍵，然後按一下 [新增參考]。 [加入參考] 對話方塊隨即出現。  
   
-2.  在 [組件] 索引標籤上，選取 **Microsoft.Office.Interop.Excel** `<version>.0.0.0` 版 (如需 Office 產品版本號碼的金鑰，請參閱 [Microsoft 版本](https://en.wikipedia.org/wiki/Microsoft_Office#Versions))，並在 [元件名稱] 清單中，按住 CTRL 鍵，然後選取 **Microsoft.Office.Interop.Word** `version <version>.0.0.0`。 如果看不到組件，您可能需要確定它們已安裝並已顯示 (請參閱[如何：安裝 Office 主要 Interop 組件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))。  
+2.  在 [組件] 索引標籤上，選取 **Microsoft.Office.Interop.Excel** `<version>.0.0.0` 版 (如需 Office 產品版本號碼的金鑰，請參閱 [Microsoft 版本](https://en.wikipedia.org/wiki/Microsoft_Office#Versions))，並在 [元件名稱] 清單中，按住 CTRL 鍵，然後選取 **Microsoft.Office.Interop.Word** `version <version>.0.0.0`。 如果看不到組件，則可能需要確定組件已安裝及顯示 (請參閱[如何：安裝 Office 主要 Interop 組件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))。  
   
 3.  按一下 [確定 **Deploying Office Solutions**]。  
   
@@ -107,7 +107,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
          您無法建立自己本身的編製過索引的屬性。 這個功能僅支援使用現有已編製過索引的屬性。  
   
-         如需詳細資訊，請參閱[如何：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)。  
+         如需詳細資訊，請參閱[＜How to：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)。  
   
 2.  在 `DisplayInExcel` 結尾加入下列程式碼，以調整資料行寬度以容納內容。  
   
@@ -157,11 +157,11 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
 2.  選取 [開始]。 找出 **Microsoft Visual Studio\<版本>**，開啟開發人員命令提示字元。  
   
-3.  在 [Visual Studio 命令提示字元] 視窗中鍵入 `ildasm`，然後按 ENTER 。 隨即會出現 IL DASM 視窗。  
+3.  在 [Visual Studio 開發人員命令提示字元] 視窗中鍵入 `ildasm`，然後按 ENTER。 隨即會出現 IL DASM 視窗。  
   
 4.  在 IL DASM 視窗的 [檔案] 功能表上，選取 [檔案] > [開啟]。 按兩下 [Visual Studio \<版本>]，然後按兩下 [專案]。 開啟您專案的資料夾，並查看 bin/Debug 資料夾中的 <您的專案名稱>.dll。 按兩下 <您的專案名稱>.dll。 新的視窗除了顯示會其他模組和組件的參考之外，還會顯示您專案的屬性。 請注意，組件中會包含命名空間 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word`。 在 Visual Studio 中，編譯器預設會將您所需要的類型從參考的 PIA 匯入組件。  
   
-     如需詳細資訊，請參閱[如何：檢視組件內容](../../../framework/app-domains/how-to-view-assembly-contents.md)。  
+     如需詳細資訊，請參閱[＜How to：檢視組件內容](../../../framework/app-domains/how-to-view-assembly-contents.md)。  
   
 5.  按兩下**資訊清單**圖示。 隨即會出現一個視窗，內含專案所參考之項目的組件清單。 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word` 未包含在清單中。 因為您專案所需的類型已匯入組件中，所以不需要 PIA 參考。 這會讓部署更為容易。 PIA 不需要存在於使用者的電腦上，而且因為應用程式不需要部署特定版本的 PIA，所以應用程式可以設計成與多個版本的 Office 搭配使用，但前提是所有版本都有必要的 API。  
   
@@ -206,7 +206,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 - [Lambda 運算式 (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
 - [如何：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
 - [逐步解說：從 Microsoft Office 組件內嵌類型資訊](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
-- [逐步解說：從 Managed 組件內嵌類型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [逐步解說：從受控組件內嵌類型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
 - [逐步解說：建立 Excel 的第一個 VSTO 增益集](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)  
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
 - [互通性](../../../csharp/programming-guide/interop/index.md)

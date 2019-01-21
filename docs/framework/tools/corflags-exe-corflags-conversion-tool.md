@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4a5b6d490387f2da441ad95bdf369f700cf2e9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21b9881f1275c6a9343421131af478e11b826073
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400025"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222723"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (CorFlags 轉換工具)
 CorFlags 轉換工具可讓您設定可攜式執行映像標頭的 CorFlags 區段。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] \(或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -30,18 +30,18 @@ CorFlags.exe assembly [options]
   
 #### <a name="parameters"></a>參數  
   
-|必要參數|描述|  
+|必要參數|說明|  
 |------------------------|-----------------|  
 |`assembly`|要設定其 CorFlags 的組件名稱。|  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/32BIT[REQ]+**|設定 32BITREQUIRED 旗標。|  
 |**/32BIT[REQ]-**|清除 32BITREQUIRED 旗標。|  
 |**/32BITPREF+**|設定 32BITPREFERRED 旗標。 應用程式在 64 位元平台上仍然以 32 位元處理序執行。 請只對 EXE 檔案設定這個旗標。 如果在 DLL 上設定這個旗標，DLL 就無法在 64 位元處理序中載入，如此就會擲回 <xref:System.BadImageFormatException> 例外狀況。 具有這個旗標的 EXE 檔案可以載入至 64 位元處理序。<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的新功能。|  
 |**/32BITPREF-**|清除 32BITPREFERRED 旗標。<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的新功能。|  
 |**/?**|顯示工具的命令語法和選項。|  
-|**/Force**|即使組件採用強式名稱，仍然強制進行更新。 **重要事項：** 如果您更新強式名稱組件，就必須先再次簽署該組件，再執行其程式碼。|  
+|**/Force**|即使組件採用強式名稱，仍然強制進行更新。 **重要：** 如果要更新採用強式名稱的組件，就必須先再次簽署該組件，再執行其程式碼。|  
 |**/help**|顯示工具的命令語法和選項。|  
 |**/ILONLY+**|設定 ILONLY 旗標。|  
 |**/ILONLY-**|清除 ILONLY 旗標。|  

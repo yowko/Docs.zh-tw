@@ -2,21 +2,21 @@
 title: 教學課程：管理 WordprocessingML 文件中的內容 (C#)
 ms.date: 07/20/2015
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-ms.openlocfilehash: 64749bfda88b3bf9473fef08d5aef6490d2c37c7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2d906bb2310d4dd6c0ccd865a52ede441556dfda
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514778"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145155"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>教學課程：管理 WordprocessingML 文件中的內容 (C#)
 本教學課程顯示如何應用功能性轉換方法與 LINQ to XML 來管理 XML 文件。 C# 範例會查詢並管理 Microsoft Word 所儲存之 Office Open XML WordprocessingML 文件中的資訊。  
   
- 如需詳細資訊，請參閱 [WordprocessingML 簡介](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/) \(英文\)。  
+ 如需詳細資訊，請參閱 [WordprocessingML 簡介](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/) \(英文\)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|說明|  
 |-----------|-----------------|  
 |[WordprocessingML 文件的型態 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)|提供 WordprocessingML 文件詳細資料的快速說明。|  
 |[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)|提供逐步指示來建立此教學課程中，查詢的來源文件。|  

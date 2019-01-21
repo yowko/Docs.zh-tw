@@ -4,12 +4,12 @@ description: 了解微服務產業中分散式資料管理的挑戰和解決方�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: adfb3c0be33d18a991ee552a99a2d02cc3ec7bb3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c3da158bf7a7ee2d4b979349299bba7487c9b1a2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151027"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145987"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分散式資料管理的挑戰和解決方案
 
@@ -53,7 +53,7 @@ ms.locfileid: "53151027"
 
 **圖 4-9**。 微服務無法直接存取其他微服務的資料表
 
-目錄微服務不應該直接更新 Basket 資料表，因為 Basket 資料表為購物籃微服務所擁有。 為更新購物籃微服務，目錄微服務應該使用可能以非同步通訊為基礎的最終一致性，例如整合事件 (訊息和事件通訊)。 這是 [eShopOnContainers](http://aka.ms/eshoponcontainers) 參考應用程式執行這類跨微服務一致性的方式。
+目錄微服務不應該直接更新 Basket 資料表，因為 Basket 資料表為購物籃微服務所擁有。 為更新購物籃微服務，目錄微服務應該使用可能以非同步通訊為基礎的最終一致性，例如整合事件 (訊息和事件通訊)。 這是 [eShopOnContainers](https://aka.ms/eshoponcontainers) 參考應用程式執行這類跨微服務一致性的方式。
 
 如 [CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem) (CAP 定理) 所述，您需要在可用性與 ACID 強式一致性中擇一。 大部分的微服務型案例都會要求可用性和高延展性，而不是強式一致性。 關鍵任務應用程式必須保持啟用及執行，開發人員才能透過處理弱式或最終一致性的技術，處理強式一致性。 這是大部分微服務型架構採用的方法。
 
@@ -100,8 +100,8 @@ ms.locfileid: "53151027"
 - **具體化檢視** \
   [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
-- **Charles Row。ACID vs.基礎：資料庫交易處理的轉換 pH** \
-  [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+- **Charles Row。ACID vs.BASE：資料庫交易處理的轉換 pH** \
+  [*https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
 - **補償交易** \
   [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)

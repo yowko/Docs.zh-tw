@@ -2,12 +2,12 @@
 title: WordprocessingML 文件的組織結構 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 11dfd06f6236b2815989b0f7570868e436c7047a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dee799583eae6bcc1660388e0b6a15185a33707c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125729"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145766"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML 文件的組織結構 (C#)
 這個主題說明 WordprocessingML 文件的 XML 組織結構。  
@@ -91,8 +91,8 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
  [Introducing the Office (2007) Open XML File Formats](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29) (Office (2007) Open XML 檔案格式簡介)  
  [Overview of WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29) (WordprocessingML 概觀)  
  [WordProcessingML 檔案的結構](http://officeopenxml.com/anatomyofOOXML.php) \(英文\)  
- [WordprocessingML 簡介](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/) \(英文\)  
- [Office 2003: XML Reference Schemas Download page](https://www.microsoft.com/en-us/download/details.aspx?id=101) (Office 2003：XML 參考結構描述下載頁面)  
+ [WordprocessingML 簡介](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/) \(英文\)  
+ [Office 2003：XML 參考結構描述下載頁面](https://www.microsoft.com/en-us/download/details.aspx?id=101)  
   
 ## <a name="see-also"></a>請參閱
 

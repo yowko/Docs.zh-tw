@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f0827634278f248089b105844dadf8959f953595
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196457"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221592"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (簽署工具)
 簽署工具是一項命令列工具，會以數位方式簽署檔案、驗證檔案中的簽章以及為檔案加上時間戳記。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] \(或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -29,7 +29,7 @@ signtool [command] [options] [file_name | ...]
   
 #### <a name="parameters"></a>參數  
   
-|引數|描述|  
+|引數|說明|  
 |--------------|-----------------|  
 |`command`|四個命令之一 (`catdb`、`sign`、`Timestamp` 或 `Verify`)，指定要對檔案執行的操作。 如需每個命令的描述，請參閱下一個表格。|  
 |`options`|修改命令的選項。 除了全域 `/q` 和 `/v` 選項外，每個命令支援一組唯一的選項。|  
@@ -37,7 +37,7 @@ signtool [command] [options] [file_name | ...]
   
  簽署工具支援下列命令。 每個命令都會搭配一組獨特選項使用，這些選項列於個別區段中。  
   
-|命令|描述|  
+|命令|說明|  
 |-------------|-----------------|  
 |`catdb`|在目錄資料庫中加入或移除目錄檔。 目錄資料庫可以用來自動查閱目錄檔，並且是由 GUID 所識別。 如需 `catdb` 命令支援選項的清單，請參閱 [catdb 命令選項](../../../docs/framework/tools/signtool-exe.md#catdb)。|  
 |`sign`|數位簽署檔案。 數位簽章可以防止檔案遭到篡改，而且可讓使用者根據簽署憑證確認簽署者。 如需 `sign` 命令支援選項的清單，請參閱 [sign 命令選項](../../../docs/framework/tools/signtool-exe.md#sign)。|  
@@ -46,7 +46,7 @@ signtool [command] [options] [file_name | ...]
   
  下列選項適用於所有簽署工具命令。  
   
-|Global 選項|描述|  
+|Global 選項|說明|  
 |-------------------|-----------------|  
 |**/q**|如果命令成功執行則不顯示任何輸出，如果命令失敗則顯示最少的輸出。|  
 |**/v**|不論命令執行成功或失敗，都顯示詳細資訊輸出，並顯示警告訊息。|  
@@ -56,7 +56,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="catdb-command-options"></a>catdb 命令選項  
  下表列出可以搭配 `catdb` 命令使用的選項。  
   
-|Catdb 選項|描述|  
+|Catdb 選項|說明|  
 |------------------|-----------------|  
 |`/d`|指示預設目錄資料庫已經更新。 如果未使用 `/d` 和 `/g` 選項，簽署工具就會更新系統元件和驅動程式資料庫。|  
 |`/g` *GUID*|指定由全域唯一識別項 *GUID* 所識別的目錄資料庫已更新。|  
@@ -67,7 +67,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="sign-command-options"></a>Sign 命令選項  
  下表列出可以搭配 `sign` 命令使用的選項。  
   
-|Sign 命令選項|描述|  
+|Sign 命令選項|說明|  
 |-------------------------|-----------------|  
 |`/a`|自動選取最佳的簽署憑證。 簽署工具會找到滿足所有指定條件的所有有效憑證，並且選取有效時間最長的一個。 如果沒有這個選項，簽署工具只需要找出一個有效的簽署憑證。|  
 |`/ac`  *file*|從 *file* 將其他憑證加入至簽章區塊。|  
@@ -103,7 +103,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="timestamp-command-options"></a>TimeStamp 命令選項  
  下表列出可以搭配 `TimeStamp` 命令使用的選項。  
   
-|TimeStamp 選項|描述|  
+|TimeStamp 選項|說明|  
 |----------------------|-----------------|  
 |`/p7`|為 PKCS #7 檔案加上時間戳記。|  
 |`/t`  *URL*|指定時間戳記伺服器的 URL。 要加上時間戳記的檔案必須先經過簽署。 必須有 `/t` 或 `/tr` 任一選項。|  
@@ -116,7 +116,7 @@ signtool [command] [options] [file_name | ...]
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>驗證命令選項  
   
-|Verify 選項|描述|  
+|Verify 選項|說明|  
 |-------------------|-----------------|  
 |`/a`|指定所有方法都可以用來驗證檔案。 首先會搜尋目錄資料庫，判斷檔案是否已在目錄中簽署。 如果檔案未在任何目錄中簽署，簽署工具便會嘗試驗證檔案的內嵌簽署。 驗證不一定已在目錄中簽署的檔案時，建議您採用這個選項。 這些檔案的範例包括 Windows 檔案或驅動程式。|  
 |`/ad`|使用預設目錄資料庫尋找目錄。|  
@@ -129,7 +129,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|指定在目錄中搜尋檔案時，要使用的選擇性雜湊演算法。|  
 |`/kp`|指定應以核心模式驅動程式簽署原則執行驗證。|  
 |`/ms`|使用多個驗證語意。 在 [!INCLUDE[win8](../../../includes/win8-md.md)] 及以上版本上，這是 [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 呼叫的預設行為。|  
-|`/o` *Version*|根據作業系統版本驗證檔案。 *Version* 的格式如下：*PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*。 *PlatformID* 代表 <xref:System.PlatformID> 列舉成員的基礎值。 **重要事項：** 建議使用 `/o` 參數。 如果未指定 `/o`，SignTool.exe 可能會傳回未預期的結果。 例如，如果您未包含 `/o` 參數，在舊版作業系統上正確驗證的系統目錄，可能無法在較新版作業系統正確驗證。|  
+|`/o` *Version*|根據作業系統版本驗證檔案。 *Version* 的形式如下：*PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*。 *PlatformID* 代表 <xref:System.PlatformID> 列舉成員的基礎值。 **重要：** 建議使用 `/o` 參數。 如果未指定 `/o`，SignTool.exe 可能會傳回未預期的結果。 例如，如果您未包含 `/o` 參數，在舊版作業系統上正確驗證的系統目錄，可能無法在較新版作業系統正確驗證。|  
 |`/p7`|驗證 PKCS #7 檔案。 PKCS #7 驗證沒有使用任何現有的原則。 檢查簽章，並建置簽署憑證鏈結。|  
 |`/pa`|指定使用預設 Authenticode 驗證原則。 如果未指定 `/pa` 選項，簽署工具便會使用「Windows 驅動程式驗證原則」(Windows Driver Verification Policy)。 這個選項無法與 `catdb` 選項搭配使用。|  
 |`/pg` *PolicyGUID*|依 GUID 指定驗證原則。 *PolicyGUID* 會對應至驗證原則的 ActionID。 這個選項無法與 `catdb` 選項搭配使用。|  
@@ -142,7 +142,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="return-value"></a>傳回值  
  簽署工具終止時會傳回下列其中一個結束代碼。  
   
-|結束代碼|描述|  
+|結束代碼|說明|  
 |---------------|-----------------|  
 |0|執行成功。|  
 |1|執行失敗。|  

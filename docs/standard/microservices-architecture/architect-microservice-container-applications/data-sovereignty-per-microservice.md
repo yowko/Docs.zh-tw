@@ -4,12 +4,12 @@ description: 每個微服務之資料自主性是微服務的其中一個重點�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 136f8d173042ab235e5fa3c8478f4aa5659a9787
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4900c294f94f4b4d604ba841595fc5c6d7952c10
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126844"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144898"
 ---
 # <a name="data-sovereignty-per-microservice"></a>每個微服務的資料自主性
 
@@ -27,7 +27,7 @@ ms.locfileid: "53126844"
 
 集中式資料庫方法一開始看起來較簡單，而且似乎能重複使用不同子系統中的實體，讓一切一致。 但事實上，您會得到很大的資料表，它們會服務許多不同子系統，且包含在大部分情況下不需要的屬性和資料行。 就像是嘗試使用相同的實體地圖來進行短距離的健走、一整天的汽車旅行，以及學習地理。
 
-具有通常單一關聯式資料庫的單一應用程式有兩個重要優點：[ACID 交易](https://en.wikipedia.org/wiki/ACID)和 SQL 語言，兩者都可在與您應用程式相關的的所有資料表和資料之間使用。 這種方法可用來輕鬆地撰寫查詢，以結合來自多個資料表的資料。
+一般具有單一關聯式資料庫的單一應用程式有兩個重要優點：[ACID 交易](https://en.wikipedia.org/wiki/ACID)和 SQL 語言，兩者都可在與您應用程式相關的所有資料表和資料之間使用。 這種方法可用來輕鬆地撰寫查詢，以結合來自多個資料表的資料。
 
 不過，當您移到微服務架構時，資料存取變得複雜許多。 但即使 ACID 交易可以或應該用於微服務或繫結內容中，每個微服務所擁有的資料仍是該微服務私用，並且只能透過其微服務 API 來存取。 封裝資料可確保微服務鬆散偶合，而且彼此獨立地持續改進。 如果多個服務存取相同的資料，結構描述更新便需要所有服的協調性更新。 這會破壞微服務生命週期自主。 但分散式資料結構表示您無法讓單一 ACID 交易跨越微服務。 這又表示當商務程序跨越多個微服務時，您必須使用最終一致性。 這要實作時比簡單的 SQL 聯結難上許多，因為您無法建立完整性條件約束，或在不同的資料庫之間使用分散式交易，我們將在稍後說明。 同樣地，許多其他關聯式資料庫功能無法跨多個微服務使用。
 
@@ -37,7 +37,7 @@ ms.locfileid: "53126844"
 
 ## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>微服務和繫結內容模式之間的關聯性
 
-微服務概念衍生自[網域導向設計 (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) 中的[繫結內容 (BC) 模式](http://martinfowler.com/bliki/BoundedContext.html)。 DDD 透過將大型模型分成多個 BC 並且明確指定其界限來處理大型模型。 每個 BC 必須有自己的模型和資料庫。同樣地，每個微服務也擁有其相關資料。 此外，每個 BC 通常都有它自己的[通用語言](http://martinfowler.com/bliki/UbiquitousLanguage.html)，協助軟體開發人員和網域專家之間的溝通。
+微服務概念衍生自[網域導向設計 (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) 中的[繫結內容 (BC) 模式](https://martinfowler.com/bliki/BoundedContext.html)。 DDD 透過將大型模型分成多個 BC 並且明確指定其界限來處理大型模型。 每個 BC 必須有自己的模型和資料庫。同樣地，每個微服務也擁有其相關資料。 此外，每個 BC 通常都有它自己的[通用語言](https://martinfowler.com/bliki/UbiquitousLanguage.html)，協助軟體開發人員和網域專家之間的溝通。
 
 通用語言中的詞彙 (主要為領域實體) 在不同繫結內容中可以有不同名稱，即使是不同領域實體都共用相同的識別 (亦即，用來從儲存體讀取實體的唯一識別碼)。 比方說，在使用者設定檔繫結內容中，使用者網域實體可能會與排序之繫結內容中的買方網域實體共用身分識別。
 

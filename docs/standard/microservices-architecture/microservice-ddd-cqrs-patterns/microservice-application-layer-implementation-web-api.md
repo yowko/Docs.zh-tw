@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解相�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 332829d30f10dde49727c63e9e80a91f24e1123a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d37660d3e2a7640383347071adfe969325ddd77b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151183"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152108"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 實作微服務應用程式層
 
@@ -183,7 +183,7 @@ Autofac 也有功能可[掃描組件以及按命名慣例註冊類型](https://a
 
 如圖 7-24 所示，模式的基礎是接受來自用戶端的命令，然後根據領域模型規則處理它們，最後保持交易狀態。
 
-![CQRS 的寫入端高層級檢視：UI 應用程式透過連接到 CommandHandler 的 API 傳送命令會依賴領域模型和基礎結構來更新資料庫。](./media/image21.png)
+![CQRS 的寫入端高層級檢視：UI 應用程式透過連接到 CommandHandler 的 API 來傳送命令，這依賴領域模型和基礎結構來更新資料庫。](./media/image21.png)
 
 **圖 7-24**. CQRS 模式中命令或「交易端」的高階檢視
 
@@ -397,7 +397,7 @@ public class CreateOrderCommandHandler
 #### <a name="additional-resources"></a>其他資源
 
 - **Mark Seemann：應用程式在界限不是物件導向的** \
-  [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  [*https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
 - **命令和事件** \
   [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)

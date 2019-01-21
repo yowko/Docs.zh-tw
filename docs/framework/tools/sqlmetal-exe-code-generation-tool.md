@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9bdffe76aaf9f41bfbba99bae9d2d3fa9b329d4a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002888"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221826"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (程式碼產生工具)
 SqlMetal 命令列工具會產生 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 之 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]元件的程式碼和對應。 藉由套用本主題稍後出現的選項，您就可以指示 SqlMetal 執行數個不同的動作，包括以下各項：  
@@ -30,7 +30,7 @@ SqlMetal 命令列工具會產生 [!INCLUDE[vbtecdlinq](../../../includes/vbtecd
 > [!NOTE]
 >  使用 Visual Studio 的開發人員也可以使用 [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] 來產生實體類別。 命令列方法會針對大型資料庫做適當調整。 由於 SqlMetal 是命令列工具，因此您可以在建置處理序中使用它。  
   
- 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。在命令提示字元中，鍵入下列命令：  
+ 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。在命令提示字元中，鍵入下列命令：  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ sqlmetal [options] [<input file>]
   
  **連接選項**  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/server:** *\<名稱>*|指定資料庫伺服器名稱。|  
 |**/database:** *\<名稱>*|指定伺服器上的資料庫目錄。|  
@@ -54,7 +54,7 @@ sqlmetal [options] [<input file>]
   
  **擷取選項**  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/views**|擷取資料庫檢視。|  
 |**/functions**|擷取資料庫函式。|  
@@ -62,7 +62,7 @@ sqlmetal [options] [<input file>]
   
  **輸出選項**  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|以 .dbml 傳送輸出。 無法搭配 **/map** 選項使用。|  
 |**/code** *[:file]*|以原始程式碼傳送輸出。 無法搭配 **/dbml** 選項使用。|  
@@ -70,18 +70,18 @@ sqlmetal [options] [<input file>]
   
  **其他**  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/language:** *\<語言>*|指定原始程式碼語言。<br /><br /> 有效的 *\<語言>*：vb、csharp。<br /><br /> 預設值：衍生自程式碼檔案名稱的副檔名。|  
 |**/namespace:** *\<名稱>*|指定所產生程式碼的命名空間。 預設值：沒有命名空間。|  
 |**/context:** *\<類型>*|指定資料庫內容類別的名稱。 預設值：衍生自資料庫名稱。|  
 |**/entitybase:** *\<類型>*|指定所產生程式碼中實體類別的基底類別。 預設值：實體沒有基底類別。|  
 |**/pluralize**|自動複數化或單數化類別和成員名稱。<br /><br /> 這個選項功能僅適用於美國英文版本。|  
-|**/serialization:** *\<選項>*|產生可序列化的類別。<br /><br /> 有效的 *\<選項>*：無、單向。 預設值：無。<br /><br /> 如需詳細資訊，請參閱[序列化](../../../docs/framework/data/adonet/sql/linq/serialization.md)。|  
+|**/serialization:** *\<選項>*|產生可序列化的類別。<br /><br /> 有效的 *\<選項 >*：無、單向。 預設值：無。<br /><br /> 如需詳細資訊，請參閱[序列化](../../../docs/framework/data/adonet/sql/linq/serialization.md)。|  
   
  **輸入檔案**  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**\<輸入檔>**|指定 SQL Server Express .mdf 檔、 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf 檔或是 .dbml 中繼檔。|  
   

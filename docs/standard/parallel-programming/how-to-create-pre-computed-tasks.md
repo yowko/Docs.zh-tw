@@ -1,5 +1,5 @@
 ---
-title: 如何：建立經過預先計算的工作
+title: HOW TO：建立經過預先計算的工作
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47e4c5d721b37388a4008d100f5212057477c638
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: aa95eccfa39073bb8ccb3cb9c49e099ac1f90ab1
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44211654"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222089"
 ---
-# <a name="how-to-create-pre-computed-tasks"></a>如何：建立經過預先計算的工作
+# <a name="how-to-create-pre-computed-tasks"></a>HOW TO：建立經過預先計算的工作
 此文件將說明如何使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法擷取保留在快取中的非同步下載作業的結果。 <xref:System.Threading.Tasks.Task.FromResult%2A> 方法會傳回已完成的 <xref:System.Threading.Tasks.Task%601> 物件，該物件中會保存提供的值做為其 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性。 當您執行會傳回 <xref:System.Threading.Tasks.Task%601> 物件的非同步作業，而且該 <xref:System.Threading.Tasks.Task%601> 物件的結果已計算時，這個方法很有用。  
   
 ## <a name="example"></a>範例  
@@ -29,7 +29,7 @@ ms.locfileid: "44211654"
  這個範例會計算下載多個字串兩次所需的時間。 由於結果已保存在快取中，因此第二組下載作業所需的時間應該會比第一組短。 <xref:System.Threading.Tasks.Task.FromResult%2A> 方法會讓 `DownloadStringAsync` 方法建立保存這些預先計算結果的 <xref:System.Threading.Tasks.Task%601> 物件。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `CachedDownloads.cs` 的檔案中 (在 Visual Basic 中為 `CachedDownloads.vb`)，然後在 Visual Studio 的 [命令提示字元] 視窗中執行下列命令。  
+ 請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `CachedDownloads.cs` 的檔案中 (在 Visual Basic 中為 `CachedDownloads.vb`)，然後在 Visual Studio 開發人員命令提示字元視窗中執行下列命令。  
   
  Visual C#  
   
