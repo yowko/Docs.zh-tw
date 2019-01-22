@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: ebbbe763ecfc4aeac338d0eb88ee785a4f637456
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a7824f0f39820b186b654aa4369dc068134d6a0d
+ms.sourcegitcommit: 42522983167b52852e1a20c87d57a1f63215f9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148600"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443651"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 結構描述定義工具 (Xsd.exe) 可以從 XDR、XML 和 XSD 檔案或從執行階段組件的類別中，產生 XML 結構描述或 Common Language Runtime 類別。  
@@ -35,7 +35,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |選項|描述|  
 |------------|-----------------|  
 |**/h\[elp\]**|顯示工具的命令語法和選項。|  
-|**/o\[utputdir\]:**_目錄_|指定輸出檔的目錄。 這個引數只可以使用一次。 預設為目前的目錄。|  
+|**/o\[utputdir\]:**_directory_|指定輸出檔的目錄。 這個引數只可以使用一次。 預設為目前的目錄。|  
 |**/?**|顯示工具的命令語法和選項。|  
 |**/p\[arameters\]:**_file.xml_|從指定的 .xml 檔案，讀取各種作業模式的選項。 簡短形式為 `/p:`。 如需詳細資訊，請參閱 <<c0> [ 備註](#remarks)一節。|  
   
@@ -44,19 +44,19 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |選項|描述|  
 |------------|-----------------|  
-|**/c\[取悅\]**|產生對應到指定的結構描述的類別。 若要將 XML 資料讀入物件，請使用 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> 方法。|  
-|**/d**[**ataset**]|產生衍生自 <xref:System.Data.DataSet> 的類別，對應到指定的結構描述。 若要將 XML 資料讀入衍生類別，請使用 <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> 方法。|  
+|**/c\[lasses\]**|產生對應到指定的結構描述的類別。 若要將 XML 資料讀入物件，請使用 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> 方法。|  
+|**/d[ataset]**|產生衍生自 <xref:System.Data.DataSet> 的類別，對應到指定的結構描述。 若要將 XML 資料讀入衍生類別，請使用 <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> 方法。|  
   
  您也可以為 .xsd 檔指定下列任何選項：  
   
 |選項|描述|  
 |------------|-----------------|  
-|**/e\[實作\]:**_項目_|指定所要產生程式碼的結構描述中的項目。 根據預設，會輸入所有項目。 您可以多次指定這個引數。|  
+|**/e\[lement\]:**_element_|指定所要產生程式碼的結構描述中的項目。 根據預設，會輸入所有項目。 您可以多次指定這個引數。|  
 |**/enableDataBinding**|在所有產生的型別上實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，以啟用資料繫結 (Data Binding)。 簡短形式為 `/edb`。|  
 |**/enableLinqDataSet**|(簡短形式：`/eld`)。指定產生的 DataSet 可使用 LINQ to DataSet 查詢。 如果也指定了 /dataset 選項，就會使用這個選項。 如需詳細資訊，請參閱 [LINQ to DataSet 概觀](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查詢具類型資料集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 如需使用 LINQ 的一般資訊，請參閱 [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。|  
 |**/f\[ields\]**|產生欄位，而不是產生屬性。 根據預設，會產生屬性。|  
-|**/l\[anguage\]:**_語言_|指定要使用的程式語言。 可以選擇 `CS` (C#，此為預設值)、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#)。 您也可以對實作 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的類別指定完整名稱。|  
-|**/n\[amespace\]:**_命名空間_|指定產生的型別的執行階段命名空間。 預設命名空間是 `Schemas`。|  
+|**/l\[anguage\]:**_language_|指定要使用的程式語言。 可以選擇 `CS` (C#，此為預設值)、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#)。 您也可以對實作 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的類別指定完整名稱。|  
+|**/n\[amespace\]:**_namespace_|指定產生的型別的執行階段命名空間。 預設命名空間是 `Schemas`。|  
 |**/nologo**|隱藏產品啟始畫面。|  
 |**/order**|在所有物件成員上產生明確順序識別項。|  
 |**/o\[ut\]:**_directoryName_|指定要在其中放置檔案的輸出目錄。 預設為目前的目錄。|  
@@ -66,7 +66,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |選項|描述|  
 |------------|-----------------|  
-|**/t\[類型\]:**_typename_|指定所要建立結構描述的型別名稱。 您可以指定多個型別引數。 如果 *typename* 沒有指定命名空間，Xsd.exe 會以指定的類型比對組件中的所有類型。 如果 *typename* 指定命名空間，只有該類型會被比對。 如果 *typename* 結尾為星號字元 (\*)，則工具會比對 \* 之前以這個字串為開頭的所有類型。 如果省略 `/type` 選項，Xsd.exe 會產生組件中所有型別的結構描述。|  
+|**/t\[ype\]:**_typename_|指定所要建立結構描述的型別名稱。 您可以指定多個型別引數。 如果 *typename* 沒有指定命名空間，Xsd.exe 會以指定的類型比對組件中的所有類型。 如果 *typename* 指定命名空間，只有該類型會被比對。 如果 *typename* 結尾為星號字元 (\*)，則工具會比對 \* 之前以這個字串為開頭的所有類型。 如果省略 `/type` 選項，Xsd.exe 會產生組件中所有型別的結構描述。|  
   
 ## <a name="remarks"></a>備註  
  下表列出 Xsd.exe 執行的作業。  
