@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ec44d4c2757555c74fe7fc27c26cc5fc87c4517
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7595b4a69dd327e448aade1e2dcba06100e55bf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638675"
 ---
-# <a name="isymunmanagedwritersetuserentrypoint-method"></a><span data-ttu-id="051bc-102">ISymUnmanagedWriter::SetUserEntryPoint 方法</span><span class="sxs-lookup"><span data-stu-id="051bc-102">ISymUnmanagedWriter::SetUserEntryPoint Method</span></span>
-<span data-ttu-id="051bc-103">指定的使用者定義的方法，是針對此模組的進入點。</span><span class="sxs-lookup"><span data-stu-id="051bc-103">Specifies the user-defined method that is the entry point for this module.</span></span> <span data-ttu-id="051bc-104">比方說，此進入點可能是使用者的主要方法，而不是在 main 之前編譯器產生的虛設常式。</span><span class="sxs-lookup"><span data-stu-id="051bc-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span></span>  
+# <a name="isymunmanagedwritersetuserentrypoint-method"></a><span data-ttu-id="f70a7-102">ISymUnmanagedWriter::SetUserEntryPoint 方法</span><span class="sxs-lookup"><span data-stu-id="f70a7-102">ISymUnmanagedWriter::SetUserEntryPoint Method</span></span>
+<span data-ttu-id="f70a7-103">指定的使用者定義的方法，此模組的進入點。</span><span class="sxs-lookup"><span data-stu-id="f70a7-103">Specifies the user-defined method that is the entry point for this module.</span></span> <span data-ttu-id="f70a7-104">例如，此進入點可能是使用者的主要方法，而不是在 main 之前編譯器所產生的虛設常式。</span><span class="sxs-lookup"><span data-stu-id="f70a7-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="051bc-105">語法</span><span class="sxs-lookup"><span data-stu-id="051bc-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f70a7-105">語法</span><span class="sxs-lookup"><span data-stu-id="f70a7-105">Syntax</span></span>  
   
 ```  
 HRESULT SetUserEntryPoint(  
     [in] mdMethodDef entryMethod);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="051bc-106">參數</span><span class="sxs-lookup"><span data-stu-id="051bc-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f70a7-106">參數</span><span class="sxs-lookup"><span data-stu-id="f70a7-106">Parameters</span></span>  
  `entryMethod`  
- <span data-ttu-id="051bc-107">[in]中繼資料語彙基元的方法，是使用者進入點。</span><span class="sxs-lookup"><span data-stu-id="051bc-107">[in] The metadata token for the method that is the user entry point.</span></span>  
+ <span data-ttu-id="f70a7-107">[in]是使用者的項目方法的中繼資料語彙基元點。</span><span class="sxs-lookup"><span data-stu-id="f70a7-107">[in] The metadata token for the method that is the user entry point.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="051bc-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="051bc-108">Return Value</span></span>  
- <span data-ttu-id="051bc-109">如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="051bc-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f70a7-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="f70a7-108">Return Value</span></span>  
+ <span data-ttu-id="f70a7-109">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="f70a7-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="051bc-110">需求</span><span class="sxs-lookup"><span data-stu-id="051bc-110">Requirements</span></span>  
- <span data-ttu-id="051bc-111">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="051bc-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f70a7-110">需求</span><span class="sxs-lookup"><span data-stu-id="f70a7-110">Requirements</span></span>  
+ <span data-ttu-id="f70a7-111">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f70a7-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="051bc-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="051bc-112">See Also</span></span>  
- [<span data-ttu-id="051bc-113">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="051bc-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f70a7-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f70a7-112">See also</span></span>
+- [<span data-ttu-id="f70a7-113">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="f70a7-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
