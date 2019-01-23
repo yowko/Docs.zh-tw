@@ -1,18 +1,18 @@
 ---
-title: HOW TO：在 Managed Windows 服務中裝載 WCF 服務
+title: HOW TO：將 WCF 服務裝載於 Managed 的 Windows 服務
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613817"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>HOW TO：在 Managed Windows 服務中裝載 WCF 服務
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>HOW TO：將 WCF 服務裝載於 Managed 的 Windows 服務
 
 本主題概要說明建立 Windows 服務裝載 Windows Communication Foundation (WCF) 服務所需的基本步驟。 此案例會啟用受管理的 Windows 服務裝載是不是啟動訊息的安全環境中裝載網際網路資訊服務 (IIS) 外部的長時間執行 WCF 服務的選項。 服務的存留期會改由作業系統來控制。 所有 Windows 版本都提供這個裝載選項。
 
@@ -138,4 +138,4 @@ Windows 服務可以透過 Microsoft Management Console (MMC) 中的 Microsoft.M
 - [簡化設定](../../../../docs/framework/wcf/simplified-configuration.md)
 - [在 Managed 應用程式中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
 - [裝載服務](../../../../docs/framework/wcf/hosting-services.md)
-- [Windows Server App Fabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)

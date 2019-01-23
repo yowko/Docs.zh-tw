@@ -2,19 +2,19 @@
 title: '&lt;messageLogging&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: cfc5f23e58c5a428ecb4541ccfc0ada5b190fb36
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a08f773da524808606c791ec5e5de6623c6714ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616598"
 ---
 # <a name="ltmessagelogginggt"></a>&lt;messageLogging&gt;
 這個項目會定義 Windows Communication Foundation (WCF) 的訊息記錄功能設定。  
   
  \<system.ServiceModel>  
-\<診斷 >  
-\<messageLogging >  
+\<diagnostic>  
+\<messageLogging>  
   
 ## <a name="syntax"></a>語法  
   
@@ -121,9 +121,9 @@ ms.locfileid: "54150444"
 </messageLogging>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>  
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>  
- [設定訊息記錄](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>
+- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
+- <xref:System.ServiceModel.Configuration.MessageLoggingElement>
+- [設定訊息記錄](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)

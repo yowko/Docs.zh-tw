@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5007e07340621fa76dc37a48eaf8c17bc048339
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 219b511662a2e59fb6e0e55b6630bd54015fcc79
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620093"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>程式碼存取安全性原則相容性和移轉
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 程式碼存取安全性 (CAS) 的原則部分在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中已過時。 如此一來，您可能會遇到編譯警告和執行階段例外狀況如果您呼叫過時的原則類型和成員[明確](#explicit_use)或[隱含](#implicit_use)（透過其他類型和成員）。  
+ 程式碼存取安全性 (CAS) 的原則部分在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中已過時。 如此一來，您可能會遇到編譯警告和執行階段例外狀況如果您呼叫過時的原則類型和成員[明確](#explicit_use)或是[隱含](#implicit_use)（透過其他型別和成員）。  
   
  您可以透過下列方式避免出現警告和錯誤：  
   
@@ -33,11 +33,11 @@ ms.locfileid: "33393243"
   
 -   [隱含使用](#implicit_use)  
   
--   [錯誤和警告](#errors_and_warnings)  
+-   [錯誤與警告](#errors_and_warnings)  
   
--   [移轉： 取代過時呼叫](#migration)  
+-   [移轉：取代過時呼叫](#migration)  
   
--   [相容性： 使用 CAS 原則的舊版選項](#compatibility)  
+-   [相容性：使用 CAS 原則的舊版選項](#compatibility)  
   
 <a name="explicit_use"></a>   
 ## <a name="explicit-use"></a>明確使用  
@@ -116,13 +116,13 @@ ms.locfileid: "33393243"
 -   <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=nameWithType>  
   
 ### <a name="application-domain-sandboxing"></a>應用程式定義域沙箱作業  
- <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 方法通常用於對應用程式定義域中的組件進行沙箱化處理。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]公開不需要使用的成員<xref:System.Security.Policy.PolicyLevel>針對此目的。 如需詳細資訊，請參閱[如何： 執行部分信任程式碼在沙箱中](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)。  
+ <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 方法通常用於對應用程式定義域中的組件進行沙箱化處理。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]會公開成員，不需要使用<xref:System.Security.Policy.PolicyLevel>針對此目的。 如需詳細資訊，請參閱[＜How to：在沙箱中執行部分信任程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)。  
   
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>決定部分信任程式碼的安全或合理權限集合  
- 主機通常需要決定對裝載的程式碼進行沙箱化處理的適當權限。 之前[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，CAS 原則提供的方法與<xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType>方法。 做為替代，[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]提供<xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType>方法傳回安全、 標準的權限，為提供的辨識項集合。  
+ 主機通常需要決定對裝載的程式碼進行沙箱化處理的適當權限。 再[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，CAS 原則提供一個方式來執行這項作業<xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType>方法。 替代方案是，[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]提供<xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType>方法，以傳回安全、 標準的權限，提供的辨識項集合。  
   
 ### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>非沙箱化案例：組件載入的多載  
- 不對組件進行沙箱化處理，而使用組件載入多載的原因，可能是為了要使用在其他情況下無法使用的參數。 從開始[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，不需要的組件載入多載<xref:System.Security.Policy.Evidence?displayProperty=nameWithType>物件做為參數，例如<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>，實現此案例。  
+ 不對組件進行沙箱化處理，而使用組件載入多載的原因，可能是為了要使用在其他情況下無法使用的參數。 開頭[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，不需要的組件載入多載<xref:System.Security.Policy.Evidence?displayProperty=nameWithType>物件做為參數，例如<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>，實現此案例。  
   
  如果您要對組件進行沙箱化處理，請使用 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 多載。  
   
@@ -141,6 +141,6 @@ ms.locfileid: "33393243"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
- [安全程式碼撰寫方針](../../standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>另請參閱
+- [如何：在沙箱中執行部分信任程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [安全程式碼撰寫方針](../../standard/security/secure-coding-guidelines.md)

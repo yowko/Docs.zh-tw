@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
-ms.openlocfilehash: a639e1389d0771dfcb5635b7d78982150b684fd3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5a0f6e0fab5d0f2fe8574e348fc6b8ae726eeb99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617209"
 ---
 # <a name="parameter-design"></a>參數設計
 本章節會提供廣泛的指導方針，在參數的設計，包括各節來檢查引數的指導方針。 此外，您應該參閱中所述的指導方針[命名的參數](../../../docs/standard/design-guidelines/naming-parameters.md)。  
@@ -157,5 +157,5 @@ public class String {
   
 ## <a name="see-also"></a>另請參閱
 
-- [成員設計方針](../../../docs/standard/design-guidelines/member.md)  
+- [成員設計方針](../../../docs/standard/design-guidelines/member.md)
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e6690a4f11bb1a88e2d77c67ccb29056c8e03f96
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: d4483d11903d61135585a2b6c2c33eff48300151
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616010"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>組件繫結重新導向安全性使用權限
 在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。 這適用於 .NET Framework 組件和協力廠商組件的重新導向。 藉由設定授與權限<xref:System.Security.Permissions.SecurityPermissionFlag>加上旗標上<xref:System.Security.Permissions.SecurityPermission>。 Managed 組件預設會有任何權限。  
@@ -27,12 +27,12 @@ ms.locfileid: "47088656"
 |----------|-----------------------------------|  
 |受信任的區域 （本機電腦）|**ON**|  
 |內部網路區域|**ON**|  
-|網際網路區域|**關閉**|  
-|不受信任的區域|**關閉**|  
+|網際網路區域|**OFF**|  
+|不受信任的區域|**OFF**|  
   
  系統管理員可以變更這些安全性設定，以支援或限制特定電腦的特定案例。 沒有變更工具**BindingRedirects**旗標設定預設值; 系統管理員必須手動編輯使用者的電腦上的 Security.config 檔。  
   
-## <a name="see-also"></a>另請參閱  
- [發行者原則檔和並排顯示執行](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)  
- [如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
- [並存執行](../../../docs/framework/deployment/side-by-side-execution.md)
+## <a name="see-also"></a>另請參閱
+- [發行者原則檔和並排顯示執行](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)
+- [如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [並存執行](../../../docs/framework/deployment/side-by-side-execution.md)

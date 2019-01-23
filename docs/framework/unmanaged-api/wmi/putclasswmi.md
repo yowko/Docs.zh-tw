@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de08662a825a84f19a40863cf73481d89364ebd0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 995c697497876969edc1021350b7bfe28e4018bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614506"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi 函式
 建立新類別或更新現有類別。  
@@ -73,12 +73,12 @@ HRESULT PutClassWmi (
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 使用者沒有建立或修改類別的權限。 |
 | `WBEM_E_FAILED` | 0x80041001 | 發生未指定的錯誤。 |
-| `WBEM_E_INVALID_CLASS` | 收到 0x80041010 | 指定的類別不是有效的。 一般而言，這表示`pObject`指定的執行個體物件。 |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | 指定的類別不是有效的。 一般而言，這表示`pObject`指定的執行個體物件。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
 | `WBEM_E_INVALID OPERATION` | 0x80041016 | 指定的類別名稱無效。 |
 | `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | 您嘗試進行的變更，可能會導致失效的子類別。 |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY`指定旗標，但是類別已存在。 |
-| `WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` 中指定了`lFlags`，而且找不到類別。 |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` 中指定了`lFlags`，而且找不到類別。 |
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | 類別的必要的屬性不是所有已設定。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI 是可能已停止和重新啟動。 呼叫[ConnectServerWmi](connectserverwmi.md)一次。 |
@@ -100,5 +100,5 @@ HRESULT PutClassWmi (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

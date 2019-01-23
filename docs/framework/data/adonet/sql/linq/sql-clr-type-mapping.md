@@ -2,12 +2,12 @@
 title: SQL-CLR 類型對應
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5c8c6456d108975ec927e28ac80c8dcca1567b46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617339"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 類型對應
 在 LINQ to SQL 中，關聯式資料庫的資料模型會對應至以您選擇之程式語言表示的物件模型 (Object Model)。 執行應用程式時，LINQ to SQL 會將物件模型中的 Language Integrated Query (LINQ) 轉譯成 SQL，並將這些查詢傳送至資料庫進行執行。 當資料庫傳回結果時，LINQ to SQL 會將結果轉譯回您可以在自己的程式語言中處理的物件。  
@@ -38,7 +38,7 @@ ms.locfileid: "48837332"
 ## <a name="default-type-mapping"></a>預設型別對應  
  您可以使用物件關聯式設計工具 (O/R 設計工具) 或 SQLMetal 命令列工具，自動建立物件模型或外部對應檔案。 這些工具的預設型別對應會定義選擇哪些 CLR 型別來對應至 SQL Server 資料庫內部的資料行。 如需使用這些工具的詳細資訊，請參閱[建立物件模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)。  
   
- 您也可以根據物件模型或外部對應檔案中的對應資訊，使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 方法來建立 SQL Server 資料庫。 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 方法的預設型別對應會定義建立哪些 SQL Server 資料行型別來對應至物件模型中的 CLR 型別。 如需詳細資訊，請參閱 <<c0> [ 如何： 動態建立資料庫](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)。  
+ 您也可以根據物件模型或外部對應檔案中的對應資訊，使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 方法來建立 SQL Server 資料庫。 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 方法的預設型別對應會定義建立哪些 SQL Server 資料行型別來對應至物件模型中的 CLR 型別。 如需詳細資訊，請參閱[＜How to：動態建立資料庫](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)。  
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>型別對應的執行階段行為對照表  
@@ -256,8 +256,8 @@ ms.locfileid: "48837332"
   
  LINQ to SQL 不支援這些其他型別的任何其他型別對應。  如需詳細資訊，請參閱 <<c0> [ 型別對應的執行階段行為對照表](#BehaviorMatrix)。  
   
-## <a name="see-also"></a>另請參閱  
- [以屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [SQL-CLR 類型不符](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+## <a name="see-also"></a>另請參閱
+- [以屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [SQL-CLR 類型不符](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
