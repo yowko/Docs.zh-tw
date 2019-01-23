@@ -1,5 +1,5 @@
 ---
-title: 如何：使用邊框距離在 Windows Form 控制項周圍建立框線
+title: HOW TO：Windows Form 周圍建立框線控制使用的填補
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - margins [Windows Forms], Windows Forms
 - Margin property [Windows Forms]
 ms.assetid: bac7ed4d-a163-4259-98bd-155a36345890
-ms.openlocfilehash: 7866b78afd768fa99ceacfdee13c086a9ac00e0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26d5dd086828df94c1ea0808d2f72723344b0702
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614650"
 ---
-# <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a><span data-ttu-id="04b80-102">如何：使用邊框距離在 Windows Form 控制項周圍建立框線</span><span class="sxs-lookup"><span data-stu-id="04b80-102">How to: Create a Border Around a Windows Forms Control Using Padding</span></span>
-<span data-ttu-id="04b80-103">下列程式碼範例示範如何建立框線或外框<xref:System.Windows.Forms.RichTextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="04b80-103">The following code example demonstrates how to create a border or outline around a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="04b80-104">此範例設定的值<xref:System.Windows.Forms.Panel>控制項的<xref:System.Windows.Forms.Padding>5 和集合的屬性<xref:System.Windows.Forms.Control.Dock%2A>屬性的子系<xref:System.Windows.Forms.RichTextBox>控制權傳輸至<xref:System.Windows.Forms.DockStyle.Fill>。</span><span class="sxs-lookup"><span data-stu-id="04b80-104">The example sets the value of a <xref:System.Windows.Forms.Panel> control’s <xref:System.Windows.Forms.Padding> property to 5 and sets the <xref:System.Windows.Forms.Control.Dock%2A> property of a child <xref:System.Windows.Forms.RichTextBox> control to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span> <span data-ttu-id="04b80-105"><xref:System.Windows.Forms.Control.BackColor%2A>的<xref:System.Windows.Forms.Panel>控制設為  <xref:System.Drawing.Color.Blue%2A>，它會建立周圍的藍色框線<xref:System.Windows.Forms.RichTextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="04b80-105">The <xref:System.Windows.Forms.Control.BackColor%2A> of the <xref:System.Windows.Forms.Panel> control is set to <xref:System.Drawing.Color.Blue%2A>, which creates a blue border around the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
+# <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a><span data-ttu-id="b13c5-102">HOW TO：Windows Form 周圍建立框線控制使用的填補</span><span class="sxs-lookup"><span data-stu-id="b13c5-102">How to: Create a Border Around a Windows Forms Control Using Padding</span></span>
+<span data-ttu-id="b13c5-103">下列程式碼範例示範如何建立框線或外框<xref:System.Windows.Forms.RichTextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="b13c5-103">The following code example demonstrates how to create a border or outline around a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="b13c5-104">範例設定的值<xref:System.Windows.Forms.Panel>控制項的<xref:System.Windows.Forms.Padding>屬性設為 5 並設定<xref:System.Windows.Forms.Control.Dock%2A>屬性的子系<xref:System.Windows.Forms.RichTextBox>若要控制<xref:System.Windows.Forms.DockStyle.Fill>。</span><span class="sxs-lookup"><span data-stu-id="b13c5-104">The example sets the value of a <xref:System.Windows.Forms.Panel> control’s <xref:System.Windows.Forms.Padding> property to 5 and sets the <xref:System.Windows.Forms.Control.Dock%2A> property of a child <xref:System.Windows.Forms.RichTextBox> control to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span> <span data-ttu-id="b13c5-105"><xref:System.Windows.Forms.Control.BackColor%2A>的<xref:System.Windows.Forms.Panel>控制設為<xref:System.Drawing.Color.Blue%2A>，這會建立藍色框線<xref:System.Windows.Forms.RichTextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="b13c5-105">The <xref:System.Windows.Forms.Control.BackColor%2A> of the <xref:System.Windows.Forms.Panel> control is set to <xref:System.Drawing.Color.Blue%2A>, which creates a blue border around the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="04b80-106">範例</span><span class="sxs-lookup"><span data-stu-id="04b80-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b13c5-106">範例</span><span class="sxs-lookup"><span data-stu-id="b13c5-106">Example</span></span>  
  [!code-csharp[System.Windows.Forms.Padding#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.Padding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Padding/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="04b80-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="04b80-107">See Also</span></span>  
- <xref:System.Windows.Forms.Padding>  
- [<span data-ttu-id="04b80-108">Windows Forms 控制項的邊界和邊框距離</span><span class="sxs-lookup"><span data-stu-id="04b80-108">Margin and Padding in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md)
+## <a name="see-also"></a><span data-ttu-id="b13c5-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b13c5-107">See also</span></span>
+- <xref:System.Windows.Forms.Padding>
+- [<span data-ttu-id="b13c5-108">Windows Forms 控制項的邊界和邊框距離</span><span class="sxs-lookup"><span data-stu-id="b13c5-108">Margin and Padding in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md)

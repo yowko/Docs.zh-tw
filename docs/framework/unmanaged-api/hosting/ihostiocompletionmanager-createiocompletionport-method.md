@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52e1dd05a87eaf06b5352d7c8d63c402a65d95ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4fc7bda648dd19f614eb27ff514da653dcd347fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619407"
 ---
-# <a name="ihostiocompletionmanagercreateiocompletionport-method"></a><span data-ttu-id="53b55-102">IHostIoCompletionManager::CreateIoCompletionPort 方法</span><span class="sxs-lookup"><span data-stu-id="53b55-102">IHostIoCompletionManager::CreateIoCompletionPort Method</span></span>
-<span data-ttu-id="53b55-103">主應用程式建立新的 I/O 完成通訊埠的要求。</span><span class="sxs-lookup"><span data-stu-id="53b55-103">Requests that the host create a new I/O completion port.</span></span>  
+# <a name="ihostiocompletionmanagercreateiocompletionport-method"></a><span data-ttu-id="5890a-102">IHostIoCompletionManager::CreateIoCompletionPort 方法</span><span class="sxs-lookup"><span data-stu-id="5890a-102">IHostIoCompletionManager::CreateIoCompletionPort Method</span></span>
+<span data-ttu-id="5890a-103">主應用程式建立新的 I/O 完成連接埠的要求。</span><span class="sxs-lookup"><span data-stu-id="5890a-103">Requests that the host create a new I/O completion port.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="53b55-104">語法</span><span class="sxs-lookup"><span data-stu-id="53b55-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5890a-104">語法</span><span class="sxs-lookup"><span data-stu-id="5890a-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateIoCompletionPort (  
@@ -35,34 +35,34 @@ HRESULT CreateIoCompletionPort (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="53b55-105">參數</span><span class="sxs-lookup"><span data-stu-id="53b55-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5890a-105">參數</span><span class="sxs-lookup"><span data-stu-id="5890a-105">Parameters</span></span>  
  `phPort`  
- <span data-ttu-id="53b55-106">[out]指標，新建的 I/O 完成通訊埠或 0 （零），如果無法建立連接埠控制代碼。</span><span class="sxs-lookup"><span data-stu-id="53b55-106">[out] A pointer to a handle to the newly created I/O completion port, or 0 (zero), if the port could not be created.</span></span>  
+ <span data-ttu-id="5890a-106">[out]新建立的 I/O 完成通訊埠或 0 （零），如果無法建立連接埠的控制代碼指標。</span><span class="sxs-lookup"><span data-stu-id="5890a-106">[out] A pointer to a handle to the newly created I/O completion port, or 0 (zero), if the port could not be created.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="53b55-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="53b55-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5890a-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="5890a-107">Return Value</span></span>  
   
-|<span data-ttu-id="53b55-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="53b55-108">HRESULT</span></span>|<span data-ttu-id="53b55-109">描述</span><span class="sxs-lookup"><span data-stu-id="53b55-109">Description</span></span>|  
+|<span data-ttu-id="5890a-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5890a-108">HRESULT</span></span>|<span data-ttu-id="5890a-109">描述</span><span class="sxs-lookup"><span data-stu-id="5890a-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="53b55-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="53b55-110">S_OK</span></span>|<span data-ttu-id="53b55-111">`CreateIoCompletionPort` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="53b55-111">`CreateIoCompletionPort` returned successfully.</span></span>|  
-|<span data-ttu-id="53b55-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="53b55-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="53b55-113">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="53b55-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="53b55-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="53b55-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="53b55-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="53b55-115">The call timed out.</span></span>|  
-|<span data-ttu-id="53b55-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="53b55-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="53b55-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="53b55-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="53b55-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="53b55-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="53b55-119">事件已取消時封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="53b55-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="53b55-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="53b55-120">E_FAIL</span></span>|<span data-ttu-id="53b55-121">發生未知的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="53b55-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="53b55-122">方法會傳回 E_FAIL CLR 已不再可用的處理序內。</span><span class="sxs-lookup"><span data-stu-id="53b55-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="53b55-123">裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="53b55-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="53b55-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="53b55-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="53b55-125">記憶體不足，無法配置所要求的資源。</span><span class="sxs-lookup"><span data-stu-id="53b55-125">Not enough memory was available to allocate the requested resource.</span></span>|  
+|<span data-ttu-id="5890a-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="5890a-110">S_OK</span></span>|<span data-ttu-id="5890a-111">`CreateIoCompletionPort` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="5890a-111">`CreateIoCompletionPort` returned successfully.</span></span>|  
+|<span data-ttu-id="5890a-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5890a-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5890a-113">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="5890a-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="5890a-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5890a-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5890a-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="5890a-115">The call timed out.</span></span>|  
+|<span data-ttu-id="5890a-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5890a-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5890a-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="5890a-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="5890a-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5890a-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5890a-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="5890a-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="5890a-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5890a-120">E_FAIL</span></span>|<span data-ttu-id="5890a-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="5890a-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5890a-122">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="5890a-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5890a-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="5890a-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="5890a-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="5890a-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="5890a-125">記憶體不足，無法配置所要求的資源。</span><span class="sxs-lookup"><span data-stu-id="5890a-125">Not enough memory was available to allocate the requested resource.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="53b55-126">備註</span><span class="sxs-lookup"><span data-stu-id="53b55-126">Remarks</span></span>  
- <span data-ttu-id="53b55-127">CLR 會呼叫`CreateIoCompletionPort`方法，以要求主機建立新的 I/O 完成通訊埠。</span><span class="sxs-lookup"><span data-stu-id="53b55-127">The CLR calls the `CreateIoCompletionPort` method to request that the host create a new I/O completion port.</span></span> <span data-ttu-id="53b55-128">它會透過呼叫這個連接埠繫結 I/O 作業[ihostiocompletionmanager:: Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="53b55-128">It binds I/O operations to this port through a call to the [IHostIoCompletionManager::Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) method.</span></span> <span data-ttu-id="53b55-129">主應用程式回報狀態至 CLR 藉由呼叫[iclriocompletionmanager:: Oncomplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)。</span><span class="sxs-lookup"><span data-stu-id="53b55-129">The host reports status back to the CLR by calling [ICLRIoCompletionManager::OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5890a-126">備註</span><span class="sxs-lookup"><span data-stu-id="5890a-126">Remarks</span></span>  
+ <span data-ttu-id="5890a-127">CLR 會呼叫`CreateIoCompletionPort`方法，以要求主機建立新的 I/O 完成連接埠。</span><span class="sxs-lookup"><span data-stu-id="5890a-127">The CLR calls the `CreateIoCompletionPort` method to request that the host create a new I/O completion port.</span></span> <span data-ttu-id="5890a-128">它會在將 I/O 作業透過呼叫此連接埠繫結[ihostiocompletionmanager:: Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="5890a-128">It binds I/O operations to this port through a call to the [IHostIoCompletionManager::Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) method.</span></span> <span data-ttu-id="5890a-129">主應用程式回報狀態至 CLR 藉由呼叫[iclriocompletionmanager:: Oncomplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)。</span><span class="sxs-lookup"><span data-stu-id="5890a-129">The host reports status back to the CLR by calling [ICLRIoCompletionManager::OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="53b55-130">需求</span><span class="sxs-lookup"><span data-stu-id="53b55-130">Requirements</span></span>  
- <span data-ttu-id="53b55-131">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="53b55-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5890a-130">需求</span><span class="sxs-lookup"><span data-stu-id="5890a-130">Requirements</span></span>  
+ <span data-ttu-id="5890a-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5890a-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="53b55-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="53b55-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5890a-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5890a-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="53b55-133">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="53b55-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5890a-133">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="5890a-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="53b55-134">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53b55-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5890a-134">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5890a-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53b55-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="53b55-135">See Also</span></span>  
- [<span data-ttu-id="53b55-136">ICLRIoCompletionManager 介面</span><span class="sxs-lookup"><span data-stu-id="53b55-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)  
- [<span data-ttu-id="53b55-137">IHostIoCompletionManager 介面</span><span class="sxs-lookup"><span data-stu-id="53b55-137">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5890a-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5890a-135">See also</span></span>
+- [<span data-ttu-id="5890a-136">ICLRIoCompletionManager 介面</span><span class="sxs-lookup"><span data-stu-id="5890a-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [<span data-ttu-id="5890a-137">IHostIoCompletionManager 介面</span><span class="sxs-lookup"><span data-stu-id="5890a-137">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
