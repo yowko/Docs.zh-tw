@@ -1,18 +1,18 @@
 ---
-title: HOW TO：註冊和設定服務 Moniker
+title: HOW TO：註冊並設定服務 Moniker
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: cd3b6bbb47dfd72bf70091c9ca4d6fc5e228d950
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f8f19e70b3345b61f1f5caba2fc6f764b58cc9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593793"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>HOW TO：註冊和設定服務 Moniker
+# <a name="how-to-register-and-configure-a-service-moniker"></a>HOW TO：註冊並設定服務 Moniker
 之前使用型別之合約中的 Windows Communication Foundation (WCF) 服務 moniker，在 COM 應用程式中的，您必須向 COM 註冊必要的屬性的類型，並使用必要的繫結設定 COM 應用程式和 moniker組態設定。  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>使用 COM 註冊必要的屬性化型別  
@@ -87,7 +87,7 @@ ms.locfileid: "44221541"
     >  您可以在 C#、C++ 或其他 .NET 語言應用程式中使用類似的程式碼。  
   
     > [!NOTE]
-    >  ：如果 Moniker 的格式錯誤或服務無法使用，則呼叫 `GetObject` 時將會傳回「無效的語法」錯誤。 如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。  
+    >  :如果 moniker 的格式不正確，或如果服務無法使用，呼叫`GetObject`會傳回 「 無效的語法 」 錯誤。 如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。  
   
      雖然本主題著重於從 VB 6.0 程式碼中使用服務 Moniker，但您也可以使用其他語言中的服務 Moniker。 從 C++ 程式碼中使用 Moniker 時，應該以 "no_namespace named_guids raw_interfaces_only" 這個名稱匯入 Svcutil.exe 產生的組件，如下列程式碼所示。  
   
@@ -97,5 +97,5 @@ ms.locfileid: "44221541"
   
      這樣會修改匯入的介面定義，讓所有方法都會傳回 `HResult`。 其他傳回值都會轉換為 Out 參數。 整體的執行方法仍然相同。 這樣可讓您在 Proxy 上呼叫方法時，判斷發生例外狀況的原因。 不過這個功能只能用於 C++ 程式碼。  
   
-## <a name="see-also"></a>另請參閱  
- [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>另請參閱
+- [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

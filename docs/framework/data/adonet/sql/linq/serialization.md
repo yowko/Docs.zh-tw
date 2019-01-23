@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: cc299e26316b1a3a6fd9b475dcdb8e3911bcf2e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12d7dd8d47262f8eefe8f71f144c5648f089be45
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593572"
 ---
 # <a name="serialization"></a>序列化
 本主題描述[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]序列化功能。 後續段落會提供有關如何在設計階段的程式碼產生期間加入序列化以及 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 類別 (Class) 的執行階段序列化行為。  
   
  您可以透過下列其中一種方法，在設計階段加入序列化程式碼：  
   
--   在[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]，變更**序列化模式**屬性**單向**。  
+-   在  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]，變更**序列化模式**屬性設**單向**。  
   
--   SQLMetal 命令列新增 **/serialization**選項。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
+-   在 SQLMetal 命令列中，新增 **/serialization**選項。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
 ## <a name="overview"></a>總覽  
- 產生的程式碼[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]根據預設會提供延後的載入功能。 在視需要透明載入資料的中介層中，延後載入非常方便。 但是，由於不論是否需要延後載入，序列化程式都會觸發延後載入，所以序列化會有問題。 事實上，序列化物件後，在所有傳出延後載入的參考之下的遞移封閉 (Transitive Closure) 也已序列化。  
+ 產生的程式碼[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]預設會提供延後的載入功能。 在視需要透明載入資料的中介層中，延後載入非常方便。 但是，由於不論是否需要延後載入，序列化程式都會觸發延後載入，所以序列化會有問題。 事實上，序列化物件後，在所有傳出延後載入的參考之下的遞移封閉 (Transitive Closure) 也已序列化。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]序列化功能會處理這個問題，主要是透過兩種機制：  
   
@@ -32,9 +32,9 @@ ms.locfileid: "33356324"
   
 ### <a name="definitions"></a>定義  
   
--   *DataContract 序列化程式*： 預設的.NET Framework 3.0 或更新版本的 Windows Communication Framework (WCF) 元件所使用的序列化程式。  
+-   *DataContract 序列化程式*:預設為.NET Framework 3.0 或更新版本的 Windows Communication Framework (WCF) 元件所使用的序列化程式。  
   
--   *單向序列化*： 包含只有單向關聯屬性 （以避免循環） 之類別的序列化的版本。 依照慣例，主索引鍵-外部索引鍵關聯性之父端上的屬性 (Poperty) 會標記為即將序列化。 雙向關聯中的另一端則不會序列化。  
+-   *單向序列化*:包含僅單向關聯屬性 （以避免循環） 之類別的序列化的版本。 依照慣例，主索引鍵-外部索引鍵關聯性之父端上的屬性 (Poperty) 會標記為即將序列化。 雙向關聯中的另一端則不會序列化。  
   
      單向序列化是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 唯一支援的序列化類型。  
   
@@ -67,12 +67,12 @@ ms.locfileid: "33356324"
 ### <a name="self-recursive-relationships"></a>自我遞迴關聯性  
  自我遞迴關聯性會依循相同的模式。 對應至外部索引鍵的關聯屬性 (Property) 沒有 `DataMember` 屬性 (Attribute)，然而父屬性 (Property) 卻有該屬性 (Attribute)。  
   
- 請考慮下列具有兩個自我遞迴關聯性的類別：Employee.Manager/Reports 和 Employee.Mentor/Mentees。  
+ 請考慮下列具有兩個自我遞迴關聯性的類別：Employee.manager/reports 和 employee.mentor/mentees。  
   
  [!code-csharp[DLinqSerialization#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#7)]
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
-## <a name="see-also"></a>另請參閱  
- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
- [如何：讓實體可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+## <a name="see-also"></a>另請參閱
+- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [如何：讓實體可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)

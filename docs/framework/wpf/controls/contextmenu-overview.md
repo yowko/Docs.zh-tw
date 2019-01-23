@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-ms.openlocfilehash: 54fd823594fba4500f35ed1d69720a3309e54a36
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f1ef0f166908cce3f6c6e39819561a7ec3756a7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595743"
 ---
 # <a name="contextmenu-overview"></a>ContextMenu 概觀
 <xref:System.Windows.Controls.ContextMenu>類別代表使用特定內容公開功能的項目<xref:System.Windows.Controls.Menu>。 一般而言，使用者會公開<xref:System.Windows.Controls.ContextMenu>在[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]以滑鼠右鍵按一下滑鼠按鈕。 本主題將介紹<xref:System.Windows.Controls.ContextMenu>項目，並提供範例，示範如何將它用於[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和程式碼。  
@@ -62,11 +62,11 @@ ms.locfileid: "45666768"
 </Style>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Controls.ContextMenu>  
- <xref:System.Windows.Style>  
- <xref:System.Windows.Controls.Menu>  
- <xref:System.Windows.Controls.MenuItem>  
- [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)  
- [ContextMenu 樣式和範本](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
- [WPF 控制項陳列庫範例](https://go.microsoft.com/fwlink/?LinkID=160053)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Style>
+- <xref:System.Windows.Controls.Menu>
+- <xref:System.Windows.Controls.MenuItem>
+- [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)
+- [ContextMenu 樣式和範本](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)
+- [WPF 控制項陳列庫範例](https://go.microsoft.com/fwlink/?LinkID=160053)

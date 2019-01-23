@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: 0d3feb168acbd623270a2038bf06a3c97126bd05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1a883b2e57d0f055237d68e4f69651ef496795ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590023"
 ---
 # <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt;項目 （網路設定）
 自訂 Web 要求參數。  
   
  \<configuration>  
 \<system.net>  
-\<設定 >  
-\<httpWebRequest >  
+\<settings>  
+\<httpWebRequest>  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "50205148"
 |`maximumResponseHeadersLength`|指定回應標頭的最大長度，以 kb 為單位。 預設值為 64。 -1 值表示沒有大小限制，將會加諸於回應標頭。|  
 |`maximumErrorResponseLength`|指定錯誤回應，最大的長度，以 kb 為單位。 預設值為 64。 -1 值表示沒有大小限制，將會加諸於錯誤回應。|  
 |`maximumUnauthorizedUploadLength`|指定上傳的最大長度，以回應未經授權之錯誤碼，以位元組為單位。 預設值為 -1。 -1 值表示沒有大小限制，將會加諸於上傳。|  
-|`useUnsafeHeaderParsing`|指定是否啟用不安全的標頭的剖析。 預設值是 `false`。|  
+|`useUnsafeHeaderParsing`|指定是否啟用不安全的標頭的剖析。 預設值為 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -53,7 +53,7 @@ ms.locfileid: "50205148"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
 ## <a name="remarks"></a>備註  
  根據預設，.NET Framework 嚴格強制 RFC 2616 的 URI 剖析。 某些伺服器的回應可能包含控制字元，禁止在欄位中，這會導致<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>方法會擲回<xref:System.Net.WebException>。 如果**useUnsafeHeaderParsing**設為 **，則為 true**，<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>在此情況下，但是不會擲回，您的應用程式將會有數種形式的 URI 剖析攻擊弱點。 若要變更伺服器，以便回應不包含控制字元是最佳的解決方案。  
@@ -76,6 +76,6 @@ ms.locfileid: "50205148"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

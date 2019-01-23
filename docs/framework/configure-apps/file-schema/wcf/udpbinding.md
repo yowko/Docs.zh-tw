@@ -2,19 +2,19 @@
 title: '&lt;udpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 4b5fca2fbcece8c5a1641d4cea7700f12de11782
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c8e77eae52352a4ed5167a43386ec933afffa1fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592415"
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 用來設定 <xref:System.ServiceModel.UdpBinding> 繫結的組態元素。  
   
  \<system.ServiceModel>  
-\<繫結 >  
-\<udpBinding >  
+\<bindings>  
+\<udpBinding>  
   
 ## <a name="syntax"></a>語法  
   
@@ -75,7 +75,7 @@ ms.locfileid: "54145831"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
  UdpBinding 允許 WCF 服務透過 UDP 傳輸進行通訊。 它允許 「 射後不理 」 訊息交換其中用戶端將訊息傳送至服務，而不預期有回應傳回。  
@@ -103,12 +103,12 @@ ms.locfileid: "54145831"
 </udpBinding>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
