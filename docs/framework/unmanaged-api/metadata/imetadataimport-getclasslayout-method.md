@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b031fc35a4687a8535e3cb5e9ef2a53bab9fe376
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 52136426be9e8f220d8eb5fc93659f588f007498
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625094"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout 方法
 取得指定 TypeDef 語彙基元所參考類別的配置資訊。  
@@ -42,10 +42,10 @@ HRESULT GetClassLayout  (
   
 #### <a name="parameters"></a>參數  
  `td`  
- [in]要傳回的版面配置類別的 TypeDef 語彙基元。  
+ [in]使用版面配置，以傳回類別的 TypeDef 語彙基元。  
   
  `pdwPackSize`  
- [out]其中一個值 1、 2、 4、 8 或 16，表示類別的組件的大小。  
+ [out]其中一個值 1、 2、 4、 8 或 16，表示類別的組件大小。  
   
  `rFieldOffset`  
  [out]陣列[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)值。  
@@ -57,17 +57,17 @@ HRESULT GetClassLayout  (
  [out]傳回的項目數`rFieldOffset`。  
   
  `pulClassSize`  
- [out]大小 （位元組） 所表示的類別`td`。  
+ [out]大小 （位元組） 所表示之類別的`td`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

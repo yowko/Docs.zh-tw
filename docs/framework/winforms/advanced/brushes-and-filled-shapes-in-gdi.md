@@ -13,41 +13,41 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: 9475518a5f0422e0eac1ec521088071bb4d1c885
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 197678cfdced1e17ad87f521a30c7103c49df4e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624178"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+ 中的筆刷和填滿的形狀
-封閉的圖形，例如矩形或橢圓形包含大綱和內部。 繪製外框畫筆和筆刷填滿內部。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供填滿內部的封閉圖形筆刷的數個類別： <xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，和<xref:System.Drawing.Drawing2D.PathGradientBrush>。 所有這些類別繼承自<xref:System.Drawing.Brush>類別。 下圖顯示與實心筆刷填滿的矩形和橢圓形填滿影線筆刷。  
+封閉的形狀，例如矩形或橢圓形，是由外框和內部所組成。 使用畫筆繪製外框，並使用筆刷填滿內部。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供來填滿的封閉的形狀內部的筆刷的數個類別： <xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，和<xref:System.Drawing.Drawing2D.PathGradientBrush>。 所有這些類別繼承自<xref:System.Drawing.Brush>類別。 下圖顯示使用實心筆刷填滿的矩形和橢圓形填滿影線筆刷。  
   
- ![填滿圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
+ ![填滿形狀](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
-## <a name="solid-brushes"></a>純色筆刷  
- 若要填滿封閉的圖形時，您需要的執行個體<xref:System.Drawing.Graphics>類別和<xref:System.Drawing.Brush>。 執行個體<xref:System.Drawing.Graphics>類別提供方法，例如<xref:System.Drawing.Graphics.FillRectangle%2A>和<xref:System.Drawing.Graphics.FillEllipse%2A>，而<xref:System.Drawing.Brush>儲存的填滿，例如色彩和模式的屬性。 <xref:System.Drawing.Brush>做為其中一個引數傳遞至填滿方法。 下列程式碼範例示範如何使用紅色純色填滿橢圓形。  
+## <a name="solid-brushes"></a>實心筆刷  
+ 若要填滿一個封閉的形狀 中，您需要的執行個體<xref:System.Drawing.Graphics>類別和<xref:System.Drawing.Brush>。 執行個體<xref:System.Drawing.Graphics>類別提供方法，例如<xref:System.Drawing.Graphics.FillRectangle%2A>並<xref:System.Drawing.Graphics.FillEllipse%2A>，和<xref:System.Drawing.Brush>儲存的填滿，例如色彩和模式的屬性。 <xref:System.Drawing.Brush>做為其中一個引數傳遞至填滿方法。 下列程式碼範例示範如何使用紅色純色填滿橢圓形。  
   
  [!code-csharp[LinesCurvesAndShapes#121](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#121)]
  [!code-vb[LinesCurvesAndShapes#121](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#121)]  
   
 > [!NOTE]
->  在上述範例中，筆刷屬於型別<xref:System.Drawing.SolidBrush>，後者繼承自<xref:System.Drawing.Brush>。  
+>  在上述範例中，筆刷是型別的<xref:System.Drawing.SolidBrush>，該項則繼承自<xref:System.Drawing.Brush>。  
   
-## <a name="hatch-brushes"></a>規劃筆刷  
- 當您使用規劃筆刷填滿圖案時，您可以指定前景色彩、 背景色彩和影線樣式。 前景色彩是影線色彩。  
+## <a name="hatch-brushes"></a>筆刷  
+ 當您規劃筆刷填滿圖形時，請指定前景色彩、 背景色彩和影線樣式。 前景色彩是影線色彩。  
   
  [!code-csharp[LinesCurvesAndShapes#122](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供超過 50 個影線樣式。下圖所示的三種樣式<xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>， <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>，和<xref:System.Drawing.Drawing2D.HatchStyle.Cross>。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供超過 50 的影線樣式;下圖所示的三個樣式如下<xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>， <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>，和<xref:System.Drawing.Drawing2D.HatchStyle.Cross>。  
   
- ![填滿圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
+ ![填滿形狀](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
 ## <a name="texture-brushes"></a>紋理筆刷  
- 使用紋理筆刷，您可以使用儲存在點陣圖中的模式填滿圖形。 例如，假設下列圖片會儲存在名為的磁碟檔案`MyTexture.bmp`。  
+ 使用紋理筆刷可以填滿形狀，以儲存在點陣圖中的模式。 例如，假設下列圖片會儲存在名為的磁碟檔案`MyTexture.bmp`。  
   
- ![填滿圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art19.gif "Aboutgdip02_Art19")  
+ ![填滿形狀](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art19.gif "Aboutgdip02_Art19")  
   
  下列程式碼範例示範如何藉由重複圖片儲存在填滿橢圓形`MyTexture.bmp`。  
   
@@ -56,31 +56,31 @@ ms.locfileid: "33518989"
   
  下圖顯示實心的橢圓形。  
   
- ![填滿圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
+ ![填滿形狀](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>漸層筆刷  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供兩種漸層筆刷： 線性和路徑。 您可以使用線性漸層筆刷填滿圖形，以變更逐漸，當您移動形狀之間水平、 垂直或對角線的色彩。 下列程式碼範例示範如何使用當您移動距離左邊緣的橢圓形的右邊緣，變更從藍綠色水平漸層筆刷填滿橢圓形。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供的漸層筆刷的兩種類型： 線性和路徑。 若要變更逐漸，當您移動形狀之間水平、 垂直或對角線方式的色彩填滿圖形，您可以使用線性漸層筆刷。 下列程式碼範例示範如何使用變更從藍綠色當您從省略符號的左邊緣移至 右邊緣的水平漸層筆刷填滿橢圓形。  
   
  [!code-csharp[LinesCurvesAndShapes#124](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  
   
  下圖顯示實心的橢圓形。  
   
- ![填滿圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art21.gif "AboutGdip02_Art21")  
+ ![填滿形狀](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art21.gif "AboutGdip02_Art21")  
   
- 路徑漸層筆刷可以設定來變更色彩，當您從邊緣圖案的中心移動。  
+ 若要變更色彩，當您從邊緣，圖案的中心移動，可以設定路徑漸層筆刷。  
   
- ![填滿圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art22.gif "AboutGdip02_Art22")  
+ ![填滿形狀](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art22.gif "AboutGdip02_Art22")  
   
- 路徑漸層筆刷時相當有彈性。 漸層筆刷用來填滿至每個頂點的三種色彩逐漸從中央的紅色下列圖例變更的三角形。  
+ 路徑漸層筆刷會很有彈性。 漸層筆刷，用來填滿每個頂點的三個不同色彩逐漸從紅色中心下列圖變更中的三角形。  
   
- ![填滿圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
+ ![填滿形狀](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>  
- <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>  
- <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>  
- <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>  
- [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [操作說明：在 Windows Forms 上繪製實心矩形](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
- [操作說明：在 Windows Forms 上繪製實心橢圓形](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>
+- <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>
+- <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
+- <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
+- [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [如何：Windows Form 上繪製實心的矩形](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [如何：Windows Form 上繪製實心的橢圓形](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)

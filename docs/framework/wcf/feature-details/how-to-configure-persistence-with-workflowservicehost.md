@@ -1,16 +1,16 @@
 ---
-title: HOW TO：以 WorkflowServiceHost 設定持續性
+title: HOW TO：使用 WorkflowServiceHost 設定持續性
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 628a6b57b2d356aadadd96ebec312ef979aca6df
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2b340a46d10ef517d46a6e85fdb2f8e332cd0b46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501625"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530320"
 ---
-# <a name="how-to-configure-persistence-with-workflowservicehost"></a>HOW TO：以 WorkflowServiceHost 設定持續性
-本主題描述如何設定 SQL 工作流程執行個體存放區功能，透過使用組態檔以啟用裝載於 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中之工作流程的持續性。 使用 SQL 工作流程執行個體存放區功能前，您必須建立一個用於保存工作流程執行個體的 SQL 資料庫。 如需詳細資訊，請參閱 <<c0> [ 如何： 啟用 SQL 持續性工作流程與工作流程服務](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。  
+# <a name="how-to-configure-persistence-with-workflowservicehost"></a>HOW TO：使用 WorkflowServiceHost 設定持續性
+本主題描述如何設定 SQL 工作流程執行個體存放區功能，透過使用組態檔以啟用裝載於 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中之工作流程的持續性。 使用 SQL 工作流程執行個體存放區功能前，您必須建立一個用於保存工作流程執行個體的 SQL 資料庫。 如需詳細資訊，請參閱[＜How to：啟用 SQL 持續性工作流程與工作流程服務](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>若要在組態中設定 SQL 工作流程執行個體存放區  
   
@@ -31,7 +31,7 @@ ms.locfileid: "43501625"
     </serviceBehaviors>  
     ```  
   
-     如需如何設定 SQL 工作流程執行個體存放區的詳細資訊，請參閱[如何： 啟用 SQL 持續性工作流程與工作流程服務](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。 如需有關個別設定的 <`sqlWorkflowInstanceStore`> 行為項目，請參閱 < [SQL 工作流程執行個體存放區](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。 Windows Server App Fabric 會提供它自己的持續性存放區。 如需詳細資訊，請參閱 < [Windows Server App Fabric 持續性](https://go.microsoft.com/fwlink/?LinkId=193121)。  
+     如需如何設定 SQL 工作流程執行個體存放區的詳細資訊，請參閱[How to:啟用 SQL 持續性工作流程與工作流程服務](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。 如需有關個別設定的 <`sqlWorkflowInstanceStore`> 行為項目，請參閱 < [SQL 工作流程執行個體存放區](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。 Windows Server App Fabric 會提供它自己的持續性存放區。 如需詳細資訊，請參閱 < [Windows Server App Fabric 持續性](https://go.microsoft.com/fwlink/?LinkId=193121)。  
   
     > [!NOTE]
     >  上述組態範例會使用簡化的組態。 如需詳細資訊，請參閱[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)  
@@ -52,14 +52,14 @@ ms.locfileid: "43501625"
     });  
     ```  
   
-     如需如何設定 SQL 工作流程執行個體存放區的詳細資訊，請參閱[如何： 啟用 SQL 持續性工作流程與工作流程服務](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。 如需個別設定的詳細資訊<xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>行為項目，請參閱 < [SQL 工作流程執行個體存放區](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。 Windows Server App Fabric 會提供它自己的持續性存放區。 如需詳細資訊，請參閱 < [Windows Server App Fabric 持續性](https://go.microsoft.com/fwlink/?LinkId=193121)。  
+     如需如何設定 SQL 工作流程執行個體存放區的詳細資訊，請參閱[How to:啟用 SQL 持續性工作流程與工作流程服務](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。 如需個別設定的詳細資訊<xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>行為項目，請參閱 < [SQL 工作流程執行個體存放區](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。 Windows Server App Fabric 會提供它自己的持續性存放區。 如需詳細資訊，請參閱 < [Windows Server App Fabric 持續性](https://go.microsoft.com/fwlink/?LinkId=193121)。  
   
     > [!NOTE]
     >  上述組態範例會使用簡化的組態。 如需詳細資訊，請參閱[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)  
   
-     如需如何以程式設計方式設定持續性的範例，請參閱[如何： 啟用工作流程和工作流程服務的持續性](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md)。  
+     如需如何以程式設計方式設定持續性的範例，請參閱[How to:啟用工作流程與工作流程服務持續性](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [工作流程持續性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
- [Windows Server App Fabric 持續性](https://go.microsoft.com/fwlink/?LinkId=193121)
+## <a name="see-also"></a>另請參閱
+- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [工作流程持續性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)
+- [Windows Server App Fabric 持續性](https://go.microsoft.com/fwlink/?LinkId=193121)

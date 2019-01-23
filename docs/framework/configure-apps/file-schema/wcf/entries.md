@@ -1,22 +1,22 @@
 ---
-title: '&lt;項目&gt;'
+title: '&lt;entries&gt;'
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 8c442990ee736c17b71b625e06d961230a8ceed2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 33f98cb4b138307622a14463ce5a3008058b6e31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587056"
 ---
-# <a name="ltentriesgt"></a>&lt;項目&gt;
+# <a name="ltentriesgt"></a>&lt;entries&gt;
 這個路由項目會包含當篩選條件符合時，路由篩選條件與訊息傳送目標端點之間的對應。  
   
  \<system.serviceModel>  
 \<路由 >  
-\<routingTables >  
-\<資料表 >  
-\<項目 >  
+\<routingTables>  
+\<table>  
+\<entries>  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,14 +45,14 @@ ms.locfileid: "54146429"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<篩選條件 >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|將篩選條件對應至先前定義的用戶端端點。 將符合此篩選條件的訊息傳送至這個目的地。|  
+|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|將篩選條件對應至先前定義的用戶端端點。 將符合此篩選條件的訊息傳送至這個目的地。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含路由表的組態區段。|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含路由表的組態區段。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>    
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>

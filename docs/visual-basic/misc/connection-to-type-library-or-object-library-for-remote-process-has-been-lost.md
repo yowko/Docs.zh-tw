@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID442
 ms.assetid: 9e3544e2-cfc9-463a-8c0c-ed82e5e6462f
-ms.openlocfilehash: a2e5f411b0e3aefa3444e52296c45732f7458f04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81927c3401253120fed4be7b9a4da146700b3e75
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33635680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622646"
 ---
 # <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a>對類型程式庫或物件程式庫的遠端處理連線已經中斷
 您已中斷與遠端處理之物件程式庫或類型程式庫的連線。  
@@ -24,5 +24,5 @@ ms.locfileid: "33635680"
   
 4.  在 [參考]  對話方塊中，選取 `Application` 物件的核取方塊。  
   
-## <a name="see-also"></a>另請參閱  
- [錯誤類型](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>另請參閱
+- [錯誤類型](../../visual-basic/programming-guide/language-features/error-types.md)

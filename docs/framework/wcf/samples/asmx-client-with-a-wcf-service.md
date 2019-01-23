@@ -2,12 +2,12 @@
 title: 含 WCF 服務的 ASMX 用戶端
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 8b8ebebbcb2c95555605ebd1d8e164b8babb7e3e
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: d526bc01d7809aa2672dcfcf194ad9c7d2e7baa5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347834"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527506"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>含 WCF 服務的 ASMX 用戶端
 此範例示範如何建立使用 Windows Communication Foundation (WCF) 服務，並從非 WCF 用戶端，例如 ASMX 用戶端存取服務。  
@@ -138,7 +138,7 @@ Press <ENTER> to terminate client.
 3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!NOTE]
->  如需有關傳遞和傳回複雜資料類型，請參閱：[中的 Windows Form 用戶端資料繫結](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)，[中的 Windows Presentation Foundation 用戶端資料繫結](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)，和[資料在 ASP.NET 用戶端的繫結](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  如需有關傳遞和傳回複雜資料類型請參閱：[資料繫結，在 Windows Forms 用戶端](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)， [Windows Presentation Foundation 用戶端中的資料繫結](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)，和[ASP.NET 用戶端中的資料繫結](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

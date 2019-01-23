@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 0b504a9e368e5179d5f91faf7256445d7da47b1d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 696d14630240dce094ace7d595232e1a210ea78e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527142"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML 子代軸屬性 (Visual Basic)
 提供下列任一項目之子系的存取：<xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件的集合，或是 <xref:System.Xml.Linq.XDocument> 物件的集合。  
@@ -30,10 +30,10 @@ object.<child>
   
 |詞彙|定義|  
 |---|---|  
-|`object`|必要。 <xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件集合或 <xref:System.Xml.Linq.XDocument> 物件集合。|  
-|.<|必要。 代表子軸屬性的開頭。|  
-|`child`|必要。 若要存取，在表單的子節點名稱的 [`prefix``:`]`name`。<br /><br /> -   `Prefix` -選擇性。 子節點的 XML 命名空間前置詞。 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。<br />-   `Name` 必要。 本機子節點名稱。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
-|>|必要。 代表子軸屬性的結尾。|  
+|`object`|必要項。 <xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件集合或 <xref:System.Xml.Linq.XDocument> 物件集合。|  
+|.<|必要項。 代表子軸屬性的開頭。|  
+|`child`|必要項。 若要存取，在表單的子節點名稱的 [`prefix``:`]`name`。<br /><br /> -   `Prefix` -選擇性。 子節點的 XML 命名空間前置詞。 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。<br />-   `Name` 必要。 本機子節點名稱。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
+|>|必要項。 代表子軸屬性的結尾。|  
   
 ## <a name="return-value"></a>傳回值  
  <xref:System.Xml.Linq.XElement> 物件的集合。  
@@ -73,9 +73,9 @@ object.<child>
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Linq.XElement>  
- [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)  
- [在 Visual Basic 中建立 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Xml.Linq.XElement>
+- [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)
+- [在 Visual Basic 中建立 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
