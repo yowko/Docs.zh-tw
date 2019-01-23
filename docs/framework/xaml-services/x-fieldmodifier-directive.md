@@ -6,14 +6,15 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 1c7cb10a8021189aaac0ab8cfe5cc04ff8e67905
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ce219ca5477c5714225cfc86fe29334bea30a88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611198"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier 指示詞
-修改 XAML 編譯行為，使具名的物件參考的欄位會定義使用<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>存取而不是<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>預設行為。  
+修改 XAML 編譯行為，以便以定義已命名的物件參考的欄位<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>而不是存取<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>預設行為。  
   
 ## <a name="xaml-attribute-usage"></a>XAML Attribute Usage  
   
@@ -25,33 +26,33 @@ ms.lasthandoff: 05/04/2018
   
 |||  
 |-|-|  
-|*Public*|您將傳遞至指定的完整字串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>與<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>會有所差異，使用程式碼後置程式設計語言而定。 請參閱＜備註＞。|  
+|*Public*|您將傳遞至指定的確切字串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>與<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>各有不同，會使用的程式碼後置程式設計語言而定。 請參閱＜備註＞。|  
   
 ## <a name="dependencies"></a>相依性  
- 如果 XAML 生產使用`x:FieldModifier`該 XAML 生產的根項目必須宣告的任何地方、 [X:class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)。  
+ 如果使用 XAML 生產`x:FieldModifier`該 XAML 生產的根項目必須宣告隨時隨地[X:class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)。  
   
 ## <a name="remarks"></a>備註  
- `x:FieldModifier` 不相關的宣告類別或其成員的一般存取層級。 這樣做只適用於 XAML 處理行為屬於 XAML 生產的特定 XAML 物件處理時，就會變成應用程式的物件圖形中可能可以存取的物件。 根據預設，這類物件的欄位參考會保留私用，它可防止控制項的取用者直接修改的物件圖形。 相反地，控制取用者應該使用標準模式所啟用的程式設計模型，例如藉由取得的版面配置根目錄中，子元素的集合，專用的公用屬性，來修改物件圖形，並以此類推。  
+ `x:FieldModifier` 不相關的宣告類別或其成員的一般存取層級。 當屬於 XAML 生產的特定 XAML 物件處理，而變成可能可以存取應用程式的物件圖形中的物件，它是只會針對 XAML 處理行為的相關。 根據預設，這類物件的欄位參考會保留私用，這可防止控制項的取用者直接修改的物件圖形。 相反地，控制項的取用者會藉由使用標準模式會啟用程式設計模型，例如取得版面配置根目錄中，子系項目集合，專用的公用屬性，修改的物件圖形，並以此類推。  
   
- 值`x:FieldModifier`屬性會因程式設計語言，與特定架構可以改變其用途。 要使用的字串取決於各種語言的實作方式其<xref:System.CodeDom.Compiler.CodeDomProvider>和類型轉換器，它會傳回定義意義<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>和<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>，以及該語言是否區分大小寫。  
+ 值`x:FieldModifier`屬性而異的程式設計語言，與特定架構可以改變它的目的。 要使用的字串取決於各種語言的實作方式及其<xref:System.CodeDom.Compiler.CodeDomProvider>和類型轉換器，它會傳回定義的意義<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>和<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>，以及該語言是否區分大小寫。  
   
--   C#，要傳遞至指定的字串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`public`。  
+-   適用於 C#，要傳遞至指定的字串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`public`。  
   
--   Microsoft Visual Basic.NET，要傳遞至指定字串的<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`Public`。  
+-   適用於 Microsoft Visual Basic.NET，要傳遞至指定的字串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`Public`。  
   
--   如[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，XAML 的任何目標目前存在; 因此，要傳遞的字串是未定義。  
+-   針對[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，XAML 的任何目標目前存在; 因此，要傳遞的字串未定義。  
   
- 您也可以指定<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>(`internal`在 C# 中，`Friend`在 Visual Basic 中) 但指定<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是常見的事因為`NotPublic`時已經是預設行為。  
+ 您也可以指定<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>(`internal`在C#， `Friend` Visual Basic 中) 但指定<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>不尋常因為`NotPublic`行為已是預設值。  
   
- <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 是預設行為，因為它不頻繁編譯 XAML 的組件外部的程式碼需要存取 XAML 建立的項目。 WPF 安全性架構，連同 XAML 編譯行為將會宣告為公用，儲存項目執行個體的欄位，除非您特別設定`x:FieldModifier`為允許公用存取。  
+ <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 是預設行為，因為它是不頻繁的編譯 XAML 的組件外部的程式碼需要存取 XAML 建立的項目。 WPF 與 XAML 編譯行為的安全性架構會宣告為公用，儲存項目執行個體的欄位，除非您特別設定`x:FieldModifier`為允許公用存取。  
   
- `x:FieldModifier` 只會與相關的項目[X:name 指示詞](../../../docs/framework/xaml-services/x-name-directive.md)因為該名稱用來參考的欄位之後，它是公用。  
+ `x:FieldModifier` 才有意義之項目的[X:name 指示詞](../../../docs/framework/xaml-services/x-name-directive.md)因為該名稱用來參考欄位之後它是公用。  
   
- 根據預設，部分類別的根項目是公用的。不過，您可以將非公用使用[X:classmodifier 指示詞](../../../docs/framework/xaml-services/x-classmodifier-directive.md)。 [X:classmodifier 指示詞](../../../docs/framework/xaml-services/x-classmodifier-directive.md)也會影響根項目類別的執行個體的存取層級。 您可以將兩者`x:Name`和`x:FieldModifier`根項目，但這只會公用欄位複製的根項目，則為 true 的根項目類別存取層級仍受[X:classmodifier 指示詞](../../../docs/framework/xaml-services/x-classmodifier-directive.md)。  
+ 根據預設，部分類別的根項目是公用的;不過，您可以使其非公用利用[X:classmodifier 指示詞](../../../docs/framework/xaml-services/x-classmodifier-directive.md)。 [X:classmodifier 指示詞](../../../docs/framework/xaml-services/x-classmodifier-directive.md)也會影響根項目類別的執行個體的存取層級。 您可以將兩者放`x:Name`並`x:FieldModifier`上的根項目，但這只會使公用欄位複本的根元素，則為 true 的根項目類別的存取層級仍受到[X:classmodifier 指示詞](../../../docs/framework/xaml-services/x-classmodifier-directive.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [WPF 的 XAML 和自訂類別](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [WPF 中的程式碼後置和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [x:Name 指示詞](../../../docs/framework/xaml-services/x-name-directive.md)  
- [建置 WPF 應用程式 (WPF)](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [x:ClassModifier 指示詞](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+## <a name="see-also"></a>另請參閱
+- [WPF 的 XAML 和自訂類別](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [WPF 中的程式碼後置和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [x:Name 指示詞](../../../docs/framework/xaml-services/x-name-directive.md)
+- [建置 WPF 應用程式 (WPF)](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [x:ClassModifier 指示詞](../../../docs/framework/xaml-services/x-classmodifier-directive.md)

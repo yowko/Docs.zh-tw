@@ -1,5 +1,5 @@
 ---
-title: 如何：將控制項加入至 Windows Form
+title: HOW TO：將控制項新增至 Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6290fdac63bb22b878035c0cc27bba97300899de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611354"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>如何：將控制項加入至 Windows Form
+# <a name="how-to-add-controls-to-windows-forms"></a>HOW TO：將控制項新增至 Windows Forms
 大部分的表單都設計成將控制項加入表單的介面，來定義使用者介面 (UI)。 A*控制*是用來顯示資訊，或接受使用者輸入表單上的元件。 如需控制項的詳細資訊，請參閱[Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)。  
   
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "44213088"
   
 ### <a name="to-draw-a-control-on-a-form"></a>若要繪製在表單上控制項  
   
-1.  開啟表單。 如需詳細資訊，請參閱 <<c0> [ 如何： 顯示 Windows Form 設計工具中](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
+1.  開啟表單。 如需詳細資訊，請參閱[＜How to：在設計工具中顯示 Windows Form](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
   
 2.  在 **工具箱**，按一下您想要新增至表單的控制項。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "44213088"
   
 ### <a name="to-drag-a-control-to-a-form"></a>若要將控制項拖曳至表單  
   
-1.  開啟表單。 如需詳細資訊，請參閱 <<c0> [ 如何： 顯示 Windows Form 設計工具中](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
+1.  開啟表單。 如需詳細資訊，請參閱[＜How to：在設計工具中顯示 Windows Form](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
   
 2.  在 **工具箱**，按一下您想要並將它拖曳至表單的控制項。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "44213088"
     > [!IMPORTANT]
     >  您可能會公開本機電腦透過網路的安全性風險，藉由參考惡意`UserControl`。 這只會在惡意人士建立破壞性的自訂控制項，且您不小心將它新增至您的專案的情況下需要考量。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [操作說明：重新調整 Windows Forms 上控制項的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
- [操作說明：設定由 Windows Forms 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)
+- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [如何：調整 Windows Forms 上的控制項的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)
+- [如何：設定所顯示之文字的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

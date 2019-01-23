@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: d713a63c9503581f38048fe79c559883dc96efd2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6285deb97b05659283071b8940fe8730890b98e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609859"
 ---
 # <a name="-libpath"></a>-libpath
 指定參考的組件的位置。  
@@ -26,7 +26,7 @@ ms.locfileid: "50202968"
   
 |詞彙|定義|  
 |---|---|  
-|`dirList`|必要。 以分號分隔清單中的 改為查詢中參考的組件的目錄找不到在目前的工作目錄 （從中您叫用編譯器的目錄） 或 common language runtime 的系統目錄。 如果目錄名稱包含空格，將名稱括在引號 ("")。|  
+|`dirList`|必要項。 以分號分隔清單中的 改為查詢中參考的組件的目錄找不到在目前的工作目錄 （從中您叫用編譯器的目錄） 或 common language runtime 的系統目錄。 如果目錄名稱包含空格，將名稱括在引號 ("")。|  
   
 ## <a name="remarks"></a>備註  
  `-libpath`選項會指定所參考的組件的位置[-參考](../../../visual-basic/reference/command-line-compiler/reference.md)選項。  
@@ -56,7 +56,7 @@ ms.locfileid: "50202968"
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>另請參閱
+- [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

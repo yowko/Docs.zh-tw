@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c7616a3187cd5fa28f231dffd15b0bfeea4b7f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c5b74f2608022d48dbd7e63e4ddf6112c333e3f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604391"
 ---
 # <a name="principal-and-identity-objects"></a>Principal 和 Identity 物件
 Managed 程式碼可以探索的身分識別或透過主體的角色<xref:System.Security.Principal.IPrincipal>物件，其中包含的參考<xref:System.Security.Principal.IIdentity>物件。 它可能有助於您比較 Identity 和 Principal 物件，以熟悉例如使用者和群組帳戶的概念。 在大部分網路環境中，使用者帳戶代表人員或程式，而群組帳戶代表特定類別的使用者和他們擁有的權限。 同樣地，.NET Framework Identity 物件代表使用者，而角色代表成員資格和安全性內容。 在 .NET Framework 中，Principal 物件會封裝身分識別物件和角色。 .NET framework 應用程式會根據主體的身分識別或更常見的是其角色成員資格，授與主體權限。  
@@ -44,9 +44,9 @@ Managed 程式碼可以探索的身分識別或透過主體的角色<xref:System
   
 ## <a name="see-also"></a>另請參閱
 
-- [操作說明：建立 WindowsPrincipal 物件](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
-- [操作說明：建立 GenericPrincipal 和 GenericIdentity 物件](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
-- [取代 Principal 物件](../../../docs/standard/security/replacing-a-principal-object.md)  
-- [模擬和還原](../../../docs/standard/security/impersonating-and-reverting.md)  
-- [以角色為基礎的安全性](../../../docs/standard/security/role-based-security.md)  
+- [如何：建立 WindowsPrincipal 物件](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)
+- [如何：建立 GenericPrincipal 和 GenericIdentity 物件](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)
+- [取代 Principal 物件](../../../docs/standard/security/replacing-a-principal-object.md)
+- [模擬和還原](../../../docs/standard/security/impersonating-and-reverting.md)
+- [以角色為基礎的安全性](../../../docs/standard/security/role-based-security.md)
 - [重要的安全性概念](../../../docs/standard/security/key-security-concepts.md)
