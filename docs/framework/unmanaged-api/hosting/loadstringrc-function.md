@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 463bcf451574700d02f933d024ea5c24cedd259d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3e6230d245ad36b8d5346aa3b6f8911ef008b61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526843"
 ---
-# <a name="loadstringrc-function"></a><span data-ttu-id="d19ee-102">LoadStringRC 函式</span><span class="sxs-lookup"><span data-stu-id="d19ee-102">LoadStringRC Function</span></span>
-<span data-ttu-id="d19ee-103">使用目前執行緒的預設文化特性，將 HRESULT 值轉譯成錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="d19ee-103">Translates an HRESULT value into an error message by using the default culture of the current thread.</span></span>  
+# <a name="loadstringrc-function"></a><span data-ttu-id="564c0-102">LoadStringRC 函式</span><span class="sxs-lookup"><span data-stu-id="564c0-102">LoadStringRC Function</span></span>
+<span data-ttu-id="564c0-103">使用目前執行緒的預設文化特性，將 HRESULT 值轉譯成錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="564c0-103">Translates an HRESULT value into an error message by using the default culture of the current thread.</span></span>  
   
- <span data-ttu-id="d19ee-104">此函式中已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="d19ee-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="564c0-104">此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="564c0-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d19ee-105">語法</span><span class="sxs-lookup"><span data-stu-id="d19ee-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="564c0-105">語法</span><span class="sxs-lookup"><span data-stu-id="564c0-105">Syntax</span></span>  
   
 ```  
 HRESULT LoadStringRC (  
@@ -39,39 +39,39 @@ HRESULT LoadStringRC (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d19ee-106">參數</span><span class="sxs-lookup"><span data-stu-id="d19ee-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="564c0-106">參數</span><span class="sxs-lookup"><span data-stu-id="564c0-106">Parameters</span></span>  
  `iResourceID`  
- <span data-ttu-id="d19ee-107">[in]HRESULT。</span><span class="sxs-lookup"><span data-stu-id="d19ee-107">[in] An HRESULT.</span></span>  
+ <span data-ttu-id="564c0-107">[in]HRESULT。</span><span class="sxs-lookup"><span data-stu-id="564c0-107">[in] An HRESULT.</span></span>  
   
  `szBuffer`  
- <span data-ttu-id="d19ee-108">[out]包含成功完成時的錯誤訊息的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="d19ee-108">[out] A buffer that contains the error message upon successful completion.</span></span>  
+ <span data-ttu-id="564c0-108">[out]這種緩衝區包含成功完成時的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="564c0-108">[out] A buffer that contains the error message upon successful completion.</span></span>  
   
  `iMax`  
- <span data-ttu-id="d19ee-109">[in]錯誤訊息緩衝區的大小。</span><span class="sxs-lookup"><span data-stu-id="d19ee-109">[in] The size of the error message buffer.</span></span>  
+ <span data-ttu-id="564c0-109">[in]錯誤訊息緩衝區的大小。</span><span class="sxs-lookup"><span data-stu-id="564c0-109">[in] The size of the error message buffer.</span></span>  
   
  `bQuiet`  
- <span data-ttu-id="d19ee-110">[in]略過。</span><span class="sxs-lookup"><span data-stu-id="d19ee-110">[in] Ignored.</span></span>  
+ <span data-ttu-id="564c0-110">[in]略過。</span><span class="sxs-lookup"><span data-stu-id="564c0-110">[in] Ignored.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d19ee-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="d19ee-111">Return Value</span></span>  
- <span data-ttu-id="d19ee-112">這個方法會傳回標準的元件物件模型 (COM) 的錯誤代碼，除了下列的值定義了 WinError.h 中。</span><span class="sxs-lookup"><span data-stu-id="d19ee-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="564c0-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="564c0-111">Return Value</span></span>  
+ <span data-ttu-id="564c0-112">中所定義 WinError.h，除了下列的值，這個方法會傳回標準的元件物件模型 (COM) 錯誤代碼。</span><span class="sxs-lookup"><span data-stu-id="564c0-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="d19ee-113">傳回碼</span><span class="sxs-lookup"><span data-stu-id="d19ee-113">Return code</span></span>|<span data-ttu-id="d19ee-114">描述</span><span class="sxs-lookup"><span data-stu-id="d19ee-114">Description</span></span>|  
+|<span data-ttu-id="564c0-113">傳回碼</span><span class="sxs-lookup"><span data-stu-id="564c0-113">Return code</span></span>|<span data-ttu-id="564c0-114">描述</span><span class="sxs-lookup"><span data-stu-id="564c0-114">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="d19ee-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="d19ee-115">S_OK</span></span>|<span data-ttu-id="d19ee-116">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="d19ee-116">The method completed successfully.</span></span>|  
-|<span data-ttu-id="d19ee-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="d19ee-117">E_INVALIDARG</span></span>|<span data-ttu-id="d19ee-118">`szBuffer` 為 null 或`iMax`為零 (0)。</span><span class="sxs-lookup"><span data-stu-id="d19ee-118">`szBuffer` is null or `iMax` is zero (0).</span></span>|  
+|<span data-ttu-id="564c0-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="564c0-115">S_OK</span></span>|<span data-ttu-id="564c0-116">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="564c0-116">The method completed successfully.</span></span>|  
+|<span data-ttu-id="564c0-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="564c0-117">E_INVALIDARG</span></span>|<span data-ttu-id="564c0-118">`szBuffer` 為 null 或`iMax`為零 (0)。</span><span class="sxs-lookup"><span data-stu-id="564c0-118">`szBuffer` is null or `iMax` is zero (0).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d19ee-119">備註</span><span class="sxs-lookup"><span data-stu-id="d19ee-119">Remarks</span></span>  
- <span data-ttu-id="d19ee-120">如果方法沒有成功完成`szBuffer`包含空字串。</span><span class="sxs-lookup"><span data-stu-id="d19ee-120">If the method does not complete successfully, `szBuffer` contains an empty string.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="564c0-119">備註</span><span class="sxs-lookup"><span data-stu-id="564c0-119">Remarks</span></span>  
+ <span data-ttu-id="564c0-120">如果方法未成功完成`szBuffer`包含空字串。</span><span class="sxs-lookup"><span data-stu-id="564c0-120">If the method does not complete successfully, `szBuffer` contains an empty string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d19ee-121">需求</span><span class="sxs-lookup"><span data-stu-id="d19ee-121">Requirements</span></span>  
- <span data-ttu-id="d19ee-122">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d19ee-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="564c0-121">需求</span><span class="sxs-lookup"><span data-stu-id="564c0-121">Requirements</span></span>  
+ <span data-ttu-id="564c0-122">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="564c0-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d19ee-123">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d19ee-123">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="564c0-123">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="564c0-123">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d19ee-124">**程式庫：** MSCorEE.dll 和 Mscorwks.dll。</span><span class="sxs-lookup"><span data-stu-id="d19ee-124">**Library:** MSCorEE.dll and Mscorwks.dll.</span></span> <span data-ttu-id="d19ee-125">使用而不是 Mscorwks.dll 的 MSCorEE.dll，以確保您設為目標的.NET framework 正確版本。</span><span class="sxs-lookup"><span data-stu-id="d19ee-125">Use MSCorEE.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
+ <span data-ttu-id="564c0-124">**程式庫：** MSCorEE.dll 和 Mscorwks.dll。</span><span class="sxs-lookup"><span data-stu-id="564c0-124">**Library:** MSCorEE.dll and Mscorwks.dll.</span></span> <span data-ttu-id="564c0-125">使用 MSCorEE.dll，而不是以確保您設為目標的.NET framework 的正確版本的 Mscorwks.dll。</span><span class="sxs-lookup"><span data-stu-id="564c0-125">Use MSCorEE.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
   
- <span data-ttu-id="d19ee-126">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d19ee-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="564c0-126">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="564c0-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d19ee-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d19ee-127">See Also</span></span>  
- [<span data-ttu-id="d19ee-128">LoadStringRCEx 函式</span><span class="sxs-lookup"><span data-stu-id="d19ee-128">LoadStringRCEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
- [<span data-ttu-id="d19ee-129">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="d19ee-129">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="564c0-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="564c0-127">See also</span></span>
+- [<span data-ttu-id="564c0-128">LoadStringRCEx 函式</span><span class="sxs-lookup"><span data-stu-id="564c0-128">LoadStringRCEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)
+- [<span data-ttu-id="564c0-129">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="564c0-129">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

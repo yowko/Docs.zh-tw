@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaa085d9883f2a94a623f7800278c74a88e6a69a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e4e6ad42c442d535e10432af099e51ca0d536729
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572795"
 ---
-# <a name="iclrdebugmanagerisdebuggerattached-method"></a><span data-ttu-id="e9412-102">ICLRDebugManager::IsDebuggerAttached 方法</span><span class="sxs-lookup"><span data-stu-id="e9412-102">ICLRDebugManager::IsDebuggerAttached Method</span></span>
-<span data-ttu-id="e9412-103">取得值，表示偵錯工具是否附加至處理序。</span><span class="sxs-lookup"><span data-stu-id="e9412-103">Gets a value that indicates whether a debugger is attached to the process.</span></span>  
+# <a name="iclrdebugmanagerisdebuggerattached-method"></a><span data-ttu-id="d19dd-102">ICLRDebugManager::IsDebuggerAttached 方法</span><span class="sxs-lookup"><span data-stu-id="d19dd-102">ICLRDebugManager::IsDebuggerAttached Method</span></span>
+<span data-ttu-id="d19dd-103">取得值，表示偵錯工具是否附加至處理序。</span><span class="sxs-lookup"><span data-stu-id="d19dd-103">Gets a value that indicates whether a debugger is attached to the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9412-104">語法</span><span class="sxs-lookup"><span data-stu-id="e9412-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d19dd-104">語法</span><span class="sxs-lookup"><span data-stu-id="d19dd-104">Syntax</span></span>  
   
 ```  
 HRESULT IsDebuggerAttached (  
@@ -35,34 +35,34 @@ HRESULT IsDebuggerAttached (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e9412-105">參數</span><span class="sxs-lookup"><span data-stu-id="e9412-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d19dd-105">參數</span><span class="sxs-lookup"><span data-stu-id="d19dd-105">Parameters</span></span>  
  `pbAttached`  
- <span data-ttu-id="e9412-106">[out]`true`偵錯工具是否附加至處理程序，否則`false`。</span><span class="sxs-lookup"><span data-stu-id="e9412-106">[out] `true` if a debugger is attached to the process; otherwise, `false`.</span></span>  
+ <span data-ttu-id="d19dd-106">[out]`true`偵錯工具附加至處理序，否則如果`false`。</span><span class="sxs-lookup"><span data-stu-id="d19dd-106">[out] `true` if a debugger is attached to the process; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e9412-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="e9412-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d19dd-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="d19dd-107">Return Value</span></span>  
   
-|<span data-ttu-id="e9412-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e9412-108">HRESULT</span></span>|<span data-ttu-id="e9412-109">描述</span><span class="sxs-lookup"><span data-stu-id="e9412-109">Description</span></span>|  
+|<span data-ttu-id="d19dd-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d19dd-108">HRESULT</span></span>|<span data-ttu-id="d19dd-109">描述</span><span class="sxs-lookup"><span data-stu-id="d19dd-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="e9412-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="e9412-110">S_OK</span></span>|<span data-ttu-id="e9412-111">`IsDebuggerAttached` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="e9412-111">`IsDebuggerAttached` returned successfully.</span></span>|  
-|<span data-ttu-id="e9412-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="e9412-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="e9412-113">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="e9412-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="e9412-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="e9412-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="e9412-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="e9412-115">The call timed out.</span></span>|  
-|<span data-ttu-id="e9412-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="e9412-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="e9412-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="e9412-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="e9412-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="e9412-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="e9412-119">事件已取消時封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="e9412-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="e9412-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e9412-120">E_FAIL</span></span>|<span data-ttu-id="e9412-121">發生未知的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="e9412-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="e9412-122">方法會傳回 E_FAIL 之後，CLR 就不再可用的處理序內。</span><span class="sxs-lookup"><span data-stu-id="e9412-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="e9412-123">裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="e9412-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="d19dd-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="d19dd-110">S_OK</span></span>|<span data-ttu-id="d19dd-111">`IsDebuggerAttached` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="d19dd-111">`IsDebuggerAttached` returned successfully.</span></span>|  
+|<span data-ttu-id="d19dd-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="d19dd-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="d19dd-113">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="d19dd-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="d19dd-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="d19dd-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="d19dd-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="d19dd-115">The call timed out.</span></span>|  
+|<span data-ttu-id="d19dd-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="d19dd-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="d19dd-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="d19dd-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="d19dd-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="d19dd-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="d19dd-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="d19dd-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="d19dd-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="d19dd-120">E_FAIL</span></span>|<span data-ttu-id="d19dd-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="d19dd-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="d19dd-122">方法會傳回 E_FAIL 之後，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="d19dd-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="d19dd-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="d19dd-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e9412-124">備註</span><span class="sxs-lookup"><span data-stu-id="e9412-124">Remarks</span></span>  
- <span data-ttu-id="e9412-125">`IsDebuggerAttached` 可讓主應用程式查詢來判斷是否要將偵錯工具附加至處理序的 CLR。</span><span class="sxs-lookup"><span data-stu-id="e9412-125">`IsDebuggerAttached` allows the host to query the CLR to determine whether a debugger is attached to the process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d19dd-124">備註</span><span class="sxs-lookup"><span data-stu-id="d19dd-124">Remarks</span></span>  
+ <span data-ttu-id="d19dd-125">`IsDebuggerAttached` 可讓查詢以判斷是否要將偵錯工具附加至處理程序的 CLR 主機。</span><span class="sxs-lookup"><span data-stu-id="d19dd-125">`IsDebuggerAttached` allows the host to query the CLR to determine whether a debugger is attached to the process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9412-126">需求</span><span class="sxs-lookup"><span data-stu-id="e9412-126">Requirements</span></span>  
- <span data-ttu-id="e9412-127">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e9412-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d19dd-126">需求</span><span class="sxs-lookup"><span data-stu-id="d19dd-126">Requirements</span></span>  
+ <span data-ttu-id="d19dd-127">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d19dd-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9412-128">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e9412-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d19dd-128">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d19dd-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e9412-129">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="e9412-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d19dd-129">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="d19dd-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e9412-130">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9412-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d19dd-130">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d19dd-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9412-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e9412-131">See Also</span></span>  
- [<span data-ttu-id="e9412-132">ICLRControl 介面</span><span class="sxs-lookup"><span data-stu-id="e9412-132">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [<span data-ttu-id="e9412-133">ICLRDebugManager 介面</span><span class="sxs-lookup"><span data-stu-id="e9412-133">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
- [<span data-ttu-id="e9412-134">IHostControl 介面</span><span class="sxs-lookup"><span data-stu-id="e9412-134">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d19dd-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d19dd-131">See also</span></span>
+- [<span data-ttu-id="d19dd-132">ICLRControl 介面</span><span class="sxs-lookup"><span data-stu-id="d19dd-132">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="d19dd-133">ICLRDebugManager 介面</span><span class="sxs-lookup"><span data-stu-id="d19dd-133">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
+- [<span data-ttu-id="d19dd-134">IHostControl 介面</span><span class="sxs-lookup"><span data-stu-id="d19dd-134">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

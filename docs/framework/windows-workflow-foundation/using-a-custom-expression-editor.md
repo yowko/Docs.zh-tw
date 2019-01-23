@@ -2,30 +2,30 @@
 title: 使用自訂運算式編輯器
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 4eb39fbd51cf4f1914f7fdca545f9c9fd8e83240
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3959fdb5b75ae6e48c19130cf6e825455d8f7103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526908"
 ---
-# <a name="using-a-custom-expression-editor"></a><span data-ttu-id="a2715-102">使用自訂運算式編輯器</span><span class="sxs-lookup"><span data-stu-id="a2715-102">Using a Custom Expression Editor</span></span>
-<span data-ttu-id="a2715-103">可以實作自訂運算式編輯器，以提供更豐富、更簡單的運算式編輯體驗。</span><span class="sxs-lookup"><span data-stu-id="a2715-103">A custom expression editor can be implemented to provide a richer or simpler expression editing experience.</span></span> <span data-ttu-id="a2715-104">在一些案例中，您可能會想要使用自訂運算式編輯器：</span><span class="sxs-lookup"><span data-stu-id="a2715-104">There are several scenarios in which you might want to use a custom expression editor:</span></span>  
+# <a name="using-a-custom-expression-editor"></a><span data-ttu-id="4f188-102">使用自訂運算式編輯器</span><span class="sxs-lookup"><span data-stu-id="4f188-102">Using a Custom Expression Editor</span></span>
+<span data-ttu-id="4f188-103">可以實作自訂運算式編輯器，以提供更豐富、更簡單的運算式編輯體驗。</span><span class="sxs-lookup"><span data-stu-id="4f188-103">A custom expression editor can be implemented to provide a richer or simpler expression editing experience.</span></span> <span data-ttu-id="4f188-104">在一些案例中，您可能會想要使用自訂運算式編輯器：</span><span class="sxs-lookup"><span data-stu-id="4f188-104">There are several scenarios in which you might want to use a custom expression editor:</span></span>  
   
--   <span data-ttu-id="a2715-105">為 IntelliSense 和重新裝載的工作流程設計工具中其他豐富的編輯功能提供支援。</span><span class="sxs-lookup"><span data-stu-id="a2715-105">To provide support for IntelliSense and other rich editing features in a rehosted workflow designer.</span></span> <span data-ttu-id="a2715-106">必須提供這項功能，因為無法在重新裝載的應用程式中使用預設 Visual Studio 的運算式編輯器。</span><span class="sxs-lookup"><span data-stu-id="a2715-106">This functionality must be provided because the default Visual Studio expression editor cannot be used in rehosted applications.</span></span>  
+-   <span data-ttu-id="4f188-105">為 IntelliSense 和重新裝載的工作流程設計工具中其他豐富的編輯功能提供支援。</span><span class="sxs-lookup"><span data-stu-id="4f188-105">To provide support for IntelliSense and other rich editing features in a rehosted workflow designer.</span></span> <span data-ttu-id="4f188-106">必須提供這項功能，因為預設的 Visual Studio 運算式編輯器不適用於重新裝載的應用程式。</span><span class="sxs-lookup"><span data-stu-id="4f188-106">This functionality must be provided because the default Visual Studio expression editor cannot be used in rehosted applications.</span></span>  
   
--   <span data-ttu-id="a2715-107">若要簡化的運算式編輯體驗，商務分析師的使用者，讓它們比方說，不需要了解 Visual Basic 或 Visual Basic 運算式處理。</span><span class="sxs-lookup"><span data-stu-id="a2715-107">To simplify the expression editing experience for the business analyst users, so that they are not, for example, required to learn Visual Basic or deal with Visual Basic expressions.</span></span>  
+-   <span data-ttu-id="4f188-107">若要簡化的運算式編輯商務分析師使用者體驗，因此若要了解 Visual Basic 或 Visual Basic 運算式處理不是，比方說，需要。</span><span class="sxs-lookup"><span data-stu-id="4f188-107">To simplify the expression editing experience for the business analyst users, so that they are not, for example, required to learn Visual Basic or deal with Visual Basic expressions.</span></span>  
   
- <span data-ttu-id="a2715-108">實作自訂運算式編輯器所需的三個基本步驟：</span><span class="sxs-lookup"><span data-stu-id="a2715-108">Three basic steps are needed to implement a custom expression editor:</span></span>  
+ <span data-ttu-id="4f188-108">實作自訂運算式編輯器所需的三個基本步驟：</span><span class="sxs-lookup"><span data-stu-id="4f188-108">Three basic steps are needed to implement a custom expression editor:</span></span>  
   
-1.  <span data-ttu-id="a2715-109">實作 <xref:System.Activities.Presentation.View.IExpressionEditorService> 介面。</span><span class="sxs-lookup"><span data-stu-id="a2715-109">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="a2715-110">這個介面可管理建立和解構運算式編輯器。</span><span class="sxs-lookup"><span data-stu-id="a2715-110">This interface manages the creation and destruction of expression editors.</span></span>  
+1.  <span data-ttu-id="4f188-109">實作 <xref:System.Activities.Presentation.View.IExpressionEditorService> 介面。</span><span class="sxs-lookup"><span data-stu-id="4f188-109">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="4f188-110">這個介面可管理建立和解構運算式編輯器。</span><span class="sxs-lookup"><span data-stu-id="4f188-110">This interface manages the creation and destruction of expression editors.</span></span>  
   
-2.  <span data-ttu-id="a2715-111">實作 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 介面。</span><span class="sxs-lookup"><span data-stu-id="a2715-111">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface.</span></span> <span data-ttu-id="a2715-112">這個介面會實作運算式編輯 UI 的 UI。</span><span class="sxs-lookup"><span data-stu-id="a2715-112">This interface implements the UI for expression editing UI.</span></span>  
+2.  <span data-ttu-id="4f188-111">實作 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 介面。</span><span class="sxs-lookup"><span data-stu-id="4f188-111">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface.</span></span> <span data-ttu-id="4f188-112">這個介面會實作運算式編輯 UI 的 UI。</span><span class="sxs-lookup"><span data-stu-id="4f188-112">This interface implements the UI for expression editing UI.</span></span>  
   
-3.  <span data-ttu-id="a2715-113">在重新裝載的工作流程應用程式中發行 <xref:System.Activities.Presentation.View.IExpressionEditorService>。</span><span class="sxs-lookup"><span data-stu-id="a2715-113">Publish the <xref:System.Activities.Presentation.View.IExpressionEditorService> in your rehosted workflow application.</span></span>  
+3.  <span data-ttu-id="4f188-113">在重新裝載的工作流程應用程式中發行 <xref:System.Activities.Presentation.View.IExpressionEditorService>。</span><span class="sxs-lookup"><span data-stu-id="4f188-113">Publish the <xref:System.Activities.Presentation.View.IExpressionEditorService> in your rehosted workflow application.</span></span>  
   
-## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a><span data-ttu-id="a2715-114">在類別庫中實作自訂運算式編輯器</span><span class="sxs-lookup"><span data-stu-id="a2715-114">Implementing a Custom Expression Editor in a Class Library</span></span>  
- <span data-ttu-id="a2715-115">以下為 (概念證明) `MyEditorService` 類別的程式碼範例，該類別會實作包含在 MyExpressionEditorService 程式庫專案中的 <xref:System.Activities.Presentation.View.IExpressionEditorService> 介面。</span><span class="sxs-lookup"><span data-stu-id="a2715-115">Here is a sample of code for a (proof of concept) `MyEditorService` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface is contained in a MyExpressionEditorService library project.</span></span>  
+## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a><span data-ttu-id="4f188-114">在類別庫中實作自訂運算式編輯器</span><span class="sxs-lookup"><span data-stu-id="4f188-114">Implementing a Custom Expression Editor in a Class Library</span></span>  
+ <span data-ttu-id="4f188-115">以下為 (概念證明) `MyEditorService` 類別的程式碼範例，該類別會實作包含在 MyExpressionEditorService 程式庫專案中的 <xref:System.Activities.Presentation.View.IExpressionEditorService> 介面。</span><span class="sxs-lookup"><span data-stu-id="4f188-115">Here is a sample of code for a (proof of concept) `MyEditorService` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface is contained in a MyExpressionEditorService library project.</span></span>  
   
 ```  
 using System;  
@@ -71,7 +71,7 @@ namespace MyExpressionEditorService
 }  
 ```  
   
- <span data-ttu-id="a2715-116">以下為 `MyExpressionEditorInstance` 類別的程式碼，該類別會實作 MyExpressionEditorService 程式庫專案中的 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 介面。</span><span class="sxs-lookup"><span data-stu-id="a2715-116">Here is the code for a `MyExpressionEditorInstance` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface in a MyExpressionEditorService library project.</span></span>  
+ <span data-ttu-id="4f188-116">以下為 `MyExpressionEditorInstance` 類別的程式碼，該類別會實作 MyExpressionEditorService 程式庫專案中的 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 介面。</span><span class="sxs-lookup"><span data-stu-id="4f188-116">Here is the code for a `MyExpressionEditorInstance` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface in a MyExpressionEditorService library project.</span></span>  
   
 ```  
 using System;  
@@ -221,8 +221,8 @@ namespace MyExpressionEditorService
 }  
 ```  
   
-### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a><span data-ttu-id="a2715-117">在 WPF 專案中發行自訂運算式編輯器</span><span class="sxs-lookup"><span data-stu-id="a2715-117">Publishing a Custom Expression Editor in a WPF Project</span></span>  
- <span data-ttu-id="a2715-118">以下程式碼示範如何在 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 應用程式中重新裝載設計工具，以及如何建立和發行 `MyEditorService` 服務。</span><span class="sxs-lookup"><span data-stu-id="a2715-118">Here is the code that shows how to rehost the designer in a [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] application and how to create and publish the `MyEditorService` service.</span></span> <span data-ttu-id="a2715-119">使用此程式碼前，請從包含 avalon2 應用程式的專案將參考加入到 MyExpressionEditorService 程式庫專案中。</span><span class="sxs-lookup"><span data-stu-id="a2715-119">Before using this code, add a reference to the MyExpressionEditorService library project from the project that contains the avalon2 application.</span></span>  
+### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a><span data-ttu-id="4f188-117">在 WPF 專案中發行自訂運算式編輯器</span><span class="sxs-lookup"><span data-stu-id="4f188-117">Publishing a Custom Expression Editor in a WPF Project</span></span>  
+ <span data-ttu-id="4f188-118">以下程式碼示範如何在 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 應用程式中重新裝載設計工具，以及如何建立和發行 `MyEditorService` 服務。</span><span class="sxs-lookup"><span data-stu-id="4f188-118">Here is the code that shows how to rehost the designer in a [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] application and how to create and publish the `MyEditorService` service.</span></span> <span data-ttu-id="4f188-119">使用此程式碼前，請從包含 avalon2 應用程式的專案將參考加入到 MyExpressionEditorService 程式庫專案中。</span><span class="sxs-lookup"><span data-stu-id="4f188-119">Before using this code, add a reference to the MyExpressionEditorService library project from the project that contains the avalon2 application.</span></span>  
   
 ```  
 using System.Windows;  
@@ -275,10 +275,10 @@ namespace WpfApplication1
 }  
 ```  
   
-### <a name="notes"></a><span data-ttu-id="a2715-120">注意</span><span class="sxs-lookup"><span data-stu-id="a2715-120">Notes</span></span>  
- <span data-ttu-id="a2715-121">如果您使用**ExpressionTextBox**控制項中的自訂活動設計工具中，則不需要建立和終結運算式編輯器使用<xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A>和<xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A>方法<xref:System.Activities.Presentation.View.IExpressionEditorService>介面。</span><span class="sxs-lookup"><span data-stu-id="a2715-121">If you are using an **ExpressionTextBox** control in a custom activity designer, it is not necessary to create and destroy expression editors using the <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> and <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> methods of the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="a2715-122"><xref:System.Activities.Presentation.View.ExpressionTextBox> 類別會為您管理這項工作。</span><span class="sxs-lookup"><span data-stu-id="a2715-122">The <xref:System.Activities.Presentation.View.ExpressionTextBox> class manages this for you.</span></span>  
+### <a name="notes"></a><span data-ttu-id="4f188-120">注意</span><span class="sxs-lookup"><span data-stu-id="4f188-120">Notes</span></span>  
+ <span data-ttu-id="4f188-121">如果您使用**ExpressionTextBox**控制項中的自訂活動設計工具中，它不需要建立和終結運算式編輯器使用<xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A>並<xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A>方法<xref:System.Activities.Presentation.View.IExpressionEditorService>介面。</span><span class="sxs-lookup"><span data-stu-id="4f188-121">If you are using an **ExpressionTextBox** control in a custom activity designer, it is not necessary to create and destroy expression editors using the <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> and <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> methods of the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="4f188-122"><xref:System.Activities.Presentation.View.ExpressionTextBox> 類別會為您管理這項工作。</span><span class="sxs-lookup"><span data-stu-id="4f188-122">The <xref:System.Activities.Presentation.View.ExpressionTextBox> class manages this for you.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2715-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a2715-123">See Also</span></span>  
- <xref:System.Activities.Presentation.View.IExpressionEditorService>  
- <xref:System.Activities.Presentation.View.IExpressionEditorInstance>  
- [<span data-ttu-id="a2715-124">在自訂活動設計工具中使用 ExpressionTextBox</span><span class="sxs-lookup"><span data-stu-id="a2715-124">Using the ExpressionTextBox in a Custom Activity Designer</span></span>](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+## <a name="see-also"></a><span data-ttu-id="4f188-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4f188-123">See also</span></span>
+- <xref:System.Activities.Presentation.View.IExpressionEditorService>
+- <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
+- [<span data-ttu-id="4f188-124">在自訂活動設計工具中使用 ExpressionTextBox</span><span class="sxs-lookup"><span data-stu-id="4f188-124">Using the ExpressionTextBox in a Custom Activity Designer</span></span>](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
