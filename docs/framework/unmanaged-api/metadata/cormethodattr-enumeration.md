@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f144426996583d5058f70daed99d8a37cfb6bfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1a69ca889e226168adb1b84ab64dc0f882c27606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520526"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 列舉
-包含值描述方法的功能。  
+包含描述方法的功能值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -70,35 +70,35 @@ typedef enum CorMethodAttr {
 |------------|-----------------|  
 |`mdMemberAccessMask`|指定成員存取。|  
 |`mdPrivateScope`|指定成員不能參考。|  
-|`mdPrivate`|指定成員可存取只能由父型別。|  
+|`mdPrivate`|指定成員只能由父型別存取。|  
 |`mdFamANDAssem`|指定成員可存取由子型別只能在這個組件中。|  
 |`mdAssem`|指定組件中的任何人都可以存取此成員。|  
-|`mdFamily`|指定成員可存取只要類型與子類型。|  
-|`mdFamORAssem`|指定成員可存取衍生的類別和其組件中的其他型別。|  
-|`mdPublic`|指定成員可存取的所有型別存取範圍。|  
-|`mdStatic`|指定此成員定義為之型別的一部分，而不是執行個體的成員。|  
+|`mdFamily`|指定成員只能由型別和子型別存取。|  
+|`mdFamORAssem`|指定成員可存取由衍生的類別和其組件中的其他型別。|  
+|`mdPublic`|指定成員為可存取的所有型別存取範圍。|  
+|`mdStatic`|指定此成員定義為類型的一部分，而不是執行個體的成員。|  
 |`mdFinal`|指定無法覆寫此方法。|  
 |`mdVirtual`|指定可以覆寫此方法。|  
-|`mdHideBySig`|指定的方法會隱藏由名稱和簽章，而不是只根據名稱。|  
+|`mdHideBySig`|指定的方法會在依名稱和簽章，而不是只依名稱隱藏。|  
 |`mdVtableLayoutMask`|指定虛擬資料表配置。|  
 |`mdReuseSlot`|指定用於虛擬資料表中，這個方法的位置可重複使用。 這是預設值。|  
-|`mdNewSlot`|指定方法一律會取得虛擬資料表中的新位置。|  
-|`mdCheckAccessOnOverride`|指定可以在相同的類型，它會顯示所覆寫方法。|  
-|`mdAbstract`|指定方法未實作。|  
-|`mdSpecialName`|指定的方法是特殊的且其名稱描述如何。|  
-|`mdPinvokeImpl`|指定使用 PInvoke 轉送方法實作。|  
+|`mdNewSlot`|指定此方法一律會取得虛擬資料表中的新位置。|  
+|`mdCheckAccessOnOverride`|指定可以在相同的型別，它會顯示所覆寫此方法。|  
+|`mdAbstract`|指定的方法尚未實作。|  
+|`mdSpecialName`|指定的方法是特殊的且其名稱描述方式。|  
+|`mdPinvokeImpl`|指定方法實作會轉送使用 PInvoke。|  
 |`mdUnmanagedExport`|指定的方法是匯出至 unmanaged 程式碼的 managed 的方法。|  
 |`mdReservedMask`|保留供內部使用的 common language runtime。|  
-|`mdRTSpecialName`|指定通用語言執行平台應該檢查方法名稱的編碼方式。|  
-|`mdHasSecurity`|指定的方法有與其相關聯的安全性。|  
-|`mdRequireSecObject`|指定此方法會呼叫包含安全性驗證碼的另一個方法。|  
+|`mdRTSpecialName`|指定 common language runtime 應該檢查方法名稱的編碼方式。|  
+|`mdHasSecurity`|指定的方法具有與它相關聯的安全性。|  
+|`mdRequireSecObject`|指定此方法會呼叫含有安全程式碼的另一種方法。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

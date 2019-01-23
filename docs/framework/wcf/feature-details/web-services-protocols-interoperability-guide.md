@@ -2,12 +2,12 @@
 title: Web 服務通訊協定互通性手冊
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 96fdf00b5d64f1ed588907fc2717388b30ae1d92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521383"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服務通訊協定互通性手冊
 Windows Communication Foundation (WCF) 會實作一些 Web 服務通訊協定。 許多這些通訊協定包含實作者應自行決定的一些選項和擴充點。 本主題提供 WCF 實作的 Web 服務通訊協定的清單。 本節中的其他主題則會提供每個受支援通訊協定的實作詳細資訊。  
@@ -82,13 +82,13 @@ Windows Communication Foundation (WCF) 會實作一些 Web 服務通訊協定。
   
 -   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [Ws-policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
+-   [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [Ws-policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
+-   [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [Ws-policyattachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
+-   [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [Ws-metadataexchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
+-   [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
   
 -   [Ws-transfer Get 擷取中繼資料](https://go.microsoft.com/fwlink/?LinkId=96708)  
   
@@ -100,13 +100,13 @@ Windows Communication Foundation (WCF) 會實作一些 Web 服務通訊協定。
   
 -   [Basic Security Profile 1.0 工作草稿](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## <a name="see-also"></a>另請參閱  
- [系統提供的互通性繫結所支援的 Web 服務通訊協定](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
- [訊息通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
- [資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [WSDL 與原則](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
- [安全性通訊協定](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
- [可靠傳訊通訊協定 1.0 版](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
- [可靠傳訊通訊協定 1.1 版](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
- [傳輸通訊協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
- [內容交換通訊協定](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
+## <a name="see-also"></a>另請參閱
+- [系統提供的互通性繫結所支援的 Web 服務通訊協定](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
+- [訊息通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)
+- [資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [WSDL 與原則](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)
+- [安全性通訊協定](../../../../docs/framework/wcf/feature-details/security-protocols.md)
+- [可靠傳訊通訊協定 1.0 版](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)
+- [可靠傳訊通訊協定 1.1 版](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)
+- [傳輸通訊協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)
+- [內容交換通訊協定](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

@@ -3,12 +3,12 @@ title: 如何：啟用 WIF 追蹤
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: f763c279c29bec73d4fc20d59dc86726d84e21bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605150"
 ---
 # <a name="how-to-enable-wif-tracing"></a>如何：啟用 WIF 追蹤
 ## <a name="applies-to"></a>適用於  
@@ -18,7 +18,7 @@ ms.locfileid: "47207108"
 -   ASP.NET® Web Forms  
   
 ## <a name="summary"></a>總結  
- 這個操作說明提供了在 ASP.NET 應用程式中啟用 WIF 追蹤的詳細逐步程序。 還提供了一些指示，說明如何測試應用程式以確認追蹤接聽項和記錄檔正常運作。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 您可以從下列位置下載：[Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)  
+ 這個操作說明提供了在 ASP.NET 應用程式中啟用 WIF 追蹤的詳細逐步程序。 還提供了一些指示，說明如何測試應用程式以確認追蹤接聽項和記錄檔正常運作。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 它可以從下列位置下載：[身分識別和存取工具](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 > [!IMPORTANT]
 >  為被動應用程式 (也就是使用 WS-同盟通訊協定的應用程式) 啟用 WIF 追蹤，可能會使應用程式暴露於阻斷服務 (DoS) 攻擊或洩漏資訊給惡意方的風險下。 這同時包括被動 RP 和被動 STS。 基於這個理由，建議您不要在生產環境中為被動 RP 或 STS 啟用 WIF 追蹤。  
@@ -42,7 +42,7 @@ ms.locfileid: "47207108"
 -   啟用追蹤，並確認它能夠正常運作  
   
 ## <a name="overview"></a>總覽  
- 追蹤可讓您對 WIF 的許多類型問題進行偵錯和疑難排解，包括權杖、Cookie、宣告、通訊協定訊息等等。 WIF 追蹤類似於 WCF 追蹤；例如，您可以選擇追蹤的詳細資訊來顯示從重大訊息到所有訊息的一切項目。 WIF 追蹤是在 **.xml** 檔案或 **.svclog** 檔案中產生，而您可以使用服務追蹤檢視器工具來檢視這些檔案。 此工具位於電腦上 Windows SDK 安裝路徑的 **bin** 目錄中，例如：**C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**。  
+ 追蹤可讓您對 WIF 的許多類型問題進行偵錯和疑難排解，包括權杖、Cookie、宣告、通訊協定訊息等等。 WIF 追蹤類似於 WCF 追蹤；例如，您可以選擇追蹤的詳細資訊來顯示從重大訊息到所有訊息的一切項目。 WIF 追蹤是在 **.xml** 檔案或 **.svclog** 檔案中產生，而您可以使用服務追蹤檢視器工具來檢視這些檔案。 此工具位於**bin** Windows SDK 目錄路徑在電腦上安裝，例如：**C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
   
 ## <a name="summary-of-steps"></a>步驟摘要  
   
@@ -65,14 +65,14 @@ ms.locfileid: "47207108"
   
 5.  [身分識別與存取] 視窗隨即出現。 在 [提供者] 底下，選取 [Test your application with the Local Development STS] (使用本機開發 STS 測試應用程式}，然後按一下 [套用]。  
   
-6.  在 **C:** 磁碟機的根目錄中建立名為 **logs** 的新資料夾，如下所示：**C:\logs**  
+6.  建立新的資料夾中名為**記錄檔**根目錄中的**c:** 磁碟機，例如所示：**C:\logs**  
   
 7.  將下列 **\<system.diagnostics>** 元素加入 *Web.config* 組態檔中緊接在 **\</configSections>** 結尾元素後面的位置，如下所示：  
   
     ```xml  
     <configuration>  
         <configSections>  
-        …  
+            ...
         </configSections>  
         <system.diagnostics>  
             <sources>  

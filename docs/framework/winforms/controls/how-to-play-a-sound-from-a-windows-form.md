@@ -1,5 +1,5 @@
 ---
-title: 如何：播放 Windows Form 中的音效
+title: HOW TO：從 Windows Form 播放的音效
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 853d0f78b4f6dba2dc84109270f79f4b010c27b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02b0cb2952e11946f994819bb09a55167781137c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607247"
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a>如何：播放 Windows Form 中的音效
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>HOW TO：從 Windows Form 播放的音效
 這個範例會在執行階段播放所指定路徑的音效。  
   
 ## <a name="example"></a>範例  
@@ -42,7 +42,7 @@ private void playSimpleSound()
   
 -   您將檔案名稱 `"c:\Windows\Media\chimes.wav"` 取代為有效的檔案名稱。  
   
--   (C#)若要參考<xref:System.Media?displayProperty=nameWithType>命名空間。  
+-   (C#) 的參考<xref:System.Media?displayProperty=nameWithType>命名空間。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  檔案作業應該含括在適當的結構化例外狀況處理區塊內。  
@@ -59,12 +59,12 @@ private void playSimpleSound()
   
 -   路徑是無效的 (<xref:System.IO.DirectoryNotFoundException> 類別)。  
   
--   路徑是只有一個冒號":"(<xref:System.NotSupportedException>類別)。  
+-   路徑是只有冒號":"(<xref:System.NotSupportedException>類別)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請勿根據檔案名稱來判斷檔案內容。 例如，`Form1.vb` 檔案可能不是 Visual Basic 來源檔案。 在應用程式中使用這些資料之前，請先驗證所有輸入值。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Media.SoundPlayer>  
- [操作說明：在 Windows Forms 中以非同步方式載入音效](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
- 
+## <a name="see-also"></a>另請參閱
+- <xref:System.Media.SoundPlayer>
+- [如何：在 Windows Form 中的非同步載入音效](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+

@@ -1,19 +1,19 @@
 ---
-title: 如何：使用主要畫面格建立矩陣的動畫
+title: HOW TO：使用主要畫面格建立矩陣的動畫
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], Matrix properties with key frames
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: 8f58b43a870f2c85ae4349965f586a33e2f75a2a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fff550a5a3a85575fe86c5290aa604ab00f1437f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518506"
 ---
-# <a name="how-to-animate-a-matrix-by-using-key-frames"></a>如何：使用主要畫面格建立矩陣的動畫
+# <a name="how-to-animate-a-matrix-by-using-key-frames"></a>HOW TO：使用主要畫面格建立矩陣的動畫
 此範例示範如何建立動畫<xref:System.Windows.Media.MatrixTransform.Matrix%2A>屬性<xref:System.Windows.Media.MatrixTransform>使用主要畫面格。  
   
 ## <a name="example"></a>範例  
@@ -34,8 +34,8 @@ ms.locfileid: "43485846"
   
  如需完整的範例，請參閱[主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.MatrixTransform.Matrix%2A>  
- <xref:System.Windows.Media.MatrixTransform>  
- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [主要畫面格操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.MatrixTransform.Matrix%2A>
+- <xref:System.Windows.Media.MatrixTransform>
+- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [主要畫面格操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

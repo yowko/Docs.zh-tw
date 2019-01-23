@@ -2,12 +2,12 @@
 title: Contract1
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 12e9cbf5232ebbad33ccc4fdca33233997d27357
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c602ea2b708fced37c5b309596fe2312be21e741
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603556"
 ---
 # <a name="contract"></a>合約
 合約  
@@ -42,8 +42,8 @@ class Contract
   
  裝載合約之的 appdomain 的識別碼。  
   
-### <a name="behaviors"></a>行為  
- 資料型別：行為陣列  
+### <a name="behaviors"></a>「行為」  
+ 資料類型：行為陣列  
   
  存取類型：唯讀  
   
@@ -64,7 +64,7 @@ class Contract
  WSDL 中 `portType` 項目的命名空間。  
   
 ### <a name="operations"></a>作業  
- 資料型別：作業陣列  
+ 資料類型：作業陣列  
   
  存取類型：唯讀  
   
@@ -78,7 +78,7 @@ class Contract
  裝載合約之處理序的處理序識別碼。  
   
 ### <a name="ref"></a>ref  
- 資料型別：合約  
+ 資料類型：合約  
   
  存取類型：唯讀  
   
@@ -104,5 +104,5 @@ class Contract
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Description.ContractDescription>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Description.ContractDescription>

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00baed93bd9ab48c92de83dac76931c3149afc2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a89c706ece0949ffa3c182d53b57221acf81b18d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515061"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange 方法
-傳回指定的範圍的內嵌的來源到指定的緩衝區。 緩衝區必須夠大，無法容納來源。  
+傳回指定的範圍的內嵌來源到指定的緩衝區。 緩衝區必須夠大，無法容納來源。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ HRESULT GetSourceRange(
   
 #### <a name="parameters"></a>參數  
  `startLine`  
- [in]中目前的文件的起始行。  
+ [in]目前文件起始行。  
   
  `startColumn`  
  [in]目前的文件中的起始欄。  
@@ -52,19 +52,19 @@ HRESULT GetSourceRange(
  [in]目前的文件中的最後一行。  
   
  `endColumn`  
- [in]目前文件中的最後一個資料行。  
+ [in]目前的文件中的最後一個資料行。  
   
  `cSourceBytes`  
  [in]來源，以位元組為單位的大小。  
   
  `pcSourceBytes`  
- [out]此變數會接收來源大小指標。  
+ [out]此變數會接收來源的大小指標。  
   
  `source`  
  [out]大小和來源文件，以位元組為單位的指定範圍的長度。  
   
 ## <a name="return-value"></a>傳回值  
- 如果此方法成功為 S_OK。  
+ 如果方法成功為 S_OK。  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

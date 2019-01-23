@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ddaddbbd050dc079fcf20551e90c895d2f4ef59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8e03572a4eaa0251866e8bfc6ae2d01d955d7b8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516183"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope 方法
 組件匯入目前的範圍，並取得新的中繼資料簽章為合併的範圍。  
@@ -47,10 +47,10 @@ HRESULT TranslateSigWithScope (
   
 #### <a name="parameters"></a>參數  
  `pAssemImport`  
- [in]匯入組件 （其中簽章定義） 的介面。  
+ [in]匯入組件 （其中會定義簽章） 介面。  
   
  `pbHashValue`  
- [in]組件的雜湊 blob。  
+ [in]組件雜湊的 blob。  
   
  `cbHashValue`  
  [in]中的位元組計數`pbHashValue`。  
@@ -65,7 +65,7 @@ HRESULT TranslateSigWithScope (
  [in]大小，以位元組為單位的`pbSigBlob`。  
   
  `pAssemEmit`  
- [in]匯出組件介面。  
+ [in]匯出組件的介面。  
   
  `emit`  
  [in]匯出中繼資料範圍的介面。  
@@ -77,20 +77,20 @@ HRESULT TranslateSigWithScope (
  [in]容量，以位元組為單位的`pvTranslatedSig`。  
   
  `pcbTranslatedSig`  
- [out]翻譯的簽章中的實際位元組數目。  
+ [out]已翻譯的簽章中的實際位元組數目。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 39d4a184972036677aaa9fdb33e672521033d35f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ccb9a19d4e6d79a84123014746b659a7168b2158
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607000"
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;清除&gt;webRequestModules （網路設定） 的項目
 移除應用程式中的所有已註冊的 Web 要求模組。  
@@ -23,7 +23,7 @@ ms.locfileid: "50190524"
  \<configuration>  
 \<system.net>  
 \<webRequestModules>  
-\<清除 >  
+\<clear>  
   
 ## <a name="syntax"></a>語法  
   
@@ -69,6 +69,6 @@ ms.locfileid: "50190524"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.Net.WebRequest>  
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.WebRequest>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

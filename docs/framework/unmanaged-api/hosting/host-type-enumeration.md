@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fce759877ad5e3c9041344647781da07ad19a45a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6a2db1aea04ae060623bc39a52ed6990f6137f82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606438"
 ---
 # <a name="hosttype-enumeration"></a>HOST_TYPE 列舉
 包含指定的啟動應用程式的主機類型的值。  
@@ -40,18 +40,18 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|啟動應用程式從 AppLaunch.exe。<br /><br /> 部分信任應用程式使用此值。|  
-|`HOST_TYPE_CORFLAG`|直接啟動應用程式。 也就是啟動應用程式從其本身的.exe 檔案。<br /><br /> 使用此值為完全信任的應用程式。|  
+|`HOST_TYPE_APPLAUNCH`|啟動從 AppLaunch.exe 應用程式。<br /><br /> 部分信任的應用程式中使用此值。|  
+|`HOST_TYPE_CORFLAG`|直接啟動應用程式。 也就是啟動應用程式與它自己的.exe 檔案。<br /><br /> 使用此值為完全受信任的應用程式。|  
 |`HOST_TYPE_DEFAULT`|HOST_TYPE_APPLAUNCH 相同。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

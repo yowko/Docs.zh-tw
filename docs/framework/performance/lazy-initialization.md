@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88092c22e763e427203350065ff62b7c5e040b97
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: fac921bbe6250b039aba8527a1b9b5203af0972e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492945"
 ---
 # <a name="lazy-initialization"></a>延遲初始設定
 物件的「延遲初始設定」表示物件一直延遲到第一次使用才建立。 (在本主題中，「延遲初始設定」和「延遲具現化」二詞為同義字。)延遲初始設定主要是用來改善效能，避免不必要的計算，並減少程式記憶體需求。 以下為最常見的案例：  
@@ -87,7 +87,7 @@ ms.locfileid: "37073212"
   
 <a name="ExceptionsInLazyObjects"></a>   
 ## <a name="exceptions-in-lazy-objects"></a>延遲物件的例外狀況  
- 如前所述，<xref:System.Lazy%601> 物件一律會傳回隨之初始化的相同物件或值，因此 <xref:System.Lazy%601.Value%2A> 屬性是唯讀的。 如果啟用例外狀況快取，此不變性也會延伸至例外狀況行為。 如果延遲初始化的物件有啟用快取的例外狀況而擲回例外狀況，從它的初始設定方法時<xref:System.Lazy%601.Value%2A>第一次存取屬性，該相同的例外狀況會擲回每個後續嘗試存取<xref:System.Lazy%601.Value%2A>屬性. 換句話說，即使在多執行緒案例中，也絕對不會重新叫用包裝類型的建構函式。 因此，<xref:System.Lazy%601> 物件無法在某次存取中擲回例外狀況，並在後續存取中傳回值。  
+ 如前所述，<xref:System.Lazy%601> 物件一律會傳回隨之初始化的相同物件或值，因此 <xref:System.Lazy%601.Value%2A> 屬性是唯讀的。 如果啟用例外狀況快取，此不變性也會延伸至例外狀況行為。 如果延遲初始化的物件有啟用快取的例外狀況，並擲回其初始設定方法的例外狀況時<xref:System.Lazy%601.Value%2A>第一次存取屬性、 存取每個後續的嘗試都會擲回該相同的例外狀況<xref:System.Lazy%601.Value%2A>屬性. 換句話說，即使在多執行緒案例中，也絕對不會重新叫用包裝類型的建構函式。 因此，<xref:System.Lazy%601> 物件無法在某次存取中擲回例外狀況，並在後續存取中傳回值。  
   
  當您使用任何採用初始設定方法 (`valueFactory` 參數) 的 <xref:System.Lazy%601?displayProperty=nameWithType> 建構函式時，就啟用了例外狀況快取；例如，它會在您使用 `Lazy(T)(Func(T))` 建構函式時啟用。 如果建構函式也採用 <xref:System.Threading.LazyThreadSafetyMode> 值 (`mode` 參數)，請指定 <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> 或 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>。 指定初始設定方法，可啟用這兩種模式的例外狀況快取。 初始設定方法可以非常簡單。 例如，它可能會呼叫 `T` 的預設建構函式：C# 為 `new Lazy<Contents>(() => new Contents(), mode)`，或 Visual Basic 為 `New Lazy(Of Contents)(Function() New Contents())`。 如果您使用未指定初始設定方法的 <xref:System.Lazy%601?displayProperty=nameWithType> 建構函式，則不會快取 `T` 的預設建構函式擲回的例外狀況。 如需詳細資訊，請參閱 <xref:System.Threading.LazyThreadSafetyMode> 列舉。  
   
@@ -101,11 +101,11 @@ ms.locfileid: "37073212"
 |建構函式|執行緒安全模式|使用初始設定方法|已快取例外狀況|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|否|否|  
-|Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|[是]|[是]|  
+|Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|是|是|  
 |Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|否|否|  
-|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|[是]|[是]|  
+|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|是|是|  
 |Lazy(T)(LazyThreadSafetyMode)|使用者指定的|否|否|  
-|Lazy(T)(Func(T), LazyThreadSafetyMode)|使用者指定的|[是]|如果使用者指定了 <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> 則為否；否則為是。|  
+|Lazy(T)(Func(T), LazyThreadSafetyMode)|使用者指定的|是|如果使用者指定了 <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> 則為否；否則為是。|  
   
 ## <a name="implementing-a-lazy-initialized-property"></a>實作延遲初始化的屬性  
  若要使用延遲初始設定來實作公用屬性，請將屬性的支援欄位定義為 <xref:System.Lazy%601>，並從屬性的 `get` 存取子傳回 <xref:System.Lazy%601.Value%2A> 屬性。  
@@ -140,7 +140,7 @@ ms.locfileid: "37073212"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Parallel.For 和 ForEach 的執行緒區域變數  
- 當您使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法平行逐一查看資料來源時，您可以使用有執行緒區域資料內建支援的多載。 在這些方法中，執行緒位置是使用本機委派建立、存取和清除資料所達成的。 如需詳細資訊，請參閱[How to： 撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[How to： 撰寫含有資料分割區域變數的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)。  
+ 當您使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法平行逐一查看資料來源時，您可以使用有執行緒區域資料內建支援的多載。 在這些方法中，執行緒位置是使用本機委派建立、存取和清除資料所達成的。 如需詳細資訊，請參閱[＜How to：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[How to:撰寫含有資料分割區域變數的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)。  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>低負荷情況下使用延遲初始設定  
  在必須延遲初始化大量物件的情況下，您可能會判定，包裝 <xref:System.Lazy%601> 中的每個物件需要太多記憶體或太多的運算資源。 或者，您可能對延遲初始設定的公開方式有嚴格的要求。 在這種情況下，您可以使用 <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> 類別的 `static` (Visual Basic 為 `Shared`) 方法，延遲初始化每個物件，不將它包裝在 <xref:System.Lazy%601> 的執行個體中。  
@@ -152,8 +152,8 @@ ms.locfileid: "37073212"
   
  請注意，本例是在每次反覆迴圈時叫用初始化程序。 在多執行緒案例中，第一個叫用初始化程序的執行緒，其值會被所有執行緒看到。 後續其他執行緒也會叫用初始化程序，但其結果不被採用。 如果無法接受這種潛在的競爭條件，請使用採用布林值引數和同步處理物件的 <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> 多載。  
   
-## <a name="see-also"></a>另請參閱  
- [Managed 執行緒處理的基本概念](../../../docs/standard/threading/managed-threading-basics.md)  
- [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)  
- [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [如何：執行物件的延遲初始化](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+## <a name="see-also"></a>另請參閱
+- [Managed 執行緒處理的基本概念](../../../docs/standard/threading/managed-threading-basics.md)
+- [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)
+- [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [如何：執行延遲初始化的物件](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

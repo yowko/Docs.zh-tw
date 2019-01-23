@@ -2,12 +2,12 @@
 title: 比較語意 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: 2184f86ee43f88b0c4cfc1b96e42e2486c17fe5f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 371999df0fb3177ecc90f9b1fa43d457a51bfd7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492490"
 ---
 # <a name="comparison-semantics-entity-sql"></a>比較語意 (Entity SQL)
 執行以下任何 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 運算子都會牽涉到型別執行個體的比較：  
@@ -66,14 +66,14 @@ ms.locfileid: "32765551"
 ## <a name="supported-combinations"></a>支援的組合  
  以下資料表針對每一種型別顯示比較運算子的所有支援組合：  
   
-|**Type**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**為 NULL**<br /><br /> **不是 NULL**|  
+|**Type**|**=**<br /><br /> **\!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**為 NULL**<br /><br /> **不是 NULL**|  
 |-|-|-|-|-|-|-|-|  
 |實體類型|Ref<sup>1</sup>|所有屬性<sup>2</sup>|所有屬性<sup>2</sup>|所有屬性<sup>2</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|Ref<sup>1</sup>|  
 |複雜類型|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|  
 |表格列|所有屬性<sup>4</sup>|所有屬性<sup>4</sup>|所有屬性<sup>4</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|所有屬性<sup>4</sup>|擲回<sup>3</sup>|  
 |基本型別|提供者特定|提供者特定|提供者特定|提供者特定|提供者特定|提供者特定|提供者特定|  
 |多重集|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|  
-|參考|[是]<sup>5</sup>|[是]<sup>5</sup>|[是]<sup>5</sup>|[是]<sup>5</sup>|Throw|Throw|[是]<sup>5</sup>|  
+|參考|是<sup>5</sup>|是<sup>5</sup>|是<sup>5</sup>|是<sup>5</sup>|Throw|Throw|是<sup>5</sup>|  
 |關聯<br /><br /> 類型|擲回<sup>3</sup>|Throw|Throw|Throw|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|  
   
  <sup>1</sup>給定的實體類型執行個體的參考會以隱含方式相較之下，如下列範例所示：  
@@ -94,13 +94,13 @@ FROM AdventureWorksEntities.Product AS p1
 WHERE p1 != REF(p2)  
 ```  
   
- <sup>2</sup>複雜類型的屬性會先簡維傳送至存放區，以便可加以比較 （只要其所有屬性都都可比較）。 另請參閱<sup>4。</sup>  
+ <sup>2</sup>複雜類型的屬性會先簡維再傳送至存放區，以便可加以比較 （只要其所有屬性都都相當）。 另請參閱<sup>4。</sup>  
   
- <sup>3</sup>Entity Framework 執行階段會偵測到不支援的案例，並擲回有意義的例外狀況，而不會佔用提供者/存放區。  
+ <sup>3</sup>Entity Framework 執行階段偵測到不支援的案例，並擲回有意義的例外狀況，而不會佔用提供者/存放區。  
   
  <sup>4</sup>嘗試比較所有的屬性。 如果某個屬性具有無法比較的型別 (如文字、ntext 或影像)，可能會擲回伺服器例外狀況。  
   
  <sup>5</sup>比較所有的個別項目參考 （這包括實體集名稱和實體類型的所有索引鍵屬性）。  
   
-## <a name="see-also"></a>另請參閱  
- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>另請參閱
+- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

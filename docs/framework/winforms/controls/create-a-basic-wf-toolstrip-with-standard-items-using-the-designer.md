@@ -1,5 +1,5 @@
 ---
-title: 如何：使用設計工具建立具有標準項目的基本 Windows Form
+title: HOW TO：建立具有標準項目的使用設計工具的基本 Windows Form
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 05ca122f425f929264669ca4914f87e850154246
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f36df117ee7bb7bcdb79ccb134c914288ec6903d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602672"
 ---
-# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>如何：使用設計工具建立具有標準項目的基本 Windows Form
+# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>HOW TO：建立具有標準項目的使用設計工具的基本 Windows Form
 下列程序示範如何建立<xref:System.Windows.Forms.ToolStrip>並新增七個<xref:System.Windows.Forms.ToolStripButton>代表一般工作的控制項。  
   
 > [!NOTE]
@@ -28,9 +28,9 @@ ms.locfileid: "43778356"
   
 3.  在  **ToolStrip 工作**窗格中，選擇**插入標準項目**。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.ToolStrip>  
- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [ToolStrip 控制項](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [ToolStrip 技術摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.ToolStrip>
+- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [ToolStrip 控制項](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+- [ToolStrip 技術摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

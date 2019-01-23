@@ -10,17 +10,17 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 6f84df5c9388220e5ca817d95362753df0920534
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68ed7541d76c1678f9f308ed2cda8afec1231a73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608715"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>無法從這些引數推斷型別參數的資料類型
-無法從這些引數推斷型別參數的資料類型。 明確指定資料類型或許可以更正這個錯誤。  
+無法從這些引數推斷類型參數的資料類型。 明確指定資料類型或許可以更正這個錯誤。  
   
- 多載解析失敗時，會發生這個錯誤。 它會顯示為附屬訊息，說明為什麼排除特定多載候選項目。 錯誤訊息，說明編譯器無法使用類型推斷，來尋找資料型別之型別參數。  
+ 多載解析失敗時，會發生這個錯誤。 它會顯示為附屬訊息，說明為什麼排除特定多載候選項目。 錯誤訊息說明編譯器無法使用類型推斷，來尋找資料型別之型別參數。  
   
 > [!NOTE]
 >  當無法指定引數時 (例如，針對查詢運算式中的查詢運算子)，會顯示不含第二句的錯誤訊息。  
@@ -57,7 +57,7 @@ End Interface
   
 -   您可以指定一個或多個類型參數的資料類型，而不是依賴類型推斷。  
   
-## <a name="see-also"></a>另請參閱  
- [寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [在 Visual Basic 中的泛型程序](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [在 Visual Basic 中的型別轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>另請參閱
+- [寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Generic Procedures in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [在 Visual Basic 中的類型轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

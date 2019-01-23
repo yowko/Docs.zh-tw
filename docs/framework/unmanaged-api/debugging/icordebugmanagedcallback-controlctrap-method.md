@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9758de5c2801f2c55b7eca149569016ec5b9243
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f13800bcecbf6e7bdc5fede4e11c2ea15ecdec93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603894"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap 方法
-CTRL + C 陷入正在偵錯的處理程序會告知偵錯工具。  
+CTRL + C 會陷入正在偵錯的處理程序會告知偵錯工具。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,26 +37,26 @@ HRESULT ControlCTrap (
   
 #### <a name="parameters"></a>參數  
  `pProcess`  
- [in]代表程序的 CTRL + C 會被截取 ICorDebugProcess 物件的指標。  
+ [in]表示處理程序的 CTRL + C 會被截取的 ICorDebugProcess 物件指標。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|偵錯工具就會處理 CTRL + C 設陷。|  
+|S_OK|偵錯工具會處理 CTRL + C 設陷。|  
 |S_FALSE|偵錯工具不會處理 CTRL + C 設陷。|  
   
 ## <a name="remarks"></a>備註  
- 處理序內的所有應用程式定義域會停止這個回呼。  
+ 在程序中的所有應用程式定義域會停止這個回呼。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

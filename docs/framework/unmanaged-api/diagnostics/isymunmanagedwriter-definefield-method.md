@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d5b3c60845fce39ce7f904c6871e7feb16e8970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03c0a9d7315f5158948701d4322887104f0844c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603660"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField 方法
-定義單一變數不是在方法中。 這個方法是使用特定類別中的欄位、 位元欄位等等。  
+定義不在方法內的單一變數。 這個方法是使用特定類別中的欄位、 位元欄位，依此類推。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,13 +44,13 @@ HRESULT DefineField(
   
 #### <a name="parameters"></a>參數  
  `parent`  
- [in]在中繼資料類型或方法語彙基元。  
+ [in]中繼資料型別或方法語彙基元。  
   
  `name`  
  [in]欄位名稱。  
   
  `attributes`  
- [in]欄位屬性。  
+ [in]欄位的欄位屬性。  
   
  `cSig`  
  [in]A`ULONG32`也就是大小，以字元為單位，以包含欄位簽章所需的緩衝區。  
@@ -59,7 +59,7 @@ HRESULT DefineField(
  [in]欄位簽章的陣列。  
   
  `addrKind`  
- [in]地址類型。  
+ [in]位址類型。  
   
  `addr1`  
  [in]欄位規格的第一個位址。  
@@ -71,10 +71,10 @@ HRESULT DefineField(
  [in]欄位規格的第三個位址。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
