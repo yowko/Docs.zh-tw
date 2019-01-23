@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fec1fb5a2dc3d6589f49d4a5864dabfb03a5477c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17530537e6d74b247aaf8708efed28ef169f9d57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491242"
 ---
 # <a name="runtime-profiling"></a>執行階段分析
 分析是在任何開發或部署案例中蒐集效能資料的一種方法。 本節適用對象為想要蒐集應用程式效能資訊的開發人員和系統管理員。  
@@ -66,5 +66,5 @@ ms.locfileid: "33393051"
 |<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|指定 `PerformanceCounter` 元件的安裝程式。|  
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|指定用以計算 `NextValue` 之 `PerformanceCounter`方法的公式。|  
   
-## <a name="see-also"></a>另請參閱  
- [效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)
+## <a name="see-also"></a>另請參閱
+- [效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)

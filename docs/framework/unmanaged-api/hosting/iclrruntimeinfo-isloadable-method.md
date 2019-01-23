@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e60c3b06453e0f447249bddf5d4da5c240576577
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e9780020abe609212fe3c4bd65f70200467ff9c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432956"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533685"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>ICLRRuntimeInfo::IsLoadable 方法
-表示此介面相關聯的執行階段是否可以載入目前的處理序不顧及其他執行階段，可能已經載入處理序。  
+指出此介面相關聯的執行階段是否可以載入到目前的程序，並考慮其他可能會載入到處理序的執行階段。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ HRESULT IsLoadable(
   
 #### <a name="parameters"></a>參數  
  `pbLoadable`  
- [out]`true`如果此執行階段無法載入目前的處理序; 否則`false`。  
+ [out]`true`如果此執行階段無法載入目前的處理序，否則`false`。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
@@ -47,20 +47,20 @@ HRESULT IsLoadable(
 |E_POINTER|`pbLoadable` 為 null。|  
   
 ## <a name="remarks"></a>備註  
- 如果另一個執行階段已經載入處理序，而此介面相關聯的執行階段可同時載入同處理序為並存執行，`pbLoadable`傳回`true`。 如果兩個執行階段無法執行-並存同處理序，`pbLoadable`傳回`false`。 例如，在相同的程序，與 CLR 2.0 版中並排或 CLR 1.1 版，可以執行 common language runtime (CLR) 第 4 版。 但是，CLR 1.1 版和 CLR 2.0 版無法執行-並存同處理序。  
+ 如果另一個執行階段已載入處理序，並且此介面相關聯的執行階段可以載入內含式並排顯示執行中，`pbLoadable`傳回`true`。 如果兩個執行階段無法執行並排顯示同處理序，`pbLoadable`傳回`false`。 例如，在相同的程序，與 CLR 2.0 版中並行或 CLR 1.1 版，可以執行 common language runtime (CLR) 第 4 版。 不過，CLR 1.1 版和 CLR 2.0 版才能執行並排顯示同處理序。  
   
- 如果沒有執行階段會載入處理序中，這個方法一律會傳回`true`。  
+ 如果沒有執行階段載入處理序，此方法一律會傳回`true`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)

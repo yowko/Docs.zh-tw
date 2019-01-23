@@ -2,12 +2,12 @@
 title: 使用命令修改資料
 ms.date: 03/30/2017
 ms.assetid: f4160389-b9ff-4b74-b655-437c76dcd586
-ms.openlocfilehash: 6388eecb2e96970f47383b61985d672bd0419a1e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cec079d16c6dc3d98cee9bf17b4201654e9ba10a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509262"
 ---
 # <a name="using-commands-to-modify-data"></a>使用命令修改資料
 您可以使用 .NET Framework 資料提供者來執行預存程序或資料定義語言陳述式 (例如 CREATE TABLE 和 ALTER COLUMN)，以執行資料庫或目錄的結構描述管理。 這些命令不會傳回資料列像查詢一樣，因此**命令**物件提供**ExecuteNonQuery**加以處理。  
@@ -23,7 +23,7 @@ ms.locfileid: "43864140"
  [執行目錄作業](../../../../docs/framework/data/adonet/performing-catalog-operations.md)  
  說明如何執行修改資料庫結構描述的命令。  
   
-## <a name="see-also"></a>另請參閱  
- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

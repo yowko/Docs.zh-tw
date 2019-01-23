@@ -20,12 +20,12 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: 98433c0f1d1008664bb994f3b43fe48a753a432c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: cd94411629f18557f677a6d1f65bfc0dede43e83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534507"
 ---
 # <a name="single-data-type-visual-basic"></a>字串資料類型 (Visual Basic)
 保存帶正負號的 IEEE 32 位元 （4 個位元組） 單精確度浮點數，值範圍從-3.4028235E + 38 到-1.401298E-45 負值，以及從 1.401298E-45 到 3.4028235E + 38 的正數值。 單精確度數字儲存的是實數的近似值。  
@@ -47,12 +47,12 @@ ms.locfileid: "48582719"
   
 -   **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Single?displayProperty=nameWithType> 結構。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Single?displayProperty=nameWithType>  
- [資料類型](../../../visual-basic/language-reference/data-types/index.md)  
- [Decimal 資料類型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
- [Double 資料類型](../../../visual-basic/language-reference/data-types/double-data-type.md)  
- [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [資料類型的疑難排解](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Single?displayProperty=nameWithType>
+- [資料類型](../../../visual-basic/language-reference/data-types/index.md)
+- [Decimal 資料類型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
+- [Double 資料類型](../../../visual-basic/language-reference/data-types/double-data-type.md)
+- [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [資料類型的疑難排解](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

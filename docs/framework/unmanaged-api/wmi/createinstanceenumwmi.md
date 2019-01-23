@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84c362dca7f617aeb929f050af23e96998c4e1d5
-ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
+ms.openlocfilehash: ba59d9d47d5c120eb2ff0a3a3c65e0fe8cdf75e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42754463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498290"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi 函式
 傳回列舉值，傳回符合指定的選取準則指定之類別的執行個體。 
@@ -48,7 +48,7 @@ HRESULT CreateInstanceEnumWmi (
 ## <a name="parameters"></a>參數
 
 `strFilter`    
-[in]執行個體所需的類別名稱。 此參數不得為`null`。
+[in]執行個體所需的類別名稱。 這個參數不可以是 `null`。
 
 `lFlags`   
 [in]旗標的組合會影響此函式的行為。 下列的值會定義於*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼： 
@@ -95,7 +95,7 @@ HRESULT CreateInstanceEnumWmi (
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 使用者沒有權限可檢視指定類別的執行個體。 |
 | `WBEM_E_FAILED` | 0x80041001 | 發生未指定的錯誤。 |
-| `WBEM_E_INVALID_CLASS` | 收到 0x80041010 | `strFilter` 不存在。 |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | `strFilter` 不存在。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI 是可能已停止和重新啟動。 呼叫[ConnectServerWmi](connectserverwmi.md)一次。 |
@@ -117,5 +117,5 @@ HRESULT CreateInstanceEnumWmi (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: e42e6f17a395edd8c765950832f2829a1aea1fe5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494440"
 ---
 # <a name="choosing-a-transport"></a>選擇傳輸
-本主題討論選擇包含 Windows Communication Foundation (WCF) 中的三種主要傳輸的準則： HTTP、 TCP 和具名的管道。 WCF 也包含訊息佇列 (也稱為 MSMQ) 傳輸，但是這份文件不討論訊息佇列。  
+本主題討論選擇包含 Windows Communication Foundation (WCF) 中的三種主要傳輸的準則：HTTP、 TCP 和具名的管道。 WCF 也包含訊息佇列 (也稱為 MSMQ) 傳輸，但是這份文件不討論訊息佇列。  
   
  WCF 程式設計模型分開端點作業 （如以表示服務合約中） 會連接兩個端點的傳輸機制。 如此可為您提供彈性以決定如何向網路公開您的服務。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "50199654"
  當通訊需要之間不同的 WCF 應用程式的單一電腦上，且您想要防止從另一部電腦的任何通訊時，然後使用具名的管道傳輸。 另一項限制是從「Windows 遠端桌面」執行的處理程序可能會受到相同的「Windows 遠端桌面」工作階段的限制，除非它們有更高的權限。  
   
 > [!WARNING]
->  當您可以使用具名的管道傳輸搭配弱式萬用字元 URL 保留項目在 IIS 中裝載的多個站台上，可能會發生下列錯誤： 嘗試監聽網站 '2'，發生的啟動服務 'NetPipeActivator' 通訊協定 'net.pipe' 的錯誤因此通訊協定會暫時停用站台。 請參閱例外狀況訊息，如需詳細資訊。 URL: Weakwildcard\<電腦名稱 > / 狀態： ConflictingRegistration 例外狀況： 處理序名稱： SMSvcHost 處理序識別碼： 1076 \  
+>  當您可以使用具名的管道傳輸搭配弱式萬用字元 URL 保留項目在 IIS 中裝載的多個站台上，可能會發生下列錯誤：嘗試監聽網站 '2' 時，所發生的啟動服務 'NetPipeActivator' 通訊協定 'net.pipe' 的錯誤，因此通訊協定會暫時停用站台。 請參閱例外狀況訊息，如需詳細資訊。 URL:Weakwildcard\<電腦名稱 > / 狀態：ConflictingRegistration 例外狀況：處理序名稱：SMSvcHost 處理序識別碼：1076\  
   
 ## <a name="decision-points-for-choosing-a-transport"></a>選擇傳輸的決策點  
  下表說明用於選擇傳輸的常見決策點。 建議您考慮適用於您應用程式的其他屬性和傳輸。 請辨識對您應用程式很重要的屬性，辨識與您各個屬性有正面關聯的傳輸，然後選擇最適合您屬性組的傳輸。  
@@ -61,16 +61,16 @@ ms.locfileid: "50199654"
 |輸送量|Throughput 是測量可以在指定的時間內傳輸及處理的資料量。 和延遲時間一樣，所選擇的傳輸會影響服務作業的輸送量。 將傳輸的輸送量最大化需要最小化傳輸內容的額外負荷，以及最小化等待訊息交換完成所花費的時間。 TCP 和具名管道傳輸都會為訊息本文增加少許額外負荷，並支援減少等候訊息回覆時間的原生雙工類型。|TCP、具名管道|  
 |Tooling|Tooling 代表開發、診斷、裝載和其他活動之通訊協定的協力廠商應用程式支援。 開發搭配 HTTP 通訊協定使用的工具和軟體代表極大的投資。|HTTP|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- <xref:System.ServiceModel.WSFederationHttpBinding>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- [繫結](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [建立使用者定義繫結](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- [繫結](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [建立使用者定義繫結](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

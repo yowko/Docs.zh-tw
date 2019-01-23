@@ -1,22 +1,22 @@
 ---
-title: '&lt;Connectionpoolsettings&gt;'
+title: '&lt;namedPipeTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: bf9229411143345847247f36de07b5c014d3f259
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cdb2863ff376a92f7c4b679f4812b895ac3f2234
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518835"
 ---
-# <a name="ltnamedpipetransportgt"></a>&lt;Connectionpoolsettings&gt;
+# <a name="ltnamedpipetransportgt"></a>&lt;namedPipeTransport&gt;
 定義傳輸，這個傳輸會使通道在包含於自訂繫結時使用具名管道來傳輸訊息。  
   
 \<system.serviceModel>  
-\<繫結 >  
+\<bindings>  
 \<customBinding>  
-\<繫結 >  
-\<namePipeTransport >  
+\<binding>  
+\<namePipeTransport>  
   
 ## <a name="syntax"></a>語法  
   
@@ -59,27 +59,27 @@ ms.locfileid: "54149596"
 |maxPendingConnections|取得或設定服務上等待分派之連線的數目上限。|  
 |maxReceivedMessageSize|取得及設定可允許訊息大小上限，以位元組為單位，可接收。|  
 |transferMode|取得或設定值，這個值表示訊息是否使用連線導向傳輸進行緩衝或資料流處理。|  
-|[\<n > 的\<Connectionpoolsettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|為具名管道繫結指定其他連線集區設定。|  
+|[\<connectionPoolSettings> of \<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|為具名管道繫結指定其他連線集區設定。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
 這個傳輸會使用以下格式的 URI "net.pipe://hostname/path"。 其他 URI 元件是選擇性的。  
   
 `namedPipeTransport` 項目建立自訂繫結時的起點，此繫結會實作具名管道傳輸通訊協定。 這個傳輸是用於電腦的 Windows Communication Foundation (WCF) 至 WCF 通訊。  
   
-## <a name="see-also"></a>另請參閱  
-<xref:System.ServiceModel.Configuration.NamedPipeTransportElement>   
-<xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>   
-<xref:System.ServiceModel.Channels.TransportBindingElement>   
-<xref:System.ServiceModel.Channels.CustomBinding>   
-[傳輸](../../../../../docs/framework/wcf/feature-details/transports.md)   
-[選擇傳輸](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
-[繫結](../../../../../docs/framework/wcf/bindings.md)   
-[擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
-[自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
-[\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [傳輸](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [選擇傳輸](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

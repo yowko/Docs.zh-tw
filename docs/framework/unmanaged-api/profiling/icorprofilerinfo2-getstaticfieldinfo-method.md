@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ab0d482366b037f92a55f00dd33df8a312e84b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6711d0e0423534744de1ee4b8a734ed2f8eab24d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514279"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo 方法
-取得值，指出套用到指定的欄位的靜態類型。  
+取得值，指出套用至指定之欄位的靜態類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,28 +38,28 @@ HRESULT GetStaticFieldInfo (
   
 #### <a name="parameters"></a>參數  
  `classId`  
- [in]類別定義的靜態欄位的識別碼。  
+ [in]在其中定義的靜態欄位的類別識別碼。  
   
  `fieldToken`  
- [in]靜態欄位中繼資料語彙基元。  
+ [in]靜態欄位的中繼資料語彙基元。  
   
  `pFieldInfo`  
- [out]值的指標[COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md)列舉，指出指定的欄位是否為靜態的而且如果因此的靜態類型可套用至欄位。  
+ [out]值的指標[COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md)列舉，指出是否指定的欄位是靜態的而如果等的靜態類型，套用到欄位。  
   
 ## <a name="remarks"></a>備註  
- 這項資訊可以用來判斷哪一個函式，呼叫以取得靜態欄位的位址。  
+ 這項資訊可用來判斷哪一個函式，呼叫以取得靜態欄位的位址。  
   
- 分析工具程式碼還是應該檢查以確保它確實具有位址的靜態欄位的中繼資料。 靜態的常值 （也就是常數） 只會存在於中繼資料，而且沒有位址。  
+ 分析工具程式碼仍應該檢查以確定它實際上具有位址的靜態欄位的中繼資料。 靜態常值 （也就是常數） 只會存在於中繼資料，而且沒有位址。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

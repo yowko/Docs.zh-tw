@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2174537e9605ad35e4f6f878954e318c7032b080
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2aed3367e20e32a387c8a1c58ead2899fbf0dcb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521435"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap 方法
 取得 ModuleRef 語彙基元以代表 PInvoke 呼叫的目標組件。  
@@ -42,32 +42,32 @@ HRESULT GetPinvokeMap (
   
 #### <a name="parameters"></a>參數  
  `tk`  
- [in]若要取得的 PInvoke 對應中繼資料 FieldDef 或 MethodDef 語彙基元。  
+ [in]若要取得 PInvoke 對應中繼資料的 fielddef 語彙或 MethodDef 語彙基元。  
   
  `pdwMappingFlags`  
- [out]使用對應的旗標指標。 這個值是從位元遮罩[CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)列舉型別。  
+ [out]指標，用於對應的旗標。 這個值是從位元遮罩[CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)列舉型別。  
   
  `szImportName`  
  [out]未受管理的目標 DLL 的名稱。  
   
  `cchImportName`  
- [in]中的寬字元大小`szImportName`。  
+ [in]寬字元大小`szImportName`。  
   
  `pchImportName`  
- [out]傳回的寬字元數目`szImportName`。  
+ [out]中傳回的寬字元數目`szImportName`。  
   
  `pmrImportDLL`  
- [out]代表未受管理的目標物件程式庫 ModuleRef 語彙基元的指標。  
+ [out]表示未受管理的目標物件程式庫 ModuleRef 語彙基元指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

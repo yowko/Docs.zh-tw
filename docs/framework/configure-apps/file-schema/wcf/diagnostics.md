@@ -1,19 +1,19 @@
 ---
-title: '&lt;診斷&gt;'
+title: '&lt;diagnostics&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 3ee611d3903ba36748837d2743cd03d54670befd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: de11145620e8fdf96785908df85ab5ecdfd2e25e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524584"
 ---
-# <a name="ltdiagnosticsgt"></a>&lt;診斷&gt;
+# <a name="ltdiagnosticsgt"></a>&lt;diagnostics&gt;
 `diagnostics` 項目會定義可由系統管理員用於執行階段檢查和控制的設定。  
   
  \<system.ServiceModel>  
-\<診斷 >  
+\<diagnostics>  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,8 +54,8 @@ ms.locfileid: "54149341"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<endToEndTracing >](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|組態檔項目，此項目可讓您啟用與停用執行服務應用程式期間不同層面的端對端追蹤。|  
-|[\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|描述 WCF 訊息記錄的設定。|  
+|[\<endToEndTracing>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|組態檔項目，此項目可讓您啟用與停用執行服務應用程式期間不同層面的端對端追蹤。|  
+|[\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|描述 WCF 訊息記錄的設定。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -84,6 +84,6 @@ ms.locfileid: "54149341"
 </diagnostics>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>

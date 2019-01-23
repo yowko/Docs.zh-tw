@@ -1,5 +1,5 @@
 ---
-title: 如何：使用非對稱金鑰加密 XML 項目
+title: HOW TO：使用非對稱金鑰加密 XML 元素
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61984d4778e42abf378a1369a86ba599d78980af
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 4a38c2264bac92e9c2c0627718bf53539e6bec72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518263"
 ---
-# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>如何：使用非對稱金鑰加密 XML 項目
+# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>HOW TO：使用非對稱金鑰加密 XML 元素
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱全球資訊網協會 (W3C) 規格 XML 加密位於 <https://www.w3.org/TR/xmldsig-core/>。  
   
  您可以使用 XML 加密將任何 XML 元素或文件取代為包含加密 XML 資料的 <`EncryptedData`> 元素。  <`EncryptedData`> 項目也可以包含子項目，而子項目會包含有關加密時所使用之金鑰和程序的資訊。  XML 加密可讓文件中包含多個加密的元素，並允許元素加密多次。  這個程序中的程式碼範例將顯示如何建立 <`EncryptedData`> 項目和數個其他子項目，以便稍後在解密時使用。  
   
  此範例會使用兩個金鑰來加密 XML 元素。  它會產生 RSA 公開/私密金鑰組，並將金鑰組儲存到安全的金鑰容器。  接著這個範例會使用進階加密標準 (AES) 演算法 (也稱為 Rijndael 演算法) 建立不同的工作階段金鑰。  範例會使用 AES 工作階段金鑰來加密 XML 文件，然後使用 RSA 公開金鑰來加密 AES 工作階段金鑰。  最後，範例會將加密的 AES 工作階段金鑰和加密的 XML 資料儲存在 XML 文件內的新 <`EncryptedData`> 項目。  
   
- 若要解密 XML 項目，您可以從金鑰容器中擷取 RSA 私密金鑰、用它來解密工作階段金鑰，然後使用工作階段金鑰來解密文件。  如需如何使用此程序加密 XML 項目解密的詳細資訊，請參閱[如何： 使用非對稱金鑰解密 XML 項目](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)。  
+ 若要解密 XML 項目，您可以從金鑰容器中擷取 RSA 私密金鑰、用它來解密工作階段金鑰，然後使用工作階段金鑰來解密文件。  如需如何使用此程序加密 XML 項目解密的詳細資訊，請參閱[How to:使用非對稱金鑰解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)。  
   
  這個範例適合多個應用程式需要共用加密資料或應用程式需要在它執行時間之間儲存加密資料的情況。  
   
@@ -144,5 +144,5 @@ ms.locfileid: "49121320"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Security.Cryptography.Xml>  
-- [操作說明：使用非對稱金鑰解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+- <xref:System.Security.Cryptography.Xml>
+- [如何：使用非對稱金鑰解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

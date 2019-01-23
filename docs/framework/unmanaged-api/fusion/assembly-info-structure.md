@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ed65181abab58117d539d23fcfeffe71ac19388
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b69aa42fc2ebb9f59cbf699d83b521704805ea5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519745"
 ---
 # <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO 結構
-包含在全域組件快取中註冊組件的資訊。  
+包含在全域組件快取中註冊組件的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,19 +42,19 @@ typedef struct _ASSEMBLY_INFO {
   
 |成員|描述|  
 |------------|-----------------|  
-|`cbAssemblyInfo`|以位元組為單位的結構大小。 這個欄位被保留供未來擴充。|  
-|`dwAssemblyFlags`|旗標，表示組件的相關的安裝詳細資料。 支援下列值：<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED 值，指出已安裝的組件。 目前的.NET framework 版本一律設定`dwAssemblyFlags`為這個值。<br />表示組件是常駐裝載-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT 值。 目前的.NET framework 版本永遠不會設定`dwAssemblyFlags`為這個值。|  
+|`cbAssemblyInfo`|以位元組為單位的結構大小。 此欄位保留以供未來擴充。|  
+|`dwAssemblyFlags`|旗標，表示安裝的組件的詳細資料。 支援下列值：<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED 」 值，指出已安裝的組件。 目前版本的.NET framework 一律設定`dwAssemblyFlags`為此值。<br />-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT 」 值，指出組件是常駐承載。 目前的.NET framework 版本永遠不會設定`dwAssemblyFlags`為此值。|  
 |`uliAssemblySizeInKB`|總大小，以 kb 為單位的組件包含的檔案。|  
 |`pszCurrentAssemblyPathBuf`|資訊清單檔案會保留目前的路徑字串緩衝區的指標。 路徑必須以 null 字元結尾。|  
 |`cchBuf`|的寬字元數目，包括 null 結束字元，`pszCurrentAssemblyPathBuf`包含。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Fusion.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [融合結構](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
- [全域組件快取](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>另請參閱
+- [融合結構](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [全域組件快取](../../../../docs/framework/app-domains/gac.md)

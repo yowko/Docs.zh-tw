@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 54af876a361dfee7a00e3fd29f43f4b643b07913
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2b3ce24a967a4c8a15facb3f0a5dbdc0243a06ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515936"
 ---
 # <a name="guidelines-and-best-practices"></a>方針及最佳作法
 本節將提供指導方針建立 Windows Communication Foundation (WCF) 應用程式的主題。  
   
 ## <a name="in-this-section"></a>本節內容  
- [最佳做法：資料合約版本設定](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [最佳做法：資料合約版本控制](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  說明如何及何時建立不會在未來版本建立時中斷的資料合約。  
   
  [服務版本設定](../../../docs/framework/wcf/service-versioning.md)  
@@ -44,8 +44,8 @@ ms.locfileid: "48850435"
   
  [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>另請參閱  
- [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation 範例](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
- [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)  
- [建置用戶端](../../../docs/framework/wcf/building-clients.md)
+## <a name="see-also"></a>另請參閱
+- [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation 範例](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)
+- [建置用戶端](../../../docs/framework/wcf/building-clients.md)

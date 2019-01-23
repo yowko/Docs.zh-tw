@@ -2,12 +2,12 @@
 title: LINQ to Entities 中的查詢
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: b6dc38951107b0d3833e1060c23962a43936bf4d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: aef82fffda1177d87b7f811ef75f37872c8c3799
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615842"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528650"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities 中的查詢
 查詢是指從資料來源中擷取資料的運算式。 查詢通常會以特定的查詢語言來表示，例如 SQL 用於關聯式資料庫，而 XQuery 用於 XML。 因此，開發人員必須針對他們所查詢的每種資料來源或資料格式，學習新的查詢語言。 Language-Integrated Query (LINQ) 提供了一種較簡單且一致的模型，可處理各種資料來源和格式的資料。 在 LINQ 查詢中，您一定會使用程式設計物件。  
@@ -24,7 +24,7 @@ ms.locfileid: "45615842"
 ### <a name="query-expression-syntax"></a>查詢運算式語法  
  查詢運算式是宣告式查詢語法。 這些語法可以讓開發人員以類似 Transact-SQL 格式的高階語言撰寫查詢。 透過使用查詢運算式語法，您就可以利用最少的程式碼，針對資料來源執行同樣複雜的篩選、排序和分組作業。 如需詳細資訊，[基本查詢作業 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。 如需示範如何使用查詢運算式語法的範例，請參閱下列主題：  
   
--   [查詢運算式語法範例：投影](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
+-   [查詢運算式語法範例：Projection](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
   
 -   [查詢運算式語法範例：篩選](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
   
@@ -40,12 +40,12 @@ ms.locfileid: "45615842"
   
 -   [查詢運算式語法範例：群組](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
   
--   [查詢運算式語法範例：導覽關聯性](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
+-   [查詢運算式語法範例：瀏覽關聯性](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>以方法為基礎的查詢語法  
  另一種撰寫 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢的方式是使用以方法為基礎的查詢。 以方法為基礎的查詢語法是一系列的 LINQ 運算子方法，並傳遞 lambda 運算式當做參數的直接方法呼叫。 如需詳細資訊，請參閱 [Lambda 運算式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。 如需示範如何使用以方法為基礎的語法之範例，請參閱下列主題：  
   
--   [以方法為基礎的查詢語法範例：投影](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
+-   [以方法為基礎的查詢語法範例：Projection](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
   
 -   [以方法為基礎的查詢語法範例：篩選](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
   
@@ -63,10 +63,10 @@ ms.locfileid: "45615842"
   
 -   [以方法為基礎的查詢語法範例：群組](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
   
--   [以方法為基礎的查詢語法範例：導覽關聯性](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
+-   [以方法為基礎的查詢語法範例：瀏覽關聯性](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
- [開始使用 C# 中的 LINQ](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [使用 Visual Basic 撰寫 LINQ 入門](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Entity Framework 合併選項和編譯的查詢](https://go.microsoft.com/fwlink/?LinkId=199591)
+## <a name="see-also"></a>另請參閱
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [開始使用 C# 中的 LINQ](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [使用 Visual Basic 撰寫 LINQ 入門](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Entity Framework 合併選項和編譯的查詢](https://go.microsoft.com/fwlink/?LinkId=199591)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: a4c0a137da74b276b1238d500057ce96756a1ae1
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 281c1c9556773446808f7bd4b4ef558805503cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499310"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 物件概觀
 本主題說明如何有效地使用，並建立<xref:System.Windows.Freezable>提供特殊功能，可協助您改善應用程式效能的物件。 Freezable 物件的範例包括筆刷、 畫筆、 轉換、 幾何和動畫。  
@@ -161,8 +161,8 @@ mc:Ignorable="PresentationOptions"
   
  如需自訂的範例<xref:System.Windows.Freezable>類別，請參閱[自訂動畫範例](https://go.microsoft.com/fwlink/?LinkID=159981)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Freezable>  
- [自訂動畫範例](https://go.microsoft.com/fwlink/?LinkID=159981)  
- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Freezable>
+- [自訂動畫範例](https://go.microsoft.com/fwlink/?LinkID=159981)
+- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

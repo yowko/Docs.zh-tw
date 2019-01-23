@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEditAndContinueSnapshot Interface1
+title: ICorDebugEditAndContinueSnapshot 介面 1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEditAndContinueSnapshot
@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27bec505df1db4ccbba862e81d9407d11245d449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: adb06ec558f2d5f823d2040422a82e8b20d926a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537890"
 ---
-# <a name="icordebugeditandcontinuesnapshot-interface1"></a>ICorDebugEditAndContinueSnapshot Interface1
+# <a name="icordebugeditandcontinuesnapshot-interface1"></a>ICorDebugEditAndContinueSnapshot 介面 1
 `ICorDebugEditAndContinueSnapshot` 已經過時。 請勿使用這個介面。  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

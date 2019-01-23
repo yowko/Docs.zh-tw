@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 4efd6ea1ee5987efcabb038152fca7f1ed90c8f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6571ee16b54c7b22d65567c8d3347cfe4a7936fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561959"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510425"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>主要畫面格動畫 HOW TO 主題
-本節中的主題將示範如何使用超過兩個屬性值和控制項插補的動畫主要畫面格動畫。  
+在本節中的主題將示範如何使用主要畫面格動畫來以動畫顯示超過兩個屬性值和控制項內插補點。  
   
 ## <a name="in-this-section"></a>本節內容  
  [使用主要畫面格建立物件的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "33561959"
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a>另請參閱  
- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>另請參閱
+- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

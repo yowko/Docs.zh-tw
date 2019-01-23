@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 155365c72fd3f5915db12104f45a500f3176f67b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 708c23f80dc3ed0a5b134295a16a20747d555be4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492334"
 ---
 # <a name="integrating-with-com-applications-overview"></a>整合 COM+ 應用程式概觀
-Windows Communication Foundation (WCF) 提供非常豐富的環境建立分散式應用程式。 如果您已經在使用裝載於 COM + 元件架構應用程式邏輯，您可以使用 WCF 擴充現有邏輯，而不是不必重新撰寫程式碼。 一個常見案例就是當您要透過 Web 服務，公開現有的 COM+ 或 Enterprise Services 商務邏輯之時。  
+Windows Communication Foundation (WCF) 提供豐富的環境，以建立分散式應用程式。 如果您已經使用裝載於 COM + 元件為基礎的應用程式邏輯，您可以使用 WCF 來擴充現有邏輯，而不需要重新撰寫程式碼。 一個常見案例就是當您要透過 Web 服務，公開現有的 COM+ 或 Enterprise Services 商務邏輯之時。  
   
  當 COM+ 元件上的介面公開為 Web 服務時，這些服務的規格和合約就會由在應用程式初始化時所執行的自動對映來決定。 下列清單會顯示這個對應的概念模型：  
   
@@ -40,9 +40,9 @@ Windows Communication Foundation (WCF) 提供非常豐富的環境建立分散�
   
 2.  選取適當的裝載模式。  
   
-3.  使用 COM+ 服務模型組態工具 (ComSvcConfig.exe) 以新增介面的 Web 服務。 如需如何使用 ComSvcConfig.exe 的詳細資訊，請參閱[How to： 使用 COM + 服務模型組態工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
+3.  使用 COM+ 服務模型組態工具 (ComSvcConfig.exe) 以新增介面的 Web 服務。 如需如何使用 ComSvcConfig.exe 的詳細資訊，請參閱[How to:使用 COM + 服務模型組態工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
   
-4.  在應用程式組態檔中進行其他服務設定。 如需如何設定元件的詳細資訊，請參閱[How to： 設定 COM + 服務設定](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)。  
+4.  在應用程式組態檔中進行其他服務設定。 如需如何設定元件的詳細資訊，請參閱[How to:設定 COM + 服務設定](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)。  
   
 ## <a name="supported-interfaces"></a>支援的介面  
  對於可公開為 Web 服務之介面的型別，有一些限制存在。 不支援下列介面型別：  
@@ -64,14 +64,14 @@ Windows Communication Foundation (WCF) 提供非常豐富的環境建立分散�
 ### <a name="limited-object-reference-support"></a>限制的物件參考支援  
  由於一些已部署的 COM+ 元件確實會依參考參數而使用物件 (例如，傳回 ADO 資料錄集 (Recordset) 物件)，因此 COM+ 整合中就包括物件參考參數的限制支援。 支援會受限於實作 `IPersistStream` COM 介面的物件。 其中包括 ADO 資料錄集物件，並且可針對特定於應用程式的 COM 物件來實作。  
   
- 若要啟用這項支援，ComSvcConfig.exe 工具提供**allowreferences**停用一般方法簽章參數，並檢查此工具會執行以確保物件參考參數，未使用的參數. 此外，必須在 <`persistableTypes`> 組態項目內 (此項目為 <`comContract`> 項目的子項) 命名及識別您當做參數傳遞的物件型別。  
+ 若要啟用這項支援，ComSvcConfig.exe 工具提供**allowreferences**交換器會停用一般方法簽章參數，並檢查以確定不會使用物件參考參數執行此工具. 此外，必須在 <`persistableTypes`> 組態項目內 (此項目為 <`comContract`> 項目的子項) 命名及識別您當做參數傳遞的物件型別。  
   
  使用這個功能時，COM+ 整合服務會使用 `IPersistStream` 介面來序列化或還原序列化物件執行個體。 如果物件執行個體不支援 `IPersistStream`，就會擲回例外狀況。  
   
  在用戶端應用程式中，您可以使用 <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> 物件上的方法，將物件傳遞至服務並以類似方法接收物件。  
   
 > [!NOTE]
->  由於自訂與平台專屬的序列化方法本質，這是最適合用來使用 WCF 用戶端和 WCF 服務之間。  
+>  由於自訂和特定平台的序列化方法本質，這是最適合使用 WCF 用戶端和 WCF 服務項目。  
   
 ## <a name="selecting-the-hosting-mode"></a>選取主控模式  
  COM+ 會以下列其中一個主控模式公開 Web 服務：  
@@ -82,7 +82,7 @@ Windows Communication Foundation (WCF) 提供非常豐富的環境建立分散�
   
 -   Web 主控  
   
-     Web 服務會在 Web 伺服器工作處理序內主控。 這個模式在接收初始化要求時，不需要使用 COM+。 如果收到這個要求時應用程式不在使用中，會在處理要求之前自動啟動該應用程式。 這個模式也會對伺服器應用程式提供 Web 服務和 DCOM 存取，但會對 Web 服務要求造成處理序躍點。 通常會需要用戶端啟用模擬。 在 WCF 中，這可以使用<xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>屬性<xref:System.ServiceModel.Security.WindowsClientCredential>類別，以存取做為泛型屬性<xref:System.ServiceModel.ChannelFactory%601>類別，並將<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>列舉值。  
+     Web 服務會在 Web 伺服器工作處理序內主控。 這個模式在接收初始化要求時，不需要使用 COM+。 如果收到這個要求時應用程式不在使用中，會在處理要求之前自動啟動該應用程式。 這個模式也會對伺服器應用程式提供 Web 服務和 DCOM 存取，但會對 Web 服務要求造成處理序躍點。 通常會需要用戶端啟用模擬。 在 WCF 中，這可以透過<xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>屬性<xref:System.ServiceModel.Security.WindowsClientCredential>類別的泛型屬性會當做<xref:System.ServiceModel.ChannelFactory%601>類別，以及<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>列舉值。  
   
 -   Web 主控同處理序  
   
@@ -93,13 +93,13 @@ Windows Communication Foundation (WCF) 提供非常豐富的環境建立分散�
   
  使用未受保護的繫結時，通訊就會因開放而遭到竄改或導致資訊洩漏。 若要避免發生這個情況，建議您使用受到保護的繫結。  
   
- 針對 COM+ 主控和 Web 主控的模式，用戶端應用程式必須讓伺服器處理序可模擬用戶端使用者。 這可以經由在 WCF 用戶端模擬層級設定為<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>。  
+ 針對 COM+ 主控和 Web 主控的模式，用戶端應用程式必須讓伺服器處理序可模擬用戶端使用者。 做法是在 WCF 用戶端中的模擬層級設定為<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>。  
   
  使用 Internet Information Services (IIS) 或 Windows Process Activation Service (WAS) 搭配 HTTP 傳輸時，就可以使用 Httpcfg.exe 工具來保留傳輸端點位址。 在其他組態中，保護不受充當為預期服務之惡意服務的攻擊可說是相當重要。 若要防止在目的端點上啟動惡意服務，可以將合法的服務設定為以 NT 服務來執行。 這樣可讓合法服務在任何惡意服務之前，先宣告端點位址。  
   
- 公開 COM + 應用程式設定 COM + 角色做為 Web 主控服務，當 「 啟動 IIS 處理序帳戶 」 必須新增至其中一個應用程式的角色。 必須新增這個帳戶 (其名稱通常為 IWAM_machinename)，才能在使用之後讓物件正常關機。 這個帳戶不應該授與任何其他的權限。  
+ 當公開設定 COM + 角色為 Web 主控服務的 COM + 應用程式，「 啟動 IIS 處理序帳戶 」 必須新增至其中一個應用程式的角色。 必須新增這個帳戶 (其名稱通常為 IWAM_machinename)，才能在使用之後讓物件正常關機。 這個帳戶不應該授與任何其他的權限。  
   
  在整合應用程式上無法使用 COM+ 處理序回收功能。 如果應用程式是設定為使用處理序回收，而且是在 COM+ 主控的處理序中執行元件，將無法啟動服務。 這項需求不包括使用 Web 主控同處理序模式的服務，因為這個服務中未套用處理序回收設定。  
   
-## <a name="see-also"></a>另請參閱  
- [整合 COM+ 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>另請參閱
+- [整合 COM+ 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：建立發行者原則
+title: HOW TO：建立發行者原則
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3969f066c0a17424d2c4527d2b4661b30f5bb6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530521"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>如何：建立發行者原則
+# <a name="how-to-create-a-publisher-policy"></a>HOW TO：建立發行者原則
 組件的廠商可以應用程式應該使用較新版的組件，包含與升級後的組件的發行者原則檔的狀態。 發行者原則檔會指定組件重新導向和程式碼基底設定，並使用應用程式組態檔相同的格式。 發行者原則檔會編譯成組件，並放置於全域組件快取。  
   
  建立發行者原則是三個步驟：  
@@ -91,7 +91,7 @@ ms.locfileid: "48838466"
   
 1.  在命令提示字元中輸入下列命令：  
   
-     **gacutil /i***publisherPolicyAssemblyFile*  
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      下列命令會將`policy.1.0.myAssembly.dll`至全域組件快取。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "48838466"
     > [!IMPORTANT]
     >  發行者原則組件無法新增至全域組件快取，除非原始發行者原則檔位於與組件相同的目錄中。  
   
-## <a name="see-also"></a>另請參閱  
- [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [設定應用程式](../../../docs/framework/configure-apps/index.md)  
- [設定.NET Framework 應用程式](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
- [執行階段設定結構描述](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)  
- [重新導向組件版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a>另請參閱
+- [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [設定應用程式](../../../docs/framework/configure-apps/index.md)
+- [設定.NET Framework 應用程式](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [執行階段設定結構描述](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)
+- [重新導向組件版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
