@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8452c41bc6d60d18fa058966299e3ca2b989604f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527324"
 ---
 # <a name="application-startup-time"></a>應用程式啟動時間
 WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明各種技術來縮短 Windows Presentation Foundation (WPF) 應用程式的認知和實際啟動時間。  
@@ -26,7 +26,7 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
 ## <a name="implement-a-splash-screen"></a>實作啟動顯示畫面  
  如果從啟動應用程式到顯示第一個 UI 之間，有很明顯、無可避免的延遲時間，請使用「啟動顯示畫面」最佳化感知的啟動時間。 這種方法會在使用者啟動應用程式時，幾乎立即顯示影像。 當應用程式準備好顯示第一個 UI 時，啟動顯示畫面會消失。 從開始[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]，您可以使用<xref:System.Windows.SplashScreen>類別來實作啟動顯示畫面。 如需詳細資訊，請參閱[將啟動顯示畫面新增至 WPF 應用程式](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)。  
   
- 您也可以使用原生 Win32 圖形，以實作您自己的啟動顯示畫面。 顯示您之前的實作<xref:System.Windows.Application.Run%2A>方法呼叫。  
+ 您也可以使用原生 Win32 圖形，以實作您自己的啟動顯示畫面。 顯示您之前的實作<xref:System.Windows.Application.Run%2A>呼叫方法。  
   
 ## <a name="analyze-the-startup-code"></a>分析啟始程式碼  
  判斷冷啟動緩慢的原因。 磁碟 I/O 可能是原因，但不一定如此。 一般情況下，您應該盡可能不要使用外部資源，例如網路、Web 服務或磁碟。  
@@ -104,12 +104,12 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
  為了達到最佳效能，請減少跨網域呼叫，以強制達成有效率的跨網域通訊。 可能的話，請使用不含引數或有基本型別引數的呼叫。  
   
 ## <a name="use-the-neutralresourceslanguage-attribute"></a>使用 NeutralResourcesLanguage 屬性  
- 使用<xref:System.Resources.NeutralResourcesLanguageAttribute>指定中性文化特性的<xref:System.Resources.ResourceManager>。 這個方法可避免組件查閱失敗。  
+ 使用<xref:System.Resources.NeutralResourcesLanguageAttribute>指定中性文化特性<xref:System.Resources.ResourceManager>。 這個方法可避免組件查閱失敗。  
   
 ## <a name="use-the-binaryformatter-class-for-serialization"></a>使用 BinaryFormatter 類別進行序列化  
- 如果您必須使用序列化，使用<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>類別而不是<xref:System.Xml.Serialization.XmlSerializer>類別。 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>類別實作在基底類別程式庫 (BCL) mscorlib.dll 組件中。 <xref:System.Xml.Serialization.XmlSerializer>實作 System.Xml.dll 組件，這可能是其他 DLL，用於載入。  
+ 如果您必須使用序列化，請使用<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>類別而不是<xref:System.Xml.Serialization.XmlSerializer>類別。 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>類別實作在基底類別庫 (BCL) mscorlib.dll 組件中。 <xref:System.Xml.Serialization.XmlSerializer> System.Xml.dll 組件，這可能是載入其他 DLL 中實作。  
   
- 如果您必須使用<xref:System.Xml.Serialization.XmlSerializer>類別，您可以達到較佳的效能，如果您預先產生序列化組件。  
+ 如果您必須使用<xref:System.Xml.Serialization.XmlSerializer>類別，您可以達到更佳的效能，如果您預先產生序列化組件。  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>將 ClickOnce 設定為啟動之後檢查更新  
  如果您的應用程式使用 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]，請將 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 設定成在應用程式啟動之後檢查部署網站是否有更新，以避免在啟動時存取網路。  
@@ -120,13 +120,13 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
  重新開機後第一個執行的 WPF 應用程式是 PresentationFontCache 服務。 此服務會快取系統字型、改善字型存取，並改善整體效能。 啟動服務時會產生額外負荷，在一些受控制的環境中，請考慮將服務設定成在系統重新開機時自動啟動。  
   
 ## <a name="set-data-binding-programmatically"></a>以程式設計的方式設定資料繫結  
- 而不是使用 XAML 設定<xref:System.Windows.FrameworkElement.DataContext%2A>以宣告方式主要視窗中，請考慮將其設定以程式設計方式在<xref:System.Windows.Application.OnActivated%2A>方法。  
+ 而不是使用 XAML 來設定<xref:System.Windows.FrameworkElement.DataContext%2A>宣告的主視窗中，請考慮設定它以程式設計方式在<xref:System.Windows.Application.OnActivated%2A>方法。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.SplashScreen>  
- <xref:System.AppDomain>  
- <xref:System.Resources.NeutralResourcesLanguageAttribute>  
- <xref:System.Resources.ResourceManager>  
- [在 WPF 應用程式中加入啟動顯示畫面](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)  
- [Ngen.exe (原生映像產生器)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- [\<generatePublisherEvidence> 元素](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.SplashScreen>
+- <xref:System.AppDomain>
+- <xref:System.Resources.NeutralResourcesLanguageAttribute>
+- <xref:System.Resources.ResourceManager>
+- [在 WPF 應用程式中加入啟動顯示畫面](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (原生映像產生器)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
+- [\<generatePublisherEvidence> 元素](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

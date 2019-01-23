@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f86cc83936dd8150ca6b3f28c9b6a624278e2b36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b768c8f7880a2317d1b72878657158e839b731f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569725"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach 方法
-會傳回 HRESULT，指出是否可以啟動新的處理序或附加至指定的現有處理序內目前的電腦和執行階段組態的內容。  
+會傳回 HRESULT，指出是否有可能在目前的電腦以及執行階段組態的內容中啟動新的處理序，或附加至指定的現有處理序。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,10 +41,10 @@ HRESULT CanLaunchOrAttach (
  [in]現有的處理序的識別碼。  
   
  `win32DebuggingEnabled`  
- [in]傳入`true`您計劃啟動，發生 Win32 啟用偵錯，或附加啟用，否則，偵錯 Win32 傳遞`false`。  
+ [in]傳入`true`如果您計劃使用 Win32 啟用偵錯，來啟動或附加啟用，否則，偵錯 Win32 傳遞`false`。  
   
 ## <a name="return-value"></a>傳回值  
- 如果偵錯服務判斷可啟動新的處理序或附加至指定的處理序，為 S_OK，會假設目前的電腦和執行階段組態的相關資訊。 可能的 HRESULT 值為：  
+ 如果偵錯服務判斷啟動新的處理序，或附加至指定的處理序，為 S_OK 是可行的指定目前的電腦和執行階段組態的詳細資訊。 可能的 HRESULT 值為：  
   
 -   S_OK  
   
@@ -55,18 +55,18 @@ HRESULT CanLaunchOrAttach (
 -   CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>備註  
- 這個方法僅供參考。 介面不會停止您啟動或附加至處理序，不論值傳回的`CanLaunchOrAttach`。  
+ 這個方法僅供參考。 介面不會停止您無法啟動或附加至處理序，不論值傳回`CanLaunchOrAttach`。  
   
- 如果您打算啟動啟用偵錯的 Win32 或附加啟用偵錯 Win32，請傳遞`true`如`win32DebuggingEnabled`。 所傳回的 HRESULT`CanLaunchOrAttach`可能會與不同，如果您使用此選項。  
+ 若要啟動已啟用偵錯的 Win32 或附加啟用 Win32 偵錯，則會傳遞`true`針對`win32DebuggingEnabled`。 所傳回的 HRESULT`CanLaunchOrAttach`如果您使用此選項可能會不同。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

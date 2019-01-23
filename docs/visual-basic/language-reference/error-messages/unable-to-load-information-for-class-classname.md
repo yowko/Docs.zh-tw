@@ -1,5 +1,5 @@
 ---
-title: 無法載入類別的資訊&#39;&lt;類別名稱&gt;&#39;
+title: 無法載入類別的資訊&#39; &lt;classname&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30712
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 4ee58b02965bef680731f6911d8b5121fd890eb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 368484d9138d1ae10efb8c63f6cfaa6bcefa6ed8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528952"
 ---
-# <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>無法載入類別的資訊&#39;&lt;類別名稱&gt;&#39;
-沒有可用的類別已建立的參考。  
+# <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>無法載入類別的資訊&#39; &lt;classname&gt;&#39;
+參考了未提供的類別。  
   
  **錯誤 ID:** BC30712  
   
@@ -25,5 +25,5 @@ ms.locfileid: "33604168"
   
 2.  嘗試存取模組中所宣告的其中一個成員。 在某些情況下，偵錯環境找不到成員，因為尚未載入宣告它們的模組。  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)
+## <a name="see-also"></a>另請參閱
+- [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)

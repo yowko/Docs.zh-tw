@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d3a7168ce0ee3484384ae0e2d10ca00367fc9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2e00bc95dd9b54d5451da65cefbfff13395e467f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511954"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID 函式
 取得適當 common language runtime (CLR) 版本資訊與指定類別`CLSID`。  
   
- 此函式中已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,31 +51,31 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
  [in] 大小，以寬字元為單位的`pVersion`緩衝區。  
   
  `dwLength`  
- [out]傳回的緩衝區長度，單位為位元組。  
+ [out]傳回的緩衝區長度，以位元組為單位。  
   
  `dwResolutionFlags`  
- [in] CLSID_RESOLUTION_FLAGS 值的其中一個。 支援下列值：  
+ [in] CLSID_RESOLUTION_FLAGS 值之一。 支援下列值：  
   
--   CLSID_RESOLUTION_DEFAULT: (0x0) 指定該預設 interop 行為應該使用。  
+-   CLSID_RESOLUTION_DEFAULT:(0x0) 指定應使用預設 interop 行為。  
   
--   CLSID_RESOLUTION_REGISTERED: (0x1) 登錄也應搜尋和填充碼原則的指定應該套用。  
+-   CLSID_RESOLUTION_REGISTERED:(0x1) 應該搜尋登錄，而且應該套用填充碼原則的指定。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|此函式成功傳回。|  
+|S_OK|此函式會成功傳回。|  
 |E_INVALIDARG|其中一個參數具有無效的類型或格式。|  
-|ERROR_INSUFFICIENT_BUFFER|`pVersion`緩衝區不夠大，足以容納整個版本字串。|  
-|REGDB_E_CLASSNOTREG|沒有任何類別登錄具有指定`CLSID`。|  
-|E_POINTER|`dwLength` 為 null，或`cchBuffer`夠大，無法保存的版本字串，但`pVersion`為 null。|  
+|ERROR_INSUFFICIENT_BUFFER|`pVersion`緩衝區並不夠大，無法容納整個版本字串。|  
+|REGDB_E_CLASSNOTREG|沒有具有指定之登錄類別`CLSID`。|  
+|E_POINTER|`dwLength` 為 null，或是`cchBuffer`夠大，足以容納版本字串，但`pVersion`為 null。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>另請參閱
+- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

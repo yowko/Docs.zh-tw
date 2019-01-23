@@ -2,15 +2,15 @@
 title: Null 常值和類型推斷 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 74ff2b459488f896c5ea6af4f7d1e045da5a7983
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2499579237155ff3f7291f795bd1ce9e8a84163c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529105"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Null 常值和類型推斷 (Entity SQL)
-Null 常值與 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型別系統中的任何型別都相容。 不過，對於 null 常值是否正確，推斷的型別[!INCLUDE[esql](../../../../../../includes/esql-md.md)]會加諸特定限制上可以使用 null 常值的地方。  
+Null 常值與 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型別系統中的任何型別都相容。 不過，為了正確推斷 null 常值的型別[!INCLUDE[esql](../../../../../../includes/esql-md.md)]強加特定條件約束可以使用 null 常值的地方。  
   
 ## <a name="typed-nulls"></a>具型別的 Null  
  具型別的 Null 可以在任何地方使用。 具型別的 Null 不需要型別推斷，因為該型別是已知的。 例如，您可以使用下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 建構來建構 Int16 型別的 Null：  
@@ -40,5 +40,5 @@ Null 常值與 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型別系
   
  自由浮動 Null 常值不能在其他案例中使用。 例如，不能當做資料列建構函式的引數。  
   
-## <a name="see-also"></a>另請參閱  
- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>另請參閱
+- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

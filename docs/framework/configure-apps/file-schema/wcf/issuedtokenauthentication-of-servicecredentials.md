@@ -2,22 +2,22 @@
 title: '&lt;serviceCredentials&gt; 的 &lt;issuedTokenAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: 43f03ad32345195324c9ba2a3977d294a7a2b789
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4a9087e319c278ea396b5611b2f7f923bd00b6d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509333"
 ---
 # <a name="ltissuedtokenauthenticationgt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;issuedTokenAuthentication&gt;
 指定發行為服務認證的自訂權杖。  
   
  \<system.ServiceModel>  
-\<行為 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行為 >  
+\<behavior>  
 \<serviceCredentials>  
-\<issuedTokenAuthentication >  
+\<issuedTokenAuthentication>  
   
 ## <a name="syntax"></a>語法  
   
@@ -89,13 +89,13 @@ ms.locfileid: "54151484"
   
  如需有關使用這個組態項的詳細資訊，請參閱[How to:Federation Service 上設定認證](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.IssuedTokenAuthentication%2A>  
- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>  
- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>  
- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [如何：Federation Service 上設定認證](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.IssuedTokenAuthentication%2A>
+- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>
+- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>
+- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [如何：Federation Service 上設定認證](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

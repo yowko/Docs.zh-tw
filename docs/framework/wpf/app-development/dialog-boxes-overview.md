@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 649d60a2d50237827d5f334e934103b234a42724
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79ea8c7df88a6253fb3fb44d072fbe366bcc720b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510152"
 ---
 # <a name="dialog-boxes-overview"></a>對話方塊概觀
 獨立應用程式通常具有主視窗，其中顯示的主要資料的應用程式運作，並公開的功能來處理該資料透過[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]功能表列、 工具列和狀態列等機制。 重要的應用程式還可能顯示其他視窗來執行下列動作：  
@@ -344,7 +344,7 @@ ms.locfileid: "43506330"
 [!code-csharp[DialogBoxSample#FindDialogCloseCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#finddialogclosecodebehind2)]
 [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
   
-## <a name="see-also"></a>另請參閱  
- [快顯功能表概觀](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [對話方塊範例](https://go.microsoft.com/fwlink/?LinkID=159984)  
- [ColorPicker Custom Control Sample](https://go.microsoft.com/fwlink/?LinkID=159977) (ColorPicker 自訂控制項範例)
+## <a name="see-also"></a>另請參閱
+- [快顯功能表概觀](../../../../docs/framework/wpf/controls/popup-overview.md)
+- [對話方塊範例](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [ColorPicker Custom Control Sample](https://go.microsoft.com/fwlink/?LinkID=159977) (ColorPicker 自訂控制項範例)

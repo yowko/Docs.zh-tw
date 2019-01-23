@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b8de9852a29c9cc20e2c607506ae3d804e6d406e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569975"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>HOW TO：建立流程圖工作流程
 工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步解說如何建立這類使用內建活動的工作流程<xref:System.Activities.Statements.Flowchart>活動，並從先前的自訂活動[How to:建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
@@ -150,11 +150,11 @@ ms.locfileid: "54415243"
   
      如需有關如何執行工作流程，指示，請參閱下一個主題中， [How to:執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。 如果您已經完成[How to:執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)步驟來搭配另一個樣式的工作流程並想要使用此步驟的流程圖工作流程執行，請直接跳到[以建置並執行應用程式](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)一節[How to:執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Activities.Statements.Flowchart>  
- <xref:System.Activities.Statements.FlowDecision>  
- [Windows Workflow Foundation 程式設計](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [設計工作流程](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- [快速入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [如何：建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [如何：執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Activities.Statements.Flowchart>
+- <xref:System.Activities.Statements.FlowDecision>
+- [Windows Workflow Foundation 程式設計](../../../docs/framework/windows-workflow-foundation/programming.md)
+- [設計工作流程](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
+- [快速入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
+- [如何：建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)
+- [如何：執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

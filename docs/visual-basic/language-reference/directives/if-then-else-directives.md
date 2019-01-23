@@ -18,12 +18,12 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: c98868e16fc609a49721724fdd32221a380ff834
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8930e0e5c6bf9bd713b5601c91e6d1a5cbfd7a51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568216"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else 指示詞
 有條件地編譯選取的 Visual Basic 程式碼區塊。  
@@ -80,10 +80,10 @@ ms.locfileid: "50182888"
   
  [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
-[#Const 指示詞](../../../visual-basic/language-reference/directives/const-directive.md)  
-[If...Then...Else 陳述式](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
-[條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
-<xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>   
+## <a name="see-also"></a>另請參閱
+- [#Const 指示詞](../../../visual-basic/language-reference/directives/const-directive.md)
+- [If...Then...Else 陳述式](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- <xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>
 
 

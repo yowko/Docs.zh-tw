@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4d0ad0c8651fe10bd2a1c72a8a995846cc80a55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 48f15cc08167baaadc61787b8b1f7167304f0cae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569475"
 ---
 # <a name="coinitiee-enumeration"></a>COINITIEE 列舉
 指定所使用的常數[CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)初始化 common language runtime 時。  
@@ -40,18 +40,18 @@ typedef enum tagCOINITEE {
   
 |成員|描述|  
 |------------|-----------------|  
-|`COINITEE_DEFAULT`|預設的初始化模式。 這會初始化執行階段並建立預設<xref:System.AppDomain>。|  
+|`COINITEE_DEFAULT`|預設的初始化模式。 這會初始化執行階段，並建立預設<xref:System.AppDomain>。|  
 |`COINITEE_DLL`|若要執行的 managed 的 DLL 的初始化。|  
-|`COINITEE_MAIN`|初始化執行受管理的 EXE。 此初始化執行階段，但不會建立預設<xref:System.AppDomain>，這輸入主常式中的可執行檔之後所建立。|  
+|`COINITEE_MAIN`|初始化執行 managed 的 EXE。 這會初始化執行階段，但不會建立預設<xref:System.AppDomain>，這輸入主常式中的 exe 之後所建立。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

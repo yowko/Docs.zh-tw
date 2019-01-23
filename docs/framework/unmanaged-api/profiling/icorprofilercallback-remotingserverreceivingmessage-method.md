@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1874b5bea465eb31bcaad2d912b90d35cfc711b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 67ec3bf10638538b49f1ec44ff583bdf4ba4ef9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572249"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage 方法
-通知分析工具的處理序收到的遠端方法叫用或啟用要求。  
+通知分析工具處理序已收到的遠端方法叫用或啟用要求。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,30 +37,30 @@ HRESULT RemotingClientSendingMessage(
   
 #### <a name="parameters"></a>參數  
  `pCookie`  
- [in]值，這個值會對應中提供的值與[icorprofilercallback:: Remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)在這些情況下：  
+ [in]值，這個值會對應中提供的價值[icorprofilercallback:: Remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)在這些情況下：  
   
--   遠端處理 GUID cookie 是使用中。  
+-   遠端處理 GUID cookie 在作用中。  
   
 -   成功的訊息傳輸通道。  
   
--   GUID cookie 會啟用用戶端處理程序。  
+-   GUID cookie 上為作用中的用戶端程序。  
   
- 這可讓您輕易地配對的遠端處理呼叫，以及邏輯呼叫堆疊的建立。  
+ 這可讓您輕易地配對的遠端呼叫，以及建立的邏輯呼叫堆疊。  
   
  `fIsAsync`  
- [in]值是`true`呼叫是非同步的; 否則如果`false`。  
+ [in]值是`true`的呼叫是非同步，否則如果`false`。  
   
 ## <a name="remarks"></a>備註  
- 如果是非同步的訊息要求，要求可以處理任意執行緒。  
+ 如果是非同步的訊息要求，要求可以處理任何任意的執行緒。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

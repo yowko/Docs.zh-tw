@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: b22fb9ae24a04d9fe530811bf764352199c31813
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 047b8b148e616c8ad94f55844f8bc4063a9e5cd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528923"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
@@ -37,6 +37,6 @@ Visual Basic 支援`-refout`切換 15.3 版開始。
 `-refonly` 和 [`-refout`](refout-compiler-option.md) 選項互斥。
 
 ## <a name="see-also"></a>另請參閱
-[-refout](refout-compiler-option.md)   
-[Visual Basic 命令列編譯器](index.md)  
-[編譯命令列範例](sample-compilation-command-lines.md)   
+- [-refout](refout-compiler-option.md)
+- [Visual Basic 命令列編譯器](index.md)
+- [編譯命令列範例](sample-compilation-command-lines.md)

@@ -2,12 +2,12 @@
 title: '&lt;bindingElementExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: ee67df95de715f0b21250bbf5739f84b4945d719
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1b843f2986a0020b8ce079e58bf9865a0b3d402d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569897"
 ---
 # <a name="ltbindingelementextensionsgt"></a>&lt;bindingElementExtensions&gt;
 這個區段會啟用電腦或應用程式組態檔中自訂繫結項目的使用。 您可以透過使用 `add` 關鍵字，將項目的 `type` 屬性設定為繫結項目延伸，以及將 `name` 屬性設定為自訂繫結項目，來將自訂繫結項目加入至這個集合。  
@@ -43,6 +43,6 @@ ms.locfileid: "54151439"
 </customBinding>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>  
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>
+- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)

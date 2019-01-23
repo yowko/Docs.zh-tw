@@ -2,19 +2,19 @@
 title: '&lt;endpoint&gt; 項目'
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: ea95e2d16027869778e99cb217d5ea4f7ba7d21a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f0701f522874e9e77ba8cb8f013016dd66fbfa30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509697"
 ---
 # <a name="ltendpointgt-element"></a>&lt;endpoint&gt; 項目
 指定服務端點的繫結、合約和位址屬性，以用於公開服務。  
   
  \<system.ServiceModel>  
-\<服務 >  
-\<端點 >  
+\<service>  
+\<endpoint>  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,7 +51,7 @@ ms.locfileid: "54147482"
 |endpointConfiguration|字串，這個字串會指定 `kind` 屬性所設定的標準端點名稱，該屬性會參考這個標準端點的其他組態資訊。 必須在 `<standardEndpoints>` 區段中定義相同的名稱。|  
 |isSystemEndpoint|布林值，用於指定端點是否為基礎結構端點。|  
 |kind|字串，這個字串會指定所套用之標準端點的型別。 型別必須要在 `<extensions>` 區段或 machine.config 中註冊。如果未指定任何內容，則會建立一般服務端點。|  
-|listenUriMode|指定傳輸如何處理提供給服務接聽的 `ListenUri`。 有效值為<br /><br /> 明確<br />唯一<br /><br /> 預設值為 Explicit。|  
+|listenUriMode|指定傳輸如何處理提供給服務接聽的 `ListenUri`。 有效值為<br /><br /> -   Explicit<br />唯一<br /><br /> 預設值為 Explicit。|  
 |listenUri|字串，指定服務端點接聽的 URI。 預設為空字串。|  
 |name|選擇性屬性。 指定服務端點名稱的字串。 預設值是繫結名稱和合約描述名稱的串連。 服務可能會有多個端點，因此端點的 `name` 屬性會與服務的名稱有所區別。|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "54147482"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|位址標頭的集合。|  
-|[\<身分識別 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|身分識別，可讓其他端點與此端點交換訊息，以啟用端點的驗證。|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|身分識別，可讓其他端點與此端點交換訊息，以啟用端點的驗證。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -84,9 +84,9 @@ ms.locfileid: "54147482"
 </endpoint>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.ServiceEndpointElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.Description.ServiceEndpoint>  
- [端點：位址、 繫結和合約](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [如何：在組態中建立服務端點](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.Description.ServiceEndpoint>
+- [端點：位址、 繫結和合約](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [如何：在組態中建立服務端點](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

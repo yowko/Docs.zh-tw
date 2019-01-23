@@ -16,11 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e09bf424a41445f7e36397775d1578cdf4e7e75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf1be8d5c709f3d6e5991e4d33dde2e923291a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569410"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC 列舉
 包含值，可用來在中繼資料產生期間影響行為。  
@@ -49,19 +50,19 @@ typedef enum CorSetENC {
 |------------|-----------------|  
 |`MDSetENCOn`|已過時。|  
 |`MDSetENCOff`|已過時。|  
-|`MDUpdateENC`|表示可更新的中繼資料，而不能移動語彙基元。|  
+|`MDUpdateENC`|表示可以更新中繼資料，而不移動語彙基元。|  
 |`MDUpdateFull`|表示可以在更新過程中移動語彙基元。|  
-|`MDUpdateExtension`|表示更新可包含僅的新增項目。 無法移動語彙基元。|  
-|`MDUpdateIncremental`|表示編譯是累加的。|  
-|`MDUpdateDelta`|表示應該儲存，只有變更的中繼資料。|  
+|`MDUpdateExtension`|指出，更新可以只包含加入項目。 無法移動語彙基元。|  
+|`MDUpdateIncremental`|表示累加編譯。|  
+|`MDUpdateDelta`|表示應該儲存，只有已變更的中繼資料。|  
 |`MDUpdateMask`|包含`MDUpdateENC`，`MDUpdateFull`和`MDUpdateIncremental`。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 7fd111f5e885de3389b8f93002db22b48c4edd45
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 70ba038a2bdf4bde092ef6beecf32ac9ad5cbba1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506897"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>在 Visual Basic 中管理 XML
 您可以使用*XML 常值*從外部來源，例如字串、 檔案或資料流載入 XML。 然後您可以使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]來操作 XML，以及使用[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]來查詢 XML。  
   
 ## <a name="in-this-section"></a>本節內容  
- [如何：從檔案、字串或資料流載入 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
+ [如何：從檔案、 字串或 Stream 載入 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
  示範如何將 XML 載入<xref:System.Xml.Linq.XDocument>或<xref:System.Xml.Linq.XElement>從文字檔案、 字串或資料流的物件。  
   
  [如何：使用 LINQ 轉換 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
@@ -42,7 +42,7 @@ ms.locfileid: "46562225"
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
  提供各節，說明如何使用連結[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Visual Basic 中。  
   
-## <a name="see-also"></a>另請參閱  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>另請參閱
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

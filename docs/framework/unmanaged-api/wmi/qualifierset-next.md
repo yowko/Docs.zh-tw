@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 938044a4e932139eb8a4d0a5d2f998cbc6f193cb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 35ab5b64b3c7e364e0dd11c002b87a0a413f4335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532431"
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next 函式
 擷取透過呼叫 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) 函式而開始之列舉中的下一個限定詞。   
@@ -50,7 +50,7 @@ HRESULT QualifierSet_Next (
 [in]指標[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)執行個體。
 
 `lFlags`   
-[in]保留。 這個參數必須是 0。
+[in] 保留。 這個參數必須是 0。
 
 `pstrName`   
 [out]限定詞的名稱。 如果`null`，此參數會忽略它; 否則`pstrName`應該不指向有效`BSTR`或發生記憶體流失。 如果不是 null，函式一律會配置新`BSTR`它會傳回當`WBEM_S_NO_ERROR`。
@@ -88,5 +88,5 @@ HRESULT QualifierSet_Next (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

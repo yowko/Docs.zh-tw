@@ -7,39 +7,39 @@ dev_langs:
 helpviewer_keywords:
 - transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-ms.openlocfilehash: 943bfa73b54a1ac5d68d21d2bb6e271133db595a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af8c1c243a29aa08863fb793c3ebffb91f2872b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526073"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572301"
 ---
 # <a name="why-transformation-order-is-significant"></a>為何轉換順序很重要
-單一<xref:System.Drawing.Drawing2D.Matrix>物件可儲存單一轉換的序列。 後者稱為複合轉換。 取得複合的轉換矩陣乘以個別轉換的矩陣。  
+單一<xref:System.Drawing.Drawing2D.Matrix>物件可用來儲存單一轉換的序列。 後者稱為 「 複合 」 轉換。 複合轉換矩陣被取得個別轉換的矩陣相乘。  
   
 ## <a name="composite-transform-examples"></a>複合轉換範例  
- 在複合轉換中，個別轉換的順序很重要的。 例如，如果第一次旋轉，再調整，然後轉譯，您取得不同的結果非先轉換，再旋轉，然後調整。 在[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，複合轉換建立從左到右。 如果 S、 R 和 T 分別是縮放、 旋轉和轉譯矩陣，然後產品 SRT （依該順序） 是複合的轉換矩陣的第一個標尺、 一個圖示旋轉，然後將轉譯。 產品所產生的矩陣 SRT 與不同產品 TRS 所產生的矩陣。  
+ 在複合的轉換中，個別轉換的順序很重要的。 例如，如果先旋轉，再調整，然後轉譯，得到不同的結果比先轉換再旋轉，然後調整。 在  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，複合轉換是從左到右。 如果 S、 R 和 T 分別調整、 旋轉和轉譯矩陣，然後產品 SRT （依此順序） 調整規模的第一個是 「 複合 」 轉換的矩陣、 旋轉，然後將轉譯。 該產品所產生的矩陣 SRT 是不同於產品 TRS 所產生的矩陣。  
   
- 順序是很重要的其中一個原因是，完成像旋轉和縮放轉換，以根據座標系統的原點。 縮放的中心位於原點的物件產生不同的結果調整已移開原點的物件。 同樣地，旋轉的中心位於原點的物件所產生的旋轉已移開原點的物件不同的結果。  
+ 順序很重要的其中一個原因是，例如旋轉和縮放轉換會完成方面座標系統的原點。 縮放中心位於原點的物件產生不同的結果調整已離開來源的物件。 同樣地，旋轉的中心位於原點的物件所產生的旋轉物件已移動離開來源不同的結果。  
   
- 下列範例會結合以形成複合轉換縮放、 旋轉和轉譯 （依該順序）。 引數<xref:System.Drawing.Drawing2D.MatrixOrder.Append>傳遞至<xref:System.Drawing.Graphics.RotateTransform%2A>方法表示旋轉會遵循縮放比例。 同樣地，引數<xref:System.Drawing.Drawing2D.MatrixOrder.Append>傳遞至<xref:System.Drawing.Graphics.TranslateTransform%2A>方法表示轉譯會遵循旋轉。 <xref:System.Drawing.Drawing2D.MatrixOrder.Append> 和<xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>屬於<xref:System.Drawing.Drawing2D.MatrixOrder>列舉型別。  
+ 下列範例會結合以形成複合的轉換縮放、 旋轉和平移 （依此順序）。 引數<xref:System.Drawing.Drawing2D.MatrixOrder.Append>傳遞至<xref:System.Drawing.Graphics.RotateTransform%2A>方法表示旋轉會遵循的縮放比例。 同樣地，引數<xref:System.Drawing.Drawing2D.MatrixOrder.Append>傳遞至<xref:System.Drawing.Graphics.TranslateTransform%2A>方法表示轉譯會遵循旋轉。 <xref:System.Drawing.Drawing2D.MatrixOrder.Append> 並<xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>屬於<xref:System.Drawing.Drawing2D.MatrixOrder>列舉型別。  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  
   
- 下列範例使如同上述範例中，相同的方法呼叫，但呼叫的順序相反。 產生作業的順序會先轉換再旋轉，則小數位數，會產生第一個標尺非常不同的結果，再更換，然後轉換。  
+ 下列範例會進行相同的方法呼叫，如同上述範例中，但呼叫的順序相反。 產生作業的順序先轉換、 然後旋轉、 縮放比例，會產生第一個標尺非常不同的結果，然後旋轉，然後再轉譯。  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.MiscLegacyTopics#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#22)]  
   
- 複合轉換中的個別轉換的順序互換的其中一種方式是一系列的方法呼叫的順序互換。 控制作業的順序的第二個方式是變更矩陣的 order 引數。 下列範例是上述範例中，不同處在於相同<xref:System.Drawing.Drawing2D.MatrixOrder.Append>已變更為<xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>。 SRT，其中 S、 R、 T 縮放、 旋轉矩陣並分別將轉譯的順序是矩陣乘法。 複合轉換的順序會是第一個標尺，再旋轉，然後轉換。  
+ 複合轉換中的個別轉換的順序相反的方法之一是一系列的方法呼叫的順序相反。 控制作業的順序的第二個方式是變更矩陣的 order 引數。 下列範例等同於上述範例中，不同之處在於<xref:System.Drawing.Drawing2D.MatrixOrder.Append>已變更為<xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>。 SRT，其中 S、 R、 T 縮放、 旋轉的矩陣和是分別轉譯順序是矩陣相乘。 複合轉換的順序是第一個標尺，然後旋轉，然後轉譯。  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.MiscLegacyTopics#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#23)]  
   
- 前一個範例的結果是相同的此主題中的第一個範例的結果。 這是因為我們反轉方法呼叫的順序和矩陣乘法的順序。  
+ 前一個範例的結果會是相同本主題中的第一個範例的結果。 這是因為我們反轉方法呼叫的順序和矩陣相乘的順序。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Drawing.Drawing2D.Matrix>  
- [座標系統和轉換](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
- [使用 Managed GDI+ 中的轉換](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Drawing.Drawing2D.Matrix>
+- [座標系統和轉換](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+- [使用 Managed GDI+ 中的轉換](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

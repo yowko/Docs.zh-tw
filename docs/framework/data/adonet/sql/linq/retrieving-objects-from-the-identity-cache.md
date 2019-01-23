@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: fe22dbdff0e5e9ea6bfe55fc24c492414e01cd6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569150"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>從識別快取擷取物件
 本主題描述 LINQ to SQL 查詢的類型，這些查詢可從 <xref:System.Data.Linq.DataContext> 所管理的識別快取傳回物件。  
@@ -20,7 +20,7 @@ ms.locfileid: "33357604"
  一般而言，為了讓 LINQ to SQL 查詢從識別快取傳回物件，此查詢必須以物件的主索引鍵為基礎，而且必須傳回單一物件。 特別是，此查詢必須採用下列其中一種一般格式。  
   
 > [!NOTE]
->  預先編譯的查詢不會從識別快取傳回物件。 如需有關預先編譯的查詢的詳細資訊，請參閱<xref:System.Data.Linq.CompiledQuery>和[如何： 儲存和重複使用查詢](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)。  
+>  預先編譯的查詢不會從識別快取傳回物件。 如需有關預先編譯的查詢的詳細資訊，請參閱<xref:System.Data.Linq.CompiledQuery>和[How to:儲存並重複使用查詢](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)。  
   
  若要從識別快取擷取物件，查詢必須採用下列其中一種一般格式：  
   
@@ -64,8 +64,8 @@ ms.locfileid: "33357604"
  [!code-csharp[L2S_QueryCache#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/l2s_querycache/cs/program.cs#1)]
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [物件身分識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [物件身分識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+## <a name="see-also"></a>另請參閱
+- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [物件身分識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [物件身分識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

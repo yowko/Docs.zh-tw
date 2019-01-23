@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 9f7ee114a5a480d470c2c32b5b83e287b07e9537
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44507d8e746584ecf8efaa0b361d1707eae50156
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570586"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>使用二進位資料 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫可讓您擷取及更新中的二進位資料[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要在下列方面：  
@@ -25,7 +25,7 @@ ms.locfileid: "43515551"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 實作資料的二進位資料流中所定義，使用 HTTP [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。 在此機制中，二進位資料會視為不同的媒體資源，但與實體稱為媒體連結項目。 如需詳細資訊，請參閱 <<c0> [ 資料流處理提供者](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。  
   
 > [!TIP]
->  如何建立下載二進位影像檔從 Windows Presentation Foundation (WPF) 用戶端應用程式的逐步範例[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服務，將儲存相片，請參閱文章[資料服務資料流處理提供者系列-組件2： 從用戶端存取媒體資源 Stream](https://go.microsoft.com/fwlink/?LinkId=201637)。 若要下載部落格文章中精選之資料流相片資料服務的範例程式碼，請參閱[資料流處理相片資料服務範例](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN Code Gallery 中。  
+>  如何建立下載二進位影像檔從 Windows Presentation Foundation (WPF) 用戶端應用程式的逐步範例[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服務，將儲存相片，請參閱文章[資料服務資料流處理提供者系列-組件2:從用戶端存取媒體資源 Stream](https://go.microsoft.com/fwlink/?LinkId=201637)。 若要下載部落格文章中精選之資料流相片資料服務的範例程式碼，請參閱[資料流處理相片資料服務範例](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN Code Gallery 中。  
   
 ## <a name="entity-metadata"></a>實體中繼資料  
  在資料服務中繼資料中，套用到屬於媒體連結項目之實體類型的 `HasStream` 屬性會指出擁有相關媒體資源資料流的實體。 在下列範例中，`PhotoInfo`實體是媒體連結項目具有相關的媒體資源，由`HasStream`屬性。  
@@ -38,7 +38,7 @@ ms.locfileid: "43515551"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫提供從 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 架構資料服務存取二進位資源資料流的方法。 下載媒體資源時，您可以使用媒體資源的 URI，或者您可以取得包含媒體資源資料本身的二進位資料流。 您也可以上載媒體資源資料做為二進位資料流。  
   
 > [!TIP]
->  如何建立下載二進位影像檔從 Windows Presentation Foundation (WPF) 用戶端應用程式的逐步範例[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服務，將儲存相片，請參閱文章[資料服務資料流處理提供者系列-組件2： 從用戶端存取媒體資源 Stream](https://go.microsoft.com/fwlink/?LinkId=201637)。 若要下載部落格文章中精選之資料流相片資料服務的範例程式碼，請參閱[資料流處理相片資料服務範例](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN Code Gallery 中。  
+>  如何建立下載二進位影像檔從 Windows Presentation Foundation (WPF) 用戶端應用程式的逐步範例[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服務，將儲存相片，請參閱文章[資料服務資料流處理提供者系列-組件2:從用戶端存取媒體資源 Stream](https://go.microsoft.com/fwlink/?LinkId=201637)。 若要下載部落格文章中精選之資料流相片資料服務的範例程式碼，請參閱[資料流處理相片資料服務範例](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN Code Gallery 中。  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>取得二進位資料流的 URI  
  擷取特定類型的媒體資源 (例如影像及其他媒體檔案) 時，在應用程式中使用媒體資源的 URI 通常比處理二進位資料的資料流本身更容易。 若要取得與給定媒體連結項目相關聯的資源資料流 URI，您必須在追蹤實體的 <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> 執行個體上呼叫 <xref:System.Data.Services.Client.DataServiceContext> 方法。 下列範例會示範如何呼叫 <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> 方法來取得在用戶端上建立新影像所使用的媒體資源資料流 URI：  
@@ -66,6 +66,6 @@ ms.locfileid: "43515551"
 > [!NOTE]
 >  當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> 時，並不會將資料流傳送到資料服務，直到呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 為止。  
   
-## <a name="see-also"></a>另請參閱  
- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [將資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+## <a name="see-also"></a>另請參閱
+- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [將資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
