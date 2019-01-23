@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
-ms.openlocfilehash: 5d201d331d766d865d0ee7afb164813084fa3651
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cca909e67464d08c0bb4ff8a0d0186d9d600ce18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596341"
 ---
 # <a name="comparison-expressions"></a>比較運算式
 比較運算式會檢查常數值、屬性值或方法結果是否等於、不等於、大於或小於另一個值。 如果特定比較對於 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 無效，將會擲回例外狀況。 所有的比較 (隱含和明確) 都會要求所有元件在資料來源內都是可以比較的。 `Where` 子句中經常會使用比較運算式來限制查詢結果。  
@@ -53,5 +53,5 @@ ms.locfileid: "32761502"
  [!code-csharp[DP L2E Conceptual Examples#MethodAsConstantFails](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#methodasconstantfails)]
  [!code-vb[DP L2E Conceptual Examples#MethodAsConstantFails](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#methodasconstantfails)]  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to Entities 查詢中的運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+## <a name="see-also"></a>另請參閱
+- [LINQ to Entities 查詢中的運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: af5bd998840e87a4e13f5865c26aea57dcd24426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7fdea1aa399e6f967bdfad1cd19067a7f5761b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543574"
 ---
 # <a name="typography-how-to-topics"></a>印刷樣式 HOW TO 主題
-本節中的主題描述如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]支援豐富您的應用程式中的文字。  
+在本節中的主題描述如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]支援豐富的呈現您的應用程式中的文字。  
   
 ## <a name="in-this-section"></a>本節內容  
  [建立文字裝飾](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
@@ -27,7 +27,7 @@ ms.locfileid: "33546311"
  [繪製文字至視覺效果](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
  [在 XAML 中使用特殊字元](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Documents.Typography>  
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [OpenType 字型功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Documents.Typography>
+- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [OpenType 字型功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)

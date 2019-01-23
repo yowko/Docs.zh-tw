@@ -2,12 +2,12 @@
 title: ADO.NET 的 SQL Server 同處理序特定行為
 ms.date: 03/30/2017
 ms.assetid: 4f223948-ae8f-4c16-bdc2-4acc6debed3f
-ms.openlocfilehash: 33c2f1018748a0d5703119a1ab77d23a40a06457
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e177a7c510a0feae5fed162781a1d42984361c5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43876579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545432"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>ADO.NET 的 SQL Server 同處理序特定行為
 ADO.NET 有四個主要功能擴充，位於 <xref:Microsoft.SqlServer.Server> 命名空間 (Namespace) 中，它們專門用於同處理序：<xref:Microsoft.SqlServer.Server.SqlContext>、<xref:Microsoft.SqlServer.Server.SqlPipe>、<xref:Microsoft.SqlServer.Server.SqlTriggerContext> 和 <xref:Microsoft.SqlServer.Server.SqlDataRecord>。  
@@ -18,6 +18,6 @@ ADO.NET 有四個主要功能擴充，位於 <xref:Microsoft.SqlServer.Server> �
   
 1.  [Ado.net 的 SQL Server 同處理序特定擴充](https://go.microsoft.com/fwlink/?LinkId=115403)  
   
-## <a name="see-also"></a>另請參閱  
- [在 Managed 程式碼中建立 SQL Server 2005 物件](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [在 Managed 程式碼中建立 SQL Server 2005 物件](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

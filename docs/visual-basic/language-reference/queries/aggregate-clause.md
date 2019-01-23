@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: e3ce8ff7da647120e5fd9e3b4cd44cc603eb797d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a26ea220a807d3158d6874e2127db9a2f280a10c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547088"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate 子句 (Visual Basic)
 適用於一或多個彙總函式集合。  
@@ -33,11 +33,11 @@ Aggregate element [As type] In collection _
   
 |詞彙|定義|  
 |---|---|  
-|`element`|必要。 變數，可用來逐一查看集合的元素。|  
+|`element`|必要項。 變數，可用來逐一查看集合的元素。|  
 |`type`|選擇性。 `element` 的類型。 如果未不指定任何類型，類型`element`推斷從`collection`。|  
-|`collection`|必要。 指的是要處理的集合。|  
+|`collection`|必要項。 指的是要處理的集合。|  
 |`clause`|選擇性。 一或多個查詢子句，例如`Where`子句，來限定要套用的彙總子句或子句的查詢結果。|  
-|`expressionList`|必要。 一或多個以逗點分隔運算式可識別要套用至集合的彙總函式。 您可以將別名套用至指定成員名稱的查詢結果的彙總函式。 如果未不提供任何別名，則會使用彙總函式的名稱。 如需範例，請參閱本主題稍後的彙總函式的相關章節。|  
+|`expressionList`|必要項。 一或多個以逗點分隔運算式可識別要套用至集合的彙總函式。 您可以將別名套用至指定成員名稱的查詢結果的彙總函式。 如果未不提供任何別名，則會使用彙總函式的名稱。 如需範例，請參閱本主題稍後的彙總函式的相關章節。|  
   
 ## <a name="remarks"></a>備註  
  `Aggregate`子句可以用來在您的查詢中包含彙總函式。 彙總函式會執行檢查及計算值的集合，並傳回單一值。 您可以使用查詢結果型別的成員，以存取計算的值。 您可以使用標準彙總函式`All`， `Any`， `Average`， `Count`， `LongCount`， `Max`， `Min`，以及`Sum`函式。 這些函式是熟悉的開發人員已熟悉 SQL 中的彙總。 它們都是以本主題的下一節所述。  
@@ -120,9 +120,9 @@ Aggregate element [As type] In collection _
   
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [查詢](../../../visual-basic/language-reference/queries/index.md)  
-- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
-- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
-- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)  
+- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查詢](../../../visual-basic/language-reference/queries/index.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
 - [Group By 子句](../../../visual-basic/language-reference/queries/group-by-clause.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
-ms.openlocfilehash: 893fdb1b9b3b5ace6b869c7b64ce7483ff523023
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7bec146f0100971d78eed69412ce27889e7a6263
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45590922"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597160"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>ASP.NET 中的內嵌式程式碼不支援 XML 常值和 XML 屬性
 在 ASP.NET 中的內嵌程式碼中不支援 XML 常值和 XML 屬性。 若要使用 XML 功能，將移至程式碼後置的程式碼。  
@@ -25,7 +25,7 @@ ms.locfileid: "45590922"
   
 -   將程式碼，包括 XML 常值或 XML 軸屬性移至的 ASP.NET 程式碼後置檔案中。  
   
-## <a name="see-also"></a>另請參閱  
- [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)  
- [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>另請參閱
+- [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)
+- [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

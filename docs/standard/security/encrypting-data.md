@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7ecdfff9d309a2e751d5f989760c42d6fa84fe99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47114953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562514"
 ---
 # <a name="encrypting-data"></a>加密資料
 對稱式加密和非對稱式加密是使用不同的程序執行。 對稱式加密在資料流上執行，因此適用於加密大量資料。 非對稱式加密在少數的位元組上執行，因此只適用於小量的資料。  
@@ -173,7 +173,7 @@ The connection failed.
 ## <a name="asymmetric-encryption"></a>非對稱加密  
  非對稱演算法通常用來加密少量的資料，例如對稱金鑰和 IV 的加密。 一般來說，個別的執行中非對稱式加密會使用另一個合作對象所產生的公開金鑰。 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 類別由 .NET Framework 針對此目的所提供。  
   
- 下列範例會使用公開金鑰資訊來加密對稱金鑰和 IV。 會初始化兩個代表第三方的公開金鑰的位元組陣列。 <xref:System.Security.Cryptography.RSAParameters> 物件會初始化為這些值。 下一步 **RSAParameters** （以及它所代表的公開金鑰） 的物件匯入**RSACryptoServiceProvider**使用<xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType>方法。 最後， <xref:System.Security.Cryptography.RijndaelManaged> 類別所建立的私密金鑰和 IV 會被加密。 此範例會要求系統安裝 128 位元加密。  
+ 下列範例會使用公開金鑰資訊來加密對稱金鑰和 IV。 會初始化兩個代表第三方的公開金鑰的位元組陣列。 <xref:System.Security.Cryptography.RSAParameters> 物件會初始化為這些值。 接下來， **RSAParameters** (以及它所代表的公開金鑰) 的物件會使用 **方法匯入到** RSACryptoServiceProvider <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> 。 最後， <xref:System.Security.Cryptography.RijndaelManaged> 類別所建立的私密金鑰和 IV 會被加密。 此範例會要求系統安裝 128 位元加密。  
   
 ```vb  
 Imports System  
@@ -264,6 +264,6 @@ class Class1
   
 ## <a name="see-also"></a>另請參閱
 
-- [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [解密資料](../../../docs/standard/security/decrypting-data.md)  
+- [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [解密資料](../../../docs/standard/security/decrypting-data.md)
 - [The signature is valid](../../../docs/standard/security/cryptographic-services.md)

@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: dd5618bd0533f885a6aef8229b2d8cb1bc34c237
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2c33cb9ba0479df5e69b6979a789253f9fae565
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597329"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>運算式是一個數值，不可以是指派的目標
-陳述式嘗試將值指派給運算式。 您只能指派給值的可寫入變數、 屬性或陣列元素執行階段。 下列範例說明會發生此錯誤。  
+陳述式會嘗試將值指派給運算式。 您只能指派給可寫入的變數、 屬性或陣列元素的值，在執行階段。 下列範例說明如何可能會發生此錯誤。  
   
 ```  
 Dim yesterday As Integer  
@@ -28,7 +28,7 @@ maximum = 50
   
  類似的範例可以套用至屬性和陣列項目。  
   
- **間接存取。** 透過實值類型的間接存取也可以產生這個錯誤。 請考慮下列程式碼範例中，會嘗試設定的值<xref:System.Drawing.Point>藉由存取間接透過<xref:System.Windows.Forms.Control.Location%2A>。  
+ **間接存取。** 透過實值類型的間接存取也可以產生這個錯誤。 下列程式碼範例，嘗試設定的值，請考慮<xref:System.Drawing.Point>藉由存取間接透過<xref:System.Windows.Forms.Control.Location%2A>。  
   
 ```  
 ' Assume this code runs inside Form1.  
@@ -38,7 +38,7 @@ exitButton.Location.X = 140
 ' The preceding line is an ERROR because of no storage for Location.  
 ```  
   
- 前述範例中的最後一個陳述式會失敗，因為它會建立暫存配置的<xref:System.Drawing.Point>所傳回的結構<xref:System.Windows.Forms.Control.Location%2A>屬性。 結構是實值類型，且陳述式執行後，不會保留暫時性結構。 藉由宣告和使用的變數未解決此問題<xref:System.Windows.Forms.Control.Location%2A>，這樣就可以建立更具永久性配置<xref:System.Drawing.Point>結構。 下列範例會顯示可以取代前述範例中的最後一個陳述式的程式碼。  
+ 前述範例中的最後一個陳述式會失敗，因為它會建立只有暫存的配置<xref:System.Drawing.Point>所傳回的結構<xref:System.Windows.Forms.Control.Location%2A>屬性。 結構是實值類型，並執行陳述式之後，不會保留暫時性結構。 未解決此問題，藉由宣告和使用的變數<xref:System.Windows.Forms.Control.Location%2A>，以建立更永久的配置<xref:System.Drawing.Point>結構。 下列範例顯示可以取代前述範例中的最後一個陳述式的程式碼。  
   
 ```  
 Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)  
@@ -49,15 +49,15 @@ exitButton.Location = exitLocation
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   如果陳述式指派值的運算式，運算式以取代單一可寫入的變數、 屬性或陣列元素。  
+-   如果陳述式會將值指派給運算式，運算式以取代單一可寫入的變數、 屬性或陣列元素。  
   
--   如果此陳述式間接存取透過實值類型 （通常是結構），建立實值類型的變數。  
+-   如果此陳述式間接存取透過實值型別 （通常是結構），建立變數來保存實值型別。  
   
 -   將適當的結構 （或其他實值型別） 指派給變數。  
   
--   您可以使用變數來存取要指派其值的屬性。  
+-   您可以使用變數來存取屬性，以將它指派值。  
   
-## <a name="see-also"></a>另請參閱  
- [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [陳述式](../../../visual-basic/programming-guide/language-features/statements.md)  
- [程序的疑難排解](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+## <a name="see-also"></a>另請參閱
+- [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [陳述式](../../../visual-basic/programming-guide/language-features/statements.md)
+- [程序的疑難排解](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)

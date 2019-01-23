@@ -5,15 +5,15 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5192030fa2eda45431dd8a3765603d3081b93fa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595314"
 ---
 # <a name="data-transfer-and-serialization"></a>資料傳輸與序列化
-在連線系統中，服務與用戶端會仰賴資料交換來完成任何工作。 身為開發人員的服務或用戶端，您也必須了解 Windows Communication Foundation (WCF) 如何處理資料與資料序列化才能建立有效率且容易維護的應用程式。  
+在連線系統中，服務與用戶端會仰賴資料交換來完成任何工作。 身為開發人員的服務或用戶端中，您也必須了解 Windows Communication Foundation (WCF) 如何處理資料與資料序列化以建立有效率且容易維護的應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
  [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "33489202"
  說明在設計資料傳輸與序列化的程式時，要注意的項目。  
   
  [資料傳輸架構概觀](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- 描述在 WCF 中的資料傳輸的整體設計的檢視。  
+ 說明 WCF 中的資料傳輸的整體設計的檢視。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.ServiceModel>  
@@ -60,6 +60,6 @@ ms.locfileid: "33489202"
 ## <a name="related-sections"></a>相關章節  
  [擴充編碼器與序列化程式](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a>另請參閱  
- [最佳做法：資料合約版本設定](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [服務版本設定](../../../../docs/framework/wcf/service-versioning.md)
+## <a name="see-also"></a>另請參閱
+- [最佳做法：資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [服務版本設定](../../../../docs/framework/wcf/service-versioning.md)

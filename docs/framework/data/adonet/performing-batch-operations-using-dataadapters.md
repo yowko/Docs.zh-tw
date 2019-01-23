@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: cfc77ff3b030ffebf52feab0190f81fc4e581cf9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ccf730eb85024687285200db8f978291986dcc18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543457"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>使用 DataAdapter 執行批次作業
 ADO.NET 中的批次支援可讓 <xref:System.Data.Common.DataAdapter> 針對從 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 至伺服器的 INSERT、UPDATE 與 DELETE 作業進行分組，而非一次傳送一個作業。 如此可降低往返於伺服器的次數，因此一般都能夠大幅提升作業效能。 SQL Server (<xref:System.Data.SqlClient>) 和 Oracle (<xref:System.Data.OracleClient>) 的 .NET 資料提供者都支援批次更新。  
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>處理批次更新的相關事件和錯誤  
- **DataAdapter**有兩個與更新相關的事件： **RowUpdating**並**RowUpdated**。 停用舊版 ADO.NET 的批次處理時，會針對已處理的每個資料列產生其中一個事件。 **RowUpdating**在更新之前，會產生並**RowUpdated**資料庫更新完成之後產生。  
+ **DataAdapter**有兩個與更新相關的事件：**RowUpdating**並**RowUpdated**。 停用舊版 ADO.NET 的批次處理時，會針對已處理的每個資料列產生其中一個事件。 **RowUpdating**在更新之前，會產生並**RowUpdated**資料庫更新完成之後產生。  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>批次更新時所變更的事件行為  
  啟用批次處理時，會在單一資料庫作業中更新多個資料列。 因此，每個批次作業只會發生一個 `RowUpdated` 事件，而每個已處理的資料列則會發生 `RowUpdating` 事件。 停用批次處理時，會以一對一交錯的方式引發這兩個事件，即針對一個資料列引發一個 `RowUpdating` 事件和一個 `RowUpdated` 事件，再針對下一個資料列引發一個 `RowUpdating` 事件和一個 `RowUpdated` 事件，直到處理完所有資料列為止。  
@@ -141,8 +141,8 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
  資料提供者和後端資料庫伺服器決定批次執行能使用哪些 SQL 建構。 如果要求執行不受支援的陳述式，則可能擲回例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [使用 DataAdapter 更新資料來源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [使用 DataAdapter 更新資料來源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

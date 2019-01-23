@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: KrzysztofCwalina
-ms.openlocfilehash: 016a42ee7a772a3268e823e75b6239467e13b315
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 74eee418a3c87b335cdf96557c4e17b95aff7b58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562878"
 ---
 # <a name="exception-throwing"></a>擲回例外狀況
 擲回例外狀況這一節所述的指導方針需要良好定義的執行失敗的意義。 每當成員不是什麼，就會發生執行失敗設計 （成員名稱有隱含意義）。 例如，如果`OpenFile`方法無法傳回給呼叫端的開啟的檔案控制代碼，它會被視為新的執行失敗。  
@@ -66,5 +66,5 @@ ms.locfileid: "53148038"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [例外狀況的設計方針](../../../docs/standard/design-guidelines/exceptions.md)

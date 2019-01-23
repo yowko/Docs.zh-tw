@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 90169aac0c0c2cac8860b2809467ffa3a27d0e91
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566823"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>HOW TO：稽核 Windows Communication Foundation 安全性事件
 Windows Communication Foundation (WCF) 可讓您將安全性事件記錄到 Windows 事件記錄檔，您可以使用 Windows 事件檢視器檢視。 這個主題會說明如何將應用程式設定為會記錄安全性事件。 如需有關 WCF 稽核的詳細資訊，請參閱[稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
@@ -81,14 +81,14 @@ Windows Communication Foundation (WCF) 可讓您將安全性事件記錄到 Wind
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  如果將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，就會隱藏產生安全性稽核時的失敗 (如果設定為 `false`，就會擲回例外狀況)。 不過，如果您啟用下列 Windows**本機安全性設定**屬性，來產生稽核事件失敗會導致 Windows 立即關機：  
   
- **稽核： 當無法記錄安全性稽核系統立即關機**  
+ **稽核：當無法記錄安全性稽核時，立即系統關機**  
   
  若要設定此屬性，開啟**本機安全性設定** 對話方塊。 底下**安全性設定**，按一下**本機原則**。 然後按一下**安全性選項**。  
   
  如果<xref:System.ServiceModel.AuditLogLocation>屬性設定為<xref:System.ServiceModel.AuditLogLocation.Security>並**稽核物件存取**不一定都是**本機安全性原則**，稽核事件將不會寫入安全性記錄檔。 請注意，這時不會傳回任何失敗，但是稽核項目也不會寫入安全性記錄檔中。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- <xref:System.ServiceModel.AuditLogLocation>  
- [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- <xref:System.ServiceModel.AuditLogLocation>
+- [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)

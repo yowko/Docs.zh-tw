@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0a506f05aac3b8335a0863c3152567fe05463a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b66cc09eda1fe5ea46a55b6239e05b5acec851c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566901"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>ICorDebugManagedCallback::UpdateModuleSymbols 方法
-告知偵錯工具通用語言執行階段模組的符號，已變更。  
+已變更為通用語言執行階段模組的符號會告知偵錯工具。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ HRESULT UpdateModuleSymbols (
   
 #### <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]表示模組符號已經變更的應用程式網域的 ICorDebugAppDomain 物件指標。  
+ [in]表示包含的模組的符號已經變更的應用程式定義域的 ICorDebugAppDomain 物件指標。  
   
  `pModule`  
  [in]ICorDebugModule 物件，表示的模組符號已經變更指標。  
@@ -48,20 +48,20 @@ HRESULT UpdateModuleSymbols (
  [in]Win32 COM 指標`IStream`物件，其中包含已修改的符號。  
   
 ## <a name="remarks"></a>備註  
- 這個方法會提供機會更新模組的符號偵錯工具的檢視，藉由呼叫[isymunmanagedreader:: Updatesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)或[isymunmanagedreader:: Replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)。  
+ 這個方法便有機會呼叫來更新模組的符號偵錯工具的檢視[isymunmanagedreader:: Updatesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)或是[isymunmanagedreader:: Replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)。  
   
- 這個回呼可能會多次發生相同的模組。  
+ 此回呼可能會多次發生相同的模組。  
   
  偵錯工具應該嘗試繫結未繫結的來源層級中斷點。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

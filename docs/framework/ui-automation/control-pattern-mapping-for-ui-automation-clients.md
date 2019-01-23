@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 6beeec86ba8bf16be432bc2ae2de20aa08a0d2d9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7552db2b0d1f9063733ddac29612057e0475570e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597189"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 自動化用戶端的控制項模式對應
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題列出控制項類型及其相關聯的控制項模式。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "47113117"
 |資料格|Grid|捲軸、選取、表格|無|  
 |Data Item|Selection Item|展開摺疊、方格項目、捲軸項目、表格、切換、值|無|  
 |文件|文字|捲軸、值|無|  
-|Edit|無|文字、範圍值、值|無|  
+|編輯|無|文字、範圍值、值|無|  
 |群組|無|展開摺疊|無|  
-|頁首|無|Transform|無|  
+|頁首|無|資料轉換|無|  
 |標題項目|無|轉換、叫用|無|  
 |超連結|叫用|值|無|  
 |Image|無|方格項目、表格項目|叫用、選取項目|  
@@ -67,7 +67,7 @@ ms.locfileid: "47113117"
 |索引標籤項目|Selection Item|無|叫用|  
 |資料表|方格、方格項目、表格、表格項目|無|無|  
 |文字|無|方格項目、表格項目、文字|值|  
-|Thumb|Transform|無|無|  
+|Thumb|資料轉換|無|無|  
 |標題列|無|無|無|  
 |工具列|無|停駐、展開摺疊、轉換|無|  
 |工具提示|無|文字、視窗|無|  
@@ -78,5 +78,5 @@ ms.locfileid: "47113117"
 > [!NOTE]
 >  如果控制項類型沒有所列的受支援控制項模式，但有一或多個有條件支援的控制項模式，就會一律支援其中一個條件式控制項模式。  
   
-## <a name="see-also"></a>另請參閱  
- [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>另請參閱
+- [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)

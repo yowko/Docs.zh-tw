@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 60def26d21ff065bda3209ac90161af0672a38af
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6006024f29c37545ce95e579c7b93727d8c6bc67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547744"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF 安全性策略 – 安全性工程
 高可信度電腦運算是一項 Microsoft 開發案，用於確保生產安全的程式碼。 高可信度電腦運算開發案的一個重要項目是 [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 是可用來搭配標準工程程序協助安全的程式碼傳遞之工程實務。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 包含 10 個階段，結合正規化、可衡量性與其他結構到最佳做法，包括：  
@@ -67,32 +67,32 @@ ms.locfileid: "50181692"
 ### <a name="source-analysis-and-editing-tools"></a>來源分析和編輯工具  
  除了手動的 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 安全性程式碼檢閱項目，[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 小組使用多項來源分析工具和相關聯的編輯來減少安全性漏洞。 使用廣泛的來源工具，包含下列項目：  
   
--   **FXCop**：尋找在 Managed 程式碼中的常見安全性問題，從程式碼存取安全性之使用狀況的繼承規則，到如何安全地相互操作 Unmanaged 程式碼。 請參閱 [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29)。  
+-   **FXCop**:舉凡繼承規則，到如何安全地相互操作 unmanaged 程式碼的程式碼存取安全性使用狀況的 managed 程式碼中尋找常見安全性問題。 請參閱 [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29)。  
   
--   **Prefix/Prefast**：找出 Unmanaged 程式碼中的安全性漏洞及常見安全性問題，例如緩衝區滿溢、格式字串問題和錯誤檢查。  
+-   **Prefix/Prefast**:例如緩衝區滿溢、 格式字串問題和錯誤檢查的 unmanaged 程式碼中尋找安全性漏洞及常見安全性問題。  
   
--   **禁止的應用程式開發介面**：搜尋原始程式碼，來識別已知會造成安全性問題之函式的意外使用，例如 `strcpy`。 一旦識別到之後，會以較安全的替代項目取代這些函式。  
+-   **禁用的 Api**:搜尋原始程式碼，來識別造成安全性問題，例如已知的函式的意外使用`strcpy`。 一旦識別到之後，會以較安全的替代項目取代這些函式。  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>測試技術  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 使用不同的安全性測試技術，包含：  
   
--   **白箱測試**：測試人員檢視原始程式碼，然後建置入侵測試。  
+-   **白箱測試**:測試人員檢視原始程式碼，並再建置入侵測試  
   
--   **黑箱測試**：測試人員藉由檢查應用程式開發介面和功能，試著找出安全性漏洞，然後嘗試攻擊產品。  
+-   **黑測試**:測試人員找出安全性漏洞，藉由檢查 API 和功能，再嘗試攻擊產品。  
   
--   **從其他產品減輕安全性問題**：如果相關，則測試來自相關產品的安全性問題。 例如，已識別 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] 的大約 60 項安全性問題的合適變異型式，並嘗試套用至 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]。  
+-   **其他產品減輕安全性問題**:如果相關，則測試來自相關產品的安全性問題。 例如，已識別 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] 的大約 60 項安全性問題的合適變異型式，並嘗試套用至 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]。  
   
--   **透過檔案模糊測試進行以工具為基礎的滲透測試**：檔案模糊測試是透過各種輸入來惡意探索檔案讀取器的輸入範圍。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 中使用這項技術的其中一個範例是用來檢查影像解碼程式碼中的錯誤。  
+-   **透過檔案模糊測試進行以工具為基礎的滲透測試**:檔案模糊測試是惡意探索檔案讀取器的輸入範圍，透過各種輸入。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 中使用這項技術的其中一個範例是用來檢查影像解碼程式碼中的錯誤。  
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>重要程式碼管理  
  針對[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]，[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]標記和追蹤可提高權限的安全性關鍵程式碼使用.NET Framework 支援建置安全性沙箱 (請參閱**安全性關鍵方法**在[WPF安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md))。 假設在安全性關鍵程式碼上的安全性需求很高，這類程式碼會接收額外層級的來源管理控制和安全性稽核。 大約 5% 到 10%的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 由經過專門的檢閱小組檢閱的安全性關鍵程式碼所組成。 原始程式碼和簽入程序是由追蹤安全性關鍵程式碼來管理，以及對應每個重要的實體 (也就是一個包含關鍵程式碼的方法) 至其登出狀態。 登出狀態包含一或多個檢閱者的名稱。 每個 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 的每日建置會比較該關鍵程式碼和前一個建置的關鍵程式碼，以檢查未經核准的變更。 如果工程師修改未經檢閱小組核准的關鍵程式碼，它會被識別並被立即修正。 此程序能在 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 沙箱程式碼上套用和維護特別高層級的監督。  
   
-## <a name="see-also"></a>另請參閱  
- [安全性](../../../docs/framework/wpf/security-wpf.md)  
- [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [WPF 安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
- [高可信度電腦運算](https://www.microsoft.com/mscorp/twc/default.mspx)  
- [應用程式的威脅分析模型](https://msdn.microsoft.com/security/securecode/threatmodeling/acetm/)  
- [安全性方針：.NET Framework 2.0](https://msdn.microsoft.com/library/default.asp?url=/library/dnpag2/html/PAGGuidelines0003.asp)
+## <a name="see-also"></a>另請參閱
+- [安全性](../../../docs/framework/wpf/security-wpf.md)
+- [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [WPF 安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
+- [高可信度電腦運算](https://www.microsoft.com/mscorp/twc/default.mspx)
+- [應用程式的威脅分析模型](https://msdn.microsoft.com/security/securecode/threatmodeling/acetm/)
+- [安全性方針：.NET Framework 2.0](https://msdn.microsoft.com/library/default.asp?url=/library/dnpag2/html/PAGGuidelines0003.asp)

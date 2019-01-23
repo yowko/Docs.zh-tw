@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: b76d999bfe3f7ae5205cb9486e040c1d6191b78c
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 001baa8d3cbd294772bef634825c67ea13b23458
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597277"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 指定一或多個宣告的程式設計項目與類別或結構的大規模，而非與該類別或結構的特定執行個體相關聯。  
@@ -92,10 +92,10 @@ ms.locfileid: "37143527"
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另請參閱  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Static](../../../visual-basic/language-reference/modifiers/static.md)  
- [在 Visual Basic 中的存留期](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>另請參閱
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Static](../../../visual-basic/language-reference/modifiers/static.md)
+- [在 Visual Basic 中的存留期](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

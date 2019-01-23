@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a431c82450ddcc563a1d3d92bb61a64d723a007
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49b93c220c8745b63d1463b2236f253112b1a545
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543889"
 ---
 # <a name="icordebugerrorinfoenumnext-method"></a>ICorDebugErrorInfoEnum::Next 方法
 `ICorDebugErrorInfoEnum::Next` 已經過時。 請勿呼叫這個方法。  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

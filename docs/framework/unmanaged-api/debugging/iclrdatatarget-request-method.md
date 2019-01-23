@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc79277c75118b11766e66137284bd5655eed091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 77bd3bc239d0101f02cd515b0ec2a8bec3372882
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596900"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request 方法
-由通用語言執行平台 (CLR) 資料存取服務要求的操作，實作所定義。  
+由通用語言執行平台 (CLR) 資料存取服務要求的作業，呼叫，實作所定義。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,27 +49,27 @@ HRESULT Request (
  [in]輸入緩衝區，用於連入要求的大小。  
   
  `inBuffer`  
- [in]包含要求之緩衝區。  
+ [in]包含要求的緩衝區。  
   
  `outBufferSize`  
- [in]輸出緩衝區，用來回應的大小。  
+ [in]輸出緩衝區，它用於回應的大小。  
   
  `outBuffer`  
- [out]包含回應緩衝區。  
+ [out]包含回應的緩衝區。  
   
 ## <a name="remarks"></a>備註  
- `Request`方法可協助加入未指定的自訂作業。 也就是說，這個方法會提供擴充性而不需要的介面定義的修訂。  
+ `Request`方法可協助的未指定的自訂作業。 也就是說，這個方法會提供擴充性，而不需要的介面定義的修訂。  
   
  此方法是由偵錯應用程式的作者來實作。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** ClrData.idl、 ClrData.h  
+ **標頭：** ClrData.idl, ClrData.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

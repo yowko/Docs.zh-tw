@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 4d0e0a1bea32fe3be896b80e77de34e04cd9f2f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592428"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>設定 WS-Atomic 異動支援
 這個主題說明如何使用 [WS-AT 組態公用程式] 來設定 WS-AtomicTransaction (WS-AT) 支援。  
@@ -54,7 +54,7 @@ ms.locfileid: "43525878"
 ### <a name="creating-and-exporting-certificates"></a>建立和匯出憑證  
  這個程序需要 MMC 憑證嵌入式管理單元。 依序開啟 [開始]、[執行] 功能表，並在輸入方塊中輸入 "mmc" 然後按下 [確定]，即可存取嵌入式管理單元。 然後，在**Console1**  視窗中，瀏覽至**檔案/新增移除**嵌入式管理單元，按一下 新增，然後選擇**憑證**從**獨立版本嵌入式管理單元**清單。 最後，選取**電腦帳戶**來管理，並按一下 **確定**。 **憑證**節點會出現在嵌入式管理單元主控台。  
   
- 您必須已擁有必要的憑證，才能建立信任。 若要了解如何建立及安裝新的憑證，在以下步驟前，請參閱[如何： 建立和安裝暫時用戶端憑證，在開發期間的 WCF](https://go.microsoft.com/fwlink/?LinkId=158925)。  
+ 您必須已擁有必要的憑證，才能建立信任。 若要了解如何建立及安裝新的憑證，在以下步驟前，請參閱[How to:建立並在 WCF 中的暫存用戶端憑證安裝在開發期間](https://go.microsoft.com/fwlink/?LinkId=158925)。  
   
 1.  在電腦 A 上，使用 MMC 憑證嵌入式管理單元將現有的憑證 (certA) 匯入 LocalMachine\MY (個人節點) 和 LocalMachine\ROOT 存放區 (受信任的根憑證授權單位節點)。 若要將憑證匯入特定的節點，以滑鼠右鍵按一下節點，然後選擇**所有工作/匯入**。  
   
@@ -118,6 +118,6 @@ ms.locfileid: "43525878"
   
 -   31：詳細資訊  
   
-## <a name="see-also"></a>另請參閱  
- [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
- [WS-AtomicTransaction 設定 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)
+## <a name="see-also"></a>另請參閱
+- [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction 設定 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

@@ -2,22 +2,22 @@
 title: 選擇訊息交換模式
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: ac5ff841eb4e314c1c9d04c895d7a22766da003e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 927324e0f707284e31baefa261d4d90b147e4e24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594755"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>選擇訊息交換模式
-撰寫自訂傳輸的第一個步驟是決定*訊息交換模式*（又稱為 Mep） 所需的通道所開發。 本主題會說明可用的選項，並討論各種需求。 這是通道開發工作清單中所述的第一個工作[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
+撰寫自訂傳輸的第一個步驟是決定哪一種*訊息交換模式*（又稱為 Mep） 所需的通道所開發。 本主題會說明可用的選項，並討論各種需求。 這是通道開發工作清單中所述的第一個工作[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
   
 ## <a name="six-message-exchange-patterns"></a>六種訊息交換模式  
  您可以從三個 MEP 中選擇：  
   
 -   資料包 (<xref:System.ServiceModel.Channels.IInputChannel> 和 <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
-     當使用資料包 (datagram) MEP 時，用戶端傳送訊息，使用*引發 fire and forget* exchange。 射後不理交換是一種需要以超出範圍之外的方式確認傳遞成功的交換。 訊息可能會在傳輸時遺失而永遠無法抵達服務。 即使傳送作業在用戶端已成功完成，也無法保證遠端端點已接收到該訊息。 資料包是訊息的基本建置組塊，您可以在資料包的最上層建立自己的通訊協定，其中包括可靠的通訊協定和安全的通訊協定。 用戶端資料包通道會實作 <xref:System.ServiceModel.Channels.IOutputChannel> 介面，服務資料包通道則會實作 <xref:System.ServiceModel.Channels.IInputChannel> 介面。  
+     當使用資料包 (datagram) MEP 時，用戶端傳送訊息，使用*射後不理*exchange。 射後不理交換是一種需要以超出範圍之外的方式確認傳遞成功的交換。 訊息可能會在傳輸時遺失而永遠無法抵達服務。 即使傳送作業在用戶端已成功完成，也無法保證遠端端點已接收到該訊息。 資料包是訊息的基本建置組塊，您可以在資料包的最上層建立自己的通訊協定，其中包括可靠的通訊協定和安全的通訊協定。 用戶端資料包通道會實作 <xref:System.ServiceModel.Channels.IOutputChannel> 介面，服務資料包通道則會實作 <xref:System.ServiceModel.Channels.IInputChannel> 介面。  
   
 -   要求-回應 (<xref:System.ServiceModel.Channels.IRequestChannel> 和 <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33805885"
  ![選擇訊息交換模式](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
 三個基本訊息交換模式。 從上到下：資料包、要求-回應及雙工。  
   
- 每個 Mep 都能支援*工作階段*。 工作階段 (以及 <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> 型別的 <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType> 實作) 會使在通道中傳送與接收的所有訊息相互關聯。 要求-回應模式是獨立的兩個訊息工作階段，因為要求與回覆是相互關聯的。 相較之下，支援工作階段的要求-回應模式，則表示在通道上的所有要求/回應組合都與彼此相互關聯。 這樣您就可以從總計六個的 MEP 中進行選擇：  
+ 也可以支援每個 Mep*工作階段*。 工作階段 (以及 <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> 型別的 <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType> 實作) 會使在通道中傳送與接收的所有訊息相互關聯。 要求-回應模式是獨立的兩個訊息工作階段，因為要求與回覆是相互關聯的。 相較之下，支援工作階段的要求-回應模式，則表示在通道上的所有要求/回應組合都與彼此相互關聯。 這樣您就可以從總計六個的 MEP 中進行選擇：  
   
 -   資料包  
   
@@ -92,5 +92,5 @@ ms.locfileid: "33805885"
   
 -   當某一端在您的通道上呼叫 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 時，立即終止工作階段而不執行 I/O。 同樣地，這可能表示不進行任何動作，或是牽涉到中止網路連線或其他一些資源。  
   
-## <a name="see-also"></a>另請參閱  
- [通道模型概觀](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+## <a name="see-also"></a>另請參閱
+- [通道模型概觀](../../../../docs/framework/wcf/extending/channel-model-overview.md)
