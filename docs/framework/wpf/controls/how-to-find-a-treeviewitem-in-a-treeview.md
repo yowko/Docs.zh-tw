@@ -1,5 +1,5 @@
 ---
-title: 如何：在 TreeView 中尋找 TreeViewItem
+title: HOW TO：在 TreeView 中尋找 TreeViewItem
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,38 +8,38 @@ helpviewer_keywords:
 - TreeView control [WPF], finding a TreeViewItem
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-ms.openlocfilehash: cff931312e6bc6db5ae5f26c0db80ad2f43825f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bce4f059e76b0ebea29b023eba2e9e2f59813035
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636023"
 ---
-# <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>如何：在 TreeView 中尋找 TreeViewItem
-<xref:System.Windows.Controls.TreeView>控制項提供便利的方式顯示階層式資料。 如果您<xref:System.Windows.Controls.TreeView>繫結至資料來源，<xref:System.Windows.Controls.TreeView.SelectedItem%2A>屬性提供便利的方式，讓您快速擷取選取的資料物件。 它通常是最佳選擇使用基礎資料物件，但有時候您可能需要以程式設計方式操作的資料包含<xref:System.Windows.Controls.TreeViewItem>。 例如，您可能需要以程式設計方式展開<xref:System.Windows.Controls.TreeViewItem>，或選取不同的項目中<xref:System.Windows.Controls.TreeView>。  
+# <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>HOW TO：在 TreeView 中尋找 TreeViewItem
+<xref:System.Windows.Controls.TreeView>控制項提供便利的方式，來顯示階層式資料。 如果您<xref:System.Windows.Controls.TreeView>繫結至資料來源，<xref:System.Windows.Controls.TreeView.SelectedItem%2A>屬性提供便利的方式，讓您快速擷取選取的資料物件。 通常最好使用基礎資料物件中，但有時候您可能需要以程式設計方式操作的資料包含<xref:System.Windows.Controls.TreeViewItem>。 例如，您可能需要以程式設計方式展開<xref:System.Windows.Controls.TreeViewItem>，或選取不同的項目中<xref:System.Windows.Controls.TreeView>。  
   
- 若要尋找<xref:System.Windows.Controls.TreeViewItem>包含特定資料物件，則必須周遊的每個層級<xref:System.Windows.Controls.TreeView>。 中的項目<xref:System.Windows.Controls.TreeView>也都可以虛擬化來改善效能。 在案例中可能會虛擬化項目，您也必須了解<xref:System.Windows.Controls.TreeViewItem>檢查它是否包含資料的物件。  
+ 若要尋找<xref:System.Windows.Controls.TreeViewItem>，其中包含特定的資料物件，則必須周遊的每個層級<xref:System.Windows.Controls.TreeView>。 中的項目<xref:System.Windows.Controls.TreeView>也都可以虛擬化來改善效能。 在案例中可能會虛擬化項目，您也必須了解<xref:System.Windows.Controls.TreeViewItem>來檢查它是否包含資料的物件。  
   
 ## <a name="example"></a>範例  
   
 ## <a name="description"></a>描述  
- 下列範例會搜尋<xref:System.Windows.Controls.TreeView>的特定物件，並傳回所含之物件的<xref:System.Windows.Controls.TreeViewItem>。 範例會確保每個<xref:System.Windows.Controls.TreeViewItem>具現化，而可以搜尋其子項目。 這個範例也適用於如果<xref:System.Windows.Controls.TreeView>不使用虛擬化的項目。  
+ 下列範例會搜尋<xref:System.Windows.Controls.TreeView>針對特定物件，並傳回包含之物件的<xref:System.Windows.Controls.TreeViewItem>。 此範例可確保每個<xref:System.Windows.Controls.TreeViewItem>會具現化，而可以搜尋其子項目。 此範例也適用於如果<xref:System.Windows.Controls.TreeView>不會使用虛擬化的項目。  
   
 > [!NOTE]
->  下列範例適用於任何<xref:System.Windows.Controls.TreeView>，不論基礎資料模型和搜尋每個<xref:System.Windows.Controls.TreeViewItem>直到找到的物件。 另一個有較佳的效能的技術是搜尋指定的物件的資料模型、 追蹤資料階層架構中的位置，並找出對應<xref:System.Windows.Controls.TreeViewItem>中<xref:System.Windows.Controls.TreeView>。 不過，有更佳的效能的技術需要資料模型的知識，而且無法一般化任何給定的<xref:System.Windows.Controls.TreeView>。  
+>  下列範例適用於任何<xref:System.Windows.Controls.TreeView>不論基礎資料模型，並搜尋每個<xref:System.Windows.Controls.TreeViewItem>直到找到的物件。 具有較佳的效能的另一個方法是搜尋指定的物件的資料模型、 追蹤內資料階層中，其位置，並找出對應<xref:System.Windows.Controls.TreeViewItem>在<xref:System.Windows.Controls.TreeView>。 不過，有較佳的效能的技巧需要資料模型的知識，而且無法在任何給定的一般化<xref:System.Windows.Controls.TreeView>。  
   
 ## <a name="code"></a>程式碼  
  [!code-csharp[TreeViewFindTVI#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[TreeViewFindTVI#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#1)]  
   
- 先前的程式碼依賴自訂<xref:System.Windows.Controls.VirtualizingStackPanel>可公開方法，名為`BringIntoView`。 下列程式碼會定義自訂<xref:System.Windows.Controls.VirtualizingStackPanel>。  
+ 先前的程式碼依賴自訂<xref:System.Windows.Controls.VirtualizingStackPanel>公開一個名為方法`BringIntoView`。 下列程式碼會定義自訂<xref:System.Windows.Controls.VirtualizingStackPanel>。  
   
  [!code-csharp[TreeViewFindTVI#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#2)]
  [!code-vb[TreeViewFindTVI#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#2)]  
   
- 下列 XAML 顯示如何建立<xref:System.Windows.Controls.TreeView>使用自訂<xref:System.Windows.Controls.VirtualizingStackPanel>。  
+ 下列 XAML 示範如何建立<xref:System.Windows.Controls.TreeView>使用自訂<xref:System.Windows.Controls.VirtualizingStackPanel>。  
   
  [!code-xaml[TreeViewFindTVI#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
-## <a name="see-also"></a>另請參閱  
- [改善 TreeView 的效能](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)
+## <a name="see-also"></a>另請參閱
+- [改善 TreeView 的效能](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)

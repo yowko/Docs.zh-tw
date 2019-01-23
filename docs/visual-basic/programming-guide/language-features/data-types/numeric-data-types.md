@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 6578a410e389a313b0bad70f043691240e288887
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1188e8288bb73a49acc3e3bf0f72e3ac4fef5f7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636404"
 ---
 # <a name="numeric-data-types-visual-basic"></a>數字資料類型 (Visual Basic)
 Visual Basic 提供數個*數值資料型別*來處理各種表示相互轉換的數字。 *整數*型別代表只有整數 （正數、 負數和零），並*整數*類型表示的整數和小數部分的數字。  
@@ -78,9 +78,9 @@ Visual Basic 提供數個*數值資料型別*來處理各種表示相互轉換�
 ### <a name="small-fractional-numbers"></a>最小分數  
  如果您不需要的全套`Double`資料類型，您可以使用`Single`資料型別，可保存從-3.4028235E + 38 到 3.4028235E + 38 浮點數。 最小的範圍為`Single`變數是-1.401298E-45 的負數值，以及從 1.401298E-45 的正數值。 如果您有非常大量的保留小的浮點數的變數時，common language runtime 可以有時會儲存您`Single`變數更有效率且節省記憶體耗用量。  
   
-## <a name="see-also"></a>另請參閱  
- [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [字元資料類型](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- [其他資料類型](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
- [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [操作說明：呼叫使用不帶正負號類型的 Windows 函式](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+## <a name="see-also"></a>另請參閱
+- [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [字元資料類型](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
+- [其他資料類型](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)
+- [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [如何：呼叫使用不帶正負號類型的 Windows 函式](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)

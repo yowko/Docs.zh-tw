@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunction2 Interface1
+title: ICorDebugFunction2 介面 1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunction2
@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d765f87e36c98b5f664e84d85b883bc949fccf54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 190e2323fb07dbca6e156d7a24397997e54b6da9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540789"
 ---
-# <a name="icordebugfunction2-interface1"></a>ICorDebugFunction2 Interface1
-以邏輯方式擴充 ICorDebugFunction 介面 Just My Code 逐步執行偵錯提供支援，這會略過的非使用者程式碼。  
+# <a name="icordebugfunction2-interface1"></a>ICorDebugFunction2 介面 1
+以邏輯方式擴充 ICorDebugFunction 介面以支援 Just My Code 逐步執行偵錯，這會略過非使用者程式碼。  
   
 ## <a name="methods"></a>方法  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33415330"
 |------------|-----------------|  
 |[EnumerateNativeCode 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-enumeratenativecode-method.md)|（尚未實作）。取得包含此 ICorDebugFunction2 物件所參考的函式中的原生程式碼陳述式 ICorDebugCodeEnum 介面指標。|  
 |[GetJMCStatus 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getjmcstatus-method.md)|取得值，指出是否要將此函式標記為使用者程式碼。|  
-|[GetVersionNumber 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)|取得此函式的編輯後繼續版本。|  
+|[GetVersionNumber 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)|取得此函式的 編輯後繼續版本。|  
 |[SetJMCStatus 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-setjmcstatus-method.md)|將此函式標示為 Just My Code 逐步執行。|  
   
 ## <a name="remarks"></a>備註  
@@ -41,13 +41,13 @@ ms.locfileid: "33415330"
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

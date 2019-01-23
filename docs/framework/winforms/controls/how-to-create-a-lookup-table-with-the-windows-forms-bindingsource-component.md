@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows Forms BindingSource 元件建立查閱資料表
+title: HOW TO：使用 Windows Forms BindingSource 元件建立查閱資料表
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 83a34c9d1a4b3d1c2e9950d3c5427567022326b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535580"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539892"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows Forms BindingSource 元件建立查閱資料表
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>HOW TO：使用 Windows Forms BindingSource 元件建立查閱資料表
 查閱資料表是具有資料行的資料表，而此資料行會從相關資料表的記錄中顯示資料。 在下列程序中，會使用 <xref:System.Windows.Forms.ComboBox> 控制項顯示從父資料表到子資料表具有外部索引鍵關聯性的欄位。  
   
  為了協助您設想這兩個資料表與此種關聯性，以下是父資料表和子資料表的範例：  
@@ -89,10 +89,10 @@ ms.locfileid: "33535580"
   
 7.  將 <xref:System.Windows.Forms.BindingNavigator> 控制項繫結至子資料表的 <xref:System.Windows.Forms.BindingSource> (例如 `OrdersBindingSource`)。  
   
-8.  從子資料表的 <xref:System.Windows.Forms.ComboBox> (例如 <xref:System.Windows.Forms.BindingNavigator>)，將 <xref:System.Windows.Forms.BindingSource> 和 `OrdersBindingSource` 以外的控制項繫結至您想要顯示的詳細資料欄位。  
+8.  從子資料表的 <xref:System.Windows.Forms.ComboBox> (例如 <xref:System.Windows.Forms.BindingNavigator>)，將 <xref:System.Windows.Forms.BindingSource> 和 `OrdersBindingSource` 以外的控制項繫結程序至您想要顯示的詳細資料欄位。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.BindingSource>  
- [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [ComboBox 控制項](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
- [將控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.BindingSource>
+- [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [ComboBox 控制項](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [將控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

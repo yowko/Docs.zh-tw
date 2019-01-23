@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5fca698adc4d08d805fec2ff80af377366674b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a830a4cc881912d52ec33959104957d0b858b16a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539463"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName 方法
 列舉 MemberDef 語彙基元，其代表具有指定名稱之指定類型成員。  
@@ -51,16 +51,16 @@ HRESULT EnumMembersWithName (
  [in]列舉值的範圍限制成員名稱。  
   
  `rMembers`  
- [out]陣列，用來儲存 memberdef 語彙基元。  
+ [out]陣列，用來儲存 MemberDef 語彙基元。  
   
  `cMax`  
  [in] `rMembers` 陣列的大小上限。  
   
  `pcTokens`  
- [out]Memberdef 語彙基元中傳回的實際數目`rMembers`。  
+ [out]MemberDef 語彙基元中傳回的實際數目`rMembers`。  
   
 ## <a name="remarks"></a>備註  
- 這個方法會列舉欄位和方法，但沒有屬性或事件。 不同於[imetadataimport:: Enummembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)，`EnumMembersWithName`捨棄不具有指定的名稱的所有欄位和成員 token。  
+ 這個方法會列舉欄位和方法，但沒有屬性或事件。 不同於[imetadataimport:: Enummembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)，`EnumMembersWithName`捨棄並沒有指定的名稱的所有欄位和成員 token。  
   
 ## <a name="return-value"></a>傳回值  
   
@@ -70,14 +70,14 @@ HRESULT EnumMembersWithName (
 |`S_FALSE`|沒有列舉 MemberDef 語彙基元。 在此情況下，`pcTokens`為零。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

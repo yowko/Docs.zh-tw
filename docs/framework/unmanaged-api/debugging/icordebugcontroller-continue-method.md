@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 529a65285203ac831e1bcab9dc1bea69ac28a282
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 115a998f8be233c38efac1a301b4b24b7d861662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412561"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540178"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue 方法
-之後繼續執行的 managed 執行緒的呼叫[停止方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)。  
+之後繼續執行的受管理的執行緒呼叫[Stop 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,25 +37,25 @@ HRESULT Continue (
   
 #### <a name="parameters"></a>參數  
  `fIsOutOfBand`  
- [in]設定為`true`繼續從超出訊號範圍的事件; 否則設為`false`。  
+ [in]設定為`true`如果超出訊號範圍的事件，從繼續執行，否則設定為`false`。  
   
 ## <a name="remarks"></a>備註  
- `Continue` 若要在呼叫之後繼續進行程序`ICorDebugController::Stop`方法。  
+ `Continue` 若要在呼叫之後繼續進行的程序`ICorDebugController::Stop`方法。  
   
- 在執行混合模式偵錯時，請勿呼叫`Continue`上 Win32 事件執行緒除非您要繼續從超出訊號範圍的事件。  
+ 在執行混合模式偵錯時，請勿呼叫`Continue`win32 事件執行緒除非您要繼續從超出訊號範圍的事件。  
   
- *頻外事件*managed 的事件或在偵錯工具支援與受管理狀態的處理程序互動的一般 unmanaged 的事件。 在此情況下，偵錯工具會接收[icordebugunmanagedcallback:: Debugevent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md)回呼其`fOutOfBand`參數設定為`false`。  
+ *頻內事件*managed 的事件或一般的非受控的事件期間偵錯工具支援互動的程序的受管理狀態。 在此情況下，偵錯工具收到[icordebugunmanagedcallback:: Debugevent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md)具有回呼其`fOutOfBand`參數設定為`false`。  
   
- *的頻外事件*是 unmanaged 期間互動的程序的受管理狀態時，不可能因為發生事件停止處理序的事件。 在此情況下，偵錯工具會接收`ICorDebugUnmanagedCallback::DebugEvent`回呼其`fOutOfBand`參數設定為`true`。  
+ *頻外事件*是互動的程序的受管理狀態的期間不可能因為事件而停止處理程序時未受管理的事件。 在此情況下，偵錯工具收到`ICorDebugUnmanagedCallback::DebugEvent`具有回呼其`fOutOfBand`參數設為`true`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- 
+## <a name="see-also"></a>另請參閱
+

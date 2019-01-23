@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540659"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 本文針對大型 .NET Framework 應用程式或處理大量資料 (例如檔案或資料庫) 的應用程式，提供可提升其效能的提示。 這些提示來自於以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，本文包含數個 C# 編譯器的實際範例。 
@@ -463,12 +463,12 @@ class Compilation { /*...*/
   
 ## <a name="see-also"></a>另請參閱
 
-- [本主題的簡報影片](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
-- [效能分析的初級開發人員指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
-- [效能](../../../docs/framework/performance/index.md)  
-- [.NET 效能祕訣](https://msdn.microsoft.com/library/ms973839.aspx)  
-- [Windows Phone Performance Analysis tool 工具](https://msdn.microsoft.com/magazine/hh781024.aspx)  
-- [尋找與 Visual Studio Profiler 的應用程式瓶頸](https://msdn.microsoft.com/magazine/cc337887.aspx)  
-- [Channel 9 PerfView 教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)  
+- [本主題的簡報影片](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
+- [效能分析的初級開發人員指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [效能](../../../docs/framework/performance/index.md)
+- [.NET 效能祕訣](https://msdn.microsoft.com/library/ms973839.aspx)
+- [Windows Phone Performance Analysis tool 工具](https://msdn.microsoft.com/magazine/hh781024.aspx)
+- [尋找與 Visual Studio Profiler 的應用程式瓶頸](https://msdn.microsoft.com/magazine/cc337887.aspx)
+- [Channel 9 PerfView 教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET 編譯器平台 SDK](../../csharp/roslyn-sdk/index.md)
 - [在 GitHub 上的 dotnet/roslyn 存放庫](https://github.com/dotnet/roslyn)

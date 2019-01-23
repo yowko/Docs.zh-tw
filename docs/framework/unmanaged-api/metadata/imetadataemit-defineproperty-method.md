@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c250a577f2ccdbbfefb35225b880c0e4317db36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 71cdfc6b05288fef020e1aed1870a9a155588d47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543077"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 方法
-建立指定類型的屬性定義具有指定`get`和`set`方法存取子，並取得該屬性定義的語彙基元。  
+建立具有指定的屬性定義指定的型別，如`get`和`set`方法存取子，並取得該屬性定義的語彙基元。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,13 +57,13 @@ HRESULT DefineProperty (
  [in]屬性的旗標。  
   
  `pvSig`  
- [in]屬性的簽章。  
+ [in]屬性簽章。  
   
  `cbSig`  
  [in]中的位元組計數`pvSig`。  
   
  `dwCPlusTypeFlag`  
- [in]屬性的預設值的類型。  
+ [in]屬性的預設值的型別。  
   
  `pValue`  
  [in]屬性的預設值。  
@@ -72,26 +72,26 @@ HRESULT DefineProperty (
  [in]中的字元 (Unicode) 的計數`pValue`。  
   
  `mdSetter`  
- [in]所設定的屬性值的方法。  
+ [in]設定屬性值的方法。  
   
  `mdGetter`  
  [in]取得屬性值的方法。  
   
  `rmdOtherMethods[]`  
- [in]其他方法與屬性相關聯的陣列。 終止與陣列`mdTokenNil`。  
+ [in]其他方法與屬性相關聯的陣列。 終止陣列`mdTokenNil`。  
   
  `pmdProp`  
- [out]`mdProperty`指派的語彙基元。  
+ [out]`mdProperty`指派權杖。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

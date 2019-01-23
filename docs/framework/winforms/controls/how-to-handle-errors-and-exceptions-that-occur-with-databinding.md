@@ -1,5 +1,5 @@
 ---
-title: 如何：處理資料繫結時所發生的錯誤和例外狀況
+title: HOW TO：處理錯誤和資料繫結時所發生例外狀況
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], error handling
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
-ms.openlocfilehash: d0bb41da69bf1cb87f052c11d3a7d1f1783320ad
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3fc40bac6a0b75680b677076e4cfaffd167ddc21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631044"
 ---
-# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>如何：處理資料繫結時所發生的錯誤和例外狀況
+# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>HOW TO：處理錯誤和資料繫結時所發生例外狀況
 當您將它們繫結至控制項時，有時候基礎商務物件會發生例外狀況和錯誤。 您可以攔截這些錯誤和例外狀況然後復原，或藉由為特定的 <xref:System.Windows.Forms.Binding> 、 <xref:System.Windows.Forms.BindingSource> 或 <xref:System.Windows.Forms.CurrencyManager> 元件處理 <xref:System.Windows.Forms.Binding.BindingComplete> 事件，將錯誤資訊傳遞給使用者。  
   
 ## <a name="example"></a>範例  
@@ -37,9 +37,9 @@ ms.locfileid: "44196851"
   
 -   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[How to:編譯並執行完整的 Windows Form 程式碼範例使用 Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.BindingSource.BindingComplete?displayProperty=nameWithType>  
- [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.BindingSource.BindingComplete?displayProperty=nameWithType>
+- [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)

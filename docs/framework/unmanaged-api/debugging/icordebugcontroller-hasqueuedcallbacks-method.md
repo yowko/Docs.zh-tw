@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eba265b727d00690ab77c6ae831e954d59df7c50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9e650b3435bffd8d40bba24100c13f5071fa5dc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630836"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks 方法
-取得值，指出是否針對指定的執行緒目前佇列任何受管理的回呼。  
+取得值，指出是否任何受管理的回呼目前在佇列中等待指定的執行緒。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,23 +41,23 @@ HRESULT HasQueuedCallbacks (
  [in]表示執行緒 」 ICorDebugThread 」 物件的指標。  
   
  `pbQueued`  
- [out]值的指標`true`如果任何受管理的回呼目前佇列指定的執行緒，否則`false`。  
+ [out]為值的指標`true`如果任何受管理的回呼目前針對指定的執行緒已排入佇列，否則`false`。  
   
- 如果指定 null`pThread`參數，`HasQueuedCallbacks`會傳回`true`如果目前沒有任何執行緒排入佇列 managed 回撥。  
+ 如果指定 null`pThread`參數，`HasQueuedCallbacks`會傳回`true`如果目前沒有受管理的回呼排入佇列的任何執行緒。  
   
 ## <a name="remarks"></a>備註  
- 回呼會分派的一次，每次[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)呼叫。 偵錯工具可以檢查這個旗標，如果想要報告多個同時發生的偵錯事件。  
+ 回呼會在時間內，每次分派的一個[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)呼叫。 偵錯工具可以檢查此旗標，如果想要報告多個同時進行的偵錯事件。  
   
- 當偵錯事件會排入佇列時，它們已經發生，因此偵錯工具必須清空整個佇列，以確定偵錯項目狀態。 (呼叫`ICorDebugController::Continue`清空佇列。)例如，如果佇列包含兩個執行緒上的偵錯事件*X*，和偵錯工具暫止的執行緒*X*之後第一個偵錯事件，然後呼叫`ICorDebugController::Continue`，第二個偵錯事件執行緒*X*會分派，雖然執行緒已經暫止。  
+ 當偵錯事件會排入佇列時，它們已經發生，因此偵錯工具必須清空的偵錯工具的狀態，確定整個佇列。 (呼叫`ICorDebugController::Continue`清空佇列。)比方說，如果佇列包含兩個執行緒上的偵錯事件*X*，以及偵錯工具暫止的執行緒*X*之後第一個偵錯事件，然後呼叫`ICorDebugController::Continue`，第二個偵錯事件執行緒*X*雖然已暫停的執行緒會分派。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- 
+## <a name="see-also"></a>另請參閱
+

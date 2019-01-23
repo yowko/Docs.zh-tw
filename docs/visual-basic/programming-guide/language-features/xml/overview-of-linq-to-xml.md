@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 65df48112834be04dc8d3b62b8b163316b06c4a6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 13997b8588e11eb3600a6fd838e0514069d0e62a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421239"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539021"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic 中的 LINQ to XML 概觀
 Visual Basic 提供的支援[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]透過 XML 常值和 XML 軸屬性。 這可讓您使用熟悉、 便利的語法，在 Visual Basic 程式碼中使用的 XML。 *XML 常值*可讓您直接在您的程式碼中包含 XML。 *XML 軸屬性*讓您存取子節點、 子代節點和 XML 常值的屬性。 如需詳細資訊，請參閱 < [XML 常值概觀](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)並[Visual Basic 中的存取 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)。  
@@ -61,8 +61,8 @@ Visual Basic 提供的支援[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)
   
  [!code-vb[VbXMLSamples#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_6.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [在 Visual Basic 中建立 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [在 Visual Basic 中存取 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
- [在 Visual Basic 中管理 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+## <a name="see-also"></a>另請參閱
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [在 Visual Basic 中建立 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [在 Visual Basic 中存取 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [在 Visual Basic 中管理 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)

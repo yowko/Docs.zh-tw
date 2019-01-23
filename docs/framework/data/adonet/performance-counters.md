@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 3e66e4f34afcf8cba03c60c92b5b69d8ca01961b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: a17d0b2382f105bb6299386e45a6746e05c39feb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539060"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 中的效能計數器
 ADO.NET 2.0 導入了對效能計數器的擴充支援，其中包含對 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 的支援。 舊版 ADO.NET 中提供的 <xref:System.Data.SqlClient> 效能計數器已被本主題中討論的新效能計數器取代。 您可以使用 ADO.NET 效能計數器來監控應用程式的狀態及其使用的連接資源。 效能計數器可藉由「Windows 效能監視器」來進行監視，或可藉由 <xref:System.Diagnostics.PerformanceCounter> 命名空間 (Namespace) 中的 <xref:System.Diagnostics> 類別以程式設計的方式存取。  
@@ -24,16 +24,16 @@ ADO.NET 2.0 導入了對效能計數器的擴充支援，其中包含對 <xref:S
 |`HardDisconnectsPerSecond`|每秒鐘對資料庫伺服器所進行的中斷連接數目。|  
 |`NumberOfActiveConnectionPoolGroups`|使用中的唯一連接集區群組的數目。 這個計數器是由 AppDomain 中找到的唯一連接字串數目所控制。|  
 |`NumberOfActiveConnectionPools`|連接集區的總數。|  
-|`NumberOfActiveConnections`|目前使用中的現用連接的數目。 **注意：** 預設不啟用此效能計數器。 若要啟用這個效能計數器，請參閱[啟動依預設關閉的計數器](#ActivatingOffByDefault)。|  
-|`NumberOfFreeConnections`|連接集區中可用的連接數目。 **注意：** 預設不啟用此效能計數器。 若要啟用這個效能計數器，請參閱[啟動依預設關閉的計數器](#ActivatingOffByDefault)。|  
+|`NumberOfActiveConnections`|目前使用中的現用連接的數目。 **注意：** 這個效能計數器預設未啟用。 若要啟用這個效能計數器，請參閱[啟動依預設關閉的計數器](#ActivatingOffByDefault)。|  
+|`NumberOfFreeConnections`|連接集區中可用的連接數目。 **注意：** 這個效能計數器預設未啟用。 若要啟用這個效能計數器，請參閱[啟動依預設關閉的計數器](#ActivatingOffByDefault)。|  
 |`NumberOfInactiveConnectionPoolGroups`|標示為清除的唯一連接集區群組的數目。 這個計數器是由 AppDomain 中找到的唯一連接字串數目所控制。|  
 |`NumberOfInactiveConnectionPools`|最近未有任何活動且正等候處置 (Dispose) 的非現用連接集區數目。|  
 |`NumberOfNonPooledConnections`|尚未共用的現用連接的數目。|  
 |`NumberOfPooledConnections`|正由連接共用基礎結構所管理的現用連接的數目。|  
 |`NumberOfReclaimedConnections`|已透過記憶體回收作業回收的連接數目，其中 `Close` 或 `Dispose` 並非由應用程式呼叫。 未明確關閉或處置連接都會損及效能。|  
 |`NumberOfStasisConnections`|目前正等候動作完成因此無法提供應用程式使用的連接數目。|  
-|`SoftConnectsPerSecond`|正從連接集區提取的現用連接的數目。 **注意：** 預設不啟用此效能計數器。 若要啟用這個效能計數器，請參閱[啟動依預設關閉的計數器](#ActivatingOffByDefault)。|  
-|`SoftDisconnectsPerSecond`|正傳回至連接集區的現用連接的數目。 **注意：** 預設不啟用此效能計數器。 若要啟用這個效能計數器，請參閱[啟動依預設關閉的計數器](#ActivatingOffByDefault)。|  
+|`SoftConnectsPerSecond`|正從連接集區提取的現用連接的數目。 **注意：** 這個效能計數器預設未啟用。 若要啟用這個效能計數器，請參閱[啟動依預設關閉的計數器](#ActivatingOffByDefault)。|  
+|`SoftDisconnectsPerSecond`|正傳回至連接集區的現用連接的數目。 **注意：** 這個效能計數器預設未啟用。 若要啟用這個效能計數器，請參閱[啟動依預設關閉的計數器](#ActivatingOffByDefault)。|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>連接集區群組和連接集區  
  在使用「Windows 驗證」(整合式安全性) 時，必須同時監控 `NumberOfActiveConnectionPoolGroups` 和 `NumberOfActiveConnectionPools` 效能計數器。 原因是連接集區群組會對應至唯一的連接字串。 使用整合式安全性時，連接集區會對應至連接字串，並針對個別的 Windows 識別 (Identity) 額外建立獨立的集區。 例如，如果 Fred 和 Julie 位於相同的 AppDomain 內，且兩者都使用連接字串 `"Data Source=MySqlServer;Integrated Security=true"`，則會針對連接字串建立連接集區群組，並針對 Fred 和 Julie 建立兩個額外的集區。 如果 John 和 Martha 使用連接字串具有相同的 SQL Server 登入`"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`，然後建立單一集區**lowPrivUser**身分識別。  
@@ -394,10 +394,10 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [OLE DB、ODBC 和 Oracle 連接共用](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- [適用於 ASP.NET 的效能計數器](https://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)  
- [執行階段分析](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)  
- [監視效能臨界值簡介](https://msdn.microsoft.com/library/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [OLE DB、ODBC 和 Oracle 連接共用](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [適用於 ASP.NET 的效能計數器](https://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)
+- [執行階段分析](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+- [監視效能臨界值簡介](https://msdn.microsoft.com/library/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

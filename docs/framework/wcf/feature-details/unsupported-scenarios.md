@@ -2,12 +2,12 @@
 title: 不支援的案例
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 2e44cbf159d5df724a5213648b28d952f49b8e8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845673"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631255"
 ---
 # <a name="unsupported-scenarios"></a>不支援的案例
 基於各種原因，Windows Communication Foundation (WCF) 不支援某些特定的安全性案例。 比方說， [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 不會實作 SSPI 或 Kerberos 驗證通訊協定，並因此 WCF 不支援該平台上，執行使用 Windows 驗證的服務。 執行 WCF 只有 Windows XP Home Edition 下的時，會支援其他驗證機制，例如使用者名稱/密碼和 HTTP/HTTPS 整合式的驗證。  
@@ -28,9 +28,9 @@ ms.locfileid: "48845673"
   
 -   建立以狀態為基礎的安全性內容權杖 (SCT) (根據預設會停用建立作業)。  
   
- 您只能透過自訂繫結來建立以狀態為基礎的 SCT ( 如需詳細資訊，請參閱 <<c0> [ 如何： 建立安全工作階段的安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)在程式碼中，您可以使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 方法來建立安全性繫結項目 (可能是 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>)，並將 `requireCancellation` 參數設為 `false`，藉此啟用權杖。 此參數會參考 SCT 的快取。 將值設為 `false` 會啟用以狀態為基礎的 SCT 功能。  
+ 您只能透過自訂繫結來建立以狀態為基礎的 SCT ( 如需詳細資訊，請參閱[＜How to：建立安全性內容權杖的安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)在程式碼中，您可以使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 方法來建立安全性繫結項目 (可能是 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>)，並將 `requireCancellation` 參數設為 `false`，藉此啟用權杖。 此參數會參考 SCT 的快取。 將值設為 `false` 會啟用以狀態為基礎的 SCT 功能。  
   
- 或者，在組態中，藉此啟用權杖建立 <`customBinding`>，然後再新增 <`security`> 項目，並設定`authenticationMode`屬性設為 SecureConversation 並`requireSecurityContextCancellation`屬性設定為`true`。  
+ 另外，您可以在組態中建立 <`customBinding`> 並新增 <`security`> 項目，然後將 `authenticationMode` 屬性設為 SecureConversation 並將 `requireSecurityContextCancellation` 屬性設為 `true`，藉此啟用權杖。  
   
 > [!NOTE]
 >  執行作業之前有一些特定需求： 例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 將建立會變成 Windows 識別的繫結項目，但是不會建立 SCT。 因此，您可以將其與 `Required` 上的 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 選項搭配使用。  
@@ -42,7 +42,7 @@ ms.locfileid: "48845673"
  如果模擬的內容沒有載入組件的存取權，而且同時也是 Common Language Runtime (CLR) 第一次嘗試載入該 AppDomain 的組件，則 <xref:System.AppDomain> 會快取失敗結果。 即使還原模擬後，後續的組件載入嘗試一樣會失敗，而且即使還原後的內容具有載入組件的存取權也一樣。 這是因為 CLR 並未在使用者內容變更之後重新嘗試載入。 您必須重新啟動應用程式定義域，從失敗中進行還原。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 類別的 <xref:System.ServiceModel.Security.WindowsClientCredential><xref:System.Security.Principal.TokenImpersonationLevel.Identification>屬性預設值為 。 在大多數情況下，識別層級的模擬內容沒有載入任何其他組件的權限。 這是預設值，因此您應該要瞭解這個常見的情況。 當模擬的處理序沒有 `SeImpersonate` 權限時，一樣會發生識別層級的模擬情況。 如需詳細資訊，請參閱 <<c0> [ 委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+>  <xref:System.ServiceModel.Security.WindowsClientCredential> 類別的 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>屬性預設值為 <xref:System.Security.Principal.TokenImpersonationLevel.Identification>。 在大多數情況下，識別層級的模擬內容沒有載入任何其他組件的權限。 這是預設值，因此您應該要瞭解這個常見的情況。 當模擬的處理序沒有 `SeImpersonate` 權限時，一樣會發生識別層級的模擬情況。 如需詳細資訊，請參閱 <<c0> [ 委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ### <a name="delegation-requires-credential-negotiation"></a>委派需要認證交涉  
  若要將 Kerberos 驗證通訊協定與委派搭配使用，您必須實作具有認證交涉的 Kerberos 通訊協定 (有時也稱做「多線」(Multi-leg) 或「多步驟」(Multi-step) Kerberos)。 如果您實作不具有認證交涉的 Kerberos 驗證 (有時也稱做「單次」(One-shot) 或「單支線」(Single-leg) Kerberos)，則會擲回例外狀況。 如需如何實作認證交涉的詳細資訊，請參閱[偵錯 Windows 驗證錯誤](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)。  
@@ -62,7 +62,7 @@ ms.locfileid: "48845673"
  與 FIPS 相容的 AES 加密在識別層級模擬底下的雙工回呼中無法發揮作用。  
   
 ### <a name="cngksp-certificates"></a>CNG/KSP 憑證  
- *密碼編譯 API: Next Generation (CNG)* 會長期取代 CryptoAPI。 此 API 可用於 unmanaged 程式碼中[!INCLUDE[wv](../../../../includes/wv-md.md)]，[!INCLUDE[lserver](../../../../includes/lserver-md.md)]和更新版本的 Windows 版本。  
+ *密碼編譯 API:Next Generation (CNG)* 會長期取代 CryptoAPI。 此 API 可用於 unmanaged 程式碼中[!INCLUDE[wv](../../../../includes/wv-md.md)]，[!INCLUDE[lserver](../../../../includes/lserver-md.md)]和更新版本的 Windows 版本。  
   
  .NET framework 4.6.1 和更早版本不支援這些憑證因為它們使用舊版的 CryptoAPI 來處理 CNG/KSP 憑證。 使用.NET Framework 4.6.1 和更早版本使用這些憑證會導致例外狀況。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48845673"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>如果需要使用 ASP.NET 模擬與 ASP.NET 相容性的話，訊息安全性就會失敗  
  WCF 不支援下列設定的組合，因為它們可以防止用戶端驗證發生：  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模擬已啟用。 這是在 web.config 中藉由設定`impersonate`屬性的 <`identity`> 項目`true`。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模擬已啟用。 在 Web.config 檔案中將 <`identity`> 項目的 `impersonate` 屬性設為 `true`，即可完成此作業。  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 藉由設定啟用相容性模式`aspNetCompatibilityEnabled`的屬性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)到`true`。  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48845673"
   
  解決方式是匯入之後直接在用戶端修改繫結。  
   
-## <a name="see-also"></a>另請參閱  
- [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>另請參閱
+- [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: 615f98bf36d29c1f269d6866b1232ad33a5ae2f2
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 53fc47c7dd26142d2ead49178afefe2775a96580
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543142"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip 子句 (Visual Basic)
 略過集合中指定數目的項目，然後傳回其餘項目。  
@@ -26,7 +26,7 @@ Skip count
   
 ## <a name="parts"></a>組件  
  `count`  
- 必要。 值或評估運算式，以略過序列的項目數目。  
+ 必要項。 值或評估運算式，以略過序列的項目數目。  
   
 ## <a name="remarks"></a>備註  
  `Skip`子句會使查詢，以略過的結果清單開頭的項目，並傳回其餘項目。 略過的項目數由`count`參數。  
@@ -42,11 +42,11 @@ Skip count
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-clause_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查詢](../../../visual-basic/language-reference/queries/index.md)  
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Skip While 子句](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Take 子句](../../../visual-basic/language-reference/queries/take-clause.md)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查詢](../../../visual-basic/language-reference/queries/index.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Skip While 子句](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Take 子句](../../../visual-basic/language-reference/queries/take-clause.md)

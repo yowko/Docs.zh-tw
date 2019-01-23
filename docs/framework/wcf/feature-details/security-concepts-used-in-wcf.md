@@ -2,12 +2,12 @@
 title: 用於 WCF 的安全性概念
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: 9fe27f3f63f8c7fad1a4bbb0975a5255d5a16654
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2dd820d4b6ba38f194074465ac7c1f40289fd928
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541790"
 ---
 # <a name="security-concepts-used-in-wcf"></a>用於 WCF 的安全性概念
 Windows Communication Foundation (WCF) 安全性是已在使用中的概念中建置及部署各種安全性基礎結構。  
@@ -15,7 +15,7 @@ Windows Communication Foundation (WCF) 安全性是已在使用中的概念中�
  WCF 支援一些基礎結構，例如安全通訊端層 (SSL) over HTTP (HTTPS)。 不過，WCF 不僅是只能支援現有安全性基礎結構實作較新的互通安全性標準 （例如 Ws-security) 透過 SOAP 編碼訊息。 不論是使用現有的機制或新的互通標準，兩者都是依據相同的安全性概念。 因此，若要實作應用程式的最佳安全性模型，最重要的是了解現有基礎結構與較新標準所依據的概念。  
   
 ## <a name="introduction-to-security-for-wcf-web-services"></a>WCF Web 服務安全性簡介  
- Microsoft Patterns and Practices 群組所需的 WCF 安全性指引也就是這裡下載撰寫的深入白皮書： [WCF 安全性指南](https://go.microsoft.com/fwlink/?LinkId=210210)。 本白皮書描述基本安全性概念，因為這些概念與 Web 服務、主要 WCF 安全性概念、內部網路應用程式案例，以及網際網路應用程式案例有關。  
+ Microsoft Patterns and Practices 群組所需的 WCF 安全性指引也就是這裡下載撰寫的深入白皮書：[WCF 安全性指南](https://go.microsoft.com/fwlink/?LinkId=210210)。 本白皮書描述基本安全性概念，因為這些概念與 Web 服務、主要 WCF 安全性概念、內部網路應用程式案例，以及網際網路應用程式案例有關。  
   
 ## <a name="industry-wide-security-specifications"></a>業界安全性規格  
   
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) 安全性是已在使用中的概念中�
  X.509 憑證是在安全性應用程式中使用的主要認證形式。 如需 X.509 憑證，請參閱[X.509 公用金鑰憑證](https://go.microsoft.com/fwlink/?LinkId=210213)。 X.509 憑證儲存在憑證存放區中。 執行 Windows 的電腦上有多種憑證存放區，每個存放區都有不同的用途。 如需有關不同存放區的詳細資訊，請參閱[憑證存放區](https://go.microsoft.com/fwlink/?LinkID=87787)。  
   
 ## <a name="web-services-security-specifications"></a>Web 服務安全性規格  
- 系統定義的繫結支援許多常用的 Web 服務安全性規格。 如需完整清單，系統提供繫結和 web 服務規格的支援，請參閱： [Web 服務之互通性繫結所支援的通訊協定](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ 系統定義的繫結支援許多常用的 Web 服務安全性規格。 如需完整清單，系統提供繫結和 web 服務規格的支援，請參閱：[系統提供的互通性繫結所支援的 Web 服務通訊協定](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
   
 ## <a name="access-control-mechanisms"></a>存取控制機制  
  WCF 提供數種方法來控制服務或作業的存取權。 包括  
@@ -46,6 +46,6 @@ Windows Communication Foundation (WCF) 安全性是已在使用中的概念中�
   
  如需有關這些主題，請參閱[存取控制機制](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   
-## <a name="see-also"></a>另請參閱  
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>另請參閱
+- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

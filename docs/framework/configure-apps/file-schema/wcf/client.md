@@ -1,22 +1,22 @@
 ---
-title: '&lt;用戶端&gt;'
+title: '&lt;client&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 24defe7e01603f1b1be3023d07854091335d6c60
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 32fcd9792f674d4ded466f26641690c8ae4328b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540399"
 ---
-# <a name="ltclientgt"></a>&lt;用戶端&gt;
+# <a name="ltclientgt"></a>&lt;client&gt;
 `client` 項目會定義用戶端可連線的端點清單。  
   
  \<system.ServiceModel>  
-\<用戶端 >  
+\<client>  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,8 +41,8 @@ ms.locfileid: "54148639"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<端點 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|包含端點項目的清單，其中的端點項目指定這個用戶端可連線的端點。|  
-|[\<中繼資料 >](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|包含處理中繼資料的設定。|  
+|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|包含端點項目的清單，其中的端點項目指定這個用戶端可連線的端點。|  
+|[\<metadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|包含處理中繼資料的設定。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -72,8 +72,8 @@ ms.locfileid: "54148639"
 </client>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.ClientSection>  
- <xref:System.ServiceModel.Configuration.MetadataElement>  
- [WCF 用戶端組態](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [用戶端](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.ClientSection>
+- <xref:System.ServiceModel.Configuration.MetadataElement>
+- [WCF 用戶端組態](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [用戶端](../../../../../docs/framework/wcf/feature-details/clients.md)

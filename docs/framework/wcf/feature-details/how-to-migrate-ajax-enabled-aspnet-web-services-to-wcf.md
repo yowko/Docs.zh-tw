@@ -2,12 +2,12 @@
 title: HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: cd630fa8a583b5d1efdaefaf899cb6e345e7c7ad
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638284"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF
 本主題概述將基本的 ASP.NET AJAX 服務移轉至對等的 AJAX 啟用 Windows Communication Foundation (WCF) 服務的程序。 它示範如何建立同等功效的 WCF 版本的 ASP.NET AJAX 服務。 這兩項服務可以接著使用並排顯示，或 WCF 服務可以用來取代 ASP.NET AJAX 服務。
@@ -22,7 +22,7 @@ ms.locfileid: "48840910"
 
  在程序之後的範例中，會提供來自本主題中所述程序的程式碼。
 
- 如需有關如何公開透過啟用 AJAX 的端點的 WCF 服務的詳細資訊，請參閱[如何： 使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主題。
+ 如需有關如何公開透過啟用 AJAX 的端點的 WCF 服務的詳細資訊，請參閱[How to:使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主題。
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>若要建立並測試 ASP.NET Web 服務應用程式
 
@@ -36,7 +36,7 @@ ms.locfileid: "48840910"
 
 5.  從**建置**功能表上，選取**建置方案**。
 
-6.  從**偵錯**功能表上，選取**啟動但不偵錯**。
+6.  從 [偵錯] 功能表，選取 [啟動但不偵錯]。
 
 7.  在產生的網頁中，選取 `HelloWorld` 作業。
 
@@ -213,4 +213,4 @@ d.Add("two", 2);
 |逸出字元|一律使用逸出正斜線 (/)；絕不允許使用未逸出的無效 JSON 字元，例如 "\n"。|使用逸出斜線 (/) 做為 DateTime 值。|
 
 ## <a name="see-also"></a>另請參閱
- [如何：使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [如何：使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
