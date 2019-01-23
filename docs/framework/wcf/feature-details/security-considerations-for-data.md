@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5c7451e5e914c372c8631922001cfec5e84a586c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527948"
 ---
 # <a name="security-considerations-for-data"></a>資料的安全性考量
 處理資料時 Windows Communication Foundation (WCF) 中，您必須考慮一些威脅類別。 下表列出與資料處理有關的最重要威脅類別。 WCF 會提供可減輕這些威脅的工具。  
@@ -205,7 +205,7 @@ ms.locfileid: "50195940"
   
 -   套用至型別的<xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性。  
   
--   指定傳回型別清單之方法的 `KnownTypeAttribute` 屬性。  
+-   指定傳回型別清單之方法的`KnownTypeAttribute` 屬性。  
   
 -   `ServiceKnownTypeAttribute` 屬性。  
   
@@ -223,9 +223,9 @@ ms.locfileid: "50195940"
   
  當撰寫傳回已知類型清單的方法時，或將清單直接傳遞至 <xref:System.Runtime.Serialization.DataContractSerializer> 建構函式時，請確保準備清單的程式碼是安全的，並且只在受信任的資料上作業。  
   
- 如果在組態中指定已知類型，請確保組態檔是安全的。 請永遠在組態中使用強式名稱 (藉由指定型別所在之已簽署組件的公開金鑰)，但不指定要載入之型別的版本。 型別載入器會自動選取最新版本 (如果可能)。 如果在組態中指定特定版本，就會有下列風險：型別可能會有在未來版本中可能會修正的安全性弱點，但有弱點的版本仍將會載入，因為它在組態中已明確指定。  
+ 如果在組態中指定已知類型，請確保組態檔是安全的。 請永遠在組態中使用強式名稱 (藉由指定型別所在之已簽署組件的公開金鑰)，但不指定要載入之型別的版本。 型別載入器會自動選取最新版本 (如果可能)。 如果您在組態中指定特定版本，您會執行下列風險：型別可能會有可能在未來的版本中，修正安全性弱點，但仍然會有弱點的版本載入，因為它在組態中明確指定。  
   
- 已知類型太多會有另一種結果： <xref:System.Runtime.Serialization.DataContractSerializer> 會在應用程式定義域中建立序列化/還原序列化程式碼的快取，以及必須序列化和還原序列化之各個型別的項目。 只要應用程式定義域在執行中，便永遠不會清除這個快取。 因此，知道應用程式使用許多已知類型的攻擊者可以造成所有這些類型的還原序列化，導致快取使用不當比例的大量記憶體。  
+ 已知的類型太多會有另一種結果：<xref:System.Runtime.Serialization.DataContractSerializer>建立序列化/還原序列化程式碼的快取在應用程式網域中，針對每種類型，它必須序列化和還原序列化的項目。 只要應用程式定義域在執行中，便永遠不會清除這個快取。 因此，知道應用程式使用許多已知類型的攻擊者可以造成所有這些類型的還原序列化，導致快取使用不當比例的大量記憶體。  
   
 ### <a name="preventing-types-from-being-in-an-unintended-state"></a>防止型別處於非預期的狀態  
  型別可能會有必須強制執行的內部一致性條件約束。 請務必小心，避免在還原序列化期間違反這些條件約束。  
@@ -254,7 +254,7 @@ ms.locfileid: "50195940"
   
 -   請小心使用以 <xref:System.SerializableAttribute> 屬性標示的舊版型別。 其中許多都是設計來使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 遠端處理，只用於受信任的資料。 以此屬性標示之現有型別的設計可能尚未考慮到狀態安全性。  
   
--   就狀態安全性而言，請勿依賴 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性 (Attribute) 的 `DataMemberAttribute` 屬性 (Property) 來保證資料的存在。 資料可能永遠是 `null`、`zero` 或 `invalid`。  
+-   就狀態安全性而言，請勿依賴 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性 (Attribute) 的 `DataMemberAttribute` 屬性 (Property) 來保證資料的存在。 資料可能永遠是 `null`、 `zero`或 `invalid`。  
   
 -   在沒有先驗證之前，絕對不要信任從不受信任的資料來源還原序列化的物件圖形。 每個個別物件可能處於一致性狀態，但是整個物件圖形可能不是。 此外，即使物件圖形保留模式已停用，已還原序列化圖形仍可能有相同物件的多個參照，或是有循環參照。 如需詳細資訊，請參閱 <<c0> [ 序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
@@ -353,8 +353,8 @@ ms.locfileid: "50195940"
   
 -   一般來說，當使用接受配額的元件時，請了解它的安全性含意並設定為安全值。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.XmlDictionaryReader>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [資料合約已知類型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.XmlDictionaryReader>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [資料合約已知類型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
