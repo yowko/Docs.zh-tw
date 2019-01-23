@@ -1,5 +1,5 @@
 ---
-title: 如何：將控制項定位在 Windows Form 上
+title: HOW TO：在 Windows Forms 上的位置控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,40 +15,40 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 6843c22fec964de92c41760f1108d1c83e1f5bf8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 2baf311f04209e988f2f5dd562e247ee13ed59ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607156"
 ---
-# <a name="how-to-position-controls-on-windows-forms"></a><span data-ttu-id="6905a-102">如何：將控制項定位在 Windows Form 上</span><span class="sxs-lookup"><span data-stu-id="6905a-102">How to: Position Controls on Windows Forms</span></span>
-<span data-ttu-id="6905a-103">若要調整控制項的位置，使用 Windows Form 設計工具中，或指定<xref:System.Windows.Forms.Control.Location%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="6905a-103">To position controls, use the Windows Forms Designer, or specify the <xref:System.Windows.Forms.Control.Location%2A> property.</span></span>  
+# <a name="how-to-position-controls-on-windows-forms"></a><span data-ttu-id="dd315-102">HOW TO：在 Windows Forms 上的位置控制項</span><span class="sxs-lookup"><span data-stu-id="dd315-102">How to: Position Controls on Windows Forms</span></span>
+<span data-ttu-id="dd315-103">若要調整控制項的位置，使用 Windows Form 設計工具中，或指定<xref:System.Windows.Forms.Control.Location%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="dd315-103">To position controls, use the Windows Forms Designer, or specify the <xref:System.Windows.Forms.Control.Location%2A> property.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6905a-104">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="6905a-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="6905a-105">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="6905a-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="6905a-106">如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="6905a-106">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="dd315-104">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="dd315-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="dd315-105">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="dd315-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="dd315-106">如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="dd315-106">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a><span data-ttu-id="6905a-107">若要將控制項放置在 Windows Form 設計工具的設計介面上</span><span class="sxs-lookup"><span data-stu-id="6905a-107">To position a control on the design surface of the Windows Forms Designer</span></span>  
+### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a><span data-ttu-id="dd315-107">若要將控制項放置在 Windows Form 設計工具的設計介面上</span><span class="sxs-lookup"><span data-stu-id="dd315-107">To position a control on the design surface of the Windows Forms Designer</span></span>  
   
--   <span data-ttu-id="6905a-108">將控制項拖曳至適當的位置，使用滑鼠。</span><span class="sxs-lookup"><span data-stu-id="6905a-108">Drag the control to the appropriate location with the mouse.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="6905a-109">選取的控制項，然後移動它具有箭號將它放在更精確索引鍵。</span><span class="sxs-lookup"><span data-stu-id="6905a-109">Select the control and move it with the ARROW keys to position it more precisely.</span></span> <span data-ttu-id="6905a-110">此外，*對齊線*協助您放置在表單上精確的控制項。</span><span class="sxs-lookup"><span data-stu-id="6905a-110">Also, *snaplines* assist you in placing controls precisely on your form.</span></span> <span data-ttu-id="6905a-111">如需詳細資訊，請參閱 <<c0> [ 逐步解說： 在 Windows Form 使用對齊線排列的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。</span><span class="sxs-lookup"><span data-stu-id="6905a-111">For more information, see [Walkthrough: Arranging Controls on Windows Forms Using Snaplines](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).</span></span>  
-  
-### <a name="to-position-a-control-using-the-properties-window"></a><span data-ttu-id="6905a-112">若要將使用 [屬性] 視窗的控制項</span><span class="sxs-lookup"><span data-stu-id="6905a-112">To position a control using the Properties window</span></span>  
-  
-1.  <span data-ttu-id="6905a-113">按一下您要放置的控制項。</span><span class="sxs-lookup"><span data-stu-id="6905a-113">Click the control you want to position.</span></span>  
-  
-2.  <span data-ttu-id="6905a-114">在 [**屬性**] 視窗中，型別值<xref:System.Windows.Forms.Control.Location%2A>屬性，以逗號分隔，其容器內控制項的位置。</span><span class="sxs-lookup"><span data-stu-id="6905a-114">In the **Properties** window, type values for the <xref:System.Windows.Forms.Control.Location%2A> property, separated by a comma, to position the control within its container.</span></span>  
-  
-     <span data-ttu-id="6905a-115">第一個數字 (X) 是從容器; 左框線的距離第二個數字 (Y) 是從容器工作區，以像素表示上框線的距離。</span><span class="sxs-lookup"><span data-stu-id="6905a-115">The first number (X) is the distance from the left border of the container; the second number (Y) is the distance from the upper border of the container area, measured in pixels.</span></span>  
+-   <span data-ttu-id="dd315-108">將控制項拖曳至適當的位置，使用滑鼠。</span><span class="sxs-lookup"><span data-stu-id="dd315-108">Drag the control to the appropriate location with the mouse.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="6905a-116">您可以展開<xref:System.Windows.Forms.Control.Location%2A>類型的屬性**X**並**Y**個別值。</span><span class="sxs-lookup"><span data-stu-id="6905a-116">You can expand the <xref:System.Windows.Forms.Control.Location%2A> property to type the **X** and **Y** values individually.</span></span>  
+    >  <span data-ttu-id="dd315-109">選取的控制項，然後移動它具有箭號將它放在更精確索引鍵。</span><span class="sxs-lookup"><span data-stu-id="dd315-109">Select the control and move it with the ARROW keys to position it more precisely.</span></span> <span data-ttu-id="dd315-110">此外，*對齊線*協助您放置在表單上精確的控制項。</span><span class="sxs-lookup"><span data-stu-id="dd315-110">Also, *snaplines* assist you in placing controls precisely on your form.</span></span> <span data-ttu-id="dd315-111">如需詳細資訊，請參閱[逐步解說：排列控制項，在 Windows Form 使用對齊線](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。</span><span class="sxs-lookup"><span data-stu-id="dd315-111">For more information, see [Walkthrough: Arranging Controls on Windows Forms Using Snaplines](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).</span></span>  
   
-### <a name="to-position-a-control-programmatically"></a><span data-ttu-id="6905a-117">若要以程式設計方式調整控制項的位置</span><span class="sxs-lookup"><span data-stu-id="6905a-117">To position a control programmatically</span></span>  
+### <a name="to-position-a-control-using-the-properties-window"></a><span data-ttu-id="dd315-112">若要將使用 [屬性] 視窗的控制項</span><span class="sxs-lookup"><span data-stu-id="dd315-112">To position a control using the Properties window</span></span>  
   
-1.  <span data-ttu-id="6905a-118">設定<xref:System.Windows.Forms.Control.Location%2A>屬性來控制<xref:System.Drawing.Point>。</span><span class="sxs-lookup"><span data-stu-id="6905a-118">Set the <xref:System.Windows.Forms.Control.Location%2A> property of the control to a <xref:System.Drawing.Point>.</span></span>  
+1.  <span data-ttu-id="dd315-113">按一下您要放置的控制項。</span><span class="sxs-lookup"><span data-stu-id="dd315-113">Click the control you want to position.</span></span>  
+  
+2.  <span data-ttu-id="dd315-114">在 [**屬性**] 視窗中，型別值<xref:System.Windows.Forms.Control.Location%2A>屬性，以逗號分隔，其容器內控制項的位置。</span><span class="sxs-lookup"><span data-stu-id="dd315-114">In the **Properties** window, type values for the <xref:System.Windows.Forms.Control.Location%2A> property, separated by a comma, to position the control within its container.</span></span>  
+  
+     <span data-ttu-id="dd315-115">第一個數字 (X) 是從容器; 左框線的距離第二個數字 (Y) 是從容器工作區，以像素表示上框線的距離。</span><span class="sxs-lookup"><span data-stu-id="dd315-115">The first number (X) is the distance from the left border of the container; the second number (Y) is the distance from the upper border of the container area, measured in pixels.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="dd315-116">您可以展開<xref:System.Windows.Forms.Control.Location%2A>類型的屬性**X**並**Y**個別值。</span><span class="sxs-lookup"><span data-stu-id="dd315-116">You can expand the <xref:System.Windows.Forms.Control.Location%2A> property to type the **X** and **Y** values individually.</span></span>  
+  
+### <a name="to-position-a-control-programmatically"></a><span data-ttu-id="dd315-117">若要以程式設計方式調整控制項的位置</span><span class="sxs-lookup"><span data-stu-id="dd315-117">To position a control programmatically</span></span>  
+  
+1.  <span data-ttu-id="dd315-118">設定<xref:System.Windows.Forms.Control.Location%2A>屬性來控制<xref:System.Drawing.Point>。</span><span class="sxs-lookup"><span data-stu-id="dd315-118">Set the <xref:System.Windows.Forms.Control.Location%2A> property of the control to a <xref:System.Drawing.Point>.</span></span>  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -62,7 +62,7 @@ ms.locfileid: "44083773"
     button1->Location = Point(100, 100);  
     ```  
   
-2.  <span data-ttu-id="6905a-119">變更控制項的位置的 X 座標使用<xref:System.Windows.Forms.Control.Left%2A>子屬性。</span><span class="sxs-lookup"><span data-stu-id="6905a-119">Change the X coordinate of the control's location using the <xref:System.Windows.Forms.Control.Left%2A> subproperty.</span></span>  
+2.  <span data-ttu-id="dd315-119">變更控制項的位置的 X 座標使用<xref:System.Windows.Forms.Control.Left%2A>子屬性。</span><span class="sxs-lookup"><span data-stu-id="dd315-119">Change the X coordinate of the control's location using the <xref:System.Windows.Forms.Control.Left%2A> subproperty.</span></span>  
   
     ```vb  
     Button1.Left = 300  
@@ -76,9 +76,9 @@ ms.locfileid: "44083773"
     button1->Left = 300;  
     ```  
   
-### <a name="to-increment-a-controls-location-programmatically"></a><span data-ttu-id="6905a-120">若要以程式設計方式遞增控制項的位置</span><span class="sxs-lookup"><span data-stu-id="6905a-120">To increment a control's location programmatically</span></span>  
+### <a name="to-increment-a-controls-location-programmatically"></a><span data-ttu-id="dd315-120">若要以程式設計方式遞增控制項的位置</span><span class="sxs-lookup"><span data-stu-id="dd315-120">To increment a control's location programmatically</span></span>  
   
-1.  <span data-ttu-id="6905a-121">設定<xref:System.Windows.Forms.Control.Left%2A>遞增控制項的 X 座標的子屬性。</span><span class="sxs-lookup"><span data-stu-id="6905a-121">Set the <xref:System.Windows.Forms.Control.Left%2A> subproperty to increment the X coordinate of the control.</span></span>  
+1.  <span data-ttu-id="dd315-121">設定<xref:System.Windows.Forms.Control.Left%2A>遞增控制項的 X 座標的子屬性。</span><span class="sxs-lookup"><span data-stu-id="dd315-121">Set the <xref:System.Windows.Forms.Control.Left%2A> subproperty to increment the X coordinate of the control.</span></span>  
   
     ```vb  
     Button1.Left += 200  
@@ -93,15 +93,15 @@ ms.locfileid: "44083773"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="6905a-122">使用<xref:System.Windows.Forms.Control.Location%2A>屬性來設定控制項的 X 和 Y 位置同時。</span><span class="sxs-lookup"><span data-stu-id="6905a-122">Use the <xref:System.Windows.Forms.Control.Location%2A> property to set a control's X and Y positions simultaneously.</span></span> <span data-ttu-id="6905a-123">若要個別設定的位置，使用控制項的<xref:System.Windows.Forms.Control.Left%2A>(**X**) 或<xref:System.Windows.Forms.Control.Top%2A>(**Y**) 子屬性。</span><span class="sxs-lookup"><span data-stu-id="6905a-123">To set a position individually, use the control's <xref:System.Windows.Forms.Control.Left%2A> (**X**) or <xref:System.Windows.Forms.Control.Top%2A> (**Y**) subproperty.</span></span> <span data-ttu-id="6905a-124">請勿嘗試將隱含地設定 X 和 Y 座標<xref:System.Drawing.Point>結構，表示按鈕的位置，因為此結構包含一份按鈕的座標。</span><span class="sxs-lookup"><span data-stu-id="6905a-124">Do not try to implicitly set the X and Y coordinates of the <xref:System.Drawing.Point> structure that represents the button's location, because this structure contains a copy of the button's coordinates.</span></span>  
+    >  <span data-ttu-id="dd315-122">使用<xref:System.Windows.Forms.Control.Location%2A>屬性來設定控制項的 X 和 Y 位置同時。</span><span class="sxs-lookup"><span data-stu-id="dd315-122">Use the <xref:System.Windows.Forms.Control.Location%2A> property to set a control's X and Y positions simultaneously.</span></span> <span data-ttu-id="dd315-123">若要個別設定的位置，使用控制項的<xref:System.Windows.Forms.Control.Left%2A>(**X**) 或<xref:System.Windows.Forms.Control.Top%2A>(**Y**) 子屬性。</span><span class="sxs-lookup"><span data-stu-id="dd315-123">To set a position individually, use the control's <xref:System.Windows.Forms.Control.Left%2A> (**X**) or <xref:System.Windows.Forms.Control.Top%2A> (**Y**) subproperty.</span></span> <span data-ttu-id="dd315-124">請勿嘗試將隱含地設定 X 和 Y 座標<xref:System.Drawing.Point>結構，表示按鈕的位置，因為此結構包含一份按鈕的座標。</span><span class="sxs-lookup"><span data-stu-id="dd315-124">Do not try to implicitly set the X and Y coordinates of the <xref:System.Drawing.Point> structure that represents the button's location, because this structure contains a copy of the button's coordinates.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6905a-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6905a-125">See Also</span></span>  
- [<span data-ttu-id="6905a-126">Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="6905a-126">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
- [<span data-ttu-id="6905a-127">逐步解說：使用對齊線排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="6905a-127">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [<span data-ttu-id="6905a-128">逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="6905a-128">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [<span data-ttu-id="6905a-129">逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項</span><span class="sxs-lookup"><span data-stu-id="6905a-129">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [<span data-ttu-id="6905a-130">排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="6905a-130">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [<span data-ttu-id="6905a-131">標記個別 Windows Forms 控制項並提供其捷徑</span><span class="sxs-lookup"><span data-stu-id="6905a-131">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- [<span data-ttu-id="6905a-132">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="6905a-132">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [<span data-ttu-id="6905a-133">依功能區分 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="6905a-133">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [<span data-ttu-id="6905a-134">如何： 設定 Windows Form 的畫面位置</span><span class="sxs-lookup"><span data-stu-id="6905a-134">How to: Set the Screen Location of Windows Forms</span></span>](https://msdn.microsoft.com/library/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)
+## <a name="see-also"></a><span data-ttu-id="dd315-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dd315-125">See also</span></span>
+- [<span data-ttu-id="dd315-126">Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="dd315-126">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)
+- [<span data-ttu-id="dd315-127">逐步解說：使用對齊線的 Windows Form 上排列控制項</span><span class="sxs-lookup"><span data-stu-id="dd315-127">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [<span data-ttu-id="dd315-128">逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項</span><span class="sxs-lookup"><span data-stu-id="dd315-128">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [<span data-ttu-id="dd315-129">逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項</span><span class="sxs-lookup"><span data-stu-id="dd315-129">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [<span data-ttu-id="dd315-130">排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="dd315-130">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [<span data-ttu-id="dd315-131">標記個別 Windows Forms 控制項並提供其捷徑</span><span class="sxs-lookup"><span data-stu-id="dd315-131">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [<span data-ttu-id="dd315-132">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="dd315-132">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="dd315-133">依功能區分 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="dd315-133">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [<span data-ttu-id="dd315-134">如何：設定 Windows Form 的畫面位置</span><span class="sxs-lookup"><span data-stu-id="dd315-134">How to: Set the Screen Location of Windows Forms</span></span>](https://msdn.microsoft.com/library/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bc1407f8444b78154981619742bd0da188c4335
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 463838681ceaaeb2edab85a22dd979fb143b9248
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602880"
 ---
-# <a name="icordebugtype2gettypeid-method"></a><span data-ttu-id="aa5ce-102">ICorDebugType2::GetTypeID 方法</span><span class="sxs-lookup"><span data-stu-id="aa5ce-102">ICorDebugType2::GetTypeID Method</span></span>
-<span data-ttu-id="aa5ce-103">取得[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)此類型。</span><span class="sxs-lookup"><span data-stu-id="aa5ce-103">Gets a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this type.</span></span>  
+# <a name="icordebugtype2gettypeid-method"></a><span data-ttu-id="36ee4-102">ICorDebugType2::GetTypeID 方法</span><span class="sxs-lookup"><span data-stu-id="36ee4-102">ICorDebugType2::GetTypeID Method</span></span>
+<span data-ttu-id="36ee4-103">取得[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)這種類型。</span><span class="sxs-lookup"><span data-stu-id="36ee4-103">Gets a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa5ce-104">語法</span><span class="sxs-lookup"><span data-stu-id="aa5ce-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="36ee4-104">語法</span><span class="sxs-lookup"><span data-stu-id="36ee4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeID(  
@@ -35,32 +35,32 @@ HRESULT GetTypeID(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="aa5ce-105">參數</span><span class="sxs-lookup"><span data-stu-id="aa5ce-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="36ee4-105">參數</span><span class="sxs-lookup"><span data-stu-id="36ee4-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="aa5ce-106">[out]指標[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)此 ICorDebugType 的。</span><span class="sxs-lookup"><span data-stu-id="aa5ce-106">[out] A pointer to the [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this ICorDebugType.</span></span>  
+ <span data-ttu-id="36ee4-106">[out]指標[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)此 icordebugtype。</span><span class="sxs-lookup"><span data-stu-id="36ee4-106">[out] A pointer to the [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this ICorDebugType.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="aa5ce-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="aa5ce-107">Return Value</span></span>  
- <span data-ttu-id="aa5ce-108">如果成功，傳回值為 `S_OK`，如果失敗，則傳回失敗 `HRESULT` 程式碼。</span><span class="sxs-lookup"><span data-stu-id="aa5ce-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="aa5ce-109">`HRESULT`代碼包括下列：</span><span class="sxs-lookup"><span data-stu-id="aa5ce-109">The `HRESULT` codes include the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="36ee4-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="36ee4-107">Return Value</span></span>  
+ <span data-ttu-id="36ee4-108">如果成功，傳回值為 `S_OK`，如果失敗，則傳回失敗 `HRESULT` 程式碼。</span><span class="sxs-lookup"><span data-stu-id="36ee4-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="36ee4-109">`HRESULT`碼包括下列：</span><span class="sxs-lookup"><span data-stu-id="36ee4-109">The `HRESULT` codes include the following:</span></span>  
   
-|<span data-ttu-id="aa5ce-110">傳回碼</span><span class="sxs-lookup"><span data-stu-id="aa5ce-110">Return code</span></span>|<span data-ttu-id="aa5ce-111">描述</span><span class="sxs-lookup"><span data-stu-id="aa5ce-111">Description</span></span>|  
+|<span data-ttu-id="36ee4-110">傳回碼</span><span class="sxs-lookup"><span data-stu-id="36ee4-110">Return code</span></span>|<span data-ttu-id="36ee4-111">描述</span><span class="sxs-lookup"><span data-stu-id="36ee4-111">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="aa5ce-112">方法成功。</span><span class="sxs-lookup"><span data-stu-id="aa5ce-112">Method succeeded.</span></span> <span data-ttu-id="aa5ce-113">方法已擷取的有效[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)。</span><span class="sxs-lookup"><span data-stu-id="aa5ce-113">The method has retrieved a valid [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md).</span></span>|  
-|`CORDBG_E_CLASS_NOT_LOADED`|<span data-ttu-id="aa5ce-114">尚未載入的型別。</span><span class="sxs-lookup"><span data-stu-id="aa5ce-114">The type has not been loaded.</span></span>|  
-|`CORDBG_E_UNSUPPORTED`|<span data-ttu-id="aa5ce-115">不支援的類型。</span><span class="sxs-lookup"><span data-stu-id="aa5ce-115">The type is not supported.</span></span>|  
+|`S_OK`|<span data-ttu-id="36ee4-112">方法成功。</span><span class="sxs-lookup"><span data-stu-id="36ee4-112">Method succeeded.</span></span> <span data-ttu-id="36ee4-113">此方法已擷取的有效[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)。</span><span class="sxs-lookup"><span data-stu-id="36ee4-113">The method has retrieved a valid [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md).</span></span>|  
+|`CORDBG_E_CLASS_NOT_LOADED`|<span data-ttu-id="36ee4-114">尚未載入的型別。</span><span class="sxs-lookup"><span data-stu-id="36ee4-114">The type has not been loaded.</span></span>|  
+|`CORDBG_E_UNSUPPORTED`|<span data-ttu-id="36ee4-115">不支援的類型。</span><span class="sxs-lookup"><span data-stu-id="36ee4-115">The type is not supported.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="aa5ce-116">備註</span><span class="sxs-lookup"><span data-stu-id="aa5ce-116">Remarks</span></span>  
- <span data-ttu-id="aa5ce-117">這個方法從 ICorDebugType，表示類型可能會或可能有尚未載入執行階段中，為提供的對應[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)，這可充當不透明控制代碼識別執行階段中載入的型別。</span><span class="sxs-lookup"><span data-stu-id="aa5ce-117">This method provides a mapping from the ICorDebugType, which represents a type that may or may not have been loaded into the runtime, to a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), which serves as an opaque handle that identifies a type loaded into the runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="36ee4-116">備註</span><span class="sxs-lookup"><span data-stu-id="36ee4-116">Remarks</span></span>  
+ <span data-ttu-id="36ee4-117">這個方法提供 ICorDebugType，表示可能會或可能已載入至執行階段，為的類型對應[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)，這可充當不透明處理識別載入執行階段型別。</span><span class="sxs-lookup"><span data-stu-id="36ee4-117">This method provides a mapping from the ICorDebugType, which represents a type that may or may not have been loaded into the runtime, to a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), which serves as an opaque handle that identifies a type loaded into the runtime.</span></span>  
   
- <span data-ttu-id="aa5ce-118">當 ICorDebugType 代表的類型，尚未已載入，則這個方法會傳回`CORDBG_E_CLASS_NOT_LOADED`。</span><span class="sxs-lookup"><span data-stu-id="aa5ce-118">When the type that the ICorDebugType represents has not yet been loaded, this method returns `CORDBG_E_CLASS_NOT_LOADED`.</span></span>  <span data-ttu-id="aa5ce-119">如果不支援的類型，它會傳回`CORDBG_E_UNSUPPORTED`。</span><span class="sxs-lookup"><span data-stu-id="aa5ce-119">If the type is not supported, it returns `CORDBG_E_UNSUPPORTED`.</span></span>  
+ <span data-ttu-id="36ee4-118">當 ICorDebugType 表示的型別尚未被載入，則這個方法會傳回`CORDBG_E_CLASS_NOT_LOADED`。</span><span class="sxs-lookup"><span data-stu-id="36ee4-118">When the type that the ICorDebugType represents has not yet been loaded, this method returns `CORDBG_E_CLASS_NOT_LOADED`.</span></span>  <span data-ttu-id="36ee4-119">如果不支援的類型，它會傳回`CORDBG_E_UNSUPPORTED`。</span><span class="sxs-lookup"><span data-stu-id="36ee4-119">If the type is not supported, it returns `CORDBG_E_UNSUPPORTED`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aa5ce-120">需求</span><span class="sxs-lookup"><span data-stu-id="aa5ce-120">Requirements</span></span>  
- <span data-ttu-id="aa5ce-121">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="aa5ce-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="36ee4-120">需求</span><span class="sxs-lookup"><span data-stu-id="36ee4-120">Requirements</span></span>  
+ <span data-ttu-id="36ee4-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="36ee4-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aa5ce-122">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aa5ce-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="36ee4-122">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="36ee4-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="aa5ce-123">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aa5ce-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="36ee4-123">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="36ee4-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="aa5ce-124">**.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa5ce-124">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="36ee4-124">**.NET framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36ee4-124">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aa5ce-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aa5ce-125">See Also</span></span>  
- [<span data-ttu-id="aa5ce-126">ICorDebugType2 介面</span><span class="sxs-lookup"><span data-stu-id="aa5ce-126">ICorDebugType2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="36ee4-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="36ee4-125">See also</span></span>
+- [<span data-ttu-id="36ee4-126">ICorDebugType2 介面</span><span class="sxs-lookup"><span data-stu-id="36ee4-126">ICorDebugType2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)
