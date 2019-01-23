@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b28fe8e8fd8b602a01b6358f46f60cdf792ced0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15226e6efc468974c32c11adec48a35764bc8446
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612251"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType 列舉
 包含值，這些值描述原生 Unmanaged 類型。  
@@ -93,14 +93,14 @@ typedef enum CorNativeType {
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|已過時。|  
 |`NATIVE_TYPE_VOID`|已過時。|  
-|`NATIVE_TYPE_BOOLEAN`|4 位元組布林值，其中 TRUE 是非零，FALSE 是零。|  
-|`NATIVE_TYPE_I1`|8 位元帶正負號的整數值。|  
+|`NATIVE_TYPE_BOOLEAN`|4 位元組的布林值，其中 TRUE 且非零，則為 FALSE 會是零。|  
+|`NATIVE_TYPE_I1`|帶正負號的 8 位元整數值。|  
 |`NATIVE_TYPE_U1`|不帶正負號的 8 位元整數值。|  
 |`NATIVE_TYPE_I2`|帶正負號的 16 位元整數值。|  
 |`NATIVE_TYPE_U2`|不帶正負號的 16 位元整數值。|  
 |`NATIVE_TYPE_I4`|帶正負號的 32 位元整數值。|  
 |`NATIVE_TYPE_U4`|32 位元不帶正負號的整數值。|  
-|`NATIVE_TYPE_I8`|64 位元帶正負號的整數值。|  
+|`NATIVE_TYPE_I8`|帶正負號的 64 位元整數值。|  
 |`NATIVE_TYPE_U8`|不帶正負號的 64 位元整數值。|  
 |`NATIVE_TYPE_R4`|4 位元組浮點數值。|  
 |`NATIVE_TYPE_R8`|8 位元組浮點數值。|  
@@ -118,7 +118,7 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_OBJECTREF`|已過時。|  
 |`NATIVE_TYPE_IUNKNOWN`|COM Interop。|  
 |`NATIVE_TYPE_IDISPATCH`|COM Interop。|  
-|`NATIVE_TYPE_STRUCT`|原生結構值。|  
+|`NATIVE_TYPE_STRUCT`|原生結構的值。|  
 |`NATIVE_TYPE_INTF`|COM Interop。|  
 |`NATIVE_TYPE_SAFEARRAY`|COM Interop。|  
 |`NATIVE_TYPE_FIXEDARRAY`|固定長度的陣列值。|  
@@ -127,25 +127,25 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_NESTEDSTRUCT`|已過時。<br /><br /> 使用 NATIVE_TYPE_STRUCT。|  
 |`NATIVE_TYPE_BYVALSTR`|COM Interop。|  
 |`NATIVE_TYPE_ANSIBSTR`|COM Interop。|  
-|`NATIVE_TYPE_TBSTR`|COM Interop。<br /><br /> 視平台選取 BSTR 或 ansibstr 的功能。|  
-|`NATIVE_TYPE_VARIANTBOOL`|2 位元組布林值，其中為 true，則為-1，FALSE 為零。|  
+|`NATIVE_TYPE_TBSTR`|COM Interop。<br /><br /> 選取 BSTR 或 ANSIBSTR 視平台。|  
+|`NATIVE_TYPE_VARIANTBOOL`|2 位元組的布林值，其中為 true，則為-1，而 FALSE 是零。|  
 |`NATIVE_TYPE_FUNC`|函式指標。|  
-|`NATIVE_TYPE_ASANY`|任何原生類型的參考。|  
+|`NATIVE_TYPE_ASANY`|任何原生型別的參考。|  
 |`NATIVE_TYPE_ARRAY`|未指定類型的成員與陣列的參考。|  
-|`NATIVE_TYPE_LPSTRUCT`|結構的 32 位元整數指標。|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|自訂封送處理器的原生型別。<br /><br /> 這後面必須使用下列格式的字串: 「 原生型別名稱/0Custom 封送處理器會輸入 cookie 的名稱/0Optional/0"或"{原生類型 GUID} / 0Custom 封送處理器類型名稱/0Optional cookie/0"|  
-|`NATIVE_TYPE_ERROR`|COM Interop。<br /><br /> ELEMENT_TYPE_I4 與這個類型會對應至 VT_HRESULT。|  
+|`NATIVE_TYPE_LPSTRUCT`|結構的 32 位元的整數指標。|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|自訂封送處理器的原生型別。<br /><br /> 這必須遵循下列格式的字串來：「 原生型別名稱/0Custom 封送處理器型別名稱/0Optional cookie/0"或"{原生輸入 GUID} / 0Custom 封送處理器輸入 cookie 的名稱/0Optional/0 」|  
+|`NATIVE_TYPE_ERROR`|COM Interop。<br /><br /> ELEMENT_TYPE_I4 與此類型會對應至 VT_HRESULT。|  
 |`NATIVE_TYPE_IINSPECTABLE`|原生`IInspectable`型別。|  
 |`NATIVE_TYPE_HSTRING`|原生`HString`。|  
 |`NATIVE_TYPE_MAX`|無效的值。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.InteropServices.UnmanagedType>  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.InteropServices.UnmanagedType>
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

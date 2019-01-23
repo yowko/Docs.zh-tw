@@ -2,12 +2,12 @@
 title: 追蹤參與者
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: e346e0df3417f6ac83854bd96d6e64dcf103ea93
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 3165e08a02954facb7e016606e2f94662c6edfe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613511"
 ---
 # <a name="tracking-participants"></a>追蹤參與者
 追蹤參與者是可讓工作流程開發人員存取 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 物件並加以處理的擴充點。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含寫入追蹤記錄以做為 Windows 事件追蹤 (ETW) 事件的標準追蹤參與者。 如果不符合需求，您也可以寫入自訂的追蹤參與者。  
@@ -140,6 +140,6 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
             Console.ReadLine();  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>另請參閱
+- [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)
