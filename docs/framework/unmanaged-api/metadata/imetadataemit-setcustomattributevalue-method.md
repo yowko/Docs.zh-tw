@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b699539df52bda9206191dd89c0f95de69140a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca5bd8716121148fa45cc9c66cdb19de79a06f47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546539"
 ---
-# <a name="imetadataemitsetcustomattributevalue-method"></a><span data-ttu-id="4ee02-102">IMetaDataEmit::SetCustomAttributeValue 方法</span><span class="sxs-lookup"><span data-stu-id="4ee02-102">IMetaDataEmit::SetCustomAttributeValue Method</span></span>
-<span data-ttu-id="4ee02-103">設定或更新先前呼叫所定義的自訂屬性的值[imetadataemit:: Definecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)。</span><span class="sxs-lookup"><span data-stu-id="4ee02-103">Sets or updates the value of a custom attribute defined by a prior call to [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).</span></span>  
+# <a name="imetadataemitsetcustomattributevalue-method"></a><span data-ttu-id="c40cb-102">IMetaDataEmit::SetCustomAttributeValue 方法</span><span class="sxs-lookup"><span data-stu-id="c40cb-102">IMetaDataEmit::SetCustomAttributeValue Method</span></span>
+<span data-ttu-id="c40cb-103">設定或更新先前呼叫所定義的自訂屬性的值[imetadataemit:: Definecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)。</span><span class="sxs-lookup"><span data-stu-id="c40cb-103">Sets or updates the value of a custom attribute defined by a prior call to [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4ee02-104">語法</span><span class="sxs-lookup"><span data-stu-id="4ee02-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c40cb-104">語法</span><span class="sxs-lookup"><span data-stu-id="c40cb-104">Syntax</span></span>  
   
 ```  
 HRESULT SetCustomAttributeValue (   
@@ -37,25 +37,25 @@ HRESULT SetCustomAttributeValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4ee02-105">參數</span><span class="sxs-lookup"><span data-stu-id="4ee02-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c40cb-105">參數</span><span class="sxs-lookup"><span data-stu-id="c40cb-105">Parameters</span></span>  
  `pcv`  
- <span data-ttu-id="4ee02-106">[in]目標的自訂屬性的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="4ee02-106">[in] The token of the target custom attribute.</span></span>  
+ <span data-ttu-id="c40cb-106">[in]目標的自訂屬性的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="c40cb-106">[in] The token of the target custom attribute.</span></span>  
   
  `pCustomAttribute`  
- <span data-ttu-id="4ee02-107">[in]包含自訂屬性的陣列指標。</span><span class="sxs-lookup"><span data-stu-id="4ee02-107">[in] A pointer to the array that contains the custom attribute.</span></span>  
+ <span data-ttu-id="c40cb-107">[in]包含自訂屬性陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="c40cb-107">[in] A pointer to the array that contains the custom attribute.</span></span>  
   
  `cbCustomAttribute`  
- <span data-ttu-id="4ee02-108">[in]以位元組為單位，自訂屬性的大小。</span><span class="sxs-lookup"><span data-stu-id="4ee02-108">[in] The size, in bytes, of the custom attribute.</span></span>  
+ <span data-ttu-id="c40cb-108">[in]以位元組為單位，自訂屬性的大小。</span><span class="sxs-lookup"><span data-stu-id="c40cb-108">[in] The size, in bytes, of the custom attribute.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4ee02-109">需求</span><span class="sxs-lookup"><span data-stu-id="4ee02-109">Requirements</span></span>  
- <span data-ttu-id="4ee02-110">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4ee02-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c40cb-109">需求</span><span class="sxs-lookup"><span data-stu-id="c40cb-109">Requirements</span></span>  
+ <span data-ttu-id="c40cb-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c40cb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4ee02-111">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4ee02-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c40cb-111">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c40cb-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4ee02-112">**程式庫：** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="4ee02-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c40cb-112">**程式庫：** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="c40cb-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4ee02-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ee02-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c40cb-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c40cb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ee02-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4ee02-114">See Also</span></span>  
- [<span data-ttu-id="4ee02-115">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="4ee02-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="4ee02-116">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="4ee02-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c40cb-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c40cb-114">See also</span></span>
+- [<span data-ttu-id="c40cb-115">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="c40cb-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="c40cb-116">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="c40cb-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -2,20 +2,20 @@
 title: '&lt;webScriptEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 85cb5ecf-351b-45f3-aa29-aa2e4b64bcdd
-ms.openlocfilehash: beb17d4ccc39bcca30e97d4f0df47c797cde6216
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: acafb5b6a5c4911dcf21a55cfb9e93883067e5ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566381"
 ---
-# <a name="ltwebscriptendpointgt"></a><span data-ttu-id="c121e-102">&lt;webScriptEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="c121e-102">&lt;webScriptEndpoint&gt;</span></span>
-<span data-ttu-id="c121e-103">此組態元素定義具有固定的標準端點[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)繫結，會自動加入[ \<Enablewebscript&gt >](../../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)行為。</span><span class="sxs-lookup"><span data-stu-id="c121e-103">This configuration element defines a standard endpoint with a fixed [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) binding that automatically adds the [\<enableWebScript>](../../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) behavior.</span></span> <span data-ttu-id="c121e-104">撰寫從 ASP.NET AJAX 應用程式呼叫的服務時，請使用這個端點。</span><span class="sxs-lookup"><span data-stu-id="c121e-104">Use this endpoint when you are writing a service that is called from an ASP.NET AJAX application.</span></span>  
+# <a name="ltwebscriptendpointgt"></a><span data-ttu-id="d702f-102">&lt;webScriptEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="d702f-102">&lt;webScriptEndpoint&gt;</span></span>
+<span data-ttu-id="d702f-103">此組態元素定義具有固定的標準端點[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)繫結，會自動加入[ \<Enablewebscript&gt >](../../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)行為。</span><span class="sxs-lookup"><span data-stu-id="d702f-103">This configuration element defines a standard endpoint with a fixed [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) binding that automatically adds the [\<enableWebScript>](../../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) behavior.</span></span> <span data-ttu-id="d702f-104">撰寫從 ASP.NET AJAX 應用程式呼叫的服務時，請使用這個端點。</span><span class="sxs-lookup"><span data-stu-id="d702f-104">Use this endpoint when you are writing a service that is called from an ASP.NET AJAX application.</span></span>  
   
-<span data-ttu-id="c121e-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="c121e-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="c121e-106">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="c121e-106">\<standardEndpoints></span></span>  
+<span data-ttu-id="d702f-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="d702f-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="d702f-106">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="d702f-106">\<standardEndpoints></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c121e-107">語法</span><span class="sxs-lookup"><span data-stu-id="c121e-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d702f-107">語法</span><span class="sxs-lookup"><span data-stu-id="d702f-107">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -27,24 +27,24 @@ ms.locfileid: "54148769"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c121e-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c121e-108">Attributes and Elements</span></span>  
- <span data-ttu-id="c121e-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="c121e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d702f-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="d702f-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="d702f-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="d702f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c121e-110">屬性</span><span class="sxs-lookup"><span data-stu-id="c121e-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d702f-110">屬性</span><span class="sxs-lookup"><span data-stu-id="d702f-110">Attributes</span></span>  
   
-|<span data-ttu-id="c121e-111">屬性</span><span class="sxs-lookup"><span data-stu-id="c121e-111">Attribute</span></span>|<span data-ttu-id="c121e-112">描述</span><span class="sxs-lookup"><span data-stu-id="c121e-112">Description</span></span>|  
+|<span data-ttu-id="d702f-111">屬性</span><span class="sxs-lookup"><span data-stu-id="d702f-111">Attribute</span></span>|<span data-ttu-id="d702f-112">描述</span><span class="sxs-lookup"><span data-stu-id="d702f-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="c121e-113">webEndpointType</span><span class="sxs-lookup"><span data-stu-id="c121e-113">webEndpointType</span></span>|<span data-ttu-id="c121e-114">字串，指定端點的型別。</span><span class="sxs-lookup"><span data-stu-id="c121e-114">A string that specifies the type of the endpoint.</span></span>|  
+|<span data-ttu-id="d702f-113">webEndpointType</span><span class="sxs-lookup"><span data-stu-id="d702f-113">webEndpointType</span></span>|<span data-ttu-id="d702f-114">字串，指定端點的型別。</span><span class="sxs-lookup"><span data-stu-id="d702f-114">A string that specifies the type of the endpoint.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c121e-115">子元素</span><span class="sxs-lookup"><span data-stu-id="c121e-115">Child Elements</span></span>  
- <span data-ttu-id="c121e-116">無。</span><span class="sxs-lookup"><span data-stu-id="c121e-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d702f-115">子元素</span><span class="sxs-lookup"><span data-stu-id="d702f-115">Child Elements</span></span>  
+ <span data-ttu-id="d702f-116">無。</span><span class="sxs-lookup"><span data-stu-id="d702f-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="c121e-117">父項目</span><span class="sxs-lookup"><span data-stu-id="c121e-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d702f-117">父項目</span><span class="sxs-lookup"><span data-stu-id="d702f-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="c121e-118">項目</span><span class="sxs-lookup"><span data-stu-id="c121e-118">Element</span></span>|<span data-ttu-id="c121e-119">描述</span><span class="sxs-lookup"><span data-stu-id="c121e-119">Description</span></span>|  
+|<span data-ttu-id="d702f-118">項目</span><span class="sxs-lookup"><span data-stu-id="d702f-118">Element</span></span>|<span data-ttu-id="d702f-119">描述</span><span class="sxs-lookup"><span data-stu-id="d702f-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c121e-120">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="c121e-120">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="c121e-121">標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。</span><span class="sxs-lookup"><span data-stu-id="c121e-121">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[<span data-ttu-id="d702f-120">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="d702f-120">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="d702f-121">標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。</span><span class="sxs-lookup"><span data-stu-id="d702f-121">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="c121e-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c121e-122">See Also</span></span>  
- <xref:System.ServiceModel.Description.WebScriptEndpoint>  
- <xref:System.ServiceModel.Configuration.WebScriptEndpointElement>
+## <a name="see-also"></a><span data-ttu-id="d702f-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d702f-122">See also</span></span>
+- <xref:System.ServiceModel.Description.WebScriptEndpoint>
+- <xref:System.ServiceModel.Configuration.WebScriptEndpointElement>
