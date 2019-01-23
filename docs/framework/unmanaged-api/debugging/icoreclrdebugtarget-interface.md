@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 371768a8306c3751e7fc54b91a8583df41ad219b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4576d8ea7d601e1b37d0cb6f54802f93bc128622
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593780"
 ---
-# <a name="icoreclrdebugtarget-interface"></a><span data-ttu-id="fb665-102">ICoreClrDebugTarget 介面</span><span class="sxs-lookup"><span data-stu-id="fb665-102">ICoreClrDebugTarget Interface</span></span>
-<span data-ttu-id="fb665-103">提供方法來控制參考計數、 列舉處理序，並釋放與偵錯工具附加至遠端的 Macintosh Silverlight 目標相關聯的記憶體。</span><span class="sxs-lookup"><span data-stu-id="fb665-103">Provides methods that control reference counts, enumerate processes, and free the memory associated with a debugger that is attached to a remote Macintosh Silverlight target.</span></span>  
+# <a name="icoreclrdebugtarget-interface"></a><span data-ttu-id="ae43a-102">ICoreClrDebugTarget 介面</span><span class="sxs-lookup"><span data-stu-id="ae43a-102">ICoreClrDebugTarget Interface</span></span>
+<span data-ttu-id="ae43a-103">提供控制參考計數、 列舉處理序，並釋放記憶體偵錯工具附加至遠端的 Macintosh 的 Silverlight 目標相關聯的方法。</span><span class="sxs-lookup"><span data-stu-id="ae43a-103">Provides methods that control reference counts, enumerate processes, and free the memory associated with a debugger that is attached to a remote Macintosh Silverlight target.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fb665-104">語法</span><span class="sxs-lookup"><span data-stu-id="fb665-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ae43a-104">語法</span><span class="sxs-lookup"><span data-stu-id="ae43a-104">Syntax</span></span>  
   
 ```  
 class ICoreClrDebugTarget {  
@@ -49,28 +49,28 @@ class ICoreClrDebugTarget {
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="fb665-105">方法</span><span class="sxs-lookup"><span data-stu-id="fb665-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ae43a-105">方法</span><span class="sxs-lookup"><span data-stu-id="ae43a-105">Methods</span></span>  
   
-|<span data-ttu-id="fb665-106">方法</span><span class="sxs-lookup"><span data-stu-id="fb665-106">Method</span></span>|<span data-ttu-id="fb665-107">描述</span><span class="sxs-lookup"><span data-stu-id="fb665-107">Description</span></span>|  
+|<span data-ttu-id="ae43a-106">方法</span><span class="sxs-lookup"><span data-stu-id="ae43a-106">Method</span></span>|<span data-ttu-id="ae43a-107">描述</span><span class="sxs-lookup"><span data-stu-id="ae43a-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="fb665-108">ICoreClrDebugTarget::EnumProcesses 方法</span><span class="sxs-lookup"><span data-stu-id="fb665-108">ICoreClrDebugTarget::EnumProcesses Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|<span data-ttu-id="fb665-109">列舉在遠端電腦上執行的處理序。</span><span class="sxs-lookup"><span data-stu-id="fb665-109">Enumerates the processes that are running on a remote computer.</span></span>|  
-|[<span data-ttu-id="fb665-110">ICoreClrDebugTarget::EnumRuntimes 方法</span><span class="sxs-lookup"><span data-stu-id="fb665-110">ICoreClrDebugTarget::EnumRuntimes Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|<span data-ttu-id="fb665-111">列舉的 common language runtime (Clr) 中指定的處理序的遠端電腦上。</span><span class="sxs-lookup"><span data-stu-id="fb665-111">Enumerates the common language runtimes (CLRs) in the specified process on a remote computer.</span></span>|  
-|[<span data-ttu-id="fb665-112">ICoreClrDebugTarget::FreeMemory 方法</span><span class="sxs-lookup"><span data-stu-id="fb665-112">ICoreClrDebugTarget::FreeMemory Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|<span data-ttu-id="fb665-113">釋放由這個類別中的列舉型別方法所配置的記憶體。</span><span class="sxs-lookup"><span data-stu-id="fb665-113">Frees the memory that is allocated by the enumeration methods in this class.</span></span>|  
+|[<span data-ttu-id="ae43a-108">ICoreClrDebugTarget::EnumProcesses 方法</span><span class="sxs-lookup"><span data-stu-id="ae43a-108">ICoreClrDebugTarget::EnumProcesses Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|<span data-ttu-id="ae43a-109">列舉在遠端電腦上執行的處理序。</span><span class="sxs-lookup"><span data-stu-id="ae43a-109">Enumerates the processes that are running on a remote computer.</span></span>|  
+|[<span data-ttu-id="ae43a-110">ICoreClrDebugTarget::EnumRuntimes 方法</span><span class="sxs-lookup"><span data-stu-id="ae43a-110">ICoreClrDebugTarget::EnumRuntimes Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|<span data-ttu-id="ae43a-111">列舉的 common language runtime (Clr) 中指定的處理序在遠端電腦上。</span><span class="sxs-lookup"><span data-stu-id="ae43a-111">Enumerates the common language runtimes (CLRs) in the specified process on a remote computer.</span></span>|  
+|[<span data-ttu-id="ae43a-112">ICoreClrDebugTarget::FreeMemory 方法</span><span class="sxs-lookup"><span data-stu-id="ae43a-112">ICoreClrDebugTarget::FreeMemory Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|<span data-ttu-id="ae43a-113">釋放由這個類別中的列舉型別方法所配置的記憶體。</span><span class="sxs-lookup"><span data-stu-id="ae43a-113">Frees the memory that is allocated by the enumeration methods in this class.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fb665-114">備註</span><span class="sxs-lookup"><span data-stu-id="fb665-114">Remarks</span></span>  
- <span data-ttu-id="fb665-115">目前，這項功能僅適用於偵錯遠端的 Macintosh 電腦執行的 Silverlight 架構應用程式目標支援。</span><span class="sxs-lookup"><span data-stu-id="fb665-115">Currently, this functionality is supported only for debugging a Silverlight-based application target that is running on a remote Macintosh computer.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ae43a-114">備註</span><span class="sxs-lookup"><span data-stu-id="ae43a-114">Remarks</span></span>  
+ <span data-ttu-id="ae43a-115">目前，這項功能僅適用於偵錯遠端的 Macintosh 電腦執行的 Silverlight 應用程式目標支援。</span><span class="sxs-lookup"><span data-stu-id="ae43a-115">Currently, this functionality is supported only for debugging a Silverlight-based application target that is running on a remote Macintosh computer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fb665-116">需求</span><span class="sxs-lookup"><span data-stu-id="fb665-116">Requirements</span></span>  
- <span data-ttu-id="fb665-117">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fb665-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ae43a-116">需求</span><span class="sxs-lookup"><span data-stu-id="ae43a-116">Requirements</span></span>  
+ <span data-ttu-id="ae43a-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ae43a-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fb665-118">**標頭：** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="fb665-118">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="ae43a-118">**標頭：** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="ae43a-118">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="fb665-119">**程式庫：** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="fb665-119">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="ae43a-119">**程式庫：** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="ae43a-119">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="fb665-120">**.NET framework 版本：** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="fb665-120">**.NET Framework Versions:** 3.5 SP1</span></span>  
+ <span data-ttu-id="ae43a-120">**.NET framework 版本：** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="ae43a-120">**.NET Framework Versions:** 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fb665-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fb665-121">See Also</span></span>  
- [<span data-ttu-id="fb665-122">ICorDebugRemoteTarget 介面</span><span class="sxs-lookup"><span data-stu-id="fb665-122">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [<span data-ttu-id="fb665-123">ICorDebug 介面</span><span class="sxs-lookup"><span data-stu-id="fb665-123">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [<span data-ttu-id="fb665-124">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="fb665-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="ae43a-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ae43a-121">See also</span></span>
+- [<span data-ttu-id="ae43a-122">ICorDebugRemoteTarget 介面</span><span class="sxs-lookup"><span data-stu-id="ae43a-122">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [<span data-ttu-id="ae43a-123">ICorDebug 介面</span><span class="sxs-lookup"><span data-stu-id="ae43a-123">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [<span data-ttu-id="ae43a-124">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="ae43a-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
