@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 13cc4d85a1a4b5c9b1ff61afbf7980a54e3d22d0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e194dbef0f18657646161a3f5cc4812b3ab78f7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530090"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>自訂類型和程式庫的 XAML 相關 CLR 屬性
 本主題描述由.NET Framework XAML 服務所定義的通用語言執行平台 (CLR) 屬性。 它也會說明其他 CLR 屬性定義在.NET Framework 組件或類型的應用程式的 XAML 相關案例。 屬性的組件、 類型或成員設定這些 CLR 屬性提供 XAML 類型系統資訊與您的型別。 處理 XAML 節點資料流直接或透過專用的 XAML 讀取器和 XAML 寫入器會使用.NET Framework XAML 服務任何 XAML 取用者會提供資訊。  
@@ -24,7 +24,7 @@ ms.locfileid: "47424437"
   
  **適用於：** 類別、 屬性或`get`支援可附加屬性的存取子成員。  
   
- **引數：** None  
+ **引數：** 無  
   
  <xref:System.Windows.Markup.AmbientAttribute> 指出應該解譯屬性或所有屬性的屬性化類型中，在 XAML 中的環境屬性概念。 環境概念與 XAML 處理器如何判斷成員類別擁有者有關。 環境屬性是屬性的值，必須是可用於剖析器內容時建立物件圖形，但典型的型別成員查閱已暫止立即設定所建立的 XAML 節點。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47424437"
   
  **適用於：** 類別  
   
- **引數：** 指定的屬性化類型的成員名稱的字串。  
+ **引數：** 字串，指定名稱的屬性化型別的成員。  
   
  <xref:System.Windows.Markup.ContentPropertyAttribute> 表示引數所命名的屬性，應該做為該類型的 XAML 內容屬性。 XAML 內容屬性定義會繼承所有可指派給定義類型的衍生型別。 您可以藉由套用覆寫特定的衍生型別上定義<xref:System.Windows.Markup.ContentPropertyAttribute>特定衍生型別。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "47424437"
   
  **適用於：** 類別  
   
- **引數：** 支援兩種屬性：  
+ **引數：** 支援兩種形式的屬性：  
   
 -   屬性化類型指定的屬性名稱的字串。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "47424437"
   
  **適用於：** 類別  
   
- **引數：** 屬性化類型指定執行階段名稱屬性的名稱的字串。  
+ **引數：** 字串，指定屬性化型別上的執行階段名稱屬性的名稱。  
   
  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 報告的屬性對應到 XAML 的屬性化型別[X:name 指示詞](../../../docs/framework/xaml-services/x-name-directive.md)。 屬性必須是型別<xref:System.String>，而且必須是讀取/寫入。  
   
@@ -110,9 +110,9 @@ ms.locfileid: "47424437"
 ### <a name="trimsurroundingwhitespaceattribute"></a>TrimSurroundingWhitespaceAttribute  
  **參考文件：**  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>  
   
- **適用於：** 類型  
+ **適用於：** 型別  
   
- **引數：** None。  
+ **引數：** 無。  
   
  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 會套用至特定可能顯示為顯著泛空白字元的內容中的子元素的類型 (內容持有的集合，其中具有<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>)。 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 主要是與儲存的路徑，但可在載入路徑 XAML 類型系統中藉由檢查<xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>。 如需詳細資訊，請參閱 <<c0> [ 泛空白字元處理中 XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "47424437"
   
  **適用於：** 類別、 屬性、 方法 (唯一 XAML 有效的方法案例是`get`支援可附加成員的存取子)。  
   
- **引數：** <xref:System.Type>的<xref:System.ComponentModel.TypeConverter>。  
+ **引數：**<xref:System.Type> 的 <xref:System.ComponentModel.TypeConverter>。  
   
  <xref:System.ComponentModel.TypeConverterAttribute> 在 XAML 內容參考自訂<xref:System.ComponentModel.TypeConverter>。 這<xref:System.ComponentModel.TypeConverter>提供自訂型別，或該類型的成員的型別轉換行為。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "47424437"
   
  **適用於：** 類別  
   
- **引數：** 參考相關的屬性名稱的字串。  
+ **引數：** 依名稱參考相關屬性的字串。  
   
  表示類別的 CLR 屬性別名[X:uid 指示詞](../../../docs/framework/xaml-services/x-uid-directive.md)。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "47424437"
   
  **適用於：** 類別，特別是裝載混合的內容，其中物件項目周圍的空白字元可能會造成很大 UI 表示法預期集合型別。  
   
- **引數：** None。  
+ **引數：** 無。  
   
  <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 表示集合型別應該處理為泛空白字元顯著，XAML 處理器，這會影響建構的 XAML 節點資料流的值集合中的節點。 如需詳細資訊，請參閱 <<c0> [ 泛空白字元處理中 XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "47424437"
   
  **適用於：** 類別  
   
- **引數：** 名稱回呼。  
+ **引數：** 命名的回呼。  
   
  表示類別可以使用標記延伸的一個或多個屬性，提供的值，以及參考的 XAML 寫入器應該呼叫在執行類別的任何屬性上的標記延伸設定作業之前的處理常式。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "47424437"
   
  **適用於：** 類別  
   
- **引數：** 名稱回呼。  
+ **引數：** 命名的回呼。  
   
  表示類別可以使用型別轉換子的一個或多個屬性，提供的值，以及參考的 XAML 寫入器應該呼叫在執行類別的任何屬性的型別轉換子設定作業之前的處理常式。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "47424437"
   
 -   字串，指定可以包含從先前的引數的 XAML 命名空間的 XAML 命名空間的識別碼。  
   
- <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> 指定可以在另一個 XAML 命名空間建立小計的 XAML 命名空間。 歸類 XAML 命名空間通常會指出在預先定義<xref:System.Windows.Markup.XmlnsDefinitionAttribute>。 這種方式可用於版本控制 XAML 詞彙的文件庫中，並讓它與先前定義的標記，針對稍早的版本控制詞彙相容。  
+ <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> 指定可以在另一個 XAML 命名空間建立小計的 XAML 命名空間。 一般會在預先定義的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 中指出建立小計的 XAML 命名空間。 這種方式可用於版本控制 XAML 詞彙的文件庫中，並讓它與先前定義的標記，針對稍早的版本控制詞彙相容。  
   
 ### <a name="xmlnsdefinitionattribute"></a>XmlnsDefinitionAttribute  
  **參考文件：**  <xref:System.Windows.Markup.XmlnsDefinitionAttribute>  
@@ -268,6 +268,6 @@ ms.locfileid: "47424437"
 > [!NOTE]
 >  .NET framework XAML 服務也會定義的 XAML 相關屬性<xref:System.Windows.Markup.RootNamespaceAttribute>。 這個屬性是專案系統支援的組件層級屬性，並不是與 XAML 自訂型別相關。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Attribute>  
- [定義可搭配 .NET Framework XAML 服務使用的自訂類型](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Attribute>
+- [定義可搭配 .NET Framework XAML 服務使用的自訂類型](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
