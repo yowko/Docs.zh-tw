@@ -8,15 +8,15 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: da8d482fbf506749f9805edcbbaad3c893ad56b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38e9553d77612635f0403a8dc34c368379116e8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365848"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497114"
 ---
 # <a name="service-operations-wcf-data-services"></a>服務作業 (WCF 資料服務)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以讓您定義資料服務上的服務作業，以公開伺服器上的方法。 如同其他資料服務資源，服務作業依 URI 定址。 服務作業可讓您公開資料服務中的業務邏輯，例如實作驗證邏輯、套用以角色為基礎的安全性，或公開特殊的查詢功能。 服務作業是加入至資料服務類別的方法，衍生自 <xref:System.Data.Services.DataService%601>。 如同所有其他資料服務資源，您可以將參數提供給服務作業方法。 例如，下列服務作業的 URI (根據[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)資料服務) 會將值傳遞`London`至`city`參數：  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以讓您定義資料服務上的服務作業，以公開伺服器上的方法。 如同其他資料服務資源，服務作業依 URI 定址。 服務作業可讓您公開資料服務中的業務邏輯，例如實作驗證邏輯、套用以角色為基礎的安全性，或公開特殊的查詢功能。 服務作業是加入至資料服務類別的方法，衍生自 <xref:System.Data.Services.DataService%601>。 如同所有其他資料服務資源，您可以將參數提供給服務作業方法。 例如，下列服務作業 URI (根據[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)資料服務) 會將值傳遞`London`到`city`參數：  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -27,7 +27,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
  [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
  [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
- 您可以使用 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601>，直接存取資料服務所使用的資料來源。 如需詳細資訊，請參閱[如何： 定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)。  
+ 您可以使用 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601>，直接存取資料服務所使用的資料來源。 如需詳細資訊，請參閱[＜How to：定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)。  
   
  如需如何從.NET Framework 用戶端應用程式呼叫服務作業的資訊，請參閱[呼叫服務作業](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)。  
   
@@ -96,7 +96,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 > [!NOTE]
 >  如果服務作業具有已透過現制存取基礎實體集隱藏的傳回型別，則用戶端應用程式就無法使用服務作業。  
   
- 如需詳細資訊，請參閱[如何： 定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)。  
+ 如需詳細資訊，請參閱[＜How to：定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)。  
   
 ## <a name="raising-exceptions"></a>引發例外狀況  
  每當您在資料服務執行中引發例外狀況時，建議您使用 <xref:System.Data.Services.DataServiceException> 類別。 這是因為資料服務執行階段知道如何將此例外狀況物件的屬性正確對應到 HTTP 回應訊息。 當您在服務作業中引發 <xref:System.Data.Services.DataServiceException> 時，傳回的例外狀況會以 <xref:System.Reflection.TargetInvocationException> 包裝。 若要傳回沒有以 <xref:System.Data.Services.DataServiceException> 括住的基礎 <xref:System.Reflection.TargetInvocationException>，您必須覆寫 <xref:System.Data.Services.DataService%601.HandleException%2A> 中的 <xref:System.Data.Services.DataService%601> 方法、從 <xref:System.Data.Services.DataServiceException> 擷取 <xref:System.Reflection.TargetInvocationException>，然後將其當做最上層錯誤傳回，如以下範例所示：  
@@ -104,5 +104,5 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
  [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#handleexceptions)]
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
-## <a name="see-also"></a>另請參閱  
- [攔截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+## <a name="see-also"></a>另請參閱
+- [攔截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

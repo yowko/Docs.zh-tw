@@ -2,12 +2,12 @@
 title: 探索尋找與尋找準則
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 7c389a4f0b8fb9789db33fe3edbb01a1d6302137
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 21bfde1dae99a09e278a51ed330166551d4dca8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493309"
 ---
 # <a name="discovery-find-and-findcriteria"></a>探索尋找與尋找準則
 探索尋找作業是由用戶端初始化，用於探索一項或多項服務，並且為探索中的其中一個主要動作。 執行尋找會透過網路傳送 WS-Discovery Probe 訊息。 符合指定準則的服務會以 WS-Discovery ProbeMatch 訊息回覆。 如需有關探索訊息的詳細資訊，請參閱[Ws-discovery 規格](https://go.microsoft.com/fwlink/?LinkID=122347)。  
@@ -64,8 +64,8 @@ FindResponse findResponse = discoveryClient.Find(findCriteria);
 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [使用探索用戶端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
- [探索範圍](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [基本](../../../../docs/framework/wcf/samples/basic-sample.md)
+## <a name="see-also"></a>另請參閱
+- [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [使用探索用戶端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
+- [探索範圍](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
+- [基本](../../../../docs/framework/wcf/samples/basic-sample.md)

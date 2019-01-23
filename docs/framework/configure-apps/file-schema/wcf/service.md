@@ -1,20 +1,20 @@
 ---
-title: '&lt;服務&gt;'
+title: '&lt;service&gt;'
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: ef0ae70440323c1ede5deca60e88f29861760e68
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: e91e04c602fd867e329477015fc0a8354ae26a05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535004"
 ---
-# <a name="ltservicegt"></a>&lt;服務&gt;
+# <a name="ltservicegt"></a>&lt;service&gt;
 `service` 項目包含 Windows Communication Foundation (WCF) 服務的設定。 它也包含公開服務的端點。  
   
  \<system.ServiceModel>  
 \<services>  
-\<服務 >  
+\<service>  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,8 +38,8 @@ ms.locfileid: "54145506"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<端點 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|公開此服務之 `endpoint` 項目的集合。|  
-|[\<主控件 >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定這個服務執行個體的主機。 此項目的型別為 <xref:System.ServiceModel.Configuration.HostElement>。|  
+|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|公開此服務之 `endpoint` 項目的集合。|  
+|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定這個服務執行個體的主機。 此項目的型別為 <xref:System.ServiceModel.Configuration.HostElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -68,6 +68,6 @@ ms.locfileid: "54145506"
 </service>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.ServiceElement>  
- [設定服務](../../../../../docs/framework/wcf/configuring-services.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.ServiceElement>
+- [設定服務](../../../../../docs/framework/wcf/configuring-services.md)

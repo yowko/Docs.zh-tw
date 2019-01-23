@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 815f2e2f695837c973210a21ab3631ef307c23d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f2d3624d130c005f9ed9109863b052e3272797ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423633"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496815"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName 方法
 取得處理序所參考的可執行檔的完整路徑[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)。  
@@ -43,19 +43,19 @@ HRESULT GetDisplayName (
  [in] `szName` 陣列的大小。  
   
  `pcchName`  
- [out]傳回的寬字元數目`szName`陣列。  
+ [out]中傳回的寬字元數目`szName`陣列。  
   
  `szName`  
- [out]陣列來儲存名稱，包括可執行檔的完整路徑。 名稱是以 null 結束。  
+ [out]要儲存的名稱，包括可執行檔的完整路徑的陣列。 名稱是以 null 結束。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorPub.idl、 CorPub.h  
+ **標頭：** CorPub.idl CorPub.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorPublishProcess 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorPublishProcess 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)

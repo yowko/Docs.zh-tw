@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d73c299231a588a5ae0b252dd2b5a0a834685f2d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cd4d1be3ec3c64c7c6669a2c85ba6bf68db6da68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536759"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 當 Just-In-time (JIT) 編譯器開始編譯函式時，會啟動 `jitCompilationStart` Managed 偵錯助理 (MDA)。  
@@ -157,7 +157,7 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

@@ -7,31 +7,31 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 40b64b8d2b6306d458b7a9cc657c5b7dc4270eb2
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 9a1dcf159f007f1587030057885122c036b99aac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537204"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
-指定一或多個宣告的程式設計項目只能從其宣告的內容，包括從任何所包含的型別中存取。  
+指定一或多個宣告的程式設計元素，只能從其宣告的內容，包括從任何所包含的型別中存取。  
   
 ## <a name="remarks"></a>備註  
- 如果程式設計項目表示專屬功能，或包含機密資料，您通常要盡可能地限制其存取權。 您藉由只模組、 類別或結構定義該存取權限達到最大的限制。 若要限制存取的項目，如此一來，您可以將它與宣告`Private`。  
+ 如果程式設計項目代表專屬的功能，或包含機密資料，您通常會想要盡可能地限制其存取權。 您藉由只模組、 類別或結構，定義以存取它達到最大的限制。 若要限制存取的項目，如此一來，您可以將它與宣告`Private`。  
 
 > [!NOTE]
-> 您也可以使用[受保護的私用](private-protected.md)存取修飾詞，讓成員存取從該類別和衍生類別位於其包含的組件。
+> 您也可以使用[Private Protected](private-protected.md)存取修飾詞，讓成員存取從該類別中，並從其包含的組件中的衍生類別。
 
 ## <a name="rules"></a>規則  
 
--   **宣告內容。** 您只能在模組層級使用 `Private`。 這表示宣告內容`Private`項目必須是模組、 類別或結構，而且不得原始程式檔、 命名空間、 介面或程序。  
+-   **宣告內容。** 您只能在模組層級使用 `Private`。 這表示的宣告內容`Private`項目必須是模組、 類別或結構，，而且不能是原始程式檔、 命名空間、 介面或程序。  
   
 ## <a name="behavior"></a>行為  
   
--   **存取層級。** 宣告內容中的所有程式碼可以存取其`Private`項目。 這包括所包含的型別，例如巢狀的類別或列舉型別中的，指派運算式中的程式碼。 宣告內容以外的任何程式碼可以存取其`Private`項目。  
+-   **存取層級。** 宣告內容中的所有程式碼可以存取其`Private`項目。 這包括程式碼中包含的型別，例如巢狀的類別或列舉型別中的，指派運算式。 宣告內容之外的任何程式碼可以存取其`Private`項目。  
   
--   **存取修飾詞。** 指定存取層級的關鍵字稱為*存取修飾詞*。 如需存取修飾詞的比較，請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+-   **存取修飾詞。** 指定存取層級的關鍵字稱為*存取修飾詞*。 如需存取修飾詞的比較，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `Private` 修飾詞可用於以下內容：  
   
@@ -59,12 +59,12 @@ ms.locfileid: "34234551"
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另請參閱  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [受保護的私用](./private-protected.md)   
- [Protected Friend](./protected-friend.md)[存取 Visual Basic 中的層級    ](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>另請參閱
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+- [Private Protected](./private-protected.md)
+- [Protected Friend](./protected-friend.md)[存取 Visual Basic 中的層級    ](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

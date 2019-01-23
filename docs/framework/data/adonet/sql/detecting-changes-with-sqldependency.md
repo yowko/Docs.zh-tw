@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: 63d6a17e5aaf3e5d39ed0eda288e75c071be4d73
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 36c95d3eb0a79a4a2dbe0d930b646aa35ffc89e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533477"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>使用 SqlDependency 偵測變更
 您可以將 <xref:System.Data.SqlClient.SqlDependency> 物件與 <xref:System.Data.SqlClient.SqlCommand> 產生關聯，以便偵測查詢結果與原始擷取結果不同的時間。 此外，您也可以指派委派 (Delegate) 給 `OnChange` 事件，而此事件將在相關聯命令的結果變更時引發。 您必須先將 <xref:System.Data.SqlClient.SqlDependency> 與此命令產生關聯，然後再執行此命令。 `HasChanges` 的 <xref:System.Data.SqlClient.SqlDependency> 屬性也可用來判斷自從上次擷取資料以來，查詢結果是否已經變更。  
@@ -122,6 +122,6 @@ void Termination()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [SQL Server 中的查詢通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [SQL Server 中的查詢通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

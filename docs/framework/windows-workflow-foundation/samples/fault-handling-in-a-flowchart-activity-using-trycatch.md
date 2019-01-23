@@ -2,12 +2,12 @@
 title: 使用 TryCatch 錯誤處理流程圖活動
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: df3d93087744ce0fba597f5c9f1d2da4b71a50dd
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 56215ecf1b5f2b54333271f2086b831f564ff7c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507495"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>使用 TryCatch 錯誤處理流程圖活動
 這個範例示範 <xref:System.Activities.Statements.TryCatch> 活動在複雜控制流程活動中的使用方式。
@@ -27,7 +27,7 @@ ms.locfileid: "48845641"
 |--------------------------|--------------------|
 |Single|10|
 |MNK|15|
-|MWK|15 + (1 – 1 /`numberOfKids`)\*10**注意：** 甚至是此計算可能會擲回<xref:System.DivideByZeroException>。 因此，折扣計算是包裝在 <xref:System.Activities.Statements.TryCatch> 活動中，以攔截 <xref:System.DivideByZeroException> 例外狀況並將折扣設為零。|
+|MWK|15 + (1 – 1 /`numberOfKids`)\*10**附註：** 此計算可能會擲回 <xref:System.DivideByZeroException>。 因此，折扣計算是包裝在 <xref:System.Activities.Statements.TryCatch> 活動中，以攔截 <xref:System.DivideByZeroException> 例外狀況並將折扣設為零。|
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
@@ -46,6 +46,6 @@ ms.locfileid: "48845641"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
-## <a name="see-also"></a>另請參閱  
- [流程圖工作流程](../../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)  
- [例外狀況](../../../../docs/framework/windows-workflow-foundation/exceptions.md)
+## <a name="see-also"></a>另請參閱
+- [流程圖工作流程](../../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)
+- [例外狀況](../../../../docs/framework/windows-workflow-foundation/exceptions.md)

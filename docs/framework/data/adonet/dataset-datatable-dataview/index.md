@@ -2,12 +2,6 @@
 title: DataSet、DataTable 和 DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 0f537ad8ff468de54adc8bc820a060eaca357be9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506245"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSet、DataTable 和 DataView
 ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論內含資料來源為何，都可提供一致的關聯式程式設計模型。 <xref:System.Data.DataSet> 表示一組完整的資料，包括內含、排序和約束資料的資料表，以及資料表間的關聯性。  
@@ -78,6 +72,6 @@ ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論
  [將現有條件約束新增至 DataSet](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  描述如何將來自資料來源的主索引鍵資訊填入 **DataSet**。  
   
-## <a name="see-also"></a>另請參閱  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

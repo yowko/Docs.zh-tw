@@ -1,5 +1,5 @@
 ---
-title: 如何： 列舉電腦上展示的時區
+title: HOW TO：列舉電腦上展示的時區
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c012b10f43a45699605e2d87a5b4a814c7dae28
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518406"
 ---
-# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>如何： 列舉電腦上展示的時區
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>HOW TO：列舉電腦上展示的時區
 
 若要順利處理指定的時區，需要可供系統使用之時區的相關資訊。 Windows XP 和 Windows Vista 作業系統會將此資訊儲存在登錄中。 不過，雖然全世界的時區總數很大，但是登錄只會包含其中一部分的資訊。 此外，登錄本身是內容很容易變成故意或意外變更的動態結構。 因此，應用程式無法永遠假設特定時區已定義且可在系統上使用。 許多使用時區資訊應用程式之應用程式的第一個步驟，為是否可在本機系統上使用必要時區，或將可從中選取的時區清單提供給使用者。 這需要應用程式列舉本機系統上所定義的時區。
 
 > [!NOTE]
-> 如果應用程式依賴本機系統可能沒有定義為特定時區的目前狀態，應用程式可以確保其目前狀態序列化和還原序列化的相關時區資訊。 時區然後新增到清單控制項，使應用程式使用者可以選取它。 如需詳細資訊，請參閱 <<c0> [ 如何： 儲存到內嵌資源的 Time Zones](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)並[如何： 從內嵌資源還原時區](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。
+> 如果應用程式依賴本機系統可能沒有定義為特定時區的目前狀態，應用程式可以確保其目前狀態序列化和還原序列化的相關時區資訊。 時區然後新增到清單控制項，使應用程式使用者可以選取它。 如需詳細資訊，請參閱[How to:將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)和[How to:從內嵌資源還原時區](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>列舉本機系統上展示的時區
 
@@ -73,6 +73,6 @@ ms.locfileid: "45698298"
 
 ## <a name="see-also"></a>另請參閱
 
-* [日期、時間和時區](../../../docs/standard/datetime/index.md)
-* [操作說明：將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
-* [操作說明：從內嵌資源還原時區](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [日期、時間和時區](../../../docs/standard/datetime/index.md)
+- [如何：將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+- [如何：從內嵌資源還原時區](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

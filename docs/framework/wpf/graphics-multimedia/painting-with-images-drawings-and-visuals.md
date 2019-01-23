@@ -12,12 +12,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: 0d860062814a447830e1237f4fc2c1ae0d223e9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d226ecb6e168a044cd9802b4278c25084d8c84fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510020"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537747"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>使用影像、繪圖和視覺效果繪製
 本主題描述如何使用<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，並<xref:System.Windows.Media.VisualBrush>物件來使用影像繪製區域<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。  
@@ -90,7 +90,7 @@ DrawingBrush 所繪製的物件
   
  有兩種方式來指定<xref:System.Windows.Media.VisualBrush.Visual%2A>內容的<xref:System.Windows.Media.VisualBrush>。  
   
--   建立新<xref:System.Windows.Media.Visual>並使用它來設定<xref:System.Windows.Media.VisualBrush.Visual%2A>屬性<xref:System.Windows.Media.VisualBrush>。 如需範例，請參閱稍後的[範例：使用視覺效果繪製物件](#examplevisualbrush1)一節。  
+-   建立新<xref:System.Windows.Media.Visual>並使用它來設定<xref:System.Windows.Media.VisualBrush.Visual%2A>屬性<xref:System.Windows.Media.VisualBrush>。 如需範例，請參閱[範例：使用視覺效果繪製物件](#examplevisualbrush1)一節。  
   
 -   使用現有<xref:System.Windows.Media.Visual>，這會建立重複的映像的目標<xref:System.Windows.Media.Visual>。 您可以接著使用<xref:System.Windows.Media.VisualBrush>建立有趣的效果，例如反映與放大。 如需範例，請參閱[範例：建立反映](#examplevisualbrush2)一節。  
   
@@ -134,16 +134,16 @@ DrawingBrush 所繪製的物件
   
  如需詳細資訊的並排顯示功能的相關<xref:System.Windows.Media.TileBrush>物件，請參閱[TileBrush 概觀](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.ImageBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- <xref:System.Windows.Media.VisualBrush>  
- <xref:System.Windows.Media.TileBrush>  
- [TileBrush 概觀](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [WPF 筆刷概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [繪圖物件概觀](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [不透明度遮罩概觀](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [ImageBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.ImageBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- <xref:System.Windows.Media.VisualBrush>
+- <xref:System.Windows.Media.TileBrush>
+- [TileBrush 概觀](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)
+- [WPF 筆刷概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)
+- [影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [繪圖物件概觀](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+- [不透明度遮罩概觀](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)
+- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [ImageBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160049)

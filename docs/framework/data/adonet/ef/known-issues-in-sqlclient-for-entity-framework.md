@@ -2,12 +2,12 @@
 title: 適用於 Entity Framework 的 SqlClient 已知問題
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: c1353444415ddd2305a73d14bacf1bb33a931929
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 112c11edd3955f2bdc6d2b0510e385d4560b80ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47072390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497244"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>適用於 Entity Framework 的 SqlClient 已知問題
 本節說明與 .NET Framework Data Provider for SQL Server (SqlClient) 相關的已知問題。  
@@ -36,7 +36,7 @@ ms.locfileid: "47072390"
 -   具有 DEREF 建構對 REF 建構的查詢。  
   
 ## <a name="skip-operator"></a>SKIP 運算子  
- 如果您使用[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]，SKIP 搭配 ORDER BY 使用非索引鍵資料行上可能會傳回不正確的結果。 如果非索引鍵資料行中有重複的資料，可能會略過超過所指定數目的資料行。 這是因為 SKIP 針對 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] 轉譯的方式所造成的。 例如，在下列查詢中，五個以上的資料列可能會略過如果`E.NonKeyColumn`有重複的值：  
+ 如果您使用[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]，SKIP 搭配 ORDER BY 使用非索引鍵資料行上可能會傳回不正確的結果。 如果非索引鍵資料行中有重複的資料，可能會略過超過所指定數目的資料行。 這是因為 SKIP 針對 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]轉譯的方式所造成的。 例如，在下列查詢中，五個以上的資料列可能會略過如果`E.NonKeyColumn`有重複的值：  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
@@ -59,6 +59,6 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ## <a name="server-generated-guid-identity-values"></a>伺服器產生的 GUID 識別值  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 支援伺服器產生的 GUID 識別值，但是提供者必須支援在資插入資料列之後，傳回伺服器產生的識別值。 從 SQL Server 2005 開始，您可以傳回伺服器產生的 GUID 型別在 SQL Server 資料庫裡[OUTPUT 子句](https://go.microsoft.com/fwlink/?LinkId=169400)。  
   
-## <a name="see-also"></a>另請參閱  
- [適用於 Entity Framework 的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- [LINQ to Entities 中的已知問題和考量](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+## <a name="see-also"></a>另請參閱
+- [適用於 Entity Framework 的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
+- [LINQ to Entities 中的已知問題和考量](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bce005a677dcb74c176a6dddfb2726f6b1fd0e8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f911d99470b9870f5c42d4170a4024123c10e7f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511117"
 ---
 # <a name="igchostcollect-method"></a>IGCHost::Collect 方法
-強制發生在指定的層代，不論目前的記憶體回收集合的狀態。  
+強制發生指定的層代，不論目前的記憶體回收集合的狀態。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +37,16 @@ HRESULT Collect (
   
 #### <a name="parameters"></a>參數  
  `Generation`  
- [in]在其上執行記憶體回收層代。 值為-1 表示所有層代將會進行記憶體回收。  
+ [in]要執行記憶體回收層代。 -1 值表示所有層代將會進行記憶體回收。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** GCHost.idl、 GCHost.h  
+ **標頭：** GCHost.idl GCHost.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IGCHost 介面](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IGCHost 介面](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

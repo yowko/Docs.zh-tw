@@ -2,12 +2,12 @@
 title: LINQ to XML 概觀 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
-ms.openlocfilehash: 962fddcfec04259425c1094f07adf0e3966dfab0
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 987409aab9d3d12cc3cbbebaa64da0bffcee1c8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504037"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML 概觀 (Visual Basic)
 XML 已被廣泛採用為格式化許多內容之資料的方式。 例如，您可以在 Web、組態檔、Microsoft Office Word 檔案與資料庫中發現 XML。  
@@ -22,13 +22,13 @@ XML 已被廣泛採用為格式化許多內容之資料的方式。 例如，您
 ## <a name="what-is-linq-to-xml"></a>何謂 LINQ to XML？  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是一個以 LINQ 為基礎、記憶體中的 XML 程式發展介面，可讓您從 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 程式設計語言內使用 XML。  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 如同文件物件模型 (DOM)，它會將 XML 文件帶到記憶體中。 您可以查詢與修改文件，並在修改後儲存到檔案，或將其序列化並透過網際網路傳送。 不過，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]與 DOM 不同： 它提供新的物件模型較為輕量且更容易使用，而且會在 Visual Basic 中的語言功能的利用。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 如同文件物件模型 (DOM)，它會將 XML 文件帶到記憶體中。 您可以查詢與修改文件，並在修改後儲存到檔案，或將其序列化並透過網際網路傳送。 不過，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與 DOM 不同：它提供新的物件模型較為輕量且更容易使用，而且會在 Visual Basic 中的語言功能的利用。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 最重要的優點為其與 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 的整合能力。 這種整合可讓您在記憶體中 XML 文件上撰寫查詢以擷取項目和屬性的集合。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的查詢功能相當於 (雖然語法上不同) XPath 和 Xquery 的功能。 整合[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]Visual Basic 中提供更強類型，編譯時間檢查，以及改善的偵錯工具支援。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的另一項優點是將查詢結果當做 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 物件建構函式參數的功能，可提供建立 XML 樹狀結構的強大方法。 此方法稱為「功能建構」，可讓開發人員輕鬆將 XML 樹狀結構從某種圖形轉換為另一種圖形。  
   
- 例如，您可能具有[ XML 檔範例：典型訂購單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) 中所述的典型 XML 訂購單。 您可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 執行下列查詢，以便在採購訂單中取得每個項目的零件編號屬行值：  
+ 比方說，您可能會有典型的 XML 採購訂單中所述[範例 XML 檔：典型的採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。 您可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 執行下列查詢，以便在採購訂單中取得每個項目的零件編號屬行值：  
   
 ```vb  
 Dim partNos = _  
@@ -89,7 +89,7 @@ Dim contacts = _
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.Linq>  
-- [使用者入門 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
-- [Visual Basic 中的 LINQ to XML 概觀](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+- <xref:System.Xml.Linq>
+- [使用者入門 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+- [Visual Basic 中的 LINQ to XML 概觀](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 9e8bcd4503ec840e46022a55cc08dc0610eaa60b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c86ab6c7d5113f95b0fd93d194465c4af701f78a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513644"
 ---
 # <a name="threading-model"></a>執行緒模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是設計來避免開發人員遇到執行緒的難題。 如此一來，大部分的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開發人員不需要撰寫介面來使用多個執行緒。 由於多執行緒的程式非常複雜且很難偵錯，因此，若有單一執行緒解決方案，就應避免使用多執行緒程式。  
@@ -54,7 +54,7 @@ ms.locfileid: "43512462"
  <xref:System.Windows.Threading.Dispatcher>依優先順序排序其佇列中的項目。 有可能會將元素加入時指定的十個層級<xref:System.Windows.Threading.Dispatcher>佇列。 這些優先順序會保存在<xref:System.Windows.Threading.DispatcherPriority>列舉型別。 詳細資訊<xref:System.Windows.Threading.DispatcherPriority>層級可在[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]文件。  
   
 <a name="samples"></a>   
-## <a name="threads-in-action-the-samples"></a>執行中的執行緒︰範例  
+## <a name="threads-in-action-the-samples"></a>執行中的執行緒：範例  
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>單一執行緒應用程式與長時間執行的計算  
@@ -217,5 +217,5 @@ ms.locfileid: "43512462"
   
  工作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是為了避免非預期的重新進入沒有引入記憶體流失，這就是為什麼我們不會封鎖所有位置的重新進入。  
   
-## <a name="see-also"></a>另請參閱  
- [單一執行緒應用程式與長期執行的計算範例](https://go.microsoft.com/fwlink/?LinkID=160038)
+## <a name="see-also"></a>另請參閱
+- [單一執行緒應用程式與長期執行的計算範例](https://go.microsoft.com/fwlink/?LinkID=160038)

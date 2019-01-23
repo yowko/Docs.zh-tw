@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: 89f6566bd733ff92d464c026102429d3fc5cf0c1
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.openlocfilehash: 1b8bc004705be4113d875dd7909426e2d253112d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50047848"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534978"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 可讓編譯器在第一個出現的警告視為錯誤。  
@@ -61,7 +61,7 @@ vbc -warnaserror in.vb
 vbc -warnaserror:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)

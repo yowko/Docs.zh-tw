@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10e7da7711cd63579589fda416d0d3a4f777eefe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7ad6c8bd59f62bc7b0a96e1ef5e545fe15610c91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516976"
 ---
 # <a name="icordebugmodulegetbaseaddress-method"></a>ICorDebugModule::GetBaseAddress 方法
 取得模組的基底位址。  
@@ -40,17 +40,17 @@ HRESULT GetBaseAddress(
  [out]A`CORDB_ADDRESS`指定模組的基底位址。  
   
 ## <a name="remarks"></a>備註  
- 如果模組是原生映像 （亦即，如果模組已由原生映像產生器 NGen.exe 產生），其基底地址將會是零。  
+ 如果模組是原生映像 （亦即，如果模組由原生映像產生器 NGen.exe 產生），其基底的位址將會是零。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
-    
- 
+## <a name="see-also"></a>另請參閱
+
+

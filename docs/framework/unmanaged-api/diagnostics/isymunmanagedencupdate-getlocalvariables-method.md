@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a53493d666cb16fcc9b407ca3a46072afa306b97
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 44b30d571e6786ad840308a21fb185270c6e5ae7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509866"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables 方法
 取得本機變數。  
@@ -55,7 +55,7 @@ HRESULT GetLocalVariables(
  如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedENCUpdate 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedENCUpdate 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

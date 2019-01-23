@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 4fd846502fd348222bc1da1c8746f037e9f237fe
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9e28f95b58481a5cb7b2fbf92fd20545a3f0fdc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503114"
 ---
 # <a name="transforms-overview"></a>轉換概觀
 本主題描述如何使用[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>類別來旋轉、 縮放、 移動 （平移） 及扭曲<xref:System.Windows.FrameworkElement>物件。  
@@ -70,17 +70,17 @@ ms.locfileid: "43864572"
   
 |類型|轉換屬性|  
 |----------|-------------------------------|  
-|<xref:System.Windows.Media.Brush>|<xref:System.Windows.Media.Brush.Transform%2A>, <xref:System.Windows.Media.Brush.RelativeTransform%2A>|  
+|<xref:System.Windows.Media.Brush>|<xref:System.Windows.Media.Brush.Transform%2A>、 <xref:System.Windows.Media.Brush.RelativeTransform%2A>|  
 |<xref:System.Windows.Media.ContainerVisual>|<xref:System.Windows.Media.ContainerVisual.Transform%2A>|  
 |<xref:System.Windows.Media.DrawingGroup>|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|  
-|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.UIElement.RenderTransform%2A>, <xref:System.Windows.FrameworkElement.LayoutTransform%2A>|  
+|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.UIElement.RenderTransform%2A>、 <xref:System.Windows.FrameworkElement.LayoutTransform%2A>|  
 |<xref:System.Windows.Media.Geometry>|<xref:System.Windows.Media.Geometry.Transform%2A>|  
 |<xref:System.Windows.Media.TextEffect>|<xref:System.Windows.Media.TextEffect.Transform%2A>|  
 |<xref:System.Windows.UIElement>|<xref:System.Windows.UIElement.RenderTransform%2A>|  
   
 <a name="transformcenter"></a>   
 ## <a name="transformations-and-coordinate-systems"></a>轉換和座標系統  
- 當您轉換物件時，您不只是轉換物件，也同時轉換該物件所在的座標空間。 根據預設，轉換會以目標物件之座標系統的原點為中心：(0,0)。 是唯一的例外狀況<xref:System.Windows.Media.TranslateTransform>;<xref:System.Windows.Media.TranslateTransform>沒有 center 屬性，來設定，因為轉換效果相同，不論其中心的位置。  
+ 當您轉換物件時，您不只是轉換物件，也同時轉換該物件所在的座標空間。 根據預設，轉換會在目標物件的座標系統的原點置中：(0,0). 是唯一的例外狀況<xref:System.Windows.Media.TranslateTransform>;<xref:System.Windows.Media.TranslateTransform>沒有 center 屬性，來設定，因為轉換效果相同，不論其中心的位置。  
   
  下列範例會使用<xref:System.Windows.Media.RotateTransform>旋轉<xref:System.Windows.Shapes.Rectangle>元素中，一種<xref:System.Windows.FrameworkElement>，旋轉 45 度預設中心 （0，0）。 下圖顯示旋轉的效果。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "43864572"
  如需有關 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中版面配置的詳細資訊，請參閱[版面配置](../../../../docs/framework/wpf/advanced/layout.md)概觀。  
   
 <a name="exampleRotateAnElement45degSection"></a>   
-## <a name="example-rotate-a-frameworkelement-45-degrees"></a>範例︰將 FrameworkElement 旋轉 45 度  
+## <a name="example-rotate-a-frameworkelement-45-degrees"></a>範例：將 FrameworkElement 旋轉 45 度  
  下列範例會使用<xref:System.Windows.Media.RotateTransform>以順時針方向將按鈕旋轉 45 度。 按鈕包含於<xref:System.Windows.Controls.StackPanel>具有其他兩個按鈕。  
   
  根據預設，<xref:System.Windows.Media.RotateTransform>以點 （0，0） 旋轉。 因為範例沒有指定中心值，所以按鈕會以點 (0, 0) (也就是左上角) 為中心旋轉。 <xref:System.Windows.Media.RotateTransform>套用至<xref:System.Windows.UIElement.RenderTransform%2A>屬性。 下圖顯示轉換的結果。  
@@ -149,8 +149,8 @@ ms.locfileid: "43864572"
 ## <a name="freezable-features"></a>Freezable 功能  
  因為它繼承自<xref:System.Windows.Freezable>類別，<xref:System.Windows.Media.Transform>類別提供數個特殊功能︰<xref:System.Windows.Media.Transform>物件可以宣告為[資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)、 多個物件，成為唯讀，以改善在共用效能、 複製，並變更為安全執行緒。 如需不同功能所提供的詳細資訊<xref:System.Windows.Freezable>物件，請參閱[Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Matrix>  
- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
- [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Matrix>
+- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)

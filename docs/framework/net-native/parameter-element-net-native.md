@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5c72919327c1186f5758f03680ff68037da3632
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1c2cb79948f5bd762a0cd1b9fd83fd420a5821e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537175"
 ---
 # <a name="ltparametergt-element-net-native"></a>&lt;Parameter&gt; 項目 (.NET Native)
 將反映原則套用至傳遞給方法的引數類型。  
@@ -61,7 +61,7 @@ ms.locfileid: "33395241"
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -73,8 +73,8 @@ ms.locfileid: "33395241"
 ## <a name="remarks"></a>備註  
  `<Parameter>` 項目是 [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 項目的子項，用來將原則套用至特定的方法參數。 特定的方法參數是依名稱指定，而不是依類型。 必須存在至少一個表示原則類型的屬性，例如 `Activate` 或 `Dynamic`。  
   
-## <a name="see-also"></a>另請參閱  
- [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)  
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>另請參閱
+- [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)
+- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)

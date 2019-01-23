@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
+title: 逐步解說：以 ListView 和 TreeView 控制項使用設計工具建立檔案總管樣式介面
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 73d3a0bef1ab075aee8e06f676ef17b853773552
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e62f2a9831a4a88a67c5fea1f24432c508c66eae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595617"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517093"
 ---
-# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
+# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>逐步解說：以 ListView 和 TreeView 控制項使用設計工具建立檔案總管樣式介面
 Visual Studio 的優點之一是時間的能夠建立專業的 Windows Forms 應用程式在短量。 常見的案例建立使用者介面 (UI) 與<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>類似於 Windows 作業系統的 Windows 檔案總管功能的控制項。 Windows 檔案總管會顯示使用者的電腦上的檔案和資料夾的階層式結構。  
   
 > [!NOTE]
@@ -94,16 +94,16 @@ Visual Studio 的優點之一是時間的能夠建立專業的 Windows Forms 應
 ## <a name="next-steps"></a>後續步驟  
  此應用程式可讓您的方式，您可以使用範例<xref:System.Windows.Forms.TreeView>和<xref:System.Windows.Forms.ListView>一起控制。 如需有關這些控制項的詳細資訊，請參閱下列主題：  
   
--   [操作說明：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [操作說明：將搜尋能力加入至 ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
+-   [如何：將搜尋功能加入至 ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [操作說明：將捷徑功能表附加至 TreeView 節點](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+-   [如何：將捷徑功能表附加至 TreeView 節點](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.ListView>  
- <xref:System.Windows.Forms.TreeView>  
- [ListView 控制項](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [操作說明：使用 Windows Forms TreeView 控制項加入和移除節點](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
- [操作說明：使用 Windows Forms ListView 控制項加入和移除項目](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
- [操作說明：將資料行加入至 Windows Forms ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.ListView>
+- <xref:System.Windows.Forms.TreeView>
+- [ListView 控制項](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [如何：新增和移除節點，而在 Windows Form TreeView 控制項](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [如何：新增和移除項目，使用 Windows Forms ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [如何：資料行加入 Windows Form ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)

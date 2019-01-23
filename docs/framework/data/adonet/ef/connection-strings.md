@@ -2,17 +2,17 @@
 title: ADO.NET Entity Framework 中的連接字串
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497455"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET Entity Framework 中的連接字串
 連接字串 (Connection String) 包含可當做參數從資料提供者 (Data Provider) 傳遞至資料來源的初始化資訊。 此語法會因資料提供者而不同，而且連接字串會在嘗試開啟連接期間進行剖析。 Entity Framework 所使用的連接字串包含用來連接至支援 Entity Framework 之基礎 ADO.NET 資料提供者的資訊。 它們也包含必要之模型和對應檔的相關資訊。  
   
- EntityClient 提供者會在存取模型和對應中繼資料，以及連接至資料來源時使用連接字串。 您可以透過 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 屬性來存取或設定連接字串。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別 (Class) 可用來以程式設計方式建構或存取連接字串中的參數。 如需詳細資訊，請參閱 <<c0> [ 如何： 建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。  
+ EntityClient 提供者會在存取模型和對應中繼資料，以及連接至資料來源時使用連接字串。 您可以透過 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 屬性來存取或設定連接字串。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別 (Class) 可用來以程式設計方式建構或存取連接字串中的參數。 如需詳細資訊，請參閱[＜How to：建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。  
   
  [Entity Data Model 工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)產生連接字串儲存在應用程式的組態檔中。 <xref:System.Data.Objects.ObjectContext> 會在建立物件查詢時自動擷取這個連接資訊。 您可以從 <xref:System.Data.EntityClient.EntityConnection> 屬性中存取 <xref:System.Data.Objects.ObjectContext> 執行個體 (Instance) 所使用的 <xref:System.Data.Objects.ObjectContext.Connection%2A>。 如需詳細資訊，請參閱 <<c0> [ 管理連接和交易](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
 
@@ -48,7 +48,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |選項|描述|  
 |-|-|  
-|`assemblyFullName`|含有內嵌資源之組件 (Assembly) 的完整名稱。 此名稱包括簡單名稱、版本名稱、支援的文化特性 (Culture) 和公開金鑰 (Public Key)，如下所示：<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 資源可以內嵌在應用程式可存取的任何組件中。<br /><br /> 如果您指定以萬用字元 (\*) 的`assemblyFullName`，Entity Framework 執行階段會搜尋下列位置中，依此順序中的資源：<br /><br /> 1.呼叫組件。<br />2.參考的組件。<br />3.位於應用程式 bin 目錄中的組件。<br /><br /> 如果這些檔案不在其中一個位置內，就會擲回例外狀況 (Exception)。 **注意：** 當您使用萬用字元 （*） 時，Entity Framework 必須逐一查看所有組件資源與正確的名稱。 若要改善效能，請指定組件名稱而非萬用字元。|  
+|`assemblyFullName`|含有內嵌資源之組件 (Assembly) 的完整名稱。 此名稱包括簡單名稱、版本名稱、支援的文化特性 (Culture) 和公開金鑰 (Public Key)，如下所示：<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 資源可以內嵌在應用程式可存取的任何組件中。<br /><br /> 如果您指定以萬用字元 (\*) 的`assemblyFullName`，Entity Framework 執行階段會搜尋下列位置中，依此順序中的資源：<br /><br /> 1.呼叫組件。<br />2.參考的組件。<br />3.位於應用程式 bin 目錄中的組件。<br /><br /> 如果這些檔案不在其中一個位置內，就會擲回例外狀況 (Exception)。 **注意：** 當您使用萬用字元 (*) 時，Entity Framework 必須逐一查看所有組件，以便找出含有正確名稱的資源。 若要改善效能，請指定組件名稱而非萬用字元。|  
 |`resourceName`|內含資源的名稱，例如 AdvendtureWorksModel.csdl。 中繼資料服務只會尋找具有下列其中一個副檔名的檔案或資源：.csdl、.ssdl 或 .msl。 如果沒有指定 `resourceName`，就會載入所有中繼資料資源。 這些資源應該在組件中具有唯一的名稱。 如果您在組件的不同目錄中定義了具有相同名稱的多個檔案，`resourceName` 就必須在資源名稱前面包含資料夾結構，例如 FolderName.FileName.csdl。<br /><br /> 當您針對 `resourceName` 指定萬用字元 (*) 時，不需要使用 `assemblyFullName`。|  
   
 > [!NOTE]
@@ -108,8 +108,8 @@ Metadata=.\
   
  `DataDirectory` 替代字串和 ~ 運算子的解析並非遞迴方式。 例如，當 `DataDirectory` 包含 `~` 字元時，就會發生例外狀況。 這可防止無限遞迴 (Infinite Recursion)。  
   
-## <a name="see-also"></a>另請參閱  
- [處理資料提供者](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
- [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [管理連接和異動](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
- [連接字串](../../../../../docs/framework/data/adonet/connection-strings.md)
+## <a name="see-also"></a>另請參閱
+- [處理資料提供者](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [管理連接和異動](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [連接字串](../../../../../docs/framework/data/adonet/connection-strings.md)

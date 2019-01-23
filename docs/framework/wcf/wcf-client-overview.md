@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: e6e7d9fe6764120e3d676b9d2cbd248e7491e504
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d67da4cedc4bd9bad468197db4a2ad60d054894a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152626"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492594"
 ---
 # <a name="wcf-client-overview"></a>WCF 用戶端概觀
 本節說明用戶端應用程式做什麼、 如何設定、 建立和使用 Windows Communication Foundation (WCF) 用戶端，以及如何保護用戶端應用程式。  
@@ -171,6 +171,6 @@ End Interface
 ## <a name="calling-services-using-wcf-client-channels"></a>使用 WCF 用戶端通道呼叫服務  
  WCF 用戶端型別會擴充<xref:System.ServiceModel.ClientBase%601>，而其本身衍生自<xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>介面，以公開基礎通道系統。 您可以搭配 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 類別使用目標服務合約來叫用服務。 如需詳細資訊，請參閱 < [WCF 用戶端架構](../../../docs/framework/wcf/feature-details/client-architecture.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

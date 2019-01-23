@@ -1,5 +1,5 @@
 ---
-title: '&lt;新增&gt;NameValueSectionHandler DictionarySectionHandler 的項目'
+title: '&lt;新增&gt;NameValueSectionHandler 和 DictionarySectionHandler 的項目'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: aeb3e3a4be201369ca2df8d231498dd2400d3c07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 502f86e49d68e456d8e64e00e7632aa603cafbe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523905"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<新增 > NameValueSectionHandler DictionarySectionHandler 的項目
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<新增 > NameValueSectionHandler 和 DictionarySectionHandler 的項目
 
-加入自訂應用程式設定。 每個**\<新增 >** 標記包含的索引鍵/值組。
+加入自訂應用程式設定。 每個**\<新增 >** 標記包含索引鍵/值組。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<新增 >**
+&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>語法
 
@@ -34,14 +34,14 @@ ms.locfileid: "33361367"
 
 | 屬性 | 描述 |
 | --------- | ----------- |
-| **key**   | 必要屬性。<br><br>指定設定的名稱。 |
+| **key**   | 必要屬性。<br><br>指定之設定的名稱。 |
 | **value** | 必要屬性。<br><br>指定設定的值。 |
 
 ## <a name="parent-element"></a>父項目
 
-| 項目 | 描述 |
+| 元素 | 描述 |
 | ------- | ------------|
-| [**\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義自訂組態區段，使用設定<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
+| [**\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義設定使用的自訂組態區段<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -64,8 +64,8 @@ ms.locfileid: "33361367"
 
 ## <a name="configuration-file"></a>組態檔
 
-此項目可以用於應用程式組態檔中，電腦組態檔 (*Machine.config*)，和*Web.config*不在應用程式目錄層級的檔案。
+這個項目可用的應用程式組態檔中，電腦組態檔 (*Machine.config*)，以及*Web.config*不在應用程式的目錄層級的檔案。
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
+- [適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

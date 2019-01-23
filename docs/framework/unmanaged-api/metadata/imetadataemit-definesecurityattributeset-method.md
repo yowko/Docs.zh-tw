@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60cb1640d374ce71d1d2fb51ba536b53ddd39b92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 483f59ee3e81861ec1b05a0fee9c5db797aab68f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491140"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet 方法
 建立一組安全性權限，將附加到指定的語彙基元所參考的物件。  
@@ -39,7 +40,7 @@ HRESULT DefineSecurityAttributeSet (
   
 #### <a name="parameters"></a>參數  
  `tkObj`  
- [in]要附加的安全性資訊的語彙基元。  
+ [in]要附加的安全性資訊之語彙基元。  
   
  `rSecAttrs`  
  [in]陣列`COR_SECATTR`結構。  
@@ -48,17 +49,17 @@ HRESULT DefineSecurityAttributeSet (
  [in]中的項目數`rSecAttrs`。  
   
  `pulErrorAttr`  
- [out]如果方法失敗，會指定在索引`rSecAttrs`造成問題的項目。  
+ [out]如果方法失敗，會指定在索引`rSecAttrs`造成該問題的項目。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
- **程式庫：**做為 MSCorEE.dll 中的資源  
+ **程式庫：** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

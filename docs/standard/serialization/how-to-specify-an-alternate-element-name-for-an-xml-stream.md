@@ -12,12 +12,12 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: f2dd56111bbc0ace76c2b71d208f1b753a2119b8
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 08c686349acc5777343e8e6f2e6084be44a20fe1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517392"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>HOW TO：指定 XML Stream 的替代項目名稱
   
@@ -93,11 +93,11 @@ public class SerializeOverride()
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.Serialization.XmlElementAttribute>  
-- <xref:System.Xml.Serialization.XmlAttributes>  
-- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
-- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
-- [如何：將物件序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- <xref:System.Xml.Serialization.XmlElementAttribute>
+- <xref:System.Xml.Serialization.XmlAttributes>
+- <xref:System.Xml.Serialization.XmlAttributeOverrides>
+- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- [如何：將物件序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 - [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
