@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback::ClassLoadFinished 方法"
-ms.custom: 
+title: ICorProfilerCallback::ClassLoadFinished 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.ClassLoadFinished
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae55325f514f9bec3efdf4764958e4b3fafd922b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b7415809912b7cb56fb2d0bebae196233c45477
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514574"
 ---
-# <a name="icorprofilercallbackclassloadfinished-method"></a><span data-ttu-id="3bd05-102">ICorProfilerCallback::ClassLoadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="3bd05-102">ICorProfilerCallback::ClassLoadFinished Method</span></span>
-<span data-ttu-id="3bd05-103">通知分析工具已完成載入類別。</span><span class="sxs-lookup"><span data-stu-id="3bd05-103">Notifies the profiler that a class has finished loading.</span></span>  
+# <a name="icorprofilercallbackclassloadfinished-method"></a><span data-ttu-id="3d527-102">ICorProfilerCallback::ClassLoadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="3d527-102">ICorProfilerCallback::ClassLoadFinished Method</span></span>
+<span data-ttu-id="3d527-103">通知分析工具已完成載入的類別。</span><span class="sxs-lookup"><span data-stu-id="3d527-103">Notifies the profiler that a class has finished loading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3bd05-104">語法</span><span class="sxs-lookup"><span data-stu-id="3bd05-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d527-104">語法</span><span class="sxs-lookup"><span data-stu-id="3d527-104">Syntax</span></span>  
   
 ```  
 HRESULT ClassLoadFinished(  
@@ -46,27 +35,27 @@ HRESULT ClassLoadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3bd05-105">參數</span><span class="sxs-lookup"><span data-stu-id="3bd05-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3d527-105">參數</span><span class="sxs-lookup"><span data-stu-id="3d527-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="3bd05-106">[in]識別已載入的類別。</span><span class="sxs-lookup"><span data-stu-id="3bd05-106">[in] Identifies the class that was loaded.</span></span>  
+ <span data-ttu-id="3d527-106">[in]識別已載入的類別。</span><span class="sxs-lookup"><span data-stu-id="3d527-106">[in] Identifies the class that was loaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="3bd05-107">[in]HRESULT，指出是否已成功載入類別。</span><span class="sxs-lookup"><span data-stu-id="3bd05-107">[in] An HRESULT that indicates whether the class loaded successfully.</span></span>  
+ <span data-ttu-id="3d527-107">[in]指出是否已成功載入類別的 HRESULT。</span><span class="sxs-lookup"><span data-stu-id="3d527-107">[in] An HRESULT that indicates whether the class loaded successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3bd05-108">備註</span><span class="sxs-lookup"><span data-stu-id="3bd05-108">Remarks</span></span>  
- <span data-ttu-id="3bd05-109">值`classId`不正確的資訊要求，直到`ClassLoadFinished`方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="3bd05-109">The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3d527-108">備註</span><span class="sxs-lookup"><span data-stu-id="3d527-108">Remarks</span></span>  
+ <span data-ttu-id="3d527-109">值`classId`不是有效資訊要求直到`ClassLoadFinished`呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="3d527-109">The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.</span></span>  
   
- <span data-ttu-id="3bd05-110">載入類別的某些部分可能會繼續之後`ClassLoadFinished`回呼。</span><span class="sxs-lookup"><span data-stu-id="3bd05-110">Some parts of loading the class might continue after the `ClassLoadFinished` callback.</span></span> <span data-ttu-id="3bd05-111">失敗的 HRESULT 中`hrStatus`表示失敗。</span><span class="sxs-lookup"><span data-stu-id="3bd05-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="3bd05-112">不過，成功 HRESULT 中`hrStatus`只會指出已成功載入類別的第一個部分。</span><span class="sxs-lookup"><span data-stu-id="3bd05-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.</span></span>  
+ <span data-ttu-id="3d527-110">載入類別的某些部分可能會繼續之後`ClassLoadFinished`回呼。</span><span class="sxs-lookup"><span data-stu-id="3d527-110">Some parts of loading the class might continue after the `ClassLoadFinished` callback.</span></span> <span data-ttu-id="3d527-111">失敗 HRESULT 中`hrStatus`表示失敗。</span><span class="sxs-lookup"><span data-stu-id="3d527-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="3d527-112">不過，成功的 HRESULT 中`hrStatus`僅會指示已成功載入類別的第一個部分。</span><span class="sxs-lookup"><span data-stu-id="3d527-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3bd05-113">需求</span><span class="sxs-lookup"><span data-stu-id="3bd05-113">Requirements</span></span>  
- <span data-ttu-id="3bd05-114">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3bd05-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3d527-113">需求</span><span class="sxs-lookup"><span data-stu-id="3d527-113">Requirements</span></span>  
+ <span data-ttu-id="3d527-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3d527-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3bd05-115">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3bd05-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="3d527-115">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3d527-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3bd05-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3bd05-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3d527-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3d527-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3bd05-117">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3bd05-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3d527-117">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d527-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3bd05-118">請參閱</span><span class="sxs-lookup"><span data-stu-id="3bd05-118">See Also</span></span>  
- [<span data-ttu-id="3bd05-119">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="3bd05-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="3bd05-120">ClassLoadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="3bd05-120">ClassLoadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
+## <a name="see-also"></a><span data-ttu-id="3d527-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3d527-118">See also</span></span>
+- [<span data-ttu-id="3d527-119">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="3d527-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="3d527-120">ClassLoadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="3d527-120">ClassLoadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)

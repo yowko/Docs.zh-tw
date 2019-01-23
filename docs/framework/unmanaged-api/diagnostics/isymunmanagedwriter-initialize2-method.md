@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac76ef58badcc8e443279415b7239c0b6017af3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f65262a9b9850d93e934a77f154bb625a55e1e82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514240"
 ---
-# <a name="isymunmanagedwriterinitialize2-method"></a><span data-ttu-id="228b3-102">ISymUnmanagedWriter::Initialize2 方法</span><span class="sxs-lookup"><span data-stu-id="228b3-102">ISymUnmanagedWriter::Initialize2 Method</span></span>
-<span data-ttu-id="228b3-103">設定與這個寫入器將會在相關的中繼資料發出器介面，並將偵錯符號寫入的輸出檔名稱。</span><span class="sxs-lookup"><span data-stu-id="228b3-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span></span> <span data-ttu-id="228b3-104">這個方法也可讓您設定的程式資料庫 (PDB) 檔案的最終位置。</span><span class="sxs-lookup"><span data-stu-id="228b3-104">This method also lets you set the final location of the program database (PDB) file.</span></span>  
+# <a name="isymunmanagedwriterinitialize2-method"></a><span data-ttu-id="087eb-102">ISymUnmanagedWriter::Initialize2 方法</span><span class="sxs-lookup"><span data-stu-id="087eb-102">ISymUnmanagedWriter::Initialize2 Method</span></span>
+<span data-ttu-id="087eb-103">設定與這個寫入器將會在相關的中繼資料發出器介面，並設定偵錯的符號寫入的輸出檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="087eb-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span></span> <span data-ttu-id="087eb-104">這個方法也可讓您設定的程式資料庫 (PDB) 檔案的最終位置。</span><span class="sxs-lookup"><span data-stu-id="087eb-104">This method also lets you set the final location of the program database (PDB) file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="228b3-105">語法</span><span class="sxs-lookup"><span data-stu-id="228b3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="087eb-105">語法</span><span class="sxs-lookup"><span data-stu-id="087eb-105">Syntax</span></span>  
   
 ```  
 HRESULT Initialize2(  
@@ -38,28 +38,28 @@ HRESULT Initialize2(
     [in] const WCHAR  *finalfilename);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="228b3-106">參數</span><span class="sxs-lookup"><span data-stu-id="228b3-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="087eb-106">參數</span><span class="sxs-lookup"><span data-stu-id="087eb-106">Parameters</span></span>  
  `emitter`  
- <span data-ttu-id="228b3-107">[in]中繼資料發出器介面指標。</span><span class="sxs-lookup"><span data-stu-id="228b3-107">[in] A pointer to the metadata emitter interface.</span></span>  
+ <span data-ttu-id="087eb-107">[in]中繼資料發出器介面指標。</span><span class="sxs-lookup"><span data-stu-id="087eb-107">[in] A pointer to the metadata emitter interface.</span></span>  
   
  `tempfilename`  
- <span data-ttu-id="228b3-108">[in]指標`WCHAR`包含偵錯符號寫入的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="228b3-108">[in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written.</span></span> <span data-ttu-id="228b3-109">如果檔案名稱是指定給不使用檔案名稱的寫入器，則這個參數會被忽略。</span><span class="sxs-lookup"><span data-stu-id="228b3-109">If a file name is specified for a writer that does not use file names, this parameter is ignored.</span></span>  
+ <span data-ttu-id="087eb-108">[in]指標`WCHAR`，其中包含寫入偵錯符號的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="087eb-108">[in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written.</span></span> <span data-ttu-id="087eb-109">如果檔案名稱是指定給不使用檔案名稱的寫入器，則這個參數會被忽略。</span><span class="sxs-lookup"><span data-stu-id="087eb-109">If a file name is specified for a writer that does not use file names, this parameter is ignored.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="228b3-110">[in]如果指定，符號寫入器發出符號插入給定<xref:System.Runtime.InteropServices.ComTypes.IStream>，而不是檔案中指定`filename`參數。</span><span class="sxs-lookup"><span data-stu-id="228b3-110">[in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter.</span></span> <span data-ttu-id="228b3-111">`pIStream` 是選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="228b3-111">The `pIStream` parameter is optional.</span></span>  
+ <span data-ttu-id="087eb-110">[in]如果指定，符號寫入器發出符號另外建立成給定<xref:System.Runtime.InteropServices.ComTypes.IStream>而不是在指定的檔案`filename`參數。</span><span class="sxs-lookup"><span data-stu-id="087eb-110">[in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter.</span></span> <span data-ttu-id="087eb-111">`pIStream` 是選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="087eb-111">The `pIStream` parameter is optional.</span></span>  
   
  `fFullBuild`  
- <span data-ttu-id="228b3-112">[in]`true`如果這是完整重建;`false`如果這是累加編譯。</span><span class="sxs-lookup"><span data-stu-id="228b3-112">[in] `true` if this is a full rebuild; `false` if this is an incremental compilation.</span></span>  
+ <span data-ttu-id="087eb-112">[in]`true`如果這是完整重建，`false`如果這是累加編譯。</span><span class="sxs-lookup"><span data-stu-id="087eb-112">[in] `true` if this is a full rebuild; `false` if this is an incremental compilation.</span></span>  
   
  `finalfilename`  
- <span data-ttu-id="228b3-113">[in]指標`WCHAR`也就是在 PDB 檔案的最終位置的路徑字串。</span><span class="sxs-lookup"><span data-stu-id="228b3-113">[in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.</span></span>  
+ <span data-ttu-id="087eb-113">[in]指標`WCHAR`也就是在 PDB 檔案的最終位置的路徑字串。</span><span class="sxs-lookup"><span data-stu-id="087eb-113">[in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="228b3-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="228b3-114">Return Value</span></span>  
- <span data-ttu-id="228b3-115">如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="228b3-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="087eb-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="087eb-114">Return Value</span></span>  
+ <span data-ttu-id="087eb-115">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="087eb-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="228b3-116">需求</span><span class="sxs-lookup"><span data-stu-id="228b3-116">Requirements</span></span>  
- <span data-ttu-id="228b3-117">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="228b3-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="087eb-116">需求</span><span class="sxs-lookup"><span data-stu-id="087eb-116">Requirements</span></span>  
+ <span data-ttu-id="087eb-117">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="087eb-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="228b3-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="228b3-118">See Also</span></span>  
- [<span data-ttu-id="228b3-119">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="228b3-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [<span data-ttu-id="228b3-120">Initialize 方法</span><span class="sxs-lookup"><span data-stu-id="228b3-120">Initialize Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)
+## <a name="see-also"></a><span data-ttu-id="087eb-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="087eb-118">See also</span></span>
+- [<span data-ttu-id="087eb-119">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="087eb-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="087eb-120">Initialize 方法</span><span class="sxs-lookup"><span data-stu-id="087eb-120">Initialize Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)

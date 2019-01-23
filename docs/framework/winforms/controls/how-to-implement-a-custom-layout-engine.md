@@ -1,5 +1,5 @@
 ---
-title: 如何：實作自訂配置引擎
+title: HOW TO：實作自訂的版面配置引擎
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - layout engines [Windows Forms], implementing
 - FlowLayoutPanel control [Windows Forms], layout engine
 ms.assetid: f91aa91c-29f4-4089-95ca-5d48b774b00e
-ms.openlocfilehash: 0444f0d03a36adf833c04167c6d7a3c302ab15dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac3817e8acfb249050b64f0a9ee8d082c933917b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517158"
 ---
-# <a name="how-to-implement-a-custom-layout-engine"></a><span data-ttu-id="3fba0-102">如何：實作自訂配置引擎</span><span class="sxs-lookup"><span data-stu-id="3fba0-102">How to: Implement a Custom Layout Engine</span></span>
-<span data-ttu-id="3fba0-103">下列程式碼範例示範如何建立會執行簡單的流程版面配置的自訂版面配置引擎。</span><span class="sxs-lookup"><span data-stu-id="3fba0-103">The following code example demonstrates how to create a custom layout engine that performs a simple flow layout.</span></span> <span data-ttu-id="3fba0-104">它會實作名為 panel 控制項`DemoFlowPanel`，它會覆寫<xref:System.Windows.Forms.Control.LayoutEngine%2A>屬性提供的執行個體`DemoFlowLayout`類別。</span><span class="sxs-lookup"><span data-stu-id="3fba0-104">It implements a panel control named `DemoFlowPanel`, which overrides the <xref:System.Windows.Forms.Control.LayoutEngine%2A> property to provide an instance of the `DemoFlowLayout` class.</span></span>  
+# <a name="how-to-implement-a-custom-layout-engine"></a><span data-ttu-id="ea4b6-102">HOW TO：實作自訂的版面配置引擎</span><span class="sxs-lookup"><span data-stu-id="ea4b6-102">How to: Implement a Custom Layout Engine</span></span>
+<span data-ttu-id="ea4b6-103">下列程式碼範例示範如何建立自訂配置引擎執行簡單的流程版面配置。</span><span class="sxs-lookup"><span data-stu-id="ea4b6-103">The following code example demonstrates how to create a custom layout engine that performs a simple flow layout.</span></span> <span data-ttu-id="ea4b6-104">它會實作名為的面板控制項`DemoFlowPanel`，它會覆寫<xref:System.Windows.Forms.Control.LayoutEngine%2A>屬性提供的執行個體`DemoFlowLayout`類別。</span><span class="sxs-lookup"><span data-stu-id="ea4b6-104">It implements a panel control named `DemoFlowPanel`, which overrides the <xref:System.Windows.Forms.Control.LayoutEngine%2A> property to provide an instance of the `DemoFlowLayout` class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3fba0-105">範例</span><span class="sxs-lookup"><span data-stu-id="3fba0-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ea4b6-105">範例</span><span class="sxs-lookup"><span data-stu-id="ea4b6-105">Example</span></span>  
  [!code-cpp[System.Windows.Forms.Layout.LayoutEngine#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/cpp/DemoFlowLayout.cpp#1)]
  [!code-csharp[System.Windows.Forms.Layout.LayoutEngine#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/CS/DemoFlowLayout.cs#1)]
  [!code-vb[System.Windows.Forms.Layout.LayoutEngine#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/VB/DemoFlowLayout.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="3fba0-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3fba0-106">See Also</span></span>  
- <xref:System.Windows.Forms.Layout.LayoutEngine>  
- <xref:System.Windows.Forms.Control.LayoutEngine%2A?displayProperty=nameWithType>
+## <a name="see-also"></a><span data-ttu-id="ea4b6-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ea4b6-106">See also</span></span>
+- <xref:System.Windows.Forms.Layout.LayoutEngine>
+- <xref:System.Windows.Forms.Control.LayoutEngine%2A?displayProperty=nameWithType>
