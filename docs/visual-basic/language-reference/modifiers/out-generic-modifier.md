@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 7ba774bfcd629a7518602d4b971e86a690b2dd83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 367cbd373df2a38a56e5362f66bedd5c0ec24efb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522751"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (泛型修飾詞) (Visual Basic)
 泛型型別參數`Out`關鍵字可讓您指定的型別是 covariant。  
@@ -34,11 +34,11 @@ ms.locfileid: "33598149"
   
 -   型別參數不是用為介面方法的泛型條件約束。  
   
- 在泛型委派中，型別參數可以宣告 covariant 如果只當做方法的傳回型別，而且不用於方法引數。  
+ 在泛型委派中，類型參數可以宣告為 covariant 如果它是僅用為方法的傳回型別，不用於方法引數。  
   
  參考型別支援共變數和反變數，但實值型別不支援它們。  
   
- 在 Visual Basic 中，您無法宣告 covariant 介面中的事件，而不指定委派類型。 此外，類別、 列舉或結構，covariant 介面不能有巢狀，但可以有巢狀介面。  
+ 在 Visual Basic 中，您無法宣告 covariant 介面中的事件，但未指定的委派型別。 此外，類別、 列舉或結構，covariant 介面不能有巢狀，但可以有巢狀介面。  
   
 ## <a name="behavior"></a>行為  
  具有 Covariant 型別參數的介面可讓其方法傳回的衍生型別，衍生程度高過型別參數指定的衍生型別。 例如，因為在 .NET Framework 4 的 <xref:System.Collections.Generic.IEnumerable%601> 中，T 類型是 Covariant，所以您可以不使用任何特殊的轉換方法，將 `IEnumerabe(Of String)` 類型的物件指派給 `IEnumerable(Of Object)` 類型的物件。  
@@ -51,10 +51,10 @@ ms.locfileid: "33598149"
  [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_1.vb)]  
   
 ## <a name="example"></a>範例  
- 下例會示範如何宣告、具現化及叫用 Covariant 泛型委派。 它也會顯示如何使用隱含轉換為委派類型。  
+ 下例會示範如何宣告、具現化及叫用 Covariant 泛型委派。 它也會示範如何使用隱含轉換為委派類型。  
   
  [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [泛型介面中的變異數](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+## <a name="see-also"></a>另請參閱
+- [泛型介面中的變異數](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

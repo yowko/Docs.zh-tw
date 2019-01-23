@@ -2,22 +2,22 @@
 title: ServiceDescription 與 WSDL 參考
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: e70d653519c13d2f40fa2a579b674893e1b7ab02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544324"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription 與 WSDL 參考
-本主題描述如何 Windows Communication Foundation (WCF) Web 服務描述語言 (WSDL) 將文件對應的<xref:System.ServiceModel.Description.ServiceDescription>執行個體。  
+本主題說明 Windows Communication Foundation (WCF) 如何對應 Web 服務描述語言 (WSDL) 文件，與<xref:System.ServiceModel.Description.ServiceDescription>執行個體。  
   
 ## <a name="how-servicedescription-maps-to-wsdl-11"></a>ServiceDescription 對應至 WSDL 1.1 的方法  
  您可以使用 WCF 來匯出 WSDL 文件從<xref:System.ServiceModel.Description.ServiceDescription>為您的服務執行個體。 發行中繼資料端點時，會為您的服務自動產生 WSDL 文件。  
   
  您也可以使用 <xref:System.ServiceModel.Description.ServiceEndpoint> 型別，從 WSDL 文件中匯入 <xref:System.ServiceModel.Description.ContractDescription> 執行個體、<xref:System.ServiceModel.Channels.Binding> 執行個體和 `WsdlImporter` 執行個體。  
   
- WCF，所匯出的 WSDL 文件匯入任何使用從外部 XML 結構描述文件的 XML 結構描述定義。 將會對資料型別在服務中使用的每個目標命名空間，匯出不同的 XML 結構描述文件。 同樣地，將會對服務合約使用的每個目標命名空間，匯出不同的 WSDL 文件。  
+ WCF 所匯出的 WSDL 文件匯入從外部 XML 結構描述文件使用任何 XML 結構描述定義。 將會對資料型別在服務中使用的每個目標命名空間，匯出不同的 XML 結構描述文件。 同樣地，將會對服務合約使用的每個目標命名空間，匯出不同的 WSDL 文件。  
   
 ### <a name="servicedescription"></a>ServiceDescription  
  <xref:System.ServiceModel.Description.ServiceDescription> 執行個體會對應至 `wsdl:service` 項目。 <xref:System.ServiceModel.Description.ServiceDescription> 執行個體包含 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體集合，其中每一個都會對應至個別 `wsdl:port` 項目。  
@@ -35,14 +35,14 @@ ms.locfileid: "33507347"
   
 |屬性|WSDL 對應|  
 |----------------|------------------|  
-|`Name`|`wsdl:port` /@name端點的值和`wsdl:binding`/@name端點繫結的值。|  
-|`Address`|端點之 `wsdl:port` 定義的位址。<br /><br /> 端點的傳輸會決定位址的格式。 比方說，WCF 支援的傳輸，它可能是 SOAP 位址或端點參考。|  
+|`Name`|`wsdl:port` /@name端點的值並`wsdl:binding`/@name端點繫結的值。|  
+|`Address`|端點之 `wsdl:port` 定義的位址。<br /><br /> 端點的傳輸會決定位址的格式。 比方說，WCF 支援的傳輸，它可能是為 SOAP 位址或端點參考。|  
 |`Binding`|端點的 `wsdl:binding` 定義。<br /><br /> 不同於`wsdl:binding`定義，在 WCF 中的繫結不會繫結至任何合約。|  
 |`Contract`|端點的 `wsdl:portType` 定義。|  
 |`Behaviors`|實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 介面的端點行為可以修改端點的 `wsdl:port`。|  
   
 ### <a name="bindings"></a>繫結  
- `ServiceEndpoint` 執行個體的繫結執行個體會對應至 `wsdl:binding` 定義。 不同於`wsdl:binding`定義，必須具有特定相關聯`wsdl:portType`定義 WCF 繫結與任何合約都。  
+ `ServiceEndpoint` 執行個體的繫結執行個體會對應至 `wsdl:binding` 定義。 不同於`wsdl:binding`定義，必須具有特定相關聯`wsdl:portType`定義中，WCF 繫結無關的任何合約。  
   
  繫結是由繫結項目集合所組成。 每個項目負責針對端點與用戶端通訊的方式稍加描述。 此外，繫結具有的 <xref:System.ServiceModel.Channels.MessageVersion> 會指出用於端點的 <xref:System.ServiceModel.EnvelopeVersion> 和 <xref:System.ServiceModel.Channels.AddressingVersion>。  
   
@@ -59,10 +59,10 @@ ms.locfileid: "33507347"
  繫結的 <xref:System.ServiceModel.Channels.TransportBindingElement> 會判斷 SOAP 繫結的傳輸統一資源識別碼 (URI)。  
   
 #### <a name="addressingversion"></a>AddressingVersion  
- 繫結上的 `AddressingVersion` 會對應至 `wsd:port` 中使用的定址版本。 WCF 支援 SOAP 1.1 和 SOAP 1.2 位址，以及 Ws-addressing 08/2004年和 Ws-addressing 1.0 端點參考。  
+ 繫結上的 `AddressingVersion` 會對應至 `wsd:port` 中使用的定址版本。 WCF 支援 SOAP 1.1 和 SOAP 1.2 位址，以及 Ws-addressing 08/2004 和 Ws-addressing 1.0 端點參考。  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
- 繫結上的 `EnvelopeVersion` 會對應至 `wsdl:binding` 中使用的 SOAP 版本。 WCF 還支援 SOAP 1.1 和 SOAP 1.2 繫結。  
+ 繫結上的 `EnvelopeVersion` 會對應至 `wsdl:binding` 中使用的 SOAP 版本。 WCF 支援 SOAP 1.1 和 SOAP 1.2 繫結。  
   
 ### <a name="contracts"></a>合約  
  <xref:System.ServiceModel.Description.ContractDescription> 執行個體的 `ServiceEndpoint` 執行個體會對應至 `wsdl:portType`。 `ContractDescription` 執行個體會描述所提供之合約的所有作業。  
@@ -71,7 +71,7 @@ ms.locfileid: "33507347"
 |----------------|------------------|  
 |`Name`|`wsdl:portType` /@name合約的值。|  
 |`Namespace`|`wsdl:portType` 定義的 targetNamespace。|  
-|`SessionMode`|`wsdl:portType` /@msc:usingSession合約的值。 這個屬性是 WSDL 1.1 的 WCF 延伸模組。|  
+|`SessionMode`|`wsdl:portType` /@msc:usingSession合約的值。 這個屬性是 WSDL 1.1 的 WCF 擴充功能。|  
 |`Operations`|合約的 `wsdl:operation` 定義。|  
   
 ### <a name="operations"></a>作業  
@@ -81,11 +81,11 @@ ms.locfileid: "33507347"
   
 |屬性|WSDL 對應|  
 |----------------|------------------|  
-|`Name`|`wsdl:portType` / `wsdl:operation` /@name該作業的值。|  
+|`Name`|`wsdl:portType` / `wsdl:operation` /@name作業的值。|  
 |`ProtectionLevel`|針對此作業，附加至 `wsdl:binding/wsdl:operation` 訊息之安全性原則中的保護判斷提示。|  
-|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating該作業的值。 這個屬性是 WSDL 1.1 的 WCF 延伸模組。|  
-|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating該作業的值。 這個屬性是 WSDL 1.1 的 WCF 延伸模組。|  
-|`Messages`|`wsdl:portType` / `wsdl:operation` / `wsdl:input`和`wsdl:portType` / `wsdl:operation` / `wsdl:output`作業的訊息。|  
+|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating作業的值。 這個屬性是 WSDL 1.1 的 WCF 擴充功能。|  
+|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating作業的值。 這個屬性是 WSDL 1.1 的 WCF 擴充功能。|  
+|`Messages`|`wsdl:portType` / `wsdl:operation` / `wsdl:input`並`wsdl:portType` / `wsdl:operation` / `wsdl:output`作業的訊息。|  
 |`Faults`|`wsdl:portType` / `wsdl:operation` / `wsdl:fault`作業定義。|  
 |`Behaviors`|`DataContractSerializerOperationBehavior` 和 `XmlSerializerOperationBehavior` 會處理作業繫結和作業訊息。|  
   
@@ -94,17 +94,17 @@ ms.locfileid: "33507347"
   
 |屬性|WSDL 對應|  
 |----------------|------------------|  
-|`DataContractFormatAttribute`|`Style`屬性，這個屬性會對應至`wsdl:binding` / `wsdl:operation` / `soap:operation` /@style該作業的值。<br /><br /> `DataContractSerializerOperationBehavior` 在 WSDL 中僅支援結構描述型別的原來用法。|  
+|`DataContractFormatAttribute`|`Style`屬性，這個屬性會對應至`wsdl:binding` / `wsdl:operation` / `soap:operation` /@style作業的值。<br /><br /> `DataContractSerializerOperationBehavior` 在 WSDL 中僅支援結構描述型別的原來用法。|  
   
 #### <a name="the-xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior  
  作業的 `XmlSerializerOperationBehavior` 是 `IWsdlExportExtension` 實作，會針對作業匯出 WSDL 訊息和繫結。 將會使用 `XmlSchemaExporter` 匯出 XML 結構描述型別。 `XmlSerializerOperationBehavior` 也會判斷用於該作業的用法、樣式和結構描述匯出工具與匯入工具。  
   
 |屬性|WSDL 對應|  
 |----------------|------------------|  
-|`XmlSerializerFormatAttribute`|`Style`屬性，這個屬性會對應至`wsdl:binding` / `wsdl:operation` / `soap:operation` /@style該作業的值。<br /><br /> `Use`屬性，這個屬性會對應至`wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use作業中的所有訊息的值。|  
+|`XmlSerializerFormatAttribute`|`Style`屬性，這個屬性會對應至`wsdl:binding` / `wsdl:operation` / `soap:operation` /@style作業的值。<br /><br /> `Use`屬性，這個屬性會對應至`wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use作業中的所有訊息的值。|  
   
 ### <a name="messages"></a>訊息  
- A`MessageDescription`執行個體會對應至`wsdl:message`所參考`wsdl:portType` / `wsdl:operation` / `wsdl:input`或`wsdl:portType` / `wsdl:operation` / `wsdl:output`作業中的訊息。 `MessageDescription` 中具有本文和標頭。  
+ A`MessageDescription`執行個體會對應至`wsdl:message`所參考`wsdl:portType` / `wsdl:operation` / `wsdl:input`或是`wsdl:portType` / `wsdl:operation` / `wsdl:output`作業中的訊息。 `MessageDescription` 中具有本文和標頭。  
   
 |屬性|WSDL 對應|  
 |----------------|------------------|  
@@ -113,24 +113,24 @@ ms.locfileid: "33507347"
 |`ProtectionLevel`|針對此訊息，附加至 `wsdl:message` 定義之安全性原則中的保護判斷提示。|  
 |`Body`|訊息的訊息本文。|  
 |`Headers`|訊息的標頭。|  
-|`ContractDescription.Name`, `OperationContract.Name`|在匯出時，用來衍生`wsdl:message`/@name值。|  
+|`ContractDescription.Name`、 `OperationContract.Name`|在匯出時，用來衍生`wsdl:message`/@name值。|  
   
 #### <a name="message-body"></a>訊息本文  
  A`MessageBodyDescription`執行個體會對應至`wsdl:message` / `wsdl:part`定義訊息的本文。 訊息本文可以為包裝或不要包裝。  
   
 |屬性|WSDL 對應|  
 |----------------|------------------|  
-|`WrapperName`|如果樣式不是 RPC，則`WrapperName`所參考的項目名稱的對應`wsdl:message` / `wsdl:part`與@name設定為 「 參數 」。|  
-|`WrapperNamespace`|如果樣式不是 RPC，則`WrapperNamespace`對應項目命名空間的`wsdl:message` / `wsdl:part`與@name設定為 「 參數 」。|  
+|`WrapperName`|如果樣式不是 RPC，則`WrapperName`所參考的項目名稱的對應`wsdl:message` / `wsdl:part`使用@name設定為 「 參數 」。|  
+|`WrapperNamespace`|如果樣式不是 RPC，則`WrapperNamespace`對應至的項目命名空間`wsdl:message` / `wsdl:part`使用@name設定為 「 參數 」。|  
 |`Parts`|此訊息本文的訊息部分。|  
-|`ReturnValue`|子元素的包裝函式項目是否有包裝函式項目 （文件包裝樣式或 RPC 樣式），否則第一個`wsdl:message` / `wsdl:part`訊息中。|  
+|`ReturnValue`|元素的子元素的包裝函式有包裝函式項目 （文件包裝樣式或 RPC 樣式），否則第一個`wsdl:message` / `wsdl:part`訊息中。|  
   
 #### <a name="message-parts"></a>訊息部分  
- A`MessagePartDescription`執行個體會對應至`wsdl:message` / `wsdl:part`和 XML 結構描述型別或訊息部分指向之項目。  
+ A`MessagePartDescription`執行個體會對應至`wsdl:message` / `wsdl:part`和 XML 結構描述類型或訊息部分所指向的項目。  
   
 |屬性|WSDL 對應|  
 |----------------|------------------|  
-|`Name`|`wsd:message` / `wsdl:part` /@name訊息部分及訊息部分指向之項目的名稱值。|  
+|`Name`|`wsd:message` / `wsdl:part` /@name訊息部分與訊息部分指向之項目的名稱值。|  
 |`Namespace`|訊息部分所指向之項目的命名空間。|  
 |`Index`|索引`wsdl:message` / `wsdl:part`訊息。|  
 |`ProtectionLevel`|針對此訊息部分，附加至 `wsdl:message` 定義之安全性原則中的保護判斷提示。 將會參數化原則以指向特定訊息部分。|  
@@ -140,7 +140,7 @@ ms.locfileid: "33507347"
  `MessageHeaderDescription` 執行個體是一種訊息部分，也會對應至訊息部分的 `soap:header` 繫結。  
   
 ### <a name="faults"></a>錯誤  
- A`FaultDescription`執行個體會對應至`wsdl:portType` / `wsdl:operation` / `wsdl:fault`定義以及其相關聯`wsdl:message`定義。 `wsdl:message` 會新增至相同的目標命名空間，做為相關聯的 WSDL 連接埠型別。 `wsdl:message` 具有名稱為「詳細資訊」的單一訊息部分，而這個部分會指向對應至 `DefaultType` 執行個體之 `FaultDescription` 屬性值的 XML 結構描述項目。  
+ A`FaultDescription`執行個體會對應至`wsdl:portType` / `wsdl:operation` / `wsdl:fault`定義和其相關聯`wsdl:message`定義。 `wsdl:message` 會新增至相同的目標命名空間，做為相關聯的 WSDL 連接埠型別。 `wsdl:message` 具有名稱為「詳細資訊」的單一訊息部分，而這個部分會指向對應至 `DefaultType` 執行個體之 `FaultDescription` 屬性值的 XML 結構描述項目。  
   
 |屬性|WSDL 對應|  
 |----------------|------------------|  
@@ -151,5 +151,5 @@ ms.locfileid: "33507347"
 |`DetailType`|詳細訊息部分指向之項目的 XML 結構描述型別。|  
 |`Name, ContractDescription.Name, OperationDescription.Name,`|用來衍生`wsdl:message`/@name錯誤訊息的值。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Description>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Description>

@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 3674b5e8f54735010da901c76b77bd617218891e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0d1db0e3d2a423c4ba21311b6b9deb0d2565c103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523151"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;清除&gt;項目&lt;接聽程式&gt;如&lt;來源&gt;
 清除追蹤來源的 `Listeners` 集合。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<來源 >  
-\<來源 >  
-\<接聽程式 >  
-\<清除 >  
+\<system.diagnostics>  
+\<sources>  
+\<source>  
+\<listeners>  
+\<clear>  
   
 ## <a name="syntax"></a>語法  
   
@@ -86,8 +86,8 @@ ms.locfileid: "47209177"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [追蹤接聽項](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [追蹤接聽項](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

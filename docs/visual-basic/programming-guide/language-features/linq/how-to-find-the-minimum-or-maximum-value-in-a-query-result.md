@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ 尋找查詢結果中的最小或最大值 (Visual Basic)
+title: HOW TO：查詢結果中尋找最小值或最大值，使用 LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - max operator [LINQ in Visual Basic]
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: 252601b12e21e122c316952f8e10ce04cbe3f78e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e4a7215afdfbfc7653247ad0286a36dd2ab50ba2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514266"
 ---
-# <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>如何：使用 LINQ 尋找查詢結果中的最小或最大值 (Visual Basic)
+# <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>HOW TO：查詢結果中尋找最小值或最大值，使用 LINQ (Visual Basic)
 Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並執行查詢。  
   
  下列範例示範如何建立新的應用程式會執行對 SQL Server 資料庫的查詢。 此範例使用決定結果的最小和最大值`Aggregate`和`Group By`子句。 如需詳細資訊，請參閱 <<c0> [ 彙總子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)並[By 子句群組](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
@@ -76,8 +76,8 @@ Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並�
   
 4.  按 F5 執行您的專案，並檢視結果。  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查詢](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法 (O/R 設計工具)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>另請參閱
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [查詢](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext 方法 (O/R 設計工具)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

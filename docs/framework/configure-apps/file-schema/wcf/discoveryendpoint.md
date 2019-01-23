@@ -1,20 +1,20 @@
 ---
-title: '&lt;DiscoveryEndpoint&gt;'
+title: '&lt;discoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: ab00a80904cdcd2844a44c154edb2e424633427b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b3254a1c3d7fa581b4f7573d693261f5a224515d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524165"
 ---
-# <a name="ltdiscoveryendpointgt"></a>&lt;DiscoveryEndpoint&gt;
+# <a name="ltdiscoveryendpointgt"></a>&lt;discoveryEndpoint&gt;
 
 這個組態項目會定義具有固定探索合約的標準端點。 加入至服務組態時，此組態項目會指定接聽探索訊息的位置。 加入至用戶端組態時，此組態項目會指定傳送探索查詢的位置。  
   
 \<system.serviceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54145376"
 
 | 元素 | 描述 |  
 | ------- | ----------- |  
-| [\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | 標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。 |  
+| [\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | 標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。 |  
   
 ## <a name="example"></a>範例
 
@@ -85,4 +85,4 @@ ms.locfileid: "54145376"
   
 ## <a name="see-also"></a>另請參閱
 
-<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>

@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b57d04a8a49371872c679a331b5ae9c45dce797
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 843236243563ce3dff82726aaab05845fa295b9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518133"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 函式
 取得 common language runtime (CLR) 與指定的處理序控制代碼相關聯的版本號碼。  
   
- 此函式中已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +42,7 @@ HRESULT GetVersionFromProcess (
   
 #### <a name="parameters"></a>參數  
  `hProcess`  
- [in]處理程序控制代碼。  
+ [in]處理序控制代碼。  
   
  `pVersion`  
  [out]這種緩衝區包含此方法成功完成時的版本號碼字串。  
@@ -50,28 +51,28 @@ HRESULT GetVersionFromProcess (
  [in]版本緩衝區的長度。  
   
  `pdwLength`  
- [out]指標的版本號碼字串的長度。  
+ [out]版本號碼的字串長度的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回標準的元件物件模型 (COM) 的錯誤代碼，除了下列的值定義了 WinError.h 中。  
+ 中所定義 WinError.h，除了下列的值，這個方法會傳回標準的元件物件模型 (COM) 錯誤代碼。  
   
 |傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|E_INVALIDARG|`pVersion` 為 null 和`cchBuffer`不是 null，反之亦然。<br /><br /> -或-<br /><br /> `hProcess` 不是有效的處理常式至處理序。<br /><br /> -或-<br /><br /> 未載入 CLR。|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` 為 null 或小於版本字串的長度。|  
-|E_NOTIMPL|無法在 Microsoft Windows 95、 Microsoft Windows 98、 或 Microsoft Windows Me 作業系統上使用這個方法。|  
+|E_INVALIDARG|`pVersion` 為 null 及`cchBuffer`不是 null，或反之亦然。<br /><br /> -或-<br /><br /> `hProcess` 不是有效的控制代碼至處理序。<br /><br /> -或-<br /><br /> 無法載入 CLR。|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` 為 null 或版本字串的長度大於或等於。|  
+|E_NOTIMPL|這個方法並不適用於 Microsoft Windows 95、 Microsoft Windows 98 或 Microsoft Windows Millennium Edition 作業系統。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [GetRequestedRuntimeInfo 函式](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
- [GetRequestedRuntimeVersion 函式](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>另請參閱
+- [GetRequestedRuntimeInfo 函式](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [GetRequestedRuntimeVersion 函式](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

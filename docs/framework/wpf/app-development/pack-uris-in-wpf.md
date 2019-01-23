@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 7addb503d0a7d4c7a4388144759e7f40264d7703
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 111b129b17d0fe473b0249c43e25ddc50bfe6fd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513447"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
 在 Windows Presentation Foundation (WPF) 中，[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]用來識別和載入檔案，在許多方面，包括下列：  
@@ -46,11 +46,11 @@ ms.locfileid: "43522431"
   
  ![套件和組件圖表](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
   
- 若要識別組件，OPC 規格會利用 RFC 2396 的擴充性 (統一資源識別元 (URI): 泛型語法) 來定義套件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]配置。  
+ 若要識別組件，OPC 規格會利用的擴充性 RFC 2396 (統一資源識別元 (URI):泛型語法） 來定義套件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]配置。  
   
  所指定的配置[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]由它的前置詞; 定義 http、 ftp 和 file 是已知範例。 組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]配置使用"pack"作為其配置，並包含兩個元件： 授權和路徑。 以下是組件的格式[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  
   
- 組件: / /*授權單位*/*路徑*
+ pack://*authority*/*path*
   
  *授權單位*指定類型的封裝，包含組件，而*路徑*指定在封裝內某個組件的位置。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "43522431"
   
 -   **授權**：application:///。  
   
--   **路徑**︰相對於本機組件專案資料夾根之資源檔的名稱，包括其路徑。  
+-   **路徑**:資源檔，包括其相對於本機組件專案資料夾根的路徑名稱。  
   
  下列範例示範此組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]針對[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]位於本機組件專案資料夾的根目錄中的資源檔。  
   
@@ -105,9 +105,9 @@ ms.locfileid: "43522431"
   
 -   **授權**：application:///。  
   
--   **路徑**：編譯為所參考組件之資源檔的名稱。 路徑必須符合下列格式：  
+-   **路徑**:資源檔編譯為參考的組件的名稱。 路徑必須符合下列格式：  
   
-     *AssemblyShortName*{*;版本*] {*;PublicKey*]，元件 /*路徑*  
+     *AssemblyShortName*{*;Version*]{*;PublicKey*];component/*Path*  
   
     -   **AssemblyShortName**：所參考組件的簡短名稱。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "43522431"
   
 -   **授權**：application:///。  
   
--   **路徑**：內容檔的名稱，包括其相對於應用程式主要可執行組件之檔案系統位置的路徑。  
+-   **路徑**:內容檔，包括其相對於應用程式的主要可執行組件的檔案系統位置的路徑名稱。  
   
  下列範例示範此組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]針對[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]位於與可執行組件相同的資料夾中的內容檔案。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "43522431"
   
 -   **授權**：siteoforigin:///。  
   
--   **路徑**：來源網站檔案的名稱，包括其相對於從中啟動可執行組件之位置的路徑。  
+-   **路徑**:站台的來源檔案，包括其相對於從中啟動可執行組件位置的路徑名稱。  
   
  下列範例示範此組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]針對[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]來源網站檔，儲存在從中啟動可執行組件的位置。  
   
@@ -281,7 +281,7 @@ ms.locfileid: "43522431"
   
  表 1 說明的各種絕對套件[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]，您可以指定在標記中。  
   
- 表 1：使用標記的絕對套件 URI  
+ 表 1:標記的絕對套件 Uri  
   
 |檔案|絕對套件 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -297,7 +297,7 @@ ms.locfileid: "43522431"
   
  表 2 說明的各種相對套件[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]，您可以指定在標記中。  
   
- 表 2：使用標記的相對套件 URI  
+ 表 2:在標記中的相對套件 Uri  
   
 |檔案|相對套件 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -342,7 +342,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  表 3 說明的各種相對套件[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]您可以指定在程式碼中使用<xref:System.Uri?displayProperty=nameWithType>。  
   
- 表 3：使用程式碼的絕對套件 URI  
+ 表 3:在程式碼中的絕對套件 Uri  
   
 |檔案|絕對套件 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -358,7 +358,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  表 4 說明的各種相對套件[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]您可以指定在程式碼中使用<xref:System.Uri?displayProperty=nameWithType>。  
   
- 表 4：使用程式碼的相對套件 URI  
+ 表 4:在程式碼中的相對套件 Uri  
   
 |檔案|相對套件 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -423,5 +423,5 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  如需在佈景主題的概觀[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，請參閱 <<c2> [ 樣式和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [WPF 應用程式資源、內容和資料檔案](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>另請參閱
+- [WPF 應用程式資源、內容和資料檔案](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

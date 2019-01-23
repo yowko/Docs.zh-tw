@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 7cfcc9fa4dc3bc1450febb39500b7d96f92beac6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3032a0ca19f919344a3f73ea8689a222896093f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523710"
 ---
 # <a name="localization-attributes-and-comments"></a>當地語系化屬性和註解
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解是 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 原始程式碼內的屬性，並由開發人員提供以提供當地語系化的規則和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊︰可當地語系化屬性和自由格式當地語系化註解。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 使用可當地語系化屬性來指出要當地語系化的資源。 自由格式註解是應用程式作者想要包含的任何資訊。  
@@ -84,7 +84,7 @@ ms.locfileid: "33547263"
   
  這些屬性可以依任何順序指定，並以空格分隔。 如果指定重複屬性，則最後一個屬性會覆寫先前的屬性。 例如，Localization.Attributes = "Unmodifiable Modifiable" 會將「可修改性」設定為「可修改」，因為它是最後一個值。  
   
- 可修改性和可讀性一看就懂。 分類屬性提供預先定義的分類，以在翻譯文字時協助當地語系化人員。 文字、標籤和標題這類分類會將如何翻譯文字的資訊提供給當地語系化人員。 也會有特殊分類︰無、繼承、略過和 NeverLocalize。  
+ 可修改性和可讀性一看就懂。 分類屬性提供預先定義的分類，以在翻譯文字時協助當地語系化人員。 文字、標籤和標題這類分類會將如何翻譯文字的資訊提供給當地語系化人員。 也有特殊的類別：無、 繼承、 略過和 NeverLocalize。  
   
  下表顯示特殊分類的意義。  
   
@@ -99,8 +99,8 @@ ms.locfileid: "33547263"
 ## <a name="localization-comments"></a>當地語系化註解  
  Localization.Comments 包含有關目標值的自由格式字串。 應用程式開發人員可以新增資訊，提供當地語系化人員如何翻譯應用程式文字的提示。 註解的格式可以是用 "()" 括住的任何字串。 使用 '\\' 來逸出字元。  
   
-## <a name="see-also"></a>另請參閱  
- [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [使用自動版面配置建立按鈕](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [針對自動版面配置使用方格](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [將應用程式當地語系化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+## <a name="see-also"></a>另請參閱
+- [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [使用自動版面配置建立按鈕](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+- [針對自動版面配置使用方格](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+- [將應用程式當地語系化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
