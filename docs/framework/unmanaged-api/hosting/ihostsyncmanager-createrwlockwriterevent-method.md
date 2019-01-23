@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ff830c136e539fec58d573247a83d1f8239e3bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fc62c5084d91e99193e9ddc5bfbb400fd8d87772
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443199"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531063"
 ---
-# <a name="ihostsyncmanagercreaterwlockwriterevent-method"></a><span data-ttu-id="7f95a-102">IHostSyncManager::CreateRWLockWriterEvent 方法</span><span class="sxs-lookup"><span data-stu-id="7f95a-102">IHostSyncManager::CreateRWLockWriterEvent Method</span></span>
-<span data-ttu-id="7f95a-103">建立自動重設事件物件的寫入器鎖定的實作。</span><span class="sxs-lookup"><span data-stu-id="7f95a-103">Creates an auto-reset event object for the implementation of a writer lock.</span></span>  
+# <a name="ihostsyncmanagercreaterwlockwriterevent-method"></a><span data-ttu-id="2d94c-102">IHostSyncManager::CreateRWLockWriterEvent 方法</span><span class="sxs-lookup"><span data-stu-id="2d94c-102">IHostSyncManager::CreateRWLockWriterEvent Method</span></span>
+<span data-ttu-id="2d94c-103">建立自動重設事件物件的寫入器鎖定的實作。</span><span class="sxs-lookup"><span data-stu-id="2d94c-103">Creates an auto-reset event object for the implementation of a writer lock.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7f95a-104">語法</span><span class="sxs-lookup"><span data-stu-id="7f95a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2d94c-104">語法</span><span class="sxs-lookup"><span data-stu-id="2d94c-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateRWLockWriterEvent (  
@@ -36,39 +36,39 @@ HRESULT CreateRWLockWriterEvent (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7f95a-105">參數</span><span class="sxs-lookup"><span data-stu-id="7f95a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2d94c-105">參數</span><span class="sxs-lookup"><span data-stu-id="2d94c-105">Parameters</span></span>  
  `cookie`  
- <span data-ttu-id="7f95a-106">[in]要與自動重設事件關聯的 cookie。</span><span class="sxs-lookup"><span data-stu-id="7f95a-106">[in] A cookie to associate with the auto-reset event.</span></span>  
+ <span data-ttu-id="2d94c-106">[in]自動重設事件相關聯的 cookie。</span><span class="sxs-lookup"><span data-stu-id="2d94c-106">[in] A cookie to associate with the auto-reset event.</span></span>  
   
  `ppEvent`  
- <span data-ttu-id="7f95a-107">[out]位址指標[IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)執行個體，或如果無法建立事件物件則為 null。</span><span class="sxs-lookup"><span data-stu-id="7f95a-107">[out] A pointer to the address of an [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance, or null if the event object could not be created.</span></span>  
+ <span data-ttu-id="2d94c-107">[out]位址指標[IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)執行個體，或如果無法建立事件物件，則為 null。</span><span class="sxs-lookup"><span data-stu-id="2d94c-107">[out] A pointer to the address of an [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance, or null if the event object could not be created.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7f95a-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="7f95a-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2d94c-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="2d94c-108">Return Value</span></span>  
   
-|<span data-ttu-id="7f95a-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7f95a-109">HRESULT</span></span>|<span data-ttu-id="7f95a-110">描述</span><span class="sxs-lookup"><span data-stu-id="7f95a-110">Description</span></span>|  
+|<span data-ttu-id="2d94c-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2d94c-109">HRESULT</span></span>|<span data-ttu-id="2d94c-110">描述</span><span class="sxs-lookup"><span data-stu-id="2d94c-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="7f95a-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="7f95a-111">S_OK</span></span>|<span data-ttu-id="7f95a-112">`CreateRWLockWriterEvent` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="7f95a-112">`CreateRWLockWriterEvent` returned successfully.</span></span>|  
-|<span data-ttu-id="7f95a-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="7f95a-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="7f95a-114">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="7f95a-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="7f95a-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="7f95a-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="7f95a-116">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="7f95a-116">The call timed out.</span></span>|  
-|<span data-ttu-id="7f95a-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="7f95a-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="7f95a-118">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="7f95a-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="7f95a-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="7f95a-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="7f95a-120">事件已取消時封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="7f95a-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="7f95a-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="7f95a-121">E_FAIL</span></span>|<span data-ttu-id="7f95a-122">發生未知的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="7f95a-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="7f95a-123">方法會傳回 E_FAIL CLR 已不再可用的處理序內。</span><span class="sxs-lookup"><span data-stu-id="7f95a-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="7f95a-124">裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="7f95a-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="7f95a-125">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="7f95a-125">E_OUTOFMEMORY</span></span>|<span data-ttu-id="7f95a-126">沒有足夠的記憶體可用來建立要求的事件物件。</span><span class="sxs-lookup"><span data-stu-id="7f95a-126">Not enough memory was available to create the requested event object.</span></span>|  
+|<span data-ttu-id="2d94c-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="2d94c-111">S_OK</span></span>|<span data-ttu-id="2d94c-112">`CreateRWLockWriterEvent` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="2d94c-112">`CreateRWLockWriterEvent` returned successfully.</span></span>|  
+|<span data-ttu-id="2d94c-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="2d94c-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="2d94c-114">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="2d94c-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="2d94c-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="2d94c-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="2d94c-116">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="2d94c-116">The call timed out.</span></span>|  
+|<span data-ttu-id="2d94c-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="2d94c-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="2d94c-118">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="2d94c-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="2d94c-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="2d94c-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="2d94c-120">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="2d94c-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="2d94c-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2d94c-121">E_FAIL</span></span>|<span data-ttu-id="2d94c-122">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="2d94c-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="2d94c-123">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="2d94c-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="2d94c-124">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="2d94c-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="2d94c-125">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="2d94c-125">E_OUTOFMEMORY</span></span>|<span data-ttu-id="2d94c-126">記憶體不足，無法建立要求的事件物件。</span><span class="sxs-lookup"><span data-stu-id="2d94c-126">Not enough memory was available to create the requested event object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7f95a-127">備註</span><span class="sxs-lookup"><span data-stu-id="7f95a-127">Remarks</span></span>  
- <span data-ttu-id="7f95a-128">CLR 會呼叫`CreateRWLockWriterEvent`方法來取得參考`IHostAutoEvent`寫入器鎖定的實作中使用的執行個體。</span><span class="sxs-lookup"><span data-stu-id="7f95a-128">The CLR calls the `CreateRWLockWriterEvent` method to get a reference to an `IHostAutoEvent` instance to use in its implementation of a writer lock.</span></span> <span data-ttu-id="7f95a-129">主機可以使用指定的 cookie，以判斷哪些工作正在等候鎖定的反覆項目方法[ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="7f95a-129">The host can use the specified cookie to determine which tasks are waiting on the lock by calling the iteration methods of the [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2d94c-127">備註</span><span class="sxs-lookup"><span data-stu-id="2d94c-127">Remarks</span></span>  
+ <span data-ttu-id="2d94c-128">CLR 會呼叫`CreateRWLockWriterEvent`方法來取得參考`IHostAutoEvent`寫入器鎖定的實作中使用的執行個體。</span><span class="sxs-lookup"><span data-stu-id="2d94c-128">The CLR calls the `CreateRWLockWriterEvent` method to get a reference to an `IHostAutoEvent` instance to use in its implementation of a writer lock.</span></span> <span data-ttu-id="2d94c-129">主機可以使用指定的 cookie，以判斷哪些工作正在等候鎖定上藉由呼叫的反覆項目方法[ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="2d94c-129">The host can use the specified cookie to determine which tasks are waiting on the lock by calling the iteration methods of the [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7f95a-130">需求</span><span class="sxs-lookup"><span data-stu-id="7f95a-130">Requirements</span></span>  
- <span data-ttu-id="7f95a-131">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7f95a-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2d94c-130">需求</span><span class="sxs-lookup"><span data-stu-id="2d94c-130">Requirements</span></span>  
+ <span data-ttu-id="2d94c-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2d94c-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7f95a-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7f95a-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2d94c-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2d94c-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="7f95a-133">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="7f95a-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2d94c-133">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="2d94c-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7f95a-134">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f95a-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2d94c-134">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2d94c-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f95a-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7f95a-135">See Also</span></span>  
- [<span data-ttu-id="7f95a-136">ICLRSyncManager 介面</span><span class="sxs-lookup"><span data-stu-id="7f95a-136">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [<span data-ttu-id="7f95a-137">IHostAutoEvent 介面</span><span class="sxs-lookup"><span data-stu-id="7f95a-137">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
- [<span data-ttu-id="7f95a-138">IHostManualEvent 介面</span><span class="sxs-lookup"><span data-stu-id="7f95a-138">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)  
- [<span data-ttu-id="7f95a-139">IHostSyncManager 介面</span><span class="sxs-lookup"><span data-stu-id="7f95a-139">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2d94c-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2d94c-135">See also</span></span>
+- [<span data-ttu-id="2d94c-136">ICLRSyncManager 介面</span><span class="sxs-lookup"><span data-stu-id="2d94c-136">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="2d94c-137">IHostAutoEvent 介面</span><span class="sxs-lookup"><span data-stu-id="2d94c-137">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [<span data-ttu-id="2d94c-138">IHostManualEvent 介面</span><span class="sxs-lookup"><span data-stu-id="2d94c-138">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [<span data-ttu-id="2d94c-139">IHostSyncManager 介面</span><span class="sxs-lookup"><span data-stu-id="2d94c-139">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
