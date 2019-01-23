@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05339787b112ad029cb9870e8c6ffca37e55e631
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 56665997e529227ca82b34a2303f4a2a705c3b1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522504"
 ---
-# <a name="imetadataemitdefinepermissionset-method"></a><span data-ttu-id="bf668-102">IMetaDataEmit::DefinePermissionSet 方法</span><span class="sxs-lookup"><span data-stu-id="bf668-102">IMetaDataEmit::DefinePermissionSet Method</span></span>
-<span data-ttu-id="bf668-103">建立指定的中繼資料簽章，以設定權限，並取得該權限集合定義的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="bf668-103">Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.</span></span>  
+# <a name="imetadataemitdefinepermissionset-method"></a><span data-ttu-id="29ec0-102">IMetaDataEmit::DefinePermissionSet 方法</span><span class="sxs-lookup"><span data-stu-id="29ec0-102">IMetaDataEmit::DefinePermissionSet Method</span></span>
+<span data-ttu-id="29ec0-103">建立使用權限集合與指定之中繼資料簽章的定義，並取得該權限集定義的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="29ec0-103">Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf668-104">語法</span><span class="sxs-lookup"><span data-stu-id="bf668-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="29ec0-104">語法</span><span class="sxs-lookup"><span data-stu-id="29ec0-104">Syntax</span></span>  
   
 ```  
 HRESULT DefinePermissionSet (  
@@ -39,31 +39,31 @@ HRESULT DefinePermissionSet (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bf668-105">參數</span><span class="sxs-lookup"><span data-stu-id="bf668-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="29ec0-105">參數</span><span class="sxs-lookup"><span data-stu-id="29ec0-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="bf668-106">[in]要裝飾的物件。</span><span class="sxs-lookup"><span data-stu-id="bf668-106">[in] The object to be decorated.</span></span>  
+ <span data-ttu-id="29ec0-106">[in]要裝飾的物件。</span><span class="sxs-lookup"><span data-stu-id="29ec0-106">[in] The object to be decorated.</span></span>  
   
  `dwAction`  
- <span data-ttu-id="bf668-107">[in]A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)值，指定要使用的宣告式安全性的類型。</span><span class="sxs-lookup"><span data-stu-id="bf668-107">[in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.</span></span>  
+ <span data-ttu-id="29ec0-107">[in]A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)值，指定要使用的宣告式安全性的類型。</span><span class="sxs-lookup"><span data-stu-id="29ec0-107">[in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.</span></span>  
   
  `pvPermission`  
- <span data-ttu-id="bf668-108">[in]使用權限 BLOB。</span><span class="sxs-lookup"><span data-stu-id="bf668-108">[in] The permission BLOB.</span></span>  
+ <span data-ttu-id="29ec0-108">[in]BLOB 權限。</span><span class="sxs-lookup"><span data-stu-id="29ec0-108">[in] The permission BLOB.</span></span>  
   
  `cbPermission`  
- <span data-ttu-id="bf668-109">[in]大小，以位元組為單位的`pvPermission`。</span><span class="sxs-lookup"><span data-stu-id="bf668-109">[in] The size, in bytes, of `pvPermission`.</span></span>  
+ <span data-ttu-id="29ec0-109">[in]大小，以位元組為單位的`pvPermission`。</span><span class="sxs-lookup"><span data-stu-id="29ec0-109">[in] The size, in bytes, of `pvPermission`.</span></span>  
   
  `ppm`  
- <span data-ttu-id="bf668-110">[out]傳回的權限語彙基元。</span><span class="sxs-lookup"><span data-stu-id="bf668-110">[out] The returned permission token.</span></span>  
+ <span data-ttu-id="29ec0-110">[out]傳回的權限的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="29ec0-110">[out] The returned permission token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bf668-111">需求</span><span class="sxs-lookup"><span data-stu-id="bf668-111">Requirements</span></span>  
- <span data-ttu-id="bf668-112">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bf668-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="29ec0-111">需求</span><span class="sxs-lookup"><span data-stu-id="29ec0-111">Requirements</span></span>  
+ <span data-ttu-id="29ec0-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="29ec0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bf668-113">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bf668-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="29ec0-113">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="29ec0-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bf668-114">**程式庫：** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="bf668-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="29ec0-114">**程式庫：** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="29ec0-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="bf668-115">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf668-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="29ec0-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="29ec0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bf668-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bf668-116">See Also</span></span>  
- [<span data-ttu-id="bf668-117">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="bf668-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="bf668-118">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="bf668-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="29ec0-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="29ec0-116">See also</span></span>
+- [<span data-ttu-id="29ec0-117">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="29ec0-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="29ec0-118">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="29ec0-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

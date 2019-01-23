@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84c362dca7f617aeb929f050af23e96998c4e1d5
-ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
+ms.openlocfilehash: ba59d9d47d5c120eb2ff0a3a3c65e0fe8cdf75e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42754463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498290"
 ---
-# <a name="createinstanceenumwmi-function"></a><span data-ttu-id="502e2-103">CreateInstanceEnumWmi 函式</span><span class="sxs-lookup"><span data-stu-id="502e2-103">CreateInstanceEnumWmi function</span></span>
-<span data-ttu-id="502e2-104">傳回列舉值，傳回符合指定的選取準則指定之類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="502e2-104">Returns an enumerator that returns the instances of a specified class that meet specified selection criteria.</span></span> 
+# <a name="createinstanceenumwmi-function"></a><span data-ttu-id="ba73a-103">CreateInstanceEnumWmi 函式</span><span class="sxs-lookup"><span data-stu-id="ba73a-103">CreateInstanceEnumWmi function</span></span>
+<span data-ttu-id="ba73a-104">傳回列舉值，傳回符合指定的選取準則指定之類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="ba73a-104">Returns an enumerator that returns the instances of a specified class that meet specified selection criteria.</span></span> 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="502e2-105">語法</span><span class="sxs-lookup"><span data-stu-id="502e2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba73a-105">語法</span><span class="sxs-lookup"><span data-stu-id="ba73a-105">Syntax</span></span>  
   
 ```  
 HRESULT CreateInstanceEnumWmi (
@@ -45,77 +45,77 @@ HRESULT CreateInstanceEnumWmi (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="502e2-106">參數</span><span class="sxs-lookup"><span data-stu-id="502e2-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="ba73a-106">參數</span><span class="sxs-lookup"><span data-stu-id="ba73a-106">Parameters</span></span>
 
 `strFilter`    
-<span data-ttu-id="502e2-107">[in]執行個體所需的類別名稱。</span><span class="sxs-lookup"><span data-stu-id="502e2-107">[in] The name of the class for which instances are desired.</span></span> <span data-ttu-id="502e2-108">此參數不得為`null`。</span><span class="sxs-lookup"><span data-stu-id="502e2-108">This parameter cannot be `null`.</span></span>
+<span data-ttu-id="ba73a-107">[in]執行個體所需的類別名稱。</span><span class="sxs-lookup"><span data-stu-id="ba73a-107">[in] The name of the class for which instances are desired.</span></span> <span data-ttu-id="ba73a-108">這個參數不可以是 `null`。</span><span class="sxs-lookup"><span data-stu-id="ba73a-108">This parameter cannot be `null`.</span></span>
 
 `lFlags`   
-<span data-ttu-id="502e2-109">[in]旗標的組合會影響此函式的行為。</span><span class="sxs-lookup"><span data-stu-id="502e2-109">[in] A combination of flags that affect the behavior of this function.</span></span> <span data-ttu-id="502e2-110">下列的值會定義於*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="502e2-110">The following values are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span> 
+<span data-ttu-id="ba73a-109">[in]旗標的組合會影響此函式的行為。</span><span class="sxs-lookup"><span data-stu-id="ba73a-109">[in] A combination of flags that affect the behavior of this function.</span></span> <span data-ttu-id="ba73a-110">下列的值會定義於*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="ba73a-110">The following values are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span> 
 
-|<span data-ttu-id="502e2-111">常數</span><span class="sxs-lookup"><span data-stu-id="502e2-111">Constant</span></span>  |<span data-ttu-id="502e2-112">值</span><span class="sxs-lookup"><span data-stu-id="502e2-112">Value</span></span>  |<span data-ttu-id="502e2-113">描述</span><span class="sxs-lookup"><span data-stu-id="502e2-113">Description</span></span>  |
+|<span data-ttu-id="ba73a-111">常數</span><span class="sxs-lookup"><span data-stu-id="ba73a-111">Constant</span></span>  |<span data-ttu-id="ba73a-112">值</span><span class="sxs-lookup"><span data-stu-id="ba73a-112">Value</span></span>  |<span data-ttu-id="ba73a-113">描述</span><span class="sxs-lookup"><span data-stu-id="ba73a-113">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | <span data-ttu-id="502e2-114">0x20000</span><span class="sxs-lookup"><span data-stu-id="502e2-114">0x20000</span></span> | <span data-ttu-id="502e2-115">如果集、 函式會擷取已修改儲存在目前連接的地區設定當地語系化的命名空間中的限定詞。</span><span class="sxs-lookup"><span data-stu-id="502e2-115">If set, the function retrieves the amended qualifiers stored in the localized namespace of the current connection's locale.</span></span> <br/> <span data-ttu-id="502e2-116">如果沒有設定，此函數會擷取立即的命名空間中儲存的辨識符號。</span><span class="sxs-lookup"><span data-stu-id="502e2-116">If not set, the function retrieves only the qualifiers stored in the immediate namespace.</span></span> |
-| `WBEM_FLAG_DEEP` | <span data-ttu-id="502e2-117">0</span><span class="sxs-lookup"><span data-stu-id="502e2-117">0</span></span> | <span data-ttu-id="502e2-118">列舉會包含這和所有子類別階層架構中。</span><span class="sxs-lookup"><span data-stu-id="502e2-118">The enumeration includes this and all subclasses in the hierarchy.</span></span> |
-| `WBEM_FLAG_SHALLOW` | <span data-ttu-id="502e2-119">1</span><span class="sxs-lookup"><span data-stu-id="502e2-119">1</span></span> | <span data-ttu-id="502e2-120">列舉型別包含這個類別只單純執行個體，並排除所有執行個體，提供這個類別中找不到屬性的子類別。</span><span class="sxs-lookup"><span data-stu-id="502e2-120">The enumeration includes only pure instances of this class and excludes all instances of subclasses that supply properties not found in this class.</span></span> |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | <span data-ttu-id="502e2-121">0x10</span><span class="sxs-lookup"><span data-stu-id="502e2-121">0x10</span></span> | <span data-ttu-id="502e2-122">旗標會導致半同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="502e2-122">The flag causes a semisynchronous call.</span></span> |
-| `WBEM_FLAG_FORWARD_ONLY` | <span data-ttu-id="502e2-123">0x20</span><span class="sxs-lookup"><span data-stu-id="502e2-123">0x20</span></span> | <span data-ttu-id="502e2-124">函數會傳回順向的列舉值。</span><span class="sxs-lookup"><span data-stu-id="502e2-124">The function returns a forward-only enumerator.</span></span> <span data-ttu-id="502e2-125">一般而言，順向的列舉值會比較快，並使用較少的記憶體，比傳統的列舉值，但不是允許呼叫[複製品](clone.md)。</span><span class="sxs-lookup"><span data-stu-id="502e2-125">Typically, forward-only enumerators are faster and use less memory than conventional enumerators, but they do not allow calls to [Clone](clone.md).</span></span> |
-| `WBEM_FLAG_BIDIRECTIONAL` | <span data-ttu-id="502e2-126">0</span><span class="sxs-lookup"><span data-stu-id="502e2-126">0</span></span> | <span data-ttu-id="502e2-127">之前在發行時，WMI 就會保留在 enumration 物件的指標。</span><span class="sxs-lookup"><span data-stu-id="502e2-127">WMI retains pointers to objects in the enumration until they are released.</span></span> | 
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | <span data-ttu-id="ba73a-114">0x20000</span><span class="sxs-lookup"><span data-stu-id="ba73a-114">0x20000</span></span> | <span data-ttu-id="ba73a-115">如果集、 函式會擷取已修改儲存在目前連接的地區設定當地語系化的命名空間中的限定詞。</span><span class="sxs-lookup"><span data-stu-id="ba73a-115">If set, the function retrieves the amended qualifiers stored in the localized namespace of the current connection's locale.</span></span> <br/> <span data-ttu-id="ba73a-116">如果沒有設定，此函數會擷取立即的命名空間中儲存的辨識符號。</span><span class="sxs-lookup"><span data-stu-id="ba73a-116">If not set, the function retrieves only the qualifiers stored in the immediate namespace.</span></span> |
+| `WBEM_FLAG_DEEP` | <span data-ttu-id="ba73a-117">0</span><span class="sxs-lookup"><span data-stu-id="ba73a-117">0</span></span> | <span data-ttu-id="ba73a-118">列舉會包含這和所有子類別階層架構中。</span><span class="sxs-lookup"><span data-stu-id="ba73a-118">The enumeration includes this and all subclasses in the hierarchy.</span></span> |
+| `WBEM_FLAG_SHALLOW` | <span data-ttu-id="ba73a-119">1</span><span class="sxs-lookup"><span data-stu-id="ba73a-119">1</span></span> | <span data-ttu-id="ba73a-120">列舉型別包含這個類別只單純執行個體，並排除所有執行個體，提供這個類別中找不到屬性的子類別。</span><span class="sxs-lookup"><span data-stu-id="ba73a-120">The enumeration includes only pure instances of this class and excludes all instances of subclasses that supply properties not found in this class.</span></span> |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | <span data-ttu-id="ba73a-121">0x10</span><span class="sxs-lookup"><span data-stu-id="ba73a-121">0x10</span></span> | <span data-ttu-id="ba73a-122">旗標會導致半同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="ba73a-122">The flag causes a semisynchronous call.</span></span> |
+| `WBEM_FLAG_FORWARD_ONLY` | <span data-ttu-id="ba73a-123">0x20</span><span class="sxs-lookup"><span data-stu-id="ba73a-123">0x20</span></span> | <span data-ttu-id="ba73a-124">函數會傳回順向的列舉值。</span><span class="sxs-lookup"><span data-stu-id="ba73a-124">The function returns a forward-only enumerator.</span></span> <span data-ttu-id="ba73a-125">一般而言，順向的列舉值會比較快，並使用較少的記憶體，比傳統的列舉值，但不是允許呼叫[複製品](clone.md)。</span><span class="sxs-lookup"><span data-stu-id="ba73a-125">Typically, forward-only enumerators are faster and use less memory than conventional enumerators, but they do not allow calls to [Clone](clone.md).</span></span> |
+| `WBEM_FLAG_BIDIRECTIONAL` | <span data-ttu-id="ba73a-126">0</span><span class="sxs-lookup"><span data-stu-id="ba73a-126">0</span></span> | <span data-ttu-id="ba73a-127">之前在發行時，WMI 就會保留在 enumration 物件的指標。</span><span class="sxs-lookup"><span data-stu-id="ba73a-127">WMI retains pointers to objects in the enumration until they are released.</span></span> | 
 
-<span data-ttu-id="502e2-128">建議的旗標`WBEM_FLAG_RETURN_IMMEDIATELY`和`WBEM_FLAG_FORWARD_ONLY`為了達到最佳效能。</span><span class="sxs-lookup"><span data-stu-id="502e2-128">The recommended flags are `WBEM_FLAG_RETURN_IMMEDIATELY` and `WBEM_FLAG_FORWARD_ONLY` for best performance.</span></span>
+<span data-ttu-id="ba73a-128">建議的旗標`WBEM_FLAG_RETURN_IMMEDIATELY`和`WBEM_FLAG_FORWARD_ONLY`為了達到最佳效能。</span><span class="sxs-lookup"><span data-stu-id="ba73a-128">The recommended flags are `WBEM_FLAG_RETURN_IMMEDIATELY` and `WBEM_FLAG_FORWARD_ONLY` for best performance.</span></span>
 
 `pCtx`  
-<span data-ttu-id="502e2-129">[in]一般而言，這個值是`null`。</span><span class="sxs-lookup"><span data-stu-id="502e2-129">[in] Typically, this value is `null`.</span></span> <span data-ttu-id="502e2-130">否則，它是指標[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)可用的提供者所提供的要求的執行個體的執行個體。</span><span class="sxs-lookup"><span data-stu-id="502e2-130">Otherwise, it is a pointer to an [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) instance that may be used by the provider that is providing the requested instances.</span></span>
+<span data-ttu-id="ba73a-129">[in]一般而言，這個值是`null`。</span><span class="sxs-lookup"><span data-stu-id="ba73a-129">[in] Typically, this value is `null`.</span></span> <span data-ttu-id="ba73a-130">否則，它是指標[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)可用的提供者所提供的要求的執行個體的執行個體。</span><span class="sxs-lookup"><span data-stu-id="ba73a-130">Otherwise, it is a pointer to an [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) instance that may be used by the provider that is providing the requested instances.</span></span>
 
 `ppEnum`  
-<span data-ttu-id="502e2-131">[out]接收列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="502e2-131">[out] Receives the pointer to the enumerator.</span></span>
+<span data-ttu-id="ba73a-131">[out]接收列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="ba73a-131">[out] Receives the pointer to the enumerator.</span></span>
 
 `authLevel`  
-<span data-ttu-id="502e2-132">[in]授權層級。</span><span class="sxs-lookup"><span data-stu-id="502e2-132">[in] The authorization level.</span></span>
+<span data-ttu-id="ba73a-132">[in]授權層級。</span><span class="sxs-lookup"><span data-stu-id="ba73a-132">[in] The authorization level.</span></span>
 
-<span data-ttu-id="502e2-133">`impLevel` [in]模擬等級。</span><span class="sxs-lookup"><span data-stu-id="502e2-133">`impLevel` [in] The impersonation level.</span></span>
+<span data-ttu-id="ba73a-133">`impLevel` [in]模擬等級。</span><span class="sxs-lookup"><span data-stu-id="ba73a-133">`impLevel` [in] The impersonation level.</span></span>
 
 `pCurrentNamespace`   
-<span data-ttu-id="502e2-134">[in]指標[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)物件，表示目前的命名空間。</span><span class="sxs-lookup"><span data-stu-id="502e2-134">[in] A pointer to an [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) object that represents the current namespace.</span></span>
+<span data-ttu-id="ba73a-134">[in]指標[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)物件，表示目前的命名空間。</span><span class="sxs-lookup"><span data-stu-id="ba73a-134">[in] A pointer to an [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) object that represents the current namespace.</span></span>
 
 `strUser`   
-<span data-ttu-id="502e2-135">[in]使用者名稱。</span><span class="sxs-lookup"><span data-stu-id="502e2-135">[in] The user name.</span></span> <span data-ttu-id="502e2-136">請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="502e2-136">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="ba73a-135">[in]使用者名稱。</span><span class="sxs-lookup"><span data-stu-id="ba73a-135">[in] The user name.</span></span> <span data-ttu-id="ba73a-136">請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="ba73a-136">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
 `strPassword`   
-<span data-ttu-id="502e2-137">[in]密碼。</span><span class="sxs-lookup"><span data-stu-id="502e2-137">[in] The password.</span></span> <span data-ttu-id="502e2-138">請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="502e2-138">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="ba73a-137">[in]密碼。</span><span class="sxs-lookup"><span data-stu-id="ba73a-137">[in] The password.</span></span> <span data-ttu-id="ba73a-138">請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="ba73a-138">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
 `strAuthority`   
-<span data-ttu-id="502e2-139">[in]使用者的網域名稱。</span><span class="sxs-lookup"><span data-stu-id="502e2-139">[in] The domain name of the user.</span></span> <span data-ttu-id="502e2-140">請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="502e2-140">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="ba73a-139">[in]使用者的網域名稱。</span><span class="sxs-lookup"><span data-stu-id="ba73a-139">[in] The domain name of the user.</span></span> <span data-ttu-id="ba73a-140">請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="ba73a-140">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="502e2-141">傳回值</span><span class="sxs-lookup"><span data-stu-id="502e2-141">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="ba73a-141">傳回值</span><span class="sxs-lookup"><span data-stu-id="ba73a-141">Return value</span></span>
 
-<span data-ttu-id="502e2-142">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="502e2-142">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="ba73a-142">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="ba73a-142">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="502e2-143">常數</span><span class="sxs-lookup"><span data-stu-id="502e2-143">Constant</span></span>  |<span data-ttu-id="502e2-144">值</span><span class="sxs-lookup"><span data-stu-id="502e2-144">Value</span></span>  |<span data-ttu-id="502e2-145">描述</span><span class="sxs-lookup"><span data-stu-id="502e2-145">Description</span></span>  |
+|<span data-ttu-id="ba73a-143">常數</span><span class="sxs-lookup"><span data-stu-id="ba73a-143">Constant</span></span>  |<span data-ttu-id="ba73a-144">值</span><span class="sxs-lookup"><span data-stu-id="ba73a-144">Value</span></span>  |<span data-ttu-id="ba73a-145">描述</span><span class="sxs-lookup"><span data-stu-id="ba73a-145">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | <span data-ttu-id="502e2-146">0x80041003</span><span class="sxs-lookup"><span data-stu-id="502e2-146">0x80041003</span></span> | <span data-ttu-id="502e2-147">使用者沒有權限可檢視指定類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="502e2-147">The user does not have permission to view instances of the specified class.</span></span> |
-| `WBEM_E_FAILED` | <span data-ttu-id="502e2-148">0x80041001</span><span class="sxs-lookup"><span data-stu-id="502e2-148">0x80041001</span></span> | <span data-ttu-id="502e2-149">發生未指定的錯誤。</span><span class="sxs-lookup"><span data-stu-id="502e2-149">An unspecified error has occurred.</span></span> |
-| `WBEM_E_INVALID_CLASS` | <span data-ttu-id="502e2-150">收到 0x80041010</span><span class="sxs-lookup"><span data-stu-id="502e2-150">0x80041010</span></span> | <span data-ttu-id="502e2-151">`strFilter` 不存在。</span><span class="sxs-lookup"><span data-stu-id="502e2-151">`strFilter` does not exist.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="502e2-152">0x80041008</span><span class="sxs-lookup"><span data-stu-id="502e2-152">0x80041008</span></span> | <span data-ttu-id="502e2-153">參數不是有效的。</span><span class="sxs-lookup"><span data-stu-id="502e2-153">A parameter is not valid.</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="502e2-154">0x80041006</span><span class="sxs-lookup"><span data-stu-id="502e2-154">0x80041006</span></span> | <span data-ttu-id="502e2-155">沒有足夠的記憶體可完成此作業。</span><span class="sxs-lookup"><span data-stu-id="502e2-155">Not enough memory is available to complete the operation.</span></span> |
-| `WBEM_E_SHUTTING_DOWN` | <span data-ttu-id="502e2-156">0x80041033</span><span class="sxs-lookup"><span data-stu-id="502e2-156">0x80041033</span></span> | <span data-ttu-id="502e2-157">WMI 是可能已停止和重新啟動。</span><span class="sxs-lookup"><span data-stu-id="502e2-157">WMI was probably stopped and restarting.</span></span> <span data-ttu-id="502e2-158">呼叫[ConnectServerWmi](connectserverwmi.md)一次。</span><span class="sxs-lookup"><span data-stu-id="502e2-158">Call [ConnectServerWmi](connectserverwmi.md) again.</span></span> |
-| `WBEM_E_TRANSPORT_FAILURE` | <span data-ttu-id="502e2-159">0x80041015</span><span class="sxs-lookup"><span data-stu-id="502e2-159">0x80041015</span></span> | <span data-ttu-id="502e2-160">目前的處理序與 WMI 的遠端程序呼叫 (RPC) 連結失敗。</span><span class="sxs-lookup"><span data-stu-id="502e2-160">The remote procedure call (RPC) link between the current process and WMI has failed.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="502e2-161">0</span><span class="sxs-lookup"><span data-stu-id="502e2-161">0</span></span> | <span data-ttu-id="502e2-162">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="502e2-162">The function call was successful.</span></span>  |
+| `WBEM_E_ACCESS_DENIED` | <span data-ttu-id="ba73a-146">0x80041003</span><span class="sxs-lookup"><span data-stu-id="ba73a-146">0x80041003</span></span> | <span data-ttu-id="ba73a-147">使用者沒有權限可檢視指定類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="ba73a-147">The user does not have permission to view instances of the specified class.</span></span> |
+| `WBEM_E_FAILED` | <span data-ttu-id="ba73a-148">0x80041001</span><span class="sxs-lookup"><span data-stu-id="ba73a-148">0x80041001</span></span> | <span data-ttu-id="ba73a-149">發生未指定的錯誤。</span><span class="sxs-lookup"><span data-stu-id="ba73a-149">An unspecified error has occurred.</span></span> |
+| `WBEM_E_INVALID_CLASS` | <span data-ttu-id="ba73a-150">0x80041010</span><span class="sxs-lookup"><span data-stu-id="ba73a-150">0x80041010</span></span> | <span data-ttu-id="ba73a-151">`strFilter` 不存在。</span><span class="sxs-lookup"><span data-stu-id="ba73a-151">`strFilter` does not exist.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="ba73a-152">0x80041008</span><span class="sxs-lookup"><span data-stu-id="ba73a-152">0x80041008</span></span> | <span data-ttu-id="ba73a-153">參數不是有效的。</span><span class="sxs-lookup"><span data-stu-id="ba73a-153">A parameter is not valid.</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="ba73a-154">0x80041006</span><span class="sxs-lookup"><span data-stu-id="ba73a-154">0x80041006</span></span> | <span data-ttu-id="ba73a-155">沒有足夠的記憶體可完成此作業。</span><span class="sxs-lookup"><span data-stu-id="ba73a-155">Not enough memory is available to complete the operation.</span></span> |
+| `WBEM_E_SHUTTING_DOWN` | <span data-ttu-id="ba73a-156">0x80041033</span><span class="sxs-lookup"><span data-stu-id="ba73a-156">0x80041033</span></span> | <span data-ttu-id="ba73a-157">WMI 是可能已停止和重新啟動。</span><span class="sxs-lookup"><span data-stu-id="ba73a-157">WMI was probably stopped and restarting.</span></span> <span data-ttu-id="ba73a-158">呼叫[ConnectServerWmi](connectserverwmi.md)一次。</span><span class="sxs-lookup"><span data-stu-id="ba73a-158">Call [ConnectServerWmi](connectserverwmi.md) again.</span></span> |
+| `WBEM_E_TRANSPORT_FAILURE` | <span data-ttu-id="ba73a-159">0x80041015</span><span class="sxs-lookup"><span data-stu-id="ba73a-159">0x80041015</span></span> | <span data-ttu-id="ba73a-160">目前的處理序與 WMI 的遠端程序呼叫 (RPC) 連結失敗。</span><span class="sxs-lookup"><span data-stu-id="ba73a-160">The remote procedure call (RPC) link between the current process and WMI has failed.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="ba73a-161">0</span><span class="sxs-lookup"><span data-stu-id="ba73a-161">0</span></span> | <span data-ttu-id="ba73a-162">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="ba73a-162">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="502e2-163">備註</span><span class="sxs-lookup"><span data-stu-id="502e2-163">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="ba73a-163">備註</span><span class="sxs-lookup"><span data-stu-id="ba73a-163">Remarks</span></span>
 
-<span data-ttu-id="502e2-164">此函式會包裝在呼叫[iwbemservices:: Createclassenum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createinstanceenum)方法。</span><span class="sxs-lookup"><span data-stu-id="502e2-164">This function wraps a call to the [IWbemServices::CreateClassEnum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createinstanceenum) method.</span></span>
+<span data-ttu-id="ba73a-164">此函式會包裝在呼叫[iwbemservices:: Createclassenum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createinstanceenum)方法。</span><span class="sxs-lookup"><span data-stu-id="ba73a-164">This function wraps a call to the [IWbemServices::CreateClassEnum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createinstanceenum) method.</span></span>
 
-<span data-ttu-id="502e2-165">請注意傳回的列舉值可以有零個元素。</span><span class="sxs-lookup"><span data-stu-id="502e2-165">Note that the returned enumerator can have zero elements.</span></span>
+<span data-ttu-id="ba73a-165">請注意傳回的列舉值可以有零個元素。</span><span class="sxs-lookup"><span data-stu-id="ba73a-165">Note that the returned enumerator can have zero elements.</span></span>
 
-<span data-ttu-id="502e2-166">如果函式呼叫失敗，您可以藉由呼叫來取得其他錯誤資訊[GetErrorInfo](geterrorinfo.md)函式。</span><span class="sxs-lookup"><span data-stu-id="502e2-166">If the function call fails, you can obtain additional error information by calling the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="ba73a-166">如果函式呼叫失敗，您可以藉由呼叫來取得其他錯誤資訊[GetErrorInfo](geterrorinfo.md)函式。</span><span class="sxs-lookup"><span data-stu-id="ba73a-166">If the function call fails, you can obtain additional error information by calling the [GetErrorInfo](geterrorinfo.md) function.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="502e2-167">需求</span><span class="sxs-lookup"><span data-stu-id="502e2-167">Requirements</span></span>  
- <span data-ttu-id="502e2-168">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="502e2-168">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba73a-167">需求</span><span class="sxs-lookup"><span data-stu-id="ba73a-167">Requirements</span></span>  
+ <span data-ttu-id="ba73a-168">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ba73a-168">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="502e2-169">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="502e2-169">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="ba73a-169">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="ba73a-169">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="502e2-170">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="502e2-170">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="ba73a-170">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ba73a-170">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="502e2-171">另請參閱</span><span class="sxs-lookup"><span data-stu-id="502e2-171">See also</span></span>  
-[<span data-ttu-id="502e2-172">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="502e2-172">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="ba73a-171">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ba73a-171">See also</span></span>
+- [<span data-ttu-id="ba73a-172">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="ba73a-172">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

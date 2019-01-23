@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cf2e1be735150dfb006e2274c79c25649d0271d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4e5d49e46c6b34c6efca5d6819cb4ca341f010bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524724"
 ---
-# <a name="icorprofilercallback4rejitcompilationfinished-method"></a><span data-ttu-id="fd2cb-102">ICorProfilerCallback4::ReJITCompilationFinished 方法</span><span class="sxs-lookup"><span data-stu-id="fd2cb-102">ICorProfilerCallback4::ReJITCompilationFinished Method</span></span>
-<span data-ttu-id="fd2cb-103">通知分析工具，在 just-in-time (JIT) 編譯器已完成重新編譯函式。</span><span class="sxs-lookup"><span data-stu-id="fd2cb-103">Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.</span></span>  
+# <a name="icorprofilercallback4rejitcompilationfinished-method"></a><span data-ttu-id="19b66-102">ICorProfilerCallback4::ReJITCompilationFinished 方法</span><span class="sxs-lookup"><span data-stu-id="19b66-102">ICorProfilerCallback4::ReJITCompilationFinished Method</span></span>
+<span data-ttu-id="19b66-103">通知分析工具，在 just-in-time (JIT) 編譯器已完成重新編譯函式。</span><span class="sxs-lookup"><span data-stu-id="19b66-103">Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fd2cb-104">語法</span><span class="sxs-lookup"><span data-stu-id="fd2cb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="19b66-104">語法</span><span class="sxs-lookup"><span data-stu-id="19b66-104">Syntax</span></span>  
   
 ```  
 HRESULT ReJITCompilationFinished(  
@@ -36,32 +36,32 @@ HRESULT ReJITCompilationFinished(
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="fd2cb-105">參數</span><span class="sxs-lookup"><span data-stu-id="fd2cb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="19b66-105">參數</span><span class="sxs-lookup"><span data-stu-id="19b66-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="fd2cb-106">[in]重新編譯函式的識別碼。</span><span class="sxs-lookup"><span data-stu-id="fd2cb-106">[in] The ID of the function that was recompiled.</span></span>  
+ <span data-ttu-id="19b66-106">[in]已重新編譯函式的識別碼。</span><span class="sxs-lookup"><span data-stu-id="19b66-106">[in] The ID of the function that was recompiled.</span></span>  
   
  `rejitId`  
- <span data-ttu-id="fd2cb-107">[in] 經過 JIT 重新編譯的函式識別。</span><span class="sxs-lookup"><span data-stu-id="fd2cb-107">[in] The identity of the JIT-recompiled function.</span></span>  
+ <span data-ttu-id="19b66-107">[in] 經過 JIT 重新編譯的函式識別。</span><span class="sxs-lookup"><span data-stu-id="19b66-107">[in] The identity of the JIT-recompiled function.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="fd2cb-108">[in]值，指出是否已成功 JIT 重新編譯。</span><span class="sxs-lookup"><span data-stu-id="fd2cb-108">[in] A value that indicates whether the JIT recompilation was successful.</span></span>  
+ <span data-ttu-id="19b66-108">[in]值，指出 JIT 重新編譯是否成功。</span><span class="sxs-lookup"><span data-stu-id="19b66-108">[in] A value that indicates whether the JIT recompilation was successful.</span></span>  
   
  `fIsSafeToBlock`  
- <span data-ttu-id="fd2cb-109">[in]`true`表示封鎖可能會造成執行階段從這個回呼; 傳回呼叫執行緒的等候`false`表示封鎖將不會影響執行階段的作業。</span><span class="sxs-lookup"><span data-stu-id="fd2cb-109">[in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.</span></span>  
+ <span data-ttu-id="19b66-109">[in]`true`表示封鎖可能會導致執行階段，等候要從此回呼; 傳回呼叫的執行緒`false`表示封鎖會不會影響執行階段的作業。</span><span class="sxs-lookup"><span data-stu-id="19b66-109">[in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.</span></span>  
   
- <span data-ttu-id="fd2cb-110">值為`true`不傷害執行階段，但可能會影響分析的結果。</span><span class="sxs-lookup"><span data-stu-id="fd2cb-110">A value of `true` does not harm the runtime, but can affect the profiling results.</span></span>  
+ <span data-ttu-id="19b66-110">值為`true`不會損害執行階段，但可能會影響分析結果。</span><span class="sxs-lookup"><span data-stu-id="19b66-110">A value of `true` does not harm the runtime, but can affect the profiling results.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fd2cb-111">需求</span><span class="sxs-lookup"><span data-stu-id="fd2cb-111">Requirements</span></span>  
- <span data-ttu-id="fd2cb-112">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fd2cb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="19b66-111">需求</span><span class="sxs-lookup"><span data-stu-id="19b66-111">Requirements</span></span>  
+ <span data-ttu-id="19b66-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="19b66-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fd2cb-113">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fd2cb-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="19b66-113">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="19b66-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="fd2cb-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fd2cb-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="19b66-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="19b66-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fd2cb-115">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fd2cb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="19b66-115">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="19b66-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd2cb-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fd2cb-116">See Also</span></span>  
- [<span data-ttu-id="fd2cb-117">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="fd2cb-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="fd2cb-118">ICorProfilerCallback4 介面</span><span class="sxs-lookup"><span data-stu-id="fd2cb-118">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)  
- [<span data-ttu-id="fd2cb-119">JITCompilationStarted 方法</span><span class="sxs-lookup"><span data-stu-id="fd2cb-119">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)  
- [<span data-ttu-id="fd2cb-120">ReJITCompilationStarted 方法</span><span class="sxs-lookup"><span data-stu-id="fd2cb-120">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)
+## <a name="see-also"></a><span data-ttu-id="19b66-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="19b66-116">See also</span></span>
+- [<span data-ttu-id="19b66-117">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="19b66-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="19b66-118">ICorProfilerCallback4 介面</span><span class="sxs-lookup"><span data-stu-id="19b66-118">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [<span data-ttu-id="19b66-119">JITCompilationStarted 方法</span><span class="sxs-lookup"><span data-stu-id="19b66-119">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+- [<span data-ttu-id="19b66-120">ReJITCompilationStarted 方法</span><span class="sxs-lookup"><span data-stu-id="19b66-120">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)

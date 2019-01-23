@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6305338a95d7710a5feda2dc4c89e5a92262514c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 965e8058d44ebb5dc87ade3b6025c6291a9c3bcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492116"
 ---
-# <a name="isymunmanagedscope-interface"></a><span data-ttu-id="03ab4-102">ISymUnmanagedScope 介面</span><span class="sxs-lookup"><span data-stu-id="03ab4-102">ISymUnmanagedScope Interface</span></span>
-<span data-ttu-id="03ab4-103">表示在方法內的語彙範圍。</span><span class="sxs-lookup"><span data-stu-id="03ab4-103">Represents a lexical scope within a method.</span></span>  
+# <a name="isymunmanagedscope-interface"></a><span data-ttu-id="65243-102">ISymUnmanagedScope 介面</span><span class="sxs-lookup"><span data-stu-id="65243-102">ISymUnmanagedScope Interface</span></span>
+<span data-ttu-id="65243-103">表示在方法內的語彙範圍。</span><span class="sxs-lookup"><span data-stu-id="65243-103">Represents a lexical scope within a method.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="03ab4-104">方法</span><span class="sxs-lookup"><span data-stu-id="03ab4-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="65243-104">方法</span><span class="sxs-lookup"><span data-stu-id="65243-104">Methods</span></span>  
   
-|<span data-ttu-id="03ab4-105">方法</span><span class="sxs-lookup"><span data-stu-id="03ab4-105">Method</span></span>|<span data-ttu-id="03ab4-106">描述</span><span class="sxs-lookup"><span data-stu-id="03ab4-106">Description</span></span>|  
+|<span data-ttu-id="65243-105">方法</span><span class="sxs-lookup"><span data-stu-id="65243-105">Method</span></span>|<span data-ttu-id="65243-106">描述</span><span class="sxs-lookup"><span data-stu-id="65243-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="03ab4-107">GetChildren 方法</span><span class="sxs-lookup"><span data-stu-id="03ab4-107">GetChildren Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)|<span data-ttu-id="03ab4-108">取得此領域的子系。</span><span class="sxs-lookup"><span data-stu-id="03ab4-108">Gets the children of this scope.</span></span>|  
-|[<span data-ttu-id="03ab4-109">GetEndOffset 方法</span><span class="sxs-lookup"><span data-stu-id="03ab4-109">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)|<span data-ttu-id="03ab4-110">取得此範圍的結束位移。</span><span class="sxs-lookup"><span data-stu-id="03ab4-110">Gets the end offset for this scope.</span></span>|  
-|[<span data-ttu-id="03ab4-111">GetLocalCount 方法</span><span class="sxs-lookup"><span data-stu-id="03ab4-111">GetLocalCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocalcount-method.md)|<span data-ttu-id="03ab4-112">取得此範圍內定義的本機變數的計數。</span><span class="sxs-lookup"><span data-stu-id="03ab4-112">Gets a count of the local variables defined within this scope.</span></span>|  
-|[<span data-ttu-id="03ab4-113">GetLocals 方法</span><span class="sxs-lookup"><span data-stu-id="03ab4-113">GetLocals Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocals-method.md)|<span data-ttu-id="03ab4-114">取得此範圍內定義的本機變數。</span><span class="sxs-lookup"><span data-stu-id="03ab4-114">Gets the local variables defined within this scope.</span></span>|  
-|[<span data-ttu-id="03ab4-115">GetMethod 方法</span><span class="sxs-lookup"><span data-stu-id="03ab4-115">GetMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getmethod-method.md)|<span data-ttu-id="03ab4-116">取得包含此範圍的方法。</span><span class="sxs-lookup"><span data-stu-id="03ab4-116">Gets the method that contains this scope.</span></span>|  
-|[<span data-ttu-id="03ab4-117">GetNamespaces 方法</span><span class="sxs-lookup"><span data-stu-id="03ab4-117">GetNamespaces Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getnamespaces-method.md)|<span data-ttu-id="03ab4-118">取得此範圍內使用的命名空間。</span><span class="sxs-lookup"><span data-stu-id="03ab4-118">Gets the namespaces that are being used within this scope.</span></span>|  
-|[<span data-ttu-id="03ab4-119">GetParent 方法</span><span class="sxs-lookup"><span data-stu-id="03ab4-119">GetParent Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)|<span data-ttu-id="03ab4-120">取得此範圍的父範圍。</span><span class="sxs-lookup"><span data-stu-id="03ab4-120">Gets the parent scope of this scope.</span></span>|  
-|[<span data-ttu-id="03ab4-121">GetStartOffset 方法</span><span class="sxs-lookup"><span data-stu-id="03ab4-121">GetStartOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getstartoffset-method.md)|<span data-ttu-id="03ab4-122">取得此範圍的起始位移。</span><span class="sxs-lookup"><span data-stu-id="03ab4-122">Gets the start offset for this scope.</span></span>|  
+|[<span data-ttu-id="65243-107">GetChildren 方法</span><span class="sxs-lookup"><span data-stu-id="65243-107">GetChildren Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)|<span data-ttu-id="65243-108">取得此領域的子系。</span><span class="sxs-lookup"><span data-stu-id="65243-108">Gets the children of this scope.</span></span>|  
+|[<span data-ttu-id="65243-109">GetEndOffset 方法</span><span class="sxs-lookup"><span data-stu-id="65243-109">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)|<span data-ttu-id="65243-110">取得此範圍的結束位移。</span><span class="sxs-lookup"><span data-stu-id="65243-110">Gets the end offset for this scope.</span></span>|  
+|[<span data-ttu-id="65243-111">GetLocalCount 方法</span><span class="sxs-lookup"><span data-stu-id="65243-111">GetLocalCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocalcount-method.md)|<span data-ttu-id="65243-112">取得此範圍內定義的本機變數的計數。</span><span class="sxs-lookup"><span data-stu-id="65243-112">Gets a count of the local variables defined within this scope.</span></span>|  
+|[<span data-ttu-id="65243-113">GetLocals 方法</span><span class="sxs-lookup"><span data-stu-id="65243-113">GetLocals Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocals-method.md)|<span data-ttu-id="65243-114">取得此範圍內定義的本機變數。</span><span class="sxs-lookup"><span data-stu-id="65243-114">Gets the local variables defined within this scope.</span></span>|  
+|[<span data-ttu-id="65243-115">GetMethod 方法</span><span class="sxs-lookup"><span data-stu-id="65243-115">GetMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getmethod-method.md)|<span data-ttu-id="65243-116">取得包含此範圍的方法。</span><span class="sxs-lookup"><span data-stu-id="65243-116">Gets the method that contains this scope.</span></span>|  
+|[<span data-ttu-id="65243-117">GetNamespaces 方法</span><span class="sxs-lookup"><span data-stu-id="65243-117">GetNamespaces Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getnamespaces-method.md)|<span data-ttu-id="65243-118">取得此範圍內使用的命名空間。</span><span class="sxs-lookup"><span data-stu-id="65243-118">Gets the namespaces that are being used within this scope.</span></span>|  
+|[<span data-ttu-id="65243-119">GetParent 方法</span><span class="sxs-lookup"><span data-stu-id="65243-119">GetParent Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)|<span data-ttu-id="65243-120">取得此範圍的父範圍。</span><span class="sxs-lookup"><span data-stu-id="65243-120">Gets the parent scope of this scope.</span></span>|  
+|[<span data-ttu-id="65243-121">GetStartOffset 方法</span><span class="sxs-lookup"><span data-stu-id="65243-121">GetStartOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getstartoffset-method.md)|<span data-ttu-id="65243-122">取得此範圍的開始位移。</span><span class="sxs-lookup"><span data-stu-id="65243-122">Gets the start offset for this scope.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="03ab4-123">需求</span><span class="sxs-lookup"><span data-stu-id="03ab4-123">Requirements</span></span>  
- <span data-ttu-id="03ab4-124">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="03ab4-124">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="65243-123">需求</span><span class="sxs-lookup"><span data-stu-id="65243-123">Requirements</span></span>  
+ <span data-ttu-id="65243-124">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="65243-124">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03ab4-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="03ab4-125">See Also</span></span>  
- [<span data-ttu-id="03ab4-126">診斷符號存放區介面</span><span class="sxs-lookup"><span data-stu-id="03ab4-126">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- [<span data-ttu-id="03ab4-127">ISymUnmanagedScope2 介面</span><span class="sxs-lookup"><span data-stu-id="03ab4-127">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="65243-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="65243-125">See also</span></span>
+- [<span data-ttu-id="65243-126">診斷符號存放區介面</span><span class="sxs-lookup"><span data-stu-id="65243-126">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="65243-127">ISymUnmanagedScope2 介面</span><span class="sxs-lookup"><span data-stu-id="65243-127">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

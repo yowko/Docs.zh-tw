@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2462d1de9f1b5f94f2581c1a06ca2987712fd7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5c4d4f5d85fb076748b3f8aae498f024804fb0b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492360"
 ---
-# <a name="icordebugvalue2-interface"></a><span data-ttu-id="f1750-102">ICorDebugValue2 介面</span><span class="sxs-lookup"><span data-stu-id="f1750-102">ICorDebugValue2 Interface</span></span>
-<span data-ttu-id="f1750-103">擴充以支援 「 ICorDebugType 「 物件 」 ICorDebugValue"介面。</span><span class="sxs-lookup"><span data-stu-id="f1750-103">Extends the "ICorDebugValue" interface to provide support for "ICorDebugType" objects.</span></span>  
+# <a name="icordebugvalue2-interface"></a><span data-ttu-id="c8130-102">ICorDebugValue2 介面</span><span class="sxs-lookup"><span data-stu-id="c8130-102">ICorDebugValue2 Interface</span></span>
+<span data-ttu-id="c8130-103">延伸以支援 「 ICorDebugType 「 物件 」 ICorDebugValue"介面。</span><span class="sxs-lookup"><span data-stu-id="c8130-103">Extends the "ICorDebugValue" interface to provide support for "ICorDebugType" objects.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="f1750-104">方法</span><span class="sxs-lookup"><span data-stu-id="f1750-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c8130-104">方法</span><span class="sxs-lookup"><span data-stu-id="c8130-104">Methods</span></span>  
   
-|<span data-ttu-id="f1750-105">方法</span><span class="sxs-lookup"><span data-stu-id="f1750-105">Method</span></span>|<span data-ttu-id="f1750-106">描述</span><span class="sxs-lookup"><span data-stu-id="f1750-106">Description</span></span>|  
+|<span data-ttu-id="c8130-105">方法</span><span class="sxs-lookup"><span data-stu-id="c8130-105">Method</span></span>|<span data-ttu-id="c8130-106">描述</span><span class="sxs-lookup"><span data-stu-id="c8130-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f1750-107">GetExactType 方法</span><span class="sxs-lookup"><span data-stu-id="f1750-107">GetExactType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|<span data-ttu-id="f1750-108">取得的介面指標`ICorDebugType`物件，代表<xref:System.Type>的這個值。</span><span class="sxs-lookup"><span data-stu-id="f1750-108">Gets an interface pointer to an `ICorDebugType` object that represents the <xref:System.Type> of this value.</span></span>|  
+|[<span data-ttu-id="c8130-107">GetExactType 方法</span><span class="sxs-lookup"><span data-stu-id="c8130-107">GetExactType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|<span data-ttu-id="c8130-108">取得的介面指標`ICorDebugType`物件，表示<xref:System.Type>此值。</span><span class="sxs-lookup"><span data-stu-id="c8130-108">Gets an interface pointer to an `ICorDebugType` object that represents the <xref:System.Type> of this value.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f1750-109">備註</span><span class="sxs-lookup"><span data-stu-id="f1750-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c8130-109">備註</span><span class="sxs-lookup"><span data-stu-id="c8130-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f1750-110">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="f1750-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="c8130-110">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="c8130-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f1750-111">需求</span><span class="sxs-lookup"><span data-stu-id="f1750-111">Requirements</span></span>  
- <span data-ttu-id="f1750-112">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f1750-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c8130-111">需求</span><span class="sxs-lookup"><span data-stu-id="c8130-111">Requirements</span></span>  
+ <span data-ttu-id="c8130-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c8130-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f1750-113">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f1750-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c8130-113">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c8130-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f1750-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f1750-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c8130-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c8130-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f1750-115">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1750-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c8130-115">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8130-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1750-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1750-116">See Also</span></span>  
- [<span data-ttu-id="f1750-117">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="f1750-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
-    
- [<span data-ttu-id="f1750-118">ICorDebugValue3 介面</span><span class="sxs-lookup"><span data-stu-id="f1750-118">ICorDebugValue3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c8130-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c8130-116">See also</span></span>
+- [<span data-ttu-id="c8130-117">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="c8130-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [<span data-ttu-id="c8130-118">ICorDebugValue3 介面</span><span class="sxs-lookup"><span data-stu-id="c8130-118">ICorDebugValue3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)

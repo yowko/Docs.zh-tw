@@ -17,50 +17,50 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e60c3b06453e0f447249bddf5d4da5c240576577
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e9780020abe609212fe3c4bd65f70200467ff9c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432956"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533685"
 ---
-# <a name="iclrruntimeinfoisloadable-method"></a><span data-ttu-id="abbee-102">ICLRRuntimeInfo::IsLoadable 方法</span><span class="sxs-lookup"><span data-stu-id="abbee-102">ICLRRuntimeInfo::IsLoadable Method</span></span>
-<span data-ttu-id="abbee-103">表示此介面相關聯的執行階段是否可以載入目前的處理序不顧及其他執行階段，可能已經載入處理序。</span><span class="sxs-lookup"><span data-stu-id="abbee-103">Indicates whether the runtime associated with this interface can be loaded into the current process, taking into account other runtimes that might already be loaded into the process.</span></span>  
+# <a name="iclrruntimeinfoisloadable-method"></a><span data-ttu-id="87f31-102">ICLRRuntimeInfo::IsLoadable 方法</span><span class="sxs-lookup"><span data-stu-id="87f31-102">ICLRRuntimeInfo::IsLoadable Method</span></span>
+<span data-ttu-id="87f31-103">指出此介面相關聯的執行階段是否可以載入到目前的程序，並考慮其他可能會載入到處理序的執行階段。</span><span class="sxs-lookup"><span data-stu-id="87f31-103">Indicates whether the runtime associated with this interface can be loaded into the current process, taking into account other runtimes that might already be loaded into the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="abbee-104">語法</span><span class="sxs-lookup"><span data-stu-id="abbee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87f31-104">語法</span><span class="sxs-lookup"><span data-stu-id="87f31-104">Syntax</span></span>  
   
 ```  
 HRESULT IsLoadable(  
         [out, retval] BOOL *pbLoadable);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="abbee-105">參數</span><span class="sxs-lookup"><span data-stu-id="abbee-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="87f31-105">參數</span><span class="sxs-lookup"><span data-stu-id="87f31-105">Parameters</span></span>  
  `pbLoadable`  
- <span data-ttu-id="abbee-106">[out]`true`如果此執行階段無法載入目前的處理序; 否則`false`。</span><span class="sxs-lookup"><span data-stu-id="abbee-106">[out] `true` if this runtime could be loaded into the current process; otherwise, `false`.</span></span>  
+ <span data-ttu-id="87f31-106">[out]`true`如果此執行階段無法載入目前的處理序，否則`false`。</span><span class="sxs-lookup"><span data-stu-id="87f31-106">[out] `true` if this runtime could be loaded into the current process; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="abbee-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="abbee-107">Return Value</span></span>  
- <span data-ttu-id="abbee-108">這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="abbee-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="87f31-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="87f31-107">Return Value</span></span>  
+ <span data-ttu-id="87f31-108">這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="87f31-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="abbee-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="abbee-109">HRESULT</span></span>|<span data-ttu-id="abbee-110">描述</span><span class="sxs-lookup"><span data-stu-id="abbee-110">Description</span></span>|  
+|<span data-ttu-id="87f31-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="87f31-109">HRESULT</span></span>|<span data-ttu-id="87f31-110">描述</span><span class="sxs-lookup"><span data-stu-id="87f31-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="abbee-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="abbee-111">S_OK</span></span>|<span data-ttu-id="abbee-112">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="abbee-112">The method completed successfully.</span></span>|  
-|<span data-ttu-id="abbee-113">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="abbee-113">E_POINTER</span></span>|<span data-ttu-id="abbee-114">`pbLoadable` 為 null。</span><span class="sxs-lookup"><span data-stu-id="abbee-114">`pbLoadable` is null.</span></span>|  
+|<span data-ttu-id="87f31-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="87f31-111">S_OK</span></span>|<span data-ttu-id="87f31-112">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="87f31-112">The method completed successfully.</span></span>|  
+|<span data-ttu-id="87f31-113">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="87f31-113">E_POINTER</span></span>|<span data-ttu-id="87f31-114">`pbLoadable` 為 null。</span><span class="sxs-lookup"><span data-stu-id="87f31-114">`pbLoadable` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="abbee-115">備註</span><span class="sxs-lookup"><span data-stu-id="abbee-115">Remarks</span></span>  
- <span data-ttu-id="abbee-116">如果另一個執行階段已經載入處理序，而此介面相關聯的執行階段可同時載入同處理序為並存執行，`pbLoadable`傳回`true`。</span><span class="sxs-lookup"><span data-stu-id="abbee-116">If another runtime is already loaded into the process and the runtime associated with this interface can be loaded for in-process side-by-side execution, `pbLoadable` returns `true`.</span></span> <span data-ttu-id="abbee-117">如果兩個執行階段無法執行-並存同處理序，`pbLoadable`傳回`false`。</span><span class="sxs-lookup"><span data-stu-id="abbee-117">If the two runtimes cannot run side-by-side in-process, `pbLoadable` returns `false`.</span></span> <span data-ttu-id="abbee-118">例如，在相同的程序，與 CLR 2.0 版中並排或 CLR 1.1 版，可以執行 common language runtime (CLR) 第 4 版。</span><span class="sxs-lookup"><span data-stu-id="abbee-118">For example, the common language runtime (CLR) version 4 can run side-by-side in the same process with CLR version 2.0 or CLR version 1.1.</span></span> <span data-ttu-id="abbee-119">但是，CLR 1.1 版和 CLR 2.0 版無法執行-並存同處理序。</span><span class="sxs-lookup"><span data-stu-id="abbee-119">However, CLR version 1.1 and CLR version 2.0 cannot run side-by-side in-process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="87f31-115">備註</span><span class="sxs-lookup"><span data-stu-id="87f31-115">Remarks</span></span>  
+ <span data-ttu-id="87f31-116">如果另一個執行階段已載入處理序，並且此介面相關聯的執行階段可以載入內含式並排顯示執行中，`pbLoadable`傳回`true`。</span><span class="sxs-lookup"><span data-stu-id="87f31-116">If another runtime is already loaded into the process and the runtime associated with this interface can be loaded for in-process side-by-side execution, `pbLoadable` returns `true`.</span></span> <span data-ttu-id="87f31-117">如果兩個執行階段無法執行並排顯示同處理序，`pbLoadable`傳回`false`。</span><span class="sxs-lookup"><span data-stu-id="87f31-117">If the two runtimes cannot run side-by-side in-process, `pbLoadable` returns `false`.</span></span> <span data-ttu-id="87f31-118">例如，在相同的程序，與 CLR 2.0 版中並行或 CLR 1.1 版，可以執行 common language runtime (CLR) 第 4 版。</span><span class="sxs-lookup"><span data-stu-id="87f31-118">For example, the common language runtime (CLR) version 4 can run side-by-side in the same process with CLR version 2.0 or CLR version 1.1.</span></span> <span data-ttu-id="87f31-119">不過，CLR 1.1 版和 CLR 2.0 版才能執行並排顯示同處理序。</span><span class="sxs-lookup"><span data-stu-id="87f31-119">However, CLR version 1.1 and CLR version 2.0 cannot run side-by-side in-process.</span></span>  
   
- <span data-ttu-id="abbee-120">如果沒有執行階段會載入處理序中，這個方法一律會傳回`true`。</span><span class="sxs-lookup"><span data-stu-id="abbee-120">If no runtimes are loaded into the process, this method always returns `true`.</span></span>  
+ <span data-ttu-id="87f31-120">如果沒有執行階段載入處理序，此方法一律會傳回`true`。</span><span class="sxs-lookup"><span data-stu-id="87f31-120">If no runtimes are loaded into the process, this method always returns `true`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="abbee-121">需求</span><span class="sxs-lookup"><span data-stu-id="abbee-121">Requirements</span></span>  
- <span data-ttu-id="abbee-122">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="abbee-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="87f31-121">需求</span><span class="sxs-lookup"><span data-stu-id="87f31-121">Requirements</span></span>  
+ <span data-ttu-id="87f31-122">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="87f31-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="abbee-123">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="abbee-123">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="87f31-123">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="87f31-123">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="abbee-124">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="abbee-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="87f31-124">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="87f31-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="abbee-125">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abbee-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="87f31-125">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87f31-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abbee-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="abbee-126">See Also</span></span>  
- [<span data-ttu-id="abbee-127">ICLRRuntimeInfo 介面</span><span class="sxs-lookup"><span data-stu-id="abbee-127">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [<span data-ttu-id="abbee-128">裝載介面</span><span class="sxs-lookup"><span data-stu-id="abbee-128">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [<span data-ttu-id="abbee-129">裝載</span><span class="sxs-lookup"><span data-stu-id="abbee-129">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="87f31-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="87f31-126">See also</span></span>
+- [<span data-ttu-id="87f31-127">ICLRRuntimeInfo 介面</span><span class="sxs-lookup"><span data-stu-id="87f31-127">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="87f31-128">裝載介面</span><span class="sxs-lookup"><span data-stu-id="87f31-128">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="87f31-129">裝載</span><span class="sxs-lookup"><span data-stu-id="87f31-129">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
