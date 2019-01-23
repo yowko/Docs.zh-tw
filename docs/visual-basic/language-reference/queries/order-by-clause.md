@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: d4abb5f0b75ae4069c1dbe695a5c810b1f7aa6e1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c467b46347539a3cc6c4abfabc368ce494985b95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560930"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By 子句 (Visual Basic)
 指定查詢結果的排序次序。  
@@ -28,7 +28,7 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
 ## <a name="parts"></a>組件  
  `orderExp1`  
- 必要。 一或多個欄位從目前的查詢結果，找出如何排序傳回的值。 欄位名稱必須以逗號 （，） 分隔。 您可以識別每個欄位，因為依照遞增或遞減順序，使用`Ascending`或`Descending`關鍵字。 如果沒有`Ascending`或`Descending`關鍵字指定，則預設排序順序為遞增。 排序次序欄位可以從左到右的優先順序。  
+ 必要項。 一或多個欄位從目前的查詢結果，找出如何排序傳回的值。 欄位名稱必須以逗號 （，） 分隔。 您可以識別每個欄位，因為依照遞增或遞減順序，使用`Ascending`或`Descending`關鍵字。 如果沒有`Ascending`或`Descending`關鍵字指定，則預設排序順序為遞增。 排序次序欄位可以從左到右的優先順序。  
   
 ## <a name="remarks"></a>備註  
  您可以使用`Order By`子句來排序查詢的結果。 `Order By`子句只能排序結果，根據目前的範圍的範圍變數。 比方說，`Select`子句會導入該範圍與新的反覆項目變數的查詢運算式中的新範圍。 範圍之前定義的變數`Select`查詢中的子句之後沒有`Select`子句。 因此，如果您想要排序的欄位，不適用於您結果`Select`子句中，您必須在放置`Order By`子句之前`Select`子句。 一個您想要排序您的查詢不會傳回為結果一部分的欄位時，當您必須執行這項操作的範例。  
@@ -50,8 +50,8 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
  [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查詢](../../../visual-basic/language-reference/queries/index.md)  
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查詢](../../../visual-basic/language-reference/queries/index.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)

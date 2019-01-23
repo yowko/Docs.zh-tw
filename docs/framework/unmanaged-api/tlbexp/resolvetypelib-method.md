@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be2558e760be8519e528baeff438273c8871f320
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 6558d27f10e5b93dfe2c8053bb96434d49fd3c4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537203"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 方法
 藉由傳回它的完整的路徑來解析型別程式庫的簡單名稱。  
@@ -68,12 +68,12 @@ HRESULT ResolveTypeLib(
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** TlbRef.idl、 TlbRef.h  
+ **標頭：** TlbRef.idl TlbRef.h  
   
  **程式庫：** TlbRef.lib  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [Tlbexp Helper 函式](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a>另請參閱
+- [Tlbexp Helper 函式](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

@@ -1,15 +1,15 @@
 ---
-title: 使用 XML 宣告 (Visual Basic) 進行序列化
+title: 序列化使用 XML 宣告 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
-ms.openlocfilehash: 6b7351d85dab997ba6cb0ef023972e9e4e4fca14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0d6ccfdffa76de61c36e4cdb3f68f7cf85f1e68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558471"
 ---
-# <a name="serializing-with-an-xml-declaration-visual-basic"></a>使用 XML 宣告 (Visual Basic) 進行序列化
+# <a name="serializing-with-an-xml-declaration-visual-basic"></a>序列化使用 XML 宣告 (Visual Basic)
 這個主題描述如何控制序列化是否產生 XML 宣告。  
   
 ## <a name="xml-declaration-generation"></a>XML 宣告產生  
@@ -61,5 +61,5 @@ Console.WriteLine(sb.ToString())
 <Root><Child>child content</Child></Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [序列化 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>另請參閱
+- [序列化 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f2177702c6c5999033d0852a932e52c0725fb8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b8c3f102405c9b9fa9af2597658b728e618cabb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559368"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles 方法
-取得物件控點的程序中的列舉值。  
+取得處理序中物件控制代碼的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,31 +36,31 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
 #### <a name="parameters"></a>參數  
  `types`  
- [in]位元組合[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)值，指定要包含在集合中的控制代碼的類型。  
+ [in]位元組合[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)值，指定要包含在集合中的控制代碼的型別。  
   
  `ppENum`  
- [out]位址指標[ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)也就是列舉值物件以進行記憶體回收。  
+ [out]位址指標[ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)也就是列舉值的物件進行記憶體回收。  
   
 ## <a name="remarks"></a>備註  
- `EnumerateHandles` 是 helper 函式支援的控制代碼資料表檢查。 類似於[icordebugprocess5:: Enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)方法，而不是填入[ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)集合的所有物件，若要進行記憶體回收，它包含有控制代碼資料表中的控制代碼的物件。  
+ `EnumerateHandles` 是 helper 函式支援的控制代碼資料表檢查。 類似於[ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)方法，不同之處在於而不是填入[ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)集合與所有的物件進行記憶體回收，它包含具有控制代碼資料表中的控制代碼的物件。  
   
- `types`參數會指定要包含在集合中的控制代碼類型。 `types` 可以是下列三個成員[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)列舉型別：  
+ `types`參數會指定要包含在集合中的控制代碼類型。 `types` 可以是下列三個成員的任何[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)列舉型別：  
   
--   `CorHandleStrongOnly` （僅限強式參考來控制代碼）。  
+-   `CorHandleStrongOnly` （僅限使用強式參考至控點）。  
   
--   `CorHandleWeakOnly` （僅限弱式參考來控制代碼）。  
+-   `CorHandleWeakOnly` （僅限弱式參考以控點）。  
   
 -   `CorHandleAll` （所有控制代碼）。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac90699cf217aff926003aa545b9cceb11bf58d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4bc72b9c5687654c17a01ee9b4fa9d31dcf50b56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556112"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 列舉
 指定介面、.NET Framework 版本，或是已引進介面的 .NET Framework 版本。  
@@ -202,10 +202,10 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugModule2`|[ICorDebugModule2](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-interface.md)|2.0|  
 |`ver_ICorDebugFunction2`|[ICorDebugFunction2](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-interface.md)|2.0|  
 |`ver_ICorDebugCode2`|[ICorDebugCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-interface.md)|2.0|  
-|`ver_ICorDebugClass2`|「 ICorDebugClass2"|2.0|  
-|`ver_ICorDebugValue2`|「 ICorDebugValue2"|2.0|  
+|`ver_ICorDebugClass2`|"ICorDebugClass2"|2.0|  
+|`ver_ICorDebugValue2`|"ICorDebugValue2"|2.0|  
 |`ver_ICorDebugEval2`|「 ICorDebugEval2"。|2.0|  
-|`ver_ICorDebugObjectValue2`|「 ICorDebugObjectValue2"|2.0|  
+|`ver_ICorDebugObjectValue2`|"ICorDebugObjectValue2"|2.0|  
 |`ver_ICorDebugThread3`|[ICorDebugThread3](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-interface.md)|4|  
 |`ver_ICorDebugThread4`|[ICorDebugThread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)|4|  
 |`ver_ICorDebugStackWalk`|[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)|4|  
@@ -222,7 +222,7 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugLatestVersion`|.NET Framework 的版本 (包括其所有 Service Pack) 為最新版本。|-|  
   
 ## <a name="remarks"></a>備註  
- 偵錯工具可以使用`CorDebugInterfaceVersion`中的列舉[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函數來指定.NET Framework 偵錯工具支援的最新版本。  
+ 偵錯工具可以使用`CorDebugInterfaceVersion`中的列舉[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函式來指定.NET Framework 偵錯工具支援的最高版本。  
   
 ## <a name="interface-names"></a>介面名稱  
  在偵錯 API (例如，`ICorDebugThread3` 中的 "3") 中，出現在介面名稱結尾的號碼是指定介面版本，而不是 .NET Framework 的版本。 偵錯 API 中的所有介面名稱都有包含版本號碼，但 .NET Framework 第 1 版中導入的介面除外。 介面版本號碼與 .NET Framework 版本號碼之間的任何對應都是巧合。  
@@ -235,16 +235,16 @@ typedef enum CorDebugInterfaceVersion {
   
 -   .NET Framework 3.0 和 3.5 版使用現有的 .NET Framework 2.0 介面，而且沒有導入任何新介面。  
   
--   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]導入混合的介面版本。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 會以 `ICorDebugThread` 介面的第三和第四版出現。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]也引進了第一版`ICorDebugStackWalk`介面和第二個版本`ICorDebugNativeFrame`介面 (`ICorDebugNativeFrame2`)。  
+-   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]導入混合的介面版本。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 會以 `ICorDebugThread` 介面的第三和第四版出現。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]也引進了第一版`ICorDebugStackWalk`介面和第二版`ICorDebugNativeFrame`介面 (`ICorDebugNativeFrame2`)。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

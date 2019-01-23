@@ -2,20 +2,20 @@
 title: '&lt;netTcpBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 8416701ce4e787a49ee0a4bdd4829c6592cde94c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7372b94bde8325ec00116ee7022739f1b17a1ac9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555488"
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; 的 &lt;transport&gt;
 定義設定之端點的訊息層級安全性需求的型別[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
   
  \<system.ServiceModel>  
-\<繫結 >  
+\<bindings>  
 \<netTcpBinding>  
-\<繫結 >  
+\<binding>  
 \<安全性 >  
 \<transport>  
   
@@ -79,13 +79,13 @@ ms.locfileid: "54147326"
 ## <a name="remarks"></a>備註  
  使用傳輸安全性來達成 SOAP 訊息的完整性與機密性，以及交互驗證。 如果在繫結上選取這個安全性模式，便會使用安全性傳輸設定通道堆疊，並以傳輸安全性 (如 Windows Negotiate 或 SSL over TCP) 保護 SOAP 訊息。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.TcpTransportSecurity>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.TcpTransportSecurity>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
+- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：以程式設計方式列印 XPS 檔
+title: HOW TO：以程式設計方式列印 XPS 檔
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: a42f9b2101266857e56dee6836f4c3b27b3c6f96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fbef6aef11917a4e8f0a098c523ec2b542664681
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556609"
 ---
-# <a name="how-to-programmatically-print-xps-files"></a>如何：以程式設計方式列印 XPS 檔
+# <a name="how-to-programmatically-print-xps-files"></a>HOW TO：以程式設計方式列印 XPS 檔
 您可以使用一個多載<xref:System.Printing.PrintQueue.AddJob%2A>方法來列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]不需開啟的檔案<xref:System.Windows.Controls.PrintDialog>或基本上，任何[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]完全。  
   
  您也可以列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]檔案所使用的許多<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>並<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法<xref:System.Windows.Xps.XpsDocumentWriter>。 如需詳細資訊，請參閱[列印 XPS 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))。  
@@ -58,14 +58,14 @@ ms.locfileid: "50188321"
   
  **附註**為了簡單起見，上述範例中使用的目前狀態\*.xps 副檔名的檔案來測試[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]。 不過，[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案不一定要有此副檔名。 [isXPS.exe (isXPS 一致性工具)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) 是一種測試檔案之 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 有效性的方法。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Printing.PrintQueue>  
- <xref:System.Printing.PrintQueue.AddJob%2A>  
- <xref:System.Threading.ApartmentState>  
- <xref:System.STAThreadAttribute>  
- [XPS](https://www.microsoft.com/xps)  
- [列印 XPS 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))  
- [Managed 和 Unmanaged 執行緒處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
- [isXPS.exe (isXPS 一致性工具)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))  
- [WPF 中的文件](documents-in-wpf.md)  
- [列印概觀](printing-overview.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Printing.PrintQueue>
+- <xref:System.Printing.PrintQueue.AddJob%2A>
+- <xref:System.Threading.ApartmentState>
+- <xref:System.STAThreadAttribute>
+- [XPS](https://www.microsoft.com/xps)
+- [列印 XPS 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
+- [Managed 和 Unmanaged 執行緒處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [isXPS.exe (isXPS 一致性工具)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+- [WPF 中的文件](documents-in-wpf.md)
+- [列印概觀](printing-overview.md)

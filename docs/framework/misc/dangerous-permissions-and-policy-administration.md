@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b89792f9579da2d72c0a7f90a983308b172093fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 281582b04aabd8a18af8bf17091979385d009ee8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536538"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>危險使用權限和原則管理
 .NET Framework 為幾個受保護作業提供了使用權限，這些受保護作業也可能會讓安全性系統受到危害。 您只能在必要時將這些危險的使用權限授與給可靠的程式碼。 如果將這些使用權限授與給惡意程式碼，通常就沒有任何方法可以抵禦這些惡意程式碼。  
   
 > [!NOTE]
->  在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，.NET Framework 安全性模型和術語已有重大變更。 如需有關這些變更的詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
+>  在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，.NET Framework 安全性模型和術語已有重大變更。 如需有關這些變更的詳細資訊，請參閱 <<c0> [ 安全性變更](../../../docs/framework/security/security-changes.md)。  
   
  下表說明危險的使用權限。  
   
@@ -38,5 +38,5 @@ ms.locfileid: "33390717"
 |<xref:System.Security.Permissions.ReflectionPermission>||  
 |<xref:System.MemberAccessException>|可以使用私用成員使存取範圍機制無效。|  
   
-## <a name="see-also"></a>另請參閱  
- [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>另請參閱
+- [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

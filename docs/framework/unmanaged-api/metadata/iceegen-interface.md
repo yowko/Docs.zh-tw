@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e3e70749a768377ea470bc44a66b9fdabbb1f93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5dadbe757464b24ef532fdd8abe5457fa995348
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448852"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555059"
 ---
 # <a name="iceegen-interface"></a>ICeeGen 介面
 提供動態程式碼編譯的方法。  
@@ -33,29 +33,29 @@ ms.locfileid: "33448852"
 |方法|描述|  
 |------------|-----------------|  
 |[AddSectionReloc 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)|已過時。 將程式碼基底.reloc 指令。|  
-|[AllocateMethodBuffer 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-allocatemethodbuffer-method.md)|已過時。 建立方法，指定大小的緩衝區，並取得方法的相對虛擬位址。|  
+|[AllocateMethodBuffer 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-allocatemethodbuffer-method.md)|已過時。 建立方法中，指定大小的緩衝區，並取得方法的相對虛擬位址。|  
 |[ComputePointer 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-computepointer-method.md)|已過時。 判斷指定的程式碼區段的緩衝區。|  
-|[EmitString 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-emitstring-method.md)|已過時。 指定的字串發出到程式碼基底。|  
+|[EmitString 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-emitstring-method.md)|已過時。 程式碼基底到發出指定的字串。|  
 |[GenerateCeeFile 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceefile-method.md)|已過時。 產生程式碼基底檔案，其中包含目前載入到這個程式碼基底`ICeeGen`。|  
-|[GenerateCeeMemoryImage 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceememoryimage-method.md)|已過時。 在記憶體中的程式碼基底產生影像。|  
+|[GenerateCeeMemoryImage 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceememoryimage-method.md)|已過時。 在記憶體中的程式碼基底，會產生映像。|  
 |[GetIlSection 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-getilsection-method.md)|已過時。 取得指定的控制代碼所參考的基底中繼語言程式碼區段。|  
 |[GetIMapTokenIface 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-getimaptokeniface-method.md)|已過時。 取得指定語彙基元所參考的介面。|  
-|[GetMethodBuffer 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|已過時。 在指定的相對虛擬位址的方法取得適當大小的緩衝區。|  
+|[GetMethodBuffer 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|已過時。 取得方法的適當大小的緩衝區，在指定的相對虛擬位址。|  
 |[GetSectionBlock 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectionblock-method.md)|已過時。 取得區段的區塊程式碼基底。|  
 |[GetSectionCreate 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectioncreate-method.md)|已過時。 產生並取得使用指定的名稱和旗標值的程式碼區段。|  
-|[GetSectionDataLen 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectiondatalen-method.md)|已過時。 取得指定之區段的長度。|  
+|[GetSectionDataLen 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectiondatalen-method.md)|已過時。 取得指定的區段長度。|  
 |[GetString 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstring-method.md)|已過時。 取得儲存在指定的相對虛擬位址的字串。|  
 |[GetStringSection 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstringsection-method.md)|已過時。 取得指定的控制代碼所參考的程式碼區段的字串表示。|  
-|[TruncateSection 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-truncatesection-method.md)|已過時。 指定的長度來截斷指定的程式碼區段。|  
+|[TruncateSection 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-truncatesection-method.md)|已過時。 將指定的程式碼區段捨去指定的長度。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

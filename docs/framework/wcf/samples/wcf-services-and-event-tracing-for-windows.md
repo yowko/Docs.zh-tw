@@ -2,12 +2,12 @@
 title: WCF 服務及 Windows 的事件追蹤
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 100f9c0ce71eedaa4061fc894521597074b21b00
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d45e83919dae52ee3719fe52463711999ba48dd3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555540"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF 服務及 Windows 的事件追蹤
 此範例示範如何使用 Windows Communication Foundation (WCF) 中的分析追蹤功能發出的事件追蹤的 Windows (ETW) 事件。 分析追蹤是在 WCF 堆疊中的 WCF 服務，在生產環境中疑難排解的關鍵點發出的事件。
@@ -87,5 +87,5 @@ ms.locfileid: "50198285"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   
-## <a name="see-also"></a>另請參閱  
- [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>另請參閱
+- [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: 1220ea07501e68fd8d2a8075c686d949be9a7020
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91d74d1d72bb2a39c6b6d408839746c45ddad3db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555514"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>使用預存程序來自訂作業
 預存程序表示用以覆寫預設行為的常見方法。 本主題中的範例顯示如何使用針對預存程序產生的方法包裝函式，以及如何才能直接呼叫預存程序。  
@@ -18,7 +18,7 @@ ms.locfileid: "33360205"
  如果您使用 Visual Studio，您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]指派來執行插入、 更新和刪除的預存程序。  
   
 > [!NOTE]
->  若要讀回資料庫產生的值，請在預存程序中使用輸出參數。 如果您無法使用輸出參數，請撰寫部分方法實作，而不要依賴[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]產生的覆寫作業。 在順利完成 `INSERT` 或 `UPDATE` 作業之後，對應至資料庫產生值的成員必須設為適當的值。 如需詳細資訊，請參閱[開發人員覆寫預設行為的責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)。  
+>  若要讀回資料庫產生的值，請在預存程序中使用輸出參數。 如果您無法使用輸出參數，請撰寫部分方法實作，而不要依賴[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]產生的覆寫作業。 在順利完成 `INSERT` 或 `UPDATE` 作業之後，對應至資料庫產生值的成員必須設為適當的值。 如需詳細資訊，請參閱 <<c0> [ 開發人員在覆寫預設行為的責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -47,5 +47,5 @@ ms.locfileid: "33360205"
  [!code-csharp[DLinqOverrideDefaultSproc#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/Program.cs#3)]
  [!code-vb[DLinqOverrideDefaultSproc#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a>另請參閱  
- [開發人員覆寫預設行為的責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+## <a name="see-also"></a>另請參閱
+- [開發人員覆寫預設行為的責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)

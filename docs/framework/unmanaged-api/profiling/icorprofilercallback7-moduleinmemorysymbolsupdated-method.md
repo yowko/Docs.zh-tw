@@ -11,17 +11,17 @@ api_type:
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9aa690378a32ffee2def672f02dc8b5582647a5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae6183f33b784a0ff79d11310b952949cf13bf58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556190"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7::ModuleInMemorySymbolsUpdated 方法
 [在 .NET Framework 4.6.1 及更新版本中支援]  
   
- 每次更新記憶體中模組相關聯的符號資料流時，通知分析工具。  
+ 每次更新記憶體中模組相關聯的符號資料流時，請通知分析工具。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,27 +32,27 @@ HRESULT ModuleInMemorySymbolsUpdated(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `moduleId`  
+ [in] `moduleId`  
  已更新其符號資料流的記憶體中模組的識別碼。  
   
 ## <a name="remarks"></a>備註  
- 此回呼由設定[COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)事件遮罩旗標時呼叫[ICorProfilerCallback5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)方法。  
+ 此回呼由設定控制[COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)事件遮罩旗標時呼叫[ICorProfilerCallback5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)方法。  
   
 > [!NOTE]
->  這個事件目前不引發符號以隱含方式建立或修改透過<xref:System.Reflection.Emit>應用程式開發介面。  
+>  以隱含方式建立或修改透過符號目前不引發這個事件<xref:System.Reflection.Emit>Api。  
   
- 即使當符號提供最前面位置的其中一個多載 managed 呼叫<xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType>方法包含`rawSymbolStore`引數指定的組件，執行階段的符號可能實際上將關聯的符號資料與模組直到之後[ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)回呼發生。 這個事件提供的更新版本的機會來收集這類模組的符號。  
+ 即使當符號中所提供提前呼叫其中一個受管理的多載<xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType>方法，其中包含`rawSymbolStore`引數來指定組件，執行階段的符號可能未實際關聯的符號資料模組直到之後[ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)回呼發生。 這個事件會提供更新版本的機會，來收集這類模組的符號。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ModuleLoadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)  
- [SetEventMask2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)  
- [ICorProfilerCallback7 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ModuleLoadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)
+- [SetEventMask2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
+- [ICorProfilerCallback7 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)

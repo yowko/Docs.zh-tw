@@ -2,21 +2,21 @@
 title: '&lt;endpointDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 58bab9aef2e20d762c303e8b698214125531a136
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4611d529c1854ee456585ad3f7aac339ff771bce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556440"
 ---
 # <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 指定端點的各種探索設定，例如其探索能力、範圍以及中繼資料的任何自訂延伸模組。  
   
 \<system.ServiceModel>  
-\<行為 >  
+\<behaviors>  
 \<endpointBehaviors>  
-\<行為 >  
-\<endpointDiscovery >  
+\<behavior>  
+\<endpointDiscovery>  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,15 +48,15 @@ ms.locfileid: "54150912"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<範圍 >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|端點之範圍 URI 的集合。 有一個以上的範圍 URI 與單一端點產生關聯。|  
-|[\<擴充功能 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [的\<endpointDiscovery >]|XML 項目的集合，這個集合可讓您指定端點要發行的自訂中繼資料。|  
-|\<類型 >|要搜尋之介面的集合。|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|端點之範圍 URI 的集合。 有一個以上的範圍 URI 與單一端點產生關聯。|  
+|[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]|XML 項目的集合，這個集合可讓您指定端點要發行的自訂中繼資料。|  
+|\<types>|要搜尋之介面的集合。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<行為 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
 |||  
   
 ## <a name="remarks"></a>備註  
@@ -104,5 +104,5 @@ ms.locfileid: "54150912"
 </behaviors>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

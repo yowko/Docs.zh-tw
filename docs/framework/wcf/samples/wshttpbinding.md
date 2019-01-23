@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Profile binding
 ms.assetid: 22d85b19-0135-4141-9179-a0e9c343ad73
-ms.openlocfilehash: 6eccaaaa3ad941b16690afeecef618cdfb9040a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 333fe946f82d7bee92f5d29f079eb262297cdf8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556583"
 ---
 # <a name="wshttpbinding"></a>WSHttpBinding
 此範例示範如何實作一般服務與一般用戶端使用 Windows Communication Foundation (WCF)。 這個範例是由用戶端主控台程式 (client.exe) 和網際網路資訊服務 (IIS) 所裝載的服務程式庫所組成。 服務會實作定義要求-回覆通訊模式的合約。 合約是由 `ICalculator` 介面所定義，這個介面會公開數學運算作業 (加、減、乘、除)。 用戶端會對指定的數學運算作業提出同步要求，服務則會以結果回覆。 您可以在主控台視窗中看到用戶端活動。  
@@ -60,7 +60,7 @@ ms.locfileid: "43512027"
 </bindings>  
 ```  
   
- 在基底 `binding` 項目上，`maxReceivedMessageSize` 值可以讓您設定傳入訊息的大小上限 (以位元組為單位)。 `hostNameComparisonMode` 值可以讓您設定當分離訊息信號至服務時，是否要考量主機名稱。 `messageEncoding` 值可以讓您設定訊息是要使用 Text 編碼或 MTOM 編碼。 `textEncoding` 值可以讓您設定訊息的字元編碼。 `bypassProxyOnLocal` 值可以讓您設定本機通訊是否要使用 HTTP Proxy。 `transactionFlow` 值會設定是否流動目前的交易 (如果作業已設定為交易流程)。  
+ 在基底 `binding` 項目上，`maxReceivedMessageSize` 值可以讓您設定傳入訊息的大小上限 (以位元組為單位)。 `hostNameComparisonMode` 值可以讓您設定當分離訊息信號至服務時，是否要考量主機名稱。 `messageEncoding` 值可以讓您設定訊息是要使用 Text 編碼或 MTOM 編碼。 `textEncoding` 值可以讓您設定訊息的字元編碼。 `bypassProxyOnLocal` 值可以讓您設定本機通訊是否要使用 HTTP Proxy。 `transactionFlow` 值會設定是否流動目前的異動 (如果作業已設定為異動流程)。  
   
  在  [ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)項目，啟用的布林值會設定是否啟用可靠工作階段。 `ordered` 值會設定是否保留訊息順序。 `inactivityTimeout` 值會設定工作階段在發生錯誤前能夠閒置的時間長度。  
   

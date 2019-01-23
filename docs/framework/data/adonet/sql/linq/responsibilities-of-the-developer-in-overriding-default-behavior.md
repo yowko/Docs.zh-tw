@@ -2,15 +2,15 @@
 title: 開發人員覆寫預設行為的責任
 ms.date: 03/30/2017
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-ms.openlocfilehash: 90b8eedcc80c330a39efe97b6427beebeca913f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4773d4d5cf8192dfa1f8bfad6b5846c03ab1d2c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555618"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>開發人員覆寫預設行為的責任
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會強制下列需求，但如果不滿足這些需求，行為是未定義。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會強制下列需求，但如果沒有滿足這些需求，則行為是未定義。  
   
 -   覆寫方法不得呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 或 <xref:System.Data.Linq.Table%601.Attach%2A>。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如果覆寫方法中呼叫這些方法時，會擲回例外狀況。  
   
@@ -20,11 +20,11 @@ ms.locfileid: "33365250"
   
 -   作業順利完成時，則需要建立 (`Insert`) 和 `Update` 覆寫方法將資料庫所產生的資料行值送回給對應的物件成員。  
   
-     例如，如果`Order.OrderID`對應至識別資料行 (*autoincrement*主索引鍵)，則`InsertOrder()`覆寫方法必須擷取資料庫產生的識別碼，並設定`Order.OrderID`成員為該 id。 同樣地，必須將時間戳記成員更新為資料庫產生的時間戳記值，以確定更新的物件一致。 散佈資料庫產生的值失敗，會造成資料庫與 <xref:System.Data.Linq.DataContext> 追蹤的物件不一致。  
+     比方說，如果`Order.OrderID`對應至識別資料行 (*autoincrement*主索引鍵)，則`InsertOrder()`覆寫方法必須擷取的資料庫產生的識別碼，並設定`Order.OrderID`成員為該 id。 同樣地，必須將時間戳記成員更新為資料庫產生的時間戳記值，以確定更新的物件一致。 散佈資料庫產生的值失敗，會造成資料庫與 <xref:System.Data.Linq.DataContext> 追蹤的物件不一致。  
   
 -   使用者必須負責叫用 (Invoke) 正確的動態 API。 例如，在更新覆寫方法中，您只能呼叫 <xref:System.Data.Linq.DataContext.ExecuteDynamicUpdate%2A>。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 並不會偵測或驗證所叫用的動態方法是否符合適用的作業。 如果呼叫不適用的方法 (例如，對要更新的物件呼叫 <xref:System.Data.Linq.DataContext.ExecuteDynamicDelete%2A>)，則會產生無法定義的結果。  
   
 -   最後，需要有覆寫方法才能執行陳述的作業。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 作業 (例如立即載入、延後載入和 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>) 的語意 (Semantics) 需要有覆寫，才能提供陳述的服務。 例如，只傳回空集合而不檢查資料庫內容的載入覆寫，可能會導致資料不一致。  
   
-## <a name="see-also"></a>另請參閱  
- [自訂插入、更新和刪除作業](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+## <a name="see-also"></a>另請參閱
+- [自訂插入、更新和刪除作業](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

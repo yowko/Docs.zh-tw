@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b7eeadd532e5a53c693cc1cde59150777d7edc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d52f38412366880389e963b5ec6af63dcf5d768f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555046"
 ---
 # <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsAssemblyReferenceInList 方法
-取得值，指出是否在清單中的組件參考提供的指標。  
+取得值，指出是否在清單中的組件是指提供的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,27 +37,27 @@ HRESULT IsAssemblyReferenceInList (
   
 #### <a name="parameters"></a>參數  
  `pName`  
- [in]要搜尋的組件介面指標。 有效值為型別的`IAssemblyName`或`IReferenceIdentity`。  
+ [in]要搜尋的組件介面指標。 有效的值屬於類型`IAssemblyName`或`IReferenceIdentity`。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|字串會出現在清單中。|  
-|S_FALSE|字串不在清單中。|  
-|E_FAIL|發生未知的嚴重失敗。 方法會傳回 E_FAIL 之後，就不再可在處理程序中使用通用語言執行平台。 裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|S_FALSE|字串不會不會出現在清單中。|  
+|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL 之後，就不再可在此程序中使用 common language runtime。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRAssemblyIdentityManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [ICLRAssemblyReferenceList 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [IHostAssemblyManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
- [IHostAssemblyStore 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRAssemblyIdentityManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [IHostAssemblyStore 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
