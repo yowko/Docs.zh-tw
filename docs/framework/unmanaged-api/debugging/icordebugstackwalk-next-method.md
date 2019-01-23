@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 367c43dc08722288dc3b32b5133f7770ffc3a27c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eee75bc16f46ba5ea58fc42c570e48b09ab9a2e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553226"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next 方法
 移動[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)下一個畫面格的物件。  
@@ -38,26 +38,26 @@ HRESULT Next();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|執行階段成功回溯至下一個畫面格 （請參閱 < 備註 >）。|  
+|S_OK|執行階段成功回溯至下一個畫面 （請參閱 < 備註 >）。|  
 |E_FAIL|`ICorDebugStackWalk`物件不可以進階。|  
-|CORDBG_S_AT_END_OF_STACK|由於此回溯已到達堆疊的結尾。|  
-|CORDBG_E_PAST_END_OF_STACK|框架指標已經結尾的堆疊。因此，沒有其他框架則可以存取。|  
+|CORDBG_S_AT_END_OF_STACK|堆疊的結尾已到達此回溯的結果。|  
+|CORDBG_E_PAST_END_OF_STACK|框架指標已經結尾的堆疊;因此，可以不存取任何其他的框架。|  
   
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- `Next`方法往前移`ICorDebugStackWalk`物件呼叫框架，只有當執行階段可以回溯目前的框架。 否則，物件前進至下一步，執行階段可以回溯框架。  
+ `Next`方法的進展`ICorDebugStackWalk`物件至呼叫端的框架，只有當執行階段可以回溯目前的框架。 否則，物件會前進至下一個框架執行階段可回溯。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugStackWalk 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugStackWalk 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
