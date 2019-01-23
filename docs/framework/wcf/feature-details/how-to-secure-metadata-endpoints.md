@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: e6fbaabb97e4a8de3e4bdbcc0c105b6cf999c0d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e7ba87a0e2a0a9dd0a4cd984dd88b4850a24040e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590678"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>HOW TO：確保中繼資料端點的安全
 服務的中繼資料可能包含有關應用程式而可能會遭到惡意使用者利用的敏感資訊。 服務的取用者也可能會要求安全機制來取得關於服務的中繼資料。 因此，有時候會需要使用安全端點來發行中繼資料。  
@@ -21,7 +21,7 @@ ms.locfileid: "53152184"
   
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>在程式碼中建立安全的 HTTPS GET 中繼資料端點  
   
-1.  使用適當的 X.509 憑證設定連接埠。 憑證必須來自受信任的授權單位 (CA)，而且必須可以用於「服務授權」。 您必須使用 HttpCfg.exe 工具將憑證附加到該連接埠。 請參閱[How to:使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+1.  使用適當的 X.509 憑證設定連接埠。 憑證必須來自受信任的授權單位 (CA)，而且必須可以用於「服務授權」。 您必須使用 HttpCfg.exe 工具將憑證附加到該連接埠。 請參閱[如何：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
     > [!IMPORTANT]
     >  憑證的主體或是其網域名稱系統 (DNS) 必須符合電腦的名稱。 這點是必要條件，因為 HTTPS 機制一開始執行的一個步驟，就是檢查該憑證是否為發行給與其被叫用位址相同的統一資源識別元 (URI)。  
@@ -92,11 +92,11 @@ ms.locfileid: "53152184"
   
 -   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [操作說明：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
+- [如何：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

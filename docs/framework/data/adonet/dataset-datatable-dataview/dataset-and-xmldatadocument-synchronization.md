@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 54991234d4eaa9edab218d3b0d221a6e477d2be5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5360a7bce1b5470271bc6b512484964ebb9fd8d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587774"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>資料集和 XmlDataDocument 同步處理
 ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存取階層式資料，可以使用 .NET Framework 中提供的 XML 類別。 過去，這兩個資料表示一直是分開使用； 不過，.NET Framework 可讓您透過資料的關聯式和階層式表示的即時、 同步存取**資料集**物件和<xref:System.Xml.XmlDataDocument>物件，分別。  
@@ -112,5 +112,5 @@ ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存�
  <xref:System.Xml.XmlDataDocument>  
  包含的相關參考資訊**XmlDataDocument**類別。  
   
-## <a name="see-also"></a>另請參閱  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

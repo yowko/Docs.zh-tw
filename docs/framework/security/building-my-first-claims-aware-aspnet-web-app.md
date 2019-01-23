@@ -3,12 +3,12 @@ title: 建置第一個宣告感知 ASP.NET Web 應用程式
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 76b02a0e6869b0d4de181b59296a0858aa80948c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 67489b2bb93719d8182159fbc91703399d5e8bc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840845"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588960"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>建置第一個宣告感知 ASP.NET Web 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -41,11 +41,11 @@ ms.locfileid: "48840845"
   
  若要使用 WIF 建立您的第一個宣告感知 ASP.NET 應用程式，請遵循下列其中一項指示執行：  
   
--   [操作說明：使用 WIF 建置宣告感知 ASP.NET MVC Web 應用程式](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [如何：建置宣告感知 ASP.NET MVC Web 應用程式使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [操作說明：使用 WIF 建置宣告感知 ASP.NET Web Form 應用程式](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [如何：建置宣告感知 ASP.NET Web Form 應用程式使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [操作說明：使用表單型驗證建置宣告感知 ASP.NET 應用程式](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [如何：建置宣告感知 ASP.NET 應用程式使用表單型驗證](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
-## <a name="see-also"></a>另請參閱  
- [開始使用 WIF](../../../docs/framework/security/getting-started-with-wif.md)
+## <a name="see-also"></a>另請參閱
+- [開始使用 WIF](../../../docs/framework/security/getting-started-with-wif.md)

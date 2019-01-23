@@ -7,12 +7,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1ed2dc91d1a2ea9bade11902aac553e24c0607ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583657"
 ---
 # <a name="delegate-statement"></a>Delegate 陳述式
 用來宣告委派。 委派是參考型別參考`Shared`方法的型別或物件的執行個體方法。 任何具有相符的參數和傳回型別程序可用來建立這個委派類別的執行個體。 此程序可以接著會叫用透過委派執行個體。  
@@ -33,7 +33,7 @@ ms.locfileid: "50199769"
 |`Shadows`|選擇性。 表示此委派會重新宣告並隱藏同名的程式設計項目或一組多載的項目，基底類別中。 您可以使用任何其他類型遮蔽任何一種已宣告的項目。<br /><br /> 無法從遮蔽項目的衍生類別內使用遮蔽的項目，除了從無法存取遮蔽項目的位置以外。 例如，如果`Private`項目會遮蔽基底類別的項目，並沒有存取權限的程式碼`Private`項目改為存取基底類別項目。|  
 |`Sub`|選擇性，但是`Sub`或`Function`必須出現。 宣告此程序為委派`Sub`不傳回值的程序。|  
 |`Function`|選擇性，但是`Sub`或`Function`必須出現。 宣告此程序為委派`Function`傳回值的程序。|  
-|`name`|必要。 委派型別; 名稱依照標準變數命名慣例。|  
+|`name`|必要項。 委派型別; 名稱依照標準變數命名慣例。|  
 |`typeparamlist`|選擇性。 此委派型別參數的清單。 以逗號分隔多個類型參數。 （選擇性） 每個類型參數可以宣告 variant 利用`In`和`Out`泛型修飾詞。 您必須將括[型別清單](../../../visual-basic/language-reference/statements/type-list.md)括號括住並將它與引入`Of`關鍵字。|  
 |`parameterlist`|選擇性。 呼叫時，會傳遞至程序的參數清單。 您必須將括[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)括號括住。|  
 |`type`|如果您指定為必要項`Function`程序。 傳回值的資料型別。|  
@@ -64,12 +64,12 @@ ms.locfileid: "50199769"
   
  [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [AddressOf 運算子](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
- [委派](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [如何：使用泛型類別](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [共變數和反變數](../../programming-guide/concepts/covariance-contravariance/index.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>另請參閱
+- [AddressOf 運算子](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Of](../../../visual-basic/language-reference/statements/of-clause.md)
+- [委派](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [如何：使用泛型類別](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [共變數和反變數](../../programming-guide/concepts/covariance-contravariance/index.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

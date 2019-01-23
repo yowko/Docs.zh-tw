@@ -2,21 +2,15 @@
 title: WCF Data Services 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Astoria
-- WCF Data Services, getting started
+  - Astoria
+  - 'WCF Data Services, getting started'
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 9ece2fe051855d0fd39556f56a4343ead2c437bc
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702798"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
 WCF Data Services （先前稱為"ADO.NET Data Services"） 是可讓您建立使用服務的.NET framework 的元件[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]來公開及取用資料透過 Web 或內部網路使用的語意[具像狀態傳輸 (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)。 OData 會將資料公開為可由 URI 定址的資源。 資料是使用 GET、PUT、POST 和 DELETE 的標準 HTTP 動作來存取及變更。 OData 會使用的實體-關聯性慣例[Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)將資源公開為依關聯性相關的實體集。
 
-WCF Data Services 會使用 OData 通訊協定來定址及更新資源。 如此一來，您可以從任何支援 OData 的用戶端存取這些服務。 OData 可讓您要求，並使用已知的傳輸格式將資料寫入資源： Atom，一組交換及更新資料的 XML，以及 JavaScript Object Notation (JSON) 的標準 AJAX 中廣泛使用的文字型資料交換格式應用程式。
+WCF Data Services 會使用 OData 通訊協定來定址及更新資源。 如此一來，您可以從任何支援 OData 的用戶端存取這些服務。 OData 可讓您要求，並使用已知的傳輸格式將資料寫入資源：Atom，一組交換及更新資料的 XML，以及 JavaScript Object Notation (JSON) 的標準 AJAX 應用程式中廣泛使用的文字型資料交換格式。
 
 WCF 資料服務可以公開為 OData 摘要，來自不同來源的資料。 Visual Studio tools 可讓您更輕鬆地使用 ADO.NET Entity Framework 資料模型建立 OData 為基礎的服務。 您也可以建立根據 common language runtime (CLR) 類別以及甚至是晚期繫結或不具類型資料的 OData 摘要。
 
@@ -50,9 +44,9 @@ WCF Data Services 也包含一組用戶端程式庫，一個用於一般.NET Fra
 
 -   [開放式資料通訊協定網站](https://go.microsoft.com/fwlink/?LinkID=184554)
 
--   [OData：SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+-   [OData:SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
--   [OData：常見問題集](https://go.microsoft.com/fwlink/?LinkId=185867)
+-   [OData:常見問題集](https://go.microsoft.com/fwlink/?LinkId=185867)
 
 我想觀看某些影片...
 
@@ -60,7 +54,7 @@ WCF Data Services 也包含一組用戶端程式庫，一個用於一般.NET Fra
 
 -   [WCF Data Services 開發人員視訊](https://go.microsoft.com/fwlink/?LinkId=220861)
 
--   [OData：開發人員網站](https://go.microsoft.com/fwlink/?LinkId=185866)
+-   [OData:開發人員網站](https://go.microsoft.com/fwlink/?LinkId=185866)
 
 我想要查看端對端範例...
 
@@ -68,7 +62,7 @@ WCF Data Services 也包含一組用戶端程式庫，一個用於一般.NET Fra
 
 -   [MSDN 範例庫上的其他 WCF Data Services 範例](https://go.microsoft.com/fwlink/?LinkId=220866)
 
--   [OData：SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+-   [OData:SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
 如何與 Visual Studio 整合？
 

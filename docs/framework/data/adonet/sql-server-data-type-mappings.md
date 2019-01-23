@@ -2,12 +2,12 @@
 title: SQL Server 資料類型對應
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: 9bc2747dff7b6f2bffdca4186519f2a36083e5f0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6a718421e7a9b77bcea6b0c4ad502e8335984e27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649532"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584947"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server 資料類型對應
 SQL Server 和 .NET Framework 是以不同的型別系統為基礎。 例如，.NET Framework <xref:System.Decimal> 結構的最大小數點位數為 28，而 SQL Server decimal 和 numeric 資料型別的最大小數點位數為 38。 為了在讀取和寫入資料時維持資料完整性，<xref:System.Data.SqlClient.SqlDataReader> 會公開 (Expose) SQL Server 特有的具型別存取子方法 (可傳回 <xref:System.Data.SqlTypes> 的物件) 以及存取子方法 (可傳回 .NET Framework 型別)。 SQL Server 型別和 .NET Framework 型別也會由 <xref:System.Data.DbType> 和 <xref:System.Data.SqlDbType> 類別 (Class) 中的列舉型別 (Enumeration) 表示，而且您可以在指定 <xref:System.Data.SqlClient.SqlParameter> 資料型別時使用這些類別。  
@@ -46,8 +46,8 @@ SQL Server 和 .NET Framework 是以不同的型別系統為基礎。 例如，.
 |tinyint|Byte|<xref:System.Data.SqlDbType.TinyInt>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlByte%2A>|<xref:System.Data.DbType.Byte>|<xref:System.Data.SqlClient.SqlDataReader.GetByte%2A>|  
 |uniqueidentifier|Guid|<xref:System.Data.SqlDbType.UniqueIdentifier>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlGuid%2A>|<xref:System.Data.DbType.Guid>|<xref:System.Data.SqlClient.SqlDataReader.GetGuid%2A>|  
 |varbinary|Byte[]|<xref:System.Data.SqlDbType.VarBinary>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
-|varchar|String<br /><br /> Char[]|<xref:System.Data.SqlDbType.VarChar>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiString>, <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
-|xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|無|  
+|varchar|String<br /><br /> Char[]|<xref:System.Data.SqlDbType.VarChar>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiString>、 <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
+|xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|none|  
   
 <sup>1</sup>無法設定`DbType`屬性`SqlParameter`至`SqlDbType.Date`。  
 <sup>2</sup>使用特定的具型別存取子，如果您知道的基礎型別`sql_variant`。  
@@ -56,9 +56,9 @@ SQL Server 和 .NET Framework 是以不同的型別系統為基礎。 例如，.
 
 如需 SQL Server 資料類型的詳細資訊，請參閱[資料類型 & Amp;#40;transact-SQL&AMP;#41;](/sql/t-sql/data-types/data-types-transact-sql)。
   
-## <a name="see-also"></a>另請參閱  
- [SQL Server 資料類型和 ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [SQL Server 二進位和大量數值資料](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [設定參數和參數資料類型](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [SQL Server 資料類型和 ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [SQL Server 二進位和大量數值資料](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
+- [設定參數和參數資料類型](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

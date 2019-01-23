@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fc0919a7c05bfcbfb4b54dd0b618564f019f3fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e9a3b0320ac0be785f0823afef1819ab8a35eb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585545"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType 列舉
-表示從進行的回呼類型[icordebugmanagedcallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。  
+表示一種從進行的回呼[ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,18 +42,18 @@ typedef enum CorDebugExceptionCallbackType {
 |成員|描述|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|擲回例外狀況。|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|例外狀況結束處理序輸入的使用者程式碼。|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|例外狀況結束程序發現`catch`中使用者程式碼區塊。|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|例外狀況結束處理序已輸入使用者程式碼。|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|結束例外狀況的處理序已找到`catch`中使用者程式碼區塊。|  
 |`DEBUG_EXCEPTION_UNHANDLED`|未處理例外狀況。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

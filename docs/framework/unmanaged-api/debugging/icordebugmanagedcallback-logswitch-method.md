@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d5284cf6072aa5c1c11cc83355a3e9fa5c96837
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4b8e0807cd03c7abfee0856d52cae0454b9f1a29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587787"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>ICorDebugManagedCallback::LogSwitch 方法
-告知偵錯工具中的通用語言執行平台 (CLR) managed 執行緒已呼叫方法<xref:System.Diagnostics.Switch>類別來建立、 修改或刪除偵錯/追蹤參數。  
+通用語言執行平台 (CLR) managed 執行緒已呼叫方法，偵錯工具會告知<xref:System.Diagnostics.Switch>類別來建立、 修改或刪除偵錯/追蹤參數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,28 +44,28 @@ HRESULT LogSwitch (
  [in]表示包含建立、 修改或刪除偵錯/追蹤切換的 managed 的執行緒的應用程式網域的 ICorDebugAppDomain 物件指標。  
   
  `pThread`  
- [in]表示 managed 的執行緒的 ICorDebugThread 物件指標。  
+ [in]ICorDebugThread 物件，表示 managed 的執行緒指標。  
   
  `lLevel`  
  [in]值，指出已寫入事件記錄檔的描述訊息的嚴重性層級。  
   
  `ulReason`  
- [in]值為[LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)切換偵錯/追蹤列舉，指出作業執行。  
+ [in]值為[LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)偵錯/追蹤交換器上的列舉，指出作業執行。  
   
  `pLogSwitchName`  
  [in]偵錯/追蹤參數的名稱指標。  
   
  `pParentName`  
- [in]偵錯/追蹤參數，因為父系的名稱指標。  
+ [in]偵錯/追蹤切換的父系名稱指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

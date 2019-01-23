@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: bc104c4f51ebc64154bd3d9b39ac2bca13b2fab1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587173"
 ---
 # <a name="specifying-client-run-time-behavior"></a>指定用戶端執行階段行為
-Windows Communication Foundation (WCF) 用戶端，如同 Windows Communication Foundation (WCF) 服務，可以設定以修改以符合用戶端應用程式的執行階段行為。 指定用戶端執行階段行為時有三個屬性可供使用。 雙工用戶端回呼物件可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 屬性來修改其執行階段行為。 而另一個屬性 <xref:System.ServiceModel.Description.ClientViaBehavior> 則可用來區隔邏輯目的和立即網路目的。 此外，雙工用戶端回呼類型也可使用一些服務端的行為。 如需詳細資訊，請參閱[指定服務執行階段行為](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。  
+Windows Communication Foundation (WCF) 用戶端，例如 Windows Communication Foundation (WCF) 服務，可以設定以修改以符合用戶端應用程式的執行階段行為。 指定用戶端執行階段行為時有三個屬性可供使用。 雙工用戶端回呼物件可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 屬性來修改其執行階段行為。 而另一個屬性 <xref:System.ServiceModel.Description.ClientViaBehavior> 則可用來區隔邏輯目的和立即網路目的。 此外，雙工用戶端回呼類型也可使用一些服務端的行為。 如需詳細資訊，請參閱 <<c0> [ 指定服務執行階段行為](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>使用 CallbackBehaviorAttribute  
  您可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 類別，即可設定或擴充用戶端應用程式中回呼合約實作的執行行為。 這個屬性對回呼類別執行的函式類似於 <xref:System.ServiceModel.ServiceBehaviorAttribute> 類別，而執行個體化行為和交易設定則為其例外。  
@@ -36,12 +36,12 @@ Windows Communication Foundation (WCF) 用戶端，如同 Windows Communication 
   
 -   您只能在受控制的偵錯狀況下這樣做。  
   
- 下列程式碼範例示範的用戶端組態檔，會指示 WCF managed 例外狀況資訊從用戶端回呼物件中傳回 SOAP 訊息中。  
+ 下列程式碼範例示範的用戶端會指示 WCF 在傳回 managed 例外狀況資訊從用戶端回呼物件的 SOAP 訊息中的組態檔。  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  
 ## <a name="using-the-clientviabehavior-behavior"></a>使用 ClientViaBehavior 行為  
  您可以使用 <xref:System.ServiceModel.Description.ClientViaBehavior> 行為，對應該建立的傳輸通道指定統一資源識別項。 當立即網路目的不是訊息的預期處理器時，請使用這個行為。 當呼叫應用程式不需要知道最終目的，或者目的 `Via` 標頭不是位址時，這個行為可啟用多重躍點交談。  
   
-## <a name="see-also"></a>另請參閱  
- [指定服務執行階段行為](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+## <a name="see-also"></a>另請參閱
+- [指定服務執行階段行為](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

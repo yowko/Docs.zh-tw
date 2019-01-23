@@ -1,16 +1,16 @@
 ---
-title: HOW TO：說明如何使用訊息活動建立工作流程服務。
+title: HOW TO：搭配訊息活動建立工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a90f525e23fcad0e46ebc378d22b8282e613643a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584973"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>HOW TO：說明如何使用訊息活動建立工作流程服務。
-本主題描述如何使用訊息活動建立簡單的工作流程服務。 本主題的重點在於建立工作流程服務的機制，而該服務主要包含的便是訊息活動。 在真實世界的服務中，工作流程包含許多其他活動。 服務會實作一項稱為 Echo 的作業，該作業會使用字串並將字串傳回呼叫端。 本主題即為兩個主題的第一個。 下一個主題[How To: 服務從工作流程應用程式存取](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)討論如何建立工作流程應用程式，可以呼叫此主題中所建立的服務。  
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>HOW TO：搭配訊息活動建立工作流程服務
+本主題描述如何使用訊息活動建立簡單的工作流程服務。 本主題的重點在於建立工作流程服務的機制，而該服務主要包含的便是訊息活動。 在真實世界的服務中，工作流程包含許多其他活動。 服務會實作一項稱為 Echo 的作業，該作業會使用字串並將字串傳回呼叫端。 本主題即為兩個主題的第一個。 下一個主題[How To:服務從工作流程應用程式存取](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)討論如何建立工作流程應用程式，可以呼叫此主題中所建立的服務。  
   
 ### <a name="to-create-a-workflow-service-project"></a>若要建立工作流程服務專案  
   
@@ -87,9 +87,9 @@ ms.locfileid: "48580418"
   
      ![WCF 說明頁面](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")  
   
-4.  繼續前往[How To: 服務從工作流程應用程式存取](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)主題，以建立工作流程用戶端可呼叫此服務。  
+4.  繼續前往[How To:服務從工作流程應用程式存取](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)主題，以建立工作流程用戶端可呼叫此服務。  
   
-## <a name="see-also"></a>另請參閱  
- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [裝載工作流程服務概觀](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
- [傳訊活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+## <a name="see-also"></a>另請參閱
+- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [裝載工作流程服務概觀](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [傳訊活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

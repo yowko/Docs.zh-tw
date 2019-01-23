@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 1b7d5aca6b2c992e4f1d6bdef2a687d1ff43bf71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34d49416bb7d0da60624a1f60e4dbd01a1dff9cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584541"
 ---
 # <a name="date-and-time-data"></a>日期和時間資料
 SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些新資料型別包括日期和時間的個別型別，以及具有較大範圍、精確度和時區感知的擴充資料型別。 從 .NET Framework 3.5 版 Service Pack (SP) 1 開始，.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 就會針對 SQL Server 2008 Database Engine 的所有新功能提供完整支援。 您必須安裝 .NET Framework 3.5 SP1 (或更新版本) 才能使用這些新功能搭配 SqlClient。  
@@ -88,7 +88,7 @@ SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些
   
 |屬性|描述|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|取得或設定值是否可為 Null。 將 Null 參數值傳送至伺服器時，必須指定 <xref:System.DBNull>，而不是 `null` (在 Visual Basic 中為 `Nothing`)。 如需資料庫 null 值的詳細資訊，請參閱[Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)。|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|取得或設定值是否可為 Null。 將 Null 參數值傳送至伺服器時，必須指定 <xref:System.DBNull>，而不是 `null` (在 Visual Basic 中為 `Nothing`)。 如需資料庫 null 值的詳細資訊，請參閱 [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)。|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|取得或設定用於表示此值的最大位數。 若為日期和時間資料型別，則會忽略這項設定。|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|取得或設定的值時間部分是解析的小數點位數`Time`， `DateTime2`，和`DateTimeOffset`。 預設值為 0，表示從此值推斷實際的小數點位數並傳送至伺服器。|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|若為日期和時間資料型別，則會忽略。|  
@@ -239,8 +239,8 @@ command.Parameters.AddWithValue( _
 |[使用日期和時間資料](https://go.microsoft.com/fwlink/?LinkId=98361)|提供有關日期和時間資料型別與函式的詳細資訊，以及使用這些項目的範例。|  
 |[資料類型 & Amp;#40;transact-SQL&AMP;#41](https://go.microsoft.com/fwlink/?LinkId=98362)|說明 SQL Server 2008 中的系統資料型別。|  
   
-## <a name="see-also"></a>另請參閱  
- [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

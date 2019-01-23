@@ -1,5 +1,5 @@
 ---
-title: 如何：傳送資料至作用中的 MDI 子系
+title: HOW TO：將資料傳送至作用中的 MDI 子系
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 301e8975f9b0b12275b51b2c7626e22412243b25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dab72d64cdd013125ae7c302ccf297ecdc0c98b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523181"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589879"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a>如何：傳送資料至作用中的 MDI 子系
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>HOW TO：將資料傳送至作用中的 MDI 子系
 內容中，通常[多重文件介面 (MDI) 應用程式](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)，您必須將資料傳送至作用中的子視窗，例如當使用者將資料從剪貼簿貼到 MDI 應用程式。  
   
 > [!NOTE]
->  正在驗證哪一個子視窗有焦點，並將其內容傳送到剪貼簿的相關資訊，請參閱[決定作用中 MDI 子](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)。  
+>  正在驗證哪一個子視窗有焦點，並將其內容傳送到剪貼簿的相關資訊，請參閱[判斷使用中的 MDI 子系](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)。  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>將資料傳送至作用中的 MDI 子視窗，從剪貼簿  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>若要將資料傳送至作用中的 MDI 子視窗中，從剪貼簿  
   
-1.  在方法中，將複製到作用中子表單的作用中控制項的剪貼簿上的文字。  
+1.  在方法中，將文字複製到剪貼簿上到作用中的子表單的作用中的控制項。  
   
     > [!NOTE]
-    >  這個範例假設有 MDI 父表單 (`Form1`) 具有一個或多個 MDI 子視窗包含<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱[建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)。  
+    >  這個範例假設沒有 MDI 父表單 (`Form1`)，其包含的一或多個 MDI 子視窗<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱 <<c0> [ 建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)。  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -91,9 +91,9 @@ ms.locfileid: "33523181"
     }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [多重文件介面 (MDI) 應用程式](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
- [操作說明：建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [操作說明：建立 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [操作說明：決定作用中的 MDI 子系](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
- [操作說明：安排 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a>另請參閱
+- [多重文件介面 (MDI) 應用程式](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
+- [如何：建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
+- [如何：建立 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
+- [如何：決定作用中的 MDI 子系](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
+- [如何：排列 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

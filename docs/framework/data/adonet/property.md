@@ -2,18 +2,18 @@
 title: 屬性
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: 2476aef13da6424d0d8c58bdd1e37a72df29d8a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc8f890479e195f1e6ef847219a74f165c722fd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589421"
 ---
 # <a name="property"></a>屬性
-*屬性*是基本建置組塊的[實體類型](../../../../docs/framework/data/adonet/entity-type.md)和[複雜型別](../../../../docs/framework/data/adonet/complex-type.md)。 屬性可定義實體類型執行個體或複雜類型執行個體將包含的資料圖案和特性。 概念模型中的屬性類似類別中定義的屬性。 如同類別上的屬性可定義類別的圖形並包含關於物件的資訊，概念模型的屬性可定義實體類別的圖形，並包含關於實體類型執行個體的資訊。  
+*屬性*是基本建置組塊[實體類型](../../../../docs/framework/data/adonet/entity-type.md)並[複雜型別](../../../../docs/framework/data/adonet/complex-type.md)。 屬性可定義實體類型執行個體或複雜類型執行個體將包含的資料圖案和特性。 概念模型中的屬性類似類別中定義的屬性。 如同類別上的屬性可定義類別的圖形並包含關於物件的資訊，概念模型的屬性可定義實體類別的圖形，並包含關於實體類型執行個體的資訊。  
   
 > [!NOTE]
->  如本章所述，屬性與導覽屬性不同。 如需詳細資訊，請參閱[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)。  
+>  如本章所述，屬性與導覽屬性不同。 如需詳細資訊，請參閱 <<c0> [ 導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)。  
   
  屬性定義包含下列資訊：  
   
@@ -23,13 +23,13 @@ ms.locfileid: "33353363"
   
 -   一組[facet](../../../../docs/framework/data/adonet/facet.md)。 (選擇項)  
   
- 屬性可以包含基底資料 (例如字串、整數或布林值) 或結構化資料 (例如複雜類型)。 屬於基本型別的屬性亦稱為純量屬性。 如需詳細資訊，請參閱[實體資料模型： 基本資料型別](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。  
+ 屬性可以包含基底資料 (例如字串、整數或布林值) 或結構化資料 (例如複雜類型)。 屬於基本型別的屬性亦稱為純量屬性。 如需詳細資訊，請參閱[實體資料模型：基本資料型別](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。  
   
 > [!NOTE]
 >  複雜類型本身可以包含複雜類型的屬性。  
   
 ## <a name="example"></a>範例  
- 下圖顯示包含三種實體類型 (`Book`、`Publisher` 和 `Author`) 的概念模型。 雖然圖中並提供每個屬性的型別資訊，但每個實體類型均具有數個屬性。 屬性都[實體索引鍵](../../../../docs/framework/data/adonet/entity-key.md)皆加註 （索引鍵）。  
+ 下圖顯示包含三種實體類型 (`Book`、`Publisher` 和 `Author`) 的概念模型。 雖然圖中並提供每個屬性的型別資訊，但每個實體類型均具有數個屬性。 屬性[實體索引鍵](../../../../docs/framework/data/adonet/entity-key.md)皆加註 （索引鍵）。  
   
  ![範例模型](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
   
@@ -41,6 +41,6 @@ ms.locfileid: "33353363"
   
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   
-## <a name="see-also"></a>另請參閱  
- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>另請參閱
+- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

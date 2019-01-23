@@ -1,5 +1,5 @@
 ---
-title: 如何：定義服務作業 (WCF 資料服務)
+title: HOW TO：定義服務作業 (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: 7d40011e701525912c4406d1ab35712ee21009da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fffc0efaea200a7b0aa26b0f273b3c0d99338bfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586549"
 ---
-# <a name="how-to-define-a-service-operation-wcf-data-services"></a>如何：定義服務作業 (WCF 資料服務)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會將伺服器上定義的方法公開為服務作業。 服務作業可讓資料服務，以提供透過 URI 在伺服器上定義的方法存取。 若要定義服務作業，請套用 [`WebGet]`或`[WebInvoke]`屬性加入方法。 若要支援查詢運算子，服務作業必須傳回<xref:System.Linq.IQueryable%601>執行個體。 服務作業可以透過 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 上的 <xref:System.Data.Services.DataService%601> 屬性存取基礎資料資源。 如需詳細資訊，請參閱[服務作業](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。  
+# <a name="how-to-define-a-service-operation-wcf-data-services"></a>HOW TO：定義服務作業 (WCF Data Services)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會將伺服器上定義的方法公開為服務作業。 服務作業可讓資料服務，以提供存取權，透過伺服器上定義之方法的 URI。 若要定義服務作業，將套用 [`WebGet]`或`[WebInvoke]`屬性加入方法。 若要支援查詢運算子，服務作業必須傳回<xref:System.Linq.IQueryable%601>執行個體。 服務作業可以透過 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 上的 <xref:System.Data.Services.DataService%601> 屬性存取基礎資料資源。 如需詳細資訊，請參閱 <<c0> [ 服務作業](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。  
   
  本主題的範例定義名為 `GetOrdersByCity` 的服務作業，此服務作業會針對 <xref:System.Linq.IQueryable%601> 執行個體傳回篩選過的 `Orders`，以及相關的 `Order_Details` 物件。 此範例存取的 <xref:System.Data.Objects.ObjectContext> 執行個體為 Northwind 範例資料服務的資料來源。 當您完成時，此服務會建立[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
   
@@ -53,5 +53,5 @@ ms.locfileid: "33360879"
  [!code-csharp[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperation)]
  [!code-vb[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperation)]  
   
-## <a name="see-also"></a>另請參閱  
- [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+## <a name="see-also"></a>另請參閱
+- [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

@@ -2,12 +2,12 @@
 title: 設定您的應用程式
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-ms.openlocfilehash: e9a5429ef573fdee9478b63b76d2da8005215c93
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 39d8c73809b8c2695ccebb1d69d1c016fd2313d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584632"
 ---
 # <a name="configuring-your-application"></a>設定您的應用程式
 Windows Communication Foundation (WCF) 會使用.NET 組態系統，並可讓您設定電腦和應用程式範圍的服務。  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) 會使用.NET 組態系統，並可讓您
 > [!NOTE]
 >  如果您以滑鼠右鍵按一下它在編輯 Visual Studio 中的 WCF Web 服務專案的組態檔**方案總管**，注意**編輯 WCF 組態**操作功能表項目遺漏。 若要解決這個問題，請按一下**工具**功能表，然後選擇**WCF 服務組態編輯器**。 在那之後，您可以以滑鼠右鍵按一下 設定檔，並使用**編輯 WCF 組態**操作功能表項目。  
   
-## <a name="see-also"></a>另請參閱  
- [設定編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
- [設定服務](../../../../docs/framework/wcf/configuring-services.md)  
- [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)
+## <a name="see-also"></a>另請參閱
+- [設定編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [設定服務](../../../../docs/framework/wcf/configuring-services.md)
+- [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)

@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 36370eb54e75df9bf2bf8eb9e073bbbee995e287
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 7a7a8cc13a48b453b157443039f11c548756b0fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588648"
 ---
 # <a name="dependency-properties-overview"></a>相依性屬性概觀
 
 Windows Presentation Foundation (WPF) 提供一組可用來擴充類型的[屬性](../../../standard/base-types/common-type-system.md#Properties)功能之服務。 整體而言，這些服務通常稱為 WPF 屬性系統。 受到 WPF 屬性系統支援的屬性則稱為相依性屬性。 本概觀描述 WPF 屬性系統和相依性屬性的功能。 這包括如何在 XAML 和程式碼中使用現有的相依性屬性。 本概觀也介紹相依性屬性的特製化層面，例如相依性屬性中繼資料，以及如何在自訂類別中建立您自己的相依性屬性。
 
 ## <a name="prerequisites"></a>必要條件
-本主題假設您對 NET 類型系統和物件導向程式設計有基本的認識。 為了遵循本主題中的範例，您也應該了解 XAML 並知道如何撰寫 WPF 應用程式。 如需詳細資訊，請參閱[逐步解說︰我的第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
+本主題假設您對 NET 類型系統和物件導向程式設計有基本的認識。 為了遵循本主題中的範例，您也應該了解 XAML 並知道如何撰寫 WPF 應用程式。 如需詳細資訊，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
 ## <a name="dependency-properties-and-clr-properties"></a>相依性屬性與 CLR 屬性
  在 WPF 中，屬性通常會公開為標準 .NET [屬性](../../../standard/base-types/common-type-system.md#Properties)。 在基本層級，您可以和這些屬性直接互動，永遠不知道它們會實作為相依性屬性。 但您應該要熟悉 WPF 屬性系統的部分或全部功能，以便可以利用這些功能。
@@ -40,11 +40,11 @@ Windows Presentation Foundation (WPF) 提供一組可用來擴充類型的[屬�
 
 以下列出與相依性屬性搭配使用的術語：
 
-- **相依性屬性：** 由 <xref:System.Windows.DependencyProperty> 支援的屬性。
+- **相依性屬性：** 此屬性，做為後盾<xref:System.Windows.DependencyProperty>。
 
-- **相依性屬性識別碼︰** 是一個 <xref:System.Windows.DependencyProperty> 執行個體，在登錄相依性屬性時當成傳回值取得，然後儲存為類別的靜態成員。 此識別碼用為與 WPF 屬性系統互動的多個 API 參數。
+- **相依性屬性識別項：** A<xref:System.Windows.DependencyProperty>執行個體，這是註冊的相依性屬性時，取得做為傳回值，然後儲存為類別的靜態成員。 此識別碼用為與 WPF 屬性系統互動的多個 API 參數。
 
-- **CLR「包裝函式」：** 實際取得及設定屬性的實作。 這些實作透過在 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 呼叫中使用相依性屬性識別碼，為使用 WPF 屬性系統的屬性提供支援。
+- **CLR 「 包裝函式 」:** 實際取得及設定屬性的實作。 這些實作透過在 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 呼叫中使用相依性屬性識別碼，為使用 WPF 屬性系統的屬性提供支援。
 
 下例定義 `IsSpinning` 相依性屬性，並向其支援的屬性顯示 <xref:System.Windows.DependencyProperty> 識別碼關聯性。
 
@@ -197,7 +197,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 - 相依性屬性通常應該視為公用屬性，任何可存取執行個體的呼叫端皆可存取或至少可探索它們。 如需詳細資訊，請參閱[相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)。
 
 ## <a name="see-also"></a>另請參閱
- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [唯讀相依性屬性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [WPF 架構](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [唯讀相依性屬性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
+- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [WPF 架構](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

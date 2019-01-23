@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: d56c405fe9c46fcebaad8e5b217f44d709dc8db8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a96ff1b588bd86ee3c391ea37b7ca5724db5e650
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589882"
 ---
 # <a name="default-nettcpbinding"></a>預設 NetTcpBinding
 此範例示範如何使用 <xref:System.ServiceModel.NetTcpBinding> 繫結。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。 在此範例中，服務會自我裝載。 用戶端和服務都是主控台應用程式。  

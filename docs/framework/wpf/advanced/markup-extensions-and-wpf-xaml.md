@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 907d5dcaae8f6e09902c2b3548d5ba8ac9a2b077
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 1726ce0798f2511ee2e7d910ee5f6a0f30f9a282
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585639"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>標記延伸和 WPF XAML
 本主題介紹 XAML 標記延伸模組概念，包括其語法規則、用途，以及其根據的類別物件模型。 標記延伸模組是 XAML 語言的一般功能，以及 XAML 服務之 .NET 實作的一般功能。 本主題會具體詳述 WPF XAML 中所使用的標記延伸模組。  
@@ -40,7 +40,7 @@ ms.locfileid: "35251164"
   
 <a name="XAML_Defined_Markup_Extensions"></a>   
 ## <a name="xaml-defined-markup-extensions"></a>已定義 XAML 的標記延伸  
- 數個標記延伸模組不是 XAML 的 WPF 實作所特有，而是作為語言之 XAML 的內建功能或功能實作。 這些標記延伸模組在 System.Xaml 組件中實作為一般 .NET Framework XAML 服務的一部分，並且位在 XAML 語言 XAML 命名空間內。 根據常見標記用法，這些標記延伸模組通常可以透過用法中的 `x:` 前置詞進行識別。 <xref:System.Windows.Markup.MarkupExtension> （也定義於 System.Xaml 中） 的基底類別提供為了支援 XAML 讀取器和 XAML 寫入器，包括 WPF XAML 中應該使用的所有標記延伸的模式。  
+ 數個標記延伸模組不是 XAML 的 WPF 實作所特有，而是作為語言之 XAML 的內建功能或功能實作。 這些標記延伸模組在 System.Xaml 組件中實作為一般 .NET Framework XAML 服務的一部分，並且位在 XAML 語言 XAML 命名空間內。 根據常見標記用法，這些標記延伸模組通常可以透過用法中的 `x:` 前置詞進行識別。 <xref:System.Windows.Markup.MarkupExtension>基底類別 （也定義於 System.Xaml） 提供應該使用的所有標記延伸，以便支援 XAML 讀取器和 XAML 寫入器，包括 WPF XAML 中的模式。  
   
 -   `x:Type` 提供具名類型的 <xref:System.Type> 物件。 這項工具最常用於樣式和範本。 如需詳細資訊，請參閱 [x:Type 標記延伸模組](../../../../docs/framework/xaml-services/x-type-markup-extension.md)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "35251164"
 -   如果故意不使用 WPF 基底項目和控制項模型所提供的集合支援，則 `x:Array` 支援使用 XAML 語法來建立一般陣列。 如需詳細資訊，請參閱 [x:Array 標記延伸模組](../../../../docs/framework/xaml-services/x-array-markup-extension.md)。  
   
 > [!NOTE]
->  `x:` 前置詞用於 XAML 檔案或生產的根項目中 XAML 語言內建功能的一般 XAML 命名空間對應。 例如，WPF 應用程式的 Visual Studio 範本起始 XAML 檔案，使用這個`x:`對應。 您可以選擇專屬 XAML 命名空間對應中的不同前置詞語彙基元，但是這份文件將假設使用預設 `x:` 對應來識別這些是 XAML 語言 XAML 命名空間之已定義部分的實體，而非與特定架構無關的 WPF 預設命名空間或其他 XML 命名空間。  
+>  `x:` 前置詞用於 XAML 檔案或生產的根項目中 XAML 語言內建功能的一般 XAML 命名空間對應。 比方說，WPF 應用程式的 Visual Studio 範本會起始 XAML 檔案使用此`x:`對應。 您可以選擇專屬 XAML 命名空間對應中的不同前置詞語彙基元，但是這份文件將假設使用預設 `x:` 對應來識別這些是 XAML 語言 XAML 命名空間之已定義部分的實體，而非與特定架構無關的 WPF 預設命名空間或其他 XML 命名空間。  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>WPF 特定標記延伸模組  
@@ -63,7 +63,7 @@ ms.locfileid: "35251164"
   
 -   `Binding` 使用在執行階段套用至父物件的資料內容，來提供屬性的資料繫結值。 此標記延伸模組啟用用於指定資料繫結的重大內嵌語法，因此相當複雜。 如需詳細資訊，請參閱[Binding 標記延伸模組](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)。  
   
--   `RelativeSource` 提供的來源資訊<xref:System.Windows.Data.Binding>，可以瀏覽數個可能的關聯性在執行階段物件樹狀目錄中。 這會提供在多用途範本中所建立或使用程式碼所建立之繫結的特殊化來源，而不需要完全了解周圍物件樹狀結構。 如需詳細資訊，請參閱 [RelativeSource 標記延伸模組](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)。  
+-   `RelativeSource` 提供來源資訊<xref:System.Windows.Data.Binding>，可以瀏覽數個可能的關聯性，在執行階段物件樹狀目錄中。 這會提供在多用途範本中所建立或使用程式碼所建立之繫結的特殊化來源，而不需要完全了解周圍物件樹狀結構。 如需詳細資訊，請參閱 [RelativeSource 標記延伸模組](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)。  
   
 -   `TemplateBinding` 可讓控制項範本使用範本屬性的值，而範本屬性來自將使用範本之類別的物件模型定義屬性。 換句話說，範本定義內的屬性可以存取只在套用範本後存在的內容。 如需詳細資訊，請參閱 [TemplateBinding 標記延伸模組](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)。 如需 `TemplateBinding` 實際使用的詳細資訊，請參閱 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (使用 ControlTemplates 設定樣式範例)。  
   
@@ -73,13 +73,13 @@ ms.locfileid: "35251164"
   
 <a name="StarExtension"></a>   
 ## <a name="extension-classes"></a>*延伸模組類別  
- 針對一般 XAML 語言和 WPF 專屬的標記延伸模組，透過是 XAML 處理器識別的每個標記延伸行為`*Extension`類別衍生自<xref:System.Windows.Markup.MarkupExtension>，並提供的實作<xref:System.Windows.Markup.StaticExtension.ProvideValue%2A>方法。 每個延伸模組上的這個方法提供在評估標記延伸模組時所傳回的物件。 所傳回的物件一般是根據傳遞至標記延伸模組的各種字串語彙基元所評估。  
+ 針對一般 XAML 語言和 WPF 特定標記延伸模組，透過 XAML 處理器識別每個標記延伸模組的行為`*Extension`類別衍生自<xref:System.Windows.Markup.MarkupExtension>，並提供實作<xref:System.Windows.Markup.StaticExtension.ProvideValue%2A>方法。 每個延伸模組上的這個方法提供在評估標記延伸模組時所傳回的物件。 所傳回的物件一般是根據傳遞至標記延伸模組的各種字串語彙基元所評估。  
   
- 例如，<xref:System.Windows.StaticResourceExtension>類別會提供實際的資源查閱介面實作，讓其<xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>實作會傳回要求時，輸入要用於字串該特定實作的物件查閱的資源，由其`x:Key`。 如果您要使用現有的標記延伸模組，則此實作詳細資料大部分不重要。  
+ 例如，<xref:System.Windows.StaticResourceExtension>類別提供實際資源查閱的介面實作，讓其<xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>實作會傳回要求時，輸入該特定實作要用於字串的物件查詢的資源及其`x:Key`。 如果您要使用現有的標記延伸模組，則此實作詳細資料大部分不重要。  
   
  某些標記延伸模組未使用字串語彙基元引數。 這是因為它們會傳回靜態或一致值，或利用透過 `serviceProvider` 參數所傳遞的其中一個服務可以取得應該傳回值的內容。  
   
- `*Extension` 命名模式是基於方便性和一致性。 XAML 處理器將該類別識別為標記延伸模組支援，則不需要它。 只要程式碼基底包含 System.Xaml，並使用.NET Framework XAML 服務實作中，所有的才能辨識為 XAML 標記延伸是衍生自<xref:System.Windows.Markup.MarkupExtension>並支援建構語法。 WPF 定義標記延伸模組啟用類別，請勿遵循`*Extension`命名模式，例如<xref:System.Windows.Data.Binding>。 通常這是因為此類別支援純標記延伸模組支援以外的案例。 如果是<xref:System.Windows.Data.Binding>，類別支援執行階段存取方法和物件的屬性，針對使用 XAML 無關的案例。  
+ `*Extension` 命名模式是基於方便性和一致性。 XAML 處理器將該類別識別為標記延伸模組支援，則不需要它。 只要程式碼基底包括 System.Xaml，並使用.NET Framework XAML 服務實作，只是為了辨識為 XAML 標記延伸是衍生自<xref:System.Windows.Markup.MarkupExtension>以及支援建構語法。 WPF 定義標記延伸模組啟用類別，不會遵守`*Extension`命名模式，例如<xref:System.Windows.Data.Binding>。 通常這是因為此類別支援純標記延伸模組支援以外的案例。 如果是<xref:System.Windows.Data.Binding>，類別支援執行階段存取方法和物件的屬性，沒有與 XAML 的案例。  
   
 ### <a name="extension-class-interpretation-of-initialization-text"></a>初始化文字的延伸模組類別解譯  
  XAML 處理器會使用下列其中一種方式來解譯位在標記延伸模組名稱後面而且仍在大括弧內的字串語彙基元：  
@@ -89,17 +89,17 @@ ms.locfileid: "35251164"
 -   如果個別分隔的語彙基元未包含任何等號，則會將每個語彙基元視為建構函式引數。 每個建構函式參數都必須指定為該簽章所預期的類型，並且為該簽章所預期的適當順序。  
   
     > [!NOTE]
-    >  XAML 處理器必須呼叫建構函式，以與配對數目的引數計數相符。 基於這個理由，如果您實作自訂標記延伸時，不會提供多個建構函式具有相同的引數計數。 有多個具有相同參數計數的標記延伸模組建構函式路徑時，未定義 XAML 處理器運作方式的行為，但您應該預期在標記延伸模組類型定義發生此情況時，允許 XAML 處理器擲回用法例外狀況。  
+    >  XAML 處理器必須呼叫建構函式，以與配對數目的引數計數相符。 基於這個理由，如果您要實作自訂標記延伸，不會提供多個建構函式具有相同的引數計數。 有多個具有相同參數計數的標記延伸模組建構函式路徑時，未定義 XAML 處理器運作方式的行為，但您應該預期在標記延伸模組類型定義發生此情況時，允許 XAML 處理器擲回用法例外狀況。  
   
 -   如果個別的分隔語彙基元包含等號，則 XAML 處理器會先呼叫標記延伸模組的預設建構函式。 則每個「名稱=值」配對都會解譯為標記延伸模組上的屬性名稱，以及要指派給該屬性的值。  
   
--   如果建構函式行為與標記延伸模組中的屬性設定行為之間有平行結果，則所使用的行為就不重要。 如果只因為可讓您的標記更具意圖，而且您較不可能意外轉置建構函式參數，則較常見用法是使用有多個可設定屬性之標記延伸模組的「屬性」`=`「值」 (當您指定「屬性=值」配對時，這些屬性可能是任意順序)。另外，不保證標記延伸模組提供可設定所有其可設定屬性的建構函式參數。 例如，<xref:System.Windows.Data.Binding>是具有許多屬性都可透過 擴充功能中設定的標記延伸，*屬性*`=`*值*表單，但<xref:System.Windows.Data.Binding>只支援兩個建構函式： 預設建構函式，以及設定初始路徑。  
+-   如果建構函式行為與標記延伸模組中的屬性設定行為之間有平行結果，則所使用的行為就不重要。 如果只因為可讓您的標記更具意圖，而且您較不可能意外轉置建構函式參數，則較常見用法是使用有多個可設定屬性之標記延伸模組的「屬性」`=`「值」 (當您指定「屬性=值」配對時，這些屬性可能是任意順序)。另外，不保證標記延伸模組提供可設定所有其可設定屬性的建構函式參數。 例如，<xref:System.Windows.Data.Binding>是標記延伸，可透過延伸模組中的許多屬性*屬性*`=`*值*表單中，但<xref:System.Windows.Data.Binding>只支援兩個建構函式： 預設建構函式，以及設定初始路徑。  
   
 -   必須逸出，才能將常值逗號傳遞給標記延伸模組。  
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>逸出序列和標記延伸模組  
- XAML 處理器中的屬性處理使用大括號作為標記延伸模組序列的指標。 此外，必要時，也可能產生常值大括號字元屬性值，方法是使用後接常值大括號的空大括號配對來輸入逸出序列。 請參閱[{}逸出序列的標記延伸](../../xaml-services/escape-sequence-markup-extension.md)。  
+ XAML 處理器中的屬性處理使用大括號作為標記延伸模組序列的指標。 此外，必要時，也可能產生常值大括號字元屬性值，方法是使用後接常值大括號的空大括號配對來輸入逸出序列。 請參閱[{}逸出序列-標記延伸](../../xaml-services/escape-sequence-markup-extension.md)。  
   
 <a name="Nesting"></a>   
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>XAML 用法中的巢狀標記延伸模組  
@@ -115,13 +115,13 @@ ms.locfileid: "35251164"
 ## <a name="markup-extensions-and-property-element-syntax"></a>標記延伸模組和屬性項目語法  
  用作填入屬性項目值的物件項目時，無法從可在 XAML 中使用的一般類型支援物件項目來透過視覺方式區別標記延伸模組類別。 一般物件項目與標記延伸模組的實際差異，在於標記延伸模組會評估為類型值或延後為運算式。 因此，標記延伸模組之屬性值的任何可能類型錯誤的機制會不同，就像其他程式設計模型中處理晚期繫結屬性的方式一樣。 將會針對剖析 XAML 時所設定的目標屬性，評估一般物件項目的類型是否相符。  
   
- 用於物件項目語法以填入屬性項目時，大部分標記延伸模組內不會有內容或任何進一步屬性項目語法。 因此，您可以關閉物件項目標記，且不提供任何子項目。 只要 XAML 處理器遇到任何物件項目時，就會呼叫該類別的建構函式，以具現化從剖析的項目所建立的物件。 標記延伸模組類別並無不同︰如果您想要標記延伸模組可用於物件項目語法，則必須提供預設建構函式。 某些現有標記延伸模組有至少一個必要屬性值，而且必須指定一個必要屬性值才能進行有效初始化。 如果是這樣，該屬性值一般會指定為物件項目上屬性 (property) 的屬性 (attribute)。 在 [XAML 命名空間 (x:) 語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)和 [WPF XAML 延伸功能](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)參考頁面中，將會標註具有必要屬性 (和必要屬性的名稱) 的延伸模組。 參考頁面也會標註是否不允許特定標記延伸模組的物件項目語法或屬性語法。 值得注意的案例是 [x:Array 標記延伸模組](../../../../docs/framework/xaml-services/x-array-markup-extension.md)，這無法支援屬性語法，因為必須在標記內將該陣列的內容指定為內容。 陣列內容會當成一般物件處理；因此，沒有屬性的預設類型轉換子是可行的。 此外，[x:Array 標記延伸模組](../../../../docs/framework/xaml-services/x-array-markup-extension.md)需要 `type` 參數。  
+ 用於物件項目語法以填入屬性項目時，大部分標記延伸模組內不會有內容或任何進一步屬性項目語法。 因此，您可以關閉物件項目標記，且不提供任何子項目。 只要 XAML 處理器遇到任何物件項目時，就會呼叫該類別的建構函式，以具現化從剖析的項目所建立的物件。 標記延伸模組類別並無不同︰如果您想要標記延伸模組可用於物件項目語法，則必須提供預設建構函式。 某些現有標記延伸模組有至少一個必要屬性值，而且必須指定一個必要屬性值才能進行有效初始化。 如果是這樣，該屬性值一般會指定為物件項目上屬性 (property) 的屬性 (attribute)。 在  [XAML 命名空間 （x:）語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)並[WPF XAML 擴充功能](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)參考頁面中，有必要的屬性 （和必要屬性的名稱） 的延伸模組會註明的標記。 參考頁面也會標註是否不允許特定標記延伸模組的物件項目語法或屬性語法。 值得注意的案例是 [x:Array 標記延伸模組](../../../../docs/framework/xaml-services/x-array-markup-extension.md)，這無法支援屬性語法，因為必須在標記內將該陣列的內容指定為內容。 陣列內容會當成一般物件處理；因此，沒有屬性的預設類型轉換子是可行的。 此外，[x:Array 標記延伸模組](../../../../docs/framework/xaml-services/x-array-markup-extension.md)需要 `type` 參數。  
   
-## <a name="see-also"></a>另請參閱  
- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XAML 命名空間 (x:) 語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [WPF XAML 延伸](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [Binding 標記延伸](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
- [DynamicResource 標記延伸](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
- [x:Type 標記延伸模組](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+## <a name="see-also"></a>另請參閱
+- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XAML 命名空間 （x:）語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)
+- [WPF XAML 延伸](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)
+- [StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+- [Binding 標記延伸](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+- [DynamicResource 標記延伸](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+- [x:Type 標記延伸模組](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
