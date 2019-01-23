@@ -59,7 +59,7 @@ ms.locfileid: "53150741"
 
    2. 底下**已安裝**分類中，展開**視覺化C#** 或**Visual Basic**節點，，然後選取**Windows 桌面**。
 
-   3. 選取  **WPF 應用程式 (.NET Framework)** 範本。 輸入名稱**`ExpenseIt`** ，然後選取**確定**。
+   3. 選取  **WPF 應用程式 (.NET Framework)** 範本。 輸入名稱 **`ExpenseIt`** ，然後選取**確定**。
 
       ![與所選的 WPF 應用程式的 [新增專案] 對話方塊](media/new-project-dialog.png)
 
@@ -134,7 +134,7 @@ ms.locfileid: "53150741"
 
 1. 將新的 WPF 頁面新增至專案，並將它命名 *`ExpenseItHome.xaml`* :
 
-   1. 在 [**方案總管] 中**，以滑鼠右鍵按一下**`ExpenseIt`** 專案節點，然後選擇**新增** > **頁面**。
+   1. 在 [**方案總管] 中**，以滑鼠右鍵按一下 **`ExpenseIt`** 專案節點，然後選擇**新增** > **頁面**。
 
    1. 在 [**加入新項目**] 對話方塊中，**頁面 (WPF)** 已選取範本。 輸入名稱 **`ExpenseItHome`** ，然後選取**新增**。
 
@@ -331,7 +331,7 @@ ms.locfileid: "53150741"
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
-3. 開啟*`ExpenseItHome.xaml.vb`* 或是*`ExpenseItHome.xaml.cs`*。
+3. 開啟 *`ExpenseItHome.xaml.vb`* 或是 *`ExpenseItHome.xaml.cs`* 。
 
 4. 將下列程式碼加入`ExpenseItHome`類別加入的按鈕 click 事件處理常式。 事件處理常式會開啟**ExpenseReportPage**頁面。
 
@@ -348,7 +348,7 @@ ms.locfileid: "53150741"
 
     [!code-xaml[ExpenseIt#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseReportPage.xaml#17)]
 
-    此 UI 很類似*`ExpenseItHome.xaml`*，但報表資料會顯示在<xref:System.Windows.Controls.DataGrid>。
+    此 UI 很類似 *`ExpenseItHome.xaml`* ，但報表資料會顯示在<xref:System.Windows.Controls.DataGrid>。
 
 3. 建置並執行應用程式。
 
