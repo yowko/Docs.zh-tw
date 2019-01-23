@@ -1,5 +1,5 @@
 ---
-title: 如何：使用修飾詞和 GenerateMember 屬性
+title: HOW TO：使用修飾詞和 GenerateMember 屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,40 +15,40 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 9bb6e6568822f3edcabf50a4fceb7cc6386f05ef
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 890290d75c6690f467e565a3d75a4b75102d7875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558380"
 ---
-# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a><span data-ttu-id="70113-102">如何：使用修飾詞和 GenerateMember 屬性</span><span class="sxs-lookup"><span data-stu-id="70113-102">How to: Use the Modifiers and GenerateMember Properties</span></span>
-<span data-ttu-id="70113-103">當您將元件放在 Windows Form 上時，在設計環境所提供兩個屬性：`GenerateMember`和`Modifiers`。</span><span class="sxs-lookup"><span data-stu-id="70113-103">When you place a component on a Windows Form, two properties are provided by the design environment: `GenerateMember` and `Modifiers`.</span></span> <span data-ttu-id="70113-104">`GenerateMember`屬性會指定當 Windows Form 設計工具產生元件的成員變數。</span><span class="sxs-lookup"><span data-stu-id="70113-104">The `GenerateMember` property specifies when the Windows Forms Designer generates a member variable for a component.</span></span> <span data-ttu-id="70113-105">`Modifiers`屬性是指派給該成員變數的存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="70113-105">The `Modifiers` property is the access modifier assigned to that member variable.</span></span> <span data-ttu-id="70113-106">如果值`GenerateMember`屬性是`false`，值`Modifiers`屬性沒有任何作用。</span><span class="sxs-lookup"><span data-stu-id="70113-106">If the value of the `GenerateMember` property is `false`, the value of the `Modifiers` property has no effect.</span></span>  
+# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a><span data-ttu-id="deb7a-102">HOW TO：使用修飾詞和 GenerateMember 屬性</span><span class="sxs-lookup"><span data-stu-id="deb7a-102">How to: Use the Modifiers and GenerateMember Properties</span></span>
+<span data-ttu-id="deb7a-103">當您將元件放在 Windows Form 上時，在設計環境所提供兩個屬性：`GenerateMember`和`Modifiers`。</span><span class="sxs-lookup"><span data-stu-id="deb7a-103">When you place a component on a Windows Form, two properties are provided by the design environment: `GenerateMember` and `Modifiers`.</span></span> <span data-ttu-id="deb7a-104">`GenerateMember`屬性會指定當 Windows Form 設計工具產生元件的成員變數。</span><span class="sxs-lookup"><span data-stu-id="deb7a-104">The `GenerateMember` property specifies when the Windows Forms Designer generates a member variable for a component.</span></span> <span data-ttu-id="deb7a-105">`Modifiers`屬性是指派給該成員變數的存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="deb7a-105">The `Modifiers` property is the access modifier assigned to that member variable.</span></span> <span data-ttu-id="deb7a-106">如果值`GenerateMember`屬性是`false`，值`Modifiers`屬性沒有任何作用。</span><span class="sxs-lookup"><span data-stu-id="deb7a-106">If the value of the `GenerateMember` property is `false`, the value of the `Modifiers` property has no effect.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="70113-107">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="70113-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="70113-108">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="70113-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="70113-109">如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="70113-109">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="deb7a-107">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="deb7a-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="deb7a-108">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="deb7a-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="deb7a-109">如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="deb7a-109">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a><span data-ttu-id="70113-110">若要指定元件是否為表單的成員</span><span class="sxs-lookup"><span data-stu-id="70113-110">To specify whether a component is a member of the form</span></span>  
+### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a><span data-ttu-id="deb7a-110">若要指定元件是否為表單的成員</span><span class="sxs-lookup"><span data-stu-id="deb7a-110">To specify whether a component is a member of the form</span></span>  
   
-1.  <span data-ttu-id="70113-111">在 Windows Form 設計工具中，開啟您的表單。</span><span class="sxs-lookup"><span data-stu-id="70113-111">In the Windows Forms Designer, open your form.</span></span>  
+1.  <span data-ttu-id="deb7a-111">在 Windows Form 設計工具中，開啟您的表單。</span><span class="sxs-lookup"><span data-stu-id="deb7a-111">In the Windows Forms Designer, open your form.</span></span>  
   
-2.  <span data-ttu-id="70113-112">開啟**工具箱**，並在表單中，將三個<xref:System.Windows.Forms.Button>控制項。</span><span class="sxs-lookup"><span data-stu-id="70113-112">Open the **Toolbox**, and on the form, place three <xref:System.Windows.Forms.Button> controls.</span></span>  
+2.  <span data-ttu-id="deb7a-112">開啟**工具箱**，並在表單中，將三個<xref:System.Windows.Forms.Button>控制項。</span><span class="sxs-lookup"><span data-stu-id="deb7a-112">Open the **Toolbox**, and on the form, place three <xref:System.Windows.Forms.Button> controls.</span></span>  
   
-3.  <span data-ttu-id="70113-113">設定`GenerateMember`並`Modifiers`每個屬性<xref:System.Windows.Forms.Button>根據下表的控制項。</span><span class="sxs-lookup"><span data-stu-id="70113-113">Set the `GenerateMember` and `Modifiers` properties for each <xref:System.Windows.Forms.Button> control according to the following table.</span></span>  
+3.  <span data-ttu-id="deb7a-113">設定`GenerateMember`並`Modifiers`每個屬性<xref:System.Windows.Forms.Button>根據下表的控制項。</span><span class="sxs-lookup"><span data-stu-id="deb7a-113">Set the `GenerateMember` and `Modifiers` properties for each <xref:System.Windows.Forms.Button> control according to the following table.</span></span>  
   
-    |<span data-ttu-id="70113-114">按鈕名稱</span><span class="sxs-lookup"><span data-stu-id="70113-114">Button name</span></span>|<span data-ttu-id="70113-115">GenerateMember 值</span><span class="sxs-lookup"><span data-stu-id="70113-115">GenerateMember value</span></span>|<span data-ttu-id="70113-116">修飾詞值</span><span class="sxs-lookup"><span data-stu-id="70113-116">Modifiers value</span></span>|  
+    |<span data-ttu-id="deb7a-114">按鈕名稱</span><span class="sxs-lookup"><span data-stu-id="deb7a-114">Button name</span></span>|<span data-ttu-id="deb7a-115">GenerateMember 值</span><span class="sxs-lookup"><span data-stu-id="deb7a-115">GenerateMember value</span></span>|<span data-ttu-id="deb7a-116">修飾詞值</span><span class="sxs-lookup"><span data-stu-id="deb7a-116">Modifiers value</span></span>|  
     |-----------------|--------------------------|---------------------|  
     |`button1`|`true`|`private`|  
     |`button2`|`true`|`protected`|  
-    |`button3`|`false`|<span data-ttu-id="70113-117">沒有變更</span><span class="sxs-lookup"><span data-stu-id="70113-117">No change</span></span>|  
+    |`button3`|`false`|<span data-ttu-id="deb7a-117">沒有變更</span><span class="sxs-lookup"><span data-stu-id="deb7a-117">No change</span></span>|  
   
-4.  <span data-ttu-id="70113-118">建置方案。</span><span class="sxs-lookup"><span data-stu-id="70113-118">Build the solution.</span></span>  
+4.  <span data-ttu-id="deb7a-118">建置方案。</span><span class="sxs-lookup"><span data-stu-id="deb7a-118">Build the solution.</span></span>  
   
-5.  <span data-ttu-id="70113-119">在方案總管中，按一下 [顯示所有檔案] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="70113-119">In **Solution Explorer**, click the **Show All Files** button.</span></span>  
+5.  <span data-ttu-id="deb7a-119">在方案總管中，按一下 [顯示所有檔案] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="deb7a-119">In **Solution Explorer**, click the **Show All Files** button.</span></span>  
   
-6.  <span data-ttu-id="70113-120">開啟**Form1**節點，然後在**程式碼編輯器**，開啟**Form1.Designer.vb**或是**Form1.Designer.cs**檔案。</span><span class="sxs-lookup"><span data-stu-id="70113-120">Open the **Form1** node, and in the **Code Editor**,open the **Form1.Designer.vb** or **Form1.Designer.cs** file.</span></span> <span data-ttu-id="70113-121">此檔案包含 Windows Form 設計工具所發出的程式碼。</span><span class="sxs-lookup"><span data-stu-id="70113-121">This file contains the code emitted by the Windows Forms Designer.</span></span>  
+6.  <span data-ttu-id="deb7a-120">開啟**Form1**節點，然後在**程式碼編輯器**，開啟**Form1.Designer.vb**或是**Form1.Designer.cs**檔案。</span><span class="sxs-lookup"><span data-stu-id="deb7a-120">Open the **Form1** node, and in the **Code Editor**,open the **Form1.Designer.vb** or **Form1.Designer.cs** file.</span></span> <span data-ttu-id="deb7a-121">此檔案包含 Windows Form 設計工具所發出的程式碼。</span><span class="sxs-lookup"><span data-stu-id="deb7a-121">This file contains the code emitted by the Windows Forms Designer.</span></span>  
   
-7.  <span data-ttu-id="70113-122">尋找三個按鈕的宣告。</span><span class="sxs-lookup"><span data-stu-id="70113-122">Find the declarations for the three buttons.</span></span> <span data-ttu-id="70113-123">下列程式碼範例顯示所指定的差異`GenerateMember`和`Modifiers`屬性。</span><span class="sxs-lookup"><span data-stu-id="70113-123">The following code example shows the differences specified by the `GenerateMember` and `Modifiers` properties.</span></span>  
+7.  <span data-ttu-id="deb7a-122">尋找三個按鈕的宣告。</span><span class="sxs-lookup"><span data-stu-id="deb7a-122">Find the declarations for the three buttons.</span></span> <span data-ttu-id="deb7a-123">下列程式碼範例顯示所指定的差異`GenerateMember`和`Modifiers`屬性。</span><span class="sxs-lookup"><span data-stu-id="deb7a-123">The following code example shows the differences specified by the `GenerateMember` and `Modifiers` properties.</span></span>  
   
      [!code-csharp[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
@@ -57,10 +57,10 @@ ms.locfileid: "45666508"
      [!code-vb[System.Windows.Forms.GenerateMember#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
   
 > [!NOTE]
->  <span data-ttu-id="70113-124">根據預設，Windows Form 設計工具會指派`private`(`Friend` Visual Basic 中) 等容器控制項的修飾詞<xref:System.Windows.Forms.Panel>。</span><span class="sxs-lookup"><span data-stu-id="70113-124">By default, the Windows Forms Designer assigns the `private` (`Friend` in Visual Basic) modifier to container controls like <xref:System.Windows.Forms.Panel>.</span></span> <span data-ttu-id="70113-125">如果您的基底<xref:System.Windows.Forms.UserControl>或<xref:System.Windows.Forms.Form>有容器控制項，它將不會接受新的子系繼承的控制項和表單中。</span><span class="sxs-lookup"><span data-stu-id="70113-125">If your base <xref:System.Windows.Forms.UserControl> or <xref:System.Windows.Forms.Form> has a container control, it will not accept new children in inherited controls and forms.</span></span> <span data-ttu-id="70113-126">解決方法是變更的基底容器控制項的修飾詞`protected`或`public`。</span><span class="sxs-lookup"><span data-stu-id="70113-126">The solution is to change the modifier of the base container control to `protected` or `public`.</span></span>  
+>  <span data-ttu-id="deb7a-124">根據預設，Windows Form 設計工具會指派`private`(`Friend` Visual Basic 中) 等容器控制項的修飾詞<xref:System.Windows.Forms.Panel>。</span><span class="sxs-lookup"><span data-stu-id="deb7a-124">By default, the Windows Forms Designer assigns the `private` (`Friend` in Visual Basic) modifier to container controls like <xref:System.Windows.Forms.Panel>.</span></span> <span data-ttu-id="deb7a-125">如果您的基底<xref:System.Windows.Forms.UserControl>或<xref:System.Windows.Forms.Form>有容器控制項，它將不會接受新的子系繼承的控制項和表單中。</span><span class="sxs-lookup"><span data-stu-id="deb7a-125">If your base <xref:System.Windows.Forms.UserControl> or <xref:System.Windows.Forms.Form> has a container control, it will not accept new children in inherited controls and forms.</span></span> <span data-ttu-id="deb7a-126">解決方法是變更的基底容器控制項的修飾詞`protected`或`public`。</span><span class="sxs-lookup"><span data-stu-id="deb7a-126">The solution is to change the modifier of the base container control to `protected` or `public`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70113-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="70113-127">See Also</span></span>  
- <xref:System.Windows.Forms.Button>  
- [<span data-ttu-id="70113-128">Windows Forms 視覺繼承</span><span class="sxs-lookup"><span data-stu-id="70113-128">Windows Forms Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- [<span data-ttu-id="70113-129">逐步解說：示範視覺化繼承</span><span class="sxs-lookup"><span data-stu-id="70113-129">Walkthrough: Demonstrating Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
- [<span data-ttu-id="70113-130">如何：繼承 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="70113-130">How to: Inherit Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="deb7a-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="deb7a-127">See also</span></span>
+- <xref:System.Windows.Forms.Button>
+- [<span data-ttu-id="deb7a-128">Windows Forms 視覺繼承</span><span class="sxs-lookup"><span data-stu-id="deb7a-128">Windows Forms Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [<span data-ttu-id="deb7a-129">逐步解說：示範視覺化繼承</span><span class="sxs-lookup"><span data-stu-id="deb7a-129">Walkthrough: Demonstrating Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)
+- [<span data-ttu-id="deb7a-130">如何：繼承 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="deb7a-130">How to: Inherit Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)

@@ -1,32 +1,21 @@
 ---
 title: System.IdentityModel.Selectors.StoreCommitTransaction
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e9f2db66-5b7d-49e1-b198-0846551c6e8e
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 53dc01ed079168671d6d68aba65d5cb0591e9906
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cd9adc7d77107cb8cad9b80d2c8e63edf579db5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557210"
 ---
-# <a name="systemidentitymodelselectorsstorecommittransaction"></a><span data-ttu-id="341a3-102">System.IdentityModel.Selectors.StoreCommitTransaction</span><span class="sxs-lookup"><span data-stu-id="341a3-102">System.IdentityModel.Selectors.StoreCommitTransaction</span></span>
-<span data-ttu-id="341a3-103">System.IdentityModel.Selectors.StoreCommitTransaction</span><span class="sxs-lookup"><span data-stu-id="341a3-103">System.IdentityModel.Selectors.StoreCommitTransaction</span></span>  
+# <a name="systemidentitymodelselectorsstorecommittransaction"></a><span data-ttu-id="c98a4-102">System.IdentityModel.Selectors.StoreCommitTransaction</span><span class="sxs-lookup"><span data-stu-id="c98a4-102">System.IdentityModel.Selectors.StoreCommitTransaction</span></span>
+<span data-ttu-id="c98a4-103">System.IdentityModel.Selectors.StoreCommitTransaction</span><span class="sxs-lookup"><span data-stu-id="c98a4-103">System.IdentityModel.Selectors.StoreCommitTransaction</span></span>  
   
-## <a name="description"></a><span data-ttu-id="341a3-104">描述</span><span class="sxs-lookup"><span data-stu-id="341a3-104">Description</span></span>  
- <span data-ttu-id="341a3-105">認可指定之存放區的異動。</span><span class="sxs-lookup"><span data-stu-id="341a3-105">Committing transaction on the specified store.</span></span>  
+## <a name="description"></a><span data-ttu-id="c98a4-104">描述</span><span class="sxs-lookup"><span data-stu-id="c98a4-104">Description</span></span>  
+ <span data-ttu-id="c98a4-105">認可指定之存放區的異動。</span><span class="sxs-lookup"><span data-stu-id="c98a4-105">Committing transaction on the specified store.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="341a3-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="341a3-106">See Also</span></span>  
- [<span data-ttu-id="341a3-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="341a3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="341a3-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="341a3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="341a3-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="341a3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c98a4-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c98a4-106">See also</span></span>
+- [<span data-ttu-id="c98a4-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="c98a4-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="c98a4-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="c98a4-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="c98a4-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="c98a4-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
