@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a53493d666cb16fcc9b407ca3a46072afa306b97
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 44b30d571e6786ad840308a21fb185270c6e5ae7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509866"
 ---
-# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="e7ebc-102">ISymUnmanagedENCUpdate::GetLocalVariables 方法</span><span class="sxs-lookup"><span data-stu-id="e7ebc-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
-<span data-ttu-id="e7ebc-103">取得本機變數。</span><span class="sxs-lookup"><span data-stu-id="e7ebc-103">Gets the local variables.</span></span>  
+# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="9968c-102">ISymUnmanagedENCUpdate::GetLocalVariables 方法</span><span class="sxs-lookup"><span data-stu-id="9968c-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
+<span data-ttu-id="9968c-103">取得本機變數。</span><span class="sxs-lookup"><span data-stu-id="9968c-103">Gets the local variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7ebc-104">語法</span><span class="sxs-lookup"><span data-stu-id="e7ebc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9968c-104">語法</span><span class="sxs-lookup"><span data-stu-id="9968c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalVariables(  
@@ -38,24 +38,24 @@ HRESULT GetLocalVariables(
     [out] ULONG        *pceltFetched);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e7ebc-105">參數</span><span class="sxs-lookup"><span data-stu-id="e7ebc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9968c-105">參數</span><span class="sxs-lookup"><span data-stu-id="9968c-105">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="e7ebc-106">[in]方法的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="e7ebc-106">[in] The metadata token of the method.</span></span>  
+ <span data-ttu-id="9968c-106">[in]方法的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="9968c-106">[in] The metadata token of the method.</span></span>  
   
  `cLocals`  
- <span data-ttu-id="e7ebc-107">[in]A`ULONG`表示的大小`rgLocals`參數。</span><span class="sxs-lookup"><span data-stu-id="e7ebc-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
+ <span data-ttu-id="9968c-107">[in]A`ULONG`表示的大小`rgLocals`參數。</span><span class="sxs-lookup"><span data-stu-id="9968c-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
   
  `rgLocals`  
- <span data-ttu-id="e7ebc-108">[out]傳回的陣列[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)執行個體。</span><span class="sxs-lookup"><span data-stu-id="e7ebc-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span></span>  
+ <span data-ttu-id="9968c-108">[out]傳回的陣列[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)執行個體。</span><span class="sxs-lookup"><span data-stu-id="9968c-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="e7ebc-109">[out]指標`ULONG`接收大小的`rgLocals`包含區域變數所需要的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="e7ebc-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
+ <span data-ttu-id="9968c-109">[out]指標`ULONG`接收大小的`rgLocals`包含區域變數所需要的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="9968c-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e7ebc-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="e7ebc-110">Return Value</span></span>  
- <span data-ttu-id="e7ebc-111">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="e7ebc-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9968c-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="9968c-110">Return Value</span></span>  
+ <span data-ttu-id="9968c-111">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="9968c-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e7ebc-112">需求</span><span class="sxs-lookup"><span data-stu-id="e7ebc-112">Requirements</span></span>  
- <span data-ttu-id="e7ebc-113">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e7ebc-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9968c-112">需求</span><span class="sxs-lookup"><span data-stu-id="9968c-112">Requirements</span></span>  
+ <span data-ttu-id="9968c-113">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9968c-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7ebc-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e7ebc-114">See Also</span></span>  
- [<span data-ttu-id="e7ebc-115">ISymUnmanagedENCUpdate 介面</span><span class="sxs-lookup"><span data-stu-id="e7ebc-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9968c-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9968c-114">See also</span></span>
+- [<span data-ttu-id="9968c-115">ISymUnmanagedENCUpdate 介面</span><span class="sxs-lookup"><span data-stu-id="9968c-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

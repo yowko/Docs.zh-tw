@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10e7da7711cd63579589fda416d0d3a4f777eefe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7ad6c8bd59f62bc7b0a96e1ef5e545fe15610c91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516976"
 ---
-# <a name="icordebugmodulegetbaseaddress-method"></a><span data-ttu-id="2de5d-102">ICorDebugModule::GetBaseAddress 方法</span><span class="sxs-lookup"><span data-stu-id="2de5d-102">ICorDebugModule::GetBaseAddress Method</span></span>
-<span data-ttu-id="2de5d-103">取得模組的基底位址。</span><span class="sxs-lookup"><span data-stu-id="2de5d-103">Gets the base address of the module.</span></span>  
+# <a name="icordebugmodulegetbaseaddress-method"></a><span data-ttu-id="2fb45-102">ICorDebugModule::GetBaseAddress 方法</span><span class="sxs-lookup"><span data-stu-id="2fb45-102">ICorDebugModule::GetBaseAddress Method</span></span>
+<span data-ttu-id="2fb45-103">取得模組的基底位址。</span><span class="sxs-lookup"><span data-stu-id="2fb45-103">Gets the base address of the module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2de5d-104">語法</span><span class="sxs-lookup"><span data-stu-id="2de5d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2fb45-104">語法</span><span class="sxs-lookup"><span data-stu-id="2fb45-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBaseAddress(  
@@ -35,22 +35,22 @@ HRESULT GetBaseAddress(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2de5d-105">參數</span><span class="sxs-lookup"><span data-stu-id="2de5d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2fb45-105">參數</span><span class="sxs-lookup"><span data-stu-id="2fb45-105">Parameters</span></span>  
  `pAddress`  
- <span data-ttu-id="2de5d-106">[out]A`CORDB_ADDRESS`指定模組的基底位址。</span><span class="sxs-lookup"><span data-stu-id="2de5d-106">[out] A `CORDB_ADDRESS` that specifies the base address of the module.</span></span>  
+ <span data-ttu-id="2fb45-106">[out]A`CORDB_ADDRESS`指定模組的基底位址。</span><span class="sxs-lookup"><span data-stu-id="2fb45-106">[out] A `CORDB_ADDRESS` that specifies the base address of the module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2de5d-107">備註</span><span class="sxs-lookup"><span data-stu-id="2de5d-107">Remarks</span></span>  
- <span data-ttu-id="2de5d-108">如果模組是原生映像 （亦即，如果模組已由原生映像產生器 NGen.exe 產生），其基底地址將會是零。</span><span class="sxs-lookup"><span data-stu-id="2de5d-108">If the module is a native image (that is, if the module was produced by the native image generator, NGen.exe), its base address will be zero.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2fb45-107">備註</span><span class="sxs-lookup"><span data-stu-id="2fb45-107">Remarks</span></span>  
+ <span data-ttu-id="2fb45-108">如果模組是原生映像 （亦即，如果模組由原生映像產生器 NGen.exe 產生），其基底的位址將會是零。</span><span class="sxs-lookup"><span data-stu-id="2fb45-108">If the module is a native image (that is, if the module was produced by the native image generator, NGen.exe), its base address will be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2de5d-109">需求</span><span class="sxs-lookup"><span data-stu-id="2de5d-109">Requirements</span></span>  
- <span data-ttu-id="2de5d-110">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2de5d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2fb45-109">需求</span><span class="sxs-lookup"><span data-stu-id="2fb45-109">Requirements</span></span>  
+ <span data-ttu-id="2fb45-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2fb45-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2de5d-111">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2de5d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2fb45-111">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2fb45-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2de5d-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2de5d-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2fb45-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2fb45-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2de5d-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2de5d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2fb45-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2fb45-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2de5d-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2de5d-114">See Also</span></span>  
-    
- 
+## <a name="see-also"></a><span data-ttu-id="2fb45-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2fb45-114">See also</span></span>
+
+

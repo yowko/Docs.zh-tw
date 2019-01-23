@@ -1,29 +1,29 @@
 ---
-title: 如何：產生物件模型當做外部檔案
+title: HOW TO：產生物件模型當做外部檔案
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 00e8563b361a36de6c31e9ff0c0fd8f3b6f46b4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44b123130b79026ed7638ccc7abeb13d8a5f55ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499167"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="b7ca9-102">如何：產生物件模型當做外部檔案</span><span class="sxs-lookup"><span data-stu-id="b7ca9-102">How to: Generate the Object Model as an External File</span></span>
-<span data-ttu-id="b7ca9-103">除了使用以屬性 (Attribute) 為基礎的對應，您還可以使用 SQLMetal 命令列工具，產生自己的物件模型做為外部 XML 檔。</span><span class="sxs-lookup"><span data-stu-id="b7ca9-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="b7ca9-104">如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="b7ca9-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="b7ca9-105">藉由使用外部 XML 對應檔案，您可以避免程式碼雜亂。</span><span class="sxs-lookup"><span data-stu-id="b7ca9-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="b7ca9-106">此外，若要變更行為，也只需要修改外部檔案，而無須重新編譯應用程式的二進位碼檔案。</span><span class="sxs-lookup"><span data-stu-id="b7ca9-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="b7ca9-107">如需詳細資訊，請參閱[外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。</span><span class="sxs-lookup"><span data-stu-id="b7ca9-107">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span></span>  
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="7320c-102">HOW TO：產生物件模型當做外部檔案</span><span class="sxs-lookup"><span data-stu-id="7320c-102">How to: Generate the Object Model as an External File</span></span>
+<span data-ttu-id="7320c-103">除了使用以屬性 (Attribute) 為基礎的對應，您還可以使用 SQLMetal 命令列工具，產生自己的物件模型做為外部 XML 檔。</span><span class="sxs-lookup"><span data-stu-id="7320c-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="7320c-104">如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="7320c-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="7320c-105">藉由使用外部 XML 對應檔案，您可以避免程式碼雜亂。</span><span class="sxs-lookup"><span data-stu-id="7320c-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="7320c-106">此外，若要變更行為，也只需要修改外部檔案，而無須重新編譯應用程式的二進位碼檔案。</span><span class="sxs-lookup"><span data-stu-id="7320c-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="7320c-107">如需詳細資訊，請參閱 <<c0> [ 外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。</span><span class="sxs-lookup"><span data-stu-id="7320c-107">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b7ca9-108">[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]不支援產生外部對應檔案。</span><span class="sxs-lookup"><span data-stu-id="b7ca9-108">The [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] does not support generation of an external mapping file.</span></span>  
+>  <span data-ttu-id="7320c-108">[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]不支援產生外部對應檔案。</span><span class="sxs-lookup"><span data-stu-id="7320c-108">The [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] does not support generation of an external mapping file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b7ca9-109">範例</span><span class="sxs-lookup"><span data-stu-id="b7ca9-109">Example</span></span>  
- <span data-ttu-id="b7ca9-110">下列命令會從 Northwind 範例資料庫產生外部對應檔案。</span><span class="sxs-lookup"><span data-stu-id="b7ca9-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
+## <a name="example"></a><span data-ttu-id="7320c-109">範例</span><span class="sxs-lookup"><span data-stu-id="7320c-109">Example</span></span>  
+ <span data-ttu-id="7320c-110">下列命令會從 Northwind 範例資料庫產生外部對應檔案。</span><span class="sxs-lookup"><span data-stu-id="7320c-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
   
 ```  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   
-## <a name="example"></a><span data-ttu-id="b7ca9-111">範例</span><span class="sxs-lookup"><span data-stu-id="b7ca9-111">Example</span></span>  
- <span data-ttu-id="b7ca9-112">下列外部對應檔案摘錄顯示 Northwind 範例資料庫中之 Customers 資料表的對應。</span><span class="sxs-lookup"><span data-stu-id="b7ca9-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="b7ca9-113">這段摘錄由執行 SQLMetal 搭配產生**對應**選項。</span><span class="sxs-lookup"><span data-stu-id="b7ca9-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
+## <a name="example"></a><span data-ttu-id="7320c-111">範例</span><span class="sxs-lookup"><span data-stu-id="7320c-111">Example</span></span>  
+ <span data-ttu-id="7320c-112">下列外部對應檔案摘錄顯示 Northwind 範例資料庫中之 Customers 資料表的對應。</span><span class="sxs-lookup"><span data-stu-id="7320c-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="7320c-113">這段摘錄中產生藉由執行 SQLMetal 並加 **/typedefs/ 對應**選項。</span><span class="sxs-lookup"><span data-stu-id="7320c-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -48,7 +48,7 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 </Database>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b7ca9-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b7ca9-114">See Also</span></span>  
- [<span data-ttu-id="b7ca9-115">建立物件模型</span><span class="sxs-lookup"><span data-stu-id="b7ca9-115">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [<span data-ttu-id="b7ca9-116">外部對應</span><span class="sxs-lookup"><span data-stu-id="b7ca9-116">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [<span data-ttu-id="b7ca9-117">如何：以 Visual Basic 或 C# 產生物件模型</span><span class="sxs-lookup"><span data-stu-id="b7ca9-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+## <a name="see-also"></a><span data-ttu-id="7320c-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7320c-114">See also</span></span>
+- [<span data-ttu-id="7320c-115">建立物件模型</span><span class="sxs-lookup"><span data-stu-id="7320c-115">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [<span data-ttu-id="7320c-116">外部對應</span><span class="sxs-lookup"><span data-stu-id="7320c-116">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [<span data-ttu-id="7320c-117">如何：以 Visual Basic 或 C# 產生物件模型</span><span class="sxs-lookup"><span data-stu-id="7320c-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
