@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d5284cf6072aa5c1c11cc83355a3e9fa5c96837
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4b8e0807cd03c7abfee0856d52cae0454b9f1a29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587787"
 ---
-# <a name="icordebugmanagedcallbacklogswitch-method"></a><span data-ttu-id="dc3da-102">ICorDebugManagedCallback::LogSwitch 方法</span><span class="sxs-lookup"><span data-stu-id="dc3da-102">ICorDebugManagedCallback::LogSwitch Method</span></span>
-<span data-ttu-id="dc3da-103">告知偵錯工具中的通用語言執行平台 (CLR) managed 執行緒已呼叫方法<xref:System.Diagnostics.Switch>類別來建立、 修改或刪除偵錯/追蹤參數。</span><span class="sxs-lookup"><span data-stu-id="dc3da-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.Switch> class to create, modify, or delete a debugging/tracing switch.</span></span>  
+# <a name="icordebugmanagedcallbacklogswitch-method"></a><span data-ttu-id="e01b4-102">ICorDebugManagedCallback::LogSwitch 方法</span><span class="sxs-lookup"><span data-stu-id="e01b4-102">ICorDebugManagedCallback::LogSwitch Method</span></span>
+<span data-ttu-id="e01b4-103">通用語言執行平台 (CLR) managed 執行緒已呼叫方法，偵錯工具會告知<xref:System.Diagnostics.Switch>類別來建立、 修改或刪除偵錯/追蹤參數。</span><span class="sxs-lookup"><span data-stu-id="e01b4-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.Switch> class to create, modify, or delete a debugging/tracing switch.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dc3da-104">語法</span><span class="sxs-lookup"><span data-stu-id="dc3da-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e01b4-104">語法</span><span class="sxs-lookup"><span data-stu-id="e01b4-104">Syntax</span></span>  
   
 ```  
 HRESULT LogSwitch (  
@@ -39,33 +39,33 @@ HRESULT LogSwitch (
     [in] WCHAR               *pParentName);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="dc3da-105">參數</span><span class="sxs-lookup"><span data-stu-id="dc3da-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e01b4-105">參數</span><span class="sxs-lookup"><span data-stu-id="e01b4-105">Parameters</span></span>  
  `PAppDomain`  
- <span data-ttu-id="dc3da-106">[in]表示包含建立、 修改或刪除偵錯/追蹤切換的 managed 的執行緒的應用程式網域的 ICorDebugAppDomain 物件指標。</span><span class="sxs-lookup"><span data-stu-id="dc3da-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that created, modified, or deleted a debugging/tracing switch.</span></span>  
+ <span data-ttu-id="e01b4-106">[in]表示包含建立、 修改或刪除偵錯/追蹤切換的 managed 的執行緒的應用程式網域的 ICorDebugAppDomain 物件指標。</span><span class="sxs-lookup"><span data-stu-id="e01b4-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that created, modified, or deleted a debugging/tracing switch.</span></span>  
   
  `pThread`  
- <span data-ttu-id="dc3da-107">[in]表示 managed 的執行緒的 ICorDebugThread 物件指標。</span><span class="sxs-lookup"><span data-stu-id="dc3da-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
+ <span data-ttu-id="e01b4-107">[in]ICorDebugThread 物件，表示 managed 的執行緒指標。</span><span class="sxs-lookup"><span data-stu-id="e01b4-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
   
  `lLevel`  
- <span data-ttu-id="dc3da-108">[in]值，指出已寫入事件記錄檔的描述訊息的嚴重性層級。</span><span class="sxs-lookup"><span data-stu-id="dc3da-108">[in] A value that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
+ <span data-ttu-id="e01b4-108">[in]值，指出已寫入事件記錄檔的描述訊息的嚴重性層級。</span><span class="sxs-lookup"><span data-stu-id="e01b4-108">[in] A value that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
   
  `ulReason`  
- <span data-ttu-id="dc3da-109">[in]值為[LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)切換偵錯/追蹤列舉，指出作業執行。</span><span class="sxs-lookup"><span data-stu-id="dc3da-109">[in] A value of the [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) enumeration that indicates the operation performed on the debugging/tracing switch.</span></span>  
+ <span data-ttu-id="e01b4-109">[in]值為[LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)偵錯/追蹤交換器上的列舉，指出作業執行。</span><span class="sxs-lookup"><span data-stu-id="e01b4-109">[in] A value of the [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) enumeration that indicates the operation performed on the debugging/tracing switch.</span></span>  
   
  `pLogSwitchName`  
- <span data-ttu-id="dc3da-110">[in]偵錯/追蹤參數的名稱指標。</span><span class="sxs-lookup"><span data-stu-id="dc3da-110">[in] A pointer to the name of the debugging/tracing switch.</span></span>  
+ <span data-ttu-id="e01b4-110">[in]偵錯/追蹤參數的名稱指標。</span><span class="sxs-lookup"><span data-stu-id="e01b4-110">[in] A pointer to the name of the debugging/tracing switch.</span></span>  
   
  `pParentName`  
- <span data-ttu-id="dc3da-111">[in]偵錯/追蹤參數，因為父系的名稱指標。</span><span class="sxs-lookup"><span data-stu-id="dc3da-111">[in] A pointer to the name of the parent of the debugging/tracing switch.</span></span>  
+ <span data-ttu-id="e01b4-111">[in]偵錯/追蹤切換的父系名稱指標。</span><span class="sxs-lookup"><span data-stu-id="e01b4-111">[in] A pointer to the name of the parent of the debugging/tracing switch.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dc3da-112">需求</span><span class="sxs-lookup"><span data-stu-id="dc3da-112">Requirements</span></span>  
- <span data-ttu-id="dc3da-113">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dc3da-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e01b4-112">需求</span><span class="sxs-lookup"><span data-stu-id="e01b4-112">Requirements</span></span>  
+ <span data-ttu-id="e01b4-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e01b4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dc3da-114">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dc3da-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e01b4-114">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e01b4-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="dc3da-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dc3da-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e01b4-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e01b4-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dc3da-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dc3da-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e01b4-116">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e01b4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dc3da-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dc3da-117">See Also</span></span>  
- [<span data-ttu-id="dc3da-118">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="dc3da-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e01b4-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e01b4-117">See also</span></span>
+- [<span data-ttu-id="e01b4-118">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="e01b4-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

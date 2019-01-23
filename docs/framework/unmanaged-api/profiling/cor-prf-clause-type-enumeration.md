@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6909fa426fa952c0918638f40a571393c651e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db3b0f59884b2ec20ea3a2bd9779dbffd0fc8e1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583752"
 ---
-# <a name="corprfclausetype-enumeration"></a><span data-ttu-id="e9d7f-102">COR_PRF_CLAUSE_TYPE 列舉</span><span class="sxs-lookup"><span data-stu-id="e9d7f-102">COR_PRF_CLAUSE_TYPE Enumeration</span></span>
-<span data-ttu-id="e9d7f-103">指出剛輸入或留下的程式碼的 exception 子句類型。</span><span class="sxs-lookup"><span data-stu-id="e9d7f-103">Indicates the type of exception clause that the code has just entered or left.</span></span>  
+# <a name="corprfclausetype-enumeration"></a><span data-ttu-id="702c2-102">COR_PRF_CLAUSE_TYPE 列舉</span><span class="sxs-lookup"><span data-stu-id="702c2-102">COR_PRF_CLAUSE_TYPE Enumeration</span></span>
+<span data-ttu-id="702c2-103">指出剛輸入或留下的程式碼的 exception 子句類型。</span><span class="sxs-lookup"><span data-stu-id="702c2-103">Indicates the type of exception clause that the code has just entered or left.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9d7f-104">語法</span><span class="sxs-lookup"><span data-stu-id="e9d7f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="702c2-104">語法</span><span class="sxs-lookup"><span data-stu-id="702c2-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -37,23 +37,23 @@ typedef enum {
 } COR_PRF_CLAUSE_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e9d7f-105">成員</span><span class="sxs-lookup"><span data-stu-id="e9d7f-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="702c2-105">成員</span><span class="sxs-lookup"><span data-stu-id="702c2-105">Members</span></span>  
   
-|<span data-ttu-id="e9d7f-106">成員</span><span class="sxs-lookup"><span data-stu-id="e9d7f-106">Member</span></span>|<span data-ttu-id="e9d7f-107">描述</span><span class="sxs-lookup"><span data-stu-id="e9d7f-107">Description</span></span>|  
+|<span data-ttu-id="702c2-106">成員</span><span class="sxs-lookup"><span data-stu-id="702c2-106">Member</span></span>|<span data-ttu-id="702c2-107">描述</span><span class="sxs-lookup"><span data-stu-id="702c2-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|<span data-ttu-id="e9d7f-108">例外狀況子句無效。</span><span class="sxs-lookup"><span data-stu-id="e9d7f-108">The exception clause is not valid.</span></span>|  
-|`COR_PRF_CLAUSE_FILTER`|<span data-ttu-id="e9d7f-109">例外狀況子句為篩選條件運算式。</span><span class="sxs-lookup"><span data-stu-id="e9d7f-109">The exception clause is a filter expression.</span></span>|  
-|`COR_PRF_CLAUSE_CATCH`|<span data-ttu-id="e9d7f-110">例外狀況子句是`catch`陳述式。</span><span class="sxs-lookup"><span data-stu-id="e9d7f-110">The exception clause is a `catch` statement.</span></span>|  
-|`COR_PRF_CLAUSE_FINALLY`|<span data-ttu-id="e9d7f-111">例外狀況子句是`finally`陳述式。</span><span class="sxs-lookup"><span data-stu-id="e9d7f-111">The exception clause is a `finally` statement.</span></span>|  
+|`COR_PRF_CLAUSE_NONE`|<span data-ttu-id="702c2-108">例外狀況子句無效。</span><span class="sxs-lookup"><span data-stu-id="702c2-108">The exception clause is not valid.</span></span>|  
+|`COR_PRF_CLAUSE_FILTER`|<span data-ttu-id="702c2-109">例外狀況子句是篩選條件運算式。</span><span class="sxs-lookup"><span data-stu-id="702c2-109">The exception clause is a filter expression.</span></span>|  
+|`COR_PRF_CLAUSE_CATCH`|<span data-ttu-id="702c2-110">例外狀況子句是`catch`陳述式。</span><span class="sxs-lookup"><span data-stu-id="702c2-110">The exception clause is a `catch` statement.</span></span>|  
+|`COR_PRF_CLAUSE_FINALLY`|<span data-ttu-id="702c2-111">例外狀況子句是`finally`陳述式。</span><span class="sxs-lookup"><span data-stu-id="702c2-111">The exception clause is a `finally` statement.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e9d7f-112">需求</span><span class="sxs-lookup"><span data-stu-id="e9d7f-112">Requirements</span></span>  
- <span data-ttu-id="e9d7f-113">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e9d7f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="702c2-112">需求</span><span class="sxs-lookup"><span data-stu-id="702c2-112">Requirements</span></span>  
+ <span data-ttu-id="702c2-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="702c2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9d7f-114">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e9d7f-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="702c2-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="702c2-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e9d7f-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e9d7f-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="702c2-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="702c2-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e9d7f-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9d7f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="702c2-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="702c2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9d7f-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e9d7f-117">See Also</span></span>  
- [<span data-ttu-id="e9d7f-118">分析列舉</span><span class="sxs-lookup"><span data-stu-id="e9d7f-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="702c2-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="702c2-117">See also</span></span>
+- [<span data-ttu-id="702c2-118">分析列舉</span><span class="sxs-lookup"><span data-stu-id="702c2-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
