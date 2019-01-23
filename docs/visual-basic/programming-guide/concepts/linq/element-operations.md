@@ -2,11 +2,12 @@
 title: 項目作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
-ms.openlocfilehash: 028445cbf5e3a498fc831d15ea435955e6834544
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbc16599a2688d5e0fe8b1e510946580fa2ca012
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501239"
 ---
 # <a name="element-operations-visual-basic"></a>項目作業 (Visual Basic)
 項目作業會從序列中傳回單一特定的項目。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/04/2018
 |Single|傳回集合中的唯一項目或符合條件的唯一項目。|不適用。|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
 |SingleOrDefault|傳回集合中的唯一項目或符合條件的唯一項目。 如果沒有這類項目或集合不僅僅包含一個項目，則傳回預設值。|不適用。|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq>  
- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [如何： 查詢的最大檔案或目錄樹狀 (LINQ) (Visual Basic) 中的檔案](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Linq>
+- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [如何：最大的檔案或目錄樹狀 (LINQ) (Visual Basic) 中的查詢](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)

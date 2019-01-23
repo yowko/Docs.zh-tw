@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
-ms.openlocfilehash: 3e21251710a44764bd06fbce83f97288b6925bc2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c2a5a69186e41642abf77357db8b04e2611a43f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513127"
 ---
 # <a name="serialization"></a>序列化
 序列化是將物件轉換成的格式，可以輕易地保存或傳輸的程序。 例如，您可以將物件序列化、 傳輸，使用 HTTP 和還原序列化該在目的地電腦在網際網路上。  
@@ -103,5 +103,5 @@ public class Person : ISerializable {
   
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [用法方針](../../../docs/standard/design-guidelines/usage-guidelines.md)

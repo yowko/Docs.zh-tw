@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: d6b33df8574d9c25380d6d9319480d3c9df28660
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa0143aac4253b6a7648da589e01ac8abf9d4341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492681"
 ---
 # <a name="storyboards-overview"></a>分鏡腳本概觀
 本主題說明如何使用<xref:System.Windows.Media.Animation.Storyboard>來組織和套用動畫的物件。 說明如何以互動方式操作<xref:System.Windows.Media.Animation.Storyboard>物件，並說明間接屬性目標語法。  
@@ -63,7 +63,7 @@ ms.locfileid: "44222470"
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.EventTrigger>|是|是|是|是|[使用分鏡腳本建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> 和屬性 <xref:System.Windows.Trigger>|否|是|是|是|[在屬性值變更時觸發動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.DataTrigger>|否|是|是|是|[操作說明︰在資料變更時觸發動畫](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.DataTrigger>|否|是|是|是|[如何：當資料變更時觸發動畫](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法|是|否|否|否|[使用分鏡腳本建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  下列範例會使用<xref:System.Windows.Media.Animation.Storyboard>來建立動畫<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>項目和<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>用來繪製， <xref:System.Windows.Shapes.Rectangle>。  
@@ -225,17 +225,17 @@ ms.locfileid: "44222470"
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>在 XAML 中以互動方式控制分鏡腳本  
  在中啟動分鏡腳本[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，您使用<xref:System.Windows.Media.Animation.BeginStoryboard>觸發動作。 <xref:System.Windows.Media.Animation.BeginStoryboard> 會將這些物件和屬性，它們建立動畫，並啟動分鏡腳本動畫。 (如需此程序的詳細資訊，請參閱[動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。)如果您賦予<xref:System.Windows.Media.Animation.BeginStoryboard>藉由指定的名稱及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>屬性，讓它可控制的分鏡腳本。 接著在分鏡腳本啟動後，您就可能以互動方式控制它。 以下是可控制之分鏡腳本動作的清單，您可以將這些動作與事件觸發程序搭配使用以控制分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>： 暫停分鏡腳本。  
+-   <xref:System.Windows.Media.Animation.PauseStoryboard>：暫停分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>： 繼續已暫停的分鏡腳本。  
+-   <xref:System.Windows.Media.Animation.ResumeStoryboard>：繼續已暫停的分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>： 變更分鏡腳本的速度。  
+-   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>：變更分鏡腳本的速度。  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>： 如果有的話，請前進到其填滿期間中，結尾的分鏡腳本。  
+-   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>：如果有的話，請前進到其填滿期間中，結尾的分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>： 停止分鏡腳本。  
+-   <xref:System.Windows.Media.Animation.StopStoryboard>：停止分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>： 移除分鏡腳本。  
+-   <xref:System.Windows.Media.Animation.RemoveStoryboard>：移除分鏡腳本。  
   
  在下列範例中，會使用可控制的分鏡腳本動作以互動方式控制分鏡腳本。  
   
@@ -261,7 +261,7 @@ ms.locfileid: "44222470"
   
  使用這些方法的優點是，您不需要建立<xref:System.Windows.Trigger>或是<xref:System.Windows.TriggerAction>物件; 您只需要參考可控制<xref:System.Windows.Media.Animation.Storyboard>您想要操作。  
   
- **注意：** 上所執行的所有互動式動作<xref:System.Windows.Media.Animation.Clock>，，因此也在<xref:System.Windows.Media.Animation.Storyboard>會在計時引擎就會發生下一次轉譯之前的下一個刻度上進行。 例如，如果您使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>跳到另一個點的動畫，屬性值的方法不會立即變更，值而變更下一個刻度在計時引擎。  
+ **注意：** 所執行的所有互動式動作<xref:System.Windows.Media.Animation.Clock>，因此也在<xref:System.Windows.Media.Animation.Storyboard>會在計時引擎就會發生下一次轉譯之前的下一個刻度上。 例如，如果您使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>跳到另一個點的動畫，屬性值的方法不會立即變更，值而變更下一個刻度在計時引擎。  
   
  下列範例示範如何套用和控制動畫的互動式方法<xref:System.Windows.Media.Animation.Storyboard>類別。  
   
@@ -302,7 +302,7 @@ ms.locfileid: "44222470"
   
  套用屬性的動畫<xref:System.Windows.Trigger>物件的行為更複雜的方式比<xref:System.Windows.EventTrigger>動畫開始使用<xref:System.Windows.Media.Animation.Storyboard>方法。  這些 「 傳遞 」 與動畫定義其他<xref:System.Windows.Trigger>物件，但以此撰寫<xref:System.Windows.EventTrigger>和方法觸發動畫。  
   
-## <a name="see-also"></a>另請參閱  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+## <a name="see-also"></a>另請參閱
+- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9bcf8919037d5b79f3819fffec02708886064b40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0561f76c70da603d50b96ce5b5162efac4eff2de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453199"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492973"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction 方法
-取得中繼資料語彙基元和可用於語彙基元的指定函式的中繼資料介面執行個體。  
+取得中繼資料語彙基元和中繼資料介面執行個體可以使用語彙基元，為指定的函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,25 +39,25 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
 #### <a name="parameters"></a>參數  
  `functionId`  
- [in]用來取得中繼資料語彙基元和中繼資料介面的函式的識別碼。  
+ [in]要取得的中繼資料語彙基元和中繼資料介面函式的識別碼。  
   
  `riid`  
- [in]要取得的執行個體的中繼資料介面的參考識別碼。  
+ [in]要取得的執行個體中繼資料介面的參考識別碼。  
   
  `ppImport`  
- [out]可以使用語彙基元，指定函式的中繼資料介面執行個體的位址指標。  
+ [out]中繼資料介面執行個體可以使用語彙基元，為指定的函式的位址指標。  
   
  `pToken`  
  [out]指定的函式的中繼資料語彙基元指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

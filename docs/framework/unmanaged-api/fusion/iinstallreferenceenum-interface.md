@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cac9f9db0b7527a80671c825a4435e8ea2d135b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2aed89008dd2fa86b38f243c8e7cca1bdda901e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497770"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum 介面
-代表安裝在全域組件快取的參考組件的列舉值。  
+表示參考的組件安裝在全域組件快取的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,15 +42,15 @@ interface IInstallReferenceEnum : IUnknown {
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetNextInstallReferenceItem 方法](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|取得下一個指標`IInstallReferenceItem`包含在這個`IInstallReferenceEnum`。|  
+|[GetNextInstallReferenceItem 方法](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|取得下一個指標`IInstallReferenceItem`包含在此`IInstallReferenceEnum`。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Fusion.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IInstallReferenceItem 介面](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+## <a name="see-also"></a>另請參閱
+- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IInstallReferenceItem 介面](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)

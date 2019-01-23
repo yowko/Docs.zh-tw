@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用個別 X.509 憑證簽署與加密
+title: HOW TO：使用個別 X.509 憑證來簽署和加密
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: d4c2e34b3e123e6fa9d8dc8e544f621b39861592
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500482"
 ---
-# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>HOW TO：使用個別 X.509 憑證簽署與加密
-本主題說明如何設定 Windows Communication Foundation (WCF) 訊息簽署和加密用戶端和服務上的使用不同的憑證。  
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>HOW TO：使用個別 X.509 憑證來簽署和加密
+本主題說明如何設定 Windows Communication Foundation (WCF) 訊息簽章和加密用戶端和服務上的使用不同的憑證。  
   
- 若要啟用不同的憑證來簽署和加密，自訂用戶端或服務認證 （或兩者） 必須建立，因為 WCF 不會提供 API，以設定多個用戶端或服務的憑證。 此外，必須提供安全性權杖管理員才能運用多份憑證的資訊，以及建立可用於特定金鑰使用方式和訊息方向的適當安全性權杖提供者。  
+ 若要啟用另一個要用於簽署和加密的憑證，自訂用戶端或服務認證 （或兩者） 必須建立，因為 WCF 不會提供 API，以設定多個用戶端或服務的憑證。 此外，必須提供安全性權杖管理員才能運用多份憑證的資訊，以及建立可用於特定金鑰使用方式和訊息方向的適當安全性權杖提供者。  
   
  下方圖表會顯示所使用的主要類別、它們繼承的來源類別 (以上指標示)，以及特定方向和屬性所傳回的類別。  
   
@@ -35,15 +35,15 @@ ms.locfileid: "33806178"
   
  ![顯示如何使用用戶端認證的圖表](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
   
- 如需自訂認證的詳細資訊，請參閱[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+ 如需有關自訂認證的詳細資訊，請參閱[逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
  此外，您必須建立自訂身分識別驗證器，並將驗證器以自訂繫結連結到一個安全性繫結項目。 同時，不要使用預設認證，而必須使用自訂認證。  
   
  以下的圖表會顯示自訂繫結中使用的類別，以及自訂身分識別驗證器所連結的方法。 其中包含幾個繫結項目，全部都是繼承自 <xref:System.ServiceModel.Channels.BindingElement>。 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 有 <xref:System.ServiceModel.Channels.LocalClientSecuritySettings><xref:System.ServiceModel.Security.IdentityVerifier>屬性，會傳回 `MyIdentityVerifier`(便是自訂 的來源)的執行個體。  
   
- ![顯示自訂繫結項目的圖表](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")  
+ ![顯示自訂繫結項目圖表](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")  
   
- 如需有關如何建立自訂身分識別驗證器的詳細資訊，請參閱 < How to: [How to： 建立自訂的用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)。  
+ 如需建立自訂身分識別驗證器的詳細資訊，請參閱 < 如何：[如何：建立自訂用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)。  
   
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>使用個別憑證簽署與加密  
   
@@ -89,10 +89,10 @@ ms.locfileid: "33806178"
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>  
- <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>  
- <xref:System.ServiceModel.Security.IdentityVerifier>  
- [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
+- <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
+- <xref:System.ServiceModel.Security.IdentityVerifier>
+- [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

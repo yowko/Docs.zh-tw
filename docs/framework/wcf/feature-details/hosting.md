@@ -2,12 +2,12 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 9237518f5bfa48401e60e47ccc40e4ee303dec35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3216b578ffed23091a27c4449abfe1aa6a2a97c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502999"
 ---
 # <a name="hosting"></a>裝載
 本節中各主題描述服務裝載。 服務可以裝載 Internet Information Services (IIS)、 Windows Process Activation Service (WAS)、 Windows Server AppFabric、 Windows 服務，或受管理的應用程式，此選項通常稱為*自我裝載*。  
@@ -33,6 +33,6 @@ ms.locfileid: "44209234"
  [支援多重 IIS 網站繫結](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  
  描述如何在單一網站上，使用同一個 URI 配置為一個服務指定多個基底位址。  
   
-## <a name="see-also"></a>另請參閱  
- [裝載服務](../../../../docs/framework/wcf/hosting-services.md)  
- [Windows Server App Fabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>另請參閱
+- [裝載服務](../../../../docs/framework/wcf/hosting-services.md)
+- [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)

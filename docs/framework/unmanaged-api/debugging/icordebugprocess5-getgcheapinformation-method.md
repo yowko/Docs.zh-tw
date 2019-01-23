@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8824ce004cac8bc2ad675c83dc6b5f167f183e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf3d362902eb338e5d797b66c5fe2af4f3e1ae9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508323"
 ---
 # <a name="icordebugprocess5getgcheapinformation-method"></a>ICorDebugProcess5::GetGCHeapInformation 方法
-提供有關記憶體回收堆積，包括其是否目前可列舉的一般資訊。  
+提供記憶體回收堆積，包括其是否目前可列舉的一般資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,17 +40,17 @@ HRESULT GetGCHeapInformation(
  [out]指標[COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)提供記憶體回收堆積的一般資訊的值。  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugProcess5::GetGCHeapInformation`列舉堆積之前，必須呼叫方法或個別的堆積區域，以確保記憶體回收結構程序中目前有效。 集合正在進行時，就無法受到記憶體回收堆積。 否則，列舉型別可能會擷取無效的記憶體回收結構。  
+ `ICorDebugProcess5::GetGCHeapInformation`之前正在列舉堆積，必須呼叫方法，或個別的堆積的區域，以確保記憶體回收結構中的程序目前有效值。 當集合正在進行時，無法檢視過記憶體回收堆積。 否則，列舉型別可能會擷取無效記憶體回收結構。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugProcess5 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugProcess5 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6d97d3e4a93985f9b2de3ed9785eff5f7f46c36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1a2be03e82d5be9bae64d7169709d16c40b66e37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511874"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save 方法
-在指定的位址的檔案目前範圍中儲存所有的中繼資料。  
+將所有的中繼資料儲存在指定的位址檔案目前的範圍中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,20 +38,20 @@ HRESULT Save (
   
 #### <a name="parameters"></a>參數  
  `wzFile`  
- [in]若要將儲存至檔案的名稱。 如果這個值是 null，記憶體中複本會儲存到最後一個使用的位置。  
+ [in]若要將儲存至檔案的名稱。 如果此值是 null，記憶體中複本會儲存到最後一個使用的位置。  
   
  `dwSaveFlags`  
- [in]保留。 必須是零。  
+ [in] 保留。 必須是零。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

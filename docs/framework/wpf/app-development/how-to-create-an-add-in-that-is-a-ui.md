@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: 848e1b2064d89607a93f5ac20fede495e0c61c43
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510803"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>HOW TO：建立本身為 UI 的增益集
 此範例示範如何建立增益集是 Windows Presentation Foundation (WPF) 所裝載的 WPF 獨立應用程式。  
@@ -104,6 +104,6 @@ ms.locfileid: "53396717"
   
  此活動完全與主應用程式隔離。  
   
-## <a name="see-also"></a>另請參閱  
- [增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [WPF 增益集概觀](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+## <a name="see-also"></a>另請參閱
+- [增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [WPF 增益集概觀](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
