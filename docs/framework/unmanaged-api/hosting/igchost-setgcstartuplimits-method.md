@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbe94aa67c9cf9ac587b7fca9f5cbeca4870506b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83a1c03c209d68035b3615c83ec0ee13b94eb549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719946"
 ---
-# <a name="igchostsetgcstartuplimits-method"></a><span data-ttu-id="9bff4-102">IGCHost::SetGCStartupLimits 方法</span><span class="sxs-lookup"><span data-stu-id="9bff4-102">IGCHost::SetGCStartupLimits Method</span></span>
-<span data-ttu-id="9bff4-103">層代 0 設定區段的大小和大小上限。</span><span class="sxs-lookup"><span data-stu-id="9bff4-103">Sets the segment size and the maximum size for generation 0.</span></span>  
+# <a name="igchostsetgcstartuplimits-method"></a><span data-ttu-id="a4af2-102">IGCHost::SetGCStartupLimits 方法</span><span class="sxs-lookup"><span data-stu-id="a4af2-102">IGCHost::SetGCStartupLimits Method</span></span>
+<span data-ttu-id="a4af2-103">層代 0 設定區段的大小和大小上限。</span><span class="sxs-lookup"><span data-stu-id="a4af2-103">Sets the segment size and the maximum size for generation 0.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="9bff4-104">從開始[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，您可以設定區段的大小和最大層代 0 大小值大於`DWORD`使用[igchost2:: Setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="9bff4-104">Starting with the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], you can set segment size and maximum generation 0 size to values greater than `DWORD` by using the [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) method.</span></span>  
+>  <span data-ttu-id="a4af2-104">開頭[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，您可以設定區段的大小和最大層代 0 大小值大於`DWORD`利用[IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="a4af2-104">Starting with the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], you can set segment size and maximum generation 0 size to values greater than `DWORD` by using the [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9bff4-105">語法</span><span class="sxs-lookup"><span data-stu-id="9bff4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4af2-105">語法</span><span class="sxs-lookup"><span data-stu-id="a4af2-105">Syntax</span></span>  
   
 ```  
 HRESULT SetGCStartupLimits (  
@@ -39,24 +39,24 @@ HRESULT SetGCStartupLimits (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9bff4-106">參數</span><span class="sxs-lookup"><span data-stu-id="9bff4-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a4af2-106">參數</span><span class="sxs-lookup"><span data-stu-id="a4af2-106">Parameters</span></span>  
  `SegmentSize`  
- <span data-ttu-id="9bff4-107">[in]記憶體回收系統所使用的區段大小。</span><span class="sxs-lookup"><span data-stu-id="9bff4-107">[in] The size of the segment used by the garbage collection system.</span></span>  
+ <span data-ttu-id="a4af2-107">[in]記憶體回收系統所使用的區段大小。</span><span class="sxs-lookup"><span data-stu-id="a4af2-107">[in] The size of the segment used by the garbage collection system.</span></span>  
   
  `MaxGen0Size`  
- <span data-ttu-id="9bff4-108">[in]層代 0 的大小上限。</span><span class="sxs-lookup"><span data-stu-id="9bff4-108">[in] The maximum size for generation 0.</span></span>  
+ <span data-ttu-id="a4af2-108">[in]層代 0 的大小上限。</span><span class="sxs-lookup"><span data-stu-id="a4af2-108">[in] The maximum size for generation 0.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9bff4-109">備註</span><span class="sxs-lookup"><span data-stu-id="9bff4-109">Remarks</span></span>  
- <span data-ttu-id="9bff4-110">`SetGCStartupLimits`方法可能會呼叫一次。</span><span class="sxs-lookup"><span data-stu-id="9bff4-110">The `SetGCStartupLimits` method may be called only once.</span></span> <span data-ttu-id="9bff4-111">無法在稍後變更這些值。</span><span class="sxs-lookup"><span data-stu-id="9bff4-111">These values cannot be changed later.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a4af2-109">備註</span><span class="sxs-lookup"><span data-stu-id="a4af2-109">Remarks</span></span>  
+ <span data-ttu-id="a4af2-110">`SetGCStartupLimits`可能只有一次呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="a4af2-110">The `SetGCStartupLimits` method may be called only once.</span></span> <span data-ttu-id="a4af2-111">稍後無法變更這些值。</span><span class="sxs-lookup"><span data-stu-id="a4af2-111">These values cannot be changed later.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9bff4-112">需求</span><span class="sxs-lookup"><span data-stu-id="9bff4-112">Requirements</span></span>  
- <span data-ttu-id="9bff4-113">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9bff4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4af2-112">需求</span><span class="sxs-lookup"><span data-stu-id="a4af2-112">Requirements</span></span>  
+ <span data-ttu-id="a4af2-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a4af2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9bff4-114">**標頭：** GCHost.idl、 GCHost.h</span><span class="sxs-lookup"><span data-stu-id="9bff4-114">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="a4af2-114">**標頭：** GCHost.idl GCHost.h</span><span class="sxs-lookup"><span data-stu-id="a4af2-114">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="9bff4-115">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="9bff4-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a4af2-115">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="a4af2-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9bff4-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9bff4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a4af2-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4af2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9bff4-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9bff4-117">See Also</span></span>  
- [<span data-ttu-id="9bff4-118">IGCHost 介面</span><span class="sxs-lookup"><span data-stu-id="9bff4-118">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a4af2-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a4af2-117">See also</span></span>
+- [<span data-ttu-id="a4af2-118">IGCHost 介面</span><span class="sxs-lookup"><span data-stu-id="a4af2-118">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

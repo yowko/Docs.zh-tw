@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee1cfe52caa9d727a132d7adc23b03575293db65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444135"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716774"
 ---
-# <a name="corvalidatormoduletype-enumeration"></a><span data-ttu-id="f23b7-102">CorValidatorModuleType 列舉</span><span class="sxs-lookup"><span data-stu-id="f23b7-102">CorValidatorModuleType Enumeration</span></span>
-<span data-ttu-id="f23b7-103">指定模組的類型。</span><span class="sxs-lookup"><span data-stu-id="f23b7-103">Specifies the type of a module.</span></span>  
+# <a name="corvalidatormoduletype-enumeration"></a><span data-ttu-id="eb227-102">CorValidatorModuleType 列舉</span><span class="sxs-lookup"><span data-stu-id="eb227-102">CorValidatorModuleType Enumeration</span></span>
+<span data-ttu-id="eb227-103">指定模組的類型。</span><span class="sxs-lookup"><span data-stu-id="eb227-103">Specifies the type of a module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f23b7-104">語法</span><span class="sxs-lookup"><span data-stu-id="f23b7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb227-104">語法</span><span class="sxs-lookup"><span data-stu-id="eb227-104">Syntax</span></span>  
   
 ```  
 typedef enum  
@@ -41,26 +41,26 @@ typedef enum
 } CorValidatorModuleType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f23b7-105">成員</span><span class="sxs-lookup"><span data-stu-id="f23b7-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="eb227-105">成員</span><span class="sxs-lookup"><span data-stu-id="eb227-105">Members</span></span>  
   
-|<span data-ttu-id="f23b7-106">成員</span><span class="sxs-lookup"><span data-stu-id="f23b7-106">Member</span></span>|<span data-ttu-id="f23b7-107">描述</span><span class="sxs-lookup"><span data-stu-id="f23b7-107">Description</span></span>|  
+|<span data-ttu-id="eb227-106">成員</span><span class="sxs-lookup"><span data-stu-id="eb227-106">Member</span></span>|<span data-ttu-id="eb227-107">描述</span><span class="sxs-lookup"><span data-stu-id="eb227-107">Description</span></span>|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|<span data-ttu-id="f23b7-108">此模組是無效的類型。</span><span class="sxs-lookup"><span data-stu-id="f23b7-108">The module is an invalid type.</span></span>|  
-|`ValidatorModuleTypeMin`|<span data-ttu-id="f23b7-109">最小值`CorValidatorModuleType`列舉。</span><span class="sxs-lookup"><span data-stu-id="f23b7-109">The minimum value of the `CorValidatorModuleType` enum.</span></span>|  
-|`ValidatorModuleTypePE`|<span data-ttu-id="f23b7-110">模組是可攜式執行檔 (PE) 檔。</span><span class="sxs-lookup"><span data-stu-id="f23b7-110">The module is a portable executable (PE) file.</span></span>|  
-|`ValidatorModuleTypeObj`|<span data-ttu-id="f23b7-111">模組是.obj 檔。</span><span class="sxs-lookup"><span data-stu-id="f23b7-111">The module is a .obj file.</span></span>|  
-|`ValidatorModuleTypeEnc`|<span data-ttu-id="f23b7-112">模組是 「 編輯後繼續偵錯工具工作階段。</span><span class="sxs-lookup"><span data-stu-id="f23b7-112">The module is an edit-and-continue debugger session.</span></span>|  
-|`ValidatorModuleTypeIncr`|<span data-ttu-id="f23b7-113">模組是以累加方式內建的其中一個。</span><span class="sxs-lookup"><span data-stu-id="f23b7-113">The module is one that has been incrementally built.</span></span>|  
-|`ValidatorModuleTypeMax`|<span data-ttu-id="f23b7-114">最大值`CorValidatorModuleType`列舉。</span><span class="sxs-lookup"><span data-stu-id="f23b7-114">The maximum value of the `CorValidatorModuleType` enum.</span></span>|  
+|`ValidatorModuleTypeInvalid`|<span data-ttu-id="eb227-108">此模組是無效的類型。</span><span class="sxs-lookup"><span data-stu-id="eb227-108">The module is an invalid type.</span></span>|  
+|`ValidatorModuleTypeMin`|<span data-ttu-id="eb227-109">最小值`CorValidatorModuleType`列舉。</span><span class="sxs-lookup"><span data-stu-id="eb227-109">The minimum value of the `CorValidatorModuleType` enum.</span></span>|  
+|`ValidatorModuleTypePE`|<span data-ttu-id="eb227-110">此模組是可攜式執行檔 (PE) 檔案。</span><span class="sxs-lookup"><span data-stu-id="eb227-110">The module is a portable executable (PE) file.</span></span>|  
+|`ValidatorModuleTypeObj`|<span data-ttu-id="eb227-111">此模組是.obj 檔。</span><span class="sxs-lookup"><span data-stu-id="eb227-111">The module is a .obj file.</span></span>|  
+|`ValidatorModuleTypeEnc`|<span data-ttu-id="eb227-112">此模組是編輯後繼續偵錯工具工作階段。</span><span class="sxs-lookup"><span data-stu-id="eb227-112">The module is an edit-and-continue debugger session.</span></span>|  
+|`ValidatorModuleTypeIncr`|<span data-ttu-id="eb227-113">此模組是以累加方式內建的其中一個。</span><span class="sxs-lookup"><span data-stu-id="eb227-113">The module is one that has been incrementally built.</span></span>|  
+|`ValidatorModuleTypeMax`|<span data-ttu-id="eb227-114">最大值`CorValidatorModuleType`列舉。</span><span class="sxs-lookup"><span data-stu-id="eb227-114">The maximum value of the `CorValidatorModuleType` enum.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f23b7-115">需求</span><span class="sxs-lookup"><span data-stu-id="f23b7-115">Requirements</span></span>  
- <span data-ttu-id="f23b7-116">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f23b7-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb227-115">需求</span><span class="sxs-lookup"><span data-stu-id="eb227-115">Requirements</span></span>  
+ <span data-ttu-id="eb227-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="eb227-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f23b7-117">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f23b7-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="eb227-117">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="eb227-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f23b7-118">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="f23b7-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="eb227-118">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="eb227-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f23b7-119">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f23b7-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="eb227-119">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb227-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f23b7-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f23b7-120">See Also</span></span>  
- [<span data-ttu-id="f23b7-121">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="f23b7-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="eb227-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eb227-120">See also</span></span>
+- [<span data-ttu-id="eb227-121">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="eb227-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

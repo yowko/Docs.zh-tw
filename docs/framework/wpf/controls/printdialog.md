@@ -8,23 +8,23 @@ helpviewer_keywords:
 - controls [WPF], PrintDialog
 - PrintDialog control [WPF]
 ms.assetid: 0ce9e3e7-206f-45ec-b845-4c05cfb5ff1d
-ms.openlocfilehash: a1f69e0960e2882e3f31b5c79eaf0aab7a1e0e82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7def3ab16fe174008d1c7287786fd22566ce3d70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689296"
 ---
-# <a name="printdialog"></a><span data-ttu-id="2de72-102">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="2de72-102">PrintDialog</span></span>
-<span data-ttu-id="2de72-103"><xref:System.Windows.Controls.PrintDialog>控制項用來具現化的標準列印對話方塊會自動設定<xref:System.Printing.PrintTicket>和<xref:System.Printing.PrintQueue>根據使用者輸入。</span><span class="sxs-lookup"><span data-stu-id="2de72-103">The <xref:System.Windows.Controls.PrintDialog> control is used to instantiate a standard print dialog box that automatically configures a <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintQueue> according to user input.</span></span>  
+# <a name="printdialog"></a><span data-ttu-id="4213f-102">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="4213f-102">PrintDialog</span></span>
+<span data-ttu-id="4213f-103"><xref:System.Windows.Controls.PrintDialog>控制項用來具現化的標準列印對話方塊會自動設定<xref:System.Printing.PrintTicket>和<xref:System.Printing.PrintQueue>根據使用者輸入。</span><span class="sxs-lookup"><span data-stu-id="4213f-103">The <xref:System.Windows.Controls.PrintDialog> control is used to instantiate a standard print dialog box that automatically configures a <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintQueue> according to user input.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="2de72-104">參考資料</span><span class="sxs-lookup"><span data-stu-id="2de72-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4213f-104">參考資料</span><span class="sxs-lookup"><span data-stu-id="4213f-104">Reference</span></span>  
  <xref:System.Windows.Controls.PrintDialog>  
   
  <xref:System.Printing.PrintTicket>  
   
  <xref:System.Printing.PrintQueue>  
   
-## <a name="see-also"></a><span data-ttu-id="2de72-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2de72-105">See Also</span></span>  
- [<span data-ttu-id="2de72-106">列印概觀</span><span class="sxs-lookup"><span data-stu-id="2de72-106">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [<span data-ttu-id="2de72-107">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="2de72-107">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="4213f-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4213f-105">See also</span></span>
+- [<span data-ttu-id="4213f-106">列印概觀</span><span class="sxs-lookup"><span data-stu-id="4213f-106">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [<span data-ttu-id="4213f-107">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="4213f-107">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

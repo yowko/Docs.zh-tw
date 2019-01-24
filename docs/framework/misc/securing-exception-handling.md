@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe978930a9f84e0084f79f5fe585a1ecc3bf4eb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679379"
 ---
-# <a name="securing-exception-handling"></a><span data-ttu-id="c818d-102">設定例外狀況處理的安全性</span><span class="sxs-lookup"><span data-stu-id="c818d-102">Securing Exception Handling</span></span>
-<span data-ttu-id="c818d-103">在 Visual c + + 和 Visual Basic 中，執行才能進行任何進一步篩選條件運算式堆疊**最後**陳述式。</span><span class="sxs-lookup"><span data-stu-id="c818d-103">In Visual C++ and Visual Basic, a filter expression further up the stack runs before any **finally** statement.</span></span> <span data-ttu-id="c818d-104">**攔截**與相關聯的區塊之後，該篩選條件執行**最後**陳述式。</span><span class="sxs-lookup"><span data-stu-id="c818d-104">The **catch** block associated with that filter runs after the **finally** statement.</span></span> <span data-ttu-id="c818d-105">如需詳細資訊，請參閱[使用使用者篩選例外狀況](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)。</span><span class="sxs-lookup"><span data-stu-id="c818d-105">For more information, see [Using User-Filtered Exceptions](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span></span> <span data-ttu-id="c818d-106">本節會檢查此順序的安全性含意。</span><span class="sxs-lookup"><span data-stu-id="c818d-106">This section examines the security implications of this order.</span></span> <span data-ttu-id="c818d-107">請考慮下列虛擬程式碼範例所說明的篩選陳述式中的順序和**最後**執行的陳述式。</span><span class="sxs-lookup"><span data-stu-id="c818d-107">Consider the following pseudocode example that illustrates the order in which filter statements and **finally** statements run.</span></span>  
+# <a name="securing-exception-handling"></a><span data-ttu-id="9b679-102">設定例外狀況處理的安全性</span><span class="sxs-lookup"><span data-stu-id="9b679-102">Securing Exception Handling</span></span>
+<span data-ttu-id="9b679-103">在 Visual c + + 和 Visual Basic 中，進一步篩選條件運算式堆疊會執行任何之前**最後**陳述式。</span><span class="sxs-lookup"><span data-stu-id="9b679-103">In Visual C++ and Visual Basic, a filter expression further up the stack runs before any **finally** statement.</span></span> <span data-ttu-id="9b679-104">**攔截**相關聯的區塊之後執行的該篩選條件**最後**陳述式。</span><span class="sxs-lookup"><span data-stu-id="9b679-104">The **catch** block associated with that filter runs after the **finally** statement.</span></span> <span data-ttu-id="9b679-105">如需詳細資訊，請參閱 <<c0> [ 使用使用者篩選例外狀況](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)。</span><span class="sxs-lookup"><span data-stu-id="9b679-105">For more information, see [Using User-Filtered Exceptions](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span></span> <span data-ttu-id="9b679-106">本節將探討此順序的安全性含意。</span><span class="sxs-lookup"><span data-stu-id="9b679-106">This section examines the security implications of this order.</span></span> <span data-ttu-id="9b679-107">請考慮下列虛擬程式碼範例說明中的篩選陳述式的順序並**最後**執行的陳述式。</span><span class="sxs-lookup"><span data-stu-id="9b679-107">Consider the following pseudocode example that illustrates the order in which filter statements and **finally** statements run.</span></span>  
   
 ```cpp  
 void Main()   
@@ -51,7 +51,7 @@ void Sub()
 }                        
 ```  
   
- <span data-ttu-id="c818d-108">此程式碼會列印下列項目。</span><span class="sxs-lookup"><span data-stu-id="c818d-108">This code prints the following.</span></span>  
+ <span data-ttu-id="9b679-108">此程式碼會列印下列內容。</span><span class="sxs-lookup"><span data-stu-id="9b679-108">This code prints the following.</span></span>  
   
 ```  
 Throw  
@@ -60,7 +60,7 @@ Finally
 Catch  
 ```  
   
- <span data-ttu-id="c818d-109">篩選條件之前執行**最後**陳述式，因此可以使狀態變更的其他程式碼的執行位置無法充分利用的任何項目所導入的安全性問題。</span><span class="sxs-lookup"><span data-stu-id="c818d-109">The filter runs before the **finally** statement, so security issues can be introduced by anything that makes a state change where execution of other code could take advantage.</span></span> <span data-ttu-id="c818d-110">例如: </span><span class="sxs-lookup"><span data-stu-id="c818d-110">For example:</span></span>  
+ <span data-ttu-id="9b679-109">篩選條件之前執行**最後**陳述式，所以安全性問題會造成任何項目會變更其中執行的其他程式碼無法充分利用的狀態。</span><span class="sxs-lookup"><span data-stu-id="9b679-109">The filter runs before the **finally** statement, so security issues can be introduced by anything that makes a state change where execution of other code could take advantage.</span></span> <span data-ttu-id="9b679-110">例如: </span><span class="sxs-lookup"><span data-stu-id="9b679-110">For example:</span></span>  
   
 ```cpp  
 try   
@@ -79,7 +79,7 @@ finally
 }  
 ```  
   
- <span data-ttu-id="c818d-111">此虛擬程式碼可讓篩選器來執行任意程式碼的堆疊。</span><span class="sxs-lookup"><span data-stu-id="c818d-111">This pseudocode allows a filter higher up the stack to run arbitrary code.</span></span> <span data-ttu-id="c818d-112">作業會有類似的效果的其他範例的其他身分識別，將會略過部分安全性檢查，內部旗標設定暫時模擬或變更文化特性與執行緒相關聯。</span><span class="sxs-lookup"><span data-stu-id="c818d-112">Other examples of operations that would have a similar effect are temporary impersonation of another identity, setting an internal flag that bypasses some security check, or changing the culture associated with the thread.</span></span> <span data-ttu-id="c818d-113">建議的解決方案是導入執行緒狀態來隔離的程式碼變更，從呼叫端的篩選條件區塊的例外狀況處理常式。</span><span class="sxs-lookup"><span data-stu-id="c818d-113">The recommended solution is to introduce an exception handler to isolate the code's changes to thread state from callers' filter blocks.</span></span> <span data-ttu-id="c818d-114">不過，很重要的例外狀況處理常式會正確導入，或將不會修正此問題。</span><span class="sxs-lookup"><span data-stu-id="c818d-114">However, it is important that the exception handler be properly introduced or this problem will not be fixed.</span></span> <span data-ttu-id="c818d-115">下列範例會切換的 UI 文化特性，但可以同樣地公開任何種類的執行緒狀態變更。</span><span class="sxs-lookup"><span data-stu-id="c818d-115">The following example switches the UI culture, but any kind of thread state change could be similarly exposed.</span></span>  
+ <span data-ttu-id="9b679-111">此虛擬程式碼可讓執行任意程式碼堆疊中較高的篩選。</span><span class="sxs-lookup"><span data-stu-id="9b679-111">This pseudocode allows a filter higher up the stack to run arbitrary code.</span></span> <span data-ttu-id="9b679-112">會有類似的效果的作業的其他範例的另一個身分識別，將會略過部分安全性檢查，內部旗標設定暫時模擬或變更文化特性相關聯的執行緒。</span><span class="sxs-lookup"><span data-stu-id="9b679-112">Other examples of operations that would have a similar effect are temporary impersonation of another identity, setting an internal flag that bypasses some security check, or changing the culture associated with the thread.</span></span> <span data-ttu-id="9b679-113">建議的解決方案是引入隔離執行緒狀態的程式碼的變更，從呼叫端的篩選器區塊的例外狀況處理常式。</span><span class="sxs-lookup"><span data-stu-id="9b679-113">The recommended solution is to introduce an exception handler to isolate the code's changes to thread state from callers' filter blocks.</span></span> <span data-ttu-id="9b679-114">不過，很重要的例外狀況處理常式會適當地導入，或將不會修正此問題。</span><span class="sxs-lookup"><span data-stu-id="9b679-114">However, it is important that the exception handler be properly introduced or this problem will not be fixed.</span></span> <span data-ttu-id="9b679-115">下列範例會切換的 UI 文化特性，但可能會同樣地公開所有種類的執行緒狀態變更。</span><span class="sxs-lookup"><span data-stu-id="9b679-115">The following example switches the UI culture, but any kind of thread state change could be similarly exposed.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -116,7 +116,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- <span data-ttu-id="c818d-116">正確的修正程式在此情況下會包裝現有**再試一次**/**最後**中區塊**再試一次**/**攔截**區塊。</span><span class="sxs-lookup"><span data-stu-id="c818d-116">The correct fix in this case is to wrap the existing **try**/**finally** block in a **try**/**catch** block.</span></span> <span data-ttu-id="c818d-117">只要簡介**catch throw**到現有的子句**再試一次**/**最後**區塊仍無法解決問題，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="c818d-117">Simply introducing a **catch-throw** clause into the existing **try**/**finally** block does not fix the problem, as shown in the following example.</span></span>  
+ <span data-ttu-id="9b679-116">正確的修正方法在此情況下是包裝現有**嘗試**/**最後**中的區塊**試**/**攔截**區塊。</span><span class="sxs-lookup"><span data-stu-id="9b679-116">The correct fix in this case is to wrap the existing **try**/**finally** block in a **try**/**catch** block.</span></span> <span data-ttu-id="9b679-117">只要簡介**catch throw**至現有的子句**嘗試**/**最後**區塊無法解決此問題，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="9b679-117">Simply introducing a **catch-throw** clause into the existing **try**/**finally** block does not fix the problem, as shown in the following example.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +136,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- <span data-ttu-id="c818d-118">這樣無法修正問題，因為**最後**之前尚未執行陳述式`FilterFunc`取得控制項。</span><span class="sxs-lookup"><span data-stu-id="c818d-118">This does not fix the problem because the **finally** statement has not run before the `FilterFunc` gets control.</span></span>  
+ <span data-ttu-id="9b679-118">這樣無法修正問題，因為**最後**之前尚未執行陳述式`FilterFunc`取得控制項。</span><span class="sxs-lookup"><span data-stu-id="9b679-118">This does not fix the problem because the **finally** statement has not run before the `FilterFunc` gets control.</span></span>  
   
- <span data-ttu-id="c818d-119">下列範例會修正此問題透過確保**最後**子句已先提供例外狀況，呼叫端的例外狀況篩選條件區塊上執行。</span><span class="sxs-lookup"><span data-stu-id="c818d-119">The following example fixes the problem by ensuring that the **finally** clause has executed before offering an exception up the callers' exception filter blocks.</span></span>  
+ <span data-ttu-id="9b679-119">下列範例可以修正問題，確保**最後**子句執行之前供應項目呼叫端的例外狀況篩選器區塊，例外狀況。</span><span class="sxs-lookup"><span data-stu-id="9b679-119">The following example fixes the problem by ensuring that the **finally** clause has executed before offering an exception up the callers' exception filter blocks.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -160,5 +160,5 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c818d-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c818d-120">See Also</span></span>  
- [<span data-ttu-id="c818d-121">安全程式碼撰寫方針</span><span class="sxs-lookup"><span data-stu-id="c818d-121">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="9b679-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9b679-120">See also</span></span>
+- [<span data-ttu-id="9b679-121">安全程式碼撰寫方針</span><span class="sxs-lookup"><span data-stu-id="9b679-121">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

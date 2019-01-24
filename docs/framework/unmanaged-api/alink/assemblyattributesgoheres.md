@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d68450d05f667851404a009c0984f8722253e71e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3506462aaf8d040126d979801460772b3cd47f9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402906"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706280"
 ---
-# <a name="assemblyattributesgoheres"></a><span data-ttu-id="925d0-102">AssemblyAttributesGoHereS</span><span class="sxs-lookup"><span data-stu-id="925d0-102">AssemblyAttributesGoHereS</span></span>
-<span data-ttu-id="925d0-103">供 ALink 用來做為儲存自訂屬性相關資訊的預留位置。</span><span class="sxs-lookup"><span data-stu-id="925d0-103">Used by ALink as a placeholder to store information about custom attributes.</span></span>  
+# <a name="assemblyattributesgoheres"></a><span data-ttu-id="2e248-102">AssemblyAttributesGoHereS</span><span class="sxs-lookup"><span data-stu-id="2e248-102">AssemblyAttributesGoHereS</span></span>
+<span data-ttu-id="2e248-103">供 ALink 用來做為儲存自訂屬性相關資訊的預留位置。</span><span class="sxs-lookup"><span data-stu-id="2e248-103">Used by ALink as a placeholder to store information about custom attributes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="925d0-104">語法</span><span class="sxs-lookup"><span data-stu-id="925d0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2e248-104">語法</span><span class="sxs-lookup"><span data-stu-id="2e248-104">Syntax</span></span>  
   
 ```  
 AssemblyAttributesGoHereS  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="925d0-105">備註</span><span class="sxs-lookup"><span data-stu-id="925d0-105">Remarks</span></span>  
- <span data-ttu-id="925d0-106">這個類型的參考可能會內嵌在來源中包含組件自訂屬性的 netmodule 中。</span><span class="sxs-lookup"><span data-stu-id="925d0-106">References to this type might be embedded inside netmodules whose sources contain assembly custom attributes.</span></span> <span data-ttu-id="925d0-107">從一個或多個包含這些類型參考的 netmodule 建置組件資訊清單時，ALink 會使用附加至這些參考的資訊來發出真正的自訂屬性。</span><span class="sxs-lookup"><span data-stu-id="925d0-107">When building an assembly manifest from one or more netmodules that contain references to these types, ALink uses information attached to these references to emit real custom attributes.</span></span> <span data-ttu-id="925d0-108">因此，這個類型永遠不會具現化，而其參考只會用來做為建置流程的一部分，在最後的組件中並沒有任何用途。</span><span class="sxs-lookup"><span data-stu-id="925d0-108">As such, this type is never instantiated, and references to it are used only as part of the build process and serve no purpose in the final assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2e248-105">備註</span><span class="sxs-lookup"><span data-stu-id="2e248-105">Remarks</span></span>  
+ <span data-ttu-id="2e248-106">這個類型的參考可能會內嵌在來源中包含組件自訂屬性的 netmodule 中。</span><span class="sxs-lookup"><span data-stu-id="2e248-106">References to this type might be embedded inside netmodules whose sources contain assembly custom attributes.</span></span> <span data-ttu-id="2e248-107">從一個或多個包含這些類型參考的 netmodule 建置組件資訊清單時，ALink 會使用附加至這些參考的資訊來發出真正的自訂屬性。</span><span class="sxs-lookup"><span data-stu-id="2e248-107">When building an assembly manifest from one or more netmodules that contain references to these types, ALink uses information attached to these references to emit real custom attributes.</span></span> <span data-ttu-id="2e248-108">因此，這個類型永遠不會具現化，而其參考只會用來做為建置流程的一部分，在最後的組件中並沒有任何用途。</span><span class="sxs-lookup"><span data-stu-id="2e248-108">As such, this type is never instantiated, and references to it are used only as part of the build process and serve no purpose in the final assembly.</span></span>  
   
- <span data-ttu-id="925d0-109">這個類型的參考會指出與安全性相關且不是多用途的自訂屬性。</span><span class="sxs-lookup"><span data-stu-id="925d0-109">References to this type indicate custom attributes that are security related and are not multiple-use.</span></span>  
+ <span data-ttu-id="2e248-109">這個類型的參考會指出與安全性相關且不是多用途的自訂屬性。</span><span class="sxs-lookup"><span data-stu-id="2e248-109">References to this type indicate custom attributes that are security related and are not multiple-use.</span></span>  
   
- <span data-ttu-id="925d0-110">這些類型會在 .NET Framework 中標示為「內部」，其位於 <xref:System.Runtime.CompilerServices>。</span><span class="sxs-lookup"><span data-stu-id="925d0-110">These types are marked "internal" within the .NET Framework, and are located in <xref:System.Runtime.CompilerServices>.</span></span>  
+ <span data-ttu-id="2e248-110">這些類型會在 .NET Framework 中標示為「內部」，其位於 <xref:System.Runtime.CompilerServices>。</span><span class="sxs-lookup"><span data-stu-id="2e248-110">These types are marked "internal" within the .NET Framework, and are located in <xref:System.Runtime.CompilerServices>.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="925d0-111">需求</span><span class="sxs-lookup"><span data-stu-id="925d0-111">Requirements</span></span>  
- <span data-ttu-id="925d0-112">mscorlib.dll</span><span class="sxs-lookup"><span data-stu-id="925d0-112">mscorlib.dll</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2e248-111">需求</span><span class="sxs-lookup"><span data-stu-id="2e248-111">Requirements</span></span>  
+ <span data-ttu-id="2e248-112">mscorlib.dll</span><span class="sxs-lookup"><span data-stu-id="2e248-112">mscorlib.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="925d0-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="925d0-113">See Also</span></span>  
- [<span data-ttu-id="925d0-114">AssemblyAttributesGoHere</span><span class="sxs-lookup"><span data-stu-id="925d0-114">AssemblyAttributesGoHere</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)  
- [<span data-ttu-id="925d0-115">AssemblyAttributesGoHereM</span><span class="sxs-lookup"><span data-stu-id="925d0-115">AssemblyAttributesGoHereM</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)  
- [<span data-ttu-id="925d0-116">AssemblyAttributesGoHereSM</span><span class="sxs-lookup"><span data-stu-id="925d0-116">AssemblyAttributesGoHereSM</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)
+## <a name="see-also"></a><span data-ttu-id="2e248-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2e248-113">See also</span></span>
+- [<span data-ttu-id="2e248-114">AssemblyAttributesGoHere</span><span class="sxs-lookup"><span data-stu-id="2e248-114">AssemblyAttributesGoHere</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)
+- [<span data-ttu-id="2e248-115">AssemblyAttributesGoHereM</span><span class="sxs-lookup"><span data-stu-id="2e248-115">AssemblyAttributesGoHereM</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)
+- [<span data-ttu-id="2e248-116">AssemblyAttributesGoHereSM</span><span class="sxs-lookup"><span data-stu-id="2e248-116">AssemblyAttributesGoHereSM</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)

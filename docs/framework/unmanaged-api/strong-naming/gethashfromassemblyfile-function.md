@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e9c0abcd395caf09ebe11e060a4b922e78ad1e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83e3ba8644af1f630b5c9ad5268ec44750badc88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457928"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682040"
 ---
-# <a name="gethashfromassemblyfile-function"></a><span data-ttu-id="5c82b-102">GetHashFromAssemblyFile 函式</span><span class="sxs-lookup"><span data-stu-id="5c82b-102">GetHashFromAssemblyFile Function</span></span>
-<span data-ttu-id="5c82b-103">取得指定的組件檔案，使用指定的雜湊演算法的雜湊。</span><span class="sxs-lookup"><span data-stu-id="5c82b-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
+# <a name="gethashfromassemblyfile-function"></a><span data-ttu-id="aed34-102">GetHashFromAssemblyFile 函式</span><span class="sxs-lookup"><span data-stu-id="aed34-102">GetHashFromAssemblyFile Function</span></span>
+<span data-ttu-id="aed34-103">使用指定的雜湊演算法取得所指定組件檔案的雜湊。</span><span class="sxs-lookup"><span data-stu-id="aed34-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
   
- <span data-ttu-id="5c82b-104">此函式已被取代。</span><span class="sxs-lookup"><span data-stu-id="5c82b-104">This function has been deprecated.</span></span> <span data-ttu-id="5c82b-105">使用[iclrstrongname:: Gethashfromassemblyfile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="5c82b-105">Use the [ICLRStrongName::GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md) method instead.</span></span>  
+ <span data-ttu-id="aed34-104">此函式已被取代。</span><span class="sxs-lookup"><span data-stu-id="aed34-104">This function has been deprecated.</span></span> <span data-ttu-id="aed34-105">使用[iclrstrongname:: Gethashfromassemblyfile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="aed34-105">Use the [ICLRStrongName::GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5c82b-106">語法</span><span class="sxs-lookup"><span data-stu-id="5c82b-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aed34-106">語法</span><span class="sxs-lookup"><span data-stu-id="aed34-106">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromAssemblyFile (  
@@ -40,32 +40,32 @@ HRESULT GetHashFromAssemblyFile (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5c82b-107">參數</span><span class="sxs-lookup"><span data-stu-id="5c82b-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="aed34-107">參數</span><span class="sxs-lookup"><span data-stu-id="aed34-107">Parameters</span></span>  
  `szFilePath`  
- <span data-ttu-id="5c82b-108">[in]要雜湊檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="5c82b-108">[in] The path to the file to be hashed.</span></span>  
+ <span data-ttu-id="aed34-108">[in]要雜湊檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="aed34-108">[in] The path to the file to be hashed.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="5c82b-109">[in、 out]常數，指定的雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="5c82b-109">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="5c82b-110">使用預設雜湊演算法的零。</span><span class="sxs-lookup"><span data-stu-id="5c82b-110">Use zero for the default hash algorithm.</span></span>  
+ <span data-ttu-id="aed34-109">[in、 out]常數，指定的雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="aed34-109">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="aed34-110">使用預設雜湊演算法的零。</span><span class="sxs-lookup"><span data-stu-id="aed34-110">Use zero for the default hash algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="5c82b-111">[out]傳回雜湊緩衝區。</span><span class="sxs-lookup"><span data-stu-id="5c82b-111">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="aed34-111">[out]傳回的雜湊緩衝區。</span><span class="sxs-lookup"><span data-stu-id="aed34-111">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="5c82b-112">[in]要求的大小上限的`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="5c82b-112">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="aed34-112">[in]要求的最大大小的`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="aed34-112">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="5c82b-113">[out]傳回的大小，以位元組為單位， `pbHash`。</span><span class="sxs-lookup"><span data-stu-id="5c82b-113">[out] The returned size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="aed34-113">[out]傳回大小，以位元組為單位， `pbHash`。</span><span class="sxs-lookup"><span data-stu-id="aed34-113">[out] The returned size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5c82b-114">需求</span><span class="sxs-lookup"><span data-stu-id="5c82b-114">Requirements</span></span>  
- <span data-ttu-id="5c82b-115">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5c82b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aed34-114">需求</span><span class="sxs-lookup"><span data-stu-id="aed34-114">Requirements</span></span>  
+ <span data-ttu-id="aed34-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="aed34-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5c82b-116">**標頭：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="5c82b-116">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="aed34-116">**標頭：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="aed34-116">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="5c82b-117">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="5c82b-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="aed34-117">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="aed34-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5c82b-118">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c82b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="aed34-118">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aed34-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5c82b-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5c82b-119">See Also</span></span>  
- [<span data-ttu-id="5c82b-120">GetHashFromAssemblyFile 方法</span><span class="sxs-lookup"><span data-stu-id="5c82b-120">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)  
- [<span data-ttu-id="5c82b-121">GetHashFromAssemblyFileW 方法</span><span class="sxs-lookup"><span data-stu-id="5c82b-121">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)  
- [<span data-ttu-id="5c82b-122">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="5c82b-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="aed34-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aed34-119">See also</span></span>
+- [<span data-ttu-id="aed34-120">GetHashFromAssemblyFile 方法</span><span class="sxs-lookup"><span data-stu-id="aed34-120">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [<span data-ttu-id="aed34-121">GetHashFromAssemblyFileW 方法</span><span class="sxs-lookup"><span data-stu-id="aed34-121">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [<span data-ttu-id="aed34-122">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="aed34-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
