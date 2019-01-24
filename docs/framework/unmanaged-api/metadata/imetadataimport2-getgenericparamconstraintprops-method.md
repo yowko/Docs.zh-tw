@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1d76dcd581b54d54d6b44505e09476993b2930c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a7761c2f15cd51bff798e1b12c3a5824930b344d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446813"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617716"
 ---
-# <a name="imetadataimport2getgenericparamconstraintprops-method"></a><span data-ttu-id="f248e-102">IMetaDataImport2::GetGenericParamConstraintProps 方法</span><span class="sxs-lookup"><span data-stu-id="f248e-102">IMetaDataImport2::GetGenericParamConstraintProps Method</span></span>
-<span data-ttu-id="f248e-103">取得與指定的條件約束語彙基元所代表的泛型參數條件約束相關聯的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="f248e-103">Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.</span></span>  
+# <a name="imetadataimport2getgenericparamconstraintprops-method"></a><span data-ttu-id="d6b9f-102">IMetaDataImport2::GetGenericParamConstraintProps 方法</span><span class="sxs-lookup"><span data-stu-id="d6b9f-102">IMetaDataImport2::GetGenericParamConstraintProps Method</span></span>
+<span data-ttu-id="d6b9f-103">取得與指定的條件約束語彙基元所代表的泛型參數條件約束相關聯的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="d6b9f-103">Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f248e-104">語法</span><span class="sxs-lookup"><span data-stu-id="f248e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d6b9f-104">語法</span><span class="sxs-lookup"><span data-stu-id="d6b9f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGenericParamConstraintProps (  
@@ -37,25 +37,25 @@ HRESULT GetGenericParamConstraintProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f248e-105">參數</span><span class="sxs-lookup"><span data-stu-id="f248e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d6b9f-105">參數</span><span class="sxs-lookup"><span data-stu-id="d6b9f-105">Parameters</span></span>  
  `gpc`  
- <span data-ttu-id="f248e-106">[in]泛型參數條件約束，這是要傳回的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="f248e-106">[in] The token to the generic parameter constraint for which to return the metadata.</span></span>  
+ <span data-ttu-id="d6b9f-106">[in]泛型參數條件約束，要傳回的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="d6b9f-106">[in] The token to the generic parameter constraint for which to return the metadata.</span></span>  
   
  `ptGenericParam`  
- <span data-ttu-id="f248e-107">[out]代表所限制泛型參數的語彙基元的指標。</span><span class="sxs-lookup"><span data-stu-id="f248e-107">[out] A pointer to the token that represents the generic parameter that is constrained.</span></span>  
+ <span data-ttu-id="d6b9f-107">[out]指標，代表泛型參數受限制的權杖。</span><span class="sxs-lookup"><span data-stu-id="d6b9f-107">[out] A pointer to the token that represents the generic parameter that is constrained.</span></span>  
   
  `ptkConstraintType`  
- <span data-ttu-id="f248e-108">[out]表示條件約束 TypeDef 的 TypeRef，TypeSpec 語彙基元的指標`ptGenericParam`。</span><span class="sxs-lookup"><span data-stu-id="f248e-108">[out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.</span></span>  
+ <span data-ttu-id="d6b9f-108">[out]表示條件約束的 TypeDef、 TypeRef 或 TypeSpec 語彙基元的指標`ptGenericParam`。</span><span class="sxs-lookup"><span data-stu-id="d6b9f-108">[out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f248e-109">需求</span><span class="sxs-lookup"><span data-stu-id="f248e-109">Requirements</span></span>  
- <span data-ttu-id="f248e-110">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f248e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d6b9f-109">需求</span><span class="sxs-lookup"><span data-stu-id="d6b9f-109">Requirements</span></span>  
+ <span data-ttu-id="d6b9f-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d6b9f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f248e-111">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f248e-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d6b9f-111">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d6b9f-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f248e-112">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="f248e-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d6b9f-112">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="d6b9f-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f248e-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f248e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d6b9f-113">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6b9f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f248e-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f248e-114">See Also</span></span>  
- [<span data-ttu-id="f248e-115">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="f248e-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [<span data-ttu-id="f248e-116">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="f248e-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d6b9f-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d6b9f-114">See also</span></span>
+- [<span data-ttu-id="d6b9f-115">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="d6b9f-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="d6b9f-116">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="d6b9f-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
