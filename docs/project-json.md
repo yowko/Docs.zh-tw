@@ -4,12 +4,12 @@ description: 哪裡可以找到 .NET Core 和 ASP.NET Core 發行前版本工具
 author: mairaw
 ms.author: mairaw
 ms.date: 03/08/2017
-ms.openlocfilehash: f5f4dd8f335d940d5c63baef73e83dd3d0eccf6e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ccdf897727ed52ccbed3e56b5a9a08cb45427d70
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47216613"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361959"
 ---
 # <a name="projectjson-and-visual-studio-2015-with-net-core"></a>具有 .NET Core 的 project.json 和 Visual Studio 2015
 
@@ -17,12 +17,9 @@ ms.locfileid: "47216613"
 
 3 月 7 日以前的文件版本是以 PDF 檔案及文件存放庫中的分支來提供。
 
-## <a name="pdf-files"></a>PDF 檔案
+## <a name="pdf-documentation"></a>PDF 文件
 
-舊版文件的最佳來源是 PDF 檔案：
-
-* [.NET Core - project.json 和 Visual Studio 2015 的 PDF](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf)
-* [ASP.NET Core - project.json 和 Visual Studio 2015 的 PDF](https://github.com/aspnet/Docs/blob/master/aspnetcore/common/_static/aspnet-core-project-json.pdf)
+舊版文件的最佳來源是 [.NET Core - project.json 和 Visual Studio 2015 的 PDF](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf) \(英文\)。
 
 ## <a name="documentation-repository-branch"></a>文件存放庫分支
 

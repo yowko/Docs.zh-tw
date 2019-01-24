@@ -1,15 +1,15 @@
 ---
-title: 逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的型別 (C#)
+title: 逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的類型 (C#)
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 1900c62d1ebaf611f141f8f1bdf95f8d11f82140
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 33686dcfee90db2d0a99339a728eb6e2bd7139f5
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004321"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415711"
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的型別 (C#)
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的類型 (C#)
 若要內嵌來自強式名稱 Managed 組件的類型資訊，您可以鬆散地結合應用程式中的類型以確保版本獨立。 也就是說，您可以撰寫程式來使用 Managed 程式庫多個版本的類型，而不需重新編譯每個版本。  
   
  內嵌型別時，通常會搭配使用 COM Interop (例如從 Microsoft Office 使用 Automation 物件的應用程式)。 當您內嵌類型資訊時，可讓相同組建的程式使用不同電腦上版本各異的 Microsoft Office。 不過，您也可以搭配使用類型內嵌功能與完全受管理的解決方案。  
@@ -136,7 +136,7 @@ ms.locfileid: "46004321"
                 p_UserInput = Console.ReadLine();  
             }  
         }  
-    )  
+    }  
     ```  
   
 9. 儲存專案。  

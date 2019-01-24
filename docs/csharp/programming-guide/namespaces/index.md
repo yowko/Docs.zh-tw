@@ -1,17 +1,11 @@
 ---
-title: 命名空間 - C# 程式設計手冊
+title: '命名空間 - C# 程式設計手冊'
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
-- C# language, namespaces
-- namespaces [C#]
+  - 'C# language, namespaces'
+  - 'namespaces [C#]'
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 4abdf8a0008ce50a89eb5f3ad3512a9579dc832a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236748"
 ---
 # <a name="namespaces-c-programming-guide"></a>命名空間 (C# 程式設計手冊)
 
@@ -51,9 +45,9 @@ C# 程式設計大量使用命名空間的原因有兩個。 首先，.NET Frame
 - [使用命名空間](using-namespaces.md)
 - [如何：使用全域命名空間別名](how-to-use-the-global-namespace-alias.md)
 - [如何：使用 My 命名空間](how-to-use-the-my-namespace.md)
-- [C# 程式設計指南](../index.md)  
+- [C# 程式設計指南](../index.md)
 - [識別碼名稱](../inside-a-program/identifier-names.md)
-- [命名空間關鍵字](../../language-reference/keywords/namespace-keywords.md)  
-- [using 指示詞](../../language-reference/keywords/using-directive.md)  
-- [::運算子](../../language-reference/operators/namespace-alias-qualifer.md)  
+- [命名空間關鍵字](../../language-reference/keywords/namespace-keywords.md)
+- [using 指示詞](../../language-reference/keywords/using-directive.md)
+- [::運算子](../../language-reference/operators/namespace-alias-qualifer.md)
 - [.運算子](../../language-reference/operators/member-access-operator.md)

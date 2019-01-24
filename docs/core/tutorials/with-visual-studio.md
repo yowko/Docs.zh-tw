@@ -1,16 +1,16 @@
 ---
-title: 在 Visual Studio 2017 中使用 .NET Core 來建置 C# Hello World 應用程式
+title: 在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式
 description: 了解如何使用 Visual Studio 2017 以 C# 建置簡單的 .NET Core 主控台應用程式。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 455058ad0a9155b8c6d2a267259783c2a7cc9815
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7a2a7b251f38a2f1add39e50e32a832adaedc965
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168919"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362792"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 來建置 C# Hello World 應用程式
 
@@ -76,9 +76,9 @@ ms.locfileid: "53168919"
 
 您已建立並執行應用程式。 若要開發專業的應用程式，請執行一些其他步驟，來針對發行準備應用程式：
 
-- 如需對應用程式進行偵錯的資訊，請參閱[使用 Visual Studio 2017 針對 C# Hello World 應用程式進行偵錯](debugging-with-visual-studio.md)。
+- 如需對應用程式進行偵錯的資訊，請參閱[使用 Visual Studio 2017 針對 .NET Core Hello World 應用程式進行偵錯](debugging-with-visual-studio.md)。
 
-- 如需開發和發行應用程式可散發版本的資訊，請參閱[使用 Visual Studio 2017 發行 C# Hello World 應用程式](publishing-with-visual-studio.md)。
+- 如需開發和發行應用程式可散發版本的資訊，請參閱[使用 Visual Studio 2017 發行 .NET Core Hello World 應用程式](publishing-with-visual-studio.md)。
 
 ## <a name="related-topics"></a>相關主題
 

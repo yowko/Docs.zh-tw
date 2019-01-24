@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232842"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415919"
 ---
 # <a name="tour-of-net"></a>.NET 教學課程
 
@@ -125,7 +125,7 @@ LINQ 是一組強大的 C# 和 VB 功能，可讓您撰寫簡單的宣告式程�
 
 Mono (以及 Xamarin) 對 Java 和 Objective-C 的互通性支援大致上很類似；也就是說，它們使用相同的原則。
 
-若要深入了解原生互通性，請參閱[原生互通性](native-interop.md)主題。
+如需原生互通性的詳細資訊，請參閱[原生互通性](native-interop/index.md)文章。
 
 ## <a name="unsafe-code"></a>Unsafe 程式碼
 

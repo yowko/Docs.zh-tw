@@ -1,24 +1,18 @@
 ---
-title: Main() 和命令列引數 - C# 程式設計指南
+title: 'Main() 和命令列引數 - C# 程式設計指南'
 ms.custom: seodec18
 ms.date: 08/02/2017
 f1_keywords:
-- CS5001
-- main_CSharpKeyword
-- Main
+  - CS5001
+  - main_CSharpKeyword
+  - Main
 helpviewer_keywords:
-- Main method [C#]
-- C# language, command-line arguments
-- arguments [C#], command-line
-- command line [C#], arguments
-- command-line arguments [C#], Main method
+  - 'Main method [C#]'
+  - 'C# language, command-line arguments'
+  - 'arguments [C#], command-line'
+  - 'command line [C#], arguments'
+  - 'command-line arguments [C#], Main method'
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: e9fcee86f8a3daed73adebb1f4ce3e16f7ea2042
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237086"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令列引數 (C# 程式設計指南)
 
@@ -44,7 +38,7 @@ ms.locfileid: "53237086"
 
 ## <a name="see-also"></a>另請參閱
 
-- [使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)  
+- [使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)

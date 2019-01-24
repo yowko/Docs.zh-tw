@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: b2975403c38dbb2b73c10b147a6903013a1e5573
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239286"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362310"
 ---
 # <a name="expressions-c-programming-guide"></a>運算式 (C# 程式設計手冊)
 「運算式」是一連串的一或多個運算元以及兩或多個運算子，可以評估為單一值、物件、方法或命名空間。 運算式可以包含常值、方法呼叫、運算子和其運算元，或「簡單名稱」。 簡單名稱可以是變數、型別成員、方法參數、命名空間或型別的名稱。  
@@ -25,7 +25,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>運算式值  
- 在大部分使用運算式的內容中 (例如在陳述式或方法參數中)，運算式必須評估為某個值。 如果 x 和 y 是整數，則運算式 `x + y` 評估為數值。 運算式 `new MyClass()` 評估為 `MyClass` 物件之新執行個體的參考。 運算式 `myClass.ToString()` 評估為字串，因為這是方法的傳回型別。 不過，雖然命名空間名稱分類為運算式，但是未評估為值，因此絕不會有任何運算式的最終結果。 您無法將命名空間名稱傳遞給方法參數，或用於新的運算式，或將它指派給變數。 您只能將它用作較大運算式中的子運算式。 這也適用於類型 (與 <xref:System.Type?displayProperty=nameWithType> 物件不同)、方法群組名稱 (與特定方法不同) 以及事件 [add](../../../csharp/language-reference/keywords/add.md) 和 [remove](../../../csharp/language-reference/keywords/remove.md) 存取子。  
+ 在大部分使用運算式的內容中 (例如在陳述式或方法參數中)，運算式必須評估為某個值。 如果 x 和 y 是整數，則運算式 `x + y` 評估為數值。 運算式 `new MyClass()` 評估為 `MyClass` 類別之新執行個體的參考。 運算式 `myClass.ToString()` 評估為字串，因為這是方法的傳回型別。 不過，雖然命名空間名稱分類為運算式，但是未評估為值，因此絕不會有任何運算式的最終結果。 您無法將命名空間名稱傳遞給方法參數，或用於新的運算式，或將它指派給變數。 您只能將它用作較大運算式中的子運算式。 這也適用於類型 (與 <xref:System.Type?displayProperty=nameWithType> 物件不同)、方法群組名稱 (與特定方法不同) 以及事件 [add](../../../csharp/language-reference/keywords/add.md) 和 [remove](../../../csharp/language-reference/keywords/remove.md) 存取子。  
   
  每個值都有關聯型別。 例如，如果 x 和 y 都是 `int` 類型的變數，則運算式 `x + y` 的值也會輸入為 `int`。 如果將值指派給不同類型的變數，或者，如果 x 和 y 是不同的類型，則會套用類型轉換規則。 如需這類轉換運作方式的詳細資訊，請參閱[轉換和類型轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。  
   

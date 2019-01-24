@@ -3,12 +3,12 @@ title: 在 Visual Studio 中使用 Roslyn 語法視覺化檢視瀏覽程式碼
 description: 語法視覺化檢視提供了視覺化工具來瀏覽 .NET 編譯器平台 SDK 為程式碼產生的模型。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143556"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307197"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>在 Visual Studio 中使用 Roslyn 語法視覺化檢視瀏覽程式碼
 
@@ -80,7 +80,7 @@ ms.locfileid: "53143556"
 
 另一個選項是將語法圖視窗放在雙重監視器設定的第二個監視器。
 
-# <a name="inspecting-semantics"></a>檢查語意
+## <a name="inspecting-semantics"></a>檢查語意
 
 語法視覺化檢視可以進行符號和語意資訊的基本檢查。 在 C# 範例中的 Main() 內輸入 `double x = 1 + 1;`。 然後，在程式碼編輯器視窗中選取運算式 `1 + 1`。 視覺化檢視會在視覺化檢視中反白顯示 **AddExpression** 節點。 以滑鼠右鍵按一下此 **AddExpression**，然後按一下 [檢視符號 (如果有的話)]。 請注意，大部分的功能表項目都有「如果有的話」這個限定詞。 語法視覺化檢視會檢查節點的屬性，包括可能不針對所有節點都存在的屬性。 
 

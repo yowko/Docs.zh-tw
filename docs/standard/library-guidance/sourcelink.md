@@ -3,13 +3,13 @@ title: SourceLink 與 .NET 程式庫
 description: 使用 SourceLink 改善 .NET 程式庫偵錯的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 3bc72e158a5773b656095f9ce58b442469f91e67
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/15/2019
+ms.openlocfilehash: be97f868e2fcfc6c45e4bbac45b033f8914f4d99
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128920"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333534"
 ---
 # <a name="sourcelink"></a>SourceLink
 
@@ -35,9 +35,9 @@ SourceLink 技術可讓開發人員對來自 NuGet 的 .NET 組件進行原始�
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> 指示偵錯工具逐步執行程式碼，而不要進入程式碼。
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> 控制成員是否要顯示在偵錯工具變數視窗中。
 
-**✔️ 請考慮**將符號檔 (`*.pdb`) 包含在 NuGet 套件中。
+**✔️ CONSIDER**發行符號檔 (`*.pdb`)。
 
-> 一般情況下，您會在[符號套件](./nuget.md#symbol-packages)中發佈符號檔。 目前適用於符號的主要公用主機並不支援由 SDK 樣式專案所建立的可攜式符號檔 (`*.pdb`)，因此符號套件的用處並不大。
+> 如需有關符號檔和符號套件的詳細資訊，請參閱[符號套件](./nuget.md#symbol-packages)。
 
 >[!div class="step-by-step"]
 >[上一頁](dependencies.md)

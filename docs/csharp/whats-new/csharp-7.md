@@ -3,12 +3,12 @@ title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言未來版本 7 的新功能概觀。
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 08e9b9d1a991c6dd18477214dec60fba95afc6c9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155284"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415724"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 的新功能
 
@@ -168,7 +168,7 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 ### <a name="is-expression"></a>`is` 運算式
 
-`is` 模式運算式會擴充熟悉的 `is` 運算子，來查詢其類型之外的物件。
+`is` 模式運算式會擴充熟悉的 [`is` 運算子](../language-reference/keywords/is.md#pattern-matching-with-is)，來查詢其類型之外的物件。
 
 舉個簡單的案例。 我們會將功能加入此案例中，示範模式比對運算式如何讓處理非相關類型的演算法變簡單。 我們將從計算數次擲骰子總和的方法開始︰
 

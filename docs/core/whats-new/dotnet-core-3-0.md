@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2018
-ms.openlocfilehash: 3ca833031eb8bb0f43a334f833f2e0075842d57d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 26fb7cb25b9bf7f00f87059fbe1848763f7f175d
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156666"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415542"
 ---
 # <a name="whats-new-in-net-core-30-preview-1"></a>.NET Core 3.0 (Preview 1) 的新功能
 
@@ -30,15 +30,12 @@ ms.locfileid: "53156666"
 
 ## <a name="default-executables"></a>預設可執行檔
 
-.NET Core 現在預設將會建置可執行檔。 這對於使用 .NET Core 全域安裝版本的應用程式來說，是一項新功能。 到目前為止，只有[獨立式部署](../deploying/index.md#self-contained-deployments-scd)具有可執行檔。
+.NET Core 現在預設將會建置 [Framework 依存性可執行檔](../deploying/index.md#framework-dependent-executables-fde)。 這對於使用 .NET Core 全域安裝版本的應用程式來說，是一項新功能。 到目前為止，只有[獨立式部署](../deploying/index.md#self-contained-deployments-scd)會產生可執行檔。
 
 進行 `dotnet build` 或 `dotnet publish` 期間，如果與您所使用 SDK 的環境和平台相符，就會建立可執行檔。 針對這些可執行檔，您可以預期能夠進行與其他原生可執行檔相同的操作，例如：
 
 * 您可以按兩下可執行檔。
 * 您可以直接從命令提示字元啟動應用程式，例如在 Windows 上為 `myapp.exe`，在 Linux 和 macOS 上為 `./myapp`。
-
-> [!NOTE]
-> 不支援使用 `dotnet publish -r` 或 `dotnet build -r` 引數為其他執行階段環境指定特定執行階段。
 
 ## <a name="build-copies-dependencies"></a>組建複本相依性
 

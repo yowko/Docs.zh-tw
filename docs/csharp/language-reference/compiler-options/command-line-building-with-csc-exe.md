@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 4b6dfdbce131371553fc729206de29794266bfbe
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 833308838c5087a657c8f718682aef8d971c188f
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584312"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415906"
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 建置命令列
 您可以在命令提示字元中輸入 C# 編譯器的可執行檔名稱 (*csc.exe*)，藉此叫用該編譯器。
@@ -26,11 +26,11 @@ ms.locfileid: "48584312"
 *csc.exe* 可執行檔通常位於 *Windows* 目錄下的 Microsoft.NET\Framework\\\<版本> 資料夾中。 它的位置可能依據特定電腦的實際組態而有所不同。 如果您的電腦上安裝了多個版本的 .NET Framework，您將看到這個檔案的多個版本。 如需這類安裝的詳細資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 > [!TIP]
->  當您使用 Visual Studio IDE 建置專案時，可以在 [輸出] 視窗中顯示 **csc** 命令和其關聯的編譯器選項。 若要顯示這項資訊，請遵循[如何：檢視、儲存和設定組建記錄檔](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)中的指示，將記錄資料的詳細等級變更為 [一般] 或 [詳細]。 在您重新建置專案之後，請在 [輸出] 視窗中搜尋 **csc**，尋找 C# 編譯器的引動過程。
+>  當您使用 Visual Studio IDE 建置專案時，可以在 [輸出] 視窗中顯示 **csc** 命令和其關聯的編譯器選項。 若要顯示這項資訊，請依照[如何：檢視、儲存和設定組建記錄檔](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)中的指示，將記錄資料的詳細等級變更為 [一般] 或 [詳細]。 在您重新建置專案之後，請在 [輸出] 視窗中搜尋 **csc**，尋找 C# 編譯器的引動過程。
 
  **本主題內容**
 
-- [命令列語法規則](#-rules-for-command-line-syntax-for-the-c-compiler)
+- [命令列語法規則](#rules-for-command-line-syntax-for-the-c-compiler)
 
 - [範例命令列](#sample-command-lines-for-the-c-compiler)
 

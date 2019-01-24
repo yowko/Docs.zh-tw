@@ -8,19 +8,21 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: a55a2148ce161deca79d8ba8e64a217e474f0284
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 927640b63773d24be93cc90427668f9568a39652
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236813"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362726"
 ---
-# <a name="conversion-operators-c-programming-guide"></a>轉換運算子 (C# 程式設計手冊)
+# <a name="conversion-operators-c-programming-guide"></a>轉換運算子 (C# 程式設計指南)
+
 C# 可讓程式設計人員宣告類別或結構轉換，使類別或結構能夠與其他類別、結構或基本類型相互轉換。 轉換的定義方式類似運算子，並會以轉換的目標類型命名。 在引數所要轉換的目標類型或轉換的結果類型中，必須有一個是包含類型，但不能兩者都是。  
   
  [!code-csharp[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
-## <a name="conversion-operators-overview"></a>轉換運算子概觀  
+## <a name="conversion-operators-overview"></a>轉換運算子概觀
+
  轉換運算子具有下列屬性：  
   
 -   宣告為 `implicit` 的轉換會在必要時自動發生。  
@@ -29,7 +31,8 @@ C# 可讓程式設計人員宣告類別或結構轉換，使類別或結構能�
   
 -   所有轉換都必須宣告為 `static`。  
   
-## <a name="related-sections"></a>相關章節  
+## <a name="related-sections"></a>相關章節
+
  如需詳細資訊：  
   
 -   [使用轉換運算子](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
@@ -44,7 +47,7 @@ C# 可讓程式設計人員宣告類別或結構轉換，使類別或結構能�
   
 -   [static](../../../csharp/language-reference/keywords/static.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Convert>  
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  

@@ -1,22 +1,22 @@
 ---
-title: 如何：建立未簽署的 Friend 組件 (C#)
+title: HOW TO：建立未簽署的 Friend 組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 7244f17c24a16569903783c730fc356b11e20aa8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 16699d827aa168f2392a78ddbc7556bc5af864e8
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44211797"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362141"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a>如何：建立未簽署的 Friend 組件 (C#)
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a>HOW TO：建立未簽署的 Friend 組件 (C#)
 此範例示範如何搭配未簽署的組件使用 friend 組件。  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>建立組件和 friend 組件  
   
 1.  開啟命令提示字元。  
   
-2.  建立名為 `friend_signed_A.` 並包含下列程式碼的 C# 檔案。 程式碼會使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性宣告 friend_signed_B 為 Friend 組件。  
+2.  建立名為 `friend_unsigned_A.` 並包含下列程式碼的 C# 檔案。 程式碼會使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性宣告 friend_unsigned_B 為 Friend 組件。  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,7 +46,7 @@ ms.locfileid: "44211797"
     }  
     ```  
   
-3.  使用下列命令來編譯及簽署 friend_signed_A。  
+3.  使用下列命令來編譯及簽署 friend_unsigned_A。  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
@@ -75,7 +75,7 @@ ms.locfileid: "44211797"
     }  
     ```  
   
-5.  使用下列命令來編譯 friend_signed_B。  
+5.  使用下列命令來編譯 friend_unsigned_B。  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
@@ -83,9 +83,9 @@ ms.locfileid: "44211797"
   
      編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您必須使用 `/out` 編譯器選項，明確指定輸出組件 (.exe 或 .dll) 的名稱。 如需詳細資訊，請參閱 [/out (C# 編譯器選項)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)。  
   
-6.  執行 friend_signed_B.exe 檔案。  
+6.  執行 friend_unsigned_B.exe 檔案。  
   
-     此程式會列印兩個字串："Class1.Test" 和 "Class2.Test"。  
+     程式會列印兩個字串："Class1.Test" 和 "Class2.Test"。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要差異是 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性權限執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則是控制 `internal` 類型和成員的可見性。  

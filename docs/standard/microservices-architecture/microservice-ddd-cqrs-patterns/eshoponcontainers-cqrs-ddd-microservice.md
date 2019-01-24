@@ -4,18 +4,20 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 CQRS
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143632"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362826"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方式
 
 eShopOnContainers 參考應用程式中訂購微服務的設計是基於 CQRS 準則。 然而，它使用了最簡單的方法，即單純將查詢與命令分開，以及針對這兩個動作使用相同的資料庫。
 
-那些模式的精髓和重點在於查詢是等冪的：無論您對系統進行多少次查詢，系統的狀態都不會變更。 您甚至可以使用不同的 "reads" 資料模型，而非交易邏輯的 "writes" 領域模型，雖然訂購微服務使用的是相同的資料庫。 因此，這是簡化過後的 CQRS 方法。
+那些模式的精髓和重點在於查詢是等冪的：無論您對系統進行多少次查詢，系統的狀態都不會變更。 換句話說，查詢沒有副作用。
+
+因此，您可以使用不同的 "reads" 資料模型，而非交易邏輯的 "writes" 領域模型，即使訂購微服務使用的是相同的資料庫亦同。 因此，這是簡化過後的 CQRS 方法。
 
 另一方面，觸發交易及資料更新的命令會變更系統的狀態。 使用命令時，您必須在處理複雜性及不斷變更的商務規則時多加小心。 這正是您希望套用 DDD 技術以獲得更良好之模型化系統的場合。
 

@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio 2017 中使用 .NET Standard 類別庫
+title: 在 Visual Studio 2017 中取用 .NET Standard 程式庫
 description: 使用 Visual Studio 2017 來建置會呼叫另一個類別庫之成員的 .NET Core 應用程式。
 author: BillWagner
 ms.author: wiwagn
@@ -8,14 +8,14 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: ccf8d33b1017c3def137de7daec4373bfeec6305
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7689d45b341dbe9dbfae40beec3a7663e2bd0366
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168882"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362388"
 ---
-# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Standard 類別庫
+# <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>在 Visual Studio 2017 中取用 .NET Standard 程式庫
 
 在您遵循[在 Visual Studio 2017 中使用 .NET Core 建置 C# 類別庫](./library-with-visual-studio.md)或[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic 類別庫](vb-library-with-visual-studio.md)中的步驟建立 .NET Standard 類別庫，並根據[在 Visual Studio 2017 中使用 .NET Core 測試類別庫](testing-library-with-visual-studio.md)中的指示測試該類別庫，然後建置該類別庫的發行版本之後，下一個步驟就是把它提供給呼叫端使用。 執行這項作業的方法有兩種：
 

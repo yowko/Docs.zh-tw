@@ -3,21 +3,21 @@ title: 使用指數輪詢探索自訂 HTTP 呼叫重試
 description: 了解如何使用指數輪詢從頭開始實作 HTTP 呼叫重試，以處理可能發生的HTTP 失敗案例。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: b7aaad9199bb275f45fd088a6207d707e8e5751c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145094"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362245"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>使用指數輪詢探索自訂 HTTP 呼叫重試
 
 若要建立具復原功能的微服務，您必須處理可能的 HTTP 失敗案例。 處理這些失敗的一種方式 (雖然不建議使用) 是使用指數輪詢建立您自己的重試實作。
 
-**重要事項：** 本節將說明如何建立您自己自訂的程式碼來實作 HTTP 呼叫重試。 不過，不建議您自己做，而是使用功能更強大且可靠，同時使用方式更簡單的機制，例如，使用自 .NET Core 2.1 開始提供的 `HttpClientFactory` 搭配 Polly。 這些建議方法會在後續各節中說明。 
+**重要事項：** 此節將說明如何建立您自己的自訂程式碼來實作 HTTP 呼叫重試。 不過，不建議您自己做，而是使用功能更強大且可靠，同時使用方式更簡單的機制，例如，使用自 .NET Core 2.1 開始提供的 `HttpClientFactory` 搭配 Polly。 這些建議方法會在後續各節中說明。
 
-一開始探索時，您可以實作自己的程式碼來包含指數輪詢的公用程式類別，如 [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260) 中所示，再加上類似如下的程式碼 ([GitHub 存放庫](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)中也有提供)。
+一開始探索時，您可以使用指數輪詢的公用程式類別 (如 [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260) 中所示)，再加上如下程式碼，來實作自己的程式碼。
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -113,8 +113,7 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-請記住，此程式碼只適合作為概念證明。 後續各節說明如何使用 HttpClientFactory 這個縝密但使用方式更簡單的方法。
-HttpClientFactory 自.NET Core 2.1 開始提供，它內含像 Polly 一樣經過實證的復原程式庫。 
+請記住，此程式碼只適合作為概念證明。 後續各節說明如何使用 HttpClientFactory 這個縝密但使用方式更簡單的方法。 HttpClientFactory 自.NET Core 2.1 開始提供，它內含像 Polly 一樣經過實證的復原程式庫。
 
 >[!div class="step-by-step"]
 >[上一頁](implement-resilient-entity-framework-core-sql-connections.md)

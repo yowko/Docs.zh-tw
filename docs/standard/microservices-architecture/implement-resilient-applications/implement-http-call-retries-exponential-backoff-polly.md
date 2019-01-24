@@ -1,15 +1,15 @@
 ---
 title: 使用 Polly 以指數輪詢實作 HTTP 呼叫重試
-description: 了解如何使用 Polly 和 HttpClientFactory 處理 HTTP 失敗
+description: 了解如何使用 Polly 和 HttpClientFactory 處理 HTTP 失敗。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/10/2018
-ms.openlocfilehash: 78de1440721e83459e455f5c31d10e52a1d3b1b6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143983"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362752"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>使用 HttpClientFactory 和 Polly 原則以指數輪詢實作 HTTP 呼叫重試
 
@@ -36,9 +36,9 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetRetryPolicy());
 ```
 
-**AddPolicyHandler()** 方法會將原則新增至您將使用的 `HttpClient` 物件。 在本例中，它會為使用指數輪詢的 HTTP 重試新增 Polly 原則。
+**AddPolicyHandler()** 方法會將原則新增至您將使用的 `HttpClient` 物件。 在此案例中，它會為使用指數輪詢的 HTTP 重試新增 Polly 原則。
 
-為了有更模組化的方法，可在 ConfigureServices() 方法內的個別方法中定義 Http 重試原則，如下列程式碼所示。
+為了有更模組化的方法，可在 `Startup.cs` 檔案內的個別方法中定義 Http 重試原則，如以下程式碼所示：
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
@@ -51,11 +51,11 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 }
 ```
 
-透過 Polly，您可以定義重試原則，其中包含重試次數、指數輪詢組態，以及發生 HTTP 例外狀況時所要採取的動作，例如記錄錯誤。 在本例中，會設定原則，以便使用指數重試嘗試六次，一開始每隔兩秒。 
+透過 Polly，您可以定義重試原則，其中包含重試次數、指數輪詢組態，以及發生 HTTP 例外狀況時所要採取的動作，例如記錄錯誤。 在此案例中，會設定原則，以便使用指數重試嘗試六次，一開始每隔兩秒。 
 
 因此，它會嘗試六次，而且每次重試的間隔秒數會是指數，一開始每隔兩秒。
 
-### <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>將 Jitter 策略新增至重試原則
+## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>將 Jitter 策略新增至重試原則
 
 如果發生高並行和延展性以及高競爭的情況，定期重試原則可能會影響您的系統。 若要解決來自許多用戶端的類似重試因部分中斷而達到最高的問題，一個很好的解決方法是將 Jitter 策略新增至重試演算法/原則。 這可以透過將隨機性加入指數輪詢，來改善端對端系統的整體效能。 發生問題時，突然增加的情況會擴散。 使用簡單的 Polly 原則時，要實作 Jitter 的程式碼可能會如下列範例所示：
 
@@ -71,19 +71,17 @@ Policy
 
 ## <a name="additional-resources"></a>其他資源
 
--   **重試模式**
-    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
+- **重試模式**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/retry*](/azure/architecture/patterns/retry)
 
--   **Polly 和 HttpClientFactory**
-    [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
+- **Polly 和 HttpClientFactory**\
+  [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
--   **Polly (.NET 復原和暫時性錯誤處理程式庫)**
+- **Polly (.NET 復原和暫時性錯誤處理程式庫)**\
+  [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
-    [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
-
--   **Marc Brooker：Jitter: Making Things Better With Randomness** (Jitter：利用隨機性更臻完美)
-
-    [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
+- **Marc Brooker：Jitter:利用隨機性更臻完美**\
+  [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
 >[!div class="step-by-step"]
 >[上一頁](explore-custom-http-call-retries-exponential-backoff.md)

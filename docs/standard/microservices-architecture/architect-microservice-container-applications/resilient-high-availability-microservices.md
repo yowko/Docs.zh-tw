@@ -4,12 +4,12 @@ description: 微服務必須設計為能夠承受暫時性的網路和相依性�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 174e9881be50b8c2f8220960e93dce626e776b65
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745325"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362232"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>微服務中的復原和高可用性
 
@@ -29,7 +29,7 @@ ms.locfileid: "52745325"
 
 健康狀態與診斷不同。 健康狀態是微服務對其目前狀態採取之適當動作的報告。 使用升級與部署機制維護可用性是良好的範例。 雖然服務目前可能因為處理序當機或電腦重新開機而處於不良狀態，但服務也許還能運作。 您最後需要執行升級讓情況更為惡化。 最好的方法是先進行調查，或給微服務時間復原。 微服務的健康狀態事件能幫助我們做出明智的決定，並能確實幫助我們建立自我修復的服務。
 
-在本指南的 [Implementing health checks in ASP.NET Core services](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) (實作 ASP.NET Core 服務中的健康狀態檢查) 一節中，我們會說明如何使用您微服務中的新 ASP.NET HealthChecks 程式庫，讓它們向監視服務報告其狀態，以採取適當的動作。
+在本指南的 [Implementing health checks in ASP.NET Core services](../implement-resilient-applications/monitor-app-health.md#implement-health-checks-in-aspnet-core-services) (實作 ASP.NET Core 服務中的健康狀態檢查) 一節中，我們會說明如何使用您微服務中的新 ASP.NET HealthChecks 程式庫，讓它們向監視服務報告其狀態，以採取適當的動作。
 
 您也可以選擇使用名為 Beat Pulse 的優異開放原始碼程式庫，可在 [GitHub](https://github.com/Xabaril/BeatPulse) 上取得，並為 [NuGet 套件](https://www.nuget.org/packages/BeatPulse/)的形式。 此程式庫也會執行健康狀態檢查，但它會處理兩種檢查：
 

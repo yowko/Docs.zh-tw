@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 進入 DDD 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 1c21ba1cc4c02336a204b1fe91b72e5f3e89228c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a0b3e75c6a93aebf979b8df758fe37460c046a15
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127130"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415932"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 實作微服務領域模型 
 
@@ -152,7 +152,7 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 當您使用 Entity Framework Core 1.1 或更新版本時，DDD 實體可以更好的方式進行表達，因為除了屬性之外，它還允許了[對應至欄位 (支援欄位)](https://docs.microsoft.com/ef/core/modeling/backing-field)。 這在保護子實體或值物件集合時將會很有用。 透過這項增強功能，您可以使用簡單的私用欄位 (而非屬性)，並且也能在公用方法中實作任何對欄位集合進行的更新，並透過 AsReadOnly 方法提供唯讀存取。
 
-在 DDD 中，您會希望只透過實體 (或建構函式) 中的方法來更新實體，以控制任何不區分及資料的一致性，使屬性可以只定義 get 存取子。 屬性會受私用欄位支援。 私用成員只能在類別中進行存取。 不過，有一項例外：EF Core 也需要先設定這些欄位 (讓它可以傳回具有適當值的物件)。
+在 DDD 中，您會希望只透過實體 (或建構函式) 中的方法來更新實體，以控制任何不區分及資料的一致性，使屬性可以只定義 get 存取子。 屬性會受私用欄位支援。 私用成員只能在類別中進行存取。 不過，有一個例外：EF Core 也需要先設定這些欄位 (讓它可以傳回具有適當值的物件)。
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>僅使用 Get 存取子來將屬性對應至資料庫資料表中的欄位
 
@@ -171,8 +171,8 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 - **Vaughn Vernon：使用 DDD 及 Entity Framework 為彙總建立模型** 請注意，這*並非* Entity Framework Core。 \
   [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
-- **Julie Lerman。Coding for Domain-Driven Design: Tips for Data-Focused Devs (針對領域導向設計撰寫程式碼：給專精於資料之開發人員的提示)** \
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
+- **Julie Lerman。針對領域驅動設計撰寫程式碼：進行資料型開發的祕訣** \
+  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
 
 - **Udi Dahan.如何建立完整封裝式領域模型** \
   [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)

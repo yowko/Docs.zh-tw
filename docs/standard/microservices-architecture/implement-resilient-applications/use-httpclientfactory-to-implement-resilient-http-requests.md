@@ -1,27 +1,27 @@
 ---
 title: 使用 HttpClientFactory 實作復原 HTTP 要求
-description: HttpClientFactory 是意向明確的處理站，自 .NET Core 2.1 開始提供，可用來建立要在您應用程式中使用的 `HttpClient` 執行個體。
+description: 了解如何使用 HttpClientFactory，自 .NET Core 2.1 開始提供，可用來建立 `HttpClient` 執行個體，方便您在應用程式中使用。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 07/03/2018
-ms.openlocfilehash: 0d08346dc59b6f6227e719658909c174e67d4a61
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 10/16/2018
+ms.openlocfilehash: 6af30ae3b5111e026be6ec89d266338b88cf22b2
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030356"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362637"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
-`HttpClientFactory` 是意向明確的處理站，自 .NET Core 2.1 開始提供，可用來建立要在您應用程式中使用的 `HttpClient` 執行個體。 
+`HttpClientFactory` 是意向明確的處理站，自 .NET Core 2.1 開始提供，可用來建立要在您應用程式中使用的 <xref:System.Net.Http.HttpClient> 執行個體。
 
 ## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>.NET Core 中原始 HttpClient 類別的問題
 
-已知的原始 [HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient?view=netstandard-2.0) 類別使用方式簡單，但在某些情況下，許多開發人員都沒有正確地使用它。 
+已知的原始 [HttpClient](/dotnet/api/system.net.http.httpclient?view=netstandard-2.0) 類別使用方式簡單，但在某些情況下，許多開發人員都沒有正確地使用它。 
 
-第一個問題是，這個類別是可處置項目，將它與 `using` 陳述式搭配使用不是最好的選擇，因為即使您處置 `HttpClient` 物件，底層通訊端也不會立即釋出，而且可能會導致所謂「通訊端耗盡」的嚴重問題。 如需有關此問題的詳細資訊，請參閱[您使用 HttpClient 的方法錯誤而導致軟體不穩定](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) \(英文\) 部落格文章。
+第一個問題是，這個類別是可處置項目，將它與 `using` 陳述式搭配使用不是最好的選擇，因為即使您處置 `HttpClient` 物件，底層通訊端也不會立即釋出，而且可能會導致所謂「通訊端耗盡」的嚴重問題。 如需有關此問題的詳細資訊，請參閱[您使用 HttpClient 的方法錯誤而導致軟體不穩定](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) 部落格文章 (英文)。
 
-因此，您應該將 `HttpClient` 具現化一次，然後在整個應用程式生命週期中重複使用。 為每個要求具現化 `HttpClient` 類別將會在負載過重時耗盡可用的通訊端數目。 該問題會導致 `SocketException` 錯誤。 解決該問題的可能方法為建立 `HttpClient` 物件做為單一物件或靜態物件，如 [Microsoft 關於 HttpClient 用法的文章](../../../csharp/tutorials/console-webapiclient.md)中所述。 
+因此，您應該將 `HttpClient` 具現化一次，然後在整個應用程式生命週期中重複使用。 為每個要求具現化 `HttpClient` 類別將會在負載過重時耗盡可用的通訊端數目。 該問題會導致 `SocketException` 錯誤。 解決該問題的可能方法為建立 `HttpClient` 物件做為單一物件或靜態物件，如 [Microsoft 關於 HttpClient 用法的文章](/dotnet/csharp/tutorials/console-webapiclient)中所述。 
 
 但是將 `HttpClient` 做為單一物件或靜態物件時會出現第二個問題。 在此案例中，單一或靜態 `HttpClient` 不會理會 DNS 變更，如 [.NET Core GitHub 存放庫提及的問題](https://github.com/dotnet/corefx/issues/11224)中所述。 
 
@@ -45,17 +45,19 @@ ms.locfileid: "54030356"
 - 使用具型別用戶端
 - 使用產生的用戶端
 
-為了簡潔起見，此指導方針展示如何以結構化程度最高的方式使用 `HttpClientFactory`，也就是使用型別用戶端 (服務代理程式模式)，但是我們已記錄所有選項，而且目前已詳列在這篇[涵蓋 HttpClientFactory 用法的文章](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?#consumption-patterns)中。  
+為了簡潔起見，此指導方針展示如何以結構化程度最高的方式使用 `HttpClientFactory`，也就是使用具型別用戶端 (服務代理程式模式)，但是我們已記錄所有選項，而且目前已詳列在這篇[涵蓋 HttpClientFactory 用法的文章](/aspnet/core/fundamentals/http-requests?#consumption-patterns)中。  
 
 ## <a name="how-to-use-typed-clients-with-httpclientfactory"></a>如何搭配 HttpClientFactory 使用具型別用戶端
 
-下圖顯示具型別用戶端如何搭配 HttpClientFactory 使用。
+那麼，什麼是「具型別用戶端」？ 它只是 `DefaultHttpClientFactory` 插入時所設定的一個 `HttpClient`。
 
-![圖：使用已插入之 ClientService 的 MVC 控制器，其內部使用由 HttpClientFactory 和 Polly 原則設定的 HttpClient](./media/image3.5.png)
+下圖顯示具型別用戶端如何搭配 `HttpClientFactory` 使用：
 
-**圖 10-4**： 搭配具型別用戶端類別使用 `HttpClientFactory`。
+![ClientService (控制器或用戶端程式碼所使用) 會使用由已註冊的 IHttpClientFactory 所建立的 HttpClient。 此處理站會從它管理的集區指派一個 HttpMessageHandler 給 HttpClient。 使用擴充方法 AddHttpClient 在 DI 容器中註冊 IHttpClientFactory 時，可以使用 Polly 的原則設定 HttpClient。](./media/image3.5.png)
 
-首先，在您的應用程式中設定 `HttpClientFactory`。 加入對 `Microsoft.Extensions.Http` 套件的參考，其中包括 `IServiceCollection` 的 `AddHttpClient()` 擴充方法。 這個擴充方法註冊將用來做為介面 `IHttpClientFactory` 之單一物件的 `DefaultHttpClientFactory`。 它為 `HttpMessageHandlerBuilder` 定義暫時性設定。 此訊息處理常式 (`HttpMessageHandler` 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
+**圖 8-4**。 搭配具型別用戶端類別使用 HttpClientFactory。
+
+首先，在應用程式中設定 `HttpClientFactory`，加入對 `Microsoft.Extensions.Http` 的參考，其中包括 `IServiceCollection` 的 `AddHttpClient()` 擴充方法。 這個擴充方法註冊將用來做為介面 `IHttpClientFactory` 之單一物件的 `DefaultHttpClientFactory`。 它為 `HttpMessageHandlerBuilder` 定義暫時性設定。 此訊息處理常式 (`HttpMessageHandler` 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
 
 在下一個程式碼中，您可以看到如何使用 `AddHttpClient()` 來註冊需要使用 `HttpClient` 的具型別用戶端 (服務代理程式)。
 
@@ -67,15 +69,17 @@ services.AddHttpClient<IBasketService, BasketService>();
 services.AddHttpClient<IOrderingService, OrderingService>();
 ```
 
-只要使用 AddHttpClient() 新增具型別用戶端類別之後，每當您使用將透過建構函式插入到類別的 `HttpClient` 物件時，該 `HttpClient` 物件將會使用所提供的所有設定和原則。 在以下各節中，您將會看到那些原則，如 Polly 的重試或斷路器。
+如先前的程式碼所示，註冊用戶端服務，讓 `DefaultClientFactory` 建立特別針對每個服務設定的 `HttpClient`，我們將在下一個段落中說明。
+
+只要透過 `AddHttpClient()` 註冊您的用戶端服務類別，將插入您類別中的 `HttpClient` 物件將使用註冊時所提供的設定和原則。 在以下各節中，您將會看到那些原則，如 Polly 的重試或斷路器。
 
 ### <a name="httpclient-lifetimes"></a>HttpClient 存留期
 
-每次您從 IHttpClientFactory 取得 `HttpClient` 物件時，就會傳回一個新的 `HttpClient` 執行個體。 每個具名或具型別用戶端都會有一個 **HttpMessageHandler**。 `IHttpClientFactory` 會將處理站建立的 HttpMessageHandler 執行個體集合到集區以減少資源耗用量。 建立新的 `HttpClient` 執行個體時，如果集區中的 HttpMessageHandler 執行個體存留期尚未過期，則可重複使用它。
+每次您從 `IHttpClientFactory` 取得 `HttpClient` 物件時，都會傳回一個新的執行個體。 但只要 `HttpMessageHandler` 的存留期間尚未過期，每個 `HttpClient` 就都會使用 `HttpMessageHandler`，它會由 `IHttpClientFactory` 組成集區並重複使用以減少資源耗用量。
 
 處理常式的集合是需要的做法，因為每個處理常式通常會管理自己的基礎 HTTP 連線；建立比所需數目更多的處理常式可能會導致連線延遲。 有些處理常式也會保持連線無限期地開啟，這可能導致處理常式無法對 DNS 變更回應。
 
-集區中的 HttpMessageHandler 物件有存留期，也就是集區中該 HttpMessageHandler 執行個體可重複使用的時間長度。 預設值為 2 分鐘，但是可針對各個具名用戶端或具型別用戶端分別覆寫。 若要覆寫該值，請在建立用戶端時傳回的 IHttpClientBuilder 上呼叫 SetHandlerLifetime()，如下列程式碼所示。
+集區中的 `HttpMessageHandler` 物件有存留期，也就是集區中該 `HttpMessageHandler` 執行個體可重複使用的時間長度。 預設值為 2 分鐘，但是可針對各個具型別用戶端分別覆寫。 若要覆寫它，請在建立用戶端時所傳回的 `IHttpClientBuilder` 上呼叫 `SetHandlerLifetime()`，如下列程式碼所示：
 
 ```csharp
 //Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
@@ -83,7 +87,7 @@ services.AddHttpClient<ICatalogService, CatalogService>()
                  .SetHandlerLifetime(TimeSpan.FromMinutes(5));  
 ```
 
-每個具型別用戶端或具名用戶端都可以設定自己的處理常式存留期值。 將存留期設定成 InfiniteTimeSpan 以停用處理常式到期時間。
+每個具型別用戶端都可以設定自己的處理常式存留期值。 將存留期設定成 `InfiniteTimeSpan` 以停用處理常式到期時間。
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>實作使用已插入和已設定之 HttpClient 的具型別用戶端類別
 
@@ -149,18 +153,15 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 }
 ```
 
-到目前為止，顯示的程式碼只是執行一般 Http 要求，但下面幾節才是神奇的地方，只需新增原則及委派處理常式到已註冊的具型別用戶端，將由 `HttpClient` 完成的所有 Http 要求，在運作時會考慮使用復原原則 (例如利用指數輪詢和斷路器來重試)，或是任何其他自訂委派處理常式來實作其他安全性功能 (例如使用驗證權杖) 或任何其他自訂功能。 
-
+到目前為止，顯示的程式碼只是執行一般 Http 要求，但下面幾節才是神奇的地方，只需新增原則及委派處理常式到已註冊的具型別用戶端，將由 `HttpClient` 完成的所有 HTTP 要求，在運作時會考慮使用帳戶復原原則 (例如利用指數輪詢和斷路器來重試)，或是任何其他自訂委派處理常式來實作其他安全性功能 (例如使用驗證權杖) 或任何其他自訂功能。 
 
 ## <a name="additional-resources"></a>其他資源
 
--   **使用 .NET Core 2.1 中的 HttpClientFactory**
-    [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+- **使用 .NET Core 2.1 中的 HttpClientFactory**\
+  [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
-
--   **HttpClientFactory GitHub 存放庫**
-
-    [*https://github.com/aspnet/HttpClientFactory*](https://github.com/aspnet/HttpClientFactory)
+- **HttpClientFactory GitHub 存放庫**\
+  [*https://github.com/aspnet/HttpClientFactory*](https://github.com/aspnet/HttpClientFactory)
 
 >[!div class="step-by-step"]
 >[上一頁](explore-custom-http-call-retries-exponential-backoff.md)

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2d7555d39b3aa92ca49368ca5ad59750e3603606
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194133"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415893"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 的傳輸層安全性 (TLS) 最佳做法
 
-傳輸層安全性 (TLS) 通訊協定為一個業界標準，其設計目的是用來協助保護透過網際網路所通訊之資訊的隱私權。 [TLS 1.2](https://tools.ietf.org/html/rfc5246) \(英文\) 是可提供優於先前版本之安全性的標準。 TLS 1.2 最終將被最新發行的標準 [TLS 1.3](https://tools.ietf.org/html/rfc8446) 取代，後者速度更快，安全性更高。 本文提供保護使用 TLS 通訊協定之 .NET Framework 應用程式的建議。
+傳輸層安全性 (TLS) 通訊協定為一項業界標準，其設計目的是用來協助保護透過網際網路所通訊之資訊的隱私權。 [TLS 1.2](https://tools.ietf.org/html/rfc5246) \(英文\) 是可提供優於先前版本之安全性的標準。 TLS 1.2 最終將被最新發行的標準 [TLS 1.3](https://tools.ietf.org/html/rfc8446) 取代，後者速度更快，安全性更高。 本文提供保護使用 TLS 通訊協定之 .NET Framework 應用程式的建議。
 
 為了確保能維持 .NET Framework 應用程式的安全性，TLS 版本**不應**為硬式編碼。 .NET Framework 應用程式應使用作業系統 (OS) 所支援的 TLS 版本。
 
@@ -56,7 +56,7 @@ ms.locfileid: "50194133"
 
 針對 ASP.NET 應用程式，請檢查 _web.config_ 的 `<system.web><httpRuntime targetFramework>` 元素，以確認您是使用正確的 .NET Framework 版本。
 
-針對 Windows Forms 及其他應用程式，請參閱[如何：將 .NET Framework 的某個版本設定為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
+針對 Windows Forms 及其他應用程式，請參閱[如何：以一個 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
 
 使用下列小節來確認您沒有使用特定的 TLS 或 SSL 版本。
 
@@ -150,7 +150,7 @@ WCF 架構會自動選擇可用的最高版本通訊協定 (最高版本為 TLS 
 
 ### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
-將 `Switch.System.Net.DontEnableSchUseStrongCrypto` 設定為 `false` 值，會導致您的應用程式使用強式加密。 將 `DontEnableSchUseStrongCrypto` 設定為 `false` 值，會使用更安全的網路通訊協定 (TLS 1.2、TLS 1.1 及 TLS 1.0)，並封鎖不安全的通訊協定。 如需詳細資訊，請參閱 [SCH_USE_STRONG_CRYPTO 旗標](#the-schusestrongcrypto-flag)。 設定為 `true` 值會停用應用程式的強式加密。
+將 `Switch.System.Net.DontEnableSchUseStrongCrypto` 設定為 `false` 值，會導致您的應用程式使用強式加密。 將 `DontEnableSchUseStrongCrypto` 設定為 `false` 值，會使用更安全的網路通訊協定 (TLS 1.2、TLS 1.1 及 TLS 1.0)，並封鎖不安全的通訊協定。 如需詳細資訊，請參閱 [SCH_USE_STRONG_CRYPTO 旗標](#the-sch_use_strong_crypto-flag)。 設定為 `true` 值會停用應用程式的強式加密。
 
 若應用程式是以 .NET Framework 4.6 或更新版本作為目標，此參數預設會設定為 `false`。 那是安全的預設值，也是我們建議的選項。 若您的應用程式是在 .NET Framework 4.6 上執行，但是以較舊的版本為目標，此參數預設會設定為 `true`。 在此情況下，您應該明確地將它設定為 `false`。
 
@@ -191,7 +191,7 @@ WCF 架構會自動選擇可用的最高版本通訊協定 (最高版本為 TLS 
 
 ### <a name="schusestrongcrypto"></a>SchUseStrongCrypto
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` 登錄機碼具有 DWORD 類型的值。 將值設為 1 會導致您的應用程式使用強式加密。 強式加密會使用更安全的網路通訊協定 (TLS 1.2、TLS 1.1 及 TLS 1.0)，並封鎖不安全的通訊協定。 將值設為 0 會停用強式加密。 如需詳細資訊，請參閱 [SCH_USE_STRONG_CRYPTO 旗標](#the-schusestrongcrypto-flag)。
+`HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` 登錄機碼具有 DWORD 類型的值。 將值設為 1 會導致您的應用程式使用強式加密。 強式加密會使用更安全的網路通訊協定 (TLS 1.2、TLS 1.1 及 TLS 1.0)，並封鎖不安全的通訊協定。 將值設為 0 會停用強式加密。 如需詳細資訊，請參閱 [SCH_USE_STRONG_CRYPTO 旗標](#the-sch_use_strong_crypto-flag)。
 
 若應用程式是以 .NET Framework 4.6 或更新版本作為目標，此機碼預設會設定為 1。 這是建議的安全預設值。 若您的應用程式是在 .NET Framework 4.6 上執行，但是以較舊的版本為目標，此機碼預設會設定為 0。 在此情況下，您應該明確地將它的值設定為 1。
 
@@ -258,7 +258,7 @@ Windows Registry Editor Version 5.00
 另請參閱：
 
 - [.NET Framework 版本和相依性](../migration-guide/versions-and-dependencies.md)
-- [如何：判斷所安裝的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
+- [如何：判斷安裝的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 ## <a name="support-for-tls-12"></a>支援 TLS 1.2
 

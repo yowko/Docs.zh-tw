@@ -1,7 +1,7 @@
 ---
 title: '[] 運算子 - C# 參考'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/10/2019
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -10,52 +10,62 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 3e2ce5c4b74cbf79e00410791ffcc31368f78648
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 948ce238058307631cf0e5a7a5e3d72664233052
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243994"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333391"
 ---
 # <a name="-operator-c-reference"></a>[] 運算子 (C# 參考)
-方括號 (`[]`) 可用於陣列、索引子和屬性， 也可與指標搭配使用。  
-  
-## <a name="remarks"></a>備註  
- 陣列類型是後面接著 `[]` 的類型：  
-  
- [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
-  
- 若要存取某個陣列項目，請以方括號括住所需項目的索引：  
-  
- [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
-  
- 如果陣列索引超出範圍，則會擲回例外狀況。  
-  
- 陣列索引運算子無法多載；不過，類型可以定義接受一或多個參數的索引子。 索引子參數會由方括號括住，就像陣列索引一樣；但索引子參數可以宣告為任何類型，而不像陣列索引必須是整數型別。  
-  
- 例如，.NET Framework 定義 `Hashtable` 類型，該類型會建立任意類型之索引鍵和值的關聯：  
-  
- [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
-  
- 方括號也可用來指定[屬性](../../../csharp/programming-guide/concepts/attributes/index.md):  
-  
- [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
-  
- 您可以使用方括號來指定指標的索引：  
-  
- [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
-  
- 不會執行任何界限檢查。  
-  
-## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 運算子](../../../csharp/language-reference/operators/index.md)  
-- [陣列](../../../csharp/programming-guide/arrays/index.md)  
-- [索引子](../../../csharp/programming-guide/indexers/index.md)  
-- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)  
-- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)
+中括弧 (`[]`) 通常用於陣列、索引子或指標元素存取。
+
+如需指標元素存取的詳細資訊，請參閱[如何：使用指標存取陣列元素](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md)。
+
+您也可以使用中括弧來指定[屬性](../../programming-guide/concepts/attributes/index.md)：
+
+```csharp
+[System.Diagnostics.Conditional("DEBUG")]
+void TraceMethod() {}
+```
+
+## <a name="array-access"></a>陣列存取
+
+以下範例將示範如何存取陣列元素：
+
+[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Arrays)]
+
+如果陣列索引超出陣列的對應維度界限，就會擲回 <xref:System.IndexOutOfRangeException>。
+
+如上述範例所示，您也會在陣列類型的宣告和陣列執行個體的具現化中使用方括弧。
+
+如需陣列的詳細資訊，請參閱[陣列](../../programming-guide/arrays/index.md)。
+
+## <a name="indexer-access"></a>索引子存取
+
+下列範例使用 .NET<xref:System.Collections.Generic.Dictionary%602> 類型示範索引子存取：
+
+[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Indexers)]
+
+索引子可讓您透過與陣列編製索引類似的方式，為使用者定義型別的執行個體編製索引。 與必須是整數的陣列索引不同，索引子引數可以宣告為任何類型。
+
+如需索引子的詳細資訊，請參閱[索引子](../../programming-guide/indexers/index.md)。
+
+## <a name="operator-overloadability"></a>運算子是否可多載
+
+元素存取 `[]` 不是可多載的運算子。 請使用[索引子](../../programming-guide/indexers/index.md)以支援使用使用者定義型別編製索引。
+
+## <a name="c-language-specification"></a>C# 語言規格
+
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[元素存取](~/_csharplang/spec/expressions.md#element-access)和[指標元素存取](~/_csharplang/spec/unsafe-code.md#pointer-element-access)小節。
+
+## <a name="see-also"></a>另請參閱
+
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 運算子](index.md)
+- [陣列](../../programming-guide/arrays/index.md)
+- [索引子](../../programming-guide/indexers/index.md)
+- [指標型別](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [屬性](../../programming-guide/concepts/attributes/index.md)

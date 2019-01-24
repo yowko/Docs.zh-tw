@@ -3,13 +3,13 @@ title: NuGet 與 .NET 程式庫
 description: 針對 .NET 程式庫搭配 NuGet 進行封裝的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/15/2019
+ms.openlocfilehash: 6c3c7feb95f0ebe6b348f42cdd243ce1d14b9c50
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614541"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333417"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -98,6 +98,8 @@ NuGet.org 裝載自己的[符號伺服器存放庫](/nuget/create-packages/symbo
 
 > [!IMPORTANT]
 > NuGet.org 符號伺服器只支援 SDK 樣式專案所建立的新[可攜式符號檔](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)(`*.pdb`)。
+>
+> 若要在偵錯 .NET 程式庫時使用 NuGet.org 符號伺服器，開發人員必須擁有 Visual Studio 2017 15.9 或更新版本。
 
 建立符號套件的替代方案是在主要的 NuGet 套件中內嵌符號檔。 主要的 NuGet 套件會較大，但內嵌的符號檔表示開發人員不需要設定 NuGet.org 符號伺服器。 如果您正在使用 SDK 樣式專案建置 NuGet 套件，您可以透過設定 `AllowedOutputExtensionsInPackageBuildOutputFolder` 屬性來內嵌符號檔：
 

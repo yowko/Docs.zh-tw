@@ -1,16 +1,16 @@
 ---
 title: HOW TO：比較字串 - C# 指南
 description: 了解如何比較和排序字串值，不論大小寫、不論文化特性特定的順序
-ms.date: 03/20/2018
+ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 5b62dd37474dc0afb186c65d1f55f7ccaf7266ec
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: 0eb8669e52099e35553d9e7842371045bd88a643
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334830"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415880"
 ---
 # <a name="how-to-compare-strings-in-c"></a>如何：在 C\# 比較字串
 
@@ -29,7 +29,13 @@ ms.locfileid: "53334830"
 
 ## <a name="default-ordinal-comparisons"></a>預設的序數比較
 
-測試是否相等的最常見方法為，<xref:System.String.Equals%2A?displayProperty=nameWithType> 及 <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 使用區分大小寫的序數比較。 下列範例將顯示結果。
+最常見的作業：
+
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
+- <xref:System.String.Equals%2A?displayProperty=nameWithType>
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+
+使用序數比較、區分大小寫的比較，並使用目前文化特性。 下列範例將顯示結果：
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 

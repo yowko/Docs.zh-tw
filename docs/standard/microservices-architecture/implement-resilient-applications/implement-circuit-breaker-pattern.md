@@ -1,15 +1,15 @@
 ---
 title: 實作斷路器模式
-description: 容器化 .NET 應用程式的 .NET 微服務架構 | 實作斷路器模式作為 Http 重試的互補系統
+description: 了解如何實作斷路器模式作為 Http 重試的互補系統。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 07/03/2018
-ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: ca35214332b5ae0851a35d34aa329775206c2b66
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147257"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362796"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>實作斷路器模式
 
@@ -38,14 +38,15 @@ ms.locfileid: "53147257"
 ```csharp
 //ConfigureServices()  - Startup.cs
 services.AddHttpClient<IBasketService, BasketService>()
-        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to 5 minutes
+        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Sample. Default lifetime is 2 minutes
+        .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
         .AddPolicyHandler(GetRetryPolicy())
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 ```
 
-`AddPolicyHandler()` 方法會將原則新增至您將使用的 HttpClient 物件。 在本例中，它會為斷路器新增 Polly 原則。
+`AddPolicyHandler()` 方法會將原則新增至您將使用的 `HttpClient` 物件。 在此案例中，它會為斷路器新增 Polly 原則。
 
-為了有更模組化的方法，可在名為 GetCircuitBreakerPolicy() 的個別方法中定義斷路器原則，如下列程式碼所示。
+為了有更模組化的方法，可在名為 `GetCircuitBreakerPolicy()` 的個別方法中定義斷路器原則，如下列程式碼所示：
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
@@ -56,7 +57,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-在上述程式碼範例中，斷路器原則設定為在重試 Http 要求時，若連續五次失敗，則會中斷或開啟網路。 發生此情況時，網路會中斷 30 秒：在這段期間，斷路器會立即使呼叫失敗，而不是實際發出。  原則會自動將[相關的例外狀況和 HTTP 狀態碼](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)解釋為錯誤。  
+在上述程式碼範例中，斷路器原則設定為在重試 Http 要求時，若連續五次失敗，則會中斷或開啟網路。 發生此情況時，網路會中斷 30 秒：在這段期間，斷路器會立即使呼叫失敗，而不是實際發出。  原則會自動將[相關的例外狀況和 HTTP 狀態碼](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)解釋為錯誤。  
 
 如果您部署在與執行 HTTP 呼叫的用戶端應用程式或服務不同之環境中的特定資源發生問題，也應該使用斷路器將要求重新導向至後援基礎結構。 這樣一來，如果資料中心的中斷只會影響您的後端微服務，但不會影響您的用戶端應用程式，用戶端應用程式就可以重新導向至後援服務。 Polly 正在規劃新的原則來自動化此[容錯移轉原則](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy)案例。 
 
@@ -64,43 +65,40 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 從使用觀點來看，使用 HttpClient 時，不需要在此新增任何項目，因為使用 HttpClient 時的程式碼與 HttpClientFactory 相同，如先前章節所示。 
 
-## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>在 eShopOnContainers 中測試 Http 重試和斷路器
+## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>在 eShopOnContainers 中測試 Http 重試和斷路器
 
-只要您在 Docker 主機中啟動 eShopOnContainers 解決方案，就需要啟動多個容器。 某些容器的啟動和初始化速度會比較慢，例如 SQL Server 容器。 特別是當您第一次將 eShopOnContainers 應用程式部署至 Docker 時，因為需要設定映像和資料庫。 某些容器的啟動速度會比其他容器慢，而導致其餘服務一開始擲回 HTTP 例外狀況，即使在 docker-compose 層級設定容器之間的相依性亦然，如先前章節所述。 容器之間的這些 docker-compose 相依性只會在處理序層。 容器的進入點處理序可能已啟動，但 SQL Server 可能尚未就緒而無法查詢。 結果可能是一連串的錯誤，而且嘗試取用該特定容器時，應用程式可能會收到例外狀況。 
+只要您在 Docker 主機中啟動 eShopOnContainers 解決方案，就需要啟動多個容器。 某些容器的啟動和初始化速度會比較慢，例如 SQL Server 容器。 特別是當您第一次將 eShopOnContainers 應用程式部署至 Docker 時更是如此，因為需要設定映像和資料庫。 某些容器的啟動速度會比其他容器慢，而導致其餘服務一開始擲回 HTTP 例外狀況，即使在 docker-compose 層級設定容器之間的相依性亦然，如先前章節所述。 容器之間的這些 docker-compose 相依性只會在處理序層。 容器的進入點處理序可能已啟動，但 SQL Server 可能尚未就緒而無法查詢。 結果可能是一連串的錯誤，而且嘗試取用該特定容器時，應用程式可能會收到例外狀況。
 
 當應用程式正在部署至雲端時，您也可能會在啟動時看到這種錯誤類型。 在此情況下，平衡叢集節點之間的容器數目時，協調器可能會將容器從一個節點或 VM 移至另一個 (也就是啟動新的執行個體)。
 
 啟動所有容器時，'eShopOnContainers' 解決這些問題的方法是使用稍早所述的重試模式。 
 
-### <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>在 eShopOnContainers 中測試斷路器
+### <a name="test-the-circuit-breaker-in-eshoponcontainers"></a>在 eShopOnContainers 中測試斷路器
 
 您可以透過幾個方法來中斷/開啟網路，並使用 eShopOnContainers 進行測試。
 
 一個選項是將斷路器原則中允許的重試次數減少為 1，然後將整個解決方案重新部署至 Docker。 使用單一重試，HTTP 要求很有可能會在部署期間失敗，此時斷路器會開啟，而且您會收到錯誤。
 
-另一個選項是使用在購物籃微服務中實作的自訂中介軟體。 啟用此中介軟體時，它會攔截所有的 HTTP 要求並傳回狀態碼 500。 您可以藉由提出失敗 URI 的 GET 要求來啟用中介軟體，如下所示：
+另一個選項是使用在**購物籃**微服務中實作的自訂中介軟體。 啟用此中介軟體時，它會攔截所有的 HTTP 要求並傳回狀態碼 500。 您可以藉由提出失敗 URI 的 GET 要求來啟用中介軟體，如下所示：
 
-- `GET http://localhost:5103/failing`
+- `GET http://localhost:5103/failing`\
+  此要求會傳回中介軟體的目前狀態。 如果啟用中介軟體，要求會傳回狀態碼 500。 如果停用中介軟體，則沒有回應。
 
-此要求會傳回中介軟體的目前狀態。 如果啟用中介軟體，要求會傳回狀態碼 500。 如果停用中介軟體，則沒有回應。 
+- `GET http://localhost:5103/failing?enable`\
+  此要求會啟用中介軟體。
 
-- `GET http://localhost:5103/failing?enable`
-
-此要求會啟用中介軟體。 
-
-- `GET http://localhost:5103/failing?disable`
-
-此要求會停用中介軟體。 
+- `GET http://localhost:5103/failing?disable`\
+  此要求會停用中介軟體。
 
 例如，應用程式開始執行之後，您可以在任何瀏覽器中使用下列 URI 提出要求，來啟用中介軟體。 請注意，訂購微服務會使用連接埠 5103。
 
 `http://localhost:5103/failing?enable` 
 
-您可以接著使用 URI `http://localhost:5103/failing` 來檢查狀態，如圖 10-4 所示。
+您可以接著使用 URI `http://localhost:5103/failing` 來檢查狀態，如圖 8-5 所示。
 
-![](./media/image4.png)
+![失敗中介軟體模擬狀態檢查結果的瀏覽器檢視](./media/image4.png)
 
-**圖 10-4**： 檢查「失敗」的 ASP.NET 中介軟體狀態 (在本例中已停用) 
+**圖 8-5**。 檢查「失敗」的 ASP.NET 中介軟體狀態 (在本此案例中已停用)
 
 此時，只要您呼叫/叫用它，購物籃微服務就會以狀態碼 500 回應。
 
@@ -115,7 +113,7 @@ public class CartController : Controller
     public async Task<IActionResult> Index()
     {
         try
-        {          
+        {
             var user = _appUserParser.Parse(HttpContext.User);
             //Http requests using the Typed Client (Service Agent)
             var vm = await _basketSvc.GetBasket(user);
@@ -123,11 +121,11 @@ public class CartController : Controller
         }
         catch (BrokenCircuitException)
         {
-            // Catches error when Basket.api is in circuit-opened mode                 
+            // Catches error when Basket.api is in circuit-opened mode
             HandleBrokenCircuitException();
         }
         return View();
-    }       
+    }
 
     private void HandleBrokenCircuitException()
     {
@@ -136,11 +134,11 @@ public class CartController : Controller
 }
 ```
 
-以下摘要說明。 重試原則嘗試提出 HTTP 要求幾次，並收到 HTTP 錯誤。 當重試次數達到針對斷路器原則設定的最大數目時 (在本例中為 5)，應用程式會擲回 BrokenCircuitException。 結果是易懂訊息，如圖 10-5 所示。
+以下摘要說明。 重試原則嘗試提出 HTTP 要求幾次，並收到 HTTP 錯誤。 當重試次數達到針對斷路器原則設定的最大數目時 (在此案例中為 5)，應用程式會擲回 BrokenCircuitException。 結果是易懂訊息，如圖 8-6 所示。
 
-![](./media/image5.png)
+![MVC Web 應用程式顯示由斷路器原則所觸發「購物籃服務無法操作」訊息的瀏覽器檢視](./media/image5.png)
 
-**圖 10-5**： 斷路器傳回錯誤至 UI
+**圖 8-6**。 斷路器傳回錯誤至 UI
 
 您可以實作何時開啟/中斷網路的不同邏輯。 或者，如有後援資料中心或備援後端系統，您可以嘗試對不同後端微服務提出 HTTP 要求。 
 
@@ -148,8 +146,8 @@ public class CartController : Controller
 
 ## <a name="additional-resources"></a>其他資源
 
--   **斷路器模式**
-    [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
+- **斷路器模式**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
 >[上一頁](implement-http-call-retries-exponential-backoff-polly.md)

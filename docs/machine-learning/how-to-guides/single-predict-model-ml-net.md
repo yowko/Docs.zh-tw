@@ -1,22 +1,22 @@
 ---
-title: 使用 PredictionFunction 一次進行一個預測 - ML.NET
-description: 了解如何使用 ML.NET PredictionFunction 一次進行一個預測
-ms.date: 11/07/2018
+title: 使用 PredictionEngine 一次進行一個預測 - ML.NET
+description: 了解如何使用 ML.NET PredictionEngine 一次進行一個預測
+ms.date: 01/15/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9e34c1357e5ac241abd628289cd694bcd6b9cbb1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0b3f60038fe7f49ffbff3c63fd2862ba67adb506
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131662"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333638"
 ---
-# <a name="use-the-predictionfunction-to-make-one-prediction-at-a-time---mlnet"></a>使用 PredictionFunction 一次進行一個預測 - ML.NET 
+# <a name="use-the-predictionengine-to-make-one-prediction-at-a-time---mlnet"></a>使用 PredictionEngine 一次進行一個預測 - ML.NET 
 
 由於任何 ML.NET 模型都是轉換器，因此您會使用 `model.Transform`，將模型套用至 `DataView` 以進行預測。 
 
 不過，更典型的案例是，您沒有要預測的「資料集」，而是一次接收到一個範例。 例如，您將模型作為 ASP.NET 網站的一部分來執行，且需要對傳入的 HTTP 要求進行預測。
 
-`PredictionFunction` 透過預測管線一次執行一個範例。
+`PredictionEngine` 透過預測管線一次執行一個範例。
 
 使用預先建置的 Iris 預測資料集模型的完整範例如下：
 
@@ -27,7 +27,7 @@ var mlContext = new MLContext();
 
 // Step one: read the data as an IDataView.
 // First, we define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.TextReader(new TextLoader.Arguments
+var reader = mlContext.Data.CreateTextReader(new TextLoader.Arguments
 {
     Column = new[] {
         new TextLoader.Column("SepalLength", DataKind.R4, 0),
@@ -89,13 +89,13 @@ var mlContext = new MLContext();
 
 // Use the model for one-time prediction.
 // Make the prediction function object. Note that, on average, this call takes around 200x longer
-// than one prediction, so you might want to cache and reuse the prediction function, instead of
+// than one prediction, so you might want to cache and reuse the prediction engine, instead of
 // creating one per prediction.
-var predictionFunc = model.MakePredictionFunction<IrisInput, IrisPrediction>(mlContext);
+var predictionEngine = model.CreatePredictionEngine<IrisInput, IrisPrediction>(mlContext);
 
 // Obtain the prediction. Remember that 'Predict' is not reentrant. If you want to use multiple threads
-// for simultaneous prediction, make sure each thread is using its own PredictionFunction.
-var prediction = predictionFunc.Predict(new IrisInput
+// for simultaneous prediction, make sure each thread is using its own PredictionEngine.
+var prediction = predictionEngine.Predict(new IrisInput
 {
     SepalLength = 4.1f,
     SepalWidth = 0.1f,

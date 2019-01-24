@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202903"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415529"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系統上的大型物件堆積
 
@@ -92,7 +92,7 @@ ms.locfileid: "50202903"
 
 - 回收成本。
 
-  因為 LOH 和層代 2 會一起回收，如果超過其中一個的閾值時，就會觸發層代 2 回收。 如果因為 LOH 而觸發了層代 2 回收，那麼在 GC 之後，層代 2 不一定會變得更小。 如果在層代 2 上沒有太多資料，其影響極小。 但是如果層代 2 很大，一旦觸發許多層代 2 GC，就可能會造成效能問題。 如果暫時配置了許多大型物件，而且您的 SOH 很大，則執行 GC 可能會花費太多時間。 此外，如果您繼續配置並釋放相當大的物件，配置的成本就會暴增。
+  因為 LOH 和層代 2 會一起回收，如果超過其中一項的臨界值時，就會觸發層代 2 回收。 如果因為 LOH 而觸發了層代 2 回收，那麼在 GC 之後，層代 2 不一定會變得更小。 如果在層代 2 上沒有太多資料，其影響極小。 但是如果層代 2 很大，一旦觸發許多層代 2 GC，就可能會造成效能問題。 如果暫時配置了許多大型物件，而且您的 SOH 很大，則執行 GC 可能會花費太多時間。 此外，如果您繼續配置並釋放相當大的物件，配置的成本就會暴增。
 
 - 含有參考類型的陣列元素。
 
@@ -144,7 +144,7 @@ ms.locfileid: "50202903"
 
 ### <a name="net-clr-memory-performance-counters"></a>.NET CLR 記憶體效能計數器
 
-在調查效能問題時，這些效能計數器通常是很好的起點 (即使我們建議您使用 [ETW 事件](#etw))。 您可以新增所需的計數器來設定效能監視器，如圖 4 所示。 與 LOH 相關的是：
+在調查效能問題時，這些效能計數器通常是很好的起點 (即使我們建議您使用 [ETW 事件](#etw-events))。 您可以新增所需的計數器來設定效能監視器，如圖 4 所示。 與 LOH 相關的是：
 
 - **層代 2 回收**
 
@@ -310,8 +310,8 @@ bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 
 此命令會中斷並進入偵錯工具，並且只有在配置大小大於 8MB (0x800000) 的情況下呼叫 [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) 時，才會顯示呼叫堆疊。
 
-CLR 2.0 中新增了稱為 *VM Hoarding* 的功能，對於經常取得再釋放區段 (包括在大型與小型物件堆積上) 的案例，此功能非常有用。 若要指定 VM Hoarding，您可以透過裝載 API 指定稱為 `STARTUP_HOARD_GC_VM` 的啟動旗標。 CLR 會取消認可這些區段上的記憶體並將其放置於待命清單上，而不會將空的區段釋放歸還給 OS。 (請注意，CLR 不會對太大的區段執行此操作)。CLR 稍後會使用這些區段來滿足新的區段要求。 下次您的應用程式需要新的區段時，CLR 如果能夠找到夠大的區段，就會使用此待命清單中的區段。
+CLR 2.0 中新增了稱為 *VM Hoarding* 的功能，對於經常取得再釋放區段 (包括在大型與小型物件堆積上) 的案例，此功能非常有用。 若要指定 VM Hoarding，您可以透過裝載 API 指定稱為 `STARTUP_HOARD_GC_VM` 的啟動旗標。 CLR 會取消認可這些區段上的記憶體並將其放置於待命清單上，而不會將空的區段釋放歸還給 OS。 (請注意，CLR 不會對太大的區段執行這項操作)。CLR 稍後會使用這些區段來滿足新的區段要求。 下次您的應用程式需要新的區段時，CLR 如果能夠找到夠大的區段，就會使用此待命清單中的區段。
 
 對於想要保存已取得區段以避免發生記憶體不足例外狀況的應用程式 (例如本身是系統上所執行之主控項應用程式的某些伺服器應用程式) 來說，VM hoarding 也很有用。
 
-強烈建議您在使用此功能時仔細測試應用程式，以確保應用程式的記憶體使用情形相當穩定。
+強烈建議您在使用這項功能時仔細測試應用程式，以確保應用程式的記憶體使用情形相當穩定。
