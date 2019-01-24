@@ -5,12 +5,6 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 0a61be99cf149985a75205b289a5bd42f70cc5e8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149194"
 ---
 # <a name="whats-new-in-net-core"></a>.NET Core 的新功能
 
@@ -26,4 +20,4 @@ ms.locfileid: "53149194"
 
 ## <a name="see-also"></a>另請參閱
 
-* [ASP.NET Core 2.0 的新功能](/aspnet/core/aspnetcore-2.0)
+- [ASP.NET Core 2.0 的新功能](/aspnet/core/aspnetcore-2.0)

@@ -3,18 +3,13 @@ title: .NET Framework 使用者入門
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 helpviewer_keywords:
-- .NET Framework, getting started
-- getting started [.NET Framework]
+  - '.NET Framework, getting started'
+  - 'getting started [.NET Framework]'
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453131"
 ---
+
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 使用者入門
 
 .NET Framework 是執行階段的執行環境，負責管理以 .NET Framework 為目標的應用程式。 其由通用語言執行平台及廣大的類別庫組成，前者提供記憶體管理和其他系統服務，後者則能讓程式設計人員將強固、可靠的程式碼善用於應用程式開發的所有主要領域。
@@ -77,7 +72,7 @@ ms.locfileid: "49453131"
 
 ## <a name="related-topics"></a>相關主題
 
-| 標題 | 描述 |
+| 標題 | 說明 |
 | ----- |------------ |
 | [概觀](../../../docs/framework/get-started/overview.md) | 替建置以 .NET Framework 為目標之應用程式的開發人員提供詳細資訊。 |
 | [安裝指南 (英文)](../../../docs/framework/install/index.md) | 提供安裝 .NET Framework 的相關資訊。 |  
@@ -89,7 +84,7 @@ ms.locfileid: "49453131"
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Framework 指南](../../../docs/framework/index.md)   
-- [新功能](../../../docs/framework/whats-new/index.md)   
-- [.NET API 瀏覽器](/dotnet/api/)   
+- [.NET Framework 指南](../../../docs/framework/index.md)
+- [新功能](../../../docs/framework/whats-new/index.md)
+- [.NET API 瀏覽器](/dotnet/api/)
 - [開發指南](../../../docs/framework/development-guide.md)

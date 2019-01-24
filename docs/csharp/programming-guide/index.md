@@ -1,20 +1,14 @@
 ---
-title: C# 程式設計手冊
+title: 'C# 程式設計手冊'
 ms.date: 05/02/2017
 f1_keywords:
-- cs.langref
+  - cs.langref
 helpviewer_keywords:
-- reference tables [C#]
-- C# language, programming guide
-- Visual C#, programming concepts
-- C# language, concepts
+  - 'reference tables [C#]'
+  - 'C# language, programming guide'
+  - 'Visual C#, programming concepts'
+  - 'C# language, concepts'
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 3827ebfe401938e4fa1b530672352123ae2ac826
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235735"
 ---
 # <a name="c-programming-guide"></a>C# 程式設計手冊
 本節提供可透過 .NET Framework 存取 C# 的重要 C# 語言特性與功能的詳細資訊。  
@@ -85,7 +79,7 @@ ms.locfileid: "50235735"
   
  [反映](../../csharp/programming-guide/concepts/reflection.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../csharp/language-reference/index.md)  
+- [C# 參考](../../csharp/language-reference/index.md)
 - [C#](../../csharp/index.md)

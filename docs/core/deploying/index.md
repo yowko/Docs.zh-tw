@@ -5,12 +5,6 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415685"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 應用程式部署
 
@@ -98,7 +92,7 @@ FDD 和 SCD 使用不同的主機可執行檔，因此您可以使用自己的�
 
 ## <a name="see-also"></a>另請參閱
 
-* [使用 CLI 工具部署 .NET Core 應用程式](deploy-with-cli.md)
-* [使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)
-* [套件、中繼套件和架構](../packages.md)
-* [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)
+- [使用 CLI 工具部署 .NET Core 應用程式](deploy-with-cli.md)
+- [使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)
+- [套件、中繼套件和架構](../packages.md)
+- [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)

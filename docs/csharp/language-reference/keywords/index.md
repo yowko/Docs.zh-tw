@@ -1,20 +1,14 @@
 ---
-title: C# 關鍵字
+title: 'C# 關鍵字'
 ms.date: 03/07/2017
 f1_keywords:
-- cs.keywords
+  - cs.keywords
 helpviewer_keywords:
-- keywords [C#]
-- C# language, keywords
-- Visual C#, keywords
-- '@ keyword'
+  - 'keywords [C#]'
+  - 'C# language, keywords'
+  - 'Visual C#, keywords'
+  - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 4e4cc7b3a0249836e6c0960208c0158962088c11
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861929"
 ---
 # <a name="c-keywords"></a>C# 關鍵字
 關鍵字是預先定義的保留識別項，它對編譯器具有特殊意義。 您必須在關鍵字加上 `@` 做為前置詞，才能將它們當做程式中的識別項使用。 例如，`@if` 是有效的識別項，但 `if` 不是，因為 `if` 是關鍵字。  
@@ -60,7 +54,7 @@ ms.locfileid: "43861929"
 |[value](value.md)|[var](var.md)|[when (篩選條件)](when.md)|
 |[where (泛型型別條件約束)](where-generic-type-constraint.md)|[where (查詢子句)](where-clause.md)|[yield](yield.md)|
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 參考](../../../csharp/language-reference/index.md)
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)

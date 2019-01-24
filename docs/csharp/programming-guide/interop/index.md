@@ -1,26 +1,20 @@
 ---
-title: 互通性 - C# 程式設計手冊
+title: '互通性 - C# 程式設計手冊'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- COM interop
-- interoperability
-- platform invoke, accessing APIs with C#
-- C# language, interoperability
+  - COM interop
+  - interoperability
+  - 'platform invoke, accessing APIs with C#'
+  - 'C# language, interoperability'
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: f3cbfe564fb5820c9e0fa77b75f76be36dd718a4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235003"
 ---
 # <a name="interoperability-c-programming-guide"></a>互通性 (C# 程式設計手冊)
 互通性可讓您保留並充分利用目前在 Unmanaged 程式碼上的投資。 在 Common Language Runtime (CLR) 控制下執行的程式碼稱為「Managed 程式碼」，而在 CLR 外部執行的程式碼稱為「Unmanaged 程式碼」。 COM、COM+、C++ 元件、ActiveX 元件及 Microsoft Win32 API 都是 Unmanaged 程式碼的範例。  
   
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 會透過平台叫用服務、<xref:System.Runtime.InteropServices> 命名空間、C++ 的互通性及 COM 互通性 (COM Interop)，啟用與 Unmanaged 程式碼的互通性。  
   
-## <a name="in-this-section"></a>此節內容  
+## <a name="in-this-section"></a>本節內容  
  [互通性概觀](../../../csharp/programming-guide/interop/interoperability-overview.md)  
  說明要在 C# Managed 程式碼和 Unmanaged 程式碼之間相互操作的方法。  
   
@@ -45,7 +39,7 @@ ms.locfileid: "53235003"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)  
+- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)
 - [逐步解說：Office 程式設計](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)

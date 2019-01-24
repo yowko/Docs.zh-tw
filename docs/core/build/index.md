@@ -4,13 +4,8 @@ description: 了解如何從原始程式碼建置 .NET Core 和 .NET Core CLI。
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 036d7fb64d74c00b4ac0e3d34bacc834f3c3a198
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170063"
 ---
+
 # <a name="build-net-core-from-source"></a>從原始檔建置 .NET Core
 
 能夠從原始程式碼建置 .NET Core 很重要，如此一來就能輕鬆地將 .NET Core 移植到新平台、對產品提出貢獻和修正，並建立自訂的 .NET 版本。
@@ -101,6 +96,6 @@ ms.locfileid: "53170063"
 
 ## <a name="see-also"></a>另請參閱
 
-* [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
-* [.NET Core CLI 開發人員指南](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
-* [.NET Core 發佈封裝](./distribution-packaging.md)
+- [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [.NET Core CLI 開發人員指南](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
+- [.NET Core 發佈封裝](./distribution-packaging.md)

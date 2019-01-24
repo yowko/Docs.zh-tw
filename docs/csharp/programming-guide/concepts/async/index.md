@@ -1,13 +1,7 @@
 ---
-title: 使用 Async 和 Await 進行非同步程式設計 (C#)
+title: '使用 Async 和 Await 進行非同步程式設計 (C#)'
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: d46e499abb14964407773eca176ba0de7b43ffe2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236332"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>使用 async 和 await 進行非同步程式設計 (C#)
 您可以使用非同步程式設計，避免發生效能瓶頸並增強應用程式的整體回應性。 不過，撰寫非同步應用程式的傳統技術可能很複雜，因而難以撰寫、偵錯和維護。  
@@ -117,13 +111,13 @@ string urlContents = await client.GetStringAsync();
   
      `GetStringAsync` 會傳回 <xref:System.Threading.Tasks.Task%601> (其中 `TResult` 是字串)，而 `AccessTheWebAsync` 則會將工作指派給 `getStringTask` 變數。 工作代表對 `GetStringAsync` 之呼叫的進行中程序，並承諾會在工作完成時產生實際字串值。  
   
-4.  因為尚未等候 `getStringTask`，所以 `AccessTheWebAsync` 可以繼續進行其他不相依於 `GetStringAsync` 之最終結果的其他工作。 此工作是由對同步方法 `DoIndependentWork` 的呼叫來表示。  
+4.  因為尚未等候 `getStringTask`，所以 `AccessTheWebAsync` 可以繼續進行其他不相依於 `GetStringAsync` 之最終結果的其他工作。 這項工作是由對同步方法 `DoIndependentWork` 的呼叫來表示。  
   
 5.  `DoIndependentWork` 是完成其工作並傳回其呼叫端的同步方法。  
   
 6.  `AccessTheWebAsync` 已完成所有可處理的工作，但未取得來自 `getStringTask` 的結果。 `AccessTheWebAsync` 接著要計算和傳回下載字串的長度，但是方法必須等到有字串時才能計算該值。  
   
-     因此，`AccessTheWebAsync` 會使用 await 運算子暫停其進度，並將控制權遞交 (Yield) 給呼叫 `AccessTheWebAsync` 的方法。 `AccessTheWebAsync` 會將 `Task<int>` 傳回呼叫端。 此工作代表承諾會產生相當於下載字串長度的整數結果。  
+     因此，`AccessTheWebAsync` 會使用 await 運算子暫停其進度，並將控制權遞交 (Yield) 給呼叫 `AccessTheWebAsync` 的方法。 `AccessTheWebAsync` 會將 `Task<int>` 傳回呼叫端。 這項工作代表承諾會產生相當於下載字串長度的整數結果。  
   
     > [!NOTE]
     >  如果 `GetStringAsync` (和 `getStringTask`) 在 `AccessTheWebAsync` 等候它之前先完成，控制權仍會留在 `AccessTheWebAsync`。 如果呼叫的非同步處理序 (`getStringTask`) 已完成，而 `AccessTheWebSync` 無需等候最終結果時，那麼暫停然後再返回 `AccessTheWebAsync` 就是不必要的。  
@@ -242,7 +236,7 @@ Windows 執行階段程式設計中的非同步 API 具有下列其中一種傳�
 |[如何：使用 Async 和 Await，同時發出多個 Web 要求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|示範如何同時啟動數個工作。|[非同步範例：以平行方式提出多個 Web 要求](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|  
 |[非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)|說明非同步方法可以傳回的類型，並解釋每種類型的適用時機。||  
 |[非同步程式中的控制流程 (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)|在非同步程式中詳細追蹤一連串 await 運算式的控制流程。|[非同步範例：非同步程式中的控制流程](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|  
-|[微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)|顯示如何將下列功能加入至您的非同步方案：<br /><br /> -   [取消一個非同步工作或工作清單 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [在一段時間後取消非同步工作 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [當其中一個非同步工作完成時，取消剩餘的非同步工作 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [啟動多項非同步工作並在它們完成時進行處理 (C#)](../../../../csharp/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[非同步範例：微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|  
+|[微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)|顯示如何將下列功能加入至您的非同步方案：<br /><br /> -   [取消一項非同步工作或工作清單 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [在一段時間後取消非同步工作 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [當其中一項非同步工作完成時，取消剩餘的非同步工作 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [啟動多項非同步工作並在它們完成時進行處理 (C#)](../../../../csharp/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[非同步範例：微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|  
 |[處理非同步應用程式中的重新進入 (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|顯示如何處理現用非同步作業在執行當中重新啟動的情況。||  
 |[WhenAny：銜接 .NET Framework 和 Windows 執行階段](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)|顯示如何在 [!INCLUDE[wrt](~/includes/wrt-md.md)] 中進行 .NET Framework 與 IAsyncOperations 之工作類型之間的橋接，讓您可以搭配使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 與 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法。|[非同步範例：銜接 .NET 和 Windows 執行階段 (AsTask 和 WhenAny)](https://code.msdn.microsoft.com/Async-Sample-Bridging-d6a2f739) \(英文\)|  
 |非同步取消：銜接 .NET Framework 和 Windows 執行階段|顯示如何在 [!INCLUDE[wrt](~/includes/wrt-md.md)] 中進行 .NET Framework 與 IAsyncOperations 之工作類型之間的橋接，讓您可以搭配使用 <xref:System.Threading.CancellationTokenSource> 與 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法。|[非同步範例：銜接 .NET 和 Windows 執行階段 (AsTask & Cancellation) (英文)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
@@ -335,7 +329,7 @@ namespace AsyncFirstExample
   
 ## <a name="see-also"></a>另請參閱
 
-- [async](../../../../csharp/language-reference/keywords/async.md)  
-- [await](../../../../csharp/language-reference/keywords/await.md)  
-- [非同步程式設計](../../../../csharp/async.md)  
-- [非同步總覽](../../../../standard/async.md)  
+- [async](../../../../csharp/language-reference/keywords/async.md)
+- [await](../../../../csharp/language-reference/keywords/await.md)
+- [非同步程式設計](../../../../csharp/async.md)
+- [非同步總覽](../../../../standard/async.md)

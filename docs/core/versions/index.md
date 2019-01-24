@@ -4,13 +4,8 @@ description: 此文章說明 .NET Core SDK 與 Runtime 如何進行版本設定 
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334804"
 ---
+
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 版本設定概觀
 
 .NET Core 參考 .NET Core Runtime 與 .NET Core SDK，它包含開發應用程式所需的工具。 .NET Core SDK 是設計來搭配任何舊版 .NET Core Runtime 使用的。 此文章說明執行階段與 SDK 版本策略。 您可以在介紹 [.NET Standard](../../standard/net-standard.md#net-implementation-support) 的文章中找到 .NET Standard 版本號碼的解釋。
@@ -106,8 +101,8 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="see-also"></a>另請參閱
 
-* [目標架構](../../standard/frameworks.md)  
-* [.NET Core 發佈封裝](../build/distribution-packaging.md)  
-* [.NET Core 支援週期資料表](https://www.microsoft.com/net/core/support)  
-* [.NET Core 2+ Version Binding](https://github.com/dotnet/designs/issues/3) (.NET Core 2+ 版本繫結)  
-* [.NET Core 的 Docker 映像](https://hub.docker.com/r/microsoft/dotnet/) \(英文\)
+- [目標架構](../../standard/frameworks.md)
+- [.NET Core 發佈封裝](../build/distribution-packaging.md)
+- [.NET Core 支援週期資料表](https://www.microsoft.com/net/core/support)
+- [.NET Core 2+ Version Binding](https://github.com/dotnet/designs/issues/3) (.NET Core 2+ 版本繫結)
+- [.NET Core 的 Docker 映像](https://hub.docker.com/r/microsoft/dotnet/) \(英文\)

@@ -2,23 +2,17 @@
 title: .NET 應用程式中的資源
 ms.date: 07/25/2018
 helpviewer_keywords:
-- deploying applications [.NET Framework], resources
-- deploying applications [.NET Core], resources
-- application resources
-- resource files
-- satellite assemblies
-- localization
-- packaging application resources
-- localizing resources
+  - 'deploying applications [.NET Framework], resources'
+  - 'deploying applications [.NET Core], resources'
+  - application resources
+  - resource files
+  - satellite assemblies
+  - localization
+  - packaging application resources
+  - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bc91f5f3872ee5f4a55f3e3cd9e0e9de9bcc422
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524725"
 ---
 # <a name="resources-in-net-apps"></a>.NET 應用程式中的資源
 幾乎每個實際執行品質應用程式都必須使用資源。 資源是任何使用應用程式以邏輯方式部署的非執行檔資料。 資源可能在應用程式中顯示作錯誤訊息，或做為使用者介面的一部分。 資源可以含有一些表單中的資料，包括字串、影像和永續性物件。 (若要將保留物件寫入資源檔，物件必須是可序列化的)。將資料儲存在資源檔中，可讓您不需要重新編譯整個應用程式即可變更資料。 也可讓您將資料儲存在單一位置，不需要依賴儲存在多個位置的硬式編碼資料。  
@@ -60,11 +54,11 @@ ms.locfileid: "43524725"
   
 -   <xref:System.Resources.ResXResourceSet> 類別，可讓您將 XML 資源檔中的所有項目擷取至記憶體。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Globalization.CultureInfo>  
- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
- [應用程式基本概念](../../../docs/standard/application-essentials.md)  
- [建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
- [擷取資源](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Globalization.CultureInfo>
+- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
+- [應用程式基本概念](../../../docs/standard/application-essentials.md)
+- [建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [擷取資源](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)

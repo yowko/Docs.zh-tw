@@ -1,19 +1,13 @@
 ---
-title: C# 指南
-description: 了解 C# 指南如何協助您擴充 C# 的相關知識，而不論您是新手開發人員或經驗豐富的專家。
+title: 'C# 指南'
+description: '了解 C# 指南如何協助您擴充 C# 的相關知識，而不論您是新手開發人員或經驗豐富的專家。'
 ms.date: 01/30/2018
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 helpviewer_keywords:
-- documentation [C#]
-- Help, Visual C# documentation
-- C# language
-- Visual C#
-ms.openlocfilehash: 5b0f3cc4a090e3479489285631a8d13b8b134c56
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145656"
+  - 'documentation [C#]'
+  - 'Help, Visual C# documentation'
+  - 'C# language'
+  - 'Visual C#'
 ---
 # <a name="c-guide"></a>C# 指南
 
@@ -66,6 +60,6 @@ C# 指南含有數個章節。 您可以按順序閱讀，或直接跳至您最�
 
 ## <a name="see-also"></a>另請參閱
 
-* [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
-* [.NET 指南](../standard/index.md)  
-* [C# 範例](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
+- [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [.NET 指南](../standard/index.md)
+- [C# 範例](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)

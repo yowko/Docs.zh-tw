@@ -1,19 +1,13 @@
 ---
-title: C# 6.0 草稿語言規格
+title: 'C# 6.0 草稿語言規格'
 ms.date: 05/22/2018
 ms.topic: language-reference
 helpviewer_keywords:
-- C# language, specification
-- what's new [C#], language specification
-- Visual C#, C# language specification
-- language specification [C#]
+  - 'C# language, specification'
+  - 'what''s new [C#], language specification'
+  - 'Visual C#, C# language specification'
+  - 'language specification [C#]'
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-ms.openlocfilehash: 0a108e9e625fed3801c283c84a58ea0b503101ff
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147944"
 ---
 # <a name="c-60-draft-language-specification"></a>C# 6.0 草稿語言規格
 
@@ -27,7 +21,7 @@ C# 語言規格是 C# 語法和用法的最終來源。 此規格包含語言各
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)  
+- [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]

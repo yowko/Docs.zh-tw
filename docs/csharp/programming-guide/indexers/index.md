@@ -1,19 +1,13 @@
 ---
-title: 索引子 - C# 程式設計手冊
+title: '索引子 - C# 程式設計手冊'
 ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
-- cs.indexers
+  - cs.indexers
 helpviewer_keywords:
-- indexers [C#]
-- C# language, indexers
+  - 'indexers [C#]'
+  - 'C# language, indexers'
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 1b3dd16cf4c12dca0bc155c478c187047caf4c25
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236579"
 ---
 # <a name="indexers-c-programming-guide"></a>索引子 (C# 程式設計手冊)
 
@@ -70,5 +64,5 @@ ms.locfileid: "53236579"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)

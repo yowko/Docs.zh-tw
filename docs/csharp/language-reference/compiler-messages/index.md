@@ -1,17 +1,11 @@
 ---
-title: C# 編譯器錯誤
+title: 'C# 編譯器錯誤'
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, compiler errors
-- Visual C# compiler, errors
-- errors [C#]
+  - 'C# language, compiler errors'
+  - 'Visual C# compiler, errors'
+  - 'errors [C#]'
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: 2edd47682223dd94fc8dd7448465613236e67e27
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706394"
 ---
 # <a name="c-compiler-errors"></a>C# 編譯器錯誤
 
@@ -29,10 +23,10 @@ ms.locfileid: "46706394"
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
-- [抱歉，我們沒有這個 C# 錯誤的具體內容](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)  
-- [專案設計工具、建置頁面 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)  
-- [/warn (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)  
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [抱歉，我們沒有這個 C# 錯誤的具體內容](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
+- [專案設計工具、建置頁面 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
+- [/warn (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)
 - [/nowarn (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)
