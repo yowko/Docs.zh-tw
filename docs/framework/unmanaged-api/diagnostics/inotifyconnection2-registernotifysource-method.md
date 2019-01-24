@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b4731a9503ab29a7d90ddd28c7ac0a5a761c1e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5895dc3cb64b72380dead1e048c012b586c4f48e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432491"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550717"
 ---
-# <a name="inotifyconnection2registernotifysource-method"></a><span data-ttu-id="a8f0e-102">INotifyConnection2::RegisterNotifySource 方法</span><span class="sxs-lookup"><span data-stu-id="a8f0e-102">INotifyConnection2::RegisterNotifySource Method</span></span>
-<span data-ttu-id="a8f0e-103">安裝指定的通知來源。</span><span class="sxs-lookup"><span data-stu-id="a8f0e-103">Installs a specified notification source.</span></span>  
+# <a name="inotifyconnection2registernotifysource-method"></a><span data-ttu-id="9006d-102">INotifyConnection2::RegisterNotifySource 方法</span><span class="sxs-lookup"><span data-stu-id="9006d-102">INotifyConnection2::RegisterNotifySource Method</span></span>
+<span data-ttu-id="9006d-103">安裝指定的通知來源。</span><span class="sxs-lookup"><span data-stu-id="9006d-103">Installs a specified notification source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a8f0e-104">語法</span><span class="sxs-lookup"><span data-stu-id="a8f0e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9006d-104">語法</span><span class="sxs-lookup"><span data-stu-id="9006d-104">Syntax</span></span>  
   
 ```  
 HRESULT RegisterNotifySource  
@@ -37,21 +37,21 @@ HRESULT RegisterNotifySource
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a8f0e-105">參數</span><span class="sxs-lookup"><span data-stu-id="a8f0e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9006d-105">參數</span><span class="sxs-lookup"><span data-stu-id="9006d-105">Parameters</span></span>  
  `in_pNotifySource`  
- <span data-ttu-id="a8f0e-106">[in]指定要做為通知來源物件。</span><span class="sxs-lookup"><span data-stu-id="a8f0e-106">[in] Specifies the object to be used as the notification source.</span></span>  
+ <span data-ttu-id="9006d-106">[in]指定要做為通知來源物件。</span><span class="sxs-lookup"><span data-stu-id="9006d-106">[in] Specifies the object to be used as the notification source.</span></span>  
   
  `out_ppNotifySink`  
- <span data-ttu-id="a8f0e-107">[out]接收要做為通知接收物件。</span><span class="sxs-lookup"><span data-stu-id="a8f0e-107">[out] Receives the object to be used as the notification sink.</span></span>  
+ <span data-ttu-id="9006d-107">[out]接收要用作通知接收的物件。</span><span class="sxs-lookup"><span data-stu-id="9006d-107">[out] Receives the object to be used as the notification sink.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a8f0e-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="a8f0e-108">Return Value</span></span>  
- <span data-ttu-id="a8f0e-109">如果此方法成功為 S_OK。</span><span class="sxs-lookup"><span data-stu-id="a8f0e-109">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9006d-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="9006d-108">Return Value</span></span>  
+ <span data-ttu-id="9006d-109">如果方法成功為 S_OK。</span><span class="sxs-lookup"><span data-stu-id="9006d-109">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a8f0e-110">需求</span><span class="sxs-lookup"><span data-stu-id="a8f0e-110">Requirements</span></span>  
- <span data-ttu-id="a8f0e-111">**標頭：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="a8f0e-111">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9006d-110">需求</span><span class="sxs-lookup"><span data-stu-id="9006d-110">Requirements</span></span>  
+ <span data-ttu-id="9006d-111">**標頭：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="9006d-111">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8f0e-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a8f0e-112">See Also</span></span>  
- [<span data-ttu-id="a8f0e-113">INotifyConnection2 介面</span><span class="sxs-lookup"><span data-stu-id="a8f0e-113">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [<span data-ttu-id="a8f0e-114">INotifySource2 介面</span><span class="sxs-lookup"><span data-stu-id="a8f0e-114">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [<span data-ttu-id="a8f0e-115">INotifySink2 介面</span><span class="sxs-lookup"><span data-stu-id="a8f0e-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [<span data-ttu-id="a8f0e-116">UnregisterNotifySource 方法</span><span class="sxs-lookup"><span data-stu-id="a8f0e-116">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)
+## <a name="see-also"></a><span data-ttu-id="9006d-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9006d-112">See also</span></span>
+- [<span data-ttu-id="9006d-113">INotifyConnection2 介面</span><span class="sxs-lookup"><span data-stu-id="9006d-113">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="9006d-114">INotifySource2 介面</span><span class="sxs-lookup"><span data-stu-id="9006d-114">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="9006d-115">INotifySink2 介面</span><span class="sxs-lookup"><span data-stu-id="9006d-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="9006d-116">UnregisterNotifySource 方法</span><span class="sxs-lookup"><span data-stu-id="9006d-116">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)
