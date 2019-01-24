@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30fca37887c17f5f0da7fd2faaba32f0e5edf235
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 31b99ce4435c1282380291e3c3c15723381e8ab4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437361"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741843"
 ---
-# <a name="iclrvalidatorformateventinfo-method"></a><span data-ttu-id="1e4e4-102">ICLRValidator::FormatEventInfo 方法</span><span class="sxs-lookup"><span data-stu-id="1e4e4-102">ICLRValidator::FormatEventInfo Method</span></span>
-<span data-ttu-id="1e4e4-103">取得有關指定之驗證錯誤的詳細的訊息。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-103">Gets a detailed message about the specified validation error.</span></span>  
+# <a name="iclrvalidatorformateventinfo-method"></a><span data-ttu-id="79d28-102">ICLRValidator::FormatEventInfo 方法</span><span class="sxs-lookup"><span data-stu-id="79d28-102">ICLRValidator::FormatEventInfo Method</span></span>
+<span data-ttu-id="79d28-103">取得有關指定之驗證錯誤的詳細的訊息。</span><span class="sxs-lookup"><span data-stu-id="79d28-103">Gets a detailed message about the specified validation error.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e4e4-104">語法</span><span class="sxs-lookup"><span data-stu-id="1e4e4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="79d28-104">語法</span><span class="sxs-lookup"><span data-stu-id="79d28-104">Syntax</span></span>  
   
 ```  
 HRESULT FormatEventInfo (  
@@ -39,42 +39,42 @@ HRESULT FormatEventInfo (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1e4e4-105">參數</span><span class="sxs-lookup"><span data-stu-id="1e4e4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="79d28-105">參數</span><span class="sxs-lookup"><span data-stu-id="79d28-105">Parameters</span></span>  
  `hVECode`  
- <span data-ttu-id="1e4e4-106">[in]HRESULT 值傳遞給驗證的錯誤處理常式。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-106">[in] The HRESULT value that was passed to the validation error handler.</span></span>  
+ <span data-ttu-id="79d28-106">[in]HRESULT 值傳遞給驗證的錯誤處理常式。</span><span class="sxs-lookup"><span data-stu-id="79d28-106">[in] The HRESULT value that was passed to the validation error handler.</span></span>  
   
  `Context`  
- <span data-ttu-id="1e4e4-107">[in]A`VEContext`執行個體，其中包含驗證錯誤的相關內容資訊。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-107">[in] A `VEContext` instance that contains context information about the validation errors.</span></span>  
+ <span data-ttu-id="79d28-107">[in]A`VEContext`包含驗證錯誤相關的內容資訊的執行個體。</span><span class="sxs-lookup"><span data-stu-id="79d28-107">[in] A `VEContext` instance that contains context information about the validation errors.</span></span>  
   
  `msg`  
- <span data-ttu-id="1e4e4-108">[in、 out]易懂的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-108">[in, out] The friendly error message.</span></span>  
+ <span data-ttu-id="79d28-108">[in、 out]易懂的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="79d28-108">[in, out] The friendly error message.</span></span>  
   
  `ulMaxLength`  
- <span data-ttu-id="1e4e4-109">[in]錯誤訊息的最大長度。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-109">[in] The maximum length of the error message.</span></span>  
+ <span data-ttu-id="79d28-109">[in]錯誤訊息的最大長度。</span><span class="sxs-lookup"><span data-stu-id="79d28-109">[in] The maximum length of the error message.</span></span>  
   
  `psa`  
- <span data-ttu-id="1e4e4-110">[in]其他參數，以用於訊息的安全陣列。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-110">[in] A safe array of additional parameters to be used in the message.</span></span>  
+ <span data-ttu-id="79d28-110">[in]使用訊息中的其他參數的安全陣列。</span><span class="sxs-lookup"><span data-stu-id="79d28-110">[in] A safe array of additional parameters to be used in the message.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1e4e4-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="1e4e4-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="79d28-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="79d28-111">Return Value</span></span>  
   
-|<span data-ttu-id="1e4e4-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1e4e4-112">HRESULT</span></span>|<span data-ttu-id="1e4e4-113">描述</span><span class="sxs-lookup"><span data-stu-id="1e4e4-113">Description</span></span>|  
+|<span data-ttu-id="79d28-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="79d28-112">HRESULT</span></span>|<span data-ttu-id="79d28-113">描述</span><span class="sxs-lookup"><span data-stu-id="79d28-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="1e4e4-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="1e4e4-114">S_OK</span></span>|<span data-ttu-id="1e4e4-115">`FormatEventInfo` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-115">`FormatEventInfo` returned successfully.</span></span>|  
-|<span data-ttu-id="1e4e4-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="1e4e4-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="1e4e4-117">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="1e4e4-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="1e4e4-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="1e4e4-119">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-119">The call timed out.</span></span>|  
-|<span data-ttu-id="1e4e4-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="1e4e4-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="1e4e4-121">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="1e4e4-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="1e4e4-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="1e4e4-123">事件已取消時封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="1e4e4-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="1e4e4-124">E_FAIL</span></span>|<span data-ttu-id="1e4e4-125">發生未知的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="1e4e4-126">方法會傳回 E_FAIL CLR 已不再可用的處理序內。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="1e4e4-127">裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="79d28-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="79d28-114">S_OK</span></span>|<span data-ttu-id="79d28-115">`FormatEventInfo` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="79d28-115">`FormatEventInfo` returned successfully.</span></span>|  
+|<span data-ttu-id="79d28-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="79d28-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="79d28-117">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="79d28-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="79d28-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="79d28-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="79d28-119">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="79d28-119">The call timed out.</span></span>|  
+|<span data-ttu-id="79d28-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="79d28-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="79d28-121">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="79d28-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="79d28-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="79d28-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="79d28-123">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="79d28-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="79d28-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="79d28-124">E_FAIL</span></span>|<span data-ttu-id="79d28-125">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="79d28-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="79d28-126">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="79d28-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="79d28-127">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="79d28-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1e4e4-128">需求</span><span class="sxs-lookup"><span data-stu-id="1e4e4-128">Requirements</span></span>  
- <span data-ttu-id="1e4e4-129">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1e4e4-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="79d28-128">需求</span><span class="sxs-lookup"><span data-stu-id="79d28-128">Requirements</span></span>  
+ <span data-ttu-id="79d28-129">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="79d28-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1e4e4-130">**標頭：** IValidator.idl、 IValidator.h</span><span class="sxs-lookup"><span data-stu-id="1e4e4-130">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="79d28-130">**標頭：** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="79d28-130">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="1e4e4-131">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="1e4e4-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="79d28-131">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="79d28-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1e4e4-132">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e4e4-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="79d28-132">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79d28-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e4e4-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1e4e4-133">See Also</span></span>  
- [<span data-ttu-id="1e4e4-134">ICLRErrorReportingManager 介面</span><span class="sxs-lookup"><span data-stu-id="1e4e4-134">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [<span data-ttu-id="1e4e4-135">ICLRValidator 介面</span><span class="sxs-lookup"><span data-stu-id="1e4e4-135">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)
+## <a name="see-also"></a><span data-ttu-id="79d28-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="79d28-133">See also</span></span>
+- [<span data-ttu-id="79d28-134">ICLRErrorReportingManager 介面</span><span class="sxs-lookup"><span data-stu-id="79d28-134">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [<span data-ttu-id="79d28-135">ICLRValidator 介面</span><span class="sxs-lookup"><span data-stu-id="79d28-135">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 749ec14af7bffee87afbe5c0705a6ddf68da5fd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 80ed86526c99c36254f2b9c71f00483095e771ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734337"
 ---
-# <a name="iclrdatatargetgetpointersize-method"></a><span data-ttu-id="ca679-102">ICLRDataTarget::GetPointerSize 方法</span><span class="sxs-lookup"><span data-stu-id="ca679-102">ICLRDataTarget::GetPointerSize Method</span></span>
-<span data-ttu-id="ca679-103">取得大小，以位元組為單位，目標處理序會使用與指標類型。</span><span class="sxs-lookup"><span data-stu-id="ca679-103">Gets the size, in bytes, of the pointer type that the target process uses.</span></span> <span data-ttu-id="ca679-104">這個方法是由通用語言執行階段資料存取服務呼叫。</span><span class="sxs-lookup"><span data-stu-id="ca679-104">This method is called by the common language runtime data access services.</span></span>  
+# <a name="iclrdatatargetgetpointersize-method"></a><span data-ttu-id="606a2-102">ICLRDataTarget::GetPointerSize 方法</span><span class="sxs-lookup"><span data-stu-id="606a2-102">ICLRDataTarget::GetPointerSize Method</span></span>
+<span data-ttu-id="606a2-103">取得大小，以位元組為單位，目標處理序會使用與指標類型。</span><span class="sxs-lookup"><span data-stu-id="606a2-103">Gets the size, in bytes, of the pointer type that the target process uses.</span></span> <span data-ttu-id="606a2-104">這個方法是由通用語言執行階段資料存取服務呼叫。</span><span class="sxs-lookup"><span data-stu-id="606a2-104">This method is called by the common language runtime data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca679-105">語法</span><span class="sxs-lookup"><span data-stu-id="ca679-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="606a2-105">語法</span><span class="sxs-lookup"><span data-stu-id="606a2-105">Syntax</span></span>  
   
 ```  
 HRESULT GetPointerSize (  
@@ -35,21 +35,21 @@ HRESULT GetPointerSize (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ca679-106">參數</span><span class="sxs-lookup"><span data-stu-id="ca679-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="606a2-106">參數</span><span class="sxs-lookup"><span data-stu-id="606a2-106">Parameters</span></span>  
  `pointerSize`  
- <span data-ttu-id="ca679-107">[out]整數值，指定的大小，以位元組為單位，在目標處理序上之指標的指標。</span><span class="sxs-lookup"><span data-stu-id="ca679-107">[out] A pointer to an integer value that specifies the size, in bytes, of a pointer on the target process.</span></span>  
+ <span data-ttu-id="606a2-107">[out]整數值，指定的大小，以位元組為單位，在目標處理序上之指標的指標。</span><span class="sxs-lookup"><span data-stu-id="606a2-107">[out] A pointer to an integer value that specifies the size, in bytes, of a pointer on the target process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ca679-108">備註</span><span class="sxs-lookup"><span data-stu-id="ca679-108">Remarks</span></span>  
- <span data-ttu-id="ca679-109">此方法是由偵錯應用程式的作者來實作。</span><span class="sxs-lookup"><span data-stu-id="ca679-109">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="606a2-108">備註</span><span class="sxs-lookup"><span data-stu-id="606a2-108">Remarks</span></span>  
+ <span data-ttu-id="606a2-109">此方法是由偵錯應用程式的作者來實作。</span><span class="sxs-lookup"><span data-stu-id="606a2-109">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ca679-110">需求</span><span class="sxs-lookup"><span data-stu-id="ca679-110">Requirements</span></span>  
- <span data-ttu-id="ca679-111">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ca679-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="606a2-110">需求</span><span class="sxs-lookup"><span data-stu-id="606a2-110">Requirements</span></span>  
+ <span data-ttu-id="606a2-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="606a2-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca679-112">**標頭：** ClrData.idl、 ClrData.h</span><span class="sxs-lookup"><span data-stu-id="ca679-112">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="606a2-112">**標頭：** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="606a2-112">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="ca679-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ca679-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="606a2-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="606a2-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ca679-114">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca679-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="606a2-114">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="606a2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca679-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ca679-115">See Also</span></span>  
- [<span data-ttu-id="ca679-116">ICLRDataTarget 介面</span><span class="sxs-lookup"><span data-stu-id="ca679-116">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="606a2-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="606a2-115">See also</span></span>
+- [<span data-ttu-id="606a2-116">ICLRDataTarget 介面</span><span class="sxs-lookup"><span data-stu-id="606a2-116">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
