@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cd87cb619ef2dc1e0548c7553585b7e51e94c4f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b027d26292b5d810d91932bac4ec8dee4b77661d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924771"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643282"
 ---
-# <a name="clone-function"></a><span data-ttu-id="cd185-103">複製函式</span><span class="sxs-lookup"><span data-stu-id="cd185-103">Clone function</span></span>
-<span data-ttu-id="cd185-104">傳回目前物件的完整複本的新物件。</span><span class="sxs-lookup"><span data-stu-id="cd185-104">Returns a new object that is a complete clone of the current object.</span></span>   
+# <a name="clone-function"></a><span data-ttu-id="c06af-103">複製函式</span><span class="sxs-lookup"><span data-stu-id="c06af-103">Clone function</span></span>
+<span data-ttu-id="c06af-104">傳回屬於目前物件之完整複製品的新物件。</span><span class="sxs-lookup"><span data-stu-id="c06af-104">Returns a new object that is a complete clone of the current object.</span></span>   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="cd185-105">語法</span><span class="sxs-lookup"><span data-stu-id="cd185-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c06af-105">語法</span><span class="sxs-lookup"><span data-stu-id="c06af-105">Syntax</span></span>  
   
 ```  
 HRESULT Clone (
@@ -38,40 +38,40 @@ HRESULT Clone (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="cd185-106">參數</span><span class="sxs-lookup"><span data-stu-id="cd185-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="c06af-106">參數</span><span class="sxs-lookup"><span data-stu-id="c06af-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="cd185-107">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="cd185-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="c06af-107">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="c06af-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="cd185-108">[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。</span><span class="sxs-lookup"><span data-stu-id="cd185-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="c06af-108">[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。</span><span class="sxs-lookup"><span data-stu-id="c06af-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `ppCopy`  
-<span data-ttu-id="cd185-109">[out]新的物件，是一份完整的獨立`ptr`。</span><span class="sxs-lookup"><span data-stu-id="cd185-109">[out] A new object that is a complete lone of `ptr`.</span></span> <span data-ttu-id="cd185-110">此引數不可為`null`如果收到的目前物件的複本。</span><span class="sxs-lookup"><span data-stu-id="cd185-110">This argument cannot be `null` if it receives the copy of the current object.</span></span>
+<span data-ttu-id="c06af-109">[out]新的物件，是一份完整的獨立`ptr`。</span><span class="sxs-lookup"><span data-stu-id="c06af-109">[out] A new object that is a complete lone of `ptr`.</span></span> <span data-ttu-id="c06af-110">此引數不可為`null`如果收到的目前物件的複本。</span><span class="sxs-lookup"><span data-stu-id="c06af-110">This argument cannot be `null` if it receives the copy of the current object.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="cd185-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="cd185-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="c06af-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="c06af-111">Return value</span></span>
 
-<span data-ttu-id="cd185-112">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="cd185-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="c06af-112">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="c06af-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="cd185-113">常數</span><span class="sxs-lookup"><span data-stu-id="cd185-113">Constant</span></span>  |<span data-ttu-id="cd185-114">值</span><span class="sxs-lookup"><span data-stu-id="cd185-114">Value</span></span>  |<span data-ttu-id="cd185-115">描述</span><span class="sxs-lookup"><span data-stu-id="cd185-115">Description</span></span>  |
+|<span data-ttu-id="c06af-113">常數</span><span class="sxs-lookup"><span data-stu-id="c06af-113">Constant</span></span>  |<span data-ttu-id="c06af-114">值</span><span class="sxs-lookup"><span data-stu-id="c06af-114">Value</span></span>  |<span data-ttu-id="c06af-115">描述</span><span class="sxs-lookup"><span data-stu-id="c06af-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | <span data-ttu-id="cd185-116">0x80041001</span><span class="sxs-lookup"><span data-stu-id="cd185-116">0x80041001</span></span> | <span data-ttu-id="cd185-117">已有一般失敗。</span><span class="sxs-lookup"><span data-stu-id="cd185-117">There has been a general failure.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="cd185-118">0x80041008</span><span class="sxs-lookup"><span data-stu-id="cd185-118">0x80041008</span></span> | <span data-ttu-id="cd185-119">`null` 已指定為參數，以及是不合法，在這種用法。</span><span class="sxs-lookup"><span data-stu-id="cd185-119">`null` was specified as a parameter, and it is not legal in this usage.</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="cd185-120">0x80041006</span><span class="sxs-lookup"><span data-stu-id="cd185-120">0x80041006</span></span> | <span data-ttu-id="cd185-121">沒有足夠的記憶體可供複製的物件。</span><span class="sxs-lookup"><span data-stu-id="cd185-121">Not enough memory is available to clone the object.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="cd185-122">0</span><span class="sxs-lookup"><span data-stu-id="cd185-122">0</span></span> | <span data-ttu-id="cd185-123">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="cd185-123">The function call was successful.</span></span>  |
+| `WBEM_E_FAILED` | <span data-ttu-id="c06af-116">0x80041001</span><span class="sxs-lookup"><span data-stu-id="c06af-116">0x80041001</span></span> | <span data-ttu-id="c06af-117">已有一般失敗。</span><span class="sxs-lookup"><span data-stu-id="c06af-117">There has been a general failure.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="c06af-118">0x80041008</span><span class="sxs-lookup"><span data-stu-id="c06af-118">0x80041008</span></span> | <span data-ttu-id="c06af-119">`null` 已指定為參數，以及是不合法，在這種用法。</span><span class="sxs-lookup"><span data-stu-id="c06af-119">`null` was specified as a parameter, and it is not legal in this usage.</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="c06af-120">0x80041006</span><span class="sxs-lookup"><span data-stu-id="c06af-120">0x80041006</span></span> | <span data-ttu-id="c06af-121">沒有足夠的記憶體可供複製的物件。</span><span class="sxs-lookup"><span data-stu-id="c06af-121">Not enough memory is available to clone the object.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="c06af-122">0</span><span class="sxs-lookup"><span data-stu-id="c06af-122">0</span></span> | <span data-ttu-id="c06af-123">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="c06af-123">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="cd185-124">備註</span><span class="sxs-lookup"><span data-stu-id="cd185-124">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="c06af-124">備註</span><span class="sxs-lookup"><span data-stu-id="c06af-124">Remarks</span></span>
 
-<span data-ttu-id="cd185-125">此函式會包裝在呼叫[IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone)方法。</span><span class="sxs-lookup"><span data-stu-id="cd185-125">This function wraps a call to the [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) method.</span></span>
+<span data-ttu-id="c06af-125">此函式會包裝在呼叫[IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone)方法。</span><span class="sxs-lookup"><span data-stu-id="c06af-125">This function wraps a call to the [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) method.</span></span>
 
-<span data-ttu-id="cd185-126">複製的物件是 COM 物件的參考計數為 1。</span><span class="sxs-lookup"><span data-stu-id="cd185-126">The cloned object is a COM object that has a reference count of 1.</span></span>
+<span data-ttu-id="c06af-126">複製的物件是 COM 物件的參考計數為 1。</span><span class="sxs-lookup"><span data-stu-id="c06af-126">The cloned object is a COM object that has a reference count of 1.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="cd185-127">需求</span><span class="sxs-lookup"><span data-stu-id="cd185-127">Requirements</span></span>  
- <span data-ttu-id="cd185-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cd185-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c06af-127">需求</span><span class="sxs-lookup"><span data-stu-id="c06af-127">Requirements</span></span>  
+ <span data-ttu-id="c06af-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c06af-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cd185-129">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="cd185-129">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="c06af-129">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="c06af-129">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="cd185-130">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="cd185-130">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="c06af-130">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="c06af-130">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd185-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd185-131">See also</span></span>  
-[<span data-ttu-id="cd185-132">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="cd185-132">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="c06af-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c06af-131">See also</span></span>
+- [<span data-ttu-id="c06af-132">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="c06af-132">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

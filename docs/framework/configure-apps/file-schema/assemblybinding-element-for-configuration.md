@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 64985d4ed2c6a82c54a7623df4b13d7ec54bff33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599344"
 ---
-# <a name="assemblybinding-element-for-configuration"></a><span data-ttu-id="e7d14-102">\<Assemblybinding> > 項目\<設定 ></span><span class="sxs-lookup"><span data-stu-id="e7d14-102">\<assemblyBinding> element for \<configuration></span></span>
+# <a name="assemblybinding-element-for-configuration"></a><span data-ttu-id="42950-102">\<Assemblybinding> > 項目\<設定 ></span><span class="sxs-lookup"><span data-stu-id="42950-102">\<assemblyBinding> element for \<configuration></span></span>
 
-<span data-ttu-id="e7d14-103">指定位於組態層級的組件繫結原則。</span><span class="sxs-lookup"><span data-stu-id="e7d14-103">Specifies assembly binding policy at the configuration level.</span></span>
+<span data-ttu-id="42950-103">指定位於組態層級的組件繫結原則。</span><span class="sxs-lookup"><span data-stu-id="42950-103">Specifies assembly binding policy at the configuration level.</span></span>
 
-<span data-ttu-id="e7d14-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="e7d14-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="e7d14-105">&nbsp;&nbsp;**\<Assemblybinding> >**</span><span class="sxs-lookup"><span data-stu-id="e7d14-105">&nbsp;&nbsp;**\<assemblyBinding>**</span></span>
+<span data-ttu-id="42950-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="42950-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="42950-105">&nbsp;&nbsp;**\<assemblyBinding>**</span><span class="sxs-lookup"><span data-stu-id="42950-105">&nbsp;&nbsp;**\<assemblyBinding>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="e7d14-106">語法</span><span class="sxs-lookup"><span data-stu-id="e7d14-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="42950-106">語法</span><span class="sxs-lookup"><span data-stu-id="42950-106">Syntax</span></span>
 
 ```xml
 <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
@@ -31,34 +31,34 @@ ms.locfileid: "47193352"
 </assemblyBinding>
 ```
 
-## <a name="attribute"></a><span data-ttu-id="e7d14-107">屬性</span><span class="sxs-lookup"><span data-stu-id="e7d14-107">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="42950-107">屬性</span><span class="sxs-lookup"><span data-stu-id="42950-107">Attribute</span></span>
 
-|           | <span data-ttu-id="e7d14-108">描述</span><span class="sxs-lookup"><span data-stu-id="e7d14-108">Description</span></span> |
+|           | <span data-ttu-id="42950-108">描述</span><span class="sxs-lookup"><span data-stu-id="42950-108">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="e7d14-109">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="e7d14-109">**xmlns**</span></span> | <span data-ttu-id="e7d14-110">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="e7d14-110">Required attribute.</span></span><br><br><span data-ttu-id="e7d14-111">指定組件繫結所需的 XML 命名空間。</span><span class="sxs-lookup"><span data-stu-id="e7d14-111">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="e7d14-112">使用字串 "urn:schemas-microsoft-com:asm.v1" 做為值。</span><span class="sxs-lookup"><span data-stu-id="e7d14-112">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span> |
+| <span data-ttu-id="42950-109">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="42950-109">**xmlns**</span></span> | <span data-ttu-id="42950-110">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="42950-110">Required attribute.</span></span><br><br><span data-ttu-id="42950-111">指定組件繫結所需的 XML 命名空間。</span><span class="sxs-lookup"><span data-stu-id="42950-111">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="42950-112">使用字串 "urn:schemas-microsoft-com:asm.v1" 做為值。</span><span class="sxs-lookup"><span data-stu-id="42950-112">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="e7d14-113">父項目</span><span class="sxs-lookup"><span data-stu-id="e7d14-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="42950-113">父項目</span><span class="sxs-lookup"><span data-stu-id="42950-113">Parent element</span></span>
 
-|     | <span data-ttu-id="e7d14-114">描述</span><span class="sxs-lookup"><span data-stu-id="e7d14-114">Description</span></span> |
+|     | <span data-ttu-id="42950-114">描述</span><span class="sxs-lookup"><span data-stu-id="42950-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="e7d14-115">**\<configuration>**</span><span class="sxs-lookup"><span data-stu-id="e7d14-115">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="e7d14-116">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="e7d14-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="42950-115">**\<configuration>**</span><span class="sxs-lookup"><span data-stu-id="42950-115">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="42950-116">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="42950-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
-## <a name="child-element"></a><span data-ttu-id="e7d14-117">子項目</span><span class="sxs-lookup"><span data-stu-id="e7d14-117">Child element</span></span>
+## <a name="child-element"></a><span data-ttu-id="42950-117">子項目</span><span class="sxs-lookup"><span data-stu-id="42950-117">Child element</span></span>
 
-|     | <span data-ttu-id="e7d14-118">描述</span><span class="sxs-lookup"><span data-stu-id="e7d14-118">Description</span></span> |
+|     | <span data-ttu-id="42950-118">描述</span><span class="sxs-lookup"><span data-stu-id="42950-118">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="e7d14-119">**\<linkedConfiguration >**</span><span class="sxs-lookup"><span data-stu-id="e7d14-119">**\<linkedConfiguration>**</span></span>](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | <span data-ttu-id="e7d14-120">指定要包含的組態檔。</span><span class="sxs-lookup"><span data-stu-id="e7d14-120">Specifies a configuration file to include.</span></span> |
+| [<span data-ttu-id="42950-119">**\<linkedConfiguration>**</span><span class="sxs-lookup"><span data-stu-id="42950-119">**\<linkedConfiguration>**</span></span>](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | <span data-ttu-id="42950-120">指定要包含的組態檔。</span><span class="sxs-lookup"><span data-stu-id="42950-120">Specifies a configuration file to include.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="e7d14-121">備註</span><span class="sxs-lookup"><span data-stu-id="e7d14-121">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="42950-121">備註</span><span class="sxs-lookup"><span data-stu-id="42950-121">Remarks</span></span>
 
-<span data-ttu-id="e7d14-122">[  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)項目可簡化管理的元件組件，允許應用程式組態檔，以包含組件中的設定檔已知的位置，而不是複製的組件組態設定。</span><span class="sxs-lookup"><span data-stu-id="e7d14-122">The [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) element simplifies the management of component assemblies by allowing application configuration files to include assembly configuration files in well-known locations, rather than duplicating assembly configuration settings.</span></span>
+<span data-ttu-id="42950-122">[  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)項目可簡化管理的元件組件，允許應用程式組態檔，以包含組件中的設定檔已知的位置，而不是複製的組件組態設定。</span><span class="sxs-lookup"><span data-stu-id="42950-122">The [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) element simplifies the management of component assemblies by allowing application configuration files to include assembly configuration files in well-known locations, rather than duplicating assembly configuration settings.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e7d14-123">**\<LinkedConfiguration >** 與 Windows 並排顯示的資訊清單的應用程式不支援項目。</span><span class="sxs-lookup"><span data-stu-id="e7d14-123">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
+> <span data-ttu-id="42950-123"> *\*\<LinkedConfiguration >** 與 Windows 並排顯示的資訊清單的應用程式不支援項目。</span><span class="sxs-lookup"><span data-stu-id="42950-123">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e7d14-124">範例</span><span class="sxs-lookup"><span data-stu-id="e7d14-124">Example</span></span>
+## <a name="example"></a><span data-ttu-id="42950-124">範例</span><span class="sxs-lookup"><span data-stu-id="42950-124">Example</span></span>
 
-<span data-ttu-id="e7d14-125">下列範例示範如何包含在本機硬碟上的組態檔：</span><span class="sxs-lookup"><span data-stu-id="e7d14-125">The following example shows how to include a configuration file on the local hard disk:</span></span>
+<span data-ttu-id="42950-125">下列範例示範如何包含在本機硬碟上的組態檔：</span><span class="sxs-lookup"><span data-stu-id="42950-125">The following example shows how to include a configuration file on the local hard disk:</span></span>
 
 ```xml
 <configuration>
@@ -68,6 +68,6 @@ ms.locfileid: "47193352"
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="e7d14-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e7d14-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42950-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="42950-126">See also</span></span>
 
-[<span data-ttu-id="e7d14-127">適用於.NET Framework 的組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="e7d14-127">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="42950-127">適用於.NET Framework 的組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="42950-127">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)

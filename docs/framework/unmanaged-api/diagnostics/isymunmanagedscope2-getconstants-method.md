@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73d4cc609694610aead2a3bfaeed1f5cca5f33fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 24fd642b8eaba19a8bfb32d2dc61a87595cb3c61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643724"
 ---
-# <a name="isymunmanagedscope2getconstants-method"></a><span data-ttu-id="befda-102">ISymUnmanagedScope2::GetConstants 方法</span><span class="sxs-lookup"><span data-stu-id="befda-102">ISymUnmanagedScope2::GetConstants Method</span></span>
-<span data-ttu-id="befda-103">取得定義在這個範圍內的區域常數。</span><span class="sxs-lookup"><span data-stu-id="befda-103">Gets the local constants defined within this scope.</span></span>  
+# <a name="isymunmanagedscope2getconstants-method"></a><span data-ttu-id="0ac07-102">ISymUnmanagedScope2::GetConstants 方法</span><span class="sxs-lookup"><span data-stu-id="0ac07-102">ISymUnmanagedScope2::GetConstants Method</span></span>
+<span data-ttu-id="0ac07-103">取得此範圍內定義的區域常數。</span><span class="sxs-lookup"><span data-stu-id="0ac07-103">Gets the local constants defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="befda-104">語法</span><span class="sxs-lookup"><span data-stu-id="befda-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ac07-104">語法</span><span class="sxs-lookup"><span data-stu-id="0ac07-104">Syntax</span></span>  
   
 ```  
 HRESULT GetConstants(  
@@ -38,21 +38,21 @@ HRESULT GetConstants(
              constants[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="befda-105">參數</span><span class="sxs-lookup"><span data-stu-id="befda-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0ac07-105">參數</span><span class="sxs-lookup"><span data-stu-id="0ac07-105">Parameters</span></span>  
  `cConstants`  
- <span data-ttu-id="befda-106">[in]緩衝區的長度，`pcConstants`參數所指向。</span><span class="sxs-lookup"><span data-stu-id="befda-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span></span>  
+ <span data-ttu-id="0ac07-106">[in]緩衝區的長度，`pcConstants`參數所指向。</span><span class="sxs-lookup"><span data-stu-id="0ac07-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span></span>  
   
  `pcConstants`  
- <span data-ttu-id="befda-107">[out]指標`ULONG32`接收以字元為單位，才能包含常數緩衝區的大小。</span><span class="sxs-lookup"><span data-stu-id="befda-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
+ <span data-ttu-id="0ac07-107">[out]指標`ULONG32`接收大小，以字元為單位，以包含常數所需要的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="0ac07-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
   
  `constants`  
- <span data-ttu-id="befda-108">[out]儲存常數緩衝區。</span><span class="sxs-lookup"><span data-stu-id="befda-108">[out] The buffer that stores the constants.</span></span>  
+ <span data-ttu-id="0ac07-108">[out]儲存常數緩衝區。</span><span class="sxs-lookup"><span data-stu-id="0ac07-108">[out] The buffer that stores the constants.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="befda-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="befda-109">Return Value</span></span>  
- <span data-ttu-id="befda-110">如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="befda-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0ac07-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="0ac07-109">Return Value</span></span>  
+ <span data-ttu-id="0ac07-110">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="0ac07-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="befda-111">需求</span><span class="sxs-lookup"><span data-stu-id="befda-111">Requirements</span></span>  
- <span data-ttu-id="befda-112">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="befda-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0ac07-111">需求</span><span class="sxs-lookup"><span data-stu-id="0ac07-111">Requirements</span></span>  
+ <span data-ttu-id="0ac07-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0ac07-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="befda-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="befda-113">See Also</span></span>  
- [<span data-ttu-id="befda-114">ISymUnmanagedScope2 介面</span><span class="sxs-lookup"><span data-stu-id="befda-114">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0ac07-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0ac07-113">See also</span></span>
+- [<span data-ttu-id="0ac07-114">ISymUnmanagedScope2 介面</span><span class="sxs-lookup"><span data-stu-id="0ac07-114">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

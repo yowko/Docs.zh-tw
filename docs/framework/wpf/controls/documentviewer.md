@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: 5ae0204a3ef7141ebbc98ecc91a464116593981f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19e3d70e378e1357f4a3b299ddfb504f5b85fd0f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682965"
 ---
-# <a name="documentviewer"></a><span data-ttu-id="1e7a7-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="1e7a7-102">DocumentViewer</span></span>
-<span data-ttu-id="1e7a7-103"><xref:System.Windows.Controls.DocumentViewer>控制項用來檢視<xref:System.Windows.Documents.FixedDocument>內容 (例如[!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)]文件) 的分頁的格式。</span><span class="sxs-lookup"><span data-stu-id="1e7a7-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
+# <a name="documentviewer"></a><span data-ttu-id="43728-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="43728-102">DocumentViewer</span></span>
+<span data-ttu-id="43728-103"><xref:System.Windows.Controls.DocumentViewer>控制項用來檢視<xref:System.Windows.Documents.FixedDocument>內容 (例如[!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)]文件) 的編頁的格式。</span><span class="sxs-lookup"><span data-stu-id="43728-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="1e7a7-104">參考資料</span><span class="sxs-lookup"><span data-stu-id="1e7a7-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="43728-104">參考資料</span><span class="sxs-lookup"><span data-stu-id="43728-104">Reference</span></span>  
  <xref:System.Windows.Controls.DocumentViewer>  
   
  <xref:System.Windows.Documents.FixedDocument>  
   
-## <a name="see-also"></a><span data-ttu-id="1e7a7-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1e7a7-105">See Also</span></span>  
- [<span data-ttu-id="1e7a7-106">文件</span><span class="sxs-lookup"><span data-stu-id="1e7a7-106">Documents</span></span>](../../../../docs/framework/wpf/advanced/documents.md)  
- [<span data-ttu-id="1e7a7-107">文件序列化與儲存</span><span class="sxs-lookup"><span data-stu-id="1e7a7-107">Document Serialization and Storage</span></span>](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
- [<span data-ttu-id="1e7a7-108">列印概觀</span><span class="sxs-lookup"><span data-stu-id="1e7a7-108">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a><span data-ttu-id="43728-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="43728-105">See also</span></span>
+- [<span data-ttu-id="43728-106">文件</span><span class="sxs-lookup"><span data-stu-id="43728-106">Documents</span></span>](../../../../docs/framework/wpf/advanced/documents.md)
+- [<span data-ttu-id="43728-107">文件序列化與儲存</span><span class="sxs-lookup"><span data-stu-id="43728-107">Document Serialization and Storage</span></span>](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [<span data-ttu-id="43728-108">列印概觀</span><span class="sxs-lookup"><span data-stu-id="43728-108">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)
