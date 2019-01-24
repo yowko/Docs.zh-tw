@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-ms.openlocfilehash: 8137434bfd8c26144d78b1761b784cdba4894eaf
-ms.sourcegitcommit: 7fe772c6c05a982153655d618c826e9839d39cac
+ms.openlocfilehash: d65c921a1631cd38c4d0d1ab9b34db3d7e43a97e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33605260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654837"
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>結束&lt;關鍵字&gt;陳述式 (Visual Basic)
 
@@ -48,7 +48,7 @@ End With
 
 |組件|描述|
 |---|---|
-|`End`|必要。 結束程式設計項目的定義。|
+|`End`|必要項。 結束程式設計項目的定義。|
 |`AddHandler`|才能終止`AddHandler`存取子應開始`AddHandler`陳述式，在自訂[Event 陳述式](event-statement.md)。|
 |`Class`|終止開始比對的類別定義，才能[Class 陳述式](class-statement.md)。|
 |`Enum`|終止開始比對的列舉型別定義所需[Enum 陳述式](enum-statement.md)。|
@@ -85,7 +85,7 @@ End With
 
 |組件|描述|
 |---|---|
-|`#End`|必要。 結束前置處理的區塊的定義。|
+|`#End`|必要項。 結束前置處理的區塊的定義。|
 |`ExternalSource`|必要開始比對的外部來源區塊[#ExternalSource 指示詞](../directives/externalsource-directive.md)。|
 |`If`|必要開始比對的條件式編譯區塊`#If`指示詞。 請參閱[#If......#Else 指示詞](../directives/if-then-else-directives.md)。|
 |`Region`|必要開始比對來源區域區塊[#Region 指示詞](../directives/region-directive.md)。|
@@ -101,4 +101,4 @@ End With
   
 ## <a name="see-also"></a>另請參閱
 
-[End 陳述式](end-statement.md)
+- [End 陳述式](end-statement.md)

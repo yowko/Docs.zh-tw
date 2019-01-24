@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 5628224a08fe5f12cf2a81b179c4998001174354
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 0503292dca81ef7b249b391f54c0aba2bba2cb10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524178"
 ---
 # <a name="module-statement"></a>Module 陳述式
 宣告模組的名稱，並引進變數、 屬性、 事件和組成模組的程序的定義。  
@@ -45,7 +45,7 @@ End Module
  請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `name`  
- 必要。 此模組的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ 必要項。 此模組的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  `statements`  
  選擇性。 定義的變數、 屬性、 事件、 程序和巢狀型別，此模組的陳述式。  
@@ -96,10 +96,10 @@ End Module
 ## <a name="example"></a>範例  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Namespace 陳述式](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
- [型別提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+## <a name="see-also"></a>另請參閱
+- [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Namespace 陳述式](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)
+- [型別提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)

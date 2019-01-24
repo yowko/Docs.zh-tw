@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: 3ee707ae4e2a7dafeb7cb42d6d56eeece8f23306
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d2d170679b09eb33bea3569e1e6db8954bde3659
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622282"
 ---
 # <a name="how-to-create-a-custom-claim"></a>HOW TO：建立自訂宣告
-識別模型基礎結構中 Windows Communication Foundation (WCF) 提供一組內建宣告類型和權限與協助程式函式建立<xref:System.IdentityModel.Claims.Claim>具有這些類型和權限的執行個體。 這些內建宣告專為 WCF 支援的用戶端認證類型中找到預設的模型資訊。 在許多情況下，內建宣告就已足夠；不過有些應用程式可能需要自訂宣告。 宣告中包含了宣告類型、宣告適用的資源，以及擁有該資源所需的權限。 這個主題會描述如何建立自訂宣告。  
+身分識別模型基礎結構在 Windows Communication Foundation (WCF) 提供一組內建的宣告類型和 helper 函式具有權限建立<xref:System.IdentityModel.Claims.Claim>透過這些類型和權限的執行個體。 這些內建的宣告被設計來在 WCF 支援的用戶端認證類型中找到預設的模型資訊。 在許多情況下，內建宣告就已足夠；不過有些應用程式可能需要自訂宣告。 宣告中包含了宣告類型、宣告適用的資源，以及擁有該資源所需的權限。 這個主題會描述如何建立自訂宣告。  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>依據基本資料型別建立自訂宣告  
   
@@ -21,15 +21,15 @@ ms.locfileid: "33804855"
   
     1.  決定用於宣告類型的唯一值。  
   
-         宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 如需由 WCF 所定義的宣告類型的清單，請參閱<xref:System.IdentityModel.Claims.ClaimTypes>類別。  
+         宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 如需 WCF 所定義的宣告類型的清單，請參閱<xref:System.IdentityModel.Claims.ClaimTypes>類別。  
   
     2.  選擇基本資料型別和資源的值。  
   
-         資源就是物件。 資源的 CLR 類型可以為基本，例如 <xref:System.String> 或 <xref:System.Int32>，或任何可序列化的類型。 資源的 CLR 型別必須可序列化，因為由 WCF 在不同時間點序列化宣告。 基本類型為可序列化。  
+         資源就是物件。 資源的 CLR 類型可以為基本，例如 <xref:System.String> 或 <xref:System.Int32>，或任何可序列化的類型。 資源的 CLR 型別必須可序列化，因為宣告由 WCF 序列化的各個點上。 基本類型為可序列化。  
   
     3.  選擇 WCF 或自訂的權限的唯一值所定義的權限。  
   
-         權限為唯一字串識別碼。 中所定義的權限，會由 WCF<xref:System.IdentityModel.Claims.Rights>類別。  
+         權限為唯一字串識別碼。 由 WCF 所定義的權限會定義在<xref:System.IdentityModel.Claims.Rights>類別。  
   
          自訂宣告設計者的責任在於確保用於權限的字串識別碼為獨一無二的。  
   
@@ -44,11 +44,11 @@ ms.locfileid: "33804855"
   
     1.  決定用於宣告類型的唯一值。  
   
-         宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 如需由 WCF 所定義的宣告類型的清單，請參閱<xref:System.IdentityModel.Claims.ClaimTypes>類別。  
+         宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 如需 WCF 所定義的宣告類型的清單，請參閱<xref:System.IdentityModel.Claims.ClaimTypes>類別。  
   
     2.  選擇或定義資源的可序列化非基本類型。  
   
-         資源就是物件。 資源的 CLR 型別必須可序列化，因為由 WCF 在不同時間點序列化宣告。 基本類型已為可序列化。  
+         資源就是物件。 資源的 CLR 型別必須可序列化，因為宣告由 WCF 序列化的各個點上。 基本類型已為可序列化。  
   
          定義新類型時，請將 <xref:System.Runtime.Serialization.DataContractAttribute> 套用至類別。 也將 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性套用至需要序列化以做為宣告一部分之新類型的所有成員。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "33804855"
   
     3.  選擇 WCF 或自訂的權限的唯一值所定義的權限。  
   
-         權限為唯一字串識別碼。 中所定義的權限，會由 WCF<xref:System.IdentityModel.Claims.Rights>類別。  
+         權限為唯一字串識別碼。 由 WCF 所定義的權限會定義在<xref:System.IdentityModel.Claims.Rights>類別。  
   
          自訂宣告設計者的責任在於確保用於權限的字串識別碼為獨一無二的。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "33804855"
  [!code-csharp[c_CustomClaim#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#0)]
  [!code-vb[c_CustomClaim#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#0)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Claims.Rights>  
- <xref:System.IdentityModel.Claims.ClaimTypes>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Claims.Rights>
+- <xref:System.IdentityModel.Claims.ClaimTypes>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

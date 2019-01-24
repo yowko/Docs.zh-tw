@@ -6,12 +6,12 @@ helpviewer_keywords:
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-ms.openlocfilehash: 436caa9b93467dcf2a0763bcc0962a2beb722315
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2d5656e6328e1902bddcda3d1ac4b4eabb148d28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731357"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod 指示詞
 指定的 XAML 處理器應該用來解決它的支援型別之後初始化物件的建構函式以外的方法。  
@@ -56,5 +56,5 @@ ms.locfileid: "47397526"
   
  `x:FactoryMethod` 當項目必須位於任何其他的屬性元素之前，前面必須加上任何`x:Arguments`也提供做為項目，而且前面必須加上任何內容/內部文字/初始化文字。  
   
-## <a name="see-also"></a>另請參閱  
- [x:Arguments 指示詞](../../../docs/framework/xaml-services/x-arguments-directive.md)
+## <a name="see-also"></a>另請參閱
+- [x:Arguments 指示詞](../../../docs/framework/xaml-services/x-arguments-directive.md)

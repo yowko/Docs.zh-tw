@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 47034b3699f4dfee67d36e72d4b22898d469c900
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084705"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700291"
 ---
 # <a name="mid-statement"></a>Mid 陳述式
 取代字元的指定的數目`String`變數與另一個字串中的字元。  
@@ -32,16 +32,16 @@ Mid( _
   
 ## <a name="parts"></a>組件  
  `Target`  
- 必要。 名稱`String`修改的變數。  
+ 必要項。 名稱`String`修改的變數。  
   
  `Start`  
- 必要。 `Integer` 運算式。 字元在位置`Target`取代文字的開始位置。 `Start` 使用以一為基的索引。  
+ 必要項。 `Integer` 運算式。 字元在位置`Target`取代文字的開始位置。 `Start` 使用以一為基的索引。  
   
  `Length`  
  選擇性。 `Integer` 運算式。 若要取代的字元數。 如果省略，所有`String`用。  
   
  `StringExpression`  
- 必要。 `String` 取代一部分的運算式`Target`。  
+ 必要項。 `String` 取代一部分的運算式`Target`。  
   
 ## <a name="exceptions"></a>例外狀況  
   
@@ -63,13 +63,13 @@ Mid( _
  [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **命名空間：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **模組：** `Strings`  
   
  **組件︰** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
- [字串](../../../visual-basic/programming-guide/language-features/strings/index.md)  
- [Visual Basic 中的字串簡介](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.Strings.Mid%2A>
+- [字串](../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [Visual Basic 中的字串簡介](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
