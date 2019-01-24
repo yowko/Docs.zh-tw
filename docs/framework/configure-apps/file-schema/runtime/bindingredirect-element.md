@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: fc2c5fb906856365e901c27bfe6624375f1e0137
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7fb610357772b3c74129074096c53bf3f149501a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714746"
 ---
 # <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt;項目
 將一個組件版本重新導向至另一個版本。  
@@ -25,7 +25,7 @@ ms.locfileid: "53613761"
 \<執行階段 >  
 \<assemblyBinding>  
 \<dependentAssembly>  
-\<bindingRedirect >  
+\<bindingRedirect>  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ newVersion="new assembly version"/>
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`oldVersion`|必要屬性。<br /><br /> 指定原本要求的組件版本。 組件版本號碼的格式*major.minor.build.revision*。 這個版本號碼每個部分的有效值為 0 至 65535。<br /><br /> 您也可以使用下列格式指定版本範圍：<br /><br /> *n.n.n.n-n.n.n.n*|  
+|`oldVersion`|必要屬性。<br /><br /> 指定原本要求的組件版本。 組件版本號碼的格式*major.minor.build.revision*。 這個版本號碼每個部分的有效值為 0 至 65535。<br /><br /> 您也可以使用下列格式指定版本範圍：<br /><br /> *n.n.n.n - n.n.n.n*|  
 |`newVersion`|必要屬性。<br /><br /> 指定要使用，而非原本要求的版本格式的組件版本： *n.n.n.n*<br /><br /> 這個值可以指定 `oldVersion` 以前的版本。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -86,7 +86,7 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>另請參閱
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

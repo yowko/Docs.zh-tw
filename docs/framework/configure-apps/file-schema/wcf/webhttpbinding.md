@@ -2,18 +2,18 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: 6299100a5dd29bed8d4a30bcb4fbc9631d7bf967
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b75762fdef4f0c71c58542be9f674da291fcf23f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656566"
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 定義用來設定回應 HTTP 要求，而非 SOAP 訊息的 Windows Communication Foundation (WCF) Web 服務端點的繫結項目。  
   
 \<system.ServiceModel>  
-\<繫結 >  
+\<bindings>  
 \<webHttpBinding>  
   
 ## <a name="syntax"></a>語法  
@@ -83,18 +83,18 @@ ms.locfileid: "54145866"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
  WCF Web 程式設計模型可讓開發人員公開 （expose） WCF Web 服務透過 HTTP 要求，使用"plain old XML"(POX) 樣式傳訊而非 soap 傳訊。 針對使用 HTTP 要求與服務通訊的用戶端，服務的端點都必須設有[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)具有\<WebHttpBehavior > 附加到它。  
   
  支援在 WCF 中對於新聞訂閱和 ASP。AJAX 整合都是建 Web 程式設計模型之上。 如需有關模型的詳細資訊，請參閱[WCF Web HTTP 程式設計模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
- [WCF Web HTTP 程式設計模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>
+- [WCF Web HTTP 程式設計模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

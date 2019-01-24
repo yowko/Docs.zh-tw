@@ -2,12 +2,12 @@
 title: ADO.NET 中的資料追蹤
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 037db6f4e5695e00401c81e1490953efe2fc9b99
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ac9e290d4c9209cbf8ccf5eb3acdeceb68f9021b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721860"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET 中的資料追蹤
 ADO.NET 具備內建資料追蹤功能的.NET 資料提供者所支援的 SQL Server、 Oracle、 OLE DB 和 ODBC，以及 ADO.NET <xref:System.Data.DataSet>，和 SQL Server 網路通訊協定。  
@@ -51,7 +51,7 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [以 .NET Framework 進行網路追蹤](../../../../docs/framework/network-programming/network-tracing.md)  
- [追蹤和檢測應用程式](../../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [以 .NET Framework 進行網路追蹤](../../../../docs/framework/network-programming/network-tracing.md)
+- [追蹤和檢測應用程式](../../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

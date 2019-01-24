@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31096f7a5fd23bbd54f2beb9258c9d529e94f373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 28d4c9098076699de250ab1c43e5f9e353dc9752
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740108"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex 方法
-取得代表指定 MethodDef 語彙基元所表示之方法的指定的參數的語彙基元。  
+取得表示指定的參數，指定 MethodDef 語彙基元所代表之方法的語彙基元。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,23 +39,23 @@ HRESULT GetParamForMethodIndex (
   
 #### <a name="parameters"></a>參數  
  `md`  
- [in]表示要傳回的參數語彙基元的方法語彙基元。  
+ [in]語彙基元，表示這個方法傳回的參數 token。  
   
  `ulParamSeq`  
- [in]參數清單中要發生要求的參數序數的位置。 參數的編號從一方法的傳回值，在位置零開始。  
+ [in]參數清單中要發生要求的參數序數的位置。 參數編號從一方法的傳回值在位置零開始。  
   
  `ppd`  
- [out]ParamDef 語彙基元，代表所要求的參數的指標。  
+ [out]表示要求的參數 ParamDef 語彙基元指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

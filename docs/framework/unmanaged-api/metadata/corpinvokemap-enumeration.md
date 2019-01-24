@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: edb45c9ceefb242e5a72e8602dc93ecd39b2df09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23a4c1aa25f269121dc602bbeb6b864b589318be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745948"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 列舉
-指定 PInvoke 呼叫的選項。  
+指定的 PInvoke 呼叫的選項。  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,35 +67,35 @@ typedef enum  CorPinvokeMap {
   
 |成員|描述|  
 |------------|-----------------|  
-|`pmNoMangle`|使用指定的每個成員名稱。|  
+|`pmNoMangle`|使用所指定的每個成員名稱。|  
 |`pmCharSetMask`|保留的。|  
 |`pmCharSetNotSpec`|保留的。|  
-|`pmCharSetAnsi`|封送處理字串為多位元組字元字串。|  
-|`pmCharSetUnicode`|封送處理為 Unicode 2 位元組字元的字串。|  
-|`pmCharSetAuto`|會自動封送處理字串適用於目標作業系統。 預設值是 Windows NT、 Windows 2000、 Windows XP 和 Windows Server 2003 系列; 上的為 Unicode預設值是 Windows 98 和 Windows me 上的為 ANSI|  
+|`pmCharSetAnsi`|封送處理成多位元組字元字串的字串。|  
+|`pmCharSetUnicode`|封送處理為 Unicode 2 個位元組字元的字串。|  
+|`pmCharSetAuto`|自動字串封送處理適當的目標作業系統。 預設值是 Windows NT、 Windows 2000，Windows XP 和 Windows Server 2003 系列中 Unicode預設值是 Windows 98 和 Windows me 上的為 ANSI|  
 |`pmBestFitUseAssem`|保留的。|  
 |`pmBestFitEnabled`|執行沒有完全符合 ANSI 字元集中的 Unicode 字元的自動調整的對應。|  
-|`pmBestFitDisabled`|不會執行自動調整的對應 Unicode 字元。 在此情況下，所有無法對應的字元會被 '？ '。|  
+|`pmBestFitDisabled`|不會執行自動調整的對應的 Unicode 字元。 在此情況下，所有無法對應的字元會取代 '？ '。|  
 |`pmBestFitMask`|保留的。|  
 |`pmThrowOnUnmappableCharUseAssem`|保留的。|  
 |`pmThrowOnUnmappableCharEnabled`|Interop 封送處理器遇到無法對應的字元時，會擲回例外狀況。|  
-|`pmThrowOnUnmappableCharDisabled`|Interop 封送處理器遇到無法對應的字元時，請確實擲回例外狀況。|  
+|`pmThrowOnUnmappableCharDisabled`|Interop 封送處理器遇到無法對應的字元時，請務必擲回例外狀況。|  
 |`pmThrowOnUnmappableCharMask`|保留|  
-|`pmSupportsLastError`|可讓被呼叫端呼叫 Win32`SetLastError`屬性化方法在傳回前的函式。|  
+|`pmSupportsLastError`|可讓被呼叫端呼叫 Win32`SetLastError`自屬性方法傳回之前的函式。|  
 |`pmCallConvMask`|保留|  
-|`pmCallConvWinapi`|使用預設平台的呼叫慣例。 例如，在 Windows 上預設值是`StdCall`以及它是 Windows CE.NET `Cdecl`。|  
-|`pmCallConvCdecl`|使用`Cdecl`呼叫慣例。 在此情況下，呼叫端會清除堆疊。 這可讓呼叫的函式與`varargs`（也就是函式接受多個參數）。|  
-|`pmCallConvStdcall`|使用`StdCall`呼叫慣例。 在此情況下，被呼叫端會清除堆疊。 這是呼叫 unmanaged 函式，使用平台叫用的預設慣例。|  
-|`pmCallConvThiscall`|使用`ThisCall`呼叫慣例。 在此情況下，第一個參數是`this`指標並儲存在暫存器 ECX。 其他參數會推送至堆疊上。 `ThisCall`呼叫慣例用於呼叫從 unmanaged 的 DLL 匯出的類別上的方法。|  
+|`pmCallConvWinapi`|使用預設平台呼叫慣例。 比方說，在 Windows 上的預設值是`StdCall`以及它是 Windows CE.NET `Cdecl`。|  
+|`pmCallConvCdecl`|使用`Cdecl`呼叫慣例。 在此情況下，呼叫端會清除堆疊。 這可讓呼叫的函式與`varargs`（也就是函式接受變動數目的參數）。|  
+|`pmCallConvStdcall`|使用`StdCall`呼叫慣例。 在此情況下，被呼叫端會清除堆疊。 這是呼叫 unmanaged 函式，與平台叫用的預設慣例。|  
+|`pmCallConvThiscall`|使用`ThisCall`呼叫慣例。 在此案例中，第一個參數是`this`指標儲存在 register ECX 和。 其他參數會推送到堆疊上。 `ThisCall`呼叫慣例用來呼叫從 unmanaged DLL 匯出的類別上的方法。|  
 |`pmCallConvFastcall`|保留的。|  
 |`pmMaxValue`|保留的。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

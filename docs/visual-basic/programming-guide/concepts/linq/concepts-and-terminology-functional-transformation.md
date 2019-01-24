@@ -1,15 +1,15 @@
 ---
-title: 概念和術語 （功能轉換） (Visual Basic)
+title: 概念和術語 （函數式轉換） (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: 67986e36333ac9a1aba7bec3c1b6c248b4faf55f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e98e24bb60dd2a5b6e84195120429fac0b8832e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651860"
 ---
-# <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>概念和術語 （功能轉換） (Visual Basic)
+# <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>概念和術語 （函數式轉換） (Visual Basic)
 本主題說明純功能性轉換的概念與術語。 轉換資料的功能性轉換方法所產生的程式碼通常比更傳統的命令性程式設計可以更快速地進行程式設計、更明確，而且更容易進行偵錯與維護。  
   
  請注意，本節中的主題用意不在於完整說明功能性程式設計。 而在於識別更容易將 XML 從一個組織結構轉換為另一個組織結構的某些功能性程式設計能力。  
@@ -24,14 +24,14 @@ ms.locfileid: "33644416"
 > [!IMPORTANT]
 >  在本教學課程的其餘部分，「純虛擬函式」這個名詞用於一般含意，表示程式設計方法而非特定的語言功能。  
 >   
->  請注意，必須實作純虛擬函式做為 Visual Basic 中的函式。  
+>  請注意，純虛擬函式必須實作為在 Visual Basic 中的函式。  
 >   
 >  同時，您不應將純虛擬函式誤解為 C++ 的純虛擬方法。 後者表示包含的類別是抽象的，而且不會提供任何方法主體。  
   
 ### <a name="functional-programming"></a>功能性程式設計  
  「函式程式設計」是一種程式設計方法，可直接支援純功能性轉換。  
   
- 根據過去的經驗，一般用途的函式程式設計語言 (例如，ML、Scheme、Haskell 與 F#) 主要受到學術團體的注意。 雖然一直可以在 Visual Basic 中撰寫純功能性轉換，困難度不始終讓它能吸引大部分的程式設計人員。 更新版本的 Visual Basic 中，不過，新語言建構例如 lambda 運算式和型別推斷讓功能性程式設計更容易且更具生產力。  
+ 根據過去的經驗，一般用途的函式程式設計語言 (例如，ML、Scheme、Haskell 與 F#) 主要受到學術團體的注意。 雖然它一直可以在 Visual Basic 中撰寫純功能性轉換，困難度因此未進行其大部分的程式設計人員一個不錯的選擇。 與更新版本的 Visual Basic 中，不過，新語言建構例如 lambda 運算式和型別推斷讓它的功能性程式設計更容易且更具生產力。  
   
  如需功能性程式設計的詳細資訊，請參閱[功能性程式設計與命令式程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)。  
   
@@ -42,9 +42,9 @@ ms.locfileid: "33644416"
  下表定義與功能性轉換相關的一些辭彙。  
   
  高順序 (第一級) 函式  
- 可以視為程式設計物件的函式。 例如，高順序函式可以傳遞到其他函式，或從其他函式傳回。 在 Visual Basic 中，委派和 lambda 運算式，都是支援高順序函式的語言功能。 若要撰寫高順序函式，您可以宣告一或多個引數以取得委派，而且在呼叫高順序函式時，您通常可以使用 Lambda 運算式。 許多標準查詢運算子都是高順序函式。  
+ 可以視為程式設計物件的函式。 例如，高順序函式可以傳遞到其他函式，或從其他函式傳回。 在 Visual Basic 中，委派和 lambda 運算式是支援高順序函式的語言功能。 若要撰寫高順序函式，您可以宣告一或多個引數以取得委派，而且在呼叫高順序函式時，您通常可以使用 Lambda 運算式。 許多標準查詢運算子都是高順序函式。  
   
- 如需詳細資訊，請參閱[標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
  Lambda 運算式  
  基本上，這是可用於任何需要委派型別之處的內嵌匿名函式。 這是 Lambda 運算式的簡化定義，但這適用於此教學課程的用途。  
@@ -57,20 +57,20 @@ ms.locfileid: "33644416"
  Tuple (匿名型別)  
  這是一個數學概念，一個 Tuple 表示一個有限的物件順序，每個都有特定的型別。 Tuple 也稱為排序清單。 匿名型別為此概念的語言實作，可以宣告未具名的類別型別，並同時具現化該類別的物件。  
   
- 如需詳細資訊，請參閱[匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
   
  型別推斷 (隱含型別)  
  編譯器在沒有明確的型別宣告時，判斷變數型別的能力。  
   
- 如需詳細資訊，請參閱[區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 區域型別推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
   
  延後執行與延遲評估  
  延後運算式的評估，直到實際需要其解決的值為止。 在集合中，支援延後執行。  
   
- 如需詳細資訊，請參閱[基本查詢作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)和[延後執行和 LINQ to XML (Visual Basic) 中的延遲評估](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 基本查詢作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)並[延後執行和 LINQ to XML (Visual Basic) 中的延遲評估](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。  
   
  這些語言功能將用於本節的所有程式碼範例中。  
   
-## <a name="see-also"></a>另請參閱  
- [Introduction to 純功能性轉換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [函數式程式設計與命令式程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>另請參閱
+- [純函數式轉換 (Visual Basic) 簡介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [函數式程式設計與命令式程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: e286b900d7647bcd5bc99b78164e6820c1417a63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93ec81d94d8133fc5a6d71d7f1b57b2e9a6aad21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489540"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659627"
 ---
 # <a name="data-member-order"></a>資料成員順序
 在某些應用程式中，知道來自各個資料成員之資料的傳送順序或是資料的預期收到順序是十分有用的 (例如，資料出現在序列化 XML 中的順序)。 有時候可能需要變更這個順序。 本主題將說明排序規則。  
@@ -62,7 +62,7 @@ ms.locfileid: "33489540"
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

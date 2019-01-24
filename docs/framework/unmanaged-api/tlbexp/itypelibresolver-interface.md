@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baff7dac7f1ddc8546bcb52627eeee992921a395
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: bbd8e15b7f708df628f75dc9812eca0f84f36434
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672990"
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver 介面
 提供[ResolveTypeLib 方法](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)，其解析後的類型程式庫的檔案路徑。  
@@ -35,12 +35,12 @@ ms.locfileid: "42925879"
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** TlbRef.idl、 TlbRef.h  
+ **標頭：** TlbRef.idl TlbRef.h  
   
  **程式庫：** TlbRef.lib  
   
- **.NET framework 版本：** 4、 3.5、 3.0、 2.0  
+ **.NET framework 版本：** 4, 3.5, 3.0, 2.0  
   
-## <a name="see-also"></a>另請參閱  
- [Tlbexp Helper 函式](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx 函式](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a>另請參閱
+- [Tlbexp Helper 函式](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [LoadTypeLibEx 函式](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

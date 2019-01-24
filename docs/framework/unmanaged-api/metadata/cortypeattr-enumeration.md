@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f71e59eb13321517de61315d3ba06b96c5458f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af90055c0a51e61d4032e45d6fa4a4914ddd045f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667933"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 列舉
 包含值，這些值表示類型中繼資料。  
@@ -80,45 +80,45 @@ typedef enum CorTypeAttr {
 |成員|描述|  
 |------------|-----------------|  
 |`tdVisibilityMask`|用於型別可視性資訊。|  
-|`tdNotPublic`|指定的類型不是公用的範圍中。|  
+|`tdNotPublic`|指定的型別不是公用的範圍中。|  
 |`tdPublic`|指定的類型是公用的範圍中。|  
-|`tdNestedPublic`|指定的類型使用巢狀公用可視性。|  
-|`tdNestedPrivate`|指定的類型巢狀具有私用的可視性。|  
-|`tdNestedFamily`|指定的型別使用家族可視性所產生的巢狀。|  
-|`tdNestedAssembly`|指定的類型巢狀與組件可見性。|  
-|`tdNestedFamANDAssem`|指定型別使用家族和組件可視性所產生的巢狀。|  
-|`tdNestedFamORAssem`|指定型別使用家族或組件可視性所產生的巢狀。|  
+|`tdNestedPublic`|指定的類型巢狀具有公用可視性。|  
+|`tdNestedPrivate`|指定的類型巢狀使用私用可見度。|  
+|`tdNestedFamily`|指定的型別使用家族可視性的巢狀。|  
+|`tdNestedAssembly`|指定的型別使用巢狀組件可見性。|  
+|`tdNestedFamANDAssem`|指定的型別使用家族和組件的可見性的巢狀。|  
+|`tdNestedFamORAssem`|指定的型別使用家族或組件的可見性的巢狀。|  
 |`tdLayoutMask`|取得類型的配置資訊。|  
 |`tdAutoLayout`|指定此類型的欄位會自動配置。|  
-|`tdSequentialLayout`|指定此類型的欄位會循序配置。|  
+|`tdSequentialLayout`|指定此類型的欄位會以循序方式配置。|  
 |`tdExplicitLayout`|指定明確提供該欄位的配置。|  
-|`tdClassSemanticsMask`|取得類型的語意資訊。|  
+|`tdClassSemanticsMask`|取得型別的相關語意資訊。|  
 |`tdClass`|指定此類型為類別。|  
 |`tdInterface`|指定此類型為介面。|  
 |`tdAbstract`|指定此類型為抽象。|  
-|`tdSealed`|指定類型，無法擴充。|  
-|`tdSpecialName`|指定類別名稱是特殊。 其名稱會說明如何。|  
-|`tdImport`|指定的類型匯入。|  
+|`tdSealed`|指定的型別不能擴充。|  
+|`tdSpecialName`|指定特殊的類別名稱。 其名稱將告訴您如何。|  
+|`tdImport`|指定的型別會匯入。|  
 |`tdSerializable`|指定的型別是可序列化。|  
 |`tdWindowsRuntime`|指定此類型為[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型別。|  
-|`tdStringFormatMask`|取得如何編碼和格式字串的相關資訊。|  
+|`tdStringFormatMask`|取得字串編碼和格式化的方式的相關資訊。|  
 |`tdAnsiClass`|指定此類型會解譯為 ANSI LPTSTR。|  
 |`tdUnicodeClass`|指定此類型會解譯為 Unicode LPTSTR。|  
 |`tdAutoClass`|指定此類型會自動解譯 LPTSTR。|  
-|`tdCustomFormatClass`|指定類型具有非標準的編碼，依指定`CustomFormatMask`。|  
-|`tdCustomFormatMask`|您可以使用這個遮罩，取得原生 interop 的非標準編碼資訊。 未指定這些兩位元值的意義。|  
-|`tdBeforeFieldInit`|指定第一次嘗試存取的靜態欄位之前，必須初始化型別。|  
-|`tdForwarder`|指定的已匯出類型，以及類型轉送子。|  
-|`tdReservedMask`|這個旗標，而且下列旗標，則會由 common language runtime 內部使用。|  
-|`tdRTSpecialName`|指定通用語言執行平台應該檢查名稱編碼。|  
-|`tdHasSecurity`|指定類型具有與其相關聯的安全性。|  
+|`tdCustomFormatClass`|指定該類型具有非標準的編碼，依照`CustomFormatMask`。|  
+|`tdCustomFormatMask`|您可以使用此遮罩來取得原生 interop 的非標準編碼資訊。 未指定這些兩位元值的意義。|  
+|`tdBeforeFieldInit`|指定第一次嘗試存取的靜態欄位之前，必須先初始化型別。|  
+|`tdForwarder`|指定，將匯出的類型，以及類型轉送子。|  
+|`tdReservedMask`|這個旗標和下方的旗標，則會由 common language runtime 內部使用。|  
+|`tdRTSpecialName`|指定 common language runtime 應該檢查名稱編碼方式。|  
+|`tdHasSecurity`|指定該類型具有與其相關聯的安全性。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

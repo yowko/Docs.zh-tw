@@ -1,24 +1,24 @@
 ---
-title: HOW TO：安裝和設定 WCF 啟用元件
+title: HOW TO：安裝及設定 WCF 啟用元件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 8b516bb4603f33828069b5356676d8b35dc961d2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726893"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>HOW TO：安裝和設定 WCF 啟用元件
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>HOW TO：安裝及設定 WCF 啟用元件
 本主題說明設定 Windows Process Activation Service (亦稱為 WAS) 所需的步驟上[!INCLUDE[wv](../../../../includes/wv-md.md)]來裝載 Windows Communication Foundation (WCF) 服務不會透過 HTTP 通訊的網路通訊協定。 下列各節將概述此組態的各項步驟：  
   
 -   安裝 （或確認安裝） WCF 啟用元件。  
   
 -   設定 WAS 支援非 HTTP 通訊協定。 下列程序將設定 [!INCLUDE[wv](../../../../includes/wv-md.md)] 以啟動 TCP。  
   
- 安裝與設定 WAS，請參閱之後[如何： 將 WCF 服務裝載於 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)以建立 WCF 服務來公開使用 WAS 的非 HTTP 端點的程序。  
+ 安裝與設定 WAS，請參閱之後[How to:將 WCF 服務裝載於 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)以建立 WCF 服務來公開使用 WAS 的非 HTTP 端點的程序。  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>若要安裝 WCF 非 HTTP 啟動元件  
   
@@ -100,8 +100,8 @@ ms.locfileid: "47088330"
     > [!NOTE]
     >  這個命令是單行文字。  
   
-## <a name="see-also"></a>另請參閱  
- [TCP 啟用](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [MSMQ 啟用](../../../../docs/framework/wcf/samples/msmq-activation.md)  
- [NamedPipe 啟用](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [Windows Server App Fabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>另請參閱
+- [TCP 啟用](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [MSMQ 啟用](../../../../docs/framework/wcf/samples/msmq-activation.md)
+- [NamedPipe 啟用](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
+- [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)

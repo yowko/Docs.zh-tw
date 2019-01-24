@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74d6852d14eec234b787ca0e852c333391a7b329
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4f1ceae32445fb350f6fcc98f3a1eec044fa7885
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655500"
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;Supportportability>&gt;項目
 指定應用程式可以在兩個不同的 .NET Framework 實作中參考相同的組件，方法是停用將組件視為同等的預設行為 (此預設行為是基於應用程式可攜性的考量)。  
@@ -78,6 +78,6 @@ ms.locfileid: "53614281"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- [/appconfig （C# 編譯器選項）](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)  
+## <a name="see-also"></a>另請參閱
+- [/appconfig （C# 編譯器選項）](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [.NET framework 組件統一概觀](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

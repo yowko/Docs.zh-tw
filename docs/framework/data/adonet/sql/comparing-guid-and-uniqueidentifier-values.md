@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
-ms.openlocfilehash: 7d982b73332a2629ccd32c409e0de6fe1ce6eb98
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d773b6e49a9f3c2909b2479abdc498d4b059f660
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674052"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>比較 GUID 和 uniqueidentifier 值
 SQL Server 中的全域唯一識別碼 (GUID) 資料型別由 `uniqueidentifier` 資料型別所表示，其儲存 16 個位元組的二進位值。 GUID 是二進位數字，主要當成識別項使用，在許多電腦位於許多站台上的網路中，該識別項必須是唯一的。 可藉由呼叫 Transact-SQL NEWID 函式的方法來產生 GUID，並保證此 GUID 是全球唯一的。 如需詳細資訊，請參閱 [uniqueidentifier (transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql)。  
@@ -45,7 +45,7 @@ Sorted SqlGuids:
 1aaaaaaa-bbbb-cccc-dddd-3eeeeeeeeeee  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
 
-[SQL Server 資料類型和 ADO.NET](sql-server-data-types.md)  
-[ADO.NET 概觀](../ado-net-overview.md)  
+- [SQL Server 資料類型和 ADO.NET](sql-server-data-types.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

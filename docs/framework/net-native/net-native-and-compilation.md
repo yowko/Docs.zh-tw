@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 023759ea3d1401dbc166873d14d2c51502a1a96c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744137"
 ---
 # <a name="net-native-and-compilation"></a>.NET 原生和編譯
 以 .NET Framework 為目標的 Windows 8.1 應用程式及 Windows 桌面應用程式，會以特定的程式設計語言撰寫，並會編譯成中繼語言 (IL)。 在執行階段，Just-In-Time (JIT) 編譯器在第一次執行方法之前，才會負責編譯 IL 為本機電腦的原生程式碼。 相較之下，.NET 原生工具鏈會在編譯時期轉換原始碼為原生程式碼。 本主題比較 .NET Native 與其他適用於 .NET Framework 應用程式的編譯技術，並提供 .NET Native 如何產生原生程式碼的實用概觀，可協助您了解為什麼在以 .NET Native 編譯的程式碼中發生的例外狀況不會發生在 JIT 編譯程式碼中。  
@@ -100,8 +100,8 @@ ms.locfileid: "53152522"
   
 -   NGEN 映像通常易於損壞。 例如，修補檔案或相依性的變更通常要求使用它的組件也是由原生映像所產生的。 特別在 .NET Framework 類別庫中的系統組件更是如此。 相反地，.NET 原生允許獨立地服務彼此的應用程式。  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料和自我描述元件](../../../docs/standard/metadata-and-self-describing-components.md)  
- [深入探討.NET Native （Channel 9 影片）](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
- [反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
- [.NET Native 一般疑難排解](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料和自我描述元件](../../../docs/standard/metadata-and-self-describing-components.md)
+- [深入探討.NET Native （Channel 9 影片）](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [.NET Native 一般疑難排解](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

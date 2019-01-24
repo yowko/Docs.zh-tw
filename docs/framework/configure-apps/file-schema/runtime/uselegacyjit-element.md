@@ -4,12 +4,12 @@ ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd4f9728338ecc66f84fe42b9bdbda9938ed518b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ecf4d805feeb27a7c3fa08d2ab6dd05b6fff693a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648176"
 ---
 # <a name="ltuselegacyjitgt-element"></a>&lt;Uselegacyjit>&gt;項目
 
@@ -17,7 +17,7 @@ ms.locfileid: "53612188"
   
 \<configuration>  
 \<執行階段 >  
-\<Uselegacyjit> >
+\<useLegacyJit>
   
 ## <a name="syntax"></a>語法  
   
@@ -95,6 +95,6 @@ ms.locfileid: "53612188"
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<執行階段 > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)   
-- [\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   
+- [\<執行階段 > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
+- [\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
 - [風險降低：新的 64 位元 JIT 編譯器](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)

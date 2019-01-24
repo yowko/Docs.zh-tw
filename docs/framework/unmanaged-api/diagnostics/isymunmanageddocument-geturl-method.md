@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a447de2bb01e7bbf838ef5443e3ae7951bf8226
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9a93ef073d4dd2eaf58c057d4cdf25fa39082e14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706322"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL 方法
-傳回這份文件的統一資源定位器 (URL)。  
+傳回統一資源定位器 (URL)，這份文件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,13 +41,13 @@ HRESULT GetURL(
  [in]大小，以字元為單位的`szURL`緩衝區。  
   
  `pcchUrl`  
- [out]大小的 URL，包括 null 結束之變數的指標。  
+ [out]此變數會接收的 URL，包括 null 終止的大小指標。  
   
  `szUrl`  
- [out]包含 URL 的緩衝區。  
+ [out]包含之 URL 的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，錯誤代碼。  
+ 如果方法成功，則為 S_OK否則，出現錯誤代碼。  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

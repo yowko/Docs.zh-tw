@@ -1,15 +1,15 @@
 ---
-title: HOW TO：在可靠的工作階段內交換訊息
+title: HOW TO：可靠工作階段內交換訊息
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720050"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>HOW TO：在可靠的工作階段內交換訊息
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>HOW TO：可靠工作階段內交換訊息
 
 本主題概要說明透過其中一個系統提供的繫結啟用可靠工作階段 (此繫結支援此類工作階段，但非預設) 所需的步驟。 啟用可靠工作階段，命令式程式碼或是宣告式組態檔。 若要啟用可靠工作階段，並規定訊息依照傳送的相同順序送達，此程序會使用用戶端和服務組態檔。
 
@@ -75,8 +75,8 @@ ms.locfileid: "50195732"
 
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 
-如需如何建立支援可靠工作階段的自訂繫結的範例，請參閱 <<c0> [ 如何： 使用 HTTPS 建立自訂可靠工作階段繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)。
+如需如何建立支援可靠工作階段的自訂繫結的範例，請參閱[How to:使用 HTTPS 建立自訂可靠工作階段繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[可靠工作階段](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [可靠工作階段](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
