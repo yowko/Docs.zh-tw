@@ -1,5 +1,5 @@
 ---
-title: 如何：變更 Windows Form DataGridView 控制項資料行的順序
+title: HOW TO：變更 Windows Form DataGridView 控制項中的資料行的順序
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,35 +9,35 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
-ms.openlocfilehash: f3b1ddd583f76ab135d13108f8c62775ab894c83
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 8e090bcafb66f2d6a997f9b54626d1bf23d7032e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649514"
 ---
-# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="bc55c-102">如何：變更 Windows Form DataGridView 控制項資料行的順序</span><span class="sxs-lookup"><span data-stu-id="bc55c-102">How to: Change the Order of Columns in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="bc55c-103">當您使用 <xref:System.Windows.Forms.DataGridView> 顯示來自資料來源的資料時，資料來源結構描述中的資料行有時不會以您想要的順序顯示。</span><span class="sxs-lookup"><span data-stu-id="bc55c-103">When you use a <xref:System.Windows.Forms.DataGridView> to display data from a data source, the columns in the data source's schema sometimes do not appear in the order you would like to display them.</span></span> <span data-ttu-id="bc55c-104">您可以使用 <xref:System.Windows.Forms.DataGridViewColumn> 類別的 <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> 屬性來變更資料行的顯示順序。</span><span class="sxs-lookup"><span data-stu-id="bc55c-104">You can change the displayed order of the columns by using the <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> property of the <xref:System.Windows.Forms.DataGridViewColumn> class.</span></span>  
+# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="455ab-102">HOW TO：變更 Windows Form DataGridView 控制項中的資料行的順序</span><span class="sxs-lookup"><span data-stu-id="455ab-102">How to: Change the Order of Columns in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="455ab-103">當您使用 <xref:System.Windows.Forms.DataGridView> 顯示來自資料來源的資料時，資料來源結構描述中的資料行有時不會以您想要的順序顯示。</span><span class="sxs-lookup"><span data-stu-id="455ab-103">When you use a <xref:System.Windows.Forms.DataGridView> to display data from a data source, the columns in the data source's schema sometimes do not appear in the order you would like to display them.</span></span> <span data-ttu-id="455ab-104">您可以使用 <xref:System.Windows.Forms.DataGridViewColumn> 類別的 <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> 屬性來變更資料行的顯示順序。</span><span class="sxs-lookup"><span data-stu-id="455ab-104">You can change the displayed order of the columns by using the <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> property of the <xref:System.Windows.Forms.DataGridViewColumn> class.</span></span>  
   
- <span data-ttu-id="bc55c-105">下列程式碼範例會重新調整繫結至 Northwind 範例資料庫中的 Customers 資料表時，所自動產生之一些資料行的位置。</span><span class="sxs-lookup"><span data-stu-id="bc55c-105">The following code example repositions some of the columns automatically generated when binding to the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="bc55c-106">如需有關如何將繫結<xref:System.Windows.Forms.DataGridView>控制資料庫資料表，請參閱 <<c2> [ 如何： 將資料繫結至 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="bc55c-106">For more information about how to bind the <xref:System.Windows.Forms.DataGridView> control to a database table, see [How to: Bind Data to the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).</span></span>  
+ <span data-ttu-id="455ab-105">下列程式碼範例會重新調整繫結至 Northwind 範例資料庫中的 Customers 資料表時，所自動產生之一些資料行的位置。</span><span class="sxs-lookup"><span data-stu-id="455ab-105">The following code example repositions some of the columns automatically generated when binding to the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="455ab-106">如需有關如何將繫結<xref:System.Windows.Forms.DataGridView>控制資料庫資料表，請參閱[How to:資料繫結至 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="455ab-106">For more information about how to bind the <xref:System.Windows.Forms.DataGridView> control to a database table, see [How to: Bind Data to the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).</span></span>  
   
- <span data-ttu-id="bc55c-107">在 Visual Studio 中會支援這項工作。</span><span class="sxs-lookup"><span data-stu-id="bc55c-107">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="bc55c-108">另請參閱[如何： 變更 Windows Form DataGridView 控制項使用設計工具中的資料行順序](https://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="bc55c-108">Also see [How to: Change the Order of Columns in the Windows Forms DataGridView Control Using the Designer](https://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))</span></span>  
+ <span data-ttu-id="455ab-107">在 Visual Studio 中會支援這項工作。</span><span class="sxs-lookup"><span data-stu-id="455ab-107">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="455ab-108">另請參閱[How to:變更 Windows Form DataGridView 控制項中使用設計工具中的資料行的順序](https://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="455ab-108">Also see [How to: Change the Order of Columns in the Windows Forms DataGridView Control Using the Designer](https://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bc55c-109">範例</span><span class="sxs-lookup"><span data-stu-id="bc55c-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="455ab-109">範例</span><span class="sxs-lookup"><span data-stu-id="455ab-109">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#040](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#040)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#040](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#040)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="bc55c-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="bc55c-110">Compiling the Code</span></span>  
- <span data-ttu-id="bc55c-111">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="bc55c-111">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="455ab-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="455ab-110">Compiling the Code</span></span>  
+ <span data-ttu-id="455ab-111">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="455ab-111">This example requires:</span></span>  
   
--   <span data-ttu-id="bc55c-112">名為 `customersDataGridView` 的 <xref:System.Windows.Forms.DataGridView> 控制項，這個控制項會繫結至具有指定資料行名稱的資料表，例如 Northwind 範例資料庫中的 `Customers` 資料表。</span><span class="sxs-lookup"><span data-stu-id="bc55c-112">A <xref:System.Windows.Forms.DataGridView> control named `customersDataGridView` that is bound to a table with the indicated column names, such as the `Customers` table in the Northwind sample database.</span></span>  
+-   <span data-ttu-id="455ab-112">名為 `customersDataGridView` 的 <xref:System.Windows.Forms.DataGridView> 控制項，這個控制項會繫結至具有指定資料行名稱的資料表，例如 Northwind 範例資料庫中的 `Customers` 資料表。</span><span class="sxs-lookup"><span data-stu-id="455ab-112">A <xref:System.Windows.Forms.DataGridView> control named `customersDataGridView` that is bound to a table with the indicated column names, such as the `Customers` table in the Northwind sample database.</span></span>  
   
--   <span data-ttu-id="bc55c-113"><xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、<xref:System.Data?displayProperty=nameWithType> 和 <xref:System.Xml?displayProperty=nameWithType> 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="bc55c-113">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>, and <xref:System.Xml?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="455ab-113"><xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、<xref:System.Data?displayProperty=nameWithType> 和 <xref:System.Xml?displayProperty=nameWithType> 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="455ab-113">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>, and <xref:System.Xml?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc55c-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bc55c-114">See Also</span></span>  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewColumn>  
- <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="bc55c-115">在 Windows Forms DataGridView 控制項中顯示資料</span><span class="sxs-lookup"><span data-stu-id="bc55c-115">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [<span data-ttu-id="bc55c-116">操作說明：將資料繫結至 Windows Forms DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="bc55c-116">How to: Bind Data to the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="455ab-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="455ab-114">See also</span></span>
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewColumn>
+- <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
+- [<span data-ttu-id="455ab-115">在 Windows Forms DataGridView 控制項中顯示資料</span><span class="sxs-lookup"><span data-stu-id="455ab-115">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="455ab-116">如何：將資料繫結至 Windows Form DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="455ab-116">How to: Bind Data to the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)

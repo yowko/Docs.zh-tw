@@ -2,22 +2,22 @@
 title: '&lt;userDefinedType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 7c8b8e0403fe108f4e8d25dd1de274acc40c9fcc
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1a4f371737e9e801f3b929f4d65ac310d5fe0e28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642944"
 ---
-# <a name="ltuserdefinedtypegt"></a><span data-ttu-id="c9bab-102">&lt;userDefinedType&gt;</span><span class="sxs-lookup"><span data-stu-id="c9bab-102">&lt;userDefinedType&gt;</span></span>
-<span data-ttu-id="c9bab-103">表示要包含在服務合約中的使用者定義型別 (User Defined Type，UDT)。</span><span class="sxs-lookup"><span data-stu-id="c9bab-103">Represents a User Defined Type (UDT) that is to be included in the service contract.</span></span>  
+# <a name="ltuserdefinedtypegt"></a><span data-ttu-id="8ca8d-102">&lt;userDefinedType&gt;</span><span class="sxs-lookup"><span data-stu-id="8ca8d-102">&lt;userDefinedType&gt;</span></span>
+<span data-ttu-id="8ca8d-103">表示要包含在服務合約中的使用者定義型別 (User Defined Type，UDT)。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-103">Represents a User Defined Type (UDT) that is to be included in the service contract.</span></span>  
   
- <span data-ttu-id="c9bab-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="c9bab-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="c9bab-105">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="c9bab-105">\<comContracts></span></span>  
-<span data-ttu-id="c9bab-106">\<comContract ></span><span class="sxs-lookup"><span data-stu-id="c9bab-106">\<comContract></span></span>  
-<span data-ttu-id="c9bab-107">\<userDefinedTypes ></span><span class="sxs-lookup"><span data-stu-id="c9bab-107">\<userDefinedTypes></span></span>  
+ <span data-ttu-id="8ca8d-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="8ca8d-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="8ca8d-105">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="8ca8d-105">\<comContracts></span></span>  
+<span data-ttu-id="8ca8d-106">\<comContract></span><span class="sxs-lookup"><span data-stu-id="8ca8d-106">\<comContract></span></span>  
+<span data-ttu-id="8ca8d-107">\<userDefinedTypes></span><span class="sxs-lookup"><span data-stu-id="8ca8d-107">\<userDefinedTypes></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9bab-108">語法</span><span class="sxs-lookup"><span data-stu-id="c9bab-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8ca8d-108">語法</span><span class="sxs-lookup"><span data-stu-id="8ca8d-108">Syntax</span></span>  
   
 ```xml  
 <comContracts>
@@ -33,33 +33,33 @@ ms.locfileid: "54148730"
 </comContracts>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c9bab-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c9bab-109">Attributes and Elements</span></span>  
- <span data-ttu-id="c9bab-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="c9bab-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8ca8d-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="8ca8d-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="8ca8d-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c9bab-111">屬性</span><span class="sxs-lookup"><span data-stu-id="c9bab-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8ca8d-111">屬性</span><span class="sxs-lookup"><span data-stu-id="8ca8d-111">Attributes</span></span>  
   
-|<span data-ttu-id="c9bab-112">屬性</span><span class="sxs-lookup"><span data-stu-id="c9bab-112">Attribute</span></span>|<span data-ttu-id="c9bab-113">描述</span><span class="sxs-lookup"><span data-stu-id="c9bab-113">Description</span></span>|  
+|<span data-ttu-id="8ca8d-112">屬性</span><span class="sxs-lookup"><span data-stu-id="8ca8d-112">Attribute</span></span>|<span data-ttu-id="8ca8d-113">描述</span><span class="sxs-lookup"><span data-stu-id="8ca8d-113">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="c9bab-114">選擇性屬性，其中包含提供可讀型別名稱的字串。</span><span class="sxs-lookup"><span data-stu-id="c9bab-114">An optional attribute that contains a string that provides the readable type name.</span></span> <span data-ttu-id="c9bab-115">雖然這不是供執行階段使用，但是可幫助讀者分辨型別。</span><span class="sxs-lookup"><span data-stu-id="c9bab-115">This is not used by the runtime but helps a reader to distinguish the types.</span></span>|  
-|`TypeDefID`|<span data-ttu-id="c9bab-116">GUID 字串，識別已註冊型別程式庫內的特定 UDT 型別。</span><span class="sxs-lookup"><span data-stu-id="c9bab-116">A GUID string that identifies the specific UDT type within the registered type library.</span></span>|  
-|`TypeLibID`|<span data-ttu-id="c9bab-117">GUID 字串，識別定義此型別的已註冊型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="c9bab-117">A GUID string that identifies the registered type library that defines the type.</span></span>|  
-|`TypeLibVersion`|<span data-ttu-id="c9bab-118">字串，識別定義此型別的型別程式庫版本。</span><span class="sxs-lookup"><span data-stu-id="c9bab-118">A string that identifies the type library version that defines the type.</span></span>|  
+|`name`|<span data-ttu-id="8ca8d-114">選擇性屬性，其中包含提供可讀型別名稱的字串。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-114">An optional attribute that contains a string that provides the readable type name.</span></span> <span data-ttu-id="8ca8d-115">雖然這不是供執行階段使用，但是可幫助讀者分辨型別。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-115">This is not used by the runtime but helps a reader to distinguish the types.</span></span>|  
+|`TypeDefID`|<span data-ttu-id="8ca8d-116">GUID 字串，識別已註冊型別程式庫內的特定 UDT 型別。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-116">A GUID string that identifies the specific UDT type within the registered type library.</span></span>|  
+|`TypeLibID`|<span data-ttu-id="8ca8d-117">GUID 字串，識別定義此型別的已註冊型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-117">A GUID string that identifies the registered type library that defines the type.</span></span>|  
+|`TypeLibVersion`|<span data-ttu-id="8ca8d-118">字串，識別定義此型別的型別程式庫版本。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-118">A string that identifies the type library version that defines the type.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c9bab-119">子元素</span><span class="sxs-lookup"><span data-stu-id="c9bab-119">Child Elements</span></span>  
- <span data-ttu-id="c9bab-120">無。</span><span class="sxs-lookup"><span data-stu-id="c9bab-120">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8ca8d-119">子元素</span><span class="sxs-lookup"><span data-stu-id="8ca8d-119">Child Elements</span></span>  
+ <span data-ttu-id="8ca8d-120">無。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-120">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="c9bab-121">父項目</span><span class="sxs-lookup"><span data-stu-id="c9bab-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8ca8d-121">父項目</span><span class="sxs-lookup"><span data-stu-id="8ca8d-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="c9bab-122">項目</span><span class="sxs-lookup"><span data-stu-id="c9bab-122">Element</span></span>|<span data-ttu-id="c9bab-123">描述</span><span class="sxs-lookup"><span data-stu-id="c9bab-123">Description</span></span>|  
+|<span data-ttu-id="8ca8d-122">項目</span><span class="sxs-lookup"><span data-stu-id="8ca8d-122">Element</span></span>|<span data-ttu-id="8ca8d-123">描述</span><span class="sxs-lookup"><span data-stu-id="8ca8d-123">Description</span></span>|  
 |-------------|-----------------|  
-|`userDefinedTypes`|<span data-ttu-id="c9bab-124">`userDefinedType` 項目的集合。</span><span class="sxs-lookup"><span data-stu-id="c9bab-124">A collection of `userDefinedType` elements.</span></span>|  
+|`userDefinedTypes`|<span data-ttu-id="8ca8d-124">`userDefinedType` 項目的集合。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-124">A collection of `userDefinedType` elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c9bab-125">備註</span><span class="sxs-lookup"><span data-stu-id="c9bab-125">Remarks</span></span>  
- <span data-ttu-id="c9bab-126">COM+ 整合執行階段會藉由檢查型別程式庫來建立服務。</span><span class="sxs-lookup"><span data-stu-id="c9bab-126">The COM+ integration runtime creates services by inspecting the type library.</span></span> <span data-ttu-id="c9bab-127">當 COM+ 元件包含傳遞 VARIANT 的方法時，系統便無法在執行階段之前判斷要傳遞的實際型別。</span><span class="sxs-lookup"><span data-stu-id="c9bab-127">When a COM+ component contains methods that pass a VARIANT, the system cannot determine the actual types to be passed prior to runtime.</span></span> <span data-ttu-id="c9bab-128">因此，嘗試在 VARIANT 內傳遞使用者定義型別 (UDT) 會因為該型別不是序列化的已知型別而失敗。</span><span class="sxs-lookup"><span data-stu-id="c9bab-128">Therefore, when you attempt to pass a User Defined Type (UDT) within a VARIANT, it fails because it is not a known type for serialization.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8ca8d-125">備註</span><span class="sxs-lookup"><span data-stu-id="8ca8d-125">Remarks</span></span>  
+ <span data-ttu-id="8ca8d-126">COM+ 整合執行階段會藉由檢查型別程式庫來建立服務。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-126">The COM+ integration runtime creates services by inspecting the type library.</span></span> <span data-ttu-id="8ca8d-127">當 COM+ 元件包含傳遞 VARIANT 的方法時，系統便無法在執行階段之前判斷要傳遞的實際型別。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-127">When a COM+ component contains methods that pass a VARIANT, the system cannot determine the actual types to be passed prior to runtime.</span></span> <span data-ttu-id="8ca8d-128">因此，嘗試在 VARIANT 內傳遞使用者定義型別 (UDT) 會因為該型別不是序列化的已知型別而失敗。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-128">Therefore, when you attempt to pass a User Defined Type (UDT) within a VARIANT, it fails because it is not a known type for serialization.</span></span>  
   
- <span data-ttu-id="c9bab-129">如果要避免這個問題，您可以將這些 UDT 新增至組態檔中，以便包含它們做為適當服務合約中的已知型別。</span><span class="sxs-lookup"><span data-stu-id="c9bab-129">To circumvent this problem, you can add the UDTs to the configuration file so that they can be included as known types on the appropriate service contract.</span></span> <span data-ttu-id="c9bab-130">如果要這樣做，您必須唯一識別這些 UDT 和合約，也就是使用其原始的 COM 介面。</span><span class="sxs-lookup"><span data-stu-id="c9bab-130">In order to do so, you have to uniquely identify the UDT and the contract(s), that is, the original COM interface(s) that uses it.</span></span>  
+ <span data-ttu-id="8ca8d-129">如果要避免這個問題，您可以將這些 UDT 新增至組態檔中，以便包含它們做為適當服務合約中的已知型別。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-129">To circumvent this problem, you can add the UDTs to the configuration file so that they can be included as known types on the appropriate service contract.</span></span> <span data-ttu-id="8ca8d-130">如果要這樣做，您必須唯一識別這些 UDT 和合約，也就是使用其原始的 COM 介面。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-130">In order to do so, you have to uniquely identify the UDT and the contract(s), that is, the original COM interface(s) that uses it.</span></span>  
   
- <span data-ttu-id="c9bab-131">下列範例將示範如何將兩個特定的 UDT 新增至組態檔的 <`userDefinedTypes`> 區段，以達成這個目的。</span><span class="sxs-lookup"><span data-stu-id="c9bab-131">The following example demonstrates adding two specific UDTs to the <`userDefinedTypes`> section of the configuration file for this purpose.</span></span>  
+ <span data-ttu-id="8ca8d-131">下列範例將示範如何將兩個特定的 UDT 新增至組態檔的 <`userDefinedTypes`> 區段，以達成這個目的。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-131">The following example demonstrates adding two specific UDTs to the <`userDefinedTypes`> section of the configuration file for this purpose.</span></span>  
   
 ```xml  
 <comContracts>
@@ -88,12 +88,12 @@ ms.locfileid: "54148730"
 </comContracts>
 ```  
   
- <span data-ttu-id="c9bab-132">當初始化服務時，整合執行階段會查詢指定的型別，並將它們加入做為指定合約的已知型別集合。</span><span class="sxs-lookup"><span data-stu-id="c9bab-132">When the service is initialized, the integration runtime looks up the specified types and adds them to the known types collection for the specified contracts.</span></span>  
+ <span data-ttu-id="8ca8d-132">當初始化服務時，整合執行階段會查詢指定的型別，並將它們加入做為指定合約的已知型別集合。</span><span class="sxs-lookup"><span data-stu-id="8ca8d-132">When the service is initialized, the integration runtime looks up the specified types and adds them to the known types collection for the specified contracts.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9bab-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c9bab-133">See Also</span></span>  
- <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>  
- <xref:System.ServiceModel.Configuration.ComUdtElementCollection>  
- <xref:System.ServiceModel.Configuration.ComUdtElement>  
- [<span data-ttu-id="c9bab-134">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="c9bab-134">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [<span data-ttu-id="c9bab-135">整合 COM 應用程式</span><span class="sxs-lookup"><span data-stu-id="c9bab-135">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [<span data-ttu-id="c9bab-136">如何：設定 COM + 服務設定</span><span class="sxs-lookup"><span data-stu-id="c9bab-136">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a><span data-ttu-id="8ca8d-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8ca8d-133">See also</span></span>
+- <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
+- <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
+- <xref:System.ServiceModel.Configuration.ComUdtElement>
+- [<span data-ttu-id="8ca8d-134">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="8ca8d-134">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
+- [<span data-ttu-id="8ca8d-135">整合 COM 應用程式</span><span class="sxs-lookup"><span data-stu-id="8ca8d-135">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [<span data-ttu-id="8ca8d-136">如何：設定 COM + 服務設定</span><span class="sxs-lookup"><span data-stu-id="8ca8d-136">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
