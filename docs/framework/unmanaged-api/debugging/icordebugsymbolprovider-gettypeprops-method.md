@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3398e01912309c057cd1e01e8fc0af6c62f976bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e21273506e91c5ab69b1b0b4a52d6c0f72692dab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712768"
 ---
-# <a name="icordebugsymbolprovidergettypeprops-method"></a><span data-ttu-id="78b05-102">ICorDebugSymbolProvider::GetTypeProps 方法</span><span class="sxs-lookup"><span data-stu-id="78b05-102">ICorDebugSymbolProvider::GetTypeProps Method</span></span>
-<span data-ttu-id="78b05-103">根據 vtable 中指定的相對虛擬位址 (RVA)，傳回類型之屬性的相關資訊，例如其泛型參數的簽章數目。</span><span class="sxs-lookup"><span data-stu-id="78b05-103">Returns information about a type's properties, such as the number of signature of its generic parameters, given a relative virtual address (RVA) in a vtable.</span></span>  
+# <a name="icordebugsymbolprovidergettypeprops-method"></a><span data-ttu-id="253e9-102">ICorDebugSymbolProvider::GetTypeProps 方法</span><span class="sxs-lookup"><span data-stu-id="253e9-102">ICorDebugSymbolProvider::GetTypeProps Method</span></span>
+<span data-ttu-id="253e9-103">根據 vtable 中指定的相對虛擬位址 (RVA)，傳回類型之屬性的相關資訊，例如其泛型參數的簽章數目。</span><span class="sxs-lookup"><span data-stu-id="253e9-103">Returns information about a type's properties, such as the number of signature of its generic parameters, given a relative virtual address (RVA) in a vtable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="78b05-104">語法</span><span class="sxs-lookup"><span data-stu-id="78b05-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="253e9-104">語法</span><span class="sxs-lookup"><span data-stu-id="253e9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeProps(  
@@ -25,35 +25,35 @@ HRESULT GetTypeProps(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="78b05-105">參數</span><span class="sxs-lookup"><span data-stu-id="78b05-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="253e9-105">參數</span><span class="sxs-lookup"><span data-stu-id="253e9-105">Parameters</span></span>  
  `tableRva`  
- <span data-ttu-id="78b05-106">[in] vtable 中的相對虛擬位址 (RVA)。</span><span class="sxs-lookup"><span data-stu-id="78b05-106">[in] A relative virtual address (RVA) in a vtable.</span></span>  
+ <span data-ttu-id="253e9-106">[in] vtable 中的相對虛擬位址 (RVA)。</span><span class="sxs-lookup"><span data-stu-id="253e9-106">[in] A relative virtual address (RVA) in a vtable.</span></span>  
   
  `cbSignature`  
- <span data-ttu-id="78b05-107">[in] `signature` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="78b05-107">[in] The size of the `signature` array.</span></span> <span data-ttu-id="78b05-108">請參閱＜備註＞一節。</span><span class="sxs-lookup"><span data-stu-id="78b05-108">See the Remarks section.</span></span>  
+ <span data-ttu-id="253e9-107">[in] `signature` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="253e9-107">[in] The size of the `signature` array.</span></span> <span data-ttu-id="253e9-108">請參閱＜備註＞一節。</span><span class="sxs-lookup"><span data-stu-id="253e9-108">See the Remarks section.</span></span>  
   
  `pcbSignature`  
- <span data-ttu-id="78b05-109">[out] [out] 所傳回 `signature` 陣列的大小指標。</span><span class="sxs-lookup"><span data-stu-id="78b05-109">[out] [out] A pointer to the size of the returned `signature` array.</span></span>  
+ <span data-ttu-id="253e9-109">[out] [out] 所傳回 `signature` 陣列的大小指標。</span><span class="sxs-lookup"><span data-stu-id="253e9-109">[out] [out] A pointer to the size of the returned `signature` array.</span></span>  
   
  `signature`  
- <span data-ttu-id="78b05-110">[out] 保留所有泛型參數之 TypeSpec 簽章的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="78b05-110">[out] A buffer that holds the typespec signatures of all generic parameters.</span></span>  
+ <span data-ttu-id="253e9-110">[out] 保留所有泛型參數之 TypeSpec 簽章的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="253e9-110">[out] A buffer that holds the typespec signatures of all generic parameters.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="78b05-111">備註</span><span class="sxs-lookup"><span data-stu-id="78b05-111">Remarks</span></span>  
- <span data-ttu-id="78b05-112">若要取得之類型所需的大小`signature`陣列，請設定`cbSignature`引數為 0 和`signature`至**null**。</span><span class="sxs-lookup"><span data-stu-id="78b05-112">To get the required size of the type's `signature` array, set the `cbSignature` argument to 0 and `signature` to **null**.</span></span> <span data-ttu-id="78b05-113">當這個方法傳回時，`pcbSignature` 會包含 `signature` 陣列所需的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="78b05-113">When the method returns, `pcbSignature` will contain the number of bytes required for the `signature` array.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="253e9-111">備註</span><span class="sxs-lookup"><span data-stu-id="253e9-111">Remarks</span></span>  
+ <span data-ttu-id="253e9-112">若要取得類型的所需的大小`signature`陣列中，設定`cbSignature`引數為 0 並`signature`來**null**。</span><span class="sxs-lookup"><span data-stu-id="253e9-112">To get the required size of the type's `signature` array, set the `cbSignature` argument to 0 and `signature` to **null**.</span></span> <span data-ttu-id="253e9-113">當這個方法傳回時，`pcbSignature` 會包含 `signature` 陣列所需的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="253e9-113">When the method returns, `pcbSignature` will contain the number of bytes required for the `signature` array.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="78b05-114">本方法只適用於 .NET 原生。</span><span class="sxs-lookup"><span data-stu-id="78b05-114">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="253e9-114">本方法只適用於 .NET 原生。</span><span class="sxs-lookup"><span data-stu-id="253e9-114">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="78b05-115">需求</span><span class="sxs-lookup"><span data-stu-id="78b05-115">Requirements</span></span>  
- <span data-ttu-id="78b05-116">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="78b05-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="253e9-115">需求</span><span class="sxs-lookup"><span data-stu-id="253e9-115">Requirements</span></span>  
+ <span data-ttu-id="253e9-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="253e9-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="78b05-117">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="78b05-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="253e9-117">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="253e9-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="78b05-118">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="78b05-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="253e9-118">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="253e9-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="78b05-119">**.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78b05-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="253e9-119">**.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="253e9-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="78b05-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="78b05-120">See Also</span></span>  
- [<span data-ttu-id="78b05-121">GetMethodProps 方法</span><span class="sxs-lookup"><span data-stu-id="78b05-121">GetMethodProps Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodprops-method.md)  
- [<span data-ttu-id="78b05-122">ICorDebugSymbolProvider 介面</span><span class="sxs-lookup"><span data-stu-id="78b05-122">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  
- [<span data-ttu-id="78b05-123">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="78b05-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="253e9-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="253e9-120">See also</span></span>
+- [<span data-ttu-id="253e9-121">GetMethodProps 方法</span><span class="sxs-lookup"><span data-stu-id="253e9-121">GetMethodProps Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodprops-method.md)
+- [<span data-ttu-id="253e9-122">ICorDebugSymbolProvider 介面</span><span class="sxs-lookup"><span data-stu-id="253e9-122">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [<span data-ttu-id="253e9-123">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="253e9-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

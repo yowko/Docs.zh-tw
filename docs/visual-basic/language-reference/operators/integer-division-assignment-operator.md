@@ -11,49 +11,49 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: bcfc59efda0627f83713fe9ada24cedc20d823e3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8985fb081443d931be3210c81099d510e2da057d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491892"
 ---
-# <a name="-operator"></a><span data-ttu-id="3f305-102">\\= 運算子</span><span class="sxs-lookup"><span data-stu-id="3f305-102">\\= Operator</span></span>
-<span data-ttu-id="3f305-103">將運算式的值的變數或屬性的值除以並指派整數結果給變數或屬性。</span><span class="sxs-lookup"><span data-stu-id="3f305-103">Divides the value of a variable or property by the value of an expression and assigns the integer result to the variable or property.</span></span>  
+# <a name="-operator"></a><span data-ttu-id="8cb3b-102">\\= 運算子</span><span class="sxs-lookup"><span data-stu-id="8cb3b-102">\\= Operator</span></span>
+<span data-ttu-id="8cb3b-103">將運算式的值的變數或屬性的值除以並指派整數結果給變數或屬性。</span><span class="sxs-lookup"><span data-stu-id="8cb3b-103">Divides the value of a variable or property by the value of an expression and assigns the integer result to the variable or property.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3f305-104">語法</span><span class="sxs-lookup"><span data-stu-id="3f305-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8cb3b-104">語法</span><span class="sxs-lookup"><span data-stu-id="8cb3b-104">Syntax</span></span>  
   
 ```  
 variableorproperty \= expression  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="3f305-105">組件</span><span class="sxs-lookup"><span data-stu-id="3f305-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="8cb3b-105">組件</span><span class="sxs-lookup"><span data-stu-id="8cb3b-105">Parts</span></span>  
  `variableorproperty`  
- <span data-ttu-id="3f305-106">必要項。</span><span class="sxs-lookup"><span data-stu-id="3f305-106">Required.</span></span> <span data-ttu-id="3f305-107">任何數值變數或屬性。</span><span class="sxs-lookup"><span data-stu-id="3f305-107">Any numeric variable or property.</span></span>  
+ <span data-ttu-id="8cb3b-106">必要項。</span><span class="sxs-lookup"><span data-stu-id="8cb3b-106">Required.</span></span> <span data-ttu-id="8cb3b-107">任何數值變數或屬性。</span><span class="sxs-lookup"><span data-stu-id="8cb3b-107">Any numeric variable or property.</span></span>  
   
  `expression`  
- <span data-ttu-id="3f305-108">必要項。</span><span class="sxs-lookup"><span data-stu-id="3f305-108">Required.</span></span> <span data-ttu-id="3f305-109">任何數值運算式。</span><span class="sxs-lookup"><span data-stu-id="3f305-109">Any numeric expression.</span></span>  
+ <span data-ttu-id="8cb3b-108">必要項。</span><span class="sxs-lookup"><span data-stu-id="8cb3b-108">Required.</span></span> <span data-ttu-id="8cb3b-109">任何數值運算式。</span><span class="sxs-lookup"><span data-stu-id="8cb3b-109">Any numeric expression.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3f305-110">備註</span><span class="sxs-lookup"><span data-stu-id="3f305-110">Remarks</span></span>  
- <span data-ttu-id="3f305-111">在左邊的項目`\=`運算子可以是簡單的純量變數、 屬性或陣列項目。</span><span class="sxs-lookup"><span data-stu-id="3f305-111">The element on the left side of the `\=` operator can be a simple scalar variable, a property, or an element of an array.</span></span> <span data-ttu-id="3f305-112">變數或屬性不可[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。</span><span class="sxs-lookup"><span data-stu-id="3f305-112">The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8cb3b-110">備註</span><span class="sxs-lookup"><span data-stu-id="8cb3b-110">Remarks</span></span>  
+ <span data-ttu-id="8cb3b-111">在左邊的項目`\=`運算子可以是簡單的純量變數、 屬性或陣列項目。</span><span class="sxs-lookup"><span data-stu-id="8cb3b-111">The element on the left side of the `\=` operator can be a simple scalar variable, a property, or an element of an array.</span></span> <span data-ttu-id="8cb3b-112">變數或屬性不可[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。</span><span class="sxs-lookup"><span data-stu-id="8cb3b-112">The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span></span>  
   
- <span data-ttu-id="3f305-113">`\=`運算子將其右邊值的變數或其左邊屬性的值除以，並將整數的結果指派給變數或與其左邊的屬性</span><span class="sxs-lookup"><span data-stu-id="3f305-113">The `\=` operator divides the value of a variable or property on its left by the value on its right, and assigns the integer result to the variable or property on its left</span></span>  
+ <span data-ttu-id="8cb3b-113">`\=`運算子將其右邊值的變數或其左邊屬性的值除以，並將整數的結果指派給變數或與其左邊的屬性</span><span class="sxs-lookup"><span data-stu-id="8cb3b-113">The `\=` operator divides the value of a variable or property on its left by the value on its right, and assigns the integer result to the variable or property on its left</span></span>  
   
- <span data-ttu-id="3f305-114">如需整數除法運算的詳細資訊，請參閱[\ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="3f305-114">For further information on integer division, see [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).</span></span>  
+ <span data-ttu-id="8cb3b-114">如需整數除法運算的詳細資訊，請參閱[\ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="8cb3b-114">For further information on integer division, see [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).</span></span>  
   
-## <a name="overloading"></a><span data-ttu-id="3f305-115">多載化</span><span class="sxs-lookup"><span data-stu-id="3f305-115">Overloading</span></span>  
- <span data-ttu-id="3f305-116">`\`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。</span><span class="sxs-lookup"><span data-stu-id="3f305-116">The `\` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="3f305-117">多載`\`運算子會影響的行為`\=`運算子。</span><span class="sxs-lookup"><span data-stu-id="3f305-117">Overloading the `\` operator affects the behavior of the `\=` operator.</span></span> <span data-ttu-id="3f305-118">如果您的程式碼會使用`\=`上類別或結構，多載`\`，務必了解其重新定義的行為。</span><span class="sxs-lookup"><span data-stu-id="3f305-118">If your code uses `\=` on a class or structure that overloads `\`, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="3f305-119">如需詳細資訊，請參閱 <<c0> [ 運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="3f305-119">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
+## <a name="overloading"></a><span data-ttu-id="8cb3b-115">多載化</span><span class="sxs-lookup"><span data-stu-id="8cb3b-115">Overloading</span></span>  
+ <span data-ttu-id="8cb3b-116">`\`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。</span><span class="sxs-lookup"><span data-stu-id="8cb3b-116">The `\` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="8cb3b-117">多載`\`運算子會影響的行為`\=`運算子。</span><span class="sxs-lookup"><span data-stu-id="8cb3b-117">Overloading the `\` operator affects the behavior of the `\=` operator.</span></span> <span data-ttu-id="8cb3b-118">如果您的程式碼會使用`\=`上類別或結構，多載`\`，務必了解其重新定義的行為。</span><span class="sxs-lookup"><span data-stu-id="8cb3b-118">If your code uses `\=` on a class or structure that overloads `\`, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="8cb3b-119">如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="8cb3b-119">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3f305-120">範例</span><span class="sxs-lookup"><span data-stu-id="3f305-120">Example</span></span>  
- <span data-ttu-id="3f305-121">下列範例會使用`\=`運算子，將其中一個`Integer`變數的第二個和第一個變數會導致將整數指派。</span><span class="sxs-lookup"><span data-stu-id="3f305-121">The following example uses the `\=` operator to divide one `Integer` variable by a second and assign the integer result to the first variable.</span></span>  
+## <a name="example"></a><span data-ttu-id="8cb3b-120">範例</span><span class="sxs-lookup"><span data-stu-id="8cb3b-120">Example</span></span>  
+ <span data-ttu-id="8cb3b-121">下列範例會使用`\=`運算子，將其中一個`Integer`變數的第二個和第一個變數會導致將整數指派。</span><span class="sxs-lookup"><span data-stu-id="8cb3b-121">The following example uses the `\=` operator to divide one `Integer` variable by a second and assign the integer result to the first variable.</span></span>  
   
  [!code-vb[VbVbalrOperators#19](codesnippet/VisualBasic/integer-division-assignment-operator_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="3f305-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3f305-122">See Also</span></span>  
- [<span data-ttu-id="3f305-123">\ 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f305-123">\ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
- [<span data-ttu-id="3f305-124">/ = 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f305-124">/= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
- [<span data-ttu-id="3f305-125">指派運算子</span><span class="sxs-lookup"><span data-stu-id="3f305-125">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)  
- [<span data-ttu-id="3f305-126">算術運算子</span><span class="sxs-lookup"><span data-stu-id="3f305-126">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [<span data-ttu-id="3f305-127">Visual Basic 中的運算子優先順序</span><span class="sxs-lookup"><span data-stu-id="3f305-127">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [<span data-ttu-id="3f305-128">運算子 (依功能排列)</span><span class="sxs-lookup"><span data-stu-id="3f305-128">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [<span data-ttu-id="3f305-129">陳述式</span><span class="sxs-lookup"><span data-stu-id="3f305-129">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a><span data-ttu-id="8cb3b-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8cb3b-122">See also</span></span>
+- [<span data-ttu-id="8cb3b-123">\ 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8cb3b-123">\ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [<span data-ttu-id="8cb3b-124">/ = 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8cb3b-124">/= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [<span data-ttu-id="8cb3b-125">指派運算子</span><span class="sxs-lookup"><span data-stu-id="8cb3b-125">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)
+- [<span data-ttu-id="8cb3b-126">算術運算子</span><span class="sxs-lookup"><span data-stu-id="8cb3b-126">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [<span data-ttu-id="8cb3b-127">Visual Basic 中的運算子優先順序</span><span class="sxs-lookup"><span data-stu-id="8cb3b-127">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="8cb3b-128">運算子 (依功能排列)</span><span class="sxs-lookup"><span data-stu-id="8cb3b-128">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="8cb3b-129">陳述式</span><span class="sxs-lookup"><span data-stu-id="8cb3b-129">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
