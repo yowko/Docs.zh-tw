@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aed553a3a8d54b5229a122e76b61e3e58d4af3c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 65d6e929a0a6fb5e1933a6c9216dfc5b56342113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560642"
 ---
-# <a name="setassemblyprops-method"></a><span data-ttu-id="843fd-102">SetAssemblyProps 方法</span><span class="sxs-lookup"><span data-stu-id="843fd-102">SetAssemblyProps Method</span></span>
-<span data-ttu-id="843fd-103">指定組件層級的屬性。</span><span class="sxs-lookup"><span data-stu-id="843fd-103">Assigns assembly-level properties.</span></span>  
+# <a name="setassemblyprops-method"></a><span data-ttu-id="c394a-102">SetAssemblyProps 方法</span><span class="sxs-lookup"><span data-stu-id="c394a-102">SetAssemblyProps Method</span></span>
+<span data-ttu-id="c394a-103">會指派組件層級屬性。</span><span class="sxs-lookup"><span data-stu-id="c394a-103">Assigns assembly-level properties.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="843fd-104">語法</span><span class="sxs-lookup"><span data-stu-id="843fd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c394a-104">語法</span><span class="sxs-lookup"><span data-stu-id="c394a-104">Syntax</span></span>  
   
 ```  
 HRESULT SetAssemblyProps(  
@@ -37,26 +37,26 @@ HRESULT SetAssemblyProps(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="843fd-105">參數</span><span class="sxs-lookup"><span data-stu-id="843fd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c394a-105">參數</span><span class="sxs-lookup"><span data-stu-id="c394a-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="843fd-106">組件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="843fd-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="c394a-106">組件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="c394a-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="843fd-107">定義屬性的檔案。</span><span class="sxs-lookup"><span data-stu-id="843fd-107">File that defines the property.</span></span> <span data-ttu-id="843fd-108">可以是 NULL，如果`AssemblyID`不會指出未繫結的 netmodule。</span><span class="sxs-lookup"><span data-stu-id="843fd-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
+ <span data-ttu-id="c394a-107">定義屬性的檔案。</span><span class="sxs-lookup"><span data-stu-id="c394a-107">File that defines the property.</span></span> <span data-ttu-id="c394a-108">可以是 NULL，如果`AssemblyID`不會指出未繫結的 netmodule。</span><span class="sxs-lookup"><span data-stu-id="c394a-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
   
  `Option`  
- <span data-ttu-id="843fd-109">指出修改的選項。</span><span class="sxs-lookup"><span data-stu-id="843fd-109">Indicates the option to modify.</span></span>  
+ <span data-ttu-id="c394a-109">表示修改的選項。</span><span class="sxs-lookup"><span data-stu-id="c394a-109">Indicates the option to modify.</span></span>  
   
  `Value`  
- <span data-ttu-id="843fd-110">新的選項值。</span><span class="sxs-lookup"><span data-stu-id="843fd-110">New value of the option.</span></span>  
+ <span data-ttu-id="c394a-110">新的選項值。</span><span class="sxs-lookup"><span data-stu-id="c394a-110">New value of the option.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="843fd-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="843fd-111">Return Value</span></span>  
- <span data-ttu-id="843fd-112">如果方法成功則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="843fd-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c394a-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="c394a-111">Return Value</span></span>  
+ <span data-ttu-id="c394a-112">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="c394a-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="843fd-113">需求</span><span class="sxs-lookup"><span data-stu-id="843fd-113">Requirements</span></span>  
- <span data-ttu-id="843fd-114">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="843fd-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c394a-113">需求</span><span class="sxs-lookup"><span data-stu-id="c394a-113">Requirements</span></span>  
+ <span data-ttu-id="c394a-114">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="c394a-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="843fd-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="843fd-115">See Also</span></span>  
- [<span data-ttu-id="843fd-116">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="843fd-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="843fd-117">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="843fd-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="843fd-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="843fd-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="c394a-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c394a-115">See also</span></span>
+- [<span data-ttu-id="c394a-116">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="c394a-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="c394a-117">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="c394a-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="c394a-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="c394a-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
