@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d019c67849197cd24171ff607e60e9f08d5ff70
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2ebe6924dfe1a4aa640ef8ccd7b4047c1d137948
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640039"
 ---
 # <a name="nextmethod-function"></a>NextMethod 函式
 擷取開頭呼叫列舉中的下一步 方法[BeginMethodEnumeration](beginmethodenumeration.md)。  
@@ -50,7 +50,7 @@ HRESULT NextMethod (
 [in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
 
 `lFlags`  
-[in]保留。 這個參數必須是 0。
+[in] 保留。 這個參數必須是 0。
 
 `pName`  
 [out]指標指向`null`在呼叫之前。 當函式傳回時，新的位址`BSTR`，其中包含方法名稱。 
@@ -88,5 +88,5 @@ HRESULT NextMethod (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
