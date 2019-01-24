@@ -1,18 +1,12 @@
 ---
-title: 事件 - C# 程式設計手冊
+title: '事件 - C# 程式設計手冊'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- classes [C#], events
-- C# language, events
-- events [C#]
+  - 'classes [C#], events'
+  - 'C# language, events'
+  - 'events [C#]'
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 55fe0e8f94d9b350305b634cabb90011e173b572
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451140"
 ---
 # <a name="events-c-programming-guide"></a>事件 (C# 程式設計手冊)
 事件可讓 [類別](../../../csharp/language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或 *「引發」*(raise)) 事件的類別稱為 *「發行者」* (publisher)，而接收 (或 *「處理」*(handle)) 事件的類別則稱為 *「訂閱者」*(subscriber)。  
@@ -58,9 +52,9 @@ ms.locfileid: "53451140"
   
  [了解 C# 3.0：掌握 C# 3.0 的基本概念](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)中的[委派與事件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.EventHandler>  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [委派](../../../csharp/programming-guide/delegates/index.md)  
-- [在 Windows Forms 中建立事件處理常式](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+- <xref:System.EventHandler>
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [委派](../../../csharp/programming-guide/delegates/index.md)
+- [在 Windows Forms 中建立事件處理常式](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
