@@ -1,5 +1,5 @@
 ---
-title: 如何：依據 Windows Form DataGridView 控制項儲存格的變更執行自訂動作
+title: HOW TO：執行自訂動作，根據在 Windows Forms DataGridView 控制項的資料格中的變更
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,40 +9,40 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], detecting changes in cells
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
-ms.openlocfilehash: 3de58c1dd87d890f089366e6e85041f2983acc64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 125da277c2db44f01e6cad8cea08fbd927234f09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686851"
 ---
-# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a><span data-ttu-id="a28da-102">如何：依據 Windows Form DataGridView 控制項儲存格的變更執行自訂動作</span><span class="sxs-lookup"><span data-stu-id="a28da-102">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="a28da-103"><xref:System.Windows.Forms.DataGridView>控制項有一些可用來偵測的狀態變更事件<xref:System.Windows.Forms.DataGridView>資料格。</span><span class="sxs-lookup"><span data-stu-id="a28da-103">The <xref:System.Windows.Forms.DataGridView> control has a number of events you can use to detect changes in the state of <xref:System.Windows.Forms.DataGridView> cells.</span></span> <span data-ttu-id="a28da-104">兩個最常使用的是<xref:System.Windows.Forms.DataGridView.CellValueChanged>和<xref:System.Windows.Forms.DataGridView.CellStateChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="a28da-104">Two of the most commonly used are the <xref:System.Windows.Forms.DataGridView.CellValueChanged> and <xref:System.Windows.Forms.DataGridView.CellStateChanged> events.</span></span>  
+# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a><span data-ttu-id="09598-102">HOW TO：執行自訂動作，根據在 Windows Forms DataGridView 控制項的資料格中的變更</span><span class="sxs-lookup"><span data-stu-id="09598-102">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="09598-103"><xref:System.Windows.Forms.DataGridView>控制項具有可用來偵測變更的狀態中的事件數目<xref:System.Windows.Forms.DataGridView>資料格。</span><span class="sxs-lookup"><span data-stu-id="09598-103">The <xref:System.Windows.Forms.DataGridView> control has a number of events you can use to detect changes in the state of <xref:System.Windows.Forms.DataGridView> cells.</span></span> <span data-ttu-id="09598-104">最常使用的兩個是<xref:System.Windows.Forms.DataGridView.CellValueChanged>和<xref:System.Windows.Forms.DataGridView.CellStateChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="09598-104">Two of the most commonly used are the <xref:System.Windows.Forms.DataGridView.CellValueChanged> and <xref:System.Windows.Forms.DataGridView.CellStateChanged> events.</span></span>  
   
-### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a><span data-ttu-id="a28da-105">若要偵測 DataGridView 儲存格的值中的變更</span><span class="sxs-lookup"><span data-stu-id="a28da-105">To detect changes in the values of DataGridView cells</span></span>  
+### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a><span data-ttu-id="09598-105">若要偵測 DataGridView 儲存格的值中的變更</span><span class="sxs-lookup"><span data-stu-id="09598-105">To detect changes in the values of DataGridView cells</span></span>  
   
--   <span data-ttu-id="a28da-106">寫入的處理常式<xref:System.Windows.Forms.DataGridView.CellValueChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="a28da-106">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellValueChanged> event.</span></span>  
+-   <span data-ttu-id="09598-106">撰寫處理常式<xref:System.Windows.Forms.DataGridView.CellValueChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="09598-106">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellValueChanged> event.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#130](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#130](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#130)]  
   
-### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a><span data-ttu-id="a28da-107">在 DataGridView 儲存格的狀態偵測變更</span><span class="sxs-lookup"><span data-stu-id="a28da-107">To detect changes in the states of DataGridView cells</span></span>  
+### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a><span data-ttu-id="09598-107">若要偵測的 DataGridView 儲存格的狀態中的變更</span><span class="sxs-lookup"><span data-stu-id="09598-107">To detect changes in the states of DataGridView cells</span></span>  
   
--   <span data-ttu-id="a28da-108">寫入的處理常式<xref:System.Windows.Forms.DataGridView.CellStateChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="a28da-108">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellStateChanged> event.</span></span>  
+-   <span data-ttu-id="09598-108">撰寫處理常式<xref:System.Windows.Forms.DataGridView.CellStateChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="09598-108">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellStateChanged> event.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#135](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a28da-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="a28da-109">Compiling the Code</span></span>  
- <span data-ttu-id="a28da-110">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="a28da-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="09598-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="09598-109">Compiling the Code</span></span>  
+ <span data-ttu-id="09598-110">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="09598-110">This example requires:</span></span>  
   
--   <span data-ttu-id="a28da-111">名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。</span><span class="sxs-lookup"><span data-stu-id="a28da-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span> <span data-ttu-id="a28da-112">C# 中，事件處理常式必須連接至對應的事件。</span><span class="sxs-lookup"><span data-stu-id="a28da-112">For C#, the event handlers must be connected to the corresponding events.</span></span>  
+-   <span data-ttu-id="09598-111">名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。</span><span class="sxs-lookup"><span data-stu-id="09598-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span> <span data-ttu-id="09598-112">針對C#，事件處理常式必須連接到對應的事件。</span><span class="sxs-lookup"><span data-stu-id="09598-112">For C#, the event handlers must be connected to the corresponding events.</span></span>  
   
--   <span data-ttu-id="a28da-113"><xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="a28da-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="09598-113"><xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="09598-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a28da-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a28da-114">See Also</span></span>  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>  
- [<span data-ttu-id="a28da-115">在 Windows Forms DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計</span><span class="sxs-lookup"><span data-stu-id="a28da-115">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
- [<span data-ttu-id="a28da-116">逐步解說：驗證 Windows Forms DataGridView 控制項中的資料</span><span class="sxs-lookup"><span data-stu-id="a28da-116">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="09598-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="09598-114">See also</span></span>
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>
+- [<span data-ttu-id="09598-115">在 Windows Forms DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計</span><span class="sxs-lookup"><span data-stu-id="09598-115">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [<span data-ttu-id="09598-116">逐步解說：驗證 Windows Form DataGridView 控制項中的資料</span><span class="sxs-lookup"><span data-stu-id="09598-116">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
