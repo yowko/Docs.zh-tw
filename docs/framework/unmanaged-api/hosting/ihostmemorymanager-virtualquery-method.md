@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68a9d6ad7470ffaf1143a4a8e3134f20edb9e3c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 885871f3e6b3f10bfb7d660e2d6889e243ef751b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734360"
 ---
-# <a name="ihostmemorymanagervirtualquery-method"></a><span data-ttu-id="c9777-102">IHostMemoryManager::VirtualQuery 方法</span><span class="sxs-lookup"><span data-stu-id="c9777-102">IHostMemoryManager::VirtualQuery Method</span></span>
-<span data-ttu-id="c9777-103">可做為對應的 Win32 函式的邏輯包裝函式。</span><span class="sxs-lookup"><span data-stu-id="c9777-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="c9777-104">Win32 實作`VirtualQuery`擷取呼叫處理序的虛擬位址空間中的頁面範圍的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="c9777-104">The Win32 implementation of `VirtualQuery` retrieves information about a range of pages in the virtual address space of the calling process.</span></span>  
+# <a name="ihostmemorymanagervirtualquery-method"></a><span data-ttu-id="2a100-102">IHostMemoryManager::VirtualQuery 方法</span><span class="sxs-lookup"><span data-stu-id="2a100-102">IHostMemoryManager::VirtualQuery Method</span></span>
+<span data-ttu-id="2a100-103">可做為對應的 Win32 函式的邏輯包裝函式。</span><span class="sxs-lookup"><span data-stu-id="2a100-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="2a100-104">Win32 實作`VirtualQuery`擷取呼叫處理序虛擬位址空間中的頁面範圍的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="2a100-104">The Win32 implementation of `VirtualQuery` retrieves information about a range of pages in the virtual address space of the calling process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9777-105">語法</span><span class="sxs-lookup"><span data-stu-id="c9777-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2a100-105">語法</span><span class="sxs-lookup"><span data-stu-id="2a100-105">Syntax</span></span>  
   
 ```  
 HRESULT VirtualQuery (  
@@ -38,44 +38,44 @@ HRESULT VirtualQuery (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c9777-106">參數</span><span class="sxs-lookup"><span data-stu-id="c9777-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2a100-106">參數</span><span class="sxs-lookup"><span data-stu-id="2a100-106">Parameters</span></span>  
  `lpAddress`  
- <span data-ttu-id="c9777-107">[in]要查詢的虛擬記憶體位址指標。</span><span class="sxs-lookup"><span data-stu-id="c9777-107">[in] A pointer to the address in virtual memory to be queried.</span></span>  
+ <span data-ttu-id="2a100-107">[in]要查詢的虛擬記憶體中的位址指標。</span><span class="sxs-lookup"><span data-stu-id="2a100-107">[in] A pointer to the address in virtual memory to be queried.</span></span>  
   
  `lpBuffer`  
- <span data-ttu-id="c9777-108">[out]包含指定的記憶體區域的相關資訊的結構指標。</span><span class="sxs-lookup"><span data-stu-id="c9777-108">[out] A pointer to a structure that contains information about the specified memory region.</span></span>  
+ <span data-ttu-id="2a100-108">[out]包含指定的記憶體區域的相關資訊的結構指標。</span><span class="sxs-lookup"><span data-stu-id="2a100-108">[out] A pointer to a structure that contains information about the specified memory region.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="c9777-109">[in]大小，以位元組為單位的緩衝區，`lpBuffer`指向。</span><span class="sxs-lookup"><span data-stu-id="c9777-109">[in] The size, in bytes, of the buffer that `lpBuffer` points to.</span></span>  
+ <span data-ttu-id="2a100-109">[in]大小，以位元組為單位的緩衝區，`lpBuffer`指向。</span><span class="sxs-lookup"><span data-stu-id="2a100-109">[in] The size, in bytes, of the buffer that `lpBuffer` points to.</span></span>  
   
  `pResult`  
- <span data-ttu-id="c9777-110">[out]傳回的資訊緩衝區的位元組數目指標。</span><span class="sxs-lookup"><span data-stu-id="c9777-110">[out] A pointer to the number of bytes returned by the information buffer.</span></span>  
+ <span data-ttu-id="2a100-110">[out]傳回的資訊緩衝區的位元組數目指標。</span><span class="sxs-lookup"><span data-stu-id="2a100-110">[out] A pointer to the number of bytes returned by the information buffer.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c9777-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="c9777-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2a100-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="2a100-111">Return Value</span></span>  
   
-|<span data-ttu-id="c9777-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c9777-112">HRESULT</span></span>|<span data-ttu-id="c9777-113">描述</span><span class="sxs-lookup"><span data-stu-id="c9777-113">Description</span></span>|  
+|<span data-ttu-id="2a100-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2a100-112">HRESULT</span></span>|<span data-ttu-id="2a100-113">描述</span><span class="sxs-lookup"><span data-stu-id="2a100-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c9777-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="c9777-114">S_OK</span></span>|<span data-ttu-id="c9777-115">`VirtualQuery` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="c9777-115">`VirtualQuery` returned successfully.</span></span>|  
-|<span data-ttu-id="c9777-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c9777-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c9777-117">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="c9777-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="c9777-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="c9777-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="c9777-119">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="c9777-119">The call timed out.</span></span>|  
-|<span data-ttu-id="c9777-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="c9777-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="c9777-121">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="c9777-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="c9777-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="c9777-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="c9777-123">事件已取消時封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="c9777-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="c9777-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c9777-124">E_FAIL</span></span>|<span data-ttu-id="c9777-125">發生未知的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="c9777-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c9777-126">方法會傳回 E_FAIL CLR 已不再可用的處理序內。</span><span class="sxs-lookup"><span data-stu-id="c9777-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="c9777-127">裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="c9777-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="2a100-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="2a100-114">S_OK</span></span>|<span data-ttu-id="2a100-115">`VirtualQuery` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="2a100-115">`VirtualQuery` returned successfully.</span></span>|  
+|<span data-ttu-id="2a100-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="2a100-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="2a100-117">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="2a100-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="2a100-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="2a100-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="2a100-119">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="2a100-119">The call timed out.</span></span>|  
+|<span data-ttu-id="2a100-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="2a100-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="2a100-121">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="2a100-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="2a100-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="2a100-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="2a100-123">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="2a100-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="2a100-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2a100-124">E_FAIL</span></span>|<span data-ttu-id="2a100-125">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="2a100-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="2a100-126">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="2a100-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="2a100-127">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="2a100-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c9777-128">備註</span><span class="sxs-lookup"><span data-stu-id="c9777-128">Remarks</span></span>  
- <span data-ttu-id="c9777-129">`VirtualQuery` 提供呼叫的處理序的虛擬位址空間中的頁面範圍的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="c9777-129">`VirtualQuery` provides information about a range of pages in the virtual address space of the calling process.</span></span> <span data-ttu-id="c9777-130">此實作中設定的值`pResult`資訊緩衝區中，傳回的位元組數目的參數，並傳回 HRESULT 值。</span><span class="sxs-lookup"><span data-stu-id="c9777-130">This implementation sets the value of the `pResult` parameter to the number of bytes returned in the information buffer, and returns an HRESULT value.</span></span> <span data-ttu-id="c9777-131">在 Win32`VirtualQuery`函式，傳回值就是緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="c9777-131">In the Win32 `VirtualQuery` function, the return value is the buffer size.</span></span> <span data-ttu-id="c9777-132">如需詳細資訊，請參閱 Windows 平台的文件。</span><span class="sxs-lookup"><span data-stu-id="c9777-132">For more information, see the Windows Platform documentation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2a100-128">備註</span><span class="sxs-lookup"><span data-stu-id="2a100-128">Remarks</span></span>  
+ <span data-ttu-id="2a100-129">`VirtualQuery` 提供呼叫的處理序虛擬位址空間中的頁面範圍的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="2a100-129">`VirtualQuery` provides information about a range of pages in the virtual address space of the calling process.</span></span> <span data-ttu-id="2a100-130">此實作中設定的值`pResult`的位元組數目的參數傳回資訊的緩衝區，並傳回 HRESULT 值。</span><span class="sxs-lookup"><span data-stu-id="2a100-130">This implementation sets the value of the `pResult` parameter to the number of bytes returned in the information buffer, and returns an HRESULT value.</span></span> <span data-ttu-id="2a100-131">在 Win32 中`VirtualQuery`函式，傳回的值是緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="2a100-131">In the Win32 `VirtualQuery` function, the return value is the buffer size.</span></span> <span data-ttu-id="2a100-132">如需詳細資訊，請參閱 Windows 平台的文件。</span><span class="sxs-lookup"><span data-stu-id="2a100-132">For more information, see the Windows Platform documentation.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="c9777-133">作業系統的實作`VirtualQuery`不會造成死結，並與隨機使用者程式碼中暫停的執行緒可以執行到完成為止。</span><span class="sxs-lookup"><span data-stu-id="c9777-133">The operating system's implementation of `VirtualQuery` does not incur deadlock and can run to completion with random threads suspended in user code.</span></span> <span data-ttu-id="c9777-134">實作這個方法的裝載的版本時，請使用很棒的警告。</span><span class="sxs-lookup"><span data-stu-id="c9777-134">Use great caution when implementing a hosted version of this method.</span></span>  
+>  <span data-ttu-id="2a100-133">作業系統的實作`VirtualQuery`不會產生死結，並使用隨機使用者程式碼中暫止的執行緒可以執行到完成為止。</span><span class="sxs-lookup"><span data-stu-id="2a100-133">The operating system's implementation of `VirtualQuery` does not incur deadlock and can run to completion with random threads suspended in user code.</span></span> <span data-ttu-id="2a100-134">實作這個方法的裝載的版本時，請使用很棒的注意。</span><span class="sxs-lookup"><span data-stu-id="2a100-134">Use great caution when implementing a hosted version of this method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c9777-135">需求</span><span class="sxs-lookup"><span data-stu-id="c9777-135">Requirements</span></span>  
- <span data-ttu-id="c9777-136">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c9777-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2a100-135">需求</span><span class="sxs-lookup"><span data-stu-id="2a100-135">Requirements</span></span>  
+ <span data-ttu-id="2a100-136">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2a100-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c9777-137">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c9777-137">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2a100-137">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2a100-137">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c9777-138">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="c9777-138">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2a100-138">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="2a100-138">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c9777-139">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9777-139">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2a100-139">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2a100-139">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9777-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c9777-140">See Also</span></span>  
- [<span data-ttu-id="c9777-141">IHostMemoryManager 介面</span><span class="sxs-lookup"><span data-stu-id="c9777-141">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2a100-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2a100-140">See also</span></span>
+- [<span data-ttu-id="2a100-141">IHostMemoryManager 介面</span><span class="sxs-lookup"><span data-stu-id="2a100-141">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

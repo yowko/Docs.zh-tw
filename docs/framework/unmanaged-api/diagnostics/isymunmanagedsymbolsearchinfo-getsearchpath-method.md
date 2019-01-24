@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c490ee97a1a74cc6fe29a5b0bbece366db6025a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f87399b1124870101531f7115d0da211e646562f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670142"
 ---
-# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a><span data-ttu-id="ba541-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath 方法</span><span class="sxs-lookup"><span data-stu-id="ba541-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath Method</span></span>
-<span data-ttu-id="ba541-103">取得搜尋路徑。</span><span class="sxs-lookup"><span data-stu-id="ba541-103">Gets the search path.</span></span>  
+# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a><span data-ttu-id="e7dd3-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath 方法</span><span class="sxs-lookup"><span data-stu-id="e7dd3-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath Method</span></span>
+<span data-ttu-id="e7dd3-103">取得搜尋路徑。</span><span class="sxs-lookup"><span data-stu-id="e7dd3-103">Gets the search path.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ba541-104">語法</span><span class="sxs-lookup"><span data-stu-id="ba541-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7dd3-104">語法</span><span class="sxs-lookup"><span data-stu-id="e7dd3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSearchPathLength(  
     [out] ULONG32 *pcchPath);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ba541-105">參數</span><span class="sxs-lookup"><span data-stu-id="ba541-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e7dd3-105">參數</span><span class="sxs-lookup"><span data-stu-id="e7dd3-105">Parameters</span></span>  
  `pcchPath`  
- <span data-ttu-id="ba541-106">[out]指標`ULONG32`接收以字元為單位，才能包含搜尋路徑之緩衝區的大小。</span><span class="sxs-lookup"><span data-stu-id="ba541-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.</span></span>  
+ <span data-ttu-id="e7dd3-106">[out]指標`ULONG32`接收大小，以字元為單位，以包含搜尋路徑所需的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="e7dd3-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ba541-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="ba541-107">Return Value</span></span>  
- <span data-ttu-id="ba541-108">如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="ba541-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e7dd3-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="e7dd3-107">Return Value</span></span>  
+ <span data-ttu-id="e7dd3-108">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="e7dd3-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ba541-109">需求</span><span class="sxs-lookup"><span data-stu-id="ba541-109">Requirements</span></span>  
- <span data-ttu-id="ba541-110">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ba541-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e7dd3-109">需求</span><span class="sxs-lookup"><span data-stu-id="e7dd3-109">Requirements</span></span>  
+ <span data-ttu-id="e7dd3-110">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e7dd3-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ba541-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ba541-111">See Also</span></span>  
- [<span data-ttu-id="ba541-112">ISymUnmanagedSymbolSearchInfo 介面</span><span class="sxs-lookup"><span data-stu-id="ba541-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e7dd3-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e7dd3-111">See also</span></span>
+- [<span data-ttu-id="e7dd3-112">ISymUnmanagedSymbolSearchInfo 介面</span><span class="sxs-lookup"><span data-stu-id="e7dd3-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
