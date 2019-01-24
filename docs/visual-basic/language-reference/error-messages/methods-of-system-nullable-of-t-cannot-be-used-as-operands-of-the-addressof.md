@@ -1,5 +1,5 @@
 ---
-title: 方法的&#39;System.Nullable (Of T)&#39;不能做為運算元的&#39;AddressOf&#39;運算子
+title: 方法的&#39;System.Nullable (Of T)&#39;不能做的運算元&#39;AddressOf&#39;運算子
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32126
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: 3a3e4fc033f47fb6a72076dff79f1eece8d01a30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3e34e79f2e91bb55bb2e053ae3e59fd42c4250c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655318"
 ---
-# <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>方法的&#39;System.Nullable (Of T)&#39;不能做為運算元的&#39;AddressOf&#39;運算子
-陳述式使用`AddressOf`運算子和運算元的程序表示<xref:System.Nullable%601>結構。  
+# <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>方法的&#39;System.Nullable (Of T)&#39;不能做的運算元&#39;AddressOf&#39;運算子
+陳述式會使用`AddressOf`運算子和運算元表示的程序<xref:System.Nullable%601>結構。  
   
  **錯誤 ID:** BC32126  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   取代中的程序名稱`AddressOf`子句，但不是成員的運算元<xref:System.Nullable%601>。  
+-   取代中的程序名稱`AddressOf`子句和運算元，不是成員<xref:System.Nullable%601>。  
   
--   撰寫類別所包裝的方法<xref:System.Nullable%601>您想要使用的。 在下列範例中，`NullableWrapper`類別會定義名為的新方法`GetValueOrDefault`。 因為這個新的方法不是成員的<xref:System.Nullable%601>，它可以套用至`nullInstance`，可為 null 的類型，以形成的引數的執行個體`AddressOf`。  
+-   撰寫的類別，包裝的方法<xref:System.Nullable%601>您想要使用。 在下列範例中，`NullableWrapper`類別會定義名為的新方法`GetValueOrDefault`。 因為這個新的方法不是隸屬<xref:System.Nullable%601>，它可以套用至`nullInstance`，可為 null 的類型，以形成的引數的執行個體`AddressOf`。  
   
 ```vb  
 Module Module1  
@@ -61,8 +61,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Nullable%601>  
- [AddressOf 運算子](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [可為 Null 的值類型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Nullable%601>
+- [AddressOf 運算子](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [可為 Null 的值類型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

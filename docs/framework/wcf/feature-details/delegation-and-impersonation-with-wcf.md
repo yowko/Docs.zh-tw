@@ -8,15 +8,15 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 08b78a2a6e7d27f28ddd5c9b771f690bc16b1717
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 86f7f485c289d1641605ab538f8500418b77cfd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663306"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>使用 WCF 的委派和模擬
-「*模擬* 」(Impersonation) 是服務用來限制用戶端存取服務網域資源的常用技術。 服務網域資源可以是像是本機檔案 (模擬) 的電腦資源，或是在另一部電腦上的資源，例如檔案共用 (委派)。 如需範例應用程式，請參閱 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 如需如何使用模擬的範例，請參閱 [如何：在服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
+「*模擬* 」(Impersonation) 是服務用來限制用戶端存取服務網域資源的常用技術。 服務網域資源可以是像是本機檔案 (模擬) 的電腦資源，或是在另一部電腦上的資源，例如檔案共用 (委派)。 如需範例應用程式，請參閱 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 如需如何使用模擬的範例，請參閱[How to:服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
   
 > [!IMPORTANT]
 >  請留意，在模擬服務上的用戶端時，服務會以用戶端的認證執行，而該認證的權限可能高於伺服器處理序。  
@@ -57,9 +57,9 @@ ms.locfileid: "43505413"
  服務可以模擬用戶端的程度，取決於服務在嘗試模擬時所擁有的權限、所使用的模擬類型，以及用戶端允許的可能模擬程度。  
   
 > [!NOTE]
->  當用戶端和服務在相同電腦上執行，而且用戶端正以系統帳戶執行時 (例如， `Local System` 或 `Network Service`)，用戶端就無法在安全工作階段是以可設定狀態之安全性內容權杖所建立的情況下進行模擬。 Windows Form 或主控台應用程式 (Console Application) 一般都會以目前登入的帳戶執行，因此依預設可以模擬該帳戶。 但當用戶端是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 頁面，而且該頁面是裝載於 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 或 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]中時，根據預設，用戶端不會以 `Network Service` 帳戶執行。 所有支援安全工作階段的系統提供繫結，根據預設，都會使用沒有狀態 (Stateless) 的安全性內容權杖 (SCT)。 不過，如果用戶端是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 頁面，而且已使用含有可設定狀態之 SCT 的安全工作階段，就無法模擬該用戶端。 如需使用安全工作階段中的具狀態的 Sct 的詳細資訊，請參閱[如何： 為安全工作階段建立安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+>  當用戶端和服務在相同電腦上執行，而且用戶端正以系統帳戶執行時 (例如， `Local System` 或 `Network Service`)，用戶端就無法在安全工作階段是以可設定狀態之安全性內容權杖所建立的情況下進行模擬。 Windows Form 或主控台應用程式 (Console Application) 一般都會以目前登入的帳戶執行，因此依預設可以模擬該帳戶。 但當用戶端是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 頁面，而且該頁面是裝載於 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 或 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]中時，根據預設，用戶端不會以 `Network Service` 帳戶執行。 所有支援安全工作階段的系統提供繫結，根據預設，都會使用沒有狀態 (Stateless) 的安全性內容權杖 (SCT)。 不過，如果用戶端是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 頁面，而且已使用含有可設定狀態之 SCT 的安全工作階段，就無法模擬該用戶端。 如需使用安全工作階段中的具狀態的 Sct 的詳細資訊，請參閱[How to:建立安全性內容權杖的安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
-## <a name="impersonation-in-a-service-method-declarative-model"></a>使用服務方法的模擬：宣告式模型  
+## <a name="impersonation-in-a-service-method-declarative-model"></a>服務方法的模擬：宣告式模型  
  大多數模擬狀況都牽涉到在呼叫端內容中執行服務方法。 WCF 提供的模擬功能，以簡化這可以讓使用者能夠指定模擬需求中的<xref:System.ServiceModel.OperationBehaviorAttribute>屬性。 例如，下列程式碼中，WCF 基礎結構模擬呼叫者之前執行`Hello`方法。 資源的存取控制清單 (ACL) 必須允許呼叫者存取權限，任何存取 `Hello` 方法內部原生資源的嘗試才能繼續。 若要啟用模擬，請將 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 屬性設定為其中一個 <xref:System.ServiceModel.ImpersonationOption> 例舉值，也就是 <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>，如下列範例所示。  
   
 > [!NOTE]
@@ -73,7 +73,7 @@ ms.locfileid: "43505413"
 > [!NOTE]
 >  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上，如果有建立可設定狀態的 SCT，模擬便會失敗，並會造成 <xref:System.InvalidOperationException>。 如需詳細資訊，請參閱 <<c0> [ 不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
   
-## <a name="impersonation-in-a-service-method-imperative-model"></a>使用服務方法的模擬：命令式模型  
+## <a name="impersonation-in-a-service-method-imperative-model"></a>服務方法的模擬：命令式模型  
  有時候呼叫者並不需要模擬整個服務，而只需要模擬服務的部份即可運作。 在此情況下，請從服務方法內取得呼叫者的 Windows 身分識別，而且以命令方式執行模擬。 使用 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 的 <xref:System.ServiceModel.ServiceSecurityContext> 屬性傳回 <xref:System.Security.Principal.WindowsIdentity> 類別的執行個體，並先呼叫 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 方法，再使用該執行個體，即可完成這項執行。  
   
 > [!NOTE]
@@ -170,7 +170,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ```  
   
 ## <a name="delegation"></a>委派  
- 若要委派給後端服務，服務必須使用用戶端的 Windows 身分識別，對後端服務執行多支線 (Multi-leg) Kerberos 驗證 (無 NTLM 後援的 SSPI) 或 Kerberos 直接驗證。 若要委派給後端服務，請建立 <xref:System.ServiceModel.ChannelFactory%601> 和通道，然後在模擬用戶端時透過通道通訊。 透過這種委派，後端服務離前端服務的距離取決於前端服務達成的模擬等級。 當模擬等級為 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>時，前端和後端服務必須在相同電腦上執行。 當模擬等級為 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>時，前端和後端服務可以在不同電腦或相同電腦上執行。 啟用委派等級模擬需要 Windows 網域原則已設定，才能允許委派。 如需有關如何設定 Active Directory 以支援委派的詳細資訊，請參閱 <<c0> [ 啟用委派驗證](https://go.microsoft.com/fwlink/?LinkId=99690)。  
+ 若要委派給後端服務，服務必須使用用戶端的 Windows 身分識別，對後端服務執行多支線 (Multi-leg) Kerberos 驗證 (無 NTLM 後援的 SSPI) 或 Kerberos 直接驗證。 若要委派給後端服務，請建立 <xref:System.ServiceModel.ChannelFactory%601> 和通道，然後在模擬用戶端時透過通道通訊。 透過這種委派，後端服務離前端服務的距離取決於前端服務達成的模擬等級。 當模擬等級為 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>時，前端和後端服務必須在相同電腦上執行。 當模擬等級為 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>時，前端和後端服務可以在不同電腦或相同電腦上執行。 啟用委派等級模擬需要 Windows 網域原則已設定，才能允許委派。 如需設定 Active Directory 以支援委派的詳細資訊，請參閱 [啟用委派驗證](https://go.microsoft.com/fwlink/?LinkId=99690)(英文)。  
   
 > [!NOTE]
 >  當用戶端使用對應至後端服務 Windows 帳戶的使用者名稱和密碼驗證前端服務時，前端服務可以重複使用用戶端的使用者名稱和密碼來驗證後端服務。 這是身分識別流動特別強大的形式，因為將使用者名稱和密碼傳遞至後端服務可讓後端服務執行模擬，但它不會構成委派，因為並未使用 Kerberos。 委派上的 Active Directory 控制項不會套用至使用者名稱和密碼驗證。  
@@ -180,7 +180,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 |模擬等級|服務可以執行跨處理序委派|服務可以執行跨電腦委派|  
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|否|否|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|是|否|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|[是]|否|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|是|是|  
   
  下列程式碼範例示範如何使用委派。  
@@ -189,7 +189,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
  [!code-vb[c_delegation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_delegation/vb/source.vb#1)]  
   
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>如何設定應用程式使用限制委派  
- 在您可以使用限制委派之前，傳送者、接收者和網域控制站必須先設定為可使用限制委派。 下列程序列出啟用限制委派的步驟。 如需委派和限制的委派之間差異的詳細資訊，請參閱的部份[Windows Server 2003 Kerberos 延伸](https://go.microsoft.com/fwlink/?LinkId=100194)限制的討論。  
+ 在您可以使用限制委派之前，傳送者、接收者和網域控制站必須先設定為可使用限制委派。 下列程序列出啟用限制委派的步驟。 如需委派和限制委派之間差異的詳細資訊，請參閱 [Windows Server 2003 Kerberos 延伸](https://go.microsoft.com/fwlink/?LinkId=100194) (英文) 部分中有關限制的討論。  
   
 1.  在網域控制站上，清除用戶端應用程式執行所在之帳戶的 [ **這是機密帳戶，無法委派** ] 核取方塊。  
   
@@ -203,23 +203,23 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 -   [疑難排解 Kerberos 委派](https://go.microsoft.com/fwlink/?LinkId=36724)  
   
--   [Kerberos 通訊協定轉換與限制的委派](https://go.microsoft.com/fwlink/?LinkId=36725)  
+-   [Kerberos 通訊協定轉換與限制委派 (英文)](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.OperationBehaviorAttribute>  
- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>  
- <xref:System.ServiceModel.ImpersonationOption>  
- <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>  
- <xref:System.ServiceModel.ServiceSecurityContext>  
- <xref:System.Security.Principal.WindowsIdentity>  
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ImpersonateCallerForAllOperations%2A>  
- <xref:System.ServiceModel.ServiceHost>  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.ChannelFactory%601>  
- <xref:System.Security.Principal.TokenImpersonationLevel.Identification>  
- [使用模擬搭配傳輸安全性](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
- [模擬用戶端](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
- [如何：在服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.OperationBehaviorAttribute>
+- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>
+- <xref:System.ServiceModel.ImpersonationOption>
+- <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>
+- <xref:System.ServiceModel.ServiceSecurityContext>
+- <xref:System.Security.Principal.WindowsIdentity>
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ImpersonateCallerForAllOperations%2A>
+- <xref:System.ServiceModel.ServiceHost>
+- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.ChannelFactory%601>
+- <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
+- [使用模擬搭配傳輸安全性](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+- [模擬用戶端](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
+- [如何：服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

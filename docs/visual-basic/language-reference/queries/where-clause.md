@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-ms.openlocfilehash: de7b4bf3e7dc1145b7e95197c7bd05c66acdabd6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ecfc523573a6ab8142a04557156a3819eed440e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662292"
 ---
 # <a name="where-clause-visual-basic"></a>Where 子句 (Visual Basic)
 指定查詢的篩選條件。  
@@ -26,7 +26,7 @@ Where condition
   
 ## <a name="parts"></a>組件  
  `condition`  
- 必要。 運算式，決定是否要將目前的項目集合中的值包含在輸出集合中。 運算式必須評估為`Boolean`值或相當的`Boolean`值。 如果條件評估為`True`項目包含查詢結果中; 否則從查詢結果中排除項目。  
+ 必要項。 運算式，決定是否要將目前的項目集合中的值包含在輸出集合中。 運算式必須評估為`Boolean`值或相當的`Boolean`值。 如果條件評估為`True`項目包含查詢結果中; 否則從查詢結果中排除項目。  
   
 ## <a name="remarks"></a>備註  
  `Where`子句可讓您選取只符合特定準則的項目，以篩選查詢資料。 項目，其值會導致`Where`子句，以評估為`True`包括在查詢結果中，會排除其他項目。 使用中的運算式`Where`子句必須評估為`Boolean`或相當的`Boolean`，例如評估為整數`False`當其值為零。 您可以將多個運算式中的結合`Where`子句使用邏輯運算子，例如`And`， `Or`， `AndAlso`， `OrElse`， `Is`，和`IsNot`。  
@@ -45,9 +45,9 @@ Where condition
   
  [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_2.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查詢](../../../visual-basic/language-reference/queries/index.md)  
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [For Each...Next 陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查詢](../../../visual-basic/language-reference/queries/index.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [For Each...Next 陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

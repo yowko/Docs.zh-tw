@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: 5ae0204a3ef7141ebbc98ecc91a464116593981f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19e3d70e378e1357f4a3b299ddfb504f5b85fd0f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682965"
 ---
 # <a name="documentviewer"></a>DocumentViewer
-<xref:System.Windows.Controls.DocumentViewer>控制項用來檢視<xref:System.Windows.Documents.FixedDocument>內容 (例如[!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)]文件) 的分頁的格式。  
+<xref:System.Windows.Controls.DocumentViewer>控制項用來檢視<xref:System.Windows.Documents.FixedDocument>內容 (例如[!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)]文件) 的編頁的格式。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.DocumentViewer>  
   
  <xref:System.Windows.Documents.FixedDocument>  
   
-## <a name="see-also"></a>另請參閱  
- [文件](../../../../docs/framework/wpf/advanced/documents.md)  
- [文件序列化與儲存](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
- [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a>另請參閱
+- [文件](../../../../docs/framework/wpf/advanced/documents.md)
+- [文件序列化與儲存](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)

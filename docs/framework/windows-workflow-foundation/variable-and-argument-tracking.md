@@ -2,12 +2,12 @@
 title: 變數及引數追蹤
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4e59a6838d93a57302f0c894445ab9da5d4252ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625207"
 ---
 # <a name="variable-and-argument-tracking"></a>變數及引數追蹤
 追蹤工作流程的執行時，擷取資料通常很實用。 它可在存取追蹤記錄後期執行時，提供額外的內容。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，您可以在使用追蹤的工作流程中的任何活動範圍內擷取任何可見的變數或引數。 追蹤設定檔讓擷取資料變得非常容易。  
@@ -46,6 +46,6 @@ ms.locfileid: "47195871"
   
 3.  若為自訂追蹤參與者，請確定 WF 程式碼不會公開儲存在變數或引數中的機密資訊。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>另請參閱
+- [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)

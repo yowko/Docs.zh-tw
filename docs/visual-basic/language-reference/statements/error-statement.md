@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e819ba043dec2d5e8e792fdf57dc0c273a24e881
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654811"
 ---
 # <a name="error-statement"></a>Error 陳述式
 模擬錯誤的相符項目。  
@@ -28,7 +28,7 @@ Error errornumber
   
 ## <a name="parts"></a>組件  
  `errornumber`  
- 必要。 可以是任何有效的錯誤號碼。  
+ 必要項。 可以是任何有效的錯誤號碼。  
   
 ## <a name="remarks"></a>備註  
  `Error`回溯相容性支援陳述式。 在新的程式碼，尤其是在建立物件時，使用`Err`物件的`Raise`方法來產生執行階段錯誤。  
@@ -58,14 +58,14 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **命名空間：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **組件：** Visual Basic 執行階段程式庫 （位於 Microsoft.VisualBasic.dll)  
+ **組件：** Visual Basic Runtime Library (位於 Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>  
- <xref:Microsoft.VisualBasic.Information.Err%2A>  
- <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>  
- [On Error 陳述式](../../../visual-basic/language-reference/statements/on-error-statement.md)  
- [Resume 陳述式](../../../visual-basic/language-reference/statements/resume-statement.md)  
- [錯誤訊息](../../../visual-basic/language-reference/error-messages/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>
+- <xref:Microsoft.VisualBasic.Information.Err%2A>
+- <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>
+- [On Error 陳述式](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Resume 陳述式](../../../visual-basic/language-reference/statements/resume-statement.md)
+- [錯誤訊息](../../../visual-basic/language-reference/error-messages/index.md)

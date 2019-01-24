@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: ed0f638975c232638de4a46db5db82bb1e85668c
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 36b1ad197b5c8e38c77a9a6a92ba1b3b659efbb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661324"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 語言功能
-XAML 2009 是新 XAML 語言功能的縮寫詞彙，可擴充現有的 XAML 語言規格。 XAML 2009 引進了數個新的指示詞和建構。 這些包括[X:arguments 指示詞](../../../docs/framework/xaml-services/x-arguments-directive.md); [X:factorymethod 指示詞](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [X:reference 標記延伸](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [X:typearguments 指示詞](../../../docs/framework/xaml-services/x-typearguments-directive.md); 和通用語言基本類型的內建類型 (例如`x:Char`)。  
+XAML 2009 是新 XAML 語言功能的縮寫詞彙，可擴充現有的 XAML 語言規格。 XAML 2009 引進了數個新的指示詞和建構。 其中包括[X:arguments 指示詞](../../../docs/framework/xaml-services/x-arguments-directive.md); [X:factorymethod 指示詞](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [X:reference 標記延伸](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [X:typearguments 指示詞](../../../docs/framework/xaml-services/x-typearguments-directive.md); 和通用語言基本類型的內建類型 (例如`x:Char`)。  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>WPF 和 Visual Studio 中的 XAML 2009 支援  
@@ -32,5 +32,5 @@ XAML 2009 是新 XAML 語言功能的縮寫詞彙，可擴充現有的 XAML 語�
 ### <a name="event-attributes"></a>事件屬性  
  針對事件所支援的屬性，XAML 2006 會假定標記編譯與將事件送出到標記編譯有關。 XAML 2009 支援類似標記延伸的標記形式，這會將事件連接延遲到 XAML 的執行階段剖析和載入。 不過，WPF 應用程式和 WPF UI 的 XAML 情節通常不會使用這項功能。 WPF 及其 XAML 2006 實作會使用事件處理常式連接組合進行在 <xref:System.Windows.UIElement> 層級定義的路由事件，並使用其標記編譯器步驟進行大部分的事件屬性處理。 標記編譯器也會前置處理在 XAML 中找到的任何事件屬性，建置動作會在此 XAML 中宣告使用標記編譯器。  
   
-## <a name="see-also"></a>另請參閱  
- [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>另請參閱
+- [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

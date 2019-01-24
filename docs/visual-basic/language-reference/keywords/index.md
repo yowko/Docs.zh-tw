@@ -2,20 +2,14 @@
 title: 關鍵字 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- reserved keywords, Visual Basic
-- keywords [Visual Basic]
-- Members [Visual Basic], Visual Basic run-time
-- Visual Basic code, keywords
-- Visual Basic, language reference
-- reserved words, Visual Basic keywords
-- Visual Basic, keywords
+  - 'reserved keywords, Visual Basic'
+  - 'keywords [Visual Basic]'
+  - 'Members [Visual Basic], Visual Basic run-time'
+  - 'Visual Basic code, keywords'
+  - 'Visual Basic, language reference'
+  - 'reserved words, Visual Basic keywords'
+  - 'Visual Basic, keywords'
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: eaa8813613a0d17b6d1e32cdcdb8361e9b2e8d84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605312"
 ---
 # <a name="keywords-visual-basic"></a>關鍵字 (Visual Basic)
 下表列出所有的 Visual Basic 語言關鍵字。  
@@ -51,7 +45,7 @@ ms.locfileid: "33605312"
 |[IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)|[Let](../../../visual-basic/language-reference/queries/let-clause.md)|[Lib](../../../visual-basic/language-reference/statements/declare-statement.md)|[Like](../../../visual-basic/language-reference/operators/like-operator.md)|  
 |[Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|[Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../../../visual-basic/language-reference/operators/mod-operator.md)|  
 |[模組](../../../visual-basic/language-reference/modifiers/module-keyword.md)|[Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md)|[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|  
-|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)|  
+|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[命名空間](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)|  
 |[New 條件約束](../../../visual-basic/language-reference/statements/type-list.md)|[New 運算子](../../../visual-basic/language-reference/operators/new-operator.md)|[下一步](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Next (在 Resume 中)](../../../visual-basic/language-reference/statements/resume-statement.md)|  
 |[Not](../../../visual-basic/language-reference/operators/not-operator.md)|[Nothing](../../../visual-basic/language-reference/nothing.md)|[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|  
 |[物件](../../../visual-basic/language-reference/data-types/object-data-type.md)|[Of](../../../visual-basic/language-reference/statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
@@ -77,7 +71,7 @@ ms.locfileid: "33605312"
 |[>> 運算子](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>= 運算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf``GoSub`， `Variant`，和`Wend`保留為保留的關鍵字，但是無法再使用 Visual Basic 中。 `Let` 關鍵字的意義已變更。 `Let` 現在用於 LINQ 查詢中。 如需詳細資訊，請參閱 [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)。  
+>  `EndIf``GoSub`， `Variant`，和`Wend`雖然它們不再用在 Visual Basic 中，會保留為保留的關鍵字。 `Let` 關鍵字的意義已變更。 `Let` 現在用於 LINQ 查詢中。 如需詳細資訊，請參閱 [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)。  
   
 ## <a name="unreserved-keywords"></a>未保留關鍵字  
  下列不是保留關鍵字，表示您可以使用它們作為程式設計項目的名稱。 不過，不建議這麼做，因為它會讓程式碼很難讀取，而且可能會導致難以察覺的細微錯誤。  
@@ -117,5 +111,5 @@ ms.locfileid: "33605312"
 |[登錄摘要](../../../visual-basic/language-reference/keywords/registry-summary.md)|列出函式，可用來讀取、儲存和刪除程式設定。|  
 |[字串操作摘要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|列出用來操作字串的函式。|  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：定義可以在不同資料類型上提供完全相同功能的類別 (Visual Basic)
+title: HOW TO：定義的類別，可提供完全相同的功能上不同的資料類型 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 3570a1c851bb8fead33f4cd208489c4ae087a68d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f6faf7b9ba2338784fda2cec2efc2b3991d415e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667475"
 ---
-# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>如何：定義可以在不同資料類型上提供完全相同功能的類別 (Visual Basic)
+# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>HOW TO：定義的類別，可提供完全相同的功能上不同的資料類型 (Visual Basic)
 您可以定義一個類別，以從中建立可在不同資料類型上提供相同功能的物件。 若要這樣做，請在定義中指定一個或多個 *「類型參數」* (type parameter)。 類別之後可以作為使用各種資料類型之物件的範本。 使用這種方法所定義的類別稱為 *「泛型類別」*(generic class)。  
   
  定義泛型類別的優點是只需要定義一次，而且您的程式碼可以使用它來建立許多使用各種資料類型的物件。 這所導致的效能優於定義具有 `Object` 類型的類別。  
@@ -74,11 +74,11 @@ ms.locfileid: "33650344"
   
      [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Visual Basic 中的泛型型別](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [語言獨立性以及與語言無關的元件](../../../../standard/language-independence-and-language-independent-components.md)  
- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
- [類型清單](../../../../visual-basic/language-reference/statements/type-list.md)  
- [如何：使用泛型類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+## <a name="see-also"></a>另請參閱
+- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [語言獨立性以及與語言無關的元件](../../../../standard/language-independence-and-language-independent-components.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [類型清單](../../../../visual-basic/language-reference/statements/type-list.md)
+- [如何：使用泛型類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)

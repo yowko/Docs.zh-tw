@@ -2,12 +2,12 @@
 title: 在資料集中使用 XML
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-ms.openlocfilehash: cbdc6135a819e2141426f432d163cd49a7b78ac4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 245e893d052a67e79396fb3d9fc7062eea426215
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667040"
 ---
 # <a name="using-xml-in-a-dataset"></a>在資料集中使用 XML
 透過 ADO.NET，您可以從 XML 資料流或文件填滿 <xref:System.Data.DataSet>。 您可以使用 XML 資料流或文件，為 <xref:System.Data.DataSet> 提供資料、結構描述資訊或同時提供這兩者。 由 XML 資料流或文件提供的資訊，可與 <xref:System.Data.DataSet> 中的現有資料或結構描述資訊結合。  
@@ -31,7 +31,7 @@ ms.locfileid: "43856435"
  討論 XML 結構描述的使用方式，以及如何從 <xref:System.Data.DataSet> 產生 XML 結構描述。  
   
  [資料集和 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- 討論 .NET Framework 中有哪些可用功能可同步存取單一資料集的關聯式和階層式檢視，以及如何在 <xref:System.Data.DataSet> 與 <xref:System.Xml.XmlDataDocument> 之間建立同步關係。  
+ 討論 .NET Framework 中有哪些可用功能可同步存取單一資料集的關聯式和階層式檢閱，以及如何在 <xref:System.Data.DataSet> 與 <xref:System.Xml.XmlDataDocument> 之間建立同步關係。  
   
  [巢狀 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  討論將 <xref:System.Data.DataRelation> 的內容表示為 XML 資料時，巢狀 <xref:System.Data.DataSet> 物件的重要性，並描述如何建立這些關聯性。  
@@ -46,6 +46,6 @@ ms.locfileid: "43856435"
  [ADO.NET 概觀](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
  說明 ADO.NET 的架構和元件，以及如何使用它們來存取現有資料來源和管理應用程式資料。  
   
-## <a name="see-also"></a>另請參閱  
- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

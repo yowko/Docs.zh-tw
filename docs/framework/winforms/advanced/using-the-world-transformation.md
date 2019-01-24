@@ -8,30 +8,30 @@ helpviewer_keywords:
 - graphics [Windows Forms], world transformation
 - world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
-ms.openlocfilehash: 6a029e17096222d7ed80dea16f91b83a813039f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec232c92d32b91a7b334b237c869db8eb428eccc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647604"
 ---
 # <a name="using-the-world-transformation"></a>使用全局轉換
-全局轉換是屬性的<xref:System.Drawing.Graphics>類別。 指定全局轉換的數字會儲存在<xref:System.Drawing.Drawing2D.Matrix>物件，代表 3 × 3 矩陣。 <xref:System.Drawing.Drawing2D.Matrix>和<xref:System.Drawing.Graphics>類別有數種方法來設定數字的自然變換矩陣中。  
+全局轉換是屬性<xref:System.Drawing.Graphics>類別。 指定全局轉換的數字會儲存在<xref:System.Drawing.Drawing2D.Matrix>物件，代表 3 × 3 的矩陣。 <xref:System.Drawing.Drawing2D.Matrix>和<xref:System.Drawing.Graphics>類別有幾種方式來設定數字的自然變換矩陣中。  
   
 ## <a name="different-types-of-transformations"></a>不同類型的轉換  
- 在下列範例中，程式碼，先建立 50 × 50 矩形，並放在原點 （0，0）。 原點是在工作區的左上角。  
+ 在下列範例中，程式碼，先建立 50 x 50 矩形，並放在原點 （0，0）。 原點是在用戶端區域的左上角。  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#11)]  
   
- 下列程式碼適用於 1.75 x 方向的因數來展開矩形，並壓縮矩形，因數為 0.5，在 y 方向縮放轉換：  
+ 下列程式碼適用於展開矩形在 x 方向的 1.75，在 y 方向的 0.5 倍壓縮矩形的縮放轉換：  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#12)]
  [!code-vb[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#12)]  
   
- 結果是一個矩形在 x 方向較長且少於 y 方向的原始。  
+ 結果是在 x 方向較長且少於 y 方向的原始矩形。  
   
- 若要旋轉的矩形，而不是調整它，請使用下列程式碼：  
+ 若要旋轉而不是縮放矩形，請使用下列程式碼：  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#13)]
  [!code-vb[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#13)]  
@@ -41,7 +41,7 @@ ms.locfileid: "33523679"
  [!code-csharp[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#14)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Drawing.Drawing2D.Matrix>  
- [座標系統和轉換](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
- [使用 Managed GDI+ 中的轉換](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Drawing.Drawing2D.Matrix>
+- [座標系統和轉換](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+- [使用 Managed GDI+ 中的轉換](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

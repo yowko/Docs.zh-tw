@@ -1,5 +1,5 @@
 ---
-title: 如何：設定由 Windows Form 控制項所顯示的影像
+title: HOW TO：設定所顯示的映像的 Windows Form 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 4870f9e2acc48a90e1e2193d514926fedee05f61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93bc7970ce7c287273f8bd7ff50b07c6658e2a08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644920"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>如何：設定由 Windows Form 控制項所顯示的影像
-數個 Windows Form 控制項可以顯示影像。 這些映像可以是用途的控制項，例如按鈕，表示磁碟片圖示的圖示**儲存**命令。 或者，圖示可以提供控制項的外觀和行為，您想要的背景影像。  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>HOW TO：設定所顯示的映像的 Windows Form 控制項
+數個 Windows Form 控制項來顯示影像。 這些映像可以是用途的控制項，例如按鈕，表示磁碟片圖示的圖示**儲存**命令。 或者，圖示可以提供給控制項的外觀和行為，您想要的背景影像。  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>若要設定控制項所顯示的影像  
   
-1.  將控制項的`Image`或`BackgroundImage`屬性型別的物件<xref:System.Drawing.Image>。 一般而言，您將會映像從檔案載入使用<xref:System.Drawing.Image.FromFile%2A>方法。  
+1.  將控制項的`Image`或是`BackgroundImage`型別的物件的屬性<xref:System.Drawing.Image>。 一般而言，您將會載入映像從檔案使用<xref:System.Drawing.Image.FromFile%2A>方法。  
   
-     在下列程式碼範例中，設定路徑的映像的位置是**我的圖片**資料夾。 執行 Windows 作業系統的大部分電腦都會包含此目錄。 這也讓使用者以最少的系統存取層級可安全地執行應用程式。 下列程式碼範例需要您已經有的表單具有<xref:System.Windows.Forms.PictureBox>加入控制項。  
+     在下列程式碼範例中，將路徑設為映像的位置**My Pictures**資料夾。 執行 Windows 作業系統的大部分電腦都會包含此目錄。 這也可讓具有最少的系統存取層級的使用者安全地執行應用程式。 下列程式碼範例需要您已有表單<xref:System.Windows.Forms.PictureBox>加入控制項。  
   
     ```vb  
     ' Replace the image named below  
@@ -56,7 +56,7 @@ ms.locfileid: "33533737"
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Drawing.Image.FromFile%2A>  
- <xref:System.Drawing.Image>  
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Drawing.Image.FromFile%2A>
+- <xref:System.Drawing.Image>
+- <xref:System.Windows.Forms.Control.BackgroundImage%2A>

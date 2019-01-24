@@ -1,15 +1,15 @@
 ---
-title: 如何： 攔截剖析錯誤 (Visual Basic)
+title: HOW TO：攔截剖析錯誤 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: aa72b914d4640410a4d47ba49e774dcee31a54c0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f438a247866fdea8935be2b881a77f97c152b98f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667081"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>如何： 攔截剖析錯誤 (Visual Basic)
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>HOW TO：攔截剖析錯誤 (Visual Basic)
 這個主題顯示如何偵測格式錯誤或無效的 XML。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是使用 <xref:System.Xml.XmlReader> 實作的。 如果將格式錯誤或無效的 XML 傳遞到 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，基礎 <xref:System.Xml.XmlReader> 類別將會擲出例外狀況。 剖析 XML 的各種方法 (例如，<xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>) 不會攔截例外狀況。然後，您的應用程式就可以攔截例外狀況。  
@@ -41,5 +41,5 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
   
  如需可以預期 <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 及 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 方法擲回之例外狀況的詳細資訊，請參閱 <xref:System.Xml.XmlReader> 文件。  
   
-## <a name="see-also"></a>另請參閱  
- [剖析 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>另請參閱
+- [剖析 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

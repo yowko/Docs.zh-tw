@@ -1,16 +1,16 @@
 ---
-title: HOW TO：使用單向和要求-回覆合約來存取 WCF 服務
+title: HOW TO：存取 WCF 服務使用單向和要求-回覆合約
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f74f874d43698955cce0ae14791a9d6b748ef919
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639160"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>HOW TO：使用單向和要求-回覆合約來存取 WCF 服務
-下列程序說明如何存取 Windows Communication Foundation (WCF) 服務來定義單向合約與要求-回覆合約，並不使用雙工通訊模式。  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>HOW TO：存取 WCF 服務使用單向和要求-回覆合約
+下列程序說明如何存取 Windows Communication Foundation (WCF) 服務，定義單向合約與要求-回覆合約，並不使用雙工通訊模式。  
   
 ### <a name="to-define-the-service"></a>若要定義服務  
   
@@ -109,7 +109,7 @@ ms.locfileid: "33494318"
   
 ### <a name="to-access-the-service"></a>若要存取服務  
   
-1.  執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用中繼資料交換端點位址來建立使用下列命令列針對服務的用戶端類別： `Svcutil http://localhost:8000/Service` [ServiceModel中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)會產生一組介面和類別，如下列範例程式碼所示。  
+1.  執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用中繼資料交換端點位址來建立使用下列命令列的服務的用戶端類別：`Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生一組介面和類別，如下列範例程式碼所示。  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -400,5 +400,5 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [單向服務](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+## <a name="see-also"></a>另請參閱
+- [單向服務](../../../../docs/framework/wcf/feature-details/one-way-services.md)

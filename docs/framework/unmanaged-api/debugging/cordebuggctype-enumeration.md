@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e74f564a483d80fd6312cf015802750d48e73ca7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e08a486089a5697b9b3bb4b52c69fda3b661a6ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654736"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType 列舉
 指出記憶體回收行程是在工作站或伺服器上執行。  
@@ -41,19 +41,19 @@ typedef enum CorDebugGCType {
   
 |成員名稱|描述|  
 |-----------------|-----------------|  
-|`CorDebugWorkstationGC`|在工作站上執行記憶體回收行程。|  
+|`CorDebugWorkstationGC`|記憶體回收行程在工作站上執行。|  
 |`CorDebugServerGC`|記憶體回收行程在伺服器上執行。|  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

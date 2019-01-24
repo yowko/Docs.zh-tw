@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea617668a72413f3387a35fe009b37fa15d03354
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9bf3e5d427698673576f71e290fde54275b75317
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683452"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo 方法
 取得名稱、 資料列大小、 資料列數目、 資料行數與指定之資料表的索引鍵資料行索引。  
@@ -42,32 +42,32 @@ HRESULT GetTableInfo (
   
 #### <a name="parameters"></a>參數  
  `ixTbl`  
- [in]資料表的識別項来傳回其屬性。  
+ [in]資料表的識別碼傳回其屬性。  
   
  `pcbRow`  
- [out]大小，以位元組為單位的資料表資料列的指標。  
+ [out]大小 （位元組），資料表資料列的指標。  
   
  `pcRows`  
- [out]資料表中的資料列號碼的指標。  
+ [out]在資料表中的資料列數目指標。  
   
  `pcCols`  
- [out]資料表中的資料行編號的指標。  
+ [out]在資料表中的資料行數目指標。  
   
  `piKey`  
- [out]指向的索引鍵資料行或-1，如果資料表沒有索引鍵資料行的索引。  
+ [out]索引鍵資料行或-1，如果資料表沒有索引鍵資料行的索引指標。  
   
  `ppName`  
  [out]指向資料表名稱的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

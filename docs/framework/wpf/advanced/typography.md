@@ -8,15 +8,15 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: d673ccec58cd9f8ba0b49fafa9871efd208e4a40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b382ec6d4be5023649565d411e8c65b5dee5213
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661148"
 ---
 # <a name="typography"></a>印刷樣式
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包含支援豐富的文字內容。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文字是使用 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 來轉譯，可增強文字的清晰度與可讀性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也支援[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]提供額外的功能之外，所定義的字型[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]格式。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包含支援豐富呈現文字內容。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文字是使用 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 來轉譯，可增強文字的清晰度與可讀性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也支援[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字型，提供額外的功能，藉由定義那些[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]格式。  
   
 ## <a name="in-this-section"></a>本節內容  
  [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
@@ -28,8 +28,8 @@ ms.locfileid: "33546119"
  [圖像](../../../../docs/framework/wpf/advanced/glyphs.md)  
  [HOW-TO 主題](../../../../docs/framework/wpf/advanced/typography-how-to-topics.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Documents.Typography>  
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [OpenType 字型功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Documents.Typography>
+- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [OpenType 字型功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)

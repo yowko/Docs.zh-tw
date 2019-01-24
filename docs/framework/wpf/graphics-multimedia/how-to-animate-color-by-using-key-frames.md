@@ -1,5 +1,5 @@
 ---
-title: 操作說明：使用主要畫面格建立色彩的動畫
+title: HOW TO：使用主要畫面格建立色彩的動畫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], colors with key frames
 - key frames [WPF], animating colors with
 ms.assetid: ab04ffa6-4de9-4d5b-a3b4-4e35d5b2ef35
-ms.openlocfilehash: cb09a54df3d99e05e89ec0f3d9f17b0e9fe78647
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8d7dbe70f25b4712d1384a751a02053fb7f287ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501174"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645089"
 ---
-# <a name="how-to-animate-color-by-using-key-frames"></a>操作說明：使用主要畫面格建立色彩的動畫
+# <a name="how-to-animate-color-by-using-key-frames"></a>HOW TO：使用主要畫面格建立色彩的動畫
 此範例示範如何建立動畫<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>使用主要畫面格。  
   
 ## <a name="example"></a>範例  
@@ -34,9 +34,9 @@ ms.locfileid: "43501174"
   
  如需完整的範例，請參閱[主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.SolidColorBrush.Color%2A>  
- <xref:System.Windows.Media.SolidColorBrush>  
- <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>  
- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [主要畫面格操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.SolidColorBrush.Color%2A>
+- <xref:System.Windows.Media.SolidColorBrush>
+- <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>
+- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [主要畫面格操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

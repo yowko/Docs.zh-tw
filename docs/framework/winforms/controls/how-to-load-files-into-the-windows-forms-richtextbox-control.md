@@ -1,5 +1,5 @@
 ---
-title: 如何：將檔案載入 Windows Form RichTextBox 控制項
+title: HOW TO：將檔案載入 Windows Forms RichTextBox 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: 4d43536cab7806b8cf2de3d63b2d9f7f10024c71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99f869cd5fd3ffc35a58d3d4e7f12161cab3a7ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666042"
 ---
-# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>如何：將檔案載入 Windows Form RichTextBox 控制項
+# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>HOW TO：將檔案載入 Windows Forms RichTextBox 控制項
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以顯示純文字、Unicode 純文字或 Rich Text 格式 (RTF) 檔案。 執行方式是呼叫 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法。 您也可以使用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法從資料流載入資料。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。  
   
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>將檔案載入 RichTextBox 控制項  
@@ -80,8 +80,8 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以顯示純�
     > [!IMPORTANT]
     >  若要執行此程序，您的組件可能需要由 <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../../docs/framework/misc/code-access-security-basics.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.RichTextBox>  
- [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.RichTextBox>
+- [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
+- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

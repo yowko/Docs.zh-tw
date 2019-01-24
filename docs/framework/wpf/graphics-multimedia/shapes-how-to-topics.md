@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: d3b14881cc1366cefb4d11c9d14654c15952624b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620223"
 ---
 # <a name="shapes-how-to-topics"></a>圖案 HOW TO 主題
-此章節的主題示範如何使用<xref:System.Windows.Shapes.Shape>繪製螢幕的基本圖案的物件。  
+在本節中的主題將示範如何使用<xref:System.Windows.Shapes.Shape>物件基本圖形描繪至螢幕。  
   
 ## <a name="in-this-section"></a>本節內容  
  [使用 Polygon 元素繪製封閉的圖形](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
@@ -27,6 +27,6 @@ ms.locfileid: "33562866"
  [繪製矩形](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
  [修改線條或線段結尾的端點](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Shapes.Shape>  
- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Shapes.Shape>
+- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1b5bada61a9d6374a1b961603fcf575199dee591
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2252214a8ec217c30842995ea7d4d141e127d5f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640442"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全性策略 – 平台安全性
 雖然 Windows Presentation Foundation (WPF) 提供各種安全性服務，它也會運用基礎的平台，包括作業系統、 安全性功能[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]，和[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]。 這三層安全性功能一起為 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供了強大、深入防禦的安全性模型，即使其中一層失敗，還有兩層可以幫忙把關，如下圖所示：  
@@ -208,12 +208,12 @@ ms.locfileid: "49121398"
   
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)] 加入並擴充了 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 中的安全性功能，以便繼續提供更好的安全性。  
   
-## <a name="see-also"></a>另請參閱  
- [了解在 Windows XP SP2 中 Microsoft Internet Explorer 6 的安全性](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)  
- [了解及在受保護的模式 Internet Explorer 中工作](https://msdn.microsoft.com/library/bb250462.aspx)  
- [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)  
- [Windows Vista 安全性指南](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)  
- [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)  
- [安全性](../../../docs/framework/wpf/security-wpf.md)  
- [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [WPF 安全性策略 – 安全性工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+## <a name="see-also"></a>另請參閱
+- [了解在 Windows XP SP2 中 Microsoft Internet Explorer 6 的安全性](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
+- [了解及在受保護的模式 Internet Explorer 中工作](https://msdn.microsoft.com/library/bb250462.aspx)
+- [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)
+- [Windows Vista 安全性指南](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)
+- [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)
+- [安全性](../../../docs/framework/wpf/security-wpf.md)
+- [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [WPF 安全性策略 – 安全性工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

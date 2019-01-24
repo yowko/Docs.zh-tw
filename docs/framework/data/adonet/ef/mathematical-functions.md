@@ -2,12 +2,12 @@
 title: 數學函式
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d8d766cb1416a9a07476175364fe568d81fd9b25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652263"
 ---
 # <a name="mathematical-functions"></a>數學函式
 
@@ -221,7 +221,7 @@ ms.locfileid: "53143671"
 
 `SqlServer.LOG10(100)`
 
-## <a name="pi"></a>PI （)
+## <a name="pi"></a>PI()
 
 以 `Double` 形式傳回 pi 的常數值。 
 
@@ -233,7 +233,7 @@ ms.locfileid: "53143671"
 
 `SqlServer.PI()`
 
-## <a name="powernumericexpression-powerexpression"></a>POWER （numeric_expression，power_expression）
+## <a name="powernumericexpression-powerexpression"></a>POWER(numeric_expression, power_expression)
 
 將指定之運算式的值計算至指定的乘冪。
 
@@ -383,9 +383,9 @@ ms.locfileid: "53143671"
 ## <a name="see-also"></a>另請參閱
 
 如需 SqlClient 支援之數學函式的詳細資訊，請參閱 SqlClient 提供者資訊清單中所指定之 SQL Server 版本的說明文件：  
-  
+
 **SQL Server 2005:**[數學函數 (transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
 **SQL Server 2008：**[數學函數 (transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
 **SQL Server 2012 和更新版本：**[數學函數 (transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
- [適用於 Entity Framework 的 SqlClient 函式](sqlclient-for-ef-functions.md)
+- [適用於 Entity Framework 的 SqlClient 函式](sqlclient-for-ef-functions.md)

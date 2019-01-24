@@ -1,5 +1,5 @@
 ---
-title: '&#39;選擇性&#39;預期'
+title: '&#39;選擇性&#39;必須是'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30202
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
-ms.openlocfilehash: 52e4288255a246f78730b33beb55f6d2d83ff214
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46bd84e2bcf5c5bea11a5c9d8b6e9254c49e3021
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642473"
 ---
-# <a name="39optional39-expected"></a>&#39;選擇性&#39;預期
-在程序宣告中的選擇性引數的後面是必要的引數。 每個選擇性引數後面的引數也必須是選擇性的。  
+# <a name="39optional39-expected"></a>&#39;選擇性&#39;必須是
+在程序宣告中的選擇性引數的後面是必要的引數。 下列選擇性引數的每個引數也必須是選擇性的。  
   
  **錯誤 ID:** BC30202  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  如果引數要為必要，將它移至引數清單中前面的第一個選擇性引數。  
+1.  如果引數是必要，將它移至引數清單中前面的第一個選擇性引數。  
   
-2.  如果引數是選擇性的使用`Optional`關鍵字。  
+2.  引數是選擇性，如果使用`Optional`關鍵字。  
   
-## <a name="see-also"></a>另請參閱  
- [選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+## <a name="see-also"></a>另請參閱
+- [選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

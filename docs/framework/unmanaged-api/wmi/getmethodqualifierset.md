@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a363591f5db7a2dbcba1147df35d8c023c9b0707
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7f197851d4d7d470c6c34e4f5607e1791e724770
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681621"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet 函式
 擷取特定方法的限定詞集合。
@@ -59,7 +59,7 @@ HRESULT GetMethodQualifierSet (
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | 指定的方法不存在。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數是`null`。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
@@ -78,5 +78,5 @@ HRESULT GetMethodQualifierSet (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

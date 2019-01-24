@@ -2,20 +2,20 @@
 title: '&lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: d16807d9faae427d8c22aafc1e1f4f04e5cb13b7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2b8a6e5ba670657afda6fd8c64024a330650a9b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149458"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626832"
 ---
 # <a name="ltcommonparametersgt"></a>&lt;commonParameters&gt;
 代表參數集合，這些參數可跨多項服務全域使用。 這個集合通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。  
   
  \<system.ServiceModel>  
-\<行為 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行為 >  
+\<behavior>  
 \<workflowRuntime>  
 \<commonParameters>  
   
@@ -104,11 +104,11 @@ config.Save();
 </commonParameters>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
- <xref:System.Workflow.Runtime.WorkflowRuntime>  
- <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
- <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
- [工作流程組態檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))  
- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
+- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
+- <xref:System.Workflow.Runtime.WorkflowRuntime>
+- <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
+- <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
+- [工作流程組態檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)

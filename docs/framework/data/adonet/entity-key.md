@@ -2,25 +2,25 @@
 title: 實體索引鍵
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 6b4e3c6876aa3de1661d680d79caa3116550e073
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 02b877efb463e47f9147239c895c482f2d716714
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664005"
 ---
 # <a name="entity-key"></a>實體索引鍵
-*實體索引鍵*是[屬性](../../../../docs/framework/data/adonet/property.md)或一組屬性的[實體類型](../../../../docs/framework/data/adonet/entity-type.md)，用於判斷識別。 構成實體索引鍵的屬性是在設計階段選取的。 實體索引鍵屬性的值必須唯一識別實體類型執行個體中的[實體集](../../../../docs/framework/data/adonet/entity-set.md)在執行階段。 您應選取構成實體索引鍵的屬性，以保證執行個體在實體集中的唯一性。  
+*實體索引鍵*是[屬性](../../../../docs/framework/data/adonet/property.md)或屬性的一組[實體類型](../../../../docs/framework/data/adonet/entity-type.md)，用於判斷識別。 構成實體索引鍵的屬性是在設計階段選取的。 實體索引鍵屬性的值必須唯一識別實體類型執行個體[實體集](../../../../docs/framework/data/adonet/entity-set.md)在執行階段。 您應選取構成實體索引鍵的屬性，以保證執行個體在實體集中的唯一性。  
   
  屬性集若要成為實體索引鍵，需求如下：  
   
 -   實體集中的任兩個實體索引鍵均不可完全相同。 也就是說，以實體集中任兩個實體來說，構成索引鍵的所有屬性的值不可完全相同。 不過，構成實體索引鍵的部分 (非所有) 值可以相同。  
   
--   實體索引鍵必須包含一組不可為 null、 不可變的[基本型別屬性](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。  
+-   實體索引鍵必須包含一組不可為 null 且不可變[基本型別屬性](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。  
   
 -   構成指定實體類型之實體索引鍵的屬性不可變更。 您不能允許指定的實體類型擁有多個可能的實體索引鍵，不支援 Surrogate 索引鍵。  
   
--   實體與繼承階層相關時，根實體必須包含構成實體索引鍵的所有屬性，而且必須在根實體類型定義該實體索引鍵。 如需詳細資訊，請參閱[實體資料模型： 繼承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)。  
+-   實體與繼承階層相關時，根實體必須包含構成實體索引鍵的所有屬性，而且必須在根實體類型定義該實體索引鍵。 如需詳細資訊，請參閱[實體資料模型：繼承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)。  
   
 ## <a name="example"></a>範例  
  下圖顯示包含三種實體類型 (`Book`、`Publisher` 和 `Author`) 的概念模型。 構成實體索引鍵之每個實體類型的屬性皆加註「(索引鍵)」。 請注意，`Author` 實體類型的實體索引鍵包含兩個屬性：`Name` 和 `Address`。  
@@ -39,6 +39,6 @@ ms.locfileid: "32764992"
   
  針對實體索引鍵使用 `Name` 和 `Address` 是合理的選擇，因為相同名稱的兩位作者不太可能住在同一個地址。 不過，針對實體索引鍵所做的這個選擇不能絕對保證實體集中的唯一實體索引鍵。 在這種情況下，建議您加入一個屬性，例如 `AuthorId`，可用於明確識別作者。  
   
-## <a name="see-also"></a>另請參閱  
- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>另請參閱
+- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

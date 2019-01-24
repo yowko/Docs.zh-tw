@@ -1,16 +1,16 @@
 ---
-title: 序列化至檔案、 Textwriter 和 XmlWriters3
+title: 序列化至 File、 Textwriter 和 XmlWriters3
 ms.date: 07/20/2015
 ms.assetid: 7a0c24df-79ef-41a0-87f5-e6cf79382da9
-ms.openlocfilehash: ff877e3c800bd1409d796fb68d651175d3602e34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9908f04e2621da15f065a86feccc5af5cdac96d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658987"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>序列化至 File、TextWriter 和 XmlWriter
-您可以將 XML 樹狀結構序列化至 <xref:System.IO.File>、<xref:System.IO.TextWriter> 或 <xref:System.Xml.XmlWriter>。  
+您可以將 XML 樹狀序列化至 <xref:System.IO.File>、<xref:System.IO.TextWriter> 或 <xref:System.Xml.XmlWriter>。  
   
  您可以使用 <xref:System.Xml.Linq.XDocument> 方法，將任何 XML 元件 (包括 <xref:System.Xml.Linq.XElement> 和 `ToString`) 序列化至字串。  
   
@@ -30,5 +30,5 @@ ms.locfileid: "33645313"
   
  如需範例，請參閱適當的參考主題。  
   
-## <a name="see-also"></a>另請參閱  
- [序列化 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>另請參閱
+- [序列化 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

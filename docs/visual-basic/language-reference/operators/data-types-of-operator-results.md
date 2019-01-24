@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 135c44217debcddb15fd4cef7e73ca2f98903c43
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650479"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>運算子結果的資料類型 (Visual Basic)
 Visual Basic 決定結果資料類型的運算元資料類型為基礎的作業。 在某些情況下，這可能是較大的範圍以外的任一個運算元的資料類型。  
@@ -94,7 +94,7 @@ Visual Basic 決定結果資料類型的運算元資料類型為基礎的作業�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`<<`, `>>`|Short|SByte|Byte|Short|UShort|整數|UInteger|Long|ULong|  
+|`<<`、 `>>`|Short|SByte|Byte|Short|UShort|整數|UInteger|Long|ULong|  
   
  如果左運算元`Decimal`， `Single`， `Double`，或`String`，Visual Basic 會嘗試將它轉換成`Long`作業和資料類型的結果之前`Long`。 （要移位的位元位置數目） 的右運算元必須是`Integer`的類型，可擴展為`Integer`。  
   
@@ -175,14 +175,14 @@ Visual Basic 決定結果資料類型的運算元資料類型為基礎的作業�
   
  `Like`定義運算子只用於模式比對的`String`運算元。 Visual Basic 會嘗試將視每個運算元`String`作業之前。 結果資料類型一定是`Boolean`。  
   
-## <a name="see-also"></a>另請參閱  
- [資料類型](../../../visual-basic/language-reference/data-types/index.md)  
- [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [在 Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [在 Visual Basic 中的比較運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [運算子](../../../visual-basic/language-reference/operators/index.md)  
- [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [比較運算子](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>另請參閱
+- [資料類型](../../../visual-basic/language-reference/data-types/index.md)
+- [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [在 Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [在 Visual Basic 中的比較運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [運算子](../../../visual-basic/language-reference/operators/index.md)
+- [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [比較運算子](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)

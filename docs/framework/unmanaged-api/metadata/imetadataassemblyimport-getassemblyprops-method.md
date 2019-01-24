@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 911d0d1444e2cf3cb8241eeeff63a5a86b4ab806
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bcf1dca8799ac082c025e602e5d82c99d42650d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446270"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659601"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps 方法
-取得具有指定的中繼資料簽章的組件的屬性集。  
+取得具有指定之中繼資料簽章的組件的屬性集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +45,7 @@ HRESULT GetAssemblyProps (
   
 #### <a name="parameters"></a>參數  
  `mda`  
- [in]。 `mdAssembly`代表要取得屬性的組件的中繼資料語彙基元。  
+ [in]. `mdAssembly`表示要為其取得屬性的組件的中繼資料語彙基元。  
   
  `ppbPublicKey`  
  [out]公開金鑰或中繼資料語彙基元的指標。  
@@ -54,13 +54,13 @@ HRESULT GetAssemblyProps (
  [out]在傳回的公開金鑰的位元組數目。  
   
  `pulHashAlgId`  
- [out]指標，用來雜湊中的組件檔案的演算法。  
+ [out]指標，用來雜湊組件中的檔案的演算法。  
   
  `szName`  
  [out]組件的簡單名稱。  
   
  `cchName`  
- [in]大小，以寬字元的`szName`。  
+ [in]大小，以寬字元為單位的`szName`。  
   
  `pchName`  
  [out]中實際傳回的寬字元數目`szName`。  
@@ -69,16 +69,16 @@ HRESULT GetAssemblyProps (
  [out]ASSEMBLYMETADATA 結構，其中包含組件中繼資料指標。  
   
  `pdwAssemblyFlags`  
- [out]描述套用至組件的中繼資料的旗標。 這個值是一或多個組合[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值。  
+ [out]描述套用至組件的中繼資料的旗標。 這個值是由一或多個組成[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

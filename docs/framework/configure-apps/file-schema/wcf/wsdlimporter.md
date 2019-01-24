@@ -2,21 +2,21 @@
 title: '&lt;wsdlImporter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
-ms.openlocfilehash: 43c1a50c740cd9c75ee641e4ac4d0fa8ea3ca36b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5f3d53111c4d303146701b03d7e7b32833cd9edd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651041"
 ---
 # <a name="ltwsdlimportergt"></a>&lt;wsdlImporter&gt;
 指定所有 WSDL 匯入工具，此工具會使用 WS-Policy 附件匯入 Web 服務描述語言 (WSDL) 1.1 中繼資料。  
   
 \<system.ServiceModel>  
-\<用戶端 >  
-\<中繼資料 >  
-\<wsdlImporters >  
-\<wsdlImporter >  
+\<client>  
+\<metadata>  
+\<wsdlImporters>  
+\<wsdlImporter>  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,16 +44,16 @@ ms.locfileid: "54144986"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<wsdlImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|指定所有 WSDL 匯入工具，此工具會使用 WS-Policy 附件匯入 Web 服務描述語言 (WSDL) 1.1 中繼資料。|  
+|[\<wsdlImporters>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|指定所有 WSDL 匯入工具，此工具會使用 WS-Policy 附件匯入 Web 服務描述語言 (WSDL) 1.1 中繼資料。|  
   
 ## <a name="remarks"></a>備註  
  WSDL 匯入工具是用來匯入中繼資料，以及將該資訊轉換成表示合約和端點資訊的各種不同類別。 它可以選擇性地匯入合約和端點資訊，以及可公開 (Expose) 任何匯入錯誤並接受與匯入和轉換處理有關聯之型別資訊的屬性。 此外，它也支援匯入繫結資訊，以及可提供存取任何原則文件、WSDL 文件、WSDL 延伸和 XML 結構描述文件的屬性。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.WsdlImporterElement>  
- <xref:System.ServiceModel.Configuration.MetadataElement>  
- <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>  
- <xref:System.ServiceModel.Description.MetadataImporter>  
- <xref:System.ServiceModel.Description.WsdlImporter>  
- [WCF 用戶端組態](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [用戶端](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.WsdlImporterElement>
+- <xref:System.ServiceModel.Configuration.MetadataElement>
+- <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>
+- <xref:System.ServiceModel.Description.MetadataImporter>
+- <xref:System.ServiceModel.Description.WsdlImporter>
+- [WCF 用戶端組態](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [用戶端](../../../../../docs/framework/wcf/feature-details/clients.md)

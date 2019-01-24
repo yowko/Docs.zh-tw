@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows Form TabControl 加入和移除索引標籤
+title: HOW TO：新增和移除使用 Windows Form TabControl 的索引標籤
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 938dbb4ae695f22d6daff417fbf7176800420aae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb3c59a29c9539bcba8827e1a1e9ea807ed44826
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640726"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>如何：使用 Windows Form TabControl 加入和移除索引標籤
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>HOW TO：新增和移除使用 Windows Form TabControl 的索引標籤
 根據預設，<xref:System.Windows.Forms.TabControl>控制項包含兩個<xref:System.Windows.Forms.TabPage>控制項。 您可以存取這些索引標籤，透過<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。  
   
 ### <a name="to-add-a-tab-programmatically"></a>若要以程式設計方式加入索引標籤  
   
--   使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A>方法<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。  
+-   使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A>方法的<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -47,11 +47,11 @@ ms.locfileid: "33525600"
   
 ### <a name="to-remove-a-tab-programmatically"></a>若要以程式設計方式移除工作索引標籤  
   
--   若要移除選取的索引標籤，請使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A>方法<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。  
+-   若要移除選取的索引標籤，請使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A>方法的<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。  
   
      -或-  
   
--   若要移除所有索引標籤，請使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A>方法<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。  
+-   若要移除所有索引標籤，請使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A>方法的<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。  
   
     ```vb  
     ' Removes the selected tab:  
@@ -74,8 +74,8 @@ ms.locfileid: "33525600"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [TabControl 控制項概觀](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
- [操作說明：將控制項加入至索引標籤頁](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
- [操作說明：停用索引標籤頁](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
- [操作說明：變更 Windows Forms TabControl 的外觀](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a>另請參閱
+- [TabControl 控制項概觀](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)
+- [如何：將控制項加入索引標籤頁](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
+- [如何：停用索引標籤頁](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)
+- [如何：變更 Windows Form TabControl 的外觀](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

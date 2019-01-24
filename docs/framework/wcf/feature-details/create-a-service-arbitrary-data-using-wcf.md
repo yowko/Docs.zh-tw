@@ -1,20 +1,20 @@
 ---
-title: HOW TO：使用 WCF REST 程式設計模型建立接受任意資料的服務
+title: HOW TO：建立接受任意資料服務使用 WCF REST 程式設計模型
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: bc2643672743971da14c8bc4c75ac113f691bf4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666994"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>HOW TO：使用 WCF REST 程式設計模型建立接受任意資料的服務
-有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 服務作業必須傳回格式的資料不支援 byWCF 時，這種情況。 本主題說明如何使用 WCF REST 程式設計模型建立接收任意資料的服務。  
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>HOW TO：建立接受任意資料服務使用 WCF REST 程式設計模型
+有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 這是服務作業必須傳回格式的資料不支援 byWCF 情況。 本主題說明如何使用 WCF REST 程式設計模型建立接收任意資料的服務。  
   
 ### <a name="to-implement-the-service-contract"></a>若要實作服務合約  
   
-1.  定義服務合約。 接收任意資料的作業必須擁有 <xref:System.IO.Stream> 型別的參數。 此外，此參數必須是以要求本文傳遞的唯一參數。 此範例中說明的作業也會接收檔案名稱參數。 這個參數會透過要求的 URL 來傳遞。 您可以在 <xref:System.UriTemplate> 中指定 <xref:System.ServiceModel.Web.WebInvokeAttribute>，指定以 URL 傳遞參數。 在此情況下，URI 用來呼叫這個方法會在"UploadFile/Some-filename"結束。 URI 範本中的"{filename}"部份會指定作業的檔案名稱參數會用來呼叫作業的 URI 中傳遞。  
+1.  定義服務合約。 接收任意資料的作業必須擁有 <xref:System.IO.Stream> 型別的參數。 此外，此參數必須是以要求本文傳遞的唯一參數。 此範例中說明的作業也會接收檔案名稱參數。 這個參數會透過要求的 URL 來傳遞。 您可以在 <xref:System.UriTemplate> 中指定 <xref:System.ServiceModel.Web.WebInvokeAttribute>，指定以 URL 傳遞參數。 在此情況下，URI 用來呼叫這個方法將於"UploadFile/Some-filename"結束。 URI 範本的"{filename}"部份會指定作業的檔案名稱參數會傳遞用來呼叫作業的 URI 內。  
   
     ```csharp  
      [ServiceContract]  
@@ -193,7 +193,7 @@ namespace ReceiveRawData
   
 -   編譯程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll  
   
-## <a name="see-also"></a>另請參閱  
- [UriTemplate 與 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>另請參閱
+- [UriTemplate 與 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
+- [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

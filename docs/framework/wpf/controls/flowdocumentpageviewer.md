@@ -7,18 +7,18 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: bad83378863cbc8b05fd3b74fe126e8147a20494
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f58ebbb3f0876c8c1aa23bae04fb46573bc234f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551221"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653758"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
-<xref:System.Windows.Controls.FlowDocumentPageViewer>控制項用來檢視<xref:System.Windows.Documents.FlowDocument>上每個頁面為基礎的內容。 與<xref:System.Windows.Controls.FlowDocumentScrollViewer>，顯示哪些<xref:System.Windows.Documents.FlowDocument>捲動檢視器中的內容。  
+<xref:System.Windows.Controls.FlowDocumentPageViewer>控制項用來檢視<xref:System.Windows.Documents.FlowDocument>內容以每個頁面為基礎。 與相反<xref:System.Windows.Controls.FlowDocumentScrollViewer>，顯示哪些<xref:System.Windows.Documents.FlowDocument>捲動檢視器中的內容。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Documents.FlowDocument>  
- [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Documents.FlowDocument>
+- [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [HOW-TO 主題](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
+- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

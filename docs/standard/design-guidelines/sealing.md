@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
-ms.openlocfilehash: fd1abdb4ff6f4850eea96bcfc3afbfe00a4ae56a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646655"
 ---
 # <a name="sealing"></a>密封
 物件導向的架構功能之一是開發人員可以擴充並自訂它們以非預期的架構設計人員的方式。 這是設計的電源和可延伸的危險。 當您設計您的架構時，它，因此它是時需要它，則應該仔細設計擴充性，以及限制擴充性，會有問題時非常重要。  
@@ -49,6 +49,6 @@ ms.locfileid: "53127689"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
-- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
+- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [非密封類別](../../../docs/standard/design-guidelines/unsealed-classes.md)

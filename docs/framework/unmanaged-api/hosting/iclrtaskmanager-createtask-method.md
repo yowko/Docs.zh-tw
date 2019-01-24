@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f731e121324793a027c5977a02e1973b0d6fff20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3556c9c73d354f096316cf67741a055e9f46adfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439644"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600270"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask 方法
 明確要求的 common language runtime (CLR) 建立新的工作。  
@@ -37,39 +37,39 @@ HRESULT CreateTask (
   
 #### <a name="parameters"></a>參數  
  `pTask`  
- [out]指標，新建的位址[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)，則為 null，如果無法建立工作。  
+ [out]新建立的位址指標[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)，或為 null，如果無法建立工作。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|方法成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
+|S_OK|此方法傳回成功。|  
+|HOST_E_CLRNOTAVAILABLE|不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重失敗。 方法會傳回 E_FAIL CLR 已不再可用的處理序內。 裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
+|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
 |E_OUTOFMEMORY|沒有足夠的記憶體可配置要求的資源。|  
   
 ## <a name="remarks"></a>備註  
- 當使用者程式碼會建立一個執行緒使用中的型別時，CLR 會建立新的工作，自動啟動時，<xref:System.Threading>命名空間，或當執行緒集區的大小會增加。 Unmanaged 程式碼會呼叫 managed 函式時，它也會建立工作。  
+ 當使用者程式碼會建立執行緒使用中的型別時，CLR 會建立新的工作，在初始化後自動<xref:System.Threading>命名空間，或當執行緒集區的大小已增加。 當 unmanaged 程式碼會呼叫 managed 函式時，它也會建立工作。  
   
- `CreateTask` 可讓主應用程式發出明確的要求 CLR 建立新的工作。 例如，主機可以叫用這個方法，以將其預先初始化資料結構。  
+ `CreateTask` 可讓主應用程式發出明確的要求，CLR 會建立新的工作。 例如，主機可以叫用這個方法，以先行初始化資料結構。  
   
 > [!IMPORTANT]
->  新的工作會傳回處於暫停狀態，並保持暫停狀態，直到主機明確呼叫[ihosttask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)。  
+>  新的工作會傳回在暫停狀態，並會保持暫停，直到主機明確呼叫[ihosttask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5cfed154af93d72f69efc24c6475b432d0963580
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8beb3ef041b153535afcb8bd92e1c29787e1f161
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654408"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;移除&gt;項目&lt;接聽程式&gt;如&lt;來源&gt;
 從追蹤來源的 `Listeners` 集合移除接聽項。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<來源 >  
-\<來源 >  
-\<接聽程式 >  
+\<system.diagnostics>  
+\<sources>  
+\<source>  
+\<listeners>  
 \<remove>  
   
 ## <a name="syntax"></a>語法  
@@ -81,9 +81,9 @@ ms.locfileid: "48029279"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Diagnostics.TraceSource.Listeners%2A>  
- <xref:System.Diagnostics.TraceSource>  
- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)  
- [追蹤接聽項](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Diagnostics.TraceSource.Listeners%2A>
+- <xref:System.Diagnostics.TraceSource>
+- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)
+- [追蹤接聽項](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

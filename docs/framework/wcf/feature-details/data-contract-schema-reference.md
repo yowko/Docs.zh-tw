@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 48b151bb718cb05e171909d41ce4415a0988d1b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662578"
 ---
 # <a name="data-contract-schema-reference"></a>資料合約結構描述參考
 本主題說明 <xref:System.Runtime.Serialization.DataContractSerializer> 用來描述 XML 序列化之 Common Language Runtime (CLR) 型別的 XML 結構描述 (XSD) 子集。  
@@ -56,13 +56,13 @@ ms.locfileid: "54030525"
 |--------------|------------|  
 |`include`|支援。 `DataContractSerializer` 支援 xs:include 和 xs:import。 但是，當您從本機檔案載入中繼資料時，Svcutil.exe 會限制下列 `xs:include/@schemaLocation` 和 `xs:import/@location` 參考。 在此情況下，結構描述檔案清單必須透過超出範圍之外的機制，而不是 `include` 來傳遞； `include`的結構描述文件會被忽略。|  
 |`redefine`|禁止。 基於安全性的理由，禁止透過 `xs:redefine` 使用 `DataContractSerializer` ： `x:redefine` 要求必須遵循 `schemaLocation` 。 在特定情況下，使用 DataContract 的 Svcutil.exe 會限制使用 `schemaLocation`。|  
-|`import`|支援。 `DataContractSerializer` 支援 `xs:include` 和 `xs:import`。 但是，當您從本機檔案載入中繼資料時，Svcutil.exe 會限制下列 `xs:include/@schemaLocation` 和 `xs:import/@location` 參考。 在此情況下，結構描述檔案清單必須透過超出範圍之外的機制，而不是 `include` 來傳遞； `include` 的結構描述文件會被忽略。|  
+|`import`|支援。 `DataContractSerializer` 支援 `xs:include` 和 `xs:import`。 但是，當您從本機檔案載入中繼資料時，Svcutil.exe 會限制下列 `xs:include/@schemaLocation` 和 `xs:import/@location` 參考。 在此情況下，結構描述檔案清單必須透過超出範圍之外的機制，而不是 `include` 來傳遞； `include`的結構描述文件會被忽略。|  
 |`simpleType`|支援。 請參閱 `xs:simpleType` 一節。|  
 |`complexType`|支援，且對應至資料合約。 請參閱 `xs:complexType` 一節。|  
-|`group`|忽略。 `DataContractSerializer` 不支援使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 已忽略這些宣告並將其視為 `xs:schema` 的子項，但是無法從 `complexType` 或其他支援的建構內部參考這些宣告。|  
+|`group`|忽略。 `DataContractSerializer` 不支援使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 已忽略這些宣告並將其視為 `xs:schema`的子項，但是無法從 `complexType` 或其他支援的建構內部參考這些宣告。|  
 |`attributeGroup`|忽略。 `DataContractSerializer` 不支援使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 已忽略這些宣告並將其視為 `xs:schema`的子項，但是無法從 `complexType` 或其他支援的建構內部參考這些宣告。|  
 |`element`|支援。 請參閱全域項目宣告 (GED)。|  
-|`attribute`|忽略。 `DataContractSerializer` 不支援使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 已忽略這些宣告並將其視為 `xs:schema` 的子項，但是無法從 `complexType` 或其他支援的建構內部參考這些宣告。|  
+|`attribute`|忽略。 `DataContractSerializer` 不支援使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 已忽略這些宣告並將其視為 `xs:schema`的子項，但是無法從 `complexType` 或其他支援的建構內部參考這些宣告。|  
 |`notation`|忽略。|  
   
 ## <a name="complex-types--xscomplextype"></a>複雜型別 – \<complextype> >  
@@ -328,7 +328,7 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<x: list> >  
+### <a name="xslist"></a>\<xs:list>  
  `DataContractSerializer` 會將標示為 `System.FlagsAttribute` 的列舉型別對應至衍生自 `xs:list` 的 `xs:string`。 不支援其他任何 `xs:list` 變化。  
   
 ### <a name="xslist-attributes"></a>\<x: list> >： 屬性  
@@ -674,16 +674,16 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
       <xs:sequence minOccurs="1" maxOccurs="1">  
          <xs:element name="DateTime" type="xs:dateTime"  
          minOccurs="1" maxOccurs="1" />  
-         <xs:elementname="OffsetMinutes" type="xs:short"  
+         <xs:element name="OffsetMinutes" type="xs:short"  
          minOccurs="1" maxOccurs="1" />  
       </xs:sequence>  
    </xs:complexType>  
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

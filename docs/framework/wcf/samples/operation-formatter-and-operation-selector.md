@@ -2,12 +2,12 @@
 title: 作業格式器和作業選取器
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: a814de7433f2d06491245dc1d6e6e637b514118a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5261c082f748877505701221668b61bf7097ef06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661252"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>作業格式器和作業選取器
 這個範例會示範如何使用 Windows Communication Foundation (WCF) 擴充性點，以允許在不同的格式，從 WCF 所預期的內容中的訊息資料。 根據預設，WCF 格式器預期方法參數包含`soap:body`項目。 此範例會示範如何實作自訂作業格式器，而這個作業格式器會剖析 HTTP GET 查詢字串中的參數資料，然後使用該資料叫用方法。  
@@ -98,7 +98,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
 -   這個動作必須在呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 之前完成。 在此範例中，會顯示如何在呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 之前，以手動方式修改格式器。 其他一種可達到相同目標的方法為，從 <xref:System.ServiceModel.ServiceHost> (會在開啟之前呼叫 `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior`) 衍生類別 (如需範例，請參閱裝載文件和範例)。  
   
-### <a name="user-experience"></a>使用者經歷  
+### <a name="user-experience"></a>使用者經驗  
  在伺服器上：  
   
 -   您不需要變更伺服器 `ICalculator` 實作。  

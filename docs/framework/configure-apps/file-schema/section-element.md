@@ -10,25 +10,25 @@ helpviewer_keywords:
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 17b44ca93efc26f4732f5fe2926f894257d8f984
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 295cb8ee77c3042dc5742fb23cf4bbcd085b4d36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659211"
 ---
 # <a name="section-element"></a>\<區段 > 項目
 
 包含組態區段宣告。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<c >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<區段 >**
+&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<c >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<區段 >**
+&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**
 
 ## <a name="syntax"></a>語法
 
@@ -43,27 +43,27 @@ ms.locfileid: "32746432"
 
 |           | 描述 |
 | --------- | ----------- |
-| **name**  | 指定之組態區段的名稱。 |
-| **type**  | 指定從組態檔讀取區段的組態區段處理常式類別的名稱。 類型值的語法 」 fully-qualified-section-handler-class-name 簡單組件名稱 」。 簡單的組件名稱是根檔案名稱，而不 *.dll*檔案副檔名。 |
+| **name**  | 指定的組態區段名稱。 |
+| **type**  | 指定讀取組態檔區段的組態區段處理常式類別的名稱。 型別值的語法 」 fully-qualified-section-handler-class-name，簡單組件名稱 」。 簡單的組件名稱是根檔案名稱，而不需要 *.dll*副檔名。 |
 
-## <a name="optional-attributes"></a>選擇性屬性
+## <a name="optional-attributes"></a>選擇性的屬性
 
-下列屬性就會只適用於 ASP.NET 應用程式。 組態系統會忽略這些屬性，其他應用程式類型。
+以下為屬性只適用於 ASP.NET 應用程式。 組態系統會忽略這些屬性的其他應用程式類型。
 
 |                     | 描述 |
 | ------------------- | ----------- |
-| **allowDefinition** | 指定可以在使用中的區段的組態檔。 使用下列其中一個值：<br><br>**每個地方**<br>允許以用於任何組態檔區段。 這是預設值。<br>**MachineOnly**<br>允許區段只能用在電腦組態檔 (*Machine.config*)。<br>**MachineToApplication**<br>允許用在電腦組態檔或應用程式組態檔區段。 |
-| **allowLocation**   | 決定是否可以在使用區段**\<位置 >** 項目。 使用下列其中一個值：<br><br>**true**<br>允許區段內使用**\<位置 >** 項目。 這是預設值。<br>**false**<br>不允許使用於區段**\<位置 >** 項目。 |
+| **allowDefinition** | 指定區段可以用在哪一個組態檔。 使用下列其中一個值：<br><br>**Everywhere**<br>允許使用任何組態檔中區段。 這是預設值。<br>**MachineOnly**<br>允許區段只能用在電腦組態檔 (*Machine.config*)。<br>**MachineToApplication**<br>允許可用於電腦組態檔或應用程式組態檔區段。 |
+| **allowLocation**   | 判斷是否可以使用區段內**\<位置 >** 項目。 使用下列其中一個值：<br><br>**true**<br>允許使用於區段**\<位置 >** 項目。 這是預設值。<br>**false**<br>不允許使用於區段**\<位置 >** 項目。 |
 
 ## <a name="parent-elements"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<c >** 項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
-| [**\<sectionGroup >** 項目](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定義組態區段的命名空間。 |
+| [**\<configSections >** 項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
+| [**\<sectionGroup>** Element](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定義組態區段的命名空間。 |
 
 > [!NOTE]
-> A **\<區段 >** 元素為子元素中的其中一個 **\<c >** 或 **\<sectionGroup >** 但不是兩者。
+> A **\<一節 >** 項目是可能的子項目 **\<configSections >** 或 **\<sectionGroup >** 但不是兩者。
 
 ## <a name="child-elements"></a>子元素
 
@@ -71,13 +71,13 @@ ms.locfileid: "32746432"
 
 ## <a name="remarks"></a>備註
 
-本質上宣告的組態區段會定義組態檔的新項目。 新的項目包含組態區段處理常式的設定 (也就是一個類別，實作<xref:System.Configuration.IConfigurationSectionHandler>介面) 讀取。 屬性和子項目的區段中定義取決於您用來讀取您的設定區段處理常式。
+本質上宣告組態區段會定義組態檔的新項目。 新的項目包含的組態區段處理常式的設定 (也就是一個類別，實作<xref:System.Configuration.IConfigurationSectionHandler>介面) 讀取。 屬性和子項目的區段中定義取決於您用來讀取您的設定區段處理常式。
 
-宣告中的組態區段處理常式*Machine.config*檔案可讓您在該電腦上任何應用程式組態檔中使用的組態區段除非**allowDefinition**屬性指定不同的情況。
+宣告中的組態區段處理常式*Machine.config*檔可讓您使用 [設定] 區段中任何應用程式組態檔，該電腦上，除非**allowDefinition**屬性指定不同的情況。
 
 ## <a name="example"></a>範例
 
-下列範例會示範如何定義組態區段，並定義區段的設定：
+下列範例示範如何定義組態區段，並定義該區段的設定：
 
 ```xml
 <configuration>
@@ -94,8 +94,8 @@ ms.locfileid: "32746432"
 
 ## <a name="configuration-file"></a>組態檔
 
-此項目可以用於應用程式組態檔中，電腦組態檔 (*Machine.config*)，和*Web.config*不在應用程式目錄層級的檔案。
+這個項目可用的應用程式組態檔中，電腦組態檔 (*Machine.config*)，以及*Web.config*不在應用程式的目錄層級的檔案。
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
+- [適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

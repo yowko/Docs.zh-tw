@@ -2,12 +2,12 @@
 title: 採用 Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: 5773d2687eb06cfc562dbe25fa9b94864b1b3a49
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 58a51f7ea0db2297c7151a752de3f54307e0c5fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232959"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643347"
 ---
 # <a name="adopting-windows-communication-foundation"></a>採用 Windows Communication Foundation
 
@@ -23,4 +23,4 @@ WCF 用戶端可以使用 ASP.NET Web 服務。 使用所設定的 WCF 服務<xr
 
 ## <a name="see-also"></a>另請參閱
 
-- [如何：擷取中繼資料並實作相容性服務](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)
+- [如何：擷取中繼資料，並實作相容服務](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)

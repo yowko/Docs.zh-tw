@@ -2,12 +2,12 @@
 title: 安全性考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612819"
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
 本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。 您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。 如需詳細資訊，請參閱 <<c0> [ 安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "45591943"
   
 -   以動態方式建立連接時使用連接字串產生器 (Builder)。  
   
-     如果您必須在執行階段建構連接字串，請使用 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別 (Class)。 這個字串產生器類別會透過驗證和逸出無效的輸入資訊，協助避免連接字串插入式攻擊。 如需詳細資訊，請參閱 <<c0> [ 如何： 建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。 也使用適當的字串產生器類別，來建構資料來源連接字串一部分[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]連接字串。 如需 ADO.NET 提供者的連接字串產生器資訊，請參閱[連接字串產生器](../../../../../docs/framework/data/adonet/connection-string-builders.md)。  
+     如果您必須在執行階段建構連接字串，請使用 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別 (Class)。 這個字串產生器類別會透過驗證和逸出無效的輸入資訊，協助避免連接字串插入式攻擊。 如需詳細資訊，請參閱[＜How to：建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。 也使用適當的字串產生器類別，來建構資料來源連接字串一部分[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]連接字串。 如需 ADO.NET 提供者的連接字串產生器資訊，請參閱[連接字串產生器](../../../../../docs/framework/data/adonet/connection-string-builders.md)。  
   
  如需詳細資訊，請參閱[保護連線資訊](../../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "45591943"
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>請勿接受來自未受信任來源的 MetadataWorkspace 物件。  
  應用程式不應該接受來自未受信任來源之 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 類別的執行個體 (Instance)。 您應該改為根據這類來源明確建構並填入工作區 (Workspace)。  
   
-## <a name="see-also"></a>另請參閱  
- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [移轉考量](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+## <a name="see-also"></a>另請參閱
+- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [移轉考量](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

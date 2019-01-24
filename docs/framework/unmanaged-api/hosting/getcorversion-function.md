@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0e922273a7d4e5b98c1321992e5e89e01adb437
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0741e5773b946186a452e191cc3ae987e6067c44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606883"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion 函式
-傳回的 common language runtime (CLR) 在目前的處理序中執行的版本號碼。  
+傳回 common language runtime (CLR) 在目前的處理序中執行的版本號碼。  
   
- 此函式中已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,22 +41,22 @@ HRESULT GetCORVersion (
   
 #### <a name="parameters"></a>參數  
  `pbuffer`  
- CLR 傳回字串，指定目前載入處理序的執行階段版本所在緩衝區的指標。 傳回的字串會將相同的形式，當做字串傳遞至[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)，例如，"v1.0.1216"。 如果執行階段尚未載入到程序，則函數會傳回最新版本的執行階段電腦上安裝適當的目錄資訊。  
+ CLR 會傳回字串，指定目前已載入到處理序的執行階段版本的緩衝區指標。 傳回的字串會採用相同的格式字串傳遞至[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)，例如"v1.0.1216 」。 如果執行階段尚未載入到處理序，則函數會傳回最新版本的執行階段電腦上安裝適當的目錄資訊。  
   
  `cchBuffer`  
- 字元數 (`WCHAR`s) 中可以保存`pbuffer`。  
+ 字元數 (`WCHAR`s)，可以保留在`pbuffer`。  
   
  `dwLength`  
- 中實際傳回的字元數的指標`pbuffer`。 如果`pbuffer`為 null 指標，執行階段傳回 E_POINTER。 如果較大的字元數的長度`pbuffer`，執行階段會傳回 ERROR_INSUFFICIENT_BUFFER。  
+ 中實際傳回的字元數的指標`pbuffer`。 如果`pbuffer`為 null 指標，執行階段傳回 E_POINTER。 如果字元數大於的長度`pbuffer`，執行階段會傳回 ERROR_INSUFFICIENT_BUFFER。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>另請參閱
+- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

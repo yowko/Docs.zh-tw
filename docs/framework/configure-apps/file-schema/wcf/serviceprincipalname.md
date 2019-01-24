@@ -2,20 +2,20 @@
 title: '&lt;servicePrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: a22a905744980d0b370023e6236734a9bb0d6357
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5d65b5956491e30066ece54a48374f1d7014552e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150631"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657573"
 ---
 # <a name="ltserviceprincipalnamegt"></a>&lt;servicePrincipalName&gt;
 由其服務原則名稱 (SPN) 指定的服務身分識別。  
   
  如需有關如何設定 SPN 的詳細資訊，請參閱 <<c0> [ 服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
- \<身分識別 >  
-\<servicePrincipalName >  
+ \<identity>  
+\<servicePrincipalName>  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,15 +39,15 @@ ms.locfileid: "54150631"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<身分識別 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由用戶端驗證之服務的身分識別。|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由用戶端驗證之服務的身分識別。|  
   
 ## <a name="remarks"></a>備註  
  安全的 Windows Communication Foundation (WCF) 用戶端連接至使用這個身分識別端點對端點進行 SSPI 驗證時，會使用 SPN。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- <xref:System.ServiceModel.SpnEndpointIdentity>  
- [服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<身分識別 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- <xref:System.ServiceModel.SpnEndpointIdentity>
+- [服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

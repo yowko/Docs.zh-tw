@@ -2,18 +2,18 @@
 title: '&lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: a376f1eaa7c8790cf2174335749ed3001b403967
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 199a5d820a80565ccdfa2cb11fe749d63bd65087
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644256"
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
 表示用於定義一組預設通訊協定之間的對應傳輸通訊協定配置 （例如 http、 net.tcp、 net.pipe 等） 和 WCF 繫結組態區段。 當在執行階段建立預設端點，Windows Communication Foundation (WCF) 會查看所設定的對應，並決定哪些繫結，以使用特定基礎位址。  
   
-[**\<system.serviceModel >**](system-servicemodel.md)  
-&nbsp;&nbsp;**\<protocolMapping >**  
+[**\<system.serviceModel>**](system-servicemodel.md)  
+&nbsp;&nbsp;**\<protocolMapping>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +35,7 @@ ms.locfileid: "54147300"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<篩選條件 >](filters-of-routing.md)|包含傳輸通訊協定配置 （例如 http、 net.tcp、 net.pipe 等） 與 WCF 繫結之間的預設通訊協定對應。|  
+|[\<filters>](filters-of-routing.md)|包含傳輸通訊協定配置 （例如 http、 net.tcp、 net.pipe 等） 與 WCF 繫結之間的預設通訊協定對應。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -59,6 +59,6 @@ ms.locfileid: "54147300"
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

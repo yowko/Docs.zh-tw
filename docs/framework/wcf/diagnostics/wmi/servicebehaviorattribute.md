@@ -2,12 +2,12 @@
 title: ServiceBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-ms.openlocfilehash: c2915c636aec26cfb1f58d12da49151915c52c05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 420686ebda7f23a5d883deece251b034147fafa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654577"
 ---
 # <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
@@ -108,7 +108,7 @@ class ServiceBehaviorAttribute : Behavior
   
  存取類型：唯讀  
   
- 指定是否會在目前的交易完成時回收服務物件。  
+ 指定是否會在目前的異動完成時回收服務物件。  
   
 ### <a name="transactionautocompleteonsessionclose"></a>TransactionAutoCompleteOnSessionClose  
  資料型別：布林值  
@@ -122,7 +122,7 @@ class ServiceBehaviorAttribute : Behavior
   
  存取類型：唯讀  
   
- 指定交易隔離等級。  
+ 指定異動隔離等級。  
   
 ### <a name="transactiontimeout"></a>TransactionTimeout  
  資料型別：日期時間  
@@ -151,5 +151,5 @@ class ServiceBehaviorAttribute : Behavior
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.ServiceBehaviorAttribute>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.ServiceBehaviorAttribute>

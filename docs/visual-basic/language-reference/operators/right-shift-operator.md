@@ -10,15 +10,15 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 9bb8e82b3f5451417fe1867d08b7601ee1acb036
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1d2b6569e2bcb3c1516dbc8c78adca0855481e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668492"
 ---
 # <a name="gtgt-operator-visual-basic"></a>&gt;&gt; 運算子 (Visual Basic)
-位元模式上執行算術右移位。  
+位元模式中執行算術右移位。  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,45 +28,45 @@ result = pattern >> amount
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要。 整數值。 移位的位元模式的結果。 資料類型是屬於相同`pattern`。  
+ 必要項。 整數值。 移位的位元模式的結果。 資料類型是屬於相同`pattern`。  
   
  `pattern`  
- 必要。 整數的數值運算式。 要移位的位元模式。 資料型別必須是整數類資料類型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`，或`ULong`)。  
+ 必要項。 整數值的運算式。 要移位的位元模式。 資料類型必須是整數類資料類型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`，或`ULong`)。  
   
  `amount`  
- 必要。 數值運算式。 要移位的位元模式的位元數。 資料類型必須是`Integer`或擴展為`Integer`。  
+ 必要項。 數值運算式。 位元模式移位的位元數。 資料類型必須是`Integer`或擴展至`Integer`。  
   
 ## <a name="remarks"></a>備註  
- 算術排班不是循環，這表示移出結果的一個 end 的位元會重新引入的另一端。 在算術右移位，移位超過右邊的位元位置的位元會捨棄，而且最左邊 （符號） 位元會傳播到左邊空出的位元位置。 這表示如果`pattern`負值，空出的位置會設為其中一個; 否則設定為零。  
+ 算術的排班不是循環，這表示移出結果的某一端的位元不會重新引入另一端。 在算術右移位，移位超過最右邊位元位置的位元會予以捨棄，並最左邊 （符號） 位元會傳播到左邊空出的位元位置。 這表示如果`pattern`的值是負數，空出的位置會設為其中一個; 否則設定為零。  
   
- 請注意，資料型別`Byte`， `UShort`， `UInteger`，和`ULong`是不帶正負號，所以傳播的無正負號位元。 如果`pattern`的任何不帶正負號型別、 空出的位置永遠會設定為零。  
+ 請注意，資料類型`Byte`， `UShort`， `UInteger`，和`ULong`是不帶正負號，因此沒有傳播沒有正負號位元。 如果`pattern`的任何不帶正負號的類型、 空出的位置一律會設定為零。  
   
- 若要避免由多於結果所能容納更多的位元移位，Visual Basic 遮罩的值`amount`大小遮罩的資料類型對應`pattern`。 這些值的二進位 AND 用於移位量。 遮罩的大小如下所示：  
+ 若要避免超出結果所能持有更多的位元移位，Visual Basic 會遮罩的值`amount`具有對應的資料類型大小遮罩`pattern`。 這些值的二進位 AND 用於移位量。 遮罩的大小如下所示：  
   
-|資料型別 `pattern`|大小遮罩 （十進位）|大小遮罩 （十六進位）|  
+|資料類型 `pattern`|大小遮罩 （十進位）|大小遮罩 （十六進位）|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`, `Byte`|7|（&AMP; S) H00000007|  
-|`Short`, `UShort`|15|（&AMP; S) H0000000F|  
-|`Integer`, `UInteger`|31|（&AMP; S) H0000001F|  
-|`Long`, `ULong`|63|（&AMP; S) H0000003F|  
+|`SByte`、 `Byte`|7|&H00000007|  
+|`Short`、 `UShort`|15|&H0000000F|  
+|`Integer`、 `UInteger`|31|&H0000001F|  
+|`Long`、 `ULong`|63|&H0000003F|  
   
- 如果`amount`是零，值`result`等同於值`pattern`。 如果`amount`是負數，它是被視為不帶正負號的值，加上適當的大小遮罩。  
+ 如果`amount`為零，則值`result`的值一致`pattern`。 如果`amount`是負數，它是做為不帶正負號的值，加上適當的大小遮罩。  
   
- 算術移位不會產生溢位例外狀況。  
+ 算術移位絕不會產生溢位例外狀況。  
   
 ## <a name="overloading"></a>多載化  
- `>>`運算子可以是*多載*，這表示，類別或結構可以重新定義它的行為時的運算元有該類別或結構的類型。 如果您的程式碼會使用此運算子，這類類別或結構上，請確定您了解其重新定義的行為。 如需詳細資訊，請參閱[運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ `>>`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。 如果您的程式碼會使用這個運算子，這類類別或結構上，請務必了解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`>>`整數值上執行算術右移位運算子。 結果會有相同的資料類型已移位之運算式。  
+ 下列範例會使用`>>`整數值上執行算術右移位運算子。 結果會有相同的資料類型的已移位的運算式。  
   
  [!code-vb[VbVbalrOperators#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_1.vb)]  
   
- 前述範例中的結果如下所示：  
+ 上述範例的結果如下所示：  
   
 -   `result1` 是 2560 (0000 1010年 0000 0000)。  
   
--   `result2` 為 160 (0000 0000 1010年 0000)。  
+-   `result2` 是 160 (0000 0000 1010年 0000)。  
   
 -   `result3` 為 2 (0000 0000 0000 0010)。  
   
@@ -76,20 +76,20 @@ result = pattern >> amount
   
  移位量的`result4`的計算方式為 18 和 15，等於 2。  
   
- 下列範例顯示上一個負數值的算術移位。  
+ 下列範例會顯示在負值上算術移位。  
   
  [!code-vb[VbVbalrOperators#55](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_2.vb)]  
   
- 前述範例中的結果如下所示：  
+ 上述範例的結果如下所示：  
   
 -   `negresult1` 是-512 (1111年 1110年 0000 0000)。  
   
 -   `negresult2` 為-1 （傳播正負號位元）。  
   
-## <a name="see-also"></a>另請參閱  
- [位元移位運算子](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
- [指派運算子](../../../visual-basic/language-reference/operators/assignment-operators.md)  
- [>>= 運算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
- [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [在 Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>另請參閱
+- [位元移位運算子](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
+- [指派運算子](../../../visual-basic/language-reference/operators/assignment-operators.md)
+- [>>= 運算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)
+- [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [在 Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

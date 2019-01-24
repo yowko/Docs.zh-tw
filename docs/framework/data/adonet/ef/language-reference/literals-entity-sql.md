@@ -2,12 +2,12 @@
 title: 常值 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 90c065dff0f81a743cd66e224885de01f6129b56
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 71c77a3cb91d0981614e83221ad82d17067dc321
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643100"
 ---
 # <a name="literals-entity-sql"></a>常值 (Entity SQL)
 本主題將描述常值 (Literal) 的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援。  
@@ -15,9 +15,9 @@ ms.locfileid: "32767319"
 ## <a name="null"></a>Null  
  Null 常值是用來代表任何型別的 null 值。 Null 常值與任何型別都相容。  
   
- 您可以透過 null 常值的轉換作業建立 null 型別。 如需詳細資訊，請參閱[轉換](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)。  
+ 您可以透過 null 常值的轉換作業建立 null 型別。 如需詳細資訊，請參閱 <<c0> [ 轉型](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)。  
   
- 有關在哪裡規則自由浮動 null 常值可用，請參閱[Null 常值和型別推斷](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)。  
+ 針對規則有關在哪裡自由浮動 null 常值可以使用，請參閱 < [Null 常值和型別推斷](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)。  
   
 ## <a name="boolean"></a>Boolean  
  布林常值是由 `true` 和 `false` 關鍵字代表。  
@@ -45,7 +45,7 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  日期時間常值與地區設定 (Locale) 無關，而且它是由日期部分和時間部分所組成。 日期和時間部分都是強制的，而且沒有任何預設值。  
   
- 日期部分的格式必須是： `YYYY` - `MM` - `DD`，其中`YYYY`是四位數年份的值介於 0001 到 9999 之間，`MM`是介於 1 到 12 月和`DD`是指定的月份是有效的日期值`MM`。  
+ 日期部分的格式必須是： `YYYY` - `MM` - `DD`，其中`YYYY`是四位數年份值介於 0001 到 9999 之間`MM`是介於 1 到 12 月和`DD`是指定的月份是有效的日期值`MM`。  
   
  時間部分的格式必須是 `HH`:`MM`[:`SS`[.fffffff]]，其中 `HH`是小時值，介於 0 到 23 之間、`MM`是分鐘值，介於 0 到 59 之間、`SS`是秒鐘值，介於 0 到 59 之間，而 fffffff 則是秒鐘的小數部分，值介於 0 到 9999999 之間。 以上所有值的範圍都包含在內。 秒鐘的小數部分則為選擇性。 除非已指定秒鐘的小數部分，否則秒鐘亦為選擇性；但指定秒鐘的小數部分時，則必須有秒鐘。 如果未指定秒鐘或秒鐘的小數部分，則會使用預設值 0。  
   
@@ -92,7 +92,7 @@ X'' –- empty binary string
 ```  
   
 ## <a name="guid"></a>Guid  
- `GUID` 常值代表全域唯一的識別碼。 它是一連串關鍵字所形成`GUID`後面接著十六進位數字格式稱為*登錄*格式： 8-4-4-4-12 括在單引號。 十六進位數不區分大小寫。  
+ `GUID` 常值代表全域唯一的識別碼。 它是序列，以關鍵字`GUID`後面接著十六進位數字格式稱為*登錄*格式：8-4-4-4 到 12 個以單引號括住。 十六進位數不區分大小寫。  
   
  GUID 符號與常值裝載之間可以有任何數目的空格，但是不能有新行。  
   
@@ -101,5 +101,5 @@ Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>另請參閱
+- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -2,20 +2,20 @@
 title: '&lt;wsFederationHttpBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 25839617fae780e48a9763715242d3256a42b4a8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 288b907fbc72adea87fddf5d27623c004dbe8af9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145454"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642629"
 ---
 # <a name="ltsecuritygt-of-ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt; 的 &lt;security&gt;
 定義的安全性設定[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
  \<system.ServiceModel>  
-\<繫結 >  
+\<bindings>  
 \<wsFederatedBinding>  
-\<繫結 >  
+\<binding>  
 \<安全性 >  
   
 ## <a name="syntax"></a>語法  
@@ -105,17 +105,17 @@ ms.locfileid: "54145454"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/misc/binding.md)|定義的所有繫結功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義的所有繫結功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.WSFederationHttpSecurity>  
- <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>  
- [如何：建立 WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.WSFederationHttpSecurity>
+- <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>
+- [如何：建立 WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

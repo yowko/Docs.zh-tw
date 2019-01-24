@@ -2,12 +2,12 @@
 title: 單一 ListenUri 的多個端點
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 45963bcf03a6734b85a1213c99facd9023711bf5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fbf636acf5e2cf4ef0f417b6b50a93d3e25c3ea6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643464"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>單一 ListenUri 的多個端點
 這個範例會示範在單一 `ListenUri` 裝載多個端點的服務。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。  

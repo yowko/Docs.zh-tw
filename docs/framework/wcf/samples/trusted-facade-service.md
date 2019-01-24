@@ -2,12 +2,12 @@
 title: 信任的外觀服務
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 6acea5204ae2c05483978eb6187d1de02ae1b268
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4b18f0eb4183a9dd6d0801dd022176cd3220c62c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640416"
 ---
 # <a name="trusted-facade-service"></a>信任的外觀服務
 此案例的範例示範如何呼叫者的身分識別資訊從一個服務到另一個使用 Windows Communication Foundation (WCF) 安全性基礎結構。  
@@ -276,7 +276,7 @@ Press <ENTER> to terminate client.
   
 5.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-6.  如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+6.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

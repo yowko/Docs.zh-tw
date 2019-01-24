@@ -1,15 +1,15 @@
 ---
-title: 如何： 查詢目錄樹狀 (LINQ) (Visual Basic) 中的重複檔案
+title: HOW TO：查詢目錄樹狀結構 (LINQ) (Visual Basic) 中的重複檔案
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: c9243d98c73571fcde009cddb2d5435365f20760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cfa86aa3750b7a102bfe6787bf589b5662efa15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667176"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>如何： 查詢目錄樹狀 (LINQ) (Visual Basic) 中的重複檔案
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>HOW TO：查詢目錄樹狀結構 (LINQ) (Visual Basic) 中的重複檔案
 同名的檔案有時可能位於多個資料夾中。 例如，在 Visual Studio 安裝資料夾下，有數個資料夾內含 readme.htm 檔案。 這個範例示範如何查詢所指定根資料夾下的這類重複檔案名稱。 第二個範例示範如何查詢大小和建立時間也相符的檔案。  
   
 ## <a name="example"></a>範例  
@@ -103,6 +103,6 @@ End Module
 ## <a name="compiling-the-code"></a>編譯程式碼  
  建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>另請參閱
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

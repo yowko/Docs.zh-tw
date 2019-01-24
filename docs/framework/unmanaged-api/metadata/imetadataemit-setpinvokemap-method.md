@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84b2c0571a7991829e65b45759bd61fa4009aa71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7248f4c78684f7211c7b7633095fdc3f3f2fb1f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658620"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>IMetaDataEmit::SetPinvokeMap 方法
-設定或變更在先前呼叫所定義的功能，該方法的 PInvoke 簽章， [imetadataemit:: Definepinvokemap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)。  
+設定或變更方法的 PInvoke 簽章的功能，如先前呼叫所定義[imetadataemit:: Definepinvokemap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,26 +40,26 @@ HRESULT SetPinvokeMap (
   
 #### <a name="parameters"></a>參數  
  `tk`  
- [in]`mdToken`資訊套用到對應。  
+ [in]`mdToken`資訊所套用至對應。  
   
  `dwMappingFlags`  
- [in]用來執行對應 PInvoke 旗標。 這是位元遮罩`CorPinvokeMap`值。  
+ [in]PInvoke 用來進行對應的旗標。 這是位元遮罩`CorPinvokeMap`值。  
   
  `szImportName`  
  [in]原生 DLL 中匯出目標的名稱。  
   
  `mrImportDLL`  
- [in]`mdModuleRef`權杖的目標 unmanaged DLL。  
+ [in]`mdModuleRef`目標的語彙基元 unmanaged DLL。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

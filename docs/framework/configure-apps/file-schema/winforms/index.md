@@ -4,12 +4,6 @@ ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18d8e1e24af73c9521b3a5bb45f1c86fc52ff1e9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755548"
 ---
 # <a name="windows-forms-configuration-section"></a>Windows Form 組態區段
 Windows Forms 組態設定允許 Windows Forms 應用程式儲存並擷取有關自訂應用程式設定 (例如多重監視器支援、高 DPI 支援，以及其他預先定義的組態設定) 的資訊。
@@ -54,5 +48,5 @@ Windows Forms 應用程式組態設定是儲存在應用程式組態檔的 `Syst
 
 ## <a name="see-also"></a>另請參閱
 
-[組態檔結構描述](../index.md)   
-[Windows Forms 中的高 DPI 支援](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+- [組態檔結構描述](../index.md)
+- [Windows Forms 中的高 DPI 支援](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

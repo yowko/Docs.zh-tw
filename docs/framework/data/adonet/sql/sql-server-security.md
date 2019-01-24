@@ -2,12 +2,12 @@
 title: SQL Server 安全性
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 418dbd3e677619721b841736f5b4c1b423ada94b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33ec28536115f8571bfda47266ed3b5cad1442bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650573"
 ---
 # <a name="sql-server-security"></a>SQL Server 安全性
 SQL Server 具有許多功能，可支援安全資料庫應用程式的建立。  
@@ -34,11 +34,11 @@ SQL Server 具有許多功能，可支援安全資料庫應用程式的建立。
   
 ## <a name="related-sections"></a>相關章節  
 [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
-描述 SQL Server 和 Azure SQL Database 的安全性考量。
+說明適用於 SQL Server 和 Azure SQL Database 的安全性考量。
 
 [SQL Server 安裝的安全性考量](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
-描述安裝 SQL Server 之前應考量的安全性疑慮。
+描述要安裝 SQL Server 之前，請考慮的安全性疑慮。
 
-## <a name="see-also"></a>另請參閱  
- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
+## <a name="see-also"></a>另請參閱
+- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)

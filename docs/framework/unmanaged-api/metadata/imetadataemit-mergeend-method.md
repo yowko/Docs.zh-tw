@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 45d85be4e4987e5a5234ca2d57c85a56f9f544bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657021"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd 方法
-合併到目前範圍的一個或多個先前呼叫所指定的所有中繼資料範圍[imetadataemit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)。  
+合併到目前的範圍由一或多個先前的呼叫，以指定的所有中繼資料領域[imetadataemit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,42 +34,42 @@ HRESULT MergeEnd ();
 ```  
   
 #### <a name="parameters"></a>參數  
- 這個方法會採用任何參數。  
+ 這個方法會接受任何參數。  
   
 ## <a name="remarks"></a>備註  
- 這個常式會觸發實際的合併中繼資料，所有的匯入前的呼叫中指定的範圍`IMetaDataEmit::Merge`，到目前的輸出範圍。  
+ 這個常式會觸發實際的合併中繼資料，所有匯入指定的方法是呼叫範圍`IMetaDataEmit::Merge`，到目前的輸出範圍。  
   
- 下列的特殊情況適用於合併式：  
+ 合併，適用下列的特殊狀況：  
   
--   模組版本識別項 (MVID) 永遠不會匯入，因為它是唯一的中繼資料匯入範圍中。  
+-   模組版本識別項 （mvid） 發生會永遠不會匯入，因為它是唯一的中繼資料匯入範圍中。  
   
 -   會覆不寫任何現有的整個模組的屬性。  
   
-     如果模組屬性已設定為目前的範圍，會匯不入任何模組的屬性。 不過，如果模組屬性尚未設定在目前範圍中，它們會匯入一次，當第一次遇到。 如果這些模組內容發生一次，它們是重複的項目。 如果 （MVID 除外） 的所有模組屬性的值進行比較並發現沒有重複項目，則會引發錯誤。  
+     如果模組屬性已設定為目前的範圍，則會匯不入任何模組屬性。 不過，如果模組屬性尚未設定目前範圍中，它們會匯入一次，當他們第一次發生。 如果這些模組內容發生一次，它們是重複的項目。 如果 （MVID) 除外的所有模組屬性的值進行比較，而且沒有重複項目找到，則會引發錯誤。  
   
--   類型定義 (`TypeDef`)，沒有重複項目會合併到目前的範圍。 `TypeDef` 物件會檢查是否有重複項目針對每個*完整物件名稱* + *GUID* + *版本號碼*。 如果沒有符合項目名稱或 GUID，且任何其他兩個項目不同，則會引發錯誤。 否則，如果所有的三個項目相符，`MergeEnd`未執行快速檢查，以確保項目確實是重複項目; 如果沒有，則會引發錯誤。 這項快速檢查會尋找：  
+-   如需類型定義 (`TypeDef`)，沒有重複項目會合併到目前的範圍。 `TypeDef` 物件會檢查是否有重複項目，針對每個*完整物件名稱* + *GUID* + *版本號碼*。 如果沒有相符項目名稱或 GUID，而且有任何其他兩個項目不同，則會引發錯誤。 否則，如果所有的三個項目相符，`MergeEnd`粗略的檢查，以確保項目確實是在重複的項目; 如果沒有，則會引發錯誤。 這項快速檢查會尋找：  
   
-    -   相同成員宣告中的相同順序發生。 成員標示為`mdPrivateScope`(請參閱[CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)列舉型別) 中這項檢查; 不包含特殊合併。  
+    -   同一個成員宣告，以相同的順序發生。 標示為的成員`mdPrivateScope`(請參閱 < [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)列舉型別) 中這項檢查; 不包含特殊合併。  
   
     -   相同的類別配置。  
   
-     這表示`TypeDef`物件必須一律完整且一致地定義每個中繼資料範圍內宣告中，如果其成員的實作 （類別） 會橫跨多個編譯單位中，假設為完整定義每個範圍中存在且不增量至每個範圍。 比方說，如果參數名稱與合約相關，他們必須發出相同的方式納入每個範圍中。如果不相關，他們應該不發出至中繼資料。  
+     這表示`TypeDef`物件必須一律完整且一致地定義每個中繼資料範圍內宣告中，如果其成員的實作 （類別） 會分散到多個編譯單位中，完整的定義假設為每個範圍中存在且不增量至每個範圍。 比方說，如果參數名稱與合約相關，它們必須發出相同的方式為每個範圍中，如果它們不相關，它們應該不發出至中繼資料。  
   
-     例外狀況是，`TypeDef`物件可以有標示為增量成員`mdPrivateScope`。 在發生時，這些項目，`MergeEnd`以累加方式將它們加入至目前的範圍，而不考慮重複項目。 由於編譯器了解私人範圍，編譯器必須負責強制執行規則。  
+     例外狀況是，`TypeDef`物件可以有標示為增量成員`mdPrivateScope`。 在發生這些`MergeEnd`以累加方式將它們新增至目前的範圍，而不必考慮重複項目。 因為編譯器了解私用範圍，編譯器必須負責強制執行規則。  
   
--   相對虛擬位址 (Rva) 不會匯入或合併。編譯器預期會重新發出這項資訊。  
+-   未匯入或合併; 相對虛擬位址 (Rva)編譯器應該重新發出這項資訊。  
   
--   自訂屬性合併只能附加至的項目會合併。 比方說，第一次遇到類別時，會合併類別相關聯的自訂屬性。 如果自訂屬性相關聯`TypeDef`或`MemberDef`專屬於編譯單位 （例如成員編譯的時間戳記），它們不會合併會決定移除或更新中繼資料，這類編譯器。  
+-   只有在所連接的項目合併時，才合併自訂屬性。 比方說，第一次遇到類別時，會合併與類別相關聯的自訂屬性。 如果自訂屬性相關聯`TypeDef`或`MemberDef`專屬於編譯單位 （例如將成員編譯的時間戳記），它們不會合併，將由編譯器移除或更新這類中繼資料。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

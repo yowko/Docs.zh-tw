@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648744"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 語法
 <xref:System.Windows.PropertyPath>物件支援複雜的內嵌[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]語法來設定各種屬性採用<xref:System.Windows.PropertyPath>做為其值的型別。 本主題說明<xref:System.Windows.PropertyPath>套用至繫結和動畫語法的語法。  
@@ -196,7 +196,7 @@ or
   
  一般情況下，<xref:System.Windows.PropertyPath>設計為使用兩個不同的建構函式，一個用於繫結和最簡單的動畫使用方式，一個用於複雜動畫。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>用於繫結，其中物件字串的簽章。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>單一步驟動畫路徑，在物件所在的簽章<xref:System.Windows.DependencyProperty>。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29>用於複雜動畫的簽章。 後面這個建構函式會針對第一個參數使用語彙基元字串，並使用物件陣列來填滿語彙基元字串中的位置，以定義屬性路徑關聯性。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.PropertyPath>  
- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.PropertyPath>
+- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

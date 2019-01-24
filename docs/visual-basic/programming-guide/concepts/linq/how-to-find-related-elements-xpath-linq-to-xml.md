@@ -1,15 +1,15 @@
 ---
-title: 如何： 尋找相關項目 (XPATH-LINQ to XML) (Visual Basic)
+title: HOW TO：尋找相關項目 (XPATH-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: 24a8f252d0c703cc7883ae1408120b8cae018331
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ced58274773b9a5c16331805f9a5513a5231c5ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655409"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>如何： 尋找相關項目 (XPATH-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>HOW TO：尋找相關項目 (XPATH-LINQ to XML) (Visual Basic)
 本主題顯示如何取得在其他項目值所參考的屬性上選取的項目。  
   
  XPath 運算式為：  
@@ -21,7 +21,7 @@ ms.locfileid: "33643148"
   
  請注意，在 .Net 的清單中進行索引時，是以「零」為基礎。 在 XPath 述詞的節點集合中進行索引時，是以「一」為基礎。 此範例會反映這個差異。  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  
@@ -73,5 +73,5 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to XML (Visual Basic) 的 XPath 使用者適用的](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>另請參閱
+- [LINQ to XML (Visual Basic) 的 XPath 使用者適用的](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

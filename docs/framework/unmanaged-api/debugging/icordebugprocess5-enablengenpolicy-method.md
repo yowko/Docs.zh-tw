@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c598491acd27223a8a41234ddf2c6b8e6f005d52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca656aeba04526164a65760af990455965c5288e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665210"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>ICorDebugProcess5::EnableNGENPolicy 方法
 設定值，這個值會決定應用程式載入 managed 偵錯工具下執行時的原生映像的方式。  
@@ -37,23 +37,23 @@ HRESULT EnableNGENPolicy(
   
 #### <a name="parameters"></a>參數  
  `ePolicy`  
- [in]A [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)常數，決定如何應用程式載入 managed 偵錯工具下執行時的原生映像。  
+ [in]A [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)常數，決定應用程式載入 managed 偵錯工具下執行時的原生映像的方式。  
   
 ## <a name="remarks"></a>備註  
- 如果原則設定已成功，則方法會傳回`S_OK`。 如果`ePolicy`超出所定義之列舉值的範圍[CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)，方法會傳回`E_INVALIDARG`和方法呼叫沒有任何作用。 如果無法更新原生映像產生器 (Ngen.exe) 的原則，則方法會傳回`E_FAIL`。  
+ 如果已設定成功，則方法會傳回`S_OK`。 如果`ePolicy`所定義之列舉值的範圍之外[CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)，則方法會傳回`E_INVALIDARG`方法呼叫中沒有任何作用。 如果無法更新原生映像產生器 (Ngen.exe) 的原則，則方法會傳回`E_FAIL`。  
   
- `ICorDebugProcess5::EnableNGenPolicy`程序的存留期間，隨時可以呼叫方法。 原則是作用中的任何原則設定之後載入的模組。  
+ `ICorDebugProcess5::EnableNGenPolicy`程序的存留期間隨時都可以呼叫方法。 原則是作用中的原則設定之後會載入任何模組。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugProcess5 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugProcess5 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

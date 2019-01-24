@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <seealso> XML tag
 - seealso XML tag
 ms.assetid: 36050c95-1af2-4284-b9b6-1a70691ed978
-ms.openlocfilehash: a792bbea108bcdf33d430c47773466ef3dccdb0c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 8a7b663368cab917cbabfc5ca089b266c47c5ee8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662370"
 ---
 # <a name="ltseealsogt-visual-basic"></a>&lt;seealso&gt; (Visual Basic)
 指定另請參閱 > 一節中所顯示的連結。  
@@ -23,7 +23,7 @@ ms.locfileid: "49086137"
   
 #### <a name="parameters"></a>參數  
  `member`  
- 可從目前編譯環境呼叫的成員或欄位參考。 編譯器會檢查指定的程式碼項目存在，並將傳遞`member`輸出 XML 中的項目名稱。 `member` 必須出現在雙引號內 (" ")。  
+ 可從目前編譯環境呼叫的成員或欄位參考。 編譯器會檢查指定的程式碼項目是否存在，並將 `member` 傳遞給輸出 XML 中的項目名稱。 `member` 必須出現在雙引號內 (" ")。  
   
 ## <a name="remarks"></a>備註  
  使用`<seealso>`標記即可指定您想要另請參閱 > 一節中所顯示的文字。 使用 [\<see>](../../../visual-basic/language-reference/xmldoc/see.md)，以在文字內指定連結。  
@@ -35,5 +35,5 @@ ms.locfileid: "49086137"
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/seealso_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>另請參閱
+- [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)

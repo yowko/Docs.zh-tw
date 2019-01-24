@@ -1,5 +1,5 @@
 ---
-title: 如何： 操作資料表&#39;s 屬性資料行的資料行
+title: HOW TO：操作資料表&#39;s 資料行，透過 Columns 屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,24 +10,24 @@ helpviewer_keywords:
 - tables [WPF], manipulating columns
 - Columns property [WPF]
 ms.assetid: 3f8884f4-7e1f-456b-be06-fbd3cf469bf3
-ms.openlocfilehash: 916764c621738ddc651580f1232e1f579a17e6f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f560e85888b5617f545082d47d124163d492ec00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655807"
 ---
-# <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a>如何： 操作資料表&#39;s 屬性資料行的資料行
-這個範例會示範一些較常見可以透過資料表的資料行執行的運算<xref:System.Windows.Documents.Table.Columns%2A>屬性。  
+# <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a>HOW TO：操作資料表&#39;s 資料行，透過 Columns 屬性
+此範例示範一些較常見的作業對資料表的資料行<xref:System.Windows.Documents.Table.Columns%2A>屬性。  
   
 ## <a name="example"></a>範例  
- 下列範例會建立新的資料表，然後再使用<xref:System.Windows.Documents.TableColumnCollection.Add%2A>方法，以將資料行加入資料表的<xref:System.Windows.Documents.Table.Columns%2A>集合。  
+ 下列範例會建立新的資料表，並接著會使用<xref:System.Windows.Documents.TableColumnCollection.Add%2A>方法，以將資料行加入資料表的<xref:System.Windows.Documents.Table.Columns%2A>集合。  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Add](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_add)]
  [!code-vb[TableSnippets2#_Table_Columns_Add](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_add)]  
   
 ## <a name="example"></a>範例  
- 下列範例會將新<xref:System.Windows.Documents.TableColumn>。  索引位置 0，因此新的第一個資料行的資料表中插入新的資料行。  
+ 下列範例會插入新<xref:System.Windows.Documents.TableColumn>。  新的資料行是索引位置插入 0，使得它成為新的第一個資料行的資料表。  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableColumnCollection>集合會使用標準的以零為起始索引。  
@@ -36,7 +36,7 @@ ms.locfileid: "33545294"
  [!code-vb[TableSnippets2#_Table_Columns_Insert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_insert)]  
   
 ## <a name="example"></a>範例  
- 下列範例會存取一些任意數目的屬性中的資料行<xref:System.Windows.Documents.TableColumnCollection>集合參考特定資料行索引。  
+ 下列範例會存取某些中的資料行上的任何屬性<xref:System.Windows.Documents.TableColumnCollection>集合參考特定的資料行的索引。  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Manip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_manip)]
  [!code-vb[TableSnippets2#_Table_Columns_Manip](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_manip)]  
@@ -65,10 +65,10 @@ ms.locfileid: "33545294"
  [!code-csharp[TableSnippets2#_Table_Columns_Clear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_clear)]
  [!code-vb[TableSnippets2#_Table_Columns_Clear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_clear)]  
   
-## <a name="see-also"></a>另請參閱  
- [資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [使用 XAML 定義表格](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
- [以程式設計的方式建置資料表](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
- [透過 RowGroups 屬性管理表格的資料列群組](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [透過 Blocks 屬性管理 FlowDocument](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [透過 RowGroups 屬性管理表格的資料列群組](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+## <a name="see-also"></a>另請參閱
+- [資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)
+- [使用 XAML 定義表格](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)
+- [以程式設計的方式建置資料表](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)
+- [透過 RowGroups 屬性管理表格的資料列群組](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [透過 Blocks 屬性管理 FlowDocument](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [透過 RowGroups 屬性管理表格的資料列群組](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

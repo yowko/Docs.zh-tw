@@ -16,16 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1455ce7c3b07809d1dead8e98019c991475eb02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d36ae3ef63c1324f77786ad55674bbdc257d984
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607130"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK 函式指標
-指向 通知的主應用程式等候處理的函式 (<xref:System.Threading.WaitHandle>) 已收到信號或逾時。  
+指向主應用程式等候處理的函式 (<xref:System.Threading.WaitHandle>) 已收到信號或逾時。  
   
- 此函式指標中已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 中已被取代此函式指標[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,22 +39,22 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
   
 #### <a name="parameters"></a>參數  
  `lpParameter`  
- [in]包含由主應用程式定義資訊的物件指標。  
+ [in]物件，包含主機所定義的資訊指標。  
   
  `TimerOrWaitFired`  
- [in]`true`如果逾時等候控制代碼，或`false`如果接獲訊號。  
+ [in]`true`如果逾時等候控制代碼，或`false`，表示收到信號。  
   
 ## <a name="remarks"></a>備註  
- 函式`WAITORTIMERCALLBACK`點是回呼函式，而且必須在裝載應用程式寫入器實作。  
+ 函式，其中`WAITORTIMERCALLBACK`點是回呼函式，而且必須在裝載應用程式寫入器實作。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** MSCorWks.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>另請參閱
+- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

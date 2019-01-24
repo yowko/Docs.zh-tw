@@ -1,5 +1,5 @@
 ---
-title: 如何： 在日期和時間運算中使用時區
+title: HOW TO：在日期和時間運算中使用時區
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c9f7b2623b4ed766fb44b46c3f54caa962c07eb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682688"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>如何： 在日期和時間運算中使用時區
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>HOW TO：在日期和時間運算中使用時區
 
 一般情況下，當您執行日期和時間設定使用的算術<xref:System.DateTime>或<xref:System.DateTimeOffset>值，結果不會反映任何時區調整規則。 這是 true 即使的日期和時間值的時區是清楚識別 (例如，當<xref:System.DateTime.Kind%2A>屬性設定為<xref:System.DateTimeKind.Local>)。 本主題說明如何對屬於特定時區的日期和時間值執行算術運算。 算術運算的結果將反映時區調整規則。
 
@@ -66,5 +66,5 @@ ms.locfileid: "44041511"
 
 ## <a name="see-also"></a>另請參閱
 
-* [日期、時間和時區](../../../docs/standard/datetime/index.md)
-* [使用日期與時間執行算術運算](../../../docs/standard/datetime/performing-arithmetic-operations.md)
+- [日期、時間和時區](../../../docs/standard/datetime/index.md)
+- [使用日期與時間執行算術運算](../../../docs/standard/datetime/performing-arithmetic-operations.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 05568de863407b5d746c23ea0aff3139449a8f5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665847"
 ---
 # <a name="path-animation-how-to-topics"></a>路徑動畫 HOW TO 主題
-本節中的主題將示範如何建立動畫物件沿著路徑。  
+在本節中的主題將示範如何沿著路徑建立物件。  
   
 ## <a name="in-this-section"></a>本節內容  
  [沿著路徑建立物件的動畫 (Double 動畫)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
@@ -30,7 +30,7 @@ ms.locfileid: "33562001"
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a>另請參閱  
- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>另請參閱
+- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

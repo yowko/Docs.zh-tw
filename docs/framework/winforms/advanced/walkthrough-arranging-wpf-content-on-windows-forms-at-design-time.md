@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 062b9b943d187ccd4105f3772688c563f540d696
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 66fb814bbf0a40ccaa9339eb24dcc49332861deb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647658"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段排列 Windows Form 的 WPF 內容
 本逐步解說示範如何使用 Windows Form 的配置功能 (例如錨定和對齊線)，來排列 Windows Presentation Foundation (WPF) 控制項。
@@ -37,7 +37,7 @@ ms.locfileid: "48846470"
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成此逐步解說：  
   
--   Visual Studio 2012。  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立 Windows Form 專案。  
@@ -54,9 +54,9 @@ ms.locfileid: "48846470"
   
 #### <a name="to-create-wpf-controls"></a>建立 WPF 控制項  
   
-1.  將新的 WPF <xref:System.Windows.Controls.UserControl> 加入專案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 建立新 WPF 內容在設計階段的 Windows Form 上](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+1.  將新的 WPF <xref:System.Windows.Controls.UserControl> 加入專案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱[逐步解說：在設計階段建立 Windows Form 上的新 WPF 內容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
-2.  在 [設計] 檢視中，確定已選取 `UserControl1`。 如需詳細資訊，請參閱 <<c0> [ 如何： 選取和移動設計介面上的項目](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)。  
+2.  在 [設計] 檢視中，確定已選取 `UserControl1`。 如需詳細資訊，請參閱[＜How to：選取並移動設計介面上的項目](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)。  
   
 3.  在 **屬性**視窗中，設定的值<xref:System.Windows.FrameworkElement.Width%2A>並<xref:System.Windows.FrameworkElement.Height%2A>屬性，以`200`。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48846470"
      兩個 <xref:System.Windows.Forms.Integration.ElementHost> 控制項的大小會調整以配合新的配置。  
   
 ## <a name="using-snaplines-to-align-wpf-controls"></a>使用對齊線來對齊 WPF 控制項  
- 對齊線可讓您輕鬆對齊表單上的控制項。 您也可以使用對齊線來對齊 WPF 控制項。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 在 Windows Form 使用對齊線排列的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
+ 對齊線可讓您輕鬆對齊表單上的控制項。 您也可以使用對齊線來對齊 WPF 控制項。 如需詳細資訊，請參閱[逐步解說：排列控制項，在 Windows Form 使用對齊線](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
   
 #### <a name="to-use-snaplines-to-align-wpf-controls"></a>使用對齊線來對齊 WPF 控制項  
   
@@ -145,14 +145,14 @@ ms.locfileid: "48846470"
   
      這三個 <xref:System.Windows.Forms.Integration.ElementHost> 控制項都會適當地調整大小。  
   
-     如需詳細資訊，請參閱 <<c0> [ 如何： 錨定和停駐 TableLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)。  
+     如需詳細資訊，請參閱[＜How to：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [操作說明：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
- [操作說明：在設計階段將控制項對齊表單邊緣](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- [逐步解說：使用對齊線排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [使用 WPF 控制項](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [如何：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [如何：將控制項和表單邊緣對齊在設計階段](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [逐步解說：使用對齊線的 Windows Form 上排列控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [使用 WPF 控制項](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

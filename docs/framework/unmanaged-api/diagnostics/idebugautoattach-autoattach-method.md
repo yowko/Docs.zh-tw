@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5c95423a6918da7cc043f8d46de13d166b8d895
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b45b5e1a7589329b788160df3ac4493efa48197
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663514"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 方法
 執行伺服器叫用偵錯工具自動附加。  
@@ -53,13 +54,13 @@ HRESULT AutoAttach
  [in]程式識別碼。  
   
  `pszSessionId`  
- [in]偵錯動詞命令所傳遞的字串。  
+ [in]Debug 動詞命令所傳遞的字串。  
   
 ## <a name="return-value"></a>傳回值  
- 如果此方法成功為 S_OK。  
+ 如果方法成功為 S_OK。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** DbgAutoAttach.h  
   
-## <a name="see-also"></a>另請參閱  
- [IDebugAutoAttach 介面](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IDebugAutoAttach 介面](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

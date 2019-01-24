@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664006"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 的主要概念
 本文件提供 Windows Communication Foundation (WCF) 架構的高階檢視。 以說明重要概念，以及如何搭配運用這些概念。 如需建立 WCF 服務和用戶端的最簡單版本的教學課程，請參閱 <<c0> [ 入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要深入了解 WCF 程式設計，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "53286555"
  基礎結構端點  
  由基礎結構公開的端點，可提升服務所需或提供、但與服務合約無關之功能的效率。 例如，服務可能具有提供中繼資料資訊的基礎結構端點。  
   
- address  
+ 位址  
  指定接收訊息的位置， 可指定做為統一資源識別元 (URI)。 URI 結構描述部分會指定用來到達位址的傳輸機制，例如 HTTP 和 TCP。 URI 的階層式部分包含唯一位置，其格式取決於傳輸機制。  
   
  端點位址可讓您為服務中的每個端點建立唯一的端點位址，或在特定狀況下讓各端點共用位址。 下列範例示範將 HTTPS 通訊協定與非預設連接埠搭配使用的位址：  
@@ -152,7 +152,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WS-*  
  一組發展中 Web 服務 (WS) 規格的縮寫，例如 WCF 中所實作的 WS-Security 與 WS-ReliableMessaging 等等。  
   
-## <a name="see-also"></a>另請參閱  
- [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation 架構](../../../docs/framework/wcf/architecture.md)  
- [安全性架構](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>另請參閱
+- [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation 架構](../../../docs/framework/wcf/architecture.md)
+- [安全性架構](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

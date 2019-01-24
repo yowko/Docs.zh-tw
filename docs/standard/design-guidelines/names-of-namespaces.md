@@ -9,12 +9,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
-ms.openlocfilehash: 64efdc46583a0931df9f57c32424ca4233bf2b82
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665132"
 ---
 # <a name="names-of-namespaces"></a>命名空間的名稱
 做為其他命名指導方針，命名的命名空間時的目標建立足夠的清晰度給程式設計人員立即知道命名空間的內容可能是使用架構。 下列範本指定為命名空間進行的一般規則：  
@@ -36,7 +36,7 @@ ms.locfileid: "53143437"
   
  **✓ CONSIDER** 適時使用複數命名空間名稱。  
   
- 例如，使用`System.Collections`而不是`System.Collection`。 品牌名稱與縮寫不過是這項規則的例外狀況。 例如，使用`System.IO`而不是`System.IOs`。  
+ 例如，使用 `System.Collections` 而不是 `System.Collection`。 品牌名稱與縮寫不過是這項規則的例外狀況。 例如，使用 `System.IO` 而不是 `System.IOs`。  
   
  **X DO NOT** 該命名空間中使用相同名稱的命名空間和類型。  
   
@@ -86,5 +86,5 @@ ms.locfileid: "53143437"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

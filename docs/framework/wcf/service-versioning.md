@@ -2,28 +2,28 @@
 title: 服務版本控制
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 75a19c62f52c1d9468976f7ebea72245d1d341eb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 62c8641e69ea461c3bf56b911c25b4894f63abe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649241"
 ---
 # <a name="service-versioning"></a>服務版本控制
-在初始部署以及存留期間可能的數次部署之後，服務 (以及公開的端點) 可能因各種不同的原因而需要變更，例如變更業務需要、資訊技術需求，或解決其他問題等。 每個變更都會產生新的服務版本。 本主題說明如何考量版本控制中 Windows Communication Foundation (WCF)。  
+在初始部署以及存留期間可能的數次部署之後，服務 (以及公開的端點) 可能因各種不同的原因而需要變更，例如變更業務需要、資訊技術需求，或解決其他問題等。 每個變更都會產生新的服務版本。 本主題說明如何在 Windows Communication Foundation (WCF) 的版本控制，請考慮。  
   
 ## <a name="four-categories-of-service-changes"></a>四種服務變更的分類  
  可能需要的服務變更可分成四個分類：  
   
--   合約變更：例如，可能加入作業，或是可能加入或變更訊息中的資料項目。  
+-   合約變更：例如，可能加入作業，或可能加入或變更訊息中的資料元素。  
   
--   位址變更：例如，服務移到不同的位置，而使端點使用新的位址。  
+-   位址變更：例如，服務移至不同的位置，其中端點有新的位址。  
   
 -   繫結變更：例如，安全性機制變更或其設定變更。  
   
--   實作變更：例如，內部方法實作變更時。  
+-   實作變更：例如，內部方法實作變更。  
   
- 其中某些變更稱為「中斷」，其他則稱為「非中斷」變更。 變更為*不分行*如果會有已順利處理前一版中的所有訊息將順利都處理新的版本中。 不符合該準則的任何變更都會*重大*變更。  
+ 其中某些變更稱為「中斷」，其他則稱為「非中斷」變更。 變更*分行*會有已成功處理先前的版本中的所有訊息是否已成功處理，在新的版本。 不符合該準則的任何變更都會*重大*變更。  
   
 ## <a name="service-orientation-and-versioning"></a>服務方向與版本控制  
  其中一個服務方向的原則是，服務和用戶端都是自發的 (或獨立的)。 除此之外，這還暗示服務開發人員不得假設其控制了，甚至了解所有服務用戶端。 如此即可消除服務變更版本時，重新建置及部署所有用戶端的選擇。 本主題假設服務符合這個原則，因此必須獨立於其用戶端進行變更或「版本控制」。  
@@ -35,7 +35,7 @@ ms.locfileid: "33809686"
   
  對於服務合約而言，相容性是指可以加入服務所公開的新作業，但是語意上不可移除或變更現有作業。  
   
- 對於資料合約而言，相容性是指可以加入新的結構描述型別定義，但是不可以中斷的方式變更現有的結構描述型別定義。 中斷變更可能包括移除資料成員，或是以不相容的方式變更其資料型別。 這個功能為服務提供了一些變更其合約版本的空間，而不需中斷用戶端。 在下兩節會說明所可以對 WCF 資料服務合約的不分行和重大變更。  
+ 對於資料合約而言，相容性是指可以加入新的結構描述型別定義，但是不可以中斷的方式變更現有的結構描述型別定義。 中斷變更可能包括移除資料成員，或是以不相容的方式變更其資料型別。 這個功能為服務提供了一些變更其合約版本的空間，而不需中斷用戶端。 下面兩節說明不中斷，且重大變更，可以對 WCF 資料服務合約。  
   
 ## <a name="data-contract-versioning"></a>資料合約版本控制  
  本章節說明使用 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.DataContractAttribute> 類別時的資料版本控制。  
@@ -54,11 +54,11 @@ ms.locfileid: "33809686"
 ### <a name="lax-versioning"></a>Lax 版本控制  
  在其他許多情況中，服務開發人員可能假設，加入新的選擇性成員至資料合約將不會中斷現有用戶端。 這需要服務開發人員調查現有用戶端是否未執行結構描述驗證，以及他們是否忽略未知的資料成員。 在這些情況中，可能會利用資料合約功能以非中斷的方式加入新成員。 如果進行版本控制的資料合約功能在服務的第一個版本就已使用，那麼服務開發人員就可以很有信心地進行這項假設。  
   
- WCF，ASP.NET Web 服務，以及許多其他 Web 服務堆疊都支援*lax 版本控制*： 也就是它們未擲回例外狀況，新的未知的資料成員中接收的資料。  
+ WCF、 ASP.NET Web 服務和許多其他 Web 服務堆疊都支援*lax 版本控制*： 也就是它們不擲回例外狀況，新的未知的資料成員中接收的資料。  
   
  一般很容易誤信，加入新成員不會中斷現有用戶端。 如果您不確定所有用戶端都能處理 lax 版本控制，則建議您使用嚴格版本控制方針，並且將資料合約視為固定不變。  
   
- 如需資料合約的 lax 和嚴格版本控制的詳細指導方針，請參閱[最佳做法： 資料合約版本控制](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
+ 如需資料合約的 lax 與嚴格版本控制的詳細指導方針，請參閱[最佳做法：資料合約版本控制](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
   
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>分辨資料合約與 .NET 型別  
  .NET 類別或結構可藉由將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至該類別，而予以投射為資料合約。 .NET 型別及其資料合約規劃是兩件不同的事。 您可以擁有多個 .NET 型別使用相同的資料合約規劃。 這項分別相當實用，可讓您在變更 .NET 型別的同時維持規劃的資料合約，甚至在用字嚴格的情況下也能藉此維持與現有用戶端的相容性。 若要維持 .NET 型別和資料合約之間的這項區別，有兩件事您務必要做到：  
@@ -93,7 +93,7 @@ ms.locfileid: "33809686"
 ## <a name="message-contract-versioning"></a>訊息合約版本控制  
  訊息合約版本控制的方針與資料合約版本控制十分相似。 如果需要嚴格版本控制，則不應變更訊息本文，而是以唯一的限定名稱建立新的訊息合約。 如果您確認可以使用 lax 版本控制，則可以加入新的訊息本文部分，但不變更或移除現有部分。 本指引同時適用不包裝和包裝的訊息合約。  
   
- 即使使用嚴格版本控制，仍可以加入訊息標頭。 MustUnderstand 旗標可能會影響版本控制。 一般情況下，在 WCF 中的標頭版本控制模型是根據 SOAP 規格中所述。  
+ 即使使用嚴格版本控制，仍可以加入訊息標頭。 MustUnderstand 旗標可能會影響版本控制。 一般情況下，WCF 中的標頭版本控制模型是 SOAP 規格中所述。  
   
 ## <a name="service-contract-versioning"></a>服務合約版本控制  
  服務合約版本控制與資料合約版本控制相似，同樣包含加入、變更和移除作業。  
@@ -119,13 +119,13 @@ ms.locfileid: "33809686"
  服務合約中所述的錯誤清單並不詳盡。 作業可能隨時傳回未於其合約中說明的錯誤。 因此，變更合約中所述的錯誤集不視為中斷。 例如，使用 <xref:System.ServiceModel.FaultContractAttribute> 將新錯誤加入至合約中，或從合約中移除現有錯誤。  
   
 ### <a name="service-contract-libraries"></a>服務合約程式庫  
- 組織可能擁有合約的程式庫，合約會在其中發行至中央儲存機制，而服務實作器會從該儲存機制實作合約。 在此情況下，將服務合約發行至儲存機制時，您無法控制誰會建立實作該合約之服務。 因此，一旦服務合約發行之後，就無法進行修改，形成實際上不可變的狀態。 WCF 還支援合約繼承，可用來建立新的合約擴充現有合約。 若要使用此功能，請定義繼承自舊服務合約介面的新服務合約介面，然後將方法加入至新介面。 接著將實作舊合約的服務變更為實作新合約，並且將 "versionOld" 端點定義變更為使用新的合約。 對於 "versionOld" 用戶端而言，端點將隨公開 "versionOld" 合約繼續出現，而對於 "versionNew" 用戶端而言，端點將出現以公開 "versionNew" 合約。  
+ 組織可能擁有合約的程式庫，合約會在其中發行至中央儲存機制，而服務實作器會從該儲存機制實作合約。 在此情況下，將服務合約發行至儲存機制時，您無法控制誰會建立實作該合約之服務。 因此，一旦服務合約發行之後，就無法進行修改，形成實際上不可變的狀態。 WCF 支援合約繼承，可用來建立擴充現有合約的新合約。 若要使用此功能，請定義繼承自舊服務合約介面的新服務合約介面，然後將方法加入至新介面。 接著將實作舊合約的服務變更為實作新合約，並且將 "versionOld" 端點定義變更為使用新的合約。 對於 "versionOld" 用戶端而言，端點將隨公開 "versionOld" 合約繼續出現，而對於 "versionNew" 用戶端而言，端點將出現以公開 "versionNew" 合約。  
   
 ## <a name="address-and-binding-versioning"></a>位址與繫結版本控制  
  端點位址和繫結的變更屬於中斷變更，除非用戶端能夠動態地發現新端點位址或繫結。 實作此功能的一項機制是藉由使用通用探索、描述和整合 (UDDI) 登錄以及 UDDI 引動模式，其中用戶端會嘗試與端點進行通訊，並且在發生錯誤時，查詢已知 UDDI 登錄中目前端點的中繼資料。 然後用戶端會使用來自這項中繼資料的位址和繫結與端點進行通訊。 如果此通訊成功，用戶端就會快取位址和繫結資訊以供未來使用。  
   
 ## <a name="routing-service-and-versioning"></a>路由服務與版本控制  
- 如果對服務所做的變更是中斷變更，而且您必須同時執行兩個以上不同的服務版本，就可以使用 WCF 路由服務，將訊息路由傳送至適當的服務執行個體。 WCF 路由服務會使用以內容為基礎的路由，換言之，它會使用訊息內部的資訊來判斷要路由傳送訊息的目標位置。 如需有關此 WCF 路由服務，請參閱[路由服務](../../../docs/framework/wcf/feature-details/routing-service.md)。 如需如何使用 WCF 路由服務的服務版本設定的範例，請參閱[How To： 服務版本控制](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
+ 如果對服務所做的變更是中斷變更，而且您必須同時執行兩個以上不同的服務版本，就可以使用 WCF 路由服務，將訊息路由傳送至適當的服務執行個體。 WCF 路由服務會使用以內容為基礎的路由，換言之，它會使用訊息內部的資訊來判斷要路由傳送訊息的目標位置。 如需有關 WCF 路由服務，請參閱[路由服務](../../../docs/framework/wcf/feature-details/routing-service.md)。 如需如何使用 WCF 路由服務進行服務版本控制的範例，請參閱[How To:服務版本設定](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
   
 ## <a name="appendix"></a>附錄  
  需要嚴格版本控制時的一般資料合約版本控制方針，是將資料合約視為固定不變，並且在需要變更時建立新的合約。 您必須針對每個新的資料合約建立新類別，因此需要有機制避免採用根據舊資料合約類別撰寫的現有程式碼之後，還須再根據新資料合約類別重新撰寫。  
@@ -175,16 +175,16 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
   
  服務合約會更新，以加入根據 `PurchaseOrderV2` 所撰寫的新作業。 根據 `IPurchaseOrderV1` 撰寫的現有商務邏輯會在 `PurchaseOrderV2` 中繼續運作，而需要 `OrderDate` 屬性的新商務邏輯則會根據 `IPurchaseOrderV2` 撰寫。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- <xref:System.Runtime.Serialization.ExtensionDataObject>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [資料合約等價](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [版本相容序列化回呼](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- <xref:System.Runtime.Serialization.ExtensionDataObject>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [資料合約等價](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [版本相容序列化回呼](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

@@ -1,18 +1,18 @@
 ---
-title: HOW TO：在 IIS 中裝載 WCF 服務
+title: HOW TO：裝載在 IIS 中的 WCF 服務
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 207010f594959708322aed2e630935252c873cf8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44c1b489897a25d293644c5a3ef7d446dd8d4a3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651119"
 ---
-# <a name="how-to-host-a-wcf-service-in-iis"></a>HOW TO：在 IIS 中裝載 WCF 服務
+# <a name="how-to-host-a-wcf-service-in-iis"></a>HOW TO：裝載在 IIS 中的 WCF 服務
 本主題概要說明建立 Windows Communication Foundation (WCF) 服務裝載在網際網路資訊服務 (IIS) 所需的基本步驟。 本主題假設您熟悉 IIS，而且了解如何使用 IIS 管理工具建立與管理 IIS 應用程式。 如需 IIS 的詳細資訊，請參閱[Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449)。 WCF 服務會在 IIS 環境中的執行採用完整的 IIS 功能，例如處理序回收、 閒置關機、 處理序健康狀態監控，以及訊息啟動。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 IIS 裝載只能和 HTTP 傳輸一起使用。  
   
  如需有關如何 WCF 及[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]互動，請參閱 < [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。 如需有關如何設定安全性的詳細資訊，請參閱 <<c0> [ 安全性](../../../../docs/framework/wcf/feature-details/security.md)。  
@@ -75,9 +75,9 @@ ms.locfileid: "43510751"
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)] 
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>另請參閱  
- [在 Internet Information Services 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [裝載服務](../../../../docs/framework/wcf/hosting-services.md)  
- [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
- [安全性](../../../../docs/framework/wcf/feature-details/security.md)  
- [Windows Server App Fabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>另請參閱
+- [在 Internet Information Services 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [裝載服務](../../../../docs/framework/wcf/hosting-services.md)
+- [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [安全性](../../../../docs/framework/wcf/feature-details/security.md)
+- [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)

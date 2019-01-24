@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 875052ed26e83de50807e33e9c74dcf89f7ee679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 17217146d8e5ed53feb8305ca4ac16c8f96ddeb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653851"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo 方法
 取得對應至指定的驗證錯誤的錯誤訊息。  
@@ -44,7 +44,7 @@ HRESULT FormatEventInfo(
  [in]HRESULT 值傳遞給驗證的錯誤處理常式。  
   
  `Context`  
- [in]A`VEContext`執行個體，其中包含驗證錯誤的相關內容資訊。  
+ [in]A`VEContext`執行個體，其中包含驗證錯誤的內容資訊。  
   
  `msg`  
  [in、 out]字串，包含傳回的錯誤訊息。  
@@ -53,16 +53,16 @@ HRESULT FormatEventInfo(
  [in]錯誤訊息的最大長度。  
   
  `psa`  
- [in]安全陣列，其中包含描述錯誤的其他參數。  
+ [in]安全陣列，包含描述錯誤的其他參數。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** IValidator.idl、 IValidator.h  
+ **標頭：** IValidator.idl, IValidator.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- 
+## <a name="see-also"></a>另請參閱
+

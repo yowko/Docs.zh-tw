@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21cce26c94d26f6c079fca644a31bf83cd1a6432
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3d3ef78da9dd639d0f9050a8b61d1e365cd8b42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650245"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 列舉
-表示資源的組件資訊清單中編碼的可見性。  
+指出編碼的組件資訊清單中的資源的可見性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,15 +43,15 @@ typedef enum CorManifestResourceFlags {
 |成員|描述|  
 |------------|-----------------|  
 |`mrVisibilityMask`|保留的。|  
-|`mrPublic`|資源為公用。|  
-|`mrPrivate`|資源是私用。|  
+|`mrPublic`|資源是公用的。|  
+|`mrPrivate`|資源是私人的。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

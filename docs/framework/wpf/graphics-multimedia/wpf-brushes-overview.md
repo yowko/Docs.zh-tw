@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 47a795fa63c4d143689804cd5b3d36ac34d141be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 967d0e67ed0ce106de291e1e47b7d72e06560342
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655955"
 ---
 # <a name="wpf-brushes-overview"></a>WPF 筆刷概觀
 在螢幕上看見的項目是可見的因為它已繪製的筆刷。 例如，筆刷用來描述的按鈕、 文字、 前景和填滿圖形的背景。 本主題介紹的概念與繪製[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]筆刷，並提供範例。 筆刷可讓您以任何項目 (從簡單的純色到複雜的圖樣和影像集) 繪製 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 物件。  
@@ -28,11 +28,11 @@ ms.locfileid: "43521681"
   
 |類別|筆刷屬性|  
 |-----------|----------------------|  
-|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
+|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>、 <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  
 |<xref:System.Windows.Controls.Panel>|<xref:System.Windows.Controls.Panel.Background%2A>|  
 |<xref:System.Windows.Media.Pen>|<xref:System.Windows.Media.Pen.Brush%2A>|  
-|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
+|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>、 <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
 |<xref:System.Windows.Controls.TextBlock>|<xref:System.Windows.Controls.TextBlock.Background%2A>|  
   
  下列各節說明不同<xref:System.Windows.Media.Brush>類型，並提供每個範例。  
@@ -160,14 +160,14 @@ ms.locfileid: "43521681"
   
  如需有關為什麼<xref:System.Windows.Media.VisualBrush>物件不能是凍結，請參閱<xref:System.Windows.Media.VisualBrush>類型 頁面。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Brushes>  
- [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [筆刷範例](https://go.microsoft.com/fwlink/?LinkID=159973)  
- [ImageBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160049)  
- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [其他效能建議](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Brushes>
+- [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [筆刷範例](https://go.microsoft.com/fwlink/?LinkID=159973)
+- [ImageBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [其他效能建議](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

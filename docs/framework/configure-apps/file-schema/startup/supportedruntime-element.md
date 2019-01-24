@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 93084b34e5795ef35e8c433f50646e5da088adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600514"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;Supportedruntime>&gt;項目
 
@@ -43,7 +43,7 @@ ms.locfileid: "53129243"
 
 如果 **\<Supportedruntime> >** 項目不存在於應用程式組態檔，會使用用來建置應用程式的執行階段版本。  
 
-**\<Supportedruntime> >** 項目應由使用 1.1 版或更新版本的執行階段所建置的所有應用程式。 若要只支援 1.0 版的執行階段所建置的應用程式必須使用[ \<Requiredruntime> >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)項目。  
+ **\<Supportedruntime> >** 項目應由使用 1.1 版或更新版本的執行階段所建置的所有應用程式。 若要只支援 1.0 版的執行階段所建置的應用程式必須使用[ \<Requiredruntime> >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)項目。  
   
 > [!NOTE]
 >  如果您使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函數來指定組態檔，您必須使用`<requiredRuntime>`的執行階段的所有版本的項目。 `<supportedRuntime>`當您使用時，便會忽略元素[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。  
@@ -66,7 +66,7 @@ ms.locfileid: "53129243"
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0 4.7.2|"v4.0"|  
+|4.0-4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>「SKU 識別碼」值
@@ -77,12 +77,12 @@ ms.locfileid: "53129243"
 |----------------------------|---------------------|  
 |4.0|".NETFramework,Version=v4.0"|  
 |4.0，Client Profile|".NETFramework,Version=v4.0,Profile=Client"|  
-|4.0，平台更新 1|".NETFramework，版本 = v4.0.1"|  
-|4.0，Client Profile，更新 1|".NETFramework，版本 = v4.0.1，設定檔 = Client"|  
-|4.0，平台更新 2|".NETFramework，版本 = v4.0.2"|  
-|4.0，Client Profile，更新 2|".NETFramework，版本 = v4.0.2，設定檔 = Client"|  
-|4.0，平台更新 3|".NETFramework，版本 = verze 4.0.3"|  
-|4.0，Client Profile，更新 3|".NETFramework，版本 = verze 4.0.3，設定檔 = Client"|  
+|4.0，平台更新 1|".NETFramework,Version=v4.0.1"|  
+|4.0，Client Profile，更新 1|".NETFramework,Version=v4.0.1,Profile=Client"|  
+|4.0，平台更新 2|".NETFramework,Version=v4.0.2"|  
+|4.0，Client Profile，更新 2|".NETFramework,Version=v4.0.2,Profile=Client"|  
+|4.0，平台更新 3|".NETFramework,Version=v4.0.3"|  
+|4.0，Client Profile，更新 3|".NETFramework,Version=v4.0.3,Profile=Client"|  
 |4.5|".NETFramework,Version=v4.5"|  
 |4.5.1|".NETFramework,Version=v4.5.1"|  
 |4.5.2|".NETFramework,Version=v4.5.2"|  
@@ -110,6 +110,6 @@ ms.locfileid: "53129243"
 
 ## <a name="see-also"></a>另請參閱
 
- [啟動設定結構描述](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [同處理序並存執行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
+- [啟動設定結構描述](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [同處理序並存執行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

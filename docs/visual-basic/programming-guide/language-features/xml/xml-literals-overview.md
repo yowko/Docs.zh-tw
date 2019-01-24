@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: 03fc8c11b5553c9c3a63bdcb69bf6135050e2c89
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c6d2600b590e01fff062828f8e0f48d9cfad0190
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507644"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681387"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML 常值概觀 (Visual Basic)
 *XML 常值*可讓您將 XML 直接併入您的 Visual Basic 程式碼。 XML 常值語法表示[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件，而且這是類似 XML 1.0 語法。 這可讓您更輕鬆地以程式設計方式建立 XML 項目和文件，因為您的程式碼有相同的結構，為最後的 XML。  
@@ -54,10 +54,10 @@ ms.locfileid: "43507644"
   
  [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Linq.XElement>  
- [在 Visual Basic 中建立 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML 中內嵌的運算式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
- [XML 文件常值](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
- [XML 項目常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML 常值](../../../../visual-basic/language-reference/xml-literals/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Xml.Linq.XElement>
+- [在 Visual Basic 中建立 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML 中內嵌的運算式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [XML 文件常值](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [XML 項目常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML 常值](../../../../visual-basic/language-reference/xml-literals/index.md)

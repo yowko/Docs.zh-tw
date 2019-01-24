@@ -2,21 +2,21 @@
 title: '&lt;entries&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 5a61aefd92390eefb95d1f3e39236e53fa264990
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 082b19cd4515deb19ee7190dfeb8ae04ab834830
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645362"
 ---
 # <a name="ltaddgt-of-ltentriesgt"></a>&lt;entries&gt; 的 &lt;add&gt;
 代表將篩選條件對應至先前定義之用戶端端點的路由項目。 將符合此篩選條件的訊息傳送至這個目的地。  
   
  \<system.serviceModel>  
 \<路由 >  
-\<filterTables >  
-\<filterTable >  
-\<項目 >  
+\<filterTables>  
+\<filterTable>  
+\<entries>  
 \<add>  
   
 ## <a name="syntax"></a>語法  
@@ -58,8 +58,8 @@ ms.locfileid: "54151497"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含路由組態項目的組態區段。|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含路由組態項目的組態區段。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>      
- <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType> 
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>
