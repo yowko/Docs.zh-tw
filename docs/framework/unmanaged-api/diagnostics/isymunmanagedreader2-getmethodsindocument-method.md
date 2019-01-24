@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 762649e260817c43291de416d2f1a92a8f03afb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 38cbea25c485ff517e3448c4de5245ff36fb5b21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594547"
 ---
-# <a name="isymunmanagedreader2getmethodsindocument-method"></a><span data-ttu-id="1b84a-102">ISymUnmanagedReader2::GetMethodsInDocument 方法</span><span class="sxs-lookup"><span data-stu-id="1b84a-102">ISymUnmanagedReader2::GetMethodsInDocument Method</span></span>
-<span data-ttu-id="1b84a-103">取得具有所提供的文件中的程式行資訊的每個方法。</span><span class="sxs-lookup"><span data-stu-id="1b84a-103">Gets every method that has line information in the provided document.</span></span>  
+# <a name="isymunmanagedreader2getmethodsindocument-method"></a><span data-ttu-id="de761-102">ISymUnmanagedReader2::GetMethodsInDocument 方法</span><span class="sxs-lookup"><span data-stu-id="de761-102">ISymUnmanagedReader2::GetMethodsInDocument Method</span></span>
+<span data-ttu-id="de761-103">取得每個提供的文件中具有行資訊的方法。</span><span class="sxs-lookup"><span data-stu-id="de761-103">Gets every method that has line information in the provided document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b84a-104">語法</span><span class="sxs-lookup"><span data-stu-id="1b84a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="de761-104">語法</span><span class="sxs-lookup"><span data-stu-id="de761-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodsInDocument(  
@@ -38,24 +38,24 @@ HRESULT GetMethodsInDocument(
         length_is(*pcMethod)] ISymUnmanagedMethod* pRetVal[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1b84a-105">參數</span><span class="sxs-lookup"><span data-stu-id="1b84a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="de761-105">參數</span><span class="sxs-lookup"><span data-stu-id="de761-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="1b84a-106">[in]文件指標。</span><span class="sxs-lookup"><span data-stu-id="1b84a-106">[in] A pointer to the document.</span></span>  
+ <span data-ttu-id="de761-106">[in]文件指標。</span><span class="sxs-lookup"><span data-stu-id="de761-106">[in] A pointer to the document.</span></span>  
   
  `cMethod`  
- <span data-ttu-id="1b84a-107">[in]A`ULONG32`指出的大小`pRetVal`陣列。</span><span class="sxs-lookup"><span data-stu-id="1b84a-107">[in] A `ULONG32` that indicates the size of the  `pRetVal` array.</span></span>  
+ <span data-ttu-id="de761-107">[in]A`ULONG32`表示的大小`pRetVal`陣列。</span><span class="sxs-lookup"><span data-stu-id="de761-107">[in] A `ULONG32` that indicates the size of the  `pRetVal` array.</span></span>  
   
  `pcMethod`  
- <span data-ttu-id="1b84a-108">[out]指標`ULONG32`包含方法所需的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="1b84a-108">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.</span></span>  
+ <span data-ttu-id="de761-108">[out]指標`ULONG32`接收包含方法所需的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="de761-108">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="1b84a-109">[out]方法會接收緩衝區的指標。</span><span class="sxs-lookup"><span data-stu-id="1b84a-109">[out] A pointer to the buffer that receives the methods.</span></span>  
+ <span data-ttu-id="de761-109">[out]方法會接收緩衝區的指標。</span><span class="sxs-lookup"><span data-stu-id="de761-109">[out] A pointer to the buffer that receives the methods.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1b84a-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="1b84a-110">Return Value</span></span>  
- <span data-ttu-id="1b84a-111">如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="1b84a-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="de761-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="de761-110">Return Value</span></span>  
+ <span data-ttu-id="de761-111">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="de761-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1b84a-112">需求</span><span class="sxs-lookup"><span data-stu-id="1b84a-112">Requirements</span></span>  
- <span data-ttu-id="1b84a-113">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1b84a-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="de761-112">需求</span><span class="sxs-lookup"><span data-stu-id="de761-112">Requirements</span></span>  
+ <span data-ttu-id="de761-113">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="de761-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b84a-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1b84a-114">See Also</span></span>  
- [<span data-ttu-id="1b84a-115">ISymUnmanagedReader2 介面</span><span class="sxs-lookup"><span data-stu-id="1b84a-115">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="de761-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="de761-114">See also</span></span>
+- [<span data-ttu-id="de761-115">ISymUnmanagedReader2 介面</span><span class="sxs-lookup"><span data-stu-id="de761-115">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

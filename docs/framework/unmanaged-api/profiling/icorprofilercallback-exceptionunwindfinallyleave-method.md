@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce413ba184cfec731c6bac0d7f561c345bf53181
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7641569bc97ab241cfba355e91e73567843ea328
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637777"
 ---
-# <a name="icorprofilercallbackexceptionunwindfinallyleave-method"></a><span data-ttu-id="a0131-102">ICorProfilerCallback::ExceptionUnwindFinallyLeave 方法</span><span class="sxs-lookup"><span data-stu-id="a0131-102">ICorProfilerCallback::ExceptionUnwindFinallyLeave Method</span></span>
-<span data-ttu-id="a0131-103">通知分析工具的回溯階段的例外狀況處理已離開`finally`子句。</span><span class="sxs-lookup"><span data-stu-id="a0131-103">Notifies the profiler that the unwind phase of exception handling has left a `finally` clause.</span></span>  
+# <a name="icorprofilercallbackexceptionunwindfinallyleave-method"></a><span data-ttu-id="d0614-102">ICorProfilerCallback::ExceptionUnwindFinallyLeave 方法</span><span class="sxs-lookup"><span data-stu-id="d0614-102">ICorProfilerCallback::ExceptionUnwindFinallyLeave Method</span></span>
+<span data-ttu-id="d0614-103">通知分析工具，回溯階段的例外狀況處理已離開`finally`子句。</span><span class="sxs-lookup"><span data-stu-id="d0614-103">Notifies the profiler that the unwind phase of exception handling has left a `finally` clause.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0131-104">語法</span><span class="sxs-lookup"><span data-stu-id="a0131-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0614-104">語法</span><span class="sxs-lookup"><span data-stu-id="d0614-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionUnwindFinallyLeave();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="a0131-105">備註</span><span class="sxs-lookup"><span data-stu-id="a0131-105">Remarks</span></span>  
- <span data-ttu-id="a0131-106">因為堆疊可能不是處於允許記憶體回收，分析工具不應該在這個呼叫時封鎖，因此無法啟用先佔式記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="a0131-106">The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="a0131-107">如果嘗試在程式碼剖析工具區塊和記憶體回收，則執行階段會封鎖此回呼傳回之前。</span><span class="sxs-lookup"><span data-stu-id="a0131-107">If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d0614-105">備註</span><span class="sxs-lookup"><span data-stu-id="d0614-105">Remarks</span></span>  
+ <span data-ttu-id="d0614-106">因為堆疊可能無法在狀態，讓記憶體回收，分析工具不應在此呼叫期間封鎖，因此無法啟用先佔式記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="d0614-106">The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="d0614-107">如果嘗試此程式碼剖析工具封鎖和進行記憶體回收，則執行階段將會封鎖此回呼傳回之前。</span><span class="sxs-lookup"><span data-stu-id="d0614-107">If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="a0131-108">此外，此通話期間，程式碼剖析工具必須呼叫至 managed 程式碼或任何方式發生原因的 managed 記憶體配置。</span><span class="sxs-lookup"><span data-stu-id="a0131-108">Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="d0614-108">此外，此呼叫期間，分析工具必須呼叫至 managed 程式碼，或以任何方式造成 managed 記憶體配置。</span><span class="sxs-lookup"><span data-stu-id="d0614-108">Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0131-109">需求</span><span class="sxs-lookup"><span data-stu-id="a0131-109">Requirements</span></span>  
- <span data-ttu-id="a0131-110">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a0131-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0614-109">需求</span><span class="sxs-lookup"><span data-stu-id="d0614-109">Requirements</span></span>  
+ <span data-ttu-id="d0614-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d0614-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a0131-111">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a0131-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d0614-111">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d0614-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="a0131-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a0131-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d0614-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d0614-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a0131-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a0131-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d0614-113">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0614-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0131-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a0131-114">See Also</span></span>  
- [<span data-ttu-id="a0131-115">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="a0131-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="a0131-116">ExceptionUnwindFinallyEnter 方法</span><span class="sxs-lookup"><span data-stu-id="a0131-116">ExceptionUnwindFinallyEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)
+## <a name="see-also"></a><span data-ttu-id="d0614-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d0614-114">See also</span></span>
+- [<span data-ttu-id="d0614-115">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="d0614-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="d0614-116">ExceptionUnwindFinallyEnter 方法</span><span class="sxs-lookup"><span data-stu-id="d0614-116">ExceptionUnwindFinallyEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)

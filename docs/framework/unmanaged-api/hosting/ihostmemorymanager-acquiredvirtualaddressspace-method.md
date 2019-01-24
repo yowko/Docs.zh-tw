@@ -1,14 +1,6 @@
 ---
-title: "IHostMemoryManager::AcquiredVirtualAddressSpace 方法"
-ms.custom: 
+title: IHostMemoryManager::AcquiredVirtualAddressSpace 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMemoryManager.AcquiredVirtualAddressSpace
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: ef2f83c2-127e-4c38-8385-306c03cd2167
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: af80a43b86b1a16c5afe2741cb3d2bd7f0d874ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6133b558e62d66cfaac201317f66d784aac264c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513707"
 ---
-# <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a><span data-ttu-id="e46f4-102">IHostMemoryManager::AcquiredVirtualAddressSpace 方法</span><span class="sxs-lookup"><span data-stu-id="e46f4-102">IHostMemoryManager::AcquiredVirtualAddressSpace Method</span></span>
-<span data-ttu-id="e46f4-103">通知主機 common language runtime (CLR) 已取得作業系統中指定的記憶體。</span><span class="sxs-lookup"><span data-stu-id="e46f4-103">Notifies the host that the common language runtime (CLR) has acquired the specified memory from the operating system.</span></span>  
+# <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a><span data-ttu-id="f58d6-102">IHostMemoryManager::AcquiredVirtualAddressSpace 方法</span><span class="sxs-lookup"><span data-stu-id="f58d6-102">IHostMemoryManager::AcquiredVirtualAddressSpace Method</span></span>
+<span data-ttu-id="f58d6-103">Common language runtime (CLR) 已取得指定的記憶體，作業系統會告知主應用程式。</span><span class="sxs-lookup"><span data-stu-id="f58d6-103">Notifies the host that the common language runtime (CLR) has acquired the specified memory from the operating system.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e46f4-104">語法</span><span class="sxs-lookup"><span data-stu-id="e46f4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f58d6-104">語法</span><span class="sxs-lookup"><span data-stu-id="f58d6-104">Syntax</span></span>  
   
 ```  
 HRESULT AcquiredVirtualAddressSpace(  
@@ -47,24 +36,24 @@ HRESULT AcquiredVirtualAddressSpace(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e46f4-105">參數</span><span class="sxs-lookup"><span data-stu-id="e46f4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f58d6-105">參數</span><span class="sxs-lookup"><span data-stu-id="f58d6-105">Parameters</span></span>  
  `startAddress`  
- <span data-ttu-id="e46f4-106">[in]起始位址的記憶體。</span><span class="sxs-lookup"><span data-stu-id="e46f4-106">[in] The starting address of the memory.</span></span>  
+ <span data-ttu-id="f58d6-106">[in]記憶體的起始位址。</span><span class="sxs-lookup"><span data-stu-id="f58d6-106">[in] The starting address of the memory.</span></span>  
   
  `size`  
- <span data-ttu-id="e46f4-107">[in]以位元組為單位的記憶體大小。</span><span class="sxs-lookup"><span data-stu-id="e46f4-107">[in] The size, in bytes, of the memory.</span></span>  
+ <span data-ttu-id="f58d6-107">[in]以位元組為單位的記憶體大小。</span><span class="sxs-lookup"><span data-stu-id="f58d6-107">[in] The size, in bytes, of the memory.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e46f4-108">備註</span><span class="sxs-lookup"><span data-stu-id="e46f4-108">Remarks</span></span>  
- <span data-ttu-id="e46f4-109">`AcquiredVirtualAddressSpace`方法是一種回呼方法，而且必須實作寫入器會在裝載應用程式。</span><span class="sxs-lookup"><span data-stu-id="e46f4-109">The `AcquiredVirtualAddressSpace` method is a callback method and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="e46f4-110">CLR 會呼叫它。</span><span class="sxs-lookup"><span data-stu-id="e46f4-110">It is called by the CLR.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f58d6-108">備註</span><span class="sxs-lookup"><span data-stu-id="f58d6-108">Remarks</span></span>  
+ <span data-ttu-id="f58d6-109">`AcquiredVirtualAddressSpace`方法的回呼方法，必須在裝載應用程式寫入器實作。</span><span class="sxs-lookup"><span data-stu-id="f58d6-109">The `AcquiredVirtualAddressSpace` method is a callback method and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="f58d6-110">CLR 會呼叫它。</span><span class="sxs-lookup"><span data-stu-id="f58d6-110">It is called by the CLR.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e46f4-111">需求</span><span class="sxs-lookup"><span data-stu-id="e46f4-111">Requirements</span></span>  
- <span data-ttu-id="e46f4-112">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e46f4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f58d6-111">需求</span><span class="sxs-lookup"><span data-stu-id="f58d6-111">Requirements</span></span>  
+ <span data-ttu-id="f58d6-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f58d6-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e46f4-113">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e46f4-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f58d6-113">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f58d6-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e46f4-114">**程式庫：**包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="e46f4-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f58d6-114">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="f58d6-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e46f4-115">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e46f4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f58d6-115">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f58d6-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e46f4-116">請參閱</span><span class="sxs-lookup"><span data-stu-id="e46f4-116">See Also</span></span>  
- [<span data-ttu-id="e46f4-117">IHostMemoryManager 介面</span><span class="sxs-lookup"><span data-stu-id="e46f4-117">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f58d6-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f58d6-116">See also</span></span>
+- [<span data-ttu-id="f58d6-117">IHostMemoryManager 介面</span><span class="sxs-lookup"><span data-stu-id="f58d6-117">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

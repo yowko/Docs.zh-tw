@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4c3aedea4cc8ce2d8fb8c0c0bf3fead727dcf64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ed868febb5eb82cf73cfc5b0633d86bf4e1315c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561617"
 ---
-# <a name="corsymsearchpolicyattributes-enumeration"></a><span data-ttu-id="5b79b-102">CorSymSearchPolicyAttributes 列舉</span><span class="sxs-lookup"><span data-stu-id="5b79b-102">CorSymSearchPolicyAttributes Enumeration</span></span>
-<span data-ttu-id="5b79b-103">指定要進行搜尋的符號讀取器時使用的原則。</span><span class="sxs-lookup"><span data-stu-id="5b79b-103">Specifies the policy to be used when doing a search for a symbol reader.</span></span> <span data-ttu-id="5b79b-104">這些常數由[isymunmanagedbinder2:: Getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)和[isymunmanagedbinder3:: Getreaderfromcallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="5b79b-104">These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.</span></span>  
+# <a name="corsymsearchpolicyattributes-enumeration"></a><span data-ttu-id="fb1d7-102">CorSymSearchPolicyAttributes 列舉</span><span class="sxs-lookup"><span data-stu-id="fb1d7-102">CorSymSearchPolicyAttributes Enumeration</span></span>
+<span data-ttu-id="fb1d7-103">指定要在進行搜尋的符號讀取器時使用的原則。</span><span class="sxs-lookup"><span data-stu-id="fb1d7-103">Specifies the policy to be used when doing a search for a symbol reader.</span></span> <span data-ttu-id="fb1d7-104">這些常數由[ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)並[ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="fb1d7-104">These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="5b79b-105">它是從受信任的來源開啟程式資料庫 (PDB) 檔的安全性風險。</span><span class="sxs-lookup"><span data-stu-id="5b79b-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
+>  <span data-ttu-id="fb1d7-105">它是從受信任的來源開啟程式資料庫 (PDB) 檔的安全性風險。</span><span class="sxs-lookup"><span data-stu-id="fb1d7-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b79b-106">語法</span><span class="sxs-lookup"><span data-stu-id="5b79b-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fb1d7-106">語法</span><span class="sxs-lookup"><span data-stu-id="fb1d7-106">Syntax</span></span>  
   
 ```  
 typedef enum CorSymSearchPolicyAttributes  
@@ -41,17 +41,17 @@ typedef enum CorSymSearchPolicyAttributes
 } CorSymSearchPolicyAttributes;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5b79b-107">成員</span><span class="sxs-lookup"><span data-stu-id="5b79b-107">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="fb1d7-107">成員</span><span class="sxs-lookup"><span data-stu-id="fb1d7-107">Members</span></span>  
   
-|<span data-ttu-id="5b79b-108">成員</span><span class="sxs-lookup"><span data-stu-id="5b79b-108">Member</span></span>|<span data-ttu-id="5b79b-109">描述</span><span class="sxs-lookup"><span data-stu-id="5b79b-109">Description</span></span>|  
+|<span data-ttu-id="fb1d7-108">成員</span><span class="sxs-lookup"><span data-stu-id="fb1d7-108">Member</span></span>|<span data-ttu-id="fb1d7-109">描述</span><span class="sxs-lookup"><span data-stu-id="fb1d7-109">Description</span></span>|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|<span data-ttu-id="5b79b-110">查詢符號搜尋路徑的登錄。</span><span class="sxs-lookup"><span data-stu-id="5b79b-110">Queries the registry for symbol search paths.</span></span>|  
-|`AllowSymbolServerAccess`|<span data-ttu-id="5b79b-111">存取符號伺服器。</span><span class="sxs-lookup"><span data-stu-id="5b79b-111">Accesses a symbol server.</span></span>|  
-|`AllowOriginalPathAccess`|<span data-ttu-id="5b79b-112">搜尋偵錯目錄中指定的路徑。</span><span class="sxs-lookup"><span data-stu-id="5b79b-112">Searches the path specified in the Debug directory.</span></span>|  
-|`AllowReferencePathAccess`|<span data-ttu-id="5b79b-113">搜尋 PDB 中的.exe 檔案所在的位置。</span><span class="sxs-lookup"><span data-stu-id="5b79b-113">Searches for the PDB in the place where the .exe file is.</span></span>|  
+|`AllowRegistryAccess`|<span data-ttu-id="fb1d7-110">查詢符號搜尋路徑的登錄。</span><span class="sxs-lookup"><span data-stu-id="fb1d7-110">Queries the registry for symbol search paths.</span></span>|  
+|`AllowSymbolServerAccess`|<span data-ttu-id="fb1d7-111">存取符號伺服器。</span><span class="sxs-lookup"><span data-stu-id="fb1d7-111">Accesses a symbol server.</span></span>|  
+|`AllowOriginalPathAccess`|<span data-ttu-id="fb1d7-112">搜尋指定的偵錯目錄中的路徑。</span><span class="sxs-lookup"><span data-stu-id="fb1d7-112">Searches the path specified in the Debug directory.</span></span>|  
+|`AllowReferencePathAccess`|<span data-ttu-id="fb1d7-113">搜尋 PDB 中的.exe 檔案所在的位置。</span><span class="sxs-lookup"><span data-stu-id="fb1d7-113">Searches for the PDB in the place where the .exe file is.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5b79b-114">需求</span><span class="sxs-lookup"><span data-stu-id="5b79b-114">Requirements</span></span>  
- <span data-ttu-id="5b79b-115">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5b79b-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fb1d7-114">需求</span><span class="sxs-lookup"><span data-stu-id="fb1d7-114">Requirements</span></span>  
+ <span data-ttu-id="fb1d7-115">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="fb1d7-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b79b-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5b79b-116">See Also</span></span>  
- [<span data-ttu-id="5b79b-117">診斷符號存放區列舉</span><span class="sxs-lookup"><span data-stu-id="5b79b-117">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="fb1d7-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fb1d7-116">See also</span></span>
+- [<span data-ttu-id="fb1d7-117">診斷符號存放區列舉</span><span class="sxs-lookup"><span data-stu-id="fb1d7-117">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

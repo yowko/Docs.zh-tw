@@ -1,31 +1,23 @@
 ---
-title: "&lt;proceduresignature1&gt;不符合 CLS 標準，因為它多載&lt;proceduresignature2&gt;的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範"
+title: '&lt;proceduresignature1&gt;不符合 CLS 標準，因為它多載&lt;proceduresignature2&gt;的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc40035
 - bc40035
 helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d361759471a8edfa97437bd2503cfaa661fb9678
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0f4eaa09c3d04af350637fba0d672f55040a6466
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626845"
 ---
-# <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a><span data-ttu-id="65bc5-102">&lt;proceduresignature1&gt;不符合 CLS 標準，因為它多載&lt;proceduresignature2&gt;的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範</span><span class="sxs-lookup"><span data-stu-id="65bc5-102">&lt;proceduresignature1&gt; is not CLS-compliant because it overloads &lt;proceduresignature2&gt; which differs from it only by array of array parameter types or by the rank of the array parameter types</span></span>
-<span data-ttu-id="65bc5-103">程序或屬性標示為`<CLSCompliant(True)>`時它會覆寫另一個程序或屬性和其參數清單中唯一的差別是巢狀的層級的不規則陣列陣序。</span><span class="sxs-lookup"><span data-stu-id="65bc5-103">A procedure or property is marked as `<CLSCompliant(True)>` when it overrides another procedure or property and the only difference between their parameter lists is the nesting level of a jagged array or the rank of an array.</span></span>  
+# <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a><span data-ttu-id="c7d6b-102">&lt;proceduresignature1&gt;不符合 CLS 標準，因為它多載&lt;proceduresignature2&gt;的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範</span><span class="sxs-lookup"><span data-stu-id="c7d6b-102">&lt;proceduresignature1&gt; is not CLS-compliant because it overloads &lt;proceduresignature2&gt; which differs from it only by array of array parameter types or by the rank of the array parameter types</span></span>
+<span data-ttu-id="c7d6b-103">程序或屬性會標示為`<CLSCompliant(True)>`時它會覆寫另一個程序或屬性和其參數清單之間唯一的差別是巢狀層級的不規則陣列陣序。</span><span class="sxs-lookup"><span data-stu-id="c7d6b-103">A procedure or property is marked as `<CLSCompliant(True)>` when it overrides another procedure or property and the only difference between their parameter lists is the nesting level of a jagged array or the rank of an array.</span></span>  
   
- <span data-ttu-id="65bc5-104">在下列宣告中，第二個和第三個宣告會產生此錯誤。</span><span class="sxs-lookup"><span data-stu-id="65bc5-104">In the following declarations, the second and third declarations generate this error.</span></span>  
+ <span data-ttu-id="c7d6b-104">在下列宣告中，第二個和第三個宣告會產生這個錯誤。</span><span class="sxs-lookup"><span data-stu-id="c7d6b-104">In the following declarations, the second and third declarations generate this error.</span></span>  
   
  `Overloads Sub processArray(ByVal arrayParam() As Integer)`  
   
@@ -33,23 +25,23 @@ ms.lasthandoff: 12/21/2017
   
  `Overloads Sub processArray(ByVal arrayParam(,) As Integer)`  
   
- <span data-ttu-id="65bc5-105">第二個宣告會變更原始的一維參數`arrayParam`至陣列的陣列。</span><span class="sxs-lookup"><span data-stu-id="65bc5-105">The second declaration changes the original one-dimensional parameter `arrayParam` to an array of arrays.</span></span> <span data-ttu-id="65bc5-106">第三個宣告的變更`arrayParam`二維陣列 (rank 2)。</span><span class="sxs-lookup"><span data-stu-id="65bc5-106">The third declaration changes `arrayParam` to a two-dimensional array (rank 2).</span></span> <span data-ttu-id="65bc5-107">Visual Basic 可讓多載，可以僅由其中一個這些變更與不同，這類多載不符合[語言獨立性以及與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md)（cls） 標準。</span><span class="sxs-lookup"><span data-stu-id="65bc5-107">While Visual Basic allows overloads to differ only by one of these changes, such overloading is not compliant with the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).</span></span>  
+ <span data-ttu-id="c7d6b-105">第二個宣告會變更原始的一維參數`arrayParam`至陣列的陣列。</span><span class="sxs-lookup"><span data-stu-id="c7d6b-105">The second declaration changes the original one-dimensional parameter `arrayParam` to an array of arrays.</span></span> <span data-ttu-id="c7d6b-106">第三個宣告的變更`arrayParam`二維陣列 （也就是陣序 2）。</span><span class="sxs-lookup"><span data-stu-id="c7d6b-106">The third declaration changes `arrayParam` to a two-dimensional array (rank 2).</span></span> <span data-ttu-id="c7d6b-107">Visual Basic 可讓不同僅由其中一個這些變更的多載，這類多載與不相容[Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) （cls） 標準。</span><span class="sxs-lookup"><span data-stu-id="c7d6b-107">While Visual Basic allows overloads to differ only by one of these changes, such overloading is not compliant with the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).</span></span>  
   
- <span data-ttu-id="65bc5-108">將 <xref:System.CLSCompliantAttribute> 套用至程式設計項目時，請將屬性的 `isCompliant` 參數設定為 `True` 或 `False` ，表示符合標準或不符合標準。</span><span class="sxs-lookup"><span data-stu-id="65bc5-108">When you apply the <xref:System.CLSCompliantAttribute> to a programming element, you set the attribute's `isCompliant` parameter to either `True` or `False` to indicate compliance or noncompliance.</span></span> <span data-ttu-id="65bc5-109">這個參數沒有預設值，您必須提供值。</span><span class="sxs-lookup"><span data-stu-id="65bc5-109">There is no default for this parameter, and you must supply a value.</span></span>  
+ <span data-ttu-id="c7d6b-108">將 <xref:System.CLSCompliantAttribute> 套用至程式設計項目時，請將屬性的 `isCompliant` 參數設定為 `True` 或 `False` ，表示符合標準或不符合標準。</span><span class="sxs-lookup"><span data-stu-id="c7d6b-108">When you apply the <xref:System.CLSCompliantAttribute> to a programming element, you set the attribute's `isCompliant` parameter to either `True` or `False` to indicate compliance or noncompliance.</span></span> <span data-ttu-id="c7d6b-109">這個參數沒有預設值，您必須提供值。</span><span class="sxs-lookup"><span data-stu-id="c7d6b-109">There is no default for this parameter, and you must supply a value.</span></span>  
   
- <span data-ttu-id="65bc5-110">如果您未將 <xref:System.CLSCompliantAttribute> 套用至項目，則視為不符合標準。</span><span class="sxs-lookup"><span data-stu-id="65bc5-110">If you do not apply the <xref:System.CLSCompliantAttribute> to an element, it is considered to be noncompliant.</span></span>  
+ <span data-ttu-id="c7d6b-110">如果您未將 <xref:System.CLSCompliantAttribute> 套用至項目，則視為不符合標準。</span><span class="sxs-lookup"><span data-stu-id="c7d6b-110">If you do not apply the <xref:System.CLSCompliantAttribute> to an element, it is considered to be noncompliant.</span></span>  
   
- <span data-ttu-id="65bc5-111">根據預設，這個訊息是一個警告。</span><span class="sxs-lookup"><span data-stu-id="65bc5-111">By default, this message is a warning.</span></span> <span data-ttu-id="65bc5-112">如需隱藏警告或將警告視為錯誤的相關資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="65bc5-112">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="c7d6b-111">根據預設，這個訊息是一個警告。</span><span class="sxs-lookup"><span data-stu-id="c7d6b-111">By default, this message is a warning.</span></span> <span data-ttu-id="c7d6b-112">如需隱藏警告或將警告視為錯誤的相關資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="c7d6b-112">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="65bc5-113">**錯誤 ID:** BC40035</span><span class="sxs-lookup"><span data-stu-id="65bc5-113">**Error ID:** BC40035</span></span>  
+ <span data-ttu-id="c7d6b-113">**錯誤 ID:** BC40035</span><span class="sxs-lookup"><span data-stu-id="c7d6b-113">**Error ID:** BC40035</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="65bc5-114">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="65bc5-114">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c7d6b-114">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="c7d6b-114">To correct this error</span></span>  
   
--   <span data-ttu-id="65bc5-115">如果您需要 cls 符合性，定義您的多載，可以只將這個說明網頁所提到的變更的多種方式方面與彼此不同。</span><span class="sxs-lookup"><span data-stu-id="65bc5-115">If you require CLS compliance, define your overloads to differ from each other in more ways than only the changes cited on this Help page.</span></span>  
+-   <span data-ttu-id="c7d6b-115">如果您需要 cls 符合性，定義您的多載方面與彼此不同，在更多的方法，只將這個說明網頁所述的變更。</span><span class="sxs-lookup"><span data-stu-id="c7d6b-115">If you require CLS compliance, define your overloads to differ from each other in more ways than only the changes cited on this Help page.</span></span>  
   
--   <span data-ttu-id="65bc5-116">如果您需要的多載的差別，只要在此說明所提到的變更頁面中，移除<xref:System.CLSCompliantAttribute>從其定義或將它們標記為`<CLSCompliant(False)>`。</span><span class="sxs-lookup"><span data-stu-id="65bc5-116">If you require that the overloads differ only by the changes cited on this Help page, remove the <xref:System.CLSCompliantAttribute> from their definitions or mark them as `<CLSCompliant(False)>`.</span></span>  
+-   <span data-ttu-id="c7d6b-116">如果您需要多載的差別只能由引用此說明的變更頁面上，移除<xref:System.CLSCompliantAttribute>從其定義或將它們標記為`<CLSCompliant(False)>`。</span><span class="sxs-lookup"><span data-stu-id="c7d6b-116">If you require that the overloads differ only by the changes cited on this Help page, remove the <xref:System.CLSCompliantAttribute> from their definitions or mark them as `<CLSCompliant(False)>`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65bc5-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="65bc5-117">See Also</span></span>  
-   
- [<span data-ttu-id="65bc5-118">程序多載化</span><span class="sxs-lookup"><span data-stu-id="65bc5-118">Procedure Overloading</span></span>](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [<span data-ttu-id="65bc5-119">多載</span><span class="sxs-lookup"><span data-stu-id="65bc5-119">Overloads</span></span>](../../../visual-basic/language-reference/modifiers/overloads.md)
+## <a name="see-also"></a><span data-ttu-id="c7d6b-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c7d6b-117">See also</span></span>
+
+- [<span data-ttu-id="c7d6b-118">程序多載化</span><span class="sxs-lookup"><span data-stu-id="c7d6b-118">Procedure Overloading</span></span>](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+- [<span data-ttu-id="c7d6b-119">多載</span><span class="sxs-lookup"><span data-stu-id="c7d6b-119">Overloads</span></span>](../../../visual-basic/language-reference/modifiers/overloads.md)

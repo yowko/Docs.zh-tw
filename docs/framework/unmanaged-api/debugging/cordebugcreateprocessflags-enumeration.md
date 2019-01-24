@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fdc37676bfae8ac90fde0a7a5b11037b8357e25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83cee30ed9831accb96de17768f63e7f401908f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495941"
 ---
-# <a name="cordebugcreateprocessflags-enumeration"></a><span data-ttu-id="53216-102">CorDebugCreateProcessFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="53216-102">CorDebugCreateProcessFlags Enumeration</span></span>
-<span data-ttu-id="53216-103">提供可用的呼叫中的其他偵錯選項[icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="53216-103">Provides additional debugging options that can be used in a call to the [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) method.</span></span>  
+# <a name="cordebugcreateprocessflags-enumeration"></a><span data-ttu-id="42b30-102">CorDebugCreateProcessFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="42b30-102">CorDebugCreateProcessFlags Enumeration</span></span>
+<span data-ttu-id="42b30-103">提供可用的呼叫中的其他偵錯選項[icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="42b30-103">Provides additional debugging options that can be used in a call to the [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="53216-104">語法</span><span class="sxs-lookup"><span data-stu-id="53216-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="42b30-104">語法</span><span class="sxs-lookup"><span data-stu-id="42b30-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugCreateProcessFlags {  
@@ -34,20 +34,20 @@ typedef enum CorDebugCreateProcessFlags {
 } CorDebugCreateProcessFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="53216-105">成員</span><span class="sxs-lookup"><span data-stu-id="53216-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="42b30-105">成員</span><span class="sxs-lookup"><span data-stu-id="42b30-105">Members</span></span>  
   
-|<span data-ttu-id="53216-106">成員</span><span class="sxs-lookup"><span data-stu-id="53216-106">Member</span></span>|<span data-ttu-id="53216-107">描述</span><span class="sxs-lookup"><span data-stu-id="53216-107">Description</span></span>|  
+|<span data-ttu-id="42b30-106">成員</span><span class="sxs-lookup"><span data-stu-id="42b30-106">Member</span></span>|<span data-ttu-id="42b30-107">描述</span><span class="sxs-lookup"><span data-stu-id="42b30-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_NO_SPECIAL_OPTIONS`|<span data-ttu-id="53216-108">不設定任何特殊選項。</span><span class="sxs-lookup"><span data-stu-id="53216-108">No special options are set.</span></span>|  
+|`DEBUG_NO_SPECIAL_OPTIONS`|<span data-ttu-id="42b30-108">不為任何特殊選項。</span><span class="sxs-lookup"><span data-stu-id="42b30-108">No special options are set.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="53216-109">需求</span><span class="sxs-lookup"><span data-stu-id="53216-109">Requirements</span></span>  
- <span data-ttu-id="53216-110">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="53216-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="42b30-109">需求</span><span class="sxs-lookup"><span data-stu-id="42b30-109">Requirements</span></span>  
+ <span data-ttu-id="42b30-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="42b30-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="53216-111">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="53216-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="42b30-111">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="42b30-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="53216-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="53216-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="42b30-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="42b30-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="53216-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53216-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="42b30-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42b30-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53216-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="53216-114">See Also</span></span>  
- [<span data-ttu-id="53216-115">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="53216-115">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="42b30-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="42b30-114">See also</span></span>
+- [<span data-ttu-id="42b30-115">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="42b30-115">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

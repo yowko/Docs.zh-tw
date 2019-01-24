@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c5d3d1b868849d17b2068eecfcfeea0f1e598f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af4e9124140c2b311fb2c10800200f5d4d8dc679
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545760"
 ---
-# <a name="isymunmanagedbindergetreaderfromstream-method"></a><span data-ttu-id="56219-102">ISymUnmanagedBinder::GetReaderFromStream 方法</span><span class="sxs-lookup"><span data-stu-id="56219-102">ISymUnmanagedBinder::GetReaderFromStream Method</span></span>
-<span data-ttu-id="56219-103">提供中繼資料介面和包含符號存放區的資料流，傳回的正確[ISymUnmanagedReader](isymunmanagedreader-interface.md)從給定的符號存放區的結構，將讀取的偵錯符號。</span><span class="sxs-lookup"><span data-stu-id="56219-103">Given a metadata interface and a stream that contains the symbol store, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols from the given symbol store.</span></span>  
+# <a name="isymunmanagedbindergetreaderfromstream-method"></a><span data-ttu-id="ab412-102">ISymUnmanagedBinder::GetReaderFromStream 方法</span><span class="sxs-lookup"><span data-stu-id="ab412-102">ISymUnmanagedBinder::GetReaderFromStream Method</span></span>
+<span data-ttu-id="ab412-103">提供中繼資料介面並包含符號存放區的資料流，傳回的正確[ISymUnmanagedReader](isymunmanagedreader-interface.md)指定的符號存放區的結構，將讀取偵錯符號。</span><span class="sxs-lookup"><span data-stu-id="ab412-103">Given a metadata interface and a stream that contains the symbol store, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols from the given symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56219-104">語法</span><span class="sxs-lookup"><span data-stu-id="56219-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab412-104">語法</span><span class="sxs-lookup"><span data-stu-id="ab412-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReaderFromStream(  
@@ -36,21 +36,21 @@ HRESULT GetReaderFromStream(
     [out,retval] ISymUnmanagedReader **pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="56219-105">參數</span><span class="sxs-lookup"><span data-stu-id="56219-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ab412-105">參數</span><span class="sxs-lookup"><span data-stu-id="ab412-105">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="56219-106">[in]中繼資料匯入介面指標。</span><span class="sxs-lookup"><span data-stu-id="56219-106">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="ab412-106">[in]中繼資料匯入介面指標。</span><span class="sxs-lookup"><span data-stu-id="ab412-106">[in] A pointer to the metadata import interface.</span></span>  
   
  `pstream`  
- <span data-ttu-id="56219-107">[in]包含符號存放區的資料流指標。</span><span class="sxs-lookup"><span data-stu-id="56219-107">[in] A pointer to the stream that contains the symbol store.</span></span>  
+ <span data-ttu-id="ab412-107">[in]包含符號存放區的資料流指標。</span><span class="sxs-lookup"><span data-stu-id="ab412-107">[in] A pointer to the stream that contains the symbol store.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="56219-108">[out]設定的指標所傳回[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="56219-108">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
+ <span data-ttu-id="ab412-108">[out]設定指標所傳回[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="ab412-108">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="56219-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="56219-109">Return Value</span></span>  
- <span data-ttu-id="56219-110">如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="56219-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ab412-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="ab412-109">Return Value</span></span>  
+ <span data-ttu-id="ab412-110">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="ab412-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56219-111">需求</span><span class="sxs-lookup"><span data-stu-id="56219-111">Requirements</span></span>  
- <span data-ttu-id="56219-112">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="56219-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab412-111">需求</span><span class="sxs-lookup"><span data-stu-id="ab412-111">Requirements</span></span>  
+ <span data-ttu-id="ab412-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ab412-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56219-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="56219-113">See Also</span></span>  
- [<span data-ttu-id="56219-114">ISymUnmanagedBinder 介面</span><span class="sxs-lookup"><span data-stu-id="56219-114">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ab412-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ab412-113">See also</span></span>
+- [<span data-ttu-id="ab412-114">ISymUnmanagedBinder 介面</span><span class="sxs-lookup"><span data-stu-id="ab412-114">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
