@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 30d7fcbca82ee7336caf36edb5b01bdd4aa6a290
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dc3e1d4afb0bdccc9e4806b7e9f1d82ef2c30539
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446736"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635517"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter 介面
-提供方法，以表示會處理指定的語彙基元。  
+提供方法，以表示將會處理指定的語彙基元。  
   
 > [!NOTE]
 >  `IHostFilter`介面必須由用戶端實作。  
@@ -36,13 +36,13 @@ ms.locfileid: "33446736"
 |[MarkToken 方法](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|表示將處理指定的中繼資料語彙基元。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

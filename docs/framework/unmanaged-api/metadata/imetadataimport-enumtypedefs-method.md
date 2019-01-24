@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53ed486a885514d02bf2be9c473e102c2c5f0e15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0e6314a76433276561a8b4b87a852464dae69824
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656254"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs 方法
 列舉代表目前範圍內的所有類型的 TypeDef 語彙基元。  
@@ -40,7 +40,7 @@ HRESULT EnumTypeDefs (
   
 #### <a name="parameters"></a>參數  
  `phEnum`  
- [out]新的列舉值指標。 這必須是 NULL 的第一個呼叫此方法。  
+ [out]新的列舉值指標。 首次呼叫這個方法，這必須是 NULL。  
   
  `rTypeDefs`  
  [in]陣列，用來儲存的 TypeDef 語彙基元。  
@@ -49,7 +49,7 @@ HRESULT EnumTypeDefs (
  [in] `rTypeDefs` 陣列的大小上限。  
   
  `pcTypeDefs`  
- [out]傳回的 TypeDef 語彙基元數目`rTypeDefs`。  
+ [out]中傳回的 TypeDef 語彙基元數目`rTypeDefs`。  
   
 ## <a name="return-value"></a>傳回值  
   
@@ -59,17 +59,17 @@ HRESULT EnumTypeDefs (
 |`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcTypeDefs`為零。|  
   
 ## <a name="remarks"></a>備註  
- TypeDef 語彙基元所代表的類型，例如類別或介面，以及透過 擴充性機制加入任何型別。  
+ TypeDef 語彙基元所代表的類型，例如類別或介面，以及透過擴充性機制新增任何型別。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

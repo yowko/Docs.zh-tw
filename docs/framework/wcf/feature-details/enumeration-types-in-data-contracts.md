@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21f1f948e0bcd088cbe14316760708e10285124b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649306"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>資料合約中的列舉型別
 列舉可以在資料合約模型中表示。 本主題將逐步介紹幾個範例，說明程式設計模型。  
@@ -30,7 +30,7 @@ ms.locfileid: "33494513"
  您可以和往常一樣，對列舉資料合約使用 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性 (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 和 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>)。  
   
 ### <a name="enumeration-member-values"></a>列舉成員值  
- 資料合約通常包括列舉成員名稱，而不是數值。 不過，使用時的資料合約模型中，如果接收端的 WCF 用戶端，匯出的結構描述會保存數值。 請注意，這種情況使用時不[使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
+ 資料合約通常包括列舉成員名稱，而不是數值。 不過，使用時的資料合約模型中，如果接收端的 WCF 用戶端，匯出的結構描述會保存數值。 請注意，這不是使用時[使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
   
  在前例中，如果 `condition` 設定為 `Used` 且資料序列化為 XML，結果 XML 就是 `<condition>Used</condition>` 而不是 `<condition>1</condition>`。 因此，下列資料合約相等於 `CarConditionEnum` 的資料合約。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "33494513"
   
 1.  請嘗試尋找對應至數值的列舉成員 (已套用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性)。 如果找到，請傳送只包含該成員的清單。  
   
-2.  請嘗試將數值中斷至某個總和，以具有對應至該總和之各部分的列舉成員 (每個都套用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性)。 傳送所有這些成員的清單。 請注意，*窮盡演算法*用來尋找此類總和，因此沒有不論其是否有找到此類總和不保證。 如果要避免這個問題，請確保列舉成員的數值是二的次方。  
+2.  請嘗試將數值中斷至某個總和，以具有對應至該總和之各部分的列舉成員 (每個都套用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性)。 傳送所有這些成員的清單。 請注意，*窮盡演算法*用來尋找此類總和，因此沒有此類總和位於，即使它存在於不保證。 如果要避免這個問題，請確保列舉成員的數值是二的次方。  
   
 3.  如果上述兩個步驟失敗，且數值非零，請擲回 <xref:System.Runtime.Serialization.SerializationException>。 如果數值為零，則傳送空白清單。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "33494513"
  [!code-csharp[c_DataContractEnumerations#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#5)]
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

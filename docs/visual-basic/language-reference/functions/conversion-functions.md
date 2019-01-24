@@ -12,12 +12,12 @@ helpviewer_keywords:
 - functions [Visual Basic], conversion
 - dates [Visual Basic], converting
 ms.assetid: 8a8fb553-a8ac-424e-8103-26eea25eaa71
-ms.openlocfilehash: a5b9c4c4b65f358eb16c76e808f85d1618820836
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f867742aef5e5a56daa9e4557036d5b17b61f48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643529"
 ---
 # <a name="conversion-functions-visual-basic"></a>轉換函式 (Visual Basic)
 
@@ -38,7 +38,7 @@ ms.locfileid: "33598136"
 [CShort 函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
 [CSng 函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
 [CStr 函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
-[CType 函式](../../../visual-basic/language-reference/functions/ctype-function.md)   
+[CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)   
 [CUInt 函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
 [CULng 函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
 [CUShort 函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
@@ -50,5 +50,5 @@ ms.locfileid: "33598136"
 
 ## <a name="see-also"></a>另請參閱
 
-[類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
-[轉換資料類型](../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
+- [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [轉換資料類型](../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)

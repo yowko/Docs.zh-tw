@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 790fe629ae709a9fcb57d5b551e9fa7aecfb04f5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9b1db3b3628719eca178ababd0dc9728b491e7b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658152"
 ---
 # <a name="wcf-data-services-resources"></a>WCF 資料服務資源
 下列位置可以找到 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的簡介主題。 這些主題中有許多也包含其中含有詳細資訊的相關主題連結。  
@@ -47,17 +47,17 @@ ms.locfileid: "44177056"
  [資料存取和儲存開發人員中心](https://go.microsoft.com/fwlink/?LinkId=91903)  
  可尋找用於處理資料的相關資訊及資源的中央位置。  
   
- [資料平台 How Do I？影片： WCF Data Services 系列](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [資料平台 How Do I？影片：WCF Data Services 系列](https://go.microsoft.com/fwlink/?LinkId=124600)  
  包含一組影片，示範如何建置及存取資料服務。  
   
- [概觀： WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
+ [概觀：WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
  此白皮書提供與 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 優點有關的高階詳細資訊。  
   
  [使用 Microsoft WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131075)  
  此白皮書所提供的其他資訊和範例，可用來建立資料服務，並存取用戶端應用程式中的資料服務。  
   
- [實體-關聯性模型： 對於統一的資料檢視](https://go.microsoft.com/fwlink/?LinkId=91909)的 Peter Pin-shan Chen，麻省 Institute 的技術  
+ [實體-關聯性模型：對於資料的統一檢視](https://go.microsoft.com/fwlink/?LinkId=91909)的 Peter Pin-shan Chen，麻省 Institute 的技術  
  描述 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 實作之實體關聯式模型的基本資訊。 完稿於 1976 年，這是電腦界最常引用的文件。  
   
-## <a name="see-also"></a>另請參閱  
- [快速入門](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+## <a name="see-also"></a>另請參閱
+- [快速入門](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 03615c1c49f2acf2a7c7f0910860f36de0a4f2d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e9e2f83e15e4e1703ed42dfb479efb8feed3bb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547338"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661278"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject 的安全建構函式模式
-一般而言，類別建構函式不應該呼叫回呼 (例如，虛擬方法或委派)，因為建構函式可以當成衍生類別之建構函式的基底初始化來呼叫。 進入虛擬項目，可能是在任何指定物件的未完成初始化狀態中完成的。 不過，屬性系統本身會在內部呼叫並公開回呼，以做為相依性屬性系統的一部分。 簡單作業與相依性屬性值設定為<xref:System.Windows.DependencyObject.SetValue%2A>呼叫可能會包含回呼某處判斷。 基於這個理由，在建構函式的主體內設定相依性屬性值時應特別小心，如果您的類型是用來做為基底類別，這可能就會發生問題。 沒有實作的特定模式<xref:System.Windows.DependencyObject>可避免特定問題與相依性屬性的狀態和固有的回呼，其中記載於此處的建構函式。  
+一般而言，類別建構函式不應該呼叫回呼 (例如，虛擬方法或委派)，因為建構函式可以當成衍生類別之建構函式的基底初始化來呼叫。 進入虛擬項目，可能是在任何指定物件的未完成初始化狀態中完成的。 不過，屬性系統本身會在內部呼叫並公開回呼，以做為相依性屬性系統的一部分。 使用相依性屬性值設定為簡單作業<xref:System.Windows.DependencyObject.SetValue%2A>呼叫可能會包含回呼某處中決定。 基於這個理由，在建構函式的主體內設定相依性屬性值時應特別小心，如果您的類型是用來做為基底類別，這可能就會發生問題。 沒有實作的特定模式<xref:System.Windows.DependencyObject>可避免與相依性屬性狀態和繼承回呼中，特定的問題所記載的建構函式。  
   
  
   
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>屬性系統虛擬方法  
- 下列虛擬方法或回呼可能會在計算的期間呼叫<xref:System.Windows.DependencyObject.SetValue%2A>設定相依性屬性值的呼叫： <xref:System.Windows.ValidateValueCallback>， <xref:System.Windows.PropertyChangedCallback>， <xref:System.Windows.CoerceValueCallback>， <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>。 這其中每一個虛擬方法或回呼，會在展開多樣化的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統和相依性屬性時具有特殊用途。 如需如何使用這些虛擬項目來自訂屬性值判斷的詳細資訊，請參閱[相依性屬性回呼和驗證](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)。  
+ 下列虛擬方法或回呼可能在計算期間呼叫<xref:System.Windows.DependencyObject.SetValue%2A>呼叫，以設定相依性屬性值： <xref:System.Windows.ValidateValueCallback>， <xref:System.Windows.PropertyChangedCallback>， <xref:System.Windows.CoerceValueCallback>， <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>。 這其中每一個虛擬方法或回呼，會在展開多樣化的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統和相依性屬性時具有特殊用途。 如需如何使用這些虛擬項目來自訂屬性值判斷的詳細資訊，請參閱[相依性屬性回呼和驗證](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)。  
   
 ### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>FXCop 規則強制與屬性系統虛擬項目  
  如果您使用 Microsoft 工具 FXCop 做為建置流程的一部分，而且是衍生自從呼叫基底建構函式的特定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 架構類別，或是在衍生類別中實作自己的相依性屬性，則您可能會遇到特殊的 FXCop 規則違規。 此違規的名稱字串為：  
@@ -62,7 +62,7 @@ public class MyClass : DependencyObject
 }  
 ```  
   
- 當應用程式程式碼呼叫 `new MyClass(objectvalue)` 時，這會呼叫預設建構函式和基底類別建構函式。 然後它會設定`Property1 = object1`，呼叫虛擬方法`OnPropertyChanged`上擁有`MyClass` <xref:System.Windows.DependencyObject>。  覆寫是指尚未初始化的 `_myList`。  
+ 當應用程式程式碼呼叫 `new MyClass(objectvalue)` 時，這會呼叫預設建構函式和基底類別建構函式。 然後它會設定`Property1 = object1`，它會呼叫虛擬方法`OnPropertyChanged`上擁有`MyClass` <xref:System.Windows.DependencyObject>。  覆寫是指尚未初始化的 `_myList`。  
   
  避免這些問題的方法之一是，確定回呼只會使用其他相依性屬性，而且每個這類相依性屬性都已建立預設值做為其已註冊中繼資料的一部分。  
   
@@ -112,9 +112,9 @@ public MyClass : SomeBaseClass {
  在基底類型具有多個簽章的情況下，您必須刻意讓所有可能的簽章與您自己的建構函式實作相符，後者會使用在進一步設定屬性之前呼叫類別預設建構函式的建議模式。  
   
 #### <a name="setting-dependency-properties-with-setvalue"></a>使用 SetValue 設定相依性屬性  
- 如果您要設定此屬性，沒有屬性設定方便起見，包裝函式，以及設定值，這些相同的模式適用於<xref:System.Windows.DependencyObject.SetValue%2A>。 您呼叫<xref:System.Windows.DependencyObject.SetValue%2A>該傳遞參數建構函式也應該呼叫類別的預設建構函式進行初始化。  
+ 如果您要設定此屬性，沒有屬性設定方便起見，包裝函式，以及設定值，這些相同的模式適用於<xref:System.Windows.DependencyObject.SetValue%2A>。 您呼叫<xref:System.Windows.DependencyObject.SetValue%2A>該通過建構函式參數也應該呼叫類別的預設建構函式進行初始化。  
   
-## <a name="see-also"></a>另請參閱  
- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+## <a name="see-also"></a>另請參閱
+- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
