@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83928696fc7fdfaf2eb944f4cdb9eebecdece0b3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: be5d580c28a15a58cad6c5a2231d3a87e25c0e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495341"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 結構
 [在 .NET Framework 4.5.2 及更新版本中支援]  
@@ -46,7 +46,7 @@ typedef struct _CorDebugEHClause {
 |------------|-----------------|  
 |`Flags`|描述 EH 子句中之例外狀況資訊的位元欄位。 如需詳細資訊，請參閱＜備註＞一節。|  
 |`TryOffset`|`try` 區塊從方法主體開頭位移的位元組數。|  
-|`TryLength`|`try` 區塊的長度 (位元組)。|  
+|`TryLength`| `try` 區塊的長度 (位元組)。|  
 |`HandlerOffset`|此 `try` 區塊之處理常式的位置。|  
 |`HandlerLength`|處理常式程式碼的大小 (位元組)。|  
 |`ClassToken`|以類型為基礎之例外狀況處理常式的中繼資料 Token。|  
@@ -55,7 +55,7 @@ typedef struct _CorDebugEHClause {
 ## <a name="remarks"></a>備註  
  陣列`CoreDebugEHClause`值由[GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)方法。  
   
- EH 子句資訊以 CLI 規格定義。 如需詳細資訊，請參閱 <<c0> [ 標準 ECMA-355: Common Language Infrastructure (CLI)，第 6 版](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。  
+ EH 子句資訊以 CLI 規格定義。 如需詳細資訊，請參閱[標準 ECMA-355:通用語言基礎結構 (CLI)，第 6 版](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。  
   
  `flags` 欄位可以包含下列旗標。 請注意，CorDebug.idl 或 CorDebug.h 中並未定義這些旗標。  
   
@@ -69,12 +69,12 @@ typedef struct _CorDebugEHClause {
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、CorDebug.h  
+ **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [GetEHClauses 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  
- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+## <a name="see-also"></a>另請參閱
+- [GetEHClauses 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)
+- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

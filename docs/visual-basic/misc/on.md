@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-ms.openlocfilehash: f7412d11acfa16b5e03f7ee9e917159e47409297
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e26a2380bbb0591788adf98078f4290df849ae0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684810"
 ---
 # <a name="on-visual-basic"></a>On (Visual Basic)
 導入了執行階段錯誤的回應，或開啟編譯器選項。  
   
- 在查詢中，識別所要加入集合的索引鍵。  
+ 在查詢中，識別要聯結之集合的索引鍵。  
   
 ## <a name="remarks"></a>備註  
  `On`關鍵字用於以下內容：  
@@ -34,5 +34,5 @@ ms.locfileid: "33640589"
   
  [Option Strict 陳述式](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>另請參閱  
- [關鍵字](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>另請參閱
+- [關鍵字](../../visual-basic/language-reference/keywords/index.md)

@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e5c8449e72414775c40ced2c344e12d5137ac03f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200954"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546409"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > 項目
 
 指定要包含的組態檔。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<Assemblybinding> >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration >**
+&nbsp;&nbsp;[**\<assemblyBinding>**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**
 
 ## <a name="syntax"></a>語法
 
@@ -52,10 +52,10 @@ ms.locfileid: "47200954"
 
 ## <a name="remarks"></a>備註
 
-**\<LinkedConfiguration >** 項目可簡化元件組件的服務。 如果一或多個應用程式會使用具有組態檔位於已知位置中的組件，可以使用使用組件的應用程式的組態檔 **\<linkedConfiguration >** 包含組件的組態檔，而不是直接包括組態資訊的項目。 當元件組件受到服務時，更新常見的組態檔提供使用組件的所有應用程式的更新的組態資訊。
+ **\<LinkedConfiguration >** 項目可簡化元件組件的服務。 如果一或多個應用程式會使用具有組態檔位於已知位置中的組件，可以使用使用組件的應用程式的組態檔 **\<linkedConfiguration >** 包含組件的組態檔，而不是直接包括組態資訊的項目。 當元件組件受到服務時，更新常見的組態檔提供使用組件的所有應用程式的更新的組態資訊。
 
 > [!NOTE]
-> **\<LinkedConfiguration >** 與 Windows 並排顯示的資訊清單的應用程式不支援項目。
+>  **\<LinkedConfiguration >** 與 Windows 並排顯示的資訊清單的應用程式不支援項目。
 
 下列規則管理連結的組態檔的使用：
 
@@ -67,7 +67,7 @@ ms.locfileid: "47200954"
 
 - 所有連結的組態檔會合併以形成一個檔案，類似的行為`#include`C/c + + 指示詞。
 
-- **\<LinkedConfiguration >** 項目只允許在應用程式組態檔，它會忽略*Machine.config*。
+-  **\<LinkedConfiguration >** 項目只允許在應用程式組態檔，它會忽略*Machine.config*。
 
 - 已偵測到循環參考，並終止。 也就是說，如果 **\<linkedConfiguration >** 的一系列的組態檔項目形成迴圈，是偵測到迴圈，並將其停止。
 
@@ -85,5 +85,5 @@ ms.locfileid: "47200954"
 
 ## <a name="see-also"></a>另請參閱
 
-[**\<Assemblybinding> >** 項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-[適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
+- [**\<Assemblybinding> >** 項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
+- [適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

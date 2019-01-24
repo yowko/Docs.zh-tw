@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: cf798ac88ba83e890086cec7424c8c363980718f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc3e4517e0bb194508ccb0598920a3bdd1299e5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573279"
 ---
 # <a name="row-error-information"></a>資料列錯誤資訊
 編輯 <xref:System.Data.DataTable> 中的值時，若要避免必須在每次發生資料列錯誤時都回應，則可以將錯誤資訊加入至資料列中，供日後使用。 針對這項用途，<xref:System.Data.DataRow> 物件會為每個資料列提供 <xref:System.Data.DataRow.RowError%2A> 屬性。 將資料加入至**RowError**屬性**DataRow**設定<xref:System.Data.DataRow.HasErrors%2A>屬性**DataRow**至**true**。 如果**DataRow**屬於**DataTable**，並**DataRow.HasErrors**是**true**， **DataTable.HasErrors**屬性也是 **，則為 true**。 這同樣適用於**資料集**要**DataTable**所屬。 在測試是否有錯誤時，您可以檢查**HasErrors**屬性來判斷錯誤資訊是否已新增至任何資料列。 如果**HasErrors**是 **，則為 true**，您可以使用<xref:System.Data.DataTable.GetErrors%2A>方法**DataTable**傳回和檢查的錯誤，資料列，如下列範例所示。  
@@ -77,9 +77,9 @@ protected static void OnRowChanged(
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Data.DataColumnCollection>  
- <xref:System.Data.DataRow>  
- <xref:System.Data.DataTable>  
- [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Data.DataColumnCollection>
+- <xref:System.Data.DataRow>
+- <xref:System.Data.DataTable>
+- [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

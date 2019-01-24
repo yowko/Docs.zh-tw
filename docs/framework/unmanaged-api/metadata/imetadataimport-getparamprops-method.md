@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95850448504fd863f2726a7fb7574436476a6dc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685525"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps 方法
 取得指定 ParamDef 語彙基元所參考參數的中繼資料值。  
@@ -46,44 +46,44 @@ HRESULT GetParamProps (
   
 #### <a name="parameters"></a>參數  
  `tk`  
- [in]ParamDef 語彙基元，代表要傳回的中繼資料的參數。  
+ [in]ParamDef 語彙基元，表示要傳回的中繼資料的參數。  
   
  `pmd`  
- [out]代表方法的 MethodDef 語彙基元的指標會接受參數。  
+ [out]表示方法的 MethodDef 語彙基元的指標，會接受參數。  
   
  `pulSequence`  
  [out]方法引數清單中的參數序數位置。  
   
  `szName`  
- [out]要保存的參數名稱的緩衝區。  
+ [out]若要保留的參數名稱的緩衝區。  
   
  `cchName`  
- [in]要求的大小，以寬字元`szName`。  
+ [in]所要求的大小，以寬字元為單位的`szName`。  
   
  `pchName`  
- [out]傳回的大小的寬字元`szName`。  
+ [out]寬字元在傳回的大小`szName`。  
   
  `pdwAttr`  
- [out]任何參數相關聯的屬性旗標指標。  
+ [out]任何與參數相關聯的屬性旗標指標。  
   
  `pdwCPlusTypeFlag`  
- [out]指向的旗標，指定參數是否為<xref:System.ValueType>。  
+ [out]參數是以旗標，指定指標<xref:System.ValueType>。  
   
  `ppValue`  
  [out]參數所傳回的常數字串指標。  
   
  `pcchValue`  
- [out]大小`ppValue`寬字元，或如果`ppValue`不會保存一個字串。  
+ [out]大小`ppValue`寬字元，或零，如果`ppValue`不會保留為字串。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：列印表單的工作區和非工作區 (Visual Basic)
+title: HOW TO：列印用戶端和非工作區的表單 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - title bar [Visual Basic], printing
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - entire form
 - non-client area [Visual Basic], printing
 ms.assetid: 856bb0e4-dbc3-47e2-81cd-4b376cf07757
-ms.openlocfilehash: 5109993146a8d53d5cbeebcc52c018a6f0f57ed5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b32b5bc6cfe45f38b9eb5a0df0778eb02d827d21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685073"
 ---
-# <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>如何：列印表單的工作區和非工作區 (Visual Basic)
+# <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>HOW TO：列印用戶端和非工作區的表單 (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件可讓您完全依照螢幕所示，快速列印表單的影像，而不需要使用 <xref:System.Drawing.Printing.PrintDocument> 元件。 下列程序示範如何列印表單，包括工作區和非工作區。 非工作區包含標題列、框線和捲軸。  
   
- 在 Visual Studio 中，已不再包含 PowerPack 控制項，但您可以下載從[下載中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)。  
+ Visual Studio 中已不再包含 PowerPack 控制項，但您可以從 [下載中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)下載這些控制項。  
   
 ### <a name="to-print-both-the-client-and-the-non-client-areas-of-a-form"></a>列印表單的工作區和非工作區  
   
@@ -37,8 +37,8 @@ ms.locfileid: "43856734"
     > [!NOTE]
     >  在某些作業系統上，可能無法正確列印由 <xref:System.Drawing.Graphics> 方法所繪製的文字或圖形。 在這種情況下，請使用相容的列印方法： `PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption.CompatibleModeFullWindow`)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
- [PrintForm 元件](../../../visual-basic/developing-apps/printing/printform-component.md)  
- [操作說明：列印可捲動的表單](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>
+- [PrintForm 元件](../../../visual-basic/developing-apps/printing/printform-component.md)
+- [如何：列印可捲動的表單](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)

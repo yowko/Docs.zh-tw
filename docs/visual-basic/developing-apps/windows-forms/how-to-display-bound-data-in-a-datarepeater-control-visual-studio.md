@@ -1,21 +1,21 @@
 ---
-title: 如何：在 DataRepeater 控制項中顯示繫結資料 (Visual Studio)
+title: HOW TO：DataRepeater 控制項 (Visual Studio) 中顯示繫結的資料
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DataRepeater, data-binding
 - DataRepeater, displaying bound controls
 ms.assetid: 56a15326-1334-4275-af4e-075cad79e6f7
-ms.openlocfilehash: b96fb33a0dcf80a86d1fcb6e219e5f35b1f7351c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dbcd814edb78c54ce5629a1a8761142674fe6135
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684615"
 ---
-# <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a>如何：在 DataRepeater 控制項中顯示繫結資料 (Visual Studio)
+# <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a>HOW TO：DataRepeater 控制項 (Visual Studio) 中顯示繫結的資料
 最常見的用法<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項是顯示從資料庫或其他資料來源繫結的資料。  
   
- 除了繫結的控制項，您可能想要新增其他控制項，例如靜態標籤或影像中每個項目上重複<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。 如需詳細資訊，請參閱 <<c0> [ 如何： 在 DataRepeater 控制項中顯示未繫結控制項](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)。  
+ 除了繫結的控制項，您可能想要新增其他控制項，例如靜態標籤或影像中每個項目上重複<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。 如需詳細資訊，請參閱[＜How to：顯示未繫結的 DataRepeater 控制項中的控制項](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)。  
   
  您也可以繫結至資料來源在執行階段藉由設定<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>屬性，以`True`並指派資料來源，以便<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DataSource%2A>屬性。 在此情況下，您必須管理與資料來源的所有互動。 如需詳細資訊，請參閱 < [DataRepeater 控制項中的虛擬模式](../../../visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md)。  
   
@@ -44,10 +44,10 @@ ms.locfileid: "42933402"
   
      您可以指定每個欄位顯示何種控制項。 如需詳細資訊，請參閱 <<c0> [ 設定要從資料來源視窗拖曳時要建立的控制項](/visualstudio/data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
- [DataRepeater 控制項簡介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
- [操作說明：在 DataRepeater 控制項中顯示未繫結的控制項](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
- [如何： 利用兩個 DataRepeater 控制項 (Visual Studio) 來建立主從式表單](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
- [操作說明：變更 DataRepeater 控制項的外觀](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
- [ DataRepeater 控制項進行疑難排解](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>
+- [DataRepeater 控制項簡介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
+- [如何：DataRepeater 控制項中顯示未繫結的控制項](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)
+- [如何：使用兩個 DataRepeater 控制項 (Visual Studio) 來建立主從式表單](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)
+- [如何：變更 DataRepeater 控制項的外觀](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
+- [ DataRepeater 控制項進行疑難排解](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

@@ -2,12 +2,12 @@
 title: 逐步解說：簡單的物件模型和查詢 (C#)
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 2c2529c828c0b02ec2f53c7ea899bbe728ba88d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25e23b77f6f5547a5516c6db240537cb00685edc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686864"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>逐步解說：簡單的物件模型和查詢 (C#)
 這個逐步解說提供極為簡單的基本端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將建立的實體類別會構成 Northwind 範例資料庫中的 Customers 資料表。 接著，您會建立簡單查詢，以便列出位於倫敦的客戶。  
@@ -22,7 +22,7 @@ ms.locfileid: "33362360"
   
 -   本逐步解說會使用專用資料夾 ("c:\linqtest5") 來保存檔案。 請先建立這個資料夾，再開始逐步解說。  
   
--   這個逐步解說需要使用 Northwind 範例資料庫。 如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需指示，請參閱[下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載此資料庫之後，請將檔案複製到 c:\linqtest5 資料夾。  
+-   這個逐步解說需要使用 Northwind 範例資料庫。 如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需相關指示，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載此資料庫之後，請將檔案複製到 c:\linqtest5 資料夾。  
   
 ## <a name="overview"></a>概觀  
  此逐步解說包含六個主要工作：  
@@ -40,39 +40,39 @@ ms.locfileid: "33362360"
 -   執行查詢並觀察結果。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案  
- 在第一個工作中，您可以建立包含必要的參考，建置並執行 Visual Studio 方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  
+ 在第一個工作中，您會建立包含必要的參考，以建置並執行 Visual Studio 方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
-1.  在 Visual Studio**檔案**功能表上，指向**新增**，然後按一下 **專案**。  
+1.  在 Visual Studio**檔案**功能表上，指向**新增**，然後按一下**專案**。  
   
-2.  在**專案類型**窗格**新專案**對話方塊中，按一下  **Visual C#**。  
+2.  在 [**專案類型**窗格**新增專案**] 對話方塊中，按一下**Visual C#** 。  
   
 3.  按一下 [範本] 窗格中的 [主控台應用程式]。  
   
-4.  在**名稱**方塊中，輸入**LinqConsoleApp**。  
+4.  在 **名稱**方塊中，輸入**LinqConsoleApp**。  
   
-5.  在**位置**方塊中，確認您要儲存專案檔。  
+5.  在 **位置**方塊中，確認您要儲存專案檔。  
   
 6.  按一下 [確定 **Deploying Office Solutions**]。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
- 本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果 System.Data.Linq 未列為專案中參考 (展開**參考**節點**方案總管 中**)，請將它加入下列步驟所述。  
+ 本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果 System.Data.Linq 未列為專案中參考 (展開**參考**中的節點**方案總管 中**)，請將它加入下列的步驟中所述。  
   
 #### <a name="to-add-systemdatalinq"></a>若要加入 System.Data.Linq  
   
-1.  在**方案總管] 中**，以滑鼠右鍵按一下**參考**，然後按一下 [**加入參考**。  
+1.  在 **方案總管 中**，以滑鼠右鍵按一下**參考**，然後按一下 **加入參考**。  
   
-2.  在**加入參考**對話方塊中，按一下  **.NET**，按一下 System.Data.Linq 組件，然後按一下**確定**。  
+2.  在 **加入參考** 對話方塊中，按一下 **.NET**按一下 System.Data.Linq 組件，然後按一下 **確定**。  
   
      組件隨即加入至專案。  
   
-3.  在最上方加入下列指示詞**Program.cs**:  
+3.  在頂端新增下列指示詞**Program.cs**:  
   
      [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]  
   
 ## <a name="mapping-a-class-to-a-database-table"></a>將類別對應至資料庫資料表  
- 在這個步驟中，您會建立類別並將它對應至資料庫資料表。 這類類別稱為*實體類別*。 請注意，只要加入 <xref:System.Data.Linq.Mapping.TableAttribute> 屬性，即可完成對應。 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 屬性會指定資料庫中資料表的名稱。  
+ 在這個步驟中，您會建立類別並將它對應至資料庫資料表。 這種類別，則稱為*實體類別*。 請注意，只要加入 <xref:System.Data.Linq.Mapping.TableAttribute> 屬性，即可完成對應。 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 屬性會指定資料庫中資料表的名稱。  
   
 #### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>若要建立實體類別並將它對應至資料庫資料表  
   
@@ -109,7 +109,7 @@ ms.locfileid: "33362360"
      [!code-csharp[DLinqWalk1CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#4)]  
   
 ## <a name="creating-a-simple-query"></a>建立簡單查詢  
- 在這個步驟中，您會建立查詢以尋找資料庫 Customers 資料表中有哪些客戶位於倫敦。 這個步驟中的查詢程式碼只會描述查詢， 而不會實際執行。 這種方法稱為*延後執行*。 如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
+ 在這個步驟中，您會建立查詢以尋找資料庫 Customers 資料表中有哪些客戶位於倫敦。 這個步驟中的查詢程式碼只會描述查詢， 而不會實際執行。 這種方法就所謂*延後執行*。 如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
   
  此外，您還會產生記錄檔輸出，以顯示 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 所產生的 SQL 命令。 這項記錄功能 (其使用 <xref:System.Data.Linq.DataContext.Log%2A>) 有助於進行偵錯，以及判斷要傳送至資料庫的命令是否正確地表示您的查詢。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "33362360"
 2.  按 F5，進行應用程式偵錯。  
   
     > [!NOTE]
-    >  如果您的應用程式產生執行階段錯誤，請參閱 < 疑難排解 > 一節的[依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。  
+    >  如果您的應用程式產生執行階段錯誤，請參閱疑難排解一節[依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。  
   
      主控台視窗中的查詢結果應如下所示：  
   
@@ -150,9 +150,9 @@ ms.locfileid: "33362360"
 3.  在主控台視窗中按 Enter 鍵，以關閉應用程式。  
   
 ## <a name="next-steps"></a>後續步驟  
- [逐步解說： 跨關聯性查詢 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)主題會繼續本逐步解說結束的位置。 跨關聯性查詢 > 逐步解說將示範如何[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]跨資料表，類似於查詢*聯結*關聯式資料庫中。  
+ [逐步解說：跨關聯性查詢 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)主題會繼續本逐步解說結束的位置。 查詢跨關聯性的逐步解說將示範如何[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可以查詢資料表，類似於跨*聯結*關聯式資料庫中。  
   
  如果您想執行＜跨關聯性查詢＞逐步解說，請務必儲存您剛在本逐步解說完成的方案，這是必要的條件。  
   
-## <a name="see-also"></a>另請參閱  
- [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>另請參閱
+- [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
