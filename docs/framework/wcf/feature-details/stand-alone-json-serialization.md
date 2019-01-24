@@ -2,19 +2,19 @@
 title: 獨立 JSON 序列化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: b84e7dbb91c4f1e94ae0701dffcca50b7834df6c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618418"
 ---
 # <a name="stand-alone-json-serialization"></a>獨立 JSON 序列化
 JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 JavaScript 程式碼而設計的資料格式。 它是建立 Windows Communication Foundation (WCF) 中的 ASP.NET AJAX 服務所使用的預設資料格式。  
   
  此外，在未與 ASP.NET 整合的情況下建立 AJAX 服務時，也可以使用這個格式，在這種情況中，XML 是預設值，不過您也可以選擇 JSON。  
   
- 最後，如果您需要 JSON 支援但不想建立 AJAX 服務，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 可讓您直接將 .NET 物件序列化為 JSON 資料，以及將這類資料還原序列化為 .NET 型別的執行個體。 如需如何執行此動作的說明，請參閱 <<c0> [ 如何： 序列化和還原序列化 JSON 資料](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)。  
+ 最後，如果您需要 JSON 支援但不想建立 AJAX 服務，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 可讓您直接將 .NET 物件序列化為 JSON 資料，以及將這類資料還原序列化為 .NET 型別的執行個體。 如需如何執行此動作的說明，請參閱[How to:序列化和還原序列化 JSON 資料](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)。  
   
  使用 JSON 時，相同的 .NET 型別會受到支援，不過有少數的例外情形，如同 <xref:System.Runtime.Serialization.DataContractSerializer> 所支援的一樣。 如需支援之類型的清單，請參閱 < [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 其中包括大部分的基本型別、大部分的陣列和集合型別，以及使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 的複雜型別。  
   
@@ -26,7 +26,7 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
 |所有數字型別，例如 <xref:System.Int32>、<xref:System.Decimal> 或 <xref:System.Double>|number|`Double.NaN`、`Double.PositiveInfinity` 和 `Double.NegativeInfinity` 等特殊值不受支援，並且會造成無效的 JSON。|  
 |<xref:System.Enum>|number|請參閱本主題稍後的＜列舉與 JSON＞。|  
 |<xref:System.Boolean>|Boolean|--|  
-|<xref:System.String>, <xref:System.Char>|String|--|  
+|<xref:System.String>、 <xref:System.Char>|String|--|  
 |<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|在 JSON 中這些類型的格式是 XML 中相同 (本質上，以 ISO 8601 持續時間格式的時間範圍，「 12345678-ABCD-ABCD-ABCD-1234567890AB"格式的 GUID 和中的自然字串形式的 URI，例如"http://www.example.com」)。 如需精確的資訊，請參閱[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
 |<xref:System.Xml.XmlQualifiedName>|String|格式為 "name:namespace" (第一個冒號前面的就是名稱)。 名稱或命名空間可能會遺失。 如果沒有命名空間，冒號也可以省略。|  
 |型別 <xref:System.Array> 的 <xref:System.Byte>|數字陣列|每個數字代表一個位元組值。|  
@@ -260,6 +260,6 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 ### <a name="valid-json-key-names"></a>有效的 JSON 索引鍵名稱  
  序列化程式 XML 會編碼不是有效的 XML 名稱的索引鍵名稱。 例如，資料成員"123"的名稱會有編碼的名稱這類 「\_x0031\_\_x0032\_\_x0033\_"因為"123"是無效的 XML 項目名稱 (開頭為數字）。 有些在 XML 名稱中無效的國際字元集可能會引起類似的情況。 如需 XML 的此效果，在 JSON 處理上的說明，請參閱 < [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
 
 - [JSON 和其他資料傳輸格式的支援](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

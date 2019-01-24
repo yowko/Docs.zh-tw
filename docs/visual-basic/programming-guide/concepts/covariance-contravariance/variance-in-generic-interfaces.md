@@ -2,11 +2,12 @@
 title: 泛型介面 (Visual Basic) 中的變異數
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: c18f014897ace71e437bd733ff6fcd1d4d8810dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d39f1b125875f9a9f41ccb6b25a3a88fe577adba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618629"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>泛型介面 (Visual Basic) 中的變異數
 .NET Framework 4 引入了對於數個現有泛型介面的變異數支援。 差異支援可讓實作這些介面的類別以隱含方式轉換。 下列介面現在都是 Variant︰  
@@ -32,7 +33,7 @@ Dim strings As IEnumerable(Of String) = New List(Of String)
 Dim objects As IEnumerable(Of Object) = strings  
 ```  
   
- 在舊版的.NET Framework 中，此程式碼會造成編譯錯誤，在與 Visual Basic 中的`Option Strict On`。 但現在您可以使用 `strings`，而不使用 `objects`，如上例所示，因為 <xref:System.Collections.Generic.IEnumerable%601> 介面是 Covariant。  
+ 在舊版的.NET Framework 中，此程式碼會造成編譯錯誤，在 Visual Basic 搭配`Option Strict On`。 但現在您可以使用 `strings`，而不使用 `objects`，如上例所示，因為 <xref:System.Collections.Generic.IEnumerable%601> 介面是 Covariant。  
   
  反變數允許方法具有比介面泛型參數所指定之衍生程度更小的引數型別。 為示範反變數，我們假設您已建立 `BaseComparer` 類別來比較 `BaseClass` 類別的執行個體。 `BaseComparer` 類別會實作 `IEqualityComparer(Of BaseClass)` 介面。 因為 <xref:System.Collections.Generic.IEqualityComparer%601> 介面現在是 Contravariant，所以您可以使用 `BaseComparer` 比較繼承了 `BaseClass` 類別的類別執行個體。 這會顯示在以下程式碼範例中。  
   
@@ -68,7 +69,7 @@ Sub Test()
 End Sub  
 ```  
   
- 如需其他範例，請參閱[使用泛型集合 (Visual Basic) 的介面中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)。  
+ 如需其他範例，請參閱 <<c0> [ 針對泛型集合 (Visual Basic) 的介面中的 使用差異](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)。  
   
  僅參考型別支援泛型介面的差異。 實值型別不支援差異。 例如，`IEnumerable(Of Integer)` 無法以隱含方式轉換成 `IEnumerable(Of Object)`，因為整數是以實值型別表示。  
   
@@ -90,8 +91,8 @@ Dim integers As IEnumerable(Of Integer) = New List(Of Integer)
 Dim listObjects As IEnumerable(Of Object) = New List(Of String)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [使用泛型集合介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)  
- [建立 Variant 泛型介面 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)  
- [泛型介面](../../../../standard/generics/interfaces.md)  
- [委派中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+## <a name="see-also"></a>另請參閱
+- [使用泛型集合介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
+- [建立 Variant 泛型介面 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
+- [泛型介面](../../../../standard/generics/interfaces.md)
+- [委派中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
