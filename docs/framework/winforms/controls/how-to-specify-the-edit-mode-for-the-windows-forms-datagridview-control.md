@@ -1,5 +1,5 @@
 ---
-title: 如何：指定 Windows Form DataGridView 控制項的編輯模式
+title: HOW TO：Windows Form DataGridView 控制項中指定的編輯模式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: 5117dfe2e017cf4af1d352fdbf23c6599c0e56a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcb2014cc92a8a3e4afe7c3ed0365fd5947c70f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628262"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>如何：指定 Windows Form DataGridView 控制項的編輯模式
-根據預設，使用者可以編輯的目前內容<xref:System.Windows.Forms.DataGridView>文字方塊儲存格，請輸入或按 f2 鍵。 這將儲存格置於編輯模式如果符合所有下列條件：  
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>HOW TO：Windows Form DataGridView 控制項中指定的編輯模式
+根據預設，使用者可以編輯的目前內容<xref:System.Windows.Forms.DataGridView>文字 方塊中儲存格，在其中輸入，或按下 f2 鍵。 在編輯模式中，如果符合所有下列條件，這會使儲存格：  
   
 -   基礎資料來源支援編輯。  
   
@@ -24,11 +24,11 @@ ms.locfileid: "33536269"
   
 -   <xref:System.Windows.Forms.DataGridView.EditMode%2A>屬性值不是<xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>。  
   
--   `ReadOnly`資料格、 資料列、 資料行，以及控制項的屬性都設為`false`。  
+-   `ReadOnly`資料格、 資料列、 資料行和控制項的屬性都設為`false`。  
   
- 在編輯模式中，使用者可以變更資料格的值，並按 ENTER 以認可變更或 esc 鍵還原為其原始值的資料格。  
+ 在編輯模式中，使用者可以變更儲存格的值，然後按 ENTER 認可的變更或 esc 鍵還原為其原始值的資料格。  
   
- 您可以設定<xref:System.Windows.Forms.DataGridView>控制項，以便儲存格進入編輯模式，因為它會變成目前儲存格。 ENTER 和 ESC 鍵的行為是在此情況下，不變，但是儲存格的值是認可或還原之後會保留在編輯模式。 您也可以設定控制項，讓儲存格進入編輯模式，在儲存格，或只有當使用者按下 F2 使用者輸入時，才。 最後，您可以防止儲存格進入編輯模式，但當您呼叫<xref:System.Windows.Forms.DataGridView.BeginEdit%2A>方法。  
+ 您可以設定<xref:System.Windows.Forms.DataGridView>控制項，使儲存格進入編輯模式，因為它會變成目前儲存格。 ENTER 和 ESC 鍵行為不會變更在此情況下，但是之後的值是認可或還原的資料格會保留在編輯模式。 您也可以設定控制項，以便儲存格進入編輯模式，只在使用者輸入中的資料格，或只有當使用者按下 f2 鍵時，才。 最後，您可以防止儲存格進入編輯模式，但當您呼叫<xref:System.Windows.Forms.DataGridView.BeginEdit%2A>方法。  
   
 ### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a>若要變更 DataGridView 控制項的編輯模式  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33536269"
   
 -   <xref:System> 和 <xref:System.Windows.Forms> 組件的參考。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>  
- [Windows Forms DataGridView 控制項中的資料輸入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
+- [Windows Forms DataGridView 控制項中的資料輸入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)

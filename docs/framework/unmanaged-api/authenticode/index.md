@@ -4,12 +4,6 @@ ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78149d1f8fdad3c11fe693221888f115af84ada2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406418"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (Unmanaged API 參考)
 支援 Authenticode XrML 授權的建立及驗證模組。  
@@ -42,5 +36,5 @@ ms.locfileid: "33406418"
  [AXL_AUTHENTICODE_TIMESTAMPER_INFO 結構](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)  
  定義 Authenticode 時間戳記程式資訊。  
   
-## <a name="see-also"></a>另請參閱  
- [Unmanaged API 參考](../../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a>另請參閱
+- [Unmanaged API 參考](../../../../docs/framework/unmanaged-api/index.md)

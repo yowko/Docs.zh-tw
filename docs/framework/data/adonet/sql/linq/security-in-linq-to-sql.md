@@ -2,12 +2,12 @@
 title: LINQ to SQL 中的安全性
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-ms.openlocfilehash: c078d2b19629ed4b99180af85528952548d92045
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7730419509cd0c3530813734a98f777ddf9d9f04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625675"
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL 中的安全性
 當您連接至資料庫時，永遠都會存在安全性風險。 雖然 LINQ to SQL 可能會包含一些使用 SQL Server 資料的新方式，但是並不會提供任何額外的安全性機制。  
@@ -33,6 +33,6 @@ ms.locfileid: "53127312"
   
 -   盡可能減少所有連接字串的存留期 (Lifetime) 和接觸點。  
   
-## <a name="see-also"></a>另請參閱  
- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [常見問題集](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+## <a name="see-also"></a>另請參閱
+- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [常見問題集](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

@@ -1,21 +1,21 @@
 ---
-title: 如何：控制命名空間前置字元 (Visual Basic) (LINQ to XML)
+title: HOW TO：控制命名空間前置詞 (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: f60f90ef6742dfd725f51ff7e760436117346e85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91117307caf7e55bd8b512fbd841760616f0b2c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623738"
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>如何：控制命名空間前置字元 (Visual Basic) (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>HOW TO：控制命名空間前置詞 (Visual Basic) (LINQ to XML)
 這個主題描述如何控制命名空間前置詞。  
   
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 這個範例會宣告兩個命名空間。 它會指定`http://www.adventure-works.com`命名空間具有前置詞`aw`，而且`www.fourthcoffee.com`命名空間具有的前置詞`fc`。  
+ 這個範例會宣告兩個命名空間。 它會指定`http://www.adventure-works.com`命名空間具有前置詞`aw`，且`www.fourthcoffee.com`命名空間具有的前置詞`fc`。  
   
 ### <a name="code"></a>程式碼  
   
@@ -53,5 +53,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>另請參閱
+- [處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
