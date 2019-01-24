@@ -1,24 +1,24 @@
 ---
-title: '&lt;RoleClaimType&gt;'
+title: '&lt;roleClaimType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 69a49deb-6369-41ba-806b-ae8d21fac64b
 author: BrucePerlerMS
-ms.openlocfilehash: 565bf30d334c62c8132c60f411e89f7b260c54f1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6114a95f3942c367849785ce981858f276c0b8fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599942"
 ---
-# <a name="ltroleclaimtypegt"></a>&lt;RoleClaimType&gt;
+# <a name="ltroleclaimtypegt"></a>&lt;roleClaimType&gt;
 指定的集合中定義的角色類型宣告的宣告類型<xref:System.Security.Claims.ClaimsIdentity>所傳回的物件<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>的權杖處理常式的方法。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
 \<add>  
-\<samlSecurityTokenRequirement >  
-\<roleClaimType >  
+\<samlSecurityTokenRequirement>  
+\<roleClaimType>  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,5 +68,5 @@ ms.locfileid: "48841509"
 </add>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>
+## <a name="see-also"></a>另請參閱
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>

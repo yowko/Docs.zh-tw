@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac3c6698e4ca127257b7682f1f55acd663375280
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1492c9eac9d647c2b71c47cf758265152783d991
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423724"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673879"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next 方法
-在過程中，從目前位置開始，取得目前存在的應用程式定義域指定的數目。  
+取得指定的數目的目前存在的應用程式定義域在過程中，從目前位置開始。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,22 +40,22 @@ HRESULT Next (
   
 #### <a name="parameters"></a>參數  
  `celt`  
- [in]要擷取的項目數目。  
+ [in]要擷取的元素數目。  
   
  `objects`  
- [out]陣列指標擷取[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)物件，其中每個代表應用程式定義域。  
+ [out]擷取陣列的指標[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)每一個都代表應用程式定義域的物件。  
   
  `pceltFetched`  
- [out]指向實際傳回的應用程式定義域數目。 這個值可以是 null 如果`celt`是其中一個。  
+ [out]指標的實際傳回的應用程式定義域數目。 此值可能為 null 如果`celt`是其中一個。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorPub.idl、 CorPub.h  
+ **標頭：** CorPub.idl CorPub.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorPublishAppDomainEnum 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorPublishAppDomainEnum 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)

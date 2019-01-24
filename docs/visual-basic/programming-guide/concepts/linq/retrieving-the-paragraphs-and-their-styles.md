@@ -2,17 +2,17 @@
 title: 擷取段落及其樣式 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
-ms.openlocfilehash: 5b8075b5aa05c32d2dc894149a8fa53f103138c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a726c3b609d778d8d91be61091a3627ec1358dfc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716022"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>擷取段落及其樣式 (Visual Basic)
 在此範例中，我們會撰寫一個從 WordprocessingML 文件擷取段落節點的查詢。 它也可以識別每個段落的樣式。  
   
- 此查詢會根據在前一個範例中，查詢[尋找預設段落樣式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)，抓取的預設樣式的樣式清單。 系統需要這個資訊，讓查詢可以識別沒有明確設定樣式之段落的樣式。 段落樣式是透過 `w:pPr` 項目設定的；如果段落不包含這個項目，則會格式化為預設樣式。  
+ 此查詢是根據在上一個範例中，查詢[尋找預設段落樣式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)，表示從樣式清單擷取預設樣式。 系統需要這個資訊，讓查詢可以識別沒有明確設定樣式之段落的樣式。 段落樣式是透過 `w:pPr` 項目設定的；如果段落不包含這個項目，則會格式化為預設樣式。  
   
  本主題說明某些查詢片段的重要性，然後將查詢顯示為完整、實用範例的一部分。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "33648303"
 xDoc.Root.<w:body>...<w:p>  
 ```  
   
- 此運算式是類似於在上一個範例中，查詢的來源[尋找預設段落樣式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)。 主要差異在於，這個運算式使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸而非 <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸。 該查詢使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸是因為在具有章節的文件中，段落將不會是本文項目的直接子系，而會在階層中的兩個層級下。 藉由使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸，不管文件是否使用章節，程式碼都可以運作。  
+ 此運算式是類似於在前一個範例中，查詢的來源[尋找預設段落樣式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)。 主要差異在於，這個運算式使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸而非 <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸。 該查詢使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸是因為在具有章節的文件中，段落將不會是本文項目的直接子系，而會在階層中的兩個層級下。 藉由使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸，不管文件是否使用章節，程式碼都可以運作。  
   
 ## <a name="example"></a>範例  
  此查詢使用 `Let` 子句來判斷包含樣式節點的項目。 如果沒有項目，則 `styleNode` 會設定為 `Nothing`：  
@@ -111,7 +111,7 @@ Module Module1
 End Module  
 ```  
   
- 這個範例會產生下列輸出時套用至文件中所述[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 此範例會產生下列輸出時套用至文件中所述[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
 ```  
 StyleName:Heading1  
@@ -134,5 +134,5 @@ StyleName:Code
 ## <a name="next-steps"></a>後續步驟  
  在下一個主題中，[擷取段落 (Visual Basic) 的文字](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)，您將建立查詢以擷取段落的文字。  
   
-## <a name="see-also"></a>另請參閱  
- [教學課程： 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>另請參閱
+- [教學課程：管理 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

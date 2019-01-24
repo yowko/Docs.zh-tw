@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
-ms.openlocfilehash: 9143e84ab17711c08ff9b1eb241fe6b79426d0bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98a450fd92993506005268b54798bbc8547a60fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686305"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>命名空間中的陳述式無效
 陳述式不能出現在命名空間層級。 唯一允許的命名空間層級的宣告是模組、 介面、 類別、 委派、 列舉和結構宣告。  
@@ -21,8 +21,8 @@ ms.locfileid: "33594763"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   陳述式移至模組、 類別、 介面、 結構、 列舉或委派定義中的位置。  
+-   陳述式移至 模組、 類別、 介面、 結構、 列舉或委派定義中的位置。  
   
-## <a name="see-also"></a>另請參閱  
- [在 Visual Basic 中的範圍](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a>另請參閱
+- [在 Visual Basic 中的範圍](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)

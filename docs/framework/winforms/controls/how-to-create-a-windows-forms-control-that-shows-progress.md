@@ -1,5 +1,5 @@
 ---
-title: 如何：建立顯示進度的 Windows Forms 控制項
+title: HOW TO：建立顯示進度的 Windows Form 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: bff9bef08cdf7317d4dc8903412e03bfdacb7237
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c474419d1b60d8dbc937e77251b877efca2709b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594716"
 ---
-# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>如何：建立顯示進度的 Windows Forms 控制項
+# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>HOW TO：建立顯示進度的 Windows Form 控制項
 下列程式碼範例會顯示稱為 `FlashTrackBar` 的自訂控制項，其可用來對使用者顯示應用程式的層級或進度。 它會使用漸層來以視覺方式表示進度。  
   
  `FlashTrackBar` 控制項可說明下列概念︰  
@@ -92,6 +92,6 @@ ms.locfileid: "43502344"
  [!code-csharp[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## <a name="see-also"></a>另請參閱  
- [擴充設計階段支援](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [Windows Forms 控制項開發的基本概念](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a>另請參閱
+- [擴充設計階段支援](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
+- [Windows Forms 控制項開發的基本概念](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

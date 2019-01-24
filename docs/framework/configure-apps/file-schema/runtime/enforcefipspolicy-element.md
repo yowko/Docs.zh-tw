@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0bffe72a4bcadb4a36a9ac54263d55e242ffc4d4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 990add41d5f48da19f6bc20e4bbff19f36132df6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742103"
 ---
 # <a name="ltenforcefipspolicygt-element"></a>&lt;enforceFIPSPolicy&gt;項目
 指定是否強制執行電腦設定需求，以便讓密碼編譯演算法符合美國聯邦資訊處理標準 (FIPS) 的規範。  
@@ -71,7 +71,7 @@ ms.locfileid: "53612006"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>另請參閱
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [加密模型](../../../../../docs/standard/security/cryptography-model.md)

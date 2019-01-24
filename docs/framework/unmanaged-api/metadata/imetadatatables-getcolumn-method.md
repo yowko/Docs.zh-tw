@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 850a97240e0a6450b4dec759a8786e0df5bffac8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a88acf59043613bb216ffe84dfb1593bd6ebea00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448956"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651886"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn 方法
-取得包含指定之資料行和指定的資料表中資料列的儲存格的值的指標。  
+取得在指定的資料行和給定資料表中的資料列的資料格中所包含的值的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,16 +43,16 @@ HRESULT GetColumn (
  [in]資料表的索引。  
   
  `ixCol`  
- [in]資料表中資料行的索引。  
+ [in]在資料表中資料行的索引。  
   
  `rid`  
- [in]資料表中的資料列索引。  
+ [in]在資料表中的資料列索引。  
   
  `pVal`  
  [out]在儲存格中值的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
@@ -60,6 +60,6 @@ HRESULT GetColumn (
   
  **.NET framework 版本** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

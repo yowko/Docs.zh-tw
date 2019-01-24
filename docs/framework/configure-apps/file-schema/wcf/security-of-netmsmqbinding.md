@@ -2,20 +2,20 @@
 title: '&lt;netMsmqBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: ec164fa8830321f90f824f85841a379d577ab5af
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 71f0c10c336a9682971bc774141cb0c3bd37c092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696382"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; 的 &lt;security&gt;
 定義 MSMQ 繫結的安全性設定。 它指定是否啟用傳輸或 SOAP 安全性，以及如果啟用，正在使用的驗證模式和保護層級。  
   
  \<system.ServiceModel>  
-\<繫結 >  
+\<bindings>  
 \<netMsmqBinding>  
-\<繫結 >  
+\<binding>  
 \<安全性 >  
   
 ## <a name="syntax"></a>語法  
@@ -53,14 +53,14 @@ ms.locfileid: "54147794"
 |-------------|-----------------|  
 |繫結|繫結項目[ \<netMsmqBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>  
- <xref:System.ServiceModel.NetMsmqBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>  
- <xref:System.ServiceModel.NetMsmqSecurity>  
- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
- [WCF 中的佇列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>
+- <xref:System.ServiceModel.NetMsmqBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>
+- <xref:System.ServiceModel.NetMsmqSecurity>
+- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [WCF 中的佇列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

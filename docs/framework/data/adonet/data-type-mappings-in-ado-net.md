@@ -2,12 +2,12 @@
 title: ADO.NET 中的資料類型對應
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: aba1eb4fdaaf43d66337ca764fe01b7d3f4624bd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 15990a479142dda294145282d567cc06c7587a7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747917"
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET 中的資料類型對應
 .NET Framework 是以一般型別系統為基礎，其中定義了型別在執行階段的宣告、使用和管理方式。 它同時包含了都衍生自 <xref:System.Object> 基底類型的實值型別 (Value Type) 和參考型別 (Reference Type)。 使用資料來源時，如果沒有明確指定資料型別，就會從資料提供者 (Data Provider) 推斷資料型別。 例如，<xref:System.Data.DataSet> 物件與任何特定資料來源無關。 `DataSet` 內的資料是由資料來源擷取而來，且變更會藉由 `DataAdapter` 存回資料來源； 也就是說，當 `DataAdapter` 將來自資料來源的值填入 <xref:System.Data.DataTable> 內的 `DataSet`時，`DataTable` 內資料行的結果資料型別屬於 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別，而非 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者用於連接資料來源的特定型別。  
@@ -35,10 +35,10 @@ ms.locfileid: "43516923"
  [浮點數](../../../../docs/framework/data/adonet/floating-point-numbers.md)  
  說明開發人員在使用浮點數值 (Floating-Point Number) 時經常遇到的問題。  
   
-## <a name="see-also"></a>另請參閱  
- [SQL Server 資料類型和 ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [設定參數和參數資料類型](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [一般類型系統](../../../../docs/standard/base-types/common-type-system.md)  
- [轉換類型](https://msdn.microsoft.com/library/6038316e-bdaf-4f55-8006-407f591ce156)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [SQL Server 資料類型和 ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [設定參數和參數資料類型](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [一般類型系統](../../../../docs/standard/base-types/common-type-system.md)
+- [轉換類型](https://msdn.microsoft.com/library/6038316e-bdaf-4f55-8006-407f591ce156)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

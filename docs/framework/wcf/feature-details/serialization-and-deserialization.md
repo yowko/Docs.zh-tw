@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: be2cf6c550ab8778a42f33fa2cb1b109abeea5e9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 7ddad36c05d9972b9fc613403b68b7c793b6701d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707566"
 ---
 # <a name="serialization-and-deserialization"></a>序列化和還原序列化
 Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件與 XML 之間轉譯 (雙向)。 本主題會說明序列化程式的運作方式。  
@@ -203,11 +203,11 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
 >  使用逐步序列化可能產生結構描述無效的 XML。  
   
 ## <a name="deserialization"></a>還原序列化  
- 下列資訊將套用至任何繼承自 <xref:System.Runtime.Serialization.XmlObjectSerializer> 的類別，包括 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 類別。  
+ 下列資訊將套用至任何繼承自 <xref:System.Runtime.Serialization.XmlObjectSerializer>的類別，包括 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 類別。  
   
  還原序列化物件的最基本方式，就是呼叫其中一個 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法多載。 有三種多載，各自負責使用 <xref:System.Xml.XmlDictionaryReader>、 `XmlReader`，或是 `Stream`來讀取。 請注意， `Stream` 多載會建立未由任何配額保護的文字 <xref:System.Xml.XmlDictionaryReader> ，而且只能用來讀取受信任資料。  
   
- 同時請注意，`ReadObject` 方法傳回的物件必須轉換成適當的型別。  
+ 同時請注意， `ReadObject` 方法傳回的物件必須轉換成適當的型別。  
   
  下列程式碼會建構 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.XmlDictionaryReader>的執行個體，然後還原序列化 `Person` 執行個體。  
   
@@ -223,7 +223,7 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
   
  當使用其中一種簡單`ReadObject`多載，還原序列化程式會尋找預設名稱和命名空間上的包裝函式項目 （請參閱上一節 「 指定預設的根名稱和命名空間 」），並擲回例外狀況，如果它找到未知項目。 在先前的範例中，預期會使用 `<Person>` 包裝函式項目。 <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> 方法會被呼叫，以驗證讀取器位於如預期命名的項目上。  
   
- 有一種方式可以停用此包裝函式項目名稱檢查；某些 `ReadObject` 方法的多載會採用布林參數 `verifyObjectName` (預設會設定為 `true`)。 一旦設定為 `false`，就會忽略包裝函式項目的名稱與命名空間。 讀取以先前所述之逐步序列化機制撰寫的 XML 時，這種方式很有用。  
+ 有一種方式可以停用此包裝函式項目名稱檢查；某些 `ReadObject` 方法的多載會採用布林參數 `verifyObjectName`(預設會設定為 `true` )。 一旦設定為 `false`，就會忽略包裝函式項目的名稱與命名空間。 讀取以先前所述之逐步序列化機制撰寫的 XML 時，這種方式很有用。  
   
 ## <a name="using-the-netdatacontractserializer"></a>使用 NetDataContractSerializer  
  `DataContractSerializer` 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 之間的最主要差異，就是 `DataContractSerializer` 使用資料合約名稱，而 `NetDataContractSerializer` 則是在序列化 XML 中輸出完整的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 組件和型別名稱。 也就是說，序列化與還原序列化端點兩者必須共用完全相同的型別。 這表示 `NetDataContractSerializer` 並不需要已知型別機制，因為要還原序列化的完全相同型別一律呈現已知狀態。  
@@ -260,9 +260,9 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
   
  同時請注意， `NetDataContractSerializer` 不會在物件圖形中為每個節點輸出完整的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別和組件名稱。 它只會針對不夠清楚的部分來輸出資訊。 亦即，它會在根物件層級以及任何多型案例中輸出。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.NetDataContractSerializer>  
- <xref:System.Runtime.Serialization.XmlObjectSerializer>  
- [二進位序列化](../../../../docs/standard/serialization/binary-serialization.md)  
- [資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.NetDataContractSerializer>
+- <xref:System.Runtime.Serialization.XmlObjectSerializer>
+- [二進位序列化](../../../../docs/standard/serialization/binary-serialization.md)
+- [資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

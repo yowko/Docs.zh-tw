@@ -1,19 +1,19 @@
 ---
-title: 如何：搭配 Windows Form Panel 控制項使用設計工具群組控制項
+title: HOW TO：搭配 Windows Form Panel 控制項使用設計工具群組控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Panel control [Windows Forms], grouping controls
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-ms.openlocfilehash: 99bfcd96dea1bb92866127095a422003bf01f7cd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 706a020bfb007250b9a1b708da25704aacd755e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601529"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>如何：搭配 Windows Form Panel 控制項使用設計工具群組控制項
+# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>HOW TO：搭配 Windows Form Panel 控制項使用設計工具群組控制項
 Windows Form<xref:System.Windows.Forms.Panel>控制項用來分組其他控制項。 有三個群組控制項的原因。 其中一個是視覺化群組相關的表單項目，清楚的使用者介面;另一個是以程式設計方式分組，選項按鈕： 例如，最後一個適用於在設計階段將控制項移動做為一個單位。  
   
 > [!NOTE]
@@ -29,7 +29,7 @@ Windows Form<xref:System.Windows.Forms.Panel>控制項用來分組其他控制�
   
 3.  （選擇性）如果您想要將框線加入至面板，設定其<xref:System.Windows.Forms.BorderStyle>屬性。 有三種選擇： <xref:System.Windows.Forms.BorderStyle.Fixed3D>， <xref:System.Windows.Forms.BorderStyle.FixedSingle>，和<xref:System.Windows.Forms.BorderStyle.None>。  
   
-## <a name="see-also"></a>另請參閱  
- [Panel 控制項](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
- [Panel 控制項概觀](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
- [操作說明：設定面板背景](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)
+## <a name="see-also"></a>另請參閱
+- [Panel 控制項](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+- [Panel 控制項概觀](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
+- [如何：設定面板背景](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)

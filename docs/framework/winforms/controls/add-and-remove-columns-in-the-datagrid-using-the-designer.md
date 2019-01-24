@@ -1,5 +1,5 @@
 ---
-title: 如何：使用設計工具在 Windows Form DataGridView 控制項中加入和移除資料行
+title: HOW TO：新增和移除使用設計工具的 Windows Form DataGridView 控制項中的資料行
 ms.date: 03/30/2017
 f1_keywords:
 - vs.DataGridViewAddColumnDialog
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-ms.openlocfilehash: 99fe1b8ffb7ccc2a5bef13ea8fef6ace5d5bdfdc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7c101326c89d8f1a4ed139a7acc527b433d673ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686954"
 ---
-# <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用設計工具在 Windows Form DataGridView 控制項中加入和移除資料行
+# <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：新增和移除使用設計工具的 Windows Form DataGridView 控制項中的資料行
 Windows Form<xref:System.Windows.Forms.DataGridView>控制項必須包含資料行，以便顯示資料。 如果您打算以手動方式填入控制項，您必須自行加入資料行。 或者，您可以控制項繫結至資料來源，會產生，並會自動填入資料行。 如果資料來源包含多個資料行，比您想要顯示，您可以移除不必要的資料行。  
   
- 下列程序需要**Windows 應用程式**表單，其中包含專案<xref:System.Windows.Forms.DataGridView>控制項。 如需這類專案的設定資訊，請參閱[如何： 建立 Windows 應用程式專案](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)並[如何： 將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+ 下列程序需要**Windows 應用程式**表單，其中包含專案<xref:System.Windows.Forms.DataGridView>控制項。 如需這類專案的設定資訊，請參閱[How to:建立 Windows 應用程式專案](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)和[How to:將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -41,7 +41,7 @@ Windows Form<xref:System.Windows.Forms.DataGridView>控制項必須包含資料�
   
 3.  按一下 [**移除**] 按鈕來刪除資料行，使其從設計工具中消失。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.DataGridView>  
- [如何： 建立 Windows 應用程式專案](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)  
- [操作說明：將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.DataGridView>
+- [如何：建立 Windows 應用程式專案](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)
+- [如何：將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

@@ -2,11 +2,12 @@
 title: 投影作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: f4d1f7531ee69ebdbfb4ccd283f9f5dcb2f000af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d92405d9f3da69df4fa3964468599d6549480cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740955"
 ---
 # <a name="projection-operations-visual-basic"></a>投影作業 (Visual Basic)
 投影是指將物件轉換成新形式的作業，而這個形式通常僅包含後續即將使用的屬性。 透過使用投影，您可以建構根據每個物件所建立的新型別。 您可以投影屬性並對其執行數學函式。 您也可以投影原始物件，而不進行任何變更。  
@@ -17,7 +18,7 @@ ms.lasthandoff: 05/04/2018
   
 |方法名稱|描述|Visual Basic 查詢運算式語法|更多資訊|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|選取|投影以轉換函式為基礎的值。|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
+|選用版|投影以轉換函式為基礎的值。|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
 |SelectMany|投影一連串以轉換函式為基礎的值，然後將這些值壓平合併成一個序列。|使用多個 `From` 子句|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>查詢運算式語法範例  
@@ -48,7 +49,7 @@ MsgBox(sb.ToString())
 ```  
   
 ### <a name="selectmany"></a>SelectMany  
- 下列範例會使用多個`From`投影每個字的字串清單中的每個字串的子句。  
+ 下列範例會使用多個`From`子句，來投影字串清單中每個字串的每個字。  
   
 ```vb  
 Dim phrases = New List(Of String) From {"an apple a day", "the quick brown fox"}  
@@ -169,11 +170,11 @@ Sub SelectVsSelectMany()
 End Sub  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq>  
- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)  
- [如何：使用 Joins 合併資料](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)  
- [如何： 從 (LINQ) (Visual Basic) 的多個來源填入物件集合](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
- [如何：將 LINQ 查詢結果當做特定類型傳回](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
- [如何： 將檔案分割成許多檔案中，使用群組 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Linq>
+- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)
+- [如何：使用 Joins 合併資料](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
+- [如何：填入物件集合，從多個來源 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [如何：將 LINQ 查詢結果傳回成特定的類型](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
+- [如何：使用群組 (LINQ) (Visual Basic)，將檔案分割成許多檔案](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 048c7234fcb2592ea0dade135a32341a6e0f404f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b2b7559c203e5d357dd6921ea6862fbb5ec90a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576183"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName 方法
-取得指標匯出的類型，指定其名稱與封入型別。  
+取得指標至匯出的型別，指定其名稱與封入型別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,26 +39,26 @@ HRESULT FindExportedTypeByName (
   
 #### <a name="parameters"></a>參數  
  `szName`  
- [in]匯出的類型名稱。  
+ [in]匯出的型別名稱。  
   
  `mdtExportedType`  
- [in]匯出類型的封入類別之中繼資料語彙基元。 這個值是`mdExportedTypeNil`如果所要求的匯出類型不是巢狀的類型。  
+ [in]匯出類型的封入類別之中繼資料語彙基元。 這個值是`mdExportedTypeNil`如果要求的匯出型別不是巢狀型別。  
   
  `ptkExportedType`  
- [out]指標`mdExportedType`表示匯出的類型語彙基元。  
+ [out]指標`mdExportedType`表示匯出的型別語彙基元。  
   
 ## <a name="remarks"></a>備註  
- `FindExportedTypeByName`方法會使用標準來解析參考的 common language runtime 所採用的規則。  
+ `FindExportedTypeByName`方法會使用解析參考的 common language runtime 所採用的標準規則。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [執行階段如何找出組件](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [執行階段如何找出組件](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

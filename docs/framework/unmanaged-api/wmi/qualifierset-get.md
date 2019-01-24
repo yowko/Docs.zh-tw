@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8c10a680f1caffd583097b16c046729fe10b140
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 357182d6157b63f1bccf47cb43f0c78dec5875cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625935"
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get 函式
 取得指定的具名限定詞。  
@@ -53,7 +53,7 @@ HRESULT QualifierSet_Get (
 [in]其值所要求的限定詞名稱。
 
 `lFlags`   
-[in]保留。 這個參數必須是 0。
+[in] 保留。 這個參數必須是 0。
 
 `pVal`   
 [out]成功時，正確的型別和辨識符號值。 如果函式失敗，`VARIANT`所指向`pVal`則不會修改。 如果這個參數是`null`，則會忽略參數。
@@ -68,7 +68,7 @@ HRESULT QualifierSet_Get (
 |常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
-|`WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | 指定的辨識符號不存在。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的辨識符號不存在。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
 ## <a name="remarks"></a>備註
@@ -82,5 +82,5 @@ HRESULT QualifierSet_Get (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

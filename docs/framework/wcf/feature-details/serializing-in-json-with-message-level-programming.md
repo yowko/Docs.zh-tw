@@ -2,12 +2,12 @@
 title: 使用訊息層級程式設計序列化 Json
 ms.date: 03/30/2017
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
-ms.openlocfilehash: 2652b13cc350049cf96716eb754101001d08c64c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 39e6eaf138ee4f4946a876f492457831cbbbf80a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663046"
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>使用訊息層級程式設計序列化 Json
 WCF 支援 JSON 格式的序列化資料。 本主題描述如何使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 來指示 WCF 序列化您的型別。  
@@ -31,7 +31,7 @@ WCF 支援 JSON 格式的序列化資料。 本主題描述如何使用 <xref:Sy
                     new WebBodyFormatMessageProperty(WebContentFormat.Json)); // Use JSON format  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [AJAX 整合與 JSON 支援](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- [獨立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
- [JSON 序列化](../../../../docs/framework/wcf/samples/json-serialization.md)
+## <a name="see-also"></a>另請參閱
+- [AJAX 整合與 JSON 支援](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
+- [獨立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)
+- [JSON 序列化](../../../../docs/framework/wcf/samples/json-serialization.md)

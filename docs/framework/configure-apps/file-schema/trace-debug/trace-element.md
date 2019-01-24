@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 86cd4e7db5aa79ff85e5079813844d2af1598f4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642801"
 ---
 # <a name="lttracegt-element"></a>&lt;追蹤&gt;項目
 包含用於收集、儲存及路由傳送追蹤訊息的接聽項。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<追蹤 >  
+\<system.diagnostics>  
+\<trace>  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48845433"
 |`false`|不會自動清除輸出緩衝區。 這是預設值。|  
 |`true`|會自動排清輸出緩衝區。|  
   
-## <a name="usegloballock-attribute"></a>useGlobalLock 屬性  
+## <a name="usegloballock-attribute"></a>useGlobalLock Attribute  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -87,9 +87,9 @@ ms.locfileid: "48845433"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

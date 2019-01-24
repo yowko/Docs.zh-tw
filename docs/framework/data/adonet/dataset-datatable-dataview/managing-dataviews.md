@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: 76cf9eb70094dfe8bb760490c42503e08f4b1649
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 847829f6b131a33cc5ff1ca77b10f7e756da920f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497075"
 ---
 # <a name="managing-dataviews"></a>管理 DataView
 您可以使用 <xref:System.Data.DataViewManager> 管理 <xref:System.Data.DataView> 內所有資料表的檢視設定。 如果您有想要繫結至多個資料表的控制項，例如方格中，巡覽關聯性**DataViewManager**適合。  
@@ -119,10 +119,10 @@ System.Windows.Forms.DataGrid grid = new System.Windows.Forms.DataGrid();
 grid.SetDataBinding(viewManager, "Customers");  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Data.DataSet>  
- <xref:System.Data.DataViewManager>  
- <xref:System.Data.DataViewSetting>  
- <xref:System.Data.DataViewSettingCollection>  
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Data.DataSet>
+- <xref:System.Data.DataViewManager>
+- <xref:System.Data.DataViewSetting>
+- <xref:System.Data.DataViewSettingCollection>
+- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

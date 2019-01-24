@@ -1,5 +1,5 @@
 ---
-title: 如何：列舉已安裝的字型
+title: HOW TO：列舉已安裝的字型
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,20 @@ helpviewer_keywords:
 - fonts [Windows Forms], enumerating installed
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-ms.openlocfilehash: 9f31880cbfb42c03122fc7d2730b9ca89db49226
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0124d2bdd8b9c60dc2bf2508348044d76a2c7eb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602230"
 ---
-# <a name="how-to-enumerate-installed-fonts"></a>如何：列舉已安裝的字型
-<xref:System.Drawing.Text.InstalledFontCollection>類別繼承自<xref:System.Drawing.Text.FontCollection>抽象基底類別。 您可以使用<xref:System.Drawing.Text.InstalledFontCollection>物件來列舉電腦上安裝的字型。 <xref:System.Drawing.Text.FontCollection.Families%2A>屬性<xref:System.Drawing.Text.InstalledFontCollection>物件是陣列<xref:System.Drawing.FontFamily>物件。  
+# <a name="how-to-enumerate-installed-fonts"></a>HOW TO：列舉已安裝的字型
+<xref:System.Drawing.Text.InstalledFontCollection>類別繼承自<xref:System.Drawing.Text.FontCollection>抽象基底類別。 您可以使用<xref:System.Drawing.Text.InstalledFontCollection>物件來列舉電腦上安裝的字型。 <xref:System.Drawing.Text.FontCollection.Families%2A>的屬性<xref:System.Drawing.Text.InstalledFontCollection>物件為陣列的<xref:System.Drawing.FontFamily>物件。  
   
 ## <a name="example"></a>範例  
- 下列範例會列出電腦上安裝的所有字型家族的名稱。 程式碼會擷取<xref:System.Drawing.FontFamily.Name%2A>每個屬性<xref:System.Drawing.FontFamily>所傳回陣列中的物件<xref:System.Drawing.Text.FontCollection.Families%2A>屬性。 擷取系列名稱，如串連這些區塊是以逗號分隔的格式清單。 然後在<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>類別在矩形中繪製的逗號分隔清單。  
+ 下列範例會列出安裝在電腦上的所有字型家族的名稱。 程式碼會擷取<xref:System.Drawing.FontFamily.Name%2A>屬性的每個<xref:System.Drawing.FontFamily>中所傳回的陣列物件<xref:System.Drawing.Text.FontCollection.Families%2A>屬性。 系列名稱是擷取，串連這些區塊是以逗號分隔的格式清單。 然後<xref:System.Drawing.Graphics.DrawString%2A>方法的<xref:System.Drawing.Graphics>類別在矩形中繪製的逗號分隔清單。  
   
- 如果您執行範例程式碼時，輸出會類似於下圖所示。  
+ 如果您執行範例程式碼時，輸出會類似下圖所示。  
   
  ![安裝字型](../../../../docs/framework/winforms/advanced/media/csfontstext6.png "csfontstext6")  
   
@@ -30,5 +31,5 @@ ms.lasthandoff: 05/04/2018
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述範例設計是為搭配 Windows Form 使用所設計，而且需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.PaintEventHandler> 的參數。 此外，您應該匯入<xref:System.Drawing.Text>命名空間。  
   
-## <a name="see-also"></a>另請參閱  
- [使用字型和文字](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a>另請參閱
+- [使用字型和文字](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

@@ -2,18 +2,18 @@
 title: '&lt;webHttpEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: ee14ce23370675782f4c25385c1786fdce11eba0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b69ace451e90c824cdf8b911d596fdd158eb3f73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491715"
 ---
 # <a name="ltwebhttpendpointgt"></a>&lt;webHttpEndpoint&gt;
 此組態元素定義具有固定的標準端點[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)繫結，會自動加入[ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)行為。 撰寫 REST 服務時，請使用這個端點。  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,8 +49,8 @@ ms.locfileid: "54151965"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Description.WebHttpEndpoint>  
- <xref:System.ServiceModel.Configuration.WebHttpEndpointElement>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Description.WebHttpEndpoint>
+- <xref:System.ServiceModel.Configuration.WebHttpEndpointElement>

@@ -2,20 +2,20 @@
 title: '&lt;filters&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: fe9ce8bc2a0efb9e20800189cd9f948d5e6a2232
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 43898485ea5730e958cbc4e9968d25c0e7f0d951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709451"
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;filters&gt; 的 &lt;add&gt;
 XPath 篩選條件，指定要記錄的訊息類型。  
   
  \<system.ServiceModel>  
-\<診斷 >  
-\<messageLogging >  
-\<篩選條件 >  
+\<diagnostic>  
+\<messageLogging>  
+\<filters>  
 \<add>  
   
 ## <a name="syntax"></a>語法  
@@ -42,7 +42,7 @@ XPath 篩選條件，指定要記錄的訊息類型。
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<篩選條件 >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|包含 XPath 篩選條件的集合，這些篩選條件可用於控制藥記錄的訊息類型。|  
+|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|包含 XPath 篩選條件的集合，這些篩選條件可用於控制藥記錄的訊息類型。|  
   
 ## <a name="remarks"></a>備註  
  篩選條件只會於套用傳輸層，指定方式是將 `logMessagesAtTransportLevel` 設定為 `true`。 服務等級和格式錯誤訊息記錄不受篩選條件的影響。  
@@ -70,14 +70,14 @@ XPath 篩選條件，指定要記錄的訊息類型。
 </messageLogging>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>  
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>  
- <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>  
- <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>  
- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>  
- [設定訊息記錄](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
- [設定訊息記錄](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
- [\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>
+- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
+- <xref:System.ServiceModel.Configuration.MessageLoggingElement>
+- <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
+- <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
+- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
+- [設定訊息記錄](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [設定訊息記錄](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)

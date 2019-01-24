@@ -16,41 +16,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a77cd85c0fafd9994418693c8d3c4b148c34dbe0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 123eda65510263951895f9c7ac4c6b1781bbd5f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437660"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736678"
 ---
 # <a name="igchost-interface"></a>IGCHost 介面
 提供方法來取得記憶體回收系統的相關資訊，以及控制記憶體回收的某些層面。  
   
 > [!NOTE]
->  從開始[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，您可以使用[igchost2:: Setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)方法來設定記憶體回收集合區段的大小和記憶體回收系統的層代 0 的最大值大於`DWORD`所加諸的限制[SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/igchost-setgcstartuplimits-method.md)方法。  
+>  開頭[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，您可以使用[IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)方法來設定記憶體回收集合區段的大小和記憶體回收系統的層代 0 的最大值大於`DWORD`所加諸的限制[SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/igchost-setgcstartuplimits-method.md)方法。  
   
 > [!NOTE]
->  這個介面是僅供專家使用。 如果使用不當，它會影響應用程式的效能。  
+>  這個介面是僅供專家使用。 如果不當使用，它可能會影響應用程式的效能。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Collect 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-collect-method.md)|強制發生在指定的層代，不論目前的記憶體回收集合的狀態。|  
-|[GetStats 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-getstats-method.md)|取得目前的記憶體回收系統狀態的統計資料。|  
-|[GetThreadStats 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-getthreadstats-method.md)|取得每個執行緒統計資料記憶體回收。|  
+|[Collect 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-collect-method.md)|強制發生指定的層代，不論目前的記憶體回收集合的狀態。|  
+|[GetStats 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-getstats-method.md)|取得記憶體回收系統的目前狀態的統計資料。|  
+|[GetThreadStats 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-getthreadstats-method.md)|取得每個執行緒統計資料進行記憶體回收。|  
 |[SetGCStartupLimits 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-setgcstartuplimits-method.md)|層代 0 設定區段的大小和大小上限。|  
 |[SetVirtualMemLimit 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-setvirtualmemlimit-method.md)|設定執行階段的虛擬記憶體的大小上限。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** GCHost.idl、 GCHost.h  
+ **標頭：** GCHost.idl GCHost.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+## <a name="see-also"></a>另請參閱
+- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

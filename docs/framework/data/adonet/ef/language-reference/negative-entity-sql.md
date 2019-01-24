@@ -2,12 +2,12 @@
 title: '- （負）(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 208e54ef-4741-4ec5-89d6-6ff700863cb0
-ms.openlocfilehash: 5d1726be6a4a59891646d05b344f59962d548c75
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f33b672ecd635234b8a8859651d117aabdaf14d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745843"
 ---
 # <a name="--negative-entity-sql"></a>- (負號) (Entity SQL)
 傳回數值運算式的負值。  
@@ -31,11 +31,11 @@ ms.locfileid: "32765148"
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 - 算術運算子來傳回數值運算式的負值。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1.  遵循 [如何：執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的程序進行。  
+1.  請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
   
 2.  將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#NEGATIVE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#negative)]  
   
-## <a name="see-also"></a>另請參閱  
- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>另請參閱
+- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
