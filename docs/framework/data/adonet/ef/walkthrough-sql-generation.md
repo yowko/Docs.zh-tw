@@ -2,12 +2,12 @@
 title: 逐步解說：SQL 產生
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3210fb8872e1610c37070330082b11dddc37aa06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733437"
 ---
 # <a name="walkthrough-sql-generation"></a>逐步解說：SQL 產生
 本主題說明中的 SQL 產生如何發[範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)。 下列 Entity SQL 查詢會使用範例提供者所隨附的模型：  
@@ -136,11 +136,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
- 如果是 Join3，IsParentAJoin 會傳回 false 而且需要啟動新的 SqlSelectStatement (SelectStatement1) 並將它推送到堆疊上。 處理作業會繼續，就像處理之前的聯結一樣，而且新的範圍會推送到堆疊上並處理子系。 左子系是範圍 (Extent3) 而右邊的子系是聯結 (Join2) 也需要啟動新的 SqlSelectStatement:SelectStatement2。 Join2 上的子系也是範圍，而且會彙總到 SelectStatement2。  
+ 如果是 Join3，IsParentAJoin 會傳回 false 而且需要啟動新的 SqlSelectStatement (SelectStatement1) 並將它推送到堆疊上。 處理作業會繼續，就像處理之前的聯結一樣，而且新的範圍會推送到堆疊上並處理子系。 左子系是範圍 (Extent3) 而右邊的子系是聯結 (Join2) 也需要啟動新的 SqlSelectStatement:SelectStatement2. Join2 上的子系也是範圍，而且會彙總到 SelectStatement2。  
   
  造訪者在瀏覽 Join2 之後，但是完成它的後置處理 (ProcessJoinInputResult) 之前的狀態會顯示在下一個圖中：  
   
- ![圖表](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
   
  在上一個圖中，SelectStatement2 會顯示為自由浮動，因為它已經從堆疊推出但是父系尚未進行後置處理。 它需要加入至父系的 FROM 部分，但是它沒有 SELECT 子句，所以不是完整 SQL 陳述式。 所以在此時，預設資料行 (所有資料行都是由它的輸入產生) 會由 AddDefaultColumns 方法加入至 SELECT 清單中。 AddDefaultColumns 會逐一查看 FromExtents 中的符號，並針對每一個符號加入範圍中的所有資料行。 如果是簡單符號，它會查看符號類型，以便擷取要加入的所有屬性。 它也會使用資料行名稱填入 AllColumnNames 字典。 完成的 SelectStatement2 會附加到 SelectStatement1 的 FROM 子句。  
   
@@ -199,5 +199,5 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
   
  第二個階段結束時，將會產生最終的 SQL 陳述式。  
   
-## <a name="see-also"></a>另請參閱  
- [範例提供者中的 SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>另請參閱
+- [範例提供者中的 SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab2fbf6bb08a33158ea450f0f19eca50e280d8c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 71d267eedf621a11f8ad21cc7148e1810955521c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713427"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext 方法
-傳回指定的執行緒目前的執行緒內容。  
+傳回針對指定的執行緒目前的執行緒內容。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,30 +39,30 @@ HRESULT GetThreadContext(
   
 #### <a name="parameters"></a>參數  
  `dwThreadID`  
- [in]要擷取之內容的執行緒識別項。 作業系統所定義的識別項。  
+ [in]要擷取之內容的執行緒識別碼。 識別碼是由作業系統定義的。  
   
  `contextFlags`  
- [in]平台相關旗標，表示內容的哪些部分應該讀取的位元組合。  
+ [in]表示應讀取內容的哪些部分的平台相依旗標的位元組合。  
   
  `contextSize`  
  [in] `pContext` 的大小。  
   
  `pContext`  
- [out]要儲存的執行緒內容緩衝區。  
+ [out]將儲存執行緒內容緩衝區。  
   
 ## <a name="remarks"></a>備註  
- Windows 平台上，`pContext`必須`CONTEXT`結構 （在 WinNT.h 中定義），這是適用於所指定的電腦類型[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。 `contextFlags` 必須有相同的值，如同`ContextFlags`欄位`CONTEXT`結構。 `CONTEXT`結構處理器特定; 請參閱 WinNT.h 檔以取得詳細資料。  
+ 在 Windows 平台，`pContext`必須是`CONTEXT`（在 WinNT.h 中定義） 的結構，這是適用於所指定的機器類型[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。 `contextFlags` 必須有相同的值，如同`ContextFlags`欄位`CONTEXT`結構。 `CONTEXT`結構是處理器特定; 請參閱 WinNT.h 檔案，如需詳細資訊。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

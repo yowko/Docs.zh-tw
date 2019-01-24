@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b985aeb97621e552e9e97581e67cae029d019ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fe770ffc5a9c187e9069e8a66553976f9a53b2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709880"
 ---
 # <a name="setpekind-method"></a>SetPEKind 方法
-決定可攜式執行檔的類型，特定電腦或電腦無關。  
+決定可攜式執行檔的類型，特定電腦或機器無關。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ HRESULT SetPEKind(
  組件的識別碼。  
   
  `FileToken`  
- PE 類型是設定的檔案的語彙基元。 可以是 NULL，如果`AssemblyID`不會指出未繫結的 netmodule。  
+ PE 型別為其設定的檔的語彙基元。 可以是 NULL，如果`AssemblyID`不會指出未繫結的 netmodule。  
   
  `dwPEKind`  
  PE 所指定的型別[CorPEKind 列舉](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)。  
@@ -51,13 +51,13 @@ HRESULT SetPEKind(
  目標電腦架構，NT 標頭中所示。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則傳回 S_OK。  
+ 如果方法成功，則會傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
  需要 alink.h。  
   
-## <a name="see-also"></a>另請參閱  
- [GetPEKind 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)  
- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>另請參閱
+- [GetPEKind 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
+- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -11,20 +11,20 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], about TextBox controls
 - text boxes [Windows Forms], adding
 ms.assetid: d1a9c7f5-fa53-480a-a75c-158f8649ea2f
-ms.openlocfilehash: b15de762b166fb66ff926706e93cbac6d0c6ba9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed4a40c172e527c6210bc31ab2575ebc08ead1bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671235"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>TextBox 控制項概觀 (Windows Form)
-Windows Form 的文字方塊會用來從使用者取得輸入或顯示的文字。 <xref:System.Windows.Forms.TextBox>控制項通常用於編輯的文字，不過它也可以設定為唯讀。 文字方塊可以顯示多行、 文字換行到控制項的大小和加入基本的格式。 <xref:System.Windows.Forms.TextBox>控制項提供單一的格式樣式的文字顯示，或輸入控制項。 若要顯示多種類型的格式化的文字，請使用<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱[RichTextBox 控制項概觀](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md)。  
+Windows Form 文字方塊用來從使用者取得輸入，或顯示的文字。 <xref:System.Windows.Forms.TextBox>控制項通常使用於可編輯的文字，雖然它可以也成為唯讀狀態。 文字方塊可以顯示多行、 文字換行到控制項的大小和加入基本的格式。 <xref:System.Windows.Forms.TextBox>控制項提供單一的格式樣式顯示，或輸入控制項的文字。 若要顯示多種類型的格式化文字，請使用<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱 < [RichTextBox 控制項概觀](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md)。  
   
 ## <a name="working-with-the-textbox-control"></a>使用 TextBox 控制項  
- 控制項所顯示的文字包含於<xref:System.Windows.Forms.TextBox.Text%2A>屬性。 根據預設，您可以輸入最多 2048年個字元，在文字方塊中。 如果您設定<xref:System.Windows.Forms.TextBox.Multiline%2A>屬性`true`，您可以輸入最多 32 KB 的文字。 <xref:System.Windows.Forms.TextBox.Text%2A>屬性可以在 [屬性] 視窗中，以在執行階段的執行階段程式碼，或由使用者輸入的設計階段設定。 可以在執行階段擷取的文字方塊中目前的內容，藉由讀取<xref:System.Windows.Forms.TextBox.Text%2A>屬性。  
+ 控制項所顯示的文字包含在<xref:System.Windows.Forms.TextBox.Text%2A>屬性。 根據預設，您可以輸入最多 2048年個字元，在文字方塊中。 如果您設定<xref:System.Windows.Forms.TextBox.Multiline%2A>屬性設`true`，您可以輸入最多 32 KB 的文字。 <xref:System.Windows.Forms.TextBox.Text%2A>屬性可以在 [屬性] 視窗中，以在執行階段程式碼，或由使用者輸入，在執行階段的設計階段設定。 目前文字方塊的內容可以在執行階段擷取，請閱讀<xref:System.Windows.Forms.TextBox.Text%2A>屬性。  
   
- 下列程式碼範例會設定在執行階段控制項中的文字。 `InitializeMyControl`程序將不會自動執行，它必須進行呼叫。  
+ 下列程式碼範例會設定在執行階段控制項中的文字。 `InitializeMyControl`程序將不會自動執行; 它必須先呼叫。  
   
 ```vb  
 Private Sub InitializeMyControl()  
@@ -49,12 +49,12 @@ private:
    }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.TextBox>  
- [操作說明：控制 Windows Forms TextBox 控制項中的插入點](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- [操作說明：使用 Windows Forms TextBox 控制項建立密碼文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- [操作說明：建立唯讀文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [操作說明：將引號放入字串中](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- [操作說明：在 Windows Forms TextBox 控制項中選取文字](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- [操作說明：在 Windows Forms TextBox 控制項中檢視多行](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [TextBox 控制項](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.TextBox>
+- [如何：控制 Windows Forms TextBox 控制項中的插入點](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [如何：使用 Windows Forms TextBox 控制項建立密碼文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [如何：建立唯讀文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
+- [如何：將引號放入字串](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [如何：在 Windows Forms TextBox 控制項中選取文字](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [如何：在 Windows Forms TextBox 控制項中檢視多行](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox 控制項](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

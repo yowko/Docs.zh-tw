@@ -2,12 +2,12 @@
 title: WCF 和 ASP.NET Web 應用程式開發介面
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: 9ff974ca59b5a6448a140cbb1e7d6e8114840bdf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 460c2d6d3acfd857c3f11db313a2ebb894a14cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697019"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF 和 ASP.NET Web 應用程式開發介面
 WCF 是 Microsoft 的統一程式設計模型，用於建置服務導向的應用程式。 開發人員可運用它來建置安全、可靠與可交易性的方案，且這些方案會跨平台進行整合，並與現有投資交互操作。 [ASP.NET Web API](https://www.asp.net/web-api)是一種架構，可讓您輕鬆地建置 HTTP 服務並擴及各種用戶端，包括瀏覽器和行動裝置。 ASP.NET Web 應用程式開發介面是在 .NET Framework 上建置 RESTful 應用程式的理想平台。 本主題提供部分指引，協助您決定最符合需求的技術。  
@@ -15,7 +15,7 @@ WCF 是 Microsoft 的統一程式設計模型，用於建置服務導向的應�
 ## <a name="choosing-which-technology-to-use"></a>選擇要使用的技術  
  下列資料表說明每種技術的主要功能。  
   
-|WCF|ASP.NET Web 應用程式開發介面|  
+|WCF|ASP.NET Web API|  
 |---------|---------------------|  
 |能支援多重傳輸通訊協定 (HTTP、TCP、UDP 和自訂傳輸) 的建置服務，並允許兩者切換。|僅限 HTTP。 適用於 HTTP 的第一級程式設計模型。 更適合從各種不同的瀏覽器，等啟用無遠弗屆的行動裝置的存取。|  
 |適用於支援相同訊息型別之多重編碼 (文字、MTOM 和 Binary) 的建置服務，並允許兩者切換。|能建置支援各種媒體型別的 Web 應用程式開發介面，包括 XML、JSON 等。|  
@@ -26,6 +26,6 @@ WCF 是 Microsoft 的統一程式設計模型，用於建置服務導向的應�
   
  使用 WCF 建立可靠、 安全的 web 服務可透過各種傳輸存取。 使用 ASP.NET Web 應用程式開發介面，建立可從各種用戶端存取的 HTTP 服務。 如果您要建立及設計新的 REST 樣式服務，請使用 ASP.NET Web 應用程式開發介面。 雖然 WCF 有提供撰寫 REST 樣式服務的部分支援，但在 ASP.NET Web 應用程式開發介面中的 REST 支援更加完整，此外，未來所有 REST 的功能改良都會在 ASP.NET Web 應用程式開發介面中進行。 如果您有現有的 WCF 服務，且您想公開其他 REST 端點，請使用 WCF 與 <xref:System.ServiceModel.WebHttpBinding>。  
   
-## <a name="see-also"></a>另請參閱  
- [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation 的基本概念](../../../docs/framework/wcf/fundamental-concepts.md)  
+## <a name="see-also"></a>另請參閱
+- [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation 的基本概念](../../../docs/framework/wcf/fundamental-concepts.md)

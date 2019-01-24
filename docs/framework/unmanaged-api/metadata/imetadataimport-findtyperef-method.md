@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 375dbaf03384b4d05a7815a11612814d8b427170
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b47369e8cee2215b3e7a21e9f069d18dffda847a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691737"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>IMetaDataImport::FindTypeRef 方法
-取得 TypeRef 語彙基元的指標<xref:System.Type>參考指定範圍中且具有指定之名稱。  
+取得 TypeRef 語彙基元的指標<xref:System.Type>，位於指定的範圍內且具有指定的名稱的參考。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,23 +39,23 @@ HRESULT FindTypeRef (
   
 #### <a name="parameters"></a>參數  
  `tkResolutionScope`  
- [in]ModuleRef、 AssemblyRef 或 TypeRef 語彙基元，指定模組、 組件或類型，分別在型別參考其定義。  
+ [in]ModuleRef、 一個 AssemblyRef 或 TypeRef 語彙基元，指定模組、 組件或類型，分別在型別參考的定義。  
   
  `szName`  
- [in]若要搜尋的型別參考的名稱。  
+ [in]要搜尋的類型參考名稱。  
   
  `ptr`  
- [out]比對的 TypeRef 語彙基元的指標。  
+ [out]比對的 TypeRef 語彙基元指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

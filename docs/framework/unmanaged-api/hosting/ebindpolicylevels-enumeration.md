@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1da1d368725ab0a2334080c1caa7d4e25f5f3bab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 635cf7c4e8ff715096728414506b4a7e683727b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704208"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels 列舉
-請提供旗標，以指定的層級套用或修改組件的原則。  
+提供旗標指定要套用或修改的組件原則的層級。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,25 +47,25 @@ typedef enum {
 |------------|-----------------|  
 |`ePolicyLevelAdmin`|指定原則應該套用系統管理員層級。|  
 |`ePolicyLevelApp`|指定原則應該套用應用程式層級。|  
-|`ePolicyLevelHost`|指定原則應該套用主機層級。|  
+|`ePolicyLevelHost`|指定原則應該套用在主機層級。|  
 |`ePolicyLevelNone`|不指定原則層級旗標。|  
-|`ePolicyLevelPublisher`|指定原則應該 publisher 層級套用。|  
-|`ePolicyLevelRetargetable`|指定原則應該適用變數層級。|  
-|`ePolicyPortability`|指定原則應該支援.NET Framework 組件實作之間的可攜性。 請參閱[ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)組態檔元素。|  
-|`ePolicyUnifiedToCLR`|指定的 common language runtime (CLR)，應該統一原則。|  
+|`ePolicyLevelPublisher`|指定原則應該套用在發行者層級。|  
+|`ePolicyLevelRetargetable`|指定變數的層級應該是適用原則。|  
+|`ePolicyPortability`|指定原則應該支援的.NET Framework 組件實作之間的可攜性。 請參閱[ \<Supportportability> >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)組態檔項目。|  
+|`ePolicyUnifiedToCLR`|指定原則應該進行整合的 common language runtime (CLR)。|  
   
 ## <a name="remarks"></a>備註  
- 此列舉會傳遞至方法的[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)介面以指定在應用程式原則的變更。  
+ 此列舉會傳遞至方法[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)介面來指定應用程式原則中的變更。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRAssemblyIdentityManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRAssemblyIdentityManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

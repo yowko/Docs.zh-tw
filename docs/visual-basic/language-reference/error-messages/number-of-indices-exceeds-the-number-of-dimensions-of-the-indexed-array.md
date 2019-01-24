@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: d40a19aefdca65773d3d8e37a43d99178586fb1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b113860366ccbe47fed8ef13abb90a540dc88b33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710647"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>索引數目超過索引陣列維度的數目
 用來存取陣列項目的索引數目必須與陣列的陣序 (也就是為其宣告的維度數目) 完全相同。  
@@ -21,7 +21,7 @@ ms.locfileid: "33593432"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   從陣列參考移除註標，直到註標的總數等於陣列的陣序規範。 例如:   
+-   直到註標的總數等於陣列的陣序規範，則您可以移除陣列參考註標。 例如:   
   
     ```vb  
     Dim gameBoard(3, 3) As String  
@@ -35,5 +35,5 @@ ms.locfileid: "33593432"
     gameBoard(1, 0) = "O"  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>另請參閱
+- [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)

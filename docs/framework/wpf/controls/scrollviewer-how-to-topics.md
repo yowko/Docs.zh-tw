@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
-ms.openlocfilehash: ab8b416afb03b5ce0a64f46c3d7ca5d363d4fd34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b5bea779888342062c6ff2ab3d258ee84cb97b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672093"
 ---
 # <a name="scrollviewer-how-to-topics"></a>ScrollViewer HOW TO 主題
-此章節的主題示範如何使用<xref:System.Windows.Controls.ScrollViewer>在您的應用程式建立可捲動區域的項目。  
+在本節中的主題將示範如何使用<xref:System.Windows.Controls.ScrollViewer>元素，來建立應用程式中的可捲動區域。  
   
 ## <a name="in-this-section"></a>本節內容  
  [處理 ScrollChanged 事件](../../../../docs/framework/wpf/controls/how-to-handle-the-scrollchanged-event.md)  
@@ -27,6 +27,6 @@ ms.locfileid: "33555344"
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a>另請參閱  
- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>另請參閱
+- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)

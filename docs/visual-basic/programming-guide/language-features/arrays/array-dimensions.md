@@ -9,86 +9,86 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: cf295288dd034d744dceb71b5c58278be5cc2a2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708528"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
-A*維度*是的方向，在其中您可以不同的陣列項目的規格。 保留每一天的月份的銷售總額陣列都有一個維度 （月份的天數）。 保留每個月份的天數部門銷售總額的陣列具有兩個維度 （的部門編號及月份天數）。 陣列的維度的數目會呼叫其*陣序規範*。  
+A*維度*是在其中您可以變更陣列的項目規格的方向。 保留每一天的月份的銷售總額的陣列有一個維度 （月份天數）。 保留每一天的月份部門銷售總額的陣列具有兩個維度 （的部門編號及月份天數）。 陣列的維度數目會呼叫其*陣序規範*。  
   
 > [!NOTE]
 >  您可以使用<xref:System.Array.Rank%2A>屬性來判斷陣列中有多少維度。  
   
-## <a name="working-with-dimensions"></a>使用維度  
- 您指定的陣列項目透過提供*索引*或*註標*的每一個維度。 項目是從索引 0 到最高的索引，該維度的每個維度連續字元。  
+## <a name="working-with-dimensions"></a>使用的維度  
+ 您藉由提供指定的陣列項目*index*或*註標*針對其每一個維度。 項目是依據每個維度從索引 0 到最高的索引，該維度的連續項目。  
   
- 下圖顯示的不同陣序規範陣列概念的結構。 在圖例中的每個項目會顯示存取它的索引值。 例如，您可以存取二維陣列的第二個資料列的第一個項目指定的索引`(1, 0)`。  
+ 下圖顯示概念性結構的陣列順位不同。 在圖例中的每個項目會顯示存取它的索引值。 例如，您可以存取的二維陣列中的第二個資料列的第一個項目指定的索引`(1, 0)`。  
   
- ![圖形的其中一個圖表&#45;二維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
+ ![圖形的圖表，其中一個&#45;維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
 一維陣列  
   
- ![兩個圖形圖表&#45;二維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
+ ![兩個圖形的圖表&#45;維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
 二維陣列  
   
- ![三個示意圖&#45;二維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
+ ![圖形的圖表，包含三個&#45;維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
 三維陣列  
   
-### <a name="one-dimension"></a>一個維度  
- 許多陣列有只有一個維度，例如每個年齡的人數。 指定元素的唯一需求為該元素保留計數的年齡。 因此，這類陣列會使用一個索引。 下列範例宣告變數，以保留*一維陣列*年齡的計算歲 0 到 120。  
+### <a name="one-dimension"></a>一維  
+ 許多陣列有只有一個維度，例如每個年齡的人的數目。 將項目指定唯一的需求是該元素保留計數的年齡。 因此，這類陣列會使用一個索引。 下列範例宣告的變數來保存*的一維陣列*的時代中，計算歲到 120 之間的 0。  
   
 ```  
 Dim ageCounts(120) As UInteger  
 ```  
   
 ### <a name="two-dimensions"></a>兩個維度  
- 某些陣列有兩個維度，例如辦公室校園每個建立的每個樓層數目。 項目的規格需要的大樓號碼和樓層，而且每個項目會保存組合的建築物和樓層計數。 因此，這類陣列會使用兩個索引。 下列範例宣告變數，以保留*二維陣列*office 計數，0 到 40 建築物和樓層 0 到 5。  
+ 某些陣列有兩個維度，例如每個樓層的校園每棟建築物的辦公室的數目。 規格的項目需要的建築物號碼與最低限度值，而每個元素會保留該組合的建築物和樓層的計數。 因此，這類陣列會使用兩個索引。 下列範例宣告的變數來保存*二維陣列*office 計數，0 到 40 的建築物和樓層 0 到 5。  
   
 ```  
 Dim officeCounts(40, 5) As Byte  
 ```  
   
- 二維陣列也稱為*矩形陣列*。  
+ 二維陣列，也會呼叫*矩形陣列*。  
   
 ### <a name="three-dimensions"></a>三個維度  
- 有些陣列有三個維度，例如在 3d 空間中的值。 這類陣列會使用三個索引，在此情況下表示 x、 y 和 z 座標的實體空間。 下列範例宣告變數，以保留*三維陣列*的空中溫度三維的磁碟區中的各個點上。  
+ 少數的陣列有三個維度，例如在 3d 空間中的值。 這類陣列會使用在此情況下代表 x、 y 和 z 座標的實體空間中的三個索引。 下列範例宣告的變數來保存*三維陣列*的三維的磁碟區在各個點上的無線溫度。  
   
 ```  
 Dim airTemperatures(99, 99, 24) As Single  
 ```  
   
 ### <a name="more-than-three-dimensions"></a>三個以上的維度  
- 雖然陣列可以有 32 個維度，很少會有三個以上。  
+ 雖然陣列可以有多達 32 個維度，很少會有三個以上。  
   
 > [!NOTE]
->  當您將維度加入至陣列時，陣列所需的總儲存空間會增加相當大，因此請小心使用多維陣列。  
+>  當您將維度加入陣列時，陣列所需的儲存體總計會增加相當大，因此請謹慎使用多維陣列。  
   
 ## <a name="using-different-dimensions"></a>使用不同的維度  
- 假設您想要追蹤銷售金額加總月的每一天。 您可能會宣告一維陣列 31 項目時，其中每一天的月份，如下列範例會顯示。  
+ 假設您想要追蹤的存在的每月每一天的銷售金額。 您可以宣告一維陣列 31 項目時，其中每一天的月份，如下列範例會顯示。  
   
 ```  
 Dim salesAmounts(30) As Double  
 ```  
   
- 現在假設您想要追蹤之相同資訊不僅可針對每一天的月份，也包含一年的每個月。 您可能會宣告具有和二維陣列 （如月份） 12 列 31 個資料行 （適用於天），如下列範例所示。  
+ 現在假設您想要追蹤的相同資訊不只會針對每一天的每個月，也包含一年的每個月。 您可以宣告 （如月份） 12 個資料列與 （適用於天），31 個資料行的二維陣列，如下列範例所示。  
   
 ```  
 Dim salesAmounts(11, 30) As Double  
 ```  
   
- 現在假設您決定要讓您的陣列會保留一年以上的資訊。 如果您想要追蹤 5 年的銷售金額加總，您可以宣告一個三維陣列層級 5、 12 個資料列，與 31 個資料行，如下列範例所示。  
+ 現在假設您決定要讓您的陣列就會保留一年以上的資訊。 如果您想要追蹤 5 年的銷售金額，您可以宣告一個三維陣列 5 個層級、 12 個資料列中，與 31 個資料行，如下列範例所示。  
   
 ```  
 Dim salesAmounts(4, 11, 30) As Double  
 ```  
   
- 請注意，因為每個索引會從 0 變化，其最大值，每個維度`salesAmounts`宣告為所需的長度小於該維度。 請注意，陣列的大小會隨著每個新的維度。 前述範例中的三個大小分別為 31、 372 和 1860 個元素。  
+ 請注意，因為每個索引從 0 會變化，其最大值，每個維度的`salesAmounts`宣告為所需的長度小於該維度。 也請注意，陣列的大小會增加每個新的維度。 在上述範例中的三種大小分別為 31、 372 和 1860 個元素。  
   
 > [!NOTE]
->  您可以建立陣列，而不使用`Dim`陳述式或`New`子句。 例如，您可以呼叫<xref:System.Array.CreateInstance%2A>方法或另一個元件可以通過您的程式碼以這種方式建立的陣列。 這類陣列可以具有下限不是 0。 您可以一律作為維度的下限使用測試<xref:System.Array.GetLowerBound%2A>方法或`LBound`函式。  
+>  您可以建立陣列，而不使用`Dim`陳述式或`New`子句。 例如，您可以呼叫<xref:System.Array.CreateInstance%2A>方法或另一個元件可以通過您的程式碼以這種方式建立的陣列。 這類陣列可以有 0 以外的下限。 您可以一律測試作為維度的下限，利用<xref:System.Array.GetLowerBound%2A>方法或`LBound`函式。  
   
-## <a name="see-also"></a>另請參閱  
- [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [陣列的疑難排解](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+## <a name="see-also"></a>另請參閱
+- [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [陣列的疑難排解](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

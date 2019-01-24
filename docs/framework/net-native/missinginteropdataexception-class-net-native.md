@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 189b50b4d35d061c511fbd06cc843296607062b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a6d5755507ca00de612677235912d86caf98553
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392966"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698059"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException 類別 (.NET Native)
 **僅限 Windows 10 之 Windows 應用程式的 .NET[!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -65,7 +65,7 @@ ms.locfileid: "33392966"
   
 ## <a name="events"></a>事件  
   
-|事件|描述|  
+|Event - 事件|描述|  
 |-----------|-----------------|  
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|當例外狀況序列化，以建立包含例外狀況相關序列化資料的例外狀況狀態物件時，就會發生此事件。 (繼承自 <xref:System.Exception?displayProperty=nameWithType>。)|  
   
@@ -79,7 +79,7 @@ ms.locfileid: "33392966"
   
  `MissingInteropDataException` 類別包含唯一的成員 `MissingType` 屬性，指出需要中繼資料才能成功呼叫方法的類型。 其餘所有成員都是繼承自基底類別 <xref:System.Exception?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Exception?displayProperty=nameWithType>  
- [MissingMetadataException 類別](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)  
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Exception?displayProperty=nameWithType>
+- [MissingMetadataException 類別](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
+- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

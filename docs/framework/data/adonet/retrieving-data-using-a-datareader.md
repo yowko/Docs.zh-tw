@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: c97c30d77551f519777afa6efd31d507b3f21851
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 134bb68b9cf60cc5082afefdd9eb87d991b6e0ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692752"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>使用 DataReader 擷取資料
 若要擷取的資料使用**DataReader**，建立的執行個體**命令**物件，然後再建立**DataReader**藉由呼叫**Command.ExecuteReader**從資料來源擷取資料列。 **DataReader**提供未緩衝處理資料流的資料，可讓程序邏輯有效地循序處理來自資料來源的結果。 **DataReader**是不錯的選擇，因為資料不會快取記憶體，在擷取大量資料時。
@@ -257,9 +257,9 @@ adapter.Fill(ds);
 > [!NOTE]
 >  若要避免**OverflowException**，我們建議您也會處理任何從 Oracle NUMBER 型別轉換為有效的.NET Framework 型別儲存中的值之前<xref:System.Data.DataRow>。 您可以使用<xref:System.Data.Common.DataAdapter.FillError>事件判斷是否**OverflowException**發生。 如需詳細資訊<xref:System.Data.Common.DataAdapter.FillError>事件，請參閱 <<c2> [ 處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [使用 Datareader](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [使用 Datareader](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
+- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

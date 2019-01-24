@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 8030c0323a2f742de19a4761e24c66294c6dd5d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 990e82aa6b4f85458979adfa25965cbd16b7893e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707475"
 ---
 # <a name="connection-strings-and-configuration-files"></a>連接字串和組態檔
 在應用程式的程式碼中嵌入連接字串可能會導致安全性漏洞和維護問題。 編譯到應用程式原始程式碼中的未加密連接字串，可使用 [Ildasm.exe (IL 反組譯工具)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 工具進行檢視。 此外，如果連接字串變更，應用程式就必須重新編譯。 基於上述理由，建議您將連接字串儲存在應用程式組態檔中。  
@@ -167,12 +167,12 @@ ms.locfileid: "43865822"
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- 如需保護 ASP.NET 應用程式的詳細資訊，請參閱 ASP.NET 開發人員中心的 [NIB：ASP.NET 安全性](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)和 [ASP.NET 2.0 Security Practices at a Glance](https://go.microsoft.com/fwlink/?LinkId=59997) (ASP.NET 2.0 安全性實行方法簡介)。  
+ 保護 ASP.NET 應用程式的詳細資訊，請參閱[NIB:ASP.NET 安全性](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)並[ASP.NET 2.0 安全性作法一瞥](https://go.microsoft.com/fwlink/?LinkId=59997)ASP.NET 開發人員中心。  
   
-## <a name="see-also"></a>另請參閱  
- [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [使用組態類別](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
- [設定應用程式](../../../../docs/framework/configure-apps/index.md)  
- [ASP.NET 網站管理](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [使用組態類別](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)
+- [設定應用程式](../../../../docs/framework/configure-apps/index.md)
+- [ASP.NET 網站管理](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 FontDialog 元件顯示字型清單
+title: HOW TO：顯示字型清單使用 FontDialog 元件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,27 +13,27 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: fe291df1648da5002ce3173a68208bbad659705d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18a9a4bca42117233c4b01a4aeb6cffcb79119d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536494"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726399"
 ---
-# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>如何：使用 FontDialog 元件顯示字型清單
-[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)元件可讓使用者選取字型，以及變更其顯示層面，例如其加權和大小。  
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>HOW TO：顯示字型清單使用 FontDialog 元件
+[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)元件可讓使用者選取的字型，以及變更其顯示的層面，例如其加權和大小。  
   
- 在對話方塊中選取的字型會傳入<xref:System.Windows.Forms.FontDialog.Font%2A>屬性。 因此，利用使用者選取的字型就像是容易讀取的屬性。  
+ 在對話方塊中選取的字型會傳入<xref:System.Windows.Forms.FontDialog.Font%2A>屬性。 因此，利用使用者所選取是字型的簡單，只要讀取屬性。  
   
 ### <a name="to-select-font-properties-using-the-fontdialog-component"></a>若要選取的字型屬性使用 FontDialog 元件  
   
-1.  顯示對話方塊方塊使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法。  
+1.  顯示對話方塊方塊中，使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法。  
   
 2.  使用<xref:System.Windows.Forms.DialogResult>屬性來決定對話方塊關閉的方式。  
   
 3.  使用<xref:System.Windows.Forms.FontDialog.Font%2A>屬性來設定所需的字型。  
   
-     在下列範例中，<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式會開啟<xref:System.Windows.Forms.FontDialog>元件。 字型選擇和使用者時按下**確定**、<xref:System.Windows.Forms.FontDialog.Font%2A>屬性<xref:System.Windows.Forms.TextBox>表單上的控制項設為選擇的字型。 這個範例假設您的表單具有<xref:System.Windows.Forms.Button>控制項，<xref:System.Windows.Forms.TextBox>控制項和<xref:System.Windows.Forms.FontDialog>元件。  
+     在下列範例中，<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式會開啟<xref:System.Windows.Forms.FontDialog>元件。 如果字型是選擇且使用者按下 **[確定]**，則<xref:System.Windows.Forms.FontDialog.Font%2A>屬性<xref:System.Windows.Forms.TextBox>表單上的控制項設為所選的字型。 此範例假設您的表單具有<xref:System.Windows.Forms.Button>控制項中，<xref:System.Windows.Forms.TextBox>控制項，並有<xref:System.Windows.Forms.FontDialog>元件。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -76,6 +76,6 @@ ms.locfileid: "33536494"
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.FontDialog>  
- [FontDialog 元件](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.FontDialog>
+- [FontDialog 元件](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

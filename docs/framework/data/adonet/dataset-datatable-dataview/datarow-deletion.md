@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: e7e687dfa6af47161be9d26054eb58f319a5099d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 69bdf4d23463cc07259a2b1de6b9efaa78f0f0de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593754"
 ---
 # <a name="datarow-deletion"></a>刪除 DataRow
 有兩種方法可用來刪除<xref:System.Data.DataRow>物件從<xref:System.Data.DataTable>物件：**移除**方法<xref:System.Data.DataRowCollection>物件，而<xref:System.Data.DataRow.Delete%2A>方法**DataRow**物件。 然而<xref:System.Data.DataRowCollection.Remove%2A>方法會刪除**DataRow**從**DataRowCollection**，則<xref:System.Data.DataRow.Delete%2A>方法只能標記要刪除的資料列。 當應用程式呼叫時，就會發生真正的移除作業**AcceptChanges**方法。 您可以使用 <xref:System.Data.DataRow.Delete%2A>，以程式設計方式檢查有哪些資料列標示為要刪除，然後再將其實際移除。 將資料列標記為要刪除時，會將其 <xref:System.Data.DataRow.RowState%2A> 屬性設為 <xref:System.Data.DataRow.Delete%2A>。  
@@ -44,9 +44,9 @@ workRow.Delete();
 > [!NOTE]
 >  如果**RowState**的**DataRow**會**Added**，亦即它剛新增至資料表，則會標記為**Deleted**，它是從資料表中移除。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Data.DataRow>  
- <xref:System.Data.DataRowCollection>  
- <xref:System.Data.DataTable>  
- [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Data.DataRow>
+- <xref:System.Data.DataRowCollection>
+- <xref:System.Data.DataTable>
+- [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

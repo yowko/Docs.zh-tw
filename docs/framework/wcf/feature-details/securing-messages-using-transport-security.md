@@ -2,12 +2,12 @@
 title: 使用傳輸安全性來確保訊息的安全
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 660c3c002f1892a91a5c0eaefb2cc5c16bb460a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4a67cc8265254741a58c9b86bc45eff9c9366bcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747943"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用傳輸安全性來確保訊息的安全
 本節討論訊息佇列 (MSMQ) 的傳輸安全性，您可以使用這項傳輸安全性確保傳送至佇列之訊息的安全。  
@@ -65,7 +65,7 @@ ms.locfileid: "50187750"
  其宣告和身分識別資訊的憑證中已填入<xref:System.ServiceModel.ServiceSecurityContext>WCF 已排入佇列的傳輸通道。 服務可使用此資訊執行它自己對寄件人的驗證。  
   
 ### <a name="msmq-protection-level"></a>MSMQ 保護層級  
- 保護層級會說明如何保護 MSMQ 訊息以確保不會被竄改。 它是在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 屬性中指定。 預設值是 <xref:System.Net.Security.ProtectionLevel.Sign>。  
+ 保護層級會說明如何保護 MSMQ 訊息以確保不會被竄改。 它是在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 屬性中指定。 預設值為 <xref:System.Net.Security.ProtectionLevel.Sign>。  
   
 #### <a name="sign-protection-level"></a>簽章保護層級  
  當使用 `WindowsDomain` 驗證模式內部產生的憑證或 `Certificate` 驗證模式外部產生的憑證時，MSMQ 訊息會使用內部產生的憑證簽章。  
@@ -96,7 +96,7 @@ ms.locfileid: "50187750"
   
  支援的演算法為 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 預設為 `SHA1`。  
   
-## <a name="see-also"></a>另請參閱  
- [訊息佇列](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>另請參閱
+- [訊息佇列](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

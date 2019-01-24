@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 92efda893d0d96b5d0f6de90364faec0b85c79aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595132"
 ---
 # <a name="debugging-windows-authentication-errors"></a>偵錯 Windows 驗證錯誤
 當使用 Windows 驗證做為安全性機制時，安全性支援提供者介面 (SSPI) 便會處理安全性程序。 當安全性錯誤發生在 SSPI 層時，它們會顯示由 Windows Communication Foundation (WCF)。 本主題會提供可協助診斷這些錯誤的架構與問題集。  
@@ -47,11 +47,11 @@ ms.locfileid: "43513243"
   
 -   本機使用者：僅限電腦的使用者設定檔。 例如：`MachineName\Administrator` 或 `MachineName\ProfileName`。  
   
--   本機系統：未加入網域之電腦上的內建帳戶 SYSTEM。  
+-   本機系統：內建帳戶 SYSTEM 未加入網域的電腦上。  
   
--   網域使用者：Windows 網域上的使用者帳戶。 例如：`DomainName\ProfileName`。  
+-   網域使用者：在 Windows 網域使用者帳戶。 例如：`DomainName\ProfileName`。  
   
--   網域電腦：處理序，其具有執行於已加入 Windows 網域之電腦的電腦身分識別。 例如：`MachineName\Network Service`。  
+-   網域電腦：加入 Windows 網域的機器上執行的機器身分識別與處理程序。 例如：`MachineName\Network Service`。  
   
 > [!NOTE]
 >  當呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 類別的 <xref:System.ServiceModel.ServiceHost> 方法時，便會擷取服務認證。 每當用戶端傳送訊息時就會讀取此用戶端認證。  
@@ -139,15 +139,15 @@ ms.locfileid: "43513243"
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>無法使用 SSPI  
- 在下列作業系統不支援 Windows 驗證時用來作為伺服器： [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition 和[!INCLUDE[wv](../../../../includes/wv-md.md)]Home edition。  
+ 在下列作業系統不支援 Windows 驗證時用來作為伺服器：[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition， [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition 和[!INCLUDE[wv](../../../../includes/wv-md.md)]Home edition。  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>以不同的身分進行開發及部署  
  如果您在某一台電腦上開發應用程式，然後又在另一台電腦上進行部署，而且在每一台電腦上都使用不同的帳戶類型進行驗證，您可能會產生不同的行為。 例如，假設您是使用 `SSPI Negotiated`驗證模式，在 Windows XP Pro 機器上開發應用程式。 您又使用本機使用者帳戶進行身分驗證，然後又使用了 NTLM 通訊協定。 應用程式開發完成後，您以網域帳戶先在 Windows Server 2003 機器上部署服務而後執行。 此時，用戶端將無法驗證該服務，因為用戶端使用的是 Kerberos 及網域控制站。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.ClientBase%601>  
- [委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.ClientBase%601>
+- [委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

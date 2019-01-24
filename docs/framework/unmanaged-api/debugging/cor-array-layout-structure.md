@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a96542ab5113311bba79cc552afd7f29e6eafa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e6fee91146e99ba1f63ecafcbbdaae9d42675848
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731136"
 ---
 # <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT 結構
 提供記憶體中陣列物件配置的相關資訊。  
@@ -45,29 +45,29 @@ typedef struct COR_ARRAY_LAYOUT {
   
 |成員|描述|  
 |------------|-----------------|  
-|`componentID`|此陣列中包含的物件類型識別項。|  
-|`componentType`|CorElementType 列舉值，指出元件是否記憶體回收集合參考、 實值類別或基本型別。|  
+|`componentID`|陣列包含的物件類型的識別項。|  
+|`componentType`|CorElementType 列舉值，指出元件是否記憶體回收參考、 實值類別或基本型別。|  
 |`firstElementOffset`|要在陣列中的第一個元素的位移。|  
 |`elementSize`|每個項目的大小。|  
 |`countOffset`|要在陣列中的項目數的位移。|  
 |`rankSize`|陣序規範，以位元組為單位的大小。|  
-|`numRanks`|陣列的排列次序數目。|  
-|`rankOffset`|順位的開始位移。|  
+|`numRanks`|陣列中的排列次序的數目。|  
+|`rankOffset`|陣序規範的開始位移。|  
   
 ## <a name="remarks"></a>備註  
- `rankSize`欄位多維陣列中指定的陣序規範的大小。 它是正確的單一維度的陣列。  
+ `rankSize`欄位多維陣列中指定的陣序規範的大小。 它是精確的單一維度的陣列。  
   
- 值`numRanks`為一維陣列的 1 和`N`多維陣列的`N`維度。  
+ 值`numRanks`為 1 的一維陣列並`N`多維陣列的`N`維度。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 47ab6e52278c77156e828869dd23575561879bff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8442b8723476984b90f740beac912688719f1791
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689831"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>應用程式定義域資源監視 (ARM) ETW 事件
 <a name="top"></a> 這些事件可提供有關應用程式網域狀態的詳細診斷資訊。 您可以使用這些事件或使用應用程式網域資源監視 (ARM) 功能，取得相同的資訊。  
@@ -156,5 +156,5 @@ ms.locfileid: "33398179"
 |AppDomainID|win:UInt64|應用程式網域識別項。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
-## <a name="see-also"></a>另請參閱  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>另請參閱
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 0bacf874e09aca82b2f2685a146612cdef0673db
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705900"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>HOW TO：建立自訂授權原則
-識別模型基礎結構中 Windows Communication Foundation (WCF) 支援宣告型授權模型。 宣告會從權杖擷取出來 (可以選擇性地由自訂授權原則進行處理)，接著會放置到可隨後進行檢查以做出授權決策的 <xref:System.IdentityModel.Policy.AuthorizationContext>。 自訂原則可用於將來自傳入權杖的宣告轉換為應用程式所需要的宣告。 如此一來，應用程式層都可以 WCF 支援的不同權杖類型所服務之不同宣告的詳細資料達成隔離。 本主題會說明如何實作自訂授權原則，以及如何將該原則新增至服務所使用的原則集合。  
+身分識別模型基礎結構在 Windows Communication Foundation (WCF) 支援以宣告為基礎的授權模型。 宣告會從權杖擷取出來 (可以選擇性地由自訂授權原則進行處理)，接著會放置到可隨後進行檢查以做出授權決策的 <xref:System.IdentityModel.Policy.AuthorizationContext>。 自訂原則可用於將來自傳入權杖的宣告轉換為應用程式所需要的宣告。 如此一來，就可以達成隔離應用程式層提供 WCF 支援的不同權杖類型的不同宣告的詳細資料。 本主題會說明如何實作自訂授權原則，以及如何將該原則新增至服務所使用的原則集合。  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>實作自訂授權原則  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33804231"
   
 1.  有兩個參數會傳遞至這個方法：即 <xref:System.IdentityModel.Policy.EvaluationContext> 類別的執行個體，以及某個物件參考。  
   
-2.  如果自訂授權原則新增<xref:System.IdentityModel.Claims.ClaimSet>執行個體，而不考慮目前的內容<xref:System.IdentityModel.Policy.EvaluationContext>，然後新增每個`ClaimSet`藉由呼叫<xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29>方法，並傳回`true`從<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>方法。 傳回 `true`，就是向授權基礎結構表示該授權原則已執行其工作，因此不需要重新呼叫。  
+2.  如果自訂授權原則新增<xref:System.IdentityModel.Claims.ClaimSet>執行個體，而不考慮目前的內容<xref:System.IdentityModel.Policy.EvaluationContext>，然後將每個都`ClaimSet`藉由呼叫<xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29>方法，並傳回`true`從<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>方法。 傳回 `true`，就是向授權基礎結構表示該授權原則已執行其工作，因此不需要重新呼叫。  
   
 3.  如果自訂授權原則只會在 `EvaluationContext` 中已出現某些宣告時新增宣告集，則請檢查 `ClaimSet` 屬性所傳回的 <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A> 執行個體來查看這些宣告。 如果這些宣告有存在，則呼叫 <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> 方法來新增新的宣告集，如果沒有要新增其他宣告集，則傳回 `true`，向授權基礎結構表示授權原則已完成其工作。 如果沒有存在這些宣告，則傳回 `false`，表示如果有其他授權原則要新增更多宣告集至 `EvaluationContext`，就應該重新呼叫授權原則。  
   
@@ -45,8 +45,8 @@ ms.locfileid: "33804231"
       <behaviors>  
         <serviceAuthorization serviceAuthorizationManagerType=  
                   "Samples.MyServiceAuthorizationManager" >  
-          <authorizationPolicies>         
-            <add policyType="Samples.MyAuthorizationPolicy"  
+          <authorizationPolicies>  
+            <add policyType="Samples.MyAuthorizationPolicy" />  
           </authorizationPolicies>  
         </serviceAuthorization>  
       </behaviors>  
@@ -75,8 +75,8 @@ ms.locfileid: "33804231"
  [!code-csharp[c_CustomAuthPol#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#5)]
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [如何：比較宣告](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [如何：為服務建立自訂授權管理員](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [授權原則](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- [如何：比較宣告](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [如何：建立自訂授權管理員服務](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [授權原則](../../../../docs/framework/wcf/samples/authorization-policy.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：編輯 TableLayoutPanel 控制項中的資料行和資料列
+title: HOW TO：編輯資料行和 TableLayoutPanel 控制項中的資料列
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 820d2f98290650bfaf377bd2d4b863dfb2e6e704
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b1ae7afe2a99870e4befc04992148080aff6bfad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720323"
 ---
-# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>如何：編輯 TableLayoutPanel 控制項中的資料行和資料列
+# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>HOW TO：編輯資料行和 TableLayoutPanel 控制項中的資料列
 您可以使用的集合編輯器<xref:System.Windows.Forms.TableLayoutPanel>控制項，呼叫**資料行和資料列樣式**對話方塊中，若要編輯的資料列和資料行的控制項。  
   
 > [!NOTE]
->  如果您想要跨越多個資料列或資料行的控制項，將`RowSpan`和`ColumnSpan`控制項上的屬性。 如需詳細資訊，請參閱 [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+>  如果您想要跨越多個資料列或資料行的控制項，將`RowSpan`和`ColumnSpan`控制項上的屬性。 如需詳細資訊，請參閱[逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
 >   
->  如果您想要對齊控制項在資料格，或如果您想要延展的資料格內的控制項，使用控制項的<xref:System.Windows.Forms.Control.Anchor%2A>屬性。 如需詳細資訊，請參閱 [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+>  如果您想要對齊控制項在資料格，或如果您想要延展的資料格內的控制項，使用控制項的<xref:System.Windows.Forms.Control.Anchor%2A>屬性。 如需詳細資訊，請參閱[逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
 >   
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-edit-rows-and-columns"></a>若要編輯的資料列和資料行  
   
-1.  拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。  
+1.  從 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**將** 控制項拖曳至表單。  
   
 2.  按一下 [<xref:System.Windows.Forms.TableLayoutPanel>控制項的智慧標籤圖像 （glyph) (![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，然後選取**編輯資料列和資料行**以開啟**資料行和資料列樣式**] 對話方塊。 您也可以以滑鼠右鍵按一下<xref:System.Windows.Forms.TableLayoutPanel>控制項，並選取**編輯資料列和資料行**從捷徑功能表。  
   
@@ -43,6 +43,6 @@ ms.locfileid: "43500780"
   
 8.  若要移除的資料列或資料行，請按一下**移除** 按鈕來刪除目前選取的項目，在**成員**清單。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.SizeType>  
- [TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.SizeType>
+- [TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

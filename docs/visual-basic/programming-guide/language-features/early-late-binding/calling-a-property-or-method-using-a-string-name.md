@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 76be426049489bb58e50878822c03fa5cd5cca8e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 865270cfc8089d0bf229d9de7a7775dd2a3361d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731515"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>使用字串名稱呼叫屬性或方法 (Visual Basic)
 在大部分情況下，您可以在設計階段探索的屬性和方法的物件和撰寫程式碼來處理它們。 不過，在某些情況下您可能不知道物件的屬性和方法事先，或者您可能只想讓使用者指定的屬性，或在執行階段執行方法的彈性。  
@@ -46,6 +46,6 @@ ms.locfileid: "42911642"
 > [!NOTE]
 >  雖然`CallByName`函式可能會很有用，在某些情況下，您必須衡量其實用性，對效能的影響 — 使用`CallByName`叫用程序會稍微慢一點比晚期繫結呼叫。 如果您叫用會重複呼叫，例如在迴圈內的函式`CallByName`可能會造成嚴重影響效能。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>  
- [決定物件類型](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>
+- [決定物件類型](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)

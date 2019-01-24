@@ -7,12 +7,12 @@ helpviewer_keywords:
 - math routines
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-ms.openlocfilehash: da0b612feb5b9a479d50f52cf65e38007ab3b196
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a644183f0af7a10672acc62e39ac174b88a47b90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731812"
 ---
 # <a name="math-functions-visual-basic"></a>數學函式 (Visual Basic)
 方法的<xref:System.Math?displayProperty=nameWithType>類別提供三角函數、 對數以及其他一般數學函數。  
@@ -160,15 +160,15 @@ End Function
 ```  
   
 ## <a name="requirements"></a>需求  
- **類別：** <xref:System.Math>  
+ **類別︰** <xref:System.Math>  
   
- **命名空間：** <xref:System>  
+ **命名空間︰** <xref:System>  
   
  **組件：** mscorlib （在 mscorlib.dll 中)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>  
- <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>  
- <xref:System.Double.NaN>  
- [衍生的數學函式](../../../visual-basic/language-reference/keywords/derived-math-functions.md)  
- [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>
+- <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>
+- <xref:System.Double.NaN>
+- [衍生的數學函式](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
+- [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

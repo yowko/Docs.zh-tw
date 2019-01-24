@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aeb3c4e9a1d87b2d93a310b88c340aec0955a845
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5478a8d3433a8a57dab458c98ea745f32a9ffdf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721865"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a>ISymUnmanagedNamespace::GetName 方法
 取得這個命名空間的名稱。  
@@ -39,19 +39,19 @@ HRESULT GetName(
   
 #### <a name="parameters"></a>參數  
  `cchName`  
- [in]A`ULONG32`指出的大小`szName`緩衝區。  
+ [in]A`ULONG32`表示的大小`szName`緩衝區。  
   
  `pcchName`  
- [out]指標`ULONG32`接收以字元為單位，以包含命名空間名稱，包括 null 結束所需要的緩衝區大小。  
+ [out]指標`ULONG32`接收大小，以字元為單位，以包含命名空間名稱，包括 null 終止所需的緩衝區。  
   
  `szName`  
- [out]包含命名空間名稱的緩衝區指標。  
+ [out]包含命名空間名稱之緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedNamespace 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedNamespace 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

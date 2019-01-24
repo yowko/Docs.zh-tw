@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d09681f97829f88bedf53af229298d5d57d764df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d057032f2a46ef29a903ae21ab13af02f9d657f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728761"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode 方法
-取得指定的函式，格式為反組譯碼的所有程式碼。 .NET Framework 2.0 版中，這個方法已被取代。 使用[icordebugcode2:: Getcodechunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)改為。  
+取得指定的函式，針對 反組譯碼格式化的所有程式碼。 這個方法已被取代，在.NET Framework 2.0 版。 使用[ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)改。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,29 +45,29 @@ HRESULT GetCode (
  [in]函式開頭位移。  
   
  `endOffset`  
- [in]在函式結束位移。  
+ [in]函式結尾的位移。  
   
  `cBufferAlloc`  
- [in]大小`buffer`到程式碼傳回的陣列。  
+ [in]大小`buffer`到程式碼會傳回陣列。  
   
  `buffer`  
- [out]程式碼會傳回所在陣列。  
+ [out]陣列，將在其中傳回的程式碼。  
   
  `pcBufferSize`  
- [out]傳回的位元組數目。  
+ [out]傳回的位元組數。  
   
 ## <a name="remarks"></a>備註  
- 如果函式的程式碼，而且已經分割成多個區塊，串連這些區塊是以遞增的原生位移的順序。 不檢查指令界限。  
+ 如果函式的程式碼，而且已經分割成多個區塊，串連這些區塊是以遞增的原生位移的順序。 不會檢查指令界限。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** 1.1、 1.0  
+ **.NET framework 版本：** 1.1, 1.0  
   
-## <a name="see-also"></a>另請參閱  
- [GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- 
+## <a name="see-also"></a>另請參閱
+- [GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+

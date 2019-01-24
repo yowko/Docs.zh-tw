@@ -1,19 +1,19 @@
 ---
-title: 如何：建立繫結控制項並格式化顯示的資料
+title: HOW TO：建立繫結的控制項並格式化顯示的資料
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8f4d3c4c738e31ab83d506dc7afb4e49b142765b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2e9dabe12e3f4eda590cec26a70c6becb0e2b7a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45614994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689727"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>如何：建立繫結控制項並格式化顯示的資料
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>HOW TO：建立繫結的控制項並格式化顯示的資料
 Windows Form 資料繫結，您可以格式化顯示資料繫結控制項中使用的資料**格式化與進階繫結** 對話方塊。  
   
 > [!NOTE]
@@ -50,11 +50,11 @@ Windows Form 資料繫結，您可以格式化顯示資料繫結控制項中使�
     |貨幣|使用指定的小數位數**小數位數**上下按鈕控制項。|  
     |日期時間|選取的日期和時間應該如何顯示選取的項目中的其中一項**型別**選取方塊。|  
     |科學記號|使用指定的小數位數**小數位數**上下按鈕控制項。|  
-    |自訂|指定使用自訂格式字串。<br /><br /> 如需詳細資訊，請參閱[格式類型](../../../docs/standard/base-types/formatting-types.md)。 **注意：** 自訂格式字串不保證成功地反覆存取之間的資料來源和繫結的控制項。 改為處理 <xref:System.Windows.Forms.Binding.Parse> 或 <xref:System.Windows.Forms.Binding.Format> 繫結的事件，以及在事件處理程式碼中套用自訂格式。|  
+    |自訂|指定使用自訂格式字串。<br /><br /> 如需詳細資訊，請參閱[格式類型](../../../docs/standard/base-types/formatting-types.md)。 **注意：** 自訂格式字串不保證能成功地在資料來源和繫結的控制項之間反覆存取。 改為處理 <xref:System.Windows.Forms.Binding.Parse> 或 <xref:System.Windows.Forms.Binding.Format> 繫結的事件，以及在事件處理程式碼中套用自訂格式。|  
   
 8.  按一下 [ **[確定]** 以關閉**格式化與進階繫結**] 對話方塊中，並返回 [屬性] 視窗。  
   
-## <a name="see-also"></a>另請參閱  
- [操作說明：在 Windows Forms 上建立簡單繫結控制項](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
- [Windows Forms 中的使用者輸入驗證](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>另請參閱
+- [如何：建立 Windows Form 上的簡單繫結控制項](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Windows Forms 中的使用者輸入驗證](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)
+- [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)

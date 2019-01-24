@@ -2,12 +2,12 @@
 title: 選取認證類型
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: c2ee1b9062d14eaa44de0651985c2a385fe02f8e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 27e1bc4b9e4209fafd0e3707ad6674eb5db6e451
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577109"
 ---
 # <a name="selecting-a-credential-type"></a>選取認證類型
 *認證*是 Windows Communication Foundation (WCF) 建立宣告的身分識別或功能時所使用的資料。 例如，護照是政府發給的認證，以證明一個國家或地區的公民身分。 在 WCF 中，認證可以有許多形式，例如使用者名稱權杖和 X.509 憑證。 本主題將討論認證、 在 WCF 中，使用方式以及如何選擇正確的認證，您的應用程式。  
@@ -26,8 +26,8 @@ ms.locfileid: "43503387"
 |設定|描述|  
 |-------------|-----------------|  
 |無|指定用戶端不需要提出任何認證。 這會轉譯成匿名用戶端。|  
-|基本|為用戶端指定基本驗證。 如需詳細資訊，請參閱 RFC2617 —[HTTP 驗證： 基本與摘要式驗證](https://go.microsoft.com/fwlink/?LinkID=88313)。|  
-|摘要|為用戶端指定摘要式驗證。 如需詳細資訊，請參閱 RFC2617 —[HTTP 驗證： 基本與摘要式驗證](https://go.microsoft.com/fwlink/?LinkID=88313)。|  
+|基本|為用戶端指定基本驗證。 如需詳細資訊，請參閱 RFC2617 —[HTTP 驗證：Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkID=88313) (RFC 2617 - HTTP 驗證：基本與摘要式驗證)。|  
+|摘要|為用戶端指定摘要式驗證。 如需詳細資訊，請參閱 RFC2617 —[HTTP 驗證：Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkID=88313) (RFC 2617 - HTTP 驗證：基本與摘要式驗證)。|  
 |Ntlm|指定 NT LAN 管理員 (NTLM) 驗證。 這是用於當您因故無法使用 Kerberos 驗證時。 您可以也設定停用它做為後援<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>屬性設`false`，會讓 WCF 將最大努力擲回例外狀況，如果使用 NTLM。 請注意，將此屬性設為 `false`，不一定能夠禁止 NTLM 認證透過網路傳送。|  
 |Windows|指定 Windows 驗證。 如果在 Windows 網域上只要指定 Kerberos 通訊協定，請將 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 屬性設定為 `false` (預設為 `true`)。|  
 |憑證|使用 X.509 憑證執行用戶端驗證。|  
@@ -97,20 +97,20 @@ ms.locfileid: "43503387"
   
  如需有關認證與安全工作階段的詳細資訊，請參閱[安全工作階段的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.BasicHttpMessageSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>  
- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [WCF 安全性程式設計](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.BasicHttpMessageSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
+- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [WCF 安全性程式設計](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

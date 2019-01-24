@@ -1,5 +1,5 @@
 ---
-title: 如何：置放工具提示
+title: HOW TO：置放工具提示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: e51be52301197a66ef49339245e60404d823b36c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 403b070e782a6f243fd5a420e569daa02044dbb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512289"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727699"
 ---
-# <a name="how-to-position-a-tooltip"></a>如何：置放工具提示
+# <a name="how-to-position-a-tooltip"></a>HOW TO：置放工具提示
 此範例示範如何在螢幕上指定工具提示的位置。  
   
 ## <a name="example"></a>範例  
@@ -58,9 +58,9 @@ ToolTip 位置，藉由使用放置、 PlacementRectangle 和位移屬性
  [!code-csharp[ToolTipService#NoToolTipCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#notooltipcode)]
  [!code-vb[ToolTipService#NoToolTipCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#notooltipcode)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Controls.ToolTip>  
- <xref:System.Windows.Controls.ToolTipService>  
- [HOW-TO 主題](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
- [工具提示概觀](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
- [使用 ContextMenuService 和 ToolTipService](https://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Controls.ToolTip>
+- <xref:System.Windows.Controls.ToolTipService>
+- [HOW-TO 主題](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+- [工具提示概觀](../../../../docs/framework/wpf/controls/tooltip-overview.md)
+- [使用 ContextMenuService 和 ToolTipService](https://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)

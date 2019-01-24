@@ -1,18 +1,18 @@
 ---
-title: 如何： 修改 Office Open XML 文件 (Visual Basic)
+title: HOW TO：修改 Office Open XML 文件 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 8d4ecdf89606190eed16b5374a5e43421d1260b7
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 333896eab6002a578b1cb53eb02f787bc9259123
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753389"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670364"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>如何： 修改 Office Open XML 文件 (Visual Basic)
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>HOW TO：修改 Office Open XML 文件 (Visual Basic)
 這個主題顯示會開啟、修改以及儲存 Office Open XML 文件的範例。  
   
- 如需 Office Open XML 的詳細資訊，請參閱[Eric 白色部落格](http://www.ericwhite.com)。  
+ 如需有關 Office Open XML 的詳細資訊，請參閱 < [Eric White 部落格](http://www.ericwhite.com)。  
   
 ## <a name="example"></a>範例  
  這個範例會尋找文件中的第一個段落元件。 它會從段落擷取文字，然後刪除段落中的所有文字執行。 它所建立的新文字執行包含已轉換為大寫的第一個段落文字。 接著，它會將變更的 XML 序列化為 Open XML 封裝並加以關閉。  
@@ -137,11 +137,11 @@ End Module
   
  如果您在執行此程式後開啟 `SampleDoc.docx`，就可以看到此程式已將文件中第一個段落轉換成大寫。  
   
- 當執行與範例 Open XML 文件中所述[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)，這個範例會產生下列輸出：  
+ 當執行中所述的範例 Open XML 文件[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)，此範例會產生下列輸出：  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [進階查詢技術 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>另請參閱
+- [進階查詢技術 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: 719c2e5c97d3f8c64de53831ac50b2e7156a38fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c589ddbc7276ca13fc82513effd3bcae3cd61fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718737"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>LINQ to SQL 的功能
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援 SQL 開發人員需要的所有重要功能。 您可以查詢資訊，以及在資料表中插入、更新和刪除資訊。  
@@ -43,14 +43,14 @@ ms.locfileid: "33356414"
  若要刪除 ( `Delete` ) 項目，請從項目所屬的集合中移除該項目，然後在 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 上呼叫 <xref:System.Data.Linq.DataContext> ，以認可變更。  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 無法辨識串聯刪除作業。 如果您想要刪除資料表中的資料列具有條件約束，請參閱[How to： 資料列從資料庫刪除](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)。  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 無法辨識串聯刪除作業。 如果您想要刪除資料表中的資料列具有條件約束，請參閱[How to:從資料庫刪除資料列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)。  
   
  在下列範例中，會從資料庫中擷取 `CustomerID` 為 `98128` 的客戶。 然後會在確認已擷取該客戶的資料列之後，呼叫 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> ，以從集合中移除該物件。 最後，會呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> ，以將刪除轉送至資料庫。  
   
  [!code-csharp[DLinqGettingStarted#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#4)]
  [!code-vb[DLinqGettingStarted#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#4)]  
   
-## <a name="see-also"></a>另請參閱  
- [程式設計手冊](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
- [LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- [快速入門](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a>另請參閱
+- [程式設計手冊](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
+- [LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [快速入門](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

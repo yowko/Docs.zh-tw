@@ -1,22 +1,22 @@
 ---
-title: '&lt;BaseAddresses&gt;'
+title: '&lt;baseAddresses&gt;'
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-ms.openlocfilehash: 0af5dee41c6adf560c90874e6e9a44b62c5decc6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 34d400e74b24e9eb4140d1b43597b0217b23d80c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730122"
 ---
-# <a name="ltbaseaddressesgt"></a>&lt;BaseAddresses&gt;
+# <a name="ltbaseaddressesgt"></a>&lt;baseAddresses&gt;
 代表 `baseAddress` 項目的集合，這些項目是自我裝載環境中之服務主機的基底位址。 如果基底位址存在，即可以相對於基底位址的位址設定端點。  
   
  \<system.ServiceModel>  
-\<用戶端 >  
-\<端點 >  
-\<主控件 >  
-\<baseAddresses >  
+\<client>  
+\<endpoint>  
+\<host>  
+\<baseAddresses>  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,10 +45,10 @@ ms.locfileid: "54147344"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<主控件 >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定服務主機設定的組態項目。|  
+|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定服務主機設定的組態項目。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.HostElement>  
- <xref:System.ServiceModel.ServiceHost>  
- <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>  
- [裝載](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.HostElement>
+- <xref:System.ServiceModel.ServiceHost>
+- <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>
+- [裝載](../../../../../docs/framework/wcf/feature-details/hosting.md)

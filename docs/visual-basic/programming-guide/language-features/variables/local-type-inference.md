@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: f4edc879af9539a40269336bed97fe206920992a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706744"
 ---
 # <a name="local-type-inference-visual-basic"></a>區域類型推斷 (Visual Basic)
 Visual Basic 編譯器會使用*型別推斷*來判斷資料類型的未宣告的區域變數`As`子句。 編譯器會推斷變數的初始化運算式的類型的類型。 這可讓您宣告變數而不用明確陳述的型別，如下列範例所示。 宣告，因為兩者`num1`和`num2`強型別為整數。  
@@ -71,11 +71,11 @@ Visual Basic 編譯器會使用*型別推斷*來判斷資料類型的未宣告�
   
  如需詳細資訊，請參閱 < [Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)並[編譯的 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
   
-## <a name="see-also"></a>另請參閱  
- [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [早期和晚期繫結](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [For Each...Next 陳述式](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [For...Next 陳述式](../../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>另請參閱
+- [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [早期和晚期繫結](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [For Each...Next 陳述式](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [For...Next 陳述式](../../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

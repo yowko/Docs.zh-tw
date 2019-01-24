@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ba09991e9452a86c6b7a1cbb08a38a71ba2aeaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d3e10a3dbae0d1b790c0d80c9286affedaa4c8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709139"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock 方法
 傳回擁有此物件的監視器鎖定的 managed 的執行緒。  
@@ -41,7 +41,7 @@ HRESULT GetThreadOwningMonitorLock (
  [out]擁有此物件的監視器鎖定的 managed 的執行緒。  
   
  `pAcquisitionCount`  
- [out]必須解除鎖定，再傳回所未擁有這個執行緒的次數。  
+ [out]此執行緒就必須釋放鎖定之前它會返回正在未擁有的次數。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
@@ -49,7 +49,7 @@ HRESULT GetThreadOwningMonitorLock (
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|S_FALSE|沒有受管理的執行緒擁有此物件的監視器鎖定。|  
+|S_FALSE|沒有任何受管理的執行緒擁有此物件的監視器鎖定。|  
   
 ## <a name="exceptions"></a>例外狀況  
   
@@ -58,23 +58,23 @@ HRESULT GetThreadOwningMonitorLock (
   
 -   方法會傳回 S_OK。  
   
--   執行緒物件是有效，直到執行緒結束為止。  
+-   執行緒物件是有效的直到執行緒結束為止。  
   
- 如果任何受管理的執行緒不擁有此物件的監視器鎖定`ppThread`和`pAcquisitionCount`維持不變，而且方法會傳回 S_FALSE。  
+ 如果沒有任何受管理的執行緒擁有這個物件的監視器鎖定`ppThread`和`pAcquisitionCount`維持不變，而方法會傳回 S_FALSE。  
   
- 如果`ppThread`或`pAcquisitionCount`不是有效的指標，結果會是未定義。  
+ 如果`ppThread`或`pAcquisitionCount`不是有效的指標，結果為未定義。  
   
- 如果發生錯誤，使它無法判別其執行緒的話，擁有這個物件的監視器鎖定方法會傳回指出失敗的 HRESULT。  
+ 如果發生錯誤，無法判斷的如果有的話，執行緒擁有監視器上的鎖定這個物件，這個方法會傳回指出失敗的 HRESULT。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ce139669c0a31301f3eecdef4b4d61f83d5e4e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9887a05236b213fb439e334cdf1455f8f445e7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458935"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671924"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx 函式
-取得值，指出是否在提供的路徑上組件資訊清單包含強式名稱簽章。  
+取得指出位於指定路徑的組件資訊清單是否包含強式名稱簽章的值。  
   
  此函式已被取代。 使用[iclrstrongname:: Strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)方法改為。  
   
@@ -41,30 +41,30 @@ BOOLEAN StrongNameSignatureVerificationEx (
   
 #### <a name="parameters"></a>參數  
  `wszFilePath`  
- [in]可攜式執行檔 （.exe 或.dll） 檔案要驗證的組件路徑。  
+ [in]可攜式可執行檔 （.exe 或.dll） 檔來進行驗證的組件的路徑。  
   
  `fForceVerification`  
- [in]`true`執行驗證，即使它是必要的登錄設定會覆寫，否則`false`。  
+ [in]`true`進行驗證，即使它是必要的登錄設定會覆寫，否則`false`。  
   
  `pfWasVerified`  
- [out]`true`強式名稱簽章已通過驗證，否則如果`false`。 `pfWasVerified` 也會設為`false`如果驗證已成功登錄設定所造成。  
+ [out]`true`強式名稱簽章是否已驗證，否則`false`。 `pfWasVerified` 也會設定為`false`若驗證成功因登錄設定。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果驗證成功。否則， `false`。  
+ `true` 如果驗證成功;否則， `false`。  
   
 ## <a name="remarks"></a>備註  
- `StrongNameSignatureVerificationEx` 提供的功能類似於[StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md)函式。 不過，第二個輸入參數和輸出參數`StrongNameSignatureVerificationEx`類型`BOOLEAN`而不是`DWORD`。  
+ `StrongNameSignatureVerificationEx` 提供的功能類似於[StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md)函式。 不過，第二個輸入參數和輸出參數`StrongNameSignatureVerificationEx`屬於類型`BOOLEAN`而不是`DWORD`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** StrongName.h  
   
  **程式庫：** 包含做為 mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [StrongNameSignatureVerificationEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)  
- [StrongNameSignatureVerification 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  
- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>另請參閱
+- [StrongNameSignatureVerificationEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [StrongNameSignatureVerification 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

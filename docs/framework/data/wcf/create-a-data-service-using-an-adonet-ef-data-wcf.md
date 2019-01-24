@@ -1,22 +1,22 @@
 ---
-title: 如何：使用 ADO.NET Entity Framework 資料來源建立資料服務 (WCF 資料服務)
+title: HOW TO：建立資料服務，使用 ADO.NET Entity Framework 資料來源 (WCF Data Services)
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 4bccd1e4655786ae24166cdc32619b420c4a54d3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 294c579c366c1abf0b9a328f7480d1b29e2cb8e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675597"
 ---
-# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：使用 ADO.NET Entity Framework 資料來源建立資料服務 (WCF 資料服務)
+# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>HOW TO：建立資料服務，使用 ADO.NET Entity Framework 資料來源 (WCF Data Services)
 
 WCF Data Services 會將實體資料公開為資料服務。 此實體的資料由提供[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]當資料來源為關聯式資料庫。 本主題說明如何建立[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-架構根據現有的資料庫並使用此資料模型來建立新的資料服務的 Visual Studio Web 應用程式中的資料模型。
 
-[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]也提供命令列工具可以產生[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]模型之外的 Visual Studio 專案。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用 EdmGen.exe 產生模型和對應檔](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。
+[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]也提供命令列工具可以產生[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]模型之外的 Visual Studio 專案。 如需詳細資訊，請參閱[＜How to：使用 EdmGen.exe 產生模型和對應檔](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>若要將以現有資料庫為基礎的 Entity Framework 模型加入至現有的 Web 應用程式
 
@@ -76,5 +76,5 @@ WCF Data Services 會將實體資料公開為資料服務。 此實體的資料�
 
 - [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
-- [如何：使用反映提供者建立資料服務](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)
-- [如何：使用 LINQ to SQL 資料來源建立資料服務](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)
+- [如何：建立資料服務，使用反映提供者](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)
+- [如何：建立使用 LINQ to SQL 資料來源的資料服務](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)

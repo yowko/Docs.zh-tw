@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ca3f5a6af6ea19ec81af3f6ac0a028440f80d56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 16c4e03667d4af3ab5cc8b653d77f15eaef25843
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691823"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult 列舉
 提供如何取得指令指標 (IP) 值的詳細資料。  
@@ -44,23 +44,23 @@ typedef enum CorDebugMappingResult {
 |成員|描述|  
 |------------|-----------------|  
 |`MAPPING_PROLOG`|原生程式碼是在初構中，因此 IP 值為 0。|  
-|`MAPPING_EPILOG`|原生程式碼處於終解中，因此 IP 值是方法的最後一個指令的位址。|  
-|`MAPPING_NO_INFO`|沒有對應的資訊可用方法，因此 IP 值為 0。|  
-|`MAPPING_UNMAPPED_ADDRESS`|雖然沒有方法的對應資訊，但是目前的位址無法對應至 Microsoft intermediate language (MSIL) 程式碼。 IP 的值為 0。|  
-|`MAPPING_EXACT`|方法會對應至 MSIL 程式碼完全或是框架有解譯，因此 IP 值正確無誤。|  
+|`MAPPING_EPILOG`|原生程式碼是終解中，因此 IP 值是方法的最後一個指令的位址。|  
+|`MAPPING_NO_INFO`|對應不未提供任何資訊的方法，因此 IP 值為 0。|  
+|`MAPPING_UNMAPPED_ADDRESS`|雖然此方法的對應資訊，但目前的地址無法對應到 Microsoft intermediate language (MSIL) 程式碼。 IP 的值為 0。|  
+|`MAPPING_EXACT`|方法會對應至 MSIL 程式碼完全或框架已解譯，因此 IP 值正確無誤。|  
 |`MAPPING_APPROXIMATE`|已成功對應方法，但 IP 值可能只是近似。|  
   
 ## <a name="remarks"></a>備註  
  您可以使用[icordebugilframe:: Getip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md)方法，以取得指令指標的值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 69c91a595861dacd3dcd92666684514bc3b6f4ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690406"
 ---
 # <a name="trees-in-wpf"></a>WPF 中的樹狀結構
 在許多技術中，元素和元件都會組織成樹狀結構，開發人員可直接管理樹狀結構中的物件節點來影響應用程式的轉譯或行為。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也會使用數個樹狀結構比喻來定義程式元素之間的關聯性。 在大部分情形下，WPF 開發人員在概念上思考物件樹狀結構比喻時，可以使用程式碼建立應用程式或使用 XAML 定義應用程式的部分，但將會呼叫特定的 API 或使用特定標記來進行這些作業，而不是使用某些一般的物件樹狀結構管理 API，就像您可能在 XML DOM 中使用的方式。 WPF 會公開兩個協助程式類別提供樹狀結構比喻檢視<xref:System.Windows.LogicalTreeHelper>和<xref:System.Windows.Media.VisualTreeHelper>。 WPF 文件中也會使用視覺化樹狀結構和邏輯樹狀結構等詞彙，因為這些相同的樹狀結構在了解某些主要的 WPF 功能時非常好用。 本主題定義代表什麼意義的視覺化樹狀結構和邏輯樹狀結構、 討論這類樹狀結構與整體的物件樹狀結構概念，並介紹<xref:System.Windows.LogicalTreeHelper>和<xref:System.Windows.Media.VisualTreeHelper>s。  
@@ -86,9 +86,9 @@ ms.locfileid: "46004480"
   
  不過，資源查閱也可以延伸至目前邏輯樹狀結構以外的地方。 對於應用程式標記，資源查閱可接著繼續前進到應用程式層級的資源字典，然後到做為靜態屬性或索引鍵加以參考的佈景主題支援和系統值。 如果資源參考是動態的，則佈景主題本身也可以參考佈景主題邏輯樹狀結構以外的系統值。 如需資源字典和查閱邏輯的詳細資訊，請參閱 [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [輸入概觀](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [初始化物件樹狀結構以外的物件項目](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [WPF 架構](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+## <a name="see-also"></a>另請參閱
+- [輸入概觀](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [初始化物件樹狀結構以外的物件項目](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)
+- [WPF 架構](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

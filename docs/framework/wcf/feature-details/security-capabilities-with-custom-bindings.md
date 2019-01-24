@@ -2,12 +2,12 @@
 title: 自訂繫結的安全性功能
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-ms.openlocfilehash: c18bec095866c70622c75834e8a4d5fe6a491b08
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 51359dd555db44891b4c8fe7bca9b62cab5f8d29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708515"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>自訂繫結的安全性功能
 您可以使用一種系統提供的繫結來執行常見的安全性工作。 不過，如果需要更多控制，您可以依照這些主題中的說明，使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 來建立自訂繫結。 如需有關自訂繫結的詳細資訊，請參閱 <<c0> [ 自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
@@ -16,16 +16,16 @@ ms.locfileid: "50190888"
  [SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)  
  說明自訂繫結的可能驗證模式。  
   
- [如何：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [如何：建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  說明建立包含安全性項目之自訂繫結的基本步驟。  
   
  [如何：為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
  說明如何建立指定之驗證模式的安全性項目。  
   
- [如何：在 WSFederationHttpBinding 上停用安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [如何：停用安全工作階段在 WSFederationHttpBinding 上](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  說明如何在建立聯合服務時停用安全工作階段。  
   
- [如何：啟用訊息偵測重送攻擊](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
+ [如何：啟用訊息重新執行偵測](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
  說明如何判斷何時會發生重新執行攻擊。  
   
  [如何：建立支援認證](../../../../docs/framework/wcf/feature-details/how-to-create-a-supporting-credential.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "50190888"
   
  [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
-## <a name="see-also"></a>另請參閱  
- [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
+## <a name="see-also"></a>另請參閱
+- [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)

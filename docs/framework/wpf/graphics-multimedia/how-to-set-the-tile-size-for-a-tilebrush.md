@@ -1,18 +1,18 @@
 ---
-title: 操作說明：設定 TileBrush 的並排顯示大小
+title: HOW TO：設定 TileBrush 的並排顯示大小
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TileBrush [WPF], size of tilepropertys
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: e1ba1a25281ffdd1cc00e0bed0efe4f8508780be
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4bfc14693f1714206e89ec50128ad62dd239dbee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713560"
 ---
-# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>操作說明：設定 TileBrush 的並排顯示大小
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>HOW TO：設定 TileBrush 的並排顯示大小
 此範例示範如何設定的並排顯示大小<xref:System.Windows.Media.TileBrush>。 根據預設，<xref:System.Windows.Media.TileBrush>會產生單一並排顯示，以完全填滿您所繪製的區域。 您可以藉由設定覆寫這個行為<xref:System.Windows.Media.TileBrush.Viewport%2A>和<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>屬性。  
   
  <xref:System.Windows.Media.TileBrush.Viewport%2A>屬性指定的並排顯示大小<xref:System.Windows.Media.TileBrush>。 根據預設，windows 7<xref:System.Windows.Media.TileBrush.Viewport%2A>屬性是相對於正在繪製之區域的大小。 若要讓<xref:System.Windows.Media.TileBrush.Viewport%2A>屬性指定絕對的並排顯示大小，設定<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>屬性設<xref:System.Windows.Media.BrushMappingMode.Absolute>。  
@@ -38,7 +38,7 @@ ms.locfileid: "43467831"
   
  雖然此範例會使用<xref:System.Windows.Media.ImageBrush>類別，<xref:System.Windows.Media.TileBrush.Viewport%2A>並<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>屬性運作方式完全相同的另<xref:System.Windows.Media.TileBrush>物件，也就是如<xref:System.Windows.Media.DrawingBrush>和<xref:System.Windows.Media.VisualBrush>。 如需詳細資訊<xref:System.Windows.Media.ImageBrush>和其他<xref:System.Windows.Media.TileBrush>物件，請參閱[使用影像、 繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.TileBrush>  
- [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [使用 TileBrush 建立不同的並排顯示模式](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.TileBrush>
+- [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [使用 TileBrush 建立不同的並排顯示模式](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)

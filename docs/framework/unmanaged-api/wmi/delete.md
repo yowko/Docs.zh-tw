@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 0590c639e7cc6622c2283bfa609ccb31d7ce7e2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46578914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720570"
 ---
 # <a name="delete-function"></a>刪除函式
 刪除指定的屬性和其限定詞的所有從 CIM 類別定義。
@@ -58,7 +58,7 @@ HRESULT Delete (
 | `WBEM_E_FAILED` | 0x80041001 | 發生未指定的錯誤。 |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | 無法刪除屬性。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszzName` 無效。 |
-| `WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | 指定的屬性不存在。 |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | 指定的屬性不存在。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體來完成此作業。 |
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | 屬性被繼承自基底類別。 |
 | `WBEM_E_SYSTEM_PROPERTY` | | 系統屬性的屬性。 |
@@ -76,5 +76,5 @@ HRESULT Delete (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

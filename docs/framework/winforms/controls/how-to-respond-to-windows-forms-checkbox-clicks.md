@@ -1,5 +1,5 @@
 ---
-title: 如何：回應 Windows Form CheckBox 按一下動作
+title: HOW TO：回應 Windows Form CheckBox 按一下動作
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,18 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: aa8a15d4f55fb1dd47fdf004fa05091ec88fe03e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf9a7c51c0054c34dbce40f3a2dfa68c62f3a4e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726321"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>如何：回應 Windows Form CheckBox 按一下動作
-每當使用者按一下 Windows Form<xref:System.Windows.Forms.CheckBox>控制項，<xref:System.Windows.Forms.Control.Click>就會發生事件。 您可以設計您的應用程式，以執行某些動作的核取方塊狀態而定。  
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>HOW TO：回應 Windows Form CheckBox 按一下動作
+每當使用者按一下 Windows Form<xref:System.Windows.Forms.CheckBox>控制項，<xref:System.Windows.Forms.Control.Click>就會發生事件。 您可以編寫您的應用程式，以執行某些動作的核取方塊狀態而定。  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>若要回應 CheckBox 按一下動作  
   
-1.  在<xref:System.Windows.Forms.Control.Click>事件處理常式，使用<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性以判斷控制項的狀態，並執行任何必要的動作。  
+1.  在 <xref:System.Windows.Forms.Control.Click>事件處理常式，使用<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性來判斷控制項的狀態，並執行任何必要的動作。  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -70,16 +71,16 @@ ms.lasthandoff: 05/04/2018
     ```  
   
     > [!NOTE]
-    >  如果使用者嘗試按兩下<xref:System.Windows.Forms.CheckBox>控制項，將會個別處理每按一下，亦即，<xref:System.Windows.Forms.CheckBox>控制項不支援按兩下事件。  
+    >  如果使用者試著按兩下<xref:System.Windows.Forms.CheckBox>控制項，將會個別處理每按一下，也就是說，<xref:System.Windows.Forms.CheckBox>控制項不支援按兩下事件。  
   
     > [!NOTE]
-    >  當<xref:System.Windows.Forms.CheckBox.AutoCheck%2A>屬性是`true`（預設）、<xref:System.Windows.Forms.CheckBox>自動選取或清除按一下時其。 否則，您必須手動設定<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性時<xref:System.Windows.Forms.Control.Click>就會發生事件。  
+    >  當<xref:System.Windows.Forms.CheckBox.AutoCheck%2A>屬性是`true`（預設值），<xref:System.Windows.Forms.CheckBox>自動選取或清除時按一下它。 否則，您必須手動設定<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性時<xref:System.Windows.Forms.Control.Click>就會發生事件。  
   
      您也可以使用<xref:System.Windows.Forms.CheckBox>控制項來決定採取的動作。  
   
-### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>按一下來決定採取的動作時核取方塊  
+### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>按一下來決定所要採取的動作時核取方塊  
   
-1.  若要查詢的值中使用 case 陳述式<xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性來決定採取的動作。 當<xref:System.Windows.Forms.CheckBox.ThreeState%2A>屬性設定為`true`、<xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性可能會傳回三個可能的值，代表要檢查的方塊，方塊未選取，或是第三個不定狀態顯示此方塊以呈現暗灰色無法使用外觀上與指定的選項。  
+1.  若要查詢的值中使用 case 陳述式<xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性來決定所要採取的動作。 當<xref:System.Windows.Forms.CheckBox.ThreeState%2A>屬性設定為`true`，則<xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性可能會傳回三個可能的值，代表要核取方塊，方塊未選取，或是第三個不定狀態顯示此方塊以呈現暗灰色無法使用，表示選項的外觀。  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -132,10 +133,10 @@ ms.lasthandoff: 05/04/2018
     ```  
   
     > [!NOTE]
-    >  當<xref:System.Windows.Forms.CheckBox.ThreeState%2A>屬性設定為`true`、<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性會傳回`true`兩者<xref:System.Windows.Forms.CheckState.Checked>和<xref:System.Windows.Forms.CheckState.Indeterminate>。  
+    >  當<xref:System.Windows.Forms.CheckBox.ThreeState%2A>屬性設定為`true`，則<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性會傳回`true`同時<xref:System.Windows.Forms.CheckState.Checked>和<xref:System.Windows.Forms.CheckState.Indeterminate>。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.CheckBox>  
- [CheckBox 控制項概觀](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
- [操作說明：使用 Windows Forms CheckBox 控制項設定選項](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
- [CheckBox 控制項](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.CheckBox>
+- [CheckBox 控制項概觀](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)
+- [如何：設定使用 Windows Form 核取方塊控制項的選項](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [CheckBox 控制項](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

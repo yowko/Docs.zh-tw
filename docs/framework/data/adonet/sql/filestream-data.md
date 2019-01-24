@@ -2,12 +2,12 @@
 title: FILESTREAM 資料
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 843aa890ba80ab2816af0726170eacb77f419d50
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4002f95e47b3c1ac7d8415d590b8c4c8a5d95a91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701088"
 ---
 # <a name="filestream-data"></a>FILESTREAM 資料
 FILESTREAM 儲存體屬性適用於儲存在 varbinary(max) 資料行中的二進位 (BLOB) 資料。 在引進 FILESTREAM 之前，儲存二進位資料需要特殊處理。 文字文件、影像和視訊等非結構化資料通常會儲存在資料庫外部，因而難以管理。  
@@ -37,7 +37,7 @@ Values(1, 0x00, default)
 GO  
 ```  
   
-### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>範例：讀取、覆寫和插入 FILESTREAM 資料  
+### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>範例：讀取、 覆寫和插入 FILESTREAM 資料  
  下列範例將示範如何從 FILESTREAM 中讀取資料。 這段程式碼會取得檔案的邏輯路徑，並將 `FileAccess` 設定為 `Read` 而且將 `FileOptions` 設定為 `SequentialScan`。 然後，程式碼會將位元組從 SqlFileStream 讀入緩衝區中。 接著，這些位元組會寫入主控台視窗。  
   
  範例也會示範如何將資料寫入會覆寫所有現有資料的 FILESTREAM 中。 這段程式碼會取得檔案的邏輯路徑並建立 `SqlFileStream`，並將 `FileAccess` 設定為 `Write` 而且將 `FileOptions` 設定為 `SequentialScan`。 然後，單一位元組會寫入 `SqlFileStream`，並取代檔案中的任何資料。  
@@ -178,9 +178,9 @@ namespace FileStreamTest
 |[建立 FILESTREAM 資料的用戶端應用程式](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|描述可用於處理 FILESTREAM 資料的 Win32 API 函式。|  
 |[FILESTREAM 和其他 SQL Server 功能](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|針對使用 FILESTREAM 資料搭配其他 SQL Server 功能提供相關的考量、指導方針和限制。|  
   
-## <a name="see-also"></a>另請參閱  
- [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [程式碼存取安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
- [SQL Server 二進位和大量數值資料](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET 概觀](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+## <a name="see-also"></a>另請參閱
+- [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [程式碼存取安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
+- [SQL Server 二進位和大量數值資料](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [ADO.NET 概觀](../../../../../docs/framework/data/adonet/ado-net-overview.md)

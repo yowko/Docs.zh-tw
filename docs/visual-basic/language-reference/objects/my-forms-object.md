@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: d15765b7673f321d4362ceea0adb73959a7e7726
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 17042f60eb27c41640ef5d8c927c7acc5bc73183
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712614"
 ---
 # <a name="myforms-object"></a>My.Forms 物件
 提供存取目前專案中宣告的每個 Windows form 的執行個體的屬性。  
@@ -66,11 +66,11 @@ ms.locfileid: "48582654"
 |Windows 服務|否|  
 |網站|否|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Form.Close%2A>  
- [物件](../../../visual-basic/language-reference/objects/index.md)  
- [Is 運算子](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot 運算子](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [存取應用程式表單](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Form.Close%2A>
+- [物件](../../../visual-basic/language-reference/objects/index.md)
+- [Is 運算子](../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot 運算子](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [存取應用程式表單](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

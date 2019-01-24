@@ -2,12 +2,12 @@
 title: TCP 啟用
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 1939f611067d65d70849748604e0589a8928b09d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5e7f441873ec4d3ad087d1ff28510d92d87db9b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677821"
 ---
 # <a name="tcp-activation"></a>TCP 啟用
 這個範例會示範裝載使用 Windows Process Activation Service (WAS) 的服務，以便啟用透過 net.tcp 通訊協定進行通訊的服務。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -146,7 +146,7 @@ Press <ENTER> to terminate client.
   
      此外，您必須安裝 WCF 非 HTTP 啟動元件：  
   
-    1.  從**開始**功能表上，選擇**控制台**。  
+    1.  在 [開始] 功能表內選擇 [控制台]。  
   
     2.  選取 **程式和功能**。  
   
@@ -205,5 +205,5 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  這個命令必須輸入為單行文字。  
   
-## <a name="see-also"></a>另請參閱  
- [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>另請參閱
+- [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

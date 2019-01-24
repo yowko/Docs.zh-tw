@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93e96d6f8570e6aef7bfc18ef2859dc1e86ec8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: acc4da79796e975d349d1cb33c301c25c4791cb6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709074"
 ---
 # <a name="userthread-structure"></a>USER_THREAD 結構
-提供資訊給偵錯工具執行緒。 如需詳細資訊，請參閱[inotifysource2:: Setnotifyfilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)方法。  
+提供偵錯工具執行緒的相關資訊。 如需詳細資訊，請參閱 < [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,11 +43,11 @@ typedef struct tagUSER_THREAD
 |------------|-----------------|  
 |`pSidBuffer`|執行緒緩衝區的位址。|  
 |`dwSidLen`|執行緒的緩衝區，以位元組為單位的長度。|  
-|`dwTid`|執行緒識別碼。|  
+|`dwTid`|執行緒 id。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>另請參閱  
- [SetNotifyFilter 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)  
- [診斷符號存放區結構](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a>另請參閱
+- [SetNotifyFilter 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)
+- [診斷符號存放區結構](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

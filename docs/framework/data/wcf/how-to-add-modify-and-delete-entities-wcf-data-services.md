@@ -1,5 +1,5 @@
 ---
-title: 如何：新增、修改和刪除實體 (WCF 資料服務)
+title: HOW TO：新增、 修改及刪除實體 (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 4475d8767226a810c7b6f7d8949e9cbe2d846cca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af087aa2107927d79a7a47080d9fff43244ef4cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708879"
 ---
-# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>如何：新增、修改和刪除實體 (WCF 資料服務)
-與[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫，您可以建立、 更新和刪除資料服務中的實體資料中的物件上執行相同的動作<xref:System.Data.Services.Client.DataServiceContext>。 如需詳細資訊，請參閱[更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
+# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>HOW TO：新增、 修改及刪除實體 (WCF Data Services)
+具有[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫，您可以建立、 更新和刪除資料服務中的實體資料中的物件上執行相同的動作<xref:System.Data.Services.Client.DataServiceContext>。 如需詳細資訊，請參閱 <<c0> [ 更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
   
- 本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成建立此服務和用戶端資料類別[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
+ 本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成建立這項服務和用戶端資料類別[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會建立新的物件執行個體，然後呼叫 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 的 <xref:System.Data.Services.Client.DataServiceContext> 方法，在內容中建立項目。 呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，會將 HTTP POST 訊息傳送至資料服務。  
@@ -43,8 +43,8 @@ ms.locfileid: "33356507"
  [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addorderdetailtoorderauto)]
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorderauto)]  
   
-## <a name="see-also"></a>另請參閱  
- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [如何：將現有實體附加至 DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)  
- [如何：定義實體關聯性](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)  
- [批次處理作業](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
+## <a name="see-also"></a>另請參閱
+- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [如何：將現有實體附加至 DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)
+- [如何：定義實體關聯性](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)
+- [批次處理作業](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)

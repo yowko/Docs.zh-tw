@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51a7969821cb4c2367ac298c8452daf1f2a8ceab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185897"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691472"
 ---
 # <a name="securing-method-access"></a>設定方法存取的安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 有些方法可能不適合讓未受信任的任意程式碼呼叫。 這類方法會造成一些風險：方法可能會提供一些受限制的資訊；它可能會認定傳遞給它的任何資訊；它可能不會對參數執行錯誤檢查；它可能會因錯誤的參數發生問題或執行有害的動作。 您應該留意這些情況，並採取動作來協助保護方法。  
+ 有些方法可能不適合讓未受信任的任意程式碼呼叫。 這類方法會造成一些風險：此方法可能會提供一些受限制的資訊;它可能會認定傳遞給它; 的任何資訊它可能不會執行檢查的參數; 時發生錯誤或因錯誤的參數，它可能會故障，或執行有害的項目。 您應該留意這些情況，並採取動作來協助保護方法。  
   
  在某些情況下，您可能需要限制不提供公用用途但仍必須是公用的方法。 例如，您可能會需要有跨您自己的 Dll 呼叫的介面，因此它必須是公用的，但為了防止客戶使用它，或惡意程式碼利用進入點進入您的元件，所以您不想將它公開。 另一個限制不提供公用用途 (但必須是公用) 方法的常見原因，是為了避免記錄和支援可能非常內部的介面。  
   
@@ -240,5 +240,5 @@ class Implemented : ICanCastToMe
   
  請注意，即使語言編譯器會以編譯錯誤防止這些覆寫，程式碼撰寫還是可能以其他編譯器覆寫。  
   
-## <a name="see-also"></a>另請參閱  
- [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>另請參閱
+- [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

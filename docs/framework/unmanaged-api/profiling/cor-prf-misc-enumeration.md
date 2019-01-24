@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8f4cffd718fffa9145e1082092ecec45b80a2ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11b36fa4636dd55e539c198a260dcf93da02a237
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728956"
 ---
 # <a name="corprfmisc-enumeration"></a>COR_PRF_MISC 列舉
 包含指定特定識別項的常數值。  
@@ -40,18 +40,18 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|所使用的預設識別項[icorprofilerinfo:: Getmoduleinfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)尚未附加至組件的模組。|  
-|`PROFILER_GLOBAL_CLASS`|全域常數的類別不屬於預設類別識別項。|  
+|`PROFILER_PARENT_UNKNOWN`|所使用的預設識別碼[icorprofilerinfo:: Getmoduleinfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)尚未附加至組件的模組。|  
+|`PROFILER_GLOBAL_CLASS`|不屬於類別的全域常數預設類別識別項。|  
 |`PROFILER_GLOBAL_MODULE`|不屬於模組的全域物件預設模組識別項。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

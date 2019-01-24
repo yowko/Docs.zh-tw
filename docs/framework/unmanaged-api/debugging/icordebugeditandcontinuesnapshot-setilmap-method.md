@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22e35f06cfe5175ef3666dd5466d79384b17f2f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cfe71abfa97a3773c8ff50c0f908d48681ebdc8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680344"
 ---
 # <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a>ICorDebugEditAndContinueSnapshot::SetILMap 方法
 `SetILMap` 已經過時。 請勿呼叫這個方法。  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b2e1b08d1091e482c6b02fe015a58219ff80768
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694135"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 函式
 寫入具名限定詞與值。 新限定詞會覆寫先前的相同名稱的值。 如果不存在的辨識符號，它會建立它。 
@@ -51,7 +51,7 @@ HRESULT QualifierSet_Put (
 `wszName`   
 [in]要寫入的限定詞名稱。
 
-`pVal` [in]有效的指標`VARIANT`，其中包含要寫入的限定詞。 此參數不得為`null`。
+`pVal` [in]有效的指標`VARIANT`，其中包含要寫入的限定詞。 這個參數不可以是 `null`。
 
 `lFlavor` [in]其中一個的所需的限定詞標註，這個辨識符號會定義下列常數。 預設值是`WBEM_FLAVOR_OVERRIDABLE`(0)。
 
@@ -60,8 +60,8 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | 限定詞可以覆寫於衍生的類別或執行個體。 **這是預設值。** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | 限定詞會傳播到執行個體。 |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | 限定詞會傳播到衍生類別中。 |
-| ' WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | 無法在衍生類別或執行個體中覆寫限定詞。 |
-| ' WBEM_FLAVOR_AMENDED | 0x80 | 限定詞會進行當地語系化。 |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | 無法在衍生類別或執行個體中覆寫限定詞。 |
+| `WBEM_FLAVOR_AMENDED | 0x80 | 限定詞會進行當地語系化。 |
 
 ## <a name="return-value"></a>傳回值
 
@@ -86,5 +86,5 @@ HRESULT QualifierSet_Put (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

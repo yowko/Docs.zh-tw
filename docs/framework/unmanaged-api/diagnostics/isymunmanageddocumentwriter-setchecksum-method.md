@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b9b77b94e466a4aab4a575501ac6922293b3410
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d7a3fcd34f8cab6fa3c2949a4ee3270189b3dc77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730031"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum 方法
 設定總和檢查碼資訊。  
@@ -38,19 +38,19 @@ HRESULT SetCheckSum(
   
 #### <a name="parameters"></a>參數  
  `algorithmId`  
- [in]GUID，代表演算法識別項。  
+ [in]GUID，表示演算法識別項。  
   
  `checkSumSize`  
- [in]A`ULONG32`指出的大小，以位元組為單位，`checkSum`緩衝區。  
+ [in]A`ULONG32`表示的大小，以位元組為單位，`checkSum`緩衝區。  
   
  `checkSum`  
  [in]儲存的總和檢查碼資訊的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedDocumentWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedDocumentWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

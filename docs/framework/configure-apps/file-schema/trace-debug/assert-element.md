@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 43a3b4ea9d953d9dbb7a98c8481185ddc7e4d674
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701946"
 ---
 # <a name="ltassertgt-element"></a>&lt;判斷提示&gt;項目
 指定呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法時是否要顯示訊息方塊，此外也會指定寫入訊息之目的地檔案的名稱。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<判斷提示 >  
+\<system.diagnostics>  
+\<assert>  
   
 ## <a name="syntax"></a>語法  
   
@@ -71,6 +71,6 @@ ms.locfileid: "53154238"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Diagnostics.Debug>  
- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Diagnostics.Debug>
+- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

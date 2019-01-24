@@ -2,12 +2,12 @@
 title: OLE DB、ODBC 和 Oracle 連接共用
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 3ce65036605b7693955c3a6064fca80263d3538f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc07d4d33f2a568ef0fb4dd9806832222a13ca6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527372"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692739"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC 和 Oracle 連接共用
 共用連接可顯著提高應用程式的效能及延展性。 本節說明 OLE DB、ODBC 和 Oracle 的 .NET Framework 資料提供者的連接共用 (Connection Pooling)。  
@@ -68,7 +68,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Min Pool Size`|0|集區中保留的最小連接數。|  
 |`Pooling`|'true'|為 `true` 時，會從適當的集區描繪連接，或視需要在適當的集區中建立及加入連接。|  
   
-## <a name="see-also"></a>另請參閱  
- [連接共用](../../../../docs/framework/data/adonet/connection-pooling.md)  
- [效能計數器](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [連接共用](../../../../docs/framework/data/adonet/connection-pooling.md)
+- [效能計數器](../../../../docs/framework/data/adonet/performance-counters.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

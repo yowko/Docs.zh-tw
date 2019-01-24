@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d20701237501834c611c4e498c39597cf275176
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3577c90af51886868d57796fb5bfae91dedcee16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720115"
 ---
 # <a name="qualifiersetbeginenumeration-function"></a>QualifierSet_BeginEnumeration 函式
 將物件限定詞的列舉程式重設為列舉開始時的狀態。  
@@ -55,7 +55,7 @@ HRESULT QualifierSet_BeginEnumeration (
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lFlags`參數無效。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lFlags` 參數無效。 |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 第二次呼叫`QualifierSet_BeginEnumeration`而不需要的介入呼叫進行[ `QualifierSet_EndEnumeration` ](qualifierset-endenumeration.md)。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可供開始新的列舉型別。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
@@ -71,8 +71,8 @@ HRESULT QualifierSet_BeginEnumeration (
 |常數  |值  |描述  |
 |---------|---------|---------|
 |  | 0 | 傳回所有限定詞的名稱。 |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 傳回目前的屬性或物件特定限定詞的名稱。 <br/> 屬性： 返回 （包括覆寫） 的屬性特定的辨識符號，並不是這些限定詞會傳播從類別定義。 <br/> 執行個體： 傳回只有特定執行個體的限定詞名稱。 <br/> 類別： 傳回衍生的類別 beiong 特定只限定詞。
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 傳回的傳播的限定詞的名稱，從另一個物件。 <br/> 屬性： 傳回的限定詞傳播至這個屬性從類別定義中，而不從本身的屬性。 <br/> 執行個體： 傳回只有這些限定詞會傳播從類別定義。 <br/> 類別： 傳回繼承自父類別的只有這些限定詞的名稱。 |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 傳回目前的屬性或物件特定限定詞的名稱。 <br/> 屬性：傳回只特有的屬性 （包括覆寫） 限定詞，並不會傳播從類別定義的限定詞。 <br/> 執行個體：傳回只有特定執行個體的限定詞名稱。 <br/> 類別：傳回衍生的類別 beiong 特定只限定詞。
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 傳回的傳播的限定詞的名稱，從另一個物件。 <br/> 屬性：傳回只限定詞傳播至這個屬性從類別定義中，而不從本身的屬性。 <br/> 執行個體：傳回的只有這些限定詞傳播，從類別定義。 <br/> 類別：傳回繼承自父類別的只有這些限定詞的名稱。 |
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -81,5 +81,5 @@ HRESULT QualifierSet_BeginEnumeration (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

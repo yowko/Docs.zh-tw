@@ -2,12 +2,12 @@
 title: ReliableSessionBindingElement
 ms.date: 03/30/2017
 ms.assetid: effda125-b8d3-4de6-8c0e-f59f5ea8f6eb
-ms.openlocfilehash: 2e2e36486c3788cd714ffd0ed545fbb14f831476
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: adf7d8958e2361d6e26576f6b20321b9c5666d1d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197037"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688879"
 ---
 # <a name="reliablesessionbindingelement"></a>ReliableSessionBindingElement
 ReliableSessionBindingElement  
@@ -96,5 +96,5 @@ class ReliableSessionBindingElement : BindingElement
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
 author: KrzysztofCwalina
-ms.openlocfilehash: d0332591be7659aafb5b3169f92c81d47d519dc2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd30cdee0440553a9f955f0b3f4ee420e938b9ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698800"
 ---
 # <a name="arrays"></a>陣列
 **✓ DO** 偏好使用透過公用應用程式開發介面中的陣列的集合。 [集合](../../../docs/standard/design-guidelines/guidelines-for-collections.md)節提供有關如何選擇集合和陣列的詳細資料。  
@@ -30,6 +30,6 @@ ms.locfileid: "53127559"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Array>  
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- <xref:System.Array>
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [用法方針](../../../docs/standard/design-guidelines/usage-guidelines.md)

@@ -2,15 +2,15 @@
 title: 關聯類型
 ms.date: 03/30/2017
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-ms.openlocfilehash: 7a16b4447c9ba35f1a81a8ff837abd984985b097
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3b01e053a1d61e2ce413ae6683d350b77c402fb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714590"
 ---
 # <a name="association-type"></a>關聯類型
-*關聯型別*（亦稱為關聯） 是用於描述實體資料模型 (EDM) 中的關聯性的基本建置組塊。 在概念模型中，關聯代表兩個關聯性[實體類型](../../../../docs/framework/data/adonet/entity-type.md)(例如`Customer`和`Order`)。 在應用程式中，關聯的執行個體代表特定的關聯 (例如 `Customer` 執行個體和 `Order` 執行個體之間的關聯)。 關聯執行個體會在邏輯上群組於[關聯集](../../../../docs/framework/data/adonet/association-set.md)。  
+*關聯型別*（亦稱為關聯） 是描述 Entity Data Model (EDM) 中的關聯性的基本建置組塊。 在概念模型中，關聯代表兩個關聯性[實體類型](../../../../docs/framework/data/adonet/entity-type.md)(例如`Customer`和`Order`)。 在應用程式中，關聯的執行個體代表特定的關聯 (例如 `Customer` 執行個體和 `Order` 執行個體之間的關聯)。 關聯執行個體會以邏輯方式分組[關聯集](../../../../docs/framework/data/adonet/association-set.md)。  
   
  關聯定義包含下列資訊：  
   
@@ -23,7 +23,7 @@ ms.locfileid: "32756507"
   
 -   A[參考完整性條件約束](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)。 (選擇項)  
   
- 每個關聯 end 必須指定[關聯 end 多重性](../../../../docs/framework/data/adonet/association-end-multiplicity.md)表示可以是位於關聯某一端的實體類型執行個體數目。 關聯 End 多重性的值可以是一 (0)、零或一 (0..1)，或許多 (*)。 位於關聯某一端的實體類型執行個體可以透過存取[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)或外部索引鍵，如果這些元素會公開的實體類型。 如需詳細資訊，請參閱[實體資料模型： 外部索引鍵](../../../../docs/framework/data/adonet/foreign-key-property.md)。  
+ 每個關聯 end 必須指定[關聯 end 多重性](../../../../docs/framework/data/adonet/association-end-multiplicity.md)表示可以是位於關聯某一端的實體類型執行個體數目。 關聯 End 多重性的值可以是一 (0)、零或一 (0..1)，或許多 (*)。 您可以透過位於關聯某一端的實體類型執行個體[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)或外部索引鍵，如果實體類型上公開。 如需詳細資訊，請參閱[實體資料模型：外部索引鍵](../../../../docs/framework/data/adonet/foreign-key-property.md)。  
   
 ## <a name="example"></a>範例  
  下圖顯示包含兩個關聯 (`PublishedBy` 和 `WrittenBy`) 的概念模型。 `PublishedBy` 關聯的關聯 End 為 `Book` 和 `Publisher` 實體類型。 `Publisher` End 的多重性是 (1)，而 `Book` End 的多重性是許多 (*)，表示一個發行者發行許多書籍，而一本書籍由一個發行者發行。  
@@ -34,6 +34,6 @@ ms.locfileid: "32756507"
   
  [!code-xml[EDM_Example_Model#AssociationExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#associationexample)]  
   
-## <a name="see-also"></a>另請參閱  
- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>另請參閱
+- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

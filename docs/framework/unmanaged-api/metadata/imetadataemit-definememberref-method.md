@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 881c0b1f755e750efcc74ca61a60bbd97bc5dba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 578f79136f6ccc8a6b7eac644b2a5084d30d2ba0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722825"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef 方法
 定義目前的範圍外的模組成員的參考，並取得該參考定義的語彙基元。  
@@ -41,29 +41,29 @@ HRESULT DefineMemberRef (
   
 #### <a name="parameters"></a>參數  
  `tkImport`  
- [in]權杖的目標成員的類別或介面，如果成員不是全域的。如果成員是全域`mdModuleRef`權杖以供其他檔案。  
+ [in]權杖的目標成員的類別或介面，如果在成員不是全域;如果成員是全域、`mdModuleRef`該其他檔案的語彙基元。  
   
  `szName`  
- [in]目標成員的名稱。  
+ [in]將目標成員的名稱。  
   
  `pvSigBlob`  
- [in]目標成員的簽章。  
+ [in]將目標成員的簽章。  
   
  `cbSigBlob`  
  [in]中的位元組計數`pvSigBlob`。  
   
  `pmr`  
- [out]`mdMemberRef`指派的語彙基元。  
+ [out]`mdMemberRef`指派權杖。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

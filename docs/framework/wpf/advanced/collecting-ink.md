@@ -13,12 +13,12 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 25f9c0141a97d8e52e0883b14fd3e1f4574a05ea
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4da833256183f10eb62b43c3f665d76a6fc2ba80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711794"
 ---
 # <a name="collect-ink"></a>收集筆墨
 
@@ -26,7 +26,7 @@ ms.locfileid: "46004272"
 
 ## <a name="prerequisites"></a>必要條件
 
-若要使用下列的範例，您必須先安裝 Visual Studio 和[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]。 您也應該了解如何撰寫 wpf 應用程式。 如需有關如何開始使用 WPF 的詳細資訊，請參閱[逐步解說： 我第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。
+若要使用下列的範例，您必須先安裝 Visual Studio 和[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]。 您也應該了解如何撰寫 wpf 應用程式。 如需有關如何開始使用 WPF 的詳細資訊，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 
 ## <a name="use-the-inkcanvas-element"></a>使用 InkCanvas 項目
 

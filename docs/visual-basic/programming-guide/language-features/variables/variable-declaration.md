@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 92a20e5fbe60c71ec3375ed35c919e1f88cf0a9c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1a43cabfd3ab22ad9035ecb30435b21b75040308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718789"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic 中的變數宣告
 您宣告變數，以指定其名稱和特性。 變數的宣告陳述式是[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)。 其位置及內容會決定變數的特性。  
@@ -73,17 +73,17 @@ Dim l, m As Long, x, y As Single
 ## <a name="characteristics-of-declared-variables"></a>宣告變數的特性  
  *存留期*的變數是一段時間期間它是可供使用。 一般情況下，變數存在，只要將其宣告 （例如程序或類別） 的項目就會繼續存在。 如果變數不需要繼續存在，其包含項目存留期過後，您不需要採取任何特別動作宣告中。 如果變數需要繼續存在時間超過其包含項目，您可以包含`Static`或是`Shared`關鍵字，在其`Dim`陳述式。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
   
- *範圍*變數是可參考未限定其名稱的所有程式碼的集合。 變數的範圍取決於宣告的位置。 位於指定的區域中的程式碼可以使用定義在該區域中，而不需要限定其名稱的變數。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)。  
+ *範圍*變數是可參考未限定其名稱的所有程式碼的集合。 變數的範圍取決於宣告的位置。 位於指定的區域中的程式碼可以使用定義在該區域中，而不需要限定其名稱的變數。 如需詳細資訊，請參閱 [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)。  
   
  變數的*存取層級*是有權存取它的程式碼的範圍。 這取決於存取修飾詞 (例如[公用](../../../../visual-basic/language-reference/modifiers/public.md)或是[私人](../../../../visual-basic/language-reference/modifiers/private.md)) 中使用`Dim`陳述式。 如需詳細資訊，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [如何：建立新的變數](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [如何：移入和移出變數資料](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)  
- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)  
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
- [宣告項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+## <a name="see-also"></a>另請參閱
+- [如何：建立新的變數](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [如何：移入和移出變數資料](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
+- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)
+- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
+- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
+- [宣告項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

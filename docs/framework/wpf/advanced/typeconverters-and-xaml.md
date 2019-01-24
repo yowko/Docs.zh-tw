@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 53e2d14cf331cf41b20300afbe8966538bf621ca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 29286328c960707151fd5b6f2804346373000ad4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748073"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter 和 XAML
 本主題介紹將字串的類型轉換當成一般 XAML 語言功能的目的。 在.NET Framework 中，<xref:System.ComponentModel.TypeConverter>類別具有特殊用途的實作可用作 XAML 屬性使用方式中的屬性值的 managed 自訂類別的一部分。 如果您撰寫自訂類別，而且您想要您的類別可用來做為 XAML 可設定的屬性值的執行個體，您可能需要套用<xref:System.ComponentModel.TypeConverterAttribute>至您的類別撰寫自訂<xref:System.ComponentModel.TypeConverter>類別，或兩者。  
@@ -106,16 +106,16 @@ ms.locfileid: "43407105"
  您的 <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 實作應該傳回類型 `true` 之 `destinationType` 的 <xref:System.String>，否則會進行基底實作。  
   
 ### <a name="implementing-canconvertfrom"></a>實作 CanConvertFrom  
- 您的 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 實作應該傳回類型 <xref:System.String> 之 `sourceType` 的 `true`，否則會進行基底實作。  
+ 您的 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 實作應該傳回類型 `true` 之 `sourceType` 的 <xref:System.String>，否則會進行基底實作。  
   
 <a name="Applying_the_TypeConverterAttribute"></a>   
 ## <a name="applying-the-typeconverterattribute"></a>套用 TypeConverterAttribute  
  為了讓您自訂類型轉換器，以用做自訂類別的 XAML 處理器的型別轉換子，您必須套用[!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)]<xref:System.ComponentModel.TypeConverterAttribute>至類別定義。 您透過屬性指定的 <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> 必須是您自訂類型轉換器的類型名稱。 如果已套用這個屬性，當 XAML 處理器處理屬性類型使用您自訂類別類型的值時，就可以輸入字串並傳回物件執行個體。  
   
- 您也可以提供每個屬性的類型轉換器。 而不是套用[!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)]<xref:System.ComponentModel.TypeConverterAttribute>至類別定義中，將它套用至屬性定義 (主要定義，不`get` / `set`實作)。 屬性的類型必須符合您自訂類型轉換器所處理的類型。 如果已套用這個屬性，在 XAML 處理器處理該屬性的值時，就可以處理輸入字串並傳回物件執行個體。 每個屬性的類型轉換器技術是特別有用，如果您選擇使用來自 Microsoft.NET Framework 或某個其他程式庫，您無法控制類別定義，就無法套用的屬性類型<xref:System.ComponentModel.TypeConverterAttribute>那里。  
+ 您也可以提供每個屬性的類型轉換器。 將 [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> 套用至屬性定義 (主要定義，非其內的 `get`/`set` 實作)，而不是將它套用至類別定義。 屬性的類型必須符合您自訂類型轉換器所處理的類型。 如果已套用這個屬性，在 XAML 處理器處理該屬性的值時，就可以處理輸入字串並傳回物件執行個體。 每個屬性的類型轉換器技術是特別有用，如果您選擇使用來自 Microsoft.NET Framework 或某個其他程式庫，您無法控制類別定義，就無法套用的屬性類型<xref:System.ComponentModel.TypeConverterAttribute>那里。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ComponentModel.TypeConverter>  
- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ComponentModel.TypeConverter>
+- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 816b4138f395298e2fbf8b4de4cac63c0794657b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730941"
 ---
 # <a name="endpoint-addresses"></a>端點位址
 每個端點都有與其相關聯的位址，以便用來找出並識別端點。 這個位址主要包含一個可指定端點位置的統一資源識別元 (URI)。 在由 Windows Communication Foundation (WCF) 程式設計模型中表示端點位址<xref:System.ServiceModel.EndpointAddress>類別，其中包含選擇性<xref:System.ServiceModel.EndpointAddress.Identity%2A>屬性可讓其他端點之端點的驗證，交換訊息，以及一組選擇性的<xref:System.ServiceModel.EndpointAddress.Headers%2A>屬性，定義取用服務時所需任何其他 SOAP 標頭。 選擇性標頭會提供額外與更詳細的定址資訊，以便識別端點或與服務端點互動。 端點位址會在網路上表示為 WS-Addressing 端點參考 (EPR)。  
@@ -23,7 +23,7 @@ ms.locfileid: "48847399"
   
 -   電腦： `www.fabrikam.com`  
   
--   (選擇性) 連接埠：322  
+-   （選擇性）連接埠：322  
   
 -   路徑：/mathservice.svc/secureEndpoint  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48847399"
   
 -   繫結通訊協定：HTTP  
   
--   繫結資訊：IP 位址、連接埠、主機標頭  
+-   繫結資訊：IP 位址、 連接埠、 主機標頭  
   
  IIS 可以為每個網站指定多個繫結，讓每個配置都有多個基底位址。 之前[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]，WCF 會不支援多個位址的結構描述，和指定，會擲回<xref:System.ArgumentException>在啟用期間。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48847399"
   
  `baseAddressPrefixFilter` 不支援萬用字元。  
   
- IIS 提供的基底位址可能會有繫結至其他配置，但 `baseAddressPrefixFilters` 清單中不存在的位址， 而且這些位址尚未經過篩選。  
+ IIS 提供的基底位址可能會有繫結程序至其他配置，但 `baseAddressPrefixFilters` 清單中不存在的位址， 而且這些位址尚未經過篩選。  
   
 ## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>.NET Framework 4 及更新版本中的多重 IIS 繫結支援  
  從 .NET 4 開始，您就可以將 <xref:System.ServiceModel.ServiceHostingEnvironment> 的 <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> 設定設為 true，藉以啟用 IIS 的多重繫結支援，而不需要挑選單一基底位址。 這項支援僅限 HTTP 通訊協定配置。  
@@ -137,6 +137,6 @@ ms.locfileid: "48847399"
   
  在某些情況中，端點會接收抵達基礎傳輸的所有訊息，而不只有包含適當 `To` 標頭的訊息。 若要啟用這項功能，使用者可以使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 類別。  
   
-## <a name="see-also"></a>另請參閱  
- [指定端點位址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>另請參閱
+- [指定端點位址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

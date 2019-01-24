@@ -1,5 +1,5 @@
 ---
-title: 如何：水平分隔視窗
+title: HOW TO：水平分隔視窗
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: 1e097ce5623fab4c3c8c1d59d9bc8c9206abee2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 651e265b337b106779aeefdfa49decd3725f1a53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701452"
 ---
-# <a name="how-to-split-a-window-horizontally"></a>如何：水平分隔視窗
-下列程式碼範例會將用來分隔<xref:System.Windows.Forms.SplitContainer>控制水平。  
+# <a name="how-to-split-a-window-horizontally"></a>HOW TO：水平分隔視窗
+下列程式碼範例會將分割的分隔器<xref:System.Windows.Forms.SplitContainer>控制水平。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性<xref:System.Windows.Forms.SplitContainer>控制項會決定分隔器，而不是控制項本身的方向。  
+>  <xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性<xref:System.Windows.Forms.SplitContainer>控制項會決定起的分隔器，而不是控制項本身的方向。  
   
-### <a name="to-split-a-window-horizontally"></a>水平分隔視窗  
+### <a name="to-split-a-window-horizontally"></a>若要水平分隔視窗  
   
-1.  在程序，設定<xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性<xref:System.Windows.Forms.SplitContainer>控制權傳輸至<xref:System.Windows.Forms.Orientation.Horizontal>。  
+1.  在程序中，設定<xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性<xref:System.Windows.Forms.SplitContainer>若要控制<xref:System.Windows.Forms.Orientation.Horizontal>。  
   
     ```vb  
     Sub ShowSplitContainer()  
@@ -55,6 +55,6 @@ ms.locfileid: "33533123"
     }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

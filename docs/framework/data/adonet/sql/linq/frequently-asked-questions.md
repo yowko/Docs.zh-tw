@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 5f556c46823bd867709e8c53b59f7ac53201d242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 009115d985c51961bffddaaa3149e15ba9a5502b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679757"
 ---
 # <a name="frequently-asked-questions"></a>常見問題集
 下列各節將解答實作 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 時可能會遇到的一些常見問題。  
   
- 其他問題已解決[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
+ 其他問題的解答[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
   
 ## <a name="cannot-connect"></a>無法連接  
  問： 我無法連接到資料庫。  
   
- 答： 請確定您的連接字串正確無誤，而且您的 SQL Server 執行個體正在執行。 另外也請注意，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 需要具名管道 (Named Pipe) 通訊協定才能啟用。 如需詳細資訊，請參閱[依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。  
+ 答： 請確定您的連接字串正確無誤，且您的 SQL Server 執行個體正在執行。 另外也請注意，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 需要具名管道 (Named Pipe) 通訊協定才能啟用。 如需詳細資訊，請參閱 <<c0> [ 依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。  
   
 ## <a name="changes-to-database-lost"></a>遺失對資料庫所做的變更  
  問： 我變更了資料庫中的資料，但重新執行應用程式時，變更不見了。  
   
  答： 請確定您呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 來儲存結果到資料庫。  
   
-## <a name="database-connection-open-how-long"></a>資料庫連接：會開啟多久？  
+## <a name="database-connection-open-how-long"></a>資料庫連接：開啟多久？  
  問： 我的資料庫連接會維持開啟的狀態多久？  
   
  答： 連接通常會一直維持開啟的狀態，直到您使用查詢結果為止。 如果您預期會花時間處理所有結果，而且也不反對快取結果，請將 <xref:System.Linq.Enumerable.ToList%2A> 套用到查詢。 在每個物件只處理一次的常見情況中，在 `DataReader` 和 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中使用資料流 (Streaming) 模型較有利。  
@@ -50,7 +50,7 @@ ms.locfileid: "33365484"
 ## <a name="unexpected-query-results"></a>未預期的查詢結果  
  問： 我的查詢傳回未預期的結果。 我該如何檢查發生了什麼狀況？  
   
- 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供多項工具來檢查它所產生的 SQL 程式碼。 最重要的其中一項工具就是 <xref:System.Data.Linq.DataContext.Log%2A>。 如需詳細資訊，請參閱[偵錯支援](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)。  
+ 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供多項工具來檢查它所產生的 SQL 程式碼。 最重要的其中一項工具就是 <xref:System.Data.Linq.DataContext.Log%2A>。 如需詳細資訊，請參閱 <<c0> [ 偵錯支援](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)。  
   
 ## <a name="unexpected-stored-procedure-results"></a>未預期的預存程序結果  
  問： 我有一個預存程序，它的傳回值是由 `MAX()` 計算的。 當我將預存程序拖曳到 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]介面時，傳回值不正確。  
@@ -97,22 +97,22 @@ ms.locfileid: "33365484"
   
  `end`  
   
- 如需詳細資訊，請參閱[自訂作業所使用預存程序](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 自訂作業藉由使用預存程序](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)。  
   
 ## <a name="serialization-errors"></a>序列化錯誤  
- 問： 當我嘗試序列化時，收到下列錯誤: 「 … 輸入 'System.data.linq.changetracker + standardchangetracker' 未標示為可序列化。 」  
+ 問： 當我嘗試序列化時，我會收到下列錯誤：「...輸入 'System.data.linq.changetracker + standardchangetracker' 未標記為可序列化。 」  
   
  答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的程式碼產生支援 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化。 但不支援 <xref:System.Xml.Serialization.XmlSerializer> 或 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>。 如需詳細資訊，請參閱[序列化](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)。  
   
 ## <a name="multiple-dbml-files"></a>多個 DBML 檔案  
  問： 當有多個 DBML 檔案共用一些資料表時，會發生編譯器錯誤。  
   
- 答： 設定**內容命名空間**和**實體命名空間**屬性從[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]每個 DBML 檔案的相異值。 這就可避免名稱/命名空間發生衝突。  
+ 答： 設定**內容命名空間**並**實體命名空間**屬性[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]以區分每個 DBML 檔案的值。 這就可避免名稱/命名空間發生衝突。  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>避免在插入或更新時明確設定資料庫產生的值  
  問： 我的資料庫資料表有個 `DateCreated` 資料行，它預設為 SQL `Getdate()`。 當我嘗試使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 插入新的資料錄時，值會設成 `NULL`。 但我本來預期它會設成資料庫預設值。  
   
- 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會自動針對識別 (自動遞增)、rowguidcol (資料庫產生的 GUID) 和時間戳記資料行處理這種情況。 在其他情況下，您必須手動設定<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true`和<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>屬性。  
+ 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會自動針對識別 (自動遞增)、rowguidcol (資料庫產生的 GUID) 和時間戳記資料行處理這種情況。 在其他情況下，您應該手動設定<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true`並<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>屬性。  
   
 ## <a name="multiple-dataloadoptions"></a>多個 DataLoadOptions  
  問： 我可以指定其他載入選項，而不覆寫第一個載入選項嗎？  
@@ -144,7 +144,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>提供者模型  
  問： 是否有公用提供者模型可供使用？  
   
- 答： 沒有公用提供者模型可以使用。 此時，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援 SQL Server 和[!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]只。  
+ 答： 沒有公用提供者模型可以使用。 在此階段中，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援 SQL Server 和[!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]只。  
   
 ## <a name="sql-injection-attacks"></a>SQL 插入攻擊  
  問： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何保護不受 SQL 插入攻擊？  
@@ -160,7 +160,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
 2.  加入部分類別。 針對唯讀成員建立含參數的建構函式。  
   
-3.  檢視預設 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>)，判斷它是否為應用程式的正確值。  
+3.  檢閱預設 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>)，判斷它是否為應用程式的正確值。  
   
     > [!CAUTION]
     >  如果您使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]在 Visual Studio 中，可能會覆寫您的變更。  
@@ -170,7 +170,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  答： 是的，System.Data.Linq.dll 組件是標示有 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 屬性的其中一個 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 組件。 如果沒有此標示，[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 中的組件則只提供給完全受信任的程式碼使用。  
   
- 中的主要案例[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]允許部分信任呼叫端是要讓[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]組件，以存取 Web 應用程式、 其中*信任*組態都是 Medium。  
+ 中的主要案例[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]允許部分信任呼叫端是要讓[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]組件，以存取 Web 應用程式，其中*信任*組態是 Medium。  
   
 ## <a name="mapping-data-from-multiple-tables"></a>對應多個資料表的資料  
  問： 我的實體中的資料來自於多個資料表。 我該如何對應這些資料？  
@@ -178,7 +178,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
  答： 您可以在資料庫中建立檢視，然後將實體對應到該檢視。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會針對檢視產生與資料表相同的 SQL。  
   
 > [!NOTE]
->  在這種情況下使用檢視會有限制。 此方式在基礎檢視支援 <xref:System.Data.Linq.Table%601> 上所執行的作業時最安全。 只有您才知道會執行哪些作業。 例如，大部分的應用程式都是唯讀的而另外有相當多執行`Create` / `Update` / `Delete`作業只能藉由使用預存程序檢視。  
+>  在這種情況下使用檢視會有限制。 此方式在基礎檢視支援 <xref:System.Data.Linq.Table%601> 上所執行的作業時最安全。 只有您才知道會執行哪些作業。 例如，大部分的應用程式都是唯讀的而另外有相當多執行`Create` / `Update` / `Delete`作業只能藉由使用預存程序，針對檢視。  
   
 ## <a name="connection-pooling"></a>連接共用  
  問： 是否有可方便 <xref:System.Data.Linq.DataContext> 共用的建構？  
@@ -190,7 +190,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="second-datacontext-is-not-updated"></a>第二個 DataContext 未更新  
  問： 我使用一個 <xref:System.Data.Linq.DataContext> 執行個體來儲存資料庫中的值。 但是，相同資料庫上的第二個 <xref:System.Data.Linq.DataContext> 卻未反映更新的值。 第二個 <xref:System.Data.Linq.DataContext> 執行個體似乎傳回快取的值。  
   
- 答： 這種行為是設計上的預期行為。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會繼續傳回您在第一個執行個體中看到的相同執行個體/值。 當您進行更新時，會使用開放式並行存取。 這時會使用原始資料來檢查目前資料庫狀態，以確認它實際上是否仍未變更。 如果變更，就會發生衝突，而應用程式必須解決此衝突。 應用程式可選擇的其中一種做法是將原始狀態重設為目前資料庫狀態，然後嘗試再次更新。 如需詳細資訊，請參閱[如何： 管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
+ 答： 這種行為是設計上的預期行為。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會繼續傳回您在第一個執行個體中看到的相同執行個體/值。 當您進行更新時，會使用開放式並行存取。 這時會使用原始資料來檢查目前資料庫狀態，以確認它實際上是否仍未變更。 如果變更，就會發生衝突，而應用程式必須解決此衝突。 應用程式可選擇的其中一種做法是將原始狀態重設為目前資料庫狀態，然後嘗試再次更新。 如需詳細資訊，請參閱[＜How to：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
   
  您也可以將 <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> 設定為 false，以關閉快取和變更追蹤。 這樣每次查詢時，就能擷取最新的值。  
   
@@ -199,7 +199,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  答： 內容在唯讀模式下無法追蹤變更。  
   
-## <a name="see-also"></a>另請參閱  
- [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)  
- [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+## <a name="see-also"></a>另請參閱
+- [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
+- [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

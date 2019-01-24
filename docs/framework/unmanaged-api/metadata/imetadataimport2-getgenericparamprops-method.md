@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9ded6b4e0ac8f3e70fd0145ab6e2410c3b38e02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 694fc95a1ad16b61e25a897b778b15ec41af2a01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714265"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps 方法
-取得與指定語彙基元所代表的泛型參數相關聯的中繼資料。  
+取得與指定的語彙基元所代表的泛型參數相關聯的中繼資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,13 +47,13 @@ HRESULT GetGenericParamProps (
  [in]表示要傳回的中繼資料的泛型參數的語彙基元。  
   
  `pulParamSeq`  
- [out]序數位置`Type`父建構函式或方法中的參數。  
+ [out]序數位置`Type`父建構函式或方法的參數。  
   
  `pdwParamFlags`  
- [out]值為[CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)描述列舉`Type`泛型參數。  
+ [out]值為[CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)列舉，可描述`Type`泛型參數。  
   
  `ptOwner`  
- [out]TypeDef 或 MethodDef 語彙基元，代表參數的擁有者。  
+ [out]TypeDef 或 MethodDef 語彙基元，表示參數的擁有者。  
   
  `reserved`  
  [out]保留供未來擴充。  
@@ -65,17 +65,17 @@ HRESULT GetGenericParamProps (
  [in]大小`wzName`緩衝區。  
   
  `pchName`  
- [out]寬字元的名稱，傳回的大小。  
+ [out]傳回的名稱，以寬字元為單位的大小。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

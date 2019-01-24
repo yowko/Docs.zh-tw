@@ -8,15 +8,15 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 9c1d9943c59a8ed4c3f2002fdbcdefeefafe42ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 893df117ce6ead444ef1da262782cc271102f4d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604259"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672262"
 ---
 # <a name="as-clause-visual-basic"></a>As 子句 (Visual Basic)
-導入了`As`子句，用來識別宣告陳述式或泛型型別參數的條件約束清單中的資料類型。  
+導入了`As`子句中，用來識別宣告陳述式或泛型類型參數的條件約束清單中的資料類型。  
   
 ## <a name="remarks"></a>備註  
  `As` 關鍵字可用於以下內容：  
@@ -57,12 +57,12 @@ ms.locfileid: "33604259"
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [若要再試一次...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [再試...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
-## <a name="see-also"></a>另請參閱  
- [如何：建立新的變數](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [資料類型](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [變數宣告](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [類型清單](../../../visual-basic/language-reference/statements/type-list.md)  
- [Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>另請參閱
+- [如何：建立新的變數](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [資料類型](../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [變數宣告](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [類型清單](../../../visual-basic/language-reference/statements/type-list.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

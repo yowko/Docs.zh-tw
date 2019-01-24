@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 27e5e8c939cf95b6406c810c25940cc04420b22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692411"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>視覺分層中的點擊測試
 本主題提供視覺分層所提供點擊測試功能的概觀。 點擊測試支援可讓您判斷幾何或點的值是否落在呈現的內容<xref:System.Windows.Media.Visual>，可讓您實作使用者介面行為，例如選取矩形來選取多個物件。  
@@ -24,13 +24,13 @@ ms.locfileid: "45988578"
 ## <a name="hit-testing-scenarios"></a>點擊測試案例  
  <xref:System.Windows.UIElement>類別提供<xref:System.Windows.UIElement.InputHitTest%2A>方法，可讓您進行點擊測試使用指定的座標值的項目。 在許多情況下，<xref:System.Windows.UIElement.InputHitTest%2A>方法提供實作點擊測試的項目所需的功能。 不過，有幾個案例，您可能需要在視覺分層實作點擊測試。  
   
--   點擊測試非<xref:System.Windows.UIElement>物件： 如果您進行點擊測試非如此<xref:System.Windows.UIElement>物件，例如<xref:System.Windows.Media.DrawingVisual>或圖形物件。  
+-   點擊測試非<xref:System.Windows.UIElement>物件：這適用於您進行點擊測試非<xref:System.Windows.UIElement>物件，例如<xref:System.Windows.Media.DrawingVisual>或圖形物件。  
   
--   使用幾何進行點擊測試︰這適用於您需要使用幾何物件，而不是點的座標值進行點擊測試時。  
+-   叫用使用幾何進行測試：這適用於您要使用 geometry 物件，而不是點的座標值進行點擊測試。  
   
--   對多個物件進行點擊測試︰這適用於當您需要對多個物件進行點擊測試，例如重疊的物件。 您可以取得和幾何或點交集的所有視覺效果結果，不只有第一個結果。  
+-   點擊測試多個物件：這適用於當您需要對多個物件，例如重疊的物件進行點擊測試。 您可以取得和幾何或點交集的所有視覺效果結果，不只有第一個結果。  
   
--   正在略過<xref:System.Windows.UIElement>點擊測試原則︰ 這適用於當您需要忽略<xref:System.Windows.UIElement>點擊測試原則，會考慮為項目是否已停用或隱藏像之類的因素。  
+-   忽略<xref:System.Windows.UIElement>點擊測試原則：這適用於當您需要忽略<xref:System.Windows.UIElement>點擊測試原則，會考慮為項目是否已停用或隱藏像之類的因素。  
   
 > [!NOTE]
 >  如需示範在視覺分層進行點擊測試的完整程式碼範例，請參閱[使用 DrawingVisuals 進行點擊測試範例 (英文)](https://go.microsoft.com/fwlink/?LinkID=159994) 和[使用 Win32 交互操作進行點擊測試範例 (英文)](https://go.microsoft.com/fwlink/?LinkID=159995)。  
@@ -138,13 +138,13 @@ ms.locfileid: "45988578"
  [!code-csharp[HitTestingOverview#108](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
  [!code-vb[HitTestingOverview#108](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- <xref:System.Windows.Media.HitTestResult>  
- <xref:System.Windows.Media.HitTestResultCallback>  
- <xref:System.Windows.Media.HitTestFilterCallback>  
- <xref:System.Windows.UIElement.IsHitTestVisible%2A>  
- [使用 DrawingVisuals 範例進行點擊測試](https://go.microsoft.com/fwlink/?LinkID=159994)  
- [點擊測試使用 Win32 交互操作範例](https://go.microsoft.com/fwlink/?LinkID=159995)  
- [對 Visual 中的幾何進行點擊測試](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [使用 Win32 裝載容器進行點擊測試](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- <xref:System.Windows.Media.HitTestResult>
+- <xref:System.Windows.Media.HitTestResultCallback>
+- <xref:System.Windows.Media.HitTestFilterCallback>
+- <xref:System.Windows.UIElement.IsHitTestVisible%2A>
+- [使用 DrawingVisuals 範例進行點擊測試](https://go.microsoft.com/fwlink/?LinkID=159994)
+- [點擊測試使用 Win32 交互操作範例](https://go.microsoft.com/fwlink/?LinkID=159995)
+- [對 Visual 中的幾何進行點擊測試](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)
+- [使用 Win32 裝載容器進行點擊測試](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)

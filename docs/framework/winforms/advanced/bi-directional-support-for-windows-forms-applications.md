@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9e35f097380272822e9dbcda01617cce9fed8fc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676844"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>對 Windows Forms 應用程式的雙向支援
 您可以使用 Visual Studio 建立以 Windows 為基礎的應用程式，支援阿拉伯文和希伯來文等雙向 （由右至左） 語言。 這包括標準表單、對話方塊、MDI 表單，以及您可以在這些表單中使用的所有控制項，也就是 <xref:System.Windows.Forms.Control> 命名空間中的所有物件。  
@@ -23,7 +23,7 @@ ms.locfileid: "47424411"
  文化特性和 UI 文化特性設定可決定應用程式如何使用日期、時間、貨幣和其他資訊。 對文化特性和 UI 文化特性的支援同樣適用於雙向語言，因為其適用於任何其他語言。   另請參閱[全域 Windows Forms 和 Web Forms 的文化特性特定類別](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\))或[全域 Windows Forms 和 Web Forms 的文化特性特定類別](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft 和 RightToLeftLayout 屬性  
- 基底 <xref:System.Windows.Forms.Control> 類別 (表單的衍生來源) 包含 <xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性，您可以將其設定，以變更表單及其控制項的讀取順序。 如果您設定表單的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性，根據預設，表單上的控制項會繼承此設定。 不過，在大部分控制項上，也都可以個別設定 <xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性。 另請參閱[如何：針對全球化在 Windows Forms 中由右至左顯示文字](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\))。  
+ 基底 <xref:System.Windows.Forms.Control> 類別 (表單的衍生來源) 包含 <xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性，您可以將其設定，以變更表單及其控制項的讀取順序。 如果您設定表單的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性，根據預設，表單上的控制項會繼承此設定。 不過，在大部分控制項上，也都可以個別設定 <xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性。 另請參閱[How to:顯示全球化 Windows Form 中由右至左文字](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\))。  
   
  每個控制項的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性效果各不相同。 在某些控制項中，此屬性只會設定讀取順序，例如在 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.TreeView> 和 <xref:System.Windows.Forms.ToolTip> 控制項中。 在其他控制項中，<xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性則可變更讀取順序和配置。 其中包括 <xref:System.Windows.Forms.RadioButton>、<xref:System.Windows.Forms.ComboBox> 和 <xref:System.Windows.Forms.CheckBox> 控制項。 其他控制項需要套用 <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> 屬性，以將其配置由右至左鏡像處理。 下表詳細說明 <xref:System.Windows.Forms.Control.RightToLeft%2A> 和 <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> 屬性如何影響個別的 Windows Form 控制項。  
   
@@ -119,5 +119,5 @@ ms.locfileid: "47424411"
   
 ## <a name="see-also"></a>另請參閱
 
-[ASP.NET Web 應用程式的雙向支援](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
-[全球化 Windows Forms 應用程式](globalizing-windows-forms.md)
+- [ASP.NET Web 應用程式的雙向支援](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)
+- [全球化 Windows Forms 應用程式](globalizing-windows-forms.md)

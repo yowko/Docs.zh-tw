@@ -1,15 +1,15 @@
 ---
-title: 常見屬性 (Visual Basic)
+title: 通用屬性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5a91b0aa48a22db4ea7fb56a9c632ff0cb44dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644156"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690900"
 ---
-# <a name="common-attributes-visual-basic"></a>常見屬性 (Visual Basic)
+# <a name="common-attributes-visual-basic"></a>通用屬性 (Visual Basic)
 本主題說明在 Visual Basic 程式中最常用的屬性。  
   
 -   [全域屬性](#Global)  
@@ -29,7 +29,7 @@ ms.locfileid: "33644156"
 <Assembly: AssemblyVersion("1.0.0.0")>  
 ```  
   
- 之後，任何全域屬性會出現在原始碼最上層`Imports`陳述式之前的任何類型、 模組或命名空間宣告。 全域屬性可以出現在多個原始程式檔中，但必須使用單一編譯階段編譯檔案。 Visual Basic 專案中，通常會處於 AssemblyInfo.vb 檔案 （檔案時自動建立 Visual Studio 中建立的專案） 的全域屬性。  
+ 之後任何全域屬性會出現在原始程式碼中最上層`Imports`陳述式和任何類型、 模組或命名空間宣告之前。 全域屬性可以出現在多個原始程式檔中，但必須使用單一編譯階段編譯檔案。 Visual Basic 專案通用的屬性通常會放在 AssemblyInfo.vb 檔案 （檔案時自動建立 Visual Studio 中建立的專案）。  
   
  組件屬性是提供組件相關資訊的值。 它們的分類如下：  
   
@@ -218,9 +218,9 @@ End Class
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含呼叫端的原始程式檔完整路徑。 這是編譯時期的路徑。|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|原始程式檔中呼叫方法的行號。|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼叫端的方法名稱或屬性名稱。 如需詳細資訊，請參閱[呼叫端資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)。|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼叫端的方法名稱或屬性名稱。 如需詳細資訊，請參閱 <<c0> [ 呼叫端資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)。|`String`|  
   
- 如需 Caller Info 屬性的詳細資訊，請參閱[呼叫端資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)。  
+ 如需有關 Caller Info 屬性的詳細資訊，請參閱[呼叫端資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)。  
   
 ##  <a name="VB"></a> Visual Basic 屬性  
  下表列出 Visual Basic 特有的屬性。  
@@ -228,18 +228,18 @@ End Class
 |屬性|用途|  
 |---------------|-------------|  
 |<xref:Microsoft.VisualBasic.ComClassAttribute>|表示編譯器應該為 COM 物件公開的類別。|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|允許存取使用只限定性條件該模組所需的模組成員。|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|使用結構中指定固定長度字串的大小，使用檔案輸入和輸出函式。|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|使用結構中指定固定陣列的大小，使用檔案輸入和輸出函式。|  
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|可讓您使用所需的模組完整名稱存取模組成員。|  
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|指定使用的結構中的固定長度字串的大小，使用檔案輸入和輸出函式。|  
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|指定使用的結構中的固定陣列的大小，使用檔案輸入和輸出函式。|  
   
 ### <a name="comclassattribute"></a>COMClassAttribute  
- 使用`COMClassAttribute`簡化從 Visual Basic 建立 COM 元件的程序。 COM 物件會從.NET Framework 組件，並沒有差異很大`COMClassAttribute`，您必須遵循一些步驟來產生 Visual basic 的 COM 物件。 針對類別標記為`COMClassAttribute`，編譯器會自動執行其中許多步驟。  
+ 使用`COMClassAttribute`簡化從 Visual Basic 建立 COM 元件的程序。 COM 物件會從.NET Framework 組件，而大幅不同`COMClassAttribute`，您必須遵循幾個步驟，以產生從 Visual Basic 的 COM 物件。 針對類別以標記`COMClassAttribute`，編譯器會自動執行其中許多步驟。  
   
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute  
- 使用`HideModuleNameAttribute`以允許存取的使用只限定性條件該模組所需的模組成員。  
+ 使用`HideModuleNameAttribute`以允許存取使用所需的模組完整名稱的模組成員。  
   
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute  
- 使用`VBFixedStringAttribute`強制 Visual Basic 來建立固定長度字串。 根據預設的可變長度的字串是，將字串儲存至檔案時，此屬性才有用。 下列程式碼示範：  
+ 使用`VBFixedStringAttribute`強制 Visual Basic 來建立固定長度的字串。 根據預設的可變長度的字串是，將字串儲存至檔案時，此屬性才有用。 下列程式碼示範：  
   
 ```vb  
 Structure Worker  
@@ -252,12 +252,12 @@ End Structure
 ```  
   
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute  
- 使用`VBFixedArrayAttribute`來宣告陣列的大小固定的。 例如 Visual Basic 字串陣列是預設的可變長度。 這個屬性會序列化，或將資料寫入至檔案時很有用。  
+ 使用`VBFixedArrayAttribute`宣告為固定大小的陣列。 例如 Visual Basic 字串陣列是預設的可變長度。 這個屬性會序列化，或將資料寫入至檔案時很有用。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Visual Basic 程式設計手冊](../../../../visual-basic/programming-guide/index.md)  
- [屬性](../../../../standard/attributes/index.md)  
- [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Visual Basic 程式設計手冊](../../../../visual-basic/programming-guide/index.md)
+- [屬性](../../../../standard/attributes/index.md)
+- [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

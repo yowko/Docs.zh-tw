@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ecd1c714f41c76833ef6a0a4b7be87e338ca1a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 51eeaf79e470e38461450c6f4afbef982cca7a34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727959"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams 方法
 陣列的泛型參數指定的 TypeDef 或 MethodDef 相關聯的語彙基元的列舉值取得語彙基元。  
@@ -50,27 +50,27 @@ HRESULT EnumGenericParams (
  [out]若要列舉的泛型參數的陣列。  
   
  `cMax`  
- [in]將放置在權杖的要求的數目上限`rGenericParams`。  
+ [in]將放在權杖的要求的數目上限`rGenericParams`。  
   
  `pcGenericParams`  
- [out]傳回的語彙基元的數字放在`rGenericParams`。  
+ [out]語彙基元傳回的數字放在`rGenericParams`。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |`S_OK`|`EnumGenericParams` 已成功傳回。|  
-|`S_FALSE`|`phEnum` 不含任何成員的元素。 在此情況下，`pcGenericParams`設為 0 （零）。|  
+|`S_FALSE`|`phEnum` 有沒有成員項目。 在此情況下，`pcGenericParams`設為 0 （零）。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

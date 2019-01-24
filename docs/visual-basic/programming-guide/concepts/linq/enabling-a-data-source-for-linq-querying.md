@@ -2,12 +2,12 @@
 title: 啟用資料來源以進行 LINQ Querying2
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-ms.openlocfilehash: 6d2601e807a00ce2a6f8c342a565f5542ffc8f5b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f705db90f4838479621117bd9303f5a374d33d4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582823"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676493"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>啟用資料來源以進行 LINQ 查詢
 
@@ -29,7 +29,7 @@ ms.locfileid: "48582823"
  您可以使用兩種方式來啟用記憶體中資料的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢功能。 如果資料屬於實作 <xref:System.Collections.Generic.IEnumerable%601> 的類型，您可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 來查詢該資料。 如果透過實作 <xref:System.Collections.Generic.IEnumerable%601> 介面來啟用類型列舉並不合理，您可以在該類型中定義 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 標準查詢運算子方法，或是建立可擴充類型的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 標準查詢運算子方法。 標準查詢運算子的自訂實作 (Implementation) 應該會使用延後執行 (Deferred Execution) 來傳回結果。
 
 ### <a name="remote-data"></a>遠端資料
- 啟用遠端資料來源之 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的最佳選擇是實作 <xref:System.Linq.IQueryable%601> 介面。 不過，這與擴充資料來源之提供者 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) 不同。 擴充現有不含任何提供者模型[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]技術，例如[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]至其他資料來源類型可用於 Visual Studio 2008。
+ 啟用遠端資料來源之 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的最佳選擇是實作 <xref:System.Linq.IQueryable%601> 介面。 不過，這與擴充資料來源之提供者 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) 不同。 Visual Studio 2008 中並無任何提供者模型可用來將現有的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 技術 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) 延伸到其他資料來源類型。
 
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ 提供者
  實作 <xref:System.Linq.IQueryable%601> 的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者在複雜度上有很大的差異。 本節將討論不同層次的複雜度。

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 2a372ba995f409fc3dd12492e21af80b93d20b8c
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 20676b53d21931987139288e29c009c8348ce6ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058590"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690887"
 ---
 # <a name="serialization-guidelines"></a>序列化方針
 本文件列出在設計要序列化的 API 時所要考量的指導方針。  
@@ -140,10 +140,10 @@ ms.locfileid: "54058590"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
-- [資料合約序列化程式](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
-- [資料合約序列化程式支援的類型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
-- [二進位序列化](binary-serialization.md)  
-- [遠端物件](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
-- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)  
+- [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [資料合約序列化程式](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
+- [資料合約序列化程式支援的類型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [二進位序列化](binary-serialization.md)
+- [遠端物件](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
 - [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)

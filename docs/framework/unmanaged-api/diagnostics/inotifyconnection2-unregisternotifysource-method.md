@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4b4f90f918c872f3227ac22f4cccadcbf3194a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3e5380ed63a362b73b0684ef07b638117751ca80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712008"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>INotifyConnection2::UnregisterNotifySource 方法
 從連接中移除指定的通知來源物件。  
@@ -38,16 +38,16 @@ HRESULT UnregisterNotifySource
   
 #### <a name="parameters"></a>參數  
  `in_pNotifySource`  
- [in]要移除註冊的通知物件。  
+ [in]要取消註冊的通知物件。  
   
 ## <a name="return-value"></a>傳回值  
- 如果此方法成功為 S_OK。  
+ 如果方法成功為 S_OK。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>另請參閱  
- [INotifyConnection2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [INotifySource2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifySink2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [RegisterNotifySource 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)
+## <a name="see-also"></a>另請參閱
+- [INotifyConnection2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [INotifySource2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifySink2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [RegisterNotifySource 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)

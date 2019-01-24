@@ -6,17 +6,17 @@ helpviewer_keywords:
 - SoundPlayer class [Windows Forms], about SoundPlayer class
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
-ms.openlocfilehash: 31ce87303b7b96cfd14d4daf07fd21c9de91a548
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 041e7d0170bc98797278e209fd86cff0f82db9fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690680"
 ---
 # <a name="soundplayer-class-overview"></a>SoundPlayer 類別概觀
-<xref:System.Media.SoundPlayer> 類別可讓您輕鬆地在應用程式中包含音效。  
+ <xref:System.Media.SoundPlayer> 類別可讓您輕鬆地在應用程式中包含音效。  
   
- <xref:System.Media.SoundPlayer>類別可以播放聲音檔.wav 格式，從資源，或是從 UNC 或 HTTP 的位置。 此外，<xref:System.Media.SoundPlayer>類別可讓您載入，或以非同步方式播放音效。  
+ <xref:System.Media.SoundPlayer>類別可以播放.wav 格式，從資源或者從 UNC 或 HTTP 位置中的音效檔。 此外，<xref:System.Media.SoundPlayer>類別可讓您載入或以非同步方式播放音效。  
   
  您也可以使用 <xref:System.Media.SystemSounds> 類別來播放常見的系統音效，包括嗶聲。  
   
@@ -28,12 +28,12 @@ ms.locfileid: "33535960"
 |<xref:System.Media.SoundPlayer.LoadTimeout%2A> 屬性|程式在擲回例外狀況之前等待載入音效的毫秒數。 預設為 10 秒。|  
 |<xref:System.Media.SoundPlayer.IsLoadCompleted%2A> 屬性|表示音效是否完成載入的布林值。|  
 |<xref:System.Media.SoundPlayer.Load%2A> 方法|同步載入音效。|  
-|<xref:System.Media.SoundPlayer.LoadAsync%2A> 方法|開始非同步載入音效。 完成載入時，便會產生<xref:System.Media.SoundPlayer.OnLoadCompleted%2A>事件。|  
-|<xref:System.Media.SoundPlayer.Play%2A> 方法|播放音效中指定<xref:System.Media.SoundPlayer.SoundLocation%2A>或<xref:System.Media.SoundPlayer.Stream%2A>中新的執行緒屬性。|  
-|<xref:System.Media.SoundPlayer.PlaySync%2A> 方法|播放音效中指定<xref:System.Media.SoundPlayer.SoundLocation%2A>或<xref:System.Media.SoundPlayer.Stream%2A>目前執行緒中的屬性。|  
+|<xref:System.Media.SoundPlayer.LoadAsync%2A> 方法|開始非同步載入音效。 載入完成時，便會產生<xref:System.Media.SoundPlayer.OnLoadCompleted%2A>事件。|  
+|<xref:System.Media.SoundPlayer.Play%2A> 方法|扮演指定的音效<xref:System.Media.SoundPlayer.SoundLocation%2A>或<xref:System.Media.SoundPlayer.Stream%2A>中新的執行緒屬性。|  
+|<xref:System.Media.SoundPlayer.PlaySync%2A> 方法|扮演指定的音效<xref:System.Media.SoundPlayer.SoundLocation%2A>或<xref:System.Media.SoundPlayer.Stream%2A>目前執行緒中的屬性。|  
 |<xref:System.Media.SoundPlayer.Stop%2A> 方法|停止任何目前正在播放的音效。|  
 |<xref:System.Media.SoundPlayer.LoadCompleted> 事件|在嘗試載入音效之後引發。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Media.SoundPlayer>  
- <xref:System.Media.SystemSounds>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Media.SoundPlayer>
+- <xref:System.Media.SystemSounds>

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588570"
 ---
 # <a name="standard-query-operator-translation"></a>標準查詢運算子轉譯
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將標準查詢運算子轉譯為 SQL 命令。 資料庫的查詢處理器會決定執行語意的 SQL 轉譯。  
@@ -71,10 +71,10 @@ ORDER BY [t0].[CustomerID]
   
 |運算子|基本原理|  
 |---------------|---------------|  
-|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL 查詢可用於多重集而非序列上。 `ORDER BY` 必須是最後一個對結果套用的子句。 因此，這兩個方法不需要普遍受到轉譯。|  
+|<xref:System.Linq.Enumerable.TakeWhile%2A>、 <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL 查詢可用於多重集而非序列上。 `ORDER BY` 必須是最後一個對結果套用的子句。 因此，這兩個方法不需要普遍受到轉譯。|  
 |<xref:System.Linq.Enumerable.Reverse%2A>|如果是未排序的集合，則要轉譯這個方法是可行的，但 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 目前不會加以轉譯。|  
-|<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|如果是未排序的集合，則要轉譯這些方法是可行的，但 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 目前不會加以轉譯。|  
-|<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL 查詢是用於多重集，而非可建立索引的序列上。|  
+|<xref:System.Linq.Enumerable.Last%2A>、 <xref:System.Linq.Enumerable.LastOrDefault%2A>|如果是未排序的集合，則要轉譯這些方法是可行的，但 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 目前不會加以轉譯。|  
+|<xref:System.Linq.Enumerable.ElementAt%2A>、 <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL 查詢是用於多重集，而非可建立索引的序列上。|  
 |<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (以預設引數多載)|一般而言，如果是任意 Tuple，就不能指定預設值。 在某些情況下，可以透過外部聯結 (Outer Join) 指定 Null 值給 Tuple。|  
   
 ## <a name="expression-translation"></a>運算式轉譯  
@@ -147,7 +147,7 @@ ORDER BY [t0].[CustomerID]
 ## <a name="inheritance-support"></a>繼承支援  
   
 ### <a name="inheritance-mapping-restrictions"></a>繼承對應限制  
- 如需詳細資訊，請參閱 <<c0> [ 如何： 對應繼承階層架構](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)。  
+ 如需詳細資訊，請參閱[＜How to：對應繼承階層架構](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)。  
   
 ### <a name="inheritance-in-queries"></a>查詢中的繼承  
  僅支援在投影中使用 C# 轉換 (Cast)。 其他地方使用的轉換 (Cast) 不會受到轉譯而且會予以忽略。 事實上，除了 SQL 函式名稱之外，SQL 只會執行 Common Language Runtime (CLR) <xref:System.Convert> 的對等用法。 也就是說，SQL 可以將某個型別的值變更為另一個值。 因為沒有將相同位元的型別重新解譯為另一個型別的概念，CLR 轉換 (Cast) 沒有對等用法。 這就是 C# 轉換只能在區域執行的原因。 無法遠端處理。  
@@ -225,10 +225,10 @@ ORDER BY [t0].[CustomerID]
   
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
-## <a name="see-also"></a>另請參閱  
- [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [傳回或略過序列中的項目](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- [串連兩個序列](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
- [傳回兩個序列之間的集合差異](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- [傳回兩個序列的集合交集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- [傳回兩個序列的集合聯集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+## <a name="see-also"></a>另請參閱
+- [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [傳回或略過序列中的項目](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
+- [串連兩個序列](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
+- [傳回兩個序列之間的集合差異](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
+- [傳回兩個序列的集合交集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
+- [傳回兩個序列的集合聯集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

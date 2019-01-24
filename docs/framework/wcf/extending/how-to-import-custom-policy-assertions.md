@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: b6155296e264bb3ae90aac2ee6b83797e632962e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674777"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>HOW TO：匯入自訂原則判斷提示
 原則判斷提示描述服務端點的功能與需求。  用戶端應用程式可使用服務中繼資料中的原則判斷提示，來設定用戶端繫結或自訂服務端點的服務合約。  
@@ -25,7 +25,7 @@ ms.locfileid: "33491149"
   
 3.  使用組態檔。 請參閱下列程序。  
   
-4.  使用組態檔與[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 請參閱下列程序。  
+4.  使用組態檔[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 請參閱下列程序。  
   
 5.  以程式設計方式插入原則匯入工具。 請參閱下列程序。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33491149"
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>若要使用組態檔將自訂原則匯入工具插入中繼資料系統  
   
-1.  加入要匯入工具型別`<extensions>`元素內[ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)用戶端組態檔中的項目。  
+1.  匯入工具將類型新增至`<extensions>`項目內[ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)用戶端組態檔中的項目。  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,7 +55,7 @@ ms.locfileid: "33491149"
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>若要使用 Svcutil.exe 將自訂原則匯入工具插入中繼資料系統  
   
-1.  加入要匯入工具型別`<extensions>`元素內[ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) Svcutil.exe.config 組態檔中的項目。 您也可以使用 `/svcutilConfig` 選項指示 Svcutil.exe 載入在不同組態檔中註冊的原則匯入工具。  
+1.  匯入工具將類型新增至`<extensions>`項目內[ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) Svcutil.exe.config 組態檔中的項目。 您也可以使用 `/svcutilConfig` 選項指示 Svcutil.exe 載入在不同組態檔中註冊的原則匯入工具。  
   
 2.  使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)匯入中繼資料，以及匯入工具會自動叫用。  
   
@@ -63,8 +63,8 @@ ms.locfileid: "33491149"
   
 1.  先將匯入工具新增至 <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> 屬性 (例如，如果您目前使用的是 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>)，再匯入中繼資料。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
- [擴充中繼資料系統](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
+- [擴充中繼資料系統](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

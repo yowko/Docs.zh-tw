@@ -1,5 +1,5 @@
 ---
-title: 如何：建立漸層停駐點位置或色彩的動畫
+title: HOW TO：建立漸層停駐點位置或色彩的動畫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - animation [WPF], color of GradientStop objects
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
-ms.openlocfilehash: fcbb546b64810416d3f7dbe052da77b7bc941e7a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 48f10d418c4f584fd9d24f9292efbca5a941643c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711131"
 ---
-# <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>如何：建立漸層停駐點位置或色彩的動畫
+# <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>HOW TO：建立漸層停駐點位置或色彩的動畫
 此範例示範如何建立動畫<xref:System.Windows.Media.GradientStop.Color%2A>並<xref:System.Windows.Media.GradientStop.Offset%2A>的<xref:System.Windows.Media.GradientStop>物件。  
   
 ## <a name="example"></a>範例  
@@ -39,7 +39,7 @@ ms.locfileid: "44083981"
   
  如需其他範例，請參閱 <<c0> [ 筆刷範例](https://go.microsoft.com/fwlink/?LinkID=159973)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.GradientStop>  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.GradientStop>
+- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

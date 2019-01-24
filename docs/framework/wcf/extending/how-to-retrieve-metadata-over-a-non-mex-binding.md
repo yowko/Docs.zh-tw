@@ -1,20 +1,20 @@
 ---
-title: HOW TO：透過非 MEX 繫結擷取中繼資料
+title: HOW TO：擷取透過非 MEX 繫結中繼資料
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689546"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>HOW TO：透過非 MEX 繫結擷取中繼資料
-本主題說明如何透過非 MEX 繫結，擷取 MEX 端點的中繼資料。 此範例中的程式碼根據[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)範例。  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>HOW TO：擷取透過非 MEX 繫結中繼資料
+本主題說明如何透過非 MEX 繫結，擷取 MEX 端點的中繼資料。 在此範例中的程式碼根據[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)範例。  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>透過非 MEX 繫結擷取中繼資料  
   
-1.  判定 MEX 端點使用的繫結。 針對 Windows Communication Foundation (WCF) 服務，您可以藉由存取服務的組態檔來判斷 MEX 繫結。 在此例中，MEX 繫結是定義於下列服務組態。  
+1.  判定 MEX 端點使用的繫結。 對於 Windows Communication Foundation (WCF) 服務，您可以藉由存取服務的組態檔來判斷 MEX 繫結。 在此例中，MEX 繫結是定義於下列服務組態。  
   
     ```xml  
     <services>  
@@ -121,7 +121,7 @@ ms.locfileid: "33488084"
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  此時，您會擁有服務端點的集合。 如需有關匯入中繼資料的詳細資訊，請參閱[How to： 匯入到服務端點的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
+5.  此時，您會擁有服務端點的集合。 如需有關如何匯入中繼資料的詳細資訊，請參閱[How to:中繼資料匯入服務端點](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)

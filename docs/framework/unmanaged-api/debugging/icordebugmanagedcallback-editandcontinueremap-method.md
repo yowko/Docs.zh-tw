@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e8aa71a79bee45d5a8e1f3448c781e6ba1ec605
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e1e97b8df2ad81f91cd7250afbe4c5cc544ca6be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702245"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>ICorDebugManagedCallback::EditAndContinueRemap 方法
 這個方法已被取代。 它會通知偵錯工具，已重新對應事件傳送至整合式的開發環境 (IDE)。  
@@ -39,16 +39,16 @@ HRESULT EditAndContinueRemap (
 ```  
   
 ## <a name="remarks"></a>備註  
- `EditAndContinueRemap`時嘗試執行較舊版本的更新函式中的程式碼呼叫方法。 通用語言執行階段呼叫`EditAndContinueRemap`傳送 ide 的重新對應事件的方法。  
+ `EditAndContinueRemap`已嘗試的舊版本的更新函式中的程式碼執行時，會呼叫方法。 通用語言執行階段會呼叫`EditAndContinueRemap`ide 傳送重新對應事件的方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 933694a6a033dbfe817e3848b9008f05b86f51f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 668c7298a9543cce93cce324672334c9ec1e8cd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732813"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods 方法
 列舉代表指定類型方法的 MethodDef 語彙基元。  
@@ -41,7 +41,7 @@ HRESULT EnumMethods (
   
 #### <a name="parameters"></a>參數  
  `phEnum`  
- [in、 out]列舉值的指標。 這必須是 NULL 的第一個呼叫此方法。  
+ [in、 out]列舉值的指標。 首次呼叫這個方法，這必須是 NULL。  
   
  `cl`  
  [in]TypeDef 語彙基元的方法來列舉表示的型別。  
@@ -50,10 +50,10 @@ HRESULT EnumMethods (
  [out]要儲存 methoddef 語彙基元的陣列。  
   
  `cMax`  
- [in]大小上限的 MethodDef`rMethods`陣列。  
+ [in]最大大小的 MethodDef`rMethods`陣列。  
   
  `pcTokens`  
- [out]傳回的 methoddef 語彙基元數目`rMethods`。  
+ [out]中傳回的 methoddef 語彙基元數目`rMethods`。  
   
 ## <a name="return-value"></a>傳回值  
   
@@ -63,14 +63,14 @@ HRESULT EnumMethods (
 |`S_FALSE`|沒有列舉 MethodDef 語彙基元。 在此情況下，`pcTokens`為零。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

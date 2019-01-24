@@ -8,15 +8,15 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: 1ef957efcb4cc9330c1c273a1c953afc5b7dd240
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b375251e1ff083a527249da51dfe12ae9165dd55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720245"
 ---
 # <a name="how-to-compare-claims"></a>HOW TO：比較宣告
-識別模型基礎結構中 Windows Communication Foundation (WCF) 用來執行授權檢查。 因此，比較授權內容中的宣告與執行所要求動作或存取所要求資源所需要的宣告，屬於常見的工作。 本主題將描述如何比較宣告，包括內建和自訂的宣告類型。 如需身分識別模型基礎結構的詳細資訊，請參閱[管理宣告和授權的方式識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
+身分識別模型基礎結構在 Windows Communication Foundation (WCF) 用來執行授權檢查。 因此，比較授權內容中的宣告與執行所要求動作或存取所要求資源所需要的宣告，屬於常見的工作。 本主題將描述如何比較宣告，包括內建和自訂的宣告類型。 如需識別模型基礎結構的詳細資訊，請參閱[管理宣告與授權身分識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
   
  宣告比較需要將宣告中的三個部分 (類型、權限和資源) 與其他宣告的相同部分進行比較，以便判斷兩種宣告是否相等。 請參閱下列範例。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33489074"
  [!code-csharp[c_CustomClaimComparison#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#4)]
  [!code-vb[c_CustomClaimComparison#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#4)]  
   
- 中的比較程式碼<xref:System.IdentityModel.Claims.Claim.Equals%2A>方法會傳回`true`，此時是假設`example\someone`相同網域使用者識別為 「someone@example.com"。  
+ 中的比較程式碼<xref:System.IdentityModel.Claims.Claim.Equals%2A>方法會傳回`true`，假設`example\someone`識別相同的網域使用者 」someone@example.com"。  
   
  自訂的宣告類型也可以使用 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 方法來進行比較。 不過，在宣告的 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 屬性所傳回的類型不同於原始類型的情況下，根據 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 方法，只有在 `true` 屬性傳回的值相等時，`Resource` 才會傳回 <xref:System.IdentityModel.Claims.Claim.Equals%2A>。 在某些不適當的情況下，`Resource` 屬性傳回的自訂類型應該覆寫 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法，以便執行任何必要的自訂處理。  
   
@@ -70,6 +70,6 @@ ms.locfileid: "33489074"
  [!code-csharp[c_CustomClaimComparison#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#0)]
  [!code-vb[c_CustomClaimComparison#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#0)]  
   
-## <a name="see-also"></a>另請參閱  
- [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [如何：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+## <a name="see-also"></a>另請參閱
+- [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [如何：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

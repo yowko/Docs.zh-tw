@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea8a74633d3e950f6cf7ba87c00a9efa45206545
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94d601125049f0c215b3b03bf8b13d2959872c3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711755"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey 函式
-可確保用戶端金鑰具有正確的安全性。  
+確定用戶端金鑰有正確的安全性。  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -36,16 +36,16 @@ LONG VerifyClientKey();
 
 ## <a name="return-value"></a>傳回值
 
-如果函式成功，傳回值是`ERROR_SUCCESS`(0)。
+如果此函數成功，傳回的值是`ERROR_SUCCESS`(0)。
 
 如果函式失敗，傳回值是中定義的非零的錯誤代碼*WinError.h*。
 
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.def  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

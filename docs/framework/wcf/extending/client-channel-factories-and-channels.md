@@ -2,12 +2,12 @@
 title: 用戶端：通道處理站與通道
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 3f045f56f7b73c5416e7a21a3afde29d22212d68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 71ed9f9cbef35d14597ce6452d65bfca994dc23e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720310"
 ---
 # <a name="client-channel-factories-and-channels"></a>用戶端：通道處理站與通道
 這個主題會討論通道處理站和通道的建立方面。  
@@ -30,7 +30,7 @@ ms.locfileid: "50182433"
   
 -   <xref:System.ServiceModel.Channels.ChannelListenerBase> 類別會實作 <xref:System.ServiceModel.Channels.IChannelListener>。 它會負責基礎的狀態管理。 
   
- 以下討論以基礎[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。  
+ 以下討論以基礎[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。  
   
 ### <a name="creating-a-channel-factory"></a>建立通道處理站y  
  `UdpChannelFactory` 是衍生自 <xref:System.ServiceModel.Channels.ChannelFactoryBase>。 範例會覆寫 <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A>，以提供訊息編碼器之訊息版本的存取權。 當狀態電腦進行轉換時，該範例也會覆寫 <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> 以終止 <xref:System.ServiceModel.Channels.BufferManager> 的執行個體。  
@@ -73,5 +73,5 @@ this.socket.SendTo(
 );  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)
+## <a name="see-also"></a>另請參閱
+- [開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)

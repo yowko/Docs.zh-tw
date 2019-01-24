@@ -2,12 +2,12 @@
 title: 範例
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: 0732a876d678967d25e41b9fbe767df506257ecb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 55d53642b1d98c798b164ca99d2a59d7ba299d22
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729021"
 ---
 # <a name="samples"></a>範例
 本主題提供 Visual Basic 和 C# 解決方案，其中包含連結[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]範例程式碼。  
@@ -27,6 +27,6 @@ ms.locfileid: "43503943"
   
 -   研究技術白皮書會詳細說明[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]技術，其中包含 Visual Basic 和 C# 程式碼範例。 如需詳細資訊，請參閱 < [LINQ to SQL： 關聯式資料的.net language-integrated Query](https://go.microsoft.com/fwlink/?LinkId=93205)。  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- [LINQ to SQL 逐步解說](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)
+## <a name="see-also"></a>另請參閱
+- [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ to SQL 逐步解說](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)

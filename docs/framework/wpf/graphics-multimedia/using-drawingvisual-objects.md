@@ -8,12 +8,12 @@ helpviewer_keywords:
 - visual layer [WPF], DrawingVisual objects
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
-ms.openlocfilehash: 799892424f92782d71b9a35e76d722d1725815ea
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0d4ba3939a95b665684713f3b1775bacd3d028b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675063"
 ---
 # <a name="using-drawingvisual-objects"></a>使用 DrawingVisual 物件
 本主題提供使用方式的概觀<xref:System.Windows.Media.DrawingVisual>中的物件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]視覺圖層。  
@@ -51,9 +51,9 @@ ms.locfileid: "43861841"
   
  下列清單說明您必須覆寫的兩個成員︰  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>： 從子元素的集合傳回指定之索引處的子系。  
+-   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>：傳回指定之索引處的子系集合中的項目子系。  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>： 取得此項目內的視覺子項目數目。  
+-   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>：取得這個項目內的視覺化子項目數。  
   
  在下列範例中，覆寫這兩個<xref:System.Windows.FrameworkElement>成員實作。  
   
@@ -69,8 +69,8 @@ ms.locfileid: "43861841"
  [!code-csharp[DrawingVisualSample#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#103)]
  [!code-vb[DrawingVisualSample#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.DrawingVisual>  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [視覺分層中的點擊測試](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.DrawingVisual>
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [視覺分層中的點擊測試](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)

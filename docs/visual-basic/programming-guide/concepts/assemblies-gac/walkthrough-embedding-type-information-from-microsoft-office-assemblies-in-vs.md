@@ -1,15 +1,15 @@
 ---
-title: 逐步解說： 在 Visual Studio (Visual Basic) 中內嵌來自 Microsoft Office 組件的類型資訊
+title: 逐步解說：在 Visual Studio (Visual Basic) 中內嵌來自 Microsoft Office 組件的類型資訊
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-ms.openlocfilehash: bc8f7585964bdd60bac5d5a466f6276fab288c78
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e5b94c190a77f6877c9a3d37f310aa527083a26a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002966"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722773"
 ---
-# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>逐步解說： 在 Visual Studio (Visual Basic) 中內嵌來自 Microsoft Office 組件的類型資訊
+# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>逐步解說：在 Visual Studio (Visual Basic) 中內嵌來自 Microsoft Office 組件的類型資訊
 如果您在參考 COM 物件的應用程式中內嵌類型資訊，就不必使用主要 Interop 組件 (PIA)。 此外，內嵌的類型資訊可讓您確保應用程式的版本獨立。 也就是說，您可以撰寫程式來使用 COM 程式庫多個版本的類型，而不需每個版本使用特定的 PIA。 當應用程式使用來自 Microsoft Office 程式庫的物件時，這是十分常見的案例。 當您內嵌類型資訊時，可讓相同組建的程式在個別電腦上使用不同版本的 Microsoft Office，而不需要針對每個版本的 Microsoft Office 重新部署程式或 PIA。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -95,7 +95,7 @@ ms.locfileid: "46002966"
   
 8.  儲存專案。  
   
-9. 按 CTRL+F5 建置並執行專案。 確認範例程式碼中指定的位置 (C:\SampleFolder\SampleWorkbook.xls) 已建立 Excel 活頁簿。  
+9. 按 CTRL+F5 建置並執行專案。 確認 Excel 活頁簿已經建立的範例程式碼中指定的位置：C:\SampleFolder\SampleWorkbook.xls.  
   
 ##  <a name="BKMK_publishapp"></a> 若要將應用程式發行到安裝不同版本的 Microsoft Office 電腦  
   
@@ -107,9 +107,9 @@ ms.locfileid: "46002966"
   
 4.  當安裝完成時，執行已安裝的程式。  
   
-5.  確認範例程式碼中指定的位置 (C:\SampleFolder\SampleWorkbook.xls) 已建立 Excel 活頁簿。  
+5.  確認 Excel 活頁簿已經建立的範例程式碼中指定的位置：C:\SampleFolder\SampleWorkbook.xls.  
   
 ## <a name="see-also"></a>另請參閱
 
-- [逐步解說： 在 Visual Studio (Visual Basic) 中內嵌來自 Managed 組件的型別](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
+- [逐步解說：在 Visual Studio (Visual Basic) 中內嵌來自 Managed 組件的型別](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)

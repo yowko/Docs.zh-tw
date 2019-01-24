@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04b6c04868efff31253b2d723c5783060382212b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fc4e8140485902e4677bca0228bc125c64b497f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671854"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps 方法
 取得與指定 FieldDef 語彙基元所參考欄位相關聯的中繼資料。  
@@ -47,22 +47,22 @@ HRESULT GetFieldProps (
   
 #### <a name="parameters"></a>參數  
  `mb`  
- [in]FieldDef 語彙基元，代表要取得相關聯的中繼資料的欄位。  
+ [in]FieldDef 語彙基元，表示要取得相關聯的中繼資料的欄位。  
   
  `pClass`  
  [out]表示欄位所屬的類別類型的 TypeDef 語彙基元指標。  
   
  `szField`  
- [out]欄位的名稱。  
+ [out]欄位名稱。  
   
  `cchField`  
- [in]寬字元的緩衝區大小*szField*。  
+ [in]寬字元緩衝區的大小*szField*。  
   
  `pchField`  
- [out]實際傳回的緩衝區大小。  
+ [out]傳回的緩衝區實際大小。  
   
  `pdwAttr`  
- [out]欄位的中繼資料與相關聯的旗標。  
+ [out]欄位的中繼資料相關聯的旗標。  
   
  `ppvSigBlob`  
  [in]描述欄位的二進位中繼資料值的指標。  
@@ -77,17 +77,17 @@ HRESULT GetFieldProps (
  [out]欄位的常值。  
   
  `pcchValue`  
- [out]以字元為單位的大小`ppValue`，或為零，如果字串不存在。  
+ [out]以字元為單位的大小`ppValue`，零，如果不有任何字串。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 718a0c086181546ba7b7fb3b31fce0732dd99382
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ff01c21481e2265a82cb9788beb8abd7b213af63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517112"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709217"
 ---
 # <a name="specifying-an-endpoint-address"></a>指定端點位址
 與 Windows Communication Foundation (WCF) 服務的所有通訊都都會透過其端點。 每個 <xref:System.ServiceModel.Description.ServiceEndpoint> 都包含有 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 和 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>。 合約會指定哪些為可用的作業。 繫結會指定如何與服務通訊，而位址則指定何處可找到服務。 每個端點必須具備唯一的位址。 端點位址是由 <xref:System.ServiceModel.EndpointAddress> 類別所代表，其中包含代表服務位址的統一資源識別元 (URI)、代表服務之安全性身分識別的 <xref:System.ServiceModel.EndpointAddress.Identity%2A>，以及選用的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 集合。 選用標頭會提供更多詳細的定址資訊來識別端點或與端點互動。 例如，標頭會指出如何處理傳入訊息、端點應該將回覆訊息傳送到哪裡，或是當有多個執行個體可用時，要使用哪個服務執行個體來處理來自特定使用者的傳入訊息。  
@@ -26,7 +26,7 @@ ms.locfileid: "43517112"
   
 -   電腦： `www.fabrikam.com`  
   
--   (選擇性) 連接埠：322  
+-   （選擇性）連接埠：322  
   
 -   路徑：/mathservice.svc/secureEndpoint  
   
@@ -45,7 +45,7 @@ ms.locfileid: "43517112"
   
  當<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>（也就是當裝載應用程式會嘗試啟動服務），會呼叫方法，系統會尋找[\<服務 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)元素與 name 屬性，指定 「 UE。Samples.HelloService"。 如果[\<服務 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)找到項目，系統會載入指定的類別，並建立使用組態檔中提供的端點定義的端點。 這項機制可讓您透過兩行程式碼輕鬆地載入並啟動服務，同時不用在程式碼中留下繫結與位址資訊。 使用這種方法的好處是，您不用重新編譯或重新部署應用程式，便可進行這些變更。  
   
- 選擇性標頭中宣告[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)。 下列是用來區分兩個標頭的組態檔中指定服務端點項目的範例： 從"Gold"用戶端 `http://tempuri1.org/` 和 「 標準 」 的用戶端從 `http://tempuri2.org/` 。 呼叫此服務的用戶端必須擁有適當[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)其組態檔中。  
+ 選擇性標頭中宣告[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)。 下列是用來指定服務端點的組態檔來區別兩個標頭中的項目範例：從"Gold"用戶端`http://tempuri1.org/`和 「 標準 」 的用戶端從`http://tempuri2.org/`。 呼叫此服務的用戶端必須擁有適當[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)其組態檔中。  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
@@ -82,8 +82,8 @@ ms.locfileid: "43517112"
   
  如果沒有明確提供端點，在呼叫 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 之前，仍可藉由在 <xref:System.ServiceModel.ServiceHost> 上呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 來加入預設端點。 如需預設端點、繫結和行為的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服務的簡化組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.EndpointAddress>  
- [服務身分識別和驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [建立端點概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [裝載](../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.EndpointAddress>
+- [服務身分識別和驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [建立端點概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [裝載](../../../docs/framework/wcf/feature-details/hosting.md)

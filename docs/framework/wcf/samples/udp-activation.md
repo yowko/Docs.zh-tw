@@ -2,15 +2,15 @@
 title: UDP 啟用
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 09b208f88b456b6d98e45fc34db3857f8938cd6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715509"
 ---
 # <a name="udp-activation"></a>UDP 啟用
-此樣本根據[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 它會擴充[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例，以支援使用 Windows Process Activation Service (WAS) 處理序啟動。  
+此樣本根據[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 它會擴充[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例，以支援使用 Windows Process Activation Service (WAS) 處理序啟動。  
   
  此範例包含三個主要部分：  
   
@@ -107,9 +107,9 @@ ms.locfileid: "46562344"
   
 -   UDPActivation.dll：包含所有主要 UDP 實作的程式庫。  
   
--   Service.dll：服務程式碼。 這個檔案會複製至虛擬應用程式 ServiceModelSamples 的 \bin 目錄。 服務檔為 Service.svc，而組態檔為 Web.config。進行編譯之後，會將這些檔案複製至下列位置：%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples。  
+-   Service.dll:服務程式碼。 這個檔案會複製至虛擬應用程式 ServiceModelSamples 的 \bin 目錄。 服務檔為 Service.svc，而組態檔為 Web.config。進行編譯之後，會將這些檔案複製至下列位置：%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples。  
   
--   WasNetActivator：UDP 啟動器。  
+-   WasNetActivator:UDP 啟動程式。  
   
 -   請確定已正確安裝所有必要的部分。 下列步驟會顯示如何執行範例：  
   
@@ -117,7 +117,7 @@ ms.locfileid: "46562344"
   
     -   Windows Process Activation Service (WAS)。  
   
-    -   Internet Information Services (IIS)：W3SVC。  
+    -   Internet Information Services (IIS):W3SVC.  
   
 2.  接著啟動啟動程式：WasNetActivator.exe。 底下**啟用**索引標籤，唯一的通訊協定**UDP**，在下拉式清單中選取。 按一下 [**啟動**] 按鈕來開始啟動程式。  
   

@@ -3,19 +3,19 @@ title: '&lt;cookieHandler&gt;'
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 99bf6edb4e4f631eba292990c65c1f0c8553d8c0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 58c258bd20ce6b69a73b37a61a4d26f1efbb117a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717099"
 ---
 # <a name="ltcookiehandlergt"></a>&lt;cookieHandler&gt;
 會設定<xref:System.IdentityModel.Services.CookieHandler>， <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) 會使用來讀取和寫入 cookie。  
   
- \<system.identityModel.services >  
-\<Federationconfiguration> >  
-\<cookieHandler >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<cookieHandler>  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48840715"
 |路徑|指定寫入的任何 cookie 的路徑值。 預設值為"HttpRuntime.AppDomainAppVirtualPath 」。|  
 |模式|其中一個<xref:System.IdentityModel.Services.CookieHandlerMode>指定 SAM 所使用的 cookie 處理常式類型的值。 可以使用下列值：<br /><br /> -"Default"，"Chunked"相同。<br />-「 區塊 」 — 使用的執行個體<xref:System.IdentityModel.Services.ChunkedCookieHandler>類別。 此 cookie 處理常式可確保個別 cookie 不會超過設定的最大大小。 這是可能 「 區塊處理 」 邏輯 cookie cookie 上連線的數目。<br />-「 自訂 」 — 使用一個衍生自的自訂類別的執行個體<xref:System.IdentityModel.Services.CookieHandler>。 在衍生的類別由參考`<customCookieHandler>`子項目。<br /><br /> 預設值為"Default"。|  
 |persistentSessionLifetime|指定持續性工作階段的存留期。 如果是零，永遠使用暫時性工作階段。 預設值是"0:0:0 」，其指定的暫時性工作階段。 最大值是"365:0:0 」，其指定為 365 天的工作階段。 應該指定的值，根據下列限制： `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`，其中最左邊的值會指定天、 中間值 （如果有的話） 會指定小時，而最右邊的值 （如果有的話） 會指定分鐘。|  
-|RequireSsl|指定是否為任何撰寫的 cookie 發出"Secure"旗標。 如果此值設定時，登入工作階段 cookie 只可透過 HTTPS。 預設為 "true"。|  
+|requireSsl|指定是否為任何撰寫的 cookie 發出"Secure"旗標。 如果此值設定時，登入工作階段 cookie 只可透過 HTTPS。 預設為 "true"。|  
 |hideFromScript|控制是否"HttpOnly 」 旗標，就會發出任何寫入的 cookie。 某些網頁瀏覽器會接受這個旗標，保留用戶端指令碼存取 cookie 值。 預設為 "true"。|  
 |網域|寫入的任何 cookie 網域值。 預設值為 ""。|  
   
@@ -55,8 +55,8 @@ ms.locfileid: "48840715"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Chunkedcookiehandler> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|設定<xref:System.IdentityModel.Services.ChunkedCookieHandler>。 這個項目只會出現如果`mode`屬性的`<cookieHandler>`項目是 「 預設 」 或 「 區塊 」。|  
-|[\<customCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|設定自訂 cookie 處理常式型別。 必須有此項目如果`mode`屬性的`<cookieHandler>`項目是 「 自訂 」。 它不能存在的任何其他值`mode`屬性。 自訂型別必須衍生自<xref:System.IdentityModel.Services.CookieHandler>類別。|  
+|[\<chunkedCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|設定<xref:System.IdentityModel.Services.ChunkedCookieHandler>。 這個項目只會出現如果`mode`屬性的`<cookieHandler>`項目是 「 預設 」 或 「 區塊 」。|  
+|[\<customCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|設定自訂 cookie 處理常式型別。 必須有此項目如果`mode`屬性的`<cookieHandler>`項目是 「 自訂 」。 它不能存在的任何其他值`mode`屬性。 自訂型別必須衍生自<xref:System.IdentityModel.Services.CookieHandler>類別。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48840715"
 <cookieHandler requireSsl="false" />  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.IdentityModel.Services.CookieHandler>  
- <xref:System.IdentityModel.Services.ChunkedCookieHandler>  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>
+## <a name="see-also"></a>另請參閱
+- <xref:System.IdentityModel.Services.CookieHandler>
+- <xref:System.IdentityModel.Services.ChunkedCookieHandler>
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>

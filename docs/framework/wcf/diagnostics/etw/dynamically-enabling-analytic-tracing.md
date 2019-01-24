@@ -2,12 +2,12 @@
 title: 動態地啟用分析的追蹤
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: f03d2ce381be430121a11df95341886a4be667e2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 42d238c704910c2406eb580c2ce102e5e84ed0f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719985"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>動態地啟用分析的追蹤
 使用隨附於 Windows 作業系統的工具，您可以使用 Windows 事件追蹤 (ETW) 來動態啟用或停用追蹤。 所有[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]Windows Communication Foundation (WCF) 服務，分析追蹤可以啟用和停用，而不需要修改應用程式的 Web.config 檔案或重新啟動服務。 這樣可讓發出追蹤事件的應用程式維持不變。  
@@ -40,5 +40,5 @@ ms.locfileid: "43529515"
 |`ServiceHost`|由服務主機所發出的事件。|  
 |`WCFMessageLogging`|WCF 訊息記錄事件。|  
   
-## <a name="see-also"></a>另請參閱  
- [WCF 服務和 Windows 的事件追蹤](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+## <a name="see-also"></a>另請參閱
+- [WCF 服務和 Windows 的事件追蹤](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

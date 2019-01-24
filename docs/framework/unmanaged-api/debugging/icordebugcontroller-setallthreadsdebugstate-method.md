@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ee396c512dca2bea0a7a9737d5515defce4b2b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a8d14deae1923e2904818fc01ffa3665fdf5ea6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710569"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a>ICorDebugController::SetAllThreadsDebugState 方法
-設定偵錯狀態的所有 managed 執行緒處理序中。  
+設定程序中的所有 managed 執行緒的偵錯狀態。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,19 +41,19 @@ HRESULT SetAllThreadsDebugState (
  [in]指定偵錯執行緒的狀態 」 CorDebugThreadState 」 列舉值。  
   
  `pExceptThisThread`  
- [in]表示執行緒豁免的偵錯狀態設定 」 ICorDebugThread 」 物件的指標。 如果這個值是 null，就會不豁免任何執行緒。  
+ [in]表示執行緒偵錯的 [狀態] 設定要免除"ICorDebugThread 」 物件的指標。 如果此值是 null，為免不套用的任何執行緒。  
   
 ## <a name="remarks"></a>備註  
- `SetAllThreadsDebugState`方法可能會影響執行緒不會顯示透過[EnumerateThreads 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)，因此執行緒被暫止與`SetAllThreadsDebugState`方法必須使用繼續`SetAllThreadsDebugState`方法。  
+ `SetAllThreadsDebugState`方法可能會影響執行緒不會顯示透過[EnumerateThreads 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)，因此已暫止的執行緒`SetAllThreadsDebugState`方法都要繼續使用`SetAllThreadsDebugState`方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- 
+## <a name="see-also"></a>另請參閱
+

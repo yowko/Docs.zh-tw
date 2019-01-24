@@ -8,32 +8,32 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: a5e9161132ba6d571daa30ce82e1bfb1dd2b064f
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 062d6276ab91705a4554da2afa8459a26453906f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703610"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
 指定一或多個宣告的程式設計項目有沒有存取限制。  
   
 ## <a name="remarks"></a>備註  
- 如果您要發佈的元件或一組元件，例如類別程式庫，您通常會想要與您的組件相互操作的任何程式碼可存取的程式設計項目。 若要授與這類項目上的無限制的存取，您可以宣告它與`Public`。  
+ 如果您要發行的元件或一組元件，例如類別程式庫，您通常會想要存取您的組件與相互操作的任何程式碼的程式設計項目。 若要授與這類項目上的無限制的存取，您可以將它與宣告`Public`。  
   
- 公用存取您不需要限制存取時的一般程式設計項目層級。 請注意，元素的存取層級宣告介面、 模組、 類別或結構中的預設值為`Public`如果您不要否則宣告它。  
+ 當您不需要限制其存取權時，公用存取是正常的層級的程式設計項目。 請注意，元素的存取層級宣告的介面、 模組、 類別或結構中的預設值為`Public`如果您不要否則宣告它。  
   
 ## <a name="rules"></a>規則  
   
--   **宣告內容。** 您可以使用`Public`只能在模組、 介面或命名空間層級。 這表示宣告內容`Public`項目必須是原始程式檔、 命名空間、 介面、 模組、 類別或結構，且不能在程序。  
+-   **宣告內容。** 您可以使用`Public`只能在模組、 介面或命名空間層級。 這表示的宣告內容`Public`項目必須是原始程式檔、 命名空間、 介面、 模組、 類別或結構，而且不能是程序。  
   
 ## <a name="behavior"></a>行為  
   
 -   **存取層級。** 模組、 類別或結構可以存取的所有程式碼可以存取其`Public`項目。  
   
--   **預設存取權。** 內部程序預設值為公用存取，因此您的本機變數無法在其上使用任何存取修飾詞。  
+-   **預設存取權。** 本機變數內程序預設值為公用存取，因此您無法在其上使用任何存取修飾詞。  
   
--   **存取修飾詞。** 指定存取層級的關鍵字稱為*存取修飾詞*。 如需存取修飾詞的比較，請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+-   **存取修飾詞。** 指定存取層級的關鍵字稱為*存取修飾詞*。 如需存取修飾詞的比較，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `Public` 修飾詞可用於以下內容：  
   
@@ -65,13 +65,13 @@ ms.locfileid: "34235914"
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另請參閱  
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
- [受保護的私用](private-protected.md)   
- [Protected 的 Friend](protected-friend.md)   
- [在 Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>另請參閱
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private Protected](private-protected.md)
+- [Protected Friend](protected-friend.md)
+- [在 Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

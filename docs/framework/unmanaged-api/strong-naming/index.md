@@ -2,18 +2,12 @@
 title: 強式命名 (Unmanaged API 參考)
 ms.date: 03/30/2017
 helpviewer_keywords:
-- strong naming [.NET Framework], using the unmanaged API
-- native API reference [.NET Framework], strong naming
-- unmanaged API reference [.NET Framework], strong naming
+  - 'strong naming [.NET Framework], using the unmanaged API'
+  - 'native API reference [.NET Framework], strong naming'
+  - 'unmanaged API reference [.NET Framework], strong naming'
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5eb67e9b9f8f972075a98415de63d50585974823
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193951"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>強式命名 (Unmanaged API 參考)
 強式命名 API 可讓用戶端管理組件的強式命名簽署。  
@@ -111,6 +105,6 @@ ms.locfileid: "50193951"
  [PublicKeyBlob 結構](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  代表公開/私密金鑰組的公開金鑰 (二進位格式)。  
   
-## <a name="see-also"></a>請參閱  
- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
- [Unmanaged API 參考](../../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Unmanaged API 參考](../../../../docs/framework/unmanaged-api/index.md)
