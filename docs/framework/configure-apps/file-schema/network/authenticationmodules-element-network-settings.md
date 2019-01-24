@@ -8,55 +8,55 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 074f2f0cd2c3ac6c6287db08b22ead07afa58fc5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d143f91d31951f218631519a3182f5de6c4eca60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532110"
 ---
-# <a name="ltauthenticationmodulesgt-element-network-settings"></a><span data-ttu-id="f7397-102">&lt;authenticationModules&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="f7397-102">&lt;authenticationModules&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="f7397-103">指定用來驗證網路要求的模組。</span><span class="sxs-lookup"><span data-stu-id="f7397-103">Specifies modules used to authenticate network requests.</span></span>  
+# <a name="ltauthenticationmodulesgt-element-network-settings"></a><span data-ttu-id="082a8-102">&lt;authenticationModules&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="082a8-102">&lt;authenticationModules&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="082a8-103">指定用來驗證網路要求的模組。</span><span class="sxs-lookup"><span data-stu-id="082a8-103">Specifies modules used to authenticate network requests.</span></span>  
   
- <span data-ttu-id="f7397-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f7397-104">\<configuration></span></span>  
-<span data-ttu-id="f7397-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="f7397-105">\<system.net></span></span>  
-<span data-ttu-id="f7397-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="f7397-106">\<authenticationModules></span></span>  
+ <span data-ttu-id="082a8-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="082a8-104">\<configuration></span></span>  
+<span data-ttu-id="082a8-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="082a8-105">\<system.net></span></span>  
+<span data-ttu-id="082a8-106">\<authenticationModules></span><span class="sxs-lookup"><span data-stu-id="082a8-106">\<authenticationModules></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7397-107">語法</span><span class="sxs-lookup"><span data-stu-id="f7397-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="082a8-107">語法</span><span class="sxs-lookup"><span data-stu-id="082a8-107">Syntax</span></span>  
   
 ```xml  
 <authenticationModules>   
 </authenticationModules>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f7397-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="f7397-108">Attributes and Elements</span></span>  
- <span data-ttu-id="f7397-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="f7397-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="082a8-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="082a8-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="082a8-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="082a8-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f7397-110">屬性</span><span class="sxs-lookup"><span data-stu-id="f7397-110">Attributes</span></span>  
- <span data-ttu-id="f7397-111">無。</span><span class="sxs-lookup"><span data-stu-id="f7397-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="082a8-110">屬性</span><span class="sxs-lookup"><span data-stu-id="082a8-110">Attributes</span></span>  
+ <span data-ttu-id="082a8-111">無。</span><span class="sxs-lookup"><span data-stu-id="082a8-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="f7397-112">子元素</span><span class="sxs-lookup"><span data-stu-id="f7397-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="082a8-112">子元素</span><span class="sxs-lookup"><span data-stu-id="082a8-112">Child Elements</span></span>  
   
-|<span data-ttu-id="f7397-113">**目**</span><span class="sxs-lookup"><span data-stu-id="f7397-113">**Element**</span></span>|<span data-ttu-id="f7397-114">**描述**</span><span class="sxs-lookup"><span data-stu-id="f7397-114">**Description**</span></span>|  
+|<span data-ttu-id="082a8-113">**目**</span><span class="sxs-lookup"><span data-stu-id="082a8-113">**Element**</span></span>|<span data-ttu-id="082a8-114">**描述**</span><span class="sxs-lookup"><span data-stu-id="082a8-114">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="f7397-115">add</span><span class="sxs-lookup"><span data-stu-id="f7397-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="f7397-116">將應用程式中的驗證模組。</span><span class="sxs-lookup"><span data-stu-id="f7397-116">Adds an authentication module to the application.</span></span>|  
-|[<span data-ttu-id="f7397-117">clear</span><span class="sxs-lookup"><span data-stu-id="f7397-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="f7397-118">清除所有的驗證模組，從應用程式。</span><span class="sxs-lookup"><span data-stu-id="f7397-118">Clears all authentication modules from the application.</span></span>|  
-|[<span data-ttu-id="f7397-119">remove</span><span class="sxs-lookup"><span data-stu-id="f7397-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="f7397-120">移除應用程式中的驗證模組。</span><span class="sxs-lookup"><span data-stu-id="f7397-120">Removes an authentication module from the application.</span></span>|  
+|[<span data-ttu-id="082a8-115">add</span><span class="sxs-lookup"><span data-stu-id="082a8-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="082a8-116">將應用程式中的驗證模組。</span><span class="sxs-lookup"><span data-stu-id="082a8-116">Adds an authentication module to the application.</span></span>|  
+|[<span data-ttu-id="082a8-117">clear</span><span class="sxs-lookup"><span data-stu-id="082a8-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="082a8-118">清除所有的驗證模組，從應用程式。</span><span class="sxs-lookup"><span data-stu-id="082a8-118">Clears all authentication modules from the application.</span></span>|  
+|[<span data-ttu-id="082a8-119">remove</span><span class="sxs-lookup"><span data-stu-id="082a8-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="082a8-120">移除應用程式中的驗證模組。</span><span class="sxs-lookup"><span data-stu-id="082a8-120">Removes an authentication module from the application.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="f7397-121">父項目</span><span class="sxs-lookup"><span data-stu-id="f7397-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="082a8-121">父項目</span><span class="sxs-lookup"><span data-stu-id="082a8-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="f7397-122">**目**</span><span class="sxs-lookup"><span data-stu-id="f7397-122">**Element**</span></span>|<span data-ttu-id="f7397-123">**描述**</span><span class="sxs-lookup"><span data-stu-id="f7397-123">**Description**</span></span>|  
+|<span data-ttu-id="082a8-122">**目**</span><span class="sxs-lookup"><span data-stu-id="082a8-122">**Element**</span></span>|<span data-ttu-id="082a8-123">**描述**</span><span class="sxs-lookup"><span data-stu-id="082a8-123">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="f7397-124">system.net</span><span class="sxs-lookup"><span data-stu-id="f7397-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="f7397-125">包含會指定 .NET Framework 如何連接至網路的設定。</span><span class="sxs-lookup"><span data-stu-id="f7397-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="082a8-124">system.net</span><span class="sxs-lookup"><span data-stu-id="082a8-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="082a8-125">包含會指定 .NET Framework 如何連接至網路的設定。</span><span class="sxs-lookup"><span data-stu-id="082a8-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f7397-126">備註</span><span class="sxs-lookup"><span data-stu-id="f7397-126">Remarks</span></span>  
- <span data-ttu-id="f7397-127">`authenticationModule`項目會指定進行驗證程序與伺服器的驗證模組。</span><span class="sxs-lookup"><span data-stu-id="f7397-127">The `authenticationModule` element specifies the authentication modules that conduct the authentication process with a server.</span></span> <span data-ttu-id="f7397-128">驗證模組必須實作<xref:System.Net.IAuthenticationModule>介面。</span><span class="sxs-lookup"><span data-stu-id="f7397-128">An authentication module must implement the <xref:System.Net.IAuthenticationModule> interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="082a8-126">備註</span><span class="sxs-lookup"><span data-stu-id="082a8-126">Remarks</span></span>  
+ <span data-ttu-id="082a8-127">`authenticationModule`項目會指定進行驗證程序與伺服器的驗證模組。</span><span class="sxs-lookup"><span data-stu-id="082a8-127">The `authenticationModule` element specifies the authentication modules that conduct the authentication process with a server.</span></span> <span data-ttu-id="082a8-128">驗證模組必須實作<xref:System.Net.IAuthenticationModule>介面。</span><span class="sxs-lookup"><span data-stu-id="082a8-128">An authentication module must implement the <xref:System.Net.IAuthenticationModule> interface.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="f7397-129">組態檔</span><span class="sxs-lookup"><span data-stu-id="f7397-129">Configuration Files</span></span>  
- <span data-ttu-id="f7397-130">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="f7397-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="082a8-129">組態檔</span><span class="sxs-lookup"><span data-stu-id="082a8-129">Configuration Files</span></span>  
+ <span data-ttu-id="082a8-130">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="082a8-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f7397-131">範例</span><span class="sxs-lookup"><span data-stu-id="f7397-131">Example</span></span>  
- <span data-ttu-id="f7397-132">下列範例會啟用驗證模組。</span><span class="sxs-lookup"><span data-stu-id="f7397-132">The following example enables an authentication module.</span></span> <span data-ttu-id="f7397-133">您應該取得版本和 PublicKeyToken 的值取代為正確的值，指定模組。</span><span class="sxs-lookup"><span data-stu-id="f7397-133">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
+## <a name="example"></a><span data-ttu-id="082a8-131">範例</span><span class="sxs-lookup"><span data-stu-id="082a8-131">Example</span></span>  
+ <span data-ttu-id="082a8-132">下列範例會啟用驗證模組。</span><span class="sxs-lookup"><span data-stu-id="082a8-132">The following example enables an authentication module.</span></span> <span data-ttu-id="082a8-133">您應該取得版本和 PublicKeyToken 的值取代為正確的值，指定模組。</span><span class="sxs-lookup"><span data-stu-id="082a8-133">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -69,7 +69,7 @@ ms.locfileid: "50190810"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f7397-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f7397-134">See Also</span></span>  
-- <xref:System.Net.IAuthenticationModule>  
-- <xref:System.Net.AuthenticationManager>  
-- [<span data-ttu-id="f7397-135">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="f7397-135">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="082a8-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="082a8-134">See also</span></span>
+- <xref:System.Net.IAuthenticationModule>
+- <xref:System.Net.AuthenticationManager>
+- [<span data-ttu-id="082a8-135">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="082a8-135">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
