@@ -2,18 +2,18 @@
 title: '&lt;net.pipe&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 8a525f0684902841a2be75823932935e7533ba8b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7997894bfad8d5bf874a7f52d2cade7526375b13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715292"
 ---
 # <a name="ltnetpipegt"></a>&lt;net.pipe&gt;
 指定 Named Pipe Activation Service 的組態設定，該服務會管理具名管道連線的存留期，並且會處理透過具名管道送達的啟用要求。  
   
  \<system.serviceModel.activation>  
-\<net.pipe >  
+\<net.pipe>  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,5 +66,5 @@ ms.locfileid: "54151146"
 |-------------|-----------------|  
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|包含 SMSvcHost.exe 接聽程式處理序的組態設定。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Activation.Configuration.NetPipeSection>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Activation.Configuration.NetPipeSection>

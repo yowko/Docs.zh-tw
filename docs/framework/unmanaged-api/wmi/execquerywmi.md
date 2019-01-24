@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc22edf51cbd726b69dff3da2f0540b2c3864f2e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6cd8992fc37c570b5ea20f8751bef729311bfb7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718191"
 ---
 # <a name="execquerywmi-function"></a>ExecQueryWmi 函式
 執行查詢以擷取物件。  
@@ -52,7 +52,7 @@ HRESULT ExecQueryWmi (
 [in]具有 Windows 管理所支援的有效的查詢語言的字串。 它必須是 < WQL >，WMI 查詢語言的縮寫字。
 
 `strQuery`  
-[in]查詢的文字。 此參數不得為`null`。
+[in]查詢的文字。 這個參數不可以是 `null`。
 
 `lFlags`   
 [in]旗標的組合會影響此函式的行為。 下列的值會定義於*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼： 
@@ -107,7 +107,7 @@ HRESULT ExecQueryWmi (
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI 是可能已停止和重新啟動。 呼叫[ConnectServerWmi](connectserverwmi.md)一次。 |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 目前的處理序與 WMI 的遠端程序呼叫 (RPC) 連結失敗。 |
-| `WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | 查詢指定了不存在的類別。 |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | 查詢指定了不存在的類別。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
 ## <a name="remarks"></a>備註
@@ -127,5 +127,5 @@ HRESULT ExecQueryWmi (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

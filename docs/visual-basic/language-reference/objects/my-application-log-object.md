@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
-ms.openlocfilehash: 9a7bf4d26129e488226a562e1fe25149abc1dbe1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 62b072058951fd6b4f85e93407d699c3346ff5f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699128"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log 物件
 提供屬性和方法，以將事件和例外狀況資訊寫入至應用程式的記錄檔接聽程式。  
@@ -29,5 +29,5 @@ ms.locfileid: "43857516"
   
  **組件︰** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [My.Application 物件](../../../visual-basic/language-reference/objects/my-application-object.md)
+## <a name="see-also"></a>另請參閱
+- [My.Application 物件](../../../visual-basic/language-reference/objects/my-application-object.md)

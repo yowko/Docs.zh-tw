@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55251a3adfa67c1dac3b6952a37217e3eeb4c04a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5095dc04b118e782b00bb385427ad23a2786343c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740160"
 ---
 # <a name="icordebugthread4getblockingobjects-method"></a>ICorDebugThread4::GetBlockingObjects 方法
 提供的已排序的列舉[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構提供執行緒封鎖資訊。  
@@ -36,29 +36,29 @@ HRESULT GetBlockingObjects (
   
 #### <a name="parameters"></a>參數  
  `ppBlockingObjectEnum`  
- [out]指標的已排序列舉[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構。  
+ [out]已排序列舉型別指標[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構。  
   
 ## <a name="remarks"></a>備註  
- 傳回的列舉中的第一個項目會對應至第一個封鎖執行緒的結構。 第二個元素會對應到發生封鎖的第一，等等時執行的非同步程序呼叫 (APC) 時封鎖項目。  
+ 傳回的列舉型別中的第一個元素會對應至正在封鎖執行緒的第一個結構。 第二個元素對應至 封鎖第一個子集，等等時執行的非同步程序呼叫 (APC) 時所發生的封鎖項目。  
   
- 列舉型別無效，只會針對目前已同步處理狀態的持續時間。  
+ 列舉型別是有效的只會針對目前的同步處理狀態的持續時間。  
   
  偵錯項目處於已同步處理狀態時，必須呼叫這個方法。  
   
- 如果`ppBlockingObjectEnum`不是有效的指標，結果會是未定義。  
+ 如果`ppBlockingObjectEnum`不是有效的指標，結果為未定義。  
   
- 如果執行緒被封鎖，而且無法判斷此錯誤，方法會傳回 HRESULT，表示失敗。否則，它會傳回 S_OK。  
+ 如果執行緒遭到封鎖，無法判斷此錯誤，則方法會傳回 HRESULT，表示失敗;否則，它會傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugThread4 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugThread4 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -16,11 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee808ba403a513b897134420b45ebe8cd3537571
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9ed3cdac726fbdbf9ee2b33f42565d8594bc36e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669675"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation 列舉
 包含代表本機參考處理方式的旗標值。  
@@ -40,16 +41,16 @@ typedef enum CorLocalRefPreservation
   
 |成員|描述|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|保留本機參考。|  
-|`MDPreserveLocalTypeRef`|保留本機類型參考。|  
+|`MDPreserveLocalRefsNone`|保留任何本機參考。|  
+|`MDPreserveLocalTypeRef`|保留本機的型別參考。|  
 |`MDPreserveLocalMemberRef`|保留本機成員的參考。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

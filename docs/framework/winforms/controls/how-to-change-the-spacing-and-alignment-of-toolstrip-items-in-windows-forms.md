@@ -1,5 +1,5 @@
 ---
-title: 如何：變更 Windows Form 中 ToolStrip 項目的間距和對齊方式
+title: HOW TO：變更的間距和對齊 Windows Forms 中 ToolStrip 項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 7951a545fd8cbd0ae30907922551216161171a8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c9c60a3bfd78b7111b9cdff6a791d70c8e53c82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685059"
 ---
-# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>如何：變更 Windows Form 中 ToolStrip 項目的間距和對齊方式
-<xref:System.Windows.Forms.ToolStrip>完全支援控制項的版面配置功能，例如調整大小、 間距<xref:System.Windows.Forms.ToolStripItem>上的控制項，相對於彼此，控制項的排列方式<xref:System.Windows.Forms.ToolStrip>，相對於控制項的間距和<xref:System.Windows.Forms.ToolStrip>。  
+# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>HOW TO：變更的間距和對齊 Windows Forms 中 ToolStrip 項目
+<xref:System.Windows.Forms.ToolStrip>完全支援控制項的版面配置功能，例如調整大小、 間距<xref:System.Windows.Forms.ToolStripItem>彼此相對，控制項的排列方式的控制項<xref:System.Windows.Forms.ToolStrip>，以及相對於控制項的間距<xref:System.Windows.Forms.ToolStrip>。  
   
- 因為預設值的<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>屬性是`true`，控制項自動調整大小除非您將設定<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>屬性`false`。  
+ 因為預設值<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>屬性是`true`，除非您設定控制項的自動大小<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>屬性設`false`。  
   
-### <a name="to-manually-size-a-toolstripitem"></a>若要手動調整大小 ToolStripItem  
+### <a name="to-manually-size-a-toolstripitem"></a>若要手動調整大小 prvku ToolStripItem  
   
-1.  設定<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>屬性`false`相關聯的控制項。  
+1.  設定<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>屬性設`false`關聯的控制項。  
   
     ```vb  
     ToolStripButton1.AutoSize = False  
@@ -33,13 +33,13 @@ ms.locfileid: "33531260"
     toolStripButton1.AutoSize = false;  
     ```  
   
-2.  設定<xref:System.Windows.Forms.ToolStripItem.Size%2A>屬性要關聯的方式<xref:System.Windows.Forms.ToolStripItem>。  
+2.  設定<xref:System.Windows.Forms.ToolStripItem.Size%2A>屬性是您所要關聯<xref:System.Windows.Forms.ToolStripItem>。  
   
-### <a name="to-set-the-spacing-of-a-toolstripitem"></a>若要設定 ToolStripItem 的間距  
+### <a name="to-set-the-spacing-of-a-toolstripitem"></a>若要設定的間距 prvku ToolStripItem  
   
-1.  插入所需的值，以像素<xref:System.Windows.Forms.ToolStripItem.Margin%2A>針對關聯控制項的屬性。  
+1.  插入所需的值，單位為像素<xref:System.Windows.Forms.ToolStripItem.Margin%2A>關聯控制項的屬性。  
   
-     值<xref:System.Windows.Forms.ToolStripItem.Margin%2A>屬性指定的項目和相鄰的項目之間的間距，依此順序： 左框線、 頂端、 右側和底部。  
+     值<xref:System.Windows.Forms.ToolStripItem.Margin%2A>屬性指定的項目和相鄰項目之間的間距，順序如下：左側、 頂端、 右側，與下方。  
   
     ```vb  
     ToolStripTextBox1.Margin = New System.Windows.Forms.Padding _  
@@ -51,9 +51,9 @@ ms.locfileid: "33531260"
         (3, 0, 3, 0);  
     ```  
   
-### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a>若要對齊右邊的 ToolStrip 的 ToolStripItem  
+### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a>若要靠右對齊的 ToolStrip prvku ToolStripItem  
   
-1.  設定<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>屬性<xref:System.Windows.Forms.ToolStripItemAlignment.Right>相關聯的控制項。 根據預設，<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>設<xref:System.Windows.Forms.ToolStripItemAlignment.Left>，這會將控制項的左半部<xref:System.Windows.Forms.ToolStrip>。  
+1.  設定<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>屬性設<xref:System.Windows.Forms.ToolStripItemAlignment.Right>關聯的控制項。 根據預設，<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>設定為<xref:System.Windows.Forms.ToolStripItemAlignment.Left>，以配合控制項的左邊<xref:System.Windows.Forms.ToolStrip>。  
   
     ```vb  
     ToolStripSplitButton1.Alignment = _  
@@ -65,7 +65,7 @@ ms.locfileid: "33531260"
         System.Windows.Forms.ToolStripItemAlignment.Right;  
     ```  
   
-### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>若要排列 ToolStrip 項目在 ToolStrip 上  
+### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>若要排列 ToolStrip 項目，在 ToolStrip 上  
   
 -   設定<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>屬性設為值的<xref:System.Windows.Forms.ToolStripLayoutStyle>您想要的。  
   
@@ -79,14 +79,14 @@ ms.locfileid: "33531260"
         System.Windows.Forms.ToolStripLayoutStyle.Flow;  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.Control.Layout>  
- <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>  
- <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A>  
- <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>  
- <xref:System.Windows.Forms.ToolStripItem.Placement%2A>  
- <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>  
- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [ToolStrip 技術摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.Control.Layout>
+- <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>
+- <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A>
+- <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>
+- <xref:System.Windows.Forms.ToolStripItem.Placement%2A>
+- <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
+- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+- [ToolStrip 技術摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

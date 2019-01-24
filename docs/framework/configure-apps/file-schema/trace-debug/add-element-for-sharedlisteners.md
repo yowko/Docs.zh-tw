@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9e0a23411f4bc37a1e09460113d15f4861e0a190
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b8de4fd8a130f93b2ed3e14701c442a65c9ffcd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712466"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;新增&gt;項目&lt;sharedListeners&gt;
 將接聽項新增至 `sharedListeners` 集合。 `sharedListeners` 是的接聽程式集合的任何[\<來源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或是[\<追蹤 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)可以參考。  根據預設，在 接聽程式`sharedListeners`集合不會放在`Listeners`集合。 它們必須依名稱加入[\<來源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或是[\<追蹤 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。 不可能取得接聽程式`sharedListeners`在執行階段程式碼中的集合。  
   
  \<configuration>  
-&nbsp;&nbsp;\<system.diagnostics >  
+&nbsp;&nbsp;\<system.diagnostics>  
 &nbsp;&nbsp;&nbsp;&nbsp;\<sharedListeners > 項目  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<新增 >  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<add>  
   
 ## <a name="syntax"></a>語法  
   
@@ -110,8 +110,8 @@ ms.locfileid: "53151157"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [追蹤接聽項](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [追蹤接聽項](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

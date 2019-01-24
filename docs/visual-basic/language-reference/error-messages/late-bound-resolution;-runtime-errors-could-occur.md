@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
-ms.openlocfilehash: af027b7752fdf13f1540010a8ddb681182c1b23c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9caf02907e4b6de4c2bd8de778d4ad7a9320a82b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588775"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690575"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>晚期繫結程序解析; 可能發生執行階段錯誤
-物件變數指派給變數宣告為[物件資料類型](../../../visual-basic/language-reference/data-types/object-data-type.md)。  
+物件會指派給宣告為變數[Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)。  
   
- 當您將變數宣告為`Object`，編譯器必須執行*晚期繫結*，因而導致執行階段的額外作業。 它也可能會讓您的應用程式發生執行階段錯誤。 例如，如果您指派<xref:System.Windows.Forms.Form>至`Object`變數，然後嘗試存取<xref:System.Xml.XmlDocument.NameTable%2A?displayProperty=nameWithType>屬性，執行階段會擲回<xref:System.MemberAccessException>因為<xref:System.Windows.Forms.Form>類別並未公開`NameTable`屬性。  
+ 當您宣告一個變數`Object`，編譯器必須執行*晚期繫結*，這會導致額外的作業在執行階段。 它也可能會讓您的應用程式發生執行階段錯誤。 比方說，如果您指派<xref:System.Windows.Forms.Form>要`Object`變數，然後嘗試存取<xref:System.Xml.XmlDocument.NameTable%2A?displayProperty=nameWithType>屬性，執行階段會擲回<xref:System.MemberAccessException>因為<xref:System.Windows.Forms.Form>類別並未公開`NameTable`屬性。  
   
- 如果是特定類型的變數宣告，編譯器可以執行*早期繫結*在編譯時間。 如此可改善效能、 控制存取特定類型的成員以及您的程式碼更容易閱讀。  
+ 如果您宣告為特定類型的變數，編譯器可以執行*早期繫結*在編譯時期。 如此可改善效能、 控制存取權的特定型別、 成員和您的程式碼的可讀性。  
   
  根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的相關資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
@@ -27,8 +27,8 @@ ms.locfileid: "33588775"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   可能的話，宣告為特定類型的變數。  
+-   可能的話，將特定類型的變數宣告。  
   
-## <a name="see-also"></a>另請參閱  
- [早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [物件變數宣告](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+## <a name="see-also"></a>另請參閱
+- [早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [物件變數宣告](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)

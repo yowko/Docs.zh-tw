@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c10d5f363d454a64f9052315514e896f90f7081
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c6e9a10dabc778b91fc738d28e9f841538d7c3f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701803"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense 函式
 驗證 Authenticode XrML 授權的有效性。  
@@ -65,7 +65,7 @@ HRESULT CertVerifyAuthenticodeLicense (
 ## <a name="return-value"></a>傳回值  
  若成功，會傳回 `S_OK`。 反之則傳回錯誤碼。  
   
-## <a name="see-also"></a>另請參閱  
- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)  
- [GetHashFromHandle 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)  
- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>另請參閱
+- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [GetHashFromHandle 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

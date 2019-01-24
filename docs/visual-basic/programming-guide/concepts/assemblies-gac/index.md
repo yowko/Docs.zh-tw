@@ -2,17 +2,17 @@
 title: 組件和全域組件快取 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
-ms.openlocfilehash: 6d1692d6b62e1f1f3a8f979d3de242003f034ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413d3266546fa1d2b403509793c62e76bca5bc70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717255"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>組件和全域組件快取 (Visual Basic)
 組件會構成 .NET 型應用程式之部署、版本控制、重複使用、啟動範圍和安全性權限的基本單位。 組件會採用可執行檔 (.exe) 或動態連結程式庫 (.dll) 的格式，而且是 .NET Framework 的建置組塊。 它們為通用語言執行平台提供了感知型別實作所需的資訊。 您可以將組件視為型別和資源的集合，其構成功能的邏輯單元，而且是為了共同運作而建置。  
   
- 組件可以包含一或多個模組。 例如，大型專案的規劃方式可能是讓數個開發人員各自處理個別的模組，然後再全部組成單一組件。 如需模組的詳細資訊，請參閱[如何：建置多檔案組件](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md)主題。  
+ 組件可以包含一或多個模組。 例如，大型專案的規劃方式可能是讓數個開發人員各自處理個別的模組，然後再全部組成單一組件。 如需有關模組的詳細資訊，請參閱[How to:建置多檔案組件](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md)。  
   
  組件包含下列屬性：  
   
@@ -48,12 +48,12 @@ ms.locfileid: "33644247"
 > [!NOTE]
 >  若要在 Visual Studio 中建置組件，請在[建置] 功能表中選擇 [建置]。  
   
-## <a name="see-also"></a>另請參閱  
- [Common Language Runtime 中的組件](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Friend 組件 (Visual Basic)](friend-assemblies.md)  
- [如何： 共用組件與其他應用程式 (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
- [如何： 載入和卸載組件 (Visual Basic)](how-to-load-and-unload-assemblies.md)  
- [如何： 判斷檔案是否為組件 (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)  
- [如何： 建立和使用組件使用命令列 (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [逐步解說： 在 Visual Studio (Visual Basic) 中內嵌 Managed 組件的類型](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
- [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的型別資訊 (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+## <a name="see-also"></a>另請參閱
+- [Common Language Runtime 中的組件](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Friend 組件 (Visual Basic)](friend-assemblies.md)
+- [如何：共用組件與其他應用程式 (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)
+- [如何：載入和卸載組件 (Visual Basic)](how-to-load-and-unload-assemblies.md)
+- [如何：判斷檔案是否為組件 (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)
+- [如何：建立和使用組件使用命令列 (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [逐步解說：在 Visual Studio (Visual Basic) 中內嵌來自 Managed 組件的型別](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [逐步解說：在 Visual Studio (Visual Basic) 中內嵌來自 Microsoft Office 組件的類型資訊](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

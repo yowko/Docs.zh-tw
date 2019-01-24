@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 3a6d5b080c74fbd3f6ebca9882c1667951cfcb91
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4bec5422165a1795fd2442d95b2dd27ac1b4bc8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685954"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt;項目 （網路設定）
 定義 Proxy 伺服器。  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
-\<proxy >  
+\<defaultProxy>  
+\<proxy>  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,11 +42,11 @@ ms.locfileid: "50183669"
   
 |**屬性**|**描述**|  
 |-------------------|---------------------|  
-|`autoDetect`|指定是否自動偵測 proxy。 預設值是 `unspecified`。|  
-|`bypassonlocal`|指定是否略過本機資源的 proxy。 本機資源包含在本機伺服器 (`http://localhost`， `http://loopback`，或`http://127.0.0.1`) 和不含點的 URI (`http://webserver`)。 預設值是 `unspecified`。|  
+|`autoDetect`|指定是否自動偵測 proxy。 預設值為 `unspecified`。|  
+|`bypassonlocal`|指定是否略過本機資源的 proxy。 本機資源包含在本機伺服器 (`http://localhost`， `http://loopback`，或`http://127.0.0.1`) 和不含點的 URI (`http://webserver`)。 預設值為 `unspecified`。|  
 |`proxyaddress`|指定 proxy 使用的 URI。|  
 |`scriptLocation`|指定的組態指令碼的位置。 請勿使用`bypassonlocal`具有此屬性的屬性。 |  
-|`usesystemdefault`|指定是否要使用 Internet Explorer proxy 設定。 如果設定為`true`，後續的屬性會覆寫 Internet Explorer proxy 設定。 預設值是 `unspecified`。|  
+|`usesystemdefault`|指定是否要使用 Internet Explorer proxy 設定。 如果設定為`true`，後續的屬性會覆寫 Internet Explorer proxy 設定。 預設值為 `unspecified`。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -90,6 +90,6 @@ ms.locfileid: "50183669"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

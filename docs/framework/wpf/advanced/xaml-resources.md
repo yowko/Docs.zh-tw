@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5898d3236f58cd40c5e1ccd446b756b94e3fb113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718659"
 ---
 # <a name="xaml-resources"></a>XAML 資源
 資源是可在應用程式中不同位置重複使用的物件。 資源的範例包括筆刷和樣式。 本概觀說明如何使用中的資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 您也可以建立及存取資源，使用程式碼，或是交換使用程式碼之間和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 資源和程式碼](../../../../docs/framework/wpf/advanced/resources-and-code.md)。  
@@ -153,12 +153,12 @@ ms.locfileid: "53126393"
   
  <xref:System.Windows.DataTemplate> 也有隱含索引鍵。 隱含索引鍵<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>屬性值。 <xref:System.Windows.DataTemplate.DataType%2A> 也可以指定為型別名稱，而不是使用明確[{x: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md). 如需詳細資訊，請參閱 <<c0> [ 資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.ResourceDictionary>  
- [應用程式資源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [資源和程式碼](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [定義和參考資源](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [x:Type 標記延伸模組](../../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [DynamicResource 標記延伸](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.ResourceDictionary>
+- [應用程式資源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
+- [資源和程式碼](../../../../docs/framework/wpf/advanced/resources-and-code.md)
+- [定義和參考資源](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)
+- [應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)
+- [x:Type 標記延伸模組](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+- [DynamicResource 標記延伸](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)

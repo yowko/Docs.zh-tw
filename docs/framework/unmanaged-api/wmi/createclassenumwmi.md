@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b38e4753105932d2464bf78797a6979aeb0a0aee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2fc8b25465657ba41220d4a19e10aa06b0e30e86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733034"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi 函式
 傳回滿足所指定選取條件之所有類別的列舉程式。  
@@ -95,7 +95,7 @@ HRESULT CreateClassEnumWmi (
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 使用者沒有檢視一個或多個函式會傳回類別的權限。 |
 | `WBEM_E_FAILED` | 0x80041001 | 發生未指定的錯誤。 |
-| `WBEM_E_INVALID_CLASS` | 收到 0x80041010 | `strSuperClass` 不存在。 |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | `strSuperClass` 不存在。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI 是可能已停止和重新啟動。 呼叫[ConnectServerWmi](connectserverwmi.md)一次。 |
@@ -115,5 +115,5 @@ HRESULT CreateClassEnumWmi (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ 篩選查詢結果 (Visual Basic)
+title: HOW TO：使用 LINQ (Visual Basic) 來篩選查詢結果
 ms.date: 07/20/2015
 helpviewer_keywords:
 - filtering [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: f9854650b1f89a2330cfa81910187e3fb01c54b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d0260e53be421d36cdc8d351d30d7f8a4ac4fa84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519644"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684167"
 ---
-# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>如何：使用 LINQ 篩選查詢結果 (Visual Basic)
+# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>HOW TO：使用 LINQ (Visual Basic) 來篩選查詢結果
 Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並執行查詢。  
   
  下列範例示範如何建立新的應用程式會執行對 SQL Server 資料庫的查詢，並使用依特定值篩選結果`Where`子句。 如需詳細資訊，請參閱 < [Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)。  
@@ -77,8 +77,8 @@ Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並�
   
      [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查詢](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法 (O/R 設計工具)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>另請參閱
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [查詢](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext 方法 (O/R 設計工具)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

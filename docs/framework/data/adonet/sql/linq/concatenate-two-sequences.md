@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76767e7c-0607-4e1d-9ca2-a94f311f45eb
-ms.openlocfilehash: c0a6dde667c4f858d8177dc80a726619f463f3a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 831905ca5a712bcb80d5bab1aef61a81d2ade1b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734261"
 ---
 # <a name="concatenate-two-sequences"></a>串連兩個序列
 使用 <xref:System.Linq.Queryable.Concat%2A> 運算子可串連兩個序列。  
@@ -31,6 +31,6 @@ ms.locfileid: "33354049"
  [!code-csharp[DLinqQueryExamples#40](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#40)]
  [!code-vb[DLinqQueryExamples#40](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#40)]  
   
-## <a name="see-also"></a>另請參閱  
- [查詢範例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+## <a name="see-also"></a>另請參閱
+- [查詢範例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

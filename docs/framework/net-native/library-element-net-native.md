@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eabaf1dd99fce7cd4c45f80666534f904fcdfdf9
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: e6615ab30fdc0d0ab65f135e1df4e206f5548dc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34311971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743775"
 ---
 # <a name="ltlibrarygt-element-net-native"></a>&lt;Library&gt; 項目 (.NET Native)
 定義包含類型和類型成員的組件，該類型和類型成員的中繼資料會在執行階段用於反映。  
@@ -38,7 +38,7 @@ ms.locfileid: "34311971"
 |-----------|-----------------|  
 |*assembly_name*|組件的簡單名稱，不包含其副檔名。 這個屬性 (Attribute) 會對應至 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 屬性 (Property)。 例如，名為 Extensions.dll 之組件的名稱是 "Extensions"。 如需支援從組件條件式包含中繼資料之 *assembly_name* 的特殊格式，請參閱＜備註＞一節。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "34311971"
   
  `<Library>` 項目可當做容器來使用，以定義在執行階段需要中繼資料的程式項目；這個項目不會表示原則。 在編譯時期，編譯器工具只會在 `<Library>` 項目所指定的程式庫中，搜尋其子項目所識別的程式項目。 在其他情況下，編譯器工具會在所有程式庫 (包含 .NET Framework 核心程式庫) 中，搜尋 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 項目的子項目所識別的程式項目。  
   
- 您可以有條件地利用 `<Library>` 指示詞。 如果名稱`<Library>`項目的開始和結束都是星號 (\*)、`<Library>`指示詞在應用程式參考星號之間指定的組件時，才有作用。 例如，只有在應用程式參考 Utillities.dll 組件時，下列執行階段指示詞才適用。  
+ 您可以有條件地利用 `<Library>` 指示詞。 如果名稱`<Library>`項目開頭和結尾為星號 (\*)，則`<Library>`指示詞在應用程式參考星號之間指定的組件時，才有作用。 例如，只有在應用程式參考 Utillities.dll 組件時，下列執行階段指示詞才適用。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -68,8 +68,8 @@ ms.locfileid: "34311971"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [\<應用程式 > 項目](../../../docs/framework/net-native/application-element-net-native.md)  
- [\<指示詞 > 項目](../../../docs/framework/net-native/directives-element-net-native.md)  
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>另請參閱
+- [\<應用程式 > 項目](../../../docs/framework/net-native/application-element-net-native.md)
+- [\<指示詞 > 項目](../../../docs/framework/net-native/directives-element-net-native.md)
+- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)

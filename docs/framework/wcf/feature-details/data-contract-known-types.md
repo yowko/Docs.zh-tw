@@ -9,27 +9,28 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 00ae32ff394b1ce2acb38fb237527e934934b935
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d215d4b8adcf3e4892c00be1629f92b657496780
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705306"
 ---
 # <a name="data-contract-known-types"></a>資料合約已知型別
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 類別可讓您預先指定在還原序列化期間應該納入考量的型別。 如需實用範例，請參閱 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 範例。  
   
  一般來說，當您在用戶端與服務之間傳送參數並傳回值時，兩邊的端點都會共用要傳送之資料的所有資料合約。 但是，這種現象在下列情況中不會出現：  
   
--   傳送的資料合約是由預期的資料合約衍生而來。 如需詳細資訊，請參閱中的繼承的相關章節[資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md))。 在此情況下，所傳送資料的資料合約與接收的端點所預期的資料合約不會一樣。  
+-   傳送的資料合約是由預期的資料合約衍生而來。 如需詳細資訊，請參閱中的繼承的小節[資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md))。 在此情況下，所傳送資料的資料合約與接收的端點所預期的資料合約不會一樣。  
   
 -   要傳送的資訊宣告型別是一種介面，而不是類別、結構或列舉。 因此，您無法預先得知實際傳送了哪種可實作介面的型別，也因此接收的端點無法預先判斷已傳送資料的資料合約。  
   
--   要傳送的資訊宣告型別為 <xref:System.Object>。 由於每種型別都繼承自 <xref:System.Object>，而且您無法預先得知實際傳送的型別，因此接收的端點無法預先判斷已傳送資料的資料合約。 以下是第一個項目的特殊情況：每個資料合約都衍生自預設、且針對 <xref:System.Object>產生的空白資料合約。  
+-   要傳送的資訊宣告型別為 <xref:System.Object>。 由於每種型別都繼承自 <xref:System.Object>，而且您無法預先得知實際傳送的型別，因此接收的端點無法預先判斷已傳送資料的資料合約。 這是特殊案例的第一個項目：每個資料合約衍生自預設值，會針對產生的空白資料合約<xref:System.Object>。  
   
 -   有些型別 (包括 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別) 的成員隸屬於先前三大類別的其中一個類別。 例如， <xref:System.Collections.Hashtable> 會透過 <xref:System.Object> 將實際物件儲存到雜湊資料表中。 在序列化這些型別時，接收的一方無法預先判斷這些成員的資料合約。  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute 類別  
- 當資料抵達接收的端點時，WCF 執行階段會嘗試將資料還原序列化為 common language runtime (CLR) 型別的執行個體。 還原系列化作業所產生的型別，首先會經由檢查傳入訊息來判斷訊息內容所符合的資料合約來加以選定。 接著，還原序列化引擎會嘗試尋找可實作資料合約 (相容於訊息內容) 的 CLR 型別。 在此處理序中，我們會將還原序列化引擎所允許的候選型別集合稱為還原序列化程式的「已知型別」集合。  
+ 當資料抵達接收的結束點時，WCF 執行階段會嘗試將資料還原序列化的 common language runtime (CLR) 類型執行個體。 還原系列化作業所產生的型別，首先會經由檢查傳入訊息來判斷訊息內容所符合的資料合約來加以選定。 接著，還原序列化引擎會嘗試尋找可實作資料合約 (相容於訊息內容) 的 CLR 型別。 在此處理序中，我們會將還原序列化引擎所允許的候選型別集合稱為還原序列化程式的「已知型別」集合。  
   
  讓還原序列化引擎識別型別的一種方式，就是使用 <xref:System.Runtime.Serialization.KnownTypeAttribute>。 屬性無法套用至個別資料成員，只能套用至整個資料合約型別。 屬性會套用至可以是類別或結構的「 *外部型別* 」(Outer Type)。 在屬性最基本的用途當中，套用屬性會將型別指定為「已知型別」。 這樣一來，每當外部型別的物件或是透過其成員參照的任何物件進行還原序列化，已知型別就會變成已知型別集合的一部分。 超過一個以上的 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性可以套用至相同型別中。  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="known-types-using-open-generic-methods"></a>使用開放式泛型方法的已知型別  
  您可能需要將泛型型別新增為已知型別。 但是，開放式泛型型別無法當成 `KnownTypeAttribute` 屬性的參數來傳送。  
   
- 您可以透過替代機制來解決這個問題：撰寫可傳回型別清單，以便新增至已知型別集合的方法。 接著，因為某些限制因素，可將方法名稱指定為 `KnownTypeAttribute` 屬性的字串引數。  
+ 使用的替代機制，即可解決此問題：撰寫一個方法，傳回一份要加入至已知型別集合的型別。 接著，因為某些限制因素，可將方法名稱指定為 `KnownTypeAttribute` 屬性的字串引數。  
   
  方法必須存在於套用 `KnownTypeAttribute` 屬性的型別上、必須是靜態的、絕對不得接受任何參數，而且必須傳回可指派給 <xref:System.Collections.IEnumerable> 之 <xref:System.Type>的物件。  
   
@@ -130,7 +131,7 @@ ms.lasthandoff: 05/04/2018
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>新增已知型別的其他方式  
- 另外，您可以透過組態檔來新增已知型別。 當您並未控制進行適當還原序列化作業，例如當使用協力廠商架構型別程式庫與 Windows Communication Foundation (WCF) 需要已知型別的型別時，這非常有用。  
+ 另外，您可以透過組態檔來新增已知型別。 當您不能控制需要已知型別進行適當還原序列化，例如當使用協力廠商型別程式庫與 Windows Communication Foundation (WCF) 的型別時，這非常有用。  
   
  下列組態檔示範如何在組態檔中指定已知的型別。  
   
@@ -166,12 +167,12 @@ ms.lasthandoff: 05/04/2018
   
  在先前的組態檔中，會宣告稱為 `MyCompany.Library.Shape` 的資料合約型別，而讓 `MyCompany.Library.Circle` 做為已知的型別。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.Serialization.KnownTypeAttribute>  
- <xref:System.Collections.Hashtable>  
- <xref:System.Object>  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>  
- [已知類型](../../../../docs/framework/wcf/samples/known-types.md)  
- [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [設計服務合約](../../../../docs/framework/wcf/designing-service-contracts.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.Serialization.KnownTypeAttribute>
+- <xref:System.Collections.Hashtable>
+- <xref:System.Object>
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>
+- [已知類型](../../../../docs/framework/wcf/samples/known-types.md)
+- [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [設計服務合約](../../../../docs/framework/wcf/designing-service-contracts.md)

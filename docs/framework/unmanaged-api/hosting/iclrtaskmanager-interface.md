@@ -16,40 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14c2c9b70ac2e57983ea4b16772add6a1dff5ff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9012a38271afdef5e00e9e69eb9b2730834be2fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438063"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656150"
 ---
 # <a name="iclrtaskmanager-interface"></a>ICLRTaskManager 介面
-提供方法，可讓主應用程式明確要求的 common language runtime (CLR) 建立新的工作、 取得目前執行的工作，以及設定地理語言和文化特性的工作。  
+提供方法，可讓主應用程式明確要求，common language runtime (CLR) 建立新的工作、 取得目前正在執行的工作，並設定地理的語言和文化特性的工作。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[CreateTask 方法](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-createtask-method.md)|明確要求 CLR 建立的新[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)執行個體。|  
-|[GetCurrentTask 方法](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-getcurrenttask-method.md)|取得`ICLRTask`代表目前正在執行工作的執行個體。|  
-|[GetCurrentTaskType 方法](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-getcurrenttasktype-method.md)|取得目前執行之工作的類型。|  
-|[SetLocale 方法](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-setlocale-method.md)|通知主機已修改目前執行之工作的地區設定識別項的 CLR。|  
-|[SetUILocale 方法](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-setuilocale-method.md)|通知 common language runtime 主應用程式已修改目前執行的工作中的使用者介面的地區設定識別項。|  
+|[CreateTask 方法](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-createtask-method.md)|明確要求建立新的 CLR [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)執行個體。|  
+|[GetCurrentTask 方法](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-getcurrenttask-method.md)|取得`ICLRTask`代表目前正在執行之工作的執行個體。|  
+|[GetCurrentTaskType 方法](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-getcurrenttasktype-method.md)|取得目前正在執行之工作的類型。|  
+|[SetLocale 方法](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-setlocale-method.md)|通知 CLR 主機已經修改目前執行之工作的地區設定識別項。|  
+|[SetUILocale 方法](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-setuilocale-method.md)|通知 common language runtime 主應用程式已修改目前執行之工作的使用者介面的地區設定識別項。|  
   
 ## <a name="remarks"></a>備註  
- 裝載環境中執行每項工作有表示這兩種在主機端建立 (執行個體[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)) 和 CLR 端 (的執行個體[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md))。 主機或 CLR 就會起始工作，建立，但必須與以確保成功通訊，在主機與工作相關 CLR 之間對應的 CLR 端表示相關聯的主應用程式端表示。 必須建立和具現化 managed 程式碼可以在作業系統執行緒上執行之前的兩個物件。  
+ 正在裝載環境中執行每項工作會將表示這兩個對主機端 (執行個體[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)) 和 CLR 端 (執行個體[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md))。 主應用程式或 CLR 可以開始建立一項工作，但主應用程式端表示法必須與對應的 CLR 方表示法，以確保在主機與工作相關 CLR 之間的成功通訊相關聯。 必須建立兩個物件，並具現化 managed 程式碼可以在作業系統執行緒上執行之前。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

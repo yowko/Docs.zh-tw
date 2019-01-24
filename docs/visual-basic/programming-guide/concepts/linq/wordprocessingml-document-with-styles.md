@@ -1,12 +1,13 @@
 ---
-title: WordprocessingML 文件以及 Styles2
+title: 具有 Styles2 WordprocessingML 文件
 ms.date: 07/20/2015
 ms.assetid: a9136e4d-c368-4661-8049-7d45c679a236
-ms.openlocfilehash: 0f6ca610d67418582e3426bb911b26eb846070da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 685e32373f864b9e8cc04b0da5250bd96efd23c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729302"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>WordprocessingML 文件以及樣式
 更複雜的 WordprocessingML 文件擁有使用樣式格式化的段落。  
@@ -16,7 +17,7 @@ ms.lasthandoff: 05/04/2018
  存取封裝時，最好透過這些部分之間的關聯性 (而非使用任意路徑) 進行。 這個問題超出＜管理 WordprocessingML 文件中的內容＞教學課程的範圍，但隨附在此教學課程中的範例程式會示範正確的方法。  
   
 ## <a name="a-document-that-uses-styles"></a>使用樣式的文件  
- 中的 WordML 範例呈現[Shape of WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)主題是一個非常簡單。 下列文件較為複雜：該文件擁有使用樣式格式化的段落。 若要查看 Office Open XML 文件所組成的 XML 是執行最簡單的方式[範例的輸出 Office Open XML 文件組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)。  
+ 中的 WordML 範例呈現[Shape of WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)主題是一個非常簡單。 下列文件較為複雜：該文件擁有使用樣式格式化的段落。 若要查看組成 Office Open XML 文件的 XML 是執行最簡單的方式[範例的輸出 Office Open XML 文件組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)。  
   
  在下列文件中，第一個段落的樣式為 `Heading1`。 具有預設樣式的段落有好幾個。 同時，具有樣式 `Code` 的段落也有好幾個。 由於這個相對複雜度，這是利用 LINQ to XML 進行剖析更有趣的文件。  
   
@@ -136,5 +137,5 @@ ms.lasthandoff: 05/04/2018
 </w:document>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Office 的詳細資料中開啟 XML WordprocessingML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>另請參閱
+- [詳細資料的 Office Open XML WordprocessingML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

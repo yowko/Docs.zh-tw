@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ee3c3302d77bcc7b807c01ccb5bab172153ddda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ad192f753cd1977c9ca68e147d23375ce092b66f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708229"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences 方法
 識別那些根目錄透過直接成員欄位參考以及透過 `ConditionalWeakTable` 相依性來參考之物件的可轉移結束。  
@@ -41,7 +41,7 @@ HRESULT ConditionalWeakTableElementReferences(     [in]                     ULON
  [in] 物件 ID 陣列，針對相依性控制代碼配對中的主要項目，各包含一個 `ObjectID`。  
   
  `valueRefIds`  
- [in] 物件 ID 陣列，針對相依性控制代碼配對中的次要項目，各包含一個 `ObjectID`。 (`keyRefIds[i]`保留`valueRefIds[i]`運作。)  
+ [in] 物件 ID 陣列，針對相依性控制代碼配對中的次要項目，各包含一個 `ObjectID`。 (`keyRefIds[i]`會保留`valueRefIds[i]`保持運作。)  
   
  `rootIds`  
  [in] `GCHandleID` 值陣列，這些值會指向包含記憶體回收根目錄相關資訊的整數。  
@@ -73,14 +73,14 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 ```  
   
 ## <a name="remarks"></a>備註  
- 分析工具的[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]或更新版本的版本實作[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)介面，並記錄所指定的相依性`ConditionalWeakTableElementReferences`方法。 `ICorProfilerCallback5` 提供一組完整的即時所表示的物件之間的相依性`ConditionalWeakTable`項目。 這些相依性和成員欄位所指定的參考[icorprofilercallback:: Objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)方式讓 managed 分析工具產生的即時物件完整物件圖形。  
+ 分析工具[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]或更新版本的版本會實作[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)介面，並記錄所指定的相依性`ConditionalWeakTableElementReferences`方法。 `ICorProfilerCallback5` 提供一組完整的即時所代表的物件之間的相依性`ConditionalWeakTable`項目。 這些相依性和成員欄位所指定的參考[icorprofilercallback:: Objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)方法讓 managed 分析工具產生的作用中物件的完整物件圖形。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerCallback5 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerCallback5 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)

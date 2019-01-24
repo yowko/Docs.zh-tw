@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 6a4a9bda348ce4c0dfd1e41d4154cad88d4966a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701751"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 列舉
 包含值，表示 common language runtime (CLR) 的啟動行為。 根據預設，記憶體回收是非並行，而且只有基底類別程式庫載入定義域中性的區域。  
@@ -57,7 +57,7 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|指定應該使用並行記憶體回收。 如果呼叫端要求的伺服器組建和並行記憶體回收在單一處理器電腦上，工作站組建和非並行記憶體回收會改為執行。 **注意：** WOW64 執行的應用程式中不支援並行記憶體回收 x86 實作 Intel Itanium 架構 （先前稱為 IA-64） 的 64 位元系統上的模擬器。 如需在 64 位元 Windows 系統上使用 WOW64 的詳細資訊，請參閱[執行的 32 位元應用程式](/windows/desktop/WinProg64/running-32-bit-applications)。|  
+|`STARTUP_CONCURRENT_GC`|指定應該使用並行記憶體回收。 如果呼叫端要求的伺服器組建和並行記憶體回收在單一處理器電腦上，工作站組建和非並行記憶體回收會改為執行。 **注意：** 執行 WOW64 的應用程式中不支援並行記憶體回收 x86 實作 Intel Itanium 架構 （先前稱為 IA-64） 的 64 位元系統上的模擬器。 如需在 64 位元 Windows 系統上使用 WOW64 的詳細資訊，請參閱[執行的 32 位元應用程式](/windows/desktop/WinProg64/running-32-bit-applications)。|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|指定應該進行的載入器最佳化。|  
 |`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|指定不以定義域中性方式載入任何組件。|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|指定的所有組件以定義域中性方式載入。|  
@@ -83,5 +83,5 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

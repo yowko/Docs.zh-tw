@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f152ac48c2897259d07222fafd33d17d5287a870
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745375"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 架構
 下圖說明主要的層級的 Windows Communication Foundation (WCF) 架構。  
@@ -25,12 +25,12 @@ ms.locfileid: "33804218"
  原則和繫結會規定與服務進行通訊時的必要條件。  例如，繫結必須 (至少需要) 指定使用的傳輸 (例如，HTTP 或 TCP)，以及編碼方式。 原則包含在與服務通訊時必須符合的安全性需求和其他條件。  
   
 ### <a name="service-runtime"></a>服務執行階段  
- 服務執行階段層包含只會在服務之實際作業期間發生的行為，也就是服務的執行階段行為。 節流設定會控制要處理多少訊息，而隨著對服務的要求擴大到預設限制，這個數量可能會有所不同。 錯誤行為會指定在服務發生內部錯誤時所要發生的動作，例如，控制有哪些資訊要傳送到用戶端  (有太多資料會讓惡意使用者有機會發動攻擊)。中繼資料行為會管理採用什麼方式以及是否將中繼資料提供給外界。 執行個體 (Instance) 行為會指定可以執行服務之執行個體的數目 (例如，「單一」就是指定僅能使用一個執行個體來處理所有訊息)。 異動行為可使異動的作業在發生失敗時進行復原。 分派行為會控制如何處理訊息時，WCF 基礎結構。  
+ 服務執行階段層包含只會在服務之實際作業期間發生的行為，也就是服務的執行階段行為。 節流設定會控制要處理多少訊息，而隨著對服務的要求擴大到預設限制，這個數量可能會有所不同。 錯誤行為會指定在服務發生內部錯誤時所要發生的動作，例如，控制有哪些資訊要傳送到用戶端  (有太多資料會讓惡意使用者有機會發動攻擊)。中繼資料行為會管理採用什麼方式以及是否將中繼資料提供給外界。 執行個體 (Instance) 行為會指定可以執行服務之執行個體的數目 (例如，「單一」就是指定僅能使用一個執行個體來處理所有訊息)。 異動行為可使異動的作業在發生失敗時進行復原。 分派行為會控制由 WCF 基礎結構已處理的訊息。  
   
  擴充性可使執行階段處理序進行自訂。 例如，訊息檢查是檢查訊息之部分的功能，而啟用參數篩選功能時，便會根據作用於訊息標頭的篩選來發生預設動作。  
   
 ### <a name="messaging"></a>訊息  
- 在訊息層組成*通道*。 通道是指能以某種方式 (例如，藉由驗證訊息) 處理訊息的元件。 一組通道就是所謂*通道堆疊*。 通道會在訊息和訊息標頭上運作。 這點不同於服務執行階段層，其主要著重於關於處理訊息本文的執行。  
+ 訊息的層組成*通道*。 通道是指能以某種方式 (例如，藉由驗證訊息) 處理訊息的元件。 一組通道又稱為*通道堆疊*。 通道會在訊息和訊息標頭上運作。 這點不同於服務執行階段層，其主要著重於關於處理訊息本文的執行。  
   
  通道類型有兩種：傳輸通道和通訊協定通道。  
   
@@ -41,10 +41,10 @@ ms.locfileid: "33804218"
  訊息層說明資料的可能格式與交換模式。 WS-Security 是 WS-Security 規格的實作 (Implementation)，此規格會啟用訊息層的安全性。 WS-Reliable 訊息通道可保證訊息的傳遞。 編碼器會提供可以用來滿足訊息需要的各種編碼方式。 HTTP 通道會指定對訊息傳遞使用超文字傳輸協定 (Hypertext Transfer Protocol，HTTP)。 同樣地，TCP 通道會指定 TCP 通訊協定。 異動流程通道會管理異動的訊息模式。 具名管道通道會啟用處理序間通訊。 MSMQ 通道會啟用與 MSMQ 應用程式的互通。  
   
 ### <a name="hosting-and-activation"></a>裝載和啟動  
- 服務的最終形式就是程式。 就像其他的程式，服務必須在可執行檔中執行。 這稱為*自我裝載*服務。  
+ 服務的最終形式就是程式。 就像其他的程式，服務必須在可執行檔中執行。 這就所謂*自我裝載*服務。  
   
- 服務也可以是*裝載*，或是執行受外部代理程式，例如 IIS 或 Windows Activation Service (WAS) 的可執行檔中。 是可讓 WCF 應用程式執行的電腦上部署時，會自動啟動。 服務也可以透過手動方式來當做可執行檔 (.exe 檔) 執行。 服務也可以自動當做 Windows 服務執行。 COM + 元件也可以裝載為 WCF 服務。  
+ 服務也可以*裝載*，或在外部代理程式，例如 IIS 或 Windows Activation Service (WAS) 所管理的可執行檔中執行。 是已啟用 WCF 應用程式部署上執行的電腦時自動啟動。 服務也可以透過手動方式來當做可執行檔 (.exe 檔) 執行。 服務也可以自動當做 Windows 服務執行。 COM + 元件也可以裝載為 WCF 服務。  
   
-## <a name="see-also"></a>另請參閱  
- [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation 的基本概念](../../../docs/framework/wcf/fundamental-concepts.md)
+## <a name="see-also"></a>另請參閱
+- [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation 的基本概念](../../../docs/framework/wcf/fundamental-concepts.md)

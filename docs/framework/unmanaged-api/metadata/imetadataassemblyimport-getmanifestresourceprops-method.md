@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07237794ca45b16b1ae1ca95b1d62889f095350f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5bad338777db2097ed72ce327f42fde0f0db58e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693713"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps 方法
-取得與指定的中繼資料簽章的資訊清單資源的屬性集。  
+取得具有指定之中繼資料簽章的資訊清單資源的屬性集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,13 +43,13 @@ HRESULT GetManifestResourceProps (
   
 #### <a name="parameters"></a>參數  
  `mdmr`  
- [in]`mdManifestResource`語彙基元，代表要取得屬性的資源。  
+ [in]`mdManifestResource`語彙基元，表示要為其取得屬性的資源。  
   
  `szName`  
  [out]資源的名稱。  
   
  `cchName`  
- [in]大小，以寬字元的`szName`。  
+ [in]大小，以寬字元為單位的`szName`。  
   
  `pchName`  
  [out]中實際傳回的寬字元數目的指標`szName`。  
@@ -58,19 +58,19 @@ HRESULT GetManifestResourceProps (
  [out]指標`mdFile`語彙基元或`mdAssemblyRef`分別代表檔案或組件，包含資源的權杖。  
   
  `pdwOffset`  
- [out]指定的資源檔案開頭的位移值的指標。  
+ [out]指定的資源檔中的開頭的位移值的指標。  
   
  `pdwResourceFlags`  
- [out]旗標，敘述套用資源的中繼資料指標。 旗標值是一或多個組合[CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md)值。  
+ [out]指標，描述套用至資源的中繼資料的旗標。 旗標值是由一或多個組成[CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md)值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

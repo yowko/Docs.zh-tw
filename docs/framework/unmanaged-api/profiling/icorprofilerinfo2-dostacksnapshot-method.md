@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d107653d34689814ae97ca4012d0fd2e2c4190dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727270"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 方法
 引導指定的執行緒的堆疊上的 managed 的框架，並將資訊傳送到透過回呼程式碼剖析工具。  
@@ -73,7 +73,7 @@ HRESULT DoStackSnapshot(
   
  堆疊查核行程中的順序就是畫面格已推送至堆疊的方式相反︰ 上次分葉 （最後一個推入） 的畫面格第一次的主要 （第一個推入） 框架。  
   
- 如需如何進行程式設計以查核 managed 的堆疊的詳細資訊，請參閱[Profiler 中堆疊查核行程.NET Framework 2.0： 基礎與進階](https://go.microsoft.com/fwlink/?LinkId=73638)。  
+ 如需如何進行程式設計以查核 managed 的堆疊的詳細資訊，請參閱[Profiler 堆疊查核行程.NET Framework 2.0 中：基礎與進階](https://go.microsoft.com/fwlink/?LinkId=73638)。  
   
  堆疊查核行程可以是同步或非同步，如下列各節所述。  
   
@@ -102,12 +102,12 @@ HRESULT DoStackSnapshot(
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

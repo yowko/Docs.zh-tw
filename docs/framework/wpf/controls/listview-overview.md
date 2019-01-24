@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 42573304d6f3d6d145887fa7289f9b5ec019f521
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701543"
 ---
 # <a name="listview-overview"></a>ListView 概觀
 <xref:System.Windows.Controls.ListView>控制項提供的基礎結構，以顯示不同的版面配置或檢視表中的一組資料的項目。 例如，使用者可能會想要以表格顯示資料項目，還要排序其資料行。  
@@ -81,11 +81,11 @@ ms.locfileid: "53148908"
 ## <a name="creating-a-custom-view-mode"></a>建立自訂檢視模式  
  自訂檢視<xref:System.Windows.Controls.GridView>衍生自<xref:System.Windows.Controls.ViewBase>抽象類別，可提供工具，可顯示資料的項目，即表示<xref:System.Windows.Controls.ListViewItem>物件。    
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Controls.GridView>  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.ListViewItem>  
- <xref:System.Windows.Data.Binding>  
- [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
- [控制項](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Controls.GridView>
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListViewItem>
+- <xref:System.Windows.Data.Binding>
+- [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [控制項](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

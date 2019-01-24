@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04df65a29584f7e2de44389d815b915a541e38f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99b996cf848de968d71cc1d325d3bbda7bd5386f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715548"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 函式
 從指定的物件建立新的衍生類別物件。    
@@ -47,7 +47,7 @@ HRESULT SpawnDerivedClass (
 [in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
 
 `lFlags`  
-[in]保留。 這個參數必須是 0。
+[in] 保留。 這個參數必須是 0。
 
 `ppNewClass`  
 [out]接收新的類別定義物件的指標。 發生錯誤時，新的物件不是傳回，和`ppNewClass`左未經修改。 其值不能是`null`。
@@ -80,5 +80,5 @@ HRESULT SpawnDerivedClass (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

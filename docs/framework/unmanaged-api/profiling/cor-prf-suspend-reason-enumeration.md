@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2f4382c7fa85008de9e67ad21c467402bae4ac90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b40533553ccd7a3339a8a3ee0c8b47879efd38ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742457"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON 列舉
-指出執行階段已暫止的原因。  
+表示執行階段已暫止的原因。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,25 +45,25 @@ typedef enum {
 |成員|描述|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_SUSPEND_OTHER`|執行階段會暫停，未指定原因。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|執行階段會暫停服務記憶體回收要求。<br /><br /> 記憶體回收相關集合回呼之間發生[icorprofilercallback:: Runtimesuspendfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)和[icorprofilercallback:: Runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)回呼。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|執行階段會暫停，讓`AppDomain`可以關機。<br /><br /> 執行階段暫停時，執行階段會判定哪一個執行緒中`AppDomain`也就是正在關閉，並將它們設中止時即會回復。 有沒有`AppDomain`-擱置期間的特定回呼。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|執行階段會暫停，以便推銷程式碼進行。<br /><br /> 推銷程式碼展示僅當在 just-in-time (JIT) 編譯器在作用中與推銷程式碼啟用。 程式碼之間發生推銷碼回呼`ICorProfilerCallback::RuntimeSuspendFinished`和`ICorProfilerCallback::RuntimeResumeStarted`回呼。 **注意：** CLR JIT 不形函式在.NET Framework 2.0 版中，所以此值不會使用 2.0 中。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|執行階段會暫停，讓它可以關機。 它必須暫停所有執行緒完成作業。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|暫止執行階段同處理序偵錯。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|執行階段會暫停來準備記憶體回收。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|執行階段暫止記憶體回收集合要求。<br /><br /> 之間發生的記憶體回收相關集合回呼[icorprofilercallback:: Runtimesuspendfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)並[icorprofilercallback:: Runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)回呼。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|執行階段會暫停，讓`AppDomain`可以關機。<br /><br /> 執行階段暫停期間，執行階段會判斷哪一個執行緒都會在`AppDomain`也就是正在關閉，並將它們設定成在恢復時中止。 有沒有`AppDomain`-在這個暫止期間的特定回呼。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|執行階段會暫停，以便推銷程式碼進行。<br /><br /> 推銷程式碼都能彼此吻合僅當在 just-in-time (JIT) 編譯器在作用中與啟用推銷程式碼。 程式碼之間發生的推銷回呼`ICorProfilerCallback::RuntimeSuspendFinished`和`ICorProfilerCallback::RuntimeResumeStarted`回呼。 **注意：** 所以此值不用於 2.0 CLR JIT 不在.NET Framework 2.0 版中，講述函式。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|執行階段會暫停，讓它可以關閉。 它必須暫止所有執行緒完成作業。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|執行階段會暫停進行同處理序偵錯。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|執行階段會暫停以準備進行記憶體回收。|  
 |`COR_PRF_SUSPEND_FOR_REJIT`|執行階段會暫停進行 JIT 重新編譯。|  
   
 ## <a name="remarks"></a>備註  
- 允許在 unmanaged 程式碼中的所有執行階段執行緒繼續執行，直到嘗試重新進入執行階段，此時它們也會暫止之前執行階段會繼續執行。 這也適用於新的執行緒進入執行階段。 在執行階段內的所有執行緒會立即暫停，如果它們是在可中斷的程式碼，或是要求暫止時執行到可中斷的程式碼。  
+ 允許未受管理的程式碼中的所有執行階段執行緒繼續執行，直到嘗試重新進入執行階段，此時它們也會擱置直到執行階段繼續。 這也適用於新的執行緒進入執行階段。 在執行階段內的所有執行緒都在可中斷的程式碼，也就是如果立即暫止，或要求暫止執行到可中斷的程式碼。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

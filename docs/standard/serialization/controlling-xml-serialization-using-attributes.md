@@ -15,16 +15,16 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 28c7ebe1de3adb92e531597027e4b8bb7a63294c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 54660244c1b3cca8cb75539edbe23628b370afd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686162"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>使用屬性控制 XML 序列化
 
-屬性可用來控制物件的 XML 序列化或從相同的類別集建立其他的 XML 資料流。 如需建立替代 XML 資料流的詳細資料，請參閱[如何：指定 XML 資料流的替代項目名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。
+屬性可用來控制物件的 XML 序列化或從相同的類別集建立其他的 XML 資料流。 如需有關建立替代 XML 資料流的詳細資訊，請參閱[How to:指定 XML Stream 的替代項目名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。
 
 > [!NOTE]
 > 如果產生的 XML 必須符合第 5 節的 World Wide Web Consortium (W3C) 文件[簡易物件存取通訊協定 (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)，使用屬性中所列[屬性，控制編碼 SOAP序列化](attributes-that-control-encoded-soap-serialization.md)。
@@ -70,7 +70,7 @@ public class TaxRates {
 
 ## <a name="controlling-array-serialization"></a>控制陣列序列化
 
-<xref:System.Xml.Serialization.XmlArrayAttribute> 與 <xref:System.Xml.Serialization.XmlArrayItemAttribute> 屬性是針對陣列序列化控制而設計。 使用這些屬性，您可控制項目名稱、命名空間以及 XML 結構描述 (XSD) 資料型別 (如全球資訊網協會 [www.w3.org] 文件＜XML Schema Part 2: Datatypes＞中所定義)。 您也可以指定陣列能包含的類型。
+<xref:System.Xml.Serialization.XmlArrayAttribute> 與 <xref:System.Xml.Serialization.XmlArrayItemAttribute> 屬性是針對陣列序列化控制而設計。 使用這些屬性，您可以控制的項目名稱、 命名空間和 XML 結構描述 (XSD) 資料類型 (如全球資訊網協會 [www.w3.org] 文件中定義 「 XML 結構描述第 2 部分：資料型別 」）。 您也可以指定陣列能包含的類型。
 
 <xref:System.Xml.Serialization.XmlArrayAttribute> 將決定當陣列序列化時，封入 XML 項目的屬性。 例如，依預設，序列化以下的陣列將產生名為 `Employees` 的 XML 項目。 `Employees` 項目將包含一系列根據陣列類型 `Employee`命名的項目。
 
@@ -317,10 +317,10 @@ public class Group {
 
 ## <a name="see-also"></a>另請參閱
 
-- [可控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)  
-- [可控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)  
-- [XML 序列化簡介](introducing-xml-serialization.md)  
-- [XML 序列化範例](examples-of-xml-serialization.md)  
-- [如何：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-- [如何：序列化物件](how-to-serialize-an-object.md)  
-- [如何：還原序列化物件](how-to-deserialize-an-object.md)  
+- [可控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
+- [可控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)
+- [XML 序列化簡介](introducing-xml-serialization.md)
+- [XML 序列化範例](examples-of-xml-serialization.md)
+- [如何：指定 XML Stream 的替代項目名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [如何：將物件序列化](how-to-serialize-an-object.md)
+- [如何：還原序列化物件](how-to-deserialize-an-object.md)

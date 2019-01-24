@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693606"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 Windows Communication Foundation (WCF) 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將簡要說明 X.509 數位憑證功能及如何在 WCF 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 WCF 與憑證來完成一般工作的主題說明提供連結。  
@@ -24,7 +24,7 @@ ms.locfileid: "49453459"
  憑證必須由憑證授權單位發行，此單位通常是憑證的協力廠商簽發者。 在 Windows 網域中，會包含憑證授權單位以便用來對網域中的電腦發行憑證。  
   
 ## <a name="viewing-certificates"></a>檢視憑證  
- 使用憑證時，通常需要檢視並檢查其內容。 您可以透過 Microsoft Management Console (MMC) 嵌入式管理單元工具輕鬆達到這個目的。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理單元來檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+ 使用憑證時，通常需要檢視並檢查其內容。 您可以透過 Microsoft Management Console (MMC) 嵌入式管理單元工具輕鬆達到這個目的。 如需詳細資訊，請參閱[＜How to：使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
 ## <a name="certificate-stores"></a>憑證存放區  
  您可以在存放區中找到憑證。 兩個主要的存放區位置還可進一步細分為子存放區。 如果您是電腦的系統管理員，就可以使用 MMC 嵌入式管理單元工具來同時檢視兩個主要的存放區。 非系統管理員只能檢視目前使用者的存放區。  
@@ -52,12 +52,12 @@ ms.locfileid: "49453459"
 -   如果服務或用戶端是透過使用者帳戶執行的應用程式，則請使用 [目前使用者] 存放區。  
   
 ### <a name="accessing-stores"></a>存取存放區  
- 存放區會受到存取控制清單 (ACL) 的保護，就像電腦上的資料夾一樣。 當您建立由網際網路資訊服務 (IIS) 所裝載的服務時，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 處理序會透過 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帳戶來執行。 該帳戶必須能夠存取包含服務所使用之憑證的存放區。 每一個主要存放區都會以預設的存取清單加以保護，但是您可以修改此清單。 如果您建立個別的角色來存取存放區，則必須授予該角色存取權限。 若要了解如何使用 WinHttpCertConfig.exe 工具來修改存取清單，請參閱[如何：建立開發時要使用的暫時憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 如需將用戶端憑證搭配 IIS 一起使用的詳細資訊，請參閱[如何在 ASP.NET Web 應用程式中使用用戶端憑證呼叫 Web 服務進行驗證](https://go.microsoft.com/fwlink/?LinkId=88914)。  
+ 存放區會受到存取控制清單 (ACL) 的保護，就像電腦上的資料夾一樣。 當您建立由網際網路資訊服務 (IIS) 所裝載的服務時，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 處理序會透過 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帳戶來執行。 該帳戶必須能夠存取包含服務所使用之憑證的存放區。 每一個主要存放區都會以預設的存取清單加以保護，但是您可以修改此清單。 如果您建立個別的角色來存取存放區，則必須授予該角色存取權限。 若要了解如何修改存取清單中，使用 WinHttpCertConfig.exe 工具，請參閱[How to:用於建立暫時憑證，在開發期間](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 如需將用戶端憑證搭配 IIS 一起使用的詳細資訊，請參閱[如何在 ASP.NET Web 應用程式中使用用戶端憑證呼叫 Web 服務進行驗證](https://go.microsoft.com/fwlink/?LinkId=88914)。  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>鏈結信任與憑證授權單位  
  憑證是在階層中建立的，其中每個個別憑證都會連結到核發憑證的 CA。 此連結連至 CA 的憑證。 CA 的憑證然後發出原始 CA 的憑證的 CA 的連結。 在找到根 CA 的憑證之前，會一直重複這個程序。 根 CA 的憑證在本質上會受到信任。  
   
- 數位簽章會藉由依賴此階層 (也稱為「信任鏈結」來驗證實體。 您可以使用 MMC 嵌入式管理單元來檢視任何憑證的鏈結，只要按兩下任何憑證，然後按一下 [憑證路徑] 索引標籤即可。如需匯入憑證授權單位憑證鏈結的詳細資訊，請參閱[如何：指定用來驗證簽章的憑證授權單位憑證鏈結](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)。  
+ 數位簽章會藉由依賴此階層 (也稱為「信任鏈結」來驗證實體。 您可以使用 MMC 嵌入式管理單元來檢視任何憑證的鏈結，只要按兩下任何憑證，然後按一下 [憑證路徑] 索引標籤即可。如需有關如何匯入憑證授權單位憑證鏈結的詳細資訊，請參閱[How to:指定用來驗證簽章的憑證授權單位憑證鏈結](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)。  
   
 > [!NOTE]
 >  您可以藉由將簽發者的憑證放在信任的根授權憑證存放區，為任何簽發者都指定一個信任的根授權。  
@@ -96,7 +96,7 @@ ms.locfileid: "49453459"
   
 3.  將根授權憑證匯入 [受信任的根憑證授權單位] 存放區。  
   
-4.  如需逐步教學說明，請參閱[如何：建立開發時要使用的暫時憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。  
+4.  如需逐步指示，請參閱[How to:用於建立暫時憑證，在開發期間](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。  
   
 ## <a name="which-certificate-to-use"></a>該使用哪個憑證？  
  關於憑證常見的問題包括該使用哪些憑證以及為何使用這些憑證。 答案需視您是要針對用戶端或服務設計程式而定。 下列資訊將提供您一般性的指示，可能無法完全解答這些問題。  
@@ -170,9 +170,9 @@ ms.locfileid: "49453459"
   
  在第一版的 WCF 中，您不需要諮詢網域原則便可進行對應。 因此，當啟用對應功能且 X.509 憑證無法滿足網域原則要求時，以往在第一版中能夠順利執行的舊版應用程式可能會無法執行。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels>  
- <xref:System.ServiceModel.Security>  
- <xref:System.ServiceModel>  
- <xref:System.Security.Cryptography.X509Certificates.X509FindType>  
- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels>
+- <xref:System.ServiceModel.Security>
+- <xref:System.ServiceModel>
+- <xref:System.Security.Cryptography.X509Certificates.X509FindType>
+- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

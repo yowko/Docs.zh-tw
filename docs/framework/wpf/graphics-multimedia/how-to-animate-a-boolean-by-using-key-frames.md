@@ -1,5 +1,5 @@
 ---
-title: 如何：使用主要畫面格建立布林值的動畫
+title: HOW TO：使用主要畫面格建立布林值的動畫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], Booleans with key frames
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
-ms.openlocfilehash: 0142748a5c8e9a4375802d1b48beec0501d37e7c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3752378d280708ffd40eaac160589af4674467e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689100"
 ---
-# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>如何：使用主要畫面格建立布林值的動畫
+# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>HOW TO：使用主要畫面格建立布林值的動畫
 此範例示範如何建立動畫的布林屬性值<xref:System.Windows.Controls.Button>使用主要畫面格的控制項。  
   
 ## <a name="example"></a>範例  
@@ -28,9 +28,9 @@ ms.locfileid: "43521070"
   
  如需完整的範例，請參閱[主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>  
- <xref:System.Windows.UIElement.IsEnabled%2A>  
- <xref:System.Windows.Controls.Button>  
- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [主要畫面格操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>
+- <xref:System.Windows.UIElement.IsEnabled%2A>
+- <xref:System.Windows.Controls.Button>
+- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [主要畫面格操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

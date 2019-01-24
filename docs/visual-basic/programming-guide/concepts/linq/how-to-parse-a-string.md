@@ -1,21 +1,21 @@
 ---
-title: 如何： 剖析字串 (Visual Basic)
+title: HOW TO：剖析字串 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: da12ec98e03acceae375bbed4fc6ad4c2a71ec2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 513a82cbed796be42eb8e531ec71221ef0ac267f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652445"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>如何： 剖析字串 (Visual Basic)
-本主題說明如何在 C# 中建立 XML 樹狀結構。  
+# <a name="how-to-parse-a-string-visual-basic"></a>HOW TO：剖析字串 (Visual Basic)
+本主題說明如何建立 XML 樹狀結構中的C#。  
   
 ## <a name="example"></a>範例  
- 您可以在 Visual Basic 中的將字串剖析使用`XElement.Parse`方法。 不過，它是使用 XML 常值，如下列程式碼所示，因為 XML 常值不會發生相同的效能低落，從字串剖析 XML 更有效率。  
+ 您可以使用來剖析字串，以在 Visual Basic 中的`XElement.Parse`方法。 不過，它是使用 XML 常值，如下列程式碼所示，因為 XML 常值不會發生相同的效能低落，做為從字串剖析 XML 更有效率。  
   
- 藉由使用 XML 常值，您可以只複製並貼入您的 Visual Basic 程式中的 XML。  
+ 藉由使用 XML 常值，您可以只複製，並將您的 XML 貼到您的 Visual Basic 程式。  
   
 > [!NOTE]
 >  從文字檔剖析文字或載入 XML 文件比功能結構沒有效率。 如果您要從程式碼初始化 XML 樹狀，使用功能結構比剖析文字所花的處理器時間少。  
@@ -49,5 +49,5 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [剖析 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>另請參閱
+- [剖析 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

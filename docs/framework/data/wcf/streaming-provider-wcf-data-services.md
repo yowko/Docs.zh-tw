@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697344"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>資料流處理提供者 (WCF Data Services)
 資料服務可以公開大型物件二進位資料。 這項二進位資料可能代表視訊和音訊資料流、影像、文件檔案，或其他類型的二進位媒體。 當資料模型中的實體包含一個或多個二進位屬性時，資料服務會在回應摘要的項目內，傳回這個 base-64 編碼形式的二進位資料。 載入及序列化大型二進位資料，以這種方式可能會影響效能，因為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定義一個機制來獨立擷取二進位資料與其所屬的實體無關。 只要將實體中的二進位資料分成一個或多個資料流就可以完成這項處理。  
@@ -38,7 +38,7 @@ ms.locfileid: "45747053"
   
 5.  啟用伺服器上或資料來源中之二進位資源的存取權。  
   
- 本主題中的範例以資料流處理相片服務，後者的討論文章中深入了解的範例為基礎[資料服務資料流處理提供者系列： 實作資料流處理提供者 (第 1 部分)](https://go.microsoft.com/fwlink/?LinkID=198989)。 此範例服務的原始程式碼位於[資料流處理相片資料服務範例頁面](https://go.microsoft.com/fwlink/?LinkID=198988)MSDN Code Gallery 上。  
+ 本主題的範例以資料流處理相片服務，後者的討論文章中深入了解範例[資料服務資料流處理提供者系列：實作資料流處理提供者 （第 1 部分）](https://go.microsoft.com/fwlink/?LinkID=198989)。 此範例服務的原始程式碼位於[資料流處理相片資料服務範例頁面](https://go.microsoft.com/fwlink/?LinkID=198988)MSDN Code Gallery 上。  
   
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>在資料模型中定義媒體連結項目  
  資料來源提供者會判斷實體定義為資料模型中媒體連結項目的方式。  
@@ -50,7 +50,7 @@ ms.locfileid: "45747053"
   
  您也必須將命名空間 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 加入至實體或定義資料模型之 .edmx 或 .csdl 檔案的根。  
   
- 如需使用的資料服務的範例[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供者和公開媒體資源，請參閱文章[資料服務資料流處理提供者系列： 實作資料流處理提供者 (第 1 部分)](https://go.microsoft.com/fwlink/?LinkID=198989)。  
+ 如需使用的資料服務的範例[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供者和公開媒體資源，請參閱文章[資料服務資料流處理提供者系列：實作資料流處理提供者 （第 1 部分）](https://go.microsoft.com/fwlink/?LinkID=198989)。  
   
  **反映提供者**  
  若要指出某個實體為媒體連結項目，請將 <xref:System.Data.Services.Common.HasStreamAttribute> 加入至在反映提供者內定義實體類型的類別。  
@@ -129,7 +129,7 @@ ms.locfileid: "45747053"
   
  如需詳細資訊，請參閱 <<c0> [ 資料服務版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [自訂資料服務提供者](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
- [使用二進位資料](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+## <a name="see-also"></a>另請參閱
+- [資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [自訂資料服務提供者](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+- [使用二進位資料](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

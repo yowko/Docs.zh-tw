@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 97e0ccd46f413cc05b659731436bb141ee178419
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 5555f83107a40b40c7f05c7cc5729f721727f67c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729992"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 建立與 Managed 資源的連結。  
@@ -29,7 +29,7 @@ ms.locfileid: "48849907"
   
 ## <a name="arguments"></a>引數  
  `filename`  
- 必要。 要連結至組件的資源檔。 如果檔案名稱包含空格，將名稱括在引號 ("")。  
+ 必要項。 要連結至組件的資源檔。 如果檔案名稱包含空格，將名稱括在引號 ("")。  
   
  `identifier`  
  選擇性。 資源的邏輯名稱。 用來載入資源的名稱。 預設值是檔案的名稱。 您可以選擇性地指定檔案是否公用或私用組件資訊清單中，例如： `-linkres:filename.res,myname.res,public`。 根據預設，`filename`是公用的組件中。  
@@ -57,7 +57,7 @@ vbc -linkresource:rf.resource in.vb
   
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
-- [-資源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
+- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-資源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

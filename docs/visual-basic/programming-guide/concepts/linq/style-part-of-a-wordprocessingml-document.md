@@ -1,13 +1,13 @@
 ---
-title: WordprocessingML Document2 樣式部分
+title: 樣式的 WordprocessingML Document2 的組件
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-ms.openlocfilehash: 58767c51595a5a2c4c262df133c393dc700e0b10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55ad04ba516482613d1abd86ce5feee007c0b98d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722786"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML 文件的樣式部分
 這個主題顯示 Office Open XML WordprocessingML 文件樣式部分的範例。  
@@ -140,5 +140,5 @@ ms.locfileid: "33645950"
 </w:styles>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Office 的詳細資料中開啟 XML WordprocessingML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>另請參閱
+- [詳細資料的 Office Open XML WordprocessingML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

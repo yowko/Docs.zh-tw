@@ -8,23 +8,23 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 22d9d0def302b870de6f3e5ca4c142758b21314c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fafeb6cd47ebab5dd8f197b27d1aee9d7573e6ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591829"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717726"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>擴充 Visual Basic 中的 My 命名空間
-`My`在 Visual Basic 中的命名空間會公開屬性和方法，可讓您輕鬆地利用.NET Framework 的功能。 `My`命名空間可簡化常見的程式設計問題，通常在一行程式碼中減少困難的工作。 此外，`My`命名空間是完全可延伸，因此，您可以自訂的行為`My`並將新的服務加入至階層中以配合特定的應用程式的需求。 本主題討論如何以自訂的現有成員`My`命名空間，以及如何新增您自己自訂的類別，以`My`命名空間。  
+`My` Visual Basic 中的命名空間會公開屬性和方法可讓您輕鬆地利用.NET Framework 的強大功能。 `My`命名空間簡化了一般的程式設計問題，通常在一行程式碼中減少困難的工作。 此外，`My`命名空間是完全可延伸，讓您可以自訂的行為`My`並將新的服務新增至階層中以配合特定應用程式的需求。 本主題討論如何進行自訂的現有成員`My`命名空間，以及如何新增您自己的自訂類別，以`My`命名空間。  
   
  **主題內容**  
   
 -   [自訂現有的 My 命名空間成員](#customizing)  
   
--   [將成員新增至 My 物件](#addingtoobjects)  
+-   [將成員加入至我的物件](#addingtoobjects)  
   
--   [將自訂物件，若要加入 My 命名空間](#addingcustom)  
+-   [新增自訂的物件，以 My 命名空間](#addingcustom)  
   
 -   [將成員加入至我的命名空間](#addingtonamespace)  
   
@@ -32,78 +32,78 @@ ms.locfileid: "33591829"
   
 -   [設計指導方針](#design)  
   
--   [設計的類別庫我](#designing)  
+-   [設計類別庫的我](#designing)  
   
 -   [封裝和部署擴充功能](#packaging)  
   
 ##  <a name="customizing"></a> 自訂現有的 My 命名空間成員  
- `My`經常使用在 Visual Basic 會公開的命名空間的應用程式、 您的電腦和更多相關資訊。 如需完整的清單中的物件`My`命名空間，請參閱[My 參考](../../../visual-basic/language-reference/keywords/my-reference.md)。 您可能必須自訂現有的成員`My`命名空間，讓它們更好的符合您的應用程式的需求。 物件中的任何屬性`My`不是唯讀的命名空間可以將自訂的值。  
+ `My`命名空間，在 Visual Basic 會公開中的常用的應用程式、 您的電腦，和更多功能的相關資訊。 如需完整的清單中的物件`My`命名空間，請參閱 <<c2> [ 我參考](../../../visual-basic/language-reference/keywords/my-reference.md)。 您可能需要自訂的現有成員`My`命名空間，讓它們更符合您的應用程式的需求。 中的物件的任何屬性`My`不是唯讀的命名空間可以設定為某個自訂值。  
   
- 例如，假設您經常使用`My.User`物件來存取目前安全性內容執行您的應用程式的使用者。 不過，貴公司使用自訂的使用者物件公開的其他資訊與使用者在公司內的功能。 在此案例中，您可以取代預設值的`My.User.CurrentPrincipal`與您自己自訂的主體物件，如下列範例所示的執行個體的屬性。  
+ 例如，假設您經常使用`My.User`物件來存取目前安全性內容執行您的應用程式的使用者。 不過，貴公司會使用自訂的使用者物件公開的其他資訊和在公司內的使用者功能。 在此案例中，您可以取代預設值`My.User.CurrentPrincipal`與您自己自訂的主體物件，如下列範例所示的執行個體的屬性。  
   
  [!code-vb[VbVbcnExtendingMy#1](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_1.vb)]  
   
- 設定`CurrentPrincipal`屬性`My.User`物件變更執行應用程式的身分識別。 `My.User`物件，接著，會傳回新指定的使用者的相關資訊。  
+ 設定`CurrentPrincipal`屬性上的`My.User`物件變更應用程式所執行的身分識別。 `My.User`物件，接著會傳回新指定的使用者的相關資訊。  
   
-##  <a name="addingtoobjects"></a> 將成員新增至 My 物件  
- 從傳回型別`My.Application`和`My.Computer`定義為`Partial`類別。 因此，您可以擴充`My.Application`和`My.Computer`物件藉由建立`Partial`名為類別`MyApplication`或`MyComputer`。 這個類別不能`Private`類別。 如果您指定之類別的一部分`My`命名空間中，您可以新增屬性和方法，將會包含在`My.Application`或`My.Computer`物件。  
+##  <a name="addingtoobjects"></a> 將成員加入至我的物件  
+ 從傳回的型別`My.Application`並`My.Computer`定義為`Partial`類別。 因此，您可以延伸`My.Application`並`My.Computer`所建立的物件`Partial`名為類別`MyApplication`或`MyComputer`。 這個類別不能`Private`類別。 如果您指定的類別的一部分`My`命名空間中，您可以新增屬性和方法，將會包含`My.Application`或`My.Computer`物件。  
   
  例如，下列範例會將名為的屬性`DnsServerIPAddresses`至`My.Computer`物件。  
   
  [!code-vb[VbVbcnExtendingMy#2](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_2.vb)]  
   
-##  <a name="addingcustom"></a> 將自訂物件，若要加入 My 命名空間  
- 雖然`My`命名空間提供許多常見的程式設計工作的解決方案，您可能會遇到工作，`My`命名空間不能解決。 例如，您的應用程式可能需要存取使用者資料的自訂目錄服務或應用程式可能會使用與 Visual Basic 預設不會安裝的組件。 您可以擴充`My`包含專屬於您的環境的一般工作的自訂方案的命名空間。 `My`命名空間可以輕易地延伸到將新成員加入需求日益增加的應用程式。 此外，您可以部署您`My`給其他開發人員做為 Visual Basic 範本命名空間擴充功能。  
+##  <a name="addingcustom"></a> 新增自訂的物件，以 My 命名空間  
+ 雖然`My`命名空間提供許多常見的程式設計工作的解決方案，您可能會遇到的工作，`My`命名空間不能解決。 例如，您的應用程式可能需要存取使用者資料的自訂目錄服務，或您的應用程式可能會使用與 Visual Basic 預設不會安裝的組件。 您可以擴充`My`命名空間包含您環境特有的一般工作的自訂解決方案。 `My`命名空間可以輕鬆擴充至加入新的成員，以滿足不斷成長的應用程式需求。 此外，您可以在其中部署您`My`做為 Visual Basic 範本的其他開發人員的命名空間延伸模組。  
   
 ###  <a name="addingtonamespace"></a> 將成員加入至我的命名空間  
- 因為`My`是命名空間像任何其他命名空間，您可以加入最上層屬性，只將模組加入，並指定`Namespace`的`My`。 加上註解之模組的`HideModuleName`屬性，如下列範例所示。 `HideModuleName`屬性可確保，IntelliSense 會顯示模組名稱顯示的成員時`My`命名空間。  
+ 因為`My`是命名空間類似任何其他命名空間，您可以加入最上層屬性，只新增一個模組，並指定`Namespace`的`My`。 加上註解的模組`HideModuleName`屬性，如下列範例所示。 `HideModuleName`屬性可確保，IntelliSense 會顯示模組名稱顯示的成員時`My`命名空間。  
   
  [!code-vb[VbVbcnExtendingMy#3](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_3.vb)]  
   
- 若要將成員加入`My`命名空間中，將屬性加入所需的模組。 每個屬性加入至`My`命名空間中，加入私用欄位的型別`ThreadSafeObjectProvider(Of T)`，其中型別是傳回自訂屬性的型別。 這個欄位用來建立具備執行緒安全物件執行個體的屬性所傳回的呼叫`GetInstance`方法。 如此一來，每個執行緒存取的擴充的屬性，就會收到自己的傳回型別執行個體。 下列範例會將名為的屬性`SampleExtension`型別的`SampleExtension`至`My`命名空間：  
+ 若要將成員新增至`My`命名空間，將屬性加入所需的模組。 每個屬性新增至`My`命名空間，加入私用欄位的型別`ThreadSafeObjectProvider(Of T)`，其中型別是您的自訂屬性所傳回的類型。 這個欄位用來建立安全執行緒物件執行個體，藉由呼叫由屬性所傳回`GetInstance`方法。 如此一來，每個執行緒都存取擴充的屬性，就會收到自己的傳回型別執行個體。 下列範例會將名為的屬性`SampleExtension`型別的`SampleExtension`至`My`命名空間：  
   
  [!code-vb[VbVbcnExtendingMy#4](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_4.vb)]  
   
 ##  <a name="addingevents"></a> 將事件加入至自訂的 My 物件  
- 您可以使用`My.Application`物件來公開您的自訂事件`My`物件延伸`MyApplication`中的部分類別`My`命名空間。 針對 windows 專案，您可以按兩下**我的專案**中為您的專案中的節點**方案總管 中**。 在 Visual Basic 中**專案設計工具**，按一下 `Application`索引標籤，然後按一下  `View Application Events`  按鈕。 將會建立名為 ApplicationEvents.vb 新檔案。 它包含下列程式碼擴充`MyApplication`類別。  
+ 您可以使用`My.Application`來公開您的自訂事件的物件`My`物件來擴充`MyApplication`中的部分類別`My`命名空間。 對於以 Windows 為基礎的專案，您可以按兩下**My Project**中為您的專案中的節點**方案總管 中**。 在 Visual Basic**專案設計工具**，按一下`Application`索引標籤，然後按一下`View Application Events` 按鈕。 將建立名為 ApplicationEvents.vb 的新檔案。 它包含下列程式碼來擴充`MyApplication`類別。  
   
  [!code-vb[VbVbcnExtendingMy#5](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_5.vb)]  
   
- 您可以加入事件處理常式，您的自訂`My`物件加入至自訂事件處理常式`MyApplication`類別。 自訂事件可讓您將加入事件處理常式加入、 移除或事件引發時執行的程式碼。 請注意，`AddHandler`自訂事件只會執行程式碼會加入由處理事件的使用者程式碼。 例如，請仔細考慮`SampleExtension`前一節的物件具有`Load`您想要新增的自訂事件處理常式的事件。 下列程式碼範例將示範名為的自訂事件處理常式`SampleExtensionLoad`，將會叫用時`My.SampleExtension.Load`就會發生事件。 程式碼加入至新處理時`My.SampleExtensionLoad`事件，`AddHandler`執行此自訂事件的程式碼的一部分。 `MyApplication_SampleExtensionLoad`方法包含程式碼範例所顯示的事件處理常式處理範例`My.SampleExtensionLoad`事件。 請注意，`SampleExtensionLoad`事件將在可用，當您選取**我的應用程式事件**左側下拉式清單上述程式碼編輯器中編輯 ApplicationEvents.vb 檔案時的選項。  
+ 您可以新增您的自訂事件處理常式`My`物件加入至自訂的事件處理常式`MyApplication`類別。 自訂事件可讓您新增事件處理常式加入、 移除或引發事件時執行的程式碼。 請注意，`AddHandler`程式碼的自訂事件只會執行程式碼會加入使用者對處理事件。 比方說，認為`SampleExtension`物件上一節有`Load`您想要新增的自訂事件處理常式的事件。 下列程式碼範例顯示名為自訂的事件處理常式`SampleExtensionLoad`，它就會叫用時`My.SampleExtension.Load`就會發生事件。 程式碼來處理新的新增時`My.SampleExtensionLoad`事件，`AddHandler`執行此自訂事件的程式碼的一部分。 `MyApplication_SampleExtensionLoad`方法以顯示處理的事件處理常式的範例程式碼範例包含`My.SampleExtensionLoad`事件。 請注意，`SampleExtensionLoad`事件時，會提供您所選取**我的應用程式事件**在左邊的下拉式清單上方的程式碼編輯器編輯 ApplicationEvents.vb 檔案時的選項。  
   
  [!code-vb[VbVbcnExtendingMy#6](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_6.vb)]  
   
 ##  <a name="design"></a> 設計指導方針  
- 當您開發擴充功能`My`命名空間中，使用下列指導方針可協助您擴充功能元件的維護成本降至最低。  
+ 當您開發延伸模組`My`命名空間中，使用下列指導方針，以協助您擴充功能元件的維護成本降至最低。  
   
--   **包含擴充邏輯。** 中所包含的邏輯`My`命名空間擴充功能應該包含來公開所需的功能中的程式碼`My`命名空間。 因為您的擴充功能會以原始碼存在使用者專案中，更新擴充功能的元件會產生較高的維護成本，應該儘可能避免。  
+-   **包含延伸模組邏輯。** 中包含的邏輯`My`命名空間延伸模組應該包含需要公開所需的功能中的程式碼`My`命名空間。 因為您的延伸模組會位在使用者專案中，以原始碼，更新擴充功能的元件會產生較高的維護成本，並應該儘可能避免。  
   
--   **最小化專案的假設。** 當您建立您的擴充功能的`My`命名空間，不會假設參考、 專案層級匯入或特定的編譯器設定的一組 (例如，`Option Strict`關閉)。 相反地，相依性降到最低，並使用完整限定類型的所有參考`Global`關鍵字。 此外，在使用編譯延伸模組`Option Strict`在延伸中的錯誤降至最低。  
+-   **最小化專案的假設。** 當您建立您的擴充功能的`My`命名空間，不要假設一組參考，專案層級 imports 或特定的編譯器設定 (例如`Option Strict`關閉)。 相反地，最小化相依性，並使用完整限定所有型別參考`Global`關鍵字。 此外，請確定擴充功能會編譯使用`Option Strict`在延伸模組中的錯誤降至最低。  
   
--   **隔離的延伸模組程式碼。** 將程式碼放在單一檔案，可讓您的擴充功能輕鬆部署與 Visual Studio 項目範本。 如需詳細資訊，請參閱本主題稍後的 「 封裝和部署的擴充功能 」。 放置所有`My`單一檔案中的命名空間延伸模組程式碼或不同的資料夾中的專案，也有助於找出使用者`My`命名空間擴充功能。  
+-   **找出延伸模組程式碼。** 將程式碼放在單一檔案，可讓您的擴充功能可輕鬆部署為 Visual Studio 項目範本。 如需詳細資訊，請參閱本主題稍後的 「 封裝及部署擴充功能 」。 將所有`My`命名空間延伸模組程式碼，在單一檔案或不同的資料夾中的專案，也有助於使用者找出`My`命名空間延伸模組。  
   
-##  <a name="designing"></a> 設計的類別庫我  
- 與大部分的物件模型的案例一樣，一些設計模式中正常運作`My`命名空間，有些則沒有。 設計的延伸模組時`My`命名空間，請考慮下列原則：  
+##  <a name="designing"></a> 設計類別庫的我  
+ 在此情況下，大部分的物件模型，一些設計模式適用於`My`命名空間，有些則沒有。 設計的延伸模組時`My`命名空間，請考量以下原則：  
   
--   **無狀態的方法。** 中的方法`My`命名空間應該提供完整的解決方案，以特定的工作。 請確定傳遞給方法的參數值提供完成特定工作所需的所有輸入。 應避免建立依賴先前的狀態，例如開啟的連接資源的方法。  
+-   **無狀態的方法。** 中的方法`My`命名空間應該提供特定工作的完整解決方案。 請確定傳遞給方法的參數值提供完成特定工作所需的所有輸入。 請避免建立依賴先前的狀態，例如開啟的連線資源的方法。  
   
--   **全域執行個體。** 唯一的狀態會保留在`My`命名空間是專案的全域。 例如，`My.Application.Info`封裝共用整個應用程式的狀態。  
+-   **全域執行個體。** 唯一的狀態會保留在`My`命名空間是專案的全域。 比方說，`My.Application.Info`封裝共用整個應用程式的狀態。  
   
--   **簡單參數類型。** 避免使用複雜的參數類型，讓事情變簡單。 請改為建立方法時沒有參數輸入或可接受簡單的輸入的類型，例如字串或基本類型，等等。  
+-   **簡單的參數型別。** 簡單起見藉由避免複雜的參數類型。 相反地，建立 不要使用輸入參數的方法，或可接受簡單的輸入的類型，例如字串、 基本類型，等等。  
   
--   **Factory 方法。** 某些類型非常難以具現化。 提供 factory 方法當做擴充`My`命名空間可讓您更輕鬆地探索及取用歸類到此類別的類型。 Factory 方法，可正常運作的範例是`My.Computer.FileSystem.OpenTextFileReader`。 有數個資料流類型的.NET Framework 中可用。 具體來說，指定文字檔案`OpenTextFileReader`可協助使用者了解要使用的資料流。  
+-   **Factory 方法。** 某些類型非常難以具現化。 提供 factory 方法當做擴充`My`命名空間可讓您更輕鬆地探索及取用屬於此分類的類型。 非常適合的 factory 方法的範例是`My.Computer.FileSystem.OpenTextFileReader`。 有.NET Framework 中可用的數個資料流類型。 藉由明確地說，指定文字檔案`OpenTextFileReader`可協助使用者了解要使用的資料流。  
   
- 這些指導方針不會排除之類別庫的一般程式設計原則。 而是在不適合用於使用 Visual Basic 開發人員的建議和`My`命名空間。 建立類別庫的一般設計原則，請參閱[Framework 設計方針](../../../standard/design-guidelines/index.md)。  
+ 這些指導方針不會排除類別庫的一般設計原則。 相反地，它們是最適合用於開發人員使用 Visual Basic 的建議和`My`命名空間。 建立類別庫的一般設計原則，請參閱 < [Framework 設計方針](../../../standard/design-guidelines/index.md)。  
   
 ##  <a name="packaging"></a> 封裝和部署擴充功能  
- 您可以包含`My`命名空間擴充 Visual Studio 專案範本，或者您可以封裝您的擴充功能，並將其部署為 Visual Studio 項目範本。 當您封裝您`My`命名空間擴充與 Visual Studio 項目範本，您可以利用 Visual Basic 所提供的其他功能。 這些功能可讓您在專案參考特定組件，包括副檔名，或讓使用者明確地將您`My`命名空間擴充功能，使用**My 擴充**Visual Basic 的頁面專案設計工具。  
+ 您可以包含`My`命名空間延伸模組，Visual Studio 專案範本，或者您可以封裝您的擴充功能，並將其部署為 Visual Studio 項目範本。 當您封裝您`My`做為 Visual Studio 項目範本的命名空間延伸模組，您可以利用 Visual Basic 所提供的其他功能。 這些功能可讓您納入延伸模組，當專案參考特定組件，或是讓使用者明確地將您`My`使用的命名空間延伸模組**My 擴充**Visual basic 的頁面專案設計工具。  
   
- 如需如何部署詳細資料`My`命名空間擴充功能，請參閱[封裝和部署自訂 My 擴充](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)。  
+ 如需如何部署的詳細資訊`My`命名空間延伸模組，請參閱[封裝和部署自訂 My 擴充](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [封裝和部署自訂的 My 擴充](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
- [擴充 Visual Basic 應用程式模型](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
- [自訂 My 中可用的物件](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- [專案設計工具 my 擴充頁](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)  
- [專案設計工具、應用程式頁面 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
- [Partial](../../../visual-basic/language-reference/modifiers/partial.md)
+## <a name="see-also"></a>另請參閱
+- [封裝和部署自訂的 My 擴充](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)
+- [擴充 Visual Basic 應用程式模型](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
+- [自訂 My 中可用的物件](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+- [我的延伸模組頁面、專案設計工具](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)
+- [專案設計工具、應用程式頁面 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Partial](../../../visual-basic/language-reference/modifiers/partial.md)

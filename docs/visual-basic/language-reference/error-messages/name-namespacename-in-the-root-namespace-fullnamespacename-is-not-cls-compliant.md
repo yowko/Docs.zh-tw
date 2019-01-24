@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: 0359df132b9760f4f3d05bbece4cdf531efe2136
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d35268891711ca7f2a7f5ec47be425e342dccd7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642525"
 ---
 # <a name="name-ltnamespacenamegt-in-the-root-namespace-ltfullnamespacenamegt-is-not-cls-compliant"></a>名稱&lt;namespacename&gt;根命名空間中&lt;fullnamespacename&gt;不符合 CLS 標準
 組件標示為`<CLSCompliant(True)>`，但根命名空間名稱的項目開頭為底線 (`_`)。  
   
- 程式設計項目可以包含一或多個底線，但若要遵守[語言獨立性以及與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md)（cls） 標準，它必須不以底線開頭。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ 程式設計項目可以包含一或多個底線，但若要遵守[Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) （cls） 標準，其開頭不可以底線。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  將 <xref:System.CLSCompliantAttribute> 套用至程式設計項目時，請將屬性的 `isCompliant` 參數設定為 `True` 或 `False` ，表示符合標準或不符合標準。 這個參數沒有預設值，您必須提供值。  
   
@@ -29,15 +29,15 @@ ms.locfileid: "33594129"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   如果您需要 cls 符合性，請變更根命名空間名稱，使它的所有元素的開頭為底線。  
+-   如果您需要 cls 符合性，變更根命名空間名稱，使它的所有元素開頭為底線。  
   
--   如果您需要的命名空間名稱保持不變，則請移除<xref:System.CLSCompliantAttribute>從組件或將其標記為`<CLSCompliant(False)>`。  
+-   如果您需要的命名空間名稱保持不變，然後移除<xref:System.CLSCompliantAttribute>從組件或將其標記為`<CLSCompliant(False)>`。  
   
-## <a name="see-also"></a>另請參閱  
- [Namespace 陳述式](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)  
- [專案設計工具、應用程式頁面 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
- [宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Visual Basic 命名慣例](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
- 
+## <a name="see-also"></a>另請參閱
+- [Namespace 陳述式](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)
+- [專案設計工具、應用程式頁面 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Visual Basic 命名慣例](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+

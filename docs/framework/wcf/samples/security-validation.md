@@ -2,12 +2,12 @@
 title: 安全性驗證
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 16a12a031845a8898c32ac43bbb2e2a44fd7c7ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 594f7588f81ce04cef9e1f7f04a7ad9d75ce7a19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699762"
 ---
 # <a name="security-validation"></a>安全性驗證
 這個範例示範如何使用自訂行為驗證電腦上的服務，以確定服務符合特定條件。 在這個範例中，服務會經過驗證，其方式是自訂行為掃描服務上的每個端點，並檢查這些端點是否包含安全繫結項目。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -77,7 +77,7 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  將行為新增至所有服務時，建議您最好在進行任何變更前先備份 Machine.config 檔案。  
   
- 現在，請執行本範例 client\bin 目錄中提供的用戶端。 例外狀況，並出現下列訊息，就會發生: 「 要求的服務，'http://localhost/servicemodelsamples/service.svc' 無法啟動。 」 這是預料中的事，因為端點驗證行為認為該端點不安全，所以不讓服務啟動。 這個行為還會擲回內部例外狀況，以描述哪個端點不安全，並且在系統「事件檢視器」中的 [System.ServiceModel 4.0.0.0] 來源與 [WebHost] 類別下方寫入訊息。 此外，您也可以在這個範例中的服務上開啟追蹤功能。 這將允許使用者使用「服務追蹤檢視器」工具開啟產生的服務追蹤，以檢視端點驗證行為擲回的例外狀況。  
+ 現在，請執行本範例 client\bin 目錄中提供的用戶端。 例外狀況，並出現下列訊息，就會發生：「 要求的服務 'http://localhost/servicemodelsamples/service.svc' 無法啟動。 」 這是預料中的事，因為端點驗證行為認為該端點不安全，所以不讓服務啟動。 這個行為還會擲回內部例外狀況，以描述哪個端點不安全，並且在系統「事件檢視器」中的 [System.ServiceModel 4.0.0.0] 來源與 [WebHost] 類別下方寫入訊息。 此外，您也可以在這個範例中的服務上開啟追蹤功能。 這將允許使用者使用「服務追蹤檢視器」工具開啟產生的服務追蹤，以檢視端點驗證行為擲回的例外狀況。  
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>在事件檢閱器中檢閱失敗的端點驗證例外狀況訊息  
   
@@ -106,5 +106,5 @@ public void Validate(ServiceDescription serviceDescription,
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a>另請參閱  
- [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>另請參閱
+- [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)

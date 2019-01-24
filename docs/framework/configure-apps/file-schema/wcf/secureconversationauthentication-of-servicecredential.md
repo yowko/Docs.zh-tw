@@ -2,22 +2,22 @@
 title: '&lt;serviceCredential&gt; 的 &lt;secureConversationAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
-ms.openlocfilehash: 2c8479c4d8a321c822d49bdc24f359ffad5500e9
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 11ce6dcd2f075606cf808992edb99328daec3fba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696410"
 ---
 # <a name="ltsecureconversationauthenticationgt-of-ltservicecredentialgt"></a>&lt;serviceCredential&gt; 的 &lt;secureConversationAuthentication&gt;
 指定安全對話服務的設定。  
   
  \<system.ServiceModel>  
-\<行為 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行為 >  
+\<behavior>  
 \<serviceCredentials>  
-\<s >  
+\<secureConversationAuthentication>  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,8 +46,8 @@ ms.locfileid: "54147183"
 ## <a name="remarks"></a>備註  
  使用此組態項目指定安全性內容權杖 (SCT) Cookie 序列化的已知宣告型別清單，以及指定可編碼與確保 Cookie 資訊安全的編碼器。 如需 SCT 的詳細資訊，請參閱<xref:System.ServiceModel.Security.SecureConversationServiceCredential>。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.SecureConversationAuthentication%2A>  
- <xref:System.ServiceModel.Description.ServiceCredentials.SecureConversationAuthentication%2A>  
- <xref:System.ServiceModel.Security.SecureConversationServiceCredential>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.SecureConversationAuthentication%2A>
+- <xref:System.ServiceModel.Description.ServiceCredentials.SecureConversationAuthentication%2A>
+- <xref:System.ServiceModel.Security.SecureConversationServiceCredential>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7a4f60571fb4d30793f64c57317bf0b372ae4812
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701907"
 ---
 # <a name="application-settings-schema"></a>應用程式設定結構描述
 
@@ -26,9 +26,9 @@ ms.locfileid: "49123334"
 
 | 元素                    | 描述                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings >** | 包含所有**\<設定 >** 應用程式特定的標記。                         |
-| **\<userSettings >**        | 包含所有**\<設定 >** 目前使用者特定的標記。                        |
-| **\<設定 >**             | 定義設定。 子系 **\<applicationSettings >** 或是 **\<userSettings >**。 |
+| **\<applicationSettings>** | 包含所有**\<設定 >** 應用程式特定的標記。                         |
+| **\<userSettings>**        | 包含所有**\<設定 >** 目前使用者特定的標記。                        |
+| **\<setting>**             | 定義設定。 子系 **\<applicationSettings >** 或是 **\<userSettings >**。 |
 | **\<value>**               | 定義設定的值。 子系**\<設定 >**。                                   |
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > 項目
@@ -45,8 +45,8 @@ ms.locfileid: "49123334"
 
 | 屬性        | 描述 |
 | ---------------- | ----------- |
-| **name**         | 必要。 設定的唯一識別碼。 透過 Visual Studio 所建立的設定會儲存名稱`ProjectName.Properties.Settings`。 |
-| **serializedAs** | 必要。 要用來序列化成文字值的格式。 有效值為：<br><br>- `string`. 值序列化為字串，使用<xref:System.ComponentModel.TypeConverter>。<br>- `xml`. 值會使用 XML 序列化進行序列化。<br>- `binary`. 值會序列化為文字編碼的二進位檔使用二進位序列化。<br />- `custom`. 設定提供者的這項設定的固有知識和序列化和還原序列化它。 |
+| **name**         | 必要項。 設定的唯一識別碼。 透過 Visual Studio 所建立的設定會儲存名稱`ProjectName.Properties.Settings`。 |
+| **serializedAs** | 必要項。 要用來序列化成文字值的格式。 有效值為：<br><br>- `string`. 值序列化為字串，使用<xref:System.ComponentModel.TypeConverter>。<br>- `xml`. 值會使用 XML 序列化進行序列化。<br>- `binary`. 值會序列化為文字編碼的二進位檔使用二進位序列化。<br />- `custom`. 設定提供者的這項設定的固有知識和序列化和還原序列化它。 |
 
 ## <a name="value-element"></a>\<值 > 項目
 
@@ -92,5 +92,5 @@ ms.locfileid: "49123334"
 
 ## <a name="see-also"></a>另請參閱
 
-[應用程式設定概觀](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[應用程式設定架構](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [應用程式設定概觀](~/docs/framework/winforms/advanced/application-settings-overview.md)
+- [應用程式設定架構](~/docs/framework/winforms/advanced/application-settings-architecture.md)

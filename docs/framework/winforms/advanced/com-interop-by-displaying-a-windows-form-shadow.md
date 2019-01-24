@@ -1,5 +1,5 @@
 ---
-title: 如何：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop
+title: HOW TO：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [Windows Forms]
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: c764395b7926a131deae4109fed3a7461c45e2d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ae48a824f69c417daa38fb4b5f88fc5d980c47b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724378"
 ---
-# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>如何：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop
+# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>HOW TO：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop
 您可以藉由在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 訊息迴圈上顯示 Windows Forms 來解決元件物件模型 (COM) 互通性問題，而此訊息迴圈是使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法建立而成。  
   
  為了讓表單能夠在 COM 用戶端應用程式中正確運作，您必須在 Windows Forms 訊息迴圈上執行它。 若要執行此工作，請使用下列的其中一個方法：  
   
 -   使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法，以顯示 Windows Forms。  
   
--   在個別執行緒上顯示每個 Windows Form。 如需詳細資訊，請參閱[如何：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)。  
+-   在個別執行緒上顯示每個 Windows Form。 如需詳細資訊，請參閱[＜How to：在它自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)。  
   
 ## <a name="procedure"></a>程序  
- 若要在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 訊息迴圈上顯示表單，最簡單的方式是使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法，因為在所有方法中，它所需實作的程式碼最少。  
+ 若要在 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 訊息迴圈上顯示表單，最簡單的方式是使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 方法，因為在所有方法中，它所需實作的程式碼最少。  
   
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法會暫止 Unmanaged 應用程式的訊息迴圈，並將表單顯示成對話方塊。 因為主應用程式的訊息迴圈已經暫止，所以 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法會建立新的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 訊息迴圈來處理表單的訊息。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "33519713"
   
 #### <a name="to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>若要使用 ShowDialog 方法來顯示 Windows 表單以支援 COM Interop  
   
--   在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 元件中，將所有對 <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> 方法的呼叫取代為對 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法的呼叫。  
+-   在 <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> 元件中，將所有對 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法的呼叫取代為對 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 方法的呼叫。  
   
-## <a name="see-also"></a>另請參閱  
- [將 .NET Framework 元件公開給 COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [操作說明：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
- [Windows Forms 和 Unmanaged 應用程式](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
+## <a name="see-also"></a>另請參閱
+- [將 .NET Framework 元件公開給 COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [如何：在它自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Windows Forms 和 Unmanaged 應用程式](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

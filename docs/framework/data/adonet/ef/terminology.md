@@ -2,12 +2,12 @@
 title: Entity Framework 詞彙
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 4c0497f3c8069dc7d77bc742b1a7848716a5f4d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3b46a695f5984ec23f4a5ef28bd871d6d651c6ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684562"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 詞彙
 本主題定義中最常參考的詞彙[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文件。 而為相關主題提供的連結表示有其他可用的資訊。  
@@ -22,7 +22,7 @@ ms.locfileid: "43857371"
 |ComplexType|資料型別的規格，其中表示實體類型的非純量屬性沒有索引鍵屬性。<br /><br /> 如需詳細資訊，請參閱 < [ComplexType 項目 (CSDL)](https://msdn.microsoft.com/library/f1c2f311-9889-4b87-abd8-a94f322052e3)並[複雜型別](../../../../../docs/framework/data/adonet/complex-type.md)。|  
 |概念模型|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 中之應用程式定義域中實體類型、複雜型別、關聯、實體容器、實體集和關聯集的抽象規格。 概念模型是以 CSDL 定義於 .csdl 檔案。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。|  
 |.csdl file - .csdl 檔案|包含概念模型的 XML 檔案 (以 CSDL 表示)。|  
-|概念結構描述定義語言 (CSDL)|XML 架構的語言，可用來定義概念性模型的實體類型、關聯、實體容器、實體集以及關聯集。<br /><br /> 如需詳細資訊，請參閱 < [CSDL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)。|  
+|概念結構描述定義語言 (CSDL)|XML 架構的語言，可用來定義概念性模型的實體類型、關聯、實體容器、實體集以及關聯集。<br /><br /> 如需詳細資訊，請參閱 [CSDL Specification](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)。|  
 |Container - 容器|實體集和關聯集的邏輯群組。<br /><br /> 如需詳細資訊，請參閱 < [EntityContainer 項目 (CSDL)](https://msdn.microsoft.com/library/06d03ecb-3b7a-4e7f-95d5-b95307d47a27)並[實體容器](../../../../../docs/framework/data/adonet/entity-container.md)。|  
 |並行|讓多個使用者同時存取和變更共用資料的程序。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 預設會實作開放式並行存取 (Optimistic Concurrency) 模型。|  
 |方向|參考某些關聯的非對稱性質。 方向在結構描述內是與 `FromRole` 或 `ToRole` 項目的 `NavigationProperty` 和 `ReferentialConstraint` 屬性一起指定。<br /><br /> 如需詳細資訊，請參閱 < [NavigationProperty 項目 (CSDL)](https://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e)並[導覽屬性](../../../../../docs/framework/data/adonet/navigation-property.md)。|  
@@ -50,7 +50,7 @@ ms.locfileid: "43857371"
 |對應規格語言 (MSL)|一種 XML 架構語言，用來將定義於概念性模型中的項目對應到儲存體模型中的項目。<br /><br /> 如需詳細資訊，請參閱 < [MSL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)。|  
 |Modification Function - 修改函式|用於插入、更新和刪除資料來源中之資料的預存程序。 這些函式可用來代替 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 產生的命令。 修改函式是由儲存體模型中的 `Function` 項目來定義。 [ModificationFunctionMapping](https://msdn.microsoft.com/library/b44b5b13-9937-448b-ba36-7a0cfefea782)元素會對應至插入、 更新和刪除作業定義概念模型中的實體，這些修改函式。|  
 |多重性|可存在於關聯性各端的實體數 (依關聯定義)。 多重性也可稱為基數。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 結束項目 (CSDL)](https://msdn.microsoft.com/library/04f3c141-95bc-424b-989b-1c071b449e7c)並[關聯 end](../../../../../docs/framework/data/adonet/association-end.md)。|  
-|Multiple Entity Sets Per Type - 每個類型的多重實體|在多個實體集內定義實體類型的能力。<br /><br /> 如需詳細資訊，請參閱 < [EntitySet 項目 (CSDL)](https://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287)並[如何： 定義具有每個類型的多個實體集的模型](https://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7)。|  
+|Multiple Entity Sets Per Type - 每個類型的多重實體|在多個實體集內定義實體類型的能力。<br /><br /> 如需詳細資訊，請參閱 < [EntitySet 項目 (CSDL)](https://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287)和[How to:定義具有每個類型的多個實體集的模型](https://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7)。|  
 |導覽屬性|表示與另一個實體類型之關聯性的實體類型屬性 (依關聯定義)。 導覽屬性是用來傳回相關物件做為 <xref:System.Data.Objects.DataClasses.EntityCollection%601> 或 <xref:System.Data.Objects.DataClasses.EntityReference%601> (視關聯另一端的多重性而定)。<br /><br /> 如需詳細資訊，請參閱 < [NavigationProperty 項目 (CSDL)](https://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e)並[導覽屬性](../../../../../docs/framework/data/adonet/navigation-property.md)。|  
 |Query Path - 查詢路徑|路徑的字串表示，其中指定在執行物件查詢時要傳回的相關物件。 查詢路徑是由在 <xref:System.Data.Objects.ObjectQuery%601.Include%2A> 上呼叫 <xref:System.Data.Objects.ObjectQuery%601> 方法來定義。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 載入相關物件](https://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1)。|  
 |物件內容|表示概念模型中定義的實體容器。 它會包含基礎資料來源的連接並提供如變更追蹤和識別解析這類的服務。 物件內容是由 <xref:System.Data.Objects.ObjectContext> 或 `DbContext` 類別的執行個體來表示。<br /><br /> `DbContext` 是的一部分[Entity Framework 5.0](https://go.microsoft.com/fwlink/?LinkId=234900)。 Entity Framework 5.0 不是 .NET Framework 的一部分，而是建置在 .NET Framework 4.5 之上。 Entity Framework 5.0 可[' Entity Framework'](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488)封裝。 如需詳細資訊，請參閱 < [Entity Framework 版本與版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。|  
@@ -67,16 +67,16 @@ ms.locfileid: "43857371"
 |角色|指定給關聯的每個 `End` 的名稱，以釐清關聯性的語意。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 結束項目 (CSDL)](https://msdn.microsoft.com/library/04f3c141-95bc-424b-989b-1c071b449e7c)並[關聯 end](../../../../../docs/framework/data/adonet/association-end.md)。|  
 |Scalar Property - 純量屬性|對應至儲存體模型中單一欄位的實體屬性。|  
 |Self-Tracking Entity - 自我追蹤實體|根據「文字範本轉換工具組」(Text Template Transformation Toolkit，T4) 建置而成的實體，這種實體能夠記錄純量、複雜和導覽屬性的變更。|  
-|Simple Type - 簡單型別|用於定義概念模型中屬性的基本型別 (Primitive Type)。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 概念模型型別 (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)並[實體資料模型： 基本資料型別](../../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。|  
-|Split Entity - 分割實體|對應至儲存體模型中兩個不同類型的實體類型。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 如何： 定義具有單一實體對應的模型，這兩份資料表](https://msdn.microsoft.com/library/01762517-e4ab-439d-99e6-564ab7d6f3ed)。|  
+|Simple Type - 簡單型別|用於定義概念模型中屬性的基本型別 (Primitive Type)。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 概念模型型別 (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)和[實體資料模型：基本資料型別](../../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。|  
+|Split Entity - 分割實體|對應至儲存體模型中兩個不同類型的實體類型。<br /><br /> 如需詳細資訊，請參閱[＜How to：定義具有單一實體對應至兩個資料表的模型](https://msdn.microsoft.com/library/01762517-e4ab-439d-99e6-564ab7d6f3ed)。|  
 |儲存體模型|支援的資料來源 (如關聯式資料庫) 中資料邏輯模型的定義。 儲存體模型在 .ssdl 檔案中是以 SSDL 定義的。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)並[SSDL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md)。|  
 |.ssdl file - .ssdl 檔案|內含儲存體模型的 XML 檔案 (以 SSDL 表示)。|  
 |存放區結構描述定義語言 (SSDL)|以 XML 為架構的語言，用於定義儲存體模型 (通常相當於資料庫結構描述) 的實體類型、關聯、實體容器、實體集和關聯集。<br /><br /> 如需詳細資訊，請參閱 < [SSDL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md)。|  
 |單表|一種將資料庫內某個類型階層架構模型化的方法，此方法會將階層架構中所有類型的屬性都包含至一張資料表中。|  
 |一類一表|一種將資料庫內某個類型階層架構模型化的方法，此方法會使用多個具有一對一關聯性的資料表來設定各種類型的模型。|  
   
-## <a name="see-also"></a>另請參閱  
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
- [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)  
- [快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [Entity Framework 資源](../../../../../docs/framework/data/adonet/ef/resources.md)
+## <a name="see-also"></a>另請參閱
+- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
+- [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)
+- [快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [Entity Framework 資源](../../../../../docs/framework/data/adonet/ef/resources.md)

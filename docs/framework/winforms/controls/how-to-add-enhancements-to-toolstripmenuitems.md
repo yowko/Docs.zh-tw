@@ -1,5 +1,5 @@
 ---
-title: 如何：加強 ToolStripMenuItems 的功能
+title: HOW TO：新增 toolstripmenuitems 的功能的增強功能
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: eb55796480bea896383da479fe23a5d8967a52e3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 621b96805543abb92bc73f734f1a090d9cdb7319
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685075"
 ---
-# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>如何：加強 ToolStripMenuItems 的功能
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>HOW TO：新增 toolstripmenuitems 的功能的增強功能
 您可以增強的可用性<xref:System.Windows.Forms.MenuStrip>和<xref:System.Windows.Forms.ContextMenuStrip>控制項如下：  
   
 -   新增指定一項功能開啟或關閉，例如沿著文書處理應用程式，邊界是否顯示尺規，或指出的檔案清單中的檔案正在顯示，例如上的核取記號**視窗**功能表。  
@@ -113,7 +113,7 @@ ms.locfileid: "48582407"
     this.exitToolStripMenuItem});  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- [MenuStrip 控制項概觀](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- [MenuStrip 控制項概觀](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

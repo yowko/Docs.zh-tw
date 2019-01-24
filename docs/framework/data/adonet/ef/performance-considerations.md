@@ -2,12 +2,12 @@
 title: 效能考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 8adf3a2787c47efd929ebc5c0198e13240c279ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 43194baeaaeefd8748980a8542bea199d3e8d29f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732007"
 ---
 # <a name="performance-considerations-entity-framework"></a>效能考量 (Entity Framework)
 本主題說明 ADO.NET Entity Framework 的效能特性，並提供一些考量因素以協助提升 Entity Framework 應用程式的效能。  
@@ -153,5 +153,5 @@ ms.locfileid: "53130216"
   
 -   [ADO.NET Entity Framework 效能比較](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
-## <a name="see-also"></a>另請參閱  
- [開發和部署考量](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+## <a name="see-also"></a>另請參閱
+- [開發和部署考量](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

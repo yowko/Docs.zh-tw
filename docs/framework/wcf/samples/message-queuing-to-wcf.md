@@ -2,12 +2,12 @@
 title: 訊息佇列至 Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: cbbbab700a6602fa02160733c383a0fcaa84297b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: fa8bb6036b38456066922c0c2991a4893a22c117
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676649"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>訊息佇列至 Windows Communication Foundation
 此範例示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation (WCF) 服務。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -153,7 +153,7 @@ Console.ReadLine();
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
   
-## <a name="see-also"></a>另請參閱  
- [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [訊息佇列](https://go.microsoft.com/fwlink/?LinkId=94968)
+## <a name="see-also"></a>另請參閱
+- [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [如何：Exchange 與 WCF 端點的訊息和訊息佇列應用程式](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [訊息佇列](https://go.microsoft.com/fwlink/?LinkId=94968)

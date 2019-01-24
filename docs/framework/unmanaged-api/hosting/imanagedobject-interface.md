@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9d10126ac7edd3073d91a9c68c86a7df8cad402
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4b63d30c9662ce75df491e6e1329d2b955df2ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645973"
 ---
 # <a name="imanagedobject-interface"></a>IManagedObject 介面
 提供方法來控制受管理的物件。  
@@ -34,13 +34,13 @@ ms.locfileid: "33441113"
 |[GetSerializedBuffer 方法](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|取得此受管理物件的字串表示。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

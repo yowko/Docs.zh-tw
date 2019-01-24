@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30648
 ms.assetid: eefb77a4-efbc-4000-8871-edce7ef7f2df
-ms.openlocfilehash: c195c6892097818f4292f0732c2444644fdcb96a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 499190a711e4092122dbee8c7edfc315daea5432
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700256"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a>字串常數必須以雙引號結尾
-字串常數必須開始和結尾加上引號。  
+開頭與結尾加上引號的字串常數必須。  
   
  **ErrorID:** BC30648  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請確定字串常值的結尾引號 （"）。 如果您貼上的其他文字編輯器中的值，請確定貼上的字元是有效的引號，而不是其中一個類似，例如 「 智慧型 」 或 「 大 」 引號字元 （") 或兩個單引號 （'）。  
+-   請確定字串常值結尾引號 （"）。 如果您貼上的其他文字編輯器中的值，請確定貼上的字元是有效的雙引號，而不是其中一個類似，例如 「 智慧 」 或 「 大 」 的引號字元 (") 或兩個單引號 （'）。  
   
-## <a name="see-also"></a>另請參閱  
- [字串](../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a>另請參閱
+- [字串](../../../visual-basic/programming-guide/language-features/strings/index.md)

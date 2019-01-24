@@ -1,5 +1,5 @@
 ---
-title: ICorDebugType Interface1
+title: ICorDebugType 介面 1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugType
@@ -16,44 +16,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de2871b406bb9da84d20d7c526ad4a703baae409
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d29ab3c67e0788b15850b7dfb8b55914c1d1e369
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694525"
 ---
-# <a name="icordebugtype-interface1"></a>ICorDebugType Interface1
-代表類型，基本或複雜 （亦即，使用者定義）。 如果是泛型類型，則 `ICorDebugType` 表示具現化的泛型類型。  
+# <a name="icordebugtype-interface1"></a>ICorDebugType 介面 1
+表示型別，基本或複雜 （也就是，使用者定義）。 如果是泛型類型，則 `ICorDebugType` 表示具現化的泛型類型。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[EnumerateTypeParameters 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|取得的介面指標來參考泛型 ICorDebugTypeEnum<xref:System.Type>參數類別所參考的`ICorDebugType`。|  
-|[GetBase 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|取得的介面指標`ICorDebugType`參考所參考類別的基底類別`ICorDebugType`，如果有的話。|  
+|[EnumerateTypeParameters 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|取得的介面指標參考泛型 ICorDebugTypeEnum<xref:System.Type>類別所參考的參數`ICorDebugType`。|  
+|[GetBase 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|取得的介面指標`ICorDebugType`參考所參考的類別的基底類別`ICorDebugType`，如果有的話。|  
 |[GetClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|取得的介面指標來參考這個型別建構函式 ICorDebugClass `ICorDebugType`。|  
-|[GetFirstTypeParameter 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|取得的介面指標`ICorDebugType`參考第一個泛型<xref:System.Type>所參考類別的建構函式的參數`ICorDebugType`。|  
+|[GetFirstTypeParameter 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|取得的介面指標`ICorDebugType`參考的第一個泛型<xref:System.Type>參數所參考的類別的建構函式`ICorDebugType`。|  
 |[GetRank 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getrank-method.md)|取得陣列型別中的維度數目。|  
-|[GetStaticFieldValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|取得包含所指定的欄位參考的靜態欄位的值 ICorDebugValue 的介面指標的指定之堆疊框架中語彙基元。|  
-|[GetType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|取得描述通用語言執行平台的原生類型的 CorElementType 值<xref:System.Type>所參考`ICorDebugType`。|  
+|[GetStaticFieldValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|取得包含指定的欄位所參考的靜態欄位值 ICorDebugValue 的介面指標權杖中指定的堆疊框架。|  
+|[GetType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|取得描述通用語言執行平台的原生類型 CorElementType 值<xref:System.Type>所參考`ICorDebugType`。|  
   
 ## <a name="remarks"></a>備註  
- 如果類型是泛型，`ICorDebugClass`表示未具現化的型別。 `ICorDebugType`介面表示未具現化的泛型型別。 比方說，雜湊表\<K，V > 則表示由`ICorDebugClass`，而雜湊表\<Int32、 字串 > 則表示由`ICorDebugType`。  
+ 如果類型是泛型，`ICorDebugClass`表示未具現化的型別。 `ICorDebugType`介面表示未具現化的泛型型別。 例如，雜湊表\<K，V > 會由`ICorDebugClass`，而雜湊表\<Int32，字串 > 會由`ICorDebugType`。  
   
- 非泛型型別都由兩者`ICorDebugClass`和`ICorDebugType`。 處理類型具現化的.NET Framework 2.0 版中引進了第二個介面。  
+ 非泛型類型都由兩者`ICorDebugClass`和`ICorDebugType`。 處理類型具現化的.NET Framework 2.0 版中引進了第二個介面。  
   
 > [!NOTE]
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

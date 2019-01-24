@@ -1,19 +1,19 @@
 ---
-title: '&lt;尋找準則&gt;'
+title: '&lt;findCriteria&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: 0a2fb7ae641f8ec34c518d8dc2c11fbc2ae26190
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b90e6cab923075dbf750dc0d26a0eb1196cfde32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741232"
 ---
-# <a name="ltfindcriteriagt"></a>&lt;尋找準則&gt;
+# <a name="ltfindcriteriagt"></a>&lt;findCriteria&gt;
 組態項目，該項目提供一組用戶端應用程式搜尋探索服務時所用的準則。 準則可以分組為搜尋準則 （指定您要尋找的服務），以及尋找終止準則 （搜尋應持續多久）。  
   
  \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,16 +57,16 @@ ms.locfileid: "54146923"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<a d d >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|包含工作流程服務合約型別的名稱的組態項目的集合。|  
+|[\<contractTypeNames>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|包含工作流程服務合約型別的名稱的組態項目的集合。|  
 |\<擴充功能 > 的\<尋找準則 >|XML 項目物件的集合，這些物件會提供擴充。|  
-|[\<範圍 >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|物件的集合，這些物件包含尋找作業找尋特定服務時所用的絕對 URI。<br /><br /> 如果找到特定的服務，就會順利比對服務 URI 和範圍 URI (有時候會藉助處理複雜比對的範圍規則)。|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|物件的集合，這些物件包含尋找作業找尋特定服務時所用的絕對 URI。<br /><br /> 如果找到特定的服務，就會順利比對服務 URI 和範圍 URI (有時候會藉助處理複雜比對的範圍規則)。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|包含應用程式參與服務探索處理序做為用戶端所需的設定。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|包含應用程式參與服務探索處理序做為用戶端所需的設定。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Discovery.FindCriteria>  
- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Discovery.FindCriteria>
+- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>

@@ -1,21 +1,21 @@
 ---
-title: 如何： 產生文字檔案，從 XML (Visual Basic)
+title: HOW TO：產生文字檔案，從 XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-ms.openlocfilehash: 6b9e816fc61a583e8ea07045127b895480c03147
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd3c8b0f9faf0b465d9b0f6a5c17ceef62ddb285
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642775"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687712"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>如何： 產生文字檔案，從 XML (Visual Basic)
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>HOW TO：產生文字檔案，從 XML (Visual Basic)
 此範例顯示如何從 XML 檔案產生以逗號分隔的 (CSV) 檔案。  
   
 ## <a name="example"></a>範例  
- Visual Basic 版本使用程序程式碼，來彙總成單一字串的字串集合。  
+ Visual Basic 版本會使用程序程式碼，來彙總成單一字串的字串集合。  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -51,5 +51,5 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>另請參閱
+- [投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

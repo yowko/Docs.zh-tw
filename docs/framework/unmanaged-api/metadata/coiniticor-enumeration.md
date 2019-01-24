@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 56d90257389941189ff5036ebcb145fd0df17dc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 224684bd76ec3318b2c7f8197263d66973ce27aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716488"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR 列舉
-指定所使用的常數[CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)它會初始化 common language runtime。  
+指定所使用的常數[CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)在它初始化 common language runtime。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,13 +42,13 @@ typedef enum tagCOINITCOR
 |`COINITCOR`|表示預設的初始化模式。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

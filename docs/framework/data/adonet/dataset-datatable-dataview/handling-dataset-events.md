@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-ms.openlocfilehash: ff684adcb4e23b91b3e59476299d277c90c22c51
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 88ff0be43099758c076216e963d139b945936ba6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652939"
 ---
 # <a name="handling-dataset-events"></a>處理 DataSet 的事件
 <xref:System.Data.DataSet> 物件提供三個事件： <xref:System.ComponentModel.MarshalByValueComponent.Disposed>、 <xref:System.Data.DataSet.Initialized>和 <xref:System.Data.DataSet.MergeFailed>。  
@@ -51,12 +51,12 @@ private static void DataSetMergeFailed(
  `DataSet` 是衍生自 <xref:System.ComponentModel.MarshalByValueComponent> 類別 (Class)，此類別會公開 (Expose) <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 方法和 <xref:System.ComponentModel.MarshalByValueComponent.Disposed> 事件。 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>事件加入事件處理常式來接聽元件上清除的事件。 您可以使用<xref:System.ComponentModel.MarshalByValueComponent.Disposed>事件的`DataSet`如果您想要執行程式碼時<xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>呼叫方法。 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 釋放所使用的資源<xref:System.ComponentModel.MarshalByValueComponent>。  
   
 > [!NOTE]
->  `DataSet`並`DataTable`物件會繼承自<xref:System.ComponentModel.MarshalByValueComponent>且支援<xref:System.Runtime.Serialization.ISerializable>針對遠端執行功能的介面。 這些是唯一可以進行遠端通訊的 ADO.NET 物件。 如需詳細資訊，請參閱 <<c0> [ 遠端物件](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)。  
+>  `DataSet`並`DataTable`物件會繼承自<xref:System.ComponentModel.MarshalByValueComponent>且支援<xref:System.Runtime.Serialization.ISerializable>針對遠端執行功能的介面。 這些是唯一可以進行遠端通訊的 ADO.NET 物件。 如需詳細資訊，請參閱 [Remote Objects](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)。  
   
  如需可用時使用的其他事件資訊`DataSet`，請參閱[DataTable 事件處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)並[處理 DataAdapter 事件](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [驗證資料](https://msdn.microsoft.com/library/b3a9ee4e-5d4d-4411-9c56-c811f2b4ee7e)  
- [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [驗證資料](https://msdn.microsoft.com/library/b3a9ee4e-5d4d-4411-9c56-c811f2b4ee7e) \(機器翻譯\)
+- [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

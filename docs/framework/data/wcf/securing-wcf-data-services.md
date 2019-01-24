@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: 56ece9c2c81f05047e85ab681e7cfe0da65f35b9
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ae62441bf0c8460413e18dd7fc1b1315af1ba00c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726945"
 ---
 # <a name="securing-wcf-data-services"></a>保護 WCF Data Services 的安全
 本主題描述與開發、部署和執行 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，以及存取支援 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 之服務的應用程式有關的安全性考量。 您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。  
@@ -29,9 +29,9 @@ ms.locfileid: "48839566"
 |驗證選項|描述|  
 |----------------------------|-----------------|  
 |匿名驗證|啟用 HTTP 匿名驗證時，任何原則都可以連線至資料服務。 匿名存取不需要認證。 只有在您想要允許任何人存取資料服務時，才使用此選項。|  
-|基本和摘要式驗證|驗證需要使用者名稱和密碼所組成的認證。 支援非 Windows 用戶端的驗證。 **安全性注意事項：** 基本驗證認證 （使用者名稱和密碼） 會以純文字傳送，而且可以被攔截。 摘要式驗證會根據所提供的認證傳送雜湊，這讓它比基本驗證更安全。 兩者都很容易受到攔截式攻擊。 使用這些驗證方法時，您應該考慮使用安全通訊端層 (SSL)，加密用戶端與資料服務之間的通訊。 <br /><br /> Microsoft Internet Information Services (IIS) 會在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式中，針對 HTTP 要求，同時提供基本和摘要式驗證的實作。 這個 Windows 驗證提供者實作可讓 .NET Framework 用戶端應用程式將要求之 HTTP 標頭中的認證提供給資料服務，以便密切地交涉 Windows 使用者的驗證。 如需詳細資訊，請參閱 <<c0> [ 摘要式驗證技術參考](https://go.microsoft.com/fwlink/?LinkId=200408)。<br /><br /> 當您想要讓您的資料服務根據 Windows 認證之外的特定自訂驗證服務使用基本驗證時，您必須實作一個自訂 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] HTTP 模組以進行驗證。<br /><br /> 如需如何使用自訂基本驗證結構描述的範例[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，請參閱文章[自訂基本驗證](https://go.microsoft.com/fwlink/?LinkID=200388)在[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]以及驗證數列。|  
+|基本和摘要式驗證|驗證需要使用者名稱和密碼所組成的認證。 支援非 Windows 用戶端的驗證。 **安全性注意事項：** 基本驗證認證 (使用者名稱和密碼) 會以純文字傳送，而且可以被攔截。 摘要式驗證會根據所提供的認證傳送雜湊，這讓它比基本驗證更安全。 兩者都很容易受到攔截式攻擊。 使用這些驗證方法時，您應該考慮使用安全通訊端層 (SSL)，加密用戶端與資料服務之間的通訊。 <br /><br /> Microsoft Internet Information Services (IIS) 會在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式中，針對 HTTP 要求，同時提供基本和摘要式驗證的實作。 這個 Windows 驗證提供者實作可讓 .NET Framework 用戶端應用程式將要求之 HTTP 標頭中的認證提供給資料服務，以便密切地交涉 Windows 使用者的驗證。 如需詳細資訊，請參閱 <<c0> [ 摘要式驗證技術參考](https://go.microsoft.com/fwlink/?LinkId=200408)。<br /><br /> 當您想要讓您的資料服務根據 Windows 認證之外的特定自訂驗證服務使用基本驗證時，您必須實作一個自訂 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] HTTP 模組以進行驗證。<br /><br /> 如需如何使用自訂基本驗證結構描述的範例[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，請參閱文章[自訂基本驗證](https://go.microsoft.com/fwlink/?LinkID=200388)在[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]以及驗證數列。|  
 |Windows 驗證|Windows 型認證是使用 NTLM 或 Kerberos 交換。 此機制比基本或摘要式驗證更安全，但它需要用戶端是 Windows 架構的應用程式。 IIS 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式中，也會針對 HTTP 要求提供 Windows 驗證的實作。 如需詳細資訊，請參閱 < [ASP.NET 表單驗證概觀](https://msdn.microsoft.com/library/099c1587-6934-476e-ac95-28f534bc9708)。<br /><br /> 如需如何使用 Windows 驗證的範例[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，請參閱文章[Windows 驗證](https://go.microsoft.com/fwlink/?LinkID=200384)在[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]以及驗證數列。|  
-|[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 表單驗證|表單驗證可讓您使用自己的程式碼來驗證使用者，然後在 Cookie 或網頁 URL 中維護驗證語彙基元 (Token)。 您可以使用您所建立的登入表單驗證使用者的使用者名稱和密碼。 未經驗證的要求會重新導向至登入頁面，使用者可在此處提供認證和送出表單。 如果應用程式驗證了要求，則系統會發出包含金鑰的票證，用於重新建立後續要求的身分識別。 如需詳細資訊，請參閱 <<c0> [ 表單驗證提供者](https://msdn.microsoft.com/library/77e21ba2-bad1-4967-a8ec-74942dea7e47)。 **安全性注意事項：** 根據預設，包含表單驗證票證的 cookie 未受到保護時使用中的表單驗證[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 應用程式。 您應該考慮要求 SSL 同時保護驗證票證和初始登入認證。 <br /><br /> 針對使用方式的範例表單與的驗證[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，請參閱文章[表單驗證](https://go.microsoft.com/fwlink/?LinkID=200389)在[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]以及驗證數列。|  
+|[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 表單驗證|表單驗證可讓您使用自己的程式碼來驗證使用者，然後在 Cookie 或網頁 URL 中維護驗證語彙基元 (Token)。 您可以使用您所建立的登入表單驗證使用者的使用者名稱和密碼。 未經驗證的要求會重新導向至登入頁面，使用者可在此處提供認證和送出表單。 如果應用程式驗證了要求，則系統會發出包含金鑰的票證，用於重新建立後續要求的身分識別。 如需詳細資訊，請參閱 <<c0> [ 表單驗證提供者](https://msdn.microsoft.com/library/77e21ba2-bad1-4967-a8ec-74942dea7e47)。 **安全性注意事項：** 根據預設，當您在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 應用程式中使用表單驗證時，不會保護包含表單驗證票證之 Cookie 的安全。 您應該考慮要求 SSL 同時保護驗證票證和初始登入認證。 <br /><br /> 針對使用方式的範例表單與的驗證[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，請參閱文章[表單驗證](https://go.microsoft.com/fwlink/?LinkID=200389)在[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]以及驗證數列。|  
 |宣告架構驗證|在宣告型驗證中，資料服務所依賴的受信任 「 協力廠商 」 身分識別提供者服務來驗證使用者。 身分識別提供者會明確地驗證要求資料服務資源之存取權的使用者，並發出授與要求資源之存取權的語彙基元。 接著，系統會向資料服務呈現此權杖，然後根據與發出存取權杖之身分識別服務的信任關係，授與存取權給使用者。<br /><br /> 使用宣告架構驗證提供者的優點是，它們可以跨信任網域，用來驗證各種不同類型的用戶端。 資料服務可以採用此種協力廠商提供者，來卸載維護和驗證使用者的需求。 OAuth 2.0 是 Microsoft Azure AppFabric 存取控制所支援的宣告架構驗證通訊協定，以服務的方式用於聯盟授權。 此通訊協定支援 REST 型服務。 如需如何使用 OAuth 2.0 的範例[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，請參閱文章[OData 和 OAuth](https://go.microsoft.com/fwlink/?LinkId=200514)在[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]以及驗證數列。|  
   
 <a name="clientAuthentication"></a>   
@@ -50,9 +50,9 @@ context.Credentials = _
     New NetworkCredential(userName, password, domain)  
 ```  
   
- 如需詳細資訊，請參閱 <<c0> [ 如何： 指定用戶端認證的資料服務要求](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)。  
+ 如需詳細資訊，請參閱[＜How to：指定的資料服務要求用戶端認證](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)。  
   
- 當資料服務需要無法使用 <xref:System.Net.NetworkCredential> 物件指定的登入認證 (例如宣告架構語彙基元或 Cookie) 時，您必須在 HTTP 要求中手動設定標頭，這通常是 `Authorization` 和 `Cookie` 標頭。 如需有關此種驗證案例的詳細資訊，請參閱文章[OData 和驗證： 用戶端攔截](https://go.microsoft.com/fwlink/?LinkID=200385)。 如需如何設定 HTTP 標頭的要求訊息中的範例，請參閱 <<c0> [ 如何： 設定用戶端要求中的標頭](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)。  
+ 當資料服務需要無法使用 <xref:System.Net.NetworkCredential> 物件指定的登入認證 (例如宣告架構語彙基元或 Cookie) 時，您必須在 HTTP 要求中手動設定標頭，這通常是 `Authorization` 和 `Cookie` 標頭。 如需有關此種驗證案例的詳細資訊，請參閱文章[OData 和驗證：用戶端攔截](https://go.microsoft.com/fwlink/?LinkID=200385)。 如需如何設定 HTTP 標頭的要求訊息中的範例，請參閱[How to:設定用戶端要求中的標頭](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)。  
   
 ## <a name="impersonation"></a>模擬  
  一般而言，資料服務會使用裝載資料服務之背景工作處理序的認證來存取所需的資源，例如伺服器或資料庫上的檔案。 使用模擬時，可以用提出要求之使用者的 Windows 識別身分 (使用者帳戶) 執行 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式。 模擬常用於依賴 IIS 驗證使用者，而且此原則的認證用來存取必要資源的應用程式。 如需詳細資訊，請參閱 < [ASP.NET 模擬](https://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d)。  
@@ -64,10 +64,10 @@ context.Credentials = _
  根據預設，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您針對資料服務資源 (實體集和服務作業)，將常見的讀取和寫入權限授與能夠存取資料服務的任何使用者。 定義讀取和寫入權限的規則可以針對資料服務所公開的每個實體，以及公開到任何服務作業的每個實體個別定義。 建議您同時將讀取和寫入權限僅限為用戶端應用程式所需的資源。 如需詳細資訊，請參閱 <<c0> [ 最少資源存取需求](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md#accessRequirements)。  
   
 ### <a name="implement-role-based-interceptors"></a>實作以角色為基礎的攔截器  
- 攔截器可讓您在資料服務實際運作之前，攔截對資料服務資源的要求。 如需詳細資訊，請參閱 <<c0> [ 攔截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)。 攔截器可讓您根據提出要求的已驗證使用者進行授權決策。 如需如何限制存取資料服務資源，根據已驗證的使用者身分識別的範例，請參閱 <<c0> [ 如何： 攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
+ 攔截器可讓您在資料服務實際運作之前，攔截對資料服務資源的要求。 如需詳細資訊，請參閱 <<c0> [ 攔截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)。 攔截器可讓您根據提出要求的已驗證使用者進行授權決策。 如需如何限制存取資料服務資源，根據已驗證的使用者身分識別的範例，請參閱[How to:攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
   
 ### <a name="restrict-access-to-the-persisted-data-store-and-local-resources"></a>限制已保存之資料存放區和本機資源的存取  
- 用來存取已保存之存放區的帳戶應該僅被授與資料庫或檔案系統中的足夠權限來支援資料服務的需求。 使用匿名驗證時，這是用來執行裝載應用程式的帳戶。 如需詳細資訊，請參閱 [如何：開發在 IIS 上執行的 WCF 資料服務](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。 使用模擬時，必須將這些資源的存取權授與已驗證的使用者，通常是做為 Windows 群組的一部分。  
+ 用來存取已保存之存放區的帳戶應該僅被授與資料庫或檔案系統中的足夠權限來支援資料服務的需求。 使用匿名驗證時，這是用來執行裝載應用程式的帳戶。 如需詳細資訊，請參閱[＜How to：開發在 IIS 上執行的 WCF 資料服務](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。 使用模擬時，必須將這些資源的存取權授與已驗證的使用者，通常是做為 Windows 群組的一部分。  
   
 ## <a name="other-security-considerations"></a>其他安全性考量  
   
@@ -110,6 +110,6 @@ context.Credentials = _
   
 -   建議用戶端應用程式一律驗證使用者輸入，以及接受自不受信任之服務的資料。  
   
-## <a name="see-also"></a>另請參閱  
- [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a>另請參閱
+- [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

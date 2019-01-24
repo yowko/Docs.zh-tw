@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: ca1d33b2077736a9760f65857bffe4e96c4aeab0
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
+ms.openlocfilehash: 3be617d53ba87c35ae44f143da15a6b647eaa0d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680776"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;新增&gt;bypasslist （網路設定） 的項目
 將 IP 位址或 DNS 名稱加入至 proxy 略過清單中。  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
-\<bypasslist >  
+\<defaultProxy>  
+\<bypasslist>  
 \<add>  
   
 ## <a name="syntax"></a>語法  
@@ -80,6 +80,6 @@ ms.locfileid: "50235722"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0fb805e3292d90fd5f9562d9b0b8fcc31f84ec7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 905de2745be085391bef8ea32b8f82a5da78f3a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681192"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope 方法
-開啟現有磁碟上的檔案，並將它的中繼資料對應到記憶體中。  
+開啟現有磁碟上的檔案，並將它的中繼資料對應到記憶體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,43 +40,43 @@ HRESULT OpenScope (
   
 #### <a name="parameters"></a>參數  
  `szScope`  
- [in]要開啟的檔案名稱。 這個檔案必須包含 common language runtime (CLR) 中繼資料。  
+ [in]要開啟之檔案的名稱。 此檔案必須包含 common language runtime (CLR) 中繼資料。  
   
  `dwOpenFlags`  
- [in]值為[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列舉來指定 （讀取、 寫入和等等） 的模式開啟。  
+ [in]值為[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列舉，來開啟指定的模式 （讀取、 寫入和等等）。  
   
  `riid`  
- [in]要傳回; 所需的中繼資料介面的 IID呼叫端會使用介面來匯入 （讀取），或發出 （寫入） 中繼資料。  
+ [in]要傳回; 所需的中繼資料介面的 IID呼叫端會使用介面來匯入 （讀取），或發出 （寫入） 的中繼資料。  
   
- 值`riid`必須指定其中一個 「 匯入 」 或 「 發出"介面。 有效值為 IID_IMetaDataEmit、 IID_IMetaDataImport、 IID_IMetaDataAssemblyEmit、 IID_IMetaDataAssemblyImport、 IID_IMetaDataEmit2 或 IID_IMetaDataImport2。  
+ 值`riid`必須指定其中一個 「 匯入 」 或 「 發出 」 介面。 有效值為 IID_IMetaDataEmit、 IID_IMetaDataImport、 IID_IMetaDataAssemblyEmit、 IID_IMetaDataAssemblyImport、 IID_IMetaDataEmit2 或 IID_IMetaDataImport2。  
   
  `ppIUnk`  
  [out]要傳回的介面的指標。  
   
 ## <a name="remarks"></a>備註  
- 您可以查詢中繼資料的記憶體中複本，使用其中一個，「 匯入 」 的介面方法，或加入至一個 「 發出"介面的使用方法。  
+ 使用方法的其中一個 「 匯入 」 介面，或新增要使用的 「 發出 」 介面的其中一個方法，您可以查詢中繼資料的記憶體內的複本。  
   
- 如果目標檔案未包含 CLR 中繼資料，`OpenScope`方法將會失敗。  
+ 如果目標檔案不包含 CLR 中繼資料，`OpenScope`方法將會失敗。  
   
- 在.NET Framework 1.0 和 1.1 中，如果範圍以開啟`dwOpenFlags`設 ofRead，很適合用於共用。 也就是說，如果後續呼叫`OpenScope`傳入先前開啟的檔案的名稱，會重複使用現有的範圍，並不會建立一組新的資料結構。 不過，由於這個共用可能會發生問題。  
+ 在.NET Framework 1.0 和 1.1 中，如果範圍與開啟`dwOpenFlags`設 ofRead，很適合共用。 也就是說，如果後續呼叫`OpenScope`傳入名稱先前已開啟的檔案，會重複使用現有的範圍，並不會建立一組新的資料結構。 不過，由於此共用可能會發生問題。  
   
- 在.NET Framework 2.0 版中，範圍則是以開啟`dwOpenFlags`ofRead 設不會再共用。 共用範圍，以便使用 ofReadOnly 值。 共用範圍時，使用 「 讀取/寫入 」 中繼資料介面的查詢將會失敗。  
+ 在.NET Framework 2.0 版中，範圍則是使用開啟`dwOpenFlags`設 ofRead 不再共用。 若要允許共用範圍使用 ofReadOnly 值。 共用範圍時，使用 [讀取/寫入] 中繼資料介面的查詢將會失敗。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataDispenser 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- [IMetaDataDispenserEx 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataDispenser 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

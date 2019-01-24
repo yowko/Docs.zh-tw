@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48b15429d40d3a69db52615592fc1697f385d319
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e060fc62a93d98d8b86a244db1bc53a769cb31c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717164"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame 結構
 代表例外狀況物件所產生的堆疊框架資訊。  
@@ -44,20 +44,20 @@ typedef struct CorDebugExceptionObjectStackFrame {
 |`pModule`|ICorDebugModule 物件目前畫面格指標。|  
 |`ip`|指令指標 (EIP/RIP) 目前畫面格的值。|  
 |`methodDef`|目前的框架方法語彙基元。|  
-|`isLastForeignExceptionFrame`|值，指出的框架是在外部例外狀況中的最後一個框架。|  
+|`isLastForeignExceptionFrame`|值，指出框架是否為外部例外狀況的最後一個框架。|  
   
 ## <a name="remarks"></a>備註  
  呼叫端必須釋放 ICorDebugModule 物件的指標之後就無法再使用中。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

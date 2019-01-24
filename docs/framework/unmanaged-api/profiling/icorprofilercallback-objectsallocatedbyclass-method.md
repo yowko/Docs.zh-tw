@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dde5c50666333c02c8c1a9a167e17af3f40341
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1200ca14b91c101a8145a3aed8023002ddb9298b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454338"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746631"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass 方法
-通知分析工具有關的每個指定的類別已建立最新的記憶體回收回收後的執行個體數目。  
+通知分析工具有關的每個指定的類別已自最新的回收之後建立的執行個體數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,26 +41,26 @@ HRESULT ObjectsAllocatedByClass(
  [in]大小`classIds`和`cObjects`陣列。  
   
  `classIds`  
- [in]陣列的類別識別碼，其中每個識別碼與一或多個執行個體中指定的類別。  
+ [in]類別識別碼，其中每個識別碼指定的類別與一或多個執行個體的陣列。  
   
  `cObjects`  
- [in]整數，指定每個整數的中的對應類別執行個體數目的陣列`classIds`陣列。  
+ [in]整數，指定每個整數中的對應類別的執行個體數目的陣列`classIds`陣列。  
   
 ## <a name="remarks"></a>備註  
- `classIds`和`cObjects`是平行陣列。 例如，`classIds[i]`和`cObjects[i]`參考相同的類別。 自上一個記憶體回收之後建立的類別執行個體之後，如果省略，則此類別。 `ObjectsAllocatedByClass`回呼不會報告在大型物件堆積中配置的物件。  
+ `classIds`和`cObjects`陣列是平行陣列。 例如，`classIds[i]`和`cObjects[i]`參考相同的類別。 如果自上一個記憶體回收之後建立的類別執行個體之後，即會省略的類別。 `ObjectsAllocatedByClass`回呼將不會報告在大型物件堆積中配置的物件。  
   
- 所報告的數字`ObjectsAllocatedByClass`都只是估計值。 確切計數，使用[icorprofilercallback:: Objectallocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)。  
+ 所報告的數字`ObjectsAllocatedByClass`是只是估計值。 確切的計數，請使用[icorprofilercallback:: Objectallocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)。  
   
- `classIds`陣列可能包含一或多個 null 項目，如果對應`cObjects`陣列有要卸載的類型。  
+ `classIds`陣列可能包含一或多個 null 的項目，如果對應`cObjects`陣列有要卸載的類型。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

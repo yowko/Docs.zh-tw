@@ -15,15 +15,15 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 824c1e47cf50dc13a3a986e48a49158b15dbb935
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ceee83c9deb318f5912eb724cbd237c3d7b73152
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733333"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>逐步解說：在設計階段偵錯自訂的 Windows Form 控制項
-當您建立自訂控制項時，通常會發現它需要偵錯它的設計階段行為。 這是特別有用，如果您撰寫自訂的設計工具為您的自訂控制項。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 建立 Windows Form 控制項，會善用 Visual Studio 設計階段功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
+當您建立自訂控制項時，通常會發現它需要偵錯它的設計階段行為。 這是特別有用，如果您撰寫自訂的設計工具為您的自訂控制項。 如需詳細資訊，請參閱[逐步解說：建立 Windows Form 會充分利用 Visual Studio 設計階段功能的控制項](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
   
  就像您會偵錯任何其他.NET Framework 類別，您可以偵錯使用 Visual Studio 中，您的自訂控制項。 差別在於您要偵錯 Visual Studio 執行您的自訂控制項程式碼的個別執行個體  
   
@@ -60,9 +60,9 @@ ms.locfileid: "45964830"
   
 1.  新增**Windows 控制項程式庫**專案加入方案。  
   
-2.  加入新**UserControl** DebugControlLibrary 專案項目。 如需詳細資訊，請參閱 < [NIB： 如何： 加入新的專案項目](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 提供新的來源檔案的"DebugControl 」 的基底名稱。  
+2.  加入新**UserControl** DebugControlLibrary 專案項目。 如需詳細資訊，請參閱[NIB： 操作說明：加入新的專案項目](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 提供新的來源檔案的"DebugControl 」 的基底名稱。  
   
-3.  使用**方案總管**，刪除專案的預設控制項的基底名稱的程式碼檔案中刪除 「`UserControl1`"。 如需詳細資訊，請參閱 < [NIB： 如何： 移除、 Delete 和排除項目](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+3.  使用**方案總管**，刪除專案的預設控制項的基底名稱的程式碼檔案中刪除 「`UserControl1`"。 如需詳細資訊，請參閱[NIB： 操作說明：移除，請刪除，並排除項目](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
   
 4.  建置方案。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "45964830"
   
 4.  開啟中的 Form1 **Form 設計工具**，然後選取**DebugControl**控制項。  
   
-5.  值變更`DemoString`屬性。 請注意，當您認可變更時，Visual Studio 偵錯執行個體取得焦點，在中斷點停止執行。 您可以逐步執行屬性存取子就如同您將任何其他程式碼。  
+5.  變更 `DemoString` 屬性的值。 請注意，當您認可變更時，Visual Studio 偵錯執行個體取得焦點，在中斷點停止執行。 您可以逐步執行屬性存取子就如同您將任何其他程式碼。  
   
 6.  當您完成與偵錯工作階段，您可以結束關閉裝載 Visual Studio 執行個體，或按一下**停止偵錯**偵錯執行個體中的按鈕。  
   
@@ -170,9 +170,9 @@ ms.locfileid: "45964830"
   
 -   有幾個屬性可套用至控制項的屬性，來操作您的自訂控制項互動與設計工具。 您可以找到這些屬性在<xref:System.ComponentModel?displayProperty=nameWithType>命名空間。  
   
--   您可以撰寫自訂的設計工具為您的自訂控制項。 這可讓您使用 Visual Studio 所公開的可擴充設計工具基礎結構的設計經驗的完整控制。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 建立 Windows Form 控制項，會善用 Visual Studio 設計階段功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
+-   您可以撰寫自訂的設計工具為您的自訂控制項。 這可讓您使用 Visual Studio 所公開的可擴充設計工具基礎結構的設計經驗的完整控制。 如需詳細資訊，請參閱[逐步解說：建立 Windows Form 會充分利用 Visual Studio 設計階段功能的控制項](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
- [如何： 存取設計階段服務](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
- [如何：在 Windows Forms 中存取設計階段支援](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+## <a name="see-also"></a>另請參閱
+- [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)
+- [如何：存取設計階段服務](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)
+- [如何：在 Windows Forms 中存取設計階段支援](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)

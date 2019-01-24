@@ -1,5 +1,5 @@
 ---
-title: 如何：進行對 Windows Form 控制項的安全執行緒呼叫
+title: HOW TO：Windows Form 控制項的安全執行緒呼叫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 60a71aefbf6d180ffe8d68f54d438e5b58a603fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664718"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710465"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>如何：進行對 Windows Form 控制項的安全執行緒呼叫
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>HOW TO：Windows Form 控制項的安全執行緒呼叫
 
 如果您使用多執行緒處理來改善 Windows Forms 應用程式的效能，您必須確定以安全執行緒的方式呼叫控制項。
 
@@ -406,7 +406,7 @@ private:
  下列程式碼範例是完整的 Windows Forms 應用程式，此應用程式由具有三個按鈕和一個文字方塊的表單所組成。 第一個按鈕示範不安全的跨執行緒存取，第二個按鈕示範使用 <xref:System.Windows.Forms.Control.Invoke%2A>的安全存取，第三個按鈕示範使用 <xref:System.ComponentModel.BackgroundWorker>的安全存取。
 
 > [!NOTE]
-> 如需如何執行這個範例的相關指示，請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416)。 此範例必須參考 System.Drawing 和 System.Windows.Forms 組件。
+> 如需有關如何執行範例的指示，請參閱[How to:編譯並執行完整的 Windows Form 程式碼範例使用 Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416)。 此範例必須參考 System.Drawing 和 System.Windows.Forms 組件。
 
 ```csharp
 using System;
@@ -1051,7 +1051,7 @@ int main()
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [操作說明：在背景執行作業](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [操作說明：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [如何：在背景執行作業](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [如何：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [Windows Forms 和 Unmanaged 應用程式](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

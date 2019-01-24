@@ -2,20 +2,20 @@
 title: '&lt;custom&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 1978c898039a6ff9ab3303427951c214cde96e24
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5180b8866d8b0155a8683ab9cb6135c26f696929
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734983"
 ---
 # <a name="ltcustomgt"></a>&lt;custom&gt;
 指定自訂對等解析程式服務的設定。  
   
 \<system.serviceModel>  
-\<繫結 >  
+\<bindings>  
 \<netPeerBinding>  
-\<繫結 >  
+\<binding>  
 \<resolver>  
 \<custom>  
   
@@ -43,7 +43,7 @@ ms.locfileid: "54145745"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<身分識別 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定使用這個項目設定的自訂對等解析程式的身分識別。 此項目的型別為 <xref:System.ServiceModel.Configuration.IdentityElement>。|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定使用這個項目設定的自訂對等解析程式的身分識別。 此項目的型別為 <xref:System.ServiceModel.Configuration.IdentityElement>。|  
 |[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|位址標頭的集合，用於自訂對等解析程式所處理的 SOAP 訊息。|  
   
 ### <a name="parent-elements"></a>父項目  
@@ -55,10 +55,10 @@ ms.locfileid: "54145745"
 ## <a name="remarks"></a>備註  
  這個項目定義自訂對等解析程式服務的基本設定，包括裝載服務之對等的端點位址以及任何特定繫結設定。 如需有關如何建立自訂解析程式的詳細資訊，請參閱 <<c0> [ 新增至 PeerChannel 應用程式的自訂解析程式](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
- <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>  
- <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
- <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
- [對等解析程式](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [將自訂解析程式新增至 PeerChannel 應用程式](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>
+- <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>
+- <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>
+- <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>
+- [對等解析程式](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [將自訂解析程式新增至 PeerChannel 應用程式](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

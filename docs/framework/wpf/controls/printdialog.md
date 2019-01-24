@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], PrintDialog
 - PrintDialog control [WPF]
 ms.assetid: 0ce9e3e7-206f-45ec-b845-4c05cfb5ff1d
-ms.openlocfilehash: a1f69e0960e2882e3f31b5c79eaf0aab7a1e0e82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7def3ab16fe174008d1c7287786fd22566ce3d70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689296"
 ---
 # <a name="printdialog"></a>PrintDialog
 <xref:System.Windows.Controls.PrintDialog>控制項用來具現化的標準列印對話方塊會自動設定<xref:System.Printing.PrintTicket>和<xref:System.Printing.PrintQueue>根據使用者輸入。  
@@ -25,6 +25,6 @@ ms.locfileid: "33554764"
   
  <xref:System.Printing.PrintQueue>  
   
-## <a name="see-also"></a>另請參閱  
- [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>另請參閱
+- [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

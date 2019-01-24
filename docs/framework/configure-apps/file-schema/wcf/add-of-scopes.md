@@ -2,22 +2,22 @@
 title: '&lt;scopes&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: e2bf649259d6ccb0e55428ab3619fe561d051ff7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 961fb3e388e3ae756bd7511ea6c65df6dd2a1486
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705569"
 ---
 # <a name="ltaddgt-of-ltscopesgt"></a>&lt;scopes&gt; 的 &lt;add&gt;
 加入自訂的範圍 URI，這個 URI 可用於在查詢期間篩選服務端點。  
   
 \<system.ServiceModel>  
-\<行為 >  
+\<behaviors>  
 \<endpointBehaviors>  
-\<行為 >  
-\<endpointDiscovery >  
-\<範圍 >  
+\<behavior>  
+\<endpointDiscovery>  
+\<scopes>  
 \<add>  
   
 ## <a name="syntax"></a>語法  
@@ -52,7 +52,7 @@ ms.locfileid: "54146223"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<範圍 >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|包含組態項目的集合，這些項目會指定可用於在查詢期間篩選服務端點的自訂範圍 URI。|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|包含組態項目的集合，這些項目會指定可用於在查詢期間篩選服務端點的自訂範圍 URI。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

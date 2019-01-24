@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 2b821a1deb947db86e89207c447045f76a8bb842
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 4571af701ea28c3b7dbecbb1b1a82e7093c2831e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646457"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI 自動化用戶端中的快取
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題將介紹 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性和控制項模式的快取。  
   
@@ -24,7 +24,7 @@ ms.locfileid: "48035106"
   
  快取的優點是與 Windows Presentation Foundation (WPF) 控制項和具有伺服器端 UI 自動化提供者的自訂控制項最為明顯。 在存取用戶端提供者 (如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控制項的預設提供者) 時，優勢較不明顯。  
   
- 下列情況會發生快取：當應用程式啟動 <xref:System.Windows.Automation.CacheRequest> ，然後使用任何會傳回 <xref:System.Windows.Automation.AutomationElement>的方法或屬性時；例如 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>、 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。 方法<xref:System.Windows.Automation.TreeWalker>類別是例外狀況; 如果快取只完成<xref:System.Windows.Automation.CacheRequest>指定為參數 (例如<xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>。  
+ 下列情況會發生快取：當應用程式啟動 <xref:System.Windows.Automation.CacheRequest> ，然後使用任何會傳回 <xref:System.Windows.Automation.AutomationElement>的方法或屬性時；例如 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>、 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。 <xref:System.Windows.Automation.TreeWalker> 類別的方法例外；僅有在指定 <xref:System.Windows.Automation.CacheRequest> 為參數 (例如 <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>) 時會完成快取。  
   
  在 <xref:System.Windows.Automation.CacheRequest> 為作用中時訂閱事件，也會發生快取。 <xref:System.Windows.Automation.AutomationElement> 會以事件來源的形式傳遞給事件處理常式，其中包含快取的屬性和原始 <xref:System.Windows.Automation.CacheRequest>所指定的模式。 在您訂閱事件之後所做的任何 <xref:System.Windows.Automation.CacheRequest> 變更皆不會有任何作用。  
   
@@ -40,17 +40,17 @@ ms.locfileid: "48035106"
   
 <a name="Control_Patterns_to_Cache"></a>   
 ### <a name="control-patterns-to-cache"></a>要快取的控制項模式  
- 您可呼叫每一個模式的 <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> 之後再啟動要求，以指定要快取的控制項模式。 快取模式時，其屬性不會自動快取;您必須指定您要使用快取的內容<xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>。  
+ 您可呼叫每一個模式的 <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> 之後再啟動要求，以指定要快取的控制項模式。 快取模式時，不會自動快取它的屬性；您必須使用 <xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>指定您要快取的屬性。  
   
 <a name="Scope_of_the_Caching"></a>   
 ### <a name="scope-and-filtering-of-caching"></a>快取的範圍和篩選  
- 您可以指定的項目，其屬性和模式，您要設定快取<xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType>之後再啟動要求的屬性。 範圍與在要求處於作用中時所擷取的項目有關。 例如，如果您只設定 <xref:System.Windows.Automation.TreeScope.Children>，然後擷取 <xref:System.Windows.Automation.AutomationElement>，則會快取該項目子系的屬性和項目，而不是項目本身的屬性和項目。 若要確保進行擷取項目本身的快取，您必須在 <xref:System.Windows.Automation.TreeScope.Element> 屬性中包含 <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> 。 您無法將範圍設 <xref:System.Windows.Automation.TreeScope.Parent> 或 <xref:System.Windows.Automation.TreeScope.Ancestors>。 不過，快取子項目時即會快取父項目；請參閱本主題中的＜擷取快取的子系和父代＞。  
+ 您可以設定 <xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType> 屬性之後再啟動要求，以指定要快取其屬性和模式的項目。 範圍與在要求處於作用中時所擷取的項目有關。 例如，如果您只設定 <xref:System.Windows.Automation.TreeScope.Children>，然後擷取 <xref:System.Windows.Automation.AutomationElement>，則會快取該項目子系的屬性和項目，而不是項目本身的屬性和項目。 若要確保進行擷取項目本身的快取，您必須在 <xref:System.Windows.Automation.TreeScope.Element> 屬性中包含 <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> 。 您無法將範圍設 <xref:System.Windows.Automation.TreeScope.Parent> 或 <xref:System.Windows.Automation.TreeScope.Ancestors>。 不過，快取子項目時即會快取父項目；請參閱本主題中的＜擷取快取的子系和父代＞。  
   
- 快取的範圍也會受到<xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType>屬性。 根據預設，僅會針對在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視中顯示的項目執行快取。 不過，您可以變更此屬性，將快取套用至所有項目，或是只套用至內容檢視中顯示的項目。  
+ 快取的範圍也會受到 <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType> 屬性的影響。 根據預設，僅會針對在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視中顯示的項目執行快取。 不過，您可以變更此屬性，將快取套用至所有項目，或是只套用至內容檢視中顯示的項目。  
   
 <a name="Strength_of_the_Element_References"></a>   
 ### <a name="strength-of-the-element-references"></a>項目參考的強度  
- 擷取 <xref:System.Windows.Automation.AutomationElement>時，預設為您可以存取該項目的所有屬性與模式 (包括未快取的屬性與模式)。 不過，如需更高的效率，您可以將 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> 的 <xref:System.Windows.Automation.CacheRequest> 屬性設為 <xref:System.Windows.Automation.AutomationElementMode.None>，以指定項目參考僅參考快取的資料。 在此情況下，您就不能存取擷取項目的任何非快取屬性和模式。 這表示您無法透過 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 的 `Current` 或 <xref:System.Windows.Automation.AutomationElement> 屬性擷取任何屬性或控制項模式；也無法使用 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 或 <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>擷取模式。 快取模式，您可以呼叫這類擷取陣列屬性的方法<xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>，而不是在控制項上，執行動作，例如<xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>。  
+ 擷取 <xref:System.Windows.Automation.AutomationElement>時，預設為您可以存取該項目的所有屬性與模式 (包括未快取的屬性與模式)。 不過，如需更高的效率，您可以將 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> 的 <xref:System.Windows.Automation.CacheRequest> 屬性設為 <xref:System.Windows.Automation.AutomationElementMode.None>，以指定項目參考僅參考快取的資料。 在此情況下，您就不能存取擷取項目的任何非快取屬性和模式。 這表示您無法透過 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 的 `Current` 或 <xref:System.Windows.Automation.AutomationElement> 屬性擷取任何屬性或控制項模式；也無法使用 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 或 <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>擷取模式。 在快取模式上，您可以呼叫 <xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>這類擷取陣列屬性的方法，而不是 <xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>這類在控制項上執行動作的方法。  
   
  舉例來說，螢幕助讀程式是可能不需要物件完整參考的應用程式，其會預先擷取視窗中項目的 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> 和 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> 屬性，而不需 <xref:System.Windows.Automation.AutomationElement> 物件本身。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48035106"
   
  更新快取不會更改任何現有 <xref:System.Windows.Automation.AutomationElement> 參考的屬性。  
   
-## <a name="see-also"></a>另請參閱  
- [用戶端的 UI 自動化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [FetchTimer 範例](https://msdn.microsoft.com/library/5b7d3294-de22-4f24-b2d6-d4785a304b90)
+## <a name="see-also"></a>另請參閱
+- [用戶端的 UI 自動化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [FetchTimer 範例](https://msdn.microsoft.com/library/5b7d3294-de22-4f24-b2d6-d4785a304b90)

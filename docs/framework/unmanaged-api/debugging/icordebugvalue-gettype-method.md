@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fc0dd03abc1adb8eeea76a1053fb4d58de4ecf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b4d2ba850ffc6e49cf330174dda9524c7bac4549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709191"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType 方法
-取得這個 「 ICorDebugValue 」 物件的基本類型。  
+取得這個 「 ICorDebugValue"物件的基本類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,21 +37,21 @@ HRESULT GetType (
   
 #### <a name="parameters"></a>參數  
  `pType`  
- [out]值為"CorElementType 」 列舉值，指出值的類型指標。  
+ [out]值為"CorElementType"列舉，指出值的類型指標。  
   
 ## <a name="remarks"></a>備註  
- 如果物件是複雜的執行階段類型，該類型可以透過適當的子類別檢查`ICorDebugValue`介面。 例如，"ICorDebugObjectValue 」，以繼承自`ICorDebugValue`，表示複雜類型。  
+ 如果物件是複雜的執行階段型別，該類型會檢查透過適當的子`ICorDebugValue`介面。 例如，"ICorDebugObjectValue 」，繼承自`ICorDebugValue`，表示複雜型別。  
   
- `GetType`和[icordebugobjectvalue:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)方法都會傳回值的類型資訊。 它們會同時取代感知泛型[icordebugvalue2:: Getexacttype](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)方法。  
+ `GetType`並[icordebugobjectvalue:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)方法都會傳回值的型別資訊。 它們兩者都由取代感知泛型[ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- 
+## <a name="see-also"></a>另請參閱
+

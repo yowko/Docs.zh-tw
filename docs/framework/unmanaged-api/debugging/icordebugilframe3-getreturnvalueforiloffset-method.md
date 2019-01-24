@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 315bd78f660e093ecbf65224bd09a9b4f44300b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5d0b92dccceab48fcf0780a29d7bac38d591455
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714967"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset 方法
 取得封裝函式的傳回值的"ICorDebugValue 」 物件。  
@@ -39,39 +39,39 @@ HRESULT GetReturnValueForILOffset(
  IL 位移。 請參閱＜備註＞一節。  
   
  `ppReturnValue`  
- 「 ICorDebugValue 」 介面物件，提供函式呼叫的傳回值的相關資訊的位址指標。  
+ 提供函式呼叫的傳回值的詳細資訊 」 ICorDebugValue 」 介面物件的位址指標。  
   
 ## <a name="remarks"></a>備註  
- 這個方法會用於[icordebugcode3:: Getreturnvalueliveoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法來取得方法的傳回值。 它是在其傳回值會被忽略，如下列兩個程式碼範例所示的方法的情況下特別有用。 第一個範例會呼叫<xref:System.Int32.TryParse%2A?displayProperty=nameWithType>方法，但會忽略方法的傳回值。  
+ 這個方法會用於[ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法來取得方法的傳回值。 它是在方法的傳回值會被忽略，如下列兩個程式碼範例所示的情況下特別有用。 第一個範例會呼叫<xref:System.Int32.TryParse%2A?displayProperty=nameWithType>方法，但是忽略方法的傳回值。  
   
  [!code-csharp[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv1.cs#1)]
  [!code-vb[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv1.vb#1)]  
   
- 第二個範例說明如何在偵錯更常見的問題。 當做方法呼叫中引數使用的方法，因為它的傳回值存取。 只有在偵錯工具逐步執行呼叫的方法時，才 在許多情況下，特別是當外部程式庫中定義呼叫的方法不可行。  
+ 第二個範例說明一個更常見的問題，在偵錯。 因為方法用來當做方法呼叫中引數，其傳回值只在偵錯工具逐步執行呼叫的方法時，才是可存取。 在許多情況下，特別是當被呼叫的方法定義在外部程式庫，這不可能。  
   
  [!code-csharp[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv2.cs#2)]
  [!code-vb[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv2.vb#2)]  
   
- 如果您要傳入[icordebugcode3:: Getreturnvalueliveoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) IL 位移函式呼叫位置的方法，它會傳回一或多個原生位移。 偵錯工具然後可以在這些原生位移函式中設定中斷點。 當偵錯工具叫用的其中一個中斷點時，然後您可以傳遞相同的 IL 位移傳遞到這個方法，以取得傳回值。 偵錯工具應再清除它所設定的所有中斷點。  
+ 如果您傳遞[ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) il 位移函式呼叫位置的方法，它會傳回一或多個原生位移。 偵錯工具則可以在這些函式中的原生位移上設定中斷點。 當偵錯工具叫用其中一個中斷點時，您可以將相同的 IL 位移傳遞給這個方法，以取得傳回值。 偵錯工具應接著清除它所設定的所有中斷點。  
   
 > [!WARNING]
->  [Icordebugcode3:: Getreturnvalueliveoffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)和`ICorDebugILFrame3::GetReturnValueForILOffset`方法可讓您取得只參考類型的傳回值資訊。 傳回值的資訊擷取實值類型 (也就是所有的型別衍生自<xref:System.ValueType>) 不支援。  
+>  [ICorDebugCode3::GetReturnValueLiveOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)和`ICorDebugILFrame3::GetReturnValueForILOffset`方法可讓您取得僅參考型別傳回值資訊。 傳回值資訊擷取實值型別 (也就是所有的型別衍生自<xref:System.ValueType>) 不支援。  
   
- 所指定的 IL 位移`ILOffset`參數應該是位於函式呼叫位置，以及偵錯項目應該停止於中斷點，在所傳回的原生位移設定[icordebugcode3:: Getreturnvalueliveoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法針對相同的 IL 位移。 如果指定的 IL 位移的正確位置在不停止偵錯項目時，API 將會失敗。  
+ 所指定的 IL 位移`ILOffset`參數應該是在函式呼叫站台，以及偵錯項目應停止於中斷點，設定所傳回之原生位移[ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法相同的 IL 位移。 如果未在指定的 IL 位移的正確位置停止偵錯項目，則 API 將會失敗。  
   
- 如果函式呼叫不會傳回值，此 API 將會失敗。  
+ 如果函式呼叫沒有傳回值，則 API 將會失敗。  
   
- `ICorDebugILFrame3::GetReturnValueForILOffset`方法是僅可在 x86 型和 AMD64 系統。  
+ `ICorDebugILFrame3::GetReturnValueForILOffset`方法是僅適用於 x86 架構和 AMD64 系統。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [GetReturnValueLiveOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)  
- [ICorDebugILFrame3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+## <a name="see-also"></a>另請參閱
+- [GetReturnValueLiveOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)
+- [ICorDebugILFrame3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)

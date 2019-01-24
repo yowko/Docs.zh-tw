@@ -2,12 +2,12 @@
 title: 保護連接資訊
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 6cd27f2bce1879301e80c7a8ec689971705a45b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4c96861afc47c67c8e8c1f3721b09672ca3f48ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662214"
 ---
 # <a name="protecting-connection-information"></a>保護連接資訊
 保護應用程式時的最重要目標之一就是保護資料來源的存取。 連接字串如果沒有受到保護，就可能造成安全性漏洞。 以純文字儲存連接資訊，或在記憶體中保存連接資訊，都會危及整個系統的安全性。 內嵌在原始程式碼中的連接字串可使用讀取[Ildasm.exe （IL 反組譯工具）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)若要檢視已編譯的組件中的 Microsoft intermediate language (MSIL)。  
@@ -39,8 +39,8 @@ ms.locfileid: "43513473"
 ## <a name="encrypt-configuration-files"></a>加密組態檔  
  連接字串也可以儲存在組態檔案中，這麼做可免除將連接字串嵌入應用程式程式碼的需要。 組態檔是標準的 XML 檔案，.NET Framework 已為其定義了共用元素組。 組態檔中的連接字串通常會儲存在 **\<connectionStrings >** 中的項目**app.config**對於 Windows 應用程式，或**web.config** ASP.NET 應用程式的檔案。 如需有關基本概念的儲存，擷取和加密的連接字串從組態檔，請參閱[連接字串和組態檔](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [使用受保護的組態加密組態資訊](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
- [PAVE 機器碼和 .NET Framework 程式碼中的安全性](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [使用受保護的組態加密組態資訊](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)
+- [PAVE 機器碼和 .NET Framework 程式碼中的安全性](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: 一般結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: 157330304ac656ddbdbb18408ca5144566746808
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: dfd1e28a117ca71cac6c792058c1aeb17a0c4f69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700958"
 ---
 # <a name="common-schema-collections"></a>一般結構描述集合
 通用結構描述集合是由每個 .NET Framework Managed 提供者所實作的結構描述集合。 您可以查詢來判斷支援的結構描述集合清單，藉由呼叫.NET Framework managed 提供者**GetSchema**方法沒有引數，或以結構描述集合名稱"MetaDataCollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。 這些集合會描述所有必要資料行。 如果願意，提供者可以隨意加入其他資料行。 例如，`SqlClient` 及 `OracleClient` 會將 ParameterName 加入限制集合。  
@@ -74,7 +74,7 @@ ms.locfileid: "44260265"
 |IsConcurrencyType|bool|True 表示每次資料列變更及資料行的值與之前的值不同時，資料庫都會更新資料型別。<br /><br /> False 表示每次資料列變更時，資料庫不會更新資料型別。<br /><br /> DBNull.Value 表示資料庫不支援此型別的資料型別。|  
 |IsLiteralSupported|bool|True 表示資料型別可表示為常值。<br /><br /> False 表示資料型別不可表示為常值。|  
 |LiteralPrefix|string|套用至指定常值的前置詞。|  
-|Datatypes|字串|套用至指定常值的後置詞。|  
+|LiteralSuffix|字串|套用至指定常值的後置詞。|  
 |NativeDataType|String|NativeDataType 是用於公開資料型別之 OLE DB 型別的 OLE DB 特定資料行。|  
   
 ## <a name="restrictions"></a>限制  
@@ -92,9 +92,9 @@ ms.locfileid: "44260265"
   
 |ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
-|Reservedwords|字串|提供者特定的保留的字。|  
+|ReservedWord|字串|提供者特定的保留的字。|  
   
-## <a name="see-also"></a>另請參閱  
- [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [GetSchema 和結構描述集合](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [GetSchema 和結構描述集合](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
