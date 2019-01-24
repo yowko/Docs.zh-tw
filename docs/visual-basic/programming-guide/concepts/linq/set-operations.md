@@ -2,12 +2,12 @@
 title: 設定作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 2620fa02c8f1f07edbf149c3202af8ab1decc072
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1b515c7eee11f7aadc1d34223dbb4ea1367842d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741870"
 ---
 # <a name="set-operations-visual-basic"></a>設定作業 (Visual Basic)
 LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是根據相同或不同集合 (集) 內是否有對等項目而定。  
@@ -46,13 +46,13 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
  ![顯示兩個序列聯集的圖形。](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
   
 ## <a name="query-expression-syntax-example"></a>查詢運算式語法範例  
- 下列範例會使用`Distinct`LINQ 查詢來傳回唯一的數字從整數的清單中的子句。  
+ 下列範例會使用`Distinct`在 LINQ 查詢中傳回唯一的數字的整數清單的子句。  
   
  [!code-vb[CsLINQSetOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq>  
- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Distinct 子句](../../../../visual-basic/language-reference/queries/distinct-clause.md)  
- [如何： 合併和比較字串集合 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
- [如何： 尋找兩個清單 (LINQ) (Visual Basic) 之間的差異](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Linq>
+- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Distinct 子句](../../../../visual-basic/language-reference/queries/distinct-clause.md)
+- [如何：合併和比較字串集合 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [如何：尋找兩個清單 (LINQ) (Visual Basic) 之間的集合差異](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

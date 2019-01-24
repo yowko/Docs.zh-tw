@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 46d70a0b0ccc33755666867240be8778b5638947
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 13bc401647612c982eb13a3b607e41c6afa61716
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742743"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的佇列
 在本節中的主題將討論 Windows Communication Foundation (WCF) 支援佇列。 WCF 會提供支援藉由利用 Microsoft Message Queuing （先前稱為 MSMQ） 做為傳輸佇列，並適用於下列案例：  
@@ -22,7 +22,7 @@ ms.locfileid: "43858365"
   
 -   中斷操作。 當透過高延遲網路或可用性有限的網路進行通訊時 (例如使用行動裝置)，傳送、接收和處理操作可能中斷。 佇列能夠使這些操作繼續進行，即使已經與端點中斷連線也是一樣。 重新建立連線後，佇列會將訊息轉送至接收應用程式。  
   
- 若要使用的佇列功能的 WCF 應用程式中，您可以使用其中一個標準繫結，或如果其中一個標準繫結無法滿足您的需求，您可以建立自訂繫結。 如需相關標準繫結，以及如何選擇其中一個的詳細資訊，請參閱[如何： 與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 如需建立自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 若要使用的佇列功能的 WCF 應用程式中，您可以使用其中一個標準繫結，或如果其中一個標準繫結無法滿足您的需求，您可以建立自訂繫結。 如需相關標準繫結，以及如何選擇其中一個的詳細資訊，請參閱[How to:與 WCF 端點交換訊息和訊息佇列應用程式](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 如需建立自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
@@ -34,7 +34,7 @@ ms.locfileid: "43858365"
  [如何：與 WCF 端點交換佇列訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  說明如何使用<xref:System.ServiceModel.NetMsmqBinding>WCF 用戶端和 WCF 服務之間進行通訊的類別。  
   
- [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [如何：Exchange 與 WCF 端點的訊息和訊息佇列應用程式](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  說明如何使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>WCF 和訊息佇列應用程式之間進行通訊。  
   
  [在工作階段中群組佇列訊息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
@@ -64,5 +64,5 @@ ms.locfileid: "43858365"
  [佇列通訊的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  說明使用 WCF 的最佳做法佇列通訊。  
   
-## <a name="see-also"></a>另請參閱  
- [訊息佇列](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+## <a name="see-also"></a>另請參閱
+- [訊息佇列](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

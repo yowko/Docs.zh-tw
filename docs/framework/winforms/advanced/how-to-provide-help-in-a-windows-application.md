@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows 應用程式中提供說明
+title: HOW TO：在 Windows 應用程式中提供說明
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], Windows applications
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 98ed6d4e10d0eb80b99a36172980fcb33186c8ca
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 00ee19f343d8f471d84f3dc8180e61b7354e3985
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738598"
 ---
-# <a name="how-to-provide-help-in-a-windows-application"></a>如何：在 Windows 應用程式中提供說明
+# <a name="how-to-provide-help-in-a-windows-application"></a>HOW TO：在 Windows 應用程式中提供說明
 您可以使用的<xref:System.Windows.Forms.HelpProvider>附加至 Windows Form 上的特定控制項的說明檔內的 [說明] 主題的元件。 說明檔可以是 HTML 或 HTMLHelp 1.x 或更高的格式。  
   
 > [!NOTE]
@@ -48,15 +48,15 @@ ms.locfileid: "43801238"
   
  在執行階段，按下 F1 時控制項 — 對於您已設定**HelpKeyword**並**HelpNavigator**屬性 — 有焦點將會開啟您與它相關的說明檔<xref:System.Windows.Forms.HelpProvider>元件。  
   
- 目前，**HelpNamespace** 屬性支援下列三種格式的說明檔：HTMLHelp 1.x、HTMLHelp 2.0 和 HTML。 因此，您可以將 **HelpNamespace** 屬性設定為 http:// 位址，例如網頁。 如果這麼做，則會開啟將 **HelpKeyword** 屬性中所指定的字串用作錨點之網頁的預設瀏覽器。 錨點是用來跳到 HTML 網頁的特定組件。  
+ 目前， **HelpNamespace**屬性支援下列三種格式的說明檔：HTMLHelp 1.x、 HTMLHelp 2.0 和 HTML。 因此，您可以將 **HelpNamespace** 屬性設定為 http:// 位址，例如網頁。 如果這麼做，則會開啟將 **HelpKeyword** 屬性中所指定的字串用作錨點之網頁的預設瀏覽器。 錨點是用來跳到 HTML 網頁的特定組件。  
   
 > [!IMPORTANT]
 >  請先仔細檢查用戶端所傳送的任何資訊，再將它用於應用程式中。 惡意使用者可能會嘗試傳送或插入可執行的指令碼、SQL 陳述式或其他程式碼。 在顯示使用者的輸入、將它儲存在資料庫中，或使用它之前，請先檢查它未包含可能不安全的資訊。 一般檢查方式是在您收到來自使用者的輸入時，使用規則運算式來尋找關鍵字，例如 "SCRIPT"。  
   
- 您也可以使用<xref:System.Windows.Forms.HelpProvider>元件來顯示快顯說明，即使您將它設定為顯示在 Windows Forms 上控制項的說明檔案。 如需詳細資訊，請參閱[如何：顯示快顯說明](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)。  
+ 您也可以使用<xref:System.Windows.Forms.HelpProvider>元件來顯示快顯說明，即使您將它設定為顯示在 Windows Forms 上控制項的說明檔案。 如需詳細資訊，請參閱[＜How to：顯示快顯說明](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [操作說明：顯示快顯說明](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
- [使用工具提示來顯示控制項說明](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- [整合 Windows Forms 中的使用者說明](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
- [Windows Forms](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>另請參閱
+- [如何：顯示快顯說明](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)
+- [使用工具提示來顯示控制項說明](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
+- [整合 Windows Forms 中的使用者說明](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
+- [Windows Forms](../../../../docs/framework/winforms/index.md)

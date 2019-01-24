@@ -1,5 +1,5 @@
 ---
-title: 操作說明：沿著路徑建立物件的動畫 (矩陣動畫)
+title: HOW TO：沿著路徑建立物件的動畫 (矩陣動畫)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-ms.openlocfilehash: f88133a5e927a1a1f59b1aa02826d140c107d002
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 836f61e062b921c7e51166a35d8169f903fcbab9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738296"
 ---
-# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>操作說明：沿著路徑建立物件的動畫 (矩陣動畫)
+# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>HOW TO：沿著路徑建立物件的動畫 (矩陣動畫)
 此範例示範如何使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>類別以動畫顯示物件沿著路徑所定義<xref:System.Windows.Media.PathGeometry>。  
   
 ## <a name="example"></a>範例  
@@ -34,7 +34,7 @@ ms.locfileid: "43469982"
   
  如需完整的範例，請參閱[路徑動畫範例](https://go.microsoft.com/fwlink/?LinkID=160028)。 如需幾何路徑的詳細資訊，請參閱 <<c0> [ 幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [路徑動畫範例](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [路徑動畫操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [路徑動畫範例](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [路徑動畫操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

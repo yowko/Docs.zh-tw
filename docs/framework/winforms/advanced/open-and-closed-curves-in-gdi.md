@@ -10,48 +10,48 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-ms.openlocfilehash: 47f420184ac384ab11054d1cc3e767ab7f618234
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8581b5f8d774a91d17dcfe93f801d87394f28c0b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735204"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>GDI+ 中的開放型和封閉型曲線
-下圖顯示兩個曲線： 開啟單一，另一個已關閉。  
+下圖顯示兩個曲線： 開啟和其中一個已關閉。  
   
- ![開放型 & 封閉型曲線](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art24.gif "Aboutgdip02_art24")  
+ ![開啟 & 封閉型曲線](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art24.gif "Aboutgdip02_art24")  
   
 ## <a name="managed-interface-for-curves"></a>曲線的 managed 的介面  
- 封閉型曲線有內部，因此可以填滿的筆刷。 <xref:System.Drawing.Graphics>類別[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供下列方法，以便填滿封閉的圖形和曲線： <xref:System.Drawing.Graphics.FillRectangle%2A>， <xref:System.Drawing.Graphics.FillEllipse%2A>， <xref:System.Drawing.Graphics.FillPie%2A>， <xref:System.Drawing.Graphics.FillPolygon%2A>， <xref:System.Drawing.Graphics.FillClosedCurve%2A>， <xref:System.Drawing.Graphics.FillPath%2A>，和<xref:System.Drawing.Graphics.FillRegion%2A>。 每當您呼叫其中一種方法時，您必須傳遞其中一個特定的筆刷類型 (<xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，或<xref:System.Drawing.Drawing2D.PathGradientBrush>) 做為引數。  
+ 封閉型曲線有內部，因此可以填滿筆刷。 <xref:System.Drawing.Graphics>類別內[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供下列方法來填滿封閉的形狀和曲線： <xref:System.Drawing.Graphics.FillRectangle%2A>， <xref:System.Drawing.Graphics.FillEllipse%2A>， <xref:System.Drawing.Graphics.FillPie%2A>， <xref:System.Drawing.Graphics.FillPolygon%2A>， <xref:System.Drawing.Graphics.FillClosedCurve%2A>， <xref:System.Drawing.Graphics.FillPath%2A>，和<xref:System.Drawing.Graphics.FillRegion%2A>。 每當您呼叫其中一個方法，您必須傳遞其中一個特定的筆刷類型 (<xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，或<xref:System.Drawing.Drawing2D.PathGradientBrush>) 做為引數。  
   
- <xref:System.Drawing.Graphics.FillPie%2A>方法是<xref:System.Drawing.Graphics.DrawArc%2A>方法。 就像<xref:System.Drawing.Graphics.DrawArc%2A>方法繪製外框的橢圓形的一部分<xref:System.Drawing.Graphics.FillPie%2A>方法填入一部分的橢圓形內部。 下列範例會繪製弧形，並填滿橢圓形內部的對應部分：  
+ <xref:System.Drawing.Graphics.FillPie%2A>方法是附隨於<xref:System.Drawing.Graphics.DrawArc%2A>方法。 就如同<xref:System.Drawing.Graphics.DrawArc%2A>方法會繪製外框的橢圓形，部分<xref:System.Drawing.Graphics.FillPie%2A>方法會填滿橢圓形內部的一部分。 下列範例會繪製弧形，並填滿橢圓形內部的相對應的部分：  
   
  [!code-csharp[LinesCurvesAndShapes#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#21)]
  [!code-vb[LinesCurvesAndShapes#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#21)]  
   
- 下圖顯示弧形和填滿的圓形。  
+ 下圖顯示弧線和填滿的圓形。  
   
- ![開放型 & 封閉型曲線](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art25.gif "Aboutgdip02_art25")  
+ ![開啟 & 封閉型曲線](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art25.gif "Aboutgdip02_art25")  
   
- <xref:System.Drawing.Graphics.FillClosedCurve%2A>方法是<xref:System.Drawing.Graphics.DrawClosedCurve%2A>方法。 這兩種方法會藉由連接的起始點的結束點，自動關閉曲線。 下列範例會繪製曲線，通過 （0，0），（60，20） 和 （40、 50）。 曲線後，自動關閉連接 （40、 50） 的起始點 （0，0），並利用純色填滿內部。  
+ <xref:System.Drawing.Graphics.FillClosedCurve%2A>方法是附隨於<xref:System.Drawing.Graphics.DrawClosedCurve%2A>方法。 這兩種方法會藉由連接的起始點的結束點，自動關閉曲線。 下列範例會繪製曲線通過 （0，0），（60，20），以及 （40、 50）。 然後曲線會自動關閉連接 （40、 50） 開始的點 （0，0），並使用純色填滿內部。  
   
  [!code-csharp[LinesCurvesAndShapes#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#22)]
  [!code-vb[LinesCurvesAndShapes#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#22)]  
   
- <xref:System.Drawing.Graphics.FillPath%2A>方法填滿內部的路徑的個別項目。 如果路徑的一不會形成封閉的曲線或圖形，<xref:System.Drawing.Graphics.FillPath%2A>方法填滿它之前會自動關閉該片段的路徑。 下列範例會繪製，並填滿弧線、 曲線、 字串和圓形圖所組成的路徑：  
+ <xref:System.Drawing.Graphics.FillPath%2A>方法會填滿之路徑的個別部分的內部互相。 如果一段路徑不會形成封閉的曲線或圖形，<xref:System.Drawing.Graphics.FillPath%2A>方法會自動關閉該路徑的部分填滿它之前。 下列範例會繪製，並填滿弧線、 基線曲線、 字串和圓形圖組成的路徑：  
   
  [!code-csharp[LinesCurvesAndShapes#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#23)]
  [!code-vb[LinesCurvesAndShapes#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#23)]  
   
- 下圖顯示逾時或無純色填滿的路徑。 請注意，在字串中的文字是所述，但不是填滿，由<xref:System.Drawing.Graphics.DrawPath%2A>方法。 它是<xref:System.Drawing.Graphics.FillPath%2A>繪製內部的字串中字元的方法。  
+ 下圖顯示包含或不含純色填滿的路徑。 請注意，在字串中的文字是所述，但未填入，藉由<xref:System.Drawing.Graphics.DrawPath%2A>方法。 它是<xref:System.Drawing.Graphics.FillPath%2A>繪製字串中字元的內部互相的方法。  
   
- ![字串之路徑中的](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art26.gif "Aboutgdip02_art26")  
+ ![路徑中的字串](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art26.gif "Aboutgdip02_art26")  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>  
- <xref:System.Drawing.Pen?displayProperty=nameWithType>  
- <xref:System.Drawing.Point?displayProperty=nameWithType>  
- [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [操作說明：建立繪圖的圖形物件](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [建構和繪製路徑](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
+- <xref:System.Drawing.Pen?displayProperty=nameWithType>
+- <xref:System.Drawing.Point?displayProperty=nameWithType>
+- [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [如何：建立繪圖的圖形物件](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+- [建構和繪製路徑](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)

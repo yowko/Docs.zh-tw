@@ -2,12 +2,12 @@
 title: WCF Web HTTP 程式設計物件模型
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 8400798e4edcad41c4f5336d59646413900347f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e15f616aa7ef9502176c5d508f8d8882e2a5bd47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861633"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739361"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP 程式設計物件模型
 WCF WEB HTTP 程式設計模型可讓開發人員公開透過基本 HTTP 要求的 Windows Communication Foundation (WCF) Web 服務，而不需要使用 SOAP。 WCF WEB HTTP 程式設計模型是建置在現有的 WCF 擴充性模型之上。 這個模型會定義下列類別：  
@@ -94,15 +94,15 @@ WCF WEB HTTP 程式設計模型可讓開發人員公開透過基本 HTTP 要求�
  <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> 類別會使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 類別，以將呼叫分派至服務作業。  
   
 ## <a name="compatibility"></a>相容性  
- WCF WEB HTTP 程式設計模型不會使用 SOAP 型訊息，並因此不支援 WS-* 通訊協定。 不過，您可以透過兩個不同的端點來公開相同的合約：一個端點使用 SOAP，而另一個端點不使用 SOAP。 請參閱[如何： 公開給 SOAP 和 Web 用戶端合約](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)的範例。  
+ WCF WEB HTTP 程式設計模型不會使用 SOAP 型訊息，並因此不支援 WS-* 通訊協定。 不過，您可以透過兩個不同的端點來公開相同的合約：一個端點使用 SOAP，而另一個端點不使用 SOAP。 請參閱[如何：公開給 SOAP 和 Web 用戶端合約](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)的範例。  
   
 ## <a name="security"></a>安全性  
  因為 WCF WEB HTTP 程式設計模型不支援 WS-* 通訊協定來保護在 WCF WEB HTTP 程式設計模型上建置的 Web 服務的唯一方法是運用 SSL 公開服務。 如需有關設定使用 SSL[!INCLUDE[iisver](../../../../includes/iisver-md.md)]請參閱[如何在 IIS 中實作 SSL](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>  
- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
- <xref:System.ServiceModel.Description.WebHttpBehavior>  
- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
- [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>
+- <xref:System.ServiceModel.Description.WebHttpBehavior>
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>
+- [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 092f073a138a09fc25b96fbddde5b73992056981
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: db802e127cacec2243741310b8a885c7ffcd24e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736990"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>在用戶端應用程式中使用資料服務 (WCF 資料服務)
 您可以存取服務公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要將 URI 提供給網頁瀏覽器。 URI 可提供資源的位址，而要求訊息會傳送至這些位址，以存取或變更資源所代表的基礎資料。 瀏覽器會發出 HTTP GET 命令，並且以 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要的形式傳回要求的資源。 如需詳細資訊，請參閱 <<c0> [ 從網頁瀏覽器存取服務](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)。  
@@ -33,16 +33,16 @@ ms.locfileid: "44087779"
   
 -   **HTTP MERGE** -由於執行刪除再插入資料來源，只為了變更實體資料的方式非常缺乏效率[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]引進了新的 HTTP MERGE 動作。 要求訊息的承載包含在定址實體資源中必須變更的屬性。 由於 HTTP 規格中未定義 HTTP MERGE，因此可能需要進行額外處理，才能透過非 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 感知的伺服器來路由傳送 HTTP MERGE 要求。  
   
- 如需詳細資訊，請參閱 < [OData： 作業](https://go.microsoft.com/fwlink/?LinkId=185792)。  
+ 如需詳細資訊，請參閱[OData:作業](https://go.microsoft.com/fwlink/?LinkId=185792)。  
   
 ### <a name="payload-formats"></a>承載格式  
  若為 HTTP PUT、HTTP POST 或 HTTP MERGE 要求，要求訊息的裝載會包含您傳送至資料服務的實體資料。 承載的內容取決於訊息的資料格式。 所有動作 (DELETE 除外) 的 HTTP 回應也包含此類承載。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支援以下列承載格式存取及變更服務的資料：  
   
--   **Atom** -藉由以 XML 為基礎的訊息編碼，可定義[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]做為 Atom 發行通訊協定 (AtomPub) 來啟用透過 HTTP 交換資料，如 Web 摘要、 podcast、 wiki 及以 XML 為基礎的網際網路功能的延伸。 如需詳細資訊，請參閱 < [OData: Atom 格式](https://go.microsoft.com/fwlink/?LinkId=185794)。  
+-   **Atom** -藉由以 XML 為基礎的訊息編碼，可定義[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]做為 Atom 發行通訊協定 (AtomPub) 來啟用透過 HTTP 交換資料，如 Web 摘要、 podcast、 wiki 及以 XML 為基礎的網際網路功能的延伸。 如需詳細資訊，請參閱[OData:Atom 格式](https://go.microsoft.com/fwlink/?LinkId=185794)。  
   
--   **JSON** -JavaScript Object Notation (JSON) 是以 JavaScript 程式設計語言的子集為基礎的輕量型資料交換格式。 如需詳細資訊，請參閱 < [OData: JSON 格式](https://go.microsoft.com/fwlink/?LinkId=185795)。  
+-   **JSON** -JavaScript Object Notation (JSON) 是以 JavaScript 程式設計語言的子集為基礎的輕量型資料交換格式。 如需詳細資訊，請參閱[OData:JSON 格式](https://go.microsoft.com/fwlink/?LinkId=185795)。  
   
- HTTP 要求訊息的標頭中會要求裝載的訊息格式。 如需詳細資訊，請參閱 < [OData： 作業](https://go.microsoft.com/fwlink/?LinkID=185792)。  
+ HTTP 要求訊息的標頭中會要求裝載的訊息格式。 如需詳細資訊，請參閱[OData:作業](https://go.microsoft.com/fwlink/?LinkID=185792)。  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>使用用戶端程式庫存取及變更資料  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包含可讓您更輕鬆地取用的用戶端程式庫[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]從.NET Framework 和 Silverlight 為基礎的用戶端應用程式摘要。 這些程式庫會簡化 HTTP 訊息的傳送與接收。 他們也會將訊息承載轉譯為代表實體資料的 CLR 物件。 用戶端程式庫具有兩個核心類別： <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601>。 這些類別可讓您查詢資料服務，然後使用傳回的實體資料當做 CLR 物件。 如需詳細資訊，請參閱 < [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)並[WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)。  
@@ -51,6 +51,6 @@ ms.locfileid: "44087779"
   
  有一些程式庫可供您可以用來取用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]其他種類的用戶端應用程式中的摘要。 如需詳細資訊，請參閱 < [OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796)。  
   
-## <a name="see-also"></a>另請參閱  
- [存取資料服務資源](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
- [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+## <a name="see-also"></a>另請參閱
+- [存取資料服務資源](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

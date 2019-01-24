@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, concurency sample
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-ms.openlocfilehash: f8925157714621f8b97893bc25e41685778416f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d2aed72a075fb5fd6fc52d38a05488367b5e4467
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745489"
 ---
 # <a name="concurrency"></a>並行
 並行範例會示範搭配 <xref:System.ServiceModel.ServiceBehaviorAttribute> 列舉使用 <xref:System.ServiceModel.ConcurrencyMode>，以控制服務的執行個體要循序處理或並行處理訊息。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它會實作`ICalculator`服務合約。 這個範例會定義繼承自 `ICalculatorConcurrency` 的新合約 `ICalculator`，並提供兩個額外作業來檢查服務的並行狀態。 藉由改變並行設定，您可以在執行用戶端時觀察行為上的改變。  
@@ -22,11 +22,11 @@ ms.locfileid: "50186001"
   
  其中提供三種可用的並行模式：  
   
--   `Single`：每個服務執行個體都會一次處理一個訊息。 這是預設的並行模式。  
+-   `Single`：每個服務執行個體一次處理一個訊息。 這是預設的並行模式。  
   
--   `Multiple`：每個服務執行個體都會並行處理多個訊息。 此服務實作必須是安全執行緒，才能使用這種並行模式。  
+-   `Multiple`：每個服務執行個體同時處理多個訊息。 此服務實作必須是安全執行緒，才能使用這種並行模式。  
   
--   `Reentrant`：每個服務執行個體都會一次處理一個訊息，但是接受可重新進入 (Re-entrant) 的呼叫。 服務只有在對外呼叫時才會接受這些呼叫。可重新進入所示[ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)範例。  
+-   `Reentrant`：每個服務執行個體一次處理一個訊息，但接受可重新進入的呼叫。 服務只有在對外呼叫時才會接受這些呼叫。可重新進入所示[ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)範例。  
   
  並存的使用與執行個體模式有關。 在 <xref:System.ServiceModel.InstanceContextMode.PerCall> 執行個體中，並行模式沒有任何相關，因為每個訊息都是由新的服務執行個體處理。 在 <xref:System.ServiceModel.InstanceContextMode.Single> 執行個體中，只有 <xref:System.ServiceModel.ConcurrencyMode.Single> 或 <xref:System.ServiceModel.ConcurrencyMode.Multiple>，並行模式才相關，這點會依單一執行個體是循序處理或並行處理訊息而定。 在 <xref:System.ServiceModel.InstanceContextMode.PerSession> 執行個體中，任何並行模式都可能相關。  
   

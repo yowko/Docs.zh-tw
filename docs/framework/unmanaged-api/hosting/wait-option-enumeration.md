@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb37394799db39baa406ef332066d5ebb2dbf19d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 793d3996f9cbcb1a38a728ade06f775784166123
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745892"
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION 列舉
-包含值，表示是否通用語言執行平台 (CLR) 區塊所要求的作業，應該採取動作的主機。  
+包含值，指出是否通用語言執行平台 (CLR) 區塊所要求的作業，應該採取動作的主機。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,21 +40,21 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`WAIT_ALERTABLE`|通知主機應該喚醒工作，如果 CLR 會呼叫[ihosttask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)方法。|  
-|`WAIT_MSGPUMP`|通知主機，它就必須提示上目前的作業系統執行緒的訊息，如果執行緒被封鎖。 執行階段指定這個值只在<xref:System.Threading.ApartmentState.STA>執行緒。|  
-|`WAIT_NOTINDEADLOCK`|通知主機指定的同步處理要求，無法分類的主機。 也就是說，無法傳回主機`HOST_E_DEADLOCK`。|  
+|`WAIT_ALERTABLE`|主應用程式應該喚醒工作，如果 CLR 會呼叫[ihosttask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)方法。|  
+|`WAIT_MSGPUMP`|主應用程式，它就必須提取目前的 OS 執行緒上的訊息，如果執行緒被封鎖。 執行階段會指定此值只在<xref:System.Threading.ApartmentState.STA>執行緒。|  
+|`WAIT_NOTINDEADLOCK`|通知主機指定的同步處理的要求不會中斷由主應用程式。 也就是說，無法傳回主機`HOST_E_DEADLOCK`。|  
   
 ## <a name="remarks"></a>備註  
- [Ihosttaskmanager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)和[ihosttaskmanager:: Switchtotask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)這兩個方法會採用此類型的參數。  
+ [Ihosttaskmanager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)並[ihosttaskmanager:: Switchtotask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)方法都採用這種類型的參數。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

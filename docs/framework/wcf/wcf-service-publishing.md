@@ -2,12 +2,12 @@
 title: WCF 服務發行
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 515885658612cf11ecff8e084c466a70ba698625
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ca4a95b606f73800b11416627a27b8174e2bdda9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452983"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742994"
 ---
 # <a name="wcf-service-publishing"></a>WCF 服務發行
 

@@ -2,12 +2,12 @@
 title: .NET Framework XAML 服務的 XAML 命名空間
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: ac6554cbdeb5bc6e0fe7fb96ea95d0143c293d22
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2e9e2d9e2257e5e6059210b82a69d7a837254032
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736795"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML 服務的 XAML 命名空間
 XAML 命名空間是一個擴充的 XML 命名空間定義的概念。 類似於 XML 命名空間，您可以定義 XAML 命名空間使用`xmlns`標記中的屬性。 XAML 命名空間也都被表示 XAML 節點資料流和其他 XAML 服務 Api。 本主題定義 XAML 命名空間概念，並描述如何定義 XAML 命名空間，並可供 XAML 結構描述內容與.NET Framework XAML 服務的其他層面。  
@@ -40,7 +40,7 @@ XAML 命名空間是一個擴充的 XML 命名空間定義的概念。 類似於
   
  更完整的 CLR 命名空間和組件慣例的定義如下所示：  
   
- `clr-namespace:` *clrnsName* `; assembly=` *組件名稱*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyName*  
   
  *assemblyName*表示任何字串做為合法<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>輸入。 這個字串可以包含文化特性、 公開金鑰或版本資訊 (這些概念的定義中的參考主題定義<xref:System.Reflection.Assembly>)。 COFF 格式和辨識項 (所使用的其他多載<xref:System.Reflection.Assembly.Load%2A>) 無關的 XAML 的組件載入之用; 所有的負載資訊必須顯示為字串。  
   
@@ -63,5 +63,5 @@ XAML 命名空間是一個擴充的 XML 命名空間定義的概念。 類似於
   
  屬性是與相關的.NET Framework XAML 服務中處理的 XAML 命名空間的其他兩個 API<xref:System.Windows.Markup.XmlnsDefinitionAttribute>和<xref:System.Windows.Markup.XmlnsPrefixAttribute>。 這些屬性套用至組件。 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 會使用 XAML 結構描述內容來解譯包含 URI 的任何 XAML 命名空間宣告。 <xref:System.Windows.Markup.XmlnsPrefixAttribute> 會使用發出 XAML，以便可以序列化特定的 XAML 命名空間，以可預測的前置詞的工具。 如需詳細資訊，請參閱 < [XAML-Related 自訂類型和程式庫的 CLR 屬性](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [認識 XAML 節點資料流結構和概念](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+## <a name="see-also"></a>另請參閱
+- [認識 XAML 節點資料流結構和概念](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

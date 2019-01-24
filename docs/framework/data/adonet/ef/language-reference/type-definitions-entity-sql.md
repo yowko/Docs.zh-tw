@@ -2,18 +2,18 @@
 title: 類型定義 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 7abbe5dfed005a10955a385cadf12725a9450512
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7ac27c3dd43cb83272bff991dbd713e8269ccbb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743526"
 ---
 # <a name="type-definitions-entity-sql"></a>類型定義 (Entity SQL)
 型別定義用於 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 內嵌函式中的宣告陳述式。  
   
 ## <a name="remarks"></a>備註  
- 內嵌函式的宣告陳述式組成[函式](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)關鍵字後面接著表示函式名稱 (例如，"MyAvg")，後面接著以括號 （適用於在參數定義清單的識別項例如"dues Collection(Decimal)")。  
+ 內嵌函式的宣告陳述式組成[函式](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)關鍵字後面接著表示函式名稱 (例如"MyAvg")，後面接著括號 （適用於中的參數定義清單的識別項例如"dues collection （decimal)。  
   
  參數定義清單包括零或多個參數定義。 每個參數定義包括一個識別項 (函式參數的名稱，例如 "dues")，後面接型別定義 (例如 "Collection(Decimal)")。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "32761151"
   
 -   關鍵字 `COLLECTION` 後面接以括號括住的其他型別定義 (例如 "Collection(AdventureWorks.Order)")。  
   
--   關鍵字 ROW 後面接以括號括住的屬性定義清單 (例如 "Row(x AdventureWorks.Order)")。 屬性定義具有格式，例如"`identifier type_definition`， `identifier type_definition`，..."。  
+-   關鍵字 ROW 後面接以括號括住的屬性定義清單 (例如 "Row(x AdventureWorks.Order)")。 屬性定義都有一種格式如"`identifier type_definition`， `identifier type_definition`，..."。  
   
 -   關鍵字 REF 後面接以括號括住的識別項型別 (例如 "Ref(AdventureWorks.Order)")。 REF 型別定義運算子需要實體類型做為引數。 您不能指定基本型別做為引數。  
   
@@ -86,6 +86,6 @@ Function UnReference(p1 Ref(AdventureWorks.Order)) AS (
 select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>另請參閱
+- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

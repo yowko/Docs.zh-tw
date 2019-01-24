@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83f6190872ecf4435688f3b7c82a61f5f15d9f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f988f95c28e6d2248882fb033b8d8c4d3c629229
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744189"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 結構
 包含參考的組件，包括其版本和層級支援地區設定、 處理器和作業系統的相關資訊。  
@@ -50,24 +50,24 @@ typedef struct {
 |`usMajorVersion`|參考的組件的主要版本號碼。 此值不可為零。 如果所有的位元`usMajorVersion`設定，未指定的主要版本。|  
 |`usMinorVersion`|參考的組件的次要版本號碼。 此值不可為零。 如果所有的位元`usMinorVersion`設定，未指定的次要版本。|  
 |`usBuildNumber`|參考的組件的組建編號。 此值不可為零。 如果所有的位元`usBuildNumber`設定，未指定組建編號。|  
-|`usRevisionNumber`|參考的組件的修訂編號。 此值不可為零。 如果所有的位元`usRevisionNumber`設定，未指定版本號碼。|  
-|`szLocale`|符合 RFC1766 規格中，以分號分隔，指定參考的組件所支援的地區設定的地區設定名稱清單。 Null 值表示地區設定的獨立性。 **注意：** .NET Framework 版本 1.0，您無法指定多個地區設定中。|  
-|`cbLocale`|中的寬字元大小`szLocale`。|  
-|`rdwProcessor`|陣列的識別項，在 Winnt.h 中定義的類型所參考的組件支援的處理器。 NULL 值，表示處理器獨立性。|  
+|`usRevisionNumber`|參考的組件的修訂編號。 此值不可為零。 如果所有的位元`usRevisionNumber`設定，未指定的修訂編號。|  
+|`szLocale`|符合 RFC1766 規格中，使用分號分隔，指定參考的組件所支援的地區設定的地區設定名稱的清單。 Null 值表示地區設定的獨立性。 **注意：** 在.NET Framework 1.0 版，您無法指定多個地區設定。|  
+|`cbLocale`|寬字元大小`szLocale`。|  
+|`rdwProcessor`|陣列識別項，因為在 Winnt.h 中定義的類型參考的組件所支援的處理器。 NULL 值表示處理器的獨立性。|  
 |`ulProcessor`|長度`rdwProcessor`陣列。|  
-|`rOS`|陣列[OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)指定參考的組件所支援之作業系統的執行個體。 NULL 值表示作業系統獨立性。|  
+|`rOS`|陣列[OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)指定參考的組件所支援的作業系統的執行個體。 NULL 值表示作業系統獨立性。|  
 |`ulOS`|長度`rOS`陣列。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料結構](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [OSINFO 結構](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料結構](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [OSINFO 結構](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)

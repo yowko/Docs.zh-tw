@@ -2,12 +2,12 @@
 title: 位元標準函式
 ms.date: 03/30/2017
 ms.assetid: 993868ca-16e3-47b6-9915-c29cd63b0a21
-ms.openlocfilehash: df3b81a47b8e1202884a5c38f55c7061279b245f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 882ecd2e82c64981dd76b3c860711433293145b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761190"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742261"
 ---
 # <a name="bitwise-canonical-functions"></a>位元標準函式
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包含位元標準函式。  
@@ -22,5 +22,5 @@ ms.locfileid: "32761190"
 |`BitWiseOr (` `value1` `,`  `value2` `)`|傳回 `value1` 和 `value2` 的位元分離，作為 `value1` 和 `value2` 的型別。<br /><br /> **引數**<br /><br /> A `Byte`， `Int16`，`Int32`和`Int64`。<br /><br /> **範例**<br /><br /> `-- The following example returns 3.`<br /><br /> `BitWiseOr(1,3)`|  
 |`BitWiseXor (` `value1` `,`  `value2` `)`|傳回 `value1` 和 `value2` 的位元排除分離，作為 `value1` 和 `value2` 的型別。<br /><br /> **引數**<br /><br /> A `Byte`， `Int16`，`Int32`和`Int64`。<br /><br /> **範例**<br /><br /> `-- The following example returns 2.`<br /><br /> `BitWiseXor (1,3)`|  
   
-## <a name="see-also"></a>另請參閱  
- [標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+## <a name="see-also"></a>另請參閱
+- [標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

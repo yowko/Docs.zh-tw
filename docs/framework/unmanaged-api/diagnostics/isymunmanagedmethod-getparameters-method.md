@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fbedb7b1c10dcc2b9b9940db10aae7e4101436b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0fc5fd29b8b423ddd3a659ee2fc8a339eea0105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733879"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters 方法
-取得這個方法的參數。 參數會傳回方法的簽章中所定義的順序。  
+取得這個方法的參數。 參數會傳回方法的簽章中定義的順序。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,16 +42,16 @@ HRESULT GetParameters(
  [in] `params` 陣列的大小。  
   
  `pcParams`  
- [in]指標`ULONG32`包含參數所需的緩衝區大小。  
+ [in]指標`ULONG32`接收，才可包含參數的緩衝區大小。  
   
  `params`  
- [out]接收參數緩衝區的指標。  
+ [out]接收的參數緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

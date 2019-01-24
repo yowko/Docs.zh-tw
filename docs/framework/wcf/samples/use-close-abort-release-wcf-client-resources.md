@@ -3,12 +3,12 @@ title: 使用關閉和中止發行 WCF 用戶端資源
 description: Dispose 可以失敗，而且網路失敗時擲回例外狀況。 這可能導致不想要的行為。 相反地，使用關閉並釋放用戶端的資源，網路失敗時中止。
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: d37ad9d2277fea2656311a5a1f57d51343d10d89
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4996ccba955d7946bb76b8124b8b28d803b6f3e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736425"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>關閉和中止網路連線已卸除時，安全地釋放資源
 此範例示範如何使用`Close`和`Abort`方法，以清除資源，使用具類型的用戶端時。 `using`陳述式會不穩定的網路連線時，會導致例外狀況。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。 在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。  

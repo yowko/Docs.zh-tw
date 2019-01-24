@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 532f69afd949971fbb4f56a8fdbcc6eab159446f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1c214918b4a41ac989a3804c9146c4a54c5909f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738205"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument 方法
-定義來源文件。 Guid 被提供已知的語言、 廠商和文件類型。  
+定義來源文件。 已知的語言、 廠商和文件類型提供的 Guid。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,10 +43,10 @@ HRESULT DefineDocument(
  [in]指標`WCHAR`定義識別文件的統一資源定位器 (URL)。  
   
  `language`  
- [in]定義文件語言的 GUID 指標。  
+ [in]定義文件語言 GUID 指標。  
   
  `languageVendor`  
- [in]識別文件語言的廠商定義的 GUID 指標。  
+ [in]定義文件語言廠商的身分識別的 GUID 指標。  
   
  `documentType`  
  [in]定義文件類型的 GUID 指標。  
@@ -54,10 +55,10 @@ HRESULT DefineDocument(
  [out]所傳回的指標[ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)介面。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：**於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
