@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Joins 以 LINQ 合併資料 (Visual Basic)
+title: HOW TO：以 LINQ 合併資料使用聯結 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 4db5d288d79379b677bb19b2eba0d094e0d71bc8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fd1025d056dfb11d2253a39defb384c1d05efa32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553694"
 ---
-# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>如何：使用 Joins 以 LINQ 合併資料 (Visual Basic)
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>HOW TO：以 LINQ 合併資料使用聯結 (Visual Basic)
 Visual Basic 提供`Join`和`Group Join`查詢子句可讓您結合多個集合之間的一般值為基礎的集合的內容。 這些值稱為*金鑰*值。 開發人員熟悉關聯式資料庫概念會辨識`Join`INNER JOIN 子句和`Group Join`做為有效，LEFT OUTER JOIN 子句。  
   
  本主題中的範例將示範幾種方式使用合併資料`Join`和`Group Join`查詢子句。  
@@ -79,12 +79,12 @@ Visual Basic 提供`Join`和`Group Join`查詢子句可讓您結合多個集合�
   
 2.  按 F5 執行範例。  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)  
- [Group Join 子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)  
- [Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)  
- [查詢](../../../../visual-basic/language-reference/queries/index.md)  
- [使用 LINQ 轉換資料 (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)
+## <a name="see-also"></a>另請參閱
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [Group Join 子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [查詢](../../../../visual-basic/language-reference/queries/index.md)
+- [使用 LINQ 轉換資料 (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

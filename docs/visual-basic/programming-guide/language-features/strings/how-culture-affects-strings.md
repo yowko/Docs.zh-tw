@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 41fd612695fbeacbc7b53cb9e5dbf67939e73482
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543444"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>在 Visual Basic 中文化特性如何影響字串
 此說明頁面討論 Visual Basic 來執行字串轉換及比較所使用的文化特性資訊。  
@@ -36,7 +36,7 @@ ms.locfileid: "39332589"
  如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Conversion.Str%2A> 與 <xref:Microsoft.VisualBasic.Conversion.Val%2A>。  
   
 ## <a name="using-a-specific-culture"></a>使用特定文化特性  
- 假設您正在開發的應用程式，傳送至 Web 服務的日期 （格式為字串）。 在此情況下，您的應用程式必須使用特定文化特性的字串轉換。 為了說明原因，請考慮使用的日期的結果<xref:System.DateTime.ToString>方法： 如果您的應用程式會使用該方法來格式化日期 2005 年 7 月 4 日，則會傳回 「 2005 年 7 月 4 日上午 12:00:00"時執行的美式英文 (EN-US) 文化特性，但它會傳回"04.07.2005 00:00:00 「 當執行與德文 (DE-DE) 文化特性。  
+ 假設您正在開發的應用程式，傳送至 Web 服務的日期 （格式為字串）。 在此情況下，您的應用程式必須使用特定文化特性的字串轉換。 為了說明原因，請考慮使用的日期的結果<xref:System.DateTime.ToString>方法：如果您的應用程式會使用該方法來格式化日期 2005 年 7 月 4 日，它會傳回"2005 年 7 月 4 日上午 12:00:00"時執行的美式英文 (EN-US) 文化特性，但它會傳回"04.07.2005 00:00:00"當執行與德文 (DE-DE) 文化特性。  
   
  當您需要執行的特定文化特性格式的字串轉換時，您應該使用`CultureInfo`類別的內建[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。 您可以建立新`CultureInfo`藉由傳遞文化特性的名稱，以特定文化特性的物件<xref:System.Globalization.CultureInfo.%23ctor%2A>建構函式。 支援的文化特性名稱會列在<xref:System.Globalization.CultureInfo>類別 [說明] 頁面。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "39332589"
 ### <a name="security-considerations"></a>安全性考量  
  如果您的應用程式進行比較或大小寫變更作業的結果為基礎的安全性決策，則作業應該使用<xref:System.String.Compare%2A?displayProperty=nameWithType>方法，然後傳遞`Ordinal`或是`OrdinalIgnoreCase`如`comparisonType`引數。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Globalization.CultureInfo>  
- [Visual Basic 中的字串簡介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Globalization.CultureInfo>
+- [Visual Basic 中的字串簡介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

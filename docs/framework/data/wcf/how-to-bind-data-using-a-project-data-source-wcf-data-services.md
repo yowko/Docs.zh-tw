@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用專案資料來源繫結資料 (WCF Data Services)
+title: HOW TO：使用專案資料來源 (WCF Data Services) 的資料繫結
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 62a7e3bf7caf60c6a532dbffeb8aac8b6c59deb9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540750"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>HOW TO：使用專案資料來源繫結資料 (WCF Data Services)
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>HOW TO：使用專案資料來源 (WCF Data Services) 的資料繫結
 
 您可以建立 WCF Data Services 用戶端應用程式中產生的資料物件為基礎的資料來源。 當您使用，會在將資料服務的參考時**加入服務參考** 對話方塊中，以及產生的用戶端資料類別，會建立一個專案資料來源。 每一個實體集都會建立一個資料來源，並由資料服務公開。 您可以建立這些資料來源項目，從顯示的服務資料的表單**Zdroje dat**拖曳至設計工具 視窗。 這些項目會成為繫結至資料來源的控制項。 在執行期間，此資料來源繫結至的執行個體<xref:System.Data.Services.Client.DataServiceCollection%601>類別，其中會填入資料服務查詢所傳回的物件。 如需詳細資訊，請參閱 <<c0> [ 將資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。
 
@@ -23,7 +23,7 @@ ms.locfileid: "44216525"
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>使用 WPF 視窗中的專案資料來源
 
-1.  在 Visual Studio 中，在 WPF 專案中，加入 Northwind 資料服務的參考。 如需詳細資訊，請參閱 <<c0> [ 如何： 加入資料服務參考](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。
+1.  在 Visual Studio 中，在 WPF 專案中，加入 Northwind 資料服務的參考。 如需詳細資訊，請參閱[＜How to：加入資料服務參考](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。
 
 2.  在 [**資料來源**] 視窗中，展開`Customers`中的節點**NorthwindEntities**專案資料來源。
 

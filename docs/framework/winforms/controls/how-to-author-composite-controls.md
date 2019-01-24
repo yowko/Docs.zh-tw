@@ -1,5 +1,5 @@
 ---
-title: 如何：撰寫複合控制項
+title: HOW TO：撰寫複合控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], creating composite controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 7abdeae4d19ceb6425f85e3cdd28f565a03d7ea4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f2dc0ca7c2514ad444904b707a2cea9d57849660
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397068"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549794"
 ---
-# <a name="how-to-author-composite-controls"></a>如何：撰寫複合控制項
+# <a name="how-to-author-composite-controls"></a>HOW TO：撰寫複合控制項
 複合控制項的運用方式有許多種。 您可以將它們撰寫成 Windows 桌面應用程式專案的一部分，且只在專案中的表單上使用它們。 或者，您可以在 Windows 控制項程式庫專案中撰寫它們、將專案編譯成組件，然後在其他專案中使用控制項。 您甚至可以繼承它們，並使用視覺繼承來針對特殊用途進行快速自訂。  
   
 > [!NOTE]
@@ -78,11 +78,11 @@ ms.locfileid: "47397068"
   
      您可以在 DLL 中看見繼承自複合控制項的組成控制項，而且可以修改其 [修飾詞] 屬性為 [公用] 之控制項的屬性。 您無法變更其 [修飾詞] 屬性為 [私人] 之控制項的屬性。  
   
-## <a name="see-also"></a>另請參閱  
- [逐步解說：使用 Visual Basic 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [逐步解說：使用 Visual C# 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [逐步解說：使用 Visual Basic 繼承自 Windows Forms 控制項](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- [逐步解說：使用 Visual C# 繼承自 Windows Forms 控制項](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
- [控制項類型建議](../../../../docs/framework/winforms/controls/control-type-recommendations.md)  
- [操作說明：撰寫 Windows Forms 的控制項](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
- [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>另請參閱
+- [逐步解說：撰寫使用 Visual Basic 複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [逐步解說：撰寫複合控制項具有視覺效果C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [逐步解說：繼承自使用 Visual Basic 的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [逐步解說：繼承自具有視覺效果的 Windows Forms 控制項C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [控制項類型建議](../../../../docs/framework/winforms/controls/control-type-recommendations.md)
+- [如何：撰寫 Windows forms 的控制項](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)
+- [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

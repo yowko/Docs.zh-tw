@@ -2,12 +2,12 @@
 title: System.TimeSpan 方法
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: ab4519f480dfeca0a35da50a80bd878b7db0960d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a3f3c82f9f8db4b72588f165ed4d897b974eb076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539905"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan 方法
 <xref:System.TimeSpan?displayProperty=nameWithType> 的成員支援主要取決於您所使用的 .NET Framework 和 Microsoft SQL Server 版本。  
@@ -36,8 +36,8 @@ ms.locfileid: "50187058"
 ### <a name="addition-and-subtraction"></a>加法和減法  
  雖然 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 型別支援加法和減法，但是 SQL `TIME` 型別卻不支援。 因此，如果您的 LINQ to SQL 查詢嘗試在對應至 SQL `TIME` 型別時進行加法和減法，它們將會產生錯誤。 您可以找到 SQL 中的日期和時間類型使用的其他考量事項[SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [建立物件模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>另請參閱
+- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [建立物件模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
+- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
