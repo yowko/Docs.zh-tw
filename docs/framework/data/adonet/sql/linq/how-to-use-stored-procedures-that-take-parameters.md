@@ -1,21 +1,21 @@
 ---
-title: 如何：使用有參數的預存程序
+title: HOW TO：使用採用參數的預存程序
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: d1c9337f59b8cf218b9d2ab8fe4cf21afd2da689
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b81cb3b7428ba2ed4e958e18e9368f6f774e8ee3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604218"
 ---
-# <a name="how-to-use-stored-procedures-that-take-parameters"></a>如何：使用有參數的預存程序
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a>HOW TO：使用採用參數的預存程序
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將輸出參數對應至參考參數，而且會針對實值型別 (Value Type)，將參數宣告為可為 Null。  
   
- 如需如何使用輸入的參數在查詢中傳回資料列集的範例，請參閱[如何： 傳回資料列集](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)。  
+ 如需如何使用輸入的參數中的查詢會傳回一個資料列集的範例，請參閱[How to:傳回資料列集](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)。  
   
 ## <a name="example"></a>範例  
  下列範例取用單一輸入參數 (客戶 ID)，並傳回輸出參數 (該客戶的總銷售量)。  
@@ -39,8 +39,8 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-csharp[DLinqSprox#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#3)]
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a>另請參閱  
- [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
- [使用可為 Null 的型別](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)  
- [可為 Null 的值類型](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a>另請參閱
+- [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [使用可為 Null 的型別](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [可為 Null 的值類型](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

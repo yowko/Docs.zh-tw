@@ -1,5 +1,5 @@
 ---
-title: 如何：在執行階段期間隱藏控制項
+title: HOW TO：在執行階段隱藏控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invisible
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
-ms.openlocfilehash: 51e804c7f01b55ed7504837042b6c32bf47d9405
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00f352e0b2c0582c45710f7e5a26e68ab7fbd944
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597786"
 ---
-# <a name="how-to-make-your-control-invisible-at-run-time"></a>如何：在執行階段期間隱藏控制項
-但有些的時候，當您可能想要建立使用者控制項在執行階段不可見。 例如，鬧鐘控制項可能不可見，除了當警示已響起。 輕鬆達成設定<xref:System.Windows.Forms.Control.Visible%2A>屬性。 如果<xref:System.Windows.Forms.Control.Visible%2A>屬性是`true`，控制項將顯示為一般。 如果`false`，將隱藏控制項。 雖然在隱藏時，仍可執行程式碼，在控制項中的，您無法透過使用者介面控制項互動。 如果您想要建立不可見的控制項仍然會回應使用者輸入 （例如滑鼠點按動作），您應該建立透明的控制項。 如需詳細資訊，請參閱[為您的控制項提供透明背景](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)。  
+# <a name="how-to-make-your-control-invisible-at-run-time"></a>HOW TO：在執行階段隱藏控制項
+有些的時候您可能想要建立在執行階段不會察覺的使用者控制項。 例如，警示時鐘控制項可能除了警示已響起時不可見。 這可以輕鬆地藉由設定<xref:System.Windows.Forms.Control.Visible%2A>屬性。 如果<xref:System.Windows.Forms.Control.Visible%2A>屬性是`true`，您的控制項將會出現如往常。 如果`false`，將隱藏控制項。 雖然在控制項中的程式碼仍可能在隱藏時執行，但是您不能透過使用者介面控制項互動。 如果您想要建立不可見的控制項，仍會回應使用者輸入 （例如滑鼠點按），您應該建立透明的控制項。 如需詳細資訊，請參閱 <<c0> [ 為您的控制項提供透明背景](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)。  
   
 ### <a name="to-make-your-control-invisible-at-run-time"></a>若要在執行階段隱藏控制項  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33532408"
     myControl1.Visible = false;  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.Control.Visible%2A>  
- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [操作說明：為控制項提供透明背景](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.Control.Visible%2A>
+- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [如何：為控制項提供透明背景](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：調整 Windows Form 的大小
+title: HOW TO：調整 Windows Form 的大小
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 40a2ff3dcde9d0fbbc9a7e6c67430eb8313614e4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f9a1aae4e9a787b798d6c27f9daa597955b208a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521182"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614561"
 ---
-# <a name="how-to-resize-windows-forms"></a>如何：調整 Windows Form 的大小
-您可以使用幾種方式來指定 Windows Form 的大小。 您可以為 <xref:System.Windows.Forms.Form.Size%2A> 屬性設定新值，或個別調整 <xref:System.Windows.Forms.Control.Height%2A> 或 <xref:System.Windows.Forms.Control.Width%2A> 屬性，以程式設計方式來變更表單的高度和寬度。 如果您使用 Visual Studio，您可以變更使用 Windows Form 設計工具的大小。 另請參閱[如何： 使用設計工具調整 Windows Form](https://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\))。  
+# <a name="how-to-resize-windows-forms"></a>HOW TO：調整 Windows Form 的大小
+您可以使用幾種方式來指定 Windows Form 的大小。 您可以為 <xref:System.Windows.Forms.Form.Size%2A> 屬性設定新值，或個別調整 <xref:System.Windows.Forms.Control.Height%2A> 或 <xref:System.Windows.Forms.Control.Width%2A> 屬性，以程式設計方式來變更表單的高度和寬度。 如果您使用 Visual Studio，您可以變更使用 Windows Form 設計工具的大小。 另請參閱[How to:調整 Windows Form 使用設計工具的大小](https://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\))。  
   
 ### <a name="to-resize-a-form-programmatically"></a>以程式設計方式調整表單的大小  
   
@@ -112,6 +112,6 @@ ms.locfileid: "43521182"
     f->Size->X += 100;  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
- [增強 Windows Forms 應用程式](../../../docs/framework/winforms/advanced/index.md)
+## <a name="see-also"></a>另請參閱
+- [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [增強 Windows Forms 應用程式](../../../docs/framework/winforms/advanced/index.md)

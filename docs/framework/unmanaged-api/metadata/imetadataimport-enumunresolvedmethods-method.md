@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cfd53309b2b5e96e28e9e063a8adfda430864115
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2009104d31723b9fed383b7bbb41146127d89bd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447448"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611952"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods 方法
 列舉 MemberDef 語彙基元，其代表目前中繼資料範圍內無法解析的方法。  
@@ -40,16 +40,16 @@ HRESULT EnumUnresolvedMethods (
   
 #### <a name="parameters"></a>參數  
  `phEnum`  
- [in、 out]列舉值的指標。 這必須是 NULL 的第一個呼叫此方法。  
+ [in、 out]列舉值的指標。 首次呼叫這個方法，這必須是 NULL。  
   
  `rMethods`  
- [out]陣列，用來儲存 memberdef 語彙基元。  
+ [out]陣列，用來儲存 MemberDef 語彙基元。  
   
  `cMax`  
  [in] `rMethods` 陣列的大小上限。  
   
  `pcTokens`  
- [out]Memberdef 語彙基元中傳回的數目`rMethods`。  
+ [out]MemberDef 語彙基元中傳回的數字`rMethods`。  
   
 ## <a name="return-value"></a>傳回值  
   
@@ -59,19 +59,19 @@ HRESULT EnumUnresolvedMethods (
 |`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcTokens`為零。|  
   
 ## <a name="remarks"></a>備註  
- 無法解析的方法是一種已宣告但未實作。 方法會包含在列舉中如果方法已標記為`miForwardRef`和`mdPinvokeImpl`或`miRuntime`設為零。 換句話說，無法解析的方法是標示的類別方法`miForwardRef`但這不是 （透過 PInvoke 到達） 的 unmanaged 程式碼中實作，或在內部實作的執行階段本身  
+ 無法解析的方法是指已宣告但未實作。 如果方法已標記為，方法包含在列舉`miForwardRef`任一個`mdPinvokeImpl`或`miRuntime`設為零。 換句話說，無法解析的方法是一種類別的方法標示為`miForwardRef`但它不實作 （連線到透過 PInvoke） 的 unmanaged 程式碼中也不會實作的執行階段本身內部  
   
- 列舉型別會排除在模組範圍 （全域） 或在介面或抽象類別所定義的所有方法。  
+ 列舉型別會排除在模組範圍 （全域），或在介面或抽象類別中定義的所有方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: a9c5c5529e349eca2ba089ed6fb71da4bd48430a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2d97bd3175de5d0c0587e27c375f2d2bae378a6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600397"
 ---
 # <a name="ltsourcesgt-element"></a>&lt;來源&gt;項目
 指定起始追蹤訊息的追蹤來源。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<來源 >  
+\<system.diagnostics>  
+\<sources>  
   
 ## <a name="syntax"></a>語法  
   
@@ -81,12 +81,12 @@ ms.locfileid: "48033242"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.ConsoleTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- <xref:System.Diagnostics.XmlWriterTraceListener>  
- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.ConsoleTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- <xref:System.Diagnostics.XmlWriterTraceListener>
+- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

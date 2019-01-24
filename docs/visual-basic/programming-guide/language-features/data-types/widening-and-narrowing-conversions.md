@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: ad49e5443016dc4fed57be4a991df9f6d6095b55
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d1b573dbafbead20330a4fd0f62e8f21f27dce81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610925"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>擴展和縮小轉換 (Visual Basic)
 使用類型轉換的重要考量是轉換的結果是否在目的地資料類型的範圍內。  
@@ -47,10 +47,10 @@ ms.locfileid: "43519273"
 |[Long](../../../../visual-basic/language-reference/data-types/long-data-type.md)|`Long`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|`ULong`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`, `Single`, `Double`<sup>2</sup>|  
-|[Single](../../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`, `Double`|  
+|[Single](../../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`、 `Double`|  
 |[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
 |任何列舉型別 ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|其基礎的整數類資料類型和任何類型的擴展基礎的型別。|  
-|[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
+|[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`、 `String`|  
 |`Char` 陣列|`Char` 陣列， `String`|  
 |任何型別|[物件](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |任何衍生型別|任何基底的類型衍生自此<sup>3</sup>。|  
@@ -107,12 +107,12 @@ Dim square As cSquare = New cSquare
 shape = square  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [隱含和明確轉換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [如何： 將物件轉換成 Visual Basic 中的另一個類型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)  
- [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>另請參閱
+- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [隱含和明確轉換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [如何：將物件轉換成 Visual Basic 中的另一個類型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)
+- [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

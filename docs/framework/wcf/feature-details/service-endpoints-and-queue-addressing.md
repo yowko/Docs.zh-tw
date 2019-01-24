@@ -2,12 +2,12 @@
 title: 服務端點與佇列定址
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 71ebf29e51118a7f555f3e79598e49ffd65e0c63
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b513dbf5bfde812c551335826813967272bfd708
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613918"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服務端點與佇列定址
 本主題將討論用戶端如何針對從佇列讀取的服務進行定址，以及服務端點如何對應至佇列。 提醒您下, 圖顯示傳統 Windows Communication Foundation (WCF) 已排入佇列的應用程式部署。  
@@ -40,9 +40,9 @@ ms.locfileid: "47196300"
   
 -   \<*佇列名稱*> 是佇列的名稱。 佇列名稱同時也參照到子佇列。 因此， \<*佇列名稱*> = \<*名稱的佇列*> [;*次要 queue 名稱*]。  
   
- 範例 1：若要針對 abc atadatum.com 電腦所裝載的私密佇列 PurchaseOrders 進行定址，URI 必須是 net.msmq://abc.adatum.com/private/PurchaseOrders。  
+ 範例 1:若要解決的私密佇列 PurchaseOrders abc atadatum.com 電腦所裝載，URI 會是 net.msmq: //abc.adatum.com/private/purchaseorders。  
   
- 範例 2：若要針對 def atadatum.com 電腦所裝載的公用佇列 AccountsPayable 進行定址，URI 必須是 net.msmq://def.adatum.com/AccountsPayable。  
+ 範例 2:若要解決的公用佇列 AccountsPayable def atadatum.com 電腦所裝載，URI 會是 net.msmq: //def.adatum.com/accountspayable。  
   
  接聽項會使用佇列位址來當成接聽 URI 以讀取訊息。 換句話說，佇列位址等於 TCP 通訊端的接聽連接埠。  
   
@@ -73,15 +73,15 @@ ms.locfileid: "47196300"
 |以 WCF URI 為基礎的佇列位址|使用 Active Directory 屬性|佇列傳輸通訊協定屬性|最後的 MSMQ 格式名稱|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |Net.msmq://\<machine-name>/private/abc|False (預設)|Native (預設)|DIRECT=OS:machine-name\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT =http://machine/msmq/private$/ abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
 |Net.msmq://\<machine-name>/private/abc|True|原生|PUBLIC=some-guid (佇列的 GUID)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>從寄不出的信件佇列或有害訊息佇列讀取訊息  
  若要從屬於目標佇列之子佇列的有害訊息佇列中讀取訊息，請使用子佇列位址來開啟 `ServiceHost`。  
   
- 範例：從本機電腦的 PurchaseOrders 私用佇列之有害訊息佇列讀取訊息的服務，會定址為 net.msmq://localhost/private/PurchaseOrders;poison。  
+ 範例：讀取從本機電腦的 PurchaseOrders 私用佇列的有害訊息佇列服務會 //localhost/private/purchaseorders;。  
   
- 為了從系統的交易式寄不出的信件佇列讀取訊息，URI 必須採用 net.msmq://localhost/system$;DeadXact 的格式。  
+ 為了從系統的異動式寄不出的信件佇列讀取訊息，URI 必須採用 net.msmq://localhost/system$;DeadXact 的格式。  
   
  為了從系統的非交易式寄不出的信件佇列讀取訊息，URI 必須採用 net.msmq://localhost/system$;DeadLetter 的格式。  
   
@@ -100,9 +100,9 @@ ms.locfileid: "47196300"
   
  請注意，當您使用 `MsmqIntegrationBinding` 從佇列接收訊息時，只能使用直接格式名稱，與公用與私用格式名稱 (需要 Active Directory 整合)。 然而，我們建議您使用直接格式名稱。 例如，在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用其他任何格式名稱都會導致錯誤，因為系統會嘗試開啟子佇列，而此子佇列只能由直接格式名稱來開啟。  
   
- 當您使用 `MsmqIntegrationBinding` 為 SRMP 定址時，不需要在直接格式名稱中新增 /msmq/ 以協助網際網路資訊服務 (IIS) 進行分派作業。 例如： abc 使用 SRMP 通訊協定，而不是 DIRECT 佇列進行定址時 =http://adatum.com/msmq/private$/ abc，您應該使用 DIRECT =http://adatum.com/private$/abc。  
+ 當您使用 `MsmqIntegrationBinding` 為 SRMP 定址時，不需要在直接格式名稱中新增 /msmq/ 以協助網際網路資訊服務 (IIS) 進行分派作業。 例如: Abc 使用 SRMP 通訊協定，而不是 DIRECT 佇列進行定址時 =http://adatum.com/msmq/private$/ abc，您應該使用 DIRECT =http://adatum.com/private$/abc。  
   
  請注意，您無法使用包含 `MsmqIntegrationBinding` 的 net.msmq:// 定址。 因為`MsmqIntegrationBinding`支援自由形式 MSMQ 格式名稱定址，您可以使用 WCF 服務使用此繫結至 MSMQ 中使用多點傳送與通訊群組清單功能。 當您使用 `CustomDeadLetterQueue` 時，需指定 `MsmqIntegrationBinding` 則是一個例外。 它必須是 net.msmq:// 的格式，與使用 `NetMsmqBinding` 來指定的方式很類似。  
   
-## <a name="see-also"></a>另請參閱  
- [以 Web 裝載佇列應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>另請參閱
+- [以 Web 裝載佇列應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

@@ -2,12 +2,12 @@
 title: 高可用性、嚴重損壞修復的 SqlClient 支援
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 258922a1541c4594ce2b4673d4d68c279087aef2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609118"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性、嚴重損壞修復的 SqlClient 支援
 本主題討論高可用性、嚴重損壞修復 (AlwaysOn 可用性群組) 的 SqlClient 支援 (在 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中新增)。  AlwaysOn 可用性群組功能已新增至 SQL Server 2012。 如需 AlwaysOn 可用性群組的詳細資訊，請參閱 SQL Server 線上叢書 》。  
@@ -51,7 +51,7 @@ ms.locfileid: "43513022"
   
 -   連接到 SQL Server 使用超過 64 個 IP 位址設定的執行個體，將會導致連接失敗。  
   
--   使用的應用程式的行為`MultiSubnetFailover`連接屬性不會影響基礎的驗證類型： SQL Server 驗證、 Kerberos 驗證或 Windows 驗證。  
+-   使用的應用程式的行為`MultiSubnetFailover`連接屬性不會影響基礎的驗證類型：SQL Server 驗證、 Kerberos 驗證或 Windows 驗證。  
   
 -   提高 `Connect Timeout` 的值可延長容錯移轉時間並減少應用程式重試連接的次數。  
   
@@ -96,6 +96,6 @@ ms.locfileid: "43513022"
   
  唯讀路由連接到主要複本的時間較長，因為唯讀路由會先連接到主要複本，再尋找最適合的可讀次要複本。 因此，您應延長登入逾時。  
   
-## <a name="see-also"></a>另請參閱  
- [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

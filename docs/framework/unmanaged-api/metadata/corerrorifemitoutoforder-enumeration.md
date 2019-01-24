@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4e9d03dcf4603f9470f8f2509050eb6f875746a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 084f0bbab130cd4e7334184fe9baa322c0487942
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616767"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>CorErrorIfEmitOutOfOrder 列舉
 包含旗標值，這些值表示中繼資料未按順序發出時，在哪些條件下應該產生錯誤訊息。  
@@ -47,21 +47,21 @@ typedef enum CorErrorIfEmitOutOfOrder {
   
 |成員|描述|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|表示預設行為，也不會產生錯誤訊息。|  
+|`MDErrorOutOfOrderDefault`|表示預設的行為，不會產生錯誤訊息。|  
 |`MDErrorOutOfOrderNone`|表示編譯器應該不會產生錯誤訊息。|  
-|`MDErrorOutOfOrderAll`|表示編譯器應該產生錯誤訊息，當欄位、 屬性、 事件、 方法或參數，就會發出順序。|  
-|`MDMethodOutOfOrder`|表示未按順序發出方法時，編譯器應該產生錯誤訊息。|  
-|`MDFieldOutOfOrder`|表示未按順序發出欄位時編譯器應該產生錯誤訊息。|  
-|`MDParamOutOfOrder`|表示未按順序發出參數時，編譯器應該產生錯誤訊息。|  
-|`MDPropertyOutOfOrder`|表示未按順序發出屬性時，編譯器應該產生錯誤訊息。|  
-|`MDEventOutOfOrder`|表示編譯器應該產生錯誤訊息時就會發出事件順序。|  
+|`MDErrorOutOfOrderAll`|表示編譯器應產生錯誤訊息，當欄位、 屬性、 事件、 方法或參數，就會發出次序不對。|  
+|`MDMethodOutOfOrder`|指示編譯器在未按順序發出方法時，應該產生錯誤訊息。|  
+|`MDFieldOutOfOrder`|指示編譯器在未按順序發出欄位時，應該產生錯誤訊息。|  
+|`MDParamOutOfOrder`|指示編譯器在未按順序發出參數時，應該產生錯誤訊息。|  
+|`MDPropertyOutOfOrder`|指示編譯器在未按順序發出屬性時，應該產生錯誤訊息。|  
+|`MDEventOutOfOrder`|表示編譯器應該產生一則錯誤訊息時就會發出事件順序。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

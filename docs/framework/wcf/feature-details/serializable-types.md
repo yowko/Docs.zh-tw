@@ -2,12 +2,12 @@
 title: 可序列化的型別
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: e54fd860ce757257253dad097a52e634dbb5d8bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fe29d2eb2b50d2515d71745bc062255dbfb60ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498276"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608046"
 ---
 # <a name="serializable-types"></a>可序列化的型別
 根據預設，<xref:System.Runtime.Serialization.DataContractSerializer> 會序列化所有公開可見的型別。 型別的所有公用讀取/寫入屬性 (Property) 和欄位都會序列化。  
@@ -38,9 +38,9 @@ ms.locfileid: "33498276"
 ## <a name="inheritance"></a>繼承  
  未標記的型別 (沒有 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性的型別) 可以繼承自沒有這個屬性的型別，不過不允許反向操作，也就是說，擁有這個屬性的型別無法繼承自未標記的型別。 強制執行這個規則的主要原因，是為了確保與使用舊版 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 撰寫的程式碼回溯相容。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

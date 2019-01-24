@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f25348410387a7b0e03ef897e8534336baeb126a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 50aa116fc1f5377254a8a6a128d0240c57cb52b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597563"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories 列舉
 描述分類的主機可以封鎖無法在部分信任程式碼中執行的功能。  
@@ -48,32 +48,32 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`eAll`|指定所有 managed 類別和成員，涵蓋的其他`EApiCategories`欄位遭到封鎖而無法在部分信任程式碼中執行。|  
+|`eAll`|指定所有 managed 類別和成員所涵蓋的其他`EApiCategories`欄位遭到封鎖而無法在部分信任程式碼中執行。|  
 |`eExternalProcessMgmt`|指定封鎖受管理的類別和成員，可讓建立、 管理和解構的外部處理序在部分信任程式碼中執行。|  
-|`eExternalThreading`|指定封鎖受管理的類別和成員，可讓建立、 管理和解構的外部執行緒在部分信任程式碼中執行。|  
-|`eMayLeakOnAbort`|指定封鎖無法可能遺漏記憶體中止的 managed 的類型和成員在部分信任程式碼中執行。|  
-|`eNoCategory`|指定無法在部分信任程式碼中執行封鎖的任何 managed 程式碼的類別。|  
-|`eSecurityInfrastructure`|指定 common language runtime (CLR) 安全性基礎結構遭到封鎖而無法由部分信任程式碼。|  
-|`eSelfAffectingProcessMgmt`|指定封鎖受管理的類別和其功能可能會影響受主控的處理序的成員在部分信任程式碼中執行。|  
+|`eExternalThreading`|指定 managed 的類別和成員，可讓建立、 管理和解構的外部執行緒被封鎖而無法執行部分信任程式碼中。|  
+|`eMayLeakOnAbort`|指定封鎖受管理的類型和成員，可能會洩漏中止上的記憶體在部分信任程式碼中執行。|  
+|`eNoCategory`|指定沒有任何 managed 程式碼類別無法在部分信任程式碼中執行。|  
+|`eSecurityInfrastructure`|指定通用語言執行平台 (CLR) 安全性基礎結構遭到封鎖而無法由部分信任程式碼。|  
+|`eSelfAffectingProcessMgmt`|指定封鎖受管理的類別和其功能可能會影響裝載的處理序的成員在部分信任程式碼中執行。|  
 |`eSelfAffectingThreading`|指定封鎖受管理的類別和其功能可能會影響裝載處理序中的執行緒的成員在部分信任程式碼中執行。|  
-|`eSharedState`|指定封鎖受管理的類別和成員公開共用的狀態的部分信任程式碼中執行。|  
+|`eSharedState`|指定封鎖受管理的類別和公開共用的狀態的成員在部分信任程式碼中執行。|  
 |`eSynchronization`|指定封鎖 common language runtime 類別和成員，可讓使用者程式碼保留鎖定在部分信任程式碼中執行。|  
 |`eUI`|指定封鎖受管理的類別和成員允許或需要人為互動在部分信任程式碼中執行。|  
   
 ## <a name="remarks"></a>備註  
- [Iclrhostprotectionmanager:: Setprotectedcategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md)方法使用的型別參數`EApiCategories`。  
+ [Iclrhostprotectionmanager:: Setprotectedcategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md)方法會採用類型參數的`EApiCategories`。  
   
- `EApiCategories`列舉型別和`SetProtectedCategories`方法直接相關的 managed<xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType>類別。 Managed 的類別會搭配<xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>列舉型別，其值會直接對應`EApiCategories`值，將 managed 型別和成員，將功能對應至所描述的類別公開`EApiCategories`。  
+ `EApiCategories`列舉型別和`SetProtectedCategories`方法直接相關的 managed<xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType>類別。 受管理的類別會搭配<xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>列舉型別，其值直接對應到`EApiCategories`值，以將 managed 型別和將功能對應至所描述的類別公開的成員標示`EApiCategories`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRHostProtectionManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRHostProtectionManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
+- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

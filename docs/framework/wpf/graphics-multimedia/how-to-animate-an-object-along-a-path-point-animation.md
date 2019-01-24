@@ -1,5 +1,5 @@
 ---
-title: 操作說明：沿著路徑建立物件的動畫 (點動畫)
+title: HOW TO：沿著路徑建立物件的動畫 (點動畫)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (point animation)
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
-ms.openlocfilehash: d6dc79cd7a15aef2a4168fffb293c5e1f33cde08
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 521caa4411f1c0137769e7c221176b5693934ad0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610522"
 ---
-# <a name="how-to-animate-an-object-along-a-path-point-animation"></a>操作說明：沿著路徑建立物件的動畫 (點動畫)
+# <a name="how-to-animate-an-object-along-a-path-point-animation"></a>HOW TO：沿著路徑建立物件的動畫 (點動畫)
 此範例示範如何使用<xref:System.Windows.Media.Animation.PointAnimationUsingPath>物件來以動畫顯示<xref:System.Windows.Point>沿著曲線路徑。  
   
 ## <a name="example"></a>範例  
@@ -30,7 +30,7 @@ ms.locfileid: "44259778"
   
  上述範例中使用的程式碼版本<xref:System.Windows.Media.Animation.Storyboard>來以動畫顯示<xref:System.Windows.Media.EllipseGeometry>，即使只有一張動畫已套用。 A<xref:System.Windows.Media.Animation.Storyboard>通常是最簡單的方式套用多個動畫，因為這些動畫可以控制由相同<xref:System.Windows.Media.Animation.Storyboard>。 不過，若要將單一動畫套用至屬性，使用程式碼時更簡單的方法是使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法。 如需範例，請參閱[不使用分鏡腳本而建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [路徑動畫範例](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [路徑動畫操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- [路徑動畫範例](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [路徑動畫操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

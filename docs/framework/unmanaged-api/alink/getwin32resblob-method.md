@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f40b99c0a81bf0f2b622c7d23157dbb5736df1ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: abc5f9350342af0439cb83f1df14979cfabcdb3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601531"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob 方法
-擷取 Win32 資源 blob。 設定組件選項之後呼叫這個方法。  
+擷取 Win32 資源的 blob。 設定組件選項之後呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,21 +50,21 @@ HRESULT GetWin32ResBlob(
  如果檔案是 DLL，false EXE，則為 TRUE。  
   
  `pszIconFile`  
- 要插入資源 blob 的選擇性圖示。  
+ 若要將資源的 blob 插入的選擇性圖示。  
   
  `ppResBlob`  
- 接收資源 blob。  
+ 收到資源的 blob。  
   
  `pcbResBlob`  
  接收 blob 的大小。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則傳回 S_OK。  
+ 如果方法成功，則會傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
  需要 alink.h  
   
-## <a name="see-also"></a>另請參閱  
- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>另請參閱
+- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

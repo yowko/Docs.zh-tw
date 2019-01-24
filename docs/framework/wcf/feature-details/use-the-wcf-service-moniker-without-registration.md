@@ -1,20 +1,20 @@
 ---
-title: HOW TO：使用 Windows Communication Foundation 服務 Moniker 且不註冊
+title: HOW TO：使用 Windows Communication Foundation 服務 Moniker，但不註冊
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: fd61528770b16b13430be3691aef19c1cc743e9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ce388da75711ab1378ce59575c067cf828089e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615268"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>HOW TO：使用 Windows Communication Foundation 服務 Moniker 且不註冊
-若要連接到並與 Windows Communication Foundation (WCF) 服務通訊，WCF 用戶端應用程式必須服務位址、 繫結組態，以及服務合約的詳細資料。  
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>HOW TO：使用 Windows Communication Foundation 服務 Moniker，但不註冊
+若要連接到並與 Windows Communication Foundation (WCF) 服務進行通訊，WCF 用戶端應用程式必須有服務位址、 繫結組態和服務合約的詳細資料。  
   
- WCF 服務 moniker 通常取得必要的合約，透過之前註冊的必要的屬性型別，但可能情況下，這並不可行。 如果沒有註冊，Moniker 可使用 `wsdl` 參數、中繼資料交換和使用 `mexAddress` 參數，即可用 Web 服務定義語言 (WSDL) 文件格式來取得合約的定義。  
+ WCF 服務 moniker 通常取得必要的合約，透過之前註冊的必要的屬性型別，但可能會有，這並不可行的情況。 如果沒有註冊，Moniker 可使用 `wsdl` 參數、中繼資料交換和使用 `mexAddress` 參數，即可用 Web 服務定義語言 (WSDL) 文件格式來取得合約的定義。  
   
  所適用的案例包括散發 Excel 試算表，在試算表中有些儲存格的值會透過 Web 服務互動計算而來。 在此案例中，可能無法在開啟文件的所有用戶端上註冊服務合約組件。 `wsdl` 參數或 `mexAddress` 參數將會啟用獨立的 (Self-Contained) 解決方案。  
   
@@ -52,10 +52,10 @@ contract=IAffiliate, contractNamespace=http://Microsoft.ServiceModel.Demo,
 binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/  
 ```  
   
- 在執行用戶端應用程式期間，用戶端會使用提供的 `WS-MetadataExchange` 來執行 `mexAddress`。 這樣做可能會對一些服務傳回位址、繫結和合約詳細資訊。 您可以使用 `address`, `contract`, `contractNamespace`, `binding` 和 `bindingNamespace` 參數來識別要用的服務。 一旦這些參數都符合，moniker 建構適當的合約定義的 WCF 用戶端，然後呼叫使用 WCF 用戶端與具型別的合約一樣。  
+ 在執行用戶端應用程式期間，用戶端會使用提供的 `WS-MetadataExchange` 來執行 `mexAddress`。 這樣做可能會對一些服務傳回位址、繫結和合約詳細資訊。 您可以使用 `address`, `contract`, `contractNamespace`, `binding` 和 `bindingNamespace` 參數來識別要用的服務。 一旦這些參數都符合，moniker 建構適當的合約定義的 WCF 用戶端，並呼叫便可使用 WCF 用戶端中，如同具型別合約。  
   
 > [!NOTE]
 >  如果 Moniker 的格式錯誤或服務無法使用，則呼叫 `GetObject` 時將會傳回「無效的語法」錯誤。 如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。  
   
-## <a name="see-also"></a>另請參閱  
- [如何：註冊和設定服務 Moniker](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a>另請參閱
+- [如何：註冊並設定服務 Moniker](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

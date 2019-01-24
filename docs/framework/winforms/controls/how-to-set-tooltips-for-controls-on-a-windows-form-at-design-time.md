@@ -1,5 +1,5 @@
 ---
-title: 如何：在設計階段設定 Windows Form 上控制項的工具提示
+title: HOW TO：在設計階段設定 Windows Form 上控制項的工具提示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 689b06e8fbebe490f79ab6c12f144546472a95ff
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ebefe596728b5cabd9d24720d8c39f13c8836bd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609404"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>如何：在設計階段設定 Windows Form 上控制項的工具提示
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>HOW TO：在設計階段設定 Windows Form 上控制項的工具提示
 您可以設定<xref:System.Windows.Forms.ToolTip>在程式碼，或在 Windows Form 設計工具中的字串。 如需詳細資訊<xref:System.Windows.Forms.ToolTip>元件，請參閱 < [ToolTip 元件概觀](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)。  
   
 > [!NOTE]
@@ -76,7 +76,7 @@ ms.locfileid: "49087215"
   
 2.  在 [**屬性**] 視窗中，刪除中的文字**ToolTip1 的**。  
 
-## <a name="see-also"></a>另請參閱  
-- [ToolTip 元件概觀](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
-- [操作說明：變更 Windows Forms ToolTip 元件的延遲時間](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+## <a name="see-also"></a>另請參閱
+- [ToolTip 元件概觀](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)
+- [如何：變更 Windows Form ToolTip 元件的延遲時間](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [ToolTip 元件](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)

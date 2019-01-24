@@ -2,19 +2,19 @@
 title: '&lt;client&gt; 的 &lt;endpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: 47b3599ed2d0868fcbc4a04a28936bcfe1c9c3f1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a7d95ee819c911d80178e38a37aeaccc5b1f1764
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598301"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;client&gt; 的 &lt;endpoint&gt;
 指定通道端點的合約、繫結和位址屬性，用戶端會使用該通道端點連線至伺服器上的服務端點。  
   
  \<system.ServiceModel>  
-\<用戶端 >  
-\<端點 >  
+\<client>  
+\<endpoint>  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,13 +51,13 @@ ms.locfileid: "54147001"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|位址標頭的集合。|  
-|[\<身分識別 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|身分識別，可讓其他端點與此端點交換訊息，以啟用端點的驗證。|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|身分識別，可讓其他端點與此端點交換訊息，以啟用端點的驗證。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<用戶端 >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|組態區段，它會定義用戶端可以連線的端點清單。|  
+|[\<client>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|組態區段，它會定義用戶端可以連線的端點清單。|  
   
 ## <a name="example"></a>範例  
  這是通道端點組態的範例。  
@@ -71,11 +71,11 @@ ms.locfileid: "54147001"
 </endpoint>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
- <xref:System.ServiceModel.Configuration.ClientSection>  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>  
- <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
- [WCF 用戶端組態](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [用戶端](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
+- <xref:System.ServiceModel.Configuration.ClientSection>
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>
+- <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
+- [WCF 用戶端組態](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [用戶端](../../../../../docs/framework/wcf/feature-details/clients.md)

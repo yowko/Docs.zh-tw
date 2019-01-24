@@ -2,12 +2,12 @@
 title: LINQ to DataSet 概觀
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-ms.openlocfilehash: 43c3aa081bd934202bd3a7831741054115d7a6d5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a1f01c95513eee1de65343e9f574b8f7df68e0cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612550"
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ to DataSet 概觀
 <xref:System.Data.DataSet> 是其中一個常用的 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 元件。 它是 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 所依據之中斷連接程式撰寫模型 (Programming Model) 的重要項目，而且可讓您明確快取來自不同資料來源的資料。 若為展示層，<xref:System.Data.DataSet> 會與 GUI 控制項緊密整合，以便進行資料繫結 (Data Binding)。 若為中介層 (Middle Tier)，它會提供保留關聯式資料圖案的快取，而且包含快速簡易查詢和階層導覽服務。 較低的資料庫上的要求數目常用的技巧是使用<xref:System.Data.DataSet>的中介層中的快取。 例如，請考慮資料驅動[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 應用程式。 通常，應用程式資料的重要部分不會經常變更，而且在工作階段 (Session) 或使用者之間是通用的。 這項資料可以保留在 Web 伺服器的記憶體中，以便減少針對資料庫所進行的要求數目並加快使用者互動的速度。 另一個有用的層面<xref:System.Data.DataSet>是它可讓應用程式從一或多個資料來源的資料子集帶入應用程式空間。 然後，此應用程式就可以管理記憶體中資料，同時保留其關聯式圖案。  
@@ -28,7 +28,7 @@ ms.locfileid: "45991242"
   
  在 N-Tier 應用程式中，<xref:System.Data.DataSet> 通常會用於中介層，以便快取 Web 應用程式的資訊。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查詢功能透過擴充方法實作，並擴充現有的 ADO.NET 2.0 <xref:System.Data.DataSet>。  
   
-## <a name="see-also"></a>另請參閱  
- [查詢資料集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
+## <a name="see-also"></a>另請參閱
+- [查詢資料集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
+- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
