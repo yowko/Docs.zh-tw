@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 562b6fcd015441ce5eb6b5f0ab7a4f361bb229c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84d53bd5bb9c0eca83b39fc9d1c83d93440e336b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449425"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645456"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping 方法
 取得記憶體區域的對應的檔，以及對應的類型。  
@@ -45,34 +45,34 @@ HRESULT GetFileMapping (
  [out]對應區域的大小。 如果`pdwMappingType`是`fmFlat`，這是檔案的大小。  
   
  `pdwMappingType`  
- [out]A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)值，指出對應的類型。 目前實作的 common language runtime (CLR) 一律會傳回`fmFlat`。 其他值被保留供未來使用。 不過，您應該一律確認傳回的值，因為可能在未來版本中啟用其他值，或服務版本。  
+ [out]A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)值，指出對應的類型。 目前的實作的 common language runtime (CLR) 永遠傳回`fmFlat`。 其他值保留供日後使用。 不過，您一律應該確認傳回的值，因為其他值可能會在未來版本中啟用，或服務版本。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|所有輸出會填都滿。|  
+|`S_OK`|所有的輸出會填滿。|  
 |`E_INVALIDARG`|傳遞 NULL 做為引數的值。|  
-|`COR_E_NOTSUPPORTED`|CLR 實作無法提供記憶體區域的相關資訊。 這種情形，原因如下：<br /><br /> -在中繼資料範圍以開啟`ofWrite`或`ofCopyMemory`旗標。<br />-在中繼資料範圍已開啟但`ofReadOnly`旗標。<br />- [Imetadatadispenser:: Openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)方法用來開啟僅中繼資料檔案的一部分。<br />-檔案不是可移植執行檔 (PE) 檔案。 **注意：** 這些條件取決於 CLR 實作，並可可能會影響在未來的 CLR 版本。|  
+|`COR_E_NOTSUPPORTED`|CLR 實作無法提供記憶體區域的相關資訊。 這種情形，原因如下：<br /><br /> -在中繼資料範圍以開啟`ofWrite`或`ofCopyMemory`旗標。<br />-在中繼資料範圍已開啟但`ofReadOnly`旗標。<br />- [Imetadatadispenser:: Openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)方法用來開啟 僅中繼資料檔案的一部分。<br />-檔案不是可攜式執行檔 (PE) 檔案。 **注意：** 這些條件取決於 CLR 實作中，而且可能會減弱在未來的 CLR 版本。|  
   
 ## <a name="remarks"></a>備註  
- 記憶體的`ppvData`指向無效，只要基礎中繼資料範圍已開啟。  
+ 記憶體的`ppvData`指向無效，只要基礎的中繼資料範圍已開啟。  
   
- 為了讓您藉由呼叫對應到記憶體中的磁碟上檔案的中繼資料時使用這個方法[imetadatadispenser:: Openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)方法，您必須指定`ofReadOnly`旗標，而且您必須指定`ofWrite`或`ofCopyMemory`旗標。  
+ 為了讓此方法才能運作，當您將磁碟上檔案的中繼資料對應到記憶體上呼叫[imetadatadispenser:: Openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)方法，您必須指定`ofReadOnly`旗標，您必須指定`ofWrite`或`ofCopyMemory`旗標。  
   
- 選擇每個範圍的檔案對應類型是 CLR 的特定實作的特定項目。 無法由使用者設定。 目前實作的 clr 一律會傳回`fmFlat`中`pdwMappingType`，但可能會變更在未來版本的 CLR 或未來的指定版本的版本更新服務。 請務必檢查傳回的值`pdwMappingType`，因為不同類型會有不同的版面配置和位移。  
+ 選擇每個範圍的檔案對應類型是 CLR 的指定實作的特定項目。 它不能由使用者設定。 目前實作的 clr 一律會傳回`fmFlat`在`pdwMappingType`，但這在 CLR 的版本，或未來的特定版本的服務版本可以在未來變更。 您一律應該檢查傳回的值`pdwMappingType`，因為不同的版面配置和位移，會有不同的型別。  
   
- 不支援傳遞任何三個參數為 NULL。 方法會傳回`E_INVALIDARG`，和輸出會填滿。 忽略對應型別或區域的大小，可能會導致程式異常終止。  
+ 不支援將傳遞的任何三個參數都是 NULL。 此方法會傳回`E_INVALIDARG`，且沒有任何輸出會填入。 忽略對應型別或區域的大小，可能會導致程式異常終止。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataInfo 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)  
- [CorFileMapping 列舉](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataInfo 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)
+- [CorFileMapping 列舉](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

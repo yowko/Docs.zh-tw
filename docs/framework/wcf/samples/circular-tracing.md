@@ -2,12 +2,12 @@
 title: 循環追蹤
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
-ms.openlocfilehash: 1f6c5287e6a53ed26ee5c9ed477e08dafc512e3f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: eaecf2205e7618f02a66f8c35fc88ca5a59947b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646431"
 ---
 # <a name="circular-tracing"></a>循環追蹤
 這個範例會示範循環緩衝區追蹤接聽項的實作。 實際執行服務的常見案例是產生可長時間使用的服務以及可在低階進行的追蹤記錄。 這些服務會耗用大量的磁碟空間。 在進行服務疑難排解時，追蹤記錄中最近的資料往往最切合問題的解決。 這個範例將示範實作循環緩衝區追蹤接聽項，其中會將最近的追蹤保存在磁碟上，最多到某個可設定的資料數量。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)並包含自訂追蹤接聽項。  
@@ -59,5 +59,5 @@ ms.locfileid: "45743397"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`  
   
-## <a name="see-also"></a>另請參閱  
- [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>另請參閱
+- [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -2,12 +2,12 @@
 title: 從命令樹產生 SQL - 最佳作法
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 0087c67b12b4b6ea36cabd5800b7be0a72fc4a90
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 476a2b9d6d3a8efb6094afce0143abed765bdb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659091"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>從命令樹產生 SQL - 最佳作法
 輸出查詢命令樹會仔細地建立可用 SQL 表示之查詢的模型。 不過，從輸出命令樹產生 SQL 時，提供者寫入器會面臨某些常見的挑戰。 本主題將討論這些挑戰。 在下一個主題中，範例提供者將示範如何處理這些挑戰。  
@@ -136,7 +136,7 @@ ON b.y = d.z
  您可以在 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 所傳遞的查詢命令樹中重複使用運算式。 請勿假設每個運算式都只會出現在查詢命令樹中一次。  
   
 ## <a name="mapping-primitive-types"></a>對應基本型別  
- 將概念 (EDM) 型別對應至提供者型別時，您應該對應至最廣泛的型別 (Int32)，以便容納所有可能的值。 此外，請避免對應至型別無法用於許多作業，例如 BLOB 型別 (例如， `ntext` SQL Server 中)。  
+ 將概念 (EDM) 型別對應至提供者型別時，您應該對應至最廣泛的型別 (Int32)，以便容納所有可能的值。 此外，請避免對應至型別無法用於許多作業，例如 BLOB 型別 (例如`ntext`SQL Server 中)。  
   
-## <a name="see-also"></a>另請參閱  
- [SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>另請參閱
+- [SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

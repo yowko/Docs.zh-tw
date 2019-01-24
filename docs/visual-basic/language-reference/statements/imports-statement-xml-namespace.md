@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e137b27ae5128e54eca466632cadad9908232045
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655981"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports 陳述式 (XML 命名空間)
 匯入適用於 XML 常值和 XML 軸屬性的 XML 命名空間前置詞。  
@@ -30,7 +30,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
  選擇性。 字串的 xml 項目和屬性可以參考`xmlNamespaceName`。 如果沒有`xmlNamespacePrefix`是提供，匯入的 XML 命名空間是預設 XML 命名空間。 必須是有效的 XML 識別項。 如需詳細資訊，請參閱 <<c0> [ 名稱的宣告 XML 元素和屬性](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。  
   
  `xmlNamespaceName`  
- 必要。 識別要匯入的 XML 命名空間的字串。  
+ 必要項。 識別要匯入的 XML 命名空間的字串。  
   
 ## <a name="remarks"></a>備註  
  您可以使用`Imports`陳述式來定義通用的 XML 命名空間，您可以使用 XML 常值和 XML 軸屬性，或做為參數傳遞至`GetXmlNamespace`運算子。 (如需有關使用資訊`Imports`陳述式匯入別名可用型別名稱，用於您的程式碼，請參閱[Imports 陳述式 （.NET 命名空間和類型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。)宣告 XML 命名空間所使用的語法`Imports`陳述式是用於 XML 的語法相同。 因此，您可以從 XML 檔案複製命名空間宣告，並將它用於`Imports`陳述式。  
@@ -88,8 +88,8 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>另請參閱  
- [XML 項目常值](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)  
- [宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
- [GetXmlNamespace 運算子](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+## <a name="see-also"></a>另請參閱
+- [XML 項目常值](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)
+- [宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [GetXmlNamespace 運算子](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

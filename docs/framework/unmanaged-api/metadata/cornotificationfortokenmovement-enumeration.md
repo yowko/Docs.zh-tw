@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96ab659e6ab6cc9601c0e9a1ab511da92905c242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 745ba18fd1a36789f06bcd3dd4d183c9b28b9875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650102"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement 列舉
-指定權杖的重新對應時將中繼資料 API 用戶端傳送的通知。  
+指定權杖的重新對應發生時將中繼資料 API 用戶端傳送的通知。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,39 +65,39 @@ typedef enum CorNotificationForTokenMovement {
   
 |成員|描述|  
 |------------|-----------------|  
-|`MDNotifyDefault`|通知`mdTypeRef`， `mdMethodDef`， `mdMemberRef`，或`mdFieldDef`語彙基元移動。|  
-|`MDNotifyAll`|語彙基元移動時，通知。|  
+|`MDNotifyDefault`|時通知我`mdTypeRef`， `mdMethodDef`， `mdMemberRef`，或`mdFieldDef`語彙基元移動。|  
+|`MDNotifyAll`|語彙基元移動時，就會通知。|  
 |`MDNotifyNone`|不通知語彙基元移動時。|  
-|`MDNotifyMethodDef`|通知`mdMethodDef`語彙基元移動。|  
-|`MDNotifyMemberRef`|通知`mdMemberRef`語彙基元移動。|  
-|`MDNotifyFieldDef`|通知`mdFieldDef`語彙基元移動。|  
-|`MDNotifyTypeRef`|通知`mdTypeRef`語彙基元移動。|  
-|`MDNotifyTypeDef`|通知`mdTypeDef`語彙基元移動。|  
-|`MDNotifyParamDef`|通知`mdParamDef`語彙基元移動。|  
-|`MDNotifyInterfaceImpl`|通知`mdInterfaceImpl`語彙基元移動。|  
-|`MDNotifyProperty`|通知`mdProperty`語彙基元移動。|  
-|`MDNotifyEvent`|通知`mdEvent`語彙基元移動。|  
-|`MDNotifySignature`|通知`mdSignature`語彙基元移動。|  
-|`MDNotifyTypeSpec`|通知`mdTypeSpec`語彙基元移動。|  
-|`MDNotifyCustomAttribute`|通知`mdCustomAttribute`語彙基元移動。|  
-|`MDNotifySecurityValue`|通知`mdSecurityValue`語彙基元移動。|  
-|`MDNotifyPermission`|通知`mdPermission`語彙基元移動。|  
-|`MDNotifyModuleRef`|通知`mdModuleRef`語彙基元移動。|  
-|`MDNotifyNameSpace`|通知`mdNameSpace`語彙基元移動。|  
-|`MDNotifyAssemblyRef`|通知`mdAssemblyRef`語彙基元移動。|  
-|`MDNotifyFile`|通知`mdFile`語彙基元移動。|  
-|`MDNotifyExportedType`|通知`mdExportedType`語彙基元移動。|  
-|`MDNotifyResource`|通知`mdManifestResource`語彙基元移動。|  
+|`MDNotifyMethodDef`|通知時機`mdMethodDef`k 的移動。|  
+|`MDNotifyMemberRef`|通知時機`mdMemberRef`k 的移動。|  
+|`MDNotifyFieldDef`|通知時機`mdFieldDef`k 的移動。|  
+|`MDNotifyTypeRef`|通知時機`mdTypeRef`k 的移動。|  
+|`MDNotifyTypeDef`|通知時機`mdTypeDef`k 的移動。|  
+|`MDNotifyParamDef`|通知時機`mdParamDef`k 的移動。|  
+|`MDNotifyInterfaceImpl`|通知時機`mdInterfaceImpl`k 的移動。|  
+|`MDNotifyProperty`|通知時機`mdProperty`k 的移動。|  
+|`MDNotifyEvent`|通知時機`mdEvent`k 的移動。|  
+|`MDNotifySignature`|通知時機`mdSignature`k 的移動。|  
+|`MDNotifyTypeSpec`|通知時機`mdTypeSpec`k 的移動。|  
+|`MDNotifyCustomAttribute`|通知時機`mdCustomAttribute`k 的移動。|  
+|`MDNotifySecurityValue`|通知時機`mdSecurityValue`k 的移動。|  
+|`MDNotifyPermission`|通知時機`mdPermission`k 的移動。|  
+|`MDNotifyModuleRef`|通知時機`mdModuleRef`k 的移動。|  
+|`MDNotifyNameSpace`|通知時機`mdNameSpace`k 的移動。|  
+|`MDNotifyAssemblyRef`|通知時機`mdAssemblyRef`k 的移動。|  
+|`MDNotifyFile`|通知時機`mdFile`k 的移動。|  
+|`MDNotifyExportedType`|通知時機`mdExportedType`k 的移動。|  
+|`MDNotifyResource`|通知時機`mdManifestResource`k 的移動。|  
   
 ## <a name="remarks"></a>備註  
  語彙基元可能會重新對應 （也就是指移動） 期間的中繼資料合併。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

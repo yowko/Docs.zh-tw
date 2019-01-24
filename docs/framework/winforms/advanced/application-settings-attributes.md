@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: 9ed549cb1e10b22c4fa34d984133a6be11dfab44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 09fb5c26f7ecccd427155836c3864773153dddfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668947"
 ---
 # <a name="application-settings-attributes"></a>應用程式設定屬性
 應用程式設定架構提供許多可套用至應用程式設定包裝函式類別或其個別屬性的屬性。 這些屬性會檢查在執行階段應用程式設定基礎結構，通常會特別設定提供者，才能調整其運作的自訂包裝函式所述的需求。  
@@ -19,7 +19,7 @@ ms.locfileid: "43525108"
  下表列出的屬性可以套用到應用程式設定包裝函式類別，這個類別的個別屬性，或兩者。 根據定義，只是單一的 scope 屬性 —**UserScopedSettingAttribute**或是**ApplicationScopedSettingAttribute**— 必須套用至每個設定屬性。  
   
 > [!NOTE]
->  為自訂設定提供者中，衍生自<xref:System.Configuration.SettingsProvider>類別中，只有需要辨識下列的三個屬性： **ApplicationScopedSettingAttribute**， **UserScopedSettingAttribute**，並**DefaultSettingValueAttribute**。  
+>  為自訂設定提供者中，衍生自<xref:System.Configuration.SettingsProvider>類別中，只有需要辨識下列的三個屬性：**ApplicationScopedSettingAttribute**， **UserScopedSettingAttribute**，以及**DefaultSettingValueAttribute**。  
   
 |屬性|目標|描述|  
 |---------------|------------|-----------------|  
@@ -37,8 +37,8 @@ ms.locfileid: "43525108"
   
  *類別*指出，屬性可以只套用至應用程式設定包裝函式類別。 *屬性*指出屬性可以套用唯一的設定屬性。 *兩者*指出屬性可以套用在任一個層級。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- [應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [如何：建立應用程式設定](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- [應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [如何：建立應用程式設定](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)

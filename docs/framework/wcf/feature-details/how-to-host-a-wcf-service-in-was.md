@@ -1,18 +1,18 @@
 ---
-title: HOW TO：在 WAS 中裝載 WCF 服務
+title: HOW TO：裝載在 WAS 中的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: fd48957f7f8410b4b0df39fe125c35e4fc98cb8e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9094cf04ed1bc9fabe8d9df11b876007f322679a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651171"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>HOW TO：在 WAS 中裝載 WCF 服務
+# <a name="how-to-host-a-wcf-service-in-was"></a>HOW TO：裝載在 WAS 中的 WCF 服務
 本主題概述建立 Windows Process Activation Services (亦稱為 WAS) 所需的基本步驟裝載 Windows Communication Foundation (WCF) 服務。 WAS 是新的處理序啟用服務，其為一般化的 Internet Information Services (IIS) 功能，與非 HTTP 傳輸通訊協定搭配使用。 WCF 會使用 WCF，例如 TCP、 具名管道，與訊息佇列所支援的非 HTTP 通訊協定接收啟用要求通訊接聽程式配接器介面。  
   
- 這個裝載選項要求 WAS 啟用元件必須正確安裝與設定，但不要求將任何裝載程式碼撰寫為應用程式的一部分。 如需有關安裝與設定 WAS 的詳細資訊，請參閱 <<c0> [ 如何： 安裝和設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
+ 這個裝載選項要求 WAS 啟用元件必須正確安裝與設定，但不要求將任何裝載程式碼撰寫為應用程式的一部分。 如需有關安裝與設定 WAS 的詳細資訊，請參閱[How to:安裝及設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
   
 > [!WARNING]
 >  如果 Web 伺服器的要求處理管線設定為「傳統」模式，就不支援 WAS 啟動。 若要使用 WAS 啟動，Web 伺服器的要求處理管線就必須設定為「整合」模式。  
@@ -98,6 +98,6 @@ ms.locfileid: "43746800"
   
 6.  請編譯並執行用戶端。  
   
-## <a name="see-also"></a>另請參閱  
- [TCP 啟用](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [Windows Server App Fabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>另請參閱
+- [TCP 啟用](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)

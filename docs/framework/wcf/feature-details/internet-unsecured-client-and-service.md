@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 7f4a5fada6c2c17563796ae634ee742285551160
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e8aa8d66e667036f09bd5670e779f14fa9401450
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643802"
 ---
 # <a name="internet-unsecured-client-and-service"></a>沒有安全保障的網際網路用戶端與服務
 下圖顯示的公用、 不安全 Windows Communication Foundation (WCF) 用戶端和服務的範例。  
@@ -109,7 +109,7 @@ ms.locfileid: "50181481"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>另請參閱
+- [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

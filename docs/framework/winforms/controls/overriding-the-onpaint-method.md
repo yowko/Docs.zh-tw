@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: fbc0a82f82afcc59384246b58437d521d56d708b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d688818e24084dbb3db81f418e37d724e9f48512
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666246"
 ---
 # <a name="overriding-the-onpaint-method"></a>覆寫 OnPaint 方法
 覆寫任何事件中所定義的基本步驟[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]都相同，而且下列清單摘要說明。  
@@ -26,7 +26,7 @@ ms.locfileid: "48838516"
   
  <xref:System.Windows.Forms.Control.Paint>事件會詳細討論這裡因為每個 Windows Form 控制項必須覆寫<xref:System.Windows.Forms.Control.Paint>它所繼承的事件<xref:System.Windows.Forms.Control>。 基底<xref:System.Windows.Forms.Control>類別並不知道如何衍生的控制項需要繪製，並不提供任何繪製邏輯<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 <xref:System.Windows.Forms.Control.OnPaint%2A>方法<xref:System.Windows.Forms.Control>只會分派<xref:System.Windows.Forms.Control.Paint>事件登錄的事件接收器。  
   
- 如果您已完成的範例[如何： 開發簡單的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)，您已看過會覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 下列程式碼片段是取自該範例。  
+ 如果您已完成的範例[How to:開發簡單的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)，您已看過會覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 下列程式碼片段是取自該範例。  
   
 ```vb  
 Public Class FirstControl  
@@ -86,7 +86,7 @@ public class PaintEventArgs : EventArgs {
   
  控制項叫用以其<xref:System.Windows.Forms.Control.OnPaint%2A>每當程式需要變更其視覺顯示的方法。 這個方法接著會引發<xref:System.Windows.Forms.Control.Paint>事件。  
   
-## <a name="see-also"></a>另請參閱  
- [事件](../../../../docs/standard/events/index.md)  
- [呈現 Windows Forms 控制項](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
- [定義事件](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)
+## <a name="see-also"></a>另請參閱
+- [事件](../../../../docs/standard/events/index.md)
+- [呈現 Windows Forms 控制項](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)
+- [定義事件](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)

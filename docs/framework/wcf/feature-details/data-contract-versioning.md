@@ -9,15 +9,15 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 0e91bf597e344dd09e80bee5787e92383065b654
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520194"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646915"
 ---
 # <a name="data-contract-versioning"></a>資料合約版本控制
-隨著應用程式的發展，您也必須變更服務所使用的資料合約。 本主題說明如何設定資料合約的版本。 本主題描述資料合約版本控制的機制。 如需完整的概觀和規定性的版本控制指導方針，請參閱[最佳做法： 資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
+隨著應用程式的發展，您也必須變更服務所使用的資料合約。 本主題說明如何設定資料合約的版本。 本主題描述資料合約版本控制的機制。 如需完整的概觀和規定性的版本控制指導方針，請參閱[最佳做法：資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
   
 ## <a name="breaking-vs-nonbreaking-changes"></a>中斷與不中斷變更的比較  
  資料合約的變更可以採用中斷或不中斷的方式進行。 當資料合約以不中斷的方式變更時，使用舊版合約的應用程式可以與使用新版合約的應用程式通訊，而使用新版合約的應用程式可以與使用舊版合約的應用程式通訊。 相反的，中斷變更則會阻止單向或雙向的通訊。  
@@ -115,17 +115,17 @@ ms.locfileid: "43520194"
  大多數的集合變更是不中斷的，因為大部份的集合類型可以在資料合約模型內互相交換。 不過，將非自訂的集合進行自訂 (反之亦然) 則是中斷變更。 同時，變更集合的自訂設定是中斷變更，也就是變更其資料合約名稱和命名空間、重複元素名稱、主要元素名稱，以及值元素名稱。 如需有關集合自訂的詳細資訊，請參閱[集合 Types in Data Contracts](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。  
 當然，變更集合之內容的資料合約 (例如，從整數的清單變更為字串的清單) 是中斷變更。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.SerializationException>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- [版本相容序列化回呼](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
- [最佳做法：資料合約版本設定](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.SerializationException>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- [版本相容序列化回呼](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+- [最佳做法：資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

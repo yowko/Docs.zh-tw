@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68e6f7599db55ed9429f159b380a8a9f8ae3f034
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b7190d2f9d4b64b6a97280914d63c98e505ec70f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649436"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>IMetaDataEmit::DefineImportType 方法
-建立指定類型的定義在目前的範圍之外，並定義該參考的語彙基元的參考。  
+建立指定的型別定義在目前的範圍之外，並定義該參考的語彙基元的參考。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ HRESULT DefineImportType (
   
 #### <a name="parameters"></a>參數  
  `pAssemImport`  
- [in][IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)代表從中匯入的目標類型的組件的介面。  
+ [in][IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)介面，表示從其中匯入的目標類型的組件。  
   
  `pbHashValue`  
  [in]陣列，其中包含所指定的組件的雜湊`pAssemImport`。  
@@ -52,29 +52,29 @@ HRESULT DefineImportType (
  [in] `pbHashValue` 陣列中的位元組數。  
   
  `pImport`  
- [in][IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)代表從中匯入的目標類型的中繼資料範圍的介面。  
+ [in][IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)介面，表示從其中匯入的目標類型的中繼資料範圍。  
   
  `tdImport`  
  [in]`mdTypeDef`指定目標類型的語彙基元。  
   
  `pAssemEmit`  
- [in][IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)代表組件目標類型匯入的介面。  
+ [in][IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)介面，表示組件匯入到其中的目標型別。  
   
  `ptr`  
- [out]`mdTypeRef`型別參考目前範圍中定義的語彙基元。  
+ [out]`mdTypeRef`為型別參考目前範圍中定義的語彙基元。  
   
 ## <a name="remarks"></a>備註  
- 在呼叫之前[imetadataemit:: Defineimportmember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md)方法，您可以使用`DefineImportType`方法來建立類型參考，目前在範圍中，成員的父類別或父介面。  
+ 在呼叫之前[imetadataemit:: Defineimportmember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md)方法，您可以使用`DefineImportType`方法用來建立型別參考，在目前範圍中，成員的父類別或父介面。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

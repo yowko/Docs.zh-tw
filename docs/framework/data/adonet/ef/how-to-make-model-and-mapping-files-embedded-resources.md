@@ -1,15 +1,15 @@
 ---
-title: 如何：讓模型和對應檔成為內嵌資源
+title: HOW TO：讓模型和對應檔案內嵌的資源
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: 35507f92d0ba9f434156773c8dc5621ed3c423c0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0fd7e4fe751fd05a8b48f3dee79d374f669917fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660342"
 ---
-# <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>如何：讓模型和對應檔成為內嵌資源
+# <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>HOW TO：讓模型和對應檔案內嵌的資源
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]可讓您部署模型和對應檔做為內嵌資源的應用程式。 具有內嵌模型和對應檔的組件必須載入與實體連接相同的應用程式定義域中。 如需詳細資訊，請參閱[連接字串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。 根據預設，[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 工具會內嵌模型和對應檔。 當您手動定義模型和對應檔時，請使用這個程序，確保檔案與 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式已一起部署為內嵌資源。  
   
 > [!NOTE]
@@ -38,8 +38,8 @@ ms.locfileid: "43864277"
   
   
   
-## <a name="see-also"></a>另請參閱  
- [建立模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)  
- [如何：定義連接字串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)  
- [如何：建置 EntityCollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
- [ADO.NET 實體資料模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a>另請參閱
+- [建立模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
+- [如何：定義連接字串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)
+- [如何：建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)
+- [ADO.NET 實體資料模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
