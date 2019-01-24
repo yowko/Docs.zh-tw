@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: f64e47922aea35ac9ddf51428107af0d4002d33e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1666c7743f1116f86bc4457af53711cb6f1a6b7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185819"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579819"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 指定金鑰組的金鑰容器名稱，為組件提供強式名稱。  
@@ -26,7 +26,7 @@ ms.locfileid: "50185819"
   
 |詞彙|定義|  
 |---|---|  
-|`container`|必要。 包含索引鍵的容器檔案。 將檔案名稱括在引號 ("") 如果名稱包含空格。|  
+|`container`|必要項。 包含索引鍵的容器檔案。 將檔案名稱括在引號 ("") 如果名稱包含空格。|  
   
 ## <a name="remarks"></a>備註  
  藉由將公開金鑰插入組件資訊清單，並使用私密金鑰簽署最終組件，編譯器會建立可共用的元件。 若要產生金鑰檔，請在命令列中輸入 `sn -k file`。 `-i`選項會安裝至容器的金鑰組。 如需詳細資訊，請參閱 [Sn.exe （強式名稱工具）][Sn.exe （強式名稱工具）](../../../framework/tools/sn-exe-strong-name-tool.md))。  
@@ -49,8 +49,8 @@ ms.locfileid: "50185819"
 vbc -keycontainer:key1 input.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>另請參閱
+- [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

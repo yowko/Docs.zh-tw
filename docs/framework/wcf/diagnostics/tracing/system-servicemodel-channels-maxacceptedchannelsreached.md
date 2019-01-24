@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MaxAcceptedChannelsReached
 ms.date: 03/30/2017
 ms.assetid: 13d15194-a04f-4a5a-9d85-23ad350fdc7e
-ms.openlocfilehash: 1f7db6a010c112b79958e8374d65ec351cac5942
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b40a387a311f2efb6bee473e9f04c289dc9df6e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33477164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578688"
 ---
 # <a name="systemservicemodelchannelsmaxacceptedchannelsreached"></a>System.ServiceModel.Channels.MaxAcceptedChannelsReached
 System.ServiceModel.Channels.MaxAcceptedChannelsReached  
@@ -15,7 +15,7 @@ System.ServiceModel.Channels.MaxAcceptedChannelsReached
 ## <a name="description"></a>描述  
  已達到輸入工作階段通道數目的上限。  
   
-## <a name="see-also"></a>另請參閱  
- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>另請參閱
+- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

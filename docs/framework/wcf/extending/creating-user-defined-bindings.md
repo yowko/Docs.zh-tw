@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548790"
 ---
 # <a name="creating-user-defined-bindings"></a>建立使用者定義繫結
 您有幾種方式可以建立系統不提供的繫結：  
@@ -23,7 +23,7 @@ ms.locfileid: "50186053"
 ## <a name="the-order-of-binding-elements"></a>繫結項目的順序  
  每個繫結項目都代表傳送或接收訊息時的一個處理步驟。 在執行階段，繫結項目會建立通道和接聽項，它們是建立傳出和傳入通道堆疊的必要項目。  
   
- 繫結項目主要分為三種：通訊協定繫結項目、編碼繫結項目，和傳輸繫結項目。  
+ 有三種主要的繫結項目：通訊協定繫結項目、 編碼繫結項目和傳輸繫結項目。  
   
  通訊協定繫結項目 – 這些項目代表會處理訊息的較高階處理步驟。 由這些繫結項目所建立的通道與接聽項，可以新增、移除，或是修改訊息內容。 特定繫結可能包含任意數量的通訊協定繫結項目，而這些項目每個都繼承自 <xref:System.ServiceModel.Channels.BindingElement>。 Windows Communication Foundation (WCF) 包含數個通訊協定的繫結項目，包括<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>而<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。  
   
@@ -56,7 +56,7 @@ Binding customBinding = new CustomBinding(
 );  
 ```  
   
- 撰寫新的繫結項目的方式，需視其明確的功能而定。 其中一個範例中，[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)，提供詳細的說明如何實作某種繫結項目。  
+ 撰寫新的繫結項目的方式，需視其明確的功能而定。 其中一個範例，[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)，提供詳細的說明如何實作某種繫結項目。  
   
 ## <a name="creating-a-new-binding"></a>建立新繫結  
  您可以透過下列兩種方式運用使用者建立的繫結項目。 上一節說明了第一種方式，亦即透過自訂繫結。 自訂繫結允許使用者根據任意一組繫結項目來建立自己的繫結，包括使用者建立的繫結。  
@@ -118,6 +118,6 @@ public override BindingElementCollection CreateBindingElements()
 ## <a name="deriving-from-a-standard-binding"></a>衍生自標準繫結  
  您可以不建立全新的繫結類別，而改為擴充其中一個現有的系統提供繫結。 與先前的情況非常類似，這次您必須覆寫 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 屬性的 <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 方法。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.Binding>  
- [自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.Binding>
+- [自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)

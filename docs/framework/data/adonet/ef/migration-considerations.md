@@ -2,12 +2,12 @@
 title: 移轉考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: cf705caa84742d654465a2dba005f2d8f32abcca
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 14f71de4a05c821ec21bf018fe2e2383d747c41b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837491"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575615"
 ---
 # <a name="migration-considerations-entity-framework"></a>移轉考量 (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework 可以為現有應用程式提供幾項優勢， 其中一項最重要的優勢，就是使用概念模型將應用程式所使用的資料結構從資料來源中的結構描述分隔。 這樣能方便您以後對儲存體模型或資料來源本身進行變更，而不必對應用程式進行補償變更。 針對使用的優點的詳細資訊[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，請參閱 < [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)並[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "48837491"
  移轉現有應用程式至 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的途徑取決於應用程式的類型以及現有資料存取策略。 不過，在將現有應用程式移轉至 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 時，一律必須執行下列工作：  
   
 > [!NOTE]
->  當您使用 Entity Data Model 工具，從 Visual Studio 2008 開始，所有這些工作會自動執行。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用 Entity Data Model 精靈](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。  
+>  當您使用 Entity Data Model 工具，從 Visual Studio 2008 開始，所有這些工作會自動執行。 如需詳細資訊，請參閱[＜How to：使用 Entity Data Model 精靈](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。  
   
 1.  升級應用程式。  
   
@@ -37,23 +37,23 @@ ms.locfileid: "48837491"
   
 2.  定義模型與對應  
   
-     模型和對應檔案定義概念模型中的實體、資料來源中的結構 (例如資料表、預存程序和檢視表)，以及實體與資料來源結構間的對應。 如需詳細資訊，請參閱 <<c0> [ 如何： 手動定義模型和對應檔](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a)。  
+     模型和對應檔案定義概念模型中的實體、資料來源中的結構 (例如資料表、預存程序和檢視表)，以及實體與資料來源結構間的對應。 如需詳細資訊，請參閱[＜How to：手動定義模型和對應檔](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a)。  
   
-     儲存體模型中定義的類型必須與資料來源中物件的名稱相符。 如果現有應用程式將資料公開 (Expose) 為物件，您必須確保概念模型中定義的實體和屬性與這些現有資料類別和屬性的名稱相符。 如需詳細資訊，請參閱 <<c0> [ 如何： 自訂模型和對應檔案以搭配自訂物件運作](https://msdn.microsoft.com/library/bb40c4db-0121-4e45-a167-8fb06707a708)。  
+     儲存體模型中定義的類型必須與資料來源中物件的名稱相符。 如果現有應用程式將資料公開 (Expose) 為物件，您必須確保概念模型中定義的實體和屬性與這些現有資料類別和屬性的名稱相符。 如需詳細資訊，請參閱[＜How to：自訂模型和對應檔，以搭配自訂物件運作](https://msdn.microsoft.com/library/bb40c4db-0121-4e45-a167-8fb06707a708)。  
   
     > [!NOTE]
     >  Entity Data Model Designer 可以用來重新命名概念模型中的實體，使其與現有物件相符。 如需詳細資訊，請參閱 < [Entity Data Model Designer](https://msdn.microsoft.com/library/4ccd7ad6-b934-4f7c-82a0-cfd2d4a95faf)。  
   
 3.  定義連接字串 (Connection String)。  
   
-     針對概念模型執行查詢時，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會使用特殊格式化的連接字串。 此連接字串會封裝與模型和對應檔以及資料來源連接有關的資訊。 如需詳細資訊，請參閱 <<c0> [ 如何： 定義連接字串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)。  
+     針對概念模型執行查詢時，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會使用特殊格式化的連接字串。 此連接字串會封裝與模型和對應檔以及資料來源連接有關的資訊。 如需詳細資訊，請參閱[＜How to：定義連接字串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)。  
   
 4.  設定 Visual Studio 專案。  
   
-     若要參考[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]組件的模型和對應檔案必須新增至 Visual Studio 專案。 您可以將這些對應檔加入至專案，以確保它們與應用程式一起部署在連接字串中所指示的位置。 如需詳細資訊，請參閱 <<c0> [ 如何： 手動設定 Entity Framework 專案](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)。  
+     若要參考[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]組件的模型和對應檔案必須新增至 Visual Studio 專案。 您可以將這些對應檔加入至專案，以確保它們與應用程式一起部署在連接字串中所指示的位置。 如需詳細資訊，請參閱[＜How to：手動設定 Entity Framework 專案](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)。  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>適用於具有現有物件的應用程式之考量  
- 從 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4 版開始，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 可支援「單純」(plain old) CLR 物件 (POCO)，又稱為非持續性物件。 大部分的情況下，只要稍加變更您現有的物件，它們都能與 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 搭配使用。 如需詳細資訊，請參閱 <<c0> [ 處理 POCO 實體](https://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3)。 您也可以移轉應用程式[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]並使用 Entity Framework 工具所產生的資料類別。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用 Entity Data Model 精靈](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。  
+ 從 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4 版開始，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 可支援「單純」(plain old) CLR 物件 (POCO)，又稱為非持續性物件。 大部分的情況下，只要稍加變更您現有的物件，它們都能與 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 搭配使用。 如需詳細資訊，請參閱 <<c0> [ 處理 POCO 實體](https://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3)。 您也可以移轉應用程式[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]並使用 Entity Framework 工具所產生的資料類別。 如需詳細資訊，請參閱[＜How to：使用 Entity Data Model 精靈](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>適用於使用 ADO.NET 提供者的應用程式之考量  
  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供者，如 SqlClient，可讓您查詢資料來源，進而傳回表格式資料。 也將資料載入至[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]資料集。 下列清單說明適用於升級使用現有 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供者的應用程式之考量：  
@@ -86,7 +86,7 @@ ms.locfileid: "48837491"
  以 Windows Communication Foundation (WCF) 為架構的 Web 服務和應用程式使用 XML 要求/回應訊息格式公開來自基礎資料來源的資料。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 使用二進位、XML 或 WCF 資料合約序列化 (Serialization) 支援實體物件的序列化。 二進位和 WCF 序列化都支援物件圖形的完整序列化。 如需詳細資訊，請參閱 <<c0> [ 建置多層式架構應用程式](https://msdn.microsoft.com/library/9439d2ba-6b5f-44e8-be65-8a442d922cbb)。  
   
  使用 XML 資料的應用程式。  
- 物件序列化能讓您建立 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 資料服務。 這些服務為使用 XML 資料的應用程式提供資料，例如以 AJAX 為基礎的網際網路應用程式。 在這些情況下，請考慮使用 [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]。 這些資料服務會以實體資料模型為基礎並提供使用標準具像狀態傳輸 (REST) HTTP 動作的實體資料的動態存取、 例如 GET、 PUT 和張貼的資料。 如需詳細資訊，請參閱 < [WCF Data Services 4.5](../../../../../docs/framework/data/wcf/index.md)。  
+ 物件序列化能讓您建立 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 資料服務。 這些服務為使用 XML 資料的應用程式提供資料，例如以 AJAX 為基礎的網際網路應用程式。 在這些情況下，請考慮使用 [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]。 這些資料服務會以實體資料模型為基礎並提供使用標準具像狀態傳輸 (REST) HTTP 動作的實體資料的動態存取、 例如 GET、 PUT 和張貼的資料。 如需詳細資訊，請參閱 [WCF Data Services 4.5](../../../../../docs/framework/data/wcf/index.md)。  
   
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不支援原生 XML 資料型別， 亦即將實體對應至具有 XML 資料行的資料表時，XML 資料行的對等實體屬性會是字串。 您可以中斷物件的連接，而且將其序列化為 XML。 如需詳細資訊，請參閱 <<c0> [ 序列化的物件](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99)。  
   
@@ -95,6 +95,6 @@ ms.locfileid: "48837491"
  維護狀態的應用程式。  
  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web 應用程式必須經常維護 Web 網頁或使用者工作階段的狀態。 中的物件<xref:System.Data.Objects.ObjectContext>執行個體可以儲存在用戶端檢視狀態，或在工作階段狀態，在伺服器上，並稍後再擷取和重新附加至新的物件內容。 如需詳細資訊，請參閱 <<c0> [ 附加和卸離物件](https://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23)。  
   
-## <a name="see-also"></a>另請參閱  
- [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Entity Framework 詞彙](../../../../../docs/framework/data/adonet/ef/terminology.md)
+## <a name="see-also"></a>另請參閱
+- [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Entity Framework 詞彙](../../../../../docs/framework/data/adonet/ef/terminology.md)

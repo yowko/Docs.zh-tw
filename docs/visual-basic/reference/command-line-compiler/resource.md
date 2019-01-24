@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -res compiler option [Visual Basic]
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
-ms.openlocfilehash: ca9aea526d1039c09883696ed2a35ed930c92872
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 46122eaa7ca54679c9a52b939f9100c9a0747e7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199015"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550353"
 ---
 # <a name="-resource-visual-basic"></a>-資源 (Visual Basic)
 將 Managed 資源內嵌至組件中。  
@@ -31,7 +31,7 @@ ms.locfileid: "50199015"
   
 |詞彙|定義|  
 |---|---|  
-|`filename`|必要。 資源檔嵌入輸出檔的名稱。 根據預設，`filename`是公用的組件中。 將檔案名稱括在引號 ("") 如果它包含空格。|  
+|`filename`|必要項。 資源檔嵌入輸出檔的名稱。 根據預設，`filename`是公用的組件中。 將檔案名稱括在引號 ("") 如果它包含空格。|  
 |`identifier`|選擇性。 資源; 的邏輯名稱用來將其載入的名稱。 預設值是檔案的名稱。 （選擇性） 您可以指定資源是否公用或私用組件資訊清單中，如同下列： `-res:filename.res, myname.res, public`|  
   
 ## <a name="remarks"></a>備註  
@@ -52,8 +52,8 @@ vbc -res:rf.resource in.vb
   
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)  
-- [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)  
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)
+- [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
-ms.openlocfilehash: 39696be1286efa68fa70b698ba9623911c90e352
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 908751401d812be0403af5517d9bbf2ad7344f35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573799"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>選取 Windows Form Button 控制項的方法
-以下列方式，可以選取 Windows Form 按鈕：  
+將 Windows Form 按鈕可以下列方式選取：  
   
--   按一下按鈕，使用滑鼠。  
+-   使用滑鼠按一下的按鈕。  
   
--   叫用按鈕的<xref:System.Windows.Forms.Control.Click>程式碼中的事件。  
+-   叫用按鈕的<xref:System.Windows.Forms.Control.Click>在程式碼中的事件。  
   
--   按下 TAB 鍵，將焦點移至按鈕，然後選擇該按鈕按下空格鍵或 ENTER。  
+-   藉由按下 TAB 鍵，將焦點移至 按鈕，然後選擇該按鈕按下空格鍵或 ENTER 鍵。  
   
--   按下便捷鍵 （ALT + 加底線的字母） 按鈕。 如需存取金鑰的詳細資訊，請參閱[How to： 建立存取金鑰的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)。  
+-   按下便捷鍵 （ALT + 加底線的字母） 按鈕。 如需存取金鑰的詳細資訊，請參閱[How to:建立 Windows form 控制項的便捷鍵](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)。  
   
--   如果按鈕是 [接受] 按鈕的形式，按下 ENTER 鍵會選擇該按鈕，即使另一個控制項有焦點，除非控制項是另一個按鈕、 多行文字方塊中或自訂控制項的 enter 鍵。  
+-   如果表單的 接受 按鈕的按鈕，按下 ENTER 鍵會選擇該按鈕，即使另一個控制項有焦點，但如果控制項是另一個按鈕、 多行文字 方塊中或自訂控制項的設陷 enter 鍵。  
   
--   如果按鈕是表單的 「 取消 」 按鈕，按下 esc 鍵選擇該按鈕，即使另一個控制項有焦點。  
+-   如果按鈕是 「 取消 」 按鈕的表單，按下 esc 鍵會選擇 [] 按鈕，即使另一個控制項有焦點。  
   
--   呼叫<xref:System.Windows.Forms.Button.PerformClick%2A>方法來以程式設計方式選取按鈕。  
+-   呼叫<xref:System.Windows.Forms.Button.PerformClick%2A>方法來以程式設計方式選取的按鈕。  
   
-## <a name="see-also"></a>另請參閱  
- [Button 控制項概觀](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [操作說明：回應 Windows Forms Button 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [Button 控制項](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- [Button 控制項概觀](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
+- [如何：回應 Windows Form Button 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [Button 控制項](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

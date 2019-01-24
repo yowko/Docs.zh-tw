@@ -2,12 +2,12 @@
 title: BinaryMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: e2bb3cdd-3bbd-4bb5-85fe-570457500a66
-ms.openlocfilehash: 326fe6a7ca8dc5dba0dd64b1c5fc97cec49279c7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 330496d5f0f80affcb6bc44a1f66f4321a635f00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580586"
 ---
 # <a name="binarymessageencodingbindingelement"></a>BinaryMessageEncodingBindingElement
 BinaryMessageEncodingBindingElement  
@@ -52,7 +52,7 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
  定義可同時傳送之訊息數目 (在不配置新寫入器的情況下) 的整數。  
   
 ## <a name="readerquotas"></a>ReaderQuotas  
- 資料型別：XmlDictionaryReaderQuotas  
+ 資料類型：XmlDictionaryReaderQuotas  
   
  存取類型：唯讀  
   
@@ -64,5 +64,5 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>

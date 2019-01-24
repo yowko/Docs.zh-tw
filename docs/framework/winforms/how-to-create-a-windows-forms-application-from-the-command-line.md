@@ -1,5 +1,5 @@
 ---
-title: 如何： 從命令列建立 Windows Forms 應用程式
+title: HOW TO：從命令列建立 Windows Forms 應用程式
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b37c57093662c94f5ad20bf9d01c63223b5901fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54581975"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何： 從命令列建立 Windows Forms 應用程式
-下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。 在 Visual Studio 中，對這些程序有廣泛的支援。  另請參閱[逐步解說： 建立簡單的 Windows Form](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))。  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>HOW TO：從命令列建立 Windows Forms 應用程式
+下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。 在 Visual Studio 中，對這些程序有廣泛的支援。  另請參閱[逐步解說：建立簡單 Windows Form](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))。  
   
 ## <a name="procedure"></a>程序  
   
@@ -113,9 +113,9 @@ ms.locfileid: "43804785"
   
 -   若要編譯程式碼，請遵循前面說明如何編譯及執行應用程式之程序中的指示。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Control>  
- [變更 Windows Forms 的外觀](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- [增強 Windows Forms 應用程式](../../../docs/framework/winforms/advanced/index.md)  
- [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Control>
+- [變更 Windows Forms 的外觀](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
+- [增強 Windows Forms 應用程式](../../../docs/framework/winforms/advanced/index.md)
+- [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

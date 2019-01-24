@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Power Packs, deploying
 ms.assetid: f2230f53-a745-4731-89e6-033943faa209
-ms.openlocfilehash: bd235bc0b4a7f9978333931ae1dce012c0950374
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 3fd46a6e8aad61d2f8ce5a230c856470f913d0bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198224"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551770"
 ---
 # <a name="deploying-applications-that-reference-power-packs-controls-visual-studio"></a>部署參考 Power Packs 控制項 (Visual Studio) 的應用程式
 如果您想要部署參考 Power Packs 控制項的應用程式 (<xref:Microsoft.VisualBasic.PowerPacks.LineShape>， <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>， <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>，或<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>)，控制項必須安裝在目的地電腦上。  
@@ -28,6 +28,6 @@ ms.locfileid: "39198224"
   
  為啟動程序的替代方案，您可以使用電子軟體發佈系統，例如 Microsoft Systems Management Server，預先部署 Power Packs 控制項。  
   
-## <a name="see-also"></a>另請參閱  
- [如何：使用 ClickOnce 應用程式安裝必要條件](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)  
- [Visual Basic Power Packs 控制項](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)
+## <a name="see-also"></a>另請參閱
+- [如何：隨著 ClickOnce 應用程式安裝必要軟體](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)
+- [Visual Basic Power Packs 控制項](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)

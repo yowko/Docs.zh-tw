@@ -2,12 +2,12 @@
 title: 追蹤的安全性考量及實用秘訣
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 439484cf5df6311bef56be0e28e5949c79d9a8f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0dadf89ecbd7623735debe37355761aea3d62db4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184842"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580391"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>追蹤的安全性考量及實用秘訣
 此主題描述如何保護敏感資訊以防公開，以及使用 WebHost 時的實用秘訣。  
@@ -90,5 +90,5 @@ ms.locfileid: "50184842"
   
  此外，每次連線以進行連線導向的傳輸，或是每次以其他方式傳送訊息時，都會記錄一次訊息寄件者的 IP 位址。 這不需要寄件者的同意就能進行。 但是，這種記錄行為只會發生在 [資訊] 或 [詳細資料] 追蹤層級中 (不屬於實際執行的預設或建議追蹤層級)，除了即時偵錯以外。  
   
-## <a name="see-also"></a>另請參閱  
- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>另請參閱
+- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

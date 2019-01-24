@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576011"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 列舉
 包含值，這些值描述與欄位有關的中繼資料。  
@@ -63,31 +63,31 @@ typedef enum CorFieldAttr {
 |成員|描述|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|指定的協助工具資訊。|  
-|`fdPrivateScope`|指定的欄位不能參考。|  
-|`fdPrivate`|指定欄位可存取只能由其父型別。|  
-|`fdFamANDAssem`|指定欄位是由其組件中的衍生類別存取。|  
+|`fdPrivateScope`|指定無法參考的欄位。|  
+|`fdPrivate`|指定欄位只能由其父型別存取。|  
+|`fdFamANDAssem`|指定的欄位是由其組件中的衍生類別存取。|  
 |`fdAssembly`|指定欄位可存取其組件中的所有型別。|  
-|`fdFamily`|指定欄位只有才可以存取它的型別和衍生類別。|  
-|`fdFamORAssem`|指定欄位可存取衍生的類別和其組件中的所有型別。|  
+|`fdFamily`|指定欄位只能由其類型存取，而且衍生的類別。|  
+|`fdFamORAssem`|指定的欄位是可由衍生的類別和其組件中的所有型別存取。|  
 |`fdPublic`|指定欄位可存取此範圍的可見性與所有類型。|  
-|`fdStatic`|指定欄位是其類型的成員，而不是執行個體成員。|  
-|`fdInitOnly`|指定在初始化之後，無法變更欄位。|  
-|`fdLiteral`|指定欄位值是編譯時間常數。|  
+|`fdStatic`|指定的欄位是其類型的成員，而不是執行個體成員。|  
+|`fdInitOnly`|指定在初始化之後，無法變更的欄位。|  
+|`fdLiteral`|指定欄位值為編譯時間常數。|  
 |`fdNotSerialized`|指定當其類型為遠端時，則不會序列化的欄位。|  
-|`fdSpecialName`|指定欄位是特殊的且其名稱描述如何。|  
-|`fdPinvokeImpl`|指定欄位的實作會透過 PInvoke 轉送。|  
+|`fdSpecialName`|指定欄位是特殊的且其名稱描述方式。|  
+|`fdPinvokeImpl`|指定欄位的實作會經由 PInvoke 被轉送。|  
 |`fdReservedMask`|保留供內部使用的 common language runtime。|  
-|`fdRTSpecialName`|指定用 common language runtime 中繼資料內部的應用程式開發介面應該檢查名稱的編碼方式。|  
-|`fdHasFieldMarshal`|指定的欄位包含封送處理資訊。|  
-|`fdHasDefault`|指定的欄位具有預設值。|  
-|`fdHasFieldRVA`|指定的欄位具有相對虛擬位址。|  
+|`fdRTSpecialName`|指定 common language runtime 中繼資料內部 Api 應該檢查名稱編碼方式。|  
+|`fdHasFieldMarshal`|指定欄位含有封送處理資訊。|  
+|`fdHasDefault`|指定欄位含有預設值。|  
+|`fdHasFieldRVA`|指定欄位含有相對虛擬位址。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

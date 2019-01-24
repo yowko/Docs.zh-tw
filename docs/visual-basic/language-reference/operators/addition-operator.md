@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: 91806c204c313956b292eb9c9be078991f733b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: da0c6f492b068c9caa50468ead47cdc08559bfce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576352"
 ---
 # <a name="-operator-visual-basic"></a>+ 運算子 (Visual Basic)
 兩個數字相加，或傳回數值運算式的正值。 也可以用來串連兩個字串運算式。  
@@ -32,7 +32,7 @@ expression1 + expression2
   
 |詞彙|定義|  
 |---|---|  
-|`expression1`|必要。 任何數值或字串的運算式。|  
+|`expression1`|必要項。 任何數值或字串的運算式。|  
 |`expression2`|除非`+`運算子會計算為負數值。 任何數值或字串的運算式。|  
   
 ## <a name="result"></a>結果  
@@ -83,7 +83,7 @@ expression1 + expression2
 >  當您使用`+`運算子，可能無法判斷是否會發生加法或字串的串連。 使用`&`運算子串連消除模稜兩可，並提供自我記錄程式碼。  
   
 ## <a name="overloading"></a>多載化  
- `+`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。 如果您的程式碼會使用這個運算子，這類類別或結構上，請務必了解其已重新定義的行為。 如需詳細資訊，請參閱 <<c0> [ 運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ `+`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。 如果您的程式碼會使用這個運算子，這類類別或結構上，請務必了解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會使用`+`運算子，將數字。 如果運算元是數字的同時，Visual Basic 會計算算術的結果。 算術的結果表示兩個運算元的總和。  
@@ -108,11 +108,11 @@ expression1 + expression2
   
  若要避免模稜兩可，您應該使用`&`運算子來取代`+`串連。  
   
-## <a name="see-also"></a>另請參閱  
- [& 運算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
- [串連運算子](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
- [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [在 Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>另請參閱
+- [& 運算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)
+- [串連運算子](../../../visual-basic/language-reference/operators/concatenation-operators.md)
+- [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [在 Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)

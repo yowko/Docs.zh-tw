@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 93512ab00fe05a4166125c5e319ce91a5cc04573
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b056f52879c4309db0cbb33ecc789d25439a8c68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576846"
 ---
 # <a name="controls-by-category"></a>按分類區隔控制項
-Windows Presentation Foundation (WPF) 控制項可以按邏輯分數種類別。 從這些分類可看出哪些控制項有類似的使用模式或功能，方便您視情況選擇適合的控制項。  
+Windows Presentation Foundation (WPF) 控制項可以以邏輯方式分組分為數個類別。 從這些分類可看出哪些控制項有類似的使用模式或功能，方便您視情況選擇適合的控制項。  
   
 ## <a name="layout"></a>配置  
  配置控制項可用來管理子項目的大小、維度、位置和排列。  
@@ -56,7 +56,7 @@ Windows Presentation Foundation (WPF) 控制項可以按邏輯分數種類別。
 -   <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>按鈕  
- 按鈕是最基本的一種使用者介面控制項。 應用程式通常會執行中的某些工作<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件，當使用者在其上按一下。  
+ 按鈕是最基本的一種使用者介面控制項。 應用程式通常會執行某項工作中的<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件，當使用者在其上按一下。  
   
 -   <xref:System.Windows.Controls.Button>  
   
@@ -177,5 +177,5 @@ Windows Presentation Foundation (WPF) 控制項可以按邏輯分數種類別。
   
 -   <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>另請參閱  
- [控制項程式庫](../../../../docs/framework/wpf/controls/control-library.md)
+## <a name="see-also"></a>另請參閱
+- [控制項程式庫](../../../../docs/framework/wpf/controls/control-library.md)

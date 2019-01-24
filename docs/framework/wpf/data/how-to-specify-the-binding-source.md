@@ -1,5 +1,5 @@
 ---
-title: 操作說明：指定繫結來源
+title: HOW TO：指定繫結來源
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 333a85bc59ded3fd42bef6aff5845c9a6ddeb49b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2e3fa3352da85c7da394a582cfcd058fe3fadf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577122"
 ---
-# <a name="how-to-specify-the-binding-source"></a>操作說明：指定繫結來源
+# <a name="how-to-specify-the-binding-source"></a>HOW TO：指定繫結來源
 在資料繫結中，繫結來源物件是指您的資料取得來源物件。 本主題說明指定繫結來源的不同方式。  
   
 ## <a name="example"></a>範例  
@@ -39,14 +39,14 @@ ms.locfileid: "33556870"
   
 |屬性|描述|  
 |--------------|-----------------|  
-|<xref:System.Windows.Data.Binding.Source%2A>|使用這個屬性將來源設定為物件的執行個體。 如果您不需要的功能建立的執行範圍的數個屬性繼承相同的資料內容，您可以使用<xref:System.Windows.Data.Binding.Source%2A>屬性而非`DataContext`屬性。 如需詳細資訊，請參閱<xref:System.Windows.Data.Binding.Source%2A>。|  
+|<xref:System.Windows.Data.Binding.Source%2A>|使用這個屬性將來源設定為物件的執行個體。 如果您不需要的功能建立的範圍中的數個屬性都繼承相同的資料內容，您可以使用<xref:System.Windows.Data.Binding.Source%2A>屬性而非`DataContext`屬性。 如需詳細資訊，請參閱<xref:System.Windows.Data.Binding.Source%2A>。|  
 |<xref:System.Windows.Data.Binding.RelativeSource%2A>|當您想以相對於繫結目標的位置指定來源，這十分有用。 使用這個屬性的常見案例是，當您想將元素的一個屬性繫結至同一元素的其他屬性時，或當您正在樣式或範本中定義繫結時。 如需詳細資訊，請參閱<xref:System.Windows.Data.Binding.RelativeSource%2A>。|  
-|<xref:System.Windows.Data.Binding.ElementName%2A>|指定一個字串來代表您想繫結至的元素。 當您想要繫結至應用程式中其他元素的屬性時，這十分有用。 例如，如果您想要使用<xref:System.Windows.Controls.Slider>來控制應用程式中的另一個控制項的高度或如果您想要繫結<xref:System.Windows.Controls.ContentControl.Content%2A>至控制項的<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>屬性您<xref:System.Windows.Controls.ListBox>控制項。 如需詳細資訊，請參閱<xref:System.Windows.Data.Binding.ElementName%2A>。|  
+|<xref:System.Windows.Data.Binding.ElementName%2A>|指定一個字串來代表您想繫結至的元素。 當您想要繫結至應用程式中其他元素的屬性時，這十分有用。 比方說，如果您想要使用<xref:System.Windows.Controls.Slider>控制的應用程式中的另一個控制項的高度或如果您想要繫結<xref:System.Windows.Controls.ContentControl.Content%2A>的控制項<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>屬性您<xref:System.Windows.Controls.ListBox>控制項。 如需詳細資訊，請參閱<xref:System.Windows.Data.Binding.ElementName%2A>。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>  
- <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>  
- [屬性值繼承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [繫結宣告概觀](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
+- <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
+- [屬性值繼承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
+- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [繫結宣告概觀](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
+- [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

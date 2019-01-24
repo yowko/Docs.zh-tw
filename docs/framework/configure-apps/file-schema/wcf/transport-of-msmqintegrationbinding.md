@@ -2,20 +2,20 @@
 title: '&lt;msmqIntegrationBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: 27876d819f766c130a29b07524e30ac77e9ba05d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6cd930a2ab097e50edfb9bc4eba5c8d29484ad29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550548"
 ---
 # <a name="lttransportgt-of-ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt; 的 &lt;transport&gt;
 定義訊息佇列整合傳輸的安全性設定。  
   
  \<system.ServiceModel>  
-\<繫結 >  
+\<bindings>  
 msmqIntegrationBinding  
-\<繫結 >  
+\<binding>  
 \<安全性 >  
 \<transport>  
   
@@ -37,8 +37,8 @@ msmqIntegrationBinding
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`msmqAuthenticationMode`|指定 MSMQ 傳輸必須如何驗證訊息。 如果這設定為 `None`，則 `msmqProtectionLevel` 屬性的值也必須設定為 `None`。<br /><br /> 有效值包括以下的值：<br /><br /> -None:沒有驗證。<br />-WindowsDomain:驗證機制使用 Active Directory 與訊息相關聯的 SID 取得 X.509 憑證。 接著這會用於檢查佇列的 ACL，以確保使用者具有寫入佇列的權限。<br />憑證：通道會從憑證存放區取得的憑證。<br /><br /> 預設值為 WindowsDomain。 此屬性的型別為 <xref:System.ServiceModel.MsmqAuthenticationMode>。|  
-|`msmqEncryptionAlgorithm`|指定演算法，該演算法用於在訊息佇列管理員之間傳輸訊息時，在線上加密訊息。 有效值包括以下的值：<br /><br /> -RC4Stream<br />AES<br /><br /> 預設值為 RC4Stream。 此屬性的型別為 <xref:System.ServiceModel.MsmqEncryptionAlgorithm>。|  
+|`msmqAuthenticationMode`|指定 MSMQ 傳輸必須如何驗證訊息。 如果這設定為 `None`，則 `msmqProtectionLevel` 屬性的值也必須設定為 `None`。<br /><br /> 有效值包括以下的值：<br /><br /> -None:沒有驗證。<br />-   WindowsDomain:驗證機制使用 Active Directory 與訊息相關聯的 SID 取得 X.509 憑證。 接著這會用於檢查佇列的 ACL，以確保使用者具有寫入佇列的權限。<br />憑證：通道會從憑證存放區取得的憑證。<br /><br /> 預設值為 WindowsDomain。 此屬性的型別為 <xref:System.ServiceModel.MsmqAuthenticationMode>。|  
+|`msmqEncryptionAlgorithm`|指定演算法，該演算法用於在訊息佇列管理員之間傳輸訊息時，在線上加密訊息。 有效值包括以下的值：<br /><br /> -   RC4Stream<br />-   AES<br /><br /> 預設值為 RC4Stream。 此屬性的型別為 <xref:System.ServiceModel.MsmqEncryptionAlgorithm>。|  
 |`msmqProtectionLevel`|指定在 MSMQ 傳輸層級上保護訊息的方式。 加密可確保訊息完整性，而 EncryptAndSign 可確保訊息完整性和不可否認性，也就是訊息確實來自寄件者，且寄件者就是他本人。<br /><br /> 無效的值包括下列各項：<br />-None:無保護。<br />簽署：訊息會經過簽署。<br />-EncryptAndSign:訊息會經過加密和簽署。<br /><br /> 預設值為 Sign。 此屬性的型別為 ProtectionLevel。|  
 |`msmqSecureHashAlgorithm`|-指定的演算法來計算摘要做為簽章的一部分。 有效值包括以下的值：<br />-   MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> 預設值為 SHA1。 此屬性的型別為 <xref:System.ServiceModel.MsmqSecureHashAlgorithm>。|  
   
@@ -54,14 +54,14 @@ msmqIntegrationBinding
 ## <a name="remarks"></a>備註  
  這個項目會封裝訊息佇列整合傳輸的安全性設定。 這些設定同時適用於訊息佇列整合和已佇列之傳輸。 它還可讓您設定驗證模式、加密演算法、安全雜湊演算法和保護層級。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.MsmqTransportSecurity>  
- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.MsmqTransportSecurity>
+- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

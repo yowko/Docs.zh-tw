@@ -2,12 +2,12 @@
 title: 修改 SQL 產生
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: bfeb4f826022d39b2a45132a5b2bf344ef4c99c6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0bacd974c4eb9bc98851d35d574a184fde4d9468
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580053"
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 產生
 本節將討論如何為您的 (SQL:1999 相容資料庫) 提供者開發修改 SQL 產生模組。 這個模組負責將修改命令樹轉譯為適當的 SQL INSERT、UPDATE 或 DELETE 陳述式。  
@@ -27,7 +27,7 @@ ms.locfileid: "53127065"
   
  DbModificationCommandTree 及其實作所產生的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]永遠都代表單一資料列作業。 這一節會描述 .NET Framework 3.5 版中的這些型別以及其條件約束。  
   
- ![圖表](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
  DbModificationCommandTree 有一個目標屬性，此屬性代表針對修改作業設定的目標。 定義輸入集的目標運算式屬性一定是 DbScanExpression。  DbScanExpression 可以是會代表資料表或檢視，或一組資料使用查詢定義如果中繼資料屬性"Defining Query"其目標為非 null。  
   
@@ -286,5 +286,5 @@ delete [dbo].[Categories]
 where ([CategoryID] = @p0)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [撰寫 Entity Framework 資料提供者](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a>另請參閱
+- [撰寫 Entity Framework 資料提供者](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

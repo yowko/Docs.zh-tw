@@ -1,15 +1,15 @@
 ---
-title: HOW TO：以 WorkflowServiceHost 設定追蹤
+title: HOW TO：使用 WorkflowServiceHost 設定追蹤
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: 56b9f95019995cdb55ec36769ff179ce1125c4b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ed8775a8eb13a8e69566c1d413dcd2eba6d8b6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577564"
 ---
-# <a name="how-to-configure-tracking-with-workflowservicehost"></a>HOW TO：以 WorkflowServiceHost 設定追蹤
+# <a name="how-to-configure-tracking-with-workflowservicehost"></a>HOW TO：使用 WorkflowServiceHost 設定追蹤
 本主題說明如何設定裝載於 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 之 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流程的追蹤。 此追蹤是透過 Web.config 檔案指定服務行為而設定的。  
   
 ### <a name="configure-tracking-in-configuration"></a>在組態中設定追蹤  
@@ -27,7 +27,7 @@ ms.locfileid: "33490730"
     ```  
   
     > [!NOTE]
-    >  上述組態範例會使用簡化的組態。 如需詳細資訊，請參閱[簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)。  
+    >  上述組態範例會使用簡化的組態。 如需詳細資訊，請參閱 < [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)。  
   
      上述組態範例會加入 <xref:System.Activities.Tracking.EtwTrackingParticipant> 並指定追蹤設定檔名稱。 追蹤設定檔是在 <`trackingProfile`> 內的 <`tracking`> 項目中建立的。 追蹤設定檔包含有追蹤查詢，這些查詢允許追蹤參與者訂閱工作流程執行個體狀態在執行時期變更時所發出的工作流程事件。 下列範例示範如何建立追蹤設定檔。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "33490730"
     </system.serviceModel>  
     ```  
   
-     如需追蹤設定檔的詳細資訊，請參閱[追蹤設定檔](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
+     如需有關追蹤設定檔的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
   
-     如需一般追蹤的詳細資訊，請參閱[工作流程追蹤](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。  
+     如需追蹤設定檔概述的詳細資訊，請參閱[工作流程追蹤](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。  
   
 ### <a name="configure-tracking-in-code"></a>在程式碼中設定追蹤  
   
@@ -64,11 +64,11 @@ ms.locfileid: "33490730"
   
      上述程式碼範例會加入 <xref:System.Activities.Tracking.EtwTrackingParticipant> 並指定追蹤設定檔名稱。 追蹤設定檔是在 <`trackingProfile`> 項目內的 <`tracking`> 項目中建立的，如上一節所示。  
   
-     如需追蹤設定檔的詳細資訊，請參閱[追蹤設定檔](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
+     如需有關追蹤設定檔的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
   
-     如需一般追蹤的詳細資訊，請參閱[工作流程追蹤](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。 如需設定追蹤以程式設計方式的範例，請參閱[流程設定追蹤](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
+     如需追蹤設定檔概述的詳細資訊，請參閱[工作流程追蹤](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。 如需設定以程式設計方式追蹤的範例，請參閱[設定工作流程追蹤](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [WCF 服務的簡化組態](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [追蹤設定檔](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>另請參閱
+- [WCF 服務的簡化組態](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
+- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [追蹤設定檔](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97b3e63ceb4b121c3e71e33a00fdf725258039c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe590022f1354b3a41c709e4fed30f89e865fa0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548046"
 ---
 # <a name="ltimpliestypegt-element-net-native"></a>&lt;ImpliesType&gt; 項目 (.NET Native)
 如果原則已套用至包含類型或方法，則會將該原則套用至類型。  
@@ -61,7 +61,7 @@ ms.locfileid: "33395586"
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -110,7 +110,7 @@ ms.locfileid: "33395586"
 </Type>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>另請參閱
+- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

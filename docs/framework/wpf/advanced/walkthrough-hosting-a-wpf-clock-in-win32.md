@@ -1,19 +1,19 @@
 ---
-title: 逐步解說：在 Win32 中裝載 WPF 時鐘
+title: 逐步解說：裝載 WPF 時鐘在 Win32 中
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: ce8209c89430988f57c211d388c6e73b2dc17004
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 5cccc89c8346358bc4f719e1b089a181dd81f970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579767"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>逐步解說：在 Win32 中裝載 WPF 時鐘
+# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>逐步解說：裝載 WPF 時鐘在 Win32 中
 把[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]應用程式，使用<xref:System.Windows.Interop.HwndSource>，以提供包含 HWND 您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容。 第一次建立<xref:System.Windows.Interop.HwndSource>，讓它將與 CreateWindow 類似的參數。  接著您告訴<xref:System.Windows.Interop.HwndSource>關於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容要放在其內。  最後，您可以放大的 HWND <xref:System.Windows.Interop.HwndSource>。 此逐步解說將說明如何建立混合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]實作作業系統的應用程式**日期和時間內容**對話方塊。  
   
 ## <a name="prerequisites"></a>必要條件  
@@ -48,9 +48,9 @@ ms.locfileid: "46562251"
 ## <a name="clr"></a>/clr  
  第一個步驟是將此 unmanaged[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]專案成一個可呼叫 managed 程式碼。  您使用 /clr 編譯器選項，將連結至您想要使用，並調整 Main 方法，用於將必要的 Dll [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   
- 若要啟用 c + + 專案內的 managed 程式碼： 以滑鼠右鍵按一下 win32clock 專案，然後選取**屬性**。  在 **一般**屬性頁 （預設值），變更 Common Language Runtime 支援`/clr`。  
+ 若要啟用 c + + 專案內的 managed 程式碼的使用：以滑鼠右鍵按一下 win32clock 專案，然後選取**屬性**。  在 **一般**屬性頁 （預設值），變更 Common Language Runtime 支援`/clr`。  
   
- 接下來，新增所需 dll 的參考[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: PresentationCore.dll、 PresentationFramework.dll、 System.dll、 WindowsBase.dll、 UIAutomationProvider.dll 和 UIAutomationTypes.dll。 (下列指示假設作業系統安裝在 C: 磁碟機上)。  
+ 接下來，新增所需 dll 的參考[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:PresentationCore.dll、 PresentationFramework.dll、 System.dll、 WindowsBase.dll、 UIAutomationProvider.dll 和 UIAutomationTypes.dll。 (下列指示假設作業系統安裝在 C: 磁碟機上)。  
   
 1.  以滑鼠右鍵按一下 win32clock 專案，然後選取**參考...**，並在該對話方塊內：  
   
@@ -58,13 +58,13 @@ ms.locfileid: "46562251"
   
 3.  按一下 [**加入新參考**、 按一下瀏覽] 索引標籤、 輸入 C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll，然後按一下 [確定]。  
   
-4.  針對 PresentationFramework.dll 重複執行：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll。  
+4.  針對 PresentationFramework.dll 重複：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll.  
   
-5.  針對 WindowsBase.dll 重複執行：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll。  
+5.  針對 WindowsBase.dll 重複：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll。  
   
-6.  針對 UIAutomationTypes.dll 重複執行：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationTypes.dll。  
+6.  針對 UIAutomationTypes.dll 重複：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationTypes.dll.  
   
-7.  針對 UIAutomationProvider.dll 重複執行：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll。  
+7.  針對 UIAutomationProvider.dll 重複：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll.  
   
 8.  按一下 **加入新參考**，選取 System.dll，然後按一下**確定**。  
   
@@ -225,7 +225,7 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
   
  若要比較的程式碼產生此螢幕擷取畫面，您最後結果，請參閱[Win32 時鐘交互操作範例](https://go.microsoft.com/fwlink/?LinkID=160051)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Interop.HwndSource>  
- [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [Win32 時鐘交互操作範例](https://go.microsoft.com/fwlink/?LinkID=160051)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Interop.HwndSource>
+- [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [Win32 時鐘交互操作範例](https://go.microsoft.com/fwlink/?LinkID=160051)

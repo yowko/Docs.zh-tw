@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1cc754fcf7d1defa815bb0a74b7c2b4a6909478
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 76f449e52168001a2aaac6cbc3707361cf7f809a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582455"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin 函式
 判斷方法在其中宣告的類別。
@@ -59,7 +59,7 @@ HRESULT GetMethodOrigin (
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | 找不到指定的方法。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的方法。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 找不到有效的一或多個參數。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
@@ -78,5 +78,5 @@ HRESULT GetMethodOrigin (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

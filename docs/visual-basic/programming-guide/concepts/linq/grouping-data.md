@@ -1,15 +1,15 @@
 ---
-title: 群組資料 (Visual Basic)
+title: 分組資料 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: e2732c91dfff65ebb86ef45296ba369c3073a8f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14b114906a0e04a4d11c323f80b070603a7286c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644195"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576954"
 ---
-# <a name="grouping-data-visual-basic"></a>群組資料 (Visual Basic)
+# <a name="grouping-data-visual-basic"></a>分組資料 (Visual Basic)
 分組指的是將資料放在群組中，好讓每一個群組中的項目共用共同的屬性。  
   
  下圖顯示一系列字元的分組結果。 每個群組的索引鍵是字元。  
@@ -63,9 +63,9 @@ MsgBox(sb.ToString())
 ' 208  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq>  
- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Group By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)  
- [如何： 依副檔名 (LINQ) (Visual Basic) 的檔案群組](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- [如何： 將檔案分割成許多檔案中，使用群組 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Linq>
+- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Group By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [如何：檔案群組依據擴充功能 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [如何：使用群組 (LINQ) (Visual Basic)，將檔案分割成許多檔案](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
