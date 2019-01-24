@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd6cb0116e1080a68c91df365cc7dd1485b21791
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 453a30680b7fe938e975778a43282e6a29b86c7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083673"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716293"
 ---
-# <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a><span data-ttu-id="cc57b-102">ICLRStrongName::StrongNameGetBlobFromImage 方法</span><span class="sxs-lookup"><span data-stu-id="cc57b-102">ICLRStrongName::StrongNameGetBlobFromImage Method</span></span>
-<span data-ttu-id="cc57b-103">取得位於所指定記憶體位置之組件影像的二進位表示法。</span><span class="sxs-lookup"><span data-stu-id="cc57b-103">Gets a binary representation of the assembly image at the specified memory address.</span></span>  
+# <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a><span data-ttu-id="69b53-102">ICLRStrongName::StrongNameGetBlobFromImage 方法</span><span class="sxs-lookup"><span data-stu-id="69b53-102">ICLRStrongName::StrongNameGetBlobFromImage Method</span></span>
+<span data-ttu-id="69b53-103">取得位於所指定記憶體位置之組件影像的二進位表示法。</span><span class="sxs-lookup"><span data-stu-id="69b53-103">Gets a binary representation of the assembly image at the specified memory address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc57b-104">語法</span><span class="sxs-lookup"><span data-stu-id="cc57b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="69b53-104">語法</span><span class="sxs-lookup"><span data-stu-id="69b53-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameGetBlobFromImage (  
@@ -38,31 +38,31 @@ HRESULT StrongNameGetBlobFromImage (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cc57b-105">參數</span><span class="sxs-lookup"><span data-stu-id="cc57b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="69b53-105">參數</span><span class="sxs-lookup"><span data-stu-id="69b53-105">Parameters</span></span>  
  `pbBase`  
- <span data-ttu-id="cc57b-106">[in]對應的組件資訊清單的記憶體位址。</span><span class="sxs-lookup"><span data-stu-id="cc57b-106">[in] The memory address of the mapped assembly manifest.</span></span>  
+ <span data-ttu-id="69b53-106">[in]對應的組件資訊清單的記憶體位址。</span><span class="sxs-lookup"><span data-stu-id="69b53-106">[in] The memory address of the mapped assembly manifest.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="cc57b-107">[in]大小 （位元組），在映像的`pbBase`。</span><span class="sxs-lookup"><span data-stu-id="cc57b-107">[in] The size, in bytes, of the image at `pbBase`.</span></span>  
+ <span data-ttu-id="69b53-107">[in]大小 （位元組），在映像的`pbBase`。</span><span class="sxs-lookup"><span data-stu-id="69b53-107">[in] The size, in bytes, of the image at `pbBase`.</span></span>  
   
  `pbBlob`  
- <span data-ttu-id="cc57b-108">[in]包含影像的二進位表示法的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="cc57b-108">[in] A buffer to contain the binary representation of the image.</span></span>  
+ <span data-ttu-id="69b53-108">[in]包含影像的二進位表示法的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="69b53-108">[in] A buffer to contain the binary representation of the image.</span></span>  
   
  `pcbBlob`  
- <span data-ttu-id="cc57b-109">[in、 out]所要求大小上限，以位元組為單位， `pbBlob`。</span><span class="sxs-lookup"><span data-stu-id="cc57b-109">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="cc57b-110">傳回時，實際的大小，以位元組為單位的`pbBlob`。</span><span class="sxs-lookup"><span data-stu-id="cc57b-110">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
+ <span data-ttu-id="69b53-109">[in、 out]所要求大小上限，以位元組為單位， `pbBlob`。</span><span class="sxs-lookup"><span data-stu-id="69b53-109">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="69b53-110">傳回時，實際的大小，以位元組為單位的`pbBlob`。</span><span class="sxs-lookup"><span data-stu-id="69b53-110">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cc57b-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="cc57b-111">Return Value</span></span>  
- <span data-ttu-id="cc57b-112">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="cc57b-112">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="69b53-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="69b53-111">Return Value</span></span>  
+ <span data-ttu-id="69b53-112">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="69b53-112">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cc57b-113">需求</span><span class="sxs-lookup"><span data-stu-id="cc57b-113">Requirements</span></span>  
- <span data-ttu-id="cc57b-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cc57b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="69b53-113">需求</span><span class="sxs-lookup"><span data-stu-id="69b53-113">Requirements</span></span>  
+ <span data-ttu-id="69b53-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="69b53-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cc57b-115">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="cc57b-115">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="69b53-115">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="69b53-115">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="cc57b-116">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="cc57b-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="69b53-116">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="69b53-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cc57b-117">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cc57b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="69b53-117">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="69b53-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc57b-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc57b-118">See Also</span></span>  
- [<span data-ttu-id="cc57b-119">StrongNameGetBlob 方法</span><span class="sxs-lookup"><span data-stu-id="cc57b-119">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)  
- [<span data-ttu-id="cc57b-120">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="cc57b-120">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="69b53-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="69b53-118">See also</span></span>
+- [<span data-ttu-id="69b53-119">StrongNameGetBlob 方法</span><span class="sxs-lookup"><span data-stu-id="69b53-119">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
+- [<span data-ttu-id="69b53-120">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="69b53-120">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

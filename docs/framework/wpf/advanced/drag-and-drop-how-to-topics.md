@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
-ms.openlocfilehash: 72dae52c6d6b570831aefb54ca2843a92c5ad35a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48f846329d8463f9519a2a7654f9a42f6bca5384
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721864"
 ---
-# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="ec944-102">拖放 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="ec944-102">Drag and Drop How-to Topics</span></span>
-<span data-ttu-id="ec944-103">下列範例示範如何完成一般工作，使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]拖放架構。</span><span class="sxs-lookup"><span data-stu-id="ec944-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
+# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="f3eac-102">拖放 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="f3eac-102">Drag and Drop How-to Topics</span></span>
+<span data-ttu-id="f3eac-103">下列範例示範如何完成一般工作，使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]拖放 framework。</span><span class="sxs-lookup"><span data-stu-id="f3eac-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ec944-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="ec944-104">In This Section</span></span>  
- [<span data-ttu-id="ec944-105">開啟置放在 RichTextBox 控制項上的檔案</span><span class="sxs-lookup"><span data-stu-id="ec944-105">Open a File That is Dropped on a RichTextBox Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [<span data-ttu-id="ec944-106">建立資料庫物件</span><span class="sxs-lookup"><span data-stu-id="ec944-106">Create a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
- [<span data-ttu-id="ec944-107">判斷資料格式是否出現在資料物件中</span><span class="sxs-lookup"><span data-stu-id="ec944-107">Determine if a Data Format is Present in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [<span data-ttu-id="ec944-108">列出資料物件中的資料格式</span><span class="sxs-lookup"><span data-stu-id="ec944-108">List the Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
- [<span data-ttu-id="ec944-109">擷取特定資料格式的資料</span><span class="sxs-lookup"><span data-stu-id="ec944-109">Retrieve Data in a Particular Data Format</span></span>](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
- [<span data-ttu-id="ec944-110">將多個資料格式儲存在資料物件中</span><span class="sxs-lookup"><span data-stu-id="ec944-110">Store Multiple Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f3eac-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="f3eac-104">In This Section</span></span>  
+ [<span data-ttu-id="f3eac-105">開啟置放在 RichTextBox 控制項上的檔案</span><span class="sxs-lookup"><span data-stu-id="f3eac-105">Open a File That is Dropped on a RichTextBox Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [<span data-ttu-id="f3eac-106">建立資料庫物件</span><span class="sxs-lookup"><span data-stu-id="f3eac-106">Create a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
+ [<span data-ttu-id="f3eac-107">判斷資料格式是否出現在資料物件中</span><span class="sxs-lookup"><span data-stu-id="f3eac-107">Determine if a Data Format is Present in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [<span data-ttu-id="f3eac-108">列出資料物件中的資料格式</span><span class="sxs-lookup"><span data-stu-id="f3eac-108">List the Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
+ [<span data-ttu-id="f3eac-109">擷取特定資料格式的資料</span><span class="sxs-lookup"><span data-stu-id="f3eac-109">Retrieve Data in a Particular Data Format</span></span>](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
+ [<span data-ttu-id="f3eac-110">將多個資料格式儲存在資料物件中</span><span class="sxs-lookup"><span data-stu-id="f3eac-110">Store Multiple Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
   
-## <a name="see-also"></a><span data-ttu-id="ec944-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ec944-111">See Also</span></span>  
- [<span data-ttu-id="ec944-112">拖放概觀</span><span class="sxs-lookup"><span data-stu-id="ec944-112">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+## <a name="see-also"></a><span data-ttu-id="f3eac-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f3eac-111">See also</span></span>
+- [<span data-ttu-id="f3eac-112">拖放概觀</span><span class="sxs-lookup"><span data-stu-id="f3eac-112">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

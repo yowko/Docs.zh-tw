@@ -14,56 +14,56 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f12b94198b88111d559cfe372c28bdbf4b37e3fe
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2e5c12cc6d09e2f1c5b0c58ac4ad3462dca3463c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43742640"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700971"
 ---
-# <a name="fatalexecutionengineerror-mda"></a><span data-ttu-id="b7dec-102">fatalExecutionEngineError MDA</span><span class="sxs-lookup"><span data-stu-id="b7dec-102">fatalExecutionEngineError MDA</span></span>
-<span data-ttu-id="b7dec-103">在 Common Language Runtime (CLR) 中偵測到嚴重錯誤時，就會啟動 `fatalExecutionEngineError` Managed 偵錯助理 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="b7dec-103">The `fatalExecutionEngineError` managed debugging assistant (MDA) is activated when a fatal error in the common language runtime (CLR) has been detected.</span></span> <span data-ttu-id="b7dec-104">處理程序會終止。</span><span class="sxs-lookup"><span data-stu-id="b7dec-104">The process will be terminated.</span></span>  
+# <a name="fatalexecutionengineerror-mda"></a><span data-ttu-id="dd965-102">fatalExecutionEngineError MDA</span><span class="sxs-lookup"><span data-stu-id="dd965-102">fatalExecutionEngineError MDA</span></span>
+<span data-ttu-id="dd965-103">在 Common Language Runtime (CLR) 中偵測到嚴重錯誤時，就會啟動 `fatalExecutionEngineError` Managed 偵錯助理 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="dd965-103">The `fatalExecutionEngineError` managed debugging assistant (MDA) is activated when a fatal error in the common language runtime (CLR) has been detected.</span></span> <span data-ttu-id="dd965-104">處理程序會終止。</span><span class="sxs-lookup"><span data-stu-id="dd965-104">The process will be terminated.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="b7dec-105">徵兆 </span><span class="sxs-lookup"><span data-stu-id="b7dec-105">Symptoms</span></span>  
- <span data-ttu-id="b7dec-106">未預期的處理序終止。</span><span class="sxs-lookup"><span data-stu-id="b7dec-106">Unexpected process termination.</span></span> <span data-ttu-id="b7dec-107">因為 CLR 失敗的發生原因各種各樣，所以無法判斷其他症狀。</span><span class="sxs-lookup"><span data-stu-id="b7dec-107">Other symptoms cannot be determined because a CLR failure can occur for a variety of reasons.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="dd965-105">徵兆</span><span class="sxs-lookup"><span data-stu-id="dd965-105">Symptoms</span></span>  
+ <span data-ttu-id="dd965-106">未預期的處理序終止。</span><span class="sxs-lookup"><span data-stu-id="dd965-106">Unexpected process termination.</span></span> <span data-ttu-id="dd965-107">因為 CLR 失敗的發生原因各種各樣，所以無法判斷其他症狀。</span><span class="sxs-lookup"><span data-stu-id="dd965-107">Other symptoms cannot be determined because a CLR failure can occur for a variety of reasons.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="b7dec-108">原因</span><span class="sxs-lookup"><span data-stu-id="b7dec-108">Cause</span></span>  
- <span data-ttu-id="b7dec-109">CLR 已受創損毀。</span><span class="sxs-lookup"><span data-stu-id="b7dec-109">The CLR has been fatally corrupted.</span></span> <span data-ttu-id="b7dec-110">這通常是因為資料損毀所致，造成此狀況的問題很多，例如呼叫格式不正確的平台叫用函式，以及將無效的資料傳遞至 CLR。</span><span class="sxs-lookup"><span data-stu-id="b7dec-110">This is most often caused by data corruption, which can be caused by a number of problems, such as calls to malformed platform invoke functions and passing invalid data to the CLR.</span></span>  
+## <a name="cause"></a><span data-ttu-id="dd965-108">原因</span><span class="sxs-lookup"><span data-stu-id="dd965-108">Cause</span></span>  
+ <span data-ttu-id="dd965-109">CLR 已受創損毀。</span><span class="sxs-lookup"><span data-stu-id="dd965-109">The CLR has been fatally corrupted.</span></span> <span data-ttu-id="dd965-110">這通常是因為資料損毀所致，造成此狀況的問題很多，例如呼叫格式不正確的平台叫用函式，以及將無效的資料傳遞至 CLR。</span><span class="sxs-lookup"><span data-stu-id="dd965-110">This is most often caused by data corruption, which can be caused by a number of problems, such as calls to malformed platform invoke functions and passing invalid data to the CLR.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="b7dec-111">解決方式</span><span class="sxs-lookup"><span data-stu-id="b7dec-111">Resolution</span></span>  
- <span data-ttu-id="b7dec-112">啟用額外的 MDA 可能有助於找出問題。</span><span class="sxs-lookup"><span data-stu-id="b7dec-112">Enabling additional MDAs might help identify the problem.</span></span> <span data-ttu-id="b7dec-113">下列 MDA 在診斷此問題方面特別有幫助：</span><span class="sxs-lookup"><span data-stu-id="b7dec-113">The following MDAs can be particularly helpful in diagnosing the issue:</span></span>  
+## <a name="resolution"></a><span data-ttu-id="dd965-111">解決方式</span><span class="sxs-lookup"><span data-stu-id="dd965-111">Resolution</span></span>  
+ <span data-ttu-id="dd965-112">啟用額外的 MDA 可能有助於找出問題。</span><span class="sxs-lookup"><span data-stu-id="dd965-112">Enabling additional MDAs might help identify the problem.</span></span> <span data-ttu-id="dd965-113">下列 MDA 在診斷此問題方面特別有幫助：</span><span class="sxs-lookup"><span data-stu-id="dd965-113">The following MDAs can be particularly helpful in diagnosing the issue:</span></span>  
   
--   [<span data-ttu-id="b7dec-114">invalidOverlappedToPinvoke</span><span class="sxs-lookup"><span data-stu-id="b7dec-114">invalidOverlappedToPinvoke</span></span>](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)  
+-   [<span data-ttu-id="dd965-114">invalidOverlappedToPinvoke</span><span class="sxs-lookup"><span data-stu-id="dd965-114">invalidOverlappedToPinvoke</span></span>](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)  
   
--   [<span data-ttu-id="b7dec-115">overlappedFreeError</span><span class="sxs-lookup"><span data-stu-id="b7dec-115">overlappedFreeError</span></span>](../../../docs/framework/debug-trace-profile/overlappedfreeerror-mda.md)  
+-   [<span data-ttu-id="dd965-115">overlappedFreeError</span><span class="sxs-lookup"><span data-stu-id="dd965-115">overlappedFreeError</span></span>](../../../docs/framework/debug-trace-profile/overlappedfreeerror-mda.md)  
   
--   [<span data-ttu-id="b7dec-116">pInvokeStackImbalance</span><span class="sxs-lookup"><span data-stu-id="b7dec-116">pInvokeStackImbalance</span></span>](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)  
+-   [<span data-ttu-id="dd965-116">pInvokeStackImbalance</span><span class="sxs-lookup"><span data-stu-id="dd965-116">pInvokeStackImbalance</span></span>](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)  
   
--   [<span data-ttu-id="b7dec-117">gcUnmanagedToManaged</span><span class="sxs-lookup"><span data-stu-id="b7dec-117">gcUnmanagedToManaged</span></span>](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)  
+-   [<span data-ttu-id="dd965-117">gcUnmanagedToManaged</span><span class="sxs-lookup"><span data-stu-id="dd965-117">gcUnmanagedToManaged</span></span>](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)  
   
--   [<span data-ttu-id="b7dec-118">gcManagedToUnmanaged</span><span class="sxs-lookup"><span data-stu-id="b7dec-118">gcManagedToUnmanaged</span></span>](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)  
+-   [<span data-ttu-id="dd965-118">gcManagedToUnmanaged</span><span class="sxs-lookup"><span data-stu-id="dd965-118">gcManagedToUnmanaged</span></span>](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)  
   
--   [<span data-ttu-id="b7dec-119">callbackOnCollectedDelegate</span><span class="sxs-lookup"><span data-stu-id="b7dec-119">callbackOnCollectedDelegate</span></span>](../../../docs/framework/debug-trace-profile/callbackoncollecteddelegate-mda.md)  
+-   [<span data-ttu-id="dd965-119">callbackOnCollectedDelegate</span><span class="sxs-lookup"><span data-stu-id="dd965-119">callbackOnCollectedDelegate</span></span>](../../../docs/framework/debug-trace-profile/callbackoncollecteddelegate-mda.md)  
   
--   [<span data-ttu-id="b7dec-120">reportAvOnComRelease</span><span class="sxs-lookup"><span data-stu-id="b7dec-120">reportAvOnComRelease</span></span>](../../../docs/framework/debug-trace-profile/reportavoncomrelease-mda.md)  
+-   [<span data-ttu-id="dd965-120">reportAvOnComRelease</span><span class="sxs-lookup"><span data-stu-id="dd965-120">reportAvOnComRelease</span></span>](../../../docs/framework/debug-trace-profile/reportavoncomrelease-mda.md)  
   
--   [<span data-ttu-id="b7dec-121">invalidVariant</span><span class="sxs-lookup"><span data-stu-id="b7dec-121">invalidVariant</span></span>](../../../docs/framework/debug-trace-profile/invalidvariant-mda.md)  
+-   [<span data-ttu-id="dd965-121">invalidVariant</span><span class="sxs-lookup"><span data-stu-id="dd965-121">invalidVariant</span></span>](../../../docs/framework/debug-trace-profile/invalidvariant-mda.md)  
   
--   [<span data-ttu-id="b7dec-122">invalidIUnknown</span><span class="sxs-lookup"><span data-stu-id="b7dec-122">invalidIUnknown</span></span>](../../../docs/framework/debug-trace-profile/invalidiunknown-mda.md)  
+-   [<span data-ttu-id="dd965-122">invalidIUnknown</span><span class="sxs-lookup"><span data-stu-id="dd965-122">invalidIUnknown</span></span>](../../../docs/framework/debug-trace-profile/invalidiunknown-mda.md)  
   
--   [<span data-ttu-id="b7dec-123">raceOnRCWCleanup</span><span class="sxs-lookup"><span data-stu-id="b7dec-123">raceOnRCWCleanup</span></span>](../../../docs/framework/debug-trace-profile/raceonrcwcleanup-mda.md)  
+-   [<span data-ttu-id="dd965-123">raceOnRCWCleanup</span><span class="sxs-lookup"><span data-stu-id="dd965-123">raceOnRCWCleanup</span></span>](../../../docs/framework/debug-trace-profile/raceonrcwcleanup-mda.md)  
   
--   [<span data-ttu-id="b7dec-124">invalidFunctionPointerInDelegate</span><span class="sxs-lookup"><span data-stu-id="b7dec-124">invalidFunctionPointerInDelegate</span></span>](../../../docs/framework/debug-trace-profile/invalidfunctionpointerindelegate-mda.md)  
+-   [<span data-ttu-id="dd965-124">invalidFunctionPointerInDelegate</span><span class="sxs-lookup"><span data-stu-id="dd965-124">invalidFunctionPointerInDelegate</span></span>](../../../docs/framework/debug-trace-profile/invalidfunctionpointerindelegate-mda.md)  
   
--   [<span data-ttu-id="b7dec-125">invalidGCHandleCookie</span><span class="sxs-lookup"><span data-stu-id="b7dec-125">invalidGCHandleCookie</span></span>](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)  
+-   [<span data-ttu-id="dd965-125">invalidGCHandleCookie</span><span class="sxs-lookup"><span data-stu-id="dd965-125">invalidGCHandleCookie</span></span>](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="b7dec-126">對執行階段的影響</span><span class="sxs-lookup"><span data-stu-id="b7dec-126">Effect on the Runtime</span></span>  
- <span data-ttu-id="b7dec-127">此 MDA 對執行階段行為沒有影響。</span><span class="sxs-lookup"><span data-stu-id="b7dec-127">This MDA has no effect on the runtime's behavior.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="dd965-126">對執行階段的影響</span><span class="sxs-lookup"><span data-stu-id="dd965-126">Effect on the Runtime</span></span>  
+ <span data-ttu-id="dd965-127">此 MDA 對執行階段行為沒有影響。</span><span class="sxs-lookup"><span data-stu-id="dd965-127">This MDA has no effect on the runtime's behavior.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="b7dec-128">輸出</span><span class="sxs-lookup"><span data-stu-id="b7dec-128">Output</span></span>  
- <span data-ttu-id="b7dec-129">造成嚴重錯誤的 CLR 函式位址、發生錯誤的執行緒識別碼，以及錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="b7dec-129">The address of the CLR function that caused the fatal error, the ID of the thread where the error occurred, and the error code.</span></span>  
+## <a name="output"></a><span data-ttu-id="dd965-128">輸出</span><span class="sxs-lookup"><span data-stu-id="dd965-128">Output</span></span>  
+ <span data-ttu-id="dd965-129">造成嚴重錯誤的 CLR 函式位址、發生錯誤的執行緒識別碼，以及錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="dd965-129">The address of the CLR function that caused the fatal error, the ID of the thread where the error occurred, and the error code.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="b7dec-130">組態</span><span class="sxs-lookup"><span data-stu-id="b7dec-130">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="dd965-130">組態</span><span class="sxs-lookup"><span data-stu-id="dd965-130">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -73,7 +73,7 @@ ms.locfileid: "43742640"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b7dec-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b7dec-131">See Also</span></span>  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>  
- <xref:System.Runtime.ConstrainedExecution.Cer>  
- [<span data-ttu-id="b7dec-132">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="b7dec-132">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a><span data-ttu-id="dd965-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dd965-131">See also</span></span>
+- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
+- <xref:System.Runtime.ConstrainedExecution.Cer>
+- [<span data-ttu-id="dd965-132">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="dd965-132">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

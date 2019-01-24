@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abb2e2902737749fd9dc1f148a340e28da772e59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7f8e9c91ddddd0e0b14c79bef86c7665ff4e3dcc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439016"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723317"
 ---
-# <a name="icorruntimehostnextdomain-method"></a><span data-ttu-id="d3d8d-102">ICorRuntimeHost::NextDomain 方法</span><span class="sxs-lookup"><span data-stu-id="d3d8d-102">ICorRuntimeHost::NextDomain Method</span></span>
-<span data-ttu-id="d3d8d-103">取得列舉中的下一個網域的介面指標。</span><span class="sxs-lookup"><span data-stu-id="d3d8d-103">Gets an interface pointer to the next domain in the enumeration.</span></span>  
+# <a name="icorruntimehostnextdomain-method"></a><span data-ttu-id="f4b44-102">ICorRuntimeHost::NextDomain 方法</span><span class="sxs-lookup"><span data-stu-id="f4b44-102">ICorRuntimeHost::NextDomain Method</span></span>
+<span data-ttu-id="f4b44-103">取得列舉型別中的下一個網域的介面指標。</span><span class="sxs-lookup"><span data-stu-id="f4b44-103">Gets an interface pointer to the next domain in the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d3d8d-104">語法</span><span class="sxs-lookup"><span data-stu-id="d3d8d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f4b44-104">語法</span><span class="sxs-lookup"><span data-stu-id="f4b44-104">Syntax</span></span>  
   
 ```  
 HRESULT NextDomain (  
@@ -36,32 +36,32 @@ HRESULT NextDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d3d8d-105">參數</span><span class="sxs-lookup"><span data-stu-id="d3d8d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f4b44-105">參數</span><span class="sxs-lookup"><span data-stu-id="f4b44-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="d3d8d-106">[in]此列舉值會透過呼叫取得[EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md)。</span><span class="sxs-lookup"><span data-stu-id="d3d8d-106">[in] The enumerator that was obtained through a call to [EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).</span></span>  
+ <span data-ttu-id="f4b44-106">[in]列舉值取得透過呼叫[EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md)。</span><span class="sxs-lookup"><span data-stu-id="f4b44-106">[in] The enumerator that was obtained through a call to [EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).</span></span>  
   
  `pAppDomain`  
- <span data-ttu-id="d3d8d-107">[out]介面指標<xref:System._AppDomain?displayProperty=nameWithType>型別，表示下一個網域中的列舉型別或為 null，如果沒有更多的定義域存在。</span><span class="sxs-lookup"><span data-stu-id="d3d8d-107">[out] An interface pointer to the <xref:System._AppDomain?displayProperty=nameWithType> type that represents the next domain in the enumeration, or null, if no more domains exist.</span></span>  
+ <span data-ttu-id="f4b44-107">[out]介面指標<xref:System._AppDomain?displayProperty=nameWithType>型別，表示下一個網域中的列舉型別或 null，如果沒有更多的定義域存在。</span><span class="sxs-lookup"><span data-stu-id="f4b44-107">[out] An interface pointer to the <xref:System._AppDomain?displayProperty=nameWithType> type that represents the next domain in the enumeration, or null, if no more domains exist.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d3d8d-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="d3d8d-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f4b44-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="f4b44-108">Return Value</span></span>  
   
-|<span data-ttu-id="d3d8d-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d3d8d-109">HRESULT</span></span>|<span data-ttu-id="d3d8d-110">描述</span><span class="sxs-lookup"><span data-stu-id="d3d8d-110">Description</span></span>|  
+|<span data-ttu-id="f4b44-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f4b44-109">HRESULT</span></span>|<span data-ttu-id="f4b44-110">描述</span><span class="sxs-lookup"><span data-stu-id="f4b44-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="d3d8d-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="d3d8d-111">S_OK</span></span>|<span data-ttu-id="d3d8d-112">此作業成功。</span><span class="sxs-lookup"><span data-stu-id="d3d8d-112">The operation was successful.</span></span>|  
-|<span data-ttu-id="d3d8d-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="d3d8d-113">S_FALSE</span></span>|<span data-ttu-id="d3d8d-114">作業無法完成，或在列舉中沒有多個網域。</span><span class="sxs-lookup"><span data-stu-id="d3d8d-114">The operation failed to complete, or there are no more domains in the enumeration.</span></span>|  
-|<span data-ttu-id="d3d8d-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="d3d8d-115">E_FAIL</span></span>|<span data-ttu-id="d3d8d-116">發生未知的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="d3d8d-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="d3d8d-117">若方法會傳回 E_FAIL，common language runtime (CLR) 就不會再處理序中。</span><span class="sxs-lookup"><span data-stu-id="d3d8d-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="d3d8d-118">任何裝載的應用程式開發介面的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="d3d8d-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="d3d8d-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="d3d8d-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="d3d8d-120">CLR 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="d3d8d-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="f4b44-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="f4b44-111">S_OK</span></span>|<span data-ttu-id="f4b44-112">此作業成功。</span><span class="sxs-lookup"><span data-stu-id="f4b44-112">The operation was successful.</span></span>|  
+|<span data-ttu-id="f4b44-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="f4b44-113">S_FALSE</span></span>|<span data-ttu-id="f4b44-114">作業無法完成，或在列舉中有沒有更多的定義域。</span><span class="sxs-lookup"><span data-stu-id="f4b44-114">The operation failed to complete, or there are no more domains in the enumeration.</span></span>|  
+|<span data-ttu-id="f4b44-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f4b44-115">E_FAIL</span></span>|<span data-ttu-id="f4b44-116">發生不明、 重大失敗。</span><span class="sxs-lookup"><span data-stu-id="f4b44-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="f4b44-117">如果方法會傳回 E_FAIL，common language runtime (CLR) 不再使用舊處理序中。</span><span class="sxs-lookup"><span data-stu-id="f4b44-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="f4b44-118">任何裝載 api 的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="f4b44-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="f4b44-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="f4b44-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="f4b44-120">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="f4b44-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d3d8d-121">需求</span><span class="sxs-lookup"><span data-stu-id="d3d8d-121">Requirements</span></span>  
- <span data-ttu-id="d3d8d-122">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d3d8d-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f4b44-121">需求</span><span class="sxs-lookup"><span data-stu-id="f4b44-121">Requirements</span></span>  
+ <span data-ttu-id="f4b44-122">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f4b44-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d3d8d-123">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d3d8d-123">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f4b44-123">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f4b44-123">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d3d8d-124">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="d3d8d-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f4b44-124">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="f4b44-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d3d8d-125">**.NET framework 版本：** 1.0、 1.1</span><span class="sxs-lookup"><span data-stu-id="d3d8d-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="f4b44-125">**.NET framework 版本：** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="f4b44-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3d8d-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d3d8d-126">See Also</span></span>  
- <xref:System._AppDomain>  
- <xref:System.AppDomain>  
- [<span data-ttu-id="d3d8d-127">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="d3d8d-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f4b44-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f4b44-126">See also</span></span>
+- <xref:System._AppDomain>
+- <xref:System.AppDomain>
+- [<span data-ttu-id="f4b44-127">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="f4b44-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

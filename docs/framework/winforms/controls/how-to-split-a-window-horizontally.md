@@ -1,5 +1,5 @@
 ---
-title: 如何：水平分隔視窗
+title: HOW TO：水平分隔視窗
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: 1e097ce5623fab4c3c8c1d59d9bc8c9206abee2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 651e265b337b106779aeefdfa49decd3725f1a53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701452"
 ---
-# <a name="how-to-split-a-window-horizontally"></a><span data-ttu-id="45783-102">如何：水平分隔視窗</span><span class="sxs-lookup"><span data-stu-id="45783-102">How to: Split a Window Horizontally</span></span>
-<span data-ttu-id="45783-103">下列程式碼範例會將用來分隔<xref:System.Windows.Forms.SplitContainer>控制水平。</span><span class="sxs-lookup"><span data-stu-id="45783-103">The following code example makes the splitter that divides the <xref:System.Windows.Forms.SplitContainer> control horizontal.</span></span>  
+# <a name="how-to-split-a-window-horizontally"></a><span data-ttu-id="56b6d-102">HOW TO：水平分隔視窗</span><span class="sxs-lookup"><span data-stu-id="56b6d-102">How to: Split a Window Horizontally</span></span>
+<span data-ttu-id="56b6d-103">下列程式碼範例會將分割的分隔器<xref:System.Windows.Forms.SplitContainer>控制水平。</span><span class="sxs-lookup"><span data-stu-id="56b6d-103">The following code example makes the splitter that divides the <xref:System.Windows.Forms.SplitContainer> control horizontal.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="45783-104"><xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性<xref:System.Windows.Forms.SplitContainer>控制項會決定分隔器，而不是控制項本身的方向。</span><span class="sxs-lookup"><span data-stu-id="45783-104">The <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control determines the direction of the splitter, not of the control itself.</span></span>  
+>  <span data-ttu-id="56b6d-104"><xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性<xref:System.Windows.Forms.SplitContainer>控制項會決定起的分隔器，而不是控制項本身的方向。</span><span class="sxs-lookup"><span data-stu-id="56b6d-104">The <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control determines the direction of the splitter, not of the control itself.</span></span>  
   
-### <a name="to-split-a-window-horizontally"></a><span data-ttu-id="45783-105">水平分隔視窗</span><span class="sxs-lookup"><span data-stu-id="45783-105">To split a window horizontally</span></span>  
+### <a name="to-split-a-window-horizontally"></a><span data-ttu-id="56b6d-105">若要水平分隔視窗</span><span class="sxs-lookup"><span data-stu-id="56b6d-105">To split a window horizontally</span></span>  
   
-1.  <span data-ttu-id="45783-106">在程序，設定<xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性<xref:System.Windows.Forms.SplitContainer>控制權傳輸至<xref:System.Windows.Forms.Orientation.Horizontal>。</span><span class="sxs-lookup"><span data-stu-id="45783-106">Within a procedure, set the <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control to <xref:System.Windows.Forms.Orientation.Horizontal>.</span></span>  
+1.  <span data-ttu-id="56b6d-106">在程序中，設定<xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性<xref:System.Windows.Forms.SplitContainer>若要控制<xref:System.Windows.Forms.Orientation.Horizontal>。</span><span class="sxs-lookup"><span data-stu-id="56b6d-106">Within a procedure, set the <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control to <xref:System.Windows.Forms.Orientation.Horizontal>.</span></span>  
   
     ```vb  
     Sub ShowSplitContainer()  
@@ -55,6 +55,6 @@ ms.locfileid: "33533123"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="45783-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="45783-107">See Also</span></span>  
- <xref:System.Windows.Forms.SplitContainer>  
- [<span data-ttu-id="45783-108">SplitContainer 控制項</span><span class="sxs-lookup"><span data-stu-id="45783-108">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="56b6d-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="56b6d-107">See also</span></span>
+- <xref:System.Windows.Forms.SplitContainer>
+- [<span data-ttu-id="56b6d-108">SplitContainer 控制項</span><span class="sxs-lookup"><span data-stu-id="56b6d-108">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

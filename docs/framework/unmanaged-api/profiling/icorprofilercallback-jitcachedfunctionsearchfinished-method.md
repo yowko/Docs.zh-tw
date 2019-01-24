@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89c7b0fe0f3ade3f57aa50b100bc9b4ecc904a17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: de225a0d4855cbd3f8a46787c2472ca727558fc9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669649"
 ---
-# <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a><span data-ttu-id="9d74e-102">ICorProfilerCallback::JITCachedFunctionSearchFinished 方法</span><span class="sxs-lookup"><span data-stu-id="9d74e-102">ICorProfilerCallback::JITCachedFunctionSearchFinished Method</span></span>
-<span data-ttu-id="9d74e-103">通知分析工具用於先前使用原生映像產生器 (NGen.exe) 所編譯的函式已完成搜尋。</span><span class="sxs-lookup"><span data-stu-id="9d74e-103">Notifies the profiler that a search has finished for a function that was compiled previously using the Native Image Generator (NGen.exe).</span></span>  
+# <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a><span data-ttu-id="ca8d8-102">ICorProfilerCallback::JITCachedFunctionSearchFinished 方法</span><span class="sxs-lookup"><span data-stu-id="ca8d8-102">ICorProfilerCallback::JITCachedFunctionSearchFinished Method</span></span>
+<span data-ttu-id="ca8d8-103">通知分析工具對於先前使用 原生映像產生器 (NGen.exe) 所編譯的函式已完成搜尋。</span><span class="sxs-lookup"><span data-stu-id="ca8d8-103">Notifies the profiler that a search has finished for a function that was compiled previously using the Native Image Generator (NGen.exe).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9d74e-104">語法</span><span class="sxs-lookup"><span data-stu-id="9d74e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ca8d8-104">語法</span><span class="sxs-lookup"><span data-stu-id="ca8d8-104">Syntax</span></span>  
   
 ```  
 HRESULT JITCachedFunctionSearchFinished(  
@@ -35,24 +35,24 @@ HRESULT JITCachedFunctionSearchFinished(
     [in] COR_PRF_JIT_CACHE result);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9d74e-105">參數</span><span class="sxs-lookup"><span data-stu-id="9d74e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ca8d8-105">參數</span><span class="sxs-lookup"><span data-stu-id="ca8d8-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="9d74e-106">[in]搜尋已執行其函式的識別碼。</span><span class="sxs-lookup"><span data-stu-id="9d74e-106">[in] The ID of the function for which the search was performed.</span></span>  
+ <span data-ttu-id="ca8d8-106">[in]執行搜尋函式的識別碼。</span><span class="sxs-lookup"><span data-stu-id="ca8d8-106">[in] The ID of the function for which the search was performed.</span></span>  
   
  `result`  
- <span data-ttu-id="9d74e-107">[in]值為[COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md)列舉，指出的搜尋結果。</span><span class="sxs-lookup"><span data-stu-id="9d74e-107">[in] A value of the [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) enumeration that indicates the result of the search.</span></span>  
+ <span data-ttu-id="ca8d8-107">[in]值為[COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md)列舉，指出搜尋的結果。</span><span class="sxs-lookup"><span data-stu-id="ca8d8-107">[in] A value of the [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) enumeration that indicates the result of the search.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9d74e-108">備註</span><span class="sxs-lookup"><span data-stu-id="9d74e-108">Remarks</span></span>  
- <span data-ttu-id="9d74e-109">在.NET Framework 2.0 版中， [icorprofilercallback:: Jitcachedfunctionsearchstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md)和`JITCachedFunctionSearchFinished`回呼將不會進行一般 NGen 映像中的所有函式。</span><span class="sxs-lookup"><span data-stu-id="9d74e-109">In the .NET Framework version 2.0, the [ICorProfilerCallback::JITCachedFunctionSearchStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) and `JITCachedFunctionSearchFinished` callbacks will not be made for all functions in regular NGen images.</span></span> <span data-ttu-id="9d74e-110">只針對分析工具進行最佳化的 NGen 映像將映像中產生的所有函式的回呼。</span><span class="sxs-lookup"><span data-stu-id="9d74e-110">Only NGen images optimized for a profiler will generate callbacks for all functions in the image.</span></span> <span data-ttu-id="9d74e-111">不過，額外負擔，因為分析工具應該要求程式碼剖析工具最佳化 NGen 影像才想要使用這些回呼強制將函式編譯在 just-in-time (JIT)。</span><span class="sxs-lookup"><span data-stu-id="9d74e-111">However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT).</span></span> <span data-ttu-id="9d74e-112">否則，分析工具應該收集的資訊函式使用延遲的策略。</span><span class="sxs-lookup"><span data-stu-id="9d74e-112">Otherwise, the profiler should use a lazy strategy for gathering function information.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ca8d8-108">備註</span><span class="sxs-lookup"><span data-stu-id="ca8d8-108">Remarks</span></span>  
+ <span data-ttu-id="ca8d8-109">在.NET Framework 2.0 版中， [icorprofilercallback:: Jitcachedfunctionsearchstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md)和`JITCachedFunctionSearchFinished`回呼將不會進行一般的 NGen 影像中的所有函式。</span><span class="sxs-lookup"><span data-stu-id="ca8d8-109">In the .NET Framework version 2.0, the [ICorProfilerCallback::JITCachedFunctionSearchStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) and `JITCachedFunctionSearchFinished` callbacks will not be made for all functions in regular NGen images.</span></span> <span data-ttu-id="ca8d8-110">只適用於程式碼剖析工具的 NGen 映像會產生映像中的所有函式的回呼。</span><span class="sxs-lookup"><span data-stu-id="ca8d8-110">Only NGen images optimized for a profiler will generate callbacks for all functions in the image.</span></span> <span data-ttu-id="ca8d8-111">不過，由於額外的負荷，分析工具應該要求程式碼剖析工具最佳化 NGen 影像才想要使用這些回呼強制函式會編譯在 just-in-time (JIT)。</span><span class="sxs-lookup"><span data-stu-id="ca8d8-111">However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT).</span></span> <span data-ttu-id="ca8d8-112">分析工具，否則為要使用延遲的策略用於蒐集函式資訊使用。</span><span class="sxs-lookup"><span data-stu-id="ca8d8-112">Otherwise, the profiler should use a lazy strategy for gathering function information.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9d74e-113">需求</span><span class="sxs-lookup"><span data-stu-id="9d74e-113">Requirements</span></span>  
- <span data-ttu-id="9d74e-114">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9d74e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ca8d8-113">需求</span><span class="sxs-lookup"><span data-stu-id="ca8d8-113">Requirements</span></span>  
+ <span data-ttu-id="ca8d8-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ca8d8-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9d74e-115">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9d74e-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ca8d8-115">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ca8d8-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9d74e-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9d74e-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ca8d8-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ca8d8-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9d74e-117">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d74e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ca8d8-117">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca8d8-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d74e-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9d74e-118">See Also</span></span>  
- [<span data-ttu-id="9d74e-119">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="9d74e-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ca8d8-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ca8d8-118">See also</span></span>
+- [<span data-ttu-id="ca8d8-119">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="ca8d8-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

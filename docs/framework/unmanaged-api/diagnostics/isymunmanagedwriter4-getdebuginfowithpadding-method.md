@@ -4,38 +4,38 @@ ms.date: 03/30/2017
 ms.assetid: 881e20ca-8131-4bd0-ba41-c2d6391b0fe2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a703c7c8adf5d770ea74f8ed869568978f3b42f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d669ae15c01a560f2cefb6e361ca32411652fbc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732969"
 ---
-# <a name="isymunmanagedwriter4getdebuginfowithpadding-method"></a><span data-ttu-id="bb7ad-102">ISymUnmanagedWriter4::GetDebugInfoWithPadding 方法</span><span class="sxs-lookup"><span data-stu-id="bb7ad-102">ISymUnmanagedWriter4::GetDebugInfoWithPadding Method</span></span>
-<span data-ttu-id="bb7ad-103">函式與相同[GetDebugInfo 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md)不同之處在於路徑字串以下列結束的 null 字元的固定的大小，讓字串資料的零填補`MAX_PATH`。</span><span class="sxs-lookup"><span data-stu-id="bb7ad-103">Functions the same as [GetDebugInfo Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) except that the path string is padded with zeros following the terminating null character to make the string data a fixed size of `MAX_PATH`.</span></span> <span data-ttu-id="bb7ad-104">如果路徑字串長度本身是填補只取得小於`MAX_PATH`。</span><span class="sxs-lookup"><span data-stu-id="bb7ad-104">Padding is only given if the path string length itself is less than `MAX_PATH`.</span></span>  
+# <a name="isymunmanagedwriter4getdebuginfowithpadding-method"></a><span data-ttu-id="bd8ce-102">ISymUnmanagedWriter4::GetDebugInfoWithPadding 方法</span><span class="sxs-lookup"><span data-stu-id="bd8ce-102">ISymUnmanagedWriter4::GetDebugInfoWithPadding Method</span></span>
+<span data-ttu-id="bd8ce-103">函數一樣[GetDebugInfo 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md)不同之處在於路徑字串以下列結束的 null 字元，讓字串資料的固定的大小的零來填補`MAX_PATH`。</span><span class="sxs-lookup"><span data-stu-id="bd8ce-103">Functions the same as [GetDebugInfo Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) except that the path string is padded with zeros following the terminating null character to make the string data a fixed size of `MAX_PATH`.</span></span> <span data-ttu-id="bd8ce-104">如果路徑字串的長度本身是只指定填補小於`MAX_PATH`。</span><span class="sxs-lookup"><span data-stu-id="bd8ce-104">Padding is only given if the path string length itself is less than `MAX_PATH`.</span></span>  
   
- <span data-ttu-id="bb7ad-105">這可讓您更輕鬆地撰寫工具類型的差異 PE 檔案。</span><span class="sxs-lookup"><span data-stu-id="bb7ad-105">This makes it easier to write tools that difference PE files.</span></span>  
+ <span data-ttu-id="bd8ce-105">這可讓您更輕鬆地撰寫工具類型的差異 PE 檔案。</span><span class="sxs-lookup"><span data-stu-id="bd8ce-105">This makes it easier to write tools that difference PE files.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bb7ad-106">語法</span><span class="sxs-lookup"><span data-stu-id="bb7ad-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bd8ce-106">語法</span><span class="sxs-lookup"><span data-stu-id="bd8ce-106">Syntax</span></span>  
   
 ```idl  
 HRESULT GetDebugInfoWithPadding(    [in, out] IMAGE_DEBUG_DIRECTORY *pIDD,    [in] DWORD cData,    [out] DWORD *pcData,    [out, size_is(cData), length_is(*pcData)] BYTE data[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bb7ad-107">參數</span><span class="sxs-lookup"><span data-stu-id="bb7ad-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="bd8ce-107">參數</span><span class="sxs-lookup"><span data-stu-id="bd8ce-107">Parameters</span></span>  
   
-|<span data-ttu-id="bb7ad-108">參數</span><span class="sxs-lookup"><span data-stu-id="bb7ad-108">Parameter</span></span>|<span data-ttu-id="bb7ad-109">描述</span><span class="sxs-lookup"><span data-stu-id="bb7ad-109">Description</span></span>|  
+|<span data-ttu-id="bd8ce-108">參數</span><span class="sxs-lookup"><span data-stu-id="bd8ce-108">Parameter</span></span>|<span data-ttu-id="bd8ce-109">描述</span><span class="sxs-lookup"><span data-stu-id="bd8ce-109">Description</span></span>|  
 |---------------|-----------------|  
 |`pIDD`||  
 |`cData`||  
 |`pcData`||  
 |`data`||  
   
-## <a name="return-value"></a><span data-ttu-id="bb7ad-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="bb7ad-110">Return Value</span></span>  
- <span data-ttu-id="bb7ad-111">傳回 `HRESULT`。</span><span class="sxs-lookup"><span data-stu-id="bb7ad-111">Returns `HRESULT`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bd8ce-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="bd8ce-110">Return Value</span></span>  
+ <span data-ttu-id="bd8ce-111">傳回 `HRESULT`。</span><span class="sxs-lookup"><span data-stu-id="bd8ce-111">Returns `HRESULT`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bb7ad-112">需求</span><span class="sxs-lookup"><span data-stu-id="bb7ad-112">Requirements</span></span>  
- <span data-ttu-id="bb7ad-113">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="bb7ad-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bd8ce-112">需求</span><span class="sxs-lookup"><span data-stu-id="bd8ce-112">Requirements</span></span>  
+ <span data-ttu-id="bd8ce-113">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="bd8ce-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb7ad-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bb7ad-114">See Also</span></span>  
- [<span data-ttu-id="bb7ad-115">ISymUnmanagedWriter4 介面</span><span class="sxs-lookup"><span data-stu-id="bb7ad-115">ISymUnmanagedWriter4 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bd8ce-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bd8ce-114">See also</span></span>
+- [<span data-ttu-id="bd8ce-115">ISymUnmanagedWriter4 介面</span><span class="sxs-lookup"><span data-stu-id="bd8ce-115">ISymUnmanagedWriter4 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)

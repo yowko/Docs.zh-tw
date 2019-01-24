@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1da1d368725ab0a2334080c1caa7d4e25f5f3bab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 635cf7c4e8ff715096728414506b4a7e683727b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704208"
 ---
-# <a name="ebindpolicylevels-enumeration"></a><span data-ttu-id="dcce6-102">EBindPolicyLevels 列舉</span><span class="sxs-lookup"><span data-stu-id="dcce6-102">EBindPolicyLevels Enumeration</span></span>
-<span data-ttu-id="dcce6-103">請提供旗標，以指定的層級套用或修改組件的原則。</span><span class="sxs-lookup"><span data-stu-id="dcce6-103">Provides flags to specify the level at which to apply or modify assembly policy.</span></span>  
+# <a name="ebindpolicylevels-enumeration"></a><span data-ttu-id="cd4c3-102">EBindPolicyLevels 列舉</span><span class="sxs-lookup"><span data-stu-id="cd4c3-102">EBindPolicyLevels Enumeration</span></span>
+<span data-ttu-id="cd4c3-103">提供旗標指定要套用或修改的組件原則的層級。</span><span class="sxs-lookup"><span data-stu-id="cd4c3-103">Provides flags to specify the level at which to apply or modify assembly policy.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dcce6-104">語法</span><span class="sxs-lookup"><span data-stu-id="dcce6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cd4c3-104">語法</span><span class="sxs-lookup"><span data-stu-id="cd4c3-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -41,31 +41,31 @@ typedef enum {
 } EBindPolicyLevels;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="dcce6-105">成員</span><span class="sxs-lookup"><span data-stu-id="dcce6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="cd4c3-105">成員</span><span class="sxs-lookup"><span data-stu-id="cd4c3-105">Members</span></span>  
   
-|<span data-ttu-id="dcce6-106">成員</span><span class="sxs-lookup"><span data-stu-id="dcce6-106">Member</span></span>|<span data-ttu-id="dcce6-107">描述</span><span class="sxs-lookup"><span data-stu-id="dcce6-107">Description</span></span>|  
+|<span data-ttu-id="cd4c3-106">成員</span><span class="sxs-lookup"><span data-stu-id="cd4c3-106">Member</span></span>|<span data-ttu-id="cd4c3-107">描述</span><span class="sxs-lookup"><span data-stu-id="cd4c3-107">Description</span></span>|  
 |------------|-----------------|  
-|`ePolicyLevelAdmin`|<span data-ttu-id="dcce6-108">指定原則應該套用系統管理員層級。</span><span class="sxs-lookup"><span data-stu-id="dcce6-108">Specifies that policy should be applied at the administrator level.</span></span>|  
-|`ePolicyLevelApp`|<span data-ttu-id="dcce6-109">指定原則應該套用應用程式層級。</span><span class="sxs-lookup"><span data-stu-id="dcce6-109">Specifies that policy should be applied at the application level.</span></span>|  
-|`ePolicyLevelHost`|<span data-ttu-id="dcce6-110">指定原則應該套用主機層級。</span><span class="sxs-lookup"><span data-stu-id="dcce6-110">Specifies that policy should be applied at the host level.</span></span>|  
-|`ePolicyLevelNone`|<span data-ttu-id="dcce6-111">不指定原則層級旗標。</span><span class="sxs-lookup"><span data-stu-id="dcce6-111">Specifies no policy-level flags.</span></span>|  
-|`ePolicyLevelPublisher`|<span data-ttu-id="dcce6-112">指定原則應該 publisher 層級套用。</span><span class="sxs-lookup"><span data-stu-id="dcce6-112">Specifies that policy should be applied at the publisher level.</span></span>|  
-|`ePolicyLevelRetargetable`|<span data-ttu-id="dcce6-113">指定原則應該適用變數層級。</span><span class="sxs-lookup"><span data-stu-id="dcce6-113">Specifies that policy should be applicable at variable levels.</span></span>|  
-|`ePolicyPortability`|<span data-ttu-id="dcce6-114">指定原則應該支援.NET Framework 組件實作之間的可攜性。</span><span class="sxs-lookup"><span data-stu-id="dcce6-114">Specifies that policy should support portability between implementations of a .NET Framework assembly.</span></span> <span data-ttu-id="dcce6-115">請參閱[ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)組態檔元素。</span><span class="sxs-lookup"><span data-stu-id="dcce6-115">See the [\<supportPortability>](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) configuration file element.</span></span>|  
-|`ePolicyUnifiedToCLR`|<span data-ttu-id="dcce6-116">指定的 common language runtime (CLR)，應該統一原則。</span><span class="sxs-lookup"><span data-stu-id="dcce6-116">Specifies that policy should be unified to that of the common language runtime (CLR).</span></span>|  
+|`ePolicyLevelAdmin`|<span data-ttu-id="cd4c3-108">指定原則應該套用系統管理員層級。</span><span class="sxs-lookup"><span data-stu-id="cd4c3-108">Specifies that policy should be applied at the administrator level.</span></span>|  
+|`ePolicyLevelApp`|<span data-ttu-id="cd4c3-109">指定原則應該套用應用程式層級。</span><span class="sxs-lookup"><span data-stu-id="cd4c3-109">Specifies that policy should be applied at the application level.</span></span>|  
+|`ePolicyLevelHost`|<span data-ttu-id="cd4c3-110">指定原則應該套用在主機層級。</span><span class="sxs-lookup"><span data-stu-id="cd4c3-110">Specifies that policy should be applied at the host level.</span></span>|  
+|`ePolicyLevelNone`|<span data-ttu-id="cd4c3-111">不指定原則層級旗標。</span><span class="sxs-lookup"><span data-stu-id="cd4c3-111">Specifies no policy-level flags.</span></span>|  
+|`ePolicyLevelPublisher`|<span data-ttu-id="cd4c3-112">指定原則應該套用在發行者層級。</span><span class="sxs-lookup"><span data-stu-id="cd4c3-112">Specifies that policy should be applied at the publisher level.</span></span>|  
+|`ePolicyLevelRetargetable`|<span data-ttu-id="cd4c3-113">指定變數的層級應該是適用原則。</span><span class="sxs-lookup"><span data-stu-id="cd4c3-113">Specifies that policy should be applicable at variable levels.</span></span>|  
+|`ePolicyPortability`|<span data-ttu-id="cd4c3-114">指定原則應該支援的.NET Framework 組件實作之間的可攜性。</span><span class="sxs-lookup"><span data-stu-id="cd4c3-114">Specifies that policy should support portability between implementations of a .NET Framework assembly.</span></span> <span data-ttu-id="cd4c3-115">請參閱[ \<Supportportability> >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)組態檔項目。</span><span class="sxs-lookup"><span data-stu-id="cd4c3-115">See the [\<supportPortability>](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) configuration file element.</span></span>|  
+|`ePolicyUnifiedToCLR`|<span data-ttu-id="cd4c3-116">指定原則應該進行整合的 common language runtime (CLR)。</span><span class="sxs-lookup"><span data-stu-id="cd4c3-116">Specifies that policy should be unified to that of the common language runtime (CLR).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="dcce6-117">備註</span><span class="sxs-lookup"><span data-stu-id="dcce6-117">Remarks</span></span>  
- <span data-ttu-id="dcce6-118">此列舉會傳遞至方法的[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)介面以指定在應用程式原則的變更。</span><span class="sxs-lookup"><span data-stu-id="dcce6-118">This enumeration is passed to methods of the [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interface to specify changes in application policy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cd4c3-117">備註</span><span class="sxs-lookup"><span data-stu-id="cd4c3-117">Remarks</span></span>  
+ <span data-ttu-id="cd4c3-118">此列舉會傳遞至方法[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)介面來指定應用程式原則中的變更。</span><span class="sxs-lookup"><span data-stu-id="cd4c3-118">This enumeration is passed to methods of the [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interface to specify changes in application policy.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dcce6-119">需求</span><span class="sxs-lookup"><span data-stu-id="dcce6-119">Requirements</span></span>  
- <span data-ttu-id="dcce6-120">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dcce6-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cd4c3-119">需求</span><span class="sxs-lookup"><span data-stu-id="cd4c3-119">Requirements</span></span>  
+ <span data-ttu-id="cd4c3-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cd4c3-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dcce6-121">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="dcce6-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="cd4c3-121">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="cd4c3-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="dcce6-122">**程式庫：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="dcce6-122">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="cd4c3-122">**程式庫：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cd4c3-122">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="dcce6-123">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dcce6-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="cd4c3-123">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd4c3-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dcce6-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dcce6-124">See Also</span></span>  
- [<span data-ttu-id="dcce6-125">ICLRAssemblyIdentityManager 介面</span><span class="sxs-lookup"><span data-stu-id="dcce6-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [<span data-ttu-id="dcce6-126">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="dcce6-126">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="cd4c3-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd4c3-124">See also</span></span>
+- [<span data-ttu-id="cd4c3-125">ICLRAssemblyIdentityManager 介面</span><span class="sxs-lookup"><span data-stu-id="cd4c3-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="cd4c3-126">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="cd4c3-126">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
