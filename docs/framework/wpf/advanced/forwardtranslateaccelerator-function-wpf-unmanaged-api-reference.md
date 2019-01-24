@@ -8,17 +8,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: d8a296c0590d07c4929610021714d2a257236d67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78031ed80fe83b736a351886457f9200534f470b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591509"
 ---
 # <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator 函式 (WPF Unmanaged API 參考)
-這個 API 支援的 Windows Presentation Foundation (WPF) 基礎結構，並不是直接從您的程式碼使用。  
+此 API 支援 Windows Presentation Foundation (WPF) 基礎結構，並不是直接從您的程式碼使用。  
   
- Windows Presentation Foundation (WPF) 基礎結構用於 windows 的管理。  
+ 使用 windows 管理的 Windows Presentation Foundation (WPF) 基礎結構。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,18 +34,18 @@ HRESULT ForwardTranslateAccelerator(
  訊息指標。  
   
  appUnhandled  
- `true` 當此應用程式已經指定有機會處理輸入的訊息，但未處理。否則， `false`。  
+ `true` 此應用程式時已指定有機會處理輸入的訊息，但未處理，否則， `false`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[.NET Framework 系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[.NET Framework 系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **DLL:**  
   
- 在.NET Framework 3.0 和 3.5: PresentationHostDLL.dll  
+ 在.NET Framework 3.0 和 3.5:PresentationHostDLL.dll  
   
- 在.NET Framework 4 和更新版本： PresentationHost_v0400.dll  
+ 在.NET Framework 4 及更新版本：PresentationHost_v0400.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [WPF Unmanaged API 參考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a>另請參閱
+- [WPF Unmanaged API 參考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

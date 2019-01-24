@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 1ac7acda0b9065fde4ab04c80e9d26a1ec23fa6e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 03b37dae72be0ffa589159b2aedc2ac16e35139e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583203"
 ---
 # <a name="accessing-services-using-a-client"></a>使用用戶端存取服務
 用戶端應用程式必須建立、 設定及使用 WCF 用戶端或通道物件來與服務通訊。 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)主題提供的物件 」 和 「 建立基本的用戶端和通道物件，並運用所需的步驟的概觀。  
@@ -70,7 +70,7 @@ ms.locfileid: "53130984"
   
  不論在何種訊息交換模式下，大型資料區塊都會減慢用戶端的處理速度。 若要了解如何處理這些問題，請參閱[Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   
- 如果作業完成時，您的應用程式必須執行更多工作，您應該建立您的 WCF 用戶端會實作服務合約介面上的非同步方法組。 若要這樣做最簡單的方式是使用`/async`上切換[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 如需範例，請參閱[How to:以非同步方式呼叫服務作業](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
+ 如果作業完成時，您的應用程式必須執行更多工作，您應該建立您的 WCF 用戶端會實作服務合約介面上的非同步方法組。 若要這樣做最簡單的方式是使用`/async`上切換[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 如需範例，請參閱[如何：以非同步方式呼叫服務作業](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
  如需增加用戶端效能的詳細資訊，請參閱[中介層用戶端應用程式](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。  
   
@@ -93,11 +93,11 @@ ms.locfileid: "53130984"
   
  使用隱含方式的應用程式會叫用使用者介面初始設定式，但若應用程式的使用者無法在繫結的傳送逾時期限之內回應，當使用者介面傳回時就會擲回例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
- [雙工服務](../../../../docs/framework/wcf/feature-details/duplex-services.md)  
- [操作說明：存取服務使用單向和要求-回覆合約](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [操作說明：Access Services 搭配雙工合約](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [操作說明：存取 WSE 3.0 服務](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [操作說明：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
- [操作說明：以非同步方式呼叫服務作業](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [中介層用戶端應用程式](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)
+## <a name="see-also"></a>另請參閱
+- [雙工服務](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [如何：存取服務使用單向和要求-回覆合約](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [如何：Access Services 搭配雙工合約](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [如何：存取 WSE 3.0 服務](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [如何：以非同步方式呼叫服務作業](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [中介層用戶端應用程式](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

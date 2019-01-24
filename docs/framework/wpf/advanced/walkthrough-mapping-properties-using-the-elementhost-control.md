@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 34119d889c8d6600fdda12cac33192c32d8e0fa6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bb418b725afd0c38a39e42e50511147d0f616059
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623208"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>逐步解說：使用 ElementHost 控制項對應屬性
 
@@ -62,7 +62,7 @@ ms.locfileid: "43510007"
 
 4.  在 Windows Form 設計工具中開啟 `Form1`。 按兩下表單，以新增事件處理常式<xref:System.Windows.Forms.Form.Load>事件。
 
-5.  返回 Windows Form 設計工具，並新增事件處理常式的表單<xref:System.Windows.Forms.Control.Resize>事件。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用設計工具建立事件處理常式](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。
+5.  返回 Windows Form 設計工具，並新增事件處理常式的表單<xref:System.Windows.Forms.Control.Resize>事件。 如需詳細資訊，請參閱[＜How to：建立使用設計工具的事件處理常式](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。
 
 6.  宣告<xref:System.Windows.Forms.Integration.ElementHost>欄位中`Form1`類別。
 
@@ -147,4 +147,4 @@ ms.locfileid: "43510007"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Windows Forms 和 WPF 屬性對應](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [逐步解說：在 Windows Forms 中裝載 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [逐步解說：裝載 Windows Forms 中的 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -2,12 +2,12 @@
 title: 新聞訂閱架構
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: f0a6b288860c343157f31f74d5a461fad1784e0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b07fc03fd11c794d804b6bcd1813010965365e43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623439"
 ---
 # <a name="architecture-of-syndication"></a>新聞訂閱架構
 新聞訂閱 API 主要是提供格式中性的程式設計模型，以便在網路上透過各種格式來撰寫新聞訂閱內容。 抽象資料模型包含下列類別：  
@@ -24,13 +24,13 @@ ms.locfileid: "33492807"
   
  這些類別可緊密地對應至 Atom 1.0 規格中所定義的建構 (儘管其中有些名稱不同)。  
   
- 在 Windows Communication Foundation (WCF) 中，新聞訂閱摘要會模型化為另一種服務作業是在衍生類別的傳回型別<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>。 摘要的擷取會被模型化為要求-回應訊息交換。 用戶端會將要求傳送至服務，並由服務回應。 要求訊息是在基礎結構通訊協定 (例如，原始 HTTP) 上設置，而回應訊息則包含常用新聞訂閱格式 (RSS 2.0 或 Atom 1.0) 的承載。 可實作這些訊息交換的服務，稱為新聞訂閱服務。  
+ 在 Windows Communication Foundation (WCF) 中，新聞訂閱摘要會模型化為另一種服務作業，其中一個是在衍生類別的傳回型別<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>。 摘要的擷取會被模型化為要求-回應訊息交換。 用戶端會將要求傳送至服務，並由服務回應。 要求訊息是在基礎結構通訊協定 (例如，原始 HTTP) 上設置，而回應訊息則包含常用新聞訂閱格式 (RSS 2.0 或 Atom 1.0) 的承載。 可實作這些訊息交換的服務，稱為新聞訂閱服務。  
   
  新聞訂閱服務合約包含一組可傳回 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 類別執行個體的作業。 下列範例示範新聞訂閱服務的介面宣告。  
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- 新聞訂閱支援建置在 WCF REST 程式設計模型會定義之上<xref:System.ServiceModel.WebHttpBinding>繫結，以搭配<xref:System.ServiceModel.Description.WebHttpBehavior>來提供摘要的服務可用。 如需有關 WCF REST 程式設計模型的詳細資訊，請參閱[WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)。  
+ 新聞訂閱支援為建置基礎，定義的 WCF REST 程式設計模型<xref:System.ServiceModel.WebHttpBinding>繫結，以搭配<xref:System.ServiceModel.Description.WebHttpBehavior>來提供以服務形式提供的摘要。 如需有關 WCF REST 程式設計模型的詳細資訊，請參閱 < [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)。  
   
 > [!NOTE]
 >  Atom 1.0 規格允許在其任何日期建構中指定小數秒數。 當序列化和還原序列化 WCF 實作會忽略小數秒數。  
@@ -75,9 +75,9 @@ ms.locfileid: "33492807"
   
 ## <a name="extensibility"></a>擴充性  
   
--   擴充性是新聞訂閱通訊協定的一項重要功能。 Atom 1.0 和 RSS 2.0 都可讓您將屬性與項目新增至規格中未定義的新聞訂閱摘要。 WCF 新聞訂閱程式設計模型提供兩種使用自訂屬性與延伸的方式： 衍生新類別，與鬆散型別的存取。 如需詳細資訊，請參閱[新聞訂閱擴充性](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)。  
+-   擴充性是新聞訂閱通訊協定的一項重要功能。 Atom 1.0 和 RSS 2.0 都可讓您將屬性與項目新增至規格中未定義的新聞訂閱摘要。 WCF 新聞訂閱程式設計模型提供的自訂屬性和延伸模組使用的兩種方式： 衍生新類別和鬆散型別存取。 如需詳細資訊，請參閱 <<c0> [ 新聞訂閱擴充性](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [WCF 摘要整合概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [WCF 摘要整合物件模型對應到 Atom 和 RSS 的方式](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
- [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>另請參閱
+- [WCF 摘要整合概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [WCF 摘要整合物件模型對應到 Atom 和 RSS 的方式](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
+- [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

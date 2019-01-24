@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30aad6fc62c8fee7448163ca69117b804203d505
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: defa18bde8e5ce0f1cc7ff040aaa4fa0e95fd7e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619212"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle 函式
-產生之雜湊與指定的檔案控制代碼，使用指定的雜湊演算法檔案的內容。  
+使用指定的雜湊演算法產生以指定檔案控制代碼指定之檔案的雜湊。  
   
  此函式已被取代。 使用[iclrstrongname:: Gethashfromhandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)方法改為。  
   
@@ -45,26 +45,26 @@ HRESULT GetHashFromHandle (
  [in]要雜湊的檔案控制代碼。  
   
  `piHashAlg`  
- [in、 out]常數，指定的雜湊演算法。 使用預設演算法為零。  
+ [in、 out]常數，指定的雜湊演算法。 使用零的預設演算法。  
   
  `pbHash`  
- [out]傳回雜湊緩衝區。  
+ [out]傳回的雜湊緩衝區。  
   
  `cchHash`  
- [in]要求的大小上限的`pbHash`。  
+ [in]要求的最大大小的`pbHash`。  
   
  `pchHash`  
  [out]大小，以位元組為單位傳回`pbHash`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** StrongName.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [GetHashFromHandle 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)  
- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>另請參閱
+- [GetHashFromHandle 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

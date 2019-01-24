@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: b17de01c4a5e89051393aa3c6bb2d0079535dbf6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 3e1aced8ecb4f85dd81c8a928422cbb7d0b10dcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564327"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>逐步解說：示範視覺化繼承
 視覺化繼承可讓您查看基底表單上的控制項，並加入新的控制項。 在本逐步解說中，您將建立基底表單，並編譯為類別庫。 您將匯入此類別庫至另一個專案，並建立繼承自基底表單的新表單。 在這個逐步解說期間，您將了解如何：  
@@ -70,7 +70,7 @@ ms.locfileid: "46703672"
   
 #### <a name="to-add-a-button-that-inheritors-of-the-base-form-can-modify"></a>加入基底表單繼承者可以修改的按鈕：  
   
-1.  開啟**Form1**設計工具中。  
+1.  在設計工具中，開啟 **Form1**。  
   
 2.  在上**所有的 Windows Form**索引標籤**工具箱**，按兩下**按鈕**將按鈕新增至表單。 使用滑鼠來定位並調整按鈕的大小。  
   
@@ -161,9 +161,9 @@ ms.locfileid: "46703672"
 12. 按 F5 執行應用程式，並觀察繼承的表單之行為。  
   
 ## <a name="next-steps"></a>後續步驟  
- 使用者控制項的繼承以非常類似的方式運作。 開啟一個新的類別庫專案，並加入使用者控制項。 將構成控制項放在上面，然後編譯專案。 開啟另一個新的類別庫專案，並加入已編譯類別程式庫的參考。 此外，請嘗試加入繼承的控制項 (透過**加入新項目** 對話方塊中) 至專案並使用**繼承選取器**。 將使用者控制項，並將變更`Inherits`(`:` Visual C#) 陳述式。 如需詳細資訊，請參閱 <<c0> [ 如何： 繼承 Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。  
+ 使用者控制項的繼承以非常類似的方式運作。 開啟一個新的類別庫專案，並加入使用者控制項。 將構成控制項放在上面，然後編譯專案。 開啟另一個新的類別庫專案，並加入已編譯類別程式庫的參考。 此外，請嘗試加入繼承的控制項 (透過**加入新項目** 對話方塊中) 至專案並使用**繼承選取器**。 將使用者控制項，並將變更`Inherits`(`:` Visual C#) 陳述式。 如需詳細資訊，請參閱[＜How to：繼承 Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [如何：繼承 Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- [Windows Forms 視覺繼承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- [Windows Forms](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>另請參閱
+- [如何：繼承 Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+- [Windows Forms 視覺繼承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Windows Forms](../../../../docs/framework/winforms/index.md)

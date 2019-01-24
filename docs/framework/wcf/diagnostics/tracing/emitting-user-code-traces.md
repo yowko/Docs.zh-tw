@@ -2,12 +2,12 @@
 title: 發出使用者程式碼追蹤
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5ecc0c2110362f715275729b5e4c4c7e1ec03496
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492660"
 ---
 # <a name="emitting-user-code-traces"></a>發出使用者程式碼追蹤
 除了啟用追蹤來收集檢測資料產生 Windows Communication Foundation (WCF) 組態中的，您也可以發出使用者程式碼中以程式設計方式追蹤。 如此一來，您就可以主動建立供日後深入診斷之用的檢測資料。 本主題將討論如何完成這項工作。  
@@ -123,7 +123,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  在下列圖表中，也會看到往返「計算機」活動的傳輸追蹤，以及每個要求活動各兩對的「開始」和「停止」追蹤，一對屬於用戶端，另一對屬於服務 (亦即，每個追蹤來源各有一對追蹤)。  
   
- ![追蹤檢視器： 發出使用者&#45;程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
+ ![追蹤檢視器：發出使用者&#45;程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 依據建立時間 (左面板) 以及依據巢狀活動 (右上方面板) 列示的活動清單  
   
  如果服務程式碼擲回連帶導致用戶端擲回的例外狀況 (例如，用戶端未獲得其要求的回應時)，服務和用戶端的警告或錯誤訊息都會因為直接的相互關聯而在同一個活動中產生。 在下圖中，服務會擲回例外狀況，指出 「 服務拒絕處理此要求在使用者程式碼 」。 用戶端也會擲回的例外狀況，指出 「 伺服器無法處理要求，因為發生內部錯誤 」。  
@@ -140,5 +140,5 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  定義活動和傳播活動識別碼可讓我們在端點之間執行直接錯誤相互關聯。 如此一來，就可以更迅速地找到錯誤的根本原因。  
   
-## <a name="see-also"></a>另請參閱  
- [擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+## <a name="see-also"></a>另請參閱
+- [擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)

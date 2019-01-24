@@ -2,12 +2,12 @@
 title: 適用於 Entity Framework 的 SqlClient
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: 430e0e143519f97802c8cef4eee658b482a81880
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1c38567f77d69a894376e23b6d4ff6c669edc806
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569098"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>適用於 Entity Framework 的 SqlClient
 本節將描述可讓 Entity Framework 透過 Microsoft SQL Server 運作的 .NET Framework Data Provider for SQL Server (SqlClient)。  
@@ -34,7 +34,7 @@ ms.locfileid: "44252586"
 ## <a name="provider-namespace-name"></a>提供者命名空間名稱  
  所有提供者都必須指定命名空間。 這個屬性會告知 Entity Framework 此提供者對特定建構 (例如型別和函式) 所使用的前置詞。 SqlClient 提供者資訊清單的命名空間是 `SqlServer`。 如需有關命名空間的詳細資訊，請參閱[命名空間](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)。  
   
-## <a name="types"></a>類型  
+## <a name="types"></a>型別  
  適用於 Entity Framework 的 SqlClient 提供者會提供概念模型類型和 SQL Server 型別之間的對應資訊。 如需詳細資訊，請參閱 <<c0> [ 適用於 Entity framework 的 sqlclient 類型 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)。  
   
 ## <a name="functions"></a>函式  
@@ -47,7 +47,7 @@ ms.locfileid: "44252586"
   
  [適用於 Entity Framework 的 SqlClient 已知問題](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
   
-## <a name="see-also"></a>另請參閱  
- [Entity SQL 語言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [語言參考](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
- [Entity Framework 的 SqlClient 提供者中的已知問題](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
+## <a name="see-also"></a>另請參閱
+- [Entity SQL 語言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [語言參考](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
+- [Entity Framework 的 SqlClient 提供者中的已知問題](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)

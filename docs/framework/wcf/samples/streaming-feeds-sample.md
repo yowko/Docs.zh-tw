@@ -2,12 +2,12 @@
 title: 資料流摘要範例
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 17639273ece804dc531cbbc3ab9135c814ea632d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a2bbc51593b4f1c3655d2e1d0df7f14d0005d68c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631349"
 ---
 # <a name="streaming-feeds-sample"></a>資料流摘要範例
 這個範例會示範如何管理含有大量項目的新聞訂閱摘要。 在伺服器上，此範例會示範如何在項目即將寫入網路資料流的之前立即延遲建立摘要中個別的 <xref:System.ServiceModel.Syndication.SyndicationItem> 物件。  
@@ -118,5 +118,5 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   
-## <a name="see-also"></a>另請參閱  
- [獨立診斷摘要](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)
+## <a name="see-also"></a>另請參閱
+- [獨立診斷摘要](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: b5696c593fdeaabab66ea7c286c6e1309e6e8e38
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: dbe85ea817a597db84ddad530d67b1c2b7953f75
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204795"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535358"
 ---
 # <a name="ltschemaimporterextensionsgt-element"></a>&lt;schemaImporterExtensions&gt; 元素
 包含 <xref:System.Xml.Serialization.XmlSchemaImporter> 用來對應 XSD 型別至 .NET Framework 型別的型別。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)。  
@@ -52,9 +52,9 @@ ms.locfileid: "44204795"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.Serialization.XmlSchemaImporter>  
-- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
-- [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)  
-- [\<dateTimeSerialization> 元素](../../../docs/standard/serialization/datetimeserialization-element.md)  
-- [\<新增 > 項目\<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
+- <xref:System.Xml.Serialization.XmlSchemaImporter>
+- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
+- [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)
+- [\<dateTimeSerialization> 元素](../../../docs/standard/serialization/datetimeserialization-element.md)
+- [\<新增 > 項目\<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
 - [\<system.xml.serialization> 項目](../../../docs/standard/serialization/system-xml-serialization-element.md)

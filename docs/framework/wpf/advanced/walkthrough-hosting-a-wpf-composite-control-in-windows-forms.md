@@ -1,20 +1,20 @@
 ---
-title: 逐步解說：在 Windows Form 中裝載 WPF 複合控制項
+title: 逐步解說：裝載 Windows Forms 中的 WPF 複合控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: b49d09ce81c0605ecd82b67ec4c0b24973ac293c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f0fad58d269c89079237969fc03cf5edb6cf0358
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569660"
 ---
-# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：在 Windows Form 中裝載 WPF 複合控制項
+# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：裝載 Windows Forms 中的 WPF 複合控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]程式碼，它可以更有效率地將現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式與[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不從頭重寫程式。 常見的案例是當您想要內嵌一個或多個控制項實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows Forms 應用程式內。 如需有關自訂 WPF 控制項的詳細資訊，請參閱 <<c0> [ 控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)。  
   
- 本逐步解說引導您完成應用程式以裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項，以在 Windows Forms 應用程式中執行資料輸入。 複合控制項會封裝在 DLL 中。 這個一般程序可以延伸到更複雜的應用程式和控制項。 本逐步解說設計成幾乎完全相同的外觀和功能[逐步解說： 裝載在 WPF 中的 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)。 主要差異在於裝載案例相反。  
+ 本逐步解說引導您完成應用程式以裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項，以在 Windows Forms 應用程式中執行資料輸入。 複合控制項會封裝在 DLL 中。 這個一般程序可以延伸到更複雜的應用程式和控制項。 本逐步解說設計成幾乎完全相同的外觀和功能[逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)。 主要差異在於裝載案例相反。  
   
  本逐步解說分為兩節。 第一節簡要說明的實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。 第二節詳細討論如何裝載 Windows Forms 應用程式中的複合控制項、 接收來自控制項的事件以及存取某些控制項的屬性。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "48582810"
   
 ## <a name="prerequisites"></a>必要條件  
 
-您需要完成這個逐步解說 Visual Studio。  
+若要完成這個逐步解說，您必須具有 Visual Studio。  
   
 ## <a name="implementing-the-wpf-composite-control"></a>實作 WPF 複合控制項  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]此範例中使用的複合控制項是接受使用者的名稱和地址的簡單資料輸入表單。 使用者按一下兩個按鈕中的其中一個來表示工作已完成時，控制項會引發自訂事件，以將該資訊傳回給主應用程式。 下圖顯示轉譯的控制項。  
@@ -110,7 +110,7 @@ WPF 複合控制項
   
 3.  引發自訂`OnButtonClick`事件，就會通知使用者已完成，並將資料傳遞回主應用程式的主應用程式。  
   
- 此控制項也會公開一些可讓您變更外觀的色彩和字型屬性。 不同於<xref:System.Windows.Forms.Integration.WindowsFormsHost>類別，用來裝載 Windows Form 控制項，這<xref:System.Windows.Forms.Integration.ElementHost>類別會公開控制項的<xref:System.Windows.Controls.Panel.Background%2A>只有屬性。 若要維護這個程式碼範例和中所討論的範例之間的相似度[逐步解說： 裝載在 WPF 中的 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)，控制項會直接公開其餘屬性。  
+ 此控制項也會公開一些可讓您變更外觀的色彩和字型屬性。 不同於<xref:System.Windows.Forms.Integration.WindowsFormsHost>類別，用來裝載 Windows Form 控制項，這<xref:System.Windows.Forms.Integration.ElementHost>類別會公開控制項的<xref:System.Windows.Controls.Panel.Background%2A>只有屬性。 若要維護這個程式碼範例和中所討論的範例之間的相似度[逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)，控制項會直接公開其餘屬性。  
   
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>程式碼後置檔案的基本結構  
  此程式碼後置檔案包含單一的命名空間中， `MyControls`，其中會包含兩個類別：`MyControl1`和`MyControlEventArgs`。  
@@ -320,9 +320,9 @@ Windows Forms 應用程式中裝載的 WPF 複合控制項
   
  建置並執行應用程式。 按一下不同的選項按鈕，以查看在 WPF 複合控制項上的效果。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [逐步解說：在 Windows Forms 中裝載立體 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [逐步解說：裝載 Windows Forms 中的 3d WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: afc35578f362f4a72a40fdb3d87406a8795cb59d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e494e4e6fcbf91a7ab90b6922bc7bb4ace236b8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498631"
 ---
 # <a name="-win32icon"></a>-win32icon
 將.ico 檔插入輸出檔。 這個.ico 檔表示中的輸出檔**檔案總管**。  
@@ -44,6 +44,6 @@ ms.locfileid: "50194861"
 vbc -win32icon:rf.ico in.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

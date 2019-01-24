@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9aef8c40be2456532bd6df6feb8d286cdaeefa7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1beb76012d5f0351ee644c8dea89cabdbe2c8970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555020"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes 方法
-列舉中目前的中繼資料範圍內組件資訊清單所參考的匯出的類型。  
+列舉在目前的中繼資料範圍內的組件資訊清單中參考的匯出的類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,10 +46,10 @@ HRESULT EnumExportedTypes (
  [out]列舉`mdExportedType`中繼資料語彙基元。  
   
  `cMax`  
- [in]最大數目`mdExportedType`可以放入權杖`rExportedTypes`陣列。  
+ [in]最大數目`mdExportedType`語彙基元可以放入`rExportedTypes`陣列。  
   
  `pcTokens`  
- [out]數目`mdExportedType`語彙基元實際置於`rExportedTypes`。  
+ [out]數目`mdExportedType`語彙基元實際上置於`rExportedTypes`。  
   
 ## <a name="return-value"></a>傳回值  
   
@@ -59,13 +59,13 @@ HRESULT EnumExportedTypes (
 |`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcTokens`設為零。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

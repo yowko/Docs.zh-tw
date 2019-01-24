@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4c3aedea4cc8ce2d8fb8c0c0bf3fead727dcf64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ed868febb5eb82cf73cfc5b0633d86bf4e1315c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561617"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes 列舉
-指定要進行搜尋的符號讀取器時使用的原則。 這些常數由[isymunmanagedbinder2:: Getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)和[isymunmanagedbinder3:: Getreaderfromcallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)方法。  
+指定要在進行搜尋的符號讀取器時使用的原則。 這些常數由[ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)並[ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)方法。  
   
 > [!IMPORTANT]
 >  它是從受信任的來源開啟程式資料庫 (PDB) 檔的安全性風險。  
@@ -47,11 +47,11 @@ typedef enum CorSymSearchPolicyAttributes
 |------------|-----------------|  
 |`AllowRegistryAccess`|查詢符號搜尋路徑的登錄。|  
 |`AllowSymbolServerAccess`|存取符號伺服器。|  
-|`AllowOriginalPathAccess`|搜尋偵錯目錄中指定的路徑。|  
+|`AllowOriginalPathAccess`|搜尋指定的偵錯目錄中的路徑。|  
 |`AllowReferencePathAccess`|搜尋 PDB 中的.exe 檔案所在的位置。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [診斷符號存放區列舉](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [診斷符號存放區列舉](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

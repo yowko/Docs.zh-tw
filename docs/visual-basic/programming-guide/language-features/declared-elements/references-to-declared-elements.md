@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 18f9920891e35517efe7adcfd4c03e03ac771478
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 16f4fb28ab030ccebed2a8d1b93a3a6c29d075c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501252"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>已宣告之項目的參考 (Visual Basic)
 當您的程式碼參考宣告的項目時，Visual Basic 編譯器會符合您適當的宣告該名稱的參考中的名稱。 如果多個項目宣告具有相同名稱時，您可以控制這些項目所要參考即*合格*它的名稱。  
@@ -193,11 +193,11 @@ Dim xDoc As xD.XmlDocument
 ## <a name="shadowing"></a>遮蔽  
  當兩個程式設計項目共用相同的名稱時，可以隱藏其中一個，或是*陰影*，另一個。 遮蔽的項目不是可供參考。相反地，當您的程式碼使用遮蔽的項目名稱時，Visual Basic 編譯器解析遮蔽的項目。 如範例的更詳細說明，請參閱 < [Visual Basic 中的遮蔽功能](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [宣告項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)  
- [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
+## <a name="see-also"></a>另請參閱
+- [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [宣告項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+- [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Public](../../../../visual-basic/language-reference/modifiers/public.md)

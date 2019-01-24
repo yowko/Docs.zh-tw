@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f5d53debd746ba031e39215354c391d288016b6b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a4c29db3f84570d4d5e99a1deaf8beb3145c8ea1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626936"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt;項目
 將類別名稱對應至易記的演算法名稱，允許一個類別有許多易記名稱。  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<cryptoNameMapping >  
-\<nameEntry >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<cryptoNameMapping>  
+\<nameEntry>  
   
 ## <a name="syntax"></a>語法  
   
@@ -77,8 +77,8 @@ ms.locfileid: "50201347"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>另請參閱
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
 - [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

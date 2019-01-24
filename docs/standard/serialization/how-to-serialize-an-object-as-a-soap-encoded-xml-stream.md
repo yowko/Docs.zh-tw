@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將物件序列化為 SOAP 編碼的 XML 資料流
+title: HOW TO：將物件序列化為 SOAP 編碼的 XML Stream
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - XML serialization, SOAP
 - serialization, SOAP
 ms.assetid: af406e0a-fa3a-46dd-a7ba-c80731eba3a0
-ms.openlocfilehash: cdfa2c8c7a27806873217495ac09f7f20e82b6bc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: dc5c4a68c1fba303937ae126cd5b5d4f7f8107ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698574"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631382"
 ---
-# <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>HOW TO：將物件序列化為 SOAP 編碼的 XML 資料流
+# <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>HOW TO：將物件序列化為 SOAP 編碼的 XML Stream
   
  因為 SOAP 訊息是使用 XML 建置的，所以 <xref:System.Xml.Serialization.XmlSerializer> 類別可用來序列化類別並產生編碼的 SOAP 訊息。 產生的 XML 會與[全球資訊網協會之＜Simple Object Access Protocol (SOAP) 1.1＞文件中的第 5 節](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512)相符。 當您建立透過 SOAP 訊息溝通的 XML Web 服務時，您可以將特殊 SOAP 屬性集套用至類別與類別成員以自訂 XML 資料流。 如需屬性的清單，請參閱[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)。  
   
@@ -72,9 +72,9 @@ XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [可控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
-- [以 XML Web 服務進行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
-- [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
-- [如何：覆寫已編碼的 SOAP XML 序列化](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
+- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [可控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
+- [以 XML Web 服務進行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
+- [如何：將物件序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [如何：覆寫編碼的 SOAP XML 序列化](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)

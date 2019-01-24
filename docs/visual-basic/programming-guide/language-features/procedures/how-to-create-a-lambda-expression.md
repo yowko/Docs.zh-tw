@@ -1,18 +1,18 @@
 ---
-title: 如何：建立 Lambda 運算式 (Visual Basic)
+title: HOW TO：建立 Lambda 運算式 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: f437166bc5206b4145d6508aa2131ec94d6eca95
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: e7302304fe6c44b0143d7f12ec272d597b313fdd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492401"
 ---
-# <a name="how-to-create-a-lambda-expression-visual-basic"></a>如何：建立 Lambda 運算式 (Visual Basic)
+# <a name="how-to-create-a-lambda-expression-visual-basic"></a>HOW TO：建立 Lambda 運算式 (Visual Basic)
 A *lambda 運算式*函式或副程式，並沒有名稱。 只要委派型別有效，則可以使用 lambda 運算式。  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>若要建立的單行 lambda 運算式函式  
@@ -104,12 +104,12 @@ A *lambda 運算式*函式或副程式，並沒有名稱。 只要委派型別�
   
  [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq.Enumerable>  
- [Lambda 運算式](./lambda-expressions.md)  
- [Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [如何：在 Visual Basic 中將程序傳遞至其他程序](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)  
- [Delegate 陳述式](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Linq.Enumerable>
+- [Lambda 運算式](./lambda-expressions.md)
+- [Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [如何：傳遞至另一個程序，在 Visual Basic 中的程序](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Delegate 陳述式](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

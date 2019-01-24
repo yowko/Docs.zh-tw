@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 75159ef8-bd43-4d13-acb7-1f1fe9253160
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: f59549d83e5662f236a44f112b473b2d233f4669
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1e51d5347581ed0da77abb8ea8eec18915f41b83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555449"
 ---
 # <a name="ui-automation-control-types-overview"></a>UI 自動化控制項類型概觀
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控制項類型是已知的識別項，可以用來指出特定項目代表哪種控制項，例如下拉式方塊或按鈕。  
   
@@ -114,5 +114,5 @@ ms.locfileid: "47197769"
   
 -   [Window 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Automation.ControlType>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Automation.ControlType>

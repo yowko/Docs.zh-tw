@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84059c5e5542e13b1d4fc4efcfc4c7f418db391e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2da6bc87a175851aa7b23b67075ce61e39f0b937
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555078"
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames 函式
 擷取所有的限定詞或目前的物件或屬性提供的特定限定詞的名稱。 
@@ -53,8 +53,8 @@ HRESULT QualifierSet_GetNames (
 |常數  |值  |描述  |
 |---------|---------|---------|
 |  | 0 | 傳回所有限定詞的名稱。 |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 傳回目前的屬性或物件特定限定詞的名稱。 <br/> 屬性： 返回 （包括覆寫） 的屬性特定的辨識符號，並不是這些限定詞會傳播從類別定義。 <br/> 執行個體： 傳回只有特定執行個體的限定詞名稱。 <br/> 類別： 傳回衍生的類別 beiong 特定只限定詞。
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 傳回的傳播的限定詞的名稱，從另一個物件。 <br/> 屬性： 傳回的限定詞傳播至這個屬性從類別定義中，而不從本身的屬性。 <br/> 執行個體： 傳回只有這些限定詞會傳播從類別定義。 <br/> 類別： 傳回繼承自父類別的只有這些限定詞的名稱。 |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 傳回目前的屬性或物件特定限定詞的名稱。 <br/> 屬性：傳回只特有的屬性 （包括覆寫） 限定詞，並不會傳播從類別定義的限定詞。 <br/> 執行個體：傳回只有特定執行個體的限定詞名稱。 <br/> 類別：傳回衍生的類別 beiong 特定只限定詞。
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 傳回的傳播的限定詞的名稱，從另一個物件。 <br/> 屬性：傳回只限定詞傳播至這個屬性從類別定義中，而不從本身的屬性。 <br/> 執行個體：傳回的只有這些限定詞傳播，從類別定義。 <br/> 類別：傳回繼承自父類別的只有這些限定詞的名稱。 |
 
 `pstrNames` [out]新`SAFEARRAY`包含要求的名稱。 陣列可以有 0 的項目。 如果發生錯誤時，新`SAFEARRAY`就不會傳回。
 
@@ -83,5 +83,5 @@ HRESULT QualifierSet_GetNames (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 009f1482de6e1daea21766300b4fb6a3ab0ffc8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3fc212321b28545f62f0a1c2965281d02ac73e40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638102"
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS 結構
-提供有關 common language runtime (CLR) 記憶體回收機制統計資料。  
+提供 common language runtime (CLR) 記憶體回收機制的相關統計資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,22 +48,22 @@ typedef struct _COR_GC_STATS {
   
 |成員|描述|  
 |------------|-----------------|  
-|`Flags`|表示要計算及傳回的欄位值。|  
-|`ExplicitGCCount`|指出所強制的外部要求的記憶體回收數目。|  
-|`GenCollectionsTaken`|表示執行每個層代的回收次數。|  
+|`Flags`|表示欄位值，應該會計算並傳回。|  
+|`ExplicitGCCount`|指出所強制的外部要求記憶體回收數目。|  
+|`GenCollectionsTaken`|表示執行每個層代的回收數目。|  
 |`CommittedKBytes`|認可所有堆積中的 kb 總數。|  
 |`ReservedKBytes`|保留所有堆積中的 kb 總數。|  
-|`Gen0HeapSizeKBytes`|以 kb 為單位，層代 0 堆積的大小。|  
+|`Gen0HeapSizeKBytes`|以 kb 為單位的層代 0 堆積大小。|  
 |`Gen1HeapSizeKBytes`|以 kb 為單位，產生一個堆積的大小。|  
 |`Gen2HeapSizeKBytes`|以 kb 為單位，產生兩個堆積的大小。|  
-|`LargeObjectHeapSizeKBytes`|以 kb 為單位，在大型物件堆積的大小。|  
-|`KBytesPromotedFromGen0`|大小，以 kb 為單位，從層代 0 提升至其中一個層代的物件。|  
-|`KBytesPromotedFromGen1`|大小，以 kb 為單位，從一個層代升級至兩個層代的物件。|  
+|`LargeObjectHeapSizeKBytes`|以 kb 為單位，大型物件堆積的大小。|  
+|`KBytesPromotedFromGen0`|大小 （kb），從層代 0 提升至其中一個層代的物件。|  
+|`KBytesPromotedFromGen1`|大小 （kb），從一個層代升級至兩個層代的物件。|  
   
 ## <a name="remarks"></a>備註  
- [Iclrgcmanager:: Getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)方法需要`Flags`欄位`COR_GC_STATS`結構來設定的一或多個值[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)以指定的列舉設定為統計資料。  
+ [Iclrgcmanager:: Getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)方法需要`Flags`欄位`COR_GC_STATS`設為一或多個值的結構[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)来指定其列舉型別設定要統計資料。  
   
- 下表將對應到兩個此結構所提供的統計資料[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)列舉值`COR_GC_COUNTS`和`COR_GC_MEMORYUSAGE`。  
+ 下表對應至兩個這個結構所提供的統計資料[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)列舉值`COR_GC_COUNTS`和`COR_GC_MEMORYUSAGE`。  
   
 |指定 COR_GC_COUNTS|指定 COR_GC_MEMORYUSAGE|  
 |----------------------------------|---------------------------------------|  
@@ -78,15 +78,15 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** GCHost.idl  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [自動管理記憶體](../../../../docs/standard/automatic-memory-management.md)  
- [記憶體回收](../../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>另請參閱
+- [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [自動管理記憶體](../../../../docs/standard/automatic-memory-management.md)
+- [記憶體回收](../../../../docs/standard/garbage-collection/index.md)

@@ -2,12 +2,12 @@
 title: System.DateTimeOffset 方法
 ms.date: 03/30/2017
 ms.assetid: 25b3e5c0-7603-4a70-b3e5-2149e3da69a2
-ms.openlocfilehash: 7fc6502f899e953637d23c0d54cc5fe615c38eea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46b1622cdc8a38544f1c8a8104abb935c9ff1269
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637199"
 ---
 # <a name="systemdatetimeoffset-methods"></a>System.DateTimeOffset 方法
 一旦在物件模型 (Object Model) 或外部對應檔案中對應之後，LINQ to SQL 就可讓您從 LINQ to SQL 查詢內部呼叫大部分 <xref:System.DateTimeOffset?displayProperty=nameWithType> 方法、運算子和屬性。  
@@ -26,7 +26,7 @@ ms.locfileid: "33363308"
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond%2A>|  
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
-## <a name="see-also"></a>另請參閱  
- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [建立物件模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
+## <a name="see-also"></a>另請參閱
+- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [建立物件模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

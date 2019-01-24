@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d314d85e7c1297636e8dd5cecaf050a527151518
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd00a1fa8099d5a87577271487c46e68a46794c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43453047"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566979"
 ---
-# <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 函式
-執行查詢，以接收事件。 呼叫會立即傳回，並到達，呼叫端可以輪詢事件傳回的列舉值。 釋放傳回的列舉值會取消查詢。  
+# <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi function
+執行查詢以接收事件。 呼叫會立即傳回，並到達，呼叫端可以輪詢事件傳回的列舉值。 釋放傳回的列舉值會取消查詢。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -52,7 +52,7 @@ HRESULT ExecNotificationQueryWmi (
 [in]具有 Windows 管理所支援的有效的查詢語言的字串。 它必須是 < WQL >，WMI 查詢語言的縮寫字。
 
 `strQuery`  
-[in]查詢的文字。 此參數不得為`null`。
+[in]查詢的文字。 這個參數不可以是 `null`。
 
 `lFlags`   
 [in]下列兩個旗標會影響此函式行為的組合。 這些值會定義於*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼。 
@@ -94,7 +94,7 @@ HRESULT ExecNotificationQueryWmi (
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 使用者沒有檢視一個或多個函式會傳回類別的權限。 |
 | `WBEM_E_FAILED` | 0x80041001 | 發生未指定的錯誤。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
-| `WBEM_E_INVALID_CLASS` | 收到 0x80041010 | 查詢指定了不存在的類別。 |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | 查詢指定了不存在的類別。 |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | 已要求太多有效位數，傳遞的事件。 必須指定較大的輪詢容錯。 |
 | `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | 查詢 requess 可以提供比 Windows 管理的詳細資訊。 這`HRESULT`事件查詢會產生要輪詢的命名空間中的所有物件的要求時，會傳回。 |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | 查詢必須有語法錯誤。 |
@@ -123,5 +123,5 @@ HRESULT ExecNotificationQueryWmi (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

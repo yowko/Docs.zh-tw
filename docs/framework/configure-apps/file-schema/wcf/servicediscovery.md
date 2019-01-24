@@ -2,21 +2,21 @@
 title: '&lt;serviceDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 2b3061274ef670ccd672c3155ca7285d567834bd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 73943f5f962a6963809e2c65ce8593f6181559f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146897"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587329"
 ---
 # <a name="ltservicediscoverygt"></a>&lt;serviceDiscovery&gt;
 指定服務端點的探索能力。  
   
  \<system.ServiceModel>  
-\<行為 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行為 >  
-\<serviceDiscovery >  
+\<behavior>  
+\<serviceDiscovery>  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,14 +49,14 @@ ms.locfileid: "54146897"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|公告端點的集合。 使用此區段指定用於傳送公告訊息的端點。|  
-|[\<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|探索端點的集合。 使用此區段指定用於接聽探索訊息的端點。|  
+|[\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|公告端點的集合。 使用此區段指定用於傳送公告訊息的端點。|  
+|[\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|探索端點的集合。 使用此區段指定用於接聽探索訊息的端點。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<行為 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
 ## <a name="remarks"></a>備註  
  加入至服務的行為組態時，這個組態項目會將該服務的所有端點標示為可探索。 您可以使用，以進一步設定這類端點的探索功能[ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)或是[ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)子項目。 使用  [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)一節，以指定用來傳送服務公告 （線上 /hello 與離線 /bye） 的端點組態，以設定公告。 使用[ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)區段手動指定用於接聽探索訊息的端點。  
@@ -85,5 +85,5 @@ ms.locfileid: "54146897"
 </behaviors>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>

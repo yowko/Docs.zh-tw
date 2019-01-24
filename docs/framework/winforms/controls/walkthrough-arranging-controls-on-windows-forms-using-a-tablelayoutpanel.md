@@ -1,28 +1,28 @@
 ---
-title: 逐步解說：使用 TableLayoutPanel 排列 Windows Form 上的控制項
+title: 逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with TableLayoutPanel
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 769a8a5b60c6b963619b79526a7d1ee59af3ba33
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d058fd43649b8096ce2a65d8537cf4b663f58594
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585415"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>逐步解說：使用 TableLayoutPanel 排列 Windows Form 上的控制項
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項
 有些應用程式需要表單能在調整表單大小或變更內容大小時，自行適當排列配置。 當需要動態配置但不想用程式碼明確處理 <xref:System.Windows.Forms.Control.Layout> 事件時，請考慮使用配置面板。  
   
  <xref:System.Windows.Forms.FlowLayoutPanel> 控制項和 <xref:System.Windows.Forms.TableLayoutPanel> 控制項提供直覺的方式，排列表單上的控制項。 這兩者都提供自動且可設定的功能，可用來控制其內含子控制項的相對位置，而且也都能為執行階段提供動態配置功能，所以每當父表單變更維度時，子控制項的大小和位置就會相應調整。 配置面板可以巢嵌在配置面板內，從而提供精緻的使用者介面。  
   
- <xref:System.Windows.Forms.FlowLayoutPanel> 會以特定的水平或垂直文字方向排列其內容。 其內容可以從某一資料列換行至下一個資料列，或從某一資料行換行至下一個資料行。 此外，也可裁剪其內容而不換行。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 在 Windows Form 使用 FlowLayoutPanel 排列的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。  
+ <xref:System.Windows.Forms.FlowLayoutPanel> 會以特定的水平或垂直文字方向排列其內容。 其內容可以從某一資料列換行至下一個資料列，或從某一資料行換行至下一個資料行。 此外，也可裁剪其內容而不換行。 如需詳細資訊，請參閱[逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。  
   
  <xref:System.Windows.Forms.TableLayoutPanel>排列其內容在方格中，提供功能類似於 HTML\<表格 > 項目。 <xref:System.Windows.Forms.TableLayoutPanel>控制項可讓您將控制項放在格線版面配置，而不需要精確指定每個個別控制項的位置。 其儲存格依資料列和資料行排列，大小可以各不相同。 跨越資料列和資料行，就可以合併資料格。 資料格可以包含任何項目可以包含一份表單，和在做為容器的大部分其他方面的行為。  
   
- <xref:System.Windows.Forms.TableLayoutPanel>控制項也提供依比例調整大小功能在執行階段，讓您的配置可以變更順暢地調整表單大小時。 這可讓<xref:System.Windows.Forms.TableLayoutPanel>控制項非常適合的用途，例如資料輸入表單和當地語系化應用程式。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 建立適用於資料輸入且可調整大小的 Windows Form](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)並[逐步解說： 建立可當地語系化的 Windows Form](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)。  
+ <xref:System.Windows.Forms.TableLayoutPanel>控制項也提供依比例調整大小功能在執行階段，讓您的配置可以變更順暢地調整表單大小時。 這可讓<xref:System.Windows.Forms.TableLayoutPanel>控制項非常適合的用途，例如資料輸入表單和當地語系化應用程式。 如需詳細資訊，請參閱[逐步解說：建立適用於資料輸入且可調整大小的 Windows Form](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)和[逐步解說：建立可當地語系化的 Windows Form](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)。  
   
  一般情況下，您不應該使用<xref:System.Windows.Forms.TableLayoutPanel>為整個版面配置容器的控制項。 使用<xref:System.Windows.Forms.TableLayoutPanel>控制項以提供版面配置的組件的按比例調整大小功能。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "43773968"
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立名為"TableLayoutPanelExample 」 的 Windows 應用程式專案。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立 Windows 應用程式專案](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  建立名為"TableLayoutPanelExample 」 的 Windows 應用程式專案。 如需詳細資訊，請參閱[＜How to：建立 Windows 應用程式專案](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
 2.  選取中的表單**Windows** **Form 設計工具**。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "43773968"
   
 #### <a name="to-arrange-controls-in-rows-and-columns-using-a-tablelayoutpanel"></a>若要排列資料列和資料行使用 TableLayoutPanel 控制項  
   
-1.  拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。 請注意，根據預設，<xref:System.Windows.Forms.TableLayoutPanel>控制項有四個資料格。  
+1.  從 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**將** 控制項拖曳至表單。 請注意，根據預設，<xref:System.Windows.Forms.TableLayoutPanel>控制項有四個資料格。  
   
 2.  拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**成<xref:System.Windows.Forms.TableLayoutPanel>控制項，並放入其中一個資料格。 請注意，<xref:System.Windows.Forms.Button>會建立與您所選取的資料格內的控制項。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "43773968"
   
 3.  選取第一個資料行，然後將值變更其<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>屬性設<xref:System.Windows.Forms.SizeType.AutoSize>。 按一下 **確定**以接受變更。 請注意第一個資料行的寬度會縮小，以符合<xref:System.Windows.Forms.Button>控制項。 也請注意，資料行寬度不調整大小。  
   
-4.  在 **屬性**視窗中，開啟<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>集合，然後選取第一個資料行。 值變更其<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>屬性設<xref:System.Windows.Forms.SizeType.Percent>。 按一下 **確定**以接受變更。 調整大小<xref:System.Windows.Forms.TableLayoutPanel>控制較大的寬度，並記下的第一個資料行寬度會展開。 調整大小<xref:System.Windows.Forms.TableLayoutPanel>控制較小的寬度，並記下第一個資料行中的按鈕的大小，以配合儲存格。 也請注意，資料行寬度可調整大小。  
+4.  在 **屬性**視窗中，開啟<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>集合，然後選取第一個資料行。 將其 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 屬性的值變更為 <xref:System.Windows.Forms.SizeType.Percent>。 按一下 **確定**以接受變更。 調整大小<xref:System.Windows.Forms.TableLayoutPanel>控制較大的寬度，並記下的第一個資料行寬度會展開。 調整大小<xref:System.Windows.Forms.TableLayoutPanel>控制較小的寬度，並記下第一個資料行中的按鈕的大小，以配合儲存格。 也請注意，資料行寬度可調整大小。  
   
 5.  在 **屬性**視窗中，開啟<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>集合，然後選取所有列出的資料行。 值設定每個<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>屬性設<xref:System.Windows.Forms.SizeType.Percent>。 按一下 **確定**以接受變更。 重複使用<xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A>集合。  
   
@@ -117,11 +117,11 @@ ms.locfileid: "43773968"
 3.  重複步驟 2 的`RowSpan`屬性。  
   
 ## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>在 [工具箱] 中按兩下控制項以插入控制項  
- 您可以填入您<xref:System.Windows.Forms.TableLayoutPanel>控制項中按兩下控制項**工具箱**。  
+ 在 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**中按兩下控制項，即可填入**控制項。  
   
 #### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>在 [工具箱] 中按兩下控制項以插入控制項  
   
-1.  拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。  
+1.  從 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**將** 控制項拖曳至表單。  
   
 2.  在 [工具箱] <xref:System.Windows.Forms.Button>**中按兩下**控制項圖示。 請注意，新的按鈕控制項出現在<xref:System.Windows.Forms.TableLayoutPanel>控制項的第一個資料格。  
   
@@ -139,15 +139,15 @@ ms.locfileid: "43773968"
 3.  變更 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的 <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> 屬性值為 <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>。 按兩下<xref:System.Windows.Forms.Button>中的圖示**工具箱**插入<xref:System.Windows.Forms.Button>直到控制<xref:System.Windows.Forms.TableLayoutPanel>控制項已滿。 按兩下<xref:System.Windows.Forms.Button>中的圖示**工具箱**一次。 請注意，您會收到的錯誤訊息**Windows Form 設計工具**通知您，無法建立額外的資料列和資料行。  
   
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>繪製控制項外框以插入控制項  
- 您可以插入將控制項插入<xref:System.Windows.Forms.TableLayoutPanel>控制項，並在儲存格中繪製其外框來指定其大小。  
+ 您可以將控制項插入 <xref:System.Windows.Forms.TableLayoutPanel> 控制項中，在儲存格中繪製其外框來指定其大小。  
   
 #### <a name="to-insert-a-control-by-drawing-its-outline"></a>繪製控制項外框以插入控制項  
   
-1.  拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。  
+1.  從 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**將** 控制項拖曳至表單。  
   
 2.  按一下 [工具箱] 的 <xref:System.Windows.Forms.Button> 控制項圖示。 請勿拖曳到表單。  
   
-3.  將滑鼠指標移<xref:System.Windows.Forms.TableLayoutPanel>控制項。 請注意，指標會變成十字形狀並附有 <xref:System.Windows.Forms.Button> 控制項圖示。  
+3.  將滑鼠指標移至 <xref:System.Windows.Forms.TableLayoutPanel> 控制項上。 請注意，指標會變成十字形狀並附有 <xref:System.Windows.Forms.Button> 控制項圖示。  
   
 4.  按住滑鼠按鈕。  
   
@@ -176,18 +176,18 @@ ms.locfileid: "43773968"
   
 -   配置面板可以包含其他的配置面板。 實驗將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項放入現有的控制項。  
   
--   停駐<xref:System.Windows.Forms.TableLayoutPanel>父表單的指導方針。 調整表單的大小，並注意配置的效果。  
+-   將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項停駐在父表單。 調整表單的大小，並注意配置的效果。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.FlowLayoutPanel>  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [逐步解說：使用對齊線排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Microsoft Windows 使用者經驗, 使用者介面開發人員和設計人員的正式方針。Redmond, WA: Microsoft Press, 1999.(USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
- [逐步解說：建立適用於資料輸入且可調整大小的 Windows Form](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)  
- [逐步解說： 建立可當地語系化的 Windows Form](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)  
- [TableLayoutPanel 控制項的最佳作法](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)  
- [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
- [操作說明：將控制項停駐在 Windows Forms 上](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
- [操作說明：錨定 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
- [逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.FlowLayoutPanel>
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- [逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [逐步解說：使用對齊線的 Windows Form 上排列控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Microsoft Windows 使用者經驗, 使用者介面開發人員和設計人員的正式方針。Redmond，WA:Microsoft Press，1999年。(USBN:0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [逐步解說：建立適用於資料輸入且可調整大小的 Windows Form](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)
+- [逐步解說：建立可當地語系化的 Windows Form](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)
+- [TableLayoutPanel 控制項的最佳作法](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
+- [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
+- [如何：停駐在 Windows Forms 上控制項](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
+- [如何：在 Windows Forms 上控制項的錨定](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)
+- [逐步解說：配置 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

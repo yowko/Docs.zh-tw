@@ -1,15 +1,15 @@
 ---
-title: 如何： 判斷檔案是否為組件 (Visual Basic)
+title: HOW TO：判斷檔案是否為組件 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: ced41279e7e192d6d5bed53dbce7378395b32e6d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b8627c64398afdef00fde71121f870b337ac072f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520083"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>如何： 判斷檔案是否為組件 (Visual Basic)
+# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>HOW TO：判斷檔案是否為組件 (Visual Basic)
 檔案只有受管理時才是組件，而且其中繼資料會包含組件項目。 如需組件和中繼資料的詳細資訊，請參閱[組件資訊清單](../../../../framework/app-domains/assembly-manifest.md)主題。  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>如何以手動方式判斷檔案是否為組件  
@@ -18,7 +18,7 @@ ms.locfileid: "47089395"
   
 2.  載入要測試的檔案。  
   
-3.  如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。 如需詳細資訊，請參閱[如何：檢視組件內容](../../../../framework/app-domains/how-to-view-assembly-contents.md)主題。  
+3.  如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。 如需詳細資訊，請參閱本主題[How to:檢視組件內容](../../../../framework/app-domains/how-to-view-assembly-contents.md)。  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>如何以程式設計方式判斷檔案是否為組件  
   
@@ -54,6 +54,6 @@ End Module
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Reflection.AssemblyName>  
-- [程式設計概念](../../../../visual-basic/programming-guide/concepts/index.md)  
+- <xref:System.Reflection.AssemblyName>
+- [程式設計概念](../../../../visual-basic/programming-guide/concepts/index.md)
 - [組件和全域組件快取 (Visual Basic)](index.md)

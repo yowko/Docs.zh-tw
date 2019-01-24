@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc900ca20ac87ddecfd8f7adf0894af21ca5d2f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 86736f885e40e553195cf2a5f84575a5384e6b60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564704"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>ICorDebugManagedCallback2::FunctionRemapOpportunity 方法
-告知偵錯工具執行程式碼已達到較舊版本的已編輯函式中的序列點。  
+告知偵錯工具執行程式碼已達到較舊版本的已編輯的函式中的序列點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,34 +41,34 @@ HRESULT FunctionRemapOpportunity (
   
 #### <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]ICorDebugAppDomain 物件，表示應用程式定義域，其中包含編輯函式指標。  
+ [in]ICorDebugAppDomain 物件，表示應用程式定義域，其中包含已編輯的函式指標。  
   
  `pThread`  
- [in]表示執行緒在其發現重新對應中斷點的 ICorDebugThread 物件指標。  
+ [in]ICorDebugThread 物件，表示在其發現重新對應中斷點的執行緒指標。  
   
  `pOldFunction`  
- [in]ICorDebugFunction 物件，表示目前的執行緒執行的函式版本指標。  
+ [in]ICorDebugFunction 物件，表示目前執行緒上執行的函式版本的指標。  
   
  `pNewFunction`  
  [in]ICorDebugFunction 物件，表示最新版本的函式指標。  
   
  `oldILOffset`  
- [in]指令指標的函式的舊版本中的 Microsoft intermediate language (MSIL) 位移。  
+ [in]Microsoft intermediate language (MSIL) 位移的函式的舊版本中的指令指標。  
   
 ## <a name="remarks"></a>備註  
- 此回呼會讓偵錯工具呼叫來重新對應其適當的位置中指定的函式的新版本的指令指標[icordebugilframe2:: Remapfunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)方法。 如果偵錯工具不會呼叫`RemapFunction`之前先呼叫[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法，執行階段將會繼續執行舊的程式碼，而且會引發另一個`FunctionRemapOpportunity`回呼，在下一個序列點。  
+ 此回呼會讓偵錯工具重新對應指令指標至其適當的位置，在新版本中所指定函式藉由呼叫[ICorDebugILFrame2::RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)方法。 如果偵錯工具不會呼叫`RemapFunction`呼叫之前，先[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法，執行階段將會繼續執行舊的程式碼，並會引發另一個`FunctionRemapOpportunity`回呼，在下一個序列點。  
   
- 每個框架正在執行較舊版本的指定函式，直到偵錯工具傳回 S_OK 時，會叫用這個回呼。  
+ 每個框架正在執行較舊版本的指定的函式，直到偵錯工具會傳回 s_ok 時，會叫用這個回呼。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugManagedCallback2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugManagedCallback2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

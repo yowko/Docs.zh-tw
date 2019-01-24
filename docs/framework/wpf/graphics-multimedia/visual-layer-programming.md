@@ -9,15 +9,15 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: 13957e60c92a90624882e126fe66aca789b6835a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3bf3e718b1253348030c0ddf3ac52ed8aa79b37d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561731"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580781"
 ---
 # <a name="visual-layer-programming"></a>視覺分層程式設計
-<xref:System.Windows.Media.Visual>物件是的核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]物件，其主要角色是提供呈現支援。 使用者介面控制項，例如<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.TextBox>，衍生自<xref:System.Windows.Media.Visual>類別，並將它用於保存其呈現資料。  
+<xref:System.Windows.Media.Visual>物件是核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]物件，其主要角色是提供轉譯支援。 使用者介面控制項，例如<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.TextBox>，衍生自<xref:System.Windows.Media.Visual>類別，並使用它來保存其轉譯資料。  
   
 ## <a name="in-this-section"></a>本節內容  
  [視覺分層中的點擊測試](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
@@ -25,9 +25,9 @@ ms.locfileid: "33561731"
  [教學課程：在 Win32 應用程式中裝載視覺物件](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
  [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)

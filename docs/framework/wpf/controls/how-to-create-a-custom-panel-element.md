@@ -1,5 +1,5 @@
 ---
-title: 如何：建立自訂面板項目
+title: HOW TO：建立自訂面板項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Panel control [WPF]
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
-ms.openlocfilehash: bca8900ccb3c31a78066a43709a5e9334bc09eab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 93d9ebacda8c753ab5a4446999e1aa86828a2b9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621928"
 ---
-# <a name="how-to-create-a-custom-panel-element"></a>如何：建立自訂面板項目
+# <a name="how-to-create-a-custom-panel-element"></a>HOW TO：建立自訂面板項目
 ## <a name="example"></a>範例  
  此範例示範如何覆寫預設版面配置行為<xref:System.Windows.Controls.Panel>項目，並建立自訂的版面配置項目衍生自<xref:System.Windows.Controls.Panel>。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "43776709"
  [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
  [!code-vb[PlotPanel#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Controls.Panel>  
- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [建立自訂的內容換行面板範例](https://go.microsoft.com/fwlink/?LinkID=159979)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Controls.Panel>
+- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [建立自訂的內容換行面板範例](https://go.microsoft.com/fwlink/?LinkID=159979)

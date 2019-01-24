@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: a04a294d5505180a41edeba4643d25667a301c1d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d74e1f7aaaa22d68c49f4e40ca557511a48e0554
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525023"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 運算子 (Visual Basic)
 兩個數目相除，然後只傳回餘數。  
@@ -30,10 +30,10 @@ number1 Mod number2
   
 ## <a name="parts"></a>組件  
  `number1`  
- 必要。 任何數值運算式。  
+ 必要項。 任何數值運算式。  
   
  `number2`  
- 必要。 任何數值運算式。  
+ 必要項。 任何數值運算式。  
   
 ## <a name="supported-types"></a>支援的類型  
  所有的數字類型。 這包括的不帶正負號和浮點類型和`Decimal`。  
@@ -100,12 +100,12 @@ End Module
   
  [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
- [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [資料類型的疑難排解](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [在 Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [\ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.Conversion.Int%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
+- [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [資料類型的疑難排解](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [在 Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [\ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d752d6dbe8a6b7a23faae498f9118c8d89e92929
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a9e5a2f7baa1c15ac54950bf1bfc0d448d08f58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567785"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>IMetaDataImport::IsValidToken 方法
 取得一個值，用來表示指定語彙基元是否包含程式碼物件的有效參考。  
@@ -37,20 +37,20 @@ BOOL IsValidToken (
   
 #### <a name="parameters"></a>參數  
  `tk`  
- [in]若要檢查的參考有效性語彙基元。  
+ [in]若要檢查參考有效的語彙基元。  
   
 ## <a name="return-value"></a>傳回值  
  `true` 如果`tk`目前範圍內是有效的中繼資料語彙基元。 否則為 `false`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

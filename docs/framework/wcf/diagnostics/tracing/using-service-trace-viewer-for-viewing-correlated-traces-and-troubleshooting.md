@@ -2,12 +2,12 @@
 title: 使用服務追蹤檢視器檢視相關追蹤並進行疑難排解
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: b43c7f3d8018c119dbabf8f55ec115a00e1ac077
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188790"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594802"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>使用服務追蹤檢視器檢視相關追蹤並進行疑難排解
 本主題說明追蹤資料的格式、檢視方式，以及如何使用服務追蹤檢視器來排解應用程式問題的方法。  
@@ -119,7 +119,7 @@ ms.locfileid: "50188790"
   
 -   已處理 [新增] 動作。  
   
--   已設定安全工作階段 (會在第一次要求時發生) 並處理三個安全性基礎結構回應訊息：RST、RSTR、SCT (處理序訊息 1、2、3)。  
+-   設定安全工作階段 （第一次要求時發生） 和已處理的三個安全性基礎結構回應訊息：RST、 RSTR、 SCT （處理程序訊息 1、 2、 3）。  
   
 -   已處理「減去」、「相乘」，和「除以」要求。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "50188790"
  如果我們連按兩下左面板中加入活動的 「 處理動作，我們可以看到新增的相關用戶端 WCF 活動的圖形表示法。 左側的第一個活動為根活動 (0000)，也是預設活動。 WCF 傳輸，從環境活動。 如果未定義，WCF 會傳出 0000 傳輸。 此處的第二個活動「處理動作」(新增) 則會傳出 0。 接著，我們會看到「設定安全工作階段」。  
   
  ![使用追蹤檢視器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-WCF 用戶端活動的圖形檢視：環境活動 (此處為 0)、處理動作，和設定安全工作階段。  
+WCF 用戶端活動的圖表檢視：環境活動 (此處為 0)、 程序動作，以及設定安全工作階段  
   
  在右上角面板中，我們可以看到所有與「處理動作」(新增活動) 相關的追蹤。 具體來說，我們已將要求訊息 (「已透過通道傳送訊息」) 傳送出去，並在相同的活動中接收了回應 (「已透過通道接收訊息」)。 下圖將顯示此做法。 為求簡單扼要，「設定安全工作階段」活動將於圖形中摺疊起來。  
   
@@ -198,7 +198,7 @@ WCF 用戶端與服務活動的圖形檢視
  ![使用追蹤檢視器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
 若要開始排解疑難，您也可以挑選紅色或黃色訊息追蹤，並連按兩下來追蹤根本原因。  
   
-## <a name="see-also"></a>另請參閱  
- [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>另請參閱
+- [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

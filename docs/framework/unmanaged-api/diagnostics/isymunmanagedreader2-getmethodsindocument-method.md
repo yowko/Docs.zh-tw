@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 762649e260817c43291de416d2f1a92a8f03afb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 38cbea25c485ff517e3448c4de5245ff36fb5b21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594547"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument 方法
-取得具有所提供的文件中的程式行資訊的每個方法。  
+取得每個提供的文件中具有行資訊的方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,19 +43,19 @@ HRESULT GetMethodsInDocument(
  [in]文件指標。  
   
  `cMethod`  
- [in]A`ULONG32`指出的大小`pRetVal`陣列。  
+ [in]A`ULONG32`表示的大小`pRetVal`陣列。  
   
  `pcMethod`  
- [out]指標`ULONG32`包含方法所需的緩衝區大小。  
+ [out]指標`ULONG32`接收包含方法所需的緩衝區大小。  
   
  `pRetVal`  
  [out]方法會接收緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedReader2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedReader2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

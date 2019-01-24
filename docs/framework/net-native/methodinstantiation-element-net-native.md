@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d741e8df8f2b8c6d90a1d867c73495a2ffd1304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2d05f9c727672c4f249e388a32b1101aaafd2f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538254"
 ---
 # <a name="ltmethodinstantiationgt-element-net-native"></a>&lt;MethodInstantiation&gt; 項目 (.NET Native)
 將執行階段反映原則套用至建構的泛型方法。  
@@ -61,7 +61,7 @@ ms.locfileid: "33397789"
 |-----------|-----------------|  
 |*policy_setting*|要為方法套用此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -74,8 +74,8 @@ ms.locfileid: "33397789"
 ## <a name="remarks"></a>備註  
  `<MethodInstantiation>` 元素會覆寫其對應開放式泛型方法的執行階段反映原則。  
   
-## <a name="see-also"></a>另請參閱  
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)
+## <a name="see-also"></a>另請參閱
+- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)

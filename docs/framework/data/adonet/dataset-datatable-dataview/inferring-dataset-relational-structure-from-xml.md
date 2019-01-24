@@ -2,12 +2,12 @@
 title: 從 XML 推斷資料集關聯式結構
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 13f63d416b76dbeaedbc007cd27eb2975f1efdef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f5cbbcd148f13a630398e870124803d482f63698
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587644"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>從 XML 推斷資料集關聯式結構
 <xref:System.Data.DataSet> 的關聯式結構或結構描述是由資料表、資料行、條件約束和關聯所組成。 從 XML 載入 <xref:System.Data.DataSet> 時，可預先定義結構描述，也可從正在載入的 XML 中，明確或透過介面建立。 如需載入的結構描述和內容的詳細資訊<xref:System.Data.DataSet>從 XML，請參閱[從 XML 載入 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)並[從 XML 載入資料集結構描述資訊](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)。  
@@ -47,5 +47,5 @@ ms.locfileid: "43515585"
  [ADO.NET 概觀](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
  描述 ADO.NET 的架構和元件，以及如何使用它們來存取現有資料來源和管理應用程式資料。  
   
-## <a name="see-also"></a>另請參閱  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

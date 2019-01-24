@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 1b34b3369e5a045f45251d3285f10bf74b6f0d33
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4cce0d56a629ca01e0174235b1e84291e9fa2f57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503205"
 ---
 # <a name="data-binding-overview"></a>資料繫結概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>這類的 s<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.ItemsControl>這類的 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>有內建的功能，可讓彈性的樣式，單一資料項目的集合。 您可以在資料上方產生排序、篩選和群組檢視。  
@@ -83,13 +83,13 @@ ms.locfileid: "45990072"
   
  ![資料繫結資料流程](../../../../docs/framework/wpf/data/media/databinding-dataflow.png "DataBinding_DataFlow")  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> 繫結會自動更新目標屬性中，[來源] 屬性的變更，但目標屬性的變更不會傳播回來源屬性。 如果要繫結的控制項是隱含唯讀的，這種類型的繫結很適當。 例如，您可以繫結到股票行情即時看板這類的來源，或者目標屬性沒有可供進行變更的控制項介面，例如資料表的資料繫結背景色彩。 如果沒有不需要監視目標屬性的變更，使用<xref:System.Windows.Data.BindingMode.OneWay>繫結模式可以避免的額外負荷<xref:System.Windows.Data.BindingMode.TwoWay>繫結模式。  
+-   <xref:System.Windows.Data.BindingMode.OneWay> 繫結會自動更新目標屬性中，[來源] 屬性的變更，但目標屬性的變更不會傳播回來源屬性。 如果要繫結的控制項是隱含唯讀的，這種類型的繫結很適當。 例如，您可以繫結到股票行情即時看板這類的來源，或者目標屬性沒有可供進行變更的控制項介面，例如資料表的資料繫結背景色彩。 如果不需要監視目標屬性的變更，使用 <xref:System.Windows.Data.BindingMode.OneWay> 繫結模式可以避免 <xref:System.Windows.Data.BindingMode.TwoWay> 繫結模式的額外負荷。  
   
 -   <xref:System.Windows.Data.BindingMode.TwoWay> 繫結會讓來源屬性或要自動更新對方的目標屬性的變更。 這種類型的繫結適合可編輯表單或其他完全互動式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例。 大部分屬性預設為<xref:System.Windows.Data.BindingMode.OneWay>繫結，但是某些相依性屬性 (通常是屬性的使用者可編輯的控制項，例如<xref:System.Windows.Controls.TextBox.Text%2A>屬性<xref:System.Windows.Controls.TextBox>並<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>屬性<xref:System.Windows.Controls.CheckBox>) 預設為<xref:System.Windows.Data.BindingMode.TwoWay>繫結。 判斷相依性屬性預設是否會單向或雙向繫結的程式設計方式是，使用 <xref:System.Windows.DependencyProperty.GetMetadata%2A> 取得屬性的屬性中繼資料，然後檢查 <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> 屬性的布林值。  
   
 -   <xref:System.Windows.Data.BindingMode.OneWayToSource> 是的反向<xref:System.Windows.Data.BindingMode.OneWay>繫結，它會更新來源 屬性的目標屬性變更時。 範例案例之一是當您只需要從 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 重新評估來源值時。  
   
--   圖中未說明為<xref:System.Windows.Data.BindingMode.OneTime>繫結，這會讓來源屬性，來初始化目標屬性，但並不會傳播後續變更。 這代表如果資料內容發生變更或資料內容中的物件有變更，則變更不會反映在目標屬性中。 如果您使用的資料適合使用目前狀態的快照集或資料是真正的靜態，則此類型的繫結很適當。 如果您想要以來源屬性的某些值初始化目標屬性，但無法預先得知資料內容，則此類型的繫結也很有用。 這是基本簡易形式的<xref:System.Windows.Data.BindingMode.OneWay>繫結，提供更佳的效能，在來源值不會變更的情況下。  
+-   圖中未說明為<xref:System.Windows.Data.BindingMode.OneTime>繫結，這會讓來源屬性，來初始化目標屬性，但並不會傳播後續變更。 這代表如果資料內容發生變更或資料內容中的物件有變更，則變更不會反映在目標屬性中。 如果您使用的資料適合使用目前狀態的快照集或資料是真正的靜態，則此類型的繫結很適當。 如果您想要以來源屬性的某些值初始化目標屬性，但無法預先得知資料內容，則此類型的繫結也很有用。 這是 <xref:System.Windows.Data.BindingMode.OneWay> 繫結的基本簡易形式，萬一來源值不變更，可提供較佳的效能。  
   
  請注意，若要偵測來源變更 (適用於<xref:System.Windows.Data.BindingMode.OneWay>並<xref:System.Windows.Data.BindingMode.TwoWay>繫結)，來源必須實作適合的屬性變更通知機制，例如<xref:System.ComponentModel.INotifyPropertyChanged>。 請參閱[實作屬性變更通知](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)如需範例的<xref:System.ComponentModel.INotifyPropertyChanged>實作。  
   
@@ -429,11 +429,11 @@ ms.locfileid: "45990072"
 ## <a name="debugging-mechanism"></a>偵錯機制  
  您可以設定附加的屬性<xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType>上繫結相關的物件，以接收特定繫結的相關狀態資訊。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Controls.DataErrorValidationRule>  
- [WPF 第 4.5 版的新功能](../../../../docs/framework/wpf/getting-started/whats-new.md)  
- [繫結至 LINQ 查詢的結果](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
- [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [資料繫結示範](https://go.microsoft.com/fwlink/?LinkID=163703)  
- [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [繫結至 ADO.NET 資料來源](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Controls.DataErrorValidationRule>
+- [WPF 第 4.5 版的新功能](../../../../docs/framework/wpf/getting-started/whats-new.md)
+- [繫結至 LINQ 查詢的結果](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
+- [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [資料繫結示範](https://go.microsoft.com/fwlink/?LinkID=163703)
+- [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [繫結至 ADO.NET 資料來源](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

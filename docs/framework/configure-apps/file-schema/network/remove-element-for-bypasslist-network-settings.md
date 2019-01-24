@@ -10,20 +10,20 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 83449aa2df2b0442f5ba5e1f152232b007bcdc15
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c9db8cc2cf05987db97f28d7f97967f5bb52404e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193704"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625662"
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;移除&gt;bypasslist （網路設定） 的項目
 Proxy 略過清單移除 IP 位址或 DNS 名稱。  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
-\<bypasslist >  
+\<defaultProxy>  
+\<bypasslist>  
 \<remove>  
   
 ## <a name="syntax"></a>語法  
@@ -78,6 +78,6 @@ Proxy 略過清單移除 IP 位址或 DNS 名稱。
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

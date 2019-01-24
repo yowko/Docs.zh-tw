@@ -13,17 +13,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05e571149a794cbffa9e602255455d779a83e2a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5025f4bb6433d193ecf7dec1d8375104147e9e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562566"
 ---
 # <a name="icorprofilercallback6-interface"></a>ICorProfilerCallback6 介面
 [在 .NET Framework 4.5.2 及更新版本中支援]  
   
- 子類別[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)提供 common language runtime 用於通知分析工具組件載入的回撥方法。  
+ 子類別[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)提供一種回呼方法，common language runtime 用來通知分析工具在載入組件。  
   
 ## <a name="methods"></a>方法  
   
@@ -34,11 +34,11 @@ ms.locfileid: "33452952"
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

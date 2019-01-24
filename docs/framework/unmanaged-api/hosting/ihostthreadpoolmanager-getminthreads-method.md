@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2064f134d83e6d410e851d8ea9498b45e36aea37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8010ac602c82c7da2af9d0678227a6ce1c91391a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521461"
 ---
 # <a name="ihostthreadpoolmanagergetminthreads-method"></a>IHostThreadPoolManager::GetMinThreads 方法
-取得主機維護的閒置執行緒數目最小執行緒集區要求的頁數。  
+執行緒集區預期的要求中取得主控件保留的閒置執行緒的數目下限。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,35 +37,35 @@ HRESULT GetMinThreads (
   
 #### <a name="parameters"></a>參數  
  `MinThreads`  
- [out]主機目前維護閒置工作者執行緒最小數目指標。  
+ [out]主控件目前保留閒置的工作者執行緒的最小數目指標。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|`GetMinThreads` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重失敗。 方法會傳回 E_FAIL CLR 已不再可用的處理序內。 裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
+|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
 |E_NOTIMPL|主機並未提供的實作`GetMinThreads`。|  
   
 ## <a name="remarks"></a>備註  
- 主機不需要提供的實作`GetMinThreads`。 在此情況下，則會傳回 E_NOTIMPL 的 HRESULT 值。  
+ 主應用程式不需要提供的實作`GetMinThreads`。 在此情況下，它應該傳回 E_NOTIMPL 的 HRESULT 值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Threading.ThreadPool.GetMinThreads%2A>  
- <xref:System.Threading.ThreadPool>  
- [GetMaxThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)  
- [SetMinThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)  
- [IHostThreadPoolManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Threading.ThreadPool.GetMinThreads%2A>
+- <xref:System.Threading.ThreadPool>
+- [GetMaxThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)
+- [SetMinThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)
+- [IHostThreadPoolManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

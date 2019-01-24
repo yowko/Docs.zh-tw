@@ -2,12 +2,12 @@
 title: 從服務中繼資料產生 WCF 用戶端
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 78804eb7f4139280e7d72c5a45aa0ae4cc3c2d77
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3bdb283e461076ffd5c1e77963933de0e5b4bb02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570953"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>從服務中繼資料產生 WCF 用戶端
 本主題說明如何使用 Svcutil.exe 中不同的參數，從中繼資料文件中產生用戶端。  
@@ -47,13 +47,13 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |選項|描述|  
 |------------|-----------------|  
-|**/language:\<語言 >**|指定要用於產生程式碼的程式語言。 請提供在 Machine.config 檔案中註冊的語言名稱，或繼承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 之類別的完整名稱。<br /><br /> 值：c#、cs、csharp、vb、vbs、visualbasic、vbscript、javascript、c++、mc、cpp<br /><br /> 預設：csharp<br /><br /> 簡短形式：`/l`<br /><br /> 如需詳細資訊，請參閱 < [CodeDomProvider 類別](https://go.microsoft.com/fwlink/?LinkId=94778)。|  
+|**/language:\<language>**|指定要用於產生程式碼的程式語言。 請提供在 Machine.config 檔案中註冊的語言名稱，或繼承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 之類別的完整名稱。<br /><br /> 值：c#、cs、csharp、vb、vbs、visualbasic、vbscript、javascript、c++、mc、cpp<br /><br /> 預設：csharp<br /><br /> 簡短形式：`/l`<br /><br /> 如需詳細資訊，請參閱 < [CodeDomProvider 類別](https://go.microsoft.com/fwlink/?LinkId=94778)。|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>選擇用戶端命名空間  
   
 |選項|描述|  
 |------------|-----------------|  
-|**/namespace:\<字串，字串 >**|指定從 WSDL 或 XML 結構描述 `targetNamespace` 到 Common Language Runtime (CLR) 命名空間的對應。 使用萬用字元 (*) 做為 `targetNamespace` 會對應至所有的 `targetNamespaces`，而不會明確對應至該 CLR 命名空間。<br /><br /> 為了確保訊息合約名稱不會與作業名稱衝突，您應該以雙冒號 (`::`) 來限定型別參照，或確定名稱為唯一。<br /><br /> 預設：衍生自 `DataContracts` 的結構描述文件之目標命名空間。 預設命名空間用於所有其他產生的型別。<br /><br /> 簡短形式：`/n`|  
+|**/namespace:\<string,string>**|指定從 WSDL 或 XML 結構描述 `targetNamespace` 到 Common Language Runtime (CLR) 命名空間的對應。 使用萬用字元 (*) 做為 `targetNamespace` 會對應至所有的 `targetNamespaces`，而不會明確對應至該 CLR 命名空間。<br /><br /> 為了確保訊息合約名稱不會與作業名稱衝突，您應該以雙冒號 (`::`) 來限定型別參照，或確定名稱為唯一。<br /><br /> 預設：衍生自結構描述文件的目標命名空間`DataContracts`。 預設命名空間用於所有其他產生的型別。<br /><br /> 簡短形式：`/n`|  
   
 ## <a name="choosing-a-data-binding"></a>選擇資料繫結  
   
@@ -69,6 +69,6 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |**/mergeConfig**|將產生的組態合併至現有檔案，而非覆寫現有檔案。|  
 |**/noConfig**|不要產生組態檔。|  
   
-## <a name="see-also"></a>另請參閱  
- [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [中繼資料架構概觀](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+## <a name="see-also"></a>另請參閱
+- [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [中繼資料架構概觀](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

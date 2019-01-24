@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f5b12825c9a348cd16eed9f5be0f41e03c367c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd8c5e05d3f331d46b2d31f3f2448a674f090eaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508603"
 ---
 # <a name="corprfgcrootkind-enumeration"></a>COR_PRF_GC_ROOT_KIND 列舉
-表示所公開的記憶體回收根目錄的種類[icorprofilercallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)回呼。  
+表示，由記憶體回收根目錄的種類[ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)回呼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,18 +42,18 @@ typedef enum {
 |成員|描述|  
 |------------|-----------------|  
 |`COR_PRF_GC_ROOT_STACK`|根目錄是在堆疊上的變數。|  
-|`COR_PRF_GC_ROOT_FINALIZER`|根目錄是完成項佇列中的項目。|  
-|`COR_PRF_GC_ROOT_HANDLE`|根目錄是記憶體回收控制代碼。|  
+|`COR_PRF_GC_ROOT_FINALIZER`|根是完成項佇列中的項目。|  
+|`COR_PRF_GC_ROOT_HANDLE`|根是記憶體回收控制代碼。|  
 |`COR_PRF_GC_ROOT_OTHER`|未指定的根類型。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows Form BindingSource 元件排序和篩選 ADO.NET 資料
+title: HOW TO：排序和篩選 ADO.NET 資料，使用 Windows Form BindingSource 元件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 932d30d356225d88d7ef149561cc4c5cc8ac4dd0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: edb639f25970c6946eb33c68dd5a99cad566d4a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584775"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows Form BindingSource 元件排序和篩選 ADO.NET 資料
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>HOW TO：排序和篩選 ADO.NET 資料，使用 Windows Form BindingSource 元件
 排序和篩選功能，您可以公開<xref:System.Windows.Forms.BindingSource>透過控制<xref:System.Windows.Forms.BindingSource.Sort%2A>和<xref:System.Windows.Forms.BindingSource.Filter%2A>屬性。 您可以套用簡單排序的基礎資料來源時<xref:System.ComponentModel.IBindingList>，您可以套用的篩選和進階排序的資料來源時<xref:System.ComponentModel.IBindingListView>。 <xref:System.Windows.Forms.BindingSource.Sort%2A>屬性需要標準[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]語法： 字串，表示資料來源中的資料行的名稱後面加上`ASC`或`DESC`來指出是否應該以遞增或遞減順序排序清單。 您可以設定進階排序，或使用逗號分隔符號隔開每個資料行的多重資料行排序。 <xref:System.Windows.Forms.BindingSource.Filter%2A>屬性會採用字串運算式。  
   
 > [!NOTE]
@@ -53,8 +53,8 @@ ms.locfileid: "50188751"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  若要執行此範例中，貼上程式碼包含表單的表單<xref:System.Windows.Forms.BindingSource>名為`BindingSource1`並<xref:System.Windows.Forms.DataGridView>名為`dataGridView1`。 處理<xref:System.Windows.Forms.Form.Load>事件的形式和呼叫`InitializeSortedFilteredBindingSource`load 事件處理常式方法中。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.BindingSource.Sort%2A>  
- <xref:System.Windows.Forms.BindingSource.Filter%2A>  
- [如何：安裝範例資料庫](https://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)  
- [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.BindingSource.Sort%2A>
+- <xref:System.Windows.Forms.BindingSource.Filter%2A>
+- [如何：安裝範例資料庫](https://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
+- [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)

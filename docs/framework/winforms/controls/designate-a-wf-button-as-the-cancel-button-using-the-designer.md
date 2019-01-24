@@ -1,18 +1,18 @@
 ---
-title: 如何：使用設計工具將 Windows Form 按鈕指定為取消按鈕
+title: HOW TO：將 Windows Form 按鈕指定為取消按鈕使用設計工具
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [Windows Forms], cancel buttons
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 30e77d9c-d565-4ab5-a84a-62c043af8822
-ms.openlocfilehash: faffeafc0cbe67c3b40297144ec85acd94956da9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 9d11528d7d7fed13f531faeb09f38c4564f970be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520473"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a>如何：使用設計工具將 Windows Form 按鈕指定為取消按鈕
+# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a>HOW TO：將 Windows Form 按鈕指定為取消按鈕使用設計工具
 在任何 Windows 表單上，您可以指定<xref:System.Windows.Forms.Button>設為 [取消] 按鈕的控制項。 每當使用者按下 ESC 鍵，不論哪一個表單上的其他控制項具有焦點時，按一下 [取消] 按鈕。 這類按鈕通常被設計成讓使用者快速結束作業，而不需要認可至任何動作。  
   
 > [!NOTE]
@@ -24,10 +24,10 @@ ms.locfileid: "48580939"
   
 2.  在 [**屬性**] 視窗中，將表單的<xref:System.Windows.Forms.Form.CancelButton%2A>屬性設<xref:System.Windows.Forms.Button>控制項的名稱。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.Form.CancelButton%2A>  
- [Button 控制項概觀](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [選取 Windows Forms Button 控制項的方法](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [操作說明：回應 Windows Forms Button 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [操作說明：使用設計工具將 Windows Forms 按鈕指定為接受按鈕](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
- [Button 控制項](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.Form.CancelButton%2A>
+- [Button 控制項概觀](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
+- [選取 Windows Forms Button 控制項的方法](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
+- [如何：回應 Windows Form Button 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [如何：將 Windows Form 按鈕指定為接受按鈕使用設計工具](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [Button 控制項](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

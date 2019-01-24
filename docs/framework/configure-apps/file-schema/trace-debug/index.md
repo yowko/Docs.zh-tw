@@ -2,23 +2,17 @@
 title: 追蹤和偵錯設定結構描述
 ms.date: 03/30/2017
 helpviewer_keywords:
-- tracing [.NET Framework], trace and debug settings schema
-- configuration schema [.NET Framework], trace and debug settings
-- configuration settings [.NET Framework], tracing
-- schema configuration settings
-- configuration settings [.NET Framework], debugging
-- trace listeners, trace and debug settings schema
-- configuration sections [.NET Framework]
-- elements [.NET Framework], trace and debug settings
+  - 'tracing [.NET Framework], trace and debug settings schema'
+  - 'configuration schema [.NET Framework], trace and debug settings'
+  - 'configuration settings [.NET Framework], tracing'
+  - schema configuration settings
+  - 'configuration settings [.NET Framework], debugging'
+  - 'trace listeners, trace and debug settings schema'
+  - 'configuration sections [.NET Framework]'
+  - 'elements [.NET Framework], trace and debug settings'
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9927ad0e853577abb19750d54ba9e852a4e7ec51
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397942"
 ---
 # <a name="trace-and-debug-settings-schema"></a>追蹤和偵錯設定結構描述
 追蹤和偵錯設定會指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。  
@@ -49,8 +43,8 @@ ms.locfileid: "47397942"
 |[\<system.diagnostics>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
 |[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|包含用於收集、儲存及路由傳送追蹤訊息的接聽項。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.Debug>  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.Debug>
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

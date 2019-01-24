@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e99cafe39a030a412bf33aeb9d96d5006ca02df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d9db6853d3bd4bb7faae54b746a5a940c7dec8a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415957"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561787"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor 方法
-配置新的物件執行個體指定的類型，而不會嘗試呼叫建構函式方法。  
+配置新的物件執行個體，指定的類型，而不會嘗試呼叫建構函式方法。  
   
- 這個方法是.NET Framework 2.0 版中已過時。 使用[icordebugeval2:: Newparameterizedobjectnoconstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)改為。  
+ 這個方法是在.NET Framework 2.0 版中已過時。 使用[ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)改。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,13 +42,13 @@ HRESULT NewObjectNoConstructor (
  [in]ICorDebugClass 物件，表示要具現化的物件類型的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** 1.1、 1.0  
+ **.NET framework 版本：** 1.1, 1.0  
   
-## <a name="see-also"></a>另請參閱  
- [NewParameterizedObjectNoConstructor 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)
+## <a name="see-also"></a>另請參閱
+- [NewParameterizedObjectNoConstructor 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)

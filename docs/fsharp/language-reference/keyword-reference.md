@@ -2,12 +2,12 @@
 title: 關鍵字參考
 description: 尋找所有的相關資訊的連結F#語言關鍵字。
 ms.date: 05/16/2016
-ms.openlocfilehash: 75adc609dc6feeda2be9aa76bbb50b47b3d738ea
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579832"
 ---
 # <a name="keyword-reference"></a>關鍵字參考
 
@@ -20,7 +20,7 @@ ms.locfileid: "53611746"
 |關鍵字|連結|描述|
 |-------|----|-----------|
 |`abstract`|[成員](members/index.md)<br /><br />[抽象類別](abstract-classes.md)|表示的類型中宣告它，或者是虛擬和其預設實作中有沒有實作的方法。|
-|`and`|[`let` 繫結](functions/let-bindings.md)<br /><br />[成員](members/index.md)<br /><br />[條件約束](generics/constraints.md)|相互遞迴繫結中使用，在屬性宣告，以及使用泛型參數上的多個條件約束。|
+|`and`|[`let` Bindings](functions/let-bindings.md)<br /><br />[記錄](records.md)<br /><br />[成員](members/index.md)<br /><br />[條件約束](generics/constraints.md)|用於相互遞迴繫結和記錄，在屬性宣告，以及使用泛型參數上的多個條件約束。|
 |`as`|[類別](classes.md)<br /><br />[模式比對](Pattern-Matching.md)|用來提供目前類別物件的物件名稱。 也可用來為指定的名稱模式比對整個模式。|
 |`assert`|[判斷提示](assertions.md)|用來驗證程式碼在偵錯期間。|
 |`base`|[類別](classes.md)<br /><br />[繼承](inheritance.md)|做為基底類別物件的名稱。|
@@ -51,7 +51,7 @@ ms.locfileid: "53611746"
 |`interface`|[介面](interfaces.md)|用來宣告和實作介面。|
 |`internal`|[存取控制](access-control.md)|用來指定成員可見組件內，但超出它。|
 |`lazy`|[延遲運算](lazy-computations.md)|用來指定只在需要結果時，才要執行的計算。|
-|`let`|[`let` 繫結](functions/let-bindings.md)|用來建立關聯，或繫結至值或函式的名稱。|
+|`let`|[`let` Bindings](functions/let-bindings.md)|用來建立關聯，或繫結至值或函式的名稱。|
 |`let!`|[非同步工作流程](asynchronous-workflows.md)<br /><br />[計算運算式](computation-expressions.md)|若要將名稱繫結的非同步計算，結果的非同步工作流程中，或在其他計算運算式中，用來將名稱繫結至結果，也就是計算類型的使用。|
 |`match`|[比對運算式](match-expressions.md)|用來分支藉由比較模式的值。|
 |`match!`|[計算運算式](computation-expressions.md#match)|用來內嵌呼叫計算運算式和模式比對其結果。|

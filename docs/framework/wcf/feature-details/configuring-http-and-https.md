@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 3094c82382292be3295238ef9cf2687f6eeb98f8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c87b0f411c187e1497c8ec55771b80bb94c3629
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149883"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635668"
 ---
 # <a name="configuring-http-and-https"></a>設定 HTTP 和 HTTPS
 WCF 服務與用戶端可以透過 HTTP 和 HTTPS 進行通訊。 HTTP/HTTPS 設定是使用 Internet Information Services (IIS)，或使用命令列工具設定。 在 IIS HTTP 或 HTTPS 之下裝載 WCF 服務時，設定可以在 IIS (使用 inetmgr.exe 工具) 內進行。 如果是自我裝載的 WCF 服務，可以使用命令列工具設定 HTTP 或 HTTPS 設定。  
@@ -90,6 +90,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 ## <a name="issues-specific-to-windows-xp"></a>Windows XP 的特定問題  
  IIS 不支援在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上共用連接埠。 如果 IIS 正在執行的 WCF 服務會嘗試使用相同的連接埠的命名空間，WCF 服務無法啟動。 兩者都會預設為使用連接埠 80 的 IIS 和 WCF。 變更其中一項服務的通訊埠指派，或使用 IP 接聽清單將 WCF 服務指派給 IIS 不使用的網路介面卡。 IIS 6.0 (含) 以後版本已經重新設計，可以使用 HTTP 伺服器 API。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- [操作說明：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- [如何：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 98a9295f1a2158e28a699aa6dfb1403542e523b4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c16cf910546dcbe0a19efa13b552ffd4d9b6411
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580965"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>依字母順序排列的 Visual Basic 編譯器選項
 Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 (IDE) 編譯程式的替代方法。 以下是 Visual Basic 命令列編譯器選項，依字母順序排序的清單。  
@@ -25,7 +25,7 @@ Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 
 |`-analyzer`|從這個組件執行分析器 (簡短形式：-a)|  
 |.[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|指定 DLL 的基底位址。|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|建立檔案，其中包含可簡化錯誤回報的資訊。|  
-|`-checksumalgorithm:<alg>`|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設值) 或 SHA256。|  
+|`-checksumalgorithm:<alg>`|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 （預設值） 或 SHA256。|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|指定編譯過程中所有原始程式碼檔使用的字碼頁。|  
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|產生偵錯資訊。|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|定義條件式編譯的符號。|  
@@ -39,7 +39,7 @@ Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|從指定的組件匯入命名空間。|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|指定金鑰組的金鑰容器名稱，為組件提供強式名稱。|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|指定一個檔案，其中包含可為組件提供強式名稱的金鑰或金鑰組。|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定語言版本： 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0。|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定語言版本：9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定所參考的組件的位置[-參考](../../../visual-basic/reference/command-line-compiler/reference.md)選項。|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|建立與 Managed 資源的連結。|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|指定類別，其中包含`Sub Main`在啟動時使用的程序。|  
@@ -80,8 +80,8 @@ Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|識別要內嵌到專案的可攜式執行檔 (PE) 中的使用者定義 Win32 應用程式資訊清單檔。|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|將 Win32 資源插入輸出檔中。|  
   
-## <a name="see-also"></a>另請參閱  
- [依分類列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
- [專案設計工具簡介](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
- [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
- [依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+## <a name="see-also"></a>另請參閱
+- [依分類列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
+- [專案設計工具簡介](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)
+- [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+- [依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)

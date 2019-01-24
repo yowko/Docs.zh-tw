@@ -1,5 +1,5 @@
 ---
-title: 如何：使用設計工具建立 Windows Form 控制項的便捷鍵
+title: HOW TO：使用設計工具的 Windows Form 控制項建立便捷鍵
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], access keys
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-ms.openlocfilehash: d077de1636888f0e3b763344206692fee2cb2296
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e9524449b457fc276678ecaadd1d137e7280156a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527467"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>如何：使用設計工具建立 Windows Form 控制項的便捷鍵
+# <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>HOW TO：使用設計工具的 Windows Form 控制項建立便捷鍵
 *便捷鍵*是功能表、 功能表項目，或按鈕等控制項的標籤文字中加上底線的字元。 它可讓使用者 「 按一下 」 按鈕，然後按下 ALT 鍵組合中的預先定義的存取金鑰。 例如，如果按鈕會執行將表單，列印程序，因此其`Text`屬性設定為"Print"，將連字號 (&)"P"會導致字母"P"會加上底線的按鈕文字在執行階段的字母前面。 使用者可以執行命令與按鈕關聯，藉由按下 ALT + P。 您不能有無法接收焦點的控制項的便捷鍵。  
   
 > [!NOTE]
@@ -32,8 +32,8 @@ ms.locfileid: "43502967"
   
 1.  在 **屬性**視窗中，將`Text`屬性設為字串，包含連字號 (&) 要存取的索引鍵的字母前面。 例如，若要設定為便捷鍵的字母"P"，輸入**列印 &** 到方格內。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.Button>  
- [操作說明：回應 Windows Forms Button 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [操作說明：設定由 Windows Forms 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.Button>
+- [如何：回應 Windows Form Button 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [如何：設定所顯示之文字的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

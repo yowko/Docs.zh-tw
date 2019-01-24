@@ -1,5 +1,5 @@
 ---
-title: 如何：在 TableLayoutPanel 控制項中對齊和縮放控制項
+title: HOW TO：對齊和縮放 TableLayoutPanel 控制項中的控制項
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor.TLP.AlignStretchCtrl
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], stretching
 - controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
-ms.openlocfilehash: 06e152058337955164bd526e20e023d759340f01
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 91464108a6ac4600c14a06b4a7dcea200d7f0254
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535927"
 ---
-# <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>如何：在 TableLayoutPanel 控制項中對齊和縮放控制項
+# <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>HOW TO：對齊和縮放 TableLayoutPanel 控制項中的控制項
 您可以對齊和縮放控制項<xref:System.Windows.Forms.TableLayoutPanel>具有<xref:System.Windows.Forms.Control.Anchor%2A>和<xref:System.Windows.Forms.Control.Dock%2A>屬性。  
   
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "43504149"
   
 ### <a name="to-align-and-stretch-a-control"></a>若要對齊和縮放控制項  
   
-1.  拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。  
+1.  從 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**將** 控制項拖曳至表單。  
   
 2.  拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**的左上方儲存格中<xref:System.Windows.Forms.TableLayoutPanel>控制項。 <xref:System.Windows.Forms.Button>控制項在儲存格中置中對齊。  
   
@@ -39,5 +39,5 @@ ms.locfileid: "43504149"
   
 8.  設定的值<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Anchor%2A>屬性設<xref:System.Windows.Forms.AnchorStyles.None>。 <xref:System.Windows.Forms.Button>控制項移到儲存格的中央。  
   
-## <a name="see-also"></a>另請參閱  
- [TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- [TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

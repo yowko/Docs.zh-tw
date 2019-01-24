@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAssembly Interface1
+title: ICorDebugAssembly 介面 1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAssembly
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88134fb7854091bb60e8084a6d776bdec922c7e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8a6776467eb9f5eaaacadb2908de17fc277e495b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569176"
 ---
-# <a name="icordebugassembly-interface1"></a>ICorDebugAssembly Interface1
+# <a name="icordebugassembly-interface1"></a>ICorDebugAssembly 介面 1
 表示組件。  
   
 ## <a name="methods"></a>方法  
@@ -34,7 +34,7 @@ ms.locfileid: "33406366"
 |[GetAppDomain 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getappdomain-method.md)|取得包含這個應用程式定義域的介面指標`ICorDebugAssembly`執行個體。|  
 |[GetCodeBase 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getcodebase-method.md)|不在目前版本的.NET framework 中實作。|  
 |[GetName 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getname-method.md)|取得組件名稱。|  
-|[GetProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getprocess-method.md)|取得該組件正在執行的 ICorDebugProcess 執行個體。|  
+|[GetProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getprocess-method.md)|取得 ICorDebugProcess 執行個體執行所在的組件。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -42,13 +42,13 @@ ms.locfileid: "33406366"
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

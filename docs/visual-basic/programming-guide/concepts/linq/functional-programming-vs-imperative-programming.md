@@ -2,12 +2,12 @@
 title: 功能性程式設計與命令式程式設計 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 63d3801a393b242bce8b497e2c983534a6996c6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 762889717d2b20d5a06848ebaa41f3e066a8c061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579806"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>功能性程式設計與命令式程式設計 (Visual Basic)
 本主題比較與對照功能性程式設計與更傳統的命令性 (程序性) 程式設計。  
@@ -25,7 +25,7 @@ ms.locfileid: "33644273"
 |主要流量控制|迴圈、條件與函式 (方法) 呼叫。|函式呼叫，包括遞迴。|  
 |主要操作單位|結構或類別的執行個體。|當做第一級物件與資料集合的函式。|  
   
- 雖然多數語言的設計在於支援特定的程式設計開發架構，但許多一般的語言還是有足夠的彈性，可以支援多種開發架構。 例如，包含函式指標的多數語言可用於確實支援功能性程式設計。 此外，Visual Basic 包含明確的語言擴充功能以支援功能性程式設計，包括 lambda 運算式與型別推斷。 LINQ 技術是一種宣告式功能性程式設計。  
+ 雖然多數語言的設計在於支援特定的程式設計開發架構，但許多一般的語言還是有足夠的彈性，可以支援多種開發架構。 例如，包含函式指標的多數語言可用於確實支援功能性程式設計。 此外，Visual Basic 會包含明確的語言擴充功能，以支援功能性程式設計，包括 lambda 運算式與型別推斷。 LINQ 技術是一種宣告式功能性程式設計。  
   
 ## <a name="functional-programming-using-xslt"></a>使用 XSLT 的功能性程式設計  
  許多 XSLT 開發人員都很熟悉純功能性方法。 開發 XSLT 樣式表最有效的方式，就是將每個範本都視為可組合的隔離轉換。 執行順序完全不重視。 XSLT 不允許副作用 (除非執行程序性程式碼的溢出機制可以產生導致非純功能性的副作用)。 不過，雖然 XSLT 是一個有效的工具，但是有些特性並不是最好的。 例如，在 XML 中表示程式設計建構會使程式碼相當詳細，因此難以維護。 同時，大量依賴流量控制遞迴可能會使程式碼難以讀取。 如需 XSLT 的詳細資訊，請參閱 [XSLT 轉換](../../../../standard/data/xml/xslt-transformations.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "33644273"
   
  幸運的是，Visual Basic 不需要完全跳到功能性程式設計，因為它支援命令性與功能性程式設計的方法。 開發人員可以選擇哪個方法最適合特定的案例。 事實上，程式通常會結合這兩種方法。  
   
-## <a name="see-also"></a>另請參閱  
- [Introduction to 純功能性轉換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [XSLT 轉換](../../../../standard/data/xml/xslt-transformations.md)  
- [重構到純虛擬函式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>另請參閱
+- [純函數式轉換 (Visual Basic) 簡介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [XSLT 轉換](../../../../standard/data/xml/xslt-transformations.md)
+- [重構為純虛擬函式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

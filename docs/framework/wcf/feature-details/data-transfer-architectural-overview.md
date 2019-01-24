@@ -7,27 +7,27 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 69032a04067311f4df3696474dfc9ad4df465f51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 217da219dc49c588a7f6bc8d32048553f179d67f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528017"
 ---
 # <a name="data-transfer-architectural-overview"></a>資料傳輸架構概觀
 Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可以接收訊息、加以處理，然後分派到使用者程式碼執行進一步動作，或是使用使用者程式碼提供的資料建構訊息，然後傳遞到目的地。 此主題將針對進階程式開發人員，描述處理訊息與所包含資料的架構。 如需如何傳送與接收資料的簡化型工作導向檢視，請參閱 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
   
 > [!NOTE]
->  本主題討論藉由檢查 WCF 物件模型不可見的 WCF 實作詳細資料。 關於已記載的實作詳細資料，依序有兩件需要注意的事項。 首先，描述已經過簡化，實際的實作可能會因為最佳化或其他原因而更為複雜。 第二，絕不要依賴特定的實作詳細資料 (即使已記載於文件中)，因為這些詳細資料可能會在不同的版本中 (甚至是在服務版本中) 變更而不另行通知。  
+>  本主題討論 WCF 實作詳細資料不會顯示藉由檢查 WCF 物件模型。 關於已記載的實作詳細資料，依序有兩件需要注意的事項。 首先，描述已經過簡化，實際的實作可能會因為最佳化或其他原因而更為複雜。 第二，絕不要依賴特定的實作詳細資料 (即使已記載於文件中)，因為這些詳細資料可能會在不同的版本中 (甚至是在服務版本中) 變更而不另行通知。  
   
 ## <a name="basic-architecture"></a>基本架構  
- 在 WCF 訊息處理功能的核心是<xref:System.ServiceModel.Channels.Message>類別中將詳細說明[使用 Message 類別](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。 WCF 的執行階段元件可以分為兩個主要部分： 通道堆疊與服務架構，與<xref:System.ServiceModel.Channels.Message>類別當做連接點。  
+ 在 WCF 訊息處理功能的核心<xref:System.ServiceModel.Channels.Message>類別中的詳細資料中所述[Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。 WCF 執行階段元件可以分成兩個主要部分： 通道堆疊與服務架構，與<xref:System.ServiceModel.Channels.Message>當做連接點的類別。  
   
  通道堆疊負責在有效 <xref:System.ServiceModel.Channels.Message> 執行個體，以及對應至傳送或接收訊息資料的某些動作之間進行轉換。 在傳送端，通道堆疊會取用有效的 <xref:System.ServiceModel.Channels.Message> 執行個體，然後在經過某些處理後，執行邏輯上對應至傳送訊息的某些動作。 這些動作可能是傳送 TCP 或 HTTP 封包、將訊息存放在訊息佇列中、將訊息寫入資料庫、將訊息儲存在檔案共用，或是任何視實作而定的其他動作。 最常見的動作是透過網路通訊協定傳送訊息。 在接收端，則發生相反的情況—偵測到動作 (可能是 TCP 或 HTTP 封包抵達，或是任何其他動作)，然後在經過處理後，通道堆疊會將這個動作轉換為有效的 <xref:System.ServiceModel.Channels.Message> 執行個體。  
   
- 您可以使用 WCF 使用<xref:System.ServiceModel.Channels.Message>類別與通道堆疊直接。 但是，這麼做是很困難並且耗時的。 此外，<xref:System.ServiceModel.Channels.Message>物件會提供不支援中繼資料，因此如果您使用 WCF 以這種方式，無法產生強型別的 WCF 用戶端。  
+ 您可以使用 WCF 使用<xref:System.ServiceModel.Channels.Message>類別與通道堆疊直接。 但是，這麼做是很困難並且耗時的。 此外，<xref:System.ServiceModel.Channels.Message>物件會提供不支援中繼資料，因此如果您使用 WCF 以這種方式，您就無法產生強類型的 WCF 用戶端。  
   
- 因此，WCF 會包含提供方便使用程式設計模型，您可以使用它來建構與接收的服務架構`Message`物件。 服務架構會透過服務合約的概念，將服務對應至 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別，然後將訊息分派至使用者作業，這個作業是使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 屬性標記的單純 <xref:System.ServiceModel.OperationContractAttribute> 方法 (如需詳細資料，請參閱 [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md))。 這些方法會有參數與傳回值。 在服務端，服務架構會將傳入的 <xref:System.ServiceModel.Channels.Message> 執行個體轉換成參數，然後將傳回值轉換成傳出的 <xref:System.ServiceModel.Channels.Message> 執行個體。 在用戶端，則執行相反的動作。 例如，請考量下列 `FindAirfare` 作業。  
+ 因此，WCF 會包含提供簡單易用程式設計模型，您可以使用它來建構與接收的服務架構`Message`物件。 服務架構會透過服務合約的概念，將服務對應至 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別，然後將訊息分派至使用者作業，這個作業是使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 屬性標記的單純 <xref:System.ServiceModel.OperationContractAttribute> 方法 (如需詳細資料，請參閱 [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md))。 這些方法會有參數與傳回值。 在服務端，服務架構會將傳入的 <xref:System.ServiceModel.Channels.Message> 執行個體轉換成參數，然後將傳回值轉換成傳出的 <xref:System.ServiceModel.Channels.Message> 執行個體。 在用戶端，則執行相反的動作。 例如，請考量下列 `FindAirfare` 作業。  
   
  [!code-csharp[c_DataArchitecture#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#1)]
  [!code-vb[c_DataArchitecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#1)]  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
  <xref:System.ServiceModel.Channels.Message> 類別是要用來當做訊息的抽象表示法，但其設計與 SOAP 訊息有強烈關聯。 <xref:System.ServiceModel.Channels.Message> 包含三段主要的資訊：訊息本文、訊息標頭和訊息屬性。  
   
 ## <a name="message-body"></a>訊息本文  
- 訊息本文是用來表示訊息的實際資料承載。 訊息本文一定會當做 XML Infoset 表示。 這不表示所有 WCF 中建立或接收的訊息必須都是以 XML 格式。 而是留給通道堆疊決定如何解譯訊息本文。 可能會將本文當做 XML 發出、轉換成某些其他格式，或甚至整個省略。 當然，使用 WCF 提供的繫結的大多數時間，訊息內文被表示為 SOAP 封套之本文區段中的 XML 內容。  
+ 訊息本文是用來表示訊息的實際資料承載。 訊息本文一定會當做 XML Infoset 表示。 這不表示建立，或在 WCF 中收到的所有訊息必須都是 XML 格式。 而是留給通道堆疊決定如何解譯訊息本文。 可能會將本文當做 XML 發出、轉換成某些其他格式，或甚至整個省略。 當然，大部分的 WCF 提供的繫結，與訊息本文會表示為 SOAP envelope 的主體區段中的 XML 內容。  
   
  重點是要了解 `Message` 類別不一定需要包含使用 XML 資料表示本文的緩衝區。 就邏輯上來說， `Message` 會包含 XML Infoset，但是可能會使用動態方式建構這個 Infoset，並且一定不會以實體方式存在記憶體中。  
   
@@ -80,32 +80,32 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
 |訊息類型|訊息中的本文資料|寫入 (OnWriteBodyContents) 實作|讀取 (OnGetReaderAtBodyContents) 實作|  
 |------------------|--------------------------|--------------------------------------------------|-------------------------------------------------------|  
 |傳出，從經過非資料流處理的程式設計模型建立|寫入訊息需要的資料 (例如，物件與需要序列化它的 <xref:System.Runtime.Serialization.DataContractSerializer> 執行個體)*|自訂邏輯以根據儲存資料寫出訊息 (例如，呼叫 `WriteObject` 上的 `DataContractSerializer` (如果這是使用中的序列化程式))*|呼叫 `OnWriteBodyContents`、緩衝處理結果、透過緩衝區傳回 XML 讀取器|  
-|傳出，從經過資料流處理的程式設計模型建立|使用要寫入之資料的 `Stream`*|使用 <xref:System.Xml.IStreamProvider> 機制從儲存的資料流寫出資料*|呼叫 `OnWriteBodyContents`、緩衝處理結果、透過緩衝區傳回 XML 讀取器|  
-|從資料流通道堆疊傳入|`Stream` 物件，表示透過網路傳入並且搭配 <xref:System.Xml.XmlReader> 的資料|使用 `XmlReader` 從儲存的 `WriteNode` 寫出內容|傳回儲存的 `XmlReader`|  
+|傳出，從經過資料流處理的程式設計模型建立|使用要寫入之資料的 `Stream` *|使用 <xref:System.Xml.IStreamProvider> 機制從儲存的資料流寫出資料*|呼叫 `OnWriteBodyContents`、緩衝處理結果、透過緩衝區傳回 XML 讀取器|  
+|從資料流通道堆疊傳入|`Stream` 物件，表示透過網路傳入並且搭配 <xref:System.Xml.XmlReader> 的資料|使用 `XmlReader` 從儲存的 `WriteNode`寫出內容|傳回儲存的 `XmlReader`|  
 |從非資料流的通道堆疊傳入|包含搭配 `XmlReader` 之本文資料的緩衝區|使用 `XmlReader` 從儲存的 `WriteNode`寫出內容|傳回儲存的 lang|  
   
- \* 這些項目都不會直接實作在`Message`子類別，但在子類別的<xref:System.ServiceModel.Channels.BodyWriter>類別。 如需 <xref:System.ServiceModel.Channels.BodyWriter>的詳細資訊，請參閱 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
+ \* 這些項目不會直接實作`Message`子類別，但在子類別的<xref:System.ServiceModel.Channels.BodyWriter>類別。 如需 <xref:System.ServiceModel.Channels.BodyWriter>的詳細資訊，請參閱 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
   
 ## <a name="message-headers"></a>訊息標頭  
  包含標頭的訊息。 標頭邏輯上是由與名稱、命名空間，以及一些其他屬性關聯的 XML Infoset 所組成。 使用 `Headers` 的 <xref:System.ServiceModel.Channels.Message>屬性可以存取訊息標頭。 每個標頭是由 <xref:System.ServiceModel.Channels.MessageHeader> 類別表示。 通常當使用設定的通道堆疊搭配 SOAP 訊息運作時，訊息標頭會對應到 SOAP 訊息標頭。  
   
- 將資訊放入訊息標頭以及從中擷取資訊就像使用訊息本文。 因為不支援資料流所以處理序稍微經過簡化。 您可以存取相同標頭的內容一次以上，並且以任意順序存取標頭，以強制一定要緩衝處理標頭。 沒有任何可透過標頭，取得 XML 讀取器的一般用途機制，但是沒有`MessageHeader`wcf，表示具備這類功能的可讀取標頭內部的子類別。 當使用自訂應用程式標頭的訊息傳入時， `MessageHeader` 的型別是由通道堆疊建立。 這可讓服務架構使用還原序列化引擎 (例如 <xref:System.Runtime.Serialization.DataContractSerializer>) 來解譯這些標頭。  
+ 將資訊放入訊息標頭以及從中擷取資訊就像使用訊息本文。 因為不支援資料流所以處理序稍微經過簡化。 您可以存取相同標頭的內容一次以上，並且以任意順序存取標頭，以強制一定要緩衝處理標頭。 沒有任何可透過標頭，取得 XML 讀取器的一般用途機制，但沒有`MessageHeader`代表可讀取的標頭，與這類功能的 WCF 內部的子類別。 當使用自訂應用程式標頭的訊息傳入時， `MessageHeader` 的型別是由通道堆疊建立。 這可讓服務架構使用還原序列化引擎 (例如 <xref:System.Runtime.Serialization.DataContractSerializer>) 來解譯這些標頭。  
   
- 如需詳細資訊，請參閱[使用 Message 類別](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
+ 如需詳細資訊，請參閱 < [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
   
 ## <a name="message-properties"></a>郵件內容  
  訊息會包含屬性。 「 *屬性* 」(Property) 是與字串名稱關聯的任何 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件。 透過 `Properties` 的 `Message`屬性可以存取屬性。  
   
  不像訊息本文和訊息標頭 (通常會分別對應至 SOAP 本文與 SOAP 標頭)，訊息屬性通常不會與訊息一起傳送或接收。 訊息屬性的存在主要是當做通訊機制，將有關訊息的資料在通道堆疊的各個通道之間傳遞，以及在通道堆疊與服務模型之間傳遞。  
   
- 例如，HTTP 傳輸通道納入 WCF 的一部分是能夠產生各種 HTTP 狀態碼，例如 「 404 （找不到） 」 和 「 500 （內部伺服器錯誤），「 當其將回應傳送給用戶端。 在傳送之前的回覆訊息，它會檢查是否`Properties`的`Message`包含稱為"httpResponse"，其中包含的型別物件的屬性<xref:System.ServiceModel.Channels.HttpResponseMessageProperty>。 如果找到這類屬性，它會查看 <xref:System.ServiceModel.Channels.HttpResponseMessageProperty.StatusCode%2A> 屬性然後使用該狀態碼。 如果找不到，就會使用預設「200 (確定)」代碼。  
+ 例如，HTTP 傳輸通道，WCF 的一部分是能夠產生各種 HTTP 狀態碼，例如 「 404 （找不到） 」 和 「 500 （內部伺服器錯誤），「 當其將回應傳送給用戶端。 在傳送之前的回覆訊息，它會檢查是否`Properties`的`Message`包含一個稱為"httpResponse"，其中包含型別的物件的屬性<xref:System.ServiceModel.Channels.HttpResponseMessageProperty>。 如果找到這類屬性，它會查看 <xref:System.ServiceModel.Channels.HttpResponseMessageProperty.StatusCode%2A> 屬性然後使用該狀態碼。 如果找不到，就會使用預設「200 (確定)」代碼。  
   
- 如需詳細資訊，請參閱[使用 Message 類別](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
+ 如需詳細資訊，請參閱 < [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
   
 ### <a name="the-message-as-a-whole"></a>整個訊息  
  到目前為止，已經單獨討論過存取訊息各部分的方法。 但是， <xref:System.ServiceModel.Channels.Message> 類別也提供方法與整個訊息一起運作。 例如， `WriteMessage` 方法會將整個訊息寫出至 XML 寫入器。  
   
- 為了要能夠這樣做，就必須在整個 `Message` 執行個體與 XML Infoset 之間定義對應。 事實上這類對應已經存在： WCF 使用 SOAP 標準定義這個對應。 當寫出 `Message` 執行個體當做 XML Infoset 時，產生的 Infoset 是包含訊息的有效 SOAP 封套。 因此， `WriteMessage` 通常會執行下列步驟：  
+ 為了要能夠這樣做，就必須在整個 `Message` 執行個體與 XML Infoset 之間定義對應。 事實上，存在這類對應：WCF 會使用 SOAP 標準定義這個對應。 當寫出 `Message` 執行個體當做 XML Infoset 時，產生的 Infoset 是包含訊息的有效 SOAP 封套。 因此， `WriteMessage` 通常會執行下列步驟：  
   
 1.  寫入 SOAP 封套項目開頭標記。  
   
@@ -128,12 +128,12 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
   
  通道堆疊是由一或多個依順序排列的通道組成。 傳出 `Message` 執行個體會傳遞至堆疊中的第一個通道 (也稱為「 *最上層通道*」(Topmost Channel))，然後再向下傳遞至堆疊中的下一個通道，以此類推。 訊息會終止在最後一個通道，稱為「 *傳輸通道*」(Transport Channel)。 傳入訊息來自傳輸通道，並且會在堆疊的通道間向上傳遞。 從最上層通道，訊息通常會傳遞至服務架構。 雖然這是應用程式訊息的常見模式，某些通道的運作方式卻有些不同；例如，通道可能會在沒有收到上層通道所傳遞訊息的情況下，傳送專屬的基礎結構訊息。  
   
- 當訊息在堆疊內傳遞時，通道可能會在訊息上以各種方式作業。 最常見的作業是將標頭新增至傳出訊息，然後讀取傳入訊息上的標頭。 例如，通道可能會計算訊息的數位簽章，然後將其新增當做標頭。 通道也會在傳入訊息上檢查這個數位簽章標頭，然後封鎖沒有有效簽章的訊息避免在通道堆疊向上傳遞。 通道通常也會設定或檢查訊息屬性。 訊息本文則通常不會修改，雖然這允許的比方說，WCF 安全性通道能夠加密訊息本文。  
+ 當訊息在堆疊內傳遞時，通道可能會在訊息上以各種方式作業。 最常見的作業是將標頭新增至傳出訊息，然後讀取傳入訊息上的標頭。 例如，通道可能會計算訊息的數位簽章，然後將其新增當做標頭。 通道也會在傳入訊息上檢查這個數位簽章標頭，然後封鎖沒有有效簽章的訊息避免在通道堆疊向上傳遞。 通道通常也會設定或檢查訊息屬性。 訊息本文通常是未修改，雖然允許這麼做，例如，WCF 安全性通道能夠加密訊息本文。  
   
 ### <a name="transport-channels-and-message-encoders"></a>傳輸通道與訊息編碼器  
  堆疊中的最底層通道負責將傳出 <xref:System.ServiceModel.Channels.Message>(其他通道已修改過) 實際轉換為某些動作。 在接收端，這是將某些動作轉換為讓其他通道處理之 `Message` 的通道。  
   
- 如同之前所述，動作可能有很多種：經由各種通訊協定傳送或接收網路封包、在資料庫中讀取或寫入訊息，或是在訊息佇列中新增或清除佇列訊息，以提供為數不多的範例。 所有這些動作都有一個共同： 它們需要 WCF 之間的轉換`Message`執行個體與能夠傳送、 接收，讀取、 寫入的位元組的實際群組排入佇列，或清除佇列。 將 `Message` 轉換為位元組群組的程序稱為「 *編碼*」(Encoding)，而從位元組群組建立 `Message` 的反向程序稱為「 *解碼*」(Decoding)。  
+ 如同之前所述，動作可能有很多種：經由各種通訊協定傳送或接收網路封包、在資料庫中讀取或寫入訊息，或是在訊息佇列中新增或清除佇列訊息，以提供為數不多的範例。 所有這些動作都有一個共通： 它們需要 WCF 之間轉換`Message`執行個體和實際位元組，可以傳送、 接收、 讀取、 寫入，群組排入佇列，或從佇列中清除。 將 `Message` 轉換為位元組群組的程序稱為「 *編碼*」(Encoding)，而從位元組群組建立 `Message` 的反向程序稱為「 *解碼*」(Decoding)。  
   
  大部分的傳輸通道會使用稱為「 *訊息編碼器* 」(Message Encoder) 的元件以完成編碼與解碼工作。 訊息編碼器是 <xref:System.ServiceModel.Channels.MessageEncoder> 類別的子類別。 `MessageEncoder` 包含各種 `ReadMessage` 和 `WriteMessage` 方法多載，以便在 `Message` 和位元組群組之間轉換。  
   
@@ -141,7 +141,7 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
   
  在接收端，緩衝處理的傳輸通道會將傳入位元組 (例如，從傳入 TCP 封包) 擷取至陣列中，然後呼叫 `ReadMessage` 以取得能夠在通道堆疊進一步向上傳遞的 `Message` 物件。 資料流傳輸通道會建立 `Stream` 物件 (例如，經由傳入 TCP 連線的網路資料流)，然後將其傳遞至 `ReadMessage` 以取回 `Message` 物件。  
   
- 傳輸通道與訊息編碼器之間的分隔並不是強制性的；可以寫入不使用訊息編碼器的傳輸通道。 但是，這項分隔的優點是容易撰寫。 只要傳輸通道使用的基底<xref:System.ServiceModel.Channels.MessageEncoder>，也可以搭配任何 WCF 或協力廠商訊息編碼器。 同樣地，相同的編碼器通常能夠在任何傳輸通道中使用。  
+ 傳輸通道與訊息編碼器之間的分隔並不是強制性的；可以寫入不使用訊息編碼器的傳輸通道。 但是，這項分隔的優點是容易撰寫。 只要傳輸通道使用的基底<xref:System.ServiceModel.Channels.MessageEncoder>，它可以搭配任何 WCF 或協力廠商訊息編碼器。 同樣地，相同的編碼器通常能夠在任何傳輸通道中使用。  
   
 ### <a name="message-encoder-operation"></a>訊息編碼器作業  
  若要描述編碼器的一般作業，考量下列四種案例會有幫助。  
@@ -153,9 +153,9 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
 |解碼，經過緩衝處理|當在經過緩衝處理模式中進行解碼時，通常會建立包含經過緩衝處理資料的特殊 `Message` 子類別。 會讀取訊息的標頭，然後建立位於訊息本文上的 XML 讀取器。 這是會跟 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents>一起傳回的讀取器。|  
 |解碼，經過資料流處理|當在經過資料流處理模式中進行解碼時，通常會建立特別訊息子類別。 資料流的進階程度剛好足以讀取所有標頭並位於訊息本文上。 然後會在資料流上建立 XML 讀取器。 這是會跟 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents>一起傳回的讀取器。|  
   
- 編碼器也能夠執行其他功能。 例如，編碼器能夠集區 XML 讀取器和寫入器。 有需要就建立新的 XML 讀取器或寫入器是很昂貴的。 因此，編碼器通常會使用可設定的大小，維護讀取器的集區以及寫入器的集區。 中的先前所述的編碼器作業說明，每當的片語使用 「 建立 XML 讀取器/寫入器 」 時，通常表示 「 從集區取用一個，或如果無法使用，請建立一個 」。 編碼器 (和解碼時所建立的 `Message` 子類別) 包含邏輯，在不再需要使用讀取器和寫入器時 (例如，當 `Message` 已關閉) 將其傳回至集區。  
+ 編碼器也能夠執行其他功能。 例如，編碼器能夠集區 XML 讀取器和寫入器。 有需要就建立新的 XML 讀取器或寫入器是很昂貴的。 因此，編碼器通常會使用可設定的大小，維護讀取器的集區以及寫入器的集區。 中的先前所述的編碼器作業說明，每當的片語 「 建立 XML 讀取器/寫入器 」 會使用，這通常表示 「 從集區取用一個，或建立一個，如果其中一個無法使用 」。 編碼器 (和解碼時所建立的 `Message` 子類別) 包含邏輯，在不再需要使用讀取器和寫入器時 (例如，當 `Message` 已關閉) 將其傳回至集區。  
   
- WCF 提供三種訊息編碼器，雖然可以建立其他的自訂類型。 提供的類型為文字、二進位以及訊息傳輸最佳化機制 (MTOM)。 在 [Choosing a Message Encoder](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)中會詳細描述這些類型。  
+ WCF 會提供三種訊息編碼器，雖然您可以建立額外的自訂型別。 提供的類型為文字、二進位以及訊息傳輸最佳化機制 (MTOM)。 在 [Choosing a Message Encoder](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)中會詳細描述這些類型。  
   
 ### <a name="the-istreamprovider-interface"></a>IStreamProvider 介面  
  將含有經過資料流處理之本文的傳出訊息寫入至 XML 寫入器時， <xref:System.ServiceModel.Channels.Message> 將會在其 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 實作中使用類似下面一連串的呼叫：  
@@ -179,10 +179,10 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
  透過這種方式，XML 寫入器就可以選擇呼叫 <xref:System.Xml.IStreamProvider.GetStream> 以及寫出經過資料流處理之資料的時機。 例如，文字及二進位 XML 寫入器將立即呼叫此方法，並在開始與結束標記之間寫出資料流處理內容。 MTOM 寫入器則可能會決定於稍後準備好要寫入訊息的適當部分時，再呼叫 <xref:System.Xml.IStreamProvider.GetStream> 。  
   
 ## <a name="representing-data-in-the-service-framework"></a>在服務架構中表示資料  
- 本主題的 「 基本架構 」 一節所述，服務架構是的一部分，以及其他項目，會負責將訊息資料的方便使用的程式設計模型之間的轉換和實際 WCF`Message`執行個體。 通常訊息交換在服務架構中會表示為使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 屬性標記的 <xref:System.ServiceModel.OperationContractAttribute> 方法。 方法可以取用某些參數然後傳回值或輸出參數 (或兩者皆是)。 在服務端，輸入參數代表傳入訊息，而傳回值與輸出參數代表傳出訊息。 在用戶端，則是反向作業。 在 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)中會詳細描述使用參數與傳回值之描述訊息的程式設計模型。 但是，這個章節將提供簡短的概觀。  
+ 本主題的 「 基本架構 」 一節所述，「 服務 」 架構是 WCF，以及其他項目，是負責將訊息資料的方便使用的程式設計模型之間的轉換，但實際的部分`Message`執行個體。 通常訊息交換在服務架構中會表示為使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 屬性標記的 <xref:System.ServiceModel.OperationContractAttribute> 方法。 方法可以取用某些參數然後傳回值或輸出參數 (或兩者皆是)。 在服務端，輸入參數代表傳入訊息，而傳回值與輸出參數代表傳出訊息。 在用戶端，則是反向作業。 在 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)中會詳細描述使用參數與傳回值之描述訊息的程式設計模型。 但是，這個章節將提供簡短的概觀。  
   
 ## <a name="programming-models"></a>程式設計模型  
- WCF 服務架構支援五個不同程式設計模型以描述訊息：  
+ WCF 服務架構支援五個不同的程式設計模型以描述訊息：  
   
 ### <a name="1-the-empty-message"></a>1.空訊息  
  這是最單純的案例。 若要描述空的傳入訊息，請不要使用任何輸入參數。  
@@ -215,10 +215,10 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
  [!code-csharp[C_DataArchitecture#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#7)]
  [!code-vb[C_DataArchitecture#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#7)]  
   
- 動作 ="*"行有效地關閉訊息分派，並可確保所有訊息都傳送至`IForwardingService`合約使其能夠`ForwardMessage`作業。 （一般來說，發送器會檢查訊息的"Action"標頭，來判斷它用來進行哪些作業。 動作 ="\*「 代表 」 的動作標頭的所有可能值 」。)動作的組合 ="\*"與使用 Message 當做參數稱為 「 通用合約 」，因為它是能夠接收所有可能的訊息。 若要能夠傳送所有可能的訊息，請使用 Message 當做傳回值，並設定`ReplyAction`至 「\*"。 這會避免服務架構新增專屬的 Action 標頭，讓您能夠使用傳回的 `Message` 物件控制這個標頭。  
+ 動作 ="*"列實際上會關閉訊息分派，並可確保所有訊息都傳送給`IForwardingService`合約到手`ForwardMessage`作業。 （一般來說，發送器會檢查訊息的"Action"標頭，來判斷要讓哪些作業。 動作 ="\*"表示"的動作標頭的所有可能值"。)動作的組合 ="\*」 與使用 Message 當做參數稱為 「 通用合約 」，因為它能夠接收所有可能的訊息。 若要能夠傳送所有可能的訊息，使用 Message 當做傳回值，並設定`ReplyAction`到 「\*"。 這會避免服務架構新增專屬的 Action 標頭，讓您能夠使用傳回的 `Message` 物件控制這個標頭。  
   
 ### <a name="3-message-contracts"></a>3.訊息合約  
- WCF 提供的宣告式程式設計模型以描述訊息，稱為*訊息合約*。 這個模型在 [Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)中有更詳細的說明。 整個訊息在本質上是由使用像是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 和 <xref:System.ServiceModel.MessageBodyMemberAttribute> 之屬性的單一 <xref:System.ServiceModel.MessageHeaderAttribute> 型別表示，以描述訊息合約類別與訊息之間的對應方式。  
+ WCF 會提供宣告式程式設計模型以描述訊息，稱為*訊息合約*。 這個模型在 [Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)中有更詳細的說明。 整個訊息在本質上是由使用像是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 和 <xref:System.ServiceModel.MessageBodyMemberAttribute> 之屬性的單一 <xref:System.ServiceModel.MessageHeaderAttribute> 型別表示，以描述訊息合約類別與訊息之間的對應方式。  
   
  訊息合約提供對產生的 `Message` 執行個體提供許多控制 (雖然很明顯地不像直接使用 `Message` 類別一樣能夠提供那麼多的控制)。 例如，訊息本文通常是由多段資訊所組成，每段資訊以專屬的 XML 項目表示。 這些項目可能會直接發生在本文中 (「*不包裝* 」(Bare) 模式)，或是可能「 *包裝* 」(Wrapped) 在內含 XML 項目中。 使用訊息合約程式設計模型能夠讓您決定要使用不包裝或包裝模式，然後控制包裝函式與命名空間名稱。  
   
@@ -232,25 +232,25 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
 ### <a name="4-parameters"></a>4.參數  
  想要描述作業而在多個資料片段執行作業的程式開發人員，通常不需要訊息合約提供的控制等級。 例如，當建立新的服務時，人們通常不想決定要使用不包裝或包裝模式，以及決定包裝函式項目的名稱。 做這些決定通常需要深入了解 Web 服務與 SOAP。  
   
- WCF 服務架構可以自動挑選最佳與最互通的 SOAP 表示法傳送或接收多項相關的資訊，而不會強迫使用者做這些選擇。 只要描述這些資訊片段當做作業合約的參數或傳回值，就可以完成這個動作。 例如，請考量下列作業合約。  
+ WCF 服務架構可以自動挑選最佳與最互通的 SOAP 表示法傳送或接收多個相關的片段的詳細資訊，而不需要使用者上強制套用這些選項。 只要描述這些資訊片段當做作業合約的參數或傳回值，就可以完成這個動作。 例如，請考量下列作業合約。  
   
  [!code-csharp[C_DataArchitecture#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#11)]
  [!code-vb[C_DataArchitecture#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#11)]  
   
  服務架構會自動決定將所有三項資訊片段 (`customerID`、 `item`和 `quantity`) 放入訊息本文，然後將其包裝在名為 `SubmitOrderRequest`的包裝函式項目中。  
   
- 建議方法是將要傳送或接收的資訊描述當做作業合約參數的簡單清單，除非有特殊原因必須使用更複雜的訊息合約或 `Message` 架構的程式設計模型。  
+ 建議方法是將要傳送或接收的資訊描述當做作業合約參數的簡單清單，除非有特殊原因必須使用更複雜的訊息合約或 `Message`架構的程式設計模型。  
   
 ### <a name="5-stream"></a>5.資料流  
- 在作業合約中使用 `Stream` 或其中一個子類別，或是當做訊息合約中的單獨訊息本文部分，可以視為與上述不同的程式設計模型。 以這種方式使用 `Stream` 是確保合約能夠用在經過資料流處理方式的唯一辦法，除非寫入專屬的與資料流相容之 `Message` 子類別。 如需詳細資訊，請參閱[大型資料和串流處理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
+ 在作業合約中使用 `Stream` 或其中一個子類別，或是當做訊息合約中的單獨訊息本文部分，可以視為與上述不同的程式設計模型。 以這種方式使用 `Stream` 是確保合約能夠用在經過資料流處理方式的唯一辦法，除非寫入專屬的與資料流相容之 `Message` 子類別。 如需詳細資訊，請參閱 < [Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   
  當以這種方式使用 `Stream` 或其中一個子類別時，就不會叫用序列化程式。 針對傳出訊息會建立特殊的資料流 `Message` 子類別，然後會如同 <xref:System.Xml.IStreamProvider> 介面上章節中所述寫出資料流。 針對傳入訊息，服務架構會在傳入訊息上建立 `Stream` 子類別，然後將其提供給作業使用。  
   
 ## <a name="programming-model-restrictions"></a>程式設計模型限制  
- 上述的程式設計模型不能任意組合。 例如，如果作業接受訊息合約類型，訊息合約必須是其唯一的輸入參數。 此外，然後作業必須傳回空訊息 (屬於 void 的傳回型別) 或另一個訊息合約。 在每個特定程式設計模型的主題中會描述這些程式設計模型限制： [Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)、 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)和 [Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
+ 上述的程式設計模型不能任意組合。 例如，如果作業接受訊息合約類型，訊息合約必須是其唯一的輸入參數。 此外，然後作業必須傳回空訊息 (屬於 void 的傳回型別) 或另一個訊息合約。 這些程式設計模型限制是以每個特定的程式設計模型的主題所述：[使用訊息合約](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)， [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)，以及[Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   
 ## <a name="message-formatters"></a>訊息格式器  
- 藉由將名為「 *訊息格式器* 」(Message Formatter) 的元件插入服務架構可以支援上述程式設計模型。 訊息格式器所實作的型別<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>或<xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>介面，或兩者都使用，以供用戶端和服務 WCF 用戶端，分別。  
+ 藉由將名為「 *訊息格式器* 」(Message Formatter) 的元件插入服務架構可以支援上述程式設計模型。 訊息格式器所實作的型別<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>或<xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>介面，或兩者，以用於用戶端和服務 WCF 用戶端，分別。  
   
  通常是藉由行為插入訊息格式器。 例如， <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 會插入資料合約訊息格式器。 可以藉由在服務端的 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> 方法中將 <xref:System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Dispatcher.DispatchOperation%29> 設定為正確的格式器，或是藉由在用戶端的 <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> 方法中將 <xref:System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Dispatcher.ClientOperation%29> 設定為正確的格式器以達到此目的。  
   
@@ -264,13 +264,13 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
 |<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>|<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%28System.ServiceModel.Channels.Message%2CSystem.Object%5B%5D%29>|將傳入 `Message` 轉換為傳回值/輸出參數|  
   
 ## <a name="serialization"></a>序列化  
- 當您使用訊息合約或參數描述訊息內容時，必須使用序列化在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別與 XML Infoset 表示法之間進行轉換。 例如，使用在其他位置，在 WCF 中，序列化<xref:System.ServiceModel.Channels.Message>有個泛型<xref:System.ServiceModel.Channels.Message.GetBody%2A>可用來讀取還原序列化訊息的整個本文為物件的方法。  
+ 當您使用訊息合約或參數描述訊息內容時，必須使用序列化在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別與 XML Infoset 表示法之間進行轉換。 例如，使用在其他位置，在 WCF 中，序列化<xref:System.ServiceModel.Channels.Message>有個泛型<xref:System.ServiceModel.Channels.Message.GetBody%2A>可用來還原序列化訊息的整個主體讀入物件的方法。  
   
- WCF 支援 「 現成 」 兩種序列化技術來序列化和還原序列化參數及訊息部分：<xref:System.Runtime.Serialization.DataContractSerializer>和`XmlSerializer`。 此外，您可以撰寫自訂序列化程式。 不過，WCF 的其他部分 (例如泛型`GetBody`方法或 SOAP 錯誤序列化) 可能會限制只能使用<xref:System.Runtime.Serialization.XmlObjectSerializer>子類別 (<xref:System.Runtime.Serialization.DataContractSerializer>和<xref:System.Runtime.Serialization.NetDataContractSerializer>，但不是<xref:System.Xml.Serialization.XmlSerializer>)，或甚至被硬式編碼為只能使用<xref:System.Runtime.Serialization.DataContractSerializer>。  
+ WCF 支援序列化和還原序列化參數及訊息部分的 「 現成 」 的兩種序列化技術：<xref:System.Runtime.Serialization.DataContractSerializer>而`XmlSerializer`。 此外，您可以撰寫自訂序列化程式。 不過，WCF 的其他部分 (例如泛型`GetBody`方法或 SOAP 錯誤序列化) 可能會受限於只能使用<xref:System.Runtime.Serialization.XmlObjectSerializer>子類別 (<xref:System.Runtime.Serialization.DataContractSerializer>並<xref:System.Runtime.Serialization.NetDataContractSerializer>，而非<xref:System.Xml.Serialization.XmlSerializer>)，或甚至被硬式編碼為只使用<xref:System.Runtime.Serialization.DataContractSerializer>。  
   
  `XmlSerializer` 是在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務中使用的序列化引擎。 `DataContractSerializer` 是了解新資料合約程式設計模型的新序列化引擎。 `DataContractSerializer` 是預設選擇，而您可以使用 `XmlSerializer` 屬性，針對個別作業選擇使用 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 。  
   
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 和 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 是分別負責插入 `DataContractSerializer` 與 `XmlSerializer`之訊息格式器的作業行為。 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行為實際上能夠與任何衍生自 <xref:System.Runtime.Serialization.XmlObjectSerializer>的序列化程式共同運作，其中包含 <xref:System.Runtime.Serialization.NetDataContractSerializer> (在「使用獨立序列化」中會詳細描述)。 行為會呼叫其中一個 `CreateSerializer` 虛擬方法多載以取得序列化程式。 若要插入不同的序列化程式，請建立新的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 子類別，然後同時覆寫 `CreateSerializer` 多載。  
   
-## <a name="see-also"></a>另請參閱  
- [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>另請參閱
+- [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

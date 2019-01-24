@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 0dbf0a61e1d1183b3f4491002b04156ccf6da0ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183726"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566728"
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服務執行階段行為
 一旦您設計好服務合約 ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) 並實作服務合約 ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md))，就可以設定服務執行階段的作業行為。 本主題討論系統提供的服務與作業行為，並說明哪裡可以找到更多資訊以建立新行為。 儘管有些行為會以屬性形式來套用，許多行為還是需要透過應用程式組態檔或以程式設計方式來套用。 如需有關如何設定服務應用程式的詳細資訊，請參閱 < [Configuring](../../../docs/framework/wcf/configuring-services.md)。  
@@ -64,7 +64,7 @@ ms.locfileid: "50183726"
  請注意，這個建構函式提供物件時，某些功能相關至 Windows Communication Foundation (WCF) 執行個體行為的運作方式。 例如，提供已知物件執行個體時，呼叫 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 將沒有任何作用。 同樣的，也會忽略任何其他執行個體的釋放機制。 <xref:System.ServiceModel.ServiceHost> 類別的行為就像是所有作業的 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 屬性都已設為 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> 。  
   
 ## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>其他服務、端點、合約與作業行為  
- 服務行為，例如 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性，會在整個服務上作業。 例如，如果您將 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> 屬性設為 <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType>，就必須自行處理該服務中每項作業的執行緒同步化問題。 端點行為會在整個端點上作業；許多系統提供的端點行為都是因應用戶端功能而生。 合約行為會在合約層級作業，而作業行為則會修改作業遞送。  
+ 服務行為，例如 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性，會在整個服務上作業。 例如，如果您將 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> 屬性設為 <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> ，就必須自行處理該服務中每項作業的執行緒同步化問題。 端點行為會在整個端點上作業；許多系統提供的端點行為都是因應用戶端功能而生。 合約行為會在合約層級作業，而作業行為則會修改作業遞送。  
   
  這些行為當中，有許多都是在屬性上實作的，而您能以使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性的方式來使用它們，方法是將它們套用至適當的服務類別或作業實作上。 儘管您能以程式設計方式來使用諸如 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 物件的其他行為，一般來說您還是需要透過應用程式組態檔來加以套用。  
   
@@ -114,12 +114,12 @@ ms.locfileid: "50183726"
 ### <a name="operation-behaviors"></a>作業行為  
  下列作業行為指定作業的序列化與交易控制。  
   
--   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. 表示 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 的執行階段行為。  
+-   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. 表示 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>的執行階段行為。  
   
 -   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. 控制 `XmlSerializer` 的執行階段行為並將其與作業相關聯。  
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>. 指定服務作業接受異動標頭時所在的層級。  
   
-## <a name="see-also"></a>另請參閱  
- [設定服務](../../../docs/framework/wcf/configuring-services.md)  
- [如何：控制服務執行個體](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+## <a name="see-also"></a>另請參閱
+- [設定服務](../../../docs/framework/wcf/configuring-services.md)
+- [如何：控制服務執行個體](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-ms.openlocfilehash: 062e726b6f1d6831303e1cc0ae82a434daab860c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf65844cda195847989d1eb8ef752fe87c9de22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532187"
 ---
 # <a name="configuring-client-behaviors"></a>設定用戶端行為
-Windows Communication Foundation (WCF) 設定有兩種行為： 藉由參考行為組態-中定義的`<behavior>`用戶端應用程式組態檔-，或以程式設計方式呼叫中的區段應用程式。 這個主題將描述這兩種方法。  
+Windows Communication Foundation (WCF) 設定行為以兩種方式： 藉由參考行為組態，是定義於`<behavior>`用戶端應用程式組態檔-，或以程式設計方式呼叫中的區段應用程式。 這個主題將描述這兩種方法。  
   
  使用組態檔時，行為組態都是具名的組態設定集合。 每個行為組態的名稱必須是獨一無二的。 會在端點組態的 `behaviorConfiguration` 屬性中使用這個字串，以便將端點連結至行為。  
   
@@ -43,7 +43,7 @@ Windows Communication Foundation (WCF) 設定有兩種行為： 藉由參考行�
 ```  
   
 ## <a name="using-behaviors-programmatically"></a>以程式設計方式使用行為  
- 您也可以設定或以程式設計方式插入行為，找出適當的`Behaviors`Windows Communication Foundation (WCF) 用戶端物件或用戶端通道處理站物件之前開啟用戶端上的屬性。  
+ 您也可以設定或以程式設計方式插入行為，找出適當`Behaviors`Windows Communication Foundation (WCF) 用戶端物件或用戶端通道處理站物件之前開啟用戶端上的屬性。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會示範如何以程式設計的方式插入行為，其方法是先存取傳回自 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 屬性之 <xref:System.ServiceModel.Description.ServiceEndpoint> 上的 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 屬性，再建立通道物件。  
@@ -51,5 +51,5 @@ Windows Communication Foundation (WCF) 設定有兩種行為： 藉由參考行�
  [!code-csharp[ChannelFactoryBehaviors#10](../../../samples/snippets/csharp/VS_Snippets_CFX/channelfactorybehaviors/cs/client.cs#10)]
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
-## <a name="see-also"></a>另請參閱  
- [\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+## <a name="see-also"></a>另請參閱
+- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

@@ -2,12 +2,12 @@
 title: '&lt;idn&gt;項目 （Uri 設定）'
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: e68fa040123180ee31af40e82f45d6efd076d8aa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 21950beeefb23e81066623534774148e1f5d92ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580731"
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;idn&gt;項目 （Uri 設定）
 指定是否國際化網域名稱 (IDN) 剖析套用至網域名稱。  
@@ -17,7 +17,7 @@ ms.locfileid: "53153354"
   
  [\<Uri > 項目 （Uri 設定）](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [\<idn >](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
+ [\<idn>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,14 +36,14 @@ ms.locfileid: "53153354"
 |-----------------|---------------------|  
 |`enabled`|指定是否國際化網域名稱 (IDN) 剖析套用至網域名稱的預設值為 none。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[Uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址的設定。|  
+|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址的設定。|  
   
 ## <a name="remarks"></a>備註  
  現有<xref:System.Uri>類別已擴充.NET Framework 3.5 中。 3.0 SP1 和 2.0 SP1 支援國際資源識別項 (IRI) 和國際化網域名稱 (IDN)。 目前的使用者不會看到任何變更從.NET Framework 2.0 的行為，除非它們特別啟用 IRI 和 IDN 支援。 這可確保應用程式與舊版 .NET framework 相容。  
@@ -93,7 +93,7 @@ ms.locfileid: "53153354"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+## <a name="see-also"></a>另請參閱
+- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 型別&#39; &lt;typename&gt; &#39;沒有建構函式
+title: 類型&#39; &lt;typename&gt; &#39;沒有建構函式
 ms.date: 07/20/2015
 f1_keywords:
 - bc30251
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 16b64365ecd5dcfe592c47745dcb66878c2ee5a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a13451956b8afb1bf733c6faa218eadf4255495
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511094"
 ---
-# <a name="type-39lttypenamegt39-has-no-constructors"></a>型別&#39; &lt;typename&gt; &#39;沒有建構函式
+# <a name="type-39lttypenamegt39-has-no-constructors"></a>類型&#39; &lt;typename&gt; &#39;沒有建構函式
 類型不支援呼叫 `Sub New()`。 一個可能原因是編譯器或二進位檔案損毀。  
   
  **錯誤 ID:** BC30251  
@@ -29,6 +29,6 @@ ms.locfileid: "33595029"
   
 4.  如果錯誤持續發生，請收集情況的相關資訊，並通知 Microsoft 產品支援服務。  
   
-## <a name="see-also"></a>另請參閱  
- [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [告訴我們](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>另請參閱
+- [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [告訴我們](/visualstudio/ide/talk-to-us)

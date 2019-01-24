@@ -11,17 +11,17 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 54859b3065e8e9bb9680d8b6bf7946b393f73b9f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c9bb0bc16517ba3ffe6621cdf53b1685e8730e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533542"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合
 您的自訂控制項有時候會公開為屬性的集合。 本逐步解說示範如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>類別來控制如何在設計階段序列化集合。 套用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>集合屬性的值可確保會序列化屬性。  
   
- 若要複製一份清單列出本主題中的程式碼，請參閱[如何： 序列化集合的標準類型使用 DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)。  
+ 若要複製一份清單列出本主題中的程式碼，請參閱[How to:序列化標準類型使用 DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -38,7 +38,7 @@ ms.locfileid: "43788077"
   
 1.  建立 Windows 控制項程式庫專案，稱為`SerializationDemoControlLib`。 如需詳細資訊，請參閱 < [Windows 控制項程式庫範本](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4)。  
   
-2.  重新命名`UserControl1`至`SerializationDemoControl`。 如需詳細資訊，請參閱 <<c0> [ 如何： 重新命名識別項](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724)。  
+2.  重新命名`UserControl1`至`SerializationDemoControl`。 如需詳細資訊，請參閱[＜How to：重新命名識別項](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724)。  
   
 3.  在 **屬性**視窗中，設定的值<xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType>屬性設`10`。  
   
@@ -49,8 +49,8 @@ ms.locfileid: "43788077"
     |屬性|變更為|  
     |--------------|---------------|  
     |**多行**|`true`|  
-    |**停駐**|<xref:System.Windows.Forms.DockStyle.Fill>|  
-    |**捲軸**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
+    |**Dock**|<xref:System.Windows.Forms.DockStyle.Fill>|  
+    |[ScrollBars]|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
 6.  在 **程式碼編輯器**，宣告名為字串陣列欄位`stringsValue`在`SerializationDemoControl`。  
@@ -84,7 +84,7 @@ ms.locfileid: "43788077"
   
 1.  將 Windows 應用程式專案加入方案。 將專案命名為 `SerializationDemoControlTest`。  
   
-2.  在 **工具箱**，尋找名為  索引標籤**SerializationDemoControlLib 元件**。 在此索引標籤中，您會發現`SerializationDemoControl`。 如需詳細資訊，請參閱[逐步解說：自動將自訂元件填入工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
+2.  在 **工具箱**，尋找名為  索引標籤**SerializationDemoControlLib 元件**。 在此索引標籤中，您會發現`SerializationDemoControl`。 如需詳細資訊，請參閱[逐步解說：自動將 [工具箱] 中的以自訂元件填入](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
   
 3.  位置`SerializationDemoControl`您的表單上。  
   
@@ -135,10 +135,10 @@ ms.locfileid: "43788077"
   
 -   [設計工具序列化概觀](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
   
--   [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+-   [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>  
- [設計工具序列化概觀](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
- [如何： 序列化標準類型使用 DesignerSerializationVisibilityAttribute 的集合](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)  
- [逐步解說：自動將自訂元件填入工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
+- [設計工具序列化概觀](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)
+- [如何：序列化標準類型使用 DesignerSerializationVisibilityAttribute 的集合](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+- [逐步解說：自動填入 [工具箱] 中的以自訂元件](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

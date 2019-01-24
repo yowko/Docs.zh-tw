@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 326f970f53293b74bbf8c5e77830f3f6ce1b73ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0d5702f5df1e2d31a4e01de6be7c70af03b54296
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519680"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap 方法
-取得其名稱為基礎的自訂屬性。 不同於中繼資料的自訂屬性，這些屬性是存放在符號存放區中。  
+取得自訂屬性，根據其名稱。 不同於中繼資料的自訂屬性，這些屬性會保存在符號存放區。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,25 +41,25 @@ HRESULT GetSymAttributePreRemap(
   
 #### <a name="parameters"></a>參數  
  `parent`  
- [in]父系中繼資料語彙基元。  
+ [in]父代的中繼資料語彙基元。  
   
  `name`  
- [in]指標`WCHAR`其中包含的名稱。  
+ [in]指標`WCHAR`包含名稱。  
   
  `cBuffer`  
- [in]A`ULONG32`指出的大小`buffer`陣列。  
+ [in]A`ULONG32`表示的大小`buffer`陣列。  
   
  `pcBuffer`  
- [out]指標`ULONG32`包含屬性位元組所需要的緩衝區大小。  
+ [out]指標`ULONG32`接收包含屬性的位元組所需的緩衝區大小。  
   
  `buffer`  
- [out]接收屬性位元組的緩衝區指標。  
+ [out]接收屬性位元組緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedReader2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedReader2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

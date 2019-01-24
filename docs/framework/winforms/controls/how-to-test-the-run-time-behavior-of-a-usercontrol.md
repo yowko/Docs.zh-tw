@@ -1,5 +1,5 @@
 ---
-title: 如何：測試 UserControl 的執行階段行為
+title: HOW TO：測試 UserControl 的執行階段行為
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 40ec136a86b52dcb007d15d5a2917212745961f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fece6fda33ddb86e0aff0584af97ba085dfa9e1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506364"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>如何：測試 UserControl 的執行階段行為
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>HOW TO：測試 UserControl 的執行階段行為
 當您開發<xref:System.Windows.Forms.UserControl>，您要測試其執行階段行為。 您可以建立個別的 Windows 應用程式專案，並將您的控制項上測試表單中，但此程序是很不方便。 更快速且輕鬆的方式是使用**UserControl 測試容器**Visual Studio 所提供。 直接從您的 Windows 控制項程式庫專案，啟動這個測試容器。  
   
 > [!IMPORTANT]
@@ -41,7 +41,7 @@ ms.locfileid: "43512205"
   
 6.  關閉測試容器。  
   
-7.  將另一個使用者控制項加入**TestContainerExample**專案。 如需詳細資訊，請參閱 < [NIB： 如何： 加入現有項目加入至專案](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。  
+7.  將另一個使用者控制項加入**TestContainerExample**專案。 如需詳細資訊，請參閱[NIB： 操作說明：將現有的項目加入至專案](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。  
   
 8.  在  **Windows Form 設計工具**，拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至控制項的設計介面。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "43512205"
   
 6.  使用**選取 使用者控制項**<xref:System.Windows.Forms.ComboBox>切換兩個使用者控制項，從**TestContainerExample**專案。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.UserControl>  
- [操作說明：撰寫複合控制項](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
- [逐步解說：使用 Visual Basic 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [逐步解說：使用 Visual C# 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [使用者控制項設計工具](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.UserControl>
+- [如何：撰寫複合控制項](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
+- [逐步解說：撰寫使用 Visual Basic 複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [逐步解說：撰寫複合控制項具有視覺效果C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [使用者控制項設計工具](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)

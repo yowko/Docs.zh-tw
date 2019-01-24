@@ -2,22 +2,22 @@
 title: '&lt;serviceCredentials&gt; 的 &lt;serviceCertificate&gt; '
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: dfaf02eeaf6de781af70c21321a042de5eff74a5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6718804005d21cfdb75c27e417cb106aa05d79ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146026"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556320"
 ---
 # <a name="ltservicecertificategt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;serviceCertificate&gt; 
 指定 X.509 憑證，而此憑證將用以驗證使用訊息安全性模式的用戶端服務。  
   
  \<system.ServiceModel>  
-\<行為 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行為 >  
+\<behavior>  
 \<serviceCredentials>  
-\<v >  
+\<serviceCertificate>  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,8 +37,8 @@ ms.locfileid: "54146026"
 |---------------|-----------------|  
 |`findValue`|字串，其中包含要在 X.509 憑證存放區內搜尋的值。 屬性所包含的型別必須滿足指定之 X509FindType 的需求。 預設為空字串。|  
 |`storeLocation`|指定 X.509 憑證存放區的位置，用戶端會使用該憑證存放區來驗證伺服器的憑證。 有效值包括以下的值：<br /><br /> -LocalMachine: 指派憑證存放區到本機電腦。<br />-CurrentUser: 指派憑證存放區目前的使用者。<br /><br /> 預設為 LocalMachine。|  
-|`storeName`|指定要開啟之 X.509 憑證存放區的名稱。 有效值包括以下的值：<br /><br /> -AddressBook:其他使用者的憑證存放區。<br />-AuthRoot:第三方憑證授權單位 (Ca) 憑證存放區。<br />-CertificatAuthority:中繼憑證授權單位 (Ca) 憑證存放區。<br />-不允許：已撤銷之憑證的憑證存放區。<br />-我：個人憑證的憑證存放區。<br />根目錄：受信任的根憑證授權單位 (Ca) 憑證存放區。<br />-TrustedPeople:直接信任之人員和資源的憑證存放區。<br />-TrustedPublisher:直接信任之發行者的憑證存放區。<br /><br /> 預設為 My。|  
-|`x509FindType`|定義要執行之 X.509 搜尋的類型。 有效值包括以下的值：<br /><br /> -FindByThumbprint<br />-   FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> `findValue` 屬性所包含的型別必須滿足指定之 X509FindType 的需求。<br /><br /> 預設值為 FindBySubjectDistinguishedName。|  
+|`storeName`|指定要開啟之 X.509 憑證存放區的名稱。 有效值包括以下的值：<br /><br /> -AddressBook:其他使用者的憑證存放區。<br />-   AuthRoot:第三方憑證授權單位 (Ca) 憑證存放區。<br />-CertificatAuthority:中繼憑證授權單位 (Ca) 憑證存放區。<br />-不允許：已撤銷之憑證的憑證存放區。<br />-我：個人憑證的憑證存放區。<br />根目錄：受信任的根憑證授權單位 (Ca) 憑證存放區。<br />-TrustedPeople:直接信任之人員和資源的憑證存放區。<br />-TrustedPublisher:直接信任之發行者的憑證存放區。<br /><br /> 預設為 My。|  
+|`x509FindType`|定義要執行之 X.509 搜尋的類型。 有效值包括以下的值：<br /><br /> -FindByThumbprint<br />-   FindBySubjectName<br />-   FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> `findValue` 屬性所包含的型別必須滿足指定之 X509FindType 的需求。<br /><br /> 預設值為 FindBySubjectDistinguishedName。|  
   
 ### <a name="child-elements"></a>子元素  
  無  
@@ -54,10 +54,10 @@ ms.locfileid: "54146026"
   
  如需使用元素的詳細資訊，請參閱[How to:指定用戶端認證值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>  
- <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>  
- [如何：指定用戶端認證值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
- [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
+- <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>
+- [如何：指定用戶端認證值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

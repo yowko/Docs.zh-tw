@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 82e022e28d3559791be3236fb80081807426a456
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2f387ecccac2c1c97d03e2c22a31ad2dd0577c77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567772"
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt;項目 （網路設定）
 包含會指定 .NET Framework 如何連接至網路的設定。  
@@ -42,15 +42,15 @@ ms.locfileid: "50192534"
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定連線到網際網路主機的最大數目。|  
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
 |[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|設定 Simple Mail Transport Protocol (SMTP) 郵件傳送選項。|  
-|[Requestcaching>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
-|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|會設定基本的網路中的類別選項<xref:System.Net>和相關的子命名空間。|  
+|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|會設定基本的網路中的類別選項<xref:System.Net>和相關的子命名空間。|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定用於來自網際網路主機要求資訊的模組。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[組態](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|包含的所有命名空間的設定。|  
+|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|包含的所有命名空間的設定。|  
   
 ## <a name="remarks"></a>備註  
  [ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)項目包含設定中的類別<xref:System.Net>和相關的子命名空間。 這些設定會設定驗證模組、 連線的管理、 郵件設定、 proxy 伺服器和接收來自網際網路主機的資訊適用於網際網路要求模組。  
@@ -92,5 +92,5 @@ ms.locfileid: "50192534"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

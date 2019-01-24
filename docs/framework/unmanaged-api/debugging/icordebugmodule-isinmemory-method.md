@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ae5c16f9f508511e4a15b2eae2c28d68238f1d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7bfdcc3c8328d71146732fc4ba5664ebee9bea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574868"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory 方法
 取得值，指出是否此模組只存在於記憶體。  
@@ -40,17 +40,17 @@ HRESULT IsInMemory(
  [out]`true`如果此模組只存在於記憶體中; 否則`false`。  
   
 ## <a name="remarks"></a>備註  
- Common language runtime (CLR) 支援的載入模組，從原始資料流的位元組。 這類模組稱為*記憶體中模組*並不存在於磁碟上。  
+ Common language runtime (CLR) 支援從未經處理的資料流的位元組的模組的載入。 這類模組稱為*記憶體中模組*並不存在於磁碟上。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
-    
- 
+## <a name="see-also"></a>另請參閱
+
+

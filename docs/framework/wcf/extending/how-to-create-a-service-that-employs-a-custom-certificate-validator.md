@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立使用自訂憑證驗證程式的服務
+title: HOW TO：建立使用自訂憑證驗證程式服務
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: cc768f5e5086e6eba1ccac9d969eac14e14ceb2f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c4e9be8cb24745cd9651d4ee649a9a37520aa58d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569319"
 ---
-# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>HOW TO：建立使用自訂憑證驗證程式的服務
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>HOW TO：建立使用自訂憑證驗證程式服務
 這個主題將示範如何實作自訂憑證驗證程式，以及如何設定用戶端或服務認證，以使用自訂憑證驗證程式來取代預設的憑證驗證邏輯。  
   
- 如果 X.509 憑證用來驗證用戶端或服務，Windows Communication Foundation (WCF) 預設會使用 Windows 憑證存放區和 Crypto API 來驗證憑證，並確保它是受信任。 有時內建的憑證驗證功能不足，必須變更。 WCF 提供簡單的方法，以變更驗證邏輯可讓使用者新增自訂憑證驗證程式。 如果指定了自訂憑證驗證程式，則 WCF 不會使用內建的憑證驗證邏輯，但改用自訂驗證程式。  
+ 如果 X.509 憑證來驗證用戶端或服務，Windows Communication Foundation (WCF) 設定預設使用 Windows 憑證存放區和 Crypto API 來驗證憑證，並確保它是受信任。 有時內建的憑證驗證功能不足，必須變更。 WCF 會提供簡單的方法，以變更驗證邏輯可讓使用者新增的自訂憑證驗證。 如果指定的自訂憑證驗證，則 WCF 不會使用內建的憑證驗證邏輯，但改為依賴自訂驗證程式。  
   
 ## <a name="procedures"></a>程序  
   
@@ -35,15 +35,15 @@ ms.locfileid: "33808139"
   
 #### <a name="to-specify-a-custom-certificate-validator-in-service-configuration"></a>在服務組態中指定自訂憑證驗證程式  
   
-1.  新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)項目和[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)至[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)項目。  
+1.  新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)項目並[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)至[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)項目。  
   
-2.  新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)並設定`name`屬性設為適當值。  
+2.  新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) ，並設定`name`屬性設為適當的值。  
   
-3.  新增[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)至`<behavior>`項目。  
+3.  新增[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)到`<behavior>`項目。  
   
 4.  將 `<clientCertificate>` 項目加入至 `<serviceCredentials>` 項目。  
   
-5.  新增[\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)至`<clientCertificate>`項目。  
+5.  新增[\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)到`<clientCertificate>`項目。  
   
 6.  將 `customCertificateValidatorType` 屬性設定為驗證程式類型。 下列範例會將屬性設定為類型的命名空間和名稱。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "33808139"
   
 #### <a name="to-specify-a-custom-certificate-validator-using-configuration-on-the-client"></a>使用用戶端上的組態來指定自訂憑證驗證程式  
   
-1.  新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)項目和[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)至[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)項目。  
+1.  新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)項目並[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)至[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)項目。  
   
 2.  新增[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)項目。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "33808139"
   
 5.  新增[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)。  
   
-6.  新增[\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)下列範例所示。  
+6.  新增[\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)如下列範例所示。  
   
 7.  將 `customCertificateValidatorType` 屬性設定為驗證程式類型。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "33808139"
   
 #### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-client"></a>使用用戶端上的程式碼來指定自訂憑證驗證程式  
   
-1.  請使用 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 屬性來指定自訂憑證驗證程式。 您可以使用 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 屬性來存取用戶端認證。 (所產生的用戶端類別[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)一定是衍生自<xref:System.ServiceModel.ClientBase%601>類別。)  
+1.  請使用 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 屬性來指定自訂憑證驗證程式。 您可以使用 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 屬性來存取用戶端認證。 (所產生的用戶端類別[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)永遠是衍生自<xref:System.ServiceModel.ClientBase%601>類別。)  
   
 2.  將 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 屬性設定為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>。  
   
@@ -129,5 +129,5 @@ ms.locfileid: "33808139"
  [!code-csharp[c_CustomCertificateValidator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#3)]
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.IdentityModel.Selectors.X509CertificateValidator>
+## <a name="see-also"></a>另請參閱
+- <xref:System.IdentityModel.Selectors.X509CertificateValidator>

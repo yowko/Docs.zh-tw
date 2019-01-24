@@ -1,5 +1,5 @@
 ---
-title: ICorDebugChain Interface1
+title: ICorDebugChain 介面 1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugChain
@@ -16,47 +16,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32889a8e8867fc42b48413463095dda423f26b85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e0bb716f1ad4087642a76dc84266ec6d3f46c1ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571200"
 ---
-# <a name="icordebugchain-interface1"></a>ICorDebugChain Interface1
+# <a name="icordebugchain-interface1"></a>ICorDebugChain 介面 1
 表示實體或邏輯呼叫堆疊的區段。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[EnumerateFrames 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-enumerateframes-method.md)|取得列舉值，其中包含鏈結中的所有受管理的堆疊框架開頭為最新的框架。|  
-|[GetActiveFrame 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getactiveframe-method.md)|取得作用中 (也就是最新) 鏈結上的框架。|  
-|[GetCallee 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcallee-method.md)|取得由這個鏈結所呼叫。|  
-|[GetCaller 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcaller-method.md)|取得呼叫這個鏈結的鏈結。|  
+|[EnumerateFrames 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-enumerateframes-method.md)|取得列舉值，其中包含所有的受管理的堆疊框架，在鏈結中，從最新的框架開始。|  
+|[GetActiveFrame 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getactiveframe-method.md)|取得使用 (也就是最新) 鏈結上的框架。|  
+|[GetCallee 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcallee-method.md)|取得這個鏈結所呼叫函式鏈結。|  
+|[GetCaller 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcaller-method.md)|取得呼叫這個接收鏈結的鏈結。|  
 |[GetContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcontext-method.md)|未實作。|  
 |[GetNext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getnext-method.md)|取得執行緒中的下一個框架鏈結。|  
-|[GetPrevious 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getprevious-method.md)|取得執行緒中先前的框架鏈結。|  
+|[GetPrevious 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getprevious-method.md)|取得執行緒先前的框架鏈結。|  
 |[GetReason 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)|取得這個呼叫鏈結發生的原因。|  
-|[GetRegisterSet 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getregisterset-method.md)|取得為這個鏈結的使用中部分設定的暫存器。|  
+|[GetRegisterSet 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getregisterset-method.md)|取得設定此鏈結的使用中部分的暫存器。|  
 |[GetStackRange 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getstackrange-method.md)|取得這個鏈結的堆疊區段的位址範圍。|  
-|[GetThread 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getthread-method.md)|取得實體的執行緒，這個呼叫鏈結的一部分。|  
-|[IsManaged 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-ismanaged-method.md)|取得值，指出這個鏈結是否正在執行 managed 程式碼。|  
+|[GetThread 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getthread-method.md)|取得實體的執行緒，此呼叫鏈結的一部分。|  
+|[IsManaged 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-ismanaged-method.md)|取得值，指出這個鏈結是否正在執行的 managed 程式碼。|  
   
 ## <a name="remarks"></a>備註  
- 鏈結中的堆疊框架佔用連續的堆疊空間，而且共用相同的執行緒和內容。 鏈結可能代表其中一個 managed 或 unmanaged 程式碼鏈結。 空白`ICorDebugChain`的執行個體表示的 unmanaged 程式碼鏈結。  
+ 鏈結中的堆疊框架會佔據連續的堆疊空間，並共用相同的執行緒和內容。 鏈結可能代表其中一個 managed 或 unmanaged 程式碼鏈結。 空白`ICorDebugChain`執行個體代表 unmanaged 程式碼鏈結。  
   
 > [!NOTE]
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

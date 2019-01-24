@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d237aa83a6bd1c6c68f96aa4fa58a88cfa23c2c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510139"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>認識 XAML 節點資料流結構和概念
 XAML 讀取器和 XAML 寫入器在 .NET Framework XAML 服務中實作，根據 XAML 節點資料流的設計概念。 XAML 節點資料流是一組 XAML 節點的概念化。 在此概念化中，XAML 處理器會逐步查核 XAML 中的節點關聯性結構，一次一個 XAML。 在任何時候，只能有一個目前的記錄或目前的位置存在於開啟的 XAML 節點資料流中，而應用程式開發介面的許多層面只會報告從該位置取得的資訊。 XAML 節點資料流中的目前節點可以描述成物件、成員或值。 若將 XAML 視為 XAML 節點資料流，XAML 讀取器可以與 XAML 寫入器進行通訊，並可讓程式在有關 XAML 的載入路徑或儲存路徑作業期間，檢視、變更 XAML 節點資料流的內容，或與其互動。 XAML 讀取器和寫入器應用程式開發介面的設計和 XAML 節點資料流概念，類似先前相關讀取器和寫入器的設計和概念，例如 [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] ，以及 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別。 本主題討論 XAML 節點資料流概念，並說明如何撰寫在 XAML 節點層級與 XAML 表示法互動的常式。  
@@ -80,7 +80,7 @@ while (xxr.Read()) {
  除了 XAML 節點迴圈之外，還有其他處理 XAML 表示的可能方式。 例如，可能存在著可以讀取索引節點的 XAML 讀取器，或特別是直接以 `x:Name`、以 `x:Uid`或透過其他識別項存取節點的 XAML 讀取器。 .NET Framework XAML 服務沒有提供完整的實作，但會透過服務和支援類型來提供建議的模式。 如需詳細資訊，請參閱 <xref:System.Xaml.IXamlIndexingReader> 與 <xref:System.Xaml.XamlNodeList>。  
   
 > [!TIP]
->  Microsoft 也有生產名為 Microsoft XAML Toolkit 的 Out-of-Band 版本。 這個 Out-of-Band 版本仍在其發行前階段。 不過，如果您願意使用發行前元件，Microsoft XAML Toolkit 有提供一些有趣的資源，可用於 XAML 工具和 XAML 的靜態分析。 Microsoft XAML Toolkit 包含 XAML DOM 應用程式開發介面、FxCop 分析的支援，以及適用於 Silverlight 的 XAML 結構描述內容。 如需詳細資訊，請參閱 < [Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML)。  
+>  Microsoft 也有生產名為 Microsoft XAML Toolkit 的 Out-of-Band 版本。 這個 Out-of-Band 版本仍在其發行前階段。 不過，如果您願意使用發行前元件，Microsoft XAML Toolkit 有提供一些有趣的資源，可用於 XAML 工具和 XAML 的靜態分析。 Microsoft XAML Toolkit 包含 XAML DOM 應用程式開發介面、FxCop 分析的支援，以及適用於 Silverlight 的 XAML 結構描述內容。 如需詳細資訊，請參閱 [Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML)。  
   
 <a name="working_with_the_current_node"></a>   
 ## <a name="working-with-the-current-node"></a>使用目前的節點  
@@ -194,17 +194,17 @@ public class GameBoard {
   
  下列清單指出 XAML 讀取器應該要導入指示詞 XAML 成員節點的所有案例，以及如何在 .NET Framework XAML 服務實作中識別該成員節點。  
   
--   **物件節點的初始文字：** 此成員節點的名稱是 `_Initialization`，它代表 XAML 指示詞，且其定義在 XAML 語言 XAML 命名空間中。 您可以從 <xref:System.Xaml.XamlLanguage.Initialization%2A>取得其靜態實體。  
+-   **物件節點的初始文字：** 此成員節點的名稱是`_Initialization`，它代表 XAML 指示詞，且其定義在 XAML 語言 XAML 命名空間。 您可以從 <xref:System.Xaml.XamlLanguage.Initialization%2A>取得其靜態實體。  
   
--   **標記延伸的位置參數：** 此成員節點的名稱是 `_PositionalParameters`，且其定義在 XAML 語言 XAML 命名空間中。 它一律包含物件的泛型清單，每個物件都是位置參數，以 `,` 分隔符號字元預先分隔，和輸入 XAML 中所提供的一樣。 您可以從 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>取得位置參數指示詞的靜態實體。  
+-   **標記延伸的位置參數：** 此成員節點的名稱是`_PositionalParameters`，且其定義在 XAML 語言 XAML 命名空間。 它一律包含物件的泛型清單，每個物件都是位置參數，以 `,` 分隔符號字元預先分隔，和輸入 XAML 中所提供的一樣。 您可以從 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>取得位置參數指示詞的靜態實體。  
   
--   **未知的內容：** 此成員節點的名稱是 `_UnknownContent`。 嚴格來說，它是 <xref:System.Xaml.XamlDirective>，且其定義在 XAML 語言 XAML 命名空間中。 如果 XAML 物件項目包含來源 XAML 中的內容，但是在目前可用的 XAML 結構描述內容之下，無法判斷任何內容屬性，則會將這個指示詞當作 Sentinel 使用。 若要在 XAML 節點資料流中偵測此情況，您可以檢查是否有名為 `_UnknownContent` 的成員。 如果在載入路徑 XAML 節點資料流中，沒有採取任何其他動作，當它遇到任何物件上的 <xref:System.Xaml.XamlObjectWriter> 成員，預設 `WriteEndObject` 就會在所嘗試的 `_UnknownContent` 上擲回。 預設 <xref:System.Xaml.XamlXmlWriter> 不會擲回，並且會將成員視為隱含。 您可以從 `_UnknownContent` 取得 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>的靜態實體。  
+-   **未知的內容：** 此成員節點的名稱是`_UnknownContent`。 嚴格來說，它是 <xref:System.Xaml.XamlDirective>，且其定義在 XAML 語言 XAML 命名空間中。 如果 XAML 物件項目包含來源 XAML 中的內容，但是在目前可用的 XAML 結構描述內容之下，無法判斷任何內容屬性，則會將這個指示詞當作 Sentinel 使用。 若要在 XAML 節點資料流中偵測此情況，您可以檢查是否有名為 `_UnknownContent` 的成員。 如果在載入路徑 XAML 節點資料流中，沒有採取任何其他動作，當它遇到任何物件上的 <xref:System.Xaml.XamlObjectWriter> 成員，預設 `WriteEndObject` 就會在所嘗試的 `_UnknownContent` 上擲回。 預設 <xref:System.Xaml.XamlXmlWriter> 不會擲回，並且會將成員視為隱含。 您可以從 `_UnknownContent` 取得 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>的靜態實體。  
   
 -   **集合的集合屬性：** 雖然用於 XAML 之集合類別的支援 CLR 類型，通常會有專用具名屬性可保存集合項目，但是在支援類型解析之前，XAML 類型系統並不知道該屬性。 相反地，XAML 節點資料流會導入 `Items` 預留位置，做為集合 XAML 類型的成員。 在 .NET Framework XAML 服務實作中，這個指示詞/成員在節點資料流中的名稱為 `_Items`。 這個指示詞的常數可以從 <xref:System.Xaml.XamlLanguage.Items%2A>取得。  
   
      注意：XAML 節點資料流可能包含 Items 屬性，而依據支援類型解析和 XAML 結構描述內容，其中的項目是無法剖析的。 例如，套用至物件的  
   
--   **XML 定義的成員：** XML 定義的 `xml:base`、 `xml:lang` 和 `xml:space` 成員，在 .NET Framework XAML 服務實作中，會報告成名為 `base`、 `lang`和 `space` 的 XAML 指示詞。 這些成員的命名空間是 XML 命名空間 `http://www.w3.org/XML/1998/namespace`。 您可以從 <xref:System.Xaml.XamlLanguage>取得每個成員的常數。  
+-   **XML 定義的成員：** XML 定義`xml:base`，`xml:lang`並`xml:space`成員皆會回報為名為 XAML 指示詞`base`， `lang`，和`space`在.NET Framework XAML 服務實作。 這些成員的命名空間是 XML 命名空間 `http://www.w3.org/XML/1998/namespace`。 您可以從 <xref:System.Xaml.XamlLanguage>取得每個成員的常數。  
   
 ## <a name="node-order"></a>節點順序  
  在某些情況下， <xref:System.Xaml.XamlXmlReader> 會變更 XAML 節點資料流中的 XAML 節點順序，不同於在標記中檢視或當做 XML 處理時，所出現的節點順序。 這麼做是為了排列節點，讓 <xref:System.Xaml.XamlObjectWriter> 可以用僅限順向的方式來處理節點資料流。  在 .NET Framework XAML 服務中，XAML 讀取器會重新排列節點，而不會將這項工作留給 XAML 寫入器，如此可以讓節點資料流的 XAML 物件寫入器消費者獲得最佳化效能。  
@@ -217,7 +217,7 @@ public class GameBoard {
 ### <a name="getobject"></a>GetObject  
  `GetObject` 表示 XAML 節點，其中，XAML 物件寫入器並不是要建構新的物件，而是應該要取得物件的包含屬性值。 在支援類型的物件模型中，當包含屬性是刻意唯讀時，在 XAML 節點資料流中遇到 `GetObject` 節點這種一般情況，會發生於集合物件或字典物件。 在此情節中，通常會由擁有者類型的初始化邏輯來建立及初始化集合或字典 (通常是空的)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Xaml.XamlObjectReader>  
- [XAML Services](../../../docs/framework/xaml-services/index.md)  
- [XAML 命名空間](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Xaml.XamlObjectReader>
+- [XAML Services](../../../docs/framework/xaml-services/index.md)
+- [XAML 命名空間](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f31dad53f42fdd8f7ac3a0cb995b507ecc3590d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96ad0e34bf638c378f37e317f790696c2ac7cb25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519693"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine 方法
-傳回最接近的一行，也就是序列點，在本文件也可能不是序列點中。  
+在此可能會或可能不是序列點的文件中會傳回是序列點，最接近的一行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,13 +37,13 @@ HRESULT FindClosestLine(
   
 #### <a name="parameters"></a>參數  
  `line`  
- [in]這份文件中的行。  
+ [in]這份文件中的資料行。  
   
  `pRetVal`  
- [out]接收行變數的指標。  
+ [out]此變數會接收列指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，錯誤代碼。  
+ 如果方法成功，則為 S_OK否則，出現錯誤代碼。  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

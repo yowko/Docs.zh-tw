@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cc437f63621c451c0af796513d4646fe0668c00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7ae0838dd5f4dcfe95cd516b23fef3d5ca429031
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586351"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>ICorDebugManagedCallback::BreakpointSetError 方法
-Common language runtime 無法精確地繫結在 just-in-time (JIT) 編譯函式之前已設定的中斷點會告知偵錯工具。  
+Common language runtime 無法精確地繫結之前的函式是在 just-in-time (JIT) 編譯，並設定中斷點會告知偵錯工具。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,28 +40,28 @@ HRESULT BreakpointSetError (
   
 #### <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]代表應用程式定義域，其中包含未繫結的中斷點 ICorDebugAppDomain 物件的指標。  
+ [in]ICorDebugAppDomain 物件，表示應用程式定義域，其中包含未繫結的中斷點指標。  
   
  `pThread`  
- [in]表示包含繫結的中斷點的執行緒 ICorDebugThread 物件的指標。  
+ [in]ICorDebugThread 物件，表示包含未繫結的中斷點的執行緒指標。  
   
  `pBreakpoint`  
  [in]ICorDebugBreakpoint 物件，表示未繫結的中斷點指標。  
   
  `dwError`  
- [in]整數，表示的錯誤。  
+ [in]整數，表示錯誤。  
   
 ## <a name="remarks"></a>備註  
  永遠不會叫用指定的中斷點。 偵錯工具應該停用，並將它重新繫結。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

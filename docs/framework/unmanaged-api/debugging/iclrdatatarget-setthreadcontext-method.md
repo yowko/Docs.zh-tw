@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73697fdd19f2492aabdc0d76e8c1a27c917c85f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9018ccc27d0afc35b9dfa2d2ebad323c9150ae60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580690"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext 方法
-目標處理序中，設定指定之執行緒的目前內容。 這個方法是由通用語言執行平台 (CLR) 資料存取服務呼叫。  
+目標處理序中設定指定之執行緒的目前內容。 這個方法是由通用語言執行平台 (CLR) 資料存取服務呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +40,7 @@ HRESULT SetThreadContext (
   
 #### <a name="parameters"></a>參數  
  `threadID`  
- [in]目標處理序中執行緒的作業系統識別項。  
+ [in]目標處理序中的執行緒作業系統識別項。  
   
  `contextSize`  
  [in]內容的大小。  
@@ -48,19 +48,19 @@ HRESULT SetThreadContext (
  `context`  
  [in]包含內容之緩衝區的指標。  
   
- 中的資料`context`緩衝區將 Win32 格式`CONTEXT`結構。 內容指定處理器特定暫存器的資料，因此 Win32 定義`CONTEXT`結構取決於處理器架構。 請參閱 WinNT.h 標頭檔定義的 Win32`CONTEXT`結構。  
+ 中的資料`context`緩衝區會在 Win32 格式`CONTEXT`結構。 這個內容會指定特定處理器的暫存器資料，因此 Win32 定義`CONTEXT`結構取決於處理器架構。 請參閱 WinNT.h 標頭檔來定義的 Win32`CONTEXT`結構。  
   
 ## <a name="remarks"></a>備註  
  此方法是由偵錯應用程式的作者來實作。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** ClrData.idl、 ClrData.h  
+ **標頭：** ClrData.idl, ClrData.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

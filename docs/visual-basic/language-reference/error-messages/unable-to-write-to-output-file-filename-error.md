@@ -1,5 +1,5 @@
 ---
-title: 無法寫入輸出檔&#39; &lt;filename&gt;&#39;:&lt;錯誤&gt;
+title: 無法寫入輸出檔&#39;&lt;檔名&gt;&#39;:&lt;錯誤&gt;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: e8fbfd54782e601595712035827ea346d1dbf500
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c82f1e6e4a01af87cc7dce49cfaa78f9be1631db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572691"
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>無法寫入輸出檔&#39; &lt;filename&gt;&#39;:&lt;錯誤&gt;
+# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>無法寫入輸出檔&#39;&lt;檔名&gt;&#39;:&lt;錯誤&gt;
 建立檔案時發生問題。  
   
  無法開啟輸出檔案以供寫入。 檔案 (或包含檔案的資料夾) 可能已由另一個處理序以獨佔方式開啟使用，或是其可能設定了唯讀屬性。  
@@ -33,7 +33,7 @@ ms.locfileid: "33597506"
   
 1.  再次編譯程式，看看錯誤是否重複發生。  
   
-2.  如果錯誤持續發生，請儲存工作並重新啟動 Visual Studio。  
+2.  如果錯誤持續發生，請儲存您的工作，然後重新啟動 Visual Studio。  
   
 3.  如果錯誤繼續發生，請重新啟動電腦。  
   
@@ -45,17 +45,17 @@ ms.locfileid: "33597506"
   
 1.  開啟您感興趣的資料夾。  
   
-2.  按一下**檢視**圖示，然後選擇 **詳細資料**。  
+2.  按一下 **檢視**圖示，然後選擇**詳細資料**。  
   
-3.  以滑鼠右鍵按一下資料行標頭，然後選擇 **屬性**從下拉式清單。  
+3.  以滑鼠右鍵按一下資料行標頭，然後選擇**屬性**從下拉式清單。  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>變更檔案或資料夾的屬性  
   
-1.  在**檔案總管**，以滑鼠右鍵按一下檔案或資料夾，然後選擇 **屬性**。  
+1.  在 **檔案總管**，以滑鼠右鍵按一下檔案或資料夾，然後選擇**屬性**。  
   
-2.  在**屬性**區段**一般**索引標籤上，清除**唯讀**方塊。  
+2.  在 [**屬性**一節**一般**索引標籤上，清除**唯讀**] 方塊中。  
   
-3.  Press **OK**.  
+3.  按 [確定]。  
   
-## <a name="see-also"></a>另請參閱  
- [告訴我們](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>另請參閱
+- [告訴我們](/visualstudio/ide/talk-to-us)

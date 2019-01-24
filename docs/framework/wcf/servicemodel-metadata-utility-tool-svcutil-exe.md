@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 10a5be16ef27aedf86f391b661750a953262d29b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533204"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 中繼資料公用程式工具 (Svcutil.exe)
 
@@ -29,10 +29,10 @@ ServiceModel Metadata Utility Tool 位於 Windows SDK 安裝位置，特別 *%Pr
 |工作|主題|
 |----------|-----------|
 |從執行中服務或靜態中繼資料文件產生程式碼。|[從服務中繼資料產生 WCF 用戶端](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|
-|從編譯的程式碼匯出中繼資料文件。|[操作說明：使用 Svcutil.exe 來匯出編譯的服務程式碼的中繼資料](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|
-|驗證編譯的服務程式碼。|[操作說明：使用 Svcutil.exe 來驗證已編譯的服務程式碼](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|
-|從執行中服務下載中繼資料文件。|[操作說明：使用 Svcutil.exe 來下載中繼資料文件](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|
-|產生序列化程式碼。|[操作說明：改善啟動時間的 WCF 用戶端應用程式的使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|
+|從編譯的程式碼匯出中繼資料文件。|[如何：使用 Svcutil.exe 來匯出編譯的服務程式碼的中繼資料](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|
+|驗證編譯的服務程式碼。|[如何：使用 Svcutil.exe 來驗證已編譯的服務程式碼](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|
+|從執行中服務下載中繼資料文件。|[如何：使用 Svcutil.exe 來下載中繼資料文件](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|
+|產生序列化程式碼。|[如何：改善啟動時間的 WCF 用戶端應用程式的使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|
 
 > [!CAUTION]
 > 如果提供作為參數的名稱相同，Svcutil 會覆寫磁碟上的現有檔案。 這可能包括程式碼檔案、 設定或中繼資料檔案。 若要避免這個問題產生的程式碼和組態檔時，使用`/mergeConfig`切換。
@@ -59,7 +59,7 @@ ServiceModel Metadata Utility Tool 位於 Windows SDK 安裝位置，特別 *%Pr
 
 |選項|描述|
 |------------|-----------------|
-|/ 目錄：\<目錄 >|要建立檔案的目錄。<br /><br /> 預設值：目前的目錄。<br /><br /> 簡短形式：`/d`|
+|/ 目錄：\<目錄 >|要建立檔案的目錄。<br /><br /> 預設：目前的目錄。<br /><br /> 簡短形式：`/d`|
 |/help|顯示工具的命令語法和選項。<br /><br /> 簡短形式：`/?`|
 |/noLogo|隱藏版權和橫幅訊息。|
 |/svcutilConfig:\<configFile>|指定要取代 App.config 檔所使用的自訂組態檔。 指定的組態檔可用來註冊 system.serviceModel 副檔名，而不會變更工具的組態檔。|
@@ -88,7 +88,7 @@ Svcutil.exe 可從中繼資料文件產生服務合約、用戶端和資料型�
 |------------|-----------------|
 |/async|同時產生同步與非同步方法簽章。<br /><br /> 預設：只產生同步方法簽章。<br /><br /> 簡短形式：`/a`|
 |/collectionType:\<type>|指定 WCF 用戶端的清單集合類型。<br/><br /> 預設值： 集合型別為 System.Array。 <br /><br /> 簡短形式：`/ct`|
-|/config:\<configFile >|指定產生之組態檔的檔案名稱。<br /><br /> 預設：output.config|
+|/config:\<configFile>|指定產生之組態檔的檔案名稱。<br /><br /> 預設：output.config|
 |/dataContractOnly|只產生資料合約類型的程式碼。 不會產生「服務合約」類型。<br /><br /> 這個選項應該只能指定本機中繼資料檔案。<br /><br /> 簡短形式：`/dconly`|
 |/enableDataBinding|在所有「資料合約」類型上實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，以啟用資料繫結。<br /><br /> 簡短形式：`/edb`|
 |/excludeType:\<type>|指定要從參考的合約類型排除的完整型別名稱或組件限定型別名稱。<br /><br /> 將這個參數與個別 DLL 的 `/r` 一起使用時，會參考 XSD 類別的完整名稱。<br /><br /> 簡短形式：`/et`|
@@ -97,17 +97,17 @@ Svcutil.exe 可從中繼資料文件產生服務合約、用戶端和資料型�
 |/language:\<語言 >|指定要用於產生程式碼的程式語言。 您應該提供註冊在 Machine.config 檔案中的語言名稱或完整的名稱的類別繼承自<xref:System.CodeDom.Compiler.CodeDomProvider>。<br /><br /> 值：c#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 預設：csharp<br /><br /> 簡短形式：`/l`|
 |/mergeConfig|將產生的組態合併至現有檔案，而非覆寫現有檔案。|
 |/messageContract|產生「訊息合約」類型。<br /><br /> 簡短形式：`/mc`|
-|/namespace:\<字串，字串 >|指定從 WSDL 或 XML 結構描述 targetNamespace 到 CLR 命名空間的對應。 使用 '\*' 的目標命名空間對應至該 CLR 命名空間的所有的 Targetnamespace，而不明確的對應。<br /><br /> 為了確保訊息合約名稱不會與作業名稱衝突，您應該以 `::` 限定型別參考，或確定是唯一的名稱。<br /><br /> 預設值：資料合約，以衍生自結構描述文件的目標命名空間。 預設命名空間用於所有其他產生的型別。<br /><br /> 簡短形式：`/n` **注意：** 產生時要使用以 XmlSerializer 類型，支援只有單一命名空間對應。 所有產生的型別會在預設的命名空間或所指定的命名空間是 ' *'。|
+|/namespace:\<string,string>|指定從 WSDL 或 XML 結構描述 targetNamespace 到 CLR 命名空間的對應。 使用 '\*' 的目標命名空間對應至該 CLR 命名空間的所有的 Targetnamespace，而不明確的對應。<br /><br /> 為了確保訊息合約名稱不會與作業名稱衝突，您應該以 `::` 限定型別參考，或確定是唯一的名稱。<br /><br /> 預設：資料合約，以衍生自結構描述文件的目標命名空間。 預設命名空間用於所有其他產生的型別。<br /><br /> 簡短形式：`/n` **注意：** 產生時要使用以 XmlSerializer 類型，支援只有單一命名空間對應。 所有產生的型別會在預設的命名空間或所指定的命名空間是 ' *'。|
 |/noConfig|不要產生組態檔。|
-|/noStdLib|不引用標準程式庫。<br /><br /> 預設值：Mscorlib.dll 和 System.servicemodel.dll 的參考。|
-|/out:\<檔案 >|指定產生之程式碼的檔案名稱。<br /><br /> 預設值：衍生自 WSDL 定義名稱，WSDL 服務名稱，或其中一個結構描述的目標命名空間。<br /><br /> 簡短形式：`/o`|
+|/noStdLib|不引用標準程式庫。<br /><br /> 預設：Mscorlib.dll 和 System.servicemodel.dll 的參考。|
+|/out:\<檔案 >|指定產生之程式碼的檔案名稱。<br /><br /> 預設：衍生自 WSDL 定義名稱，WSDL 服務名稱，或其中一個結構描述的目標命名空間。<br /><br /> 簡短形式：`/o`|
 |/reference:\<檔案路徑 >|參考指定組件中的型別。 產生用戶端時，使用這個選項即可指定組件，這些組件可能包含代表匯入之中繼資料的類型。<br /><br /> 您無法使用這個參數指定訊息合約和 <xref:System.Xml.Serialization.XmlSerializer> 型別。<br /><br /> 如果已參考 <xref:System.DateTimeOffset>，則會使用這個型別，而不會產生新型別。 如果應用程式是使用 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 撰寫的，則 SvcUtil.exe 會自動參考 <xref:System.DateTimeOffset>。<br /><br /> 簡短形式：`/r`|
 |/serializable|產生已使用 Serializable 屬性標示的類別。<br /><br /> 簡短形式：`/s`|
 |/serviceContract|只產生服務合約的程式碼。 不會產生用戶端類別和組態<br /><br /> 簡短形式：`/sc`|
 |/serializer:Auto|自動選取序列化程式。 這會嘗試使用資料合約序列化程式，並使用 XmlSerializer，如果失敗。<br /><br /> 簡短形式：`/ser`|
 |/serializer:DataContractSerializer|產生使用「資料合約序列化程式」以進行序列化與還原序列化的資料型別。<br /><br /> 簡短形式：`/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|產生使用 <xref:System.Xml.Serialization.XmlSerializer> 以進行序列化與還原序列化的資料型別。<br /><br /> 簡短形式：`/ser:XmlSerializer`|
-|/targetClientVersion|指定設為應用程式目標的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 版本。 有效值為 `Version30` 和 `Version35`。 預設值是 `Version30`。<br /><br /> 簡短形式：`/tcv`<br /><br /> `Version30`：使用 `/tcv:Version30`如果您要使用的用戶端產生程式碼[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]。<br /><br /> `Version35`：使用 `/tcv:Version35`如果您要使用的用戶端產生程式碼[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]。 將 `/tcv:Version35` 與 `/async` 參數一起使用時，會產生事件架構與回呼/委派架構的非同步方法。 此外，也會啟用具備 LINQ 功能的資料集和 <xref:System.DateTimeOffset> 的支援。|
+|/targetClientVersion|指定設為應用程式目標的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 版本。 有效值為 `Version30` 和 `Version35`。 預設值為 `Version30`。<br /><br /> 簡短形式：`/tcv`<br /><br /> `Version30`：使用 `/tcv:Version30`如果您要使用的用戶端產生程式碼[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]。<br /><br /> `Version35`：使用 `/tcv:Version35`如果您要使用的用戶端產生程式碼[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]。 將 `/tcv:Version35` 與 `/async` 參數一起使用時，會產生事件架構與回呼/委派架構的非同步方法。 此外，也會啟用具備 LINQ 功能的資料集和 <xref:System.DateTimeOffset> 的支援。|
 |/wrapped|控制是否將特殊大小寫搭配 wrapped 參數用於文件常值樣式的文件。 使用 **/ 包裝**參數搭配[Service Model Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具來指定一般大小寫。|
 
 > [!NOTE]
@@ -191,7 +191,7 @@ Svcutil.exe 可從應用程式的已編譯組件產生必要的 C# 序列化程�
 |------------|-----------------|
 |/reference:\<檔案路徑 >|將指定的組件新增至用於解析型別參考的組件集合中。<br /><br /> 簡短形式：`/r`|
 |/excludeType:\<type>|指定要從匯出作業或驗證作業排除的型別其完整名稱或組件限定名稱。<br /><br /> 簡短形式：`/et`|
-|/out:\<檔案 >|指定產生之程式碼的檔案名稱。 將多個組件做為工具的輸入傳遞時，會忽略這個選項。<br /><br /> 預設值：衍生自組件名稱。<br /><br /> 簡短形式：`/o`|
+|/out:\<檔案 >|指定產生之程式碼的檔案名稱。 將多個組件做為工具的輸入傳遞時，會忽略這個選項。<br /><br /> 預設：衍生自組件名稱。<br /><br /> 簡短形式：`/o`|
 |/UseSerializerForFaults|指定應使用 <xref:System.Xml.Serialization.XmlSerializer> 來讀取和寫入錯誤，而非使用預設 <xref:System.Runtime.Serialization.DataContractSerializer>。|
 
 ## <a name="examples"></a>範例
@@ -280,4 +280,4 @@ Svcutil.exe 可從應用程式的已編譯組件產生必要的 C# 序列化程�
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [操作說明：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)

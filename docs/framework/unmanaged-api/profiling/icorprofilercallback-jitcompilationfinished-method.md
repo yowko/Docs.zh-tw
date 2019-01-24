@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dbf447e1325b4acaa26c9bb16d7d1a736eb20a29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d2e75d357b1f56df676163744015a1a3f77c17b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530746"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished 方法
-通知分析工具在 just-in-time (JIT) 編譯器發出已完成函式的編譯。  
+通知分析工具，在 just-in-time (JIT) 編譯器已完成編譯的函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,25 +38,25 @@ HRESULT JITCompilationFinished(
   
 #### <a name="parameters"></a>參數  
  `functionId`  
- [in]已編譯的函式 ID。  
+ [in]已編譯的函式的識別碼。  
   
  `hrStatus`  
- [in]值，指出是否已成功編譯。  
+ [in]值，指出編譯是否成功。  
   
  `fIsSafeToBlock`  
- [in]值，指出程式碼剖析工具來封鎖是否會影響執行階段的作業。 值是`true`如果封鎖可能會造成執行階段從這個回呼; 傳回呼叫執行緒的等候否則`false`。  
+ [in]這個值表示是否封鎖的程式碼剖析工具，將會影響執行階段的作業。 值是`true`如果封鎖可能會導致執行階段，等候要從此回呼; 傳回呼叫的執行緒，否則為`false`。  
   
- 雖然值`true`將不會危害到執行階段，則會扭曲分析的結果。  
+ 雖然值`true`將不會危害執行階段，它可能會扭曲分析的結果。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [JITCompilationStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [JITCompilationStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)

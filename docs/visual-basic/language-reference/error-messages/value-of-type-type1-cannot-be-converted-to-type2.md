@@ -1,5 +1,5 @@
 ---
-title: 型別的值&#39;type1&#39;無法轉換成&#39;type2&#39;
+title: 類型的值&#39;類型 1&#39;無法轉換成&#39;type2&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31194
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31194
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
-ms.openlocfilehash: 9e59d3bc5e2bfca3628248d08ffc475334d4da79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 657e0feb675e15b9ece00d40c3d1ebe932a29099
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568281"
 ---
-# <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a>型別的值&#39;type1&#39;無法轉換成&#39;type2&#39;
-類型 'type1' 值無法轉換成 'type2'。 您可以使用 'Value' 屬性取得的第一個元素的字串值 '\<parentElement >'。  
+# <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a>類型的值&#39;類型 1&#39;無法轉換成&#39;type2&#39;
+類型 'type1' 的值無法轉換成 'type2'。 您可以使用 'Value' 屬性，若要取得的第一個元素的字串值 '\<parentElement >'。  
   
  已嘗試將 XML 常值隱含轉換成特定類型。 您無法將 XML 常值隱含轉換成指定的類型。  
   
@@ -25,8 +25,8 @@ ms.locfileid: "33602751"
   
 -   使用 XML 常值的 `Value` 屬性以 `String`形式來參考其值。 使用 `CType` 函式、另一個類型轉換函式或 <xref:System.Convert> 類別，將值轉換為指定的類型。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Convert>  
- [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)  
- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Convert>
+- [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)
+- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

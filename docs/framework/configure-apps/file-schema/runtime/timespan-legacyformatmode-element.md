@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e371f45286c88c9136b869e750009dadeb261877
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d167af6c9e4bbd919a4cfeb279a6d68a14139c33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535030"
 ---
 # <a name="lttimespanlegacyformatmodegt-element"></a>&lt;TimeSpan_LegacyFormatMode&gt;項目
 決定是否執行階段會保留舊版行為，在格式化作業與<xref:System.TimeSpan?displayProperty=nameWithType>值。  
   
  \<configuration>  
 \<執行階段 >  
-< TimeSpan_LegacyFormatMode >  
+<TimeSpan_LegacyFormatMode>  
   
 ## <a name="syntax"></a>語法  
   
@@ -93,6 +93,6 @@ Invalid Format
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>另請參閱
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

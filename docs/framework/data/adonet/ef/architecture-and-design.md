@@ -2,12 +2,12 @@
 title: 架構與設計
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576326"
 ---
 # <a name="architecture-and-design"></a>架構與設計
 中的 SQL 產生模組[範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)會實作成運算式樹狀架構表示的命令樹上的造訪者。 此產生作業是透過運算式樹狀，在單一行程中完成。  
@@ -414,5 +414,5 @@ IsEmpty(inut) = Not Exists(input)
   
  若要同時針對範圍別名與資料行產生唯一的名稱，請使用 <existing_name>_n，其中 n 是尚未使用過的最小別名。 所有別名的全域清單會增加串聯重新命名的需求。  
   
-## <a name="see-also"></a>另請參閱  
- [範例提供者中的 SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>另請參閱
+- [範例提供者中的 SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70d2d4ed0d2b923b1095fd0ce898330c319fa5cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637368"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType 列舉
-指定如何將物件序列化 common language runtime。  
+指定 common language runtime 序列化物件的方式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,32 +60,32 @@ typedef enum CorSerializationType {
 |成員|描述|  
 |------------|-----------------|  
 |`SERIALIZATION_TYPE_UNDEFINED`|物件序列化為未定義。|  
-|`SERIALIZATION_TYPE_BOOLEAN`|將物件序列化為布林型別|  
-|`SERIALIZATION_TYPE_CHAR`|將物件序列化為字元類型。|  
-|`SERIALIZATION_TYPE_I1`|物件會序列化為 1 位元組帶正負號的整數。|  
-|`SERIALIZATION_TYPE_U1`|物件會序列化為 1 位元組不帶正負號的整數。|  
+|`SERIALIZATION_TYPE_BOOLEAN`|將物件序列化為的布林值的類型|  
+|`SERIALIZATION_TYPE_CHAR`|物件會序列化為字元類型。|  
+|`SERIALIZATION_TYPE_I1`|物件會序列化為帶正負號的 1 位元整數。|  
+|`SERIALIZATION_TYPE_U1`|物件會序列化為不帶正負號的 1 位元整數。|  
 |`SERIALIZATION_TYPE_I2`|物件會序列化為 2 位元組帶正負號的整數。|  
-|`SERIALIZATION_TYPE_U2`|物件會序列化為 2 位元組不帶正負號的整數。|  
+|`SERIALIZATION_TYPE_U2`|物件會序列化為不帶正負號的 2 位元整數。|  
 |`SERIALIZATION_TYPE_I4`|物件會序列化為 4 位元組帶正負號的整數。|  
 |`SERIALIZATION_TYPE_U4`|物件會序列化為 4 位元組不帶正負號的整數。|  
-|`SERIALIZATION_TYPE_I8`|物件會序列化為 8 位元組帶正負號的整數。|  
-|`SERIALIZATION_TYPE_U8`|物件會序列化為 8 位元組不帶正負號的整數。|  
-|`SERIALIZATION_TYPE_R4`|物件會序列化為 4 位元組浮點數。|  
+|`SERIALIZATION_TYPE_I8`|物件會序列化為帶正負號的 8 位元整數。|  
+|`SERIALIZATION_TYPE_U8`|物件會序列化為不帶正負號的 8 位元整數。|  
+|`SERIALIZATION_TYPE_R4`|物件會序列化成 4 位元組浮點數。|  
 |`SERIALIZATION_TYPE_R8`|物件會序列化為 8 位元組浮點數。|  
 |`SERIALIZATION_TYPE_STRING`|將物件序列化為 System.String 類型。|  
 |`SERIALIZATION_TYPE_SZARRAY`|將物件序列化為一維，下限為零的陣列。|  
-|`SERIALIZATION_TYPE_TYPE`|將物件序列化為泛型類型。|  
+|`SERIALIZATION_TYPE_TYPE`|物件會序列化為泛型型別。|  
 |`SERIALIZATION_TYPE_TAGGED_OBJECT`|物件會序列化為標記的物件。|  
 |`SERIALIZATION_TYPE_FIELD`|物件會序列化為欄位。|  
 |`SERIALIZATION_TYPE_PROPERTY`|物件會序列化為屬性。|  
 |`SERIALIZATION_TYPE_ENUM`|物件會序列化為列舉型別。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

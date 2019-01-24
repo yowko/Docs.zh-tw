@@ -8,20 +8,20 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: f88020c7407fb9c91e06bc2ee177773171e344fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7db5f8afdfe61709aba9569bcee8c0d3aa6ee44f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527038"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 指定呼叫程序時，可以省略程序引數。  
   
 ## <a name="remarks"></a>備註  
- 每一個選擇性參數，您必須指定為該參數的預設值的常數運算式。 如果運算式評估為[Nothing](../../../visual-basic/language-reference/nothing.md)，預設值的數值資料類型作為參數的預設值。  
+ 每一個選擇性的參數，您必須指定該參數的預設值的常數運算式。 如果運算式評估為[Nothing](../../../visual-basic/language-reference/nothing.md)，值的資料類型的預設值做為參數的預設值。  
   
- 如果參數清單包含一個選擇性參數，它後面的每個參數也必須是選擇性。  
+ 如果參數清單包含選擇性參數，便會跟隨它的每個參數也必須是選擇性。  
   
  `Optional` 修飾詞可用於以下內容：  
   
@@ -34,13 +34,13 @@ ms.locfileid: "33599300"
 -   [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
->  當呼叫程序使用或不含選擇性參數，您可以在依位置或名稱傳遞引數。 如需詳細資訊，請參閱[傳遞引數依位置和名稱](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)。  
+>  呼叫程序時使用或不含選擇性參數，您可以依位置或依名稱傳遞引數。 如需詳細資訊，請參閱 <<c0> [ 傳遞引數依位置和名稱](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)。  
   
 > [!NOTE]
->  您也可以使用多載，以定義具有選擇性參數的程序。 如果您有一個選擇性參數，您可以定義程序接受參數，一個沒有兩個多載的版本。 如需詳細資訊，請參閱[程序多載](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)。  
+>  您也可以使用多載，以定義與選擇性參數的程序。 如果您有一個選擇性參數，您可以定義兩個程序，一個可接受的參數，其中並不多載的版本。 如需詳細資訊，請參閱 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會定義具有選擇性參數的程序。  
+ 下列範例會定義具有一個選擇性參數的程序。  
   
 ```  
 Public Function FindMatches(ByRef values As List(Of String),  
@@ -62,11 +62,11 @@ End Function
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何依位置傳遞引數與依名稱傳遞引數呼叫的程序。 程序有兩個選擇性參數。  
+ 下列範例示範如何呼叫程序，使用依位置傳遞的引數，並以依名稱傳遞的引數。 程序中的兩個選擇性參數。  
   
  [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>另請參閱
+- [參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

@@ -2,20 +2,20 @@
 title: '&lt;textMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: 0ee50a4b5adeede2dd531ba734ac9fb420f3b713
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 68b5c9f1f158f7f78f4ea31dedb9b72eab409e05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540698"
 ---
 # <a name="lttextmessageencodinggt"></a>&lt;textMessageEncoding&gt;
 指定字元編碼和訊息版本處理，用於文字 XML 訊息。  
   
  \<system.serviceModel>  
-\<繫結 >  
+\<bindings>  
 \<customBinding>  
-\<繫結 >  
+\<binding>  
 \<textMessageEncoding>  
   
 ## <a name="syntax"></a>語法  
@@ -49,7 +49,7 @@ ms.locfileid: "54150236"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
  編碼是將訊息轉換成位元組序列的處理序， 解碼則是相反的處理序。 Windows Communication Foundation (WCF) 包含三種類型的 SOAP 訊息的編碼方式：文字、 二進位和訊息傳輸最佳化機制 (MTOM)。  
@@ -65,14 +65,14 @@ ms.locfileid: "54150236"
                      textEncoding="utf-8" />
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.TextMessageEncodingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
- [選擇訊息編碼器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [訊息編碼](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.TextMessageEncodingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+- [選擇訊息編碼器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [訊息編碼](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

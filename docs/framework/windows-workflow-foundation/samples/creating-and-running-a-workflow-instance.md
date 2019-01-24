@@ -2,12 +2,12 @@
 title: 建立與執行工作流程執行個體
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
-ms.openlocfilehash: 571d41194ebc98be81646fb5bfdab060225015ca
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: a86835155417692bc332bf51eb5825ce0b017b04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527259"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>建立與執行工作流程執行個體
 這個範例示範如何執行工作流程執行個體。 範例中會示範如何以同步和非同步方式執行。  
@@ -29,5 +29,5 @@ ms.locfileid: "46562238"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreatingWorkflowInstances`  
   
-## <a name="see-also"></a>另請參閱  
- [使用 WorkflowInvoker 與 WorkflowApplication](../../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)
+## <a name="see-also"></a>另請參閱
+- [使用 WorkflowInvoker 與 WorkflowApplication](../../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)

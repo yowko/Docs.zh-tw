@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ref return values [Visual Basic]
 - ref returns [Visual Basic]
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
-ms.openlocfilehash: ba649c4beaf3ec70a8c118f823fe8f25651a05a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f3543d93bb2d313aa000cdee38bc713a9bb02b1d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634398"
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>支援參考傳回值 (Visual Basic)
 
@@ -47,7 +47,7 @@ Visual Basic 不允許您撰寫方法，以參考傳回值，但能讓您使用�
 
 ## <a name="see-also"></a>另請參閱
 
-[值和傳參考方式傳遞引數](passing-arguments-by-value-and-by-reference.md)   
-[Visual Basic 中的程序](index.md)   
+- [值和傳參考方式傳遞引數](passing-arguments-by-value-and-by-reference.md)
+- [Visual Basic 中的程序](index.md)
 
 

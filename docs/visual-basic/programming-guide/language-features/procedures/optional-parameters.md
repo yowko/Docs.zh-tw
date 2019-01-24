@@ -12,15 +12,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: a438455668310769c5267a6d42a2e694bb7b01dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7f7910b5e19c3e1a22598c1a987aa2b02e256e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552225"
 ---
 # <a name="optional-parameters-visual-basic"></a>選擇性參數 (Visual Basic)
-您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *選擇性參數*以`Optional`程序定義中的關鍵字。 可套用下列規則：  
+您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *選擇性參數*由`Optional`程序定義中的關鍵字。 可套用下列規則：  
   
 -   程序定義中的每一個選擇性參數都必須指定一個預設值。  
   
@@ -50,7 +50,7 @@ Sub name(argument 1, , , argument 4)
  [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>判斷是否有選擇性引數  
- 程序在執行階段時無法偵測指定的引數是否已省略，或者呼叫程式碼已明確提供預設值。 如果您需要有所區別，可以將一個不常用的值設定為預設值。 下列程序定義選擇性參數`office`，和其預設值，測試`QJZ`，以查看是否在呼叫中將其省略：  
+ 程序在執行階段時無法偵測指定的引數是否已省略，或者呼叫程式碼已明確提供預設值。 如果您需要有所區別，可以將一個不常用的值設定為預設值。 下列程序定義選擇性參數`office`，並為其預設值的測試`QJZ`，以查看是否在呼叫中將其省略：  
   
  [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
   
@@ -59,12 +59,12 @@ Sub name(argument 1, , , argument 4)
 ## <a name="optional-parameters-and-overloading"></a>選擇性參數和多載化  
  另一個用選擇性參數定義程序的方式是使用多載化 (Overloading)。 如果您有一個選擇性參數，您可以定義程序的兩個多載版本，其中一個接受該參數，而另一個則不接受。 隨著選擇性參數數目的增加，這個方法會變得比較複雜。 但是，它的優點是可以完全確定呼叫程式是否提供每一個選擇性引數。  
   
-## <a name="see-also"></a>另請參閱  
- [程序](./index.md)  
- [程序參數和引數](./procedure-parameters-and-arguments.md)  
- [以傳值和傳址方式傳遞引數](./passing-arguments-by-value-and-by-reference.md)  
- [依位置和名稱傳遞引數](./passing-arguments-by-position-and-by-name.md)  
- [參數陣列](./parameter-arrays.md)  
- [程序多載化](./procedure-overloading.md)  
- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>另請參閱
+- [程序](./index.md)
+- [程序參數和引數](./procedure-parameters-and-arguments.md)
+- [以傳值和傳址方式傳遞引數](./passing-arguments-by-value-and-by-reference.md)
+- [依位置和名稱傳遞引數](./passing-arguments-by-position-and-by-name.md)
+- [參數陣列](./parameter-arrays.md)
+- [程序多載化](./procedure-overloading.md)
+- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

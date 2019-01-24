@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d1bd732a82028afe809f4c2141e1d61668eae1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b87444165f0504964b6489beb562ca2e8bd4697e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524282"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout 方法
-取得字串物件配置的相關資訊。 這個方法已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]，和已取代[icorprofilerinfo3:: Getstringlayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md)方法。  
+取得字串物件配置的相關資訊。 這個方法已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]，並已取代[ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,21 +38,21 @@ HRESULT GetStringLayout(
   
 #### <a name="parameters"></a>參數  
  `pBufferLengthOffset`  
- [out]指標的位置，相對於位移`ObjectID`指標儲存字串的長度。 長度會儲存為`DWORD`。  
+ [out]指標位移的位置，相對於`ObjectID`指標，儲存字串的長度。 長度會儲存為`DWORD`。  
   
 > [!NOTE]
->  這個參數會傳回字串的長度，不是緩衝區的長度。 不再使用之緩衝區的長度。  
+>  此參數會傳回字串的長度，不是緩衝區的長度。 緩衝區的長度已無法再使用。  
   
  `PStringLengthOffset`  
- [out]指標的位置，相對於位移`ObjectID`儲存字串本身長度的指標。 長度會儲存為`DWORD`。  
+ [out]指標位移的位置，相對於`ObjectID`儲存的字串本身長度的指標。 長度會儲存為`DWORD`。  
   
  `pBufferOffset`  
  [out]相對於的緩衝區位移的指標`ObjectID`儲存的寬字元字串的指標。  
   
 ## <a name="remarks"></a>備註  
- `GetStringLayout`方法會取得位移，相對於`ObjectID`指標，下列儲存所在的位置：  
+ `GetStringLayout`方法會取得位移，相對於`ObjectID`指標，下列預存的位置：  
   
--   字串緩衝區的長度。  
+-   字串的緩衝區的長度。  
   
 -   字串本身長度。  
   
@@ -61,14 +61,14 @@ HRESULT GetStringLayout(
  字串可能會以 null 結束。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

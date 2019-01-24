@@ -1,5 +1,5 @@
 ---
-title: 操作說明：使用 From、To 和 By 控制動畫
+title: HOW TO：使用 From、To 和 By 控制動畫
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], From/to/by
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-ms.openlocfilehash: e422c008ae3051ecd69b3278eb05fc0e2d1b1a0b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dda8cdb6159cc6d8e6da5b7d430ebf76aaa100b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530307"
 ---
-# <a name="how-to-control-an-animation-using-from-to-and-by"></a>操作說明：使用 From、To 和 By 控制動畫
+# <a name="how-to-control-an-animation-using-from-to-and-by"></a>HOW TO：使用 From、To 和 By 控制動畫
 「 From/To/By"或 「 基本動畫 」 會建立兩個目標值之間的轉換 (請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)不同類型動畫的簡介)。 若要設定基本動畫目標值時，使用其<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性。  下表摘要說明如何<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性可能會一起或分開來決定動畫的目標值。  
   
 |指定的屬性|產生的行為|  
@@ -37,7 +37,7 @@ ms.locfileid: "43858801"
 ## <a name="example"></a>範例  
  [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
   
-## <a name="see-also"></a>另請參閱  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [From、To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)
+## <a name="see-also"></a>另請參閱
+- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [From、To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)

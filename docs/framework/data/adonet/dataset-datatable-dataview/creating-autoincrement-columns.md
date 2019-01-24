@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cf09732a-ab54-4d98-89e2-4d0a1f28fbce
-ms.openlocfilehash: 9c6b5393e1928828bca001ba1d2336f09e64c22c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b4beffb3c5072e9eaa398e7433b363babadbb9eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528637"
 ---
 # <a name="creating-autoincrement-columns"></a>建立自動遞增資料行
 若要確保資料行的值是唯一的，您可以在將新資料列加入至資料表時，將資料行值設為自動累加。 若要建立自動遞增<xref:System.Data.DataColumn>，將<xref:System.Data.DataColumn.AutoIncrement%2A>屬性的資料行 **，則為 true**。 <xref:System.Data.DataColumn>開頭中定義的值，然後<xref:System.Data.DataColumn.AutoIncrementSeed%2A>屬性，加入每個資料列的值**AutoIncrement**資料行中定義的值會增加<xref:System.Data.DataColumn.AutoIncrementStep%2A>資料行屬性。  
@@ -35,8 +35,8 @@ workColumn.AutoIncrementSeed = 200;
 workColumn.AutoIncrementStep = 3;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Data.DataColumn>  
- [DataTable 結構描述定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Data.DataColumn>
+- [DataTable 結構描述定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
+- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

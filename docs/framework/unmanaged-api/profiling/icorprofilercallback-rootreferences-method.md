@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 467d065ab4d47e698c7043697ebe2ccf5f98a3cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94b736a8e3250f4d208d4a9a46a022140b676318
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631345"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>ICorProfilerCallback::RootReferences 方法
-通知分析工具的記憶體回收之後根參考的相關資訊。  
+通知分析工具，但記憶體回收之後根參考的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,20 +43,20 @@ HRESULT RootReferences(
  [in]參考靜態物件或物件在堆疊上的物件識別碼的陣列。  
   
 ## <a name="remarks"></a>備註  
- 同時`RootReferences`和[icorprofilercallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)呼叫以通知分析工具。 程式碼剖析工具通常會實作，其中一個或另一個，但不是能同時，因為資訊傳入`RootReferences2`為傳入的超集`RootReferences`。  
+ 兩者`RootReferences`並[ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)呼叫以通知分析工具。 分析工具通常會實作，其中一種，但非兩者皆是，因為傳入的資訊`RootReferences2`傳入的超集`RootReferences`。  
   
- 可能會`rootRefIds`陣列，包含 null 的物件。 例如，在堆疊上宣告的所有物件參考記憶體回收行程視為根，並將報告。  
+ 可能會`rootRefIds`包含 null 物件的陣列。 比方說，在堆疊上宣告的所有物件參考會被視為由記憶體回收行程的根目錄，並將報告。  
   
- 所傳回的物件識別碼`RootReferences`不自行，回呼期間有效，因為記憶體回收可能正在將物件從舊位址移到新的位址。 因此，分析工具必須不嘗試期間檢查物件`RootReferences`呼叫。 當[icorprofilercallback2:: Garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)是呼叫，所有物件都已移至其新位置並且可以安全地進行檢查。  
+ 所傳回的物件識別碼`RootReferences`不本身的回呼期間有效，因為記憶體回收可能正在將物件從舊位址移到新的位址。 因此，程式碼剖析工具不得嘗試期間檢查物件`RootReferences`呼叫。 當[ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)是呼叫，所有物件都已移至其新位置和可以安全地進行檢查。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

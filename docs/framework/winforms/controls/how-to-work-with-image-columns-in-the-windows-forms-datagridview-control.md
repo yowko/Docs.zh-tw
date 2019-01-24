@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows Form DataGridView 控制項中的影像資料行
+title: HOW TO：使用 Windows Form DataGridView 控制項中的影像資料行
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - image columns [Windows Forms], Windows Forms
 - DataGridView control [Windows Forms], image columns
 ms.assetid: 8a37aa75-3c6e-4893-91d0-7a5f34bfe287
-ms.openlocfilehash: 7948ee69b35aaca111fa71e6f0540f2fcffc05dd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 649362055273c12c13b04fc06d4fdeb6d8d4b491
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579481"
 ---
-# <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>如何：使用 Windows Form DataGridView 控制項中的影像資料行
+# <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>HOW TO：使用 Windows Form DataGridView 控制項中的影像資料行
 下列程式碼範例示範如何在互動式使用者介面 (UI) 中使用 <xref:System.Windows.Forms.DataGridView> 影像資料行。 此範例也會示範使用 <xref:System.Windows.Forms.DataGridViewImageColumn> 時的影像大小調整和配置的可能性。  
   
 ## <a name="example"></a>範例  
@@ -30,10 +30,10 @@ ms.locfileid: "43388742"
   
 -   System 和 System.Windows.Forms 組件的參考。  
   
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[How to:編譯並執行完整的 Windows Form 程式碼範例使用 Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewImageColumn>  
- [在 Windows Forms DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
- [操作說明：顯示 Windows Form DataGridView 控制項的儲存格影像](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewImageColumn>
+- [在 Windows Forms DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [如何：Windows Forms DataGridView 控制項的儲存格的顯示影像](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)

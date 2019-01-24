@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: 9107b946394ab70980e4865364fc1ba9683e2025
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: cfc18df4487488bd90d7b0250a9053f55305d8a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785156"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631489"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 屬性軸屬性 (Visual Basic)
 提供的屬性值存取權<xref:System.Xml.Linq.XElement>物件或集合中的第一個項目<xref:System.Xml.Linq.XElement>物件。  
@@ -30,21 +30,21 @@ object.@<attribute>
   
 ## <a name="parts"></a>組件  
  `object`  
- 必要。 <xref:System.Xml.Linq.XElement>物件或集合<xref:System.Xml.Linq.XElement>物件。  
+ 必要項。 <xref:System.Xml.Linq.XElement>物件或集合<xref:System.Xml.Linq.XElement>物件。  
   
  .@  
- 必要。 表示屬性軸屬性的開頭。  
+ 必要項。 表示屬性軸屬性的開頭。  
   
  <  
  選擇性。 表示屬性名稱的開頭時`attribute`不在 Visual Basic 中是有效的識別項。  
   
  `attribute`  
- 必要。 若要存取，在表單的屬性名稱的 [`prefix`:]`name`。  
+ 必要項。 若要存取，在表單的屬性名稱的 [`prefix`:]`name`。  
   
 |組件|描述|  
 |----------|-----------------|  
 |`prefix`|選擇性。 XML 屬性的命名空間前置詞。 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。|  
-|`name`|必要。 本機屬性名稱。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
+|`name`|必要項。 本機屬性名稱。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
   
  \>  
  選擇性。 代表屬性名稱的結尾時`attribute`不在 Visual Basic 中是有效的識別項。  
@@ -106,9 +106,9 @@ object.@<attribute>
   
  `Phone type: home`  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Linq.XElement>  
- [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)  
- [在 Visual Basic 中建立 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Xml.Linq.XElement>
+- [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)
+- [在 Visual Basic 中建立 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

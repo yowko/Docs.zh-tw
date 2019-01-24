@@ -12,19 +12,19 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4170ca53252fef3afda026393300e34b99e9d018
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583080"
 ---
 # <a name="array-conversions-visual-basic"></a>陣列轉換 (Visual Basic)
 您可以將陣列型別轉換成不同的陣列型別，提供符合下列條件：  
   
 -   **相等的順位。** 兩個陣列的陣序規範必須相同，也就是它們必須具有相同的維度數目。 不過，個別的維度的長度不需要相同。  
   
--   **項目資料型別。** 兩個陣列元素的資料類型必須是參考型別。 您無法轉換`Integer`陣列`Long`陣列、 或甚至`Object`陣列，因為牽涉到至少一個實值型別。 如需詳細資訊，請參閱 <<c0> [ 實值型別和參考型別](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
+-   **項目資料型別。** 兩個陣列元素的資料類型必須是參考型別。 您無法轉換`Integer`陣列`Long`陣列、 或甚至`Object`陣列，因為牽涉到至少一個實值型別。 如需詳細資訊，請參閱 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
   
 -   **可轉換性。** 轉換，以擴大或縮小，必須能夠在兩個陣列項目類型之間。 舉例來說，未通過這項需求是嘗試之間的轉換`String`陣列和陣列的類別衍生自<xref:System.Attribute?displayProperty=nameWithType>。 這兩種類型沒有任何共通點，並沒有任何類型的轉換之間存在。  
   
@@ -59,12 +59,12 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [隱含和明確轉換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [如何： 將物件轉換成 Visual Basic 中的另一個類型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)  
- [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>另請參閱
+- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [隱含和明確轉換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [如何：將物件轉換成 Visual Basic 中的另一個類型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)
+- [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

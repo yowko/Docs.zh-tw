@@ -2,12 +2,12 @@
 title: 非同步程式 (Visual Basic) 中的控制流程
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 368422338f6452bf5dbe968d4798bc0d5e937c92
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 24a3ece8393fd739ff76fbe759a5572414ce5748
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532522"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>非同步程式 (Visual Basic) 中的控制流程
 您可以使用 `Async` 和 `Await` 關鍵字更輕鬆地撰寫和維護非同步程式。 不過，如果您不了解程式的運作方式，則結果可能會讓您大吃一驚。 本主題透過簡單非同步程式來追蹤控制流程，以顯示控制何時從某個方法移至另一個方法以及每次傳輸的資訊。  
@@ -98,7 +98,7 @@ Length of the downloaded string: 33946.
 >  若要執行範例時，您必須擁有 Visual Studio 2012 或更新版本以及.NET Framework 4.5 或更新版本安裝在電腦上。  
   
 ### <a name="download-the-program"></a>下載程式  
- 您可以從 [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (非同步範例：非同步程式中的控制流程) 下載本主題的應用程式。 下列步驟會開啟和執行程式。  
+ 您可以下載本主題中的應用程式[非同步範例：非同步程式中的控制流程](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)。 下列步驟會開啟和執行程式。  
   
 1.  解壓縮下載的檔案，然後啟動 Visual Studio。  
   
@@ -358,8 +358,8 @@ Dim contentLength As Integer = Await getLengthTask
   
  ![步驟六](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")  
   
-## <a name="see-also"></a>另請參閱  
- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [非同步方法的傳回型別 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (非同步範例：非同步程式中的控制流程 (C# 和 Visual Basic))
+## <a name="see-also"></a>另請參閱
+- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [非同步方法的傳回型別 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [非同步範例：非同步程式中的控制流程 (C#和 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

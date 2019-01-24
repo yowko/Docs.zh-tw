@@ -1,5 +1,5 @@
 ---
-title: '&lt;移除&gt;NameValueSectionHandler DictionarySectionHandler 的項目'
+title: '&lt;移除&gt;NameValueSectionHandler 和 DictionarySectionHandler 的項目'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 61f1c98d3f12b5aa1d25595ca28328602683b073
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ece76f06f5ecbf47302b62a5e546cc13298106bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535576"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<移除 > NameValueSectionHandler DictionarySectionHandler 的項目
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<移除 > NameValueSectionHandler 和 DictionarySectionHandler 的項目
 
 移除先前定義的設定。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<移除 >**
+&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>語法
 
@@ -38,9 +38,9 @@ ms.locfileid: "32742909"
 
 ## <a name="parent-element"></a>父項目
 
-| 項目 | 描述 |
+| 元素 | 描述 |
 | ------- | ------------|
-| [**\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義自訂組態區段，使用設定<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
+| [**\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義設定使用的自訂組態區段<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -48,13 +48,13 @@ ms.locfileid: "32742909"
 
 ## <a name="remarks"></a>備註
 
-您可以使用**\<移除 >** 項目移除您已在組態檔階層架構中較高層級定義的應用程式的設定。
+您可以使用**\<移除 >** 來移除您已定義在組態檔階層架構中較高層級的應用程式設定的項目。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用**\<移除 >** 應用程式組態檔中移除電腦組態檔中預先定義的設定項目。
+下列範例示範如何使用**\<移除 >** 應用程式組態檔中移除先前在電腦組態檔中定義的設定項目。
 
-下列的機器組態檔案程式碼會宣告區段 **\<mySection >** ，並將兩項設定，`key1`和`key2`，它：
+下列的機器組態檔案程式碼會宣告一節 **\<mySection >** ，並將兩種設定`key1`和`key2`，給它：
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ ms.locfileid: "32742909"
 </configuration>
 ```
 
-下列應用程式組態檔程式碼會移除`key2`從設定 **\<mySection >**:
+下列應用程式組態檔程式碼中移除`key2`上設定 **\<mySection >**:
 
 ```xml
 <!--Application configuration file -->
@@ -82,8 +82,8 @@ ms.locfileid: "32742909"
 
 ## <a name="configuration-file"></a>組態檔
 
-此項目可以用於應用程式組態檔中，電腦組態檔 (*Machine.config*)，和*Web.config*不在應用程式目錄層級的檔案。
+這個項目可用的應用程式組態檔中，電腦組態檔 (*Machine.config*)，以及*Web.config*不在應用程式的目錄層級的檔案。
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
+- [適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

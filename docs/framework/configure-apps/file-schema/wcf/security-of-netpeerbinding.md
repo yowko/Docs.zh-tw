@@ -2,20 +2,20 @@
 title: '&lt;netPeerBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: eb25535e9eb0b74e8f92a77cf86656cc3788f0aa
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6b4fe62afad22de880fdaaefad0e719f29c63fd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553941"
 ---
 # <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a>&lt;netPeerBinding&gt; 的 &lt;security&gt;
 定義的安全性設定[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)、 包括的驗證類型使用，以及使用訊息傳輸的安全性。  
   
  \<system.ServiceModel>  
-\<繫結 >  
+\<bindings>  
 \<netPeerBinding>  
-\<繫結 >  
+\<binding>  
 \<安全性 >  
   
 ## <a name="syntax"></a>語法  
@@ -58,19 +58,19 @@ ms.locfileid: "54146117"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/misc/binding.md)|定義的所有繫結功能[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義的所有繫結功能[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。|  
   
 ## <a name="remarks"></a>備註  
  安全性可以是訊息特定或傳輸特定。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.PeerSecurityElement>  
- <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>  
- <xref:System.ServiceModel.PeerSecuritySettings>  
- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.PeerSecurityElement>
+- <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>
+- <xref:System.ServiceModel.PeerSecuritySettings>
+- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

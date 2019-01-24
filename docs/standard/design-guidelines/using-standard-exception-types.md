@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
 author: KrzysztofCwalina
-ms.openlocfilehash: dbf54f602fbe4ace01b60bb57e1106d3f19ba7df
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b947c7cce057c060b1ab5054d1227f5703ccbf89
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543902"
 ---
 # <a name="using-standard-exception-types"></a>使用標準例外狀況類型
 本章節描述的架構和其使用方式詳細資料所提供的標準例外狀況。 清單並不詳盡。 請參閱.NET Framework 參考文件的使用方式的其他 Framework 例外狀況型別。  
@@ -65,5 +65,5 @@ ms.locfileid: "53144217"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [例外狀況的設計方針](../../../docs/standard/design-guidelines/exceptions.md)

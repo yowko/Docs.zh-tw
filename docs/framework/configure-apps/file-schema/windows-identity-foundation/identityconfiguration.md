@@ -3,12 +3,12 @@ title: '&lt;identityConfiguration&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
 author: BrucePerlerMS
-ms.openlocfilehash: 11ba7df79ead1693fc6828aeabde413237680737
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7c20f3d00b71eacbf8409c3f848d550445468e5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193771"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513096"
 ---
 # <a name="ltidentityconfigurationgt"></a>&lt;identityConfiguration&gt;
 指定服務層級身分識別設定。  
@@ -43,19 +43,19 @@ ms.locfileid: "47193771"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<快取 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|註冊用於工作階段權杖和權杖重新執行偵測快取。 可以在服務層級或上指定的安全性權杖處理常式集合。 選擇性。|  
-|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制權杖處理常式用來驗證憑證的設定。 可以在服務層級或上指定的安全性權杖處理常式集合。 選擇性。|  
-|[\<claimsAuthenticationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|註冊的連入宣告的宣告驗證管理員。 選擇性。|  
-|[\<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|註冊的連入宣告的宣告授權管理員。 選擇性。|  
-|[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|指定必要的連入安全性權杖的宣告集。 選擇性。|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|註冊用於工作階段權杖和權杖重新執行偵測快取。 可以在服務層級或上指定的安全性權杖處理常式集合。 選擇性。|  
+|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制權杖處理常式用來驗證憑證的設定。 可以在服務層級或上指定的安全性權杖處理常式集合。 選擇性。|  
+|[\<claimsAuthenticationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|註冊的連入宣告的宣告驗證管理員。 選擇性。|  
+|[\<claimsAuthorizationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|註冊的連入宣告的宣告授權管理員。 選擇性。|  
+|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|指定必要的連入安全性權杖的宣告集。 選擇性。|  
 |[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定安全性權杖處理常式的集合。 您可以指定零個或多個安全性權杖處理常式集合。 選擇性。|  
-|[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|啟用權杖重新執行偵測，並指定權杖的到期時間。 可以在服務層級或上指定的安全性權杖處理常式集合。 選擇性。|  
+|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|啟用權杖重新執行偵測，並指定權杖的到期時間。 可以在服務層級或上指定的安全性權杖處理常式集合。 選擇性。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<system.identityModel >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|提供啟用應用程式中的 Windows Identity Foundation (WIF) 選項的設定。|  
+|[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|提供啟用應用程式中的 Windows Identity Foundation (WIF) 選項的設定。|  
   
 ## <a name="remarks"></a>備註  
  多個身分識別可能會定義組態，每個都有唯一的名稱。 的行為如下所示：  
@@ -79,10 +79,10 @@ ms.locfileid: "47193771"
 > [!IMPORTANT]
 >  指定下列項目作為子項目的`<identityConfiguration>`，也已被取代的項目，雖然行為仍然會支援回溯相容性。 這些項目，相反地，必須指定底下[ \<Securitytokenhandlerconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)項目。  
 >   
->  -   [\<audienceUris >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
-> -   [\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
-> -   [\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
-> -   [\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
+>  -   [\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
+> -   [\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
+> -   [\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
+> -   [\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
   
 ## <a name="example"></a>範例  
  下列範例會建立名為"alternateConfiguration"的身分識別組態。 身分識別組態會指定預設設定。  
@@ -93,6 +93,6 @@ ms.locfileid: "47193771"
 </system.identityModel>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.IdentityModel.Configuration.IdentityConfiguration>  
- <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>
+## <a name="see-also"></a>另請參閱
+- <xref:System.IdentityModel.Configuration.IdentityConfiguration>
+- <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>

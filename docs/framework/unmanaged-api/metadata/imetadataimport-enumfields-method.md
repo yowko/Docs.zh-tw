@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd8a2d373b801bd8238d50eecb388ef511bc34bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c16f904251545b87426210a76c5107e93a27749
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639558"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields 方法
 列舉指定 TypeDef 語彙基元所參考類型的 FieldDef 語彙基元。  
@@ -47,30 +47,30 @@ HRESULT EnumFields (
  [in]其欄位是列舉類別的 TypeDef 語彙基元。  
   
  `rFields`  
- [out]Fielddef 語彙基元清單。  
+ [out]FieldDef 語彙基元清單。  
   
  `cMax`  
  [in] `rFields` 陣列的大小上限。  
   
  `pcTokens`  
- [out]Fielddef 語彙基元中傳回的實際數目`rFields`。  
+ [out]中傳回的 fielddef 語彙基元的實際數目`rFields`。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |`S_OK`|`EnumFields` 已成功傳回。|  
-|`S_FALSE`|沒有要列舉的欄位。 在此情況下，`pcTokens`為零。|  
+|`S_FALSE`|沒有列舉欄位。 在此情況下，`pcTokens`為零。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：為 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項建立查閱資料表
+title: HOW TO：Windows form 的 ComboBox、 ListBox 或 CheckedListBox 控制項建立查閱資料表
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: b719f2112aac1292b668fe199d48de4b0b60ed21
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 264a50cb2f9346ea164cedfbe5ced5e231e246ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516517"
 ---
-# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：為 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項建立查閱資料表
+# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>HOW TO：Windows form 的 ComboBox、 ListBox 或 CheckedListBox 控制項建立查閱資料表
 在 Windows Form 上以方便使用的格式來顯示資料，但以對程式更有意義的格式來存放資料，這樣的做法有時候相當實用。 例如，食品的訂單表單可能會在清單方塊中依名稱來顯示功能表項目。 但是，記錄訂單的資料表則會包含代表食品的唯一 ID 編號。 下表將顯示如何存放並顯示食品訂單表單資料的範例。  
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
@@ -70,9 +70,9 @@ ms.locfileid: "43773085"
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [資料繫結和 Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [ListBox 控制項概觀](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- [ComboBox 控制項概觀](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- [CheckedListBox 控制項概觀](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- [用來列出選項的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>另請參閱
+- [資料繫結和 Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [ListBox 控制項概觀](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)
+- [ComboBox 控制項概觀](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)
+- [CheckedListBox 控制項概觀](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)
+- [用來列出選項的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

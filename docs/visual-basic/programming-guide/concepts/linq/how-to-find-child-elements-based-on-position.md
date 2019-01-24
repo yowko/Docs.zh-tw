@@ -1,15 +1,15 @@
 ---
-title: 如何： 尋找子項目根據位置 (XPATH-LINQ to XML) (Visual Basic)
+title: HOW TO：尋找子項目根據位置 (XPATH-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
-ms.openlocfilehash: 9f18da12786b4c44dc21e54c8d5020f49ef9ecb6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 023ad921a5ba03adb306cd6ed93e38ad92406c20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626044"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>如何： 尋找子項目根據位置 (XPATH-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>HOW TO：尋找子項目根據位置 (XPATH-LINQ to XML) (Visual Basic)
 有時候您會想要根據項目的位置尋找這些項目。 您可能想要尋找第二個項目，或者想要尋找第三到第五個項目。  
   
  XPath 運算式為：  
@@ -21,7 +21,7 @@ ms.locfileid: "43390782"
 ## <a name="example"></a>範例  
  這個範例會尋找第二到第四個 `Test` 項目。 結果為項目的集合。  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：測試組態 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[範例 XML 檔：測試組態 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。  
   
 ```vb  
 Dim testCfg As XElement = XElement.Load("TestConfig.xml")  
@@ -78,5 +78,5 @@ Results are identical
 </Test>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to XML (Visual Basic) 的 XPath 使用者適用的](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>另請參閱
+- [LINQ to XML (Visual Basic) 的 XPath 使用者適用的](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

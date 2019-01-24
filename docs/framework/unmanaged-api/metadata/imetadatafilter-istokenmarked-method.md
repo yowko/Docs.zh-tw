@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5bf5149e8e42a810a6a490767638b374f66b5679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 32642c4ff6193e2002c8a4c7d201b36c7601debb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445860"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582535"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked 方法
-取得值，指出指定的中繼資料語彙基元是否已標示為處理。  
+取得值，指出指定的中繼資料語彙基元是否已標示為已處理。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,19 +38,19 @@ HRESULT IsTokenMarked (
   
 #### <a name="parameters"></a>參數  
  `tk`  
- [in]要檢查處理標記的語彙基元。  
+ [in]要檢查處理標記的權杖。  
   
  `pIsMarked`  
- [out]值是`true`如果`tk`已處理，否則為`false`。  
+ [out]值是`true`如果`tk`已經過處理，否則為`false`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataFilter 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataFilter 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

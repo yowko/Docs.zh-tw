@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ff1723cb481ee946e0c5c433009d3d6d7460cf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 69a3b0921528ed09ee4ab3a1ede6b9efe565e02a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619214"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>ICLRRuntimeInfo::IsLoaded 方法
-指出是否與 common language runtime (CLR) 相關聯[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面載入處理序。 可以載入執行階段，但也沒有開始。  
+表示 common language runtime (CLR) 要與相關聯[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面會載入處理序。 但還沒有開始，就可以載入執行階段。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +40,7 @@ HRESULT IsLoaded(
  [in]處理序控制代碼。  
   
  `pbLoaded`  
- [out]`true` CLR 載入處理序; 否則如果`false`。  
+ [out]`true` CLR 載入處理序，否則如果`false`。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
@@ -51,28 +51,28 @@ HRESULT IsLoaded(
 |E_POINTER|`pbLoaded` 為 null。|  
   
 ## <a name="remarks"></a>備註  
- 這個方法是與舊版相容的下列功能和介面：  
+ 這個方法是具有回溯相容性與下列函式和介面：  
   
 -   [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)介面 （在.NET Framework 第 1 版裝載 API)。  
   
--   [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)介面 （在.NET Framework 2.0 裝載應用程式開發介面)。  
+-   [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) （在.NET Framework 2.0 中裝載 API) 的介面。  
   
--   Deprecated`CorBindTo*`函式 (請參閱[已被取代的 CLR 裝載函數](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)裝載 API 的.NET Framework 2.0 中)。  
+-   已被取代`CorBindTo*`函式 (請參閱 <<c2> [ 已被取代 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)裝載 API 的.NET Framework 2.0 中)。  
   
- 主機可能呼叫其中一個已被取代`CorBindTo*`函式，例如[CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)函式，來具現化特定的 clr 版本。 然後再呼叫主機[iclrmetahost:: Getruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md)方法並指定相同的版本號碼，才能取得[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面。  
+ 主機可能呼叫其中一個已被取代`CorBindTo*`函式，例如[CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)函式，來具現化特定的 clr 版本。 主應用程式然後再呼叫[iclrmetahost:: Getruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md)方法並指定相同的版本號碼，才能取得[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面。  
   
- 如果主機然後呼叫`IsLoaded`方法在傳回[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面，`pbLoaded`傳回`true`; 否則它會傳回`false`。  
+ 如果主應用程式接著會呼叫`IsLoaded`方法傳回[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面`pbLoaded`傳回`true`; 否則它會傳回`false`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)

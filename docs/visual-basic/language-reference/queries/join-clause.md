@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: b1551583079c66d1bf5f6963a42d5d24e518fff3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2017e8edbb4d1bd25a3669b92553f2905b567594
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514678"
 ---
 # <a name="join-clause-visual-basic"></a>Join 子句 (Visual Basic)
 將兩個集合合併成單一集合。 根據相符的索引鍵的聯結作業，並使用`Equals`運算子。  
@@ -31,10 +31,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="parts"></a>組件  
  `element`  
- 必要。 要聯結之集合的控制變數。  
+ 必要項。 要聯結之集合的控制變數。  
   
  `collection`  
- 必要。 要結合的左邊識別集合的集合`Join`運算子。 A`Join`子句可以巢狀方式置於另一個`Join`子句，或在`Group Join`子句。  
+ 必要項。 要結合的左邊識別集合的集合`Join`運算子。 A`Join`子句可以巢狀方式置於另一個`Join`子句，或在`Group Join`子句。  
   
  `joinClause`  
  選擇性。 一個以上的額外`Join`子句，以進一步精簡查詢。  
@@ -43,7 +43,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  選擇性。 一個以上的額外`Group Join`子句，以進一步精簡查詢。  
   
  `key1` `Equals` `key2`  
- 必要。 識別要聯結之集合的索引鍵。 您必須使用`Equals`運算子來比較所聯結之集合中的索引鍵。 您可以使用合併聯結條件`And`運算子來識別多個索引鍵。 `key1` 必須從左側集合`Join`運算子。 `key2` 從集合中的右側必須是`Join`運算子。  
+ 必要項。 識別要聯結之集合的索引鍵。 您必須使用`Equals`運算子來比較所聯結之集合中的索引鍵。 您可以使用合併聯結條件`And`運算子來識別多個索引鍵。 `key1` 必須從左側集合`Join`運算子。 `key2` 從集合中的右側必須是`Join`運算子。  
   
  聯結條件中使用索引鍵可以包含一個以上的項目從集合的運算式。 不過，每個索引鍵的運算式可以包含從其個別集合的項目。  
   
@@ -87,10 +87,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `explorer (2424), File Explorer, Priority = 8`  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查詢](../../../visual-basic/language-reference/queries/index.md)  
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查詢](../../../visual-basic/language-reference/queries/index.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)

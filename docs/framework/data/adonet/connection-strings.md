@@ -2,12 +2,12 @@
 title: ADO.NET 中的連接字串
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 078fdab257115296f9ff00330265cb14ff8674c8
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.openlocfilehash: c765eee661858499240344cb5059fe1fa9a58ab5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50409453"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627560"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET 中的連接字串
 
@@ -57,6 +57,6 @@ ms.locfileid: "50409453"
  [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  示範的技術可保護用於連接至資料來源的資訊。
   
-## <a name="see-also"></a>另請參閱  
- [連接至資料來源](/cpp/data/odbc/connecting-to-a-data-source)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [連接至資料來源](/cpp/data/odbc/connecting-to-a-data-source)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

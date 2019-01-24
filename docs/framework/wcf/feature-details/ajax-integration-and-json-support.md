@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-ms.openlocfilehash: bcf1cab9386d9d9503af6258c1bb39f8744c073b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 54942386bb4fb88e72a86b5e25f12cee4776a126
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625636"
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX 整合與 JSON 支援
 Windows Communication Foundation (WCF) 會對 ASP.NET Asynchronous JavaScript 與 XML (AJAX) 及 JavaScript Object Notation (JSON) 資料格式可讓 WCF 服務對 AJAX 用戶端公開作業。 AJAX 用戶端執行的 JavaScript 程式碼並存取這些 WCF 服務，使用 HTTP 要求的網頁。 本節中的主題會提供有關此支援以及如何實作的詳細資訊。  
@@ -29,6 +29,6 @@ Windows Communication Foundation (WCF) 會對 ASP.NET Asynchronous JavaScript �
  [如何：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
  描述如何將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF Web 服務。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>  
- [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>
+- [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

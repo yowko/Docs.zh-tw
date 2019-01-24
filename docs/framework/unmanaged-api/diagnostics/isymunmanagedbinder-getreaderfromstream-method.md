@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c5d3d1b868849d17b2068eecfcfeea0f1e598f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af4e9124140c2b311fb2c10800200f5d4d8dc679
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545760"
 ---
 # <a name="isymunmanagedbindergetreaderfromstream-method"></a>ISymUnmanagedBinder::GetReaderFromStream 方法
-提供中繼資料介面和包含符號存放區的資料流，傳回的正確[ISymUnmanagedReader](isymunmanagedreader-interface.md)從給定的符號存放區的結構，將讀取的偵錯符號。  
+提供中繼資料介面並包含符號存放區的資料流，傳回的正確[ISymUnmanagedReader](isymunmanagedreader-interface.md)指定的符號存放區的結構，將讀取偵錯符號。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,13 +44,13 @@ HRESULT GetReaderFromStream(
  [in]包含符號存放區的資料流指標。  
   
  `pRetVal`  
- [out]設定的指標所傳回[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面。  
+ [out]設定指標所傳回[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedBinder 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedBinder 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)

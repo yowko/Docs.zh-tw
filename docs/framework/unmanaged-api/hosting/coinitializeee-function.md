@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bbd25909e70826f8cd29076c1eb62a4da6779cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 36a603bf1badebd2454601780179a8435f33bc70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525179"
 ---
 # <a name="coinitializeee-function"></a>CoInitializeEE 函式
-確保 common language runtime 執行引擎載入處理序。 此函式已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 使用[iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)方法改為。  
+可確保 common language runtime 執行引擎會載入處理序。 此函式已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 使用[iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)方法改為。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,25 +39,25 @@ HRESULT CoInitializeEE (
  [in]其中一個[COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md)列舉常數。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回標準的 COM 錯誤碼定義於 Winerror.h，與下表中的值。  
+ 定義在 Winerror.h 和下表中的值，這個方法會傳回標準 COM 錯誤碼。  
   
 |傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|執行引擎已順利載入。|  
-|S_FALSE|執行引擎已載入。|  
-|E_FAIL|無法載入執行引擎。|  
+|S_FALSE|已載入的執行引擎。|  
+|E_FAIL|無法載入的執行引擎。|  
   
 ## <a name="remarks"></a>備註  
- 如果先前尚未載入這個方法會將載入的執行引擎。  
+ 如果先前尚未載入，這個方法會載入執行引擎。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料全域靜態函式](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料全域靜態函式](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

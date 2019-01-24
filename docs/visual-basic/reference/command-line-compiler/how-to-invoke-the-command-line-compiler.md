@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: d2d193f8c3d483ff87fe719919982e8c3473ec0b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: dd5fadb9c9f248b5fb4f289bb2d24f1b085a79a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503725"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>HOW TO：叫用命令列編譯器 (Visual Basic)
 您可以叫用命令列編譯器，命令列中，也稱為 MS-DOS 命令提示字元中輸入的可執行檔名稱。 如果您從預設的 Windows 命令提示字元進行編譯，您必須輸入可執行檔的完整的路徑。 若要覆寫此預設行為，您可以使用 Visual Studio 中，開發人員命令提示字元，或修改 PATH 環境變數。 兩者都可讓您只要鍵入編譯器名稱從任何目錄進行編譯。  
@@ -57,6 +57,6 @@ ms.locfileid: "54221839"
   
      例如，如果您在名為目錄中儲存您的原始程式碼`SourceFiles`，您會開啟命令提示字元並輸入`cd SourceFiles`變更至該目錄。 如果目錄包含名為原始程式檔`Source.vb`，您可以輸入來編譯`vbc.exe Source.vb`。  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

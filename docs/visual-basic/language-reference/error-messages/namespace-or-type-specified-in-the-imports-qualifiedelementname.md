@@ -1,5 +1,5 @@
 ---
-title: 命名空間或類型指定在匯入&#39;&lt;完整項目名稱&gt;&#39;規定&#39;t 包含任何 public 成員，或找不到
+title: 在匯入指定的命名空間或類型&#39;&lt;限定&gt;&#39;不&#39;t 包含任何 public 成員，或找不到
 ms.date: 07/20/2015
 f1_keywords:
 - bc40056
@@ -7,24 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 8be0df5cbe4b8d4a640c9b6c2e126b3828254fd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21c0794fb4ed6104204fba5d49e37394eff24865
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552134"
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>命名空間或類型指定在匯入&#39;&lt;完整項目名稱&gt;&#39;規定&#39;t 包含任何 public 成員，或找不到
-中的匯入的命名空間或類型指定\<完整項目名稱 >' 不包含任何 public 成員，或是找不到。 請確定命名空間或類型已定義，而且包含至少一個 public 成員。 請確定別名名稱不包含其他別名。  
+# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>在匯入指定的命名空間或類型&#39;&lt;限定&gt;&#39;不&#39;t 包含任何 public 成員，或找不到
+中的匯入的命名空間或類型指定\<完整項目名稱 >' 不包含任何 public 成員，或是找不到。 請確定命名空間或類型定義，而且包含至少一個 public 成員。 請確定別名名稱不包含其他別名。  
   
- `Imports`陳述式會指定包含的項目，或是無法找到未定義任何`Public`成員。  
+ `Imports`陳述式會指定包含的項目不能找到，或未定義任何`Public`成員。  
   
  A*包含項目的*可以是命名空間、 類別、 結構、 模組、 介面或列舉型別。 包含的項目包含成員，例如變數、 程序或其他內含項目。  
   
- 匯入的目的是允許您存取命名空間或類型成員的程式碼，而不必加以限定。 若要加入的命名空間或類型的參考，可能也需要您的專案。 如需詳細資訊，請參閱 < 匯入包含項目 >[宣告之項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+ 匯入的目的是允許您存取命名空間或類型成員的程式碼，而不必加以限定。 若要加入的命名空間或類型的參考，可能也需要您的專案。 如需詳細資訊，請參閱 < 匯入包含項目 」 中[References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
- 如果編譯器找不到指定的包含項目，它無法解析使用它的參考。 如果它找到的項目但項目不會公開任何`Public`成員，則任何參考可以成功。 在任一情況下是無意義的匯入的項目。  
+ 如果編譯器找不到指定的包含項目，所以無法解析使用它的參考。 如果它找到的項目，但項目不會公開任何`Public`成員，則任何參考可成功。 在任一情況下它是無意義的匯入之項目的項目。  
   
- 請記住，如果您匯入包含項目，並將匯入別名指派給它，您便無法使用該匯入別名匯入另一個項目。 下列程式碼會產生編譯器錯誤。  
+ 請記住，如果您匯入包含項目，並將匯入別名指派給它，則您無法使用該匯入別名匯入另一個項目。 下列程式碼會產生編譯器錯誤。  
   
  `Imports`   `winfrm`   `= System.Windows.Forms`  
   
@@ -38,13 +39,13 @@ ms.lasthandoff: 05/04/2018
   
 1.  請確認包含的項目是從您的專案存取。  
   
-2.  確認包含的項目規格不會包含從另一個匯入任何匯入別名。  
+2.  請確認包含的項目規格不會包含從另一個匯入任何匯入別名。  
   
 3.  請確認包含的項目會公開至少一個`Public`成員。  
   
-## <a name="see-also"></a>另請參閱  
- [Imports 陳述式 (.NET 命名空間和類型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Namespace 陳述式](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
- [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>另請參閱
+- [Imports 陳述式 (.NET 命名空間和類型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Namespace 陳述式](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

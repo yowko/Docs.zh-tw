@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 0e77b26bdc7eaa038c69a6fb706ee066aa223a2e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 96107c287003cc5fca2eb0eaa86f0f1f32b7d65e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523688"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF 自訂控制項的 UI 自動化
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] 提供一個單一的通用介面，可讓自動化用戶端用來檢查或操作各種平台和架構的使用者介面。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 可讓品質保證 (測試) 程式碼和協助工具應用程式 (例如螢幕助讀程式) 檢查使用者介面元素，並模擬從其他程式碼與它們進行的使用者互動。 如需跨所有平台之 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 的相關資訊，請參閱＜協助工具＞。  
@@ -154,7 +154,7 @@ End Class
  [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
  [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
-## <a name="see-also"></a>另請參閱  
- [UI 自動化概觀](../../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [具有佈景主題和 UI 自動化支援範例的 NumericUpDown 自訂控制項](https://go.microsoft.com/fwlink/?LinkID=160025)  
- [伺服器端 UI 自動化提供者實作](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+## <a name="see-also"></a>另請參閱
+- [UI 自動化概觀](../../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [具有佈景主題和 UI 自動化支援範例的 NumericUpDown 自訂控制項](https://go.microsoft.com/fwlink/?LinkID=160025)
+- [伺服器端 UI 自動化提供者實作](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

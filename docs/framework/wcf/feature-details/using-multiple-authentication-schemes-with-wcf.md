@@ -2,12 +2,12 @@
 title: 搭配 WCF 使用多個驗證配置
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8aa593803354628354e5ed3bf02cbcea44505e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593806"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>搭配 WCF 使用多個驗證配置
 WCF 現在允許您在單一端點上指定多個驗證配置。 此外，Web 裝載服務可以直接從 IIS 繼承驗證設定。 自我裝載服務可以指定可使用的驗證配置。 如需在 IIS 中設定驗證設定的詳細資訊，請參閱[IIS 驗證](https://go.microsoft.com/fwlink/?LinkId=232458)  
@@ -119,11 +119,11 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [端點：位址、繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [設定系統提供的繫結](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [繫結](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [繫結](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>另請參閱
+- [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [端點：位址、 繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [設定系統提供的繫結](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [繫結](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [繫結](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)

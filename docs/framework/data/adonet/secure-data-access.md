@@ -2,12 +2,12 @@
 title: 安全存取資料
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: d7964a084c1d5936b034d76b8c6e46053e8dcb0a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 600ab092d1ae7c890a5d50f3beed52eb8b4110b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129190"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494635"
 ---
 # <a name="secure-data-access"></a>安全存取資料
 若要撰寫安全的 ADO.NET 程式碼，您必須了解基礎資料存放區或資料庫中可用的安全性機制。 您也需要考量您的應用程式所可能包含的其他功能或元件的安全性隱含。  
@@ -87,10 +87,10 @@ ms.locfileid: "53129190"
 |[與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)|包含說明如何將 COM 元件公開至 .NET Framework 以及如何將 .NET Framework 元件公開至 COM 的主題。|
 |[進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|包含主要 Interop 組件 (Assembly)、執行緒和自訂封送處理 (Marshaling) 等進階主題。|
 
-## <a name="see-also"></a>另請參閱  
- [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [資料存取策略的建議](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [資料存取策略的建議](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

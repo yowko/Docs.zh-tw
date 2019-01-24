@@ -2,18 +2,18 @@
 title: '&lt;netTcpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: da769e57a44880d5050b06a8e2a3d317daff35d6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0f5e4df5a25062ba6454dfc845ba2999ddcc6ca8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572262"
 ---
 # <a name="ltnettcpcontextbindinggt"></a>&lt;netTcpContextBinding&gt;
 指定 <xref:System.ServiceModel.NetTcpBinding> 的內容，它會要求保護層級為簽署。 NetTcpContextBinding 的 contextExchangeMechanism 為 SOAPHeader。  
   
  \<system.ServiceModel>  
-\<繫結 >  
+\<bindings>  
 \<netTcpContextBinding>  
   
 ## <a name="syntax"></a>語法  
@@ -81,7 +81,7 @@ ms.locfileid: "54146065"
 |receiveTimeout|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:10:00。|  
 |sendTimeout|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |transactionFlow|指定繫結是否支援流動 WS-Transactions 的布林值。 預設為 `false`。|  
-|transactionProtocol|指定要搭配此繫結使用的交易通訊協定。 有效值為<br /><br /> -OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> 預設值為 OleTransactions。 此屬性的型別為 <xref:System.ServiceModel.TransactionProtocol>。|  
+|transactionProtocol|指定要搭配此繫結使用的交易通訊協定。 有效值為<br /><br /> -   OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> 預設值為 OleTransactions。 此屬性的型別為 <xref:System.ServiceModel.TransactionProtocol>。|  
 |transferMode|<xref:System.ServiceModel.TransferMode> 值，指定訊息要經過緩衝處理或資料流處理，或為要求或回應。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -96,15 +96,15 @@ ms.locfileid: "54146065"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.NetTcpContextBinding>  
- <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>  
- <xref:System.ServiceModel.Channels.ContextBindingElement>  
- [\<netTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.NetTcpContextBinding>
+- <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>
+- <xref:System.ServiceModel.Channels.ContextBindingElement>
+- [\<netTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

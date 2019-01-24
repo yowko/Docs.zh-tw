@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 5744184d224fa97e57055b5a110d830e8809647f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a2d0ef1e70c88133d5f9c3d2ffe8dafa4983cfd9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552017"
 ---
 # <a name="what-is-windows-communication-foundation"></a>何謂 Windows Communication Foundation
 Windows Communication Foundation (WCF) 是用於建置服務導向應用程式的架構。 使用 WCF，您可以將資料傳送非同步訊息形式從一個服務端點之間。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：
@@ -72,7 +72,7 @@ WCF 包含下列幾組功能。 如需詳細資訊，請參閱 < [WCF 功能詳�
 
 -   **異動**
 
-     WCF 還支援使用三種交易模型中的任一種進行交易：WS-AtomicTtransaction、 <xref:System.Transactions> 命名空間中的應用程式開發介面，以及 Microsoft 分散式交易協調器。 如需有關交易看到在 WCF 中的支援[交易](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。
+     WCF 也支援使用三種交易模型的其中一個：Ws-atomicttransaction、 在 Api<xref:System.Transactions>命名空間，以及 Microsoft 分散式交易協調器。 如需有關交易看到在 WCF 中的支援[交易](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。
 
 -   **AJAX 與 REST 支援**
 

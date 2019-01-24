@@ -1,30 +1,30 @@
 ---
-title: 工作 2：裝載工作流程設計工具
+title: 工作 2:裝載工作流程設計工具
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 8ac6b3590d146909c1cb9fd8cf9cae2352b0155b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572769"
 ---
-# <a name="task-2-host-the-workflow-designer"></a>工作 2：裝載工作流程設計工具
+# <a name="task-2-host-the-workflow-designer"></a>工作 2:裝載工作流程設計工具
 本主題說明的程序裝載的執行個體[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]Windows Presentation Foundation (WPF) 應用程式中。  
   
- 程序會設定**方格**控制項，其中包含設計工具中，以程式設計方式建立的執行個體<xref:System.Activities.Presentation.WorkflowDesigner>，其中包含預設值<xref:System.Activities.Statements.Sequence>活動，註冊以提供設計工具中繼資料所有內建活動和裝載的設計工具支援[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]中[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]應用程式。  
+ 程序會設定**方格**控制項，其中包含設計工具中，以程式設計方式建立的執行個體<xref:System.Activities.Presentation.WorkflowDesigner>，其中包含預設<xref:System.Activities.Statements.Sequence>活動，會註冊提供的設計工具中繼資料設計工具支援所有內建活動和主機[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]在[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]應用程式。  
   
 ### <a name="to-host-the-workflow-designer"></a>若要裝載工作流程設計工具  
   
-1.  開啟 HostingApplication 專案中建立您[工作 1： 建立新的 Windows Presentation Foundation 應用程式](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)。  
+1.  開啟的 HostingApplication 專案中建立[工作 1:建立新的 Windows Presentation Foundation 應用程式](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)。  
   
-2.  將視窗調整至方便使用 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 的大小。 若要這樣做，請選取**MainWindow**在設計師中，按 F4 顯示**屬性**視窗中，然後在**配置**那里區段中，將**寬度** 600 的值和**高度**350 的值。  
+2.  將視窗調整至方便使用 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 的大小。 若要這樣做，請選取**MainWindow**在設計師中，按 F4 顯示**屬性**視窗中，然後在**配置**那里區段中，將**寬度**值為 600，**高度**350 的值。  
   
-3.  選取以設定方格名稱**方格**設計工具中的面板 (按一下 [] 內的方塊**MainWindow**) 和設定**名稱**頂端的屬性**屬性**"grid1"的視窗。  
+3.  選取以設定資料格的名稱**格線**設計工具中的面板 (按一下 [] 內的方塊**MainWindow**) 和設定**名稱**頂端的屬性**屬性**為"grid1"視窗。  
   
-4.  在**屬性**視窗中，按一下省略符號 (**...**) 旁邊`ColumnDefinitions`屬性可開啟**集合編輯器** 對話方塊。  
+4.  在 **屬性** 視窗中，按一下省略符號 (**...**) 旁`ColumnDefinitions`屬性可開啟**集合編輯器** 對話方塊。  
   
-5.  在**集合編輯器**對話方塊中，按一下 **新增**按鈕將三個資料行插入配置三次。 第一個資料行會包含**工具箱**，第二個資料行將裝載[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]，和第三個資料行用於屬性偵測器。  
+5.  在 [**集合編輯器**] 對話方塊中，按一下**新增**按鈕三次，以插入版面配置中的三個資料行。 第一個資料行會包含**工具箱**，第二個資料行將裝載[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]，以及第三個資料行用於屬性偵測器。  
   
 6.  設定`Width`屬性中間的資料行的值"4 *"。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33519060"
     </Grid>  
     ```  
   
-8.  在**方案總管 中**，以滑鼠右鍵按一下 MainWindow.xaml，然後選取**檢視程式碼**。 遵循下列步驟修改程式碼：  
+8.  在 **方案總管**，以滑鼠右鍵按一下 MainWindow.xaml，然後選取**檢視程式碼**。 遵循下列步驟修改程式碼：  
   
     1.  加入下列命名空間：  
   
@@ -68,7 +68,7 @@ ms.locfileid: "33519060"
         }  
         ```  
   
-    3.  將下列 `AddDesigner` 方法加入至 `MainWindow` 類別。 這個實作會建立的執行個體<xref:System.Activities.Presentation.WorkflowDesigner>，新增<xref:System.Activities.Statements.Sequence>活動，並將其置於 grid1 中間資料行中**方格**。  
+    3.  將下列 `AddDesigner` 方法加入至 `MainWindow` 類別。 這個實作會建立的執行個體<xref:System.Activities.Presentation.WorkflowDesigner>，將<xref:System.Activities.Statements.Sequence>活動，並將它放在中間的資料行的 grid1**格線**。  
   
         ```csharp  
         private void AddDesigner()  
@@ -97,7 +97,7 @@ ms.locfileid: "33519060"
         }  
         ```  
   
-         如需註冊活動設計工具的詳細資訊，請參閱[How to： 建立自訂活動設計工具](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)。  
+         如需有關如何註冊活動設計工具的詳細資訊，請參閱[How to:建立自訂活動設計工具](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)。  
   
     5.  在 `MainWindow` 類別建構函式中，將呼叫加入至先前宣告的方法，為中繼資料註冊設計工具支援，以建立 <xref:System.Activities.Presentation.WorkflowDesigner>。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "33519060"
   
 9. 按 F5 以建置及執行方案。  
   
-10. 請參閱[工作 3： 建立工具箱與 PropertyGrid 窗格](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)以了解如何加入**工具箱**和**PropertyGrid**到重新裝載工作流程設計工具支援。  
+10. 請參閱[工作 3:建立工具箱與 PropertyGrid 窗格](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)以了解如何新增**工具箱**並**PropertyGrid**支援新增至您的重新裝載工作流程設計工具。  
   
-## <a name="see-also"></a>另請參閱  
- [重新裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [工作 1：建立新的 Windows Presentation Foundation 應用程式](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [工作 3：建立工具箱與 PropertyGrid 窗格](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+## <a name="see-also"></a>另請參閱
+- [重新裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+- [工作 1:建立新的 Windows Presentation Foundation 應用程式](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
+- [工作 3:建立工具箱與 PropertyGrid 窗格](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)

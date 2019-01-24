@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 7d5ffc0b19e53cdc35f2d2e2cd224f692a0a80ed
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: ce8e4f0ebb086ca2f8335a0a5a625638e079fde2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638297"
 ---
 # <a name="examples-of-xml-serialization"></a>XML 序列化的範例
 XML 序列化的形式不只一種，從簡單到複雜都有。 例如，您可序列化僅包含公用欄位及屬性的類別，如 [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)中所示。 下列程式碼範例說明各種不同的進階案例，包括如何使用 XML 序列化以產生符合特定 XML 結構描述 (XSD) 文件的 XML 資料流。  
@@ -182,7 +182,7 @@ public class Item
  如果兩個項目已設定順序，則已序列化的類別執行個體可能類似於下列項目。  
   
 ```xml  
-<PurchaseOrder xmlns:xsi=http://www.w3.org/2001/XMLSchema-instance xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+<PurchaseOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
     <Items>  
         <Item>  
             <ItemID>aaa111</ItemID>  
@@ -764,9 +764,9 @@ public class Test
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
-- [可控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
-- [XmlSerializer 類別](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
-- [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
+- [可控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
+- [XmlSerializer 類別](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- [如何：將物件序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

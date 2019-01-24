@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: 7f0469a879bab7aac8e572cc666dfa9d168103ea
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: be5d1ae308b9412f914f1cde91d1cc5834212df8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570547"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Windows Form 控制項的邊界和邊框距離
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間提供您許多版面配置功能來完成這項作業。 最重要的兩項是 <xref:System.Windows.Forms.Control.Margin%2A> 和 <xref:System.Windows.Forms.Control.Padding%2A> 屬性。  
@@ -25,12 +25,12 @@ ms.locfileid: "43488335"
   
  ![邊框距離及邊界 Windows Forms 控制項](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- Visual Studio 中有針對此功能提供的設計階段支援。  另請參閱[逐步解說： 以配置出 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性](https://msdn.microsoft.com/library/3z3f9e8b\(v=vs.110\))。  
+ Visual Studio 中有針對此功能提供的設計階段支援。  另請參閱[逐步解說：配置 Windows Form 控制項與邊框距離、 邊界和 AutoSize 屬性](https://msdn.microsoft.com/library/3z3f9e8b\(v=vs.110\))。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.Control.AutoSize%2A>  
- <xref:System.Windows.Forms.Control.Margin%2A>  
- <xref:System.Windows.Forms.Control.Padding%2A>  
- <xref:System.Windows.Forms.Control.LayoutEngine%2A>  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- <xref:System.Windows.Forms.FlowLayoutPanel>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.Control.AutoSize%2A>
+- <xref:System.Windows.Forms.Control.Margin%2A>
+- <xref:System.Windows.Forms.Control.Padding%2A>
+- <xref:System.Windows.Forms.Control.LayoutEngine%2A>
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- <xref:System.Windows.Forms.FlowLayoutPanel>

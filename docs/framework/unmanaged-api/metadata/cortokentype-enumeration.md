@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 769802eae048427325af9807d788b1fbc5a15665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9cc480d673648562638fbfd4a03df643dd734b9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620613"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 列舉
 表示中繼資料語彙基元的類型。  
@@ -93,14 +93,14 @@ typedef enum CorTokenType {
 |`mdtBaseType`|未使用。|  
   
 ## <a name="remarks"></a>備註  
- 每個值會等於對應的中繼資料語彙基元中的第一個位元組的值。  
+ 每個值會等於對應的中繼資料語彙基元中的第一個位元組值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

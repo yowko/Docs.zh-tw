@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: d5031136b48b50ef7ad34b97942b7f6d8054d340
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 892c0488588e9a5b59650f4a815ba9819493a610
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538261"
 ---
 # <a name="adding-columns-to-a-datatable"></a>將資料行加入至 DataTable
 A<xref:System.Data.DataTable>包含的集合<xref:System.Data.DataColumn>所參考的物件**資料行**資料表屬性。 這個資料行集合 (可搭配任何條件約束) 可定義資料表的結構描述 (或結構)。  
@@ -51,10 +51,10 @@ workTable.Columns.Add("Purchases", typeof(Double));
   
  如果您要使用 <xref:System.Xml.Linq.XElement> 當做 <xref:System.Data.DataColumn.DataType%2A> 中 <xref:System.Data.DataColumn> 的 <xref:System.Data.DataTable>，當您讀入資料時，XML 序列化將無法運作。 例如，如果您使用 <xref:System.Xml.XmlDocument> 方法來寫出 `DataTable.WriteXml`，在序列化至 XML 時，<xref:System.Xml.Linq.XElement> 就會存在額外的父節點。 若要解決此問題，請使用 <xref:System.Data.SqlTypes.SqlXml> 型別而非 <xref:System.Xml.Linq.XElement>。 `ReadXml` 和 `WriteXml` 會搭配 <xref:System.Data.SqlTypes.SqlXml> 正確運作。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Data.DataColumn>  
- <xref:System.Data.DataColumnCollection>  
- <xref:System.Data.DataTable>  
- [DataTable 結構描述定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Data.DataColumn>
+- <xref:System.Data.DataColumnCollection>
+- <xref:System.Data.DataTable>
+- [DataTable 結構描述定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
+- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

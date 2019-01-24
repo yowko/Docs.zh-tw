@@ -2,14 +2,8 @@
 title: WCF 效能計數器
 ms.date: 03/30/2017
 helpviewer_keywords:
-- performance counters [WCF]
+  - 'performance counters [WCF]'
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: d0ad7ee0bc3ea1d15197e6b8d9888d60b21a2f15
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846211"
 ---
 # <a name="wcf-performance-counters"></a>WCF 效能計數器
 Windows Communication Foundation (WCF) 包含大量的效能計數器，可協助您測量應用程式的效能。  
@@ -27,11 +21,11 @@ Windows Communication Foundation (WCF) 包含大量的效能計數器，可協�
   
  `performanceCounters` 屬性可設為啟用特定類型的效能計數器。 有效值為  
   
--   All：所有類別的計數器 (ServiceModelService、ServiceModelEndpoint 和 ServiceModelOperation) 都會啟用。  
+-   所有：類別的所有計數器 （ServiceModelService、 ServiceModelEndpoint 和 ServiceModelOperation） 會都啟用。  
   
--   ServiceOnly：只啟用 ServiceModelService 類別的計數器。 此為預設值。  
+-   ServiceOnly:啟用只 ServiceModelService 類別的計數器。 這是預設值。  
   
--   Off：ServiceModel* 效能計數器會停用。  
+-   Off:ServiceModel * 效能計數器已停用。  
   
  如果您想要啟用 WCF 的所有應用程式的效能計數器，您可以在 Machine.config 檔案中放置的組態設定。  請參閱**效能計數器增加記憶體大小**節，如需有關設定您電腦有足夠的記憶體效能計數器。  
   
@@ -59,7 +53,7 @@ config.Save();
 ## <a name="increasing-memory-size-for-performance-counters"></a>為效能計數器增加記憶體大小  
  WCF 會使用不同的共用的記憶體，其效能計數器分類。  
   
- 根據預設，不同的共用記憶體會設為全域效能計數器記憶體的四分之一。 預設的全域效能計數器記憶體為 524,288 個位元組。 因此，三個 WCF 效能計數器的類別有預設大小為約 128KB。 在電腦上的 WCF 應用程式的執行階段特性而定，效能計數器記憶體可能會耗盡。 當發生這種情況時，則 WCF 會將錯誤寫入應用程式事件記錄檔。 錯誤的內容會說明效能計數器並未載入，且項目中會包含例外狀況「System.InvalidOperationException：自訂計數器檔案檢視記憶體不足」。 如果已啟用錯誤層級的追蹤，則同樣會追蹤這個錯誤。 如果效能計數器記憶體耗盡，繼續執行您的 WCF 應用程式啟用之效能計數器可能會導致效能降低。 如果您是電腦的系統管理員，則應為電腦設定配置足夠的記憶體，支援可隨時存在的效能計數器數目上限。  
+ 根據預設，不同的共用記憶體會設為全域效能計數器記憶體的四分之一。 預設的全域效能計數器記憶體為 524,288 個位元組。 因此，三個 WCF 效能計數器的類別有預設大小為約 128KB。 在電腦上的 WCF 應用程式的執行階段特性而定，效能計數器記憶體可能會耗盡。 當發生這種情況時，則 WCF 會將錯誤寫入應用程式事件記錄檔。 錯誤的內容說明效能計數器並未載入，且項目包含例外狀況 「 System.InvalidOperationException:自訂計數器檔案檢視記憶體不足。 」 如果已啟用錯誤層級的追蹤，則同樣會追蹤這個錯誤。 如果效能計數器記憶體耗盡，繼續執行您的 WCF 應用程式啟用之效能計數器可能會導致效能降低。 如果您是電腦的系統管理員，則應為電腦設定配置足夠的記憶體，支援可隨時存在的效能計數器數目上限。  
   
  您可以變更登錄中的 WCF 類別目錄的效能計數器記憶體數量。 若要執行這項操作，您必須將名為 `FileMappingSize` 的新 DWORD 值加入下列三個位置，並且將它設為所需的值 (以位元組為單位)。 重新啟動您的電腦，讓這些變更生效。  
   
@@ -72,7 +66,7 @@ config.Save();
  處置掉大量物件 (例如 ServiceHost)，但在等待進行記憶體回收時，`PrivateBytes` 效能計數器將登錄相當大的數目。 若要解決這個問題，您可以加入自己的應用程式專屬計數器，或是使用 `performanceCounters` 屬性，僅啟用服務層級的計數器。  
   
 ## <a name="types-of-performance-counters"></a>效能計數器類型  
- 效能計數器分成三種不同的層級：服務、端點和作業。  
+ 效能計數器分為三種不同的層級：服務、 端點和作業。  
   
  您可以使用 WMI 擷取效能計數器執行個體的名稱。 例如，套用至物件的  
   
@@ -138,5 +132,5 @@ ServiceName@ServiceBaseAddress
   
  如需有關如何以程式設計方式存取計數器的詳細資訊，請參閱 <<c0> [ 效能計數器程式設計架構](https://go.microsoft.com/fwlink/?LinkId=95179)。  
   
-## <a name="see-also"></a>另請參閱  
- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>另請參閱
+- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

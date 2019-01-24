@@ -5,15 +5,15 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: f08a52add4e735ce794ecef2c3bd4b186b3c01a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8fdf11887d9ed7a52ac0d5f1abc81dcbb7932a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618905"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>在 Visual Basic 中為變數進行疑難排解
-此頁面會列出可以在使用 Visual Basic 中的變數時所發生的一些常見問題。  
+此頁面會列出一些常見的問題，使用 Visual Basic 中的變數時，可能會發生。  
   
 ## <a name="unable-to-access-members-of-an-object"></a>無法存取物件的成員  
  如果您的程式碼嘗試存取物件的屬性或方法，可能會發生兩種錯誤結果：  
@@ -47,13 +47,13 @@ ms.locfileid: "33655691"
 ### <a name="correct-approach"></a>正確方法  
  避免使用具有相同名稱但不同範圍的變數。 如果您想要使用其他組件或專案，請盡可能避免使用這些外部元件所定義的任何名稱。 如果您有多個同名的變數時，請務必限定它的每個參考。 如需詳細資訊，請參閱 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [如何：存取物件的成員](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
- [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [如何：決定物件變數參考的型別](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)  
- [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+## <a name="see-also"></a>另請參閱
+- [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [如何：存取物件的成員](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [如何：決定物件變數參考的類型](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
+- [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24ba4b37cc8221df4e018d172996c0910ec07f7d
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: e3a7d606f64dfe1a1abfd3da930fd00957da90a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583573"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 函式
 在受管理物件格式 (MOF) 語法中傳回之物件的文字呈現。
@@ -84,5 +84,5 @@ HRESULT GetObjectText (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

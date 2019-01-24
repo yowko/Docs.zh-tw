@@ -2,12 +2,12 @@
 title: SQL Server 中的授權和權限
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: bdf5112e3f0e2cada4885b0b66adf248f0ffe808
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 5d1ea7a9ad451db67e7a51c3485f98e03fd40690
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510009"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server 中的授權和權限
 當您建立資料庫物件時，必須明確地授與權限，讓使用者能夠存取這些物件。 每個安全性實體物件都具有可利用權限陳述式來授與主體的權限。  
@@ -58,10 +58,10 @@ ms.locfileid: "46007301"
 |--------------|-----------------|  
 |[權限](/sql/relational-databases/security/permissions-database-engine)|包含說明權限階層、目錄檢視以及固定伺服器與資料庫角色之權限的主題。|
   
-## <a name="see-also"></a>另請參閱  
- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- [SQL Server 中的伺服器和資料庫角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
- [SQL Server 中的擁有權和使用者結構描述分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
+- [SQL Server 中的伺服器和資料庫角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
+- [SQL Server 中的擁有權和使用者結構描述分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

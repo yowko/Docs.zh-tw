@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ 呼叫預存程序 (Visual Basic)
+title: HOW TO：呼叫預存程序，使用 LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], stored procedure calls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: 50a4dff90dc1ce02869978f1da147e530cefc3e1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: bd1a3b0b163d3ab0fcc7eb9616e88c11381ff189
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552043"
 ---
-# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>如何：使用 LINQ 呼叫預存程序 (Visual Basic)
+# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>HOW TO：呼叫預存程序，使用 LINQ (Visual Basic)
 Language Integrated Query (LINQ) 可讓您更容易存取的資料庫資訊，包括資料庫物件，例如預存程序。  
   
  下列範例示範如何建立 SQL Server 資料庫中呼叫預存程序的應用程式。 此範例示範如何呼叫資料庫中的兩個不同的預存程序。 每個程序會傳回查詢的結果。 一個程序會使用輸入的參數，並在其他程序不接受參數。  
@@ -68,9 +68,9 @@ Language Integrated Query (LINQ) 可讓您更容易存取的資料庫資訊，�
   
 4.  按 F5 執行您的專案，並檢視結果。  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查詢](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法 (O/R 設計工具)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [如何：指派用來執行更新、插入和刪除的預存程序 (O/R 設計工具)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+## <a name="see-also"></a>另請參閱
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [查詢](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext 方法 (O/R 設計工具)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [如何：指派用來執行更新、插入和刪除的預存程序 (O/R 設計工具)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

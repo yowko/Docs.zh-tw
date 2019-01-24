@@ -1,20 +1,21 @@
 ---
-title: 如何： 控制投影 (Visual Basic) 的型別
+title: HOW TO：控制投影 (Visual Basic) 的類型
 ms.date: 07/20/2015
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
-ms.openlocfilehash: efeb247c2b7662c71ec97ea1d8c1839361d82e14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e892e6328576a9727a13a4c1acd951d44ce4daa8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628869"
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>如何： 控制投影 (Visual Basic) 的型別
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>HOW TO：控制投影 (Visual Basic) 的類型
 投影使採用一組資料、進行篩選、變更其組織結構，甚至變更其型別的程序。 大部分的查詢運算式都會執行投影。 本節中所顯示的大部分查詢運算式會評估為 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，但是您可以控制投影的型別以建立其他型別的集合。 本主題顯示如何執行此動作。  
   
 ## <a name="example"></a>範例  
  下列範例會定義新型別 `Customer`。 接著，查詢運算式會在 `Customer` 子句中具現化新的 `Select` 物件。 這會造成查詢運算式的型別變成 <xref:System.Collections.Generic.IEnumerable%601> 的 `Customer`。  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   
 ```vb  
 Public Class Customer  
@@ -85,6 +86,6 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq.Enumerable.Select%2A>  
- [投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Linq.Enumerable.Select%2A>
+- [投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: 標準查詢運算子概觀 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 27b144ae75054dbdc535b6ad894e4a5a0b8529e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e665a9408deb5d5788301b1b24f39a4fd79fbc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526492"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>標準查詢運算子概觀 (Visual Basic)
 「標準查詢運算子」是形成 LINQ 模式的方法。 這些方法大多會在序列上運作，而序列是指其類型會實作 <xref:System.Collections.Generic.IEnumerable%601> 介面或 <xref:System.Linq.IQueryable%601> 介面的物件。 標準查詢運算子所提供的查詢功能包括篩選、投影、彙總、排序等等。  
@@ -64,7 +64,7 @@ MsgBox(output.ToString())
 ```  
   
 ## <a name="query-expression-syntax"></a>查詢運算式語法  
- 某些更常用的標準查詢運算子具有專用 C# 和 Visual Basic 語言關鍵字語法，可將它們呼叫為「查詢運算式」的一部分。 如需標準查詢運算子具有專用的關鍵字和其對應的語法的詳細資訊，請參閱[標準查詢運算子 (Visual Basic) 的查詢運算式語法](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)。  
+ 某些更常用的標準查詢運算子具有專用 C# 和 Visual Basic 語言關鍵字語法，可將它們呼叫為「查詢運算式」的一部分。 如需標準查詢運算子具有專用關鍵字和其對應語法的詳細資訊，請參閱[標準查詢運算子 (Visual Basic) 的查詢運算式語法](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)。  
   
 ## <a name="extending-the-standard-query-operators"></a>擴充標準查詢運算子  
  您可以建立適用於目標定義域或技術的定義域特定方法，來擴增一組標準查詢運算子。 您也可以將標準查詢運算子取代為提供額外服務的專屬實作，例如遠端評估、查詢轉譯和最佳化。 如需範例，請參閱 <xref:System.Linq.Enumerable.AsEnumerable%2A>。  
@@ -82,11 +82,11 @@ MsgBox(output.ToString())
   
  [投影作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
   
- [資料分割 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
+ [資料分割的資料 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
   
  [聯結作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
   
- [群組資料 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
+ [分組資料 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
   
  [產生作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)  
   
@@ -100,10 +100,10 @@ MsgBox(output.ToString())
   
  [彙總作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq.Enumerable>  
- <xref:System.Linq.Queryable>  
- [LINQ 簡介 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- [標準查詢運算子 (Visual Basic) 的查詢運算式語法](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
- [分類的標準查詢運算子的方式執行 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [擴充方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Linq.Enumerable>
+- <xref:System.Linq.Queryable>
+- [LINQ 簡介 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
+- [標準查詢運算子 (Visual Basic) 的查詢運算式語法](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [依據 (Visual Basic) 的執行方式的標準查詢運算子分類](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+- [擴充方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

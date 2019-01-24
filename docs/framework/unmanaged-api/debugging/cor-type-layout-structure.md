@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b88a7b0672e15097c60afbe069ce5b78bd5c38d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 50fd730876f43be5da45f38fa2d4694cbb2b2d1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408135"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502568"
 ---
 # <a name="cortypelayout-structure"></a>COR_TYPE_LAYOUT 結構
 提供記憶體中物件配置的相關資訊。  
@@ -42,24 +42,24 @@ typedef struct COR_TYPE_LAYOUT {
   
 |成員|描述|  
 |------------|-----------------|  
-|`parentID`|此類型的父類型的識別項。 這會是 NULL 類型 id (token1 = 0，token2 = 0) 的型別 id 對應於<xref:System.Object?displayProperty=nameWithType>。|  
-|`objectSize`|此類型的物件的基底的大小。 這是針對非變數可調整大小的物件大小總計。|  
+|`parentID`|此類型的父類型的識別碼。 這會是 NULL 類型識別碼 (token1 = 0，token2 = 0) 的型別 id 對應於<xref:System.Object?displayProperty=nameWithType>。|  
+|`objectSize`|此類型物件的基底的大小。 這是針對非變數大小物件的總大小。|  
 |`numFields`|此類型的物件中包含的欄位數目。|  
-|`boxOffset`|如果此類型經過 box 處理，開頭位移的物件的欄位。 這個欄位是僅適用於實值類型，例如基本類型和結構。|  
-|`type`|這個型別所屬 CorElementType。|  
+|`boxOffset`|如果此類型經過 box 處理，則會在物件的欄位的位移開頭。 這個欄位是僅適用於實值型別，例如基本類型和結構。|  
+|`type`|CorElementType，屬於此類型。|  
   
 ## <a name="remarks"></a>備註  
- 如果`numFields`大於零，您可以呼叫[icordebugprocess5:: Gettypefields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md)方法，以取得這種類型的欄位的相關資訊。 如果`type`是`ELEMENT_TYPE_STRING`， `ELEMENT_TYPE_ARRAY`，或`ELEMENT_TYPE_SZARRAY`、 此類型之物件的大小是變數，而您可以[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)結構以[icordebugprocess5:: Getarraylayout](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md)方法。  
+ 如果`numFields`是小於或等於零，您可以呼叫[ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md)方法，以取得此類型中的欄位的相關資訊。 如果`type`已`ELEMENT_TYPE_STRING`， `ELEMENT_TYPE_ARRAY`，或`ELEMENT_TYPE_SZARRAY`，此類型之物件的大小是變數，您可以傳遞[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)結構[ICorDebugProcess5::GetArrayLayout](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

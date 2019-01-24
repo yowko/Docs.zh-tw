@@ -1,5 +1,5 @@
 ---
-title: 操作說明：使用幾何路徑旋轉物件 (矩陣動畫)
+title: HOW TO：使用幾何路徑旋轉物件 (矩陣動畫)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - rotating objects by geometric paths [WPF]
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
-ms.openlocfilehash: 3a35f6dda05cfe65811de16d76b288c8fbd618a7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: de61e2469e22d077da4b082e18340a837fac2880
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565887"
 ---
-# <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>操作說明：使用幾何路徑旋轉物件 (矩陣動畫)
+# <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>HOW TO：使用幾何路徑旋轉物件 (矩陣動畫)
 此範例示範如何使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>並<xref:System.Windows.Media.MatrixTransform>輪替 (powerpivot) 沿著幾何路徑所定義的物件<xref:System.Windows.Media.PathGeometry>物件。  
   
 ## <a name="example"></a>範例  
@@ -31,7 +31,7 @@ ms.locfileid: "44199228"
   
  上述範例中使用的程式碼版本<xref:System.Windows.Media.Animation.Storyboard>來以動畫顯示<xref:System.Windows.Media.EllipseGeometry>，即使只有一張動畫已套用。 程式碼中的屬性套用單一動畫更簡單的方法是使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法。 如需範例，請參閱[不使用分鏡腳本而建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [路徑動畫操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
- [路徑動畫範例](https://go.microsoft.com/fwlink/?LinkID=160028)
+## <a name="see-also"></a>另請參閱
+- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [路徑動畫操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+- [路徑動畫範例](https://go.microsoft.com/fwlink/?LinkID=160028)

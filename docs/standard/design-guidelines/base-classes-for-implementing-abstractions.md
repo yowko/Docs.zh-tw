@@ -7,12 +7,12 @@ helpviewer_keywords:
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: KrzysztofCwalina
-ms.openlocfilehash: 411596f342930c9387dc6523d25805bddad18687
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6811423258481fcbae24743c9b17f3f20c379c58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565809"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>實作抽象的基底類別
 嚴格來說，類別就變得基底類別衍生自此類別的另一個類別。 不過，為了本章節中，基底類別是設計主要是為了提供常見的抽象概念，或重複使用一些其他類別的預設實作透過繼承的類別。 基底類別通常位於繼承階層架構，在階層的根的抽象概念與數個在底部的自訂實作之間的中間。  
@@ -35,5 +35,5 @@ ms.locfileid: "53148664"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

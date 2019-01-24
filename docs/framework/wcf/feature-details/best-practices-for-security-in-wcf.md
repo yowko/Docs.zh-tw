@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 25cc1a1e4c6e7e7d3f695c06eade8be546ee6c05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531963"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
 下列各節將列出在使用 Windows Communication Foundation (WCF) 建立安全應用程式時，應該考慮採用的最佳做法。 如需安全性的詳細資訊，請參閱[安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)、[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)和[中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
@@ -24,7 +24,7 @@ ms.locfileid: "50205252"
  WS-SecurityPolicy 允許服務以中繼資料發佈關於本身身分識別的資訊。 透過 `svcutil` 或如 <xref:System.ServiceModel.Description.WsdlImporter> 的其他方法擷取時，身分識別資訊會轉譯為 WCF 服務端點位址的身分識別屬性。 沒有驗證這些服務的用戶端屬於正確且有效的略過服務驗證。 但是，惡意的服務會利用這類用戶端，變更 WSDL 中聲稱的身分，執行認證轉送或其他的中間人攻擊。  
   
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>使用 X509 憑證取代 NTLM  
- WCF 提供兩種對等驗證機制，分別是 X509 憑證 (用於對等通道) 以及 Windows 驗證，後者的使用案例中，SSPI 交涉會從 Kerberos 降級為 NTLM。  相較於 NTLM，使用 1024 位元以上的金鑰進行的憑證式驗證較為理想，因為：  
+ WCF 提供兩個對等驗證機制：X509 憑證 （對等通道所使用） 和從 Kerberos SSPI 交涉降級至 NTLM 所在的 Windows 驗證。  相較於 NTLM，使用 1024 位元以上的金鑰進行的憑證式驗證較為理想，因為：  
   
 -   雙向驗證的可用性  
   
@@ -45,7 +45,7 @@ ms.locfileid: "50205252"
  請務必信任您的中繼資料來源，並確認中繼資料未遭受任何竄改。 使用 HTTP 通訊協定擷取的中繼資料會以純文字傳送出去且可以竄改。 如果服務使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 和 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 屬性，請以服務建立者提供的 URL 來使用 HTTPS 通訊協定下載資料。  
   
 ## <a name="publish-metadata-using-security"></a>使用安全性發行中繼資料  
- 若要預防服務的已發行中繼資料遭到竄改，請使用傳輸或訊息層級的安全性來保護中繼資料交換端點的安全。 如需詳細資訊，請參閱[發行中繼資料端點](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)和[如何：使用程式碼發行服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。  
+ 若要預防服務的已發行中繼資料遭到竄改，請使用傳輸或訊息層級的安全性來保護中繼資料交換端點的安全。 如需詳細資訊，請參閱 <<c0> [ 發行中繼資料端點](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)和[How to:發行服務，使用程式碼的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。  
   
 ## <a name="ensure-use-of-local-issuer"></a>確定本機簽發者的用途  
  如果已指定特定繫結的簽發者位址和繫結，這時使用該繫結的端點就不會使用該本機簽發者。 預期一定要使用該本機簽發者的用戶端應該要確定自己沒有使用這類繫結，否則它們就會修改繫結，進而使得簽發者位址成為 null。  
@@ -56,7 +56,7 @@ ms.locfileid: "50205252"
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>在自訂繫結上，將 SecurityBindingElement.IncludeTimestamp 設定為 True  
  當您建立自訂繫結時，您必須將 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 設定為 `true`。 否則，如果 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 設定為 `false`，而且用戶端使用以非對稱金鑰為基礎的權杖 (如 X509 憑證)，則不會簽署訊息。  
   
-## <a name="see-also"></a>另請參閱  
- [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
- [中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+## <a name="see-also"></a>另請參閱
+- [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
+- [中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

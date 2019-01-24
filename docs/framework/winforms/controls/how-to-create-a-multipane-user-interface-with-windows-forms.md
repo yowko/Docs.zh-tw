@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：利用 Windows Form 建立多窗格使用者介面
+title: HOW TO：利用 Windows Form 建立多窗格使用者介面
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 4e243191b83149f17f4970150d784dcd7d014b22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f7ba0ab7f0701fe39c3cefb979b9226eeeddffe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532079"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531404"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>逐步解說：利用 Windows Form 建立多窗格使用者介面
-在下列程序中，您將建立類似搭配使用 Microsoft Outlook 中的多窗格使用者介面**資料夾** 清單中，**訊息** 窗格中，與**預覽**窗格。 這種排列方式被達成透過停駐控制項的表單來達成。  
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>HOW TO：利用 Windows Form 建立多窗格使用者介面
+在下列程序中，您將建立類似於使用 Microsoft Outlook 中所使用的多窗格使用者介面**資料夾** 清單中，**訊息**窗格中，和**預覽**  窗格。 這種排列方式是主要透過停駐控制項的表單來達成的。  
   
- 將控制項停駐，您決定哪一個父容器的邊緣控制項視窗固定至。 因此，如果您設定<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性<xref:System.Windows.Forms.DockStyle.Right>，控制項的右邊緣會停駐於其父控制項的右邊緣。 此外，停駐控制項的邊緣會調整大小以符合其容器控制項。 如需有關如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性雖然有效，請參閱[How to： 在 Windows Form 上的停駐控制項](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)。  
+ 當您將控制項停駐時，您決定父容器的邊緣控制項固定至。 因此，如果您設定<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Right>，右邊緣的控制項所停駐到其父控制項的右邊緣。 此外，停駐控制項的邊緣會調整大小以符合其容器控制項。 如需有關如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性雖然有效，請參閱[How to:停駐在 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)。  
   
- 此程序著重於排列<xref:System.Windows.Forms.SplitContainer>和其他控制項在表單上，而非新增功能，讓模擬 Microsoft Outlook 應用程式。  
+ 此程序著重於排列<xref:System.Windows.Forms.SplitContainer>和其他控制項在表單上，而不加入讓模仿 Microsoft Outlook 應用程式的功能。  
   
- 若要建立此使用者介面，您將放內的所有控制項<xref:System.Windows.Forms.SplitContainer>控制項，其中包含<xref:System.Windows.Forms.TreeView>左側面板中的控制項。 右手邊的面板<xref:System.Windows.Forms.SplitContainer>控制項包含第二個<xref:System.Windows.Forms.SplitContainer>用來控制<xref:System.Windows.Forms.ListView>上述控制項<xref:System.Windows.Forms.RichTextBox>控制項。 這些<xref:System.Windows.Forms.SplitContainer>控制項可讓獨立調整表單上其他控制項的大小。 您可以調整此程序以您自己的特殊功能的自訂使用者介面中的技術。  
+ 若要建立此使用者介面，您會放置內的所有控制項<xref:System.Windows.Forms.SplitContainer>控制項，包含<xref:System.Windows.Forms.TreeView>左面板中的控制項。 右側面板中的<xref:System.Windows.Forms.SplitContainer>控制項包含第二個<xref:System.Windows.Forms.SplitContainer>控制項取代<xref:System.Windows.Forms.ListView>控制上述<xref:System.Windows.Forms.RichTextBox>控制項。 這些<xref:System.Windows.Forms.SplitContainer>控制項可讓您獨立調整大小的表單上的其他控制項。 您可以調整此程序來製作您自己的自訂使用者介面中的技術。  
   
 ### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>若要以程式設計方式建立的 Outlook 樣式使用者介面  
   
-1.  在表單中，宣告每個包含您的使用者介面的控制項。 此範例中，使用<xref:System.Windows.Forms.TreeView>， <xref:System.Windows.Forms.ListView>， <xref:System.Windows.Forms.SplitContainer>，和<xref:System.Windows.Forms.RichTextBox>控制項，以模擬 Microsoft Outlook 的使用者介面。  
+1.  在表單中，宣告每個包含您的使用者介面的控制項。 此範例中，使用<xref:System.Windows.Forms.TreeView>， <xref:System.Windows.Forms.ListView>， <xref:System.Windows.Forms.SplitContainer>，和<xref:System.Windows.Forms.RichTextBox>為了模仿 Microsoft Outlook 使用者介面的控制項。  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ ms.locfileid: "33532079"
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  建立您的使用者介面會定義程序。 下列程式碼設定的屬性，讓表單將類似於 Microsoft Outlook 中的使用者介面。 不過，藉由使用其他控制項，或停駐它們以不同的方式，它也一樣簡單來建立其他使用者介面一樣具有彈性。  
+2.  建立您的使用者介面會定義程序。 下列程式碼設定的屬性，使表單看起來將類似 Microsoft Outlook 中的使用者介面。 不過，藉由使用其他控制項，或停駐它們以不同的方式，它是一樣的容易建立一樣具有彈性的其他使用者介面。  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ ms.locfileid: "33532079"
     }  
     ```  
   
-3.  在 Visual Basic 中，加入至您在建立程序呼叫`New()`程序。 在 Visual C# 中，將這行程式碼加入表單類別的建構函式。  
+3.  在 Visual Basic 中，新增您在建立程序的呼叫`New()`程序。 在視覺效果C#，將這行程式碼新增至表單類別的建構函式。  
   
     ```vb  
     ' Add this to the New procedure.  
@@ -176,7 +176,7 @@ ms.locfileid: "33532079"
     createOutlookUI();  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [操作說明：使用設計工具，以 Windows Forms 建立多窗格使用者介面](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [如何：使用設計工具的 Windows form 建立多窗格使用者介面](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)

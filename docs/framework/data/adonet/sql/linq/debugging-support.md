@@ -2,12 +2,12 @@
 title: 偵錯支援
 ms.date: 03/30/2017
 ms.assetid: 262d8e60-8e71-42d7-8340-1b5276a0ad35
-ms.openlocfilehash: 70823d7480d59f96f3f8f4ad2b28102917ec2d80
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e19acb4a3a5cdff29e5eee81e422be1209cf91ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554865"
 ---
 # <a name="debugging-support"></a>偵錯支援
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供一般的偵錯支援[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  另請參閱[偵錯 LINQ](/visualstudio/debugger/debugging-linq)或是[偵錯 LINQ](/visualstudio/debugger/debugging-linq)。  
@@ -27,5 +27,5 @@ ms.locfileid: "43856825"
  [疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)  
  展示難以判斷其原因的常見案例。  
   
-## <a name="see-also"></a>另請參閱  
- [程式設計手冊](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
+## <a name="see-also"></a>另請參閱
+- [程式設計手冊](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)

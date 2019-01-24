@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 612b1dcea0f776dfd4580803e76f2785e7d28da6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f65352ebd9ca12aaed6b469c5df136301e9f839c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620535"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>物件初始設定式：具名和匿名類型 (Visual Basic)
 物件初始設定式可讓您使用單一運算式中指定的複雜物件的屬性。 它們可用來建立執行個體的具名型別和匿名型別。  
@@ -125,12 +125,12 @@ ms.locfileid: "42930586"
   
      [!code-vb[VbVbalrObjectInit#15](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_15.vb)]  
   
-     如需匿名型別中定義屬性選項的詳細資訊，請參閱[如何： 推斷屬性名稱和匿名類型宣告中的型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)。  
+     如需匿名型別中定義屬性選項的詳細資訊，請參閱[How to:推斷屬性名稱和匿名類型宣告中的型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [如何：在匿名類型宣告中推斷屬性名稱和類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
- [Key](../../../../visual-basic/language-reference/modifiers/key.md)  
- [如何：使用物件初始設定式宣告物件](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+## <a name="see-also"></a>另請參閱
+- [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [如何：推斷屬性名稱和匿名類型宣告中的類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Key](../../../../visual-basic/language-reference/modifiers/key.md)
+- [如何：使用物件初始設定式宣告物件](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

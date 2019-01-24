@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fdace527194228dd6004a991950a80d23275650
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 74b9ef2cdd48c403eb5a50d357a673eee3102106
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548234"
 ---
 # <a name="icordebugmdagetdescription-method"></a>ICorDebugMDA::GetDescription 方法
 取得字串，包含由 managed 偵錯助理 (MDA) 的描述[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)。  
@@ -40,26 +40,26 @@ HRESULT GetDescription (
   
 #### <a name="parameters"></a>參數  
  `cchName`  
- [in]將會儲存描述字串緩衝區的大小。  
+ [in]會儲存描述字串緩衝區的大小。  
   
  `pcchName`  
- [out]傳回在字串緩衝區的位元組數目指標。  
+ [out]傳回字串緩衝區的位元組數目指標。  
   
  `szName`  
- [out]包含描述 MDA 的字串緩衝區。  
+ [out]字串緩衝區，包含描述的 MDA。  
   
 ## <a name="remarks"></a>備註  
  字串可以是零長度。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugMDA 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)  
- [診斷 Managed 偵錯助理的錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugMDA 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [診斷 Managed 偵錯助理的錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

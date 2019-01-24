@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 2b2d487484f026be7637185ef759fb87db571b3a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8c5f94cb7f815e4aebef10d930843971219baef6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623114"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet 中的查詢
 查詢是指從資料來源中擷取資料的運算式。 查詢通常會以特定的查詢語言來表示，例如 SQL 用於關聯式資料庫，而 XQuery 用於 XML。 因此，開發人員必須針對他們所查詢的每種資料來源或資料格式，學習新的查詢語言。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 提供了一種較簡單且一致的模型，可處理各種資料來源和格式的資料。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查詢中，您一定會使用程式設計物件。  
@@ -59,8 +59,8 @@ ms.locfileid: "53145802"
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
   
-## <a name="see-also"></a>另請參閱  
- [程式設計手冊](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
- [查詢資料集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- [開始使用 C# 中的 LINQ](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [使用 Visual Basic 撰寫 LINQ 入門](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>另請參閱
+- [程式設計手冊](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+- [查詢資料集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
+- [開始使用 C# 中的 LINQ](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [使用 Visual Basic 撰寫 LINQ 入門](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

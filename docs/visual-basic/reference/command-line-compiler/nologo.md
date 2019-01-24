@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: 21c708ef632cc0ed923713cd49e22d44848b4db3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1b9cedc3e45795a66c203d4c86bb071045a1d3f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550470"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
 在編譯期間隱藏著作權橫幅和參考用訊息的顯示。  
@@ -36,6 +36,6 @@ ms.locfileid: "53131140"
 vbc -nologo t2.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c76e46c75680d9fc0ad70e94da288f0c6b5e5ee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e222f1a39276b6debc348bfb25e8db65cb648ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544636"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps 方法
-取得具有指定的中繼資料簽章之匯出類型的屬性集。  
+取得具有指定之中繼資料簽章之匯出類型的屬性集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,10 +43,10 @@ HRESULT GetExportedTypeProps (
   
 #### <a name="parameters"></a>參數  
  `mdct`  
- [in]`mdExportedType`中繼資料語彙基元，代表所匯出的類型。  
+ [in]`mdExportedType`中繼資料語彙基元，表示匯出的型別。  
   
  `szName`  
- [out]匯出的類型名稱。  
+ [out]匯出的型別名稱。  
   
  `cchName`  
  [in]大小，以寬字元為單位的`szName`。  
@@ -58,19 +58,19 @@ HRESULT GetExportedTypeProps (
  [out]`mdFile`， `mdAssemblyRef`，或`mdExportedType`包含或允許匯出的類型的屬性存取的中繼資料語彙基元。  
   
  `ptkTypeDef`  
- [out]指標`mdTypeDef`表示檔案中的類型語彙基元。  
+ [out]指標`mdTypeDef`語彙基元，表示檔案中的類型。  
   
  `pdwExportedTypeFlags`  
- [out]描述套用至匯出的型別中繼資料的旗標指標。 旗標值可以是一個或多個[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)值。  
+ [out]指標，描述套用至匯出的型別中繼資料的旗標。 旗標值可以是一或多個[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

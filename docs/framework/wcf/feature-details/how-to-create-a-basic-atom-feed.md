@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: ac356ac9acd3f0b14fb3da902f1a9c3cfbdd9ef7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 1229257cc8c15ea67bd4fdf3ff6ffa959a6bfe02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582492"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>HOW TO：建立基本 Atom 摘要
 Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要的服務。 本主題討論如何建立可公開 Atom 新聞訂閱摘要的新聞訂閱服務。  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要�
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  所有套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的服務作業都會對應至 HTTP GET 要求。 若要將您的作業對應至不同的 HTTP 方法，請改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立基本的 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)。  
+    >  所有套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的服務作業都會對應至 HTTP GET 要求。 若要將您的作業對應至不同的 HTTP 方法，請改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 如需詳細資訊，請參閱[＜How to：建立基本 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)。  
   
 2.  實作服務合約。  
   
@@ -96,6 +96,6 @@ Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要�
 ## <a name="compiling-the-code"></a>編譯程式碼  
  在編譯先前的程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>

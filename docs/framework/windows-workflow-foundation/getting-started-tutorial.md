@@ -1,19 +1,19 @@
 ---
-title: 使用者入門課程 2
+title: 開始使用 Tutorial2
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WF [WF], getting started
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
-ms.openlocfilehash: 7e1bfdc79eda8095d5d391afd61abb8473d8e7ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99daa524f041ffcd096195fc79527557b8f2697d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591970"
 ---
 # <a name="getting-started-tutorial"></a>快速入門教學課程
-本節包含一系列逐步解說主題，向您介紹程式設計 Windows Workflow Foundation (WF) 應用程式。 您可以遵循這些主題的程序進行，建置一個數字猜測遊戲應用程式。 教學課程中的第一個主題會引導您透過步驟來建立工作流程所需的自訂活動。 在第二個主題中，這些活動會隨著內建工作流程活動組裝至流程圖工作流程。 在第三個主題中，會設定主應用程式執行工作流程，並在最後一個主題中介紹持續性。 這個程序中的每一個步驟都與之前的步驟息息相關，因此建議您最好依照順序完成。  
+本節包含的逐步解說主題集，為您介紹 Windows Workflow Foundation (WF) 應用程式的程式設計。 您可以遵循這些主題的程序進行，建置一個數字猜測遊戲應用程式。 教學課程中的第一個主題會引導您透過步驟來建立工作流程所需的自訂活動。 在第二個主題中，這些活動會隨著內建工作流程活動組裝至流程圖工作流程。 在第三個主題中，會設定主應用程式執行工作流程，並在最後一個主題中介紹持續性。 這個程序中的每一個步驟都與之前的步驟息息相關，因此建議您最好依照順序完成。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
@@ -31,11 +31,11 @@ ms.locfileid: "33512436"
  [如何：建立自訂追蹤參與者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md)  
  說明如何建立自訂的追蹤參與者和追蹤設定檔。  
   
- [如何：並存裝載工作流程的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
+ [如何：裝載工作流程-並存的多個的版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
  描述如何使用 `WorkflowIdentity` 裝載工作流程並存的多個版本。  
   
  [如何：更新執行中工作流程執行個體的定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)  
  說明如何使用動態更新來修改執行中的工作流程執行個體。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Workflow Foundation 程式設計](../../../docs/framework/windows-workflow-foundation/programming.md)
+## <a name="see-also"></a>另請參閱
+- [Windows Workflow Foundation 程式設計](../../../docs/framework/windows-workflow-foundation/programming.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbee999feba5839e66f8eb8c0faaa6e90ca85bd5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b84ebe43c55e2a32e24206d875c65984b8c946b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501538"
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt;項目
 指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。  
@@ -75,7 +75,7 @@ ms.locfileid: "53613319"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>另請參閱
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [NIB:部分組件參考](https://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)

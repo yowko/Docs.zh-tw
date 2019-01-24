@@ -16,29 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6761ff204d299bc2db84e2e80d988306125a110
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4be027238d676d78a3ec29e4f2696f765291f29b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504427"
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding 介面
-提供稱為 common language runtime (CLR)，以通知主機應用程式已建立應用程式定義域的方法。  
+提供 common language runtime (CLR)，以通知主應用程式已建立的應用程式定義域所呼叫的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[OnAppDomain 方法](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|由 common language runtime (CLR)，以通知主機已建立應用程式定義域呼叫。|  
+|[OnAppDomain 方法](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|由 common language runtime (CLR)，以通知主機已建立的應用程式定義域呼叫。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

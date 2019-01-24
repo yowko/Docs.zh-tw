@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd759a4167a667919a443bc6492c049631ad222c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed27d8b2ee99d0a9364c577e50120f3c7b4f5929
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546789"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
 當執行緒嘗試在另一個執行緒中在引入非同步中止時，就會啟用 `asynchronousThreadAbort` Managed 偵錯助理 (MDA)。 同步執行緒中止不會啟動 `asynchronousThreadAbort` MDA。
@@ -71,4 +71,5 @@ void FireMda()
 ```
 
 ## <a name="see-also"></a>另請參閱
- <xref:System.Threading.Thread> [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- <xref:System.Threading.Thread>
+- [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

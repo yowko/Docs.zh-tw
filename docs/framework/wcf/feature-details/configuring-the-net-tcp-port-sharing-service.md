@@ -2,12 +2,12 @@
 title: 設定 Net.TCP Port Sharing Service
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 3afc4cf50ac0dda0198ca8986177fd3028f9837e
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 9bc625f9e998f27b6227a5951f11c7d85220ae7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585519"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>設定 Net.TCP Port Sharing Service
 使用 Net.TCP 傳輸的自我裝載服務可以控制好幾項進階設定，例如 `ListenBacklog` 和 `MaxPendingAccepts`，這些設定掌管網路通訊時使用的基礎 TCP 通訊端行為。 但是，如果傳輸繫結已經停用連接埠共用 (預設為啟用)，則每個通訊端的這些設定只能套用在繫結層級中。  
@@ -61,5 +61,5 @@ ms.locfileid: "54029355"
 > [!WARNING]
 >  預設的 SMSvcHost.exe.config 檔案會指定自訂 `etwProviderId` 來防止 SMSvcHost.exe 追蹤干擾服務追蹤。  
   
-## <a name="see-also"></a>另請參閱  
- [\<net.tcp >](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)
+## <a name="see-also"></a>另請參閱
+- [\<net.tcp>](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)

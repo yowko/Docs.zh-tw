@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab5612a2bb48b2cc93e0150f45107e474a4e6217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27e2f194d252baa2e2ca185d905c945d26a177a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590087"
 ---
 # <a name="corprfcodegenflags-enumeration"></a>COR_PRF_CODEGEN_FLAGS 列舉
-定義的程式碼產生旗標可以設定的[icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法。  
+定義可以使用設定的程式碼產生旗標[icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,20 +39,20 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`COR_PRF_CODEGEN_DISABLE_INLINING`|沒有函式會內嵌於此函式主體。 不過，您可能會內嵌於其呼叫端函式本身。|  
-|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|此函式主體會停用所有的最佳化。 不過，函式本身可能仍在進行內嵌於其呼叫端。|  
+|`COR_PRF_CODEGEN_DISABLE_INLINING`|沒有任何函式會內嵌於此函式主體。 不過，您可能會內嵌至其呼叫端函式本身。|  
+|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|將停用此函式主體的所有最佳化項目。 不過，函式本身仍可能會內嵌至其呼叫者。|  
   
 ## <a name="remarks"></a>備註  
- `COR_PRF_CODEGEN_FLAGS`項列舉供[icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法，以啟用程式碼剖析工具，以控制 JIT 重新編譯函式的程式碼產生。  
+ `COR_PRF_CODEGEN_FLAGS`列舉由[icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法來啟用分析工具，來控制 JIT 重新編譯函式的程式碼產生。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

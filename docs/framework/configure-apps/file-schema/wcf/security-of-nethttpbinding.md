@@ -2,20 +2,20 @@
 title: '&lt;netHttpBinding 的 &gt;security&lt;'
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: a03553c5afe78b3f95526411b8187464da08161b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7273aaf187882a6f72bd901e03581524e919770f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584924"
 ---
 # <a name="ltsecuritygt-of-ltnethttpbinding"></a>&lt;netHttpBinding 的 &gt;security&lt;
 定義的安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
   
 \<system.ServiceModel>  
-\<繫結 >  
+\<bindings>  
 \<netHttpBinding>  
-\<繫結 >  
+\<binding>  
 \<安全性 >  
   
 ## <a name="syntax"></a>語法  
@@ -65,12 +65,12 @@ ms.locfileid: "54149686"
 ## <a name="remarks"></a>備註  
  根據預設，SOAP 訊息並不安全，而且用戶端也尚未經過驗證。 這個項目可讓您設定 `netHttpBinding` 項目的其他安全性設定。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.NetHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetHttpBindingElement.Security%2A>    
- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.NetHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetHttpBindingElement.Security%2A>
+- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：設定狀態列面板的大小
+title: HOW TO：設定狀態列面板的大小
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: d708b94d02b4f1c1e2f00101e6e394043a6057ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be1f216af61c1e7b77e84c584dc9d965a97c56b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539649"
 ---
-# <a name="how-to-set-the-size-of-status-bar-panels"></a>如何：設定狀態列面板的大小
+# <a name="how-to-set-the-size-of-status-bar-panels"></a>HOW TO：設定狀態列面板的大小
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStripStatusLabel> 控制項會取代 <xref:System.Windows.Forms.StatusBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.StatusBar> 控制項，以提供回溯相容性及未來使用。  
   
- 每個執行個體<xref:System.Windows.Forms.StatusBarPanel>類別內[StatusBar 控制項](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)控制項的動態屬性，以決定其寬度和調整大小行為在執行階段數目。  
+ 每個執行個體<xref:System.Windows.Forms.StatusBarPanel>類別內[StatusBar 控制項](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)控制項有許多動態屬性，以決定其寬度和調整大小行為，在執行階段。  
   
-### <a name="to-set-the-size-of-a-panel"></a>若要設定面板的大小  
+### <a name="to-set-the-size-of-a-panel"></a>若要設定的面板大小  
   
-1.  在程序，設定<xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>， <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>，和<xref:System.Windows.Forms.StatusBarPanel.Width%2A>屬性 (或任何子集其中) 的狀態列面板使用其索引則是透過傳遞<xref:System.Windows.Forms.StatusBar.Panels%2A>屬性<xref:System.Windows.Forms.StatusBarPanel>集合。  
+1.  在程序，設定<xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>， <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>，並<xref:System.Windows.Forms.StatusBarPanel.Width%2A>屬性 (或任何子集其中) 的狀態列面板使用其索引則是透過傳遞<xref:System.Windows.Forms.StatusBar.Panels%2A>屬性<xref:System.Windows.Forms.StatusBarPanel>集合。  
   
     ```vb  
     Public Sub SetStatusBarPanelSize()  
@@ -65,9 +65,9 @@ ms.locfileid: "33533776"
        }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.StatusBar>  
- <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [逐步解說：在執行階段更新狀態列資訊](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
- [操作說明：判斷在 Windows Forms StatusBar 控制項中按下的面板](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- [StatusBar 控制項概觀](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.StatusBar>
+- <xref:System.Windows.Forms.ToolStripStatusLabel>
+- [逐步解說：在執行階段更新狀態列資訊](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
+- [如何：判斷按下 Windows Forms StatusBar 控制項中的面板](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar 控制項概觀](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

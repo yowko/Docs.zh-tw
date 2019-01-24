@@ -16,28 +16,28 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e2edc64cd9067ed89ae0e309c6a5630319ce835
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f006085aba140264e2a2605adce39924dbe082e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568110"
 ---
 # <a name="icordebugruntimeunwindableframe-interface"></a>ICorDebugRuntimeUnwindableFrame 介面
 提供 Unmanaged 方法的支援，這些方法需要通用語言執行平台 (CLR) 才能回溯框架。  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugRuntimeUnwindableFrame` 是特殊的版的 ICorDebugFrame 介面。 它會使用 unmanaged 需要回溯上目前的堆疊框架執行階段的方法。 現有的回溯慣例沒有作用，因為它們不會使用 JIT 編譯程式碼。 當偵錯工具看到無法還原的畫面格時，應該使用[icordebugstackwalk:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)回溯，但是它的方法應該會執行本身的檢查。 當偵錯工具收到`ICorDebugRuntimeUnwindableFrame`，它可以呼叫[icordebugstackwalk:: Getcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)方法來擷取框架的內容。  
+ `ICorDebugRuntimeUnwindableFrame` 是 ICorDebugFrame 介面的特製化的版本。 它會使用需要回溯上目前的堆疊框架執行階段的 unmanaged 方法。 現有的回溯慣例無法運作，因為它們不會使用 JIT 編譯的程式碼。 當偵錯工具會看到無法還原的畫面格時，應使用[icordebugstackwalk:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)回溯，但是它的方法應該會執行檢查本身。 當偵錯工具收到`ICorDebugRuntimeUnwindableFrame`，它可以呼叫[icordebugstackwalk:: Getcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)方法來擷取框架的內容。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a84061cff7cc5dbdeba1e0e66396e04a8f345cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7501a8a0f8368049c87b3c90e1e707e12773a853
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531638"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>ICorDebugProcess3::SetEnableCustomNotification 方法
-啟用和停用指定之類型的自訂偵錯工具通知。  
+啟用和停用指定之型別的自訂偵錯工具通知。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,26 +36,26 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
   
 #### <a name="parameters"></a>參數  
  `pClass`  
- [in]指定自訂偵錯工具通知的型別。  
+ [in]指定自訂的偵錯工具通知的型別。  
   
  `fEnable`  
- [in]`true`啟用自訂偵錯工具通知。`false`停用通知。 預設值是 `false`。  
+ [in]`true`以啟用自訂的偵錯工具通知;`false`停用通知。 預設值為 `false`。  
   
 ## <a name="remarks"></a>備註  
- 當`fEnable`設`true`，呼叫<xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType>方法觸發程序[icordebugmanagedcallback3:: Customnotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)回呼。 預設值則會停用通知因此，偵錯工具必須指定它知道，而且想要處理的任何通知類型。 因為[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)範圍類別是由應用程式定義域，偵錯工具必須呼叫`SetEnableCustomNotification`每個應用程式網域中的程序，如果它要接收通知接收之間的整個程序。  
+ 當`fEnable`設定為`true`，呼叫<xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType>方法觸發程序[ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)回呼。 根據預設，會停用通知因此，偵錯工具必須指定它所知，並想要處理的任何通知類型。 因為[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)類別的範圍由應用程式定義域、 偵錯工具必須呼叫`SetEnableCustomNotification`程序，如果它要接收通知，跨整個程序中的每個應用程式定義域。  
   
- 從開始[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]，僅支援的通知是跨執行緒相依性通知。  
+ 從開始[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]，只受支援的通知會跨執行緒相依性通知。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugProcess3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md)  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugProcess3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md)
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

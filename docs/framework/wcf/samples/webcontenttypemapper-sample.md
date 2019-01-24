@@ -2,12 +2,12 @@
 title: WebContentTypeMapper 範例
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 572bea9fc38668d554ef467be7689ac01b652fb8
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e37c044e12e015d9f6a5a8e2562d83772cd88a54
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569582"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 範例
 這個範例示範如何將新內容型別對應至 Windows Communication Foundation (WCF) 訊息本文格式。  

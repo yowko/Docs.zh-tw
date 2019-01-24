@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 8b5a7f7d428925590236351d56073024f6ad32b7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2cfa796d40fad35077c3d7b55e36bc7336c5d26b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562761"
 ---
 # <a name="brush-transformation-overview"></a>筆刷轉換概觀
 Brush 類別提供兩個轉換屬性：<xref:System.Windows.Media.Brush.Transform%2A>和<xref:System.Windows.Media.Brush.RelativeTransform%2A>。 上述屬性可讓您旋轉、縮放、扭曲及平移筆刷的內容。 本主題說明這兩種屬性之間的差異並提供使用方式範例。  
@@ -78,7 +78,7 @@ Brush 類別提供兩個轉換屬性：<xref:System.Windows.Media.Brush.Transfor
      ![將轉換後的筆刷投影至輸出區域](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   
 <a name="rotateexample"></a>   
-## <a name="example-rotate-an-imagebrush-45-degrees"></a>範例︰ 旋轉 ImageBrush 45 度  
+## <a name="example-rotate-an-imagebrush-45-degrees"></a>範例：旋轉 ImageBrush 45 度  
  下列範例會套用<xref:System.Windows.Media.RotateTransform>要<xref:System.Windows.Media.Brush.RelativeTransform%2A>屬性<xref:System.Windows.Media.ImageBrush>。 <xref:System.Windows.Media.RotateTransform>物件的<xref:System.Windows.Media.RotateTransform.CenterX%2A>和<xref:System.Windows.Media.RotateTransform.CenterY%2A>屬性都設為 0.5，相對座標內容中心點。 如此一來，會以筆刷內容的中心為中心點旋轉。  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushrelativetransformexample)]
@@ -97,11 +97,11 @@ Brush 類別提供兩個轉換屬性：<xref:System.Windows.Media.Brush.Transfor
   
  這個範例是某完整範例的一部分。 如需完整的範例，請參閱 [Brush 範例](https://go.microsoft.com/fwlink/?LinkID=159973)。 如需筆刷的詳細資訊，請參閱 [WPF 筆刷概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Brush.Transform%2A>  
- <xref:System.Windows.Media.Brush.RelativeTransform%2A>  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Brush>  
- [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Brush.Transform%2A>
+- <xref:System.Windows.Media.Brush.RelativeTransform%2A>
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Brush>
+- [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

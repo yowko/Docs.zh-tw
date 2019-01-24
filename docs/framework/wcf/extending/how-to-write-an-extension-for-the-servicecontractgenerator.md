@@ -1,15 +1,15 @@
 ---
-title: HOW TO：撰寫 ServiceContractGenerator 的擴充
+title: HOW TO：撰寫 servicecontractgenerator 的擴充功能
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: 43105553739e104ab862b3be3cf2082fbf6d499f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd0566f358b313ea96f1c9b2d5fd7fc447f4d2ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629694"
 ---
-# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>HOW TO：撰寫 ServiceContractGenerator 的擴充
+# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>HOW TO：撰寫 servicecontractgenerator 的擴充功能
 本主題說明如何撰寫 <xref:System.ServiceModel.Description.ServiceContractGenerator> 的擴充。 您可以在作業行為上實作 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> 介面，或在合約行為上實作 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 介面來達到這個目的。 本主題說明如何在合約行為上實作 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 介面。  
   
  <xref:System.ServiceModel.Description.ServiceContractGenerator> 會從 <xref:System.ServiceModel.Description.ServiceEndpoint>、<xref:System.ServiceModel.Description.ContractDescription> 和 <xref:System.ServiceModel.Channels.Binding> 執行個體中產生服務合約、用戶端類型，與用戶端組態。 一般來說，您可以從服務中繼資料匯入 <xref:System.ServiceModel.Description.ServiceEndpoint>、<xref:System.ServiceModel.Description.ContractDescription>，和 <xref:System.ServiceModel.Channels.Binding> 執行個體，然後使用這些執行個體來產生程式碼以呼叫服務。 此範例會使用 <xref:System.ServiceModel.Description.IWsdlImportExtension> 實作來處理 WSDL 附註，然後將程式碼產生擴充加入至匯入的合約中，以便在產生的程式碼中產生註解。  
@@ -98,6 +98,6 @@ ms.locfileid: "33488656"
   
 7.  在實作 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 的特定合約上，會針對每個合約行為自動呼叫 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>。 這個方法會接著修改傳入的 <xref:System.ServiceModel.Description.ServiceContractGenerationContext>。 在這個範例中會加入註解。  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [如何：匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [如何：匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

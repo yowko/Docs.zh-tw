@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 09d96b304ba3bcf2a9de2812ce37ae69dba73a41
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8e0ab9e3818ff4210dc6e349104ea0dcc4c8bfa7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596003"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>隱含和明確轉換 (Visual Basic)
 *隱含轉換*不需要任何特殊的語法，在原始程式碼中。 在下列範例中，Visual Basic 會隱含地將值轉換`k`為單精確度浮點數值之前將它指派給`q`。  
@@ -56,8 +56,8 @@ k = CInt(q)
 |---|---|---|  
 |`CBool`|[Boolean 資料類型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，以及列舉型別)， `String`， `Object`|  
 |`CByte`|[Byte 資料類型](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|任何數值類型 (包括`SByte`以及列舉型別)， `Boolean`， `String`， `Object`|  
-|`CChar`|[Char 資料類型](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`, `Object`|  
-|`CDate`|[Date 資料類型](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`, `Object`|  
+|`CChar`|[Char 資料類型](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`、 `Object`|  
+|`CDate`|[Date 資料類型](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`、 `Object`|  
 |`CDbl`|[Double 資料類型](../../../../visual-basic/language-reference/data-types/double-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，以及列舉型別)， `Boolean`， `String`， `Object`|  
 |`CDec`|[Decimal 資料類型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，以及列舉型別)， `Boolean`， `String`， `Object`|  
 |`CInt`|[Integer 資料類型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，以及列舉型別)， `Boolean`， `String`， `Object`|  
@@ -117,7 +117,7 @@ End If
  如需詳細資訊和範例，請參閱 <<c0> [ 陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)。  
   
 ### <a name="types-defining-ctype"></a>定義 CType 的類型  
- 您可以定義`CType`上類別或您已定義的結構。 這可讓您將從您的類別或結構的型別來回轉換值。 如需詳細資訊和範例，請參閱 <<c0> [ 如何： 定義轉換運算子](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
+ 您可以定義`CType`上類別或您已定義的結構。 這可讓您將從您的類別或結構的型別來回轉換值。 如需詳細資訊和範例，請參閱[How to:定義轉換運算子](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
   
 > [!NOTE]
 >  轉換關鍵字搭配使用的值必須是有效的目的地資料類型，或發生錯誤。 比方說，如果您嘗試轉換`Long`要`Integer`，值`Long`的有效範圍內必須是`Integer`資料型別。  
@@ -125,15 +125,15 @@ End If
 > [!CAUTION]
 >  指定`CType`如果來源類型並非衍生自目的型別，從一個類別的型別轉換為另一個在執行階段失敗。 此類錯誤會擲回<xref:System.InvalidCastException>例外狀況。  
   
- 不過，如果其中一個型別結構或類別定義，而且您已定義`CType`在該結構或類別中，如果它能滿足的需求，可以成功轉換您`CType`。 請參閱[如何： 定義轉換運算子](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
+ 不過，如果其中一個型別結構或類別定義，而且您已定義`CType`在該結構或類別中，如果它能滿足的需求，可以成功轉換您`CType`。 請參閱[如何：定義轉換運算子](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
   
  執行明確的轉換，也就是*轉型*運算式，以指定的資料型別或物件類別。  
   
-## <a name="see-also"></a>另請參閱  
- [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [如何： 將物件轉換成 Visual Basic 中的另一個類型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)  
- [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a>另請參閱
+- [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [如何：將物件轉換成 Visual Basic 中的另一個類型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)
+- [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

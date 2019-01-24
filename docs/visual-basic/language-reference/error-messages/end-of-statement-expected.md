@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 8df756009ebe3a0613ec47018d938151829214df
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1e4c46088d3d89d9c2066e33def880941107575f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198259"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565016"
 ---
 # <a name="end-of-statement-expected"></a>必須有陳述式結尾
 陳述式語法上完成，但其他程式設計項目會遵循完成陳述式的項目。 需要在每個陳述式結尾的行結束字元。
@@ -27,6 +27,6 @@ ms.locfileid: "50198259"
   
 2.  完成陳述式的項目之後插入的行結束字元。
   
-## <a name="see-also"></a>另請參閱  
- [操作說明：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
- [陳述式](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>另請參閱
+- [如何：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [陳述式](../../../visual-basic/programming-guide/language-features/statements.md)

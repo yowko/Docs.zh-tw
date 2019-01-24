@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: ba8d07a26b7e6abc511e5b24db26162b46a2b0a1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 39e78be4806a58d8e274d1e6ce58a1f1ee46ce1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592029"
 ---
 # <a name="application-management-overview"></a>應用程式管理概觀
 所有應用程式通常會共用一組適用於應用程式實作和管理的通用功能。 本主題提供中的功能概觀<xref:System.Windows.Application>類別來建立及管理應用程式。  
@@ -365,11 +365,11 @@ ms.locfileid: "44042253"
   
  ![XBAP &#45; 應用程式物件事件](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Application>  
- [WPF 視窗概觀](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [瀏覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
- [WPF 應用程式資源、內容和資料檔案](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [應用程式模型︰ How to 主題](https://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
- [應用程式開發](../../../../docs/framework/wpf/app-development/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Application>
+- [WPF 視窗概觀](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)
+- [瀏覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+- [WPF 應用程式資源、內容和資料檔案](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [應用程式模型：How to 主題](https://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)
+- [應用程式開發](../../../../docs/framework/wpf/app-development/index.md)

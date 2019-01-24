@@ -1,5 +1,5 @@
 ---
-title: 如何：錨定和停駐 FlowLayoutPanel 控制項中的子控制項
+title: HOW TO：錨定和停駐 FlowLayoutPanel 控制項中的子控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms], child controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: b53547e8e61e69834f262407de490422e6b6bb00
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e0a711c91f78ed26301c360582b08ac5c03ce565
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520642"
 ---
-# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>如何：錨定和停駐 FlowLayoutPanel 控制項中的子控制項
+# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>HOW TO：錨定和停駐 FlowLayoutPanel 控制項中的子控制項
 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項在其子控制項中支援 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 屬性。  
   
 ### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>錨定和停駐 FlowLayoutPanel 控制項中的子控制項  
@@ -58,8 +58,8 @@ ms.locfileid: "45615137"
   
 -   System、System.Data、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[How to:編譯並執行完整的 Windows Form 程式碼範例使用 Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.FlowLayoutPanel>  
- [FlowLayoutPanel 控制項概觀](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.FlowLayoutPanel>
+- [FlowLayoutPanel 控制項概觀](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)

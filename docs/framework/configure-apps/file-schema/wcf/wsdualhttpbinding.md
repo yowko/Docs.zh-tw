@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: 7a6059a5ebf1ae05fee8e49235f31808909adc6f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3f4befab1945d985d517bc3385868b5f4ac18dc9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532379"
 ---
 # <a name="ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt;
 定義安全、可靠且互通的繫結，且這個繫結適用於雙工服務合約或透過 SOAP 媒介的通訊。  
   
  \<system.ServiceModel>  
-\<繫結 >  
+\<bindings>  
 \<wsDualHttpBinding>  
   
 ## <a name="syntax"></a>語法  
@@ -88,7 +88,7 @@ ms.locfileid: "54146013"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
  `WSDualHttpBinding` 提供與 `WSHttpBinding` 相同的 Web 服務通訊協定支援，但是要搭配雙工合約使用。 `WSDualHttpBinding` 只支援 SOAP 安全性，而且需要可靠傳訊。 這個繫結要求用戶端擁有針對服務提供回呼端點的公用 URI， 這是由 `clientBaseAddress` 屬性提供。 雙重繫結會向服務公開用戶端的 IP 位址， 用戶端應該使用安全性確保本身只連接其信任的服務。  
@@ -131,10 +131,10 @@ ms.locfileid: "54146013"
 </configuration>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

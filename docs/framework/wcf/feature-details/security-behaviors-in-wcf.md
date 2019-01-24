@@ -2,12 +2,12 @@
 title: WCF 中的安全性行為
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 221e9cb23e05378b68e4b53bc9d678c119738af5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3040f2af2f9db030d8434e977167810ac83f09dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592805"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全性行為
 在 Windows Communication Foundation (WCF) 中，行為會修改服務層級或端點層級的執行階段行為。 (如需行為的詳細資訊在一般情況下，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全性行為*可控制認證、 驗證、 授權和稽核記錄。 您可以藉由程式設計的方式或透過組態的方式使用這些行為。 本主題將著重於設定下列與安全性功能相關的行為：  
@@ -18,7 +18,7 @@ ms.locfileid: "53127416"
   
 -   [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)。  
   
--   [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)。  
+-   [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
 -   [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)，這也可讓您指定用戶端存取中繼資料的安全端點。  
   
@@ -117,16 +117,16 @@ ms.locfileid: "53127416"
 #### <a name="clientcertifictate-element"></a>\<clientCertifictate > 項目  
  使用此項目來設定用以驗證用戶端的憑證。 如需詳細資訊，請參閱[＜How to：指定用戶端認證值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
-#### <a name="httpdigest"></a>\<httpDigest >  
+#### <a name="httpdigest"></a>\<httpDigest>  
  此功能必須與 Windows 和 Internet Information Services (IIS) 上的 Active Directory 一起啟用。 如需詳細資訊，請參閱 <<c0> [ 在 IIS 6.0 中的摘要式驗證](https://go.microsoft.com/fwlink/?LinkId=88443)。  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > 項目  
  [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)包含用來設定本機簽發者的權杖或搭配安全性權杖服務的行為項目。 如需設定用戶端使用本機簽發者的指示，請參閱[How to:設定本機簽發者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
-#### <a name="localissueraddress"></a>\<localIssuerAddress >  
+#### <a name="localissueraddress"></a>\<localIssuerAddress>  
  指定預設的安全性權杖服務位址。 這用時<xref:System.ServiceModel.WSFederationHttpBinding>並不提供的 URL 安全性權杖服務，或是聯合繫結的簽發者位址是 `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` 或 `null` 。 在這種情形下，<xref:System.ServiceModel.Description.ClientCredentials> 必須設定本機簽發者的位址，以及用於與該簽發者進行通訊的繫結。  
   
-#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
+#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors>  
  使用[ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)新增與安全性權杖服務通訊時使用的 WCF 用戶端行為。 定義中的用戶端行為[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)一節。 若要使用已定義的行為，加入 <`add`> 項目`<issuerChannelBehaviors>`兩個屬性的項目。 將 `issuerAddress` 設定為安全性權杖服務的 URL，並將 `behaviorConfiguration` 屬性設定為已定義之端點行為的名稱，如下列範例所示。  
   
 ```xml  
@@ -217,6 +217,6 @@ ms.locfileid: "53127416"
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>另請參閱
+- [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

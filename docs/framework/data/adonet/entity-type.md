@@ -2,23 +2,23 @@
 title: Entity Type - 實體類型
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: c694f29d36988ea52aeca650cf2bba2c50c91e89
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3955de1873d80e85df713a557750e34e76efeb41
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502880"
 ---
 # <a name="entity-type"></a>Entity Type - 實體類型
-*實體類型*是描述與實體資料模型 (EDM) 中的資料結構的基本建置組塊。 在概念模型中，實體類型代表最上層概念的結構，例如客戶或訂單。 實體類型是實體類型執行個體的範本。 每個範本包含下列資訊：  
+*實體類型*是描述與 Entity Data Model (EDM) 中的資料結構的基本建置組塊。 在概念模型中，實體類型代表最上層概念的結構，例如客戶或訂單。 實體類型是實體類型執行個體的範本。 每個範本包含下列資訊：  
   
 -   唯一名稱。 (必要項。)  
   
--   [實體索引鍵](../../../../docs/framework/data/adonet/entity-key.md)一或多個屬性所定義。 (必要項。)  
+-   [實體索引鍵](../../../../docs/framework/data/adonet/entity-key.md)由一或多個屬性所定義。 (必要項。)  
   
 -   資料的形式[屬性](../../../../docs/framework/data/adonet/property.md)。 (選擇性。)  
   
--   [導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)，允許從一個導覽[結束](../../../../docs/framework/data/adonet/association-end.md)的[關聯](../../../../docs/framework/data/adonet/association-type.md)之另一端。 (選擇項)  
+-   [導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)可讓不同的瀏覽[結束](../../../../docs/framework/data/adonet/association-end.md)的[關聯](../../../../docs/framework/data/adonet/association-type.md)另一端。 (選擇項)  
   
  在應用程式中，實體類型的執行個體代表特定的物件 (例如特定的客戶或訂單)。 每個實體類型執行個體必須具有唯一[實體索引鍵](../../../../docs/framework/data/adonet/entity-key.md)內[實體集](../../../../docs/framework/data/adonet/entity-set.md)。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "32765317"
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
-## <a name="see-also"></a>另請參閱  
- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)  
- [facet](../../../../docs/framework/data/adonet/facet.md)
+## <a name="see-also"></a>另請參閱
+- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [facet](../../../../docs/framework/data/adonet/facet.md)

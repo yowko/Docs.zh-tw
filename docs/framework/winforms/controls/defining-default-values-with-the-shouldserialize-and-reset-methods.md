@@ -8,26 +8,26 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 8d7645e8de5edee711c30bbe7edde8ba7b5b1dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23b4ddb3399c12f5bf3c387991676e7ea93b8a29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497429"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>使用 ShouldSerialize 和 Reset 方法定義預設值
-`ShouldSerialize` 和`Reset`是選擇性屬性，您可以提供的方法，如果屬性未具有簡單的預設值。 如果此屬性有簡單的預設值，您應該套用<xref:System.ComponentModel.DefaultValueAttribute>和改為提供預設值給屬性的類別建構函式。 其中一種機制可讓設計工具中的下列功能：  
+`ShouldSerialize` 和`Reset`是選擇性屬性，您可以提供的方法，如果屬性未具有簡單的預設值。 如果屬性具有簡單的預設值，則應套用<xref:System.ComponentModel.DefaultValueAttribute>並改為提供屬性的類別建構函式的預設值。 是一種機制可讓設計工具中的下列功能：  
   
 -   如果已修改預設值，此屬性會提供屬性瀏覽器中的視覺指示。  
   
--   使用者可以在屬性上按一下滑鼠右鍵並選擇**重設**將屬性還原為其預設值。  
+-   使用者可以在屬性上按一下滑鼠右鍵，然後選擇**重設**還原為其預設值的屬性。  
   
--   在設計工具會產生更有效率的程式碼。  
+-   設計工具會產生更有效率的程式碼。  
   
     > [!NOTE]
-    >  套用<xref:System.ComponentModel.DefaultValueAttribute>或提供`Reset` *PropertyName*和`ShouldSerialize` *PropertyName*方法。 請勿使用兩者。  
+    >  請套用<xref:System.ComponentModel.DefaultValueAttribute>，或提供`Reset` *PropertyName*並`ShouldSerialize` *PropertyName*方法。 請勿使用兩者。  
   
- `Reset` *PropertyName*方法屬性設定為其預設值，如下列程式碼片段所示。  
+ `Reset` *PropertyName*方法將屬性設定為預設值，如下列程式碼片段所示。  
   
 ```vb  
 Public Sub ResetMyFont()  
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  如果屬性沒有`Reset`方法，不會標示<xref:System.ComponentModel.DefaultValueAttribute>，而且沒有預設值在其宣告中，提供`Reset`選項的快速鍵功能表中的該屬性已停用**屬性** Visual Studio 中的 [Windows Form 設計工具] 視窗。  
+>  如果屬性不一定`Reset`方法，不會標示<xref:System.ComponentModel.DefaultValueAttribute>，而且沒有預設值，在其宣告中，提供`Reset`選項的捷徑功能表中的該屬性已停用**屬性**的 Visual Studio 中的 [Windows Form 設計工具] 視窗。  
   
- Visual Studio 這類的設計工具使用`ShouldSerialize` *PropertyName*方法來檢查屬性是否已經從其預設值，並撰寫程式碼到表單只有當屬性變更，因此允許更有效率的程式碼層代。 例如:   
+ 使用 Visual Studio 這類的設計工具`ShouldSerialize` *PropertyName*方法來檢查屬性是否已經變更預設值，並撰寫程式碼到表單只有當屬性已變更，因此可允許更有效率的程式碼層代。 例如:   
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  
@@ -141,9 +141,9 @@ public class MyControl : Control {
 }  
 ```  
   
- 在此情況下，即使所存取的私用變數的值`MyFont`屬性是`null`，屬性瀏覽器不會顯示`null`; 相反地，它會顯示<xref:System.Windows.Forms.Control.Font%2A>屬性的父代，如果不是`null`，預設值或<xref:System.Windows.Forms.Control.Font%2A>中定義值<xref:System.Windows.Forms.Control>。 因此的預設值為`MyFont`，所以無法只需設定和<xref:System.ComponentModel.DefaultValueAttribute>無法套用至這個屬性。 相反地，`ShouldSerialize`和`Reset`方法必須實作`MyFont`屬性。  
+ 在此情況下，藉由存取私用變數的值時，即使`MyFont`屬性是`null`，屬性瀏覽器不會顯示`null`; 相反地，它會顯示<xref:System.Windows.Forms.Control.Font%2A>屬性的父代，如果不是`null`，預設值<xref:System.Windows.Forms.Control.Font%2A>中所定義的值<xref:System.Windows.Forms.Control>。 因此的預設值`MyFont`無法直接設定，和<xref:System.ComponentModel.DefaultValueAttribute>無法套用至這個屬性。 相反地，`ShouldSerialize`並`Reset`方法必須實作`MyFont`屬性。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Forms 控制項中的屬性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [定義屬性](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- [屬性變更事件](../../../../docs/framework/winforms/controls/property-changed-events.md)
+## <a name="see-also"></a>另請參閱
+- [Windows Forms 控制項中的屬性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+- [定義屬性](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)
+- [屬性變更事件](../../../../docs/framework/winforms/controls/property-changed-events.md)

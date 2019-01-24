@@ -2,17 +2,17 @@
 title: Association Set - 關聯集
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: 53eeac5c3408bc35a02a368c093feda81cc16378
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 29150eea7781784c2cdbd1f0137e02b94f66e106
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565926"
 ---
 # <a name="association-set"></a>Association Set - 關聯集
 *關聯集*是邏輯容器[關聯](../../../../docs/framework/data/adonet/association-type.md)相同類型的執行個體。 關聯集不是資料模型建構，也就是說，它不會描述資料或關聯性的結構。 反之，關聯集會提供建構，讓裝載或儲存環境 (例如 Common Language Runtime 或 SQL Server 資料庫) 群組關聯執行個體，以將其對應至資料存放區。  
   
- 關聯集內定義[實體容器](../../../../docs/framework/data/adonet/entity-container.md)，這是的邏輯群組[實體集](../../../../docs/framework/data/adonet/entity-set.md)和關聯集。  
+ 關聯集內定義[實體容器](../../../../docs/framework/data/adonet/entity-container.md)，這是邏輯分組[實體集](../../../../docs/framework/data/adonet/entity-set.md)和關聯集。  
   
  關聯集的定義包含下列資訊：  
   
@@ -27,7 +27,7 @@ ms.locfileid: "32756991"
   
  ![範例模型](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
   
- 下列範例顯示以前述概念模型為基礎的一個關聯集 (`PublishedBy`) 和兩個實體集 (`Books` 和 `Publishers`)。 在 bi`Books`實體集表示的執行個體`Book`在執行階段的實體類型。 同樣地，Pj 代表`Publisher`執行個體中`Publishers`實體集。 BiPj 表示的執行個體`PublishedBy`中的關聯`PublishedBy`關聯集。  
+ 下列範例顯示以前述概念模型為基礎的一個關聯集 (`PublishedBy`) 和兩個實體集 (`Books` 和 `Publishers`)。 在 bi`Books`實體集代表的執行個體`Book`在執行階段的實體類型。 同樣地，Pj 代表`Publisher`執行個體中`Publishers`實體集。 BiPj 表示的執行個體`PublishedBy`中的關聯`PublishedBy`關聯集。  
   
  ![設定範例](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
   
@@ -39,7 +39,7 @@ ms.locfileid: "32756991"
   
  [!code-xml[EDM_Example_Model#MultipleAssociationSets](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#multipleassociationsets)]  
   
-## <a name="see-also"></a>另請參閱  
- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)  
- [外部索引鍵屬性](../../../../docs/framework/data/adonet/foreign-key-property.md)
+## <a name="see-also"></a>另請參閱
+- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [外部索引鍵屬性](../../../../docs/framework/data/adonet/foreign-key-property.md)

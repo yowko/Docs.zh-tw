@@ -1,5 +1,5 @@
 ---
-title: 如何：在設計階段複製和貼上 ElementHost 控制項
+title: HOW TO：複製並貼上 ElementHost 控制項在設計階段
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, content copying and pasting
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-ms.openlocfilehash: a61a8538fb9b4245e3f3705c5d5cbb1b45ed0b72
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 6ff1ccc5e8f188bdec2e09048974fdc20a785920
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572626"
 ---
-# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>如何：在設計階段複製和貼上 ElementHost 控制項
+# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>HOW TO：複製並貼上 ElementHost 控制項在設計階段
 此程序會示範如何複製 Windows Form 上的 Windows Presentation Foundation (WPF) 控制項。  
   
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "48872915"
   
 ### <a name="to-copy-and-paste-an-elementhost-control-at-design-time"></a>複製並貼上 ElementHost 控制項在設計階段  
   
-1.  將新的 WPF<xref:System.Windows.Controls.UserControl>至您的 Windows Forms 專案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 建立新 WPF 內容在設計階段的 Windows Form 上](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+1.  將新的 WPF<xref:System.Windows.Controls.UserControl>至您的 Windows Forms 專案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱[逐步解說：在設計階段建立 Windows Form 上的新 WPF 內容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
 2.  在**屬性**視窗中，設定的值<xref:System.Windows.FrameworkElement.Width%2A>並<xref:System.Windows.FrameworkElement.Height%2A>的屬性`UserControl1`至`200`。  
   
@@ -42,10 +42,10 @@ ms.locfileid: "48872915"
   
      新<xref:System.Windows.Forms.Integration.ElementHost>控制項，名為`elementHost2`建立表單上。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Windows.Forms.Integration.ElementHost>  
-- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
-- [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
-- [使用 WPF 控制項](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [使用 WPF 控制項](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

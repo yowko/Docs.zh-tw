@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: ebaf524997ae4ed50b28aec53507f843f028bc31
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 776fa01d78c59d38a55de969a10096c22f34e9e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49348973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588467"
 ---
 # <a name="iis-hosting-using-inline-code"></a>使用內嵌程式碼的 IIS 裝載
 這個範例會示範如何實作由網際網路資訊服務 (IIS) 裝載的服務，此時服務程式碼內嵌在 .svc 檔中並且視需要進行編譯。 服務程式碼也可以直接實作在位於應用程式之 \App_Code 目錄的原始程式碼檔中，或是編譯成部署在 \bin 中的組件。 這個範例不會示範這些技術。  
@@ -92,7 +92,7 @@ Press <ENTER> to terminate client.
   
 3.  在建立方案後，執行 setup.bat 以便在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 中安裝 ServiceModelSamples 應用程式。 ServiceModelSamples 目錄現在應該會顯示為 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 應用程式。  
   
-4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 如需有關如何建立可呼叫此服務的用戶端應用程式的範例，請參閱[如何： 建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 如需有關如何建立可呼叫此服務的用戶端應用程式的範例，請參閱[How to:建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>另請參閱
+- [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

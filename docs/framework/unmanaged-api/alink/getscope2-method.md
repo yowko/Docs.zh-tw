@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ed9645c5111e7260010df74554825ffd8d427e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc986dc27deb08f779a9654324e6832d8420554a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587126"
 ---
 # <a name="getscope2-method"></a>GetScope2 方法
 取得匯入範圍。  
@@ -51,12 +51,12 @@ HRESULT GetScope2(
  接收指標[IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)指定範圍的介面。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則傳回 S_OK。  
+ 如果方法成功，則會傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
  需要 alink.h。  
   
-## <a name="see-also"></a>另請參閱  
- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>另請參閱
+- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

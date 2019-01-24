@@ -1,5 +1,5 @@
 ---
-title: 如何：使用設計工具載入圖片 (Windows Form)
+title: HOW TO：使用設計工具 (Windows Form) 載入圖片
 ms.date: 03/30/2017
 helpviewer_keywords:
 - picture formats
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: e01e5d1dc0fad8171e705e85debc2b15d6a506eb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6142474c2009e0998852dc28d346e73f4abbf1b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539086"
 ---
-# <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>如何：使用設計工具載入圖片 (Windows Form)
+# <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>HOW TO：使用設計工具 (Windows Form) 載入圖片
 使用 Windows Form<xref:System.Windows.Forms.PictureBox>控制項，您可以載入並設定表單上顯示一張圖片在設計階段<xref:System.Windows.Forms.PictureBox.Image%2A>屬性，以有效的圖片。 下表顯示可接受的檔案類型。  
   
 |類型|副檔名|  
@@ -43,9 +43,9 @@ ms.locfileid: "43855955"
   
 1.  在 **屬性**視窗中，選取<xref:System.Windows.Forms.PictureBox.Image%2A>屬性並以滑鼠右鍵按一下左邊的映像物件的名稱會出現的小型縮圖影像。 選擇**重設**。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.PictureBox>  
- [PictureBox 控制項概觀](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- [操作說明：於執行階段修改圖片的大小或位置](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- [操作說明：在執行階段設定圖案](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
- [PictureBox 控制項](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.PictureBox>
+- [PictureBox 控制項概觀](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
+- [如何：在執行階段修改的大小或位置的圖片](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [如何：在執行階段設定圖案](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)
+- [PictureBox 控制項](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

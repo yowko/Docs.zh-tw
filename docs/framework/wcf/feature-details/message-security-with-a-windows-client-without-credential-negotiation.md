@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 09ca073a39322e54433c25321e3a9ef44c9efe90
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2e5671832fa1025c424c746b8c27162d3935fddd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525151"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>未使用認證交涉的 Windows 用戶端訊息安全性
 下列案例示範 Windows Communication Foundation (WCF) 用戶端和受保護的 Kerberos 通訊協定的服務。  
@@ -146,7 +146,7 @@ ms.locfileid: "53145815"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>另請參閱
+- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

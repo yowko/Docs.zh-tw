@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a53b0a9cdcec33846f9d491e7d6567bcf9235b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5f2a05009caed7bef6da9edee57a4a54b876b18f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580989"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication 函式
-啟動指定的網路路徑，使用指定的資訊清單和其他應用程式資料在應用程式。  
+啟動指定的網路路徑，使用指定的資訊清單和其他應用程式資料的應用程式。  
   
- 此函式中已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +45,7 @@ HRESULT CorLaunchApplication (
   
 #### <a name="parameters"></a>參數  
  `dwClickOnceHost`  
- [in]值為[HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)指定為啟動應用程式的主機類型的列舉。  
+ [in]值為[HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)列舉，指定正在啟動應用程式的主控件的型別。  
   
  `pwzAppFullName`  
  [in]正在啟動應用程式的完整名稱。  
@@ -54,25 +54,25 @@ HRESULT CorLaunchApplication (
  [in]應用程式資訊清單路徑數目。  
   
  `ppwzManifestPaths`  
- [in]字串陣列，其中每個指定的路徑啟動應用程式資訊清單。  
+ [in]字串陣列，每一個都會指定要啟動之應用程式資訊清單的路徑。  
   
  `dwActivationData`  
- [in]正在啟動應用程式啟用資料的項目數目。  
+ [in]正在啟動之應用程式啟用資料的項目數目。  
   
  `ppwzActivationData`  
- [in]字串陣列，其中每一個都是應用程式正在啟動的啟用資料項目。  
+ [in]字串陣列，每個都是要啟動之應用程式的啟用資料的項目。  
   
  `lpProcessInformation`  
  [out]程序中載入應用程式的相關資訊的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>另請參閱
+- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

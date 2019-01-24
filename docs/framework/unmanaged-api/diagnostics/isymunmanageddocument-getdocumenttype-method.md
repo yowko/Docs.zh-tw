@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0460086874af38cad348c965237f8c423f18e868
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: adad8854052d76476076e5e1357f6d3e2dec1052
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629471"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType 方法
-取得這份文件的文件類型。  
+取得此文件的文件類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ HRESULT GetDocumentType(
  [out]接收文件類型的變數的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果此方法成功為 S_OK。  
+ 如果方法成功為 S_OK。  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

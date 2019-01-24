@@ -14,12 +14,12 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 8fd489dc9f12f7e80ef2dd49c6e2dee6c28ae761
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a2c211e5ebfd00a639644243312cbe25f71f4cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395718"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593702"
 ---
 # <a name="end-statement"></a>End 陳述式
 立即結束執行。  
@@ -55,7 +55,7 @@ End
 ## <a name="smart-device-developer-notes"></a>智慧型裝置開發人員注意事項  
  不支援此陳述式。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Security.Permissions.SecurityPermissionFlag>  
- [Stop 陳述式](../../../visual-basic/language-reference/statements/stop-statement.md)  
- [結束\<關鍵字 > 陳述式](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Security.Permissions.SecurityPermissionFlag>
+- [Stop 陳述式](../../../visual-basic/language-reference/statements/stop-statement.md)
+- [結束\<關鍵字 > 陳述式](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

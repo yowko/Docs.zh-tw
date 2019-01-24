@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 0b76e07a23b105f2c1b4fb55a0d25bb52bcb9dc2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0b3b92e29c5de7365cbf1196a387bc0c9c440755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192037"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582075"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows Form 的 ClickOnce 部署
 下列主題描述 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，您可以使用這項技術輕鬆地將 Windows Form 應用程式部署到用戶端電腦。  
@@ -41,7 +41,7 @@ ms.locfileid: "44192037"
  [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  示範如何使用命令列和 SDK 工具來部署 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，而不使用 Visual Studio。  
   
- [如何：新增信任發行者至 ClickOnce 應用程式的用戶端電腦](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ [如何：將信任發行者新增到 ClickOnce 應用程式的用戶端電腦](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  示範信任的應用程式部署所需之用戶端電腦的一次組態。  
   
  [如何：指定部署更新的替代位置](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
@@ -62,10 +62,10 @@ ms.locfileid: "44192037"
  [如何：在 ClickOnce 應用程式中納入資料檔案](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  示範如何標記檔案，以便在 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 資料目錄中使用。  
   
-## <a name="see-also"></a>另請參閱  
- [應用程式設定概觀](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [發行 ClickOnce 應用程式](/visualstudio/deployment/publishing-clickonce-applications)  
- [從命令列建置 ClickOnce 應用程式](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)  
- [偵錯使用 System.Deployment.Application 的 ClickOnce 應用程式](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)  
- [使用 ClickOnce 部署 COM 元件](/visualstudio/deployment/deploying-com-components-with-clickonce)  
- [如何：使用發行精靈發行 ClickOnce 應用程式](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)
+## <a name="see-also"></a>另請參閱
+- [應用程式設定概觀](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [發行 ClickOnce 應用程式](/visualstudio/deployment/publishing-clickonce-applications)
+- [從命令列建置 ClickOnce 應用程式](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
+- [偵錯使用 System.Deployment.Application 的 ClickOnce 應用程式](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)
+- [使用 ClickOnce 部署 COM 元件](/visualstudio/deployment/deploying-com-components-with-clickonce)
+- [如何：使用 [發佈精靈] 發佈 ClickOnce 應用程式](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

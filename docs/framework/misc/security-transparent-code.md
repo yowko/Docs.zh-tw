@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a491a87c896c76fa62f1702d1ef0e99fc404607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc39e4ee47041e70060465a7e220ae1d861d9053
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510113"
 ---
 # <a name="security-transparent-code"></a>安全性透明的程式碼
 <a name="top"></a>
@@ -21,7 +21,7 @@ ms.locfileid: "33392885"
  安全性牽涉到三個互動式的部分：沙箱、權限與強化。 沙箱是指建立隔離定義域的做法，其中將某些程式碼視為完全信任，且限制其他程式碼為沙箱授權集中的權限。 在沙箱授權集內部執行的應用程式程式碼會被視為透明的。也就是說，它無法執行任何可能會影響安全性的作業。 沙箱授權集是依照辨識項 (<xref:System.Security.Policy.Evidence> 類別) 決定的。 辨識項會識別沙箱所需的特定權限，以及可建立的沙箱種類。 強化是指讓透明程式碼只能在其授權集內部執行。  
   
 > [!IMPORTANT]
->  安全性原則是舊版 .NET Framework 中的重要項目。 從開始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，安全性原則就已過時。 安全性原則的刪除獨立於安全性透明規則。 此變更影響的相關資訊，請參閱[程式碼存取安全性原則相容性和移轉](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md)。  
+>  安全性原則是舊版 .NET Framework 中的重要項目。 從開始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，安全性原則是已過時。 安全性原則的刪除獨立於安全性透明規則。 這項變更影響的相關資訊，請參閱[程式碼存取安全性原則相容性和移轉](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md)。  
   
  本主題將詳細描述透明度模型。 它包含以下各節：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33392885"
  透明度是在 .NET Framework 2.0 版所引入的，以簡化安全性模型，並且讓您更輕鬆地撰寫和部署安全程式庫與應用程式。 Microsoft Silverlight 中也使用了透明程式碼，以簡化部分信任應用程式的開發。  
   
 > [!NOTE]
->  當您開發部分信任應用程式時，必須注意目標主機的權限需求。 您可以開發使用某些主機不允許之資源的應用程式。 雖然這種應用程式在編譯時不會發生任何錯誤，不過在將它載入裝載環境時，就會失敗。 如果您已經使用 Visual Studio 開發應用程式，就可以在來自開發環境的部分信任或受限制的權限集合中啟用偵錯。 如需詳細資訊，請參閱 [如何：以限制使用權限偵錯 ClickOnce 應用程式](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)。 提供給 ClickOnce 應用程式的「計算使用權限」功能也可用於任何部分信任的應用程式。  
+>  當您開發部分信任應用程式時，必須注意目標主機的權限需求。 您可以開發使用某些主機不允許之資源的應用程式。 雖然這種應用程式在編譯時不會發生任何錯誤，不過在將它載入裝載環境時，就會失敗。 如果您已經使用 Visual Studio 開發應用程式，就可以在來自開發環境的部分信任或受限制的權限集合中啟用偵錯。 如需詳細資訊，請參閱[＜How to：以受限制的權限對 ClickOnce 應用程式進行偵錯](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)。 提供給 ClickOnce 應用程式的「計算使用權限」功能也可用於任何部分信任的應用程式。  
   
  [回到頁首](#top)  
   
@@ -106,6 +106,6 @@ ms.locfileid: "33392885"
 ## <a name="transparency-enforcement"></a>透明度強化  
  透明度規則會等到計算出透明度之後才會強制執行。 此時，如果違反了透明度規則，就會擲回 <xref:System.InvalidOperationException>。 計算透明度的時間取決於多個因素，而且無法預測。 透明度的計算會盡可能延後。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中，組件層級的透明度計算會比在 .NET Framework 2.0 中更早發生。 唯一能保證的是透明度計算會在需要時發生。 這與 Just-In-Time (JIT) 編譯器如何變更進行方法之編譯的時間點很類似，也和其如何變更偵測該方法中任何錯誤的時間點很類似。 如果您的程式碼沒有任何透明度錯誤，透明度計算就會是不可見的。  
   
-## <a name="see-also"></a>另請參閱  
- [安全性透明的程式碼，層級 1](../../../docs/framework/misc/security-transparent-code-level-1.md)  
- [安全性透明的程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+## <a name="see-also"></a>另請參閱
+- [安全性透明程式碼，層級 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
+- [安全性透明程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

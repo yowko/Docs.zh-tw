@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 DEVPATH 找出組件
+title: HOW TO：使用 DEVPATH 找出組件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 3a9ae9c60ad7de80d04f16984b3b2fb048421cc2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 11ed84b01adf57eb526eaa1e71c6968e48c64cc2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627536"
 ---
-# <a name="how-to-locate-assemblies-by-using-devpath"></a>如何：使用 DEVPATH 找出組件
+# <a name="how-to-locate-assemblies-by-using-devpath"></a>HOW TO：使用 DEVPATH 找出組件
 開發人員可能想要確定自己進行建置，某個共用組件與多個應用程式正常運作。 而不是持續將組件在全域組件快取中放在開發期間，開發人員可以建立指向組件的組建輸出目錄 DEVPATH 環境變數。  
   
  例如，假設您正在建置呼叫 MySharedAssembly 某個共用組件，並輸出目錄是 C:\MySharedAssembly\Debug。 您可以將 C:\MySharedAssembly\Debug 放在 DEVPATH 變數中。 然後您必須指定[ \<developmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)電腦組態檔中的項目。 這個項目會告知 common language runtime 使用 DEVPATH 找出組件。  
@@ -45,5 +45,5 @@ ms.locfileid: "49452746"
 > [!NOTE]
 >  使用此設定只在開發階段。 執行階段不會檢查在 DEVPATH 中找到的強式名稱組件的版本。 它會直接使用第一個找到的組件。  
   
-## <a name="see-also"></a>另請參閱  
- [設定.NET Framework 應用程式](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a>另請參閱
+- [設定.NET Framework 應用程式](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

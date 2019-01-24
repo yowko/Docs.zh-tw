@@ -2,12 +2,12 @@
 title: WCF 及國際化網域名稱
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: a0d4a5b4fe5dd3bc7cf41c8c6ad320dd83861aec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83c6f3c2afec0f2b6b8fccca4bd8252e9ab35400
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571583"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF 及國際化網域名稱
 已加入支援，以允許具有國際化網域名稱 (IDN) 的 WCF 服務。 國際化網域名稱是包含非 ASCII 字元的網域名稱。 這項支援包括兩種能力，即裝載具有 IDN 名稱之 WCF 服務，以及裝載對具有 IDN 名稱之 Web 服務進行交談的 WCF 用戶端。  
@@ -29,7 +29,7 @@ ms.locfileid: "50187919"
   
 1.  「 無 」  
   
-2.  「 AllExceptIntranet 」  
+2.  "AllExceptIntranet"  
   
 3.  [全部]  
   
@@ -41,5 +41,5 @@ ms.locfileid: "50187919"
 > [!WARNING]
 >  將 Unicode 字元加入至 applicationHost.exe.config，請使用 UTF-8 編碼儲存檔案。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Uri?displayProperty=nameWithType>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Uri?displayProperty=nameWithType>

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a117fcdf2ba9d37fb5483cc85fb575e5d3476794
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6287b7adf0ef6f6269a51f608657444f5fa7f74e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580222"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption 方法
-取得目前中繼資料範圍的指定選項的值。 此選項會控制如何處理目前的中繼資料範圍的呼叫。  
+取得目前的中繼資料範圍的指定選項的值。 此選項會控制如何處理目前的中繼資料範圍的呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,13 +38,13 @@ HRESULT GetOption (
   
 #### <a name="parameters"></a>參數  
  `optionId`  
- [in]指定要擷取的選項為 guid 的指標。 請參閱 < 備註 > 一節清單的支援的 Guid。  
+ [in]指定要擷取的選項為 guid 的指標。 請參閱支援的 Guid 清單 < 備註 > 一節。  
   
  `pValue`  
  [out]傳回選項的值。 此值的型別會指定的選項類型的 variant。  
   
 ## <a name="remarks"></a>備註  
- 下列清單顯示支援這個方法的 Guid。 如需說明，請參閱[imetadatadispenserex:: Setoption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md)方法。 如果`optionId`是不在此清單中，這個方法會傳回 HRESULT `E_INVALIDARG`，指出不正確的參數。  
+ 下列清單顯示支援此方法的 Guid。 如需說明，請參閱[imetadatadispenserex:: Setoption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md)方法。 如果`optionId`是不在此清單中，這個方法會傳回 HRESULT `E_INVALIDARG`，指出不正確的參數。  
   
 -   MetaDataCheckDuplicatesFor  
   
@@ -61,14 +61,14 @@ HRESULT GetOption (
 -   MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataDispenserEx 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [IMetaDataDispenser 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataDispenserEx 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [IMetaDataDispenser 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

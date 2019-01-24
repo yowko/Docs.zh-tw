@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-ms.openlocfilehash: 2d2f1997534a33f246c85501e66b6aa8a684445f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 798a1d1cd21fd9a0bc21c6ccaa42c478379cc7a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511533"
 ---
 # <a name="extending-security"></a>擴充安全性
 若要容納新的宣告類型和自訂的權杖，您可以擴充的安全性基礎結構的 Windows Communication Foundation (WCF)。 本章節中的主題會示範如何做到這點。  
@@ -33,10 +33,10 @@ ms.locfileid: "50190693"
  [如何：建立自訂用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
  示範如何驗證自訂端點身分識別。  
   
- [如何：使用個別 X.509 憑證簽署與加密](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
+ [如何：使用個別 X.509 憑證來簽署和加密](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
  訊息通常會以單一憑證來簽署和加密。 本主題會說明如何能在必要時使用兩份憑證。  
   
- [如何：變更 X.509 憑證私密金鑰的密碼編譯提供者](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
+ [如何：變更 X.509 憑證之私密金鑰的密碼編譯提供者](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
  說明如何變更用來提供 X.509 憑證之私密金鑰的密碼編譯提供者，以及如何整合到 Windows Communication Foundation (WCF) 架構的提供者。  
   
 ## <a name="reference"></a>參考資料  
@@ -57,5 +57,5 @@ ms.locfileid: "50190693"
   
  [基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>另請參閱  
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
+## <a name="see-also"></a>另請參閱
+- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)

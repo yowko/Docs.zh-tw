@@ -16,31 +16,31 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-ms.openlocfilehash: 4844bf7f3ecf23335715b950a96be15e54ebc601
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7002589b303c41b26b611588f339fa70dd19f959
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537591"
 ---
 # <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
-指定的屬性或程序可覆寫的同名的屬性或衍生類別中的程序。  
+指定的屬性或程序可覆寫同名的屬性或衍生類別中的程序。  
   
 ## <a name="remarks"></a>備註  
- `Overridable`修飾詞允許在衍生類別中覆寫類別中的屬性或方法。 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)修飾詞可防止屬性或方法在衍生類別中覆寫。  如需詳細資訊，請參閱[繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
+ `Overridable`修飾詞允許在衍生類別中覆寫類別中的屬性或方法。 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)修飾詞可防止屬性或方法覆寫衍生類別中。  如需詳細資訊，請參閱[繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
   
  如果`Overridable`或`NotOverridable`修飾詞未指定，預設值取決於是否屬性或方法會覆寫基底類別屬性或方法。 如果屬性或方法覆寫基底類別屬性或方法，預設值是`Overridable`; 否則它是`NotOverridable`。  
   
- 您可以遮蔽或覆寫，以重新定義繼承的項目，但有兩種方法之間的重大差異。 如需詳細資訊，請參閱[Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+ 您可以遮蔽或覆寫，以重新定義繼承的項目，但有兩種方法之間有顯著的差異。 如需詳細資訊，請參閱 < [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
   
- 會覆寫的項目有時稱為*虛擬*項目。 如果它會覆寫，但不是一定要有時也稱為*具體*項目。  
+ 可以覆寫的項目有時稱為*虛擬*項目。 如果它可以覆寫，但不一定要時，有時也稱為*具體*項目。  
   
  您只能在屬性或程序宣告陳述式中使用 `Overridable`。  
   
 ## <a name="combined-modifiers"></a>結合的修飾詞  
- 您無法指定`Overridable`或`NotOverridable`如`Private`方法。  
+ 您無法指定`Overridable`或是`NotOverridable`如`Private`方法。  
   
- 您無法指定`Overridable`搭配`MustOverride`， `NotOverridable`，或`Shared`相同宣告中。  
+ 您無法指定`Overridable`連同`MustOverride`， `NotOverridable`，或`Shared`相同宣告中。  
   
  因為覆寫項目可隱含覆寫，您無法結合 `Overridable` 與 `Overrides`。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "33603765"
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另請參閱  
- [修飾詞](../../../visual-basic/language-reference/modifiers/index.md)  
- [繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
- [關鍵字](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a>另請參閱
+- [修飾詞](../../../visual-basic/language-reference/modifiers/index.md)
+- [繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
+- [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: c9bb0d6df362380a37ae3079694ab91e9577741d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0529f112192fa64746d8c6dc7a49433b33bafbf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527714"
 ---
 # <a name="schema-import-and-export"></a>結構描述匯入和匯出
-Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 `DataContractSerializer` 會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件與 XML 之間轉譯 (雙向)。 除了序列化程式本身，WCF 會包含相關聯的結構描述匯入與結構描述匯出機制。 *結構描述*是正式、 精確且可供電腦讀取或還原序列化程式可以存取之序列化程式所產生之 XML 的外觀的描述。 WCF 使用 World Wide Web Consortium (W3C) XML 結構描述定義語言 (XSD) 做為其結構描述表示，這是許多第三方平台可廣泛地互通。  
+Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 `DataContractSerializer` 會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件與 XML 之間轉譯 (雙向)。 除了本身的序列化程式，WCF 會包含相關聯的結構描述匯入和結構描述匯出機制。 *結構描述*是的 XML 序列化程式產生或還原序列化程式可以存取的形狀的正式、 精確及電腦可讀取描述。 WCF 會使用 World Wide Web Consortium (W3C) XML 結構描述定義語言 (XSD) 做為其結構描述表示，也就是許多第三方平台廣泛互通。  
   
  結構描述匯入元件 <xref:System.Runtime.Serialization.XsdDataContractImporter> 會接受 XSD 結構描述文件，並產生 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類別 (通常是資料合約類別)，讓序列化的表單對應至指定的結構描述。  
   
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
  [!code-csharp[c_SchemaImportExport#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#1)]
  [!code-vb[c_SchemaImportExport#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#1)]  
   
- 請注意，產生的型別會遵循數個資料合約最佳做法 (位於[最佳做法： 資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
+ 請注意，產生的型別會遵循數個資料合約最佳做法 (位於[最佳做法：資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
   
 -   此型別會實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面。 如需詳細資訊，請參閱[向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
  <xref:System.Runtime.Serialization.XsdDataContractExporter> 讓您能夠進行相反的動作，也就是接受可使用 `DataContractSerializer` 序列化的型別，並產生 XSD 結構描述文件。  
   
 ## <a name="fidelity-is-not-guaranteed"></a>不保證精確度  
- 這個類別不保證結構描述或型別在來回行程中絕對保有完整的精確度  (A*來回行程*表示匯入結構描述來建立一組類別，並將結果匯出以再度建立結構描述。)不一定會傳回相同的結構描述。 反向進行此程序時也不能保證維持精確度  (匯出型別以產生其結構描述，然後再將該型別匯入回來。 不太可能會傳回相同的型別)。  
+ 這個類別不保證結構描述或型別在來回行程中絕對保有完整的精確度  (A*來回行程*表示匯入結構描述來建立一組類別，並匯出結果，以重新建立結構描述。)不一定會傳回相同的結構描述。 反向進行此程序時也不能保證維持精確度  (匯出型別以產生其結構描述，然後再將該型別匯入回來。 不太可能會傳回相同的型別)。  
   
 ## <a name="supported-types"></a>支援的型別  
  資料合約模型只支援有限的 WC3 結構描述子集。 不符合這個子集的任何結構描述，都會在匯入程序進行時造成例外狀況。 例如，沒有任何方式能夠指定資料合約的成員應該要序列化為 XML 屬性。 這樣一來，因為不可能以正確的 XML 規劃來產生資料合約，所以就不會支援需要使用 XML 屬性的結構描述，進而會在匯入期間造成例外狀況。  
@@ -51,17 +51,17 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
   
  [!code-xml[c_SchemaImportExport#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
   
- 如需詳細資訊，請參閱[資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 如果結構描述不符合資料合約規則，請使用不同的序列化引擎。 例如，<xref:System.Xml.Serialization.XmlSerializer> 會使用自己的個別結構描述匯入機制。 另外，還有一種可用來擴充受支援結構描述之範圍的特殊匯入模式。 如需詳細資訊，請參閱有關產生節<xref:System.Xml.Serialization.IXmlSerializable>中的型別[匯入的結構描述產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
+ 如需詳細資訊，請參閱 < [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 如果結構描述不符合資料合約規則，請使用不同的序列化引擎。 例如，<xref:System.Xml.Serialization.XmlSerializer> 會使用自己的個別結構描述匯入機制。 另外，還有一種可用來擴充受支援結構描述之範圍的特殊匯入模式。 如需詳細資訊，請參閱關於產生章節<xref:System.Xml.Serialization.IXmlSerializable>中的型別[匯入結構描述產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   
- `XsdDataContractExporter` 會支援可用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 序列化的任何 `DataContractSerializer` 型別。 如需詳細資訊，請參閱[資料合約序列化程式所支援的型別](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 請注意，使用 `XsdDataContractExporter` 產生的型別，通常是 `XsdDataContractImporter` 可使用的有效資料 (除非 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 是用於自訂結構描述)。  
+ `XsdDataContractExporter` 會支援可用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 序列化的任何 `DataContractSerializer` 型別。 如需詳細資訊，請參閱 < [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 請注意，使用 `XsdDataContractExporter` 產生的型別，通常是 `XsdDataContractImporter` 可使用的有效資料 (除非 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 是用於自訂結構描述)。  
   
- 如需有關使用<xref:System.Runtime.Serialization.XsdDataContractImporter>，請參閱[匯入的結構描述產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
+ 如需使用詳細資訊<xref:System.Runtime.Serialization.XsdDataContractImporter>，請參閱 <<c2> [ 匯入結構描述產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   
- 如需有關使用<xref:System.Runtime.Serialization.XsdDataContractExporter>，請參閱[匯出類別中的結構描述](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
+ 如需使用詳細資訊<xref:System.Runtime.Serialization.XsdDataContractExporter>，請參閱 <<c2> [ 從類別匯出的結構描述](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- [匯入結構描述以產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)  
- [從類別匯出結構描述](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- <xref:System.Runtime.Serialization.XsdDataContractExporter>
+- [匯入結構描述以產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
+- [從類別匯出結構描述](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)

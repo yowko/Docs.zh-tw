@@ -1,5 +1,5 @@
 ---
-title: 如何：建立 Windows Forms 的執行階段事件處理常式
+title: HOW TO：在執行階段建立 Windows Forms 事件處理常式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 38453c751e6cc63827f3f1e9d20ad2ebdfc841d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e02fec0a131523059f88d4f12f62398d80fddf0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632045"
 ---
-# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>如何：建立 Windows Forms 的執行階段事件處理常式
+# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>HOW TO：在執行階段建立 Windows Forms 事件處理常式
 除了使用 Windows Forms 設計工具建立事件以外，您也可以在執行階段建立事件處理常式。 這個動作可讓您在執行階段根據程式碼中的條件來連接事件處理常式，而不需要程式一開始啟動時進行連接。  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>在執行階段建立事件處理常式  
@@ -28,7 +28,7 @@ ms.locfileid: "33538001"
   
 2.  使用您要處理之事件的方法簽章，將方法新增至您的表單。  
   
-     例如，如果已處理<xref:System.Windows.Forms.Control.Click>事件<xref:System.Windows.Forms.Button>控制項，您將建立的方法，如下所示：  
+     例如，如果您要處理<xref:System.Windows.Forms.Control.Click>事件的<xref:System.Windows.Forms.Button>控制項，您將建立的方法，如下所示：  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)  
@@ -56,7 +56,7 @@ ms.locfileid: "33538001"
   
 4.  決定您要為其建立事件處理常式的表單或控制項。  
   
-5.  在您表單類別內的方法中，新增程式碼以指定要處理事件的事件處理常式。 例如，下列程式碼會指定事件處理常式`button1_Click`控點<xref:System.Windows.Forms.Control.Click>事件<xref:System.Windows.Forms.Button>控制項：  
+5.  在您表單類別內的方法中，新增程式碼以指定要處理事件的事件處理常式。 例如，下列程式碼指定事件處理常式`button1_Click`控制代碼<xref:System.Windows.Forms.Control.Click>事件的<xref:System.Windows.Forms.Button>控制項：  
   
     ```vb  
     AddHandler Button1.Click, AddressOf Button1_Click  
@@ -70,9 +70,9 @@ ms.locfileid: "33538001"
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     <xref:System.ComponentModel.EventHandlerList.AddHandler%2A>上述的 Visual Basic 程式碼所示的方法會建立按鈕 click 事件處理常式。  
+     <xref:System.ComponentModel.EventHandlerList.AddHandler%2A>上述 Visual Basic 程式碼所示的方法會建立按鈕的 click 事件處理常式。  
   
-## <a name="see-also"></a>另請參閱  
- [在 Windows Forms 中建立事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [事件處理常式概觀](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)  
- [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+## <a name="see-also"></a>另請參閱
+- [在 Windows Forms 中建立事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [事件處理常式概觀](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

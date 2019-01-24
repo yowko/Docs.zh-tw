@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52375486eb9d7780a51808dedc5f876587efb115
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a4a1761f088732cf19d55f42d66288bb281885f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589447"
 ---
 # <a name="ihostfiltermarktoken-method"></a>IHostFilter::MarkToken 方法
 表示將處理指定的中繼資料語彙基元。  
@@ -37,20 +37,20 @@ HRESULT MarkToken (
   
 #### <a name="parameters"></a>參數  
  `tk`  
- [in]要處理的中繼資料語彙基元。  
+ [in]處理中繼資料語彙基元。  
   
 ## <a name="remarks"></a>備註  
- 您通常會想要如果在中繼資料範圍內處理的語彙基元。 `MarkToken`方法傳遞至中繼資料引擎透過[imetadataemit:: Sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)方法。  
+ 一般而言，您會想在中繼資料範圍內無法處理的語彙基元。 `MarkToken`方法傳遞至中繼資料引擎，透過[imetadataemit:: Sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [IHostFilter 介面](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [IHostFilter 介面](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)

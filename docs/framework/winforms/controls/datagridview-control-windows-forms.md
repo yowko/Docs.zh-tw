@@ -13,12 +13,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 2ef387437befe3df67e261b719140456a3fde9dd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 14ba24b414de0732be418210ec44613f840136d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639116"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView 控制項 (Windows Form)
 `DataGridView` 控制項以表格式顯示資料，是一項功能強大、有彈性的方式。 您可以使用 `DataGridView` 控制來顯示少量資料的唯讀檢視，或者您可以調整它的大小，以顯示非常大的資料集之可編輯檢視。  
@@ -82,5 +82,5 @@ ms.locfileid: "43397215"
  <xref:System.Windows.Forms.BindingSource>  
  提供 <xref:System.Windows.Forms.BindingSource> 元件的參考文件。 <xref:System.Windows.Forms.DataGridView> 控制項和 <xref:System.Windows.Forms.BindingSource> 元件設計為可密切合作。  
   
-## <a name="see-also"></a>另請參閱  
- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

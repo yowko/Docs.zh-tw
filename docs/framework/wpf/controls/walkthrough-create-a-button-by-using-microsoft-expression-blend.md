@@ -6,12 +6,12 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: ce0a0623c2317fd95286e96c7bb5521a7400d4f9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: bf6da0600335061e15560aabf668671a24d8911d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502243"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>逐步解說：使用 Microsoft Expression Blend 建立按鈕
 本逐步解說將引導您完成建立程序[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用 Microsoft Expression Blend 的自訂的按鈕。  
@@ -42,7 +42,7 @@ ms.locfileid: "49121074"
   
 #### <a name="to-convert-a-rectangle-to-a-button"></a>將矩形的按鈕  
   
-1.  **視窗背景屬性設定為黑色：** 選取的視窗中，按一下 [**內容] 索引標籤**，並將<xref:System.Windows.Controls.Control.Background%2A>屬性設`Black`。  
+1.  **設定為黑色的視窗背景屬性：** 選取的視窗中，按一下**內容 索引標籤**，並將<xref:System.Windows.Controls.Control.Background%2A>屬性設`Black`。  
   
      ![如何將按鈕的背景設定為黑色](../../../../docs/framework/wpf/controls/media/custom-button-blend-changebackground.png "custom_button_blend_ChangeBackground")  
   
@@ -50,15 +50,15 @@ ms.locfileid: "49121074"
   
      ![如何繪製矩形](../../../../docs/framework/wpf/controls/media/custom-button-blend-drawrect.png "custom_button_blend_DrawRect")  
   
-3.  **圓角矩形的圓：** 拖曳矩形的控制點，或直接設定<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>屬性。 設定的值<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>為 20。  
+3.  **完成的矩形邊角：** 拖曳矩形的控制點，或直接設定<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>屬性。 設定的值<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>為 20。  
   
      ![如何讓圓角矩形的邊角](../../../../docs/framework/wpf/controls/media/custom-button-blend-roundcorners.png "custom_button_blend_RoundCorners")  
   
-4.  **矩形，按鈕會變成：** 選取矩形。 在 **工具**功能表上，按一下**製作按鈕**。  
+4.  **將變更矩形的按鈕：** 選取矩形。 在 **工具**功能表上，按一下**製作按鈕**。  
   
      ![如何使圖案至按鈕](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton.png "custom_button_blend_MakeButton")  
   
-5.  **指定樣式/樣板的範圍：** 像則會顯示下列對話方塊。  
+5.  **指定樣式/樣板的範圍：** 如下所示的對話方塊隨即出現。  
   
      ![[建立樣式資源] 對話方塊中](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")  
   
@@ -69,7 +69,7 @@ ms.locfileid: "49121074"
   
 #### <a name="to-edit-the-button-template-to-change-the-button-appearance"></a>若要編輯按鈕範本，若要變更按鈕的外觀  
   
-1.  **移至 編輯範本檢視：** 來進一步自訂按鈕的外觀，我們需要編輯 按鈕 範本。 此範本的建立，當我們轉換為按鈕的矩形。 若要編輯 按鈕 範本，以滑鼠右鍵按一下  按鈕，然後選取**編輯控制項組件 （範本）** ，然後**編輯範本**。  
+1.  **請移至 編輯範本檢視：** 若要進一步自訂按鈕的外觀，我們需要編輯 按鈕 範本。 此範本的建立，當我們轉換為按鈕的矩形。 若要編輯 按鈕 範本，以滑鼠右鍵按一下  按鈕，然後選取**編輯控制項組件 （範本）** ，然後**編輯範本**。  
   
      ![如何編輯樣板](../../../../docs/framework/wpf/controls/media/custom-button-blend-edittemplate.jpg "custom_button_blend_EditTemplate")  
   
@@ -81,7 +81,7 @@ ms.locfileid: "49121074"
   
      ![如何重新命名範本的元件](../../../../docs/framework/wpf/controls/media/custom-button-blend-renamecomponents.png "custom_button_blend_RenameComponents")  
   
-3.  **Alter 矩形，使其空白內 （例如甜甜圈）：** 選取**outerRectangle**並將<xref:System.Windows.Shapes.Shape.Fill%2A>設為 透明 」 和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>為 5。  
+3.  **Alter 矩形，使其空白內 （例如甜甜圈）：** 選取  **outerRectangle**並設定<xref:System.Windows.Shapes.Shape.Fill%2A>設為 透明 」 和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>為 5。  
   
      ![如何建立矩形空白](../../../../docs/framework/wpf/controls/media/custom-button-blend-changerectproperties.png "custom_button_blend_ChangeRectProperties")  
   
@@ -89,27 +89,27 @@ ms.locfileid: "49121074"
   
      ![如何設定，請使用範本的色彩](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatestroke.png "custom_button_blend_TemplateStroke")  
   
-4.  **建立內部的矩形︰** 現在，建立另一個矩形 （其命名為"innerRectangle 」），並置於內部的對稱**outerRectangle** 。 這類型的工作，您可能要縮放設定編輯區域中的更大的按鈕。  
+4.  **建立內部的矩形：** 現在，建立另一個矩形 （其命名為"innerRectangle 」），並置於內部的對稱**outerRectangle** 。 這類型的工作，您可能要縮放設定編輯區域中的更大的按鈕。  
   
     > [!NOTE]
     >  您的矩形看起來可能不同於圖中 （例如，它可能會有圓角）。  
   
      ![如何建立另一個矩形內的矩形](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangleproperties.png "custom_button_blend_innerRectangleProperties")  
   
-5.  **移至頂端的 ContentPresenter:** 這個時候，就可以，文字"Button"將不會顯示沒事取這麼長。 如果情況如此，這是因為**innerRectangle**上**myContentPresenter**。 若要修正此問題，拖曳**myContentPresenter**下方**innerRectangle**。 調整矩形的位置並**myContentPresenter**尋找類似下方所示。  
+5.  **將 ContentPresenter 移至頂端：** 此時，就可以，文字"Button"將不會顯示沒事取這麼長。 如果情況如此，這是因為**innerRectangle**上**myContentPresenter**。 若要修正此問題，拖曳**myContentPresenter**下方**innerRectangle**。 調整矩形的位置並**myContentPresenter**尋找類似下方所示。  
   
     > [!NOTE]
     >  或者，您也可以定位**myContentPresenter**上按一下滑鼠右鍵，然後按**轉寄傳送**。  
   
      ![如何將另一個按鈕上的某個按鈕移](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangle2.png "custom_button_blend_innerRectangle2")  
   
-6.  **變更外觀，innerRectangle:** 設定<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>， <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>，和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>為 20 的值。 此外，設定<xref:System.Windows.Shapes.Shape.Fill%2A>到背景工作的範本使用自訂運算式 「 {TemplateBinding 背景} 」)，並設定<xref:System.Windows.Shapes.Shape.Stroke%2A>為 「 透明 」。 請注意，設定<xref:System.Windows.Shapes.Shape.Fill%2A>並<xref:System.Windows.Shapes.Shape.Stroke%2A>的**innerRectangle**的相反**outerRectangle**。  
+6.  **變更 innerRectangle 的外觀：** 設定<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>， <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>，和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>為 20 的值。 此外，設定<xref:System.Windows.Shapes.Shape.Fill%2A>到背景工作的範本使用自訂運算式 「 {TemplateBinding 背景} 」)，並設定<xref:System.Windows.Shapes.Shape.Stroke%2A>為 「 透明 」。 請注意，設定<xref:System.Windows.Shapes.Shape.Fill%2A>並<xref:System.Windows.Shapes.Shape.Stroke%2A>的**innerRectangle**的相反**outerRectangle**。  
   
      ![如何變更矩形的外觀](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties1.png "custom_button_blend_glassRectangleProperties1")  
   
-7.  **在上面加入半透明效果圖層：** 自訂的按鈕外觀的最後一步是要加入半透明效果圖層上。 此半透明效果圖層是由第三個矩形所組成。 因為半透明效果會涵蓋整個按鈕，玻璃矩形的維度，以便類似**outerRectangle**。 因此，只需產生一份建立矩形**outerRectangle**。 反白顯示**outerRectangle** ，並使用 CTRL + C 和 CTRL + V 以製作複本。 這個新的矩形"glassCube 」 的名稱。  
+7.  **在上面加入半透明效果圖層：** 自訂的按鈕外觀的最後一步是在最上面加入半透明效果圖層。 此半透明效果圖層是由第三個矩形所組成。 因為半透明效果會涵蓋整個按鈕，玻璃矩形的維度，以便類似**outerRectangle**。 因此，只需產生一份建立矩形**outerRectangle**。 反白顯示**outerRectangle** ，並使用 CTRL + C 和 CTRL + V 以製作複本。 這個新的矩形"glassCube 」 的名稱。  
   
-8.  **視需要調整 glassCube 的位置：** 如果**glassCube**是尚未定位，使其涵蓋整個按鈕，將它拖曳到位置。  
+8.  **如有必要，請重新定位 glassCube:** 如果**glassCube**是尚未定位，使其涵蓋整個按鈕，將它拖曳到位置。  
   
 9. **提供 glassCube outerRectangle 以稍有不同於：** 變更的屬性**glassCube**。 藉由變更開始<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>並<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>為 10 的屬性和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>為 2。  
   
@@ -117,17 +117,17 @@ ms.locfileid: "49121074"
   
 10. **請看起來像玻璃的 glassCube:** 設定<xref:System.Windows.Shapes.Shape.Fill%2A>光滑看使用線形漸層 75%不透明且交替使用的色彩為白色和透明超過 6 大約平均地間距間隔。 這是要設定為漸層停駐的項目：  
   
-    -   漸層停駐 1： 白色，並且 75%的 Alpha 值  
+    -   漸層停駐 1:白色，並且 75%的 Alpha 值  
   
-    -   漸層停止 2： 透明  
+    -   漸層停駐 2:透明  
   
-    -   漸層停駐 3： 白色，並且 75%的 Alpha 值  
+    -   漸層停駐 3:白色，並且 75%的 Alpha 值  
   
-    -   漸層停止 4： 透明  
+    -   漸層停駐 4:透明  
   
-    -   漸層停駐 5： 白色，並且 75%的 Alpha 值  
+    -   漸層停駐 5:白色，並且 75%的 Alpha 值  
   
-    -   漸層停止 6： 透明  
+    -   漸層停駐 6:透明  
   
      這會建立 「 波浪"玻璃外觀。  
   
@@ -142,13 +142,13 @@ ms.locfileid: "49121074"
   
 #### <a name="to-set-property-triggers"></a>若要設定屬性觸發程序  
   
-1.  **建立新的屬性觸發程序：** 具有**glassCube**選取，按一下  **+ 屬性**中**觸發程序**面板 （請參閱圖遵循下一步）。 這會建立預設屬性觸發程序的屬性觸發程序。  
+1.  **建立新的屬性觸發程序：** 具有**glassCube**選取，按一下 **+ 屬性**中**觸發程序**面板 （請參閱圖遵循下一步）。 這會建立預設屬性觸發程序的屬性觸發程序。  
   
-2.  **使 IsMouseOver 屬性使用的觸發程序：** 將屬性變更為<xref:System.Windows.UIElement.IsMouseOver%2A>。 這可讓屬性觸發程序啟動的時機<xref:System.Windows.UIElement.IsMouseOver%2A>屬性是`true`（當使用者指向滑鼠按鈕）。  
+2.  **請 IsMouseOver 觸發程序所使用的屬性：** 將屬性變更為<xref:System.Windows.UIElement.IsMouseOver%2A>。 這可讓屬性觸發程序啟動的時機<xref:System.Windows.UIElement.IsMouseOver%2A>屬性是`true`（當使用者指向滑鼠按鈕）。  
   
      ![如何在屬性上設定觸發程序](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger.png "custom_button_blend_IsMousedOverPropertyTrigger")  
   
-3.  **IsMouseOver 觸發 glasscube 的 100%的不透明度：** 注意**觸發程序記錄已開啟**（請參閱上圖中）。 這表示的屬性值變更的任何**glassCube**錄製時將成為動作發生於當<xref:System.Windows.UIElement.IsMouseOver%2A>是`true`。 錄製時，變更<xref:System.Windows.UIElement.Opacity%2A>的**glassCube**到 100%。  
+3.  **IsMouseOver glasscube 的 100%的觸發程序不透明度：** 請注意，**觸發程序記錄已開啟**（請參閱上圖中）。 這表示的屬性值變更的任何**glassCube**錄製時將成為動作發生於當<xref:System.Windows.UIElement.IsMouseOver%2A>是`true`。 錄製時，變更<xref:System.Windows.UIElement.Opacity%2A>的**glassCube**到 100%。  
   
      ![如何設定按鈕的不透明度](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom_button_blend_IsMousedOverPropertyTrigger2")  
   
@@ -171,7 +171,7 @@ ms.locfileid: "49121074"
   
      到目前為止，我們有屬性觸發程序具有數個相關聯的動作時用來建立醒目提示行為的滑鼠指標進入和離開 按鈕的區域。 另一個常見的問題，按鈕是以反白顯示具有焦點時 （就按一下它之後）。 我們可以加入另一個屬性觸發程序，以便將這類行為<xref:System.Windows.UIElement.IsFocused%2A>屬性。  
   
-6.  **建立 IsFocused 屬性觸發程序：** 使用相同的程序，針對<xref:System.Windows.UIElement.IsMouseOver%2A>（請參閱本章節的第一個步驟），建立另一個屬性觸發程序<xref:System.Windows.UIElement.IsFocused%2A>屬性。 雖然**觸發程序記錄已開啟**，觸發程序中加入下列動作：  
+6.  **建立 IsFocused 屬性觸發程序：** 使用相同的程序，與<xref:System.Windows.UIElement.IsMouseOver%2A>（請參閱本章節的第一個步驟），建立另一個屬性觸發程序<xref:System.Windows.UIElement.IsFocused%2A>屬性。 雖然**觸發程序記錄已開啟**，觸發程序中加入下列動作：  
   
     -   **glassCube**取得<xref:System.Windows.UIElement.Opacity%2A>100%。  
   
@@ -196,17 +196,17 @@ ms.locfileid: "49121074"
   
      ![時間軸面板](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger3.png "custom_button_blend_MouseOverEventTrigger3")  
   
-3.  **建立主要畫面格：** 若要建立動畫，選取您想要建立動畫時間軸，而且可用於這些主要畫面格建立兩個或多個主要畫面格、 設定要之間進行插補的動畫的屬性值的物件。 下圖會引導您完成建立主要畫面格。  
+3.  **建立主要畫面格：** 若要建立動畫，請選取您想要建立動畫時間軸，而且可用於這些主要畫面格建立兩個或多個主要畫面格、 設定要之間進行插補的動畫的屬性值的物件。 下圖會引導您完成建立主要畫面格。  
   
      ![如何建立主要畫面格](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger4.png "custom_button_blend_MouseOverEventTrigger4")  
   
-4.  **壓縮在這個主要畫面格 glassCube:** 選取第二個主要畫面格，使用壓縮的大小**glassCube**為使用其完整大小的 90%**大小轉換**。  
+4.  **在此主要畫面格的壓縮 glassCube:** 選取的第二個主要畫面格，壓縮的大小**glassCube**使用其完整大小的 90%**大小轉換**。  
   
      ![如何縮減按鈕大小](../../../../docs/framework/wpf/controls/media/custom-button-blend-sizetransform.png "custom_button_blend_SizeTransform")  
   
      按 F5 執行應用程式。 將滑鼠指標移動到按鈕。 請注意，在按鈕上壓縮的玻璃層。  
   
-5.  **建立另一個事件觸發程序並與它關聯不同的動畫：** 讓我們新增一個更多的動畫。 使用類似的程序，您用來建立上一個事件觸發程序動畫：  
+5.  **建立另一個事件觸發程序，並讓不同的動畫與其產生關聯：** 讓我們加入一個詳細的動畫。 使用類似的程序，您用來建立上一個事件觸發程序動畫：  
   
     1.  建立新的事件觸發程序使用<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
@@ -247,9 +247,9 @@ ms.locfileid: "49121074"
   
 -   其他： 建立漸層，在其中新增 BitmapEffects，使用轉換，並設定物件的基本屬性。  
   
-## <a name="see-also"></a>另請參閱  
- [使用 XAML 建立按鈕](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [點陣圖效果概觀](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+## <a name="see-also"></a>另請參閱
+- [使用 XAML 建立按鈕](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)
+- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [點陣圖效果概觀](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

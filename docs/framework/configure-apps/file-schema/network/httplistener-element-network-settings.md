@@ -2,20 +2,20 @@
 title: '&lt;httpListener&gt;項目 （網路設定）'
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 58228eed71dd6a5f5af8e26c02db9633da6ceef6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 896b6633ef4a741b9a7460d8ce3d879253d542da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577694"
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt;項目 （網路設定）
 自訂所使用的參數<xref:System.Net.HttpListener>類別。  
   
  \<configuration>  
 \<system.net>  
-\<設定 >  
-\<httpListener >  
+\<settings>  
+\<httpListener>  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ ms.locfileid: "50197778"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
 ## <a name="remarks"></a>備註  
  **UnescapeRequestUrl**屬性會指出如果<xref:System.Net.HttpListener>使用原始未逸出的 URI，而不是轉換的 URI，其中任何百分比編碼的值會轉換，並且會採取其他的正規化步驟。  
@@ -137,8 +137,8 @@ ms.locfileid: "50197778"
 |驗證檔||  
 |可以是空白||  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.Net.Configuration.HttpListenerElement>  
-- <xref:System.Net.HttpListener>  
-- <xref:System.Net.HttpListenerRequest.Url%2A>  
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.Configuration.HttpListenerElement>
+- <xref:System.Net.HttpListener>
+- <xref:System.Net.HttpListenerRequest.Url%2A>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

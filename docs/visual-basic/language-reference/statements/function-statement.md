@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: b370e92aaab88a7f0d49f1de60b50fa6bbf1e161
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5018aebb0401ce5a1c46ecf04a7c65ca676271e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39323010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565900"
 ---
 # <a name="function-statement-visual-basic"></a>Function 陳述式 (Visual Basic)
 宣告名稱、 參數和定義的程式碼`Function`程序。  
@@ -67,11 +67,11 @@ End Function
   
     -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
-    -   [為 protected 的 Friend](../../language-reference/modifiers/protected-friend.md)
+    -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)
 
-    - [受保護的私用](../../language-reference/modifiers/private-protected.md)  
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)  
   
-     請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+     請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 -   `proceduremodifiers`  
   
@@ -109,7 +109,7 @@ End Function
   
 -   `name`  
   
-     必要。 程序的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+     必要項。 程序的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
 -   `typeparamlist`  
   
@@ -139,8 +139,8 @@ End Function
   
     |組件|描述|  
     |---|---|  
-    |`interface`|必要。 這個程序所實作的介面名稱的包含類別或結構。|  
-    |`definedname`|必要。 名稱，據以在 `interface` 中定義程序。|  
+    |`interface`|必要項。 這個程序所實作的介面名稱的包含類別或結構。|  
+    |`definedname`|必要項。 名稱，據以在 `interface` 中定義程序。|  
   
 -   `Handles`  
   
@@ -158,8 +158,8 @@ End Function
   
     |組件|描述|  
     |---|---|  
-    |`eventvariable`|必要。 宣告的類別或結構，會引發事件的資料類型的物件變數。|  
-    |`event`|必要。 此程序處理事件的名稱。|  
+    |`eventvariable`|必要項。 宣告的類別或結構，會引發事件的資料類型的物件變數。|  
+    |`event`|必要項。 此程序處理事件的名稱。|  
   
 -   `statements`  
   
@@ -235,7 +235,7 @@ End Function
   
  迭代器函式的傳回型別可以是<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>， <xref:System.Collections.IEnumerator>，或<xref:System.Collections.Generic.IEnumerator%601>。  
   
- 如需詳細資訊，請參閱[迭代器](../../programming-guide/concepts/iterators.md)。  
+ 如需詳細資訊，請參閱 [Iterator](../../programming-guide/concepts/iterators.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會使用`Function`陳述式來宣告名稱、 參數和構成的主體的程式碼`Function`程序。 `ParamArray`修飾詞可讓要接受可變數目的引數的函式。  
@@ -254,15 +254,15 @@ End Function
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [Sub 陳述式](sub-statement.md)  
- [函式程序](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)  
- [參數清單](parameter-list.md)  
- [Dim 陳述式](dim-statement.md)  
- [Call 陳述式](call-statement.md)  
- [Of](of-clause.md)  
- [參數陣列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [如何：使用泛型類別](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [程序的疑難排解](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [函式運算式](../../../visual-basic/language-reference/operators/function-expression.md)
+## <a name="see-also"></a>另請參閱
+- [Sub 陳述式](sub-statement.md)
+- [函式程序](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
+- [參數清單](parameter-list.md)
+- [Dim 陳述式](dim-statement.md)
+- [Call 陳述式](call-statement.md)
+- [Of](of-clause.md)
+- [參數陣列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+- [如何：使用泛型類別](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [程序的疑難排解](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [函式運算式](../../../visual-basic/language-reference/operators/function-expression.md)

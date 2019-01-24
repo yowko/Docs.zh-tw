@@ -16,19 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f833c19da1199528dceee3a4f34dea7180380023
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576430"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 類別
-提供建立原生可攜式執行檔 (PE) 的功能。 介面將通常用於由編譯器所產生可執行檔將編譯的輸出。  
+提供建立原生可攜式執行檔 (PE) 的功能。 介面將通常用於由編譯器產生可執行其編譯的輸出。  
   
 > [!NOTE]
->  `ICeeFileGen` 支援的.NET Framework 基礎結構，並不是直接從您的程式碼使用。  
+>  `ICeeFileGen` 支援.NET Framework 基礎結構，並不是直接從您的程式碼使用。  
   
- 此介面已被取代，而且將在未來版本中移除。  
+ 此介面已被取代，並將在未來版本中移除。  
   
 ## <a name="syntax"></a>語法  
   
@@ -236,11 +237,11 @@ public:
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** ICeeFileGen.h  
   
  **.NET framework 版本：** 1.0  
   
-## <a name="see-also"></a>另請參閱  
- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

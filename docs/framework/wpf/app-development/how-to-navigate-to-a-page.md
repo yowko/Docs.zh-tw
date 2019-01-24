@@ -1,5 +1,5 @@
 ---
-title: 如何： 瀏覽的頁面
+title: HOW TO：瀏覽的頁面
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - pages [WPF], navigating to
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
-ms.openlocfilehash: 896287376979d40816e3937fff77b38bf71a62f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b76a12cbe6e1622e5624f5416abf24a4ca292a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536903"
 ---
-# <a name="how-to-navigate-to-a-page"></a>如何： 瀏覽的頁面
-此範例說明幾種方法中的頁面可以巡覽至<xref:System.Windows.Navigation.NavigationWindow>。  
+# <a name="how-to-navigate-to-a-page"></a>HOW TO：瀏覽的頁面
+此範例說明數種方式，在其中一個頁面可以巡覽到從<xref:System.Windows.Navigation.NavigationWindow>。  
   
 ## <a name="example"></a>範例  
  可能會<xref:System.Windows.Navigation.NavigationWindow>瀏覽至頁面，使用下列其中之一：  
@@ -31,7 +31,7 @@ ms.locfileid: "33548384"
 > [!NOTE]
 >  [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)] 可以是相對或絕對。 如需詳細資訊，請參閱 [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Controls.Frame>  
- <xref:System.Windows.Controls.Page>  
- <xref:System.Windows.Navigation.NavigationService>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Controls.Frame>
+- <xref:System.Windows.Controls.Page>
+- <xref:System.Windows.Navigation.NavigationService>

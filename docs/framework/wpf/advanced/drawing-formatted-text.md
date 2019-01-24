@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 4cbf2a9ec9b742af3895f7c30b1a4dbbdbf5a635
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a476b62e62b812b01da8deeb0c605e35ae6624ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562774"
 ---
 # <a name="drawing-formatted-text"></a>繪製格式化的文字
 本主題提供的功能概觀<xref:System.Windows.Media.FormattedText>物件。 這個物件提供在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中繪製文字的低階控制項。  
@@ -85,7 +85,7 @@ ms.locfileid: "43804934"
  ![遵循文字路徑幾何的範圍](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 遵循文字之路徑幾何的範圍  
   
- 如需詳細資訊，請參閱[如何：建立文字的 PathGeometry 動畫](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)。  
+ 如需詳細資訊，請參閱[＜How to：建立文字的 PathGeometry 動畫](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)。  
   
  您可以建立其他趣味的使用格式化的文字，一旦轉換成<xref:System.Windows.Media.PathGeometry>物件。 例如，您可以裁剪視訊以顯示在其中。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "43804934"
 |DrawText 旗標|WPF 對等項目|注意|  
 |-------------------|--------------------|-----------|  
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|使用<xref:System.Windows.Media.FormattedText.Height%2A>屬性來計算適當[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DrawText 'y' 位置。|  
-|DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|使用<xref:System.Windows.Media.FormattedText.Height%2A>和<xref:System.Windows.Media.FormattedText.Width%2A>; 屬性來計算輸出矩形。|  
+|DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>、 <xref:System.Windows.Media.FormattedText.Width%2A>|使用<xref:System.Windows.Media.FormattedText.Height%2A>和<xref:System.Windows.Media.FormattedText.Width%2A>; 屬性來計算輸出矩形。|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|使用<xref:System.Windows.Media.FormattedText.TextAlignment%2A>屬性值設為<xref:System.Windows.TextAlignment.Center>。|  
 |DT_EDITCONTROL|無|不需要。 架構編輯控制項中的空間寬度和最後一行轉譯相同。|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用<xref:System.Windows.Media.FormattedText.Trimming%2A>屬性的值<xref:System.Windows.TextTrimming.CharacterEllipsis>。<br /><br /> 使用<xref:System.Windows.TextTrimming.WordEllipsis>以取得[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DT_END_ELLIPSIS DT_WORD_ELIPSIS 與結尾的省略符號，在此情況下，字元省略符號只會發生在一行文字，不適合。|  
@@ -123,9 +123,9 @@ ms.locfileid: "43804934"
 |DT_WORDBREAK|無|不需要。 斷詞會自動使用<xref:System.Windows.Media.FormattedText>物件。 您無法停用它。|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用<xref:System.Windows.Media.FormattedText.Trimming%2A>屬性的值<xref:System.Windows.TextTrimming.WordEllipsis>。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.FormattedText>  
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [建立外框文字](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [如何︰建立文字的 PathGeometry 動畫](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.FormattedText>
+- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [建立外框文字](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)
+- [如何：建立文字的 PathGeometry 動畫](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)

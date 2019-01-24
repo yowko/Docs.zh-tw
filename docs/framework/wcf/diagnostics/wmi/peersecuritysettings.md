@@ -2,12 +2,12 @@
 title: PeerSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 24ae0d35-f3a3-419b-afd6-686e22aae27b
-ms.openlocfilehash: 92aca4c790607de91314aacf6414d0dfacea9a9f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 761ed0e30c6acca8c910c5dc97dfbae46c1f89bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564834"
 ---
 # <a name="peersecuritysettings"></a>PeerSecuritySettings
 PeerSecuritySettings  
@@ -36,7 +36,7 @@ class PeerSecuritySettings
  使用繫結設定之端點是否採用訊息層級與傳輸層級安全性。  
   
 ### <a name="transport"></a>Transport  
- 資料型別：PeerTransportSecuritySettings  
+ 資料類型：PeerTransportSecuritySettings  
   
  存取類型：唯讀  
   
@@ -48,5 +48,5 @@ class PeerSecuritySettings
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.PeerSecuritySettings>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.PeerSecuritySettings>

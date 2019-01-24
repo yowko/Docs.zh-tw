@@ -2,12 +2,12 @@
 title: 連接字串語法
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 3d8b37315ab3ceea2ddedd139787627e86b6a131
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f6cbfc9676c2c373ab833ac556cf04bb0ba15096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524542"
 ---
 # <a name="connection-string-syntax"></a>連接字串語法
 每個 .NET Framework 資料提供者都擁有一個 `Connection` 物件，繼承自 <xref:System.Data.Common.DbConnection> 以及提供者特定的 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 屬性。 每個提供者的特定連接字串語法會記錄在其 `ConnectionString` 屬性中。 下表列出 .NET Framework 中包含的四個資料提供者。  
@@ -194,7 +194,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
  如需 ODBC 連接字串語法的詳細資訊，請參閱 <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>。  
   
-## <a name="see-also"></a>另請參閱  
- [連接字串](../../../../docs/framework/data/adonet/connection-strings.md)  
- [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [連接字串](../../../../docs/framework/data/adonet/connection-strings.md)
+- [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80cee666a05432099a380a5ac547a5ca28698c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 414526d498b39e894c6bd3530a446f8c06f46378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572743"
 ---
 # <a name="silverlight-debugging"></a>Silverlight 偵錯
 本節中的主題說明 Common Language Runtime (CLR) 為了支援對 Windows 作業系統或 Macintosh 平台上執行的 Silverlight 應用程式進行偵錯，所提供的環境和介面。  
@@ -34,7 +34,7 @@ ms.locfileid: "33436029"
  從目標處理序中的 CLR 路徑來建立版本字串。  
   
  [CreateDebuggingInterfaceFromVersion 函式](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)  
- 接受的 CLR 版本字串傳回[CreateVersionStringFromModule 函式](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)函式，並傳回對應的偵錯工具介面。  
+ 接受從傳回的 CLR 版本字串[CreateVersionStringFromModule 函式](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)函式，並傳回對應的偵錯工具介面。  
   
  [CoreClrDebugProcInfo 結構](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)  
  代表正在遠端電腦上執行的處理序。  
@@ -54,9 +54,9 @@ ms.locfileid: "33436029"
  [ShutdownDbgTransportManager 函式](../../../../docs/framework/unmanaged-api/debugging/shutdowndbgtransportmanager-function.md)  
  關閉傳輸管理員，以便與遠端目標電腦連接。  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯 Coclass](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [偵錯全域靜態函式](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯 Coclass](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯全域靜態函式](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fc6d08e960b0ba82c76945a318ec723546f71b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9796dd234611fd6bbdf2b949b8a0ed66527aaba9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521253"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 列舉
 包含描述的組件的執行階段功能的值。  
@@ -42,24 +42,24 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|指定匯出的類型定義是隱含構成組件檔案中。 在.NET framework 1.0 和 1.1 版中，這個值永遠是設定。|  
-|`afImplicitResources`|指定隱含構成組件檔案中定義的資源。 在.NET Framework 1.0 和 1.1 中，這個值永遠是設定。|  
-|`afNonSideBySideAppDomain`|指定組件無法執行與其他版本一起執行相同的應用程式定義域中。|  
-|`afNonSideBySideProcess`|指定組件無法執行與其他版本一起執行相同的處理序中。|  
-|`afNonSideBySideMachine`|指定是否在同一部電腦上執行，無法與其他版本一起執行組件。|  
+|`afImplicitExportedTypes`|指定匯出的型別定義隱含構成組件檔案中。 在.NET framework 1.0 和 1.1 版中，這個值永遠都會假設設定。|  
+|`afImplicitResources`|指定的資源定義中是隱含包含組件的檔案。 在.NET Framework 1.0 和 1.1 中，這個值永遠都會假設設定。|  
+|`afNonSideBySideAppDomain`|指定是否它們相同的應用程式定義域中執行，無法與其他版本一起執行的組件。|  
+|`afNonSideBySideProcess`|指定是否它們在相同的程序執行，無法與其他版本一起執行的組件。|  
+|`afNonSideBySideMachine`|指定是否在同一部電腦上執行，無法與其他版本一起執行的組件。|  
   
 ## <a name="remarks"></a>備註  
- 0x0070 0x0010 之間的值可用來描述的參考組件-並存相容性功能。 如果這些值未設定，組件會假設為-並存相容。  
+ 0x0010 與 0x0070 之間的值用來描述所參考組件的並排顯示相容性功能。 如果沒有這些值的設定，則會將組件假設為並排顯示相容。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MsCorEE.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

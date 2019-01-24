@@ -2,12 +2,12 @@
 title: HOW TO：匯入自訂 WSDL
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: 33762afffca6e90cb32c358bee6d9f29ca609994
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dba3ec52d03939a306709e7756ff4e801699cf38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575602"
 ---
 # <a name="how-to-import-custom-wsdl"></a>HOW TO：匯入自訂 WSDL
 這個主題會描述如何匯入自訂 WSDL。 若要處理自訂 WSDL，您必須實作 <xref:System.ServiceModel.Description.IWsdlImportExtension> 介面。  
@@ -77,7 +77,7 @@ ms.locfileid: "33488266"
     WsdlImporter importer = new WsdlImporter(metaDocs);          System.Collections.ObjectModel.Collection<ContractDescription> contracts  = importer.ImportAllContracts();  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- [自訂 WSDL 發行集](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+- [自訂 WSDL 發行集](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)

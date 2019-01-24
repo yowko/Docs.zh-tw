@@ -2,12 +2,12 @@
 title: 疑難排解
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 6fe4f789ca64c0646b77fdb66b0c6e2b73763293
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586406"
 ---
 # <a name="troubleshooting"></a>疑難排解
 下列資訊將說明一些您在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式中可能會遇到的問題，並提供建議來避免或降低這些問題的影響。  
@@ -37,7 +37,7 @@ ms.locfileid: "47108347"
   
  否則會擲回 <xref:System.Data.SqlClient.SqlException> 例外狀況。  
   
- 如需詳細資訊，請參閱 <<c0> [ 如何： 刪除資料列從資料庫](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)。  
+ 如需詳細資訊，請參閱[＜How to：從資料庫刪除資料列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)。  
   
 ## <a name="expression-not-queryable"></a>無法查詢運算式  
  如果您看到「運算式 [expression] 無法查詢；是否遺漏組件參考？」 錯誤，請確定下列各項：  
@@ -69,6 +69,6 @@ ms.locfileid: "47108347"
 ## <a name="oncreated-partial-method"></a>OnCreated() 部分方法  
  每次呼叫物件建構函式時，都會呼叫產生的方法 `OnCreated()`，包括 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 呼叫建構函式來複製原始值的情況。 如果您要在自己的部分類別中實作 `OnCreated()` 方法，請將此行為列入考量。  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯支援](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
- [常見問題集](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯支援](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [常見問題集](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

@@ -2,19 +2,19 @@
 title: '&lt;backupLists&gt;'
 ms.date: 03/30/2017
 ms.assetid: 593b3390-f65b-4684-ad40-0596b62f0954
-ms.openlocfilehash: ff363f97b25496dc9bb3a691de7c8abf77c0dc9d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: fc9c697aff2e9c26c7922a0acaf5577b0dea2dc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532366"
 ---
 # <a name="ltbackuplistsgt"></a>&lt;backupLists&gt;
 代表組態區段，用於定義錯誤處理中使用的一組備份服務。 每個子項目是備份清單會列舉一組您希望路由服務在無法找到主要端點時使用的端點。 如果清單中的第一個端點關閉，路由服務將自動容錯移轉至清單中的下一個端點。  如此可提供您快速提升應用程式可靠性的方式，而不需教導用戶端應用程式如何處理複雜的模式以及部署所有服務的位置。  
   
  \<system.serviceModel>  
 \<路由 >  
-\<backupLists >  
+\<backupLists>  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "54149120"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|代表定義一組路由篩選條件，判斷類型的 Windows Communication Foundation (WCF) 的組態區段<xref:System.ServiceModel.Dispatcher.MessageFilter>評估內送訊息，以及路由資料表定義目標端點時要使用將訊息傳送至篩選條件的比對。|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|代表定義一組路由篩選條件，判斷類型的 Windows Communication Foundation (WCF) 的組態區段<xref:System.ServiceModel.Dispatcher.MessageFilter>評估內送訊息，以及路由資料表定義目標端點時要使用將訊息傳送至篩選條件的比對。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>    
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

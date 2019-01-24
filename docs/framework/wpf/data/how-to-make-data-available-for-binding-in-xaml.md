@@ -1,5 +1,5 @@
 ---
-title: 如何：讓資料可於 XAML 中繫結
+title: HOW TO：讓資料可於 XAML 中繫結
 ms.date: 01/29/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 09a6fca48c06efca6f06b9e0617de9095197bd17
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 95871b6a8d11ad4086735bd3315c360885d027dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555462"
 ---
-# <a name="how-to-make-data-available-for-binding-in-xaml"></a>如何：讓資料可於 XAML 中繫結
+# <a name="how-to-make-data-available-for-binding-in-xaml"></a>HOW TO：讓資料可於 XAML 中繫結
 本主題討論您可以讓資料可用於繫結中的各種方式[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，取決於您的應用程式的需求。  
   
 ## <a name="example"></a>範例  
@@ -42,6 +42,6 @@ ms.locfileid: "48261468"
   
  如需您可以指定您要繫結資料的多種資訊，請參閱[指定的繫結來源](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)。 如需您可以結合的資料類型至或如何實作您自己[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件的繫結，請參閱[繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

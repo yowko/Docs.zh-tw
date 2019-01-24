@@ -2,12 +2,12 @@
 title: 含 JSON 和 XML 的 AJAX 服務範例
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 17b0fd362ac84c7fbc0c9e88fb3d318966356bc6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ed337b7e2717083f5b951d9c204b90ebcddf2d3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632292"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>含 JSON 和 XML 的 AJAX 服務範例
 此範例示範如何使用 Windows Communication Foundation (WCF) 建立會傳回 JavaScript 物件標記法 (JSON) 或 XML 資料的 Asynchronous JavaScript and XML (AJAX) 服務。 您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取 AJAX 服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例。  
@@ -111,5 +111,5 @@ xmlHttp.onreadystatechange=function(){
   
 3.  瀏覽至`http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm`（不要在瀏覽器從專案目錄開啟 XmlAjaxClientPage.htm）。  
   
-## <a name="see-also"></a>另請參閱  
- [使用 HTTP POST 的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)
+## <a name="see-also"></a>另請參閱
+- [使用 HTTP POST 的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

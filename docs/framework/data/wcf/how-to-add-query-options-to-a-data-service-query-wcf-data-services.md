@@ -1,5 +1,5 @@
 ---
-title: 如何：將查詢選項加入至資料服務查詢 (WCF 資料服務)
+title: HOW TO：將查詢選項加入至資料服務查詢 (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: e4258526-557e-4e96-91e1-2175400c7c8f
-ms.openlocfilehash: 330581c699ca4beede3333315844af084f27e672
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f02f28127650f316b954eaca182945e83fd418a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519030"
 ---
-# <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>如何：將查詢選項加入至資料服務查詢 (WCF 資料服務)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您使用所產生的用戶端資料服務類別，從以 .NET Framework 為基礎的用戶端應用程式查詢資料服務。 要執行此作業之最簡易的方式是撰寫 Language Integrated Query (LINQ) 查詢運算式，其中要包含想要的查詢選項。 您也可以呼叫一系列的 LINQ 查詢方法來撰寫功能相等的查詢。 最後，您可以使用 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法，在查詢中加入查詢選項。 在每個案例中，用戶端產生的 URI 都會包括所要求的實體集，以及選取的已套用之查詢選項。 如需詳細資訊，請參閱[查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
+# <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>HOW TO：將查詢選項加入至資料服務查詢 (WCF Data Services)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您使用所產生的用戶端資料服務類別，從以 .NET Framework 為基礎的用戶端應用程式查詢資料服務。 要執行此作業之最簡易的方式是撰寫 Language Integrated Query (LINQ) 查詢運算式，其中要包含想要的查詢選項。 您也可以呼叫一系列的 LINQ 查詢方法來撰寫功能相等的查詢。 最後，您可以使用 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法，在查詢中加入查詢選項。 在每個案例中，用戶端產生的 URI 都會包括所要求的實體集，以及選取的已套用之查詢選項。 如需詳細資訊，請參閱 <<c0> [ 查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
   
- 本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成建立此服務和用戶端資料類別[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
+ 本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成建立這項服務和用戶端資料類別[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何撰寫 LINQ 查詢運算式，該運算式只會傳回運費超過 $30 美元的訂單，並按出貨日期遞減排序結果。  
@@ -45,6 +45,6 @@ ms.locfileid: "33363226"
  [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#orderwithfilter)]
  [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#orderwithfilter)]  
   
-## <a name="see-also"></a>另請參閱  
- [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
- [如何：投影查詢結果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)
+## <a name="see-also"></a>另請參閱
+- [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [如何：專案查詢結果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)

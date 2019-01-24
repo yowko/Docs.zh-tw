@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
 author: KrzysztofCwalina
-ms.openlocfilehash: 1719e9843252c25d1e799471330c6cb08211245b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4943ddcdf1bc4e3e32c8d664cbcc5c50ae3959bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543824"
 ---
 # <a name="virtual-members"></a>虛擬成員
 虛擬成員可以被覆寫，因此變更子類別的行為。 它們是回呼提供，擴充性方面相當類似，但它們會有較高的執行效能和記憶體耗用量。 此外，虛擬成員覺得在需要建立一種特殊種類的現有類型 （特製化） 的情況下更自然的。  
@@ -40,5 +40,5 @@ ms.locfileid: "53128919"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

@@ -2,12 +2,12 @@
 title: 路由簡介
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: e540e084305aee51d6820cc9ae43f7791d5c07d6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d13a5cc86b7f0bbd67e1ef3ab6094bfb004972c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563765"
 ---
 # <a name="routing-introduction"></a>路由簡介
 路由服務提供了泛型的可外掛式 SOAP 媒介，此媒介能夠根據訊息內容路由傳送訊息。 透過路由服務，您就可以建立複雜路由邏輯，以便實作服務彙總、服務版本控制、優先權路由和多點傳送路由等案例。 路由服務還提供錯誤處理，可讓您設定備份端點清單，當傳送至主要目的端點期間發生錯誤時，訊息就會傳送至此清單中的端點。  
@@ -401,7 +401,7 @@ using (ServiceHost serviceHost =
   
  若要搭配路由服務使用 Windows 認證模擬，您必須同時設定認證與服務。 用戶端認證物件 (<xref:System.ServiceModel.Security.WindowsClientCredential>，可從 <xref:System.ServiceModel.ChannelFactory> 中存取) 定義允許模擬所必須設定的 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 屬性來存取。 最後，您必須在服務上設定 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 行為，才能將 `ImpersonateCallerForAllOperations` 設定為 `true`。 路由服務會使用這個旗標決定是否要建立用戶端，用來轉送已啟用模擬的訊息。  
   
-## <a name="see-also"></a>另請參閱  
- [訊息篩選](message-filters.md)  
- [路由合約](routing-contracts.md)  
- [選擇篩選](choosing-a-filter.md)
+## <a name="see-also"></a>另請參閱
+- [訊息篩選](message-filters.md)
+- [路由合約](routing-contracts.md)
+- [選擇篩選](choosing-a-filter.md)

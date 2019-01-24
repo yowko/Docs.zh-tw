@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: 043f156f96d6ebc9ac5a6487287ad327928d9bf0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c168fc2ceddde0f8d104ec5e562f92c9c9e487d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583531"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>列舉 SQL Server 執行個體 (ADO.NET)
 SQL Server 允許應用程式尋找目前網路內的 SQL Server 執行個體。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 類別會將此資訊公開至應用程式開發人員，並提供包含所有可見伺服器之相關資訊的 <xref:System.Data.DataTable>。 傳回此資料表包含一份可用的網路上的符合清單提供當使用者嘗試建立新的連接，並展開下拉式清單包含所有可用的伺服器上的伺服器執行個體**連線屬性** 對話方塊。 顯示的結果不一定是完整的。  
@@ -45,10 +45,10 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
 |Column|描述|  
 |------------|-----------------|  
-|**伺服器名稱**|伺服器名稱。|  
+|**ServerName**|伺服器名稱。|  
 |**InstanceName**|伺服器執行個體的名稱。 如果伺服器做為預設執行個體執行，則此處為空白。|  
 |**IsClustered**|表示伺服器是否為叢集的一部分。|  
-|**版本**|伺服器版本。 例如：<br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
+|**版本**|伺服器版本。 例如: <br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>列舉型別限制  
  可能會，也可能不會列出所有可用的伺服器。 此清單需視逾時及網路流量之類的因素而定。 這可能會導致兩個連續呼叫的清單不同， 而只會列出相同網路上的伺服器。 廣播封包通常不會周遊路由器，因此您可能看不到某個列出的伺服器，但它在所有呼叫中都是穩定的。  
@@ -124,6 +124,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

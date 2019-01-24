@@ -2,12 +2,12 @@
 title: ADO.NET 資料集
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: e4f2aeca72404379a9cebbfacda77f98a9e85bf3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f9821f07aae8a761a3890e93347f9cf727f8bdd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569423"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 資料集
 <xref:System.Data.DataSet> 物件對於支援 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 的中斷連接、分散式的資料案例非常重要。 **資料集**是提供與資料來源無關的一致性關聯式程式設計模型的資料常駐記憶體表示法。 它可與多個不同的資料來源一起使用、與 XML 資料一起使用，或管理應用程式的本機資料。 **資料集**表示一組完整的資料，包括相關的資料表、 條件約束及資料表間的關聯性。 如下圖所示**資料集**物件模型。  
@@ -45,8 +45,8 @@ DataSet 物件模型
   
  如需詳細資訊，請參閱 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
