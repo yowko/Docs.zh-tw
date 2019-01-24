@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f71e59eb13321517de61315d3ba06b96c5458f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af90055c0a51e61d4032e45d6fa4a4914ddd045f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667933"
 ---
-# <a name="cortypeattr-enumeration"></a><span data-ttu-id="6da26-102">CorTypeAttr 列舉</span><span class="sxs-lookup"><span data-stu-id="6da26-102">CorTypeAttr Enumeration</span></span>
-<span data-ttu-id="6da26-103">包含值，這些值表示類型中繼資料。</span><span class="sxs-lookup"><span data-stu-id="6da26-103">Contains values that indicate type metadata.</span></span>  
+# <a name="cortypeattr-enumeration"></a><span data-ttu-id="eabda-102">CorTypeAttr 列舉</span><span class="sxs-lookup"><span data-stu-id="eabda-102">CorTypeAttr Enumeration</span></span>
+<span data-ttu-id="eabda-103">包含值，這些值表示類型中繼資料。</span><span class="sxs-lookup"><span data-stu-id="eabda-103">Contains values that indicate type metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6da26-104">語法</span><span class="sxs-lookup"><span data-stu-id="6da26-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eabda-104">語法</span><span class="sxs-lookup"><span data-stu-id="eabda-104">Syntax</span></span>  
   
 ```  
 typedef enum CorTypeAttr {  
@@ -75,50 +75,50 @@ typedef enum CorTypeAttr {
 } CorTypeAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="6da26-105">成員</span><span class="sxs-lookup"><span data-stu-id="6da26-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="eabda-105">成員</span><span class="sxs-lookup"><span data-stu-id="eabda-105">Members</span></span>  
   
-|<span data-ttu-id="6da26-106">成員</span><span class="sxs-lookup"><span data-stu-id="6da26-106">Member</span></span>|<span data-ttu-id="6da26-107">描述</span><span class="sxs-lookup"><span data-stu-id="6da26-107">Description</span></span>|  
+|<span data-ttu-id="eabda-106">成員</span><span class="sxs-lookup"><span data-stu-id="eabda-106">Member</span></span>|<span data-ttu-id="eabda-107">描述</span><span class="sxs-lookup"><span data-stu-id="eabda-107">Description</span></span>|  
 |------------|-----------------|  
-|`tdVisibilityMask`|<span data-ttu-id="6da26-108">用於型別可視性資訊。</span><span class="sxs-lookup"><span data-stu-id="6da26-108">Used for type visibility information.</span></span>|  
-|`tdNotPublic`|<span data-ttu-id="6da26-109">指定的類型不是公用的範圍中。</span><span class="sxs-lookup"><span data-stu-id="6da26-109">Specifies that the type is not in public scope.</span></span>|  
-|`tdPublic`|<span data-ttu-id="6da26-110">指定的類型是公用的範圍中。</span><span class="sxs-lookup"><span data-stu-id="6da26-110">Specifies that the type is in public scope.</span></span>|  
-|`tdNestedPublic`|<span data-ttu-id="6da26-111">指定的類型使用巢狀公用可視性。</span><span class="sxs-lookup"><span data-stu-id="6da26-111">Specifies that the type is nested with public visibility.</span></span>|  
-|`tdNestedPrivate`|<span data-ttu-id="6da26-112">指定的類型巢狀具有私用的可視性。</span><span class="sxs-lookup"><span data-stu-id="6da26-112">Specifies that the type is nested with private visibility.</span></span>|  
-|`tdNestedFamily`|<span data-ttu-id="6da26-113">指定的型別使用家族可視性所產生的巢狀。</span><span class="sxs-lookup"><span data-stu-id="6da26-113">Specifies that the type is nested with family visibility.</span></span>|  
-|`tdNestedAssembly`|<span data-ttu-id="6da26-114">指定的類型巢狀與組件可見性。</span><span class="sxs-lookup"><span data-stu-id="6da26-114">Specifies that the type is nested with assembly visibility.</span></span>|  
-|`tdNestedFamANDAssem`|<span data-ttu-id="6da26-115">指定型別使用家族和組件可視性所產生的巢狀。</span><span class="sxs-lookup"><span data-stu-id="6da26-115">Specifies that the type is nested with family and assembly visibility.</span></span>|  
-|`tdNestedFamORAssem`|<span data-ttu-id="6da26-116">指定型別使用家族或組件可視性所產生的巢狀。</span><span class="sxs-lookup"><span data-stu-id="6da26-116">Specifies that the type is nested with family or assembly visibility.</span></span>|  
-|`tdLayoutMask`|<span data-ttu-id="6da26-117">取得類型的配置資訊。</span><span class="sxs-lookup"><span data-stu-id="6da26-117">Gets layout information for the type.</span></span>|  
-|`tdAutoLayout`|<span data-ttu-id="6da26-118">指定此類型的欄位會自動配置。</span><span class="sxs-lookup"><span data-stu-id="6da26-118">Specifies that the fields of this type are laid out automatically.</span></span>|  
-|`tdSequentialLayout`|<span data-ttu-id="6da26-119">指定此類型的欄位會循序配置。</span><span class="sxs-lookup"><span data-stu-id="6da26-119">Specifies that the fields of this type are laid out sequentially.</span></span>|  
-|`tdExplicitLayout`|<span data-ttu-id="6da26-120">指定明確提供該欄位的配置。</span><span class="sxs-lookup"><span data-stu-id="6da26-120">Specifies that field layout is supplied explicitly.</span></span>|  
-|`tdClassSemanticsMask`|<span data-ttu-id="6da26-121">取得類型的語意資訊。</span><span class="sxs-lookup"><span data-stu-id="6da26-121">Gets semantic information about the type.</span></span>|  
-|`tdClass`|<span data-ttu-id="6da26-122">指定此類型為類別。</span><span class="sxs-lookup"><span data-stu-id="6da26-122">Specifies that the type is a class.</span></span>|  
-|`tdInterface`|<span data-ttu-id="6da26-123">指定此類型為介面。</span><span class="sxs-lookup"><span data-stu-id="6da26-123">Specifies that the type is an interface.</span></span>|  
-|`tdAbstract`|<span data-ttu-id="6da26-124">指定此類型為抽象。</span><span class="sxs-lookup"><span data-stu-id="6da26-124">Specifies that the type is abstract.</span></span>|  
-|`tdSealed`|<span data-ttu-id="6da26-125">指定類型，無法擴充。</span><span class="sxs-lookup"><span data-stu-id="6da26-125">Specifies that the type cannot be extended.</span></span>|  
-|`tdSpecialName`|<span data-ttu-id="6da26-126">指定類別名稱是特殊。</span><span class="sxs-lookup"><span data-stu-id="6da26-126">Specifies that the class name is special.</span></span> <span data-ttu-id="6da26-127">其名稱會說明如何。</span><span class="sxs-lookup"><span data-stu-id="6da26-127">Its name describes how.</span></span>|  
-|`tdImport`|<span data-ttu-id="6da26-128">指定的類型匯入。</span><span class="sxs-lookup"><span data-stu-id="6da26-128">Specifies that the type is imported.</span></span>|  
-|`tdSerializable`|<span data-ttu-id="6da26-129">指定的型別是可序列化。</span><span class="sxs-lookup"><span data-stu-id="6da26-129">Specifies that the type is serializable.</span></span>|  
-|`tdWindowsRuntime`|<span data-ttu-id="6da26-130">指定此類型為[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型別。</span><span class="sxs-lookup"><span data-stu-id="6da26-130">Specifies that this type is a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] type.</span></span>|  
-|`tdStringFormatMask`|<span data-ttu-id="6da26-131">取得如何編碼和格式字串的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="6da26-131">Gets information about how strings are encoded and formatted.</span></span>|  
-|`tdAnsiClass`|<span data-ttu-id="6da26-132">指定此類型會解譯為 ANSI LPTSTR。</span><span class="sxs-lookup"><span data-stu-id="6da26-132">Specifies that this type interprets an LPTSTR as ANSI.</span></span>|  
-|`tdUnicodeClass`|<span data-ttu-id="6da26-133">指定此類型會解譯為 Unicode LPTSTR。</span><span class="sxs-lookup"><span data-stu-id="6da26-133">Specifies that this type interprets an LPTSTR as Unicode.</span></span>|  
-|`tdAutoClass`|<span data-ttu-id="6da26-134">指定此類型會自動解譯 LPTSTR。</span><span class="sxs-lookup"><span data-stu-id="6da26-134">Specifies that this type interprets an LPTSTR automatically.</span></span>|  
-|`tdCustomFormatClass`|<span data-ttu-id="6da26-135">指定類型具有非標準的編碼，依指定`CustomFormatMask`。</span><span class="sxs-lookup"><span data-stu-id="6da26-135">Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.</span></span>|  
-|`tdCustomFormatMask`|<span data-ttu-id="6da26-136">您可以使用這個遮罩，取得原生 interop 的非標準編碼資訊。</span><span class="sxs-lookup"><span data-stu-id="6da26-136">Use this mask to get non-standard encoding information for native interop.</span></span> <span data-ttu-id="6da26-137">未指定這些兩位元值的意義。</span><span class="sxs-lookup"><span data-stu-id="6da26-137">The meaning of the values of these two bits is unspecified.</span></span>|  
-|`tdBeforeFieldInit`|<span data-ttu-id="6da26-138">指定第一次嘗試存取的靜態欄位之前，必須初始化型別。</span><span class="sxs-lookup"><span data-stu-id="6da26-138">Specifies that the type must be initialized before the first attempt to access a static field.</span></span>|  
-|`tdForwarder`|<span data-ttu-id="6da26-139">指定的已匯出類型，以及類型轉送子。</span><span class="sxs-lookup"><span data-stu-id="6da26-139">Specifies that the type is exported, and a type forwarder.</span></span>|  
-|`tdReservedMask`|<span data-ttu-id="6da26-140">這個旗標，而且下列旗標，則會由 common language runtime 內部使用。</span><span class="sxs-lookup"><span data-stu-id="6da26-140">This flag and the flags below are used internally by the common language runtime.</span></span>|  
-|`tdRTSpecialName`|<span data-ttu-id="6da26-141">指定通用語言執行平台應該檢查名稱編碼。</span><span class="sxs-lookup"><span data-stu-id="6da26-141">Specifies that the common language runtime should check the name encoding.</span></span>|  
-|`tdHasSecurity`|<span data-ttu-id="6da26-142">指定類型具有與其相關聯的安全性。</span><span class="sxs-lookup"><span data-stu-id="6da26-142">Specifies that the type has security associated with it.</span></span>|  
+|`tdVisibilityMask`|<span data-ttu-id="eabda-108">用於型別可視性資訊。</span><span class="sxs-lookup"><span data-stu-id="eabda-108">Used for type visibility information.</span></span>|  
+|`tdNotPublic`|<span data-ttu-id="eabda-109">指定的型別不是公用的範圍中。</span><span class="sxs-lookup"><span data-stu-id="eabda-109">Specifies that the type is not in public scope.</span></span>|  
+|`tdPublic`|<span data-ttu-id="eabda-110">指定的類型是公用的範圍中。</span><span class="sxs-lookup"><span data-stu-id="eabda-110">Specifies that the type is in public scope.</span></span>|  
+|`tdNestedPublic`|<span data-ttu-id="eabda-111">指定的類型巢狀具有公用可視性。</span><span class="sxs-lookup"><span data-stu-id="eabda-111">Specifies that the type is nested with public visibility.</span></span>|  
+|`tdNestedPrivate`|<span data-ttu-id="eabda-112">指定的類型巢狀使用私用可見度。</span><span class="sxs-lookup"><span data-stu-id="eabda-112">Specifies that the type is nested with private visibility.</span></span>|  
+|`tdNestedFamily`|<span data-ttu-id="eabda-113">指定的型別使用家族可視性的巢狀。</span><span class="sxs-lookup"><span data-stu-id="eabda-113">Specifies that the type is nested with family visibility.</span></span>|  
+|`tdNestedAssembly`|<span data-ttu-id="eabda-114">指定的型別使用巢狀組件可見性。</span><span class="sxs-lookup"><span data-stu-id="eabda-114">Specifies that the type is nested with assembly visibility.</span></span>|  
+|`tdNestedFamANDAssem`|<span data-ttu-id="eabda-115">指定的型別使用家族和組件的可見性的巢狀。</span><span class="sxs-lookup"><span data-stu-id="eabda-115">Specifies that the type is nested with family and assembly visibility.</span></span>|  
+|`tdNestedFamORAssem`|<span data-ttu-id="eabda-116">指定的型別使用家族或組件的可見性的巢狀。</span><span class="sxs-lookup"><span data-stu-id="eabda-116">Specifies that the type is nested with family or assembly visibility.</span></span>|  
+|`tdLayoutMask`|<span data-ttu-id="eabda-117">取得類型的配置資訊。</span><span class="sxs-lookup"><span data-stu-id="eabda-117">Gets layout information for the type.</span></span>|  
+|`tdAutoLayout`|<span data-ttu-id="eabda-118">指定此類型的欄位會自動配置。</span><span class="sxs-lookup"><span data-stu-id="eabda-118">Specifies that the fields of this type are laid out automatically.</span></span>|  
+|`tdSequentialLayout`|<span data-ttu-id="eabda-119">指定此類型的欄位會以循序方式配置。</span><span class="sxs-lookup"><span data-stu-id="eabda-119">Specifies that the fields of this type are laid out sequentially.</span></span>|  
+|`tdExplicitLayout`|<span data-ttu-id="eabda-120">指定明確提供該欄位的配置。</span><span class="sxs-lookup"><span data-stu-id="eabda-120">Specifies that field layout is supplied explicitly.</span></span>|  
+|`tdClassSemanticsMask`|<span data-ttu-id="eabda-121">取得型別的相關語意資訊。</span><span class="sxs-lookup"><span data-stu-id="eabda-121">Gets semantic information about the type.</span></span>|  
+|`tdClass`|<span data-ttu-id="eabda-122">指定此類型為類別。</span><span class="sxs-lookup"><span data-stu-id="eabda-122">Specifies that the type is a class.</span></span>|  
+|`tdInterface`|<span data-ttu-id="eabda-123">指定此類型為介面。</span><span class="sxs-lookup"><span data-stu-id="eabda-123">Specifies that the type is an interface.</span></span>|  
+|`tdAbstract`|<span data-ttu-id="eabda-124">指定此類型為抽象。</span><span class="sxs-lookup"><span data-stu-id="eabda-124">Specifies that the type is abstract.</span></span>|  
+|`tdSealed`|<span data-ttu-id="eabda-125">指定的型別不能擴充。</span><span class="sxs-lookup"><span data-stu-id="eabda-125">Specifies that the type cannot be extended.</span></span>|  
+|`tdSpecialName`|<span data-ttu-id="eabda-126">指定特殊的類別名稱。</span><span class="sxs-lookup"><span data-stu-id="eabda-126">Specifies that the class name is special.</span></span> <span data-ttu-id="eabda-127">其名稱將告訴您如何。</span><span class="sxs-lookup"><span data-stu-id="eabda-127">Its name describes how.</span></span>|  
+|`tdImport`|<span data-ttu-id="eabda-128">指定的型別會匯入。</span><span class="sxs-lookup"><span data-stu-id="eabda-128">Specifies that the type is imported.</span></span>|  
+|`tdSerializable`|<span data-ttu-id="eabda-129">指定的型別是可序列化。</span><span class="sxs-lookup"><span data-stu-id="eabda-129">Specifies that the type is serializable.</span></span>|  
+|`tdWindowsRuntime`|<span data-ttu-id="eabda-130">指定此類型為[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型別。</span><span class="sxs-lookup"><span data-stu-id="eabda-130">Specifies that this type is a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] type.</span></span>|  
+|`tdStringFormatMask`|<span data-ttu-id="eabda-131">取得字串編碼和格式化的方式的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="eabda-131">Gets information about how strings are encoded and formatted.</span></span>|  
+|`tdAnsiClass`|<span data-ttu-id="eabda-132">指定此類型會解譯為 ANSI LPTSTR。</span><span class="sxs-lookup"><span data-stu-id="eabda-132">Specifies that this type interprets an LPTSTR as ANSI.</span></span>|  
+|`tdUnicodeClass`|<span data-ttu-id="eabda-133">指定此類型會解譯為 Unicode LPTSTR。</span><span class="sxs-lookup"><span data-stu-id="eabda-133">Specifies that this type interprets an LPTSTR as Unicode.</span></span>|  
+|`tdAutoClass`|<span data-ttu-id="eabda-134">指定此類型會自動解譯 LPTSTR。</span><span class="sxs-lookup"><span data-stu-id="eabda-134">Specifies that this type interprets an LPTSTR automatically.</span></span>|  
+|`tdCustomFormatClass`|<span data-ttu-id="eabda-135">指定該類型具有非標準的編碼，依照`CustomFormatMask`。</span><span class="sxs-lookup"><span data-stu-id="eabda-135">Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.</span></span>|  
+|`tdCustomFormatMask`|<span data-ttu-id="eabda-136">您可以使用此遮罩來取得原生 interop 的非標準編碼資訊。</span><span class="sxs-lookup"><span data-stu-id="eabda-136">Use this mask to get non-standard encoding information for native interop.</span></span> <span data-ttu-id="eabda-137">未指定這些兩位元值的意義。</span><span class="sxs-lookup"><span data-stu-id="eabda-137">The meaning of the values of these two bits is unspecified.</span></span>|  
+|`tdBeforeFieldInit`|<span data-ttu-id="eabda-138">指定第一次嘗試存取的靜態欄位之前，必須先初始化型別。</span><span class="sxs-lookup"><span data-stu-id="eabda-138">Specifies that the type must be initialized before the first attempt to access a static field.</span></span>|  
+|`tdForwarder`|<span data-ttu-id="eabda-139">指定，將匯出的類型，以及類型轉送子。</span><span class="sxs-lookup"><span data-stu-id="eabda-139">Specifies that the type is exported, and a type forwarder.</span></span>|  
+|`tdReservedMask`|<span data-ttu-id="eabda-140">這個旗標和下方的旗標，則會由 common language runtime 內部使用。</span><span class="sxs-lookup"><span data-stu-id="eabda-140">This flag and the flags below are used internally by the common language runtime.</span></span>|  
+|`tdRTSpecialName`|<span data-ttu-id="eabda-141">指定 common language runtime 應該檢查名稱編碼方式。</span><span class="sxs-lookup"><span data-stu-id="eabda-141">Specifies that the common language runtime should check the name encoding.</span></span>|  
+|`tdHasSecurity`|<span data-ttu-id="eabda-142">指定該類型具有與其相關聯的安全性。</span><span class="sxs-lookup"><span data-stu-id="eabda-142">Specifies that the type has security associated with it.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="6da26-143">需求</span><span class="sxs-lookup"><span data-stu-id="6da26-143">Requirements</span></span>  
- <span data-ttu-id="6da26-144">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6da26-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eabda-143">需求</span><span class="sxs-lookup"><span data-stu-id="eabda-143">Requirements</span></span>  
+ <span data-ttu-id="eabda-144">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="eabda-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6da26-145">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="6da26-145">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="eabda-145">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="eabda-145">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="6da26-146">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6da26-146">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="eabda-146">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eabda-146">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6da26-147">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6da26-147">See Also</span></span>  
- [<span data-ttu-id="6da26-148">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="6da26-148">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="eabda-147">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eabda-147">See also</span></span>
+- [<span data-ttu-id="eabda-148">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="eabda-148">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

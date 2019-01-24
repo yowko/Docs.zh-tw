@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: 3a7accd2e98423bf3ab0133a5eb36610b3ebb414
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1913832bf95d0ea7188637f5456e4ff8f24695e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718906"
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="6ee6a-102">字型 (WPF)</span><span class="sxs-lookup"><span data-stu-id="6ee6a-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="6ee6a-103"> 包含支援豐富的文字使用[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字型。</span><span class="sxs-lookup"><span data-stu-id="6ee6a-103"> includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="6ee6a-104">範例套件的[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字型隨附於[!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="6ee6a-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="3fcf1-102">字型 (WPF)</span><span class="sxs-lookup"><span data-stu-id="3fcf1-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="3fcf1-103">包含支援豐富呈現文字使用[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字型。</span><span class="sxs-lookup"><span data-stu-id="3fcf1-103">includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="3fcf1-104">組件的範例[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字型會包含[!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="3fcf1-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6ee6a-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="6ee6a-105">In This Section</span></span>  
- [<span data-ttu-id="6ee6a-106">OpenType 字型功能</span><span class="sxs-lookup"><span data-stu-id="6ee6a-106">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [<span data-ttu-id="6ee6a-107">將字型與應用程式一起封裝</span><span class="sxs-lookup"><span data-stu-id="6ee6a-107">Packaging Fonts with Applications</span></span>](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
- [<span data-ttu-id="6ee6a-108">範例 OpenType 字型套件</span><span class="sxs-lookup"><span data-stu-id="6ee6a-108">Sample OpenType Font Pack</span></span>](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [<span data-ttu-id="6ee6a-109">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="6ee6a-109">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3fcf1-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="3fcf1-105">In This Section</span></span>  
+ [<span data-ttu-id="3fcf1-106">OpenType 字型功能</span><span class="sxs-lookup"><span data-stu-id="3fcf1-106">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [<span data-ttu-id="3fcf1-107">將字型與應用程式一起封裝</span><span class="sxs-lookup"><span data-stu-id="3fcf1-107">Packaging Fonts with Applications</span></span>](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="3fcf1-108">範例 OpenType 字型套件</span><span class="sxs-lookup"><span data-stu-id="3fcf1-108">Sample OpenType Font Pack</span></span>](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
+ [<span data-ttu-id="3fcf1-109">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="3fcf1-109">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="6ee6a-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6ee6a-110">See Also</span></span>  
- <xref:System.Windows.FontStyle>  
- <xref:System.Windows.SystemFonts>  
- [<span data-ttu-id="6ee6a-111">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="6ee6a-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="6ee6a-112">WPF 中的印刷樣式</span><span class="sxs-lookup"><span data-stu-id="6ee6a-112">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="3fcf1-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3fcf1-110">See also</span></span>
+- <xref:System.Windows.FontStyle>
+- <xref:System.Windows.SystemFonts>
+- [<span data-ttu-id="3fcf1-111">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="3fcf1-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [<span data-ttu-id="3fcf1-112">WPF 中的印刷樣式</span><span class="sxs-lookup"><span data-stu-id="3fcf1-112">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
