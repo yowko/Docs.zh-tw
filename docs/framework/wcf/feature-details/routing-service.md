@@ -2,12 +2,12 @@
 title: 路由服務
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 139607614934aedbad9f76172b8e31fb02394d80
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0d58e70d482532e3f148d3f4f92741f46221982
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495301"
 ---
 # <a name="routing-service"></a>路由服務
 「路由服務」是一種泛型 SOAP 媒介，可做為訊息路由器。 路由服務的核心功能是可根據訊息內容傳送訊息的能力，這可讓訊息根據訊息 (不論是標頭或訊息本文) 內部本身的值轉送至用戶端端點。  
@@ -62,7 +62,7 @@ ms.locfileid: "43522166"
  透過使用以內容為基礎的路由，您就可以公開從外部用戶端應用程式接收訊息的端點，然後根據訊息內的值，將每個訊息路由傳送至適當的內容端點。 這項益處相當實用，可提供一個特定端點給各種不同的後端應用程式，以及對客戶呈現一個應用程式端點，同時將應用程式重構至各種不同服務。  
   
 ### <a name="service-versioning"></a>服務版本控制  
- 當您轉換新版方案時，可能需要保留舊版，以便同時對現有客戶提供服務。 在這種情況下，經常會要求連接至較新版本的用戶端與方案進行通訊時，必須使用不同的位址。 路由服務可讓您根據訊息中包含的版本專屬資訊，將訊息路由傳送至適當的方案，藉此公開一個同時對兩個方案版本提供服務的服務端點。 如需這類實作的範例，請參閱[How To： 服務版本設定](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
+ 當您轉換新版方案時，可能需要保留舊版，以便同時對現有客戶提供服務。 在這種情況下，經常會要求連接至較新版本的用戶端與方案進行通訊時，必須使用不同的位址。 路由服務可讓您根據訊息中包含的版本專屬資訊，將訊息路由傳送至適當的方案，藉此公開一個同時對兩個方案版本提供服務的服務端點。 如需這類實作的範例，請參閱[How To:服務版本設定](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
   
 ### <a name="priority-routing"></a>優先權路由  
  為多個用戶端提供服務時，您可能與某些夥伴有服務等級協定 (SLA)，該協定會要求來自這些夥伴的所有資料與其他用戶端的資料分開處理。 透過使用尋找訊息內所包含客戶專屬資訊的篩選，您就可以輕鬆將特定夥伴的訊息路由傳送至專為符合其 SLA 需求所建立的端點。  
@@ -105,7 +105,7 @@ ms.locfileid: "43522166"
   
 -   動態組態  
   
-## <a name="see-also"></a>另請參閱  
- [路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
- [路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [訊息篩選](../../../../docs/framework/wcf/feature-details/message-filters.md)
+## <a name="see-also"></a>另請參閱
+- [路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
+- [訊息篩選](../../../../docs/framework/wcf/feature-details/message-filters.md)

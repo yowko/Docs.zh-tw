@@ -2,12 +2,12 @@
 title: 根據開發情況比較 ASP.NET Web 服務與 WCF
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: c4c07d24ba322c957aac5ba9fa6ed3a5f337fb9a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6bf9743410d3138efd5f3ea151b58f61e46ef683
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127364"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496789"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>根據開發情況比較 ASP.NET Web 服務與 WCF
 Windows Communication Foundation (WCF) 已啟用來進行程式設計和設定類似 ASP.NET Web 服務的 WCF 應用程式及模擬其行為的 ASP.NET 相容性模式選項。 下列各節比較 ASP.NET Web 服務與 WCF 的功能才能使用這兩種技術開發應用程式。  
@@ -750,5 +750,5 @@ public void Receive(Message input)
 ## <a name="globalization"></a>全球化  
  ASP.NET 設定語言可讓您指定個別服務的文化特性。 WCF 不支援此組態設定，除了在 ASP.NET 相容性模式中。 若要當地語系化未使用 ASP.NET 相容性模式的 WCF 服務，編譯特定文化特性的組件，將服務類型並對每個特定文化特性的組件中的不同文化特性特定端點。  
   
-## <a name="see-also"></a>另請參閱  
- [根據用途與使用的標準來比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+## <a name="see-also"></a>另請參閱
+- [根據用途與使用的標準來比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

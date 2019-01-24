@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue2 Interface1
+title: ICorDebugHeapValue2 介面 1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue2
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5eb8fa52a3f599787edaa6c47c260f48aa143e61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 447fd8c7a6c52cdebc39ffd9c62cea5890c18c3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499323"
 ---
-# <a name="icordebugheapvalue2-interface1"></a>ICorDebugHeapValue2 Interface1
-支援的通用語言執行平台 (CLR) 處理的 ICorDebugHeapValue 的延伸模組。  
+# <a name="icordebugheapvalue2-interface1"></a>ICorDebugHeapValue2 介面 1
+ICorDebugHeapValue，提供支援，以通用語言執行平台 (CLR) 所處理的延伸模組。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[CreateHandle 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|建立指定類型的控制代碼，這個`ICorDebugHeapValue2`物件。|  
+|[CreateHandle 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|建立指定型別的控制代碼，這個`ICorDebugHeapValue2`物件。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -38,13 +38,13 @@ ms.locfileid: "33412145"
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

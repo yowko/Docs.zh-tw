@@ -5,17 +5,17 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 557e3607443066a863946ff08958197a14662a88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519363"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>支援 LINQ 的 Visual Basic 功能
 名稱[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]指的是支援的查詢語法，並直接在語言中的其他語言建構的 Visual Basic 中的技術。 使用[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，您不必學習新語言來查詢外部資料來源。 您可以使用 Visual Basic，就可查詢對關聯式資料庫、 XML 存放區或物件中的資料。 這項整合到語言的查詢功能可讓您編譯時間檢查有語法錯誤和型別安全。 這項整合也可確保您已經知道大部分的您必須知道要在 Visual Basic 中撰寫內容豐富且各種查詢。  
   
- 下列各節說明在足夠的詳細資料，可讓您開始閱讀簡介文件、 程式碼範例和範例應用程式中支援 LINQ 的語言建構。 您也可以按一下連結，找出的語言功能即在一起的 language integrated query，以便更詳細的說明。 很好的起點開始[逐步解說： 在 Visual Basic 中撰寫查詢](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)。  
+ 下列各節說明在足夠的詳細資料，可讓您開始閱讀簡介文件、 程式碼範例和範例應用程式中支援 LINQ 的語言建構。 您也可以按一下連結，找出的語言功能即在一起的 language integrated query，以便更詳細的說明。 很好的起點開始[逐步解說：在 Visual Basic 中撰寫查詢](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)。  
   
 ## <a name="query-expressions"></a>查詢運算式  
  在 Visual Basic 中的查詢運算式可以是以類似於 SQL 或 XQuery 的宣告式語法來表示。 在編譯時期，查詢語法會轉換成方法呼叫的標準查詢運算子擴充方法的 LINQ 提供者的實作。 藉由指定適當的命名空間與標準查詢運算子是在範圍內的應用程式控制項`Imports`陳述式。 Visual Basic 查詢運算式語法看起來像這樣：  
@@ -44,7 +44,7 @@ ms.locfileid: "39199143"
   
  [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
   
- 如需詳細資訊，請參閱 <<c0> [ 物件初始設定式： 具名和匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。  
+ 如需詳細資訊，請參閱[物件初始設定式：具名和匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。  
   
 ## <a name="anonymous-types"></a>匿名類型  
  匿名型別提供便利的方式，可以暫時將一組屬性，到您想要在查詢結果中包含的項目。 這可讓您選擇在查詢中，依任何順序的可用欄位的任何組合，而不定義具名的資料型別項目。  
@@ -93,9 +93,9 @@ ms.locfileid: "39199143"
   
  如需詳細資訊，請參閱 [Lambda 運算式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- [使用 Visual Basic 撰寫 LINQ 入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>另請參閱
+- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [使用 Visual Basic 撰寫 LINQ 入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
