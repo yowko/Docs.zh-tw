@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: 219edcbdb09b4edbd9c5ec31e0def77cce6379bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed1f7781453503682648d740b57dd7af0a1715c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524126"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>初始化物件樹狀結構以外的物件項目
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 初始化的某些層面會延後處理，因為這些處理通常需要將該項目連接到邏輯樹狀結構或視覺化樹狀結構。 本主題說明為了初始化未連接到任一樹狀結構的項目所需的步驟。  
@@ -27,22 +27,22 @@ ms.locfileid: "33545528"
   
  視覺化樹狀結構也會參與此程序。 透過範本成為視覺化樹狀結構一部分的項目，也必須等到連接之後才能完全具現化。  
   
- 此行為的結果是，依賴某個項目之完整視覺特性的特定作業需要額外的步驟。 其中一個範例是您嘗試取得某個類別的視覺特性，而此類別已建構但尚未附加至樹狀結構。 比方說，如果您想要呼叫<xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>上<xref:System.Windows.Media.Imaging.RenderTargetBitmap>和您要將視覺效果是項目未連線至樹狀目錄中，直到其他初始設定步驟都完成之後，該元素會以視覺化方式完成。  
+ 此行為的結果是，依賴某個項目之完整視覺特性的特定作業需要額外的步驟。 其中一個範例是您嘗試取得某個類別的視覺特性，而此類別已建構但尚未附加至樹狀結構。 比方說，如果您想要呼叫<xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>上<xref:System.Windows.Media.Imaging.RenderTargetBitmap>您傳遞的視覺效果，而且 未連接的樹狀結構的項目才會完成額外的初始化步驟，該項目會以視覺化方式完成。  
   
 ### <a name="using-begininit-and-endinit-to-initialize-the-element"></a>使用 BeginInit 和 EndInit 來初始化項目  
- 中的各種類別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]實作<xref:System.ComponentModel.ISupportInitialize>介面。 您使用<xref:System.ComponentModel.ISupportInitialize.BeginInit%2A>和<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>包含初始化步驟 （例如，設定屬性值，會影響轉譯） 程式碼中的區域線，代表介面的方法。 之後<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>呼叫的順序，請配置系統可以處理項目，並開始尋找隱含樣式。  
+ 中的各種類別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]實作<xref:System.ComponentModel.ISupportInitialize>介面。 您使用<xref:System.ComponentModel.ISupportInitialize.BeginInit%2A>和<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>表示區域，以在程式碼中包含初始化步驟 （例如設定屬性的值影響呈現的） 介面的方法。 之後<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>呼叫的順序，請配置系統可以處理項目，並開始尋找隱含樣式。  
   
- 如果項目要設定屬性，在上是<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>衍生類別中，您便可以呼叫的類別版本<xref:System.Windows.FrameworkElement.BeginInit%2A>和<xref:System.Windows.FrameworkElement.EndInit%2A>而不是轉型為<xref:System.ComponentModel.ISupportInitialize>。  
+ 如果項目會設定屬性，在<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>衍生類別，則您可以呼叫的類別版本<xref:System.Windows.FrameworkElement.BeginInit%2A>並<xref:System.Windows.FrameworkElement.EndInit%2A>而不是轉換至<xref:System.ComponentModel.ISupportInitialize>。  
   
 ### <a name="sample-code"></a>程式碼範例  
- 下列範例會使用轉譯的主控台應用程式的範例程式碼[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]和<xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType>的鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案，以說明的適當位置<xref:System.Windows.FrameworkElement.BeginInit%2A>和<xref:System.Windows.FrameworkElement.EndInit%2A>周圍其他[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]呼叫可調整會影響呈現的屬性。  
+ 下列範例會使用轉譯的主控台應用程式的範例程式碼[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]和<xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType>鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案，以說明的位置正確<xref:System.Windows.FrameworkElement.BeginInit%2A>並<xref:System.Windows.FrameworkElement.EndInit%2A>周圍其他[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]呼叫可調整影響呈現的屬性。  
   
  此範例只會說明 main 函式。 `Rasterize` 和 `Save` 函式 (未顯示) 是負責影像處理和 IO 的公用程式函式。  
   
  [!code-csharp[InitializeElements#Main](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
  [!code-vb[InitializeElements#Main](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
-## <a name="see-also"></a>另請參閱  
- [WPF 中的樹狀結構](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>另請參閱
+- [WPF 中的樹狀結構](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

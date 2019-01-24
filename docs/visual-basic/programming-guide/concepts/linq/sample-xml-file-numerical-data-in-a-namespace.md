@@ -1,15 +1,15 @@
 ---
-title: Namespace1 中的範例 XML 檔： 數值資料
+title: XML 範例檔：Namespace1 中的數值資料
 ms.date: 07/20/2015
 ms.assetid: f01cc0a1-fb55-4b42-8380-16f4be47d6f4
-ms.openlocfilehash: 71ff5229d4f2342880bdf50f288355a676b78722
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 410e3df37c0e6f38f984e65cf3a9d4cc0a338110
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585233"
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a>範例 XML 檔：命名空間中的數值資料
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a>XML 範例檔：命名空間中的數值資料
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 此檔案包含數值資料以進行加總、平均和群組。 XML 位於命名空間中。  
   
 ## <a name="data"></a>資料  
@@ -55,5 +55,5 @@ ms.locfileid: "39244305"
 </Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [範例 XML 文件 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>另請參閱
+- [範例 XML 文件 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

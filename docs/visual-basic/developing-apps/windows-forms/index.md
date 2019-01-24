@@ -2,15 +2,9 @@
 title: Windows Forms 應用程式基本概念 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Windows applications
-- Windows Forms, Visual Basic
+  - Windows applications
+  - 'Windows Forms, Visual Basic'
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 59b21bf9bbe3e78a1ac8cedd3812863cbcae7382
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582569"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 應用程式基本概念 (Visual Basic)
 Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 Windows Forms 應用程式的能力。 您可以使用 Visual Studio 來建立使用 Windows Form 的應用程式和使用者介面。 在 Windows Forms 應用程式的基礎類別<xref:System.Windows.Forms>命名空間。  
@@ -46,10 +40,10 @@ Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 
   
 |以|請參閱|  
 |--------|---------|  
-|使用 Visual Studio 中建立新的 Windows Forms 應用程式|[逐步解說： 建立簡單 Windows Form](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
-|使用在表單上控制項|[操作說明：將控制項新增至 Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
+|使用 Visual Studio 中建立新的 Windows Forms 應用程式|[逐步解說：建立簡單 Windows Form](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|使用在表單上控制項|[如何：將控制項新增至 Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |建立使用圖形 <xref:System.Drawing>|[圖形程式設計入門](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
-|建立自訂控制項|[操作說明：繼承自 UserControl 類別](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
+|建立自訂控制項|[如何：繼承自 UserControl 類別](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ## <a name="displaying-and-manipulating-data"></a>顯示和操作資料  
  許多應用程式必須顯示來自資料庫、XML 檔案、XML Web 服務或其他資料來源的資料。 Windows Form 提供彈性的控制項稱為<xref:System.Windows.Forms.DataGridView>呈現傳統資料列和資料行格式，這類表格式資料，使每一項資料佔有自己的儲存格的控制項。 使用<xref:System.Windows.Forms.DataGridView>您可以自訂個別儲存格的外觀、 鎖定任意的資料列和資料行就位，並顯示在儲存格中，至於其他功能的複雜控制項。  
@@ -66,9 +60,9 @@ Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 
   
 |以|請參閱|  
 |--------|---------|  
-|使用<xref:System.Windows.Forms.BindingSource>元件|[操作說明：使用設計工具將 Windows Forms 控制項和 BindingSource 元件加以繫結](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]資料來源|[操作說明：使用 Windows Forms BindingSource 元件排序和篩選 ADO.NET 資料](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|使用 [資料來源] 視窗|[逐步解說：顯示 Windows Form 上的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
+|使用<xref:System.Windows.Forms.BindingSource>元件|[如何：繫結 Windows Form 控制項和 BindingSource 元件加以使用設計工具](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
+|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]資料來源|[如何：排序和篩選 ADO.NET 資料，使用 Windows Form BindingSource 元件](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|使用 [資料來源] 視窗|[逐步解說：Windows Form 上顯示資料](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>將應用程式部署到用戶端電腦  
  一旦您撰寫您的應用程式，您必須傳送給您的使用者，讓他們可以安裝並執行它自己的用戶端電腦上。 使用[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]技術，您可以使用按幾下即可部署您從 Visual Studio 內的應用程式和使用者提供指向您在網站上的應用程式的 URL。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 會管理所有的項目和您的應用程式中的相依性，並確保應用程式已正確安裝用戶端電腦上。  
@@ -81,7 +75,7 @@ Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 
   
 |以|請參閱|  
 |--------|---------|  
-|部署應用程式 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[如何：使用發行精靈發行 ClickOnce 應用程式](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|部署應用程式 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[如何：使用 [發佈精靈] 發佈 ClickOnce 應用程式](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |更新[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]部署|[如何：管理 ClickOnce 應用程式的更新](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
 |管理與安全性 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[如何：啟用 ClickOnce 安全性設定](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
@@ -92,11 +86,11 @@ Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 
   
 |以|請參閱|  
 |--------|---------|  
-|列印表單的內容|[如何：列印 Windows Forms 中的圖形](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：在 Windows Forms 中列印多頁文字檔](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
+|列印表單的內容|[如何：列印 Windows Form 中的圖形](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：列印 Windows Form 中的多頁文字檔](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |深入了解 Windows Form 安全性|[Windows Forms 中的安全性概觀](../../../framework/winforms/security-in-windows-forms-overview.md)|  
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
-- [Windows Forms 概觀](../../../framework/winforms/windows-forms-overview.md)  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
+- [Windows Forms 概觀](../../../framework/winforms/windows-forms-overview.md)
 - [My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)

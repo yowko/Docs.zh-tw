@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d6ec37bbd8750c27a41b5f18180c7726cdcd483
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f99fb7a693c47b257abe9c0b783856179fc9f0eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582369"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 列舉
 包含值，這些值描述套用至組件編譯的中繼資料。  
@@ -59,31 +59,31 @@ typedef enum CorAssemblyFlags {
   
 |成員|描述|  
 |------------|-----------------|  
-|`afPublicKey`|表示組件參考會保留完整的未雜湊的公用金鑰。|  
+|`afPublicKey`|表示組件參考會保留完整的雜湊的公用金鑰。|  
 |`afPA_None`|表示未指定的處理器架構。|  
-|`afPA_MSIL`|指示處理器架構是中性 (PE32)。|  
-|`afPA_x86`|指示處理器架構為 x86 (PE32)。|  
+|`afPA_MSIL`|指出處理器架構是中性 (PE32)。|  
+|`afPA_x86`|指出處理器架構為 x86 (PE32)。|  
 |`afPA_IA64`|指示處理器架構為 Itanium （PE32 +）。|  
-|`afPA_AMD64`|表示的處理器架構的 AMD X64 （PE32 +）。|  
-|`afPA_ARM`|指示處理器架構是 ARM (PE32)。|  
-|`afPA_NoPlatform`|表示組件的參考組件。也就是說，它會適用於任何架構，但無法在任何架構上執行。 因此，此旗標等同於`afPA_Mask`。|  
-|`afPA_Specified`|指示處理器架構旗標，應該傳播至`AssemblyRef`記錄。|  
-|`afPA_Mask`|遮罩描述處理器架構。|  
+|`afPA_AMD64`|指出處理器架構的 AMD X64 （PE32 +）。|  
+|`afPA_ARM`|指出處理器架構是 ARM (PE32)。|  
+|`afPA_NoPlatform`|表示組件的參考組件;也就是它會套用至任何架構，但無法在任何架構上執行。 因此，此旗標等同於`afPA_Mask`。|  
+|`afPA_Specified`|指出處理器架構旗標，應該傳播至`AssemblyRef`記錄。|  
+|`afPA_Mask`|遮罩，描述處理器架構。|  
 |`afPA_FullMask`|指定包含處理器架構的說明。|  
-|`afPA_Shift`|表示排班中的計數與索引的處理器架構旗標。|  
-|`afEnableJITcompileTracking`|表示對應的值從<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>的<xref:System.Diagnostics.DebuggableAttribute>。|  
-|`afDisableJITcompileOptimizer`|表示對應的值從<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>的<xref:System.Diagnostics.DebuggableAttribute>。|  
-|`afRetargetable`|指出的組件可能會被重定在執行階段組件從不同的發行者。|  
-|`afContentType_Mask`|遮罩描述的內容類型。|  
+|`afPA_Shift`|指出處理器架構旗標，從索引中的移位計數。|  
+|`afEnableJITcompileTracking`|從對應的值會指出<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>的<xref:System.Diagnostics.DebuggableAttribute>。|  
+|`afDisableJITcompileOptimizer`|從對應的值會指出<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>的<xref:System.Diagnostics.DebuggableAttribute>。|  
+|`afRetargetable`|表示組件可以被重定目標在執行階段組件從不同的 「 發行者 」。|  
+|`afContentType_Mask`|遮罩，描述的內容類型。|  
 |`afContentType_Default`|表示預設內容類型。|  
 |`afContentType_WindowsRuntime`|指出[!INCLUDE[wrt](../../../../includes/wrt-md.md)]內容類型。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

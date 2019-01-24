@@ -2,12 +2,12 @@
 title: 解譯 wsatConfig.exe 傳回的錯誤碼
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 9df059618b45ae65ffb3e6e31a87d5531c79d947
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70a917446415794f8d500818bdeff5b945834598
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510022"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>解譯 wsatConfig.exe 傳回的錯誤碼
 本主題列出 WS-AtomicTransaction 組態公用程式 (wsatConfig.exe) 產生的錯誤碼，以及建議採取的動作。  
@@ -44,7 +44,7 @@ ms.locfileid: "33507346"
 |28|`-network` 命令列選項無效。|更正 `-network` 命令列選項，以正確指定 "enable" 或 "disable"。|  
 |29|`-maxTimeout` 命令列選項無效。|依指示更正 `-maxTimeout` 命令列選項。|  
 |30|`-timeout` 命令列選項無效。|依指示更正 `-timeout` 命令列選項。|  
-|31|`-traceLevel` 命令列選項無效。|更正 `-traceLevel` 命令列選項，以指定下列的有效值，<br /><br /> 關閉<br />-錯誤<br />-   Critical<br />-警告<br />資訊<br />-Verbose<br />-所有|  
+|31|`-traceLevel` 命令列選項無效。|更正 `-traceLevel` 命令列選項，以指定下列的有效值，<br /><br /> 關閉<br />-錯誤<br />-   Critical<br />-警告<br />-資訊<br />-Verbose<br />-所有|  
 |32|`-traceActivity` 命令列選項無效。|透過指定 "enable" 或 "disable" 來更正 `-traceActivity` 命令列選項。|  
 |33|`-traceProp` 命令列選項無效。|透過指定 "enable" 或 "disable" 來更正 `-traceProp` 命令列選項。|  
 |34|`-tracePII` 命令列選項無效。|透過指定 "enable" 或 "disable" 來更正 `-tracePII` 命令列選項。|  
@@ -67,5 +67,5 @@ ms.locfileid: "33507346"
 |55|在嘗試啟動 ETW 追蹤工作階段時發生非預期的錯誤。|請連絡 Microsoft。|  
 |56|在嘗試啟動 ETW 追蹤工作階段時發生非預期的錯誤。|請連絡 Microsoft。|  
   
-## <a name="see-also"></a>另請參閱  
- [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>另請參閱
+- [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

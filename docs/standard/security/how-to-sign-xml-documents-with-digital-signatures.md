@@ -1,5 +1,5 @@
 ---
-title: 如何：使用數位簽章簽署 XML 文件
+title: HOW TO：使用數位簽章簽署 XML 文件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 49999ae8b66b01ca71c0027bdf43c13272fbe8a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622620"
 ---
-# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>如何：使用數位簽章簽署 XML 文件
+# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>HOW TO：使用數位簽章簽署 XML 文件
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別，以數位簽章簽署 XML 文件或 XML 文件的一部分。  XML 數位簽章 (XMLDSIG) 可讓您驗證在簽署資料後，資料未經過變更。  如需 XMLDSIG 標準的詳細資訊，請參閱 World Wide Web Consortium (W3C) 建議事項[XML 簽章語法和處理](https://www.w3.org/TR/xmldsig-core/)。  
   
  這個程序中的程式碼範例會示範如何數位簽署整份 XML 文件，並將簽章附加到 <`Signature`> 項目的文件中。  範例會建立 RSA 簽章金鑰、將金鑰加入安全的金鑰容器，然後使用金鑰來數位簽署 XML 文件。  金鑰便可以擷取來驗證 XML 數位簽章，或可以用來簽署另一份 XML 文件。  
   
- 如需有關如何驗證 XML 數位簽章使用此程序所建立的資訊，請參閱[如何： 確認數位簽章的 XML 文件](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)。  
+ 如需有關如何驗證 XML 數位簽章使用此程序所建立的資訊，請參閱[How to:驗證 XML 文件的數位簽章](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)。  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>數位簽署 XML 文件  
   
@@ -120,5 +120,5 @@ ms.locfileid: "45664601"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Security.Cryptography.Xml>  
-- [操作說明：驗證 XML 文件的數位簽章](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+- <xref:System.Security.Cryptography.Xml>
+- [如何：驗證 XML 文件的數位簽章](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

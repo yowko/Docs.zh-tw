@@ -7,39 +7,39 @@ helpviewer_keywords:
 - data grids [Windows Forms], examples
 - DataGridView control [Windows Forms], examples
 ms.assetid: 78085f26-d5d2-4b75-813e-e932b72fd06f
-ms.openlocfilehash: 3d6a44dce7dfd59d484d1a3495982a0d7d1f3e46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af8dcaf8b6d32f03c2f2f46312d1290a99381c43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611493"
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的基本資料行、資料列和儲存格功能
-許多的基本行為的`DataGridView`藉由設定單一屬性，則可以修改資料格、 列和資料行。 本節中的主題會說明有幾個最常使用這些功能。  
+許多的基本行為的`DataGridView`藉由設定單一屬性，則可以修改資料格、 資料列和資料行。 在本節中的主題會說明幾個最常使用這些功能。  
   
 ## <a name="in-this-section"></a>本節內容  
- [操作說明：隱藏 Windows Forms DataGridView 控制項中的資料行](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
+ [如何：隱藏 Windows Form DataGridView 控制項中的資料行](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
  若要防止特定資料行出現在控制項中的說明。  
   
- [操作說明：隱藏 Windows Forms DataGridView 控制項中的資料行行首](../../../../docs/framework/winforms/controls/how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
+ [如何：隱藏 Windows Form DataGridView 控制項中的資料行標頭](../../../../docs/framework/winforms/controls/how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
  描述如何顯示在控制項時，防止資料行標頭。  
   
- [操作說明：啟用 Windows Forms DataGridView 控制項中的資料行重新調整順序](../../../../docs/framework/winforms/controls/how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
- 描述如何讓使用者在控制項中的資料行重新排列。  
+ [如何：啟用 Windows Form DataGridView 控制項中的資料行重新調整順序](../../../../docs/framework/winforms/controls/how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
+ 描述如何讓使用者能夠重新排列控制項中的資料行。  
   
- [操作說明：凍結 Windows Forms DataGridView 控制項中的資料行](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
- 描述如何防止一個或多個相鄰的資料行捲動。  
+ [如何：凍結 Windows Form DataGridView 控制項中的資料行](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
+ 描述如何防止捲動的一或多個相鄰的資料行。  
   
- [操作說明：使 Windows Forms DataGridView 控制項中的資料行成為唯讀](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
+ [如何：讓唯讀的 Windows Form DataGridView 控制項中的資料行](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
  描述如何防止使用者編輯控制項中的特定資料行。  
   
- [操作說明：防止在 Windows Forms DataGridView 控制項中新增和刪除資料列](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)  
- 描述如何移除底部的控制項，以防止使用者加入資料列的新記錄的資料列。 同時描述如何防止使用者刪除資料列。  
+ [如何：防止資料列新增與 Windows Form DataGridView 控制項中刪除](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)  
+ 描述如何移除底部的 加入資料列時，防止使用者控制項的新記錄的資料列。 同時描述如何防止使用者刪除資料列。  
   
- [操作說明：取得和設定 Windows Forms DataGridView 控制項中目前的儲存格](../../../../docs/framework/winforms/controls/get-and-set-the-current-cell-wf-datagridview-control.md)  
- 描述如何存取目前擁有焦點在控制項中的資料格。  
+ [如何：取得和設定 Windows Form DataGridView 控制項中的目前儲存格](../../../../docs/framework/winforms/controls/get-and-set-the-current-cell-wf-datagridview-control.md)  
+ 描述如何存取目前焦點在控制項中的資料格。  
   
- [操作說明：顯示 Windows Form DataGridView 控制項的儲存格影像](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+ [如何：Windows Forms DataGridView 控制項的儲存格的顯示影像](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
  描述如何建立影像資料行，顯示每個資料格中的圖示。  
   
 ## <a name="reference"></a>參考資料  
@@ -53,6 +53,6 @@ ms.locfileid: "33525490"
  [在 Windows Forms DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  提供主題描述如何使用儲存格、資料列和資料行物件進行程式設計。  
   
-## <a name="see-also"></a>另請參閱  
- [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Windows Forms DataGridView 控制項中的資料行類型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>另請參閱
+- [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [Windows Forms DataGridView 控制項中的資料行類型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

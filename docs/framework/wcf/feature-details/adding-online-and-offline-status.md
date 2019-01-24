@@ -2,12 +2,12 @@
 title: 加入上線與離線狀態
 ms.date: 03/30/2017
 ms.assetid: 05e5f51d-81b6-4c17-b364-9dda447a5fce
-ms.openlocfilehash: fb19614c1975c5634a81ca2f40edb145b724cd1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a04648e4251774538d298b35d1d655e09e03495
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591889"
 ---
 # <a name="adding-online-and-offline-status"></a>加入上線與離線狀態
 在許多情況下，應用程式監視對等通道連線狀態的特定詳細資訊是很重要的工作。 您可以在 `GetProperty` 介面實作上呼叫 <xref:System.ServiceModel.IOnlineStatus> 方法，以取得此項資訊。 含有此介面實作的物件可以監視連線狀態或註冊事件處理常式 (例如 `OnOnline` 和 `OnOffline`)，並且在發生上線狀態變更時立即做出反應。  
@@ -17,5 +17,5 @@ ms.locfileid: "33488100"
 > [!NOTE]
 >  上線事件處理常式在傳送任何訊息之前，應先確認節點是否已開啟。  
   
-## <a name="see-also"></a>另請參閱  
- [建置對等通道應用程式](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>另請參閱
+- [建置對等通道應用程式](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

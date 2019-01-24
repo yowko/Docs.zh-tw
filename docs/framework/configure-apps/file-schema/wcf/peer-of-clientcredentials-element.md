@@ -2,22 +2,22 @@
 title: '&lt;clientCredentials&gt; 的 &lt;peer&gt; 項目'
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 9846a25a8df165f51290aa8a26f907d40b6b159f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f933e4c6719437d530e0cf90e3aa1da3a8143060
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150561"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616208"
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 的 &lt;peer&gt; 項目
 指定驗證對等用戶端時所使用的認證。  
   
  \<system.ServiceModel>  
-\<行為 >  
+\<behaviors>  
 \<endpointBehaviors>  
-\<行為 >  
+\<behavior>  
 \<clientCredentials>  
-\<對等電腦 >  
+\<peer>  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,17 +52,17 @@ ms.locfileid: "54150561"
 ## <a name="remarks"></a>備註  
  這個組態項目會指定對等節點用於向網狀結構中其他節點驗證其本身的認證，以及對等節點用來驗證其他對等節點的驗證設定。 如需詳細資訊，請參閱 <<c0> [ 對等通道訊息驗證](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)並[保護的對等通道應用程式](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Peer%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>  
- <xref:System.ServiceModel.Security.PeerCredential>  
- [對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)  
- [對等通道訊息驗證](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [對等通道自訂驗證](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [保護對等通道應用程式的安全](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Configuration.PeerCredentialElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Peer%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>
+- <xref:System.ServiceModel.Security.PeerCredential>
+- [對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)
+- [對等通道訊息驗證](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
+- [對等通道自訂驗證](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [保護對等通道應用程式的安全](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

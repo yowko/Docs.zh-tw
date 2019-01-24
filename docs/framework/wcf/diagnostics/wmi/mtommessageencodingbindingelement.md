@@ -2,12 +2,12 @@
 title: MtomMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4a9c6c3d-e561-4b2d-a693-7e84bdd3534a
-ms.openlocfilehash: 49a640a666131491366646d6d486d25a515e35bf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ad4f2cc3b03111854d10d6a1c1128f090a629a07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185702"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490970"
 ---
 # <a name="mtommessageencodingbindingelement"></a>MtomMessageEncodingBindingElement
 MtomMessageEncodingBindingElement  
@@ -52,7 +52,7 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
  定義可同時傳送之訊息數目 (在不配置新寫入器的情況下) 的整數。  
   
 ### <a name="readerquotas"></a>ReaderQuotas  
- 資料型別：XmlDictionaryReaderQuotas  
+ 資料類型：XmlDictionaryReaderQuotas  
   
  存取類型：唯讀  
   
@@ -64,5 +64,5 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>

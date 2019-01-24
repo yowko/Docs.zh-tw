@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: e2cfb3068a416da40b99072a0c7dfd751d3578c3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 33a4d6f7db140023bc33839fec7d5e28b7f5fe51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547302"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>HOW TO：建立循序工作流程
-工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步解說如何建立這類使用內建活動的工作流程<xref:System.Activities.Statements.Sequence>活動和自訂活動，從先前[How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
+工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步解說如何建立這類使用內建活動的工作流程<xref:System.Activities.Statements.Sequence>活動，並從先前的自訂活動[How to:建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
   
 > [!NOTE]
->  「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成本主題，您必須先完成[How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)。  
+>  「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成本主題，您必須先完成[How to:建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)。  
   
 > [!NOTE]
->  若要下載教學課程的完整的版本，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  若要下載教學課程的完整版本，請參閱 [Windows Workflow Foundation (WF45) - 快速入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ### <a name="to-create-the-workflow"></a>建立工作流程  
   
@@ -155,13 +155,13 @@ ms.locfileid: "43524180"
   
 1.  按下 CTRL+SHIFT+B 以建置方案。  
   
-     如需有關如何執行工作流程，指示，請參閱下一個主題中，[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。 如果您已完成[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)步驟來搭配另一個樣式的工作流程並想要使用此步驟中的循序工作流程執行，請直接跳到[以建置並執行應用程式](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)一節[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。  
+     如需有關如何執行工作流程，指示，請參閱下一個主題中， [How to:執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。 如果您已經完成[How to:執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)步驟來搭配另一個樣式的工作流程並想要使用此步驟中的循序工作流程執行，請直接跳到[以建置並執行應用程式](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)一節[How to:執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Activities.Statements.Flowchart>  
- <xref:System.Activities.Statements.FlowDecision>  
- [Windows Workflow Foundation 程式設計](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [設計工作流程](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- [快速入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [如何：建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [如何：執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Activities.Statements.Flowchart>
+- <xref:System.Activities.Statements.FlowDecision>
+- [Windows Workflow Foundation 程式設計](../../../docs/framework/windows-workflow-foundation/programming.md)
+- [設計工作流程](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
+- [快速入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
+- [如何：建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)
+- [如何：執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

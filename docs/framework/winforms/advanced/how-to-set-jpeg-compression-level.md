@@ -1,5 +1,5 @@
 ---
-title: 如何：設定 JPEG 壓縮層級
+title: HOW TO：設定 JPEG 壓縮層級
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 5f12f0ed8bae7b6cfb6f3162848e3c3761f7dbbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aae7be0b610ba90b5915267cd9bc257be9b56362
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525239"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628103"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a>如何：設定 JPEG 壓縮層級
-當您將影像儲存至磁碟以減少檔案大小或改善其品質時，可能會想要修改影像的參數。 您可以修改其壓縮層級來調整 JPEG 影像的品質。 若要儲存為 JPEG 影像時，請指定壓縮層級，您必須建立<xref:System.Drawing.Imaging.EncoderParameters>物件，並將它傳遞給<xref:System.Drawing.Image.Save%2A>方法<xref:System.Drawing.Image>類別。 初始化<xref:System.Drawing.Imaging.EncoderParameters>物件，所以它沒有陣列，其中包含一<xref:System.Drawing.Imaging.EncoderParameter>。 當您建立<xref:System.Drawing.Imaging.EncoderParameter>，指定<xref:System.Drawing.Imaging.Encoder.Quality>編碼器，以及所要的壓縮層級。  
+# <a name="how-to-set-jpeg-compression-level"></a>HOW TO：設定 JPEG 壓縮層級
+當您將影像儲存至磁碟以減少檔案大小或改善其品質時，可能會想要修改影像的參數。 您可以修改其壓縮層級來調整 JPEG 影像的品質。 若要儲存 JPEG 影像時，請指定的壓縮層級，您必須建立<xref:System.Drawing.Imaging.EncoderParameters>物件，並將它傳遞給<xref:System.Drawing.Image.Save%2A>方法<xref:System.Drawing.Image>類別。 初始化<xref:System.Drawing.Imaging.EncoderParameters>物件，使其具有陣列，其中包含一個<xref:System.Drawing.Imaging.EncoderParameter>。 當您建立<xref:System.Drawing.Imaging.EncoderParameter>，指定<xref:System.Drawing.Imaging.Encoder.Quality>編碼器，以及所要的壓縮層級。  
   
 ## <a name="example"></a>範例  
- 下列範例程式碼會建立<xref:System.Drawing.Imaging.EncoderParameter>物件，並將儲存三個 JPEG 影像。 每個 JPEG 影像會儲存具有不同的品質等級，藉由修改`long`值傳遞至<xref:System.Drawing.Imaging.EncoderParameter>建構函式。 品質層級 0 對應到最大壓縮，而品質層級 100 對應到最小壓縮。  
+ 下列範例程式碼會建立<xref:System.Drawing.Imaging.EncoderParameter>物件，並儲存三個 JPEG 影像。 每個 JPEG 影像時，會儲存使用不同的品質層級上，藉由修改`long`值傳遞至<xref:System.Drawing.Imaging.EncoderParameter>建構函式。 品質層級 0 對應到最大壓縮，而品質層級 100 對應到最小壓縮。  
   
 ```csharp  
 private void VaryQualityLevel()  
@@ -129,7 +129,7 @@ End Function
   
 -   名為 `TestPhoto.jpg` 且位在 **c:\\** 的影像檔。  
   
-## <a name="see-also"></a>另請參閱  
- [操作說明：判斷編碼器所支援的參數](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
- [點陣圖類型](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
- [使用 Managed GDI+ 中的影像編碼器和解碼器](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a>另請參閱
+- [如何：判斷編碼器所支援的參數](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [點陣圖類型](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)
+- [使用 Managed GDI+ 中的影像編碼器和解碼器](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

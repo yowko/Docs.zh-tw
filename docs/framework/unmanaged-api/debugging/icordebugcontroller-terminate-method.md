@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7a95f09d1baebed65bae994550431d88ba0dfc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 362ae813846ab31f170ae49288735996eb1e9555
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531755"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate 方法
 終止與指定的結束代碼的程序。  
   
 > [!NOTE]
->  這個方法是 Win32 的包裝函式`TerminateProcess`函式。 因此，`Terminate`使用結束碼，在相同的方式來 Win32`TerminateProcess`函式會使用它。  
+>  這個方法是 Win32 的包裝函式`TerminateProcess`函式。 因此，`Terminate`會結束程式碼使用相同方式來 Win32`TerminateProcess`函式會使用它。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,19 +43,19 @@ HRESULT Terminate (
  [in]結束代碼數字值。 Winbase.h 中定義之有效的數字值。  
   
 ## <a name="remarks"></a>備註  
- 如果處理程序已停止時`Terminate`是呼叫，處理程序應該繼續使用[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法以便偵錯工具會收到確認透過終止[Icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)或[icordebugmanagedcallback:: Exitappdomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)回呼。  
+ 如果處理程序已停止的時機`Terminate`是呼叫，應該會繼續執行處理序使用[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法，讓偵錯工具會收到確認透過終止[Icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)或是[icordebugmanagedcallback:: Exitappdomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)回呼。  
   
 > [!NOTE]
->  由應用程式定義域不實作這個方法。 也就是說，不會實作在<xref:System.AppDomain>層級。  
+>  應用程式定義域不實作這個方法。 也就是說，它不在實作<xref:System.AppDomain>層級。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- 
+## <a name="see-also"></a>另請參閱
+

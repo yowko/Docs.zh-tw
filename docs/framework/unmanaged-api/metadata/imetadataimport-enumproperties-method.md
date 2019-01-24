@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad29204e445bc61b6dc9753d594f0e4bf62930fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64e6bd57c5f16b0e7d59f6cf760030aab4c6b9f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448569"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568799"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties 方法
 列舉 PropertyDef 語彙基元，其代表指定的 TypeDef 語彙基元所參考的類型屬性。  
@@ -41,10 +41,10 @@ HRESULT EnumProperties (
   
 #### <a name="parameters"></a>參數  
  `phEnum`  
- [in、 out]列舉值的指標。 這必須是 NULL 的第一個呼叫此方法。  
+ [in、 out]列舉值的指標。 首次呼叫這個方法，這必須是 NULL。  
   
  `td`  
- [in]代表屬性與列舉類型的 TypeDef 語彙基元。  
+ [in]TypeDef 語彙基元表示要列舉的類型屬性。  
   
  `rProperties`  
  [out]陣列，用來儲存 PropertyDef 語彙基元。  
@@ -53,7 +53,7 @@ HRESULT EnumProperties (
  [in] `rProperties` 陣列的大小上限。  
   
  `pcProperties`  
- [out]PropertyDef 語彙基元中傳回的數目`rProperties`。  
+ [out]PropertyDef 語彙基元中傳回的數字`rProperties`。  
   
 ## <a name="return-value"></a>傳回值  
   
@@ -63,14 +63,14 @@ HRESULT EnumProperties (
 |`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcProperties`為零。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

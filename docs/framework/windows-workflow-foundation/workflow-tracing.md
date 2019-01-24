@@ -2,12 +2,12 @@
 title: 工作流程追蹤
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: 27e56933043c9eb955500cdd1c5bbd06cb33bde8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f8b454437631b4711360ddf0c1196cafca13b5ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627170"
 ---
 # <a name="workflow-tracing"></a>工作流程追蹤
 工作流程追蹤提供使用 .NET Framework 追蹤接聽程式擷取診斷資訊的方式。 如果偵測到應用程式的問題，可以啟用追蹤，等到問題解決再停用追蹤。 您可以運用兩種方式啟用工作流程的偵錯追蹤。 您可以使用事件追蹤檢視器加以設定，也可以使用 <xref:System.Diagnostics>，將追蹤事件傳送至檔案。  
@@ -69,6 +69,6 @@ ms.locfileid: "45591245"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>另請參閱
+- [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)

@@ -2,12 +2,12 @@
 title: 索引屬性
 description: 深入了解索引的屬性，在F#，可讓已排序的資料類似陣列存取。
 ms.date: 10/17/2018
-ms.openlocfilehash: 3817290505339803814e981cd5408cd4df6bd283
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a092da753acacf80807d145051a719df2d3e1520
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611772"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550964"
 ---
 # <a name="indexed-properties"></a>索引屬性
 
@@ -58,13 +58,29 @@ ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth
 ```
 
-## <a name="indexed-properties-with-multiple-index-variables"></a>具有多個索引變數的索引的屬性
+## <a name="indexed-properties-with-multiple-index-values"></a>具有多個索引值的索引的屬性
 
-索引的屬性可以有一個以上的索引變數。 在此情況下，變數會以逗號分隔的屬性使用時。 在這類屬性的 set 方法必須有兩個局部調用的引數，其中第一個 tuple，其中包含索引鍵，而第二個所設定的值。
+索引的屬性可以有一個以上的索引值。 在此情況下，值會以逗號分隔的屬性使用時。 在這類屬性的 set 方法必須有兩個局部調用的引數，其中第一個是包含索引鍵，元組和第二個是要設定的值。
 
-下列程式碼示範如何使用多個索引變數的索引屬性。
+下列程式碼示範如何使用具有多個索引值的索引屬性。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3302.fs)]
+```fsharp
+open System.Collections.Generic
+
+/// Basic implementation of a sparse matrix basedon a dictionary
+type SparseMatrix() =
+    let table = new Dictionary<(int * int), float>()
+    member __.Item
+        // Because the key is comprised of two values, 'get' has two index values
+        with get(key1, key2) = table.[(key1, key2)]
+
+        // 'set' has two index values and a new value to place in the key's position
+        and set (key1, key2) value = table.[(key1, key2)] <- value
+
+let sm = new SparseMatrix()
+for i in 1..1000 do
+    sm.[i, i] <- float i * float i
+```
 
 ## <a name="see-also"></a>另請參閱
 

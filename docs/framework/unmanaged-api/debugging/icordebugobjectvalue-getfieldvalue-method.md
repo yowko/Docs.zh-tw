@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 230666cefdadd56465fac35222500ad4b6da67e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 72a504d23b7b15ad3de72995a632843874cc7c5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631738"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>ICorDebugObjectValue::GetFieldValue 方法
-取得指定類別的指定之欄位的值，這個物件值。  
+取得這個物件值，指定類別的指定欄位的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,28 +39,28 @@ HRESULT GetFieldValue (
   
 #### <a name="parameters"></a>參數  
  `pClass`  
- [in]表示要取得的欄位值的類別 」 ICorDebugClass 」 物件的指標。  
+ [in]表示要取得的欄位值的類別 「 ICorDebugClass"物件的指標。  
   
  `fieldDef`  
  [in]`mdFieldDef`參考描述欄位的中繼資料語彙基元。  
   
  `ppValue`  
- [out]代表指定之欄位的值"ICorDebugValue 」 物件的指標。  
+ [out]表示指定之欄位的值"ICorDebugValue 」 物件的指標。  
   
 ## <a name="remarks"></a>備註  
- 指定的類別`pClass`參數，必須是階層中的物件值的類別，而且此欄位必須是該類別的欄位。  
+ 中指定的類別`pClass`參數，必須是階層中的物件值的類別，且此欄位必須是該類別的欄位。  
   
- `GetFieldValue`方法仍會成功的泛型物件和泛型類別。 例如，如果 MyDictionary\<V > 繼承自字典\<字串，V >，而且物件值的類型 MyDictionary\<int32 >，並傳遞`ICorDebugClass`字典的物件\<K，V > 將已順利取得欄位的字典\<字串、 int32 >。  
+ `GetFieldValue`方法仍然會成功的泛型物件的泛型類別。 比方說，如果 MyDictionary\<V > 繼承自字典\<字串，V >，而且物件值的類型 MyDictionary\<int32 >，並傳遞`ICorDebugClass`字典的物件\<K，V > 將已成功取得欄位的字典\<string，int32 >。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
-    
- 
+## <a name="see-also"></a>另請參閱
+
+

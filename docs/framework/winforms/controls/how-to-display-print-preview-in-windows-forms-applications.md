@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows Forms 應用程式中顯示預覽列印
+title: HOW TO：顯示預覽列印在 Windows Forms 應用程式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,30 +10,30 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 1c1291ea675d823fab3052b0fa365cb2d4c31088
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d348c89e3334543cf935e5faec29e546d848a984
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526726"
 ---
-# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>如何：在 Windows Forms 應用程式中顯示預覽列印
-您可以使用<xref:System.Windows.Forms.PrintPreviewDialog>控制項，讓使用者顯示文件，通常在列印之前。  
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>HOW TO：顯示預覽列印在 Windows Forms 應用程式
+您可以使用<xref:System.Windows.Forms.PrintPreviewDialog>控制項，讓使用者以顯示文件，通常要列印之前。  
   
- 若要這樣做，您需要指定的執行個體<xref:System.Drawing.Printing.PrintDocument>類別; 這是要列印文件。 如需有關使用預覽列印與<xref:System.Drawing.Printing.PrintDocument>元件，請參閱[如何： 列印 Windows Form 使用預覽列印](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)。  
+ 若要這樣做，您需要指定的執行個體<xref:System.Drawing.Printing.PrintDocument>類別; 這是要列印的文件。 如需有關使用使用預覽列印<xref:System.Drawing.Printing.PrintDocument>元件，請參閱[How to:使用預覽列印 Windows Forms 中列印](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)。  
   
 > [!NOTE]
->  若要使用<xref:System.Windows.Forms.PrintPreviewDialog>控制項在執行階段，使用者必須已安裝印表機他們在電腦上，在本機或透過網路，因為這是部分如何<xref:System.Windows.Forms.PrintPreviewDialog>元件決定文件列印的樣子。  
+>  若要使用<xref:System.Windows.Forms.PrintPreviewDialog>控制項在執行階段，使用者必須擁有在本機或透過網路，在他們的電腦上安裝印表機，這有一部分是如何<xref:System.Windows.Forms.PrintPreviewDialog>元件可讓您判斷文件列印的樣子。  
   
- <xref:System.Windows.Forms.PrintPreviewDialog>控制使用<xref:System.Drawing.Printing.PrinterSettings>類別。 此外，<xref:System.Windows.Forms.PrintPreviewDialog>控制使用<xref:System.Drawing.Printing.PageSettings>類別，就如同<xref:System.Windows.Forms.PrintPreviewDialog>元件。 列印文件中指定<xref:System.Windows.Forms.PrintPreviewDialog>控制項的<xref:System.Windows.Forms.PrintPreviewControl.Document%2A>屬性是指兩個執行個體<xref:System.Drawing.Printing.PrinterSettings>和<xref:System.Drawing.Printing.PageSettings>類別，以及這些用來呈現預覽視窗中的文件。  
+ <xref:System.Windows.Forms.PrintPreviewDialog>控制項會使用<xref:System.Drawing.Printing.PrinterSettings>類別。 此外，<xref:System.Windows.Forms.PrintPreviewDialog>控制項會使用<xref:System.Drawing.Printing.PageSettings>類別，就如同<xref:System.Windows.Forms.PrintPreviewDialog>元件。 列印文件中指定<xref:System.Windows.Forms.PrintPreviewDialog>控制項的<xref:System.Windows.Forms.PrintPreviewControl.Document%2A>屬性會參考兩個執行個體<xref:System.Drawing.Printing.PrinterSettings>和<xref:System.Drawing.Printing.PageSettings>類別，以及這些用來呈現預覽視窗中的文件。  
   
 ### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>若要檢視使用 PrintPreviewDialog 控制項的頁面  
   
 -   使用 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 方法顯示對話方塊，並指定要使用的 <xref:System.Drawing.Printing.PrintDocument> 。  
   
-     在下列程式碼範例中，<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式會開啟執行個體<xref:System.Windows.Forms.PrintPreviewDialog>控制項。 列印文件中指定<xref:System.Windows.Forms.PrintDialog.Document%2A>屬性。 在下列範例中，指定不列印的文件。  
+     在下列程式碼範例中，<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式會開啟的執行個體<xref:System.Windows.Forms.PrintPreviewDialog>控制項。 列印文件中指定<xref:System.Windows.Forms.PrintDialog.Document%2A>屬性。 在下列範例中，指定不列印的文件。  
   
-     這個範例需要您的表單具有<xref:System.Windows.Forms.Button>控制項，<xref:System.Drawing.Printing.PrintDocument>名元件`myDocument`，和<xref:System.Windows.Forms.PrintPreviewDialog>控制項。  
+     這個範例需要您的表單具有<xref:System.Windows.Forms.Button>控制<xref:System.Drawing.Printing.PrintDocument>名元件`myDocument`，和<xref:System.Windows.Forms.PrintPreviewDialog>控制項。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -81,8 +81,8 @@ ms.locfileid: "33532804"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [PrintDocument 元件](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
- [PrintPreviewDialog 控制項](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- [Windows Forms 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
- [Windows Forms](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>另請參閱
+- [PrintDocument 元件](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)
+- [PrintPreviewDialog 控制項](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
+- [Windows Forms 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Windows Forms](../../../../docs/framework/winforms/index.md)

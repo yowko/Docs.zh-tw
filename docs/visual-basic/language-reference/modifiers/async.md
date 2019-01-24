@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: 244f468d9432e132c93ae8272d51098f86ad439a
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 654c397918f564bbba9ce91ebd8135b14dd7abb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561448"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 `Async`修飾詞表示方法或[lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)它修改為非同步。 這類方法稱為*非同步方法*。  
   
- 非同步方法提供了方便進行可能需要長時間執行之工作的方式，而不需封鎖呼叫端的執行緒。 非同步方法的呼叫端可以繼續其工作，而不等候非同步方法完成。  
+ 非同步方法提供了方便進行可能需要長時間執行之工作的方式，而不需封鎖呼叫端的執行緒。 非同步方法的呼叫端可以繼續其工作，而不需等待非同步方法完成。  
   
 > [!NOTE]
 >  `Async` 和 `Await` 關鍵字是在 Visual Studio 2012 中引入。 如需非同步程式設計的簡介，請參閱[使用 Async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)。  
@@ -42,21 +42,21 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- 一般而言，所修飾的方法`Async`關鍵字包含至少一個[Await](../../../visual-basic/language-reference/modifiers/async.md)運算式或陳述式。 方法會以同步方式執行，直到達到第一個 `Await`，此時它會暫止，直到等候的工作完成。 同時，控制權會返回方法的呼叫端。 如果方法未包含 `Await` 運算式或陳述式，則方法就不會暫止，並且會像同步方法一樣執行。 編譯器警告提醒您並不包含任何非同步方法`Await`因為這種情況可能表示發生錯誤。 如需詳細資訊，請參閱[編譯器錯誤](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md)。  
+ 一般而言，所修飾的方法`Async`關鍵字包含至少一個[Await](../../../visual-basic/language-reference/modifiers/async.md)運算式或陳述式。 方法會以同步方式執行，直到達到第一個 `Await`，此時它會暫止，直到等候的工作完成。 同時，控制權會返回方法的呼叫端。 如果方法未包含 `Await` 運算式或陳述式，則方法就不會暫止，並且會像同步方法一樣執行。 編譯器警告來警示您未包含任何非同步方法`Await`因為這種情況可能表示發生錯誤。 如需詳細資訊，請參閱 <<c0> [ 編譯器錯誤](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md)。  
   
  `Async` 關鍵字是未保留的關鍵字。 它是修飾方法或 Lambda 運算式時的關鍵字。 在所有其他內容中，它會解譯為識別項。  
   
 ## <a name="return-types"></a>傳回型別  
- 非同步方法可能是[Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)程序，或[函式](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)程序具有傳回類型為<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>。 此方法無法宣告任何[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)參數。  
+ 非同步方法可能是[Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)程序，或有[函式](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)程序具有傳回型別<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>。 此方法不可以宣告任何[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)參數。  
   
- 您指定`Task(Of TResult)`的非同步方法的傳回型別如果[傳回](../../../visual-basic/language-reference/statements/return-statement.md)方法的陳述式擁有 TResult 類型的運算元。 如果方法完成時未傳回任何有意義的值，則使用 `Task`。 也就是說，呼叫方法會傳回 `Task`，但是當 `Task` 完成時，任何等候 `Await` 的 `Task` 陳述式都不會產生結果值。  
+ 您指定`Task(Of TResult)`的非同步方法的傳回型別若[傳回](../../../visual-basic/language-reference/statements/return-statement.md)之方法的陳述式擁有 TResult 類型的運算元。 如果方法完成時未傳回任何有意義的值，則使用 `Task`。 也就是說，呼叫方法會傳回 `Task`，但是當 `Task` 完成時，任何等候 `Await` 的 `Task` 陳述式都不會產生結果值。  
   
  Async 副程式主要是用來定義需要 `Sub` 程序的事件處理常式。 非同步副程式的呼叫端無法等候它，而且無法攔截方法擲回的例外狀況。  
   
  如需詳細資訊和範例，請參閱[非同步方法的傳回型別](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例將示範非同步事件處理常式、非同步 Lambda 運算式及非同步方法。 如需使用這些元素的完整範例，請參閱[逐步解說： 存取 Web，透過使用 Async 和 Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下載逐步解說程式碼。  
+ 下列範例將示範非同步事件處理常式、非同步 Lambda 運算式及非同步方法。 如需使用這些元素的完整範例，請參閱[逐步解說：使用 Async 和 Await 存取 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下載逐步解說程式碼。  
   
 ```vb  
 ' An event handler must be a Sub procedure.  
@@ -103,8 +103,8 @@ Private Async Function GetURLContentsAsync(url As String) As Task(Of Byte())
 End Function  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
- [Await 運算子](../../../visual-basic/language-reference/operators/await-operator.md)  
- [使用 Async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)  
- [逐步解說：使用 Async 和 Await 存取 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
+- [Await 運算子](../../../visual-basic/language-reference/operators/await-operator.md)
+- [使用 Async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [逐步解說：使用 Async 和 Await 存取 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2a50823b812541786cf1bebfd6b1262ce2e9314
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2d5f807481468b61365c8b4d8412f12a4741ebb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503149"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>使用日期和時間執行算術運算
 
@@ -78,7 +78,7 @@ A<xref:System.DateTimeOffset>值包含不只一個日期和時間，還能明確
 
 如需詳細資訊，請參閱 <<c0> [ 各時區間轉換時間](../../../docs/standard/datetime/converting-between-time-zones.md)。
 
-<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>類別不提供任何自動套用調整規則，當您執行日期和時間運算的方法。 不過，作法是將時區時間轉換為 UTC，並執行算術運算，然後從 UTC 轉換回時區時間。 如需詳細資訊，請參閱 <<c0> [ 如何： 在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)。
+<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>類別不提供任何自動套用調整規則，當您執行日期和時間運算的方法。 不過，作法是將時區時間轉換為 UTC，並執行算術運算，然後從 UTC 轉換回時區時間。 如需詳細資訊，請參閱[How to:在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)。
 
 例如，下列程式碼與前面的程式碼類似，也是將 2008 年 3 月 9 日 凌晨 2:00 加上兩個半小時。 不過，因為它會先將美加中部標準時間轉換為 UTC，再執行日期和時間運算，然後將 UTC 的結果轉換回美加中部標準時間，所以產生的時間會反映美加中部標準時區到日光節約時間的轉換。
 
@@ -87,5 +87,5 @@ A<xref:System.DateTimeOffset>值包含不只一個日期和時間，還能明確
 
 ## <a name="see-also"></a>另請參閱
 
-* [日期、時間和時區](../../../docs/standard/datetime/index.md)
-* [操作說明：在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)
+- [日期、時間和時區](../../../docs/standard/datetime/index.md)
+- [如何：在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)

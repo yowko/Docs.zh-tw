@@ -9,12 +9,12 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 1d030f8058cd497212c20bca8f064f2bedc99fce
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d85ff343587e8689a4859a09c8dc80932374a82e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507813"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498644"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>常數和常值資料類型 (Visual Basic)
 常值是表示為本身，而不是為變數的值或運算式，例如數字 3 或字串"Hello"的結果值。 常數是有意義的名稱，會取代常值，並保留在整個程式，而不是變數，可能會變更其值，這個相同的值。  
@@ -61,14 +61,14 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Single`|(無)|F 或 ！|  
 |`String`|"|(無)|  
   
-## <a name="see-also"></a>另請參閱  
- [使用者定義的常數](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)  
- [如何：宣告常數](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)  
- [常數的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Option Explicit 陳述式](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [列舉的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
- [如何： 宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
- [列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)  
- [常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [使用者定義的常數](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
+- [如何：宣告常數](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
+- [常數的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Explicit 陳述式](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [列舉的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+- [如何：宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
+- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)
+- [常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)

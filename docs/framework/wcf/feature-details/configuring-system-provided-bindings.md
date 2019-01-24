@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 343cdc4e30984e75bd2fede2706679839a573153
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0e3dd33e740d7e9f0b59b8568b35a83303e8b592
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517691"
 ---
 # <a name="configuring-system-provided-bindings"></a>設定系統提供的繫結
 在與端點對話時，繫結會指定要使用的通訊機制，並指出如何連接至端點。 繫結是由定義如何 Windows Communication Foundation (WCF) 通道的分層處理提供所需的通訊功能的項目所組成。 繫結包含三種項目型別：  
@@ -22,7 +22,7 @@ ms.locfileid: "48845706"
   
 -   訊息編碼繫結項目，對於傳送至端點的訊息來說，這些項目決定了要使用的 Wire 編碼，例如，文字/XML、二進位，或是訊息傳輸最佳化機制 (MTOM)。  
   
- 本主題提供所有的系統提供的 Windows Communication Foundation (WCF) 繫結。 如果這些項目都不能完全符合應用程式的需求，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別來建立繫結。 如需建立自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 本主題提供所有的系統提供的 Windows Communication Foundation (WCF) 繫結。 如果這些項目都不能完全符合應用程式的需求，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別來建立繫結程序。 如需建立自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 > [!IMPORTANT]
 >  請選取啟用了安全性的繫結。 根據預設，除了 <xref:System.ServiceModel.BasicHttpBinding> 繫結之外，所有繫結都會啟用安全性。 如果您沒有選取安全繫結或是停用了安全性，請務必透過其他方式來保護您的網路交換，例如儲存在安全的資料中心或是另外放在隔離的網路上。  
@@ -40,7 +40,7 @@ ms.locfileid: "48845706"
 |<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|安全且互通的繫結，可針對 <xref:System.ServiceModel.WSHttpBinding.Security%2A>、<xref:System.ServiceModel.ReliableSession> 與 <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> 繫結項目提供正確的版本支援。|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|安全且互通的繫結，適用於雙工服務合約或透過 SOAP 媒介的通訊。|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|安全、互通，且可支援 WS-Federation 通訊協定的繫結，此繫結可讓聯合組織有效率地驗證並授權使用者。|  
-|<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|衍生自 <xref:System.ServiceModel.WS2007HttpBinding> 且支援聯合安全性的安全、可互通的繫結。|  
+|<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|衍生自 <xref:System.ServiceModel.WS2007HttpBinding> 且支援聯合安全性的安全、可互通的繫結。|  
 |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|安全且最佳化的繫結，適用於 WCF 應用程式之間的跨電腦通訊。|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|安全、可靠且最佳化的繫結，適用於 WCF 應用程式之間的電腦通訊。|  
 |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|佇列繫結，適用於 WCF 應用程式之間的跨電腦通訊。|  
@@ -71,13 +71,13 @@ ms.locfileid: "48845706"
 |功能|描述|  
 |-------------|-----------------|  
 |互通性類型|表示繫結一定可與其互通的通訊協定或技術。|  
-|安全性|指定保護通道的方式：<br /><br /> -None: SOAP 訊息不安全，而且用戶端未經驗證。<br />-傳輸： 已滿足傳輸層安全性需求。<br />訊息： 已滿足訊息層安全性需求。<br />混合： 此安全性模式亦稱為`TransportWithMessageCredentials`。 它負責處理訊息層級的認證，而完整性和機密性需求則交由傳輸層負責。<br />-兩者： 這兩個訊息層級與傳輸層級安全性會使用。 這項能力是 <xref:System.ServiceModel.NetMsmqBinding> 所獨有的。|  
+|安全性|指定保護通道的方式：<br /><br /> -None:SOAP 訊息不安全，而且用戶端未經驗證。<br />-傳輸：已滿足傳輸層安全性需求。<br />訊息：訊息層已滿足安全性需求。<br />混合：此安全性模式亦稱為`TransportWithMessageCredentials`。 它負責處理訊息層級的認證，而完整性和機密性需求則交由傳輸層負責。<br />-兩者：會使用這兩個訊息層級與傳輸層級安全性。 這項能力是 <xref:System.ServiceModel.NetMsmqBinding> 所獨有的。|  
 |工作階段|指定此繫結是否支援工作階段合約。|  
 |異動|指定是否已啟用異動。|  
 |雙工|指定是否支援雙工合約。 請注意，此功能需要繫結對工作階段的支援。|  
 |資料流|指定是否支援訊息資料流。|  
   
-## <a name="see-also"></a>另請參閱  
- [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [使用繫結設定服務與用戶端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)
+## <a name="see-also"></a>另請參閱
+- [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [使用繫結設定服務與用戶端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)

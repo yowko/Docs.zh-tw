@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: 0539f2144c85fe20a440f8b99425936025a186c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0aa75fe4812553ecbf00542da37f232aca32c1a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606617"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>系統提供的互通性繫結所支援的 Web 服務通訊協定
 Windows Communication Foundation (WCF) 是建置來與支援一組稱為 Web 服務規格的規格的 Web 服務交互操作。 若要簡化服務組態的互通性最佳做法，WCF 引進了三種互通系統提供繫結： <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>， <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>，和<xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>。 與組織互通性提升的 Structured Information Standards (OASIS) 標準，WCF 包含一個互通系統提供繫結： <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>。 中繼資料發行集，WCF 會包含兩個互通系統提供繫結： [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)並[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主題列出系統提供之繫結支援的規格。  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) 是建置來與支援一組稱為 Web 服
 |訊息|MTOM|[MTOM](https://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`、`wsHttpBinding` 和 `ws2007HttpBinding` 支援訊息傳輸最佳化機制 (MTOM)。 預設不使用。 若要使用 MTOM，請將 `messageEncoding` 屬性設為 `"Mtom"`。<br /><br /> 範例：<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
 |中繼資料|WSDL 1.1|[WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> WCF 會使用 Web 服務描述語言 (WSDL) 來描述服務。|  
 |中繼資料|WS-Policy|[WS-Policy](https://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> WCF 會使用 Ws-policy 規格與定義域特定的判斷提示，來描述服務需求和功能。|  
-|中繼資料|WS-Policy 1.5|[Ws-policy 1.5](https://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> WCF 會使用 Ws-policy 規格與定義域特定的判斷提示，來描述服務需求和功能。|  
+|中繼資料|WS-Policy 1.5|[WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> WCF 會使用 Ws-policy 規格與定義域特定的判斷提示，來描述服務需求和功能。|  
 |中繼資料|WS-PolicyAttachment|[WS-PolicyAttachment](https://go.microsoft.com/fwlink/?LinkId=95328)<br /><br /> WCF 實作 Ws-policyattachment 以附加原則運算式，在各種不同的範圍，在 Web 服務描述語言 (WSDL)。|  
 |中繼資料|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF 實作 Ws-metadataexchange 以擷取 XML 結構描述、 WSDL 和 Ws-policy。|  
   
@@ -48,8 +48,8 @@ Windows Communication Foundation (WCF) 是建置來與支援一組稱為 Web 服
 |分類|通訊協定|規格和用法|  
 |--------------|--------------|-----------------------------|  
 |訊息|SOAP 1.2|[入門](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [訊息傳遞架構](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附加 （包括 HTTP 繫結）](https://go.microsoft.com/fwlink/?LinkId=95329)|  
-|訊息|Ws-addressing 2005/08|[Web 服務定址 1.0-核心](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服務定址 1.0-SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`、`ws2007HttpBinding` 和 `wsDualHttpBinding` 會實作全球資訊網協會 (W3C) WS-Addressing 建議，以啟用非同步訊息、訊息相互關聯和傳輸中性的定址機制。<br /><br /> 雖然 WS-* 規格允許 WS-Addressing 標頭加密，但是 WCF 並不提供這項支援。|  
-|傳訊|WS-Addressing 1.0 - 中繼資料|[Ws-addressing 1.0 中繼資料](https://www.w3.org/2007/05/addressing/metadata)policyversion 設定為 1.2 （預設值），然後在 ServiceMetadata 行為中設定的原則版本已啟用此通訊協定的支援，wsdl 描述符合 Ws-addressing wsdl、 使用設定為 1.5 policyversion="1.0，wsdl 描述會遵守之 ws-addressing 的中繼資料。<br /><br /> 雖然 WS-* 規格允許 WS-Addressing 標頭加密，但是 WCF 並不提供這項支援。|  
+|訊息|WS-Addressing 2005/08|[Web 服務定址 1.0-核心](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服務定址 1.0-SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`、`ws2007HttpBinding` 和 `wsDualHttpBinding` 會實作全球資訊網協會 (W3C) WS-Addressing 建議，以啟用非同步訊息、訊息相互關聯和傳輸中性的定址機制。<br /><br /> 雖然 WS-* 規格允許 WS-Addressing 標頭加密，但是 WCF 並不提供這項支援。|  
+|訊息|WS-Addressing 1.0 - 中繼資料|[Ws-addressing 1.0 中繼資料](https://www.w3.org/2007/05/addressing/metadata)policyversion 設定為 1.2 （預設值），然後在 ServiceMetadata 行為中設定的原則版本已啟用此通訊協定的支援，wsdl 描述符合 Ws-addressing wsdl、 使用設定為 1.5 policyversion="1.0，wsdl 描述會遵守之 ws-addressing 的中繼資料。<br /><br /> 雖然 WS-* 規格允許 WS-Addressing 標頭加密，但是 WCF 並不提供這項支援。|  
 |安全性|WSS SOAP 訊息安全性 1.0|[WSS SOAP 訊息安全性 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> `securityMode` 屬性設為 "wsSecurityOverHttp" (預設值) 且使用 `wsSecurity` 子項目設定參數時使用。<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
 |安全性|WSS SOAP 訊息安全性 UsernameToken 設定檔 1.1|[WSS SOAP 訊息安全性 UsernameToken 設定檔 1.0](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> `wsSecurity` 項目的 `authenticationMode` 屬性設為 "Username" 時使用。<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
 |安全性|WSS SOAP 訊息安全性 X.509 憑證權杖設定檔 1.1|[WSS SOAP 訊息安全性 X.509 憑證權杖設定檔 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)<br /><br /> 用於在 `wsSecurity` 項目的 `authenticationMode` 屬性設為 "Username"、"Certificate" 或 "None" 時保護訊息。 此外，當 `wsSecurity` 項目的 `authenticationMode` 屬性設為 "Certificate" 時，請使用此規格進行用戶端驗證。<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Certificate"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
@@ -95,7 +95,7 @@ Windows Communication Foundation (WCF) 是建置來與支援一組稱為 Web 服
 |--------------|--------------|-----------------------------|  
 |Transport|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)|  
 |訊息|SOAP 1.2|[入門](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [訊息傳遞架構](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附加 （包括 HTTP 繫結）](https://go.microsoft.com/fwlink/?LinkId=95329)|  
-|訊息|Ws-addressing 2005/08|[Web 服務定址 1.0-核心](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服務定址 1.0-SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)|  
+|訊息|WS-Addressing 2005/08|[Web 服務定址 1.0-核心](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服務定址 1.0-SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)|  
 |中繼資料|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF 實作 Ws-metadataexchange 以擷取 XML 結構描述、 WSDL 和 Ws-policy。|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
@@ -105,13 +105,13 @@ Windows Communication Foundation (WCF) 是建置來與支援一組稱為 Web 服
 |--------------|--------------|-----------------------------|  
 |Transport|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> 已啟用傳輸安全性。|  
 |訊息|SOAP 1.2|[入門](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [訊息傳遞架構](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附加 （包括 HTTP 繫結）](https://go.microsoft.com/fwlink/?LinkId=95329)|  
-|訊息|Ws-addressing 2005/08|[Web 服務定址 1.0-核心](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服務定址 1.0-SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)|  
+|訊息|WS-Addressing 2005/08|[Web 服務定址 1.0-核心](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服務定址 1.0-SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)|  
 |中繼資料|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF 實作 Ws-metadataexchange 以擷取 XML 結構描述、 WSDL 和 Ws-policy。|  
   
-## <a name="see-also"></a>另請參閱  
- [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
- [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)  
- [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)  
- [\<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)  
- [\<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)
+## <a name="see-also"></a>另請參閱
+- [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)
+- [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+- [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)
+- [\<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)
+- [\<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)

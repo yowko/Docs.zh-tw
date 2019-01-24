@@ -1,5 +1,5 @@
 ---
-title: 如何： 讓使用者解決模稜兩可的時間
+title: HOW TO：讓使用者解決模稜兩可的時間
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91e80f44934092007f6f842f0694789d49321446
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ae6d16bda7a2cd6f2367129b737ec79d8193ebf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502711"
 ---
-# <a name="how-to-let-users-resolve-ambiguous-times"></a>如何： 讓使用者解決模稜兩可的時間
+# <a name="how-to-let-users-resolve-ambiguous-times"></a>HOW TO：讓使用者解決模稜兩可的時間
 
 不明確的時間是指對應到多個國際標準時間 (UTC) 的時間。 發生時機是往回調整時鐘時間，例如從時區的日光節約時間轉換到其標準時間期間。 處理不明確的時間時，您可以執行下列其中一項：
 
@@ -60,5 +60,5 @@ ms.locfileid: "43863547"
 
 ## <a name="see-also"></a>另請參閱
 
-* [日期、時間和時區](../../../docs/standard/datetime/index.md)
-* [操作說明：解決模稜兩可的時間](../../../docs/standard/datetime/resolve-ambiguous-times.md)
+- [日期、時間和時區](../../../docs/standard/datetime/index.md)
+- [如何：解決模稜兩可的時間](../../../docs/standard/datetime/resolve-ambiguous-times.md)

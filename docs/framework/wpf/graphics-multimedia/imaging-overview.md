@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 10cdf5b8cf475c95e086b447b36a569da2173fa9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa23595359bc210edfd1d55486158a71420699c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615068"
 ---
 # <a name="imaging-overview"></a>影像處理概觀
 本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可讓開發人員顯示、轉換及格式化影像。  
@@ -133,13 +133,13 @@ ms.locfileid: "44195669"
 #### <a name="stretching-images"></a>縮放影像  
  <xref:System.Windows.Controls.Image.Stretch%2A>屬性可讓您控制影像如何縮放以填滿容器。 <xref:System.Windows.Controls.Image.Stretch%2A>屬性可以接受下列值所定義<xref:System.Windows.Media.Stretch>列舉型別：  
   
--   <xref:System.Windows.Media.Stretch.None>： 映像不會自動縮放以填滿輸出區域。 如果影像大於輸出區域，會將影像繪製到輸出區域，並裁剪超過的部分。  
+-   <xref:System.Windows.Media.Stretch.None>：映像不會自動縮放以填滿輸出區域。 如果影像大於輸出區域，會將影像繪製到輸出區域，並裁剪超過的部分。  
   
--   <xref:System.Windows.Media.Stretch.Fill>： 影像會縮放以符合輸出區域。 因為影像的高度和寬度是分開縮放，所以可能不會維持影像的原始外觀比例。 也就是說，影像可能會變形以完全填滿輸出容器。  
+-   <xref:System.Windows.Media.Stretch.Fill>：影像會縮放以符合輸出區域。 因為影像的高度和寬度是分開縮放，所以可能不會維持影像的原始外觀比例。 也就是說，影像可能會變形以完全填滿輸出容器。  
   
--   <xref:System.Windows.Media.Stretch.Uniform>： 影像會縮放，以完全符合輸出區域。 會維持影像的外觀比例。  
+-   <xref:System.Windows.Media.Stretch.Uniform>：影像會縮放，以完全符合輸出區域。 會維持影像的外觀比例。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>： 影像會縮放，使它完全填滿輸出區域，同時維持影像的原始外觀比例。  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>：影像會縮放，使它完全填滿輸出區域，同時維持影像的原始外觀比例。  
   
  下列範例適用於每個可用<xref:System.Windows.Media.Stretch>列舉型別的<xref:System.Windows.Controls.Image>。  
   
@@ -189,10 +189,10 @@ ms.locfileid: "44195669"
 > [!NOTE]
 >  轉碼器必須經過數位簽署，系統才能辨識它。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Imaging.BitmapSource>  
- <xref:System.Windows.Media.Imaging.BitmapImage>  
- <xref:System.Windows.Controls.Image>  
- <xref:System.Windows.Media.Imaging.BitmapMetadata>  
- [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Win32 範例轉碼器 (英文)](https://go.microsoft.com/fwlink/?LinkID=160052)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Imaging.BitmapSource>
+- <xref:System.Windows.Media.Imaging.BitmapImage>
+- <xref:System.Windows.Controls.Image>
+- <xref:System.Windows.Media.Imaging.BitmapMetadata>
+- [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Win32 範例轉碼器 (英文)](https://go.microsoft.com/fwlink/?LinkID=160052)

@@ -2,12 +2,12 @@
 title: 在 SQL Server 中授與資料列層級權限
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 0ec68f013d08e3939d48a820b9fd52ce27a4f12d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28e552e005cdfa0b4c69ff95927b938fa3898193
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553762"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>在 SQL Server 中授與資料列層級權限
 在某些案例中，相較於單純地授與、撤銷或拒絕權限，您需要以更細微的層級來控制資料存取。 例如，醫院資料庫應用程式可能需要限制個別醫生只能存取與其病患相關的資訊。 類似的需求存在許多環境中，包括財務、法律、政府和軍事應用程式中。 為了協助解決這些案例，SQL Server 2016 提供 [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx) 功能，以一個安全性原則來簡化並集中管理資料列層級存取邏輯。 針對舊版 SQL Server，您可以使用檢視來制定資料列層級篩選，以達到類似的功能。  
@@ -59,11 +59,11 @@ ms.locfileid: "53127286"
   
 -   將預存程序的 EXECUTE 授與資料庫角色。 使用者只能透過提供的預存程序來存取資料。  
   
-## <a name="see-also"></a>另請參閱  
- [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx)  
- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [在 SQL Server 中使用預存程序來管理權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [在 SQL Server 中撰寫安全的動態 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx)
+- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [在 SQL Server 中使用預存程序來管理權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [在 SQL Server 中撰寫安全的動態 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

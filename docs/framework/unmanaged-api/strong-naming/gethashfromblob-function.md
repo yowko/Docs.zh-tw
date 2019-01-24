@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 427d93a9aff527d36720c4199782fa104a66f8d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6bfa846aa66345e23e085ca148c7e3f492c529f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576339"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob 函式
-取得該組件的雜湊指定的記憶體位址，使用指定的雜湊演算法。  
+使用指定的雜湊演算法取得位於指定記憶體位址之組件的雜湊。  
   
  此函式已被取代。 使用[ICLRStronName::GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)方法改為。  
   
@@ -49,26 +49,26 @@ HRESULT GetHashFromBlob (
  [in]記憶體區塊的長度，以位元組為單位。  
   
  `piHashAlg`  
- [in、 out]常數，指定的雜湊演算法。 使用預設演算法為零。  
+ [in、 out]常數，指定的雜湊演算法。 使用零的預設演算法。  
   
  `pbHash`  
- [out]傳回雜湊緩衝區。  
+ [out]傳回的雜湊緩衝區。  
   
  `cchHash`  
- [in]要求的大小上限的`pbHash`。  
+ [in]要求的最大大小的`pbHash`。  
   
  `pchHash`  
  [out]大小，以位元組為單位傳回`pbHash`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** StrongName.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [GetHashFromBlob 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)  
- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>另請參閱
+- [GetHashFromBlob 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)
+- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

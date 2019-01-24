@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 4a98ada39a04730b46f40fe139e72d1855d9b067
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 329b4f68874d29d141001800ed326a454a878ab8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502894"
 ---
-# <a name="inherits-statement"></a>Inherits 陳述式
+# <a name="inherits-statement"></a>Inherits Statement
 會導致目前的類別或介面從另一個類別或介面集合繼承屬性、 變數、 屬性、 程序和事件。  
   
 ## <a name="syntax"></a>語法  
@@ -63,9 +63,9 @@ Inherits basetypenames
   
  名為介面`thisInterface`現在包含中的所有定義<xref:System.IComparable>， <xref:System.IDisposable>，和<xref:System.IFormattable>介面繼承的成員分別提供針對特定類型的比較的兩個物件，釋放配置的資源表示為物件的值和`String`。 類別若實作`thisInterface`必須實作每個基底介面的每個成員。  
   
-## <a name="see-also"></a>另請參閱  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
- [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>另請參閱
+- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
+- [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

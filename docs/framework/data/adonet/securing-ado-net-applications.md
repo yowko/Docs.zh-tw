@@ -2,12 +2,12 @@
 title: 設定 ADO.NET 應用程式的安全性
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: e5b99621989e9f14c6c734a497f210780f3c7e57
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 935d963ed19175518191006c2cc367f88d69e2aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585363"
 ---
 # <a name="securing-adonet-applications"></a>設定 ADO.NET 應用程式的安全性
 撰寫安全的 ADO.NET 應用程式並不只是為了避免常見的編碼錯誤，例如未驗證使用者輸入。 用於存取資料的應用程式有許多潛在的錯誤，攻擊者可以利用這些錯誤來擷取、管理或毀損機密資料。 因此，了解安全性的所有面向就相當重要，從應用程式設計階段期間的威脅模組處理，到最終的部署以及進行中的作業，都包括在內。  
@@ -51,6 +51,6 @@ ms.locfileid: "43526965"
  [安全性參考書目](/visualstudio/ide/security-bibliography)  
  提供可線上使用及列印版本的外部資源連結。  
   
-## <a name="see-also"></a>另請參閱  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

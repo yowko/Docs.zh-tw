@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: a8c71551adc2b88b5300994134eaec329a083709
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f237831befab627ec603a9000a7cef6184e0ae65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546105"
 ---
 # <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt;項目 （網路設定）
 描述 FTP 快取是否作用中，並且描述的預設快取原則。  
   
  \<configuration>  
 \<system.net>  
-\<Requestcaching> >  
-\<defaultFtpCachePolicy >  
+\<requestCaching>  
+\<defaultFtpCachePolicy>  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +38,7 @@ ms.locfileid: "50188283"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`policyLevel`|指定 FTP 快取原則。 預設值是 `Default`。|  
+|`policyLevel`|指定 FTP 快取原則。 預設值為 `Default`。|  
   
 ## <a name="policylevel-attribute"></a>Securityclasses 屬性  
   
@@ -60,7 +60,7 @@ ms.locfileid: "50188283"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[Requestcaching>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
+|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -79,8 +79,8 @@ ms.locfileid: "50188283"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.Net.Cache>  
-- <xref:System.Net.WebRequest>  
-- <xref:System.Net.Cache.RequestCacheLevel>  
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.Cache>
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.Cache.RequestCacheLevel>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

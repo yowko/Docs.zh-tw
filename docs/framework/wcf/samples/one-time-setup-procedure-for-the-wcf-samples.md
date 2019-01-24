@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 範例的單次安裝程序
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 5db72a6e5970a2c10e0dd1fb62339efd9b69138c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 35eeab5daec6f63f4d3bed85442ffe6ca28dc38b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583389"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 範例的單次安裝程序
 大部分的 Windows Communication Foundation (WCF) 範例是裝載在網際網路資訊服務 (IIS)，然後執行常見的虛擬目錄中。 這個單次安裝程序會建立磁碟; 上的資料夾它也將虛擬目錄加入至名為 IIS **ServiceModelSamples**。
@@ -40,11 +40,11 @@ ms.locfileid: "48840102"
   
 5.  請遵循[防火牆指示](../../../../docs/framework/wcf/samples/firewall-instructions.md)啟用範例所使用的連接埠。  
   
-6.  請檢查下列預設目錄： \<InstallDrive >:**\WF_WCF_Samples**。 如果先前安裝了範例，這就是預設目錄。  
+6.  請檢查下列預設目錄：\<InstallDrive >:**\WF_WCF_Samples**。 如果先前安裝了範例，這就是預設目錄。  
   
 7.  如果未安裝範例，從安裝的範例下載位置[Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939)或是[Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373)。  
   
-8.  安裝之後的範例，請移至： \<InstallDrive >:**\WF_WCF_Samples\WCF\Setup\\**  
+8.  在安裝後的範例，請移至：\<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
   
 9. 執行**Setupvroot.bat**批次檔。 系統會執行下列步驟：  
   
