@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 0bb89ac855d65d7677a062346db8665698dbb805
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1802785e38b58ce2c057d6ddbe1e54e73e079761
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514338"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660719"
 ---
 # <a name="recursive-procedures-visual-basic"></a>遞迴程序 (Visual Basic)
 A*遞迴*程序會呼叫其本身。 一般情況下，這不是撰寫 Visual Basic 程式碼的最有效方式。  
@@ -37,15 +37,15 @@ A*遞迴*程序會呼叫其本身。 一般情況下，這不是撰寫 Visual Ba
   
  **測試**。 如果您撰寫遞迴程序，您應該測試它非常小心地以確定它一律符合某些限制狀況。 您也應該確定您無法執行太多遞迴呼叫，因為記憶體不足。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.StackOverflowException>  
- [程序](./index.md)  
- [Sub 程序](./sub-procedures.md)  
- [函式程序](./function-procedures.md)  
- [屬性程序](./property-procedures.md)  
- [運算子程序](./operator-procedures.md)  
- [程序參數和引數](./procedure-parameters-and-arguments.md)  
- [程序多載化](./procedure-overloading.md)  
- [程序的疑難排解](./troubleshooting-procedures.md)  
- [迴圈結構](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [疑難排解例外狀況：System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)
+## <a name="see-also"></a>另請參閱
+- <xref:System.StackOverflowException>
+- [程序](./index.md)
+- [Sub 程序](./sub-procedures.md)
+- [函式程序](./function-procedures.md)
+- [屬性程序](./property-procedures.md)
+- [運算子程序](./operator-procedures.md)
+- [程序參數和引數](./procedure-parameters-and-arguments.md)
+- [程序多載化](./procedure-overloading.md)
+- [程序的疑難排解](./troubleshooting-procedures.md)
+- [迴圈結構](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [疑難排解例外狀況：System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

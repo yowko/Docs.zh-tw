@@ -1,5 +1,5 @@
 ---
-title: 如何：將應用程式當地語系化
+title: HOW TO：將應用程式當地語系化
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 1190fb739e7c1873532e96b50399ac0deb6bb51c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1761fbf1cb8ec337ea5733e3ab693031b1934179
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846275"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725532"
 ---
-# <a name="how-to-localize-an-application"></a>如何：將應用程式當地語系化
+# <a name="how-to-localize-an-application"></a>HOW TO：將應用程式當地語系化
 本教學課程說明如何使用 LocBaml 工具來建立當地語系化的應用程式。  
   
 > [!NOTE]
@@ -46,11 +46,11 @@ ms.locfileid: "48846275"
   
 3.  將 UID 加入您的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案。 UID 可用來追蹤對檔案的變更，以及識別必須轉譯的項目。 若要將 Uid 新增至您的檔案中，執行**updateuid**專案檔：  
   
-     **msbuild-t: updateuid helloapp.csproj**  
+     **msbuild -t:updateuid helloapp.csproj**  
   
      若要確認您有沒有遺漏或重複的 Uid，請執行**checkuid**:  
   
-     **msbuild-t: checkuid helloapp.csproj**  
+     **msbuild -t:checkuid helloapp.csproj**  
   
      執行後**updateuid**，您的檔案應該會包含 Uid。 例如，在 HelloApp 的 Pane1.xaml 檔案中，您應該會發現下列項目：  
   
@@ -91,21 +91,21 @@ ms.locfileid: "48846275"
   
 4.  當您執行 LocBaml 時，可指定的選項如下：  
   
-    -   **剖析**或是 **-p**剖析 Baml、 資源或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]檔案，以產生.csv 或.txt 檔案。  
+    -   **剖析**或 **-p:** 剖析 Baml、 資源或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]檔案，以產生.csv 或.txt 檔案。  
   
-    -   **產生**或是 **-g:** 當地語系化的二進位檔案使用產生的已翻譯的檔案。  
+    -   **產生**或 **-g:** 使用轉譯的檔案，以產生當地語系化的二進位檔案。  
   
     -   **out**或是 **-o** {*filedirectory*] **:** 輸出檔名稱。  
   
     -   **文化特性**或是 **-cul** {*文化特性*] **:** 輸出組件的地區設定。  
   
-    -   **翻譯**或是 **-trans** {*translation.csv*] **:** 轉譯或當地語系化的檔案。  
+    -   **translation** or **-trans** {*translation.csv*] **:** 轉譯或當地語系化的檔案。  
   
     -   **asmpath**或是 **-asmpath:** {*filedirectory*] **:** 如果您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]程式碼包含自訂控制項，您必須提供**asmpath**自訂控制項組件。  
   
-    -   **nologo：** 顯示無標誌或著作權資訊。  
+    -   **nologo:** 會顯示無標誌或著作權資訊。  
   
-    -   **verbose：** 顯示詳細模式資訊。  
+    -   **詳細資訊：** 顯示詳細模式資訊。  
   
     > [!NOTE]
     >  如果您執行此工具時，您需要的選項清單，輸入**LocBaml.exe**按 ENTER 鍵。  
@@ -209,6 +209,6 @@ ms.locfileid: "48846275"
 ## <a name="whats-next"></a>後續步驟  
  您現在對於如何使用 LocBaml 工具，應該有基本的了解。  您應該能夠建立包含 UID 的檔案。 藉由使用 LocBaml 工具，您應該能夠剖析檔案來擷取可當地語系化的內容，而在內容轉譯之後，您應該能夠產生將轉譯內容合併的 .resources.dll 檔案。 本主題可能無法顧及所有細節，但是您現在已經有了使用 LocBaml 將應用程式當地語系化所需的知識。  
   
-## <a name="see-also"></a>另請參閱  
- [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [使用自動配置概觀](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+## <a name="see-also"></a>另請參閱
+- [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [使用自動配置概觀](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)

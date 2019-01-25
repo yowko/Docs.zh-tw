@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac4a8a0c13ba6aa0d5c65ec7fa1aa3b771c964eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b7f20dec86a85be85472037f58a2bd2002d9be1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620383"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags 列舉
 指定會引發 Managed 偵錯助理 (MDA) 的執行緒狀態。  
@@ -38,19 +38,19 @@ typedef enum CorDebugMDAFlags {
   
 |成員|描述|  
 |------------|-----------------|  
-|`MDA_FLAG_SLIP`|因為 MDA 所引發的進度落後 MDA 已引發所在的執行緒。|  
+|`MDA_FLAG_SLIP`|因為 MDA 引發的進度落後的執行緒引發之 MDA。|  
   
 ## <a name="remarks"></a>備註  
- 呼叫堆疊不會再描述原本引發 MDA，當執行緒被視為具有*順延*。 這是作業的不尋常的情況下，是作業的無效結束時執行的執行緒。  
+ 呼叫堆疊不會再描述最初發生 MDA，當執行緒被視為具有*順延*。 這是作業的不尋常的情況下，帶來了無效，在結束時的執行緒執行。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：在使用者控制項上啟用拖放功能
+title: 逐步解說：啟用拖曳並放在使用者控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 7ca4987da8422c00e3fc34ff4605ddd13e4091b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ffaab4115edec1fc0115b27b8904970854f79d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600670"
 ---
-# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>逐步解說：在使用者控制項上啟用拖放功能
+# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>逐步解說：啟用拖曳並放在使用者控制項
 
 本逐步解說示範如何建立自訂使用者控制項以參與 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的拖放資料傳輸。
 
@@ -33,12 +33,12 @@ ms.locfileid: "47193706"
 
 ## <a name="prerequisites"></a>必要條件
 
-您需要完成這個逐步解說 Visual Studio。
+若要完成這個逐步解說，您必須具有 Visual Studio。
 
 ## <a name="create-the-application-project"></a>建立應用程式專案
  在本節中，您將建立應用程式基礎結構，其中包含具有兩個面板的主頁面和<xref:System.Windows.Controls.TextBox>。
 
-1.  在 Visual Basic 或 Visual C# 中，建立名為 `DragDropExample` 的新 WPF 應用程式專案。 如需詳細資訊，請參閱[如何：建立新的 WPF 應用程式專案](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。
+1.  在 Visual Basic 或 Visual C# 中，建立名為 `DragDropExample` 的新 WPF 應用程式專案。 如需詳細資訊，請參閱[＜How to：建立新的 WPF 應用程式專案](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。
 
 2.  開啟 MainWindow.xaml。
 

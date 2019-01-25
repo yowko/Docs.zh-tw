@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8ae7149e1f104863825fdea128729dcc80847c19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679928"
 ---
 # <a name="handling-and-raising-events"></a>處理和引發事件
-.NET Framework 中的事件是以委派模型為基礎。 遵循觀察者設計模式的委派模型，它可讓訂閱者向提供者註冊，並且接收通知。 事件發送者會推播事件已發生的通知，而事件接收器會收到該通告並定義對它的回應。 此文章將描述委派模型的主要元件、如何在應用程式中使用事件，以及如何在程式碼中實作事件。  
+.NET Framework 中的事件是以委派模型為基礎。 遵循觀察者設計模式的委派模型，它可讓訂閱者向提供者註冊，並且接收通知。 事件發送者會推播事件已發生的通知，而事件接收器會收到該通告並定義對它的回應。 本文將描述委派模型的主要元件、如何在應用程式中使用事件，以及如何在程式碼中實作事件。  
   
  如需處理 Windows 8.x Microsoft Store 應用程式中事件的詳細資訊，請參閱[事件和路由事件概觀](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10))。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "53127923"
   
  委派在 .NET Framework 中有多種用途。 在事件中，委派是事件來源和處理事件的程式碼之間的媒介 (或類似指標的機制)。 將委派類型加入事件宣告中就可以讓委派與事件產生關聯，如上一節的範例所示。 如需委派的詳細資訊，請參閱 <xref:System.Delegate> 類別。  
   
- .NET Framework 提供了 <xref:System.EventHandler> 和 <xref:System.EventHandler%601> 委派來支援大多數事件案例。 請針對所有沒有事件資料的事件使用 <xref:System.EventHandler> 委派。 請針對有事件相關資料的事件使用 <xref:System.EventHandler%601> 委派。 這些委派沒有傳回類型值，而且會採用兩個參數 (事件來源的物件和事件資料的物件)。  
+ .NET Framework 提供了 <xref:System.EventHandler> 和 <xref:System.EventHandler%601> 委派來支援大多數事件案例。 請針對所有沒有事件資料的事件使用 <xref:System.EventHandler> 委派。 請針對有事件相關資料的事件使用 <xref:System.EventHandler%601> 委派。 這些委派沒有傳回型別值，而且會採用兩個參數 (事件來源的物件和事件資料的物件)。  
   
  委派為多點傳送，這表示它們可以存有對一個以上事件處理方法的參考。 如需詳細資訊，請參閱 <xref:System.Delegate> 參考頁面。 委派可讓事件處理更彈性並進行精細的控制。 委派會維護事件的已註冊事件處理常式清單，進而做為引發事件之類別的事件分派者。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "53127923"
 ## <a name="raising-multiple-events"></a>引發多個事件  
  如果您的類別會引發多個事件，編譯器將會為每個事件委派執行個體產生一個欄位。 如果事件數目很大，則可能無法接受每個委派一個欄位的儲存成本。 對於這些情況，.NET Framework 提供了事件屬性，可以搭配您選擇的另一種資料結構來儲存事件委派。  
   
- 事件屬性是由事件存取子伴隨的事件宣告所組成。 事件存取子是您定義用來將事件委派執行個體加入儲存區資料結構或從其中移除的方法。 請注意，事件屬性會比事件欄位來得慢些，因為每個事件委派都必須先擷取，然後才能夠叫用。 記憶體和速度之間會有所折衷。 如果您的類別定義許多不常引發的事件，您會想要實作事件屬性。 如需詳細資訊，請參閱[如何：使用事件屬性處理多個事件](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)。  
+ 事件屬性是由事件存取子伴隨的事件宣告所組成。 事件存取子是您定義用來將事件委派執行個體加入儲存區資料結構或從其中移除的方法。 請注意，事件屬性會比事件欄位來得慢些，因為每個事件委派都必須先擷取，然後才能夠叫用。 記憶體和速度之間會有所折衷。 如果您的類別定義許多不常引發的事件，您會想要實作事件屬性。 如需詳細資訊，請參閱[＜How to：使用事件屬性處理多個事件](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)。  
   
 ## <a name="related-topics"></a>相關主題  
   
@@ -85,14 +85,14 @@ ms.locfileid: "53127923"
 |[如何：引發和使用事件](../../../docs/standard/events/how-to-raise-and-consume-events.md)|包含引發和使用事件的範例。|  
 |[如何：使用事件屬性處理多個事件](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|示範如何使用事件屬性處理多個事件。|  
 |[觀察者設計模式](../../../docs/standard/events/observer-design-pattern.md)|描述設計模式，可讓訂閱者向提供者註冊，並且接收通知。|  
-|[如何：使用 Web Form 應用程式中的事件](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|示範如何處理 Web Form 控制項所引發的事件。|  
+|[如何：使用 Web Forms 應用程式中的事件](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|示範如何處理 Web Forms 控制項所引發的事件。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.EventHandler>  
-- <xref:System.EventHandler%601>  
-- <xref:System.EventArgs>  
-- <xref:System.Delegate>  
-- [事件和路由事件概觀 (UWP 應用程式)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
-- [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- <xref:System.EventHandler>
+- <xref:System.EventHandler%601>
+- <xref:System.EventArgs>
+- <xref:System.Delegate>
+- [事件和路由事件概觀 (UWP 應用程式)](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
 - [事件 (C# 程式設計手冊)](../../csharp/programming-guide/events/index.md)

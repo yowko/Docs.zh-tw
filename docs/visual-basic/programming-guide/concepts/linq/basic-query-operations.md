@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: bcaefce4621fbfe3b3ac1a65ca634136fd9870e4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d066b282604a53e2cf973ce0425af729fba6a118
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461020"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585613"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查詢作業 (Visual Basic)
 本主題提供簡介[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]運算式在 Visual Basic 中，以及一些典型的一種您在查詢中執行的作業。 如需詳細資訊，請參閱下列主題：  
@@ -29,7 +29,7 @@ ms.locfileid: "43461020"
   
  [查詢](../../../../visual-basic/language-reference/queries/index.md)  
   
- [逐步解說： 在 Visual Basic 中撰寫查詢](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
+ [逐步解說：在 Visual Basic 中撰寫查詢](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>指定資料來源 （來源）  
  在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢中，第一個步驟是指定您想要查詢的資料來源。 因此，`From`在查詢中的子句一律會先出現。 查詢運算子來選取和塑造結果取決於來源的類型。  
@@ -103,7 +103,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  [!code-vb[VbLINQBasicOps#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_9.vb)]  
   
 > [!NOTE]
->  您可以執行此程式碼中建立學生的清單[如何： 建立項目的清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。  
+>  您可以執行此程式碼中建立的學生清單[How to:建立項目清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。  
   
  `Join`關鍵字相當於`INNER JOIN`SQL 中。 它結合了兩個集合中的項目之間的比對索引鍵值為基礎的兩個集合。 查詢會傳回所有或部分具有相符索引鍵值的集合項目。 例如，下列程式碼重複先前的隱含聯結的動作。  
   
@@ -116,9 +116,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_11.vb)]  
   
- 如果您執行此程式碼使用的中建立的學生清單[如何： 建立項目的清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)，從輸出`For Each`陳述式：  
+ 如果您執行此程式碼使用的中建立的學生清單[How to:建立清單的項目](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)，從輸出`For Each`陳述式：  
   
- 年份： Junior  
+ 年份：Junior  
   
  Tucker Michael  
   
@@ -128,9 +128,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Tucker Lance  
   
- 年份： 資深  
+ 年份：資深  
   
- Omelchenko Svetlana  
+ Omelchenko, Svetlana  
   
  Osada Michiko  
   
@@ -140,9 +140,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Adams Terry  
   
- 年份： 包括新生諮詢人員  
+ 年份：包括新生諮詢人員  
   
- Mortensen Sven  
+ Mortensen, Sven  
   
  牙哥加西亞島 Cesar  
   
@@ -152,9 +152,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  如需詳細資訊`Group By`，請參閱 <<c2> [ 群組的子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [使用 Visual Basic 撰寫 LINQ 入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [查詢](../../../../visual-basic/language-reference/queries/index.md)  
- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [使用 Visual Basic 撰寫 LINQ 入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [查詢](../../../../visual-basic/language-reference/queries/index.md)
+- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

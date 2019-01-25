@@ -2,12 +2,12 @@
 title: 建立 BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 5b7fd3e88fa12a66e086906de6f0d7d6a7d1aa17
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 8c4f3b4b3f9a3e4694ece814de691c07ef88ec5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684875"
 ---
 # <a name="creating-a-bindingelement"></a>建立 BindingElement
 繫結和繫結項目 (延伸的物件<xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>和<xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>分別) 是與通道處理站和通道接聽程式相關聯的 Windows Communication Foundation (WCF) 應用程式模型所在的位置。 如果沒有繫結，使用自訂通道需要在通道層級進行程式設計中所述[服務通道層級程式設計](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)並[用戶端通道層級程式設計](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)。 本主題討論的最低需求，以便使用您的通道，在 WCF 中，開發<xref:System.ServiceModel.Channels.BindingElement>針對您的通道，並啟用使用，從應用程式的步驟 4 中所述[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "49454456"
   
  <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> 擁有可建立 `ChunkingChannelListener` 並傳遞至內部通道接聽程式的相似實作。  
   
- 使用傳輸通道，另一個例子[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例提供下列覆寫。  
+ 另一個範例是使用傳輸通道，[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例提供下列覆寫。  
   
  在此範例中，繫結項目為 `UdpTransportBindingElement`，其衍生自 <xref:System.ServiceModel.Channels.TransportBindingElement>。 它會覆寫下列方法來建置與通道關聯的處理站。  
   
@@ -71,7 +71,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  一旦您已經建立您的通道繫結項目，返回[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)主題，以查看是否要將組態檔支援新增至您的繫結項目，如果，以及如何加入中繼資料發行集支援，以及是否以及如何使用您的繫結項目來建構使用者定義的繫結。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.BindingElement>  
- [開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)  
- [傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.BindingElement>
+- [開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)
+- [傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

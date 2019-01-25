@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a3d7d3bb05a878f4d9832cf39a8e8863929c4e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bba34b7f0956e602de690b8aa30d955acc526e8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529485"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes 方法
-擷取組件層級自訂的屬性。  
+擷取組件層級自訂屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +44,7 @@ HRESULT EnumCustomAttributes(
  列舉值的控制代碼。  
   
  `tkType`  
- 要列舉的屬性類型。 使用`mdTokenNill`所有屬性。  
+ 要列舉的屬性型別。 使用`mdTokenNill`的所有屬性。  
   
  `rCustomValues`  
  接收權杖的自訂屬性。  
@@ -53,15 +53,15 @@ HRESULT EnumCustomAttributes(
  指定的大小`rCustomValues`陣列。  
   
  `pcCustomValues`  
- （選擇性） 接收語彙基元值的計數。  
+ 選擇性地接收的權杖值的計數。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則傳回 S_OK。  
+ 如果方法成功，則會傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
  需要 alink.h  
   
-## <a name="see-also"></a>另請參閱  
- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>另請參閱
+- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

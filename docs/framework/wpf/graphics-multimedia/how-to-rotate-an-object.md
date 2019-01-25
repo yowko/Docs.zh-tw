@@ -1,5 +1,5 @@
 ---
-title: 操作說明：旋轉物件
+title: HOW TO：旋轉物件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: b5a954158388e8b85589042e9d1f3b82c1747e30
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b44ce71f91962806704eb05a9cbec53638856b3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525426"
 ---
-# <a name="how-to-rotate-an-object"></a>操作說明：旋轉物件
+# <a name="how-to-rotate-an-object"></a>HOW TO：旋轉物件
 此範例會顯示如何旋轉物件。 此範例會先建立<xref:System.Windows.Media.RotateTransform>，然後指定其<xref:System.Windows.Media.RotateTransform.Angle%2A>以度為單位。  
   
  下列範例會旋轉<xref:System.Windows.Shapes.Polyline>物件繞其左上角的 45 度。  
@@ -44,7 +44,7 @@ ms.locfileid: "45591499"
   
  如需完整範例，請參閱 [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Transform>  
- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Transform>
+- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

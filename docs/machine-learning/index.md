@@ -1,14 +1,14 @@
 ---
 title: ML.NET 內容指南
 description: 了解如何建置量身打造的 AI 解決方案，並使用 ML.NET 將其整合到您的 .NET 應用程式中。
-ms.date: 11/06/2018
+ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550457"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET 內容指南
 
@@ -28,6 +28,8 @@ ms.locfileid: "53126246"
 ## <a name="tutorials"></a>教學課程
 
 [使用二進位分類模型分析人氣](tutorials/sentiment-analysis.md)說明如何建置應用程式以判斷人氣是正面或負面。
+
+[使用多元分類模型對 GitHub 問題進行分類](tutorials/github-issue-classification.md)可讓您了解如何建置能判斷 GitHub 問題之 Area 標籤的應用程式。
 
 [使用迴歸模型預測計程車費用](tutorials/taxi-fare.md)說明如何建置預測用應用程式以使用來自歷史資料的許多因素來判斷答案。
 

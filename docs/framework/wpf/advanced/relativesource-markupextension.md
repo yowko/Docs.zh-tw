@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 6ede7bc8a6c2a45630c48417c7ab90eb8decdc39
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 43201be232a037b14d783ae61546ef0030f486ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559381"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource 標記延伸
 指定的屬性<xref:System.Windows.Data.RelativeSource>繫結來源，使用於[繫結標記延伸](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)，或設定時<xref:System.Windows.Data.Binding.RelativeSource%2A>屬性<xref:System.Windows.Data.Binding>在 XAML 中建立的項目。  
@@ -105,11 +105,11 @@ ms.locfileid: "54029433"
   
  `RelativeSource` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 在 XAML 使用的所有標記延伸`{`和`}`字元在其屬性語法中，這是用 XAML 處理器會辨識為標記延伸必須處理這個屬性的慣例。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Data.Binding>  
- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [繫結宣告概觀](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [x:Type 標記延伸模組](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Data.Binding>
+- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [繫結宣告概觀](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
+- [x:Type 標記延伸模組](../../../../docs/framework/xaml-services/x-type-markup-extension.md)

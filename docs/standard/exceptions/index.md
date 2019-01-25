@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 648a4d9e2f9be2cd8a5912ebfe272331a70ee76e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707878"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中處理和擲回例外狀況
 
@@ -48,7 +48,7 @@ ms.locfileid: "48845589"
 
 下表列出一些常見的例外狀況，並提供可能造成這些例外狀況的原因範例。
 
-| 例外狀況類型 | 描述 | 範例 |
+| 例外狀況類型 | 說明 | 範例 |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | 適用於所有例外狀況的基底類別。 | 無 (使用這個例外狀況的衍生類別)。 |
 | <xref:System.IndexOutOfRangeException> | 只有當陣列索引不正確時，才由執行階段擲回。 | 在陣列有效範圍之外對它進行索引： <br /> `arr[arr.Length+1]` |
@@ -60,13 +60,13 @@ ms.locfileid: "48845589"
 
 ## <a name="see-also"></a>另請參閱
 
-- [例外狀況類別和屬性](exception-class-and-properties.md)  
-- [操作說明：使用 Try/Catch 區塊攔截例外狀況](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
-- [操作說明：使用 Catch 區塊中的特定例外狀況](how-to-use-specific-exceptions-in-a-catch-block.md)  
-- [操作說明：明確擲回例外狀況](how-to-explicitly-throw-exceptions.md)  
-- [操作說明：建立使用者定義的例外狀況](how-to-create-user-defined-exceptions.md)  
-- [使用使用者篩選的例外狀況處理常式](using-user-filtered-exception-handlers.md)  
-- [操作說明：使用 Finally 區塊](how-to-use-finally-blocks.md)  
-- [處理 COM Interop 例外狀況](handling-com-interop-exceptions.md)  
-- [例外狀況的最佳做法](best-practices-for-exceptions.md)  
+- [例外狀況類別和屬性](exception-class-and-properties.md)
+- [如何：使用 Try/Catch 區塊攔截例外狀況](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+- [如何：使用 Catch 區塊中的特定例外狀況](how-to-use-specific-exceptions-in-a-catch-block.md)
+- [如何：明確擲回例外狀況](how-to-explicitly-throw-exceptions.md)
+- [如何：建立使用者定義的例外狀況](how-to-create-user-defined-exceptions.md)
+- [使用使用者篩選的例外狀況處理常式](using-user-filtered-exception-handlers.md)
+- [如何：使用 Finally 區塊](how-to-use-finally-blocks.md)
+- [處理 COM Interop 例外狀況](handling-com-interop-exceptions.md)
+- [例外狀況的最佳做法](best-practices-for-exceptions.md)
 - [每個開發人員針對執行階段中例外狀況所需知道的概念](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) \(英文\)。

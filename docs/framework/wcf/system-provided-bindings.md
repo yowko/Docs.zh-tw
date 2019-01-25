@@ -5,12 +5,12 @@ ms.date: 06/05/2018
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-ms.openlocfilehash: 6730238a73b41faa4409fdfc75af1de36f31d13e
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 3c6c6b628d208aede8c547dcfa66fc189a26ae01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569596"
 ---
 # <a name="system-provided-bindings"></a>系統提供的繫結
 
@@ -57,39 +57,39 @@ ms.locfileid: "34805642"
 
 |繫結|互通性|安全性 (預設值)|工作階段<br />(預設值)|異動|雙工|編碼 (預設值)|資料流<br />(預設值)|
 |-------------|----------------------|--------------------------|-----------------------------|------------------|------------|--------------------------|-------------------------------|
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(無)、傳輸、訊息、混合|(無)|(無)|N/A|文字、(MTOM)|[是]<br />(緩衝)|
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(無)、傳輸、訊息、混合|(無)|(無)|N/A|文字、(MTOM)|是<br />(緩衝)|
 |<xref:System.ServiceModel.WSHttpBinding>|WS|傳輸、(訊息)、混合|(無)、可靠工作階段、安全性工作階段|(無)、是|N/A|(文字)、MTOM|否|
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|(訊息)、無|(可靠工作階段)、安全性工作階段|(無)、是|[是]|(文字)、MTOM|否|
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|(訊息)、無|(可靠工作階段)、安全性工作階段|(無)、是|是|(文字)、MTOM|否|
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(訊息)、混合、無|(無)、可靠工作階段、安全性工作階段|(無)、是|否|(文字)、MTOM|否|
 |<xref:System.ServiceModel.NetHttpBinding>|.NET|(無)、傳輸、訊息、TransportWithMessageCredential、TransportCredentialOnly|請參閱下列注意事項|無|請參閱下列注意事項|(二進位)、文字、MTOM|是 (緩衝)|
-|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(傳輸)、TransportWithMessageCredential|請參閱下列注意事項|無|請參閱下列注意事項|(二進位)、文字、MTOM|[是]<br />(緩衝)|
-|<xref:System.ServiceModel.NetTcpBinding>|.NET|(傳輸)、訊息、無、混合|(傳輸)、可靠工作階段、安全性工作階段|(無)、是|[是]|二元|[是]<br />(緩衝)|
-|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(傳輸)、無|無、(傳輸)|(無)、是|[是]|二元|[是]<br />(緩衝)|
+|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(傳輸)、TransportWithMessageCredential|請參閱下列注意事項|無|請參閱下列注意事項|(二進位)、文字、MTOM|是<br />(緩衝)|
+|<xref:System.ServiceModel.NetTcpBinding>|.NET|(傳輸)、訊息、無、混合|(傳輸)、可靠工作階段、安全性工作階段|(無)、是|是|二元|是<br />(緩衝)|
+|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(傳輸)、無|無、(傳輸)|(無)、是|是|二元|是<br />(緩衝)|
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|訊息、(傳輸)、無|(無)、傳輸|無、(是)|否|二元|否|
-|<xref:System.ServiceModel.NetPeerTcpBinding>|對等|(傳輸)|(無)|(無)|[是]||否|
+|<xref:System.ServiceModel.NetPeerTcpBinding>|對等|(傳輸)|(無)|(無)|是||否|
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(傳輸)|(無)|無、(是)|N/A|N/A|否|
-|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(無)、傳輸、訊息、混合|(無)|(無)|N/A|文字、(MTOM)|[是]<br />(緩衝)|
-|<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(傳輸)、訊息、無、混合|(傳輸)、可靠工作階段、安全性工作階段|(無)、是|[是]|二元|[是]<br />(緩衝)|
+|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(無)、傳輸、訊息、混合|(無)|(無)|N/A|文字、(MTOM)|是<br />(緩衝)|
+|<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(傳輸)、訊息、無、混合|(傳輸)、可靠工作階段、安全性工作階段|(無)、是|是|二元|是<br />(緩衝)|
 |<xref:System.ServiceModel.WSHttpContextBinding>|WS|傳輸、(訊息)、混合|(無)、可靠工作階段、安全性工作階段|(無)、是|N/A|文字、(MTOM)|否|
 |<xref:System.ServiceModel.UdpBinding> <br /><br /> **注意：** 互通性可以透過實作這個繫結所實作的標準 SOAP-over-UDP 規格來達成。|.NET|(無)|(無)|(無)|N/A|(文字)|否|
 
 > [!IMPORTANT]
-> <xref:System.ServiceModel.NetHttpBinding> 是為了使用 HTTP 或 WebSocket 服務而設計的繫結，其預設會使用二進位編碼。 <xref:System.ServiceModel.NetHttpBinding> 會偵測其所搭配使用的是要求-回覆合約還是雙工合約，並改變行為來配合，也就是會針對要求-回覆合約使用 HTTP，並針對雙工合約使用 WebSockets。 您可以覆寫這個行為，方法是使用 <xref:System.ServiceModel.Channels.WebSocketTransportUsage> 繫結設定：WhenDuplex - 這是預設值，行為方式如上所述。 Never-這會避免使用 WebSockets。 嘗試將這個設定用於雙工合約會導致例外狀況。 Always-這會強制使用 WebSockets，甚至用於要求-回覆合約。 NetHttpBinding 在 HTTP 模式和 WebSocket 模式下都會支援可靠工作階段。 在 WebSocket 模式中，工作階段是由傳輸提供。
+> <xref:System.ServiceModel.NetHttpBinding> 是為了使用 HTTP 或 WebSocket 服務而設計的繫結，其預設會使用二進位編碼。 <xref:System.ServiceModel.NetHttpBinding> 會偵測其所搭配使用的是要求-回覆合約還是雙工合約，並改變行為來配合，也就是會針對要求-回覆合約使用 HTTP，並針對雙工合約使用 WebSockets。 此行為可以使用來覆寫<xref:System.ServiceModel.Channels.WebSocketTransportUsage>繫結設定：WhenDuplex-這是預設值，行為方式如上所述。 Never-這會避免使用 WebSockets。 嘗試將這個設定用於雙工合約會導致例外狀況。 Always-這會強制使用 WebSockets，甚至用於要求-回覆合約。 NetHttpBinding 在 HTTP 模式和 WebSocket 模式下都會支援可靠工作階段。 在 WebSocket 模式中，工作階段是由傳輸提供。
 
  下表說明上一個表格中列出的各項功能。
 
 |功能|描述|
 |-------------|-----------------|
 |互通性類型|表示繫結一定可與其互通的通訊協定或技術。|
-|安全性|指定保護通道的方式：<br />- 無：SOAP 訊息未受保護，且用戶端也未經過驗證。<br />- 傳輸：已滿足傳輸層的安全性需求。<br />- 訊息：已滿足訊息層的安全性需求。<br />- 混合：訊息已包含宣告，傳輸層級的完整性與機密性需求已滿足。|
+|安全性|指定保護通道的方式：<br />-None:SOAP 訊息未受保護，並在用戶端未通過驗證。<br />-傳輸：已滿足傳輸層安全性需求。<br />訊息：訊息層已滿足安全性需求。<br />混合：宣告包含在 message;完整性和機密性需求已滿足傳輸層。|
 |工作階段|指定此繫結是否支援工作階段合約。|
 |異動|指定是否已啟用異動。|
 |雙工|指定是否支援雙工合約。 請注意，此功能需要繫結對工作階段的支援。|
-|編碼|請指定訊息的 Wire 格式。 允許的值包括：<br />- 文字：例如 UTF-8。<br />- 二進位<br />- 訊息傳輸最佳化機制 (MTOM)：一種有效的編碼方式，可在 SOAP 封套內容中編碼二進位的 XML 項目。|
-|資料流|指定傳入與傳出的訊息是否支援資料流。 請使用繫結上的 `TransferMode` 屬性來設定該值。 允許的值包括：<br />- <xref:System.ServiceModel.TransferMode.Buffered>：要求訊息和回應訊息已同時緩衝處理。<br />- <xref:System.ServiceModel.TransferMode.Streamed>：要求訊息和回應訊息已同時進行資料流處理。<br />- <xref:System.ServiceModel.TransferMode.StreamedRequest>：資料流處理要求訊息，緩衝處理回應訊息。<br />- <xref:System.ServiceModel.TransferMode.StreamedResponse>：緩衝處理要求訊息，資料流處理回應訊息。|
+|編碼|請指定訊息的 Wire 格式。 允許的值包括：<br />- 文字：例如 UTF-8。<br />- 二進位<br />-Message Transmission Optimization Mechanism (MTOM):一種方法的有效編碼的 SOAP 封套內容中的二進位 XML 項目。|
+|資料流|指定傳入與傳出的訊息是否支援資料流。 請使用繫結上的 `TransferMode` 屬性來設定該值。 允許的值包括：<br />- <xref:System.ServiceModel.TransferMode.Buffered>：要求訊息和回應訊息皆以緩衝處理。<br />- <xref:System.ServiceModel.TransferMode.Streamed>：要求訊息和回應訊息皆以資料流處理。<br />- <xref:System.ServiceModel.TransferMode.StreamedRequest>：資料流處理要求訊息，緩衝處理回應訊息。<br />- <xref:System.ServiceModel.TransferMode.StreamedResponse>：緩衝處理要求訊息，資料流處理回應訊息。|
 
 ## <a name="see-also"></a>另請參閱
 
-[建立端點概觀](endpoint-creation-overview.md)  
-[使用繫結設定服務與用戶端](using-bindings-to-configure-services-and-clients.md)  
-[基本 WCF 程式設計](basic-wcf-programming.md)  
+- [建立端點概觀](endpoint-creation-overview.md)
+- [使用繫結設定服務與用戶端](using-bindings-to-configure-services-and-clients.md)
+- [基本 WCF 程式設計](basic-wcf-programming.md)

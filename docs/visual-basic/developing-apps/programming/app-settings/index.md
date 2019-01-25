@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-ms.openlocfilehash: 3b933287d18a2519969852117fc6f847e9ead461
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d14f53003320bb4c3b71134af324961c7565cebf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535459"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>存取應用程式設定 (Visual Basic)
 本節包含描述可讓您完成的 `My.Settings` 物件和工作的主題。  
@@ -30,6 +30,6 @@ ms.locfileid: "48583655"
 |儲存已更新的使用者設定值|[如何：保存 Visual Basic 中的使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
 |判斷使用者設定的值|[如何：在 Visual Basic 中讀取應用程式設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
-## <a name="see-also"></a>另請參閱  
- [管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)  
- [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)
+## <a name="see-also"></a>另請參閱
+- [管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
+- [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)

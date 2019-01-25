@@ -44,12 +44,13 @@
 ### [平行程式設計](standard/parallel-programming/)
 ### [執行緒處理](standard/threading/)
 ## [記憶體與延伸相關類型](standard/memory-and-spans/index.md)
-### [記憶體\<T> 與延伸\<T> 使用指導方針](standard/memory-and-spans/memory-t-usage-guidelines.md)
+### [記憶體<T>與延伸<T>使用指導方針](standard/memory-and-spans/memory-t-usage-guidelines.md)
 ## [原生互通性](standard/native-interop/index.md)
 ### [P/Invoke](standard/native-interop/pinvoke.md)
 ### [類型封送處理](standard/native-interop/type-marshalling.md)
 ### [自訂結構封送處理](standard/native-interop/customize-struct-marshalling.md)
 ### [自訂參數封送處理](standard/native-interop/customize-parameter-marshalling.md)
+### [Interop 指導方針](standard/native-interop/best-practices.md)
 ### [字元集和封送處理](standard/native-interop/charset.md)
 ## [集合和資料結構](standard/collections/)
 ## [.NET 中的數值](standard/numerics.md)
@@ -180,7 +181,7 @@
 ##### [dotnet add reference](core/tools/dotnet-add-reference.md)
 ##### [dotnet list reference](core/tools/dotnet-list-reference.md)
 ##### [dotnet remove reference](core/tools/dotnet-remove-reference.md)
-#### 封裝
+#### 套件
 ##### [dotnet add package](core/tools/dotnet-add-package.md)
 ##### [dotnet remove package](core/tools/dotnet-remove-package.md)
 ### [global.json](core/tools/global-json.md)
@@ -1181,11 +1182,12 @@
 
 <!-- ML.NET Content -->
 # [ML.NET 指南](machine-learning/index.md)
-## 總覽
+## 概觀
 ### [什麼是 ML.NET？](machine-learning/what-is-mldotnet.md)
 ### [模型定型概念](machine-learning/basic-concepts-model-training-in-mldotnet.md)
 ## [教學課程](machine-learning/tutorials/index.md)
 ### [情感分析 (二元分類)](machine-learning/tutorials/sentiment-analysis.md)
+### [問題分類 (多元分類)](machine-learning/tutorials/github-issue-classification.md)
 ### [計程車車資預測工具 (迴歸)](machine-learning/tutorials/taxi-fare.md)
 ### [鳶尾花 (叢集)](machine-learning/tutorials/iris-clustering.md)
 ## [操作指南](machine-learning/how-to-guides/index.md)
@@ -1196,7 +1198,7 @@
 ### [使用許多欄載入資料](machine-learning/how-to-guides/load-data-from-mult-column-csv-ml-net.md)
 ### [從多個檔案載入資料](machine-learning/how-to-guides/load-data-from-multiple-files-ml-net.md)
 ### [從文字檔載入資料](machine-learning/how-to-guides/load-data-from-text-file-ml-net.MD)
-### [使用 PredictionFunction 一次進行一個預測](machine-learning/how-to-guides/single-predict-model-ml-net.md)
+### [使用 PredictionEngine 一次進行一個預測](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 ### [讓已定型模型運作](machine-learning/how-to-guides/consuming-model-ml-net.md)
 ### [使用正常化來前置處理資料](machine-learning/how-to-guides/normalizers-preprocess-data-ml-net.md)
 ### [使用 Infer.NET 進行概率性程式設計](machine-learning/how-to-guides/matchup-app-infer-net.md)

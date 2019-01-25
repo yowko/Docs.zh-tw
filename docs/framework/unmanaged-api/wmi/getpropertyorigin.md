@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86c512f25c40f201d818b6789c6410bfb095b878
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b61c0359b8b18cb5082b1739defc65371476af25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529917"
 ---
 # <a name="getpropertyorigin-function"></a>GetPropertyOrigin 函式
 判斷屬性在其中宣告的類別。
@@ -60,7 +60,7 @@ HRESULT GetPropertyOrigin (
 |常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 已有一般失敗。 |
-|`WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | 找不到指定的屬性。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的屬性。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
@@ -80,5 +80,5 @@ HRESULT GetPropertyOrigin (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

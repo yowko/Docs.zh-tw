@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GEZero1
 ms.assetid: 6f54fdc6-e263-4b2f-a66f-f206f3a59818
-ms.openlocfilehash: 6c95f657c9032f9661cde77d4ad42bd8c1b6fc3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef130ce0cb3b7b65936dad3421dee101cfdca4c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624752"
 ---
 # <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to-zero"></a>引數&lt;引數名稱&gt;必須大於或等於零
 引數值小於零。 引數值必須大於或等於零。  
@@ -20,6 +20,6 @@ ms.locfileid: "33596203"
   
 2.  如果透過計算來提供引數，請檢查計算所處理的值。  
   
-## <a name="see-also"></a>另請參閱  
- [以傳值和傳址方式傳遞引數](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
+## <a name="see-also"></a>另請參閱
+- [以傳值和傳址方式傳遞引數](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
 

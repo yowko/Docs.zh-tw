@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2efa46abf5a1fcedee4a4055331f7a59963be794
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709152"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>應用程式案例 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援公開及取用資料的一組核心案例[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 本主題會為您指出與這些案例有關的主題。  
@@ -20,12 +20,12 @@ ms.locfileid: "43803326"
   
 -   [將資料當作服務公開](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [如何：使用 ADO.NET Entity Framework 資料來源建立資料服務](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
+-   [如何：建立使用 ADO.NET Entity Framework 資料來源的資料服務](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
   
  將任意 CLR 資料類別公開為 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。  
  -   [將資料當作服務公開](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [如何：使用反映提供者建立資料服務](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+-   [如何：建立資料服務，使用反映提供者](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
   
 -   [資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
   
@@ -41,14 +41,14 @@ ms.locfileid: "43803326"
   
 -   [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [如何： 將資料服務資料繫結至控制項 (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [如何：資料服務資料繫結至控制項 (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  在以 AJAX 為基礎的用戶端應用程式中，取用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。  
  -   [在用戶端應用程式中使用資料服務](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
--   [OData: URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)  
+-   [OData:URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)  
   
--   [OData: JavaScript 物件標記法 (JSON) 格式](https://go.microsoft.com/fwlink/?LinkId=185790)  
+-   [OData:JavaScript 物件標記法 (JSON) 格式](https://go.microsoft.com/fwlink/?LinkId=185790)  
   
  建立端對端資料解決方案，以使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]用戶端和伺服器之間傳輸資料。  
  -   [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
@@ -86,6 +86,6 @@ ms.locfileid: "43803326"
   
 -   [服務作業](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
   
-## <a name="see-also"></a>另請參閱  
- [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
- [資源](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+## <a name="see-also"></a>另請參閱
+- [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [資源](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

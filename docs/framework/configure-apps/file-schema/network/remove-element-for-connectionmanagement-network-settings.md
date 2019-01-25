@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 899d64633447223fffc5a9c7323a9baa7d040297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702544"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;移除&gt;connectionManagement （網路設定） 的項目
 從連線管理清單中，移除 IP 位址或 DNS 名稱。  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
 \<remove>  
   
 ## <a name="syntax"></a>語法  
@@ -74,7 +74,7 @@ ms.locfileid: "50181549"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
