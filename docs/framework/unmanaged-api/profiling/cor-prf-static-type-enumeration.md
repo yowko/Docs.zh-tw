@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc610f4cc34b256867396a3390d5ccd0822f6454
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 34a2ca5b505c504115af47402c3d92a05ec0676f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737623"
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE 列舉
 指出欄位是否為靜態，若是靜態，則欄位套用的是靜態品質。 這些值可以表示的欄位具有多個使用位元 OR 運算結合不同的靜態品質。  
@@ -43,19 +43,19 @@ typedef enum {
 |成員|描述|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_NOT_A_STATIC`|欄位不是靜態的。|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|此欄位是應用程式定義域靜態。|  
-|`COR_PRF_FIELD_THREAD_STATIC`|此欄位是執行緒靜態。|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|此欄位是靜態內容。|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|應用程式定義域靜態欄位。|  
+|`COR_PRF_FIELD_THREAD_STATIC`|執行緒靜態欄位。|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|內容靜態欄位。|  
 |`COR_PRF_FIELD_RVA_STATIC`|此欄位是相對虛擬位址 (RVA) 為靜態。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

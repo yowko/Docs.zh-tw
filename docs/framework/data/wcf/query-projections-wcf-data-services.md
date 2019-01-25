@@ -10,15 +10,15 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2cd39355fec310bc33a3d02524a4d4cc060dba6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646077"
 ---
 # <a name="query-projections-wcf-data-services"></a>查詢投影 (WCF 資料服務)
-投影提供一種機制，在[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]減少，僅傳回特定屬性的實體會在回應中藉由指定查詢所傳回之摘要中的資料量。 如需詳細資訊，請參閱 < [OData: Select 系統查詢選項 ($select)](https://go.microsoft.com/fwlink/?LinkId=186076)。  
+投影提供一種機制，在[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]減少，僅傳回特定屬性的實體會在回應中藉由指定查詢所傳回之摘要中的資料量。 如需詳細資訊，請參閱[OData:選取系統查詢選項 ($select)](https://go.microsoft.com/fwlink/?LinkId=186076)。  
   
  本主題描述如何定義查詢投影、實體與非實體類型的需求為何、對投影結果進行更新、建立投影類型，以及列出一些投影考量因素。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "43526684"
    [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithinitializer)]
    [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithinitializer)]
 
-- 實體類型： 支援
+- 實體類型：支援
 
-- 非實體類型： 支援
+- 非實體類型：支援
 
 **使用建構函式，以建立新的投影執行個體**
 
@@ -76,9 +76,9 @@ ms.locfileid: "43526684"
    [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithconstructor)]
    [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithconstructor)]
 
-- 實體類型： A <xref:System.NotSupportedException> ，就會引發。
+- 實體類型：引發 <xref:System.NotSupportedException>。
 
-- 非實體類型： 支援
+- 非實體類型：支援
 
 **使用投影來轉換屬性值**
 
@@ -87,9 +87,9 @@ ms.locfileid: "43526684"
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithtransform)]
    
-- 實體類型： 此轉換不支援實體類型，因為它可能造成混淆且可能覆寫屬於另一個實體的資料來源中的資料。 引發 <xref:System.NotSupportedException>。
+- 實體類型：實體類型不支援此種轉換，因為它可能造成混淆且可能覆寫屬於另一個實體之資料來源中的資料。 引發 <xref:System.NotSupportedException>。
 
-- 非實體類型： 支援  
+- 非實體類型：支援  
   
 <a name="considerations"></a>   
 ## <a name="projection-considerations"></a>投影考量因素  
@@ -107,7 +107,7 @@ ms.locfileid: "43526684"
   
 -   查詢用戶端上的投影查詢會轉譯為在要求 URI 中使用 `$select` 查詢選項。 若針對舊版 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 執行使用投影的查詢 (該版本不支援 `$select` 查詢選項)，會傳回錯誤。 在將資料服務之 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的 <xref:System.Data.Services.DataServiceBehavior> 設定為 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 值時也會發生這種情況。 如需詳細資訊，請參閱 <<c0> [ 資料服務版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。  
   
- 如需詳細資訊，請參閱 < [How to： 專案查詢結果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)。  
+ 如需詳細資訊，請參閱[＜How to：將查詢結果投影](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a>另請參閱
+- [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

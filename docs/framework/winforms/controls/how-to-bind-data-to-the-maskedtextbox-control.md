@@ -1,5 +1,5 @@
 ---
-title: 如何：將資料繫結至 MaskedTextBox 控制項
+title: HOW TO：將資料繫結至 MaskedTextBox 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 98d59e7443b51c17baafd05e6701c1418298b4a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1eccfb40cd256cb3ebea6f0dcf38d73d5d53e8bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735074"
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>如何：將資料繫結至 MaskedTextBox 控制項
-您可以將資料繫結<xref:System.Windows.Forms.MaskedTextBox>控制一樣，您可以為任何其他 Windows Form 控制項。 不過，如果資料庫中資料的格式不符合遮罩定義所預期的格式，您必須將資料重新格式化。 下列程序示範如何使用執行此動作<xref:System.Windows.Forms.Binding.Format>和<xref:System.Windows.Forms.Binding.Parse>事件<xref:System.Windows.Forms.Binding>類別來顯示個別的電話號碼和電話做為單一的可編輯欄位的擴充功能的資料庫欄位。  
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>HOW TO：將資料繫結至 MaskedTextBox 控制項
+您可以繫結至資料<xref:System.Windows.Forms.MaskedTextBox>控制一樣，您可以為任何其他的 Windows Form 控制項。 不過，如果您在資料庫中的資料格式不符遮罩定義所預期的格式，您必須重新格式化資料。 下列程序示範如何使用執行此動作<xref:System.Windows.Forms.Binding.Format>並<xref:System.Windows.Forms.Binding.Parse>事件的<xref:System.Windows.Forms.Binding>類別，以顯示不同的電話號碼和電話做為單一的可編輯欄位的延伸模組的資料庫欄位。  
   
- 下列程序，就需要使用 Northwind 範例資料庫，安裝 SQL Server 資料庫的存取權。  
+ 下列程序，您需要已安裝 Northwind 範例資料庫的 SQL Server 資料庫的存取權。  
   
-### <a name="to-bind-data-to-a-maskedtextbox-control"></a>將資料繫結至 MaskedTextBox 控制項  
+### <a name="to-bind-data-to-a-maskedtextbox-control"></a>若要將資料繫結至 MaskedTextBox 控制項  
   
 1.  建立新的 Windows Form 專案。  
   
-2.  拖放兩<xref:System.Windows.Forms.TextBox>控制項拖曳至表單中; 它們的名稱`FirstName`和`LastName`。  
+2.  將兩個<xref:System.Windows.Forms.TextBox>控制項拖曳至表單中; 它們的名稱`FirstName`和`LastName`。  
   
-3.  拖曳<xref:System.Windows.Forms.MaskedTextBox>控制項拖曳至表單，則其命名`PhoneMask`。  
+3.  拖曳<xref:System.Windows.Forms.MaskedTextBox>控制項拖曳至表單，其命名為`PhoneMask`。  
   
-4.  設定<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>屬性`PhoneMask`至`(000) 000-0000 x9999`。  
+4.  設定<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>的屬性`PhoneMask`至`(000) 000-0000 x9999`。  
   
-5.  加入下列命名空間匯入至表單。  
+5.  新增下列命名空間匯入至表單。  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ ms.locfileid: "33530911"
     Imports System.Data.SqlClient  
     ```  
   
-6.  以滑鼠右鍵按一下表單，然後選擇 **檢視程式碼**。 在您的表單類別中的任意位置放置這段程式碼。  
+6.  以滑鼠右鍵按一下表單，然後選擇 **檢視程式碼**。 將此程式碼置於表單類別中的任意位置。  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ ms.locfileid: "33530911"
     End Sub  
     ```  
   
-7.  加入事件處理常式<xref:System.Windows.Forms.Binding.Format>和<xref:System.Windows.Forms.Binding.Parse>，結合，並將事件`PhoneNumber`和`Extension`從繫結欄位<xref:System.Data.DataSet>。  
+7.  新增事件處理常式<xref:System.Windows.Forms.Binding.Format>並<xref:System.Windows.Forms.Binding.Parse>來結合和分離事件`PhoneNumber`並`Extension`從繫結欄位<xref:System.Data.DataSet>。  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ ms.locfileid: "33530911"
     End Sub  
     ```  
   
-8.  加入兩個<xref:System.Windows.Forms.Button>控制項加入表單。 它們的名稱`previousButton`和`nextButton`。 按兩下每個按鈕，新增<xref:System.Windows.Forms.Control.Click>事件處理常式，並填滿的事件處理常式，如下列程式碼範例所示。  
+8.  新增兩個<xref:System.Windows.Forms.Button>控制項加入表單。 它們的名稱`previousButton`和`nextButton`。 按兩下每個按鈕以新增<xref:System.Windows.Forms.Control.Click>事件處理常式，並填入的事件處理常式，如下列程式碼範例所示。  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  
@@ -228,10 +228,10 @@ ms.locfileid: "33530911"
     End Sub  
     ```  
   
-9. 執行範例。 編輯資料，並使用**上一步**和**下一步**按鈕以查看正確的資料保存到<xref:System.Data.DataSet>。  
+9. 執行範例。 編輯資料，並用**上一步**並**下一步**按鈕，以查看正確的資料保存至<xref:System.Data.DataSet>。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例會列出該結果，無法完成先前的程序的完整程式碼。  
+ 下列程式碼範例是完整的程式碼列出該結果，無法完成上一個程序。  
   
  [!code-cpp[MaskedTextBoxData#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
  [!code-csharp[MaskedTextBoxData#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
@@ -239,15 +239,15 @@ ms.locfileid: "33530911"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   建立 Visual C# 或 Visual Basic 專案。  
+-   建立視覺效果C#或 Visual Basic 專案。  
   
--   新增<xref:System.Windows.Forms.TextBox>和<xref:System.Windows.Forms.MaskedTextBox>控制項至表單，先前的程序中所述。  
+-   新增<xref:System.Windows.Forms.TextBox>和<xref:System.Windows.Forms.MaskedTextBox>控制項至表單，如先前程序中所述。  
   
 -   開啟專案的預設表單的原始程式碼檔。  
   
--   上的 < 程式碼 > 一節列出的程式碼取代此檔案中的原始程式碼。  
+-   上的 「 程式碼 」 一節中所列的程式碼取代此檔案中的原始程式碼。  
   
 -   編譯應用程式。  
   
-## <a name="see-also"></a>另請參閱  
- [逐步解說：使用 MaskedTextBox 控制項](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+## <a name="see-also"></a>另請參閱
+- [逐步解說：使用 MaskedTextBox 控制項](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

@@ -2,22 +2,22 @@
 title: '&lt;secureConversationBootstrap&gt;'
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-ms.openlocfilehash: a923ca5d695b1b0b8f5362320b11f39f5153e9c8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dae0d6c24e50884cf044464209f3a3b9a50079aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744891"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 指定用於啟始安全對話服務的預設值。  
   
  \<system.serviceModel>  
-\<繫結 >  
+\<bindings>  
 \<customBinding>  
-\<繫結 >  
+\<binding>  
 \<安全性 >  
-\<secureConversationBootstrap >  
+\<secureConversationBootstrap>  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54148509"
 |`includeTimestamp`|布林值，指定每個訊息是否包含時間戳記。 預設為 `true`。|  
 |`keyEntropyMode`|指定保護訊息安全之金鑰的計算方法。 金鑰可僅根據用戶端金鑰資料、僅根據服務金鑰資料，或兩者的組合。 有效值為：<br /><br /> -ClientEntropy:工作階段金鑰根據用戶端提供的金鑰資料。<br />-ServerEntropy:工作階段金鑰根據提供的金鑰資料的服務。<br />-CombinedEntropy:工作階段金鑰根據用戶端和服務提供的金鑰材料。<br /><br /> 預設為 CombinedEntropy。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>。|  
 |`messageProtectionOrder`|設定順序，訊息層級安全性演算法會以這個順序套用至訊息。 有效值包括以下的值：<br /><br /> -SignBeforeEncrypt:先簽署，再加密。<br />-SignBeforeEncryptAndEncryptSignature:簽署、 加密和加密簽章。<br />-EncryptBeforeSign:先加密，再簽署。<br /><br /> 使用相互憑證搭配 WS-Security 1.1 時，SignBeforeEncryptAndEncryptSignature 是預設值。  SignBeforeEncrypt 是 WS-Security 1.0 的預設值。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.MessageProtectionOrder>。|  
-|`messageSecurityVersion`|設定使用的 WS-Security 版本。 有效值包括以下的值：<br /><br /> -WSSecurityJan2004<br />-WSSecurityXXX2005<br /><br /> 預設為 WSSecurityXXX2005。 此屬性的型別為 <xref:System.ServiceModel.MessageSecurityVersion>。|  
+|`messageSecurityVersion`|設定使用的 WS-Security 版本。 有效值包括以下的值：<br /><br /> -   WSSecurityJan2004<br />-   WSSecurityXXX2005<br /><br /> 預設為 WSSecurityXXX2005。 此屬性的型別為 <xref:System.ServiceModel.MessageSecurityVersion>。|  
 |`requireDerivedKeys`|布林值，指定是否可以從原始的證明金鑰衍生金鑰。 預設為 `true`。|  
 |`requireSecurityContextCancellation`|布林值，指定當不再需要安全性內容時是否應取消及終止它。 預設為 `true`。|  
 |`requireSignatureConfirmation`|布林值，指定是否啟用 WS-Security 簽章確認。 設定為 `true` 時，回應程式會確認訊息簽章。 預設為 `false`。<br /><br /> 簽章確認是用來確認服務的回應完全感知要求。|  
@@ -64,8 +64,8 @@ ms.locfileid: "54148509"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|指定目前發行的權杖。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>。|  
-|[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|指定此繫結之本機用戶端的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>。|  
-|[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|指定此繫結之本機服務的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>。|  
+|[\<localClientSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|指定此繫結之本機用戶端的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>。|  
+|[\<localServiceSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|指定此繫結之本機服務的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -73,14 +73,14 @@ ms.locfileid: "54148509"
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

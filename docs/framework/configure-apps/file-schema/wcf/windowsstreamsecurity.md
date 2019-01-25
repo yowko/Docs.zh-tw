@@ -1,22 +1,22 @@
 ---
-title: '&lt;windowsstreamsecurity 正在&gt;'
+title: '&lt;windowsStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: 6cce178910767d7fd197aff0d007b7cc3f4e60f3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4218072f63cabe511ca9d30c77395f734d961eca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745177"
 ---
-# <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsstreamsecurity 正在&gt;
+# <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsStreamSecurity&gt;
 指定自訂繫結的 Windows 資料流安全性設定。  
   
  \<system.serviceModel>  
-\<繫結 >  
+\<bindings>  
 \<customBinding>  
-\<繫結 >  
-\<windowsstreamsecurity 正在 >  
+\<binding>  
+\<windowsStreamSecurity>  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,16 +40,16 @@ ms.locfileid: "54151120"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
  TCP 和具名管道這類使用資料流導向通訊協定的傳輸，支援資料流傳輸升級。 具體來說，WCF 會提供安全性升級。 此傳輸安全性的組態和封裝這個組態項目[ \<Custombinding> >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)，這可以設定並新增至自訂繫結  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>  
- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

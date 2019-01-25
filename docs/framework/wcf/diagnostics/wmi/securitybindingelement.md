@@ -2,12 +2,12 @@
 title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
-ms.openlocfilehash: 601e3fafd9aa876186b7f78dfdcb87a2336ddfcd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f7c4e30b72af36de1d3088e4ca8cd98ced734104
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692320"
 ---
 # <a name="securitybindingelement"></a>SecurityBindingElement
 SecurityBindingElement  
@@ -54,7 +54,7 @@ class SecurityBindingElement : BindingElement
  用於建立金鑰的 Entropy 來源。  
   
 ### <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings  
- 資料型別：LocalServiceSecuritySettings  
+ 資料類型：LocalServiceSecuritySettings  
   
  存取類型：唯讀  
   
@@ -80,5 +80,5 @@ class SecurityBindingElement : BindingElement
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1d920a97338bba3e90ec8f0c440f6dd2a93e722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f3c430e18864c0352b43641bce9a7d52af69cc80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718217"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a>ICorDebugManagedCallback::LoadClass 方法
-告知偵錯工具已載入類別。  
+已載入類別會告知偵錯工具。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,25 +38,25 @@ HRESULT LoadClass (
   
 #### <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]ICorDebugAppDomain 物件，表示應用程式定義域到其中已載入類別指標。  
+ [in]表示已載入類別所在的應用程式定義域的 ICorDebugAppDomain 物件指標。  
   
  `c`  
- [in]表示類別 ICorDebugClass 物件的指標。  
+ [in]ICorDebugClass 物件，代表的類別指標。  
   
 ## <a name="remarks"></a>備註  
- 只有當已啟用類別載入的模組包含的類別，就會發生這個回呼。 類別載入一定會啟用動態模組。  
+ 只有當類別載入已啟用模組包含類別，就會發生這個回呼。 類別載入一定會啟用動態模組。  
   
- `LoadClass`回呼會提供將中斷點繫結至新產生的類別，在動態模組中的適當時間。  
+ `LoadClass`回呼會提供適當的時間，來將中斷點繫結至新產生的類別，在動態模組中。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [UnloadClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)  
- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>另請參閱
+- [UnloadClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)
+- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

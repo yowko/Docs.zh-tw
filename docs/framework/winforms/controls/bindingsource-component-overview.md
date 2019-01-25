@@ -7,18 +7,18 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 047df677ade3837e167845ace2bdc6ca14738c3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fbd089cef6f014979cf8bbdf376b2f76ac9bcf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686942"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 元件概觀
 <xref:System.Windows.Forms.BindingSource> 元件的設計目的，是為了簡化將控制項繫結至基礎資料來源的程序。 <xref:System.Windows.Forms.BindingSource> 元件可同時做為管線和其他控制項繫結的目標資料來源。 它可以在透過命令傳遞至基礎資料清單時，提供表單資料連接的抽象層。 此外，您也可以直接加入資料，將元件本身當做資料來源使用。  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>做為媒介的 BindingSource 元件  
- <xref:System.Windows.Forms.BindingSource> 元件可做為表單上部分或全部控制項的資料來源。 在 Visual Studio<xref:System.Windows.Forms.BindingSource>可以繫結至控制項，藉由`DataBindings`屬性，這是從存取**屬性**視窗。 另請參閱[如何：使用設計工具將 Windows Forms 控制項和 BindingSource 元件加以繫結](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)。  
+ <xref:System.Windows.Forms.BindingSource> 元件可做為表單上部分或全部控制項的資料來源。 在 Visual Studio 中，<xref:System.Windows.Forms.BindingSource>可以藉由控制繫結`DataBindings`屬性，因此可從**屬性**視窗。 另請參閱[How to:繫結 Windows Form 控制項和 BindingSource 元件加以使用設計工具](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)。  
   
  您可以將 <xref:System.Windows.Forms.BindingSource> 元件繫結至簡單的資料來源 (例如物件或 <xref:System.Collections.ArrayList> 等基本集合的單一屬性)，也可以繫結至複雜的資料來源 (例如資料庫資料表)。 <xref:System.Windows.Forms.BindingSource> 元件可做為提供繫結和貨幣管理服務的媒介。 您可以在設計階段或執行階段，透過將資料來源的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 和 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 屬性分別設定為資料庫和資料表，將 <xref:System.Windows.Forms.BindingSource> 元件繫結至複雜的資料來源。 下圖示範 <xref:System.Windows.Forms.BindingSource> 元件在現有資料繫結架構中的位置。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "33529600"
 |<xref:System.Windows.Forms.BindingSource.Sort%2A> 屬性|如果資料來源是 <xref:System.ComponentModel.IBindingList>，可取得或設定用來排序的資料行名稱，以及排序次序資訊。 如果資料來源是 <xref:System.ComponentModel.IBindingListView> 並支援進階排序，可取得用來排序的多個資料行名稱，以及排序次序資訊。|  
 |<xref:System.Windows.Forms.BindingSource.Filter%2A> 屬性|如果資料來源是 <xref:System.ComponentModel.IBindingListView>，可取得或設定用來篩選所檢視之資料列的運算式。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.BindingNavigator>  
- [BindingSource 元件架構](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)  
- [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [BindingNavigator 控制項](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [Windows Forms 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.BindingNavigator>
+- [BindingSource 元件架構](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)
+- [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [BindingNavigator 控制項](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [Windows Forms 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

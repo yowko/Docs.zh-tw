@@ -1,18 +1,18 @@
 ---
-title: 如何：鎖定 Windows Form 的控制項
+title: HOW TO：鎖定控制項新增至 Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: 8de22ae6667446620867f3c15aac3c4af65582bf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a59e5997104b9438681702d460dd8f6937df41b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741453"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a>如何：鎖定 Windows Form 的控制項
+# <a name="how-to-lock-controls-to-windows-forms"></a>HOW TO：鎖定控制項新增至 Windows Forms
 當您設計您的 Windows 應用程式的使用者介面 (UI) 時，您可以在之後放置的位置正確，因此，您不小心移動或調整其大小設定其他屬性時，鎖定控制項。  
   
  此外，您可以鎖定及解除鎖定所有表單上的控制項，也就是很有幫助具有許多控制項的表單，或您可以解除鎖定個別控制項的功能。 一旦您已經置身在表單上放置所有控制項，可鎖定這些項目全都放在預防錯誤移動的位置。  
@@ -46,9 +46,9 @@ ms.locfileid: "43511134"
   
 1.  在 [**屬性**] 視窗中，按一下**鎖定**屬性，並選取`false`。 （按兩下名稱切換屬性設定）。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>另請參閱
+- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)
+- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

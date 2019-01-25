@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf56a2720ab407d05b8356280913445c15a17020
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 97bb5912ec4d384260e3809166efacded8e2b389
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679093"
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt;項目
 決定日期和時間剖析方法使用一組調整過的規則來剖析日期字串，包含日期、 月份、 小時和 AM/PM 指示項。  
   
  \<configuration>  
  \<執行階段 >  
-\<EnableAmPmParseAdjustment >  
+\<EnableAmPmParseAdjustment>  
   
 ## <a name="syntax"></a>語法  
   
@@ -76,11 +76,11 @@ ms.locfileid: "53611070"
   
  下表說明中的差異<xref:System.DateTime>值時<xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType>方法來剖析字串""4/10 6 AM"與`<EnableAmPmParseAdjustment>`項目的`enabled`屬性設定為"0"或"1"。 假設今天的日期為 2017 年 1 月 5 日，並且如同即會使用指定的文化特性"G"格式字串格式化顯示的日期。  
   
-|文化特性名稱|已啟用 ="0"|已啟用 ="1"|  
+|文化特性名稱|enabled="0"|enabled="1"|  
 |------------------|------------------|------------------|  
 |en-US|2017 年 1 月 5 日上午 4:00:00|2017 年 4 月 10 日上午 6:00:00|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
-## <a name="see-also"></a>另請參閱  
-- [\<執行階段 > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
+## <a name="see-also"></a>另請參閱
+- [\<執行階段 > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
 - [\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

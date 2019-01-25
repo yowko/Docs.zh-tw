@@ -7,22 +7,22 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808532"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738348"
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：資料合約版本控制
-本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。 如需資料合約的詳細資訊，請參閱[使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。 如需資料合約的詳細資訊，請參閱中的主題[Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ## <a name="note-on-schema-validation"></a>結構描述驗證注意事項  
- 在討論資料合約版本控制，請務必注意匯出 Windows Communication Foundation (WCF) 的資料合約結構描述沒有任何版本設定的支援，依預設會標示為選擇性元素的事實以外。  
+ 在討論資料合約版本控制，請務必請注意，匯出由 Windows Communication Foundation (WCF) 的資料合約結構描述沒有任何版本控制支援，除了根據預設會標示為選擇性項目。  
   
  這表示即使最常見的版本設定案例 (例如新增資料成員)，也無法以與指定結構描述完全整合的方式來實作。 較新版的資料合約 (例如具有新的資料成員) 不會使用舊的結構描述來驗證。  
   
- 然而，有許多案例並不需要嚴格的結構描述相容性。 許多 Web 服務平台包括使用 ASP.NET 建立的 WCF 和 XML Web services 請勿執行預設結構描述驗證，因此可容許結構描述未描述的額外項目。 當使用此類平台時，許多版本設定案例都更容易實作。  
+ 然而，有許多案例並不需要嚴格的結構描述相容性。 許多 Web 的服務平台，包括使用 ASP.NET 建立的 WCF 和 XML Web service 請勿執行預設的結構描述驗證，因此可容許結構描述未描述的額外項目。 當使用此類平台時，許多版本設定案例都更容易實作。  
   
  因此，有兩組資料合約版本設定指導方針：一組適用於嚴格結構描述驗證很重要的案例，另一組適用於不重要的案例。  
   
@@ -35,18 +35,18 @@ ms.locfileid: "33808532"
   
  雖然在這些範例中，名稱已變更 (附加一個 "2")，但建議您將新的命名空間加上版本號碼或日期，來變更命名空間而非名稱。 例如，`http://schemas.contoso.com/2005/05/21/PurchaseOrder` 資料合約會變更為 `http://schemas.contoso.com/2005/10/14/PurchaseOrder` 資料合約。  
   
- 如需詳細資訊，請參閱 < 最佳作法：[服務版本控制](../../../docs/framework/wcf/service-versioning.md)。  
+ 如需詳細資訊，請參閱 < 最佳作法：[服務版本設定](../../../docs/framework/wcf/service-versioning.md)。  
   
- 雖然有時候，您必須為應用程式傳送的訊息，保證具有嚴格結構描述相容性，但不能依賴傳入訊息來達到嚴格的結構描述相容性。 此案例具有一項危險性，就是傳入訊息可能會包含一些無關的資料。 這些無關值會儲存並傳回由 WCF 因此造成傳送訊息的結構描述無效。 如果要避免這個問題，應關閉往返功能。 執行這項作業的方法有兩種。  
+ 雖然有時候，您必須為應用程式傳送的訊息，保證具有嚴格結構描述相容性，但不能依賴傳入訊息來達到嚴格的結構描述相容性。 此案例具有一項危險性，就是傳入訊息可能會包含一些無關的資料。 沒有直接關聯的值儲存，並傳回由 WCF 因此造成傳送訊息的結構描述無效。 如果要避免這個問題，應關閉往返功能。 執行這項作業的方法有兩種。  
   
 -   請勿在您任何的型別上實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面。  
   
 -   將 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性設定為 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>，以套用 `true` 屬性至您的服務合約。  
   
- 如需反覆存取的詳細資訊，請參閱[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ 如需往返的詳細資訊，請參閱[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>不需要結構描述驗證時的版本設定  
- 嚴格結構描述相容性很少有需要。 許多平台都會容許結構描述未描述的額外項目。 這所容許之，如中所述功能的完整[資料合約版本控制](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)和[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)可用。 建議使用下列指導方針。  
+ 嚴格結構描述相容性很少有需要。 許多平台都會容許結構描述未描述的額外項目。 只要容許這種情況，完整的功能中所述[資料合約版本控制](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)並[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)可用。 建議使用下列指導方針。  
   
  有些指導方針必須確實遵守，才能對預期收到舊版本之處傳送新版本的型別，或對預期收到新版本之處傳送舊的版本。 其他的指導方針並非絕對必要，但在此處會列出，因為它們可能會受到未來結構描述版本設定的影響。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "33808532"
   
 3.  從資料合約的第一個版本開始時，請永遠實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 以啟用往返。 如需詳細資訊，請參閱[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 如果您已發行型別的一或多個版本，而沒有實作這個介面，請在型別的下一個版本中實作它。  
   
-4.  在較新的版本中，請勿變更資料合約名稱或命名空間。 如果變更做為資料合約基礎之型別的名稱或命名空間，請使用適當的機制以確定保留資料合約名稱和命名空間，例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性。 如需有關命名的詳細資訊，請參閱[資料合約名稱](../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
+4.  在較新的版本中，請勿變更資料合約名稱或命名空間。 如果變更做為資料合約基礎之型別的名稱或命名空間，請使用適當的機制以確定保留資料合約名稱和命名空間，例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性。 如需有關命名的詳細資訊，請參閱 < [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
   
 5.  在較新的版本中，請勿變更任何資料成員的名稱。 如果變更做為資料成員基礎的欄位、屬性或事件的名稱，請使用 `Name` 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性來保留現有的資料成員名稱。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "33808532"
   
     2.  如果無法接受成員為 `null` 預設值或零，而成員未出現在傳入的資料流中，就應使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 以提供合理的預設值來提供回呼方法。 如需回呼的詳細資訊，請參閱[版本相容序列化回呼](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
   
-    3.  `Order` 上的 `DataMemberAttribute` 屬性應用於確定所有新增的資料成員都會出現在現有的資料成員之後。 執行這項操作的建議方法如下：資料合約第一個版本中的所有資料成員都不應設定其 `Order` 屬性。 資料合約第二個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 2。 資料合約第三個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 3，以此類推。 您可以將一個以上的資料成員設定為相同的 `Order` 號碼。  
+    3.  `Order` 上的 `DataMemberAttribute` 屬性應用於確定所有新增的資料成員都會出現在現有的資料成員之後。 執行此動作的建議的方法如下所示：資料成員中的資料合約的第一個版本都不應該有其`Order`屬性集。 資料合約第二個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 2。 資料合約第三個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 3，以此類推。 您可以將一個以上的資料成員設定為相同的 `Order` 號碼。  
   
 9. 即使 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性保持為在舊版中 `false` 的預設屬性，也請不要在新版中移除資料成員。  
   
@@ -86,22 +86,22 @@ ms.locfileid: "33808532"
   
 14. 您不應在版本之間新增或移除列舉成員。 您也不應重新命名列舉成員，除非您使用 `EnumMemberAttribute` 屬性 (Attribute) 上的 Name 屬性 (Property) 讓它們的名稱在資料合約模型中保持相同。  
   
-15. 在資料合約模型中所述的集合互換[集合資料合約中的型別](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 這可允許更大程度的彈性。 然而，請確定您沒有在版本之間以不可互換的方式不慎變更集合型別。 例如，請勿從非自訂的集合 (也就是沒有 `CollectionDataContractAttribute` 屬性) 變更為自訂的集合，或從自訂的集合變更為非自訂的集合。 此外，請勿在版本之間變更 `CollectionDataContractAttribute` 上的屬性。 唯一允許的變更是，如果基礎集合型別的名稱或命名空間已變更，而您需要讓其資料合約名稱和命名空間和舊版本中的相同，則可新增 Name 或 Namespace 屬性。  
+15. 集合是可互換的資料合約模型中所述[集合 Types in Data Contracts](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 這可允許更大程度的彈性。 然而，請確定您沒有在版本之間以不可互換的方式不慎變更集合型別。 例如，請勿從非自訂的集合 (也就是沒有 `CollectionDataContractAttribute` 屬性) 變更為自訂的集合，或從自訂的集合變更為非自訂的集合。 此外，請勿在版本之間變更 `CollectionDataContractAttribute` 上的屬性。 唯一允許的變更是，如果基礎集合型別的名稱或命名空間已變更，而您需要讓其資料合約名稱和命名空間和舊版本中的相同，則可新增 Name 或 Namespace 屬性。  
   
  當情況特殊時，可以放心略過此處列出的一些指導方針。 在違背指導方針之前，請確定您完全瞭解其中的序列化、還原序列化以及結構描述機制。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- <xref:System.ServiceModel.ServiceBehaviorAttribute>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
- <xref:System.Runtime.Serialization.ExtensionDataObject>  
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [資料合約版本控制](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
- [資料合約名稱](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
- [版本相容序列化回呼](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- <xref:System.ServiceModel.ServiceBehaviorAttribute>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
+- <xref:System.Runtime.Serialization.ExtensionDataObject>
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>
+- [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [資料合約版本控制](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [資料合約名稱](../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [版本相容序列化回呼](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

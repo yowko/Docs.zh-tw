@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3e21d42340378c576bfc65750fba26a257b82cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a65de26f3fc088b292ec9f8a96ca4e503a17edd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680893"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted 方法
-通知分析工具在 just-in-time (JIT) 編譯器已啟動重新編譯函式。  
+通知分析工具在 just-in-time (JIT) 編譯器已開始重新編譯函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,30 +38,30 @@ HRESULT ReJITCompilationStarted(
   
 #### <a name="parameters"></a>參數  
  `functionId`  
- [in]已開始 JIT 編譯器重新編譯函式的識別碼。  
+ [in]JIT 編譯器開始編譯函式的識別碼。  
   
  `rejitId`  
  [in]重新編譯函式的新版本的識別碼。  
   
  `fIsSafeToBlock`  
- [in]`true`表示封鎖可能會造成執行階段從這個回呼; 傳回呼叫執行緒的等候`false`表示封鎖將不會影響執行階段的作業。 值為`true`不傷害執行階段，但可能會影響分析的結果。  
+ [in]`true`表示封鎖可能會導致執行階段，等候要從此回呼; 傳回呼叫的執行緒`false`表示封鎖會不會影響執行階段的作業。 值為`true`不會損害執行階段，但可能會影響分析結果。  
   
 ## <a name="remarks"></a>備註  
- 很可能會收到一對以上的`ReJITCompilationStarted`和[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)方法會呼叫每個函式因為執行階段控制代碼類別建構函式。 例如，執行階段啟動方法，重新編譯，但是類別 B 的類別建構函式必須在執行。 因此，執行階段重新編譯類別 B 的建構函式，並執行它。 建構函式執行時，它會方法 A，這會導致重新編譯一次方法的呼叫。 在此案例中，就會中止方法的第一次重新編譯。 不過，兩者會嘗試重新編譯的方法會回報 JIT 重新編譯事件。  
+ 可接收的多個配對`ReJITCompilationStarted`並[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)方法會呼叫每個函式因為執行階段控制代碼類別建構函式。 比方說，在執行階段開始重新編譯方法，但類別 B 的類別建構函式必須執行。 因此，執行階段會重新編譯類別 B 的建構函式，並執行它。 當建構函式執行時，它會讓方法 A，這會導致重新編譯方法的呼叫。 在此案例中，就會中止方法的第一次重新編譯。 不過，兩者會嘗試重新編譯是使用 JIT 重新編譯事件所報告的方法。  
   
- 程式碼剖析工具必須在其中兩個執行緒同時進行回呼的情況下支援 JIT 重新編譯回呼的序列。 例如，執行緒的呼叫`ReJITCompilationStarted`; 不過，執行緒的呼叫[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)，執行緒 B 呼叫[icorprofilercallback:: Exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)函式識別碼從`ReJITCompilationStarted`回呼執行緒 a。它可能會顯示該函式 ID 尚未有效期不應因為呼叫[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)有尚未收到分析工具。 不過，在此情況下，函式識別碼無效。  
+ 在其中兩個執行緒同時進行回呼的情況下，程式碼剖析工具必須支援 JIT 重新編譯回呼的序列。 例如，呼叫執行緒 A `ReJITCompilationStarted`; 不過，在執行緒的呼叫之前[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)，執行緒 B 呼叫[icorprofilercallback:: Exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)函式識別碼從`ReJITCompilationStarted`回呼執行緒 a。它可能會顯示該函式識別碼尚未有效期不應因為呼叫[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)有尚未收到的分析工具。 不過，在此情況下，函式識別碼無效。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback4 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)  
- [JITCompilationFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)  
- [ReJITCompilationFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback4 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [JITCompilationFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)
+- [ReJITCompilationFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)

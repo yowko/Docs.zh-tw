@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 350aecb9f9c99c9aa44ae6df6d31c7cb69ae5760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: acff919cbeb6b5d71197664139cdc9212961e314
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629510"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>ISymUnmanagedDocument::HasEmbeddedSource 方法
-傳回`true`如果文件來源內嵌在偵錯符號; 否則傳回`false`。  
+會傳回`true`文件具有來源內嵌在偵錯的符號; 否則會傳回`false`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ HRESULT HasEmbeddedSource(
  [out]此變數會指出是否有來源文件的指標會內嵌在偵錯符號。  
   
 ## <a name="return-value"></a>傳回值  
- 如果此方法成功為 S_OK。  
+ 如果方法成功為 S_OK。  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

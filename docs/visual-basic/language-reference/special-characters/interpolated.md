@@ -1,12 +1,12 @@
 ---
 title: $ （Visual Basic 參考）
 ms.date: 10/31/2017
-ms.openlocfilehash: f4651849241ec0ccf8052cc012ae97babd299e62
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 94c88b5f6d741bb35af775b56b1bab273bbf5b1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715422"
 ---
 # <a name="-visual-basic-reference"></a>$ （Visual Basic 參考）
 
@@ -18,6 +18,6 @@ ms.locfileid: "50183434"
 
 如需字串插值的詳細資訊，請參閱[字串插值](../../programming-guide/language-features/strings/interpolated-strings.md)主題。
 
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 參考](../index.md)  
- [Visual Basic 的特殊字元](index.md)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 參考](../index.md)
+- [Visual Basic 的特殊字元](index.md)

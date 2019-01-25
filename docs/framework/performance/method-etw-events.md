@@ -7,11 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 578aed02d5d44ae94763b6a254420a4976320f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e18d64bdc67bfa5dce01c9125ee2e8585ab7db9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671950"
 ---
 # <a name="method-etw-events"></a>方法 ETW 事件
 <a name="top"></a> 這些事件會收集方法的特定資訊。 若要進行符號解析，需使用這些事件的承載。 此外，這些事件會提供實用資訊，例如呼叫方法的次數。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
 |引發事件的關鍵字|層級|  
 |-----------------------------------|-----------|  
 |`JITKeyword` (0x10) 執行階段提供者|告知性 (4)|  
-|`NGenKeyword` (0x10) 執行階段提供者|告知性 (4)|  
+|`NGenKeyword` (0x20) 執行階段提供者|告知性 (4)|  
 |`JitRundownKeyword` (0x10) 取消提供者|告知性 (4)|  
 |`NGENRundownKeyword` (0x20) 取消提供者|告知性 (4)|  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/04/2018
 |MethodStartAddress|win:UInt64|方法的起始位址。|  
 |MethodSize|win:UInt32|方法的大小。|  
 |MethodToken|win:UInt32|0 代表動態方法和 JIT Helper。|  
-|MethodFlags|win:UInt32|0x1：動態方法。<br /><br /> 0x2：泛型方法。<br /><br /> 0x4：JIT 編譯的程式碼方法 (否則為 NGEN 原生映像程式碼)。<br /><br /> 0x8：Helper 方法。|  
+|MethodFlags|win:UInt32|0x1:動態方法。<br /><br /> 0x2:泛型方法。<br /><br /> 0x4:JIT 編譯的程式碼方法 （否則為 NGEN 原生映像程式碼）。<br /><br /> 0x8:Helper 方法。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
  [回到頁首](#top)  
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/04/2018
   
  下表說明事件資訊。  
   
-|事件|事件識別碼|說明|  
+|事件|事件 ID|說明|  
 |-----------|--------------|----------------|  
 |`DCStartInit_V1`|147|在啟動取消期間、列舉開始之前傳送。|  
 |`DCStartComplete_V1`|145|在啟動取消期間、列舉結尾時傳送。|  
@@ -102,7 +103,7 @@ ms.lasthandoff: 05/04/2018
 |`JITKeyword` (0x10) 執行階段提供者|詳細資訊 (5)|  
 |`NGenKeyword` (0x20) 執行階段提供者|詳細資訊 (5)|  
 |`JitRundownKeyword` (0x10) 取消提供者|詳細資訊 (5)|  
-|`NGENRundownKeyword` (0x10) 取消提供者|詳細資訊 (5)|  
+|`NGENRundownKeyword` (0x20) 取消提供者|詳細資訊 (5)|  
   
  下表說明事件資訊。  
   
@@ -122,7 +123,7 @@ ms.lasthandoff: 05/04/2018
 |MethodStartAddress|win:UInt64|起始位址：|  
 |MethodSize|win:UInt32|方法的長度。|  
 |MethodToken|win:UInt32|0 代表動態方法和 JIT Helper。|  
-|MethodFlags|win:UInt32|0x1：動態方法。<br /><br /> 0x2：泛型方法。<br /><br /> 0x4：JIT 編譯方法 (否則由 NGen.exe 產生)<br /><br /> 0x8：Helper 方法。|  
+|MethodFlags|win:UInt32|0x1:動態方法。<br /><br /> 0x2:泛型方法。<br /><br /> 0x4:JIT 編譯方法 （否則由 NGen.exe 產生）<br /><br /> 0x8:Helper 方法。|  
 |MethodNameSpace|win:UnicodeString|與方法相關聯的完整命名空間名稱。|  
 |MethodName|win:UnicodeString|與方法相關聯的完整類別名稱。|  
 |MethodSignature|win:UnicodeString|方法的簽章 (以逗號分隔的類型名稱清單)。|  
@@ -139,7 +140,7 @@ ms.lasthandoff: 05/04/2018
 |`JITKeyword` (0x10) 執行階段提供者|詳細資訊 (5)|  
 |`NGenKeyword` (0x20) 執行階段提供者|詳細資訊 (5)|  
 |`JitRundownKeyword` (0x10) 取消提供者|詳細資訊 (5)|  
-|`NGENRundownKeyword` (0x10) 取消提供者|詳細資訊 (5)|  
+|`NGENRundownKeyword` (0x20) 取消提供者|詳細資訊 (5)|  
   
  下表說明事件資訊。  
   
@@ -160,5 +161,5 @@ ms.lasthandoff: 05/04/2018
 |MethodSignature|win:UnicodeString|方法的簽章 (以逗號分隔的類型名稱清單)。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
-## <a name="see-also"></a>另請參閱  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>另請參閱
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

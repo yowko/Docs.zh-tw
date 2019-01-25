@@ -1,21 +1,21 @@
 ---
-title: 在 Word 文件 (Visual Basic) 中尋找文字
+title: 尋找 Word 文件 (Visual Basic) 中的文字
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: d9f9b0066a1f9b1fbe25c52f5bc23721b9e813c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ab6d337fdf20684027cef3a41fe367bbedd4ee2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720859"
 ---
-# <a name="finding-text-in-word-documents-visual-basic"></a>在 Word 文件 (Visual Basic) 中尋找文字
+# <a name="finding-text-in-word-documents-visual-basic"></a>尋找 Word 文件 (Visual Basic) 中的文字
 本主題會延伸先前的查詢以進行實用的操作：在文件中尋找出現的所有字串。  
   
 ## <a name="example"></a>範例  
  此範例會處理 WordprocessingML 文件，以便在文件中尋找所有出現的特定文字片段。 如果要這樣做，我們會使用尋找字串 "Hello" 的查詢。 此範例在這個教學課程中，會在先前的範例上建置。 新的查詢會在以下程式碼的註解中叫出。  
   
- 建立此範例的來源文件的指示，請參閱[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 如需建立此範例中的來源文件的指示，請參閱[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
  這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
@@ -300,14 +300,14 @@ StyleName:Code ><
   
  當然，這個範例可以利用數種方式增強。 例如，我們可以使用規則運算式 (Regular Expression) 來搜尋文字；我們可以在特定的字典中逐一查看所有 Word 檔案等等。  
   
- 請注意，這個範例的執行方式與撰寫為單一查詢的執行方式約略相同。 由於每個查詢都會使用延遲、延後的方式實作，因此每個查詢在反覆運算前不會產生其結果。 如需有關執行與延遲評估的詳細資訊，請參閱[延後執行和 LINQ to XML (Visual Basic) 中的延遲評估](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。  
+ 請注意，這個範例的執行方式與撰寫為單一查詢的執行方式約略相同。 由於每個查詢都會使用延遲、延後的方式實作，因此每個查詢在反覆運算前不會產生其結果。 如需有關執行與延遲評估的詳細資訊，請參閱 <<c0> [ 延後執行和 LINQ to XML (Visual Basic) 中的延遲評估](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。  
   
 ## <a name="next-steps"></a>後續步驟  
  下一節提供有關 WordprocessingML 文件的詳細資訊：  
   
--   [Office 的詳細資料中開啟 XML WordprocessingML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+-   [詳細資料的 Office Open XML WordprocessingML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
-## <a name="see-also"></a>另請參閱  
- [教學課程： 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [使用純虛擬函式進行重構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
- [延後的執行與延遲評估 linq to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+## <a name="see-also"></a>另請參閱
+- [教學課程：管理 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [使用純虛擬函式進行重構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
+- [延後的執行和延遲評估，在 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

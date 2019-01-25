@@ -8,17 +8,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 1400329c-b598-465f-80f2-e3dabf044811
-ms.openlocfilehash: 4931f64a525f14ad5b0b69c582a81cd15d98e541
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e79b74dc8bb7d57125c27e17e8f52d607fffcf1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721927"
 ---
 # <a name="activate-function-wpf-unmanaged-api-reference"></a>啟用函式 (WPF Unmanaged API 參考)
-這個 API 支援的 Windows Presentation Foundation (WPF) 基礎結構，並不是直接從您的程式碼使用。  
+此 API 支援 Windows Presentation Foundation (WPF) 基礎結構，並不是直接從您的程式碼使用。  
   
- Windows Presentation Foundation (WPF) 基礎結構用於 windows 的管理。  
+ 使用 windows 管理的 Windows Presentation Foundation (WPF) 基礎結構。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,21 +31,21 @@ void Activate(
   
 #### <a name="parameters"></a>參數  
  pParameters  
- 指向視窗的啟動參數。  
+ 指向視窗的啟動參數的指標。  
   
  ppInner  
- 包含指標的單一項目緩衝區的位址指標<xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument>物件。  
+ 包含一個指向單一項目緩衝區的位址指標<xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument>物件。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[.NET Framework 系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[.NET Framework 系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **DLL:**  
   
- 在.NET Framework 3.0 和 3.5: PresentationHostDLL.dll  
+ 在.NET Framework 3.0 和 3.5:PresentationHostDLL.dll  
   
- 在.NET Framework 4 和更新版本： PresentationHost_v0400.dll  
+ 在.NET Framework 4 及更新版本：PresentationHost_v0400.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [WPF Unmanaged API 參考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a>另請參閱
+- [WPF Unmanaged API 參考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

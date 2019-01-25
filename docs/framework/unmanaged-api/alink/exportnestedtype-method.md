@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0afe4daa1c85f3e15addac55bdbe631d40e03f19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5c7ea671af5c6c725df136810bb8cf6610a6f83f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710335"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 方法
 指定巢狀型別為可匯出。 [ExportType 方法](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)也可以匯出巢狀類型，但這個方法會比較快。  
@@ -46,30 +46,30 @@ HRESULT ExportNestedType(
  若要從匯出的組件識別碼。  
   
  `FileToken`  
- 檔案的語彙基元或組件的檔案，它定義成可匯出的類型。  
+ 檔案的語彙基元或組件的檔案，定義成可匯出的型別。  
   
  `TypeToken`  
- 輸入成可匯出類型的語彙基元。  
+ 可匯出型別的型別語彙基元。  
   
  `ParentType`  
- 父類型的語彙基元。  
+ 父型別的權杖。  
   
  `pszTypename`  
- 若要匯出的完整限定的類型名稱。  
+ 若要匯出的完整型別名稱。  
   
  `dwFlags`  
- `ComType` 旗標，例如`tdPublic`或`tdNested`。 此值可能會傳遞至[DefineExportedType 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
+ `ComType` 這類旗標`tdPublic`或`tdNested`。 這個值可能會傳遞至[DefineExportedType 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
  `pType`  
- 接收匯出類型的語彙的基元。  
+ 接收匯出之類型的語彙基元。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則傳回 S_OK。  
+ 如果方法成功，則會傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
  需要 alink.h  
   
-## <a name="see-also"></a>另請參閱  
- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>另請參閱
+- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

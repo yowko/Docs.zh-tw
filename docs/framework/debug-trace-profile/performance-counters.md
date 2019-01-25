@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39472662cd26799e9adbbbd199129e2c83dd0d93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c9bf5d138be250d1dfeee012368153bac96b067
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672392"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的效能計數器
 本主題提供一份您可以在中找到的效能計數器[Windows 效能監視器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)。  
@@ -251,6 +251,6 @@ for (int i = 0; i < Array.Length; i++)
 |**Stack Walk Depth**|在最後一個執行階段程式碼存取安全性檢查期間顯示堆疊深度。 執行階段程式碼存取安全性檢查都是藉由查核堆疊來執行的。 這個計數器不是平均數；它僅顯示最後觀察到的值。|  
 |**Total Runtime Checks**|顯示自應用程式啟動後執行階段程式碼存取安全性檢查執行的總數。 當呼叫端要求特定權限時，會執行執行階段程式碼存取安全性檢查。 執行階段檢查在每次由呼叫端呼叫時進行，並且檢查目前呼叫端的執行緒堆疊。 搭配使用 **Stack Walk Depth** 計數器時，此計數器指出因安全性檢查而發生的效能降低。|  
   
-## <a name="see-also"></a>另請參閱  
- [效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)  
- [執行階段分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+## <a name="see-also"></a>另請參閱
+- [效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [執行階段分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 83bba35340a917b649369fc1eb7a01a2bc6a2188
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 293e7cd6449b8a35b5e42b4823a4412e0d6a3f14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628158"
 ---
 # <a name="mysettings-object"></a>My.Settings 物件
 提供屬性和方法，以存取應用程式的設定。  
@@ -49,8 +49,8 @@ ms.locfileid: "43861672"
 |---|---|  
 |讀取應用程式設定|[如何：在 Visual Basic 中讀取應用程式設定](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
 |變更使用者設定|[如何：在 Visual Basic 中變更使用者設定](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|保存使用者設定|[如何：保存 Visual Basic 中的使用者設定](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|建立使用者設定的屬性方格|[如何：在 Visual Basic 中建立使用者設定的屬性方格](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|保存使用者設定|[如何：在 Visual Basic 中的使用者設定可持續](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|建立使用者設定的屬性方格|[如何：建立 Visual Basic 中的使用者設定的屬性方格](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>範例  
  此範例會顯示 `Nickname` 設定的值。  
@@ -59,10 +59,10 @@ ms.locfileid: "43861672"
   
  為了確保此範例正常運作，您的應用程式必須具有 `String` 類型的 `Nickname` 設定。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Configuration.ApplicationSettingsBase>  
- [如何：在 Visual Basic 中讀取應用程式設定](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)  
- [如何：在 Visual Basic 中變更使用者設定](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)  
- [如何：保存 Visual Basic 中的使用者設定](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)  
- [如何：在 Visual Basic 中建立使用者設定的屬性方格](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)  
- [管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Configuration.ApplicationSettingsBase>
+- [如何：在 Visual Basic 中讀取應用程式設定](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [如何：在 Visual Basic 中變更使用者設定](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [如何：在 Visual Basic 中的使用者設定可持續](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [如何：建立 Visual Basic 中的使用者設定的屬性方格](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

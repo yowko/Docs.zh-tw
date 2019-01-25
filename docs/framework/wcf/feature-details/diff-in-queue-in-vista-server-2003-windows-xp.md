@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: d956a72c9413384176c10effefc0307b09744c4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bbae7e54160923e973ff6a8adb655587adf1002
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492020"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708827"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista、Windows Server 2003 和 Windows XP 之間的佇列功能差異
 本主題摘要說明在 Windows Communication Foundation (WCF) 佇列功能之間的差異[!INCLUDE[wv](../../../../includes/wv-md.md)]， [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，和[!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
@@ -30,11 +30,11 @@ ms.locfileid: "33492020"
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支援負認可，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 則否。 來自接收佇列管理員的負認可會造成傳送佇列管理員將拒絕的訊息放在寄不出的信件佇列中。 因此，`ReceiveErrorHandling.Reject` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 不可使用 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支援訊息屬性，持續計算嘗試傳遞訊息的次數。 這個中止計數屬性無法在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用。 WCF 會維護中止計數，在記憶體中，因此它是這個屬性可能不包含精確的值時的 Web 伺服陣列中的多個 WCF 服務讀取相同的訊息。  
+-   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支援訊息屬性，持續計算嘗試傳遞訊息的次數。 這個中止計數屬性無法在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用。 WCF 會維護記憶體中的中止計數，因此它是這個屬性可能不包含精確的值相同的訊息讀取的 Web 伺服陣列中的多個 WCF 服務時。  
   
 ## <a name="remote-transactional-read"></a>遠端異動式讀取  
  [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 MSMQ 支援遠端交易式讀取。 這允許從佇列讀取的應用程式裝載在與裝載佇列不同的電腦上。 這可以確保讓服務的伺服陣列從中央佇列讀取的能力，以增加系統的整體輸送量。 它也可以確保當讀取及處理訊息、異動復原以及訊息保留在佇列中以供日後處理時，是否會發生失敗。  
   
-## <a name="see-also"></a>另請參閱  
- [使用無效信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- [有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+## <a name="see-also"></a>另請參閱
+- [使用無效信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

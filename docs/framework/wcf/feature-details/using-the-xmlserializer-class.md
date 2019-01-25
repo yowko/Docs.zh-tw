@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: abb679971771f6bff5bd1c84ff744e2fcbb9c45a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 084a31ec008d1651bb66f7d59731a21d4ef0ece7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47188722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732852"
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 類別
 Windows Communication Foundation (WCF) 可以使用兩種不同的序列化技術，以將資料轉換成 XML，在用戶端與服務、 稱為序列化的程序之間傳輸的應用程式中。  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) 可以使用兩種不同的序列化技�
  當使用 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 時，不支援 <xref:System.Xml.Serialization.XmlSerializer> 屬性。  
   
 > [!NOTE]
->  在此情況下，<xref:System.Xml.Serialization.XmlSerializer>下列發行 WCF 之前的例外狀況，則會擲回: 「 在結構描述最上層宣告的項目不能有`maxOccurs`> 1。 經由使用 `XmlArray` 或 `XmlArrayItem`，而不使用 `XmlElementAttribute`，或使用 Wrapped 參數樣式，來提供 "more" 的包裝函式項目」。  
+>  在此情況下，<xref:System.Xml.Serialization.XmlSerializer>擲回下列例外狀況，發行 WCF 之前：「 在結構描述最上層宣告的項目不能有`maxOccurs`> 1。 經由使用 `XmlArray` 或 `XmlArrayItem`，而不使用 `XmlElementAttribute`，或使用 Wrapped 參數樣式，來提供 "more" 的包裝函式項目」。  
 >   
 >  如果您收到此類例外狀況，請查看這種情況是否適用。  
   
@@ -163,7 +163,7 @@ Windows Communication Foundation (WCF) 可以使用兩種不同的序列化技�
   
 -   所產生的結構描述可能不是有效的資料合約結構描述。 例如，您的結構描述提供者方法可能會產生結構描述，其中包含資料合約模型中不支援的 XML 屬性。 在這種情況中，您可以將結構描述匯入為 `IXmlSerializable` 型別。 此匯入模式不在預設情況下，但可以輕鬆地啟用 – 例如，使用`/importXmlTypes`命令列參數[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 在將詳細說明這[匯入結構描述產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。 請注意，您必須對您的型別執行個體直接使用 XML。 您可能也會考慮使用不同的序列化技術，支援範圍更廣的結構描述 – 請參閱有關使用 `XmlSerializer` 的主題。  
   
--   您可能會想要在 Proxy 中重複使用現有的 `IXmlSerializable` 型別，而非產生一個新的。 在這種情況中，「匯入結構描述以產生型別」主題中所說明的參照型別功能可用於指出要重複使用的型別。 這會對應至使用`/reference`svcutil.exe，指定包含要重複使用的類型的組件上切換。  
+-   您可能會想要在 Proxy 中重複使用現有的 `IXmlSerializable` 型別，而非產生一個新的。 在這種情況中，「匯入結構描述以產生型別」主題中所說明的參照型別功能可用於指出要重複使用的型別。 這會對應至在 svcutil.exe 上使用 `/reference` 參數，指定包含要重複使用之型別的組件。  
   
 ### <a name="xmlserializer-legacy-behavior"></a>XmlSerializer 舊版行為  
  在 .NET Framework 4.0 及更早版本中，XmlSerializer 會將 C# 程式碼寫入檔案中，以產生暫時的序列化組件。 接著將這個檔案編譯成組件。  這種行為有一些不良的後果，例如減慢序列化程式的啟動時間。 在 .NET Framework 4.5 中，這種行為已變更，不需要使用編譯器就可以產生組件。 某些開發人員可能會想要查看產生的 C# 程式碼。 您可以藉由下列組態指定使用這個舊版行為：  
@@ -205,11 +205,11 @@ Windows Communication Foundation (WCF) 可以使用兩種不同的序列化技�
 > [!NOTE]
 >  `<xmlSerializer useLegacySerializerGeneration="true"/>`參數僅適用於執行.NET Framework 4.5 或更新版本的電腦上。 上述`appSettings`方法適用於所有.NET Framework 版本。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.DataContractFormatAttribute>  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- <xref:System.ServiceModel.MessageHeaderArrayAttribute>  
- [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
- [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [如何：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動時間](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.DataContractFormatAttribute>
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- <xref:System.ServiceModel.MessageHeaderArrayAttribute>
+- [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [如何：改善啟動時間的 WCF 用戶端應用程式的使用 XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

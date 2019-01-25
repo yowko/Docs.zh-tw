@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5668d75c831710b4f077c325b40352a518ee2c96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3847c5e5704f4eef138bf8b3f7966e4ff66d8784
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716307"
 ---
 # <a name="iclrsyncmanagergetmonitorowner-method"></a>ICLRSyncManager::GetMonitorOwner 方法
-取得[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)擁有指定的 cookie 所識別的監視器的執行個體。  
+取得[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)擁有所指定的 cookie 識別監視器的執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,39 +38,39 @@ HRESULT GetMonitorOwner (
   
 #### <a name="parameters"></a>參數  
  `cookie`  
- [in]監視相關聯的 cookie。  
+ [in]與監視相關聯的 cookie。  
   
  `ppOwnerHostTask`  
- [out]指標`IHostTask`目前擁有的監視器或為 null 沒有工作是否擁有權。  
+ [out]指標`IHostTask`目前擁有監視器，則為 null 如果沒有工作具有擁有權。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|`GetMonitorOwner` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
+|HOST_E_CLRNOTAVAILABLE|不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重失敗。 方法會傳回 E_FAIL CLR 已不再可用的處理序內。 裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
+|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- 主機通常會呼叫`GetMonitorOwner`死結偵測機制的一部分。 Cookie 會與監視相關聯時就會建立使用呼叫[ihostsyncmanager:: Createmonitorevent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md)。  
+ 主機通常會呼叫`GetMonitorOwner`死結偵測機制的一部分。 建立藉由呼叫時，cookie 是與監視相關聯[ihostsyncmanager:: Createmonitorevent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md)。  
   
 > [!NOTE]
->  釋放基礎監視事件的呼叫可能封鎖，但不是會鎖死，如果此方法的呼叫位於目前作用中與該監視相關聯的 cookie。 當他們嘗試取得此監視，也可能會封鎖其他工作。  
+>  可能會封鎖呼叫釋放基準監視的事件，但不是會鎖死，如果此方法的呼叫正在目前作用中與該監視器相關聯的 cookie。 如果嘗試取得此監視，也可能會封鎖其他工作。  
   
- `GetMonitorOwner` 一律會立即傳回，而且可以隨時呼叫之後呼叫`CreateMonitorEvent`。 主機不需要等候工作在等候事件。  
+ `GetMonitorOwner` 一律會立即傳回，而且可以在呼叫之後任何時間呼叫`CreateMonitorEvent`。 主應用程式不需要等候，直到工作在等候事件。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [IHostSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [IHostSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

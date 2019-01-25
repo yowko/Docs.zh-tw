@@ -2,12 +2,12 @@
 title: 訊息記錄的安全性考量
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 5ed2529d82c3994a245d2132909cd1e88b6ed62d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731994"
 ---
 # <a name="security-concerns-for-message-logging"></a>訊息記錄的安全性考量
 此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。  
@@ -99,16 +99,16 @@ ms.locfileid: "50188803"
 ## <a name="events-triggered-by-message-logging"></a>由訊息記錄所觸發的事件  
  以下列出由訊息記錄所發出的所有事件。  
   
--   Message logging on：在組態中或透過 WMI 啟用訊息記錄時，會發出這個事件。 事件內容為「已開啟訊息記錄。 可能會以純文字記錄敏感資料，即使在網路傳輸時經過加密，例如，訊息本文」。  
+-   登入的訊息：在組態中，或透過 WMI 啟用訊息記錄時，就會發出此事件。 事件內容為「已開啟訊息記錄。 可能會以純文字記錄敏感資料，即使在網路傳輸時經過加密，例如，訊息本文」。  
   
--   Message logging off：在組態中或透過 WMI 停用訊息記錄時，會發出這個事件。 事件內容為「已關閉訊息記錄」。  
+-   訊息記錄功能：透過 WMI 停用訊息記錄時，就會發出此事件。 事件內容為「已關閉訊息記錄」。  
   
--   Log Known PII On：啟用已知 PII 記錄時，會發出這個事件。 發生這種情況時`enableLoggingKnownPii`屬性中`machineSettings`Machine.config 檔案的元素設定為`true`，而`logKnownPii`屬性`source`App.config 或 Web.config 檔案中的項目設為`true`.  
+-   登入的已知的 PII:啟用已知 pii 記錄時，就會發出此事件。 發生這種情況時`enableLoggingKnownPii`屬性中`machineSettings`Machine.config 檔案的元素設定為`true`，而`logKnownPii`屬性`source`App.config 或 Web.config 檔案中的項目設為`true`.  
   
--   Log Known PII Not Allowed：不允許記錄已知 PII 時，會發出這個事件。 發生這種情況時`logKnownPii`的屬性`source`App.config 或 Web.config 檔案中的項目設為`true`，但`enableLoggingKnownPii`屬性中`machineSettings`Machine.config 檔案的項目設為`false`. 不會有例外狀況擲回。  
+-   記錄已知的 PII，不允許：不允許記錄已知 PII 時，就會發出此事件。 發生這種情況時`logKnownPii`的屬性`source`App.config 或 Web.config 檔案中的項目設為`true`，但`enableLoggingKnownPii`屬性中`machineSettings`Machine.config 檔案的項目設為`false`. 不會有例外狀況擲回。  
   
  您可以在 Windows 的 [事件檢視器] 工具中檢視這些事件。 如需詳細資訊，請參閱[事件記錄](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [訊息記錄](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [追蹤的安全性考量及實用秘訣](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+## <a name="see-also"></a>另請參閱
+- [訊息記錄](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [追蹤的安全性考量及實用秘訣](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

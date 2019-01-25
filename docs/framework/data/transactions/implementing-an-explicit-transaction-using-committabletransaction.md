@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 1edcdefeaafbee3cfbc0810a47e64f38f9f97ddc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 078102da95222d45bec82269edf1eb8e40866408
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713127"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>使用 CommittableTransaction 實作明確交易
 <xref:System.Transactions.CommittableTransaction> 類別為應用程式提供使用交易的明確方式，而非隱含地使用 <xref:System.Transactions.TransactionScope> 類別。 這個方法對想要跨多個函式呼叫或多個執行緒呼叫來使用相同交易的應用程式也很有用處。 與 <xref:System.Transactions.TransactionScope> 類別不同的是，應用程式寫入器需要特別呼叫 <xref:System.Transactions.CommittableTransaction.Commit%2A> 和 <xref:System.Transactions.Transaction.Rollback%2A> 方法，才能認可或中止交易。  
@@ -43,7 +43,7 @@ ms.locfileid: "33365679"
   
  您可以呼叫 <xref:System.Transactions.CommittableTransaction.BeginCommit%2A>，將認可停頓分配給來自執行緒集區的執行緒。 您也可以呼叫 <xref:System.Transactions.CommittableTransaction.EndCommit%2A> 來判斷交易是否已實際認可。 如果交易因為某種原因而失敗，則 <xref:System.Transactions.CommittableTransaction.EndCommit%2A> 會引發交易例外狀況。 如果交易在呼叫 <xref:System.Transactions.CommittableTransaction.EndCommit%2A> 時尚未認可，則呼叫端會在交易認可或中止之前一直保持封鎖狀態。  
   
- 進行非同步認可的最簡便方式，就是提供可在完成認可時加以呼叫的回呼方法。 但是，您必須在用於叫用呼叫的原始 <xref:System.Transactions.CommittableTransaction.EndCommit%2A> 物件上呼叫 <xref:System.Transactions.CommittableTransaction> 方法。 若要取得該物件，您可以向下轉型*IAsyncResult*回呼方法參數，因為<xref:System.Transactions.CommittableTransaction>類別會實作<xref:System.IAsyncResult>類別。  
+ 進行非同步認可的最簡便方式，就是提供可在完成認可時加以呼叫的回呼方法。 但是，您必須在用於叫用呼叫的原始 <xref:System.Transactions.CommittableTransaction.EndCommit%2A> 物件上呼叫 <xref:System.Transactions.CommittableTransaction> 方法。 若要取得該物件，您可以向下轉型*IAsyncResult*參數的回呼方法中，由於<xref:System.Transactions.CommittableTransaction>類別會實作<xref:System.IAsyncResult>類別。  
   
  下列範例示範如何完成非同步認可。  
   
@@ -85,6 +85,6 @@ void OnCommitted(IAsyncResult asyncResult)
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [使用異動範圍實作隱含異動](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
- [交易處理](../../../../docs/framework/data/transactions/index.md)
+## <a name="see-also"></a>另請參閱
+- [使用異動範圍實作隱含異動](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
+- [交易處理](../../../../docs/framework/data/transactions/index.md)

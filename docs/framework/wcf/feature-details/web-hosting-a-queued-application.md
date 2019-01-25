@@ -2,12 +2,12 @@
 title: 以 Web 裝載佇列應用程式
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: aa50b3b66230930f9553d6f0238b0a5f9178f7a5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 957a97c263f44302b66b6fb57b8330f63a178fa1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700204"
 ---
 # <a name="web-hosting-a-queued-application"></a>以 Web 裝載佇列應用程式
 Windows Process Activation Service (WAS) 管理啟動和包含該主機的 Windows Communication Foundation (WCF) 服務的應用程式的工作者處理序的存留期。 WAS 處理序模型會藉由移除 HTTP 上的相依性，將 HTTP 伺服器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 處理序模型一般化。 這可讓 WCF 服務使用 HTTP 和非 HTTP 通訊協定，例如 net.msmq 和 msmq.formatname，在裝載環境中支援訊息型啟用，並可讓您裝載大量應用程式，在指定的電腦。  
@@ -41,6 +41,6 @@ Windows Process Activation Service (WAS) 管理啟動和包含該主機的 Windo
 ### <a name="subqueue-and-system-queue-caveat"></a>子佇列和系統佇列警告  
  WAS 裝載的應用程式無法根據系統佇列中的訊息啟動，例如整個系統寄不出的信件佇列，或是子佇列，例如有害子佇列。 這是這個產品版本的限制。  
   
-## <a name="see-also"></a>另請參閱  
- [有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- [服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+## <a name="see-also"></a>另請參閱
+- [有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

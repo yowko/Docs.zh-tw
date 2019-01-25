@@ -2,12 +2,12 @@
 title: 關鍵字參考
 description: 尋找所有的相關資訊的連結F#語言關鍵字。
 ms.date: 05/16/2016
-ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579832"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857901"
 ---
 # <a name="keyword-reference"></a>關鍵字參考
 
@@ -73,7 +73,7 @@ ms.locfileid: "54579832"
 |`return!`|[計算運算式](computation-expressions.md)<br /><br />[非同步工作流程](asynchronous-workflows.md)|用來表示計算運算式，評估時，提供包含的計算運算式的結果。|
 |`select`|[查詢運算式](query-expressions.md)|用於查詢運算式，以指定哪些欄位或擷取的資料行。 請注意，這是內容關鍵字，這表示它不是實際的保留的字，而且它只會像適當的內容中的關鍵字。|
 |`static`|[成員](members/index.md)|用來指出方法或屬性，可以呼叫沒有類型的執行個體或共用類型的所有執行個體之間的值成員。|
-|`struct`|[結構](structures.md)<br /><br />[條件約束](generics/constraints.md)|用來宣告結構類型。<br /><br />也用於泛型參數條件約束。<br /><br />用於 OCaml 模組定義中的相容性。|
+|`struct`|[結構](structures.md)<br /><br /> [元組](tuples.md)<br/><br/>[條件約束](generics/constraints.md)|用來宣告結構類型。<br /><br/>用來指定的結構元組。<br/><br />也用於泛型參數條件約束。<br /><br />用於 OCaml 模組定義中的相容性。|
 |`then`|[條件運算式：`if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[建構函式](members/constructors.md)|條件式運算式中使用。<br /><br />也用來在物件建構後執行副作用。|
 |`to`|[迴圈：`for...to` 運算式](loops-for-to-expression.md)|用於`for`表示某個範圍的迴圈。|
 |`true`|[基本類型](primitive-types.md)|做為布林常值。|

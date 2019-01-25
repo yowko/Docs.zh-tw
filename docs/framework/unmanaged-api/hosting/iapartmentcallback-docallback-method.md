@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba1dc2a1ec8b0b3b5ec25036cab6362237efe98f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6f64d554ee0bcd93d30dd617177c4e1e33e57aa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648858"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a>IApartmentCallback::DoCallback 方法
-執行指定的函式在 apartment 中。  
+執行指定的函式中的 apartment。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,19 +38,19 @@ HRESULT _stdcall DoCallback(
   
 #### <a name="parameters"></a>參數  
  `pFunc`  
- [in]要在 apartment 中執行的函式指標。  
+ [in]要在 apartment 內執行的函式指標。  
   
  `pData`  
  [in]函式的引數指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IApartmentCallback 介面](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IApartmentCallback 介面](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-interface.md)
