@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7996d5800e99d8e6161e24f34604aff3e4e906bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c923b54f791cd8ff794538d4687ca0329e62c87e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547023"
 ---
 # <a name="icordebugnativeframe-interface1"></a>ICorDebugNativeFrame Interface1
 ICorDebugFrame 用於原生框架的特殊的實作。  
@@ -30,15 +30,15 @@ ICorDebugFrame 用於原生框架的特殊的實作。
   
 |方法|描述|  
 |------------|-----------------|  
-|[CanSetIP 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-cansetip-method.md)|取得值，指出是否安全指令指標設在原生程式碼中指定的位移位置。|  
-|[GetIP 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getip-method.md)|取得原生程式碼中堆疊框架的位移。|  
-|[GetLocalDoubleRegisterValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocaldoubleregistervalue-method.md)|取得表示的引數或兩個原生框架記憶體暫存器中儲存的本機變數的值 ICorDebugValue 指標。|  
-|[GetLocalMemoryRegisterValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalmemoryregistervalue-method.md)|取得指標`ICorDebugValue`，代表本機變數，其中的低位元會儲存在指定的暫存器和高的位元會儲存在指定的記憶體位址的值。|  
-|[GetLocalMemoryValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalmemoryvalue-method.md)|取得指標`ICorDebugValue`表示儲存在指定的記憶體位址變數的值。|  
-|[GetLocalRegisterMemoryValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalregistermemoryvalue-method.md)|取得指標`ICorDebugValue`，代表本機變數，其中高的位元會儲存在指定的暫存器和低位元會儲存在指定的記憶體位址的值|  
-|[GetLocalRegisterValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalregistervalue-method.md)|取得指標`ICorDebugValue`表示的引數，或是儲存在指定的原生暫存器中的本機變數的值。|  
-|[GetRegisterSet 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getregisterset-method.md)|取得指標[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) ，代表這個設定的暫存器`ICorDebugNativeFrame`。|  
-|[SetIP 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)|將指定的位移位置的指令指標原生程式碼。|  
+|[CanSetIP 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-cansetip-method.md)|取得值，指出它是否安全地在機器碼中設定指令指標至指定的位移位置。|  
+|[GetIP 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getip-method.md)|取得原生程式碼的堆疊框架的位移。|  
+|[GetLocalDoubleRegisterValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocaldoubleregistervalue-method.md)|取得表示引數或儲存在兩個記憶體暫存器的原生框架中的本機變數的值 ICorDebugValue 的指標。|  
+|[GetLocalMemoryRegisterValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalmemoryregistervalue-method.md)|取得指標`ICorDebugValue`，代表本機變數，其中的低位元會儲存在指定的暫存器，以及高的位元會儲存在指定的記憶體位址的值。|  
+|[GetLocalMemoryValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalmemoryvalue-method.md)|取得指標`ICorDebugValue`，代表儲存在指定的記憶體位址的本機變數的值。|  
+|[GetLocalRegisterMemoryValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalregistermemoryvalue-method.md)|取得指標`ICorDebugValue`，代表本機變數，其中的高的位元會儲存在指定的暫存器，和低的位元會儲存在指定的記憶體位址的值|  
+|[GetLocalRegisterValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalregistervalue-method.md)|取得指標`ICorDebugValue`表示引數或儲存在指定的原生暫存器的本機變數的值。|  
+|[GetRegisterSet 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getregisterset-method.md)|取得指標[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) ，表示此設定的暫存器`ICorDebugNativeFrame`。|  
+|[SetIP 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)|指令指標設定為原生程式碼中指定的位移位置。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -46,13 +46,13 @@ ICorDebugFrame 用於原生框架的特殊的實作。
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

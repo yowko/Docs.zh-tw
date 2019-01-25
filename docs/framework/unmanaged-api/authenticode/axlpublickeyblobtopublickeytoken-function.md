@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56333165d179abd79e82f1416342a2700029eb12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2ac147596794f748d3160cdbd34b9f306dfdb379
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604414"
 ---
 # <a name="axlpublickeyblobtopublickeytoken-function"></a>_AxlPublicKeyBlobToPublicKeyToken 函式
 從 CSP PUBLICKEYBLOB 格式運算強式名稱公開金鑰語彙基元。  
@@ -39,5 +39,5 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
 ## <a name="return-value"></a>傳回值  
  若函式成功則傳回 `S_OK`：反之則傳回 `S_FALSE`。  
   
-## <a name="see-also"></a>另請參閱  
- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>另請參閱
+- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

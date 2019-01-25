@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：使用對齊線排列 Windows Form 上的控制項
+title: 逐步解說：使用對齊線的 Windows Form 上排列控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 170b79f03515ab371f7013c267b28ba85dafd0f5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2a2fd47c3ea2e675292c040f08b981a394e8221b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543220"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>逐步解說：使用對齊線排列 Windows Form 上的控制項
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>逐步解說：使用對齊線的 Windows Form 上排列控制項
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 Windows Form 設計工具會提供您許多版面配置工具，來完成這項作業。 其中一個最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
   
  對齊線所顯示的精確對齊控制項與其他控制項的位置。 也會顯示您的 Windows 使用者介面指導方針所指定的控制項之間的邊界的建議的距離。 如需詳細資訊，請參閱 <<c0> [ 使用者介面設計和開發](https://go.microsoft.com/FWLink/?LinkId=83878)。  
@@ -64,7 +64,7 @@ ms.locfileid: "47112909"
   
 #### <a name="to-arrange-controls-using-snaplines"></a>使用對齊線排列控制項  
   
-1.  拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至表單。  
+1.  從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至表單。  
   
 2.  移動<xref:System.Windows.Forms.Button>表單的右下角的控制項。 請注意，會顯示對齊線<xref:System.Windows.Forms.Button>控制方法的下框線和右框線的表單。 這些對齊線會顯示控制項的框線和表單的建議的距離。  
   
@@ -92,11 +92,11 @@ ms.locfileid: "47112909"
 > [!NOTE]
 >  如果表單的<xref:System.Windows.Forms.Control.Padding%2A>屬性設定為 0,0,0,0、 Windows Form 設計工具，可讓表單遮蔽<xref:System.Windows.Forms.Control.Padding%2A>9,9,9,9 的值。 若要覆寫此行為，請指派 0,0,0,0 以外的值。  
   
-1.  值變更<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Margin%2A>屬性來擴充<xref:System.Windows.Forms.Control.Margin%2A>中的項目**屬性**視窗和設定<xref:System.Windows.Forms.Padding.All%2A>屬性設為 0。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 以配置出 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)。  
+1.  值變更<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Margin%2A>屬性來擴充<xref:System.Windows.Forms.Control.Margin%2A>中的項目**屬性**視窗和設定<xref:System.Windows.Forms.Padding.All%2A>屬性設為 0。 如需詳細資訊，請參閱[逐步解說：配置 Windows Form 控制項與邊框距離、 邊界和 AutoSize 屬性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)。  
   
 2.  移動<xref:System.Windows.Forms.Button>接近直到對齊線出現在表單的右框線的控制項。 這個距離現在指定表單的值來<xref:System.Windows.Forms.Control.Padding%2A>屬性。  
   
-3.  拖曳<xref:System.Windows.Forms.GroupBox>控制項從**工具箱**拖曳至表單。  
+3.  從 [工具箱] <xref:System.Windows.Forms.GroupBox>**將** 控制項拖曳至表單。  
   
 4.  值變更<xref:System.Windows.Forms.GroupBox>控制項的<xref:System.Windows.Forms.Control.Padding%2A>展開屬性<xref:System.Windows.Forms.Control.Padding%2A>中的項目**屬性**視窗和設定<xref:System.Windows.Forms.Padding.All%2A>為 10 的屬性。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47112909"
   
 1.  選取您的表單上控制項的兩個。 移動選取項目，並注意會出現在您的選取項目和其他控制項之間的對齊線。  
   
-2.  拖曳<xref:System.Windows.Forms.GroupBox>控制項從**工具箱**拖曳至表單。  
+2.  從 [工具箱] <xref:System.Windows.Forms.GroupBox>**將** 控制項拖曳至表單。  
   
 3.  拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**成<xref:System.Windows.Forms.GroupBox>控制項。  
   
@@ -152,9 +152,9 @@ ms.locfileid: "47112909"
   
 #### <a name="to-resize-a-control-using-snaplines"></a>若要調整大小的控制項使用對齊線  
   
-1.  拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至表單。  
+1.  從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至表單。  
   
-2.  調整大小<xref:System.Windows.Forms.Button>角調整大小控點，並拖曳抓取其中的控制項。 如需詳細資訊，請參閱 <<c0> [ 如何： 調整 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)。  
+2.  調整大小<xref:System.Windows.Forms.Button>角調整大小控點，並拖曳抓取其中的控制項。 如需詳細資訊，請參閱[How to:調整 Windows Forms 上的控制項的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)。  
   
 3.  拖曳調整大小控點，直到其中一個<xref:System.Windows.Forms.Button>與另一個控制項對齊控制項的框線。 請注意，對齊線隨即出現。 也請注意，調整大小控點會貼齊至對齊線所指定的位置。  
   
@@ -165,9 +165,9 @@ ms.locfileid: "47112909"
   
 #### <a name="to-align-a-label-to-a-controls-text"></a>若要對齊控制項的文字標籤  
   
-1.  拖曳<xref:System.Windows.Forms.TextBox>控制項從**工具箱**拖曳至表單。 當您卸除<xref:System.Windows.Forms.TextBox>控制項拖曳至表單中，按一下智慧標籤圖像 （glyph），然後選取**將文字設定為 textBox1**選項。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 執行常見工作使用智慧標籤在 Windows Form 控制項](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)。  
+1.  從 [工具箱] <xref:System.Windows.Forms.TextBox>**將** 控制項拖曳至表單。 當您卸除<xref:System.Windows.Forms.TextBox>控制項拖曳至表單中，按一下智慧標籤圖像 （glyph），然後選取**將文字設定為 textBox1**選項。 如需詳細資訊，請參閱[逐步解說：在 Windows 上使用智慧標籤執行一般工作 Form 控制項](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)。  
   
-2.  拖曳<xref:System.Windows.Forms.Label>控制項從**工具箱**拖曳至表單。  
+2.  從 [工具箱] <xref:System.Windows.Forms.Label>**將** 控制項拖曳至表單。  
   
 3.  變更 <xref:System.Windows.Forms.Label> 控制項的 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性值為 `true`。 請注意控制項的框線會調整以符合顯示文字。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "47112909"
   
 #### <a name="to-use-snaplines-with-keyboard-navigation"></a>若要使用鍵盤瀏覽可以使用對齊線  
   
-1.  拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至表單。 請將它放在表單的左上角。  
+1.  從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至表單。 請將它放在表單的左上角。  
   
 2.  按下 CTRL + 向下箭號。 請注意，控制項在表單下移至第一個可用的水平對齊位置。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "47112909"
   
 #### <a name="to-selectively-disable-snaplines"></a>若要選擇性地停用對齊線  
   
-1.  拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。  
+1.  從 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**將** 控制項拖曳至表單。  
   
 2.  在 [工具箱] <xref:System.Windows.Forms.Button>**中按兩下**控制項圖示。 請注意，新的按鈕控制項出現在<xref:System.Windows.Forms.TableLayoutPanel>控制項的第一個資料格。  
   
@@ -237,11 +237,11 @@ ms.locfileid: "47112909"
   
 -   建立的資料行<xref:System.Windows.Forms.TextBox>控制項和對應的資料行的<xref:System.Windows.Forms.Label>控制項。 設定的值<xref:System.Windows.Forms.Label>控制項的<xref:System.Windows.Forms.Control.AutoSize%2A>屬性設`true`。 使用對齊線來移動<xref:System.Windows.Forms.Label>控制項，其顯示的文字中的文字與對齊<xref:System.Windows.Forms.TextBox>控制項。  
   
- Windows 使用者介面設計的相關資訊，請參閱本書*Microsoft Windows 使用者經驗、 使用者介面開發人員和設計人員的正式方針*Redmond，WA: Microsoft Press，1999年。 (USBN: 0-7356 0566年-1)。  
+ Windows 使用者介面設計的相關資訊，請參閱本書*Microsoft Windows 使用者經驗、 使用者介面開發人員和設計人員的正式方針*Redmond，WA:Microsoft Press，1999年。 (USBN:0-7356-0566-1).  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.Design.Behavior.SnapLine>  
- [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.Design.Behavior.SnapLine>
+- [逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [逐步解說：配置 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)

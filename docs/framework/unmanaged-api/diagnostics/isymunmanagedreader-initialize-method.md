@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d141d23f02b2abc92e3d4455aebe1a4057b6bb85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee68533e95deb4b6efaa9226c047599f233b3954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494752"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize 方法
-初始化這個讀取器會與，以及檔案名稱的模組相關聯的中繼資料匯入工具介面的符號讀取器。  
+初始化符號讀取器，這個讀取器會與，以及檔案名稱的模組相關聯的中繼資料匯入工具介面。  
   
 > [!NOTE]
->  這個方法可以只一次，而且必須在任何其他的讀取器方法之前呼叫。  
+>  這個方法可以只呼叫一次，並必須在任何其他的讀取器方法之前呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,10 +42,10 @@ HRESULT Initialize (
   
 #### <a name="parameters"></a>參數  
  `importer`  
- [in]與這個讀取器將相關聯的中繼資料匯入工具介面。  
+ [in]與這個讀取器將會在相關聯的中繼資料匯入工具介面。  
   
  `filename`  
- [in]模組檔案名稱。 您可以使用`pIStream`參數改為。  
+ [in]模組的檔案名稱。 您可以使用`pIStream`參數改。  
   
  `searchPath`  
  [in]要搜尋的路徑。 這是選擇性參數。  
@@ -54,13 +54,13 @@ HRESULT Initialize (
  [in]檔案資料流，做為檔案名稱參數的替代方案。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="remarks"></a>備註  
- 您必須指定的其中之一`filename`或`pIStream`參數不可同時為兩者。 `searchPath` 是選擇性參數。  
+ 您必須指定的其中之一`filename`或`pIStream`不可同時為兩者的參數。 `searchPath` 是選擇性參數。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

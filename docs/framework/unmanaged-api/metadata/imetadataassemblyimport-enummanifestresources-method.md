@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 707e482a6952ee1266950dc181fbc85e5d6ef398
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0cffafe9c8eac03d31c2b0b45dd65ed2c5b28861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722632"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources 方法
-取得列舉值的指標，在目前的組件資訊清單所參考的資源。  
+取得列舉值的指標，在目前的組件資訊清單中所參考的資源。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,10 +46,10 @@ HRESULT EnumManifestResources (
  [out]用來儲存陣列`mdManifestResource`中繼資料語彙基元。  
   
  `cMax`  
- [in]最大數目`mdManifestResource`可以放入權杖`rManifestResources`。  
+ [in]最大數目`mdManifestResource`語彙基元可以放入`rManifestResources`。  
   
  `pcTokens`  
- [out]數目`mdManifestResource`語彙基元實際置於`rManifestResources`。  
+ [out]數目`mdManifestResource`語彙基元實際上置於`rManifestResources`。  
   
 ## <a name="return-value"></a>傳回值  
   
@@ -59,13 +59,13 @@ HRESULT EnumManifestResources (
 |`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcTokens`設為零。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

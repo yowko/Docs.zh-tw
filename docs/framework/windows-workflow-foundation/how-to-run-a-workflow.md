@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3b2081cee307e80396a9af4b9cfdbdea001113e6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e609c2b1a24ba01bf23226187b6d87e56395ff99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530398"
 ---
 # <a name="how-to-run-a-workflow"></a>HOW TO：執行工作流程
-本主題將延續 Windows Workflow Foundation 快速入門教學課程，並討論如何建立工作流程主機以及執行上一個 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 主題中定義的工作流程。
+本主題將延續 Windows Workflow Foundation 快速入門教學課程，並討論如何建立工作流程主機和執行在先前定義的工作流程[How to:建立工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)主題。
 
 > [!NOTE]
->  「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成此主題，您必須先完成 [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) 和 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)。
+>  「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成此主題，您必須先完成[How to:Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)和[How to:建立工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)。
 
 > [!NOTE]
->  若要下載教學課程的完整的版本，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  若要下載教學課程的完整版本，請參閱 [Windows Workflow Foundation (WF45) - 快速入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ### <a name="to-create-the-workflow-host-project"></a>建立工作流程主機專案  
   
-1.  從先前開啟的方案[How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)使用 Visual Studio 2012 的主題。  
+1.  從先前開啟的方案[How to:建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)使用 Visual Studio 2012 的主題。  
   
 2.  在 [ **方案總管** ] 中，以滑鼠右鍵按一下 [ **WF45GettingStartedTutorial** ] 方案，並依序選取 [ **加入**]、[ **新增專案**]。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48836931"
      使用下列基本 <xref:System.Activities.WorkflowInvoker> 裝載程式碼來取代使用 <xref:System.Activities.WorkflowApplication> 的程式碼字行。 這個範例裝載程式碼會示範裝載及叫用工作流程的基本步驟，但是尚未包含從這個主題成功執行工作流程的功能。 在下列步驟中，會修改此基本程式碼，並加入其他功能，直到應用程式完成為止。
 
     > [!NOTE]
-    >  請將這些範例中的 `Workflow1` 換成 `FlowchartNumberGuessWorkflow`]、[ `SequentialNumberGuessWorkflow`或 `StateMachineNumberGuessWorkflow`，視您在前面 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 步驟中完成的工作流程而定。 如果您不替換 `Workflow1` ，那麼在您嘗試建置或執行工作流程時，會發生建置錯誤。
+    >  請取代`Workflow1`在這些範例中使用`FlowchartNumberGuessWorkflow`， `SequentialNumberGuessWorkflow`，或`StateMachineNumberGuessWorkflow`，取決於您在上一個完成的工作流程[How to:建立工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)步驟。 如果您不替換 `Workflow1` ，那麼在您嘗試建置或執行工作流程時，會發生建置錯誤。
 
      [!code-csharp[CFX_WF_GettingStarted#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/extrasnippets.cs#4)]
      [!code-vb[CFX_WF_GettingStarted#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/extrasnippets.vb#4)]
@@ -94,7 +94,7 @@ ms.locfileid: "48836931"
 2.  以下列用來建立及傳遞參數字典至所建立之工作流程的程式碼，取代建立新 <xref:System.Activities.WorkflowApplication> 的程式碼字行。
 
     > [!NOTE]
-    >  請將這些範例中的 `Workflow1` 換成 `FlowchartNumberGuessWorkflow`]、[ `SequentialNumberGuessWorkflow`或 `StateMachineNumberGuessWorkflow`，視您在前面 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 步驟中完成的工作流程而定。 如果您不替換 `Workflow1` ，那麼在您嘗試建置或執行工作流程時，會發生建置錯誤。
+    >  請取代`Workflow1`在這些範例中使用`FlowchartNumberGuessWorkflow`， `SequentialNumberGuessWorkflow`，或`StateMachineNumberGuessWorkflow`，取決於您在上一個完成的工作流程[How to:建立工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)步驟。 如果您不替換 `Workflow1` ，那麼在您嘗試建置或執行工作流程時，會發生建置錯誤。
 
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
@@ -148,13 +148,13 @@ ms.locfileid: "48836931"
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
 
-     如需如何將持續性加入工作流程應用程式的指示，請參閱下一個主題： [How to: Create and Run a Long Running Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)。
+     如需有關如何將持續性工作流程應用程式中，加入指示，請參閱下一個主題中， [How to:建立及執行長時間執行的工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)。
 
 ## <a name="example"></a>範例
  以下範例是 `Main` 方法的完整程式碼清單。
 
 > [!NOTE]
->  請將這些範例中的 `Workflow1` 換成 `FlowchartNumberGuessWorkflow`]、[ `SequentialNumberGuessWorkflow`或 `StateMachineNumberGuessWorkflow`，視您在前面 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 步驟中完成的工作流程而定。 如果您不替換 `Workflow1` ，那麼在您嘗試建置或執行工作流程時，會發生建置錯誤。
+>  請取代`Workflow1`在這些範例中使用`FlowchartNumberGuessWorkflow`， `SequentialNumberGuessWorkflow`，或`StateMachineNumberGuessWorkflow`，取決於您在上一個完成的工作流程[How to:建立工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)步驟。 如果您不替換 `Workflow1` ，那麼在您嘗試建置或執行工作流程時，會發生建置錯誤。
 
  [!code-csharp[CFX_WF_GettingStarted#12](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#12)]
  [!code-vb[CFX_WF_GettingStarted#12](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#12)]

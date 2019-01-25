@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: 63f3826215f24a4bab6d84709c2f9da6a9c8f4f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c58a5ebc033f75413a975e6b1de4ed71d23a141b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548478"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation 異動概觀
 異動提供了將一組動作或作業分組為單一個不可分割的執行單位。 交易就是具有下列屬性的作業集合：  
@@ -26,20 +26,20 @@ ms.locfileid: "33498552"
   
  Windows Communication Foundation (WCF) 提供一組豐富的功能，可讓您在 Web 服務應用程式中建立分散式的交易。  
   
- WCF 實作 Ws-atomictransaction (WS-AT) 通訊協定，可讓交易流動互通的應用程式，例如使用協力廠商技術建置的可互通 Web 服務的 WCF 應用程式的支援。 WCF 同時也實作 OLE Transactions 通訊協定，可在案例中，您不需要 interop 功能來啟用交易流程支援。  
+ WCF 實作 WS-AtomicTransaction (WS-AT) 通訊協定，可讓 WCF 應用程式，將交易傳送至可互通的應用程式，例如使用協力廠商技術建置互通的 Web 服務的支援。 此外，WCF 也會實作 OLE Transactions 通訊協定，可用在案例中，您不需要 interop 功能來啟用交易流程的支援。  
   
- 您可以使用應用程式組態檔，將繫結程序設定成啟用或停用異動流程，以及設定繫結程序上所需要的異動通訊協定。 此外，您也可以使用組態檔設定服務層級的異動逾時。 如需詳細資訊，請參閱[啟用交易流程](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)。  
+ 您可以使用應用程式組態檔，將繫結程序設定成啟用或停用異動流程，以及設定繫結程序上所需要的異動通訊協定。 此外，您也可以使用組態檔設定服務層級的異動逾時。 如需詳細資訊，請參閱 <<c0> [ 啟用交易流程](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)。  
   
- <xref:System.ServiceModel> 命名空間 (Namespace) 中的交易屬性可讓您完成下列工作：  
+ <xref:System.ServiceModel> 命名空間 (Namespace) 中的異動屬性可讓您完成下列工作：  
   
 -   使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性，以設定交易逾時和隔離等級的過濾。  
   
 -   使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性，即可啟用交易功能並設定交易完成行為。  
   
--   使用合約方法上的 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性，即可要求、允許或拒絕交易流程。  
+-   使用合約方法上的 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性，即可要求、允許或拒絕異動流程。  
   
- 如需詳細資訊，請參閱[ServiceModel 交易屬性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。  
+ 如需詳細資訊，請參閱 < [ServiceModel 異動屬性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [ServiceModel 異動屬性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
- [啟用異動流程](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+## <a name="see-also"></a>另請參閱
+- [ServiceModel 異動屬性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
+- [啟用異動流程](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)

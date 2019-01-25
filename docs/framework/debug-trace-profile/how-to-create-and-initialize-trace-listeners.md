@@ -1,5 +1,5 @@
 ---
-title: 如何：建立和初始設定追蹤接聽項
+title: HOW TO：建立和初始化追蹤接聽項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 943621b953fbe158b3be6ae0695ba7692b7c517f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee0ad6b34e30b03ec42ff793e37d0e13b448cbfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583099"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>如何：建立和初始設定追蹤接聽項
+# <a name="how-to-create-and-initialize-trace-listeners"></a>HOW TO：建立和初始化追蹤接聽項
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 類別會將訊息傳送給名稱為接聽程式的物件，以接收和處理這些訊息。 <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType> 就是這類接聽程式之一，其會在啟用追蹤或偵錯時自動建立與初始化。 如果您要將 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.Debug> 輸出導向任何其他來源，您必須建立和初始化其他的追蹤接聽程式。  
   
  您建立的接聽程式應反映出您應用程式的需求。 例如，如果您想要取得所有追蹤輸出的文字記錄，可建立 <xref:System.Diagnostics.TextWriterTraceListener> 接聽程式，以在啟用時，將所有輸出寫入新的文字檔。 反之，如果您只想在應用程式執行期間檢視輸出，可建立 <xref:System.Diagnostics.ConsoleTraceListener> 接聽程式，將所有輸出導向主控台視窗。 <xref:System.Diagnostics.EventLogTraceListener> 可以將追蹤輸出導向事件記錄檔。 如需詳細資訊，請參閱[追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)。  
@@ -93,8 +94,8 @@ ms.lasthandoff: 05/04/2018
     myListener.Flush();  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [如何：將追蹤陳述式新增至應用程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>另請參閱
+- [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f4c8e9a7ce5eddde18c1266cb724d5c3b0d5f41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bbeebc766d6e8048843a74691addd1dee90623ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621694"
 ---
 # <a name="corprfgcgenerationrange-structure"></a>COR_PRF_GC_GENERATION_RANGE 結構
 說明正在進行記憶體回收的記憶體範圍 (亦即區塊)。  
@@ -41,22 +41,22 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
   
 |成員|描述|  
 |------------|-----------------|  
-|`generation`|值為[COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)所屬列舉，指定要產生的記憶體區塊。|  
-|`rangeStart`|指定的記憶體區塊的起始位置的物件識別碼。|  
+|`generation`|值為[COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)所屬的列舉，指定要產生的記憶體區塊。|  
+|`rangeStart`|指定的記憶體區塊的開始位置的物件識別碼。|  
 |`rangeLength`|指定使用的記憶體區塊 （也就是在區塊內使用的記憶體數量） 部分的大小的整數指標。|  
-|`rangeLengthReserved`|指定的記憶體區塊 （也就是保留的區塊的記憶體數量） 大小的整數指標。|  
+|`rangeLengthReserved`|為指定的記憶體區塊 （也就是保留給區塊的記憶體數量） 大小的整數指標。|  
   
 ## <a name="remarks"></a>備註  
- `rangeLength`保證是精確值只有當[icorprofilerinfo2:: Getgenerationbounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md)或[icorprofilerinfo2:: Getobjectgeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md)，這兩個其中使用`COR_PRF_GC_GENERATION_RANGE`結構，請從呼叫[icorprofilercallback2:: Garbagecollectionstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)或[icorprofilercallback2:: Garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)方法。  
+ `rangeLength`保證是正確的值只有當[ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md)或是[ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md)，這兩個使用`COR_PRF_GC_GENERATION_RANGE`結構，從呼叫[ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)或[ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [分析結構](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>另請參閱
+- [分析結構](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

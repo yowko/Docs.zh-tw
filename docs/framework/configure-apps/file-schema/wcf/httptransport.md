@@ -2,20 +2,20 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: d03b92dc1e7b53a182b8065a6d4ac652f76291ba
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1e6cb812d68d5f26a837ff3e1124034a8a648be4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541075"
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 指定 HTTP 傳輸，以傳輸自訂繫結的 SOAP 訊息。  
   
  \<system.serviceModel>  
-\<繫結 >  
+\<bindings>  
 \<customBinding>  
-\<繫結 >  
+\<binding>  
 \<httpTransport>  
   
 ## <a name="syntax"></a>語法  
@@ -28,7 +28,7 @@ ms.locfileid: "54147430"
                keepAliveEnabled="Boolean"
                maxBufferSize="Integer"
                proxyAddress="Uri"
-               proxyAuthenticationScheme="None/Digest/Negotiate/Ntlm/Basic/Anonymous/IntegratedWindowsAuthentication"
+               proxyAuthenticationScheme="None/Digest/Negotiate/Ntlm/Basic/Anonymous"
                realm="String"
                transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"
                unsafeConnectionNtlmAuthentication="Boolean"
@@ -49,7 +49,7 @@ ms.locfileid: "54147430"
 |keepAliveEnabled|布林值，指定是否要與網際網路資源建立持續連線。|  
 |maxBufferSize|正整數，指定緩衝區的大小上限。 預設為 524288。|  
 |proxyAddress|指定 HTTP Proxy 位址的 URI。 如果 `useSystemWebProxy` 為 `true`，則這項設定必須為 `null`。 預設為 `null`。|  
-|proxyAuthenticationScheme|指定通訊協定，用於驗證由 HTTP Proxy 處理的用戶端要求。 有效值包括以下的值：<br /><br /> -None:未執行驗證。<br />摘要：指定摘要式驗證。<br />-Negotiate:會與用戶端決定驗證配置來進行交涉。 如果用戶端和伺服器都支援 Kerberos，就使用它，否則使用 NTLM。<br />-Ntlm:指定 NTLM 驗證。<br />-基本：指定基本驗證。<br />匿名：指定匿名驗證。<br />-IntegratedWindowsAuthentication:指定 Windows 驗證。<br /><br /> 預設值為 Anonymous。 此屬性的型別為 <xref:System.Net.AuthenticationSchemes>。|  
+|proxyAuthenticationScheme|指定通訊協定，用於驗證由 HTTP Proxy 處理的用戶端要求。 有效值包括以下的值：<br /><br /> -None:未執行驗證。<br />摘要：指定摘要式驗證。<br />-Negotiate:會與用戶端決定驗證配置來進行交涉。 如果用戶端和伺服器都支援 Kerberos，就使用它，否則使用 NTLM。<br />-Ntlm:指定 NTLM 驗證。<br />-基本：指定基本驗證。<br />匿名：指定匿名驗證。<br /><br /> 預設值為 Anonymous。 此屬性的型別為 <xref:System.Net.AuthenticationSchemes>。 請注意，`IntegratedWindowsAuthentication`不支援。|  
 |realm|字串，指定在 Proxy/伺服器上使用的領域。 預設為空字串。<br /><br /> 伺服器使用領域來分割受保護的資源。 每個分割都可以有自己的驗證配置和 (或) 授權資料庫。 領域只限於基本和摘要式驗證使用。 當用戶端成功驗證之後，驗證對指定領域中的所有資源都有效。 領域的詳細說明，請參閱在 RFC 2617 [IETF 網站](https://www.ietf.org)。|  
 |transferMode|指定訊息是否要經過緩衝處理或資料流處理，或為要求或回應。 有效值包括以下的值：<br /><br /> 緩衝處理：要求和回應訊息會進行緩衝處理。<br />資料流：串流處理的要求和回應訊息。<br />-StreamedRequest:資料流處理要求訊息，緩衝處理回應訊息。<br />-StreamedResponse:緩衝處理要求訊息，資料流處理回應訊息。<br /><br /> 預設為 Buffered。 此屬性的型別為 <xref:System.ServiceModel.TransferMode>。|  
 |unsafeConnectionNtlmAuthentication|布林值，指定是否已在伺服器啟用「不安全的連線共用」。 預設為 `false`。 如果已啟用，NTLM 驗證會在各 TCP 連線上執行一次。|  
@@ -62,19 +62,19 @@ ms.locfileid: "54147430"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
  `httpTransport` 項目是在建立自訂繫結時的起點，該繫結會實作 HTTP 傳輸通訊協定。 HTTP 是用於互通性目的的主要傳輸。 這個傳輸被支援的 Windows Communication Foundation (WCF) 以確保與其他非 WCF Web 服務堆疊互通。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.HttpTransportElement>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [傳輸](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [選擇傳輸](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.HttpTransportElement>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [傳輸](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [選擇傳輸](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

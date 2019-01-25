@@ -2,15 +2,15 @@
 title: 複雜類型
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: 8daeac8309434b3c4e090d8e75f2de02d63e8b11
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4e18ecf18399f57769dcdfc77192e72ec47f5df3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555436"
 ---
 # <a name="complex-type"></a>複雜類型
-A*複雜型別*是用於定義豐富結構化屬性上的範本[實體類型](../../../../docs/framework/data/adonet/entity-type.md)或其他複雜類型。 每個範本包含下列資訊：  
+A*複雜型別*是上定義豐富結構化屬性的範本[實體類型](../../../../docs/framework/data/adonet/entity-type.md)或其他複雜類型。 每個範本包含下列資訊：  
   
 -   唯一名稱。 (必要項)  
   
@@ -26,7 +26,7 @@ A*複雜型別*是用於定義豐富結構化屬性上的範本[實體類型](..
   
 -   複雜類型不具有識別，因此無法獨立存在。 複雜類型只能以實體類型或其他複雜類型的屬性形式存在。  
   
--   複雜型別不能參與[關聯](../../../../docs/framework/data/adonet/association-type.md)。 關聯的兩個 end 可以是複雜類型，因此[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)無法在複雜類型定義。  
+-   複雜型別不能參與[關聯](../../../../docs/framework/data/adonet/association-type.md)。 關聯的兩個端點可以是複雜類型，因此[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)不能定義於複雜型別。  
   
 ## <a name="example"></a>範例  
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用稱為概念結構定義語言的特定領域語言 (DSL) ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 來定義概念模型。 下列 CSDL 以基底類型屬性 `StreetAddress`、`City`、`StateOrProvince`、`Country` 和 `PostalCode` 定義複雜類型 Address。  
@@ -37,6 +37,6 @@ A*複雜型別*是用於定義豐富結構化屬性上的範本[實體類型](..
   
  [!code-xml[EDM_Example_Model#EntityWithComplexType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#entitywithcomplextype)]  
   
-## <a name="see-also"></a>另請參閱  
- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>另請參閱
+- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

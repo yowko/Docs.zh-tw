@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ac1ecb73257782888c963082953ed243177a86b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9d156d7c7ada8309e501ba44720dfa285ce50d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552355"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps 方法
-取得指定的事件語彙基元，包括宣告類型、 新增和移除方法的委派，以及任何旗標和其他相關聯的資料所代表事件的中繼資料資訊。  
+取得指定的事件語彙基元，包括宣告的型別、 新增和移除方法委派，和任何旗標和其他相關聯的資料所代表的事件的中繼資料資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,50 +49,50 @@ HRESULT GetEventProps (
   
 #### <a name="parameters"></a>參數  
  `ev`  
- [in]事件中繼資料語彙基元，代表要取得的中繼資料的事件。  
+ [in]事件中繼資料語彙基元，表示要取得中繼資料的事件。  
   
  `pClass`  
- [out]代表宣告的事件類別的 TypeDef 語彙基元指標。  
+ [out]表示宣告該事件之類別的 TypeDef 語彙基元指標。  
   
  `szEvent`  
- [out]事件所參考的名稱`ev`。  
+ [out]所參考的事件名稱`ev`。  
   
  `pchEvent`  
- [in]所要求的長度，以寬字元`szEvent`。  
+ [in]所要求的長度，寬字元`szEvent`。  
   
  `pdwEventFlags`  
- [out]傳回的寬字元的長度`szEvent`。  
+ [out]傳回寬字元的長度`szEvent`。  
   
  `ptkEventType`  
- [out]TypeRef 或 TypeDef 中繼資料語彙基元，代表的指標<xref:System.Delegate>事件型別。  
+ [out]TypeRef 或 TypeDef 中繼資料語彙基元，代表指標<xref:System.Delegate>事件型別。  
   
  `pmdAddOn`  
- [out]代表加入事件處理常式的方法中繼資料語彙基元的指標。  
+ [out]表示將事件處理常式方法的中繼資料語彙基元指標。  
   
  `pmdRemoveOn`  
- [out]代表移除事件處理常式的方法中繼資料語彙基元的指標。  
+ [out]表示移除事件處理常式方法的中繼資料語彙基元指標。  
   
  `pmdFire`  
- [out]代表引發事件的方法中繼資料語彙基元的指標。  
+ [out]表示引發事件的方法中繼資料語彙基元指標。  
   
  `rmdOtherMethod`  
- [out]陣列的其他方法與事件相關聯的語彙基元指標。  
+ [out]與事件相關聯的其他方法的語彙基元指標的陣列。  
   
  `cMax`  
  [in] `rmdOtherMethod` 陣列的大小上限。  
   
  `pcOtherMethod`  
- [out]傳回的 token 數目`rmdOtherMethod`。  
+ [out]權杖中傳回的數目`rmdOtherMethod`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

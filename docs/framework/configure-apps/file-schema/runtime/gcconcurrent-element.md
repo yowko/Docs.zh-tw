@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fa802ab9d1025bd130a6265b50050284aae0150
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4c83576c5c46d9a32f990d23fa20b116be36e4c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611991"
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt;項目
 指定 Common Language Runtime 是否會在個別的執行緒執行記憶體回收。  
   
  \<configuration>  
 \<執行階段 >  
-\<gcConcurrent >  
+\<gcConcurrent>  
   
 ## <a name="syntax"></a>語法  
   
@@ -89,7 +89,7 @@ ms.locfileid: "53612383"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>另請參閱
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [記憶體回收的基本概念](../../../../../docs/standard/garbage-collection/fundamentals.md)

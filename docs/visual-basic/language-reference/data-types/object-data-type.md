@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 94d3ddcf71194eb69a2d26bcdf549aaf693e46e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5a37b571e0600927e0e50fdb1a63bcf8ef194d72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617534"
 ---
 # <a name="object-data-type"></a>Object Data Type
 包含參考物件的位址。 您可以將任何參考型別 （字串、 陣列、 類別或介面） 指派給`Object`變數。 `Object`變數也可以參考資料的任何實值類型 (數字`Boolean`， `Char`， `Date`、 結構或列舉)。  
@@ -66,11 +66,11 @@ Dim myCollection As New Collection()
 objDb = myCollection.Item(1)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Object>  
- [資料類型](../../../visual-basic/language-reference/data-types/index.md)  
- [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [如何：判斷兩個物件是否關聯](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
- [如何：判斷兩個物件是否相同](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Object>
+- [資料類型](../../../visual-basic/language-reference/data-types/index.md)
+- [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [如何：判斷兩個物件是否關聯](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [如何：判斷兩個物件是否相同](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
