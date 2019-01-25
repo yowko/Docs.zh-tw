@@ -8,19 +8,19 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 445b57747bbcb04df0d6bc6b3e90743b8c9600f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ea0eba097505741aba31bce4f23e0cc9ca1d4608
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712479"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt;項目 （網路設定）
 啟用或停用網路的效能計數器。  
   
  \<configuration>  
 \<system.net>  
-\<設定 >  
+\<settings>  
 \<performanceCounters>  
   
 ## <a name="syntax"></a>語法  
@@ -38,7 +38,7 @@ ms.locfileid: "50187072"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|指定是否啟用網路效能計數器。 預設值是 `false`。|  
+|`enabled`|指定是否啟用網路效能計數器。 預設值為 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -47,7 +47,7 @@ ms.locfileid: "50187072"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
 ## <a name="remarks"></a>備註  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
@@ -73,8 +73,8 @@ ms.locfileid: "50187072"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
+- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
 - [網路效能計數器](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

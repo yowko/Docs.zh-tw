@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8efcd62f39a7de397ef93231fd125a17c7e513e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd294037774721839b0c4f1f09bdc2a6e3b87841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425073"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562670"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod 方法
-取得這個方法有行中的文件。  
+取得這個方法有幾行中的文件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,19 +38,19 @@ HRESULT GetDocumentsForMethod(
   
 #### <a name="parameters"></a>參數  
  `cDocs`  
- [in]所指向之緩衝區的長度`pcDocs`。  
+ [in]所指向緩衝區的長度`pcDocs`。  
   
  `pcDocs`  
- [out]指標`ULONG32`接收以字元為單位，包含文件所需的緩衝區大小。  
+ [out]指標`ULONG32`接收大小，以字元為單位，包含文件所需的緩衝區。  
   
  `documents`  
  [in]包含文件的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，錯誤代碼。  
+ 如果方法成功，則為 S_OK否則，出現錯誤代碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymENCUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymENCUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 28eda94914125f2c5849a471671c8e283475c82c
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520174"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 指示詞
 限制的傳遞類型泛型型別之建構函式的泛型引的數。  
@@ -81,8 +81,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
  在 WPF 中，並為目標時[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，您可以使用 XAML 2009 功能，並搭配`x:TypeArguments`但只在鬆散的 XAML (未標記編譯的 XAML)。 WPF 之編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 關鍵字和功能。 如果您需要以標記編譯 XAML，您必須在 「 XAML 2006 和 WPF 泛型 XAML 使用方式 」 一節所述的限制下進行操作。  
   
-## <a name="see-also"></a>另請參閱  
- [x:Class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)  
- [x:Type 標記延伸模組](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [通用 XAML 語言基本類型的內建類型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
- [XAML 中的泛型](../../../docs/framework/xaml-services/generics-in-xaml.md)
+## <a name="see-also"></a>另請參閱
+- [x:Class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)
+- [x:Type 標記延伸模組](../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [通用 XAML 語言基本類型的內建類型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
+- [XAML 中的泛型](../../../docs/framework/xaml-services/generics-in-xaml.md)

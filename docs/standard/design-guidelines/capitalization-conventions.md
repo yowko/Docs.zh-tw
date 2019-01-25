@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
-ms.openlocfilehash: 159635d6e3ce414c8fd45ff7f02a75fd7cbdfe7e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670169"
 ---
 # <a name="capitalization-conventions"></a>大小寫慣例
 簡單的方法，使用這一章配置中的指導方針情況下，當套用一致的方式，請識別項型別、 成員和參數容易閱讀。  
@@ -106,5 +106,5 @@ ms.locfileid: "53131088"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

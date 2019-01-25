@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9359d196ecdaa83d7f5f14c3570392d54691be73
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 766b839afe0ca14e49bcf595241169b601999d7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195628"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706784"
 ---
 # <a name="lttypegt-element-net-native"></a>&lt;Type&gt; 項目 (.NET Native)
 將執行階段原則套用到特定的類型，例如類別或結構。  
@@ -131,7 +131,7 @@ ms.locfileid: "50195628"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>另請參閱
+- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

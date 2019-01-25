@@ -1,19 +1,19 @@
 ---
-title: 如何：使用設計工具將 Windows Forms 控制項繫結至型別
+title: HOW TO：將 Windows Forms 控制項繫結至類型，使用設計工具
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding to a type
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: 33df9e050dd8c2b3ace8ff89cbd5939b538fcd95
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 6c307c913fc8deb62bc18ca2c01bb8621d9b0642
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496435"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>如何：使用設計工具將 Windows Forms 控制項繫結至型別
+# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>HOW TO：將 Windows Forms 控制項繫結至類型，使用設計工具
 當您在建立與資料互動的控制項時，有時需要將控制項繫結至類型，而非物件。 您在設計階段通常需要將控制項繫結至類型，當時資料可能無法使用，但您仍希望資料繫結的控制項顯示類型公用介面中的資料。 下列程序示範如何建立新<xref:System.Windows.Forms.BindingSource>也就是繫結至型別，以及如何將其中一個類型的屬性，以繫結<xref:System.Windows.Forms.TextBox.Text%2A>屬性<xref:System.Windows.Forms.TextBox>。  
   
 ### <a name="to-bind-the-bindingsource-to-a-type"></a>將 BindingSource 繫結至類型  
@@ -51,7 +51,7 @@ ms.locfileid: "48873741"
   
 4.  在  **DataSource UI 類型編輯器**，展開的節點<xref:System.Windows.Forms.BindingSource>之前，所新增，然後選取您想要繫結的繫結類型屬性<xref:System.Windows.Forms.TextBox.Text%2A>屬性<xref:System.Windows.Forms.TextBox>。  
   
-## <a name="see-also"></a>另請參閱  
- [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [操作說明：將 Windows Forms 控制項繫結至型別](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
- [將控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+## <a name="see-also"></a>另請參閱
+- [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [如何：將 Windows Forms 控制項繫結至型別](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+- [將控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

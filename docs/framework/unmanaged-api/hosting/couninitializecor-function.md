@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 305a8d7b5a800c46ed814b1e654947859dc9bd03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 349f6922c18a7745c8eff05b1786dc649f8bb70a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520980"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor 函式
 `CoUninitializeCor` 已經過時。  
@@ -33,7 +33,7 @@ STDAPI_(void) CoUninitializeCor(void);
 ```  
   
 ## <a name="remarks"></a>備註  
- Common language runtime 無法從處理序卸載。 若要完全移除執行的處理序的執行階段，您必須關閉該程序。  
+ Common language runtime 無法從處理序卸載。 若要完全移除執行中處理序的執行階段，您必須關閉該程序。  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料全域靜態函式](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料全域靜態函式](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

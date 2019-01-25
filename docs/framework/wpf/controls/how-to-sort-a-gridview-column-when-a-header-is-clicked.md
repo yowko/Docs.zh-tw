@@ -1,5 +1,5 @@
 ---
-title: 操作說明：在按一下標頭時排序 GridView 資料行
+title: HOW TO：在按一下行首時排序 GridView 資料行
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 30bcbd8b7cdd4c184560aaa4a2799137da51fc8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694083"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>操作說明：在按一下標頭時排序 GridView 資料行
-這個範例示範如何建立<xref:System.Windows.Controls.ListView>實作控制項<xref:System.Windows.Controls.GridView>檢視模式和資料內容，當使用者按一下資料行標頭來排序。  
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>HOW TO：在按一下行首時排序 GridView 資料行
+此範例示範如何建立<xref:System.Windows.Controls.ListView>實作控制項<xref:System.Windows.Controls.GridView>檢視模式和排序資料內容，當使用者按一下資料行標頭。  
   
 ## <a name="example"></a>範例  
- 下列範例會定義<xref:System.Windows.Controls.GridView>具有三個資料行繫結至<xref:System.DateTime.Year%2A>， <xref:System.DateTime.Month%2A>，和<xref:System.DateTime.Day%2A>，屬性<xref:System.DateTime>結構。  
+ 下列範例會定義<xref:System.Windows.Controls.GridView>繫結至的三個資料行<xref:System.DateTime.Year%2A>， <xref:System.DateTime.Month%2A>，以及<xref:System.DateTime.Day%2A>，屬性<xref:System.DateTime>結構。  
   
 ```xaml  
 <GridView>  
@@ -37,7 +37,7 @@ ms.locfileid: "33554894"
 </GridView>  
 ```  
   
- 下列範例顯示定義為資料項目<xref:System.Collections.ArrayList>的<xref:System.DateTime>物件。 <xref:System.Collections.ArrayList>定義為<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>如<xref:System.Windows.Controls.ListView>控制項。  
+ 下列範例顯示定義為資料項目<xref:System.Collections.ArrayList>的<xref:System.DateTime>物件。 <xref:System.Collections.ArrayList>指<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>如<xref:System.Windows.Controls.ListView>控制項。  
   
 ```xaml  
 <ListView.ItemsSource>  
@@ -69,7 +69,7 @@ ms.locfileid: "33554894"
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- 若要排序的資料，根據資料行的內容，此範例會定義事件處理常式來處理<xref:System.Windows.Controls.Primitives.ButtonBase.Click>按資料行的標頭按鈕時所發生的事件。 下列範例示範如何指定的事件處理常式<xref:System.Windows.Controls.GridViewColumnHeader>控制項。  
+ 若要排序的資料，根據資料行的內容，此範例會定義事件處理常式來處理<xref:System.Windows.Controls.Primitives.ButtonBase.Click>您按下資料行標頭按鈕時所發生的事件。 下列範例示範如何指定的事件處理常式<xref:System.Windows.Controls.GridViewColumnHeader>控制項。  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -223,9 +223,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.GridView>  
- [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.GridView>
+- [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

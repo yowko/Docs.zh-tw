@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 750f054c908cd9d837a18ee6c8a537285b325288
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205161"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728347"
 ---
 # <a name="white-space-processing-in-xaml"></a>在 XAML 中處理泛空白字元
 XAML 的語言規則狀態必須處理該顯著泛空白字元[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]處理器實作中。 本主題說明這些 XAML 語言規則， 它還會列出所定義的額外空白字元處理[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]XAML 處理器和序列化的 XAML 寫入器的實作。  
@@ -53,7 +53,7 @@ XAML 的語言規則狀態必須處理該顯著泛空白字元[!INCLUDE[TLA2#tla
 ## <a name="preserving-white-space"></a>保留空白字元  
  有數種技巧可保留在來源中的泛空白字元[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]最終的簡報，不會受到[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]處理器空白字元正規化。  
   
- **xml: space ="preserve"**： 在項目層級想要保留泛空白字元的地方指定這個屬性。 這樣做會保留所有空白字元，其中包括程式碼編輯應用程式為了以視覺上直覺的巢狀結構來「美化」對齊項目可能加入的空格。 不過，這些空格的呈現與否是由包含項目的內容模型所決定。 避免指定`xml:space="preserve"`根層級因為大部分的物件模型不會考慮白色空間成顯著，不論您如何設定屬性。 全域設定 `xml:space` 可能會對某些實作中的 XAML 處理 (特別是序列化) 帶來效能影響。 您最好只將屬性設定特別的呈現字串內的泛空白字元或泛空白字元的集合的項目層級。  
+ **xml:space="preserve"**:在指定這個屬性的項目層級想要保留泛空白字元的地方。 這樣做會保留所有空白字元，其中包括程式碼編輯應用程式為了以視覺上直覺的巢狀結構來「美化」對齊項目可能加入的空格。 不過，這些空格的呈現與否是由包含項目的內容模型所決定。 避免指定`xml:space="preserve"`根層級因為大部分的物件模型不會考慮白色空間成顯著，不論您如何設定屬性。 全域設定 `xml:space` 可能會對某些實作中的 XAML 處理 (特別是序列化) 帶來效能影響。 您最好只將屬性設定特別的呈現字串內的泛空白字元或泛空白字元的集合的項目層級。  
   
  **實體和不分行空格**： [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 支援將任何 [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] 實體放置在文字物件模型內。 您可以使用專用的實體，例如不分行空格 (&\#160; 在 utf-8 編碼)。 您也可以使用支援不分行空格字元的 RTF 文字控制項。 如果您使用實體來模擬縮排等版面配置特性，應該要特別小心，因為相較於在一般版面配置系統中產生縮排結果的功能 (例如適當使用面板和邊界)，實體的執行階段輸出會隨更多因素而改變。 例如，實體會回應使用者選取的字型，對應至相關字型並可能變更大小。  
   
@@ -74,7 +74,7 @@ XAML 的語言規則狀態必須處理該顯著泛空白字元[!INCLUDE[TLA2#tla
   
  此外，某些非固定格式文件模型中的分行符號的內嵌項目應該刻意不引入額外的空間，甚至是中的空白有效集合。 例如，<xref:System.Windows.Documents.LineBreak>項目具有相同的目的\<b R / > 標記中的[!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]，並以方便閱讀，在標記中，通常<xref:System.Windows.Documents.LineBreak>隔開撰寫的換行字元的任何後續文字。 該換行字元不應該正規化為下一行的前置空格。 若要啟用該行為，類別定義<xref:System.Windows.Documents.LineBreak>項目會套用<xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>，這樣就會在由解譯[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]周圍的空白字元的處理器<xref:System.Windows.Documents.LineBreak>為一律修剪。  
   
-## <a name="see-also"></a>另請參閱  
- [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XML 字元實體和 XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [在 XAML 中處理的 xml: space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+## <a name="see-also"></a>另請參閱
+- [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XML 字元實體和 XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+- [在 XAML 中處理的 xml: space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)

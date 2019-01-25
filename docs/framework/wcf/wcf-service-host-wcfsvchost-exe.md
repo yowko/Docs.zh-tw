@@ -2,12 +2,12 @@
 title: WCF 服務主機 (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6f719756688af066a42c3f73a860038dad1e5a53
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505636"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服務主機 (WcfSvcHost.exe)
 Windows Communication Foundation (WCF) 服務主機 (WcfSvcHost.exe) 可讓您啟動 Visual Studio 偵錯工具 (F5) 來自動裝載並測試您已實作的服務。 然後，您可以測試使用 WCF 測試用戶端 (WcfTestClient.exe) 或您自己的用戶端中，找出並修正任何潛在錯誤的服務。  
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) 服務主機 (WcfSvcHost.exe) 可讓您�
 >  WCF 服務主機不支援部分信任。 如果您想要在部分信任中使用 WCF 服務，請勿 WCF 服務程式庫專案範本在 Visual Studio 中建置您的服務。 相反地，建立新的網站在 Visual Studio 中，選擇 WCF 服務網站範本，其可裝載 web 伺服器支援 WCF 部分信任中的服務。  
   
 ## <a name="project-types-hosted-by-wcf-service-host"></a>WCF 服務主機裝載的專案類型  
- WCF 服務主控件可以裝載 WCF 服務程式庫專案類型： WCF 服務程式庫、 循序工作流程服務程式庫、 狀態機器工作流程服務程式庫和新聞訂閱服務程式庫。 WCF 服務主機也可以裝載那些可以加入至服務程式庫專案使用的服務**加入項目**功能。 這包括 WCF 服務、 WF 狀態機器服務、 WF 循序服務、 XAML WF 狀態機器服務和 XAML WF 循序服務。  
+ WCF 服務主控件可以裝載 WCF 服務程式庫專案類型：WCF 服務程式庫、 循序工作流程服務程式庫、 狀態機器工作流程服務程式庫和新聞訂閱服務程式庫。 WCF 服務主機也可以裝載那些可以加入至服務程式庫專案使用的服務**加入項目**功能。 這包括 WCF 服務、 WF 狀態機器服務、 WF 循序服務、 XAML WF 狀態機器服務和 XAML WF 循序服務。  
   
  但是，您應該注意到，此工具無法協助您設定主機。 對於這項工作，您必須手動編輯 App.config 檔案。 此工具也不會驗證使用者定義的組態檔。  
   
@@ -72,19 +72,19 @@ Windows Communication Foundation (WCF) 服務主機 (WcfSvcHost.exe) 可讓您�
   
  **WCF 服務主機**主視窗包含兩個功能表：  
   
--   **檔案**： 包含**關閉**並**結束**命令。 當您按一下 **關閉**，則**WCF 服務主機**對話方塊隨即關閉，但會繼續裝載服務。 當您按一下 **結束**，WCF 服務主機也會關閉。 這還會停止所有裝載的服務。  
+-   **檔案**:包含**關閉**並**結束**命令。 當您按一下 **關閉**，則**WCF 服務主機**對話方塊隨即關閉，但會繼續裝載服務。 當您按一下 **結束**，WCF 服務主機也會關閉。 這還會停止所有裝載的服務。  
   
--   **幫助**： 包含**關於**命令，以包含版本資訊。 它也包含**協助**可以開啟說明檔的命令。  
+-   **協助**:包含**關於**命令，以包含版本資訊。 它也包含**協助**可以開啟說明檔的命令。  
   
  主**WCF 服務主機**視窗包含兩個區域：  
   
 -   第一個區域是**服務**。 其中包含一份顯示所有服務基本資訊的清單。 這些資訊包括：  
   
-    -   **服務**： 列出所有的服務。  
+    -   **服務**：列出所有的服務。  
   
-    -   **狀態**： 列出服務的狀態。 有效值為 「 已啟動 」、 「 已停止 」 和 「 錯誤 」。  
+    -   **狀態**:列出服務的狀態。 有效值為 「 已啟動 」、 「 已停止 」 和 「 錯誤 」。  
   
-    -   **中繼資料位址**： 顯示服務的中繼資料位址。  
+    -   **中繼資料位址**:顯示服務的中繼資料位址。  
   
 -   第二個區域**更多資訊**。 它會顯示服務狀態的詳細的說明 中選取特定服務行時**服務**區域。 如果狀態為「錯誤」，您就可以在螢幕上檢視完整的錯誤訊息。  
   
@@ -110,5 +110,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
   
  如需有關 netsh.exe 的詳細資訊，請參閱 「[如何使用 Netsh.exe 工具和命令列參數](https://go.microsoft.com/fwlink/?LinkId=97877)"。  
   
-## <a name="see-also"></a>另請參閱  
- [WCF 測試用戶端 (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a>另請參閱
+- [WCF 測試用戶端 (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

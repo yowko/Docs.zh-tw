@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: c9d554dfd8d21b6e0e5f4aef0f4402e16485c2e8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 2a0644ea17db2923f5729feda40f3b2bff364231
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660745"
 ---
 # <a name="load-balancing"></a>負載平衡
-以增加容量的 Windows Communication Foundation (WCF) 應用程式的方法之一是調整排除這些程式部署到負載平衡的伺服器陣列。 WCF 應用程式可以進行負載平衡使用標準負載平衡技術，包括 Windows 網路負載平衡等軟體負載平衡器，以及硬體架構的負載平衡裝置。  
+增加 Windows Communication Foundation (WCF) 應用程式容量的一種方法是將其相應放大程式部署到負載平衡的伺服器陣列。 WCF 應用程式可以進行負載平衡使用標準負載平衡技術，包括軟體負載平衡器，例如 Windows 網路負載平衡，以及硬體架構的負載平衡裝置。  
   
- 下列章節會討論負載平衡使用各種系統提供的繫結所建置的 WCF 應用程式的考量。  
+ 下列各節討論負載平衡使用各種不同的系統提供繫結所建置的 WCF 應用程式的考量。  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>使用基本 HTTP 繫結的負載平衡  
- 從負載平衡，使用進行通訊的 WCF 應用程式的觀點來看<xref:System.ServiceModel.BasicHttpBinding>與其他常見的 HTTP 網路流量類型 （靜態 HTML 內容、 ASP.NET 網頁或 ASMX Web 服務） 並無不同。 使用此繫結的 WCF 通道原本是無狀態，並在通道關閉時終止其連線。 因此，<xref:System.ServiceModel.BasicHttpBinding> 可搭配現有的 HTTP 負載平衡技術正常運作。  
+ 從負載平衡，使用進行通訊的 WCF 應用程式的觀點來看<xref:System.ServiceModel.BasicHttpBinding>與其他常見的 HTTP 網路流量 （靜態 HTML 內容、 ASP.NET 網頁或 ASMX Web 服務） 並無不同。 使用這個繫結的 WCF 通道是原本就是無狀態，並在通道關閉時終止其連線。 因此，<xref:System.ServiceModel.BasicHttpBinding> 可搭配現有的 HTTP 負載平衡技術正常運作。  
   
  根據預設，<xref:System.ServiceModel.BasicHttpBinding> 會在訊息中傳送包含 `Keep-Alive` 值的連線 HTTP 標頭，該值可以讓使用者建立服務 (指支援使用者的服務) 的持續連線。 這項組態會改進處理能力，因為先前建立的連線可以重複使用，並將後續訊息傳送到相同的伺服器。 不過，重複使用連線可能會使用戶端與負載平衡陣列內的特定伺服器產生強烈的關聯性，這樣就會降低循環配置資源的有效性。 如果不希望發生這種行為，請針對 `Keep-Alive` 或使用者定義的 <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> 使用 <xref:System.ServiceModel.Channels.CustomBinding> 屬性，停用伺服器上的 HTTP <xref:System.ServiceModel.Channels.Binding>。 下列範例會示範如何使用組態來做到這點。  
   
@@ -77,12 +77,12 @@ ms.locfileid: "33807521"
 </configuration>  
 ```  
   
- 如需有關預設端點、 繫結和行為的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+ 如需預設端點、繫結和行為的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服務的簡化組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>使用 WSHttp 繫結和 WSDualHttp 繫結的負載平衡  
  只要對預設的繫結組態進行一些修改，即可透過 HTTP 負載平衡技術來使 <xref:System.ServiceModel.WSHttpBinding> 與 <xref:System.ServiceModel.WSDualHttpBinding> 兩者達成負載平衡。  
   
--   關閉安全性內容建立：將 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 上的 <xref:System.ServiceModel.WSHttpBinding> 屬性設定為 `false`，即可做到這點。 或者，如果需要安全性工作階段，便可使用具狀態的安全性工作階段中所述[安全工作階段](../../../docs/framework/wcf/feature-details/secure-sessions.md)主題。 具狀態的安全性工作階段讓服務能夠保持無狀態，因為安全性工作階段的所有狀態都會隨著每項要求傳輸為保護安全性權杖的一部分。 請注意，為了啟用可設定狀態的安全性工作階段，這時必須使用 <xref:System.ServiceModel.Channels.CustomBinding> 或是使用者定義的 <xref:System.ServiceModel.Channels.Binding>，因為系統提供的 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.WSDualHttpBinding> 上面並未公開 (Expose) 這些必要的組態設定。  
+-   關閉安全性內容建立：將 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 上的 <xref:System.ServiceModel.WSHttpBinding> 屬性設定為 `false`，即可做到這點。 或者，如果需要安全性工作階段，就可以使用具狀態的安全性工作階段中所述[安全工作階段](../../../docs/framework/wcf/feature-details/secure-sessions.md)主題。 具狀態的安全性工作階段讓服務能夠保持無狀態，因為安全性工作階段的所有狀態都會隨著每項要求傳輸為保護安全性權杖的一部分。 請注意，為了啟用可設定狀態的安全性工作階段，這時必須使用 <xref:System.ServiceModel.Channels.CustomBinding> 或是使用者定義的 <xref:System.ServiceModel.Channels.Binding>，因為系統提供的 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.WSDualHttpBinding> 上面並未公開 (Expose) 這些必要的組態設定。  
   
 -   請勿使用可靠工作階段。 這項功能預設為關閉。  
   
@@ -91,5 +91,5 @@ ms.locfileid: "33807521"
   
  為了在負載平衡案例中創造最佳效能，請考慮使用 <xref:System.ServiceModel.NetTcpSecurity> (<xref:System.ServiceModel.SecurityMode.Transport> 或 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>)。  
   
-## <a name="see-also"></a>另請參閱  
- [Internet Information Services 裝載最佳做法](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+## <a name="see-also"></a>另請參閱
+- [Internet Information Services 裝載最佳做法](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a51d88af20b3abbbe2f80134473ec1ba1b7a4b17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99f9162cc01d68d25304aed5cb8102b6cc21f7a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727088"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>ICorProfilerInfo3::GetThreadStaticAddress2 方法
 取得指定執行緒靜態欄位的位址，這位於指定之執行緒和應用程式定義域的範圍內。  
@@ -43,38 +43,38 @@ HRESULT GetThreadStaticAddress2(
  [in]包含要求的執行緒靜態欄位的類別識別碼。  
   
  `fieldToken`  
- [in]要求的執行緒靜態欄位中繼資料語彙基元。  
+ [in]要求的執行緒靜態欄位的中繼資料語彙基元。  
   
  `appDomainId`  
  [in] 應用程式定義域的 ID。  
   
  `threadId`  
- [in]要求的靜態欄位的資料範圍的執行緒識別碼。  
+ [in]要求的靜態欄位的範圍的執行緒識別碼。  
   
  `ppAddress`  
- [out]內指定執行緒靜態欄位的位址指標。  
+ [out]位於指定的執行緒靜態欄位的位址指標。  
   
 ## <a name="remarks"></a>備註  
  `GetThreadStaticAddress2`方法可能會傳回下列其中之一：  
   
--   如果在指定的靜態欄位指派指定的內容中的位址 CORPROF_E_DATAINCOMPLETE HRESULT。  
+-   如果指定的靜態欄位尚未指派指定的內容中的地址 CORPROF_E_DATAINCOMPLETE HRESULT。  
   
--   可能會在記憶體回收堆積中之物件的位址。 這些位址可能會變成記憶體回收之後, 無效，所以記憶體回收之後, 程式碼剖析工具不應該假設都有效。  
+-   可能在記憶體回收堆積中物件的位址。 這些位址可能會變成無效記憶體回收之後，讓記憶體回收之後, 程式碼剖析工具不應該假設其有效。  
   
- 類別的類別建構函式完成之前，`GetThreadStaticAddress2`會針對其所有靜態欄位，傳回 CORPROF_E_DATAINCOMPLETE，雖然部分的靜態欄位可能已經初始化，而且為根建立記憶體回收物件。  
+ 類別的類別建構函式完成之前，`GetThreadStaticAddress2`雖然靜態欄位的一些可能已經初始化，將會傳回 CORPROF_E_DATAINCOMPLETE 所有其靜態欄位，及根廢棄項目集合物件。  
   
- [Icorprofilerinfo2:: Getthreadstaticaddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md)方法很類似`GetThreadStaticAddress2`方法，但是不接受的應用程式網域引數。  
+ [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md)方式類似於`GetThreadStaticAddress2`方法，但不是接受應用程式網域引數。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerInfo3 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [程式碼剖析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerInfo3 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [程式碼剖析](../../../../docs/framework/unmanaged-api/profiling/index.md)

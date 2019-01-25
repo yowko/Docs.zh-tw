@@ -1,5 +1,5 @@
 ---
-title: 如何：將 LINQ 查詢結果當做特定類型傳回 (Visual Basic)
+title: HOW TO：將 LINQ 查詢結果傳回成特定的類型 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], specific type returned
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 720660153cb357c11168ab45ebf8343559faf82a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7d281de2005f1ee9227b3e3496125c8af9acba35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500612"
 ---
-# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>如何：將 LINQ 查詢結果當做特定類型傳回 (Visual Basic)
+# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>HOW TO：將 LINQ 查詢結果傳回成特定的類型 (Visual Basic)
 Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並執行查詢。 根據預設，LINQ 查詢會傳回非匿名型別物件的清單。 您也可以指定查詢傳回特定型別的清單，使用`Select`子句。  
   
  下列範例示範如何建立新的應用程式會執行對 SQL Server 資料庫的查詢，並將結果投射成特定的具名類型。 如需詳細資訊，請參閱 <<c0> [ 匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)並[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)。  
@@ -75,8 +75,8 @@ Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並�
   
 5.  按 F5 執行您的專案，並檢視結果。  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查詢](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法 (O/R 設計工具)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>另請參閱
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [查詢](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext 方法 (O/R 設計工具)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

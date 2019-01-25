@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: 95e33f38fcad70b61ae565307915b60dcbfb905a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd480f7f9a4fec42aebc57fe0b9e61bd8993ee34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697032"
 ---
 # <a name="transformations-how-to-topics"></a>轉換 HOW TO 主題
-本節中的主題描述如何將不同的轉換套用至物件。  
+在本節中的主題描述如何將不同的轉換套用至物件。  
   
 ## <a name="in-this-section"></a>本節內容  
  [在事件發生時套用轉換至元素](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
@@ -30,8 +30,8 @@ ms.locfileid: "33562371"
  [平移元素](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
  [使用 MatrixTransform 建立自訂轉換](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Transform>  
- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Transform>
+- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)

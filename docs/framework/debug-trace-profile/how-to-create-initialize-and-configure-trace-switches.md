@@ -1,5 +1,5 @@
 ---
-title: 如何：建立，初始化和設定追蹤參數
+title: HOW TO：建立、 初始化和設定追蹤參數
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739611"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：建立，初始化和設定追蹤參數
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>HOW TO：建立、 初始化和設定追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。  
   
 <a name="create"></a>   
@@ -75,11 +75,11 @@ ms.locfileid: "33392927"
   
 2.  如果您的專案未包含組態檔 (app.config 或 Web.config)，請從 [專案] 功能表中選取 [新增項目]。  
   
-    -   **Visual Basic：** 在 [新增項目] 對話方塊中，選擇 [應用程式組態檔]。  
+    -   **Visual Basic:** 在 **加入新項目**對話方塊方塊中，選擇**應用程式組態檔**。  
   
          隨即會建立並開啟應用程式組態檔。 這是根項目為 `<configuration>.` 的 XML 文件。  
   
-    -   **Visual C#：** 在 [新增項目] 對話方塊中，選擇 [XML 檔]。 將這個檔案命名為 **app.config**。在 XML 編輯器中，於 XML 宣告後加入下列 XML：  
+    -   **視覺化C#:** 在 **加入新項目**對話方塊方塊中，選擇**XML 檔案**。 將這個檔案命名為 **app.config**。在 XML 編輯器中，於 XML 宣告後加入下列 XML：  
   
         ```xml  
         <configuration>  
@@ -125,8 +125,8 @@ ms.locfileid: "33392927"
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [如何：將追蹤陳述式新增至應用程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [追蹤和偵錯設定結構描述](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>另請參閱
+- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [追蹤和偵錯設定結構描述](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

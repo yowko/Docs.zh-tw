@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6574c4d30b963ce571343d1a584bfccb48ffd195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 61dd9f8a668904bb9b9e0b6b4d1d84d1ed07045d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737880"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>ISymUnmanagedReader::GetGlobalVariables 方法
-傳回所有的全域變數。  
+傳回所有全域變數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,19 +39,19 @@ HRESULT GetGlobalVariables(
   
 #### <a name="parameters"></a>參數  
  `cVars`  
- [in]所指向之緩衝區的長度`pcVars`。  
+ [in]所指向緩衝區的長度`pcVars`。  
   
  `pcVars`  
- [out]指標`ULONG32`包含變數所需要的緩衝區大小。  
+ [out]指標`ULONG32`接收含有變數所需的緩衝區大小。  
   
  `pVars`  
  [out]這種緩衝區包含的變數。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

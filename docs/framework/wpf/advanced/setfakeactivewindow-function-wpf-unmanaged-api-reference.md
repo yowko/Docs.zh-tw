@@ -8,17 +8,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: a69118be-63b0-445c-9fb6-ab8cc958e531
-ms.openlocfilehash: 6eb8d4d4b04e80373b8bfe1ceed84694e2a8a469
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf2cdce9da4f10ca91df5a7e04ca207ba76db5a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507283"
 ---
 # <a name="setfakeactivewindow-function-wpf-unmanaged-api-reference"></a>SetFakeActiveWindow 函式 (WPF Unmanaged API 參考)
-這個 API 支援的 Windows Presentation Foundation (WPF) 基礎結構，並不是直接從您的程式碼使用。  
+此 API 支援 Windows Presentation Foundation (WPF) 基礎結構，並不是直接從您的程式碼使用。  
   
- Windows Presentation Foundation (WPF) 基礎結構用於 windows 的管理。  
+ 使用 windows 管理的 Windows Presentation Foundation (WPF) 基礎結構。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,11 +33,11 @@ void __stdcall SetFakeActiveWindow(
  視窗控制代碼。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[.NET Framework 系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[.NET Framework 系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **DLL:** PresentationHost_v0400.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [WPF Unmanaged API 參考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a>另請參閱
+- [WPF Unmanaged API 參考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

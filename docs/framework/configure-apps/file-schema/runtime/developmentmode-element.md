@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 982bc04e362f82760226b1cd2b8b3febe9cc7107
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 2f6a48a055d98a2f0b379df612da4e8fd49f3987
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669090"
 ---
 # <a name="ltdevelopmentmodegt-element"></a>&lt;developmentMode&gt;項目
 指定執行階段是否要在 DEVPATH 環境變數所指定的目錄中搜尋組件。  
   
  \<configuration>  
 \<執行階段 >  
-\<developmentMode >  
+\<developmentMode>  
   
 ## <a name="syntax"></a>語法  
   
@@ -71,7 +71,7 @@ ms.locfileid: "53612045"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>另請參閱
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [如何：使用 DEVPATH 找出組件](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

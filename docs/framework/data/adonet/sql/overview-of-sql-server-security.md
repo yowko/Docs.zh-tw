@@ -2,12 +2,12 @@
 title: SQL Server 安全性概觀
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 25f9f96a550438d242ee409da0d09b7df06de33c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8000e88de70706c7bb8ec39a05beea4605208b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591705"
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server 安全性概觀
 具有重疊安全性層的深入防禦策略是抵禦安全性威脅的最佳方式。 SQL Server 提供了一種安全性架構，其設計目的是為了允許資料庫管理員和開發人員建立安全的資料庫應用程式並抵禦威脅。 每個 SQL Server 版本都會透過引進新的特性和功能來改善舊版 SQL Server。 不過，安全性無法一體適用。 每個應用程式的安全性需求都是唯一的。 開發人員必須瞭解哪些特性和功能的組合最適合用來抵禦已知威脅，以及預期未來可能會發生的威脅。  
@@ -39,8 +39,8 @@ ms.locfileid: "43528653"
  [SQL Server 中的 CLR 整合安全性](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
  提供 CLR 整合安全性資源的連結。  
   
-## <a name="see-also"></a>另請參閱  
- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

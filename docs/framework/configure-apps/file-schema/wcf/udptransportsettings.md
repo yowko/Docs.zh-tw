@@ -1,20 +1,20 @@
 ---
-title: '&lt;Udpannouncementendpoint&gt;'
+title: '&lt;udpTransportSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: 9c7687e849650a57fca059d68157d1f2c032ee74
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 58931cb70f83378740093615adf89a437e32ff2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667189"
 ---
-# <a name="ltudptransportsettingsgt"></a>&lt;Udpannouncementendpoint&gt;
+# <a name="ltudptransportsettingsgt"></a>&lt;udpTransportSettings&gt;
 這個組態項目會公開 UDP 傳輸設定[ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)。  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
-\<udpDiscoveryEndpoint >  
+\<standardEndpoints>  
+\<udpDiscoveryEndpoint>  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "54145727"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|具有固定探索合約及 UDP 傳輸繫結的標準端點。|  
+|[\<udpDiscoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|具有固定探索合約及 UDP 傳輸繫結的標準端點。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Discovery.UdpTransportSettings>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Discovery.UdpTransportSettings>

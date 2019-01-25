@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49b42a7fc54af56149b602b337e4a6c853c270cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cf4c0eb3f9bb36cb45aa93c576b4efddaa93482
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736529"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType 列舉
 識別堆疊框架的類型。 這個列舉型別由[icordebuginternalframe:: Getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)方法。  
@@ -50,25 +50,25 @@ typedef enum CorDebugInternalFrameType {
 |成員|描述|  
 |------------|-----------------|  
 |`STUBFRAME_NONE`|null 值。 `ICorDebugInternalFrame::GetFrameType`方法不會傳回此值。|  
-|`STUBFRAME_M2U`|管理至 unmanaged 的虛設常式的框架。|  
-|`STUBFRAME_U2M`|Unmanaged--受管理的虛設常式的框架。|  
+|`STUBFRAME_M2U`|Managed 至 unmanaged 虛設常式的框架。|  
+|`STUBFRAME_U2M`|非受控至 managed 虛設常式的框架。|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|應用程式定義域之間的轉換。|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|輕量級方法呼叫。|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|輕量的方法呼叫。|  
 |`STUBFRAME_FUNC_EVAL`|函式評估的開始。|  
 |`STUBFRAME_INTERNALCALL`|Common language runtime 內部呼叫。|  
-|`STUBFRAME_CLASS_INIT`|類別初始設定開始。|  
+|`STUBFRAME_CLASS_INIT`|在類別初始化開始。|  
 |`STUBFRAME_EXCEPTION`|就會擲回例外狀況。|  
-|`STUBFRAME_SECURITY`|使用程式碼存取安全性的框架。|  
+|`STUBFRAME_SECURITY`|用於程式碼存取安全性的框架。|  
 |`STUBFRAME_JIT_COMPILATION`|執行階段是 JIT 編譯方法。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

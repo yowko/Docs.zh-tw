@@ -2,20 +2,20 @@
 title: '&lt;basicHttpBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: 870694eae832dd603e511d0b6817c07b08c50614
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 9e6a0e864dcb83a529a5ac457e2fcffe0435376f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701166"
 ---
 # <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; 的 &lt;security&gt;
 定義的安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
   
  \<system.ServiceModel>  
-\<繫結 >  
+\<bindings>  
 \<basicHttpBinding>  
-\<繫結 >  
+\<binding>  
 \<安全性 >  
   
 ## <a name="syntax"></a>語法  
@@ -65,14 +65,14 @@ ms.locfileid: "54150262"
 ## <a name="remarks"></a>備註  
  根據預設，SOAP 訊息並不安全，而且用戶端也尚未經過驗證。 這個項目可讓您設定 `basicHttpBinding` 項目的其他安全性設定。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.BasicHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>  
- <xref:System.ServiceModel.BasicHttpSecurity>  
- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.BasicHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>
+- <xref:System.ServiceModel.BasicHttpSecurity>
+- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

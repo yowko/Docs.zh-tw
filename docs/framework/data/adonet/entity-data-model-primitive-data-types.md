@@ -2,23 +2,23 @@
 title: 實體資料模型：基本資料型別
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: 3e99f65c57cf0e0ee4cbccc79d5819d39b9ee60b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2c2e1056c43f974ec38407372a8f447e52b4a630
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748008"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>實體資料模型：基本資料型別
-實體資料模型 (EDM) 支援一組用來定義的抽象基本資料類型 （例如字串、 布林值、 Int32 等） 的[屬性](../../../../docs/framework/data/adonet/property.md)概念模型中。 這些基本資料型別是實際基本資料型別的 Proxy，無論在 SQL Server 資料庫或 Common Language Runtime (CLR) 等儲存或裝載環境中皆可支援。 EDM 不會定義基本資料型別作業或慣例的語意，這些語意是由儲存或裝載環境定義的。 一般來說，EDM 中的基本資料型別對應於儲存或裝載環境中相對應的基本資料型別。 如需如何 Entity Framework 將 EDM 中的基本類型對應到 SQL Server 資料類型資訊，請參閱[適用於 Entity Framework 的 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)。  
+Entity Data Model (EDM) 支援一組用來定義的抽象基本資料類型 （例如字串、 布林值、 Int32 等） 的[屬性](../../../../docs/framework/data/adonet/property.md)概念模型中。 這些基本資料型別是實際基本資料型別的 Proxy，無論在 SQL Server 資料庫或 Common Language Runtime (CLR) 等儲存或裝載環境中皆可支援。 EDM 不會定義基本資料型別作業或慣例的語意，這些語意是由儲存或裝載環境定義的。 一般來說，EDM 中的基本資料型別對應於儲存或裝載環境中相對應的基本資料型別。 如需 Entity Framework 到 SQL Server 資料型別所對應的 edm 基本類型的資訊，請參閱[適用於 Entity framework 的 sqlclient 類型 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)。  
   
 > [!NOTE]
 >  EDM 不支援基本資料型別集合。  
   
- 如需 EDM 中結構化的資料類型的資訊，請參閱[實體類型](../../../../docs/framework/data/adonet/entity-type.md)和[複雜型別](../../../../docs/framework/data/adonet/complex-type.md)。  
+ 如需 EDM 中的結構化的資料類型的資訊，請參閱[實體類型](../../../../docs/framework/data/adonet/entity-type.md)並[複雜型別](../../../../docs/framework/data/adonet/complex-type.md)。  
   
 ## <a name="primitive-data-types-supported-in-the-entity-data-model"></a>實體資料模型中支援的基本資料型別  
- 下表列出 EDM 所支援的基本資料型別。 這個表格也列出[facet](../../../../docs/framework/data/adonet/facet.md) ，可以套用到每個基本資料類型。  
+ 下表列出 EDM 所支援的基本資料型別。 這個表格也列出[facet](../../../../docs/framework/data/adonet/facet.md) ，可以套用至每個基本資料類型。  
   
 |基本資料型別|描述|適用的 Facet|  
 |-------------------------|-----------------|-----------------------|  
@@ -38,6 +38,6 @@ ms.locfileid: "32765967"
 |String|包含字元資料。|Unicode、FixedLength、MaxLength、Collation、Precision、Nullable、Default|  
 |時間|包含一天的時間。|Precision、Nullable、Default|  
   
-## <a name="see-also"></a>另請參閱  
- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>另請參閱
+- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

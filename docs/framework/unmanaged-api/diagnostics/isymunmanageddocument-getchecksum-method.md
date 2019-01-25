@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 660da82f1e6d6d3ea8ba084885331c895bc64542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 406fdfcfc0b6db988b317245aaaa4f4a643b2079
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561396"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum 方法
 取得總和檢查碼。  
@@ -44,10 +44,10 @@ HRESULT GetCheckSum(
  [out]大小和總和檢查碼，以位元組為單位的長度。  
   
  `data`  
- [out]接收總和檢查碼的緩衝區。  
+ [out]接收的總和檢查碼的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，錯誤代碼。  
+ 如果方法成功，則為 S_OK否則，出現錯誤代碼。  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

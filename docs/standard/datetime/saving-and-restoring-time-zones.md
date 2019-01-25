@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dc983f1f0b2405f207d69c62b800ee854fcd409
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569452"
 ---
 # <a name="saving-and-restoring-time-zones"></a>儲存和還原時區
 
@@ -72,8 +72,8 @@ ms.locfileid: "44081764"
 
 將序列化的時區字串儲存在這種方式，也會將時區建立常式從應用程式本身。 比方說，時區建立常式可以執行，並建立包含應用程式可以使用的歷程時區資訊的資料檔案。 可以是資料檔，則安裝應用程式時，您可以開啟和一或多個時區可以還原序列化時應用程式需要它們。
 
-如需用來儲存已序列化的時區資料的內嵌的資源的範例，請參閱 <<c0> [ 如何： 將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)並[如何： 從內嵌資源還原時區](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。
+如需用來儲存已序列化的時區資料的內嵌的資源的範例，請參閱[How to:將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)和[How to:從內嵌資源還原時區](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-* [日期、時間和時區](../../../docs/standard/datetime/index.md)
+- [日期、時間和時區](../../../docs/standard/datetime/index.md)

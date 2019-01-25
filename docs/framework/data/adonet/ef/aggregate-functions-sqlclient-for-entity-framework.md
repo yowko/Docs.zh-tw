@@ -2,12 +2,12 @@
 title: 彙總函式 (適用於 Entity Framework 的 SqlClient)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 8ed9a58da9914724fe312876d6594cb526f2e0e9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 55a10b82ffc189f5cf4118cb225a96963226256e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724183"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>彙總函式 (適用於 Entity Framework 的 SqlClient)
 .NET Framework Data Provider for SQL Server (SqlClient) 有提供彙總函式。 彙總函式會對一組輸入值執行計算，並傳回值。 這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。 提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。  
@@ -224,8 +224,8 @@ Collection(T)，其中 T 是下列類型之一： `Int32`， `Int64`， `Double`
 ## <a name="see-also"></a>另請參閱
 
 如需 SqlClient 所支援彙總函式的詳細資訊，請參閱 SqlClient 提供者資訊清單中所指定 SQL Server 版本的說明文件：  
-  
-**SQL Server 2005**:[彙總函式 & Amp;#40;transact-SQL&AMP;#41;](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))  
-**SQL Server 2008 及更新版本**:[彙總函式 & Amp;#40;transact-SQL&AMP;#41;](/sql/t-sql/functions/aggregate-functions-transact-sql)  
-[Entity SQL 語言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
-[彙總標準函式](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)
+
+**SQL Server 2005**:[彙總函式 & Amp;#40;transact-SQL&AMP;#41](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))  
+**SQL Server 2008 及更新版本**:[彙總函式 & Amp;#40;transact-SQL&AMP;#41](/sql/t-sql/functions/aggregate-functions-transact-sql)  
+- [Entity SQL 語言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [彙總標準函式](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

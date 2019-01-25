@@ -2,12 +2,12 @@
 title: SQL Server 功能和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 2747af4ee2937f5b5d26217df5eb45c806606ac5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9e6f9d0404108428375aa859fa3f0b0939da6a24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705367"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 功能和 ADO.NET
 本節中的主題將討論使用 ADO.NET 來開發資料庫應用程式的 SQL Server 功能。  
@@ -46,9 +46,9 @@ ms.locfileid: "44085234"
  [LocalDB 的 SqlClient 支援](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
  說明 SqlClient 對 LocalDB 資料庫的支援。  
   
-## <a name="see-also"></a>另請參閱  
- [ADO.NET 中的 SQL Server 資料作業](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [ADO.NET 中的 SQL Server 資料作業](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

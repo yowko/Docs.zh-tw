@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c130b92fd5114d067730da3b7cd138d98cf0577
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ade4c88f4431dd6db636ea2581bdb936ac8d8e5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538007"
 ---
 # <a name="icordebugappdomain3-interface"></a>ICorDebugAppDomain3 介面
-提供方法來擷取資訊的受管理的表示法[!INCLUDE[wrt](../../../../includes/wrt-md.md)]目前載入的應用程式定義域中的類型。 這個介面是 ICorDebugAppDomain 和 ICorDebugAppDomain2 介面的擴充功能。  
+提供方法來擷取資訊的受管理的表示法[!INCLUDE[wrt](../../../../includes/wrt-md.md)]目前已載入應用程式定義域中的類型。 這個介面是 ICorDebugAppDomain 和 ICorDebugAppDomain2 介面的延伸模組。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Icordebugappdomain3:: Getcachedwinrttypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|取得列舉值，所有快取[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型別。|  
-|[Icordebugappdomain3:: Getcachedwinrttypesforiids](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|取得列舉值的快取[!INCLUDE[wrt](../../../../includes/wrt-md.md)]應用程式定義域中的類型取決於其介面識別項。|  
+|[ICorDebugAppDomain3::GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|取得列舉值，所有快取[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型別。|  
+|[ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|取得列舉值的快取[!INCLUDE[wrt](../../../../includes/wrt-md.md)]其介面識別項為基礎的應用程式定義域中的類型。|  
   
 ## <a name="remarks"></a>備註  
- 這個介面是用於偵錯工具的函式評估呼叫搭配`M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`。 當方法會擷取所支援的介面識別碼[!INCLUDE[wrt](../../../../includes/wrt-md.md)]伺服器物件時，偵錯工具可能會使用此介面中定義的方法以對應至對應到這些介面的 managed 型別。  
+ 這個介面適用於偵錯工具的函式評估呼叫搭配`M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`。 當方法會擷取支援的介面識別項[!INCLUDE[wrt](../../../../includes/wrt-md.md)]伺服器物件，偵錯工具可以使用此介面中定義的方法，將其對應到對應至這些介面的 managed 型別。  
   
- 若要擷取此介面的執行個體，執行`QueryInterface`ICorDebugAppDomain 或 ICorDebugAppDomain2 介面的執行個體上。  
+ 若要擷取此介面的執行個體，請執行`QueryInterface`ICorDebugAppDomain 或 ICorDebugAppDomain2 介面的執行個體上。  
   
 > [!NOTE]
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
@@ -48,7 +48,7 @@ ms.locfileid: "33407401"
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: UriTemplate 與 UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3fd60325d2264a2ddeaabef7b0998844ca8c8cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722604"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 與 UriTemplateTable
 Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 Windows Communication Foundation (WCF) 加入兩個新的類別，可讓開發人員充分掌控其 Uri。 <xref:System.UriTemplate> 和<xref:System.UriTemplateTable>WCF 中形成的 URI 為基礎的發送引擎基礎。 這些類別也可用在其本身，可讓開發人員充分運用範本與 URI 對應機制不需實作 WCF 服務。  
@@ -81,7 +81,7 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 W
   
 - "{shoe}/boat"  
   
-- "{shoe} / {划船} /bed/ {quilt}"  
+- "{shoe}/{boat}/bed/{quilt}"  
   
 - "shoe / {划船}"  
   
@@ -89,7 +89,7 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 W
   
 - "shoe/船隻？ x = 2"  
   
-- "shoe / {划船}？ x = {平台}"  
+- "shoe/{boat}?x={bed}"  
   
 - "shoe/{boat}?x={bed}&y=band"  
   
@@ -129,7 +129,7 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 W
 - /{shoe}{boat}：變數之間必須以常值分隔。  
   
 ### <a name="matching-and-compound-path-segments"></a>比對和複合路徑區段  
- 複合路徑區段可讓您定義一個 UriTemplate，該 UriTemplate 在單一路徑區段中有多個變數。 例如，在下列範本字串: 「 位址 / {state}。{city}"的相同區段中定義兩個變數 （state 和 city）。 此範本會比對 URL 這類`http://example.com/Washington.Redmond`，但它也會比對的 URL，例如`http://example.com/Washington.Redmond.Microsoft`。 在後者的情況下，狀態變數將包含 「 Washington 」，而 city 變數將包含"Redmond.Microsoft"。 在此情況下，任何文字 (除了 ‘/’ 之外) 都會比對 {city} 變數。 如果您想要使用範本不比對 「 額外的 」 文字，請將變數放在另一個範本區段中，例如: 「 位址 / {state} / {city}。  
+ 複合路徑區段可讓您定義一個 UriTemplate，該 UriTemplate 在單一路徑區段中有多個變數。 例如，在下列範本字串：「 位址 / {state}。{city}"的相同區段中定義兩個變數 （state 和 city）。 此範本會比對 URL 這類`http://example.com/Washington.Redmond`，但它也會比對的 URL，例如`http://example.com/Washington.Redmond.Microsoft`。 在後者的情況下，狀態變數將包含 「 Washington 」，而 city 變數將包含"Redmond.Microsoft"。 在此情況下，任何文字 (除了 ‘/’ 之外) 都會比對 {city} 變數。 如果您想要使用範本不比對 「 額外的 」 文字，請將變數放在另一個範本區段中，例如：「 位址 / {state} / {city}。  
   
 ### <a name="named-wildcard-segments"></a>命名的萬用字元片段  
  命名的萬用字元片段是任一路徑變數片段變數名稱開頭為萬用字元 '\*'。 下列範本字串包含了命名的萬用字元片段，名為 "shoe"。  
@@ -328,9 +328,9 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 > [!NOTE]
 > 當字元 á 與 Á 出現在 URI 路徑或 <xref:System.UriTemplate> 路徑片段常值中時，兩者將被視為不同的字元 (但是字元 a 與 A 則被視為相同)。 當字元 á 與 Á 出現在 <xref:System.UriTemplate> {variableName} 或查詢字串中時，兩者將被視為相同的字元 (而且字元 a 與 A 亦將被視為相同)。  
   
-## <a name="see-also"></a>另請參閱  
- [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [UriTemplate 資料表](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [UriTemplate 資料表發送器](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+## <a name="see-also"></a>另請參閱
+- [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+- [UriTemplate 資料表](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [UriTemplate 資料表發送器](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

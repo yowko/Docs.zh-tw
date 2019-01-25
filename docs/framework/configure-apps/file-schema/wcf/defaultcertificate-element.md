@@ -2,23 +2,23 @@
 title: '&lt;defaultCertificate&gt; 項目'
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: 2f6167d7b30da753d093a87753eeef3374fcc0f0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1e4c76ea2b3e4064f3bc14461be1729af299117b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146988"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676625"
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt; 項目
 指定服務或 STS 不透過交涉通訊協定提供憑證時要使用的 X.509 憑證。  
   
  \<system.ServiceModel>  
-\<行為 >  
+\<behaviors>  
 endpointBehaviors 區段  
-\<行為 >  
+\<behavior>  
 \<clientCredentials>  
-\<v >  
-\<defaultCertificate >  
+\<serviceCertificate>  
+\<defaultCertificate>  
   
 ## <a name="syntax"></a>語法  
   
@@ -72,7 +72,7 @@ endpointBehaviors 區段
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<v >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|指定對用戶端驗證服務時所使用的憑證。|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|指定對用戶端驗證服務時所使用的憑證。|  
   
 ## <a name="remarks"></a>備註  
  對於使用以憑證為基礎之訊息安全性的繫結，這個組態項目指定的憑證會用來加密傳送給服務的訊息，而且預期會由服務用來簽署對用戶端的回覆。 它會儲存當服務未指定憑證時所要使用的單一憑證。  
@@ -98,11 +98,11 @@ endpointBehaviors 區段
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>  
- [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
- [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)  
- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
+- [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
+- [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)
+- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

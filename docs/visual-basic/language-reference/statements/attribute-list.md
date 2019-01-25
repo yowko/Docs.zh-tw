@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 23f2004a34f5d6dc27c8263f6e66642dd32c6a5f
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 9ab55187fef11fba9c794ff0266656860bea3d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672102"
 ---
 # <a name="attribute-list-visual-basic"></a>屬性清單 (Visual Basic)
 指定要套用至程式設計項目宣告的屬性。 以逗號分隔多個屬性。 以下是一個屬性的語法。  
@@ -25,7 +25,7 @@ ms.locfileid: "37936925"
 |||
 |---|---|
 |`attributemodifier`|所需的原始程式檔開頭套用的屬性。 可以是[組件](../../../visual-basic/language-reference/modifiers/assembly.md)或是[模組](../../../visual-basic/language-reference/modifiers/module-keyword.md)。|
-|`attributename`| 必要。 屬性的名稱。|
+|`attributename`| 必要項。 屬性的名稱。|
 |`attributearguments`|選擇性。 此屬性的位置引數的清單。 以逗號分隔多個引數。|
 |`attributeinitializer`|選擇性。 此屬性的變數或屬性初始設定式清單。 以逗號分隔多個初始設定式。|
   
@@ -53,8 +53,8 @@ ms.locfileid: "37936925"
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> 表示屬性化的程序會表示 unmanaged 動態連結程式庫 (DLL) 中的進入點。 屬性會提供 DLL 名稱做為位置的引數和區域變數初始設定式的其他資訊。  
   
-## <a name="see-also"></a>另請參閱  
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
- [Module \<鍵字>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
- [屬性概觀](../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [操作說明：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+## <a name="see-also"></a>另請參閱
+- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Module \<鍵字>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [屬性概觀](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [如何：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

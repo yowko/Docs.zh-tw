@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: fe820b9d2157c09428903a36427d3ff5e4c0045b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 5c8767db154c79d9e3b37a22410ac1e4705b7a44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45619171"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609794"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前方法
 因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前的方法。 請考慮將 'Await' 運算子套用至呼叫的結果。  
@@ -23,9 +23,9 @@ ms.locfileid: "45619171"
   
  因此最佳做法是一律等候呼叫。  
   
- 根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的詳細資訊，請參閱[Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
+ 根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的詳細資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤 ID︰** BC42358  
+ **錯誤 ID:** BC42358  
   
 ### <a name="to-address-this-warning"></a>解決這個警告  
   
@@ -117,7 +117,7 @@ ms.locfileid: "45619171"
   
      包含按鈕和文字方塊的簡單視窗會出現在 MainWindow.xaml 的 [ **設計** ] 檢視中。  
   
-     如需 XAML 設計工具的詳細資訊，請參閱[使用 XAML 設計工具建立 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。 如需如何建置您自己的簡單 UI 的資訊，請參閱[逐步解說：使用 Async 和 Await 存取 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)的＜建立 WPF 應用程式＞和＜設計簡單的 WPF MainWindow＞章節。  
+     如需 XAML 設計工具的詳細資訊，請參閱[使用 XAML 設計工具建立 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。 如需有關如何建置您自己的簡單 UI 的資訊，請參閱 「 建立 WPF 應用程式 > 和 < 設計簡單的 WPF MainWindow > 區段[逐步解說：使用 Async 和 Await 存取 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
 4.  以下列程式碼取代 MainWindow.xaml.vb 中的程式碼。  
   
@@ -205,5 +205,5 @@ ms.locfileid: "45619171"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Await 運算子](../../../visual-basic/language-reference/operators/await-operator.md)  
+- [Await 運算子](../../../visual-basic/language-reference/operators/await-operator.md)
 - [使用 Async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)

@@ -1,20 +1,20 @@
 ---
-title: 使用介面中的變異數的泛型集合 (Visual Basic)
+title: 使用介面中的變異數，針對泛型集合 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-ms.openlocfilehash: 860c41e73aa2d45ca1a9adcb3031834545e2fb37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7265fc208b7538a2ab63822afbe63b09b0f34135
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735405"
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>使用介面中的變異數的泛型集合 (Visual Basic)
+# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>使用介面中的變異數，針對泛型集合 (Visual Basic)
 Covariant 介面允許其方法傳回與介面中指定的類型相比，其衍生程度較大的類型。 Contravariant 介面允許其方法接受與介面中指定的參數相比，其類型衍生程度較小的參數。  
   
  在 .NET Framework 4 中，有數個現有介面已變成 Covariant 和 Contravariant。 這些結構包括 <xref:System.Collections.Generic.IEnumerable%601> 及 <xref:System.IComparable%601>。 因此，您可以針對衍生類型的集合，重複使用搭配基底類型之泛型集合運作的方法。  
   
- 如需.NET Framework 中的 variant 介面的清單，請參閱[泛型介面 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
+ 如需.NET Framework 中的 variant 介面的清單，請參閱 <<c0> [ 泛型介面 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
   
 ## <a name="converting-generic-collections"></a>轉換泛型集合  
  下列範例說明在 <xref:System.Collections.Generic.IEnumerable%601> 介面中支援共變數的好處。 `PrintFullName` 方法接受 `IEnumerable(Of Person)` 類型的集合作為參數。 不過，您可以重複用於 `IEnumerable(Of Person)` 類型的集合，因為 `Employee` 會繼承 `Person`。  
@@ -109,5 +109,5 @@ Sub Main()
 End Sub  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [泛型介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [泛型介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

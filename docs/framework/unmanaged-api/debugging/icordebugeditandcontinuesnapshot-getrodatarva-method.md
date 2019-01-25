@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c46e85309f1e6867899a3b0fb123f4a3e535493
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a0fcd03fde49622a8c388bb821549cec2cf3a154
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531011"
 ---
 # <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a>ICorDebugEditAndContinueSnapshot::GetRoDataRVA 方法
 `GetRoDataRVA` 已經過時。 請勿呼叫這個方法。  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

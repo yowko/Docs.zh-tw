@@ -1,5 +1,5 @@
 ---
-title: 如何：將資料表和資料行加入至 Windows Form DataGrid 控制項
+title: HOW TO：將資料表和資料行新增至 Windows Forms DataGrid 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: fc8161ea29da92f5dcc2e76f956f3fecd6140acc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be0bb6d3d7b8d8b362653257139e83900dbb2780
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717866"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>如何：將資料表和資料行加入至 Windows Form DataGrid 控制項
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>HOW TO：將資料表和資料行新增至 Windows Forms DataGrid 控制項
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- 您可以在 Windows Form 顯示資料<xref:System.Windows.Forms.DataGrid>中資料表和資料行，藉由建立控制項**DataGridTableStyle**物件並將它們加入至**您**物件，它是透過存取<xref:System.Windows.Forms.DataGrid>控制項的**Tablestyle**屬性。 每個資料表樣式顯示的任何資料表中所指定內容**DataGridTableStyle**物件的**MappingName**屬性。 根據預設，指定沒有資料行樣式的資料表樣式會顯示資料的資料表中的所有資料行。 您可以限制資料表的哪些資料行出現加**DataGridColumnStyle**物件加入至**GridColumnStylesCollection**物件，它透過存取**GridColumnStyles**每個屬性**DataGridTableStyle**物件。  
+ 您可以在 Windows Form 中顯示資料<xref:System.Windows.Forms.DataGrid>中資料表和資料行，藉由建立控制項**Styl**物件，並將它們加入至**您**物件，也就是經由<xref:System.Windows.Forms.DataGrid>控制項的**Tablestyle**屬性。 每個資料表樣式會顯示任何資料表中指定的內容**Styl**物件的**MappingName**屬性。 根據預設，任何指定的資料行樣式的資料表樣式會顯示資料的資料表內的所有資料行。 您可以限制哪些資料行從資料表顯示加上**DataGridColumnStyle**物件至**GridColumnStylesCollection**物件，這透過存取**GridColumnStyles**屬性的每個**Styl**物件。  
   
 ### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>若要以程式設計方式將資料表和資料行加入到資料格  
   
-1.  若要顯示資料表中的資料，您必須先繫結<xref:System.Windows.Forms.DataGrid>控制項至資料集。 如需詳細資訊，請參閱[How to： 將 Windows Form DataGrid 控制項繫結至資料來源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
+1.  若要顯示資料表中的資料，您必須先繫結<xref:System.Windows.Forms.DataGrid>資料集的控制項。 如需詳細資訊，請參閱[＜How to：將 Windows Forms DataGrid 控制項繫結至資料來源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
   
     > [!CAUTION]
-    >  時以程式設計方式指定資料行樣式，一定要建立**DataGridColumnStyle**物件，並將其新增至**GridColumnStylesCollection**物件，然後再加入**DataGridTableStyle**物件加入至**您**物件。 當您將加入空**DataGridTableStyle**物件加入至集合， **DataGridColumnStyle**自動為您產生的物件。 因此，發生例外狀況會擲回您嘗試加入新**DataGridColumnStyle**物件具有重複**MappingName**值**GridColumnStylesCollection**物件。  
+    >  時以程式設計方式指定資料行樣式，一定要建立**DataGridColumnStyle**物件，並將其新增至**GridColumnStylesCollection**物件，然後再加入**Styl**物件至**您**物件。 當您將加入空**Styl**物件加入至集合， **DataGridColumnStyle**自動為您產生的物件。 因此，將會擲回例外狀況如果您嘗試加入新**DataGridColumnStyle**物件具有重複**MappingName**值**GridColumnStylesCollection**物件。  
   
-2.  宣告新的資料表樣式，並將其對應的名稱。  
+2.  宣告新的表格樣式，並將它對應的名稱。  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -67,7 +67,7 @@ ms.locfileid: "33527715"
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  呼叫**新增**方法**GridColumnStylesCollection**資料表樣式加入資料行的物件  
+4.  呼叫**新增**方法**GridColumnStylesCollection**將資料行加入資料表樣式的物件  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "33527715"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  呼叫**新增**方法**您**將資料表樣式加入資料格的物件。  
+5.  呼叫**新增**方法**您**將資料表樣式加入至資料格的物件。  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  
@@ -95,6 +95,6 @@ ms.locfileid: "33527715"
     dataGrid1->TableStyles->Add(ts1);  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [DataGrid 控制項](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [操作說明：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a>另請參閱
+- [DataGrid 控制項](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

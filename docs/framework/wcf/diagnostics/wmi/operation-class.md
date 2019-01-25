@@ -2,12 +2,12 @@
 title: Operation 類別
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: 16de8b25594896349ea546d3def52dd256fe5c70
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9453d67854bb8439891661b07e3ab3aa373e23eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180935"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668297"
 ---
 # <a name="operation-class"></a>Operation 類別
 運算  
@@ -53,7 +53,7 @@ class Operation
  表示以非同步方式實作作業`Begin`[開啟/關閉角括號] 和`End`採用服務合約中的 [開啟/關閉角度 brackets] 方法組。  
   
 ### <a name="behaviors"></a>「行為」  
- 資料型別：行為陣列  
+ 資料類型：行為陣列  
   
  存取類型：唯讀  
   
@@ -128,5 +128,5 @@ class Operation
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Description.OperationDescription>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Description.OperationDescription>

@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ecb80de1ae46b072df4bab8357e78e7a22ae298
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4780242dc34f31ecd0ff0dc2c339cdaa30278a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721158"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 方法
 設定使用指定的 Microsoft intermediate language (MSIL) 對應項目指定的函式的程式碼對應。  
   
 > [!NOTE]
->  在.NET Framework 2.0 版中，呼叫`SetILInstrumentedCodeMap`上`FunctionID`代表特定應用程式網域中的泛型函式會影響該函式應用程式定義域中的所有執行個體。  
+>  在.NET Framework 2.0 版中，呼叫`SetILInstrumentedCodeMap`上`FunctionID`代表特定的應用程式定義域中的泛型函式會影響該函式應用程式定義域中的所有執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,10 +42,10 @@ HRESULT SetILInstrumentedCodeMap(
   
 #### <a name="parameters"></a>參數  
  `functionId`  
- [in]若要設定程式碼對應的函式的識別碼。  
+ [in]要設定 code map 函式的識別碼。  
   
  `fStartJit`  
- [in]布林值，指出是否在呼叫`SetILInstrumentedCodeMap`方法是針對特定的第一個`FunctionID`。 設定`fStartJit`至`true`中的第一個呼叫`SetILInstrumentedCodeMap`針對給定`FunctionID`，以及`false`之後。  
+ [in]布林值，指出是否在呼叫`SetILInstrumentedCodeMap`方法是為特定的第一個`FunctionID`。 設定`fStartJit`來`true`中的第一個呼叫`SetILInstrumentedCodeMap`針對給定`FunctionID`，以及`false`之後。  
   
  `cILMapEntries`  
  [in]中的項目數`cILMapEntries`陣列。  
@@ -54,42 +54,42 @@ HRESULT SetILInstrumentedCodeMap(
  [in]COR_IL_MAP 結構陣列，其中每個指定的 MSIL 位移。  
   
 ## <a name="remarks"></a>備註  
- 分析工具通常會以檢測方法 （例如，當到達指定的原始程式行時，通知） 插入陳述式的原始程式碼內的方法。 `SetILInstrumentedCodeMap` 可讓分析工具將原始的 MSIL 指示對應至其新位置。 分析工具可以使用[icorprofilerinfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)方法來取得原始的 MSIL 位移指定的原生位移。  
+ 分析工具通常會插入方法的原始程式碼中的陳述式以檢測方法 （例如，在達到指定的原始程式行時通知）。 `SetILInstrumentedCodeMap` 可讓分析工具將原始的 MSIL 指令對應至其新位置。 可以使用分析工具[icorprofilerinfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)方法來取得原始的 MSIL 位移指定的原生位移。  
   
- 偵錯工具會假設每個舊的位移，是指原始、 未修改的 MSIL 程式碼中的 MSIL 位移，並且每個新的位移，是指在新的已檢測的程式碼的 MSIL 位移。 此對應應該是以遞增順序排序。 逐步執行才能正常運作，請遵循這些指導方針：  
+ 偵錯工具會假設每個舊位移是指原始、 未修改的 MSIL 程式碼中的 MSIL 位移，而每個新的位移是指在新的已檢測的程式碼的 MSIL 位移。 此對應應該以遞增的順序排序。 逐步執行才能正常運作，請遵循這些指導方針：  
   
--   無法重新排列已經過檢測的 MSIL 程式碼。  
+-   無法重新排序已檢測的 MSIL 程式碼。  
   
 -   請勿移除原始的 MSIL 程式碼。  
   
--   包含對應中的程式資料庫 (PDB) 檔案中的所有序列點的項目。 對應不會不進行插補遺漏的項目。 因此，根據下列對應：  
+-   包含在對應中的程式資料庫 (PDB) 檔案中的所有序列點的項目。 對應不會插補遺漏的項目。 因此，假設下列對應：  
   
-     (0 舊，-0 新)  
+     (0，0 新)  
   
-     (5 舊，10 新)  
+     (5，-10 新)  
   
-     (9 舊，-20 新)  
+     (9，-20 新)  
   
     -   0、 1、 2、 3 或 4 的舊位移會對應至新的位移 0。  
   
-    -   5、 6、 7 或 8 的舊位移會對應至新的位移 10。  
+    -   5、 6、 7 或 8 的舊位移會對應至 10 的新位移。  
   
-    -   9 或更高版本的舊位移會對應至新的位移 20。  
+    -   9 或更新版本的舊位移會對應至新的位移 20。  
   
-    -   0、 1、 2、 3、 4、 5、 6、 7、 8 或 9 的新位移會對應至舊的位移 0。  
+    -   0、 1、 2、 3、 4、 5、 6、 7、 8 或 9 新位移會對應至舊的位移 0。  
   
-    -   為新的位移 10、 11、 12、 13、 14、 15、 16、 17、 18 或 19 的會對應至舊的位移 5。  
+    -   新的位移，10、 11、 12、 13、 14、 15、 16、 17、 18 或 19 的會對應至舊位移 5。  
   
-    -   20 或更高版本的新位移會對應至舊的位移 9。  
+    -   20 或更高版本的新位移會對應至舊位移 9。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

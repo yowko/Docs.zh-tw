@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows Form 上設定定位順序
+title: HOW TO：在 Windows Form 上設定定位順序
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 74244ae4e3692ed210b2a8f1513b035c85e98376
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 118785e14dddcd5ff19aa8c143f9e8df05d8980b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675176"
 ---
-# <a name="how-to-set-the-tab-order-on-windows-forms"></a>如何：在 Windows Form 上設定定位順序
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a>HOW TO：在 Windows Form 上設定定位順序
 定位順序是以使用者焦點從某個控制項移動到另一個按下 TAB 鍵的順序。 每個表單有它自己的定位順序。 根據預設，定位順序是您可以在其中建立控制項的順序相同。 定位順序編號從 0 開始。  
   
 > [!NOTE]
@@ -54,8 +54,8 @@ ms.locfileid: "43745511"
     > [!NOTE]
     >  選項按鈕群組有一個索引標籤停止在執行階段。 [選取] 按鈕 (也就是具有按鈕其<xref:System.Windows.Forms.RadioButton.Checked%2A>屬性設定為`true`) 具有其<xref:System.Windows.Forms.Control.TabStop%2A>屬性會自動設定為`true`，而其他按鈕有其<xref:System.Windows.Forms.Control.TabStop%2A>屬性設定為`false`。 如需有關分組<xref:System.Windows.Forms.RadioButton>控制項，請參閱[當成一組群組 Windows Form RadioButton 控制項](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>另請參閱
+- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)
+- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

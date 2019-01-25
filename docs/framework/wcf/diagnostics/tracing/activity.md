@@ -2,12 +2,12 @@
 title: 活動
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 00115d51cff40be726ccf94c3cac09242c0bdab8
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505584"
 ---
 # <a name="activity"></a>活動
 本主題說明 Windows Communication Foundation (WCF) 追蹤模型中的活動追蹤。 活動指的是協助使用者縮小失敗範圍的處理單位。 發生在同一個活動中的錯誤都是直接相關的。 例如，因為訊息解密失敗而導致作業失敗。 作業與訊息解密失敗的追蹤會同時出現在同一個活動中，顯示解密錯誤與要求錯誤之間直接的相互關聯性。  
@@ -64,15 +64,15 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="activity-lifetime"></a>活動存留期  
  嚴格地說，活動證據會在發出的追蹤第一次使用活動識別碼時開始，並於最後一次使用活動識別碼時停止。 <xref:System.Diagnostics> 會提供預先定義的追蹤類型組合，包括「開始」與「停止」，以明確標記活動的存留期界限。  
   
--   開始：表示活動的開頭。 「 開始 」 追蹤會提供開始新處理里程碑的記錄。 它包含特定處理序中所指定之追蹤來源的全新活動識別碼 (除非活動識別碼已傳播至各端點，我們才會在每個端點看到一個「開始」)。 開始新活動的範例包括建立新的執行緒以供處理，或是輸入新的公用方法。  
+-   啟動：表示活動的開始。 「 開始 」 追蹤會提供開始新處理里程碑的記錄。 它包含特定處理序中所指定之追蹤來源的全新活動識別碼 (除非活動識別碼已傳播至各端點，我們才會在每個端點看到一個「開始」)。 開始新活動的範例包括建立新的執行緒以供處理，或是輸入新的公用方法。  
   
 -   停止：表示活動的結尾。 「 停止 」 追蹤會提供結束現有處理里程碑的記錄。 它包含特定處理序中所指定之追蹤來源的現有活動識別碼，除非活動識別碼已傳播至各端點時，我們才會在每個端點看到一個「停止」。  停止活動的範例包括終止處理中的執行緒，或結束的方法，其開始標示 「 開始 」 追蹤。  
   
 -   暫停：表示活動處理暫停。 「 暫停 」 追蹤包含現有的活動識別碼，預期將在稍後繼續其處理。 在「暫停」與「繼續」事件之間，不會從目前的追蹤來源使用此識別碼發出任何追蹤。 範例包括呼叫外部程式庫函式，或等候 I/O 完成連接埠等資源時暫停活動。  
   
--   繼續：表示繼續處理活動。 「 繼續 」 追蹤包含現有的活動識別碼，從目前的追蹤來源的最後一個發出的追蹤是 「 暫停 」 追蹤。 範例包括從呼叫外部程式庫函式返回，或是 I/O 完成連接埠等資源表示繼續處理時返回。  
+-   繼續：表示繼續處理的活動。 「 繼續 」 追蹤包含現有的活動識別碼，從目前的追蹤來源的最後一個發出的追蹤是 「 暫停 」 追蹤。 範例包括從呼叫外部程式庫函式返回，或是 I/O 完成連接埠等資源表示繼續處理時返回。  
   
--   傳輸： 由於某些活動由其他人所造成，或與其他類別相關，活動可以與其他透過 「 傳輸 」 追蹤的活動。 傳輸會記錄活動之間的導向關係  
+-   傳輸：因為某些活動由其他人所造成，或與其他類別相關，活動可以透過 「 傳輸 」 追蹤的其他活動相關。 傳輸會記錄活動之間的導向關係  
   
  「開始」與「停止」追蹤對相互關聯並不重要。 然而，這兩項追蹤有助於提升效能、進行分析，以及驗證活動範圍。  
   
@@ -97,9 +97,9 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   活動就是代表活動，但不一定代表物件。 活動應該解讀為 「 它的發生時。 。 。 (已發出有意義的追蹤)」。  
   
-## <a name="see-also"></a>另請參閱  
- [設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [發出使用者程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)
+## <a name="see-also"></a>另請參閱
+- [設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [發出使用者程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

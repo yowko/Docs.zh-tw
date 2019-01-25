@@ -1,15 +1,15 @@
 ---
-title: 如何： 建立簽署的 Friend 組件 (Visual Basic)
+title: HOW TO：建立簽署的 Friend 組件 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 6a9dcc65e7e496a436d81ad2d311a4174f111104
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 02acda34783afceaeb83d0d0752e5247747b5337
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667280"
 ---
-# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>如何： 建立簽署的 Friend 組件 (Visual Basic)
+# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>HOW TO：建立簽署的 Friend 組件 (Visual Basic)
 此範例示範如何搭配具有強式名稱的組件使用 friend 組件。 這兩個組件都必須具有強式名稱。 雖然此範例中的兩個組件使用相同的金鑰，但您可以針對這兩個組件使用不同的金鑰。  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>建立簽署的組件和 friend 組件  
@@ -84,12 +84,12 @@ ms.locfileid: "50188431"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要差異是 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性權限執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則是控制 `Friend` 類型和成員的可見性。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [組件和全域組件快取 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Friend 組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [如何： 建立未簽署的 Friend 組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe （強式名稱工具）][Sn.exe （強式名稱工具）](../../../../framework/tools/sn-exe-strong-name-tool.md))  
- [建立和使用強式名稱的組件](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [程式設計概念](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [組件和全域組件快取 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Friend 組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [如何：建立未簽署的 Friend 組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [Sn.exe （強式名稱工具）][Sn.exe （強式名稱工具）](../../../../framework/tools/sn-exe-strong-name-tool.md))
+- [建立和使用強式名稱的組件](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [程式設計概念](../../../../visual-basic/programming-guide/concepts/index.md)

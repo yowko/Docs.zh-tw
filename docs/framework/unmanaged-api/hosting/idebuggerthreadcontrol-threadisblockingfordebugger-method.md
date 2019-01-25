@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9766c71c568c9661cf284e9c05eb2dd7634a95aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa72c136e98f80df6d2868c447e1c535ae61af06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739624"
 ---
 # <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a>IDebuggerThreadControl::ThreadIsBlockingForDebugger 方法
-通知會傳送此回呼執行緒相關的主機至偵錯服務內的區塊。  
+通知主機有關的傳送此回呼的執行緒偵錯服務內的區塊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,18 +34,18 @@ HRESULT ThreadIsBlockingForDebugger ( );
 ```  
   
 ## <a name="remarks"></a>備註  
- `ThreadIsBlockingForDebugger`一律會在執行階段執行緒上呼叫方法。  
+ `ThreadIsBlockingForDebugger`一律會在執行階段的執行緒上呼叫方法。  
   
- `ThreadIsBlockingForDebugger`方法可讓主機得以執行其他動作，而則執行緒會封鎖。  
+ `ThreadIsBlockingForDebugger`方法可讓主應用程式執行時則執行緒會封鎖另一個動作的機會。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IDebuggerThreadControl 介面](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IDebuggerThreadControl 介面](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

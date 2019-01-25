@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 673712912b674c48dee094859364df9b22c51c82
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 51cdcc4789ac553c2775c89d6124cf90624b8747
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716048"
 ---
 # <a name="designing-and-implementing-services"></a>設計與實作服務
 本節將說明如何定義及實作 WCF 合約。 服務合約會指定端點與外界溝通的內容。 更具體來說，這是關於一組會組織到基本訊息交換模式 (MEP) 之特定訊息的聲明，而這些交換模式包括要求/回覆、單向和雙工。 如果服務合約為一組邏輯相關的訊息交換，則服務作業就是單一的訊息交換。 例如，`Hello` 作業一定會明確地接收一個訊息 (這樣呼叫端才能宣告歡迎畫面)，但卻不一定會傳回訊息 (需視作業的禮節而定)。  
@@ -66,6 +66,6 @@ ms.locfileid: "43877290"
   
  這加總的需求程序是很重要要牢記在心，同時設計、 實作、 設定及裝載 Windows Communication Foundation (WCF) 服務應用程式。 例如，合約可以指定必須支援某個工作階段。 若是如此，您就必須將繫結程序設定成可支援該合約需求，否則服務實作將無法運作。 或者，如果您的服務需要 Windows 整合式驗證而且已裝載於網際網路資訊服務 (IIS)，則服務所在的 Web 應用程式必須啟用 Windows 整合式驗證並關閉匿名支援。 如需有關之功能和影響的不同服務主應用程式類型的詳細資訊，請參閱[裝載的服務](../../../docs/framework/wcf/hosting-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [設計服務合約](../../../docs/framework/wcf/designing-service-contracts.md)  
- [履行服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)
+## <a name="see-also"></a>另請參閱
+- [設計服務合約](../../../docs/framework/wcf/designing-service-contracts.md)
+- [履行服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：宣告常數 (Visual Basic)
+title: HOW TO：宣告常數 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.constant
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: ce45e4df7f74cd68bde0fb2adba10197a11edb1b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678833"
 ---
-# <a name="how-to-declare-a-constant-visual-basic"></a>如何：宣告常數 (Visual Basic)
+# <a name="how-to-declare-a-constant-visual-basic"></a>HOW TO：宣告常數 (Visual Basic)
 您使用`Const`陳述式來宣告常數，並將其值設定。 藉由宣告為常數，您可以指派有意義的名稱的值。 一旦宣告為常數，它無法修改或指派新值。  
   
  您宣告程序內或在模組、 類別或結構的宣告區段中的常數。 類別或結構層級常數`Private`根據預設，但也可能會宣告為`Public`， `Friend`， `Protected`，或`Protected Friend`適當層級的程式碼存取。  
@@ -65,14 +65,25 @@ ms.locfileid: "43394310"
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)  
- [常數和常值資料類型](constant-and-literal-data-types.md)  
- [常數的概觀](constants-overview.md)[如何： 宣告常數](how-to-declare-a-constant.md)[使用者定義的常數](user-defined-constants.md)[常數和常值的資料類型](constant-and-literal-data-types.md)[如何： 群組關聯在一起的常數值](how-to-group-related-constant-values-together.md)[列舉類型的概觀](enumerations-overview.md)[如何： 宣告列舉](how-to-declare-enumerations.md)[如何： 參考列舉成員](how-to-refer-to-an-enumeration-member.md)[列舉型別和名稱限定](enumerations-and-name-qualification.md)[如何： 逐一查看列舉型別](how-to-iterate-through-an-enumeration.md)[操作說明： 決定與列舉值關聯的字串](how-to-determine-the-string-associated-with-an-enumeration-value.md)[何時使用列舉型別](when-to-use-an-enumeration.md)
+## <a name="see-also"></a>另請參閱
+- [Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [常數和常值資料類型](constant-and-literal-data-types.md)
+- [常數的概觀](constants-overview.md)
+- [如何：宣告常數](how-to-declare-a-constant.md)
+- [使用者定義的常數](user-defined-constants.md)
+- [常數和常值資料類型](constant-and-literal-data-types.md)
+- [如何：群組關聯的常數值在一起](how-to-group-related-constant-values-together.md)
+- [列舉的概觀](enumerations-overview.md)
+- [如何：宣告列舉](how-to-declare-enumerations.md)
+- [如何：參考列舉成員](how-to-refer-to-an-enumeration-member.md)
+- [列舉和名稱限定性條件](enumerations-and-name-qualification.md)
+- [如何：逐一查看列舉類型](how-to-iterate-through-an-enumeration.md)
+- [如何：決定與列舉值關聯的字串](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [何時使用列舉](when-to-use-an-enumeration.md)
 
- [列舉的概觀](enumerations-overview.md)  
- [常數的概觀](constants-overview.md)  
- [如何： 宣告列舉](how-to-declare-enumerations.md)  
- [列舉和名稱限定性條件](enumerations-and-name-qualification.md)  
- [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [列舉的概觀](enumerations-overview.md)
+- [常數的概觀](constants-overview.md)
+- [如何：宣告列舉](how-to-declare-enumerations.md)
+- [列舉和名稱限定性條件](enumerations-and-name-qualification.md)
+- [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)

@@ -2,12 +2,12 @@
 title: Oracle 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 80623a1abcaeee642b9206edc106d1a4ea74d63b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694460"
 ---
 # <a name="oracle-schema-collections"></a>Oracle 結構描述集合
 除通用結構描述集合之外，Microsoft .NET Framework Data Provider for Oracle 還支援下列特定的結構描述集合：  
@@ -107,7 +107,7 @@ ms.locfileid: "44217343"
 |SECONDARY|String|索引是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y&#124;N)。|  
 |BUFFER_POOL|String|要用於索引區塊之預設緩衝集區的名稱。|  
 |USER_STATS|String|統計資料是否為使用者直接輸入的。|  
-|DURATION|String|表示暫存資料表的持續期間：1) SYS$SESSION：在工作階段持續期間保留資料列，2) SYS$TRANSACTION：COMMIT 後刪除資料列，3) 若為永久資料表，則是 Null。|  
+|DURATION|String|表示暫存資料表的持續期間：1) SYS$ SESSION： 資料列會保留期間的工作階段中，2) SYS$ TRANSACTION: COMMIT，3)，則為 Null 永久資料表後刪除資料列。|  
 |PCT_DIRECT_ACCESS|Decimal|若為依索引進行組織之資料表上的次要索引，此為以 VALID 猜測的資料列百分比|  
 |ITYP_OWNER|String|若為網域索引，此為索引型別的擁有人。|  
 |ITYP_NAME|String|若為網域索引，此為索引型別的名稱。|  
@@ -115,7 +115,7 @@ ms.locfileid: "44217343"
 |GLOBAL_STATS|String|若為分割的索引，表示統計資料是藉由整體分析索引收集的 (YES)，或者是藉由估計基礎索引分割區及子分割區而取得的 (NO)。|  
 |DOMIDX_STATUS|String|反映網域索引的狀態。 NULL：指定的索引不是網域索引。 VALID：索引是有效的網域索引。 IDXTYP_INVLD：此網域索引的索引型別無效。|  
 |DOMIDX_OPSTATUS|String|反映網域索引上執行的作業狀態：NULL：指定的索引不是網域索引。 VALID：作業執行完畢，未發生錯誤。 FAILED：作業失敗，發生錯誤。|  
-|FUNCIDX_STATUS|String|表示功能型索引的狀態：NULL：這不是功能型索引，ENABLED：啟用功能型索引，DISABLED：停用功能型索引。|  
+|FUNCIDX_STATUS|String|表示功能型索引的狀態：NULL： 這不是功能型索引，ENABLED： 啟用功能型索引，停用： 函式為基礎的索引已停用。|  
 |JOIN_INDEX|String|表示這是否為聯結索引。|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
@@ -145,7 +145,7 @@ ms.locfileid: "44217343"
 |TIMESTAMP|String|物件規格的時間戳記 (字元資料)。|  
 |狀態|String|物件的狀態 (VALID、INVALID 或 N/A)。|  
 |TEMPORARY|String|物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。|  
-|GENERATED|String|是否已產生此物件系統的名稱？ (Y &AMP;#124; N)。|  
+|GENERATED|String|是否已產生此物件系統的名稱？ (Y &#124; N).|  
 |SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124; N)。|  
 |CREATED|DateTime|建立物件的日期。|  
   
@@ -220,7 +220,7 @@ ms.locfileid: "44217343"
 |TIMESTAMP|String|物件規格的時間戳記 (字元資料)|  
 |狀態|String|物件的狀態 (VALID、INVALID 或 N/A)。|  
 |TEMPORARY|String|物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。|  
-|GENERATED|String|是否已產生此物件系統的名稱？ (Y &AMP;#124; N)。|  
+|GENERATED|String|是否已產生此物件系統的名稱？ (Y &#124; N).|  
 |SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124; N)。|  
   
 ## <a name="packages"></a>封裝  
@@ -236,7 +236,7 @@ ms.locfileid: "44217343"
 |TIMESTAMP|String|物件規格的時間戳記 (字元資料)。|  
 |狀態|String|物件的狀態 (VALID、INVALID 或 N/A)。|  
 |TEMPORARY|String|物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。|  
-|GENERATED|String|是否已產生此物件系統的名稱？ (Y &AMP;#124; N)。|  
+|GENERATED|String|是否已產生此物件系統的名稱？ (Y &#124; N).|  
 |SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124; N)。|  
 |CREATED|DateTime|建立物件的日期。|  
   
@@ -253,7 +253,7 @@ ms.locfileid: "44217343"
 |TIMESTAMP|String|物件規格的時間戳記 (字元資料)。|  
 |狀態|String|物件的狀態 (VALID、INVALID 或 N/A)。|  
 |TEMPORARY|String|物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。|  
-|GENERATED|String|是否已產生此物件系統的名稱？ (Y &AMP;#124; N)。|  
+|GENERATED|String|是否已產生此物件系統的名稱？ (Y &#124; N).|  
 |SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124; N)。|  
 |CREATED|DateTime|建立物件的日期。|  
   
@@ -379,5 +379,5 @@ ms.locfileid: "44217343"
 |CHAR_LENGTH|Decimal|字串資料型別的字元限制。|  
 |CHAR_USED|String|指出位元組限制 (B) 或字元限制 (C) 是否為字串的正式限制。|  
   
-## <a name="see-also"></a>另請參閱  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

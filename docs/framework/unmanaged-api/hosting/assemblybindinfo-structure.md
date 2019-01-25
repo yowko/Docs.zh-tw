@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 385ccc7a63fb5eb27ae7bdda5bdcf13c750eb667
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0247f356bfc9f354edc420ea5460da02b17ab116
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561136"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo 結構
-提供參考組件的詳細的資訊。  
+提供參考的組件的詳細的資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,27 +41,27 @@ typedef struct _AssemblyBindInfo {
   
 |成員|描述|  
 |------------|-----------------|  
-|`dwAppDomainId`|唯一識別碼`IStream`呼叫所傳回的[ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)，從參考組件即載入。|  
+|`dwAppDomainId`|唯一識別碼`IStream`呼叫所傳回的[ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)，從參考的組件即載入。|  
 |`lpReferencedIdentity`|參考的組件的唯一識別碼。|  
-|`lpPostPolicyIdentity`|參考的組件之後的任何繫結的原則值的應用程式識別項。|  
-|`ePolicyLevel`|其中一個[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值，指出哪一個版本控制原則，如果有的話，應該套用到參考的組件。|  
+|`lpPostPolicyIdentity`|參考的組件之後的任何繫結的原則值的應用程式識別碼。|  
+|`ePolicyLevel`|其中一個[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值，指出哪一個版本控制，如果有的話，應該套用原則的參考組件。|  
   
 ## <a name="remarks"></a>備註  
- 主機提供的唯一識別碼`dwAppDomainId`common language runtime (CLR)。 若要在呼叫之後`IHostAssemblyStore::ProvideAssembly`傳回時，執行階段使用的識別項來決定是否的內容`IStream`已經對應。 如果是這樣，執行階段會載入現有的複本，而非重新對應資料流。 執行階段也會使用這個識別碼做為查閱索引鍵以從傳回的資料流呼叫[ihostassemblystore:: Providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)。 因此，識別碼必須是唯一的要求模組和組件要求。  
+ 主應用程式提供的唯一識別碼`dwAppDomainId`common language runtime (CLR)。 在呼叫之後`IHostAssemblyStore::ProvideAssembly`傳回時，執行階段會使用識別碼來判斷是否內容`IStream`已經對應。 如果是的話，則執行階段會載入現有的複本，而不是重新對應之資料流。 執行階段也會使用此識別碼做為查閱索引鍵從傳回的資料流呼叫[ihostassemblystore:: Providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)。 因此，識別碼必須是唯一的模組要求，並針對組件要求。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.idl  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [ICLRAssemblyIdentityManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [ICLRAssemblyReferenceList 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [IHostAssemblyManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
- [IHostAssemblyStore 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)  
- [ModuleBindInfo 結構](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)
+## <a name="see-also"></a>另請參閱
+- [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [ICLRAssemblyIdentityManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [IHostAssemblyStore 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [ModuleBindInfo 結構](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)

@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45548fcd85e58086c2a43ac33e739c8ccb0e833f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ecd11b57d1901c4618ee0d27442753559b85c509
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738101"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument 方法
 尋找文件。 文件語言、 廠商和類型是選擇性的。  
@@ -45,7 +46,7 @@ HRESULT GetDocument (
  [in]文件語言。 這是選擇性參數。  
   
  `languageVendor`  
- [in]文件語言的廠商識別。 這是選擇性參數。  
+ [in]文件語言廠商的身分識別。 這是選擇性參數。  
   
  `documentType`  
  [in]文件類型。 這是選擇性參數。  
@@ -54,10 +55,10 @@ HRESULT GetDocument (
  [out]傳回的介面指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：**於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

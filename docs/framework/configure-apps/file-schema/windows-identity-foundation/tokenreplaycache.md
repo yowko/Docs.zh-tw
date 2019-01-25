@@ -3,20 +3,20 @@ title: '&lt;tokenReplayCache&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: d21a819f789b5be4bdf7ebf57b37a072e1d213ff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1e89afc5764dbdb86e87d2307425299dff57c686
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525143"
 ---
 # <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
 註冊權杖重新執行快取服務或安全性權杖處理常式集合。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<快取 >  
-\<tokenReplayCache >  
+\<caches>  
+\<tokenReplayCache>  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47206214"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<快取 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|註冊服務或安全性權杖處理常式集合所使用的快取。|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|註冊服務或安全性權杖處理常式集合所使用的快取。|  
   
 ## <a name="remarks"></a>備註  
  權杖重新執行快取用來偵測重新執行的語彙基元。 會啟用權杖重新執行偵測[ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)項目，也會指定權杖的最大的到期時間。  
@@ -62,6 +62,6 @@ ms.locfileid: "47206214"
 </caches>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.IdentityModel.Tokens.TokenReplayCache>  
- [\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.IdentityModel.Tokens.TokenReplayCache>
+- [\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)

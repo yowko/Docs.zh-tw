@@ -1,19 +1,19 @@
 ---
-title: '&lt;AnnouncementEndpoint&gt;'
+title: '&lt;announcementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: fe278da539af59a32edf5a626461dbec0ba3887d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8e180d53260ccf3364ab3c8d7b076f78917526d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151640"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729875"
 ---
-# <a name="ltannouncementendpointgt"></a>&lt;AnnouncementEndpoint&gt;
+# <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
 這個組態項目會定義具有固定公告合約的標準端點。 服務可以選擇性地公告其可用性，方法是分別在開啟與關閉該服務時傳送線上及離線公告訊息。 Windows Communication Foundation (WCF) 服務指定公告端點，在[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)項目，並且使用 AnnouncementClient 來執行公告。 想要從其他服務公告所接聽的用戶端實際上做為 WCF 服務;因此您必須在該用戶端設定公告端點[ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)一節。  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54151640"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。|  
   
 ## <a name="example"></a>範例  
  下列範例示範透過 http 及 peernet 接聽公告訊息的用戶端。  
@@ -78,5 +78,5 @@ ms.locfileid: "54151640"
 </standardEndpoints>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>

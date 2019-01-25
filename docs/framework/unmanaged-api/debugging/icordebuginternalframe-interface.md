@@ -1,5 +1,5 @@
 ---
-title: ICorDebugInternalFrame Interface1
+title: ICorDebugInternalFrame 介面 1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugInternalFrame
@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45a710e6d8be4a041d9852585ea83fea85376f66
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1fab8221bd160a74bb44c3ed0721ad4620e93419
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692791"
 ---
-# <a name="icordebuginternalframe-interface1"></a>ICorDebugInternalFrame Interface1
-代表執行階段內部堆疊上的框架。 這個介面是 ICorDebugFrame 介面的子類別。  
+# <a name="icordebuginternalframe-interface1"></a>ICorDebugInternalFrame 介面 1
+表示執行階段內部的框架在堆疊上。 這個介面是 ICorDebugFrame 介面的子類別。  
   
 ## <a name="methods"></a>方法  
   
@@ -38,13 +38,13 @@ ms.locfileid: "33413822"
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

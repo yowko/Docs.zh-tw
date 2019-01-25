@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5b9be3050da21c0a99931ca70cf990b0b8bf1fe
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 711903656d8bcce3a2d213af68160707a55a48e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699996"
 ---
 # <a name="ltprobinggt-element"></a>&lt;探查&gt;項目
 指定應用程式基底的 common language runtime 載入組件時所要搜尋的子目錄。  
@@ -65,8 +65,8 @@ ms.locfileid: "53612297"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [指定組件的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+## <a name="see-also"></a>另請參閱
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [指定組件的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

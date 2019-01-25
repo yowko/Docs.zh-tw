@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d4f7ebf784ab02ecdd0203423157da5bef968a87
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bc209d184ac330b112d17c34f0bf1c479a8b5f7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516157"
 ---
 # <a name="denial-of-service"></a>阻斷服務
 當系統由於無法處理訊息，或者處理訊息的速度極為緩慢而爆滿時，就會發生阻絕服務。  
@@ -26,7 +26,7 @@ ms.locfileid: "47198695"
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>惡意用戶端將大量授權要求傳送至服務  
  如果惡意用戶端透過大量授權要求炸滿服務，就可能導致伺服器使用過多的記憶體。  
   
- 避免方法：使用 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> 類別的下列屬性：  
+ 風險降低：使用下列屬性的<xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>類別：  
   
 -   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>：控制時間界限之 `SecurityContextToken` 的上限，而這是伺服器在 `SPNego` 或 `SSL` 交涉之後快取的上限。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47198695"
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>無效的 IAuthorizationPolicy 實作會導致服務停止回應  
  在錯誤的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 介面實作上呼叫 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 方法，將會導致服務停止回應。  
   
- 避免方法：僅使用信任的程式碼。 也就是說，僅使用您所撰寫並測試過的程式碼，或使用來自可信任提供者的程式碼。 在沒有謹慎的考慮之前，請勿將不受信任的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 延伸項目外掛至您的程式碼。 這個做法適用於服務實作中使用的所有延伸項目。 WCF 不會區分應用程式程式碼和已插入的外部程式碼中使用擴充點。  
+ 風險降低：僅使用信任的程式碼。 也就是說，僅使用您所撰寫並測試過的程式碼，或使用來自可信任提供者的程式碼。 在沒有謹慎的考慮之前，請勿將不受信任的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 延伸項目外掛至您的程式碼。 這個做法適用於服務實作中使用的所有延伸項目。 WCF 不會區分應用程式程式碼和已插入的外部程式碼中使用擴充點。  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>可能需要調整 Kerberos 權杖的大小上限  
  如果用戶端是許多群組的成員 (大約 900 個群組，不過實際數目會因群組而有所不同)，當訊息標頭的區塊超過 64 KB 時，可能會發生問題。 在此情況下，您可以增加 Kerberos 權杖的大小上限，Microsoft 支援文章中所述 」[Internet Explorer Kerberos 驗證無法運作由於連線至 IIS 的緩衝區不足](https://go.microsoft.com/fwlink/?LinkId=89176)。 」 您也可能需要增加最大的 WCF 訊息大小，以容納較大型的 Kerberos 權杖。  
@@ -69,21 +69,21 @@ ms.locfileid: "47198695"
 ## <a name="protect-configuration-files-with-acls"></a>使用 ACL 保護組態檔  
  您可以針對 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 發行的權杖，在程式碼和組態檔中指定必要和選用的宣告。 這樣會造成在傳送至安全性權杖服務的 `RequestSecurityToken` 訊息中發出相對應的項目。 攻擊者可以修改程式碼或組態以移除必要或選用的宣告，這樣便有可能取得安全性權杖服務，而發出不允許存取目標服務的權杖。  
   
- 避免方法：需要存取電腦以修改組態檔。 使用檔案存取控制清單 (ACL) 以保護組態檔。 WCF 要求才會允許這類的程式碼，從組態載入程式碼存在於應用程式目錄或全域組件快取。 使用目錄 ACL 以保護目錄。  
+ 若要減輕此項目：需要修改組態檔的電腦存取權。 使用檔案存取控制清單 (ACL) 以保護組態檔。 WCF 要求才會允許這類的程式碼，從組態載入程式碼存在於應用程式目錄或全域組件快取。 使用目錄 ACL 以保護目錄。  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>達到服務之安全工作階段數上限  
  當服務順利驗證用戶端而且是藉由服務建立安全工作階段時，服務會持續追蹤工作階段，直到用戶端取消服務或工作階段到期為止。 每個建立的工作階段都不利於服務之同時作用中工作階段的數量上限。 達到這個限制時，將會拒絕嘗試以該服務建立新工作階段的用戶端，直到一或多個作用中工作階段到期或由用戶端所取消為止。 用戶端在服務中可以擁有多個工作階段，而且會對該限制計數每個工作階段。  
   
 > [!NOTE]
->  當您使用具狀態的工作階段時，之前的段落就沒有作用。 如需可設定狀態的工作階段的詳細資訊，請參閱[如何： 建立安全工作階段的安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+>  當您使用具狀態的工作階段時，之前的段落就沒有作用。 如需可設定狀態的工作階段的詳細資訊，請參閱[How to:建立安全性內容權杖的安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
  若要避免這個情況，請設定 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 屬性，以設定作用中工作階段數的上限和工作階段的最長存留時間。  
   
-## <a name="see-also"></a>另請參閱  
- [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>另請參閱
+- [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

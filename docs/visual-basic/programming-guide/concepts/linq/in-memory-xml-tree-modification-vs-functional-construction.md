@@ -2,12 +2,12 @@
 title: 記憶體中 XML 樹狀修改與函數式建構 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d91c4ebf-6549-43cc-9961-26d4a82f722b
-ms.openlocfilehash: 71b8799d4da2f8f4fb10bdec6ca7cfcec76e036a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0f33775656e92f4ca9d6158ea2a065bb533a944b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452777"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538592"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a>記憶體中 XML 樹狀修改與函數式建構 (LINQ to XML) (Visual Basic)
 就地修改 XML 樹狀結構是變更 XML 文件組織結構的傳統方式。 一般應用程式會將文件載入到資料存放區，例如 DOM 或 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]；使用程式設計介面插入節點、刪除節點或變更節點的內容；然後將 XML 儲存到檔案或透過網路傳輸。  
@@ -74,5 +74,5 @@ Console.WriteLine(newTree)
   
  這是非常簡單的範例，但是它有助於顯示兩種方法間的觀點差異。 功能性方法在轉換大型 XML 文件時，會產生較大的產能。  
   
-## <a name="see-also"></a>另請參閱  
- [修改 XML 樹狀結構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>另請參閱
+- [修改 XML 樹狀結構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

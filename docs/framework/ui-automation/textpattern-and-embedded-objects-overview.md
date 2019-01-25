@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 78c511555065528d1ab34ee3ec9f8859a15bbc61
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 52077103277cdc4d32dfe3e44fcccffeec20295e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706861"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern 和 Embedded 物件概觀
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本概觀描述 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 如何公開內嵌物件或文字文件或容器內的子元素。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "50194098"
 |-------------------|------------|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|傳回字串 "The image"。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|傳回圍住文字範圍的最內層 <xref:System.Windows.Automation.AutomationElement> ；在此情況下是代表文字提供者本身的 <xref:System.Windows.Automation.AutomationElement> 。|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A>，參數為 (TextUnit.Word, 1)。|將文字範圍移至 "is"。 因為只有以文字為基礎的內嵌物件會被視為文字資料流的一部分，所以此範例中的影像不會影響 Move 或其傳回值 (在本例中為 1)。|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> ，參數為 (TextUnit.Word, 1)。|將文字範圍移至 "is"。 因為只有以文字為基礎的內嵌物件會被視為文字資料流的一部分，所以此範例中的影像不會影響 Move 或其傳回值 (在本例中為 1)。|  
   
 <a name="Table"></a>   
 ### <a name="table"></a>資料表  
@@ -140,22 +140,22 @@ ms.locfileid: "50194098"
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> ，參數為 (0,0)|傳回 <xref:System.Windows.Automation.AutomationElement> ，表示表格儲存格的內容；在此情況下，此元素是文字控制項。|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ，其中 <xref:System.Windows.Automation.AutomationElement> 是先前 `GetItem` 方法傳回的物件。|傳回跨越影像的範圍![內嵌影像範例](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> ，適用於先前 `RangeFromChild` 方法所傳回的物件。|傳回表示表格儲存格的 <xref:System.Windows.Automation.AutomationElement> ；在此情況下，此元素是支援 TableItemPattern 的文字控制項。|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>，適用於先前 `GetEnclosingElement` 方法所傳回的物件。|傳回表示表格的 <xref:System.Windows.Automation.AutomationElement> 。|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> ，適用於先前 `GetEnclosingElement` 方法所傳回的物件。|傳回表示表格的 <xref:System.Windows.Automation.AutomationElement> 。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> ，適用於先前 `GetEnclosingElement` 方法所傳回的物件。|傳回表示文字提供者本身的 <xref:System.Windows.Automation.AutomationElement>|  
   
  **範例 2：取得儲存格的文字內容。**  
   
 |呼叫的方法|結果|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.GridPattern.GetItem%2A> ，參數為 (1,1)。|傳回 <xref:System.Windows.Automation.AutomationElement>，表示表格儲存格的內容；在此情況下，此元素是文字控制項。|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>，其中 <xref:System.Windows.Automation.AutomationElement> 是先前 `GetItem` 方法傳回的物件。|傳回 "Y"。|  
+|<xref:System.Windows.Automation.GridPattern.GetItem%2A> ，參數為 (1,1)。|傳回 <xref:System.Windows.Automation.AutomationElement> ，表示表格儲存格的內容；在此情況下，此元素是文字控制項。|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ，其中 <xref:System.Windows.Automation.AutomationElement> 是先前 `GetItem` 方法傳回的物件。|傳回 "Y"。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Automation.TextPattern>  
- <xref:System.Windows.Automation.Text.TextPatternRange>  
- <xref:System.Windows.Automation.Provider.ITextProvider>  
- <xref:System.Windows.Automation.Provider.ITextRangeProvider>  
- [使用 UI 自動化存取內嵌物件](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
- [使用 UI 自動化公開資料表的內容](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [使用 UI 自動化周遊文字](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [TextPattern 搜尋和選取範例](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Automation.TextPattern>
+- <xref:System.Windows.Automation.Text.TextPatternRange>
+- <xref:System.Windows.Automation.Provider.ITextProvider>
+- <xref:System.Windows.Automation.Provider.ITextRangeProvider>
+- [使用 UI 自動化存取內嵌物件](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+- [使用 UI 自動化公開資料表的內容](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)
+- [使用 UI 自動化周遊文字](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)
+- [TextPattern 搜尋和選取範例](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

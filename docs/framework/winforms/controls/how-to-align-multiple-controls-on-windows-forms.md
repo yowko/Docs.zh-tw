@@ -1,5 +1,5 @@
 ---
-title: 如何：對齊 Windows Form 上的多個控制項
+title: HOW TO：對齊 Windows Forms 上的多個控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 44bbf2503087a0e8b7f178b1c7b7fe65b50496d8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 003d45f9384caa6a5b63187d20fe3e3e040e3e5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519797"
 ---
-# <a name="how-to-align-multiple-controls-on-windows-forms"></a>如何：對齊 Windows Form 上的多個控制項
+# <a name="how-to-align-multiple-controls-on-windows-forms"></a>HOW TO：對齊 Windows Forms 上的多個控制項
 若要標準化您以 Windows 為基礎的應用程式的使用者介面 (UI) 的配置，您可以放置群組使用單一命令的控制項。  
   
 > [!NOTE]
@@ -28,13 +28,13 @@ ms.locfileid: "43524009"
   
 3.  在 **格式**功能表上，指向**對齊**，然後按一下其中一個可用的七個選項。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
- [操作說明：將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [逐步解說：使用對齊線排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [操作說明：將現有控制項重新指派至不同的父代](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)
+## <a name="see-also"></a>另請參閱
+- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)
+- [如何：將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [逐步解說：使用對齊線的 Windows Form 上排列控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [如何：重新指派至不同的父代的現有控制項](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)

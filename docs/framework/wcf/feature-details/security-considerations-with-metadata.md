@@ -2,21 +2,21 @@
 title: 中繼資料的安全性考量
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 4afa040744b1b1a8a25addb954d5785436899434
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa1a79a0be6682a8459043955a7956f6f8444bf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585561"
 ---
 # <a name="security-considerations-with-metadata"></a>中繼資料的安全性考量
 當 Windows Communication Foundation (WCF) 中使用的中繼資料功能，請考慮發行、 擷取和使用服務中繼資料的安全性含意。  
   
 ## <a name="when-to-publish-metadata"></a>發行中繼資料的時機  
- 根據預設，WCF 服務不要發佈中繼資料。 若要發佈的 WCF 服務中繼資料您必須明確啟用中繼資料發行中繼資料端點新增至您的服務 (請參閱[中繼資料發行](../../../../docs/framework/wcf/feature-details/publishing-metadata.md))。 停用中繼資料發行則會降低服務的攻擊面，並降低非預期資料暴露的風險。 不是所有服務都必須發行中繼資料。 如果您不需要發行中繼資料，可以考慮關閉這個功能。 請注意，仍然可以直接從您使用的服務組件產生中繼資料和用戶端程式碼[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 如需使用 Svcutil.exe 來匯出中繼資料的詳細資訊，請參閱[如何： 使用 Svcutil.exe 來匯出中繼資料編譯服務程式碼從](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)。  
+ 根據預設，WCF 服務不要發佈中繼資料。 若要發佈的 WCF 服務中繼資料您必須明確啟用中繼資料發行中繼資料端點新增至您的服務 (請參閱[中繼資料發行](../../../../docs/framework/wcf/feature-details/publishing-metadata.md))。 停用中繼資料發行則會降低服務的攻擊面，並降低非預期資料暴露的風險。 不是所有服務都必須發行中繼資料。 如果您不需要發行中繼資料，可以考慮關閉這個功能。 請注意，仍然可以直接從您使用的服務組件產生中繼資料和用戶端程式碼[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 如需使用 Svcutil.exe 來匯出中繼資料的詳細資訊，請參閱[How to:使用 Svcutil.exe 來匯出編譯的服務程式碼的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)。  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>使用安全繫結發行中繼資料  
- WCF 會提供不安全的預設中繼資料繫結也允許匿名存取中繼資料。 WCF 服務發行服務中繼資料包含有關服務的詳細的描述，並可能有意或無意包含敏感資訊。 例如，服務中繼資料可能包含原意不是要公開廣播的基礎結構作業的相關資訊。 若要防止未經授權存取服務中繼資料，您可以在中繼資料端點中使用安全繫結。 中繼資料端點會回應至使用 Secure Sockets Layer (SSL) 來確保中繼資料安全的 HTTP/GET 要求。 如需詳細資訊，請參閱 <<c0> [ 如何： 保護中繼資料端點](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
+ WCF 會提供不安全的預設中繼資料繫結也允許匿名存取中繼資料。 WCF 服務發行服務中繼資料包含有關服務的詳細的描述，並可能有意或無意包含敏感資訊。 例如，服務中繼資料可能包含原意不是要公開廣播的基礎結構作業的相關資訊。 若要防止未經授權存取服務中繼資料，您可以在中繼資料端點中使用安全繫結。 中繼資料端點會回應至使用 Secure Sockets Layer (SSL) 來確保中繼資料安全的 HTTP/GET 要求。 如需詳細資訊，請參閱[＜How to：確保中繼資料端點的安全](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
   
  確保中繼資料端點的安全同樣能對要求者提供一種方法，可安全地擷取服務中繼資料而避免遇到竄改或詐騙等風險。  
   
@@ -38,6 +38,6 @@ ms.locfileid: "50187591"
 ## <a name="protecting-application-configuration-files"></a>保護應用程式組態檔  
  服務的應用程式組態檔可能會控制發行中繼資料的方法以及是否發行中繼資料。 強烈建議您透過適當的存取控制清單 (ACL) 來保護應用程式組態檔，以確保攻擊者無法修改這類設定。  
   
-## <a name="see-also"></a>另請參閱  
- [如何：保護中繼資料端點的安全](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
- [安全性](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>另請參閱
+- [如何：確保中繼資料端點的安全](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [安全性](../../../../docs/framework/wcf/feature-details/security.md)

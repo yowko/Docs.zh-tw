@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008514e3637a980f3722d0c9896a17be33d54c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b8608a5438b31cad64bb27d2866109f479dad441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739494"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 函式
-傳回 common language runtime (CLR) 載入到處理程序的安裝的目錄。 安裝目錄是完整名稱，例如，"c:\windows\microsoft.net\framework\v1.0.3705"。  
+傳回 common language runtime (CLR) 載入到處理程序的安裝的目錄。 安裝目錄是完整名稱，例如，"c:\windows\microsoft.net\framework\v1.0.3705 」。  
   
  此函式已被取代。 被取代[iclrruntimeinfo:: Getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)方法中提供[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
@@ -41,7 +41,7 @@ HRESULT GetCORSystemDirectory (
   
 #### <a name="parameters"></a>參數  
  `pbuffer`  
- [out]在其中執行階段會傳回字串，包含載入到處理序的執行階段安裝目錄的完整格式的名稱緩衝區。 如果執行階段尚未載入到程序，則函數會傳回最新版本的執行階段電腦上安裝適當的目錄資訊。  
+ [out]執行階段會傳回字串，包含載入到處理序的執行階段安裝目錄的完整格式的名稱緩衝區。 如果執行階段尚未載入到處理序，則函數會傳回最新版本的執行階段電腦上安裝適當的目錄資訊。  
   
  `cchBuffer`  
  [in]大小，以位元組為單位的`pbuffer`。  
@@ -52,16 +52,16 @@ HRESULT GetCORSystemDirectory (
 ## <a name="remarks"></a>備註  
   
 > [!CAUTION]
->  請勿使用此函式中執行的 CLR 版本 4 的處理序。 如果在電腦上已安裝舊版的 clr，此函數會傳回該版本的安裝目錄。  
+>  請勿使用此函式中執行的 CLR 版本 4 的處理序。 如果在電腦上安裝舊版的 CLR，則此函數會傳回該版本的安裝目錄。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>另請參閱
+- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

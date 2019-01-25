@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：在 WPF 應用程式中快取應用程式資料
+title: 逐步解說：快取中的 WPF 應用程式的應用程式資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 1eddf3ad52bab6ef4665d7c3691353fa9c54574c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513720"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>逐步解說：在 WPF 應用程式中快取應用程式資料
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>逐步解說：快取中的 WPF 應用程式的應用程式資料
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 一次存取資料時，應用程式可以從快取，而要擷取原始的來源取得資料。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。
 
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供類別，可讓您使用中的快取[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]應用程式。 這些類別位於<xref:System.Runtime.Caching>命名空間。
@@ -71,14 +71,14 @@ ms.locfileid: "49087345"
 
 5.  在 **名稱**文字中，輸入您專案的名稱。 例如，您可以輸入**WPFCaching**。
 
-6.  選取 **為方案建立目錄**核取方塊。
+6.  選取 [為解決方案建立目錄] 核取方塊。
 
 7.  按一下 [確定 **Deploying Office Solutions**]。
 
      WPF 設計工具中開啟**設計**檢視，並顯示 MainWindow.xaml 檔案。 Visual Studio 會建立**我的專案**資料夾、 Application.xaml 檔案，以及 MainWindow.xaml 檔案。
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>以.NET Framework 為目標，並加入快取的組件的參考
- 根據預設，WPF 應用程式目標[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>WPF 應用程式中的命名空間，應用程式必須為目標[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)])，而且必須包含命名空間的參考。
+ 根據預設，WPF 應用程式目標[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>WPF 應用程式中的命名空間，應用程式必須為目標[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)](不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)])，而且必須包含命名空間的參考。
 
  因此下, 一個步驟是變更.NET Framework 目標，並將參考加入<xref:System.Runtime.Caching>命名空間。
 

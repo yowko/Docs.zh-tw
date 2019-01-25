@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: 571b09a0783ec0dfd09970b000faec39dca682b3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a2c476280009a617573fb7989b2184cd9baa6a8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660680"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>物件變數指派 (Visual Basic)
 您可以使用一般的指派陳述式來將物件指派給物件變數。 您可以指派物件運算式或[Nothing](../../../../visual-basic/language-reference/nothing.md)關鍵字，如下列範例說明。  
@@ -75,10 +75,10 @@ End Sub
 addStandardText(Me)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [如何： 宣告物件變數，並在 Visual Basic 中將物件指派給它](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
- [如何：讓物件變數不參考執行個體](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
- [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>另請參閱
+- [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [如何：宣告物件變數，並在 Visual Basic 中將物件指派給它](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [如何：讓物件變數不參考任何執行個體](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)
+- [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

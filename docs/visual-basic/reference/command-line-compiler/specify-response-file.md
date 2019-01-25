@@ -4,12 +4,12 @@ ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: 54a4cee0b779c0784eec169a15ab1594c56cede9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d790e66e04cc62011550e894eec4000a43783765
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494774"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (指定回應檔) (Visual Basic)
 指定包含編譯器選項的檔案和要編譯的原始程式碼檔案。  
@@ -22,7 +22,7 @@ ms.locfileid: "50194679"
   
 ## <a name="arguments"></a>引數  
  `response_file`  
- 必要。 列出編譯器選項或原始程式檔編譯的檔案。 將檔案名稱括在引號 ("") 如果它包含空格。  
+ 必要項。 列出編譯器選項或原始程式檔編譯的檔案。 將檔案名稱括在引號 ("") 如果它包含空格。  
   
 ## <a name="remarks"></a>備註  
  編譯器會處理編譯器選項和原始程式碼檔，如同它們已在命令列上指定回應檔中指定。  
@@ -60,7 +60,7 @@ source2.vb
 vbc @file1.rsp  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

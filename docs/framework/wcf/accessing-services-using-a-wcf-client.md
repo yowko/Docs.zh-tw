@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 0678300fca4442cf90dd15c5a4e011d80656eac6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 97340f8583ef0900645f6db5c453475e85549c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620186"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>使用 WCF 用戶端存取服務
 
@@ -52,7 +52,7 @@ Svcutil.exe <file1 [,file2]>
  如果僅提供一個檔案名稱，這就會是輸出檔的名稱。 如果提供兩個檔案名稱，則第一個檔案為輸入組態檔，其內容會與產生的組態合併，並寫入至第二個檔案。 如需有關組態的詳細資訊，請參閱 <<c0> [ 服務的設定繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。
 
 > [!IMPORTANT]
-> 未受保護的中繼資料要求和未受保護的網路要求一樣，都會構成某些風險：如果您無法確定正在進行通訊的端點是否為名符其實的端點，那麼您所擷取的資料很可能是來自於惡意服務的中繼資料。
+> 不安全的中繼資料要求的任何不安全的網路要求的相同方式來構成某些風險：如果您不確定您正在與通訊的端點是它會，您所擷取的資訊可能來自於惡意服務的中繼資料。
 
 ## <a name="add-service-reference-in-visual-studio"></a>在 Visual Studio 中加入服務參考
 
@@ -178,22 +178,22 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 許多由 WCF 用戶端擲回的例外狀況是由服務上的例外狀況造成的。 以下提供一些這類範例：
 
--   <xref:System.Net.Sockets.SocketException>：現有的連接遭遠端主機強制關閉。
+-   <xref:System.Net.Sockets.SocketException>：遠端主機已強制關閉現有的連接。
 
 -   <xref:System.ServiceModel.CommunicationException>：基礎連接意外關閉。
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>：通訊端連接中止。 這種情況可能是處理訊息時發生錯誤、遠端主機超過接收逾時時間，或基礎網路資源問題所造成。
+-   <xref:System.ServiceModel.CommunicationObjectAbortedException>：通訊端連線已中止。 這種情況可能是處理訊息時發生錯誤、遠端主機超過接收逾時時間，或基礎網路資源問題所造成。
 
 發生這類例外狀況時，最佳的解決方式是開啟服務端的追蹤功能，並且判斷該處發生哪種例外狀況。 如需有關追蹤的詳細資訊，請參閱 <<c0> [ 追蹤](../../../docs/framework/wcf/diagnostics/tracing/index.md)並[使用追蹤疑難排解您的應用程式](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 - [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [如何：使用雙面合約存取服務](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [如何：Access Services 搭配雙工合約](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [如何：以非同步方式呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [如何：使用單向和要求-回覆合約來存取服務](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [如何：存取服務使用單向和要求-回覆合約](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
 - [如何：存取 WSE 3.0 服務](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [了解產生的用戶端程式碼](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [如何：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動時間](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [如何：改善啟動時間的 WCF 用戶端應用程式的使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [指定用端執行階段行為](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [設定用戶端行為](../../../docs/framework/wcf/configuring-client-behaviors.md)

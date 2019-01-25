@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0898936665b3b337f2fd4e4d53bcc9f6071469b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d570f9392bbd66f0d9031c776b139ee3b30541b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698215"
 ---
 # <a name="corfield-structure"></a>COR_FIELD 結構
 提供物件中欄位的相關資訊。  
@@ -41,22 +41,22 @@ typedef struct COR_FIELD{
   
 |成員|描述|  
 |------------|-----------------|  
-|`token`|`mdFieldDef`語彙基元可以用來取得欄位資訊。|  
+|`token`|`mdFieldDef`權杖，可用來取得欄位資訊。|  
 |`offset`|在物件中的欄位資料的位元組位移。|  
-|`id`|A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)可識別此欄位的類型值。|  
-|`fieldType`|CorElementType 列舉值，指出欄位的類型。|  
+|`id`|A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)可識別此欄位的型別值。|  
+|`fieldType`|CorElementType 列舉值，指出欄位的型別。|  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

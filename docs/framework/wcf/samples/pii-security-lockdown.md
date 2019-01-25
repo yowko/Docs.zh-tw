@@ -2,12 +2,12 @@
 title: PII 安全性鎖定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 48b62ed5c27463b863ff585520a4b42fc4c83f88
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3537f50c8695838b69d1920cfd953c8b1196d830
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699775"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全性鎖定
 這個範例示範如何控制的 Windows Communication Foundation (WCF) 服務的數個安全性相關功能：  
@@ -47,7 +47,7 @@ ms.locfileid: "50195134"
   
 3.  發出下列命令，加密 Web.config 資料夾中的 appSettings 組態設定：`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`。  
   
- 可以找到加密的組態檔區段的詳細資訊，閱讀 ASP.NET 組態 how to DPAPI ([建置安全的 ASP.NET 應用程式： 驗證、 授權和安全通訊](https://go.microsoft.com/fwlink/?LinkId=95137)) 和 RSA 在 ASP.NET 組態中的 how to ([How To： 在 ASP.NET 2.0 使用 RSA 加密組態區段](https://go.microsoft.com/fwlink/?LinkId=95138))。  
+ 可以找到加密的組態檔區段的詳細資訊，閱讀 ASP.NET 組態 how to DPAPI ([建置安全的 ASP.NET 應用程式：驗證、 授權和安全通訊](https://go.microsoft.com/fwlink/?LinkId=95137)) 和 RSA 在 ASP.NET 組態中的 how to ([How To:Encrypt Configuration Sections in ASP.NET 2.0 使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138))。  
   
 ## <a name="locking-configuration-file-elements"></a>鎖定組態檔項目  
  在 Web 裝載的案例中，可能在服務的子目錄中還有服務。 在這些情況中，便會計算子目錄中服務的組態值，方法則是先檢查 Machine.config 中的值，接著合併上層目錄到下層目錄樹狀結構中的 Web.config 檔，最後合併其中包含服務之目錄中的 Web.config 檔。 大多數組態項目的預設行為是允許子目錄中的組態檔覆寫上層目錄中的值組。 在特定情況中，可能會防止子目錄中的組態檔覆寫上層目錄組態的值組。  
@@ -124,9 +124,9 @@ ms.locfileid: "50195134"
   
  也可能使用 DPAPI 和 RSA 加密組態檔項目。 如需詳細資訊，請參閱下列連結：  
   
--   [建置安全的 ASP.NET 應用程式： 驗證、 授權和安全通訊](https://go.microsoft.com/fwlink/?LinkId=95137)  
+-   [建置安全的 ASP.NET 應用程式：驗證、 授權和安全通訊](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [如何： Encrypt Configuration Sections in ASP.NET 2.0 使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+-   [如何：Encrypt Configuration Sections in ASP.NET 2.0 使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要設定、建置及執行範例  
   
@@ -142,5 +142,5 @@ ms.locfileid: "50195134"
   
 1.  編輯 Machine.config 以將 `enableLoggingKnownPii` 屬性設定為 `false`。  
   
-## <a name="see-also"></a>另請參閱  
- [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>另請參閱
+- [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)

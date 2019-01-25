@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: ab9eacc3fb3796139d8ed8382146a4a6c2b28a97
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 25a868afded83f28f5f56a9f19e050bbd32b24c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490826"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>擴充索引子屬性 (Visual Basic)
 提供集合中個別項目的存取。  
@@ -29,10 +29,10 @@ object(index)
   
 |詞彙|定義|  
 |---|---|  
-|`object`|必要。 可查詢的集合。 也就是集合，實作<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。|  
-|(|必要。 表示索引子屬性的開頭。|  
-|`index`|必要。 整數運算式，指定集合中項目的以零為起始的位置。|  
-|)|必要。 表示索引子屬性的結尾。|  
+|`object`|必要項。 可查詢的集合。 也就是集合，實作<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。|  
+|(|必要項。 表示索引子屬性的開頭。|  
+|`index`|必要項。 整數運算式，指定集合中項目的以零為起始的位置。|  
+|)|必要項。 表示索引子屬性的結尾。|  
   
 ## <a name="return-value"></a>傳回值  
  從指定的位置，集合中的物件或`Nothing`如果索引超出範圍。  
@@ -55,9 +55,9 @@ object(index)
   
  `Second phone number: 425-555-0145`  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Linq.XElement>  
- [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)  
- [在 Visual Basic 中建立 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML Value 屬性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Xml.Linq.XElement>
+- [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)
+- [在 Visual Basic 中建立 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML Value 屬性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

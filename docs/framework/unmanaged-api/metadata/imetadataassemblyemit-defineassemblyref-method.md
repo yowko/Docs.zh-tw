@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6675d50d3222a43abc8838c3c86cb825d2dad16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f82fca1d7701921a10c1feb9cce19371729ff01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493466"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef 方法
 為這個組件所參考的組件，建立包含其中繼資料的 `AssemblyRef` 結構，並且傳回關聯的中繼資料語彙基元。  
@@ -44,13 +44,13 @@ HRESULT DefineAssemblyRef (
   
 #### <a name="parameters"></a>參數  
  `pbPublicKeyOrToken`  
- [in]參考的組件的 「 發行者 」 的公開金鑰。 Helper 函式[StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)可以用來取得要做為此參數傳遞的公開金鑰的雜湊。  
+ [in]參考的組件的 「 發行者 」 的公開金鑰。 Helper 函式[StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)可用來取得的公用金鑰來作為此參數傳遞的雜湊。  
   
  `cbPublicKeyOrToken`  
  [in]以位元組為單位的大小`pbPublicKeyOrToken`。  
   
  `szName`  
- [in]人類看得懂的文字之組件的名稱。 此值不能超過 1024年個字元。  
+ [in]組件的人類看得懂的文字名稱。 此值不得超過 1024年個字元。  
   
  `pMetaData`  
  [in]ASSEMBLYMETADATA 執行個體，其中包含參考的組件的版本、 平台和地區設定資訊。  
@@ -70,16 +70,16 @@ HRESULT DefineAssemblyRef (
 ## <a name="remarks"></a>備註  
  一個`AssemblyRef`必須定義這個組件參考的每個組件的中繼資料結構。  
   
- 執行階段參考組件的詳細資料會傳遞至組件解析程式，其中指出它們代表 「 建立 」 時的資訊。 組件解析程式接著會套用原則。  
+ 在執行階段，參考的組件的詳細資料會傳遞至組件解析程式，並指出它們代表的"as 建置 」 的資訊。 組件解析程式接著會套用原則。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

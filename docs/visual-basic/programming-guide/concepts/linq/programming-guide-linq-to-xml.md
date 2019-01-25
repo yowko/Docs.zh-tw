@@ -2,12 +2,12 @@
 title: 程式設計手冊 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-ms.openlocfilehash: 70c169cecc8ca4ede30216bc832a8518766cd1a5
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 04e98c6aaa038bea03dd118521311adf40e3e2be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675092"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>程式設計手冊 (LINQ to XML) (Visual Basic)
 本節提供使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 進行程式設計的概念性和使用說明資訊。  
@@ -34,6 +34,6 @@ ms.locfileid: "42929811"
 |[LINQ to XML 安全性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|描述與 LINQ to XML 相關聯的安全性問題，並提供一些減少暴露其安全性的指引。|  
 |[範例 XML 文件 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|包含本文件中的許多範例所使用的 XML 範例文件。|  
   
-## <a name="see-also"></a>另請參閱  
- [使用者入門 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)
+## <a name="see-also"></a>另請參閱
+- [使用者入門 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

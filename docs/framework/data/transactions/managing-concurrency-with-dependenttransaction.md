@@ -2,12 +2,12 @@
 title: 使用 DependentTransaction 管理並行存取
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 5bcf321c2c09411ddb720e2cb4be1ddb076bbe6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1943c8c8c03bb9598dc0c456d52fa962288d240c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664456"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>使用 DependentTransaction 管理並行存取
 <xref:System.Transactions.Transaction> 物件係使用 <xref:System.Transactions.Transaction.DependentClone%2A> 方法建立。 其唯一目的在於保證當其他程式碼片段 (例如，背景工作執行緒仍在執行交易工作時，不會認可交易。 當完成並準備好認可在複製之交易中所執行的工作時，可以使用 <xref:System.Transactions.DependentTransaction.Complete%2A> 方法來通知交易的建立者。 這麼一來，您便可保持資料的一致性和正確性。  
@@ -70,7 +70,7 @@ using(TransactionScope scope = new TransactionScope())
   
  `ThreadMethod` 方法會在新執行緒上執行。 用戶端開始新的執行緒後，會將相依交易當成 `ThreadMethod` 參數傳送出去。  
   
- 由於相依交易係由 <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> 所建立，因此可以保證直到第二個執行緒上所有執行的交易工作都已完成，並且在相依交易上呼叫 <xref:System.Transactions.DependentTransaction.Complete%2A> 後，才會認可交易。 這表示，如果用戶端的範圍結束 (當它嘗試處置交易物件的結尾**使用**陳述式) 的新的執行緒呼叫之前<xref:System.Transactions.DependentTransaction.Complete%2A>相依的交易，直到會封鎖用戶端程式碼<xref:System.Transactions.DependentTransaction.Complete%2A>相依項上呼叫。 接著，交易便可完成認可或中止。  
+ 由於相依交易係由 <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> 所建立，因此可以保證直到第二個執行緒上所有執行的交易工作都已完成，並且在相依交易上呼叫 <xref:System.Transactions.DependentTransaction.Complete%2A> 後，才會認可交易。 這表示，如果用戶端的範圍結束 (當它嘗試處置交易物件的結尾**使用**陳述式) 之前的新的執行緒呼叫<xref:System.Transactions.DependentTransaction.Complete%2A>相依的交易，在用戶端程式碼封鎖，直到<xref:System.Transactions.DependentTransaction.Complete%2A>上的相依性呼叫。 接著，交易便可完成認可或中止。  
   
 ## <a name="concurrency-issues"></a>並行問題  
  使用 <xref:System.Transactions.DependentTransaction> 類別時，您需要注意下列幾項額外的並行問題：  
@@ -81,5 +81,5 @@ using(TransactionScope scope = new TransactionScope())
   
 -   如果背景工作執行緒繁衍出新的背景工作執行緒，請記得從相依複製品中建立一個相依複製品，並將其傳遞給背景工作執行緒。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Transactions.DependentTransaction>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Transactions.DependentTransaction>

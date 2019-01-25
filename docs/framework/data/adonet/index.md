@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 59828e988659b9fc5644ff801f77171103630660
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 87b29db0cc093b195361ef34086f41038c181bef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507313"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取服務一組類別 (Class)。 ADO.NET 提供一組豐富的元件，用於建立分散式資料共用應用程式。 其為 .NET Framework 的一個完整的部分，提供關聯式、XML 及應用程式資料的存取。 ADO.NET 支援各種開發需要，包括建立應用程式、工具、語言或網際網路瀏覽器使用的前端資料庫用戶端及中介層商務物件。  
@@ -62,6 +62,6 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  [範例及快速入門](https://msdn.microsoft.com/library/ms184422.aspx)  
  提供與 .NET Framework 關聯之所有範例及 QuickStart 範例的完整清單。  
   
-## <a name="see-also"></a>另請參閱  
- [存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

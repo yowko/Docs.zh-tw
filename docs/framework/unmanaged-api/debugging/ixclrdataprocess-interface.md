@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8c98dd42b4ac5593d96478c2286f49ad216a4bc1
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: ff74a7acb5cc84c177f083c19402cd78977aeab5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680370"
 ---
 # <a name="ixclrdataprocess-interface"></a>IXCLRDataProcess 介面
 

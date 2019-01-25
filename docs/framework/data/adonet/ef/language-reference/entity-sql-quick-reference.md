@@ -2,20 +2,20 @@
 title: Entity SQL 快速參考
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 0617ce96acaf5a6eafb2658cfe218cc8f4135f6e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 20d8d1cb1e4b5cbf37dffcce6a7e79c2a4c265d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539399"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL 快速參考
-本主題提供 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢的快速參考。 本主題中的查詢根據 AdventureWorks Sales model。  
+本主題提供 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢的快速參考。 本主題中的查詢是以 AdventureWorks Sales model 為基礎。  
   
 ## <a name="literals"></a>常值  
   
 ### <a name="string"></a>String  
- 字串常值包括 Unicode 和非 Unicode 字元兩種。 Unicode 字串前面會加一個 n，例如， `N'hello'`。  
+ 字串常值包括 Unicode 和非 Unicode 字元兩種。 Unicode 字串前面會加一個 n比方說， `N'hello'`。  
   
  以下是非 Unicode 字串常值的範例：  
   
@@ -72,7 +72,7 @@ DATETIME '2006-12-25 01:01'
 ## <a name="type-constructors"></a>型別建構函式  
   
 ### <a name="row"></a>ROW  
- [資料列](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)建構匿名、 結構式型別 （記錄） 中的左值做為： `ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ [資料列](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)建構匿名、 結構式型別 （記錄） 值，例如： `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  範例：  
   
@@ -91,7 +91,7 @@ SELECT VALUE row (product.ProductID as ProductID, product.Name
 |...|...|  
   
 ### <a name="multiset"></a>MULTISET  
- [多重集](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)建構集合，例如：  
+ [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)建構集合，例如：  
   
  `MULTISET(1,2,2,3)` `--same as`-`{1,2,2,3}.`  
   
@@ -130,7 +130,7 @@ AS o
 ## <a name="references"></a>參考  
   
 ### <a name="ref"></a>REF  
- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)會建立實體類型執行個體的參考。 例如，以下查詢會傳回 Orders 實體集中每一個 Order 實體的參考：  
+ [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)建立實體類型執行個體的參考。 例如，以下查詢會傳回 Orders 實體集中每一個 Order 實體的參考：  
   
 ```  
 SELECT REF(o) AS OrderID FROM Orders AS o  
@@ -164,7 +164,7 @@ SELECT VALUE REF(p).Name FROM
 |...|  
   
 ### <a name="deref"></a>DEREF  
- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)對參考值取值並且產生該取值的結果。 例如，以下查詢會對 Orders 實體集中的每一個 Order 產生 Order 實體：`SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2`。  
+ [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)參考會值取值並且產生該取值的結果。 例如，以下查詢會對 Orders 實體集中的每一個 Order 產生 Order 實體：`SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2`。  
   
  範例：  
   
@@ -183,7 +183,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
 |...|  
   
 ### <a name="createref-and-key"></a>CREATEREF 和 KEY  
- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)會建立傳遞索引鍵的參考。 [索引鍵](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)會擷取具有類型參考之運算式的索引鍵部分。  
+ [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)會建立傳遞索引鍵的參考。 [索引鍵](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)擷取具有類型參考之運算式的索引鍵部分。  
   
  範例：  
   
@@ -204,7 +204,7 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 ## <a name="functions"></a>函式  
   
 ### <a name="canonical"></a>標準  
- 命名空間[標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)為 Edm，像是`Edm.Length("string")`。 除非匯入了另一個命名空間其中包含與標準函式同名的函式，否則不需要指定命名空間。 如果兩個命名空間有相同的函式，使用者就應當指定完整名稱。  
+ 命名空間[標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)處於 Edm 中，為`Edm.Length("string")`。 除非匯入了另一個命名空間其中包含與標準函式同名的函式，否則不需要指定命名空間。 如果兩個命名空間有相同的函式，使用者就應當指定完整名稱。  
   
  範例：  
   
@@ -223,7 +223,7 @@ SELECT Length(c. FirstName) As NameLen FROM
 |5|  
   
 ### <a name="microsoft-provider-specific"></a>Microsoft 提供者專用  
- [Microsoft 提供者專屬函式](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)中`SqlServer`命名空間。  
+ [Microsoft 提供者特有的函式](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)位於`SqlServer`命名空間。  
   
  範例：  
   
@@ -242,7 +242,7 @@ SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM
 |26|  
   
 ## <a name="namespaces"></a>命名空間  
- [使用](../../../../../../docs/framework/data/adonet/ef/language-reference/using-entity-sql.md)指定查詢運算式中使用命名空間。  
+ [使用](../../../../../../docs/framework/data/adonet/ef/language-reference/using-entity-sql.md)指定查詢運算式中使用的命名空間。  
   
  範例：  
   
@@ -257,7 +257,7 @@ using SqlServer; LOWER('AA');
 |aa|  
   
 ## <a name="paging"></a>分頁  
- 藉由宣告可以表示分頁[略過](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)和[限制](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)子子句，以[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)子句。  
+ 藉由宣告可以表示分頁[略過](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)並[限制](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)子子句，以[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)子句。  
   
  範例：  
   
@@ -275,7 +275,7 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
 |12|Aguilar|  
   
 ## <a name="grouping"></a>群組  
- [GROUPING BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)指定查詢所傳回物件的群組 ([選取](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 運算式是要放置。  
+ [GROUPING BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)指定查詢所傳回物件的群組 ([選取](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 運算式要放置。  
   
  範例：  
   
@@ -294,7 +294,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product as P
 |...|  
   
 ## <a name="navigation"></a>巡覽  
- 關聯性巡覽運算子可以讓您在關聯性上從一個實體 (開始端) 巡覽到另一個實體 (結束端)。 [瀏覽](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)採用關聯性類型指定為\<命名空間 >。\<關聯性類型名稱 >。 瀏覽傳回 Ref\<T > 如果基數的結尾為 1。 如果基數的結尾為 n，集合 < Ref\<T >> 會傳回。  
+ 關聯性巡覽運算子可以讓您在關聯性上從一個實體 (開始端) 巡覽到另一個實體 (結束端)。 [瀏覽](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)接受限定為的關聯性類型\<命名空間 >。\<關聯性類型名稱 >。 瀏覽傳回 Ref\<T > 如果基數的結尾為 1。 如果基數的結尾為 n，集合 < Ref\<T >> 會傳回。  
   
  範例：  
   
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE 和 SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供 SELECT VALUE 子句來略過隱含資料列建構。 SELECT VALUE 子句中可指定一個項目。 這類子句使用時，任何資料列包裝函式會不建構包含 SELECT 子句中的項目所需形狀的集合可以產生，例如： `SELECT VALUE a`。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供 SELECT VALUE 子句來略過隱含資料列建構。 SELECT VALUE 子句中可指定一個項目。 當使用這類子句時，任何資料列包裝函式會建構 SELECT 子句中的項目而想要的形狀的集合可以產生，例如： `SELECT VALUE a`。  
   
  範例：  
   
@@ -362,6 +362,6 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
 |-----------|  
 |true|  
   
-## <a name="see-also"></a>另請參閱  
- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>另請參閱
+- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

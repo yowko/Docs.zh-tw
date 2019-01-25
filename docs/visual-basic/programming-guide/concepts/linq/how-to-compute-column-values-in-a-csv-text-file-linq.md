@@ -1,15 +1,15 @@
 ---
-title: 如何： 計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值
+title: HOW TO：計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 9eb0198c16efebd09af45ae26a47288b2153cf43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c99696472deaa79842e3270d05b63cd591754d8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671898"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>如何： 計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>HOW TO：計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值
 本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。 此處顯示的範例準則可以套用至其他類型的結構化文字。  
   
 ### <a name="to-create-the-source-file"></a>建立來源檔案  
@@ -145,6 +145,6 @@ End Class
 ## <a name="compiling-the-code"></a>編譯程式碼  
  建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>另請參閱
+- [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

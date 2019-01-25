@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 7c076172424baab4553a277baab2faca634c1e87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3ae17dc98137bd417d2468fb0415fb2078acf20f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512823"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686019"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 標記延伸
 將控制項樣板中的屬性值連結成為樣板化控制項上另一個屬性的值。  
@@ -60,11 +60,11 @@ ms.locfileid: "43512823"
   
  `TemplateBinding` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 在 XAML 使用的所有標記延伸`{`和`}`字元在其屬性語法中，這是用 XAML 處理器會辨識為標記延伸必須處理這個屬性的慣例。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Style>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [RelativeSource 標記延伸](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
- [Binding 標記延伸](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Style>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [RelativeSource 標記延伸](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)
+- [Binding 標記延伸](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)

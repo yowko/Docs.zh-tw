@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d62b9be1bef16014e2870c15a232bb46d4daf10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ac0d77b1d8d35a7753d3a501f147bd5ac53750c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583726"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps 方法
 取得與指定語彙基元所參考成員相關聯的中繼資料。  
@@ -43,35 +43,35 @@ HRESULT GetMemberRefProps (
   
 #### <a name="parameters"></a>參數  
  `mr`  
- [in]要傳回相關聯的中繼資料的 MemberRef 語彙基元。  
+ [in]若要傳回相關聯的中繼資料的 MemberRef 語彙基元。  
   
  `ptk`  
- [out]TypeDef 或 TypeRef 或 TypeSpec 語彙基元表示宣告成員或表示模組類別宣告成員或代表該成員是 MethodDef ModuleRef 語彙基元的類別。  
+ [out]TypeDef TypeRef 或 TypeSpec 語彙基元，代表宣告的成員或 ModuleRef 語彙基元，代表宣告的成員或代表該成員 MethodDef 的模組類別的類別。  
   
  `szMember`  
- [out]成員的名稱的的字串緩衝區。  
+ [out]針對成員名稱的字串緩衝區。  
   
  `cchMember`  
- [in]要求的大小，以寬字元`szMember`。  
+ [in]所要求的大小，以寬字元為單位的`szMember`。  
   
  `pchMember`  
- [out]傳回的大小的寬字元`szMember`。  
+ [out]寬字元在傳回的大小`szMember`。  
   
  `ppvSibBlob`  
- [out]成員的二進位中繼資料簽章指標。  
+ [out]指標，該成員的二進位中繼資料簽章。  
   
  `pbSig`  
  [out]以位元組為單位的大小`ppvSigBlob`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

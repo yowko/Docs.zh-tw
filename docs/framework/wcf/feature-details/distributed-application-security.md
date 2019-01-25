@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 1a601c03c8644f3f4b543864a774a35820c7d6bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189624"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709425"
 ---
 # <a name="distributed-application-security"></a>分散式應用程式安全性
 Windows Communication Foundation (WCF) 安全性分為三個主要的功能區域： 傳輸安全性、 存取控制和稽核。 傳輸安全性提供完整性、機密性與驗證。 傳輸安全性是由下列其中一項提供：傳輸安全性、訊息安全性或 `TransportWithMessageCredential`。  
@@ -65,8 +65,8 @@ Windows Communication Foundation (WCF) 安全性分為三個主要的功能區�
 |設定|描述|  
 |-------------|-----------------|  
 |無|指定用戶端不需要提出任何認證。 這會轉譯成匿名用戶端。|  
-|基本|指定基本驗證。  如需詳細資訊，請參閱 RFC2617 「[HTTP 驗證： 基本與摘要式驗證](https://go.microsoft.com/fwlink/?LinkId=88313)。 」|  
-|摘要|指定摘要式驗證。  如需詳細資訊，請參閱 RFC2617 「[HTTP 驗證： 基本與摘要式驗證](https://go.microsoft.com/fwlink/?LinkId=88313)。 」|  
+|基本|指定基本驗證。  如需詳細資訊，請參閱 RFC2617 「[HTTP 驗證：基本和摘要式驗證](https://go.microsoft.com/fwlink/?LinkId=88313)。 」|  
+|摘要|指定摘要式驗證。  如需詳細資訊，請參閱 RFC2617 「[HTTP 驗證：基本和摘要式驗證](https://go.microsoft.com/fwlink/?LinkId=88313)。 」|  
 |Ntlm|指定在 Windows 網域上使用 SSPI 交涉的 Windows 驗證。<br /><br /> SSPI 交涉的結果會是使用 Kerberos 通訊協定或 NT LanMan (NTLM)。|  
 |Windows|指定在 Windows 網域上使用 SSPI 的 Windows 驗證。 SSPI 會挑選 Kerberos 通訊協定或 NTLM 做為驗證服務。<br /><br /> SSPI 會先嘗試 Kerberos 通訊協定，如果失敗的話，才會使用 NTLM。|  
 |憑證|使用憑證 (通常是 X.509) 執行用戶端驗證。|  
@@ -94,8 +94,8 @@ Windows Communication Foundation (WCF) 安全性分為三個主要的功能區�
   
  訊息安全性模式還可讓您執行傳輸安全性，如此服務認證就會在初始交涉的過程中與用戶端交換。 若要啟用交涉，請將 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 屬性設為 `true`。  
   
-## <a name="see-also"></a>另請參閱  
- [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>另請參閱
+- [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

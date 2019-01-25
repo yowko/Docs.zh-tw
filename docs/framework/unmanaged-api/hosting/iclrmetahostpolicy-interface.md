@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9a70cf0812f84908630f109ef06aafa4b4f7525
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46576552db6e3c9aa06646b260e74cb4b7890d9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559225"
 ---
 # <a name="iclrmetahostpolicy-interface"></a>ICLRMetaHostPolicy 介面
-提供[GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法，讓指標回到通用的 language runtime (CLR) 介面，根據原則的條件，管理組件、 版本和組態檔。  
+提供[GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法，這個方法會傳回根據原則準則的通用語言執行平台 (CLR) 介面的指標，管理組件、 版本和組態檔。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetRequestedRuntime 方法](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)|提供的慣用的 CLR 介面根據原則的條件，管理組件、 版本和組態檔。|  
+|[GetRequestedRuntime 方法](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)|提供的慣用的 CLR 介面根據原則準則、 管理組件、 版本和組態檔。|  
   
 ## <a name="remarks"></a>備註  
  您可以取得此介面的參考，藉由呼叫[CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)函式，如下列程式碼所示：  
@@ -42,20 +42,20 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
 ```  
   
 > [!NOTE]
->  這個介面不實際上不會載入或啟用 CLR，但只會傳回可用的版本會安裝或載入為基礎的慣用的 CLR 版本。  
+>  此介面實際上不會不會載入或啟用 CLR，但只會傳回可用的版本安裝或載入為基礎的慣用的 CLR 版本。  
   
- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]裝載 API，將合併原則，讓主機有特定的需求可能會使用基本功能而不會產生非預期的負面影響。 例如，許多 MSCorEE.dll 匯出會繫結至特定的 CLR，雖然方法可能會以邏輯方式需要它。 [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)列舉型別提供通用於大多數的主控件的繫結原則。  
+ [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]裝載 API 合併原則，好讓主機的特定需求可能會使用基本功能而不會產生非預期的負面影響。 比方說，許多 MSCorEE.dll 匯出會繫結至特定的 CLR，雖然方法可能會以邏輯方式需要它。 [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)列舉型別提供通用於大部分的主控件的繫結原則。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [.NET Framework 4 和 4.5 中新增的 CLR 裝載介面](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>另請參閱
+- [.NET Framework 4 和 4.5 中新增的 CLR 裝載介面](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -16,11 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bec138460d508371565c26017fab3a8c22266db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bee25122920a6fcec3bbd4e9e53bbdad008d5304
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514098"
 ---
 # <a name="clsidresolutionflags-enumeration"></a>CLSID_RESOLUTION_FLAGS 列舉
 包含值，表示 common language runtime (CLR) 應該要如何解決`CLSID`。  
@@ -39,14 +40,14 @@ typedef enum {
 |成員|描述|  
 |------------|-----------------|  
 |`CLSID_RESOLUTION_DEFAULT`|表示預設行為。|  
-|`CLSID_RESOLUTION_REGISTERED`|指出執行階段會搜尋登錄套用填充碼原則。|  
+|`CLSID_RESOLUTION_REGISTERED`|表示執行階段會搜尋登錄，並套用填充碼原則。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

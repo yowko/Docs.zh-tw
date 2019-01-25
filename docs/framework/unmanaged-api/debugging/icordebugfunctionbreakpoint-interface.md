@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunctionBreakpoint Interface1
+title: ICorDebugFunctionBreakpoint 介面 1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunctionBreakpoint
@@ -16,22 +16,22 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd4c430798333dd22c36ce30e7c9ce05bdc8f56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b8403873fb7bc15e3109821bf738d7b68e20f878
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662682"
 ---
-# <a name="icordebugfunctionbreakpoint-interface1"></a>ICorDebugFunctionBreakpoint Interface1
-擴充 ICorDebugBreakpoint 介面以支援在函式內的中斷點。  
+# <a name="icordebugfunctionbreakpoint-interface1"></a>ICorDebugFunctionBreakpoint 介面 1
+擴充 ICorDebugBreakpoint 介面，以支援在函式內的中斷點。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
 |[GetFunction 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|取得參考函式設定中斷點 ICorDebugFunction 介面指標。|  
-|[GetOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|取得，中斷點在函式內的位移。|  
+|[GetOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|取得中斷點的函式中的位移。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -39,13 +39,13 @@ ms.locfileid: "33414179"
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
