@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73fa281d28e9b5362ff386b55b07dd431f1915f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ef5faff6682ed6c043e81212f2cb27d4cfbd813d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601853"
 ---
-# <a name="couninitializeee-function"></a><span data-ttu-id="b7de9-102">CoUninitializeEE 函式</span><span class="sxs-lookup"><span data-stu-id="b7de9-102">CoUninitializeEE Function</span></span>
-<span data-ttu-id="b7de9-103">`CoUninitializeEE` 已經過時，不提供功能。</span><span class="sxs-lookup"><span data-stu-id="b7de9-103">`CoUninitializeEE` is obsolete and provides no functionality.</span></span>  
+# <a name="couninitializeee-function"></a><span data-ttu-id="7b779-102">CoUninitializeEE 函式</span><span class="sxs-lookup"><span data-stu-id="7b779-102">CoUninitializeEE Function</span></span>
+<span data-ttu-id="7b779-103">`CoUninitializeEE` 已經過時，不提供功能。</span><span class="sxs-lookup"><span data-stu-id="7b779-103">`CoUninitializeEE` is obsolete and provides no functionality.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b7de9-104">語法</span><span class="sxs-lookup"><span data-stu-id="b7de9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7b779-104">語法</span><span class="sxs-lookup"><span data-stu-id="7b779-104">Syntax</span></span>  
   
 ```  
 void CoUninitializeEE (  
@@ -34,9 +34,9 @@ void CoUninitializeEE (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="b7de9-105">備註</span><span class="sxs-lookup"><span data-stu-id="b7de9-105">Remarks</span></span>  
- <span data-ttu-id="b7de9-106">Common language runtime 執行引擎無法從處理序卸載。</span><span class="sxs-lookup"><span data-stu-id="b7de9-106">The common language runtime execution engine cannot be unloaded from a process.</span></span> <span data-ttu-id="b7de9-107">若要關閉執行引擎呼叫[CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)。</span><span class="sxs-lookup"><span data-stu-id="b7de9-107">To shut down the execution engine call [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7b779-105">備註</span><span class="sxs-lookup"><span data-stu-id="7b779-105">Remarks</span></span>  
+ <span data-ttu-id="7b779-106">Common language runtime 執行引擎無法從處理序卸載。</span><span class="sxs-lookup"><span data-stu-id="7b779-106">The common language runtime execution engine cannot be unloaded from a process.</span></span> <span data-ttu-id="7b779-107">若要關閉的執行引擎呼叫[CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)。</span><span class="sxs-lookup"><span data-stu-id="7b779-107">To shut down the execution engine call [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b7de9-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b7de9-108">See Also</span></span>  
- [<span data-ttu-id="b7de9-109">CoInitializeEE 函式</span><span class="sxs-lookup"><span data-stu-id="b7de9-109">CoInitializeEE Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
- [<span data-ttu-id="b7de9-110">中繼資料全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="b7de9-110">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="7b779-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7b779-108">See also</span></span>
+- [<span data-ttu-id="7b779-109">CoInitializeEE 函式</span><span class="sxs-lookup"><span data-stu-id="7b779-109">CoInitializeEE Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)
+- [<span data-ttu-id="7b779-110">中繼資料全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="7b779-110">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

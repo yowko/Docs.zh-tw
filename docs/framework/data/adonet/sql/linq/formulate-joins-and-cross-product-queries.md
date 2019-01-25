@@ -5,79 +5,79 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-ms.openlocfilehash: 20b46ce37d93119330e336f583ac68b5c1dc4c4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a06c7d451d9ad2856092910065f1195a86c737ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548505"
 ---
-# <a name="formulate-joins-and-cross-product-queries"></a><span data-ttu-id="d2ca1-102">制定聯結和交叉乘積查詢</span><span class="sxs-lookup"><span data-stu-id="d2ca1-102">Formulate Joins and Cross-Product Queries</span></span>
-<span data-ttu-id="d2ca1-103">下列範例顯示如何合併多張資料表中的結果。</span><span class="sxs-lookup"><span data-stu-id="d2ca1-103">The following examples show how to combine results from multiple tables.</span></span>  
+# <a name="formulate-joins-and-cross-product-queries"></a><span data-ttu-id="11f5a-102">制定聯結和交叉乘積查詢</span><span class="sxs-lookup"><span data-stu-id="11f5a-102">Formulate Joins and Cross-Product Queries</span></span>
+<span data-ttu-id="11f5a-103">下列範例顯示如何合併多張資料表中的結果。</span><span class="sxs-lookup"><span data-stu-id="11f5a-103">The following examples show how to combine results from multiple tables.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d2ca1-104">範例</span><span class="sxs-lookup"><span data-stu-id="d2ca1-104">Example</span></span>  
- <span data-ttu-id="d2ca1-105">下列範例會使用中的外部索引鍵巡覽`From`在 Visual Basic 中的子句 (`from`子句在 C# 中的) 來選取在倫敦 （london） 的所有客戶的訂單。</span><span class="sxs-lookup"><span data-stu-id="d2ca1-105">The following example uses foreign key navigation in the `From` clause in Visual Basic (`from` clause in C#) to select all orders for customers in London.</span></span>  
+## <a name="example"></a><span data-ttu-id="11f5a-104">範例</span><span class="sxs-lookup"><span data-stu-id="11f5a-104">Example</span></span>  
+ <span data-ttu-id="11f5a-105">下列範例會使用中的外部索引鍵巡覽`From`在 Visual Basic 中的子句 (`from`子句C#) 來選取在倫敦的客戶的所有訂單。</span><span class="sxs-lookup"><span data-stu-id="11f5a-105">The following example uses foreign key navigation in the `From` clause in Visual Basic (`from` clause in C#) to select all orders for customers in London.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
-## <a name="example"></a><span data-ttu-id="d2ca1-106">範例</span><span class="sxs-lookup"><span data-stu-id="d2ca1-106">Example</span></span>  
- <span data-ttu-id="d2ca1-107">下列範例會使用中的外部索引鍵巡覽`Where`在 Visual Basic 中的子句 (`where`子句在 C# 中的) 來篩選出內建`Products`其`Supplier`位於美國。</span><span class="sxs-lookup"><span data-stu-id="d2ca1-107">The following example uses foreign key navigation in the `Where` clause in Visual Basic (`where` clause in C#) to filter for out-of-stock `Products` whose `Supplier` is in the United States.</span></span>  
+## <a name="example"></a><span data-ttu-id="11f5a-106">範例</span><span class="sxs-lookup"><span data-stu-id="11f5a-106">Example</span></span>  
+ <span data-ttu-id="11f5a-107">下列範例會使用中的外部索引鍵巡覽`Where`在 Visual Basic 中的子句 (`where`子句中的C#) 來篩選出缺貨`Products`其`Supplier`是在美國境內。</span><span class="sxs-lookup"><span data-stu-id="11f5a-107">The following example uses foreign key navigation in the `Where` clause in Visual Basic (`where` clause in C#) to filter for out-of-stock `Products` whose `Supplier` is in the United States.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
-## <a name="example"></a><span data-ttu-id="d2ca1-108">範例</span><span class="sxs-lookup"><span data-stu-id="d2ca1-108">Example</span></span>  
- <span data-ttu-id="d2ca1-109">下列範例會使用中的外部索引鍵巡覽`From`在 Visual Basic 中的子句 (`from`子句在 C# 中的) 來篩選位於西雅圖的員工，並列出他們的領域。</span><span class="sxs-lookup"><span data-stu-id="d2ca1-109">The following example uses foreign key navigation in the `From` clause in Visual Basic (`from` clause in C#) to filter for employees in Seattle and to list their territories.</span></span>  
+## <a name="example"></a><span data-ttu-id="11f5a-108">範例</span><span class="sxs-lookup"><span data-stu-id="11f5a-108">Example</span></span>  
+ <span data-ttu-id="11f5a-109">下列範例會使用中的外部索引鍵巡覽`From`在 Visual Basic 中的子句 (`from`子句C#) 來篩選位於西雅圖的員工，並列出他們的領域。</span><span class="sxs-lookup"><span data-stu-id="11f5a-109">The following example uses foreign key navigation in the `From` clause in Visual Basic (`from` clause in C#) to filter for employees in Seattle and to list their territories.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
-## <a name="example"></a><span data-ttu-id="d2ca1-110">範例</span><span class="sxs-lookup"><span data-stu-id="d2ca1-110">Example</span></span>  
- <span data-ttu-id="d2ca1-111">下列範例會使用中的外部索引鍵巡覽`Select`在 Visual Basic 中的子句 (`select`子句在 C# 中的) 來篩選員工配對，其中一位員工報告其他而且其中兩位員工都是來自相同`City`。</span><span class="sxs-lookup"><span data-stu-id="d2ca1-111">The following example uses foreign key navigation in the `Select` clause in Visual Basic (`select` clause in C#) to filter for pairs of employees where one employee reports to the other and where both employees are from the same `City`.</span></span>  
+## <a name="example"></a><span data-ttu-id="11f5a-110">範例</span><span class="sxs-lookup"><span data-stu-id="11f5a-110">Example</span></span>  
+ <span data-ttu-id="11f5a-111">下列範例會使用中的外部索引鍵巡覽`Select`在 Visual Basic 中的子句 (`select`子句C#) 來篩選員工配對，到另一位員工報告的位置，以及兩位員工的來自相同的位置`City`。</span><span class="sxs-lookup"><span data-stu-id="11f5a-111">The following example uses foreign key navigation in the `Select` clause in Visual Basic (`select` clause in C#) to filter for pairs of employees where one employee reports to the other and where both employees are from the same `City`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
-## <a name="example"></a><span data-ttu-id="d2ca1-112">範例</span><span class="sxs-lookup"><span data-stu-id="d2ca1-112">Example</span></span>  
- <span data-ttu-id="d2ca1-113">下列 Visual Basic 範例會尋找所有客戶和訂單、 可確保訂單會對應到客戶，和可保證，該清單中每位客戶，提供有連絡人名稱。</span><span class="sxs-lookup"><span data-stu-id="d2ca1-113">The following Visual Basic example looks for all customers and orders, makes sure that the orders are matched to customers, and guarantees that for every customer in that list, a contact name is provided.</span></span>  
+## <a name="example"></a><span data-ttu-id="11f5a-112">範例</span><span class="sxs-lookup"><span data-stu-id="11f5a-112">Example</span></span>  
+ <span data-ttu-id="11f5a-113">下列 Visual Basic 範例會尋找所有客戶和訂單、 可確保訂單會比對，為客戶和保證，該清單中每位客戶，提供連絡人的名稱。</span><span class="sxs-lookup"><span data-stu-id="11f5a-113">The following Visual Basic example looks for all customers and orders, makes sure that the orders are matched to customers, and guarantees that for every customer in that list, a contact name is provided.</span></span>  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   
-## <a name="example"></a><span data-ttu-id="d2ca1-114">範例</span><span class="sxs-lookup"><span data-stu-id="d2ca1-114">Example</span></span>  
- <span data-ttu-id="d2ca1-115">下列範例明確聯結 (Join) 兩張資料表，並規劃來自這兩張資料表的結果。</span><span class="sxs-lookup"><span data-stu-id="d2ca1-115">The following example explicitly joins two tables and projects results from both tables.</span></span>  
+## <a name="example"></a><span data-ttu-id="11f5a-114">範例</span><span class="sxs-lookup"><span data-stu-id="11f5a-114">Example</span></span>  
+ <span data-ttu-id="11f5a-115">下列範例明確聯結 (Join) 兩張資料表，並規劃來自這兩張資料表的結果。</span><span class="sxs-lookup"><span data-stu-id="11f5a-115">The following example explicitly joins two tables and projects results from both tables.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#51](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#51)]
  [!code-vb[DLinqQueryExamples#51](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#51)]  
   
-## <a name="example"></a><span data-ttu-id="d2ca1-116">範例</span><span class="sxs-lookup"><span data-stu-id="d2ca1-116">Example</span></span>  
- <span data-ttu-id="d2ca1-117">下列範例明確聯結三張資料表，並規劃來自每張資料表的結果。</span><span class="sxs-lookup"><span data-stu-id="d2ca1-117">The following example explicitly joins three tables and projects results from each of them.</span></span>  
+## <a name="example"></a><span data-ttu-id="11f5a-116">範例</span><span class="sxs-lookup"><span data-stu-id="11f5a-116">Example</span></span>  
+ <span data-ttu-id="11f5a-117">下列範例明確聯結三張資料表，並規劃來自每張資料表的結果。</span><span class="sxs-lookup"><span data-stu-id="11f5a-117">The following example explicitly joins three tables and projects results from each of them.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#52](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#52)]
  [!code-vb[DLinqQueryExamples#52](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#52)]  
   
-## <a name="example"></a><span data-ttu-id="d2ca1-118">範例</span><span class="sxs-lookup"><span data-stu-id="d2ca1-118">Example</span></span>  
- <span data-ttu-id="d2ca1-119">下列範例顯示如何使用 `LEFT OUTER JOIN` 來達成 `DefaultIfEmpty()`。</span><span class="sxs-lookup"><span data-stu-id="d2ca1-119">The following example shows how to achieve a `LEFT OUTER JOIN` by using `DefaultIfEmpty()`.</span></span> <span data-ttu-id="d2ca1-120">如果 `DefaultIfEmpty()` 沒有 `Order`，則 `Employee` 方法會傳回 null。</span><span class="sxs-lookup"><span data-stu-id="d2ca1-120">The `DefaultIfEmpty()` method returns null when there is no `Order` for the `Employee`.</span></span>  
+## <a name="example"></a><span data-ttu-id="11f5a-118">範例</span><span class="sxs-lookup"><span data-stu-id="11f5a-118">Example</span></span>  
+ <span data-ttu-id="11f5a-119">下列範例顯示如何使用 `LEFT OUTER JOIN` 來達成 `DefaultIfEmpty()`。</span><span class="sxs-lookup"><span data-stu-id="11f5a-119">The following example shows how to achieve a `LEFT OUTER JOIN` by using `DefaultIfEmpty()`.</span></span> <span data-ttu-id="11f5a-120">如果 `DefaultIfEmpty()` 沒有 `Order`，則 `Employee` 方法會傳回 null。</span><span class="sxs-lookup"><span data-stu-id="11f5a-120">The `DefaultIfEmpty()` method returns null when there is no `Order` for the `Employee`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#53](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#53)]
  [!code-vb[DLinqQueryExamples#53](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#53)]  
   
-## <a name="example"></a><span data-ttu-id="d2ca1-121">範例</span><span class="sxs-lookup"><span data-stu-id="d2ca1-121">Example</span></span>  
- <span data-ttu-id="d2ca1-122">下列範例會規劃透過聯結產生的 `let` 運算式。</span><span class="sxs-lookup"><span data-stu-id="d2ca1-122">The following example projects a `let` expression resulting from a join.</span></span>  
+## <a name="example"></a><span data-ttu-id="11f5a-121">範例</span><span class="sxs-lookup"><span data-stu-id="11f5a-121">Example</span></span>  
+ <span data-ttu-id="11f5a-122">下列範例會規劃透過聯結產生的 `let` 運算式。</span><span class="sxs-lookup"><span data-stu-id="11f5a-122">The following example projects a `let` expression resulting from a join.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#54](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#54)]
  [!code-vb[DLinqQueryExamples#54](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#54)]  
   
-## <a name="example"></a><span data-ttu-id="d2ca1-123">範例</span><span class="sxs-lookup"><span data-stu-id="d2ca1-123">Example</span></span>  
- <span data-ttu-id="d2ca1-124">下列範例顯示具有複合索引鍵的 `join`。</span><span class="sxs-lookup"><span data-stu-id="d2ca1-124">The following example shows a `join` with a composite key.</span></span>  
+## <a name="example"></a><span data-ttu-id="11f5a-123">範例</span><span class="sxs-lookup"><span data-stu-id="11f5a-123">Example</span></span>  
+ <span data-ttu-id="11f5a-124">下列範例顯示具有複合索引鍵的 `join`。</span><span class="sxs-lookup"><span data-stu-id="11f5a-124">The following example shows a `join` with a composite key.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#55](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#55)]
  [!code-vb[DLinqQueryExamples#55](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#55)]  
   
-## <a name="example"></a><span data-ttu-id="d2ca1-125">範例</span><span class="sxs-lookup"><span data-stu-id="d2ca1-125">Example</span></span>  
- <span data-ttu-id="d2ca1-126">下列範例顯示如何建構 `join`，其中另一端可以為 null，而另一端則不可以。</span><span class="sxs-lookup"><span data-stu-id="d2ca1-126">The following example shows how to construct a `join` where one side is nullable and the other is not.</span></span>  
+## <a name="example"></a><span data-ttu-id="11f5a-125">範例</span><span class="sxs-lookup"><span data-stu-id="11f5a-125">Example</span></span>  
+ <span data-ttu-id="11f5a-126">下列範例顯示如何建構 `join`，其中另一端可以為 null，而另一端則不可以。</span><span class="sxs-lookup"><span data-stu-id="11f5a-126">The following example shows how to construct a `join` where one side is nullable and the other is not.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#56](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#56)]
  [!code-vb[DLinqQueryExamples#56](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#56)]  
   
-## <a name="see-also"></a><span data-ttu-id="d2ca1-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d2ca1-127">See Also</span></span>  
- [<span data-ttu-id="d2ca1-128">查詢範例</span><span class="sxs-lookup"><span data-stu-id="d2ca1-128">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a><span data-ttu-id="11f5a-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="11f5a-127">See also</span></span>
+- [<span data-ttu-id="11f5a-128">查詢範例</span><span class="sxs-lookup"><span data-stu-id="11f5a-128">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

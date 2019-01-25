@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f26a049c68b62ee09a569d741f0c1ab03a3f331a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6b7a7641398d2d083a3ea1b7f44186c3be02213c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428667"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566602"
 ---
-# <a name="eclrassemblyidentityflags-enumeration"></a><span data-ttu-id="3cf92-102">ECLRAssemblyIdentityFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="3cf92-102">ECLRAssemblyIdentityFlags Enumeration</span></span>
-<span data-ttu-id="3cf92-103">表示組件的識別類型。</span><span class="sxs-lookup"><span data-stu-id="3cf92-103">Indicates the type of an assembly's identity.</span></span>  
+# <a name="eclrassemblyidentityflags-enumeration"></a><span data-ttu-id="66b03-102">ECLRAssemblyIdentityFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="66b03-102">ECLRAssemblyIdentityFlags Enumeration</span></span>
+<span data-ttu-id="66b03-103">指示組件的身分識別的型別。</span><span class="sxs-lookup"><span data-stu-id="66b03-103">Indicates the type of an assembly's identity.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3cf92-104">語法</span><span class="sxs-lookup"><span data-stu-id="3cf92-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66b03-104">語法</span><span class="sxs-lookup"><span data-stu-id="66b03-104">Syntax</span></span>  
   
 ```  
 typedef enum _CLRAssemblyIdentityFlags {  
@@ -34,18 +34,18 @@ typedef enum _CLRAssemblyIdentityFlags {
 } ECLRAssemblyIdentityFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="3cf92-105">成員</span><span class="sxs-lookup"><span data-stu-id="3cf92-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="66b03-105">成員</span><span class="sxs-lookup"><span data-stu-id="66b03-105">Members</span></span>  
   
-|<span data-ttu-id="3cf92-106">成員</span><span class="sxs-lookup"><span data-stu-id="3cf92-106">Member</span></span>|<span data-ttu-id="3cf92-107">描述</span><span class="sxs-lookup"><span data-stu-id="3cf92-107">Description</span></span>|  
+|<span data-ttu-id="66b03-106">成員</span><span class="sxs-lookup"><span data-stu-id="66b03-106">Member</span></span>|<span data-ttu-id="66b03-107">描述</span><span class="sxs-lookup"><span data-stu-id="66b03-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|<span data-ttu-id="3cf92-108">被正式的身分識別。</span><span class="sxs-lookup"><span data-stu-id="3cf92-108">The identity is canonicalized.</span></span>|  
+|`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|<span data-ttu-id="66b03-108">正式的身分識別。</span><span class="sxs-lookup"><span data-stu-id="66b03-108">The identity is canonicalized.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3cf92-109">需求</span><span class="sxs-lookup"><span data-stu-id="3cf92-109">Requirements</span></span>  
- <span data-ttu-id="3cf92-110">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3cf92-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="66b03-109">需求</span><span class="sxs-lookup"><span data-stu-id="66b03-109">Requirements</span></span>  
+ <span data-ttu-id="66b03-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="66b03-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3cf92-111">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3cf92-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="66b03-111">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="66b03-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3cf92-112">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3cf92-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="66b03-112">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66b03-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3cf92-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3cf92-113">See Also</span></span>  
- [<span data-ttu-id="3cf92-114">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="3cf92-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="66b03-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="66b03-113">See also</span></span>
+- [<span data-ttu-id="66b03-114">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="66b03-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
