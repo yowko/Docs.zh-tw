@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5112c3c8d5fef6efada4bffdfa575716503515e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2520c37b1969e5e98f02772857f96195b211b549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674152"
 ---
-# <a name="corelementtype-enumeration1"></a><span data-ttu-id="45a78-102">CorElementType 列舉 1</span><span class="sxs-lookup"><span data-stu-id="45a78-102">CorElementType Enumeration1</span></span>
-<span data-ttu-id="45a78-103">指定 common language runtime <xref:System.Type>、 型別修飾詞或在 中繼資料型別簽章類型的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="45a78-103">Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.</span></span>  
+# <a name="corelementtype-enumeration1"></a><span data-ttu-id="d5c4d-102">CorElementType 列舉 1</span><span class="sxs-lookup"><span data-stu-id="d5c4d-102">CorElementType Enumeration1</span></span>
+<span data-ttu-id="d5c4d-103">指定 common language runtime <xref:System.Type>、 型別修飾詞或在 中繼資料型別簽章類型的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-103">Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="45a78-104">語法</span><span class="sxs-lookup"><span data-stu-id="45a78-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d5c4d-104">語法</span><span class="sxs-lookup"><span data-stu-id="d5c4d-104">Syntax</span></span>  
   
 ```  
 typedef enum CorElementType {  
@@ -76,74 +76,74 @@ typedef enum CorElementType {
 } CorElementType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="45a78-105">成員</span><span class="sxs-lookup"><span data-stu-id="45a78-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="d5c4d-105">成員</span><span class="sxs-lookup"><span data-stu-id="d5c4d-105">Members</span></span>  
   
-|<span data-ttu-id="45a78-106">成員</span><span class="sxs-lookup"><span data-stu-id="45a78-106">Member</span></span>|<span data-ttu-id="45a78-107">描述</span><span class="sxs-lookup"><span data-stu-id="45a78-107">Description</span></span>|  
+|<span data-ttu-id="d5c4d-106">成員</span><span class="sxs-lookup"><span data-stu-id="d5c4d-106">Member</span></span>|<span data-ttu-id="d5c4d-107">描述</span><span class="sxs-lookup"><span data-stu-id="d5c4d-107">Description</span></span>|  
 |------------|-----------------|  
-|`ELEMENT_TYPE_END`|<span data-ttu-id="45a78-108">在內部使用。</span><span class="sxs-lookup"><span data-stu-id="45a78-108">Used internally.</span></span>|  
-|`ELEMENT_TYPE_VOID`|<span data-ttu-id="45a78-109">無效的型別。</span><span class="sxs-lookup"><span data-stu-id="45a78-109">A void type.</span></span>|  
-|`ELEMENT_TYPE_BOOLEAN`|<span data-ttu-id="45a78-110">布林型別</span><span class="sxs-lookup"><span data-stu-id="45a78-110">A Boolean type</span></span>|  
-|`ELEMENT_TYPE_CHAR`|<span data-ttu-id="45a78-111">字元類型。</span><span class="sxs-lookup"><span data-stu-id="45a78-111">A character type.</span></span>|  
-|`ELEMENT_TYPE_I1`|<span data-ttu-id="45a78-112">帶正負號的 1 位元整數。</span><span class="sxs-lookup"><span data-stu-id="45a78-112">A signed 1-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U1`|<span data-ttu-id="45a78-113">不帶正負號的 1 位元整數。</span><span class="sxs-lookup"><span data-stu-id="45a78-113">An unsigned 1-byte integer.</span></span>|  
-|`ELEMENT_TYPE_I2`|<span data-ttu-id="45a78-114">2 位元組帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="45a78-114">A signed 2-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U2`|<span data-ttu-id="45a78-115">2 位元組不帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="45a78-115">An unsigned 2-byte integer.</span></span>|  
-|`ELEMENT_TYPE_I4`|<span data-ttu-id="45a78-116">4 位元組帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="45a78-116">A signed 4-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U4`|<span data-ttu-id="45a78-117">4 位元組不帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="45a78-117">An unsigned 4-byte integer.</span></span>|  
-|`ELEMENT_TYPE_I8`|<span data-ttu-id="45a78-118">8 位元組帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="45a78-118">A signed 8-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U8`|<span data-ttu-id="45a78-119">8 位元組不帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="45a78-119">An unsigned 8-byte integer.</span></span>|  
-|`ELEMENT_TYPE_R4`|<span data-ttu-id="45a78-120">4 位元組浮點數。</span><span class="sxs-lookup"><span data-stu-id="45a78-120">A 4-byte floating point.</span></span>|  
-|`ELEMENT_TYPE_R8`|<span data-ttu-id="45a78-121">8 位元組浮點數。</span><span class="sxs-lookup"><span data-stu-id="45a78-121">An 8-byte floating point.</span></span>|  
-|`ELEMENT_TYPE_STRING`|<span data-ttu-id="45a78-122">System.String 類型。</span><span class="sxs-lookup"><span data-stu-id="45a78-122">A System.String type.</span></span>|  
-|`ELEMENT_TYPE_PTR`|<span data-ttu-id="45a78-123">指標型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="45a78-123">A pointer type modifier.</span></span>|  
-|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="45a78-124">參考型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="45a78-124">A reference type modifier.</span></span>|  
-|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="45a78-125">值型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="45a78-125">A value type modifier.</span></span>|  
-|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="45a78-126">類別型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="45a78-126">A class type modifier.</span></span>|  
-|`ELEMENT_TYPE_VAR`|<span data-ttu-id="45a78-127">類別變數的類型修飾詞。</span><span class="sxs-lookup"><span data-stu-id="45a78-127">A class variable type modifier.</span></span>|  
-|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="45a78-128">多維度陣列型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="45a78-128">A multi-dimensional array type modifier.</span></span>|  
-|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="45a78-129">泛型類型的類型修飾詞。</span><span class="sxs-lookup"><span data-stu-id="45a78-129">A type modifier for generic types.</span></span>|  
-|`ELEMENT_TYPE_TYPEDBYREF`|<span data-ttu-id="45a78-130">具型別參考。</span><span class="sxs-lookup"><span data-stu-id="45a78-130">A typed reference.</span></span>|  
-|`ELEMENT_TYPE_I`|<span data-ttu-id="45a78-131">原生的整數的大小。</span><span class="sxs-lookup"><span data-stu-id="45a78-131">Size of a native integer.</span></span>|  
-|`ELEMENT_TYPE_U`|<span data-ttu-id="45a78-132">帶正負號的原生整數的大小。</span><span class="sxs-lookup"><span data-stu-id="45a78-132">Size of an unsigned native integer.</span></span>|  
-|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="45a78-133">函式的指標。</span><span class="sxs-lookup"><span data-stu-id="45a78-133">A pointer to a function.</span></span>|  
-|`ELEMENT_TYPE_OBJECT`|<span data-ttu-id="45a78-134">System.Object 類型。</span><span class="sxs-lookup"><span data-stu-id="45a78-134">A System.Object type.</span></span>|  
-|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="45a78-135">一維、 零下限陣列型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="45a78-135">A single-dimensional, zero lower-bound array type modifier.</span></span>|  
-|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="45a78-136">方法的變數型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="45a78-136">A method variable type modifier.</span></span>|  
-|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="45a78-137">C 語言所需的修飾詞。</span><span class="sxs-lookup"><span data-stu-id="45a78-137">A C language required modifier.</span></span>|  
-|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="45a78-138">C 語言選擇性修飾詞。</span><span class="sxs-lookup"><span data-stu-id="45a78-138">A C language optional modifier.</span></span>|  
-|`ELEMENT_TYPE_INTERNAL`|<span data-ttu-id="45a78-139">在內部使用。</span><span class="sxs-lookup"><span data-stu-id="45a78-139">Used internally.</span></span>|  
-|`ELEMENT_TYPE_MAX`|<span data-ttu-id="45a78-140">類型無效。</span><span class="sxs-lookup"><span data-stu-id="45a78-140">An invalid type.</span></span>|  
-|`ELEMENT_TYPE_MODIFIER`|<span data-ttu-id="45a78-141">在內部使用。</span><span class="sxs-lookup"><span data-stu-id="45a78-141">Used internally.</span></span>|  
-|`ELEMENT_TYPE_SENTINEL`|<span data-ttu-id="45a78-142">是一份參數數目可變的 sentinel 為類型修飾詞。</span><span class="sxs-lookup"><span data-stu-id="45a78-142">A type modifier that is a sentinel for a list of a variable number of parameters.</span></span>|  
-|`ELEMENT_TYPE_PINNED`|<span data-ttu-id="45a78-143">在內部使用。</span><span class="sxs-lookup"><span data-stu-id="45a78-143">Used internally.</span></span>|  
+|`ELEMENT_TYPE_END`|<span data-ttu-id="d5c4d-108">在內部使用。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-108">Used internally.</span></span>|  
+|`ELEMENT_TYPE_VOID`|<span data-ttu-id="d5c4d-109">無效的型別。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-109">A void type.</span></span>|  
+|`ELEMENT_TYPE_BOOLEAN`|<span data-ttu-id="d5c4d-110">布林型別</span><span class="sxs-lookup"><span data-stu-id="d5c4d-110">A Boolean type</span></span>|  
+|`ELEMENT_TYPE_CHAR`|<span data-ttu-id="d5c4d-111">字元類型。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-111">A character type.</span></span>|  
+|`ELEMENT_TYPE_I1`|<span data-ttu-id="d5c4d-112">帶正負號的 1 位元整數。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-112">A signed 1-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U1`|<span data-ttu-id="d5c4d-113">不帶正負號的 1 位元整數。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-113">An unsigned 1-byte integer.</span></span>|  
+|`ELEMENT_TYPE_I2`|<span data-ttu-id="d5c4d-114">2 位元組帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-114">A signed 2-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U2`|<span data-ttu-id="d5c4d-115">2 位元組不帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-115">An unsigned 2-byte integer.</span></span>|  
+|`ELEMENT_TYPE_I4`|<span data-ttu-id="d5c4d-116">4 位元組帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-116">A signed 4-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U4`|<span data-ttu-id="d5c4d-117">4 位元組不帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-117">An unsigned 4-byte integer.</span></span>|  
+|`ELEMENT_TYPE_I8`|<span data-ttu-id="d5c4d-118">8 位元組帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-118">A signed 8-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U8`|<span data-ttu-id="d5c4d-119">8 位元組不帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-119">An unsigned 8-byte integer.</span></span>|  
+|`ELEMENT_TYPE_R4`|<span data-ttu-id="d5c4d-120">4 位元組浮點數。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-120">A 4-byte floating point.</span></span>|  
+|`ELEMENT_TYPE_R8`|<span data-ttu-id="d5c4d-121">8 位元組浮點數。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-121">An 8-byte floating point.</span></span>|  
+|`ELEMENT_TYPE_STRING`|<span data-ttu-id="d5c4d-122">System.String 類型。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-122">A System.String type.</span></span>|  
+|`ELEMENT_TYPE_PTR`|<span data-ttu-id="d5c4d-123">指標型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-123">A pointer type modifier.</span></span>|  
+|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="d5c4d-124">參考型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-124">A reference type modifier.</span></span>|  
+|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="d5c4d-125">值型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-125">A value type modifier.</span></span>|  
+|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="d5c4d-126">類別型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-126">A class type modifier.</span></span>|  
+|`ELEMENT_TYPE_VAR`|<span data-ttu-id="d5c4d-127">類別變數的類型修飾詞。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-127">A class variable type modifier.</span></span>|  
+|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="d5c4d-128">多維度陣列型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-128">A multi-dimensional array type modifier.</span></span>|  
+|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="d5c4d-129">泛型類型的類型修飾詞。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-129">A type modifier for generic types.</span></span>|  
+|`ELEMENT_TYPE_TYPEDBYREF`|<span data-ttu-id="d5c4d-130">具型別參考。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-130">A typed reference.</span></span>|  
+|`ELEMENT_TYPE_I`|<span data-ttu-id="d5c4d-131">原生的整數的大小。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-131">Size of a native integer.</span></span>|  
+|`ELEMENT_TYPE_U`|<span data-ttu-id="d5c4d-132">帶正負號的原生整數的大小。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-132">Size of an unsigned native integer.</span></span>|  
+|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="d5c4d-133">函式的指標。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-133">A pointer to a function.</span></span>|  
+|`ELEMENT_TYPE_OBJECT`|<span data-ttu-id="d5c4d-134">System.Object 類型。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-134">A System.Object type.</span></span>|  
+|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="d5c4d-135">一維、 零下限陣列型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-135">A single-dimensional, zero lower-bound array type modifier.</span></span>|  
+|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="d5c4d-136">方法的變數型別修飾詞。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-136">A method variable type modifier.</span></span>|  
+|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="d5c4d-137">C 語言所需的修飾詞。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-137">A C language required modifier.</span></span>|  
+|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="d5c4d-138">C 語言選擇性修飾詞。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-138">A C language optional modifier.</span></span>|  
+|`ELEMENT_TYPE_INTERNAL`|<span data-ttu-id="d5c4d-139">在內部使用。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-139">Used internally.</span></span>|  
+|`ELEMENT_TYPE_MAX`|<span data-ttu-id="d5c4d-140">類型無效。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-140">An invalid type.</span></span>|  
+|`ELEMENT_TYPE_MODIFIER`|<span data-ttu-id="d5c4d-141">在內部使用。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-141">Used internally.</span></span>|  
+|`ELEMENT_TYPE_SENTINEL`|<span data-ttu-id="d5c4d-142">是一份參數數目可變的 sentinel 為類型修飾詞。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-142">A type modifier that is a sentinel for a list of a variable number of parameters.</span></span>|  
+|`ELEMENT_TYPE_PINNED`|<span data-ttu-id="d5c4d-143">在內部使用。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-143">Used internally.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="45a78-144">備註</span><span class="sxs-lookup"><span data-stu-id="45a78-144">Remarks</span></span>  
- <span data-ttu-id="45a78-145">類型修飾詞會促使表示更複雜的類型。</span><span class="sxs-lookup"><span data-stu-id="45a78-145">The type modifiers form the basis for representing more complex types.</span></span> <span data-ttu-id="45a78-146">A`CorElementType`類型修飾詞值套用至緊接在型別簽章中的值。</span><span class="sxs-lookup"><span data-stu-id="45a78-146">A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature.</span></span> <span data-ttu-id="45a78-147">值，會遵循`CorElementType`型別修飾詞值可以是`CorElementType`簡單型別值、 中繼資料語彙基元或其他值，指定下表中。</span><span class="sxs-lookup"><span data-stu-id="45a78-147">The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d5c4d-144">備註</span><span class="sxs-lookup"><span data-stu-id="d5c4d-144">Remarks</span></span>  
+ <span data-ttu-id="d5c4d-145">類型修飾詞會促使表示更複雜的類型。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-145">The type modifiers form the basis for representing more complex types.</span></span> <span data-ttu-id="d5c4d-146">A`CorElementType`類型修飾詞值套用至緊接在型別簽章中的值。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-146">A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature.</span></span> <span data-ttu-id="d5c4d-147">值，會遵循`CorElementType`型別修飾詞值可以是`CorElementType`簡單型別值、 中繼資料語彙基元或其他值，指定下表中。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-147">The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="45a78-148">所有數字 (*數字*，*引數計數*，*中繼資料語彙基元*，*陣序規範*，*計數*，與*繫結*) 會儲存為壓縮的整數。</span><span class="sxs-lookup"><span data-stu-id="45a78-148">All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers.</span></span> <span data-ttu-id="45a78-149">請參閱[標準 ECMA-335-通用語言基礎結構 (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487)上 ECMA 造訪網站以取得詳細資料。</span><span class="sxs-lookup"><span data-stu-id="45a78-149">See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.</span></span>  
+>  <span data-ttu-id="d5c4d-148">所有數字 (*數字*，*引數計數*，*中繼資料語彙基元*，*陣序規範*，*計數*，與*繫結*) 會儲存為壓縮的整數。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-148">All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers.</span></span> <span data-ttu-id="d5c4d-149">請參閱[標準 ECMA-335-通用語言基礎結構 (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487)上 ECMA 造訪網站以取得詳細資料。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-149">See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.</span></span>  
   
-|<span data-ttu-id="45a78-150">類型修飾詞</span><span class="sxs-lookup"><span data-stu-id="45a78-150">Type modifier</span></span>|<span data-ttu-id="45a78-151">格式</span><span class="sxs-lookup"><span data-stu-id="45a78-151">Format</span></span>|  
+|<span data-ttu-id="d5c4d-150">類型修飾詞</span><span class="sxs-lookup"><span data-stu-id="d5c4d-150">Type modifier</span></span>|<span data-ttu-id="d5c4d-151">格式</span><span class="sxs-lookup"><span data-stu-id="d5c4d-151">Format</span></span>|  
 |-------------------|------------|  
-|`ELEMENT_TYPE_PTR`|<span data-ttu-id="45a78-152">ELEMENT_TYPE_PTR <`CorElementType`值 ></span><span class="sxs-lookup"><span data-stu-id="45a78-152">ELEMENT_TYPE_PTR <a `CorElementType` value></span></span>|  
-|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="45a78-153">ELEMENT_TYPE_BYREF <`CorElementType`值 ></span><span class="sxs-lookup"><span data-stu-id="45a78-153">ELEMENT_TYPE_BYREF <a `CorElementType` value></span></span>|  
-|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="45a78-154">ELEMENT_TYPE_VALUETYPE <`mdTypeDef`中繼資料語彙基元 ></span><span class="sxs-lookup"><span data-stu-id="45a78-154">ELEMENT_TYPE_VALUETYPE <an `mdTypeDef` metadata token></span></span>|  
-|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="45a78-155">ELEMENT_TYPE_CLASS <`mdTypeDef`中繼資料語彙基元 ></span><span class="sxs-lookup"><span data-stu-id="45a78-155">ELEMENT_TYPE_CLASS <an `mdTypeDef` metadata token></span></span>|  
-|`ELEMENT_TYPE_VAR`|<span data-ttu-id="45a78-156">ELEMENT_TYPE_VAR\<數字 ></span><span class="sxs-lookup"><span data-stu-id="45a78-156">ELEMENT_TYPE_VAR \<number></span></span>|  
-|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="45a78-157">ELEMENT_TYPE_ARRAY <`CorElementType`值 >\<陣序規範 > \<count1 > \<bound1 >...\<countN > \<boundN ></span><span class="sxs-lookup"><span data-stu-id="45a78-157">ELEMENT_TYPE_ARRAY <a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN></span></span>|  
-|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="45a78-158">ELEMENT_TYPE_GENERICINST <`mdTypeDef`中繼資料語彙基元 >\<引數計數 > \<arg1 >...\<argN ></span><span class="sxs-lookup"><span data-stu-id="45a78-158">ELEMENT_TYPE_GENERICINST <an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN></span></span>|  
-|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="45a78-159">Typ ELEMENT_TYPE_FNPTR\<函式，包括呼叫慣例的完整簽章 ></span><span class="sxs-lookup"><span data-stu-id="45a78-159">ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention></span></span>|  
-|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="45a78-160">ELEMENT_TYPE_SZARRAY <`CorElementType`值 ></span><span class="sxs-lookup"><span data-stu-id="45a78-160">ELEMENT_TYPE_SZARRAY <a `CorElementType` value></span></span>|  
-|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="45a78-161">ELEMENT_TYPE_MVAR\<數字 ></span><span class="sxs-lookup"><span data-stu-id="45a78-161">ELEMENT_TYPE_MVAR \<number></span></span>|  
-|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="45a78-162">ELEMENT_TYPE_ <`mdTypeRef`或`mdTypeDef`中繼資料語彙基元 ></span><span class="sxs-lookup"><span data-stu-id="45a78-162">ELEMENT_TYPE_<a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
-|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="45a78-163">E_T_CMOD_OPT <`mdTypeRef`或`mdTypeDef`中繼資料語彙基元 ></span><span class="sxs-lookup"><span data-stu-id="45a78-163">E_T_CMOD_OPT <a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_PTR`|<span data-ttu-id="d5c4d-152">ELEMENT_TYPE_PTR <`CorElementType`值 ></span><span class="sxs-lookup"><span data-stu-id="d5c4d-152">ELEMENT_TYPE_PTR <a `CorElementType` value></span></span>|  
+|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="d5c4d-153">ELEMENT_TYPE_BYREF <`CorElementType`值 ></span><span class="sxs-lookup"><span data-stu-id="d5c4d-153">ELEMENT_TYPE_BYREF <a `CorElementType` value></span></span>|  
+|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="d5c4d-154">ELEMENT_TYPE_VALUETYPE <`mdTypeDef`中繼資料語彙基元 ></span><span class="sxs-lookup"><span data-stu-id="d5c4d-154">ELEMENT_TYPE_VALUETYPE <an `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="d5c4d-155">ELEMENT_TYPE_CLASS <`mdTypeDef`中繼資料語彙基元 ></span><span class="sxs-lookup"><span data-stu-id="d5c4d-155">ELEMENT_TYPE_CLASS <an `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_VAR`|<span data-ttu-id="d5c4d-156">ELEMENT_TYPE_VAR\<數字 ></span><span class="sxs-lookup"><span data-stu-id="d5c4d-156">ELEMENT_TYPE_VAR \<number></span></span>|  
+|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="d5c4d-157">ELEMENT_TYPE_ARRAY <`CorElementType`值 >\<陣序規範 > \<count1 > \<bound1 >...\<countN > \<boundN ></span><span class="sxs-lookup"><span data-stu-id="d5c4d-157">ELEMENT_TYPE_ARRAY <a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN></span></span>|  
+|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="d5c4d-158">ELEMENT_TYPE_GENERICINST <`mdTypeDef`中繼資料語彙基元 >\<引數計數 > \<arg1 >...\<argN ></span><span class="sxs-lookup"><span data-stu-id="d5c4d-158">ELEMENT_TYPE_GENERICINST <an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN></span></span>|  
+|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="d5c4d-159">Typ ELEMENT_TYPE_FNPTR\<函式，包括呼叫慣例的完整簽章 ></span><span class="sxs-lookup"><span data-stu-id="d5c4d-159">ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention></span></span>|  
+|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="d5c4d-160">ELEMENT_TYPE_SZARRAY <`CorElementType`值 ></span><span class="sxs-lookup"><span data-stu-id="d5c4d-160">ELEMENT_TYPE_SZARRAY <a `CorElementType` value></span></span>|  
+|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="d5c4d-161">ELEMENT_TYPE_MVAR\<數字 ></span><span class="sxs-lookup"><span data-stu-id="d5c4d-161">ELEMENT_TYPE_MVAR \<number></span></span>|  
+|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="d5c4d-162">ELEMENT_TYPE_ <`mdTypeRef`或`mdTypeDef`中繼資料語彙基元 ></span><span class="sxs-lookup"><span data-stu-id="d5c4d-162">ELEMENT_TYPE_<a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="d5c4d-163">E_T_CMOD_OPT <`mdTypeRef`或`mdTypeDef`中繼資料語彙基元 ></span><span class="sxs-lookup"><span data-stu-id="d5c4d-163">E_T_CMOD_OPT <a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="45a78-164">需求</span><span class="sxs-lookup"><span data-stu-id="45a78-164">Requirements</span></span>  
- <span data-ttu-id="45a78-165">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="45a78-165">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d5c4d-164">需求</span><span class="sxs-lookup"><span data-stu-id="d5c4d-164">Requirements</span></span>  
+ <span data-ttu-id="d5c4d-165">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d5c4d-165">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="45a78-166">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="45a78-166">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="d5c4d-166">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="d5c4d-166">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="45a78-167">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="45a78-167">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d5c4d-167">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5c4d-167">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="45a78-168">另請參閱</span><span class="sxs-lookup"><span data-stu-id="45a78-168">See Also</span></span>  
- [<span data-ttu-id="45a78-169">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="45a78-169">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="d5c4d-168">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d5c4d-168">See also</span></span>
+- [<span data-ttu-id="d5c4d-169">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="d5c4d-169">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
