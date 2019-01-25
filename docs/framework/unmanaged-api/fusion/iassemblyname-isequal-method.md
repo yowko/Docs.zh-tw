@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 043394541f5ed91b85a57f4cb13c61cca442bfec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70784106798748eeaabd8e6b6c3787e27b0ece74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746670"
 ---
-# <a name="iassemblynameisequal-method"></a><span data-ttu-id="b7a87-102">IAssemblyName::IsEqual 方法</span><span class="sxs-lookup"><span data-stu-id="b7a87-102">IAssemblyName::IsEqual Method</span></span>
-<span data-ttu-id="b7a87-103">決定指定[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)物件是否等於此`IAssemblyName`，根據指定的比較旗標。</span><span class="sxs-lookup"><span data-stu-id="b7a87-103">Determines whether a specified [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object is equal to this `IAssemblyName`, based on the specified comparison flags.</span></span>  
+# <a name="iassemblynameisequal-method"></a><span data-ttu-id="68d5a-102">IAssemblyName::IsEqual 方法</span><span class="sxs-lookup"><span data-stu-id="68d5a-102">IAssemblyName::IsEqual Method</span></span>
+<span data-ttu-id="68d5a-103">判斷指定[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)物件是否等於這個`IAssemblyName`，根據指定的比較旗標。</span><span class="sxs-lookup"><span data-stu-id="68d5a-103">Determines whether a specified [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object is equal to this `IAssemblyName`, based on the specified comparison flags.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b7a87-104">語法</span><span class="sxs-lookup"><span data-stu-id="b7a87-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68d5a-104">語法</span><span class="sxs-lookup"><span data-stu-id="68d5a-104">Syntax</span></span>  
   
 ```  
 HRESULT IsEqual (  
@@ -36,20 +36,20 @@ HRESULT IsEqual (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b7a87-105">參數</span><span class="sxs-lookup"><span data-stu-id="b7a87-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="68d5a-105">參數</span><span class="sxs-lookup"><span data-stu-id="68d5a-105">Parameters</span></span>  
  `pName`  
- <span data-ttu-id="b7a87-106">[in]`IAssemblyName`物件要與這個比較`IAssemblyName`。</span><span class="sxs-lookup"><span data-stu-id="b7a87-106">[in] The `IAssemblyName` object to which to compare this `IAssemblyName`.</span></span>  
+ <span data-ttu-id="68d5a-106">[in]`IAssemblyName`物件所要比較這`IAssemblyName`。</span><span class="sxs-lookup"><span data-stu-id="68d5a-106">[in] The `IAssemblyName` object to which to compare this `IAssemblyName`.</span></span>  
   
  `dwCmpFlags`  
- <span data-ttu-id="b7a87-107">[in]位元組合[ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md)影響比較的值。</span><span class="sxs-lookup"><span data-stu-id="b7a87-107">[in] A bitwise combination of [ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md) values that influence the comparison.</span></span>  
+ <span data-ttu-id="68d5a-107">[in]位元組合[ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md)影響比較的值。</span><span class="sxs-lookup"><span data-stu-id="68d5a-107">[in] A bitwise combination of [ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md) values that influence the comparison.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b7a87-108">需求</span><span class="sxs-lookup"><span data-stu-id="b7a87-108">Requirements</span></span>  
- <span data-ttu-id="b7a87-109">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b7a87-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="68d5a-108">需求</span><span class="sxs-lookup"><span data-stu-id="68d5a-108">Requirements</span></span>  
+ <span data-ttu-id="68d5a-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="68d5a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b7a87-110">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b7a87-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="68d5a-110">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="68d5a-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="b7a87-111">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b7a87-111">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="68d5a-111">**NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68d5a-111">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b7a87-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b7a87-112">See Also</span></span>  
- [<span data-ttu-id="b7a87-113">IAssemblyName 介面</span><span class="sxs-lookup"><span data-stu-id="b7a87-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [<span data-ttu-id="b7a87-114">融合列舉</span><span class="sxs-lookup"><span data-stu-id="b7a87-114">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="68d5a-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="68d5a-112">See also</span></span>
+- [<span data-ttu-id="68d5a-113">IAssemblyName 介面</span><span class="sxs-lookup"><span data-stu-id="68d5a-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="68d5a-114">融合列舉</span><span class="sxs-lookup"><span data-stu-id="68d5a-114">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

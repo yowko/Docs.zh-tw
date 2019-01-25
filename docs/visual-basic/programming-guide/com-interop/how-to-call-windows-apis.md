@@ -1,5 +1,5 @@
 ---
-title: 如何：呼叫 Windows API (Visual Basic)
+title: HOW TO：呼叫 Windows Api (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - API calls [Visual Basic]
@@ -7,38 +7,38 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 081f4242ef5883a8b25b8819ba3aff835b1e6ac7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5db6e299012982024f34d46906de1a3be9b20ff1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650680"
 ---
-# <a name="how-to-call-windows-apis-visual-basic"></a><span data-ttu-id="f0447-102">如何：呼叫 Windows API (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f0447-102">How to: Call Windows APIs (Visual Basic)</span></span>
-<span data-ttu-id="f0447-103">此範例定義和呼叫`MessageBox`在 user32.dll 中的函式，然後將字串傳遞給它。</span><span class="sxs-lookup"><span data-stu-id="f0447-103">This example defines and calls the `MessageBox` function in user32.dll and then passes a string to it.</span></span>  
+# <a name="how-to-call-windows-apis-visual-basic"></a><span data-ttu-id="0adb7-102">HOW TO：呼叫 Windows Api (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0adb7-102">How to: Call Windows APIs (Visual Basic)</span></span>
+<span data-ttu-id="0adb7-103">此範例定義和呼叫`MessageBox`在 user32.dll 中的函式，然後將字串傳遞給它。</span><span class="sxs-lookup"><span data-stu-id="0adb7-103">This example defines and calls the `MessageBox` function in user32.dll and then passes a string to it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f0447-104">範例</span><span class="sxs-lookup"><span data-stu-id="f0447-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="0adb7-104">範例</span><span class="sxs-lookup"><span data-stu-id="0adb7-104">Example</span></span>  
  [!code-vb[VbVbalrInterop#1](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-call-windows-apis_1.vb)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f0447-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="f0447-105">Compiling the Code</span></span>  
- <span data-ttu-id="f0447-106">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="f0447-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="0adb7-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="0adb7-105">Compiling the Code</span></span>  
+ <span data-ttu-id="0adb7-106">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="0adb7-106">This example requires:</span></span>  
   
--   <span data-ttu-id="f0447-107"><xref:System> 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="f0447-107">A reference to the <xref:System> namespace.</span></span>  
+-   <span data-ttu-id="0adb7-107"><xref:System> 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="0adb7-107">A reference to the <xref:System> namespace.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="f0447-108">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="f0447-108">Robust Programming</span></span>  
- <span data-ttu-id="f0447-109">以下條件可能會造成例外狀況：</span><span class="sxs-lookup"><span data-stu-id="f0447-109">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="0adb7-108">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="0adb7-108">Robust Programming</span></span>  
+ <span data-ttu-id="0adb7-109">以下條件可能會造成例外狀況：</span><span class="sxs-lookup"><span data-stu-id="0adb7-109">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="f0447-110">此方法不是靜態、 是抽象的或先前已定義。</span><span class="sxs-lookup"><span data-stu-id="f0447-110">The method is not static, is abstract, or has been previously defined.</span></span> <span data-ttu-id="f0447-111">父類型是介面或長度*名稱*或是*dllName*為零。</span><span class="sxs-lookup"><span data-stu-id="f0447-111">The parent type is an interface, or the length of *name* or *dllName* is zero.</span></span> <span data-ttu-id="f0447-112">(<xref:System.ArgumentException>)</span><span class="sxs-lookup"><span data-stu-id="f0447-112">(<xref:System.ArgumentException>)</span></span>  
+-   <span data-ttu-id="0adb7-110">此方法不是靜態、 是抽象的或先前已定義。</span><span class="sxs-lookup"><span data-stu-id="0adb7-110">The method is not static, is abstract, or has been previously defined.</span></span> <span data-ttu-id="0adb7-111">父類型是介面或長度*名稱*或是*dllName*為零。</span><span class="sxs-lookup"><span data-stu-id="0adb7-111">The parent type is an interface, or the length of *name* or *dllName* is zero.</span></span> <span data-ttu-id="0adb7-112">(<xref:System.ArgumentException>)</span><span class="sxs-lookup"><span data-stu-id="0adb7-112">(<xref:System.ArgumentException>)</span></span>  
   
--   <span data-ttu-id="f0447-113">*名稱*或是*dllName*是`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="f0447-113">The *name* or *dllName* is `Nothing`.</span></span> <span data-ttu-id="f0447-114">(<xref:System.ArgumentNullException>)</span><span class="sxs-lookup"><span data-stu-id="f0447-114">(<xref:System.ArgumentNullException>)</span></span>  
+-   <span data-ttu-id="0adb7-113">*名稱*或是*dllName*是`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="0adb7-113">The *name* or *dllName* is `Nothing`.</span></span> <span data-ttu-id="0adb7-114">(<xref:System.ArgumentNullException>)</span><span class="sxs-lookup"><span data-stu-id="0adb7-114">(<xref:System.ArgumentNullException>)</span></span>  
   
--   <span data-ttu-id="f0447-115">之前已使用 `CreateType` 建立包含類型。</span><span class="sxs-lookup"><span data-stu-id="f0447-115">The containing type has been previously created using `CreateType`.</span></span> <span data-ttu-id="f0447-116">(<xref:System.InvalidOperationException>)</span><span class="sxs-lookup"><span data-stu-id="f0447-116">(<xref:System.InvalidOperationException>)</span></span>  
+-   <span data-ttu-id="0adb7-115">之前已使用 `CreateType` 建立包含類型。</span><span class="sxs-lookup"><span data-stu-id="0adb7-115">The containing type has been previously created using `CreateType`.</span></span> <span data-ttu-id="0adb7-116">(<xref:System.InvalidOperationException>)</span><span class="sxs-lookup"><span data-stu-id="0adb7-116">(<xref:System.InvalidOperationException>)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0447-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f0447-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0adb7-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0adb7-117">See also</span></span>
 
-- [<span data-ttu-id="f0447-118">詳述平台叫用</span><span class="sxs-lookup"><span data-stu-id="f0447-118">A Closer Look at Platform Invoke</span></span>](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)  
-- [<span data-ttu-id="f0447-119">平台叫用範例</span><span class="sxs-lookup"><span data-stu-id="f0447-119">Platform Invoke Examples</span></span>](../../../framework/interop/platform-invoke-examples.md)  
-- [<span data-ttu-id="f0447-120">使用 Unmanaged DLL 函式</span><span class="sxs-lookup"><span data-stu-id="f0447-120">Consuming Unmanaged DLL Functions</span></span>](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
-- [<span data-ttu-id="f0447-121">定義方法，以使用反映發出</span><span class="sxs-lookup"><span data-stu-id="f0447-121">Defining a Method with Reflection Emit</span></span>](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  
-- [<span data-ttu-id="f0447-122">逐步解說：呼叫 Windows API</span><span class="sxs-lookup"><span data-stu-id="f0447-122">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
-- [<span data-ttu-id="f0447-123">COM Interop</span><span class="sxs-lookup"><span data-stu-id="f0447-123">COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/index.md)
+- [<span data-ttu-id="0adb7-118">詳述平台叫用</span><span class="sxs-lookup"><span data-stu-id="0adb7-118">A Closer Look at Platform Invoke</span></span>](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
+- [<span data-ttu-id="0adb7-119">平台叫用範例</span><span class="sxs-lookup"><span data-stu-id="0adb7-119">Platform Invoke Examples</span></span>](../../../framework/interop/platform-invoke-examples.md)
+- [<span data-ttu-id="0adb7-120">使用 Unmanaged DLL 函式</span><span class="sxs-lookup"><span data-stu-id="0adb7-120">Consuming Unmanaged DLL Functions</span></span>](../../../framework/interop/consuming-unmanaged-dll-functions.md)
+- [<span data-ttu-id="0adb7-121">定義方法，以使用反映發出</span><span class="sxs-lookup"><span data-stu-id="0adb7-121">Defining a Method with Reflection Emit</span></span>](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)
+- [<span data-ttu-id="0adb7-122">逐步解說：呼叫 Windows API</span><span class="sxs-lookup"><span data-stu-id="0adb7-122">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [<span data-ttu-id="0adb7-123">COM Interop</span><span class="sxs-lookup"><span data-stu-id="0adb7-123">COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/index.md)

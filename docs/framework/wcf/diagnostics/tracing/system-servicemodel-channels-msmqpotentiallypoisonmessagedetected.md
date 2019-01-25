@@ -1,32 +1,21 @@
 ---
 title: System.ServiceModel.Channels.MsmqPotentiallyPoisonMessageDetected
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a530df15-ebcd-45d6-bcdf-fc4483bcebec
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46a8b58f2b8fdec81deaac7494a226cddee24ad6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39d9f63814d4a34a5d054eb04b8e4a0ea3262a96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674855"
 ---
-# <a name="systemservicemodelchannelsmsmqpotentiallypoisonmessagedetected"></a><span data-ttu-id="bebf2-102">System.ServiceModel.Channels.MsmqPotentiallyPoisonMessageDetected</span><span class="sxs-lookup"><span data-stu-id="bebf2-102">System.ServiceModel.Channels.MsmqPotentiallyPoisonMessageDetected</span></span>
-<span data-ttu-id="bebf2-103">System.ServiceModel.Channels.MsmqPotentiallyPoisonMessageDetected</span><span class="sxs-lookup"><span data-stu-id="bebf2-103">System.ServiceModel.Channels.MsmqPotentiallyPoisonMessageDetected</span></span>  
+# <a name="systemservicemodelchannelsmsmqpotentiallypoisonmessagedetected"></a><span data-ttu-id="3011d-102">System.ServiceModel.Channels.MsmqPotentiallyPoisonMessageDetected</span><span class="sxs-lookup"><span data-stu-id="3011d-102">System.ServiceModel.Channels.MsmqPotentiallyPoisonMessageDetected</span></span>
+<span data-ttu-id="3011d-103">System.ServiceModel.Channels.MsmqPotentiallyPoisonMessageDetected</span><span class="sxs-lookup"><span data-stu-id="3011d-103">System.ServiceModel.Channels.MsmqPotentiallyPoisonMessageDetected</span></span>  
   
-## <a name="description"></a><span data-ttu-id="bebf2-104">描述</span><span class="sxs-lookup"><span data-stu-id="bebf2-104">Description</span></span>  
- <span data-ttu-id="bebf2-105">偵測到可能的有害訊息。</span><span class="sxs-lookup"><span data-stu-id="bebf2-105">A potentially poison message was detected.</span></span>  
+## <a name="description"></a><span data-ttu-id="3011d-104">描述</span><span class="sxs-lookup"><span data-stu-id="3011d-104">Description</span></span>  
+ <span data-ttu-id="3011d-105">偵測到可能的有害訊息。</span><span class="sxs-lookup"><span data-stu-id="3011d-105">A potentially poison message was detected.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bebf2-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="bebf2-106">See Also</span></span>  
- [<span data-ttu-id="bebf2-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="bebf2-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="bebf2-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="bebf2-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="bebf2-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="bebf2-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="3011d-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3011d-106">See also</span></span>
+- [<span data-ttu-id="3011d-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="3011d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="3011d-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="3011d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="3011d-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="3011d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c69be53a429e2f40741cc1e4c20fef3b7363654
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e5ed689ad7c456121f7687e7df09eca6c7ea617d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502555"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a><span data-ttu-id="0206d-102">ICorDebugSymbolProvider2::GetGenericDictionaryInfo 方法</span><span class="sxs-lookup"><span data-stu-id="0206d-102">ICorDebugSymbolProvider2::GetGenericDictionaryInfo Method</span></span>
-<span data-ttu-id="0206d-103">擷取泛型字典對應。</span><span class="sxs-lookup"><span data-stu-id="0206d-103">Retrieves a generic dictionary map.</span></span>  
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a><span data-ttu-id="b2df8-102">ICorDebugSymbolProvider2::GetGenericDictionaryInfo 方法</span><span class="sxs-lookup"><span data-stu-id="b2df8-102">ICorDebugSymbolProvider2::GetGenericDictionaryInfo Method</span></span>
+<span data-ttu-id="b2df8-103">擷取泛型字典對應。</span><span class="sxs-lookup"><span data-stu-id="b2df8-103">Retrieves a generic dictionary map.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0206d-104">語法</span><span class="sxs-lookup"><span data-stu-id="0206d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2df8-104">語法</span><span class="sxs-lookup"><span data-stu-id="b2df8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGenericDictionaryInfo(  
@@ -22,64 +22,64 @@ HRESULT GetGenericDictionaryInfo(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0206d-105">參數</span><span class="sxs-lookup"><span data-stu-id="0206d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b2df8-105">參數</span><span class="sxs-lookup"><span data-stu-id="b2df8-105">Parameters</span></span>  
  `ppMemoryBuffer`  
- <span data-ttu-id="0206d-106">[out]位址指標[ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)物件，其中包含泛型字典對應。</span><span class="sxs-lookup"><span data-stu-id="0206d-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object containing the generic dictionary map.</span></span> <span data-ttu-id="0206d-107">如需詳細資訊，請參閱＜備註＞一節。</span><span class="sxs-lookup"><span data-stu-id="0206d-107">See the Remarks section for more information.</span></span>  
+ <span data-ttu-id="b2df8-106">[out]位址指標[ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)物件，其中包含泛型字典對應。</span><span class="sxs-lookup"><span data-stu-id="b2df8-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object containing the generic dictionary map.</span></span> <span data-ttu-id="b2df8-107">如需詳細資訊，請參閱＜備註＞一節。</span><span class="sxs-lookup"><span data-stu-id="b2df8-107">See the Remarks section for more information.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0206d-108">備註</span><span class="sxs-lookup"><span data-stu-id="0206d-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b2df8-108">備註</span><span class="sxs-lookup"><span data-stu-id="b2df8-108">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0206d-109">本方法只適用於 .NET 原生。</span><span class="sxs-lookup"><span data-stu-id="0206d-109">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="b2df8-109">本方法只適用於 .NET 原生。</span><span class="sxs-lookup"><span data-stu-id="b2df8-109">This method is available with .NET Native only.</span></span>  
   
- <span data-ttu-id="0206d-110">對應是由兩個最上層區段所組成：</span><span class="sxs-lookup"><span data-stu-id="0206d-110">The map consists of two top-level sections:</span></span>  
+ <span data-ttu-id="b2df8-110">對應是由兩個最上層區段所組成：</span><span class="sxs-lookup"><span data-stu-id="b2df8-110">The map consists of two top-level sections:</span></span>  
   
--   <span data-ttu-id="0206d-111">A[目錄](#Directory)包含此對應中所有字典的相對虛擬位址 (RVA)。</span><span class="sxs-lookup"><span data-stu-id="0206d-111">A [directory](#Directory) containing the relative virtual addresses (RVA) of all dictionaries included in this map.</span></span>  
+-   <span data-ttu-id="b2df8-111">A [directory](#Directory)包含這個對應中所有字典的相對虛擬位址 (RVA)。</span><span class="sxs-lookup"><span data-stu-id="b2df8-111">A [directory](#Directory) containing the relative virtual addresses (RVA) of all dictionaries included in this map.</span></span>  
   
--   <span data-ttu-id="0206d-112">位元組對齊[堆積](#Heap)，其中包含物件具現化資訊。</span><span class="sxs-lookup"><span data-stu-id="0206d-112">A byte-aligned [heap](#Heap) that contains object instantiation information.</span></span> <span data-ttu-id="0206d-113">會在最後一個目錄項目之後立即啟動。</span><span class="sxs-lookup"><span data-stu-id="0206d-113">It starts immediately after the last directory entry.</span></span>  
+-   <span data-ttu-id="b2df8-112">位元組對齊[堆積](#Heap)，其中包含的物件具現化資訊。</span><span class="sxs-lookup"><span data-stu-id="b2df8-112">A byte-aligned [heap](#Heap) that contains object instantiation information.</span></span> <span data-ttu-id="b2df8-113">會在最後一個目錄項目之後立即啟動。</span><span class="sxs-lookup"><span data-stu-id="b2df8-113">It starts immediately after the last directory entry.</span></span>  
   
 <a name="Directory"></a>   
-## <a name="the-directory"></a><span data-ttu-id="0206d-114">目錄</span><span class="sxs-lookup"><span data-stu-id="0206d-114">The Directory</span></span>  
- <span data-ttu-id="0206d-115">目錄中的每個項目是指堆積中的位移，也就是相對於堆積開頭的位移。</span><span class="sxs-lookup"><span data-stu-id="0206d-115">Each entry in the directory refers to an offset inside the heap; that is, it is an offset that is relative to the start of the heap.</span></span> <span data-ttu-id="0206d-116">個別項目的值不一定是唯一的，可能會有多個目錄項目指向堆積中的同一個位移。</span><span class="sxs-lookup"><span data-stu-id="0206d-116">The value of individual entries is not necessarily unique; it is possible for multiple directory entries to point to the same offset in the heap.</span></span>  
+## <a name="the-directory"></a><span data-ttu-id="b2df8-114">目錄</span><span class="sxs-lookup"><span data-stu-id="b2df8-114">The Directory</span></span>  
+ <span data-ttu-id="b2df8-115">目錄中的每個項目是指堆積中的位移，也就是相對於堆積開頭的位移。</span><span class="sxs-lookup"><span data-stu-id="b2df8-115">Each entry in the directory refers to an offset inside the heap; that is, it is an offset that is relative to the start of the heap.</span></span> <span data-ttu-id="b2df8-116">個別項目的值不一定是唯一的，可能會有多個目錄項目指向堆積中的同一個位移。</span><span class="sxs-lookup"><span data-stu-id="b2df8-116">The value of individual entries is not necessarily unique; it is possible for multiple directory entries to point to the same offset in the heap.</span></span>  
   
- <span data-ttu-id="0206d-117">泛型字典對應的目錄部分具有下列結構：</span><span class="sxs-lookup"><span data-stu-id="0206d-117">The directory portion of the generic dictionary map has the following structure:</span></span>  
+ <span data-ttu-id="b2df8-117">泛型字典對應的目錄部分具有下列結構：</span><span class="sxs-lookup"><span data-stu-id="b2df8-117">The directory portion of the generic dictionary map has the following structure:</span></span>  
   
--   <span data-ttu-id="0206d-118">前 4 個位元組包含字典項目數 (也就是字典中的相對虛擬位址數目)。</span><span class="sxs-lookup"><span data-stu-id="0206d-118">The first 4 bytes contains the number of dictionary entries (that is, the number of relative virtual addresses in the dictionary).</span></span> <span data-ttu-id="0206d-119">我們將這個值為*N*。如果設定高位元，項目會依相對虛擬位址的遞增順序排序。</span><span class="sxs-lookup"><span data-stu-id="0206d-119">We will refer to this value as *N*. If the high bit is set, the entries are sorted by relative virtual address in ascending order.</span></span>  
+-   <span data-ttu-id="b2df8-118">前 4 個位元組包含字典項目數 (也就是字典中的相對虛擬位址數目)。</span><span class="sxs-lookup"><span data-stu-id="b2df8-118">The first 4 bytes contains the number of dictionary entries (that is, the number of relative virtual addresses in the dictionary).</span></span> <span data-ttu-id="b2df8-119">我們會將此值作為*N*。如果設定高位元，項目會依相對虛擬位址的遞增順序排序。</span><span class="sxs-lookup"><span data-stu-id="b2df8-119">We will refer to this value as *N*. If the high bit is set, the entries are sorted by relative virtual address in ascending order.</span></span>  
   
--   <span data-ttu-id="0206d-120">*N*遵循目錄項目。</span><span class="sxs-lookup"><span data-stu-id="0206d-120">The *N* directory entries follow.</span></span> <span data-ttu-id="0206d-121">每個項目是由兩個 4 位元組區段中的 8 個位元組所組成：</span><span class="sxs-lookup"><span data-stu-id="0206d-121">Each entry consists of 8 bytes, in two 4-byte segments:</span></span>  
+-   <span data-ttu-id="b2df8-120">*N*遵循目錄項目。</span><span class="sxs-lookup"><span data-stu-id="b2df8-120">The *N* directory entries follow.</span></span> <span data-ttu-id="b2df8-121">每個項目是由兩個 4 位元組區段中的 8 個位元組所組成：</span><span class="sxs-lookup"><span data-stu-id="b2df8-121">Each entry consists of 8 bytes, in two 4-byte segments:</span></span>  
   
-    -   <span data-ttu-id="0206d-122">位元組 0-3：RVA；字典的相對虛擬位址。</span><span class="sxs-lookup"><span data-stu-id="0206d-122">Bytes 0-3: RVA; the dictionary's relative virtual address.</span></span>  
+    -   <span data-ttu-id="b2df8-122">位元組 0-3:RVA;字典的相對虛擬位址。</span><span class="sxs-lookup"><span data-stu-id="b2df8-122">Bytes 0-3: RVA; the dictionary's relative virtual address.</span></span>  
   
-    -   <span data-ttu-id="0206d-123">位元組 4-7：位移；相對於堆積開頭的位移。</span><span class="sxs-lookup"><span data-stu-id="0206d-123">Bytes 4-7: Offset; an offset relative to the start of the heap.</span></span>  
+    -   <span data-ttu-id="b2df8-123">位元組 4-7:位移;相對於堆積開頭的位移。</span><span class="sxs-lookup"><span data-stu-id="b2df8-123">Bytes 4-7: Offset; an offset relative to the start of the heap.</span></span>  
   
 <a name="Heap"></a>   
-## <a name="the-heap"></a><span data-ttu-id="0206d-124">堆積</span><span class="sxs-lookup"><span data-stu-id="0206d-124">The Heap</span></span>  
- <span data-ttu-id="0206d-125">堆積的大小可透過資料流讀取器來計算，計算方式是將目錄大小減去資料流長度，再加 4。</span><span class="sxs-lookup"><span data-stu-id="0206d-125">The heap’s size can be computed by a stream reader by subtracting the length of the stream from the directory size + 4.</span></span> <span data-ttu-id="0206d-126">換句話說：</span><span class="sxs-lookup"><span data-stu-id="0206d-126">In other words:</span></span>  
+## <a name="the-heap"></a><span data-ttu-id="b2df8-124">堆積</span><span class="sxs-lookup"><span data-stu-id="b2df8-124">The Heap</span></span>  
+ <span data-ttu-id="b2df8-125">堆積的大小可透過資料流讀取器來計算，計算方式是將目錄大小減去資料流長度，再加 4。</span><span class="sxs-lookup"><span data-stu-id="b2df8-125">The heap’s size can be computed by a stream reader by subtracting the length of the stream from the directory size + 4.</span></span> <span data-ttu-id="b2df8-126">換句話說：</span><span class="sxs-lookup"><span data-stu-id="b2df8-126">In other words:</span></span>  
   
 ```  
 Heap Size = Stream.Length – (Directory Size + 4)  
 ```  
   
- <span data-ttu-id="0206d-127">其中目錄大小為 `N * 8`。</span><span class="sxs-lookup"><span data-stu-id="0206d-127">where the directory size is `N * 8`.</span></span>  
+ <span data-ttu-id="b2df8-127">其中目錄大小為 `N * 8`。</span><span class="sxs-lookup"><span data-stu-id="b2df8-127">where the directory size is `N * 8`.</span></span>  
   
- <span data-ttu-id="0206d-128">堆積上每個具現化資訊項目的格式為：</span><span class="sxs-lookup"><span data-stu-id="0206d-128">The format for each instantiation information item on the heap is:</span></span>  
+ <span data-ttu-id="b2df8-128">堆積上每個具現化資訊項目的格式為：</span><span class="sxs-lookup"><span data-stu-id="b2df8-128">The format for each instantiation information item on the heap is:</span></span>  
   
--   <span data-ttu-id="0206d-129">這個具現化資訊項目的長度 (以位元組為單位)，採用壓縮的 ECMA 中繼資料格式。</span><span class="sxs-lookup"><span data-stu-id="0206d-129">The length of this instantiation information item in bytes in compressed ECMA metadata format.</span></span> <span data-ttu-id="0206d-130">該值不包括這個長度資訊。</span><span class="sxs-lookup"><span data-stu-id="0206d-130">The value excludes this length information.</span></span>  
+-   <span data-ttu-id="b2df8-129">這個具現化資訊項目的長度 (以位元組為單位)，採用壓縮的 ECMA 中繼資料格式。</span><span class="sxs-lookup"><span data-stu-id="b2df8-129">The length of this instantiation information item in bytes in compressed ECMA metadata format.</span></span> <span data-ttu-id="b2df8-130">該值不包括這個長度資訊。</span><span class="sxs-lookup"><span data-stu-id="b2df8-130">The value excludes this length information.</span></span>  
   
--   <span data-ttu-id="0206d-131">泛型具現化類型數目或*T*，採用壓縮的 ECMA 中繼資料格式。</span><span class="sxs-lookup"><span data-stu-id="0206d-131">The number of generic instantiation types, or *T*, in compressed ECMA metadata format.</span></span>  
+-   <span data-ttu-id="b2df8-131">數種泛型具現化類型，或*T*，採用壓縮的 ECMA 中繼資料格式。</span><span class="sxs-lookup"><span data-stu-id="b2df8-131">The number of generic instantiation types, or *T*, in compressed ECMA metadata format.</span></span>  
   
--   <span data-ttu-id="0206d-132">*T*類型，分別表示以 ECMA 類型簽章格式。</span><span class="sxs-lookup"><span data-stu-id="0206d-132">*T* types, each represented in ECMA type signature format.</span></span>  
+-   <span data-ttu-id="b2df8-132">*T*類型，分別表示以 ECMA 類型簽章格式。</span><span class="sxs-lookup"><span data-stu-id="b2df8-132">*T* types, each represented in ECMA type signature format.</span></span>  
   
- <span data-ttu-id="0206d-133">包含每個堆積項目的長度可簡化目錄區段的排序，而不影響堆積。</span><span class="sxs-lookup"><span data-stu-id="0206d-133">The inclusion of the length for each heap element enables simple sorting of the directory section without affecting the heap.</span></span>  
+ <span data-ttu-id="b2df8-133">包含每個堆積項目的長度可簡化目錄區段的排序，而不影響堆積。</span><span class="sxs-lookup"><span data-stu-id="b2df8-133">The inclusion of the length for each heap element enables simple sorting of the directory section without affecting the heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0206d-134">需求</span><span class="sxs-lookup"><span data-stu-id="0206d-134">Requirements</span></span>  
- <span data-ttu-id="0206d-135">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0206d-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2df8-134">需求</span><span class="sxs-lookup"><span data-stu-id="b2df8-134">Requirements</span></span>  
+ <span data-ttu-id="b2df8-135">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b2df8-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0206d-136">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0206d-136">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b2df8-136">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b2df8-136">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0206d-137">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0206d-137">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b2df8-137">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2df8-137">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0206d-138">**.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0206d-138">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="b2df8-138">**.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2df8-138">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0206d-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0206d-139">See Also</span></span>  
- [<span data-ttu-id="0206d-140">ICorDebugSymbolProvider2 介面</span><span class="sxs-lookup"><span data-stu-id="0206d-140">ICorDebugSymbolProvider2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)  
- [<span data-ttu-id="0206d-141">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="0206d-141">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="b2df8-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b2df8-139">See also</span></span>
+- [<span data-ttu-id="b2df8-140">ICorDebugSymbolProvider2 介面</span><span class="sxs-lookup"><span data-stu-id="b2df8-140">ICorDebugSymbolProvider2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
+- [<span data-ttu-id="b2df8-141">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="b2df8-141">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

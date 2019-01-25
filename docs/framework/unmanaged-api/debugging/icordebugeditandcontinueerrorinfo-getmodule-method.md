@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ca6bf185297cbafb4450271ddcd6093d7e62515
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b8afa78b324e68b345ee36513f6dda9ba042f29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415372"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629185"
 ---
-# <a name="icordebugeditandcontinueerrorinfogetmodule-method"></a><span data-ttu-id="e611f-102">ICorDebugEditAndContinueErrorInfo::GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="e611f-102">ICorDebugEditAndContinueErrorInfo::GetModule Method</span></span>
-<span data-ttu-id="e611f-103">`GetModule` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="e611f-103">`GetModule` is obsolete.</span></span> <span data-ttu-id="e611f-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="e611f-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogetmodule-method"></a><span data-ttu-id="f6bbb-102">ICorDebugEditAndContinueErrorInfo::GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="f6bbb-102">ICorDebugEditAndContinueErrorInfo::GetModule Method</span></span>
+<span data-ttu-id="f6bbb-103">`GetModule` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="f6bbb-103">`GetModule` is obsolete.</span></span> <span data-ttu-id="f6bbb-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="f6bbb-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e611f-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e611f-105">See Also</span></span>  
- [<span data-ttu-id="e611f-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="e611f-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f6bbb-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f6bbb-105">See also</span></span>
+- [<span data-ttu-id="f6bbb-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="f6bbb-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

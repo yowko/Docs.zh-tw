@@ -1,5 +1,5 @@
 ---
-title: '&#39;做為任何&#39;中不支援&#39;Declare&#39;陳述式'
+title: '&#39;任何&#39;中不支援&#39;Declare&#39;陳述式'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30828
@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - BC30828
 ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
-ms.openlocfilehash: 34beaeb7178645d5a167d1b7b969bb3e4f500e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 560ddc8674718f98f3e1a2f6d4facdb198f5e506
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709854"
 ---
-# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a><span data-ttu-id="caff5-102">&#39;做為任何&#39;中不支援&#39;Declare&#39;陳述式</span><span class="sxs-lookup"><span data-stu-id="caff5-102">&#39;As Any&#39; is not supported in &#39;Declare&#39; statements</span></span>
-<span data-ttu-id="caff5-103">`Any`資料類型用於`Declare`允許無法包含任何資料類型的引數使用的 Visual Basic 6.0 及舊版中的陳述式。</span><span class="sxs-lookup"><span data-stu-id="caff5-103">The `Any` data type was used with `Declare` statements in Visual Basic 6.0 and earlier versions to permit the use of arguments that could contain any type of data.</span></span> <span data-ttu-id="caff5-104">多載，不過，Visual Basic 支援，因此讓`Any`資料型別已經過時。</span><span class="sxs-lookup"><span data-stu-id="caff5-104">Visual Basic supports overloading, however, and so makes the `Any` data type obsolete.</span></span>  
+# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a><span data-ttu-id="bff0a-102">&#39;任何&#39;中不支援&#39;Declare&#39;陳述式</span><span class="sxs-lookup"><span data-stu-id="bff0a-102">&#39;As Any&#39; is not supported in &#39;Declare&#39; statements</span></span>
+<span data-ttu-id="bff0a-103">`Any`資料類型用於`Declare`允許無法包含任何資料類型的引數使用的 Visual Basic 6.0 和更早版本中的陳述式。</span><span class="sxs-lookup"><span data-stu-id="bff0a-103">The `Any` data type was used with `Declare` statements in Visual Basic 6.0 and earlier versions to permit the use of arguments that could contain any type of data.</span></span> <span data-ttu-id="bff0a-104">Visual Basic 支援多載，不過，並因此會`Any`資料型別已經過時。</span><span class="sxs-lookup"><span data-stu-id="bff0a-104">Visual Basic supports overloading, however, and so makes the `Any` data type obsolete.</span></span>  
   
- <span data-ttu-id="caff5-105">**錯誤 ID:** BC30828</span><span class="sxs-lookup"><span data-stu-id="caff5-105">**Error ID:** BC30828</span></span>  
+ <span data-ttu-id="bff0a-105">**錯誤 ID:** BC30828</span><span class="sxs-lookup"><span data-stu-id="bff0a-105">**Error ID:** BC30828</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="caff5-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="caff5-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="bff0a-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="bff0a-106">To correct this error</span></span>  
   
-1.  <span data-ttu-id="caff5-107">宣告您想要使用; 的特定型別參數如需範例。</span><span class="sxs-lookup"><span data-stu-id="caff5-107">Declare parameters of the specific type you want to use; for example.</span></span>  
+1.  <span data-ttu-id="bff0a-107">宣告您想要使用的特定型別參數比方說。</span><span class="sxs-lookup"><span data-stu-id="bff0a-107">Declare parameters of the specific type you want to use; for example.</span></span>  
   
      [!code-vb[VbVbalrStatements#95](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_1.vb)]  
   
-2.  <span data-ttu-id="caff5-108">使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>屬性來指定`As Any`時`Void*`必須由被呼叫程序。</span><span class="sxs-lookup"><span data-stu-id="caff5-108">Use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to specify `As Any` when `Void*` is expected by the procedure being called.</span></span>  
+2.  <span data-ttu-id="bff0a-108">使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>屬性來指定`As Any`當`Void*`預期的被呼叫程序。</span><span class="sxs-lookup"><span data-stu-id="bff0a-108">Use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to specify `As Any` when `Void*` is expected by the procedure being called.</span></span>  
   
      [!code-vb[VbVbalrStatements#96](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_2.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="caff5-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="caff5-109">See Also</span></span>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="caff5-110">逐步解說：呼叫 Windows API</span><span class="sxs-lookup"><span data-stu-id="caff5-110">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
- [<span data-ttu-id="caff5-111">Declare 陳述式</span><span class="sxs-lookup"><span data-stu-id="caff5-111">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [<span data-ttu-id="caff5-112">在 Managed 程式碼中建立原型</span><span class="sxs-lookup"><span data-stu-id="caff5-112">Creating Prototypes in Managed Code</span></span>](../../../framework/interop/creating-prototypes-in-managed-code.md)
+## <a name="see-also"></a><span data-ttu-id="bff0a-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bff0a-109">See also</span></span>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [<span data-ttu-id="bff0a-110">逐步解說：呼叫 Windows API</span><span class="sxs-lookup"><span data-stu-id="bff0a-110">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [<span data-ttu-id="bff0a-111">Declare 陳述式</span><span class="sxs-lookup"><span data-stu-id="bff0a-111">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="bff0a-112">在 Managed 程式碼中建立原型</span><span class="sxs-lookup"><span data-stu-id="bff0a-112">Creating Prototypes in Managed Code</span></span>](../../../framework/interop/creating-prototypes-in-managed-code.md)

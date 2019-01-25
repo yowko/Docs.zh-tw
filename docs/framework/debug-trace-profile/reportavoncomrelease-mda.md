@@ -13,32 +13,32 @@ helpviewer_keywords:
 ms.assetid: a2b86b63-08b2-4943-b344-3c2cf46ccd31
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b03b4f3f8c5b6e3e86903a240259ddf2fbf5c71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c70c70f251fca9312019d4c63304e8354bf87fd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729154"
 ---
-# <a name="reportavoncomrelease-mda"></a><span data-ttu-id="f550a-102">reportAvOnComRelease MDA</span><span class="sxs-lookup"><span data-stu-id="f550a-102">reportAvOnComRelease MDA</span></span>
-<span data-ttu-id="f550a-103">如果在執行 COM Interop 並使用與原始 COM 呼叫組合的 `reportAvOnComRelease` 或 <xref:System.Runtime.InteropServices.Marshal.Release%2A> 方法時，因為使用者參考計數錯誤而擲回例外狀況，就會啟用 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> Managed 偵錯助理 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="f550a-103">The `reportAvOnComRelease` managed debugging assistant (MDA) is activated when exceptions are thrown due to user reference counting errors while performing COM interop and using the <xref:System.Runtime.InteropServices.Marshal.Release%2A> or <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> method combined with raw COM calls.</span></span>  
+# <a name="reportavoncomrelease-mda"></a><span data-ttu-id="f1a72-102">reportAvOnComRelease MDA</span><span class="sxs-lookup"><span data-stu-id="f1a72-102">reportAvOnComRelease MDA</span></span>
+<span data-ttu-id="f1a72-103">如果在執行 COM Interop 並使用與原始 COM 呼叫組合的 `reportAvOnComRelease` 或 <xref:System.Runtime.InteropServices.Marshal.Release%2A> 方法時，因為使用者參考計數錯誤而擲回例外狀況，就會啟用 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> Managed 偵錯助理 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="f1a72-103">The `reportAvOnComRelease` managed debugging assistant (MDA) is activated when exceptions are thrown due to user reference counting errors while performing COM interop and using the <xref:System.Runtime.InteropServices.Marshal.Release%2A> or <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> method combined with raw COM calls.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="f550a-104">徵兆 </span><span class="sxs-lookup"><span data-stu-id="f550a-104">Symptoms</span></span>  
- <span data-ttu-id="f550a-105">存取違規與記憶體損毀。</span><span class="sxs-lookup"><span data-stu-id="f550a-105">Access violations and memory corruption.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="f1a72-104">徵兆 </span><span class="sxs-lookup"><span data-stu-id="f1a72-104">Symptoms</span></span>  
+ <span data-ttu-id="f1a72-105">存取違規與記憶體損毀。</span><span class="sxs-lookup"><span data-stu-id="f1a72-105">Access violations and memory corruption.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="f550a-106">原因</span><span class="sxs-lookup"><span data-stu-id="f550a-106">Cause</span></span>  
- <span data-ttu-id="f550a-107">有時候，在執行 COM Interop 並使用與原始 COM 呼叫組合的 <xref:System.Runtime.InteropServices.Marshal.Release%2A> 或 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 方法時，會因為使用者參考計數錯誤而擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="f550a-107">Occasionally, an exception is thrown due to user reference counting errors while performing COM interop and using the <xref:System.Runtime.InteropServices.Marshal.Release%2A> or <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> method combined with raw COM calls.</span></span> <span data-ttu-id="f550a-108">通常會捨棄此例外狀況，因為如果不這麼做，就會導致 CLR 發生存取違規，而降低效能。</span><span class="sxs-lookup"><span data-stu-id="f550a-108">Normally, this exception is discarded because not doing so would cause an access violation in the CLR, bringing it down.</span></span> <span data-ttu-id="f550a-109">如果啟用此助理，就會偵測並提報這類例外狀況，而不是直接捨棄。</span><span class="sxs-lookup"><span data-stu-id="f550a-109">When this assistant is enabled, such exceptions can be detected and reported instead of being simply discarded.</span></span>  
+## <a name="cause"></a><span data-ttu-id="f1a72-106">原因</span><span class="sxs-lookup"><span data-stu-id="f1a72-106">Cause</span></span>  
+ <span data-ttu-id="f1a72-107">有時候，在執行 COM Interop 並使用與原始 COM 呼叫組合的 <xref:System.Runtime.InteropServices.Marshal.Release%2A> 或 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 方法時，會因為使用者參考計數錯誤而擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="f1a72-107">Occasionally, an exception is thrown due to user reference counting errors while performing COM interop and using the <xref:System.Runtime.InteropServices.Marshal.Release%2A> or <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> method combined with raw COM calls.</span></span> <span data-ttu-id="f1a72-108">通常會捨棄此例外狀況，因為如果不這麼做，就會導致 CLR 發生存取違規，而降低效能。</span><span class="sxs-lookup"><span data-stu-id="f1a72-108">Normally, this exception is discarded because not doing so would cause an access violation in the CLR, bringing it down.</span></span> <span data-ttu-id="f1a72-109">如果啟用此助理，就會偵測並提報這類例外狀況，而不是直接捨棄。</span><span class="sxs-lookup"><span data-stu-id="f1a72-109">When this assistant is enabled, such exceptions can be detected and reported instead of being simply discarded.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="f550a-110">解決方式</span><span class="sxs-lookup"><span data-stu-id="f550a-110">Resolution</span></span>  
- <span data-ttu-id="f550a-111">檢查您的參考計數程式碼，並搜尋錯誤，另外也要檢查物件的原生用戶端，查看是否有參考計數錯誤。</span><span class="sxs-lookup"><span data-stu-id="f550a-111">Examine your reference counting code and search for errors as well as examining the native clients of your object for reference counting errors.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="f1a72-110">解決方式</span><span class="sxs-lookup"><span data-stu-id="f1a72-110">Resolution</span></span>  
+ <span data-ttu-id="f1a72-111">檢查您的參考計數程式碼，並搜尋錯誤，另外也要檢查物件的原生用戶端，查看是否有參考計數錯誤。</span><span class="sxs-lookup"><span data-stu-id="f1a72-111">Examine your reference counting code and search for errors as well as examining the native clients of your object for reference counting errors.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="f550a-112">對執行階段的影響</span><span class="sxs-lookup"><span data-stu-id="f550a-112">Effect on the Runtime</span></span>  
- <span data-ttu-id="f550a-113">有兩種模式可用。</span><span class="sxs-lookup"><span data-stu-id="f550a-113">Two modes are available.</span></span> <span data-ttu-id="f550a-114">如果 `allowAv` 屬性為 `true`，該助理會防止執行階段捨棄存取違規。</span><span class="sxs-lookup"><span data-stu-id="f550a-114">If the `allowAv` attribute is `true`, the assistant prevents the runtime from discarding the access violation.</span></span> <span data-ttu-id="f550a-115">如果 `allowAv` 為 `false` (預設值)，則執行階段會捨棄存取違規，但是會向使用者提報警告訊息，指出已擲回並捨棄例外狀況。</span><span class="sxs-lookup"><span data-stu-id="f550a-115">If `allowAv` is `false`, which is the default, the runtime discards the access violation, but a warning message is reported to the user to indicate that an exception was thrown and discarded.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="f1a72-112">對執行階段的影響</span><span class="sxs-lookup"><span data-stu-id="f1a72-112">Effect on the Runtime</span></span>  
+ <span data-ttu-id="f1a72-113">有兩種模式可用。</span><span class="sxs-lookup"><span data-stu-id="f1a72-113">Two modes are available.</span></span> <span data-ttu-id="f1a72-114">如果 `allowAv` 屬性為 `true`，該助理會防止執行階段捨棄存取違規。</span><span class="sxs-lookup"><span data-stu-id="f1a72-114">If the `allowAv` attribute is `true`, the assistant prevents the runtime from discarding the access violation.</span></span> <span data-ttu-id="f1a72-115">如果 `allowAv` 為 `false` (預設值)，則執行階段會捨棄存取違規，但是會向使用者提報警告訊息，指出已擲回並捨棄例外狀況。</span><span class="sxs-lookup"><span data-stu-id="f1a72-115">If `allowAv` is `false`, which is the default, the runtime discards the access violation, but a warning message is reported to the user to indicate that an exception was thrown and discarded.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="f550a-116">輸出</span><span class="sxs-lookup"><span data-stu-id="f550a-116">Output</span></span>  
- <span data-ttu-id="f550a-117">如果可能，輸出會包含 COM 介面指標的原始 vtable。</span><span class="sxs-lookup"><span data-stu-id="f550a-117">If possible, the output contains the COM interface pointer's original vtable.</span></span> <span data-ttu-id="f550a-118">否則，就會顯示告知性訊息。</span><span class="sxs-lookup"><span data-stu-id="f550a-118">Otherwise, an informational message is displayed.</span></span>  
+## <a name="output"></a><span data-ttu-id="f1a72-116">輸出</span><span class="sxs-lookup"><span data-stu-id="f1a72-116">Output</span></span>  
+ <span data-ttu-id="f1a72-117">如果可能，輸出會包含 COM 介面指標的原始 vtable。</span><span class="sxs-lookup"><span data-stu-id="f1a72-117">If possible, the output contains the COM interface pointer's original vtable.</span></span> <span data-ttu-id="f1a72-118">否則，就會顯示告知性訊息。</span><span class="sxs-lookup"><span data-stu-id="f1a72-118">Otherwise, an informational message is displayed.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="f550a-119">組態</span><span class="sxs-lookup"><span data-stu-id="f550a-119">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="f1a72-119">組態</span><span class="sxs-lookup"><span data-stu-id="f1a72-119">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -48,7 +48,7 @@ ms.locfileid: "33386362"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f550a-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f550a-120">See Also</span></span>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="f550a-121">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="f550a-121">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="f550a-122">Interop 封送處理</span><span class="sxs-lookup"><span data-stu-id="f550a-122">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a><span data-ttu-id="f1a72-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1a72-120">See also</span></span>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [<span data-ttu-id="f1a72-121">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="f1a72-121">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="f1a72-122">Interop 封送處理</span><span class="sxs-lookup"><span data-stu-id="f1a72-122">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

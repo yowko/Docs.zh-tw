@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cdb1570b682088e92ff7c7a78d84259d02d8512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9c930b6fe81fdb7013e95a20d33ff0ba0148f88f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658808"
 ---
-# <a name="corcheckduplicatesfor-enumeration"></a><span data-ttu-id="a8a20-102">CorCheckDuplicatesFor 列舉</span><span class="sxs-lookup"><span data-stu-id="a8a20-102">CorCheckDuplicatesFor Enumeration</span></span>
-<span data-ttu-id="a8a20-103">指定將會檢查有重複的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-103">Specifies the metadata tokens that will be checked for duplicates.</span></span>  
+# <a name="corcheckduplicatesfor-enumeration"></a><span data-ttu-id="65cbc-102">CorCheckDuplicatesFor 列舉</span><span class="sxs-lookup"><span data-stu-id="65cbc-102">CorCheckDuplicatesFor Enumeration</span></span>
+<span data-ttu-id="65cbc-103">指定要檢查重複項目中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-103">Specifies the metadata tokens that will be checked for duplicates.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a8a20-104">語法</span><span class="sxs-lookup"><span data-stu-id="a8a20-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="65cbc-104">語法</span><span class="sxs-lookup"><span data-stu-id="65cbc-104">Syntax</span></span>  
   
 ```  
 typedef enum CorCheckDuplicatesFor {  
@@ -66,44 +66,44 @@ typedef enum CorCheckDuplicatesFor {
 } CorCheckDuplicatesFor;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a8a20-105">成員</span><span class="sxs-lookup"><span data-stu-id="a8a20-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="65cbc-105">成員</span><span class="sxs-lookup"><span data-stu-id="65cbc-105">Members</span></span>  
   
-|<span data-ttu-id="a8a20-106">成員</span><span class="sxs-lookup"><span data-stu-id="a8a20-106">Member</span></span>|<span data-ttu-id="a8a20-107">描述</span><span class="sxs-lookup"><span data-stu-id="a8a20-107">Description</span></span>|  
+|<span data-ttu-id="65cbc-106">成員</span><span class="sxs-lookup"><span data-stu-id="65cbc-106">Member</span></span>|<span data-ttu-id="65cbc-107">描述</span><span class="sxs-lookup"><span data-stu-id="65cbc-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDDupAll`|<span data-ttu-id="a8a20-108">請檢查重複項目的所有中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-108">Check all metadata tokens for duplicates.</span></span>|  
-|`MDDupENC`|<span data-ttu-id="a8a20-109">未使用。</span><span class="sxs-lookup"><span data-stu-id="a8a20-109">Not used.</span></span>|  
-|`MDNoDupChecks`|<span data-ttu-id="a8a20-110">不會檢查重複項目中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-110">Do not check metadata tokens for duplicates.</span></span>|  
-|`MDDupTypeDef`|<span data-ttu-id="a8a20-111">檢查是否有重複的`mdTypeDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-111">Check for duplicates of `mdTypeDef` tokens.</span></span>|  
-|`MDDupInterfaceImpl`|<span data-ttu-id="a8a20-112">檢查是否有重複的`mdInterfaceImpl`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-112">Check for duplicates of `mdInterfaceImpl` tokens.</span></span>|  
-|`MDDupMethodDef`|<span data-ttu-id="a8a20-113">檢查是否有重複的`mdMethodDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-113">Check for duplicates of `mdMethodDef` tokens.</span></span>|  
-|`MDDupTypeRef`|<span data-ttu-id="a8a20-114">檢查是否有重複的`mdTypeRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-114">Check for duplicates of `mdTypeRef` tokens.</span></span>|  
-|`MDDupMemberRef`|<span data-ttu-id="a8a20-115">檢查是否有重複的`mdMemberRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-115">Check for duplicates of `mdMemberRef` tokens.</span></span>|  
-|`MDDupCustomAttribute`|<span data-ttu-id="a8a20-116">檢查是否有重複的`mdCustomAttribute`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-116">Check for duplicates of `mdCustomAttribute` tokens.</span></span>|  
-|`MDDupParamDef`|<span data-ttu-id="a8a20-117">檢查是否有重複的`mdParamDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-117">Check for duplicates of `mdParamDef` tokens.</span></span>|  
-|`MDDupPermission`|<span data-ttu-id="a8a20-118">檢查是否有重複的`mdPermission`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-118">Check for duplicates of `mdPermission` tokens.</span></span>|  
-|`MDDupProperty`|<span data-ttu-id="a8a20-119">檢查是否有重複的`mdProperty`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-119">Check for duplicates of `mdProperty` tokens.</span></span>|  
-|`MDDupEvent`|<span data-ttu-id="a8a20-120">檢查是否有重複的`mdEvent`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-120">Check for duplicates of `mdEvent` tokens.</span></span>|  
-|`MDDupFieldDef`|<span data-ttu-id="a8a20-121">檢查是否有重複的`mdFieldDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-121">Check for duplicates of `mdFieldDef` tokens.</span></span>|  
-|`MDDupSignature`|<span data-ttu-id="a8a20-122">檢查是否有重複的`mdSignature`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-122">Check for duplicates of `mdSignature` tokens.</span></span>|  
-|`MDDupModuleRef`|<span data-ttu-id="a8a20-123">檢查是否有重複的`mdModuleRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-123">Check for duplicates of `mdModuleRef` tokens.</span></span>|  
-|`MDDupTypeSpec`|<span data-ttu-id="a8a20-124">檢查是否有重複的`mdTypeSpec`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-124">Check for duplicates of `mdTypeSpec` tokens.</span></span>|  
-|`MDDupImplMap`|<span data-ttu-id="a8a20-125">檢查是否有重複的`mdImplMap`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-125">Check for duplicates of `mdImplMap` tokens.</span></span>|  
-|`MDDupAssemblyRef`|<span data-ttu-id="a8a20-126">檢查是否有重複的`mdAssemblyRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-126">Check for duplicates of `mdAssemblyRef` tokens.</span></span>|  
-|`MDDupFile`|<span data-ttu-id="a8a20-127">檢查是否有重複的`mdFile`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-127">Check for duplicates of `mdFile` tokens.</span></span>|  
-|`MDDupExportedType`|<span data-ttu-id="a8a20-128">檢查是否有重複的`mdExportedType`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-128">Check for duplicates of `mdExportedType` tokens.</span></span>|  
-|`MDDupManifestResource`|<span data-ttu-id="a8a20-129">檢查是否有重複的`mdManifestResource`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-129">Check for duplicates of `mdManifestResource` tokens.</span></span>|  
-|`MDDupGenericParam`|<span data-ttu-id="a8a20-130">檢查是否有重複的`mdGenericParam`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-130">Check for duplicates of `mdGenericParam` tokens.</span></span>|  
-|`MDDupMethodSpec`|<span data-ttu-id="a8a20-131">檢查是否有重複的`mdMethodSpec`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-131">Check for duplicates of `mdMethodSpec` tokens.</span></span>|  
-|`MDDupGenericParamConstraint`|<span data-ttu-id="a8a20-132">檢查是否有重複的`mdGenericParamConstraint`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-132">Check for duplicates of `mdGenericParamConstraint` tokens.</span></span>|  
-|`MDDupAssembly`|<span data-ttu-id="a8a20-133">檢查是否有重複的`mdAssembly`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-133">Check for duplicates of `mdAssembly` tokens.</span></span>|  
-|`MDDupDefault`|<span data-ttu-id="a8a20-134">檢查是否有重複的`mdMemberRef`， `mdTypeRef`， `mdSignature`， `mdTypeSpec`，和`mdMethodSpec`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a8a20-134">Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.</span></span>|  
+|`MDDupAll`|<span data-ttu-id="65cbc-108">請檢查重複項目的所有中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-108">Check all metadata tokens for duplicates.</span></span>|  
+|`MDDupENC`|<span data-ttu-id="65cbc-109">未使用。</span><span class="sxs-lookup"><span data-stu-id="65cbc-109">Not used.</span></span>|  
+|`MDNoDupChecks`|<span data-ttu-id="65cbc-110">不會檢查重複項目中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-110">Do not check metadata tokens for duplicates.</span></span>|  
+|`MDDupTypeDef`|<span data-ttu-id="65cbc-111">檢查是否有重複的`mdTypeDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-111">Check for duplicates of `mdTypeDef` tokens.</span></span>|  
+|`MDDupInterfaceImpl`|<span data-ttu-id="65cbc-112">檢查是否有重複的`mdInterfaceImpl`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-112">Check for duplicates of `mdInterfaceImpl` tokens.</span></span>|  
+|`MDDupMethodDef`|<span data-ttu-id="65cbc-113">檢查是否有重複的`mdMethodDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-113">Check for duplicates of `mdMethodDef` tokens.</span></span>|  
+|`MDDupTypeRef`|<span data-ttu-id="65cbc-114">檢查是否有重複的`mdTypeRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-114">Check for duplicates of `mdTypeRef` tokens.</span></span>|  
+|`MDDupMemberRef`|<span data-ttu-id="65cbc-115">檢查是否有重複的`mdMemberRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-115">Check for duplicates of `mdMemberRef` tokens.</span></span>|  
+|`MDDupCustomAttribute`|<span data-ttu-id="65cbc-116">檢查是否有重複的`mdCustomAttribute`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-116">Check for duplicates of `mdCustomAttribute` tokens.</span></span>|  
+|`MDDupParamDef`|<span data-ttu-id="65cbc-117">檢查是否有重複的`mdParamDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-117">Check for duplicates of `mdParamDef` tokens.</span></span>|  
+|`MDDupPermission`|<span data-ttu-id="65cbc-118">檢查是否有重複的`mdPermission`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-118">Check for duplicates of `mdPermission` tokens.</span></span>|  
+|`MDDupProperty`|<span data-ttu-id="65cbc-119">檢查是否有重複的`mdProperty`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-119">Check for duplicates of `mdProperty` tokens.</span></span>|  
+|`MDDupEvent`|<span data-ttu-id="65cbc-120">檢查是否有重複的`mdEvent`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-120">Check for duplicates of `mdEvent` tokens.</span></span>|  
+|`MDDupFieldDef`|<span data-ttu-id="65cbc-121">檢查是否有重複的`mdFieldDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-121">Check for duplicates of `mdFieldDef` tokens.</span></span>|  
+|`MDDupSignature`|<span data-ttu-id="65cbc-122">檢查是否有重複的`mdSignature`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-122">Check for duplicates of `mdSignature` tokens.</span></span>|  
+|`MDDupModuleRef`|<span data-ttu-id="65cbc-123">檢查是否有重複的`mdModuleRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-123">Check for duplicates of `mdModuleRef` tokens.</span></span>|  
+|`MDDupTypeSpec`|<span data-ttu-id="65cbc-124">檢查是否有重複的`mdTypeSpec`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-124">Check for duplicates of `mdTypeSpec` tokens.</span></span>|  
+|`MDDupImplMap`|<span data-ttu-id="65cbc-125">檢查是否有重複的`mdImplMap`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-125">Check for duplicates of `mdImplMap` tokens.</span></span>|  
+|`MDDupAssemblyRef`|<span data-ttu-id="65cbc-126">檢查是否有重複的`mdAssemblyRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-126">Check for duplicates of `mdAssemblyRef` tokens.</span></span>|  
+|`MDDupFile`|<span data-ttu-id="65cbc-127">檢查是否有重複的`mdFile`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-127">Check for duplicates of `mdFile` tokens.</span></span>|  
+|`MDDupExportedType`|<span data-ttu-id="65cbc-128">檢查是否有重複的`mdExportedType`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-128">Check for duplicates of `mdExportedType` tokens.</span></span>|  
+|`MDDupManifestResource`|<span data-ttu-id="65cbc-129">檢查是否有重複的`mdManifestResource`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-129">Check for duplicates of `mdManifestResource` tokens.</span></span>|  
+|`MDDupGenericParam`|<span data-ttu-id="65cbc-130">檢查是否有重複的`mdGenericParam`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-130">Check for duplicates of `mdGenericParam` tokens.</span></span>|  
+|`MDDupMethodSpec`|<span data-ttu-id="65cbc-131">檢查是否有重複的`mdMethodSpec`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-131">Check for duplicates of `mdMethodSpec` tokens.</span></span>|  
+|`MDDupGenericParamConstraint`|<span data-ttu-id="65cbc-132">檢查是否有重複的`mdGenericParamConstraint`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-132">Check for duplicates of `mdGenericParamConstraint` tokens.</span></span>|  
+|`MDDupAssembly`|<span data-ttu-id="65cbc-133">檢查是否有重複的`mdAssembly`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-133">Check for duplicates of `mdAssembly` tokens.</span></span>|  
+|`MDDupDefault`|<span data-ttu-id="65cbc-134">檢查是否有重複項目`mdMemberRef`， `mdTypeRef`， `mdSignature`， `mdTypeSpec`，和`mdMethodSpec`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="65cbc-134">Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a8a20-135">需求</span><span class="sxs-lookup"><span data-stu-id="a8a20-135">Requirements</span></span>  
- <span data-ttu-id="a8a20-136">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a8a20-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="65cbc-135">需求</span><span class="sxs-lookup"><span data-stu-id="65cbc-135">Requirements</span></span>  
+ <span data-ttu-id="65cbc-136">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="65cbc-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a8a20-137">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="a8a20-137">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="65cbc-137">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="65cbc-137">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="a8a20-138">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a8a20-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="65cbc-138">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65cbc-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8a20-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a8a20-139">See Also</span></span>  
- [<span data-ttu-id="a8a20-140">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="a8a20-140">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="65cbc-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="65cbc-139">See also</span></span>
+- [<span data-ttu-id="65cbc-140">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="65cbc-140">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

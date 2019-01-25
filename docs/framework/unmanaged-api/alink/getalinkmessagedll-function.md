@@ -17,26 +17,26 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 395dc85ad638e8a790962a4aa38019612c360ce1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 632f19e0ead57d5508265fece578bb22f18ba54a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722721"
 ---
-# <a name="getalinkmessagedll-function"></a><span data-ttu-id="f7119-102">GetALinkMessageDll 函式</span><span class="sxs-lookup"><span data-stu-id="f7119-102">GetALinkMessageDll Function</span></span>
-<span data-ttu-id="f7119-103">尋找並載入 DLL 的訊息。</span><span class="sxs-lookup"><span data-stu-id="f7119-103">Finds and loads the message DLL.</span></span> <span data-ttu-id="f7119-104">如果訊息 DLL 無法找到或載入，則傳回 0。</span><span class="sxs-lookup"><span data-stu-id="f7119-104">Returns 0 if the message DLL could not be located or loaded.</span></span> <span data-ttu-id="f7119-105">訊息 DLL 應該的子目錄，其名稱是語言識別碼、 中或在目前的目錄。</span><span class="sxs-lookup"><span data-stu-id="f7119-105">The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.</span></span>  
+# <a name="getalinkmessagedll-function"></a><span data-ttu-id="9d742-102">GetALinkMessageDll 函式</span><span class="sxs-lookup"><span data-stu-id="9d742-102">GetALinkMessageDll Function</span></span>
+<span data-ttu-id="9d742-103">尋找並載入 DLL 的訊息。</span><span class="sxs-lookup"><span data-stu-id="9d742-103">Finds and loads the message DLL.</span></span> <span data-ttu-id="9d742-104">如果訊息 DLL 無法找到或載入，則會傳回 0。</span><span class="sxs-lookup"><span data-stu-id="9d742-104">Returns 0 if the message DLL could not be located or loaded.</span></span> <span data-ttu-id="9d742-105">訊息 DLL 應該的子目錄，其名稱是語言識別碼、 中或在目前的目錄。</span><span class="sxs-lookup"><span data-stu-id="9d742-105">The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7119-106">語法</span><span class="sxs-lookup"><span data-stu-id="f7119-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d742-106">語法</span><span class="sxs-lookup"><span data-stu-id="9d742-106">Syntax</span></span>  
   
 ```  
 HINSTANCE WINAPI GetALinkMessageDll();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="f7119-107">需求</span><span class="sxs-lookup"><span data-stu-id="f7119-107">Requirements</span></span>  
- <span data-ttu-id="f7119-108">**標頭：** alink.h</span><span class="sxs-lookup"><span data-stu-id="f7119-108">**Header:** alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d742-107">需求</span><span class="sxs-lookup"><span data-stu-id="9d742-107">Requirements</span></span>  
+ <span data-ttu-id="9d742-108">**標頭：** alink.h</span><span class="sxs-lookup"><span data-stu-id="9d742-108">**Header:** alink.h</span></span>  
   
- <span data-ttu-id="f7119-109">**程式庫**: alink.dll</span><span class="sxs-lookup"><span data-stu-id="f7119-109">**Library**: alink.dll</span></span>  
+ <span data-ttu-id="9d742-109">**程式庫**: alink.dll</span><span class="sxs-lookup"><span data-stu-id="9d742-109">**Library**: alink.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7119-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f7119-110">See Also</span></span>  
- [<span data-ttu-id="f7119-111">Al.exe (組件連結器)</span><span class="sxs-lookup"><span data-stu-id="f7119-111">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a><span data-ttu-id="9d742-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9d742-110">See also</span></span>
+- [<span data-ttu-id="9d742-111">Al.exe (組件連結器)</span><span class="sxs-lookup"><span data-stu-id="9d742-111">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)
