@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 69dea99cf71bd1e091116e54e244abfca291ffdb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9da2fc05824fa7e412c1c4802852fd00ba2709e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658190"
 ---
 # <a name="operator-statement"></a>Operator Statement
 宣告運算子符號、 運算元與類別或結構定義的運算子程序的程式碼。  
@@ -44,13 +44,13 @@ End Operator
  選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。  
   
  `Public`  
- 必要。 表示這個運算子程序[公開](../../../visual-basic/language-reference/modifiers/public.md)存取。  
+ 必要項。 表示這個運算子程序[公開](../../../visual-basic/language-reference/modifiers/public.md)存取。  
   
  `Overloads`  
  選擇性。 請參閱[多載](../../../visual-basic/language-reference/modifiers/overloads.md)。  
   
  `Shared`  
- 必要。 指出此運算子程序[共用](../../../visual-basic/language-reference/modifiers/shared.md)程序。  
+ 必要項。 指出此運算子程序[共用](../../../visual-basic/language-reference/modifiers/shared.md)程序。  
   
  `Shadows`  
  選擇性。 請參閱[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。  
@@ -62,10 +62,10 @@ End Operator
  除非您指定所需的轉換運算子`Widening`。 表示定義這個運算子程序[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)轉換。 在此 [說明] 頁面上，請參閱 「 擴展和縮小轉換 」。  
   
  `operatorsymbol`  
- 必要。 符號或運算子，此運算子程序定義的識別碼。  
+ 必要項。 符號或運算子，此運算子程序定義的識別碼。  
   
  `operand1`  
- 必要。 名稱和類型的一元運算子 （包括轉換運算子） 的單一運算元或二元運算子的左的運算元。  
+ 必要項。 名稱和類型的一元運算子 （包括轉換運算子） 的單一運算元或二元運算子的左的運算元。  
   
  `operand2`  
  二元運算子的必要項。 名稱和類型的二元運算子的右運算元。  
@@ -77,7 +77,7 @@ End Operator
 |組件|描述|  
 |----------|-----------------|  
 |`ByVal`|必須是選擇性，但傳遞機制[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)。|  
-|`operandname`|必要。 表示此運算元的變數名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`operandname`|必要項。 表示此運算元的變數名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
 |`operandtype`|選擇性除非`Option Strict`是`On`。 此運算元資料類型。|  
   
  `type`  
@@ -87,10 +87,10 @@ End Operator
  選擇性。 運算子程序執行的陳述式區塊。  
   
  `returnvalue`  
- 必要。 運算子程序傳回呼叫程式碼的值。  
+ 必要項。 運算子程序傳回呼叫程式碼的值。  
   
  `End` `Operator`  
- 必要。 此運算子程序的定義就會終止。  
+ 必要項。 此運算子程序的定義就會終止。  
   
 ## <a name="remarks"></a>備註  
  您可以使用`Operator`只能在類別或結構中。 這表示*宣告內容*運算子不能是原始程式檔、 命名空間、 模組、 介面、 程序或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
@@ -170,14 +170,14 @@ End Operator
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [IsFalse 運算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
- [IsTrue 運算子](../../../visual-basic/language-reference/operators/istrue-operator.md)  
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [擴展和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [如何：定義運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [如何：定義轉換運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
- [如何：呼叫運算子程序](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)  
- [如何：使用定義運算子的類別](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)
+## <a name="see-also"></a>另請參閱
+- [IsFalse 運算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)
+- [IsTrue 運算子](../../../visual-basic/language-reference/operators/istrue-operator.md)
+- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
+- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [擴展和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [如何：定義運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [如何：定義轉換運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [如何：呼叫運算子程序](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)
+- [如何：使用定義運算子的類別](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)

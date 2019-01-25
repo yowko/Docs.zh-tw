@@ -1,19 +1,20 @@
 ---
-title: 簡介 Visual Basic2 中的 XML 常值
+title: 在 Visual Basic2 XML 常值簡介
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: bac0a4a297dcecce5465e5a1a1c02e4cbc9848a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6c4773236c3af83603033c74e2e12e9f47a86b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624024"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic 中的 XML 常值簡介
 本節提供在 Visual Basic 中建立 XML 樹狀結構的相關資訊。  
   
- 使用 LINQ 查詢的結果做為內容，XML 樹狀結構的相關資訊，請參閱[功能建構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
+ 如需使用 LINQ 查詢的結果做為內容，XML 樹狀結構的資訊，請參閱[函數式建構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
   
- 如需有關在 Visual Basic 中的 XML 常值的詳細資訊，請參閱[概觀的 LINQ to XML 在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
+ 如需有關在 Visual Basic 中的 XML 常值的詳細資訊，請參閱 <<c0> [ 概觀的 LINQ to XML，在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
   
 ## <a name="creating-xml-trees"></a>建立 XML 樹狀結構  
  下列範例顯示如何在此案例 <xref:System.Xml.Linq.XElement> 中建立 `contacts`：  
@@ -194,5 +195,5 @@ Child1 was cloned
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>另請參閱
+- [建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

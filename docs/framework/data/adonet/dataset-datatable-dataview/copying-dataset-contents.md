@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: b85fb6ebf56b110330be121c87d2492b0cfac536
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b4edc1bbf1448fc86df76ed9f790a924a563647b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804064"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700308"
 ---
 # <a name="copying-dataset-contents"></a>複製資料集內容
 您可以建立一份<xref:System.Data.DataSet>，讓您可以使用資料，而不會影響原始的資料，或處理的資料子集**資料集**。 當複製**資料集**，您可以：  
@@ -94,8 +94,8 @@ foreach (DataRow copyRow in copyRows)
   customerTable.ImportRow(copyRow);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Data.DataSet>  
- <xref:System.Data.DataTable>  
- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Data.DataSet>
+- <xref:System.Data.DataTable>
+- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

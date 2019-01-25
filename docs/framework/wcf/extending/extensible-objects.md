@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: 95bd354e3aed8e0968debcac160383eb9c26cd0a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f2738d6e3a5fc75ab2f5714dc6644267e4fa1e29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495834"
 ---
 # <a name="extensible-objects"></a>可延伸物件
 可延伸物件模式是用於以新功能延伸現有的執行階段類別，或將新狀態新增至物件。 附加至其中一個可擴充物件的擴充功能會在處理程序中的各種不同階段啟用行為，以存取附加至它們可存取之一般可擴充物件的共用狀態與功能。  
@@ -36,11 +36,11 @@ where T : IExtensibleObject<T>
   
  <xref:System.ServiceModel.IExtension%601> 不代表與其他標準 Managed 介面的任何互動。 特別是，擁有者物件上的 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 方法通常不會中斷連結它的延伸。  
   
- 當擴充功能加入至集合，<xref:System.ServiceModel.IExtension%601.Attach%2A>進入集合之前呼叫。 從集合中，移除擴充功能時<xref:System.ServiceModel.IExtension%601.Detach%2A>移除之後呼叫。 這表示 （假設適當的同步處理） 擴充功能可以倚賴才發現它在集合中是之間<xref:System.ServiceModel.IExtension%601.Attach%2A>和<xref:System.ServiceModel.IExtension%601.Detach%2A>。  
+ 當延伸新增至集合中，<xref:System.ServiceModel.IExtension%601.Attach%2A>它進入集合之前呼叫。 從集合中，移除延伸模組時<xref:System.ServiceModel.IExtension%601.Detach%2A>移除後予以呼叫。 這表示 （假定適當的同步處理） 延伸模組可以倚賴只有要在集合中找到時是之間<xref:System.ServiceModel.IExtension%601.Attach%2A>和<xref:System.ServiceModel.IExtension%601.Detach%2A>。  
   
  傳遞至 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> 或 <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> 的物件不需要是 <xref:System.ServiceModel.IExtension%601> (例如，您可以傳遞任何物件)，但是傳回的延伸是 <xref:System.ServiceModel.IExtension%601>。  
   
- 如果集合中的任何延伸模組不是<xref:System.ServiceModel.IExtension%601>，<xref:System.ServiceModel.IExtensionCollection%601.Find%2A>會傳回 null，和<xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A>會傳回空集合。 如果多個延伸模組實作<xref:System.ServiceModel.IExtension%601>，<xref:System.ServiceModel.IExtensionCollection%601.Find%2A>傳回其中一個。 從 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> 傳回的值是快照。
+ 如果在集合中的不含副檔名<xref:System.ServiceModel.IExtension%601>，<xref:System.ServiceModel.IExtensionCollection%601.Find%2A>會傳回 null，和<xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A>傳回空集合。 如果多個延伸模組實作<xref:System.ServiceModel.IExtension%601>，<xref:System.ServiceModel.IExtensionCollection%601.Find%2A>傳回其中一個。 從 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> 傳回的值是快照。
   
  有兩個主要案例。 第一個案例是使用 <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A> 屬性做為型別字典，將狀態插入物件，讓另一個元件可使用型別來查閱它。  
   
@@ -49,7 +49,7 @@ where T : IExtensibleObject<T>
  <xref:System.ServiceModel.IExtensionCollection%601> 介面是 <xref:System.ServiceModel.IExtension%601> 物件的集合，這些物件允許依據 <xref:System.ServiceModel.IExtension%601> 的型別將其擷取。 <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> 會傳回最近所加入屬於該型別之 <xref:System.ServiceModel.IExtension%601> 的物件。  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Windows Communication Foundation 中的可延伸物件  
- Windows Communication Foundation (WCF) 中有四種可延伸物件：  
+ Windows Communication Foundation (WCF) 中有四個可延伸的物件：  
   
 -   <xref:System.ServiceModel.ServiceHostBase> – 這是服務之主機的基底類別。  這個類別的延伸可用於延伸 <xref:System.ServiceModel.ServiceHostBase> 本身的行為，或儲存各服務的狀態。  
   
@@ -57,7 +57,7 @@ where T : IExtensibleObject<T>
   
 -   <xref:System.ServiceModel.OperationContext> – 這個類別代表執行階段為各作業蒐集的作業資訊。  其中包括的資訊如傳入訊息標頭、傳入訊息屬性、傳入安全性身分識別和其他資訊。  這個類別的延伸可以延伸 <xref:System.ServiceModel.OperationContext> 的行為，或儲存各作業的狀態。  
   
--   <xref:System.ServiceModel.IContextChannel> – 這個介面可讓每個狀態之通道與 WCF 執行階段所建置的 proxy 進行檢查。  這個類別的延伸可以延伸 <xref:System.ServiceModel.IClientChannel> 的行為，或可用它來儲存各通道的狀態。  
+-   <xref:System.ServiceModel.IContextChannel> – 這個介面可讓每一個狀態的通道和 proxy 由 WCF 執行階段檢查。  這個類別的延伸可以延伸 <xref:System.ServiceModel.IClientChannel> 的行為，或可用它來儲存各通道的狀態。  
   
 -  
   
@@ -65,7 +65,7 @@ where T : IExtensibleObject<T>
   
  [!code-csharp[IInstanceContextInitializer#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/iinstancecontextinitializer/cs/initializer.cs#1)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.IExtensibleObject%601>  
- <xref:System.ServiceModel.IExtension%601>  
- <xref:System.ServiceModel.IExtensionCollection%601>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.IExtensibleObject%601>
+- <xref:System.ServiceModel.IExtension%601>
+- <xref:System.ServiceModel.IExtensionCollection%601>

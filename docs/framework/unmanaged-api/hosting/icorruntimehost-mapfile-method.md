@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45b88758c339cd77bc7e17e0c29969f8783555f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 814073b766d5d562b414a566ae3f92abd664ce35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707839"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile 方法
 將指定的檔案對應到記憶體中。 這個方法已過時。  
@@ -40,16 +41,16 @@ HRESULT MapFile(
  [in]要對應的檔案控制代碼。  
   
  `hMapAddress`  
- [out]要開始進行對應的檔案開始的記憶體位址。  
+ [out]要開始對應檔案起始記憶體位址。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** 1.0、 1.1  
+ **.NET framework 版本：** 1.0, 1.1  
   
-## <a name="see-also"></a>另請參閱  
- [ICorRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

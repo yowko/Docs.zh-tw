@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: e682c2c23dd6fe80aee87d2a86b3df2dae66b802
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 211f07e7c9dbc7e0583272d46c493ad99628d283
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677496"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724105"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>錯誤的總和檢查碼值，非十六進位數字或奇數的十六進位數字
 總和檢查碼值包含無效的十六進位數字，或是有奇數個數字。  
@@ -33,5 +33,5 @@ ms.locfileid: "45677496"
   
 ## <a name="see-also"></a>另請參閱
 
-- [ASP.NET 概觀](/aspnet/overview)  
+- [ASP.NET 概觀](/aspnet/overview)
 - [告訴我們](/visualstudio/ide/talk-to-us)

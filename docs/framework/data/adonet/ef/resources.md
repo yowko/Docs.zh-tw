@@ -2,12 +2,12 @@
 title: Entity Framework 資源
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
-ms.openlocfilehash: bc1a5b76ecc038d8059b04f4dc222126e796f03d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 24ee9225b8e19eac93554d2243aac0cafd5e9ef0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522449"
 ---
 # <a name="entity-framework-resources"></a>Entity Framework 資源
 下列外部資源提供建立 Entity Framework 應用程式的資訊和支援。  
@@ -27,8 +27,8 @@ ms.locfileid: "53128670"
  [Entity Framework 常見問題集](https://social.technet.microsoft.com/wiki/contents/articles/3737.entity-framework-faq.aspx)  
  Wiki 區段包含有關 Entity Framework 常見問題集問題。  
   
-## <a name="see-also"></a>另請參閱  
- [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)  
- [快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [Entity Framework 詞彙](../../../../../docs/framework/data/adonet/ef/terminology.md)  
- [ADO.NET 實體資料模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a>另請參閱
+- [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)
+- [快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [Entity Framework 詞彙](../../../../../docs/framework/data/adonet/ef/terminology.md)
+- [ADO.NET 實體資料模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

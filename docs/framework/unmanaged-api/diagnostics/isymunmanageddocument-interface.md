@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f75e517890275b90523dc42cdac3a83d871beac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b14333235882efb6da1ce011c109c67a1d149bf3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584515"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument 介面
-代表符號存放區所參考的文件。 文件是由統一資源定位器 (URL) 和 GUID 文件類型定義。 您可以找出不論如何使用 URL 儲存文件及文件類型的 GUID。 您可以在符號存放區中儲存的文件來源，並透過此介面擷取它。  
+代表符號存放區所參考的文件。 文件是由統一資源定位器 (URL) 和 GUID 的文件類型定義。 您可以找出文件，不論它使用 URL 的儲存方式和文件類型的 GUID。 您可以在符號存放區中儲存的文件來源，並透過這個介面擷取它。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[FindClosestLine 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-findclosestline-method.md)|傳回最接近的一行，也就是序列點，在本文件也可能不是序列點中。|  
+|[FindClosestLine 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-findclosestline-method.md)|在此可能會或可能不是序列點的文件中會傳回是序列點，最接近的一行。|  
 |[GetCheckSum 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getchecksum-method.md)|取得總和檢查碼。|  
-|[GetCheckSumAlgorithmId 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getchecksumalgorithmid-method.md)|取得總和檢查碼演算法識別項，或如果沒有任何總和檢查碼傳回全部為零的 GUID。|  
-|[GetDocumentType 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getdocumenttype-method.md)|取得這份文件的文件類型。|  
-|[GetLanguage 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getlanguage-method.md)|取得這份文件的語言識別項。|  
+|[GetCheckSumAlgorithmId 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getchecksumalgorithmid-method.md)|取得總和檢查碼演算法識別項，或如果沒有任何總和檢查碼會傳回全部為零的 GUID。|  
+|[GetDocumentType 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getdocumenttype-method.md)|取得此文件的文件類型。|  
+|[GetLanguage 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getlanguage-method.md)|取得這份文件的語言識別碼。|  
 |[GetLanguageVendor 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getlanguagevendor-method.md)|取得這份文件的語言廠商。|  
 |[GetSourceLength 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getsourcelength-method.md)|取得內嵌來源的長度 (以位元組為單位)。|  
-|[GetSourceRange 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getsourcerange-method.md)|傳回指定的範圍的內嵌的來源到指定的緩衝區。|  
+|[GetSourceRange 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getsourcerange-method.md)|傳回指定的範圍的內嵌來源到指定的緩衝區。|  
 |[GetURL 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-geturl-method.md)|傳回這份文件的 URL。|  
-|[HasEmbeddedSource 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-hasembeddedsource-method.md)|傳回`true`如果文件來源內嵌在偵錯符號; 否則傳回`false`。|  
+|[HasEmbeddedSource 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-hasembeddedsource-method.md)|會傳回`true`文件具有來源內嵌在偵錯的符號; 否則會傳回`false`。|  
   
-## <a name="see-also"></a>另請參閱  
- [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

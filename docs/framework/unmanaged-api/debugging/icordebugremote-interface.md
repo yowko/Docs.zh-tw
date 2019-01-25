@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab8ed5c4fa3dc0ed77c1948aa6c1b940ecc25c14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5cb7a3100e1f0839b50e0430c16a02879f1b8988
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553473"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote 介面
 提供啟動或附加 Managed 偵錯工具至遠端目標處理序的功能。  
@@ -62,23 +62,23 @@ interface ICorDebugRemote : IUnknown
   
 |方法|描述|  
 |------------|-----------------|  
-|[ICorDebugRemote::CreateProcessEx 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Managed 偵錯在遠端電腦上建立處理程序。|  
+|[ICorDebugRemote::CreateProcessEx 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|進行受控偵錯，請在遠端電腦上建立處理程序。|  
 |[ICorDebugRemote::DebugActiveProcessEx 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|啟動處理序在偵錯工具在遠端電腦上。|  
   
 ## <a name="remarks"></a>備註  
- 目前，這項功能僅適用於偵錯遠端 Macintosh 電腦執行的 Silverlight 架構應用程式目標支援。  
+ 目前，這項功能僅適用於偵錯遠端的 Macintosh 電腦執行的 Silverlight 應用程式目標支援。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** 4.5、 4、 3.5 SP1  
+ **.NET framework 版本：** 4.5，4，3.5 SP1  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

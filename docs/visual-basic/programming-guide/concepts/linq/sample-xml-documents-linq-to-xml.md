@@ -2,12 +2,12 @@
 title: 範例 XML 文件 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: 5ddfdd9c8b7114651cea59a0b356ee87f29bd62b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9e1c8dc073a0079766e1239c9a31ea00696da84f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652380"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>範例 XML 文件 (LINQ to XML)
 下列範例檔案用於整個 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的程式碼範例和程式碼片段。  
@@ -19,19 +19,19 @@ ms.locfileid: "45964542"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[範例 XML 檔：典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)|包含典型採購訂單的 XML 文件。|  
+|[範例 XML 檔：典型的採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)|包含典型採購訂單的 XML 文件。|  
 |[範例 XML 檔：命名空間中的典型採購訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)|在命名空間中，包含典型採購訂單的 XML 文件。|  
 |[範例 XML 檔：多份採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)|包含多個採購訂單的 XML 文件。|  
 |[範例 XML 檔：命名空間中的多份採購訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)|在命名空間中，包含多個採購訂單的 XML 文件。|  
 |[範例 XML 檔：測試組態 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|包含某些虛擬測試組態資料的 XML 文件。|  
 |[範例 XML 檔：命名空間中的測試組態](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)|在命名空間中，包含某些虛擬測試組態資料的 XML 文件。|  
 |[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)|包含客戶和訂單的 XML 文件。|  
-|[範例 XSD 檔：客戶和訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|驗證 [範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) 的 XML 結構描述定義 (XSD)。|  
-|[範例 XML 檔：位於相同命名空間中的客戶和訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|在命名空間中，包含客戶和訂單的 XML 文件。|  
+|[範例 XSD 檔：客戶和訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Xml 結構描述定義 (XSD) 驗證[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。|  
+|[範例 XML 檔：客戶和命名空間中的訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|在命名空間中，包含客戶和訂單的 XML 文件。|  
 |[範例 XML 檔：數值資料 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|包含適合加總與群組之資料的 XML 文件。|  
 |[範例 XML 檔：命名空間中的數值資料](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|在命名空間中，包含適合加總與群組之資料的 XML 文件。|  
 |[範例 XML 檔：書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)|包含書籍目錄的 XML 文件。|  
 |[範例 XML 檔：合併的採購訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|呈現包含不同命名空間中之採購訂單的 XML 文件。|  
   
-## <a name="see-also"></a>另請參閱  
- [程式設計手冊 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>另請參閱
+- [程式設計手冊 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

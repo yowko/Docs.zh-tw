@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 038598e6fa8c0f7d47a161783d21f03b3c87af0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f61efdecfb87ed598dd9675c0b8804259849e64c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706257"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 介面
-擴充 ICorDebugType 介面擷取類型識別項的基底類型或複雜 （使用者定義） 的型別。  
+可擴充 ICorDebugType 介面來擷取基底型別或複雜的 （使用者定義） 型別的型別識別項。  
   
 ## <a name="methods"></a>方法  
   
 |方法||  
 |------------|-|  
-|[GetTypeID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|取得[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)此類型。|  
+|[GetTypeID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|取得[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)這種類型。|  
   
 ## <a name="remarks"></a>備註  
  這個介面是 ICorDebugType 介面的邏輯擴充。  
@@ -55,13 +55,13 @@ pType2->GetTypeID(&id);
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

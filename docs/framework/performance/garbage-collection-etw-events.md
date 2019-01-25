@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13f7e935ab999ccc3cd3ea1e308e8d686bed4171
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95762cbda4a1a251dd64fd33b2815d474f1fe2b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685213"
 ---
 # <a name="garbage-collection-etw-events"></a>記憶體回收 ETW 事件
 <a name="top"></a> 這些事件收集到記憶體回收的相關資訊。 它們協助診斷和偵錯，包括判斷執行多少次記憶體回收、在記憶體回收期間釋放了多少記憶體，以及其他事項。  
@@ -366,5 +366,5 @@ ms.locfileid: "33396931"
   
  沒有事件資料。  
   
-## <a name="see-also"></a>另請參閱  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>另請參閱
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b32e0da554622eb84b5569b5a1db04447fdc2940
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 939e10e0c06e98f98e0c468358f4296fd1061a79
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593923"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;項目&lt;執行階段&gt;
 包含組件的識別資訊。  
@@ -25,7 +25,7 @@ ms.locfileid: "53612552"
 \<執行階段 >  
 \<assemblyBinding>  
 \<dependentAssembly>  
-\<組件識別 >  
+\<assemblyIdentity>  
   
 ## <a name="syntax"></a>語法  
   
@@ -121,7 +121,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>另請參閱
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

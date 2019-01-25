@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4311a77c9159428bf7beacc99d4479acb28b91b6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: db41a11a3fb6c772a3e6fbb164435daa9e032ea5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516937"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 函式
 建立物件轉寄站接收以協助用戶端從 Windows Management 接收非同步呼叫。
@@ -62,5 +62,5 @@ HRESULT GetDemultiplexedStub (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

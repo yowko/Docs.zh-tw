@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 17a30ba5132673af70860e4f5f1a87f861c97386
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 40ea9b6d8ad88683ef0b3d75907fe645e9f2e3e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679067"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自動化控制項模式概觀
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本概觀介紹 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控制項模式。 控制項模式提供一種方式，分類及公開與控制項類型或控制項外觀無關的控制項功能。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47193641"
   
  使用者介面自動化用戶端存取 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制模式類別的方法和屬性，並使用它們來取得 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]的相關資訊，或操作 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]。 這些控制項模式類別位於 <xref:System.Windows.Automation> 命名空間 (例如 <xref:System.Windows.Automation.InvokePattern> 和 <xref:System.Windows.Automation.SelectionPattern>)。  
   
- 用戶端<xref:System.Windows.Automation.AutomationElement>方法 (例如<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType>或是<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) 或[!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)]存取子來存取[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]模式上的屬性。 每個控制項模式類別有一個欄位成員 (例如<xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>' 或<xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>)，識別該控制項模式，而且可以做為參數傳遞<xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>或<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>擷取該模式<xref:System.Windows.Automation.AutomationElement>。  
+ 用戶端使用 <xref:System.Windows.Automation.AutomationElement> 方法 (例如 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> 或 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) 或 [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] 存取子來存取模式的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。 每個控制項模式類別有一個欄位成員 (例如<xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>' 或<xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>)，識別該控制項模式，而且可以做為參數傳遞<xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>或<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>擷取該模式<xref:System.Windows.Automation.AutomationElement>。  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>動態控制項模式  
@@ -74,9 +74,9 @@ ms.locfileid: "47193641"
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|允許用戶端對不支援範圍值的控制項，取得或設定一個值。 例如日期時間選擇器。|  
 |<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|公開視窗 ( [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 作業系統的基本概念) 的特定資訊。 視窗控制項範例包括最上層應用程式視窗 ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]、 [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]等等)、 [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] 子視窗和對話方塊。|  
   
-## <a name="see-also"></a>另請參閱  
- [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [UI 自動化用戶端的控制項模式對應](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [用戶端的 UI 自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [用戶端的 UI 自動化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+## <a name="see-also"></a>另請參閱
+- [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [UI 自動化用戶端的控制項模式對應](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+- [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [用戶端的 UI 自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
+- [用戶端的 UI 自動化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)

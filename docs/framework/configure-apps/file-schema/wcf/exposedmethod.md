@@ -2,19 +2,19 @@
 title: '&lt;exposedMethod&gt;'
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: c63689224e3bba69816f5904599425a235a51bae
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0bfb56395217283eeba69c2f3b7569a89f576423
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702037"
 ---
 # <a name="ltexposedmethodgt"></a>&lt;exposedMethod&gt;
 表示 COM+ 方法，這個方法會在 COM+ 元件上的介面公開為 Web 服務時公開。  
   
  \<system.ServiceModel>  
 \<comContracts>  
-\<comContract >  
+\<comContract>  
 \<方法 >  
   
 ## <a name="syntax"></a>語法  
@@ -45,7 +45,7 @@ ms.locfileid: "54145226"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<exposedMethods >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethods.md)|集合[ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)項目。|  
+|[\<exposedMethods>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethods.md)|集合[ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)項目。|  
   
 ## <a name="remarks"></a>備註  
  COM+ 整合設定工具 (ComSvcConfig.exe) 可用來從 COM 介面加入特定的方法，使這些方法可以出現在所產生的服務合約上。  
@@ -68,9 +68,9 @@ ms.locfileid: "54145226"
   
  在服務初始化階段，執行階段會嘗試反映，並加入只包含在清單中的方法來產生服務合約[ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)項目。 這時會針對每個未包含在服務合約中的介面方法加以追蹤。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.ComMethodElementCollection>  
- <xref:System.ServiceModel.Configuration.ComMethodElement>  
- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [整合 COM 應用程式](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [如何：設定 COM + 服務設定](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.ComMethodElementCollection>
+- <xref:System.ServiceModel.Configuration.ComMethodElement>
+- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
+- [整合 COM 應用程式](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [如何：設定 COM + 服務設定](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

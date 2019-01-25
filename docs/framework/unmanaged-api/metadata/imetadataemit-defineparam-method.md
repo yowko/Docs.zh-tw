@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d49ac70aceb76f69711ea4bf514f69697ac156c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33bff2b72f2381fea461bb043506ee78f757dea8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504897"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam 方法
-建立與指定的簽章與指定的語彙基元所參考的方法參數的定義，並取得該參數定義的語彙基元。  
+使用指定的語彙基元所參考的方法指定的簽章建立的參數定義，並取得該參數定義的語彙基元。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +44,7 @@ HRESULT DefineParam (
   
 #### <a name="parameters"></a>參數  
  `md`  
- [in]正在定義其參數的方法的語彙基元。  
+ [in]正在定義其參數的方法之語彙基元。  
   
  `ulParamSeq`  
  [in]參數的順序編號。  
@@ -65,20 +65,20 @@ HRESULT DefineParam (
  [in]大小，以 Unicode 字元的`pValue`。  
   
  `ppd`  
- [out]`mdParamDef`指派的語彙基元。  
+ [out]`mdParamDef`指派權杖。  
   
 ## <a name="remarks"></a>備註  
  中的值序列`ulParamSeq`參數 1 為開頭。 傳回值具有 0 的序號。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c5d42aa7053c1138808775a16d820d5fef3b095
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a9a43735ec80821c2380b824bfced99113cf08f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651089"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize 方法
-取得大小，以位元組為單位，表示這個 「 ICorDebugCode"的二進位的程式碼。  
+取得大小，以位元組為單位，此 「 ICorDebugCode"所表示的二進位程式碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +37,16 @@ HRESULT GetSize (
   
 #### <a name="parameters"></a>參數  
  `pcBytes`  
- [out]指標的大小，單位為位元組的二進位檔的程式碼這個`ICorDebugCode`物件表示。  
+ [out]指標大小 （位元組），二進位檔的程式碼這個`ICorDebugCode`物件表示。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- 
+## <a name="see-also"></a>另請參閱
+

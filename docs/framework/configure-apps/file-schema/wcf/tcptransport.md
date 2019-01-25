@@ -2,20 +2,20 @@
 title: '&lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 21b63ab0b4546dc2f4d46c40b02c55fb639320f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7f38d0c0ff42e75067b06835e7e6613f8fa4adcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660644"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 定義 TCP 傳輸，通道可使用此傳輸來傳輸自訂繫結的訊息。  
   
  \<system.serviceModel>  
-\<繫結 >  
+\<bindings>  
 \<customBinding>  
-\<繫結 >  
+\<binding>  
 \<tcpTransport>  
   
 ## <a name="syntax"></a>語法  
@@ -72,21 +72,21 @@ ms.locfileid: "54151172"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
  這個傳輸會使用以下格式的 URI "net.tcp://hostname:port/path"。 其他 URI 元件是選擇性的。  
   
  `tcpTransport` 項目是在建立自訂繫結時的起點，該繫結會實作 TCP 傳輸通訊協定。 這個傳輸已針對 WCF 至 WCF 的通訊最佳化。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.TcpTransportElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [傳輸](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [選擇傳輸](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.TcpTransportElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [傳輸](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [選擇傳輸](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

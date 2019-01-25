@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397425"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579000"
 ---
 # <a name="loader-etw-events"></a>載入器 ETW 事件
 <a name="top"></a> 這些事件收集載入及卸載應用程式定義域、組件和模組的相關資訊。  
@@ -55,7 +55,7 @@ ms.locfileid: "33397425"
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|應用程式定義域的唯一識別項。|  
-|AppDomainFlags|win:UInt32|0x1：預設定義域。<br /><br /> 0x2：可執行檔。<br /><br /> 0x4：應用程式定義域，位元 28-31：這個定義域的共用原則。<br /><br /> 0：共用的定義域。|  
+|AppDomainFlags|win:UInt32|0x1:預設網域。<br /><br /> 0x2:可執行檔。<br /><br /> 0x4:應用程式定義域，位元 28-31 日：共用此網域的原則。<br /><br /> 0:共用的網域。|  
 |AppDomainName|win:UnicodeString|易記的應用程式定義域名稱。 在處理序的存留期間可能會變更。|  
 |AppDomainIndex|win:UInt32|這個應用程式定義域的索引。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
@@ -88,7 +88,7 @@ ms.locfileid: "33397425"
 |AssemblyID|win:UInt64|組件的唯一 ID。|  
 |AppDomainID|win:UInt64|這個組件之定義域的 ID。|  
 |BindingID|win:UInt64|可唯一識別組件繫結的 ID。|  
-|AssemblyFlags|win:UInt32|0x1：定義域中性組件。<br /><br /> 0x2：動態組件。<br /><br /> 0x4：組件具有原生映像。<br /><br /> 0x8：可回收組件。|  
+|AssemblyFlags|win:UInt32|0x1:定義域中性組件。<br /><br /> 0x2:動態組件。<br /><br /> 0x4:組件具有原生映像。<br /><br /> 0x8:可回收組件。|  
 |AssemblyName|win:UnicodeString|完整的組件名稱。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
@@ -120,7 +120,7 @@ ms.locfileid: "33397425"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|模組的唯一 ID。|  
 |AssemblyID|win:UInt64|這個模組所在之組件的 ID。|  
-|ModuleFlags|win:UInt32|0x1：定義域中性模組。<br /><br /> 0x2：模組具有原生映像。<br /><br /> 0x4：動態模組。<br /><br /> 0x8：資訊清單模組。|  
+|ModuleFlags|win:UInt32|0x1:定義域中性模組。<br /><br /> 0x2:模組具有原生映像。<br /><br /> 0x4:動態模組。<br /><br /> 0x8:資訊清單模組。|  
 |Reserved1|win:UInt32|保留的欄位。|  
 |ModuleILPath|win:UnicodeString|模組之 Microsoft Intermediate Language (MSIL) 映像的路徑，或動態模組名稱 (如果它是動態組件 (以 Null 終止) 的話)。|  
 |ModuleNativePath|win:UnicodeString|模組原生映像的路徑 (如果存在的話 (以 Null 終止))。|  
@@ -167,7 +167,7 @@ ms.locfileid: "33397425"
 |ModuleID|win:UInt64|識別這個模組所屬的組件。|  
 |AssemblyID|win:UInt64|這個模組所在之組件的 ID。|  
 |AppDomainID|win:UInt64|使用這個模組之應用程式定義域的 ID。|  
-|ModuleFlags|win:UInt32|0x1：定義域中性模組。<br /><br /> 0x2：模組具有原生映像。<br /><br /> 0x4：動態模組。<br /><br /> 0x8：資訊清單模組。|  
+|ModuleFlags|win:UInt32|0x1:定義域中性模組。<br /><br /> 0x2:模組具有原生映像。<br /><br /> 0x4:動態模組。<br /><br /> 0x8:資訊清單模組。|  
 |Reserved1|win:UInt32|保留的欄位。|  
 |ModuleILPath|win:UnicodeString|模組之 MSIL 映像的路徑，或動態模組名稱 (如果它是動態組件 (以 Null 終止) 的話)。|  
 |ModuleNativePath|win:UnicodeString|模組原生映像的路徑 (如果存在的話 (以 Null 終止))。|  
@@ -212,5 +212,5 @@ ms.locfileid: "33397425"
   
  模組範圍事件會在任何 ETW 層級大於或等於 4 且分類為告知性事件時引發。  
   
-## <a name="see-also"></a>另請參閱  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>另請參閱
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

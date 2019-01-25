@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0b163ac4af4e487ccab4c18b7907eba5a31e5779
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524049"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic 中的 LINQ 簡介
 Language Integrated Query (LINQ) 會將查詢功能新增至 Visual Basic，並提供簡單且功能強大的功能，當您使用所有類型的資料。 而不是將查詢傳送至資料庫，以進行處理，或使用的每一個您要搜尋的資料類型不同的查詢語法，LINQ 導入了查詢，Visual Basic 語言的一部分。 它使用統一的語法，不論資料類型為何。  
@@ -177,7 +177,7 @@ Language Integrated Query (LINQ) 會將查詢功能新增至 Visual Basic，並�
   
  當您有 SQL Server 資料庫的有效連接時，您可以加入**LINQ to SQL 類別**項目範本加入專案。 這會顯示物件關聯式設計工具 (O/R 設計工具)。 O/R 設計工具可讓您想要存取您的程式碼中的項目拖曳**伺服器總管**/**資料庫總管**拖曳至設計工具介面上。 LINQ to SQL 檔案將 <xref:System.Data.Linq.DataContext> 物件加入專案。 此物件包含您想要存取的資料表和檢視的屬性和集合，以及您想要呼叫的預存程序方法。 將變更儲存至 LINQ to SQL (.dbml) 檔案之後，參考 O/R 設計工具所定義的 <xref:System.Data.Linq.DataContext> 物件，您就可以存取程式碼中的這些物件。 專案的 <xref:System.Data.Linq.DataContext> 物件依據您的 LINQ to SQL 檔案名稱來命名。 例如，名為 Northwind.dbml 的 LINQ to SQL 檔案，會建立名為 `NorthwindDataContext` 的 <xref:System.Data.Linq.DataContext> 物件。  
   
- 如需範例與逐步指示，請參閱[如何： 查詢資料庫](how-to-query-a-database-by-using-linq.md)並[如何： 呼叫預存程序](how-to-call-a-stored-procedure-by-using-linq.md)。  
+ 如需範例與逐步指示，請參閱[How to:查詢資料庫](how-to-query-a-database-by-using-linq.md)和[How to:呼叫預存程序](how-to-call-a-stored-procedure-by-using-linq.md)。  
   
 ## <a name="visual-basic-features-that-support-linq"></a>Visual Basic 支援 LINQ 的功能。  
  Visual Basic 包含其他值得注意的功能，讓使用 LINQ 簡單，並減少執行 LINQ 查詢，您必須撰寫的程式碼數量。 這些需求包括下列各項：  
@@ -236,20 +236,20 @@ Language Integrated Query (LINQ) 會將查詢功能新增至 Visual Basic，並�
   
  [如何：篩選查詢結果](how-to-filter-query-results-by-using-linq.md)  
   
- [如何：統計、加總或平均資料](how-to-count-sum-or-average-data-by-using-linq.md)  
+ [如何：計數、 加總或平均資料](how-to-count-sum-or-average-data-by-using-linq.md)  
   
- [如何：尋找查詢結果中的最小或最大值](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
+ [如何：尋找查詢結果中的最小值或最大值](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
  [如何：指派用來執行更新、插入和刪除的預存程序 (O/R 設計工具)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
 ## <a name="featured-book-chapters"></a>精選的書籍章節  
- [第 17 章： LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10))在[Visual Basic 2008 程式設計](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
+ [第 17 章：LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10))在[Visual Basic 2008 程式設計](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ (Language-Integrated Query)](../../concepts/linq/index.md)  
-- [Visual Basic 中的 LINQ to XML 概觀](../../language-features/xml/overview-of-linq-to-xml.md)  
-- [LINQ to DataSet 概觀](~/docs/framework/data/adonet/linq-to-dataset-overview.md)  
-- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)  
-- [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) (Visual Studio 中的 LINQ to SQL 工具)  
+- [LINQ (Language-Integrated Query)](../../concepts/linq/index.md)
+- [Visual Basic 中的 LINQ to XML 概觀](../../language-features/xml/overview-of-linq-to-xml.md)
+- [LINQ to DataSet 概觀](~/docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) (Visual Studio 中的 LINQ to SQL 工具)
 - [DataContext 方法 (O/R 設計工具)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
