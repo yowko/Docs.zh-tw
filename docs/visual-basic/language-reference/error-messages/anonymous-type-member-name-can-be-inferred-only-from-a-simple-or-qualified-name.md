@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36556
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
-ms.openlocfilehash: f4f62a9ac97c6dbd8d2426f8bfd17afa66c4001a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d91b7a3c57db38fde3cf371773e8d64834a8f72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715266"
 ---
-# <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="a60cf-102">只能從不含引數的簡單或限定名稱來推斷匿名類型成員名稱</span><span class="sxs-lookup"><span data-stu-id="a60cf-102">Anonymous type member name can be inferred only from a simple or qualified name with no arguments</span></span>
-<span data-ttu-id="a60cf-103">您無法推斷匿名類型成員名稱，從複雜的運算式。</span><span class="sxs-lookup"><span data-stu-id="a60cf-103">You cannot infer an anonymous type member name from a complex expression.</span></span>  
+# <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="629de-102">只能從不含引數的簡單或限定名稱來推斷匿名類型成員名稱</span><span class="sxs-lookup"><span data-stu-id="629de-102">Anonymous type member name can be inferred only from a simple or qualified name with no arguments</span></span>
+<span data-ttu-id="629de-103">您無法推斷匿名類型成員名稱，從複雜的運算式。</span><span class="sxs-lookup"><span data-stu-id="629de-103">You cannot infer an anonymous type member name from a complex expression.</span></span>  
   
 ```vb  
 Dim numbers() As Integer = {1, 2, 3, 4, 5}  
@@ -23,18 +23,18 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
 ' Dim instanceName1 = New With {numbers(3)}  
 ```  
   
- <span data-ttu-id="a60cf-104">如需來源匿名型別可以和無法推斷成員的名稱和類型的詳細資訊，請參閱[How to： 推斷屬性名稱和匿名類型宣告中的型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)。</span><span class="sxs-lookup"><span data-stu-id="a60cf-104">For more information about sources from which anonymous types can and cannot infer member names and types, see [How to: Infer Property Names and Types in Anonymous Type Declarations](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).</span></span>  
+ <span data-ttu-id="629de-104">如需匿名型別可以和無法推斷成員名稱和類型的來源的詳細資訊，請參閱[How to:推斷屬性名稱和匿名類型宣告中的型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)。</span><span class="sxs-lookup"><span data-stu-id="629de-104">For more information about sources from which anonymous types can and cannot infer member names and types, see [How to: Infer Property Names and Types in Anonymous Type Declarations](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).</span></span>  
   
- <span data-ttu-id="a60cf-105">**錯誤 ID:** BC36556</span><span class="sxs-lookup"><span data-stu-id="a60cf-105">**Error ID:** BC36556</span></span>  
+ <span data-ttu-id="629de-105">**錯誤 ID:** BC36556</span><span class="sxs-lookup"><span data-stu-id="629de-105">**Error ID:** BC36556</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a60cf-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="a60cf-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="629de-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="629de-106">To correct this error</span></span>  
   
--   <span data-ttu-id="a60cf-107">將運算式指派給成員名稱，如下列程式碼所示：</span><span class="sxs-lookup"><span data-stu-id="a60cf-107">Assign the expression to a member name, as shown in the following code:</span></span>  
+-   <span data-ttu-id="629de-107">為成員的名稱，指派運算式，如下列程式碼所示：</span><span class="sxs-lookup"><span data-stu-id="629de-107">Assign the expression to a member name, as shown in the following code:</span></span>  
   
     ```  
     Dim instanceName2 = New With {.number = numbers(3)}  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a60cf-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a60cf-108">See Also</span></span>  
- [<span data-ttu-id="a60cf-109">匿名類型</span><span class="sxs-lookup"><span data-stu-id="a60cf-109">Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [<span data-ttu-id="a60cf-110">如何：在匿名類型宣告中推斷屬性名稱和類型</span><span class="sxs-lookup"><span data-stu-id="a60cf-110">How to: Infer Property Names and Types in Anonymous Type Declarations</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+## <a name="see-also"></a><span data-ttu-id="629de-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="629de-108">See also</span></span>
+- [<span data-ttu-id="629de-109">匿名類型</span><span class="sxs-lookup"><span data-stu-id="629de-109">Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [<span data-ttu-id="629de-110">如何：推斷屬性名稱和匿名類型宣告中的類型</span><span class="sxs-lookup"><span data-stu-id="629de-110">How to: Infer Property Names and Types in Anonymous Type Declarations</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

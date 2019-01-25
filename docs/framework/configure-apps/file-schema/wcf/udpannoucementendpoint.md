@@ -2,20 +2,20 @@
 title: '&lt;udpAnnoucementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: 8a6c874d7d2930b969f2cc9778534aa99eab78f5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ab0e786ec4b21f25682c52fb7609d24e901f6eac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582427"
 ---
-# <a name="ltudpannoucementendpointgt"></a><span data-ttu-id="fb11c-102">&lt;udpAnnoucementEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="fb11c-102">&lt;udpAnnoucementEndpoint&gt;</span></span>
-<span data-ttu-id="fb11c-103">這個組態項目會定義標準端點，服務會使用此端點透過 UDP 繫結傳送公告訊息。</span><span class="sxs-lookup"><span data-stu-id="fb11c-103">This configuration element defines a standard endpoint that is used by services to send announcement messages over a UDP binding.</span></span> <span data-ttu-id="fb11c-104">此端點具備固定合約，而且支援兩種探索版本。</span><span class="sxs-lookup"><span data-stu-id="fb11c-104">It has a fixed contract and supports two discovery versions.</span></span> <span data-ttu-id="fb11c-105">此外，它擁有固定的 UDP 繫結和預設位址值，如 WS-Discovery 規格 (WS-Discovery 2005 年 4 月或 WS-Discovery 1.1 版) 中所指定。</span><span class="sxs-lookup"><span data-stu-id="fb11c-105">In addition it has a fixed UDP binding and a default address value as specified in the WS-Discovery specifications (WS-Discovery April 2005 or WS-Discovery version 1.1).</span></span> <span data-ttu-id="fb11c-106">您可以指定傳送及接收公告訊息時所使用的多點傳送位址。</span><span class="sxs-lookup"><span data-stu-id="fb11c-106">You can specify the multicast address to use for sending and receiving the announcement messages.</span></span>  
+# <a name="ltudpannoucementendpointgt"></a><span data-ttu-id="36668-102">&lt;udpAnnoucementEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="36668-102">&lt;udpAnnoucementEndpoint&gt;</span></span>
+<span data-ttu-id="36668-103">這個組態項目會定義標準端點，服務會使用此端點透過 UDP 繫結傳送公告訊息。</span><span class="sxs-lookup"><span data-stu-id="36668-103">This configuration element defines a standard endpoint that is used by services to send announcement messages over a UDP binding.</span></span> <span data-ttu-id="36668-104">此端點具備固定合約，而且支援兩種探索版本。</span><span class="sxs-lookup"><span data-stu-id="36668-104">It has a fixed contract and supports two discovery versions.</span></span> <span data-ttu-id="36668-105">此外，它擁有固定的 UDP 繫結和預設位址值，如 WS-Discovery 規格 (WS-Discovery 2005 年 4 月或 WS-Discovery 1.1 版) 中所指定。</span><span class="sxs-lookup"><span data-stu-id="36668-105">In addition it has a fixed UDP binding and a default address value as specified in the WS-Discovery specifications (WS-Discovery April 2005 or WS-Discovery version 1.1).</span></span> <span data-ttu-id="36668-106">您可以指定傳送及接收公告訊息時所使用的多點傳送位址。</span><span class="sxs-lookup"><span data-stu-id="36668-106">You can specify the multicast address to use for sending and receiving the announcement messages.</span></span>  
   
-<span data-ttu-id="fb11c-107">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="fb11c-107">\<system.ServiceModel></span></span>  
-<span data-ttu-id="fb11c-108">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="fb11c-108">\<standardEndpoints></span></span>  
+<span data-ttu-id="36668-107">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="36668-107">\<system.ServiceModel></span></span>  
+<span data-ttu-id="36668-108">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="36668-108">\<standardEndpoints></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fb11c-109">語法</span><span class="sxs-lookup"><span data-stu-id="fb11c-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="36668-109">語法</span><span class="sxs-lookup"><span data-stu-id="36668-109">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -30,32 +30,32 @@ ms.locfileid: "54145818"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fb11c-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="fb11c-110">Attributes and Elements</span></span>  
- <span data-ttu-id="fb11c-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="fb11c-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="36668-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="36668-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="36668-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="36668-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fb11c-112">屬性</span><span class="sxs-lookup"><span data-stu-id="fb11c-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="36668-112">屬性</span><span class="sxs-lookup"><span data-stu-id="36668-112">Attributes</span></span>  
   
-|<span data-ttu-id="fb11c-113">屬性</span><span class="sxs-lookup"><span data-stu-id="fb11c-113">Attribute</span></span>|<span data-ttu-id="fb11c-114">描述</span><span class="sxs-lookup"><span data-stu-id="fb11c-114">Description</span></span>|  
+|<span data-ttu-id="36668-113">屬性</span><span class="sxs-lookup"><span data-stu-id="36668-113">Attribute</span></span>|<span data-ttu-id="36668-114">描述</span><span class="sxs-lookup"><span data-stu-id="36668-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="fb11c-115">discoveryVersion</span><span class="sxs-lookup"><span data-stu-id="fb11c-115">discoveryVersion</span></span>|<span data-ttu-id="fb11c-116">字串，此字串會指定兩個 WS-Discovery 通訊協定版本的其中之一。</span><span class="sxs-lookup"><span data-stu-id="fb11c-116">A string that specifies one of the two versions of WS-Discovery protocol.</span></span> <span data-ttu-id="fb11c-117">有效的值為 WSDiscovery11 和 WSDiscoveryApril2005。</span><span class="sxs-lookup"><span data-stu-id="fb11c-117">Valid values are WSDiscovery11 and WSDiscoveryApril2005.</span></span> <span data-ttu-id="fb11c-118">這個值的型別為 <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>。</span><span class="sxs-lookup"><span data-stu-id="fb11c-118">This value is of type <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.</span></span>|  
-|<span data-ttu-id="fb11c-119">maxAnnouncementDelay</span><span class="sxs-lookup"><span data-stu-id="fb11c-119">maxAnnouncementDelay</span></span>|<span data-ttu-id="fb11c-120">Timespan 值，這個值指定 Discovery 通訊協定傳送 Hello 訊息之前會等候的延遲值上限。</span><span class="sxs-lookup"><span data-stu-id="fb11c-120">A Timespan value that specifies the maximum value for the delay the Discovery protocol will wait before sending a Hello message.</span></span> <span data-ttu-id="fb11c-121">系統會等候一段隨機時間值 (介於 0 和此屬性的值之間)，之後才傳送訊息。</span><span class="sxs-lookup"><span data-stu-id="fb11c-121">The messages will wait for a random time value between 0 and the value of this attribute before being sent.</span></span> <span data-ttu-id="fb11c-122">這個屬性用於設定一小段隨機的延遲，避免網路關閉而所有服務同時再次上線時網路負荷過大。</span><span class="sxs-lookup"><span data-stu-id="fb11c-122">This attribute is used to set a small, random delay to prevent network storms when a network goes out and all services come back online at the same time.</span></span>|  
-|<span data-ttu-id="fb11c-123">multicastAddress</span><span class="sxs-lookup"><span data-stu-id="fb11c-123">multicastAddress</span></span>|<span data-ttu-id="fb11c-124">URI，這個 URI 會指定傳送及接收探索訊息時所使用的多點傳送位址。</span><span class="sxs-lookup"><span data-stu-id="fb11c-124">A URI that specifies a multicast address to use for sending and receiving the discovery messages.</span></span> <span data-ttu-id="fb11c-125">預設值是與通訊協定規格一致的多點傳送位址。</span><span class="sxs-lookup"><span data-stu-id="fb11c-125">The default value is the multicast address as conformant to the protocol specification.</span></span>|  
-|<span data-ttu-id="fb11c-126">name</span><span class="sxs-lookup"><span data-stu-id="fb11c-126">name</span></span>|<span data-ttu-id="fb11c-127">字串，這個字串會指定標準端點之組態的名稱。</span><span class="sxs-lookup"><span data-stu-id="fb11c-127">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="fb11c-128">這個名稱用於服務端點的 `endpointConfiguration` 屬性中，可將標準端點連結至其組態。</span><span class="sxs-lookup"><span data-stu-id="fb11c-128">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
+|<span data-ttu-id="36668-115">discoveryVersion</span><span class="sxs-lookup"><span data-stu-id="36668-115">discoveryVersion</span></span>|<span data-ttu-id="36668-116">字串，此字串會指定兩個 WS-Discovery 通訊協定版本的其中之一。</span><span class="sxs-lookup"><span data-stu-id="36668-116">A string that specifies one of the two versions of WS-Discovery protocol.</span></span> <span data-ttu-id="36668-117">有效的值為 WSDiscovery11 和 WSDiscoveryApril2005。</span><span class="sxs-lookup"><span data-stu-id="36668-117">Valid values are WSDiscovery11 and WSDiscoveryApril2005.</span></span> <span data-ttu-id="36668-118">這個值的型別為 <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>。</span><span class="sxs-lookup"><span data-stu-id="36668-118">This value is of type <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.</span></span>|  
+|<span data-ttu-id="36668-119">maxAnnouncementDelay</span><span class="sxs-lookup"><span data-stu-id="36668-119">maxAnnouncementDelay</span></span>|<span data-ttu-id="36668-120">Timespan 值，這個值指定 Discovery 通訊協定傳送 Hello 訊息之前會等候的延遲值上限。</span><span class="sxs-lookup"><span data-stu-id="36668-120">A Timespan value that specifies the maximum value for the delay the Discovery protocol will wait before sending a Hello message.</span></span> <span data-ttu-id="36668-121">系統會等候一段隨機時間值 (介於 0 和此屬性的值之間)，之後才傳送訊息。</span><span class="sxs-lookup"><span data-stu-id="36668-121">The messages will wait for a random time value between 0 and the value of this attribute before being sent.</span></span> <span data-ttu-id="36668-122">這個屬性用於設定一小段隨機的延遲，避免網路關閉而所有服務同時再次上線時網路負荷過大。</span><span class="sxs-lookup"><span data-stu-id="36668-122">This attribute is used to set a small, random delay to prevent network storms when a network goes out and all services come back online at the same time.</span></span>|  
+|<span data-ttu-id="36668-123">multicastAddress</span><span class="sxs-lookup"><span data-stu-id="36668-123">multicastAddress</span></span>|<span data-ttu-id="36668-124">URI，這個 URI 會指定傳送及接收探索訊息時所使用的多點傳送位址。</span><span class="sxs-lookup"><span data-stu-id="36668-124">A URI that specifies a multicast address to use for sending and receiving the discovery messages.</span></span> <span data-ttu-id="36668-125">預設值是與通訊協定規格一致的多點傳送位址。</span><span class="sxs-lookup"><span data-stu-id="36668-125">The default value is the multicast address as conformant to the protocol specification.</span></span>|  
+|<span data-ttu-id="36668-126">name</span><span class="sxs-lookup"><span data-stu-id="36668-126">name</span></span>|<span data-ttu-id="36668-127">字串，這個字串會指定標準端點之組態的名稱。</span><span class="sxs-lookup"><span data-stu-id="36668-127">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="36668-128">這個名稱用於服務端點的 `endpointConfiguration` 屬性中，可將標準端點連結至其組態。</span><span class="sxs-lookup"><span data-stu-id="36668-128">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="fb11c-129">子元素</span><span class="sxs-lookup"><span data-stu-id="fb11c-129">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="36668-129">子元素</span><span class="sxs-lookup"><span data-stu-id="36668-129">Child Elements</span></span>  
   
-|<span data-ttu-id="fb11c-130">項目</span><span class="sxs-lookup"><span data-stu-id="fb11c-130">Element</span></span>|<span data-ttu-id="fb11c-131">描述</span><span class="sxs-lookup"><span data-stu-id="fb11c-131">Description</span></span>|  
+|<span data-ttu-id="36668-130">項目</span><span class="sxs-lookup"><span data-stu-id="36668-130">Element</span></span>|<span data-ttu-id="36668-131">描述</span><span class="sxs-lookup"><span data-stu-id="36668-131">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fb11c-132">\<Udpannouncementendpoint ></span><span class="sxs-lookup"><span data-stu-id="fb11c-132">\<udpTransportSettings></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|<span data-ttu-id="fb11c-133">設定的集合，可讓您設定 UDP 端點的 UDP 傳輸。</span><span class="sxs-lookup"><span data-stu-id="fb11c-133">A collection of settings that allow you to configure UDP transport for the UDP endpoint.</span></span>|  
+|[<span data-ttu-id="36668-132">\<udpTransportSettings></span><span class="sxs-lookup"><span data-stu-id="36668-132">\<udpTransportSettings></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|<span data-ttu-id="36668-133">設定的集合，可讓您設定 UDP 端點的 UDP 傳輸。</span><span class="sxs-lookup"><span data-stu-id="36668-133">A collection of settings that allow you to configure UDP transport for the UDP endpoint.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="fb11c-134">父項目</span><span class="sxs-lookup"><span data-stu-id="fb11c-134">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="36668-134">父項目</span><span class="sxs-lookup"><span data-stu-id="36668-134">Parent Elements</span></span>  
   
-|<span data-ttu-id="fb11c-135">項目</span><span class="sxs-lookup"><span data-stu-id="fb11c-135">Element</span></span>|<span data-ttu-id="fb11c-136">描述</span><span class="sxs-lookup"><span data-stu-id="fb11c-136">Description</span></span>|  
+|<span data-ttu-id="36668-135">項目</span><span class="sxs-lookup"><span data-stu-id="36668-135">Element</span></span>|<span data-ttu-id="36668-136">描述</span><span class="sxs-lookup"><span data-stu-id="36668-136">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fb11c-137">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="fb11c-137">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="fb11c-138">標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。</span><span class="sxs-lookup"><span data-stu-id="fb11c-138">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[<span data-ttu-id="36668-137">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="36668-137">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="36668-138">標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。</span><span class="sxs-lookup"><span data-stu-id="36668-138">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="fb11c-139">範例</span><span class="sxs-lookup"><span data-stu-id="fb11c-139">Example</span></span>  
- <span data-ttu-id="fb11c-140">下列範例示範透過具預設多點傳送位址的 UDP 多點傳送傳輸與具指定多點傳送位址的 UDP 多點傳送傳輸接聽公告的用戶端。</span><span class="sxs-lookup"><span data-stu-id="fb11c-140">The following example demonstrates a client listening for announcement over a UDP multicast transport with default multicast address, and UDP multicast transport with specified multicast address.</span></span>  
+## <a name="example"></a><span data-ttu-id="36668-139">範例</span><span class="sxs-lookup"><span data-stu-id="36668-139">Example</span></span>  
+ <span data-ttu-id="36668-140">下列範例示範透過具預設多點傳送位址的 UDP 多點傳送傳輸與具指定多點傳送位址的 UDP 多點傳送傳輸接聽公告的用戶端。</span><span class="sxs-lookup"><span data-stu-id="36668-140">The following example demonstrates a client listening for announcement over a UDP multicast transport with default multicast address, and UDP multicast transport with specified multicast address.</span></span>  
   
 ```xml  
 <services>
@@ -79,5 +79,5 @@ ms.locfileid: "54145818"
 </standardEndpoints>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fb11c-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fb11c-141">See Also</span></span>  
- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>
+## <a name="see-also"></a><span data-ttu-id="36668-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="36668-141">See also</span></span>
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>

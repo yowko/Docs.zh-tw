@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 0a1be35a37a9f3d0fa94d13f5bc50df213bd1775
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f663cd95c979ec9f2b81ccf173b4418321228f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570521"
 ---
-# <a name="transformations"></a><span data-ttu-id="938da-102">轉換</span><span class="sxs-lookup"><span data-stu-id="938da-102">Transformations</span></span>
-<span data-ttu-id="938da-103">轉型可用來旋轉、 縮放、 轉譯，或扭曲<xref:System.Windows.FrameworkElement>物件。</span><span class="sxs-lookup"><span data-stu-id="938da-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="b4980-102">轉換</span><span class="sxs-lookup"><span data-stu-id="b4980-102">Transformations</span></span>
+<span data-ttu-id="b4980-103">轉換用來旋轉、 縮放、 轉譯，或扭曲<xref:System.Windows.FrameworkElement>物件。</span><span class="sxs-lookup"><span data-stu-id="b4980-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="938da-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="938da-104">In This Section</span></span>  
- [<span data-ttu-id="938da-105">轉換概觀</span><span class="sxs-lookup"><span data-stu-id="938da-105">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [<span data-ttu-id="938da-106">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="938da-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b4980-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="b4980-104">In This Section</span></span>  
+ [<span data-ttu-id="b4980-105">轉換概觀</span><span class="sxs-lookup"><span data-stu-id="b4980-105">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="b4980-106">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="b4980-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="938da-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="938da-107">See Also</span></span>  
- <xref:System.Windows.Media.Transform>  
- [<span data-ttu-id="938da-108">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="938da-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="938da-109">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="938da-109">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="938da-110">版面配置</span><span class="sxs-lookup"><span data-stu-id="938da-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="b4980-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b4980-107">See also</span></span>
+- <xref:System.Windows.Media.Transform>
+- [<span data-ttu-id="b4980-108">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="b4980-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="b4980-109">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="b4980-109">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="b4980-110">版面配置</span><span class="sxs-lookup"><span data-stu-id="b4980-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)

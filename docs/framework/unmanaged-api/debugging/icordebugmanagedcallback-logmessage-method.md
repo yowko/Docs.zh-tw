@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4c8494b1ffc80fc49acce01c5de0b3fd18c0f5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 61a8d3e4a343818918e140727d3770ba3e82aac8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574686"
 ---
-# <a name="icordebugmanagedcallbacklogmessage-method"></a><span data-ttu-id="0e6e5-102">ICorDebugManagedCallback::LogMessage 方法</span><span class="sxs-lookup"><span data-stu-id="0e6e5-102">ICorDebugManagedCallback::LogMessage Method</span></span>
-<span data-ttu-id="0e6e5-103">告知偵錯工具中的通用語言執行平台 (CLR) managed 執行緒已呼叫方法<xref:System.Diagnostics.EventLog>記錄事件的類別。</span><span class="sxs-lookup"><span data-stu-id="0e6e5-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.EventLog> class to log an event.</span></span>  
+# <a name="icordebugmanagedcallbacklogmessage-method"></a><span data-ttu-id="f7c8f-102">ICorDebugManagedCallback::LogMessage 方法</span><span class="sxs-lookup"><span data-stu-id="f7c8f-102">ICorDebugManagedCallback::LogMessage Method</span></span>
+<span data-ttu-id="f7c8f-103">通用語言執行平台 (CLR) managed 執行緒已呼叫方法，偵錯工具會告知<xref:System.Diagnostics.EventLog>記錄事件的類別。</span><span class="sxs-lookup"><span data-stu-id="f7c8f-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.EventLog> class to log an event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e6e5-104">語法</span><span class="sxs-lookup"><span data-stu-id="0e6e5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f7c8f-104">語法</span><span class="sxs-lookup"><span data-stu-id="f7c8f-104">Syntax</span></span>  
   
 ```  
 HRESULT LogMessage (  
@@ -39,30 +39,30 @@ HRESULT LogMessage (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0e6e5-105">參數</span><span class="sxs-lookup"><span data-stu-id="0e6e5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f7c8f-105">參數</span><span class="sxs-lookup"><span data-stu-id="f7c8f-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="0e6e5-106">[in]表示包含 managed 的執行緒記錄事件的應用程式網域的 ICorDebugAppDomain 物件指標。</span><span class="sxs-lookup"><span data-stu-id="0e6e5-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that logged the event.</span></span>  
+ <span data-ttu-id="f7c8f-106">[in]表示包含 managed 的執行緒記錄事件的應用程式網域的 ICorDebugAppDomain 物件指標。</span><span class="sxs-lookup"><span data-stu-id="f7c8f-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that logged the event.</span></span>  
   
  `pThread`  
- <span data-ttu-id="0e6e5-107">[in]表示 managed 的執行緒的 ICorDebugThread 物件指標。</span><span class="sxs-lookup"><span data-stu-id="0e6e5-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
+ <span data-ttu-id="f7c8f-107">[in]ICorDebugThread 物件，表示 managed 的執行緒指標。</span><span class="sxs-lookup"><span data-stu-id="f7c8f-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
   
  `lLevel`  
- <span data-ttu-id="0e6e5-108">[in]值為[LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)列舉，指出已寫入事件記錄檔的描述訊息的嚴重性層級。</span><span class="sxs-lookup"><span data-stu-id="0e6e5-108">[in] A value of the [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) enumeration that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
+ <span data-ttu-id="f7c8f-108">[in]值為[LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)列舉，指出已寫入事件記錄檔的描述訊息的嚴重性層級。</span><span class="sxs-lookup"><span data-stu-id="f7c8f-108">[in] A value of the [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) enumeration that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
   
  `pLogSwitchName`  
- <span data-ttu-id="0e6e5-109">[in]追蹤參數的名稱指標。</span><span class="sxs-lookup"><span data-stu-id="0e6e5-109">[in] A pointer to the name of the tracing switch.</span></span>  
+ <span data-ttu-id="f7c8f-109">[in]追蹤參數的名稱指標。</span><span class="sxs-lookup"><span data-stu-id="f7c8f-109">[in] A pointer to the name of the tracing switch.</span></span>  
   
  `pMessage`  
- <span data-ttu-id="0e6e5-110">[in]指標，寫入事件記錄檔訊息。</span><span class="sxs-lookup"><span data-stu-id="0e6e5-110">[in] A pointer to the message that was written to the event log.</span></span>  
+ <span data-ttu-id="f7c8f-110">[in]已寫入事件記錄檔訊息指標。</span><span class="sxs-lookup"><span data-stu-id="f7c8f-110">[in] A pointer to the message that was written to the event log.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0e6e5-111">需求</span><span class="sxs-lookup"><span data-stu-id="0e6e5-111">Requirements</span></span>  
- <span data-ttu-id="0e6e5-112">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0e6e5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f7c8f-111">需求</span><span class="sxs-lookup"><span data-stu-id="f7c8f-111">Requirements</span></span>  
+ <span data-ttu-id="f7c8f-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f7c8f-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0e6e5-113">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0e6e5-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f7c8f-113">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f7c8f-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0e6e5-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0e6e5-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f7c8f-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f7c8f-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0e6e5-115">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0e6e5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f7c8f-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7c8f-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e6e5-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0e6e5-116">See Also</span></span>  
- [<span data-ttu-id="0e6e5-117">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="0e6e5-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f7c8f-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f7c8f-116">See also</span></span>
+- [<span data-ttu-id="f7c8f-117">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="f7c8f-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

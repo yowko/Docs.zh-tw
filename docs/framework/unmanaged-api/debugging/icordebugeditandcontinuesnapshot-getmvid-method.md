@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEditAndContinueSnapshot::GetMvid 方法"
-ms.custom: 
+title: ICorDebugEditAndContinueSnapshot::GetMvid 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEditAndContinueSnapshot.GetMvid
 api_location:
@@ -23,20 +15,17 @@ helpviewer_keywords:
 ms.assetid: d7e916a6-1c39-4676-972d-da3d8546044b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 973feab63d0a741fddb8cc96e1d48e1ae5a33892
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f912ec38f0407f9e2758f231fd43d895b5cdfcb3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583396"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="95079-102">ICorDebugEditAndContinueSnapshot::GetMvid 方法</span><span class="sxs-lookup"><span data-stu-id="95079-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
-<span data-ttu-id="95079-103">`GetMvid` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="95079-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="95079-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="95079-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="7d83d-102">ICorDebugEditAndContinueSnapshot::GetMvid 方法</span><span class="sxs-lookup"><span data-stu-id="7d83d-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
+<span data-ttu-id="7d83d-103">`GetMvid` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="7d83d-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="7d83d-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="7d83d-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95079-105">請參閱</span><span class="sxs-lookup"><span data-stu-id="95079-105">See Also</span></span>  
- [<span data-ttu-id="95079-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="95079-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="7d83d-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7d83d-105">See also</span></span>
+- [<span data-ttu-id="7d83d-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="7d83d-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

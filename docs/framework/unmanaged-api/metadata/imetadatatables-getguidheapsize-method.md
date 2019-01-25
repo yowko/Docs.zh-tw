@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97d196769b549022ce498958fc34cf08df442d0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7f9a7ddb85865545698809e1865ec571f7c5e9c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674215"
 ---
-# <a name="imetadatatablesgetguidheapsize-method"></a><span data-ttu-id="4f77e-102">IMetaDataTables::GetGuidHeapSize 方法</span><span class="sxs-lookup"><span data-stu-id="4f77e-102">IMetaDataTables::GetGuidHeapSize Method</span></span>
-<span data-ttu-id="4f77e-103">取得以位元組為單位 GUID 堆積的大小。</span><span class="sxs-lookup"><span data-stu-id="4f77e-103">Gets the size, in bytes, of the GUID heap.</span></span>  
+# <a name="imetadatatablesgetguidheapsize-method"></a><span data-ttu-id="01f6d-102">IMetaDataTables::GetGuidHeapSize 方法</span><span class="sxs-lookup"><span data-stu-id="01f6d-102">IMetaDataTables::GetGuidHeapSize Method</span></span>
+<span data-ttu-id="01f6d-103">取得大小，以位元組為單位，GUID 堆積。</span><span class="sxs-lookup"><span data-stu-id="01f6d-103">Gets the size, in bytes, of the GUID heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4f77e-104">語法</span><span class="sxs-lookup"><span data-stu-id="4f77e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01f6d-104">語法</span><span class="sxs-lookup"><span data-stu-id="01f6d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGuidHeapSize (  
@@ -35,19 +35,19 @@ HRESULT GetGuidHeapSize (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4f77e-105">參數</span><span class="sxs-lookup"><span data-stu-id="4f77e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="01f6d-105">參數</span><span class="sxs-lookup"><span data-stu-id="01f6d-105">Parameters</span></span>  
  `pcbGuids`  
- <span data-ttu-id="4f77e-106">[out]大小，以位元組為單位 GUID 堆積的指標。</span><span class="sxs-lookup"><span data-stu-id="4f77e-106">[out] A pointer to the size, in bytes, of the GUID heap.</span></span>  
+ <span data-ttu-id="01f6d-106">[out]大小 （位元組），GUID 堆積的指標。</span><span class="sxs-lookup"><span data-stu-id="01f6d-106">[out] A pointer to the size, in bytes, of the GUID heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4f77e-107">需求</span><span class="sxs-lookup"><span data-stu-id="4f77e-107">Requirements</span></span>  
- <span data-ttu-id="4f77e-108">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4f77e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01f6d-107">需求</span><span class="sxs-lookup"><span data-stu-id="01f6d-107">Requirements</span></span>  
+ <span data-ttu-id="01f6d-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="01f6d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4f77e-109">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4f77e-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="01f6d-109">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="01f6d-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4f77e-110">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="4f77e-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="01f6d-110">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="01f6d-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4f77e-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f77e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="01f6d-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01f6d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4f77e-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4f77e-112">See Also</span></span>  
- [<span data-ttu-id="4f77e-113">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="4f77e-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="4f77e-114">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="4f77e-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="01f6d-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="01f6d-112">See also</span></span>
+- [<span data-ttu-id="01f6d-113">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="01f6d-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="01f6d-114">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="01f6d-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
