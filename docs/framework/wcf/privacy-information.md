@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683961"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隱私權資訊
 Microsoft 一向致力於保護終端使用者的隱私權。 當您建置的應用程式使用 Windows Communication Foundation (WCF) 3.0 版，您的應用程式可能會影響到使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 WCF 不會傳送任何資訊給 Microsoft 從您的應用程式除非您本人或使用者選擇要傳送給我們。  
@@ -95,7 +95,7 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置的應
 ### <a name="tracing"></a>追蹤  
  WCF 基礎結構的診斷功能會記錄透過傳輸和服務模型層，和活動以及這些訊息相關聯的事件傳遞的訊息。 根據預設，這個功能是關閉的。 啟用使用應用程式的組態檔，且可能在執行階段使用的 WCF WMI 提供者修改追蹤行為。 啟用此功能時，追蹤基礎結構會將包含訊息、活動和處理事件的診斷追蹤，發送至已設定的接聽項。 輸出的格式和位置是由系統管理員的接聽程式組態選項來決定，不過通常會是 XML 格式的檔案。 系統管理員要負責設定追蹤檔上的存取控制清單 (ACL)。 由 Windows Activation System (WAS) 裝載時，系統管理員更應該確定在非必須的情況下，不是從公開的虛擬根目錄使用檔案。  
   
- 追蹤的類型有兩種：訊息記錄和服務模型診斷追蹤，分別會在下節中描述。 這兩個類型的追蹤也可透過本身的追蹤來源進行設定：<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 和 <xref:System.ServiceModel>。 這些記錄追蹤來源都會擷取對應用程式而言為本機的資料。  
+ 有兩種類型的追蹤：訊息記錄和診斷的服務模型追蹤，在下一節中所述。 這兩個類型的追蹤也可透過本身的追蹤來源進行設定：<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 和 <xref:System.ServiceModel>。 這些記錄追蹤來源都會擷取對應用程式而言為本機的資料。  
   
 ### <a name="message-logging"></a>訊息記錄  
  訊息記錄追蹤來源 (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) 可讓系統管理員記錄在系統來回傳送的訊息。 透過組態，使用者可以決定要記錄整個訊息或僅記錄訊息標頭、是否要在傳輸層及 (或) 服務模型層記錄，以及是否包含格式不正確的訊息。 此外，使用者也可以設定篩選以限制要記錄的訊息。  
@@ -167,11 +167,11 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置的應
   
  \<AudienceRestrictionCondition>  
   
- \<對象 > [uri]\</Audience > +  
+ \<Audience>[uri]\</Audience>+  
   
  \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition / > *  
+ \<DoNotCacheCondition />*  
   
  <\!-抽象基底型別  
   
@@ -185,7 +185,7 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置的應
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<判斷提示 > [判斷提示]\</Assertion > *  
+ \<Assertion>[assertion]\</Assertion>*  
   
  [any]*  
   
@@ -195,9 +195,9 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置的應
   
  \<陳述式 / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
- \<主旨 >  
+ \<Subject>  
   
  `<NameIdentifier`  
   
@@ -213,17 +213,17 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置的應
   
  \<SubjectConfirmation>  
   
- \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
+ \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
  \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
- \<ds: keyinfo >...\</ds:KeyInfo > 嗎？  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</ SubjectConfirmation > 嗎？  
+ \</SubjectConfirmation>?  
   
  \</Subject>  
   
- \</ SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
@@ -255,9 +255,9 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置的應
   
  />*  
   
- \</ AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- \<AttributeStatement >  
+ \<AttributeStatement>  
   
  [主旨]  
   
@@ -273,7 +273,7 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置的應
   
  \</ 屬性 > +  
   
- \</ AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
@@ -291,7 +291,7 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置的應
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<判斷提示 > [判斷提示]\</Assertion > +  
+ \<Assertion>[assertion]\</Assertion>+  
   
  \</ 辨識項 > 嗎？  
   
@@ -401,6 +401,6 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置的應
   
  Web 服務描述語言 (WSDL) 中包含了連接埠定義。 每個連接埠都有端點位址，以及表示應用程式所使用服務的繫結。 您可以透過組態決定是否公開 WSDL。 在電腦上不會保留任何資訊。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
- [安全性](../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>另請參閱
+- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [安全性](../../../docs/framework/wcf/feature-details/security.md)

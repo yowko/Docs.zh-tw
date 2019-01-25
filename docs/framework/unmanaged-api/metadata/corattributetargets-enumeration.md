@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54d239c3091b29424b26fbab4cb4eb9152ff9ad9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 416c7787e7e68ea0c6864091e92d92fed1a60bf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650115"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 列舉
 指定有效套用屬性的應用程式項目。  
@@ -64,34 +64,34 @@ typedef enum CorAttributeTargets
   
 |成員|描述|  
 |------------|-----------------|  
-|`catAssembly`|屬性可以套用至組件中。|  
-|`catModule`|屬性可以套用至可攜式執行檔 （.dll 或.exe） 模組。|  
+|`catAssembly`|屬性可以套用至組件。|  
+|`catModule`|屬性可以套用至可攜式可執行檔 （.dll 或.exe） 模組。|  
 |`catClass`|屬性可以套用至類別。|  
-|`catStruct`|屬性可以套用至結構。也就是說，類型的值。|  
-|`catEnum`|屬性可以套用至列舉。|  
+|`catStruct`|屬性可以套用至結構;也就是類型的值。|  
+|`catEnum`|屬性可以套用至列舉型別。|  
 |`catConstructor`|屬性可以套用至建構函式。|  
 |`catMethod`|屬性可以套用至方法。|  
 |`catProperty`|屬性可以套用至屬性。|  
 |`catField`|屬性可以套用至欄位。|  
-|`catEvent`|屬性可以套用到的事件。|  
+|`catEvent`|屬性可以套用至事件。|  
 |`catInterface`|屬性可以套用至介面。|  
 |`catParameter`|屬性可以套用至參數。|  
-|`catDelegate`|屬性可以套用的委派。|  
+|`catDelegate`|屬性可以套用至委派。|  
 |`catGenericParameter`|屬性可以套用至泛型參數。|  
 |`catAll`|屬性可以套用至任何應用程式項目。|  
 |`catClassMembers`|屬性可以套用至類別的成員。|  
   
 ## <a name="remarks"></a>備註  
- `CorAttributeTargets`列舉值可以與慣用的組合，將位元 OR 運算結合。  
+ `CorAttributeTargets`列舉值可以結合位元的 OR 運算，若要取得慣用的組合。  
   
- `CorAttributeTargets`與 managed<xref:System.AttributeTargets?displayProperty=nameWithType>列舉型別。  
+ `CorAttributeTargets`平行 managed<xref:System.AttributeTargets?displayProperty=nameWithType>列舉型別。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

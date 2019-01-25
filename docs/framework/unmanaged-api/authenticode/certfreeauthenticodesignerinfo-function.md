@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 8029633c-b6e4-4665-a7c2-89607c3247ef
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84f15dc49d14e781f69d0f9da8f314eb71d8c034
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4282be8e57c965e14398a9284002b1191c5169fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401612"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708034"
 ---
 # <a name="certfreeauthenticodesignerinfo-function"></a>CertFreeAuthenticodeSignerInfo 函式
 釋出配置給資源[AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)結構。  
@@ -34,5 +34,5 @@ HRESULT CertFreeAuthenticodeSignerInfo (
 ## <a name="return-value"></a>傳回值  
  若函式成功則傳回 `S_OK`。 反之則傳回錯誤碼。  
   
-## <a name="see-also"></a>另請參閱  
- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>另請參閱
+- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

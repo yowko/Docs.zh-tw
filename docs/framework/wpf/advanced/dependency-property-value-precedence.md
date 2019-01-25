@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 25dfe63a65c3044837beb26ec6c4eaa772c1df1b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ad5bd74388ab1d4a20e496271fd992b1562587d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696783"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711271"
 ---
 # <a name="dependency-property-value-precedence"></a>相依性屬性值優先順序
 <a name="introduction"></a> 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的運作方式如何影響相依性屬性的值，並描述屬性系統套用到屬性有效值的優先順序。  
@@ -126,9 +126,9 @@ ms.locfileid: "46696783"
 ## <a name="clearvalue-and-value-precedence"></a>ClearValue 和值優先順序  
  <xref:System.Windows.DependencyObject.ClearValue%2A>方法可快速清除任何在本機套用的值，從 設定項目的相依性屬性。 不過，呼叫<xref:System.Windows.DependencyObject.ClearValue%2A>並不保證在屬性註冊期間於中繼資料建立的預設值是新的有效值。 值優先順序中的所有其他參與者仍在作用中。 只有在本機設定的值會從優先順序移除。 例如，如果您呼叫<xref:System.Windows.DependencyObject.ClearValue%2A>上的屬性，其中該屬性也會設定由佈景主題樣式，則會套用主題值做為新的值，而不是中繼資料為基礎的預設值。 如果您想要取得跨處理序的所有屬性值參與者，並將值設定為 已註冊的中繼資料預設值，您可以取得預設值，肯定是藉由查詢相依性屬性中繼資料，然後您可以在本機使用的預設值設定的屬性，藉由呼叫<xref:System.Windows.DependencyObject.SetValue%2A>。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.DependencyObject>  
- <xref:System.Windows.DependencyProperty>  
- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [相依性屬性回呼和驗證](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.DependencyObject>
+- <xref:System.Windows.DependencyProperty>
+- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [相依性屬性回呼和驗證](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)

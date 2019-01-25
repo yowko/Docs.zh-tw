@@ -3044,12 +3044,12 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: a3af5e519b263b5b151640ac9c3d0576905eddb9
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 5eb00854f27a195ac3121aea16e2889897e6ef3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53781735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667657"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>很抱歉，我們沒有此 Visual Basic 錯誤的相關細節
 很抱歉，我們沒有任何有關此錯誤的特定資訊。 您可以搜尋錯誤號碼與訊息文字，以在網路上尋找資訊。 或者，您可以要求其他開發人員使用這些論壇的其中一個：  
@@ -3072,6 +3072,6 @@ ms.locfileid: "53781735"
  另請參閱：  
  [Visual Basic 程式設計人員的其他資源](../../visual-basic/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 程式設計手冊](../../visual-basic/programming-guide/index.md)  
- [Visual Basic 參考](../../visual-basic/reference/index.md)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 程式設計手冊](../../visual-basic/programming-guide/index.md)
+- [Visual Basic 參考](../../visual-basic/reference/index.md)

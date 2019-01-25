@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 832d66eee14680870e70f1e0e8d40987eff3257f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6bcbae7b5de54bd2134adbbdee1986c4e1dfae3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667007"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW 函式
-取得指定的組件檔案，使用指定的雜湊演算法的雜湊。 組件檔案的路徑必須指定為 Unicode 字串。  
+使用指定的雜湊演算法取得所指定組件檔案的雜湊。 組件檔案的路徑必須指定為 Unicode 字串。  
   
  此函式已被取代。 使用[iclrstrongname:: Gethashfromassemblyfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)方法改為。  
   
@@ -48,24 +48,24 @@ HRESULT GetHashFromAssemblyFileW (
  [in、 out]常數，指定的雜湊演算法。 使用預設雜湊演算法的零。  
   
  `pbHash`  
- [out]傳回雜湊緩衝區。  
+ [out]傳回的雜湊緩衝區。  
   
  `cchHash`  
- [in]要求的大小上限的`pbHash`。  
+ [in]要求的最大大小的`pbHash`。  
   
  `pchHash`  
- [out]傳回的大小，以位元組為單位， `pbHash`。  
+ [out]傳回大小，以位元組為單位， `pbHash`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** StrongName.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [GetHashFromAssemblyFileW 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)  
- [GetHashFromAssemblyFile 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)  
- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>另請參閱
+- [GetHashFromAssemblyFileW 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [GetHashFromAssemblyFile 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

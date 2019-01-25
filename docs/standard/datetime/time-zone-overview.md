@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0eb24c7c4f2c60a9c16d903ab1e845b058e280f7
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: e5fa4376cdb0496cfd25f4764257c4f3afbc7268
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697045"
 ---
 # <a name="time-zone-overview"></a>時區概觀
 
@@ -59,7 +59,7 @@ ms.locfileid: "46539300"
 
 相依性<xref:System.TimeZoneInfo>上登錄類別表示時區感知的應用程式不能是某些特定的時區定義在登錄中。 因此，嘗試具現化特定時區 (非當地時區或代表 UTC 的時區) 應該使用例外狀況處理。 它也應該提供一些方法，讓應用程式繼續如果所需的<xref:System.TimeZoneInfo>物件無法從登錄具現化。
 
-若要處理所需的時區，缺乏<xref:System.TimeZoneInfo>類別包含<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法，可用來建立登錄中找不到的自訂時區。 如需建立自訂時區的詳細資訊，請參閱 <<c0> [ 如何： 建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)並[如何： 建立有調整規則的時區](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)。 此外，您可以使用<xref:System.TimeZoneInfo.ToSerializedString%2A>方法來將新建立的時區轉換為字串，並將它儲存在資料存放區 （例如資料庫、 文字檔、 登錄或應用程式資源）。 然後您可以使用<xref:System.TimeZoneInfo.FromSerializedString%2A>方法，以將此字串轉換回<xref:System.TimeZoneInfo>物件。 如需詳細資訊，請參閱 <<c0> [ 如何： 將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)並[如何： 從內嵌資源還原時區](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。
+若要處理所需的時區，缺乏<xref:System.TimeZoneInfo>類別包含<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法，可用來建立登錄中找不到的自訂時區。 如需建立自訂時區的詳細資訊，請參閱[How to:建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)和[How to:建立有調整規則的時區](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)。 此外，您可以使用<xref:System.TimeZoneInfo.ToSerializedString%2A>方法來將新建立的時區轉換為字串，並將它儲存在資料存放區 （例如資料庫、 文字檔、 登錄或應用程式資源）。 然後您可以使用<xref:System.TimeZoneInfo.FromSerializedString%2A>方法，以將此字串轉換回<xref:System.TimeZoneInfo>物件。 如需詳細資訊，請參閱[How to:將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)和[How to:從內嵌資源還原時區](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。
 
 因為每個時區都會具備與 UTC 的基底位移，以及具備反映任何現有調整規則之與 UTC 的位移，所以某個時區的時間可以輕鬆地轉換為另一個時區的時間。 基於此目的，<xref:System.TimeZoneInfo>物件包含數種轉換方法，包括：
 
@@ -75,4 +75,4 @@ ms.locfileid: "46539300"
 
 ## <a name="see-also"></a>另請參閱
 
-* [日期、時間和時區](../../../docs/standard/datetime/index.md)
+- [日期、時間和時區](../../../docs/standard/datetime/index.md)

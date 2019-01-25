@@ -1,5 +1,5 @@
 ---
-title: 如何：處理 Windows Forms 控制項中的使用者輸入事件
+title: HOW TO：處理 Windows Form 控制項中的使用者輸入的事件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, user input
 - user input [Windows Forms], Windows Forms controls
 ms.assetid: 3de74dcf-fae3-42d0-92b5-bc04a61a6888
-ms.openlocfilehash: 3b15edfec25282d5a0b79ef48cabd2a27c694055
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ae4a6f7087c82be6531a91980e2fee0108298a46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003618"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738705"
 ---
-# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>如何：處理 Windows Forms 控制項中的使用者輸入事件
+# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>HOW TO：處理 Windows Form 控制項中的使用者輸入的事件
 此範例示範如何處理 Windows Form 控制項中可能發生的大部分鍵盤、滑鼠、焦點和驗證事件。 名為 `TextBoxInput` 的文字方塊中有焦點時，會接收那些事件，而每個事件的相關資訊，會依據事件引發的順序，寫入名為 `TextBoxOutput` 的文字方塊中。 應用程式中也包含一組核取方塊，可用來篩選所要報告的事件。  
   
 ## <a name="example"></a>範例  
@@ -29,7 +29,7 @@ ms.locfileid: "46003618"
   
 -   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[How to:編譯並執行完整的 Windows Form 程式碼範例使用 Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Forms 中的使用者輸入](../../../docs/framework/winforms/user-input-in-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- [Windows Forms 中的使用者輸入](../../../docs/framework/winforms/user-input-in-windows-forms.md)

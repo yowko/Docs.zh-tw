@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fef23f2b128b1e5393c5104b6e33758882b34882
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a324dc07d450a7ca8992ab3a16f064233692581
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711625"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a>ICorDebugModule::GetMetaDataInterface 方法
-取得可以用來檢查模組的中繼資料的中繼資料介面物件。  
+取得可用來檢查模組的中繼資料的中繼資料介面物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,19 +41,19 @@ HRESULT GetMetaDataInterface (
  [in]指定的中繼資料介面的參考識別碼。  
   
  `ppObj`  
- [out]位址指標`T:IUnknown`物件的其中一個[中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)。  
+ [out]位址指標`T:IUnknown`物件，其中[中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)。  
   
 ## <a name="remarks"></a>備註  
- 偵錯工具可以使用`GetMetaDataInterface`方法來建立模組，則必須執行才能編輯該模組的原始中繼資料的副本。 偵錯工具呼叫`GetMetaDataInterface`取得[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)介面物件模組，然後呼叫[imetadataemit:: Savetomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md)模組的中繼資料的副本儲存至記憶體。  
+ 偵錯工具可以使用`GetMetaDataInterface`方法來建立一份模組，它必須執行才能編輯該模組的原始中繼資料。 偵錯工具呼叫`GetMetaDataInterface`以取得[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)介面物件模組，然後呼叫[imetadataemit:: Savetomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md)到模組的中繼資料的副本儲存到記憶體。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料](../../../../docs/framework/unmanaged-api/metadata/index.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料](../../../../docs/framework/unmanaged-api/metadata/index.md)

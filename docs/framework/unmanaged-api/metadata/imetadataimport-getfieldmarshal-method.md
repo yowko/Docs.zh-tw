@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 837b2142e200e224fe32c2c673be0f317633452a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3bc90a17a0469cd716c1e3e990b5c0fb2ff8bf5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647567"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal 方法
-取得指定的欄位中繼資料語彙基元所代表欄位的原生 unmanaged 類型指標。  
+取得指定的欄位中繼資料語彙基元所表示之欄位的原生、 unmanaged 類型的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,23 +39,23 @@ HRESULT GetFieldMarshal (
   
 #### <a name="parameters"></a>參數  
  `tk`  
- [in]代表要取得 interop 封送處理資訊的欄位中繼資料語彙基元。  
+ [in]表示要取得 interop 封送處理資訊之欄位的中繼資料語彙基元。  
   
  `ppvNativeType`  
- [out]中繼資料簽章之欄位的原生類型的指標。  
+ [out]中繼資料簽章欄位的原生類型的指標。  
   
  `pcbNativeType`  
  [out]以位元組為單位的大小`ppvNativeType`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

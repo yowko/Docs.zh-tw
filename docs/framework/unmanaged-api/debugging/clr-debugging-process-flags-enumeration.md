@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dff6b245c80050a5e85561b8bba6aa9ba8199ba8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 609bb050bb9c5addb5250f65a059a70d3ce32428
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662240"
 ---
 # <a name="clrdebuggingprocessflags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS 列舉
 提供值，可供[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法。  
@@ -40,23 +40,23 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
 |成員|描述|  
 |------------|-----------------|  
-|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|此執行階段已傳送的非 catch 向上 managed 偵錯工具事件。 請參閱 < 備註 > 一節，區別趕上和非 catch 向上事件。|  
-|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|已暫止 managed 的事件是<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>要求。|  
+|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|此執行階段發生的非 catch up managed 偵錯工具事件時傳送。 請參閱 < 備註 > 一節追補和非 catch 向上事件之間的差異。|  
+|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|管理已暫止的事件是<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>要求。|  
   
 ## <a name="remarks"></a>備註  
- 追補事件包含程序、 應用程式定義域、 組件、 模組和偵錯工具帶到目前的狀態，它已附加至處理序之後的執行緒建立通知。 非 catch 總事件，也就以`CLR_DEBUGGING_MANAGED_EVENT_PENDING`旗標，包含所有其他偵錯工具事件，例如例外狀況，以及管理偵錯助理 (MDA) 的通知。  
+ 更新事件包含程序、 應用程式定義域、 組件、 模組和偵錯工具帶到目前的狀態之後它已附加至處理序, 的執行緒建立通知。 非 catch 總事件，由`CLR_DEBUGGING_MANAGED_EVENT_PENDING`旗標，包括所有其他偵錯工具事件，例如例外狀況和 managed 偵錯助理 (MDA) 通知。  
   
- `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`旗標可讓執行階段可以區分終止的例外狀況和附加 managed 偵錯工具，可取消的要求。  
+ `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`旗標可讓執行階段終止的例外狀況和附加 managed 偵錯工具，可取消的要求之間不同。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Metahost.idl、 Metahost.h  
+ **標頭：** Metahost.idl Metahost.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

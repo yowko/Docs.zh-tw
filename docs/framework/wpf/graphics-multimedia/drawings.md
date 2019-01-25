@@ -13,22 +13,23 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 8b142cfc65e39e48502cde263fea51378c47f43e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e70367d199ece207589d67ee38cb71f0cdda5b11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684101"
 ---
 # <a name="drawings"></a>繪圖
-<xref:System.Windows.Media.Drawing> 物件可用來有效率地繪製圖形、 影像或文字。 使用繪製時，會使用繪圖<xref:System.Windows.Media.DrawingBrush>或程式設計與<xref:System.Windows.Media.Visual>物件。  
+<xref:System.Windows.Media.Drawing> 物件用來有效率地繪製圖形、 影像或文字。 使用繪製時，會使用繪圖<xref:System.Windows.Media.DrawingBrush>或程式設計與<xref:System.Windows.Media.Visual>物件。  
   
 ## <a name="in-this-section"></a>本節內容  
  [繪圖物件概觀](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
   [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Drawing>  
- [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Drawing>
+- [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)

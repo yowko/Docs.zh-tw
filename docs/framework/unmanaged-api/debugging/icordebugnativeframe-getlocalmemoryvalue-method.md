@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5419d2e6932e08d05c8336d473cf68bd16058a48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e8d0c16000c78fab0371b68c3a350bd2018aa1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664521"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryValue 方法
-取得引數或儲存在指定的記憶體位置，針對這個原生框架中區域變數的值。  
+取得引數或儲存在指定的記憶體位置，這個原生框架中區域變數的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,25 +40,25 @@ HRESULT GetLocalMemoryValue (
   
 #### <a name="parameters"></a>參數  
  `address`  
- [in]A`CORDB_ADDRESS`值，指定包含值的記憶體位置。  
+ [in]A`CORDB_ADDRESS`值，指定記憶體位置包含的值。  
   
  `cbSigBlob`  
- [in]整數，指定所參考的二進位中繼資料簽章的大小`pvSigBlob`參數。  
+ [in]整數，指定所參考的二進位中繼資料簽章大小`pvSigBlob`參數。  
   
  `pvSigBlob`  
- [in]A`PCCOR_SIGNATURE`實值類型的二進位中繼資料簽章所指向的值。  
+ [in]A`PCCOR_SIGNATURE`指向的值類型的二進位中繼資料簽章的值。  
   
  `ppValue`  
- [out]代表儲存在指定的記憶體位置的擷取的值的"ICorDebugValue 」 物件的位址指標。  
+ [out]「 ICorDebugValue 」 物件，代表儲存在指定的記憶體位置的擷取的值的位址指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- 
+## <a name="see-also"></a>另請參閱
+

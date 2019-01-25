@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 332c9fe35111b3fa7e4f604f4a2334694f0f89c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670312"
 ---
 # <a name="drawings-how-to-topics"></a>繪圖 HOW TO 主題
-本節中的主題描述如何使用<xref:System.Windows.Media.Drawing>繪製圖形、 影像或文字的物件。  
+在本節中的主題描述如何使用<xref:System.Windows.Media.Drawing>來繪製圖形、 影像或文字的物件。  
   
 ## <a name="in-this-section"></a>本節內容  
  [對圖形套用 GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
@@ -29,8 +29,8 @@ ms.locfileid: "33556662"
   [使用 VideoDrawing 播放媒體](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
   [將圖形當做影像來源使用](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Drawing>  
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Drawing>
+- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)

@@ -1,15 +1,15 @@
 ---
-title: 如何： 將物件資料寫入至 XML 檔案 (Visual Basic)
+title: HOW TO：將物件資料寫入至 XML 檔案 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: 434706383c50e5df8e419e3988da8dc7cce87c83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7784566cba7b9cf85914a410b78240856879ba8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715825"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>如何： 將物件資料寫入至 XML 檔案 (Visual Basic)
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>HOW TO：將物件資料寫入至 XML 檔案 (Visual Basic)
 此範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 類別，將來自某個類別的物件寫入 XML 檔案。  
   
 ## <a name="example"></a>範例  
@@ -54,7 +54,7 @@ End Module
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  如果檔案不存在，此範例就會建立新的檔案。 如果應用程式需要建立檔案，該應用程式就需要資料夾的 `Create` 權限。 如果檔案已經存在，則應用程式只需要 `Write` 權限，這是較小的權限。 若有可能，更為安全的做法是在部署期間建立檔案，並且只授與單一檔案的 `Read` 權限，而不授與資料夾的 `Create` 權限。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.IO.StreamWriter>  
- [如何：從 XML 檔案讀取物件資料 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- [序列化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.IO.StreamWriter>
+- [如何：讀取物件資料，從 XML 檔案 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [序列化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：建立繪製的圖形物件
+title: HOW TO：建立繪圖的圖形物件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 54175e27ca46431299db369f67f02051ef08d0d2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a21e049cb91ec29bcd46eb04efd78487da9a6317
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497028"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>如何：建立繪製的圖形物件
+# <a name="how-to-create-graphics-objects-for-drawing"></a>HOW TO：建立繪圖的圖形物件
 您可以繪製線條與圖形之前，呈現文字，或顯示和管理映像[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您需要建立<xref:System.Drawing.Graphics>物件。 <xref:System.Drawing.Graphics>物件代表[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]繪圖介面，而是用來建立圖形影像物件。  
   
  使用圖形有兩個步驟：  
@@ -165,13 +165,13 @@ ms.locfileid: "50185192"
   
     |若要轉譯|請參閱|  
     |---------------|---------|  
-    |線條|[操作說明：在 Windows Form 上繪製線條](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
-    |圖形|[操作說明：繪製外框形狀](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
-    |文字|[操作說明：在 Windows Forms 上繪製文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
-    |影像|[操作說明：使用 GDI+ 呈現影像](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+    |線條|[如何：在 Windows Form 上繪製線條](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
+    |圖形|[如何：繪製外框的形狀](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
+    |文字|[如何：Windows Form 上繪製文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
+    |影像|[如何：使用 GDI + 呈現影像](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
   
-## <a name="see-also"></a>另請參閱  
- [圖形程式設計入門](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Windows Forms 中的圖形和繪圖](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [操作說明：使用 GDI+ 呈現影像](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+## <a name="see-also"></a>另請參閱
+- [圖形程式設計入門](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+- [Windows Forms 中的圖形和繪圖](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [如何：使用 GDI + 呈現影像](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)

@@ -2,19 +2,19 @@
 title: 適用於 Entity Framework 的 SqlClient 函式
 ms.date: 03/30/2017
 ms.assetid: 71a3613c-b94e-494c-8ad8-90cf86ae0b87
-ms.openlocfilehash: 99283b75704aaa2f80e49b0495d1cf950f6097df
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dc111d3f8321170a02c70f168bf8ae5c2a3521e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764667"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730629"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>適用於 Entity Framework 的 SqlClient 函式
 適用於 Entity Framework 的 .NET Framework Data Provider for SQL Server (SqlClient) 提供了一組可執行數學和彙總 (Aggregation) 計算的函式，以及可執行 `System.DateTime` 和 `string` 作業的函式。 這些函式位於 `SQLServer` 命名空間 (Namespace) 中。  
   
- 函式可以使用的任何提供者的清單，請參閱[標準函式](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)。  
+ 如需應該使用任何提供者的函式的清單，請參閱[標準函式](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)。  
   
- 如需如何標準 SQL Server 函式的函式對應資訊，請參閱[概念模型標準與 SQL Server 函式對應](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)。  
+ 如需如何標準函式對應至 SQL Server 函式的資訊，請參閱[概念模型標準與 SQL Server 函式對應](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [概念模型標準與 SQL Server 函式的對應](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
@@ -29,6 +29,6 @@ ms.locfileid: "32764667"
   
  [系統函式](../../../../../docs/framework/data/adonet/ef/system-functions.md)  
   
-## <a name="see-also"></a>另請參閱  
- [Entity SQL 參考](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Entity SQL 概觀](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>另請參閱
+- [Entity SQL 參考](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL 概觀](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

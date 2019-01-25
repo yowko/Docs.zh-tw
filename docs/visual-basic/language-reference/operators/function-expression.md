@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: cfdd17f6f4ee6c4ddb3fa73ab3ec9c5ce46a162f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: b83bee06a3a001fd362a217907e783cb7ad293ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648091"
 ---
 # <a name="function-expression-visual-basic"></a>函式運算式 (Visual Basic)
 宣告參數與定義的函式的 lambda 運算式的程式碼。  
@@ -31,8 +31,8 @@ End Function
 |詞彙|定義|  
 |---|---|  
 |`parameterlist`|選擇性。 本機變數的名稱，表示此程序參數的清單。 括號必須要有即使清單是空的。 請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
-|`expression`|必要。 在單一運算式。 運算式的類型是函式的傳回型別。|  
-|`statements`|必要。 陳述式會使用傳回值的清單`Return`陳述式。 (請參閱[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。)傳回值的類型是函式的傳回型別。|  
+|`expression`|必要項。 在單一運算式。 運算式的類型是函式的傳回型別。|  
+|`statements`|必要項。 陳述式會使用傳回值的清單`Return`陳述式。 (請參閱[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。)傳回值的類型是函式的傳回型別。|  
   
 ## <a name="remarks"></a>備註  
  A *lambda 運算式*是函式不會計算並傳回值的名稱。 您可以使用 lambda 運算式任何地方使用委派類型，除非做為引數`RemoveHandler`。 如需委派和 lambda 運算式與委派使用的詳細資訊，請參閱[委派陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md)並[寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。  
@@ -87,12 +87,12 @@ Dim londonCusts = db.Customers.
   
  如需有關查詢方法的詳細資訊，請參閱[查詢](../../../visual-basic/language-reference/queries/index.md)。 如需有關標準查詢運算子的詳細資訊，請參閱[標準查詢運算子概觀](../../programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [陳述式](../../../visual-basic/programming-guide/language-features/statements.md)  
- [數值比較](../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
- [布林運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
- [If 運算子](../../../visual-basic/language-reference/operators/if-operator.md)  
- [寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+## <a name="see-also"></a>另請參閱
+- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [陳述式](../../../visual-basic/programming-guide/language-features/statements.md)
+- [數值比較](../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
+- [布林運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
+- [If 運算子](../../../visual-basic/language-reference/operators/if-operator.md)
+- [寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

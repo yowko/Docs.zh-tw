@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af896b67cda885613ffb268172c7773f2be17133
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4db788755febab9b21adb26caf74c8ea154c1493
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653810"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next 方法
-取得指定的數目的連續物件的物件，從序列中列舉值的目前位置開始的循序集合。  
+取得指定的數目的連續物件從物件，從序列中列舉值的目前位置開始的循序集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,19 +43,19 @@ HRESULT Next (
  [in] 要擷取的物件數目。  
   
  `objects`  
- [out]陣列`ObjectID`值，其中每一個都代表一個擷取的物件。  
+ [out]陣列`ObjectID`值，每一個都代表一個擷取的物件。  
   
  `pceltFetched`  
  [out] `objects` 陣列中實際傳回之項目數目的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerObjectEnum 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerObjectEnum 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

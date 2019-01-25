@@ -1,18 +1,18 @@
 ---
-title: 如何：顯示變更集
+title: HOW TO：顯示變更集
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: c9664c6d32f78f455aa29311f111acaecb5c7905
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 773e72d52a934bc7c6fa80fe252d62e67f87a34b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596796"
 ---
-# <a name="how-to-display-a-changeset"></a>如何：顯示變更集
+# <a name="how-to-display-a-changeset"></a>HOW TO：顯示變更集
 您可以使用 <xref:System.Data.Linq.DataContext> 來檢視 <xref:System.Data.Linq.DataContext.GetChangeSet%2A> 所追蹤的變更。  
   
 ## <a name="example"></a>範例  
@@ -75,5 +75,5 @@ ms.locfileid: "33359981"
   
  `Total changes: {Added: 0, Removed: 0, Modified: 8}`  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯支援](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯支援](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

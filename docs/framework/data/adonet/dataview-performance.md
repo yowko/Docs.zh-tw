@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
-ms.openlocfilehash: 41b9e51e804d88227b8812124d25eae21838fc6d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 1384103f6ca35bab02280e6019d717a5d2f333cc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610446"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684719"
 ---
 # <a name="dataview-performance"></a>DataView 效能
 本主題將討論使用 <xref:System.Data.DataView.Find%2A> 類別 (Class) 之 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法以及在 Web 應用程式中快取 <xref:System.Data.DataView> 的效能提升。  
@@ -86,5 +86,5 @@ GridView1.DataSource = ordersView;
 GridView1.DataBind();  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [資料繫結和 LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+## <a name="see-also"></a>另請參閱
+- [資料繫結和 LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)

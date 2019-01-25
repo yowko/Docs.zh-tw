@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: f731ff150bd901e325726fca5aa682ff1770f979
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6ed6f3d4fd77d714ab554d641c0c0fc4f403bbf8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715097"
 ---
 # <a name="addhandler-statement"></a>AddHandler 陳述式
 將事件與事件處理常式在執行階段。  
@@ -44,8 +44,8 @@ AddHandler event, AddressOf eventhandler
 ## <a name="example"></a>範例  
  [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/addhandler-statement_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [RemoveHandler 陳述式](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
- [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)  
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>另請參閱
+- [RemoveHandler 陳述式](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)
+- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
