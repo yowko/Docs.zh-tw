@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 2e0c2764f96a2592ad0a4dfe5caa46536373eb80
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 81b16f7e4f216d1879c57dfb2dc2bfb1e1191aa2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683332"
 ---
 # <a name="ui-automation-properties-for-clients"></a>用戶端的 UI 自動化屬性
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本概觀向您介紹公開至使用者介面自動化用戶端應用程式的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47193274"
 ## <a name="property-ids"></a>屬性識別碼  
  屬性 [!INCLUDE[TLA#tla_id#plural](../../../includes/tlasharptla-idsharpplural-md.md)] 是封裝在 <xref:System.Windows.Automation.AutomationProperty> 物件之唯一的常數值。 使用者介面自動化用戶端應用程式從 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 類別取得這些 <xref:System.Windows.Automation.AutomationElement> ，或是從適當的控制項模式類別取得，例如 <xref:System.Windows.Automation.ScrollPattern>。 使用者介面自動化提供者從 <xref:System.Windows.Automation.AutomationElementIdentifiers> 取得這些，或是從控制項模式識別項類別的其中一項取得，例如 <xref:System.Windows.Automation.ScrollPatternIdentifiers>。  
   
- 數值<xref:System.Windows.Automation.AutomationIdentifier.Id%2A>的<xref:System.Windows.Automation.AutomationProperty>供提供者用來識別屬性，會在查詢進行<xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType>方法。 一般而言，用戶端應用程式不需要檢查 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>。 <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> 僅供偵錯和診斷之用。  
+ 提供者使用 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 的 <xref:System.Windows.Automation.AutomationProperty> 數值來識別在 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> 方法中要查詢的屬性。 一般而言，用戶端應用程式不需要檢查 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>。 <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> 僅供偵錯和診斷之用。  
   
 <a name="Property_Conditions"></a>   
 ## <a name="property-conditions"></a>屬性條件  
@@ -79,7 +79,7 @@ ms.locfileid: "47193274"
 ## <a name="default-property-values"></a>預設屬性值  
  如果使用者介面自動化提供者並未實作屬性，則 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 系統便能提供預設值。 例如，如果控制項的提供者不支援 <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>所識別之屬性， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 就會傳回空字串。 同樣地，如果提供者不支援 <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>所識別之屬性， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 就會傳回 `false`。  
   
- 您可以使用來變更此行為<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>和<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType>方法多載。 當您指定 `true` 做為第二個參數時， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 不會傳回預設值，但相反地會傳回特殊值 <xref:System.Windows.Automation.AutomationElement.NotSupported>。  
+ 您可以使用 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> 方法多載變更此行為。 當您指定 `true` 做為第二個參數時， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 不會傳回預設值，但相反地會傳回特殊值 <xref:System.Windows.Automation.AutomationElement.NotSupported>。  
   
  下列範例程式碼會嘗試從項目擷取屬性，如果不支援該屬性，則改用應用程式定義的值。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "47193274"
 |<xref:System.Windows.Automation.AutomationElement.FocusedElement%2A>|(靜態屬性) 具有輸入焦點的 <xref:System.Windows.Automation.AutomationElement> 。|  
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(靜態屬性) 根 <xref:System.Windows.Automation.AutomationElement>。|  
   
-## <a name="see-also"></a>另請參閱  
- [UI 自動化用戶端中的快取](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [訂閱 UI 自動化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+## <a name="see-also"></a>另請參閱
+- [UI 自動化用戶端中的快取](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [訂閱 UI 自動化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

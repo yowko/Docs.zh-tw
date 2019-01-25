@@ -12,12 +12,12 @@ helpviewer_keywords:
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
-ms.openlocfilehash: 240492590fab4579b9d984d5dce759f6d9f8cbab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646603"
 ---
 # <a name="struct-design"></a>結構設計
 一般用途的實值型別最常稱為結構時，它的 C# 關鍵字。 本節提供一般的結構設計指導方針。  
@@ -48,6 +48,6 @@ ms.locfileid: "53153107"
   
 ## <a name="see-also"></a>另請參閱
 
-- [類型設計方針](../../../docs/standard/design-guidelines/type.md)  
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [類型設計方針](../../../docs/standard/design-guidelines/type.md)
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [在類別和結構之間選擇](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)

@@ -3,12 +3,12 @@ title: Visual Studio 2012 的識別和存取工具
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: 1177048d8124c955220605e52dde539b84510cba
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a1b5456f9081d807a3c9e29e1010cbfbf91e637f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678547"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Visual Studio 2012 的識別和存取工具
 本主題說明適用於 Visual Studio 11 的新識別和存取工具。 您可以從下列 URL 下載此工具： [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849)或直接從 Visual Studio 11，藉由搜尋 「 識別 」，直接在延伸模組管理員中。  
@@ -25,7 +25,7 @@ ms.locfileid: "48584154"
   
 -   您可以在單一螢幕中，利用 Active Directory Federation Services (AD FS) 2.0 (或其他 WS-Federation 提供者) 建立同盟。  
   
--   此工具會利用 Microsoft Azure Access Control Service (ACS) 功能並提供簡易核取方塊清單，其中列出您要使用的所有識別提供者：Facebook、Google、Live ID、Yahoo!、所有 OpenID 提供者以及所有 WS-Federation 提供者。 只要選取識別提供者、按一下 [確定]，然後按 F5，您的應用程式和 ACS 即可自動設定完成，成為 ACS 感知測試應用程式。  
+-   此工具會利用簡單的核取方塊清單的 Windows Azure 存取控制服務 (ACS) 功能，您想要使用的所有身分識別提供者：Facebook、 Google、 Live ID、 yahoo ！、 所有 OpenID 提供者和任何 WS-同盟提供者。 只要選取識別提供者、按一下 [確定]，然後按 F5，您的應用程式和 ACS 即可自動設定完成，成為 ACS 感知測試應用程式。  
   
-## <a name="see-also"></a>另請參閱  
- [WIF 功能](../../../docs/framework/security/wif-features.md)
+## <a name="see-also"></a>另請參閱
+- [WIF 功能](../../../docs/framework/security/wif-features.md)

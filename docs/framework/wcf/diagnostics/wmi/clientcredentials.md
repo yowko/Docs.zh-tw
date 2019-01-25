@@ -2,12 +2,12 @@
 title: ClientCredentials
 ms.date: 03/30/2017
 ms.assetid: 41dffd6b-8f14-4fed-aefb-2a1bb168efb3
-ms.openlocfilehash: 8b6200f84f352d49cf142d9c8b97d1c2b36149b2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 410a133ae3041db00ecb7a17677afe6538ef1f4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180896"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632734"
 ---
 # <a name="clientcredentials"></a>ClientCredentials
 ClientCredentials  
@@ -96,5 +96,5 @@ class ClientCredentials : Behavior
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Description.ClientCredentials>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Description.ClientCredentials>
