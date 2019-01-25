@@ -16,40 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92097cdf735630f3537296f188bd83ea8162add2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b7fc0a271a9c62406d2942f387a5458e21211116
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522722"
 ---
-# <a name="ihostthreadpoolmanager-interface"></a><span data-ttu-id="fe622-102">IHostThreadPoolManager 介面</span><span class="sxs-lookup"><span data-stu-id="fe622-102">IHostThreadPoolManager Interface</span></span>
-<span data-ttu-id="fe622-103">提供方法讓 common language runtime (CLR) 來設定執行緒集區，以及佇列的執行緒集區的工作項目。</span><span class="sxs-lookup"><span data-stu-id="fe622-103">Provides methods that enable the common language runtime (CLR) to configure the thread pool and to queue work items to the thread pool.</span></span>  
+# <a name="ihostthreadpoolmanager-interface"></a><span data-ttu-id="22c0f-102">IHostThreadPoolManager 介面</span><span class="sxs-lookup"><span data-stu-id="22c0f-102">IHostThreadPoolManager Interface</span></span>
+<span data-ttu-id="22c0f-103">提供方法，啟用 common language runtime (CLR) 來設定執行緒集區，以及執行緒集區的工作項目佇列。</span><span class="sxs-lookup"><span data-stu-id="22c0f-103">Provides methods that enable the common language runtime (CLR) to configure the thread pool and to queue work items to the thread pool.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="fe622-104">方法</span><span class="sxs-lookup"><span data-stu-id="fe622-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="22c0f-104">方法</span><span class="sxs-lookup"><span data-stu-id="22c0f-104">Methods</span></span>  
   
-|<span data-ttu-id="fe622-105">方法</span><span class="sxs-lookup"><span data-stu-id="fe622-105">Method</span></span>|<span data-ttu-id="fe622-106">描述</span><span class="sxs-lookup"><span data-stu-id="fe622-106">Description</span></span>|  
+|<span data-ttu-id="22c0f-105">方法</span><span class="sxs-lookup"><span data-stu-id="22c0f-105">Method</span></span>|<span data-ttu-id="22c0f-106">描述</span><span class="sxs-lookup"><span data-stu-id="22c0f-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="fe622-107">GetAvailableThreads 方法</span><span class="sxs-lookup"><span data-stu-id="fe622-107">GetAvailableThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md)|<span data-ttu-id="fe622-108">取得目前未處理的工作項目之執行緒集區中的執行緒數目。</span><span class="sxs-lookup"><span data-stu-id="fe622-108">Gets the number of threads in the thread pool that are not currently processing work items.</span></span>|  
-|[<span data-ttu-id="fe622-109">GetMaxThreads 方法</span><span class="sxs-lookup"><span data-stu-id="fe622-109">GetMaxThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)|<span data-ttu-id="fe622-110">執行緒集區中，同時取得主機維護執行緒的數目上限。</span><span class="sxs-lookup"><span data-stu-id="fe622-110">Gets the maximum number of threads that the host maintains concurrently in the thread pool.</span></span>|  
-|[<span data-ttu-id="fe622-111">GetMinThreads 方法</span><span class="sxs-lookup"><span data-stu-id="fe622-111">GetMinThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)|<span data-ttu-id="fe622-112">取得主機維護的閒置執行緒數目最小要求的頁數。</span><span class="sxs-lookup"><span data-stu-id="fe622-112">Gets the minimum number of idle threads that the host maintains in anticipation of requests.</span></span>|  
-|[<span data-ttu-id="fe622-113">QueueUserWorkItem 方法</span><span class="sxs-lookup"><span data-stu-id="fe622-113">QueueUserWorkItem Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)|<span data-ttu-id="fe622-114">對於執行，函式，並提供物件，其中包含要由函式使用的資料。</span><span class="sxs-lookup"><span data-stu-id="fe622-114">Queues a function for execution, and provides an object containing data to be used by the function.</span></span>|  
-|[<span data-ttu-id="fe622-115">SetMaxThreads 方法</span><span class="sxs-lookup"><span data-stu-id="fe622-115">SetMaxThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setmaxthreads-method.md)|<span data-ttu-id="fe622-116">設定主應用程式可以維護執行緒集區中的執行緒的數目上限。</span><span class="sxs-lookup"><span data-stu-id="fe622-116">Sets the maximum number of threads that the host can maintain in the thread pool.</span></span>|  
-|[<span data-ttu-id="fe622-117">SetMinThreads 方法</span><span class="sxs-lookup"><span data-stu-id="fe622-117">SetMinThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)|<span data-ttu-id="fe622-118">預期的要求中設定主應用程式必須維護的閒置執行緒的最小數目。</span><span class="sxs-lookup"><span data-stu-id="fe622-118">Sets the minimum number of idle threads that the host must maintain in anticipation of requests.</span></span>|  
+|[<span data-ttu-id="22c0f-107">GetAvailableThreads 方法</span><span class="sxs-lookup"><span data-stu-id="22c0f-107">GetAvailableThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md)|<span data-ttu-id="22c0f-108">取得目前未處理的工作項目之執行緒集區中的執行緒數目。</span><span class="sxs-lookup"><span data-stu-id="22c0f-108">Gets the number of threads in the thread pool that are not currently processing work items.</span></span>|  
+|[<span data-ttu-id="22c0f-109">GetMaxThreads 方法</span><span class="sxs-lookup"><span data-stu-id="22c0f-109">GetMaxThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)|<span data-ttu-id="22c0f-110">執行緒集區中，同時取得主機維護執行緒的數目上限。</span><span class="sxs-lookup"><span data-stu-id="22c0f-110">Gets the maximum number of threads that the host maintains concurrently in the thread pool.</span></span>|  
+|[<span data-ttu-id="22c0f-111">GetMinThreads 方法</span><span class="sxs-lookup"><span data-stu-id="22c0f-111">GetMinThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)|<span data-ttu-id="22c0f-112">預期的要求中取得主控件保留的閒置執行緒的數目下限。</span><span class="sxs-lookup"><span data-stu-id="22c0f-112">Gets the minimum number of idle threads that the host maintains in anticipation of requests.</span></span>|  
+|[<span data-ttu-id="22c0f-113">QueueUserWorkItem 方法</span><span class="sxs-lookup"><span data-stu-id="22c0f-113">QueueUserWorkItem Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)|<span data-ttu-id="22c0f-114">函式，以執行排入佇列，並提供包含要使用的函式資料的物件。</span><span class="sxs-lookup"><span data-stu-id="22c0f-114">Queues a function for execution, and provides an object containing data to be used by the function.</span></span>|  
+|[<span data-ttu-id="22c0f-115">SetMaxThreads 方法</span><span class="sxs-lookup"><span data-stu-id="22c0f-115">SetMaxThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setmaxthreads-method.md)|<span data-ttu-id="22c0f-116">設定主應用程式可以維護執行緒集區中的執行緒最大數目。</span><span class="sxs-lookup"><span data-stu-id="22c0f-116">Sets the maximum number of threads that the host can maintain in the thread pool.</span></span>|  
+|[<span data-ttu-id="22c0f-117">SetMinThreads 方法</span><span class="sxs-lookup"><span data-stu-id="22c0f-117">SetMinThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)|<span data-ttu-id="22c0f-118">預期的要求中設定主應用程式必須維護的閒置執行緒的數目下限。</span><span class="sxs-lookup"><span data-stu-id="22c0f-118">Sets the minimum number of idle threads that the host must maintain in anticipation of requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fe622-119">備註</span><span class="sxs-lookup"><span data-stu-id="fe622-119">Remarks</span></span>  
- <span data-ttu-id="fe622-120">主機不需要使用的呼叫中指定的值，設定執行緒集區`SetMaxThreads`和`SetMinThreads`方法。</span><span class="sxs-lookup"><span data-stu-id="fe622-120">The host is not required to configure the thread pool by using the values specified in calls to the `SetMaxThreads` and `SetMinThreads` methods.</span></span> <span data-ttu-id="fe622-121">在此情況下，主應用程式應該傳回 E_NOTIMPL 的 HRESULT 值，這些方法。</span><span class="sxs-lookup"><span data-stu-id="fe622-121">In this case, the host should return an HRESULT value of E_NOTIMPL from these methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="22c0f-119">備註</span><span class="sxs-lookup"><span data-stu-id="22c0f-119">Remarks</span></span>  
+ <span data-ttu-id="22c0f-120">主應用程式不需要使用的呼叫中指定的值，設定執行緒集區`SetMaxThreads`和`SetMinThreads`方法。</span><span class="sxs-lookup"><span data-stu-id="22c0f-120">The host is not required to configure the thread pool by using the values specified in calls to the `SetMaxThreads` and `SetMinThreads` methods.</span></span> <span data-ttu-id="22c0f-121">在此情況下，主應用程式應該從這些方法會傳回 E_NOTIMPL HRESULT 值。</span><span class="sxs-lookup"><span data-stu-id="22c0f-121">In this case, the host should return an HRESULT value of E_NOTIMPL from these methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fe622-122">需求</span><span class="sxs-lookup"><span data-stu-id="fe622-122">Requirements</span></span>  
- <span data-ttu-id="fe622-123">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fe622-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="22c0f-122">需求</span><span class="sxs-lookup"><span data-stu-id="22c0f-122">Requirements</span></span>  
+ <span data-ttu-id="22c0f-123">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="22c0f-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fe622-124">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fe622-124">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="22c0f-124">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="22c0f-124">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="fe622-125">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="fe622-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="22c0f-125">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="22c0f-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fe622-126">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe622-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="22c0f-126">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="22c0f-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fe622-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fe622-127">See Also</span></span>  
- <xref:System.Threading>  
- <xref:System.Threading.ThreadPool>  
- [<span data-ttu-id="fe622-128">裝載介面</span><span class="sxs-lookup"><span data-stu-id="fe622-128">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="22c0f-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="22c0f-127">See also</span></span>
+- <xref:System.Threading>
+- <xref:System.Threading.ThreadPool>
+- [<span data-ttu-id="22c0f-128">裝載介面</span><span class="sxs-lookup"><span data-stu-id="22c0f-128">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -9,59 +9,59 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c2dfd5d3944618cf94d32fac2708d6daef5a410
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 67dae26733527a85f4fc13734da896193e53db8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576885"
 ---
-# <a name="ltnetfx45cultureawarecomparergethashcodelongstringsgt-element"></a><span data-ttu-id="72e8d-102">&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt;項目</span><span class="sxs-lookup"><span data-stu-id="72e8d-102">&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt; Element</span></span>
-<span data-ttu-id="72e8d-103">指定執行階段是否使用固定的記憶體數量計算 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法的雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="72e8d-103">Specifies whether the runtime uses a fixed amount of memory to calculate hash codes for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method.</span></span>  
+# <a name="ltnetfx45cultureawarecomparergethashcodelongstringsgt-element"></a><span data-ttu-id="94393-102">&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt;項目</span><span class="sxs-lookup"><span data-stu-id="94393-102">&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt; Element</span></span>
+<span data-ttu-id="94393-103">指定執行階段是否使用固定的記憶體數量計算 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法的雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="94393-103">Specifies whether the runtime uses a fixed amount of memory to calculate hash codes for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method.</span></span>  
   
- <span data-ttu-id="72e8d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="72e8d-104">\<configuration></span></span>  
-<span data-ttu-id="72e8d-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="72e8d-105">\<runtime></span></span>  
-<span data-ttu-id="72e8d-106">< NetFx45_CultureAwareComparerGetHashCode_LongStrings ></span><span class="sxs-lookup"><span data-stu-id="72e8d-106"><NetFx45_CultureAwareComparerGetHashCode_LongStrings></span></span>  
+ <span data-ttu-id="94393-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="94393-104">\<configuration></span></span>  
+<span data-ttu-id="94393-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="94393-105">\<runtime></span></span>  
+<span data-ttu-id="94393-106"><NetFx45_CultureAwareComparerGetHashCode_LongStrings></span><span class="sxs-lookup"><span data-stu-id="94393-106"><NetFx45_CultureAwareComparerGetHashCode_LongStrings></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="72e8d-107">語法</span><span class="sxs-lookup"><span data-stu-id="72e8d-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94393-107">語法</span><span class="sxs-lookup"><span data-stu-id="94393-107">Syntax</span></span>  
   
 ```xml
 <NetFx45_CultureAwareComparerGetHashCode_LongStrings enabled="0|1">  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="72e8d-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="72e8d-108">Attributes and Elements</span></span>  
- <span data-ttu-id="72e8d-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="72e8d-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="94393-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="94393-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="94393-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="94393-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="72e8d-110">屬性</span><span class="sxs-lookup"><span data-stu-id="72e8d-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="94393-110">屬性</span><span class="sxs-lookup"><span data-stu-id="94393-110">Attributes</span></span>  
   
-|<span data-ttu-id="72e8d-111">屬性</span><span class="sxs-lookup"><span data-stu-id="72e8d-111">Attribute</span></span>|<span data-ttu-id="72e8d-112">描述</span><span class="sxs-lookup"><span data-stu-id="72e8d-112">Description</span></span>|  
+|<span data-ttu-id="94393-111">屬性</span><span class="sxs-lookup"><span data-stu-id="94393-111">Attribute</span></span>|<span data-ttu-id="94393-112">描述</span><span class="sxs-lookup"><span data-stu-id="94393-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="72e8d-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="72e8d-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="72e8d-114">指定通用語言執行平台是否會在計算雜湊碼時配置固定數量的記憶體。</span><span class="sxs-lookup"><span data-stu-id="72e8d-114">Specifies whether the common language runtime allocates a fixed amount of memory when calculating hash codes.</span></span>|  
+|`enabled`|<span data-ttu-id="94393-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="94393-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="94393-114">指定通用語言執行平台是否會在計算雜湊碼時配置固定數量的記憶體。</span><span class="sxs-lookup"><span data-stu-id="94393-114">Specifies whether the common language runtime allocates a fixed amount of memory when calculating hash codes.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="72e8d-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="72e8d-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="94393-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="94393-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="72e8d-116">值</span><span class="sxs-lookup"><span data-stu-id="72e8d-116">Value</span></span>|<span data-ttu-id="72e8d-117">描述</span><span class="sxs-lookup"><span data-stu-id="72e8d-117">Description</span></span>|  
+|<span data-ttu-id="94393-116">值</span><span class="sxs-lookup"><span data-stu-id="94393-116">Value</span></span>|<span data-ttu-id="94393-117">描述</span><span class="sxs-lookup"><span data-stu-id="94393-117">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="72e8d-118">0</span><span class="sxs-lookup"><span data-stu-id="72e8d-118">0</span></span>|<span data-ttu-id="72e8d-119">通用語言執行平台會為 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法配置可變的記憶體數量來計算雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="72e8d-119">The common language runtime allocates a variable amount of memory for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method to calculate hash codes.</span></span> <span data-ttu-id="72e8d-120">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="72e8d-120">This is the default.</span></span>|  
-|<span data-ttu-id="72e8d-121">1</span><span class="sxs-lookup"><span data-stu-id="72e8d-121">1</span></span>|<span data-ttu-id="72e8d-122">通用語言執行平台會為 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法配置固定的記憶體數量來計算雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="72e8d-122">The common language runtime allocates a fixed amount of memory for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method to calculate hash codes.</span></span>|  
+|<span data-ttu-id="94393-118">0</span><span class="sxs-lookup"><span data-stu-id="94393-118">0</span></span>|<span data-ttu-id="94393-119">通用語言執行平台會為 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法配置可變的記憶體數量來計算雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="94393-119">The common language runtime allocates a variable amount of memory for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method to calculate hash codes.</span></span> <span data-ttu-id="94393-120">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="94393-120">This is the default.</span></span>|  
+|<span data-ttu-id="94393-121">1</span><span class="sxs-lookup"><span data-stu-id="94393-121">1</span></span>|<span data-ttu-id="94393-122">通用語言執行平台會為 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法配置固定的記憶體數量來計算雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="94393-122">The common language runtime allocates a fixed amount of memory for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method to calculate hash codes.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="72e8d-123">子元素</span><span class="sxs-lookup"><span data-stu-id="72e8d-123">Child Elements</span></span>  
- <span data-ttu-id="72e8d-124">無。</span><span class="sxs-lookup"><span data-stu-id="72e8d-124">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="94393-123">子元素</span><span class="sxs-lookup"><span data-stu-id="94393-123">Child Elements</span></span>  
+ <span data-ttu-id="94393-124">無。</span><span class="sxs-lookup"><span data-stu-id="94393-124">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="72e8d-125">父項目</span><span class="sxs-lookup"><span data-stu-id="72e8d-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="94393-125">父項目</span><span class="sxs-lookup"><span data-stu-id="94393-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="72e8d-126">項目</span><span class="sxs-lookup"><span data-stu-id="72e8d-126">Element</span></span>|<span data-ttu-id="72e8d-127">描述</span><span class="sxs-lookup"><span data-stu-id="72e8d-127">Description</span></span>|  
+|<span data-ttu-id="94393-126">項目</span><span class="sxs-lookup"><span data-stu-id="94393-126">Element</span></span>|<span data-ttu-id="94393-127">描述</span><span class="sxs-lookup"><span data-stu-id="94393-127">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="72e8d-128">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="72e8d-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="72e8d-129">包含有關執行階段初始化選項的資訊。</span><span class="sxs-lookup"><span data-stu-id="72e8d-129">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="94393-128">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="94393-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="94393-129">包含有關執行階段初始化選項的資訊。</span><span class="sxs-lookup"><span data-stu-id="94393-129">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="72e8d-130">備註</span><span class="sxs-lookup"><span data-stu-id="72e8d-130">Remarks</span></span>  
- <span data-ttu-id="72e8d-131">根據預設，通用語言執行平台會為 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法配置可變的記憶體數量，因此，當方法嘗試計算長度超過數百萬個字元的超大型字串雜湊碼時，就可能擲回 <xref:System.ArgumentException> 。</span><span class="sxs-lookup"><span data-stu-id="72e8d-131">By default, the common language runtime allocates a variable amount of memory for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method, and an <xref:System.ArgumentException> can be thrown when the method attempts to compute the hash code of very large strings (over several million characters long).</span></span> <span data-ttu-id="72e8d-132">藉由將這個項目加入至應用程式組態檔，並將其 `enabled` 屬性設定為 "1"，就可以指定 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法使用替代演算法配置固定的記憶體數量來計算雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="72e8d-132">By adding this element to an application configuration file and setting its `enabled` attribute to "1", you can specify that the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method use an alternate algorithm that allocates a fixed amount of memory for the computation of hash codes.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="94393-130">備註</span><span class="sxs-lookup"><span data-stu-id="94393-130">Remarks</span></span>  
+ <span data-ttu-id="94393-131">根據預設，通用語言執行平台會為 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法配置可變的記憶體數量，因此，當方法嘗試計算長度超過數百萬個字元的超大型字串雜湊碼時，就可能擲回 <xref:System.ArgumentException> 。</span><span class="sxs-lookup"><span data-stu-id="94393-131">By default, the common language runtime allocates a variable amount of memory for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method, and an <xref:System.ArgumentException> can be thrown when the method attempts to compute the hash code of very large strings (over several million characters long).</span></span> <span data-ttu-id="94393-132">藉由將這個項目加入至應用程式組態檔，並將其 `enabled` 屬性設定為 "1"，就可以指定 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法使用替代演算法配置固定的記憶體數量來計算雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="94393-132">By adding this element to an application configuration file and setting its `enabled` attribute to "1", you can specify that the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method use an alternate algorithm that allocates a fixed amount of memory for the computation of hash codes.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="72e8d-133">`<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` 項目不會在 [!INCLUDE[win8](../../../../../includes/win8-md.md)] (含) 以後版本中使用。</span><span class="sxs-lookup"><span data-stu-id="72e8d-133">The `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` element is not used in [!INCLUDE[win8](../../../../../includes/win8-md.md)] and later versions.</span></span>  
+>  <span data-ttu-id="94393-133">`<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` 項目不會在 [!INCLUDE[win8](../../../../../includes/win8-md.md)] (含) 以後版本中使用。</span><span class="sxs-lookup"><span data-stu-id="94393-133">The `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` element is not used in [!INCLUDE[win8](../../../../../includes/win8-md.md)] and later versions.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="72e8d-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="72e8d-134">See Also</span></span>  
-- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
-- [<span data-ttu-id="72e8d-135">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="72e8d-135">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [<span data-ttu-id="72e8d-136">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="72e8d-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="94393-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="94393-134">See also</span></span>
+- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
+- [<span data-ttu-id="94393-135">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="94393-135">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="94393-136">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="94393-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

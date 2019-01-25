@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 112ddcf51a5637bb89df9479850c2a4a70d2e1d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e041efed929255d4ce3af2d051a391bc4179cda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630914"
 ---
-# <a name="imetadataimport2getversionstring-method"></a><span data-ttu-id="227e4-102">IMetaDataImport2::GetVersionString 方法</span><span class="sxs-lookup"><span data-stu-id="227e4-102">IMetaDataImport2::GetVersionString Method</span></span>
-<span data-ttu-id="227e4-103">取得執行階段用來建置組件的版本號碼。</span><span class="sxs-lookup"><span data-stu-id="227e4-103">Gets the version number of the runtime that was used to build the assembly.</span></span>  
+# <a name="imetadataimport2getversionstring-method"></a><span data-ttu-id="ae3e3-102">IMetaDataImport2::GetVersionString 方法</span><span class="sxs-lookup"><span data-stu-id="ae3e3-102">IMetaDataImport2::GetVersionString Method</span></span>
+<span data-ttu-id="ae3e3-103">取得執行階段用來建置組件的版本號碼。</span><span class="sxs-lookup"><span data-stu-id="ae3e3-103">Gets the version number of the runtime that was used to build the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="227e4-104">語法</span><span class="sxs-lookup"><span data-stu-id="227e4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ae3e3-104">語法</span><span class="sxs-lookup"><span data-stu-id="ae3e3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVersionString (  
@@ -37,28 +37,28 @@ HRESULT GetVersionString (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="227e4-105">參數</span><span class="sxs-lookup"><span data-stu-id="227e4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ae3e3-105">參數</span><span class="sxs-lookup"><span data-stu-id="ae3e3-105">Parameters</span></span>  
  `pwzBuf`  
- <span data-ttu-id="227e4-106">[out]將指定版本的字串陣列。</span><span class="sxs-lookup"><span data-stu-id="227e4-106">[out] An array to store the string that specifies the version.</span></span>  
+ <span data-ttu-id="ae3e3-106">[out]將指定版本的字串陣列。</span><span class="sxs-lookup"><span data-stu-id="ae3e3-106">[out] An array to store the string that specifies the version.</span></span>  
   
  `ccBufSize`  
- <span data-ttu-id="227e4-107">[in]大小，以寬字元為單位的`pwzBuf`陣列。</span><span class="sxs-lookup"><span data-stu-id="227e4-107">[in] The size, in wide characters, of the `pwzBuf` array.</span></span>  
+ <span data-ttu-id="ae3e3-107">[in]大小，以寬字元為單位的`pwzBuf`陣列。</span><span class="sxs-lookup"><span data-stu-id="ae3e3-107">[in] The size, in wide characters, of the `pwzBuf` array.</span></span>  
   
  `pccBufSize`  
- <span data-ttu-id="227e4-108">[out]中的寬字元數目，包括 null 結束字元，傳回`pwzBuf`陣列。</span><span class="sxs-lookup"><span data-stu-id="227e4-108">[out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.</span></span>  
+ <span data-ttu-id="ae3e3-108">[out]中的寬字元數目，包括 null 結束字元，傳回`pwzBuf`陣列。</span><span class="sxs-lookup"><span data-stu-id="ae3e3-108">[out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="227e4-109">備註</span><span class="sxs-lookup"><span data-stu-id="227e4-109">Remarks</span></span>  
- <span data-ttu-id="227e4-110">`GetVersionString`方法會取得目前中繼資料範圍的內建的版本。</span><span class="sxs-lookup"><span data-stu-id="227e4-110">The `GetVersionString` method gets the built-for version of the current metadata scope.</span></span> <span data-ttu-id="227e4-111">如果從未儲存範圍，則將不會建置的版本中，並會傳回空字串。</span><span class="sxs-lookup"><span data-stu-id="227e4-111">If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ae3e3-109">備註</span><span class="sxs-lookup"><span data-stu-id="ae3e3-109">Remarks</span></span>  
+ <span data-ttu-id="ae3e3-110">`GetVersionString`方法會取得目前的中繼資料範圍的內建的版本。</span><span class="sxs-lookup"><span data-stu-id="ae3e3-110">The `GetVersionString` method gets the built-for version of the current metadata scope.</span></span> <span data-ttu-id="ae3e3-111">如果未曾儲存範圍，不會有內建的版本中，並會傳回空字串。</span><span class="sxs-lookup"><span data-stu-id="ae3e3-111">If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="227e4-112">需求</span><span class="sxs-lookup"><span data-stu-id="227e4-112">Requirements</span></span>  
- <span data-ttu-id="227e4-113">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="227e4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ae3e3-112">需求</span><span class="sxs-lookup"><span data-stu-id="ae3e3-112">Requirements</span></span>  
+ <span data-ttu-id="ae3e3-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ae3e3-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="227e4-114">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="227e4-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ae3e3-114">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ae3e3-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="227e4-115">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="227e4-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ae3e3-115">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="ae3e3-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="227e4-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="227e4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ae3e3-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ae3e3-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="227e4-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="227e4-117">See Also</span></span>  
- [<span data-ttu-id="227e4-118">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="227e4-118">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [<span data-ttu-id="227e4-119">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="227e4-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ae3e3-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ae3e3-117">See also</span></span>
+- [<span data-ttu-id="ae3e3-118">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="ae3e3-118">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="ae3e3-119">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="ae3e3-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

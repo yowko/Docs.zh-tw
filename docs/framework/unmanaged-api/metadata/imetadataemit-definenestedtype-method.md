@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0d105679a749b8c87099af871bdb42874d440b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee8e0dec469c7389a69c70567d7b2cb98d3404e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603907"
 ---
-# <a name="imetadataemitdefinenestedtype-method"></a><span data-ttu-id="12887-102">IMetaDataEmit::DefineNestedType 方法</span><span class="sxs-lookup"><span data-stu-id="12887-102">IMetaDataEmit::DefineNestedType Method</span></span>
-<span data-ttu-id="12887-103">建立類型定義的中繼資料簽章、 傳回`mdTypeDef`權杖該類型，然後將其指定定義的類型為所參考的類型成員`tdEncloser`參數。</span><span class="sxs-lookup"><span data-stu-id="12887-103">Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.</span></span>  
+# <a name="imetadataemitdefinenestedtype-method"></a><span data-ttu-id="3b47b-102">IMetaDataEmit::DefineNestedType 方法</span><span class="sxs-lookup"><span data-stu-id="3b47b-102">IMetaDataEmit::DefineNestedType Method</span></span>
+<span data-ttu-id="3b47b-103">建立類型定義的中繼資料簽章，會傳回`mdTypeDef`該類型中，權杖，並指定定義的類型為所參考之型別的成員`tdEncloser`參數。</span><span class="sxs-lookup"><span data-stu-id="3b47b-103">Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="12887-104">語法</span><span class="sxs-lookup"><span data-stu-id="12887-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b47b-104">語法</span><span class="sxs-lookup"><span data-stu-id="3b47b-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineNestedType (   
@@ -40,34 +40,34 @@ HRESULT DefineNestedType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="12887-105">參數</span><span class="sxs-lookup"><span data-stu-id="12887-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3b47b-105">參數</span><span class="sxs-lookup"><span data-stu-id="3b47b-105">Parameters</span></span>  
  `szTypeDef`  
- <span data-ttu-id="12887-106">[in]以 Unicode 的型別名稱。</span><span class="sxs-lookup"><span data-stu-id="12887-106">[in] The name of the type in Unicode.</span></span>  
+ <span data-ttu-id="3b47b-106">[in]以 Unicode 的型別名稱。</span><span class="sxs-lookup"><span data-stu-id="3b47b-106">[in] The name of the type in Unicode.</span></span>  
   
  `dwTypeDefFlags`  
- <span data-ttu-id="12887-107">[in]`TypeDef`屬性。</span><span class="sxs-lookup"><span data-stu-id="12887-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="12887-108">這是位元遮罩`CorTypeAttr`值。</span><span class="sxs-lookup"><span data-stu-id="12887-108">This is a bitmask of `CorTypeAttr` values.</span></span>  
+ <span data-ttu-id="3b47b-107">[in]`TypeDef`屬性。</span><span class="sxs-lookup"><span data-stu-id="3b47b-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="3b47b-108">這是位元遮罩`CorTypeAttr`值。</span><span class="sxs-lookup"><span data-stu-id="3b47b-108">This is a bitmask of `CorTypeAttr` values.</span></span>  
   
  `tkExtends`  
- <span data-ttu-id="12887-109">[in]基底類別的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="12887-109">[in] The token of the base class.</span></span> <span data-ttu-id="12887-110">這可能是`mdTypeDef`或`mdTypeRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="12887-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
+ <span data-ttu-id="3b47b-109">[in]基底類別的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="3b47b-109">[in] The token of the base class.</span></span> <span data-ttu-id="3b47b-110">這是`mdTypeDef`或`mdTypeRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="3b47b-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
   
- <span data-ttu-id="12887-111">`rtkImplements`[]</span><span class="sxs-lookup"><span data-stu-id="12887-111">`rtkImplements`[]</span></span>  
- <span data-ttu-id="12887-112">[in]指定此類別或介面實作的介面的語彙基元的陣列。</span><span class="sxs-lookup"><span data-stu-id="12887-112">[in] An array of tokens that specify the interfaces that this class or interface implements.</span></span>  
+ <span data-ttu-id="3b47b-111">`rtkImplements`[]</span><span class="sxs-lookup"><span data-stu-id="3b47b-111">`rtkImplements`[]</span></span>  
+ <span data-ttu-id="3b47b-112">[in]指定此類別或介面實作的介面的語彙基元的陣列。</span><span class="sxs-lookup"><span data-stu-id="3b47b-112">[in] An array of tokens that specify the interfaces that this class or interface implements.</span></span>  
   
  `tdEncloser`  
- <span data-ttu-id="12887-113">[in]封入類型的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="12887-113">[in] The token of the enclosing type.</span></span> <span data-ttu-id="12887-114">陣列的最後一個元素必須是`mdTokenNil`。</span><span class="sxs-lookup"><span data-stu-id="12887-114">The last element of the array must be `mdTokenNil`.</span></span>  
+ <span data-ttu-id="3b47b-113">[in]封入類型的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="3b47b-113">[in] The token of the enclosing type.</span></span> <span data-ttu-id="3b47b-114">陣列的最後一個項目必須是`mdTokenNil`。</span><span class="sxs-lookup"><span data-stu-id="3b47b-114">The last element of the array must be `mdTokenNil`.</span></span>  
   
  `ptd`  
- <span data-ttu-id="12887-115">[out]`mdTypeDef`指派的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="12887-115">[out] The `mdTypeDef` token assigned.</span></span>  
+ <span data-ttu-id="3b47b-115">[out]`mdTypeDef`指派權杖。</span><span class="sxs-lookup"><span data-stu-id="3b47b-115">[out] The `mdTypeDef` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="12887-116">需求</span><span class="sxs-lookup"><span data-stu-id="12887-116">Requirements</span></span>  
- <span data-ttu-id="12887-117">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="12887-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b47b-116">需求</span><span class="sxs-lookup"><span data-stu-id="3b47b-116">Requirements</span></span>  
+ <span data-ttu-id="3b47b-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3b47b-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="12887-118">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="12887-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3b47b-118">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3b47b-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="12887-119">**程式庫：** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="12887-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3b47b-119">**程式庫：** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="3b47b-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="12887-120">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="12887-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3b47b-120">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b47b-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="12887-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="12887-121">See Also</span></span>  
- [<span data-ttu-id="12887-122">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="12887-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="12887-123">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="12887-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3b47b-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3b47b-121">See also</span></span>
+- [<span data-ttu-id="3b47b-122">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="3b47b-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="3b47b-123">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="3b47b-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

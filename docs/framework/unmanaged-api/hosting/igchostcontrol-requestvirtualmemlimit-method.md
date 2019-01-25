@@ -1,14 +1,6 @@
 ---
-title: "IGCHostControl::RequestVirtualMemLimit 方法"
-ms.custom: 
+title: IGCHostControl::RequestVirtualMemLimit 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IGCHostControl.RequestVirtualMemLimit
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: f4984a8c-4c0e-4460-9aa1-d022b3621228
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a14cb0d2d34db4ea0e5f9abf6fba6efc5e5a950c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db1572c035242a4a143ee435957409e5d16fca1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607169"
 ---
-# <a name="igchostcontrolrequestvirtualmemlimit-method"></a><span data-ttu-id="70cc4-102">IGCHostControl::RequestVirtualMemLimit 方法</span><span class="sxs-lookup"><span data-stu-id="70cc4-102">IGCHostControl::RequestVirtualMemLimit Method</span></span>
-<span data-ttu-id="70cc4-103">要求的主機，若要變更虛擬記憶體的限制。</span><span class="sxs-lookup"><span data-stu-id="70cc4-103">Requests the host to change the limits of virtual memory.</span></span>  
+# <a name="igchostcontrolrequestvirtualmemlimit-method"></a><span data-ttu-id="95861-102">IGCHostControl::RequestVirtualMemLimit 方法</span><span class="sxs-lookup"><span data-stu-id="95861-102">IGCHostControl::RequestVirtualMemLimit Method</span></span>
+<span data-ttu-id="95861-103">要求的主機，若要變更虛擬記憶體的限制。</span><span class="sxs-lookup"><span data-stu-id="95861-103">Requests the host to change the limits of virtual memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="70cc4-104">語法</span><span class="sxs-lookup"><span data-stu-id="70cc4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="95861-104">語法</span><span class="sxs-lookup"><span data-stu-id="95861-104">Syntax</span></span>  
   
 ```  
 HRESULT RequestVirtualMemLimit (  
@@ -47,21 +36,21 @@ HRESULT RequestVirtualMemLimit (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="70cc4-105">參數</span><span class="sxs-lookup"><span data-stu-id="70cc4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="95861-105">參數</span><span class="sxs-lookup"><span data-stu-id="95861-105">Parameters</span></span>  
  `sztMaxVirtualMemMB`  
- <span data-ttu-id="70cc4-106">[in]要配置的記憶體要求的大小。</span><span class="sxs-lookup"><span data-stu-id="70cc4-106">[in] The requested size of memory to be allocated.</span></span>  
+ <span data-ttu-id="95861-106">[in]記憶體配置要求的大小。</span><span class="sxs-lookup"><span data-stu-id="95861-106">[in] The requested size of memory to be allocated.</span></span>  
   
  `psztNewMaxVirtualMemMB`  
- <span data-ttu-id="70cc4-107">[in、 out]實際大小配置的記憶體指標。</span><span class="sxs-lookup"><span data-stu-id="70cc4-107">[in, out] A pointer to the actual size of memory allocated.</span></span>  
+ <span data-ttu-id="95861-107">[in、 out]實際大小配置的記憶體指標。</span><span class="sxs-lookup"><span data-stu-id="95861-107">[in, out] A pointer to the actual size of memory allocated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="70cc4-108">需求</span><span class="sxs-lookup"><span data-stu-id="70cc4-108">Requirements</span></span>  
- <span data-ttu-id="70cc4-109">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="70cc4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="95861-108">需求</span><span class="sxs-lookup"><span data-stu-id="95861-108">Requirements</span></span>  
+ <span data-ttu-id="95861-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="95861-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="70cc4-110">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="70cc4-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="95861-110">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="95861-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="70cc4-111">**程式庫：**包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="70cc4-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="95861-111">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="95861-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="70cc4-112">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70cc4-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="95861-112">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95861-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70cc4-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="70cc4-113">See Also</span></span>  
- [<span data-ttu-id="70cc4-114">IGCHostControl 介面</span><span class="sxs-lookup"><span data-stu-id="70cc4-114">IGCHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="95861-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="95861-113">See also</span></span>
+- [<span data-ttu-id="95861-114">IGCHostControl 介面</span><span class="sxs-lookup"><span data-stu-id="95861-114">IGCHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)

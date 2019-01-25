@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa69eda974187748d7046c792fa16b7729e3deff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12adffbfeb2ce6271774cf44c1a913d7a1414ba4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718607"
 ---
-# <a name="imetadataimportgettypedefprops-method"></a><span data-ttu-id="223cb-102">IMetaDataImport::GetTypeDefProps 方法</span><span class="sxs-lookup"><span data-stu-id="223cb-102">IMetaDataImport::GetTypeDefProps Method</span></span>
-<span data-ttu-id="223cb-103">傳回中繼資料資訊<xref:System.Type>指定 TypeDef 語彙基元所代表。</span><span class="sxs-lookup"><span data-stu-id="223cb-103">Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportgettypedefprops-method"></a><span data-ttu-id="04155-102">IMetaDataImport::GetTypeDefProps 方法</span><span class="sxs-lookup"><span data-stu-id="04155-102">IMetaDataImport::GetTypeDefProps Method</span></span>
+<span data-ttu-id="04155-103">傳回中繼資料資訊<xref:System.Type>指定 TypeDef 語彙基元所代表。</span><span class="sxs-lookup"><span data-stu-id="04155-103">Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="223cb-104">語法</span><span class="sxs-lookup"><span data-stu-id="223cb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="04155-104">語法</span><span class="sxs-lookup"><span data-stu-id="04155-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeDefProps (  
@@ -40,34 +40,34 @@ HRESULT GetTypeDefProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="223cb-105">參數</span><span class="sxs-lookup"><span data-stu-id="223cb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="04155-105">參數</span><span class="sxs-lookup"><span data-stu-id="04155-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="223cb-106">[in]TypeDef 語彙基元，代表要傳回的中繼資料的類型。</span><span class="sxs-lookup"><span data-stu-id="223cb-106">[in] The TypeDef token that represents the type to return metadata for.</span></span>  
+ <span data-ttu-id="04155-106">[in]TypeDef 語彙基元，表示要傳回的中繼資料的型別。</span><span class="sxs-lookup"><span data-stu-id="04155-106">[in] The TypeDef token that represents the type to return metadata for.</span></span>  
   
  `szTypeDef`  
- <span data-ttu-id="223cb-107">[out]緩衝區，其中包含的型別名稱。</span><span class="sxs-lookup"><span data-stu-id="223cb-107">[out] A buffer containing the type name.</span></span>  
+ <span data-ttu-id="04155-107">[out]緩衝區，包含型別名稱。</span><span class="sxs-lookup"><span data-stu-id="04155-107">[out] A buffer containing the type name.</span></span>  
   
  `cchTypeDef`  
- <span data-ttu-id="223cb-108">[in]中的寬字元大小`szTypeDef`。</span><span class="sxs-lookup"><span data-stu-id="223cb-108">[in] The size in wide characters of `szTypeDef`.</span></span>  
+ <span data-ttu-id="04155-108">[in]寬字元大小`szTypeDef`。</span><span class="sxs-lookup"><span data-stu-id="04155-108">[in] The size in wide characters of `szTypeDef`.</span></span>  
   
  `pchTypeDef`  
- <span data-ttu-id="223cb-109">[out]傳回的寬字元數目`szTypeDef`。</span><span class="sxs-lookup"><span data-stu-id="223cb-109">[out] The number of wide characters returned in `szTypeDef`.</span></span>  
+ <span data-ttu-id="04155-109">[out]中傳回的寬字元數目`szTypeDef`。</span><span class="sxs-lookup"><span data-stu-id="04155-109">[out] The number of wide characters returned in `szTypeDef`.</span></span>  
   
  `pdwTypeDefFlags`  
- <span data-ttu-id="223cb-110">[out]若要修改的類型定義任何旗標指標。</span><span class="sxs-lookup"><span data-stu-id="223cb-110">[out] A pointer to any flags that modify the type definition.</span></span> <span data-ttu-id="223cb-111">這個值是從位元遮罩[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)列舉型別。</span><span class="sxs-lookup"><span data-stu-id="223cb-111">This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="04155-110">[out]若要修改的類型定義任何旗標的指標。</span><span class="sxs-lookup"><span data-stu-id="04155-110">[out] A pointer to any flags that modify the type definition.</span></span> <span data-ttu-id="04155-111">這個值是從位元遮罩[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)列舉型別。</span><span class="sxs-lookup"><span data-stu-id="04155-111">This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.</span></span>  
   
  `ptkExtends`  
- <span data-ttu-id="223cb-112">[out]TypeDef 或 TypeRef 中繼資料語彙基元，代表所要求類型的基底類型。</span><span class="sxs-lookup"><span data-stu-id="223cb-112">[out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.</span></span>  
+ <span data-ttu-id="04155-112">[out]TypeDef 或 TypeRef 中繼資料語彙基元，表示所要求型別的基底型別。</span><span class="sxs-lookup"><span data-stu-id="04155-112">[out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="223cb-113">需求</span><span class="sxs-lookup"><span data-stu-id="223cb-113">Requirements</span></span>  
- <span data-ttu-id="223cb-114">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="223cb-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="04155-113">需求</span><span class="sxs-lookup"><span data-stu-id="04155-113">Requirements</span></span>  
+ <span data-ttu-id="04155-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="04155-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="223cb-115">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="223cb-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="04155-115">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="04155-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="223cb-116">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="223cb-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="04155-116">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="04155-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="223cb-117">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="223cb-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="04155-117">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04155-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="223cb-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="223cb-118">See Also</span></span>  
- [<span data-ttu-id="223cb-119">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="223cb-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="223cb-120">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="223cb-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="04155-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="04155-118">See also</span></span>
+- [<span data-ttu-id="04155-119">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="04155-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="04155-120">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="04155-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
