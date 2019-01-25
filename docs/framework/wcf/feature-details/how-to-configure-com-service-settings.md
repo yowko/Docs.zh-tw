@@ -1,17 +1,17 @@
 ---
-title: HOW TO：設定 COM+ 服務設定
+title: HOW TO：設定 COM + 服務設定
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 9cbeb03e21ed3b8ec272d47815ac7e9c48d77499
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 8deb7be51cdf3273a57d6777b103123636a2d2f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49348766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637394"
 ---
-# <a name="how-to-configure-com-service-settings"></a>HOW TO：設定 COM+ 服務設定
+# <a name="how-to-configure-com-service-settings"></a>HOW TO：設定 COM + 服務設定
 使用 COM+ 服務組態工具加入或移除應用程式介面時，Web 服務組態會在應用程式的組態檔中更新。 在 COM + 裝載模式中，Application.config 檔案放在應用程式根目錄中 (%PROGRAMFILES%\ComPlus 應用程式\\{appid} 是預設值)。 在兩個 Web 裝載模式中，Web.config 檔案都會放在指定的 vroot 目錄中。  
   
 > [!NOTE]
@@ -96,5 +96,5 @@ public interface IFinancesContract : IDisposable
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-* [整合 COM 應用程式](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+## <a name="see-also"></a>另請參閱
+- [整合 COM 應用程式](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

@@ -3,15 +3,15 @@ title: 工作流程的 &lt;behaviors&gt;
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c6017b6-0c4f-4192-bd67-9515f5d1ec82
-ms.openlocfilehash: 762fd1ff0de7980848ac3921706f406932c7f35d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b4ad7fb54cc8a03f5dd698055da5a29e719775c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731669"
 ---
 # <a name="ltbehaviorsgt-of-workflow"></a>工作流程的 &lt;behaviors&gt;
-這個項目包含**serviceBehaviors**集合。  集合中的每個項目都會定義工作流程服務使用的行為項目。 每個行為項目由其唯一**名稱**屬性。  
+這個元素包含**serviceBehaviors**集合。  集合中的每個項目都會定義工作流程服務使用的行為項目。 每個行為項目由其唯一**名稱**屬性。  
   
  \<system.ServiceModel>  
   
@@ -30,11 +30,11 @@ ms.locfileid: "32767306"
 ### <a name="attributes"></a>屬性  
  無  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/servicebehaviors-of-workflow.md)|這個組態區段表示為特定工作流程服務定義的所有行為。|  
+|[\<serviceBehaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/servicebehaviors-of-workflow.md)|這個組態區段表示為特定工作流程服務定義的所有行為。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -42,8 +42,8 @@ ms.locfileid: "32767306"
 |-------------|-----------------|  
 |[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|所有工作流程組態項目的根項目。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.BehaviorsSection>  
- <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>  
- <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>  
- [使用行為來設定與擴充執行階段](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.BehaviorsSection>
+- <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>
+- <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>
+- [使用行為來設定與擴充執行階段](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ba2103003e3976e51e82ad6b42315a881582f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d07c6de47038d5c52d76ad8ca8e0a5684551d59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491463"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr 列舉
 包含值，這些值描述方法參數的中繼資料。  
@@ -48,20 +48,20 @@ typedef enum CorParamAttr {
   
 |成員|描述|  
 |------------|-----------------|  
-|`pdIn`|指定的參數會傳遞至方法呼叫。|  
-|`pdOut`|指定的參數傳遞從方法傳回。|  
-|`pdOptional`|指定是選擇性參數。|  
+|`pdIn`|指定此參數會傳遞至方法呼叫。|  
+|`pdOut`|指定參數傳遞從方法傳回。|  
+|`pdOptional`|指定的參數為選擇性。|  
 |`pdReservedMask`|保留供內部使用的 common language runtime。|  
 |`pdHasDefault`|指定參數有預設值。|  
-|`pdHasFieldMarshal`|指定的參數有封送處理資訊。|  
+|`pdHasFieldMarshal`|指定參數的封送處理資訊。|  
 |`pdUnused`|未使用。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

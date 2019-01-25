@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows Forms ListView 控制項中啟用並排顯示
+title: HOW TO：啟用 Windows Form ListView 控制項中的並排顯示檢視
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 4eb418bbd2d399c57ce4a8235130a9939be56ce4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b51a314791180ea0f03f2eb0c5fbe8f897a0016d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629292"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>如何：在 Windows Forms ListView 控制項中啟用並排顯示
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>HOW TO：啟用 Windows Form ListView 控制項中的並排顯示檢視
 使用的 <xref:System.Windows.Forms.ListView> 控制項的並排顯示檢視功能，您可以提供圖形和文字資訊之間的視覺化平衡。 並排顯示檢視中針對項目顯示的文字資訊與詳細資料檢視所定義的資料行資訊相同。 並排顯示檢視與 <xref:System.Windows.Forms.ListView> 控制項中的群組或插入標記功能相配合。  
   
  並排顯示檢視會使用 32 x 32 像素圖示和數行的文字，如下列影像所示。  
@@ -57,11 +57,11 @@ ms.locfileid: "43519518"
   
 -   名為 book.ico 的圖示檔，位於與可執行檔相同的目錄中。  
   
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[How to:編譯並執行完整的 Windows Form 程式碼範例使用 Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.ListView>  
- <xref:System.Windows.Forms.ListView.TileSize%2A>  
- [ListView 控制項](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [ListView 控制項概觀](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
- [Windows XP 功能和 Windows Forms 控制項](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.ListView>
+- <xref:System.Windows.Forms.ListView.TileSize%2A>
+- [ListView 控制項](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [ListView 控制項概觀](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
+- [Windows XP 功能和 Windows Forms 控制項](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)

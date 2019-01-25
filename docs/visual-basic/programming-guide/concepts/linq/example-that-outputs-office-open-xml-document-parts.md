@@ -1,15 +1,15 @@
 ---
-title: 範例輸出 Office Open XML 文件組件 (Visual Basic)
+title: 輸出 Office Open XML 文件組件 (Visual Basic) 的範例
 ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-ms.openlocfilehash: 2e4b03d89a5b1eabb5751d807ef78442a960389d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ad7dc9d6f68ecde88888b0f0250632f3f946f92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670247"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>範例輸出 Office Open XML 文件組件 (Visual Basic)
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>輸出 Office Open XML 文件組件 (Visual Basic) 的範例
 本主題顯示如何開啟 Office Open XML 文件並存取其中的一部分。  
   
 ## <a name="example"></a>範例  
@@ -64,5 +64,5 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Office 的詳細資料中開啟 XML WordprocessingML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>另請參閱
+- [詳細資料的 Office Open XML WordprocessingML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

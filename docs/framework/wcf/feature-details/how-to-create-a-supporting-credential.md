@@ -1,15 +1,15 @@
 ---
-title: HOW TO：建立支援的認證
+title: HOW TO：建立支援認證
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: ef4d9a406e6fc929e4ad59911d587e462c9b2b65
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e56d595b389f2217f4c50db1242f418742a5d56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499987"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539801"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>HOW TO：建立支援的認證
+# <a name="how-to-create-a-supporting-credential"></a>HOW TO：建立支援認證
 您可能具有需要多個認證的自訂安全性配置。 例如，服務對用戶端的要求可能不只是提供使用者名稱和密碼，可能也要提供可證明用戶端已超過 18 歲的認證。 第二個認證已*支援認證*。 本主題說明如何在 Windows Communication Foundation (WCF) 用戶端實作這類認證。  
   
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "43499987"
 |已簽署和加密|已簽署的加密支援權杖是出現在 `wsse:SecurityHeader` 時，也會進行加密的已簽署支援權杖。|  
   
 ## <a name="programming-supporting-credentials"></a>程式設計的支援認證  
- 若要建立會使用支援的權杖，您必須建立服務[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。 (如需詳細資訊，請參閱 <<c0> [ 如何： 建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)  
+ 若要建立會使用支援的權杖，您必須建立服務[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。 (如需詳細資訊，請參閱[How to:建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)  
   
  建立自訂繫結的第一個步驟為建立安全性繫結項目，可以是下列三種類型的其中之一：  
   
@@ -80,5 +80,5 @@ ms.locfileid: "43499987"
 ### <a name="code"></a>程式碼  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>另請參閱  
- [如何：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a>另請參閱
+- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

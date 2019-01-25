@@ -3,12 +3,12 @@ title: '&lt;activityStateQuery&gt; 的 &lt;states&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a7cc2018-2b79-44f1-825a-bb7ca08690a3
-ms.openlocfilehash: d43a2e93c046e4dc52de504932f768ece09af487
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: db50155af22cd8a50158b940a88599df1a66ce1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143385"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635854"
 ---
 # <a name="ltstatesgt-of-ltactivitystatequerygt"></a>&lt;activityStateQuery&gt; 的 &lt;states&gt;
 組態元素的集合，其中包含應該發出追蹤記錄之已訂閱活動的狀態。  
@@ -16,12 +16,12 @@ ms.locfileid: "53143385"
  如需有關追蹤設定檔查詢的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
   
 \<system.serviceModel>  
-\<追蹤 >  
+\<tracking>  
 \<trackingProfile>  
-\<工作流程 >  
-\<activityStateQueries >  
-\<activityStateQuery >  
-\<狀態 >  
+\<workflow>  
+\<activityStateQueries>  
+\<activityStateQuery>  
+\<states>  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,13 +50,13 @@ ms.locfileid: "53143385"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<狀態 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/state-of-states.md)|組態項目，其中包含追蹤記錄應發出之已訂閱活動的狀態。|  
+|[\<state>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/state-of-states.md)|組態項目，其中包含追蹤記錄應發出之已訂閱活動的狀態。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)|代表組態項目，可用來追蹤由父活動取消子活動的要求。 追蹤參與者必須要具備這個查詢，才能訂閱取消要求記錄物件。|  
+|[\<activityStateQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)|代表組態項目，可用來追蹤由父活動取消子活動的要求。 追蹤參與者必須要具備這個查詢，才能訂閱取消要求記錄物件。|  
   
 ## <a name="remarks"></a>備註  
  ActivityStateQuery 的一項獨特功能，就是可在追蹤工作流程的執行時擷取資料。 它可在存取追蹤記錄後期執行時，提供額外的內容。 您可以使用[\<引數 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)， [\<狀態 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)並[\<狀態 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)項目擷取任何變數或引數從工作流程中的任何活動。 下列範例示範活動狀態查詢，此查詢會在發出活動的 `Closed` 追蹤記錄時擷取變數及引數。 變數和引數只能使用 ActivityStateRecord 擷取，並因此訂閱在追蹤設定檔中使用[ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)。  
@@ -75,8 +75,8 @@ ms.locfileid: "53143385"
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>      
- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
+- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

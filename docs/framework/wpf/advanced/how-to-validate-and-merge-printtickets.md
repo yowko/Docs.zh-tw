@@ -1,5 +1,5 @@
 ---
-title: 如何：驗證和合併 PrintTickets
+title: HOW TO：驗證和合併 PrintTickets
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 37a1c0600b8429158336968507ddc8cfb6d8f98b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0b9f7b101ea4f06c86f66f8e4e16d1ffeabaa9e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671937"
 ---
-# <a name="how-to-validate-and-merge-printtickets"></a>如何：驗證和合併 PrintTickets
+# <a name="how-to-validate-and-merge-printtickets"></a>HOW TO：驗證和合併 PrintTickets
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [列印結構描述](https://go.microsoft.com/fwlink/?LinkId=186397)包括有彈性且可延伸<xref:System.Printing.PrintCapabilities>和<xref:System.Printing.PrintTicket>項目。 前者的逐項列出列印裝置的功能，後者則指定裝置應該如何使用這些功能對於特定的一連串的文件、 個別的文件或個別的頁面。  
   
  一般的應用程式可支援列印的工作順序會如下所示。  
@@ -56,14 +56,14 @@ ms.locfileid: "43485634"
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Printing.PrintCapabilities>  
- <xref:System.Printing.PrintTicket>  
- <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
- <xref:System.Printing.PrintServer>  
- <xref:System.Printing.EnumeratedPrintQueueTypes>  
- <xref:System.Printing.PrintQueue>  
- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [列印結構描述](https://go.microsoft.com/fwlink/?LinkId=186397)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Printing.PrintCapabilities>
+- <xref:System.Printing.PrintTicket>
+- <xref:System.Printing.PrintServer.GetPrintQueues%2A>
+- <xref:System.Printing.PrintServer>
+- <xref:System.Printing.EnumeratedPrintQueueTypes>
+- <xref:System.Printing.PrintQueue>
+- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
+- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [列印結構描述](https://go.microsoft.com/fwlink/?LinkId=186397)

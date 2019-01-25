@@ -7,12 +7,12 @@ helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-ms.openlocfilehash: d1d9209cd583ac96ece59660ad29c76a66d3395a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d5909e6ee7436b7e4f7baa30bfe81eb8ba5441e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625742"
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (泛型修飾詞) (Visual Basic)
 若為泛型型別參數，`In` 關鍵字會指定型別參數是 Contravariant。  
@@ -25,11 +25,11 @@ ms.locfileid: "33597428"
 ## <a name="rules"></a>規則  
  您可以在泛型介面及委派中使用 `In` 關鍵字。  
   
- 如果它是只當做方法引數的型別，而且並未當做方法的傳回型別，型別參數可以宣告 contravariant 的泛型介面或委派中。 `ByRef` 參數不能為 covariant 或 contravariant。  
+ 如果它是僅為方法引數的型別，不用為方法的傳回型別，類型參數可以宣告 contravariant 泛型介面或委派中。 `ByRef` 參數不可以是共變性或逆變性。  
   
- 共變數和反變數參考類型和支援值型別不支援。  
+ 共變性與逆變性是參考型別支援和不支援的實值型別。  
   
- 在 Visual Basic 中，您無法宣告但未指定委派類型的 contravariant 介面中的事件。 此外，類別、 列舉或結構，contravariant 介面不能有巢狀，但可以有巢狀介面。  
+ 在 Visual Basic 中，您無法宣告 contravariant 介面中的事件，而不指定委派類型。 此外，類別、 列舉或結構，contravariant 介面不能有巢狀，但可以有巢狀介面。  
   
 ## <a name="behavior"></a>行為  
  具有 Contravariant 型別參數的介面可讓其方法接受衍生程度低於介面型別參數指定之衍生類型的引數。 例如，因為在 .NET Framework 4 的 <xref:System.Collections.Generic.IComparer%601> 介面中，類型 T 是 Contravariant，所以您可以不使用任何特殊的轉換方法，將 `IComparer(Of Person)` 類型的物件指派給 `IComparer(Of Employee)` 類型的物件 (如果 `Person` 繼承 `Employee`)。  
@@ -46,6 +46,6 @@ ms.locfileid: "33597428"
   
  [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [泛型介面中的變異數](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>另請參閱
+- [泛型介面中的變異數](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

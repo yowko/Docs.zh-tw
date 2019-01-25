@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 349324cabc999bac3bd0c247d3614dfc503b8b61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 32f9a5f92ae580839ce46476de9f9c7edcd54685
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573396"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>產生加密和解密金鑰
 建立和管理金鑰是密碼編譯程序中很重要的一部分。 對稱演算法需要建立金鑰和初始化向量 (IV)。 務必不要對不該解密您資料的任何人透露金鑰。 IV 不需要加密，但是應該針對每個工作階段變更。 非對稱演算法需要建立公開金鑰和私密金鑰。 公開金鑰可以公開給任何人，但私密金鑰必須只有將解密以公開金鑰加密之資料的一方知道。 本節描述如何產生及管理對稱和非對稱演算法的金鑰。  
@@ -90,7 +90,7 @@ RSAParameters RSAKeyInfo = RSA.ExportParameters(false);
   
 ## <a name="see-also"></a>另請參閱
 
-- [加密資料](../../../docs/standard/security/encrypting-data.md)  
-- [解密資料](../../../docs/standard/security/decrypting-data.md)  
-- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)  
-- [操作說明：在金鑰容器儲存非對稱金鑰](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [加密資料](../../../docs/standard/security/encrypting-data.md)
+- [解密資料](../../../docs/standard/security/decrypting-data.md)
+- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
+- [如何：在金鑰容器儲存非對稱金鑰](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

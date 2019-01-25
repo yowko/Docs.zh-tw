@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: d27e1bda296a153343b450c84c65fa35d55d72f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 427840430a37f675ccc0f0ee4f423370f2a55550
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646366"
 ---
 # <a name="3-d-transformations-overview"></a>立體轉換概觀
 本主題說明如何對 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 圖形系統中的 3D 模型套用轉換。 轉換可讓開發人員重新置放模型、調整模型大小，以及調整模型方向，而不需要變更定義模型的基底值。  
@@ -67,7 +67,7 @@ ScaleVector 範例
   
  [!code-xaml[animation3dgallery_snip#Rotate3DUsingAxisAngleRotation3DExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotat3DUsingAxisAngleRotation3DExample.xaml#rotate3dusingaxisanglerotation3dexamplewholepage)]  
   
- 注意︰[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D 是右手系統，這表示旋轉的正角度值會繞著軸以逆時針方向旋轉。  
+ 注意：[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3d 是右手系統，這表示旋轉的正角度值會導致軸以逆時針方向旋轉。  
   
  如果未指定值，軸角度旋轉會假設對於原點旋轉<xref:System.Windows.Media.Media3D.RotateTransform3D.CenterX%2A>， <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterY%2A>，和<xref:System.Windows.Media.Media3D.RotateTransform3D.CenterZ%2A>RotateTransform3D 上的屬性。 若使用縮放比例，最好記住旋轉會轉換模型的整個座標空間。 如果模型不是相對於原點建立，或先前已平移，則可能會「以原點為中心」旋轉而不是就地旋轉。  
   
@@ -105,7 +105,7 @@ ScaleVector 範例
   
  因為觀景窗也是模型，所以同樣可以轉換觀景窗屬性。  雖然您可以轉換觀景窗位置或平面距離來變更場景的外觀 (實際上是轉換整個場景投影)，但請注意，以這種方式達成的許多效果就觀者的「視覺感受」來說，會比對場景中的模型位置套用轉換來得少。  
   
-## <a name="see-also"></a>另請參閱  
- [立體圖形概觀](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>另請參閱
+- [立體圖形概觀](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)

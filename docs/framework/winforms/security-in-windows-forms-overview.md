@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 36d38756f7df88ec04aca781525f0f6b0a48b768
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a19e6d2ed39c21301b3409cdeb55a569f0d2eff4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703376"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Form 中的安全性概觀
 在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 發行之前，在使用者電腦上執行的所有程式碼，對資源的存取權限都和電腦的使用者相同。 例如，如果使用者可以存取檔案系統，程式碼就可以存取檔案系統，如果使用者可以存取某個資料庫，程式碼就可以存取該資料庫。 就使用者明確安裝在本機電腦上的可執行檔中的程式碼而言，也許這些權限是可接受的，但是就來自網際網路或近端內部網路的潛在惡意程式碼而言，可能就無法接受了。 不應該讓這個程式碼在沒有權限的情況下，存取使用者的電腦資源。  
@@ -75,17 +75,17 @@ ms.locfileid: "48839127"
   
  您要選擇哪一種技術，將取決於您的部署環境。 如需詳細資訊，請參閱[選擇 ClickOnce 部署策略](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)。  
   
- 根據預設，[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]使用 Visual Studio 部署的應用程式或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 （Mage.exe 和 MageUI.exe） 設定為具有完全信任的用戶端電腦上執行。 如果您在部署應用程式時，是使用部分信任，或是只有使用某些額外的權限，則必須變更這個預設值。 您可以使用 Visual Studio 或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 MageUI.exe，當您設定您的部署。 如需有關如何使用 MageUI.exe 的詳細資訊，請參閱＜逐步解說：從命令列部署 ClickOnce 應用程式＞。  另請參閱[如何：設定 ClickOnce 應用程式的自訂權限](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\))或[如何：設定 ClickOnce 應用程式的自訂權限](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\))。  
+ 根據預設，[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]使用 Visual Studio 部署的應用程式或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 （Mage.exe 和 MageUI.exe） 設定為具有完全信任的用戶端電腦上執行。 如果您在部署應用程式時，是使用部分信任，或是只有使用某些額外的權限，則必須變更這個預設值。 您可以使用 Visual Studio 或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 MageUI.exe，當您設定您的部署。 如需如何使用 MageUI.exe 的詳細資訊，請參閱 < 逐步解說：部署 ClickOnce 應用程式，從命令列。  另請參閱[How to:設定 ClickOnce 應用程式的自訂權限](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\))或[How to:設定 ClickOnce 應用程式的自訂權限](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\))。  
   
  如需有關 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 安全性層面和權限提高的詳細資訊，請參閱[保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。 如需有關受信任的應用程式部署的詳細資訊，請參閱[受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)。  
   
 ### <a name="testing-the-application"></a>測試應用程式  
- 如果您使用 Visual Studio 部署您的 Windows Forms 應用程式，您可以啟用偵錯部分信任或受限制的使用權限集合從開發環境中。  另請參閱[如何：以限制使用權限偵錯 ClickOnce 應用程式](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\))或[如何：以限制使用權限偵錯 ClickOnce 應用程式](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))。  
+ 如果您使用 Visual Studio 部署您的 Windows Forms 應用程式，您可以啟用偵錯部分信任或受限制的使用權限集合從開發環境中。  另請參閱[How to:偵錯 ClickOnce Application with Restricted Permissions](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\))或[How to:以受限制的權限對 ClickOnce 應用程式進行偵錯](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Forms 安全性](../../../docs/framework/winforms/windows-forms-security.md)  
- [程式碼存取安全性的基本概念](../../../docs/framework/misc/code-access-security-basics.md)  
- [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)  
- [受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)  
- [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+## <a name="see-also"></a>另請參閱
+- [Windows Forms 安全性](../../../docs/framework/winforms/windows-forms-security.md)
+- [程式碼存取安全性的基本概念](../../../docs/framework/misc/code-access-security-basics.md)
+- [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)
+- [受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)
+- [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

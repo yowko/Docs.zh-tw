@@ -2,20 +2,20 @@
 title: '&lt;netNamedPipeBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: 0079cb9e62abed42a36b67fed935f883473ebbb8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: bef644094de06939c6948a50888f7f7f9d3e9a7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524607"
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; 的 &lt;security&gt;
 定義繫結的安全性設定。  
   
  \<system.ServiceModel>  
-\<繫結 >  
+\<bindings>  
 \<netNamedPipeBinding>  
-\<繫結 >  
+\<binding>  
 \<安全性 >  
   
 ## <a name="syntax"></a>語法  
@@ -51,14 +51,14 @@ ms.locfileid: "54147820"
 |-------------|-----------------|  
 |繫結|繫結項目[ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.NetNamedPipeSecurity>  
- <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>  
- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.NetNamedPipeSecurity>
+- <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>
+- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: ff68c30c4e58cebb70c59352593d7b084413dce8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 012590a21ac24b1146c30405c9872355a4b50802
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627248"
 ---
 # <a name="getcustomui"></a>GetCustomUI
-如果實作，呼叫 PresentationHost.exe 從主機上，取得自訂的進度和錯誤訊息。  
+如果實作時，請呼叫由 PresentationHost.exe 從主機取得自訂的進度和錯誤訊息。  
   
 ## <a name="syntax"></a>語法  
   
@@ -27,7 +27,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzProgressClassName`  
   
- [out]最好是主機提供進度使用者介面、 類別名稱[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]檔案搭配<xref:System.Windows.Controls.Page>是其最上層元素。 這個類別位於所指定的組件`pwzProgressAssemblyName`。  
+ [out]最好是主機提供進度使用者介面的類別名稱[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]檔案中使用<xref:System.Windows.Controls.Page>是其最上層元素。 此類別位於所指定的組件`pwzProgressAssemblyName`。  
   
  `pwzErrorAssemblyName`  
   
@@ -35,15 +35,15 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzErrorClassName`  
   
- [out]為主機提供的錯誤使用者類別的名稱介面，最好是使用 XAML 檔案<xref:System.Windows.Controls.Page>是其最上層元素。 這個類別位於所指定的組件`pwzErrorAssemblyName`。  
+ [out]為主機提供的錯誤使用者的類別名稱介面，最好的 XAML 檔案<xref:System.Windows.Controls.Page>是其最上層元素。 此類別位於所指定的組件`pwzErrorAssemblyName`。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- HRESULT： 忽略。  
+ HRESULT:忽略。  
   
 ## <a name="remarks"></a>備註  
- 主應用程式可能 PresentationHost.exe 的預設使用者介面可能不符合特定主題。 如果這種情況，主應用程式可以實作[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)回到進度和錯誤的使用者介面 PresentationHost.exe。 一定會呼叫 PresentationHost.exe [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)才能使用其預設使用者介面。  
+ 主應用程式可能會有特定的佈景主題，PresentationHost.exe 的預設使用者介面可能不符合。 如果發生這種情況，主應用程式可實作[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)返回進度和錯誤的使用者介面 PresentationHost.exe。 一定會呼叫 PresentationHost.exe [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)之前使用其預設使用者介面。  
   
- 一次 PresentationHost 的初始化期間，會呼叫此函式。  
+ 一次在 PresentationHost 的初始化期間，會呼叫此函數。  
   
-## <a name="see-also"></a>另請參閱  
- [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)
+## <a name="see-also"></a>另請參閱
+- [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)

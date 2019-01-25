@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5996ce41c80cb54c4fcb9104c2993c85bcc2b466
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fb7b800bca1957c8c324ddb9c11cb4eabb49cd24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628483"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod 函式
 從 CIM 類別定義中刪除指定的方法。
@@ -55,7 +55,7 @@ HRESULT Delete (
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | 指定的方法不存在。 |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體來完成此作業。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
 
@@ -72,5 +72,5 @@ HRESULT Delete (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

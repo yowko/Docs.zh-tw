@@ -10,23 +10,23 @@ helpviewer_keywords:
 - GlyphRunDrawing objects [WPF]
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
-ms.openlocfilehash: 744906d7dba8b9bc317d181738790b7647fe912c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a629d74c7b76e5daf2460c63b040fbe37a3a36d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499115"
 ---
 # <a name="glyphs"></a>字符
-圖像 （glyph） 是字元的要在螢幕上繪製的低階描述。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 可直接存取圖像 （glyph） 的客戶想要攔截，並將保存完成格式化後的文字。  
+圖像 （glyph） 是字元，會繪製在螢幕上的低層級描述。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供客戶想要攔截和保存格式化之後的文字中的圖像 （glyph） 的直接存取。  
   
 ## <a name="in-this-section"></a>本節內容  
  [GlyphRun 物件和 Glyphs 元素簡介](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [操作說明：使用圖像繪製文字](../../../../docs/framework/wpf/advanced/draw-text-using-glyphs.md)  
+  [如何：使用圖像繪製文字](../../../../docs/framework/wpf/advanced/draw-text-using-glyphs.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.GlyphRun>  
- <xref:System.Windows.Media.DrawingContext.DrawText%2A>  
- <xref:System.Windows.Documents.Glyphs>  
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.GlyphRun>
+- <xref:System.Windows.Media.DrawingContext.DrawText%2A>
+- <xref:System.Windows.Documents.Glyphs>
+- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)

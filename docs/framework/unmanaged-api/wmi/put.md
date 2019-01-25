@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625766"
 ---
 # <a name="put-function"></a>Put 函式
 將具名屬性設定為新值。
@@ -50,10 +50,10 @@ HRESULT Put (
 [in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
 
 `wszName`  
-[in]屬性的名稱。 此參數不得為`null`。
+[in]屬性的名稱。 這個參數不可以是 `null`。
 
 `lFlags`  
-[in]保留。 這個參數必須是 0。
+[in] 保留。 這個參數必須是 0。
 
 `pVal`   
 [in]有效的指標`VARIANT`會變成新的屬性值。 如果`pVal`是`null`或指向`VARIANT`型別的`VT_NULL`，屬性設定為`null`。 
@@ -72,7 +72,7 @@ HRESULT Put (
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 找不到有效的一或多個參數。 |
 |`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | 無法辨識的屬性型別。 建立類別執行個體，如果類別已存在時，會傳回此值。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | 執行個體： 表示`pVal`指向`VARIANT`屬性的型別不正確。 <br/> 如需類別定義： 在父類別中，已經存在的屬性和新的 COM 型別是從舊的 COM 型別不同。 |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | 執行個體：指出`pVal`指向`VARIANT`屬性的型別不正確。 <br/> 如需類別定義：屬性中已存在的父類別，新的 COM 型別是從舊的 COM 型別不同。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。 |
   
 ## <a name="remarks"></a>備註
@@ -100,5 +100,5 @@ HRESULT Put (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

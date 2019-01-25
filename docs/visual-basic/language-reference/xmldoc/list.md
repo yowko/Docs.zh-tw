@@ -13,12 +13,12 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 98c3b8bd809ac550468a5d80e01e6fd16e6d96ea
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 8d9bcffc32a1d1670aba1ce0e7b0ff0a6dc7112d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521110"
 ---
 # <a name="ltlistgt-visual-basic"></a>&lt;清單&gt;(Visual Basic)
 定義清單或資料表。  
@@ -62,5 +62,5 @@ ms.locfileid: "42924930"
   
  [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>另請參閱
+- [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)

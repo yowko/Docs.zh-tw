@@ -1,5 +1,5 @@
 ---
-title: 輸入的&#39; &lt;variablename&gt; &#39;無法推斷，因為迴圈繫結和 step 變數不會擴展為相同的型別
+title: 類型&#39; &lt;variablename&gt; &#39;無法推斷，因為迴圈繫結和 step 變數不會擴展為相同的型別
 ms.date: 07/20/2015
 f1_keywords:
 - bc30982
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: d6fdd9445b5336773d150c643c7bf1ca58a0c87a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ae14426181778a78254db8a5cd968d60bbdc8f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631254"
 ---
-# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>輸入的&#39; &lt;variablename&gt; &#39;無法推斷，因為迴圈繫結和 step 變數不會擴展為相同的型別
-您已經撰寫`For...Next`迴圈下列條件成立，因為編譯器無法推斷迴圈控制變數的資料類型：  
+# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>類型&#39; &lt;variablename&gt; &#39;無法推斷，因為迴圈繫結和 step 變數不會擴展為相同的型別
+您已撰寫`For...Next`下列條件成立，因為編譯器無法推斷迴圈控制變數的資料類型的迴圈：  
   
 -   未使用 `As` 子句指定迴圈控制變數的資料類型。  
   
 -   迴圈繫結和 step 變數包含至少兩種資料類型。  
   
--   資料型別之間，沒有標準轉換存在。  
+-   標準轉換存在之間的資料類型。  
   
  因此，編譯器無法推斷迴圈控制變數的資料類型。  
   
- 在下列範例中，步驟變數是字元和迴圈繫結都是這兩個整數。 因為沒有標準轉換字元和整數之間，會報告此錯誤。  
+ 在下列範例中，步驟變數是字元，而且迴圈繫結都是這兩個整數。 因為沒有標準轉換字元和整數之間，則會報告此錯誤。  
   
 ```vb  
 Dim stepVar = "1"c  
@@ -42,7 +42,7 @@ Dim n = 20
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   變更類型的迴圈繫結和 step 變數在必要時，使至少一個其他擴展為型別。 在上述範例中，變更的類型`stepVar`至`Integer`。  
+-   變更迴圈繫結和 step 變數為必要的類型，使至少一個其他擴展為的型別。 在上述範例中，將變更的型別`stepVar`至`Integer`。  
   
     ```  
     Dim stepVar = 1  
@@ -54,7 +54,7 @@ Dim n = 20
     Dim stepVar As Integer = 1  
     ```  
   
--   使用明確的轉換函式的迴圈繫結和 step 變數轉換成適當的型別。 在上述範例中，套用`Val`函式以`stepVar`。  
+-   您可以使用明確的轉換函式，將迴圈繫結和 step 變數轉換成適當的類型。 在上述範例中，套用`Val`函式以`stepVar`。  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  
@@ -62,11 +62,11 @@ Dim n = 20
     Next  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
- [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Infer 陳述式](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [擴展和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.Conversion.Val%2A>
+- [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Option Infer 陳述式](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [擴展和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

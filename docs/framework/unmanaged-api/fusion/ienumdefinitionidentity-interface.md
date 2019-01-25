@@ -16,11 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34186ee8825c0981ec095cf855c76ff5f800907d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3ff37acd9b4dffe80112f0a0ebe9c9cd86ae66f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668441"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity 介面
 做為集合的列舉值`IDefinitionIdentity`物件。  
@@ -54,18 +55,18 @@ IEnumDefinitionIdentity : IUnknown {
   
 |方法|描述|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|取得新的介面指標`IEnumDefinitionIdentity`物件，其中包含這個相同的成員`IEnumDefinitionIdentity`。|  
+|`IEnumDefinitionIdentity::Clone`|取得新的介面指標`IEnumDefinitionIdentity`物件，其中包含與這個相同的成員`IEnumDefinitionIdentity`。|  
 |`IEnumDefinitionIdentity::Next`|取得指定的數目`IDefinitionIdentity`物件，從目前位置開始。|  
-|`IEnumDefinitionIdentity::Reset`|將指令指標移到開頭`IEnumDefinitionIdentity`。|  
-|`IEnumDefinitionIdentity::Skip`|將指令指標向前移以指定的項目，從目前位置開始。|  
+|`IEnumDefinitionIdentity::Reset`|將指令指標移至這個開頭`IEnumDefinitionIdentity`。|  
+|`IEnumDefinitionIdentity::Skip`|將指令指標向前移的指定項目數，從目前位置開始。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Isolation.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IDefinitionIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+## <a name="see-also"></a>另請參閱
+- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IDefinitionIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)

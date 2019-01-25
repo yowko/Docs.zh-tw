@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f3e5b3c4dcec98f293b4d6444d781705c700f88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6300195cafeedd8823e0b10b4ee0ebf9ff8e2055
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528065"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server 程式設計和主機保護屬性
-在 SQL Server 主機中載入和執行 Managed 程式碼的功能需要符合主機對程式碼存取安全性和主機資源保護的需求。  程式碼存取安全性需求由三個 SQL Server 權限集合其中之一所指定：SAFE、EXTERNAL-ACCESS 或 UNSAFE。 在 SAFE 或 EXTERNAL-ACCESS 權限集合內執行的程式碼，必須避免已套用 <xref:System.Security.Permissions.HostProtectionAttribute> 屬性的特定類型或成員。 <xref:System.Security.Permissions.HostProtectionAttribute> 不像可靠性保證一樣是安全性權限，關鍵在於它會識別主機可能不允許的特定程式碼建構 (類型或方法)。  使用 <xref:System.Security.Permissions.HostProtectionAttribute> 會強制使用有助於保護主機穩定性的程式設計模型。  
+在 SQL Server 主機中載入和執行 Managed 程式碼的功能需要符合主機對程式碼存取安全性和主機資源保護的需求。  三個 SQL Server 權限集的其中一個指定的程式碼存取安全性需求：SAFE、 EXTERNAL-ACCESS 或 UNSAFE。 在 SAFE 或 EXTERNAL-ACCESS 權限集合內執行的程式碼，必須避免已套用 <xref:System.Security.Permissions.HostProtectionAttribute> 屬性的特定類型或成員。 <xref:System.Security.Permissions.HostProtectionAttribute> 不像可靠性保證一樣是安全性權限，關鍵在於它會識別主機可能不允許的特定程式碼建構 (類型或方法)。  使用 <xref:System.Security.Permissions.HostProtectionAttribute> 會強制使用有助於保護主機穩定性的程式設計模型。  
   
 ## <a name="host-protection-attributes"></a>主機保護屬性  
  主機保護屬性可識別不適合主機程式設計模型的類型或成員，並且代表下列遞增的可靠性威脅層級：  
@@ -52,14 +53,14 @@ ms.lasthandoff: 05/04/2018
 |`System.Windows.Forms`|<xref:System.Windows.Forms.AutoCompleteStringCollection.SyncRoot%2A?displayProperty=nameWithType> 屬性|  
   
 ## <a name="sql-server-permission-sets"></a>SQL Server 權限集合  
- SQL Server 可讓使用者針對部署到資料庫中的程式碼指定可靠性需求。 當組件上傳至資料庫時，組件作者可以為該組件指定三個權限集合的其中一個：SAFE、EXTERNAL-ACCESS 或 UNSAFE。  
+ SQL Server 可讓使用者針對部署到資料庫中的程式碼指定可靠性需求。 當組件上傳至資料庫時，組件作者可以指定三個權限集合的其中一個該組件：SAFE、 EXTERNAL-ACCESS 或 UNSAFE。  
   
 |權限集合|SAFE|EXTERNAL-ACCESS|UNSAFE|  
 |--------------------|----------|----------------------|------------|  
 |程式碼存取安全性|僅限執行|執行 + 存取外部資源|無限制的|  
-|程式設計模型限制|[是]|[是]|無限制|  
-|可驗證性需求|[是]|是|否|  
-|呼叫原生程式碼的能力|否|否|[是]|  
+|程式設計模型限制|是|是|無限制|  
+|可驗證性需求|是|是|否|  
+|呼叫原生程式碼的能力|否|否|是|  
   
  SAFE 是最可靠且安全的模式，並且在允許的程式設計模型方面有相關限制。 SAFE 程式碼具有高可靠性和安全性功能。 SAFE 組件有足夠的權限來執行、執行計算，以及存取本機資料庫。 SAFE 組件必須是可驗證的型別安全，且不允許呼叫 Unmanaged 程式碼。  
   
@@ -74,6 +75,6 @@ ms.lasthandoff: 05/04/2018
   
  基於這些考量，SQL Server 不允許使用靜態變數和靜態資料成員。 對於 SAFE 及 EXTERNAL-ACCESS 組件，SQL Server 會在 CREATE ASSEMBLY 時，檢查組件的中繼資料，並且如果它找到使用靜態資料成員和變數，便讓這類組件的建立作業失敗。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Security.Permissions.HostProtectionAttribute>  
- <xref:System.Security.Permissions.HostProtectionResource>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Security.Permissions.HostProtectionAttribute>
+- <xref:System.Security.Permissions.HostProtectionResource>

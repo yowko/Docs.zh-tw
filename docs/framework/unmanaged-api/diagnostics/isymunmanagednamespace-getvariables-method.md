@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b63dbcaa54e03e5603e06545f8b4fec393d8268
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11a5eb01a3e354b4360bea59af1e63ffeb0576aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730109"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables 方法
 傳回在此命名空間內的全域範圍中定義的所有變數。  
@@ -39,19 +39,19 @@ HRESULT GetVariables(
   
 #### <a name="parameters"></a>參數  
  `cVars`  
- [in]A`ULONG32`指出的大小`pVars`陣列。  
+ [in]A`ULONG32`表示的大小`pVars`陣列。  
   
  `pcVars`  
- [out]指標`ULONG32`包含命名空間所需的緩衝區大小。  
+ [out]指標`ULONG32`接收包含命名空間所需的緩衝區大小。  
   
  `pVars`  
  [out]包含命名空間緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedNamespace 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedNamespace 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

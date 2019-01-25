@@ -2,12 +2,12 @@
 title: SQL Server 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 7f710af5c05942d2ff1718c9d59d4d776f45c6e7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635035"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server 結構描述集合
 除了通用結構描述集合之外，Microsoft .NET Framework Data Provider for SQL Server 還支援其他結構描述集合。 這些結構描述集合會因您目前使用的 SQL Server 版本而稍微不同。 若要判斷支援的結構描述集合清單，請呼叫**GetSchema**方法沒有引數，或以結構描述集合名稱"MetaDataCollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  
@@ -51,7 +51,7 @@ ms.locfileid: "49123861"
   
 |ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
-|type_desc|String|索引的類型將屬於下列其中一種類型：<br /><br /> -HEAP<br />叢集<br />-非叢集<br />-   XML<br />空間|  
+|type_desc|String|索引的類型將屬於下列其中一種類型：<br /><br /> -   HEAP<br />叢集<br />-非叢集<br />-   XML<br />-   SPATIAL|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -75,9 +75,9 @@ ms.locfileid: "49123861"
 |SPECIFIC_CATALOG|String|目錄的特定名稱。|  
 |SPECIFIC_SCHEMA|String|結構描述的特定名稱。|  
 |SPECIFIC_NAME|String|目錄的特定名稱。|  
-|與|String|預存程序所屬的目錄。|  
+|ROUTINE_CATALOG|String|預存程序所屬的目錄。|  
 |ROUTINE_SCHEMA|String|包含預存程序的結構描述。|  
-|與|String|預存程序的名稱。|  
+|ROUTINE_NAME|String|預存程序的名稱。|  
 |ROUTINE_TYPE|String|針對預存程序傳回 PROCEDURE，並針對函式傳回 FUNCTION。|  
 |CREATED|DateTime|建立程序的時間。|  
 |LAST_ALTERED|DateTime|上次修改程序的時間。|  
@@ -255,6 +255,6 @@ ms.locfileid: "49123861"
 |Create_Date|DateTime|建立/登錄組件的日期。|  
 |Permission_set_desc|String|組件使用權限集合/安全性層級的易記名稱。|  
   
-## <a name="see-also"></a>另請參閱  
- [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

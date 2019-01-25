@@ -2,37 +2,37 @@
 title: LINQ to SQL 中的程式碼產生
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 0345e48061132626fb714f00e44cb5637879f94a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01ba89f2161430b046eb6f3151bc33dbd659b0d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627963"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL 中的程式碼產生
 您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 命令列工具，來產生表示資料庫的程式碼。 無論使用哪種工具，端對端程式碼產生都可分為三個階段：  
   
-1.  *DBML 擷取器*從資料庫擷取結構描述資訊和重新組合成 XML 格式的 DBML 檔案的資訊。  
+1.  *DBML 擷取器*從資料庫擷取結構描述資訊，並重新組合成 XML 格式的 DBML 檔案的資訊。  
   
-2.  DBML 檔案掃描的*DBML 驗證程式*的錯誤。  
+2.  DBML 檔案由掃描*DBML Validator*的錯誤。  
   
 3.  如果沒有發現驗證錯誤，檔案會傳遞給程式碼產生器。  
   
- 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。 使用 Visual Studio 的開發人員也可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來產生程式碼。 請參閱[LINQ to SQL 工具，Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
+ 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。 使用 Visual Studio 的開發人員也可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]產生程式碼。 請參閱[LINQ to SQL 工具，在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
 ## <a name="dbml-extractor"></a>DBML 擷取器  
- DBML 擷取器是[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]接受資料庫中繼資料，做為輸入，然後產生 DBML 檔案，做為輸出的元件。  
+ DBML 擷取器是[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]會做為輸入的資料庫中繼資料，並產生輸出成 DBML 檔案的元件。  
   
 ## <a name="code-generator"></a>程式碼產生器  
- 程式碼產生器是[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]元件，可將轉譯 DBML 檔案，Visual Basic、 C# 或 XML 對應檔案。  
+ 程式碼產生器[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]轉譯為 Visual Basic 的 DBML 檔案的元件C#，或 XML 對應檔案。  
   
 ## <a name="xml-schema-definition-file"></a>XML 結構描述定義檔  
  DBML 檔案必須根據下列結構描述定義 (XSD 檔案) 進行驗證。  
   
- 這個結構描述定義檔與用來驗證外部對應檔案的結構描述定義檔不同。 如需詳細資訊，請參閱[外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md))。  
+ 這個結構描述定義檔與用來驗證外部對應檔案的結構描述定義檔不同。 如需詳細資訊，請參閱 <<c0> [ 外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md))。  
   
 > [!NOTE]
->  Visual Studio 使用者也可以找到這個 XSD 檔 XML 結構描述 對話方塊中為"DbmlSchema.xsd"。 若要正確使用 XSD 檔案驗證 DBML 檔案，請參閱[How to： 驗證 DBML 和外部對應檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
+>  Visual Studio 使用者也可找到這個 XSD 檔在 XML 結構描述 對話方塊中為"DbmlSchema.xsd"。 若要正確使用 XSD 檔案來驗證 DBML 檔案，請參閱[How to:驗證 DBML 和外部對應檔](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -243,7 +243,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>範例 DBML 檔案  
- 下列程式碼是從 Northwind 範例資料庫所建立 DBML 檔案的摘錄。 您可以藉由使用 SQLMetal 產生整個檔案 **/xml**選項。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
+ 下列程式碼是從 Northwind 範例資料庫所建立 DBML 檔案的摘錄。 您可以產生整個檔案使用 SQLMetal 並加 **/xml**選項。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -269,9 +269,9 @@ elementFormDefault="qualified" >
 </Database>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [如何：產生物件模型當作外部檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
- [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>另請參閱
+- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [如何：產生物件模型當做外部檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

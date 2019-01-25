@@ -1,5 +1,5 @@
 ---
-title: 如何：在執行階段時建立點陣圖
+title: HOW TO：在執行階段建立點陣圖
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], creating
 - bitmaps [Windows Forms], examples [Visual Basic]
 ms.assetid: 737bae30-e599-4e1d-bf30-bab8280b32be
-ms.openlocfilehash: 24c24e8e9b91e1977911b8e98391971d1f371108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf24f4fe7c54ae38e201fc4ed0a004985a266d8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632409"
 ---
-# <a name="how-to-create-a-bitmap-at-run-time"></a>如何：在執行階段時建立點陣圖
-這個範例會建立並繪製<xref:System.Drawing.Bitmap>物件，並顯示現有的 Windows Form 中<xref:System.Windows.Forms.PictureBox>控制項。  
+# <a name="how-to-create-a-bitmap-at-run-time"></a>HOW TO：在執行階段建立點陣圖
+此範例會建立，並在繪製<xref:System.Drawing.Bitmap>物件，並顯示現有的 Windows Form 中<xref:System.Windows.Forms.PictureBox>控制項。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[System.Drawing.CreateBitmapAtRuntime#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CreateBitmapAtRuntime/CS/Form1.cs#1)]
@@ -25,8 +25,8 @@ ms.locfileid: "33520636"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System、 System.Drawing 和 System.Windows.Forms 組件會匯入在 Windows Form。  
+-   System、 System.Drawing 和 System.Windows.Forms 組件會匯入 Windows 表單。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Drawing.Bitmap>  
- [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Drawing.Bitmap>
+- [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

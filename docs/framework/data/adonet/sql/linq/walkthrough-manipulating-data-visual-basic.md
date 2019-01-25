@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: e0bf8b32595f656d3bff424610f193bd84d0f5bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0eab5fe5c9455badb7f538307cb827391b254a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626923"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>逐步解說：操作資料 (Visual Basic)
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  
@@ -25,7 +25,7 @@ ms.locfileid: "33361649"
   
 -   Northwind 範例資料庫。  
   
-     如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需指示，請參閱[下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載資料庫之後，請將 northwnd.mdf 檔案複製至 c:\linqtest2 資料夾。  
+     如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需相關指示，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載資料庫之後，請將 northwnd.mdf 檔案複製至 c:\linqtest2 資料夾。  
   
 -   從 Northwind 資料庫產生的 Visual Basic 程式碼檔。  
   
@@ -51,17 +51,17 @@ ms.locfileid: "33361649"
 -   將這些變更送出至 Northwind 資料庫。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案  
- 在第一個工作中，您可以建立包含必要的參考，建置並執行 Visual Studio 方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  
+ 在第一個工作中，您會建立包含必要的參考，以建置並執行 Visual Studio 方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
 1.  在 Visual Studio 的 [檔案]  功能表上，按一下 [新增專案] 。  
   
-2.  在**專案類型**窗格**新專案**對話方塊中，按一下  **Visual Basic**。  
+2.  在 [**專案類型**] 窗格中的**新增專案**] 對話方塊中，按一下 [ **Visual Basic**。  
   
 3.  按一下 [範本] 窗格中的 [主控台應用程式]。  
   
-4.  在**名稱**方塊中，輸入**LinqDataManipulationApp**。  
+4.  在 **名稱**方塊中，輸入**LinqDataManipulationApp**。  
   
 5.  按一下 [確定 **Deploying Office Solutions**]。  
   
@@ -70,13 +70,13 @@ ms.locfileid: "33361649"
   
 #### <a name="to-add-systemdatalinq"></a>若要加入 System.Data.Linq  
   
-1.  在**方案總管] 中**，以滑鼠右鍵按一下**參考**，然後按一下 [**加入參考**。  
+1.  在 **方案總管 中**，以滑鼠右鍵按一下**參考**，然後按一下 **加入參考**。  
   
-2.  在**加入參考**對話方塊中，按一下  **.NET**，按一下 System.Data.Linq 組件，然後按一下**確定**。  
+2.  在 **加入參考** 對話方塊中，按一下 **.NET**按一下 System.Data.Linq 組件，然後按一下 **確定**。  
   
      組件隨即加入至專案。  
   
-3.  在程式碼編輯器中，加入下列指示詞**Module1**:  
+3.  在程式碼編輯器中，新增下列指示詞上述**Module1**:  
   
      [!code-vb[DLinqWalk3VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#1)]  
   
@@ -85,9 +85,9 @@ ms.locfileid: "33361649"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>若要將 Northwind 程式碼檔案加入至專案  
   
-1.  在**專案**功能表上，按一下 **加入現有項目**。  
+1.  在 **專案**功能表上，按一下**加入現有項目**。  
   
-2.  在**加入現有項目**對話方塊中，巡覽至 c:\linqtest2\northwind.vb，，然後按一下**新增**。  
+2.  在 [**加入現有項目**] 對話方塊中，巡覽至 c:\linqtest2\northwind.vb，，，然後按一下**新增**。  
   
      northwind.vb file 隨即加入至專案。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "33361649"
   
      A**主控台**視窗隨即開啟。  
   
-     關閉應用程式中按 Enter 鍵**主控台**視窗中，或按一下**停止偵錯**在 Visual Studio**偵錯**功能表。  
+     藉由按下 Enter 以關閉應用程式**主控台** 視窗中，或按一下**停止偵錯**在 Visual Studio**偵錯**功能表。  
   
 ## <a name="creating-a-new-entity"></a>建立新的實體  
  建立新的實體十分簡單。 您可以使用 `Customer` 關鍵字，建立物件 (如 `New`)。  
@@ -129,7 +129,7 @@ ms.locfileid: "33361649"
   
      請注意，新的資料列不會出現在結果中。 新的資料尚未送出至資料庫。  
   
-3.  中按 Enter 鍵**主控台**視窗以停止偵錯。  
+3.  中按 Enter 鍵**主控台**視窗停止偵錯。  
   
 ## <a name="updating-an-entity"></a>更新實體  
  在下列步驟中，您會擷取 `Customer` 物件，並修改它的其中一個屬性。  
@@ -181,10 +181,10 @@ ms.locfileid: "33361649"
     Customer ID: RICAR  
     ```  
   
-4.  中按 Enter 鍵**主控台**視窗以停止偵錯。  
+4.  中按 Enter 鍵**主控台**視窗停止偵錯。  
   
 > [!NOTE]
 >  送出變更以加入新的客戶之後，因為您無法再原樣加入同一位客戶，所以無法再原樣執行這個方案。 若要再執行一次這個方案，請變更要加入的客戶 ID 值。  
   
-## <a name="see-also"></a>另請參閱  
- [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>另請參閱
+- [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

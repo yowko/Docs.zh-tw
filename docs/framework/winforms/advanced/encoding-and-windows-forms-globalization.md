@@ -19,12 +19,12 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 1b1ac50bde87b22c3ce9ff7524edbf8750976788
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3a9d891fe898cf691a5f0d36e6360c2a73fb199d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183109"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629224"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>編碼方式和 Windows Form 全球化
 Windows Forms 應用程式完全支援 Unicode，這表示不論是何種平台、程式或語言，每個字元都會以唯一號碼來表示。 如需有關 Unicode 的詳細資訊，請參閱 < [Unicode 協會網站](https://www.unicode.org)。  
@@ -38,4 +38,4 @@ Windows Forms 應用程式完全支援 Unicode，這表示不論是何種平台�
   
 ## <a name="see-also"></a>另請參閱
 
-[全球化 Windows Forms 應用程式](globalizing-windows-forms.md)
+- [全球化 Windows Forms 應用程式](globalizing-windows-forms.md)

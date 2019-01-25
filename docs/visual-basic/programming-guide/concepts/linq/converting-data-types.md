@@ -2,12 +2,12 @@
 title: 轉換資料類型 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 9821b2d6caad8feeac856185b92518c25de88da3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3845c14bc7390d486668916fe7d5d5ad840b7990
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653732"
 ---
 # <a name="converting-data-types-visual-basic"></a>轉換資料類型 (Visual Basic)
 轉換方法會變更輸入物件的類型。  
@@ -37,7 +37,7 @@ ms.locfileid: "33643743"
 |ToLookup|根據索引鍵選取器函式，將項目放入 <xref:System.Linq.Lookup%602> (一對多字典)。 這個方法會強制執行查詢。|不適用。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>查詢運算式語法範例  
- 下列程式碼範例使用`From As`子句，以存取僅適用於子型別成員之前的子型別類型轉型。  
+ 下列程式碼範例使用`From As`子句的類型轉換成子型別之前存取僅適用於子類型的成員。  
   
 ```vb  
 Class Plant  
@@ -77,8 +77,8 @@ Sub Cast()
 End Sub  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq>  
- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)  
- [如何： 查詢 ArrayList 使用 LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Linq>
+- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [如何：使用 LINQ (Visual Basic) 查詢 ArrayList](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

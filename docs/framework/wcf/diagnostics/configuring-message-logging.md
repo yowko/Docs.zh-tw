@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 80d852dd08e935d4c06e9b6d2e52b0a075849ef5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f57385b930ce533de3ff12b0dbd363690f04082d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636010"
 ---
 # <a name="configuring-message-logging"></a>設定訊息記錄
 本主題描述如何針對不同的案例設定訊息記錄。  
@@ -83,11 +83,11 @@ ms.locfileid: "44085145"
 ### <a name="other-options"></a>其他選項  
  除了記錄層級，使用者也可以指定下列選項：  
   
--   記錄整個訊息 (`logEntireMessage` 屬性)：這個值會指定是否記錄整個訊息 (訊息標頭和本文)。 預設值為 `false`，表示只記錄標頭。 這項設定會影響到服務和傳輸訊息記錄層級。  
+-   記錄整個訊息 (`logEntireMessage`屬性):這個值會指定是否要記錄整個訊息 （訊息標頭和本文）。 預設值為 `false`，表示只記錄標頭。 這項設定會影響到服務和傳輸訊息記錄層級。  
   
--   要記錄的最大訊息數 (`maxMessagesToLog` 屬性)：這個值會指定所要記錄訊息的最大數目。 所有的訊息 (服務、傳輸及格式錯誤訊息) 都會計算到此配額內。 當抵達配額時，便會發出追蹤，而且不再記錄其他訊息。 預設值為 10000。  
+-   要記錄的最大訊息 (`maxMessagesToLog`屬性):這個值會指定要記錄訊息的數目上限。 所有的訊息 (服務、傳輸及格式錯誤訊息) 都會計算到此配額內。 當抵達配額時，便會發出追蹤，而且不再記錄其他訊息。 預設值為 10000。  
   
--   要記錄訊息的最大大小 (`maxSizeOfMessageToLog` 屬性)：這個值會指定所要記錄訊息的最大大小，以位元組為單位。 不記錄超過大小限制的訊息，而且也不針對該訊息執行任何其他活動。 這個設定會影響所有的追蹤層級。 如果有開啟 ServiceModel 追蹤，便會在第一個記錄點 (ServiceModelSend* 或 TransportReceive) 發出警告層級追蹤以通知使用者。 服務層級和傳輸層級等訊息的預設值是 256 K，而格式錯誤訊息的預設值是 4 K。  
+-   要記錄訊息的大小上限 (`maxSizeOfMessageToLog`屬性):這個值會指定要記錄以位元組為單位的訊息大小上限。 不記錄超過大小限制的訊息，而且也不針對該訊息執行任何其他活動。 這個設定會影響所有的追蹤層級。 如果有開啟 ServiceModel 追蹤，便會在第一個記錄點 (ServiceModelSend* 或 TransportReceive) 發出警告層級追蹤以通知使用者。 服務層級和傳輸層級等訊息的預設值是 256 K，而格式錯誤訊息的預設值是 4 K。  
   
     > [!CAUTION]
     >  經過計算以便與 `maxSizeOfMessageToLog` 比較的訊息大小，就是進行序列化之前在記憶體中的訊息大小。 這個大小可能不同於已記錄之訊息字串的實際長度，而且在許多情況下都會大於實際大小。 如此一來，訊息可能就不會加以記錄。 您可以將 `maxSizeOfMessageToLog` 屬性指定為超過預期訊息大小的 10%，這樣就可以解決這個情形。 此外，如果有記錄格式錯誤訊息，由訊息記錄應用的實際磁碟空間大小最多可為 `maxSizeOfMessageToLog` 所指定值的 5 倍。  
@@ -163,7 +163,7 @@ ms.locfileid: "44085145"
   
  請注意，`type` 屬性應該設定為此型別的限定組件名稱。  
   
-## <a name="see-also"></a>另請參閱  
- [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
- [訊息記錄](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [追蹤與訊息記錄的建議設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+## <a name="see-also"></a>另請參閱
+- [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [訊息記錄](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [追蹤與訊息記錄的建議設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

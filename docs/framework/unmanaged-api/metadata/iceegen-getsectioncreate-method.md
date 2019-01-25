@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 857462c380ce51994e13dab5cfe3c28bba0f38be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93e96e7804a3b5ecc64e9e50ce700435be83b77a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643360"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate 方法
 產生並取得使用指定的名稱和旗標值的程式碼區段。  
@@ -47,19 +47,19 @@ HRESULT GetSectionCreate (
  [in]指定選項的旗標。  
   
  `section`  
- [out]指標，新建的程式碼區段。  
+ [out]新建立的程式碼區段指標。  
   
 ## <a name="remarks"></a>備註  
- 呼叫`GetSectionCreate`只有當您有不由其他方法處理的特殊區段需求。  
+ 呼叫`GetSectionCreate`只有當您有未處理的其他方法的特殊區段需求。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: eb9d38a7d6f74e5d8636f862c663c0ba0990baa5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 355267331eda73ab4c32ec27dbba1d82d729420f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638778"
 ---
 # <a name="-main"></a>-主要
 指定包含 `Sub Main` 程序的類別或模組。  
@@ -24,7 +24,7 @@ ms.locfileid: "50180228"
   
 ## <a name="arguments"></a>引數  
  `location`  
- 必要。 名稱的類別或模組，其中包含`Sub Main`程式啟動時要呼叫的程序。 這可能是在表單 **-主要： module**或是 **-main:namespace.module**。  
+ 必要項。 名稱的類別或模組，其中包含`Sub Main`程式啟動時要呼叫的程序。 這可能是在表單 **-主要： module**或是 **-main:namespace.module**。  
   
 ## <a name="remarks"></a>備註  
  當您建立可執行檔或 Windows 可執行程式時，請使用此選項。 如果 **-主要**略過選項，編譯器會搜尋有效的共用`Sub Main`所有公用類別和模組中。  
@@ -52,8 +52,8 @@ ms.locfileid: "50180228"
 vbc t2.vb t3.vb -main:Test2  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [在 Visual Basic 中的 main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [在 Visual Basic 中的 main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

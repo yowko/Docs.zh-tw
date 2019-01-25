@@ -1,5 +1,5 @@
 ---
-title: 如何：將十六進位字串轉換為數字 (Visual Basic)
+title: HOW TO：十六進位字串轉換為數字 (Visual Basic)
 ms.date: 01/31/2018
 helpviewer_keywords:
 - numbers [Visual Basic], hexadecimals
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-ms.openlocfilehash: 65184bbb742ad549a8398d55dc7bdeed05a9d973
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 76acee8913df35d4d071017078b38a3c474c3357
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633804"
 ---
-# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>如何：將十六進位字串轉換為數字 (Visual Basic)
+# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>HOW TO：十六進位字串轉換為數字 (Visual Basic)
 此範例會將十六進位字串轉換成整數使用<xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>方法。  
   
 ## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>若要為十六進位字串轉換為數字  
@@ -33,6 +33,6 @@ ms.locfileid: "50197544"
 
    前置詞或數字分隔符號是否存在，呼叫<xref:System.Convert.ToInt32(System.String,System.Int32)>方法會擲回<xref:System.FormatException>。
 
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
- <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
+- <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>

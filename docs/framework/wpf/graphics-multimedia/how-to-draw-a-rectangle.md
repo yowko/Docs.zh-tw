@@ -1,19 +1,19 @@
 ---
-title: 如何：繪製矩形
+title: HOW TO：繪製矩形
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawing [WPF], rectangles
 - graphics [WPF], rectangles
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-ms.openlocfilehash: 5f65bd11976817fe3f4d3e5d016f820a249769c3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b8434a8935a8e2f79aff17b96d20c8798f96e9fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674673"
 ---
-# <a name="how-to-draw-a-rectangle"></a>如何：繪製矩形
+# <a name="how-to-draw-a-rectangle"></a>HOW TO：繪製矩形
 此範例示範如何藉由繪製矩形<xref:System.Windows.Shapes.Rectangle>項目。  
   
  若要繪製矩形，建立<xref:System.Windows.Shapes.Rectangle>項目，並指定其<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>。 若要繪製的矩形內部，請將其<xref:System.Windows.Shapes.Shape.Fill%2A>。 若要讓矩形外框，使用其<xref:System.Windows.Shapes.Shape.Stroke%2A>和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>屬性。  
@@ -29,8 +29,8 @@ ms.locfileid: "43506150"
   
  這個範例屬於較大型的範例;如需完整的範例，請參閱[圖形元素範例](https://go.microsoft.com/fwlink/?LinkID=160037)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Shapes.Rectangle>  
- [圖形元素範例](https://go.microsoft.com/fwlink/?LinkID=160037)  
- [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Shapes.Rectangle>
+- [圖形元素範例](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)

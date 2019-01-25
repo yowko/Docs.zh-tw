@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], hosting workflows
 ms.assetid: a99a5990-b53b-419b-9538-b1c3d1ba5db3
-ms.openlocfilehash: f392c8d632b3c43058090afce99cba992e2bee4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6eeced2f7707ac69595cacc1c4a1301b1d2bfef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523191"
 ---
 # <a name="hosting-workflows"></a>裝載工作流程
 本節中的主題討論裝載工作流程。  
@@ -30,7 +30,7 @@ ms.locfileid: "33514539"
  [使用 WorkflowIdentity 與版本設定](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)  
  描述如何使用 `WorkflowIdentity` 裝載工作流程並存的多個版本。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Workflow Foundation 程式設計](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [設計工作流程](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- [Windows Workflow Foundation 資料模型](../../../docs/framework/windows-workflow-foundation/data-model.md)
+## <a name="see-also"></a>另請參閱
+- [Windows Workflow Foundation 程式設計](../../../docs/framework/windows-workflow-foundation/programming.md)
+- [設計工作流程](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
+- [Windows Workflow Foundation 資料模型](../../../docs/framework/windows-workflow-foundation/data-model.md)

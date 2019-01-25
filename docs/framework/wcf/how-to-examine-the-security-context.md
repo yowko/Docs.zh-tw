@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: 64e566fb8d0cfadc2a46d0a335ddb2799739f9f9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bcc23097a6778bb537421ba494dd94414b37f4e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646262"
 ---
 # <a name="how-to-examine-the-security-context"></a>HOW TO：檢查安全性內容
 當程式設計 Windows Communication Foundation (WCF) 服務，服務安全性內容可讓您判斷有關用戶端認證及宣告用來向服務驗證的詳細資料。 這可藉由使用 <xref:System.ServiceModel.ServiceSecurityContext> 類別的屬性達成。  
@@ -54,6 +54,6 @@ ms.locfileid: "50187776"
   
 -   <xref:System.IdentityModel.Claims>  
   
-## <a name="see-also"></a>另請參閱  
- [保護服務安全](../../../docs/framework/wcf/securing-services.md)  
- [服務身分識別和驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>另請參閱
+- [保護服務安全](../../../docs/framework/wcf/securing-services.md)
+- [服務身分識別和驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

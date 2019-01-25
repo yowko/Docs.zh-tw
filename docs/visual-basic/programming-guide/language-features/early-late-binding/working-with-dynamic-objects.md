@@ -4,22 +4,22 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic objects [Visual Basic]
 ms.assetid: bdee2a00-07ff-46f9-86dd-fdac9b99cc97
-ms.openlocfilehash: 78b17a379ea219cc24842322703caaa9d29eeb2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14bd78f2897edc9f2092e062fda16ba5a7d04c37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640858"
 ---
 # <a name="working-with-dynamic-objects-visual-basic"></a>使用動態物件 (Visual Basic)
-動態物件會提供另一種方法，除了`Object`類型，以在執行階段物件晚期繫結。 動態物件成員，例如屬性和方法在執行階段會使用公開中所定義的動態介面<xref:System.Dynamic>命名空間。 您可以使用中的類別<xref:System.Dynamic>命名空間，以建立使用的靜態類型或格式不相符的資料結構的物件。 您也可以使用動態語言，例如 IronPython 和 IronRuby 中所定義的動態物件。 如需示範如何建立動態物件，或使用動態語言所定義的動態物件的範例，請參閱[逐步解說： 建立和使用動態物件](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)， <xref:System.Dynamic.DynamicObject>，或<xref:System.Dynamic.ExpandoObject>。  
+動態物件會提供另一種方式，而非`Object`類型，以在執行階段在物件的晚期繫結。 動態物件在執行階段公開成員，例如屬性和方法，藉由使用動態中所定義的介面<xref:System.Dynamic>命名空間。 您可以使用中的類別<xref:System.Dynamic>命名空間，以建立靜態類型或格式不相符的資料結構所使用的物件。 您也可以使用 IronPython 和 IronRuby 之類的動態語言中所定義的動態物件。 如需示範如何建立動態物件，或使用動態語言所定義的動態物件的範例，請參閱[逐步解說：建立和使用動態物件](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)， <xref:System.Dynamic.DynamicObject>，或<xref:System.Dynamic.ExpandoObject>。  
   
- Visual Basic 中的繫結物件的動態語言執行階段和動態的語言，例如 IronPython 和 IronRuby 使用<xref:System.Dynamic.IDynamicMetaObjectProvider>介面。 類別實作的範例`IDynamicMetaObjectProvider`介面都是<xref:System.Dynamic.DynamicObject>和<xref:System.Dynamic.ExpandoObject>類別。  
+ Visual Basic 中的繫結物件的動態語言執行平台和動態語言 IronPython 和 IronRuby 之類使用<xref:System.Dynamic.IDynamicMetaObjectProvider>介面。 範例類別可實作`IDynamicMetaObjectProvider`介面會<xref:System.Dynamic.DynamicObject>和<xref:System.Dynamic.ExpandoObject>類別。  
   
- 如果物件實作進行晚期繫結呼叫`IDynamicMetaObjectProvider`介面、 Visual Basic 繫結到使用該介面的動態物件。 如果物件未實作進行晚期繫結呼叫`IDynamicMetaObjectProvider`介面，或如果呼叫`IDynamicMetaObjectProvider`介面失敗時，使用 Visual Basic 執行階段的晚期繫結功能的 Visual Basic 繫結至物件。  
+ 如果晚期繫結進行呼叫，以實作的物件`IDynamicMetaObjectProvider`介面，以使用該介面的動態物件的 Visual Basic 繫結。 如果晚期繫結呼叫對物件未實作`IDynamicMetaObjectProvider`介面，或如果呼叫`IDynamicMetaObjectProvider`介面失敗時，Visual Basic 繫結至物件所使用的 Visual Basic 執行階段的晚期繫結功能。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Dynamic.DynamicObject>  
- <xref:System.Dynamic.ExpandoObject>  
- [逐步解說：建立和使用動態物件](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
- [早期和晚期繫結](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Dynamic.DynamicObject>
+- <xref:System.Dynamic.ExpandoObject>
+- [逐步解說：建立和使用動態物件](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [早期和晚期繫結](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)

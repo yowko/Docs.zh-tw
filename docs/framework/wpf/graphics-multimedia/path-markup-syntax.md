@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591928"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671261"
 ---
 # <a name="path-markup-syntax"></a>路徑標記語法
 路徑中會討論[圖案和基本繪圖中 WPF 概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)並[幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)，不過，本主題詳細說明您可以指定路徑中使用功能強大且複雜的迷你語言幾何更簡潔地使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -40,20 +40,20 @@ ms.locfileid: "45591928"
 ### <a name="a-note-about-white-space"></a>關於空白字元  
  為了簡潔起見，會在後續的語法區段中會顯示單一空格，但是在顯示單一空格的位置也接受多個空格。  
   
- 兩個數字不一定要分隔的逗號或空格，但是這只能在明確產生的字串。 比方說，`2..3`是實際的兩個數字:"2"。 和 ".3"。 同樣地，`2-3`是"2"和"-3"。 命令之前或之後也一樣不需要空格。  
+ 兩個數字不一定要分隔的逗號或空格，但是這只能在明確產生的字串。 比方說，`2..3`是實際的兩個數字："2." 和 ".3"。 同樣地，`2-3`是"2"和"-3"。 命令之前或之後也一樣不需要空格。  
   
 ### <a name="syntax"></a>語法  
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]屬性使用方式語法<xref:System.Windows.Media.StreamGeometry>所組成的選擇性<xref:System.Windows.Media.FillRule>值與一個或多個圖描述。  
   
 |StreamGeometry XAML 屬性使用方式|  
 |-----------------------------------------|  
-|`<` *物件**屬性* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]屬性使用方式語法<xref:System.Windows.Media.PathFigureCollection>是一或多個圖表描述所組成。  
   
 |PathFigureCollection XAML 屬性使用方式|  
 |-----------------------------------------------|  
-|`<` *物件**屬性* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
   
 |詞彙|描述|  
 |----------|-----------------|  
@@ -224,11 +224,11 @@ ms.locfileid: "45591928"
   
  您也可以使用科學記號標記法。 比方說，`+1.e17`是有效的值。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.StreamGeometry>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.PathFigureCollection>  
- [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.StreamGeometry>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.PathFigureCollection>
+- [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

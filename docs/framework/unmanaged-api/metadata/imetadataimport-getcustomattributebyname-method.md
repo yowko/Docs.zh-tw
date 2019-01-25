@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c25304bef4d240eedea749bb2829595056f9b74d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68cac76a83164e24c0810c9d19fa845c8580b1d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637226"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName 方法
 取得自訂屬性，指定其名稱和擁有者。  
@@ -40,29 +40,29 @@ HRESULT GetCustomAttributeByName (
   
 #### <a name="parameters"></a>參數  
  `tkObj`  
- [in]表示擁有的自訂屬性的物件中繼資料語彙基元。  
+ [in]表示擁有該自訂屬性的物件中繼資料語彙基元。  
   
  `szName`  
  [in]自訂屬性的名稱。  
   
  `ppData`  
- [out]資料做為自訂屬性的值的陣列指標。  
+ [out]做為自訂屬性的值之資料的陣列指標。  
   
  `pcbData`  
  [out]以位元組為單位的中傳回的資料大小 *`ppData`。  
   
 ## <a name="remarks"></a>備註  
- 它是合法為相同的擁有者; 定義多個自訂屬性他們甚至可能會遇到相同的名稱。 不過，`GetCustomAttributeByName`傳回只有一個執行個體。 (`GetCustomAttributeByName`傳回遇到的第一個執行個體。)若要尋找自訂屬性的所有執行個體，請呼叫[imetadataimport:: Enumcustomattributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md)方法。  
+ 它是合法來定義多個自訂屬性之相同的擁有者;他們甚至可能擁有相同的名稱。 不過，`GetCustomAttributeByName`傳回只有一個執行個體。 (`GetCustomAttributeByName`傳回遇到的第一個執行個體。)若要尋找自訂屬性的所有執行個體，呼叫[imetadataimport:: Enumcustomattributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

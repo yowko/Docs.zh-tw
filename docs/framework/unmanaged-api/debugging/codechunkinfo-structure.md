@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e3d138700ef06da7b40a88a768a41f3ffcb38eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d658e360fcfd3fda837c6d7ccab9458594ce9641
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522540"
 ---
 # <a name="codechunkinfo-structure1"></a>CodeChunkInfo 結構 1
 代表記憶體中的單一程式碼區塊。  
@@ -39,22 +39,22 @@ typedef struct _CodeChunkInfo {
   
 |成員|描述|  
 |------------|-----------------|  
-|`startAddr`|A`CORDB_ADDRESS`值，指定區塊的起始位址。|  
-|`length`|以位元組為單位，區塊的大小。|  
+|`startAddr`|A`CORDB_ADDRESS`值，指定區塊的開始位址。|  
+|`length`|以位元組為單位的區塊大小。|  
   
 ## <a name="remarks"></a>備註  
  單一的程式碼區塊是物件的屬於程式碼，例如函式的原生程式碼的區域。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

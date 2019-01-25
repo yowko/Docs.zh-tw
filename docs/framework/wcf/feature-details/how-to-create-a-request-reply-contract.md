@@ -2,12 +2,12 @@
 title: HOW TO：建立要求-回覆合約
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 0d41973d04fc75f70011505a3361e71e89a05276
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 085514e09eb13676d5c939724071e89535d443f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663605"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>HOW TO：建立要求-回覆合約
 要求-回覆合約會指定一個方法以傳回回覆。 回覆必須在此合約條件下進行傳送並與要求相互關聯。 即便該方法未傳回任何回覆 (在 C# 為 `void`，在 Visual Basic 為 `Sub`)，基礎結構還是會建立空訊息並傳送給呼叫者。 若要避免傳送空的回覆訊息，請使用單向作業合約。  
@@ -45,9 +45,9 @@ public interface ICalculator
   
 -   如需如何指定作業合約的詳細資訊，請參閱<xref:System.ServiceModel.OperationContractAttribute>類別和<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>屬性。  
   
--   藉由套用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性，部署服務時就會自動產生服務合約定義，亦即 Web 服務描述語言 (WSDL) 文件。 只要將 `?wsdl` 附加至服務的 HTTP 基底位址，便能夠下載這份文件。 例如：`http://microsoft/CalculatorService?wsdl`  
+-   藉由套用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性，部署服務時就會自動產生服務合約定義，亦即 Web 服務描述語言 (WSDL) 文件。 只要將 `?wsdl` 附加至服務的 HTTP 基底位址，便能夠下載這份文件。 例如： `http://microsoft/CalculatorService?wsdl`   
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [設計服務合約](../../../../docs/framework/wcf/designing-service-contracts.md)  
- [如何：建立雙面合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [設計服務合約](../../../../docs/framework/wcf/designing-service-contracts.md)
+- [如何：建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Windows 認證來確保服務安全
+title: HOW TO：使用 Windows 認證的服務安全
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: c47539e0c614992efd74296171034b8091ba3f15
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83b55ca42a3cebb6ceb2aec128202f14dc35da0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657554"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>HOW TO：使用 Windows 認證來確保服務安全
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>HOW TO：使用 Windows 認證的服務安全
 本主題說明如何啟用位於 Windows 網域，而且由相同的網域中的用戶端呼叫的 Windows Communication Foundation (WCF) 服務上的傳輸安全性。 如需有關此案例的詳細資訊，請參閱 < [Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。  
   
  這個主題假設您擁有現有的合約介面、已定義了實作 (Implementation)，以及一些附加內容。 您也可以修改現有的服務和用戶端。  
@@ -74,7 +74,7 @@ ms.locfileid: "50183317"
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>搭配程式碼在用戶端中使用繫結  
   
-1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 proxy 程式碼繼承自<xref:System.ServiceModel.ClientBase%601>類別，可確保每個用戶端具有必要的建構函式、 方法和屬性與 WCF 服務進行通訊。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
+1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 如需詳細資訊，請參閱[＜How to：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 proxy 程式碼繼承自<xref:System.ServiceModel.ClientBase%601>類別，可確保每個用戶端具有必要的建構函式、 方法和屬性與 WCF 服務進行通訊。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
   
 2.  此程序的程式碼會插入至用戶端程式的 `Main` 方法開頭。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "50183317"
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>搭配組態在用戶端中使用繫結  
   
-1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼和組態檔。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼和組態檔。 如需詳細資訊，請參閱[＜How to：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 2.  取代[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)為前一個區段的組態程式碼產生的組態檔區段。  
   
@@ -147,9 +147,9 @@ ms.locfileid: "50183317"
  [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)] 
  [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.WSHttpBinding>  
- [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [保護服務安全](../../../docs/framework/wcf/securing-services.md)  
- [安全性概觀](../../../docs/framework/wcf/feature-details/security-overview.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.WSHttpBinding>
+- [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [保護服務安全](../../../docs/framework/wcf/securing-services.md)
+- [安全性概觀](../../../docs/framework/wcf/feature-details/security-overview.md)

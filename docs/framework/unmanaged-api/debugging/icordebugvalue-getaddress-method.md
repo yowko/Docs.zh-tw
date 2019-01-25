@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c0fa19841580c7cfe8902577c3f756712a35893
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b88c49ba93ff3c4cc3f5c7a656dfa5da6e82109e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559832"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress 方法
-取得正在進行偵錯這個 「 ICorDebugValue 」 物件的位址。  
+取得正在進行偵錯這個 「 ICorDebugValue"物件的位址。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,19 +37,19 @@ HRESULT GetAddress (
   
 #### <a name="parameters"></a>參數  
  `pAddress`  
- [out]指標`CORDB_ADDRESS`物件，指定這個值物件的位址。  
+ [out]指標`CORDB_ADDRESS`物件，指定此物件的位址值。  
   
 ## <a name="remarks"></a>備註  
- 如果值為無法使用，則會傳回 0 （零）。 這如果的值是在暫存器中至少一部分會發生問題，或是儲存在記憶體回收行程控制代碼 (`GCHandle`)。  
+ 如果值為無法使用，則會傳回 0 （零）。 這可能發生的值是否在暫存器中，至少部分，或儲存在記憶體回收行程控制代碼 (`GCHandle`)。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- 
+## <a name="see-also"></a>另請參閱
+

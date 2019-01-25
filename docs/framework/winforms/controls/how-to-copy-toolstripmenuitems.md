@@ -1,19 +1,19 @@
 ---
-title: 如何：複製 ToolStripMenuItems
+title: HOW TO：複製 ToolStripMenuItems
 ms.date: 03/30/2017
 helpviewer_keywords:
 - menu items [Windows Forms], copying and pasting
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: 238516f18037a75b1d254d95086e22a970fadf09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3b1103cda6d4f61b55f6856cd426779a4f39f2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639441"
 ---
-# <a name="how-to-copy-toolstripmenuitems"></a>如何：複製 ToolStripMenuItems
+# <a name="how-to-copy-toolstripmenuitems"></a>HOW TO：複製 ToolStripMenuItems
 在設計階段，您可以將整個最上層功能表及其子功能表項目複製到 <xref:System.Windows.Forms.MenuStrip>上的不同位置。 您也可以在最上層功能表之間複製個別功能表項目，或變更功能表內功能表項目的位置。  
   
 ### <a name="to-copy-a-top-level-menu-and-its-submenu-items-to-another-top-level-location"></a>將最上層功能表及其子功能表項目複製到另一個最上層位置  
@@ -42,7 +42,7 @@ ms.locfileid: "33530477"
   
      您所複製的子功能表項目會在選取的子功能表項目之前插入。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- [MenuStrip 控制項概觀](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- [MenuStrip 控制項概觀](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

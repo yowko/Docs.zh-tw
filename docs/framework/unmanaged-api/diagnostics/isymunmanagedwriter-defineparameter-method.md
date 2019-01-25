@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6b01abc16334dbe091e7586efcce1c3e390a64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b552ef39c7f73aaa5cfeae4a313e329b267abf98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643382"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter 方法
-定義目前方法中的單一參數。 參數型別是取自方法的簽章中參數的位置 （序列）。  
+目前方法中定義的單一參數。 參數類型是來自方法的簽章中參數的位置 （序列）。  
   
- 參數指定方法的中繼資料中定義的如果您沒有使用此方法來重新定義。 符號讀取器必須檢查符號存放區之前先檢查一般參數的中繼資料。  
+ 指定方法的中繼資料中定義了參數，如果您沒有使用這個方法來重新定義。 符號讀取器必須檢查符號存放區之前先檢查一般的中繼資料的參數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +53,7 @@ HRESULT DefineParameter(
  [in]參數簽章。  
   
  `addrKind`  
- [in]地址類型。  
+ [in]位址類型。  
   
  `addr1`  
  [in]參數規格的第一個位址。  
@@ -64,10 +65,10 @@ HRESULT DefineParameter(
  [in]參數規格的第三個位址。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：**於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

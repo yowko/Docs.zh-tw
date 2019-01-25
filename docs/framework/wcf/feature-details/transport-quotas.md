@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542765"
 ---
 # <a name="transport-quotas"></a>傳輸配額
 傳輸配額是用來判斷連線何時過度使用資源的原則機制。 配額是硬性限制，一旦超出配額值，就會無法使用其他資源。 傳輸配額能夠防範惡意或無意間發生的阻絕服務攻擊。  
   
- Windows Communication Foundation (WCF) 傳輸有預設值依據保守的資源配置的配額值。 這些預設值適用於開發環境和小規模的安裝情況。 如果安裝時資源不足，或者不論是否有額外的資源，連線都會受到限制時，服務系統管理員就應該檢查傳輸配額，並且調整個別的配額值。  
+ Windows Communication Foundation (WCF) 傳輸的保守的資源配置為基礎的預設配額值。 這些預設值適用於開發環境和小規模的安裝情況。 如果安裝時資源不足，或者不論是否有額外的資源，連線都會受到限制時，服務系統管理員就應該檢查傳輸配額，並且調整個別的配額值。  
   
 ## <a name="types-of-transport-quotas"></a>傳輸配額的類型  
- WCF 傳輸有三種配額：  
+ WCF 傳輸有三種配額類型：  
   
--   *逾時*減少阻絕服務攻擊，依賴佔用資源一段時間。  
+-   *逾時*降低阻絕服務攻擊依賴佔用資源一段時間。  
   
--   *記憶體配置限制*防止單一連線耗盡系統記憶體和拒絕服務其他連線。  
+-   *記憶體配置限制*防止單一連線用盡系統記憶體和拒絕服務其他連線。  
   
--   *收集大小限制*繫結間接配置記憶體或有限供應之資源的耗用量。  
+-   *限制集合大小*繫結的間接配置記憶體或有限供應資源耗用量。  
   
 ## <a name="transport-quota-descriptions"></a>傳輸配額描述  
- 本章節描述適用於標準 WCF 傳輸的傳輸配額： HTTP (S)、 TCP/IP 和具名的管道。 自訂傳輸會公開未包含在下列清單的可設定配額。 如需自訂傳輸配額的詳細資訊，請參閱自訂傳輸的相關文件。  
+ 本節說明適用於標準 WCF 傳輸的傳輸配額：HTTP (S)、 TCP/IP 和具名的管道。 自訂傳輸會公開未包含在下列清單的可設定配額。 如需自訂傳輸配額的詳細資訊，請參閱自訂傳輸的相關文件。  
   
  每個配額設定都各有型別、最小值和預設值。 配額的最大值受到其型別限制。 由於機器限制，不一定都能將配額設定為最大值。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "33507750"
  透過繫結或組態進行設定時，傳輸配額 `MaxPendingConnections` 和 `MaxOutboundConnectionsPerEndpoint` 會結合為一個名為 `MaxConnections` 的傳輸配額。 只有繫結項目才能允許個別設定這些配額值。 `MaxConnections` 傳輸配額具有相同的最小值和預設值。  
   
 ## <a name="setting-transport-quotas"></a>設定傳輸配額  
- 傳輸配額可以透過傳輸繫結項目、傳輸繫結、應用程式組態或主機原則來設定。 本文件未涵蓋透過主應用程式原則來設定傳輸的內容。 如需探索主機原則配額設定的詳細資訊，請參閱基礎傳輸的相關文件。 [設定 HTTP 和 HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)主題描述 Http.sys 驅動程式的配額設定。 如需在 HTTP、TCP/IP 和具名管道連線上設定 Windows 限制的詳細資訊，請搜尋 Microsoft 知識庫。  
+ 傳輸配額可以透過傳輸繫結項目、傳輸繫結、應用程式組態或主機原則來設定。 本文件未涵蓋透過主應用程式原則來設定傳輸的內容。 如需探索主機原則配額設定的詳細資訊，請參閱基礎傳輸的相關文件。 [設定 HTTP 和 HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)主題說明 Http.sys 驅動程式的配額設定。 如需在 HTTP、TCP/IP 和具名管道連線上設定 Windows 限制的詳細資訊，請搜尋 Microsoft 知識庫。  
   
  其他類型的配額會間接套用至傳輸。 傳輸用來將訊息轉換為位元組的訊息編碼器，可以有自己的配額設定。 不過，這些配額與所要使用的傳輸類型無關。  
   
@@ -107,10 +107,10 @@ ms.locfileid: "33507750"
 ### <a name="controlling-transport-quotas-from-configuration"></a>從組態控制傳輸配額  
  應用程式組態可以像直接存取繫結上的屬性一樣，設定相同的傳輸配額。 在組態檔中，傳輸配額的名稱一律以小寫字母為開頭。 例如，繫結上的 `CloseTimeout` 屬性會對應至組態中的 `closeTimeout` 設定，而繫結上的 `MaxConnections` 屬性則會對應至組態中的 `maxConnections` 設定。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>

@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：實作 COM 物件的繼承 (Visual Basic)
+title: 逐步解說：實作 COM 物件 (Visual Basic) 的繼承
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [Visual Basic], COM reusability
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: a1c1b7c247d3277c6614a4774395650c4c069c2f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: e99deb2ea5e8acd5e1e07adffe29d35e2624b27e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648202"
 ---
-# <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>逐步解說：實作 COM 物件的繼承 (Visual Basic)
+# <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>逐步解說：實作 COM 物件 (Visual Basic) 的繼承
 您可以衍生從 Visual Basic 類別`Public`中 COM 物件，即使在舊版的 Visual Basic 中建立的類別。 屬性和方法，從 COM 物件繼承的類別可以覆寫或多載，就如同屬性和任何其他基底類別的方法可以覆寫或多載。 當您有現有的類別程式庫，您不希望重新編譯時，適合使用 COM 物件的繼承。  
   
  下列程序示範如何使用 Visual Basic 6.0 中建立 COM 物件，包含類別，並將它作為基底類別。  
@@ -129,7 +129,7 @@ ms.locfileid: "42929994"
   
 -   使用屬性`ByRef`無法覆寫參數。  
   
-## <a name="see-also"></a>另請參閱  
- [.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)  
- [Short 資料類型](../../../visual-basic/language-reference/data-types/short-data-type.md)
+## <a name="see-also"></a>另請參閱
+- [.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+- [Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Short 資料類型](../../../visual-basic/language-reference/data-types/short-data-type.md)

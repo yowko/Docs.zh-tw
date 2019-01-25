@@ -2,12 +2,12 @@
 title: SQL Server 二進位和大量數值資料
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
-ms.openlocfilehash: 9ebbe23dfbcac7825ce449dd40f62b921d13ab4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f6bd62d2e9d2f87947e01b7964c5d151690b62bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195793"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643024"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server 二進位和大量數值資料
 SQL Server 提供 `max` 規範，可擴充 `varchar`、`nvarchar` 和 `varbinary` 資料類型的儲存容量。 `varchar(max)``nvarchar(max)`，並`varbinary(max)`統稱*大數值資料型別*。 您可以使用大數值資料型別來儲存最多可達 2^31-1 位元組的資料。  
@@ -21,8 +21,8 @@ SQL Server 提供 `max` 規範，可擴充 `varchar`、`nvarchar` 和 `varbinary
  [FILESTREAM 資料](../../../../../docs/framework/data/adonet/sql/filestream-data.md)  
  說明如何使用儲存在 SQL Server 2008 中的大數值資料搭配 FILESTREAM 屬性。  
   
-## <a name="see-also"></a>另請參閱  
- [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET 中的 SQL Server 資料作業](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [ADO.NET 中的 SQL Server 資料作業](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

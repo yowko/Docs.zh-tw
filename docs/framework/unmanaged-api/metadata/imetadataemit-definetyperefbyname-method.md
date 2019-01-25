@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4fd6102b65137a06009428c1245b80c0d44924a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4dd08afba664a491b3ba398f3da4c6a73cda5378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445487"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517132"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName 方法
-取得定義在指定範圍內，是在目前範圍之外的類型中繼資料語彙基元。  
+取得定義在指定的範圍內，也就是目前範圍以外的類型中繼資料語彙基元。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,15 +39,15 @@ HRESULT DefineTypeRefByName (
   
 #### <a name="parameters"></a>參數  
  `tkResolutionScope`  
- [in]指定的解析範圍語彙基元。 下列語彙基元的型別是有效的：  
+ [in]指定的解析範圍語彙基元。 下列的語彙基元型別是有效的：  
   
--   `mdModuleRef`如果呼叫端定義所在的相同組件中定義的類型。  
+-   `mdModuleRef`如果呼叫端定義所在的相同組件中定義型別。  
   
--   `mdAssemblyRef`如果呼叫端定義的非組件中定義類型。  
+-   `mdAssemblyRef`如果不同於呼叫端定義的組件中定義的類型。  
   
--   `mdTypeRef`如果類型是巢狀的類型。  
+-   `mdTypeRef`如果類型是巢狀型別。  
   
--   `mdModule`如果在呼叫端定義所在的相同模組中定義類型。  
+-   `mdModule`如果類型定義在呼叫端定義所在的相同模組中。  
   
 -   如果為 null，全域定義類型。  
   
@@ -58,14 +58,14 @@ HRESULT DefineTypeRefByName (
  [out]指標`mdTypeRef`指派給類型的語彙基元。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
