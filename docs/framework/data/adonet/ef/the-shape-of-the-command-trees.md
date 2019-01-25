@@ -2,12 +2,12 @@
 title: 命令樹的形狀
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 9084e2616ac4ea540bdf755afd011d67a5c991fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b859dfaa6350341b4b90753fd5dda3339e6bb584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573019"
 ---
 # <a name="the-shape-of-the-command-trees"></a>命令樹的形狀
 SQL 產生模組負責根據給定輸入查詢命令樹運算式，產生後端特定的 SQL 查詢。 本章節將討論查詢命令樹的特性、屬性和結構。  
@@ -23,7 +23,7 @@ SQL 產生模組負責根據給定輸入查詢命令樹運算式，產生後端�
   
  DBQueryCommandTree.Query 屬性是描述查詢邏輯之運算式樹狀架構的根。 DBQueryCommandTree.Parameters 屬性包含用於查詢的參數清單。 由 DbExpression 物件所組成的運算式。  
   
- DbExpression 物件代表某些計算。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會提供幾種運算式來撰寫查詢運算式，包括常數、變數、函式、建構函式，以及標準關係運算子 (如 Filter 和 Join)。 每一個 DbExpression 物件都有 ResultType 屬性，代表該運算式所產生的結果類型。 這個型別會表示為 TypeUsage。  
+ DbExpression 物件代表某些計算。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會提供幾種運算式來撰寫查詢運算式，包括常數、變數、函式、建構函式，以及標準關係運算子 (如 Filter 和 Join)。 每一個 DbExpression 物件都有 ResultType 屬性，表示該運算式所產生之結果的型別。 這個型別會表示為 TypeUsage。  
   
 ## <a name="shapes-of-the-output-query-command-tree"></a>輸出查詢命令樹的形狀  
  輸出查詢命令樹緊密地代表關聯式 (SQL) 查詢，而且與查詢命令樹所套用的規則相較之下，前者會遵守更為嚴格的規則。 這些通常包含可輕鬆轉譯為 SQL 的建構。  
@@ -69,9 +69,9 @@ SQL 產生模組負責根據給定輸入查詢命令樹運算式，產生後端�
   
 -   使用者定義函式。  
   
- 標準函式 (請參閱[標準函式](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)如需詳細資訊) 指定為一部分[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，並提供者應該提供這些規格為基礎的標準函式的實作。 存放區函式是根據對應之提供者資訊清單中的規格。 使用者定義函式是根據 SSDL 中的規格。  
+ 標準函式 (請參閱[標準函式](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)如需詳細資訊) 的一部分[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，而且提供者應該提供根據這些規格的標準函式的實作。 存放區函式是根據對應之提供者資訊清單中的規格。 使用者定義函式是根據 SSDL 中的規格。  
   
- 此外，具有 NiladicFunction 屬性的函式沒有任何引數，而且轉譯時結尾不應該有括號。  也就是為 *\<functionName >* 而不是 *\<functionName > （)*。  
+ 此外，具有 NiladicFunction 屬性的函式沒有任何引數，而且轉譯時結尾不應該有括號。  也就是， *\<函數名稱 >* 而非 *\<functionName > （)*。  
   
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  DbNewInstanceExpression 只能發生在下列兩個案例中：  
@@ -96,14 +96,14 @@ SQL 產生模組負責根據給定輸入查詢命令樹運算式，產生後端�
 #### <a name="dbscanexpression"></a>DbScanExpression  
  當用於輸出命令樹時，DbScanExpression 會有效地代表對資料表、檢閱表或存放區查詢的掃描 (以 EnitySetBase::Target 表示)。  
   
- 如果中繼資料屬性"Defining Query"的目標是不是 null，它會代表查詢，查詢文字會在提供存放結構定義中所指定的提供者特定的語言 （或方言） 中的中繼資料屬性。  
+ 如果中繼資料屬性"Defining Query"目標的會是不是 null，則它會代表查詢，查詢文字，會提供在存放結構定義中所指定提供者的特定語言 （或方言） 的中繼資料屬性。  
   
- 否則，目標會代表資料表或檢視表。 其結構描述前置詞不是位於"Schema"中繼資料屬性，如果不是 null，就是實體容器名稱。  資料表或檢視表名稱會是"Table"中繼資料屬性，如果不是 null，否則為 Name 屬性的實體集基底。  
+ 否則，目標會代表資料表或檢視表。 其結構描述前置詞不是在"Schema"中繼資料屬性中，如果不是 null，否則就是實體容器名稱。  可能是"Table"中繼資料屬性，如果不是 null，否則為實體的 Name 屬性設定基底資料表或檢視表的名稱。  
   
  所有的這些屬性都來自於存放結構定義檔案 (SSDL) 中對應 EntitySet 的定義。  
   
 ### <a name="using-primitive-types"></a>使用基本型別  
  在輸出命令樹中參考基本型別時，通常會在概念模型的基本型別中參考這些型別。 但是對於某些運算式而言，提供者需要對應的存放區基本型別。 這類運算式的範例包括 DbCastExpression，也可能包括 DbNullExpression (如果提供者需要將 null 轉型為對應的型別)。 在這些情況下，提供者應該根據基本型別種類和它的 Facet，執行與提供者型別的對應。  
   
-## <a name="see-also"></a>另請參閱  
- [SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>另請參閱
+- [SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

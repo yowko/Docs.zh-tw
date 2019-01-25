@@ -1,5 +1,5 @@
 ---
-title: 如何：設定項目的寬度屬性
+title: HOW TO：設定項目的寬度屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - width properties [WPF]
 - Panel control [WPF], width properties of elements
 ms.assetid: 6ee04a9d-63f0-4f5b-a406-0a8cd4c35729
-ms.openlocfilehash: 261318e3d1433a47eeec2069f484124efd14653f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 739b041d8ca89abb9bd1934abb997d1154f08c95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673981"
 ---
-# <a name="how-to-set-the-width-properties-of-an-element"></a>如何：設定項目的寬度屬性
+# <a name="how-to-set-the-width-properties-of-an-element"></a>HOW TO：設定項目的寬度屬性
 ## <a name="example"></a>範例  
  此範例中以視覺化方式顯示轉譯行為中的四個寬度相關屬性之間的差異[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  
   
@@ -33,13 +33,13 @@ ms.locfileid: "43523807"
   
  如需完整的範例，請參閱[寬度屬性比較範例](https://go.microsoft.com/fwlink/?LinkID=160050)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Controls.ListBox>  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.FrameworkElement.ActualWidth%2A>  
- <xref:System.Windows.FrameworkElement.MaxWidth%2A>  
- <xref:System.Windows.FrameworkElement.MinWidth%2A>  
- <xref:System.Windows.FrameworkElement.Width%2A>  
- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [設定元素的高度屬性](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [寬度屬性比較範例](https://go.microsoft.com/fwlink/?LinkID=160050)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.FrameworkElement.ActualWidth%2A>
+- <xref:System.Windows.FrameworkElement.MaxWidth%2A>
+- <xref:System.Windows.FrameworkElement.MinWidth%2A>
+- <xref:System.Windows.FrameworkElement.Width%2A>
+- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [設定元素的高度屬性](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)
+- [寬度屬性比較範例](https://go.microsoft.com/fwlink/?LinkID=160050)

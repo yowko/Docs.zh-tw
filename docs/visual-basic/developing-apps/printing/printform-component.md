@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
-ms.openlocfilehash: 879d31c5a572689d84af6b2e46f3d33e1a8841c8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a093dbb674a0d182b9a981cf39668d9ca11d0e8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47172150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746191"
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm 元件 (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Visual basic 中的元件可讓您在執行階段列印 Windows Form 的影像。 其行為取代了舊版 Visual Basic 中 `PrintForm` 方法的行為。  
   
- 在 Visual Studio 中，已不再包含 PowerPack 控制項，但您可以下載從[下載中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)。  
+ Visual Studio 中已不再包含 PowerPack 控制項，但您可以從 [下載中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)下載這些控制項。  
   
 ## <a name="printform-component-overview"></a>PrintForm 元件概觀  
  Windows Form 的常見案例是建立一個表單，其格式類似紙本表單或報表，然後再列印表單的影像。 雖然您可以使用 <xref:System.Drawing.Printing.PrintDocument> 元件來執行這項作業，但這樣做需要撰寫許多程式碼。 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件可讓您將表單的影像列印至印表機、[預覽列印] 視窗或檔案，而不需要使用 <xref:System.Drawing.Printing.PrintDocument> 元件。  
@@ -66,10 +66,10 @@ pf.PrintAction = PrintToPrinter
 pf.Print()  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- [操作說明：使用 PrintForm 元件列印表單](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)  
- [操作說明：列印表單的工作區](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
- [操作說明：列印表單的工作區和非工作區](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
- [操作說明：列印可捲動的表單](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>
+- [如何：使用 PrintForm 元件列印表單](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)
+- [如何：列印表單的工作區](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
+- [如何：列印表單的工作區和非工作區](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
+- [如何：列印可捲動的表單](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)

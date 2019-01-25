@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50d9ac08b01a67df68ff077721ff5421fbc27707
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7905b3ee83378ed1a27501b082dbfca01d6436c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688060"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>ISymUnmanagedENCUpdate::UpdateMethodLines 方法
 允許更新的方法，具有未重新編譯，但其中的行已獨立的行資訊。 允許每個陳述式的差異。  
@@ -37,7 +38,7 @@ HRESULT UpdateMethodLines(
   
 #### <a name="parameters"></a>參數  
  `mdMethodToken`  
- [in]方法語彙基元的中繼資料。  
+ [in]方法的語彙基元的中繼資料。  
   
  `pDeltas`  
  [in]陣列`INT32`值，表示在方法中的每個序列點的差異。  
@@ -46,10 +47,10 @@ HRESULT UpdateMethodLines(
  [in]A`ULONG`包含大小`pDeltas`參數。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：**於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedENCUpdate 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedENCUpdate 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

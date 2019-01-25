@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 8121b6e8c5a136f5f89b59636a7cb7f15794164a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b243ee7fdb72aaf749492a008708da4209a7736e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745472"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611978"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "43745472"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>建立新的 XAML 瀏覽器應用程式 (XBAP)  
- 若要建立新的 XBAP 專案最簡單的方式是使用 Microsoft Visual Studio。 建立新專案時，從範本清單選取 [WPF 瀏覽器應用程式]。 如需更多詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)。  
+ 若要建立新的 XBAP 專案最簡單的方式是使用 Microsoft Visual Studio。 建立新專案時，從範本清單選取 [WPF 瀏覽器應用程式]。 如需詳細資訊，請參閱[＜How to：建立新的 WPF 瀏覽器應用程式專案](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)。  
   
  當您執行 XBAP 專案時，它會在瀏覽器視窗中開啟，而不是在獨立視窗中開啟。 當您偵錯 XBAP 從 Visual Studio 時，應用程式會使用網際網路區域權限執行，並因此如果會擲回安全性例外狀況會在超過這些權限。 如需詳細資訊，請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md)和 [WPF 部分信任安全性](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "43745472"
   
 7.  在 [安全性] 底下的 [設定]清單中，勾選 [允許檔案中的主動式內容在我的電腦上執行] 核取方塊。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定 **Deploying Office Solutions**]。  
   
      變更在重新啟動 Internet Explorer 之後才會生效。  
   
@@ -186,6 +186,6 @@ ms.locfileid: "43745472"
   
  此外，ClickOnce 下載順序的改善的並行會改善最多 10%的開始時間。 ClickOnce 下載和驗證之後資訊清單、 應用程式的下載會啟動，而進度列開始更新。  
   
-## <a name="see-also"></a>另請參閱  
- [設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+## <a name="see-also"></a>另請參閱
+- [設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)

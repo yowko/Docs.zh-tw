@@ -2,12 +2,12 @@
 title: 使用 JSONP
 ms.date: 03/30/2017
 ms.assetid: f386718c-b4ba-4931-a610-40c27a46672a
-ms.openlocfilehash: 55f90c37dc4e94653f2233371a044a2f019b59a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 622fbdbf2674aea552cfd57f528d7cc5168cfda8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713482"
 ---
 # <a name="using-jsonp"></a>使用 JSONP
 
@@ -17,7 +17,7 @@ JSON Padding (JSONP) 是一種啟用 Web 瀏覽器跨網站指令碼支援的機
 callback({"a" = \\"b\\"});
 ```
 
-在上述範例中，JSON 承載 (`{"a" = \\"b\\"}`) 包裝在函式呼叫 (`callback`) 中。 回呼函式已在目前的網頁中定義。 JSONP 回應的內容類型為`application/javascript`。
+在上述範例中，JSON 承載 (`{"a" = \\"b\\"}`) 包裝在函式呼叫 (`callback`) 中。 回呼函式已在目前的網頁中定義。 JSONP 回應的內容型別是`application/javascript`。
 
 JSONP 不會自動啟用。 若要啟用此功能，請將其中一個 HTTP 標準端點 (`javascriptCallbackEnabled` 或 `true`) 上的 <xref:System.ServiceModel.Description.WebHttpEndpoint> 屬性設定為 <xref:System.ServiceModel.Description.WebScriptEndpoint>，如下列範例所示。
 
@@ -86,4 +86,4 @@ anotherFunction ({"root":"Something"}, 201);
 
 ## <a name="see-also"></a>另請參閱
 
-[WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

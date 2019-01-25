@@ -2,12 +2,12 @@
 title: '&lt;位址&gt;不是有效的遠端檔案位址'
 ms.date: 07/20/2015
 ms.assetid: 2c312242-6c42-4754-a1f5-7e801a542604
-ms.openlocfilehash: 5c7d92a9e2c3f20988367fd54428331c8a432986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2fd919469efb8562ebaa5ad2b4fc5f27244645f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599895"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730408"
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a>&lt;位址&gt;不是有效的遠端檔案位址
 \<位址 > 不是有效的遠端檔案位址。 有效位址應該包含通訊協定、路徑和檔案名稱。  
@@ -18,8 +18,8 @@ ms.locfileid: "33599895"
   
 -   檢查您所指定的位址以判斷失敗的位置，並提供必要的資訊。  
   
-## <a name="see-also"></a>另請參閱  
- [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)  
- [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)  
- [如何：下載檔案](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
+## <a name="see-also"></a>另請參閱
+- [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)
+- [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)
+- [如何：下載檔案](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
 

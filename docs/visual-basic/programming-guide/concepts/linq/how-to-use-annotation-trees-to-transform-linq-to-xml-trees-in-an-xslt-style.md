@@ -1,15 +1,15 @@
 ---
-title: 如何： 使用註釋將 LINQ to XML 樹狀結構中的 XSLT 樣式 (Visual Basic) 轉換
+title: HOW TO：使用註釋轉換 LINQ to XML 樹狀結構的 XSLT 樣式 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: c19d290e5b7acdf2702e24383a176ed06c9c7a1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed31e00b6d67a6707a98977c58e4e7afe35c8ad7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746295"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何： 使用註釋將 LINQ to XML 樹狀結構中的 XSLT 樣式 (Visual Basic) 轉換
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>HOW TO：使用註釋轉換 LINQ to XML 樹狀結構的 XSLT 樣式 (Visual Basic)
 附註可用於簡化 XML 樹狀的轉換。  
   
  有些 XML 文件為「中央具有混合內容的文件」。 使用這類文件時，您不一定要知道項目子節點的組織結構。 例如，包含文字的節點類似如下：  
@@ -378,5 +378,5 @@ After Transform
 </Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [進階的 LINQ to XML 程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>另請參閱
+- [進階的 LINQ to XML 程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

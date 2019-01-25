@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 7090d5e9cd4b44a6f894cc92ad69b34761356118
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d76b7db8a3c8f2dcdc8bdbc325a1bb14b87229ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188195"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721106"
 ---
 # <a name="securing-clients"></a>確保用戶端的安全
 在 Windows Communication Foundation (WCF) 中，服務說明用戶端的安全性需求。 也就是說，服務會指定使用哪一個安全性模式，以及用戶端是否必須提供認證。 因此，保護用戶端安全的程序便十分簡單，只要使用從服務 (如果已發行) 取得的中繼資料並建立用戶端即可。 中繼資料指定如何設定用戶端。 如果服務要求用戶端提供認證，則您必須取得符合要求的認證。 本主題將進一步探討此程序。 如需建立安全服務的詳細資訊，請參閱[Securing Services](../../../docs/framework/wcf/securing-services.md)。  
@@ -134,7 +134,7 @@ ms.locfileid: "50188195"
 > [!NOTE]
 >  使用應用程式組態檔無法設定某些用戶端認證值，例如使用者名稱和密碼，或者 Windows 使用者和密碼值。 這類認證值只能在程式碼中指定。  
   
- 如需有關如何設定用戶端憑證的詳細資訊，請參閱 < [How to: Specify Client Credential Values](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 如需有關如何設定用戶端憑證的詳細資訊，請參閱[How to:指定用戶端認證值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 > [!NOTE]
 >  `ClientCredentialType` 設定為 `SecurityMode` 時，會忽略 `"TransportWithMessageCredential",`，如下列範例組態所示。  
@@ -152,16 +152,16 @@ ms.locfileid: "50188195"
 </wsHttpBinding>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
- <xref:System.ServiceModel.ClientBase%601>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
- [設定編輯器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
- [保護服務安全](../../../docs/framework/wcf/securing-services.md)  
- [使用 WCF 用戶端存取服務](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [如何：指定用戶端認證值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
- [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [如何：指定用戶端認證類型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
+- <xref:System.ServiceModel.ClientBase%601>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
+- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+- [設定編輯器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [保護服務安全](../../../docs/framework/wcf/securing-services.md)
+- [使用 WCF 用戶端存取服務](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [如何：指定用戶端認證值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [如何：指定用戶端認證類型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

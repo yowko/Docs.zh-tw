@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67abf017040b9e6bbe9b10e560c8d57c124ae84e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5f2288e02c01a40877abbd6a5ce5b2696c0944ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719972"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi 函式
 建立或更新現有類別的執行個體。 執行個體是寫入到 WMI 存放庫。 
@@ -69,12 +69,12 @@ HRESULT PutInstanceWmi (
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 使用者沒有權限來更新指定類別的執行個體。 |
 | `WBEM_E_FAILED` | 0x80041001 | 發生未指定的錯誤。 |
-| `WBEM_E_INVALID_CLASS` | 收到 0x80041010 | 支援這個執行個體的類別不是有效的。 |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | 支援這個執行個體的類別不是有效的。 |
 | `WBEM_E_ILLEGAL_NULL` | 0x80041028 | `null`指定的屬性，不能`null`，例如標記**Indexed**或**Not_Null**限定詞。 |
 | `WBEM_E_INVALID_OBJECT` | 0x8004100f | 指定的執行個體不是有效的。 (例如，呼叫`PutInstanceWmi`類別會傳回此值。) |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY`指定旗標，但是執行個體已經存在。 |
-| `WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` 中指定了`lFlags`，但執行個體不存在。 |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` 中指定了`lFlags`，但執行個體不存在。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI 是可能已停止和重新啟動。 呼叫[ConnectServerWmi](connectserverwmi.md)一次。 |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 目前的處理序與 WMI 的遠端程序呼叫 (RPC) 連結失敗。 |
@@ -102,5 +102,5 @@ Windows Management 不會呼叫提供者來進行的任何子類別的執行個�
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

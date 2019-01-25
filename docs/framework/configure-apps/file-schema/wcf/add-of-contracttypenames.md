@@ -2,18 +2,18 @@
 title: '&lt;contractTypeNames&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: 79972eaea6918b3fe923c963b6a219fd8f972516
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cf9a1ae28b53b841ac5d8d85d31e1548e36369ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145610"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735723"
 ---
 # <a name="ltaddgt-of-ltcontracttypenamesgt"></a>&lt;contractTypeNames&gt; 的 &lt;add&gt;
 組態項目，這個項目會指定要搜尋之服務的合約名稱，以及通常用於搜尋服務的準則。 如果指定多個合約名稱，則只會回覆符合「所有」合約的服務端點。 請注意，在 Windows Communication Foundation (WCF) 端點僅支援一個合約。  
   
  \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,9 +58,9 @@ ms.locfileid: "54145610"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<a d d >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|合約型別名稱的集合。|  
+|[\<contractTypeNames>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|合約型別名稱的集合。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Discovery.FindCriteria>  
- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>  
- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Discovery.FindCriteria>
+- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>

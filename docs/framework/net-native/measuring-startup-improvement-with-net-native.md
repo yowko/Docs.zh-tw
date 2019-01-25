@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d8e104b5d32c07c4730154ff3fc69b452a024b7
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: a7435d68635e2a1066b143c28b5662364326ac8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607234"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>評估使用 .NET Native 的啟動改善
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 可大幅改善應用程式的啟動時間。 在可攜式、低電源的裝置上，以及用於複雜的應用程式時，這項改良功能尤其明顯。 本主題將協助您著手進行測量這項啟動改良功能所需的基本檢測。  
@@ -47,7 +47,7 @@ ms.locfileid: "49347899"
   
 -   您的應用程式已經完成同步處理新的報導時。  
   
- 檢測應用程式很簡單：只要在衍生的類別上呼叫適當的方法即可。 使用先前範例中的 `AppEventSource`，您可以檢測應用程式，如下所示：  
+ 檢測應用程式很簡單：只要在衍生類別上呼叫適當的方法。 使用先前範例中的 `AppEventSource`，您可以檢測應用程式，如下所示：  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   
@@ -97,5 +97,5 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  針對您原始的應用程式以及使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈來建置的版本重複此程序，就可以比較出效能的差異。   [!INCLUDE[net_native](../../../includes/net-native-md.md)] 應用程式的啟動速度通常會比非 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 應用程式快。 如果您有挖掘更深入的資料，PerfView 也可以識別出程式碼中最耗時間的部分。 如需詳細資訊，請觀看 [PerfView 教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)或閱讀 [Vance Morrison 的部落格文章](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Diagnostics.Tracing.EventSource>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Diagnostics.Tracing.EventSource>

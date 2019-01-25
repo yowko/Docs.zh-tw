@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82b81ec29dece182548ead046edc7cb754fbf00e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b844a660da6a1e8d96ed7f5833435b413219e29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645622"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult 列舉
-指出兩個組件識別是否相等由[CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)函式。  
+表示之兩個組件身分識別，對等，由[CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,27 +50,27 @@ typedef enum _tagAssemblyComparisonResult {
 |成員名稱|描述|  
 |-----------------|-----------------|  
 |`ACR_EquivalentFullMatch`|表示所有組件欄位比對中。|  
-|`ACR_EquivalentFXUnified`|指出的組件都會被視為相等的通用語言執行階段 (CLR) 版本統一的.NET Framework 2.0 版中的組件版本號碼為基礎。|  
-|`ACR_EquivalentPartialFXUnified`|表示 CLR 統一的.NET Framework 2.0 中的組件版本號碼為基礎的組件的部分相符。|  
-|`ACR_EquivalentPartialMatch`|表示組件的部分相符。|  
-|`ACR_EquivalentPartialUnified`|表示根據舊的版本號碼的統一的組件的部分相符。|  
+|`ACR_EquivalentFXUnified`|指出，組件都視為對等的通用語言執行階段 (CLR) 版本統一的.NET Framework 2.0 版中的組件版本號碼為基礎。|  
+|`ACR_EquivalentPartialFXUnified`|表示根據.NET Framework 2.0 中的組件版本號碼將 CLR 統一的組件的部分相符。|  
+|`ACR_EquivalentPartialMatch`|指出部分相符的組件。|  
+|`ACR_EquivalentPartialUnified`|表示根據舊版的版本號碼的統一的組件的部分相符。|  
 |`ACR_EquivalentPartialWeakNamed`|指出部分相符的簡單名稱的組件。|  
-|`ACR_EquivalentUnified`|指出的組件都會被視為相等 CLR 統一的舊版本的.NET framework 的版本號碼為基礎。|  
-|`ACR_EquivalentWeakNamed`|表示兩個簡單名稱的組件，已忽略其版本號碼之間相符。|  
-|`ACR_NonEquivalent`|指出兩個組件之間沒有相符項目。|  
+|`ACR_EquivalentUnified`|指出，組件視為相同的基礎 CLR 版本對應轉換的舊版本的.NET Framework 的版本號碼。|  
+|`ACR_EquivalentWeakNamed`|表示忽略其版本號碼的兩個簡單名稱組件之間相符。|  
+|`ACR_NonEquivalent`|表示發生在兩個組件之間沒有相符項目。|  
 |`ACR_NonEquivalentPartialVersion`|指出兩個組件相符除了其版本號碼，只有部分相符。|  
-|`ACR_NonEquivalentVersion`|指出兩個組件相符除了其版本號碼，並不相符。|  
+|`ACR_NonEquivalentVersion`|指出兩個組件相符除了其版本號碼，不相符。|  
 |`ACR_Unknown`|指出不相等的原因不明。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Fusion.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [CompareAssemblyIdentity 函式](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
- [融合列舉](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [CompareAssemblyIdentity 函式](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)
+- [融合列舉](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

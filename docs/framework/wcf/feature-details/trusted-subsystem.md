@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: ac789ba81d728c067be515479e749440bb5809d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a2b8f4f49afb987243ed96c29a09d7f0ec842945
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744579"
 ---
 # <a name="trusted-subsystem"></a>受信任的子系統
 用戶端會存取分散在網路上的一或多個 Web 服務。 Web 服務的設計會將對其他資源 (例如資料庫或其他 Web 服務) 的存取封裝在 Web 服務的商務邏輯中。 這些資源必須受到保護，以避免未經授權的存取。 下圖說明受信任的子系統處理序。  
@@ -101,7 +101,7 @@ ms.locfileid: "44042451"
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>組態  
- 下列組態會使用組態來設定相同端點。 請注意兩個繫結，一個會保護受信任子系統所裝載的服務，另一個則會在受信任子系統和後端服務之間進行通訊。  
+ 下列組態會使用組態來設定相同端點。 請注意兩個繫結：其中一個會保護裝載於受信任的子系統中的服務和其他受信任的子系統和後端服務之間進行通訊。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -210,6 +210,6 @@ ms.locfileid: "44042451"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>另請參閱
+- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

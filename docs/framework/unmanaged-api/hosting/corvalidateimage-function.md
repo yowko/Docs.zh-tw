@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 101271823f7b7877bb7f007588b6a164233e5b45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a84869281ec27aface96d722603186382c6e15e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432373"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730772"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage 函式
-驗證 managed 的模組映像，並已經載入後，通知作業系統載入器。  
+驗證 managed 的模組映像，並載入後通知作業系統載入器。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,13 +37,13 @@ STDAPI _CorValidateImage (
   
 #### <a name="parameters"></a>參數  
  `ImageBase`  
- [in]要驗證之影像的起始位置的指標 managed 程式碼。 映像已經必須載入記憶體。  
+ [in]指向要驗證的映像的起始位置的 managed 程式碼。 映像必須已被載入到記憶體中。  
   
  `FileName`  
- [in]影像的檔案名稱。  
+ [in]映像的檔案名稱。  
   
 ## <a name="return-value"></a>傳回值  
- 此函式傳回的標準值`E_INVALIDARG`， `E_OUTOFMEMORY`， `E_UNEXPECTED`，和`E_FAIL`，以及下列值。  
+ 此函數會傳回標準值`E_INVALIDARG`， `E_OUTOFMEMORY`， `E_UNEXPECTED`，和`E_FAIL`，以及下列的值。  
   
 |傳回值|描述|  
 |------------------|-----------------|  
@@ -51,17 +51,17 @@ STDAPI _CorValidateImage (
 |`STATUS_SUCCESS`|影像是有效的。 此值沒有 HRESULT 0x00000000L。|  
   
 ## <a name="remarks"></a>備註  
- 在 Windows XP 和更新版本中，作業系統載入器會檢查 managed 模組藉由檢查 COM 描述元的目錄中的位元的通用物件檔案格式 (COFF) 標頭。 設定位元表示受管理的模組。 如果載入器偵測到受管理的模組，它會載入 MsCorEE.dll 呼叫`_CorValidateImage`，它會執行下列動作：  
+ 在 Windows XP 和更新版本中，作業系統載入器會檢查 managed 模組藉由檢查 COM 描述元的目錄中的位元的通用物件檔案格式 (COFF) 標頭。 設定位元表示受管理的模組。 如果載入器偵測到受管理的模組，它會載入 MsCorEE.dll，並呼叫`_CorValidateImage`，會執行下列動作：  
   
--   確認影像為有效的受管理的模組。  
+-   確認映像都是有效的受管理的模組。  
   
 -   Common language runtime (CLR) 中的進入點變更映像中的進入點。  
   
--   對於 64 位元版本的 Windows，修改的映像從 PE32 將其轉換為 PE32 + 格式是在記憶體中。  
+-   如需 64 位元版本的 Windows，修改的映像從 PE32 格式轉換成 PE32 + 格式是在記憶體中。  
   
--   載入器載入 managed 的模組映像時傳回。  
+-   載入器在載入 managed 的模組映像時傳回。  
   
- 針對可執行檔映像，作業系統載入器接著呼叫[_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函式，不論在可執行檔中指定的進入點。 載入器會呼叫 DLL 的組件映像， [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)函式。  
+ 針對可執行檔映像，作業系統載入器接著會呼叫[_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函式，不論在可執行檔中指定的進入點。 DLL 組件映像，則載入器會呼叫[_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)函式。  
   
  `_CorExeMain` 或`_CorDllMain`執行下列動作：  
   
@@ -71,16 +71,16 @@ STDAPI _CorValidateImage (
   
 -   開始執行。  
   
- 載入器呼叫[_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)函式時 managed 模組映像會卸載。 不過，此函式不會執行任何動作;它只會傳回。  
+ 載入器呼叫[_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)函式時受管理模組映像，就會卸載。 不過，此函式不會執行任何動作;它只會傳回。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料全域靜態函式](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料全域靜態函式](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

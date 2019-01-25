@@ -1,19 +1,19 @@
 ---
-title: 逐步解說：自動將自訂元件填入工具箱
+title: 逐步解說：自動填入 [工具箱] 中的以自訂元件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IToolboxService interface
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 488d51e748ea17b09e61b982db7abadc34f8e311
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8c40f4a58800183c142602d950e4fe1331c1eaf3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730265"
 ---
-# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>逐步解說：自動將自訂元件填入工具箱
+# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>逐步解說：自動填入 [工具箱] 中的以自訂元件
 如果您的元件會定義目前開啟的方案中的專案，它們會自動顯示，在**工具箱**，您需要採取任何動作。 您可以手動填入**工具箱**以使用您自訂元件[選擇工具箱項目對話方塊 (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)，但**工具箱**考慮您的方案中的項目建置輸出具有所有下列特性：  
   
 -   實作<xref:System.ComponentModel.IComponent>;  
@@ -47,9 +47,9 @@ ms.locfileid: "44041557"
   
 1.  建立以 Windows 為基礎的應用程式專案，稱為`ToolboxExample`(**檔案** > **新增** > **專案** >  **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。  
   
-2.  將新元件加入至專案。 呼叫它`DemoComponent`。  
+2.  將新元件加入至專案。 稱為 `DemoComponent`。  
   
-     如需詳細資訊，請參閱 < [NIB： 如何： 加入新的專案項目](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。  
+     如需詳細資訊，請參閱[NIB： 操作說明：加入新的專案項目](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。  
   
 3.  建置專案。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "44041557"
   
 1.  卸載方案中的專案。  
   
-     如需 卸載專案的詳細資訊，請參閱[NIB： 如何： 卸載再重新載入專案](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b)。 如果提示您儲存時，請選擇**是**。  
+     如需 卸載專案的詳細資訊，請參閱[NIB： 操作說明：卸載並重新載入專案](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b)。 如果提示您儲存時，請選擇**是**。  
   
 2.  加入新**Windows 應用程式**專案加入方案。 開啟中的表單**設計工具**。  
   
@@ -93,8 +93,8 @@ ms.locfileid: "44041557"
 ## <a name="next-steps"></a>後續步驟  
  本逐步解說示範**工具箱**考慮專案的元件，但**工具箱**也是會考慮控制項。 若要試驗您自己的自訂控制項，可新增和移除您的方案中的控制項專案。  
   
-## <a name="see-also"></a>另請參閱  
- [選項對話方塊、 Windows Form 設計工具、 一般](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
- [如何：操作工具箱索引標籤](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
- [選擇工具箱項目對話方塊 (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
- [將控制項加入 Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- [選項對話方塊、 Windows Form 設計工具、 一般](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
+- [如何：操作工具箱索引標籤](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)
+- [選擇工具箱項目對話方塊 (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)
+- [將控制項加入 Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

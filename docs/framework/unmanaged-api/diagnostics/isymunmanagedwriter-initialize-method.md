@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44046560f4f788c4a7d695ff18c9c01740fea35a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9c38a2d87f8c8db0b77dd60460d6d00a73f41ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710985"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize 方法
-設定與這個寫入器將會在相關的中繼資料發出器介面，並將偵錯符號寫入的輸出檔名稱。  
+設定與這個寫入器將會在相關的中繼資料發出器介面，並設定偵錯的符號寫入的輸出檔案名稱。  
   
- 一次，呼叫這個方法，它必須進行任何其他寫入器方法之前呼叫。 有些寫入器可能需要的檔案名稱。 不過，您一律可以檔案名稱傳遞至這個方法沒有任何未使用的檔案名稱的寫入器上的負面影響。  
+ 一次，呼叫這個方法，它必須在其他任何寫入方法之前呼叫。 有些寫入器可能需要的檔案名稱。 不過，您一律可以檔案名稱傳遞給這個方法沒有任何未使用的檔案名稱的寫入器上的負面影響。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,20 +44,20 @@ HRESULT Initialize(
  [in]中繼資料發出器介面指標。  
   
  `filename`  
- [in]偵錯符號寫入的檔案名稱。 如果檔案名稱是指定給不使用檔案名稱的寫入器，則這個參數會被忽略。  
+ [in]寫入偵錯符號的檔案名稱。 如果檔案名稱是指定給不使用檔案名稱的寫入器，則這個參數會被忽略。  
   
  `pIStream`  
- [in]如果指定，符號寫入器會發出符號插入給定<xref:System.Runtime.InteropServices.ComTypes.IStream>，而不是檔案中指定`filename`參數。 `pIStream` 是選擇性參數。  
+ [in]如果指定，符號寫入器就會發出符號另外建立成給定<xref:System.Runtime.InteropServices.ComTypes.IStream>而不是在指定的檔案`filename`參數。 `pIStream` 是選擇性參數。  
   
  `fFullBuild`  
- [in]`true`如果這是完整重建;`false`如果這是累加編譯。  
+ [in]`true`如果這是完整重建，`false`如果這是累加編譯。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：**於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [Initialize2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [Initialize2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)

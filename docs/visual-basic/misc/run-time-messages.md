@@ -5,12 +5,12 @@ helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-ms.openlocfilehash: ce61401dec875ac1dea01e1e5a892d06974a3d36
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 11d35774b489d36c32e5d3f58a5bc25b005ff12d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675024"
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic 執行階段訊息
 本節包含在執行階段發生的 Visual Basic 錯誤訊息。  
@@ -553,6 +553,6 @@ ms.locfileid: "43788022"
   
  [您必須指定目前資料夾或其中一個子資料夾底下的路徑](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
-## <a name="see-also"></a>另請參閱  
-   
- [錯誤訊息](../../visual-basic/language-reference/error-messages/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [錯誤訊息](../../visual-basic/language-reference/error-messages/index.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 902414ca96d9b4bf888608bd9ad267777da92e32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742311"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 函式
 傳回識別屬性的唯一控制代碼。
@@ -63,7 +63,7 @@ HRESULT GetPropertyHandle (
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | 找不到指定的屬性名稱。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的屬性名稱。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
 |`WBEM_E_NOT_SUPPORTED` | 0x8004100c | 要求的屬性屬於型別是`CIM_OBJECT`或`CIM_ARRAY`。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
@@ -83,5 +83,5 @@ HRESULT GetPropertyHandle (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

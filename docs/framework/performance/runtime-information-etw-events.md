@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4244196a957c67a807cdb705f6d74ee2b41869d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb213ef4a335cf6784c2889cd9cf0214a1411da2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735710"
 ---
 # <a name="runtime-information-etw-events"></a>執行階段資訊 ETW 事件
 執行階段的這些 ETW 事件記錄資訊，包含 SKU、版本號碼、執行階段啟用方式、用來啟動它的命令列參數、GUID (適用時)，以及其他相關資訊。 如果多個執行階段是在某個處理序內執行，則這些事件所提供的資訊 (ClrInstanceID) 有助於釐清執行階段。  
@@ -44,5 +44,5 @@ ms.locfileid: "33391598"
 |ComObjectGUID|win:GUID|只有在 StartupMode=0x08 時才為非 Null。|  
 |RuntimeDLLPath|win:UnicodeString|已載入處理序中之 CLR .dll 檔案的路徑。|  
   
-## <a name="see-also"></a>另請參閱  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>另請參閱
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

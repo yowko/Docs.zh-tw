@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c09b70b5afb0561d32e55dd89df6cac083abc068
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 98758ce2c1fb0373ce5a94ad153c0f07144616e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422012"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729891"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses 方法
 列舉在遠端電腦上執行的處理序。  
@@ -43,7 +43,7 @@ HRESULT EnumProcesses (
  [out] `ppProcs` 中傳回的處理序數目。 這個值可以是 0 (零)。  
   
  `ppProcs`  
- [out]陣列[CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) ，此結構表示遠端電腦上執行的處理程序。  
+ [out]陣列[CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)代表在遠端電腦上執行的處理程序的結構。  
   
 ## <a name="return-value"></a>傳回值  
  S_OK  
@@ -56,10 +56,10 @@ HRESULT EnumProcesses (
  其他失敗。  
   
 ## <a name="remarks"></a>備註  
- 若要釋放由這個方法所配置的記憶體，請呼叫[icoreclrdebugtarget:: Freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)方法。  
+ 若要釋放這個方法所配置的記憶體，請呼叫[icoreclrdebugtarget:: Freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CoreClrRemoteDebuggingInterfaces.h  
   
@@ -67,5 +67,5 @@ HRESULT EnumProcesses (
   
  **.NET framework 版本：** 3.5 SP1  
   
-## <a name="see-also"></a>另請參閱  
- [ICoreClrDebugTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICoreClrDebugTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

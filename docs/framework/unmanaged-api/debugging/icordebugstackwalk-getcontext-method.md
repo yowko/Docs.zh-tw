@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1126842a30f19831cc845bcfccc0e08f4bf5f6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 306eee3c0ce4689d1d6295aba1ef7584841dcc72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422668"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731045"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext 方法
-傳回目前的框架中的內容[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)物件。  
+傳回目前的框架的內容[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,25 +54,25 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|目前畫面格的內容已成功地傳回。|  
-|E_FAIL|不會傳回內容。|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|內容緩衝區為太小。|  
-|CORDBG_E_PAST_END_OF_STACK|框架指標已經結尾的堆疊。因此，沒有其他框架則可以存取。|  
+|S_OK|已成功地傳回目前的框架的內容。|  
+|E_FAIL|無法傳回內容。|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|內容緩衝區是太小。|  
+|CORDBG_E_PAST_END_OF_STACK|框架指標已經結尾的堆疊;因此，可以不存取任何其他的框架。|  
   
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- 回溯還原子集暫存器，例如非暫時性暫存器，因為內容可能不完全與暫存狀態時呼叫。  
+ 因為回溯還原暫存器，例如靜態暫存器中，只有部分內容可能不完全符合的註冊狀態時呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

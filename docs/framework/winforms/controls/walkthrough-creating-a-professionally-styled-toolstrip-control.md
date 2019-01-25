@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 6435f33489be1355313e43a046b0e3169e1eaea3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714889"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>逐步解說：建立專業樣式的 ToolStrip 控制項
 您可以提供給您的應用程式<xref:System.Windows.Forms.ToolStrip>撰寫您自己的類別衍生自控制項專業外觀和行為<xref:System.Windows.Forms.ToolStripProfessionalRenderer>型別。  
@@ -30,7 +30,7 @@ ms.locfileid: "43861969"
   
  當您完成時，您必須使用 Microsoft Office® XP 控制項專業外觀的可重複使用的自訂用戶端控制項。  
   
- 若要複製一份清單列出本主題中的程式碼，請參閱[如何： 建立專業樣式的 ToolStrip 控制項](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)。  
+ 若要複製一份清單列出本主題中的程式碼，請參閱[How to:建立專業樣式的 ToolStrip 控制項](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -49,7 +49,7 @@ ms.locfileid: "43861969"
   
 2.  在 [**方案總管] 中**，藉由刪除原始程式檔，視您選擇的語言而定，名為"UserControl1.cs 」 或 「 UserControl1.vb"，刪除專案的預設控制項。  
   
-     如需詳細資訊，請參閱 < [NIB： 如何： 移除、 Delete 和排除項目](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+     如需詳細資訊，請參閱[NIB： 操作說明：移除，請刪除，並排除項目](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
   
 3.  加入新<xref:System.Windows.Forms.UserControl>項目**StackViewLibrary**專案。 提供新的原始程式檔的基底名稱`StackView`。  
   
@@ -81,14 +81,14 @@ ms.locfileid: "43861969"
     |--------------|-----------|  
     |名稱|`mailStackButton`|  
     |CheckOnClick|true|  
-    |已核取 CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
+    |CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
     |ImageAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
     |ImageScaling|<xref:System.Windows.Forms.ToolStripItemImageScaling.None>|  
     |ImageTransparentColor|`238, 238, 238`|  
     |邊界|`0, 0, 0, 0`|  
     |與邊框距離|`3, 3, 3, 3`|  
-    |Text|**郵件**|  
+    |文字|**郵件**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5.  重複步驟 7 的另外三個<xref:System.Windows.Forms.ToolStripButton>控制項。  
@@ -102,7 +102,7 @@ ms.locfileid: "43861969"
   
 1.  在 Windows Form 設計工具中，選取 `StackView`控制項。  
   
-2.  在 [**屬性**] 視窗中，按一下**事件**。  
+2.  在 [屬性] 視窗中按一下 [事件]。  
   
 3.  按兩下 Load 事件，以產生`StackView_Load`事件處理常式。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "43861969"
   
 5.  在 Windows Form 設計工具中，選取 `mailStackButton`控制項。  
   
-6.  在 [**屬性**] 視窗中，按一下**事件**。  
+6.  在 [屬性] 視窗中按一下 [事件]。  
   
 7.  按兩下 Click 事件。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "43861969"
   
 8.  重新命名`mailStackButton_Click`事件處理常式來`stackButton_Click`。  
   
-     如需詳細資訊，請參閱 <<c0> [ 如何： 重新命名的識別項 (Visual Basic)](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c)。  
+     如需詳細資訊，請參閱[＜How to：重新命名的識別項 (Visual Basic)](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c)。  
   
 9. 插入下列程式碼插入`stackButton_Click`事件處理常式。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "43861969"
 12. 重複步驟 10 和 11 for`contactsStackButton`和`tasksStackButton`控制項。  
   
 ## <a name="defining-icons"></a>定義圖示  
- 每個`StackView`按鈕有一個相關聯的圖示。 為了方便起見，每個圖示表示為 Base64 編碼字串時，這會還原序列化之前<xref:System.Drawing.Bitmap>從它所建立。 在生產環境中，您將點陣圖資料儲存為資源，並圖示會出現在 Windows Form 設計工具。 如需詳細資訊，請參閱 <<c0> [ 如何： 加入背景影像加入 Windows Form](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff)。  
+ 每個`StackView`按鈕有一個相關聯的圖示。 為了方便起見，每個圖示表示為 Base64 編碼字串時，這會還原序列化之前<xref:System.Drawing.Bitmap>從它所建立。 在生產環境中，您將點陣圖資料儲存為資源，並圖示會出現在 Windows Form 設計工具。 如需詳細資訊，請參閱[＜How to：將背景影像加入至 Windows Form](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff)。  
   
 #### <a name="to-define-icons"></a>若要定義圖示  
   
@@ -167,7 +167,7 @@ ms.locfileid: "43861969"
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
   
 ## <a name="testing-the-stackview-control"></a>測試 StackView 控制項  
- `StackView`控制項是衍生自<xref:System.Windows.Forms.UserControl>類別。 因此，您可以測試具有的控制項**UserControl 測試容器**。 如需詳細資訊，請參閱[如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+ `StackView`控制項是衍生自<xref:System.Windows.Forms.UserControl>類別。 因此，您可以測試具有的控制項**UserControl 測試容器**。 如需詳細資訊，請參閱[＜How to：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
   
 #### <a name="to-test-the-stackview-control"></a>若要測試 StackView 控制項  
   
@@ -180,13 +180,13 @@ ms.locfileid: "43861969"
   
 -   建立您的控制項使用的快顯功能表<xref:System.Windows.Forms.ContextMenuStrip>。 如需詳細資訊，請參閱 < [ContextMenu 元件概觀](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)。  
   
--   使用自動填入的標準功能表中建立的表單。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 提供標準功能表項目表單](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)。  
+-   使用自動填入的標準功能表中建立的表單。 如需詳細資訊，請參閱[逐步解說：對表單提供標準功能表項目](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)。  
   
--   建立多個文件介面 (MDI) 表單使用停駐<xref:System.Windows.Forms.ToolStrip>控制項。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用功能表合併和 ToolStrip 控制項建立 MDI 表單](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
+-   建立多個文件介面 (MDI) 表單使用停駐<xref:System.Windows.Forms.ToolStrip>控制項。 如需詳細資訊，請參閱[＜How to：使用功能表合併和 ToolStrip 控制項建立 MDI 表單](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.StatusStrip>  
- [ToolStrip 控制項](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [操作說明：對表單提供標準功能表項目](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.StatusStrip>
+- [ToolStrip 控制項](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [如何：對表單提供標準功能表項目](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)

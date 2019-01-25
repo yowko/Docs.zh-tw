@@ -11,12 +11,12 @@ helpviewer_keywords:
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: KrzysztofCwalina
-ms.openlocfilehash: f0ad21f0a5b869332223d96991dd0a7bebeba420
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7d940f10799df2efc6c6d031781e1ef7cf777dd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559332"
 ---
 # <a name="protected-members"></a>Protected 成員
 受保護的成員，本身不提供任何擴充性，但它們可以讓透過子類別化的擴充性功能更強大。 它們可以用來公開 （expose） 而不需要不必要地複雜的主要公用介面的進階的自訂選項。  
@@ -35,5 +35,5 @@ ms.locfileid: "53149350"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

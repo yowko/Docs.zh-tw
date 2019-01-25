@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6667812ab7f9acff2a66e458f68d77a0d670bc2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0a4f0fd100397fc52ca917c54f0276598d714640
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642840"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps 方法
 修改指定的 `AssemblyRef` 中繼資料結構。  
@@ -44,7 +44,7 @@ HRESULT SetAssemblyRefProps (
   
 #### <a name="parameters"></a>參數  
  `ar`  
- [in]指定的中繼資料語彙基元`AssemblyRef`要修改的中繼資料結構。  
+ [in]指定中繼資料語彙基元`AssemblyRef`要修改的中繼資料結構。  
   
  `pbPublicKeyOrToken`  
  [in]參考的組件的 「 發行者 」 的公開金鑰。  
@@ -53,13 +53,13 @@ HRESULT SetAssemblyRefProps (
  [in]以位元組為單位的大小`pbPublicKeyOrToken`。  
   
  `szName`  
- [in]人類看得懂的文字之組件的名稱。  
+ [in]組件的人類看得懂的文字名稱。  
   
  `pMetaData`  
- [in]ASSEMBLYMETADATA 執行個體，其中包含組件的版本、 平台，以及地區設定資訊指標。  
+ [in]ASSEMBLYMETADATA 執行個體，其中包含組件的版本、 平台，以及地區設定資訊的指標。  
   
  `pbHashValue`  
- [in]與組件相關聯的雜湊資料指標。  
+ [in]組件相關聯的雜湊資料指標。  
   
  `cbHashValue`  
  [in]以位元組為單位的大小`pbHashValue`。  
@@ -71,13 +71,13 @@ HRESULT SetAssemblyRefProps (
  若要建立`AssemblyRef`中繼資料結構，使用[imetadataassemblyemit:: Defineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

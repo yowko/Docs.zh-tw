@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: e4d56c5b5deda0bd1df8827020e0b76cc6276c1c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 2fc44163db99be5a0f2ddb2820053a5bdda3ccbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086631"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668986"
 ---
 # <a name="xtype-markup-extension"></a>x:Type 標記延伸
 提供 CLR<xref:System.Type>是指定的 XAML 類型的基礎類型的物件。  
@@ -41,7 +41,7 @@ ms.locfileid: "49086631"
 |||  
 |-|-|  
 |`prefix`|選擇性。 對應的非預設 XAML 命名空間的前置詞。 指定前置詞通常是不必要。 請參閱＜備註＞。|  
-|`typeNameValue`|必要。 型別名稱解析成目前的預設 XAML 命名空間;或指定的對應前置詞，如果`prefix`提供。|  
+|`typeNameValue`|必要項。 型別名稱解析成目前的預設 XAML 命名空間;或指定的對應前置詞，如果`prefix`提供。|  
   
 ## <a name="remarks"></a>備註  
  `x:Type`標記延伸具有類似的功能`typeof()`C# 中的運算子或`GetType`運算子在 Microsoft Visual Basic。  
@@ -79,8 +79,8 @@ ms.locfileid: "49086631"
   
  在 WPF 中，您可以使用 XAML 2009 功能，但只能針對鬆散的 XAML (未標記編譯的 XAML)。 WPF 之編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 關鍵字和功能。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Style>  
- [樣式設定和範本化](../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [標記延伸和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Style>
+- [樣式設定和範本化](../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [標記延伸和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

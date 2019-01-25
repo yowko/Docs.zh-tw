@@ -2,18 +2,18 @@
 title: 進出工作流程服務的異動流動
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: f53bfa3c745a0d487a8daf23f399c1420e36c8ec
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 4a5cde045c6c676c2efc694c67fd049b6eb611b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708632"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>進出工作流程服務的異動流動
-工作流程服務與用戶端都可以參與異動。  若要讓服務作業變成環境交易的一部分，請將 <xref:System.ServiceModel.Activities.Receive> 活動放在 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。 <xref:System.ServiceModel.Activities.Send> 或 <xref:System.ServiceModel.Activities.SendReply> 活動在 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 內所進行的任何呼叫也會在環境交易中進行。 工作流程用戶端應用程式可以使用 <xref:System.Activities.Statements.TransactionScope> 活動建立環境交易，然後使用環境交易呼叫服務作業。 本主題逐步帶領您建立參與交易的工作流程服務和工作流程用戶端。  
+工作流程服務與用戶端都可以參與異動。  若要讓服務作業變成環境交易的一部分，請將 <xref:System.ServiceModel.Activities.Receive> 活動放在 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。 <xref:System.ServiceModel.Activities.Send> 或 <xref:System.ServiceModel.Activities.SendReply> 活動在 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 內所進行的任何呼叫也會在環境異動中進行。 工作流程用戶端應用程式可以使用 <xref:System.Activities.Statements.TransactionScope> 活動建立環境異動，然後使用環境異動呼叫服務作業。 本主題逐步帶領您建立參與交易的工作流程服務和工作流程用戶端。  
   
 > [!WARNING]
->  如果工作流程服務執行個體是在交易內載入，而且工作流程包含 <xref:System.Activities.Statements.Persist> 活動，則工作流程執行個體將會停止回應，直到交易逾時為止。  
+>  如果工作流程服務執行個體是在異動內載入，而且工作流程包含 <xref:System.Activities.Statements.Persist> 活動，則工作流程執行個體將會停止回應，直到異動逾時為止。  
   
 > [!IMPORTANT]
 >  每當您使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 時，建議您將工作流程中的所有 Receive 放在 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。  
@@ -117,8 +117,8 @@ ms.locfileid: "48036048"
   
     |活動|值|  
     |--------------|-----------|  
-    |第一個 WriteLine|「 服務： 接收已完成 」|  
-    |第二個 WriteLine|"Service: Received = " + requestMessage|  
+    |第一個 WriteLine|「 服務：接收已完成 」|  
+    |第二個 WriteLine|「 服務：Received = " + requestMessage|  
   
      工作流程的外觀現在應該如下圖所示：  
   
@@ -133,9 +133,9 @@ ms.locfileid: "48036048"
     |屬性|值|  
     |--------------|-----------|  
     |以|replyMessage|  
-    |值|"Service: Sending reply."|  
+    |值|「 服務：傳送回覆。 」|  
   
-11. 將 <xref:System.Activities.Statements.WriteLine> 活動拖放到 <xref:System.Activities.Statements.Assign> 活動後面，並將其 <xref:System.Activities.Statements.WriteLine.Text%2A> 屬性設定為 "Service: Begin reply"。  
+11. 將拖放<xref:System.Activities.Statements.WriteLine>後的活動<xref:System.Activities.Statements.Assign>活動，然後設定其<xref:System.Activities.Statements.WriteLine.Text%2A>屬性 」 服務：開始回覆。 」  
   
      工作流程的外觀現在應該如下圖所示：  
   
@@ -145,9 +145,9 @@ ms.locfileid: "48036048"
   
      ![回覆訊息設定](../../../../docs/framework/wcf/feature-details/media/replymessagesettings.JPG "ReplyMessageSettings")  
   
-13. 將拖放<xref:System.Activities.Statements.WriteLine>後的活動`SendReplyToReceive`活動，然後設定其<xref:System.Activities.Statements.WriteLine.Text%2A>屬性 」 服務： 傳送的回覆。 」  
+13. 將拖放<xref:System.Activities.Statements.WriteLine>後的活動`SendReplyToReceive`活動，然後設定其<xref:System.Activities.Statements.WriteLine.Text%2A>屬性 」 服務：傳送回覆。 」  
   
-14. 將 <xref:System.Activities.Statements.WriteLine> 活動拖放到工作流程的底部，然後將其 <xref:System.Activities.Statements.WriteLine.Text%2A> 屬性設定為 "Service: Workflow ends, press ENTER to exit"。  
+14. 將拖放<xref:System.Activities.Statements.WriteLine>底部的 設定與工作流程的活動其<xref:System.Activities.Statements.WriteLine.Text%2A>屬性 」 服務：Workflow ends，按下 ENTER 以結束。 」  
   
      完成的服務工作流程外觀應該如下圖所示：  
   
@@ -173,7 +173,7 @@ ms.locfileid: "48036048"
   
 6.  將 `PrintTransactionInfo` 活動拖放到 <xref:System.Activities.Statements.Sequence> 內  
   
-7.  將拖放<xref:System.Activities.Statements.WriteLine>後的活動`PrintTransactionInfo`活動，然後設定其<xref:System.Activities.Statements.WriteLine.Text%2A>屬性為"Client: Beginning Send"。 工作流程的外觀現在應該如下圖所示：  
+7.  將拖放<xref:System.Activities.Statements.WriteLine>後的活動`PrintTransactionInfo`活動，然後設定其<xref:System.Activities.Statements.WriteLine.Text%2A>屬性，以 「 用戶端：開始傳送 」。 工作流程的外觀現在應該如下圖所示：  
   
      ![將活動新增](../../../../docs/framework/wcf/feature-details/media/clientaddcbswriteline.JPG "ClientAddCBSWriteLine")  
   
@@ -199,9 +199,9 @@ ms.locfileid: "48036048"
   
      ![取得 ReceiveForSend 訊息設定的設定](../../../../docs/framework/wcf/feature-details/media/clientreplymessagesettings.JPG "ClientReplyMessageSettings")  
   
-12. 將 <xref:System.Activities.Statements.WriteLine> 活動拖放到 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 活動之間，然後將其 <xref:System.Activities.Statements.WriteLine.Text%2A> 屬性設定為 "Client: Send complete"。  
+12. 將拖放<xref:System.Activities.Statements.WriteLine>之間的活動<xref:System.ServiceModel.Activities.Send>並<xref:System.ServiceModel.Activities.ReceiveReply>活動，並設定其<xref:System.Activities.Statements.WriteLine.Text%2A>屬性，以 「 用戶端：傳送完成。 」  
   
-13. 將 <xref:System.Activities.Statements.WriteLine> 活動拖放到 <xref:System.ServiceModel.Activities.ReceiveReply> 活動後面，並將其 <xref:System.Activities.Statements.WriteLine.Text%2A> 屬性設定為 "Client side: Reply received = " + replyMessage  
+13. 將拖放<xref:System.Activities.Statements.WriteLine>後的活動<xref:System.ServiceModel.Activities.ReceiveReply>活動，然後設定其<xref:System.Activities.Statements.WriteLine.Text%2A>屬性，以 「 用戶端：收到的回覆 ="+ replyMessage  
   
 14. 將 `PrintTransactionInfo` 活動拖放到 <xref:System.Activities.Statements.WriteLine> 活動後面。  
   
@@ -312,7 +312,7 @@ ms.locfileid: "48036048"
         }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
 
-- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Windows Communication Foundation 異動概觀](../../../../docs/framework/wcf/feature-details/transactions-overview.md)

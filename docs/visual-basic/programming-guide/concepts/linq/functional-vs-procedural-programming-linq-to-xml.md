@@ -1,15 +1,15 @@
 ---
-title: 功能性程序性程式設計 (LINQ to XML) (Visual Basic)
+title: 功能性程序性程式設計的比較 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
-ms.openlocfilehash: 55f1e354f71e58c3592f91e198925c0fd5f0da71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5db2f686d72390cdb7e338235a39e4039281e6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644998"
 ---
-# <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>功能性程序性程式設計 (LINQ to XML) (Visual Basic)
+# <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>功能性程序性程式設計的比較 (LINQ to XML) (Visual Basic)
 XML 應用程式有很多種：  
   
 -   有些應用程式會採用 XML 來源文件，然後以不同於來源文件的組織結構產生新的 XML 文件。  
@@ -36,9 +36,9 @@ XML 應用程式有很多種：
   
  您可以搭配任一種方法使用 LINQ to XML。 您可以使用相同的類別，在某些情況下，也可以使用相同的方法。 但是，兩種方法的結構與目標差異相當大。 例如，在不同的情況下，其中一種方法的效能通常會比較好，而且或多或少會使用到記憶體。 此外，其中一種方法會比較容易撰寫，並產生較容易維護的程式碼。  
   
- 若要查看這兩種對照方法，請參閱[記憶體中 XML 樹狀結構修改與功能建構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)。  
+ 若要查看這兩種對照方法，請參閱[記憶體中 XML 樹狀結構修改與函數式建構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)。  
   
- 如需撰寫功能性轉換的教學課程，請參閱[純功能性轉換的 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。  
+ 如需撰寫功能性轉換的教學課程，請參閱 <<c0> [ 純功能性轉換的 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to XML 程式設計概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>另請參閱
+- [LINQ to XML 程式設計概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

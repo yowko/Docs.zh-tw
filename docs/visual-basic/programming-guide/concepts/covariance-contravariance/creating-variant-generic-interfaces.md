@@ -2,24 +2,24 @@
 title: 建立 Variant 泛型介面 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-ms.openlocfilehash: 9e79183cd75e3e222cfa82c6b8ca651eb99ffc02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6afddf018b4608418f82fa851d018f2c3e1d0fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663254"
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>建立 Variant 泛型介面 (Visual Basic)
 您可以在介面中將泛型型別參數宣告為 Covariant 或 Contravariant。 「共變數」允許介面方法具有比泛型型別參數衍生程度更大的傳回型別。 「反變數」允許介面具有比泛型參數所指定引數型別衍生程度更小的引數類型。 具有 Covariant 或 Contravariant 泛型型別參數的泛型介面稱為「變異」。  
   
 > [!NOTE]
->  .NET Framework 4 引入了對於數個現有泛型介面的變異數支援。 .NET Framework 中的 variant 介面清單，請參閱[泛型介面 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
+>  .NET Framework 4 引入了對於數個現有泛型介面的變異數支援。 如需.NET Framework 中的 variant 介面清單，請參閱[泛型介面 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
   
 ## <a name="declaring-variant-generic-interfaces"></a>宣告 Variant 泛型介面  
  您可以使用泛型型別參數的 `in` 和 `out` 關鍵字宣告 Variant 泛型介面。  
   
 > [!IMPORTANT]
->  `ByRef` 在 Visual Basic 中的參數不可以是變數。 實值型別也不支援變異數。  
+>  `ByRef` 在 Visual Basic 中的參數不可變動。 實值型別也不支援變異數。  
   
  您可以使用 `out` 關鍵字將泛型型別參數宣告為 Covariant 。 Covariant 類型必須滿足下列條件︰  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33643880"
     End Interface  
     ```  
   
-     這個規則只有一個例外。 如果您以 Contravariant 泛型委派作為方法參數，則可將類型用作委派的泛型型別參數。 以下範例的 `R` 類型說明這種情況： 如需詳細資訊，請參閱[委派 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)和[Func 與 Action 委派 (Visual Basic) 使用變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
+     這個規則只有一個例外。 如果您以 Contravariant 泛型委派作為方法參數，則可將類型用作委派的泛型型別參數。 以下範例的 `R` 類型說明這種情況： 如需詳細資訊，請參閱 <<c0> [ 委派 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)並[針對 Func 與 Action 泛型委派 (Visual Basic) 使用差異](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -73,7 +73,7 @@ Interface IVariant(Of Out R, In A)
 End Interface  
 ```  
   
- 在 Visual Basic 中，您無法宣告 variant 介面中的事件，但未指定委派類型。 此外，類別、 列舉或結構，variant 介面不能有巢狀，但它可以有巢狀介面。 下列程式碼說明此情形。  
+ 在 Visual Basic 中，您無法宣告 variant 介面中的事件，但未指定的委派型別。 此外，類別、 列舉或結構，變異數介面不能有巢狀，但它可以有巢狀介面。 下列程式碼說明此情形。  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -145,7 +145,7 @@ Interface IExtCovariant(Of Out T)
 End Interface  
 ```  
   
- 在`Invariant(Of T)`介面，泛型型別參數`T`為非變異值，而在`IExtCovariant (Of Out T)`型別參數是共變數，雖然這兩個介面擴充相同的介面。 相同的規則也套用至 Contravariant 泛型型別參數。  
+ 在 `Invariant(Of T)`介面，泛型類型參數`T`為非變異，而在`IExtCovariant (Of Out T)`型別參數是 covariant，雖然這兩個介面都擴充相同的介面。 相同的規則也套用至 Contravariant 泛型型別參數。  
   
  您可以建立介面，以便擴充 `T` 泛型型別參數為 Covariant 的介面，以及如果在擴充介面中， `T` 泛型型別參數為非變異的情況下，擴充其為 Contravariant 的介面。 下列程式碼範例說明此情形。  
   
@@ -179,7 +179,7 @@ End Interface
  例如，如果您在一個類別中，明確地實作相同 Variant 泛型介面與不同泛型型別參數，它可能會造成語意模糊。 在此情況下，編譯器不會產生錯誤，但未指定在執行階段將選擇哪個介面實作。 這可能會導致您的程式碼中有細微錯誤。 請參考下列程式碼範例。  
   
 > [!NOTE]
->  與`Option Strict Off`，Visual Basic 會產生編譯器警告，模稜兩可的介面實作時。 與`Option Strict On`，Visual Basic 會產生編譯器錯誤。  
+>  使用`Option Strict Off`，Visual Basic 會產生編譯器警告，模稜兩可的介面實作時。 使用`Option Strict On`，Visual Basic 會產生編譯器錯誤。  
   
 ```vb  
 ' Simple class hierarchy.  
@@ -225,6 +225,6 @@ End Sub
   
  在此範例中，並未指定 `pets.GetEnumerator` 方法如何在 `Cat` 和 `Dog` 之間選擇。 這可能會在程式碼中造成問題。  
   
-## <a name="see-also"></a>另請參閱  
- [泛型介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [針對 Func 與 Action 泛型委派使用變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a>另請參閱
+- [泛型介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [針對 Func 與 Action 泛型委派使用變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

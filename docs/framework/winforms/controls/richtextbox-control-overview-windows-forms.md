@@ -7,24 +7,24 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], about RichTextBox control
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-ms.openlocfilehash: 53c4cd41cf203886c93291debc7bca4f395f9698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88a94a5256ba016fbdcc7ceab3802e0c3777f7b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642213"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox 控制項概觀 (Windows Form)
-Windows Form<xref:System.Windows.Forms.RichTextBox>控制項用來顯示、 輸入及管理具有格式的文字。 <xref:System.Windows.Forms.RichTextBox>控制項執行的所有項目<xref:System.Windows.Forms.TextBox>控制項，但它可以也顯示字型、 色彩和連結; 文字和內嵌的影像從載入檔案，並尋找指定的字元。 <xref:System.Windows.Forms.RichTextBox>控制項通常用來提供操作文字，並顯示類似於文書處理應用程式，例如 Microsoft Word 的功能。 像<xref:System.Windows.Forms.TextBox>控制項，<xref:System.Windows.Forms.RichTextBox>控制項可以顯示捲軸，但不同的是<xref:System.Windows.Forms.TextBox>控制它的預設值是要顯示水平與垂直捲軸，如有需要以及它還有其他捲軸設定。  
+Windows Form<xref:System.Windows.Forms.RichTextBox>控制項用來顯示、 輸入和操作具有格式的文字。 <xref:System.Windows.Forms.RichTextBox>控制一切<xref:System.Windows.Forms.TextBox>控制項，但它也顯示字型、 色彩和連結; 從檔案載入文字和內嵌的影像即可尋找指定的字元。 <xref:System.Windows.Forms.RichTextBox>控制項通常用來提供文字操作和顯示功能類似於文書處理應用程式，例如 Microsoft Word。 像是<xref:System.Windows.Forms.TextBox>控制項中，<xref:System.Windows.Forms.RichTextBox>控制項可以顯示捲軸，但不同於<xref:System.Windows.Forms.TextBox>視需要顯示水平與垂直捲軸的控制項，其預設值是和它具有其他捲軸設定。  
   
 ## <a name="working-with-the-richtextbox-control"></a>使用 RichTextBox 控制項  
- 如同<xref:System.Windows.Forms.TextBox>控制項，顯示的文字設定<xref:System.Windows.Forms.RichTextBox.Text%2A>屬性。 <xref:System.Windows.Forms.RichTextBox>控制項具有格式化文字的多個屬性。 如需這些屬性的詳細資訊，請參閱[如何：為 Windows Forms RichTextBox 控制項設定字型屬性](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md)和[如何：使用 Windows Forms RichTextBox 控制項設定縮排、首行縮排和分項段落](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)。 若要管理檔案、<xref:System.Windows.Forms.RichTextBox.LoadFile%2A>和<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>方法可以顯示並寫入多個檔案格式，包括純文字、 Unicode 純文字格式和 Rich Text Format (RTF)。 可能的檔案格式會列在<xref:System.Windows.Forms.RichTextBoxStreamType>。 您可以使用<xref:System.Windows.Forms.RichTextBox.Find%2A>方法來尋找文字或特定的字元字串。  
+ 如同<xref:System.Windows.Forms.TextBox>控制項，顯示的文字設定<xref:System.Windows.Forms.RichTextBox.Text%2A>屬性。 <xref:System.Windows.Forms.RichTextBox>控制項具有格式化文字的多個屬性。 如需有關這些屬性的詳細資訊，請參閱[How to:為 Windows Forms RichTextBox 控制項設定字型屬性](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md)和[How to:設定縮排、 首行縮排和分項段落與 Windows Forms RichTextBox 控制項](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)。 若要操作的檔案，<xref:System.Windows.Forms.RichTextBox.LoadFile%2A>和<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>方法可以顯示並寫入包括純文字、 Unicode 純文字和 Rich Text Format (RTF) 的多種檔案格式。 可能的檔案格式會列在<xref:System.Windows.Forms.RichTextBoxStreamType>。 您可以使用<xref:System.Windows.Forms.RichTextBox.Find%2A>方法來尋找文字或特定字元字串。  
   
- 您也可以使用<xref:System.Windows.Forms.RichTextBox>控制項，以便設定 Web 樣式連結<xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>屬性`true`撰寫程式碼以處理<xref:System.Windows.Forms.RichTextBox.LinkClicked>事件。 如需詳細資訊，請參閱[如何：使用 Windows Forms RichTextBox 控制項顯示 Web 樣式連結](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md)。 您可以防止使用者藉由設定操作部分或全部控制項中文字<xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A>屬性`true`。  
+ 您也可以使用<xref:System.Windows.Forms.RichTextBox>藉由設定的 Web 樣式連結的控制<xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>屬性設`true`撰寫程式碼來處理和<xref:System.Windows.Forms.RichTextBox.LinkClicked>事件。 如需詳細資訊，請參閱[＜How to：顯示 Web 樣式連結與 Windows Forms RichTextBox 控制項](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md)。 您可以防止使用者藉由設定操作部分或全部控制項中的文字<xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A>屬性設`true`。  
   
- 您可以復原和取消復原中大部分的編輯作業<xref:System.Windows.Forms.RichTextBox>藉由呼叫控制項<xref:System.Windows.Forms.TextBoxBase.Undo%2A>和<xref:System.Windows.Forms.RichTextBox.Redo%2A>方法。 <xref:System.Windows.Forms.RichTextBox.CanRedo%2A>方法可讓您判斷是否已在復原使用者最後一項作業可以重新套用到控制項。  
+ 您可以復原和取消復原中的大部分編輯作業<xref:System.Windows.Forms.RichTextBox>控制項，藉由呼叫<xref:System.Windows.Forms.TextBoxBase.Undo%2A>和<xref:System.Windows.Forms.RichTextBox.Redo%2A>方法。 <xref:System.Windows.Forms.RichTextBox.CanRedo%2A>方法可讓您判斷是否將使用者已復原的最後一個作業可以套用到控制項。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.RichTextBox>  
- [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [TextBox 控制項概觀](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.RichTextBox>
+- [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
+- [TextBox 控制項概觀](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)

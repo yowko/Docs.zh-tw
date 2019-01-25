@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: b4b89047cb1b85c4386f1bd9d2a16a06ec112b73
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c0f31f753a45bf4c13280febb164324535b0fdeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715578"
 ---
 # <a name="timing-behaviors-overview"></a>計時行為概觀
 本主題說明動畫和其他的計時行為<xref:System.Windows.Media.Animation.Timeline>物件。  
@@ -41,7 +41,7 @@ ms.locfileid: "43858134"
 |詞彙|描述|屬性||||  
 |----------|-----------------|----------------|-|-|-|  
 |簡單持續時間|時間軸正向輪播一次所需的時間長度。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
-|重複一次|時間長度所花費的時間軸正向播放和之後，<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>屬性為 true 時，反向播放一次。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
+|重複一次|時間長度所花費的時間軸正向播放和之後，<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>屬性為 true 時，反向播放一次。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>、 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
 |作用期間|時間長度所花費的時間軸完成所指定的所有重複項目及其<xref:System.Windows.Media.Animation.RepeatBehavior>屬性。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
@@ -118,13 +118,13 @@ ms.locfileid: "43858134"
   
 -   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – 指定這樣的速率，相對於其父代，時間進行的<xref:System.Windows.Media.Animation.Timeline>。 大於 1 的值增加的速度<xref:System.Windows.Media.Animation.Timeline>及其子<xref:System.Windows.Media.Animation.Timeline>物件; 零和一之間的值變慢。 其中一個值，指出<xref:System.Windows.Media.Animation.Timeline>做為其父系的相同費率的進展。 <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>容器時間軸的設定會影響其所有子<xref:System.Windows.Media.Animation.Timeline>物件。  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – 指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>花費的時間軸的 加速。 如需範例，請參閱[如何： 加速或減速的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)。 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – 指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>花費的時間軸的 加速。 如需範例，請參閱[如何：加速或減速的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)。 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>時間軸所花費的減速。 如需範例，請參閱[如何： 加速或減速的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)。  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>時間軸所花費的減速。 如需範例，請參閱[如何：加速或減速的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [計時事件概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
- [動畫計時行為範例](https://go.microsoft.com/fwlink/?LinkID=159970)
+## <a name="see-also"></a>另請參閱
+- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [計時事件概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
+- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [動畫計時行為範例](https://go.microsoft.com/fwlink/?LinkID=159970)

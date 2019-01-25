@@ -12,12 +12,12 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: 9377d889f56049720ab10439582300913f5cbb37
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 64ded285c74d61206618695c1d0bb6f158ce860d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704900"
 ---
 # <a name="structure-statement"></a>Structure 陳述式
 宣告結構的名稱，並引進變數、 屬性、 事件和結構包含的程序的定義。  
@@ -38,17 +38,17 @@ End Structure
 |詞彙|定義|  
 |---|---|  
 |`attributelist`|選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />- [為 protected 的 Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [受保護的私用](../../language-reference/modifiers/private-protected.md) <br /><br /> 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />- [為 protected 的 Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [受保護的私用](../../language-reference/modifiers/private-protected.md) <br /><br /> 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
 |`Shadows`|選擇性。 請參閱[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
 |`Partial`|選擇性。 表示結構的部分定義。 請參閱[部分](../../../visual-basic/language-reference/modifiers/partial.md)。|  
-|`name`|必要。 此結構的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`name`|必要項。 此結構的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
 |`Of`|選擇性。 指定這為泛型結構。|  
 |`typelist`|如果您使用所需[的](../../../visual-basic/language-reference/statements/of-clause.md)關鍵字。 此結構的型別參數的清單。 請參閱[輸入清單](../../../visual-basic/language-reference/statements/type-list.md)。|  
 |`Implements`|選擇性。 指出此結構實作的一個或多個介面成員。 請參閱[實作陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
 |`interfacenames`|如果您使用所需`Implements`陳述式。 這個結構所實作的介面名稱。|  
-|`datamemberdeclarations`|必要。 零或多個`Const`， `Dim`， `Enum`，或`Event`陳述式宣告*資料成員*的結構。|  
+|`datamemberdeclarations`|必要項。 零或多個`Const`， `Dim`， `Enum`，或`Event`陳述式宣告*資料成員*的結構。|  
 |`methodmemberdeclarations`|選擇性。 零或多個宣告`Function`， `Operator`， `Property`，或`Sub`程序，做為*方法成員*的結構。|  
-|`End Structure`|必要。 終止`Structure`定義。|  
+|`End Structure`|必要項。 終止`Structure`定義。|  
   
 ## <a name="remarks"></a>備註  
  `Structure`陳述式會定義您可以自訂的複合值類型。 A*結構*為一般化的使用者定義型別 (UDT) 的舊版的 Visual Basic。 如需詳細資訊，請參閱 <<c0> [ 結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)。  
@@ -104,14 +104,14 @@ End Structure
   
  [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)  
- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
- [結構和類別](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+## <a name="see-also"></a>另請參閱
+- [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)
+- [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)
+- [結構和類別](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

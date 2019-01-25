@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed6ba8a738b4086b9150e0a1c7b300a519fa3092
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 102fcff6120822c5de0ede45d43a9cd064270085
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715474"
 ---
 # <a name="icordebughandlevalue-interface1"></a>ICorDebugHandleValue Interface1
-ICorDebugReferenceValue，表示要偵錯工具已建立的記憶體回收控制代碼的參考值的子類別。  
+ICorDebugReferenceValue，代表要偵錯工具已建立為記憶體回收控制代碼的參考值的子類別。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Dispose 方法](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|釋放的控制代碼所參考`ICorDebugHandleValue`物件，而不會明確地釋放的介面指標。|  
-|[GetHandleType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|取得描述類型的控制代碼所參考的 CorDebugHandleType 值`ICorDebugHandleValue`。|  
+|[Dispose 方法](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|釋放控制代碼所參考`ICorDebugHandleValue`未明確地釋放介面指標的物件。|  
+|[GetHandleType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|取得描述的控制代碼所參考類型的 CorDebugHandleType 值`ICorDebugHandleValue`。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugReferenceValue`物件無效的執行中的偵錯的程式碼中斷。 `ICorDebugHandleValue`維護符號和接續，透過其參考，直到明確釋放為止。  
+ `ICorDebugReferenceValue`物件都無效的執行中的偵錯的程式碼中斷。 `ICorDebugHandleValue`維護透過符號和接續，其參考，直到明確釋放為止。  
   
 > [!NOTE]
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

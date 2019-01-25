@@ -2,12 +2,12 @@
 title: 通道處理站和快取
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: fa333d3ffa0063e226405eb8e715f9ee99f68432
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 055c9d1412338bb444ca33556f3c94b1ffc4c6a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745324"
 ---
 # <a name="channel-factory-and-caching"></a>通道處理站和快取
 WCF 用戶端應用程式會使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立與 WCF 服務的通訊通道。  建立 <xref:System.ServiceModel.ChannelFactory%601> 執行個體會產生額外負荷，因為這涉及到下列作業：  
@@ -111,9 +111,9 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
   
  在上述範例中，`TestClient` 的所有執行個體都會使用不同的通道處理站。 當每個端點各有不同的安全性需求，而進行快取沒有意義時，這種方式非常有用。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.ClientBase%601>  
- [建置用戶端](../../../../docs/framework/wcf/building-clients.md)  
- [用戶端](../../../../docs/framework/wcf/feature-details/clients.md)  
- [使用 WCF 用戶端存取服務](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [操作說明：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.ClientBase%601>
+- [建置用戶端](../../../../docs/framework/wcf/building-clients.md)
+- [用戶端](../../../../docs/framework/wcf/feature-details/clients.md)
+- [使用 WCF 用戶端存取服務](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

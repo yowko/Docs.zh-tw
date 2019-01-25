@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 692105d464c005109cbf1ff704045efa7d1e9173
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c56ef33d1a44b263466a293b06aa988885b2008d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725593"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>逐步解說：在 Win32 中裝載 WPF 內容
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能加入應用程式，可能會比重寫原始程式碼更有效率。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供簡單的機制，來裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的內容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗。  
@@ -180,7 +180,7 @@ ms.locfileid: "48842797"
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>配置
- [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中的項目[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容包含五個<xref:System.Windows.Controls.TextBox>控制項，與相關聯<xref:System.Windows.Controls.Label>控制項： 名稱、 地址、 縣 （市）、 State 和 Zip。 另外還有兩個<xref:System.Windows.Controls.Button>控制項 **[確定]** 和**取消**
+ [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中的項目[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容包含五個<xref:System.Windows.Controls.TextBox>控制項，與相關聯<xref:System.Windows.Controls.Label>控制項：名稱、 地址、 縣 （市）、 State 和 Zip。 另外還有兩個<xref:System.Windows.Controls.Button>控制項 **[確定]** 和**取消**
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容會在 `WPFPage` 類別中實作。 配置是以 <xref:System.Windows.Controls.Grid> 配置項目來處理。 類別繼承自 <xref:System.Windows.Controls.Grid>，如此能有效使其成為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容根項目。
 

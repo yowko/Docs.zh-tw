@@ -1,24 +1,24 @@
 ---
-title: '&lt;工作流程&gt;'
+title: '&lt;workflow&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 560aa9b6-9cf3-460e-b798-f87d14b1d2de
-ms.openlocfilehash: 940d396bd6e3dc3cdc5d8fb6f72d293061f3aa0e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6383ab937324efd7178bb06738653b7995c53b4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553720"
 ---
-# <a name="ltworkflowgt"></a>&lt;工作流程&gt;
+# <a name="ltworkflowgt"></a>&lt;workflow&gt;
 包括特定工作流程之所有查詢的組態項目，這個工作流程可由 <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId?displayProperty=nameWithType> 屬性識別。  
   
  如需在工作流程追蹤和其設定的詳細資訊，請參閱[工作流程追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)並[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
   
 \<system.serviceModel>  
-\<追蹤 >  
+\<tracking>  
 \<trackingProfile>  
-\<工作流程 >  
+\<workflow>  
   
 ## <a name="syntax"></a>語法  
   
@@ -134,8 +134,8 @@ ms.locfileid: "47207305"
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement>  
- <xref:System.Activities.Tracking.TrackingProfile>  
- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement>
+- <xref:System.Activities.Tracking.TrackingProfile>
+- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

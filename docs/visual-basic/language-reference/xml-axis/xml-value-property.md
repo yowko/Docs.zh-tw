@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 2b0719320db5843d5d010bfbd70e551646e3ded9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 54bd18b050ca58c286bfca3972b242348c61fe45
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737607"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Value 屬性 (Visual Basic)
 提供存取權的第一個元素的集合值<xref:System.Xml.Linq.XElement>物件。  
@@ -29,7 +29,7 @@ object.Value
   
 |詞彙|定義|  
 |---|---|  
-|`object`|必要。 <xref:System.Xml.Linq.XElement> 物件的集合。|  
+|`object`|必要項。 <xref:System.Xml.Linq.XElement> 物件的集合。|  
   
 ## <a name="return-value"></a>傳回值  
  A `String` ，其中包含集合中的第一個元素的值或`Nothing`如果集合是空的。  
@@ -67,13 +67,13 @@ object.Value
   
  `work`  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Linq.XElement>  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)  
- [在 Visual Basic 中建立 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [擴充方法](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
- [擴充索引子屬性](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)  
- [XML 子代軸屬性](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
- [XML 屬性 (Attribute) 軸屬性 (Property)](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Xml.Linq.XElement>
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)
+- [在 Visual Basic 中建立 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [擴充方法](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [擴充索引子屬性](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)
+- [XML 子代軸屬性](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+- [XML 屬性 (Attribute) 軸屬性 (Property)](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)

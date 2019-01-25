@@ -1,5 +1,5 @@
 ---
-title: 如何：參考 Visual Basic 的 COM 物件
+title: HOW TO：從 Visual Basic 參考 COM 物件
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 293bf76b1520f50e67837942eab2f27a49e330e3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c9d6a2ad6146ebd90be330813a44d092c044348b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534926"
 ---
-# <a name="how-to-reference-com-objects-from-visual-basic"></a>如何：參考 Visual Basic 的 COM 物件
+# <a name="how-to-reference-com-objects-from-visual-basic"></a>HOW TO：從 Visual Basic 參考 COM 物件
 在 Visual Basic 中將參考加入至具有型別程式庫的 COM 物件需要建立 interop 組件的 COM 程式庫。 參考 COM 物件的成員會路由傳送至的 interop 組件，且接著轉送到實際的 COM 物件。 從 COM 物件的回應會路由傳送至的 interop 組件，並轉送至您[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]應用程式。  
   
  您可以參考 COM 物件，而不需使用 interop 組件中的.NET 組件內嵌 COM 物件的型別資訊。 若要內嵌類型資訊，請設定`Embed Interop Types`屬性設`True`的 COM 物件的參考。 如果您正在使用命令列編譯器來編譯，請使用`/link`參考的 COM 程式庫的選項。 如需詳細資訊，請參閱 < [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)。  
@@ -54,9 +54,9 @@ ms.locfileid: "44204782"
   
 ## <a name="see-also"></a>另請參閱
 
-- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
-- [Tlbimp.exe (類型程式庫匯入工具)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
-- [Tlbexp.exe (類型程式庫匯出工具)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)  
-- [逐步解說：實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
-- [互通性的疑難排解](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
+- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Tlbimp.exe (類型程式庫匯入工具)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (類型程式庫匯出工具)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
+- [逐步解說：實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [互通性的疑難排解](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
 - [Imports 陳述式 (.NET 命名空間和類型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

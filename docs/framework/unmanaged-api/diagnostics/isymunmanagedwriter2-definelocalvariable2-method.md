@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53f02499bbc64f1502951ff9fbf16a848e77f0ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e0ce6a207f2a7862b0b49f1e68cda9528aa03ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667527"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 方法
-在目前的語彙範圍中定義單一變數。 可以多次呼叫這個方法在範圍中有多個定義域的相同名稱的變數。 在此情況下，不過，值`startOffset`和`endOffset`參數不能重疊。  
+在目前的語彙範圍中定義單一變數。 可以多次呼叫這個方法在範圍中有多個定義域的相同名稱的變數。 在此情況下，不過，值`startOffset`和`endOffset`參數不得重疊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,7 +53,7 @@ HRESULT DefineLocalVariable2(
  [in]簽章的中繼資料語彙基元。  
   
  `addrKind`  
- [in]地址類型。  
+ [in]位址類型。  
   
  `addr1`  
  [in]參數規格的第一個位址。  
@@ -65,17 +65,17 @@ HRESULT DefineLocalVariable2(
  [in]參數規格的第三個位址。  
   
  `startOffset`  
- [in]變數的起始位移。 這是選擇性參數。 如果是 0，會忽略這個參數，並會在整個範圍中定義變數。 如果它是非零值，變數會落在目前範圍的位移之內。  
+ [in]變數的起始位移。 這是選擇性參數。 如果是 0，會忽略這個參數，並在整個範圍定義的變數。 如果它是非零值時，變數會落在目前的範圍的位移。  
   
  `endOffset`  
- [in]變數的結束位移。 這是選擇性參數。 如果是 0，會忽略這個參數，並會在整個範圍中定義變數。 如果它是非零值，變數會落在目前範圍的位移之內。  
+ [in]變數的結束位移。 這是選擇性參數。 如果是 0，會忽略這個參數，並在整個範圍定義的變數。 如果它是非零值時，變數會落在目前的範圍的位移。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl  
+ **標頭：** CorSym.idl  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedWriter2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- [DefineLocalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedWriter2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [DefineLocalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)

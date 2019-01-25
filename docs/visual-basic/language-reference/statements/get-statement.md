@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 32b89caf56c010f9e6ed7b78309ef30b56b682ea
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: ade54b2f00c540a1bf4ede311e1631b2c5d7e3ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742389"
 ---
 # <a name="get-statement"></a>Get 陳述式
 宣告`Get`屬性程序用來擷取屬性的值。  
@@ -34,9 +34,9 @@ End Get
 |詞彙|定義|  
 |---|---|  
 |`attributelist`|選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|上最多一個的選擇性`Get`和`Set`這個屬性中的陳述式。 可以是下列其中一項：<br /><br /> -   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`accessmodifier`|上最多一個的選擇性`Get`和`Set`這個屬性中的陳述式。 可以是下列其中一項：<br /><br /> -   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
 |`statements`|選擇性。 一或多個陳述式時執行`Get`呼叫屬性程序。|  
-|`End Get`|必要。 結束的定義`Get`屬性程序。|  
+|`End Get`|必要項。 結束的定義`Get`屬性程序。|  
   
 ## <a name="remarks"></a>備註  
  每個屬性必須有`Get`屬性程序屬性標示為除非`WriteOnly`。 `Get`程序用來傳回屬性的目前值。  
@@ -82,9 +82,9 @@ End Get
   
  [!code-vb[VbVbalrStatements#30](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_4.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [Set 陳述式](../../../visual-basic/language-reference/statements/set-statement.md)  
- [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Exit 陳述式](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [逐步解說：定義類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)
+## <a name="see-also"></a>另請參閱
+- [Set 陳述式](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Exit 陳述式](../../../visual-basic/language-reference/statements/exit-statement.md)
+- [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [逐步解說：定義類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)

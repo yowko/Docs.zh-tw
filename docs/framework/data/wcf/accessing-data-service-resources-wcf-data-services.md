@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: d4f4de1fa12418bd56f9680e5414bfe7dd0aa128
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9589656c00573f7b3bba07aee1f89902a34d61ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740836"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>存取資料服務資源 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]將資料公開為可由 Uri 定址的資源摘要。 會根據實體-關聯性慣例呈現這些資源[Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)。 在此模型中，實體代表資料運算單位 (這些資料在應用程式定義域中為資料型別)，例如客戶、訂單、項目及產品。 使用具像狀態傳輸 (REST) 的語意即可存取及變更實體資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。  
@@ -61,7 +61,7 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer
 http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
 ```  
   
- 如需詳細資訊，請參閱 < [OData: URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)。  
+ 如需詳細資訊，請參閱[OData:URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)。  
   
 ## <a name="system-query-options"></a>系統查詢選項  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定義一組系統查詢選項可供您執行傳統查詢運算資源，例如篩選、 排序和分頁。 例如，下列 URI 會傳回的所有集合`Order`實體以及相關`Order_Detail`實體，其中的郵遞區號結尾不`100`:  
@@ -76,13 +76,13 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
   
 |查詢選項|描述|  
 |------------------|-----------------|  
-|`$orderby`|在傳回的摘要中定義實體的預設排序次序。 下列查詢會依據縣市和城市來排序傳回的客戶摘要：<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$orderby=Country,City`<br /><br /> 如需詳細資訊，請參閱 < [OData: OrderBy 系統查詢選項 ($orderby)](https://go.microsoft.com/fwlink/?LinkId=186968)。|  
-|`$top`|指定要併入傳回之摘要中的實體數。 下列範例會略過前 10 名客戶，然後傳回接下來的 10 名：<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10`<br /><br /> 如需詳細資訊，請參閱 < [OData: Top 系統查詢選項 ($top)](https://go.microsoft.com/fwlink/?LinkId=186969)。|  
-|`$skip`|指定開始傳回摘要中的實體之前所要略過的實體數。 下列範例會略過前 10 名客戶，然後傳回接下來的 10 名：<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10`<br /><br /> 如需詳細資訊，請參閱 < [OData: Skip 系統查詢選項 ($skip)](https://go.microsoft.com/fwlink/?LinkId=186971)。|  
-|`$filter`|定義運算式，根據特定準則來篩選摘要中傳回的實體。 這個查詢選項可支援一組邏輯比較運算子、算術運算子及預先定義的查詢函數，這些是用來評估篩選運算式。 下列範例會傳回郵遞區號不是以 100 結尾的所有訂單：<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')`<br /><br /> 如需詳細資訊，請參閱 < [OData: Filter 系統查詢選項 ($filter)](https://go.microsoft.com/fwlink/?LinkId=186972)。|  
-|`$expand`|指定查詢傳回哪些相關實體。 相關實體會當做摘要或是內嵌項目 (連同查詢傳回的實體) 併入。 下列範例會傳回客戶 'ALFKI' 的訂單，連同每一份訂單的項目詳細資料：<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$expand=Order_Details`<br /><br /> 如需詳細資訊，請參閱 < [OData: Expand 系統查詢選項 ($expand)](https://go.microsoft.com/fwlink/?LinkId=186973)。|  
-|`$select`|指定投射，可定義要在投射中傳回之實體的屬性。 依預設，實體的所有屬性都會在摘要中傳回。 下列查詢只會傳回 `Customer` 實體的三個屬性：<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$select=CustomerID,CompanyName,City`<br /><br /> 如需詳細資訊，請參閱 < [OData: Select 系統查詢選項 ($select)](https://go.microsoft.com/fwlink/?LinkID=186076)。|  
-|`$inlinecount`|要求摘要中傳回的實體計數應該要隨附在摘要中。 如需詳細資訊，請參閱 < [OData: Inlinecount 系統查詢選項 ($inlinecount)](https://go.microsoft.com/fwlink/?LinkId=186975)。|  
+|`$orderby`|在傳回的摘要中定義實體的預設排序次序。 下列查詢會依據縣市和城市來排序傳回的客戶摘要：<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$orderby=Country,City`<br /><br /> 如需詳細資訊，請參閱[OData:OrderBy 系統查詢選項 ($orderby)](https://go.microsoft.com/fwlink/?LinkId=186968)。|  
+|`$top`|指定要併入傳回之摘要中的實體數。 下列範例會略過前 10 名客戶，然後傳回接下來的 10 名：<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10`<br /><br /> 如需詳細資訊，請參閱[OData:Top 系統查詢選項 ($top)](https://go.microsoft.com/fwlink/?LinkId=186969)。|  
+|`$skip`|指定開始傳回摘要中的實體之前所要略過的實體數。 下列範例會略過前 10 名客戶，然後傳回接下來的 10 名：<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10`<br /><br /> 如需詳細資訊，請參閱[OData:Skip 系統查詢選項 ($skip)](https://go.microsoft.com/fwlink/?LinkId=186971)。|  
+|`$filter`|定義運算式，根據特定準則來篩選摘要中傳回的實體。 這個查詢選項可支援一組邏輯比較運算子、算術運算子及預先定義的查詢函數，這些是用來評估篩選運算式。 下列範例會傳回郵遞區號不是以 100 結尾的所有訂單：<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')`<br /><br /> 如需詳細資訊，請參閱[OData:篩選系統查詢選項 ($filter)](https://go.microsoft.com/fwlink/?LinkId=186972)。|  
+|`$expand`|指定查詢傳回哪些相關實體。 相關實體會當做摘要或是內嵌項目 (連同查詢傳回的實體) 併入。 下列範例會傳回客戶 'ALFKI' 的訂單，連同每一份訂單的項目詳細資料：<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$expand=Order_Details`<br /><br /> 如需詳細資訊，請參閱[OData:Expand 系統查詢選項 ($expand)](https://go.microsoft.com/fwlink/?LinkId=186973)。|  
+|`$select`|指定投射，可定義要在投射中傳回之實體的屬性。 依預設，實體的所有屬性都會在摘要中傳回。 下列查詢只會傳回 `Customer` 實體的三個屬性：<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$select=CustomerID,CompanyName,City`<br /><br /> 如需詳細資訊，請參閱[OData:選取系統查詢選項 ($select)](https://go.microsoft.com/fwlink/?LinkID=186076)。|  
+|`$inlinecount`|要求摘要中傳回的實體計數應該要隨附在摘要中。 如需詳細資訊，請參閱[OData:Inlinecount 系統查詢選項 ($inlinecount)](https://go.microsoft.com/fwlink/?LinkId=186975)。|  
   
 ## <a name="addressing-relationships"></a>定址關聯性  
  除了定址實體集和實體執行個體，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]也可讓您定址表示實體之間的關聯性的關聯。 必須具備此功能，您才能夠建立或變更兩個實體執行個體之間的關聯性，例如，在 Northwind 範例資料庫中的承運者與指定訂單相關。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支援`$link`運算子特別定址實體之間的關聯。 例如，在 HTTP PUT 要求訊息中，指定以下 URI 將特定訂單的承運者變更為新承運者。  
@@ -91,10 +91,10 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
 ```  
   
- 如需詳細資訊，請參閱 < [OData： 項目之間的定址連結](https://go.microsoft.com/fwlink/?LinkId=187351)。  
+ 如需詳細資訊，請參閱[OData:定址的項目之間的連結](https://go.microsoft.com/fwlink/?LinkId=187351)。  
   
 ## <a name="consuming-the-returned-feed"></a>取用傳回的摘要  
  URI[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]資源可讓您定址服務所公開的實體資料。 當您的網頁瀏覽器的網址欄位中輸入 URI[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]傳回要求之資源的摘要表示法。 如需詳細資訊，請參閱 < [WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。 雖然 Web 瀏覽器可能適用於測試資料服務資源傳回預期的資料，可以也建立、 更新和刪除資料的實際執行資料服務通常會存取應用程式程式碼或指令碼語言，在網頁中的。 如需詳細資訊，請參閱 <<c0> [ 用戶端應用程式中使用的資料服務](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [開放式資料通訊協定網站](https://go.microsoft.com/fwlink/?LinkID=182204)
+## <a name="see-also"></a>另請參閱
+- [開放式資料通訊協定網站](https://go.microsoft.com/fwlink/?LinkID=182204)

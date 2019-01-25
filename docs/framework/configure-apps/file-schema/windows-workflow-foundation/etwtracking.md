@@ -3,20 +3,21 @@ title: '&lt;etwTracking&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: 6defccdd6a81a1c00a4b65fa9214c86e6cccbea2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f9d1acd5dafb9df181b036db9d3ad783ca618874
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684318"
 ---
 # <a name="ltetwtrackinggt"></a>&lt;etwTracking&gt;
-可讓服務利用 ETW 追蹤使用的服務行為<xref:System.Activities.Tracking.EtwTrackingParticipant>。  
+這個服務行為可讓服務能夠利用 ETW 追蹤使用<xref:System.Activities.Tracking.EtwTrackingParticipant>。  
   
 \<system.ServiceModel>  
-\<行為 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行為 >  
-\<etwTracking >  
+\<behavior>  
+\<etwTracking>  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,14 +40,14 @@ ms.lasthandoff: 05/03/2018
 |---------------|-----------------|  
 |profileName|可指定與這個行為相關聯的追蹤設定檔名稱的字串。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<行為 > 的\<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|指定行為項目。|  
+|[\<行為 > 的\<v >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|指定行為項目。|  
   
 ## <a name="remarks"></a>備註  
  加入至服務的行為組態時，這個組態項目會在工作流程服務中，設定追蹤參與者。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="example"></a>範例  
  以下組態範例顯示在 Web.config 檔案中設定的標準 ETW 追蹤參與者。  
   
- 中所定義的 ETW 追蹤參與者用來寫入追蹤記錄至 ETW 的提供者 Id **\<診斷 >** > 一節。 追蹤參與者擁有與其相關聯的設定檔，以指定已經訂閱的追蹤記錄。 這由定義**profileName**屬性**\<新增 >** 項目。 這些定義之後，追蹤參與者會加入至 **\<etwTracking >** 服務行為。 如此會將選取的追蹤參與者加入至工作流程執行個體的擴充，因此，追蹤參與者可開始接收追蹤記錄。  
+ ETW 追蹤參與者用來寫入追蹤記錄到 ETW 提供者識別碼會定義在**\<診斷 >** 一節。 追蹤參與者擁有與其相關聯的設定檔，以指定已經訂閱的追蹤記錄。 這由定義**profileName**屬性**\<新增 >** 項目。 一旦這些定義加入追蹤參與者 **\<etwTracking >** 服務行為。 如此會將選取的追蹤參與者加入至工作流程執行個體的擴充，因此，追蹤參與者可開始接收追蹤記錄。  
   
 ```xml  
 <configuration>   
@@ -83,8 +84,8 @@ ms.lasthandoff: 05/03/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [追蹤參與者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
+- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
+- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追蹤參與者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

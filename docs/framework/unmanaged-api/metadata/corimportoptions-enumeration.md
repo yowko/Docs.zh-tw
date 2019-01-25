@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7078b2eb98c15b7229132076da8af4691032bb08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8a4cc17bdcaea5099d0d2b0195ae4fa28e3d4744
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744595"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions 列舉
 包含旗標值，這些值可控制在匯入目前範圍之外的組件期間所發生的行為。  
@@ -49,21 +49,21 @@ typedef enum CorImportOptions {
 |成員|描述|  
 |------------|-----------------|  
 |`MDImportOptionDefault`|表示預設行為，也就是略過已刪除的記錄。|  
-|`MDImportOptionAll`|表示應該列舉所有中繼資料。|  
-|`MDImportOptionAllTypeDefs`|表示應該列舉所有的 Typedef，包括已刪除的。|  
-|`MDImportOptionAllMethodDefs`|表示應該列舉所有 MethodDefs，包括已刪除的。|  
-|`MDImportOptionAllFieldDefs`|表示應該列舉所有 FieldDefs，包括已刪除的。|  
-|`MDImportOptionAllProperties`|表示應該列舉所有 PropertyDefs，包括已刪除的。|  
-|`MDImportOptionAllEvents`|表示應該列舉所有 EventDefs，包括已刪除的。|  
-|`MDImportOptionAllCustomAttributes`|表示應該列舉所有的自訂屬性，包括已刪除的。|  
-|`MDImportOptionAllExportedTypes`|表示應該列舉所有的匯出的類型，包括已刪除的。|  
+|`MDImportOptionAll`|指出應該要列舉所有的中繼資料。|  
+|`MDImportOptionAllTypeDefs`|指出應該要列舉所有的 Typedef，包括已刪除的。|  
+|`MDImportOptionAllMethodDefs`|表示所有 MethodDefs，包括已刪除的應該要都列舉。|  
+|`MDImportOptionAllFieldDefs`|表示所有 FieldDefs，包括已刪除的應該要都列舉。|  
+|`MDImportOptionAllProperties`|表示所有 PropertyDefs，包括已刪除的應該要都列舉。|  
+|`MDImportOptionAllEvents`|表示所有 EventDefs，包括已刪除的應該要都列舉。|  
+|`MDImportOptionAllCustomAttributes`|指出應該要列舉所有的自訂屬性，包括已刪除的。|  
+|`MDImportOptionAllExportedTypes`|表示所有匯出的類型，包括已刪除的應該要列舉。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

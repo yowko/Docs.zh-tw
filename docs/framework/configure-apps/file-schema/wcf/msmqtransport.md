@@ -2,21 +2,21 @@
 title: '&lt;msmqTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-ms.openlocfilehash: a0406ae6e91755707656e10c75cbd25dd68d07c2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 523f2fd030f40a6d55080a48773159ab4b5887ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660576"
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 當通道包含於自訂繫結時，讓通道在 MSMQ 傳輸上傳輸訊息。  
   
  \<system.serviceModel>  
-\<繫結 >  
+\<bindings>  
 \<customBinding>  
-\<繫結 >  
-\<msmqIntegration >  
+\<binding>  
+\<msmqIntegration>  
   
 ## <a name="syntax"></a>語法  
   
@@ -73,28 +73,28 @@ ms.locfileid: "54147911"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<msmqTransportSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|指定此繫結的傳輸安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>。|  
+|[\<msmqTransportSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|指定此繫結的傳輸安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
  `msmqTransport` 項目可讓使用者設定佇列通訊通道的屬性。 佇列通訊通道的傳輸中會使用訊息佇列。  
   
  這個繫結項目是訊息佇列標準繫結 (`netMsmqBinding`) 所使用的預設繫結項目。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.MsmqTransportElement>  
- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [WCF 中的佇列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [傳輸](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [選擇傳輸](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.MsmqTransportElement>
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [WCF 中的佇列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [傳輸](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [選擇傳輸](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

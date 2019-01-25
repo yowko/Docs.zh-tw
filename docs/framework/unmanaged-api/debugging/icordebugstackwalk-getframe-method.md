@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 548a8a7743c02be5734b677010627f847c5bc4b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 09a5d44e2f09c0a9ad87d590bb6d7330241143ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421983"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666237"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame 方法
-取得目前的框架中[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)物件。  
+取得目前的框架[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +35,7 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
 #### <a name="parameters"></a>參數  
  `pFrame`  
- [in]建立的框架物件，代表目前的堆疊框架的位址指標。  
+ [in]建立的框架物件，表示目前的框架在堆疊中的位址指標。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
@@ -44,25 +44,25 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 |-------------|-----------------|  
 |S_OK|執行階段成功地傳回目前的框架。|  
 |E_FAIL|未傳回目前的框架。|  
-|S_FALSE|目前的框架是原生堆疊框架。|  
+|S_FALSE|目前的框架是原生的堆疊框架。|  
 |E_INVALIDARG|`pFrame` 為 null。|  
-|CORDBG_E_PAST_END_OF_STACK|框架指標已經結尾的堆疊。因此，沒有其他框架則可以存取。|  
+|CORDBG_E_PAST_END_OF_STACK|框架指標已經結尾的堆疊;因此，可以不存取任何其他的框架。|  
   
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugStackWalk` 傳回只有實際的堆疊框架。 使用[icordebugthread3:: Getactiveinternalframes](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)方法來傳回內部框架。 （內部框架是資料結構來儲存暫存資料推送到堆疊上由執行階段）。  
+ `ICorDebugStackWalk` 傳回只是實際的堆疊框架。 使用[ICorDebugThread3::GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)方法來傳回內部框架。 （內部的畫面格是資料結構來儲存暫存資料推送至堆疊的執行階段）。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugStackWalk 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugStackWalk 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

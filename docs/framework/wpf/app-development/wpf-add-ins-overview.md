@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662734"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 增益集概觀
 <a name="Introduction"></a> .NET Framework 包含開發人員可用來建立支援增益集擴充性的應用程式增益集模型。 此增益集模型可讓您建立增益集，整合並擴充應用程式的功能。 在某些情況下，應用程式也需要顯示增益集所提供的使用者介面。本主題說明 WPF 擴大.NET Framework 增益集模型以啟用這些案例、 架構、 其優點，以及其限制背後的方式。  
@@ -282,10 +282,10 @@ ms.locfileid: "53397029"
 ## <a name="performance-optimization"></a>效能最佳化  
  根據預設，當使用多個應用程式定義域時，每個應用程式所需的各種.NET Framework 組件全部載入該應用程式定義域。 如此一來，建立新應用程式定義域以及從其中啟動應用程式所需的時間，可能會影響效能。 不過，.NET Framework 可讓您降低啟動時間，指示應用程式定義域間共用組件，如果已載入的應用程式。 您可以使用<xref:System.LoaderOptimizationAttribute>屬性，它必須套用至進入點方法 (`Main`)。 在此情況下，您必須只使用程式碼實作您的應用程式定義 (請參閱[應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md))。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.LoaderOptimizationAttribute>  
- [增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [應用程式定義域](../../../../docs/framework/app-domains/application-domains.md)  
- [.NET framework 遠端處理概觀](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [讓物件變成可遠端處理](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
- [HOW-TO 主題](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.LoaderOptimizationAttribute>
+- [增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [應用程式定義域](../../../../docs/framework/app-domains/application-domains.md)
+- [.NET framework 遠端處理概觀](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
+- [讓物件變成可遠端處理](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [HOW-TO 主題](../../../../docs/framework/wpf/app-development/how-to-topics.md)

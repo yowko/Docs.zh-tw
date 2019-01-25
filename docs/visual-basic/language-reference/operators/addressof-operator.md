@@ -8,12 +8,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: 7c229c32a3b295b4dbfe50ca2abc60d4ad5f2145
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f4f88551b6708ac3d0ee0f0f5bdcbdec1dfaaa9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597783"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721058"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf 運算子 (Visual Basic)
 建立參考特定程序的程序委派執行個體。  
@@ -26,15 +26,15 @@ AddressOf procedurename
   
 ## <a name="parts"></a>組件  
  `procedurename`  
- 必要。 指定新建立的程序委派所參考的程序。  
+ 必要項。 指定新建立的程序委派所要參考的程序。  
   
 ## <a name="remarks"></a>備註  
- `AddressOf`運算子會建立指向所指定的函式的函式委派`procedurename`。 當指定的程序是執行個體方法然後函式委派參考執行個體和方法。 然後，叫用的函式委派時指定的執行個體的指定的方法呼叫。  
+ `AddressOf`運算子會建立指向所指定的函式的函式委派`procedurename`。 指定的程序時的執行個體方法然後函式委派是指執行個體和方法。 然後，叫用的函式委派時指定的執行個體的指定的方法呼叫。  
   
- `AddressOf`運算子可以當做委派建構函式的運算元，或用於可由編譯器決定委派型別所在內容。  
+ `AddressOf`運算子可用來當做委派建構函式的運算元，或用於可由編譯器決定委派型別所在的內容。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用`AddressOf`運算子來指定要處理的委派`Click`按鈕的事件。  
+ 這個範例會使用`AddressOf`運算子來指定委派，以便處理`Click`按鈕的事件。  
   
  [!code-vb[VbVbalrDelegates#8](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addressof-operator_1.vb)]  
   
@@ -43,8 +43,8 @@ AddressOf procedurename
   
  [!code-vb[VbVbalrDelegates#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addressof-operator_2.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [委派](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+## <a name="see-also"></a>另請參閱
+- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [委派](../../../visual-basic/programming-guide/language-features/delegates/index.md)

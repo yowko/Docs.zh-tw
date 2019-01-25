@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 2e37a42b3767d279da0d742ba9958ceb6628aab1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5078e12ed5c68556a1d1d04d01c90440b57c1407
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736399"
 ---
 # <a name="services-and-transactions"></a>服務與異動
 Windows Communication Foundation (WCF) 應用程式可以起始從交易內的用戶端，並協調服務作業內的交易。 用戶端可以初始化異動並叫用數個服務作業，同時確保服務作業已認可，或是復原為單一單位。  
@@ -88,7 +88,7 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [System.ServiceModel 中的異動式支援](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
- [異動模型](../../../docs/framework/wcf/feature-details/transaction-models.md)  
- [WS 異動流程](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+## <a name="see-also"></a>另請參閱
+- [System.ServiceModel 中的異動式支援](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)
+- [異動模型](../../../docs/framework/wcf/feature-details/transaction-models.md)
+- [WS 異動流程](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

@@ -2,12 +2,12 @@
 title: ServiceDebugBehavior
 ms.date: 03/30/2017
 ms.assetid: a5ec9061-1e95-43fb-b0d9-dbd0a7bc3c44
-ms.openlocfilehash: 68b2350f257bc95d8e17f4b9049d67c7f67becae
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: d6f0e4741aa10bff450a29cfd7a9e63e226c6495
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498878"
 ---
 # <a name="servicedebugbehavior"></a>ServiceDebugBehavior
 ServiceDebugBehavior  
@@ -72,5 +72,5 @@ class ServiceDebugBehavior : Behavior
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Description.ServiceDebugBehavior>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>

@@ -2,12 +2,12 @@
 title: 資料類型與函式
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 34f8f0a59f1a962eaa6a747e124f47d1570ca455
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0a60c5f680937816cd97b4ef44ee7fd1ad510f73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711891"
 ---
 # <a name="data-types-and-functions"></a>資料類型與函式
 下表所列的主題將針對 Common Language Runtime (CLR) 的成員、建構和轉換描述 LINQ to SQL 支援。 支援的成員和建構可用於您的 LINQ to SQL 查詢中。  
@@ -31,7 +31,7 @@ ms.locfileid: "43520735"
 |[System.TimeSpan 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|描述 LINQ to SQL 對 <xref:System.TimeSpan?displayProperty=nameWithType> 結構之成員的支援。|  
 |[不支援的功能](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中不支援的功能。|  
   
-## <a name="see-also"></a>另請參閱  
- [SQL-CLR 類型不符](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
- [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [在 Visual Studio 中的.NET framework 類別庫](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)
+## <a name="see-also"></a>另請參閱
+- [SQL-CLR 類型不符](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+- [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [在 Visual Studio 中的.NET framework 類別庫](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

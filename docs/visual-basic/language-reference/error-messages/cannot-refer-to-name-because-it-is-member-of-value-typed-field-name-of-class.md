@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30310
 ms.assetid: 2aeb8872-7c87-4f01-98ef-9714ba3eebbe
-ms.openlocfilehash: f44d33c9d51148e6bbcfbf5db4dbc115101df1f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6298c3e0f5102397d5cc3f237a186598c6b5ecc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739293"
 ---
 # <a name="cannot-refer-to-39ltnamegt39-because-it-is-a-member-of-the-value-typed-field-39ltnamegt39-of-class-39ltclassnamegt39-which-has-39systemmarshalbyrefobject39-as-a-base-class"></a>不能參考&#39;&lt;名稱&gt;&#39;因為它是實值類型欄位的成員&#39;&lt;名稱&gt;&#39;類別的&#39; &lt;classname&gt; &#39;具有&#39;System.MarshalByRefObject&#39;做為基底類別
-`System.MarshalByRefObject`類別可讓應用程式跨應用程式定義域界限支援遠端物件的存取權。 類型必須繼承自`MarshalByRejectObject`類別時跨應用程式定義域界限使用的型別。 必須不會複製物件的狀態，因為物件的成員不是他們所建立的應用程式網域外使用。  
+`System.MarshalByRefObject`類別可讓您跨應用程式定義域界限支援遠端物件的存取權的應用程式。 類型必須繼承自`MarshalByRejectObject`類別，在跨應用程式定義域界限使用的型別。 因為物件的成員不是他們所建立的應用程式定義域外使用，必須不會複製物件的狀態。  
   
  **錯誤 ID:** BC30310  
   
@@ -25,6 +25,6 @@ ms.locfileid: "33586343"
   
 2.  明確限定的成員`Me`關鍵字。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.MarshalByRefObject>  
- [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.MarshalByRefObject>
+- [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)

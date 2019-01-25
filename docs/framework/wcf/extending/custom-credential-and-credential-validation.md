@@ -8,19 +8,19 @@ helpviewer_keywords:
 - credential validation [WCF]
 - credentials [WCF], validation
 ms.assetid: da831bec-e281-4d44-b343-437b5eef688e
-ms.openlocfilehash: 9b340c01a9eb4ce4007e93f2b38e292cd6543ba1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 731131d4bc967aa3ae95eca1f9e9cbb2770f8f7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746566"
 ---
 # <a name="custom-credential-and-credential-validation"></a>自訂認證與認證驗證
-Windows Communication Foundation (WCF) 安全性為基礎的服務和用戶端之間的認證交換。 使用一般認證類型就可滿足大多數安全性案例，例如 Windows (Kerberos)、使用者名稱和密碼以及憑證。 不過，如果需要新的認證類型，可在本節的各主題中找到如何處理及驗證新類型的方法。  
+安全性在 Windows Communication Foundation (WCF) 為基礎的服務和用戶端之間的認證交換。 使用一般認證類型就可滿足大多數安全性案例，例如 Windows (Kerberos)、使用者名稱和密碼以及憑證。 不過，如果需要新的認證類型，可在本節的各主題中找到如何處理及驗證新類型的方法。  
   
 ## <a name="in-this-section"></a>本節內容  
- [如何：建立使用自訂憑證驗證程式的服務](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- 說明如何透過繼承自自訂 WCF 驗證<xref:System.IdentityModel.Selectors.X509CertificateValidator>類別。  
+ [如何：建立使用自訂憑證驗證程式服務](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ 說明如何藉由繼承自自訂 WCF 驗證<xref:System.IdentityModel.Selectors.X509CertificateValidator>類別。  
   
  [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  示範如何擴充<xref:System.ServiceModel.Description.ClientCredentials>和<xref:System.ServiceModel.Description.ServiceCredentials>類別，以涵蓋新認證類型。 而這是說明建立自訂認證類型之主題系列中的第一項。  
@@ -55,5 +55,5 @@ Windows Communication Foundation (WCF) 安全性為基礎的服務和用戶端�
   
  [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a>另請參閱  
- [安全性](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>另請參閱
+- [安全性](../../../../docs/framework/wcf/feature-details/security.md)

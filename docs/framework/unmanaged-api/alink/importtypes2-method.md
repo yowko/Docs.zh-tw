@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51c696679626a598be422376e9dc89b5add1773d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 60f2057330f1a06cdd3e6ff5560f8ca7aeefe857
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400487"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725723"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 方法
-會起始匯入的類型。 呼叫這個方法來開始匯入從透過匯入每個範圍的型別[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)。  
+會起始匯入的類型。 呼叫這個方法，以開始匯入類型，從透過匯入每個領域[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ HRESULT ImportTypes2(
  要從中匯入的以零為起始範圍。  
   
  `phEnum`  
- 在給定範圍中，接收列舉值類型的控制代碼。  
+ 指定的範圍內接收類型的列舉值控制代碼。  
   
  `ppImportScope`  
  選擇性地接收[IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)介面。  
@@ -59,12 +59,12 @@ HRESULT ImportTypes2(
  選擇性地指定範圍內接收類型的計數。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則傳回 S_OK。  
+ 如果方法成功，則會傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
  需要 alink.h  
   
-## <a name="see-also"></a>另請參閱  
- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>另請參閱
+- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

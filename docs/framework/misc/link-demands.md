@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29a3254bb5ccfe422a1c2d7d156975c0887d9273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f55e282309d21b78c0aad9e7ada687f23628379
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725671"
 ---
 # <a name="link-demands"></a>連結要求
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  連結要求會在 Just-In-Time 編譯期間進行安全性檢查，並且只檢查程式碼組件的即時呼叫者。 當您的程式碼繫結至類型參考，包括函式指標參考和方法呼叫時，連結就會發生。 如果呼叫的組件並沒有足夠權限可連結到您的程式碼，則程式碼載入和執行時不會允許連結且會擲回執行階段例外狀況。 連結要求可以在繼承自您的程式碼的類別中被覆寫。  
   
- 請注意，對這種類型的需求不會執行完整堆疊查核行程，而且您的程式碼仍會受到引誘攻擊。 比方說，如果組件 A 中的方法受到連結要求保護，組件 B 中的直接呼叫端是根據評估組件 b 的權限 不過，連結要求不會評估組件 C 中的方法間接呼叫該方法組件 b 中的使用方式的組件中連結要求會指定立即呼叫組件中的呼叫端必須具備要連結至您的程式碼的直接權限。 它並未指定所有呼叫端必須擁有以便執行程式碼的權限。  
+ 請注意，對這種類型的需求不會執行完整堆疊查核行程，而且您的程式碼仍會受到引誘攻擊。 比方說，如果組件 A 中的方法受到連結要求保護，組件 B 中的直接呼叫端是根據評估的組件 b 的權限 不過，連結要求不會評估組件 C 中的方法如果會間接呼叫組件 b 中的使用方法的組件方法連結要求指定的權限可讓您直接在立即呼叫組件中的呼叫端必須擁有連結到您的程式碼。 它並未指定所有呼叫端必須擁有以便執行程式碼的權限。  
   
  <xref:System.Security.CodeAccessPermission.Assert%2A>、<xref:System.Security.CodeAccessPermission.Deny%2A> 和 <xref:System.Security.CodeAccessPermission.PermitOnly%2A> 堆疊查核行程修飾詞不會影響連結要求的評估。  由於連結要求不會執行堆疊查核行程，堆疊查核行程修飾詞不會影響連結要求。  
   
- 如果連結要求保護的方法透過存取[反映](../../../docs/framework/reflection-and-codedom/reflection.md)，則連結要求會檢查透過反映來存取之程式碼的立即呼叫端。 使用反映來執行的方法探索和方法引動過程都是如此。 例如，假設程式碼使用反映來傳回<xref:System.Reflection.MethodInfo>物件表示方法受到連結要求，然後再將其傳遞**MethodInfo**其他一些使用物件來叫用原始方法的程式碼的物件。 在此情況下，連結要求檢查就會發生兩次： 一次是針對傳回**MethodInfo**物件和一次是針對叫用它。  
+ 如果連結要求保護的方法透過存取[反映](../../../docs/framework/reflection-and-codedom/reflection.md)，則連結要求會檢查立即呼叫端，透過反映存取之程式碼。 使用反映來執行的方法探索和方法引動過程都是如此。 例如，假設程式碼會使用反映來傳回<xref:System.Reflection.MethodInfo>物件，表示方法受到連結要求，然後將其傳遞**MethodInfo**使用物件來叫用的原始方法的一些其他程式碼的物件。 在此情況下，連結要求檢查就會發生兩次： 一次傳回的程式碼**MethodInfo**物件和一次叫用它的程式碼。  
   
 > [!NOTE]
 >  在靜態類別建構函式上執行的連結要求不會保護建構函式，因為靜態建構函式由系統所呼叫，不在應用程式的程式碼執行路徑中。 如此一來，當連結需求套用至整個類別時，它無法保護對靜態建構函式的存取權，不過它確實會保護類別的其餘部分。  
@@ -54,6 +54,6 @@ public static string ReadData()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [屬性](../../../docs/standard/attributes/index.md)  
- [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)
+## <a name="see-also"></a>另請參閱
+- [屬性](../../../docs/standard/attributes/index.md)
+- [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)

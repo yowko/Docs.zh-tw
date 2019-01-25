@@ -1,5 +1,5 @@
 ---
-title: 如何：控制主要畫面格動畫執行時間
+title: HOW TO：控制主要畫面格動畫執行時間
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - key frames [WPF], timing
 - timing key-fram animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
-ms.openlocfilehash: d65bf6f7643adf1d98d468853ae8017a4a6554ac
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3a8e11ee8bfbbe87ca5a1c51b815dd21c124a951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712021"
 ---
-# <a name="how-to-control-key-frame-animation-timing"></a>如何：控制主要畫面格動畫執行時間
+# <a name="how-to-control-key-frame-animation-timing"></a>HOW TO：控制主要畫面格動畫執行時間
 此範例示範如何控制主要畫面格動畫中的主要畫面格的時間。 如同其他動畫，主要畫面格動畫也有<xref:System.Windows.Media.Animation.Timeline.Duration%2A>屬性。 除了指定動畫的持續時間，您必須指定這段期間的哪個部分配置給每個主要畫面格。 若要配置的時間，您指定<xref:System.Windows.Media.Animation.KeyTime>動畫中的每個主要畫面格。  
   
  <xref:System.Windows.Media.Animation.KeyTime>時的主要畫面格結束 （它未指定主要畫面格播放的時間長度），指定每個主要畫面格。 您可以指定<xref:System.Windows.Media.Animation.KeyTime>作為<xref:System.TimeSpan>值，以百分比表示，或作為<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>或<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>特殊值。  
@@ -65,7 +65,7 @@ ms.locfileid: "44086189"
   
  如需完整的範例，請參閱[主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)。 如需有關主要畫面格動畫的詳細資訊，請參閱[主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

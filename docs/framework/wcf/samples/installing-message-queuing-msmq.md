@@ -2,11 +2,12 @@
 title: 安裝訊息佇列 (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: b54fab13d644cafda8a070280d672c60cf71b675
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2aae92ba6e373af2d8bc9cff0b4c9d317ba10136
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588021"
 ---
 # <a name="installing-message-queuing-msmq"></a>安裝訊息佇列 (MSMQ)
 下列程序示範如何安裝 Message Queuing 4.0 和 Message Queuing 3.0。  
@@ -18,21 +19,21 @@ ms.lasthandoff: 05/04/2018
   
 1.  在 [伺服器管理員] 中，按一下**功能**。  
   
-2.  在右窗格中**功能摘要**，按一下 **新增功能**。  
+2.  在右窗格底下**功能摘要**，按一下**新增功能**。  
   
-3.  在結果視窗中，依序展開**訊息佇列**。  
+3.  在 [結果] 視窗中，展開**訊息佇列**。  
   
-4.  展開**訊息佇列服務**。  
+4.  依序展開**訊息佇列服務**。  
   
-5.  按一下**目錄服務整合**（針對加入網域電腦），然後按一下**HTTP 支援**。  
+5.  按一下 **目錄服務整合**（適用於加入網域電腦），然後按一下**HTTP 支援**。  
   
-6.  按一下**下一步**，然後按一下 **安裝**。  
+6.  按一下 **下一步**，然後按一下**安裝**。  
   
 #### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a>若要在 Windows 7 或 Windows Vista 上安裝 Message Queuing 4.0  
   
-1.  開啟**控制台**。  
+1.  開啟**控制台中**。  
   
-2.  按一下**程式**然後在**程式和功能**，按一下 **開啟或關閉 Windows 功能**。  
+2.  按一下 **程式**然後在**程式和功能**，按一下 **開啟或關閉 Windows 功能**。  
   
 3.  展開 [Microsoft Message Queue (MSMQ) 伺服器]，展開 [Microsoft Message Queue (MSMQ) 伺服器核心]，然後選取下列訊息佇列功能的核取方塊進行安裝：  
   
@@ -42,13 +43,13 @@ ms.lasthandoff: 05/04/2018
   
 4.  按一下 [確定 **Deploying Office Solutions**]。  
   
-5.  如果提示您重新啟動電腦時，請按一下**確定**以完成安裝。  
+5.  如果提示您重新啟動電腦時，請按一下**確定**才能完成安裝。  
   
 #### <a name="to-install-message-queuing-30-on-windows-xp-and-windows-server-2003"></a>若要在 Windows XP 和 Windows Server 2003 上安裝 Message Queuing 3.0  
   
-1.  開啟**控制台**。  
+1.  開啟**控制台中**。  
   
-2.  按一下**新增或移除程式**，然後按一下 **新增 Windows 元件**。  
+2.  按一下 **新增或移除程式**，然後按一下**新增 Windows 元件**。  
   
 3.  選取 訊息佇列，然後按一下**詳細資料**。  
   
@@ -57,9 +58,9 @@ ms.lasthandoff: 05/04/2018
   
 4.  確定在詳細資料頁面上選取 MSMQ HTTP 支援的選項。  
   
-5.  按一下**確定**結束詳細資料] 頁面，然後按一下 [**下一步**。 完成安裝。  
+5.  按一下 [ **[確定]** 以結束 [詳細資料] 頁面中，然後按一下**下一步]**。 完成安裝。  
   
-6.  如果提示您重新啟動電腦時，請按一下**確定**以完成安裝。  
+6.  如果提示您重新啟動電腦時，請按一下**確定**才能完成安裝。  
   
-## <a name="see-also"></a>另請參閱  
- [設定指示](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a>另請參閱
+- [設定指示](../../../../docs/framework/wcf/samples/set-up-instructions.md)

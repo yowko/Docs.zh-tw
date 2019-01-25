@@ -2,12 +2,12 @@
 title: WCF 中的訊息安全性
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 81d9acde3c8fab1860904074199066cca55c7186
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 023798f3bbc283b11dbb6c132f7573ee65d18077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731344"
 ---
 # <a name="message-security-in-wcf"></a>WCF 中的訊息安全性
 Windows Communication Foundation (WCF) 有兩種主要模式安全性 (`Transport`並`Message`) 和第三個模式 (`TransportWithMessageCredential`)，結合這兩個。 本主題將說明訊息安全性以及使用的原因。  
@@ -58,8 +58,8 @@ Windows Communication Foundation (WCF) 有兩種主要模式安全性 (`Transpor
   
 -   需要實作 XML 層級的安全性機制及支援 WS-Security 規格。 這可能會影響互通性。  
   
-## <a name="see-also"></a>另請參閱  
- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [如何：使用傳輸安全性和訊息認證](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
- [Microsoft Patterns and Practices，第 3 章： 實作傳輸和訊息層安全性](https://go.microsoft.com/fwlink/?LinkId=88897)
+## <a name="see-also"></a>另請參閱
+- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [如何：使用傳輸安全性和訊息認證](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Microsoft Patterns and Practices，第 3 章：實作傳輸和訊息層安全性](https://go.microsoft.com/fwlink/?LinkId=88897)

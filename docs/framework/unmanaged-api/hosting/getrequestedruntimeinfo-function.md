@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f37be8e3d2e92147e9f13954ab64396062ade2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 51cd834b92dd595b5b3e7f668ef252462f4287de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695279"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 函式
 取得 common language runtime (CLR) 應用程式所要求的版本和目錄資訊。  
   
- 此函式中已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +52,7 @@ HRESULT GetRequestedRuntimeInfo (
  [in]應用程式的名稱。  
   
  `pwszVersion`  
- [in]指定執行階段的版本號碼的字串。  
+ [in]字串，指定執行階段的版本號碼。  
   
  `pConfigurationFile`  
  [in]相關聯的組態檔的名稱`pExe`。  
@@ -64,7 +64,7 @@ HRESULT GetRequestedRuntimeInfo (
  [in]一或多個[RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md)列舉值。  
   
  `pDirectory`  
- [out]包含成功完成時執行階段的目錄路徑的緩衝區。  
+ [out]這種緩衝區包含成功完成時，執行階段的目錄路徑。  
   
  `dwDirectory`  
  [in]目錄緩衝區的長度。  
@@ -73,7 +73,7 @@ HRESULT GetRequestedRuntimeInfo (
  [out]目錄路徑字串的長度指標。  
   
  `pVersion`  
- [out]這種緩衝區包含成功完成時執行階段的版本號碼。  
+ [out]這種緩衝區包含成功完成時，執行階段的版本號碼。  
   
  `cchBuffer`  
  [in]版本字串緩衝區的長度。  
@@ -82,31 +82,31 @@ HRESULT GetRequestedRuntimeInfo (
  [out]版本字串的長度指標。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回標準的元件物件模型 (COM) 的錯誤代碼，除了下列的值定義了 WinError.h 中。  
+ 中所定義 WinError.h，除了下列的值，這個方法會傳回標準的元件物件模型 (COM) 錯誤代碼。  
   
 |傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|ERROR_INSUFFICIENT_BUFFER|目錄緩衝區不足夠儲存的目錄路徑。<br /><br /> -或-<br /><br /> 版本緩衝區不足夠儲存的版本字串。|  
+|ERROR_INSUFFICIENT_BUFFER|無法夠大，無法儲存的目錄路徑的目錄緩衝區。<br /><br /> -或-<br /><br /> 版本緩衝區不夠大，無法儲存版本字串。|  
   
 ## <a name="remarks"></a>備註  
- `GetRequestedRuntimeInfo`方法會傳回執行階段載入處理序，不一定是最新版本的電腦上安裝的版本資訊。  
+ `GetRequestedRuntimeInfo`方法會傳回執行階段載入處理序，而不一定是最新版本的電腦上安裝的版本資訊。  
   
  在.NET Framework 2.0 版中，您可以取得最新的安裝版本的相關資訊，使用`GetRequestedRuntimeInfo`方法，如下所示：  
   
 -   指定`pExe`， `pwszVersion`，和`pConfigurationFile`參數為 null。  
   
--   指定在 RUNTIME_INFO_UPGRADE_VERSION 旗標`RUNTIME_INFO_FLAGS`列舉`runtimeInfoFlags`參數。  
+-   指定在 RUNTIME_INFO_UPGRADE_VERSION 旗標`RUNTIME_INFO_FLAGS`列舉型別供`runtimeInfoFlags`參數。  
   
- `GetRequestedRuntimeInfo`方法不會傳回最新的 CLR 版本，在下列情況下：  
+ `GetRequestedRuntimeInfo`方法不會傳回最新的 CLR 版本，在下列情況：  
   
--   指定正在載入特定的 CLR 版本的應用程式組態檔存在。 請注意，.NET Framework 會使用組態檔，即使您指定 null`pConfigurationFile`參數。  
+-   指定正在載入特定的 CLR 版本的應用程式組態檔存在。 請注意 .NET Framework 會使用組態檔，即使您指定 null`pConfigurationFile`參數。  
   
--   [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)指定舊版 CLR 呼叫方法。  
+-   [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)方法受呼叫時指定較早的 CLR 版本。  
   
--   目前正在執行針對舊版 CLR 編譯的應用程式。  
+-   針對較早的 CLR 版本所編譯的應用程式目前正在執行。  
   
- 如`runtimeInfoFlags`參數，您可以指定其中一個架構的常數`RUNTIME_INFO_FLAGS`列舉一次：  
+ 針對`runtimeInfoFlags`參數，您可以指定其中一個架構的常數`RUNTIME_INFO_FLAGS`列舉一次：  
   
 -   RUNTIME_INFO_REQUEST_IA64  
   
@@ -115,15 +115,15 @@ HRESULT GetRequestedRuntimeInfo (
 -   RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [GetRequestedRuntimeVersion 函式](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
- [GetVersionFromProcess 函式](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>另請參閱
+- [GetRequestedRuntimeVersion 函式](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [GetVersionFromProcess 函式](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
+- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf4f3f582e417c5e7b814622986427f996796ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: def1c04064cc9fc98c108dcdad5c017c0c8e465b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655526"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel 列舉
-包含值，表示故障的影響，當有特定記憶體配置要求卻無法滿足。  
+包含值，表示失敗的影響，當有特定記憶體配置已要求但不能滿足。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,22 +40,22 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`eAppDomainCritical`|表示配置要求此配置的網域中執行 managed 程式碼的重要。 如果無法配置記憶體，無法保證 CLR，網域是仍可使用。 主機會決定當無法滿足配置時要採取什麼動作。 它可以指示中止 CLR`AppDomain`自動執行，或允許繼續執行上呼叫方法[ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)。|  
-|`eProcessCritical`|表示配置是重要的程序中的 managed 程式碼執行。 執行完成項時，在啟動期間，而且會使用此值。 如果無法配置記憶體，CLR 就無法執行操作中處理程序。 如果配置失敗，CLR 會有效停用。 Clr 的所有後續呼叫會失敗並 HOST_E_CLRNOTAVAILABLE。|  
-|`eTaskCritical`|表示配置是重大執行所要求的配置工作。 如果無法配置記憶體，則 CLR 便無法保證可以執行此工作。 如果發生故障，CLR 會引發<xref:System.Threading.ThreadAbortException>實體作業系統執行緒上。|  
+|`eAppDomainCritical`|指出配置已要求配置的網域中執行 managed 程式碼的重要。 如果無法配置記憶體，CLR 不保證仍可使用定義域。 主應用程式會決定當無法滿足配置時要採取什麼動作。 它可以指示 CLR 在中止`AppDomain`自動執行，或允許它繼續執行上呼叫方法[ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)。|  
+|`eProcessCritical`|指出配置重要的程序中的 managed 程式碼執行。 這個值可在啟動期間，當執行完成項。 如果無法配置記憶體，CLR 無法在程序。 如果配置失敗，CLR 會有效地停用。 所有後續的呼叫，clr 會失敗並 HOST_E_CLRNOTAVAILABLE。|  
+|`eTaskCritical`|表示配置務必執行之工作的要求配置。 如果無法配置記憶體，CLR 不保證可以執行此工作。 如果發生失敗，CLR 會引發<xref:System.Threading.ThreadAbortException>實體作業系統執行緒上。|  
   
 ## <a name="remarks"></a>備註  
- 中定義的記憶體配置方法[IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)和[IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)介面採用這種類型的參數。 失敗的嚴重性而定，主機可以決定是否會立即配置要求失敗，或等候，直到可以滿足。  
+ 中所定義的記憶體配置方法[IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)並[IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)介面採用這種類型的參數。 失敗的嚴重性而定，主機可以決定是否要立即拒絕配置要求，或等候，直到可以滿足。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRMemoryNotificationCallback 介面](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)  
- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRMemoryNotificationCallback 介面](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)
+- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

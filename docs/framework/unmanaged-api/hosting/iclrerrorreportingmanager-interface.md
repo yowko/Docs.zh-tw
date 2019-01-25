@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf9e04ed1d3a68fed120c4c13ad992af1f777244
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d10fe0240073464e3c2677343288e5379840885d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732787"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager 介面
-提供方法，讓主應用程式設定錯誤報告的自訂堆疊傾印。  
+提供方法，可讓主應用程式設定錯誤報告的自訂堆疊傾印。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[BeginCustomDump 方法](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|指定錯誤報告的自訂堆疊傾印的組態。|  
-|[EndCustomDump 方法](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|清除之前呼叫所設定的自訂堆疊傾印組態`BeginCustomDump`。|  
-|[GetBucketParametersForCurrentException 方法](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|取得目前的例外狀況呼叫的執行緒上的 Watson 貯體。|  
+|[BeginCustomDump 方法](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|指定錯誤報告的自訂的堆疊傾印的組態。|  
+|[EndCustomDump 方法](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|清除先前呼叫所設定的自訂堆疊傾印組態`BeginCustomDump`。|  
+|[GetBucketParametersForCurrentException 方法](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|取得目前的例外狀況，在呼叫執行緒上的 Watson 值區。|  
   
 ## <a name="remarks"></a>備註  
- `BeginCustomDump`方法設定自訂的堆疊傾印組態。 `EndCustomDump`方法清除自訂堆疊傾印組態，並釋放任何相關聯的狀態。 它應該呼叫自訂的傾印完成後。  
+ `BeginCustomDump`方法會設定自訂的堆疊傾印組態。 `EndCustomDump`方法會清除自訂堆疊傾印組態，並釋放任何相關聯的狀態。 自訂的傾印完成之後，應該會呼叫它。  
   
 > [!IMPORTANT]
->  無法呼叫`EndCustomDump`會導致記憶體流失。  
+>  無法呼叫`EndCustomDump`會造成記憶體遺漏。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ECustomDumpItemKind 列舉](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)  
- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [ECustomDumpItemKind 列舉](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)
+- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

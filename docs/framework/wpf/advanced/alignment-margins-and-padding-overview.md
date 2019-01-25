@@ -10,12 +10,12 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: 44c8814362ebb490d5e7676496309b2124782b78
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c716c07fabe5b93f13c86f8d347e4fd4d058145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569949"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>對齊、邊界和填補概觀
 <xref:System.Windows.FrameworkElement>類別會公開數個屬性，用來精確定位子項目。 本主題將討論四個最重要的屬性： <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>， <xref:System.Windows.Controls.Border.Padding%2A>，和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>。 一定要了解這些屬性的作用，因為它們提供控制 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中項目位置的基礎。  
@@ -139,13 +139,13 @@ ms.locfileid: "43800884"
 ## <a name="whats-next"></a>後續步驟  
  位置所定義的內容<xref:System.Windows.FrameworkElement>類別讓您精細控制內的項目位置的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 現在您有數種技巧可使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 進一步使用位置項目。  
   
- 有更詳細說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 版面配置的其他資源可供使用。 [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)主題包含有關的各種詳細<xref:System.Windows.Controls.Panel>項目。 本主題[逐步解說： 我第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)介紹進階的技術，使用版面配置項目來定位元件，並將其動作繫結至資料來源。  
+ 有更詳細說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 版面配置的其他資源可供使用。 [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)主題包含有關的各種詳細<xref:System.Windows.Controls.Panel>項目。 本主題[逐步解說：我第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)介紹進階的技術，使用版面配置項目來定位元件，並將其動作繫結至資料來源。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.Margin%2A>  
- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)  
- [WPF 版面配置庫範例](https://go.microsoft.com/fwlink/?LinkID=160054)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.Margin%2A>
+- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)
+- [WPF 版面配置庫範例](https://go.microsoft.com/fwlink/?LinkID=160054)
