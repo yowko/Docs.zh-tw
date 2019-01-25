@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 063ddd0bfa1734d43f90b4680166c21b80f5cc05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 17673fb3684747f42556caef4ea54db050eef56e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696174"
 ---
-# <a name="ihostmemorymanagervirtualfree-method"></a><span data-ttu-id="93aa9-102">IHostMemoryManager::VirtualFree 方法</span><span class="sxs-lookup"><span data-stu-id="93aa9-102">IHostMemoryManager::VirtualFree Method</span></span>
-<span data-ttu-id="93aa9-103">可做為對應的 Win32 函式的邏輯包裝函式。</span><span class="sxs-lookup"><span data-stu-id="93aa9-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="93aa9-104">Win32 實作`VirtualFree`釋放、 取消的認可，或釋出並取消認可呼叫的處理序的虛擬位址空間中的頁面區域。</span><span class="sxs-lookup"><span data-stu-id="93aa9-104">The Win32 implementation of `VirtualFree` releases, decommits, or releases and decommits a region of pages within the virtual address space of the calling process.</span></span>  
+# <a name="ihostmemorymanagervirtualfree-method"></a><span data-ttu-id="b276e-102">IHostMemoryManager::VirtualFree 方法</span><span class="sxs-lookup"><span data-stu-id="b276e-102">IHostMemoryManager::VirtualFree Method</span></span>
+<span data-ttu-id="b276e-103">可做為對應的 Win32 函式的邏輯包裝函式。</span><span class="sxs-lookup"><span data-stu-id="b276e-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="b276e-104">Win32 實作`VirtualFree`釋放、 取消認可，或釋出並取消認可頁面呼叫處理序虛擬位址空間內的某個區域。</span><span class="sxs-lookup"><span data-stu-id="b276e-104">The Win32 implementation of `VirtualFree` releases, decommits, or releases and decommits a region of pages within the virtual address space of the calling process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93aa9-105">語法</span><span class="sxs-lookup"><span data-stu-id="93aa9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b276e-105">語法</span><span class="sxs-lookup"><span data-stu-id="b276e-105">Syntax</span></span>  
   
 ```  
 HRESULT VirtualFree (  
@@ -37,42 +37,42 @@ HRESULT VirtualFree (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="93aa9-106">參數</span><span class="sxs-lookup"><span data-stu-id="93aa9-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b276e-106">參數</span><span class="sxs-lookup"><span data-stu-id="b276e-106">Parameters</span></span>  
  `lpAddress`  
- <span data-ttu-id="93aa9-107">[in]要釋放的虛擬記憶體分頁的基底位址指標。</span><span class="sxs-lookup"><span data-stu-id="93aa9-107">[in] A pointer to the base address of the virtual memory pages to be freed.</span></span>  
+ <span data-ttu-id="b276e-107">[in]要釋放虛擬記憶體分頁的基底位址指標。</span><span class="sxs-lookup"><span data-stu-id="b276e-107">[in] A pointer to the base address of the virtual memory pages to be freed.</span></span>  
   
  `dwSize`  
- <span data-ttu-id="93aa9-108">[in]以位元組為單位，要釋放的區域大小。</span><span class="sxs-lookup"><span data-stu-id="93aa9-108">[in] The size, in bytes, of the region to be freed.</span></span>  
+ <span data-ttu-id="b276e-108">[in]大小 （位元組），要釋放的區域。</span><span class="sxs-lookup"><span data-stu-id="b276e-108">[in] The size, in bytes, of the region to be freed.</span></span>  
   
  `dwFreeType`  
- <span data-ttu-id="93aa9-109">[in]釋放作業類型。</span><span class="sxs-lookup"><span data-stu-id="93aa9-109">[in] The type of freeing operation.</span></span>  
+ <span data-ttu-id="b276e-109">[in]釋放作業類型。</span><span class="sxs-lookup"><span data-stu-id="b276e-109">[in] The type of freeing operation.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="93aa9-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="93aa9-110">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b276e-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="b276e-110">Return Value</span></span>  
   
-|<span data-ttu-id="93aa9-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="93aa9-111">HRESULT</span></span>|<span data-ttu-id="93aa9-112">描述</span><span class="sxs-lookup"><span data-stu-id="93aa9-112">Description</span></span>|  
+|<span data-ttu-id="b276e-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b276e-111">HRESULT</span></span>|<span data-ttu-id="b276e-112">描述</span><span class="sxs-lookup"><span data-stu-id="b276e-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="93aa9-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="93aa9-113">S_OK</span></span>|<span data-ttu-id="93aa9-114">`VirtualFree` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="93aa9-114">`VirtualFree` returned successfully.</span></span>|  
-|<span data-ttu-id="93aa9-115">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="93aa9-115">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="93aa9-116">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="93aa9-116">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="93aa9-117">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="93aa9-117">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="93aa9-118">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="93aa9-118">The call timed out.</span></span>|  
-|<span data-ttu-id="93aa9-119">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="93aa9-119">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="93aa9-120">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="93aa9-120">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="93aa9-121">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="93aa9-121">HOST_E_ABANDONED</span></span>|<span data-ttu-id="93aa9-122">事件已取消時封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="93aa9-122">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="93aa9-123">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="93aa9-123">E_FAIL</span></span>|<span data-ttu-id="93aa9-124">發生未知的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="93aa9-124">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="93aa9-125">方法會傳回 E_FAIL CLR 已不再可用的處理序內。</span><span class="sxs-lookup"><span data-stu-id="93aa9-125">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="93aa9-126">裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="93aa9-126">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="93aa9-127">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="93aa9-127">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="93aa9-128">您嘗試釋放未配置到主機的記憶體。</span><span class="sxs-lookup"><span data-stu-id="93aa9-128">An attempt was made to free memory that was not allocated through the host.</span></span>|  
+|<span data-ttu-id="b276e-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="b276e-113">S_OK</span></span>|<span data-ttu-id="b276e-114">`VirtualFree` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="b276e-114">`VirtualFree` returned successfully.</span></span>|  
+|<span data-ttu-id="b276e-115">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b276e-115">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b276e-116">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="b276e-116">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="b276e-117">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="b276e-117">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="b276e-118">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="b276e-118">The call timed out.</span></span>|  
+|<span data-ttu-id="b276e-119">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="b276e-119">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="b276e-120">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="b276e-120">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="b276e-121">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="b276e-121">HOST_E_ABANDONED</span></span>|<span data-ttu-id="b276e-122">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="b276e-122">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="b276e-123">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b276e-123">E_FAIL</span></span>|<span data-ttu-id="b276e-124">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="b276e-124">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="b276e-125">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="b276e-125">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="b276e-126">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="b276e-126">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="b276e-127">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="b276e-127">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="b276e-128">您嘗試釋出透過主機未配置的記憶體。</span><span class="sxs-lookup"><span data-stu-id="b276e-128">An attempt was made to free memory that was not allocated through the host.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="93aa9-129">備註</span><span class="sxs-lookup"><span data-stu-id="93aa9-129">Remarks</span></span>  
- <span data-ttu-id="93aa9-130">`VirtualFree` 釋放與相關聯的虛擬記憶體分頁`lpAddress`透過之前呼叫的參數[ihostmemorymanager:: Virtualalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md)函式。</span><span class="sxs-lookup"><span data-stu-id="93aa9-130">`VirtualFree` frees virtual memory pages associated with the `lpAddress` parameter through an earlier call to the [IHostMemoryManager::VirtualAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md) function.</span></span> <span data-ttu-id="93aa9-131">嘗試釋放未配置到主機的記憶體應該傳回 HOST_E_INVALIDOPERATION。</span><span class="sxs-lookup"><span data-stu-id="93aa9-131">Attempts to free memory that was not allocated through the host should return HOST_E_INVALIDOPERATION.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b276e-129">備註</span><span class="sxs-lookup"><span data-stu-id="b276e-129">Remarks</span></span>  
+ <span data-ttu-id="b276e-130">`VirtualFree` 釋放相關聯的虛擬記憶體分頁`lpAddress`透過先前呼叫的參數[ihostmemorymanager:: Virtualalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md)函式。</span><span class="sxs-lookup"><span data-stu-id="b276e-130">`VirtualFree` frees virtual memory pages associated with the `lpAddress` parameter through an earlier call to the [IHostMemoryManager::VirtualAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md) function.</span></span> <span data-ttu-id="b276e-131">嘗試釋出透過主機未配置的記憶體應傳回 HOST_E_INVALIDOPERATION。</span><span class="sxs-lookup"><span data-stu-id="b276e-131">Attempts to free memory that was not allocated through the host should return HOST_E_INVALIDOPERATION.</span></span>  
   
- <span data-ttu-id="93aa9-132">語意都完全相同的 Win32 實作`VirtualFree`。</span><span class="sxs-lookup"><span data-stu-id="93aa9-132">The semantics are identical to those of the Win32 implementation of `VirtualFree`.</span></span> <span data-ttu-id="93aa9-133">如需詳細資訊，請參閱 Windows 平台的文件。</span><span class="sxs-lookup"><span data-stu-id="93aa9-133">For more information, see the Windows Platform documentation.</span></span>  
+ <span data-ttu-id="b276e-132">語意都完全相同的 Win32 實作`VirtualFree`。</span><span class="sxs-lookup"><span data-stu-id="b276e-132">The semantics are identical to those of the Win32 implementation of `VirtualFree`.</span></span> <span data-ttu-id="b276e-133">如需詳細資訊，請參閱 Windows 平台的文件。</span><span class="sxs-lookup"><span data-stu-id="b276e-133">For more information, see the Windows Platform documentation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="93aa9-134">需求</span><span class="sxs-lookup"><span data-stu-id="93aa9-134">Requirements</span></span>  
- <span data-ttu-id="93aa9-135">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="93aa9-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b276e-134">需求</span><span class="sxs-lookup"><span data-stu-id="b276e-134">Requirements</span></span>  
+ <span data-ttu-id="b276e-135">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b276e-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="93aa9-136">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="93aa9-136">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b276e-136">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b276e-136">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="93aa9-137">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="93aa9-137">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b276e-137">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="b276e-137">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="93aa9-138">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93aa9-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b276e-138">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b276e-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93aa9-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="93aa9-139">See Also</span></span>  
- [<span data-ttu-id="93aa9-140">IHostMemoryManager 介面</span><span class="sxs-lookup"><span data-stu-id="93aa9-140">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
- [<span data-ttu-id="93aa9-141">IHostMalloc 介面</span><span class="sxs-lookup"><span data-stu-id="93aa9-141">IHostMalloc Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b276e-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b276e-139">See also</span></span>
+- [<span data-ttu-id="b276e-140">IHostMemoryManager 介面</span><span class="sxs-lookup"><span data-stu-id="b276e-140">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="b276e-141">IHostMalloc 介面</span><span class="sxs-lookup"><span data-stu-id="b276e-141">IHostMalloc Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)

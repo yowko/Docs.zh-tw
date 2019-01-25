@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4708fa173725e4c91a13f5b92cdbb1fdf8a8a4d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bb8686342b20bd6afe0a4c4803d64428ed95c98b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665769"
 ---
-# <a name="ireferenceidentity-interface"></a><span data-ttu-id="40fc4-102">IReferenceIdentity 介面</span><span class="sxs-lookup"><span data-stu-id="40fc4-102">IReferenceIdentity Interface</span></span>
-<span data-ttu-id="40fc4-103">表示唯一的簽章的程式碼物件的參考。</span><span class="sxs-lookup"><span data-stu-id="40fc4-103">Represents a reference to the unique signature of a code object.</span></span>  
+# <a name="ireferenceidentity-interface"></a><span data-ttu-id="76f62-102">IReferenceIdentity 介面</span><span class="sxs-lookup"><span data-stu-id="76f62-102">IReferenceIdentity Interface</span></span>
+<span data-ttu-id="76f62-103">表示唯一的簽章的程式碼物件的參考。</span><span class="sxs-lookup"><span data-stu-id="76f62-103">Represents a reference to the unique signature of a code object.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="40fc4-104">方法</span><span class="sxs-lookup"><span data-stu-id="40fc4-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="76f62-104">方法</span><span class="sxs-lookup"><span data-stu-id="76f62-104">Methods</span></span>  
   
-|<span data-ttu-id="40fc4-105">方法</span><span class="sxs-lookup"><span data-stu-id="40fc4-105">Method</span></span>|<span data-ttu-id="40fc4-106">描述</span><span class="sxs-lookup"><span data-stu-id="40fc4-106">Description</span></span>|  
+|<span data-ttu-id="76f62-105">方法</span><span class="sxs-lookup"><span data-stu-id="76f62-105">Method</span></span>|<span data-ttu-id="76f62-106">描述</span><span class="sxs-lookup"><span data-stu-id="76f62-106">Description</span></span>|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|<span data-ttu-id="40fc4-107">取得新的介面指標`IReferenceIdentity`等同於此執行個體`IReferenceIdentity`，除非有指定的屬性變更。</span><span class="sxs-lookup"><span data-stu-id="40fc4-107">Gets an interface pointer to a new `IReferenceIdentity` instance that is identical to this `IReferenceIdentity`, except for the specified attribute changes.</span></span>|  
-|`IReferenceIdentity::EnumAttributes`|<span data-ttu-id="40fc4-108">取得的介面指標`IEnumIDENTITY_ATTRIBUTE`包含與此相關聯之屬性的執行個體`IReferenceIdentity`。</span><span class="sxs-lookup"><span data-stu-id="40fc4-108">Gets an interface pointer to an `IEnumIDENTITY_ATTRIBUTE` instance that contains the attributes associated with this `IReferenceIdentity`.</span></span>|  
-|`IReferenceIdentity::GetAttribute`|<span data-ttu-id="40fc4-109">在指定的命名空間中具有指定之名稱取得屬性的值。</span><span class="sxs-lookup"><span data-stu-id="40fc4-109">Gets the value of the attribute in the specified namespace, with the specified name.</span></span>|  
-|`IReferenceIdentity::SetAttribute`|<span data-ttu-id="40fc4-110">設定具有指定的命名空間與指定的名稱，以指定的值的屬性。</span><span class="sxs-lookup"><span data-stu-id="40fc4-110">Sets the attribute that has the specified namespace and the specified name to the specified value.</span></span>|  
+|`IReferenceIdentity::Clone`|<span data-ttu-id="76f62-107">取得新的介面指標`IReferenceIdentity`等於這個執行個體`IReferenceIdentity`，但不包括指定的屬性變更。</span><span class="sxs-lookup"><span data-stu-id="76f62-107">Gets an interface pointer to a new `IReferenceIdentity` instance that is identical to this `IReferenceIdentity`, except for the specified attribute changes.</span></span>|  
+|`IReferenceIdentity::EnumAttributes`|<span data-ttu-id="76f62-108">取得的介面指標`IEnumIDENTITY_ATTRIBUTE`執行個體，包含與此相關聯的屬性`IReferenceIdentity`。</span><span class="sxs-lookup"><span data-stu-id="76f62-108">Gets an interface pointer to an `IEnumIDENTITY_ATTRIBUTE` instance that contains the attributes associated with this `IReferenceIdentity`.</span></span>|  
+|`IReferenceIdentity::GetAttribute`|<span data-ttu-id="76f62-109">取得屬性的值中指定的命名空間，以指定的名稱。</span><span class="sxs-lookup"><span data-stu-id="76f62-109">Gets the value of the attribute in the specified namespace, with the specified name.</span></span>|  
+|`IReferenceIdentity::SetAttribute`|<span data-ttu-id="76f62-110">設定具有指定的命名空間和指定的值指定之名稱的屬性。</span><span class="sxs-lookup"><span data-stu-id="76f62-110">Sets the attribute that has the specified namespace and the specified name to the specified value.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="40fc4-111">需求</span><span class="sxs-lookup"><span data-stu-id="40fc4-111">Requirements</span></span>  
- <span data-ttu-id="40fc4-112">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="40fc4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="76f62-111">需求</span><span class="sxs-lookup"><span data-stu-id="76f62-111">Requirements</span></span>  
+ <span data-ttu-id="76f62-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="76f62-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="40fc4-113">**標頭：** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="40fc4-113">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="76f62-113">**標頭：** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="76f62-113">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="40fc4-114">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40fc4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="76f62-114">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76f62-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="40fc4-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="40fc4-115">See Also</span></span>  
- [<span data-ttu-id="40fc4-116">融合介面</span><span class="sxs-lookup"><span data-stu-id="40fc4-116">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [<span data-ttu-id="40fc4-117">IEnumIDENTITY_ATTRIBUTE 介面</span><span class="sxs-lookup"><span data-stu-id="40fc4-117">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+## <a name="see-also"></a><span data-ttu-id="76f62-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="76f62-115">See also</span></span>
+- [<span data-ttu-id="76f62-116">融合介面</span><span class="sxs-lookup"><span data-stu-id="76f62-116">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="76f62-117">IEnumIDENTITY_ATTRIBUTE 介面</span><span class="sxs-lookup"><span data-stu-id="76f62-117">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)

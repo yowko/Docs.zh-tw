@@ -1,21 +1,21 @@
 ---
-title: '&lt;篩選器&gt;'
+title: '&lt;filter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: f7224eab9f3c21bce9839298b50c52e9da08b6f7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 9fae9a599299fdd8cf1e996593514fc0ef38b6ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645505"
 ---
-# <a name="ltfiltergt"></a><span data-ttu-id="fec05-102">&lt;篩選器&gt;</span><span class="sxs-lookup"><span data-stu-id="fec05-102">&lt;filter&gt;</span></span>
+# <a name="ltfiltergt"></a><span data-ttu-id="25adb-102">&lt;filter&gt;</span><span class="sxs-lookup"><span data-stu-id="25adb-102">&lt;filter&gt;</span></span>
 
-<span data-ttu-id="fec05-103">定義路由篩選條件，判斷類型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>傳入訊息，也可以在任何支援的資料或篩選條件所需的參數為時使用。</span><span class="sxs-lookup"><span data-stu-id="fec05-103">Defines a routing filter, which determines the type of Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages, as well any supporting data or parameters required by the filter.</span></span>
+<span data-ttu-id="25adb-103">定義路由篩選條件，判斷類型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>傳入訊息，也可以在任何支援的資料或篩選條件所需的參數為時使用。</span><span class="sxs-lookup"><span data-stu-id="25adb-103">Defines a routing filter, which determines the type of Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages, as well any supporting data or parameters required by the filter.</span></span>
 
-<span data-ttu-id="fec05-104">\<system.serviceModel >\<路由 >\<篩選條件 >\<篩選條件 ></span><span class="sxs-lookup"><span data-stu-id="fec05-104">\<system.serviceModel> \<routing> \<filters> \<filter></span></span>
+<span data-ttu-id="25adb-104">\<system.serviceModel> \<routing> \<filters> \<filter></span><span class="sxs-lookup"><span data-stu-id="25adb-104">\<system.serviceModel> \<routing> \<filters> \<filter></span></span>
   
-## <a name="syntax"></a><span data-ttu-id="fec05-105">語法</span><span class="sxs-lookup"><span data-stu-id="fec05-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25adb-105">語法</span><span class="sxs-lookup"><span data-stu-id="25adb-105">Syntax</span></span>  
   
 ```xml  
 <routing>
@@ -28,31 +28,31 @@ ms.locfileid: "54146403"
 </routing>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fec05-106">屬性和元素</span><span class="sxs-lookup"><span data-stu-id="fec05-106">Attributes and elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="25adb-106">屬性和元素</span><span class="sxs-lookup"><span data-stu-id="25adb-106">Attributes and elements</span></span>
 
-<span data-ttu-id="fec05-107">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="fec05-107">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="25adb-107">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="25adb-107">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="fec05-108">屬性</span><span class="sxs-lookup"><span data-stu-id="fec05-108">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="25adb-108">屬性</span><span class="sxs-lookup"><span data-stu-id="25adb-108">Attributes</span></span>
 
-| <span data-ttu-id="fec05-109">屬性</span><span class="sxs-lookup"><span data-stu-id="fec05-109">Attribute</span></span>  | <span data-ttu-id="fec05-110">描述</span><span class="sxs-lookup"><span data-stu-id="fec05-110">Description</span></span> |
+| <span data-ttu-id="25adb-109">屬性</span><span class="sxs-lookup"><span data-stu-id="25adb-109">Attribute</span></span>  | <span data-ttu-id="25adb-110">描述</span><span class="sxs-lookup"><span data-stu-id="25adb-110">Description</span></span> |
 | ---------- | ----------- |
-| <span data-ttu-id="fec05-111">customType</span><span class="sxs-lookup"><span data-stu-id="fec05-111">customType</span></span> | <span data-ttu-id="fec05-112">字串，其中包含要做為篩選之自訂類型的完整類型名稱。</span><span class="sxs-lookup"><span data-stu-id="fec05-112">A string containing the fully qualified type name of the custom type to be used as a filter.</span></span> <span data-ttu-id="fec05-113">如果`filterType`設為`custom`，這個屬性包含要建立之類別的完整型別名稱。</span><span class="sxs-lookup"><span data-stu-id="fec05-113">If `filterType` is set to `custom`, this attribute contains the fully qualified type name of the class to create.</span></span>  <span data-ttu-id="fec05-114">`filterData` 也可包含評估自訂型別篩選條件期間要使用的值。</span><span class="sxs-lookup"><span data-stu-id="fec05-114">`filterData` may also contain values to be used during evaluation of the custom type filter.</span></span> |
-| <span data-ttu-id="fec05-115">filterData</span><span class="sxs-lookup"><span data-stu-id="fec05-115">filterData</span></span> | <span data-ttu-id="fec05-116">包含篩選資料的字串。</span><span class="sxs-lookup"><span data-stu-id="fec05-116">A string containing the filter data.</span></span> <span data-ttu-id="fec05-117">如需如何指定這個屬性的詳細資訊，請參閱 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>。</span><span class="sxs-lookup"><span data-stu-id="fec05-117">For more information on how to specify this attribute, see <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>.</span></span> |
-| <span data-ttu-id="fec05-118">filterType</span><span class="sxs-lookup"><span data-stu-id="fec05-118">filterType</span></span> | <span data-ttu-id="fec05-119">包含篩選條件類型的字串。</span><span class="sxs-lookup"><span data-stu-id="fec05-119">A string containing the filter type.</span></span> <span data-ttu-id="fec05-120">此屬性的型別為 <xref:System.ServiceModel.Routing.Configuration.FilterType>。</span><span class="sxs-lookup"><span data-stu-id="fec05-120">This attribute is of <xref:System.ServiceModel.Routing.Configuration.FilterType> type.</span></span>  <span data-ttu-id="fec05-121">如需此屬性與 `filterData` 屬性如何搭配運作的詳細資訊，請參閱 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>。</span><span class="sxs-lookup"><span data-stu-id="fec05-121">For more information on how this works with the `filterData` attribute, see <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>.</span></span> |
-| <span data-ttu-id="fec05-122">name</span><span class="sxs-lookup"><span data-stu-id="fec05-122">name</span></span>       | <span data-ttu-id="fec05-123">字串，其中包含這個篩選項目的唯一名稱。</span><span class="sxs-lookup"><span data-stu-id="fec05-123">A string containing the unique name of this filter element.</span></span> |
+| <span data-ttu-id="25adb-111">customType</span><span class="sxs-lookup"><span data-stu-id="25adb-111">customType</span></span> | <span data-ttu-id="25adb-112">字串，其中包含要做為篩選之自訂類型的完整類型名稱。</span><span class="sxs-lookup"><span data-stu-id="25adb-112">A string containing the fully qualified type name of the custom type to be used as a filter.</span></span> <span data-ttu-id="25adb-113">如果`filterType`設為`custom`，這個屬性包含要建立之類別的完整型別名稱。</span><span class="sxs-lookup"><span data-stu-id="25adb-113">If `filterType` is set to `custom`, this attribute contains the fully qualified type name of the class to create.</span></span>  <span data-ttu-id="25adb-114">`filterData` 也可包含評估自訂型別篩選條件期間要使用的值。</span><span class="sxs-lookup"><span data-stu-id="25adb-114">`filterData` may also contain values to be used during evaluation of the custom type filter.</span></span> |
+| <span data-ttu-id="25adb-115">filterData</span><span class="sxs-lookup"><span data-stu-id="25adb-115">filterData</span></span> | <span data-ttu-id="25adb-116">包含篩選資料的字串。</span><span class="sxs-lookup"><span data-stu-id="25adb-116">A string containing the filter data.</span></span> <span data-ttu-id="25adb-117">如需如何指定這個屬性的詳細資訊，請參閱 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>。</span><span class="sxs-lookup"><span data-stu-id="25adb-117">For more information on how to specify this attribute, see <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>.</span></span> |
+| <span data-ttu-id="25adb-118">filterType</span><span class="sxs-lookup"><span data-stu-id="25adb-118">filterType</span></span> | <span data-ttu-id="25adb-119">包含篩選條件類型的字串。</span><span class="sxs-lookup"><span data-stu-id="25adb-119">A string containing the filter type.</span></span> <span data-ttu-id="25adb-120">此屬性的型別為 <xref:System.ServiceModel.Routing.Configuration.FilterType>。</span><span class="sxs-lookup"><span data-stu-id="25adb-120">This attribute is of <xref:System.ServiceModel.Routing.Configuration.FilterType> type.</span></span>  <span data-ttu-id="25adb-121">如需此屬性與 `filterData` 屬性如何搭配運作的詳細資訊，請參閱 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>。</span><span class="sxs-lookup"><span data-stu-id="25adb-121">For more information on how this works with the `filterData` attribute, see <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>.</span></span> |
+| <span data-ttu-id="25adb-122">name</span><span class="sxs-lookup"><span data-stu-id="25adb-122">name</span></span>       | <span data-ttu-id="25adb-123">字串，其中包含這個篩選項目的唯一名稱。</span><span class="sxs-lookup"><span data-stu-id="25adb-123">A string containing the unique name of this filter element.</span></span> |
 
-### <a name="child-elements"></a><span data-ttu-id="fec05-124">子元素</span><span class="sxs-lookup"><span data-stu-id="fec05-124">Child elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="25adb-124">子元素</span><span class="sxs-lookup"><span data-stu-id="25adb-124">Child elements</span></span>
 
-<span data-ttu-id="fec05-125">無。</span><span class="sxs-lookup"><span data-stu-id="fec05-125">None.</span></span>
+<span data-ttu-id="25adb-125">無。</span><span class="sxs-lookup"><span data-stu-id="25adb-125">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="fec05-126">父元素</span><span class="sxs-lookup"><span data-stu-id="fec05-126">Parent elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="25adb-126">父元素</span><span class="sxs-lookup"><span data-stu-id="25adb-126">Parent elements</span></span>
 
-| <span data-ttu-id="fec05-127">元素</span><span class="sxs-lookup"><span data-stu-id="fec05-127">Element</span></span> | <span data-ttu-id="fec05-128">描述</span><span class="sxs-lookup"><span data-stu-id="fec05-128">Description</span></span> |
+| <span data-ttu-id="25adb-127">元素</span><span class="sxs-lookup"><span data-stu-id="25adb-127">Element</span></span> | <span data-ttu-id="25adb-128">描述</span><span class="sxs-lookup"><span data-stu-id="25adb-128">Description</span></span> |
 | ------- | ----------- |
-| [<span data-ttu-id="fec05-129">\<路由 ></span><span class="sxs-lookup"><span data-stu-id="fec05-129">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | <span data-ttu-id="fec05-130">定義一組路由篩選條件，判斷類型的 Windows Communication Foundation (WCF) 的組態區段<xref:System.ServiceModel.Dispatcher.MessageFilter>傳入訊息時使用。</span><span class="sxs-lookup"><span data-stu-id="fec05-130">A configuration section for defining a set of routing filters, which determine the type of Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages.</span></span> |
+| [<span data-ttu-id="25adb-129">\<routing></span><span class="sxs-lookup"><span data-stu-id="25adb-129">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | <span data-ttu-id="25adb-130">定義一組路由篩選條件，判斷類型的 Windows Communication Foundation (WCF) 的組態區段<xref:System.ServiceModel.Dispatcher.MessageFilter>傳入訊息時使用。</span><span class="sxs-lookup"><span data-stu-id="25adb-130">A configuration section for defining a set of routing filters, which determine the type of Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages.</span></span> |
 
-## <a name="see-also"></a><span data-ttu-id="fec05-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fec05-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25adb-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="25adb-131">See also</span></span>
 
-<xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>    
-<xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A?displayProperty=nameWithType>   
-<xref:System.ServiceModel.Routing.Configuration.FilterType?displayProperty=nameWithType>   
+- <xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterType?displayProperty=nameWithType>

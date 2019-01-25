@@ -17,29 +17,29 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 350aecb9f9c99c9aa44ae6df6d31c7cb69ae5760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: acff919cbeb6b5d71197664139cdc9212961e314
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629510"
 ---
-# <a name="isymunmanageddocumenthasembeddedsource-method"></a><span data-ttu-id="8387a-102">ISymUnmanagedDocument::HasEmbeddedSource 方法</span><span class="sxs-lookup"><span data-stu-id="8387a-102">ISymUnmanagedDocument::HasEmbeddedSource Method</span></span>
-<span data-ttu-id="8387a-103">傳回`true`如果文件來源內嵌在偵錯符號; 否則傳回`false`。</span><span class="sxs-lookup"><span data-stu-id="8387a-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span></span>  
+# <a name="isymunmanageddocumenthasembeddedsource-method"></a><span data-ttu-id="eec71-102">ISymUnmanagedDocument::HasEmbeddedSource 方法</span><span class="sxs-lookup"><span data-stu-id="eec71-102">ISymUnmanagedDocument::HasEmbeddedSource Method</span></span>
+<span data-ttu-id="eec71-103">會傳回`true`文件具有來源內嵌在偵錯的符號; 否則會傳回`false`。</span><span class="sxs-lookup"><span data-stu-id="eec71-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8387a-104">語法</span><span class="sxs-lookup"><span data-stu-id="8387a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eec71-104">語法</span><span class="sxs-lookup"><span data-stu-id="eec71-104">Syntax</span></span>  
   
 ```  
 HRESULT HasEmbeddedSource(  
    [out, retval]  BOOL  *pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8387a-105">參數</span><span class="sxs-lookup"><span data-stu-id="8387a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="eec71-105">參數</span><span class="sxs-lookup"><span data-stu-id="eec71-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="8387a-106">[out]此變數會指出是否有來源文件的指標會內嵌在偵錯符號。</span><span class="sxs-lookup"><span data-stu-id="8387a-106">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span></span>  
+ <span data-ttu-id="eec71-106">[out]此變數會指出是否有來源文件的指標會內嵌在偵錯符號。</span><span class="sxs-lookup"><span data-stu-id="eec71-106">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8387a-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="8387a-107">Return Value</span></span>  
- <span data-ttu-id="8387a-108">如果此方法成功為 S_OK。</span><span class="sxs-lookup"><span data-stu-id="8387a-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="eec71-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="eec71-107">Return Value</span></span>  
+ <span data-ttu-id="eec71-108">如果方法成功為 S_OK。</span><span class="sxs-lookup"><span data-stu-id="eec71-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8387a-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8387a-109">See Also</span></span>  
- [<span data-ttu-id="8387a-110">ISymUnmanagedDocument 介面</span><span class="sxs-lookup"><span data-stu-id="8387a-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="eec71-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eec71-109">See also</span></span>
+- [<span data-ttu-id="eec71-110">ISymUnmanagedDocument 介面</span><span class="sxs-lookup"><span data-stu-id="eec71-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

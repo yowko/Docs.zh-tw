@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1d920a97338bba3e90ec8f0c440f6dd2a93e722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f3c430e18864c0352b43641bce9a7d52af69cc80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718217"
 ---
-# <a name="icordebugmanagedcallbackloadclass-method"></a><span data-ttu-id="589de-102">ICorDebugManagedCallback::LoadClass 方法</span><span class="sxs-lookup"><span data-stu-id="589de-102">ICorDebugManagedCallback::LoadClass Method</span></span>
-<span data-ttu-id="589de-103">告知偵錯工具已載入類別。</span><span class="sxs-lookup"><span data-stu-id="589de-103">Notifies the debugger that a class has been loaded.</span></span>  
+# <a name="icordebugmanagedcallbackloadclass-method"></a><span data-ttu-id="0ec4a-102">ICorDebugManagedCallback::LoadClass 方法</span><span class="sxs-lookup"><span data-stu-id="0ec4a-102">ICorDebugManagedCallback::LoadClass Method</span></span>
+<span data-ttu-id="0ec4a-103">已載入類別會告知偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="0ec4a-103">Notifies the debugger that a class has been loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="589de-104">語法</span><span class="sxs-lookup"><span data-stu-id="589de-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ec4a-104">語法</span><span class="sxs-lookup"><span data-stu-id="0ec4a-104">Syntax</span></span>  
   
 ```  
 HRESULT LoadClass (  
@@ -36,27 +36,27 @@ HRESULT LoadClass (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="589de-105">參數</span><span class="sxs-lookup"><span data-stu-id="589de-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0ec4a-105">參數</span><span class="sxs-lookup"><span data-stu-id="0ec4a-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="589de-106">[in]ICorDebugAppDomain 物件，表示應用程式定義域到其中已載入類別指標。</span><span class="sxs-lookup"><span data-stu-id="589de-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the class has been loaded.</span></span>  
+ <span data-ttu-id="0ec4a-106">[in]表示已載入類別所在的應用程式定義域的 ICorDebugAppDomain 物件指標。</span><span class="sxs-lookup"><span data-stu-id="0ec4a-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the class has been loaded.</span></span>  
   
  `c`  
- <span data-ttu-id="589de-107">[in]表示類別 ICorDebugClass 物件的指標。</span><span class="sxs-lookup"><span data-stu-id="589de-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
+ <span data-ttu-id="0ec4a-107">[in]ICorDebugClass 物件，代表的類別指標。</span><span class="sxs-lookup"><span data-stu-id="0ec4a-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="589de-108">備註</span><span class="sxs-lookup"><span data-stu-id="589de-108">Remarks</span></span>  
- <span data-ttu-id="589de-109">只有當已啟用類別載入的模組包含的類別，就會發生這個回呼。</span><span class="sxs-lookup"><span data-stu-id="589de-109">This callback occurs only if class loading has been enabled for the module that contains the class.</span></span> <span data-ttu-id="589de-110">類別載入一定會啟用動態模組。</span><span class="sxs-lookup"><span data-stu-id="589de-110">Class loading is always enabled for dynamic modules.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0ec4a-108">備註</span><span class="sxs-lookup"><span data-stu-id="0ec4a-108">Remarks</span></span>  
+ <span data-ttu-id="0ec4a-109">只有當類別載入已啟用模組包含類別，就會發生這個回呼。</span><span class="sxs-lookup"><span data-stu-id="0ec4a-109">This callback occurs only if class loading has been enabled for the module that contains the class.</span></span> <span data-ttu-id="0ec4a-110">類別載入一定會啟用動態模組。</span><span class="sxs-lookup"><span data-stu-id="0ec4a-110">Class loading is always enabled for dynamic modules.</span></span>  
   
- <span data-ttu-id="589de-111">`LoadClass`回呼會提供將中斷點繫結至新產生的類別，在動態模組中的適當時間。</span><span class="sxs-lookup"><span data-stu-id="589de-111">The `LoadClass` callback provides an appropriate time to bind breakpoints to newly generated classes in dynamic modules.</span></span>  
+ <span data-ttu-id="0ec4a-111">`LoadClass`回呼會提供適當的時間，來將中斷點繫結至新產生的類別，在動態模組中。</span><span class="sxs-lookup"><span data-stu-id="0ec4a-111">The `LoadClass` callback provides an appropriate time to bind breakpoints to newly generated classes in dynamic modules.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="589de-112">需求</span><span class="sxs-lookup"><span data-stu-id="589de-112">Requirements</span></span>  
- <span data-ttu-id="589de-113">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="589de-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0ec4a-112">需求</span><span class="sxs-lookup"><span data-stu-id="0ec4a-112">Requirements</span></span>  
+ <span data-ttu-id="0ec4a-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0ec4a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="589de-114">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="589de-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0ec4a-114">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0ec4a-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="589de-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="589de-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0ec4a-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0ec4a-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="589de-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="589de-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0ec4a-116">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ec4a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="589de-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="589de-117">See Also</span></span>  
- [<span data-ttu-id="589de-118">UnloadClass 方法</span><span class="sxs-lookup"><span data-stu-id="589de-118">UnloadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)  
- [<span data-ttu-id="589de-119">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="589de-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0ec4a-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0ec4a-117">See also</span></span>
+- [<span data-ttu-id="0ec4a-118">UnloadClass 方法</span><span class="sxs-lookup"><span data-stu-id="0ec4a-118">UnloadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)
+- [<span data-ttu-id="0ec4a-119">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="0ec4a-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
