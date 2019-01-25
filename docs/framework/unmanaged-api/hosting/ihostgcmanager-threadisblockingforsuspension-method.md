@@ -17,51 +17,51 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85921156860f52eb2a898e6be356e191c2a4f02d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d338b03247f1304f065afc459eb70aac725937c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709802"
 ---
-# <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a><span data-ttu-id="115a4-102">IHostGCManager::ThreadIsBlockingForSuspension 方法</span><span class="sxs-lookup"><span data-stu-id="115a4-102">IHostGCManager::ThreadIsBlockingForSuspension Method</span></span>
-<span data-ttu-id="115a4-103">通知主機，從中進行方法呼叫的執行緒即將封鎖記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="115a4-103">Notifies the host that the thread from which the method call was made is about to block for a garbage collection.</span></span>  
+# <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a><span data-ttu-id="05a97-102">IHostGCManager::ThreadIsBlockingForSuspension 方法</span><span class="sxs-lookup"><span data-stu-id="05a97-102">IHostGCManager::ThreadIsBlockingForSuspension Method</span></span>
+<span data-ttu-id="05a97-103">主應用程式在進行方法呼叫的執行緒即將封鎖記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="05a97-103">Notifies the host that the thread from which the method call was made is about to block for a garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="115a4-104">語法</span><span class="sxs-lookup"><span data-stu-id="115a4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="05a97-104">語法</span><span class="sxs-lookup"><span data-stu-id="05a97-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadIsBlockingForSuspension ();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="115a4-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="115a4-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="05a97-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="05a97-105">Return Value</span></span>  
   
-|<span data-ttu-id="115a4-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="115a4-106">HRESULT</span></span>|<span data-ttu-id="115a4-107">描述</span><span class="sxs-lookup"><span data-stu-id="115a4-107">Description</span></span>|  
+|<span data-ttu-id="05a97-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="05a97-106">HRESULT</span></span>|<span data-ttu-id="05a97-107">描述</span><span class="sxs-lookup"><span data-stu-id="05a97-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="115a4-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="115a4-108">S_OK</span></span>|<span data-ttu-id="115a4-109">`ThreadIsBlockingForSuspension` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="115a4-109">`ThreadIsBlockingForSuspension` returned successfully.</span></span>|  
-|<span data-ttu-id="115a4-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="115a4-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="115a4-111">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="115a4-111">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="115a4-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="115a4-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="115a4-113">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="115a4-113">The call timed out.</span></span>|  
-|<span data-ttu-id="115a4-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="115a4-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="115a4-115">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="115a4-115">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="115a4-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="115a4-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="115a4-117">事件已取消時封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="115a4-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="115a4-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="115a4-118">E_FAIL</span></span>|<span data-ttu-id="115a4-119">發生未知的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="115a4-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="115a4-120">方法會傳回 E_FAIL CLR 已不再可用的處理序內。</span><span class="sxs-lookup"><span data-stu-id="115a4-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="115a4-121">裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="115a4-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="05a97-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="05a97-108">S_OK</span></span>|<span data-ttu-id="05a97-109">`ThreadIsBlockingForSuspension` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="05a97-109">`ThreadIsBlockingForSuspension` returned successfully.</span></span>|  
+|<span data-ttu-id="05a97-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="05a97-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="05a97-111">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="05a97-111">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="05a97-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="05a97-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="05a97-113">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="05a97-113">The call timed out.</span></span>|  
+|<span data-ttu-id="05a97-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="05a97-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="05a97-115">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="05a97-115">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="05a97-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="05a97-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="05a97-117">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="05a97-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="05a97-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="05a97-118">E_FAIL</span></span>|<span data-ttu-id="05a97-119">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="05a97-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="05a97-120">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="05a97-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="05a97-121">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="05a97-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="115a4-122">備註</span><span class="sxs-lookup"><span data-stu-id="115a4-122">Remarks</span></span>  
- <span data-ttu-id="115a4-123">CLR 通常會呼叫`ThreadIsBlockForSuspension`方法以準備進行回收，若要讓主機有機會針對未受管理的工作的執行緒重新排程。</span><span class="sxs-lookup"><span data-stu-id="115a4-123">The CLR typically calls the `ThreadIsBlockForSuspension` method in preparation for a garbage collection, to give the host an opportunity to reschedule the thread for unmanaged tasks.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="05a97-122">備註</span><span class="sxs-lookup"><span data-stu-id="05a97-122">Remarks</span></span>  
+ <span data-ttu-id="05a97-123">CLR 通常會呼叫`ThreadIsBlockForSuspension`方法以準備進行回收，若要讓主應用程式有機會重新排程未受管理的工作的執行緒。</span><span class="sxs-lookup"><span data-stu-id="05a97-123">The CLR typically calls the `ThreadIsBlockForSuspension` method in preparation for a garbage collection, to give the host an opportunity to reschedule the thread for unmanaged tasks.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="115a4-124">主機可以重新排定工作只有在呼叫之後`ThreadIsBlockingForSuspension`。</span><span class="sxs-lookup"><span data-stu-id="115a4-124">The host can reschedule tasks only after a call to `ThreadIsBlockingForSuspension`.</span></span> <span data-ttu-id="115a4-125">在執行階段呼叫[SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md)，主機必須重新排程工作。</span><span class="sxs-lookup"><span data-stu-id="115a4-125">After the runtime calls [SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md), the host must not reschedule a task.</span></span>  
+>  <span data-ttu-id="05a97-124">主應用程式可以重新排程工作只有在呼叫之後`ThreadIsBlockingForSuspension`。</span><span class="sxs-lookup"><span data-stu-id="05a97-124">The host can reschedule tasks only after a call to `ThreadIsBlockingForSuspension`.</span></span> <span data-ttu-id="05a97-125">在執行階段會呼叫後[SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md)，主機必須重新排程工作。</span><span class="sxs-lookup"><span data-stu-id="05a97-125">After the runtime calls [SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md), the host must not reschedule a task.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="115a4-126">需求</span><span class="sxs-lookup"><span data-stu-id="115a4-126">Requirements</span></span>  
- <span data-ttu-id="115a4-127">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="115a4-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="05a97-126">需求</span><span class="sxs-lookup"><span data-stu-id="05a97-126">Requirements</span></span>  
+ <span data-ttu-id="05a97-127">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="05a97-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="115a4-128">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="115a4-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="05a97-128">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="05a97-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="115a4-129">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="115a4-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="05a97-129">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="05a97-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="115a4-130">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="115a4-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="05a97-130">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05a97-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="115a4-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="115a4-131">See Also</span></span>  
- [<span data-ttu-id="115a4-132">ICLRTask 介面</span><span class="sxs-lookup"><span data-stu-id="115a4-132">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [<span data-ttu-id="115a4-133">ICLRTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="115a4-133">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [<span data-ttu-id="115a4-134">IHostTask 介面</span><span class="sxs-lookup"><span data-stu-id="115a4-134">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [<span data-ttu-id="115a4-135">IHostTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="115a4-135">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
- [<span data-ttu-id="115a4-136">IHostGCManager 介面</span><span class="sxs-lookup"><span data-stu-id="115a4-136">IHostGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="05a97-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="05a97-131">See also</span></span>
+- [<span data-ttu-id="05a97-132">ICLRTask 介面</span><span class="sxs-lookup"><span data-stu-id="05a97-132">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="05a97-133">ICLRTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="05a97-133">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="05a97-134">IHostTask 介面</span><span class="sxs-lookup"><span data-stu-id="05a97-134">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="05a97-135">IHostTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="05a97-135">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="05a97-136">IHostGCManager 介面</span><span class="sxs-lookup"><span data-stu-id="05a97-136">IHostGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)

@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed6ba8a738b4086b9150e0a1c7b300a519fa3092
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 102fcff6120822c5de0ede45d43a9cd064270085
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715474"
 ---
-# <a name="icordebughandlevalue-interface1"></a><span data-ttu-id="3b630-102">ICorDebugHandleValue Interface1</span><span class="sxs-lookup"><span data-stu-id="3b630-102">ICorDebugHandleValue Interface1</span></span>
-<span data-ttu-id="3b630-103">ICorDebugReferenceValue，表示要偵錯工具已建立的記憶體回收控制代碼的參考值的子類別。</span><span class="sxs-lookup"><span data-stu-id="3b630-103">A subclass of ICorDebugReferenceValue that represents a reference value to which the debugger has created a handle for garbage collection.</span></span>  
+# <a name="icordebughandlevalue-interface1"></a><span data-ttu-id="7e064-102">ICorDebugHandleValue Interface1</span><span class="sxs-lookup"><span data-stu-id="7e064-102">ICorDebugHandleValue Interface1</span></span>
+<span data-ttu-id="7e064-103">ICorDebugReferenceValue，代表要偵錯工具已建立為記憶體回收控制代碼的參考值的子類別。</span><span class="sxs-lookup"><span data-stu-id="7e064-103">A subclass of ICorDebugReferenceValue that represents a reference value to which the debugger has created a handle for garbage collection.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="3b630-104">方法</span><span class="sxs-lookup"><span data-stu-id="3b630-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7e064-104">方法</span><span class="sxs-lookup"><span data-stu-id="7e064-104">Methods</span></span>  
   
-|<span data-ttu-id="3b630-105">方法</span><span class="sxs-lookup"><span data-stu-id="3b630-105">Method</span></span>|<span data-ttu-id="3b630-106">描述</span><span class="sxs-lookup"><span data-stu-id="3b630-106">Description</span></span>|  
+|<span data-ttu-id="7e064-105">方法</span><span class="sxs-lookup"><span data-stu-id="7e064-105">Method</span></span>|<span data-ttu-id="7e064-106">描述</span><span class="sxs-lookup"><span data-stu-id="7e064-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="3b630-107">Dispose 方法</span><span class="sxs-lookup"><span data-stu-id="3b630-107">Dispose Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|<span data-ttu-id="3b630-108">釋放的控制代碼所參考`ICorDebugHandleValue`物件，而不會明確地釋放的介面指標。</span><span class="sxs-lookup"><span data-stu-id="3b630-108">Releases the handle referenced by this `ICorDebugHandleValue` object without explicitly releasing the interface pointer.</span></span>|  
-|[<span data-ttu-id="3b630-109">GetHandleType 方法</span><span class="sxs-lookup"><span data-stu-id="3b630-109">GetHandleType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|<span data-ttu-id="3b630-110">取得描述類型的控制代碼所參考的 CorDebugHandleType 值`ICorDebugHandleValue`。</span><span class="sxs-lookup"><span data-stu-id="3b630-110">Gets a CorDebugHandleType value that describes the kind of handle referenced by this `ICorDebugHandleValue`.</span></span>|  
+|[<span data-ttu-id="7e064-107">Dispose 方法</span><span class="sxs-lookup"><span data-stu-id="7e064-107">Dispose Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|<span data-ttu-id="7e064-108">釋放控制代碼所參考`ICorDebugHandleValue`未明確地釋放介面指標的物件。</span><span class="sxs-lookup"><span data-stu-id="7e064-108">Releases the handle referenced by this `ICorDebugHandleValue` object without explicitly releasing the interface pointer.</span></span>|  
+|[<span data-ttu-id="7e064-109">GetHandleType 方法</span><span class="sxs-lookup"><span data-stu-id="7e064-109">GetHandleType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|<span data-ttu-id="7e064-110">取得描述的控制代碼所參考類型的 CorDebugHandleType 值`ICorDebugHandleValue`。</span><span class="sxs-lookup"><span data-stu-id="7e064-110">Gets a CorDebugHandleType value that describes the kind of handle referenced by this `ICorDebugHandleValue`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3b630-111">備註</span><span class="sxs-lookup"><span data-stu-id="3b630-111">Remarks</span></span>  
- <span data-ttu-id="3b630-112">`ICorDebugReferenceValue`物件無效的執行中的偵錯的程式碼中斷。</span><span class="sxs-lookup"><span data-stu-id="3b630-112">An `ICorDebugReferenceValue` object is invalidated by a break in the execution of debugged code.</span></span> <span data-ttu-id="3b630-113">`ICorDebugHandleValue`維護符號和接續，透過其參考，直到明確釋放為止。</span><span class="sxs-lookup"><span data-stu-id="3b630-113">An `ICorDebugHandleValue` maintains its reference through breaks and continuations, until it is explicitly released.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7e064-111">備註</span><span class="sxs-lookup"><span data-stu-id="7e064-111">Remarks</span></span>  
+ <span data-ttu-id="7e064-112">`ICorDebugReferenceValue`物件都無效的執行中的偵錯的程式碼中斷。</span><span class="sxs-lookup"><span data-stu-id="7e064-112">An `ICorDebugReferenceValue` object is invalidated by a break in the execution of debugged code.</span></span> <span data-ttu-id="7e064-113">`ICorDebugHandleValue`維護透過符號和接續，其參考，直到明確釋放為止。</span><span class="sxs-lookup"><span data-stu-id="7e064-113">An `ICorDebugHandleValue` maintains its reference through breaks and continuations, until it is explicitly released.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3b630-114">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="3b630-114">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="7e064-114">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="7e064-114">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3b630-115">需求</span><span class="sxs-lookup"><span data-stu-id="3b630-115">Requirements</span></span>  
- <span data-ttu-id="3b630-116">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3b630-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e064-115">需求</span><span class="sxs-lookup"><span data-stu-id="7e064-115">Requirements</span></span>  
+ <span data-ttu-id="7e064-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7e064-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3b630-117">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3b630-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7e064-117">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7e064-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3b630-118">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3b630-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7e064-118">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7e064-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3b630-119">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b630-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7e064-119">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e064-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b630-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3b630-120">See Also</span></span>  
- [<span data-ttu-id="3b630-121">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="3b630-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="7e064-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7e064-120">See also</span></span>
+- [<span data-ttu-id="7e064-121">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="7e064-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

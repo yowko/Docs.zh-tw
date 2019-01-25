@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7db9b5af9b8bb8419573ef90ddf8beef697cb5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 22463a56911354c9706bbfbc7d1824aee5d3c74d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457496"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725021"
 ---
-# <a name="icorprofilerinfo2getcodeinfo2-method"></a><span data-ttu-id="b6af2-102">ICorProfilerInfo2::GetCodeInfo2 方法</span><span class="sxs-lookup"><span data-stu-id="b6af2-102">ICorProfilerInfo2::GetCodeInfo2 Method</span></span>
-<span data-ttu-id="b6af2-103">取得與指定 `FunctionID` 相關聯的原生程式碼範圍。</span><span class="sxs-lookup"><span data-stu-id="b6af2-103">Gets the extents of native code associated with the specified `FunctionID`.</span></span>  
+# <a name="icorprofilerinfo2getcodeinfo2-method"></a><span data-ttu-id="3b754-102">ICorProfilerInfo2::GetCodeInfo2 方法</span><span class="sxs-lookup"><span data-stu-id="3b754-102">ICorProfilerInfo2::GetCodeInfo2 Method</span></span>
+<span data-ttu-id="3b754-103">取得與指定 `FunctionID` 相關聯的原生程式碼範圍。</span><span class="sxs-lookup"><span data-stu-id="3b754-103">Gets the extents of native code associated with the specified `FunctionID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6af2-104">語法</span><span class="sxs-lookup"><span data-stu-id="b6af2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b754-104">語法</span><span class="sxs-lookup"><span data-stu-id="3b754-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCodeInfo2(  
@@ -38,37 +38,37 @@ HRESULT GetCodeInfo2(
     COR_PRF_CODE_INFO codeInfos[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b6af2-105">參數</span><span class="sxs-lookup"><span data-stu-id="b6af2-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3b754-105">參數</span><span class="sxs-lookup"><span data-stu-id="3b754-105">Parameters</span></span>  
  `functionID`  
- <span data-ttu-id="b6af2-106">[in] 與機器碼關聯的函式識別碼。</span><span class="sxs-lookup"><span data-stu-id="b6af2-106">[in] The ID of the function with which the native code is associated.</span></span>  
+ <span data-ttu-id="3b754-106">[in] 與機器碼關聯的函式識別碼。</span><span class="sxs-lookup"><span data-stu-id="3b754-106">[in] The ID of the function with which the native code is associated.</span></span>  
   
  `cCodeInfos`  
- <span data-ttu-id="b6af2-107">[in] `codeInfos` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="b6af2-107">[in] The size of the `codeInfos` array.</span></span>  
+ <span data-ttu-id="3b754-107">[in] `codeInfos` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="3b754-107">[in] The size of the `codeInfos` array.</span></span>  
   
  `pcCodeInfos`  
- <span data-ttu-id="b6af2-108">[out]總數的指標[COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)可用結構。</span><span class="sxs-lookup"><span data-stu-id="b6af2-108">[out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.</span></span>  
+ <span data-ttu-id="3b754-108">[out]總數的指標[COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)可用的結構。</span><span class="sxs-lookup"><span data-stu-id="3b754-108">[out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.</span></span>  
   
  `codeInfos`  
- <span data-ttu-id="b6af2-109">[out] 呼叫者提供的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="b6af2-109">[out] A caller-provided buffer.</span></span> <span data-ttu-id="b6af2-110">方法傳回之後，它會包含 `COR_PRF_CODE_INFO` 結構的陣列，其中每個結構各描述一個機器碼區塊。</span><span class="sxs-lookup"><span data-stu-id="b6af2-110">After the method returns, it contains an array of `COR_PRF_CODE_INFO` structures, each of which describes a block of native code.</span></span>  
+ <span data-ttu-id="3b754-109">[out] 呼叫者提供的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="3b754-109">[out] A caller-provided buffer.</span></span> <span data-ttu-id="3b754-110">方法傳回之後，它會包含 `COR_PRF_CODE_INFO` 結構的陣列，其中每個結構各描述一個機器碼區塊。</span><span class="sxs-lookup"><span data-stu-id="3b754-110">After the method returns, it contains an array of `COR_PRF_CODE_INFO` structures, each of which describes a block of native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b6af2-111">備註</span><span class="sxs-lookup"><span data-stu-id="b6af2-111">Remarks</span></span>  
- <span data-ttu-id="b6af2-112">範圍是以遞增的 Microsoft 中繼語言 (MSIL) 位移順序來排序。</span><span class="sxs-lookup"><span data-stu-id="b6af2-112">The extents are sorted in order of increasing Microsoft intermediate language (MSIL) offset.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3b754-111">備註</span><span class="sxs-lookup"><span data-stu-id="3b754-111">Remarks</span></span>  
+ <span data-ttu-id="3b754-112">範圍是以遞增的 Microsoft 中繼語言 (MSIL) 位移順序來排序。</span><span class="sxs-lookup"><span data-stu-id="3b754-112">The extents are sorted in order of increasing Microsoft intermediate language (MSIL) offset.</span></span>  
   
- <span data-ttu-id="b6af2-113">`GetCodeInfo2` 傳回之後，您必須確認 `codeInfos` 緩衝區夠大，可以包含所有 `COR_PRF_CODE_INFO` 結構。</span><span class="sxs-lookup"><span data-stu-id="b6af2-113">After `GetCodeInfo2` returns, you must verify that the `codeInfos` buffer was large enough to contain all the `COR_PRF_CODE_INFO` structures.</span></span> <span data-ttu-id="b6af2-114">若要這樣做，請比較 `cCodeInfos` 的值與 `cchName` 參數的值。</span><span class="sxs-lookup"><span data-stu-id="b6af2-114">To do this, compare the value of `cCodeInfos` with the value of the `cchName` parameter.</span></span> <span data-ttu-id="b6af2-115">如果 `cCodeInfos` 除以 `COR_PRF_CODE_INFO` 結構的大小之後小於`pcCodeInfos`，請配置較大的 `codeInfos` 緩衝區，以新的較大大小更新 `cCodeInfos`，然後重新呼叫 `GetCodeInfo2`。</span><span class="sxs-lookup"><span data-stu-id="b6af2-115">If `cCodeInfos` divided by the size of a `COR_PRF_CODE_INFO` structure is smaller than `pcCodeInfos`, allocate a larger `codeInfos` buffer, update `cCodeInfos` with the new, larger size, and call `GetCodeInfo2` again.</span></span>  
+ <span data-ttu-id="3b754-113">`GetCodeInfo2` 傳回之後，您必須確認 `codeInfos` 緩衝區夠大，可以包含所有 `COR_PRF_CODE_INFO` 結構。</span><span class="sxs-lookup"><span data-stu-id="3b754-113">After `GetCodeInfo2` returns, you must verify that the `codeInfos` buffer was large enough to contain all the `COR_PRF_CODE_INFO` structures.</span></span> <span data-ttu-id="3b754-114">若要這樣做，請比較 `cCodeInfos` 的值與 `cchName` 參數的值。</span><span class="sxs-lookup"><span data-stu-id="3b754-114">To do this, compare the value of `cCodeInfos` with the value of the `cchName` parameter.</span></span> <span data-ttu-id="3b754-115">如果 `cCodeInfos` 除以 `COR_PRF_CODE_INFO` 結構的大小之後小於`pcCodeInfos`，請配置較大的 `codeInfos` 緩衝區，以新的較大大小更新 `cCodeInfos`，然後重新呼叫 `GetCodeInfo2`。</span><span class="sxs-lookup"><span data-stu-id="3b754-115">If `cCodeInfos` divided by the size of a `COR_PRF_CODE_INFO` structure is smaller than `pcCodeInfos`, allocate a larger `codeInfos` buffer, update `cCodeInfos` with the new, larger size, and call `GetCodeInfo2` again.</span></span>  
   
- <span data-ttu-id="b6af2-116">此外，您可以先使用長度為零的 `codeInfos` 緩衝區來呼叫 `GetCodeInfo2`，以取得正確的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="b6af2-116">Alternatively, you can first call `GetCodeInfo2` with a zero-length `codeInfos` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="b6af2-117">您可以將 `codeInfos` 緩衝區大小設定為 `pcCodeInfos` 中傳回的值，乘以 `COR_PRF_CODE_INFO` 結構的大小，然後重新呼叫 `GetCodeInfo2`。</span><span class="sxs-lookup"><span data-stu-id="b6af2-117">You can then set the `codeInfos` buffer size to the value returned in `pcCodeInfos`, multiplied by the size of a `COR_PRF_CODE_INFO` structure, and call `GetCodeInfo2` again.</span></span>  
+ <span data-ttu-id="3b754-116">此外，您可以先使用長度為零的 `codeInfos` 緩衝區來呼叫 `GetCodeInfo2`，以取得正確的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="3b754-116">Alternatively, you can first call `GetCodeInfo2` with a zero-length `codeInfos` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="3b754-117">您可以將 `codeInfos` 緩衝區大小設定為 `pcCodeInfos` 中傳回的值，乘以 `COR_PRF_CODE_INFO` 結構的大小，然後重新呼叫 `GetCodeInfo2`。</span><span class="sxs-lookup"><span data-stu-id="3b754-117">You can then set the `codeInfos` buffer size to the value returned in `pcCodeInfos`, multiplied by the size of a `COR_PRF_CODE_INFO` structure, and call `GetCodeInfo2` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6af2-118">需求</span><span class="sxs-lookup"><span data-stu-id="b6af2-118">Requirements</span></span>  
- <span data-ttu-id="b6af2-119">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b6af2-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b754-118">需求</span><span class="sxs-lookup"><span data-stu-id="3b754-118">Requirements</span></span>  
+ <span data-ttu-id="3b754-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3b754-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6af2-120">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b6af2-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="3b754-120">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3b754-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b6af2-121">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b6af2-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3b754-121">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3b754-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b6af2-122">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6af2-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3b754-122">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b754-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6af2-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b6af2-123">See Also</span></span>  
- [<span data-ttu-id="b6af2-124">GetCodeInfo3 方法</span><span class="sxs-lookup"><span data-stu-id="b6af2-124">GetCodeInfo3 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)  
- [<span data-ttu-id="b6af2-125">ICorProfilerInfo2 介面</span><span class="sxs-lookup"><span data-stu-id="b6af2-125">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
- [<span data-ttu-id="b6af2-126">分析介面</span><span class="sxs-lookup"><span data-stu-id="b6af2-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="b6af2-127">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="b6af2-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="3b754-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3b754-123">See also</span></span>
+- [<span data-ttu-id="3b754-124">GetCodeInfo3 方法</span><span class="sxs-lookup"><span data-stu-id="3b754-124">GetCodeInfo3 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)
+- [<span data-ttu-id="3b754-125">ICorProfilerInfo2 介面</span><span class="sxs-lookup"><span data-stu-id="3b754-125">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="3b754-126">分析介面</span><span class="sxs-lookup"><span data-stu-id="3b754-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="3b754-127">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="3b754-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

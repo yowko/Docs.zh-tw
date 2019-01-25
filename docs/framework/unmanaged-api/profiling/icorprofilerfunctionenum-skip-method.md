@@ -17,46 +17,46 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95301c4a99253261721c7f524b99f79a6207feb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ba1f357c0d68b5a8b5104569a95433504cc84ee6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675322"
 ---
-# <a name="icorprofilerfunctionenumskip-method"></a><span data-ttu-id="e0396-102">ICorProfilerFunctionEnum::Skip 方法</span><span class="sxs-lookup"><span data-stu-id="e0396-102">ICorProfilerFunctionEnum::Skip Method</span></span>
-<span data-ttu-id="e0396-103">將列舉值的資料指標從其目前位置前移，以略過指定數目的項目。</span><span class="sxs-lookup"><span data-stu-id="e0396-103">Advances the enumerator's cursor from its current position so that the specified number of elements are skipped.</span></span>  
+# <a name="icorprofilerfunctionenumskip-method"></a><span data-ttu-id="245c2-102">ICorProfilerFunctionEnum::Skip 方法</span><span class="sxs-lookup"><span data-stu-id="245c2-102">ICorProfilerFunctionEnum::Skip Method</span></span>
+<span data-ttu-id="245c2-103">將列舉值的資料指標從其目前位置前移，以略過指定數目的項目。</span><span class="sxs-lookup"><span data-stu-id="245c2-103">Advances the enumerator's cursor from its current position so that the specified number of elements are skipped.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0396-104">語法</span><span class="sxs-lookup"><span data-stu-id="e0396-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="245c2-104">語法</span><span class="sxs-lookup"><span data-stu-id="245c2-104">Syntax</span></span>  
   
 ```  
 HRESULT Skip([in] ULONG celt);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e0396-105">參數</span><span class="sxs-lookup"><span data-stu-id="e0396-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="245c2-105">參數</span><span class="sxs-lookup"><span data-stu-id="245c2-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="e0396-106">[in]要略過的項目數目。</span><span class="sxs-lookup"><span data-stu-id="e0396-106">[in] The number of elements to be skipped.</span></span>  
+ <span data-ttu-id="245c2-106">[in]略過的項目數目。</span><span class="sxs-lookup"><span data-stu-id="245c2-106">[in] The number of elements to be skipped.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e0396-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="e0396-107">Return Value</span></span>  
- <span data-ttu-id="e0396-108">這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="e0396-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="245c2-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="245c2-107">Return Value</span></span>  
+ <span data-ttu-id="245c2-108">這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="245c2-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="e0396-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e0396-109">HRESULT</span></span>|<span data-ttu-id="e0396-110">描述</span><span class="sxs-lookup"><span data-stu-id="e0396-110">Description</span></span>|  
+|<span data-ttu-id="245c2-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="245c2-109">HRESULT</span></span>|<span data-ttu-id="245c2-110">描述</span><span class="sxs-lookup"><span data-stu-id="245c2-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="e0396-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="e0396-111">S_OK</span></span>|<span data-ttu-id="e0396-112">`celt` 略過項目。</span><span class="sxs-lookup"><span data-stu-id="e0396-112">`celt` elements were skipped.</span></span>|  
-|<span data-ttu-id="e0396-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="e0396-113">S_FALSE</span></span>|<span data-ttu-id="e0396-114">少於`celt`項目已略過，表示已沒有多個項目。</span><span class="sxs-lookup"><span data-stu-id="e0396-114">Fewer than `celt` elements were skipped, which indicates that there are no more elements.</span></span>|  
+|<span data-ttu-id="245c2-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="245c2-111">S_OK</span></span>|<span data-ttu-id="245c2-112">`celt` 已略過項目。</span><span class="sxs-lookup"><span data-stu-id="245c2-112">`celt` elements were skipped.</span></span>|  
+|<span data-ttu-id="245c2-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="245c2-113">S_FALSE</span></span>|<span data-ttu-id="245c2-114">少於`celt`項目已略過，這表示為沒有多個項目。</span><span class="sxs-lookup"><span data-stu-id="245c2-114">Fewer than `celt` elements were skipped, which indicates that there are no more elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e0396-115">備註</span><span class="sxs-lookup"><span data-stu-id="e0396-115">Remarks</span></span>  
- <span data-ttu-id="e0396-116">這個列舉值的資料指標的新位置時 （目前的位置） + `celt`。</span><span class="sxs-lookup"><span data-stu-id="e0396-116">The new position of this enumerator's cursor is (current position) + `celt`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="245c2-115">備註</span><span class="sxs-lookup"><span data-stu-id="245c2-115">Remarks</span></span>  
+ <span data-ttu-id="245c2-116">此列舉值的資料指標的新位置是 （目前的位置） + `celt`。</span><span class="sxs-lookup"><span data-stu-id="245c2-116">The new position of this enumerator's cursor is (current position) + `celt`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e0396-117">需求</span><span class="sxs-lookup"><span data-stu-id="e0396-117">Requirements</span></span>  
- <span data-ttu-id="e0396-118">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e0396-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="245c2-117">需求</span><span class="sxs-lookup"><span data-stu-id="245c2-117">Requirements</span></span>  
+ <span data-ttu-id="245c2-118">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="245c2-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e0396-119">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e0396-119">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="245c2-119">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="245c2-119">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e0396-120">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e0396-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="245c2-120">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="245c2-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e0396-121">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0396-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="245c2-121">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="245c2-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0396-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e0396-122">See Also</span></span>  
- [<span data-ttu-id="e0396-123">ICorProfilerFunctionEnum 介面</span><span class="sxs-lookup"><span data-stu-id="e0396-123">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
- [<span data-ttu-id="e0396-124">分析介面</span><span class="sxs-lookup"><span data-stu-id="e0396-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="245c2-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="245c2-122">See also</span></span>
+- [<span data-ttu-id="245c2-123">ICorProfilerFunctionEnum 介面</span><span class="sxs-lookup"><span data-stu-id="245c2-123">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [<span data-ttu-id="245c2-124">分析介面</span><span class="sxs-lookup"><span data-stu-id="245c2-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
