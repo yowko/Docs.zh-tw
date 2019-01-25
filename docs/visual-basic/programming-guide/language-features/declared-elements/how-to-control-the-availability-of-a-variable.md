@@ -1,5 +1,5 @@
 ---
-title: 如何：控制變數的可用性 (Visual Basic)
+title: HOW TO：控制變數 (Visual Basic) 的可用性
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access levels, declared elements
@@ -11,69 +11,69 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: 27ee5d3405ea24c0754cffa85e9b89b2ac561e42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d5db7fe474d8732e0ae37f3d95d0187eef68ec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582483"
 ---
-# <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a><span data-ttu-id="a7307-102">如何：控制變數的可用性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a7307-102">How to: Control the Availability of a Variable (Visual Basic)</span></span>
-<span data-ttu-id="a7307-103">指定控制變數的可用性其*存取層級*。</span><span class="sxs-lookup"><span data-stu-id="a7307-103">You control the availability of a variable by specifying its *access level*.</span></span> <span data-ttu-id="a7307-104">存取層級決定何種程式碼有權讀取或寫入的變數。</span><span class="sxs-lookup"><span data-stu-id="a7307-104">The access level determines what code has permission to read or write to the variable.</span></span>  
+# <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a><span data-ttu-id="cd9c5-102">HOW TO：控制變數 (Visual Basic) 的可用性</span><span class="sxs-lookup"><span data-stu-id="cd9c5-102">How to: Control the Availability of a Variable (Visual Basic)</span></span>
+<span data-ttu-id="cd9c5-103">指定控制變數的可用性及其*存取層級*。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-103">You control the availability of a variable by specifying its *access level*.</span></span> <span data-ttu-id="cd9c5-104">存取層級會判斷哪些程式碼有權讀取或寫入變數。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-104">The access level determines what code has permission to read or write to the variable.</span></span>  
   
--   <span data-ttu-id="a7307-105">*成員變數*（定義在模組層級以及任何程序之外） 預設為公用存取，這表示可以看到它們的任何程式碼可以存取它們。</span><span class="sxs-lookup"><span data-stu-id="a7307-105">*Member variables* (defined at module level and outside any procedure) default to public access, which means any code that can see them can access them.</span></span> <span data-ttu-id="a7307-106">您可以指定存取修飾詞來變更。</span><span class="sxs-lookup"><span data-stu-id="a7307-106">You can change this by specifying an access modifier.</span></span>  
+-   <span data-ttu-id="cd9c5-105">*成員變數*（定義在模組層級和任何程序之外） 預設為公用存取，這表示可以看到它們的任何程式碼可以存取它們。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-105">*Member variables* (defined at module level and outside any procedure) default to public access, which means any code that can see them can access them.</span></span> <span data-ttu-id="cd9c5-106">您可以藉由指定的存取修飾詞來變更此設定。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-106">You can change this by specifying an access modifier.</span></span>  
   
--   <span data-ttu-id="a7307-107">*本機變數*（定義在程序） 名義具有公用存取，雖然其程序內的程式碼可以存取它們。</span><span class="sxs-lookup"><span data-stu-id="a7307-107">*Local variables* (defined inside a procedure) nominally have public access, although only code within their procedure can access them.</span></span> <span data-ttu-id="a7307-108">您無法變更存取層級的區域變數，但您可以變更包含它的程序的存取層級。</span><span class="sxs-lookup"><span data-stu-id="a7307-108">You cannot change the access level of a local variable, but you can change the access level of the procedure that contains it.</span></span>  
+-   <span data-ttu-id="cd9c5-107">*本機變數*（程序內所定義的） 名義上具有公用存取，但其程序內的程式碼可以存取它們。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-107">*Local variables* (defined inside a procedure) nominally have public access, although only code within their procedure can access them.</span></span> <span data-ttu-id="cd9c5-108">您無法變更存取層級的區域變數，但您可以變更包含它的程序的存取層級。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-108">You cannot change the access level of a local variable, but you can change the access level of the procedure that contains it.</span></span>  
   
- <span data-ttu-id="a7307-109">如需詳細資訊，請參閱[存取 Visual Basic 中的層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="a7307-109">For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
+ <span data-ttu-id="cd9c5-109">如需詳細資訊，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-109">For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## <a name="private-and-public-access"></a><span data-ttu-id="a7307-110">私人和公用存取</span><span class="sxs-lookup"><span data-stu-id="a7307-110">Private and Public Access</span></span>  
+## <a name="private-and-public-access"></a><span data-ttu-id="cd9c5-110">私用和公用存取</span><span class="sxs-lookup"><span data-stu-id="cd9c5-110">Private and Public Access</span></span>  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a><span data-ttu-id="a7307-111">若要存取只會從其模組、 類別或結構中的變數</span><span class="sxs-lookup"><span data-stu-id="a7307-111">To make a variable accessible only from within its module, class, or structure</span></span>  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a><span data-ttu-id="cd9c5-111">若要存取只能從其模組、 類別或結構中的變數</span><span class="sxs-lookup"><span data-stu-id="cd9c5-111">To make a variable accessible only from within its module, class, or structure</span></span>  
   
-1.  <span data-ttu-id="a7307-112">位置[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)變數內模組、 類別或結構，但以外的任何程序。</span><span class="sxs-lookup"><span data-stu-id="a7307-112">Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable inside the module, class, or structure, but outside any procedure.</span></span>  
+1.  <span data-ttu-id="cd9c5-112">地方[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)內模組、 類別或結構，但在任何程序之外的變數。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-112">Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable inside the module, class, or structure, but outside any procedure.</span></span>  
   
-2.  <span data-ttu-id="a7307-113">包含[私人](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字`Dim`陳述式。</span><span class="sxs-lookup"><span data-stu-id="a7307-113">Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.</span></span>  
+2.  <span data-ttu-id="cd9c5-113">包含[私人](../../../../visual-basic/language-reference/modifiers/private.md)中的關鍵字`Dim`陳述式。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-113">Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.</span></span>  
   
-     <span data-ttu-id="a7307-114">您可以讀取或寫入變數從模組、 類別或結構中的任何位置，而不是從外部。</span><span class="sxs-lookup"><span data-stu-id="a7307-114">You can read or write to the variable from anywhere within the module, class, or structure, but not from outside it.</span></span>  
+     <span data-ttu-id="cd9c5-114">您可以讀取或寫入變數，從模組、 類別或結構內的任何位置，而不是從其外部。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-114">You can read or write to the variable from anywhere within the module, class, or structure, but not from outside it.</span></span>  
   
-#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a><span data-ttu-id="a7307-115">若要存取的任何程式碼，可以看到變數</span><span class="sxs-lookup"><span data-stu-id="a7307-115">To make a variable accessible from any code that can see it</span></span>  
+#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a><span data-ttu-id="cd9c5-115">若要從任何可以看到它的程式碼存取變數</span><span class="sxs-lookup"><span data-stu-id="cd9c5-115">To make a variable accessible from any code that can see it</span></span>  
   
-1.  <span data-ttu-id="a7307-116">為成員變數，請將`Dim`變數內模組、 類別或結構，但以外的任何程序陳述式。</span><span class="sxs-lookup"><span data-stu-id="a7307-116">For a member variable, place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.</span></span>  
+1.  <span data-ttu-id="cd9c5-116">成員變數，將`Dim`變數內模組、 類別或結構，但以外的任何程序的陳述式。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-116">For a member variable, place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.</span></span>  
   
-2.  <span data-ttu-id="a7307-117">包含[公用](../../../../visual-basic/language-reference/modifiers/public.md)關鍵字`Dim`陳述式。</span><span class="sxs-lookup"><span data-stu-id="a7307-117">Include the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.</span></span>  
+2.  <span data-ttu-id="cd9c5-117">包含[公開金鑰](../../../../visual-basic/language-reference/modifiers/public.md)中的關鍵字`Dim`陳述式。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-117">Include the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.</span></span>  
   
-     <span data-ttu-id="a7307-118">您可以讀取或寫入至變數從相互操作的任何程式碼與組件。</span><span class="sxs-lookup"><span data-stu-id="a7307-118">You can read or write to the variable from any code that interoperates with your assembly.</span></span>  
+     <span data-ttu-id="cd9c5-118">您可以讀取或寫入變數的交互操作的任何程式碼與您的組件。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-118">You can read or write to the variable from any code that interoperates with your assembly.</span></span>  
   
- <span data-ttu-id="a7307-119">-或-</span><span class="sxs-lookup"><span data-stu-id="a7307-119">-or-</span></span>  
+ <span data-ttu-id="cd9c5-119">-或-</span><span class="sxs-lookup"><span data-stu-id="cd9c5-119">-or-</span></span>  
   
-1.  <span data-ttu-id="a7307-120">為區域變數，請將`Dim`陳述式的程序內的變數。</span><span class="sxs-lookup"><span data-stu-id="a7307-120">For a local variable, place the `Dim` statement for the variable inside a procedure.</span></span>  
+1.  <span data-ttu-id="cd9c5-120">本機變數中，放置`Dim`程序內變數的陳述式。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-120">For a local variable, place the `Dim` statement for the variable inside a procedure.</span></span>  
   
-2.  <span data-ttu-id="a7307-121">不包含`Public`關鍵字`Dim`陳述式。</span><span class="sxs-lookup"><span data-stu-id="a7307-121">Do not include the `Public` keyword in the `Dim` statement.</span></span>  
+2.  <span data-ttu-id="cd9c5-121">不包含`Public`中的關鍵字`Dim`陳述式。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-121">Do not include the `Public` keyword in the `Dim` statement.</span></span>  
   
-     <span data-ttu-id="a7307-122">您可以讀取或寫入變數，從程序中的任何位置，而不是從外部。</span><span class="sxs-lookup"><span data-stu-id="a7307-122">You can read or write to the variable from anywhere within the procedure, but not from outside it.</span></span>  
+     <span data-ttu-id="cd9c5-122">您可以讀取或寫入變數，從程序中的任何位置，而不是從其外部。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-122">You can read or write to the variable from anywhere within the procedure, but not from outside it.</span></span>  
   
-## <a name="protected-and-friend-access"></a><span data-ttu-id="a7307-123">保護和 Friend 存取權限</span><span class="sxs-lookup"><span data-stu-id="a7307-123">Protected and Friend Access</span></span>  
- <span data-ttu-id="a7307-124">您可以限制變數對其類別和任何衍生的類別，或其組件的存取層級。</span><span class="sxs-lookup"><span data-stu-id="a7307-124">You can limit the access level of a variable to its class and any derived classes, or to its assembly.</span></span> <span data-ttu-id="a7307-125">您也可以指定這些限制，讓存取的程式碼，在任何衍生類別中或在相同的組件中的任何其他地方的聯集。</span><span class="sxs-lookup"><span data-stu-id="a7307-125">You can also specify the union of these limitations, which allows access from code in any derived class or in any other place in the same assembly.</span></span> <span data-ttu-id="a7307-126">您指定這個聯集結合`Protected`和`Friend`相同宣告中的關鍵字。</span><span class="sxs-lookup"><span data-stu-id="a7307-126">You specify this union by combining the `Protected` and `Friend` keywords in the same declaration.</span></span>  
+## <a name="protected-and-friend-access"></a><span data-ttu-id="cd9c5-123">受保護和 Friend 存取權限</span><span class="sxs-lookup"><span data-stu-id="cd9c5-123">Protected and Friend Access</span></span>  
+ <span data-ttu-id="cd9c5-124">您可以限制變數對其類別和衍生的類別，或其組件的存取層級。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-124">You can limit the access level of a variable to its class and any derived classes, or to its assembly.</span></span> <span data-ttu-id="cd9c5-125">您也可以指定這些限制，可讓您從程式碼的存取相同的組件中的任何其他位置或任何衍生類別中的聯集。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-125">You can also specify the union of these limitations, which allows access from code in any derived class or in any other place in the same assembly.</span></span> <span data-ttu-id="cd9c5-126">您指定這個聯集結合`Protected`和`Friend`相同宣告中的關鍵字。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-126">You specify this union by combining the `Protected` and `Friend` keywords in the same declaration.</span></span>  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a><span data-ttu-id="a7307-127">若要只能從其類別和任何衍生的類別中存取變數</span><span class="sxs-lookup"><span data-stu-id="a7307-127">To make a variable accessible only from within its class and any derived classes</span></span>  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a><span data-ttu-id="cd9c5-127">若要在其類別和任何衍生的類別內只能從存取變數</span><span class="sxs-lookup"><span data-stu-id="cd9c5-127">To make a variable accessible only from within its class and any derived classes</span></span>  
   
-1.  <span data-ttu-id="a7307-128">位置`Dim`陳述式的類別內部，但任何程序之外的變數。</span><span class="sxs-lookup"><span data-stu-id="a7307-128">Place the `Dim` statement for the variable inside a class, but outside any procedure.</span></span>  
+1.  <span data-ttu-id="cd9c5-128">位置`Dim`陳述式的類別，但任何程序之外的變數。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-128">Place the `Dim` statement for the variable inside a class, but outside any procedure.</span></span>  
   
-2.  <span data-ttu-id="a7307-129">包含[保護](../../../../visual-basic/language-reference/modifiers/protected.md)關鍵字`Dim`陳述式。</span><span class="sxs-lookup"><span data-stu-id="a7307-129">Include the [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) keyword in the `Dim` statement.</span></span>  
+2.  <span data-ttu-id="cd9c5-129">包含[Protected](../../../../visual-basic/language-reference/modifiers/protected.md)中的關鍵字`Dim`陳述式。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-129">Include the [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) keyword in the `Dim` statement.</span></span>  
   
-     <span data-ttu-id="a7307-130">您可以讀取或寫入變數，從類別內的任何位置，以及從任何類別衍生，而不是從外部衍生鏈結中的任何類別。</span><span class="sxs-lookup"><span data-stu-id="a7307-130">You can read or write to the variable from anywhere within the class, as well as from within any class derived from it, but not from outside any class in the derivation chain.</span></span>  
+     <span data-ttu-id="cd9c5-130">您可以讀取或寫入變數，從任何地方在類別中，以及從任何類別衍生，而不是從衍生鏈結中的任何類別外部。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-130">You can read or write to the variable from anywhere within the class, as well as from within any class derived from it, but not from outside any class in the derivation chain.</span></span>  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a><span data-ttu-id="a7307-131">若要在相同的組件內只能從存取變數</span><span class="sxs-lookup"><span data-stu-id="a7307-131">To make a variable accessible only from within the same assembly</span></span>  
+#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a><span data-ttu-id="cd9c5-131">若要只能從相同的組件中存取變數</span><span class="sxs-lookup"><span data-stu-id="cd9c5-131">To make a variable accessible only from within the same assembly</span></span>  
   
-1.  <span data-ttu-id="a7307-132">位置`Dim`變數內模組、 類別或結構，但以外的任何程序陳述式。</span><span class="sxs-lookup"><span data-stu-id="a7307-132">Place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.</span></span>  
+1.  <span data-ttu-id="cd9c5-132">位置`Dim`變數內模組、 類別或結構，但以外的任何程序的陳述式。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-132">Place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.</span></span>  
   
-2.  <span data-ttu-id="a7307-133">包含[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)關鍵字`Dim`陳述式。</span><span class="sxs-lookup"><span data-stu-id="a7307-133">Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) keyword in the `Dim` statement.</span></span>  
+2.  <span data-ttu-id="cd9c5-133">包含[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)中的關鍵字`Dim`陳述式。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-133">Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) keyword in the `Dim` statement.</span></span>  
   
-     <span data-ttu-id="a7307-134">您可以讀取或寫入變數從模組、 類別或結構中的任何位置，以及從任何程式碼相同的組件，而不是從外部組件。</span><span class="sxs-lookup"><span data-stu-id="a7307-134">You can read or write to the variable from anywhere within the module, class, or structure, as well as from any code in the same assembly, but not from outside the assembly.</span></span>  
+     <span data-ttu-id="cd9c5-134">您可以讀取或寫入變數，從模組、 類別或結構內的任何位置，以及從任何程式碼位於相同的組件，而不是從外部組件。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-134">You can read or write to the variable from anywhere within the module, class, or structure, as well as from any code in the same assembly, but not from outside the assembly.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a7307-135">範例</span><span class="sxs-lookup"><span data-stu-id="a7307-135">Example</span></span>  
- <span data-ttu-id="a7307-136">下列範例顯示的變數宣告`Public`， `Protected`， `Friend`， `Protected Friend`，和`Private`存取層級。</span><span class="sxs-lookup"><span data-stu-id="a7307-136">The following example shows declarations of variables with `Public`, `Protected`, `Friend`, `Protected Friend`, and `Private` access levels.</span></span> <span data-ttu-id="a7307-137">請注意，當`Dim`陳述式指定的存取層級，您不需要包含`Dim`關鍵字。</span><span class="sxs-lookup"><span data-stu-id="a7307-137">Note that when the `Dim` statement specifies an access level, you do not need to include the `Dim` keyword.</span></span>  
+## <a name="example"></a><span data-ttu-id="cd9c5-135">範例</span><span class="sxs-lookup"><span data-stu-id="cd9c5-135">Example</span></span>  
+ <span data-ttu-id="cd9c5-136">下列範例顯示的變數宣告`Public`， `Protected`， `Friend`， `Protected Friend`，和`Private`存取層級。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-136">The following example shows declarations of variables with `Public`, `Protected`, `Friend`, `Protected Friend`, and `Private` access levels.</span></span> <span data-ttu-id="cd9c5-137">請注意，當`Dim`陳述式會指定存取層級，您不需要包含`Dim`關鍵字。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-137">Note that when the `Dim` statement specifies an access level, you do not need to include the `Dim` keyword.</span></span>  
   
 ```  
 Public Class classForEverybody  
@@ -83,13 +83,13 @@ Protected Friend stringForProjectAndHeirs As String
 Private numberForMeOnly As Integer  
 ```  
   
-## <a name="net-framework-security"></a><span data-ttu-id="a7307-138">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="a7307-138">.NET Framework Security</span></span>  
- <span data-ttu-id="a7307-139">更嚴格的變數的存取層級，小惡意程式碼的機會使用它。</span><span class="sxs-lookup"><span data-stu-id="a7307-139">The more restrictive the access level of a variable, the smaller the chances that malicious code can make improper use of it.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="cd9c5-138">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="cd9c5-138">.NET Framework Security</span></span>  
+ <span data-ttu-id="cd9c5-139">更嚴格變數的存取層級，它使用較小的機會，惡意程式碼不適當。</span><span class="sxs-lookup"><span data-stu-id="cd9c5-139">The more restrictive the access level of a variable, the smaller the chances that malicious code can make improper use of it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a7307-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a7307-140">See Also</span></span>  
- [<span data-ttu-id="a7307-141">在 Visual Basic 中的存取層級</span><span class="sxs-lookup"><span data-stu-id="a7307-141">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [<span data-ttu-id="a7307-142">Dim 陳述式</span><span class="sxs-lookup"><span data-stu-id="a7307-142">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)  
- [<span data-ttu-id="a7307-143">Public</span><span class="sxs-lookup"><span data-stu-id="a7307-143">Public</span></span>](../../../../visual-basic/language-reference/modifiers/public.md)  
- [<span data-ttu-id="a7307-144">Protected</span><span class="sxs-lookup"><span data-stu-id="a7307-144">Protected</span></span>](../../../../visual-basic/language-reference/modifiers/protected.md)  
- [<span data-ttu-id="a7307-145">Friend</span><span class="sxs-lookup"><span data-stu-id="a7307-145">Friend</span></span>](../../../../visual-basic/language-reference/modifiers/friend.md)  
- [<span data-ttu-id="a7307-146">Private</span><span class="sxs-lookup"><span data-stu-id="a7307-146">Private</span></span>](../../../../visual-basic/language-reference/modifiers/private.md)
+## <a name="see-also"></a><span data-ttu-id="cd9c5-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd9c5-140">See also</span></span>
+- [<span data-ttu-id="cd9c5-141">在 Visual Basic 中的存取層級</span><span class="sxs-lookup"><span data-stu-id="cd9c5-141">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [<span data-ttu-id="cd9c5-142">Dim 陳述式</span><span class="sxs-lookup"><span data-stu-id="cd9c5-142">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [<span data-ttu-id="cd9c5-143">Public</span><span class="sxs-lookup"><span data-stu-id="cd9c5-143">Public</span></span>](../../../../visual-basic/language-reference/modifiers/public.md)
+- [<span data-ttu-id="cd9c5-144">Protected</span><span class="sxs-lookup"><span data-stu-id="cd9c5-144">Protected</span></span>](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [<span data-ttu-id="cd9c5-145">Friend</span><span class="sxs-lookup"><span data-stu-id="cd9c5-145">Friend</span></span>](../../../../visual-basic/language-reference/modifiers/friend.md)
+- [<span data-ttu-id="cd9c5-146">Private</span><span class="sxs-lookup"><span data-stu-id="cd9c5-146">Private</span></span>](../../../../visual-basic/language-reference/modifiers/private.md)
