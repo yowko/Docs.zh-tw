@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fed7519402b4c3c1b2405ea99f8ba484781e95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e40f08a3dae6f17617e97e07a23b9d7eb611083
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558627"
 ---
-# <a name="clrruntimehost-coclass"></a><span data-ttu-id="34394-102">CLRRuntimeHost Coclass</span><span class="sxs-lookup"><span data-stu-id="34394-102">CLRRuntimeHost Coclass</span></span>
-<span data-ttu-id="34394-103">提供介面來管理執行階段所執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="34394-103">Provides interfaces for managing code execution by the runtime.</span></span>  
+# <a name="clrruntimehost-coclass"></a><span data-ttu-id="dcc5c-102">CLRRuntimeHost Coclass</span><span class="sxs-lookup"><span data-stu-id="dcc5c-102">CLRRuntimeHost Coclass</span></span>
+<span data-ttu-id="dcc5c-103">提供介面來管理執行程式碼執行階段。</span><span class="sxs-lookup"><span data-stu-id="dcc5c-103">Provides interfaces for managing code execution by the runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="34394-104">語法</span><span class="sxs-lookup"><span data-stu-id="34394-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dcc5c-104">語法</span><span class="sxs-lookup"><span data-stu-id="dcc5c-104">Syntax</span></span>  
   
 ```  
 coclass CLRRuntimeHost {  
@@ -35,21 +35,21 @@ coclass CLRRuntimeHost {
 };  
 ```  
   
-## <a name="interfaces"></a><span data-ttu-id="34394-105">介面</span><span class="sxs-lookup"><span data-stu-id="34394-105">Interfaces</span></span>  
+## <a name="interfaces"></a><span data-ttu-id="dcc5c-105">介面</span><span class="sxs-lookup"><span data-stu-id="dcc5c-105">Interfaces</span></span>  
   
-|<span data-ttu-id="34394-106">介面</span><span class="sxs-lookup"><span data-stu-id="34394-106">Interface</span></span>|<span data-ttu-id="34394-107">描述</span><span class="sxs-lookup"><span data-stu-id="34394-107">Description</span></span>|  
+|<span data-ttu-id="dcc5c-106">介面</span><span class="sxs-lookup"><span data-stu-id="dcc5c-106">Interface</span></span>|<span data-ttu-id="dcc5c-107">描述</span><span class="sxs-lookup"><span data-stu-id="dcc5c-107">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="34394-108">ICLRRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="34394-108">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|<span data-ttu-id="34394-109">提供方法來控制執行階段執行的應用程式。</span><span class="sxs-lookup"><span data-stu-id="34394-109">Provides methods for controlling the execution of applications by the runtime.</span></span>|  
-|[<span data-ttu-id="34394-110">ICLRValidator 介面</span><span class="sxs-lookup"><span data-stu-id="34394-110">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|<span data-ttu-id="34394-111">提供用於驗證的可攜式執行檔映像及詳細報告驗證錯誤的方法。</span><span class="sxs-lookup"><span data-stu-id="34394-111">Provides methods for validation of portable executable images and for detailed reporting of validation errors.</span></span>|  
+|[<span data-ttu-id="dcc5c-108">ICLRRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="dcc5c-108">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|<span data-ttu-id="dcc5c-109">提供方法來控制執行階段應用程式的執行。</span><span class="sxs-lookup"><span data-stu-id="dcc5c-109">Provides methods for controlling the execution of applications by the runtime.</span></span>|  
+|[<span data-ttu-id="dcc5c-110">ICLRValidator 介面</span><span class="sxs-lookup"><span data-stu-id="dcc5c-110">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|<span data-ttu-id="dcc5c-111">提供用於驗證的可攜式執行檔的影像及詳細的報告驗證錯誤的方法。</span><span class="sxs-lookup"><span data-stu-id="dcc5c-111">Provides methods for validation of portable executable images and for detailed reporting of validation errors.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="34394-112">需求</span><span class="sxs-lookup"><span data-stu-id="34394-112">Requirements</span></span>  
- <span data-ttu-id="34394-113">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="34394-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dcc5c-112">需求</span><span class="sxs-lookup"><span data-stu-id="dcc5c-112">Requirements</span></span>  
+ <span data-ttu-id="dcc5c-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dcc5c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="34394-114">**標頭：** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="34394-114">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="dcc5c-114">**標頭：** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="dcc5c-114">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="34394-115">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="34394-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="dcc5c-115">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="dcc5c-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="34394-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34394-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dcc5c-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dcc5c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34394-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="34394-117">See Also</span></span>  
- [<span data-ttu-id="34394-118">裝載 Coclass</span><span class="sxs-lookup"><span data-stu-id="34394-118">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a><span data-ttu-id="dcc5c-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dcc5c-117">See also</span></span>
+- [<span data-ttu-id="dcc5c-118">裝載 Coclass</span><span class="sxs-lookup"><span data-stu-id="dcc5c-118">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

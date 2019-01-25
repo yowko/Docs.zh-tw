@@ -19,17 +19,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14b5f2227991e38ba66889d7e966ab24e714294c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac0cee9affff03a95cd7635a8b1afd42e6edc6ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684319"
 ---
-# <a name="icoreclrdebugtargetenumruntimes-method"></a><span data-ttu-id="965bd-102">ICoreClrDebugTarget::EnumRuntimes 方法</span><span class="sxs-lookup"><span data-stu-id="965bd-102">ICoreClrDebugTarget::EnumRuntimes Method</span></span>
-<span data-ttu-id="965bd-103">列舉遠端電腦上所執行之指定處理序中的 Common Language Runtime (CLR)。</span><span class="sxs-lookup"><span data-stu-id="965bd-103">Enumerates the common language runtimes (CLRs) in the specified process that is running on a remote computer.</span></span>  
+# <a name="icoreclrdebugtargetenumruntimes-method"></a><span data-ttu-id="d860d-102">ICoreClrDebugTarget::EnumRuntimes 方法</span><span class="sxs-lookup"><span data-stu-id="d860d-102">ICoreClrDebugTarget::EnumRuntimes Method</span></span>
+<span data-ttu-id="d860d-103">列舉遠端電腦上所執行之指定處理序中的 Common Language Runtime (CLR)。</span><span class="sxs-lookup"><span data-stu-id="d860d-103">Enumerates the common language runtimes (CLRs) in the specified process that is running on a remote computer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="965bd-104">語法</span><span class="sxs-lookup"><span data-stu-id="965bd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d860d-104">語法</span><span class="sxs-lookup"><span data-stu-id="d860d-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumRuntimes (  
@@ -39,40 +39,40 @@ HRESULT EnumRuntimes (
     );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="965bd-105">參數</span><span class="sxs-lookup"><span data-stu-id="965bd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d860d-105">參數</span><span class="sxs-lookup"><span data-stu-id="d860d-105">Parameters</span></span>  
  `dwInternalProcessID`  
- <span data-ttu-id="965bd-106">[in] 要列舉執行階段之處理序的內部處理序 ID。</span><span class="sxs-lookup"><span data-stu-id="965bd-106">[in] The internal process ID of the process for which you want to enumerate runtimes.</span></span> <span data-ttu-id="965bd-107">這會是`m_dwInternalID`從對應[CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)。</span><span class="sxs-lookup"><span data-stu-id="965bd-107">This will be `m_dwInternalID` from the corresponding [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).</span></span>  
+ <span data-ttu-id="d860d-106">[in] 要列舉執行階段之處理序的內部處理序 ID。</span><span class="sxs-lookup"><span data-stu-id="d860d-106">[in] The internal process ID of the process for which you want to enumerate runtimes.</span></span> <span data-ttu-id="d860d-107">這會是`m_dwInternalID`從相對應[CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)。</span><span class="sxs-lookup"><span data-stu-id="d860d-107">This will be `m_dwInternalID` from the corresponding [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).</span></span>  
   
  `pcRuntimes`  
- <span data-ttu-id="965bd-108">[out] `ppRuntimes` 中傳回的執行階段數目。</span><span class="sxs-lookup"><span data-stu-id="965bd-108">[out] The number of runtimes returned in `ppRuntimes`.</span></span> <span data-ttu-id="965bd-109">這個值可以是 0 (零)。</span><span class="sxs-lookup"><span data-stu-id="965bd-109">This value can be 0 (zero).</span></span>  
+ <span data-ttu-id="d860d-108">[out] `ppRuntimes` 中傳回的執行階段數目。</span><span class="sxs-lookup"><span data-stu-id="d860d-108">[out] The number of runtimes returned in `ppRuntimes`.</span></span> <span data-ttu-id="d860d-109">這個值可以是 0 (零)。</span><span class="sxs-lookup"><span data-stu-id="d860d-109">This value can be 0 (zero).</span></span>  
   
  `ppRuntimes`  
- <span data-ttu-id="965bd-110">[out]陣列[CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) ，此結構表示執行階段載入遠端目標處理序。</span><span class="sxs-lookup"><span data-stu-id="965bd-110">[out] An array of [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) structures that represent the runtimes loaded in the remote target process.</span></span>  
+ <span data-ttu-id="d860d-110">[out]陣列[CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) ，此結構表示執行階段載入到遠端目標處理序。</span><span class="sxs-lookup"><span data-stu-id="d860d-110">[out] An array of [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) structures that represent the runtimes loaded in the remote target process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="965bd-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="965bd-111">Return Value</span></span>  
- <span data-ttu-id="965bd-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="965bd-112">S_OK</span></span>  
- <span data-ttu-id="965bd-113">成功。</span><span class="sxs-lookup"><span data-stu-id="965bd-113">Success.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d860d-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="d860d-111">Return Value</span></span>  
+ <span data-ttu-id="d860d-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="d860d-112">S_OK</span></span>  
+ <span data-ttu-id="d860d-113">成功。</span><span class="sxs-lookup"><span data-stu-id="d860d-113">Success.</span></span>  
   
- <span data-ttu-id="965bd-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="965bd-114">S_FALSE</span></span>  
- <span data-ttu-id="965bd-115">`dwInternalProcessID` 不符合電腦上所執行的任何處理序，可能是因為處理序已終止。</span><span class="sxs-lookup"><span data-stu-id="965bd-115">`dwInternalProcessID` does not match any process that is running on the computer, probably because the process was terminated.</span></span> <span data-ttu-id="965bd-116">`pcRuntimes` 和 `ppRuntimes` 將為 null。</span><span class="sxs-lookup"><span data-stu-id="965bd-116">`pcRuntimes` and `ppRuntimes` will be null.</span></span>  
+ <span data-ttu-id="d860d-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="d860d-114">S_FALSE</span></span>  
+ <span data-ttu-id="d860d-115">`dwInternalProcessID` 不符合電腦上所執行的任何處理序，可能是因為處理序已終止。</span><span class="sxs-lookup"><span data-stu-id="d860d-115">`dwInternalProcessID` does not match any process that is running on the computer, probably because the process was terminated.</span></span> <span data-ttu-id="d860d-116">`pcRuntimes` 和 `ppRuntimes` 將為 null。</span><span class="sxs-lookup"><span data-stu-id="d860d-116">`pcRuntimes` and `ppRuntimes` will be null.</span></span>  
   
- <span data-ttu-id="965bd-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="965bd-117">E_OUTOFMEMORY</span></span>  
- <span data-ttu-id="965bd-118">無法為 `ppRuntimes` 配置足夠的記憶體。</span><span class="sxs-lookup"><span data-stu-id="965bd-118">Unable to allocate enough memory for `ppRuntimes`.</span></span>  
+ <span data-ttu-id="d860d-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="d860d-117">E_OUTOFMEMORY</span></span>  
+ <span data-ttu-id="d860d-118">無法為 `ppRuntimes` 配置足夠的記憶體。</span><span class="sxs-lookup"><span data-stu-id="d860d-118">Unable to allocate enough memory for `ppRuntimes`.</span></span>  
   
- <span data-ttu-id="965bd-119">E_FAIL (或其他 E_ 傳回碼)</span><span class="sxs-lookup"><span data-stu-id="965bd-119">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="965bd-120">其他失敗。</span><span class="sxs-lookup"><span data-stu-id="965bd-120">Other failures.</span></span>  
+ <span data-ttu-id="d860d-119">E_FAIL (或其他 E_ 傳回碼)</span><span class="sxs-lookup"><span data-stu-id="d860d-119">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="d860d-120">其他失敗。</span><span class="sxs-lookup"><span data-stu-id="d860d-120">Other failures.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="965bd-121">備註</span><span class="sxs-lookup"><span data-stu-id="965bd-121">Remarks</span></span>  
- <span data-ttu-id="965bd-122">若要釋放由這個方法所配置的記憶體，請呼叫[icoreclrdebugtarget:: Freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="965bd-122">To free the memory that was allocated by this method, call the [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d860d-121">備註</span><span class="sxs-lookup"><span data-stu-id="d860d-121">Remarks</span></span>  
+ <span data-ttu-id="d860d-122">若要釋放這個方法所配置的記憶體，請呼叫[icoreclrdebugtarget:: Freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="d860d-122">To free the memory that was allocated by this method, call the [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="965bd-123">需求</span><span class="sxs-lookup"><span data-stu-id="965bd-123">Requirements</span></span>  
- <span data-ttu-id="965bd-124">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="965bd-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d860d-123">需求</span><span class="sxs-lookup"><span data-stu-id="d860d-123">Requirements</span></span>  
+ <span data-ttu-id="d860d-124">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d860d-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="965bd-125">**標頭：** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="965bd-125">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="d860d-125">**標頭：** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="d860d-125">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="965bd-126">**程式庫：** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="965bd-126">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="d860d-126">**程式庫：** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="d860d-126">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="965bd-127">**.NET framework 版本：** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="965bd-127">**.NET Framework Versions:** 3.5 SP1</span></span>  
+ <span data-ttu-id="d860d-127">**.NET framework 版本：** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="d860d-127">**.NET Framework Versions:** 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="965bd-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="965bd-128">See Also</span></span>  
- [<span data-ttu-id="965bd-129">ICoreClrDebugTarget 介面</span><span class="sxs-lookup"><span data-stu-id="965bd-129">ICoreClrDebugTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d860d-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d860d-128">See also</span></span>
+- [<span data-ttu-id="d860d-129">ICoreClrDebugTarget 介面</span><span class="sxs-lookup"><span data-stu-id="d860d-129">ICoreClrDebugTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

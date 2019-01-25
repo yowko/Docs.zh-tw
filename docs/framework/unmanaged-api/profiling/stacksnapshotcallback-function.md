@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78fdcb69e73bc7238972d1a6ffb37b5ba91c7953
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e73afa7ef33e12d6bc658c944c79ce1bc4f94f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572408"
 ---
-# <a name="stacksnapshotcallback-function"></a><span data-ttu-id="11a9d-102">StackSnapshotCallback 函式</span><span class="sxs-lookup"><span data-stu-id="11a9d-102">StackSnapshotCallback Function</span></span>
-<span data-ttu-id="11a9d-103">提供程式碼剖析工具相關資訊每個 managed 的框架和每次執行未受管理的框架的堆疊上堆疊查核行程，由起始期間[icorprofilerinfo2:: Dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="11a9d-103">Provides the profiler with information about each managed frame and each run of unmanaged frames on the stack during a stack walk, which is initiated by the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span></span>  
+# <a name="stacksnapshotcallback-function"></a><span data-ttu-id="effc8-102">StackSnapshotCallback 函式</span><span class="sxs-lookup"><span data-stu-id="effc8-102">StackSnapshotCallback Function</span></span>
+<span data-ttu-id="effc8-103">提供分析工具相關資訊每個 managed 的框架和每次執行的非受控框架在堆疊上堆疊查核行程，這起始期間[ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="effc8-103">Provides the profiler with information about each managed frame and each run of unmanaged frames on the stack during a stack walk, which is initiated by the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="11a9d-104">語法</span><span class="sxs-lookup"><span data-stu-id="11a9d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="effc8-104">語法</span><span class="sxs-lookup"><span data-stu-id="effc8-104">Syntax</span></span>  
   
 ```  
 HRESULT __stdcall StackSnapshotCallback (  
@@ -39,41 +39,41 @@ HRESULT __stdcall StackSnapshotCallback (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="11a9d-105">參數</span><span class="sxs-lookup"><span data-stu-id="11a9d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="effc8-105">參數</span><span class="sxs-lookup"><span data-stu-id="effc8-105">Parameters</span></span>  
  `funcId`  
- <span data-ttu-id="11a9d-106">[in]如果此值為零，這個回呼位於執行的未受管理的框架。否則，它是 managed 函式的識別碼，這個回呼位於個 managed 框架。</span><span class="sxs-lookup"><span data-stu-id="11a9d-106">[in] If this value is zero, this callback is for a run of unmanaged frames; otherwise, it is the identifier of a managed function and this callback is for a managed frame.</span></span>  
+ <span data-ttu-id="effc8-106">[in]如果此值為零，此回呼是未受管理的畫面格; 的執行否則，它是受管理的函式的識別碼，而且此回呼是個 managed 框架。</span><span class="sxs-lookup"><span data-stu-id="effc8-106">[in] If this value is zero, this callback is for a run of unmanaged frames; otherwise, it is the identifier of a managed function and this callback is for a managed frame.</span></span>  
   
  `ip`  
- <span data-ttu-id="11a9d-107">[in]原生程式碼指令指標框架中的值。</span><span class="sxs-lookup"><span data-stu-id="11a9d-107">[in] The value of the native code instruction pointer in the frame.</span></span>  
+ <span data-ttu-id="effc8-107">[in]原生程式碼指令指標框架中的值。</span><span class="sxs-lookup"><span data-stu-id="effc8-107">[in] The value of the native code instruction pointer in the frame.</span></span>  
   
  `frameInfo`  
- <span data-ttu-id="11a9d-108">[in]A`COR_PRF_FRAME_INFO`值所參考的堆疊框架的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="11a9d-108">[in] A `COR_PRF_FRAME_INFO` value that references information about the stack frame.</span></span> <span data-ttu-id="11a9d-109">只有在這個回呼期間，這個值可供使用。</span><span class="sxs-lookup"><span data-stu-id="11a9d-109">This value is valid for use only during this callback.</span></span>  
+ <span data-ttu-id="effc8-108">[in]A`COR_PRF_FRAME_INFO`值所參考的堆疊框架的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="effc8-108">[in] A `COR_PRF_FRAME_INFO` value that references information about the stack frame.</span></span> <span data-ttu-id="effc8-109">只在回呼期間，這個值是有效的使用。</span><span class="sxs-lookup"><span data-stu-id="effc8-109">This value is valid for use only during this callback.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="11a9d-110">[in]大小`CONTEXT`結構，也就由參考`context`參數。</span><span class="sxs-lookup"><span data-stu-id="11a9d-110">[in] The size of the `CONTEXT` structure, which is referenced by the `context` parameter.</span></span>  
+ <span data-ttu-id="effc8-110">[in]大小`CONTEXT`結構，也就由參考`context`參數。</span><span class="sxs-lookup"><span data-stu-id="effc8-110">[in] The size of the `CONTEXT` structure, which is referenced by the `context` parameter.</span></span>  
   
  `context`  
- <span data-ttu-id="11a9d-111">[in]對 win32 指標`CONTEXT`結構，表示這個畫面格 CPU 的狀態。</span><span class="sxs-lookup"><span data-stu-id="11a9d-111">[in] A pointer to a Win32 `CONTEXT` structure that represents the state of the CPU for this frame.</span></span>  
+ <span data-ttu-id="effc8-111">[in]Win32 指標`CONTEXT`結構，代表此框架的 CPU 的狀態。</span><span class="sxs-lookup"><span data-stu-id="effc8-111">[in] A pointer to a Win32 `CONTEXT` structure that represents the state of the CPU for this frame.</span></span>  
   
- <span data-ttu-id="11a9d-112">`context`參數是傳入 COR_PRF_SNAPSHOT_CONTEXT 旗標時，才有效`ICorProfilerInfo2::DoStackSnapshot`。</span><span class="sxs-lookup"><span data-stu-id="11a9d-112">The `context` parameter is valid only if the COR_PRF_SNAPSHOT_CONTEXT flag was passed in `ICorProfilerInfo2::DoStackSnapshot`.</span></span>  
+ <span data-ttu-id="effc8-112">`context`參數是傳入 COR_PRF_SNAPSHOT_CONTEXT 旗標時，才有效`ICorProfilerInfo2::DoStackSnapshot`。</span><span class="sxs-lookup"><span data-stu-id="effc8-112">The `context` parameter is valid only if the COR_PRF_SNAPSHOT_CONTEXT flag was passed in `ICorProfilerInfo2::DoStackSnapshot`.</span></span>  
   
  `clientData`  
- <span data-ttu-id="11a9d-113">[in]用戶端資料，這直接透過傳遞指標`ICorProfilerInfo2::DoStackSnapshot`。</span><span class="sxs-lookup"><span data-stu-id="11a9d-113">[in] A pointer to the client data, which is passed straight through from `ICorProfilerInfo2::DoStackSnapshot`.</span></span>  
+ <span data-ttu-id="effc8-113">[in]用戶端資料指標，再傳遞直接從`ICorProfilerInfo2::DoStackSnapshot`。</span><span class="sxs-lookup"><span data-stu-id="effc8-113">[in] A pointer to the client data, which is passed straight through from `ICorProfilerInfo2::DoStackSnapshot`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="11a9d-114">備註</span><span class="sxs-lookup"><span data-stu-id="11a9d-114">Remarks</span></span>  
- <span data-ttu-id="11a9d-115">`StackSnapshotCallback`函式由程式碼剖析工具寫入器實作。</span><span class="sxs-lookup"><span data-stu-id="11a9d-115">The `StackSnapshotCallback` function is implemented by the profiler writer.</span></span> <span data-ttu-id="11a9d-116">您必須限制在執行工作的複雜度`StackSnapshotCallback`。</span><span class="sxs-lookup"><span data-stu-id="11a9d-116">You must limit the complexity of work done in `StackSnapshotCallback`.</span></span> <span data-ttu-id="11a9d-117">例如，當使用`ICorProfilerInfo2::DoStackSnapshot`以非同步的方式，目標執行緒可能持有的鎖定。</span><span class="sxs-lookup"><span data-stu-id="11a9d-117">For example, when using `ICorProfilerInfo2::DoStackSnapshot` in an asynchronous manner, the target thread may be holding locks.</span></span> <span data-ttu-id="11a9d-118">如果內的程式碼`StackSnapshotCallback`需要相同的鎖定，可能發生死結。</span><span class="sxs-lookup"><span data-stu-id="11a9d-118">If code within `StackSnapshotCallback` requires the same locks, a deadlock could ensue.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="effc8-114">備註</span><span class="sxs-lookup"><span data-stu-id="effc8-114">Remarks</span></span>  
+ <span data-ttu-id="effc8-115">`StackSnapshotCallback`函式由程式碼剖析工具寫入器實作。</span><span class="sxs-lookup"><span data-stu-id="effc8-115">The `StackSnapshotCallback` function is implemented by the profiler writer.</span></span> <span data-ttu-id="effc8-116">您必須限制在完成工作的複雜性`StackSnapshotCallback`。</span><span class="sxs-lookup"><span data-stu-id="effc8-116">You must limit the complexity of work done in `StackSnapshotCallback`.</span></span> <span data-ttu-id="effc8-117">例如，當使用`ICorProfilerInfo2::DoStackSnapshot`以非同步方式，在目標執行緒可能持有的鎖定。</span><span class="sxs-lookup"><span data-stu-id="effc8-117">For example, when using `ICorProfilerInfo2::DoStackSnapshot` in an asynchronous manner, the target thread may be holding locks.</span></span> <span data-ttu-id="effc8-118">如果程式碼內`StackSnapshotCallback`需要相同的鎖定，可能發生死結。</span><span class="sxs-lookup"><span data-stu-id="effc8-118">If code within `StackSnapshotCallback` requires the same locks, a deadlock could ensue.</span></span>  
   
- <span data-ttu-id="11a9d-119">`ICorProfilerInfo2::DoStackSnapshot`方法呼叫`StackSnapshotCallback`managed 框架每一次或一次每一回合的 unmanaged 框架的函式。</span><span class="sxs-lookup"><span data-stu-id="11a9d-119">The `ICorProfilerInfo2::DoStackSnapshot` method calls the `StackSnapshotCallback` function once per managed frame or once per run of unmanaged frames.</span></span> <span data-ttu-id="11a9d-120">如果`StackSnapshotCallback`稱為 「 執行中的未受管理的框架，分析工具可能會使用暫存器內容 (所參考`context`參數) 來執行它自己的未受管理的堆疊查核行程。</span><span class="sxs-lookup"><span data-stu-id="11a9d-120">If `StackSnapshotCallback` is called for a run of unmanaged frames, the profiler may use the register context (referenced by the `context` parameter) to perform its own unmanaged stack walk.</span></span> <span data-ttu-id="11a9d-121">在此情況下，Win32`CONTEXT`結構代表最近推送的框架內的未受管理的框架執行的 CPU 狀態。</span><span class="sxs-lookup"><span data-stu-id="11a9d-121">In this case, the Win32 `CONTEXT` structure represents the CPU state for the most recently pushed frame within the run of unmanaged frames.</span></span> <span data-ttu-id="11a9d-122">雖然 Win32`CONTEXT`結構包含之所有暫存器值，則您應該只依賴的堆疊指標暫存器、 框架指標暫存器、 指令指標暫存器和靜態 （即保留） 值整數暫存器。</span><span class="sxs-lookup"><span data-stu-id="11a9d-122">Although the Win32 `CONTEXT` structure includes values for all registers, you should rely only on the values of the stack pointer register, frame pointer register, instruction pointer register, and the nonvolatile (that is, preserved) integer registers.</span></span>  
+ <span data-ttu-id="effc8-119">`ICorProfilerInfo2::DoStackSnapshot`方法呼叫`StackSnapshotCallback`managed 框架每一次或一次每一回合的非受控框架的函式。</span><span class="sxs-lookup"><span data-stu-id="effc8-119">The `ICorProfilerInfo2::DoStackSnapshot` method calls the `StackSnapshotCallback` function once per managed frame or once per run of unmanaged frames.</span></span> <span data-ttu-id="effc8-120">如果`StackSnapshotCallback`呼叫執行未受管理的畫面格期間，分析工具可以使用暫存器內容 (藉由參考`context`參數) 來執行它自己的未受管理的堆疊查核行程。</span><span class="sxs-lookup"><span data-stu-id="effc8-120">If `StackSnapshotCallback` is called for a run of unmanaged frames, the profiler may use the register context (referenced by the `context` parameter) to perform its own unmanaged stack walk.</span></span> <span data-ttu-id="effc8-121">在此案例中，Win32`CONTEXT`結構代表最近推送的框架內的未受管理的框架執行的 CPU 狀態。</span><span class="sxs-lookup"><span data-stu-id="effc8-121">In this case, the Win32 `CONTEXT` structure represents the CPU state for the most recently pushed frame within the run of unmanaged frames.</span></span> <span data-ttu-id="effc8-122">雖然 Win32`CONTEXT`結構包含的所有暫存器值，您應該只依賴堆疊指標暫存器、 框架指標暫存器、 指令指標暫存器和值 （也就，保留） 之靜態整數暫存器。</span><span class="sxs-lookup"><span data-stu-id="effc8-122">Although the Win32 `CONTEXT` structure includes values for all registers, you should rely only on the values of the stack pointer register, frame pointer register, instruction pointer register, and the nonvolatile (that is, preserved) integer registers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="11a9d-123">需求</span><span class="sxs-lookup"><span data-stu-id="11a9d-123">Requirements</span></span>  
- <span data-ttu-id="11a9d-124">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="11a9d-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="effc8-123">需求</span><span class="sxs-lookup"><span data-stu-id="effc8-123">Requirements</span></span>  
+ <span data-ttu-id="effc8-124">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="effc8-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="11a9d-125">**標頭：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="11a9d-125">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="effc8-125">**標頭：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="effc8-125">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="11a9d-126">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="11a9d-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="effc8-126">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="effc8-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="11a9d-127">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="11a9d-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="effc8-127">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="effc8-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="11a9d-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="11a9d-128">See Also</span></span>  
- [<span data-ttu-id="11a9d-129">DoStackSnapshot 方法</span><span class="sxs-lookup"><span data-stu-id="11a9d-129">DoStackSnapshot Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
- [<span data-ttu-id="11a9d-130">分析全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="11a9d-130">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="effc8-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="effc8-128">See also</span></span>
+- [<span data-ttu-id="effc8-129">DoStackSnapshot 方法</span><span class="sxs-lookup"><span data-stu-id="effc8-129">DoStackSnapshot Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
+- [<span data-ttu-id="effc8-130">分析全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="effc8-130">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

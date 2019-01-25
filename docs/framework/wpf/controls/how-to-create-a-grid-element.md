@@ -1,5 +1,5 @@
 ---
-title: 如何：建立 Grid 項目
+title: HOW TO：建立 Grid 項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,24 +7,24 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], creating [WPF], grid instance
 ms.assetid: b2f07626-9df8-43b8-8d36-492f3cb42837
-ms.openlocfilehash: b93bb859c4a0df50da2fa00587a28fda3776fd09
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b5bb9572b6a34b21208a8d8c0583068873772aae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726594"
 ---
-# <a name="how-to-create-a-grid-element"></a><span data-ttu-id="a4c06-102">如何：建立 Grid 項目</span><span class="sxs-lookup"><span data-stu-id="a4c06-102">How to: Create a Grid Element</span></span>
-## <a name="example"></a><span data-ttu-id="a4c06-103">範例</span><span class="sxs-lookup"><span data-stu-id="a4c06-103">Example</span></span>  
- <span data-ttu-id="a4c06-104">下列範例示範如何建立和使用的執行個體<xref:System.Windows.Controls.Grid>使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]或程式碼。</span><span class="sxs-lookup"><span data-stu-id="a4c06-104">The following example shows how to create and use an instance of <xref:System.Windows.Controls.Grid> by using either [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] or code.</span></span> <span data-ttu-id="a4c06-105">這個範例會使用三個<xref:System.Windows.Controls.ColumnDefinition>物件和三個<xref:System.Windows.Controls.RowDefinition>物件來建立一個方格，其中擁有九個資料格，例如工作表。</span><span class="sxs-lookup"><span data-stu-id="a4c06-105">This example uses three <xref:System.Windows.Controls.ColumnDefinition> objects and three <xref:System.Windows.Controls.RowDefinition> objects to create a grid that has nine cells, such as in a worksheet.</span></span> <span data-ttu-id="a4c06-106">每個資料格都包含<xref:System.Windows.Controls.TextBlock>項目，表示資料及上方資料列包含<xref:System.Windows.Controls.TextBlock>使用<xref:System.Windows.Controls.Grid.ColumnSpan%2A>套用的屬性。</span><span class="sxs-lookup"><span data-stu-id="a4c06-106">Each cell contains a <xref:System.Windows.Controls.TextBlock> element that represents data, and the top row contains a <xref:System.Windows.Controls.TextBlock> with the <xref:System.Windows.Controls.Grid.ColumnSpan%2A> property applied.</span></span> <span data-ttu-id="a4c06-107">若要顯示的界限，每個資料格，<xref:System.Windows.Controls.Grid.ShowGridLines%2A>屬性處於啟用狀態。</span><span class="sxs-lookup"><span data-stu-id="a4c06-107">To show the boundaries of each cell, the <xref:System.Windows.Controls.Grid.ShowGridLines%2A> property is enabled.</span></span>  
+# <a name="how-to-create-a-grid-element"></a><span data-ttu-id="be263-102">HOW TO：建立 Grid 項目</span><span class="sxs-lookup"><span data-stu-id="be263-102">How to: Create a Grid Element</span></span>
+## <a name="example"></a><span data-ttu-id="be263-103">範例</span><span class="sxs-lookup"><span data-stu-id="be263-103">Example</span></span>  
+ <span data-ttu-id="be263-104">下列範例示範如何建立和使用的執行個體<xref:System.Windows.Controls.Grid>使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]或程式碼。</span><span class="sxs-lookup"><span data-stu-id="be263-104">The following example shows how to create and use an instance of <xref:System.Windows.Controls.Grid> by using either [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] or code.</span></span> <span data-ttu-id="be263-105">這個範例會使用三個<xref:System.Windows.Controls.ColumnDefinition>物件和三個<xref:System.Windows.Controls.RowDefinition>物件來建立一個方格，其中擁有九個資料格，例如工作表。</span><span class="sxs-lookup"><span data-stu-id="be263-105">This example uses three <xref:System.Windows.Controls.ColumnDefinition> objects and three <xref:System.Windows.Controls.RowDefinition> objects to create a grid that has nine cells, such as in a worksheet.</span></span> <span data-ttu-id="be263-106">每個資料格都包含<xref:System.Windows.Controls.TextBlock>項目，表示資料及上方資料列包含<xref:System.Windows.Controls.TextBlock>使用<xref:System.Windows.Controls.Grid.ColumnSpan%2A>套用的屬性。</span><span class="sxs-lookup"><span data-stu-id="be263-106">Each cell contains a <xref:System.Windows.Controls.TextBlock> element that represents data, and the top row contains a <xref:System.Windows.Controls.TextBlock> with the <xref:System.Windows.Controls.Grid.ColumnSpan%2A> property applied.</span></span> <span data-ttu-id="be263-107">若要顯示的界限，每個資料格，<xref:System.Windows.Controls.Grid.ShowGridLines%2A>屬性處於啟用狀態。</span><span class="sxs-lookup"><span data-stu-id="be263-107">To show the boundaries of each cell, the <xref:System.Windows.Controls.Grid.ShowGridLines%2A> property is enabled.</span></span>  
   
  [!code-csharp[Grid#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Grid/CSharp/Grid_Code.cs#3)]
  [!code-vb[Grid#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Grid/VisualBasic/grid_vb.vb#3)]
  [!code-xaml[Grid#3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Grid/XAML/default.xaml#3)]  
   
-  <span data-ttu-id="a4c06-108">兩種方法會產生看起來相同，類似下面這個使用者介面。</span><span class="sxs-lookup"><span data-stu-id="a4c06-108">Either approach will generate a user interface that looks much the same, like the one below.</span></span>
+  <span data-ttu-id="be263-108">兩種方法會產生看起來相同，類似下面這個使用者介面。</span><span class="sxs-lookup"><span data-stu-id="be263-108">Either approach will generate a user interface that looks much the same, like the one below.</span></span>
 
   ![螢幕擷取畫面說明包含分成三個資料行的方格的 WPF 使用者介面。](./media/how-to-create-a-grid-element/how-to-create-a-grid-element.png)
-## <a name="see-also"></a><span data-ttu-id="a4c06-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a4c06-112">See Also</span></span>  
- <xref:System.Windows.Controls.Grid>  
- [<span data-ttu-id="a4c06-113">面板概觀</span><span class="sxs-lookup"><span data-stu-id="a4c06-113">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a><span data-ttu-id="be263-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="be263-112">See also</span></span>
+- <xref:System.Windows.Controls.Grid>
+- [<span data-ttu-id="be263-113">面板概觀</span><span class="sxs-lookup"><span data-stu-id="be263-113">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)

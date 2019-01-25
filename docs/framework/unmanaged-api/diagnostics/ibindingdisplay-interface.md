@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5304496da992b44c171ca3c6ffa3fffa35d6f9cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3e5f36e10fffebe89b805cee3cb57e88afd4df35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745288"
 ---
-# <a name="ibindingdisplay-interface"></a><span data-ttu-id="44ac3-102">IBindingDisplay 介面</span><span class="sxs-lookup"><span data-stu-id="44ac3-102">IBindingDisplay Interface</span></span>
-<span data-ttu-id="44ac3-103">提供方法，顯示執行中應用程式的目前繫結資訊。</span><span class="sxs-lookup"><span data-stu-id="44ac3-103">Provides methods that display current binding information about the running application.</span></span>  
+# <a name="ibindingdisplay-interface"></a><span data-ttu-id="347dc-102">IBindingDisplay 介面</span><span class="sxs-lookup"><span data-stu-id="347dc-102">IBindingDisplay Interface</span></span>
+<span data-ttu-id="347dc-103">提供方法，它會顯示執行中應用程式的目前繫結資訊。</span><span class="sxs-lookup"><span data-stu-id="347dc-103">Provides methods that display current binding information about the running application.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="44ac3-104">方法</span><span class="sxs-lookup"><span data-stu-id="44ac3-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="347dc-104">方法</span><span class="sxs-lookup"><span data-stu-id="347dc-104">Methods</span></span>  
   
-|<span data-ttu-id="44ac3-105">方法</span><span class="sxs-lookup"><span data-stu-id="44ac3-105">Method</span></span>|<span data-ttu-id="44ac3-106">描述</span><span class="sxs-lookup"><span data-stu-id="44ac3-106">Description</span></span>|  
+|<span data-ttu-id="347dc-105">方法</span><span class="sxs-lookup"><span data-stu-id="347dc-105">Method</span></span>|<span data-ttu-id="347dc-106">描述</span><span class="sxs-lookup"><span data-stu-id="347dc-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="44ac3-107">GetCurrentDisplay 方法</span><span class="sxs-lookup"><span data-stu-id="44ac3-107">GetCurrentDisplay Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|<span data-ttu-id="44ac3-108">傳回目前的繫結顯示資訊。</span><span class="sxs-lookup"><span data-stu-id="44ac3-108">Returns the current binding display information.</span></span>|  
-|[<span data-ttu-id="44ac3-109">InitializeForProcess 方法</span><span class="sxs-lookup"><span data-stu-id="44ac3-109">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|<span data-ttu-id="44ac3-110">初始化 `IBindingDisplay` 物件。</span><span class="sxs-lookup"><span data-stu-id="44ac3-110">Initializes the `IBindingDisplay` object.</span></span>|  
+|[<span data-ttu-id="347dc-107">GetCurrentDisplay 方法</span><span class="sxs-lookup"><span data-stu-id="347dc-107">GetCurrentDisplay Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|<span data-ttu-id="347dc-108">傳回目前的繫結顯示資訊。</span><span class="sxs-lookup"><span data-stu-id="347dc-108">Returns the current binding display information.</span></span>|  
+|[<span data-ttu-id="347dc-109">InitializeForProcess 方法</span><span class="sxs-lookup"><span data-stu-id="347dc-109">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|<span data-ttu-id="347dc-110">初始化 `IBindingDisplay` 物件。</span><span class="sxs-lookup"><span data-stu-id="347dc-110">Initializes the `IBindingDisplay` object.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="44ac3-111">需求</span><span class="sxs-lookup"><span data-stu-id="44ac3-111">Requirements</span></span>  
- <span data-ttu-id="44ac3-112">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="44ac3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="347dc-111">需求</span><span class="sxs-lookup"><span data-stu-id="347dc-111">Requirements</span></span>  
+ <span data-ttu-id="347dc-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="347dc-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="44ac3-113">**標頭：** BindingDisplay.h</span><span class="sxs-lookup"><span data-stu-id="44ac3-113">**Header:** BindingDisplay.h</span></span>  
+ <span data-ttu-id="347dc-113">**標頭：** BindingDisplay.h</span><span class="sxs-lookup"><span data-stu-id="347dc-113">**Header:** BindingDisplay.h</span></span>  
   
- <span data-ttu-id="44ac3-114">**程式庫：** BindingDisplay.idl</span><span class="sxs-lookup"><span data-stu-id="44ac3-114">**Library:** BindingDisplay.idl</span></span>  
+ <span data-ttu-id="347dc-114">**程式庫：** BindingDisplay.idl</span><span class="sxs-lookup"><span data-stu-id="347dc-114">**Library:** BindingDisplay.idl</span></span>  
   
- <span data-ttu-id="44ac3-115">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44ac3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="347dc-115">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="347dc-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44ac3-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="44ac3-116">See Also</span></span>  
- [<span data-ttu-id="44ac3-117">診斷符號存放區介面</span><span class="sxs-lookup"><span data-stu-id="44ac3-117">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="347dc-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="347dc-116">See also</span></span>
+- [<span data-ttu-id="347dc-117">診斷符號存放區介面</span><span class="sxs-lookup"><span data-stu-id="347dc-117">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49b42a7fc54af56149b602b337e4a6c853c270cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cf4c0eb3f9bb36cb45aa93c576b4efddaa93482
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736529"
 ---
-# <a name="cordebuginternalframetype-enumeration"></a><span data-ttu-id="00552-102">CorDebugInternalFrameType 列舉</span><span class="sxs-lookup"><span data-stu-id="00552-102">CorDebugInternalFrameType Enumeration</span></span>
-<span data-ttu-id="00552-103">識別堆疊框架的類型。</span><span class="sxs-lookup"><span data-stu-id="00552-103">Identifies the type of stack frame.</span></span> <span data-ttu-id="00552-104">這個列舉型別由[icordebuginternalframe:: Getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="00552-104">This enumeration is used by the [ICorDebugInternalFrame::GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) method.</span></span>  
+# <a name="cordebuginternalframetype-enumeration"></a><span data-ttu-id="16a6b-102">CorDebugInternalFrameType 列舉</span><span class="sxs-lookup"><span data-stu-id="16a6b-102">CorDebugInternalFrameType Enumeration</span></span>
+<span data-ttu-id="16a6b-103">識別堆疊框架的類型。</span><span class="sxs-lookup"><span data-stu-id="16a6b-103">Identifies the type of stack frame.</span></span> <span data-ttu-id="16a6b-104">這個列舉型別由[icordebuginternalframe:: Getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="16a6b-104">This enumeration is used by the [ICorDebugInternalFrame::GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="00552-105">語法</span><span class="sxs-lookup"><span data-stu-id="00552-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="16a6b-105">語法</span><span class="sxs-lookup"><span data-stu-id="16a6b-105">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugInternalFrameType {  
@@ -45,30 +45,30 @@ typedef enum CorDebugInternalFrameType {
 } CorDebugInternalFrameType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="00552-106">成員</span><span class="sxs-lookup"><span data-stu-id="00552-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="16a6b-106">成員</span><span class="sxs-lookup"><span data-stu-id="16a6b-106">Members</span></span>  
   
-|<span data-ttu-id="00552-107">成員</span><span class="sxs-lookup"><span data-stu-id="00552-107">Member</span></span>|<span data-ttu-id="00552-108">描述</span><span class="sxs-lookup"><span data-stu-id="00552-108">Description</span></span>|  
+|<span data-ttu-id="16a6b-107">成員</span><span class="sxs-lookup"><span data-stu-id="16a6b-107">Member</span></span>|<span data-ttu-id="16a6b-108">描述</span><span class="sxs-lookup"><span data-stu-id="16a6b-108">Description</span></span>|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|<span data-ttu-id="00552-109">null 值。</span><span class="sxs-lookup"><span data-stu-id="00552-109">A null value.</span></span> <span data-ttu-id="00552-110">`ICorDebugInternalFrame::GetFrameType`方法不會傳回此值。</span><span class="sxs-lookup"><span data-stu-id="00552-110">The `ICorDebugInternalFrame::GetFrameType` method never returns this value.</span></span>|  
-|`STUBFRAME_M2U`|<span data-ttu-id="00552-111">管理至 unmanaged 的虛設常式的框架。</span><span class="sxs-lookup"><span data-stu-id="00552-111">A managed-to-unmanaged stub frame.</span></span>|  
-|`STUBFRAME_U2M`|<span data-ttu-id="00552-112">Unmanaged--受管理的虛設常式的框架。</span><span class="sxs-lookup"><span data-stu-id="00552-112">An unmanaged-to-managed stub frame.</span></span>|  
-|`STUBFRAME_APPDOMAIN_TRANSITION`|<span data-ttu-id="00552-113">應用程式定義域之間的轉換。</span><span class="sxs-lookup"><span data-stu-id="00552-113">A transition between application domains.</span></span>|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|<span data-ttu-id="00552-114">輕量級方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="00552-114">A lightweight method call.</span></span>|  
-|`STUBFRAME_FUNC_EVAL`|<span data-ttu-id="00552-115">函式評估的開始。</span><span class="sxs-lookup"><span data-stu-id="00552-115">The start of function evaluation.</span></span>|  
-|`STUBFRAME_INTERNALCALL`|<span data-ttu-id="00552-116">Common language runtime 內部呼叫。</span><span class="sxs-lookup"><span data-stu-id="00552-116">An internal call into the common language runtime.</span></span>|  
-|`STUBFRAME_CLASS_INIT`|<span data-ttu-id="00552-117">類別初始設定開始。</span><span class="sxs-lookup"><span data-stu-id="00552-117">The start of a class initialization.</span></span>|  
-|`STUBFRAME_EXCEPTION`|<span data-ttu-id="00552-118">就會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="00552-118">An exception that is thrown.</span></span>|  
-|`STUBFRAME_SECURITY`|<span data-ttu-id="00552-119">使用程式碼存取安全性的框架。</span><span class="sxs-lookup"><span data-stu-id="00552-119">A frame used for code access security.</span></span>|  
-|`STUBFRAME_JIT_COMPILATION`|<span data-ttu-id="00552-120">執行階段是 JIT 編譯方法。</span><span class="sxs-lookup"><span data-stu-id="00552-120">The runtime is JIT-compiling a method.</span></span>|  
+|`STUBFRAME_NONE`|<span data-ttu-id="16a6b-109">null 值。</span><span class="sxs-lookup"><span data-stu-id="16a6b-109">A null value.</span></span> <span data-ttu-id="16a6b-110">`ICorDebugInternalFrame::GetFrameType`方法不會傳回此值。</span><span class="sxs-lookup"><span data-stu-id="16a6b-110">The `ICorDebugInternalFrame::GetFrameType` method never returns this value.</span></span>|  
+|`STUBFRAME_M2U`|<span data-ttu-id="16a6b-111">Managed 至 unmanaged 虛設常式的框架。</span><span class="sxs-lookup"><span data-stu-id="16a6b-111">A managed-to-unmanaged stub frame.</span></span>|  
+|`STUBFRAME_U2M`|<span data-ttu-id="16a6b-112">非受控至 managed 虛設常式的框架。</span><span class="sxs-lookup"><span data-stu-id="16a6b-112">An unmanaged-to-managed stub frame.</span></span>|  
+|`STUBFRAME_APPDOMAIN_TRANSITION`|<span data-ttu-id="16a6b-113">應用程式定義域之間的轉換。</span><span class="sxs-lookup"><span data-stu-id="16a6b-113">A transition between application domains.</span></span>|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|<span data-ttu-id="16a6b-114">輕量的方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="16a6b-114">A lightweight method call.</span></span>|  
+|`STUBFRAME_FUNC_EVAL`|<span data-ttu-id="16a6b-115">函式評估的開始。</span><span class="sxs-lookup"><span data-stu-id="16a6b-115">The start of function evaluation.</span></span>|  
+|`STUBFRAME_INTERNALCALL`|<span data-ttu-id="16a6b-116">Common language runtime 內部呼叫。</span><span class="sxs-lookup"><span data-stu-id="16a6b-116">An internal call into the common language runtime.</span></span>|  
+|`STUBFRAME_CLASS_INIT`|<span data-ttu-id="16a6b-117">在類別初始化開始。</span><span class="sxs-lookup"><span data-stu-id="16a6b-117">The start of a class initialization.</span></span>|  
+|`STUBFRAME_EXCEPTION`|<span data-ttu-id="16a6b-118">就會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="16a6b-118">An exception that is thrown.</span></span>|  
+|`STUBFRAME_SECURITY`|<span data-ttu-id="16a6b-119">用於程式碼存取安全性的框架。</span><span class="sxs-lookup"><span data-stu-id="16a6b-119">A frame used for code access security.</span></span>|  
+|`STUBFRAME_JIT_COMPILATION`|<span data-ttu-id="16a6b-120">執行階段是 JIT 編譯方法。</span><span class="sxs-lookup"><span data-stu-id="16a6b-120">The runtime is JIT-compiling a method.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="00552-121">需求</span><span class="sxs-lookup"><span data-stu-id="00552-121">Requirements</span></span>  
- <span data-ttu-id="00552-122">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="00552-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="16a6b-121">需求</span><span class="sxs-lookup"><span data-stu-id="16a6b-121">Requirements</span></span>  
+ <span data-ttu-id="16a6b-122">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="16a6b-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="00552-123">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="00552-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="16a6b-123">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="16a6b-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="00552-124">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="00552-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="16a6b-124">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="16a6b-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="00552-125">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="00552-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="16a6b-125">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="16a6b-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="00552-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="00552-126">See Also</span></span>  
- [<span data-ttu-id="00552-127">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="00552-127">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="16a6b-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="16a6b-126">See also</span></span>
+- [<span data-ttu-id="16a6b-127">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="16a6b-127">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

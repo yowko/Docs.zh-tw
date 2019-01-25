@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008514e3637a980f3722d0c9896a17be33d54c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b8608a5438b31cad64bb27d2866109f479dad441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739494"
 ---
-# <a name="getcorsystemdirectory-function"></a><span data-ttu-id="31d0b-102">GetCORSystemDirectory 函式</span><span class="sxs-lookup"><span data-stu-id="31d0b-102">GetCORSystemDirectory Function</span></span>
-<span data-ttu-id="31d0b-103">傳回 common language runtime (CLR) 載入到處理程序的安裝的目錄。</span><span class="sxs-lookup"><span data-stu-id="31d0b-103">Returns the installation directory of the common language runtime (CLR) that is loaded into the process.</span></span> <span data-ttu-id="31d0b-104">安裝目錄是完整名稱，例如，"c:\windows\microsoft.net\framework\v1.0.3705"。</span><span class="sxs-lookup"><span data-stu-id="31d0b-104">The installation directory is fully qualified, for example, "c:\windows\microsoft.net\framework\v1.0.3705".</span></span>  
+# <a name="getcorsystemdirectory-function"></a><span data-ttu-id="84c89-102">GetCORSystemDirectory 函式</span><span class="sxs-lookup"><span data-stu-id="84c89-102">GetCORSystemDirectory Function</span></span>
+<span data-ttu-id="84c89-103">傳回 common language runtime (CLR) 載入到處理程序的安裝的目錄。</span><span class="sxs-lookup"><span data-stu-id="84c89-103">Returns the installation directory of the common language runtime (CLR) that is loaded into the process.</span></span> <span data-ttu-id="84c89-104">安裝目錄是完整名稱，例如，"c:\windows\microsoft.net\framework\v1.0.3705 」。</span><span class="sxs-lookup"><span data-stu-id="84c89-104">The installation directory is fully qualified, for example, "c:\windows\microsoft.net\framework\v1.0.3705".</span></span>  
   
- <span data-ttu-id="31d0b-105">此函式已被取代。</span><span class="sxs-lookup"><span data-stu-id="31d0b-105">This function is deprecated.</span></span> <span data-ttu-id="31d0b-106">被取代[iclrruntimeinfo:: Getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)方法中提供[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="31d0b-106">It is superseded by the [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) method provided in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="84c89-105">此函式已被取代。</span><span class="sxs-lookup"><span data-stu-id="84c89-105">This function is deprecated.</span></span> <span data-ttu-id="84c89-106">被取代[iclrruntimeinfo:: Getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)方法中提供[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="84c89-106">It is superseded by the [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) method provided in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="31d0b-107">語法</span><span class="sxs-lookup"><span data-stu-id="31d0b-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84c89-107">語法</span><span class="sxs-lookup"><span data-stu-id="84c89-107">Syntax</span></span>  
   
 ```  
 HRESULT GetCORSystemDirectory (   
@@ -39,29 +39,29 @@ HRESULT GetCORSystemDirectory (
 );   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="31d0b-108">參數</span><span class="sxs-lookup"><span data-stu-id="31d0b-108">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="84c89-108">參數</span><span class="sxs-lookup"><span data-stu-id="84c89-108">Parameters</span></span>  
  `pbuffer`  
- <span data-ttu-id="31d0b-109">[out]在其中執行階段會傳回字串，包含載入到處理序的執行階段安裝目錄的完整格式的名稱緩衝區。</span><span class="sxs-lookup"><span data-stu-id="31d0b-109">[out] A buffer in which the runtime returns a string that contains the fully qualified name of the installation directory for the runtime that is loaded into the process.</span></span> <span data-ttu-id="31d0b-110">如果執行階段尚未載入到程序，則函數會傳回最新版本的執行階段電腦上安裝適當的目錄資訊。</span><span class="sxs-lookup"><span data-stu-id="31d0b-110">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
+ <span data-ttu-id="84c89-109">[out]執行階段會傳回字串，包含載入到處理序的執行階段安裝目錄的完整格式的名稱緩衝區。</span><span class="sxs-lookup"><span data-stu-id="84c89-109">[out] A buffer in which the runtime returns a string that contains the fully qualified name of the installation directory for the runtime that is loaded into the process.</span></span> <span data-ttu-id="84c89-110">如果執行階段尚未載入到處理序，則函數會傳回最新版本的執行階段電腦上安裝適當的目錄資訊。</span><span class="sxs-lookup"><span data-stu-id="84c89-110">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="31d0b-111">[in]大小，以位元組為單位的`pbuffer`。</span><span class="sxs-lookup"><span data-stu-id="31d0b-111">[in] The size, in bytes, of `pbuffer`.</span></span>  
+ <span data-ttu-id="84c89-111">[in]大小，以位元組為單位的`pbuffer`。</span><span class="sxs-lookup"><span data-stu-id="84c89-111">[in] The size, in bytes, of `pbuffer`.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="31d0b-112">[out]傳入的字元數`pbuffer`。</span><span class="sxs-lookup"><span data-stu-id="31d0b-112">[out] The number of characters returned in `pbuffer`.</span></span>  
+ <span data-ttu-id="84c89-112">[out]傳入的字元數`pbuffer`。</span><span class="sxs-lookup"><span data-stu-id="84c89-112">[out] The number of characters returned in `pbuffer`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="31d0b-113">備註</span><span class="sxs-lookup"><span data-stu-id="31d0b-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84c89-113">備註</span><span class="sxs-lookup"><span data-stu-id="84c89-113">Remarks</span></span>  
   
 > [!CAUTION]
->  <span data-ttu-id="31d0b-114">請勿使用此函式中執行的 CLR 版本 4 的處理序。</span><span class="sxs-lookup"><span data-stu-id="31d0b-114">Do not use this function in processes that are running version 4 of the CLR.</span></span> <span data-ttu-id="31d0b-115">如果在電腦上已安裝舊版的 clr，此函數會傳回該版本的安裝目錄。</span><span class="sxs-lookup"><span data-stu-id="31d0b-115">If an earlier version of the CLR is installed on the computer, this function returns the installation directory for that version.</span></span>  
+>  <span data-ttu-id="84c89-114">請勿使用此函式中執行的 CLR 版本 4 的處理序。</span><span class="sxs-lookup"><span data-stu-id="84c89-114">Do not use this function in processes that are running version 4 of the CLR.</span></span> <span data-ttu-id="84c89-115">如果在電腦上安裝舊版的 CLR，則此函數會傳回該版本的安裝目錄。</span><span class="sxs-lookup"><span data-stu-id="84c89-115">If an earlier version of the CLR is installed on the computer, this function returns the installation directory for that version.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="31d0b-116">需求</span><span class="sxs-lookup"><span data-stu-id="31d0b-116">Requirements</span></span>  
- <span data-ttu-id="31d0b-117">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="31d0b-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84c89-116">需求</span><span class="sxs-lookup"><span data-stu-id="84c89-116">Requirements</span></span>  
+ <span data-ttu-id="84c89-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="84c89-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="31d0b-118">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="31d0b-118">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="84c89-118">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="84c89-118">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="31d0b-119">**程式庫：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="31d0b-119">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="84c89-119">**程式庫：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="84c89-119">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="31d0b-120">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="31d0b-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="84c89-120">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84c89-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="31d0b-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="31d0b-121">See Also</span></span>  
- [<span data-ttu-id="31d0b-122">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="31d0b-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="84c89-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="84c89-121">See also</span></span>
+- [<span data-ttu-id="84c89-122">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="84c89-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

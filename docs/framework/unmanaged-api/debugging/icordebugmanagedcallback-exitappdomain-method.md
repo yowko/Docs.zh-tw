@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f909eddde182a73709be9ca5cafec6285db46b4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: baeac4ee3e4a22b023420caa7caffa238ff5a5c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696109"
 ---
-# <a name="icordebugmanagedcallbackexitappdomain-method"></a><span data-ttu-id="9535a-102">ICorDebugManagedCallback::ExitAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="9535a-102">ICorDebugManagedCallback::ExitAppDomain Method</span></span>
-<span data-ttu-id="9535a-103">告知偵錯工具應用程式定義域已結束。</span><span class="sxs-lookup"><span data-stu-id="9535a-103">Notifies the debugger that an application domain has exited.</span></span>  
+# <a name="icordebugmanagedcallbackexitappdomain-method"></a><span data-ttu-id="24624-102">ICorDebugManagedCallback::ExitAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="24624-102">ICorDebugManagedCallback::ExitAppDomain Method</span></span>
+<span data-ttu-id="24624-103">已結束應用程式定義域會告知偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="24624-103">Notifies the debugger that an application domain has exited.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9535a-104">語法</span><span class="sxs-lookup"><span data-stu-id="9535a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="24624-104">語法</span><span class="sxs-lookup"><span data-stu-id="24624-104">Syntax</span></span>  
   
 ```  
 HRESULT ExitAppDomain (  
@@ -36,21 +36,21 @@ HRESULT ExitAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9535a-105">參數</span><span class="sxs-lookup"><span data-stu-id="9535a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="24624-105">參數</span><span class="sxs-lookup"><span data-stu-id="24624-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="9535a-106">[in]代表包含指定的應用程式網域的處理序 ICorDebugProcess 物件的指標。</span><span class="sxs-lookup"><span data-stu-id="9535a-106">[in] A pointer to an ICorDebugProcess object that represents the process that contains the given application domain.</span></span>  
+ <span data-ttu-id="24624-106">[in]ICorDebugProcess 物件，表示包含指定的應用程式定義域的處理序的指標。</span><span class="sxs-lookup"><span data-stu-id="24624-106">[in] A pointer to an ICorDebugProcess object that represents the process that contains the given application domain.</span></span>  
   
  `pAppDomain`  
- <span data-ttu-id="9535a-107">[in]表示已結束的應用程式定義域的 ICorDebugAppDomain 物件指標。</span><span class="sxs-lookup"><span data-stu-id="9535a-107">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that has exited.</span></span>  
+ <span data-ttu-id="24624-107">[in]表示已結束的應用程式定義域的 ICorDebugAppDomain 物件指標。</span><span class="sxs-lookup"><span data-stu-id="24624-107">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that has exited.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9535a-108">需求</span><span class="sxs-lookup"><span data-stu-id="9535a-108">Requirements</span></span>  
- <span data-ttu-id="9535a-109">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9535a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="24624-108">需求</span><span class="sxs-lookup"><span data-stu-id="24624-108">Requirements</span></span>  
+ <span data-ttu-id="24624-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="24624-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9535a-110">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9535a-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="24624-110">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="24624-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9535a-111">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9535a-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="24624-111">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="24624-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9535a-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9535a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="24624-112">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24624-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9535a-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9535a-113">See Also</span></span>  
- [<span data-ttu-id="9535a-114">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="9535a-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="24624-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="24624-113">See also</span></span>
+- [<span data-ttu-id="24624-114">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="24624-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

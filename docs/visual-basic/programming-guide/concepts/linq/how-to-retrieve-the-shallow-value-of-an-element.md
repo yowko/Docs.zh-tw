@@ -1,32 +1,23 @@
 ---
-title: "如何： 擷取表層值的項目 (Visual Basic)"
-ms.custom: 
+title: HOW TO：擷取表層值的項目 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 673b890ab842d1c18c8020eefe03d90086d1bf4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a861acafe3b9561b1237e6b6449374374c723805
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505792"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a><span data-ttu-id="2067b-102">如何： 擷取表層值的項目 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2067b-102">How to: Retrieve the Shallow Value of an Element (Visual Basic)</span></span>
-<span data-ttu-id="2067b-103">本主題說明如何取得項目的表層值。</span><span class="sxs-lookup"><span data-stu-id="2067b-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="2067b-104">表層值僅是特定項目的值。與深層值不同的是，深層值包含了由所有子代項目連結成單一字串的值。</span><span class="sxs-lookup"><span data-stu-id="2067b-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a><span data-ttu-id="37752-102">HOW TO：擷取表層值的項目 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="37752-102">How to: Retrieve the Shallow Value of an Element (Visual Basic)</span></span>
+<span data-ttu-id="37752-103">本主題說明如何取得項目的表層值。</span><span class="sxs-lookup"><span data-stu-id="37752-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="37752-104">表層值僅是特定項目的值。與深層值不同的是，深層值包含了由所有子代項目連結成單一字串的值。</span><span class="sxs-lookup"><span data-stu-id="37752-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  
   
- <span data-ttu-id="2067b-105">當您使用轉換或 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性，您擷取的是深層值。</span><span class="sxs-lookup"><span data-stu-id="2067b-105">When you retrieve an element value by using either casting or the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property, you retrieve the deep value.</span></span> <span data-ttu-id="2067b-106">若要擷取表層值，您可以使用 `ShallowValue` 擴充方法，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="2067b-106">To retrieve the shallow value, you can use the `ShallowValue` extension method, as shown in the follwing example.</span></span> <span data-ttu-id="2067b-107">當您想要根據項目的內容進行選取時，擷取表層值就非常有用。</span><span class="sxs-lookup"><span data-stu-id="2067b-107">Retrieving the shallow value is useful when you want to select elements based on their content.</span></span>  
+ <span data-ttu-id="37752-105">當您使用轉換或 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性，您擷取的是深層值。</span><span class="sxs-lookup"><span data-stu-id="37752-105">When you retrieve an element value by using either casting or the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property, you retrieve the deep value.</span></span> <span data-ttu-id="37752-106">若要擷取表層值，您可以使用 `ShallowValue` 擴充方法，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="37752-106">To retrieve the shallow value, you can use the `ShallowValue` extension method, as shown in the follwing example.</span></span> <span data-ttu-id="37752-107">當您想要根據項目的內容進行選取時，擷取表層值就非常有用。</span><span class="sxs-lookup"><span data-stu-id="37752-107">Retrieving the shallow value is useful when you want to select elements based on their content.</span></span>  
   
- <span data-ttu-id="2067b-108">下列範例會宣告擷取項目表層值的擴充方法。</span><span class="sxs-lookup"><span data-stu-id="2067b-108">The following example declares an extension method that retrieves the shallow value of an element.</span></span> <span data-ttu-id="2067b-109">接著會在查詢中使用此擴充方法，將所有包含計算值的項目列出。</span><span class="sxs-lookup"><span data-stu-id="2067b-109">It then uses the extension method in a query to list all elements that contain a calculated value.</span></span>  
+ <span data-ttu-id="37752-108">下列範例會宣告擷取項目表層值的擴充方法。</span><span class="sxs-lookup"><span data-stu-id="37752-108">The following example declares an extension method that retrieves the shallow value of an element.</span></span> <span data-ttu-id="37752-109">接著會在查詢中使用此擴充方法，將所有包含計算值的項目列出。</span><span class="sxs-lookup"><span data-stu-id="37752-109">It then uses the extension method in a query to list all elements that contain a calculated value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2067b-110">範例</span><span class="sxs-lookup"><span data-stu-id="2067b-110">Example</span></span>  
- <span data-ttu-id="2067b-111">下列文字檔 Report.xml 是此範例的原始檔。</span><span class="sxs-lookup"><span data-stu-id="2067b-111">The following text file, Report.xml, is the source for this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="37752-110">範例</span><span class="sxs-lookup"><span data-stu-id="37752-110">Example</span></span>  
+ <span data-ttu-id="37752-111">下列文字檔 Report.xml 是此範例的原始檔。</span><span class="sxs-lookup"><span data-stu-id="37752-111">The following text file, Report.xml, is the source for this example.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -74,7 +65,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="2067b-112">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="2067b-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="37752-112">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="37752-112">This example produces the following output:</span></span>  
   
 ```  
 Column  Name="CustomerId"   =Customer.CustomerId.Heading  
@@ -83,5 +74,5 @@ Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2067b-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2067b-113">See Also</span></span>  
- [<span data-ttu-id="2067b-114">LINQ to XML 軸 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2067b-114">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="37752-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="37752-113">See also</span></span>
+- [<span data-ttu-id="37752-114">LINQ to XML 軸 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="37752-114">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
