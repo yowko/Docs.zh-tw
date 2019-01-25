@@ -1,1 +1,0 @@
-<span data-ttu-id="b6325-101">4.6、4.5.2、4.51 的 2013 年 11 月更新</span><span class="sxs-lookup"><span data-stu-id="b6325-101">4.6, 4.5.2, November 2013 update to 4.5.1</span></span>
