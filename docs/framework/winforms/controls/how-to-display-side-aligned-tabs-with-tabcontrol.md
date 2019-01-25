@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 TabControl 顯示對齊側邊的定位點
+title: HOW TO：使用 TabControl 顯示對齊側邊
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-ms.openlocfilehash: e145547ba4c8648a765e9507b7f35e50cb15fd82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b2d691cb41a48b51bb48291e321d763a9ff7e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532457"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650571"
 ---
-# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>如何：使用 TabControl 顯示對齊側邊的定位點
+# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>HOW TO：使用 TabControl 顯示對齊側邊
 <xref:System.Windows.Forms.TabControl> 的 <xref:System.Windows.Forms.TabControl.Alignment%2A> 屬性支援以垂直方式 (沿著控制項的左或右邊緣) 顯示索引標籤，而非水平方式 (橫跨控制項的頂端或底部) 。 根據預設，此垂直顯示會導致不良的使用者經驗，因為當啟用視覺化樣式時，<xref:System.Windows.Forms.TabPage> 物件的 <xref:System.Windows.Forms.TabPage.Text%2A> 屬性並不會在索引標籤中顯示。 也沒有直接控制索引標籤內文字方向的方式。您可以在 <xref:System.Windows.Forms.TabControl> 上面使用主控描繪，來改善這種經驗。  
   
  下列程序示範如何使用主控描繪功能來呈現靠右對齊的索引標籤，使索引標籤文字從左向右跑。  
@@ -40,5 +40,5 @@ ms.locfileid: "33532457"
      [!code-csharp[TabControl.RightAlignedTabs#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/TabControl.RightAlignedTabs/CS/Form1.cs#1)]
      [!code-vb[TabControl.RightAlignedTabs#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
- [TabControl 控制項](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- [TabControl 控制項](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)

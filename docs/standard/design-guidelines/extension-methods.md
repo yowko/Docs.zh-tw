@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
-ms.openlocfilehash: 6fedd41e901035290995d7ece1b5aa23e76f345e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621756"
 ---
 # <a name="extension-methods"></a>擴充方法
 擴充方法是允許使用執行個體方法呼叫語法來呼叫靜態方法的語言功能。 這些方法必須接受至少一個參數，表示要對方法的執行個體。  
@@ -48,5 +48,5 @@ ms.locfileid: "53148286"
   
 ## <a name="see-also"></a>另請參閱
 
-- [成員設計方針](../../../docs/standard/design-guidelines/member.md)  
+- [成員設計方針](../../../docs/standard/design-guidelines/member.md)
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

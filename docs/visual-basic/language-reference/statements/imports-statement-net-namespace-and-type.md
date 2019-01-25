@@ -16,12 +16,12 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 0211438e8b4c02fead910dd7a32e0df9ed73ddc5
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ecb75e71225d2b6705d6235a941ecd83b3aab75b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699801"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports 陳述式 (.NET 命名空間和類型)
 可讓類型參考而不需要命名空間限定性條件的名稱。  
@@ -38,8 +38,8 @@ Imports [ aliasname = ] namespace.element
   
 |詞彙|定義|  
 |---|---|  
-|`aliasname`|選擇性。 *匯入別名*或 程式碼可以參考到名稱`namespace`而不是完整限定性條件字串。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`namespace`|必要。 正在匯入的命名空間完整限定的名稱。 可以是命名空間的巢狀字串為任何層級。|  
+|`aliasname`|選擇性。 *匯入別名*或 程式碼可以參考到名稱`namespace`而不是完整限定性條件字串。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`namespace`|必要項。 正在匯入的命名空間完整限定的名稱。 可以是命名空間的巢狀字串為任何層級。|  
 |`element`|選擇性。 命名空間中宣告的程式設計項目名稱。 可以是任何容器項目。|  
   
 ## <a name="remarks"></a>備註  
@@ -56,7 +56,7 @@ Imports [ aliasname = ] namespace.element
  請注意，`Imports`陳述式不會從其他專案和組件的項目提供至您的專案。 匯入不會設定參考。 此外，它只會移除已可供專案的名稱進行限定的需求。 如需詳細資訊，請參閱 < 匯入包含項目 」 中[References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
 > [!NOTE]
->  您可以定義隱含`Imports`陳述式，利用[參考 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)。 如需詳細資訊，請參閱 <<c0> [ 如何： 加入或移除已匯入命名空間 (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)。  
+>  您可以定義隱含`Imports`陳述式，利用[參考 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)。 如需詳細資訊，請參閱[＜How to：新增或移除匯入的命名空間 (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)。  
   
 ## <a name="import-aliases"></a>匯入別名  
  *匯入別名*定義命名空間或類型的別名。 當您需要使用一或多個命名空間中宣告的同名的項目，則匯入別名會非常有用。 如需詳細資訊和範例，請參閱 「 合格的項目名稱 」 中[References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
@@ -98,9 +98,9 @@ Imports [ aliasname = ] namespace.element
   
  [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_7.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [Namespace 陳述式](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [參考和 Imports 陳述式](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- [Imports 陳述式 (XML 命名空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
- [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>另請參閱
+- [Namespace 陳述式](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [參考和 Imports 陳述式](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Imports 陳述式 (XML 命名空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+- [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

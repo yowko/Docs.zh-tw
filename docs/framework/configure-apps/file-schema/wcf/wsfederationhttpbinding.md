@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-ms.openlocfilehash: 0101f9c06c5461c0008ba72c67fc5a49c1f09b4d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5457acd38a0fa1a52d5819516b88d9682076b458
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151845"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671456"
 ---
 # <a name="ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt;
 定義支援 WS-Federation 的繫結。  
   
  \<system.ServiceModel>  
-\<繫結 >  
+\<bindings>  
 wsFederationBinding 項目  
   
 ## <a name="syntax"></a>語法  
@@ -137,7 +137,7 @@ wsFederationBinding 項目
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
  聯合是在多個系統上共用識別以便進行驗證和授權的能力。 這些識別可以指向使用者或電腦。 聯合 HTTP 支援 SOAP 安全性以及混合模式安全性，但不支援獨立使用傳輸安全性。 這個繫結會提供 Windows Communication Foundation (WCF) 支援 WS-同盟通訊協定。 使用這個繫結設定的服務必須使用 HTTP 傳輸。  
@@ -191,11 +191,11 @@ wsFederationBinding 項目
 </configuration>
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.WSFederationHttpBinding>  
- <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement>  
- [如何：建立 WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+- <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement>
+- [如何：建立 WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

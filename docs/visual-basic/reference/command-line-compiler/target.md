@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 7db9b71ee5b2c6b82bdb638471f9598df7f64097
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5208d5a5291969b7060ef5a48e3f6c3ae42aa22a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671911"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 指定編譯器輸出的格式。  
@@ -25,7 +25,7 @@ ms.locfileid: "53148663"
 ## <a name="remarks"></a>備註  
  下表摘要說明的效果`-target`選項。  
   
-|**選項**|**行為**|  
+|**選項**|**Behavior**|  
 |----------------|------------------|  
 |`-target:exe`|可讓編譯器建立可執行主控台應用程式。<br /><br /> 這是預設選項，若未`-target`指定選項。 可執行檔會建立副檔名為.exe。<br /><br /> 除非另有指定，否則`/out`選項，輸出檔案名稱會採用包含輸入檔名稱`Sub Main`程序。<br /><br /> 只有一個`Sub Main`編譯為.exe 檔的原始程式碼檔案中所需的程序。 使用`-main`編譯器選項來指定哪個類別包含`Sub Main`程序。|  
 |`-target:library`|可讓編譯器建立動態連結程式庫 (DLL)。<br /><br /> 動態連結程式庫檔案會建立副檔名為.dll。<br /><br /> 除非另有指定與`-out`選項，輸出檔案名稱會採用第一個輸入檔案名稱。<br /><br /> 建置 DLL 時`Sub Main`程序就不需要。|  
@@ -57,11 +57,11 @@ vbc -target:library in.vb
   
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
-- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
-- [-參考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
-- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
-- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
-- [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)
+- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
+- [-參考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
+- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
+- [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

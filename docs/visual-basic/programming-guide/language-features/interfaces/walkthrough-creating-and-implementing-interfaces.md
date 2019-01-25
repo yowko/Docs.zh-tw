@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], walkthrough
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-ms.openlocfilehash: af9305deb60637b642d091501e743f2c7a57ccad
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7a5694826e0fff82aceb8ad18f75f96f308e724c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680383"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>逐步解說：建立和實作介面 (Visual Basic)
 
@@ -109,7 +109,7 @@ ms.locfileid: "43391077"
   
 ## <a name="see-also"></a>另請參閱
 
- [Implements 陳述式](../../../../visual-basic/language-reference/statements/implements-statement.md)  
- [介面](../../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
- [Interface 陳述式](../../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Event 陳述式](../../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Implements 陳述式](../../../../visual-basic/language-reference/statements/implements-statement.md)
+- [介面](../../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Interface 陳述式](../../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Event 陳述式](../../../../visual-basic/language-reference/statements/event-statement.md)
