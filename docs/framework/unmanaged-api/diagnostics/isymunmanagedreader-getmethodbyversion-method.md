@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef5888c33e9532e5fc132fe571d59699d6f80c49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 531ed9a6d8805e22408f112c9e617705057468ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624190"
 ---
-# <a name="isymunmanagedreadergetmethodbyversion-method"></a><span data-ttu-id="541dc-102">ISymUnmanagedReader::GetMethodByVersion 方法</span><span class="sxs-lookup"><span data-stu-id="541dc-102">ISymUnmanagedReader::GetMethodByVersion Method</span></span>
-<span data-ttu-id="541dc-103">取得符號讀取器方法，指定方法語彙基元和編輯複製版本號碼。</span><span class="sxs-lookup"><span data-stu-id="541dc-103">Gets a symbol reader method, given a method token and an edit-and-copy version number.</span></span> <span data-ttu-id="541dc-104">版本號碼從 1 開始，就會遞增每次方法變更時編輯複製作業的結果。</span><span class="sxs-lookup"><span data-stu-id="541dc-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.</span></span>  
+# <a name="isymunmanagedreadergetmethodbyversion-method"></a><span data-ttu-id="15bba-102">ISymUnmanagedReader::GetMethodByVersion 方法</span><span class="sxs-lookup"><span data-stu-id="15bba-102">ISymUnmanagedReader::GetMethodByVersion Method</span></span>
+<span data-ttu-id="15bba-103">取得符號讀取器方法，指定方法的語彙基元和編輯複製版本號碼。</span><span class="sxs-lookup"><span data-stu-id="15bba-103">Gets a symbol reader method, given a method token and an edit-and-copy version number.</span></span> <span data-ttu-id="15bba-104">版本號碼從 1 開始，就會遞增每次編輯複製作業造成變更的方法時。</span><span class="sxs-lookup"><span data-stu-id="15bba-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="541dc-105">語法</span><span class="sxs-lookup"><span data-stu-id="541dc-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15bba-105">語法</span><span class="sxs-lookup"><span data-stu-id="15bba-105">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodByVersion (  
@@ -36,21 +36,21 @@ HRESULT GetMethodByVersion (
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="541dc-106">參數</span><span class="sxs-lookup"><span data-stu-id="541dc-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="15bba-106">參數</span><span class="sxs-lookup"><span data-stu-id="15bba-106">Parameters</span></span>  
  `token`  
- <span data-ttu-id="541dc-107">[in]方法語彙基元。</span><span class="sxs-lookup"><span data-stu-id="541dc-107">[in] The method token.</span></span>  
+ <span data-ttu-id="15bba-107">[in]方法的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="15bba-107">[in] The method token.</span></span>  
   
  `version`  
- <span data-ttu-id="541dc-108">[in]方法的版本。</span><span class="sxs-lookup"><span data-stu-id="541dc-108">[in] The method version.</span></span>  
+ <span data-ttu-id="15bba-108">[in]方法的版本。</span><span class="sxs-lookup"><span data-stu-id="15bba-108">[in] The method version.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="541dc-109">[out]傳回的介面指標。</span><span class="sxs-lookup"><span data-stu-id="541dc-109">[out] A pointer to the returned interface.</span></span>  
+ <span data-ttu-id="15bba-109">[out]傳回的介面指標。</span><span class="sxs-lookup"><span data-stu-id="15bba-109">[out] A pointer to the returned interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="541dc-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="541dc-110">Return Value</span></span>  
- <span data-ttu-id="541dc-111">如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="541dc-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="15bba-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="15bba-110">Return Value</span></span>  
+ <span data-ttu-id="15bba-111">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="15bba-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="541dc-112">需求</span><span class="sxs-lookup"><span data-stu-id="541dc-112">Requirements</span></span>  
- <span data-ttu-id="541dc-113">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="541dc-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15bba-112">需求</span><span class="sxs-lookup"><span data-stu-id="15bba-112">Requirements</span></span>  
+ <span data-ttu-id="15bba-113">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="15bba-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="541dc-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="541dc-114">See Also</span></span>  
- [<span data-ttu-id="541dc-115">ISymUnmanagedReader 介面</span><span class="sxs-lookup"><span data-stu-id="541dc-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="15bba-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="15bba-114">See also</span></span>
+- [<span data-ttu-id="15bba-115">ISymUnmanagedReader 介面</span><span class="sxs-lookup"><span data-stu-id="15bba-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

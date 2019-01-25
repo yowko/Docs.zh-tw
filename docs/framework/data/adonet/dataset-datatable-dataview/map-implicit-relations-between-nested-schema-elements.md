@@ -2,27 +2,27 @@
 title: 在巢狀結構描述項目之間進行隱含關聯對應
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 73cd8a83021934de3b8e3bf494a4f59dd32e183c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3b17b7f76870c64a9c4332dd99a71fcd8ea6b6e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538280"
 ---
-# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="bf5d5-102">在巢狀結構描述項目之間進行隱含關聯對應</span><span class="sxs-lookup"><span data-stu-id="bf5d5-102">Map Implicit Relations Between Nested Schema Elements</span></span>
-<span data-ttu-id="bf5d5-103">XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型別。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="bf5d5-104">在這樣的情況下，對應處理序會在 <xref:System.Data.DataSet> 內套用預設對應並建立下列各項：</span><span class="sxs-lookup"><span data-stu-id="bf5d5-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
+# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="13b1b-102">在巢狀結構描述項目之間進行隱含關聯對應</span><span class="sxs-lookup"><span data-stu-id="13b1b-102">Map Implicit Relations Between Nested Schema Elements</span></span>
+<span data-ttu-id="13b1b-103">XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型別。</span><span class="sxs-lookup"><span data-stu-id="13b1b-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="13b1b-104">在這樣的情況下，對應處理序會在 <xref:System.Data.DataSet> 內套用預設對應並建立下列各項：</span><span class="sxs-lookup"><span data-stu-id="13b1b-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
   
--   <span data-ttu-id="bf5d5-105">為每個複雜型別 (父和子) 建立一個資料表。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-105">One table for each of the complex types (parent and child).</span></span>  
+-   <span data-ttu-id="13b1b-105">為每個複雜型別 (父和子) 建立一個資料表。</span><span class="sxs-lookup"><span data-stu-id="13b1b-105">One table for each of the complex types (parent and child).</span></span>  
   
--   <span data-ttu-id="bf5d5-106">如果沒有唯一的條件約束存在父代上，一個額外主索引鍵資料行每個資料表定義名為*TableName*_Id 所在*TableName*是父資料表的名稱。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
+-   <span data-ttu-id="13b1b-106">如果沒有唯一的條件約束存在父代上，一個額外主索引鍵資料行每個資料表定義名為*TableName*_Id 所在*TableName*是父資料表的名稱。</span><span class="sxs-lookup"><span data-stu-id="13b1b-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
   
--   <span data-ttu-id="bf5d5-107">識別額外的資料行的主索引鍵的父資料表上的主索引鍵條件約束 (藉由設定**IsPrimaryKey**屬性設 **，則為 True**)。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="bf5d5-108">此條件約束的名稱為 Constraint\#，其中 \# 為 1、2、3 等。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-108">The constraint is named Constraint\# where \# is 1, 2, 3, and so on.</span></span> <span data-ttu-id="bf5d5-109">例如，第一個條件約束的預設名稱是 Constraint1。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-109">For example, the default name for the first constraint is Constraint1.</span></span>  
+-   <span data-ttu-id="13b1b-107">識別額外的資料行的主索引鍵的父資料表上的主索引鍵條件約束 (藉由設定**IsPrimaryKey**屬性設 **，則為 True**)。</span><span class="sxs-lookup"><span data-stu-id="13b1b-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="13b1b-108">此條件約束的名稱為 Constraint\#，其中 \# 為 1、2、3 等。</span><span class="sxs-lookup"><span data-stu-id="13b1b-108">The constraint is named Constraint\# where \# is 1, 2, 3, and so on.</span></span> <span data-ttu-id="13b1b-109">例如，第一個條件約束的預設名稱是 Constraint1。</span><span class="sxs-lookup"><span data-stu-id="13b1b-109">For example, the default name for the first constraint is Constraint1.</span></span>  
   
--   <span data-ttu-id="bf5d5-110">子資料表中的外部索引鍵條件約束將另一個資料行識別為外部索引鍵，此外部索引鍵參考至父資料表的主索引鍵。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="bf5d5-111">名為條件約束*ParentTable_ChildTable*何處*ParentTable*是父資料表的名稱並*ChildTable*是子資料表的名稱。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
+-   <span data-ttu-id="13b1b-110">子資料表中的外部索引鍵條件約束將另一個資料行識別為外部索引鍵，此外部索引鍵參考至父資料表的主索引鍵。</span><span class="sxs-lookup"><span data-stu-id="13b1b-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="13b1b-111">名為條件約束*ParentTable_ChildTable*何處*ParentTable*是父資料表的名稱並*ChildTable*是子資料表的名稱。</span><span class="sxs-lookup"><span data-stu-id="13b1b-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
   
--   <span data-ttu-id="bf5d5-112">父資料表和子資料表間的資料關聯。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-112">A data relation between the parent and child tables.</span></span>  
+-   <span data-ttu-id="13b1b-112">父資料表和子資料表間的資料關聯。</span><span class="sxs-lookup"><span data-stu-id="13b1b-112">A data relation between the parent and child tables.</span></span>  
   
- <span data-ttu-id="bf5d5-113">下列範例示範結構描述所在**OrderDetail**是子元素**順序**。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
+ <span data-ttu-id="13b1b-113">下列範例示範結構描述所在**OrderDetail**是子元素**順序**。</span><span class="sxs-lookup"><span data-stu-id="13b1b-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,16 +54,16 @@ ms.locfileid: "53128696"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="bf5d5-114">XML 結構描述對應處理序內建立下列**資料集**:</span><span class="sxs-lookup"><span data-stu-id="bf5d5-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
+ <span data-ttu-id="13b1b-114">XML 結構描述對應處理序內建立下列**資料集**:</span><span class="sxs-lookup"><span data-stu-id="13b1b-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
   
--   <span data-ttu-id="bf5d5-115">**順序**並**OrderDetail**資料表。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-115">An **Order** and an **OrderDetail** table.</span></span>  
+-   <span data-ttu-id="13b1b-115">**順序**並**OrderDetail**資料表。</span><span class="sxs-lookup"><span data-stu-id="13b1b-115">An **Order** and an **OrderDetail** table.</span></span>  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   <span data-ttu-id="bf5d5-116">Unique 條件約束**順序**資料表。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="bf5d5-117">請注意， **IsPrimaryKey**屬性設定為 **，則為 True**。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
+-   <span data-ttu-id="13b1b-116">Unique 條件約束**順序**資料表。</span><span class="sxs-lookup"><span data-stu-id="13b1b-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="13b1b-117">請注意， **IsPrimaryKey**屬性設定為 **，則為 True**。</span><span class="sxs-lookup"><span data-stu-id="13b1b-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ ms.locfileid: "53128696"
     IsPrimaryKey: True  
     ```  
   
--   <span data-ttu-id="bf5d5-118">上的外部索引鍵條件約束**OrderDetail**資料表。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
+-   <span data-ttu-id="13b1b-118">上的外部索引鍵條件約束**OrderDetail**資料表。</span><span class="sxs-lookup"><span data-stu-id="13b1b-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ ms.locfileid: "53128696"
     RelatedColumns: Order_Id   
     ```  
   
--   <span data-ttu-id="bf5d5-119">之間的關聯性**順序**並**OrderDetail**資料表。</span><span class="sxs-lookup"><span data-stu-id="bf5d5-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="bf5d5-120">**巢狀**此關聯性的屬性設定為 **，則為 True**因為**Order**並**OrderDetail**元素的巢狀結構描述中.</span><span class="sxs-lookup"><span data-stu-id="bf5d5-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
+-   <span data-ttu-id="13b1b-119">之間的關聯性**順序**並**OrderDetail**資料表。</span><span class="sxs-lookup"><span data-stu-id="13b1b-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="13b1b-120">**巢狀**此關聯性的屬性設定為 **，則為 True**因為**Order**並**OrderDetail**元素的巢狀結構描述中.</span><span class="sxs-lookup"><span data-stu-id="13b1b-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
   
     ```  
     ParentTable: Order  
@@ -97,7 +97,7 @@ ms.locfileid: "53128696"
     Nested: True  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="bf5d5-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bf5d5-121">See Also</span></span>  
- [<span data-ttu-id="bf5d5-122">從 XML 結構描述 (XSD) 產生資料集關聯</span><span class="sxs-lookup"><span data-stu-id="bf5d5-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- [<span data-ttu-id="bf5d5-123">將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束</span><span class="sxs-lookup"><span data-stu-id="bf5d5-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [<span data-ttu-id="bf5d5-124">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="bf5d5-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="13b1b-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="13b1b-121">See also</span></span>
+- [<span data-ttu-id="13b1b-122">從 XML 結構描述 (XSD) 產生資料集關聯</span><span class="sxs-lookup"><span data-stu-id="13b1b-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [<span data-ttu-id="13b1b-123">將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束</span><span class="sxs-lookup"><span data-stu-id="13b1b-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [<span data-ttu-id="13b1b-124">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="13b1b-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

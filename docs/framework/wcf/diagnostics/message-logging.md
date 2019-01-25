@@ -1,44 +1,33 @@
 ---
-title: "訊息記錄"
-ms.custom: 
+title: 訊息記錄
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da73af529a20a8d2e3e7df0ebadf2aeee4acbf1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 405b29bc68773400f1ece06c01794d24f40b1c3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585847"
 ---
-# <a name="message-logging"></a><span data-ttu-id="f972f-102">訊息記錄</span><span class="sxs-lookup"><span data-stu-id="f972f-102">Message Logging</span></span>
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="f972f-103"> 可讓您記錄傳入與傳出的訊息以便離線使用。</span><span class="sxs-lookup"><span data-stu-id="f972f-103"> provides the capability to log incoming and outgoing messages for offline consumption.</span></span> <span data-ttu-id="f972f-104">訊息記錄功能可讓您看到訊息與訊息本文的樣貌。</span><span class="sxs-lookup"><span data-stu-id="f972f-104">Message logging enables you to see what the message and message body looks like.</span></span> <span data-ttu-id="f972f-105">這種記錄類型特別適合用來讓您了解傳入了哪些引數，以及接收端點以何種方式來理解以 XML 表示的引數。</span><span class="sxs-lookup"><span data-stu-id="f972f-105">This type of logging is particularly helpful in letting you know what arguments were passed in and how the receiving endpoint saw the arguments expressed as XML.</span></span> <span data-ttu-id="f972f-106">此外，記錄收到的訊息可讓您診斷格式不正確的訊息並查看訊息的抵達方式。</span><span class="sxs-lookup"><span data-stu-id="f972f-106">In addition, logging the message as it was received allows you to diagnose malformed messages as well as to see how the message arrived.</span></span> <span data-ttu-id="f972f-107">您也可以檢查所使用的安全性權杖、加密與簽署的部分，以及保留不變的部分。</span><span class="sxs-lookup"><span data-stu-id="f972f-107">You can also examine the security tokens used, parts encrypted and signed, and parts left intact.</span></span>  
+# <a name="message-logging"></a><span data-ttu-id="49ab5-102">訊息記錄</span><span class="sxs-lookup"><span data-stu-id="49ab5-102">Message Logging</span></span>
+<span data-ttu-id="49ab5-103">Windows Communication Foundation (WCF) 提供讓您記錄傳入和傳出訊息以便離線使用。</span><span class="sxs-lookup"><span data-stu-id="49ab5-103">Windows Communication Foundation (WCF) provides the capability to log incoming and outgoing messages for offline consumption.</span></span> <span data-ttu-id="49ab5-104">訊息記錄功能可讓您看到訊息與訊息本文的樣貌。</span><span class="sxs-lookup"><span data-stu-id="49ab5-104">Message logging enables you to see what the message and message body looks like.</span></span> <span data-ttu-id="49ab5-105">這種記錄類型特別適合用來讓您了解傳入了哪些引數，以及接收端點以何種方式來理解以 XML 表示的引數。</span><span class="sxs-lookup"><span data-stu-id="49ab5-105">This type of logging is particularly helpful in letting you know what arguments were passed in and how the receiving endpoint saw the arguments expressed as XML.</span></span> <span data-ttu-id="49ab5-106">此外，記錄收到的訊息可讓您診斷格式不正確的訊息並查看訊息的抵達方式。</span><span class="sxs-lookup"><span data-stu-id="49ab5-106">In addition, logging the message as it was received allows you to diagnose malformed messages as well as to see how the message arrived.</span></span> <span data-ttu-id="49ab5-107">您也可以檢查所使用的安全性權杖、加密與簽署的部分，以及保留不變的部分。</span><span class="sxs-lookup"><span data-stu-id="49ab5-107">You can also examine the security tokens used, parts encrypted and signed, and parts left intact.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f972f-108">本節內容</span><span class="sxs-lookup"><span data-stu-id="f972f-108">In This Section</span></span>  
- [<span data-ttu-id="f972f-109">訊息流程概觀</span><span class="sxs-lookup"><span data-stu-id="f972f-109">Message Flow Overview</span></span>](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="49ab5-108">本節內容</span><span class="sxs-lookup"><span data-stu-id="49ab5-108">In This Section</span></span>  
+ [<span data-ttu-id="49ab5-109">訊息流程概觀</span><span class="sxs-lookup"><span data-stu-id="49ab5-109">Message Flow Overview</span></span>](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
   
- <span data-ttu-id="f972f-110">本主題描述如何將事件記錄檔訊息對應至用戶端和服務事件。</span><span class="sxs-lookup"><span data-stu-id="f972f-110">This topic describes how event log messages correspond to client and service events.</span></span>  
+ <span data-ttu-id="49ab5-110">本主題描述如何將事件記錄檔訊息對應至用戶端和服務事件。</span><span class="sxs-lookup"><span data-stu-id="49ab5-110">This topic describes how event log messages correspond to client and service events.</span></span>  
   
- [<span data-ttu-id="f972f-111">設定訊息記錄</span><span class="sxs-lookup"><span data-stu-id="f972f-111">Configuring Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
+ [<span data-ttu-id="49ab5-111">設定訊息記錄</span><span class="sxs-lookup"><span data-stu-id="49ab5-111">Configuring Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
   
- <span data-ttu-id="f972f-112">本主題描述如何針對不同的案例設定訊息記錄。</span><span class="sxs-lookup"><span data-stu-id="f972f-112">This topic describes how you can configure message logging for different scenarios.</span></span>  
+ <span data-ttu-id="49ab5-112">本主題描述如何針對不同的案例設定訊息記錄。</span><span class="sxs-lookup"><span data-stu-id="49ab5-112">This topic describes how you can configure message logging for different scenarios.</span></span>  
   
- [<span data-ttu-id="f972f-113">檢視訊息記錄</span><span class="sxs-lookup"><span data-stu-id="f972f-113">Viewing Message Logs</span></span>](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
+ [<span data-ttu-id="49ab5-113">檢視訊息記錄</span><span class="sxs-lookup"><span data-stu-id="49ab5-113">Viewing Message Logs</span></span>](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
   
- <span data-ttu-id="f972f-114">此主題描述如何檢視訊息記錄。</span><span class="sxs-lookup"><span data-stu-id="f972f-114">This topic describes how you can view message logs.</span></span>  
+ <span data-ttu-id="49ab5-114">此主題描述如何檢視訊息記錄。</span><span class="sxs-lookup"><span data-stu-id="49ab5-114">This topic describes how you can view message logs.</span></span>  
   
- [<span data-ttu-id="f972f-115">訊息記錄的安全性考量</span><span class="sxs-lookup"><span data-stu-id="f972f-115">Security Concerns for Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
+ [<span data-ttu-id="49ab5-115">訊息記錄的安全性考量</span><span class="sxs-lookup"><span data-stu-id="49ab5-115">Security Concerns for Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
   
- <span data-ttu-id="f972f-116">此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。</span><span class="sxs-lookup"><span data-stu-id="f972f-116">This topic describes how you can protect sensitive data from being exposed in message logs, as well as events generated by message logging.</span></span>  
+ <span data-ttu-id="49ab5-116">此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。</span><span class="sxs-lookup"><span data-stu-id="49ab5-116">This topic describes how you can protect sensitive data from being exposed in message logs, as well as events generated by message logging.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f972f-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="f972f-117">See Also</span></span>  
- [<span data-ttu-id="f972f-118">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="f972f-118">Administration and Diagnostics</span></span>](../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="49ab5-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="49ab5-117">See also</span></span>
+- [<span data-ttu-id="49ab5-118">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="49ab5-118">Administration and Diagnostics</span></span>](../../../../docs/framework/wcf/diagnostics/index.md)

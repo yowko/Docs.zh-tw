@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac4a8a0c13ba6aa0d5c65ec7fa1aa3b771c964eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b7f20dec86a85be85472037f58a2bd2002d9be1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620383"
 ---
-# <a name="cordebugmdaflags-enumeration"></a><span data-ttu-id="5a42b-102">CorDebugMDAFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="5a42b-102">CorDebugMDAFlags Enumeration</span></span>
-<span data-ttu-id="5a42b-103">指定會引發 Managed 偵錯助理 (MDA) 的執行緒狀態。</span><span class="sxs-lookup"><span data-stu-id="5a42b-103">Specifies the status of the thread on which the managed debugging assistant (MDA) is fired.</span></span>  
+# <a name="cordebugmdaflags-enumeration"></a><span data-ttu-id="4633c-102">CorDebugMDAFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="4633c-102">CorDebugMDAFlags Enumeration</span></span>
+<span data-ttu-id="4633c-103">指定會引發 Managed 偵錯助理 (MDA) 的執行緒狀態。</span><span class="sxs-lookup"><span data-stu-id="4633c-103">Specifies the status of the thread on which the managed debugging assistant (MDA) is fired.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5a42b-104">語法</span><span class="sxs-lookup"><span data-stu-id="5a42b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4633c-104">語法</span><span class="sxs-lookup"><span data-stu-id="4633c-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugMDAFlags {  
@@ -34,23 +34,23 @@ typedef enum CorDebugMDAFlags {
 } CorDebugMDAFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5a42b-105">成員</span><span class="sxs-lookup"><span data-stu-id="5a42b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="4633c-105">成員</span><span class="sxs-lookup"><span data-stu-id="4633c-105">Members</span></span>  
   
-|<span data-ttu-id="5a42b-106">成員</span><span class="sxs-lookup"><span data-stu-id="5a42b-106">Member</span></span>|<span data-ttu-id="5a42b-107">描述</span><span class="sxs-lookup"><span data-stu-id="5a42b-107">Description</span></span>|  
+|<span data-ttu-id="4633c-106">成員</span><span class="sxs-lookup"><span data-stu-id="4633c-106">Member</span></span>|<span data-ttu-id="4633c-107">描述</span><span class="sxs-lookup"><span data-stu-id="4633c-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDA_FLAG_SLIP`|<span data-ttu-id="5a42b-108">因為 MDA 所引發的進度落後 MDA 已引發所在的執行緒。</span><span class="sxs-lookup"><span data-stu-id="5a42b-108">The thread on which the MDA was fired has slipped since the MDA was fired.</span></span>|  
+|`MDA_FLAG_SLIP`|<span data-ttu-id="4633c-108">因為 MDA 引發的進度落後的執行緒引發之 MDA。</span><span class="sxs-lookup"><span data-stu-id="4633c-108">The thread on which the MDA was fired has slipped since the MDA was fired.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5a42b-109">備註</span><span class="sxs-lookup"><span data-stu-id="5a42b-109">Remarks</span></span>  
- <span data-ttu-id="5a42b-110">呼叫堆疊不會再描述原本引發 MDA，當執行緒被視為具有*順延*。</span><span class="sxs-lookup"><span data-stu-id="5a42b-110">When the call stack no longer describes where the MDA was originally raised, the thread is considered to have *slipped*.</span></span> <span data-ttu-id="5a42b-111">這是作業的不尋常的情況下，是作業的無效結束時執行的執行緒。</span><span class="sxs-lookup"><span data-stu-id="5a42b-111">This is an unusual circumstance brought about by the thread's execution of an invalid operation upon exiting.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4633c-109">備註</span><span class="sxs-lookup"><span data-stu-id="4633c-109">Remarks</span></span>  
+ <span data-ttu-id="4633c-110">呼叫堆疊不會再描述最初發生 MDA，當執行緒被視為具有*順延*。</span><span class="sxs-lookup"><span data-stu-id="4633c-110">When the call stack no longer describes where the MDA was originally raised, the thread is considered to have *slipped*.</span></span> <span data-ttu-id="4633c-111">這是作業的不尋常的情況下，帶來了無效，在結束時的執行緒執行。</span><span class="sxs-lookup"><span data-stu-id="4633c-111">This is an unusual circumstance brought about by the thread's execution of an invalid operation upon exiting.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5a42b-112">需求</span><span class="sxs-lookup"><span data-stu-id="5a42b-112">Requirements</span></span>  
- <span data-ttu-id="5a42b-113">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5a42b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4633c-112">需求</span><span class="sxs-lookup"><span data-stu-id="4633c-112">Requirements</span></span>  
+ <span data-ttu-id="4633c-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4633c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5a42b-114">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5a42b-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4633c-114">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4633c-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5a42b-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5a42b-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4633c-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4633c-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5a42b-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a42b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4633c-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4633c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5a42b-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5a42b-117">See Also</span></span>  
- [<span data-ttu-id="5a42b-118">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="5a42b-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="4633c-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4633c-117">See also</span></span>
+- [<span data-ttu-id="4633c-118">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="4633c-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
