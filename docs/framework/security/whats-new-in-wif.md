@@ -3,12 +3,12 @@ title: Windows Identity Foundation 4.5 的新功能
 ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
-ms.openlocfilehash: 673294ccdb76e6016169a4e2b4e7713ba63fa1e7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: deb75494b2813aac3182270b027391b87fdeb0f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619606"
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>Windows Identity Foundation 4.5 的新功能
 第一版的 Windows Identity Foundation (WIF) 是發行為獨立下載的版本，稱為 WIF 3.5，因為它是在 .NET 3.5 SP1 的期間內所引入的。 從 .NET 4.5 開始，WIF 就成為 .NET Framework 的一部分。 在架構中直接提供 WIF 類別可讓 .NET 中的宣告式身分識別的整合更加深入，讓您更容易使用宣告。 您需要修改為 WIF 3.5 所撰寫的應用程式，才能利用新的模型；如需詳細資訊，請參閱[將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)。  
@@ -56,8 +56,8 @@ ms.locfileid: "48836812"
   
      當您使用 **Visual Studio 2012 的身分識別分與存取工具** (請參閱上述的**對 Visual Studio 體驗的變更**) 時，此工具會為您在組態檔中新增設定了 `useIdentityConfiguration` 屬性的 `<serviceCredentials>` 元素。 它還會新增一個含有 WIF 組態設定的對應 [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 元素，以及新增繫結和其他必要的設定，以便讓您將驗證外包給您選擇的 STS。  
   
-## <a name="see-also"></a>另請參閱  
- [將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
- [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [WIF API 參考](../../../docs/framework/security/wif-api-reference.md)  
- [WIF 組態參考](../../../docs/framework/security/wif-configuration-reference.md)
+## <a name="see-also"></a>另請參閱
+- [將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+- [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [WIF API 參考](../../../docs/framework/security/wif-api-reference.md)
+- [WIF 組態參考](../../../docs/framework/security/wif-configuration-reference.md)

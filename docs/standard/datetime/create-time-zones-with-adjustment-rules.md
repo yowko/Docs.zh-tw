@@ -1,5 +1,5 @@
 ---
-title: 如何： 建立有調整規則的時區
+title: HOW TO：建立有調整規則的時區
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a5c04f7807638a4a8b114828083835f348ac08
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721171"
 ---
-# <a name="how-to-create-time-zones-with-adjustment-rules"></a>如何： 建立有調整規則的時區
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>HOW TO：建立有調整規則的時區
 
 應用程式所需的精確的時區資訊可能不存在特定的系統上有幾個原因：
 
@@ -34,7 +34,7 @@ ms.locfileid: "46004110"
 > [!IMPORTANT]
 > 藉由呼叫建立的自訂時區<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法不會新增至登錄。 相反地，存取他們只能透過所傳回的物件參考<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法呼叫。
 
-本主題說明如何建立有調整規則的時區。 若要建立不支援日光節約時間調整規則的時區，請參閱[如何： 建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)。
+本主題說明如何建立有調整規則的時區。 若要建立不支援日光節約時間調整規則的時區，請參閱[How to:建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)。
 
 ### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>若要建立使用浮動調整規則的時區
 
@@ -95,6 +95,6 @@ ms.locfileid: "46004110"
 
 ## <a name="see-also"></a>另請參閱
 
-* [日期、時間和時區](../../../docs/standard/datetime/index.md)
-* [時區概觀](../../../docs/standard/datetime/time-zone-overview.md)
-* [操作說明：建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)
+- [日期、時間和時區](../../../docs/standard/datetime/index.md)
+- [時區概觀](../../../docs/standard/datetime/time-zone-overview.md)
+- [如何：建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)

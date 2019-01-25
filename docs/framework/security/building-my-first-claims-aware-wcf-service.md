@@ -3,12 +3,12 @@ title: 建置第一個宣告感知 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: e6324087afa62f276766c733284dc69e425b89bc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2102ec07a26c02c7181e3422e48939c40b86a8de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599201"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>建置第一個宣告感知 WCF 服務
 ## <a name="applies-to"></a>適用於  
@@ -38,7 +38,7 @@ ms.locfileid: "48836229"
   
  AD FS 2.0 是 Windows Server R2 的一部分，可以當做供內部部署案例使用的 STS； Azure Active Directory 存取控制 (也稱為存取控制服務或 ACS) 是一項隨著 Microsoft Azure 提供的雲端服務。 此外，基於測試或教育目的，您也可以使用其他 STS 建立專屬宣告感知應用程式。 例如，您可以使用屬於本機開發 STS [Identity and Access Tool for Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849)這就是線上免費提供。  
   
- 若要建立第一個宣告感知 WCF 服務使用 WIF，請參閱[How To： 啟用 WCF Web 服務應用程式的 WIF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)。
+ 若要建立第一個宣告感知 WCF 服務使用 WIF，請參閱[How To:啟用 WCF Web 服務應用程式的 WIF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)。
   
-## <a name="see-also"></a>另請參閱  
- [開始使用 WIF](../../../docs/framework/security/getting-started-with-wif.md)
+## <a name="see-also"></a>另請參閱
+- [開始使用 WIF](../../../docs/framework/security/getting-started-with-wif.md)

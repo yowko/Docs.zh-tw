@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 7718edaefbad18afa11b3e3680fac39da585a610
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1246ce5056c17641e10bb96f79b60090d6f43b89
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803276"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525049"
 ---
 # <a name="configuring-services"></a>設定服務
 在設計並實作您的服務合約之後，就可開始設定您的服務。 您可在此處定義及自訂向用戶端公開服務的方式，包括指定所在的位址、用於傳送及接收訊息的傳輸和訊息編碼，以及所需要的安全性類型。  
   
- 此處所使用的組態包括所有的方法，如命令式程式碼或使用組態檔，您可以在其中定義及自訂服務的各方面，例如指定端點位址、使用的傳輸以及安全性配置。 事實上，撰寫組態是主要的撰寫 WCF 應用程式一部分。  
+ 此處所使用的組態包括所有的方法，如命令式程式碼或使用組態檔，您可以在其中定義及自訂服務的各方面，例如指定端點位址、使用的傳輸以及安全性配置。 在實務上，撰寫組態是主要的程式設計 WCF 應用程式一部分。  
   
 ## <a name="in-this-section"></a>本節內容  
  [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)  
- 從開始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，WCF 隨附可簡化 WCF 組態需求的新預設組態模型。 如果您未提供任何特定服務的 WCF 組態，執行階段會使用預設端點、 繫結和行為自動設定您的服務。  
+ 從開始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，WCF 本身就有新的預設組態模型，可簡化 WCF 組態需求。 如果您未提供任何特定服務的 WCF 組態，執行階段會使用預設端點、 繫結和行為自動設定您的服務。  
   
  [使用設定檔設定服務](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Windows Communication Foundation (WCF) 服務是可設定使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]技術設定。 最常見的是，XML 項目新增至裝載 WCF 服務的 Internet Information Services (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。  
+ Windows Communication Foundation (WCF) 服務是可設定使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]技術設定。 大多數情況下，XML 項目會新增至裝載的 WCF 服務的 Internet Information Services (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。  
   
  [繫結](../../../docs/framework/wcf/bindings.md)  
- 此外，WCF 會繫結可讓您快速選取用戶端和服務如何通訊，例如傳輸、 安全性與訊息編碼使用的最基本功能的形式，包括數種系統提供的常用組態。  
+ 此外，WCF 會包含數個系統提供的常用組態的繫結可讓您快速選取用戶端與服務通訊的方式，例如傳輸、 安全性和訊息編碼使用的最基本的功能形式。  
   
  [端點](../../../docs/framework/wcf/endpoints.md)  
- 所有與 WCF 服務的通訊會透過*端點*的服務。 端點包含合約、在繫結中指定的組態資訊，以及指出何處可找到服務或何處可取得有關服務之資訊的位址。  
+ 使用 WCF 服務的所有通訊都都會透過*端點*的服務。 端點包含合約、在繫結中指定的組態資訊，以及指出何處可找到服務或何處可取得有關服務之資訊的位址。  
   
  [保護服務安全](../../../docs/framework/wcf/securing-services.md)  
- 使用 WCF 和現有的安全性機制，您可以實作機密性、 完整性、 驗證和授權，在任何服務。 您也可以稽核安全性成功和失敗。  
+ 使用 WCF，與現有安全性機制，您可以實作機密性、 完整性、 驗證和授權，在任何服務。 您也可以稽核安全性成功和失敗。  
   
  [建立 WS-I Basic Profile 1.1 交互操作服務](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
  在 WS-I Basic Profile 1.1 規格中略述了部署與其他平台或作業系統上的服務和用戶端互通之服務的需求。  
@@ -55,7 +55,7 @@ ms.locfileid: "33803276"
   
  [管理與診斷](../../../docs/framework/wcf/diagnostics/index.md)  
   
-## <a name="see-also"></a>另請參閱  
- [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)  
- [WCF 功能詳細資料](../../../docs/framework/wcf/feature-details/index.md)
+## <a name="see-also"></a>另請參閱
+- [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)
+- [WCF 功能詳細資料](../../../docs/framework/wcf/feature-details/index.md)

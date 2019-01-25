@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3bcdbfacf02d84848934e21d58ed6fff7d37d52
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 7d1ddbd9649d82ffe55c16e0657a1c020b50acbb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610860"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>HOW TO：執行延遲初始化的物件
 <xref:System.Lazy%601?displayProperty=nameWithType> 類別可簡化執行物件延遲初始化和具現化的工作。 以延遲方式初始化物件時，您可以避免必須在永不需要這些物件時完全建立它們，也可以延後其初始化作業，直到第一次存取這些物件為止。 如需詳細資訊，請參閱[延遲初始化](../../../docs/framework/performance/lazy-initialization.md)。  
@@ -76,6 +76,6 @@ End Sub
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>  
- [延遲初始設定](../../../docs/framework/performance/lazy-initialization.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
+- [延遲初始設定](../../../docs/framework/performance/lazy-initialization.md)

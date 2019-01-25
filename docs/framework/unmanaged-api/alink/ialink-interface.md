@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1eae19d592dcf5243139e11bb6662953436e45a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b93dd3b1d08a939e03ccfa52f7fb2e97c97d7e96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600085"
 ---
 # <a name="ialink-interface"></a>IALink 介面
-可協助建構.NET Framework 組件。 在其他方面，介面包含協助您撰寫多模組組件的組件資訊清單、 簽署組件具有強式名稱，以及建立的 netmodule 中的方法。  
+可協助建構.NET Framework 組件。 除此之外，介面包含協助您撰寫多模組組件的組件資訊清單、 簽署組件具有強式名稱，以及建立的 netmodule 中的方法。  
   
 ## <a name="in-this-section"></a>本節內容  
  [AddFile 方法 1](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
@@ -63,7 +63,7 @@ ms.locfileid: "33408589"
   
  [ImportTypes 方法](../../../../docs/framework/unmanaged-api/alink/importtypes-method.md)  
   
- < Init 方法 >  
+ 「 Init 方法 」  
   
  [LinkResource 方法](../../../../docs/framework/unmanaged-api/alink/linkresource-method.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33408589"
   
  [SetNonAssemblyFlags 方法](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>另請參閱  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Al.exe (組件連結器)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>另請參閱
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Al.exe (組件連結器)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

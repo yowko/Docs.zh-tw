@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9658ad8a1963d3747fb7c23dce84790a30b17db3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8f1eb2354536a436bd6ae41cf70bf11549982d5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612589"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread 方法
-將執行緒的 ID 對應至 Win32 執行緒控制代碼。  
+會對應至 Win32 執行緒控制代碼之執行緒的識別碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,16 +43,16 @@ HRESULT GetHandleFromThread(
  [out]Win32 執行緒控制代碼指標。  
   
 ## <a name="remarks"></a>備註  
- 分析工具必須呼叫 Win32`DuplicateHandle`函式上使用它之前的控制代碼。  
+ 分析工具必須呼叫 Win32`DuplicateHandle`後才能使用它的控制代碼上的函式。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl、CorProf.h  
+ **標頭：** CorProf.idl, CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

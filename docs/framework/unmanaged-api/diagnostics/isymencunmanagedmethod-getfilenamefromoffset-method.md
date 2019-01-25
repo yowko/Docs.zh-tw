@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db3e9cfa73672920ff70d9128541a8f513fca00f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e0582714c157de69293eb1e8dfa40e0cd2f44cba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621194"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset 方法
 取得行位移與相關聯的檔案名稱。  
@@ -43,19 +43,19 @@ HRESULT GetFileNameFromOffset(
  [in]A`ULONG32`包含位移。  
   
  `cchName`  
- [in]A`ULONG32`指出的大小`szName`緩衝區。  
+ [in]A`ULONG32`表示的大小`szName`緩衝區。  
   
  `pcchName`  
- [out]指標`ULONG32`接收以字元為單位，以包含檔案名稱所需要的緩衝區大小。  
+ [out]指標`ULONG32`接收大小，以字元為單位，以包含檔案名稱所需的緩衝區。  
   
  `szName`  
  [out]包含檔案名稱的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymENCUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymENCUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用使用者名稱與密碼來驗證
+title: HOW TO：使用使用者名稱和密碼進行驗證
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: b37d296312be4c7694a2db55d85dd618e3252f14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2fb384fe0012b5c0a72e961f027c3db629891e09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532288"
 ---
-# <a name="how-to-authenticate-with-a-user-name-and-password"></a>HOW TO：使用使用者名稱與密碼來驗證
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>HOW TO：使用使用者名稱和密碼進行驗證
 
-本主題示範如何啟用 Windows Communication Foundation (WCF) 服務驗證用戶端使用 Windows 網域使用者名稱和密碼。 這裡假設您有運作中的自我裝載 WCF 服務。 如需範例，建立基本自我裝載的 WCF 服務，請參閱[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。 本主題假設服務是在程式碼中進行設定。 如果您想要看到的設定類似的服務，使用組態檔範例請參閱[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+本主題示範如何啟用 Windows Communication Foundation (WCF) 服務驗證用戶端的 Windows 網域使用者名稱和密碼。 這裡假設您有運作中的自我裝載 WCF 服務。 如需範例，建立基本自我裝載的 WCF 服務，請參閱[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。 本主題假設服務是在程式碼中進行設定。 如果您想要看到的設定類似服務，使用組態檔範例請參閱[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
  若要設定服務使用 Windows 網域使用者名和密碼驗證其用戶端，請使用 <xref:System.ServiceModel.WSHttpBinding>，並將其 `Security.Mode` 屬性設定為 `Message`。 此外，將使用者名稱和密碼從用戶端傳送至服務時，您必須指定要用來加密使用者名稱和密碼的 X 509 憑證。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33493305"
     // ...  
     ```  
   
-2.  指定伺服器憑證，用以加密透過網路傳送之使用者名及密碼的資訊。 這個程式碼應直接加在上面程式碼之後。 下列範例會使用的憑證，會建立由 setup.bat 檔從[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)範例：  
+2.  指定伺服器憑證，用以加密透過網路傳送之使用者名及密碼的資訊。 這個程式碼應直接加在上面程式碼之後。 下列範例會使用已建立的憑證中的 setup.bat 檔案所[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)範例：  
   
     ```  
     // ...  
@@ -40,7 +40,7 @@ ms.locfileid: "33493305"
     // ...  
     ```  
   
-     您可以使用自己的憑證，只需將程式碼修改成參考您的憑證。 如需有關建立及使用憑證，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 確認憑證是在本機電腦的 [受信任的人] 憑證存放區中。 您可以執行 mmc.exe，然後選取**檔案**，**新增/移除嵌入式管理單元...** 功能表項目。 在**新增或移除嵌入式管理單元**對話方塊中，選取**憑證嵌入式管理單元**按一下**新增**。 在 [憑證嵌入式管理單元] 對話方塊中選取**電腦帳戶**。 根據預設，從訊息安全性使用者名稱範例所產生的憑證位於 [個別/憑證] 資料夾中。  將為"localhost"下的 發行至資料行在 MMC 視窗中列出。 將拖放到憑證**受信任的人**資料夾。 這樣可讓 WCF 在執行驗證時，將憑證視為受信任的憑證。  
+     您可以使用自己的憑證，只需將程式碼修改成參考您的憑證。 如需建立及使用憑證的詳細資訊，請參閱[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 確認憑證是在本機電腦的 [受信任的人] 憑證存放區中。 您可以執行 mmc.exe，然後選取**檔案**，**新增/移除嵌入式管理單元...** 功能表項目。 在 **新增或移除嵌入式管理單元**對話方塊中，選取**憑證嵌入式管理單元**然後按一下**新增**。 在 憑證 嵌入式管理單元 對話方塊中選取**電腦帳戶**。 根據預設，從訊息安全性使用者名稱範例所產生的憑證位於 [個別/憑證] 資料夾中。  它會列為核發給在 MMC 視窗中的資料行底下的"localhost"。 將拖放到憑證**受信任的人**資料夾。 這樣可讓 WCF 在執行驗證時，將憑證視為受信任的憑證。  
   
 ## <a name="to-call-the-service-passing-username-and-password"></a>若要呼叫服務傳遞使用者名稱和密碼  
   
@@ -82,15 +82,15 @@ ms.locfileid: "33493305"
     // Call the service operation using the proxy  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSHttpSecurity>  
- <xref:System.ServiceModel.SecurityMode>  
- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.UserName%2A>  
- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.Password%2A>  
- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>  
- <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>  
- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>  
- [使用基本驗證的傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
- [分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSHttpSecurity>
+- <xref:System.ServiceModel.SecurityMode>
+- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.UserName%2A>
+- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.Password%2A>
+- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
+- <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>
+- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
+- [使用基本驗證的傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
+- [分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
+- [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

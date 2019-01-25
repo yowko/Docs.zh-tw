@@ -2,12 +2,12 @@
 title: 傳訊活動
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-ms.openlocfilehash: 3391f7442ef4922a847a58b6316eb177cbcfbd5e
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 839e9225db7b5d76cf05f148811634389e81502a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617625"
 ---
 # <a name="messaging-activities"></a>傳訊活動
 訊息傳遞活動允許工作流程傳送和接收 WCF 訊息。 藉由將訊息傳遞活動加入至工作流程，您就可以製作任何複雜訊息交換模式 (MEP) 的模型。

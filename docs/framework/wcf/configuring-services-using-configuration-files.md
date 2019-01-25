@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029667"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717398"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
 使用組態檔中設定 Windows Communication Foundation (WCF) 服務可讓您彈性提供端點，並設計階段部署而不是在服務行為資料。 本主題概要說明可用的主要技巧。  
@@ -96,24 +96,24 @@ ms.locfileid: "54029667"
 ### <a name="the-bindings-element"></a>\<繫結 > 項目  
  `bindings` 項目包含所有繫結的規格，在任何服務中定義的任何端點都可以使用這些繫結。  
   
- [\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
 ### <a name="the-binding-element"></a>\<繫結 > 項目  
  `binding`中所包含的項目`bindings`項目可以是其中一個系統提供繫結 (請參閱[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) 或自訂繫結 (請參閱[自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md))。 `binding` 項目具有的 `name` 屬性可將繫結與 `bindingConfiguration` 項目的 `endpoint` 屬性所指定的端點相互關聯。 如果未指定名稱，則該繫結會對應於該繫結型別的預設值。  
   
  如需有關如何設定服務和用戶端的詳細資訊，請參閱 <<c0> [ 設定的 Windows Communication Foundation 應用程式](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
   
- [\<繫結 >](../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../docs/framework/misc/binding.md)  
   
 ### <a name="the-behaviors-element"></a>\<行為 > 項目  
  這是定義服務行為之 `behavior` 項目的容器項目。  
   
- [\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
 ### <a name="the-behavior-element"></a>\<行為 > 項目  
  每個 `behavior` 項目都是由 `name` 屬性所識別，並可提供系統提供的行為，例如 <`throttling`>，或是自訂行為。 如果未指定名稱，則該行為項目會對應於預設服務或端點行為。  
   
- [\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>如何使用繫結與行為組態  
  WCF 可讓您更容易使用的參考系統組態中的端點之間共用組態。 與其直接指派組態值給端點，繫結相關的組態值會被分類到 `bindingConfiguration` 區段的 `<binding>` 項目群組中。 一個繫結組態是繫結上的一個具名的設定群組。 然後，端點可以依照名稱來參考 `bindingConfiguration` 。  
@@ -262,8 +262,8 @@ ms.locfileid: "54029667"
   
  如果子行為集合包含已經存在父行為集合中的行為，子行為就會覆寫父代。 因此，如果父行為集合具有`<serviceMetadata httpGetEnabled="False" />`，而且子行為集合具有`<serviceMetadata httpGetEnabled="True" />`，子行為將會覆寫行為集合中的父行為，而且 httpGetEnabled 會是"true"。  
   
-## <a name="see-also"></a>另請參閱  
- [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)  
- [設定 Windows Communication Foundation 應用程式](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<繫結 >](../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱
+- [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)
+- [設定 Windows Communication Foundation 應用程式](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
+- [\<binding>](../../../docs/framework/misc/binding.md)

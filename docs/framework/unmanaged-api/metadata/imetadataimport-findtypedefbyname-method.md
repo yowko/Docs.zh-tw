@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b4aad1cf1d3eb2dec249686f2897e6f393ab7e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b6040f21bb530ce775fc79e33b97eb14870c04f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445474"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578804"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName 方法
-取得指標的 TypeDef 中繼資料語彙基元的<xref:System.Type>具有指定名稱。  
+取得指標的 TypeDef 中繼資料語彙基元<xref:System.Type>具有指定名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,23 +39,23 @@ HRESULT FindTypeDefByName
   
 #### <a name="parameters"></a>參數  
  `szTypeDef`  
- [in]要取得的 TypeDef 語彙基元類型的名稱。  
+ [in]要取得的 TypeDef 語彙基元的型別名稱。  
   
  `tkEnclosingClass`  
- [in]表示封入類別的 TypeDef 或 TypeRef 權杖。 如果要尋找的類型不是巢狀的類別，設定此值為 NULL。  
+ [in]TypeDef 或 TypeRef 語彙基元代表封入類別。 如果要尋找的類型不是巢狀的類別，請將此值設為 NULL。  
   
  `ptd`  
- [out]比對的 TypeDef 語彙基元的指標。  
+ [out]相符的 TypeDef 語彙基元指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b57233457c697dbe35ab0f68d6ce3557cee9b5c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641144"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>以多平台為目標之函式庫的應用程式資源
 您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)專案類型，以確保您類別庫中的資源，可從多個平台。 這個專案類型會是適用於 Visual Studio 2012，並以.NET Framework 類別庫的可攜式子集為目標。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]可確保能夠從桌面應用程式、Silverlight 應用程式、Windows Phone 應用程式和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式存取您的程式庫。
@@ -52,7 +52,7 @@ ms.locfileid: "48580085"
  如果您的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案包含當地語系化資源，則可以使用中樞和支點模型來部署這些資源，就像在桌面應用程式中部署程式庫一樣。 若要使用 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中的主要資源檔和任何當地語系化資源檔，可以加入主要組件的參考。 在編譯時期，Visual Studio 會將您的主要資源檔和所有當地語系化資源檔中的資源擷取至不同的 .resw 檔。 然後會將 .resw 檔編譯成單一 PRI 檔案，供 [!INCLUDE[wrt](../../../includes/wrt-md.md)]在執行階段時存取。
 
 <a name="NonLoc"></a>
-## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>範例：非當地語系化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
+## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>範例：未當地語系化 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  以下簡單的非當地語系化[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]範例會使用資源來儲存資料行的名稱，並判斷要為表格式資料保留的字元數。 這個範例會使用名為 LibResources.resx 的檔案儲存下表中列出的字串資源。
 
 |資源名稱|資源值|
@@ -81,7 +81,7 @@ ms.locfileid: "48580085"
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>範例：當地語系化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
+## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>範例：當地語系化 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  下列當地語系化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]範例包含法文 (法國) 和英文 (美國) 文化特性的資源。 英文 （美國） 文化特性是應用程式的預設文化特性;它的資源會顯示在資料表中[上一節](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)。 法文 (法國) 文化特性的資源檔命名為 LibResources.fr-FR.resx，並且包含下表所列的字串資源。 `UILibrary` 類別的原始程式碼與前一節中所顯示的內容相同。
 
 |資源名稱|資源值|
@@ -106,6 +106,6 @@ ms.locfileid: "48580085"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Resources.ResourceManager>  
-- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)  
+- <xref:System.Resources.ResourceManager>
+- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
 - [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

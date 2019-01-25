@@ -2,19 +2,19 @@
 title: '&lt;filterTables&gt;'
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
-ms.openlocfilehash: 2b537619a276f32c50576561aea03b5fbbb58e7d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d73a3c25dbb4d2de41007149ef5864fcf37ad883
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573055"
 ---
 # <a name="ltfiltertablesgt"></a>&lt;filterTables&gt;
 代表定義路由表的組態區段，該路由表包含當篩選條件符合時，路由篩選條件與訊息傳送目標端點之間的對應。  
   
  \<system.serviceModel>  
 \<路由 >  
-\<routingTables >  
+\<routingTables>  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,14 +43,14 @@ ms.locfileid: "54147781"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<篩選條件 >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|路由表，其中包含當篩選條件符合時，路由篩選條件與訊息傳送目標端點之間的對應。|  
+|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|路由表，其中包含當篩選條件符合時，路由篩選條件與訊息傳送目標端點之間的對應。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|組態區段，其中包含路由篩選條件與路由表。|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|組態區段，其中包含路由篩選條件與路由表。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection?displayProperty=nameWithType>    
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection?displayProperty=nameWithType>

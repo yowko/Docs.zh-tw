@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 7128b23790588a604989cb18918a7a7e8b598191
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ba0d508881d6500d53e9e9781c3cce7185ed845d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724339"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>逐步解說：繫結至混合應用程式中的資料
 不論您使用繫結至控制項的資料來源是不可或缺的將基礎資料的存取權提供給使用者[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 本逐步解說示範如何在包含兩者的混合式應用程式使用資料繫結[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項。  
@@ -122,7 +122,7 @@ ms.locfileid: "48584188"
   
 1.  從**資料**功能表上，選取**加入新的資料來源**。  
   
-2.  在 **資料來源組態精靈**，使用的資料集建立 Northwind 資料庫的連接。 如需詳細資訊，請參閱 <<c0> [ 如何： 連接到資料庫中的資料](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)。  
+2.  在 **資料來源組態精靈**，使用的資料集建立 Northwind 資料庫的連接。 如需詳細資訊，請參閱[＜How to：連接到資料庫中的資料](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)。  
   
 3.  當提示您**資料來源組態精靈**，儲存連接字串，做為`NorthwindConnectionString`。  
   
@@ -173,10 +173,10 @@ ms.locfileid: "48584188"
   
 10. 按 F5 鍵建置並執行應用程式。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [混合式應用程式範例中的繫結的資料](https://go.microsoft.com/fwlink/?LinkID=159983)  
- [逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [逐步解說：在 Windows Forms 中裝載 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [混合式應用程式範例中的繫結的資料](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [逐步解說：裝載 Windows Forms 中的 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

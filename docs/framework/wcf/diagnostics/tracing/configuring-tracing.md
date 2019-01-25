@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584908"
 ---
 # <a name="configuring-tracing"></a>設定追蹤
 本主題將說明如何啟用追蹤、設定追蹤來源以發出追蹤並設定追蹤層級、設定活動追蹤與傳播以支援端對端追蹤相互關聯，以及設定追蹤接聽項來存取追蹤。  
@@ -58,17 +58,17 @@ ms.locfileid: "45649994"
 ## <a name="configuring-trace-sources-to-emit-traces"></a>設定追蹤來源來發出追蹤  
  WCF 會針對每個組件定義追蹤來源。 組件中產生的追蹤是由針對該來源而定義的接聽項所存取。 下列為定義的追蹤來源：  
   
--   System.ServiceModel： 記錄所有階段的 WCF 處理，每當在讀取組態、 已處理訊息傳輸、 安全性處理，訊息會分派在使用者程式碼，並依此類推。  
+-   System.ServiceModel:記錄所有階段的 WCF 處理，每當在讀取組態、 已處理訊息傳輸、 安全性處理，訊息會分派在使用者程式碼，並依此類推。  
   
--   System.ServiceModel.MessageLogging：記錄在整個系統來回傳送的所有訊息。  
+-   System.ServiceModel.MessageLogging:流經系統的所有訊息都記錄。  
   
 -   System.IdentityModel。  
   
 -   System.ServiceModel.Activation。  
   
--   System.IO.Log：記錄一般記錄檔系統 (CLFS) 的 .NET Framework 介面。  
+-   System.IO.Log:.NET Framework 介面以通用記錄檔系統 (CLFS) 記錄。  
   
--   System.Runtime.Serialization：記錄何時讀取或寫入物件。  
+-   System.Runtime.Serialization:記錄檔讀取或寫入物件時。  
   
 -   CardSpace。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "45649994"
   
  您可以設定自訂追蹤接聽項，以將追蹤傳送到 Wire，例如傳送至遠端資料庫。 身為應用程式的部署者，您應該在遠端電腦的追蹤記錄上強制執行適當的存取控制。  
   
- 您也可以使用程式設計方式來設定追蹤接聽項。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和初始化追蹤接聽項](https://go.microsoft.com/fwlink/?LinkId=94648)並[建立自訂 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)。  
+ 您也可以使用程式設計方式來設定追蹤接聽項。 如需詳細資訊，請參閱[＜How to：建立和初始化追蹤接聽項](https://go.microsoft.com/fwlink/?LinkId=94648)並[建立自訂的 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)。  
   
 > [!CAUTION]
 >  因為 `System.Diagnostics.XmlWriterTraceListener` 不具備執行緒安全，追蹤來源可能會在輸出追蹤時特別鎖定資源。 當許多執行緒將追蹤輸出至設定為使用此接聽項的追蹤來源時，可能會發生資源爭用的情況，進而造成顯著的效能問題。 若要解決這個問題，您應該實作具備執行緒安全的自訂接聽項。  
@@ -153,7 +153,7 @@ ms.locfileid: "45649994"
 |追蹤層級|追蹤事件的本質|追蹤事件的內容|追蹤事件|使用者目標|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
 |Off|N/A|N/A|未發出任何追蹤。|N/A|  
-|Critical|「 負面 」 事件： 指示非預期的處理或錯誤狀況的事件。||已記錄包含下列的未處理例外狀況：<br /><br /> -OutOfMemoryException<br />-ThreadAbortException （CLR 會叫用任何 ThreadAbortExceptionHandler）<br />-StackOverflowException （無法攔截）<br />-ConfigurationErrorsException<br />-SEHException<br />-應用程式啟動錯誤<br />-Failfast 事件<br />系統停止回應<br />-有害訊息： 訊息會導致應用程式失敗的追蹤。|系統管理員<br /><br /> 應用程式開發人員|  
+|Critical|「 負面 」 事件： 指示非預期的處理或錯誤狀況的事件。||已記錄包含下列的未處理例外狀況：<br /><br /> -   OutOfMemoryException<br />-ThreadAbortException （CLR 會叫用任何 ThreadAbortExceptionHandler）<br />-StackOverflowException （無法攔截）<br />-   ConfigurationErrorsException<br />-   SEHException<br />-應用程式啟動錯誤<br />-Failfast 事件<br />系統停止回應<br />-有害訊息： 訊息會導致應用程式失敗的追蹤。|系統管理員<br /><br /> 應用程式開發人員|  
 |錯誤|「 負面 」 事件： 指示非預期的處理或錯誤狀況的事件。|發生未預期的處理。 應用程式無法如預期般執行工作。 然而，應用程式仍舊繼續執行。|已記錄所有例外狀況。|系統管理員<br /><br /> 應用程式開發人員|  
 |警告|「 負面 」 事件： 指示非預期的處理或錯誤狀況的事件。|潛在問題已經發生或是可能發生，但是應用程式仍舊正常運作。 然而，它可能無法繼續正常運作。|-應用程式已收到的要求超過其節流設定允許。<br />-按收佇列已接近其最大的已設定容量。<br />已超過逾時。<br />-認證被拒。|系統管理員<br /><br /> 應用程式開發人員|  
 |資訊|「 正面 」 事件： 標示為成功里程碑的事件|不管應用程式是否正常運作，都屬於應用程式執行的重要與成功里程碑。|一般來說，會產生對監控與診斷系統狀態、衡量效能，或描述分析有幫助的訊息。 您可以使用這類資訊來進行容量規劃與效能管理：<br /><br /> 的已建立通道。<br />建立端點接聽程式。<br />訊息進入/離開傳輸。<br />擷取安全性權杖。<br />會讀取組態設定。|系統管理員<br /><br /> 應用程式開發人員<br /><br /> 產品開發人員。|  
@@ -180,8 +180,8 @@ ms.locfileid: "45649994"
   
  您無法使用具有使用者定義追蹤來源的 `propagateActivity` 屬性。 若要進行使用者程式碼活動識別碼傳播，請確定您未設定 ServiceModel `ActivityTracing`，而且讓 ServiceModel `propagateActivity` 屬性仍舊設定為 `true`。  
   
-## <a name="see-also"></a>另請參閱  
- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [如何：建立和初始設定追蹤接聽項](https://go.microsoft.com/fwlink/?LinkId=94648)  
- [建立自訂的 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)
+## <a name="see-also"></a>另請參閱
+- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [如何：建立和初始化追蹤接聽項](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [建立自訂的 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)

@@ -2,12 +2,12 @@
 title: 彙總作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 7e6f838a340283f6fbcd0db4d7d6a089aae9a5aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7daf4f653d3796eaa3ae426fdbf86a89ebdd2dc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735379"
 ---
 # <a name="aggregation-operations-visual-basic"></a>彙總作業 (Visual Basic)
 彙總運算會計算值集合中的單一值。 彙總運算的一個範例是，當您使用一個月中每天的溫度值來計算每天平均溫度時。  
@@ -33,12 +33,12 @@ ms.locfileid: "33644065"
 ## <a name="query-expression-syntax-examples"></a>查詢運算式語法範例  
   
 ### <a name="average"></a>平均  
- 下列程式碼範例使用`Aggregate Into Average`來計算陣列中的數字，代表溫度平均溫度的 Visual Basic 中的子句。  
+ 下列程式碼範例使用`Aggregate Into Average`來計算平均溫度代表溫度的數字陣列中的 Visual Basic 中的子句。  
   
  [!code-vb[CsLINQAggregating#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_1.vb)]  
   
 ### <a name="count"></a>計數  
- 下列程式碼範例使用`Aggregate Into Count`來計算陣列中的值大於或等於 80 數目的 Visual Basic 中的子句。  
+ 下列程式碼範例使用`Aggregate Into Count`來計算陣列中大於或等於 80 的值數目的 Visual Basic 中的子句。  
   
  [!code-vb[CsLINQAggregating#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_2.vb)]  
   
@@ -48,26 +48,26 @@ ms.locfileid: "33644065"
  [!code-vb[CsLINQAggregating#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_3.vb)]  
   
 ### <a name="max"></a>最大  
- 下列程式碼範例使用`Aggregate Into Max`子句來計算陣列中的數字，代表溫度最大的溫度。  
+ 下列程式碼範例使用`Aggregate Into Max`子句來計算最大的溫度代表溫度的數字陣列中。  
   
  [!code-vb[CsLINQAggregating#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_4.vb)]  
   
 ### <a name="min"></a>最小  
- 下列程式碼範例使用`Aggregate Into Min`子句來計算陣列中的數字，代表溫度最小的溫度。  
+ 下列程式碼範例使用`Aggregate Into Min`子句來計算最小的溫度代表溫度的數字陣列中。  
   
  [!code-vb[CsLINQAggregating#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_5.vb)]  
   
 ### <a name="sum"></a>Sum  
- 下列程式碼範例使用`Aggregate Into Sum`子句來計算總計的支出金額從陣列的值，表示費用。  
+ 下列程式碼範例使用`Aggregate Into Sum`子句來計算總費用金額從陣列的值，表示費用。  
   
  [!code-vb[CsLINQAggregating#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_6.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq>  
- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [如何： 計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值](../../../../visual-basic/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)  
- [如何：統計、加總或平均資料](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
- [如何：尋找查詢結果中的最小或最大值](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
- [如何： 查詢的最大檔案或目錄樹狀 (LINQ) (Visual Basic) 中的檔案](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
- [如何： 查詢一組資料夾 (LINQ) (Visual Basic) 中的位元組總數](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Linq>
+- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [如何：計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值](../../../../visual-basic/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [如何：計數、 加總或平均資料](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)
+- [如何：尋找查詢結果中的最小值或最大值](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)
+- [如何：最大的檔案或目錄樹狀 (LINQ) (Visual Basic) 中的查詢](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)
+- [如何：查詢的一組資料夾 (LINQ) (Visual Basic) 中的位元組總數](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)

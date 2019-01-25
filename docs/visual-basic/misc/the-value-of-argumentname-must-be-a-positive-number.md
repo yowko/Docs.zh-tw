@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_NegativeNumber
 ms.assetid: 597c412c-499e-49d2-b656-af2d90c292a5
-ms.openlocfilehash: f38c2b92037a2a5dd400dd37656e6ec18066886b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92ab85bed90d500602700c086557d17da2bc3f46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33638550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575641"
 ---
 # <a name="the-value-of-ltargumentnamegt-must-be-a-positive-number"></a>值&lt;引數名稱&gt;必須是正數
 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> 屬性的值必須大於或等於零。  
@@ -20,7 +20,7 @@ ms.locfileid: "33638550"
   
 -   將 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> 屬性設為正數。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>  
- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>
+- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <para> XML tag
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-ms.openlocfilehash: fa11c713a5ed5793b50865753f8bcdeaabf56e83
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 5932ddb55a4dab48267cdd9b9f321cec8660d77a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662318"
 ---
 # <a name="ltparagt-visual-basic"></a>&lt;para&gt; (Visual Basic)
 指定的內容會格式化為一個段落。  
@@ -35,5 +35,5 @@ ms.locfileid: "45994282"
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/para_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>另請參閱
+- [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)

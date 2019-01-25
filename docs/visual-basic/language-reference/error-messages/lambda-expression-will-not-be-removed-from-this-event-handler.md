@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 69228bbb5f659a8e500e85dea1ef87cb43b0356e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f8b10082bb39c76ba1393daf8327df2ed631caf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568097"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>Lambda 運算式將不會從這個事件處理常式中移除
-Lambda 運算式不會移除這個事件處理常式。 Lambda 運算式指派給變數，並使用變數來加入和移除事件。  
+Lambda 運算式將不會從這個事件處理常式中移除。 指派給變數的 lambda 運算式，並使用變數來新增和移除事件。  
   
- 當事件處理常式使用 lambda 運算式時，您可能無法看見預期的行為。 編譯器會產生新的方法，每個 lambda 運算式定義，即使它們完全相同。 因此，下列程式碼顯示`False`。  
+ 當事件處理常式使用 lambda 運算式時，您可能不會看到預期的行為。 編譯器會產生新的方法，每個 lambda 運算式定義，即使它們完全相同。 因此，下列程式碼顯示`False`。  
   
 ```vb  
 Module Module1  
@@ -33,7 +33,7 @@ Module Module1
 End Module  
 ```  
   
- 當事件處理常式使用 lambda 運算式時，這可能會造成非預期的結果。 在下列範例中，lambda 運算式加入`AddHandler`不會移除`RemoveHandler`陳述式。  
+ 當事件處理常式使用 lambda 運算式時，這可能會導致非預期的結果。 在下列範例中，lambda 運算式新增`AddHandler`不會移除`RemoveHandler`陳述式。  
   
 ```vb  
 Module Module1  
@@ -54,13 +54,13 @@ Module Module1
 End Module  
 ```  
   
- 根據預設，這個訊息是一個警告。 如需如何隱藏警告或將警告視為錯誤的詳細資訊，請參閱[Visual Basic 中的 設定警告](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
+ 根據預設，這個訊息是一個警告。 如需如何隱藏警告或將警告視為錯誤的詳細資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
  **錯誤 ID:** BC42326  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   若要避免這個警告，並移除 lambda 運算式，指派給變數的 lambda 運算式，兩者中使用變數`AddHandler`和`RemoveHandler`陳述式，如下列範例所示。  
+-   若要避免出現警告，並移除 lambda 運算式，指派給變數的 lambda 運算式並使用該變數在這兩`AddHandler`和`RemoveHandler`陳述式，如下列範例所示。  
   
 ```vb  
 Module Module1  
@@ -84,7 +84,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>另請參閱
+- [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)

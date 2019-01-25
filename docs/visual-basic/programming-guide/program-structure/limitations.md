@@ -8,30 +8,30 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 57378c3aa18a5cc108c10e8654e55803f3cf9052
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f356b52304110299ed0af9bbccd5d03893f31a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596354"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 的限制
-舊版的 Visual Basic 會強制界限的程式碼，例如變數名稱的模組和模組大小中允許的變數數目的長度。 在 Visual Basic.NET 中，這些限制有已經放寬，讓您更自由撰寫及排列您的程式碼。  
+舊版的 Visual Basic 會強制執行中程式碼，例如變數名稱，變數中的模組，以及模組大小所允許的數目的長度的界限。 在 Visual Basic.NET 中，這些限制已經被放寬，讓您更充分的自由撰寫及排列您的程式碼。  
   
- 實體限制會更依賴於執行階段的記憶體比編譯時期的考量。 如果您使用審慎的程式設計作法，並將大型應用程式分割成多個類別和模組時，就很少機會遇到內部的 Visual Basic 限制。  
+ 實體的限制會更依賴於執行階段的記憶體，比在編譯時期的考量。 如果您使用容錯度加倍的程式設計作法，並分成多個類別和模組中的大型應用程式時，就很少機會遇到內部的 Visual Basic 限制。  
   
- 在極端情況下可能會遇到一些限制如下：  
+ 以下是在極端情況下可能會遇到一些限制：  
   
--   **名稱長度。** 沒有最大的每個宣告的程式設計項目名稱的字元數。 如果限定的項目名稱，這個最大值會套用到整個限定性條件字串。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+-   **名稱長度。** 沒有最大的每個宣告的程式設計項目名稱的字元數。 如果為限定的項目名稱，這個最大值會套用到整個限定性條件字串。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
--   **行長度。** 沒有最多 65535 個字元的實體來源的程式碼行。 一行程式碼邏輯來源可以是較長，如果您使用行接續字元。 請參閱[How to： 中斷和合併陳述式中的程式碼](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)。  
+-   **行長度。** 沒有實體的來源程式碼行中的 65535 個字元的最大值。 如果您使用行接續字元的長度時，能邏輯的原始程式碼行。 請參閱[如何：中斷和合併程式碼中的陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)。  
   
--   **陣列維度。** 沒有您可以宣告為陣列的維度數目上限。 這會限制多少索引可用來指定陣列項目。 請參閱[陣列 Visual Basic 中的維度](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)。  
+-   **陣列維度。** 沒有您可以宣告為陣列的維度數目上限。 這會限制您可以使用指定的陣列元素的幾個索引。 請參閱[Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)。  
   
--   **字串長度。** 沒有您可以儲存在單一字串中的 Unicode 字元的數目上限。 請參閱[字串資料型別](../../../visual-basic/language-reference/data-types/string-data-type.md)。  
+-   **字串長度。** 沒有您可以儲存在單一字串的 Unicode 字元的數目上限。 請參閱[字串資料類型](../../../visual-basic/language-reference/data-types/string-data-type.md)。  
   
--   **環境字串長度。** 沒有 32768 字元做為命令列引數的任何環境字串的最大值。 這是在所有平台上的限制。  
+-   **環境字串長度。** 沒有任何做為命令列引數的環境字串 32768 個字元的最大值。 這是在所有平台上的限制。  
   
-## <a name="see-also"></a>另請參閱  
- [程式結構和程式碼慣例](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [Visual Basic 命名慣例](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+## <a name="see-also"></a>另請參閱
+- [程式結構和程式碼慣例](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Visual Basic 命名慣例](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: 0399c89e926611b076072e6475c52bf31ae83637
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c0e65a6286ef4756bba305d41dce6ef2a85401dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516122"
 ---
 # <a name="collection-types-in-data-contracts"></a>資料合約中的集合型別
 「 *集合* 」(Collection) 是特定型別之項目的清單。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用陣列或其他多種型別 (泛型清單、泛型 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>) 來表示這類清單。 例如，集合可能含有特定「客戶」的地址清單。 不論實際型別為何，這些集合統稱為「 *清單集合*」(List Collection)。  
@@ -262,7 +262,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  您可以指定集合介面型別做為參照集合型別的一部分，不過您不能指定無效的集合型別 (例如沒有 `Add` 方法或公用建構函式的型別)。  
   
- 封閉式泛型會被視為最符合的型別 (非泛型型別則會被視為相等於 `Object` 的封閉式泛型)。 例如，如果 <xref:System.Collections.Generic.List%601> 的泛型 <xref:System.DateTime>、泛型 <xref:System.ComponentModel.BindingList%601> (開放式泛型) 和 <xref:System.Collections.ArrayList> 都是參照集合型別，便會產生下列結果。  
+ 封閉式泛型會被視為最符合的型別 (非泛型型別則會被視為相等於 `Object`的封閉式泛型)。 例如，如果 <xref:System.Collections.Generic.List%601> 的泛型 <xref:System.DateTime>、泛型 <xref:System.ComponentModel.BindingList%601> (開放式泛型) 和 <xref:System.Collections.ArrayList> 都是參照集合型別，便會產生下列結果。  
   
  [!code-csharp[c_collection_types_in_data_contracts#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#10)]
  [!code-vb[c_collection_types_in_data_contracts#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#10)]  
@@ -288,9 +288,9 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |非泛型或封閉式泛型 (任何參數數目)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 或<br /><br /> `MyType<T> : IDictionary` 其中 T=`int`|封閉式泛型 `IDictionary<object,object>`|  
 |封閉式泛型 (任何參數數目)|<xref:System.Collections.Generic.IDictionary%602>，封閉式|`MyType<T> : IDictionary<string, bool>` 其中 T=`int`|封閉式泛型 (例如， `IDIctionary<string,bool>`)|  
-|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，其中一個索引鍵或值屬封閉式，另一個則為開放式並使用型別的一個參數|`MyType<T,U,V> : IDictionary<string,V>` 其中 T=`int`，U=`float`，V=`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>` 其中 Z=`string`|封閉式泛型 (例如，`IDictionary<string,bool>`)|  
-|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，索引鍵與值都屬開放式，而且每一個都會使用型別的一個參數|`MyType<T,U,V> : IDictionary<V,U>`，其中 T=`int`，U=`bool`，V=`string`|封閉式泛型 (例如， `IDictionary<string,bool>`)|  
-|開放式泛型 (兩個參數)|泛型 <xref:System.Collections.Generic.IDictionary%602>，開放式，依照型別之泛型參數的出現順序來同時使用這兩個參數|`MyType<K,V> : IDictionary<K,V>`，K 與 V 都屬開放式|開放式泛型 (例如，`IDictionary<K,V>`)|  
+|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，其中一個索引鍵或值屬封閉式，另一個則為開放式並使用型別的一個參數|`MyType<T,U,V> : IDictionary<string,V>` 其中 T=`int`，U=`float`，V=`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>` 其中 Z=`string`|封閉式泛型 (例如， `IDictionary<string,bool>`)|  
+|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，索引鍵與值都屬開放式，而且每一個都會使用型別的一個參數|`MyType<T,U,V> : IDictionary<V,U>` 其中 T=`int`，U=`bool`，V=`string`|封閉式泛型 (例如， `IDictionary<string,bool>`)|  
+|開放式泛型 (兩個參數)|泛型 <xref:System.Collections.Generic.IDictionary%602>，開放式，依照型別之泛型參數的出現順序來同時使用這兩個參數|`MyType<K,V> : IDictionary<K,V>`，K 與 V 都屬開放式|開放式泛型 (例如， `IDictionary<K,V>`)|  
   
  如果型別同時實作 <xref:System.Collections.IDictionary> 與泛型 <xref:System.Collections.Generic.IDictionary%602>，這時就只會考慮泛型 <xref:System.Collections.Generic.IDictionary%602> 。  
   
@@ -348,7 +348,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   除非已使用 Name 覆寫，否則清單集合資料合約的預設名稱，就會是 "ArrayOf" 字串與集合中所包含型別之資料合約名稱的組合。 例如，整數泛型清單的資料合約名稱是 "ArrayOfint"。 請記住， `Object` 的資料合約名稱是 "anyType"，因此非泛型清單 (例如， <xref:System.Collections.ArrayList> ) 的資料合約名稱會是 "ArrayOfanyType"。  
   
- 除非已使用 `Name` 覆寫，否則字典集合資料合約的預設名稱，就會是 "ArrayOfKeyValueOf" 字串與索引鍵型別之資料合約名稱加上值型別之資料合約名稱的組合。 例如，字串與整數之泛型字典的資料合約名稱為 "ArrayOfKeyValueOfstringint"。 此外，如果索引鍵或值型別其中一個不是基本型別，便會在名稱後附加索引鍵與值型別之資料合約命名空間的命名空間雜湊。 如需有關命名空間雜湊的詳細資訊，請參閱 < [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
+ 除非已使用 `Name`覆寫，否則字典集合資料合約的預設名稱，就會是 "ArrayOfKeyValueOf" 字串與索引鍵型別之資料合約名稱加上值型別之資料合約名稱的組合。 例如，字串與整數之泛型字典的資料合約名稱為 "ArrayOfKeyValueOfstringint"。 此外，如果索引鍵或值型別其中一個不是基本型別，便會在名稱後附加索引鍵與值型別之資料合約命名空間的命名空間雜湊。 如需有關命名空間雜湊的詳細資訊，請參閱 < [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
   
  每個字典集合資料合約都具有表示字典中一個項目的附屬資料合約。 除了 "ArrayOf" 的前置詞以外，該合約的名稱與字典資料合約的名稱相同，而且其命名空間也與字典資料合約相同。 例如，對於 "ArrayOfKeyValueOfstringint" 字典資料合約，"KeyValueofstringint" 資料合約表示字典中的一個項目。 您可以使用 `ItemName` 屬性來自訂這個資料合約的名稱，如下節所示。  
   
@@ -395,5 +395,5 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ## <a name="collections-and-object-reference-preservation"></a>集合與物件參考保留  
  當序列化程式在保留物件參考的模式下運作時，物件參考保留也會套用到集合。 具體來說，就是整個集合與集合中所包含的個別項目都會保留其物件身分識別。 若是字典，則會針對索引鍵/值組物件以及個別的索引鍵和值物件保留物件身分識別。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

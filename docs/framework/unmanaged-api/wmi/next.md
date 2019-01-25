@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15d470ccf9384695aa38a50c2c062c1b660fea96
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: aaebf06c63d7022c9798824097cd722a2ffadde5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584606"
 ---
 # <a name="next-function"></a>下一個函式
 擷取開頭呼叫列舉中的下一個屬性[BeginEnumeration](beginenumeration.md)。  
@@ -51,7 +51,7 @@ HRESULT Next (
 [in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
 
 `lFlags`  
-[in]保留。 這個參數必須是 0。
+[in] 保留。 這個參數必須是 0。
 
 `pstrName`  
 [out]新`BSTR`含有屬性名稱。 您可以將此參數設定為`null`如果名稱不需要。
@@ -92,8 +92,8 @@ HRESULT Next (
 |常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 屬性是標準的系統屬性。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 類別： 屬性繼承自父類別。 </br> 執行個體： 屬性，而繼承自父類別中，尚未修改的執行個體。  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 類別： 屬性屬於衍生的類別。 </br> 執行個體： 執行個體; 所修改的屬性也就是所提供的值，或加入或修改限定詞。 |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 類別：屬性被繼承自父類別。 </br> 執行個體：屬性，而繼承自父類別中，有尚未修改的執行個體。  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 類別：屬性屬於衍生的類別。 </br> 執行個體：執行個體; 所修改的屬性也就是所提供的值，或加入或修改限定詞。 |
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -102,5 +102,5 @@ HRESULT Next (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

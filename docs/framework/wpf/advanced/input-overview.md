@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 4492b92268828943d222fbf624781bc0b9ce7901
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 481d19ca8a7222f26b8d22864c790031c14ffa8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592584"
 ---
 # <a name="input-overview"></a>輸入概觀
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]子系統提供一個功能強大[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]各式各樣的裝置取得輸入，包括滑鼠、 鍵盤、 觸控及手寫筆。 本主題描述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的服務，以及說明輸入系統的架構。
@@ -243,7 +243,7 @@ ms.locfileid: "48842784"
 
  當您讓物件回應操作時，可以讓物件看起來像有慣性。 這可讓您的物件模擬真實世界。 例如，當您在桌上推動書本時，如果推得夠用力，則在放開書本之後，書本還會繼續移動。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您透過在使用者的手指放開物件之後引發操作事件，來模擬此行為。
 
- 如需如何建立可讓使用者移動、調整大小和旋轉物件的應用程式的資訊，請參閱[逐步解說：建立您的第一個觸控應用程式](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)。
+ 如需有關如何建立應用程式，可讓使用者移動、 調整大小，以及旋轉物件的資訊，請參閱[逐步解說：建立您的第一個觸控應用程式](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)。
 
  <xref:System.Windows.UIElement>定義下列操作事件。
 
@@ -391,4 +391,8 @@ ms.locfileid: "48842784"
  具有其他資源可詳細說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 架構項目和事件路由。 如需詳細資訊，請參閱下列概觀：[命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)、[焦點概觀](../../../../docs/framework/wpf/advanced/focus-overview.md)、[基底項目概觀](../../../../docs/framework/wpf/advanced/base-elements-overview.md)、[WPF 中的樹狀結構](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)和[路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。
 
 ## <a name="see-also"></a>另請參閱
- [焦點概觀](../../../../docs/framework/wpf/advanced/focus-overview.md)[命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)[路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)[基底項目概觀](../../../../docs/framework/wpf/advanced/base-elements-overview.md)[屬性](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+- [焦點概觀](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [基底項目概觀](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [屬性](../../../../docs/framework/wpf/advanced/properties-wpf.md)

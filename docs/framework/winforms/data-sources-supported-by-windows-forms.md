@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: aee15d8d40ddd3f928c8bc5396d8bcbff17ba533
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 71013506bfe73907cd19c11b03d01d0c3e05e1d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573966"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Form 支援的資料來源
 傳統上，資料繫結已使用的應用程式中利用儲存在資料庫中的資料。 使用 Windows Form 資料繫結，您可以從資料庫，以及其他的結構，例如陣列和集合中的資料存取資料，只要已符合特定最低需求。  
@@ -37,7 +37,7 @@ ms.locfileid: "43858908"
  Windows Form 支援公用屬性的資料繫結控制項屬性的物件使用的執行個體上<xref:System.Windows.Forms.Binding>型別。 Windows Form 也支援繫結清單控制項，例如<xref:System.Windows.Forms.ListControl>物件執行個體時<xref:System.Windows.Forms.BindingSource>用。  
   
  陣列或集合  
- 若要做為資料來源，必須實作清單<xref:System.Collections.IList>介面; 一個範例是陣列，其中是的執行個體<xref:System.Array>類別。 如需有關陣列的詳細資訊，請參閱[如何： 建立陣列的物件 (Visual Basic)](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3)。  
+ 若要做為資料來源，必須實作清單<xref:System.Collections.IList>介面; 一個範例是陣列，其中是的執行個體<xref:System.Array>類別。 如需有關陣列的詳細資訊，請參閱[How to:建立物件 (Visual Basic) 的陣列](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3)。  
   
  一般情況下，您應該使用<xref:System.ComponentModel.BindingList%601>當您建立資料繫結的物件清單。 <xref:System.ComponentModel.BindingList%601> 是的泛型版本<xref:System.ComponentModel.IBindingList>介面。 <xref:System.ComponentModel.IBindingList>介面會擴充<xref:System.Collections.IList>藉由新增屬性、 方法和所需的雙向資料繫結事件的介面。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "43858908"
   
 -   <xref:System.Data.DataViewManager>. A<xref:System.Data.DataViewManager>是自訂的檢視的整個<xref:System.Data.DataSet>，類似於<xref:System.Data.DataView>，但包含的關聯性。 具有<xref:System.Data.DataViewManager.DataViewSettings%2A>集合中，您可以設定預設篩選和排序選項的任何檢視，<xref:System.Data.DataViewManager>具有指定的資料表。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Forms 資料繫結中的變更告知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- [資料繫結和 Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>另請參閱
+- [Windows Forms 資料繫結中的變更告知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
+- [資料繫結和 Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)

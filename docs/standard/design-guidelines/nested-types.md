@@ -11,12 +11,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: KrzysztofCwalina
-ms.openlocfilehash: 7e5fe66106ad34e88bbf435794a08a159c045b02
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 22c14d05105154ff642cb8a44eda8e7c5d0575e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559537"
 ---
 # <a name="nested-types"></a>巢狀類型
 巢狀型別是另一個類型，稱為封入類型的範圍內定義的類型。 巢狀型別可以存取其封入類型的所有成員。 比方說，它必須定義在封入類型，以及受保護的欄位定義中的封入類型的所有上階的私用欄位的存取。  
@@ -47,5 +47,5 @@ ms.locfileid: "53148872"
   
 ## <a name="see-also"></a>另請參閱
 
-- [類型設計方針](../../../docs/standard/design-guidelines/type.md)  
+- [類型設計方針](../../../docs/standard/design-guidelines/type.md)
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

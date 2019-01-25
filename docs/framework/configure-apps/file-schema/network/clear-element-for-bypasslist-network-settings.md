@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 5c26857496d52f9fb98ef76a72cb72fe8d852349
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 840833f2752115cb5f5639a25daf05bcbff3d452
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720911"
 ---
 # <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;清除&gt;bypasslist （網路設定） 的項目
 清除 proxy 略過清單。  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
-\<bypasslist >  
-\<清除 >  
+\<defaultProxy>  
+\<bypasslist>  
+\<clear>  
   
 ## <a name="syntax"></a>語法  
   
@@ -70,6 +70,6 @@ ms.locfileid: "50201409"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

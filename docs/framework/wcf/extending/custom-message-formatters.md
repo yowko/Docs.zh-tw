@@ -2,15 +2,15 @@
 title: 自訂訊息格式器
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-ms.openlocfilehash: 301c508a0c639985e226dc55f62431ad8bb9c12b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1633bdd3959ba812251ef1b78bcd0e83b2060c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487668"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612761"
 ---
 # <a name="custom-message-formatters"></a>自訂訊息格式器
-訊息中的內容常使用 XML 格式，這對於應用程式通常並不方便。 應用程式會操作物件，取得及設定其屬性。 Windows Communication Foundation (WCF) 會使用*資料合約*轉換<xref:System.ServiceModel.Channels.Message>成為能夠輕易處理應用程式物件的物件。 這些處理程序稱為序列化和還原序列化。 請注意，這些相同的詞彙用於描述由傳輸層在往來訊息 Wire 格式之間進行的序列化和還原序列化，是不相關的處理程序。  
+訊息中的內容常使用 XML 格式，這對於應用程式通常並不方便。 應用程式會操作物件，取得及設定其屬性。 Windows Communication Foundation (WCF) 會使用*資料合約*轉換<xref:System.ServiceModel.Channels.Message>成容易處理的應用程式物件的物件。 這些處理程序稱為序列化和還原序列化。 請注意，這些相同的詞彙用於描述由傳輸層在往來訊息 Wire 格式之間進行的序列化和還原序列化，是不相關的處理程序。  
   
  如果您需要實作無法使用資料合約完成的訊息和物件之間的特定轉換，可以使用自訂訊息格式器。 如果要執行這項操作，請在用戶端或服務上修改或延伸特定合約作業的執行行為。  
   
@@ -21,7 +21,7 @@ ms.locfileid: "33487668"
   
  接下來，覆寫 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> 方法以序列化物件。 在傳送傳出訊息之前會呼叫這個方法。  
   
- 如果要將自訂格式器插入服務應用程式中，請使用作業行為將 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 物件指派給 <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> 屬性。 行為的相關資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
+ 如果要將自訂格式器插入服務應用程式中，請使用作業行為將 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 物件指派給 <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> 屬性。 行為的相關資訊，請參閱[設定和擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
 ## <a name="custom-message-formatters-on-the-service"></a>服務上的自訂訊息格式器  
  <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 介面會定義將 <xref:System.ServiceModel.Channels.Message> 物件轉換成作業的參數，以及從參數轉換成 <xref:System.ServiceModel.Channels.Message> 服務應用程式中物件的方法。  
@@ -30,9 +30,9 @@ ms.locfileid: "33487668"
   
  接下來，覆寫 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> 方法以序列化物件。 在傳送傳出訊息之前會呼叫這個方法。  
   
- 如果要將自訂格式器插入服務應用程式中，請使用作業行為將 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 物件指派給 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> 屬性。 行為的相關資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
+ 如果要將自訂格式器插入服務應用程式中，請使用作業行為將 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 物件指派給 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> 屬性。 行為的相關資訊，請參閱[設定和擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>  
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>  
- [使用行為來設定與擴充執行階段](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>
+- <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>
+- [使用行為來設定與擴充執行階段](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

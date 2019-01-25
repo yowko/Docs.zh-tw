@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread2 Interface1
+title: ICorDebugThread2 介面 1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread2
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c348cf28a6330523d1a490c136a3214e37d13f4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3826bfd16d3cf7534a6e920c516987908547b419
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716140"
 ---
-# <a name="icordebugthread2-interface1"></a>ICorDebugThread2 Interface1
+# <a name="icordebugthread2-interface1"></a>ICorDebugThread2 介面 1
 可做為 ICorDebugThread 介面的邏輯擴充。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetActiveFunctions 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)|取得包含在執行緒框架中作用中的函式的相關資料的 COR_ACTIVE_FUNCTION 執行個體的陣列。|  
+|[GetActiveFunctions 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)|取得包含執行緒的框架中作用中的函式的相關資料的 COR_ACTIVE_FUNCTION 執行個體的陣列。|  
 |[GetConnectionID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getconnectionid-method.md)|取得這個連接識別碼`ICorDebugThread2`。|  
 |[GetTaskID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-gettaskid-method.md)|取得這個工作識別碼`ICorDebugThread2`。|  
 |[GetVolatileOSThreadID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getvolatileosthreadid-method.md)|取得這個作業系統執行緒識別項`ICorDebugThread2`。|  
@@ -42,13 +42,13 @@ ms.locfileid: "33423045"
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

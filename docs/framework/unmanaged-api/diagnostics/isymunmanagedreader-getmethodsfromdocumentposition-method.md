@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c84aceb0faabd879911e9595a7f3154065e2191
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f55c8986d2efc78b6fcd2840bad588af84228017
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426194"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561774"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition 方法
-傳回的陣列的方法，其中每個包含文件中指定位置的中斷點。  
+傳回的陣列的方法，其中每一個包含文件中指定位置的中斷點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,16 +54,16 @@ HRESULT GetMethodsFromDocumentPosition (
  [in] `pRetVal` 陣列的大小。  
   
  `pcMethod`  
- [out]此變數會接收中傳回的元素數目的指標`pRetVal`陣列。  
+ [out]此變數會接收傳回的項目數的指標`pRetVal`陣列。  
   
  `pRetVal`  
- [out]陣列的指標，其中每個指向[ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)物件，代表包含中斷點的方法。  
+ [out]指標的陣列，其中每一個指向[ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)物件，表示包含中斷點的方法。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

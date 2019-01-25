@@ -1,5 +1,5 @@
 ---
-title: 物件存留期：物件的建立和終結 (Visual Basic)
+title: 物件存留期：物件如何建立和終結 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Constructor
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 319d606bcd19397932c05f1d5b808f2f5d8923ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610327"
 ---
-# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>物件存留期：物件的建立和終結 (Visual Basic)
+# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>物件存留期：物件如何建立和終結 (Visual Basic)
 您可以使用 `New` 關鍵字來建立類別的執行個體，即物件。 在使用新物件之前，經常必須在新物件上執行初始設定工作。 常見的初始設定工作包括開啟檔案、連線到資料庫，以及讀取登錄機碼的值。 Visual Basic 控制項的使用程序呼叫的新物件初始化*建構函式*（允許控制初始化的特殊方法）。  
   
  物件離開範圍之後，它會被通用語言執行平台 (CLR) 所釋放。 Visual Basic 會控制使用呼叫的程序的系統資源的釋放*解構函式*。 建構函式與解構函式一起支援建立穩固和可預測的類別庫。  
@@ -146,9 +146,9 @@ End Sub
   
  記憶體回收系統之間的另一個差異牽涉到使用 `Nothing`。 若要利用 Visual Basic 6.0 及舊版中的參考計數，程式設計師有時候會將 `Nothing` 指派給物件變數，以釋放那些變數所保留的參考。 如果變數保留物件的最後參考，就會立即釋放物件資源。 在新版 Visual Basic 中，雖然可能在一些情況下，此程序仍相當重要，但是執行它永遠不會造成參考的物件立即釋放其資源。 若要立即釋放資源，請使用物件的 <xref:System.IDisposable.Dispose%2A> 方法 (若有的話)。 唯一應該將變數設定為 `Nothing` 的時間，是在它的存留期相對於記憶體回收行程偵測失去關聯之物件所需的時間較長時。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.IDisposable.Dispose%2A>  
- [初始化及終止元件](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
- [New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [清除 Unmanaged 資源](../../../../standard/garbage-collection/unmanaged.md)  
- [Nothing](../../../../visual-basic/language-reference/nothing.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.IDisposable.Dispose%2A>
+- [初始化及終止元件](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)
+- [New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [清除 Unmanaged 資源](../../../../standard/garbage-collection/unmanaged.md)
+- [Nothing](../../../../visual-basic/language-reference/nothing.md)

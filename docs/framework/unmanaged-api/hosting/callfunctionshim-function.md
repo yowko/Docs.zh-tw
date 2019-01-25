@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1060ca140db0304c8e5667f7fdf9624b3ac2b64a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 39223e10b0f75eefb83f3b9a83c5f030318cd715
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738926"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim 函式
-會指定程式庫中有指定的名稱和參數的函式呼叫。  
+會指定程式庫中具有指定的名稱和參數的函式呼叫。  
   
- 此函式中已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,25 +49,25 @@ HRESULT CallFunctionShim (
  [in]函式的名稱。  
   
  `lpvArgument1`  
- [in]要傳遞給函式的第一個引數。  
+ [in]第一個引數傳遞給函式。  
   
  `lpvArgument2`  
- [in]第二個引數傳遞至函式。  
+ [in]第二個引數傳遞給函式。  
   
  `szVersion`  
- [in]包含函式的程式庫版本。  
+ [in]包含此函式的程式庫版本。  
   
  `pvReserved`  
- [in]保留供未來使用。 傳遞此參數中的零。  
+ [in]保留供日後使用。 傳遞此參數中的零。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>另請參閱
+- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

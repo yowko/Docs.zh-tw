@@ -1,15 +1,15 @@
 ---
-title: 教學課程： 延後執行 (Visual Basic)
+title: 教學課程：延後的執行 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c80d53a8-1a30-4115-b232-52f0d089fec5
-ms.openlocfilehash: cf6540506c1a50bb10884e4aed5edc1d9c851ac6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2459d9089af9886b8b2b8952a5e80832ee2d468f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609430"
 ---
-# <a name="tutorial-deferred-execution-visual-basic"></a>教學課程： 延後執行 (Visual Basic)
+# <a name="tutorial-deferred-execution-visual-basic"></a>教學課程：延後的執行 (Visual Basic)
 此教學課程說明將查詢鏈結在一起時的處理模型。 將查詢鏈結在一起是撰寫功能性轉換的重要部分。 確實了解鏈結的查詢如何運作相當重要。  
   
  處理 Office Open XML 文件的查詢會廣泛使用這個技術。  
@@ -18,8 +18,8 @@ ms.locfileid: "33645872"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[延後的執行與延遲評估 linq to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)|描述延後執行和延遲評估的概念。|  
+|[延後的執行和延遲評估，在 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)|描述延後執行和延遲評估的概念。|  
 |[延後的執行範例 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)|提供延後執行的範例。|  
   
-## <a name="see-also"></a>另請參閱  
- [純功能性轉換 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a>另請參閱
+- [純功能性轉換 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEnum Interface1
+title: ICorDebugEnum 介面 1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEnum
@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4659bbc9c2e3c71a6cf85e51a06bee4f789356b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97080f7d850e67d635f9a65ee85ad3ddddbb244d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732748"
 ---
-# <a name="icordebugenum-interface1"></a>ICorDebugEnum Interface1
-做為偵錯應用程式所使用的列舉值的抽象基底介面。  
+# <a name="icordebugenum-interface1"></a>ICorDebugEnum 介面 1
+做為 偵錯的應用程式所使用的列舉值的抽象基底介面。  
   
 ## <a name="methods"></a>方法  
   
@@ -32,19 +32,19 @@ ms.locfileid: "33422301"
 |------------|-----------------|  
 |[Clone 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|建立一份這`ICorDebugEnum`物件。|  
 |[GetCount 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|列舉中取得的項目數。|  
-|[Reset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|將游標移至列舉的開頭。|  
+|[Reset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|將游標移至列舉型別的開頭。|  
 |[Skip 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|將游標移往前列舉中所指定的項目數。|  
   
 ## <a name="remarks"></a>備註  
  下列的列舉值衍生自`ICorDebugEnum`:  
   
--   「 ICorDebugAppDomainEnum"  
+-   "ICorDebugAppDomainEnum"  
   
 -   「 ICorDebugAssemblyEnum"  
   
 -   [ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
   
--   「 ICorDebugBreakpointEnum"  
+-   "ICorDebugBreakpointEnum"  
   
 -   「 ICorDebugChainEnum"  
   
@@ -54,7 +54,7 @@ ms.locfileid: "33422301"
   
 -   [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
   
--   「 ICorDebugFrameEnum"  
+-   "ICorDebugFrameEnum"  
   
 -   [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
   
@@ -66,11 +66,11 @@ ms.locfileid: "33422301"
   
 -   「 ICorDebugModuleEnum"  
   
--   「 ICorDebugObjectEnum"  
+-   "ICorDebugObjectEnum"  
   
--   「 ICorDebugProcessEnum"  
+-   "ICorDebugProcessEnum"  
   
--   「 ICorDebugStepperEnum"  
+-   "ICorDebugStepperEnum"  
   
 -   「 ICorDebugThreadEnum"  
   
@@ -84,13 +84,13 @@ ms.locfileid: "33422301"
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

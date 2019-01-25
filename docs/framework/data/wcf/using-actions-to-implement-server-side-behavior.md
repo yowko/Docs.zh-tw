@@ -2,12 +2,12 @@
 title: 使用動作實作伺服器端行為
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c478c09ada879bdb237cff1e3c914a5990aba765
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622607"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用動作實作伺服器端行為
 
@@ -48,7 +48,7 @@ OData 動作可實作一種行為，以依據從 OData 服務擷取的資源而�
   
  參數可能會以 Token 的形式傳遞。 這是因為您可以寫入使用代表資源之 Token 的資料服務提供者，如果是這種情況，您可能必須先將這些 Token 轉換 (封送處理) 成實際資源，然後再分派給實際動作。 封送處理參數之後，它必須處於可編輯狀態，如此一來，叫用動作時對資源進行的任何變更才會儲存並寫入磁碟。  
   
- 這個介面需要兩個方法：Invoke 和 GetResult。 Invoke 會叫用實作動作之行為的委派，而 GetResult 會傳回動作的結果。  
+ 此介面需要兩個方法：叫用和 GetResult。 Invoke 會叫用實作動作之行為的委派，而 GetResult 會傳回動作的結果。  
   
 ## <a name="invoking-a-wcf-data-service-action"></a>叫用 WCF 資料服務動作  
  動作是使用 HTTP POST 要求來叫用的。 URL 會依序指定資源和動作名稱。 參數是透過要求的主體傳遞的。 例如，假設有一項名為 MovieService 的服務，而這項服務公開了名為 Rate 的動作。 您就可以使用下列 URL，針對特定的影片叫用 Rate 動作：  
@@ -80,8 +80,8 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
   
  在上述程式碼片段中，`MoviesModel` 類別的產生方式是使用 Visual Studio，加入 WCF 資料服務的服務參考。  
   
-## <a name="see-also"></a>另請參閱  
- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
- [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [開發和部署 WCF 資料服務](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
- [自訂資料服務提供者](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+## <a name="see-also"></a>另請參閱
+- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
+- [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [開發和部署 WCF 資料服務](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
+- [自訂資料服務提供者](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

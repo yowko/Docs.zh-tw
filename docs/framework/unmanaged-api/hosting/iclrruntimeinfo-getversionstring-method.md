@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b18323644220ffdce1caad966b8a0c2a7baddde2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dfbf543deb98661ab9116e9dfcb6cb534d3ff13b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434633"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608345"
 ---
 # <a name="iclrruntimeinfogetversionstring-method"></a>ICLRRuntimeInfo::GetVersionString 方法
 取得 common language runtime (CLR) 版本資訊與相關給定[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面。  
@@ -43,15 +43,15 @@ HRESULT GetVersionString(
   
 #### <a name="parameters"></a>參數  
  `pwzBuffer`  
- [out].NET Framework 編譯版本，格式為"v*A*。*B*[。*X*]"。 *A*， *B*，和*X*是對應至主要版本、 次要版本和組建編號的十進位數字。 *X*是選擇性的。 如果*X*已不存在，沒有結尾週期。  
+ [out].NET Framework 編譯版本，格式為"v*A*。*B*[。*X*]"。 *A*， *B*，以及*X*是對應至主要版本、 次要版本和組建編號的十進位數字。 *X*是選擇性的。 如果*X*已不存在，沒有任何結尾的句點。  
   
 > [!NOTE]
->  C:\Windows\Microsoft.NET\Framework 底下所顯示的樣子，這個參數必須符合.NET Framework 版本的目錄名稱。  
+>  C:\Windows\Microsoft.NET\Framework 底下所顯示的樣子，這個參數必須符合.NET Framework 版本中，目錄名稱。  
   
- 範例值是"v1.0.3705"、"v1.1.4322"、"v2.0.50727，"和"v4.0。*x*"，其中*x*取決於已安裝的組建編號。 請注意，"v"前置詞是強制性。  
+ 範例值為"v1.0.3705"、"v1.1.4322"、"v2.0.50727"和"v4.0。*x*"，其中*x*取決於已安裝的組建編號。 請注意，"v"前置詞是必要的。  
   
  `pchBuffer`  
- [in、 out]指定的大小`pwzBuffer`以避免緩衝區滿溢。 如果`pwzBuffer`是`null`，`pchBuffer`傳回的所需的大小`pwzBuffer`允許 preallocation。  
+ [in、 out]指定的大小`pwzBuffer`以避免緩衝區滿溢。 如果`pwzBuffer`已`null`，`pchBuffer`傳回的所需的大小`pwzBuffer`以便預先配置。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
@@ -62,16 +62,16 @@ HRESULT GetVersionString(
 |E_POINTER|`pwzBuffer` 或 `pchBuffer` 為 null。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [.NET Framework 4 和 4.5 中新增的 CLR 裝載介面](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [.NET Framework 4 和 4.5 中新增的 CLR 裝載介面](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)

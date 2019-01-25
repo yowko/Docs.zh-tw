@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: f4c0d7fa9f14868404cde6201692e26b919198be
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 19eba101e2a91d1b0549e9e3eb86d0af94f2d1b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619738"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join 子句 (Visual Basic)
 將兩個集合合併成單一階層式集合。 聯結作業根據對應索引鍵。  
@@ -33,11 +33,11 @@ Group Join element [As type] In collection _
   
 |詞彙|定義|  
 |---|---|  
-|`element`|必要。 要聯結之集合的控制變數。|  
+|`element`|必要項。 要聯結之集合的控制變數。|  
 |`type`|選擇性。 `element` 的類型。 如果沒有`type`指定的型別`element`從推斷而來`collection`。|  
-|`collection`|必要。 要結合的左側集合的集合`Group Join`運算子。 A`Group Join`子句可以巢狀方式置於`Join`子句或以其他`Group Join`子句。|  
-|`key1` `Equals` `key2`|必要。 識別要聯結之集合的索引鍵。 您必須使用`Equals`運算子來比較所聯結之集合中的索引鍵。 您可以使用合併聯結條件`And`運算子來識別多個索引鍵。 `key1`參數必須是從左側集合`Join`運算子。 `key2`參數必須是從右邊的集合`Join`運算子。<br /><br /> 聯結條件中使用索引鍵可以包含一個以上的項目從集合的運算式。 不過，每個索引鍵的運算式可以包含從其個別集合的項目。|  
-|`expressionList`|必要。 識別如何彙總集合中的項目群組的一或多個運算式。 若要識別群組結果的成員名稱，請使用`Group`關鍵字 (`<alias> = Group`)。 您也可以包含將套用至群組的彙總函式。|  
+|`collection`|必要項。 要結合的左側集合的集合`Group Join`運算子。 A`Group Join`子句可以巢狀方式置於`Join`子句或以其他`Group Join`子句。|  
+|`key1` `Equals` `key2`|必要項。 識別要聯結之集合的索引鍵。 您必須使用`Equals`運算子來比較所聯結之集合中的索引鍵。 您可以使用合併聯結條件`And`運算子來識別多個索引鍵。 `key1`參數必須是從左側集合`Join`運算子。 `key2`參數必須是從右邊的集合`Join`運算子。<br /><br /> 聯結條件中使用索引鍵可以包含一個以上的項目從集合的運算式。 不過，每個索引鍵的運算式可以包含從其個別集合的項目。|  
+|`expressionList`|必要項。 識別如何彙總集合中的項目群組的一或多個運算式。 若要識別群組結果的成員名稱，請使用`Group`關鍵字 (`<alias> = Group`)。 您也可以包含將套用至群組的彙總函式。|  
   
 ## <a name="remarks"></a>備註  
  `Group Join`子句結合兩個集合根據比對所聯結之集合中的索引鍵值。 產生的集合可以包含第二個集合中符合第一個集合的索引鍵值參考項目集合的成員。 您也可以指定要套用至群組項目的第二個集合中的彙總函式。 彙總函式的相關資訊，請參閱[彙總子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
@@ -55,11 +55,11 @@ Group Join element [As type] In collection _
   
  [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查詢](../../../visual-basic/language-reference/queries/index.md)  
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Join 子句](../../../visual-basic/language-reference/queries/join-clause.md)  
- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Group By 子句](../../../visual-basic/language-reference/queries/group-by-clause.md)
+## <a name="see-also"></a>另請參閱
+- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查詢](../../../visual-basic/language-reference/queries/index.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Join 子句](../../../visual-basic/language-reference/queries/join-clause.md)
+- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Group By 子句](../../../visual-basic/language-reference/queries/group-by-clause.md)
