@@ -1,19 +1,19 @@
 ---
-title: 操作說明：使用主要畫面格建立大小變更的動畫
+title: HOW TO：使用主要畫面格建立大小變更的動畫
 ms.date: 03/30/2017
 helpviewer_keywords:
 - key frames [WPF], animating size changes with
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: 69845d1d75f81042bbeb20ee6b1015f5c2f53b81
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9efaaebdf08a6079bff7179e9ec035b4f38bb3ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678443"
 ---
-# <a name="how-to-animate-size-changes-by-using-key-frames"></a>操作說明：使用主要畫面格建立大小變更的動畫
+# <a name="how-to-animate-size-changes-by-using-key-frames"></a>HOW TO：使用主要畫面格建立大小變更的動畫
 這個範例示範如何使用主要畫面格建立大小變更的動畫。  
   
 ## <a name="example"></a>範例  
@@ -29,12 +29,12 @@ ms.locfileid: "43803749"
   
  如需完整的範例，請參閱[主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>  
- <xref:System.Windows.Media.ArcSegment.Size%2A>  
- <xref:System.Windows.Media.ArcSegment>  
- <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>  
- <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>  
- <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>  
- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [主要畫面格操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>
+- <xref:System.Windows.Media.ArcSegment.Size%2A>
+- <xref:System.Windows.Media.ArcSegment>
+- <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>
+- <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>
+- <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>
+- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [主要畫面格操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

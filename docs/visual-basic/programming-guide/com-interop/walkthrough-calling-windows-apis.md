@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：呼叫 Windows API (Visual Basic)
+title: 逐步解說：呼叫 Windows Api (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DLLs, calling
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: bb98d842bfe65bdf637a789fc9a8319a70cb2bc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657970"
 ---
-# <a name="walkthrough-calling-windows-apis-visual-basic"></a>逐步解說：呼叫 Windows API (Visual Basic)
+# <a name="walkthrough-calling-windows-apis-visual-basic"></a>逐步解說：呼叫 Windows Api (Visual Basic)
 Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您可以使用它們來執行工作時很難撰寫您自己的對等的程序。 比方說，Windows 會提供名為函式`FlashWindowEx`，可讓您的應用程式的標題列淺色與深色陰影之間。  
   
  在您的程式碼中使用 Windows Api 的優點是，他們就可以節省開發時間，因為它們包含數十個有用的功能，已撰寫並可立即使用。 缺點是 Windows Api 很難進行運作和十足，發生錯誤時。  
@@ -147,12 +147,12 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
   
 12. 按一下  **Button2**。 如果可以移動檔案，則會顯示 「 已成功移動檔案 」 訊息。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
- [在 Managed 程式碼中建立原型](../../../framework/interop/creating-prototypes-in-managed-code.md)  
- [做為回呼方法，委派封送處理](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
+- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
+- [在 Managed 程式碼中建立原型](../../../framework/interop/creating-prototypes-in-managed-code.md)
+- [做為回呼方法，委派封送處理](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

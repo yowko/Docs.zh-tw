@@ -1,5 +1,5 @@
 ---
-title: 如何：存取 Managed HTML 文件物件模型
+title: HOW TO：存取 Managed 的 HTML 文件物件模型
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 175a29322fe2af13992e267b3fc3308b70212272
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8799ac9897771a7cdf5a1e473914f461e435c061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637147"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>如何：存取 Managed HTML 文件物件模型
+# <a name="how-to-access-the-managed-html-document-object-model"></a>HOW TO：存取 Managed 的 HTML 文件物件模型
 您可以從兩種類型的應用程式中，存取受管理的「HTML 文件物件模型」(DOM)：  
   
 -   執行有受管理之 <xref:System.Windows.Forms.WebBrowser> 控制項的 Windows Forms 應用程式 (.exe)。 這兩種技術為互補，<xref:System.Windows.Forms.WebBrowser> 控制項負責將頁面顯示給使用者，HTML DOM 負責顯示文件的邏輯結構。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/04/2018
 
 ### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a>存取 Internet Explorer 中所執行之 UserControl 的 DOM  
   
-1.  建立您自己之 <xref:System.Windows.Forms.UserControl> 類別的衍生類別。 如需詳細資訊，請參閱[如何：撰寫複合控制項](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)。  
+1.  建立您自己之 <xref:System.Windows.Forms.UserControl> 類別的衍生類別。 如需詳細資訊，請參閱[＜How to：撰寫複合控制項](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)。  
   
 2.  將下列程式碼放入您 <xref:System.Windows.Forms.UserControl> 的 Load 事件處理常式中：  
   
@@ -44,5 +45,5 @@ ms.lasthandoff: 05/04/2018
   
 1.  您的應用程式或 <xref:System.Windows.Forms.UserControl> 需要完全信任，才能存取受管理的 HTML DOM。 若要部署使用 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 的 Windows Forms 應用程式，可以使用「使用權限提高」或「受信任的應用程式部署」要求完全信任；如需詳細資料，請參閱[保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。  
   
-## <a name="see-also"></a>另請參閱  
- [使用 Managed HTML 文件物件模型](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a>另請參閱
+- [使用 Managed HTML 文件物件模型](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

@@ -2,18 +2,18 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: a7743f790c1080b601c7e92236723dbc721a849b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c67161ddd0698a74f073b10e79674529b198e9f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500509"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 對使用者提供訊息堆疊的完整控制權。  
   
  \<system.serviceModel>  
-\<繫結 >  
+\<bindings>  
 \<customBinding>  
   
 ## <a name="syntax"></a>語法  
@@ -290,16 +290,16 @@ ms.locfileid: "54149898"
  如需如何使用自訂繫結來修改系統提供繫結的討論，請參閱[How to:自訂系統提供的繫結](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
     
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.Configuration.BindingsSection>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [customBinding 元素](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.Configuration.BindingsSection>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [customBinding 元素](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [繫結](../../../../../docs/framework/wcf/bindings.md)
+- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

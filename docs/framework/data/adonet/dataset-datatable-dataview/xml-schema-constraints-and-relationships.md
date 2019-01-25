@@ -2,12 +2,12 @@
 title: XML 結構描述條件約束和關聯性
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: bcb6e257a40040701612b73768a98e056bccd6c5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: aea0efc51adb5a81f479cad41a7fb8d145ceb869
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602867"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML 結構描述條件約束和關聯性
 中的 XML 結構描述定義語言 (XSD) 結構描述中，您可以指定條件約束 (唯一的索引鍵和 keyref 條件約束) 和關聯性 (使用**msdata: relationship**註釋)。 這個主題會說明 XML 結構描述中指定的條件約束和關聯性如何經過解譯以產生 <xref:System.Data.DataSet>。  
@@ -186,6 +186,6 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
   
  如果 keyref 條件約束參考巢狀資料表包含**msdata: isnested ="true"** 註解**資料集**會建立單一的巢狀關聯性為基礎的 keyref 條件約束，相關的唯一的/索引鍵條件約束。  
   
-## <a name="see-also"></a>另請參閱  
- [從 XML 結構描述 (XSD) 衍生資料集關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [從 XML 結構描述 (XSD) 衍生資料集關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

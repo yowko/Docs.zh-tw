@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 441e8ef3-998c-4d12-8825-ce66a178f90f
-ms.openlocfilehash: 3c60a9e430b4228117fd03a43a30f27342154b1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0dd8687bac8aa8ce046fb89c109debd91409aca8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573539"
 ---
 # <a name="customizing-operations-by-using-stored-procedures-exclusively"></a>以獨佔模式使用預存程序來自訂作業
 在常見的案例中使用預存程序存取資料。  
@@ -18,7 +18,7 @@ ms.locfileid: "33357510"
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 您可以修改提供的範例[自訂作業所使用預存程序](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)即使第一個查詢 （這會導致執行動態 SQL） 取代為方法呼叫包裝預存程序。  
+ 您可以修改中提供的範例[自訂作業藉由使用預存程序](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)藉由包裝預存程序的方法呼叫中取代甚至是第一個查詢 （這會導致動態 SQL 執行）。  
   
  假設 `CustomersByCity` 為下列範例中的方法。  
   
@@ -31,5 +31,5 @@ ms.locfileid: "33357510"
  [!code-csharp[DLinqOverrideDefaultSproc#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/Program.cs#5)]
  [!code-vb[DLinqOverrideDefaultSproc#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>另請參閱  
- [開發人員覆寫預設行為的責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+## <a name="see-also"></a>另請參閱
+- [開發人員覆寫預設行為的責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)

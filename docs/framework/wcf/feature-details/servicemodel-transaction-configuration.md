@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: 2c724e3f67bbf6554abffb44f101d2f28f748023
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee35b6c02637c3013a42303dcd7aa7c813bd183c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693158"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 異動組態
-Windows Communication Foundation (WCF) 提供三個屬性來設定服務的交易： `transactionFlow`， `transactionProtocol`，和`transactionTimeout`。  
+Windows Communication Foundation (WCF) 提供三個屬性來設定服務的異動： `transactionFlow`， `transactionProtocol`，和`transactionTimeout`。  
   
 ## <a name="configuring-transactionflow"></a>設定 transactionFlow  
- WCF 會提供包含預先定義的繫結，大部分`transactionFlow`和`transactionProtocol`屬性，因此您可以設定為接受使用特定交易流程通訊協定之特定端點的傳入交易的繫結。 此外，您可以使用 `transactionFlow` 元素及其 `transactionProtocol` 屬性來建置您自訂的繫結。 如需有關設定組態項目，請參閱[\<繫結 >](../../../../docs/framework/misc/binding.md)和[WCF 組態結構描述](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
+ WCF 會提供包含預先定義的繫結的大部分`transactionFlow`和`transactionProtocol`屬性，因此您可以設定為接受傳入交易，針對特定端點使用特定交易流程通訊協定的繫結。 此外，您可以使用 `transactionFlow` 元素及其 `transactionProtocol` 屬性來建置您自訂的繫結。 如需有關如何設定組態元素的詳細資訊，請參閱 < [\<繫結 >](../../../../docs/framework/misc/binding.md)並[WCF 組態結構描述](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
   
  `transactionFlow` 屬性會指定是否要為使用繫結的服務端點啟用交易流程。  
   
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) 提供三個屬性來設定服務的交�
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>設定 transactionTimeout  
- 您可以設定`transactionTimeout`的 WCF 服務屬性`behavior`組態檔元素。 下列程式碼會示範如何執行此項作業。  
+ 您可以設定`transactionTimeout`WCF 服務中的屬性`behavior`組態檔的項目。 下列程式碼會示範如何執行此項作業。  
   
 ```xml  
 <configuration>  
@@ -54,7 +54,7 @@ Windows Communication Foundation (WCF) 提供三個屬性來設定服務的交�
 </configuration>  
 ```  
   
- `transactionTimeout` 屬性會指定在服務所建立之新交易必須完成的時間週期。 這個屬性可當做任何建立新交易之作業的 <xref:System.Transactions.TransactionScope> 逾時使用，若套用了 <xref:System.ServiceModel.OperationBehaviorAttribute>，則 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 屬性會設為 `true`。  
+ `transactionTimeout` 屬性會指定在服務所建立之新異動必須完成的時間週期。 這個屬性可當做任何建立新交易之作業的 <xref:System.Transactions.TransactionScope> 逾時使用，若套用了 <xref:System.ServiceModel.OperationBehaviorAttribute>，則 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 屬性會設為 `true`。  
   
  逾時會指定從建立交易到完成兩階段交易認可通訊協定中的階段 1 的時間範圍。  
   
@@ -62,6 +62,6 @@ Windows Communication Foundation (WCF) 提供三個屬性來設定服務的交�
   
  請注意，所使用的逾時值會是這個 `transactionTimeout` 組態設定和任何 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 屬性間的較小值。  
   
-## <a name="see-also"></a>另請參閱  
- [\<繫結 >](../../../../docs/framework/misc/binding.md)  
- [WCF 組態結構描述](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)
+## <a name="see-also"></a>另請參閱
+- [\<binding>](../../../../docs/framework/misc/binding.md)
+- [WCF 組態結構描述](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

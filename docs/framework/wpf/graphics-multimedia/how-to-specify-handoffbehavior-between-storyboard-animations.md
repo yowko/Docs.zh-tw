@@ -1,18 +1,18 @@
 ---
-title: 如何：指定腳本動畫之間的傳遞行為
+title: HOW TO：指定腳本動畫之間的傳遞行為
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Storyboards [WPF], handoff behavior between animations
 - animation [WPF], handoff behavior between
 ms.assetid: 97bd6842-929b-49d9-813e-46553ae46472
-ms.openlocfilehash: 6846cde9fd0aa93a0ce57fd2da0f9e1df85ec5a4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 01c652e170e27da0be9b1ab5f7659d7089aee6f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677734"
 ---
-# <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>如何：指定腳本動畫之間的傳遞行為
+# <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>HOW TO：指定腳本動畫之間的傳遞行為
 此範例示範如何指定分鏡腳本動畫之間的遞移式行為。 <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>屬性<xref:System.Windows.Media.Animation.BeginStoryboard>指定新動畫已套用至屬性的任何現有的互動。  
   
 ## <a name="example"></a>範例  
@@ -20,9 +20,9 @@ ms.locfileid: "45615803"
   
  [!code-xaml[timingbehaviors_snip#HandoffBehaviorWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/HandoffBehaviorExample.xaml#handoffbehaviorwholepage)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Animation.BeginStoryboard>  
- <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [動畫和計時](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Animation.BeginStoryboard>
+- <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>
+- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [動畫和計時](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
+- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

@@ -1,15 +1,15 @@
 ---
-title: 不同的組織結構 (Visual Basic) 的組織結構規劃 XML
+title: 結構投影 XML 不同圖案 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: d5fe201b14bdfa81bd4c750e17eaef6ba6e895f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9df05ff8c9dc43de861675b4780fcbdca6881bf8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609716"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>不同的組織結構 (Visual Basic) 的組織結構規劃 XML
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>結構投影 XML 不同圖案 (Visual Basic)
 本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。  
   
  許多典型的 XML 轉換都包含鏈結的查詢，如此範例中所示。 常見的狀況是，從特定格式的 XML 開始，將中繼結果規劃為匿名型別或具名型別的集合，最後再將結果規劃回完全不同於來源 XML 之組織結構的 XML。  
@@ -17,7 +17,7 @@ ms.locfileid: "33645651"
 ## <a name="example"></a>範例  
  此範例會處理 WordprocessingML 文件，並從 WordprocessingML 文件擷取段落節點。 它也可以識別每個段落的樣式和文字。 最後，此範例會使用不同的組織結構規劃 XML。 此範例在這個教學課程中，會在先前的範例上建置。 進行規劃的新陳述式會在以下程式碼的註解中叫出。  
   
- 建立此範例的來源文件的指示，請參閱[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 如需建立此範例中的來源文件的指示，請參閱[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
  這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
@@ -230,7 +230,7 @@ End Module
 ## <a name="next-steps"></a>後續步驟  
  在下一個範例中，您將在 Word 文件中進行查詢以尋找所有文字：  
   
--   [在 Word 文件 (Visual Basic) 中尋找文字](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+-   [尋找 Word 文件 (Visual Basic) 中的文字](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>另請參閱  
- [教學課程： 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>另請參閱
+- [教學課程：管理 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

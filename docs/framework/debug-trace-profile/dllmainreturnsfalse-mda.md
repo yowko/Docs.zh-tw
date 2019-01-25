@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4987b025450f2207a01a472a0c39fc6da2de0782
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c513ba06ac79eb3da229605120c4f59ab8d32665
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554539"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>dllMainReturnsFalse MDA
 如果以理由 DLL_PROCESS_ATTACH 呼叫的使用者組件 Managed `DllMain` 函式，傳回 FALSE，就會啟動 `dllMainReturnsFalse` Managed 偵錯助理 (MDA)。  
@@ -44,5 +44,5 @@ ms.locfileid: "33386489"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>另請參閱
+- [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

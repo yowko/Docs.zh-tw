@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 480fedc8ae63ffa3222a74e39297cc64b6812e97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5f1d62c55df410d284fe050b805cf465718ab112
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444487"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576145"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap 方法
-設定指定的語彙基元所參考之方法的 PInvoke 簽章的功能。  
+設定指定的語彙基元所參考方法的 PInvoke 簽章的功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,23 +43,23 @@ HRESULT DefinePinvokeMap (
  [in]目標方法的語彙基元。  
   
  `dwMappingFlags`  
- [in]用來執行對應 PInvoke 旗標。  
+ [in]PInvoke 用來進行對應的旗標。  
   
  `szImportName`  
- [in]Unmanaged DLL 中的方法匯出目標的名稱。  
+ [in]方法在 unmanaged DLL 中的匯出目標的名稱。  
   
  `mrImportDLL`  
- [in]目標的語彙基元原生 DLL。  
+ [in]目標的語彙基元的原生 DLL。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -1,15 +1,15 @@
 ---
-title: 如何： 建立未簽署的 Friend 組件 (Visual Basic)
+title: HOW TO：建立未簽署的 Friend 組件 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: 5fb2310a5d883e65df0b59b6fe316aa4d4637b7f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ed4a818921f26fd5eb70fc4ba52929522627c096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698202"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>如何： 建立未簽署的 Friend 組件 (Visual Basic)
+# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>HOW TO：建立未簽署的 Friend 組件 (Visual Basic)
 此範例示範如何搭配未簽署的組件使用 friend 組件。  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>建立組件和 friend 組件  
@@ -79,14 +79,14 @@ ms.locfileid: "50188314"
   
 6.  執行 friend_signed_B.exe 檔案。  
   
-     此程式會顯示兩個字串:"Class1.Test"和"Class2.Test"。  
+     此程式會顯示兩個字串："Class1.Test" 和 "Class2.Test"。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要差異是 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性權限執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則是控制 `Friend` 類型和成員的可見性。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [組件和全域組件快取 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Friend 組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [如何： 建立簽署的 Friend 組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [程式設計指南概念](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [組件和全域組件快取 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Friend 組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [如何：建立簽署的 Friend 組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [程式設計指南概念](../../../../visual-basic/programming-guide/concepts/index.md)

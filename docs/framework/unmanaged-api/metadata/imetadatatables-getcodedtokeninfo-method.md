@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7a36d14b67efb3934089dc16de41a3b80ea0c0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11ab93e9cb4449ab77e5e9c4da81073aaf432382
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669688"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>IMetaDataTables::GetCodedTokenInfo 方法
 取得與指定的資料列索引相關聯的語彙基元的陣列指標。  
@@ -40,26 +40,26 @@ HRESULT GetCodedTokenInfo (
   
 #### <a name="parameters"></a>參數  
  `ixCdTkn`  
- [in]自動程式碼傳回的語彙基元種類。  
+ [in]要傳回的自動程式化語彙基元種類。  
   
  `pcTokens`  
  [out]長度指標`ppTokens`。  
   
  `ppTokens`  
- [out]指向陣列，其中包含傳回的語彙基元清單的指標。  
+ [out]陣列，其中包含清單的指標的指標傳回權杖。  
   
  `ppName`  
- [out]指標的指標為在語彙基元名稱`ixCdTkn`。  
+ [out]在語彙基元名稱的指標的指標`ixCdTkn`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

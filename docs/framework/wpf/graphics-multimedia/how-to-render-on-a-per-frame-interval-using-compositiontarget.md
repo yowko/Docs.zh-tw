@@ -1,5 +1,5 @@
 ---
-title: 操作說明：使用 CompositionTarget 在單格間隔轉譯
+title: HOW TO：使用 CompositionTarget 在單格間隔轉譯
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: cc043e6d225ad3dbe57a0924593fac0f68af7eb1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: afbaf6652351e056fb0ce31ffd9e69cf98a90e85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511221"
 ---
-# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>操作說明：使用 CompositionTarget 在單格間隔轉譯
+# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>HOW TO：使用 CompositionTarget 在單格間隔轉譯
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎提供許多建立畫面型動畫的功能。 不過，有些應用程式案例需要依據每個畫面進行更細微的控制。 <xref:System.Windows.Media.CompositionTarget>物件讓您能夠建立自訂動畫，根據每個畫面的回呼。  
   
  <xref:System.Windows.Media.CompositionTarget> 是靜態類別，它代表繪製您的應用程式在顯示介面。 <xref:System.Windows.Media.CompositionTarget.Rendering>繪製應用程式的場景每次引發事件。 轉譯畫面播放速率是每秒繪製場景的次數。  
@@ -40,6 +40,6 @@ ms.locfileid: "43526437"
   
  新增或移除轉譯<xref:System.EventHandler>時引發事件的委派會延遲到完成的事件之後引發。 這是的方式一致<xref:System.MulticastDelegate>-Common Language Runtime (CLR) 會處理基礎的事件。 另請注意，不保證會以特定的順序呼叫轉譯事件。 如果您有多個<xref:System.EventHandler>委派依賴特定順序，您應該登錄單一<xref:System.Windows.Media.CompositionTarget.Rendering>事件並進行多工處理中正確的委派排列自己。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.CompositionTarget>  
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.CompositionTarget>
+- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

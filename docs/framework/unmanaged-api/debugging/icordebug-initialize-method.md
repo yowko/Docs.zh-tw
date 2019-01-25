@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa79382d597d303d492e3a441c15a422697be279
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7b4cf6c50d624f82a75f19b8e3f42c73910c4e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709295"
 ---
 # <a name="icordebuginitialize-method"></a>ICorDebug::Initialize 方法
 初始化 `ICorDebug` 物件。  
@@ -34,16 +34,16 @@ HRESULT Initialize ();
 ```  
   
 ## <a name="remarks"></a>備註  
- 偵錯工具必須呼叫`Initialize`在建立服務的時間來初始化偵錯。 必須在任何其他方法之前呼叫此方法`ICorDebug`呼叫。  
+ 偵錯工具必須呼叫`Initialize`在建立時的時間來初始化偵錯服務。 必須在任何其他方法之前呼叫這個方法`ICorDebug`呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

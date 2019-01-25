@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 640e8976b95b5228f1caa967c053ffd95d2553ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147668"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651600"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 連接共用 (ADO.NET)
 連接到資料庫伺服器通常需要執行幾個很費時的步驟。 必須要建立實體頻道 (如通訊端或具名管道)，必須建立與伺服器的初始信號交換、必須剖析連接字串資訊、伺服器必須要驗證連接，以及必須檢查是否已在現行交易中登記等。  
@@ -129,8 +129,8 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="application-role-alternatives"></a>應用程式角色替代方案  
  建議您善加利用安全機制，以取代應用程式角色。 如需詳細資訊，請參閱 < [SQL Server 中建立應用程式角色](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [連接共用](../../../../docs/framework/data/adonet/connection-pooling.md)  
- [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [效能計數器](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [連接共用](../../../../docs/framework/data/adonet/connection-pooling.md)
+- [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [效能計數器](../../../../docs/framework/data/adonet/performance-counters.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

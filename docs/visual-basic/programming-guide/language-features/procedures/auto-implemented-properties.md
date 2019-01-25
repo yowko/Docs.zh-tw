@@ -9,15 +9,15 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: bc83163a024bd50d3e256b4eb49861669f8c02c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdf5b8bcc53a49b31fa0fb2b71dc2702a4900503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495457"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>自動實作的屬性 (Visual Basic)
-*自動實作屬性*可讓您快速指定類別的屬性，而不需要撰寫程式碼以`Get`和`Set`屬性。 當您撰寫自動實作屬性之程式碼時，Visual Basic 編譯器會自動建立私用欄位，來存放建立關聯的 `Get` 和 `Set` 程序外，另外存放屬性變數。  
+*自動實作的屬性*可讓您快速指定類別的屬性，而不需要撰寫程式碼來`Get`和`Set`屬性。 當您撰寫自動實作屬性之程式碼時，Visual Basic 編譯器會自動建立私用欄位，來存放建立關聯的 `Get` 和 `Set` 程序外，另外存放屬性變數。  
   
  使用自動實作屬性、屬性 (包括預設值)，可以在單行中宣告。 下列範例顯示三個屬性宣告。  
   
@@ -74,7 +74,7 @@ End Class
  [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>需要標準語法的屬性定義  
- 自動實作屬性很方便，並且支援許多程式設計案例。 不過，有很多情況下您不能使用自動實作的屬性並必須改為使用標準或*展開*，屬性的語法。  
+ 自動實作屬性很方便，並且支援許多程式設計案例。 不過，有很多情況下您不能使用自動實作的屬性並必須改為使用標準，或*展開*，屬性語法。  
   
  如果您想要執行下列任何一項，您必須使用已展開屬性定義語法：  
   
@@ -91,12 +91,12 @@ End Class
 -   提供支援欄位的 XML 註解。  
   
 ## <a name="expanding-an-auto-implemented-property"></a>展開自動實作屬性  
- 如果您必須將自動實作屬性轉換為包含 `Get` 或 `Set` 程序的已展開屬性，Visual Basic 程式碼編輯器可以自動產生屬性的 `Get` 和 `Set` 程序和 `End Property` 陳述式。 如果您將游標置於後的空白列，產生的程式碼`Property`陳述式中，輸入`G`(如`Get`) 或`S`(如`Set`) 然後按 ENTER。 當您在 `Property` 陳述式結束時按下 ENTER，Visual Basic 程式碼編輯器會自動產生唯讀和唯寫屬性的 `Get` 或 `Set` 程序。  
+ 如果您必須將自動實作屬性轉換為包含 `Get` 或 `Set` 程序的已展開屬性，Visual Basic 程式碼編輯器可以自動產生屬性的 `Get` 和 `Set` 程序和 `End Property` 陳述式。 如果資料指標放在空行下列使用者產生的程式碼`Property`陳述式中，輸入`G`(如`Get`) 或`S`(的`Set`) 然後按 ENTER。 當您在 `Property` 陳述式結束時按下 ENTER，Visual Basic 程式碼編輯器會自動產生唯讀和唯寫屬性的 `Get` 或 `Set` 程序。  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 宣告及呼叫在 Visual Basic 中的預設屬性](./how-to-declare-and-call-a-default-property.md)  
- [如何：宣告混合存取層級的屬性](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)  
- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)  
- [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>另請參閱
+- [如何：宣告，並在 Visual Basic 中呼叫預設屬性](./how-to-declare-and-call-a-default-property.md)
+- [如何：宣告混合的存取層級的屬性](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)
+- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
+- [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

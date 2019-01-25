@@ -5,21 +5,21 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: 8e7632dda1a1bd2b60b71c385ad58c23e4207534
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 51bf3c81962c6981affdb96261fc41211142e46d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645544"
 ---
 # <a name="authorization-in-wcf"></a>WCF 的授權
 授權是控制資源 (例如服務或檔案) 存取與權限的程序。 在本節中的主題會示範如何在 Windows Communication Foundation (WCF) 的各種不同的方式執行此基本工作。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [存取控制機制](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
  提供 WCF，並且建議的使用的驗證機制的簡介。  
   
- [如何：利用 PrincipalPermissionAttribute 類別限制存取](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ [如何：以 PrincipalPermissionAttribute 類別限制存取](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  示範限制存取具有 <xref:System.Security.Permissions.PrincipalPermissionAttribute>之服務的程序。  
   
  [如何：使用 ASP.NET 角色提供者搭配服務](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
@@ -46,6 +46,6 @@ ms.locfileid: "43749576"
 ## <a name="related-sections"></a>相關章節  
  [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
-## <a name="see-also"></a>另請參閱  
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>另請參閱
+- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

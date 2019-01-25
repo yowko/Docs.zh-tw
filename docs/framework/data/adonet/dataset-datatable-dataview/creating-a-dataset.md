@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 57629d8f-393e-4677-8b83-29ffde27f5fc
-ms.openlocfilehash: 43e2f7a1892459ca96d44350431935493b596a60
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 62f0aca98c861771d3b7cc20c9f473165bc6546d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743370"
 ---
 # <a name="creating-a-dataset"></a>建立資料集
 您可呼叫 <xref:System.Data.DataSet> 建構函式 (Constructor) 來建立 <xref:System.Data.DataSet> 的執行個體 (Instance)。 選擇性地指定名稱引數。 如果您不指定 <xref:System.Data.DataSet> 的名稱，則名稱會設定為 "NewDataSet"。  
@@ -27,7 +27,7 @@ Dim customerOrders As DataSet = New DataSet("CustomerOrders")
 DataSet customerOrders = new DataSet("CustomerOrders");  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [從 DataAdapter 填入 DataSet](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [從 DataAdapter 填入 DataSet](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
+- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

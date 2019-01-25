@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 2b2a5301defabde44c4f5a98e57bd302fe390d53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671872"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt;項目
 指定是否從遠端來源載入的組件，應該就會具有完全信任，在.NET Framework 4 和更新版本。
@@ -117,8 +117,8 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 ## <a name="see-also"></a>另請參閱
 
-- [更為隱含的 CAS 原則用法： loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-- [如何：在沙箱中執行部分信任程式碼](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [更為隱含的 CAS 原則用法： loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
+- [如何：在沙箱中執行部分信任程式碼](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

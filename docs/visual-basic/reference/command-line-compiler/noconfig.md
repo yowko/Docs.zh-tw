@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: bce2d98a8915e80cdecd7b67029b0c872cf70140
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a5663fff6f7351272a78947d364458c83e5b8af1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687592"
 ---
 # <a name="-noconfig"></a>-noconfig
 指定的編譯器應該不會自動參考常用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件或匯入`System`和`Microsoft.VisualBasic`命名空間。  
@@ -35,8 +35,8 @@ ms.locfileid: "37959575"
 > [!NOTE]
 >  `-noconfig`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。  
   
-## <a name="see-also"></a>另請參閱  
- [-nostdlib (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nostdlib.md)  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [@ (指定回應檔)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)  
- [-參考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+## <a name="see-also"></a>另請參閱
+- [-nostdlib (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nostdlib.md)
+- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [@ (指定回應檔)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)
+- [-參考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)

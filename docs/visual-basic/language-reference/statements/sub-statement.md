@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 7baa4e25bc876ebfbe03c316b2020e01aedbc88d
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e7015474a0617b76ca537d2e84e8d7bfc72b6e12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924491"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737659"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 陳述式 (Visual Basic)
 宣告名稱、 參數和定義的程式碼`Sub`程序。  
@@ -72,11 +72,11 @@ End Sub
   
     -   [Private](../modifiers/private.md)  
   
-    - [為 protected 的 Friend](../../language-reference/modifiers/protected-friend.md)
+    - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
 
-    - [受保護的私用](../../language-reference/modifiers/private-protected.md)
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)
   
-     請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+     請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 -   `proceduremodifiers`  
   
@@ -110,7 +110,7 @@ End Sub
   
 -   `name`  
   
-     必要。 程序的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要建立類別的建構函式程序，將名稱設定`Sub`程序`New`關鍵字。 如需詳細資訊，請參閱 <<c0> [ 物件存留期： 物件的建立和終結的方式](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
+     必要項。 程序的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要建立類別的建構函式程序，將名稱設定`Sub`程序`New`關鍵字。 如需詳細資訊，請參閱[物件存留期：如何建立和終結物件](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
   
 -   `typeparamlist`  
   
@@ -136,8 +136,8 @@ End Sub
   
     |組件|描述|  
     |---|---|  
-    |`interface`|必要。 這個程序所實作的介面名稱的包含類別或結構。|  
-    |`definedname`|必要。 名稱，據以在 `interface` 中定義程序。|  
+    |`interface`|必要項。 這個程序所實作的介面名稱的包含類別或結構。|  
+    |`definedname`|必要項。 名稱，據以在 `interface` 中定義程序。|  
   
 -   `Handles`  
   
@@ -155,8 +155,8 @@ End Sub
   
     |組件|描述|  
     |---|---|  
-    |`eventvariable`|必要。 宣告的類別或結構，會引發事件的資料類型的物件變數。|  
-    |`event`|必要。 此程序處理事件的名稱。|  
+    |`eventvariable`|必要項。 宣告的類別或結構，會引發事件的資料類型的物件變數。|  
+    |`event`|必要項。 此程序處理事件的名稱。|  
   
 -   `statements`  
   
@@ -226,14 +226,14 @@ End Sub
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [Implements 陳述式](implements-statement.md)  
- [Function 陳述式](function-statement.md)  
- [參數清單](parameter-list.md)  
- [Dim 陳述式](dim-statement.md)  
- [Call 陳述式](call-statement.md)  
- [Of](of-clause.md)  
- [參數陣列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [如何：使用泛型類別](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [程序的疑難排解](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [部分方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+## <a name="see-also"></a>另請參閱
+- [Implements 陳述式](implements-statement.md)
+- [Function 陳述式](function-statement.md)
+- [參數清單](parameter-list.md)
+- [Dim 陳述式](dim-statement.md)
+- [Call 陳述式](call-statement.md)
+- [Of](of-clause.md)
+- [參數陣列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+- [如何：使用泛型類別](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [程序的疑難排解](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [部分方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6df28cd3eaadfe62cd34e20e6e03d5a89e6bb425
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9217a045a8ddf6ad41adcc71a9568a05fe3fb334
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565537"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest 方法
-發出的最後一個資訊清單。 匯入所有其他檔案，並設定所有選項之後呼叫這個方法。 請勿呼叫這個方法未繫結的模組。  
+發出的最後一個資訊清單。 匯入所有其他檔案和設定所有選項之後呼叫這個方法。 請勿呼叫這個方法的未繫結的模組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,18 +42,18 @@ HRESULT EmitManifest(
  組件的識別碼。  
   
  `pdwReserveSize`  
- 要保留在組件檔案中，從擷取大小[StrongNameSignatureSize 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md)。  
+ 接收要保留在組件檔案中，從擷取的大小[StrongNameSignatureSize 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md)。  
   
  `ptkManifest`  
- 選擇性地接收組件資訊清單語彙基元。  
+ 選擇性地接收的組件資訊清單語彙基元。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則傳回 S_OK。  
+ 如果方法成功，則會傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
  需要 alink.h。  
   
-## <a name="see-also"></a>另請參閱  
- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>另請參閱
+- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

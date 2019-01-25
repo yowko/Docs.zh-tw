@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0d105679a749b8c87099af871bdb42874d440b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee8e0dec469c7389a69c70567d7b2cb98d3404e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603907"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType 方法
-建立類型定義的中繼資料簽章、 傳回`mdTypeDef`權杖該類型，然後將其指定定義的類型為所參考的類型成員`tdEncloser`參數。  
+建立類型定義的中繼資料簽章，會傳回`mdTypeDef`該類型中，權杖，並指定定義的類型為所參考之型別的成員`tdEncloser`參數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,26 +48,26 @@ HRESULT DefineNestedType (
  [in]`TypeDef`屬性。 這是位元遮罩`CorTypeAttr`值。  
   
  `tkExtends`  
- [in]基底類別的語彙基元。 這可能是`mdTypeDef`或`mdTypeRef`語彙基元。  
+ [in]基底類別的語彙基元。 這是`mdTypeDef`或`mdTypeRef`語彙基元。  
   
  `rtkImplements`[]  
  [in]指定此類別或介面實作的介面的語彙基元的陣列。  
   
  `tdEncloser`  
- [in]封入類型的語彙基元。 陣列的最後一個元素必須是`mdTokenNil`。  
+ [in]封入類型的語彙基元。 陣列的最後一個項目必須是`mdTokenNil`。  
   
  `ptd`  
- [out]`mdTypeDef`指派的語彙基元。  
+ [out]`mdTypeDef`指派權杖。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

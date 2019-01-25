@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 008cf6f0bdb6bb4c459ee97f6cc337b6491a5cb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702284"
 ---
 # <a name="polling-in-console-applications"></a>在主控台應用程式中輪詢
 ADO.NET 中的非同步作業可讓您在另一個執行緒上執行其他工作的同時，在一個執行緒上起始耗時的資料庫工作。 不過，在大多數案例中，最後仍會形成資料庫作業若未完成，則應用程式將無法繼續的狀況。 對於這些狀況，輪詢非同步作業以判定作業是否完成是很有用的。  
@@ -190,6 +190,6 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [非同步作業](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [非同步作業](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: HOW TO：停用數位簽章加密
 ms.date: 03/30/2017
 ms.assetid: fd174313-ad81-4dca-898a-016ccaff8187
-ms.openlocfilehash: 074a32f6a69f8353568e76c99f4b65aece813f55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 360d939db1c7e75cea1b6f3c6a013f214564a717
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576365"
 ---
 # <a name="how-to-disable-encryption-of-digital-signatures"></a>HOW TO：停用數位簽章加密
 根據預設，訊息會經過簽署，並且簽章會經過數位加密。 這是透過使用 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 的執行個體建立自訂繫結，並將其中一個的 `MessageProtectionOrder` 屬性設定為 <xref:System.ServiceModel.Security.MessageProtectionOrder> 列舉值的方式來控制。 預設為 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>。 這個程序會比僅僅進行簽署和加密多花最多 30% 的時間，依整體訊息大小而定 (訊息越小，對效能影響越大)。 然而，停用簽章加密可能會使攻擊者得以猜測訊息內容。 這是有可能的，因為簽章項目包含訊息中每個簽署部分的純文字雜湊程式碼。 例如，雖然訊息本文預設會經過加密，但未加密的簽章會包含訊息本文加密前的雜湊程式碼。 如果簽署和加密部分的可能值組合很小，攻擊者可能會參考雜湊值來推算內容。 將簽章加密可以降低遭受這個攻擊的可能性。  
@@ -19,11 +19,11 @@ ms.locfileid: "33491656"
   
 ### <a name="to-disable-digital-signing"></a>若要停用數位簽章  
   
-1.  建立 <xref:System.ServiceModel.Channels.CustomBinding>。 如需詳細資訊，請參閱[How to： 建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。  
+1.  建立 <xref:System.ServiceModel.Channels.CustomBinding>。 如需詳細資訊，請參閱[＜How to：建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。  
   
 2.  在繫結集合中加入 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。  
   
 3.  將 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>，或將 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>。  
   
-## <a name="see-also"></a>另請參閱  
- [自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+## <a name="see-also"></a>另請參閱
+- [自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)

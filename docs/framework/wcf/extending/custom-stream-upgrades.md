@@ -2,12 +2,12 @@
 title: 自訂資料流升級
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 12c2b56d65b2ff41d6919e978dfad7560d05782c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806028"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611315"
 ---
 # <a name="custom-stream-upgrades"></a>自訂資料流升級
 以資料流為導向的傳輸 (例如 TCP 和具名管道) 會在用戶端和伺服器之間的連續位元組資料流上進行作業。 透過 <xref:System.IO.Stream> 物件即可實現此資料流。 在資料流升級中，用戶端會想將選用通訊協定層新增至通道堆疊，並也要求其他通訊通道端也這樣執行。 資料流升級包含使用升級的物件取代原始的 <xref:System.IO.Stream> 物件。  
@@ -19,13 +19,13 @@ ms.locfileid: "33806028"
 ## <a name="how-stream-upgrades-work"></a>資料流升級的運作方式  
  資料流升級處理序包含了四個元件。  
   
-1.  升級資料流*啟動器*開始的程序： 在執行階段會初始化其連線之另一端的要求，以升級通道傳輸層。  
+1.  升級資料流*啟動器*開始的程序： 在執行階段會初始化其連線之另一端升級通道傳輸層的要求。  
   
-2.  升級資料流 *」 （acceptor)* 升級： 在執行階段方法，它可以接收來自其他電腦的升級要求，並可能的話會接受升級。  
+2.  升級資料流*接受器*升級： 在執行階段方法，它可以接收來自另一部電腦的升級要求，並可能的話，請接受升級。  
   
-3.  升級*提供者*建立*啟動器*在用戶端和 *」 （acceptor)* 在伺服器上。  
+3.  升級*提供者*會建立*啟動器*用戶端上的*接受器*伺服器上。  
   
-4.  資料流升級*繫結項目*加入至服務和用戶端上的繫結，並在執行階段建立提供者。  
+4.  資料流升級*繫結項目*會加入至繫結的服務和用戶端，並在執行階段建立提供者。  
   
  在多重升級的狀況中請特別注意，啟動器和接受器會封裝狀態機器，以強制執行可用於每次初始化的升級轉換。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "33806028"
 ## <a name="security-upgrades"></a>安全性升級  
  新增安全性升級是一般資料流升級處理序的特殊版本。  
   
- WCF 已提供兩個繫結項目，用於升級資料流安全性。 傳輸層安全性的組態是由 <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> 所封裝，而您可以設定這兩項並新增至自訂繫結。 這些繫結項目會擴充 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> 類別，而這個類別會建置用戶端和伺服器的資料流升級提供者。 這些繫結項目擁有的方法會建立特殊的安全性資料流升級提供者類別 (這些類別不是 `public`)，因此對於這兩個類別來說，您只需要將繫結項目新增至繫結即可。  
+ WCF 已提供兩個繫結項目升級資料流安全性。 傳輸層安全性的組態是由 <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> 所封裝，而您可以設定這兩項並新增至自訂繫結。 這些繫結項目會擴充 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> 類別，而這個類別會建置用戶端和伺服器的資料流升級提供者。 這些繫結項目擁有的方法會建立特殊的安全性資料流升級提供者類別 (這些類別不是 `public`)，因此對於這兩個類別來說，您只需要將繫結項目新增至繫結即可。  
   
  針對上述兩個繫結項目不符合的安全性案例，這三個與安全性相關的 `abstract` 類別都是衍生自上述的啟動器、接受器和提供者基底類別：  
   
@@ -92,13 +92,13 @@ ms.locfileid: "33806028"
   
 4.  每次呼叫 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> 和 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> 之後，就會升級資料流。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>  
- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>  
- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>  
- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>  
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>

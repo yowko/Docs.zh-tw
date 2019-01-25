@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21a373b946c3ce9f4606e870ae10e23a63398bc9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 53f17552a98683e4278dbdfbfa927ca3b075b225
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492282"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>範例：動態程式設計疑難排解
 > [!NOTE]
@@ -60,6 +60,6 @@ AppViewModel.Current.LayoutVM.PageMap
 ## <a name="could-the-code-be-rewritten"></a>可以改寫程式碼嗎？  
  如果應用程式使用 `typeof(LayoutApplicationVM)`，而不是 `Type.GetType("LayoutApplicationVM")`，則工具鏈可能保留了 `browse` 中繼資料。  不過，它還是不會建立 `invoke` 中繼資料，如此一來，在具現化類型時，就會導致 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外狀況。 若要避免這個例外狀況，您還是必須為命名空間或是指定 `dynamic` 原則的類型加入執行階段指示詞。 如需執行階段指示詞的相關資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [範例：處理繫結資料時所發生的例外狀況](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+## <a name="see-also"></a>另請參閱
+- [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [例如：資料繫結時處理例外狀況](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

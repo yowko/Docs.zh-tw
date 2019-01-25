@@ -2,12 +2,12 @@
 title: UriTemplate 表發送器範例
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
-ms.openlocfilehash: 4a4f725e88e014da241e1042c27bfee270e13268
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: af988a400361551dd11b74f781cf1ba108a3f5c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45648508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498485"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>UriTemplate 表發送器範例
 <xref:System.UriTemplateTable> 類別會提供可用來處理 <xref:System.UriTemplate> 執行個體集合的字典式關聯表結構。 這個範例示範使用 `UriTemplateTable` 建置的基本分派引擎，這是 `UriTemplateTable` 類別的常用案例。  
@@ -35,6 +35,6 @@ ms.locfileid: "45648508"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateDispatcher`  
   
-## <a name="see-also"></a>另請參閱  
- [UriTemplate 資料表](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+## <a name="see-also"></a>另請參閱
+- [UriTemplate 資料表](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)

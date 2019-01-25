@@ -2,21 +2,21 @@
 title: '&lt;synchronousReceive&gt; 項目'
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: bc89470900e50e4d3e522682b39b20e21a66b284
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dedbe156dea79c78f05acdb3a044c9080665675a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598891"
 ---
 # <a name="ltsynchronousreceivegt-element"></a>&lt;synchronousReceive&gt; 項目
 這個組態項目用於指定在服務或用戶端應用程式中接收訊息的執行階段行為。 它沒有任何屬性或子項目。  
   
  \<system.ServiceModel>  
-\<行為 >  
+\<behaviors>  
 \<endpointBehaviors>  
-\<行為 >  
-\<synchronousReceive >  
+\<behavior>  
+\<synchronousReceive>  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,11 +37,11 @@ ms.locfileid: "54147378"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<行為 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定端點行為。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定端點行為。|  
   
 ## <a name="remarks"></a>備註  
  您可以使用此行為指示通道接聽程式使用同步接收，而非預設的非同步接收。 Windows Communication Foundation (WCF) 會發出新的執行緒，以提取每個接受的通道。 如果有許多個通道，執行緒可能會用完。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>  
- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>
+- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ac041db64a874cc143657c601f30e4482dd2462
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f3ac053f12cb4bc37ab0bd16036fb561f8f176c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519121"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification 方法
-提供保證的 common language runtime (CLR) 版本是第一次載入，但尚未啟動時要呼叫的回呼函式。 這個方法會取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函式。  
+提供保證的 common language runtime (CLR) 版本是第一次載入，但尚未開始時要呼叫的回呼函式。 這個方法會取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ HRESULT RequestRuntimeLoadedNotification (
   
 #### <a name="parameters"></a>參數  
  `pCallbackFunction`  
- [in]在載入新的執行階段時，會叫用回呼函式。  
+ [in]已載入新的執行階段時，會叫用回呼函式。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
@@ -51,9 +51,9 @@ HRESULT RequestRuntimeLoadedNotification (
   
 -   只有在第一次載入執行階段時，會叫用回呼。  
   
--   可重新進入相同的執行階段載入不會叫用回呼。  
+-   回呼不會叫用相同的執行階段的可重新進入的負載。  
   
--   不可重新進入執行階段載入的回呼函式的呼叫已序列化的。  
+-   不可重新進入執行階段載入的序列化回呼函式的呼叫。  
   
  回呼函式具有下列原型：  
   
@@ -78,26 +78,26 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- 如果主應用程式所要載入，或導致另一個執行階段要載入的方式可重新進入，`pfnCallbackThreadSet`和`pfnCallbackThreadUnset`會提供在回呼函式必須以下列方式使用的參數：  
+ 如果主機想要載入，或導致另一個執行階段要載入的方式可重新進入，則`pfnCallbackThreadSet`和`pfnCallbackThreadUnset`參數所提供的回呼函式必須使用方式如下：  
   
--   `pfnCallbackThreadSet` 必須先嘗試這類載入可能會導致執行階段載入的執行緒所呼叫。  
+-   `pfnCallbackThreadSet` 必須由之前嘗試這類載入可能會導致執行階段載入的執行緒呼叫。  
   
--   `pfnCallbackThreadUnset` 必須先呼叫時，執行緒將不會再造成執行階段負載 （和從初始回呼傳回之前）。  
+-   `pfnCallbackThreadUnset` 必須先呼叫時，執行緒將不會再造成執行階段負載 （以及從初始的回呼傳回之前）。  
   
--   `pfnCallbackThreadSet` 和`pfnCallbackThreadUnset`兩者都不可重新進入。  
+-   `pfnCallbackThreadSet` 和`pfnCallbackThreadUnset`兩者都是不可重新進入。  
   
 > [!NOTE]
->  裝載應用程式不能呼叫`pfnCallbackThreadSet`和`pfnCallbackThreadUnset`範圍以外的`pCallbackFunction`參數。  
+>  裝載應用程式必須呼叫`pfnCallbackThreadSet`並`pfnCallbackThreadUnset`的範圍外`pCallbackFunction`參數。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRMetaHost 介面](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRMetaHost 介面](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)

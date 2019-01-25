@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa69eda974187748d7046c792fa16b7729e3deff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12adffbfeb2ce6271774cf44c1a913d7a1414ba4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718607"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps 方法
 傳回中繼資料資訊<xref:System.Type>指定 TypeDef 語彙基元所代表。  
@@ -42,32 +42,32 @@ HRESULT GetTypeDefProps (
   
 #### <a name="parameters"></a>參數  
  `td`  
- [in]TypeDef 語彙基元，代表要傳回的中繼資料的類型。  
+ [in]TypeDef 語彙基元，表示要傳回的中繼資料的型別。  
   
  `szTypeDef`  
- [out]緩衝區，其中包含的型別名稱。  
+ [out]緩衝區，包含型別名稱。  
   
  `cchTypeDef`  
- [in]中的寬字元大小`szTypeDef`。  
+ [in]寬字元大小`szTypeDef`。  
   
  `pchTypeDef`  
- [out]傳回的寬字元數目`szTypeDef`。  
+ [out]中傳回的寬字元數目`szTypeDef`。  
   
  `pdwTypeDefFlags`  
- [out]若要修改的類型定義任何旗標指標。 這個值是從位元遮罩[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)列舉型別。  
+ [out]若要修改的類型定義任何旗標的指標。 這個值是從位元遮罩[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)列舉型別。  
   
  `ptkExtends`  
- [out]TypeDef 或 TypeRef 中繼資料語彙基元，代表所要求類型的基底類型。  
+ [out]TypeDef 或 TypeRef 中繼資料語彙基元，表示所要求型別的基底型別。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

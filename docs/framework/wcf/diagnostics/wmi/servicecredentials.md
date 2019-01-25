@@ -2,12 +2,12 @@
 title: ServiceCredentials
 ms.date: 03/30/2017
 ms.assetid: 9c780793-4785-46f7-add9-ac1ebeadb614
-ms.openlocfilehash: 26bd0c95f930bf7859ae6409d797afbb596844fa
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 18100ac36b5116c2373171ff795fc23b75bbd6f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572116"
 ---
 # <a name="servicecredentials"></a>ServiceCredentials
 ServiceCredentials  
@@ -88,5 +88,5 @@ class ServiceCredentials : Behavior
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Description.ServiceCredentials>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Description.ServiceCredentials>

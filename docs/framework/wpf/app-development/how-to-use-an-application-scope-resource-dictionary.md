@@ -1,5 +1,5 @@
 ---
-title: 如何：使用應用程式範圍的資源字典
+title: HOW TO：使用應用程式範圍的資源字典
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: 081ce8d350995d5321acbb24d220bed229ff17ae
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8df357d3b366a057b2a6072fb69b47a6075df5a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492542"
 ---
-# <a name="how-to-use-an-application-scope-resource-dictionary"></a>如何：使用應用程式範圍的資源字典
+# <a name="how-to-use-an-application-scope-resource-dictionary"></a>HOW TO：使用應用程式範圍的資源字典
 此範例示範如何定義和使用應用程式範圍自訂資源字典。  
   
 ## <a name="example"></a>範例  
- <xref:System.Windows.Application> 公開共用資源的應用程式範圍存放區： <xref:System.Windows.Application.Resources%2A>。 根據預設，<xref:System.Windows.Application.Resources%2A>屬性會初始化的執行個體<xref:System.Windows.ResourceDictionary>型別。 當您取得和設定應用程式範圍的屬性使用時，會使用此執行個體<xref:System.Windows.Application.Resources%2A>。 如需詳細資訊，請參閱 <<c0> [ 如何： 取得和設定應用程式範圍資源](https://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095)。
+ <xref:System.Windows.Application> 公開共用資源的應用程式範圍存放區： <xref:System.Windows.Application.Resources%2A>。 根據預設，<xref:System.Windows.Application.Resources%2A>屬性會初始化的執行個體<xref:System.Windows.ResourceDictionary>型別。 當您取得和設定應用程式範圍的屬性使用時，會使用此執行個體<xref:System.Windows.Application.Resources%2A>。 如需詳細資訊，請參閱[＜How to：取得及設定應用程式範圍資源](https://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095)。
   
  如果您有多個您設定使用的資源<xref:System.Windows.Application.Resources%2A>，您可以改用自訂資源字典來儲存這些資源和設定<xref:System.Windows.Application.Resources%2A>與其改。 下圖顯示您將自訂資源字典，使用 XAML 的宣告。
   
@@ -41,8 +41,8 @@ ms.locfileid: "43801345"
   
  有兩個使用時的考量<xref:System.Windows.Application.Resources%2A>。 首先，字典*金鑰*是一個物件，因此您必須使用完全相同物件執行個體時設定和取得屬性值。 (請注意，使用字串時，索引鍵會區分大小寫)。其次，字典*值*是一個物件，因此您必須將值轉換成所需的型別，取得屬性值時。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.ResourceDictionary>  
- <xref:System.Windows.Application.Resources%2A>  
- [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [合併的資源字典](../../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.ResourceDictionary>
+- <xref:System.Windows.Application.Resources%2A>
+- [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+- [合併的資源字典](../../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)

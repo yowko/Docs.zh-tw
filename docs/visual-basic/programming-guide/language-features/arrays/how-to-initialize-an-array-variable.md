@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Visual Basic 中初始化陣列變數
+title: HOW TO：初始化陣列變數在 Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], initializing
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 4ce2e061c5f523fae3020b08034875422a0062a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 67382359a97e9f60b079de1d25589de446042237
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638920"
 ---
-# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>如何：在 Visual Basic 中初始化陣列變數
+# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>HOW TO：初始化陣列變數在 Visual Basic
 包括陣列常值中初始化陣列變數`New`子句並指定陣列的初始值。 您可以指定的型別，或允許它從陣列常值中的值推斷。 如需如何推斷的類型的詳細資訊，請參閱 < 填入陣列與初始值 」 中[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>若要使用陣列常值初始化陣列變數  
@@ -53,6 +53,6 @@ ms.locfileid: "50201999"
   
      [!code-vb[VbVbalrArrays#32](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_6.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [陣列的疑難排解](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+## <a name="see-also"></a>另請參閱
+- [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [陣列的疑難排解](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

@@ -8,17 +8,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 6dd101a3-44ad-4143-b228-772156f9b8ff
-ms.openlocfilehash: d678d632fda625420b6f66a5522229fc2ec71317
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 680c63548482c413a7ceff24a4f38eed589f4682
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745268"
 ---
 # <a name="savetohistory-function-wpf-unmanaged-api-reference"></a>SaveToHistory 函式 (WPF Unmanaged API 參考)
-這個 API 支援的 Windows Presentation Foundation (WPF) 基礎結構，並不是直接從您的程式碼使用。  
+此 API 支援 Windows Presentation Foundation (WPF) 基礎結構，並不是直接從您的程式碼使用。  
   
- Windows Presentation Foundation (WPF) 基礎結構用於 windows 的管理。  
+ 使用 windows 管理的 Windows Presentation Foundation (WPF) 基礎結構。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,15 +35,15 @@ HRESULT SaveToHistory(
 ## <a name="requirements"></a>需求  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[.NET Framework 系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[.NET Framework 系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **DLL:**  
   
- 在.NET Framework 3.0 和 3.5: PresentationHostDLL.dll  
+ 在.NET Framework 3.0 和 3.5:PresentationHostDLL.dll  
   
- 在.NET Framework 4 和更新版本： PresentationHost_v0400.dll  
+ 在.NET Framework 4 及更新版本：PresentationHost_v0400.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [WPF Unmanaged API 參考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a>另請參閱
+- [WPF Unmanaged API 參考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

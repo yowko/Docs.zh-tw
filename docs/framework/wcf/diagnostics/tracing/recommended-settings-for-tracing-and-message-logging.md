@@ -2,11 +2,12 @@
 title: 追蹤與訊息記錄的建議設定
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: 44cdf90572cc52d5daf95368a644759be0ad1ee0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dff4b20547cccca628ac76afc890a2817e838907
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585207"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>追蹤與訊息記錄的建議設定
 本主題將說明不同作業環境中，建議的追蹤和訊息記錄設定。  
@@ -99,7 +100,7 @@ ms.lasthandoff: 05/04/2018
  您可以使用 WMI 在執行階段變更組態設定 (藉由啟用組態中的 `wmiProviderEnabled` 屬性，如之前的組態範例中所示範)。 例如，您可以在 CIM Studio 中使用 WMI，將執行階段的追蹤來源層級從 Warning 變更為 Information。 您應注意的是，以此方式執行即時偵錯的效能成本可能會相當高。 如需使用 WMI 的詳細資訊，請參閱[使用 Windows Management Instrumentation 進行診斷](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)主題。  
   
 ## <a name="enable-correlated-events-in-aspnet-tracing"></a>啟用 ASP.NET 追蹤中的相互關聯事件  
- ASP.NET 事件不會設定相互關聯 ID (ActivityID)，除非 ASP.NET 事件追蹤開啟。 若要正確看到相互關聯的事件，您必須開啟 ASP.NET 事件追蹤命令主控台中使用下列命令，其中可以叫用，請前往**啟動**，**執行**和型別**cmd**,  
+ ASP.NET 事件不會設定相互關聯 ID (ActivityID)，除非 ASP.NET 事件追蹤開啟。 若要正確看到相互關聯的事件，您必須開啟 ASP.NET 事件追蹤命令主控台中使用下列命令，其中可以叫用方法是前往**開始**，**執行**並輸入**cmd**,  
   
 ```  
 logman start mytrace -pf logman.providers -o test.etl –ets  
@@ -111,5 +112,5 @@ logman start mytrace -pf logman.providers -o test.etl –ets
 logman stop mytrace -ets  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [使用 Windows Management Instrumentation 進行診斷](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+## <a name="see-also"></a>另請參閱
+- [使用 Windows Management Instrumentation 進行診斷](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

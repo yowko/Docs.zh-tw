@@ -1,5 +1,5 @@
 ---
-title: 如何：使用追蹤和偵錯進行條件式編譯
+title: HOW TO：使用追蹤和偵錯進行條件式編譯
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45e62fed53999636e23693ad7e61fedf21bc5423
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1738d73cf99c8b5a8131bd5e018a799c3a7780c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523554"
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>如何：使用追蹤和偵錯進行條件式編譯
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>HOW TO：使用追蹤和偵錯進行條件式編譯
 當您於開發期間偵錯應用程式時，追蹤及偵錯輸出都會移至 Visual Studio 中的 [輸出] 視窗。 然而，若要在已部署的應用程式中包含追蹤功能，您必須在啟用 **TRACE** 編譯器指示詞的情況下編譯已經過檢測的應用程式。 這可將追蹤程式碼編譯成應用程式的發行版本。 如果您沒有啟用 **TRACE** 指示詞，則在編譯期間會忽略所有的追蹤程式碼，並且不會在您將部署的可執行程式碼中包含追蹤程式碼。  
   
  追蹤和偵錯方法均具有相關聯的Conditional 屬性。 例如，如果追蹤的 Conditional 屬性為 **true**，則會在組件 (已編譯的 .exe 檔案或 .dll) 中包含所有的追蹤陳述式，如果 **Trace** Conditional 屬性為 **false**，則不會包含追蹤陳述式。  
   
- 您可以為組建開啟 **Trace** 或 **Debug** Conditional 屬性，或兩者都開啟或都關閉。 因此，組建可分為四種類型：**Debug**、**Trace**、兩者都開啟或兩者都關閉。 部分產品部署的發行組建可能不含兩者；大部分的偵錯組建則包含兩者。  
+ 您可以為組建開啟 **Trace** 或 **Debug** Conditional 屬性，或兩者都開啟或都關閉。 因此，有四種類型的組建：**偵錯**，**追蹤**、 兩者或兩者都關閉。 部分產品部署的發行組建可能不含兩者；大部分的偵錯組建則包含兩者。  
   
  您可用數種方式來指定應用程式的編譯器設定：  
   
@@ -50,9 +50,9 @@ ms.locfileid: "33390571"
   
      例如，在命令列上輸入下列編譯器指令會在已編譯可執行檔中包含追蹤程式碼：  
   
-     適用於 Visual Basic: **vbc-r:System.dll-d： 追蹤 = TRUE-d： 偵錯 = FALSE MyApplication.vb**  
+     Visual basic: **vbc-r:System.dll-d： 追蹤 = TRUE-d： 偵錯 = FALSE MyApplication.vb**  
   
-     若為 C# 中： **csc-r:System.dll-d： 追蹤-d： 偵錯 = FALSE MyApplication.cs**  
+     針對C#: **csc-r:System.dll-d： 追蹤-d： 偵錯 = FALSE MyApplication.cs**  
   
     > [!TIP]
     >  若要編譯一個以上的應用程式檔案，請在檔案名稱之間保留一個空格，例如，**MyApplication1.vb MyApplication2.vb MyApplication3.vb** 或 **MyApplication1.cs MyApplication2.cs MyApplication3.cs**。  
@@ -95,11 +95,11 @@ ms.locfileid: "33390571"
 > [!NOTE]
 >  當您準備編譯時，可從 [建置] 功能表中選取 [建置]，或使用命令列方法 (但不輸入 **d:**) 來定義條件式編譯的符號。  
   
-## <a name="see-also"></a>另請參閱  
- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [如何：建立、初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
- [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [如何：將追蹤陳述式新增至應用程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [如何：為 Visual Studio 命令列設定環境變數](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
- [操作說明：叫用命令列編譯器](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+## <a name="see-also"></a>另請參閱
+- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [如何：建立、 初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：為 Visual Studio 命令列設定環境變數](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [如何：叫用命令列編譯器](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

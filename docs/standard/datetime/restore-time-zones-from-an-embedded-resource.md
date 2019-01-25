@@ -1,5 +1,5 @@
 ---
-title: 如何： 從內嵌資源還原時區
+title: HOW TO：從內嵌資源還原時區
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99d38b336b5e655dd1c96682eec90c5fbe8469d6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 71fc4e04c87dfa3b83eabb06361d1da94a512a5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656800"
 ---
-# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>如何： 從內嵌資源還原時區
+# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>HOW TO：從內嵌資源還原時區
 
-本主題描述如何還原已儲存在資源檔的時區。 如相關資訊與指示儲存時區，請參閱 <<c0> [ 如何： 將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)。
+本主題描述如何還原已儲存在資源檔的時區。 如相關資訊與指示儲存時區，請參閱[How to:將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)。
 
 ### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>若要還原序列化從內嵌資源之 TimeZoneInfo 物件
 
@@ -60,6 +60,6 @@ ms.locfileid: "48841053"
 
 ## <a name="see-also"></a>另請參閱
 
-* [日期、時間和時區](../../../docs/standard/datetime/index.md)
-* [時區概觀](../../../docs/standard/datetime/time-zone-overview.md)
-* [操作說明：將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+- [日期、時間和時區](../../../docs/standard/datetime/index.md)
+- [時區概觀](../../../docs/standard/datetime/time-zone-overview.md)
+- [如何：將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

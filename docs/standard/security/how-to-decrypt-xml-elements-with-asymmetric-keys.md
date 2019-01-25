@@ -1,5 +1,5 @@
 ---
-title: 如何：使用非對稱金鑰解密 XML 項目
+title: HOW TO：使用非對稱金鑰解密 XML 元素
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96bee90c7cb3847f9c7059e1a0b1d737209b924f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 647ac3898924810eb16cbeb8c67f00e6465c8d80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547759"
 ---
-# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>如何：使用非對稱金鑰解密 XML 項目
+# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>HOW TO：使用非對稱金鑰解密 XML 元素
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密和解密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱 World Wide Web Consortium (W3C) 建議事項[XML 簽章語法和處理](https://www.w3.org/TR/xmldsig-core/)。  
   
- 在此程序的範例會解密使用中所述方法加密 XML 項目[如何： 使用非對稱金鑰加密 XML 項目](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)。  它會找出 <`EncryptedData`> 項目、解密該項目，然後再以原始純文字 XML 項目取代該項目。  
+ 在此程序的範例會解密 XML 項目使用中所述方法加密[How to:使用非對稱金鑰加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)。  它會找出 <`EncryptedData`> 項目、解密該項目，然後再以原始純文字 XML 項目取代該項目。  
   
  此範例會使用兩個金鑰來解密 XML 項目。  它會從金鑰容器中，擷取先前產生的 RSA 私密金鑰，然後使用 RSA 金鑰來解密儲存在 <`EncryptedData`> 項目之 <`EncryptedKey`> 項目中的工作階段金鑰。  範例接著會使用工作階段金鑰解密 XML 項目。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "44185992"
      [!code-vb[HowToDecryptXMLElementAsymmetric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#8)]  
   
 ## <a name="example"></a>範例  
- 這個範例假設名為 `test.xml` 的檔案已存在於和編譯程式相同的目錄中。  它也假設`test.xml`包含使用中所述的技術加密的 XML 項目[如何： 使用非對稱金鑰加密 XML 項目](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)。  
+ 這個範例假設名為 `test.xml` 的檔案已存在於和編譯程式相同的目錄中。  它也假設`test.xml`包含使用中所述的技術加密的 XML 項目[How to:使用非對稱金鑰加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)。  
   
  [!code-csharp[HowToDecryptXMLElementAsymmetric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#1)]
  [!code-vb[HowToDecryptXMLElementAsymmetric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#1)]  
@@ -83,5 +83,5 @@ ms.locfileid: "44185992"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Security.Cryptography.Xml>  
-- [操作說明：使用非對稱金鑰加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)
+- <xref:System.Security.Cryptography.Xml>
+- [如何：使用非對稱金鑰加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 04ea64f0e6563012a3b272306df6be4575ed7659
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e17a3888e3467d8d21506108e6599c8ae5da2fe2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695604"
 ---
 # <a name="printing-overview"></a>列印概觀
 Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應用程式開發人員有了新豐富的列印和列印系統管理[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。 藉由 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，某些列印系統增強功能也可供建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式的開發人員和使用 Unmanaged 程式碼的開發人員使用。 這項新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 檔案格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 列印路徑。  
@@ -134,16 +134,16 @@ Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應�
   
 -   **ZIP 壓縮**。 所有 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 文件使用 ZIP 壓縮。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Controls.PrintDialog>  
- <xref:System.Windows.Xps.XpsDocumentWriter>  
- <xref:System.Windows.Xps.Packaging.XpsDocument>  
- <xref:System.Printing.PrintTicket>  
- <xref:System.Printing.PrintCapabilities>  
- <xref:System.Printing.PrintServer>  
- <xref:System.Printing.PrintQueue>  
- [HOW-TO 主題](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](https://www.microsoft.com/xps)  
- [文件序列化與儲存](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
- [Microsoft XPS 文件轉換器 (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Controls.PrintDialog>
+- <xref:System.Windows.Xps.XpsDocumentWriter>
+- <xref:System.Windows.Xps.Packaging.XpsDocument>
+- <xref:System.Printing.PrintTicket>
+- <xref:System.Printing.PrintCapabilities>
+- <xref:System.Printing.PrintServer>
+- <xref:System.Printing.PrintQueue>
+- [HOW-TO 主題](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)
+- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [XPS](https://www.microsoft.com/xps)
+- [文件序列化與儲存](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [Microsoft XPS 文件轉換器 (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)

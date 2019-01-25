@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: e90eeb787fd2141459dfa67f36fda94036cec94f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b0dbd38e02c2e200796fa4508efc203685026155
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596666"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>匿名用戶端的訊息安全性
 下列案例示範用戶端與受保護的 Windows Communication Foundation (WCF) 訊息安全性的服務。 這樣的設計目的是使用訊息安全性而非傳輸安全性，如此未來可以支援更豐富的宣告型模型。 如需使用各種宣告進行授權的詳細資訊，請參閱 <<c0> [ 管理宣告與授權身分識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
@@ -131,9 +131,9 @@ ms.locfileid: "50193873"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- [訊息安全性匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>另請參閱
+- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
+- [訊息安全性匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)
+- [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

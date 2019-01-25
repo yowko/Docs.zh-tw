@@ -1,5 +1,5 @@
 ---
-title: 操作說明：轉換筆刷
+title: HOW TO：轉換筆刷
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], Transform property
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
-ms.openlocfilehash: ebc8d4c6cb36d76b70691cce183f9e6070d19822
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a90e17fa8bb4fec339fda8acbcdff5c0916d61bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529956"
 ---
-# <a name="how-to-transform-a-brush"></a>操作說明：轉換筆刷
+# <a name="how-to-transform-a-brush"></a>HOW TO：轉換筆刷
 此範例示範如何轉換<xref:System.Windows.Media.Brush>物件使用其兩個轉換屬性：<xref:System.Windows.Media.Brush.RelativeTransform%2A>和<xref:System.Windows.Media.Brush.Transform%2A>。  
   
  下列範例會使用<xref:System.Windows.Media.RotateTransform>若要旋轉的內容<xref:System.Windows.Media.ImageBrush>旋轉 45 度。  
@@ -44,7 +44,7 @@ ms.locfileid: "43507043"
   
  如需完整的範例，請參閱[筆刷範例](https://go.microsoft.com/fwlink/?LinkID=159973)。 如需筆刷的詳細資訊，請參閱[使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [筆刷轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a>另請參閱
+- [筆刷轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)
+- [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

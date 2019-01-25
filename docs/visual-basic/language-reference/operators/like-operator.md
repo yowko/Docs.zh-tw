@@ -22,12 +22,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: c5b26bd1d3ebae5136718833c124e3c6e575e9b7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b1621131b3f5e4669eb637c054be1548597cf252
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703259"
 ---
 # <a name="like-operator-visual-basic"></a>Like 運算子 (Visual Basic)
 比較字串和模式。  
@@ -40,13 +40,13 @@ result = string Like pattern
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要。 任何`Boolean`變數。 結果是`Boolean`值，指出是否`string`滿足`pattern`。  
+ 必要項。 任何`Boolean`變數。 結果是`Boolean`值，指出是否`string`滿足`pattern`。  
   
  `string`  
- 必要。 任何 `String` 運算式。  
+ 必要項。 任何 `String` 運算式。  
   
  `pattern`  
- 必要。 任何`String`運算式符合模式比對所述的慣例在 < 備註 >。  
+ 必要項。 任何`String`運算式符合模式比對所述的慣例在 < 備註 >。  
   
 ## <a name="remarks"></a>備註  
  如果中的值`string`符合模式中包含`pattern`，`result`是`True`。 如果字串不滿足模式中，`result`是`False`。 如果兩個`string`並`pattern`則為空字串，結果是`True`。  
@@ -73,7 +73,7 @@ result = string Like pattern
 ## <a name="special-characters"></a>特殊字元  
  若要符合的特殊字元的左括號 (`[`)、 問號 (`?`)，數字符號 (`#`)，和星號 (`*`)，將其括在方括號。 右括號 (`]`) 不在群組內用來比對本身，但它可以用作位於群組外部的個別字元。  
   
- 字元序列`[]`視為零長度字串 (`""`)。 不過，它不能以括弧括住的字元清單的一部分。 如果您想要檢查是否中的位置`string`包含一個群組的字元或完全沒有字元，您可以使用`Like`兩次。 如需範例，請參閱[如何： 比對的字串和模式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)。  
+ 字元序列`[]`視為零長度字串 (`""`)。 不過，它不能以括弧括住的字元清單的一部分。 如果您想要檢查是否中的位置`string`包含一個群組的字元或完全沒有字元，您可以使用`Like`兩次。 如需範例，請參閱[如何：比對的字串和模式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)。  
   
 ## <a name="character-ranges"></a>字元範圍  
  使用連字號 (`–`) 來分隔範圍的下限與上限`charlist`可以指定的字元範圍。 例如，`[A–Z]`結果中相符項目，如果對應的字元放在`string`包含範圍內的任何字元`A`–`Z`，和`[!H–L]`結果比對中，如果對應的字元位置包含的範圍之外的任何字元`H`–`L`。  
@@ -95,19 +95,19 @@ result = string Like pattern
  系統地區設定中指定的語言使用了雙拼詞字元時，出現在單一的雙拼詞字元`pattern`或`string`符合另一個字串中對等的兩個字元序列。 同樣地中的雙拼詞字元`pattern`括在括號 （單獨使用時，在清單中，或範圍） 比對中的對等的兩個字元序列`string`。  
   
 ## <a name="overloading"></a>多載化  
- `Like`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。 如果您的程式碼會使用這個運算子，這類類別或結構上，請務必了解其已重新定義的行為。 如需詳細資訊，請參閱 <<c0> [ 運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ `Like`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。 如果您的程式碼會使用這個運算子，這類類別或結構上，請務必了解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
  這個範例會使用`Like`運算子來比較各種模式的字串。 結果將會進入`Boolean`變數，表示每個字串是否符合模式。  
   
  [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [比較運算子](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Option Compare 陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [如何：比對字串和模式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.Strings.InStr%2A>
+- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
+- [比較運算子](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Option Compare 陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [如何：比對的字串和模式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-ms.openlocfilehash: 6788a7908489591e266af6d141006f2aa2d0e6f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbbcc748a65942e3a89785b267e9231f4a4a01a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686175"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>選擇性參數必須指定預設值
-選擇性參數必須提供如果未提供參數呼叫程序可以使用的預設值。  
+選擇性參數必須提供預設值，如果未提供參數呼叫程序可以使用。  
   
  **錯誤 ID:** BC30812  
   
@@ -30,5 +30,5 @@ ms.locfileid: "33593912"
     End Sub  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)
+## <a name="see-also"></a>另請參閱
+- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)

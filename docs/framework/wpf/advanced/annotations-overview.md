@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b3b009d7c25e813a73fe4f32c3eced632b052f13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543470"
 ---
 # <a name="annotations-overview"></a>附註概觀
 在書面文件上撰寫附註或註解是相當稀鬆平常的事，我們幾乎將它視為理所當然。 這些附註或註解是我們新增至文件的「註釋」，用以標記資訊，或反白顯示感興趣的項目以供日後參考。 雖然在書面文件上撰寫附註很容易且平常，不過在電子文件中新增個人註解的功能通常非常有限，如果有的話。  
@@ -64,15 +64,15 @@ ms.locfileid: "43861698"
   
  另一個範例情節牽涉到應用程式，讓交換註釋和文件讀者能透過電子郵件的自黏便箋。 這項功能讓這些應用程式可讓讀者巡覽至包含要交換之註釋的頁面。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
- <xref:System.Windows.Controls.DocumentViewer>  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>  
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
- <xref:System.Windows.Controls.FlowDocumentReader>  
- <xref:System.Windows.Annotations.IAnchorInfo>  
- [附註結構描述](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
- [ContextMenu 概觀](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
- [命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [如何：將命令新增至 MenuItem](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
+- <xref:System.Windows.Controls.DocumentViewer>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer>
+- <xref:System.Windows.Controls.FlowDocumentScrollViewer>
+- <xref:System.Windows.Controls.FlowDocumentReader>
+- <xref:System.Windows.Annotations.IAnchorInfo>
+- [附註結構描述](../../../../docs/framework/wpf/advanced/annotations-schema.md)
+- [ContextMenu 概觀](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
+- [命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [如何：將命令新增至 MenuItem](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

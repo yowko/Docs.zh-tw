@@ -1,17 +1,17 @@
 ---
-title: 如何：在 Visual Basic 中將物件轉換成其他類型
+title: HOW TO：將物件轉換成 Visual Basic 中的另一個類型
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: f168b3021ee1dbe3c82edc22fc779767c30446b8
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 81ac65ad34ad6afdfb89a750fef39b121aabd644
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611341"
 ---
-# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>如何：在 Visual Basic 中將物件轉換成其他類型
+# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>HOW TO：將物件轉換成 Visual Basic 中的另一個類型
 您將轉換`Object`變數設為另一個資料類型，例如使用轉換關鍵字[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)。  
   
 ## <a name="example"></a>範例  
@@ -33,13 +33,13 @@ End Sub
   
 -   <xref:System?displayProperty=nameWithType> 命名空間的參考。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Object>  
- [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [隱含和明確轉換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)  
- [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Object>
+- [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [隱含和明確轉換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)
+- [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

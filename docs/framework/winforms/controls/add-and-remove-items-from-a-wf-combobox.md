@@ -1,5 +1,5 @@
 ---
-title: 如何：從 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目
+title: HOW TO：新增和移除項目從 Windows Form 的 ComboBox、 ListBox 或 CheckedListBox 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: f9319ffe5e9c4f06565648565ce21dec6fc672f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f789a0e00b1d235fe61b93190ae167250113846
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500216"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：從 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目
-可以加入至 Windows Form 下拉式方塊、 清單方塊中，或檢查清單方塊中的各種不同的方式，因為這些控制項可以繫結至各種資料來源項目。 不過，本主題會示範最簡單的方法，並需要沒有資料繫結。 顯示的項目通常是字串。不過，您可以使用任何物件。 顯示在控制項中的文字是由物件所傳回的值`ToString`方法。  
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>HOW TO：新增和移除項目從 Windows Form 的 ComboBox、 ListBox 或 CheckedListBox 控制項
+可以加入至 Windows Form 下拉式方塊，清單方塊中，或檢查清單方塊中有數種情況下，因為這些控制項可以繫結至各種資料來源的項目。 不過，本主題會示範最簡單的方法，並不需要任何資料繫結。 顯示的項目通常是字串;不過，您可以使用任何物件。 控制項中顯示的文字是物件的傳回值`ToString`方法。  
   
-### <a name="to-add-items"></a>若要加入的項目  
+### <a name="to-add-items"></a>若要新增項目  
   
-1.  使用將字串或物件加入至清單`Add`方法`ObjectCollection`類別。 使用參考集合`Items`屬性：  
+1.  使用將字串或物件新增至清單`Add`方法的`ObjectCollection`類別。 集合使用參考`Items`屬性：  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +42,7 @@ ms.locfileid: "33527183"
   
      - 或 -  
   
-2.  插入的字串或物件在清單中所需的時間點`Insert`方法：  
+2.  插入的字串或物件在清單中具有所需的時間點`Insert`方法：  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -58,7 +58,7 @@ ms.locfileid: "33527183"
   
      - 或 -  
   
-3.  指派至整個陣列`Items`集合：  
+3.  將整個陣列指派`Items`集合：  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -87,11 +87,11 @@ ms.locfileid: "33527183"
     listBox1->Items->AddRange(ItemObject);  
     ```  
   
-### <a name="to-remove-an-item"></a>若要移除項目  
+### <a name="to-remove-an-item"></a>若要移除的項目  
   
-1.  呼叫`Remove`或`RemoveAt`方法，以刪除項目。  
+1.  呼叫`Remove`或`RemoveAt`方法來刪除項目。  
   
-     `Remove` 有一個引數，指定要移除的項目。`RemoveAt` 移除具有指定的索引編號的項目。  
+     `Remove` 有一個引數，指定要移除的項目。`RemoveAt` 移除具有指定索引編號的項目。  
   
     ```vb  
     ' To remove item with index 0:  
@@ -122,7 +122,7 @@ ms.locfileid: "33527183"
   
 ### <a name="to-remove-all-items"></a>若要移除所有項目  
   
-1.  呼叫`Clear`方法，以從集合中移除所有項目：  
+1.  呼叫`Clear`方法從集合移除所有項目：  
   
     ```vb  
     ListBox1.Items.Clear()  
@@ -136,10 +136,10 @@ ms.locfileid: "33527183"
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.ComboBox>  
- <xref:System.Windows.Forms.ListBox>  
- <xref:System.Windows.Forms.CheckedListBox>  
- [操作說明：排序 Windows Forms 中 ComboBox、ListBox 或 CheckedListBox 控制項的內容](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- [何時使用 Windows Forms ComboBox 取代 ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- [用來列出選項的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms.CheckedListBox>
+- [如何：排序內容的 Windows Forms 的 ComboBox、 ListBox 或 CheckedListBox 控制項](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [何時使用 Windows Forms ComboBox 取代 ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [用來列出選項的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

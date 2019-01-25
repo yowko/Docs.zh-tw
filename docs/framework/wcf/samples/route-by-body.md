@@ -2,12 +2,12 @@
 title: 依本文路由
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: ef463f7a7c46387ba3779ef6c674d9c3b022116e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a7fc6eb142b091a25bb1dd182cf43e006c187a96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633974"
 ---
 # <a name="route-by-body"></a>依本文路由
 這個範例會示範如何實作使用任何 SOAP 動作接受訊息物件的服務。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。 此服務會實作接受 `Calculate` 要求參數並傳回 <xref:System.ServiceModel.Channels.Message> 回應的單一 <xref:System.ServiceModel.Channels.Message> 作業。  

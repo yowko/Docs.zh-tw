@@ -1,17 +1,17 @@
 ---
-title: 範例：處理繫結資料時所發生的例外狀況
+title: 範例：資料繫結時處理例外狀況
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a861da011898c3648c66b6a0ea0f97cdb26ff288
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 9610eb6088a59e4f577ea6dfe679130b44988645
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725710"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>範例：處理繫結資料時所發生的例外狀況
+# <a name="example-handling-exceptions-when-binding-data"></a>範例：資料繫結時處理例外狀況
 > [!NOTE]
 >  本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。 您可以從 [Microsoft Connect 網站](https://go.microsoft.com/fwlink/?LinkId=394611)下載預覽 (需要註冊)。  
   
@@ -59,6 +59,6 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
  不過，有一些方法可以將 `ViewModel` 指定至 XAML 頁面，讓工具鏈可以在編譯時將屬性繫結與正確的類型建立關聯，並且在不使用執行階段指示詞的情況下保留中繼資料。  例如，您可以套用<xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType>屬性上的屬性。 這會導致 XAML 編譯器產生必要的查閱資訊，並避免 Default.rd.xml 檔案中需要執行階段指示詞。  
   
-## <a name="see-also"></a>另請參閱  
- [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [範例：針對動態程式設計進行疑難排解](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+## <a name="see-also"></a>另請參閱
+- [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [例如：動態程式設計疑難排解](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

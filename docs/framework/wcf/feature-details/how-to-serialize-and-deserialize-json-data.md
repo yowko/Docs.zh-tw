@@ -1,20 +1,20 @@
 ---
-title: HOW TO：序列化及還原序列化 JSON 資料
+title: HOW TO：序列化和還原序列化 JSON 資料
 ms.date: 03/30/2017
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: f51ffb180adfc8310c91ff3c1ec7b7725f6b8b15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 797b29fd7ddecd3e3ed85f8cb3a6df93044942ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704338"
 ---
-# <a name="how-to-serialize-and-deserialize-json-data"></a>HOW TO：序列化及還原序列化 JSON 資料
+# <a name="how-to-serialize-and-deserialize-json-data"></a>HOW TO：序列化和還原序列化 JSON 資料
 JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可以在用戶端瀏覽器與啟用 AJAX 的 Web 服務之間啟用快速的小量資料交換作業。  
   
  本主題示範如何將 .NET 型別物件序列化為 JSON 編碼資料，然後透過 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>，將 JSON 格式的資料還原序列化為 .NET 型別執行個體。 這個範例會使用資料合約來示範使用者定義之 `Person` 型別的序列化與還原序列化。  
   
- 一般來說，JSON 序列化和還原序列化會自動處理 Windows Communication Foundation (WCF) 啟用 AJAX 的端點上所公開的服務作業中使用資料合約類型時。 但是，在某些情況下您可能需要直接使用 JSON 資料，而本主題就是要示範這種情況。  
+ 一般來說，JSON 序列化和還原序列化會自動處理由 Windows Communication Foundation (WCF) 啟用 AJAX 的端點上所公開的服務作業中使用資料合約型別時。 但是，在某些情況下您可能需要直接使用 JSON 資料，而本主題就是要示範這種情況。  
   
 > [!NOTE]
 >  如果在伺服器的傳出回覆序列化期間發生錯誤，或是因為某些原因導致回覆作業擲回例外狀況，該錯誤可能不會被當成錯誤傳回用戶端。  
@@ -23,7 +23,7 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
   
 ### <a name="to-define-the-data-contract-for-a-person"></a>若要定義 Person 的資料合約  
   
-1.  將 `Person` 附加到類別，並將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性附加到要序列化的成員中，以定義 <xref:System.Runtime.Serialization.DataMemberAttribute> 的資料合約。 如需資料合約的詳細資訊，請參閱[設計服務合約](../../../../docs/framework/wcf/designing-service-contracts.md)。  
+1.  將 `Person` 附加到類別，並將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性附加到要序列化的成員中，以定義 <xref:System.Runtime.Serialization.DataMemberAttribute> 的資料合約。 如需有關資料合約的詳細資訊，請參閱[Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)。  
   
     ```csharp  
     [DataContract]  
@@ -135,6 +135,6 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [獨立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
- [JSON 和其他資料傳輸格式的支援](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+## <a name="see-also"></a>另請參閱
+- [獨立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)
+- [JSON 和其他資料傳輸格式的支援](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

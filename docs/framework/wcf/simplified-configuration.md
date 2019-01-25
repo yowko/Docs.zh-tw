@@ -2,12 +2,12 @@
 title: 簡化的組態
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 7df686188099aea45cac81ea94a49b98e5c65f89
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f6998b17747b5d250827066a41373d81c243773c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498355"
 ---
 # <a name="simplified-configuration"></a>簡化的組態
 設定 Windows Communication Foundation (WCF) 服務可能是複雜的工作。 這項工作不但包含許多不同的選項，而且判斷需要哪些設定往往絕非易事。 雖然組態檔能夠增加的 WCF 服務的彈性，但是也會造成許多不易發現的問題。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 能夠解決這些問題，並且提供可讓使用者降低服務組態大小與複雜度的方式。  
@@ -113,10 +113,10 @@ ms.locfileid: "48838947"
 > [!IMPORTANT]
 >  此功能只涉及 WCF 服務組態，不是用戶端組態。 大多數時候，WCF 用戶端組態會以 svcutil.exe 之類的工具產生，或從 Visual Studio 新增服務參考。 如果您要手動設定 WCF 用戶端必須新增\<用戶端 > 組態項目，並指定您想要呼叫任何端點。  
   
-## <a name="see-also"></a>另請參閱  
- [使用設定檔設定服務](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [設定系統提供的繫結](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [設定服務](../../../docs/framework/wcf/configuring-services.md)  
- [設定 Windows Communication Foundation 應用程式](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [在程式碼中設定 WCF 服務](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)
+## <a name="see-also"></a>另請參閱
+- [使用設定檔設定服務](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
+- [設定系統提供的繫結](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [設定服務](../../../docs/framework/wcf/configuring-services.md)
+- [設定 Windows Communication Foundation 應用程式](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [在程式碼中設定 WCF 服務](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

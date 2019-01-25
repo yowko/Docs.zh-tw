@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18db77b42af47b76bf1b3b66748d586c4c41dbd7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f107847ddd48805f4779ff94c4e436a176688030
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699021"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain 方法
 設定將用來初始化預設應用程式定義域的屬性。  
@@ -40,10 +40,10 @@ HRESULT SetPropertiesForDefaultAppDomain(
  [in]中的項目數`pwszPropertyNames`和`pwszPropertyValues`。  
   
  `pwszPropertyNames`  
- [in]陣列的屬性名稱或如果沒有屬性為 null。 目前，這個方法所能辨識唯一的屬性名稱是"PARTIAL_TRUST_VISIBLE_ASSEMBLIES"。  
+ [in]屬性名稱或如果沒有屬性則為 null 的陣列。 目前，唯一的屬性名稱都能夠辨識這個方法是"PARTIAL_TRUST_VISIBLE_ASSEMBLIES 」。  
   
  `pwszPropertyValues`  
- [in]陣列的屬性值或如果沒有屬性為 null。  
+ [in]屬性值或如果沒有屬性則為 null 的陣列。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
@@ -51,20 +51,20 @@ HRESULT SetPropertiesForDefaultAppDomain(
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` 包含這個方法無法辨識的屬性名稱。|  
+|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` 包含無法辨識這個方法的屬性名稱。|  
   
 ## <a name="remarks"></a>備註  
- 「 PARTIAL_TRUST_VISIBLE_ASSEMBLIES"的屬性值是一份具有條件式的組件<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA) 屬性，與<xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType>旗標，將會看見部分信任呼叫端預設應用程式中網域。  
+ 「 PARTIAL_TRUST_VISIBLE_ASSEMBLIES"的屬性值是一份具有條件式的組件<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA) 屬性<xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType>旗標，將會看見部分信任呼叫端在預設應用程式網域。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [ICLRDomainManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)
+## <a name="see-also"></a>另請參閱
+- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRDomainManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)

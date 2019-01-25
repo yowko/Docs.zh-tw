@@ -8,31 +8,31 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: fecb3c71e0686a557b8a4b0c85b7d91a9846204f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e5d74a033b14d5f1b523422d0afd360206c0cb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685009"
 ---
 # <a name="ltrequestcachinggt-element-network-settings"></a>&lt;Requestcaching>&gt;項目 （網路設定）
 控制網路要求的快取機制。  
   
  \<configuration>  
 \<system.net>  
-\<Requestcaching> >  
+\<requestCaching>  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-      <requestCaching>  
-        isPrivateCache ="true|false"  
-        disableAllCaching="true|false"  
-        defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
-        unspecifiedMaximumAge= "d.hh.mm.ss">  
-          <defaultHttpCachePolicy> … </defaultHttpCachePolicy>  
-          <defaultFtpCachePolicy> … </defaultFtpCachePolicy>  
-      </requestCaching>
+<requestCaching  
+  isPrivateCache ="true|false"  
+  disableAllCaching="true|false"  
+  defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
+  unspecifiedMaximumAge= "d.hh.mm.ss">  
+    <defaultHttpCachePolicy>...</defaultHttpCachePolicy>  
+    <defaultFtpCachePolicy>...</defaultFtpCachePolicy>  
+</requestCaching>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -42,9 +42,9 @@ ms.locfileid: "50194965"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`isPrivateCache`|指定是否快取之間提供隔離不同使用者的資訊。 預設值是 `true`。 這個值應該是`false`中介層應用程式。|  
+|`isPrivateCache`|指定是否快取之間提供隔離不同使用者的資訊。 預設值為 `true`。 這個值應該是`false`中介層應用程式。|  
 |`disableAllCaching`|指定，快取已停用所有的 Web 回應，而且不能以程式設計方式覆寫。|  
-|`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> 列舉中的其中一個值。 預設值是 `BypassCache`。|  
+|`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> 列舉中的其中一個值。 預設值為 `BypassCache`。|  
 |`unspecifiedMaximumAge`|指定預設的時間之後，內容會標示為已過期。|  
   
 ## <a name="policylevel-attribute"></a>Securityclasses 屬性  
@@ -86,6 +86,6 @@ ms.locfileid: "50194965"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.Net.Cache?displayProperty=nameWithType>  
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.Cache?displayProperty=nameWithType>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

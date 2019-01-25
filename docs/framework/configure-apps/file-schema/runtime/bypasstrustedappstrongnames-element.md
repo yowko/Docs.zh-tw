@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fe6beb359575c818131e1ae502fdebcec5096c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 725e2ee19c97cf2642134058ece07b32455516a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565471"
 ---
 # <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;Bypasstrustedappstrongnames>&gt;項目
 指定是否略過載入至完全信任的完全信任組件的強式名稱的驗證<xref:System.AppDomain>。  
   
  \<configuration>  
 \<執行階段 >  
-\<Bypasstrustedappstrongnames> >  
+\<bypassTrustedAppStrongNames>  
   
 ## <a name="syntax"></a>語法  
   
@@ -83,7 +83,7 @@ ms.locfileid: "53613748"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>另請參閱
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [如何：停用強式名稱略過功能](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

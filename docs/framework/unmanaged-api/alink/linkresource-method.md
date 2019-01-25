@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4f75ebc3a40bddbaf2347b9ef559139888f83900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b0b5c6e70afffd12d3f0cdbbb92b20ac3a949e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634999"
 ---
 # <a name="linkresource-method"></a>LinkResource 方法
 在資源中的連結。  
@@ -52,15 +52,15 @@ HRESULT LinkResource(
  資源的名稱。  
   
  `dwFlags`  
- 存取範圍旗標，例如`mrPublic`和`mrPrivate`。 此參數可能會傳遞至[DefineManifestResource 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)。  
+ 協助工具加上旗標這類`mrPublic`和`mrPrivate`。 這個參數可能會傳遞給[DefineManifestResource 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則傳回 S_OK。  
+ 如果方法成功，則會傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
  需要 alink.h。  
   
-## <a name="see-also"></a>另請參閱  
- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>另請參閱
+- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -1,18 +1,18 @@
 ---
-title: 如何：在查詢中處理複合索引鍵
+title: HOW TO：處理查詢中的複合索引鍵
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
-ms.openlocfilehash: 26c281445b84d3b3f85980de6ae4076411bb4fba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ee0bda8c3ee46cb6e08ee415def68a4a9832617
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523477"
 ---
-# <a name="how-to-handle-composite-keys-in-queries"></a>如何：在查詢中處理複合索引鍵
+# <a name="how-to-handle-composite-keys-in-queries"></a>HOW TO：處理查詢中的複合索引鍵
 有些運算子只能取用一個引數。 如果引數必須包括資料庫中的多個資料行，則必須建立匿名型別來表示此項組合。  
   
 ## <a name="example"></a>範例  
@@ -27,5 +27,5 @@ ms.locfileid: "33354235"
  [!code-csharp[DLinqCompositeKeys#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCompositeKeys/cs/Program.cs#2)]
  [!code-vb[DLinqCompositeKeys#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCompositeKeys/vb/Module1.vb#2)]  
   
-## <a name="see-also"></a>另請參閱  
- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a>另請參閱
+- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

@@ -3,12 +3,12 @@ title: '&lt;issuerTokenResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: eefd18c206b7f013c3a423df424c795583c0dde8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9f88d3cec5e1cb95ce5e12b203e32b706d407a2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216327"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556622"
 ---
 # <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
 註冊由權杖處理常式集合中的處理常式的簽發者權杖解析程式。 簽發者權杖解析程式用來解析簽署的權杖上傳入的權杖和訊息。  
@@ -16,8 +16,8 @@ ms.locfileid: "47216327"
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<Securitytokenhandlerconfiguration> >  
-\<issuerTokenResolver >  
+\<securityTokenHandlerConfiguration>  
+\<issuerTokenResolver>  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47216327"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|類型|指定簽發者權杖解析程式類型。 必須是<xref:System.IdentityModel.Tokens.IssuerTokenResolver>類別或衍生自類型<xref:System.IdentityModel.Tokens.IssuerTokenResolver>類別。 必要。|  
+|類型|指定簽發者權杖解析程式類型。 必須是<xref:System.IdentityModel.Tokens.IssuerTokenResolver>類別或衍生自類型<xref:System.IdentityModel.Tokens.IssuerTokenResolver>類別。 必要項。|  
   
 ### <a name="child-elements"></a>子元素  
  無  
@@ -50,7 +50,7 @@ ms.locfileid: "47216327"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Securitytokenhandlerconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
   
 ## <a name="remarks"></a>備註  
  簽發者權杖解析程式用來解析簽署的權杖上傳入的權杖和訊息。 它用來擷取用來檢查簽章的加密編譯內容。 您必須指定`type`屬性。 指定的型別可以是<xref:System.IdentityModel.Tokens.IssuerTokenResolver>或自訂的型別衍生自<xref:System.IdentityModel.Tokens.IssuerTokenResolver>類別。  
@@ -87,5 +87,5 @@ public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.IdentityModel.Tokens.IssuerTokenResolver>
+## <a name="see-also"></a>另請參閱
+- <xref:System.IdentityModel.Tokens.IssuerTokenResolver>

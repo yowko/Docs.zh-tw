@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b0ac45c9d2c5b7ff9630bbeaed4bfcee5ec46fcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609982"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;新增&gt;項目&lt;參數&gt;
 指定設定追蹤參數的層級。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<參數 >  
+\<system.diagnostics>  
+\<switches>  
 \<add>  
   
 ## <a name="syntax"></a>語法  
@@ -69,8 +69,8 @@ ms.locfileid: "47209122"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Diagnostics.Switch>  
- <xref:System.Diagnostics.TraceSwitch>  
- <xref:System.Diagnostics.BooleanSwitch>  
- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Diagnostics.Switch>
+- <xref:System.Diagnostics.TraceSwitch>
+- <xref:System.Diagnostics.BooleanSwitch>
+- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

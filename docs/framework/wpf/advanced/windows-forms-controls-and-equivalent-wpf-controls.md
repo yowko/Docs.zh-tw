@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: 0daa399e2d000a228773ee20f157af7439f7acbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 591831898ebb1fb699dd9f87231d5861884132ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602987"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Windows Form 控制項和對等 WPF 控制項
 許多[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項都有對等項目[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項，但有部分[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項中有沒有對等項目[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 本主題會比較這兩項技術所提供的控制項類型。  
@@ -82,12 +82,12 @@ ms.locfileid: "43502034"
 |<xref:System.Windows.Forms.TreeView>|<xref:System.Windows.Controls.TreeView>||  
 |<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Controls.UserControl>||  
 |<xref:System.Windows.Forms.VScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|捲動已內建容器控制項。|  
-|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|<xref:System.Windows.Controls.Frame>控制項可以裝載的 HTML 網頁。<br /><br /> 從開始[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]，則<xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>控制項可以裝載的 HTML 網頁，以及將備份<xref:System.Windows.Controls.Frame>控制項。|  
+|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>、 <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|<xref:System.Windows.Controls.Frame>控制項可以裝載的 HTML 網頁。<br /><br /> 從開始[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]，則<xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>控制項可以裝載的 HTML 網頁，以及將備份<xref:System.Windows.Controls.Frame>控制項。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [WPF Designer for Windows Form 開發人員](https://msdn.microsoft.com/library/47ad0909-e89b-4996-b4ac-874d929f94ca)  
- [逐步解說：在 WPF 中裝載 Windows Forms 控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)  
- [逐步解說：在 Windows Forms 中裝載 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
- [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [WPF Designer for Windows Form 開發人員](https://msdn.microsoft.com/library/47ad0909-e89b-4996-b4ac-874d929f94ca)
+- [逐步解說：裝載在 WPF 中的 Windows Forms 控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [逐步解說：裝載 Windows Forms 中的 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

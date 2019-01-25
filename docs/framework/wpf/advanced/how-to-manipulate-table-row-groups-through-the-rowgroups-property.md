@@ -1,5 +1,5 @@
 ---
-title: 如何： 操作資料表&#39;s 資料列群組，透過資料列群組屬性
+title: HOW TO：操作資料表&#39;s 資料列群組，透過 RowGroups 屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,24 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: 8cdf3b74fa5bf5a566c541ba035a1c7da7dd6949
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 233ae0e76d175f4ce20a573aa2aa29d39106562e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700453"
 ---
-# <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>如何： 操作資料表&#39;s 資料列群組，透過資料列群組屬性
-這個範例會示範一些較常見作業對資料表的資料列群組，透過<xref:System.Windows.Documents.Table.RowGroups%2A>屬性。  
+# <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>HOW TO：操作資料表&#39;s 資料列群組，透過 RowGroups 屬性
+此範例示範一些較常見的作業對資料表的資料列群組，透過<xref:System.Windows.Documents.Table.RowGroups%2A>屬性。  
   
 ## <a name="example"></a>範例  
- 下列範例會建立新的資料表，然後再使用<xref:System.Windows.Documents.TableRowGroupCollection.Add%2A>方法，以將資料行加入資料表的<xref:System.Windows.Documents.Table.RowGroups%2A>集合。  
+ 下列範例會建立新的資料表，並接著會使用<xref:System.Windows.Documents.TableRowGroupCollection.Add%2A>方法，以將資料行加入資料表的<xref:System.Windows.Documents.Table.RowGroups%2A>集合。  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Add](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_add)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Add](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_add)]  
   
 ## <a name="example"></a>範例  
- 下列範例會將新<xref:System.Windows.Documents.TableRowGroup>。  新的資料行的索引位置 0，因此新的第一個資料列插入資料表中的群組。  
+ 下列範例會插入新<xref:System.Windows.Documents.TableRowGroup>。  新的資料行的索引位置 0，因此新的第一個資料列插入資料表中的群組。  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableRowGroupCollection>集合會使用標準的以零為起始索引。  
@@ -41,19 +42,19 @@ ms.lasthandoff: 05/04/2018
  [!code-vb[TableSnippets2#_Table_RowGroups_AddRows](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_addrows)]  
   
 ## <a name="example"></a>範例  
- 下列範例會存取資料表中的第一個資料列群組中的資料列的某些任意屬性。  
+ 下列範例會存取某些資料表中的第一個資料列群組中的資料列上的任何屬性。  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_ManipRows](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_maniprows)]
  [!code-vb[TableSnippets2#_Table_RowGroups_ManipRows](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_maniprows)]  
   
 ## <a name="example"></a>範例  
- 下列範例會將多個儲存格為特定<xref:System.Windows.Documents.TableRow>（由索引指定） 資料表中。  
+ 下列範例會將數個資料格特定<xref:System.Windows.Documents.TableRow>（由索引指定） 資料表中。  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_AddCells](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_addcells)]
  [!code-vb[TableSnippets2#_Table_RowGroups_AddCells](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_addcells)]  
   
 ## <a name="example"></a>範例  
- 下列範例會存取某些任意的方法和屬性中的第一個資料列群組中的第一個資料列的資料格。  
+ 下列範例會存取一些任意的方法和屬性中第一個資料列群組中的第一個資料列的資料格。  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_ManipCells](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_manipcells)]
  [!code-vb[TableSnippets2#_Table_RowGroups_ManipCells](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_manipcells)]  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/04/2018
  [!code-vb[TableSnippets2#_Table_RowGroups_DelRef](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_delref)]  
   
 ## <a name="example"></a>範例  
- 下列範例會依索引移除的特定資料列群組。  
+ 下列範例會移除特定的資料列群組的索引。  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_DelIndex](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_delindex)]
  [!code-vb[TableSnippets2#_Table_RowGroups_DelIndex](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_delindex)]  
@@ -82,7 +83,7 @@ ms.lasthandoff: 05/04/2018
  [!code-csharp[TableSnippets2#_Table_RowGroups_Clear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_clear)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Clear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_clear)]  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 管理透過內嵌屬性的動態內容項目](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [透過 Blocks 屬性管理 FlowDocument](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [透過 Columns 屬性管理表格的資料行](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)
+## <a name="see-also"></a>另請參閱
+- [操作說明：管理非固定格式內容項目，透過 Inlines 屬性](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [透過 Blocks 屬性管理 FlowDocument](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [透過 Columns 屬性管理表格的資料行](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)

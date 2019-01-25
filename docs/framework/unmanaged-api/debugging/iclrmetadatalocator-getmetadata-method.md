@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4338619414c9c9ac8c5fe85479562410d1678698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7758e61635bf6611cf83d2d66d0b62a28fac97d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403854"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647682"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata 方法
-呼叫由 common language runtime (CLR) 資料存取服務擷取映像的中繼資料。  
+由通用語言執行平台 (CLR) 資料存取服務擷取的映像的中繼資料的呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,25 +49,25 @@ HRESULT GetMetadata(
  [in]字串，指定影像檔的路徑。  
   
  `imageTimestamp`  
- [in]映像檔的時間戳記。  
+ [in]影像檔的時間戳記。  
   
  `imageSize`  
- [in]映像檔的大小。  
+ [in]影像檔的大小。  
   
  `mvid`  
- [in]影像的全域唯一識別項。  
+ [in]映像的全域唯一識別碼。  
   
  `mdRva`  
- [in]相對虛擬位址 (RVA) 的中繼資料。 位址是相對於映像的基底位址。  
+ [in]相對虛擬位址 (RVA) 的中繼資料。 此位址是相對於映像的基底位址。  
   
  `flags`  
- [in]保留供未來使用。  
+ [in]保留供日後使用。  
   
  `bufferSize`  
- [in]要放置中繼資料的緩衝區大小。  
+ [in]在其中放置中繼資料的緩衝區大小。  
   
  `buffer`  
- [out]要放置中繼資料緩衝區。  
+ [out]中要放置的中繼資料的緩衝區。  
   
  `dataSize`  
  [out]傳回中繼資料的大小。  
@@ -76,13 +76,13 @@ HRESULT GetMetadata(
  此方法是由偵錯應用程式的作者來實作。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** ClrData.idl、 ClrData.h  
+ **標頭：** ClrData.idl, ClrData.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICLRMetadataLocator 介面](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICLRMetadataLocator 介面](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)

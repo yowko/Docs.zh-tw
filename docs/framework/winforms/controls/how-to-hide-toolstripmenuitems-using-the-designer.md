@@ -1,20 +1,20 @@
 ---
-title: 如何：使用設計工具隱藏 ToolStripMenuItems
+title: HOW TO：使用設計工具隱藏 ToolStripMenuItems
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], hiding menu items in designer
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-ms.openlocfilehash: 37371269ef9db929573efff0a8e62c86a51b2c35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 966ee5a7e038b80eb21b77c5ad5c0b57efa21951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517223"
 ---
-# <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>如何：使用設計工具隱藏 ToolStripMenuItems
-隱藏功能表項目是用來控制您的應用程式的使用者介面 (UI)，並限制使用者命令。 通常，您要隱藏整個功能表無法使用時，所有在其上的功能表項目。 這代表使用者分心。 此外，您可能想要隱藏和停用功能表或功能表項目，為單獨的隱藏不會防止使用者使用攠摝坫存取功能表命令。 如需有關如何停用功能表項目的詳細資訊，請參閱[如何： 停用 toolstripmenuitems 的功能使用設計工具](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md)。  
+# <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>HOW TO：使用設計工具隱藏 ToolStripMenuItems
+隱藏功能表項目是用來控制您的應用程式的使用者介面 (UI)，並限制使用者命令。 通常，您要隱藏整個功能表無法使用時，所有在其上的功能表項目。 這代表使用者分心。 此外，您可能想要隱藏和停用功能表或功能表項目，為單獨的隱藏不會防止使用者使用攠摝坫存取功能表命令。 如需有關如何停用功能表項目的詳細資訊，請參閱[How to:使用設計工具停用 ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md)。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -34,11 +34,11 @@ ms.locfileid: "43523573"
   
      當您隱藏子功能表項目時，它仍會顯示在設計階段在表單上，讓您可以進一步的工作，輕鬆地選取它。 實際上會在執行階段隱藏。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.ToolStripItem.Visible%2A>  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>  
- <xref:System.Windows.Forms.ToolStripItem.Available%2A>  
- <xref:System.Windows.Forms.ToolStripMenuItem.Overflow%2A>  
- [MenuStrip 控制項概觀](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
- [操作說明：使用設計工具停用 ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>
+- <xref:System.Windows.Forms.ToolStripItem.Available%2A>
+- <xref:System.Windows.Forms.ToolStripMenuItem.Overflow%2A>
+- [MenuStrip 控制項概觀](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [如何：使用設計工具停用 ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md)

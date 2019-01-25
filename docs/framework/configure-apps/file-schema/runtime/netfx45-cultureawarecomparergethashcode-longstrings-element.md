@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c2dfd5d3944618cf94d32fac2708d6daef5a410
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 67dae26733527a85f4fc13734da896193e53db8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576885"
 ---
 # <a name="ltnetfx45cultureawarecomparergethashcodelongstringsgt-element"></a>&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt;項目
 指定執行階段是否使用固定的記憶體數量計算 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法的雜湊碼。  
   
  \<configuration>  
 \<執行階段 >  
-< NetFx45_CultureAwareComparerGetHashCode_LongStrings >  
+<NetFx45_CultureAwareComparerGetHashCode_LongStrings>  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,7 +61,7 @@ ms.locfileid: "53613683"
 > [!IMPORTANT]
 >  `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` 項目不會在 [!INCLUDE[win8](../../../../../includes/win8-md.md)] (含) 以後版本中使用。  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>另請參閱
+- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
+- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

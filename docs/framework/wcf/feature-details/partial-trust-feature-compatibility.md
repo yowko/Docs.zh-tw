@@ -2,12 +2,12 @@
 title: 部分信任功能相容性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 404fe1a7fb14f28d264d4a97981eade8404141ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564717"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能相容性
 在部分信任環境中執行時，Windows Communication Foundation (WCF) 支援有限的功能子集。 部分信任環境所支援的功能，主要是用在如 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主題所述的特定案例中。  
@@ -92,7 +92,7 @@ ms.locfileid: "43864520"
   
 -   確定應用程式是否會部署為完全信任的應用程式，而使用者無法修改程式碼存取安全性設定以在部分信任環境中執行應用程式。 如果可以執行這項操作，行為就不會執行，也不會擲回例外狀況。 若要確保此行為，請參閱**levelfinal**選項使用[Caspol.exe （程式碼存取安全性原則工具）](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)。  
   
- 如需通用行為的範例，請參閱 < [How to: Lock Down Endpoints in 企業](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
+ 如需通用行為的範例，請參閱[How to:鎖定在企業中的端點](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
   
 ## <a name="configuration"></a>組態  
  有一個例外狀況，部分信任程式碼只能載入本機的 WCF 組態區段`app.config`檔案。 若要載入 WCF 組態區段參考 WCF 區段在 machine.config 或根 web.config 檔案，需要 configurationpermission （unrestricted）。 沒有這個使用權限，則 WCF 組態區段 （行為、 繫結） 之外的本機設定檔會導致例外狀況參考，會在載入組態時。  
@@ -159,10 +159,10 @@ ms.locfileid: "43864520"
 ## <a name="unlisted-features"></a>未列出的功能  
  在部分信任環境中執行時，要找到不可用的資訊片段或動作的最好方式，就是嘗試在 `try` 區塊內部存取資源或執行動作，然後捕捉 ( `catch` ) 失敗。 若要避免有重複的錯誤的追蹤檔案資料大量湧入，WCF 會停用資源或動作之後第一次安全性失敗的追蹤。 第一次嘗試存取資源或執行動作時，會針對每個失敗的資源存取產生一個例外狀況追蹤。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
- [支援的部署案例](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
- [部分信任最佳做法](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
+- [支援的部署案例](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
+- [部分信任最佳做法](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

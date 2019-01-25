@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 9a88a979a6b46f897e5f04f4481d4a23e245b165
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0f2a0c646b5af91d5296bafb01f5261d7ee6b9fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574309"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
 A*泛型程序*，也稱為*泛型方法*，是以至少一個型別參數所定義的程序。 這可讓呼叫的程式碼，來調整使其符合需求的資料類型每次呼叫此程序。  
@@ -64,11 +64,11 @@ End Sub
   
  上述呼叫`MsgBox`分別顯示"0"、"1"和"-1"。  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 中的泛型型別](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [如何：定義可以在不同資料類型上提供完全相同功能的類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
- [如何：使用泛型類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [程序](../../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [程序參數和引數](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)  
- [類型清單](../../../../visual-basic/language-reference/statements/type-list.md)  
- [參數清單](../../../../visual-basic/language-reference/statements/parameter-list.md)
+## <a name="see-also"></a>另請參閱
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [如何：定義可以在不同資料類型上提供完全相同功能的類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [如何：使用泛型類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [程序](../../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [程序參數和引數](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
+- [類型清單](../../../../visual-basic/language-reference/statements/type-list.md)
+- [參數清單](../../../../visual-basic/language-reference/statements/parameter-list.md)

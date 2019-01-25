@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c148ee0b2c96f2a387dac54eaff690ab3f05ebf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 34a6762618780b22bcd8be376209912390524578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592006"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs 方法
 列舉代表指定類型成員的 MemberRef 語彙基元。  
@@ -44,33 +44,33 @@ HRESULT EnumMemberRefs (
  [in、 out]列舉值的指標。  
   
  `tkParent`  
- [in]其成員的列舉的類型的 TypeDef 的 TypeRef、 MethodDef，ModuleRef 語彙基元。  
+ [in]其成員的列舉的類型的 TypeDef，TypeRef、 MethodDef 或 ModuleRef 語彙基元。  
   
  `rMemberRefs`  
- [out]陣列，用來儲存 MemberRef 語彙基元。  
+ [out]陣列，用來儲存 memberref 語彙基元。  
   
  `cMax`  
  [in] `rMemberRefs` 陣列的大小上限。  
   
  `pcTokens`  
- [out]MemberRef 語彙基元中傳回的實際數目`rMemberRefs`。  
+ [out]Memberref 語彙基元中傳回的實際數目`rMemberRefs`。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMemberRefs` 已成功傳回。|  
-|`S_FALSE`|沒有列舉 MemberRef 語彙基元。 在此情況下，`pcTokens`為零。|  
+|`S_FALSE`|沒有列舉 MemberRef 語彙基元。 在此情況下，`pcTokens`是零。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 898e5688ae08a59415c8b3116665eec6cb4cf904
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 9285f68521770e0dd4fbc8d6f9aa006eccc502c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533126"
 ---
 # <a name="using-sessions"></a>使用工作階段
 在 Windows Communication Foundation (WCF) 應用程式*工作階段*與一組訊息相互關聯至對話。 WCF 工作階段的不同中可用的工作階段物件[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式支援不同的行為，以及控制的方式。 本主題描述在 WCF 中的工作階段啟用功能的應用程式，以及如何使用它們。  
@@ -62,7 +62,7 @@ ms.locfileid: "44260200"
   
  WCF 會提供下列類型的工作階段為基礎的應用程式的行為：  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> 支援安全性工作階段，其中通訊兩端均同意特定安全對話。 如需詳細資訊，請參閱 < [Securing Services](../../../docs/framework/wcf/securing-services.md)。 例如，<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 繫結同時支援安全性工作階段與可靠工作階段，但根據預設，只會使用加密並以數位方式簽署訊息的安全工作階段。  
+-   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> 支援安全性工作階段，其中通訊兩端均同意特定安全對話。 如需詳細資訊，請參閱 < [Securing Services](../../../docs/framework/wcf/securing-services.md)。 例如， <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 繫結同時支援安全性工作階段與可靠工作階段，但根據預設，只會使用加密並以數位方式簽署訊息的安全工作階段。  
   
 -   <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> 繫結支援 TCP/IP 架構工作階段，可確保所有訊息都在通訊端層級由連線建立相互關聯。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "44260200"
   
  服務不會啟動用戶端的工作階段。 在 WCF 用戶端應用程式，工作階段架構通道的存留期和工作階段本身的存留期之間存在直接的關聯性。 因此，用戶端會藉由建立新的工作階段架構通道來建立新工作階段，然後適當地關閉工作階段架構通道來終止現有的工作階段。 用戶端會呼叫下列其中一項，藉此啟動服務端點的工作階段：  
   
--   通道上藉由呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 所傳回的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+-   通道上藉由呼叫<xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 所傳回的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 所產生 WCF 用戶端物件上[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
@@ -123,13 +123,13 @@ ms.locfileid: "44260200"
   
  一般來說，用戶端會呼叫下列其中一項，藉此結束服務端點的工作階段：  
   
--   通道上藉由呼叫 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 所傳回的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+-   通道上藉由呼叫<xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 所傳回的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> 在 Svcutil.exe 所產生的 WCF 用戶端物件。  
   
 -   在任一種 WCF 用戶端物件上的終止作業 （根據預設，就會終止任何作業; 合約必須明確指定終止作業）。 呼叫第一項作業時，WCF 用戶端物件會自動開啟通道，並起始工作階段。  
   
- 如需範例，請參閱 [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) 、 [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) 和 [Instancing](../../../docs/framework/wcf/samples/instancing.md) 範例。  
+ 如需範例，請參閱[如何：建立 Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) ，以及[Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md)並[Instancing](../../../docs/framework/wcf/samples/instancing.md)範例。  
   
  如需有關用戶端和工作階段的詳細資訊，請參閱 <<c0> [ 使用 WCF 用戶端存取服務](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "44260200"
  合約內的 <xref:System.ServiceModel.SessionMode> 列舉與 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 屬性之間會進行互動，以控制通道和特定服務物件之間的關聯。 如需詳細資訊，請參閱 <<c0> [ 工作階段，Instancing，and Concurrency](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)。  
   
 ### <a name="sharing-instancecontext-objects"></a>共用 InstanceContext 物件  
- 您也可以自行執行該關聯，以控制哪個工作階段架構通道或呼叫與哪個 <xref:System.ServiceModel.InstanceContext> 物件關聯。 如需完整範例，請參閱 < [InstanceContextSharing](https://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)。  
+ 您也可以自行執行該關聯，以控制哪個工作階段架構通道或呼叫與哪個 <xref:System.ServiceModel.InstanceContext> 物件關聯。 如需完整的範例，請參閱 [InstanceContextSharing](https://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)。  
   
 ## <a name="sessions-and-streaming"></a>工作階段和資料流  
  您有大量的資料傳輸，在 WCF 中的資料流傳輸模式時，緩衝處理與在完整的記憶體內處理訊息的預設行為是可行替代方案。 使用工作階段架構繫結對呼叫進行資料流處理時，可能會遇到未預期的行為。 即使使用的繫結已設定為使用工作階段，所有資料流處理呼叫還是會透過不支援工作階段的單一通道 (資料包通道) 來進行。 如果多個用戶端透過工作階段架構繫結對同一個服務物件進行資料流處理呼叫，而且服務物件的並行模式已設為單一且其執行個體內容模式已設為 `PerSession`，則所有呼叫必須經過資料包通道，所以一次只能處理一個呼叫。 一或多個用戶端可能會因此逾時。您可以將服務物件的 `InstanceContextMode` 設為 `PerCall` 或是將並行模式設為多重來解決這個問題。  
@@ -145,6 +145,6 @@ ms.locfileid: "44260200"
 > [!NOTE]
 >  此時 MaxConcurrentSessions 沒有作用，因為只有一個可用的「工作階段」。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>  
- <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
+- <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>
