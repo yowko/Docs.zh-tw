@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 9235498956f53d69b3024d1db023f3eb0908d2aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86ad062f7b7ee3dd2927f8b5b103adfd719a963d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529984"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>HOW TO：從服務端點匯出中繼資料
 本主題說明如何從服務端點匯出中繼資料。  
@@ -55,7 +55,7 @@ ms.locfileid: "33491535"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  編譯 Program.cs 時，請參考 System.ServiceModel.dll。  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料架構概觀](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [端點：位址、繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料架構概觀](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [端點：位址、 繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

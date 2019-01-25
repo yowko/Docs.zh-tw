@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2af8fe5557e452db1ef3a72de35582b18117cc30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153380"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553733"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>逐步解說：處理事件 (Visual Basic)
 這是示範如何使用事件的兩個主題的第二個。 第一個主題中，[逐步解說：宣告和引發事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，示範如何宣告及引發事件。 本節會使用表單和類別，從該逐步解說示範如何處理它們發生的事件。  
@@ -116,6 +116,6 @@ ms.locfileid: "53153380"
 > [!NOTE]
 >  您可以宣告多個`WithEvents`變數做為您的需要但陣列`WithEvents`不支援變數。  
   
-## <a name="see-also"></a>另請參閱  
- [逐步解說：宣告和引發事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>另請參閱
+- [逐步解說：宣告和引發事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
+- [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)

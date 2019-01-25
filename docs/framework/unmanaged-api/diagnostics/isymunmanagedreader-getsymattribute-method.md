@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9f22f23835f01022d5d62596b2cf63425759193
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d43467a0f3ff94eb7903b808e192230e6c0ff1e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561060"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute 方法
-取得其名稱為基礎的自訂屬性。 不同於中繼資料的自訂屬性，這些自訂屬性是存放在符號存放區。  
+取得自訂屬性，根據其名稱。 不同於中繼資料的自訂屬性，這些自訂屬性會保存在符號存放區。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,10 +41,10 @@ HRESULT GetSymAttribute (
   
 #### <a name="parameters"></a>參數  
  `parent`  
- [in]屬性要求的物件中繼資料語彙基元。  
+ [in]屬性要求的物件之中繼資料語彙基元。  
   
  `name`  
- [in]要擷取的屬性會指出變數的指標。  
+ [in]表示要擷取的屬性變數的指標。  
   
  `cBuffer`  
  [in] `buffer` 陣列的大小。  
@@ -53,13 +53,13 @@ HRESULT GetSymAttribute (
  [out]接收屬性資料的長度變數的指標。  
   
  `buffer`  
- [out]此變數會接收屬性資料指標。  
+ [out]此變數會接收屬性的資料指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼...  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼...  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

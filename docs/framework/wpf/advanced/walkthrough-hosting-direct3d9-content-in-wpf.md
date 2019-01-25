@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 1fa4c2347448e23bbf740093541ec2b834df6705
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c8bee03cc3a72e1938cca182d59818f9bc2eabc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849867"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626046"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>逐步解說：在 WPF 中裝載 Direct3D9 內容
 本逐步解說示範如何裝載 Windows Presentation Foundation (WPF) 應用程式中的 Direct3D9 內容。  
@@ -32,14 +32,14 @@ ms.locfileid: "48849867"
   
 -   DirectX 9 或更新版本的 SDK。  
   
--   包含與 WPF 相容的格式中的 Direct3D9 內容的 DLL。 如需詳細資訊，請參閱 < [WPF 和 Direct3D9 互通](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)並[逐步解說： 建立 Direct3D9 內容裝載於 WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。  
+-   包含與 WPF 相容的格式中的 Direct3D9 內容的 DLL。 如需詳細資訊，請參閱 < [WPF 和 Direct3D9 互通](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)和[逐步解說：建立裝載在 WPF 中的 Direct3D9 內容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。  
   
 ## <a name="creating-the-wpf-project"></a>建立 WPF 專案  
  第一個步驟是建立 WPF 應用程式的專案。  
   
 #### <a name="to-create-the-wpf-project"></a>若要建立 WPF 專案  
   
--   新的 WPF 應用程式專案中 Visual C# 建立名為`D3DHost`。 如需詳細資訊，請參閱[如何：建立新的 WPF 應用程式專案](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。  
+-   新的 WPF 應用程式專案中 Visual C# 建立名為`D3DHost`。 如需詳細資訊，請參閱[＜How to：建立新的 WPF 應用程式專案](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。  
   
      在中開啟 MainWindow.xaml [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
   
@@ -71,6 +71,6 @@ ms.locfileid: "48849867"
   
      Direct3D9 內容會出現在 WPF 應用程式中。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Interop.D3DImage>  
- [Direct3D9 和 WPF 互通性的效能考量](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Interop.D3DImage>
+- [Direct3D9 和 WPF 互通性的效能考量](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)

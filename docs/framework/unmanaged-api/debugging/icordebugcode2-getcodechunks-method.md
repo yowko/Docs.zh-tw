@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdfcd45b15ddc1491b12de0fa42901b6d3f7fe9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf8bc747f643819eb82448b4ad6b7fab696c9c91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572496"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks 方法
 取得這個程式碼物件組成的程式碼區塊。  
@@ -43,22 +43,22 @@ HRESULT GetCodeChunks (
  [in]大小`chunks`陣列。  
   
  `pcnumChunks`  
- [out]區塊中傳回的數目`chunks`陣列。  
+ [out]傳入的區塊數目`chunks`陣列。  
   
  `chunks`  
- [out]結構的陣列 」 CodeChunkInfo"，其中每一個都代表單一的程式碼區塊。 如果值`cbufSize`是 0，這個參數可以是 null。  
+ [out]結構的陣列 」 CodeChunkInfo 」，每一個都代表單一的程式碼區塊。 如果值`cbufSize`為 0，這個參數可以是 null。  
   
 ## <a name="remarks"></a>備註  
- 程式碼區塊將會永遠不會重疊，而且它們會將遵照的順序中串連這些區塊會有已由[Icordebugcode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md)。 在.NET Framework 2.0 版的 Microsoft intermediate language (MSIL) 程式碼物件將由一個單一程式碼區塊所組成。  
+ 程式碼區塊 （chunk） 將會永遠不會重疊，以及它們會依的序執行所在串連這些區塊會有已由[icordebugcode:: Getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md)。 在.NET Framework 2.0 版的 Microsoft intermediate language (MSIL) 程式碼物件會構成單一的程式碼區塊。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- 
+## <a name="see-also"></a>另請參閱
+

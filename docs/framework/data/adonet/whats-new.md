@@ -2,12 +2,12 @@
 title: 什麼&#39;ADO.NET 的新功能
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: a94833a513fa6ceef02b5ec64f0a7995779d323a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cfb1546ccddc6a4f6f3668210832db3d7a88f632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501591"
 ---
 # <a name="what39s-new-in-adonet"></a>什麼&#39;ADO.NET 的新功能
 下列功能是 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 的新功能。  
@@ -48,11 +48,11 @@ ms.locfileid: "43511799"
 -   包含空間資料類型的 Microsoft.SqlServer.Types.dll 組件已從 10.0 版升級至 11.0 版。 參考此組件的應用程式可能會失敗。 如需詳細資訊，請參閱 < [Database Engine 功能的突破性變更](https://go.microsoft.com/fwlink/?LinkId=224367)。  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
- [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 新增應用程式開發介面，可在搭配使用 Entity Framework 5.0 時啟用新案例。 如需有關改善和已新增至 Entity Framework 5.0 的功能的詳細資訊，請參閱下列主題： [What's New](https://go.microsoft.com/fwlink/?LinkID=251106)並[Entity Framework 版本與版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。  
+ [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 新增應用程式開發介面，可在搭配使用 Entity Framework 5.0 時啟用新案例。 如需有關改善和已新增至 Entity Framework 5.0 的功能的詳細資訊，請參閱下列主題：[最新消息](https://go.microsoft.com/fwlink/?LinkID=251106)並[Entity Framework 版本與版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。  
   
-## <a name="see-also"></a>另請參閱  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [WCF Data Services 的新功能](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [WCF Data Services 的新功能](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

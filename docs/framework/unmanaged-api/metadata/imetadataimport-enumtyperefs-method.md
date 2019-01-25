@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8a4fe2a65244156abe1bb0da4266f949ddd3df6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d096be8eb7f966d5a79e57a3a1b7ab7f63cd5ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659250"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs 方法
 列舉在目前中繼資料範圍中定義的 TypeRef 語彙基元。  
@@ -40,16 +40,16 @@ HRESULT EnumTypeRefs (
   
 #### <a name="parameters"></a>參數  
  `phEnum`  
- [in、 out]列舉值的指標。 這必須是 NULL 的第一個呼叫此方法。  
+ [in、 out]列舉值的指標。 首次呼叫這個方法，這必須是 NULL。  
   
  `rTypeRefs`  
- [out]陣列，用來儲存 typeref 語彙基元。  
+ [out]陣列，用來儲存的 typeref 語彙基元。  
   
  `cMax`  
  [in] `rTypeRefs` 陣列的大小上限。  
   
  `pcTypeRefs`  
- [out]傳回的 typeref 語彙基元數目的指標`rTypeRefs`。  
+ [out]中傳回的 typeref 語彙基元數目的指標`rTypeRefs`。  
   
 ## <a name="return-value"></a>傳回值  
   
@@ -59,17 +59,17 @@ HRESULT EnumTypeRefs (
 |`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcTypeRefs`為零。|  
   
 ## <a name="remarks"></a>備註  
- TypeRef 語彙基元代表類型的參考。  
+ TypeRef 語彙基元表示型別的參考。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

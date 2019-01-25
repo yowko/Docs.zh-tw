@@ -9,12 +9,12 @@ helpviewer_keywords:
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: KrzysztofCwalina
-ms.openlocfilehash: c9ed52c5a313676baeba66f5cb79c7a56927babb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525478"
 ---
 # <a name="events-and-callbacks"></a>事件和回呼
 回呼是擴充點，讓回呼透過委派的使用者程式碼的架構。 這些委派通常會透過方法的參數傳遞給架構。  
@@ -45,5 +45,5 @@ ms.locfileid: "53154420"
   
 ## <a name="see-also"></a>另請參閱
 
-- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 039a6f5aab2f1b857f98803f8b3d6425cc549877
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486037"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554682"
 ---
 # <a name="handling-null-values"></a>處理 Null 值
 當資料行中的值未知或遺失時，便會使用關聯式資料庫中的 Null 值。 Null 既不是空字串 (針對字元或 datetime 資料型別)，也不是零值 (針對數值資料型別)。 根據 ANSI SQL-92 規格的內容，對所有的資料型別而言，Null 必須都是相同的，以便可一致處理所有的 Null。 藉由實作 <xref:System.Data.SqlTypes> 介面，<xref:System.Data.SqlTypes.INullable> 命名空間可以提供 Null 語意。 <xref:System.Data.SqlTypes> 中的每個資料型別都具有自己的 `IsNull` 屬性及 `Null` 值，而該值可以指派給該資料型別的執行個體 (Instance)。  
@@ -32,7 +32,7 @@ ms.locfileid: "43486037"
 ## <a name="nulls-and-sqlboolean"></a>Null 及 SqlBoolean  
  任何 <xref:System.Data.SqlTypes> 之間的比較都將傳回 <xref:System.Data.SqlTypes.SqlBoolean>。 每個 `IsNull` 的 `SqlType` 函式都會傳回 <xref:System.Data.SqlTypes.SqlBoolean>，並可用於檢查是否有 Null 值。 下列 True 值資料表顯示存在 Null 值時，AND、OR 及 NOT 運算子將如何運作。 (T=true、F=false 及 U=unknown 或 Null)。  
   
- ![真值表](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
+ ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>瞭解 ANSI_NULLS 選項  
  <xref:System.Data.SqlTypes> 提供的語意與在 SQL Server 中設定 ANSI_NULLS 選項時的語意相同。 所有算術運算子 (+、-，*，/、 %)，位元運算子 (~、 &、 &#124;)，以及大部分函數都會傳回 null，如果任何運算元或引數是 null，但屬性除外`IsNull`。  
@@ -141,6 +141,6 @@ String.Equals instance method:
   Two empty strings=True   
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+- [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

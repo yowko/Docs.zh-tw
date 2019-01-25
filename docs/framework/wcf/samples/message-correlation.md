@@ -2,12 +2,12 @@
 title: 訊息相互關聯
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: dbe4408a3f2a5de92cad1cb286b9aedd963e8440
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f60d34ba7348b75f10be326319738fd1555d42df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520655"
 ---
 # <a name="message-correlation"></a>訊息相互關聯
 此範例示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation (WCF) 服務，以及如何訊息可以相互關聯的要求/回應案例中的傳送者與接收者應用程式之間。 這個範例會使用 msmqIntegrationBinding 繫結。 本實例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 K  
@@ -312,6 +312,6 @@ static void DisplayOrderStatus()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
-## <a name="see-also"></a>另請參閱  
- [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [訊息佇列](https://go.microsoft.com/fwlink/?LinkId=94968)
+## <a name="see-also"></a>另請參閱
+- [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [訊息佇列](https://go.microsoft.com/fwlink/?LinkId=94968)

@@ -1,5 +1,5 @@
 ---
-title: 如何：建立 BorderThickness 值的動畫
+title: HOW TO：建立 BorderThickness 值的動畫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - border thickness [WPF], animating changes to
 - animation [WPF], changes to border thickness
 ms.assetid: fd021978-f74b-4e7b-a7f7-3987dcad9e0f
-ms.openlocfilehash: d1ead0493d75f708557f0598d603440221182ebc
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: bd9c75ecb6c95f0dad562701940850e111dddbff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664378"
 ---
-# <a name="how-to-animate-a-borderthickness-value"></a>如何：建立 BorderThickness 值的動畫
+# <a name="how-to-animate-a-borderthickness-value"></a>HOW TO：建立 BorderThickness 值的動畫
 此範例示範如何建立變更框線粗細的動畫使用<xref:System.Windows.Media.Animation.ThicknessAnimation>類別。  
   
 ## <a name="example"></a>範例  
@@ -26,11 +26,11 @@ ms.locfileid: "49308393"
   
  如需完整的範例，請參閱[動畫範例圖庫](https://go.microsoft.com/fwlink/?LinkID=159969)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Animation.ThicknessAnimation>  
- <xref:System.Windows.Controls.Border.BorderThickness%2A>  
- <xref:System.Windows.Controls.Border>  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [動畫和計時](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
- [使用主要畫面格建立框線粗細的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Animation.ThicknessAnimation>
+- <xref:System.Windows.Controls.Border.BorderThickness%2A>
+- <xref:System.Windows.Controls.Border>
+- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [動畫和計時](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
+- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [使用主要畫面格建立框線粗細的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 9c50d03454860979e3475cb381fefc2acc07cece
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3762e3bf0978feeb1155f8cc8249a77f0a497df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535265"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 陳述式 (Visual Basic)
 執行一系列重複參考單一物件或結構的陳述式，使陳述式在存取物件或結構的成員時，可以使用簡化的語法。  使用結構時，您可以只讀取成員的值或叫用方法，如果嘗試指派值給 `With...End With` 陳述式中使用的結構成員，將會收到錯誤。  
@@ -37,9 +37,9 @@ End With
   
 |詞彙|定義|  
 |---|---|  
-|`objectExpression`|必要。 判斷值為物件的運算式。 運算式可能會很複雜，而且只會評估一次。 運算式可以判斷值為任何資料類型，包括基礎類型。|  
+|`objectExpression`|必要項。 判斷值為物件的運算式。 運算式可能會很複雜，而且只會評估一次。 運算式可以判斷值為任何資料類型，包括基礎類型。|  
 |`statements`|選擇性。 在 `With` 和 `End With` 之間的一個或多個陳述式，這些陳述式可能會參考由 `objectExpression` 的評估所產生之物件的成員。|  
-|`End With`|必要。 終止 `With` 區塊的定義。|  
+|`End With`|必要項。 終止 `With` 區塊的定義。|  
   
 ## <a name="remarks"></a>備註  
  您可以使用 `With...End With` 在指定的物件上執行一系列的陳述式，而不需多次指定物件的名稱。 在 `With` 陳述式區塊內，您可以指定以句號為開頭的物件成員，就如同 `With` 陳述式物件在其前方。  
@@ -62,10 +62,10 @@ End With
   
  您無法從區塊外部分支進入 `With` 陳述式區塊。  
   
- 除非區塊包含迴圈，否則陳述式只會執行一次。 您可以巢狀方式處理不同種類的控制結構。 如需詳細資訊，請參閱[巢狀控制結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。  
+ 除非區塊包含迴圈，否則陳述式只會執行一次。 您可以巢狀方式處理不同種類的控制結構。 如需詳細資訊，請參閱 <<c0> [ 巢狀控制結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。  
   
 > [!NOTE]
->  您可以在物件初始設定式中使用 `With` 關鍵字。 如需詳細資訊和範例，請參閱[物件初始設定式： 具名和匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)和[匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
+>  您可以在物件初始設定式中使用 `With` 關鍵字。 如需詳細資訊和範例，請參閱[物件初始設定式：具名和匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)並[匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
 >   
 >  如果您只有在初始化剛具現化之物件的屬性或欄位時使用 `With` 區塊，請考慮改用物件初始設定式。  
   
@@ -79,8 +79,8 @@ End With
   
  [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_2.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Collections.Generic.List%601>  
- [巢狀控制結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [物件初始設定式：具名和匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Collections.Generic.List%601>
+- [巢狀控制結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [物件初始設定式：具名和匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: d88d99b663b0aaeb0ae432cf02675a45c4c8bc1f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8b71942380b750cd654c2d4c248bf5c93d82112e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149064"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555076"
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt;項目 （網路設定）
 描述 HTTP 快取是否作用中，並且描述的預設快取原則。  
   
  \<configuration>  
 \<system.net>  
-\<Requestcaching> >  
-\<defaultHttpCachePolicy >  
+\<requestCaching>  
+\<defaultHttpCachePolicy>  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,7 +53,7 @@ ms.locfileid: "53149064"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[Requestcaching>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
+|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
   
 ## <a name="remarks"></a>備註  
  值`policyLevel`屬性是`BypassCache`或`Default`。  
@@ -80,8 +80,8 @@ ms.locfileid: "53149064"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.Net.Cache>  
-- <xref:System.Net.WebRequest>  
-- <xref:System.Net.Cache.RequestCacheLevel>  
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.Cache>
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.Cache.RequestCacheLevel>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

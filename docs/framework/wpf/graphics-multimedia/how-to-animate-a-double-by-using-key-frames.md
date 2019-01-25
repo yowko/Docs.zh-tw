@@ -1,5 +1,5 @@
 ---
-title: 操作說明：使用主要畫面格建立雙精度浮點數的動畫
+title: HOW TO：使用主要畫面格建立雙精度浮點數的動畫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 67466bbb5fd7e7a46c312e14666c23048bf43d80
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 60d939e9b63767a7efef059581983e8d8e8721ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639389"
 ---
-# <a name="how-to-animate-a-double-by-using-key-frames"></a>操作說明：使用主要畫面格建立雙精度浮點數的動畫
+# <a name="how-to-animate-a-double-by-using-key-frames"></a>HOW TO：使用主要畫面格建立雙精度浮點數的動畫
 此範例示範如何以動畫顯示採用屬性的值<xref:System.Double>使用主要畫面格。  
   
 ## <a name="example"></a>範例  
@@ -36,11 +36,11 @@ ms.locfileid: "45742581"
   
  為了和其他動畫範例保持一致，使用此範例中的程式碼版本<xref:System.Windows.Media.Animation.Storyboard>物件，要套用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>。 或者，套用單一動畫的程式碼中，時，使用的工作變得更容易<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法，而不是使用<xref:System.Windows.Media.Animation.Storyboard>。 如需範例，請參閱[不使用分鏡腳本而建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
- <xref:System.Windows.Shapes.Rectangle>  
- <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>  
- <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>  
- <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>  
- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [主要畫面格操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
+- <xref:System.Windows.Shapes.Rectangle>
+- <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>
+- <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>
+- <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>
+- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [主要畫面格操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

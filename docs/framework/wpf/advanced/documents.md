@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 145c28a2f36b2d53487004af214f3c6048f0687e
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6dba276e88f4c3dd475e3d79de43a9fca7a35206
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546971"
 ---
 # <a name="documents"></a>文件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一組多功能的元件，可讓開發人員透過進階的文件功能和改良的閱讀經驗來建置應用程式。 除了增強功能和品質，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也針對文件封裝、安全性和儲存提供簡化的管理服務。  
@@ -24,8 +24,8 @@ ms.locfileid: "49415200"
  [印刷樣式](typography.md)  
  [列印和列印系統管理](printing-and-print-system-management.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Controls.DocumentViewer>  
- <xref:System.Windows.Documents.FlowDocument>  
- <xref:System.Windows.Xps>  
- [isXPS.exe (isXPS 一致性工具)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Controls.DocumentViewer>
+- <xref:System.Windows.Documents.FlowDocument>
+- <xref:System.Windows.Xps>
+- [isXPS.exe (isXPS 一致性工具)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))

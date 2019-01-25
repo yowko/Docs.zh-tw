@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: 438094d00375531752f575f1f99b3db4ddf4e2e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef6ce3fe62bd45716184ccbbb0f5a29f18e7477f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514799"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic 執行階段程式庫成員
-`Microsoft.VisualBasic`命名空間包含類別、 模組、 常數和列舉型別構成 Visual Basic 執行階段程式庫。 這些程式庫成員可讓程序、 屬性和常數值，您可以使用您的程式碼中。 每個模組和類別代表與特定類別的功能。  
+`Microsoft.VisualBasic`命名空間包含類別、 模組、 常數和列舉型別構成 Visual Basic 執行階段程式庫。 這些程式庫成員提供程序、 屬性和您可以使用您的程式碼中的常數值。 每個模組和類別代表與特定類別的功能。  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection 類別  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33604584"
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.ComClassAttribute.ClassID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.EventID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceShadows%2A>|  
   
-## <a name="microsoftvisualbasiccontrolchars-class"></a>Microsoft.VisualBasic.ControlChars 類別  
+## <a name="microsoftvisualbasiccontrolchars-class"></a>Microsoft.VisualBasic.ControlChars Class  
   
 |||||  
 |---|---|---|---|  
@@ -40,7 +40,7 @@ ms.locfileid: "33604584"
 |<xref:Microsoft.VisualBasic.ControlChars.Lf>|<xref:Microsoft.VisualBasic.ControlChars.NewLine>|<xref:Microsoft.VisualBasic.ControlChars.NullChar>|<xref:Microsoft.VisualBasic.ControlChars.Quote>|  
 |<xref:Microsoft.VisualBasic.ControlChars.Tab>|<xref:Microsoft.VisualBasic.ControlChars.VerticalTab>|||  
   
-## <a name="microsoftvisualbasicconstants-class"></a>Microsoft.VisualBasic.Constants 類別  
+## <a name="microsoftvisualbasicconstants-class"></a>Microsoft.VisualBasic.Constants Class  
   
 |||||  
 |---|---|---|---|  
@@ -71,14 +71,14 @@ ms.locfileid: "33604584"
 |<xref:Microsoft.VisualBasic.Constants.vbVolume>|<xref:Microsoft.VisualBasic.Constants.vbWednesday>|<xref:Microsoft.VisualBasic.Constants.vbWide>|<xref:Microsoft.VisualBasic.Constants.vbYes>|  
 |<xref:Microsoft.VisualBasic.Constants.vbYesNo>|<xref:Microsoft.VisualBasic.Constants.vbYesNoCancel>|||  
   
-## <a name="microsoftvisualbasicconversion-module"></a>Microsoft.VisualBasic.Conversion 模組  
+## <a name="microsoftvisualbasicconversion-module"></a>Microsoft.VisualBasic.Conversion Module  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.Conversion.ErrorToString%2A>|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>|<xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
 |<xref:Microsoft.VisualBasic.Conversion.Oct%2A>|<xref:Microsoft.VisualBasic.Conversion.Str%2A>|<xref:Microsoft.VisualBasic.Conversion.Val%2A>||  
   
-## <a name="microsoftvisualbasicdateandtime-module"></a>Microsoft.VisualBasic.DateAndTime 模組  
+## <a name="microsoftvisualbasicdateandtime-module"></a>Microsoft.VisualBasic.DateAndTime Module  
   
 |||||  
 |---|---|---|---|  
@@ -97,7 +97,7 @@ ms.locfileid: "33604584"
 |<xref:Microsoft.VisualBasic.ErrObject.HelpContext%2A>|<xref:Microsoft.VisualBasic.ErrObject.HelpFile%2A>|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|<xref:Microsoft.VisualBasic.ErrObject.Number%2A>|  
 |<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|||  
   
-## <a name="microsoftvisualbasicfilesystem-module"></a>Microsoft.VisualBasic.FileSystem 模組  
+## <a name="microsoftvisualbasicfilesystem-module"></a>Microsoft.VisualBasic.FileSystem Module  
   
 |||||  
 |---|---|---|---|  
@@ -121,7 +121,7 @@ ms.locfileid: "33604584"
 |<xref:Microsoft.VisualBasic.Financial.PPmt%2A>|<xref:Microsoft.VisualBasic.Financial.PV%2A>|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|<xref:Microsoft.VisualBasic.Financial.SLN%2A>|  
 |<xref:Microsoft.VisualBasic.Financial.SYD%2A>||||  
   
-## <a name="microsoftvisualbasicglobals-module"></a>Microsoft.VisualBasic.Globals 模組  
+## <a name="microsoftvisualbasicglobals-module"></a>Microsoft.VisualBasic.Globals Module  
   
 |||||  
 |---|---|---|---|  
@@ -159,7 +159,7 @@ ms.locfileid: "33604584"
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.CreateMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DefaultInstanceAlias%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DisposeMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.MyGroupName%2A>|  
   
-## <a name="microsoftvisualbasicstrings-module"></a>Microsoft.VisualBasic.Strings 模組  
+## <a name="microsoftvisualbasicstrings-module"></a>Microsoft.VisualBasic.Strings Module  
   
 |||||  
 |---|---|---|---|  
@@ -190,9 +190,9 @@ ms.locfileid: "33604584"
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
-## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic 常數和列舉  
- `Microsoft.VisualBasic`命名空間提供常數和列舉類型做為 Visual Basic 執行階段程式庫的一部分。 您可以在程式碼中使用這些常數的值。 每個列舉，代表與特定類別的功能。 如需詳細資訊，請參閱[常數和列舉](../../visual-basic/language-reference/constants-and-enumerations.md)。  
+## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic 常數和列舉類型  
+ `Microsoft.VisualBasic`命名空間提供的 Visual Basic 執行階段程式庫一部分的常數和列舉型別。 您可以在程式碼中使用這些常數的值。 每個列舉，代表與特定類別的功能。 如需詳細資訊，請參閱 <<c0> [ 常數和列舉型別](../../visual-basic/language-reference/constants-and-enumerations.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [常數和列舉](../../visual-basic/language-reference/constants-and-enumerations.md)  
- [關鍵字](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>另請參閱
+- [常數和列舉](../../visual-basic/language-reference/constants-and-enumerations.md)
+- [關鍵字](../../visual-basic/language-reference/keywords/index.md)

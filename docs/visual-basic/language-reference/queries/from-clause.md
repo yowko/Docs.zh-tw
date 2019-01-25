@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 71573de48cc51c48291fc4b82a0628d2d0f96caa
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fd11d00ebfa42eda272db39965d25b905bd5c841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678781"
 ---
 # <a name="from-clause-visual-basic"></a>From 子句 (Visual Basic)
 指定一或多個範圍變數和要查詢的集合。  
@@ -31,9 +31,9 @@ From element [ As type ] In collection [ _ ]
   
 |詞彙|定義|  
 |---|---|  
-|`element`|必要。 A*範圍變數*用來逐一查看集合的元素。 範圍變數用來參考的每個成員`collection`逐一查看查詢如`collection`。 必須是可列舉的類型。|  
+|`element`|必要項。 A*範圍變數*用來逐一查看集合的元素。 範圍變數用來參考的每個成員`collection`逐一查看查詢如`collection`。 必須是可列舉的類型。|  
 |`type`|選擇性。 `element` 的類型。 如果沒有`type`指定的型別`element`從推斷而來`collection`。|  
-|`collection`|必要。 是指要查詢的集合。 必須是可列舉的類型。|  
+|`collection`|必要項。 是指要查詢的集合。 必須是可列舉的類型。|  
   
 ## <a name="remarks"></a>備註  
  `From`子句用來識別來源資料查詢及用來參考項目的來源集合的變數。 這些變數稱為*範圍變數*。 `From`子句是必要的查詢，除非`Aggregate`子句用來識別傳回只會彙總結果的查詢。 如需詳細資訊，請參閱 <<c0> [ 彙總子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
@@ -69,20 +69,20 @@ From element [ As type ] In collection [ _ ]
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [查詢](../../../visual-basic/language-reference/queries/index.md)  
- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [For Each...Next 陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Distinct 子句](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- [Join 子句](../../../visual-basic/language-reference/queries/join-clause.md)  
- [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)  
- [Skip 子句](../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Take 子句](../../../visual-basic/language-reference/queries/take-clause.md)  
- [Skip While 子句](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Take While 子句](../../../visual-basic/language-reference/queries/take-while-clause.md)
+## <a name="see-also"></a>另請參閱
+- [查詢](../../../visual-basic/language-reference/queries/index.md)
+- [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [For Each...Next 陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Distinct 子句](../../../visual-basic/language-reference/queries/distinct-clause.md)
+- [Join 子句](../../../visual-basic/language-reference/queries/join-clause.md)
+- [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)
+- [Skip 子句](../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Take 子句](../../../visual-basic/language-reference/queries/take-clause.md)
+- [Skip While 子句](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Take While 子句](../../../visual-basic/language-reference/queries/take-while-clause.md)

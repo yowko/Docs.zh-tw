@@ -1,15 +1,16 @@
 ---
-title: HOW TO：使用 WCF Web HTTP 程式設計模型建立傳回任意資料的服務
+title: HOW TO：建立傳回任意使用 WCF Web HTTP 程式設計模型的資料服務
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576391"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>HOW TO：使用 WCF Web HTTP 程式設計模型建立傳回任意資料的服務
-有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 服務作業必須由 WCF 不支援的格式傳回資料時，這種情況。 本主題說明如何使用 WCF WEB HTTP 程式設計模型建立這類服務。 該項服務提供一種會傳回資料流的作業。  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>HOW TO：建立傳回任意使用 WCF Web HTTP 程式設計模型的資料服務
+有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 這是服務作業必須由 WCF 不支援的格式傳回資料的情況。 本主題說明如何使用 WCF WEB HTTP 程式設計模型建立這類服務。 該項服務提供一種會傳回資料流的作業。  
   
 ### <a name="to-implement-the-service-contract"></a>若要實作服務合約  
   
@@ -24,7 +25,7 @@ ms.lasthandoff: 05/04/2018
         }  
     ```  
   
-     因為此方法會傳回<xref:System.IO.Stream>、 WCF 假設作業具有完整控制權從服務作業所傳回的位元組，並套用任何格式傳回的資料。  
+     因為此方法會傳回<xref:System.IO.Stream>WCF 會假設作業具有完整控制權會從服務作業傳回的位元組，它會套用任何格式傳回的資料。  
   
 2.  實作服務合約。 該合約只能有一項作業 (`GetImage`)。 這個方法會產生一張點陣圖，然後以 JPG 格式儲存為 <xref:System.IO.MemoryStream>。 然後，這個作業會將該資料流傳回給呼叫者。  
   
@@ -174,5 +175,5 @@ namespace RawImageService
   
 -   編譯範例程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>另請參閱  
- [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>另請參閱
+- [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

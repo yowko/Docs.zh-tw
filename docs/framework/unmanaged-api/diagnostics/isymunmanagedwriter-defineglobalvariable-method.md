@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1dd657c004c58480ea2f603ad4494753463c79b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 920c768523e422220862b04fa069fc8cbea8960a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677702"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable 方法
-定義單一的全域變數。  
+定義單一全域變數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,13 +49,13 @@ HRESULT DefineGlobalVariable(
  [in]全域變數的屬性。  
   
  `cSig`  
- [in]A`ULONG32`指出的大小，以字元為單位的`signature`緩衝區。  
+ [in]A`ULONG32`表示的大小，以字元為單位，`signature`緩衝區。  
   
  `signature`  
  [in]全域變數簽章。  
   
  `addrKind`  
- [in]地址類型。  
+ [in]位址類型。  
   
  `addr1`  
  [in]參數規格的第一個位址。  
@@ -67,12 +67,12 @@ HRESULT DefineGlobalVariable(
  [in]參數規格的第三個位址。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [DefineLocalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)  
- [DefineGlobalVariable2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [DefineLocalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+- [DefineGlobalVariable2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)

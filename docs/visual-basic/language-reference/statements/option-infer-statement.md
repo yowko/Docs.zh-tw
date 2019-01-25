@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: d6a05abec36f97094adaac7572f6015b10874442
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: ded8d334c45a29e7a892b32f51d4bb1246079ecd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646158"
 ---
 # <a name="option-infer-statement"></a>Option Infer 陳述式
 可讓您在宣告變數時使用區域類型推斷。  
@@ -93,12 +93,12 @@ Option Infer 關閉時的 IntelliSense
   
  [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Compare 陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [Option Explicit 陳述式](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [選項對話方塊、專案、Visual Basic 預設值](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)  
- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+## <a name="see-also"></a>另請參閱
+- [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Option Compare 陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Option Explicit 陳述式](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [選項對話方塊、專案、Visual Basic 預設值](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: 259fcc6f1c59df09e768a08204df81aa8105de53
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: e706650ac6da84d9b4e77fc549811e731be61b92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594157"
 ---
 # <a name="call-statement-visual-basic"></a>Call 陳述式 (Visual Basic)
 控制權轉移到`Function`， `Sub`，或動態連結程式庫 (DLL) 程序。  
@@ -27,7 +27,7 @@ ms.locfileid: "37936785"
 ## <a name="parts"></a>組件  
 |||
 |---|---|
-|`procedureName`|必要。 要呼叫的程序的名稱。|
+|`procedureName`|必要項。 要呼叫的程序的名稱。|
 |`argumentList`|選擇性。 變數或運算式表示呼叫時，會傳遞至程序的引數的清單。 以逗號分隔多個引數。 如果您包含`argumentList`，您必須將它括在括號中。|
 |||
   
@@ -43,8 +43,8 @@ ms.locfileid: "37936785"
   
  [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>另請參閱
+- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

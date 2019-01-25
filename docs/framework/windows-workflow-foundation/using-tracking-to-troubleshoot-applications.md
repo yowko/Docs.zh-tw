@@ -2,12 +2,12 @@
 title: 使用追蹤來疑難排解應用程式
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: f991533b61705c8d0a1a8e71b632dd53f24dd979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1ed95a26f682fcdb609b410251fdb3f8b647016a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734418"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>使用追蹤來疑難排解應用程式
 Windows Workflow Foundation (WF) 可讓您追蹤工作流程相關資訊，提供執行的 Windows Workflow Foundation 應用程式或服務的詳細資料。 Windows Workflow Foundation 主機就能夠在工作流程執行個體執行期間擷取工作流程事件。 如果您的工作流程產生錯誤或例外狀況，您可以使用 Windows Workflow Foundation 追蹤詳細資訊來疑難排解其處理程序。  
@@ -51,6 +51,6 @@ Windows Workflow Foundation (WF) 可讓您追蹤工作流程相關資訊，提�
   
  如果使用 ETW 追蹤參與者啟用追蹤，會將錯誤事件發出至 ETW 工作階段。 使用事件檢視器即可檢視這些事件。 這可以在節點下找到**事件檢視器-> 應用程式及服務記錄檔]-> [Microsoft]-> [Windows]-> [應用程式伺服器-應用程式**在分析通道。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>另請參閱
+- [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)

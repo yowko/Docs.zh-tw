@@ -1,15 +1,15 @@
 ---
-title: CustomPeerResolverService 內部：用戶端登錄
+title: Custompeerresolverservice:用戶端註冊
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 1f8b6f5ac3a41fdc7f817553693b0621ee0ea3de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90d40eb11dbfebf4a19ba4c42e0fd4b45a2b1e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541777"
 ---
-# <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService 內部：用戶端登錄
+# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Custompeerresolverservice:用戶端註冊
 網狀結構中的每一個節點都會將自己的端點資訊透過 `Register` 函式發佈給解析程式服務。 解析程式服務會儲存這項資訊做為註冊記錄。 這份記錄會包含該節點的唯一識別碼 (RegistrationID) 以及端點資訊 (PeerNodeAddress)。  
   
 ## <a name="stale-records-and-expiration-time"></a>失效記錄與到期時間  
@@ -26,12 +26,12 @@ ms.locfileid: "33494052"
   
  若要實作自己的解析程式服務，必須自行撰寫可以移除失效註冊記錄的維護函式。 有幾個方式可做到這點：  
   
--   **定期維護**： 設定計時器設為會定期執行，並瀏覽您的資料存放區，刪除舊的記錄。 <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> 會使用這個方法。  
+-   **定期維護**:設定計時器，定期著手進行並瀏覽您的資料存放區，刪除舊的記錄。 <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> 會使用這個方法。  
   
--   **被動刪除**： 而不是主動定期搜尋失效記錄的您可以識別和您服務正在執行另一個函式時，刪除過時的記錄。 可能會延遲對解析程式用戶端發出之要求的回應時間，但是這可以省去設定計時器的作法，對於只有少數節點會在不呼叫 `Unregister` 而離開網狀結構的情況，也比較有效率。  
+-   **被動刪除**:而不是主動定期搜尋失效記錄的作法，您可以識別和您的服務正在執行另一個函式時，刪除過時的記錄。 可能會延遲對解析程式用戶端發出之要求的回應時間，但是這可以省去設定計時器的作法，對於只有少數節點會在不呼叫 `Unregister` 而離開網狀結構的情況，也比較有效率。  
   
 ## <a name="registrationlifetime-and-refresh"></a>RegistrationLifetime 與 Refresh  
  當一個節點註冊到解析程式服務時，該節點會收到來自服務的 <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> 物件。 指定新的時間量的 `RegistrationLifetime`，註冊項目將在經過這段時間後到期並由解析程式服務移除。 例如，假設 `RegistrationLifetime` 為 2 分鐘，那麼節點必須在 2 分鐘內呼叫 `Refresh`，才能確保記錄的更新狀況且沒有被刪除。 解析程式服務收到 `Refresh` 要求時，服務會檢查該記錄並且重設到期時間。 Refresh 會連同 <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> 屬性傳回 `RegistrationLifetime` 物件。  
   
-## <a name="see-also"></a>另請參閱  
- [對等解析程式](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+## <a name="see-also"></a>另請參閱
+- [對等解析程式](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: f99735df2512fd4b1477bab9126e18f5afbbfa8c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: c02b6ea0895d8b22ac71d0cb3ea6950861de47df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678755"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML 中內嵌的運算式 (Visual Basic)
 內嵌的運算式可讓您建立 XML 常值包含在執行階段評估的運算式。 內嵌運算式的語法`<%=` `expression` `%>`，這會是相同的語法用於[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]。  
@@ -80,10 +80,10 @@ ms.locfileid: "42932925"
 > [!NOTE]
 >  當您宣告 XML 命名空間前置詞使用`xmlns`命名空間屬性的屬性值必須是常數字串。 在這方面，使用`xmlns`屬性，就像是`Imports`陳述式來宣告 XML 命名空間。 您無法使用內嵌的運算式來指定 XML 命名空間值。  
   
-## <a name="see-also"></a>另請參閱  
- [在 Visual Basic 中建立 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML 文件常值](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
- [XML 項目常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [XML 常值概觀](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)
+## <a name="see-also"></a>另請參閱
+- [在 Visual Basic 中建立 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML 文件常值](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [XML 項目常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [XML 常值概觀](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)

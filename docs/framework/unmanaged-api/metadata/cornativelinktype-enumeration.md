@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2bf8848851dc99c60b8c151ed34cd536fa9a8fed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f946179fc31adebc8e8fc67c394e0b55a876f49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641326"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType 列舉
 提供值，這些值表示機器碼中已連結的類型。  
@@ -45,20 +45,20 @@ typedef enum
 |成員|描述|  
 |------------|-----------------|  
 |`nltNone`|表示未指定任何關鍵字。|  
-|`nltAnsi`|指出指定 ANSI 關鍵字。|  
-|`nltUnicode`|指出指定的 Unicode 關鍵字|  
-|`nltAuto`|指出指定 auto 關鍵字。|  
-|`nltOle`|指出指定之 OLE 關鍵字。|  
+|`nltAnsi`|表示指定 ANSI 關鍵字。|  
+|`nltUnicode`|表示指定的 Unicode 關鍵字|  
+|`nltAuto`|表示指定 auto 關鍵字。|  
+|`nltOle`|表示指定之 OLE 關鍵字。|  
 |`nltMaxValue`|未使用。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

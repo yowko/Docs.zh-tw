@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 781111db30ae664c9dd45744f88387e161f2716f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d0e1b764691fd2582e1225cb90003e2a644061f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426795"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643685"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals 方法
 取得此範圍內定義的本機變數。  
@@ -39,19 +39,19 @@ HRESULT GetLocals(
   
 #### <a name="parameters"></a>參數  
  `cLocals`  
- [in]A`ULONG32`指出的大小`locals`陣列。  
+ [in]A`ULONG32`表示的大小`locals`陣列。  
   
  `pcLocals`  
- [out]指標`ULONG32`包含本機變數所需要的緩衝區大小。  
+ [out]指標`ULONG32`接收包含本機變數所需的緩衝區大小。  
   
  `locals`  
  [out]接收的本機變數的陣列。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedScope 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedScope 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

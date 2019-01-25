@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: d0fc45b5ccabedb127061090eed1f6b63fd7acba
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 38a0eec31c4a0910048a0ed674e997d685747862
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664196"
 ---
 # <a name="metadata-architecture-overview"></a>中繼資料架構概觀
 Windows Communication Foundation (WCF) 提供豐富的基礎結構，讓您匯出、 發行、 擷取與匯入服務中繼資料。 WCF 服務會使用中繼資料，說明如何與服務的端點互動，以便 Svcutil.exe 之類的工具，可以自動產生用戶端程式碼，來存取服務。  
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) 提供豐富的基礎結構，讓您匯�
 ## <a name="exporting-service-metadata"></a>匯出服務中繼資料  
  在 WCF 中，*中繼資料匯出*是描述服務端點，並將其投射至並行標準化表示法，用戶端可以用來了解如何使用服務的程序。 若要從 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體匯出中繼資料，請使用 <xref:System.ServiceModel.Description.MetadataExporter> 抽象類別的實作。 <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 實作會產生可封裝到 <xref:System.ServiceModel.Description.MetadataSet> 執行個體的中繼資料。  
   
- <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 類別所提供的架構可產生原則運算式，用來說明端點繫結及其相關作業、訊息，與錯誤的各項功能與需求。 這些原則運算式是在 <xref:System.ServiceModel.Description.PolicyConversionContext> 執行個體中擷取。 <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 實作可接著將這些原則運算式附加到所產生的中繼資料中。  
+ <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 類別所提供的架構可產生原則運算式，用來說明端點繫結程序及其相關作業、訊息，與錯誤的各項功能與需求。 這些原則運算式是在 <xref:System.ServiceModel.Description.PolicyConversionContext> 執行個體中擷取。 <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 實作可接著將這些原則運算式附加到所產生的中繼資料中。  
   
  在產生 <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 物件以供 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> 實作使用時，<xref:System.ServiceModel.Description.IPolicyExportExtension> 會呼叫每個可於 <xref:System.ServiceModel.Description.ServiceEndpoint> 繫結中實作 <xref:System.ServiceModel.Description.PolicyConversionContext> 介面的 <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType>。 您可以在自訂的 <xref:System.ServiceModel.Description.IPolicyExportExtension> 型別實作中實作 <xref:System.ServiceModel.Channels.BindingElement> 介面，以匯出新原則判斷提示。  
   
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) 提供豐富的基礎結構，讓您匯�
 > [!CAUTION]
 > 如果您在應用程式組態檔中加入 MEX 端點，然後嘗試從程式碼將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 加入至服務主機，則會收到下列例外狀況：  
 >
-> System.InvalidOperationException: 在服務 Service1 實作的合約清單中，找不到合約名稱 'IMetadataExchange'。 請直接將 ServiceMetadataBehavior 新增至組態檔或 ServiceHost，直接啟用此合約的支援。  
+> System.InvalidOperationException：在服務 Service1 實作的合約清單中找不到合約名稱 'IMetadataExchange'。 請直接將 ServiceMetadataBehavior 新增至組態檔或 ServiceHost，直接啟用此合約的支援。  
 >
 > 若要解決此問題，您可以在組態檔中加入 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>，或是從程式碼一併加入該端點及 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>。  
 >
@@ -87,12 +87,12 @@ Windows Communication Foundation (WCF) 提供豐富的基礎結構，讓您匯�
 ## <a name="dynamic-bindings"></a>動態繫結  
  當端點繫結變更，或當您想要建立使用相同合約但具有不同繫結的端點通道時，可以針對用來建立服務端點通道的繫結進行動態更新。 您可以針對可實作特定合約的服務端點使用 <xref:System.ServiceModel.Description.MetadataResolver> 靜態類別，於執行階段擷取並匯入中繼資料。 您可以接著使用匯入的 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 物件來建立所需端點的用戶端或通道處理站。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Description>  
- [中繼資料格式](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
- [匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- [發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [擷取中繼資料](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
- [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [擴充中繼資料系統](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Description>
+- [中繼資料格式](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
+- [匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+- [發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
+- [擷取中繼資料](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)
+- [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [擴充中繼資料系統](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

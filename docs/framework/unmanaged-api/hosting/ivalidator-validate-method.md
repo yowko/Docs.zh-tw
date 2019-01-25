@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf2c343db459879ca95372e104aee68b22dee6b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03a8bf7e215794f4a2951fe4e2d54a791bda20e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594053"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate 方法
-驗證指定的可攜式執行檔 (PE) 或 Microsoft 中繼語言 (MSIL) 檔案。  
+驗證指定的可攜式執行檔 (PE) 或 Microsoft intermediate language (MSIL) 檔案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,34 +47,34 @@ HRESULT Validate (
  [in]指標`IVEHandler`處理驗證錯誤的執行個體。  
   
  `pAppDomain`  
- [in]應用程式定義域載入該檔案指標。  
+ [in]此檔案會載入應用程式定義域的指標。  
   
  `ulFlags`  
- [in]位元組合[ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)值，表示應該執行的驗證。  
+ [in]位元組合[ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)值，指出應該執行的驗證。  
   
  `ulMaxError`  
- [in]結束驗證前，允許的錯誤數目上限。  
+ [in]結束驗證之前允許的錯誤數目上限。  
   
  `token`  
- [in]未使用。  
+ [in]不使用。  
   
  `fileName`  
  [in]字串，指定要驗證檔案的名稱。  
   
  `pe`  
- [in]檔案會儲存記憶體緩衝區的指標。  
+ [in]此檔案會儲存記憶體緩衝區的指標。  
   
  `ulSize`  
- [in]以位元組為單位來驗證檔案大小。  
+ [in]以位元組為單位，以驗證檔案的大小。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** IValidator.idl、 IValidator.h  
+ **標頭：** IValidator.idl, IValidator.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- 
+## <a name="see-also"></a>另請參閱
+

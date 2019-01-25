@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: 876a59d1441c1ba4c5057556d5ef2fb2ecb43af6
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ceda7e6ed6fc1744de14afcb0245ebabbd7fa733
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674790"
 ---
 # <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>基礎類型&lt;typename&gt;列舉不符合 CLS 規範
 這個列舉型別不是指定的資料類型的一部分[Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) （cls） 標準。 這是不在您的元件中發生錯誤，因為[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]和 Visual Basic 支援這種資料類型。 不過，另一個以完全符合 CLS 標準的程式碼撰寫的元件可能不支援這種資料類型。 這類元件可能無法順利與您的元件互動。  
@@ -27,7 +27,7 @@ ms.locfileid: "37959675"
   
 -   [UShort 資料類型](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
- 根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的詳細資訊，請參閱[Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
+ 根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的詳細資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
  **錯誤 ID:** BC40032  
   
@@ -41,7 +41,7 @@ ms.locfileid: "37959675"
   
 -   如果您要與 Automation 或 COM 物件進行互動，請記住，某些型別的資料寬度會與在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中的資料寬度不同。 例如，`uint` 在其他環境中通常是 16 位元。 如果您將 16 位元引數傳遞給這類元件，將它宣告為`UShort`而不是`UInteger`中受管理的 Visual Basic 程式碼。  
   
-## <a name="see-also"></a>另請參閱  
- [反映 (Visual Basic)](../../programming-guide/concepts/reflection.md)  
- [反映](../../../framework/reflection-and-codedom/reflection.md)  
- 
+## <a name="see-also"></a>另請參閱
+- [反映 (Visual Basic)](../../programming-guide/concepts/reflection.md)
+- [反映](../../../framework/reflection-and-codedom/reflection.md)
+

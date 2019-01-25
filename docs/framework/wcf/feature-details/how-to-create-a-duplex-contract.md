@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: 39aea526992c503943c3f458854d09677e1b5717
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cc53f6842d55892ae178e22e2835555a132778b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693632"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>HOW TO：建立雙工合約
-本主題說明的基本步驟可用來建立使用雙工 (雙向) 合約的方法。 雙工合約可供用戶端與伺服器彼此各自進行通訊，方便任何一方初始化對另一方的呼叫。 雙工合約是 Windows Communication Foundation (WCF) 服務可用的三種訊息模式的其中一個。 其他兩種訊息模式分別是單向和要求-回覆。 雙工合約是由用戶端和伺服器之間的兩個單向合約組成，而且不需要相互關聯方法呼叫。 當您的服務必須查詢用戶端以獲得更多資訊，或是明確地在用戶端上引發事件時，請使用這種合約。 如需建立雙工合約的用戶端應用程式的詳細資訊，請參閱[How to: Access Services 搭配雙工合約](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。 如需實用範例，請參閱[雙工](../../../../docs/framework/wcf/samples/duplex.md)範例。  
+本主題說明的基本步驟可用來建立使用雙工 (雙向) 合約的方法。 雙工合約可供用戶端與伺服器彼此各自進行通訊，方便任何一方初始化對另一方的呼叫。 雙工合約是其中一個可用於 Windows Communication Foundation (WCF) 服務的三種訊息模式。 其他兩種訊息模式分別是單向和要求-回覆。 雙工合約是由用戶端和伺服器之間的兩個單向合約組成，而且不需要相互關聯方法呼叫。 當您的服務必須查詢用戶端以獲得更多資訊，或是明確地在用戶端上引發事件時，請使用這種合約。 如需建立雙工合約的用戶端應用程式的詳細資訊，請參閱[How to:使用雙工合約存取服務](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。 如需實用範例，請參閱 <<c0> [ 雙工](../../../../docs/framework/wcf/samples/duplex.md)範例。  
   
 ### <a name="to-create-a-duplex-contract"></a>若要建立雙工合約  
   
@@ -63,15 +63,15 @@ ms.locfileid: "33491926"
   
 -   套用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性可自動產生 Web 服務描述語言 (WSDL) 格式的服務合約定義。  
   
--   使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)擷取 WSDL 文件 （選擇性） 的程式碼以及用戶端組態。  
+-   使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)擷取 WSDL 文件和 （選擇性） 的程式碼和用戶端組態。  
   
 -   您必須保護公開雙工服務的端點安全。 當服務收到雙工訊息時，會查看該傳入訊息中的 ReplyTo 項目，以判斷傳送回覆的位置。 如果通道不安全，那麼未受信任的用戶端可能會傳送惡意訊息，其中包含目標電腦的 ReplyTo，而導致該目標電腦發生阻絕服務。 如果是一般的要求-回覆訊息，這根本不是問題，因為電腦會忽略 ReplyTo 並且在原始傳入訊息所用的通道上傳送回應。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.ServiceContractAttribute>  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [如何：使用雙面合約存取服務](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [雙面](../../../../docs/framework/wcf/samples/duplex.md)  
- [設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [如何：定義服務合約](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- [工作階段](../../../../docs/framework/wcf/samples/session.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.ServiceContractAttribute>
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [如何：Access Services 搭配雙工合約](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [雙面](../../../../docs/framework/wcf/samples/duplex.md)
+- [設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [如何：定義服務合約](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [工作階段](../../../../docs/framework/wcf/samples/session.md)

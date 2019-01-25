@@ -2,11 +2,12 @@
 title: 參考 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0f4cc4b9-361d-4de2-b4c3-be7cbd5dd47b
-ms.openlocfilehash: e40f15789454abcd6fc4b9dd9aeb30399c5161e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c8ee29068ebc6d39760530466da3c9718107149
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744852"
 ---
 # <a name="reference-linq-to-xml"></a>參考 (LINQ to XML)
 本主題包含指向 LINQ to XML 參考主題的連結。  
@@ -18,5 +19,5 @@ ms.lasthandoff: 05/04/2018
   
  如需可讓您在 XML 樹狀結構上評估 XPath 查詢之擴充方法的參考文件，請參閱 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)
+## <a name="see-also"></a>另請參閱
+- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: f3db5f8f6688e68992f683ac1b1465078aa41231
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5c86660574e9d12f646eed9d6d6397781cb9b9c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244708"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685486"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic 中的 Me、My、MyBase 和 MyClass
 `Me``My`， `MyBase`，和`MyClass`Visual Basic 中有類似的名稱，但不同的用途。 本主題會描述每個實體以區別。  
@@ -58,5 +58,5 @@ ChangeFormColor(Me)
 ## <a name="myclass"></a>MyClass  
  `MyClass`關鍵字的行為就像參考目前的執行個體的類別，以原始實作的物件變數。 `MyClass` 類似於`Me`，但在其上的所有方法呼叫會都視為方法`NotOverridable`。  
   
-## <a name="see-also"></a>另請參閱  
- [繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a>另請參閱
+- [繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

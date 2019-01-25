@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 039dab1b4ca86cb26de739e74b152f108f074c43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a874c1493e1f8aaa18354de26905fabd3a793129
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674540"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces 方法
 取得這個命名空間的子系。  
@@ -39,19 +39,19 @@ HRESULT GetNamespaces(
   
 #### <a name="parameters"></a>參數  
  `cNameSpaces`  
- [in]A`ULONG32`指出的大小`namespaces`陣列。  
+ [in]A`ULONG32`表示的大小`namespaces`陣列。  
   
  `pcNameSpaces`  
- [out]指標`ULONG32`接收以字元為單位，包含命名空間所需的緩衝區大小。  
+ [out]指標`ULONG32`接收大小，以字元為單位，以包含命名空間所需的緩衝區。  
   
  `namespaces`  
  [out]包含命名空間緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedNamespace 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedNamespace 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

@@ -2,12 +2,12 @@
 title: 集合 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 734eeba001c243fa3466ac608feb766d6d94c394
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698761"
 ---
 # <a name="collections-visual-basic"></a>集合 (Visual Basic)
 在許多應用程式中，您想要建立和管理相關物件的群組。 有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。  
@@ -224,7 +224,7 @@ End Class
 |<xref:System.Collections.Queue>|表示物件的先進先出 (FIFO) 集合。|  
 |<xref:System.Collections.Stack>|表示物件的後進先出 (LIFO) 集合。|  
   
- <xref:System.Collections.Specialized> 命名空間會提供特製化類型和強類型集合類別，例如只有字串的集合，以及連結串列和 Hybrid 字典。  
+ <xref:System.Collections.Specialized> 命名空間會提供特製化類型和強型別集合類別，例如只有字串的集合，以及連結串列和 Hybrid 字典。  
 
 <a name="BKMK_VisualBasic"></a> 
 ###  <a name="visual-basic-collection-class"></a>Visual Basic Collection 類別  
@@ -572,13 +572,13 @@ End Function
   
 ## <a name="see-also"></a>另請參閱
 
-- [集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
-- [程式設計概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
-- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
-- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
-- [平行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
-- [集合和資料結構](../../../standard/collections/index.md)  
-- [建立和操作集合](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
-- [選取集合類別](../../../standard/collections/selecting-a-collection-class.md)  
-- [在集合內比較和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [程式設計概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [平行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [集合和資料結構](../../../standard/collections/index.md)
+- [建立和操作集合](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
+- [選取集合類別](../../../standard/collections/selecting-a-collection-class.md)
+- [在集合內比較和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [何時使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)

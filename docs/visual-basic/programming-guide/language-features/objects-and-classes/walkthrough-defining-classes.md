@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: aac30a8b0272ae6c141138a91585953237ab8098
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c41d3b2c8d905395f1249b15709da8dbdf5d4632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640429"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>逐步解說：定義類別 (Visual Basic)
 
@@ -77,9 +77,9 @@ ms.locfileid: "43403538"
   
 1.  按 f5 鍵執行應用程式。 按一下呼叫測試程序表單上的按鈕。 它會顯示訊息，指出原始`UserName`是 「 摩爾 BOBBY"，因為程序來呼叫`Capitalize`物件的方法。  
   
-2.  按一下 **確定**關閉訊息方塊。 `Button1 Click`程序會變更的值`UserName`屬性，並顯示訊息，說明的新值`UserName`是 「 Worden，Joe"。  
+2.  按一下 [確定] 來解除訊息方塊。 `Button1 Click`程序會變更的值`UserName`屬性，並顯示訊息，說明的新值`UserName`是 「 Worden，Joe"。  
   
 ## <a name="see-also"></a>另請參閱
 
-[物件導向程式設計 (Visual Basic)](../../concepts/object-oriented-programming.md)  
-[物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [物件導向程式設計 (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

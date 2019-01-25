@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822425b958422ba364a1f10903c7c312ba43fab9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 54ac36f6d0dba92742ea7a7acfadc194930ccd74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516433"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 列舉
 識別要進行記憶體回收的物件來源。  
@@ -53,34 +53,34 @@ typedef enum {
 |成員名稱|描述|  
 |-----------------|-----------------|  
 |`CorHandleStrong`|物件控制代碼資料表中的強式參考控制代碼。|  
-|`CorHandleStrongPinning`|控制代碼已釘選的強式參考物件控制代碼資料表中。|  
-|`CorHandleWeakShort`|控制代碼的弱式參考物件控制代碼資料表中。|  
+|`CorHandleStrongPinning`|控制代碼已釘選的強式參考的物件控制代碼資料表中。|  
+|`CorHandleWeakShort`|控制代碼的弱式參考的物件控制代碼資料表中。|  
 |`CorHandleWeakRefCount`|物件的控制代碼弱式參考計數物件控制代碼資料表中。|  
 |`CorHandleStrongRefCount`|物件的控制代碼參考計數物件控制代碼資料表中。|  
 |`CorHandleStrongDependent`|物件的控制代碼相依物件控制代碼資料表中。|  
 |`CorHandleStrongAsyncPinned`|物件控制代碼資料表中的非同步固定物件。|  
 |`CorHandleStrongSizedByref`|強式控制代碼，保留記憶體回收時集體關閉之所有物件和根物件的估計大小。|  
 |`CorReferenceStack`|從 managed 堆疊的參考。|  
-|`CorReferenceFinalizer`|完成項佇列中的參考。|  
-|CorHandleStrongOnly|傳回只有強式參考控制代碼資料表中。 這個值由[icordebugprocess5:: Enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)只方法。|  
-|`CorHandleWeakOnly`|傳回只弱式參考控制代碼資料表中。 這個值由[icordebugprocess5:: Enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)只方法。|  
-|`CorHandleAll`|傳回控制代碼資料表中的所有參考。 這個值由[icordebugprocess5:: Enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)只方法。|  
+|`CorReferenceFinalizer`|從完成項佇列的參考。|  
+|CorHandleStrongOnly|傳回只有強式參考控制代碼資料表中。 這個值由[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)僅方法。|  
+|`CorHandleWeakOnly`|傳回只弱式參考控制代碼資料表中。 這個值由[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)僅方法。|  
+|`CorHandleAll`|傳回控制代碼資料表中的所有參考。 這個值由[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)僅方法。|  
   
 ## <a name="remarks"></a>備註  
  `CorGCReferenceType`列舉可用，如下所示：  
   
--   值為`type`欄位[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)結構，它會指出來源的參考或控制代碼。  
+-   值`type`欄位[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)結構，它會指出參考或控制代碼的來源。  
   
--   做為`types`引數[icordebugprocess5:: Enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)方法，它會指定要包含在列舉中的控制代碼的類型。  
+-   作為`types`引數[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)方法，它會指定要包含在列舉中的控制代碼的類型。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

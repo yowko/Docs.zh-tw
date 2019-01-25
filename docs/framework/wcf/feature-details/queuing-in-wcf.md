@@ -2,12 +2,12 @@
 title: WCF 中的佇列
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: f04055df2c6d4b0a51b36040a5b377bb8738c534
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: fcdd38cf02157829bdc476cc289ea89ff8767487
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559460"
 ---
 # <a name="queuing-in-wcf"></a>WCF 中的佇列
 本節說明如何使用 Windows Communication Foundation (WCF) 中的佇列的通訊。  
@@ -48,7 +48,7 @@ ms.locfileid: "49086592"
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce 和 Durable 屬性  
  `ExactlyOnce` 和 `Durable` 屬性會影響在佇列之間傳輸訊息的方式：  
   
--   `ExactlyOnce`：設定為 `true` (預設值) 時，佇列通道會確定傳送的訊息沒有重複， 也會確定沒有遺失訊息。 如果無法傳送訊息，或者在可以傳送訊息之前訊息存留時間到期，就會在寄不出的信件佇列中記錄失敗的訊息和傳送失敗的原因。 設定為 `false` 時，佇列通道會傳輸訊息。 在這個情況下，您可以選擇寄不出的信件佇列。  
+-   `ExactlyOnce`：當設定為`true`（預設值），佇列的通道會確定的訊息，如果傳遞，不會重複。 也會確定沒有遺失訊息。 如果無法傳送訊息，或者在可以傳送訊息之前訊息存留時間到期，就會在寄不出的信件佇列中記錄失敗的訊息和傳送失敗的原因。 設定為 `false` 時，佇列通道會傳輸訊息。 在這個情況下，您可以選擇寄不出的信件佇列。  
   
 -   `Durable:` 設定為 `true` (預設值) 時，佇列通道會確定 MSMQ 將訊息永久儲存在磁碟上。 因此，如果停止後重新啟動 MSMQ 服務，磁碟上的訊息就會傳輸至目標佇列或傳遞至服務。 設定為 `false` 時，訊息會儲存在變動性存放區中，而且在停止後重新啟動 MSMQ 服務時會遺失。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "49086592"
   
  繫結中有兩個重要的屬性：  
   
--   `DeadLetterQueue`：這個屬性是一種列舉，指出是否要求寄不出的信件佇列。 列舉中也包含寄不出的信件佇列種類 (如果有要求的話)。 這些值則為 `None`、`System` 和 `Custom`。 如需有關這些屬性的解釋的詳細資訊，請參閱[使用寄不出信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`：這個屬性是列舉，指出是否要求寄不出信件佇列。 列舉中也包含寄不出的信件佇列種類 (如果有要求的話)。 這些值則為 `None`、`System` 和 `Custom`。 如需有關這些屬性的解釋的詳細資訊，請參閱[使用寄不出信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
--   `CustomDeadLetterQueue`：這個屬性是應用程式特定之寄不出的信件佇列的統一資源識別碼 (URI) 位址。 這是必要的如果`DeadLetterQueue`。`Custom` 選擇。  
+-   `CustomDeadLetterQueue`：這個屬性是應用程式特定之寄不出信件佇列的統一資源識別元 (URI) 位址。 這是必要的如果`DeadLetterQueue`。`Custom` 選擇。  
   
 #### <a name="poison-message-handling-properties"></a>有害訊息處理屬性  
  當服務在交易中從目標佇列中讀取訊息時，可能會因為各種原因而無法處理訊息。 然後服務會將訊息放回佇列，以便再次讀取。 若要處理重複失敗的訊息，可以在繫結中設定一組有害訊息處理屬性。 有害訊息處理屬性有四個：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 如需有關這些屬性的詳細資訊，請參閱 <<c0> [ 有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
@@ -81,13 +81,13 @@ ms.locfileid: "49086592"
  `MsmqTransportSecurity` 也會公開 `MsmqEncryptionAlgorithm` 和 `MsmqHashAlgorithm` 這兩個屬性。 進行訊息的佇列對佇列傳輸加密，以及進行簽章雜湊處理時，可選用這些不同演算法的列舉。  
   
 #### <a name="other-properties"></a>其他屬性  
- 除了上述屬性，下面也有繫結中公開的其他 MSMQ 特定屬性：  
+ 除了上述屬性，下面也有繫結程序中公開的其他 MSMQ 特定屬性：  
   
--   `UseSourceJournal`：指出已開啟來源日誌記錄的屬性。 來源日誌記錄是一個 MSMQ 功能，可追蹤已順利從傳輸佇列傳輸的訊息。  
+-   `UseSourceJournal`：開啟 屬性來表示來源日誌記錄。 來源日誌記錄是一個 MSMQ 功能，可追蹤已順利從傳輸佇列傳輸的訊息。  
   
--   `UseMsmqTracing`：指出已開啟 MSMQ 追蹤的屬性。 每次裝載 MSMQ 佇列管理員的電腦上有訊息傳入或傳出時，MSMQ 追蹤就會將報告訊息傳送至報告佇列。  
+-   `UseMsmqTracing`：表示已開啟 MSMQ 追蹤屬性。 每次裝載 MSMQ 佇列管理員的電腦上有訊息傳入或傳出時，MSMQ 追蹤就會將報告訊息傳送至報告佇列。  
   
--   `QueueTransferProtocol`：用於佇列對佇列訊息傳輸的通訊協定列舉。 MSMQ 會實作原生佇列對佇列傳輸通訊協定，以及稱為 SOAP Reliable Messaging Protocol (SRMP) 的 SOAP 架構通訊協定。 在佇列對佇列傳輸中使用 HTTP 傳輸時，就會使用 SRMP。 在佇列對佇列傳輸中使用 HTTPS 時，則會使用 SRMP。  
+-   `QueueTransferProtocol`：要用於佇列對佇列訊息傳輸通訊協定的列舉型別。 MSMQ 會實作原生佇列對佇列傳輸通訊協定，以及稱為 SOAP Reliable Messaging Protocol (SRMP) 的 SOAP 架構通訊協定。 在佇列對佇列傳輸中使用 HTTP 傳輸時，就會使用 SRMP。 在佇列對佇列傳輸中使用 HTTPS 時，則會使用 SRMP。  
   
 -   `UseActiveDirectory`：布林值，指出是否必須使用 Active Directory 解析佇列位址。 根據預設，這個屬性為關閉狀態。 如需詳細資訊，請參閱 <<c0> [ 服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "49086592"
 ### <a name="sample-code"></a>程式碼範例  
  如需如何撰寫使用 MSMQ 之 WCF 服務的逐步指示，請參閱下列主題：  
   
--   [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [如何：Exchange 與 WCF 端點的訊息和訊息佇列應用程式](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
 -   [如何：與 WCF 端點交換佇列訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
@@ -125,6 +125,6 @@ ms.locfileid: "49086592"
   
 -   [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
-## <a name="see-also"></a>另請參閱  
- [服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
- [以 Web 裝載佇列應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>另請參閱
+- [服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [以 Web 裝載佇列應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

@@ -2,12 +2,12 @@
 title: 逐步解說：操作資料 (C#)
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: b9b19d4f9a1fb56ddabbf3584c1fb7bb29cd6d6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637303"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>逐步解說：操作資料 (C#)
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  
@@ -23,7 +23,7 @@ ms.locfileid: "33357656"
   
 -   Northwind 範例資料庫。  
   
-     如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需指示，請參閱[下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載資料庫之後，請將 northwnd.mdf 檔案複製至 c:\linqtest6 資料夾。  
+     如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需相關指示，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載資料庫之後，請將 northwnd.mdf 檔案複製至 c:\linqtest6 資料夾。  
   
 -   會從 Northwind 資料庫產生 C# 程式碼檔案。  
   
@@ -49,19 +49,19 @@ ms.locfileid: "33357656"
 -   將這些變更送出至 Northwind 資料庫。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案  
- 在第一個工作中，您可以建立包含必要的參考，建置並執行 Visual Studio 方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  
+ 在第一個工作中，您會建立包含必要的參考，以建置並執行 Visual Studio 方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
-1.  在 Visual Studio**檔案**功能表上，指向**新增**，然後按一下 **專案**。  
+1.  在 Visual Studio**檔案**功能表上，指向**新增**，然後按一下**專案**。  
   
-2.  在**專案類型**窗格**新專案**對話方塊中，按一下  **Visual C#**。  
+2.  在 [**專案類型**] 窗格中的**新增專案**] 對話方塊中，按一下 [ **Visual C#** 。  
   
 3.  按一下 [範本] 窗格中的 [主控台應用程式]。  
   
-4.  在**名稱**方塊中，輸入**LinqDataManipulationApp**。  
+4.  在 **名稱**方塊中，輸入**LinqDataManipulationApp**。  
   
-5.  在**位置**方塊中，確認您要儲存專案檔。  
+5.  在 **位置**方塊中，確認您要儲存專案檔。  
   
 6.  按一下 [確定 **Deploying Office Solutions**]。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "33357656"
   
 #### <a name="to-add-systemdatalinq"></a>若要加入 System.Data.Linq  
   
-1.  在**方案總管] 中**，以滑鼠右鍵按一下**參考**，然後按一下 [**加入參考**。  
+1.  在 **方案總管 中**，以滑鼠右鍵按一下**參考**，然後按一下 **加入參考**。  
   
-2.  在**加入參考**對話方塊中，按一下  **.NET**，按一下 System.Data.Linq 組件，然後按一下**確定**。  
+2.  在 **加入參考** 對話方塊中，按一下 **.NET**按一下 System.Data.Linq 組件，然後按一下 **確定**。  
   
      組件隨即加入至專案。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "33357656"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>若要將 Northwind 程式碼檔案加入至專案  
   
-1.  在**專案**功能表上，按一下 **加入現有項目**。  
+1.  在 **專案**功能表上，按一下**加入現有項目**。  
   
-2.  在**加入現有項目**對話方塊中，巡覽至 c:\linqtest6\northwind.cs，，然後按一下**新增**。  
+2.  在 [**加入現有項目**] 對話方塊中，巡覽至 c:\linqtest6\northwind.cs，，，然後按一下**新增**。  
   
      northwind.cs 檔案會加入至專案。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "33357656"
   
      A**主控台**視窗隨即開啟。  
   
-     您可以關閉應用程式中按 Enter 鍵**主控台**視窗中，或按一下**停止偵錯**在 Visual Studio**偵錯**功能表。  
+     您可以藉由按下 Enter 以關閉應用程式**主控台** 視窗中，或按一下**停止偵錯**在 Visual Studio**偵錯**功能表。  
   
 ## <a name="creating-a-new-entity"></a>建立新的實體  
  建立新的實體十分簡單。 您可以使用 `Customer` 關鍵字，建立物件 (如 `new`)。  
@@ -161,5 +161,5 @@ ms.locfileid: "33357656"
 > [!NOTE]
 >  送出變更以加入新的客戶之後，無法再照原狀執行這個方案。 若要重新執行方案，請變更要加入的客戶名稱和客戶識別碼。  
   
-## <a name="see-also"></a>另請參閱  
- [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>另請參閱
+- [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

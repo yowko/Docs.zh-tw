@@ -2,12 +2,12 @@
 title: Entity SQL 參考
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: ae0aec999d30d099467be690b8920d1413b564f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 75f9c61a24ffdcba890ae04ccc5c656460c13088
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515494"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522150"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL 參考
 
@@ -108,7 +108,7 @@ Entity SQL 可提供各種功能強大的設定作業。 這包括設定運算�
 |[EXCEPT](except-entity-sql.md)|從查詢運算式傳回任何相異值的集合，也不從查詢運算式傳回 EXCEPT 運算元右側 EXCEPT 運算元左邊。|
 |[\[不\]EXISTS](exists-entity-sql.md)|判斷集合是否為空。|
 |[FLATTEN](flatten-entity-sql.md)|將集合轉換成扁平化集合。|
-|[\[不\]IN](in-entity-sql.md)|判斷某個值是否與集合中的任何值相符。|
+|[\[NOT\] IN](in-entity-sql.md)|判斷某個值是否與集合中的任何值相符。|
 |[INTERSECT](intersect-entity-sql.md)|傳回 INTERSECT 運算元左右兩側之查詢運算式都會傳回的任何相異值集合。|
 |[OVERLAPS](overlaps-entity-sql.md)|判斷兩個集合是否有共同項目。|
 |[SET](set-entity-sql.md)|用來產生移除所有重複項目的新集合，利用這種方式將物件的集合 (collection) 轉換成集 (set)。|
@@ -142,4 +142,4 @@ Entity SQL 提供的型別可用於建構、 查詢及操作運算式 （值） 
 
 ## <a name="see-also"></a>另請參閱
 
-[Entity SQL 語言](entity-sql-language.md)
+- [Entity SQL 語言](entity-sql-language.md)

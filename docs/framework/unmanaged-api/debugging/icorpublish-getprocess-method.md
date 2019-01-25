@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 414bc1bbd3578d0707e35fa70fe196b504af9942
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c625aec5b4937ec232318e62a95a612b0e8a6cd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624401"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess 方法
-取得[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)代表具有指定識別碼的程序的執行個體。  
+取得[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)執行個體，表示具有指定識別碼的程序。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,22 +38,22 @@ HRESULT GetProcess(
   
 #### <a name="parameters"></a>參數  
  `pid`  
- [in]程序的識別項。  
+ [in]處理序識別碼。  
   
  `ppProcess`  
  [out]位址指標`ICorPublishProcess`代表程序的執行個體。  
   
 ## <a name="remarks"></a>備註  
- `GetProcess` 如果處理程序不存在，或不是由目前的使用者才能進行偵錯 managed 處理序會失敗。  
+ `GetProcess` 如果處理程序不存在，或未受管理的程序可由目前的使用者進行偵錯，就會失敗。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorPub.idl、 CorPub.h  
+ **標頭：** CorPub.idl CorPub.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorPublish 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorPublish 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)

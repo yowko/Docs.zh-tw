@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6c5f7d288d805a6a25afa9a5b32a4550aaa76ec3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666575"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>逐步解說：在 Visual Basic 中撰寫查詢
 本逐步解說示範如何使用 Visual Basic 語言功能，以及在寫入[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查詢運算式。 逐步解說示範如何建立一份學生物件上的查詢、 如何執行查詢，以及如何修改它們。 查詢會將數個功能，包括物件初始設定式、 區域類型推斷和匿名型別。  
@@ -43,11 +43,11 @@ ms.locfileid: "46480652"
 -   定義`Student`類別，並建立一份類別的執行個體。  
   
     > [!IMPORTANT]
-    >  定義所需的程式碼`Student`類別，並建立使用的清單中的逐步解說中提供範例[如何： 建立項目的清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。 您可以從該處複製，並將它貼到您的專案。 新的程式碼取代您在建立專案時出現的程式碼。  
+    >  定義所需的程式碼`Student`類別，並建立使用的清單中的逐步解說中提供範例[How to:建立項目清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。 您可以從該處複製，並將它貼到您的專案。 新的程式碼取代您在建立專案時出現的程式碼。  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>若要將新的學生新增至學生清單  
   
--   請依照下列中的模式`getStudents`方法，以新增另一個執行個體`Student`類別清單。 加入學生將為您介紹物件初始設定式。 如需詳細資訊，請參閱 <<c0> [ 物件初始設定式： 具名和匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。  
+-   請依照下列中的模式`getStudents`方法，以新增另一個執行個體`Student`類別清單。 加入學生將為您介紹物件初始設定式。 如需詳細資訊，請參閱[物件初始設定式：具名和匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。  
   
 ## <a name="create-a-query"></a>建立查詢  
  在執行時，在這一節中新增此查詢會產生學術排名將它們放入前十名學生的清單。 因為此查詢會選取完整`Student`物件每次查詢結果的型別是`IEnumerable(Of Student)`。 不過，查詢類型通常是未指定查詢定義中。 相反地，編譯器會使用區域類型推斷來判斷型別。 如需詳細資訊，請參閱 <<c0> [ 區域型別推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。 查詢的範圍變數`currentStudent`，做為每個參考`Student`在來源中，執行個體`students`，提供存取權的每個物件在屬性`students`。  
@@ -144,11 +144,11 @@ ms.locfileid: "46480652"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
-- [使用 Visual Basic 撰寫 LINQ 入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [物件初始設定式：具名和匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
-- [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [使用 Visual Basic 撰寫 LINQ 入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [物件初始設定式：具名和匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [查詢](../../../../visual-basic/language-reference/queries/index.md)

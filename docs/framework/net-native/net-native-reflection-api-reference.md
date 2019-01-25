@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13dfdfd89bf91510146ce388620d3e51c2aa1f02
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 38894f57ec93fd44610b5c612326b399d477b723
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531180"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET 原生反映 API 參考
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] 包含三個新的例外狀況類型： [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)、 [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)和 [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)。 請注意有關下列三個例外狀況類型的資訊：  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] 包含三個新的例外狀況類型：[System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)， [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)，以及[System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). 請注意有關下列三個例外狀況類型的資訊：  
   
  這些類型僅供內部使用。  
  這三個例外狀況類型僅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈使用。 當 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈偵測到不允許程式繼續執行的遺失資料時，會擲回例外狀況。  
@@ -46,8 +46,8 @@ ms.locfileid: "49347498"
   
  如需有關這個命名空間中其他類型的說明文件，請參閱 .NET Framework 文件集中的 <xref:System.Runtime.CompilerServices> 參考頁面。  
   
-## <a name="see-also"></a>另請參閱  
- [MissingInteropDataException 類別](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)  
- [MissingMetadataException 類別](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)  
- [MissingRuntimeArtifactException 類別](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)  
- [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)
+## <a name="see-also"></a>另請參閱
+- [MissingInteropDataException 類別](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
+- [MissingMetadataException 類別](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
+- [MissingRuntimeArtifactException 類別](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
+- [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)

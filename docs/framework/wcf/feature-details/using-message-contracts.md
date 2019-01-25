@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534416"
 ---
 # <a name="using-message-contracts"></a>使用訊息合約
 通常當建置 Windows Communication Foundation (WCF) 應用程式，開發人員密切注意資料結構與序列化的問題，並不需要顧慮傳送資料的訊息結構。 針對這類應用程式，建立參數的資料合約或傳回值是很明確的。 (如需詳細資訊，請參閱 < [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
@@ -447,6 +447,6 @@ public class OperationDetails
   
  如果您要接收訊息物件做為 `Result` 屬性，並讓傳回的值做為該物件的屬性，則使用 `/messageContract` 命令選項。 這會產生一個簽章，此簽章會將回應訊息傳回做為 `Result` 物件的 <xref:System.EventArgs> 屬性。 然後，所有的內部傳回值都成為回應訊息物件的屬性。  
   
-## <a name="see-also"></a>另請參閱  
- [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+## <a name="see-also"></a>另請參閱
+- [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)

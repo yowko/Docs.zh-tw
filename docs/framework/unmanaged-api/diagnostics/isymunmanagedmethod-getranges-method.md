@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32036058924aaf79fa7282144ced75040bc1f825
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b6afe0f0d8780a93a7d98f24a11bb67ef65ebf63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426016"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604271"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges 方法
-指定的文件中的位置，傳回陣列的開始和結束位移組對應的 Microsoft 中繼語言 (MSIL) 這個方法內的位置所涵蓋的範圍。 陣列是整數的陣列，而且 [開始、 結束、 開始、 結束] 的格式。 範圍組數目長度除以 2 的陣列。  
+指定的文件中的位置，傳回陣列的開始和結束位移組對應的 Microsoft intermediate language (MSIL，其中涵蓋在這個方法內的位置) 範圍。 陣列是一個整數的陣列，並具有 [開始、 結束、 開始、 結束] 格式。 範圍組的數目會除以 2 陣列的長度。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,22 +48,22 @@ HRESULT GetRanges(
  [in]對應到範圍的文件行。  
   
  `column`  
- [in]文件資料行對應到範圍。  
+ [in]對應到範圍的文件的資料行。  
   
  `cRanges`  
  [in] `ranges` 陣列的大小。  
   
  `pcRanges`  
- [out]指標`ULONG32`包含範圍所需的緩衝區大小。  
+ [out]指標`ULONG32`接收包含範圍所需的緩衝區大小。  
   
  `ranges`  
  [out]接收範圍緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
- [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

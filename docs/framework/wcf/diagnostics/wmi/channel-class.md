@@ -2,12 +2,12 @@
 title: Channel 類別
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: 108d5f8e3cd092863dbd48e2bb9d180798b091a4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3fbf398cca7ae9adbbecb9439bf3cbd32eb03969
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668388"
 ---
 # <a name="channel-class"></a>Channel 類別
 通道  
@@ -39,7 +39,7 @@ class Channel
  通道的本機端點。  
   
 ### <a name="ref"></a>ref  
- 資料型別：端點  
+ 資料類型：端點  
   
  存取類型：唯讀  
   
@@ -72,5 +72,5 @@ class Channel
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.ChannelBase>
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.ChannelBase>

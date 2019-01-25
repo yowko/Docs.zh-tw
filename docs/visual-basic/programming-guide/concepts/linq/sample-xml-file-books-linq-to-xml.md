@@ -1,15 +1,15 @@
 ---
-title: 範例 XML 檔：書籍 (LINQ to XML)
+title: XML 範例檔：書籍 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 27ca5847-2289-40c0-8331-ede67ec59d1c
-ms.openlocfilehash: 5d68b7830994bdd51f59725d20ffcab9b3769b2b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3f99541f9c0aaafe25fe1fd09510b93c8e815eaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525751"
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a>範例 XML 檔：書籍 (LINQ to XML)
+# <a name="sample-xml-file-books-linq-to-xml"></a>XML 範例檔：書籍 (LINQ to XML)
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 此檔案包含書籍的相關資訊。  
   
 ## <a name="booksxml"></a>books.xml  
@@ -39,5 +39,5 @@ ms.locfileid: "43394343"
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [範例 XML 文件 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>另請參閱
+- [範例 XML 文件 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

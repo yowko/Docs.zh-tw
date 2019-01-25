@@ -2,22 +2,22 @@
 title: 屬性架構對應
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 81bbe8806694967d68c3e15da1d582092fb95e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd16731684a04ca7a92dbb6560b5c008558896cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713898"
 ---
 # <a name="attribute-based-mapping"></a>屬性架構對應
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 對應至 SQL Server 資料庫[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]任一個套用的屬性或使用外部對應檔案的物件模型。 本主題概述以屬性 (Attribute) 為基礎的方法。  
   
- 以最基本形式存在的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將資料庫對應至 <xref:System.Data.Linq.DataContext>、將資料表對應至類別，並且將資料行和關聯性 (Relationship) 對應至這些類別中的屬性 (Property)。 您也可以使用屬性 (Attribute) 來對應物件模型中的繼承階層架構 (Inheritance Hierarchy)。 如需詳細資訊，請參閱[How to： 在 Visual Basic 或 C# 中產生物件模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
+ 以最基本形式存在的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將資料庫對應至 <xref:System.Data.Linq.DataContext>、將資料表對應至類別，並且將資料行和關聯性 (Relationship) 對應至這些類別中的屬性 (Property)。 您也可以使用屬性 (Attribute) 來對應物件模型中的繼承階層架構 (Inheritance Hierarchy)。 如需詳細資訊，請參閱[＜How to：在 Visual Basic 中產生物件模型或C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
   
- 通常使用 Visual Studio 的開發人員執行屬性為基礎的對應使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 您也可以使用 SQLMetal 命令列工具，或者自行撰寫屬性的程式碼。 如需詳細資訊，請參閱[How to： 在 Visual Basic 或 C# 中產生物件模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
+ 通常使用 Visual Studio 的開發人員執行以屬性為基礎的對應使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 您也可以使用 SQLMetal 命令列工具，或者自行撰寫屬性的程式碼。 如需詳細資訊，請參閱[＜How to：在 Visual Basic 中產生物件模型或C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
   
 > [!NOTE]
->  您也可以使用外部 XML 檔進行對應。 如需詳細資訊，請參閱[外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
+>  您也可以使用外部 XML 檔進行對應。 如需詳細資訊，請參閱 <<c0> [ 外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
   
  下列各節會詳細說明以屬性 (Attribute) 為基礎的對應。 如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping>。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "33358176"
   
 |屬性|類型|預設|描述|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|永不|指示 Common Language Runtime (CLR) 在插入或更新作業之後擷取值。<br /><br /> 選項：永遠、永不、OnUpdate、OnInsert。|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|永不|指示 Common Language Runtime (CLR) 在插入或更新作業之後擷取值。<br /><br /> 選項:永遠、 永不、 OnUpdate、 OnInsert。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolean|`true`|表示資料行可以包含 Null 值。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|String|推斷的資料庫資料行型別|使用資料庫型別和修飾詞 (Modifier) 來指定資料庫資料行的型別。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|String|Empty|定義資料庫中的計算資料行。|  
@@ -61,10 +61,10 @@ ms.locfileid: "33358176"
  如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.ColumnAttribute>。  
   
 > [!NOTE]
->  AssociationAttribute 和 ColumnAttribute Storage 屬性值會區分大小寫。 例如，請確定用於 AssociationAttribute.Storage 屬性 (Property) 之屬性 (Attribute) 中的值與用於程式碼中其他位置之對應屬性 (Property) 名稱的大小寫相符。 這適用於所有.NET 程式語言，甚至是未通常區分大小寫，包含 Visual Basic。 如需 Storage 屬性的詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
+>  AssociationAttribute 和 ColumnAttribute Storage 屬性值會區分大小寫。 例如，請確定用於 AssociationAttribute.Storage 屬性 (Property) 之屬性 (Attribute) 中的值與用於程式碼中其他位置之對應屬性 (Property) 名稱的大小寫相符。 這適用於所有.NET 程式設計語言，甚至是不通常區分大小寫，包括 Visual Basic。 如需 Storage 屬性的詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute 屬性  
- 使用這個屬性 (Attribute) 可以指定屬性 (Property)，以代表資料庫中的關聯，例如外部索引鍵對主索引鍵的關聯性。 如需關聯性的詳細資訊，請參閱[如何： 對應資料庫關聯性](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。  
+ 使用這個屬性 (Attribute) 可以指定屬性 (Property)，以代表資料庫中的關聯，例如外部索引鍵對主索引鍵的關聯性。 如需有關關聯性的詳細資訊，請參閱[How to:對應資料庫關聯性](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。  
   
  下表說明這個屬性 (Attribute) 的屬性 (Property)。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "33358176"
  如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.AssociationAttribute>。  
   
 > [!NOTE]
->  AssociationAttribute 和 ColumnAttribute Storage 屬性值會區分大小寫。 例如，請確定用於 AssociationAttribute.Storage 屬性 (Property) 之屬性 (Attribute) 中的值與用於程式碼中其他位置之對應屬性 (Property) 名稱的大小寫相符。 這適用於所有.NET 程式語言，甚至是未通常區分大小寫，包含 Visual Basic。 如需 Storage 屬性的詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
+>  AssociationAttribute 和 ColumnAttribute Storage 屬性值會區分大小寫。 例如，請確定用於 AssociationAttribute.Storage 屬性 (Property) 之屬性 (Attribute) 中的值與用於程式碼中其他位置之對應屬性 (Property) 名稱的大小寫相符。 這適用於所有.NET 程式設計語言，甚至是不通常區分大小寫，包括 Visual Basic。 如需 Storage 屬性的詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
   
 ## <a name="inheritancemappingattribute-attribute"></a>InheritanceMappingAttribute 屬性  
  使用這個屬性可以對應繼承階層架構。  
@@ -142,5 +142,5 @@ ms.locfileid: "33358176"
   
  如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.DataAttribute>。  
   
-## <a name="see-also"></a>另請參閱  
- [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>另請參閱
+- [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

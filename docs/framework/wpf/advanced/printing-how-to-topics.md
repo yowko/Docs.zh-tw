@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0bf581155bb32951a4614818edb50837f608939e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726438"
 ---
 # <a name="printing-how-to-topics"></a>列印 HOW TO 主題
 在本節中的主題將示範如何使用列印和列印系統管理功能隨附[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以及新[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]列印路徑。  
@@ -31,7 +31,7 @@ ms.locfileid: "48837111"
  [列舉列印佇列的子集](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  產生具有特定特性的印表機清單的指示。  
   
- [NOTINBUILD： 如何： 擴充的列印結構描述，並建立新的列印系統類別](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
+ [NOTINBUILD:HOW TO：擴充的列印結構描述，並建立新的列印系統類別](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  延伸的 managed 程式碼如何程式設計人員可以擴充到專業的列印裝置或使用新的或不常用功能的印表機列印結構描述的詳細討論。  
   
  [取得列印系統物件屬性但不使用反映](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
@@ -46,10 +46,10 @@ ms.locfileid: "48837111"
  [驗證和合併 PrintTicket](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
  正在檢查的 print ticket 無效，而且，它不會要求印表機不支援的任何動作的指示。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Printing>  
- <xref:System.Printing.IndexedProperties>  
- <xref:System.Printing.Interop>  
- [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](https://www.microsoft.com/xps)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Printing>
+- <xref:System.Printing.IndexedProperties>
+- <xref:System.Printing.Interop>
+- [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [XPS](https://www.microsoft.com/xps)

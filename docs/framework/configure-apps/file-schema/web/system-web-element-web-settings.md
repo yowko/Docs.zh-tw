@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 39d305d429490380c76e15bdcdde434f0d75457b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6bb0e832f1fdc845c4150442547b55400f0aea89
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47202685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645947"
 ---
 # <a name="ltsystemwebgt-element-web-settings"></a>&lt;system.web&gt;項目 （Web 設定）
 包含 ASP.NET 裝載層管理整個處理序行為的方式的相關資訊。  
@@ -74,5 +74,5 @@ ms.locfileid: "47202685"
 |驗證檔||  
 |可以是空白||  
   
-## <a name="see-also"></a>另請參閱  
- [\<applicationPool> 項目 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+## <a name="see-also"></a>另請參閱
+- [\<applicationPool> 項目 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)

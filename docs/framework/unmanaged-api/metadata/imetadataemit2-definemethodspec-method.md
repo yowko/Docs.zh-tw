@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85b17199ad40d8b3fbf4e1a0271828e5a5ac7991
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d56209e030939f53e3f72fe0c8a10db2160dd19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492516"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec 方法
 建立泛型方法的執行個體，並取得定義的語彙基元。  
@@ -40,7 +40,7 @@ HRESULT DefineMethodSpec (
   
 #### <a name="parameters"></a>參數  
  `tkParent`  
- [in]要在其中建立泛型執行個體方法語彙基元。 語彙基元必須是型別`mdMethodDef`或`mdMemberRef`。  
+ [in]要建立一般的執行個體方法語彙基元。 語彙基元必須是型別`mdMethodDef`或`mdMemberRef`。  
   
  `pvSigBlob`  
  [in]二進位 COM + 方法的簽章指標。  
@@ -49,17 +49,17 @@ HRESULT DefineMethodSpec (
  [in]大小，以位元組為單位的`pvSigBlob`。  
   
  `pmi`  
- [out]方法的中繼資料簽章定義語彙基元。  
+ [out]方法的中繼資料簽章定義的語彙基元。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
  **程式庫：** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>另請參閱
+- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

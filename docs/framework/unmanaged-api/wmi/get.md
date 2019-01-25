@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb7475623961fe2ee5fc821c5f237f0a2acfae1a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cd85ac8b98d8613924a4acd73ac74a69f3d9b41d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535342"
 ---
 # <a name="get-function"></a>Get 函式
 若有的話，則擷取指定的屬性值。
@@ -64,8 +64,8 @@ HRESULT Get (
 |常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 屬性是標準的系統屬性。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 類別： 屬性繼承自父類別。 </br> 執行個體： 屬性，而繼承自父類別中，尚未修改的執行個體。  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 類別： 屬性屬於衍生的類別。 </br> 執行個體： 執行個體; 所修改的屬性也就是所提供的值，或加入或修改限定詞。 |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 類別：屬性被繼承自父類別。 </br> 執行個體：屬性，而繼承自父類別中，有尚未修改的執行個體。  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 類別：屬性屬於衍生的類別。 </br> 執行個體：執行個體; 所修改的屬性也就是所提供的值，或加入或修改限定詞。 |
 
 ## <a name="return-value"></a>傳回值
 
@@ -75,7 +75,7 @@ HRESULT Get (
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 已有一般失敗。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 找不到有效的一或多個參數。 |
-|`WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | 找不到指定的屬性。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的屬性。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
@@ -94,5 +94,5 @@ HRESULT Get (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱  
-[WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+## <a name="see-also"></a>另請參閱
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

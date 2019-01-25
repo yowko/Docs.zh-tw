@@ -2,21 +2,21 @@
 title: '&lt;serviceDebug&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: e4f929e5c847c1f8db3a3ab5a8e72ec198c7d223
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 26a84f035246c02898deacfb8fcb2c2101fddf7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524269"
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
 指定 Windows Communication Foundation (WCF) 服務的偵錯和說明資訊功能。  
   
  \<system.ServiceModel>  
-\<行為 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行為 >  
-\<serviceDebug >  
+\<behavior>  
+\<serviceDebug>  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54145805"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<行為 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
 ## <a name="remarks"></a>備註  
  設定`includeExceptionDetailInFaults`要`true`可讓服務傳回即使例外狀況未宣告使用的應用程式程式碼所擲回任何例外狀況<xref:System.ServiceModel.FaultContractAttribute>。 當在伺服器擲回非預期例外狀況的案例中偵錯時，這個設定非常有用。 使用這個屬性會傳回未知例外狀況的序列化表單，而且您可以查看例外狀況的詳細資訊。  
@@ -70,9 +70,9 @@ ms.locfileid: "54145805"
   
  選用的 `httpHelpPageBinding` 和 `httpHelpPageBinding` 屬性可讓您設定用來存取服務網頁的繫結。 如果未指定這些繫結，則會依適當情形，使用預設的繫結 (使用 HTTP 時為 `HttpTransportBindingElement`，使用 HTTPS 時則為 `HttpsTransportBindingElement`) 存取服務說明頁面。 請注意，這些屬性 (Attribute) 無法搭配內建的 WCF 繫結使用。 只有當繫結支援 xref:System.ServiceModel.Channels.IReplyChannel 的內部繫結項目 > 將會支援。 此外，該繫結的 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 屬性 (Property) 必須是 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.ServiceDebugElement>  
- <xref:System.ServiceModel.Description.ServiceDebugBehavior>  
- [指定及處理合約與服務中的錯誤](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [處理例外狀況和失敗](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
- [服務偵錯行為](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Configuration.ServiceDebugElement>
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>
+- [指定及處理合約與服務中的錯誤](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [處理例外狀況和失敗](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
+- [服務偵錯行為](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

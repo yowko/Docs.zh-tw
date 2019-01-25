@@ -1,18 +1,18 @@
 ---
-title: 如何：將變更提交至資料庫
+title: HOW TO：將變更提交至資料庫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: fef41cd1bcb9d1c4b98f96975c56bfa19c675608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 455e4e3296a9136b2b9bf24278bb034e4a94fc7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562813"
 ---
-# <a name="how-to-submit-changes-to-the-database"></a>如何：將變更提交至資料庫
+# <a name="how-to-submit-changes-to-the-database"></a>HOW TO：將變更提交至資料庫
 不論對物件進行多少的變更，都只會變更記憶體中的複本。 並不會變更到資料庫中的實際資料。 在 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 上明確呼叫 <xref:System.Data.Linq.DataContext> 之前，變更都不會傳輸至伺服器。  
   
  進行這個呼叫時，<xref:System.Data.Linq.DataContext> 會嘗試將變更轉譯為對等的 SQL 命令。 您可以使用您自己的自訂邏輯來覆寫這些動作，但是提交順序由服務的協調<xref:System.Data.Linq.DataContext>稱為*變更處理器*。 事件順序如下：  
@@ -28,13 +28,13 @@ ms.locfileid: "33362882"
  此時，資料庫偵測到的任何錯誤都會停止提交流程，並引發例外狀況。 而資料庫的所有變更都會復原為未進行提交之前的狀態。 <xref:System.Data.Linq.DataContext> 仍然具有所有變更的完整記錄。 因此，您可以嘗試更正問題，並再次呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>，如下列程式碼範例所示。  
   
 ## <a name="example"></a>範例  
- 當提交交易順利完成時，<xref:System.Data.Linq.DataContext> 會略過變更追蹤資訊，以接受物件的變更。  
+ 當提交異動順利完成時，<xref:System.Data.Linq.DataContext> 會略過變更追蹤資訊，以接受物件的變更。  
   
  [!code-csharp[DLinqSubmittingChanges#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#1)]
  [!code-vb[DLinqSubmittingChanges#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
- [如何：偵測和解決發生衝突的提交內容](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
- [如何：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)  
- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
- [變更和提交資料](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+## <a name="see-also"></a>另請參閱
+- [如何：偵測和解決衝突的提交內容](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
+- [如何：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [變更和提交資料](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

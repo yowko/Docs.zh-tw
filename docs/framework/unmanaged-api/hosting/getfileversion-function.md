@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b772de720a8c3b669bd3cbe9591637d931cb8763
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 349604404487501a692b9a2472ed32878c62d879
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430615"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494804"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion 函式
-取得指定的檔案，使用指定的緩衝區 common language runtime (CLR) 版本資訊。  
+取得指定的檔案，並使用指定的緩衝區 common language runtime (CLR) 版本資訊。  
   
- 此函式中已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,10 +41,10 @@ HRESULT GetFileVersion (
   
 #### <a name="parameters"></a>參數  
  `szFilename`  
- [in]要檢查檔案的路徑。  
+ [in]要檢查之檔案的路徑。  
   
  `szBuffer`  
- [in、 out]傳回的版本資訊已配置的緩衝區。  
+ [in、 out]傳回的版本資訊所配置的緩衝區。  
   
  `cchBuffer`  
  [in]大小，以寬字元為單位的`szBuffer`。  
@@ -53,11 +53,11 @@ HRESULT GetFileVersion (
  [out]大小，以位元組為單位傳回`szBuffer`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>另請參閱
+- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

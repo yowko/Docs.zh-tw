@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: fcef506f6be21b0c11a1c160ef6891a7ee53a5ec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83f044f403fe6d4d9c77c5b4d2045d58b50b97a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700659"
 ---
 # <a name="controls"></a>控制項
 <a name="introduction"></a>
@@ -98,13 +98,13 @@ ms.locfileid: "50189663"
   
  如需有關這些基底類別的詳細資訊，請參閱 < [WPF 內容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [依分類列出控制項](../../../../docs/framework/wpf/controls/controls-by-category.md)  
- [控制項程式庫](../../../../docs/framework/wpf/controls/control-library.md)  
- [資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [輸入](../../../../docs/framework/wpf/advanced/input-wpf.md)  
- [啟用命令](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [逐步解說：建立自訂動畫按鈕](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)  
- [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)
+## <a name="see-also"></a>另請參閱
+- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [依分類列出控制項](../../../../docs/framework/wpf/controls/controls-by-category.md)
+- [控制項程式庫](../../../../docs/framework/wpf/controls/control-library.md)
+- [資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)
+- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [輸入](../../../../docs/framework/wpf/advanced/input-wpf.md)
+- [啟用命令](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)
+- [逐步解說：建立自訂動畫的按鈕](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)
+- [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)

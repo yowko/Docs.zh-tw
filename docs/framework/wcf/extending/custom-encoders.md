@@ -2,17 +2,17 @@
 title: 自訂編碼器
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
-ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
+ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "50034340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509359"
 ---
 # <a name="custom-encoders"></a>自訂編碼器
 本主題討論如何建立自訂編碼器。  
   
- 在 Windows Communication Foundation (WCF) 中，使用*繫結*來指定如何在端點之間的跨網路傳輸資料。 繫結組成一連串*繫結項目*。 繫結包含選擇性通訊協定繫結項目，例如安全性、 必要*訊息編碼器*繫結項目，以及必要的傳輸繫結項目。 訊息編碼器是由訊息編碼繫結項目表示。 WCF 中包含三種訊息編碼器： 二進位、 訊息傳輸最佳化機制 (MTOM) 和文字。  
+ 在 Windows Communication Foundation (WCF) 中，使用*繫結*來指定如何在端點之間的跨網路傳輸資料。 繫結組成一連串*繫結項目*。 繫結包含選擇性通訊協定繫結項目，例如安全性、 必要*訊息編碼器*繫結項目，以及必要的傳輸繫結項目。 訊息編碼器是由訊息編碼繫結項目表示。 WCF 包含三種訊息編碼器：二進位、 Message Transmission Optimization Mechanism (MTOM) 和文字。  
   
  訊息編碼繫結項目會序列化傳出的 <xref:System.ServiceModel.Channels.Message> 並將它傳遞至傳輸，或者從傳輸接收序列化形式的訊息，如果有通訊協定層，就將訊息傳遞給它，如果不存在，則傳遞給應用程式。  
   
@@ -30,11 +30,11 @@ ms.locfileid: "50034340"
   
  WCF 會提供下列類型的繫結項目衍生自<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>可以提供文字、 二進位和訊息傳輸最佳化機制 (MTOM) 編碼的類別：  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>：互通性最佳、但效率最差的 XML 訊息編碼器。 Web 服務或 Web 服務用戶端通常可以瞭解文字 XML。 不過，將大型二進位資料區塊當做文字來傳輸是沒有效率的。  
+-   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>：最互通性最佳、 但效率最差的 XML 訊息編碼器。 Web 服務或 Web 服務用戶端通常可以瞭解文字 XML。 不過，將大型二進位資料區塊當做文字來傳輸是沒有效率的。  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>：表示繫結項目，這個繫結項目會指定用於二進位 XML 訊息的字元編碼和訊息版本處理。 這是最有效率的編碼方式的選項，但至少互通的因為它只支援由 WCF 端點。  
+-   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>：表示指定的字元編碼繫結項目和版本設定用於二進位 XML 訊息的訊息。 這是最有效率的編碼方式的選項，但至少互通的因為它只支援由 WCF 端點。  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>：表示繫結項目，這個繫結項目會為使用訊息傳輸最佳化機制 (MTOM) 編碼的訊息指定字元編碼和訊息版本處理。 MTOM 是在 WCF 訊息中傳輸二進位資料的有效技術。 MTOM 編碼器會嘗試在效率和互通性之間保持平衡。 MTOM 編碼方式會以文字格式傳輸大部分的 XML，但是在傳輸大型區塊的二進位資料時，會依照原狀來傳送 (不轉換成文字)，好讓這些資料最佳化。  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>：表示繫結項目，指定的字元編碼和訊息版本處理，用於使用訊息傳輸最佳化機制 (MTOM) 編碼的訊息。 MTOM 是在 WCF 訊息中傳輸二進位資料的有效技術。 MTOM 編碼器會嘗試在效率和互通性之間保持平衡。 MTOM 編碼方式會以文字格式傳輸大部分的 XML，但是在傳輸大型區塊的二進位資料時，會依照原狀來傳送 (不轉換成文字)，好讓這些資料最佳化。  
   
  繫結項目會建立二進位、MTOM 或文字的 <xref:System.ServiceModel.Channels.MessageEncoderFactory>。 處理站會建立二進位、MTOM 或文字的 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 執行個體。 一般而言，只會有一個執行個體。 不過，如果是使用工作階段，就可以提供不同的編碼器給每個工作階段。 二進位編碼器會利用這種方式來協調動態字典 (請參閱＜XML 基礎結構＞)。  
   
@@ -89,12 +89,12 @@ ms.locfileid: "50034340"
   
  最後，覆寫 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 方法以傳回這個處理站的執行個體，讓自訂的 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> 連接到用於設定服務或用戶端的繫結項目堆疊。  
   
- 有兩個範例提供使用 WCF，說明此程序範例程式碼：[自訂訊息編碼器： 自訂文字編碼器](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)並[自訂訊息編碼器： 壓縮編碼器](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)。  
+ 有兩個範例提供使用 WCF，說明此程序範例程式碼：[自訂訊息編碼器：自訂文字編碼器](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)和[自訂訊息編碼器：壓縮編碼器](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
- <xref:System.ServiceModel.Channels.MessageEncoder>  
- [資料傳輸架構概觀](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- [選擇訊息編碼器](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>
+- <xref:System.ServiceModel.Channels.MessageEncoder>
+- [資料傳輸架構概觀](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
+- [選擇訊息編碼器](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

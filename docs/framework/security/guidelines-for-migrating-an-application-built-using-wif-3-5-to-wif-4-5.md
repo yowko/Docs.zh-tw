@@ -3,12 +3,12 @@ title: 將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: ec66803edc21f186fa9a8c5bcb91b5181789893d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d843f2d01072db8b848f4d6f26dba32b4e48f302
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696179"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針
 ## <a name="applies-to"></a>適用於  
@@ -94,7 +94,7 @@ ms.locfileid: "48582511"
 ### <a name="visual-studio-tooling-changes"></a>Visual Studio 工具變更  
  WIF 3.5 SDK 已提供獨立同盟公用程式 FedUtil.exe (FedUtil)，可用來將具 WIF 功能之應用程式中的身分識別管理外包到安全性權杖服務 (STS)。 此工具已在應用程式組態檔中新增 WIF 設定，以讓應用程式從一或多個 STS 取得安全性權杖，並透過 [Add STS Service Reference] (新增 STS 服務參考)  按鈕呈現在 Visual Studio 中。 FedUtil 未隨附於 WIF 4.5。 相反地，WIF 4.5 支援名為「Visual Studio 2012 的身分識別和存取工具」的新 Visual Studio 延伸模組，用來使用將身分識別管理外包到 STS 所需的 WIF 設定來修改應用程式組態檔。 身分識別和存取工具也會實作稱為「本機 STS」的 STS，以用來測試具 WIF 功能的應用程式。 在許多情況下，這項功能都不需要建置自訂 STS，而這些自訂 STS 通常是 WIF 3.5 中測試開發中解決方案的必要項目。 基於這個原因，Visual Studio 2012 中不再支援 STS 範本；不過，WIF 4.5 仍然支援開發 STS 的類別。  
   
- 您可以從 Visual Studio 的延伸模組和更新管理員中安裝身分識別和存取工具，也可以從 Code Gallery 的下列頁面下載它：[Code Gallery 上的 Visual Studio 2012 的身分識別和存取工具](https://go.microsoft.com/fwlink/?LinkID=245849)。 下列清單摘要說明 Visual Studio 工具變更：  
+ 您可以從擴充功能和更新管理員，在 Visual Studio 中安裝 Identity and Access Tool，或您可以從 Code Gallery 上的下列網頁：[Identity and Access Tool Code Gallery 上的 Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=245849)。 下列清單摘要說明 Visual Studio 工具變更：  
   
 -   已移除 [Add STS Service Reference] (新增 STS 服務參考) 功能。 取代項目是身分識別和存取工具。  
   
@@ -170,8 +170,8 @@ add-windowsfeature windows-identity-foundation
 > [!NOTE]
 >  因為 WIF 3.5 和 WIF 4.5 中的許多類別都共用相同的名稱，所以同時使用 WIF 3.5 和 WIF 4.5 時，請一定要使用完整類別名稱，或使用命名空間別名來區分 WIF 3.5 和 WIF 4.5 中的類別。  
   
-## <a name="see-also"></a>另請參閱  
- [WIF 組態結構描述](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
- [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [Windows Identity Foundation 4.5 的新功能](../../../docs/framework/security/whats-new-in-wif.md)  
- [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+## <a name="see-also"></a>另請參閱
+- [WIF 組態結構描述](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)
+- [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Windows Identity Foundation 4.5 的新功能](../../../docs/framework/security/whats-new-in-wif.md)
+- [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)

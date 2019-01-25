@@ -1,5 +1,5 @@
 ---
-title: 如何：判斷所按的輔助按鍵為何
+title: HOW TO：判斷哪一個輔助按鍵
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - Keys.Alt enumeration member
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
-ms.openlocfilehash: bfdef668a5c766f00680c0150103a8c5267fdf68
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: e2caf421e25dff3300b3d799582f4260d0aab320
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49314880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586653"
 ---
-# <a name="how-to-determine-which-modifier-key-was-pressed"></a>如何：判斷所按的輔助按鍵為何
+# <a name="how-to-determine-which-modifier-key-was-pressed"></a>HOW TO：判斷哪一個輔助按鍵
 當您建立可接受使用者的按鍵輸入時，您也可以監視輔助按鍵，例如 SHIFT、 ALT 和 CTRL 鍵。 輔助按鍵按下時搭配其他索引鍵，或按下滑鼠，就可以適當地回應您的應用程式。 例如，如果按下以字母 S 時，這只會出現在畫面上，"s"，但如果按下按鍵 CTRL + S，可能會儲存目前的文件。 如果您處理<xref:System.Windows.Forms.Control.KeyDown>事件，<xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A>屬性<xref:System.Windows.Forms.KeyEventArgs>收到事件處理常式會指定哪一個輔助按鍵按下按鍵。 或者，<xref:System.Windows.Forms.KeyEventArgs.KeyData%2A>屬性<xref:System.Windows.Forms.KeyEventArgs>指定按鍵以及與位元 OR 運算結合任何輔助按鍵的字元。 不過，如果您處理<xref:System.Windows.Forms.Control.KeyPress>事件或滑鼠事件，事件處理常式不會收到這項資訊。 在此情況下，您必須使用<xref:System.Windows.Forms.Control.ModifierKeys%2A>屬性<xref:System.Windows.Forms.Control>類別。 在任一情況下，您必須執行適當的位元 AND<xref:System.Windows.Forms.Keys>值和您要測試的值。 <xref:System.Windows.Forms.Keys>列舉型別提供具有正確的值和每個修飾詞索引鍵，因此是很重要，您執行位元的變化。 比方說，SHIFT 鍵表示<xref:System.Windows.Forms.Keys.Shift>， <xref:System.Windows.Forms.Keys.ShiftKey>，<xref:System.Windows.Forms.Keys.RShiftKey>並<xref:System.Windows.Forms.Keys.LShiftKey>正確的值來測試 SHIFT 輔助按鍵是<xref:System.Windows.Forms.Keys.Shift>。 同樣地，若要測試 CTRL 和 ALT 修飾詞為您應該使用<xref:System.Windows.Forms.Keys.Control>和<xref:System.Windows.Forms.Keys.Alt>值，分別。  
   
 > [!NOTE]
@@ -45,8 +45,8 @@ ms.locfileid: "49314880"
      [!code-csharp[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/VB/form1.vb#5)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Forms.Keys>  
- <xref:System.Windows.Forms.Control.ModifierKeys%2A>  
- [Windows Forms 應用程式中的鍵盤輸入](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [如何： 判斷 CapsLock 是否在中，在 Visual Basic](https://msdn.microsoft.com/library/91e60f5c-dd61-4222-ba5f-39af803afd8c)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Forms.Keys>
+- <xref:System.Windows.Forms.Control.ModifierKeys%2A>
+- [Windows Forms 應用程式中的鍵盤輸入](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
+- [如何：決定如果 CapsLock 是在 Visual Basic](https://msdn.microsoft.com/library/91e60f5c-dd61-4222-ba5f-39af803afd8c)

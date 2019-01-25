@@ -2,23 +2,23 @@
 title: EDM 產生器 (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: edec83b187afc74f3ad93181c4737a4d6cec8d0e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cd43b6ca31eea2cc4265c7f2e1a045f0f12a256c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722111"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 產生器 (EdmGen.exe)
 EdmGen.exe 是用於處理 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 模型和對應檔案的命令列工具。 您可以使用 EdmGen.exe 工具執行下列動作：  
   
--   使用資料來源特定的 .NET Framework 資料提供者連接至資料來源，並產生 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 使用的概念模型 (.csdl)、儲存體模型 (.ssdl) 和對應 (.msl) 檔案。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用 EdmGen.exe 產生模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。  
+-   使用資料來源特定的 .NET Framework 資料提供者連接至資料來源，並產生 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 使用的概念模型 (.csdl)、儲存體模型 (.ssdl) 和對應 (.msl) 檔案。 如需詳細資訊，請參閱[＜How to：使用 EdmGen.exe 產生模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。  
   
--   驗證現有模型。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用 EdmGen.exe 驗證模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)。  
+-   驗證現有模型。 如需詳細資訊，請參閱[＜How to：使用 EdmGen.exe 驗證模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)。  
   
--   產生 C# 或 Visual Basic 程式碼檔案，其中包含從概念模型 (.csdl) 檔案產生的物件類別 (Class)。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用 EdmGen.exe 產生物件層程式碼](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)。  
+-   產生 C# 或 Visual Basic 程式碼檔案，其中包含從概念模型 (.csdl) 檔案產生的物件類別 (Class)。 如需詳細資訊，請參閱[＜How to：使用 EdmGen.exe 產生物件層程式碼](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)。  
   
--   產生 C# 或 Visual Basic 程式碼檔案，其中包含為現有模型預先產生的檢視表。 如需詳細資訊，[如何： Pre-Generate 檢視，以改善查詢效能](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)。  
+-   產生 C# 或 Visual Basic 程式碼檔案，其中包含為現有模型預先產生的檢視表。 如需詳細資訊， [How to:預先產生檢視以改善查詢效能](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)。  
   
  EdmGen.exe 工具是安裝在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 目錄。 在許多情況下，這是位於 C:\windows\Microsoft.NET\Framework\v4.0。 若為 64 位元系統，則是位於 C:\windows\Microsoft.NET\Framework64\v4.0。 您也可以存取 EdmGen.exe 工具從 Visual Studio 命令提示字元 (按一下**開始**，指向**所有程式**，指向**Microsoft Visual Studio 2010**，指向**Visual Studio Tools**，然後按一下**Visual Studio 2010 命令提示字元**)。  
   
@@ -62,7 +62,7 @@ EdmGen /mode:choice [options]
 |`/SupressForeignKeyProperties or /nofk`|防止外部索引鍵資料行公開為概念模型中實體類型上的純量屬性。|  
 |`/help` 或 `?`|顯示工具的命令語法和選項。|  
 |`/nologo`|隱藏著作權訊息。|  
-|`/targetversion:` \<字串 >|用於編譯產生的程式碼的 .NET Framework 版本。 支援的版本為 4 和 4.5。 預設為 4。|  
+|`/targetversion:` \<string>|用於編譯產生的程式碼的 .NET Framework 版本。 支援的版本為 4 和 4.5。 預設為 4。|  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：使用 EdmGen.exe 產生模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  
@@ -71,7 +71,7 @@ EdmGen /mode:choice [options]
   
  [如何：使用 EdmGen.exe 驗證模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
-## <a name="see-also"></a>另請參閱  
- [ADO.NET 實體資料模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
- [實體資料模型](../../../../../docs/framework/data/adonet/entity-data-model.md)  
- [CSDL、SSDL 和 MSL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+## <a name="see-also"></a>另請參閱
+- [ADO.NET 實體資料模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [實體資料模型](../../../../../docs/framework/data/adonet/entity-data-model.md)
+- [CSDL、SSDL 和 MSL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

@@ -1,22 +1,22 @@
 ---
-title: '&lt;Sessionsecuritytokencache>&gt;'
+title: '&lt;sessionSecurityTokenCache&gt;'
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: b812673ac1c015adde357d3c0707d85643aad3e9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 024375cb114bb080c576ea033e5588526350ecdf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510087"
 ---
-# <a name="ltsessionsecuritytokencachegt"></a>&lt;Sessionsecuritytokencache>&gt;
+# <a name="ltsessionsecuritytokencachegt"></a>&lt;sessionSecurityTokenCache&gt;
 註冊工作階段權杖快取服務或安全性權杖處理常式集合。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<快取 >  
-\<Sessionsecuritytokencache> >  
+\<caches>  
+\<sessionSecurityTokenCache>  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47401366"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<快取 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|註冊服務或安全性權杖處理常式集合所使用的快取。|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|註冊服務或安全性權杖處理常式集合所使用的快取。|  
   
 ## <a name="example"></a>範例  
  下列 XML 會說明用於保存工作階段安全性權杖的自訂快取的組態 (<xref:System.IdentityModel.Tokens.SessionSecurityToken>)。 組態取自`ClaimsAwareWebFarm`範例。 如需有關此範例的詳細資訊，請參閱 < [WIF 程式碼範例索引](../../../../../docs/framework/security/wif-code-sample-index.md)。  
@@ -61,5 +61,5 @@ ms.locfileid: "47401366"
 </caches>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
+## <a name="see-also"></a>另請參閱
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

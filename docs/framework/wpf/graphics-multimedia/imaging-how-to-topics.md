@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 28df9bd2f313165f233c90149d26c60856b3926b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 872eb510e3e85046818987fc6aaf761fca21b320
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493608"
 ---
 # <a name="imaging-how-to-topics"></a>影像處理 HOW TO 主題
-此章節的主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]才能顯示或修改點陣圖影像。  
+在本節中的主題將示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以便顯示或變更點陣圖影像。  
   
 ## <a name="in-this-section"></a>本節內容  
  [在 XAML 中使用 BitmapImage](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
@@ -43,5 +43,5 @@ ms.locfileid: "33563369"
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>另請參閱  
- [影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a>另請參閱
+- [影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

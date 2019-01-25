@@ -1,25 +1,25 @@
 ---
-title: 如何： 執行大型 XML 文件 (Visual Basic) 的資料流轉換
+title: HOW TO：執行大型 XML 文件 (Visual Basic) 的資料流轉換
 ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-ms.openlocfilehash: 50534cc7692386b217dec46082acf65e244ebb48
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 29213be5c70337dfe82c54b7b818df210aa1ab24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538735"
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>如何： 執行大型 XML 文件 (Visual Basic) 的資料流轉換
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>HOW TO：執行大型 XML 文件 (Visual Basic) 的資料流轉換
 有時候您必須轉換大型 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。 如果您嘗試使用非常大的 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比 (也就是，變成過度)。 因此，您應該改用資料流技術。  
   
  在您僅需要處理一次來源文件的情況下，最適合使用資料流技術，而且您可以用文件的順序處理項目。 特定的標準查詢運算子 (例如，<xref:System.Linq.Enumerable.OrderBy%2A>) 會反覆查看其來源、收集所有資料、排序這些資料，最後產生順序中的第一個項目。 請注意，如果您在產生第一個項目前使用具體化其來源的查詢運算子，您將不會為應用程式保留小的記憶體使用量。  
   
- 即使您使用中所述的技巧[如何： Stream XML 片段並存取標頭資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)，如果您嘗試組合包含已轉換的文件，記憶體使用量將會太大的 XML 樹狀結構。  
+ 即使您使用 [HOW TO：Stream XML 片段並存取標頭資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)，如果您嘗試組合包含已轉換的文件，記憶體使用量將會太大的 XML 樹狀結構。  
   
  有兩個主要方法。 其中一個方法是使用 <xref:System.Xml.Linq.XStreamingElement> 的延緩處理特性。 另一個方法則是建立 <xref:System.Xml.XmlWriter>，然後使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。 這個主題會示範這兩種方法。  
   
 ## <a name="example"></a>範例  
- 下列範例中的範例是根據[如何： Stream XML 片段並存取標頭資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
+ 下列範例中的範例是根據[How to:Stream XML 片段並存取標頭資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
   
  這個範例會使用 <xref:System.Xml.Linq.XStreamingElement> 的延後執行功能來串流輸出。 此範例可以轉換非常大的文件，同時維護小的記憶體使用量。  
   
@@ -246,7 +246,7 @@ End Class
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例也是根據中的範例[如何： Stream XML 片段並存取標頭資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
+ 下列範例也是根據中的範例[How to:Stream XML 片段並存取標頭資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
   
  此範例會使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。 此範例可以轉換非常大的文件，同時維護小的記憶體使用量。  
   
@@ -439,5 +439,5 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [進階的 LINQ to XML 程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>另請參閱
+- [進階的 LINQ to XML 程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

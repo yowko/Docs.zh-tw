@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee003d668916baec313c6115cc12826286f6cdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46e039aeec352c215046bebfb17e6fbd803962a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597485"
 ---
 # <a name="pfnclrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance 函式指標
-函式，建立指定的目標項目介面物件的點。  
+指向函式來建立指定的目標項目介面物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,16 +47,16 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
  [out]傳回的介面物件的位址指標。  
   
 ## <a name="remarks"></a>備註  
- `ICLRDataTarget`物件由偵錯應用程式的作者來實作。 實作取決於目標項目所表示的類型。 目標項目可能是處理程序，記憶體傾印、 遠端電腦，以及等等。  
+ `ICLRDataTarget`物件藉由偵錯的應用程式的寫入器。 實作取決於所表示的目標項目類型。 目標項目可能是處理程序、 記憶體傾印、 遠端電腦，等等。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** ClrData.idl  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [偵錯全域靜態函式](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>另請參閱
+- [偵錯全域靜態函式](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

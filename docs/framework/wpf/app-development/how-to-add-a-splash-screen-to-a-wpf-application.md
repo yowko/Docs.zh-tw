@@ -1,5 +1,5 @@
 ---
-title: 如何：在 WPF 應用程式中加入啟動顯示畫面
+title: HOW TO：在 WPF 應用程式中加入啟動顯示畫面
 ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 46efa041736870c5c0f08baa321ef0dc53cacc0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 545fce07d0fab3dca8116f2cacfc068b62cbbde2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537539"
 ---
-# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>如何：在 WPF 應用程式中加入啟動顯示畫面
+# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>HOW TO：在 WPF 應用程式中加入啟動顯示畫面
 
 本主題說明如何新增 [啟動] 視窗中，或是*啟動顯示畫面*，Windows Presentation Foundation (WPF) 應用程式。
 
@@ -47,4 +47,4 @@ ms.locfileid: "43502750"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.SplashScreen>
-- [如何： 將現有的項目加入至專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))
+- [如何：將現有的項目加入至專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

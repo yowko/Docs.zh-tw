@@ -2,12 +2,12 @@
 title: 日期及時間函式
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
-ms.openlocfilehash: 358d124da5fb60d38d5e906a821c0b4bc86baab2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b0272f4a9301b02bc654a00c09c1b8bb799d8309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690770"
 ---
 # <a name="date-and-time-functions"></a>日期及時間函式
 .NET Framework Data Provider for SQL Server (SqlClient) 提供了日期和時間函式，這些函式會在 `System.DateTime` 輸入值上執行作業，並傳回 `string`、數值或 `System.DateTime` 值結果。 這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。 提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。 下表顯示 SqlClient 日期和時間函式。  
@@ -33,5 +33,5 @@ ms.locfileid: "53148986"
 |---------------------|---------------------|---------------------|  
 |[日期和時間函數 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=115908)|[日期和時間函數 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=115909)|[日期和時間函數 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|  
   
-## <a name="see-also"></a>另請參閱  
- [適用於 Entity Framework 的 SqlClient 函式](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+## <a name="see-also"></a>另請參閱
+- [適用於 Entity Framework 的 SqlClient 函式](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

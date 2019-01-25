@@ -8,15 +8,15 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: e4328e1628028be72d10ee2a59c3f53b18bd6580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b53b5666985305362d093e2e579abe83ce619fc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655851"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>視覺分層程式設計 HOW TO 主題
-本節中的主題示範如何使用點擊測試和低階組合的視覺化的圖層。  
+在本節中的主題示範如何使用點擊測試和低層級組合的視覺分層。  
   
 ## <a name="in-this-section"></a>本節內容  
  [取得 Visual 的位移](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
@@ -26,9 +26,9 @@ ms.locfileid: "33561972"
  [使用 Win32 裝載容器進行點擊測試](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
  [使用 CompositionTarget 在單格間隔轉譯](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)

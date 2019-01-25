@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
 author: KrzysztofCwalina
-ms.openlocfilehash: 8d7b1500506ec73a0d33d5352756cb85039358e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d7174de7ddf062b829672e04952c1010fcb74058
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153224"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616925"
 ---
 # <a name="unsealed-classes"></a>非密封類別
 密封的類別無法被繼承，並循環讓擴充性。 相反地，可以繼承自的類別稱為未密封的類別。  
@@ -30,6 +30,6 @@ ms.locfileid: "53153224"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
-- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
+- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [密封](../../../docs/standard/design-guidelines/sealing.md)

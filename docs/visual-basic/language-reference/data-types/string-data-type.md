@@ -18,12 +18,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d841eaab8b09c9a2c126c40a1f846876f3e88601
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598811"
 ---
 # <a name="string-data-type-visual-basic"></a>String 資料類型 (Visual Basic)
 會保留該範圍的不帶正負號的 16 位元 （2 個位元組） 字碼指標順序中從 0 到 65535 的值。 每個*字碼指標*，或字元碼表示單一 Unicode 字元。 字串可以包含從 0 至大約兩個 10 億個 (2 ^31) 的 Unicode 字元。  
@@ -78,11 +78,11 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **Framework 型別。** .NET Framework 中對應的型別是<xref:System.String?displayProperty=nameWithType>類別。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.String?displayProperty=nameWithType>  
- [資料類型](../../../visual-basic/language-reference/data-types/index.md)  
- [Char 資料類型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [操作說明：呼叫使用不帶正負號類型的 Windows 函式](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.String?displayProperty=nameWithType>
+- [資料類型](../../../visual-basic/language-reference/data-types/index.md)
+- [Char 資料類型](../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [如何：呼叫使用不帶正負號類型的 Windows 函式](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

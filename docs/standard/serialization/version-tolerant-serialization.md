@@ -13,12 +13,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: f26de2dbf8ec200a4b53195ae97bbb174e815166
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c899cfe1015a25adc25fc28ee84d0a37a397defe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584684"
 ---
 # <a name="version-tolerant-serialization"></a>版本相容序列化
 在 .NET Framework 1.0 和 1.1 版中，建立可以從應用程式的某個版本，延續到下一個版本使用的可序列化型別，有其問題存在。 如果型別因加入其他欄位而變更，將會發生下列問題：  
@@ -282,15 +282,15 @@ End Class
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.SerializableAttribute>  
-- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
-- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
-- <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>  
-- <xref:System.Runtime.Serialization.OptionalFieldAttribute>  
-- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
-- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
-- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
-- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
-- <xref:System.Runtime.Serialization.StreamingContext>  
-- <xref:System.NonSerializedAttribute>  
+- <xref:System.SerializableAttribute>
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>
+- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>
+- <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>
+- <xref:System.Runtime.Serialization.OptionalFieldAttribute>
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>
+- <xref:System.Runtime.Serialization.StreamingContext>
+- <xref:System.NonSerializedAttribute>
 - [二進位序列化](binary-serialization.md)

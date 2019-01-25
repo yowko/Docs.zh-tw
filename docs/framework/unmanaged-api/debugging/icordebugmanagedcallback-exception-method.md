@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf6152c643395fe52a43424cab33f527d577b5bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db4f0bbef1ce0e6e4a2a0e904bfe8ebb997d5f4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586588"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception 方法
 例外狀況已擲回從 managed 程式碼會告知偵錯工具。  
@@ -42,22 +42,22 @@ HRESULT Exception (
  [in]表示擲回例外狀況所在的應用程式定義域的 ICorDebugAppDomain 物件指標。  
   
  `pThread`  
- [in]表示擲回例外狀況所在的執行緒 ICorDebugThread 物件的指標。  
+ [in]ICorDebugThread 物件，表示擲回例外狀況所在的執行緒指標。  
   
  `unhandled`  
- [in]如果此值為`false`、 例外狀況尚未已由應用程式處理，否則，例外狀況未經處理，並將會終止處理程序。  
+ [in]如果此值為`false`、 例外狀況尚未已由應用程式處理，否則為，例外狀況無法處理，因此將會終止處理序。  
   
 ## <a name="remarks"></a>備註  
- 從執行緒物件，可以擷取該特定例外狀況。  
+ 從執行緒物件，可以擷取特定的例外狀況。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>另請參閱
+- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

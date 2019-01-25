@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: f77864d827ce12d40971dd7f7159e985ab4096ae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b6c509bd150ec2443762134079427ebd2de8ba09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552609"
 ---
 # <a name="guide-to-the-documentation"></a>文件指南
 提供以下是 Windows Communication Foundation (WCF) 文件的相關指引。 連結文件是建議的起點，並且根據特定興趣和專業等級分群組。  
@@ -44,7 +44,7 @@ ms.locfileid: "43520970"
   
 ## <a name="using-windows-communication-foundation-with-other-technologies"></a>搭配其他技術使用 Windows Communication Foundation  
   
--   若要建立 ASP.NET 用戶端進行通訊的服務，請參閱[如何： 設定 WCF 服務設為與 ASP.NET Web 服務用戶端相互操作](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)。  
+-   若要建立 ASP.NET 用戶端進行通訊的服務，請參閱[How to:設定 WCF 服務與 ASP.NET Web 服務用戶端交互操作](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)。  
   
 -   與整合[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]遠端處理述[將.NET 遠端處理應用程式移轉至 WCF](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)。  
   
@@ -52,17 +52,17 @@ ms.locfileid: "43520970"
   
 -   若要整合現有 COM 應用程式使用 WCF 服務或用戶端，請參閱[整合 COM 應用程式](../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)。  
   
--   若要整合現有 MSMQ 應用程式使用 WCF 服務或用戶端，請參閱[如何： 與 WCF 端點交換佇列訊息](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)和[How to： 與 WCF 端點和訊息佇列應用程式交換訊息](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
+-   若要整合現有 MSMQ 應用程式使用 WCF 服務或用戶端，請參閱[How to:與 WCF 端點交換佇列訊息](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)和[How to:與 WCF 端點交換訊息和訊息佇列應用程式](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
   
 -   若要使用 Internet Information Services (IIS) 裝載的服務，請參閱[裝載的服務](../../../docs/framework/wcf/hosting-services.md)。  
   
--   若要使用 WCF 來取用 Web 服務延伸 (WSE) 3.0 服務，請參閱[如何： 存取 WSE 3.0 服務](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)。  
+-   若要使用 WCF 來取用 Web 服務延伸 (WSE) 3.0 服務，請參閱[How to:存取 WSE 3.0 服務](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)。  
   
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Windows Communication Foundation 中支援的 WS-* 通訊協定  
  若要查看系統提供繫結中支援的通訊協定清單，請參閱[Web 服務之互通性繫結所支援的通訊協定](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)。 若要查看系統提供繫結的清單，請參閱[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Communication Foundation 範例](../../../docs/framework/wcf/samples/index.md)  
- [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)  
- [方針及最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
- [建置用戶端](../../../docs/framework/wcf/building-clients.md)
+## <a name="see-also"></a>另請參閱
+- [Windows Communication Foundation 範例](../../../docs/framework/wcf/samples/index.md)
+- [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)
+- [方針及最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+- [建置用戶端](../../../docs/framework/wcf/building-clients.md)
