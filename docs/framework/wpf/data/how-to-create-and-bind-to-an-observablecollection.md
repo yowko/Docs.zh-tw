@@ -1,5 +1,5 @@
 ---
-title: 操作說明：建立和繫結至 ObservableCollection
+title: HOW TO：建立和繫結至 ObservableCollection
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 5e04aa1a1d209074dbdadcb1df089e31efa84ded
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf9f714878cd1b0b179dc1ced44e3dcfe7c2f9bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517587"
 ---
-# <a name="how-to-create-and-bind-to-an-observablecollection"></a><span data-ttu-id="fa6d9-102">操作說明：建立和繫結至 ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="fa6d9-102">How to: Create and Bind to an ObservableCollection</span></span>
-<span data-ttu-id="fa6d9-103">此範例示範如何建立並繫結至集合，其中衍生自<xref:System.Collections.ObjectModel.ObservableCollection%601>類別，即會加入或移除項目時提供通知的集合類別。</span><span class="sxs-lookup"><span data-stu-id="fa6d9-103">This example shows how to create and bind to a collection that derives from the <xref:System.Collections.ObjectModel.ObservableCollection%601> class, which is a collection class that provides notifications when items get added or removed.</span></span>  
+# <a name="how-to-create-and-bind-to-an-observablecollection"></a><span data-ttu-id="80f36-102">HOW TO：建立和繫結至 ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="80f36-102">How to: Create and Bind to an ObservableCollection</span></span>
+<span data-ttu-id="80f36-103">此範例示範如何建立和繫結至衍生自集合<xref:System.Collections.ObjectModel.ObservableCollection%601>類別，這是加入或移除項目時提供通知的集合類別。</span><span class="sxs-lookup"><span data-stu-id="80f36-103">This example shows how to create and bind to a collection that derives from the <xref:System.Collections.ObjectModel.ObservableCollection%601> class, which is a collection class that provides notifications when items get added or removed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fa6d9-104">範例</span><span class="sxs-lookup"><span data-stu-id="fa6d9-104">Example</span></span>  
- <span data-ttu-id="fa6d9-105">下列範例顯示 `NameList` 集合的實作：</span><span class="sxs-lookup"><span data-stu-id="fa6d9-105">The following example shows the implementation of a `NameList` collection:</span></span>  
+## <a name="example"></a><span data-ttu-id="80f36-104">範例</span><span class="sxs-lookup"><span data-stu-id="80f36-104">Example</span></span>  
+ <span data-ttu-id="80f36-105">下列範例顯示 `NameList` 集合的實作：</span><span class="sxs-lookup"><span data-stu-id="80f36-105">The following example shows the implementation of a `NameList` collection:</span></span>  
   
 ```csharp  
 public class NameList : ObservableCollection<PersonName>  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- <span data-ttu-id="fa6d9-106">您可以使用讓其他[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件變為可用的相同方式，將集合變為可用來進行繫結 (如[讓資料可於 XAML 中繫結](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)中所述)。</span><span class="sxs-lookup"><span data-stu-id="fa6d9-106">You can make the collection available for binding the same way you would with other [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects, as described in [Make Data Available for Binding in XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md).</span></span> <span data-ttu-id="fa6d9-107">例如，您可以使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 具現化集合，並將集合指定為資源 (如這裡所示)：</span><span class="sxs-lookup"><span data-stu-id="fa6d9-107">For example, you can instantiate the collection in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and specify the collection as a resource, as shown here:</span></span>  
+ <span data-ttu-id="80f36-106">您可以使用讓其他[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件變為可用的相同方式，將集合變為可用來進行繫結 (如[讓資料可於 XAML 中繫結](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)中所述)。</span><span class="sxs-lookup"><span data-stu-id="80f36-106">You can make the collection available for binding the same way you would with other [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects, as described in [Make Data Available for Binding in XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md).</span></span> <span data-ttu-id="80f36-107">例如，您可以使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 具現化集合，並將集合指定為資源 (如這裡所示)：</span><span class="sxs-lookup"><span data-stu-id="80f36-107">For example, you can instantiate the collection in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and specify the collection as a resource, as shown here:</span></span>  
   
 ```xaml  
 <Window  
@@ -124,7 +124,7 @@ End Class
 </Window.Resources>  
 ```  
   
- <span data-ttu-id="fa6d9-108">然後，就可以繫結至集合：</span><span class="sxs-lookup"><span data-stu-id="fa6d9-108">You can then bind to the collection:</span></span>  
+ <span data-ttu-id="80f36-108">然後，就可以繫結至集合：</span><span class="sxs-lookup"><span data-stu-id="80f36-108">You can then bind to the collection:</span></span>  
   
 ```xaml  
 <ListBox Width="200"  
@@ -133,16 +133,16 @@ End Class
          IsSynchronizedWithCurrentItem="True"/>  
 ```  
   
- <span data-ttu-id="fa6d9-109">這裡並未顯示 `NameItemTemplate` 的定義。</span><span class="sxs-lookup"><span data-stu-id="fa6d9-109">The definition of `NameItemTemplate` is not shown here.</span></span>  
+ <span data-ttu-id="80f36-109">這裡並未顯示 `NameItemTemplate` 的定義。</span><span class="sxs-lookup"><span data-stu-id="80f36-109">The definition of `NameItemTemplate` is not shown here.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="fa6d9-110">集合中的物件必須滿足[繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)中所述的需求。</span><span class="sxs-lookup"><span data-stu-id="fa6d9-110">The objects in your collection must satisfy the requirements described in the [Binding Sources Overview](../../../../docs/framework/wpf/data/binding-sources-overview.md).</span></span> <span data-ttu-id="fa6d9-111">特別是，如果您使用<xref:System.Windows.Data.BindingMode.OneWay>或<xref:System.Windows.Data.BindingMode.TwoWay>(例如，您想您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]時動態變更的來源屬性更新)，您必須實作適當的屬性已變更通知機制，例如<xref:System.ComponentModel.INotifyPropertyChanged>介面。</span><span class="sxs-lookup"><span data-stu-id="fa6d9-111">In particular, if you are using <xref:System.Windows.Data.BindingMode.OneWay> or <xref:System.Windows.Data.BindingMode.TwoWay> (for example, you want your [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] to update when the source properties change dynamically), you must implement a suitable property changed notification mechanism such as the <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span></span>  
+>  <span data-ttu-id="80f36-110">集合中的物件必須滿足[繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)中所述的需求。</span><span class="sxs-lookup"><span data-stu-id="80f36-110">The objects in your collection must satisfy the requirements described in the [Binding Sources Overview](../../../../docs/framework/wpf/data/binding-sources-overview.md).</span></span> <span data-ttu-id="80f36-111">特別是，如果您使用<xref:System.Windows.Data.BindingMode.OneWay>或是<xref:System.Windows.Data.BindingMode.TwoWay>(比方說，您想要您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的來源屬性動態變更時更新)，您必須實作適當的屬性變更通知機制，例如<xref:System.ComponentModel.INotifyPropertyChanged>介面。</span><span class="sxs-lookup"><span data-stu-id="80f36-111">In particular, if you are using <xref:System.Windows.Data.BindingMode.OneWay> or <xref:System.Windows.Data.BindingMode.TwoWay> (for example, you want your [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] to update when the source properties change dynamically), you must implement a suitable property changed notification mechanism such as the <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span></span>  
   
- <span data-ttu-id="fa6d9-112">如需詳細資訊，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)中的＜繫結至集合＞一節。</span><span class="sxs-lookup"><span data-stu-id="fa6d9-112">For more information, see the Binding to Collections section in the [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).</span></span>  
+ <span data-ttu-id="80f36-112">如需詳細資訊，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)中的＜繫結至集合＞一節。</span><span class="sxs-lookup"><span data-stu-id="80f36-112">For more information, see the Binding to Collections section in the [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fa6d9-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fa6d9-113">See Also</span></span>  
- [<span data-ttu-id="fa6d9-114">排序檢視中的資料</span><span class="sxs-lookup"><span data-stu-id="fa6d9-114">Sort Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [<span data-ttu-id="fa6d9-115">篩選檢視中的資料</span><span class="sxs-lookup"><span data-stu-id="fa6d9-115">Filter Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [<span data-ttu-id="fa6d9-116">使用 XAML 中的檢視排序和群組資料</span><span class="sxs-lookup"><span data-stu-id="fa6d9-116">Sort and Group Data Using a View in XAML</span></span>](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [<span data-ttu-id="fa6d9-117">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="fa6d9-117">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [<span data-ttu-id="fa6d9-118">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="fa6d9-118">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="80f36-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="80f36-113">See also</span></span>
+- [<span data-ttu-id="80f36-114">排序檢視中的資料</span><span class="sxs-lookup"><span data-stu-id="80f36-114">Sort Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)
+- [<span data-ttu-id="80f36-115">篩選檢視中的資料</span><span class="sxs-lookup"><span data-stu-id="80f36-115">Filter Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)
+- [<span data-ttu-id="80f36-116">使用 XAML 中的檢視排序和群組資料</span><span class="sxs-lookup"><span data-stu-id="80f36-116">Sort and Group Data Using a View in XAML</span></span>](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [<span data-ttu-id="80f36-117">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="80f36-117">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [<span data-ttu-id="80f36-118">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="80f36-118">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

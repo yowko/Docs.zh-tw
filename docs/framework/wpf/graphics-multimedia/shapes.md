@@ -14,21 +14,21 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: 1dc19da76b73d5b8e5d66851b539a7d1829fc938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c39be1bdcc9c91f4822b7e168f16cb51c51d6c60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580820"
 ---
-# <a name="shapes"></a><span data-ttu-id="9dc22-102">圖形</span><span class="sxs-lookup"><span data-stu-id="9dc22-102">Shapes</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="9dc22-103"> 提供支援繪製基本圖形使用<xref:System.Windows.Shapes.Shape>類別。</span><span class="sxs-lookup"><span data-stu-id="9dc22-103"> provides support for drawing basic shapes using the <xref:System.Windows.Shapes.Shape> class.</span></span> <span data-ttu-id="9dc22-104">圖形物件衍生自<xref:System.Windows.FrameworkElement>因此，參與版面配置系統，而可以直接使用繪製[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="9dc22-104">Shape objects derive from <xref:System.Windows.FrameworkElement> and as such, participate in the layout system and can be drawn simply using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
+# <a name="shapes"></a><span data-ttu-id="1e65c-102">圖形</span><span class="sxs-lookup"><span data-stu-id="1e65c-102">Shapes</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="1e65c-103">支援繪製使用的基本形狀<xref:System.Windows.Shapes.Shape>類別。</span><span class="sxs-lookup"><span data-stu-id="1e65c-103">provides support for drawing basic shapes using the <xref:System.Windows.Shapes.Shape> class.</span></span> <span data-ttu-id="1e65c-104">Shape 物件衍生自<xref:System.Windows.FrameworkElement>因此，參與版面配置系統，而可以直接使用來繪製[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="1e65c-104">Shape objects derive from <xref:System.Windows.FrameworkElement> and as such, participate in the layout system and can be drawn simply using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9dc22-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="9dc22-105">In This Section</span></span>  
- [<span data-ttu-id="9dc22-106">WPF 中圖案和基本繪圖概觀</span><span class="sxs-lookup"><span data-stu-id="9dc22-106">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="9dc22-107">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="9dc22-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1e65c-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="1e65c-105">In This Section</span></span>  
+ [<span data-ttu-id="1e65c-106">WPF 中圖案和基本繪圖概觀</span><span class="sxs-lookup"><span data-stu-id="1e65c-106">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="1e65c-107">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="1e65c-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9dc22-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9dc22-108">See Also</span></span>  
- <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="9dc22-109">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="9dc22-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="9dc22-110">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="9dc22-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="1e65c-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1e65c-108">See also</span></span>
+- <xref:System.Windows.Shapes.Shape>
+- [<span data-ttu-id="1e65c-109">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="1e65c-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="1e65c-110">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="1e65c-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

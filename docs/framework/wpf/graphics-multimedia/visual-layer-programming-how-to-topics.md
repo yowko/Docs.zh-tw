@@ -8,27 +8,27 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: e4328e1628028be72d10ee2a59c3f53b18bd6580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b53b5666985305362d093e2e579abe83ce619fc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655851"
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="cc1b2-102">視覺分層程式設計 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="cc1b2-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="cc1b2-103">本節中的主題示範如何使用點擊測試和低階組合的視覺化的圖層。</span><span class="sxs-lookup"><span data-stu-id="cc1b2-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="a05a7-102">視覺分層程式設計 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="a05a7-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="a05a7-103">在本節中的主題示範如何使用點擊測試和低層級組合的視覺分層。</span><span class="sxs-lookup"><span data-stu-id="a05a7-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cc1b2-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="cc1b2-104">In This Section</span></span>  
- [<span data-ttu-id="cc1b2-105">取得 Visual 的位移</span><span class="sxs-lookup"><span data-stu-id="cc1b2-105">Get the Offset of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="cc1b2-106">列舉 Visual 的繪圖內容</span><span class="sxs-lookup"><span data-stu-id="cc1b2-106">Enumerate Drawing Content of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="cc1b2-107">對 Visual 中的幾何進行點擊測試</span><span class="sxs-lookup"><span data-stu-id="cc1b2-107">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="cc1b2-108">使用幾何做為參數進行點擊測試</span><span class="sxs-lookup"><span data-stu-id="cc1b2-108">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="cc1b2-109">使用 Win32 裝載容器進行點擊測試</span><span class="sxs-lookup"><span data-stu-id="cc1b2-109">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="cc1b2-110">使用 CompositionTarget 在單格間隔轉譯</span><span class="sxs-lookup"><span data-stu-id="cc1b2-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a05a7-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="a05a7-104">In This Section</span></span>  
+ [<span data-ttu-id="a05a7-105">取得 Visual 的位移</span><span class="sxs-lookup"><span data-stu-id="a05a7-105">Get the Offset of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="a05a7-106">列舉 Visual 的繪圖內容</span><span class="sxs-lookup"><span data-stu-id="a05a7-106">Enumerate Drawing Content of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="a05a7-107">對 Visual 中的幾何進行點擊測試</span><span class="sxs-lookup"><span data-stu-id="a05a7-107">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="a05a7-108">使用幾何做為參數進行點擊測試</span><span class="sxs-lookup"><span data-stu-id="a05a7-108">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="a05a7-109">使用 Win32 裝載容器進行點擊測試</span><span class="sxs-lookup"><span data-stu-id="a05a7-109">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="a05a7-110">使用 CompositionTarget 在單格間隔轉譯</span><span class="sxs-lookup"><span data-stu-id="a05a7-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="cc1b2-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc1b2-111">See Also</span></span>  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [<span data-ttu-id="cc1b2-112">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="cc1b2-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="cc1b2-113">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="cc1b2-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="a05a7-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a05a7-111">See also</span></span>
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [<span data-ttu-id="a05a7-112">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="a05a7-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="a05a7-113">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="a05a7-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

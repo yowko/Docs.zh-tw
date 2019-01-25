@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c11de99359701bb6c3198a0b1dc18ba4318c8bc1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b5e4e2a817abff7b0cf24223b7f245fc6f86c1d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544987"
 ---
-# <a name="strongnamesignaturesize-function"></a><span data-ttu-id="02971-102">StrongNameSignatureSize 函式</span><span class="sxs-lookup"><span data-stu-id="02971-102">StrongNameSignatureSize Function</span></span>
-<span data-ttu-id="02971-103">傳回強式名稱簽章的大小。</span><span class="sxs-lookup"><span data-stu-id="02971-103">Returns the size of the strong name signature.</span></span> <span data-ttu-id="02971-104">`StrongNameSignatureSize` 通常是由編譯器決定要建立的延遲簽署組件時，檔案中保留多少空間。</span><span class="sxs-lookup"><span data-stu-id="02971-104">`StrongNameSignatureSize` is typically used by compilers to determine how much space to reserve in the file when creating a delay-signed assembly.</span></span>  
+# <a name="strongnamesignaturesize-function"></a><span data-ttu-id="831e9-102">StrongNameSignatureSize 函式</span><span class="sxs-lookup"><span data-stu-id="831e9-102">StrongNameSignatureSize Function</span></span>
+<span data-ttu-id="831e9-103">傳回強式名稱簽章的大小。</span><span class="sxs-lookup"><span data-stu-id="831e9-103">Returns the size of the strong name signature.</span></span> <span data-ttu-id="831e9-104">`StrongNameSignatureSize` 通常是由編譯器決定要建立的延遲簽署組件時，檔案中保留多少空間。</span><span class="sxs-lookup"><span data-stu-id="831e9-104">`StrongNameSignatureSize` is typically used by compilers to determine how much space to reserve in the file when creating a delay-signed assembly.</span></span>  
   
- <span data-ttu-id="02971-105">此函式已被取代。</span><span class="sxs-lookup"><span data-stu-id="02971-105">This function has been deprecated.</span></span> <span data-ttu-id="02971-106">使用[iclrstrongname:: Strongnamesignaturesize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="02971-106">Use the [ICLRStrongName::StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) method instead.</span></span>  
+ <span data-ttu-id="831e9-105">此函式已被取代。</span><span class="sxs-lookup"><span data-stu-id="831e9-105">This function has been deprecated.</span></span> <span data-ttu-id="831e9-106">使用[iclrstrongname:: Strongnamesignaturesize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="831e9-106">Use the [ICLRStrongName::StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="02971-107">語法</span><span class="sxs-lookup"><span data-stu-id="02971-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="831e9-107">語法</span><span class="sxs-lookup"><span data-stu-id="831e9-107">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameSignatureSize (   
@@ -38,31 +38,31 @@ BOOLEAN StrongNameSignatureSize (
 );   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="02971-108">參數</span><span class="sxs-lookup"><span data-stu-id="02971-108">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="831e9-108">參數</span><span class="sxs-lookup"><span data-stu-id="831e9-108">Parameters</span></span>  
  `pbPublicKeyBlob`  
- <span data-ttu-id="02971-109">[in]型別的結構[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) ，其中包含用來產生強式名稱簽章金鑰組的公開部分。</span><span class="sxs-lookup"><span data-stu-id="02971-109">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
+ <span data-ttu-id="831e9-109">[in]類型的結構[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) ，其中包含用來產生強式名稱簽章金鑰組的公開部分。</span><span class="sxs-lookup"><span data-stu-id="831e9-109">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
   
  `cbPublicKeyBlob`  
- <span data-ttu-id="02971-110">[in]大小，以位元組為單位的`pbPublicKeyBlob`。</span><span class="sxs-lookup"><span data-stu-id="02971-110">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
+ <span data-ttu-id="831e9-110">[in]大小，以位元組為單位的`pbPublicKeyBlob`。</span><span class="sxs-lookup"><span data-stu-id="831e9-110">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="02971-111">[in]儲存的強式名稱簽章所需的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="02971-111">[in] The number of bytes required to store the strong name signature.</span></span>  
+ <span data-ttu-id="831e9-111">[in]儲存的強式名稱簽章所需的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="831e9-111">[in] The number of bytes required to store the strong name signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="02971-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="02971-112">Return Value</span></span>  
- <span data-ttu-id="02971-113">`true` 如果成功地完成。否則， `false`。</span><span class="sxs-lookup"><span data-stu-id="02971-113">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="831e9-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="831e9-112">Return Value</span></span>  
+ <span data-ttu-id="831e9-113">`true` 如果成功地完成;否則， `false`。</span><span class="sxs-lookup"><span data-stu-id="831e9-113">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="02971-114">備註</span><span class="sxs-lookup"><span data-stu-id="02971-114">Remarks</span></span>  
- <span data-ttu-id="02971-115">如果`StrongNameSignatureSize`函式未順利完成，請呼叫[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函式可擷取的最後一個產生的錯誤。</span><span class="sxs-lookup"><span data-stu-id="02971-115">If the `StrongNameSignatureSize` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="831e9-114">備註</span><span class="sxs-lookup"><span data-stu-id="831e9-114">Remarks</span></span>  
+ <span data-ttu-id="831e9-115">如果`StrongNameSignatureSize`函式未順利完成，請呼叫[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函式來擷取最後一個產生的錯誤。</span><span class="sxs-lookup"><span data-stu-id="831e9-115">If the `StrongNameSignatureSize` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="02971-116">需求</span><span class="sxs-lookup"><span data-stu-id="02971-116">Requirements</span></span>  
- <span data-ttu-id="02971-117">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="02971-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="831e9-116">需求</span><span class="sxs-lookup"><span data-stu-id="831e9-116">Requirements</span></span>  
+ <span data-ttu-id="831e9-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="831e9-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="02971-118">**標頭：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="02971-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="831e9-118">**標頭：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="831e9-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="02971-119">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="02971-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="831e9-119">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="831e9-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="02971-120">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02971-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="831e9-120">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="831e9-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="02971-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="02971-121">See Also</span></span>  
- [<span data-ttu-id="02971-122">StrongNameSignatureSize 方法</span><span class="sxs-lookup"><span data-stu-id="02971-122">StrongNameSignatureSize Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)  
- [<span data-ttu-id="02971-123">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="02971-123">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="831e9-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="831e9-121">See also</span></span>
+- [<span data-ttu-id="831e9-122">StrongNameSignatureSize 方法</span><span class="sxs-lookup"><span data-stu-id="831e9-122">StrongNameSignatureSize Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)
+- [<span data-ttu-id="831e9-123">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="831e9-123">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
