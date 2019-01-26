@@ -5,16 +5,14 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 284c2a08f2b78d2c6a1ab9752a3f2283e87fd734
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50980829"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083651"
 ---
-# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>如何：啟用和停用自動繫結重新導向
+# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>HOW TO：啟用和停用自動繫結重新導向
 
 在 Visual Studio 中為目標的應用程式的編譯時[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]和更新版本中，繫結重新導向可能會自動加入至應用程式組態檔覆寫組件統一。 如果您的應用程式或其元件參考相同組件的多個版本，即使您在應用程式的組態檔中手動指定繫結重新導向，仍會加入繫結重新導向。 自動繫結重新導向功能會影響傳統型應用程式和 web 應用程式為目標[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]或更新版本中，雖然行為會稍有不同的 web 應用程式。 如果您有現有的應用程式先前版本為目標的.NET Framework 中，或如果您想要以手動方式撰寫繫結重新導向，您可以停用這項功能，您可以啟用自動繫結重新導向。
 

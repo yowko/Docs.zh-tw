@@ -9,14 +9,12 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 939e10e0c06e98f98e0c468358f4296fd1061a79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2a027cfc76255b81bc8c577be5c2d825303b3e5
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593923"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083531"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;項目&lt;執行階段&gt;
 包含組件的識別資訊。  

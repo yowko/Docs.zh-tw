@@ -5,14 +5,12 @@ helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 7e183a624b95e207d34697c906cc3f278c967ae9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ceeef00cb688c725cc595582fb6845b9e3fa9b92
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499761"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083388"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;移除&gt;項目&lt;namedCaches&gt;
 從記憶體快取的 `namedCaches` 集合移除具名快取項目。  

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 11ed84b01adf57eb526eaa1e71c6968e48c64cc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d238ceb4f96905031cb4a30f50727050381277e
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627536"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084493"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>HOW TO：使用 DEVPATH 找出組件
 開發人員可能想要確定自己進行建置，某個共用組件與多個應用程式正常運作。 而不是持續將組件在全域組件快取中放在開發期間，開發人員可以建立指向組件的組建輸出目錄 DEVPATH 環境變數。  

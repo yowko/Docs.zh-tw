@@ -11,14 +11,12 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3069022287d469704cc7adac40d02ef3c6997b56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eaeffb365dd2c9999d4faa6b28c6d50e8cd6a6e
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563040"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084324"
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt;項目
 包含任何來源或追蹤項目可參考的接聽項。  根據預設，這些接聽程式沒有收到任何追蹤，則不可能在執行階段擷取這些接聽程式。 識別為共用接聽項可以依名稱加入到來源或追蹤接聽程式。  

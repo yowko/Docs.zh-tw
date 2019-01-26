@@ -8,14 +8,12 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c22263fd51b80e7bd99ada8452696debdcc44140
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e1bc2629b613b278ad38bbe9aab4cdfaa3f2a5e
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507382"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084025"
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;新增&gt;項目&lt;接聽程式&gt;如&lt;來源&gt;
 將接聽項新增至追蹤來源的 `Listeners` 集合。  

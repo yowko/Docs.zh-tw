@@ -7,14 +7,12 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2e0970fe197ecf6e0fbcf94f410364cb59d267e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0bb2cabafbaba33f8dde7cbf3399387876e0158
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732605"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083583"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;清除&gt;項目&lt;接聽程式&gt;如&lt;追蹤&gt;
 清除追蹤的 `Listeners` 集合。  

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 8beb3ef041b153535afcb8bd92e1c29787e1f161
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f3d8eefdf74f0960f3fe530f77a67c0706e4585
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654408"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083479"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;移除&gt;項目&lt;接聽程式&gt;如&lt;來源&gt;
 從追蹤來源的 `Listeners` 集合移除接聽項。  
