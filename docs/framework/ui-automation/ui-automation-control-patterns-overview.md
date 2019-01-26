@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 40ea9b6d8ad88683ef0b3d75907fe645e9f2e3e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74e373610a78cbed5d31ff408e3c4ef8f11216f6
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679067"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066232"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自動化控制項模式概觀
 > [!NOTE]
@@ -43,7 +43,7 @@ ms.locfileid: "54679067"
   
  使用者介面自動化用戶端存取 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制模式類別的方法和屬性，並使用它們來取得 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]的相關資訊，或操作 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]。 這些控制項模式類別位於 <xref:System.Windows.Automation> 命名空間 (例如 <xref:System.Windows.Automation.InvokePattern> 和 <xref:System.Windows.Automation.SelectionPattern>)。  
   
- 用戶端使用 <xref:System.Windows.Automation.AutomationElement> 方法 (例如 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> 或 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) 或 [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] 存取子來存取模式的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。 每個控制項模式類別有一個欄位成員 (例如<xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>' 或<xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>)，識別該控制項模式，而且可以做為參數傳遞<xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>或<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>擷取該模式<xref:System.Windows.Automation.AutomationElement>。  
+ 用戶端使用 <xref:System.Windows.Automation.AutomationElement> 方法 (例如 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> 或 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) 或 [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] 存取子來存取模式的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。 每個控制項模式類別有一個欄位成員 (例如<xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>或<xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>)，識別該控制項模式，而且可以做為參數傳遞<xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>或<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>擷取該模式<xref:System.Windows.Automation.AutomationElement>。  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>動態控制項模式  

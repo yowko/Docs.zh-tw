@@ -2,12 +2,12 @@
 title: 交易 MSMQ 繫結
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-ms.openlocfilehash: e85a6396f0627454971cdd1b0b63d2fa521c2625
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9574320478741f71c7c98d7e21a24c80a31b72a2
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678196"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066047"
 ---
 # <a name="transacted-msmq-binding"></a>交易 MSMQ 繫結
 這個範例會示範如何使用訊息佇列 (MSMQ) 執行交易佇列通訊。
@@ -227,7 +227,7 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 2.  請務必先變更伺服器與用戶端上的組態，再執行範例。
 
     > [!NOTE]
-    >  將 `security``mode` 設定為 `None`，相當於將 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 和 `Message` 安全性設定為 `None`。
+    >  將 `security mode` 設定為 `None`，相當於將 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 和 `Message` 安全性設定為 `None`。
 
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

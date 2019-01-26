@@ -2,12 +2,12 @@
 title: 資料庫存取活動
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: efcdd25ee3e6b86d87d551623b166eab4fa76845
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850396"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066086"
 ---
 # <a name="database-access-activities"></a>資料庫存取活動
 資料庫存取活動可讓您存取工作流程內的資料庫。 這些活動可讓您存取資料庫以擷取或修改資訊以及使用[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)來存取資料庫。  
@@ -88,7 +88,7 @@ Public class DbUpdate: AsyncCodeActivity
 
  要執行的查詢是在其 `Sql` 屬性中設定，而參數是透過 `Parameters` 集合傳遞。
 
- 之後`DbQueryScalar`會執行，會傳回純量中`Result``out`引數 (型別的`TResult`，也就是在基底類別中定義<xref:System.Activities.AsyncCodeActivity%601>)。
+ 之後`DbQueryScalar`會執行，會傳回純量中`Result out`引數 (型別的`TResult`，也就是在基底類別中定義<xref:System.Activities.AsyncCodeActivity%601>)。
 
 ```
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -200,7 +200,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 
  要執行的查詢是在其 `Sql` 屬性中設定，而參數是透過 `Parameters` 集合傳遞。
 
- 之後`DbQueryDataSet`會執行`DataSet`會傳回`Result``out`引數 (型別的`TResult`，也就是基底類別中定義<xref:System.Activities.AsyncCodeActivity%601>)。
+ 之後`DbQueryDataSet`會執行`DataSet`會傳回`Result out`引數 (型別的`TResult`，也就是基底類別中定義<xref:System.Activities.AsyncCodeActivity%601>)。
 
 ```
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>

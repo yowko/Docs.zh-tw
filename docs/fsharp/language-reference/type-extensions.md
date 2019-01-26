@@ -1,13 +1,13 @@
 ---
 title: 類型擴充
 description: 了解如何F#類型擴充功能可讓您將新成員加入先前定義的物件類型。
-ms.date: 07/20/2018
-ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/23/2019
+ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614046"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066151"
 ---
 # <a name="type-extensions"></a>類型擴充功能
 
@@ -121,7 +121,7 @@ type IEnumerable<'T> with
 
 * 現況`Sum`成員有不同的條件約束`'T`(`static member get_Zero`和`static member (+)`) 比類型擴充功能的定義。
 * 修改類型擴充功能，能夠以相同的條件約束`Sum`就不再符合定義的條件約束上`IEnumerable<'T>`。
-* 進行變更的成員，才能`member inline Sum`將會不相符類型條件約束發生錯誤
+* 變更`member this.Sum`至`member inline this.Sum`將會不相符類型條件約束發生錯誤。
 
 預期是 「 浮動在空間 」，可以呈現，彷彿它們所擴充類型的靜態方法。 這是其中的擴充方法會變得必要。
 

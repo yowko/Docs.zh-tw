@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 696d14630240dce094ace7d595232e1a210ea78e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 597a7bef66ac3908345aa5c8b59c838a3e65b2f4
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527142"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065878"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML 子代軸屬性 (Visual Basic)
 提供下列任一項目之子系的存取：<xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件的集合，或是 <xref:System.Xml.Linq.XDocument> 物件的集合。  
@@ -32,7 +32,7 @@ object.<child>
 |---|---|  
 |`object`|必要項。 <xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件集合或 <xref:System.Xml.Linq.XDocument> 物件集合。|  
 |.<|必要項。 代表子軸屬性的開頭。|  
-|`child`|必要項。 若要存取，在表單的子節點名稱的 [`prefix``:`]`name`。<br /><br /> -   `Prefix` -選擇性。 子節點的 XML 命名空間前置詞。 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。<br />-   `Name` 必要。 本機子節點名稱。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
+|`child`|必要項。 若要存取，在表單的子節點的名稱 [`prefix:]name`。<br /><br /> -   `Prefix` -選擇性。 子節點的 XML 命名空間前置詞。 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。<br />-   `Name` 必要。 本機子節點名稱。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
 |>|必要項。 代表子軸屬性的結尾。|  
   
 ## <a name="return-value"></a>傳回值  

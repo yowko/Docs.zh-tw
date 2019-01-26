@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d58ac91f42e07e3f556389a818d8118d846653c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e476674e99f0951148dc7cfc95deeeaede3862ae
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518159"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066294"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Spinner 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "54518159"
 |------------------|------------------|  
 |Spinner<br /><br /> 編輯 （0 或 1）<br />按鈕 (2)<br />清單項目 （0 或以上）|Spinner<br /><br /> -ListItem （0 或以上）|  
   
- 為確保自動化測試工具可區別控制項檢視樹狀子結構中的兩個按鈕，請依適當的情況指派 `SmallIncrement` 或 `SmallDecrement``AutomationId` 。 針對某些實作，相關的編輯控制項可以是微調控制項的對等項目。  
+ 若要確保自動化的測試工具可區別控制項檢視樹狀子結構中的兩個按鈕，將指派`SmallIncrement`或是`SmallDecrement``AutomationId`視情況。 針對某些實作，相關的編輯控制項可以是微調控制項的對等項目。  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  

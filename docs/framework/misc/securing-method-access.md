@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691472"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066008"
 ---
 # <a name="securing-method-access"></a>設定方法存取的安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -234,7 +234,7 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Virtual Internal 覆寫或 Overloads Overridable Friend  
   
 > [!NOTE]
->  本節會警告關於安全性問題，宣告兩者為方法時`virtual`並`internal`(`Overloads``Overridable``Friend` Visual Basic 中)。 這個警告只適用於.NET framework 1.0 和 1.1 版，它不會套用到更新版本。  
+>  本節會警告關於安全性問題，宣告兩者為方法時`virtual`並`internal`(`Overloads` `Overridable` `Friend` Visual Basic 中)。 這個警告只適用於.NET framework 1.0 和 1.1 版，它不會套用到更新版本。  
   
  在.NET framework 1.0 和 1.1 版中，您必須留意類型系統存取範圍的細微差別時確認您的程式碼無法使用其他組件。 宣告的方法**虛擬**並**內部**(**Overloads Overridable Friend** Visual Basic 中) 可以覆寫父類別 vtable 項目，而且可以只從使用相同的組件中因為它是內部。 不過，覆寫的存取範圍取決於**虛擬**關鍵字，且可能會覆寫從其他組件，只要該程式碼可存取此類別本身。 如果覆寫可能會發生問題，使用宣告式安全性來解決問題，或移除**虛擬**關鍵字，如果不是絕對必要。  
   

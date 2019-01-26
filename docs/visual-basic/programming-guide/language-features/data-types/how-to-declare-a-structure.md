@@ -7,15 +7,15 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: bfed5c969466cb427e6c94d39bfcc6a6e007c320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cee2768d0e7475d2df123491e2b506bf5c08785f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672041"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066112"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>HOW TO：宣告結構 (Visual Basic)
-開始使用在 structure 宣告[Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)，您最後會與其`End``Structure`陳述式。 這兩個陳述式之間必須宣告至少一個*項目*。 項目可以是任何資料類型，但至少一個必須為非共用的變數或非共用、 非自訂的事件。  
+開始使用在 structure 宣告[Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)，然後您使用`End Structure`陳述式。 這兩個陳述式之間必須宣告至少一個*項目*。 項目可以是任何資料類型，但至少一個必須為非共用的變數或非共用、 非自訂的事件。  
   
  您無法初始化任何在結構宣告中的結構項目。 當您宣告結構類型的變數時，您將值指派至項目透過變數來存取它們。  
   

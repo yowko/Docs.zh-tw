@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: d9c3c63dece8a32280f17af6cc143b73bef58242
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df677e29534e2f451afa27b9b81159b4826c98ca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739280"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066134"
 ---
 # <a name="service-transaction-behavior"></a>服務異動行為
 這個範例會示範如何使用用戶端協調的異動，以及設定 ServiceBehaviorAttribute 和 OperationBehaviorAttribute，以控制服務異動行為。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，實作計算機服務，但經過擴充，來維護資料庫資料表和具狀態執行總數計算機作業中所執行作業的伺服器記錄檔。 對伺服器記錄資料表的持續性寫入會依用戶端協調的交易結果而定，如果用戶端交易沒有完成，Web 服務交易就會確保資料庫的更新並未經過認可。  
@@ -100,7 +100,7 @@ client.Close();
   
     -   `ReleaseServiceInstanceOnTransactionComplete` 屬性會指定是否要在交易完成時回收服務執行個體。 設定為 `false` 時，服務會維護多個作業要求中的相同服務執行個體。 這是維護執行總數的必要項。 如果設定為 `true`，就會在每次完成動作之後產生新執行個體。  
   
-    -   `TransactionAutoCompleteOnSessionClose` 屬性會指定是否要在工作階段關閉時完成未完成的異動。 藉由將它設定為`false`，個別的作業所需設定`OperationBehaviorAttribute``TransactionAutoComplete`屬性設`true`或是明確要求呼叫`SetTransactionComplete`方法來完成異動。 這個範例會示範這兩種方法。  
+    -   `TransactionAutoCompleteOnSessionClose` 屬性會指定是否要在工作階段關閉時完成未完成的異動。 藉由將它設定為`false`，個別的作業所需設定<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType>屬性設`true`或是明確要求呼叫<xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType>方法來完成異動。 這個範例會示範這兩種方法。  
   
 -   在 `ServiceContractAttribute` 上：  
   

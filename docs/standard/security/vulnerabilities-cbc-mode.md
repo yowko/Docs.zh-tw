@@ -4,12 +4,12 @@ description: 了解如何偵測及降低計時弱點與 Cipher Block Chaining (C
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123640"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066167"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>使用 CBC 模式的對稱式解密使用邊框間距的計時弱點
 
@@ -29,7 +29,7 @@ Oracle 指的是 「 告訴 」 讓它們執行的動作是否為正確的攻擊
 
 攻擊者可以使用填補 oracle，搭配 CBC 資料結構的方式，將稍有變更的訊息傳送至 oracle，公開 （expose） 的程式碼，並持續傳送資料，直到 oracle 告訴他們的資料正確。 從這個回應，攻擊者可以解密逐位元組的訊息。
 
-現代電腦網路都屬於這類高品質攻擊者可以偵測很小 （小於 0.1 毫秒） 在遠端系統上執行的差異時間。 假設資料未曾遭到竄改時，可以只會發生成功解密的應用程式可能容易遭受攻擊的工具，專為觀察在成功和失敗的解密的差異。 雖然這項時間差異可能是在某些語言或程式庫比其他更重要的現在認為這是實際服務威脅中的所有語言和程式庫，當失敗的應用程式的回應會納入考量。
+現代電腦網路都屬於這類高品質攻擊者可以偵測很小 （小於 0.1 毫秒） 在遠端系統上執行的差異時間。 假設資料未曾遭到竄改時，可以只會發生成功解密的應用程式可能容易遭受攻擊的工具，專為觀察在成功和失敗的解密的差異。 雖然這項時間差異可能是在某些語言或程式庫比其他更重要的現在認為這是實際服務威脅中的所有語言和程式庫，當失敗的應用程式的回應會納入考量。
 
 這種攻擊會依賴變更加密的資料和測試結果與 oracle 的能力。 完全緩和攻擊的唯一方法是偵測加密資料的變更，並拒絕在其上執行任何動作。 若要這樣做的標準方式是建立資料的簽章，並執行任何作業之前，請驗證該簽章。 簽章必須可供驗證，攻擊者無法加以建立，否則它們就可以變更加密的資料，然後計算新的簽章已變更的資料為基礎。 一個常見的適當簽章的類型稱為金鑰式雜湊訊息驗證碼 (HMAC)。 HMAC 與總和檢查碼不同，在於它會使用祕密金鑰，已知只產生 HMAC 的人員，並確認它的人員。 而不需要擁有金鑰，您無法產生正確的 HMAC。 當您收到您的資料時，您會需要加密的資料，獨立計算 HMAC 使用祕密金鑰，您寄件者共用，然後它們傳送給其中一個您 HMAC 計算的比較。 這項比較必須是固定的時間，否則您已新增另一個偵測到 oracle，可讓不同類型的攻擊。
 
@@ -100,7 +100,7 @@ Oracle 指的是 「 告訴 」 讓它們執行的動作是否為正確的攻擊
 
 ## <a name="finding-vulnerable-code---native-applications"></a>尋找易受攻擊的程式碼-原生應用程式
 
-建置 Windows 密碼編譯的程式： Next Generation (CNG) 程式庫：
+建置 Windows 密碼編譯的程式：下一步 的新一代 (CNG) 程式庫：
 
 - 解密呼叫是對[BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt)，並指定`BCRYPT_BLOCK_PADDING`旗標。
 - 藉由呼叫已經初始化的金鑰控制代碼[BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty)具有[BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE)設定為`BCRYPT_CHAIN_MODE_CBC`。
@@ -109,7 +109,7 @@ Oracle 指的是 「 告訴 」 讓它們執行的動作是否為正確的攻擊
 針對較舊的 Windows 密碼編譯 API 建置的程式：
 
 - 解密呼叫是對[CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt)使用`Final=TRUE`。
-- 藉由呼叫已經初始化的金鑰控制代碼[CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam)具有[KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE)設定為`CRYPT_MODE_CBC`。
+- 藉由呼叫已經初始化的金鑰控制代碼[CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam)具有[KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam)設定為`CRYPT_MODE_CBC`。
   - 由於`CRYPT_MODE_CBC`是預設設定，受影響的程式碼可能未指派任何值`KP_MODE`。
 
 ## <a name="finding-vulnerable-code---managed-applications"></a>尋找受到程式碼-受管理的應用程式

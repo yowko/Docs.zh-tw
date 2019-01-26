@@ -2,12 +2,12 @@
 title: HOW TO：指定通道安全性認證
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: b24178b9810d9ab4cde3190ab372a2c342823ca1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495197"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066190"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>HOW TO：指定通道安全性認證
 Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼叫 WCF 服務。 大部分的 WCF 服務要求用戶端指定用於驗證和授權的認證。 當從 WCF 用戶端呼叫 WCF 服務，您可以在 managed 程式碼或應用程式組態檔中指定這些認證。 當從 COM 應用程式呼叫 WCF 服務，您可以使用<xref:System.ServiceModel.ComIntegration.IChannelCredentials>介面來指定認證。 本主題將說明各種使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面指定認證的方式。  
@@ -23,9 +23,9 @@ Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼
   
 2.  開啟「訊息安全性」專案。  
   
-3.  新增`[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]`至`ICalculator`介面定義。  
+3.  新增`[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]`至`ICalculator`介面定義。  
   
-4.  新增`bindingNamespace=``http://Microsoft.ServiceModel.Samples`至服務的 App.config 中的端點標記。  
+4.  新增`bindingNamespace="http://Microsoft.ServiceModel.Samples"`至服務的 App.config 中的端點標記。  
   
 5.  建置「訊息安全性範例」並執行 Service.exe。 使用 Internet Explorer 並瀏覽至服務的 URI (http://localhost:8000/ServiceModelSamples/Service)以確保服務正在運作。  
   

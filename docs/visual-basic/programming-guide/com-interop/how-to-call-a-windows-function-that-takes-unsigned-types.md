@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669311"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065852"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>HOW TO：呼叫 Windows 函式採用不帶正負號的類型 (Visual Basic)
 如果您要使用類別、 模組或結構，具有不帶正負號的整數類型的成員，您可以存取這些成員與 Visual Basic。  
@@ -32,7 +32,7 @@ ms.locfileid: "54669311"
   
 3.  若要尋找的名稱和值的常數，它會使用呼叫 Windows 函式，請參閱文件。 其中許多 WinUser.h 檔案中定義。  
   
-4.  宣告在程式碼中必要的常數。 許多 Windows 常數是 32 位元不帶正負號的值，以及您應該將這些宣告`As``UInteger`。  
+4.  宣告在程式碼中必要的常數。 許多 Windows 常數是 32 位元不帶正負號的值，以及您應該將這些宣告`As UInteger`。  
   
 5.  以一般方式呼叫函式。 下列範例會呼叫 Windows 函式`MessageBox`，後者會採用不帶正負號的整數引數。  
   

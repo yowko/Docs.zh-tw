@@ -2,12 +2,12 @@
 title: LINQ to XML (Visual Basic) 的 XPath 使用者適用的
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-ms.openlocfilehash: 471bd4faa44bcb23ff488df6fb93f0a28cc48950
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 598acfa41d9644a07a553a2f6e8948bbf2fe3b77
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568162"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066252"
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML (Visual Basic) 的 XPath 使用者適用的
 
@@ -32,7 +32,7 @@ ms.locfileid: "54568162"
 |[如何：尋找兩個位置路徑 (XPATH-LINQ to XML) 的聯集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath.md)|比較等位運算子 <code>&#124;</code> 在 XPath 中的用法與 <xref:System.Linq.Enumerable.Concat%2A> 標準查詢運算子在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的用法。<br /><br /> 相關聯的 XPath 運算式為：<code>"//Category&#124;//Price"</code>|  
 |[如何：尋找同層級節點 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找具有特定名稱之節點的所有同層級。<br /><br /> 相關聯的 XPath 運算式為：`"../Book"`|  
 |[如何：尋找父代 (XPATH-LINQ to XML) 的屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 導覽到父項目並尋找相關聯的屬性。<br /><br /> 相關聯的 XPath 運算式為：`"../@id"`|  
-|[如何：尋找具有特定名稱 (XPATH-LINQ to XML) 的同層級的屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找內容節點之同層級的特定屬性。<br /><br /> 相關聯的 XPath 運算式為：`"``../Book/@id``"`|  
+|[如何：尋找具有特定名稱 (XPATH-LINQ to XML) 的同層級的屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找內容節點之同層級的特定屬性。<br /><br /> 相關聯的 XPath 運算式為：`"../Book/@id"`|  
 |[如何：尋找具有特定屬性 (XPATH-LINQ to XML) 項目 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找包含特定屬性的所有項目。<br /><br /> 相關聯的 XPath 運算式為：`"./*[@Select]"`|  
 |[如何：尋找子項目根據位置 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，根據其相對位置尋找項目。<br /><br /> 相關聯的 XPath 運算式為：`"Test[position() >= 2 and position() <= 4]"`|  
 |[如何：尋找正前面的同層級 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找節點正前面的同層級。<br /><br /> 相關聯的 XPath 運算式為：`"preceding-sibling::*[1]"`|  

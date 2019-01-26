@@ -2,12 +2,12 @@
 title: 傳輸通訊協定
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 559b7ec1539a43ec27010031320be144d6f5e24b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b9da567e8c82edf505a974c9884f6f1738747b
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533763"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066230"
 ---
 # <a name="transaction-protocols"></a>傳輸通訊協定
 Windows Communication Foundation (WCF) 會實作 Ws-atomic Transaction 和 Ws-coordination 通訊協定。  
@@ -118,7 +118,7 @@ Windows Communication Foundation (WCF) 會實作 Ws-atomic Transaction 和 Ws-co
   
  R1232:外寄`wscoor:Register`必須使用訊息`IssuedTokenOverTransport`中所述的驗證模式[安全性通訊協定](../../../../docs/framework/wcf/feature-details/security-protocols.md)。  
   
- `wsse:Timestamp`項目必須使用簽署`SecurityContextToken``STx`發出。 這個簽章是證明與特定異動關聯之權杖的所有權，並且用來驗證異動中登錄的參與者。 RegistrationResponse 訊息會透過 HTTPS 傳回。  
+ `wsse:Timestamp`項目必須使用簽署`SecurityContextToken STx`發出。 這個簽章是證明與特定異動關聯之權杖的所有權，並且用來驗證異動中登錄的參與者。 RegistrationResponse 訊息會透過 HTTPS 傳回。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 通訊協定繫結組態  
  WCF 支援透過 HTTPS 的單向 （資料包） 訊息。 訊息間的相互關聯則留待實作詳細資料中說明。  

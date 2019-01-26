@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: bd08940ac04d0218f3d3936514a72c12449b34ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c50a25dc0802f275e5cd4e0068e1a68bf559abc1
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505558"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066034"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>參考和 Imports 陳述式 (Visual Basic)
 您可以對外部物件可以使用您的專案選擇**加入參考**命令**專案**功能表。 在 Visual Basic 中的參考可以指向組件，就像型別程式庫，但包含更多資訊。  
@@ -24,7 +24,7 @@ ms.locfileid: "54505558"
   
  `Imports`陳述式的語法如下：  
   
- `Imports` [`|``Aliasname` =] `Namespace`  
+ `Imports [Aliasname =] Namespace`  
   
  `Aliasname` 是指您可以使用程式碼中參考匯入的命名空間的簡短名稱。 `Namespace` 透過定義在專案中，或透過先前的專案參考是可透過其中一個命名空間`Imports`陳述式。  
   

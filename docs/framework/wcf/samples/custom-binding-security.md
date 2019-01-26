@@ -2,12 +2,12 @@
 title: 自訂繫結安全性
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 5ed4b124fb5150974bcbe334e3fec627e027498f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49e14fd783fa89f25750aeb00efc105a850c0d3e
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584895"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066125"
 ---
 # <a name="custom-binding-security"></a>自訂繫結安全性
 這個範例會示範如何使用自訂繫結來設定安全性。 它會顯示如何使用自訂繫結同時啟用訊息層級安全性和安全傳輸。 當在用戶端和服務之間傳輸訊息需要安全傳輸，且同時必須保護訊息層級上訊息的安全時，這是相當有用的。 系統提供的繫結不支援這個組態。
@@ -57,7 +57,7 @@ ms.locfileid: "54584895"
 </behaviors>
 ```
 
- 此外，自訂繫結使用 Windows 認證類型 (預設認證類型) 的訊息安全性。 這是由 `security` 繫結項目所完成。 如果可以使用 Kerberos 驗證機制，則會使用訊息層級安全性來驗證用戶端和服務。 如果此範例是執行於 Active Directory 環境，就會發生這種情況。 如果 Kerberos 驗證機制無法使用，則使用 NTLM 驗證。 NTLM 會對服務驗證用戶端，但不會對用戶端驗證服務。 `security`繫結項目設定為使用`SecureConversation``authenticationType`，這會導致用戶端和服務上的安全性工作階段的建立。 若要讓服務的雙工合約能運作，這是必要的。
+ 此外，自訂繫結使用 Windows 認證類型 (預設認證類型) 的訊息安全性。 這是由 `security` 繫結項目所完成。 如果可以使用 Kerberos 驗證機制，則會使用訊息層級安全性來驗證用戶端和服務。 如果此範例是執行於 Active Directory 環境，就會發生這種情況。 如果 Kerberos 驗證機制無法使用，則使用 NTLM 驗證。 NTLM 會對服務驗證用戶端，但不會對用戶端驗證服務。 `security` 繫結項目已設定為使用 `SecureConversation` `authenticationType`，結果會在用戶端和服務上建立安全性工作階段。 若要讓服務的雙工合約能運作，這是必要的。
 
  當您執行範例時，作業要求和回應會顯示在用戶端的主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
 

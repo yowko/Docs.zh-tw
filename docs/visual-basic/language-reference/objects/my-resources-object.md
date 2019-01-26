@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: df9538bfb778d6838b51d3b0c525a433812d8131
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571817"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065865"
 ---
 # <a name="myresources-object"></a>My.Resources 物件
 提供屬性和類別來存取應用程式的資源。  
@@ -26,9 +26,9 @@ ms.locfileid: "54571817"
  您可以存取應用程式的特定文化特性資源檔從`My.Resources`物件。 根據預設，`My.Resources`物件會比對中的文化特性的資源檔的資源查閱<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A>屬性。 不過，您可以覆寫這個行為，並指定特定的文化特性，若要使用的資源。 如需詳細資訊，請參閱[桌面應用程式中的資源](../../../framework/resources/index.md)。  
   
 ## <a name="properties"></a>屬性  
- 屬性`My.Resources`物件提供唯讀存取您的應用程式資源。 若要新增或移除資源，請使用**專案設計工具**。 您可以存取透過新增的資源**專案設計工具**使用`My.Resources.``resourceName`。  
+ 屬性`My.Resources`物件提供唯讀存取您的應用程式資源。 若要新增或移除資源，請使用**專案設計工具**。 您可以存取透過新增的資源**專案設計工具**利用`My.Resources.` *resourceName*。  
   
- 您也可以新增或移除選取的專案中的資源檔**方案總管**，然後按一下**加入新項目**或是**加入現有項目**從**專案**功能表。 您可以存取資源利用這個方式加入`My.Resources.``resourceFileName`、`resourceName`。  
+ 您也可以新增或移除選取的專案中的資源檔**方案總管**，然後按一下**加入新項目**或是**加入現有項目**從**專案**功能表。 您可以利用這個方式加入的資源`My.Resources.` *resourceFileName*`.`*resourceName*。  
   
  每個資源名稱、 類別和值，而且這些資源的設定可讓您決定要存取之資源的屬性會出現在`My.Resources`物件。 在 加入資源**專案設計工具**:  
   

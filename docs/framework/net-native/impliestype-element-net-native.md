@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe590022f1354b3a41c709e4fed30f89e865fa0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 867a11eae14c3e7b2fb09acac5849698119e72c7
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548046"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065969"
 ---
 # <a name="ltimpliestypegt-element-net-native"></a>&lt;ImpliesType&gt; 項目 (.NET Native)
 如果原則已套用至包含類型或方法，則會將該原則套用至類型。  
@@ -99,7 +99,7 @@ ms.locfileid: "54548046"
 </Type>  
 ```  
   
- `<ImpliesType>` 元素也會出現在 `<Method>` 元素中，因為在某些情況下，具現化泛型方法表示要反映在類型具現化上。 例如，想像一個給定程式庫將會隨著相關聯的 <xref:System.Collections.Generic.List%601> 和 <xref:System.Array> 類型動態存取的泛型方法 `IEnumerable<T> MakeEnumerable<T>(string` `spelling``, T` `defaultValue``)`。 這可以表示成：  
+ `<ImpliesType>` 元素也會出現在 `<Method>` 元素中，因為在某些情況下，具現化泛型方法表示要反映在類型具現化上。 例如，想像一下泛型方法`IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)`給定程式庫將以動態方式存取，以及相關聯<xref:System.Collections.Generic.List%601>和<xref:System.Array>型別。 這可以表示成：  
   
 ```xml  
 <Type Name="MyType">  

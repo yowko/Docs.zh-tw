@@ -2,12 +2,12 @@
 title: 區塊處理通道
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 3e98e4be3c5ad9d6d18990feeae86369775972b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db14ceb956202bee06ff5e6b37b21fb837c6f1d9
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624233"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066411"
 ---
 # <a name="chunking-channel"></a>區塊處理通道
 傳送使用 Windows Communication Foundation (WCF) 的大型訊息時，它通常會限制用來緩衝處理這些訊息的記憶體數量。 一個可能的方案為以資料流處理訊息本文 (假設本文中有大量資料)。 然而，有些通訊協定需要緩衝處理整個訊息。 例如，可靠的傳訊和安全性。 另一個可能的方案為將較大訊息分成較小的訊息 (稱為區塊 (Chunk))，一次以單一區塊傳送這些區塊，然後在接收端重新構成較大訊息。 應用程式本身便可執行此區塊處理和取消區塊處理，或可以使用自訂通道來進行此作業。 區塊處理通道範例會顯示如何使用自訂通訊協定或層次通道，以便區塊處理和取消區塊處理任意較大訊息。  
@@ -271,7 +271,7 @@ interface ITestService
  `OnOpen` 會呼叫 `innerChannel.Open`，以開啟內部通道。  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` 會先將 `stopReceive` 設定為 `true`，以將擱置的 `ReceiveChunkLoop` 標示為停止。 接著會等待`receiveStopped``ManualResetEvent`，此值會設定當`ReceiveChunkLoop`會停止。 假設在指定的逾時內停止 `ReceiveChunkLoop`，`OnClose` 會利用剩下的逾時呼叫 `innerChannel.Close`。  
+ `OnClose` 會先將 `stopReceive` 設定為 `true`，以將擱置的 `ReceiveChunkLoop` 標示為停止。 接著會等待 `receiveStopped` <xref:System.Threading.ManualResetEvent>，而這個項目會在 `ReceiveChunkLoop` 停止時設定。 假設在指定的逾時內停止 `ReceiveChunkLoop`，`OnClose` 會利用剩下的逾時呼叫 `innerChannel.Close`。  
   
 ### <a name="onabort"></a>OnAbort  
  `OnAbort` 會呼叫 `innerChannel.Abort`，以中止內部通道。 如果有擱置的 `ReceiveChunkLoop`，會從擱置的 `innerChannel.Receive` 呼叫中收到例外狀況。  

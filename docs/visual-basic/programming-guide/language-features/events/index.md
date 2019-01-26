@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: b69615a5cf05427a2bfde82af976cfafb41171b0
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 08bd3b3c7ff5608193de0cdc1a869e0918c9e96e
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332869"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065787"
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
 雖然您可能會以視覺化方式檢視 Visual Studio 專案以一系列的程序，依序執行，事實上，大部分程式都是事件驅動，這表示執行流程取決於呼叫的外部發生項目*事件*。  
@@ -87,7 +87,7 @@ ms.locfileid: "39332869"
  [!code-vb[VbVbalrEvents#38](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_7.vb)]  
   
 ## <a name="handling-events-inherited-from-a-base-class"></a>處理繼承自基底類別的事件  
- 「衍生類別」(繼承基底類別特性的類別) 可以使用 `Handles``MyBase` 陳述式，來處理其基底類別所引發的事件。  
+ 「衍生類別」(繼承基底類別特性的類別) 可以使用 `Handles MyBase` 陳述式，來處理其基底類別所引發的事件。  
   
 #### <a name="to-handle-events-from-a-base-class"></a>處理來自基底類別的事件  
   

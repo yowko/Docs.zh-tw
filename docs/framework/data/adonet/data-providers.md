@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: d96be73fc63856e317b129c1fdd8c381c9df6c07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 529b7094ad36861cacc4009ea8faf152f056c20e
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627261"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066216"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 資料提供者
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者的用途是連接資料庫、執行命令和擷取結果。 這些結果會直接處理、放入 <xref:System.Data.DataSet> 中以便視需要而公開給使用者、與多個來源的資料結合，或在各層之間進行遠端控制。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者是輕量型的，可在資料來源與程式碼之間建立最小層，以提升效能而不會犧牲功能。  
@@ -151,8 +151,8 @@ using System.Data.OracleClient;
 |--------------|-----------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server|建議使用 Microsoft SQL Server 的中介層應用程式。<br /><br /> 建議使用 Microsoft Database Engine (MSDE) 或 SQL Server 的單層應用程式。<br /><br /> 建議使用 OLE DB provider for SQL Server (SQLOLEDB) 與[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for OLE DB。|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB|針對 SQL Server， [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server 建議而不是此提供者。<br /><br /> 建議使用 Microsoft Access 資料庫的單層應用程式採用。 不建議中介層應用程式採用 Access 資料庫。|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ' Data Provider for ODBC|建議使用 ODBC 資料來源的中介層及單層應用程式採用。|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ' Data Provider for Oracle|建議使用 Oracle 資料來源的中介層及單層應用程式採用。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC|建議使用 ODBC 資料來源的中介層及單層應用程式採用。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle|建議使用 Oracle 資料來源的中介層及單層應用程式採用。|  
   
 ## <a name="entityclient-provider"></a>EntityClient 提供者  
  EntityClient 提供者是用於根據實體資料模型 (EDM) 存取資料。 與其他 .NET Framework 資料提供者不同的是，它不會直接與資料來源互動。 不過，它會使用 Entity SQL 與基礎資料提供者進行通訊。 如需詳細資訊，請參閱 [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527)。  
