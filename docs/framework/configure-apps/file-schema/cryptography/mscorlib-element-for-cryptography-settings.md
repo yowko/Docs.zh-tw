@@ -8,48 +8,46 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 0615a68add60b02a875921b1abb3776267db1731
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a067f1f2793d98c51304269c7a37754031940824
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527584"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084155"
 ---
-# <a name="ltmscorlibgt-element-for-cryptography-settings"></a><span data-ttu-id="d4e07-102">&lt;mscorlib&gt;密碼編譯設定的項目</span><span class="sxs-lookup"><span data-stu-id="d4e07-102">&lt;mscorlib&gt; Element for Cryptography Settings</span></span>
-<span data-ttu-id="d4e07-103">包含[ \<cryptographySettings > 項目](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)。</span><span class="sxs-lookup"><span data-stu-id="d4e07-103">Contains the [\<cryptographySettings> element](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).</span></span>  
+# <a name="ltmscorlibgt-element-for-cryptography-settings"></a><span data-ttu-id="a722a-102">&lt;mscorlib&gt;密碼編譯設定的項目</span><span class="sxs-lookup"><span data-stu-id="a722a-102">&lt;mscorlib&gt; Element for Cryptography Settings</span></span>
+<span data-ttu-id="a722a-103">包含[ \<cryptographySettings > 項目](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)。</span><span class="sxs-lookup"><span data-stu-id="a722a-103">Contains the [\<cryptographySettings> element](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).</span></span>  
   
- <span data-ttu-id="d4e07-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d4e07-104">\<configuration></span></span>  
-<span data-ttu-id="d4e07-105">\<mscorlib></span><span class="sxs-lookup"><span data-stu-id="d4e07-105">\<mscorlib></span></span>  
+ <span data-ttu-id="a722a-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="a722a-104">\<configuration></span></span>  
+<span data-ttu-id="a722a-105">\<mscorlib></span><span class="sxs-lookup"><span data-stu-id="a722a-105">\<mscorlib></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4e07-106">語法</span><span class="sxs-lookup"><span data-stu-id="d4e07-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a722a-106">語法</span><span class="sxs-lookup"><span data-stu-id="a722a-106">Syntax</span></span>  
   
 ```xml  
       <mscorlib>   
 </mscorlib>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d4e07-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="d4e07-107">Attributes and Elements</span></span>  
- <span data-ttu-id="d4e07-108">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="d4e07-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a722a-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="a722a-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="a722a-108">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="a722a-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d4e07-109">屬性</span><span class="sxs-lookup"><span data-stu-id="d4e07-109">Attributes</span></span>  
- <span data-ttu-id="d4e07-110">無。</span><span class="sxs-lookup"><span data-stu-id="d4e07-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a722a-109">屬性</span><span class="sxs-lookup"><span data-stu-id="a722a-109">Attributes</span></span>  
+ <span data-ttu-id="a722a-110">無。</span><span class="sxs-lookup"><span data-stu-id="a722a-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="d4e07-111">子元素</span><span class="sxs-lookup"><span data-stu-id="d4e07-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a722a-111">子元素</span><span class="sxs-lookup"><span data-stu-id="a722a-111">Child Elements</span></span>  
   
-|<span data-ttu-id="d4e07-112">項目</span><span class="sxs-lookup"><span data-stu-id="d4e07-112">Element</span></span>|<span data-ttu-id="d4e07-113">描述</span><span class="sxs-lookup"><span data-stu-id="d4e07-113">Description</span></span>|  
+|<span data-ttu-id="a722a-112">項目</span><span class="sxs-lookup"><span data-stu-id="a722a-112">Element</span></span>|<span data-ttu-id="a722a-113">描述</span><span class="sxs-lookup"><span data-stu-id="a722a-113">Description</span></span>|  
 |-------------|-----------------|  
-|`cryptographySettings`|<span data-ttu-id="d4e07-114">包含密碼編譯設定。</span><span class="sxs-lookup"><span data-stu-id="d4e07-114">Contains cryptography settings.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="a722a-114">包含密碼編譯設定。</span><span class="sxs-lookup"><span data-stu-id="a722a-114">Contains cryptography settings.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="d4e07-115">父項目</span><span class="sxs-lookup"><span data-stu-id="d4e07-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a722a-115">父項目</span><span class="sxs-lookup"><span data-stu-id="a722a-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="d4e07-116">項目</span><span class="sxs-lookup"><span data-stu-id="d4e07-116">Element</span></span>|<span data-ttu-id="d4e07-117">描述</span><span class="sxs-lookup"><span data-stu-id="d4e07-117">Description</span></span>|  
+|<span data-ttu-id="a722a-116">項目</span><span class="sxs-lookup"><span data-stu-id="a722a-116">Element</span></span>|<span data-ttu-id="a722a-117">描述</span><span class="sxs-lookup"><span data-stu-id="a722a-117">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="d4e07-118">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="d4e07-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`configuration`|<span data-ttu-id="a722a-118">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="a722a-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="d4e07-119">範例</span><span class="sxs-lookup"><span data-stu-id="d4e07-119">Example</span></span>  
- <span data-ttu-id="d4e07-120">下列範例示範如何使用 **\<mscorlib >** 項目參考加密編譯類別及設定執行階段。</span><span class="sxs-lookup"><span data-stu-id="d4e07-120">The following example shows how to use the **\<mscorlib>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="d4e07-121">然後，您可以將字串"RSA"傳遞至<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法和用法<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法來傳回`MyCryptoRSAClass`物件。</span><span class="sxs-lookup"><span data-stu-id="d4e07-121">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="a722a-119">範例</span><span class="sxs-lookup"><span data-stu-id="a722a-119">Example</span></span>  
+ <span data-ttu-id="a722a-120">下列範例示範如何使用 **\<mscorlib >** 項目參考加密編譯類別及設定執行階段。</span><span class="sxs-lookup"><span data-stu-id="a722a-120">The following example shows how to use the **\<mscorlib>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="a722a-121">然後，您可以將字串"RSA"傳遞至<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法和用法<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法來傳回`MyCryptoRSAClass`物件。</span><span class="sxs-lookup"><span data-stu-id="a722a-121">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
 ```xml  
 <configuration>  
@@ -70,10 +68,10 @@ ms.locfileid: "54527584"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d4e07-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d4e07-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a722a-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a722a-122">See also</span></span>
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
-- [<span data-ttu-id="d4e07-123">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="d4e07-123">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="d4e07-124">密碼編譯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="d4e07-124">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [<span data-ttu-id="d4e07-125">The signature is valid</span><span class="sxs-lookup"><span data-stu-id="d4e07-125">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
-- [<span data-ttu-id="d4e07-126">設定密碼編譯類別</span><span class="sxs-lookup"><span data-stu-id="d4e07-126">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [<span data-ttu-id="a722a-123">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="a722a-123">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="a722a-124">密碼編譯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="a722a-124">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [<span data-ttu-id="a722a-125">The signature is valid</span><span class="sxs-lookup"><span data-stu-id="a722a-125">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="a722a-126">設定密碼編譯類別</span><span class="sxs-lookup"><span data-stu-id="a722a-126">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

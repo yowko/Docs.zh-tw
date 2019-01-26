@@ -9,23 +9,21 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2d97bd3175de5d0c0587e27c375f2d2bae378a6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c34ca1a47910f4255951be041d97f92ea7fd46ad
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600397"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083310"
 ---
-# <a name="ltsourcesgt-element"></a><span data-ttu-id="482a5-102">&lt;來源&gt;項目</span><span class="sxs-lookup"><span data-stu-id="482a5-102">&lt;sources&gt; Element</span></span>
-<span data-ttu-id="482a5-103">指定起始追蹤訊息的追蹤來源。</span><span class="sxs-lookup"><span data-stu-id="482a5-103">Specifies trace sources that initiate tracing messages.</span></span>  
+# <a name="ltsourcesgt-element"></a><span data-ttu-id="da3f9-102">&lt;來源&gt;項目</span><span class="sxs-lookup"><span data-stu-id="da3f9-102">&lt;sources&gt; Element</span></span>
+<span data-ttu-id="da3f9-103">指定起始追蹤訊息的追蹤來源。</span><span class="sxs-lookup"><span data-stu-id="da3f9-103">Specifies trace sources that initiate tracing messages.</span></span>  
   
- <span data-ttu-id="482a5-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="482a5-104">\<configuration></span></span>  
-<span data-ttu-id="482a5-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="482a5-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="482a5-106">\<sources></span><span class="sxs-lookup"><span data-stu-id="482a5-106">\<sources></span></span>  
+ <span data-ttu-id="da3f9-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="da3f9-104">\<configuration></span></span>  
+<span data-ttu-id="da3f9-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="da3f9-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="da3f9-106">\<sources></span><span class="sxs-lookup"><span data-stu-id="da3f9-106">\<sources></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="482a5-107">語法</span><span class="sxs-lookup"><span data-stu-id="482a5-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da3f9-107">語法</span><span class="sxs-lookup"><span data-stu-id="da3f9-107">Syntax</span></span>  
   
 ```xml  
 <sources>  
@@ -33,30 +31,30 @@ ms.locfileid: "54600397"
 </sources>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="482a5-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="482a5-108">Attributes and Elements</span></span>  
- <span data-ttu-id="482a5-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="482a5-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="da3f9-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="da3f9-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="da3f9-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="da3f9-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="482a5-110">屬性</span><span class="sxs-lookup"><span data-stu-id="482a5-110">Attributes</span></span>  
- <span data-ttu-id="482a5-111">無。</span><span class="sxs-lookup"><span data-stu-id="482a5-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="da3f9-110">屬性</span><span class="sxs-lookup"><span data-stu-id="da3f9-110">Attributes</span></span>  
+ <span data-ttu-id="da3f9-111">無。</span><span class="sxs-lookup"><span data-stu-id="da3f9-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="482a5-112">子元素</span><span class="sxs-lookup"><span data-stu-id="482a5-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="da3f9-112">子元素</span><span class="sxs-lookup"><span data-stu-id="da3f9-112">Child Elements</span></span>  
   
-|<span data-ttu-id="482a5-113">項目</span><span class="sxs-lookup"><span data-stu-id="482a5-113">Element</span></span>|<span data-ttu-id="482a5-114">描述</span><span class="sxs-lookup"><span data-stu-id="482a5-114">Description</span></span>|  
+|<span data-ttu-id="da3f9-113">項目</span><span class="sxs-lookup"><span data-stu-id="da3f9-113">Element</span></span>|<span data-ttu-id="da3f9-114">描述</span><span class="sxs-lookup"><span data-stu-id="da3f9-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="482a5-115">\<source></span><span class="sxs-lookup"><span data-stu-id="482a5-115">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|<span data-ttu-id="482a5-116">必要項目。</span><span class="sxs-lookup"><span data-stu-id="482a5-116">Required element.</span></span><br /><br /> <span data-ttu-id="482a5-117">指定起始追蹤訊息的追蹤來源。</span><span class="sxs-lookup"><span data-stu-id="482a5-117">Specifies a trace source that initiates tracing messages.</span></span>|  
+|[<span data-ttu-id="da3f9-115">\<source></span><span class="sxs-lookup"><span data-stu-id="da3f9-115">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|<span data-ttu-id="da3f9-116">必要項目。</span><span class="sxs-lookup"><span data-stu-id="da3f9-116">Required element.</span></span><br /><br /> <span data-ttu-id="da3f9-117">指定起始追蹤訊息的追蹤來源。</span><span class="sxs-lookup"><span data-stu-id="da3f9-117">Specifies a trace source that initiates tracing messages.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="482a5-118">父項目</span><span class="sxs-lookup"><span data-stu-id="482a5-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="da3f9-118">父項目</span><span class="sxs-lookup"><span data-stu-id="da3f9-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="482a5-119">項目</span><span class="sxs-lookup"><span data-stu-id="482a5-119">Element</span></span>|<span data-ttu-id="482a5-120">描述</span><span class="sxs-lookup"><span data-stu-id="482a5-120">Description</span></span>|  
+|<span data-ttu-id="da3f9-119">項目</span><span class="sxs-lookup"><span data-stu-id="da3f9-119">Element</span></span>|<span data-ttu-id="da3f9-120">描述</span><span class="sxs-lookup"><span data-stu-id="da3f9-120">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="482a5-121">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="482a5-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="482a5-122">指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="482a5-122">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`configuration`|<span data-ttu-id="da3f9-121">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="da3f9-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="da3f9-122">指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="da3f9-122">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="482a5-123">備註</span><span class="sxs-lookup"><span data-stu-id="482a5-123">Remarks</span></span>  
- <span data-ttu-id="482a5-124">這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。</span><span class="sxs-lookup"><span data-stu-id="482a5-124">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="da3f9-123">備註</span><span class="sxs-lookup"><span data-stu-id="da3f9-123">Remarks</span></span>  
+ <span data-ttu-id="da3f9-124">這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。</span><span class="sxs-lookup"><span data-stu-id="da3f9-124">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="482a5-125">範例</span><span class="sxs-lookup"><span data-stu-id="482a5-125">Example</span></span>  
- <span data-ttu-id="482a5-126">下列範例示範如何使用`<sources>`要加入追蹤來源項目`mySource`]，將來源交換器層級設定為 [ `sourceSwitch`。</span><span class="sxs-lookup"><span data-stu-id="482a5-126">The following example shows how to use the `<sources>` element to add the trace source `mySource` and to set the level for the source switch named `sourceSwitch`.</span></span> <span data-ttu-id="482a5-127">主控台追蹤接聽程式會加入，將追蹤資訊寫入主控台。</span><span class="sxs-lookup"><span data-stu-id="482a5-127">A console trace listener is added that writes trace information to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="da3f9-125">範例</span><span class="sxs-lookup"><span data-stu-id="da3f9-125">Example</span></span>  
+ <span data-ttu-id="da3f9-126">下列範例示範如何使用`<sources>`要加入追蹤來源項目`mySource`]，將來源交換器層級設定為 [ `sourceSwitch`。</span><span class="sxs-lookup"><span data-stu-id="da3f9-126">The following example shows how to use the `<sources>` element to add the trace source `mySource` and to set the level for the source switch named `sourceSwitch`.</span></span> <span data-ttu-id="da3f9-127">主控台追蹤接聽程式會加入，將追蹤資訊寫入主控台。</span><span class="sxs-lookup"><span data-stu-id="da3f9-127">A console trace listener is added that writes trace information to the console.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,12 +79,12 @@ ms.locfileid: "54600397"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="482a5-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="482a5-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="da3f9-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="da3f9-128">See also</span></span>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
-- [<span data-ttu-id="482a5-129">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="482a5-129">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [<span data-ttu-id="482a5-130">\<source></span><span class="sxs-lookup"><span data-stu-id="482a5-130">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+- [<span data-ttu-id="da3f9-129">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="da3f9-129">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [<span data-ttu-id="da3f9-130">\<source></span><span class="sxs-lookup"><span data-stu-id="da3f9-130">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

@@ -8,51 +8,49 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 6bb0e832f1fdc845c4150442547b55400f0aea89
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29aa97808f3595313b68072a910afb1354d45c6d
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645947"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084415"
 ---
-# <a name="ltsystemwebgt-element-web-settings"></a><span data-ttu-id="7b9ad-102">&lt;system.web&gt;項目 （Web 設定）</span><span class="sxs-lookup"><span data-stu-id="7b9ad-102">&lt;system.web&gt; Element (Web Settings)</span></span>
-<span data-ttu-id="7b9ad-103">包含 ASP.NET 裝載層管理整個處理序行為的方式的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="7b9ad-103">Contains information about how the ASP.NET hosting layer manages process-wide behavior.</span></span>  
+# <a name="ltsystemwebgt-element-web-settings"></a><span data-ttu-id="78616-102">&lt;system.web&gt;項目 （Web 設定）</span><span class="sxs-lookup"><span data-stu-id="78616-102">&lt;system.web&gt; Element (Web Settings)</span></span>
+<span data-ttu-id="78616-103">包含 ASP.NET 裝載層管理整個處理序行為的方式的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="78616-103">Contains information about how the ASP.NET hosting layer manages process-wide behavior.</span></span>  
   
- <span data-ttu-id="7b9ad-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7b9ad-104">\<configuration></span></span>  
-<span data-ttu-id="7b9ad-105">\<system.web > 項目 （Web 設定）</span><span class="sxs-lookup"><span data-stu-id="7b9ad-105">\<system.web> Element (Web Settings)</span></span>  
+ <span data-ttu-id="78616-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="78616-104">\<configuration></span></span>  
+<span data-ttu-id="78616-105">\<system.web > 項目 （Web 設定）</span><span class="sxs-lookup"><span data-stu-id="78616-105">\<system.web> Element (Web Settings)</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7b9ad-106">語法</span><span class="sxs-lookup"><span data-stu-id="7b9ad-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="78616-106">語法</span><span class="sxs-lookup"><span data-stu-id="78616-106">Syntax</span></span>  
   
 ```xml  
 <system.web>  
 </system.web>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7b9ad-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="7b9ad-107">Attributes and Elements</span></span>  
- <span data-ttu-id="7b9ad-108">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="7b9ad-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="78616-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="78616-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="78616-108">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="78616-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7b9ad-109">屬性</span><span class="sxs-lookup"><span data-stu-id="7b9ad-109">Attributes</span></span>  
- <span data-ttu-id="7b9ad-110">無。</span><span class="sxs-lookup"><span data-stu-id="7b9ad-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="78616-109">屬性</span><span class="sxs-lookup"><span data-stu-id="78616-109">Attributes</span></span>  
+ <span data-ttu-id="78616-110">無。</span><span class="sxs-lookup"><span data-stu-id="78616-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="7b9ad-111">子元素</span><span class="sxs-lookup"><span data-stu-id="7b9ad-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="78616-111">子元素</span><span class="sxs-lookup"><span data-stu-id="78616-111">Child Elements</span></span>  
   
-|<span data-ttu-id="7b9ad-112">項目</span><span class="sxs-lookup"><span data-stu-id="7b9ad-112">Element</span></span>|<span data-ttu-id="7b9ad-113">描述</span><span class="sxs-lookup"><span data-stu-id="7b9ad-113">Description</span></span>|  
+|<span data-ttu-id="78616-112">項目</span><span class="sxs-lookup"><span data-stu-id="78616-112">Element</span></span>|<span data-ttu-id="78616-113">描述</span><span class="sxs-lookup"><span data-stu-id="78616-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="7b9ad-114">\<applicationPool></span><span class="sxs-lookup"><span data-stu-id="7b9ad-114">\<applicationPool></span></span>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|<span data-ttu-id="7b9ad-115">指定在 aspnet.config 檔中的 IIS 應用程式集區的組態設定。</span><span class="sxs-lookup"><span data-stu-id="7b9ad-115">Specifies configuration settings for IIS application pools in an aspnet.config file.</span></span>|  
+|[<span data-ttu-id="78616-114">\<applicationPool></span><span class="sxs-lookup"><span data-stu-id="78616-114">\<applicationPool></span></span>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|<span data-ttu-id="78616-115">指定在 aspnet.config 檔中的 IIS 應用程式集區的組態設定。</span><span class="sxs-lookup"><span data-stu-id="78616-115">Specifies configuration settings for IIS application pools in an aspnet.config file.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="7b9ad-116">父項目</span><span class="sxs-lookup"><span data-stu-id="7b9ad-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="78616-116">父項目</span><span class="sxs-lookup"><span data-stu-id="78616-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="7b9ad-117">項目</span><span class="sxs-lookup"><span data-stu-id="7b9ad-117">Element</span></span>|<span data-ttu-id="7b9ad-118">描述</span><span class="sxs-lookup"><span data-stu-id="7b9ad-118">Description</span></span>|  
+|<span data-ttu-id="78616-117">項目</span><span class="sxs-lookup"><span data-stu-id="78616-117">Element</span></span>|<span data-ttu-id="78616-118">描述</span><span class="sxs-lookup"><span data-stu-id="78616-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="7b9ad-119">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7b9ad-119">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="7b9ad-120">指定通用語言執行平台和 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="7b9ad-120">Specifies the root element in every configuration file that is used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
+|[<span data-ttu-id="78616-119">\<configuration></span><span class="sxs-lookup"><span data-stu-id="78616-119">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="78616-120">指定通用語言執行平台和 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="78616-120">Specifies the root element in every configuration file that is used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7b9ad-121">備註</span><span class="sxs-lookup"><span data-stu-id="7b9ad-121">Remarks</span></span>  
- <span data-ttu-id="7b9ad-122">`system.web`項目和其子系`applicationPool`項目已新增至[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]自[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="7b9ad-122">The `system.web` element and its child `applicationPool` element were added to the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] as of [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="7b9ad-123">當您執行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本整合模式中的，此項目組合，可讓您設定 ASP.NET 如何管理執行緒，以及如何它排入佇列的要求 ASP.NET 裝載在 IIS 應用程式集區時。</span><span class="sxs-lookup"><span data-stu-id="7b9ad-123">When you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions in Integrated mode, this element combination lets you configure how ASP.NET manages threads and how it queues requests when ASP.NET is hosted in an IIS application pool.</span></span> <span data-ttu-id="7b9ad-124">如果您執行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本在傳統或 ISAPI 模式中，則會忽略這些設定。</span><span class="sxs-lookup"><span data-stu-id="7b9ad-124">If you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions in Classic or ISAPI mode, these settings are ignored.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="78616-121">備註</span><span class="sxs-lookup"><span data-stu-id="78616-121">Remarks</span></span>  
+ <span data-ttu-id="78616-122">`system.web`項目和其子系`applicationPool`項目已新增至[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]自[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="78616-122">The `system.web` element and its child `applicationPool` element were added to the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] as of [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="78616-123">當您執行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本整合模式中的，此項目組合，可讓您設定 ASP.NET 如何管理執行緒，以及如何它排入佇列的要求 ASP.NET 裝載在 IIS 應用程式集區時。</span><span class="sxs-lookup"><span data-stu-id="78616-123">When you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions in Integrated mode, this element combination lets you configure how ASP.NET manages threads and how it queues requests when ASP.NET is hosted in an IIS application pool.</span></span> <span data-ttu-id="78616-124">如果您執行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本在傳統或 ISAPI 模式中，則會忽略這些設定。</span><span class="sxs-lookup"><span data-stu-id="78616-124">If you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions in Classic or ISAPI mode, these settings are ignored.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7b9ad-125">範例</span><span class="sxs-lookup"><span data-stu-id="7b9ad-125">Example</span></span>  
- <span data-ttu-id="7b9ad-126">下列範例示範如何在 aspnet.config 檔中設定 ASP.NET 全處理序行為，當 ASP.NET 裝載於 IIS 應用程式集區。</span><span class="sxs-lookup"><span data-stu-id="7b9ad-126">The following example shows how to configure ASP.NET process-wide behavior in the aspnet.config file when ASP.NET is hosted in an IIS application pool.</span></span> <span data-ttu-id="7b9ad-127">此範例假設 IIS 正在執行中整合式驗證模式和應用程式使用[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]或更新版本。</span><span class="sxs-lookup"><span data-stu-id="7b9ad-127">The example assumes that IIS is running in Integrated mode and that the application is using the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] or a later version.</span></span> <span data-ttu-id="7b9ad-128">此行為的版本中不會發生[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]早於[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="7b9ad-128">This behavior does not occur in versions of the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] earlier than the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="7b9ad-129">在範例中的值是預設值。</span><span class="sxs-lookup"><span data-stu-id="7b9ad-129">The values in the example are the default values.</span></span>  
+## <a name="example"></a><span data-ttu-id="78616-125">範例</span><span class="sxs-lookup"><span data-stu-id="78616-125">Example</span></span>  
+ <span data-ttu-id="78616-126">下列範例示範如何在 aspnet.config 檔中設定 ASP.NET 全處理序行為，當 ASP.NET 裝載於 IIS 應用程式集區。</span><span class="sxs-lookup"><span data-stu-id="78616-126">The following example shows how to configure ASP.NET process-wide behavior in the aspnet.config file when ASP.NET is hosted in an IIS application pool.</span></span> <span data-ttu-id="78616-127">此範例假設 IIS 正在執行中整合式驗證模式和應用程式使用[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]或更新版本。</span><span class="sxs-lookup"><span data-stu-id="78616-127">The example assumes that IIS is running in Integrated mode and that the application is using the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] or a later version.</span></span> <span data-ttu-id="78616-128">此行為的版本中不會發生[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]早於[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="78616-128">This behavior does not occur in versions of the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] earlier than the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="78616-129">在範例中的值是預設值。</span><span class="sxs-lookup"><span data-stu-id="78616-129">The values in the example are the default values.</span></span>  
   
 ```xml  
 <configuration>  
@@ -65,14 +63,14 @@ ms.locfileid: "54645947"
 </configuration>  
 ```  
   
-## <a name="element-information"></a><span data-ttu-id="7b9ad-130">項目資訊</span><span class="sxs-lookup"><span data-stu-id="7b9ad-130">Element Information</span></span>  
+## <a name="element-information"></a><span data-ttu-id="78616-130">項目資訊</span><span class="sxs-lookup"><span data-stu-id="78616-130">Element Information</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="7b9ad-131">命名空間</span><span class="sxs-lookup"><span data-stu-id="7b9ad-131">Namespace</span></span>||  
-|<span data-ttu-id="7b9ad-132">結構描述名稱</span><span class="sxs-lookup"><span data-stu-id="7b9ad-132">Schema Name</span></span>||  
-|<span data-ttu-id="7b9ad-133">驗證檔</span><span class="sxs-lookup"><span data-stu-id="7b9ad-133">Validation File</span></span>||  
-|<span data-ttu-id="7b9ad-134">可以是空白</span><span class="sxs-lookup"><span data-stu-id="7b9ad-134">Can be Empty</span></span>||  
+|<span data-ttu-id="78616-131">命名空間</span><span class="sxs-lookup"><span data-stu-id="78616-131">Namespace</span></span>||  
+|<span data-ttu-id="78616-132">結構描述名稱</span><span class="sxs-lookup"><span data-stu-id="78616-132">Schema Name</span></span>||  
+|<span data-ttu-id="78616-133">驗證檔</span><span class="sxs-lookup"><span data-stu-id="78616-133">Validation File</span></span>||  
+|<span data-ttu-id="78616-134">可以是空白</span><span class="sxs-lookup"><span data-stu-id="78616-134">Can be Empty</span></span>||  
   
-## <a name="see-also"></a><span data-ttu-id="7b9ad-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7b9ad-135">See also</span></span>
-- [<span data-ttu-id="7b9ad-136">\<applicationPool> 項目 (Web 設定)</span><span class="sxs-lookup"><span data-stu-id="7b9ad-136">\<applicationPool> Element (Web Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+## <a name="see-also"></a><span data-ttu-id="78616-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="78616-135">See also</span></span>
+- [<span data-ttu-id="78616-136">\<applicationPool> 項目 (Web 設定)</span><span class="sxs-lookup"><span data-stu-id="78616-136">\<applicationPool> Element (Web Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)

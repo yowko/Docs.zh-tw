@@ -9,25 +9,23 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 295b2c5dd3eb17ca9ba19e52d9f8e51cf108162d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c4856085574792f567ff0e4bce34fc76a9c1565
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683147"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083297"
 ---
-# <a name="ltcodebasegt-element"></a><span data-ttu-id="d493d-102">&lt;程式碼基底&gt;項目</span><span class="sxs-lookup"><span data-stu-id="d493d-102">&lt;codeBase&gt; Element</span></span>
-<span data-ttu-id="d493d-103">指定 common language runtime 可以找到組件的位置。</span><span class="sxs-lookup"><span data-stu-id="d493d-103">Specifies where the common language runtime can find an assembly.</span></span>  
+# <a name="ltcodebasegt-element"></a><span data-ttu-id="faa89-102">&lt;程式碼基底&gt;項目</span><span class="sxs-lookup"><span data-stu-id="faa89-102">&lt;codeBase&gt; Element</span></span>
+<span data-ttu-id="faa89-103">指定 common language runtime 可以找到組件的位置。</span><span class="sxs-lookup"><span data-stu-id="faa89-103">Specifies where the common language runtime can find an assembly.</span></span>  
   
- <span data-ttu-id="d493d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d493d-104">\<configuration></span></span>  
-<span data-ttu-id="d493d-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="d493d-105">\<runtime></span></span>  
-<span data-ttu-id="d493d-106">\<assemblyBinding></span><span class="sxs-lookup"><span data-stu-id="d493d-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="d493d-107">\<dependentAssembly></span><span class="sxs-lookup"><span data-stu-id="d493d-107">\<dependentAssembly></span></span>  
-<span data-ttu-id="d493d-108">\<codeBase></span><span class="sxs-lookup"><span data-stu-id="d493d-108">\<codeBase></span></span>  
+ <span data-ttu-id="faa89-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="faa89-104">\<configuration></span></span>  
+<span data-ttu-id="faa89-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="faa89-105">\<runtime></span></span>  
+<span data-ttu-id="faa89-106">\<assemblyBinding></span><span class="sxs-lookup"><span data-stu-id="faa89-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="faa89-107">\<dependentAssembly></span><span class="sxs-lookup"><span data-stu-id="faa89-107">\<dependentAssembly></span></span>  
+<span data-ttu-id="faa89-108">\<codeBase></span><span class="sxs-lookup"><span data-stu-id="faa89-108">\<codeBase></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d493d-109">語法</span><span class="sxs-lookup"><span data-stu-id="d493d-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="faa89-109">語法</span><span class="sxs-lookup"><span data-stu-id="faa89-109">Syntax</span></span>  
   
 ```xml  
    <codeBase    
@@ -35,43 +33,43 @@ version="Assembly version"
 href="URL of assembly"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d493d-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="d493d-110">Attributes and Elements</span></span>  
- <span data-ttu-id="d493d-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="d493d-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="faa89-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="faa89-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="faa89-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="faa89-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d493d-112">屬性</span><span class="sxs-lookup"><span data-stu-id="d493d-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="faa89-112">屬性</span><span class="sxs-lookup"><span data-stu-id="faa89-112">Attributes</span></span>  
   
-|<span data-ttu-id="d493d-113">屬性</span><span class="sxs-lookup"><span data-stu-id="d493d-113">Attribute</span></span>|<span data-ttu-id="d493d-114">描述</span><span class="sxs-lookup"><span data-stu-id="d493d-114">Description</span></span>|  
+|<span data-ttu-id="faa89-113">屬性</span><span class="sxs-lookup"><span data-stu-id="faa89-113">Attribute</span></span>|<span data-ttu-id="faa89-114">描述</span><span class="sxs-lookup"><span data-stu-id="faa89-114">Description</span></span>|  
 |---------------|-----------------|  
-|`href`|<span data-ttu-id="d493d-115">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="d493d-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="d493d-116">指定執行階段可以在哪裡找到指定的版本的組件的 URL。</span><span class="sxs-lookup"><span data-stu-id="d493d-116">Specifies the URL where the runtime can find the specified version of the assembly.</span></span>|  
-|`version`|<span data-ttu-id="d493d-117">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="d493d-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="d493d-118">指定程式碼基底適用於組件的版本。</span><span class="sxs-lookup"><span data-stu-id="d493d-118">Specifies the version of the assembly the codebase applies to.</span></span> <span data-ttu-id="d493d-119">組件版本號碼的格式*major.minor.build.revision*。</span><span class="sxs-lookup"><span data-stu-id="d493d-119">The format of an assembly version number is *major.minor.build.revision*.</span></span>|  
+|`href`|<span data-ttu-id="faa89-115">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="faa89-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="faa89-116">指定執行階段可以在哪裡找到指定的版本的組件的 URL。</span><span class="sxs-lookup"><span data-stu-id="faa89-116">Specifies the URL where the runtime can find the specified version of the assembly.</span></span>|  
+|`version`|<span data-ttu-id="faa89-117">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="faa89-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="faa89-118">指定程式碼基底適用於組件的版本。</span><span class="sxs-lookup"><span data-stu-id="faa89-118">Specifies the version of the assembly the codebase applies to.</span></span> <span data-ttu-id="faa89-119">組件版本號碼的格式*major.minor.build.revision*。</span><span class="sxs-lookup"><span data-stu-id="faa89-119">The format of an assembly version number is *major.minor.build.revision*.</span></span>|  
   
-## <a name="version-attribute"></a><span data-ttu-id="d493d-120">版本屬性</span><span class="sxs-lookup"><span data-stu-id="d493d-120">version Attribute</span></span>  
+## <a name="version-attribute"></a><span data-ttu-id="faa89-120">版本屬性</span><span class="sxs-lookup"><span data-stu-id="faa89-120">version Attribute</span></span>  
   
-|<span data-ttu-id="d493d-121">值</span><span class="sxs-lookup"><span data-stu-id="d493d-121">Value</span></span>|<span data-ttu-id="d493d-122">描述</span><span class="sxs-lookup"><span data-stu-id="d493d-122">Description</span></span>|  
+|<span data-ttu-id="faa89-121">值</span><span class="sxs-lookup"><span data-stu-id="faa89-121">Value</span></span>|<span data-ttu-id="faa89-122">描述</span><span class="sxs-lookup"><span data-stu-id="faa89-122">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="d493d-123">每個部分的版本號碼的有效值為 0 到 65535 之間。</span><span class="sxs-lookup"><span data-stu-id="d493d-123">Valid values for each part of the version number are 0 to 65535.</span></span>|<span data-ttu-id="d493d-124">不適用。</span><span class="sxs-lookup"><span data-stu-id="d493d-124">Not applicable.</span></span>|  
+|<span data-ttu-id="faa89-123">每個部分的版本號碼的有效值為 0 到 65535 之間。</span><span class="sxs-lookup"><span data-stu-id="faa89-123">Valid values for each part of the version number are 0 to 65535.</span></span>|<span data-ttu-id="faa89-124">不適用。</span><span class="sxs-lookup"><span data-stu-id="faa89-124">Not applicable.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d493d-125">子元素</span><span class="sxs-lookup"><span data-stu-id="d493d-125">Child Elements</span></span>  
- <span data-ttu-id="d493d-126">無。</span><span class="sxs-lookup"><span data-stu-id="d493d-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="faa89-125">子元素</span><span class="sxs-lookup"><span data-stu-id="faa89-125">Child Elements</span></span>  
+ <span data-ttu-id="faa89-126">無。</span><span class="sxs-lookup"><span data-stu-id="faa89-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d493d-127">父項目</span><span class="sxs-lookup"><span data-stu-id="d493d-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="faa89-127">父項目</span><span class="sxs-lookup"><span data-stu-id="faa89-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="d493d-128">項目</span><span class="sxs-lookup"><span data-stu-id="d493d-128">Element</span></span>|<span data-ttu-id="d493d-129">描述</span><span class="sxs-lookup"><span data-stu-id="d493d-129">Description</span></span>|  
+|<span data-ttu-id="faa89-128">項目</span><span class="sxs-lookup"><span data-stu-id="faa89-128">Element</span></span>|<span data-ttu-id="faa89-129">描述</span><span class="sxs-lookup"><span data-stu-id="faa89-129">Description</span></span>|  
 |-------------|-----------------|  
-|`buildproviders`|<span data-ttu-id="d493d-130">定義用來編譯自訂資源檔的組建提供者集合。</span><span class="sxs-lookup"><span data-stu-id="d493d-130">Defines a collection of build providers used to compile custom resource files.</span></span> <span data-ttu-id="d493d-131">組建提供者的數量不限。</span><span class="sxs-lookup"><span data-stu-id="d493d-131">You can have any number of build providers.</span></span>|  
-|`compilation`|<span data-ttu-id="d493d-132">設定 ASP.NET 使用的所有編譯設定。</span><span class="sxs-lookup"><span data-stu-id="d493d-132">Configures all the compilation settings that ASP.NET uses.</span></span>|  
-|`configuration`|<span data-ttu-id="d493d-133">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="d493d-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`System.web`|<span data-ttu-id="d493d-134">指定 ASP.NET 組態區段的根項目。</span><span class="sxs-lookup"><span data-stu-id="d493d-134">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`buildproviders`|<span data-ttu-id="faa89-130">定義用來編譯自訂資源檔的組建提供者集合。</span><span class="sxs-lookup"><span data-stu-id="faa89-130">Defines a collection of build providers used to compile custom resource files.</span></span> <span data-ttu-id="faa89-131">組建提供者的數量不限。</span><span class="sxs-lookup"><span data-stu-id="faa89-131">You can have any number of build providers.</span></span>|  
+|`compilation`|<span data-ttu-id="faa89-132">設定 ASP.NET 使用的所有編譯設定。</span><span class="sxs-lookup"><span data-stu-id="faa89-132">Configures all the compilation settings that ASP.NET uses.</span></span>|  
+|`configuration`|<span data-ttu-id="faa89-133">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="faa89-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`System.web`|<span data-ttu-id="faa89-134">指定 ASP.NET 組態區段的根項目。</span><span class="sxs-lookup"><span data-stu-id="faa89-134">Specifies the root element for the ASP.NET configuration section.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d493d-135">備註</span><span class="sxs-lookup"><span data-stu-id="d493d-135">Remarks</span></span>  
- <span data-ttu-id="d493d-136">若要使用執行階段**\<程式碼基底>** 設定在電腦組態檔或發行者原則檔中，檔案也必須重新導向組件版本。</span><span class="sxs-lookup"><span data-stu-id="d493d-136">For the runtime to use the **\<codeBase>** setting in a machine configuration file or publisher policy file, the file must also redirect the assembly version.</span></span> <span data-ttu-id="d493d-137">應用程式組態檔可以有程式碼基底設定，不需要重新導向組件版本。</span><span class="sxs-lookup"><span data-stu-id="d493d-137">Application configuration files can have a codebase setting without redirecting the assembly version.</span></span> <span data-ttu-id="d493d-138">決定要使用的組件版本之後，執行階段適用於決定版本的檔案中的程式碼基底設定。</span><span class="sxs-lookup"><span data-stu-id="d493d-138">After determining which assembly version to use, the runtime applies the codebase setting from the file that determines the version.</span></span> <span data-ttu-id="d493d-139">如果沒有程式碼基底指示，執行階段會以一般方式探查組件。</span><span class="sxs-lookup"><span data-stu-id="d493d-139">If no codebase is indicated, the runtime probes for the assembly in the usual way.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="faa89-135">備註</span><span class="sxs-lookup"><span data-stu-id="faa89-135">Remarks</span></span>  
+ <span data-ttu-id="faa89-136">若要使用執行階段**\<程式碼基底>** 設定在電腦組態檔或發行者原則檔中，檔案也必須重新導向組件版本。</span><span class="sxs-lookup"><span data-stu-id="faa89-136">For the runtime to use the **\<codeBase>** setting in a machine configuration file or publisher policy file, the file must also redirect the assembly version.</span></span> <span data-ttu-id="faa89-137">應用程式組態檔可以有程式碼基底設定，不需要重新導向組件版本。</span><span class="sxs-lookup"><span data-stu-id="faa89-137">Application configuration files can have a codebase setting without redirecting the assembly version.</span></span> <span data-ttu-id="faa89-138">決定要使用的組件版本之後，執行階段適用於決定版本的檔案中的程式碼基底設定。</span><span class="sxs-lookup"><span data-stu-id="faa89-138">After determining which assembly version to use, the runtime applies the codebase setting from the file that determines the version.</span></span> <span data-ttu-id="faa89-139">如果沒有程式碼基底指示，執行階段會以一般方式探查組件。</span><span class="sxs-lookup"><span data-stu-id="faa89-139">If no codebase is indicated, the runtime probes for the assembly in the usual way.</span></span>  
   
- <span data-ttu-id="d493d-140">如果組件具有強式名稱，可以任何地方的程式碼基底設定是近端內部網路或網際網路上。</span><span class="sxs-lookup"><span data-stu-id="d493d-140">If the assembly has a strong name, the codebase setting can be anywhere on the local intranet or the Internet.</span></span> <span data-ttu-id="d493d-141">如果組件私用組件，程式碼基底設定必須是相對於應用程式的目錄路徑。</span><span class="sxs-lookup"><span data-stu-id="d493d-141">If the assembly is a private assembly, the codebase setting must be a path relative to the application's directory.</span></span>  
+ <span data-ttu-id="faa89-140">如果組件具有強式名稱，可以任何地方的程式碼基底設定是近端內部網路或網際網路上。</span><span class="sxs-lookup"><span data-stu-id="faa89-140">If the assembly has a strong name, the codebase setting can be anywhere on the local intranet or the Internet.</span></span> <span data-ttu-id="faa89-141">如果組件私用組件，程式碼基底設定必須是相對於應用程式的目錄路徑。</span><span class="sxs-lookup"><span data-stu-id="faa89-141">If the assembly is a private assembly, the codebase setting must be a path relative to the application's directory.</span></span>  
   
- <span data-ttu-id="d493d-142">針對沒有強式名稱的組件，則會忽略版本和載入器會使用的第一個出現\<程式碼基底 > 內\<dependentAssembly >。</span><span class="sxs-lookup"><span data-stu-id="d493d-142">For assemblies without a strong name, version is ignored and the loader uses the first appearance of \<codebase> inside \<dependentAssembly>.</span></span> <span data-ttu-id="d493d-143">如果應用程式組態檔，將繫結重新導向至另一個組件中沒有項目，重新導向將會優先，即使組件版本不符合繫結要求。</span><span class="sxs-lookup"><span data-stu-id="d493d-143">If there is an entry in the application configuration file that redirects binding to another assembly, the redirection will take precedence even if the assembly version doesnt match the binding request.</span></span>  
+ <span data-ttu-id="faa89-142">針對沒有強式名稱的組件，則會忽略版本和載入器會使用的第一個出現\<程式碼基底 > 內\<dependentAssembly >。</span><span class="sxs-lookup"><span data-stu-id="faa89-142">For assemblies without a strong name, version is ignored and the loader uses the first appearance of \<codebase> inside \<dependentAssembly>.</span></span> <span data-ttu-id="faa89-143">如果應用程式組態檔，將繫結重新導向至另一個組件中沒有項目，重新導向將會優先，即使組件版本不符合繫結要求。</span><span class="sxs-lookup"><span data-stu-id="faa89-143">If there is an entry in the application configuration file that redirects binding to another assembly, the redirection will take precedence even if the assembly version doesnt match the binding request.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d493d-144">範例</span><span class="sxs-lookup"><span data-stu-id="d493d-144">Example</span></span>  
- <span data-ttu-id="d493d-145">下列範例示範如何指定執行階段可以在哪裡找到組件。</span><span class="sxs-lookup"><span data-stu-id="d493d-145">The following example shows how to specify where the runtime can find an assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="faa89-144">範例</span><span class="sxs-lookup"><span data-stu-id="faa89-144">Example</span></span>  
+ <span data-ttu-id="faa89-145">下列範例示範如何指定執行階段可以在哪裡找到組件。</span><span class="sxs-lookup"><span data-stu-id="faa89-145">The following example shows how to specify where the runtime can find an assembly.</span></span>  
   
 ```xml  
 <configuration>  
@@ -89,8 +87,8 @@ href="URL of assembly"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d493d-146">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d493d-146">See also</span></span>
-- [<span data-ttu-id="d493d-147">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="d493d-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="d493d-148">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="d493d-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="d493d-149">指定組件的位置</span><span class="sxs-lookup"><span data-stu-id="d493d-149">Specifying an Assembly's Location</span></span>](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [<span data-ttu-id="d493d-150">執行階段如何找出組件</span><span class="sxs-lookup"><span data-stu-id="d493d-150">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="faa89-146">另請參閱</span><span class="sxs-lookup"><span data-stu-id="faa89-146">See also</span></span>
+- [<span data-ttu-id="faa89-147">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="faa89-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="faa89-148">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="faa89-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="faa89-149">指定組件的位置</span><span class="sxs-lookup"><span data-stu-id="faa89-149">Specifying an Assembly's Location</span></span>](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
+- [<span data-ttu-id="faa89-150">執行階段如何找出組件</span><span class="sxs-lookup"><span data-stu-id="faa89-150">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

@@ -6,24 +6,22 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a824e958a2b75b28aa66a15212e0276d6c127739
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f00d973a2faff1709a98842d1164d69c59027c53
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536525"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083609"
 ---
-# <a name="ltnamedcachesgt-element-cache-settings"></a><span data-ttu-id="51c29-102">&lt;namedCaches&gt;元素 （快取設定）</span><span class="sxs-lookup"><span data-stu-id="51c29-102">&lt;namedCaches&gt; Element (Cache Settings)</span></span>
-<span data-ttu-id="51c29-103">指定的具名組態設定集合<xref:System.Runtime.Caching.MemoryCache>執行個體。</span><span class="sxs-lookup"><span data-stu-id="51c29-103">Specifies a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span> <span data-ttu-id="51c29-104"><xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>屬性從一或多個參考的組態設定集合`namedCaches`組態檔的項目。</span><span class="sxs-lookup"><span data-stu-id="51c29-104">The <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> property references the collection of configuration settings from one or more `namedCaches` elements of the configuration file.</span></span>  
+# <a name="ltnamedcachesgt-element-cache-settings"></a><span data-ttu-id="db3aa-102">&lt;namedCaches&gt;元素 （快取設定）</span><span class="sxs-lookup"><span data-stu-id="db3aa-102">&lt;namedCaches&gt; Element (Cache Settings)</span></span>
+<span data-ttu-id="db3aa-103">指定的具名組態設定集合<xref:System.Runtime.Caching.MemoryCache>執行個體。</span><span class="sxs-lookup"><span data-stu-id="db3aa-103">Specifies a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span> <span data-ttu-id="db3aa-104"><xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>屬性從一或多個參考的組態設定集合`namedCaches`組態檔的項目。</span><span class="sxs-lookup"><span data-stu-id="db3aa-104">The <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> property references the collection of configuration settings from one or more `namedCaches` elements of the configuration file.</span></span>  
   
- <span data-ttu-id="51c29-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="51c29-105">\<configuration></span></span>  
-<span data-ttu-id="51c29-106">\< system.runtime.caching></span><span class="sxs-lookup"><span data-stu-id="51c29-106">\< system.runtime.caching></span></span>  
-<span data-ttu-id="51c29-107">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="51c29-107">\<memoryCache></span></span>  
-<span data-ttu-id="51c29-108">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="51c29-108">\<namedCaches></span></span>  
+ <span data-ttu-id="db3aa-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="db3aa-105">\<configuration></span></span>  
+<span data-ttu-id="db3aa-106">\< system.runtime.caching></span><span class="sxs-lookup"><span data-stu-id="db3aa-106">\< system.runtime.caching></span></span>  
+<span data-ttu-id="db3aa-107">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="db3aa-107">\<memoryCache></span></span>  
+<span data-ttu-id="db3aa-108">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="db3aa-108">\<namedCaches></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51c29-109">語法</span><span class="sxs-lookup"><span data-stu-id="51c29-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db3aa-109">語法</span><span class="sxs-lookup"><span data-stu-id="db3aa-109">Syntax</span></span>  
   
 ```xml  
 <namedCaches>  
@@ -31,46 +29,46 @@ ms.locfileid: "54536525"
 </namedCaches>  
 ```  
   
-## <a name="type"></a><span data-ttu-id="51c29-110">類型</span><span class="sxs-lookup"><span data-stu-id="51c29-110">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="db3aa-110">類型</span><span class="sxs-lookup"><span data-stu-id="db3aa-110">Type</span></span>  
  `None`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="51c29-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="51c29-111">Attributes and Elements</span></span>  
- <span data-ttu-id="51c29-112">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="51c29-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="db3aa-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="db3aa-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="db3aa-112">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="db3aa-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="51c29-113">屬性</span><span class="sxs-lookup"><span data-stu-id="51c29-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="db3aa-113">屬性</span><span class="sxs-lookup"><span data-stu-id="db3aa-113">Attributes</span></span>  
   
-|<span data-ttu-id="51c29-114">屬性</span><span class="sxs-lookup"><span data-stu-id="51c29-114">Attribute</span></span>|<span data-ttu-id="51c29-115">描述</span><span class="sxs-lookup"><span data-stu-id="51c29-115">Description</span></span>|  
+|<span data-ttu-id="db3aa-114">屬性</span><span class="sxs-lookup"><span data-stu-id="db3aa-114">Attribute</span></span>|<span data-ttu-id="db3aa-115">描述</span><span class="sxs-lookup"><span data-stu-id="db3aa-115">Description</span></span>|  
 |---------------|-----------------|  
-|`cacheMemoryLimitMegabytes`|<span data-ttu-id="51c29-116">整數值，指定允許的大小上限，以 mb 為單位，可執行個體<xref:System.Runtime.Caching.MemoryCache>可以成長到。</span><span class="sxs-lookup"><span data-stu-id="51c29-116">An integer value that specifies the maximum allowable size, in megabytes, that an instance of a <xref:System.Runtime.Caching.MemoryCache> can grow to.</span></span> <span data-ttu-id="51c29-117">預設值為 0，這表示的自動調整啟發學習法<xref:System.Runtime.Caching.MemoryCache>預設會使用類別。</span><span class="sxs-lookup"><span data-stu-id="51c29-117">The default value is 0, which means that the autosizing heuristics of the <xref:System.Runtime.Caching.MemoryCache> class are used by default.</span></span>|  
-|`name`|<span data-ttu-id="51c29-118">快取的名稱。</span><span class="sxs-lookup"><span data-stu-id="51c29-118">The name of the cache.</span></span>|  
-|`physicalMemoryLimitPercentage`|<span data-ttu-id="51c29-119">整數值介於 0 到 100 之間，指定可供快取的實際安裝的電腦記憶體的最大百分比。</span><span class="sxs-lookup"><span data-stu-id="51c29-119">An integer value between 0 and 100 that specifies the maximum percentage of physically installed computer memory that can be consumed by the cache.</span></span> <span data-ttu-id="51c29-120">預設值為 0，這表示的自動調整啟發學習法<xref:System.Runtime.Caching.MemoryCache>預設會使用類別。</span><span class="sxs-lookup"><span data-stu-id="51c29-120">The default value is 0, which means that the autosizing heuristics of the <xref:System.Runtime.Caching.MemoryCache> class are used by default.</span></span>|  
-|`pollingInterval`|<span data-ttu-id="51c29-121">表示時間間隔的值，在此時間之後，快取實作會比較目前的記憶體負載與針對快取執行個體所設定的絕對和百分比型記憶體限制。</span><span class="sxs-lookup"><span data-stu-id="51c29-121">A value that indicates the time interval after which the cache implementation compares the current memory load against the absolute and percentage-based memory limits that are set for the cache instance.</span></span> <span data-ttu-id="51c29-122">這個值是以"Hh: mm:"格式輸入。</span><span class="sxs-lookup"><span data-stu-id="51c29-122">This value is entered in "HH:MM:SS" format.</span></span>|  
+|`cacheMemoryLimitMegabytes`|<span data-ttu-id="db3aa-116">整數值，指定允許的大小上限，以 mb 為單位，可執行個體<xref:System.Runtime.Caching.MemoryCache>可以成長到。</span><span class="sxs-lookup"><span data-stu-id="db3aa-116">An integer value that specifies the maximum allowable size, in megabytes, that an instance of a <xref:System.Runtime.Caching.MemoryCache> can grow to.</span></span> <span data-ttu-id="db3aa-117">預設值為 0，這表示的自動調整啟發學習法<xref:System.Runtime.Caching.MemoryCache>預設會使用類別。</span><span class="sxs-lookup"><span data-stu-id="db3aa-117">The default value is 0, which means that the autosizing heuristics of the <xref:System.Runtime.Caching.MemoryCache> class are used by default.</span></span>|  
+|`name`|<span data-ttu-id="db3aa-118">快取的名稱。</span><span class="sxs-lookup"><span data-stu-id="db3aa-118">The name of the cache.</span></span>|  
+|`physicalMemoryLimitPercentage`|<span data-ttu-id="db3aa-119">整數值介於 0 到 100 之間，指定可供快取的實際安裝的電腦記憶體的最大百分比。</span><span class="sxs-lookup"><span data-stu-id="db3aa-119">An integer value between 0 and 100 that specifies the maximum percentage of physically installed computer memory that can be consumed by the cache.</span></span> <span data-ttu-id="db3aa-120">預設值為 0，這表示的自動調整啟發學習法<xref:System.Runtime.Caching.MemoryCache>預設會使用類別。</span><span class="sxs-lookup"><span data-stu-id="db3aa-120">The default value is 0, which means that the autosizing heuristics of the <xref:System.Runtime.Caching.MemoryCache> class are used by default.</span></span>|  
+|`pollingInterval`|<span data-ttu-id="db3aa-121">表示時間間隔的值，在此時間之後，快取實作會比較目前的記憶體負載與針對快取執行個體所設定的絕對和百分比型記憶體限制。</span><span class="sxs-lookup"><span data-stu-id="db3aa-121">A value that indicates the time interval after which the cache implementation compares the current memory load against the absolute and percentage-based memory limits that are set for the cache instance.</span></span> <span data-ttu-id="db3aa-122">這個值是以"Hh: mm:"格式輸入。</span><span class="sxs-lookup"><span data-stu-id="db3aa-122">This value is entered in "HH:MM:SS" format.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="51c29-123">子元素</span><span class="sxs-lookup"><span data-stu-id="51c29-123">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="db3aa-123">子元素</span><span class="sxs-lookup"><span data-stu-id="db3aa-123">Child Elements</span></span>  
   
-|<span data-ttu-id="51c29-124">項目</span><span class="sxs-lookup"><span data-stu-id="51c29-124">Element</span></span>|<span data-ttu-id="51c29-125">描述</span><span class="sxs-lookup"><span data-stu-id="51c29-125">Description</span></span>|  
+|<span data-ttu-id="db3aa-124">項目</span><span class="sxs-lookup"><span data-stu-id="db3aa-124">Element</span></span>|<span data-ttu-id="db3aa-125">描述</span><span class="sxs-lookup"><span data-stu-id="db3aa-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="51c29-126">\<add></span><span class="sxs-lookup"><span data-stu-id="51c29-126">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/add-element-for-namedcaches.md)|<span data-ttu-id="51c29-127">將具名快取新增到記憶體快取的 `namedCaches` 集合。</span><span class="sxs-lookup"><span data-stu-id="51c29-127">Adds a named cache to the `namedCaches` collection for a memory cache.</span></span>|  
-|[<span data-ttu-id="51c29-128">\<clear></span><span class="sxs-lookup"><span data-stu-id="51c29-128">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)|<span data-ttu-id="51c29-129">清除記憶體快取的 `namedCaches` 集合。</span><span class="sxs-lookup"><span data-stu-id="51c29-129">Clears the `namedCaches` collection for a memory cache.</span></span>|  
-|[<span data-ttu-id="51c29-130">\<remove></span><span class="sxs-lookup"><span data-stu-id="51c29-130">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/remove-element-for-namedcaches.md)|<span data-ttu-id="51c29-131">從記憶體快取的 `namedCaches` 集合移除具名快取項目。</span><span class="sxs-lookup"><span data-stu-id="51c29-131">Removes a named cache entry from the `namedCaches` collection for a memory cache.</span></span>|  
+|[<span data-ttu-id="db3aa-126">\<add></span><span class="sxs-lookup"><span data-stu-id="db3aa-126">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/add-element-for-namedcaches.md)|<span data-ttu-id="db3aa-127">將具名快取新增到記憶體快取的 `namedCaches` 集合。</span><span class="sxs-lookup"><span data-stu-id="db3aa-127">Adds a named cache to the `namedCaches` collection for a memory cache.</span></span>|  
+|[<span data-ttu-id="db3aa-128">\<clear></span><span class="sxs-lookup"><span data-stu-id="db3aa-128">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)|<span data-ttu-id="db3aa-129">清除記憶體快取的 `namedCaches` 集合。</span><span class="sxs-lookup"><span data-stu-id="db3aa-129">Clears the `namedCaches` collection for a memory cache.</span></span>|  
+|[<span data-ttu-id="db3aa-130">\<remove></span><span class="sxs-lookup"><span data-stu-id="db3aa-130">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/remove-element-for-namedcaches.md)|<span data-ttu-id="db3aa-131">從記憶體快取的 `namedCaches` 集合移除具名快取項目。</span><span class="sxs-lookup"><span data-stu-id="db3aa-131">Removes a named cache entry from the `namedCaches` collection for a memory cache.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="51c29-132">父項目</span><span class="sxs-lookup"><span data-stu-id="51c29-132">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="db3aa-132">父項目</span><span class="sxs-lookup"><span data-stu-id="db3aa-132">Parent Elements</span></span>  
   
-|<span data-ttu-id="51c29-133">項目</span><span class="sxs-lookup"><span data-stu-id="51c29-133">Element</span></span>|<span data-ttu-id="51c29-134">描述</span><span class="sxs-lookup"><span data-stu-id="51c29-134">Description</span></span>|  
+|<span data-ttu-id="db3aa-133">項目</span><span class="sxs-lookup"><span data-stu-id="db3aa-133">Element</span></span>|<span data-ttu-id="db3aa-134">描述</span><span class="sxs-lookup"><span data-stu-id="db3aa-134">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="51c29-135">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="51c29-135">\<memoryCache></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|<span data-ttu-id="51c29-136">定義項目，這個項目會用來設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取。</span><span class="sxs-lookup"><span data-stu-id="51c29-136">Defines an element that is used to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span>|  
+|[<span data-ttu-id="db3aa-135">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="db3aa-135">\<memoryCache></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|<span data-ttu-id="db3aa-136">定義項目，這個項目會用來設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取。</span><span class="sxs-lookup"><span data-stu-id="db3aa-136">Defines an element that is used to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="51c29-137">備註</span><span class="sxs-lookup"><span data-stu-id="51c29-137">Remarks</span></span>  
- <span data-ttu-id="51c29-138">可以包含 Web.config 檔的記憶體快取組態區段`add`， `remove`，並`clear`屬性`namedCaches`集合。</span><span class="sxs-lookup"><span data-stu-id="51c29-138">The memory cache configuration section of the Web.config file can contain `add`, `remove`, and `clear` attributes for the `namedCaches` collection.</span></span> <span data-ttu-id="51c29-139">每個`namedCaches`項目會識別`name`屬性。</span><span class="sxs-lookup"><span data-stu-id="51c29-139">Each `namedCaches` entry is uniquely identified by the `name` attribute.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="db3aa-137">備註</span><span class="sxs-lookup"><span data-stu-id="db3aa-137">Remarks</span></span>  
+ <span data-ttu-id="db3aa-138">可以包含 Web.config 檔的記憶體快取組態區段`add`， `remove`，並`clear`屬性`namedCaches`集合。</span><span class="sxs-lookup"><span data-stu-id="db3aa-138">The memory cache configuration section of the Web.config file can contain `add`, `remove`, and `clear` attributes for the `namedCaches` collection.</span></span> <span data-ttu-id="db3aa-139">每個`namedCaches`項目會識別`name`屬性。</span><span class="sxs-lookup"><span data-stu-id="db3aa-139">Each `namedCaches` entry is uniquely identified by the `name` attribute.</span></span>  
   
- <span data-ttu-id="51c29-140">您可以藉由參考應用程式組態檔中的資訊擷取執行個體的記憶體快取項目。</span><span class="sxs-lookup"><span data-stu-id="51c29-140">You can retrieve instances of memory cache entries by referencing the information in the application configuration files.</span></span> <span data-ttu-id="51c29-141">根據預設，只有預設快取執行個體具有組態檔中的項目。</span><span class="sxs-lookup"><span data-stu-id="51c29-141">By default, only the default cache instance has an entry in the configuration file.</span></span> <span data-ttu-id="51c29-142">預設快取執行個體是從傳回的執行個體<xref:System.Runtime.Caching.MemoryCache.Default%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="51c29-142">The default cache instance is the instance that is returned from the <xref:System.Runtime.Caching.MemoryCache.Default%2A> property.</span></span>  
+ <span data-ttu-id="db3aa-140">您可以藉由參考應用程式組態檔中的資訊擷取執行個體的記憶體快取項目。</span><span class="sxs-lookup"><span data-stu-id="db3aa-140">You can retrieve instances of memory cache entries by referencing the information in the application configuration files.</span></span> <span data-ttu-id="db3aa-141">根據預設，只有預設快取執行個體具有組態檔中的項目。</span><span class="sxs-lookup"><span data-stu-id="db3aa-141">By default, only the default cache instance has an entry in the configuration file.</span></span> <span data-ttu-id="db3aa-142">預設快取執行個體是從傳回的執行個體<xref:System.Runtime.Caching.MemoryCache.Default%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="db3aa-142">The default cache instance is the instance that is returned from the <xref:System.Runtime.Caching.MemoryCache.Default%2A> property.</span></span>  
   
- <span data-ttu-id="51c29-143">如果您設定為"default"的 name 屬性時，項目會使用預設的記憶體快取執行個體。</span><span class="sxs-lookup"><span data-stu-id="51c29-143">If you set the name attribute to "default", the element uses the default memory cache instance.</span></span>  
+ <span data-ttu-id="db3aa-143">如果您設定為"default"的 name 屬性時，項目會使用預設的記憶體快取執行個體。</span><span class="sxs-lookup"><span data-stu-id="db3aa-143">If you set the name attribute to "default", the element uses the default memory cache instance.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="51c29-144">範例</span><span class="sxs-lookup"><span data-stu-id="51c29-144">Example</span></span>  
- <span data-ttu-id="51c29-145">下列範例示範如何將預設快取項目名稱中的快取的名稱，藉由設定`name`為"default"的屬性。</span><span class="sxs-lookup"><span data-stu-id="51c29-145">The following example shows how to set the name of the cache to the default cache entry name by setting the `name` attribute to "default".</span></span>  
+## <a name="example"></a><span data-ttu-id="db3aa-144">範例</span><span class="sxs-lookup"><span data-stu-id="db3aa-144">Example</span></span>  
+ <span data-ttu-id="db3aa-145">下列範例示範如何將預設快取項目名稱中的快取的名稱，藉由設定`name`為"default"的屬性。</span><span class="sxs-lookup"><span data-stu-id="db3aa-145">The following example shows how to set the name of the cache to the default cache entry name by setting the `name` attribute to "default".</span></span>  
   
- <span data-ttu-id="51c29-146">`cacheMemoryLimitMegabytes` 屬性和 `physicalMemoryPercentage` 屬性都設定為零。</span><span class="sxs-lookup"><span data-stu-id="51c29-146">The `cacheMemoryLimitMegabytes` attribute and the `physicalMemoryPercentage` attribute are set to zero.</span></span> <span data-ttu-id="51c29-147">將這些屬性設定為零表示自動調整啟發學習法<xref:System.Runtime.Caching.MemoryCache>類別使用。</span><span class="sxs-lookup"><span data-stu-id="51c29-147">Setting these attributes to zero means that the autosizing heuristics of the <xref:System.Runtime.Caching.MemoryCache> class are used.</span></span> <span data-ttu-id="51c29-148">快取實作會比較目前的記憶體負載與絕對和百分比型記憶體限制每隔兩分鐘。</span><span class="sxs-lookup"><span data-stu-id="51c29-148">The cache implementation compares the current memory load against the absolute and percentage-based memory limits every two minutes.</span></span>  
+ <span data-ttu-id="db3aa-146">`cacheMemoryLimitMegabytes` 屬性和 `physicalMemoryPercentage` 屬性都設定為零。</span><span class="sxs-lookup"><span data-stu-id="db3aa-146">The `cacheMemoryLimitMegabytes` attribute and the `physicalMemoryPercentage` attribute are set to zero.</span></span> <span data-ttu-id="db3aa-147">將這些屬性設定為零表示自動調整啟發學習法<xref:System.Runtime.Caching.MemoryCache>類別使用。</span><span class="sxs-lookup"><span data-stu-id="db3aa-147">Setting these attributes to zero means that the autosizing heuristics of the <xref:System.Runtime.Caching.MemoryCache> class are used.</span></span> <span data-ttu-id="db3aa-148">快取實作會比較目前的記憶體負載與絕對和百分比型記憶體限制每隔兩分鐘。</span><span class="sxs-lookup"><span data-stu-id="db3aa-148">The cache implementation compares the current memory load against the absolute and percentage-based memory limits every two minutes.</span></span>  
   
 ```xml  
 <configuration>  
@@ -89,5 +87,5 @@ ms.locfileid: "54536525"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="51c29-149">另請參閱</span><span class="sxs-lookup"><span data-stu-id="51c29-149">See also</span></span>
-- [<span data-ttu-id="51c29-150">\<memoryCache > 項目 （快取設定）</span><span class="sxs-lookup"><span data-stu-id="51c29-150">\<memoryCache> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
+## <a name="see-also"></a><span data-ttu-id="db3aa-149">另請參閱</span><span class="sxs-lookup"><span data-stu-id="db3aa-149">See also</span></span>
+- [<span data-ttu-id="db3aa-150">\<memoryCache > 項目 （快取設定）</span><span class="sxs-lookup"><span data-stu-id="db3aa-150">\<memoryCache> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
