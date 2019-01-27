@@ -9,20 +9,18 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 82ee7b163efcefae0f2a169b74d29ea4c9f5398a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 9fc5a555085369cdec249eb9b5b247f403bd12ed
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222736"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083713"
 ---
 # <a name="ltstartupgt-element"></a>&lt;啟動&gt;項目
 
 指定 common language runtime 的啟動資訊。
 
- \<組態 >\<啟動 >
+ \<configuration> \<startup>
 
 ## <a name="syntax"></a>語法
 
@@ -98,6 +96,6 @@ ms.locfileid: "54222736"
 
 - [啟動設定結構描述](index.md)
 - [組態檔結構描述](../index.md)
-- [如何：設定應用程式，以支援.NET Framework 4 或更新版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [如何：設定應用程式以支援 .NET Framework 4 或更新版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [COM interop 的並存執行](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
 - [同處理序並存執行](../../../deployment/in-process-side-by-side-execution.md)

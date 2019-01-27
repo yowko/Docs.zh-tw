@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework application configuration, cryptography
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b9153b4525063d6c52e22d754d68ffa42e914d00
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ba11eed316e227ceae4cb5acecb2b081fa8868f2
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196943"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084402"
 ---
 # <a name="configuring-cryptography-classes"></a>設定密碼編譯類別
 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]可讓電腦系統管理員，若要設定的預設密碼編譯演算法和.NET Framework 和適當地撰寫的應用程式使用的演算法實作。  例如，企業有它自己的密碼編譯演算法的實作可以讓該實作的預設值，而不是隨附於實作[!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]。 雖然永遠都可以選擇使用加密的受控應用程式，明確繫結至特定的實作，但建議他們使用密碼編譯組態系統建立密碼編譯物件。  

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: 26317fad5796989a58a48e4f26549805b279228a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a06b8831c862706f9607e95950b81a6bb6e8b7ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736006"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip 技術摘要
 本主題提供有關 `ToolStrip` 控制項及支援這些控制項之類別的摘要資訊。  
   
- `ToolStrip` 控制項以及與其相關聯的類別提供了完整的解決方案，可用於建立工具列、 狀態列和功能表。  
+  `ToolStrip` 控制項以及與其相關聯的類別提供了完整的解決方案，可用於建立工具列、 狀態列和功能表。  
   
 ## <a name="namespaces"></a>命名空間  
  <xref:System.Windows.Forms?displayProperty=nameWithType>  
@@ -45,7 +45,7 @@ ms.locfileid: "47201097"
   
  `ToolStrip` 是 `MenuStrip`、`ContextMenuStrip` 和 `StatusStrip` 的可擴充基底類別。 這些控制項是 <xref:System.Windows.Forms.ToolStripItem> 容器，它們繼承了一般行為和事件處理、擴充以便讓每個實作處理適合它的行為。 衍生自 <xref:System.Windows.Forms.ToolStripItem> 的控制項如下表所示。 基底 `ToolStrip` 類別處理繪製、 使用者輸入，以及這些控制項的拖放事件。  
   
- `ToolStrip` 、 `MenuStrip` 、 `ContextMenuStrip` 和 `StatusStrip` 控制項取代先前的工具列、 功能表、捷徑功能表和狀態列控制項，雖然這些控制項是被保留來確保回溯相容性。  
+  `ToolStrip` 、 `MenuStrip` 、 `ContextMenuStrip` 和 `StatusStrip` 控制項取代先前的工具列、 功能表、捷徑功能表和狀態列控制項，雖然這些控制項是被保留來確保回溯相容性。  
   
 ## <a name="toolstrip-classes-at-a-glance"></a>ToolStrip 類別簡介  
  下表顯示依技術領域分組的 ToolStrip 類別。  
@@ -58,7 +58,7 @@ ms.locfileid: "47201097"
 |展示和轉譯|<xref:System.Windows.Forms.ToolStripManager><br /><br /> <xref:System.Windows.Forms.ToolStripRenderer><br /><br /> <xref:System.Windows.Forms.ToolStripProfessionalRenderer><br /><br /> <xref:System.Windows.Forms.ToolStripRenderMode><br /><br /> <xref:System.Windows.Forms.ToolStripManagerRenderMode>|  
   
 ## <a name="toolstrip-design-time-features"></a>ToolStrip 設計階段功能  
- <xref:System.Windows.Forms.ToolStrip> 家族控制項提供一組豐富的工具和範本，它能夠就地編輯和定義使用者介面的基礎，讓您可以快速建立實用的應用程式。  
+  <xref:System.Windows.Forms.ToolStrip> 家族控制項提供一組豐富的工具和範本，它能夠就地編輯和定義使用者介面的基礎，讓您可以快速建立實用的應用程式。  
   
 ### <a name="task-dialog-boxes"></a>工作對話方塊  
  在 Visual Studio 中，按一下設計工具中控制項上的智慧標籤會顯示工作清單中，以便存取許多常用的命令。  
@@ -85,9 +85,9 @@ ms.locfileid: "47201097"
 -   [ToolStrip 項目集合編輯器](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
   
 ## <a name="hosting-controls"></a>裝載控制項  
- <xref:System.Windows.Forms.ToolStripControlHost> 類別會提供內建的包裝函式給 <xref:System.Windows.Forms.ToolStripComboBox> 、 <xref:System.Windows.Forms.ToolStripTextBox> 和 <xref:System.Windows.Forms.ToolStripProgressBar> 控制項。 您也可以裝載任何其他現有或者 <xref:System.Windows.Forms.ToolStripControlHost> 中的 COM 控制項。  
+  <xref:System.Windows.Forms.ToolStripControlHost> 類別會提供內建的包裝函式給 <xref:System.Windows.Forms.ToolStripComboBox> 、 <xref:System.Windows.Forms.ToolStripTextBox> 和 <xref:System.Windows.Forms.ToolStripProgressBar> 控制項。 您也可以裝載任何其他現有或者 <xref:System.Windows.Forms.ToolStripControlHost> 中的 COM 控制項。  
   
- 如需控制項裝載的範例，請參閱 <<c0> [ 如何： 使用 ToolStripControlHost 為 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)。  
+ 如需控制項裝載的範例，請參閱[How to:使用 ToolStripControlHost 為 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)。  
   
 ## <a name="rendering"></a>正在轉譯  
  <xref:System.Windows.Forms.ToolStrip> 類別會實作明顯不同於其他的 Windows Form 控制項的轉譯配置。 透過這種配置，您可以輕鬆地套用樣式和主題。  
@@ -96,7 +96,7 @@ ms.locfileid: "47201097"
   
  您可以將相同的樣式套用至多個相同的應用程式中的 <xref:System.Windows.Forms.ToolStrip> 物件，這可以藉由把 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 設定為 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>以及分別把 <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> 或 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> 屬性設定為您想要的 <xref:System.Windows.Forms.ToolStripManagerRenderMode> 或 <xref:System.Windows.Forms.ToolStripRenderer> 值。  
   
- 例如轉譯的詳細資訊，請參閱[如何： 建立和設定 Windows Form 中 ToolStrip 控制項自訂產生器](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)。  
+ 例如轉譯的詳細資訊，請參閱[How to:建立並設定自訂轉譯器，Windows 中的 ToolStrip 控制項 form](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)。  
   
 ## <a name="styles-and-themes"></a>樣式和主題  
  <xref:System.Windows.Forms.ToolStrip> 以及關聯的類別可讓您輕鬆支援視覺化樣式和自訂外觀，而且不需要覆寫 <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> 方法的每個項目。 使用 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 和 <xref:System.Windows.Forms.ToolStrip.Renderer%2A> 屬性。  
@@ -112,12 +112,12 @@ ms.locfileid: "47201097"
   
  透過停駐來浮動定位的優點在於 <xref:System.Windows.Forms.ToolStrip> 、 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 控制項可以與其他控制項共用水平或垂直空間。  
   
- 大部分的 <xref:System.Windows.Forms.ToolStrip> 控制項能夠如同其他控制項被定位到表單，而不使用浮動定位。 您也可以藉由將 <xref:System.Windows.Forms.ToolStrip> 控制項從它的 <xref:System.Windows.Forms.ToolStripContainer> 移出並且將 `Dock` 屬性設定為 `None`， 來指定它放置在表單的任意位置上，或者藉由個別設定 <xref:System.Windows.Forms.Control.Location%2A> 屬性來指定它的絕對位置。 請參閱[如何： 將移出 toolstripcontainer 並移到表單上 ToolStrip](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)。  
+ 大部分的 <xref:System.Windows.Forms.ToolStrip> 控制項能夠如同其他控制項被定位到表單，而不使用浮動定位。 您也可以藉由將 <xref:System.Windows.Forms.ToolStrip> 控制項從它的 <xref:System.Windows.Forms.ToolStripContainer> 移出並且將 `Dock` 屬性設定為 `None`， 來指定它放置在表單的任意位置上，或者藉由個別設定 <xref:System.Windows.Forms.Control.Location%2A> 屬性來指定它的絕對位置。 請參閱[如何：將移出 toolstripcontainer 並移到表單上 ToolStrip](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)。  
   
  使用一或多個 <xref:System.Windows.Forms.ToolStripPanel> 控制項來獲得更大的彈性，特別是針對多重文件介面 (MDI) 應用程式，或如果您不需要 <xref:System.Windows.Forms.ToolStripContainer>。 <xref:System.Windows.Forms.ToolStripPanel> 提供一個可停駐空間來定位及浮動定位除了傳統控制項的 <xref:System.Windows.Forms.ToolStrip> 控制項。 根據預設，<xref:System.Windows.Forms.ToolStripPanel>未出現在設計工具**工具箱**，但您可以用滑鼠右鍵按一下，讓它那里**工具箱**，然後按一下**選擇項目**。 您也以程式設計方式存取與 <xref:System.Windows.Forms.ToolStripPanel> 相似的任何其他類別。  
   
- <xref:System.Windows.Forms.ToolStrip> 、 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 讓項目溢位。 這與在 Microsoft Office 工具列上那些項目的使用方式類似。  
+  <xref:System.Windows.Forms.ToolStrip> 、 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 讓項目溢位。 這與在 Microsoft Office 工具列上那些項目的使用方式類似。  
   
-## <a name="see-also"></a>另請參閱  
- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+## <a name="see-also"></a>另請參閱
+- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
