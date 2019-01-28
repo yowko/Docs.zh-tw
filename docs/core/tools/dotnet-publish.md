@@ -2,12 +2,12 @@
 title: dotnet publish 命令
 description: dotnet publish 命令會將 .NET Core 專案發行到目錄中。
 ms.date: 05/29/2018
-ms.openlocfilehash: 353adfcbb0479e4a951b900f06327e23a3414225
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 40ce31073ee3f6f94e110f3a4e1eeda0c7b2e48d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559276"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -227,5 +227,5 @@ dotnet publish [-h|--help]
 
 ## <a name="see-also"></a>另請參閱
 
-* [目標架構](../../standard/frameworks.md)
-* [執行階段識別項 (RID) 目錄](../rid-catalog.md)
+- [目標架構](../../standard/frameworks.md)
+- [執行階段識別項 (RID) 目錄](../rid-catalog.md)
