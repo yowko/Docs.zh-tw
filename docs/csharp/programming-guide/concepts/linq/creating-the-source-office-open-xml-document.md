@@ -2,12 +2,12 @@
 title: 建立來源 Office Open XML 文件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-ms.openlocfilehash: 7941864e5dc2401a27df151c8c7806218609fcd4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0fe5463ae95374542482f768eee2bc694e2c5dd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44189880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635841"
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>建立來源 Office Open XML 文件 (C#)
 這個主題顯示如何建立此教學課程中其他範例所使用的 Office Open XML WordprocessingML 文件。 如果您按照這些指示進行，您的輸出將會符合每個範例中提供的輸出。  
@@ -53,6 +53,6 @@ ms.locfileid: "44189880"
     > [!NOTE]
     >  如果您要使用 Microsoft Word 2003，在 [存檔類型] 下拉式清單中選取 [Word 2007 文件]。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

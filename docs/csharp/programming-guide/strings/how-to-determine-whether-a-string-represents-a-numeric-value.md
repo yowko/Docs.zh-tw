@@ -7,12 +7,12 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: a20850e6fc34b28975dbb2b6be819bf2e88f1f27
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 77673256caba640f1340fc8218bea020f5fc04f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696369"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>HOW TO：判斷字串是否表示數值 (C# 程式設計指南)
 若要判斷字串是否為所指定數值類型的有效呈現，請使用靜態 `TryParse` 方法，而這個方法是由所有基本數字類型以及 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 此等類型所實作。 下列範例示範如何判斷 "108" 是否為有效 [int](../../../csharp/language-reference/keywords/int.md)。  
@@ -39,10 +39,10 @@ bool result = int.TryParse(s, out i); //i now = 108
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請一律使用 `TryParse` 或 `Parse` 方法來驗證文字方塊和下拉式方塊這類控制項的使用者輸入。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [如何：將位元組陣列轉換為成整數](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)  
-- [如何：將字串轉換為數值](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)  
-- [如何：在十六進位字串和數字類型間轉換](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)  
-- [剖析數值字串](../../../standard/base-types/parsing-numeric.md)  
+- [如何：將位元組陣列轉換為成整數](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)
+- [如何：將字串轉換為數值](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
+- [如何：在十六進位字串和數字類型間轉換](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
+- [剖析數值字串](../../../standard/base-types/parsing-numeric.md)
 - [格式化類型](../../../standard/base-types/formatting-types.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: c5963f45ee233f4413c4281a063c9c3d2a4c2a93
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f131f647d5335a011c5f446f847ed43fda019ade
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245450"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559268"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>HOW TO：了解傳遞結構和傳遞類別參考給方法之間的差異 (C# 程式設計手冊)
 下例示範將 [struct](../../../csharp/language-reference/keywords/struct.md) 傳遞給方法，與將 [class](../../../csharp/language-reference/keywords/class.md) 執行個體傳遞給方法有何不同。 在此範例中，兩個引數 (struct 和 class 執行個體) 都是以傳值方式傳遞，而且兩種方法都會變更引數其中一個欄位的值。 不過，兩個方法的結果不相同，因為傳遞 struct 時所傳送內容，和傳遞 class 執行個體時所傳送的內容不同。  
@@ -26,9 +26,9 @@ ms.locfileid: "53245450"
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [結構](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [結構](../../../csharp/programming-guide/classes-and-structs/structs.md)
 - [傳遞參數](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)

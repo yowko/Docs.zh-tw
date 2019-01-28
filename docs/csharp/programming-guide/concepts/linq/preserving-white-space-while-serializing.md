@@ -2,12 +2,12 @@
 title: 序列化時保留空白字元
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
-ms.openlocfilehash: 7fd0a38d2a9ed8c4712b8e9a03a24a23b408f38a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1b2a7f3ab2dcad200d6985e6b7bd91637d27dde8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741359"
 ---
 # <a name="preserving-white-space-while-serializing"></a>序列化時保留空白字元
 本主題描述如何在序列化 XML 樹狀結構時控制空白字元。  
@@ -31,6 +31,6 @@ ms.locfileid: "48032357"
   
  如果此方法採用 <xref:System.Xml.Linq.SaveOptions> 當做引數，您就可以指定該方法不格式化 (縮排) 序列化的 XML。 在此情況下，會保留 XML 樹狀中的所有空白字元。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [序列化 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

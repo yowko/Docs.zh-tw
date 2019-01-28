@@ -6,12 +6,12 @@ helpviewer_keywords:
 - jump statements [C#]
 - branch statements [C#]
 ms.assetid: 58da6ae7-7388-491e-828f-e74485d87d53
-ms.openlocfilehash: 0083406a4ba3cf5d3d70ca1b17630ceb73c17dce
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1661c551c576e5f6dd7180fbc40ec837f40622bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645258"
 ---
 # <a name="jump-statements-c-reference"></a>跳躍陳述式 (C# 參考)
 分支是使用跳躍陳述式來執行，這會導致立即傳輸程式控制項。 跳躍陳述式中會使用下列關鍵字：  
@@ -26,9 +26,9 @@ ms.locfileid: "53242824"
   
 -   [throw](../../../csharp/language-reference/keywords/throw.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [C# 參考](../../../csharp/language-reference/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
 - [陳述式關鍵字](../../../csharp/language-reference/keywords/statement-keywords.md)

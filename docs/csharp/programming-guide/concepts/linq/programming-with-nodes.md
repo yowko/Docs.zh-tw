@@ -2,12 +2,12 @@
 title: 搭配節點進行程式設計 (C#)
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 060f487e6e92c2ca42a685cc03afbe438106b839
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 0924d7b1d25a33635cc5140ca32622658b10fa0e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730174"
 ---
 # <a name="programming-with-nodes-c"></a>搭配節點進行程式設計 (C#)
 必須撰寫程式 (例如，XML 編輯器、轉換系統或報表寫入器) 的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 開發人員通常需要撰寫的程式可在比項目和屬性更細微的層級上作業。 他們通常需要在節點層級、管理的文字節點、處理指示與註解上作業。 這個主題提供一些關於在節點層級進行程式設計的詳細資料。  
@@ -172,5 +172,6 @@ Console.WriteLine(doc.Nodes().Count());
 1  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [進階 LINQ to XML 程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>另請參閱
+
+- [進階 LINQ to XML 程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f644e4f4ff47e31c0f2aaadb577aa6715b445d29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff12472ae5c7b2abbf1af338c2a1aea2a72907d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677143"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>將 COM 元件公開給 .NET Framework
 本節摘要說明向 Managed 程式碼公開現有 COM 元件所需要的程序。 如需撰寫與 .NET Framework 緊密整合的 COM 伺服器的詳細資訊，請參閱[交互操作的設計考量](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))。
@@ -38,9 +38,9 @@ ms.locfileid: "33388218"
   
      Interop 應用程式最適合部署為全域組件快取中具有[強式名稱](../app-domains/strong-named-assemblies.md)的已簽署組件。  
   
-## <a name="see-also"></a>請參閱  
- [與 Unmanaged 程式碼互通](index.md)  
- [交互操作的設計考量](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))  
- [COM Interop 範例：.NET 用戶端與 COM 伺服器](com-interop-sample-net-client-and-com-server.md)  
- [語言獨立性以及與語言無關的元件](../../standard/language-independence-and-language-independent-components.md)  
- [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md)
+## <a name="see-also"></a>另請參閱
+- [與 Unmanaged 程式碼互通](index.md)
+- [交互操作的設計考量](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))
+- [COM Interop 範例：.NET 用戶端與 COM 伺服器](com-interop-sample-net-client-and-com-server.md)
+- [語言獨立性以及與語言無關的元件](../../standard/language-independence-and-language-independent-components.md)
+- [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md)

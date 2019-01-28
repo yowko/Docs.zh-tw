@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: e3b0834f27fd0673687dc00b861e80752a585737
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7c122f0d342acb3708072be89e08c7465a654815
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660381"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>HOW TO：取得有關檔案、資料夾和磁碟機的資訊 (C# 程式設計手冊)
 在 .NET Framework 中，您可以使用下列類別來存取檔案系統資訊：  
@@ -53,8 +53,8 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
  如果應用程式沒有足夠的權限可讀取指定的檔案，則不論是否存在路徑，`Exists` 方法都會傳回 `false`；此方法不會擲回例外狀況。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)

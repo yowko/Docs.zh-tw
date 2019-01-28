@@ -2,12 +2,12 @@
 title: XAttribute 類別概觀 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 5619a8442fde9f4e8f612f213bde16c86ba00115
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dba8b29c98499bc056d546a282ff2ee1bb88bfbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494011"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute 類別概觀 (C#)
 屬性是與項目相關聯的成對名稱/值。 <xref:System.Xml.Linq.XAttribute> 類別表示 XML 屬性。  
@@ -20,7 +20,7 @@ ms.locfileid: "43529070"
 ## <a name="the-xattribute-constructor"></a>XAttribute 建構函式  
  下列 <xref:System.Xml.Linq.XAttribute> 類別的建構函式就是您常用的建構函式：  
   
-|建構函式|描述|  
+|建構函式|說明|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|建立 <xref:System.Xml.Linq.XAttribute> 物件。 `name` 引數會指定屬性的名稱；`content` 會指定屬性的內容。|  
   
@@ -79,6 +79,6 @@ Console.WriteLine(c);
   
  這個區別只有對於撰寫可在節點層級使用 XML 樹狀結構之程式碼的開發人員特別重要。 這個區別與許多開發人員都無關。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ to XML 程式設計概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

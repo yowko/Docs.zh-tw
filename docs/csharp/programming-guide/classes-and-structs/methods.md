@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: df2d7837217f4267f95ed73948a4eb479cc035c1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: fa863a5606c7526ae32bc28a0cfeaa91f8c7b539
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712151"
 ---
 # <a name="methods-c-programming-guide"></a>方法 (C# 程式設計手冊)
 方法是包含一系列陳述式的程式碼區塊。 程式會造成呼叫方法並指定任何所需的方法引數來執行陳述式。 在 C# 中，每個執行的指示是在方法的內容中執行。 Main 方法是每個 C# 應用程式的進入點，而且它是由 Common Language Runtime (CLR) 啟動程式時呼叫。  
@@ -156,16 +156,16 @@ public Customer this[long id] => store.LookupCustomer(id);
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [類別和結構](index.md)  
-- [存取修飾詞](access-modifiers.md)  
-- [靜態類別和靜態類別成員](static-classes-and-static-class-members.md)  
-- [繼承](inheritance.md)  
-- [抽象和密封類別以及類別成員](abstract-and-sealed-classes-and-class-members.md)  
-- [params](../../../csharp/language-reference/keywords/params.md)  
-- [return](../../../csharp/language-reference/keywords/return.md)  
-- [out](../../../csharp/language-reference/keywords/out.md)  
-- [ref](../../../csharp/language-reference/keywords/ref.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [類別和結構](index.md)
+- [存取修飾詞](access-modifiers.md)
+- [靜態類別和靜態類別成員](static-classes-and-static-class-members.md)
+- [繼承](inheritance.md)
+- [抽象和密封類別以及類別成員](abstract-and-sealed-classes-and-class-members.md)
+- [params](../../../csharp/language-reference/keywords/params.md)
+- [return](../../../csharp/language-reference/keywords/return.md)
+- [out](../../../csharp/language-reference/keywords/out.md)
+- [ref](../../../csharp/language-reference/keywords/ref.md)
 - [傳遞參數](passing-parameters.md)

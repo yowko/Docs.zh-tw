@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 489fdf87f973de6137587fc2280ef0fa72ab78ba
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: ab0cf58bec2d9072fbc3af78e477a84726dd7a81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659640"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多型 (C# 程式設計手冊)
 多型通常是指物件導向程式設計的第三個重要部分，其重要性僅次於封裝和繼承。 多型在希臘文中表示「多種形狀」，可分成下列兩方面：  
@@ -95,13 +95,13 @@ ms.locfileid: "53286451"
   
 -   [如何：覆寫 ToString 方法](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [事件](../../../csharp/programming-guide/events/index.md)  
-- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [索引子](../../../csharp/programming-guide/indexers/index.md)  
+- [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [事件](../../../csharp/programming-guide/events/index.md)
+- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [索引子](../../../csharp/programming-guide/indexers/index.md)
 - [型別](../../../csharp/programming-guide/types/index.md)

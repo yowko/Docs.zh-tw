@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 1924e218f151a86b0524df6f3c91bdbe78131922
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3505cf44c187c2f7aa54ca61f38e5c40023d809d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502594"
 ---
 # <a name="using-constructors-c-programming-guide"></a>使用建構函式 (C# 程式設計手冊)
 建立[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)時，會呼叫其建構函式。 建構函式的名稱與類別或結構相同，而且通常會初始化新物件的資料成員。  
@@ -54,7 +54,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  因此不需要呼叫實值型別的預設建構函式。  
   
- 類別和 `structs` 都可以定義使用參數的建構函式。 使用參數的建構函式必須透過 `new` 陳述式或 [base](../../../csharp/language-reference/keywords/base.md) 陳述式呼叫。 類別和 `structs` 也可以定義多個建構函式，而且都不必定義預設建構函式。 例如:   
+ 類別和 `structs` 都可以定義使用參數的建構函式。 使用參數的建構函式必須透過 `new` 陳述式或 [base](../../../csharp/language-reference/keywords/base.md) 陳述式呼叫。 類別和 `structs` 也可以定義多個建構函式，而且都不必定義預設建構函式。 例如：  
   
  [!code-csharp[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
   
@@ -92,9 +92,9 @@ Console.WriteLine("{0}, {1}", a, b);
 
 如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)的[執行個體建構函式](~/_csharplang/spec/classes.md#instance-constructors)和[靜態建構函式](~/_csharplang/spec/classes.md#static-constructors)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 - [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3d28b7af96dde30117ec952355958ca75ae559
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: cbb939228791fa36ee64e499a2ba55dc7ce899ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614563"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (資源檔產生器)
 資源檔產生器 (Resgen.exe) 可以將文字檔 (.txt 或 .restext) 及 XML 架構資源格式檔 (.resx)，轉換成通用語言執行平台二進位檔 (.resources)，這種檔案可以嵌入至執行階段二進位可執行檔或附屬組件  (請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md))。  
@@ -329,9 +329,9 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
 resgen StringResources.txt /str:vb,,StringResources   
 ```  
   
-## <a name="see-also"></a>請參閱  
- [工具](../../../docs/framework/tools/index.md)  
- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)  
- [建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>另請參閱
+- [工具](../../../docs/framework/tools/index.md)
+- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
+- [建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

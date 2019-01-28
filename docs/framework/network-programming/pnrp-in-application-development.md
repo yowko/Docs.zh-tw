@@ -2,12 +2,12 @@
 title: 應用程式開發中的 PNRP
 ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-ms.openlocfilehash: b19138c43185f4d31bef4fe67af48f89dc03eba4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93dd65100e19f16c6597374cbab1e10d6a759562
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50180429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736542"
 ---
 # <a name="pnrp-in-application-development"></a>應用程式開發中的 PNRP
 在 Windows Vista 中，網路應用程式可以透過簡化的 PNRP 應用程式設計介面 (API)，存取名稱發行和解析功能。  
@@ -19,5 +19,5 @@ ms.locfileid: "50180429"
   
  在 PeerToPeer 應用程式之間傳遞的訊息仍然是透過基礎架構進行處理，例如 PeerChannel 和 WCF [大型資料與資料流](https://go.microsoft.com/fwlink/?LinkID=179652)。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.PeerToPeer>

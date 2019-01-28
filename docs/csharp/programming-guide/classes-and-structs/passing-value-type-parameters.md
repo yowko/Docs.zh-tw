@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: df394a6b71a06edc064fba0925398f87ed1802a8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e5d1aa97a53d52e0915c2fbf5f1b296c65b16435
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704887"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>傳遞實值類型的參數 (C# 程式設計手冊)
 相對於[參考型別](../../../csharp/language-reference/keywords/reference-types.md)變數 (包含對其資料的參考)，[實值型別](../../../csharp/language-reference/keywords/value-types.md)變數會直接包含資料。 以傳值方式將實值型別變數傳遞至方法，意味著將變數的複本傳遞至方法。 任何發生於方法內部的參數變更都不會影響儲存於引數變數中的原始資料。 如果您想要讓呼叫的方法變更參數值，就必須使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 關鍵字，以傳址方式來傳遞它。 您也可以使用 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) 關鍵字以傳址方式傳遞值，以避免發生複製的情況，同時確保該值不會變更。 為求簡化，下列範例使用 `ref`。  
@@ -39,8 +39,8 @@ ms.locfileid: "53245359"
   
  [!code-csharp[csProgGuideParameters#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_4.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [傳遞參數](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [傳遞參數](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
 - [傳遞參考型別參數](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)

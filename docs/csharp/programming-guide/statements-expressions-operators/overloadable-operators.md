@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operator overloading
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
-ms.openlocfilehash: b993c7873cdce60ae03e872b842f8265900442fd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce346920c301aabf652ea0e141d4a2f66a3e8b2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616247"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>可多載的運算子 (C# 程式設計手冊)
 
@@ -33,10 +33,10 @@ C# 允許使用者定義的類型使用 [operator](../../language-reference/keyw
 
 如需如何多載運算子的資訊，請參閱 [operator](../../language-reference/keywords/operator.md) 關鍵字文章。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [陳述式、運算式和運算子](index.md)
 - [運算子](operators.md)
-- [C# 運算子](../../language-reference/operators/index.md)  
+- [C# 運算子](../../language-reference/operators/index.md)
 - [Why are overloaded operators always static in C#?](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/) (為什麼多載運算子在 C# 中一律為靜態？)

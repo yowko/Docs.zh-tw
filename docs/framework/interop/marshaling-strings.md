@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52a78e0c3969e879bf2fd1b1f5c41b2caac2ba11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc4f40ab954a3bb31e0b55aad8c00ed2ee63f6c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514890"
 ---
 # <a name="marshaling-strings"></a>封送處理字串
 平台叫用會複製字串參數，並視需要從 .NET Framework 格式 (Unicode) 轉換成 Unmanaged 格式 (ANSI)。 傳回函式時，因為 Managed 字串不可變，所以平台叫用不會將 Managed 字串從 Unmanaged 記憶體複製回 Managed 記憶體。  
   
  下表列出字串的封送處理選項，並描述其用法，以及提供對應 .NET Framework 範例的連結。  
   
-|String|描述|範例|  
+|String|說明|範例|  
 |------------|-----------------|------------|  
 |傳值。|將字串傳遞為 In 參數。|[MsgBox](msgbox-sample.md)|  
 |作為結果。|從 Unmanaged 程式碼傳回字串。|[字串](https://msdn.microsoft.com/library/be9e82a3-dc95-4aaa-9396-61b66e467e02(v=vs.100))|  
@@ -38,9 +38,9 @@ ms.locfileid: "33391117"
 |作為傳值字串陣列。|建立以傳值方式傳遞的字串陣列。|[陣列](marshaling-different-types-of-arrays.md)|  
 |作為包含傳值字串的結構陣列。|建立包含字串的結構陣列，並以傳值方式傳遞該陣列。|[陣列](marshaling-different-types-of-arrays.md)|  
   
-## <a name="see-also"></a>請參閱  
- [使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)  
- [平台叫用資料類型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
- [封送處理類別、結構和等位](marshaling-classes-structures-and-unions.md)  
- [封送處理類型的陣列](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))  
- [其他封送處理範例](https://msdn.microsoft.com/library/a915c948-54e9-4d0f-a525-95a77fd8ed70(v=vs.100))
+## <a name="see-also"></a>另請參閱
+- [使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)
+- [平台叫用資料類型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
+- [封送處理類別、結構和等位](marshaling-classes-structures-and-unions.md)
+- [封送處理類型的陣列](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
+- [其他封送處理範例](https://msdn.microsoft.com/library/a915c948-54e9-4d0f-a525-95a77fd8ed70(v=vs.100))

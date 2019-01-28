@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 8c0b8e9814bf692e486624dd8a4a99d98337bca9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3257d365bb9816f4cb41d354f78c88ad4fa0f567
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523827"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>抽象和密封類別以及類別成員 (C# 程式設計手冊)
 [abstract](../../../csharp/language-reference/keywords/abstract.md) 關鍵字可讓您建立類別和[類別](../../../csharp/language-reference/keywords/class.md)成員，這些類別和成員並不完整，因此必須在衍生類別中實作。  
@@ -27,7 +27,7 @@ ms.locfileid: "53235851"
   
  抽象類別無法具現化。 抽象類別的用途是提供基底類別的通用定義，可供多個衍生類別共用。 例如，類別庫會定義做為其多個函式的參數使用的抽象類別，並且要求使用該類別庫的程式設計人員建立衍生類別來提供自己的類別實作。  
   
- 抽象類別也可以定義抽象方法。 只要在方法的傳回型別前面加上關鍵字 `abstract`，就可以達到這個目的。 例如:   
+ 抽象類別也可以定義抽象方法。 只要在方法的傳回型別前面加上關鍵字 `abstract`，就可以達到這個目的。 例如：  
   
  [!code-csharp[csProgGuideInheritance#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_2.cs)]  
   
@@ -48,11 +48,11 @@ ms.locfileid: "53235851"
   
  [!code-csharp[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [欄位](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [欄位](../../../csharp/programming-guide/classes-and-structs/fields.md)
 - [如何：定義抽象屬性](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)

@@ -2,19 +2,19 @@
 title: 修改 XML 樹狀結構中的項目、屬性和節點
 ms.date: 07/20/2015
 ms.assetid: 0ed22e4e-4c6b-4eb1-b0eb-06685efd8c33
-ms.openlocfilehash: 9567d0c6c5cd4853eeb2a86066cd1a805f20a031
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 68195133a944f14f83bf6a33903152393205bfce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43777346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606237"
 ---
 # <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a>修改 XML 樹狀中的項目、屬性和節點
 下表摘要說明您可以用於修改項目、其子項目或其屬性的方法和屬性。  
   
  下列方法會修改 <xref:System.Xml.Linq.XElement>。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>|以剖析的 XML 取代項目。|  
 |<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|移除項目的所有內容 (子節點和屬性)。|  
@@ -28,23 +28,23 @@ ms.locfileid: "43777346"
   
  下列方法會修改 <xref:System.Xml.Linq.XAttribute>。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>|設定屬性的值。|  
 |<xref:System.Xml.Linq.XAttribute.SetValue%2A?displayProperty=nameWithType>|設定屬性的值。|  
   
  下列方法會修改 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument>)。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A?displayProperty=nameWithType>|以新內容取代節點。|  
   
  下列方法會修改 <xref:System.Xml.Linq.XContainer> (<xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument>)。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A?displayProperty=nameWithType>|以新的內容取代子節點。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [修改 XML 樹狀結構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

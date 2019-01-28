@@ -2,12 +2,12 @@
 title: Visual Studio 中的偵錯運算式樹狀架構 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: dd3008ffd1364eec3938053bd7d37f95b8a1ebc0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 308b377af00a3d12523f8f8d469c50808f216030
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509619"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632149"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio 中的偵錯運算式樹狀架構 (C#)
 當您針對應用程式進行偵錯時，可以分析運算式樹狀架構的結構與內容。 若要取得運算式樹狀結構的快速概觀，您可以使用 `DebugView` 屬性，它只適用於偵錯模式。 如需偵錯的詳細資訊，請參閱 [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)。  
@@ -103,8 +103,8 @@ ms.locfileid: "43509619"
 |`Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));`|`1 #+ 2`|  
 |`Expression expr = Expression.ConvertChecked( Expression.Constant(10.0), typeof(int));`|`#(System.Int32)10D`|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [運算式樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-- [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)  
+- [運算式樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)
 - [建立自訂視覺化檢視](/visualstudio/debugger/create-custom-visualizers-of-data)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726646"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -154,12 +154,12 @@ ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref re
   
 ## <a name="see-also"></a>另請參閱
 
-- [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)  
+- [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)
 - [ref 傳回值和 ref 區域變數](../../programming-guide/classes-and-structs/ref-returns.md)
 - [條件 ref 運算式](../operators/conditional-operator.md#conditional-ref-expression)
 - [ref 指派運算子](../operators/assignment-operator.md#ref-assignment-operator)
-- [傳遞參數](../../programming-guide/classes-and-structs/passing-parameters.md)  
-- [方法參數](method-parameters.md)  
-- [C# 參考](../index.md)  
-- [C# 程式設計指南](../../programming-guide/index.md)  
+- [傳遞參數](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [方法參數](method-parameters.md)
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)

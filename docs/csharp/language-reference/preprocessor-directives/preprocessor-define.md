@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 7be2a2d00e96b4b734e1a68f6dc63180bcbe5e82
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3b543181e3d836226759e77f0d56ed3c3e57e7ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696200"
 ---
 # <a name="define-c-reference"></a>#define (C# 參考)
 您可以使用 `#define` 來定義符號。 當您將符號作為運算式傳遞給 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 指示詞時，運算式會判斷值為 `true`，如下列範例所示：  
@@ -64,12 +64,12 @@ public class TestDefine
   
  如需如何取消定義符號的範例，請參閱 [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)  
-- [const](../../../csharp/language-reference/keywords/const.md)  
-- [如何：使用追蹤和偵錯進行條件式編譯](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
-- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)  
+- [C# 參考](../../../csharp/language-reference/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [const](../../../csharp/language-reference/keywords/const.md)
+- [如何：使用追蹤和偵錯進行條件式編譯](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)
 - [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)

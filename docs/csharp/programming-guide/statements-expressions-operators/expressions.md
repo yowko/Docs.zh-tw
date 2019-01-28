@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600488"
 ---
 # <a name="expressions-c-programming-guide"></a>運算式 (C# 程式設計手冊)
 「運算式」是一連串的一或多個運算元以及兩或多個運算子，可以評估為單一值、物件、方法或命名空間。 運算式可以包含常值、方法呼叫、運算子和其運算元，或「簡單名稱」。 簡單名稱可以是變數、型別成員、方法參數、命名空間或型別的名稱。  
@@ -73,11 +73,11 @@ C# 支援「運算式主體成員」，可讓您提供方法、建構函式、�
 ## <a name="remarks"></a>備註  
  只要從運算式識別變數、物件屬性或物件索引子存取，就會使用該項目的值作為運算式的值。 只要運算式最後評估為必要類型，就可以將運算式放在 C# 中需要值或物件的任何位置。  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [委派](../../../csharp/programming-guide/delegates/index.md)  
-- [運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
-- [型別](../../../csharp/programming-guide/types/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [委派](../../../csharp/programming-guide/delegates/index.md)
+- [運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [型別](../../../csharp/programming-guide/types/index.md)
 - [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)

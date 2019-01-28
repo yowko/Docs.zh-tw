@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 51cc24fd8054b87b6c92a02450420a9c4abef525
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5cda3f1a076a89326d78e2be887d10eae9a722b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50191086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558016"
 ---
 # <a name="c-features-that-support-linq"></a>支援 LINQ 的 C# 功能
 下節將介紹 C# 3.0 中引進的新語言建構。 雖然這些新功能或多或少都會用於 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，但不限於 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，還可用於任何您認為實用的內容中。  
@@ -57,7 +57,7 @@ var newLargeOrderCustomers = from o in IncomingOrders
 ```csharp
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
 ```
- 如需詳細資訊，請參閱：
+ 如需詳細資訊，請參閱:
  
  - [物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
@@ -73,14 +73,14 @@ select new {name = cust.Name, phone = cust.Phone};
  如需詳細資訊，請參閱[匿名型別](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
   
 ## <a name="extension-methods"></a>擴充方法  
- 擴充方法是一種可以與類型相關聯的靜態方法，因此可以像呼叫類型上的執行個體方法一樣呼叫它。 此功能實際上可讓您「新增」方法至現有的類型，而不需要實際修改這些類型。 標準查詢運算子是一組擴充方法，可為實作 <xref:System.Collections.Generic.IEnumerable%601> 的任何類型提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢功能。  
+ 擴充方法是一種可以與類型相關聯的靜態方法，因此可以像呼叫類型上的執行個體方法一樣呼叫它。 這項功能實際上可讓您「新增」方法至現有的類型，而不需要實際修改這些類型。 標準查詢運算子是一組擴充方法，可為實作 <xref:System.Collections.Generic.IEnumerable%601> 的任何類型提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢功能。  
   
  如需詳細資訊，請參閱[擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。  
   
 ## <a name="lambda-expressions"></a>Lambda 運算式  
  Lambda 運算式是一種內嵌函式，其使用 => 運算子分隔輸入參數與函式主體，而且可以在編譯期間轉換成委派或運算式樹狀架構。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 程式設計中，當您直接對標準查詢運算子進行方法呼叫時，就會遇到 Lambda 運算式。  
   
- 如需詳細資訊，請參閱：  
+ 如需詳細資訊，請參閱:  
   
 -   [匿名函式](../../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)  
   

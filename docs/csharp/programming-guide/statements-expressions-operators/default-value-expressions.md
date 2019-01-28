@@ -6,12 +6,12 @@ ms.date: 04/25/2018
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-ms.openlocfilehash: 4b14714a55f77763425299ffc13ba579ead57810
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8e10a5de73e8d49f1a380fb8945b98ac797ef270
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575537"
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>預設值運算式 (C# 程式設計指南)
 
@@ -60,11 +60,11 @@ T t = default(T);
 
 [!code-csharp[csProgGuideGenerics#3](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-literal.cs)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Collections.Generic>  
-- [C# 程式設計指南](../index.md)  
-- [泛型 (C# 程式設計手冊)](../generics/index.md)  
-- [泛型方法](../generics/generic-methods.md)  
-- [.NET 的泛型](~/docs/standard/generics/index.md)  
+- <xref:System.Collections.Generic>
+- [C# 程式設計指南](../index.md)
+- [泛型 (C# 程式設計手冊)](../generics/index.md)
+- [泛型方法](../generics/generic-methods.md)
+- [.NET 的泛型](~/docs/standard/generics/index.md)
 - [預設值表](../../language-reference/keywords/default-values-table.md)

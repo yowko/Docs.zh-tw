@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 803c3bd4099b838ddc71fea530565f26bd4142df
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5868d8782d093a4d3d566708684d3adeb39020ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695110"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>HOW TO：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
 Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名引數和選擇性引數、稱為 `dynamic` 的新類型，以及傳遞引數以像是實值參數的形式，參考 COM 方法中參數的能力。  
@@ -173,10 +173,10 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
  [!code-csharp[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Type.Missing?displayProperty=nameWithType>  
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
-- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- <xref:System.Type.Missing?displayProperty=nameWithType>
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
+- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 141da196869d3867a9a85087a073dbec095d5118
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2115b0be2ee2e989b10d2d1834a51efb0b7e2ebb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651782"
 ---
 # <a name="generic-classes-c-programming-guide"></a>泛型類別 (C# 程式設計手冊)
 泛型類別會封裝不專屬於特定資料類型的作業。 泛型類別最常搭配類似連結清單、雜湊表、堆疊、佇列、樹狀結構等的集合。 無論儲存的資料類型為何，基本上是以相同的方式執行新增和移除集合項目等作業。  
@@ -66,10 +66,10 @@ ms.locfileid: "53244397"
   
  泛型類別都是非變異值。 換句話說，如果輸入參數指定 `List<BaseClass>`，您會在嘗試提供 `List<DerivedClass>` 時收到編譯時期錯誤。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Collections.Generic>  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [泛型](../../../csharp/programming-guide/generics/index.md)  
-- [Saving the State of Enumerators](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/) (儲存列舉程式狀態)  
+- <xref:System.Collections.Generic>
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [泛型](../../../csharp/programming-guide/generics/index.md)
+- [Saving the State of Enumerators](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/) (儲存列舉程式狀態)
 - [繼承謎題，第一部](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)

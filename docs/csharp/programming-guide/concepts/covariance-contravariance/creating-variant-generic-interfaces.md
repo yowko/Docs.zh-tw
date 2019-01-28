@@ -2,12 +2,12 @@
 title: 建立 Variant 泛型介面 (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: d8e7e8a59aeff27531187e5171a76651440ffc4c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5ae3b309282712e3441b53ea4cfc316be3ca92d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614676"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>建立 Variant 泛型介面 (C#)
 您可以在介面中將泛型型別參數宣告為 Covariant 或 Contravariant。 「共變數」允許介面方法具有比泛型型別參數衍生程度更大的傳回型別。 「反變數」允許介面具有比泛型參數所指定引數型別衍生程度更小的引數類型。 具有 Covariant 或 Contravariant 泛型型別參數的泛型介面稱為「變異」。  
@@ -185,7 +185,7 @@ class Program
   
  在此範例中，並未指定 `pets.GetEnumerator` 方法如何在 `Cat` 和 `Dog` 之間選擇。 這可能會在程式碼中造成問題。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [泛型介面中的變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+- [泛型介面中的變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [針對 Func 與 Action 泛型委派使用變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

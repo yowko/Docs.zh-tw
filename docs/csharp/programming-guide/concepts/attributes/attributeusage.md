@@ -1,12 +1,12 @@
 ---
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
-ms.openlocfilehash: 081a8f6edcddd5e87d3d9750b91ff42a72b92886
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: a3a82e33d7259ec56ec3e907bc3d4d9f8a01167d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589305"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
@@ -79,13 +79,13 @@ ThirdAttribute
 SecondAttribute
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Attribute>  
-- <xref:System.Reflection>  
-- [C# 程式設計指南](../..//index.md)  
-- [屬性](../../../..//standard/attributes/index.md)  
-- [反映 (C#)](../reflection.md)  
-- [屬性](index.md)  
-- [建立自訂屬性 (C#)](creating-custom-attributes.md)  
+- <xref:System.Attribute>
+- <xref:System.Reflection>
+- [C# 程式設計指南](../..//index.md)
+- [屬性](../../../..//standard/attributes/index.md)
+- [反映 (C#)](../reflection.md)
+- [屬性](index.md)
+- [建立自訂屬性 (C#)](creating-custom-attributes.md)
 - [使用反射存取屬性 (C#)](accessing-attributes-by-using-reflection.md)

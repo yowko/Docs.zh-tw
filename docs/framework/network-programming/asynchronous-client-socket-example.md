@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: c3c40d8e188581f18669a4db7396269056f05349
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cf34b32a9d159c193f9ea1319afec073d62e8ca4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722067"
 ---
 # <a name="asynchronous-client-socket-example"></a>非同步用戶端通訊端範例
 下列範例程式會建立連線到伺服器的用戶端。 伺服器已內建非同步通訊端，因此在伺服器傳回回應時，不會暫停執行用戶端應用程式。 應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。  
@@ -321,7 +321,7 @@ public class AsynchronousClient {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [非同步伺服器通訊端範例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
- [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [通訊端程式碼範例](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a>另請參閱
+- [非同步伺服器通訊端範例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
+- [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [通訊端程式碼範例](../../../docs/framework/network-programming/socket-code-examples.md)

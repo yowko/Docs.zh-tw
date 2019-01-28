@@ -6,12 +6,12 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50dd7fbb35358ad153cfdbec62a2922fdc28775c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e91069c25ebe6c2a22927391734e5030a908e4ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663923"
 ---
 # <a name="local-functions-c-programming-guide"></a>區域函式 (C# 程式設計手冊)
 
@@ -79,6 +79,6 @@ ms.locfileid: "53240225"
 
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [方法](methods.md)

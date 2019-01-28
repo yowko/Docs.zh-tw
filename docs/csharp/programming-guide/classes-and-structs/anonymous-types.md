@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 234190beb2cde69906df9d5c5f468689b7399535
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 179e49f44b2dbf711dae2ce81a1ef14815b7d18a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729755"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名類型 (C# 程式設計手冊)
 匿名類型提供一個便利的方法，將一組唯讀屬性封裝成一個物件，而不需要事先明確定義類型。 類型名稱會由編譯器產生，並且無法在原始程式碼層級使用。 每個屬性的類型會由編譯器推斷。  
@@ -55,9 +55,9 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
  由於匿名類型上的 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法會以屬性的 `Equals` 和 `GetHashCode` 方法來定義，相同匿名類型的兩個執行個體僅在其所有屬性都相等時，這兩個執行個體才相等。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)

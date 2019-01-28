@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: b2e9e94f75b048dbe4ce3430c7a590f9be156e1d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4ae3a9b09d67896336e3230caca67e3b40c6a676
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635997"
 ---
 # <a name="example-com-class-c-programming-guide"></a>範例 COM 類別 (C# 程式設計手冊)
 以下是公開為 COM 物件類別的範例。 在此程式碼放入 .cs 檔案並新增至專案之後，將**註冊 COM Interop** 屬性設定為 **True**。 如需詳細資訊，請參閱[＜How to：為元件註冊 COM Interop](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))。
@@ -37,8 +37,8 @@ ms.locfileid: "53242480"
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [互通性](../../../csharp/programming-guide/interop/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [互通性](../../../csharp/programming-guide/interop/index.md)
 - [專案設計工具、建置頁面 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)

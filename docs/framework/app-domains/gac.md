@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0508e9291b089ec7af6a0b41bbc231fdb0701ad6
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 15b258f0392275ffd18c52d11df3bc266a55ce3f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566290"
 ---
 # <a name="global-assembly-cache"></a>全域組件快取
 每部安裝通用語言執行平台的電腦都有稱為「全域組件快取」的全電腦程式碼快取。 全域組件快取會儲存特別指定為由電腦上數個應用程式共用的組件。  
@@ -42,7 +42,7 @@ ms.locfileid: "49452978"
   
  全域組件快取中部署的組件都必須具有強式名稱。 將組件新增至全域組件快取時，會對構成組件的所有檔案執行完整性檢查。 快取執行這些完整性檢查，以確保組件並未遭到破壞，比方說，當檔案已經變更，但資訊清單不會反映變更。  
   
-## <a name="see-also"></a>請參閱  
-- [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+## <a name="see-also"></a>另請參閱
+- [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 8134a7c7c1f2c4e6432dd19889faf796a9284553
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: ff46fcc14a8a8e3d6c6d31dcb8c922640d6478c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691738"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>逐步解說：建立和使用動態物件 (C# 和 Visual Basic)
 
@@ -157,11 +157,11 @@ ms.locfileid: "49347964"
   
 9. 儲存檔案，並按 CTRL+F5 建置及執行應用程式。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Dynamic?displayProperty=nameWithType>  
-- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
-- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+- <xref:System.Dynamic?displayProperty=nameWithType>
+- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
+- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
 - [實作動態介面 (Microsoft TechNet 的可下載 PDF)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

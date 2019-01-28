@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 105f564d40799c1c006caf8b59d6199dbd8e9318
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1d49733531507fc80165e034fde1969305cfd2e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681725"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (C# 編譯器選項)
 
@@ -48,10 +48,10 @@ ms.locfileid: "43518326"
 1. 開啟專案的 [屬性]  頁面。
 1. 修改 [僅延遲簽署] 屬性。
 
-如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。
+如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# -publicsign 選項](publicsign-compiler-option.md)  
-- [C# 編譯器選項](index.md)  
+- [C# -publicsign 選項](publicsign-compiler-option.md)
+- [C# 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

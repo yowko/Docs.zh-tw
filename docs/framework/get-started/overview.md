@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8519f7ecfc430aaa9b888f9239f669e6e54eb02
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7e1227cbf85e72570bcb08f7f13168392b7c7b60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592571"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework 的概觀
 
@@ -93,9 +93,9 @@ Windows Forms 類別是一組完整且可重複使用的類型，可大幅簡化
 
 ## <a name="see-also"></a>另請參閱
 
-- [系統需求](../../../docs/framework/get-started/system-requirements.md)   
-- [安裝指南 (英文)](../../../docs/framework/install/index.md)   
-- [開發指南](../../../docs/framework/development-guide.md)   
-- [工具](../../../docs/framework/tools/index.md)   
-- [.NET Framework 範例](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
+- [系統需求](../../../docs/framework/get-started/system-requirements.md)
+- [安裝指南 (英文)](../../../docs/framework/install/index.md)
+- [開發指南](../../../docs/framework/development-guide.md)
+- [工具](../../../docs/framework/tools/index.md)
+- [.NET Framework 範例](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)
 - [.NET Framework 類別庫](https://go.microsoft.com/fwlink/?LinkID=227195)

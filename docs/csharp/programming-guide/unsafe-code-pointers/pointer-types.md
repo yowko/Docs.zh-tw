@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 5474d179005742c610d29ccd9dac7bf1dc94c9d2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724040"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指標類型 (C# 程式設計手冊)
 
@@ -89,14 +89,14 @@ int* myVariable;
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)  
-- [Unsafe 程式碼和指標](index.md)  
-- [指標轉換](pointer-conversions.md)  
-- [指標運算式](pointer-expressions.md)  
-- [型別](../../language-reference/keywords/types.md)  
-- [Unsafe.DangerousAPI](../../language-reference/keywords/unsafe.md)  
-- [fixed 陳述式](../../language-reference/keywords/fixed-statement.md)  
-- [stackalloc](../../language-reference/keywords/stackalloc.md)  
+- [C# 程式設計指南](../index.md)
+- [Unsafe 程式碼和指標](index.md)
+- [指標轉換](pointer-conversions.md)
+- [指標運算式](pointer-expressions.md)
+- [型別](../../language-reference/keywords/types.md)
+- [Unsafe.DangerousAPI](../../language-reference/keywords/unsafe.md)
+- [fixed 陳述式](../../language-reference/keywords/fixed-statement.md)
+- [stackalloc](../../language-reference/keywords/stackalloc.md)
 - [Boxing 和 Unboxing](../types/boxing-and-unboxing.md)

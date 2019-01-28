@@ -2,12 +2,12 @@
 title: WordprocessingML 文件的樣式組件
 ms.date: 07/20/2015
 ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
-ms.openlocfilehash: 8300cd96c70fd90a09543fdf5bd86398e5397a2b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 419a8e5340a6e0dbf2eaad23d1d6787da97869c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555917"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML 文件的樣式部分
 這個主題顯示 Office Open XML WordprocessingML 文件樣式部分的範例。  
@@ -140,6 +140,6 @@ ms.locfileid: "53131543"
 </w:styles>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Office Open XML WordprocessingML 文件的詳細資料 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

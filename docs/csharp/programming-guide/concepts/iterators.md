@@ -2,12 +2,12 @@
 title: 在 C# 中逐一查看集合
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 2b358e8272820bf6fb5bcb45763bae980b91962f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 386f4145c38e3a573ec04d2a0b8e260bcdc63491
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50191190"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720794"
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 
@@ -354,7 +354,7 @@ public class Stack<T> : IEnumerable<T>
 
 - 在迭代器中封裝建立清單。 在迭代器方法中，您可以建立清單，然後在迴圈中產生每個結果。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>

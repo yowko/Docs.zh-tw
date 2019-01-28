@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: 8036421f937385edbaefb8df4ee3915798084c64
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a368048f83540bf5bb9cd43a0a88c40641eb7e94
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621693"
 ---
 # <a name="using-a-synchronous-client-socket"></a>使用同步用戶端通訊端
 在網路作業完成時，同步用戶端通訊端會暫止應用程式。 同步通訊端不適用於大量使用網路以進行作業的應用程式，但它們可以啟用其他應用程式的網路服務簡單存取。  
@@ -70,7 +70,7 @@ s.Shutdown(SocketShutdown.Both);
 s.Close();  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [使用非同步用戶端通訊端](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)  
- [同步用戶端通訊端範例](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+## <a name="see-also"></a>另請參閱
+- [使用非同步用戶端通訊端](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
+- [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [同步用戶端通訊端範例](../../../docs/framework/network-programming/synchronous-client-socket-example.md)

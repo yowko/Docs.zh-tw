@@ -2,12 +2,12 @@
 title: 查詢 XDocument 與查詢 XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-ms.openlocfilehash: 991cbf14fde1c2e3e1e76ef10066db3408ca51c5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 125b0811296695a0909f804931e0caca81f63df6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44200824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736873"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>查詢 XDocument 與查詢 XElement (C#)
 當您透過 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 載入文件時，您將會注意到您必須撰寫的查詢與透過 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 載入時撰寫的查詢稍有不同。  
@@ -109,6 +109,6 @@ Querying tree loaded with XDocument.Load
 <Child3>3</Child3>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: WordprocessingML 文件的組織結構 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: dee799583eae6bcc1660388e0b6a15185a33707c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4c034950006b7ce09ad03e4579cc298f0b2dd218
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739228"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML 文件的組織結構 (C#)
 這個主題說明 WordprocessingML 文件的 XML 組織結構。  
@@ -94,6 +94,6 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
  [WordprocessingML 簡介](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/) \(英文\)  
  [Office 2003：XML 參考結構描述下載頁面](https://www.microsoft.com/en-us/download/details.aspx?id=101)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

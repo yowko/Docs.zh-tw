@@ -2,12 +2,12 @@
 title: 對等網路案例
 ms.date: 03/30/2017
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
-ms.openlocfilehash: 46e0be29d367db0d36b87c063779d55d1338b39e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7795bae8fa9ea6b5192f16dfe616c0bf5d543c80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668999"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>對等網路案例
 對等網路可啟用或增強下列案例：  
@@ -68,5 +68,5 @@ ms.locfileid: "53129567"
   
 -  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Net.PeerToPeer.Collaboration>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.PeerToPeer.Collaboration>

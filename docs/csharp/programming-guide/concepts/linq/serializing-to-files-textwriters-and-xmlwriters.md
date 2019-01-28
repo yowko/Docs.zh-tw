@@ -2,15 +2,15 @@
 title: 序列化至 Files、TextWriters 和 XmlWriters1
 ms.date: 07/20/2015
 ms.assetid: bd3ea6f7-895b-4ff4-a625-fe2bb55b1886
-ms.openlocfilehash: 011e32054e39ee0f7f70baf9867f7cab6fe34540
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 19371c0422c607171ccbea1235ea4348852d801c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498813"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>序列化至 File、TextWriter 和 XmlWriter
-您可以將 XML 樹狀結構序列化至 <xref:System.IO.File>、<xref:System.IO.TextWriter> 或 <xref:System.Xml.XmlWriter>。  
+您可以將 XML 樹狀序列化至 <xref:System.IO.File>、<xref:System.IO.TextWriter> 或 <xref:System.Xml.XmlWriter>。  
   
  您可以使用 <xref:System.Xml.Linq.XDocument> 方法，將任何 XML 元件 (包括 <xref:System.Xml.Linq.XElement> 和 `ToString`) 序列化至字串。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "43507001"
   
 -   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  
   
- 如果您想要選擇不縮排和不保留 XML 樹狀結構中的無效空白字元，請使用下列採用 <xref:System.Xml.Linq.SaveOptions> 當做引數之方法的其中一個多載：  
+ 如果您想要選擇不縮排和不保留 XML 樹狀中的無效空白字元，請使用下列採用 <xref:System.Xml.Linq.SaveOptions> 當做引數之方法的其中一個多載：  
   
 -   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
   
@@ -30,6 +30,6 @@ ms.locfileid: "43507001"
   
  如需範例，請參閱適當的參考主題。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [序列化 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

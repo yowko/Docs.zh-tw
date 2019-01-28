@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: a2d71994647e50afc8d343725e639b6e9d24831f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 456555a34347771c9918341d7d1a797e611f5577
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589307"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>HOW TO：定義類型的實值相等 (C# 程式設計指南)
 當您定義類別或結構時，需判斷是否有必要為類型建立實值相等 (或等價) 的自訂定義。 通常，當該類型的物件必須新增至某種集合，或物件的主要目的是為了儲存一組欄位或屬性時，就會實作實值相等。 您可以根據對該類型中所有欄位和屬性的比較來定義實值相等，也可以根據子集來進行定義。 不論使用哪種方法，在類別和結構中，您的實作都必須遵循下列五項等價保證：  
@@ -63,7 +63,7 @@ ms.locfileid: "53244423"
   
  除非結構明確多載 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 和 [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 運算子，否則這些運算子無法用於結構。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [相等比較](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+- [相等比較](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)

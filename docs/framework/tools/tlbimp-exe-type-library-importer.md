@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: f39f793d3d0a2cf815028ccdb49253c46dac2ec4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631304"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (類型程式庫匯入工具)
 類型程式庫匯入工具會將 COM 類型程式庫中找到的類型定義轉換為通用語言執行平台組件中的對等定義。 Tlbimp.exe 的輸出是二進位檔案 (組件)，它包含原始類型程式庫中所定義類型的執行階段中繼資料。 您可以使用像是 [Ildasm.exe](ildasm-exe-il-disassembler.md) 這類工具來檢查這個檔案。  
@@ -125,13 +125,13 @@ bool SomeMethod();
 void SomeMethod(out bool x);  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [工具](index.md)  
- [Tlbexp.exe (類型程式庫匯出工具)](tlbexp-exe-type-library-exporter.md)  
- [匯入類型程式庫做為組件](../interop/importing-a-type-library-as-an-assembly.md)  
- [型別程式庫至組件轉換的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Ildasm.exe (IL 反組譯工具)](ildasm-exe-il-disassembler.md)  
- [Sn.exe (強式名稱工具)](sn-exe-strong-name-tool.md)  
- [強式名稱的組件](../app-domains/strong-named-assemblies.md)  
- [將型別程式庫匯入 Interop 組件的屬性](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))  
- [命令提示字元](developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>另請參閱
+- [工具](index.md)
+- [Tlbexp.exe (類型程式庫匯出工具)](tlbexp-exe-type-library-exporter.md)
+- [匯入類型程式庫做為組件](../interop/importing-a-type-library-as-an-assembly.md)
+- [型別程式庫至組件轉換的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Ildasm.exe (IL 反組譯工具)](ildasm-exe-il-disassembler.md)
+- [Sn.exe (強式名稱工具)](sn-exe-strong-name-tool.md)
+- [強式名稱的組件](../app-domains/strong-named-assemblies.md)
+- [將型別程式庫匯入 Interop 組件的屬性](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))
+- [命令提示字元](developer-command-prompt-for-vs.md)

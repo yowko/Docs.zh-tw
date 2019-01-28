@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 4fd545ded9da20da2a6378bfdf561279cf343100
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2721048145253a441770a96f8383358bb1ceda01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710348"
 ---
 # <a name="is-c-reference"></a>is (C# 參考) #
 
@@ -160,8 +160,8 @@ ms.locfileid: "53240004"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
-- [as](../../../csharp/language-reference/keywords/as.md)  
+- [C# 參考](../../../csharp/language-reference/index.md)
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+- [typeof](../../../csharp/language-reference/keywords/typeof.md)
+- [as](../../../csharp/language-reference/keywords/as.md)
 - [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)

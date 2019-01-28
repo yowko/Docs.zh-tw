@@ -2,12 +2,12 @@
 title: PNRP 快取
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 53df90a9bb3da90145ebe30bb274b4ff4950c00f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 375e193e618366b169d5c84073adb432cea3634c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736940"
 ---
 # <a name="pnrp-caches"></a>PNRP 快取
 對等名稱解析通訊協定 (PNRP) 快取是以演算法方式選取對等上所維護之對等端點的本機集合。  
@@ -35,5 +35,5 @@ ms.locfileid: "53147183"
   
  對等可以註冊要接收來自其他對等的物件。 更新物件時，會通知共同作業應用程式，並將新的物件傳遞給應用程式的所有訂閱者。 例如，群組聊天應用程式中的對等可以註冊要接收應用程式資訊，這樣會將所有交談記錄當成應用程式資料傳送給它。  這可讓它監視雲端內的聊天活動。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.PeerToPeer>

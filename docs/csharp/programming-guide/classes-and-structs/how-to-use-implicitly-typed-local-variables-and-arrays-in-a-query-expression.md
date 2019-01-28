@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: 92ac601719ccb1c5e9f769c286a1d2dd443c713a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6217b741a4dfabb67fc182a58543187ac37987ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695669"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>HOW TO：在查詢運算式中使用隱含類型區域變數和陣列 (C# 程式設計手冊)
 每次您希望編譯器判斷區域變數的類型時，可以使用隱含型別區域變數。 您必須使用隱含型別區域變數來儲存查詢運算式中常用的匿名型別。 下列範例說明在查詢中選擇性使用和必須使用隱含型別區域變數的情況。  
@@ -27,10 +27,10 @@ ms.locfileid: "53237801"
   
  [!code-csharp[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_2.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
-- [LINQ (Language-Integrated Query)](../../../csharp/linq/index.md)  
-- [var](../../../csharp/language-reference/keywords/var.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [LINQ (Language-Integrated Query)](../../../csharp/linq/index.md)
+- [var](../../../csharp/language-reference/keywords/var.md)
 - [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)

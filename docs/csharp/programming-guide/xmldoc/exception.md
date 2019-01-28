@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 09c2ce3d7c0c9b8c20d4a32aa1d4c84d4ead4fbf
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1d48d9c05e23154ee98d077af5f43c80b4dbe2fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245531"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588102"
 ---
 # <a name="ltexceptiongt-c-programming-guide"></a>&lt;例外狀況&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  
@@ -42,7 +42,7 @@ ms.locfileid: "53245531"
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

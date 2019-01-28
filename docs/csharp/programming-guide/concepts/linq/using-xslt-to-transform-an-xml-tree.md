@@ -2,12 +2,12 @@
 title: 使用 XSLT 轉換 XML 樹狀結構 (C#)
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
-ms.openlocfilehash: 3fa850c0f09404da49b2963e980d15e1ed54316f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cbba118be31a852420616a667660cef25cb9fd88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47207542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692307"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>使用 XSLT 轉換 XML 樹狀結構 (C#)
 您可以建立 XML 樹狀結構、從 XML 樹狀結構建立 <xref:System.Xml.XmlReader>、建立新文件，然後建立將寫入新文件中的 <xref:System.Xml.XmlWriter>。 然後，您可以叫用 (Invoke) XSLT 轉換，將 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 傳遞至轉換。 轉換成功完成後，系統會使用轉換的結果填入新的 XML 樹狀結構。  
@@ -58,8 +58,8 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>  
-- <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>
 - [進階 LINQ to XML 程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

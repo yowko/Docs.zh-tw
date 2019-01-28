@@ -9,12 +9,12 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: 75324cbe380b577481b5e8e03f486aa3ef0d5996
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: faeb1b07d4778f56ae854d5ece93588cbe5848f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243786"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536044"
 ---
 # <a name="ltremarksgt-c-programming-guide"></a>&lt;remarks&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  
@@ -35,7 +35,7 @@ ms.locfileid: "53243786"
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideDocComments#9](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/remarks_1.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

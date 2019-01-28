@@ -13,12 +13,12 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: b960349d26a4addb5f4723bd7aa3f19b07e5f4d2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a636fd35355dfa7320c2ca961ddada233c574dbc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563154"
 ---
 # <a name="ltlistgt-c-programming-guide"></a>&lt;list&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  
@@ -55,7 +55,7 @@ ms.locfileid: "53241544"
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

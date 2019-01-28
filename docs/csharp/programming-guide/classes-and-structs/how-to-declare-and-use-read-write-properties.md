@@ -9,12 +9,12 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 348fcf6605030396095a2d94970ffe46e8d19357
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 792c3a8f1b02f36775edb84bdf7f1ff296630fea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241836"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725281"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>HOW TO：宣告及使用讀寫屬性 (C# 程式設計指南)
 屬性會提供公用資料成員的便利性，卻沒有不受保護、控制和驗證存取物件資料所附帶的風險。 這是透過「存取子」完成的：從基礎資料成員指派和擷取值的特殊方法。 [set](../../../csharp/language-reference/keywords/set.md) 存取子可讓資料成員被指派，而 [get](../../../csharp/language-reference/keywords/get.md) 存取子可擷取資料成員值。  
@@ -55,8 +55,8 @@ person.SetAge(person.GetAge() + 1);
   
  請注意，程式中未明確使用 `ToString`。 預設會由 `WriteLine` 呼叫叫用。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)

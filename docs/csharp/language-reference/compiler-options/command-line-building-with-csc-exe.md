@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 833308838c5087a657c8f718682aef8d971c188f
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: bb8f9ace8f259ece803aa6681ebab90355146380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415906"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661694"
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 建置命令列
 您可以在命令提示字元中輸入 C# 編譯器的可執行檔名稱 (*csc.exe*)，藉此叫用該編譯器。
@@ -97,11 +97,11 @@ csc -target:library -out:Something.xyz *.cs
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
-- [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
-- [依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
-- [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [命令列引數](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
-- [如何：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
-- [如何：使用 foreach 存取命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+- [依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+- [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [命令列引數](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)
+- [如何：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [如何：使用 foreach 存取命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

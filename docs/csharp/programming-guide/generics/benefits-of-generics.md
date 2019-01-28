@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: f97d3ce7a67638719d02c31879c00679405118bc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ba4b81db0ea352f82127a838ab6b13f09d259e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650976"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>泛型的優點 (C# 程式設計手冊)
 泛型提供舊版 Common Language Runtime 限制的解決方案，以及透過在通用基底類型 <xref:System.Object> 間來回轉換達成一般化的 C# 語言。 您可以藉由建立泛型類別，在編譯時期建立類型安全的集合。  
@@ -35,11 +35,11 @@ ms.locfileid: "53245008"
   
  對用戶端程式碼而言，相較於 <xref:System.Collections.ArrayList>，唯一以 <xref:System.Collections.Generic.List%601> 新增的語法是宣告和具現化中的型別引數。 以略增加編碼複雜性為代價，您就可以建立比 <xref:System.Collections.ArrayList> 更安全、更快的清單，尤其是當清單項目為實值型別時。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Collections.Generic>  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
-- [何時使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)  
-- [集合方針](../../../standard/design-guidelines/guidelines-for-collections.md)   
+- <xref:System.Collections.Generic>
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+- [何時使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)
+- [集合方針](../../../standard/design-guidelines/guidelines-for-collections.md)

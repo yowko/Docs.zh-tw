@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: eae8d290c25399170153bbebd0637539bc565584
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 870d7593dcfd6c2b8d58562d182d37a64484a53e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577489"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>靜態類別和靜態類別成員 (C# 程式設計手冊)
 [static](../../../csharp/language-reference/keywords/static.md) 類別基本上與非靜態類別相同，但有一項差異︰無法具現化靜態類別。 換句話說，您不能使用 [new](../../../csharp/language-reference/keywords/new.md) 關鍵字來建立類別類型的變數。 因為沒有任何執行個體變數，所以您可以使用類別名稱本身來存取靜態類別的成員。 例如，如果您的 `UtilityClass` 靜態類別包含 `MethodA` 公用靜態方法，則會呼叫方法，如下列範例所示︰  
@@ -88,11 +88,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 
 如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)中的[靜態類別](~/_csharplang/spec/classes.md#static-classes)與[靜態和執行個體的成員](~/_csharplang/spec/classes.md#static-and-instance-members)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [static](../../../csharp/language-reference/keywords/static.md)  
-- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [class](../../../csharp/language-reference/keywords/class.md)  
-- [靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [static](../../../csharp/language-reference/keywords/static.md)
+- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
+- [靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)
 - [執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)

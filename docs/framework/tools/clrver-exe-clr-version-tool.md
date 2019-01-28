@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc01cf53b4af08973009027d124c50d0733a005a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: e5543e49ea44c20a536a7097277b246d4041522a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735422"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR 版本工具)
 CLR 版本工具 (Clrver.exe) 會報告電腦上已安裝的所有通用語言執行平台 (CLR) 版本。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -56,6 +56,6 @@ clrver [option]
   
  `Clrver -all`  
   
-## <a name="see-also"></a>請參閱  
- [工具](../../../docs/framework/tools/index.md)  
- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>另請參閱
+- [工具](../../../docs/framework/tools/index.md)
+- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

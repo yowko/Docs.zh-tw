@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 27f0df14fef7c261828040d905c9f624f02eddfe
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 36e910328651cc4f91acdfb2d40edea56cde2a9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676480"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>HOW TO：在查詢中傳回項目屬性的子集 (C# 程式設計手冊)
 如果下列兩個條件都成立，請在查詢運算式中使用匿名型別：  
@@ -46,8 +46,8 @@ Console.WriteLine(student.First + " " + student.Last);
   
 -   若要執行此程式碼，請將該類別複製並貼到已在 Visual Studio 中建立的 Visual C# 主控台應用程式專案。 根據預設，此專案是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版為目標，而且會有 System.Core.dll 的參考，以及 System.Linq 的 `using` 指示詞。 如果專案中遺漏上述一或多個需求，您可以手動新增這些需求。   
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [匿名類型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [匿名類型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 - [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)

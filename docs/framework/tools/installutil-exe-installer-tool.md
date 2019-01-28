@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cd7826581a8750d0c5bc87b6223d51eb2b6cce2
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: e2cba7099b84cb8a11fb7c11fae960293eb60a18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658256"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (安裝程式工具)
 安裝程式工具是一種命令列公用程式，可讓您透過執行指定之組件中的安裝程式元件，來安裝和解除安裝伺服器資源。 這個工具可以與 <xref:System.Configuration.Install> 命名空間中的類別一起使用。  
@@ -161,7 +161,7 @@ installutil /LogFile= /email=admin@mycompany.com myAssembly.exe
 installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallLog myTestAssembly.exe  
 ```  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Configuration.Install>  
- [工具](../../../docs/framework/tools/index.md)  
- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Configuration.Install>
+- [工具](../../../docs/framework/tools/index.md)
+- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

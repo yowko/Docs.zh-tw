@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: d2c6f2f78ed71558b71adcc1d4d8cc9a6f459d75
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658243"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>使用可為 Null 的型別 (C# 程式設計指南)
 
@@ -21,7 +21,7 @@ ms.locfileid: "53235211"
   
 ## <a name="declaration-and-assignment"></a>宣告與指派
 
-與實值型別可隱含轉換為對應可為 Null 的型別相同，您可以用為其基礎實值型別指派值的相同方式，將值指派給可為 Null 的型別。 您也可以指派 `null` 值。  例如: 
+與實值型別可隱含轉換為對應可為 Null 的型別相同，您可以用為其基礎實值型別指派值的相同方式，將值指派給可為 Null 的型別。 您也可以指派 `null` 值。  例如：
   
 [!code-csharp[declare and assign](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#1)]
 
@@ -53,7 +53,7 @@ ms.locfileid: "53235211"
 
 若可為 Null 型別的值為 Null 時要使用的值為基礎實值型別的預設值，請使用 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 方法。
   
-您也可以明確將可為 Null 的型別轉換為不可為 Null 的型別。 例如:   
+您也可以明確將可為 Null 的型別轉換為不可為 Null 的型別。 例如：  
   
 [!code-csharp[explicit cast](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#6)]
 
@@ -110,8 +110,8 @@ ms.locfileid: "53235211"
 
 請注意，這兩個運算子不會遵循[運算子](#operators)一節中描述的規則：即使其中一個運算元為 Null，運算子評估的結果也可能為非 Null。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [可為 Null 的型別](index.md)  
-- [C# 程式設計指南](../../programming-guide/index.md)  
-- [「增益」(Lift) 的真正意義是什麼？(英文)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  
+- [可為 Null 的型別](index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [「增益」(Lift) 的真正意義是什麼？(英文)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c56685e2b9bef811f0fa987be976790eca83e91c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6732eef46f87d9e2e3aeada138ea28853d3f0479
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43386403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663156"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows 資源當地語系化編輯器)
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>引數
 
-|引數|描述|
+|引數|說明|
 |--------------|-----------------|
 |`resourceFile`|要當地語系化的資源檔。 這個檔案必須是 Visual Studio 設計工具所產生的 Windows Form 表單 .resx 或 .resources 檔案。 Winres.exe 無法開啟泛型 .resx 或 .resources 檔案。|
 
-|選項|描述|
+|選項|說明|
 |------------|-----------------|
 |**/?**|顯示工具的命令語法和選項。|
 
@@ -137,7 +137,7 @@ Winres.exe 具有以下的特性和功能：
 
    工具會使用執行階段所需的當地語系化資源檔命名規範來儲存檔案。 例如，如果您針對德國境內的德國人當地語系化 `TestApp.resources`，則工具會將檔案儲存為 `TestApp.de-DE.resources`。 如果您針對德國境內的德國人當地語系化 `TestApp.resx`，則工具會將檔案儲存為 `TestApp.de-DE.resx`。 如需資源命名慣例的詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 如需執行階段所使用之預先定義的文化特性名稱清單，請參閱 <xref:System.Globalization.CultureInfo> 類別。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ComponentModel.LocalizableAttribute>
 - <xref:System.Globalization.CultureInfo>

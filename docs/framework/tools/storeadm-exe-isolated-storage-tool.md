@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29dd8ae38e2635f92c5be2b4d856f03a2e3e5767
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 80923d32bfefb53c41b6588b87bac679bb380811
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713402"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (隔離儲存區工具)
 隔離儲存區 (Isolated Storage) 工具可以列出或移除目前使用者的所有現有存放區。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -60,7 +60,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  使用者的漫遊實際上是否啟用，並不會影響 Storeadm.exe 的系統管理。 執行該工具而沒有使用任何選項時，會將所有動作套用至本機存放區。 執行該工具搭配 **/roaming** 選項時，會將所有動作套用至能夠漫遊的存放區。 執行該工具搭配 **/machine** 選項時，會將所有動作套用至電腦存放區。  
   
-## <a name="see-also"></a>請參閱  
- [工具](../../../docs/framework/tools/index.md)  
- [隔離儲存區](../../../docs/standard/io/isolated-storage.md)  
- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>另請參閱
+- [工具](../../../docs/framework/tools/index.md)
+- [隔離儲存區](../../../docs/standard/io/isolated-storage.md)
+- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

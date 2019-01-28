@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b05ac1016710109110c3ff9d0d318a71fe0827f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12a7b4cb29dcf2c799f17bb7f3a02c300c5f0d36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555397"
 ---
 # <a name="default-marshaling-for-arrays"></a>陣列的預設封送處理
 在包含整個 Managed 程式碼的應用程式中，Common Language Runtime 會將陣列類型傳遞為 In/Out 參數。 相較之下，Interop 封送處理器預設會將陣列傳遞為 In 參數。  
@@ -131,7 +131,7 @@ void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
- 雖然您可以將 **size_is** 或 **length_is** 屬性套用至介面定義語言 (IDL) 來源中的陣列以將大小傳送至用戶端，但是 Microsoft 介面定義語言 (MIDL) 編譯器不會將該資訊傳播至型別程式庫。 如果不知道大小，Interop 封送處理服務無法封送處理陣列項目。 因此，會將可變長度的陣列匯入為參考引數。 例如:   
+ 雖然您可以將 **size_is** 或 **length_is** 屬性套用至介面定義語言 (IDL) 來源中的陣列以將大小傳送至用戶端，但是 Microsoft 介面定義語言 (MIDL) 編譯器不會將該資訊傳播至型別程式庫。 如果不知道大小，Interop 封送處理服務無法封送處理陣列項目。 因此，會將可變長度的陣列匯入為參考引數。 例如：  
   
  **Unmanaged 簽章**  
   
@@ -171,7 +171,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   將陣列的大小定義為常數。 例如:   
+-   將陣列的大小定義為常數。 例如：  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  
@@ -203,7 +203,7 @@ void New3(ref String ar);
  與包含 LPSTR 或 LPWSTR 之結構陣列有關的 OLE Automation 限制。  因此，必須將 [字串] 欄位封送處理為 **UnmanagedType.BSTR**。 否則便會擲回例外狀況。  
   
 ### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
- 將包含 **ELEMENT_TYPE_SZARRAY** 參數 (一維陣列) 的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成指定類型的 **SAFEARRAY**。 相同的轉換規則會套用至陣列項目類型。 Managed 陣列的內容會自動從 Managed 記憶體複製至 **SAFEARRAY**。 例如:   
+ 將包含 **ELEMENT_TYPE_SZARRAY** 參數 (一維陣列) 的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成指定類型的 **SAFEARRAY**。 相同的轉換規則會套用至陣列項目類型。 Managed 陣列的內容會自動從 Managed 記憶體複製至 **SAFEARRAY**。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
   
@@ -226,7 +226,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  安全陣列的順位一律為 1，而下限一律為 0。 在執行階段，大小取決於所傳遞 Managed 陣列的大小。  
   
- 使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將陣列封送處理為 C 樣式陣列。 例如:   
+ 使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將陣列封送處理為 C 樣式陣列。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
   
@@ -261,7 +261,7 @@ HRESULT New(LPStr ar[]);
  雖然封送處理器具有封送處理陣列所需的長度資訊，但是陣列長度通常會傳遞為個別引數，以將長度傳遞給被呼叫者。  
   
 ### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
- 將包含 **ELEMENT_TYPE_ARRAY** 參數的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成指定類型的 **SAFEARRAY**。 Managed 陣列的內容會自動從 Managed 記憶體複製至 **SAFEARRAY**。 例如:   
+ 將包含 **ELEMENT_TYPE_ARRAY** 參數的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成指定類型的 **SAFEARRAY**。 Managed 陣列的內容會自動從 Managed 記憶體複製至 **SAFEARRAY**。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
   
@@ -284,7 +284,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  在執行階段，安全陣列的順位、大小和界限是取決於 Managed 陣列的特性。  
   
- 套用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將陣列封送處理為 C 樣式陣列。 例如:   
+ 套用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將陣列封送處理為 C 樣式陣列。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
   
@@ -324,7 +324,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- 將包含 <xref:System.Array?displayProperty=nameWithType> 參數的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成 **_Array** 介面。 Managed 陣列的內容只能透過 **_Array** 介面的方法和屬性進行存取。 使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將 **System.Array** 封送處理為 **SAFEARRAY**。 封送處理為安全陣列時，會將陣列項目封送處理為變異值。 例如:   
+ 將包含 <xref:System.Array?displayProperty=nameWithType> 參數的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成 **_Array** 介面。 Managed 陣列的內容只能透過 **_Array** 介面的方法和屬性進行存取。 使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將 **System.Array** 封送處理為 **SAFEARRAY**。 封送處理為安全陣列時，會將陣列項目封送處理為變異值。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
   
@@ -372,8 +372,8 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [預設的封送處理行為](default-marshaling-behavior.md)  
- [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)  
- [方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
- [複製和 Pin](copying-and-pinning.md)
+## <a name="see-also"></a>另請參閱
+- [預設的封送處理行為](default-marshaling-behavior.md)
+- [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)
+- [方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [複製和 Pin](copying-and-pinning.md)

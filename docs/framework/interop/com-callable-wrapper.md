@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75a8fb01fd22a7f84fadaf355a269b3ad3de63ab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e62d115292edc7b75ff782ac2c9161d942077333
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655331"
 ---
 # <a name="com-callable-wrapper"></a>COM 可呼叫包裝函式
 當 COM 用戶端呼叫 .NET 物件時，Common Language Runtime 會建立 Managed 物件和物件的 COM 可呼叫包裝函式 (CCW)。 無法直接參考 .NET 物件，因此 COM 用戶端使用 CCW 做為 Managed 物件的 Proxy。  
@@ -189,9 +189,9 @@ public class LoanApp
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>請參閱  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
- [COM 包裝函式](com-wrappers.md)  
- [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)  
- [限定互通的 .NET 類型](qualifying-net-types-for-interoperation.md)  
- [執行階段可呼叫包裝函式](runtime-callable-wrapper.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
+- [COM 包裝函式](com-wrappers.md)
+- [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)
+- [限定互通的 .NET 類型](qualifying-net-types-for-interoperation.md)
+- [執行階段可呼叫包裝函式](runtime-callable-wrapper.md)

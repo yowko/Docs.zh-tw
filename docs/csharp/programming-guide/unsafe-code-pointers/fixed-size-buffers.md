@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 2d0a4f829f6fe4d9662e25a4d8fd3936d2afd7f1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7c83b4819975f63c6fc19e5c4783603f37d2a885
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242474"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700607"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定大小緩衝區 (C# 程式設計手冊)
 
@@ -49,9 +49,9 @@ private fixed char name[30];
 - 陣列的宣告應包含計數，例如 `char id[8]`。 您不能使用 `char id[]`。
 - 不安全的緩衝區只能是不安全內容中結構的執行個體欄位。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)  
-- [Unsafe 程式碼和指標](index.md)  
-- [fixed 陳述式](../../language-reference/keywords/fixed-statement.md)  
+- [C# 程式設計指南](../index.md)
+- [Unsafe 程式碼和指標](index.md)
+- [fixed 陳述式](../../language-reference/keywords/fixed-statement.md)
 - [互通性](../interop/index.md)

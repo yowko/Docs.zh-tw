@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 87629346238e92cf95141e72d79be37f8b11e48f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 21819bebbb304eaace3950f40b97033762cd6ce8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568045"
 ---
 # <a name="lttypeparamgt-c-programming-guide"></a>&lt;typeparam&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  
@@ -41,8 +41,8 @@ ms.locfileid: "53241810"
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 參考](../../../csharp/language-reference/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

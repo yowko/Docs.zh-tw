@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88604058bd460d80214be6051abef7dc561c7710
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a91fd9d06e93813d440d6243ad42ea6dd70e739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523086"
 ---
 # <a name="default-marshaling-for-strings"></a>字串的預設封送處理
 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別同時都有類似的封送處理行為。  
@@ -263,8 +263,8 @@ public class Window {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [預設的封送處理行為](default-marshaling-behavior.md)  
- [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)  
- [方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
- [複製和 Pin](copying-and-pinning.md)
+## <a name="see-also"></a>另請參閱
+- [預設的封送處理行為](default-marshaling-behavior.md)
+- [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)
+- [方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [複製和 Pin](copying-and-pinning.md)

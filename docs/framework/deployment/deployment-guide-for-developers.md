@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 72cf3e2e60f27ed4faac12882fcc17974601f6e6
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 8e54c564fbd81f9a52bae5ea8a02514569902d00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589174"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
@@ -403,9 +403,9 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |3082|西班牙文 - 西班牙 (現代排序)|es|
 
 ## <a name="see-also"></a>另請參閱
-- [系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)  
-- [系統需求](../../../docs/framework/get-started/system-requirements.md)  
-- [安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)  
-- [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
-- [在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)  
+- [系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)
+- [系統需求](../../../docs/framework/get-started/system-requirements.md)
+- [安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)
+- [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)
 - [如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

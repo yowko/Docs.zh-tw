@@ -1,14 +1,14 @@
 ---
 title: 執行內部聯結 (C# 中的 LINQ)
 description: 了解如何使用 C# 中的 LINQ 執行內部聯結。
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
-ms.openlocfilehash: 2f6aad30dc8278ce1bb88bacc19b27deaa0288c7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a3e8e9bd97ec630797bc48a3302b27ed45d9103e
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112779"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857953"
 ---
 # <a name="perform-inner-joins"></a>執行內部聯結
 
@@ -66,8 +66,8 @@ C# 的第二個 `join` 子句會根據以型別 `Person` 的 `Owner` 屬性組�
 
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Linq.Enumerable.Join%2A>  
-- <xref:System.Linq.Enumerable.GroupJoin%2A>  
-- [執行群組聯結](perform-grouped-joins.md)  
-- [執行左方外部聯結](perform-left-outer-joins.md)  
-- [匿名型別](../programming-guide/classes-and-structs/anonymous-types.md)  
+- <xref:System.Linq.Enumerable.Join%2A>
+- <xref:System.Linq.Enumerable.GroupJoin%2A>
+- [執行群組聯結](perform-grouped-joins.md)
+- [執行左方外部聯結](perform-left-outer-joins.md)
+- [匿名型別](../programming-guide/classes-and-structs/anonymous-types.md)

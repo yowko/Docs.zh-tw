@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: a75d6dd5fdb74ca3cb6fe28db7415aeb478e2237
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d7971bfb4b6f96a2d8efb9c09f96c0bd2856b9d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528715"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>HOW TO：將字串轉換為數值 (C# 程式設計指南)
 您可以使用 <xref:System.Convert> 類別中的方法，或是使用各種數值類型 (int、long、float 等等) 上找到的 `TryParse` 方法，將[字串](../../../csharp/language-reference/keywords/string.md)轉換為數字。  
@@ -54,8 +54,8 @@ ms.locfileid: "53243214"
  [!code-csharp[csProgGuideTypes#5555](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_1.cs)]  
 [!code-csharp[csProgGuideTypes#24](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_7.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [型別](../../../csharp/programming-guide/types/index.md)  
-- [如何：判斷字串是否代表數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
+- [型別](../../../csharp/programming-guide/types/index.md)
+- [如何：判斷字串是否代表數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [.NET Framework 4 格式化公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

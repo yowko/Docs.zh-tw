@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: c37a273b4091d98ccc202f7d98859333658ccf7f
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676818"
 ---
 # <a name="properties-c-programming-guide"></a>屬性 (C# 程式設計手冊)
 
@@ -74,10 +74,10 @@ ms.locfileid: "53451205"
 
 如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)的[屬性](~/_csharplang/spec/classes.md#properties)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [使用屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [索引子](../../../csharp/programming-guide/indexers/index.md)  
-- [get 關鍵字](../../../csharp/language-reference/keywords/get.md)    
-- [set 關鍵字](../../../csharp/language-reference/keywords/set.md)    
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [使用屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [索引子](../../../csharp/programming-guide/indexers/index.md)
+- [get 關鍵字](../../../csharp/language-reference/keywords/get.md)
+- [set 關鍵字](../../../csharp/language-reference/keywords/set.md)

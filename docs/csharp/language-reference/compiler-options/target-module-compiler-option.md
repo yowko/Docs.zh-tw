@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: 7cc0e48a7a4a3ec3f28c89e80fadf6aa7e1130f2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 89139867cb0a207dbe82168015629fcb9e2fa6eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601892"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (C# 編譯器選項)
 這個選項可讓編譯器不要產生組件資訊清單。  
@@ -33,7 +33,7 @@ ms.locfileid: "43865058"
   
  Visual Studio 開發環境不支援建立模組。  
   
- 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="example"></a>範例  
  建立 `in.netmodule` 以編譯 `in.cs`：  
@@ -42,7 +42,7 @@ ms.locfileid: "43865058"
 csc -target:module in.cs  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
-- [-target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [-target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
 - [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)

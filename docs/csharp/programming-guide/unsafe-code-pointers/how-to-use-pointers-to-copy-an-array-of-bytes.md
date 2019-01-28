@@ -6,12 +6,12 @@ helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: 49151c6d2a573a24e63f733a5279faeee40de1b7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d174f51fa1709a70b98473a4dbbad89b9c62c22a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640299"
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>HOW TO：使用指標複製位元組陣列 (C# 程式設計指南)
 
@@ -25,9 +25,9 @@ ms.locfileid: "53241122"
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#8)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)  
-- [Unsafe 程式碼和指標](index.md)  
-- [-unsafe (C# 編譯器選項)](../../language-reference/compiler-options/unsafe-compiler-option.md)  
-- [記憶體回收](../../../standard/garbage-collection/index.md)  
+- [C# 程式設計指南](../index.md)
+- [Unsafe 程式碼和指標](index.md)
+- [-unsafe (C# 編譯器選項)](../../language-reference/compiler-options/unsafe-compiler-option.md)
+- [記憶體回收](../../../standard/garbage-collection/index.md)

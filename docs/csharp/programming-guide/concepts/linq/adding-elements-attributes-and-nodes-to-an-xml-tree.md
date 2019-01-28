@@ -2,12 +2,12 @@
 title: 將項目、屬性和節點新增至 XML 樹狀結構 (C#)
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 1ebc300d74f8dbf0ec746a14f19b5cf0c7ffa51b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 87b63df1011af9594ff44bed6385f9d82dee08a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585873"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>將項目、屬性和節點新增至 XML 樹狀結構 (C#)
 您可以將內容 (項目、屬性、註解、處理指示、文字和 CDATA) 加入到現有的 XML 樹狀結構中。  
@@ -15,21 +15,21 @@ ms.locfileid: "43517055"
 ## <a name="methods-for-adding-content"></a>加入內容的方法  
  下列方法會將子內容加入到 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument>：  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Add%2A>|將內容加入到 <xref:System.Xml.Linq.XContainer> 之子內容的結尾。|  
 |<xref:System.Xml.Linq.XContainer.AddFirst%2A>|將內容加入到 <xref:System.Xml.Linq.XContainer> 之子內容的開頭。|  
   
  下列方法會加入內容，做為 <xref:System.Xml.Linq.XNode> 的同層級節點。 雖然您可以將有效的同層級內容加入到節點的其他型別 (例如，<xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XText>)，但是您加入同層級內容的最常見目標節點為 <xref:System.Xml.Linq.XComment>。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|將內容加入到 <xref:System.Xml.Linq.XNode> 之後。|  
 |<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|將內容加入到 <xref:System.Xml.Linq.XNode> 之前。|  
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>說明  
  下列範例會建立兩個 XML 樹狀結構，然後修改其中一個樹狀結構。  
   
 ### <a name="code"></a>程式碼  
@@ -77,6 +77,6 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [修改 XML 樹狀結構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

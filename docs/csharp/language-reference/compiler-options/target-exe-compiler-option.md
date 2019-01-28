@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: 4a2d3ea2bda56caf6a16f52877ad36b3947357e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b9efa25870e11e0140cba2ad39c3bc4515056ce3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697877"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (C# 編譯器選項)
 **-target:exe** 選項可讓編譯器建立可執行檔 (EXE)：主控台應用程式。  
@@ -43,7 +43,7 @@ ms.locfileid: "43518155"
   
 3.  修改 [輸出類型] 屬性。  
   
- 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="example"></a>範例  
  下列每個命令列都會建立 `in.exe` 來編譯 `in.cs`：  
@@ -53,7 +53,7 @@ csc -target:exe in.cs
 csc in.cs  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
-- [-target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [-target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
 - [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)

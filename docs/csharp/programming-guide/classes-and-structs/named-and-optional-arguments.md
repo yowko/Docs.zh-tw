@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: df590cf9d18b6de81caccfb77e544451da9ee0df
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 57a368f6aadee608297124a9cc72dc76b0e36f30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681907"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 介紹具名和選擇性引數。 「具名引數」可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
@@ -129,9 +129,9 @@ AutoFormat 參數
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
-- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+- [如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
 - [使用索引子](../../../csharp/programming-guide/indexers/using-indexers.md)

@@ -2,12 +2,12 @@
 title: -subsystemversion (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: ff4cd196edc1ec04f8abcecfa1a7a4e99e32dd56
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 42d9d81c4cfbf98c1d7a470a5863ac9198f16395
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738075"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (C# 編譯器選項)
 指定產生的可執行檔可在其上執行的最小子系統版本，進而決定可執行檔可在其上執行的 Windows 版本。 大多數情況下，此選項可確保可執行檔可以利用舊版 Windows 未提供的特定安全性功能。  
@@ -58,6 +58,6 @@ ms.locfileid: "48025440"
 ## <a name="setting-this-option"></a>設定這個選項  
  若要在 Visual Studio 中設定 **-subsystemversion** 編譯器選項，您必須開啟 .csproj 檔案，並在 MSBuild XML 中指定 `SubsystemVersion` 屬性的值。 您不能在 Visual Studio IDE 中設定此選項。 如需詳細資訊，請參閱本主題稍早的＜預設值＞或[通用的 MSBuild 專案屬性](/visualstudio/msbuild/common-msbuild-project-properties)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
 - [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)

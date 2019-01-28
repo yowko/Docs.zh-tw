@@ -7,12 +7,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: d44d8d0143d366117a24495df3fa8a18f893ebb3
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496253"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>了解使用 Override 和 New 關鍵字的時機 (C# 程式設計手冊)
 在 C# 中，衍生類別的方法名稱可以與基底類別的方法名稱相同。 您可以使用 [new](../../../csharp/language-reference/keywords/new.md) 和 [override](../../../csharp/language-reference/keywords/override.md) 關鍵字來指定方法的互動方式。 `override` 修飾詞可「擴充」基底類別方法，而 `new` 修飾詞會「隱藏」基底類別方法。 本主題的範例會說明其間的差異。  
@@ -542,10 +542,10 @@ namespace OverrideAndNew2
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
-- [base](../../../csharp/language-reference/keywords/base.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
+- [base](../../../csharp/language-reference/keywords/base.md)
 - [abstract](../../../csharp/language-reference/keywords/abstract.md)

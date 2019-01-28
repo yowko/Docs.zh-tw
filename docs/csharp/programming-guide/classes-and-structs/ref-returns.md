@@ -4,12 +4,12 @@ description: 了解如何定義和使用 ref 傳回值和 ref 區域變數值
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: 6399079e17a53ac5bf283eaa5c799964360350f4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514410"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
 
@@ -124,5 +124,5 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 ## <a name="see-also"></a>另請參閱
 
-- [ref 關鍵字](../../language-reference/keywords/ref.md)  
+- [ref 關鍵字](../../language-reference/keywords/ref.md)
 - [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)

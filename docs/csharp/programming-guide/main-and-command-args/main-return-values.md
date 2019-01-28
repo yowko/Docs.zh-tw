@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 8337303f97a3a654f5a3718bf0714ee876a7dc9f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bd2111953bbc31799b3472f62e704667195e2532
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738478"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 傳回值 (C# 程式設計手冊)
 
@@ -93,7 +93,7 @@ private static async Task<int> AsyncConsoleWork()
 > [!NOTE]
 >如果這些範例在 `Main` 方法上使用 `async` 修飾詞，編譯器會產生相同的程式碼。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 參考](../index.md)
 - [Main() 和命令列引數](index.md)

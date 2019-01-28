@@ -2,12 +2,12 @@
 title: HOW TO：建立未簽署的 Friend 組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 16699d827aa168f2392a78ddbc7556bc5af864e8
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 4281aa4d507b2150f65d7d7ff05dd2a2fa8aacd3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703220"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>HOW TO：建立未簽署的 Friend 組件 (C#)
 此範例示範如何搭配未簽署的組件使用 friend 組件。  
@@ -90,10 +90,10 @@ ms.locfileid: "54362141"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要差異是 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性權限執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則是控制 `internal` 類型和成員的可見性。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
-- [組件和全域組件快取 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
-- [Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
-- [如何：建立簽署的 Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [組件和全域組件快取 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [如何：建立簽署的 Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [C# 程式設計指南](../../../../csharp/programming-guide/index.md)

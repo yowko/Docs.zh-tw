@@ -15,12 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: b5767f4e16e691fec5714f98114b3ed9d5692a50
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b4395d26114425556f0457f03667d0f95f786ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677637"
 ---
 # <a name="web-and-socket-permissions"></a>Web 和通訊端權限
 使用 <xref:System.Net> 命名空間之應用程式的網際網路安全性是透過 <xref:System.Net.WebPermission> 和 <xref:System.Net.SocketPermission> 類別提供。 **WebPermission** 類別可控制應用程式向 URI 要求資料，或提供 URI 給網際網路的權限。 **SocketPermission** 類別則可控制應用程式根據通訊端的主機、連接埠編號和傳輸通訊協定，使用 <xref:System.Net.Sockets.Socket> 在本機連接埠上接受資料，或使用另一個位址上的傳輸通訊協定連絡遠端裝置的權限。  
@@ -33,6 +33,6 @@ ms.locfileid: "50205083"
   
  若是 **WebPermission** 執行個體，接受表示應用程式可以將 **WebPermission** 所控制的 URI 匯出到全世界；連線表示應用程式可以存取該 URI (不論它是遠端或本機)。  
   
-## <a name="see-also"></a>請參閱  
- [安全性](../../../docs/standard/security/index.md)  
- [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)
+## <a name="see-also"></a>另請參閱
+- [安全性](../../../docs/standard/security/index.md)
+- [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: fabcbb084a74334a7a1bcddb9a04cc6705caeb29
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 74932c9a080a077a60ecbc45c997108afa176956
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53234925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676883"
 ---
 # <a name="static-constructors-c-programming-guide"></a>靜態建構函式 (C# 程式設計手冊)
 靜態建構函式用來初始化任何 [static](../../../csharp/language-reference/keywords/static.md) 資料，或執行只需要執行一次的特定動作。 在建立第一個執行個體或參考任何靜態成員之前，會自動進行呼叫。  
@@ -39,10 +39,10 @@ ms.locfileid: "53234925"
   
  [!code-csharp[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)

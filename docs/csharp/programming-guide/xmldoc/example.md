@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 92f28e630d18800ddea0f31adbd9f0291e06d202
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 658250aa598511727d5534932fcf8c31ab4e418e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650492"
 ---
 # <a name="ltexamplegt-c-programming-guide"></a>&lt;example&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  
@@ -35,7 +35,7 @@ ms.locfileid: "53244215"
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/example_1.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

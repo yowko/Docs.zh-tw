@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: e848b079d2c665052d8a5b5cfcd8fe379333b4b9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 92745ed32ab671e7401d61c8edcbbe325fc1ddea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740695"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>在 Windows Vista 和 Windows Server 2008 上安裝 .NET Framework
 
@@ -34,6 +34,6 @@ ms.locfileid: "50192378"
 
 ## <a name="see-also"></a>另請參閱
 
-[下載 .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)   
-[安裝適用於開發人員的 .NET Framework](guide-for-developers.md)
+- [下載 .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)
+- [安裝適用於開發人員的 .NET Framework](guide-for-developers.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: ff636691ea2f4dacd13fbd2a336f0023ed65750b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5d2dc8f5bdb0b89d5fd265ad86cbb13401bc8b14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523580"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>介面中的索引子 (C# 程式設計手冊)
 索引子可以宣告於 [interface](../../../csharp/language-reference/keywords/interface.md) 上。 介面索引子的存取子在下列方面與[類別](../../../csharp/language-reference/keywords/class.md)索引子的存取子不同：  
@@ -59,9 +59,9 @@ string ICitizen.this[int index]
   
  在 `ICitizen` 介面上實作索引子。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [索引子](../../../csharp/programming-guide/indexers/index.md)  
-- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [索引子](../../../csharp/programming-guide/indexers/index.md)
+- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [介面](../../../csharp/programming-guide/interfaces/index.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: 5933cf04a3fc8a1e986bff95ad1f38481883a340
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 81c719698e1dc3462e13c149c0f6a26657052f5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740540"
 ---
 # <a name="line-c-reference"></a>#line (C# 參考)
 `#line` 可讓您修改編譯器的行號以及 (選擇性) 錯誤和警告的檔案名稱輸出。
@@ -77,8 +77,8 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 參考](../../../csharp/language-reference/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)

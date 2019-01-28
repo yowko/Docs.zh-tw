@@ -2,12 +2,12 @@
 title: 對等名稱發佈和解析
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4ecdd6a4c6b52368ce8cdfe57288000631077b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143723"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682978"
 ---
 # <a name="peer-name-publication-and-resolution"></a>對等名稱發佈和解析
 
@@ -47,5 +47,5 @@ ms.locfileid: "53143723"
   
  在 <xref:System.Net.PeerToPeer> 命名空間內，包含端點以及在其中進行通訊之 PNRP 雲端或網格的 <xref:System.Net.PeerToPeer.PeerName> 記錄間有多對多關聯性。 如果有重複或過時項目，或多個具有相同對等名稱的節點，則 PNRP 節點可以使用 <xref:System.Net.PeerToPeer.PeerNameResolver> 類別來取得目前資訊。 <xref:System.Net.PeerToPeer.PeerNameResolver> 方法使用單一對等名稱，來簡化一個對等到多個對等名稱記錄以及相同的一個對等到許多雲端的觀點。 這類似於使用關聯式資料表聯結所執行的查詢。 成功完成時，解析程式物件會傳回所指定對等名稱的 <xref:System.Net.PeerToPeer.PeerNameRecordCollection>。  例如，對等名稱發生在集合的所有對等名稱記錄中，並依雲端進行排序。 這些是對等名稱的執行個體，而 PNRP 應用程式可以要求其支援資料。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
 - <xref:System.Net.PeerToPeer>

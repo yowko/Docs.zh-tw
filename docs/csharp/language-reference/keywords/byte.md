@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 9c70c5a08e1509e9c8b1a007603abfbf18f03f14
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: fe2ef272c77b1af3a5b5a7f5bf3efb4836edcf23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241221"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691524"
 ---
 # <a name="byte-c-reference"></a>byte (C# 參考)
 
@@ -106,13 +106,13 @@ SampleMethod((byte)5);
 
 如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[整數型別](~/_csharplang/spec/types.md#integral-types)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Byte>  
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
-- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- <xref:System.Byte>
+- [C# 參考](../../../csharp/language-reference/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

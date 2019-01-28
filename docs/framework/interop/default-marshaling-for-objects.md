@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94377fb2079689e7b6af2c94fa24ca2214a5c729
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 84a3ea24120a9548c9d1cd2b7b83997a2c849cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528013"
 ---
 # <a name="default-marshaling-for-objects"></a>物件的預設封送處理
 類型為 <xref:System.Object?displayProperty=nameWithType> 的參數和欄位可以向 Unmanaged 程式碼公開為下列類型之一：  
@@ -330,8 +330,8 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**物件**  *o*|永不|  
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref 物件**  *o*|只有當類型不變更時。|  
   
-## <a name="see-also"></a>請參閱  
- [預設的封送處理行為](default-marshaling-behavior.md)  
- [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)  
- [方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
- [複製和 Pin](copying-and-pinning.md)
+## <a name="see-also"></a>另請參閱
+- [預設的封送處理行為](default-marshaling-behavior.md)
+- [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)
+- [方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [複製和 Pin](copying-and-pinning.md)

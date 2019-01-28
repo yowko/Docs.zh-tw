@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 17bb0f246407804306a0ea0142f8944b5cf1ee30
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 56028bcf3b843a4f6884e2d7cc7d409621adba34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558811"
 ---
 # <a name="-define-c-compiler-options"></a>-define (C# 編譯器選項)
 **-define** 選項會將 `name` 定義為程式中所有原始程式碼檔的符號。  
@@ -28,7 +28,7 @@ ms.locfileid: "43524280"
 ```  
   
 ## <a name="arguments"></a>引數  
- `name`, `name2`  
+ `name`、 `name2`  
  您要定義的一或多個符號之名稱。  
   
 ## <a name="remarks"></a>備註  
@@ -38,7 +38,7 @@ ms.locfileid: "43524280"
   
  **-d** 是 **-define** 的簡短形式。  
   
- 您可以使用分號或逗號分隔符號名稱，以 **-define** 定義多個符號。 例如:   
+ 您可以使用分號或逗號分隔符號名稱，以 **-define** 定義多個符號。 例如：  
   
 ```console  
 -define:DEBUG;TUESDAY  
@@ -55,7 +55,7 @@ ms.locfileid: "43524280"
   
 2.  在 [建置] 索引標籤的 [條件式編譯的符號] 方塊中，輸入要定義的符號。 例如，如果您想要使用下列程式碼範例，只要在文字方塊中鍵入 `xx` 即可。  
   
- 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>。  
   
 ## <a name="example"></a>範例  
   
@@ -78,7 +78,7 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

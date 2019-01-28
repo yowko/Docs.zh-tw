@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 41baeb9724d142bb860e51fa3ee84fb6c3f6261e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5d095d4cd6d8ee204b6d05a7674dee67c35e46c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694915"
 ---
 # <a name="using-secure-sockets-layer"></a>使用安全通訊端層
 <xref:System.Net> 類別會使用安全通訊端層 (SSL) 來加密數個網路通訊協定的連線。  
@@ -62,7 +62,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
   
 -   對 **System.Net** 命名空間的參考。  
   
-## <a name="see-also"></a>請參閱  
- [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)  
- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
- [憑證的選取和驗證](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+## <a name="see-also"></a>另請參閱
+- [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)
+- [憑證的選取和驗證](../../../docs/framework/network-programming/certificate-selection-and-validation.md)

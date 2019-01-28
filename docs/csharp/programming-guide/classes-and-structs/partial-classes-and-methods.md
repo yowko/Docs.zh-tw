@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 222a47989537f09fd78c4a3b17fa8c1a5478d73f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b960bbf0a35a917d9143a0f47ce3219b6cb10ab4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243461"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713310"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分類別和方法 (C# 程式設計手冊)
 有可能將 [class](../../../csharp/language-reference/keywords/class.md)、[struct](../../../csharp/language-reference/keywords/struct.md)、[interface](../../../csharp/language-reference/keywords/interface.md) 或方法的定義，分割到兩個以上的來源檔案。 每一個來源檔案都包含型別或方法定義的一個區段，而當編譯應用程式時，就會將所有區段結合起來。  
@@ -162,10 +162,10 @@ partial void onNameChanged()
 
 如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)的[部分型別](~/_csharplang/spec/classes.md#partial-types)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [結構](../../../csharp/programming-guide/classes-and-structs/structs.md)  
-- [介面](../../../csharp/programming-guide/interfaces/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [結構](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [介面](../../../csharp/programming-guide/interfaces/index.md)
 - [partial (型別)](../../../csharp/language-reference/keywords/partial-type.md)

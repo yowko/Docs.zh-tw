@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 24eb3b1a70c420fd0008ea9c202c774592e1d346
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: baf0084e6caa3fce8ca8c375bdcc2bcd135fa21e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646798"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# 編譯器選項)
 **-doc** 選項可讓您在 XML 檔案中放入文件註解。  
@@ -58,9 +58,9 @@ ms.locfileid: "44259791"
   
 3.  修改 **XML 文件檔案**屬性。  
   
- 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -2,12 +2,12 @@
 title: 網路程式設計範例
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 55d4403f1b51674a6ee5a58eebdbeaffef1cd857
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: f2ed40eae2ef49964d80978f4a4c20c0d85fa3d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694759"
 ---
 # <a name="network-programming-samples"></a>網路程式設計範例
 本節包含可下載網路程式設計範例的描述和連結，而這些範例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相關命名空間中的類別。 
@@ -58,6 +58,6 @@ ms.locfileid: "54307301"
   
  <xref:System.Net.NetworkInformation>  
   
-## <a name="see-also"></a>請參閱  
- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
- [網路程式設計「如何」主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
+## <a name="see-also"></a>另請參閱
+- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)
+- [網路程式設計「如何」主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)

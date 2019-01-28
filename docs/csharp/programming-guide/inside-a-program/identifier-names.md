@@ -2,12 +2,12 @@
 title: 識別碼名稱
 description: 了解 C# 程式設計語言中有效識別碼名稱的規則。
 ms.date: 08/21/2018
-ms.openlocfilehash: e5ff83661c9a86273760f32a795f7de6dbc7bf1d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2147b3846d4ba6d5471b81448489c6d716e3cd61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606948"
 ---
 # <a name="identifier-names"></a>識別碼名稱
 
@@ -32,7 +32,7 @@ ms.locfileid: "43877869"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [C# 程式內部](../inside-a-program/index.md)

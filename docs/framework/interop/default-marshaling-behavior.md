@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aedc7b1941268184b71713d31913dbfbd8b74643
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 587ae32c27a3c779f5f2e4f27bf521e2ca557106
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688996"
 ---
 # <a name="default-marshaling-behavior"></a>預設的封送處理行為
 Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。 這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫端是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  
@@ -440,9 +440,9 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)  
- [複製和 Pin](copying-and-pinning.md)  
- [陣列的預設封送處理](default-marshaling-for-arrays.md)  
- [物件的預設封送處理](default-marshaling-for-objects.md)  
- [字串的預設封送處理](default-marshaling-for-strings.md)
+## <a name="see-also"></a>另請參閱
+- [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)
+- [複製和 Pin](copying-and-pinning.md)
+- [陣列的預設封送處理](default-marshaling-for-arrays.md)
+- [物件的預設封送處理](default-marshaling-for-objects.md)
+- [字串的預設封送處理](default-marshaling-for-strings.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 80b1d5496aeaf99008062299ac41b53eee167c61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0b36c25742757f2606d103d6af05eee7bc175ea0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697306"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>使用 ASP.NET 開發 Web 應用程式
 
@@ -41,4 +41,4 @@ ASP.NET Core 是 ASP.NET 4.x 的重新設計。 ASP.NET Core 透過 ASP.NET 提�
   
 ## <a name="see-also"></a>另請參閱
 
-[開發指南](../../docs/framework/development-guide.md)
+- [開發指南](../../docs/framework/development-guide.md)

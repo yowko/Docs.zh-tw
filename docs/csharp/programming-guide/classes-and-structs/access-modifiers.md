@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d315355db546c5be45d40fe0c5bcfc46d0f6ead8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7c20292a906ecfbf08311a616e05a02cd8f8a25c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731695"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>存取修飾詞 (C# 程式設計手冊)
 所有類型和類型成員都具有存取範圍層級，以控制是否可以從組件中的其他程式碼或其他組件中使用它們。 您可以使用下列存取修飾詞，以在宣告類型或成員時指定其存取範圍：  
@@ -74,17 +74,17 @@ ms.locfileid: "53240039"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [介面](../../../csharp/programming-guide/interfaces/index.md)  
-- [private](../../../csharp/language-reference/keywords/private.md)  
-- [public](../../../csharp/language-reference/keywords/public.md)  
-- [internal](../../../csharp/language-reference/keywords/internal.md)  
-- [protected](../../../csharp/language-reference/keywords/protected.md)  
-- [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)  
-- [private protected](../../../csharp/language-reference/keywords/private-protected.md)  
-- [class](../../../csharp/language-reference/keywords/class.md)  
-- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [介面](../../../csharp/programming-guide/interfaces/index.md)
+- [private](../../../csharp/language-reference/keywords/private.md)
+- [public](../../../csharp/language-reference/keywords/public.md)
+- [internal](../../../csharp/language-reference/keywords/internal.md)
+- [protected](../../../csharp/language-reference/keywords/protected.md)
+- [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)
+- [private protected](../../../csharp/language-reference/keywords/private-protected.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
+- [struct](../../../csharp/language-reference/keywords/struct.md)
 - [interface](../../../csharp/language-reference/keywords/interface.md)

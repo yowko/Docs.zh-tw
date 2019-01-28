@@ -3,12 +3,12 @@ title: 結構 - C# 手冊
 description: 了解結構類型和其建立方式
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 26b7b075dbe159d43fd7f84e9599d2d8d6a8332c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0db9ebca8a3b0be1d380128f7802e30a41c34a37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506975"
 ---
 # <a name="structs"></a>結構
 *struct* 是實值型別。 建立結構時，指派結構的變數會保留結構的實際資料。 將結構指派至新的變數時，將會複製結構。 因此，新的變數和原始變數會各自包含一份相同的資料。 針對其中一個複本所做的變更，並不會影響到另一個複本。
@@ -65,7 +65,7 @@ ms.locfileid: "43513082"
 ## <a name="nullable-types"></a>可為 Null 的型別  
 一般實值型別的值不能為 [null](./language-reference/keywords/null.md)。 不過，您可以在該類型後面添加 **?**，建立可為 Null 的實值型別 。 例如，**int?** 是也能具有 [null](./language-reference/keywords/null.md) 值的 **int** 類型。 在 CTS 中，可為 Null 的型別是泛型結構類型 <xref:System.Nullable%601> 的執行個體。 當您要在資料庫之間來回傳遞的資料數值可能為 Null 時，可為 Null 的型別會特別有用。 如需詳細資訊，請參閱[可為 Null 的型別 (C# 程式設計手冊)](./programming-guide/nullable-types/index.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [類別](classes.md)
 - [基本類型](basic-types.md)

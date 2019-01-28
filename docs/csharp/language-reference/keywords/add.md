@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
-ms.openlocfilehash: 6cc1b504de383ae63284ecb3ac7d0b1b47b36bfe
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d0eb05b5f7cb2e9ad51fe8787299a51f77ea276e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736899"
 ---
 # <a name="add-c-reference"></a>add (C# 參考)
 使用 `add` 內容關鍵字定義自訂事件存取子，以在用戶端程式碼訂閱[事件](../../../csharp/language-reference/keywords/event.md)時叫用。 如果提供自訂的 `add` 存取子，您也必須提供 [remove](../../../csharp/language-reference/keywords/remove.md) 存取子。  
@@ -24,5 +24,5 @@ ms.locfileid: "53244371"
   
  您通常不需要提供自己的自訂事件存取子。 宣告事件時編譯器自動產生的存取子，足以應付大部分的狀況。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 - [事件](../../../csharp/programming-guide/events/index.md)
