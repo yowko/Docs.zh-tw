@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1252c9a93d9c37923b1fd2940a42f1a33b575b8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617300"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 陳述式 (Visual Basic)
 重新配置陣列變數的儲存空間。  
@@ -47,8 +47,8 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |詞彙|定義|  
 |----------|----------------|  
 |`Preserve`|選擇性。 僅變更最後維度的大小時，用來保留現有陣列資料的修飾詞。|  
-|`name`|必要。 陣列變數的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`boundlist`|必要。 重新定義之陣列各維度的界限清單。|  
+|`name`|必要項。 陣列變數的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`boundlist`|必要項。 重新定義之陣列各維度的界限清單。|  
   
 ## <a name="remarks"></a>備註  
  您可以使用 `ReDim` 陳述式變更已宣告陣列的一或多個維度的大小。 如果您有大型的陣列，而且不再需要其中某些項目，`ReDim` 可以減少陣列大小，釋出記憶體。 另一方面，如果陣列需要更多項目，`ReDim` 可以加入項目。  
@@ -65,11 +65,11 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
      `boundlist` 中的維度數目必須符合陣列的原始維度 (陣序) 數目。  
   
--   **資料型別。** `ReDim` 陳述式不能變更其項目陣列變數的資料類型。  
+-   **資料類型。** `ReDim` 陳述式不能變更其項目陣列變數的資料類型。  
   
 -   **初始化。** `ReDim` 陳述式不能提供陣列項目的新初始化值。  
   
--   **陣序。** `ReDim` 陳述式不能變更陣列的陣序 (維度數目)。  
+-   **順位。** `ReDim` 陳述式不能變更陣列的陣序 (維度數目)。  
   
 -   **以 Preserve 調整大小。** 如果使用 `Preserve`，您也可以只調整陣列的最後一個維度。 至於其他每個維度，您必須指定現有陣列的界限。  
   
@@ -98,12 +98,12 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  第三個 `ReDim` 建立另一個新的陣列，並從每個圖層的每一列結尾移除另外五欄。 這次不複製任何現有的項目。 這個陳述式會將陣列還原成原始大小。 因為陳述式不包含 `Preserve` 修飾詞，所以所有的陣列項目都設為原始預設值。  
   
- 如需其他範例，請參閱[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+ 如需其他範例，請參閱 <<c0> [ 陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.IndexOutOfRangeException>  
- [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Erase 陳述式](../../../visual-basic/language-reference/statements/erase-statement.md)  
- [Nothing](../../../visual-basic/language-reference/nothing.md)  
- [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.IndexOutOfRangeException>
+- [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Erase 陳述式](../../../visual-basic/language-reference/statements/erase-statement.md)
+- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)

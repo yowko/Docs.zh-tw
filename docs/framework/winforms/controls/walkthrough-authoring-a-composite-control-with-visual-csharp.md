@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 5f8384140b813400e106ad959684264304541c93
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6205bea2ccb75078cba507c09f1a4d65571e3418
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580819"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631694"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>逐步解說：使用 Visual C# 撰寫複合控制項 #
 複合控制項提供可以建立及重複使用自訂圖形介面的方法。 複合控制項基本上是具有視覺表示的元件。 因此，它可能包含一或多個 Windows Forms 控制項、元件或程式碼區塊，可以藉由驗證使用者輸入、修改顯示屬性，或執行作者需要的其他工作來擴充功能。 複合控制項可以放在 Windows Forms 上，與其他控制項的方式相同。 在本逐步解說的第一個部分中，您可以建立簡單的複合控制項，稱為 `ctlClock`。 在逐步解說的第二個部分中，您透過繼承擴充 `ctlClock` 的功能。  
@@ -146,7 +146,7 @@ ms.locfileid: "48580819"
 4.  在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。  
   
 ## <a name="testing-the-control"></a>測試控制項  
- 控制項不是獨立應用程式；它們必須裝載在容器中。 測試控制項的執行階段行為，並且使用 **UserControl 測試容器**執行其屬性。 如需詳細資訊，請參閱[如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+ 控制項不是獨立應用程式；它們必須裝載在容器中。 測試控制項的執行階段行為，並且使用 **UserControl 測試容器**執行其屬性。 如需詳細資訊，請參閱[＜How to：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
   
 #### <a name="to-test-your-control"></a>若要測試控制項  
   
@@ -341,7 +341,7 @@ ms.locfileid: "48580819"
 5.  在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。  
   
 ### <a name="using-the-inherited-control-on-a-form"></a>在表單上使用繼承的控制項  
- 您可以使用測試基底類別控制項的相同方式，測試繼承的控制項，`ctlClock`︰按下 F5 鍵以建置專案，然後在 **UserControl 測試容器**中執行控制項。 如需詳細資訊，請參閱[如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+ 您可以測試繼承的控制項相同的方式測試基底類別的控制項， `ctlClock`:按下 F5 鍵以建置專案，並且在 **UserControl 測試容器**中執行您的控制項。 如需詳細資訊，請參閱[＜How to：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
   
  若要使用控制項，您必須將它裝載在表單上。 如同標準複合控制項，繼承的複合控制項無法獨立存在，而且必須裝載在表單或其他容器。 由於 `ctlAlarmClock` 有更深入的功能，需要額外的程式碼來進行測試。 在此程序中，您將撰寫一個簡單的程式來測試 `ctlAlarmClock` 的功能。 您將撰寫程式碼以設定及顯示 `ctlAlarmClock` 的 `AlarmTime` 屬性，然後測試其固有功能。  
   
@@ -404,9 +404,9 @@ ms.locfileid: "48580819"
   
      本逐步解說涵蓋了數個重要概念。 您已經了解藉由將控制項和元件合併成複合控制項容器，來建立複合控制項。 您已經了解將屬性新增至您的控制項，以及撰寫程式碼來實作自訂功能。 在最後一節中，您會了解透過繼承擴充指定複合控制項的功能，並且藉由覆寫這些方法來變更主方法的功能。  
   
-## <a name="see-also"></a>另請參閱  
- [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- [使用元件進行程式設計](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
- [元件撰寫逐步解說](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- [操作說明：在選擇工具箱項目對話方塊中顯示控制項](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [逐步解說：使用 Visual C# 繼承自 Windows Forms 控制項](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+## <a name="see-also"></a>另請參閱
+- [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [使用元件進行程式設計](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+- [元件撰寫逐步解說](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+- [如何：顯示中的控制項選擇工具箱項目對話方塊](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [逐步解說：繼承自具有視覺效果的 Windows Forms 控制項C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

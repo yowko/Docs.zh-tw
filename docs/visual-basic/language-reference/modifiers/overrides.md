@@ -13,12 +13,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 81118b9e97f320bffdbb58e5e1a2859052c4cee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbcd0625cdbcd06affc495ca29972c6c183c10f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582076"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 指定屬性或程序會覆寫繼承自基底類別的同名屬性或程序。  
@@ -43,13 +43,13 @@ ms.locfileid: "33602515"
   
 -   **其他符合。** 除了符合簽章的基底類別版本，此宣告在下列方面也必須符合它：  
   
-    -   存取層級修飾詞 (例如[公用](../../../visual-basic/language-reference/modifiers/public.md))  
+    -   存取層級修飾詞 (例如[公開](../../../visual-basic/language-reference/modifiers/public.md))  
   
-    -   傳遞機制，每個參數 ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../visual-basic/language-reference/modifiers/byref.md))  
+    -   傳遞機制，每個參數 ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md)或是[ByRef](../../../visual-basic/language-reference/modifiers/byref.md))  
   
     -   泛型程序的每個型別參數的條件約束清單  
   
--   **遮蔽和覆寫。** 遮蔽和覆寫都會重新定義繼承的項目，但這兩種方法之間有顯著的差異。 如需詳細資訊，請參閱[Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+-   **遮蔽和覆寫。** 遮蔽和覆寫都會重新定義繼承的項目，但這兩種方法之間有顯著的差異。 如需詳細資訊，請參閱 < [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
   
  如果您使用 `Overrides`，編譯器會隱含地新增 `Overloads`，讓程式庫 API 更容易使用 C#。  
   
@@ -61,11 +61,11 @@ ms.locfileid: "33602515"
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另請參閱  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [關鍵字](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
- [Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [類型清單](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a>另請參閱
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [類型清單](../../../visual-basic/language-reference/statements/type-list.md)
