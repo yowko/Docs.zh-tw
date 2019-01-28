@@ -4,12 +4,12 @@ description: 了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您�
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: bd1e5bf9df929c2c38f737ec3112d3687dba877c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ea8b93128e4acd435ad95fc42257df6ab22812fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620548"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 與 Visual Studio Code 使用者入門
 
@@ -140,5 +140,5 @@ Visual Studio Code C# 延伸模組可為您產生用於建置和偵錯的資產�
 
 ## <a name="see-also"></a>另請參閱
 
-* [設定 Visual Studio Code (英文)](https://code.visualstudio.com/docs/setup/setup-overview)
-* [在 Visual Studio Code 中偵錯 (英文)](https://code.visualstudio.com/Docs/editor/debugging)
+- [設定 Visual Studio Code (英文)](https://code.visualstudio.com/docs/setup/setup-overview)
+- [在 Visual Studio Code 中偵錯 (英文)](https://code.visualstudio.com/Docs/editor/debugging)
