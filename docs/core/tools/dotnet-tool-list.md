@@ -2,12 +2,12 @@
 title: dotnet tool list 命令
 description: dotnet tool list 命令會列出您電腦中指定的 .NET Core 通用工具。
 ms.date: 05/29/2018
-ms.openlocfilehash: 0c17534beb80ed87a8f260342b0f82882a9e17b6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: d3ff7fc90faf6ede3f7de0d5af5112c77ca140db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712907"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -59,4 +59,4 @@ dotnet tool list <-h|--help>
 
 ## <a name="see-also"></a>另請參閱
 
-* [.NET Core 通用工具](global-tools.md)
+- [.NET Core 通用工具](global-tools.md)

@@ -4,12 +4,12 @@ description: 了解 .NET Core 所提供的新功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 4be579f2000c86b3dad412b24589fa8e7024d2f0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 5d21d2e07342d52dc438b67f9738f43fca47469a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45591759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679889"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 的新功能
 
@@ -163,4 +163,4 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 
 ## <a name="see-also"></a>另請參閱
 
-* [ASP.NET Core 2.0 的新功能](/aspnet/core/aspnetcore-2.0)
+- [ASP.NET Core 2.0 的新功能](/aspnet/core/aspnetcore-2.0)

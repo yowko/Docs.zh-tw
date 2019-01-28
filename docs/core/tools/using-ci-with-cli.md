@@ -4,12 +4,12 @@ description: 如何在組建伺服器上使用 .NET Core SDK 和其工具的相�
 author: guardrex
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 4c651983bb900d000de37a0e413ef9ab0f7893c9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c9fd9e359a22467cc8639109538522e4088df5ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704091"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持續整合 (CI) 中使用 .NET Core SDK 和工具
 
@@ -177,4 +177,4 @@ install:
 
 ## <a name="see-also"></a>另請參閱
 
-* [.NET 下載 - Linux](https://dotnet.microsoft.com/download?initial-os=linux) \(英文\)
+- [.NET 下載 - Linux](https://dotnet.microsoft.com/download?initial-os=linux) \(英文\)
