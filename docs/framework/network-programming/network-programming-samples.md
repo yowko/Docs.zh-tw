@@ -2,62 +2,62 @@
 title: 網路程式設計範例
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 55d4403f1b51674a6ee5a58eebdbeaffef1cd857
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: f2ed40eae2ef49964d80978f4a4c20c0d85fa3d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694759"
 ---
-# <a name="network-programming-samples"></a><span data-ttu-id="67655-102">網路程式設計範例</span><span class="sxs-lookup"><span data-stu-id="67655-102">Network Programming Samples</span></span>
-<span data-ttu-id="67655-103">本節包含可下載網路程式設計範例的描述和連結，而這些範例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相關命名空間中的類別。</span><span class="sxs-lookup"><span data-stu-id="67655-103">This section contains descriptions and links to downloadable network programming samples that use classes in the <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets>, and related namespaces.</span></span> 
+# <a name="network-programming-samples"></a><span data-ttu-id="4c9e6-102">網路程式設計範例</span><span class="sxs-lookup"><span data-stu-id="4c9e6-102">Network Programming Samples</span></span>
+<span data-ttu-id="4c9e6-103">本節包含可下載網路程式設計範例的描述和連結，而這些範例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相關命名空間中的類別。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-103">This section contains descriptions and links to downloadable network programming samples that use classes in the <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets>, and related namespaces.</span></span> 
   
 > [!NOTE]
-> <span data-ttu-id="67655-104">所有範例均可從 [.NET Framework SDK 2.0 版範例下載](https://www.microsoft.com/download/confirmation.aspx?id=22181)中取得，此連結是針對 .NET Framework 2.0 所發行，且可能會過時。</span><span class="sxs-lookup"><span data-stu-id="67655-104">All samples are available in the [.NET Framework SDK version 2.0 Samples Download](https://www.microsoft.com/download/confirmation.aspx?id=22181), which was released for the .NET Framework 2.0 and may be dated.</span></span>
+> <span data-ttu-id="4c9e6-104">所有範例均可從 [.NET Framework SDK 2.0 版範例下載](https://www.microsoft.com/download/confirmation.aspx?id=22181)中取得，此連結是針對 .NET Framework 2.0 所發行，且可能會過時。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-104">All samples are available in the [.NET Framework SDK version 2.0 Samples Download](https://www.microsoft.com/download/confirmation.aspx?id=22181), which was released for the .NET Framework 2.0 and may be dated.</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="67655-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="67655-105">In This Section</span></span>  
- <span data-ttu-id="67655-106">[下載進度指示器技術範例](https://msdn.microsoft.com/library/t8w6294a(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="67655-106">[Download Progress Indicator Technology Sample](https://msdn.microsoft.com/library/t8w6294a(v=vs.85).aspx)</span></span>  
- <span data-ttu-id="67655-107">示範如何顯示檔案下載進度。</span><span class="sxs-lookup"><span data-stu-id="67655-107">Shows how to display the progress of a file download.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="4c9e6-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="4c9e6-105">In This Section</span></span>  
+ <span data-ttu-id="4c9e6-106">[下載進度指示器技術範例](https://msdn.microsoft.com/library/t8w6294a(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="4c9e6-106">[Download Progress Indicator Technology Sample](https://msdn.microsoft.com/library/t8w6294a(v=vs.85).aspx)</span></span>  
+ <span data-ttu-id="4c9e6-107">示範如何顯示檔案下載進度。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-107">Shows how to display the progress of a file download.</span></span>  
   
- <span data-ttu-id="67655-108">[FTP 用戶端技術範例](https://msdn.microsoft.com/library/b7810t5c(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="67655-108">[FTP Client Technology Sample](https://msdn.microsoft.com/library/b7810t5c(v=vs.85).aspx)</span></span>  
- <span data-ttu-id="67655-109">示範如何在 FTP 伺服器中上傳和下載檔案。</span><span class="sxs-lookup"><span data-stu-id="67655-109">Shows how to upload and download files to and from an FTP server.</span></span>  
+ <span data-ttu-id="4c9e6-108">[FTP 用戶端技術範例](https://msdn.microsoft.com/library/b7810t5c(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="4c9e6-108">[FTP Client Technology Sample](https://msdn.microsoft.com/library/b7810t5c(v=vs.85).aspx)</span></span>  
+ <span data-ttu-id="4c9e6-109">示範如何在 FTP 伺服器中上傳和下載檔案。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-109">Shows how to upload and download files to and from an FTP server.</span></span>  
   
- <span data-ttu-id="67655-110">[HttpListener 技術範例](https://msdn.microsoft.com/library/y7cbb2y2(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="67655-110">[HttpListener Technology Sample](https://msdn.microsoft.com/library/y7cbb2y2(v=vs.85).aspx)</span></span>  
- <span data-ttu-id="67655-111">示範如何處理應用程式中的 HTTP 要求。</span><span class="sxs-lookup"><span data-stu-id="67655-111">Shows how to process HTTP requests from within an application.</span></span>  
+ <span data-ttu-id="4c9e6-110">[HttpListener 技術範例](https://msdn.microsoft.com/library/y7cbb2y2(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="4c9e6-110">[HttpListener Technology Sample](https://msdn.microsoft.com/library/y7cbb2y2(v=vs.85).aspx)</span></span>  
+ <span data-ttu-id="4c9e6-111">示範如何處理應用程式中的 HTTP 要求。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-111">Shows how to process HTTP requests from within an application.</span></span>  
  
- <span data-ttu-id="67655-112">[HttpListener ASPX 主機應用程式範例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90)) </span><span class="sxs-lookup"><span data-stu-id="67655-112">[HttpListener ASPX Host Application Sample](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90)) </span></span>  
- <span data-ttu-id="67655-113">示範如何使用 <xref:System.Net.HttpListener?displayProperty=nameWithType> 類別的功能來建立 HTTP 伺服器，以將呼叫路由傳送至裝載的 ASP.NET 應用程式。</span><span class="sxs-lookup"><span data-stu-id="67655-113">Demonstrates how to use the features of the <xref:System.Net.HttpListener?displayProperty=nameWithType> class to create an HTTP server that routes calls to a hosted ASP.NET application.</span></span>
+ <span data-ttu-id="4c9e6-112">[HttpListener ASPX 主機應用程式範例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90)) </span><span class="sxs-lookup"><span data-stu-id="4c9e6-112">[HttpListener ASPX Host Application Sample](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90)) </span></span>  
+ <span data-ttu-id="4c9e6-113">示範如何使用 <xref:System.Net.HttpListener?displayProperty=nameWithType> 類別的功能來建立 HTTP 伺服器，以將呼叫路由傳送至裝載的 ASP.NET 應用程式。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-113">Demonstrates how to use the features of the <xref:System.Net.HttpListener?displayProperty=nameWithType> class to create an HTTP server that routes calls to a hosted ASP.NET application.</span></span>
   
- <span data-ttu-id="67655-114">[Mailer 技術範例](https://msdn.microsoft.com/library/whw7xbk2(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="67655-114">[Mailer Technology Sample](https://msdn.microsoft.com/library/whw7xbk2(v=vs.85).aspx)</span></span>  
- <span data-ttu-id="67655-115">示範如何從用戶端應用程式傳送電子郵件訊息。</span><span class="sxs-lookup"><span data-stu-id="67655-115">Shows how to send email messages from a client application.</span></span>  
+ <span data-ttu-id="4c9e6-114">[Mailer 技術範例](https://msdn.microsoft.com/library/whw7xbk2(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="4c9e6-114">[Mailer Technology Sample](https://msdn.microsoft.com/library/whw7xbk2(v=vs.85).aspx)</span></span>  
+ <span data-ttu-id="4c9e6-115">示範如何從用戶端應用程式傳送電子郵件訊息。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-115">Shows how to send email messages from a client application.</span></span>  
   
- <span data-ttu-id="67655-116">[NetStat 工具技術範例](https://msdn.microsoft.com/library/ks32hs88(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="67655-116">[NetStat Tool Technology Sample](https://msdn.microsoft.com/library/ks32hs88(v=vs.85).aspx)</span></span>  
- <span data-ttu-id="67655-117">示範 NCLNetStat 網路資訊工具。</span><span class="sxs-lookup"><span data-stu-id="67655-117">Demonstrates the NCLNetStat network information tool.</span></span>  
+ <span data-ttu-id="4c9e6-116">[NetStat 工具技術範例](https://msdn.microsoft.com/library/ks32hs88(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="4c9e6-116">[NetStat Tool Technology Sample](https://msdn.microsoft.com/library/ks32hs88(v=vs.85).aspx)</span></span>  
+ <span data-ttu-id="4c9e6-117">示範 NCLNetStat 網路資訊工具。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-117">Demonstrates the NCLNetStat network information tool.</span></span>  
   
- <span data-ttu-id="67655-118">[Network Information Technology Sample](https://msdn.microsoft.com/library/2xatedhd(v=vs.85).aspx) (網路資訊技術範例)</span><span class="sxs-lookup"><span data-stu-id="67655-118">[Network Information Technology Sample](https://msdn.microsoft.com/library/2xatedhd(v=vs.85).aspx)</span></span>  
- <span data-ttu-id="67655-119">示範如何監視和顯示網路資訊。</span><span class="sxs-lookup"><span data-stu-id="67655-119">Shows how to monitor and display network information.</span></span>  
+ <span data-ttu-id="4c9e6-118">[Network Information Technology Sample](https://msdn.microsoft.com/library/2xatedhd(v=vs.85).aspx) (網路資訊技術範例)</span><span class="sxs-lookup"><span data-stu-id="4c9e6-118">[Network Information Technology Sample](https://msdn.microsoft.com/library/2xatedhd(v=vs.85).aspx)</span></span>  
+ <span data-ttu-id="4c9e6-119">示範如何監視和顯示網路資訊。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-119">Shows how to monitor and display network information.</span></span>  
   
- <span data-ttu-id="67655-120">[Ping 用戶端技術範例](https://msdn.microsoft.com/library/5253acs7(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="67655-120">[Ping Client Technology Sample](https://msdn.microsoft.com/library/5253acs7(v=vs.85).aspx)</span></span>  
- <span data-ttu-id="67655-121">示範可 Ping 遠端主機的用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="67655-121">Demonstrates a client application that can ping a remote host.</span></span>  
+ <span data-ttu-id="4c9e6-120">[Ping 用戶端技術範例](https://msdn.microsoft.com/library/5253acs7(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="4c9e6-120">[Ping Client Technology Sample](https://msdn.microsoft.com/library/5253acs7(v=vs.85).aspx)</span></span>  
+ <span data-ttu-id="4c9e6-121">示範可 Ping 遠端主機的用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-121">Demonstrates a client application that can ping a remote host.</span></span>  
   
- <span data-ttu-id="67655-122">[WebClient 技術範例](https://msdn.microsoft.com/library/fxk992zc(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="67655-122">[WebClient Technology Sample](https://msdn.microsoft.com/library/fxk992zc(v=vs.85).aspx)</span></span>  
- <span data-ttu-id="67655-123">示範如何執行一般作業，例如上傳或下載檔案或資料。</span><span class="sxs-lookup"><span data-stu-id="67655-123">Demonstrates how to perform common operations, such as the upload or download of files or data.</span></span>  
+ <span data-ttu-id="4c9e6-122">[WebClient 技術範例](https://msdn.microsoft.com/library/fxk992zc(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="4c9e6-122">[WebClient Technology Sample](https://msdn.microsoft.com/library/fxk992zc(v=vs.85).aspx)</span></span>  
+ <span data-ttu-id="4c9e6-123">示範如何執行一般作業，例如上傳或下載檔案或資料。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-123">Demonstrates how to perform common operations, such as the upload or download of files or data.</span></span>  
   
- <span data-ttu-id="67655-124">[安全資料流範例](https://msdn.microsoft.com/library/ms180980(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="67655-124">[Secure Streams Sample](https://msdn.microsoft.com/library/ms180980(v=vs.85).aspx)</span></span>  
- <span data-ttu-id="67655-125">示範如何使用安全資料流以在用戶端與伺服器之間進行通訊。</span><span class="sxs-lookup"><span data-stu-id="67655-125">Shows how to use a secure stream to communicate between a client and a server.</span></span>  
+ <span data-ttu-id="4c9e6-124">[安全資料流範例](https://msdn.microsoft.com/library/ms180980(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="4c9e6-124">[Secure Streams Sample](https://msdn.microsoft.com/library/ms180980(v=vs.85).aspx)</span></span>  
+ <span data-ttu-id="4c9e6-125">示範如何使用安全資料流以在用戶端與伺服器之間進行通訊。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-125">Shows how to use a secure stream to communicate between a client and a server.</span></span>  
   
- <span data-ttu-id="67655-126">[IPv6 通訊端範例](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="67655-126">[IPv6 Sockets Sample](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)</span></span>  
- <span data-ttu-id="67655-127">示範如何在啟用 IPv6 時使用通訊端。</span><span class="sxs-lookup"><span data-stu-id="67655-127">Demonstrates how to use sockets when IPv6 is enabled.</span></span>  
+ <span data-ttu-id="4c9e6-126">[IPv6 通訊端範例](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="4c9e6-126">[IPv6 Sockets Sample](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)</span></span>  
+ <span data-ttu-id="4c9e6-127">示範如何在啟用 IPv6 時使用通訊端。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-127">Demonstrates how to use sockets when IPv6 is enabled.</span></span>  
   
- <span data-ttu-id="67655-128">[FTP 總管技術範例](https://msdn.microsoft.com/library/ms233623(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="67655-128">[FTP Explorer Technology Sample](https://msdn.microsoft.com/library/ms233623(v=vs.85).aspx)</span></span>  
- <span data-ttu-id="67655-129">示範如何列出 FTP 伺服器的內容。</span><span class="sxs-lookup"><span data-stu-id="67655-129">Demonstrates how to list the contents of an FTP server.</span></span>  
+ <span data-ttu-id="4c9e6-128">[FTP 總管技術範例](https://msdn.microsoft.com/library/ms233623(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="4c9e6-128">[FTP Explorer Technology Sample](https://msdn.microsoft.com/library/ms233623(v=vs.85).aspx)</span></span>  
+ <span data-ttu-id="4c9e6-129">示範如何列出 FTP 伺服器的內容。</span><span class="sxs-lookup"><span data-stu-id="4c9e6-129">Demonstrates how to list the contents of an FTP server.</span></span>  
   
   
-## <a name="reference"></a><span data-ttu-id="67655-130">參考資料</span><span class="sxs-lookup"><span data-stu-id="67655-130">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4c9e6-130">參考資料</span><span class="sxs-lookup"><span data-stu-id="4c9e6-130">Reference</span></span>  
  <xref:System.Net>  
   
  <xref:System.Net.NetworkInformation>  
   
-## <a name="see-also"></a><span data-ttu-id="67655-131">請參閱</span><span class="sxs-lookup"><span data-stu-id="67655-131">See Also</span></span>  
- [<span data-ttu-id="67655-132">以 .NET Framework 進行網路程式設計</span><span class="sxs-lookup"><span data-stu-id="67655-132">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
- [<span data-ttu-id="67655-133">網路程式設計「如何」主題</span><span class="sxs-lookup"><span data-stu-id="67655-133">Network Programming How-to Topics</span></span>](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
+## <a name="see-also"></a><span data-ttu-id="4c9e6-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4c9e6-131">See also</span></span>
+- [<span data-ttu-id="4c9e6-132">以 .NET Framework 進行網路程式設計</span><span class="sxs-lookup"><span data-stu-id="4c9e6-132">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)
+- [<span data-ttu-id="4c9e6-133">網路程式設計「如何」主題</span><span class="sxs-lookup"><span data-stu-id="4c9e6-133">Network Programming How-to Topics</span></span>](../../../docs/framework/network-programming/network-programming-how-to-topics.md)

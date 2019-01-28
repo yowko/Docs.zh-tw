@@ -7,37 +7,37 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: 65867bc441711193f93142d1c65122b6bc60c25d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 216adebae8a498ef2f4263f46f8ccd7a20d9202f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241823"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622373"
 ---
-# <a name="pragma-c-reference"></a><span data-ttu-id="17528-102">#pragma (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="17528-102">#pragma (C# Reference)</span></span>
-<span data-ttu-id="17528-103">`#pragma` 將編譯編譯器所在檔案的特殊指示提供給編譯器。</span><span class="sxs-lookup"><span data-stu-id="17528-103">`#pragma` gives the compiler special instructions for the compilation of the file in which it appears.</span></span> <span data-ttu-id="17528-104">編譯器必須支援指示。</span><span class="sxs-lookup"><span data-stu-id="17528-104">The instructions must be supported by the compiler.</span></span> <span data-ttu-id="17528-105">換句話說，您不能使用 `#pragma` 來建立自訂前置處理指示。</span><span class="sxs-lookup"><span data-stu-id="17528-105">In other words, you cannot use `#pragma` to create custom preprocessing instructions.</span></span> <span data-ttu-id="17528-106">Microsoft C# 編譯器支援下列兩個 `#pragma` 指示：</span><span class="sxs-lookup"><span data-stu-id="17528-106">The Microsoft C# compiler supports the following two `#pragma` instructions:</span></span>  
+# <a name="pragma-c-reference"></a><span data-ttu-id="d2969-102">#pragma (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="d2969-102">#pragma (C# Reference)</span></span>
+<span data-ttu-id="d2969-103">`#pragma` 將編譯編譯器所在檔案的特殊指示提供給編譯器。</span><span class="sxs-lookup"><span data-stu-id="d2969-103">`#pragma` gives the compiler special instructions for the compilation of the file in which it appears.</span></span> <span data-ttu-id="d2969-104">編譯器必須支援指示。</span><span class="sxs-lookup"><span data-stu-id="d2969-104">The instructions must be supported by the compiler.</span></span> <span data-ttu-id="d2969-105">換句話說，您不能使用 `#pragma` 來建立自訂前置處理指示。</span><span class="sxs-lookup"><span data-stu-id="d2969-105">In other words, you cannot use `#pragma` to create custom preprocessing instructions.</span></span> <span data-ttu-id="d2969-106">Microsoft C# 編譯器支援下列兩個 `#pragma` 指示：</span><span class="sxs-lookup"><span data-stu-id="d2969-106">The Microsoft C# compiler supports the following two `#pragma` instructions:</span></span>  
   
- [<span data-ttu-id="17528-107">#pragma warning</span><span class="sxs-lookup"><span data-stu-id="17528-107">#pragma warning</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
+ [<span data-ttu-id="d2969-107">#pragma warning</span><span class="sxs-lookup"><span data-stu-id="d2969-107">#pragma warning</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
   
- [<span data-ttu-id="17528-108">#pragma checksum</span><span class="sxs-lookup"><span data-stu-id="17528-108">#pragma checksum</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)  
+ [<span data-ttu-id="d2969-108">#pragma checksum</span><span class="sxs-lookup"><span data-stu-id="d2969-108">#pragma checksum</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)  
   
-## <a name="syntax"></a><span data-ttu-id="17528-109">語法</span><span class="sxs-lookup"><span data-stu-id="17528-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d2969-109">語法</span><span class="sxs-lookup"><span data-stu-id="d2969-109">Syntax</span></span>  
   
 ```csharp
 #pragma pragma-name pragma-arguments  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="17528-110">參數</span><span class="sxs-lookup"><span data-stu-id="17528-110">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d2969-110">參數</span><span class="sxs-lookup"><span data-stu-id="d2969-110">Parameters</span></span>  
  `pragma-name`  
- <span data-ttu-id="17528-111">可辨識的 pragma 名稱。</span><span class="sxs-lookup"><span data-stu-id="17528-111">The name of a recognized pragma.</span></span>  
+ <span data-ttu-id="d2969-111">可辨識的 pragma 名稱。</span><span class="sxs-lookup"><span data-stu-id="d2969-111">The name of a recognized pragma.</span></span>  
   
  `pragma-arguments`  
- <span data-ttu-id="17528-112">Pragma 特定引數。</span><span class="sxs-lookup"><span data-stu-id="17528-112">Pragma-specific arguments.</span></span>  
+ <span data-ttu-id="d2969-112">Pragma 特定引數。</span><span class="sxs-lookup"><span data-stu-id="d2969-112">Pragma-specific arguments.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17528-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="17528-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d2969-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d2969-113">See also</span></span>
 
-- [<span data-ttu-id="17528-114">C# 參考</span><span class="sxs-lookup"><span data-stu-id="17528-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="17528-115">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="17528-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="17528-116">C# 前置處理器指示詞</span><span class="sxs-lookup"><span data-stu-id="17528-116">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)  
-- [<span data-ttu-id="17528-117">#pragma warning</span><span class="sxs-lookup"><span data-stu-id="17528-117">#pragma warning</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
-- [<span data-ttu-id="17528-118">#pragma checksum</span><span class="sxs-lookup"><span data-stu-id="17528-118">#pragma checksum</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
+- [<span data-ttu-id="d2969-114">C# 參考</span><span class="sxs-lookup"><span data-stu-id="d2969-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="d2969-115">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="d2969-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="d2969-116">C# 前置處理器指示詞</span><span class="sxs-lookup"><span data-stu-id="d2969-116">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [<span data-ttu-id="d2969-117">#pragma warning</span><span class="sxs-lookup"><span data-stu-id="d2969-117">#pragma warning</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)
+- [<span data-ttu-id="d2969-118">#pragma checksum</span><span class="sxs-lookup"><span data-stu-id="d2969-118">#pragma checksum</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
