@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cbd75768896b09097d9e07fb22905d7d14a81547
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 19aeab232f366818291bd682ab9c063a75be6687
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863633"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724495"
 ---
-# <a name="node-types-recognized-with-xpath-queries"></a><span data-ttu-id="c0e07-102">在 XPath 查詢中辨識的節點型別</span><span class="sxs-lookup"><span data-stu-id="c0e07-102">Node Types Recognized with XPath Queries</span></span>
-<span data-ttu-id="c0e07-103">在 XPath 查詢中辨識的節點型別不同於在文件物件模型 (DOM) 中找到的節點型別。</span><span class="sxs-lookup"><span data-stu-id="c0e07-103">The types of nodes recognized in an XPath query are not the same node types found in the Document Object Model (DOM).</span></span>  
+# <a name="node-types-recognized-with-xpath-queries"></a><span data-ttu-id="b22b5-102">在 XPath 查詢中辨識的節點型別</span><span class="sxs-lookup"><span data-stu-id="b22b5-102">Node Types Recognized with XPath Queries</span></span>
+<span data-ttu-id="b22b5-103">在 XPath 查詢中辨識的節點型別不同於在文件物件模型 (DOM) 中找到的節點型別。</span><span class="sxs-lookup"><span data-stu-id="b22b5-103">The types of nodes recognized in an XPath query are not the same node types found in the Document Object Model (DOM).</span></span>  
   
-## <a name="w3c-xpath-node-types"></a><span data-ttu-id="c0e07-104">W3C XPath 節點型別</span><span class="sxs-lookup"><span data-stu-id="c0e07-104">W3C XPath Node Types</span></span>  
- <span data-ttu-id="c0e07-105">在 XPath 查詢中辨識的節點型別並非在文件物件模型 (DOM) 中找到的節點型別。</span><span class="sxs-lookup"><span data-stu-id="c0e07-105">The types of nodes recognized in an XPath query are not the types of nodes found in the Document Object Model (DOM).</span></span> <span data-ttu-id="c0e07-106">以下是由 <xref:System.Xml.XPath.XPathNodeType> 列舉表示的 XPath 節點型別。</span><span class="sxs-lookup"><span data-stu-id="c0e07-106">The following are the XPath node types represented by the <xref:System.Xml.XPath.XPathNodeType> enumeration.</span></span>  
+## <a name="w3c-xpath-node-types"></a><span data-ttu-id="b22b5-104">W3C XPath 節點型別</span><span class="sxs-lookup"><span data-stu-id="b22b5-104">W3C XPath Node Types</span></span>  
+ <span data-ttu-id="b22b5-105">在 XPath 查詢中辨識的節點型別並非在文件物件模型 (DOM) 中找到的節點型別。</span><span class="sxs-lookup"><span data-stu-id="b22b5-105">The types of nodes recognized in an XPath query are not the types of nodes found in the Document Object Model (DOM).</span></span> <span data-ttu-id="b22b5-106">以下是由 <xref:System.Xml.XPath.XPathNodeType> 列舉表示的 XPath 節點型別。</span><span class="sxs-lookup"><span data-stu-id="b22b5-106">The following are the XPath node types represented by the <xref:System.Xml.XPath.XPathNodeType> enumeration.</span></span>  
   
 -   <xref:System.Xml.XPath.XPathNodeType.All>  
   
@@ -38,22 +38,22 @@ ms.locfileid: "43863633"
   
 -   <xref:System.Xml.XPath.XPathNodeType.Whitespace>  
   
- <span data-ttu-id="c0e07-107">這些節點型別以 XPath 資料模型為基礎，其中節點均衍生自 XML 資訊集。</span><span class="sxs-lookup"><span data-stu-id="c0e07-107">These node types are based on the XPath data model, where the nodes are derived from the XML Information Set.</span></span> <span data-ttu-id="c0e07-108"><xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> 及 <xref:System.Xml.XPath.XPathNodeType.Whitespace> 節點型別是 XPath 資料模型中所說明之基底節點型別的 Microsoft .NET Framework 擴充功能。</span><span class="sxs-lookup"><span data-stu-id="c0e07-108">The <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> and <xref:System.Xml.XPath.XPathNodeType.Whitespace> node types are Microsoft .NET Framework extensions to the base node types described in the XPath data model.</span></span>  
+ <span data-ttu-id="b22b5-107">這些節點型別以 XPath 資料模型為基礎，其中節點均衍生自 XML 資訊集。</span><span class="sxs-lookup"><span data-stu-id="b22b5-107">These node types are based on the XPath data model, where the nodes are derived from the XML Information Set.</span></span> <span data-ttu-id="b22b5-108"><xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> 及 <xref:System.Xml.XPath.XPathNodeType.Whitespace> 節點型別是 XPath 資料模型中所說明之基底節點型別的 Microsoft .NET Framework 擴充功能。</span><span class="sxs-lookup"><span data-stu-id="b22b5-108">The <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> and <xref:System.Xml.XPath.XPathNodeType.Whitespace> node types are Microsoft .NET Framework extensions to the base node types described in the XPath data model.</span></span>  
   
- <span data-ttu-id="c0e07-109">屬性節點型別在 XPath 資料模型中的使用方式與在 DOM 中的不同。</span><span class="sxs-lookup"><span data-stu-id="c0e07-109">The attribute node type is used differently in the XPath data model than it is in the DOM.</span></span> <span data-ttu-id="c0e07-110">在 XPath 資料模型中，項目節點具有相關的屬性節點集，且項目節點是每個屬性節點的父代。</span><span class="sxs-lookup"><span data-stu-id="c0e07-110">In the XPath data model, the element node has a set of attribute nodes related to it and the element node is the parent of each attribute node.</span></span> <span data-ttu-id="c0e07-111">不過，在 DOM 中，項目節點是擁有者，並不是父代。</span><span class="sxs-lookup"><span data-stu-id="c0e07-111">However, in the DOM, the element node is the owner and not the parent.</span></span> <span data-ttu-id="c0e07-112">在這兩個模型中，屬性及命名空間節點都不被視為項目節點的子節點。</span><span class="sxs-lookup"><span data-stu-id="c0e07-112">In both models, attribute and namespace nodes are not considered child nodes of the element node.</span></span>  
+ <span data-ttu-id="b22b5-109">屬性節點型別在 XPath 資料模型中的使用方式與在 DOM 中的不同。</span><span class="sxs-lookup"><span data-stu-id="b22b5-109">The attribute node type is used differently in the XPath data model than it is in the DOM.</span></span> <span data-ttu-id="b22b5-110">在 XPath 資料模型中，項目節點具有相關的屬性節點集，且項目節點是每個屬性節點的父代。</span><span class="sxs-lookup"><span data-stu-id="b22b5-110">In the XPath data model, the element node has a set of attribute nodes related to it and the element node is the parent of each attribute node.</span></span> <span data-ttu-id="b22b5-111">不過，在 DOM 中，項目節點是擁有者，並不是父代。</span><span class="sxs-lookup"><span data-stu-id="b22b5-111">However, in the DOM, the element node is the owner and not the parent.</span></span> <span data-ttu-id="b22b5-112">在這兩個模型中，屬性及命名空間節點都不被視為項目節點的子節點。</span><span class="sxs-lookup"><span data-stu-id="b22b5-112">In both models, attribute and namespace nodes are not considered child nodes of the element node.</span></span>  
   
- <span data-ttu-id="c0e07-113">命名空間節點型別是 XPath 資料模型中的新加入型別，並不是可辨識的 DOM 節點型別。</span><span class="sxs-lookup"><span data-stu-id="c0e07-113">The namespace node type is an addition to the XPath data model and is not a recognized DOM node type.</span></span>  
+ <span data-ttu-id="b22b5-113">命名空間節點型別是 XPath 資料模型中的新加入型別，並不是可辨識的 DOM 節點型別。</span><span class="sxs-lookup"><span data-stu-id="b22b5-113">The namespace node type is an addition to the XPath data model and is not a recognized DOM node type.</span></span>  
   
- <span data-ttu-id="c0e07-114">如需有關巡覽項目、屬性和命名空間節點的詳細資訊，請參閱[使用 XPathNavigator 巡覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)以及[使用 XPathNavigator 巡覽屬性及命名空間節點](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)主題。</span><span class="sxs-lookup"><span data-stu-id="c0e07-114">For more information about navigating element, attribute, and namespace nodes, see the [Node Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) and [Attribute and Namespace Node Navigation Using XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md) topics.</span></span>  
+ <span data-ttu-id="b22b5-114">如需有關巡覽項目、屬性和命名空間節點的詳細資訊，請參閱[使用 XPathNavigator 巡覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)以及[使用 XPathNavigator 巡覽屬性及命名空間節點](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)主題。</span><span class="sxs-lookup"><span data-stu-id="b22b5-114">For more information about navigating element, attribute, and namespace nodes, see the [Node Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) and [Attribute and Namespace Node Navigation Using XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md) topics.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c0e07-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c0e07-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b22b5-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b22b5-115">See also</span></span>
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [<span data-ttu-id="c0e07-116">使用 XPath 資料模型處理 XML 資料</span><span class="sxs-lookup"><span data-stu-id="c0e07-116">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [<span data-ttu-id="c0e07-117">使用 XPathNavigator 選取 XML 資料</span><span class="sxs-lookup"><span data-stu-id="c0e07-117">Select XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
-- [<span data-ttu-id="c0e07-118">使用 XPathNavigator 評估 XPath 運算式</span><span class="sxs-lookup"><span data-stu-id="c0e07-118">Evaluate XPath Expressions using XPathNavigator</span></span>](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
-- [<span data-ttu-id="c0e07-119">使用 XPathNavigator 比對節點</span><span class="sxs-lookup"><span data-stu-id="c0e07-119">Matching Nodes using XPathNavigator</span></span>](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
-- [<span data-ttu-id="c0e07-120">XPath 查詢和命名空間</span><span class="sxs-lookup"><span data-stu-id="c0e07-120">XPath Queries and Namespaces</span></span>](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
-- [<span data-ttu-id="c0e07-121">編譯 XPath 運算式</span><span class="sxs-lookup"><span data-stu-id="c0e07-121">Compiled XPath Expressions</span></span>](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [<span data-ttu-id="b22b5-116">使用 XPath 資料模型處理 XML 資料</span><span class="sxs-lookup"><span data-stu-id="b22b5-116">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [<span data-ttu-id="b22b5-117">使用 XPathNavigator 選取 XML 資料</span><span class="sxs-lookup"><span data-stu-id="b22b5-117">Select XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
+- [<span data-ttu-id="b22b5-118">使用 XPathNavigator 評估 XPath 運算式</span><span class="sxs-lookup"><span data-stu-id="b22b5-118">Evaluate XPath Expressions using XPathNavigator</span></span>](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
+- [<span data-ttu-id="b22b5-119">使用 XPathNavigator 比對節點</span><span class="sxs-lookup"><span data-stu-id="b22b5-119">Matching Nodes using XPathNavigator</span></span>](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
+- [<span data-ttu-id="b22b5-120">XPath 查詢和命名空間</span><span class="sxs-lookup"><span data-stu-id="b22b5-120">XPath Queries and Namespaces</span></span>](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
+- [<span data-ttu-id="b22b5-121">編譯 XPath 運算式</span><span class="sxs-lookup"><span data-stu-id="b22b5-121">Compiled XPath Expressions</span></span>](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)

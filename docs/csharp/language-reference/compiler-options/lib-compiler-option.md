@@ -8,66 +8,66 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: c140a49de0503da1e59396f14ac1aee4c1d7d1a6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677871"
 ---
-# <a name="-lib-c-compiler-options"></a><span data-ttu-id="2eb74-102">-lib (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="2eb74-102">-lib (C# Compiler Options)</span></span>
-<span data-ttu-id="2eb74-103">**-lib** 選項會使用 [-reference (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 選項，來指定參考的組件位置。</span><span class="sxs-lookup"><span data-stu-id="2eb74-103">The **-lib** option specifies the location of assemblies referenced by means of the [-reference (C# Compiler Options)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) option.</span></span>  
+# <a name="-lib-c-compiler-options"></a><span data-ttu-id="5f89f-102">-lib (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="5f89f-102">-lib (C# Compiler Options)</span></span>
+<span data-ttu-id="5f89f-103">**-lib** 選項會使用 [-reference (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 選項，來指定參考的組件位置。</span><span class="sxs-lookup"><span data-stu-id="5f89f-103">The **-lib** option specifies the location of assemblies referenced by means of the [-reference (C# Compiler Options)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) option.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2eb74-104">語法</span><span class="sxs-lookup"><span data-stu-id="2eb74-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f89f-104">語法</span><span class="sxs-lookup"><span data-stu-id="5f89f-104">Syntax</span></span>  
   
 ```console  
 -lib:dir1[,dir2]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="2eb74-105">引數</span><span class="sxs-lookup"><span data-stu-id="2eb74-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="5f89f-105">引數</span><span class="sxs-lookup"><span data-stu-id="5f89f-105">Arguments</span></span>  
  `dir1`  
- <span data-ttu-id="2eb74-106">如果編譯器在目前的工作目錄 (您叫用編譯器的起點目錄) 或通用語言執行平台的系統目錄中找不到參考的組件，會改為查詢的目錄。</span><span class="sxs-lookup"><span data-stu-id="2eb74-106">A directory for the compiler to look in if a referenced assembly is not found in the current working directory (the directory from which you are invoking the compiler) or in the common language runtime's system directory.</span></span>  
+ <span data-ttu-id="5f89f-106">如果編譯器在目前的工作目錄 (您叫用編譯器的起點目錄) 或通用語言執行平台的系統目錄中找不到參考的組件，會改為查詢的目錄。</span><span class="sxs-lookup"><span data-stu-id="5f89f-106">A directory for the compiler to look in if a referenced assembly is not found in the current working directory (the directory from which you are invoking the compiler) or in the common language runtime's system directory.</span></span>  
   
  `dir2`  
- <span data-ttu-id="2eb74-107">用來尋找組件參考的一或多個其他目錄。</span><span class="sxs-lookup"><span data-stu-id="2eb74-107">One or more additional directories to search in for assembly references.</span></span> <span data-ttu-id="2eb74-108">使用逗號分隔額外的目錄名稱；之間不含任何空白字元。</span><span class="sxs-lookup"><span data-stu-id="2eb74-108">Separate additional directory names with a comma, and without white space between them.</span></span>  
+ <span data-ttu-id="5f89f-107">用來尋找組件參考的一或多個其他目錄。</span><span class="sxs-lookup"><span data-stu-id="5f89f-107">One or more additional directories to search in for assembly references.</span></span> <span data-ttu-id="5f89f-108">使用逗號分隔額外的目錄名稱；之間不含任何空白字元。</span><span class="sxs-lookup"><span data-stu-id="5f89f-108">Separate additional directory names with a comma, and without white space between them.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2eb74-109">備註</span><span class="sxs-lookup"><span data-stu-id="2eb74-109">Remarks</span></span>  
- <span data-ttu-id="2eb74-110">編譯器會以下列順序搜尋不完整的組件參考：</span><span class="sxs-lookup"><span data-stu-id="2eb74-110">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5f89f-109">備註</span><span class="sxs-lookup"><span data-stu-id="5f89f-109">Remarks</span></span>  
+ <span data-ttu-id="5f89f-110">編譯器會以下列順序搜尋不完整的組件參考：</span><span class="sxs-lookup"><span data-stu-id="5f89f-110">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
   
-1.  <span data-ttu-id="2eb74-111">目前的工作目錄。</span><span class="sxs-lookup"><span data-stu-id="2eb74-111">Current working directory.</span></span> <span data-ttu-id="2eb74-112">這是叫用編譯器的起點目錄。</span><span class="sxs-lookup"><span data-stu-id="2eb74-112">This is the directory from which the compiler is invoked.</span></span>  
+1.  <span data-ttu-id="5f89f-111">目前的工作目錄。</span><span class="sxs-lookup"><span data-stu-id="5f89f-111">Current working directory.</span></span> <span data-ttu-id="5f89f-112">這是叫用編譯器的起點目錄。</span><span class="sxs-lookup"><span data-stu-id="5f89f-112">This is the directory from which the compiler is invoked.</span></span>  
   
-2.  <span data-ttu-id="2eb74-113">通用語言執行平台系統目錄。</span><span class="sxs-lookup"><span data-stu-id="2eb74-113">The common language runtime system directory.</span></span>  
+2.  <span data-ttu-id="5f89f-113">通用語言執行平台系統目錄。</span><span class="sxs-lookup"><span data-stu-id="5f89f-113">The common language runtime system directory.</span></span>  
   
-3.  <span data-ttu-id="2eb74-114">**-lib** 所指定的目錄。</span><span class="sxs-lookup"><span data-stu-id="2eb74-114">Directories specified by **-lib**.</span></span>  
+3.  <span data-ttu-id="5f89f-114">**-lib** 所指定的目錄。</span><span class="sxs-lookup"><span data-stu-id="5f89f-114">Directories specified by **-lib**.</span></span>  
   
-4.  <span data-ttu-id="2eb74-115">LIB 環境變數所指定的目錄。</span><span class="sxs-lookup"><span data-stu-id="2eb74-115">Directories specified by the LIB environment variable.</span></span>  
+4.  <span data-ttu-id="5f89f-115">LIB 環境變數所指定的目錄。</span><span class="sxs-lookup"><span data-stu-id="5f89f-115">Directories specified by the LIB environment variable.</span></span>  
   
- <span data-ttu-id="2eb74-116">使用 **-reference** 來指定組件參考。</span><span class="sxs-lookup"><span data-stu-id="2eb74-116">Use **-reference** to specify an assembly reference.</span></span>  
+ <span data-ttu-id="5f89f-116">使用 **-reference** 來指定組件參考。</span><span class="sxs-lookup"><span data-stu-id="5f89f-116">Use **-reference** to specify an assembly reference.</span></span>  
   
- <span data-ttu-id="2eb74-117">**-lib** 為加法；指定超過一次時，即會附加到任何先前的值。</span><span class="sxs-lookup"><span data-stu-id="2eb74-117">**-lib** is additive; specifying it more than once appends to any prior values.</span></span>  
+ <span data-ttu-id="5f89f-117">**-lib** 為加法；指定超過一次時，即會附加到任何先前的值。</span><span class="sxs-lookup"><span data-stu-id="5f89f-117">**-lib** is additive; specifying it more than once appends to any prior values.</span></span>  
   
- <span data-ttu-id="2eb74-118">若不想使用 **-lib**，替代方法是將任何必要的組件複製到工作目錄中；這樣一來，您就只需將組件名稱傳遞給 **-reference**。</span><span class="sxs-lookup"><span data-stu-id="2eb74-118">An alternative to using **-lib** is to copy into the working directory any required assemblies; this will allow you to simply pass the assembly name to **-reference**.</span></span> <span data-ttu-id="2eb74-119">接著，您就可以從工作目錄刪除組件。</span><span class="sxs-lookup"><span data-stu-id="2eb74-119">You can then delete the assemblies from the working directory.</span></span> <span data-ttu-id="2eb74-120">由於資訊清單中未指定相依組件的路徑，因此應用程式可以在目標電腦上啟動，並在全域組件快取中尋找和使用組件。</span><span class="sxs-lookup"><span data-stu-id="2eb74-120">Since the path to the dependent assembly is not specified in the assembly manifest, the application can be started on the target computer and will find and use the assembly in the global assembly cache.</span></span>  
+ <span data-ttu-id="5f89f-118">若不想使用 **-lib**，替代方法是將任何必要的組件複製到工作目錄中；這樣一來，您就只需將組件名稱傳遞給 **-reference**。</span><span class="sxs-lookup"><span data-stu-id="5f89f-118">An alternative to using **-lib** is to copy into the working directory any required assemblies; this will allow you to simply pass the assembly name to **-reference**.</span></span> <span data-ttu-id="5f89f-119">接著，您就可以從工作目錄刪除組件。</span><span class="sxs-lookup"><span data-stu-id="5f89f-119">You can then delete the assemblies from the working directory.</span></span> <span data-ttu-id="5f89f-120">由於資訊清單中未指定相依組件的路徑，因此應用程式可以在目標電腦上啟動，並在全域組件快取中尋找和使用組件。</span><span class="sxs-lookup"><span data-stu-id="5f89f-120">Since the path to the dependent assembly is not specified in the assembly manifest, the application can be started on the target computer and will find and use the assembly in the global assembly cache.</span></span>  
   
- <span data-ttu-id="2eb74-121">即使編譯器可以參考組件，也不表示通用語言執行平台都能夠在執行階段尋找和載入組件。</span><span class="sxs-lookup"><span data-stu-id="2eb74-121">Because the compiler can reference the assembly does not imply the common language runtime will be able to find and load the assembly at runtime.</span></span> <span data-ttu-id="2eb74-122">如需執行階段如何搜尋參考組件的詳細資訊，請參閱[執行階段如何找出組件](../../../framework/deployment/how-the-runtime-locates-assemblies.md)。</span><span class="sxs-lookup"><span data-stu-id="2eb74-122">See [How the Runtime Locates Assemblies](../../../framework/deployment/how-the-runtime-locates-assemblies.md) for details on how the runtime searches for referenced assemblies.</span></span>  
+ <span data-ttu-id="5f89f-121">即使編譯器可以參考組件，也不表示通用語言執行平台都能夠在執行階段尋找和載入組件。</span><span class="sxs-lookup"><span data-stu-id="5f89f-121">Because the compiler can reference the assembly does not imply the common language runtime will be able to find and load the assembly at runtime.</span></span> <span data-ttu-id="5f89f-122">如需執行階段如何搜尋參考組件的詳細資訊，請參閱[執行階段如何找出組件](../../../framework/deployment/how-the-runtime-locates-assemblies.md)。</span><span class="sxs-lookup"><span data-stu-id="5f89f-122">See [How the Runtime Locates Assemblies](../../../framework/deployment/how-the-runtime-locates-assemblies.md) for details on how the runtime searches for referenced assemblies.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="2eb74-123">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="2eb74-123">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="5f89f-123">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="5f89f-123">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="2eb74-124">開啟專案的 [屬性頁]  對話方塊。</span><span class="sxs-lookup"><span data-stu-id="2eb74-124">Open the project's **Property Pages** dialog box.</span></span>  
+1.  <span data-ttu-id="5f89f-124">開啟專案的 [屬性頁]  對話方塊。</span><span class="sxs-lookup"><span data-stu-id="5f89f-124">Open the project's **Property Pages** dialog box.</span></span>  
   
-2.  <span data-ttu-id="2eb74-125">按一下 [參考路徑] 屬性頁。</span><span class="sxs-lookup"><span data-stu-id="2eb74-125">Click the **References Path** property page.</span></span>  
+2.  <span data-ttu-id="5f89f-125">按一下 [參考路徑] 屬性頁。</span><span class="sxs-lookup"><span data-stu-id="5f89f-125">Click the **References Path** property page.</span></span>  
   
-3.  <span data-ttu-id="2eb74-126">修改清單方塊的內容。</span><span class="sxs-lookup"><span data-stu-id="2eb74-126">Modify the contents of the list box.</span></span>  
+3.  <span data-ttu-id="5f89f-126">修改清單方塊的內容。</span><span class="sxs-lookup"><span data-stu-id="5f89f-126">Modify the contents of the list box.</span></span>  
   
- <span data-ttu-id="2eb74-127">如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>。</span><span class="sxs-lookup"><span data-stu-id="2eb74-127">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.</span></span>  
+ <span data-ttu-id="5f89f-127">如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>。</span><span class="sxs-lookup"><span data-stu-id="5f89f-127">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2eb74-128">範例</span><span class="sxs-lookup"><span data-stu-id="2eb74-128">Example</span></span>  
- <span data-ttu-id="2eb74-129">編譯 t2.cs 以建立 .exe 檔。</span><span class="sxs-lookup"><span data-stu-id="2eb74-129">Compile t2.cs to create an .exe file.</span></span> <span data-ttu-id="2eb74-130">編譯器會在工作目錄和 C 磁碟機的根目錄中尋找組件參考。</span><span class="sxs-lookup"><span data-stu-id="2eb74-130">The compiler will look in the working directory and in the root directory of the C drive for assembly references.</span></span>  
+## <a name="example"></a><span data-ttu-id="5f89f-128">範例</span><span class="sxs-lookup"><span data-stu-id="5f89f-128">Example</span></span>  
+ <span data-ttu-id="5f89f-129">編譯 t2.cs 以建立 .exe 檔。</span><span class="sxs-lookup"><span data-stu-id="5f89f-129">Compile t2.cs to create an .exe file.</span></span> <span data-ttu-id="5f89f-130">編譯器會在工作目錄和 C 磁碟機的根目錄中尋找組件參考。</span><span class="sxs-lookup"><span data-stu-id="5f89f-130">The compiler will look in the working directory and in the root directory of the C drive for assembly references.</span></span>  
   
 ```console  
 csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2eb74-131">請參閱</span><span class="sxs-lookup"><span data-stu-id="2eb74-131">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f89f-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5f89f-131">See also</span></span>
 
-- [<span data-ttu-id="2eb74-132">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="2eb74-132">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="2eb74-133">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="2eb74-133">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="5f89f-132">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="5f89f-132">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="5f89f-133">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="5f89f-133">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
