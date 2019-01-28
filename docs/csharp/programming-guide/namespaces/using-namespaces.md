@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: d29de118e928522dcc3a4b4ab32fe2d2c4d1f2f9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e52e5857d9fbe70cbd71ec91f8aa0c49b0e85df8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235771"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552303"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>使用命名空間 (C# 程式設計手冊)
 C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framework 類別會使用命名空間來組織其多種類別。 其次，宣告您自己的命名空間，有助於在較大型的程式設計專案中控制類別和方法名稱的範圍。  
@@ -66,7 +66,7 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
   
  在一般情況下，使用 `::` 來參考命名空間別名，或使用 `global::` 參考全域命名空間，以及使用 `.` 來限定類型或成員。  
   
- 搭配使用 `::` 與參考型別而非命名空間的別名是錯誤的。 例如:   
+ 搭配使用 `::` 與參考型別而非命名空間的別名是錯誤的。 例如：  
   
  [!code-csharp[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]  
   
@@ -88,11 +88,11 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
   
  請參閱主題[如何：使用全域命名空間別名](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)，以取得 `global` 別名的詳細資訊。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [命名空間](../../../csharp/programming-guide/namespaces/index.md)  
-- [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [.運算子](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [::運算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [命名空間](../../../csharp/programming-guide/namespaces/index.md)
+- [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [.運算子](../../../csharp/language-reference/operators/member-access-operator.md)
+- [::運算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

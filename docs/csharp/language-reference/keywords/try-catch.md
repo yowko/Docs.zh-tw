@@ -11,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 7e48783c01a5b94f51f89d25f465f22358e7aa8f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: df4ccde0a9a377b06b8efc64cc78936a983c66cc
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240017"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083921"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# 參考)
 
@@ -163,7 +163,7 @@ static void Main()
 
 取消註解範例中的 `throw new Exception` 行來示範例外狀況處理。 工作的 `IsFaulted` 屬性設定為 `True`，工作的 `Exception.InnerException` 屬性設定為例外狀況，並在 `catch` 區塊攔截例外狀況。
 
-取消註解 `throw new OperationCancelledException` 行來示範取消非同步處理序時會發生的情況。 工作的 `IsCanceled` 屬性設定為 `true`，並在 `catch` 區塊攔截例外狀況。 在不適用這個範例的部分情況下，工作的 `IsFaulted` 屬性會設定為 `true` 而 `IsCanceled` 設為 `false`。
+取消註解 `throw new OperationCanceledException` 行來示範取消非同步處理序時會發生的情況。 工作的 `IsCanceled` 屬性設定為 `true`，並在 `catch` 區塊攔截例外狀況。 在不適用這個範例的部分情況下，工作的 `IsFaulted` 屬性會設定為 `true` 而 `IsCanceled` 設為 `false`。
 
 [!code-csharp[csAsyncExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#2)]  
 

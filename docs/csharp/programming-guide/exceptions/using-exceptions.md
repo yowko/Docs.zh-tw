@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 64e62d9c6cfcffb9ea5c0b0e05a546753278e186
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ad664f5b689a2305afc17f4b480fdc445d64e25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583454"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>使用例外狀況 (C# 程式設計手冊)
 在 C# 中，若程式在執行階段發生錯誤，會利用一種稱為例外狀況的機制，讓整個程式都得知此狀況。 例外狀況是由遇到錯誤的程式碼所擲回，並由可以更正此錯誤的程式碼所攔截。 例外狀況可由 .NET Framework Common Language Runtime (CLR) 或程式中的程式碼所擲回。 一旦擲回了例外狀況，便會在呼叫堆疊中將此訊息往上傳，直至找到例外狀況的 `catch` 陳述式為止。 未被攔截的例外狀況會由系統提供的泛型例外處理常式負責處理，這時會顯示對話方塊。  
@@ -44,7 +44,7 @@ ms.locfileid: "53240186"
   
 -   如果到達執行緒的開頭，則會終止執行緒。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)

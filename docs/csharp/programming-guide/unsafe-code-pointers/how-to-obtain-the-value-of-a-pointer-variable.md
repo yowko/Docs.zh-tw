@@ -8,12 +8,12 @@ helpviewer_keywords:
 - variables [C#], pointers
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
-ms.openlocfilehash: b20642344b34b5426512ef64bde2ab33d55136b9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5fbc925b6770bc951a0d7ec856898f62c265462e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236631"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577148"
 ---
 # <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>HOW TO：取得指標變數值 (C# 程式設計指南)
 您可以使用指標間接運算子來取得指標所指向位置的變數。 運算式會採用下列格式，其中 `p` 是指標類型：  
@@ -38,12 +38,12 @@ ms.locfileid: "53236631"
 **pChar 的值 = Z**
 **pInt 的值 = 90**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [型別](../../../csharp/language-reference/keywords/types.md)  
-- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)  
-- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
+- [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
+- [型別](../../../csharp/language-reference/keywords/types.md)
+- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)
+- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: 94e5d3fbf250f8b99560f83e14c063142ac7ad29
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b0b75a6aa47cfc169157b229c4386ed7dc1e627b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710192"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>指標的算術運算 (C# 程式設計手冊)
 本主題討論如何使用 `+` 和 `-` 算術運算子來操作指標。  
@@ -38,13 +38,13 @@ ms.locfileid: "53242096"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
-- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [C# 運算子](../../../csharp/language-reference/operators/index.md)  
-- [指標操作](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
-- [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [型別](../../../csharp/language-reference/keywords/types.md)  
-- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)  
-- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
+- [C# 運算子](../../../csharp/language-reference/operators/index.md)
+- [指標操作](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)
+- [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
+- [型別](../../../csharp/language-reference/keywords/types.md)
+- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)
+- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

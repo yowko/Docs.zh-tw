@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 752c44bcd4ded82fb2144dca684482f30371b6aa
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6a014309829d7dbd477a7ae4a658b84a3f35d91f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742415"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>泛型和反映 (C# 程式設計手冊)
 由於 Common Language Runtime (CLR) 可在執行階段存取泛型型別資訊，因此您可以使用反映取得泛型型別的相關資訊，方法和取得非泛型型別的資訊相同。 如需詳細資訊，請參閱[執行階段中的泛型](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)。  
@@ -45,9 +45,9 @@ ms.locfileid: "53244921"
 |<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|如果目前 <xref:System.Reflection.MethodInfo> 代表泛型方法的定義，則傳回 true。|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|使用類型陣列的項目取代目前泛型方法定義的類型參數，並傳回代表所產生之建構方法的 <xref:System.Reflection.MethodInfo> 物件。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [泛型](../../../csharp/programming-guide/generics/index.md)  
-- [反映和泛用類型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [泛型](../../../csharp/programming-guide/generics/index.md)
+- [反映和泛用類型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - [泛型](~/docs/standard/generics/index.md)

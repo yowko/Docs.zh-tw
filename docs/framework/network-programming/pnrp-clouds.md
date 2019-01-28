@@ -2,12 +2,12 @@
 title: PNRP 雲端
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 22401459a183d8d21e37211d942b24dbc76a6f94
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d91bf1b68b8446e2700b601d818c493b8edc1b82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742194"
 ---
 # <a name="pnrp-clouds"></a>PNRP 雲端
 PNRP「雲端」代表一組節點，可以透過網路彼此進行通訊。 「雲端」這個詞相當於「對等網格」和「點對點圖形」。  
@@ -31,6 +31,6 @@ PNRP「雲端」代表一組節點，可以透過網路彼此進行通訊。 「
   
  建立或取得雲端執行個體之後，可以向它註冊對等名稱，以建立已知對等的網格。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Net.PeerToPeer.Cloud>  
- [對等名稱解析通訊協定](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.PeerToPeer.Cloud>
+- [對等名稱解析通訊協定](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)

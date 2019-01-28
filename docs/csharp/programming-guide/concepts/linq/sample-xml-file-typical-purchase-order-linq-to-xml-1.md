@@ -1,15 +1,15 @@
 ---
-title: 範例 XML 檔：典型採購訂單 (LINQ to XML)
+title: XML 範例檔：典型的採購訂單 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: dcbfb859-24fc-4758-b01c-51d1b6f644e6
-ms.openlocfilehash: 1e4554799937861ac28166247f94c5309b773ab4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 54bff9760aa95f624047996a65e11d98b23e863d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539788"
 ---
-# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>範例 XML 檔：典型採購訂單 (LINQ to XML)
+# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>XML 範例檔：典型的採購訂單 (LINQ to XML)
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這個檔案是典型的採購訂單。  
   
 ## <a name="purchaseorderxml"></a>PurchaseOrder.xml  
@@ -51,6 +51,6 @@ ms.locfileid: "43526774"
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [範例 XML 文件 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

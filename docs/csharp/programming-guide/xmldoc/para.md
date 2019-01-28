@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: 807b2297dd1b8e00aa9b646f28fefbcb1148fe83
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e37f1b47ae1f45b29697fee220d99e6698a8c96d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498329"
 ---
 # <a name="ltparagt-c-programming-guide"></a>&lt;para&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  
@@ -35,7 +35,7 @@ ms.locfileid: "53237944"
 ## <a name="example"></a>範例  
  如需使用 \<para> 的範例，請參閱 [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

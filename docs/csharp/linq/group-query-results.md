@@ -1,14 +1,14 @@
 ---
 title: 將查詢結果分組 (C# 中的 LINQ)
 description: 了解如何使用 C# 中的 LINQ 將結果分組。
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
-ms.openlocfilehash: f768718cb1435efdc67791612776c9e9ce2b14b8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 577a358c31fcf5346e7aab7a2e2b6be10fd1beff
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798327"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857849"
 ---
 # <a name="group-query-results"></a>將查詢結果分組
 
@@ -76,11 +76,11 @@ ms.locfileid: "43798327"
 
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Linq.Enumerable.GroupBy%2A>  
-- <xref:System.Linq.IGrouping%602>  
-- [Language-Integrated Query (LINQ)](index.md)  
-- [group 子句](../language-reference/keywords/group-clause.md)  
-- [匿名類型](../programming-guide/classes-and-structs/anonymous-types.md)  
-- [在分組作業上執行子查詢](perform-a-subquery-on-a-grouping-operation.md)  
-- [建立巢狀群組](create-a-nested-group.md)  
-- [分組資料](../programming-guide/concepts/linq/grouping-data.md)  
+- <xref:System.Linq.Enumerable.GroupBy%2A>
+- <xref:System.Linq.IGrouping%602>
+- [Language-Integrated Query (LINQ)](index.md)
+- [group 子句](../language-reference/keywords/group-clause.md)
+- [匿名類型](../programming-guide/classes-and-structs/anonymous-types.md)
+- [在分組作業上執行子查詢](perform-a-subquery-on-a-grouping-operation.md)
+- [建立巢狀群組](create-a-nested-group.md)
+- [分組資料](../programming-guide/concepts/linq/grouping-data.md)

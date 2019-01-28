@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 1be7184a37e98e72118065de262d1484476d1cb8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ad6b5767c349379121352930341be5b916131e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502062"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  
@@ -58,11 +58,11 @@ ms.locfileid: "53238662"
   
  如需詳細資訊，請參閱[將 .NET Framework 元件公開給 COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) 和[範例 COM 類別](../../../csharp/programming-guide/interop/example-com-class.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Improving Interop Performance](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29) (提升 Interop 效能)  
-- [COM 和.NET 之間的互通性簡介](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net) \(機器翻譯\)  
-- [Visual Basic 中的 COM Interop 簡介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
-- [在受控碼和非受控碼之間進行封送處理](../../../../docs/framework/interop/interop-marshaling.md)  
-- [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)  
+- [Improving Interop Performance](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29) (提升 Interop 效能)
+- [COM 和.NET 之間的互通性簡介](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net) \(機器翻譯\)
+- [Visual Basic 中的 COM Interop 簡介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+- [在受控碼和非受控碼之間進行封送處理](../../../../docs/framework/interop/interop-marshaling.md)
+- [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)

@@ -2,12 +2,12 @@
 title: 了解 WebRequest 問題和例外狀況
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 14bce9e9791e74f70f9bd91fc2551f55eaabfc5e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 55ef0b0f5260c986cad01d2854202dea3755ace7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587524"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>了解 WebRequest 問題和例外狀況
 <xref:System.Net.WebRequest> 和其衍生的類別 (<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest>和 <xref:System.Net.FileWebRequest>) 會擲回例外狀況，以表示發生異常狀況。 有時候這些問題的解決方式並不明顯。  
@@ -28,7 +28,7 @@ ms.locfileid: "50200596"
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|網域名稱服務無法解析 Proxy 主機名稱。|正確設定 Proxy。 請參閱 <https://support.microsoft.com/?id=318140>。<br /><br /> 藉由將 <xref:System.Net.HttpWebRequest.Proxy%2A> 屬性設為 `null`，強制 <xref:System.Net.HttpWebRequest> 不要使用 Proxy。|  
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|伺服器的回應不是有效的 HTTP 回應。 .NET Framework 偵測到伺服器回應不符合 HTTP 1.1 RFC 時，就會發生這個問題。 回應包含不正確的標頭或不正確的標頭分隔符號時，可能會發生這個問題。RFC 2616 定義了 HTTP 1.1 和伺服器回應的有效格式。 如需詳細資訊，請參閱[網際網路工程任務推動小組 (IETF)](https://www.ietf.org/)網站上的 [RFC 2616 - 超文字傳輸通訊協定 -- HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388)。|取得交易的網路追蹤，並檢查回應中的標頭。<br /><br /> 如果您的應用程式需要伺服器回應而不剖析 (這可能是個安全性問題)，請在組態檔中將 `useUnsafeHeaderParsing` 設為 `true`。 請參閱 [\<httpWebRequest> 元素 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)。|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Net.HttpWebRequest>  
- <xref:System.Net.HttpWebResponse>  
- <xref:System.Net.Dns>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.HttpWebRequest>
+- <xref:System.Net.HttpWebResponse>
+- <xref:System.Net.Dns>

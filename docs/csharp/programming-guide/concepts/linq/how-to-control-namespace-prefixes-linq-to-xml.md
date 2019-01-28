@@ -1,15 +1,15 @@
 ---
-title: 如何：控制命名空間前置字元 (C#) (LINQ to XML)
+title: HOW TO：控制命名空間前置詞 (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: dd2a91fde868425cadbc395d6db0f913e2be600f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4664be2661e54782598345886029835108934955
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649701"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714028"
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>如何：控制命名空間前置字元 (C#) (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>HOW TO：控制命名空間前置詞 (C#) (LINQ to XML)
 這個主題描述如何在序列化 XML 樹狀時控制命名空間前置詞。  
   
  在許多情況下，不需要控制命名空間前置詞。  
@@ -54,6 +54,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

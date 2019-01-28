@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: a4dfd1bab04f32eefe82a6777ce6864d5a162e23
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 33ad1f4e260d90125d260e2ada0898be7f820b7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221865"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572964"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)
 
@@ -190,7 +190,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |----------------|-----------------|  
 |**選取資訊清單**|可讓您選擇應用程式資訊清單。 當您選擇應用程式資訊清單時，將填入此頁面上的所有其他欄位。|  
   
-## <a name="see-also"></a>請參閱  
- [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)  
- [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
- [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+## <a name="see-also"></a>另請參閱
+- [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)
+- [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
+- [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

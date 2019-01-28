@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: 11f34e230a1f953ba3d886e416f1ece4253e3c8d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6d6e84861ec48be5bccbc050624b0843947cb727
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539860"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>HOW TO：在衍生類別中引發基底類別事件 (C# 程式設計手冊)
 下列簡單的範例示範在基底類別中宣告事件的標準方式，讓事件也可以從衍生類別引發。 這個模式會在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 類別庫的 Windows Forms 類別中廣泛使用。  
@@ -23,10 +23,10 @@ ms.locfileid: "53239614"
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [事件](../../../csharp/programming-guide/events/index.md)  
-- [委派](../../../csharp/programming-guide/delegates/index.md)  
-- [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [事件](../../../csharp/programming-guide/events/index.md)
+- [委派](../../../csharp/programming-guide/delegates/index.md)
+- [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [在 Windows Forms 中建立事件處理常式](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

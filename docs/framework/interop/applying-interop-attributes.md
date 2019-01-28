@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 554ea7c54973852510e539000baf03bdce8e7bcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 590fed6a2a4e59f438dc73057973aff4539cb1aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589762"
 ---
 # <a name="applying-interop-attributes"></a>套用 Interop 屬性
 <xref:System.Runtime.InteropServices> 命名空間提供了三種類別的 Interop 專屬屬性：一種是您在設計階段套用的屬性、一種是 COM Interop 工具和 API 在轉換過程中套用的屬性，還有一種是您或 COM Interop 套用的屬性。  
@@ -30,7 +30,7 @@ ms.locfileid: "33392560"
 ## <a name="design-time-attributes"></a>設計階段屬性  
  您可以使用設計階段屬性來調整 COM Interop 工具和 API 所執行的轉換處理結果。 下表描述您可以套用到 Managed 原始程式碼的屬性。 COM Interop 工具偶爾也會套用下表所述的屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|指定類型是否應使用 Automation 封送處理器或自訂的 Proxy 和 Stub 來進行封送處理。|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|控制對類別所產生之介面的類型。|  
@@ -57,7 +57,7 @@ ms.locfileid: "33392560"
 ## <a name="conversion-tool-attributes"></a>轉換工具屬性  
  下表描述 COM Interop 工具在轉換處理期間套用的屬性。 您不會在設計階段套用這些屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|表示參數或欄位類型的 COM 別名。 可用於屬性參數、欄位或傳回值。|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|表示類別或介面的相關資訊在從型別程式庫匯入組件時遺失。|  
@@ -67,9 +67,9 @@ ms.locfileid: "33392560"
 |<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|含有原來針對這個類型從 COM 型別程式庫匯入的 **TYPEFLAGS**。|  
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|含有原來針對這個變數從 COM 類型程式庫匯入的 **VARFLAGS**。|  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Runtime.InteropServices>  
- [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [屬性](../../../docs/standard/attributes/index.md)  
- [限定互通的 .NET 類型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [封裝 COM 的組件](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.InteropServices>
+- [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [屬性](../../../docs/standard/attributes/index.md)
+- [限定互通的 .NET 類型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)
+- [封裝 COM 的組件](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae4dd9adbdad313afa53721e83d7b7d5212df91e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564288"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在 Managed 程式碼中建立原型
 本主題描述如何存取 Unmanaged 函式，並介紹數個以 Managed 程式碼來標註方法定義的屬性欄位。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)。  
@@ -79,7 +79,7 @@ using namespace System::Runtime::InteropServices;
   
  下表列出一組平台叫用的完整屬性欄位。 在每個欄位裡，資料表包含預設值以及連結，關於如何使用這些欄位來定義 Unmanaged DLL 函式的詳細資訊。  
   
-|欄位|描述|  
+|欄位|說明|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|啟用或停用自動調整對應。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|指定用來傳遞方法引數的呼叫慣例。 預設值是 `WinAPI` ，它對應至適用於 32 位元 Intel 平台的 `__stdcall` 。|  
@@ -221,12 +221,12 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [使用 Unmanaged DLL 函式](consuming-unmanaged-dll-functions.md)  
- [指定進入點](specifying-an-entry-point.md)  
- [指定字元集](specifying-a-character-set.md)  
- [平台叫用範例](platform-invoke-examples.md)  
- [平台叫用安全性考量](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
- [識別 DLL 中的函式](identifying-functions-in-dlls.md)  
- [建立類別以包裝 DLL 函式](creating-a-class-to-hold-dll-functions.md)  
- [呼叫 DLL 函式](calling-a-dll-function.md)
+## <a name="see-also"></a>另請參閱
+- [使用 Unmanaged DLL 函式](consuming-unmanaged-dll-functions.md)
+- [指定進入點](specifying-an-entry-point.md)
+- [指定字元集](specifying-a-character-set.md)
+- [平台叫用範例](platform-invoke-examples.md)
+- [平台叫用安全性考量](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))
+- [識別 DLL 中的函式](identifying-functions-in-dlls.md)
+- [建立類別以包裝 DLL 函式](creating-a-class-to-hold-dll-functions.md)
+- [呼叫 DLL 函式](calling-a-dll-function.md)

@@ -2,12 +2,12 @@
 title: 功能性程式設計與命令式程式設計的比較 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 01be2758147b84af3410709aab62a0ca89b0c9cf
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 42c80146a091bfdcff2bbf3ebe1f4ed9a9510e29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518952"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>功能性程式設計與命令式程式設計的比較 (C#)
 本主題比較與對照功能性程式設計與更傳統的命令性 (程序性) 程式設計。  
@@ -50,8 +50,8 @@ ms.locfileid: "46696439"
   
  幸而 C# 不需要完全跳到功能性程式設計，因為它同時支援命令性與功能性程式設計方法。 開發人員可以選擇哪個方法最適合特定的案例。 事實上，程式通常會結合這兩種方法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
-- [XSLT 轉換](../../../../standard/data/xml/xslt-transformations.md)  
+- [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [XSLT 轉換](../../../../standard/data/xml/xslt-transformations.md)
 - [重構為純虛擬函式 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

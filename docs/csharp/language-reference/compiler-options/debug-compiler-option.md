@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: c0e8909a1e642333e93cfea5dbfde2f6c33c5443
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: aa9e98e4ec805006c88188d1d19eb3e9781ad732
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502961"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C# 編譯器選項)
 **-debug** 選項可讓編譯器產生偵錯資訊，並將它放在一或多個輸出檔案中。  
@@ -54,7 +54,7 @@ ms.locfileid: "43470953"
   
 4.  修改 [偵錯資訊] 屬性。  
   
- 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>。  
   
 ## <a name="example"></a>範例  
  將偵錯資訊放入輸出檔案 `app.pdb` 中：  
@@ -63,7 +63,7 @@ ms.locfileid: "43470953"
 csc -debug -pdb:app.pdb test.cs  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

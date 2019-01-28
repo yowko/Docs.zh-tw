@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -publicsign compiler option [C#]
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
-ms.openlocfilehash: 01ce30b9ac5997f56f29dcbbfa43a27738fa5556
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738062"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (C# 編譯器選項)
 
@@ -41,10 +41,10 @@ ms.locfileid: "45678955"
 1. 開啟專案的 [屬性]  頁面。
 1. 修改 [僅延遲簽署] 屬性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器 -delaysign 選項](delaysign-compiler-option.md)  
-- [C# 編譯器 -keyfile 選項](keyfile-compiler-option.md)  
-- [C# 編譯器 -keycontainer 選項](keycontainer-compiler-option.md)  
-- [C# 編譯器選項](index.md)  
+- [C# 編譯器 -delaysign 選項](delaysign-compiler-option.md)
+- [C# 編譯器 -keyfile 選項](keyfile-compiler-option.md)
+- [C# 編譯器 -keycontainer 選項](keycontainer-compiler-option.md)
+- [C# 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

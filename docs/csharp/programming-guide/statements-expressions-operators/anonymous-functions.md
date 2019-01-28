@@ -7,12 +7,12 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 9e0225960f16756820cdc095668cf7acfd4395cb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 05098d1f26526c60656cca2255a2f93922c025da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613723"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>匿名函式 (C# 程式設計手冊)
 匿名函式是可用於任何需要委派類型之處的「內嵌」陳述式或運算式。 您可以使用它來初始化具名委派，或改將它傳遞給具名委派類型作為方法參數。  
@@ -36,9 +36,9 @@ ms.locfileid: "53242863"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [陳述式、運算式和運算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
-- [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [委派](../../../csharp/programming-guide/delegates/index.md)  
-- [運算式樹狀結構 (C#)](../concepts/expression-trees/index.md)  
+- [陳述式、運算式和運算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+- [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [委派](../../../csharp/programming-guide/delegates/index.md)
+- [運算式樹狀結構 (C#)](../concepts/expression-trees/index.md)

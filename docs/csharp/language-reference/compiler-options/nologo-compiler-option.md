@@ -9,12 +9,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
-ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 537091bc3865183d193e3728d8d07649e33c6ada
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663988"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (C# 編譯器選項)
 **-nologo** 選項會隱藏編譯器啟動時的登入橫幅，以及編譯期間的資訊訊息。  
@@ -30,7 +30,7 @@ ms.locfileid: "48025288"
   
  Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

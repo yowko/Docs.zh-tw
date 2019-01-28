@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: 233b0255121cf6e7a5283041d594e2d843f105fb
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: f9df40c3ca721ca97b575a05377bbac29a29aec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560603"
 ---
 # <a name="delegate-c-reference"></a>delegate (C# 參考)
 
@@ -46,12 +46,12 @@ public delegate int TestDelegate(MyType m, long num);
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
-- [參考型別](../../../csharp/language-reference/keywords/reference-types.md)  
-- [委派](../../../csharp/programming-guide/delegates/index.md)  
-- [事件](../../../csharp/programming-guide/events/index.md)  
-- [具名方法委派與匿名方法委派](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) 
+- [C# 參考](../../../csharp/language-reference/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+- [參考型別](../../../csharp/language-reference/keywords/reference-types.md)
+- [委派](../../../csharp/programming-guide/delegates/index.md)
+- [事件](../../../csharp/programming-guide/events/index.md)
+- [具名方法委派與匿名方法委派](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
 - [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

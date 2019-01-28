@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 101cd6fa044e181cf6f993fbea642c9dffe04008
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 94c90ed264c40c99b0c139948578c85e8c9855d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236852"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696343"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>HOW TO：使用平台叫用播放 WAV 檔 (C# 程式設計指南)
 下列 C# 程式碼範例說明如何在 Windows 作業系統上使用平台叫用服務來播放 .wav 音效檔。  
@@ -44,9 +44,9 @@ ms.locfileid: "53236852"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  如需詳細資訊，請參閱 [.NET 的安全性](../../../standard/security/index.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [互通性概觀](../../../csharp/programming-guide/interop/interoperability-overview.md)  
-- [詳述平台叫用](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [互通性概觀](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [詳述平台叫用](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [使用平台叫用封送處理資料](../../../framework/interop/marshaling-data-with-platform-invoke.md)

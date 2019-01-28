@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 33f79967c34736f2175e0bb6e2b5b88d211545c2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 102ed3977d56ace0dab63b1f066cc10a6fc5dfbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514058"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (C# 編譯器選項)
 **-appconfig** 編譯器選項可讓 C# 應用程式將組件應用程式組態檔 (app.config) 的位置指定到組件繫結時間的通用語言執行平台 (CLR)。  
@@ -26,7 +26,7 @@ ms.locfileid: "45698116"
   
 ## <a name="arguments"></a>引數  
  `file`  
- 必要。 包含組件繫結設定的應用程式組態檔。  
+ 必要項。 包含組件繫結設定的應用程式組態檔。  
   
 ## <a name="remarks"></a>備註  
  **-appconfig** 的其中一種用法就是進階案例；在此案例中，組件必須同時參考特定參考組件的 .NET Framework 版本以及 .NET Framework for Silverlight 版本。 例如，以 Windows Presentation Foundation (WPF) 撰寫的 XAML 設計工具，可能必須同時參考 WPF Desktop (設計工具的使用者介面) 和 Silverlight 所附的 WPF 子集。 相同的設計工具組件必須存取這兩個組件。 根據預設，不同的參考會導致編譯器錯誤，因為組件繫結關係會將兩個組件視為對等項目。  
@@ -54,7 +54,7 @@ ms.locfileid: "45698116"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
-- [\<supportPortability> 項目](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
+- [\<supportPortability> 項目](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
 - [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)

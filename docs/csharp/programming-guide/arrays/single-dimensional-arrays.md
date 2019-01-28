@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 316f8f59b86294b1f344b31f7355017ebd992362
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: b31eb8bfc5a933cc374528c9a4d7b97ad72a7412
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604210"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>一維陣列 (C# 程式設計手冊)
 
@@ -55,10 +55,10 @@ ms.locfileid: "53334752"
   
  如需實值型別和參考型別的詳細資訊，請參閱[類型](../../../csharp/language-reference/keywords/types.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Array>  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [陣列](../../../csharp/programming-guide/arrays/index.md)  
-- [多維陣列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
+- <xref:System.Array>
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [陣列](../../../csharp/programming-guide/arrays/index.md)
+- [多維陣列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
 - [不規則陣列](../../../csharp/programming-guide/arrays/jagged-arrays.md)

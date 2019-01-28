@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collectible assemblies, retrieving
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04a04e422fec14055d8ac3f50b9f2f18658a0f9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637738"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>動態類型產生的可回收組件
 
@@ -77,9 +77,9 @@ ms.locfileid: "33398254"
 - **內容繫結物件**    
    不支援內容靜態變數。 可回收組件中的類型無法擴充 <xref:System.ContextBoundObject>。 不過，可回收組件中的程式碼可以使用在其他位置定義的內容繫結物件。
 
-- **執行緒靜態資料**       
+- **執行緒靜態資料**       
    不支援執行緒靜態變數。
 
 ## <a name="see-also"></a>另請參閱
 
-[發出動態方法和組件](emitting-dynamic-methods-and-assemblies.md)
+- [發出動態方法和組件](emitting-dynamic-methods-and-assemblies.md)

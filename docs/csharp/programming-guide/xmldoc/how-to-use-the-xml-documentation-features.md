@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: ce14de1f5aef4703a0c9b3868852104dc313e728
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 893dc726f7b4ee2d2afa69f63d13d1f11a4692db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491628"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>HOW TO：使用 XML 文件功能
 
@@ -132,8 +132,8 @@ XML 文件是以 /// 開頭。 當您建立新的專案時，精靈會為您在�
     > [!NOTE]
     > XML 檔案不會提供類型和成員的完整資訊 (例如，它不會包含任何類型資訊)。 若要取得類型或成員的完整資訊，文件檔案在使用時必須能夠反映實際類型或成員。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [/doc (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
-- [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [/doc (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
+- [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

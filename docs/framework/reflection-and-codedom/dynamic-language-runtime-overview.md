@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e874d593a18be352e7053a15525f3168e7fcc9db
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8c75d0631b05e4db53308efde8fe4c70a0778ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540558"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dynamic Language Runtime 概觀
 
@@ -91,7 +91,7 @@ DLR 使用呼叫站台中的繫結器來進行通訊，不只是與 .NET Framewo
 ## <a name="dlr-documentation"></a>DLR 文件
  如需如何使用 DLR 開放原始碼版本將動態行為新增至語言的詳細資訊，或如何搭配使用動態語言與 .NET Framework 的詳細資訊，請參閱 GitHub 的 [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) 存放庫上的文件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>

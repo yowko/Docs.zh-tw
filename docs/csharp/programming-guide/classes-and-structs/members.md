@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: e8429df6ef633f11df50ee5526496f9688f845ea
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592846"
 ---
 # <a name="members-c-programming-guide"></a>成員 (C# 程式設計手冊)
 類別和結構的成員可表示其資料與行為。 類別的成員包含在所有類別中宣告的成員，以及在其繼承階層架構之所有類別中宣告的所有成員 (建構函式和完成項除外)。 基底類別中的私用成員可繼承衍生類別，但卻無法從衍生類別進行存取。  
@@ -31,17 +31,17 @@ ms.locfileid: "53245099"
 |[完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)|在 C# 中很少使用完成項。 完成項是即將從記憶體中移除物件時，由執行階段執行引擎所呼叫的方法。 它們通常用來確保任何必須發行的資源有受到妥善處理。|  
 |[巢狀型別](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|巢狀型別是在其他類型中宣告的類型。 如果某些類型包含物件，巢狀型別通常用於描述僅供該類型使用的這些物件。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [欄位](../../../csharp/programming-guide/classes-and-structs/fields.md)  
-- [索引子](../../../csharp/programming-guide/indexers/index.md)  
-- [事件](../../../csharp/programming-guide/events/index.md)  
-- [巢狀型別](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
-- [運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [欄位](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [索引子](../../../csharp/programming-guide/indexers/index.md)
+- [事件](../../../csharp/programming-guide/events/index.md)
+- [巢狀型別](../../../csharp/programming-guide/classes-and-structs/nested-types.md)
+- [運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
 - [多載運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

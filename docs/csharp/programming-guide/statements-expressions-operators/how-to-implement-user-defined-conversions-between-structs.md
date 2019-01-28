@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
-ms.openlocfilehash: 85345203982679c0ab8dc9a6ae899312204c3230
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4b38271c1aaf582c8c58b7198765b679cdfe4881
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499560"
 ---
 # <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>HOW TO：在結構之間實作使用者定義的轉換 (C# 程式設計指南)
 這個範例會定義兩個結構 `RomanNumeral` 和 `BinaryNumeral`，並示範它們的轉換。  
@@ -32,8 +32,8 @@ ms.locfileid: "53241570"
   
      執行從 `BinaryNumeral` 到 `RomanNumeral` 的轉換。 因為 `RomanNumeral` 定義 `BinaryNumeral` 的隱含轉換，所以不需要任何轉換。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 參考](../../../csharp/language-reference/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [轉換運算子](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)

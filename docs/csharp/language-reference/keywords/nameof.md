@@ -6,12 +6,12 @@ f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 61c0744168a6fef0f8c8cfb589602e7aeff0c48b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5641b31a7fe380b2d19969f4baa7a701d74de4c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638710"
 ---
 # <a name="nameof-c-reference"></a>nameof (C# 參考)
 
@@ -135,8 +135,8 @@ class C {
 
 如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)中的 [Nameof 運算式](~/_csharplang/spec/expressions.md#nameof-expressions)。 語言規格是 C# 語法及用法的限定來源。
  
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+- [C# 參考](../../../csharp/language-reference/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [typeof](../../../csharp/language-reference/keywords/typeof.md)

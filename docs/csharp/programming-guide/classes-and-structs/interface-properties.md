@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c51064f9bb5e834648e0086fd8d28f9c0bd84b61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: af80f403942f59d672854c80830e175ef7ebaff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652175"
 ---
 # <a name="interface-properties-c-programming-guide"></a>介面屬性 (C# 程式設計手冊)
 屬性可以宣告於 [interface](../../../csharp/language-reference/keywords/interface.md) 上。 介面屬性存取子的範例如下：  
@@ -23,7 +23,7 @@ ms.locfileid: "53241583"
 ## <a name="example"></a>範例  
  在此範例中，`IEmployee` 介面具有讀寫屬性 `Name` 和唯讀屬性 `Counter`。 `Employee` 類別會實作 `IEmployee` 介面，並使用這兩個屬性。 程式會讀取新員工的姓名和目前員工人數，並顯示員工姓名和計算的員工人數。  
   
- 您可以使用屬性的完整名稱，而屬性參考在其中宣告成員的介面。 例如:   
+ 您可以使用屬性的完整名稱，而屬性參考在其中宣告成員的介面。 例如：  
   
  [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
@@ -51,11 +51,11 @@ ms.locfileid: "53241583"
   
  `Employee name: Hazem Abolrous`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [使用屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [屬性與索引子之間的比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
-- [索引子](../../../csharp/programming-guide/indexers/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [使用屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [屬性與索引子之間的比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
+- [索引子](../../../csharp/programming-guide/indexers/index.md)
 - [介面](../../../csharp/programming-guide/interfaces/index.md)

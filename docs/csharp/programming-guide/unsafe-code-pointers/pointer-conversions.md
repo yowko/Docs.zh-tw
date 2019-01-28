@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 13330e5417f75a3108e31af415465c2ed6f118d9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8fa1c1442d146c9d2fbdb2fa969b2e29d7ef765d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498303"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>指標轉換 (C# 程式設計手冊)
 下表顯示預先定義的隱含指標轉換。 在許多情況下可能會發生隱含轉換，包括方法叫用和指派陳述式。  
@@ -39,12 +39,12 @@ ms.locfileid: "53241953"
   
  [!code-csharp[csProgGuidePointers#4](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_2.cs)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [型別](../../../csharp/language-reference/keywords/types.md)  
-- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)  
-- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
+- [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
+- [型別](../../../csharp/language-reference/keywords/types.md)
+- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)
+- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

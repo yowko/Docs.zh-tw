@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 19d8d20ae630573b44399f8f5c5351f02b9fb1df
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e01f8d5e8868c11a88d99c42fba06d8fefa5dc92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491684"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>HOW TO：使用全域命名空間別名 (C# 程式設計指南)
 成員可能會被具有相同名稱的另一個實體隱藏時，能夠存取全域[命名空間](../../../csharp/language-reference/keywords/namespace.md)中的成員就很有用。  
@@ -46,10 +46,10 @@ ms.locfileid: "53236600"
 **B 2**
 **C 3**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [命名空間](../../../csharp/programming-guide/namespaces/index.md)  
-- [.運算子](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [::運算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [命名空間](../../../csharp/programming-guide/namespaces/index.md)
+- [.運算子](../../../csharp/language-reference/operators/member-access-operator.md)
+- [::運算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

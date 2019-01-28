@@ -2,12 +2,12 @@
 title: LINQ to XML 座標軸概觀 (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: 1eabd6a171637b85a5d22afa209e6c80dbbb9f4c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 73587e0637e562ce4a35f9ec92a407928e0ad885
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503054"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML 座標軸概觀 (C#)
 建立 XML 樹狀結構，或將 XML 文件載入到 XML 樹狀結構後，您可以進行查詢以尋找項目和屬性並擷取其值。 您可以透過「座標軸方法」擷取集合，也稱為「座標軸」。 有些座標軸是 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 類別中，傳回 <xref:System.Collections.Generic.IEnumerable%601> 集合的方法。 有些座標軸是 <xref:System.Xml.Linq.Extensions> 類別中的擴充方法。 當做擴充方法實作的座標軸會在集合上運算，然後傳回集合。  
@@ -23,7 +23,7 @@ ms.locfileid: "44211706"
 ## <a name="methods-for-retrieving-a-collection-of-elements"></a>擷取項目集合的方法  
  下列為 <xref:System.Xml.Linq.XElement> 類別 (或其基礎類別) 之方法的摘要，您可以在 <xref:System.Xml.Linq.XElement> 上呼叫這些方法來傳回項目的集合。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|傳回此項目祖系之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回其祖系具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
 |<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|傳回此項目子代之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回其子代具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
@@ -36,24 +36,24 @@ ms.locfileid: "44211706"
 ## <a name="method-for-retrieving-a-single-element"></a>擷取單一項目的方法  
  下列方法會從 <xref:System.Xml.Linq.XElement> 物件擷取單一子系。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|傳回具有指定之 <xref:System.Xml.Linq.XElement> 的第一個 <xref:System.Xml.Linq.XName> 子物件。|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>擷取屬性集合的方法  
  下列方法會從 <xref:System.Xml.Linq.XElement> 物件擷取屬性。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|傳回所有屬性之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XAttribute>。|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>擷取單一屬性的方法  
  下列方法會從 <xref:System.Xml.Linq.XElement> 物件擷取單一屬性。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|傳回具有指定之 <xref:System.Xml.Linq.XAttribute> 的 <xref:System.Xml.Linq.XName>。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ to XML 座標軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

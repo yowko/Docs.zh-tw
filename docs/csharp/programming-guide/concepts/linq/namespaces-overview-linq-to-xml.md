@@ -2,12 +2,12 @@
 title: 命名空間概觀 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
-ms.openlocfilehash: 4d422d9f72eb3297cffda72c441d6370d519f450
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 233b8ee23a5a587957f514ccc6586bdf96072511
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620574"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>命名空間概觀 (LINQ to XML)
 本主題說明命名空間 <xref:System.Xml.Linq.XName> 類別與 <xref:System.Xml.Linq.XNamespace> 類別。  
@@ -23,6 +23,6 @@ ms.locfileid: "45698428"
   
  如需詳細資訊，請參閱 <xref:System.Xml.Linq.XNamespace> 與 <xref:System.Xml.Linq.XName>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

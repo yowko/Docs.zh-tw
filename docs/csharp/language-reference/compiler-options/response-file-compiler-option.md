@@ -7,12 +7,12 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: f342f26ee8abe29e6c5a1477469c8b7292cd702e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 32a06c596c44cdf28e5c1bb3422b9cf8262f2c08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738088"
 ---
 # <a name="-c-compiler-options"></a>@ (C# 編譯器選項)
 @ 選項可讓您指定檔案，內含要編譯的編譯器選項和原始程式碼檔。  
@@ -30,7 +30,7 @@ ms.locfileid: "44259804"
 ## <a name="remarks"></a>備註  
  編譯器將會處理編譯器選項和原始程式碼檔，就像已在命令列上指定它們一樣。  
   
- 若要在編譯中指定多個回應檔，請指定多個回應檔選項。 例如:   
+ 若要在編譯中指定多個回應檔，請指定多個回應檔選項。 例如：  
   
 ```  
 @file1.rsp @file2.rsp  
@@ -54,6 +54,6 @@ ms.locfileid: "44259804"
 -target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
 - [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)

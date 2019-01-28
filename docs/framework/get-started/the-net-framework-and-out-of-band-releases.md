@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d968283bb2a39e2a366adc8713fa64fa1c87cd60
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6605809f984a4a1323f555cd73ecb04a67830f46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582054"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 和 Out-of-Band 發行版本
 
@@ -44,7 +44,7 @@ ms.locfileid: "50193977"
 
 4.  在右窗格中，使用 [搜尋] 方塊尋找您要使用的套件。 某些 Microsoft 套件已獲得 Microsoft .NET Framework 標誌識別，而且所有套件都會將 Microsoft 識別為發行者。
 
- ![NuGet 套件管理員](../../../docs/framework/get-started/media/clrnugetdialog.png "clrNugetDialog")
+ ![NuGet 封裝管理員](../../../docs/framework/get-started/media/clrnugetdialog.png "clrNugetDialog")
 
  如前面所述，當您部署使用 OOB 套件的應用程式時，OOB 組件會隨附於應用程式套件。
 

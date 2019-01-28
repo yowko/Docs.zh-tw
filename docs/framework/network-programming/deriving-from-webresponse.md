@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: a065e04e6683279b4541d9a723ed9c7442dec9dc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f07e20bc3d81c328390ad5da43e55aab457a62a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50088594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598863"
 ---
 # <a name="deriving-from-webresponse"></a>衍生自 WebResponse
 <xref:System.Net.WebResponse> 類別是抽象的基底類別，提供基本的方法和屬性以建立有特定通訊協定回應，符合 .NET Framework 插入式通訊協定模型的處理常式。 使用 <xref:System.Net.WebRequest> 類別向資源要求資料的應用程式，會收到 **WebResponse** 的回應。 通訊協定特定的 **WebResponse** 子代必須實作 **WebResponse** 類別的抽象成員。  
@@ -38,9 +38,9 @@ ms.locfileid: "50088594"
   
  **GetResponseStream** 方法所傳回的資料流執行個體為應用程式所擁有，而且不用關閉 **WebResponse** 即可關閉。 依照慣例，呼叫 **WebResponse.Close** 方法也會關閉 **GetResponse** 傳回的資料流。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Net.WebResponse>  
- <xref:System.Net.HttpWebResponse>  
- <xref:System.Net.FileWebResponse>  
- [可插式通訊協定程式設計](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [衍生自 WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Net.WebResponse>
+- <xref:System.Net.HttpWebResponse>
+- <xref:System.Net.FileWebResponse>
+- [可插式通訊協定程式設計](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [衍生自 WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)

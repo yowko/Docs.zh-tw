@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: ee40db31aeb39a37c6ab15b26b48f1f7d02d6780
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d3e1cb9d6fb37617c6e2aa7070b006c594d39762
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661707"
 ---
 # <a name="implicit-c-reference"></a>implicit (C# 參考)
 
@@ -31,9 +31,9 @@ ms.locfileid: "53240576"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)  
-- [C# 程式設計指南](../../programming-guide/index.md)  
-- [C# 關鍵字](index.md)  
-- [explicit](explicit.md)  
-- [operator (C# 參考)](operator.md)  
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 關鍵字](index.md)
+- [explicit](explicit.md)
+- [operator (C# 參考)](operator.md)
 - [如何：在結構之間實作使用者定義的轉換](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
