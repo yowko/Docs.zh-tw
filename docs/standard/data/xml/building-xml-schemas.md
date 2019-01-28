@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10b2471d13d410826cec3404725117649442297b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 451893cf09b0d1ebdfb33d0020376aa35240b6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842615"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650989"
 ---
 # <a name="building-xml-schemas"></a>建置 XML 結構描述
 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的類別會對應至全球資訊網協會 (W3C) XML 結構描述建議事項中定義的結構，並可用於建置記憶體中的 XML 結構描述。  
@@ -90,10 +90,10 @@ ms.locfileid: "48842615"
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
-- [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [後結構描述編譯資訊集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

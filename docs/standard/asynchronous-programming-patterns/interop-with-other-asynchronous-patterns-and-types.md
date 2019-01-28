@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05b53016712f75e45636979d77bfd27116ce8e14
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 4f6cb2d387e3b979ed0d4407e17287fb93fa0a20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678339"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interop 與其他非同步模式和類型
 .NET Framework 1.0 導入了 <xref:System.IAsyncResult> 模式，亦稱為 [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)或 `Begin/End` 模式。  .NET Framework 2.0 加入了 [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。  從 .NET Framework 4 開始， [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 取代了 APM 和 EAP，但是可讓您從較早的模式輕鬆建置移轉常式。  
@@ -115,6 +115,6 @@ ms.locfileid: "48850657"
   
 ## <a name="see-also"></a>另請參閱
 
-- [工作式非同步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
-- [實作以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
+- [工作式非同步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
+- [實作以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
 - [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)

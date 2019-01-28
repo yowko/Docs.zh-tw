@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617911"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>同步處理多執行緒處理的資料
 當多個執行緒可以對單一物件的屬性和方法進行呼叫時，請務必同步處理這些呼叫。 否則某個執行緒可能會中斷另一個執行緒正在執行的作業，而且物件可能會處於無效狀態。 其成員受到保護免於這種中斷的類別，稱為安全執行緒。  
@@ -34,7 +34,7 @@ ms.locfileid: "48842654"
 |分類|全域欄位|靜態欄位|靜態方法|執行個體欄位|執行個體方法|特定程式碼區塊|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |沒有同步處理|否|否|否|否|否|否|  
-|同步處理的內容|否|否|否|[是]|[是]|否|  
+|同步處理的內容|否|否|否|是|是|否|  
 |同步程式碼區域|否|否|只有當標記時|否|只有當標記時|只有當標記時|  
 |手動同步處理|手動|手動|手動|手動|手動|手動|  
   
@@ -69,8 +69,8 @@ ms.locfileid: "48842654"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
-- [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)  
-- [同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
-- [SyncLock 陳述式](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
+- [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)
+- [同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [SyncLock 陳述式](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
 - [lock 陳述式](~/docs/csharp/language-reference/keywords/lock-statement.md)

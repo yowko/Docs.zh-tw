@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cbf7db4d9369eade62767e55035df4118d5248ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47235279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646642"
 ---
 # <a name="managed-thread-states"></a>Managed 執行緒狀態
 屬性 <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> 提供位元遮罩，表示執行緒的目前狀態。 執行緒一律是在 <xref:System.Threading.ThreadState> 列舉至少一個可能的狀態中，而且可能同時在多個狀態中。  
@@ -28,10 +28,10 @@ ms.locfileid: "47235279"
 |------------|-------------------------|  
 |呼叫 <xref:System.Threading.Thread> 類別的建構函式。|<xref:System.Threading.ThreadState.Unstarted>|  
 |另一個執行緒呼叫 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>。|<xref:System.Threading.ThreadState.Unstarted>|  
-|執行緒回應 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>，並開始執行。|<xref:System.Threading.ThreadState.Running>|  
+|執行緒回應 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> ，並開始執行。|<xref:System.Threading.ThreadState.Running>|  
 |執行緒呼叫 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
-|執行緒對另一個物件呼叫 <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType>。|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
-|執行緒對另一個執行緒呼叫 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>。|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
+|執行緒對另一個物件呼叫 <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> 。|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
+|執行緒對另一個執行緒呼叫 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> 。|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
 |另一個執行緒呼叫 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>。|<xref:System.Threading.ThreadState.SuspendRequested>|  
 |執行緒回應 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 要求。|<xref:System.Threading.ThreadState.Suspended>|  
 |另一個執行緒呼叫 <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>。|<xref:System.Threading.ThreadState.Running>|  
@@ -44,13 +44,13 @@ ms.locfileid: "47235279"
 if ((state & (Unstarted | Stopped)) == 0)   // implies Running     
 ```  
   
- 執行緒經常在任何指定時間處於多個狀態。 比方說，如果執行緒在 <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> 呼叫上被阻擋，而另一個執行緒對相同執行緒呼叫 <xref:System.Threading.Thread.Abort%2A>，執行緒就會同時處於 <xref:System.Threading.ThreadState.WaitSleepJoin> 和 <xref:System.Threading.ThreadState.AbortRequested> 狀態。 在此情況下，當執行緒從呼叫返回 <xref:System.Threading.Monitor.Wait%2A> 或是遭到中斷時，就會收到 <xref:System.Threading.ThreadAbortException>。  
+ 執行緒經常在任何指定時間處於多個狀態。 比方說，如果執行緒在 <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> 呼叫上被阻擋，而另一個執行緒對相同執行緒呼叫 <xref:System.Threading.Thread.Abort%2A> ，執行緒就會同時處於 <xref:System.Threading.ThreadState.WaitSleepJoin> 和 <xref:System.Threading.ThreadState.AbortRequested> 狀態。 在此情況下，當執行緒從呼叫返回 <xref:System.Threading.Monitor.Wait%2A> 或是遭到中斷時，就會收到 <xref:System.Threading.ThreadAbortException>。  
   
  一旦執行緒因為呼叫 <xref:System.Threading.ThreadState.Unstarted> 而離開 <xref:System.Threading.Thread.Start%2A>狀態，它便無法再回到 <xref:System.Threading.ThreadState.Unstarted> 狀態。 執行緒永遠無法離開 <xref:System.Threading.ThreadState.Stopped> 狀態。  
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Threading.ThreadAbortException>  
-- <xref:System.Threading.Thread>  
-- <xref:System.Threading.ThreadState>  
+- <xref:System.Threading.ThreadAbortException>
+- <xref:System.Threading.Thread>
+- <xref:System.Threading.ThreadState>
 - [執行緒處理](../../../docs/standard/threading/index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09088d1ac0a8312ee5832a5f3bc0547e6654de93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5718c70597acc6919c697a9033e8593865e60a2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745034"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>建立類別以包裝 DLL 函式
 將常用 DLL 函式包裝在 Managed 類別中，是封裝平台功能的有效方法。 雖然不會強制您在每個案例這麼做，但提供類別包裝函式十分方便，因為定義 DLL 函式十分麻煩又容易發生錯誤。 如果您是使用 Visual Basic 或 C# 進行程式設計，則必須在類別或 Visual Basic 模組內宣告 DLL 函式。  
@@ -36,8 +36,8 @@ ms.locfileid: "33387058"
   
  您可以依需要命名類別和其方法。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
   
-## <a name="see-also"></a>請參閱  
- [使用 Unmanaged DLL 函式](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [識別 DLL 中的函式](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
- [在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [呼叫 DLL 函式](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>另請參閱
+- [使用 Unmanaged DLL 函式](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+- [識別 DLL 中的函式](../../../docs/framework/interop/identifying-functions-in-dlls.md)
+- [在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [呼叫 DLL 函式](../../../docs/framework/interop/calling-a-dll-function.md)

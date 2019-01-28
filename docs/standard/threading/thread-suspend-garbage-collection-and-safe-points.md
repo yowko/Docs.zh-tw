@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e8f58e17-2714-4821-802a-f8eb3b2baa62
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc3af01167fe97b701bdb0c7bc37af02d8e8a77c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f3e44b81b519bcae42c2e69eff46e73b1ae631a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490800"
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a>Thread.Suspend、記憶體回收和安全點
 當您在執行緒上呼叫 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 時，系統會注意到已要求執行緒暫止，並允許執行緒在實際暫止執行緒之前執行，直到它到達安全點為止。 執行緒的安全點是在其執行中可執行記憶體回收的點。  
@@ -28,7 +28,7 @@ ms.locfileid: "46004175"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Threading.Thread>  
-- <xref:System.GC>  
-- [執行緒處理](../../../docs/standard/threading/index.md)  
+- <xref:System.Threading.Thread>
+- <xref:System.GC>
+- [執行緒處理](../../../docs/standard/threading/index.md)
 - [自動管理記憶體](../../../docs/standard/automatic-memory-management.md)

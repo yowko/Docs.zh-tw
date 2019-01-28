@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 15e7692abfe06ec9e9f91a3b229bf99971eaecc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550496"
 ---
 # <a name="rules-for-inferring-simple-types"></a>推斷簡單型別的規則
 說明 <xref:System.Xml.Schema.XmlSchemaInference> 類別如何推斷屬性和項目的資料型別。  
@@ -24,7 +24,7 @@ ms.locfileid: "49123575"
   
  下列表格列出可能出現在結果結構描述中的推斷型別。  
   
-|簡單型別|描述|  
+|簡單型別|說明|  
 |-----------------|-----------------|  
 |boolean|True、False、0、1。|  
 |byte|介於 -128 與 127 之間的整數。|  
@@ -37,8 +37,8 @@ ms.locfileid: "49123575"
 |unsignedLong|介於 0 與 18446744073709551615 之間的整數。|  
 |整數|可能會以 "-" 開頭的有限數值。|  
 |decimal|含有 0 至 28 位精準度的數值。|  
-|float|其後可以為 "E" 或 "e" 的十進位數，最後再接上代表指數的整數值。 十進位值可介於 -16777216 與 16777216 之間。 指數值可介於 –149 與 104 之間。<br /><br /> 浮點數允許用特殊的值代表無限值與非數字值。 浮點數的特殊值包括：0, -0, INF, -INF, NaN。|  
-|double|與浮點數相同，不同之處在於十進位值可介於 -9007199254740992 與 9007199254740992 之間，而指數值可介於 –1075 與 970 之間。<br /><br /> 雙精度浮點數允許用特殊的值代表無限值與非數字值。 浮點數的特殊值包括：0, -0, INF, -INF, NaN。|  
+|float|其後可以為 "E" 或 "e" 的十進位數，最後再接上代表指數的整數值。 十進位值可介於 -16777216 與 16777216 之間。 指數值可介於 –149 與 104 之間。<br /><br /> 浮點數允許用特殊的值代表無限值與非數字值。 浮點數的特殊值包括：0、-0、INF、-INF、NaN。|  
+|double|與浮點數相同，不同之處在於十進位值可介於 -9007199254740992 與 9007199254740992 之間，而指數值可介於 –1075 與 970 之間。<br /><br /> 雙精度浮點數允許用特殊的值代表無限值與非數字值。 浮點數的特殊值包括：0、-0、INF、-INF、NaN。|  
 |持續期間|W3C 期間格式。|  
 |dateTime|W3C 日期時間格式。|  
 |時間|W3C 時間格式。|  
@@ -69,7 +69,7 @@ ms.locfileid: "49123575"
 
 下列結構描述定義的屬性會在結構描述推斷期間遭到忽略。  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`xsi:type`|若發現項目指定了 `xsi:type`，則 `xsi:type` 將被忽略。|  
 |`xsi:nil`|若發現項目具有 `xsi:nil` 屬性，表示其推斷結構描述中的項目宣告具有 `nillable="true"` 值。 將 `xsi:nil` 屬性設為 `true` 的項目不能有子項目。|  
@@ -78,6 +78,6 @@ ms.locfileid: "49123575"
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
-- [從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [推斷結構描述節點類型和結構的規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

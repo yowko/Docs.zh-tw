@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 219327d246416cfb3d76919680aa74a58bae5fb3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 72cbcf1294f3d13f406d8db177f66fdc367c0758
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724443"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 修改 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供一組可用於修改 XML 文件中節點及值的方法。 為了使用這些方法，<xref:System.Xml.XPath.XPathNavigator> 物件必須是可編輯的，也就是說，它的 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 屬性必須為 `true`。  
@@ -250,9 +250,9 @@ Console.WriteLine(navigator.OuterXml);
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [使用 XPathNavigator 插入 XML 資料](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [使用 XPathNavigator 插入 XML 資料](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)
 - [使用 XPathNavigator 移除 XML 資料](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc07779f03784cd32524e1b1189faae343710a05
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 376dd9df4666193f8e5a6be83f3fcaf5dc32f1a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865783"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544597"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>將字串轉換成 .NET Framework 資料型別
 若要將一個字串轉換成 .NET Framework 資料型別，請使用符合應用程式需求的 **XmlConvert** 方法。 如需所有可用於 **XmlConvert** 類別的轉換方法清單，請參閱 <xref:System.Xml.XmlConvert>。  
@@ -35,7 +35,7 @@ ms.locfileid: "43865783"
 > [!NOTE]
 >  若使用 **ToString** 方法將上表所列的任何 .NET Framework 型別轉換成字串，則傳回的字串將會是 XML 結構描述 (XSD) 字串型別，而不是基底型別。  
   
- **DateTime** 和 **Timespan** 數值型別的差別在於，**DateTime** 代表某一個時間，而 **TimeSpan** 代表時間間隔。 **DateTime** 和 **Timespan** 格式已指定於 XML 結構描述 (XSD) 資料型別規格中。 例如:   
+ **DateTime** 和 **Timespan** 數值型別的差別在於，**DateTime** 代表某一個時間，而 **TimeSpan** 代表時間間隔。 **DateTime** 和 **Timespan** 格式已指定於 XML 結構描述 (XSD) 資料型別規格中。 例如：  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -135,5 +135,5 @@ writer.WriteElementString("Infinity", XmlConvert.ToString(value));
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 資料類型轉換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+- [XML 資料類型轉換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
 - [將 .NET Framework 類型轉換成字串](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

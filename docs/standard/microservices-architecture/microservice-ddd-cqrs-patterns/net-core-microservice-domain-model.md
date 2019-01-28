@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 進入 DDD 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: a0b3e75c6a93aebf979b8df758fe37460c046a15
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 884a558827e0e016e27315cee1ea9ed3e0d03dc4
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415932"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065904"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 實作微服務領域模型 
 
@@ -169,7 +169,7 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 ### <a name="additional-resources"></a>其他資源
 
 - **Vaughn Vernon：使用 DDD 及 Entity Framework 為彙總建立模型** 請注意，這*並非* Entity Framework Core。 \
-  [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
+  <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
 - **Julie Lerman。針對領域驅動設計撰寫程式碼：進行資料型開發的祕訣** \
   [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)

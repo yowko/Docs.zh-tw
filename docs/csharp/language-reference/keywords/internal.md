@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 48e7dcfd5bbe569a37ceb3ec746e7c3e53a7cdd9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8d787f8deb8f3b7d1e59d99e71662960a5c04e15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652081"
 ---
 # <a name="internal-c-reference"></a>internal (C# 參考)
 `internal` 關鍵字是類型和類型成員的[存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)。 
@@ -91,14 +91,14 @@ public class TestAccess
 
 如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[已宣告存取範圍](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
-- [存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)  
-- [存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)  
-- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
-- [public](../../../csharp/language-reference/keywords/public.md)  
-- [private](../../../csharp/language-reference/keywords/private.md)  
+- [C# 參考](../../../csharp/language-reference/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+- [存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)
+- [存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)
+- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)
+- [public](../../../csharp/language-reference/keywords/public.md)
+- [private](../../../csharp/language-reference/keywords/private.md)
 - [protected](../../../csharp/language-reference/keywords/protected.md)

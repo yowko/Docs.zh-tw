@@ -21,12 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: bdc63064d3f0d809c196e77a890ba697f9d4deea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 48794898eb1a3e13454a335a2335fac57d8faf3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561643"
 ---
 # <a name="configuring-internet-applications"></a>設定網際網路應用程式
 [\<system.Net> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 組態項目包含應用程式的網路組態資訊。 使用 [\<system.Net> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 項目，您可以設定 Proxy 伺服器、設定連線管理參數，以及在應用程式中包含自訂驗證和要求模組。  
@@ -97,7 +97,7 @@ ms.locfileid: "50197232"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
- [網路設定結構描述](../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [\<system.Net> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+## <a name="see-also"></a>另請參閱
+- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)
+- [網路設定結構描述](../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [\<system.Net> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

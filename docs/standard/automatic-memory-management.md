@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e343d48b5e50fdaef3a3667f066894dea03eeb80
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e80e524a8bac28195067ce6bd30504005fc4b5a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991333"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592532"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 自動記憶體管理是 Common Language Runtime 在 [Managed 執行](../../docs/standard/managed-execution-process.md)期間所提供的一項服務。 Common Language Runtime 的記憶體回收行程會管理應用程式記憶體的配置和釋放。 這表示開發人員在開發 Managed 應用程式時，不需要撰寫程式碼來執行記憶體管理工作。 自動記憶體管理可排除一些常見的問題，例如，忘記釋放物件而造成記憶體流失 (Memory Leak)，或嘗試存取已經釋放物件的記憶體。 本章節將描述記憶體回收行程如何配置和釋放記憶體。  
@@ -38,7 +38,7 @@ ms.locfileid: "45991333"
  為了改善效能，Runtime 會為大型物件配置不同堆積中的記憶體。 記憶體回收行程會自動釋放大型物件的記憶體。 但是，為了避免移動記憶體中的大型物件，因此不會壓縮記憶體。  
   
 ## <a name="generations-and-performance"></a>層代和效能  
- 為了要最佳化記憶體回收行程的效能，Managed 堆積分成三個層代 (Generation)：0、1 和 2。 執行階段的記憶體回收演算法，是根據電腦軟體產業利用實驗記憶體回收配置所發現的數個通用原理。 首先，壓縮部分 Managed 堆積的記憶體比壓縮整個 Managed 堆積要快。 其次，較新物件的存留期 (Lifetime) 較短，較舊物件的存留期較長。 最後，較新的物件通常都會彼此相關，而且應用程式也會同時存取。  
+ 為了要最佳化記憶體回收行程的效能，受控堆積分成三個世代：0、1 和 2。 執行階段的記憶體回收演算法，是根據電腦軟體產業利用實驗記憶體回收配置所發現的數個通用原理。 首先，壓縮部分 Managed 堆積的記憶體比壓縮整個 Managed 堆積要快。 其次，較新物件的存留期 (Lifetime) 較短，較舊物件的存留期較長。 最後，較新的物件通常都會彼此相關，而且應用程式也會同時存取。  
   
  執行階段的記憶體回收行程會將新的物件儲存在第 0 個層代。 在應用程式存留期初期建立的物件則會升階並儲存在第 1 個和第 2 個層代。 物件提升的程序會在這個主題稍後加以說明。 由於壓縮部分 Managed 堆積比壓縮整個堆積要快，因此這種配置允許記憶體回收行程釋放指定層代的記憶體，而不是在每次執行回收時釋放整個 Managed 堆積的記憶體。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "45991333"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.GC>  
-- [記憶體回收](../../docs/standard/garbage-collection/index.md)  
+- <xref:System.GC>
+- [記憶體回收](../../docs/standard/garbage-collection/index.md)
 - [Managed 執行程序](../../docs/standard/managed-execution-process.md)

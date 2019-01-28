@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86376919d7456167c58ada4145d213b39e050e33
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 20050eb3eb5fe41778d7a979f94cdd258650b33e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588921"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 <xref:System.Threading.EventWaitHandle> 類別可讓執行緒藉由發出訊號及等候訊號來互相進行通訊。 事件等候控制代碼 (也簡單稱為事件) 是可接收訊號來釋出一或多個等候執行緒的等候控制代碼。 收到訊號之後，可以手動或自動重設事件等候控制代碼。 <xref:System.Threading.EventWaitHandle> 類別可以代表本機事件等候控制代碼 (本機事件) 或具名的系統事件等候控制代碼 (所有處理序都可看見的具名事件或系統事件)。  
@@ -64,8 +64,8 @@ ms.locfileid: "46702773"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Threading.EventWaitHandle>  
-- <xref:System.Threading.WaitHandle>  
-- <xref:System.Threading.AutoResetEvent>  
-- <xref:System.Threading.ManualResetEvent>  
+- <xref:System.Threading.EventWaitHandle>
+- <xref:System.Threading.WaitHandle>
+- <xref:System.Threading.AutoResetEvent>
+- <xref:System.Threading.ManualResetEvent>
 - [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)

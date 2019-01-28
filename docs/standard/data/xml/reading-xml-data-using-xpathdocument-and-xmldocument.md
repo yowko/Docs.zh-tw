@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69e22328c39ae68acc4baff12775b49fbac80696
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 68d19784bab8a5d5a1994ea139b5631f56c7c680
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580417"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>使用 XPathDocument 及 XmlDocument 讀取 XML 資料
 讀取 <xref:System.Xml.XPath?displayProperty=nameWithType> 命名空間中的 XML 文件有兩種方式。 一種是使用唯讀的 <xref:System.Xml.XPath.XPathDocument> 類別讀取 XML 文件，另一種是使用 <xref:System.Xml.XmlDocument> 命名空間中可編輯的 <xref:System.Xml?displayProperty=nameWithType> 類別讀取 XML 文件。  
@@ -74,10 +74,10 @@ document.Load("books.xml");
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [使用 XPathNavigator 存取 XML 資料](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
-- [使用 XPathNavigator 編輯 XML 資料](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [使用 XPathNavigator 存取 XML 資料](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
+- [使用 XPathNavigator 編輯 XML 資料](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)
 - [使用 XPathNavigator 進行結構描述驗證](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)

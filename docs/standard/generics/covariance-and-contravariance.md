@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692960"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的共變數和反變數
 <a name="top"></a> 共變數和反變數這兩個詞，是指使用比原本所指定更多 (較明確) 或更少 (較不明確) 衍生類型的能力。 泛型類型參數支援共變數和反變數，可在指派和使用泛型類型時提供更大的彈性。 當您參考類型系統時，共變數、反變數和不可變數的定義如下。 範例中會假設名為 `Base` 的基底類別，以及名為 `Derived`的衍生類別。  
@@ -172,11 +172,11 @@ ms.locfileid: "44038740"
   
 |類型|Covariant 類型參數|Contravariant 類型參數|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%601> 至 <xref:System.Action%6016>||[是]|  
+|<xref:System.Action%601> 至 <xref:System.Action%6016>||是|  
 |<xref:System.Comparison%601>||[是]|  
 |<xref:System.Converter%602>|[是]|[是]|  
-|<xref:System.Func%601>|[是]||  
-|<xref:System.Func%602> 至 <xref:System.Func%6017>|[是]|[是]|  
+|<xref:System.Func%601>|是||  
+|<xref:System.Func%602> 至 <xref:System.Func%6017>|是|[是]|  
 |<xref:System.IComparable%601>||[是]|  
 |<xref:System.Predicate%601>||[是]|  
 |<xref:System.Collections.Generic.IComparer%601>||[是]|  
@@ -186,10 +186,10 @@ ms.locfileid: "44038740"
 |<xref:System.Linq.IGrouping%602>|[是]||  
 |<xref:System.Linq.IOrderedEnumerable%601>|[是]||  
 |<xref:System.Linq.IOrderedQueryable%601>|[是]||  
-|<xref:System.Linq.IQueryable%601>|[是]||  
+|<xref:System.Linq.IQueryable%601>|是||  
   
 ## <a name="see-also"></a>另請參閱
 
-- [共變數和反變數 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
-- [共變數和反變數 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
+- [共變數和反變數 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
+- [共變數和反變數 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 - [委派中的變異數](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982863"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066316"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 <a name="top"></a> 在 Common Language Runtime (CLR) 中，記憶體回收行程會當做自動記憶體管理員。 它提供了下列優點：  
@@ -98,7 +98,7 @@ ms.locfileid: "50982863"
   
  每個 Managed 處理序都有一個 Managed 堆積。 處理序中的所有執行緒都會對相同堆積上的物件配置記憶體。  
   
- 為節省記憶體，記憶體回收行程會呼叫 Win32 [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) 函式，並且針對 Managed 應用程式一次保留一個記憶體區段。 記憶體回收行程也會視需要保留區段，並且透過呼叫 Win32 [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) 函式，將區段釋放回作業系統 (在清除任何物件的區段之後)。  
+ 為節省記憶體，記憶體回收行程會呼叫 Win32 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 函式，並且針對 Managed 應用程式一次保留一個記憶體區段。 記憶體回收行程也會視需要保留區段，並且透過呼叫 Win32 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) 函式，將區段釋放回作業系統 (在清除任何物件的區段之後)。  
   
 > [!IMPORTANT]
 >  記憶體回收行程所配置的區段大小是依實作而定，有可能在任何時間，包括在定期更新時做變更。 您的應用程式永遠都不應該對相關或根據特定區段的大小做出假設，也不應嘗試設定區段配置的可用記憶體數量。  

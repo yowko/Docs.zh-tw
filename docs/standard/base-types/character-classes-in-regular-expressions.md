@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: c82d4aac75fb31ec7741338fde046daefc754394
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622945"
 ---
 # <a name="character-classes-in-regular-expressions"></a>規則運算式中的字元類別
 <a name="Top"></a> 字元類別會定義一組字元，其中任何字元都可在輸入字串中出現，以便讓比對成功。 .NET 中的規則運算式語言支援下列字元類別：  
@@ -160,7 +160,7 @@ ms.locfileid: "53131465"
 ## <a name="any-character-"></a>任何字元：  
  句號字元 (.) 會比對 `\n` (新行字元 \u000A) 以外任何具有下列兩項資格的字元：  
   
--   如果 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項修改了規則運算式模式，或是 `.` 選項修改了模式中包含 `s` 字元類別的部分，`.` 就會符合任何字元。 如需詳細資訊，請參閱 [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md)。  
+-   如果 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項修改了規則運算式模式，或是 `.` 選項修改了模式中包含 `s` 字元類別的部分，`.` 就會符合任何字元。 如需詳細資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。  
   
      下列範例將示範 `.` 字元類別的預設行為與使用 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項的行為有何不同。 規則運算式 `^.+` 會從字串開頭開始，比對每一個字元。 根據預設，比對會在第一行結尾結束。規則運算式模式會比對歸位字元 `\r` 或 \u000D，但不會比對 `\n`。 由於 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項會將整個輸入字串解譯為單行，因此它會比對輸入字串中的每個字元，包括 `\n`。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "53131465"
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  由於它會比對任何字元，因此如果規則運算式模式嘗試多次比對任何字元，`.` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+>  由於它會比對任何字元，因此如果規則運算式模式嘗試多次比對任何字元，`.` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  [回到頁首](#Top)  
   
@@ -248,7 +248,7 @@ ms.locfileid: "53131465"
  如果指定了符合 ECMAScript 的行為，`\w` 就等於 `[a-zA-Z_0-9]`。 如需 ECMAScript 規則運算式的資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)中的＜ECMAScript 相符行為＞一節。  
   
 > [!NOTE]
->  由於它會比對任何文字字元，因此，如果規則運算式模式嘗試多次比對任何文字字元且後面接著特定文字字元，`\w` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+>  由於它會比對任何文字字元，因此，如果規則運算式模式嘗試多次比對任何文字字元且後面接著特定文字字元，`\w` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  下列範例會使用 `\w` 語言項目比對文字中重複的字元。 這個範例會定義規則運算式模式 `(\w)\1`，該模式解譯如下。  
   
@@ -286,7 +286,7 @@ ms.locfileid: "53131465"
  如果指定了符合 ECMAScript 的行為，`\W` 就等於 `[^a-zA-Z_0-9]`。 如需 ECMAScript 規則運算式的資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)中的＜ECMAScript 相符行為＞一節。  
   
 > [!NOTE]
->  由於它會比對任何非文字字元，因此，如果規則運算式模式嘗試多次比對任何非文字字元，且後面接著特定非文字字元，`\W` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+>  由於它會比對任何非文字字元，因此，如果規則運算式模式嘗試多次比對任何非文字字元，且後面接著特定非文字字元，`\W` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  以下範例將說明 `\W` 字元類別。  它會定義規則運算式模式 `\b(\w+)(\W){1,2}`，該模式會比對後面接一個或多個非文字字元的文字，例如空白字元或標點符號。 規則運算式的解譯方式如下表所示。  
   
@@ -326,7 +326,7 @@ ms.locfileid: "53131465"
 |\b|開始字緣比對。|  
 |\w+|比對一個或多個文字字元。|  
 |(e)?|比對 "e" 零次或一次。|  
-|s|比對 "s"。|  
+|秒|比對 "s"。|  
 |(\s&#124;$)|比對空白字元或輸入字串的結尾。|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
@@ -594,6 +594,6 @@ ms.locfileid: "53131465"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Char.GetUnicodeCategory%2A>  
-- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- <xref:System.Char.GetUnicodeCategory%2A>
+- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)

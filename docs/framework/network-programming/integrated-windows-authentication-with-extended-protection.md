@@ -2,12 +2,12 @@
 title: 具有延伸保護的整合式 Windows 驗證
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: e07bc903a60dfff5e9caaf93f9c2bfd579541a96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189702"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591613"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>具有延伸保護的整合式 Windows 驗證
 已建立的增強功能會影響 <xref:System.Net> 中的 <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream> 和相關類別以及相關命名空間處理整合式 Windows 驗證的方式。 為加強安全性，擴充保護已新增支援。  
@@ -148,6 +148,6 @@ ms.locfileid: "50189702"
   
  伺服器應用程式也可以使用這些擴充的保護功能，搭配其他類型的要求進行驗證，以及在使用受信任的 Proxy 時進行驗證。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Security.Authentication.ExtendedProtection>  
- <xref:System.Security.Authentication.ExtendedProtection.Configuration>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Security.Authentication.ExtendedProtection>
+- <xref:System.Security.Authentication.ExtendedProtection.Configuration>

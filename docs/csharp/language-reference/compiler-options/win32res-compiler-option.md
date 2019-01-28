@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 96b0b089843495d35a54db43018688dbb4ffba2b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 522d80ce6be277c048fa62cc1a7b077d8bb08bfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544697"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (C# 編譯器選項)
 **-win32res** 選項會將 Win32 資源插入至輸出檔案中。  
@@ -51,7 +51,7 @@ ms.locfileid: "43507506"
 csc -win32res:rf.res in.cs  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17e8e00afd759a3408ca54930c15d0b8797ff947
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 57f62f6d03a95860e06e0a457884dd30d186643a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222333"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574153"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (組件繫結記錄檔檢視器)
 組件繫結記錄檔檢視器會顯示組件繫結的詳細資料。 這項資訊有助於診斷 .NET Framework 為何無法在執行階段找到組件。 這類失敗通常是因為組件部署至不正確的位置、原生映像已失效，或版本號碼或文化特定不符所致。 通用語言執行平台找不到組件，通常在應用程式中會顯示為 <xref:System.TypeLoadException>。  
@@ -228,9 +228,9 @@ Discarding native image.
     > [!NOTE]
     >  只有在 Windows 8 (含) 以後版本中才會啟用這個方塊。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.TypeLoadException>  
- [工具](../../../docs/framework/tools/index.md)  
- [全域組件快取](../../../docs/framework/app-domains/gac.md)  
- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.TypeLoadException>
+- [工具](../../../docs/framework/tools/index.md)
+- [全域組件快取](../../../docs/framework/app-domains/gac.md)
+- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

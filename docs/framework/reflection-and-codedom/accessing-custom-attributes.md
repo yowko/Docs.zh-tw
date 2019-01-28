@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8aafd1586068dcd7aaf4a72ef5454e3a2698ccd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb537950ce240d77282551f847b637a77792a264
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645232"
 ---
 # <a name="accessing-custom-attributes"></a>存取自訂屬性
 建立屬性與程式項目的關聯之後，就可以使用反映來查詢其存在狀況和值。 在 .NET Framework 1.0 和 1.1 版中，會檢查執行內容中的自訂屬性。 .NET Framework 2.0 版提供新的載入內容，就是僅限反映的內容，這可以用來檢查無法載入來執行的程式碼。  
@@ -72,8 +72,8 @@ public class LocalizationExtenderProvider
  [!code-csharp[CustomAttributeData#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source2.cs#2)]
  [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
- [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
+- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
+- [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)

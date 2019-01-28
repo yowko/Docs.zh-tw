@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 844b0edb93b93704c4886495c673dc0496f7ba71
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 04601ac0e6b1bc3289be36ce3e1a144ce57ccefb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550509"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>執行不區分文化特性的大小寫變更
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>、<xref:System.String.ToLower%2A?displayProperty=nameWithType>、<xref:System.Char.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.Char.ToLower%2A?displayProperty=nameWithType> 方法提供不接受任何參數的多載。 根據預設，不含參數的這些多載會根據 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 的值，執行大小寫變更。 這會產生可能會因為文化特性而有所不同的區分大小寫結果。 若要釐清您希望大小寫變更是區分文化特性還是不區分文化特性，就應該使用要求您明確地指定 `culture` 參數的這些方法的多載。 針對區分文化特性的大小寫變更，請為 `culture` 參數指定 `CultureInfo.CurrentCulture`。 至於不區分文化特性的大小寫變更，則為 `culture` 參數指定 `CultureInfo.InvariantCulture`。  
@@ -69,8 +69,8 @@ static object LookupKey(string key)
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
-- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
-- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
-- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
+- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>
+- <xref:System.String.ToLower%2A?displayProperty=nameWithType>
+- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>
+- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>
 - [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

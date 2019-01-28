@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 8ec3cafec49ae2e05c67d177ad1ea1fdd9b73bca
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 55b1829537224118de9870fa696ec2b1689d5066
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603062"
 ---
 # <a name="operators-c-programming-guide"></a>運算子 (C# 程式設計手冊)
 
@@ -175,7 +175,7 @@ a = (b = c);
 
  如需詳細資訊，請參閱[運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)[C# 運算子](../../../csharp/language-reference/operators/index.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [陳述式、運算式和運算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)

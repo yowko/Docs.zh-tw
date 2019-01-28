@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415529"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066424"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系統上的大型物件堆積
 
@@ -34,7 +34,7 @@ ms.locfileid: "54415529"
 
 大型物件屬於層代 2，因為只有在層代 2 回收期間才會回收它們。 回收層代時，也會回收其所有較年輕的層代。 舉例來說，發生層代 1 GC 時，會同時回收層代 1 和 0。 而發生層代 2 GC 時，就會回收整個堆積。 基於這個理由，層代 2 GC 也稱為「完整 GC」。 本文引用層代 2 GC，而不是完整 GC，但這些詞彙可以互換。
 
-層代提供 GC 堆積的邏輯檢視。 實際上，物件是存留在受控堆積區段中。 「受控堆積區段」是記憶體的區塊，由 GC 代替受控程式碼向 OS (透過呼叫 [VirtualAlloc 函式](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx)) 要求保留。 載入 CLR 時，GC 會配置兩個初始堆積區段：一個針對小型物件 (小型物件堆積或 SOH)，另一個針對大型物件 (大型物件堆積)。
+層代提供 GC 堆積的邏輯檢視。 實際上，物件是存留在受控堆積區段中。 「受控堆積區段」是記憶體的區塊，由 GC 代替受控程式碼向 OS (透過呼叫 [VirtualAlloc 函式](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)) 要求保留。 載入 CLR 時，GC 會配置兩個初始堆積區段：一個針對小型物件 (小型物件堆積或 SOH)，另一個針對大型物件 (大型物件堆積)。
 
 藉由將受控物件置於這些受控堆積區段中，就可以滿足配置的要求了。 如果物件小於 85,000 個位元組，它會置於 SOH 的區段上；否則，它會置於 LOH 區段。 隨著愈來愈多的物件配置在區段之上，這些區段就會被認可 (以較小的區塊)。
 對於 SOH，在 GC 之後存留下來的物件會提升至下一個層代。 層代 0 回收之後存留下來的物件目前被視為層代 1 物件，依此類推。 然而，通過最老層代存留的物件仍可視為屬於最老的層代。 換句話說，來自層代 2 的存留者就是層代 2 物件；來自 LOH 的存留者就是 LOH 的物件 (用 gen2 來回收)。
@@ -57,9 +57,9 @@ ms.locfileid: "54415529"
 
 如果沒有足夠的可用空間來處理大型物件配置的要求，GC 會先嘗試從 OS 取得更多區段。 如果該作業失敗，它就會觸發層代 2 GC，以期釋放一些空間。
 
-在層代 1 或層代 2 GC 期間，記憶體回收行程將沒有作用中物件的區段釋放歸還給 OS (藉由呼叫 [VirtualFree 函式](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx))。 從最後的作用中物件到區段結尾的空間會取消認可。(gen0/gen1 存留的暫時區段除外，記憶體回收行程確實會保持部分已認可，因為您的應用程式將立即開始在其中配置)。 可用空間雖然重設過，但仍然是經認可的，這表示 OS 並不必將其中的資料寫回磁碟中。
+在層代 1 或層代 2 GC 期間，記憶體回收行程將沒有作用中物件的區段釋放歸還給 OS (藉由呼叫 [VirtualFree 函式](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree))。 從最後的作用中物件到區段結尾的空間會取消認可。(gen0/gen1 存留的暫時區段除外，記憶體回收行程確實會保持部分已認可，因為您的應用程式將立即開始在其中配置)。 可用空間雖然重設過，但仍然是經認可的，這表示 OS 並不必將其中的資料寫回磁碟中。
 
-由於在層代 2 GC 期間只會收集 LOH，因此只能在這類 GC 期間釋放 LOH 區段。 圖 3 說明的案例，是記憶體回收行程將一個區段 (區段 2) 釋放釋放歸還 OS，並在其餘區段上取消認可更多空間的情況。 如果它必須使用位於區段結尾的已取消認可空間，來滿足大型物件配置要求，就會再次認可記憶體。 (如需認可/取消認可的說明，請參閱 [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) 的文件。
+由於在層代 2 GC 期間只會收集 LOH，因此只能在這類 GC 期間釋放 LOH 區段。 圖 3 說明的案例，是記憶體回收行程將一個區段 (區段 2) 釋放釋放歸還 OS，並在其餘區段上取消認可更多空間的情況。 如果它必須使用位於區段結尾的已取消認可空間，來滿足大型物件配置要求，就會再次認可記憶體。 (如需認可/取消認可的說明，請參閱 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 的文件。
 
 ![圖 3：層代 2 GC 之後的 LOH](media/loh/loh-figure-3.jpg)  
 圖 3：層代 2 GC 之後的 LOH
@@ -302,13 +302,13 @@ LOH 堆積的大小是 (16,754,224 + 16,699,288 + 16,284,504) = 49,738,016 個�
 
 經常可以看到 VM 片段，這是由需要經常進行記憶體回收的暫存大型物件所造成的，因為這樣才能從 OS 取得新的受控堆積區段，並將空的區段釋放歸還給 OS。
 
-若要驗證 LOH 是否會造成 VM 片段，您可以在 [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) 和 [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx) 上設定中斷點，以查看何者會呼叫它們。 例如，若要查看何者會嘗試從 OS 配置大於 8MB 的虛擬記憶體區塊，您可以設定中斷點如下：
+若要驗證 LOH 是否會造成 VM 片段，您可以在 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 和 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) 上設定中斷點，以查看何者會呼叫它們。 例如，若要查看何者會嘗試從 OS 配置大於 8MB 的虛擬記憶體區塊，您可以設定中斷點如下：
 
 ```console
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-此命令會中斷並進入偵錯工具，並且只有在配置大小大於 8MB (0x800000) 的情況下呼叫 [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) 時，才會顯示呼叫堆疊。
+此命令會中斷並進入偵錯工具，並且只有在配置大小大於 8MB (0x800000) 的情況下呼叫 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 時，才會顯示呼叫堆疊。
 
 CLR 2.0 中新增了稱為 *VM Hoarding* 的功能，對於經常取得再釋放區段 (包括在大型與小型物件堆積上) 的案例，此功能非常有用。 若要指定 VM Hoarding，您可以透過裝載 API 指定稱為 `STARTUP_HOARD_GC_VM` 的啟動旗標。 CLR 會取消認可這些區段上的記憶體並將其放置於待命清單上，而不會將空的區段釋放歸還給 OS。 (請注意，CLR 不會對太大的區段執行這項操作)。CLR 稍後會使用這些區段來滿足新的區段要求。 下次您的應用程式需要新的區段時，CLR 如果能夠找到夠大的區段，就會使用此待命清單中的區段。
 

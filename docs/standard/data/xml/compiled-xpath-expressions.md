@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7bb158331c1e03b18601dc553ed8ac0e8fa7930
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1716488f6e072b09469dfbe5cc8fb4965e5db44c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605234"
 ---
 # <a name="compiled-xpath-expressions"></a>編譯 XPath 運算式
 <xref:System.Xml.XPath.XPathExpression> 物件表示從 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 類別的靜態 <xref:System.Xml.XPath.XPathExpression> 方法或 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator> 方法傳回的編譯 XPath 查詢。  
@@ -37,7 +37,7 @@ ms.locfileid: "44041391"
   
  下表說明每個 W3C XPath 傳回型別、其 Microsoft .NET Framework 對等型別，以及與 <xref:System.Xml.XPath.XPathExpression> 物件搭配使用的方法 (根據其傳回型別)。  
   
-|W3C XPath 傳回型別|.NET Framework 對等型別|描述|方法|  
+|W3C XPath 傳回型別|.NET Framework 對等型別|說明|方法|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|依文件順序建立之不重複節點的未排序集合。|<xref:System.Xml.XPath.XPathNavigator.Select%2A> 或 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|`true` 或 `false` 值。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 或<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
@@ -121,12 +121,12 @@ Console.WriteLine(nodes.Current.Value);
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [使用 XPathNavigator 選取 XML 資料](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
-- [使用 XPathNavigator 評估 XPath 運算式](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
-- [使用 XPathNavigator 比對節點](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
-- [使用 XPath 查詢辨識的節點類型](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [使用 XPathNavigator 選取 XML 資料](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
+- [使用 XPathNavigator 評估 XPath 運算式](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
+- [使用 XPathNavigator 比對節點](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
+- [使用 XPath 查詢辨識的節點類型](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
 - [XPath 查詢和命名空間](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)

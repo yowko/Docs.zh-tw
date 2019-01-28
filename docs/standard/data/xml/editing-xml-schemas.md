@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc8df722acd5c9547833cb4fe3051e1590c6c627
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e2cf9e1b4349d83a378f6b17e8740c95546bbe4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573958"
 ---
 # <a name="editing-xml-schemas"></a>編輯 XML 結構描述
 編輯 XML 結構描述是結構描述物件模型 (SOM) 的其中一項最重要功能。 SOM 的所有前結構描述編譯屬性都可用於變更 XML 結構描述中的現有值。 然後可重新編譯該 XML 結構描述以反映這些變更。  
@@ -137,10 +137,10 @@ ms.locfileid: "44087669"
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [後結構描述編譯資訊集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

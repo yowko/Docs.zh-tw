@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Info object [Visual Basic], tasks
 ms.assetid: 13c145bc-5c85-4fea-a5dd-2ca8681a0252
-ms.openlocfilehash: 6e4336c2a1e7b9ed32883c772fd6929676658e68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 508ab8a1cc302e58baa869fc30cea322e01235e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743630"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>取得電腦的相關資訊 (Visual Basic)
 `My.Computer.Info` 物件所提供的屬性可用來取得電腦的記憶體、已載入組件、名稱和作業系統的相關資訊。  
@@ -25,5 +25,5 @@ ms.locfileid: "33582196"
 |判斷應用程式執行所在電腦上已安裝的 Service Pack。|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|  
 |判斷應用程式執行所在電腦上已安裝的 `UICulture`。|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|  
   
-## <a name="see-also"></a>請參閱  
- <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>

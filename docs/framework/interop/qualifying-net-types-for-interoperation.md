@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baa5b9f250fe7117838f936b09b050ba500b7209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a40b9524990213eaaf2ed78503b6f831776306ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524308"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>限定互通的 .NET 類型
 如果您想要向 COM 應用程式公開組件中的類型，請考慮設計階段的 COM Interop 需求。 當您遵守下列方針時，Managed 類型 (類別、介面、結構和列舉) 會與 COM 類型緊密整合：  
@@ -47,9 +47,9 @@ ms.locfileid: "33389040"
   
  匯出至 COM 時，會壓平合併 Managed 類型的繼承階層。 Managed 與 Unmanaged 環境之間的版本設定不同。 向 COM 公開之類型與其他 Managed 類型的版本設定特性不同。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
- [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)  
- [套用 Interop 屬性](../../../docs/framework/interop/applying-interop-attributes.md)  
- [封裝 COM 的組件](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.InteropServices.ComVisibleAttribute>
+- [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)
+- [套用 Interop 屬性](../../../docs/framework/interop/applying-interop-attributes.md)
+- [封裝 COM 的組件](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

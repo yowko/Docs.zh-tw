@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f2dc9fccf6718c4edebc26efcdda71b41873a3a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0c13f5aef9f08929dcd17f53777ba9e23b00b838
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728381"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用 Unmanaged DLL 函式
 平台叫用服務，可讓 Managed 程式碼呼叫 Unmanaged 函式在動態連結程式庫 (DLL) 中實作，例如 Win32 API 中。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
@@ -72,7 +72,7 @@ ms.locfileid: "50195238"
   
  平台叫用會擲回由 Unmanaged 函式產生的例外狀況給 Managed 呼叫端。
 
-## <a name="see-also"></a>請參閱  
- [與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)  
- [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)  
+## <a name="see-also"></a>另請參閱
+- [與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)
+- [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)
+- [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

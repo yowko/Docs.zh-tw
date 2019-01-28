@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81d0ce4f697935908b8ad7084560bd1adacbdf2d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: cd4ce0975fa071ee193e2b467bcc73f51462f5e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "47863484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569598"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform 類別實作 XSLT 處理器
 > [!NOTE]
@@ -230,10 +230,10 @@ Root node is book.
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.Xsl.XslTransform>  
-- [使用 XslTransform 類別進行 XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
-- [轉換中的 XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
-- [轉換中的 XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
-- [XslTransform 的 XPathDocument 輸入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
-- [XslTransform 的 XmlDataDocument 輸入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+- <xref:System.Xml.Xsl.XslTransform>
+- [使用 XslTransform 類別進行 XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
+- [轉換中的 XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
+- [轉換中的 XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
+- [XslTransform 的 XPathDocument 輸入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
+- [XslTransform 的 XmlDataDocument 輸入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)
 - [XslTransform 的 XmlDocument 輸入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

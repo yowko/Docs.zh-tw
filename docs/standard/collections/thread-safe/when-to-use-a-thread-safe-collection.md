@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: ca809c28e7d55d7b899809c2fd514c073dd73054
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543169"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>使用安全執行緒集合的時機
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 引進五種悉的集合類型，特別設計來支援多執行緒新增和移除作業。 若要達到執行緒安全，這些新的類型會使用各種有效率的鎖定和無鎖定同步處理機制。 同步處理會增加作業的負荷。 負荷量取決於使用的同步處理類型、執行的作業類型，以及其他因素 (例如，嘗試同時存取集合的執行緒數目)。  
@@ -64,6 +64,6 @@ ms.locfileid: "49123562"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
-- [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)
 - [平行程式設計](../../../../docs/standard/parallel-programming/index.md)

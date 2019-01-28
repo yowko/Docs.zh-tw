@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0827634278f248089b105844dadf8959f953595
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 0176c2fe62d871b265ecd652d2789c7acdfdb765
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631837"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (簽署工具)
 簽署工具是一項命令列工具，會以數位方式簽署檔案、驗證檔案中的簽章以及為檔案加上時間戳記。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -209,6 +209,6 @@ signtool verify /a SystemFile.dll
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [工具](../../../docs/framework/tools/index.md)  
- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>另請參閱
+- [工具](../../../docs/framework/tools/index.md)
+- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

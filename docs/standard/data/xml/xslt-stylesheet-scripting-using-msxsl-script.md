@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68c98b3b4effbe7cea1a3c4443d2222e6bbcd43c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 5c57f8964172d351ddae048ea36e63a13cf2578d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46584249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563427"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>使用 &lt;msxsl:script&gt; 的 XSLT 樣式表指令碼
 <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。  
@@ -49,7 +49,7 @@ ms.locfileid: "46584249"
   
  函式可在 `msxsl:script` 項目內進行宣告。 下表顯示根據預設所支援的命名空間。 您可以使用所列之命名空間以外的類別。 不過這些類別必須是完整限定。  
   
-|預設的命名空間|描述|  
+|預設的命名空間|說明|  
 |------------------------|-----------------|  
 |系統|系統類別。|  
 |System.Collection|集合類別。|  
@@ -89,9 +89,10 @@ ms.locfileid: "46584249"
  建議將所有指令碼內容置於 CDATA 區段內，因為指定之語言的運算子、識別項或分隔符號有可能會被錯譯為 XML。 下列範例顯示在指令碼中使用邏輯 AND 運算子。  
   
 ```xml  
-<msxsl:script implements-prefix='yourprefix' language='CSharp>  
+<msxsl:script implements-prefix='yourprefix' language='CSharp'>  
     public string book(string abc, string xyz)  
-    {  if ((abc== abc)&&(abc== xyz)) return bar+xyz;  
+    {  
+        if ((abc == bar) && (abc == xyz)) return bar + xyz;  
         else return null;  
     }  
 </msxsl:script>  
@@ -146,8 +147,8 @@ public class Sample
    private const String filename = "number.xml";  
    private const String stylesheet = "calc.xsl";  
   
-   public static void Main() {  
-  
+   public static void Main()  
+   {  
     //Create the XslTransform and load the style sheet.  
     XslTransform xslt = new XslTransform();  
     xslt.Load(stylesheet);  
@@ -162,7 +163,7 @@ public class Sample
     //Transform the file.  
     xslt.Transform(doc, null, writer, null);  
     writer.Close();  
-  }   
+  }  
 }  
 ```  
   
@@ -190,7 +191,8 @@ public class Sample
   
   <msxsl:script language="C#" implements-prefix="user">  
      <![CDATA[  
-     public double circumference(double radius){  
+     public double circumference(double radius)  
+     {  
        double pi = 3.14;  
        double circ = pi*radius*2;  
        return circ;  

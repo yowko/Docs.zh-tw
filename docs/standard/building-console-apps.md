@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 979989c3e1f90f3de47473aa1bd8bc5268520e57
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 135decebcd071c611cf6e72835fee33d49088070
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493907"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>在 .NET Framework 中建置主控台應用程式
 .NET Framework 中的應用程式可以使用 <xref:System.Console?displayProperty=nameWithType> 類別從主控台讀取字元，以及將字元寫入主控台。 來自主控台的資料會從標準輸入資料流讀取，要傳送到主控台的資料會寫入至標準輸出資料流，而傳送給主控台的錯誤資料則會寫入至標準錯誤輸出資料流。 在應用程式啟動時，這些資料流會自動與主控台產生關聯，並且分別表示為 <xref:System.Console.In%2A>、<xref:System.Console.Out%2A> 和 <xref:System.Console.Error%2A> 屬性。  
@@ -34,5 +34,5 @@ ms.locfileid: "48840150"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Console?displayProperty=nameWithType>  
+- <xref:System.Console?displayProperty=nameWithType>
 - [格式化類型](../../docs/standard/base-types/formatting-types.md)

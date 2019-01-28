@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 0b191a01995b7c36d733b225672a3d79f488a276
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531417"
 ---
 # <a name="regular-expression-language---quick-reference"></a>規則運算式語言 - 快速參考
 <a name="top"></a>規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。  如需簡介，請參閱 [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。  
@@ -217,10 +217,10 @@ ms.locfileid: "54030395"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
-- <xref:System.Text.RegularExpressions.Regex>  
-- [規則運算式](regular-expressions.md)  
-- [規則運算式類別](the-regular-expression-object-model.md)  
-- [規則運算式範例](regular-expression-examples.md)  
-- [規則運算式 - 快速參考 (以 Word 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
+- <xref:System.Text.RegularExpressions.Regex>
+- [規則運算式](regular-expressions.md)
+- [規則運算式類別](the-regular-expression-object-model.md)
+- [規則運算式範例](regular-expression-examples.md)
+- [規則運算式 - 快速參考 (以 Word 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
 - [規則運算式 - 快速參考 (以 PDF 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

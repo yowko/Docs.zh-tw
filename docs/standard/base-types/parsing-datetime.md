@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d10384955e07198a4b5ea7202722bea4b831e02
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207612"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560811"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>在 .NET 中剖析日期和時間字串
 
@@ -89,8 +89,8 @@ ms.locfileid: "44207612"
 
 ## <a name="see-also"></a>另請參閱
 
-- [剖析字串](parsing-strings.md)  
-- [格式化類型](formatting-types.md)  
-- [.NET 中的類型轉換](type-conversion.md)  
-- [標準日期和時間格式](standard-date-and-time-format-strings.md)  
+- [剖析字串](parsing-strings.md)
+- [格式化類型](formatting-types.md)
+- [.NET 中的類型轉換](type-conversion.md)
+- [標準日期和時間格式](standard-date-and-time-format-strings.md)
 - [自訂日期和時間格式字串](custom-date-and-time-format-strings.md)

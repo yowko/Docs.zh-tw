@@ -2,12 +2,12 @@
 title: 程式設計手冊 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-ms.openlocfilehash: acb8271ad9ea338d31516c35bae46593a5fd2f78
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d71fb2d0365199bf89b0cfbd05b614ebd7634219
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493998"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>程式設計手冊 (LINQ to XML) (C#)
 本節提供使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 進行程式設計的概念性和使用說明資訊。  
@@ -21,7 +21,7 @@ ms.locfileid: "47199043"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|說明|  
 |-----------|-----------------|  
 |[LINQ to XML 程式設計概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 類別的概觀，以及關於其中三個最重要類別的詳細資訊：<xref:System.Xml.Linq.XElement>、<xref:System.Xml.Linq.XAttribute> 和 <xref:System.Xml.Linq.XDocument>。|  
 |[建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|提供有關使用 XML 樹狀的概念性與工作型資訊。 您可以使用功能結構，或從字串或檔案剖析 XML 文字，藉以建立 XML 樹狀結構。 您也可以使用 <xref:System.Xml.XmlReader> 來填入 XML 樹狀結構。|  
@@ -34,7 +34,7 @@ ms.locfileid: "47199043"
 |[LINQ to XML 安全性 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-security.md)|描述與 LINQ to XML 相關聯的安全性問題，並提供一些減少暴露其安全性的指引。|  
 |[範例 XML 文件 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|包含本文件中的許多範例所使用的 XML 範例文件。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [使用者入門 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+- [使用者入門 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
 - [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)

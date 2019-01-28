@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: 30aba517b3b0fbb5fa5bea48134934b2c2d26e50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7ccd47b8778aa3a374ee102b39038e8df475e9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731916"
 ---
 # <a name="file-encodings-visual-basic"></a>檔案編碼方式 (Visual Basic)
 檔案編碼方式，也稱為字元編碼方式，指定在處理文字時如何代表字元。 就可以或無法處理的語言字元部分而言，可能會偏好使用某種編碼，但是通常偏好使用 Unicode。  
@@ -27,7 +27,7 @@ ms.locfileid: "33582281"
 ## <a name="encoding-class"></a>編碼類別  
  <xref:System.Text.Encoding> 類別表示字元編碼方式。 此表列出可用的編碼方式類型，並描述每個編碼方式。  
   
-|名稱|描述|
+|名稱|說明|
 |---|---|    
 |<xref:System.Text.ASCIIEncoding>|代表 Unicode 字元的 ASCII 字元編碼方式。|  
 |<xref:System.Text.UnicodeEncoding>|代表 Unicode 字元的 UTF-16 編碼方式。|  
@@ -35,6 +35,6 @@ ms.locfileid: "33582281"
 |<xref:System.Text.UTF7Encoding>|代表 Unicode 字元的 UTF-7 編碼方式。|  
 |<xref:System.Text.UTF8Encoding>|代表 Unicode 字元的 UTF-8 編碼方式。|  
   
-## <a name="see-also"></a>請參閱  
- [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+## <a name="see-also"></a>另請參閱
+- [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

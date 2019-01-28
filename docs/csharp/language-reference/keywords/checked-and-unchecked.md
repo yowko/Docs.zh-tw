@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: ba4ddd7fa87eb200de0de3aea6f0bc056a40f0e5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 12f65fe4b1dc710ff5c053073817dbd793c86082
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511831"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked 與 Unchecked (C# 參考)
 C# 陳述式可在 checked 或 unchecked 內容中執行。 在 checked 內容中，算術溢位會引發例外狀況。 在未經檢查的內容中，會忽略算術溢位，並捨棄目的型別不適用的高序位位元，以便將結果截斷。  
@@ -36,9 +36,9 @@ C# 陳述式可在 checked 或 unchecked 內容中執行。 在 checked 內容�
  
  針對常數運算式 (可以在編譯時期完整評估的運算式)，一律會檢查預設內容。 除非將一個常量表達式顯式放置在未經檢查的上下文中，否則在對該表達式進行編譯時評估期間發生的溢出會導致編譯時錯誤。
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)  
-- [C# 程式設計指南](../../programming-guide/index.md)  
-- [C# 關鍵字](index.md)  
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 關鍵字](index.md)
 - [陳述式關鍵字](statement-keywords.md)

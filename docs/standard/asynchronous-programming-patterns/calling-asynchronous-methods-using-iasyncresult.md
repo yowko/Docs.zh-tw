@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 07fba116-045b-473c-a0b7-acdbeb49861f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23fa927dcdb91fb3905f1cbe845450751de91157
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 01001d68b4bee42453fcb84725507b0cf61184a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50180071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610509"
 ---
 # <a name="calling-asynchronous-methods-using-iasyncresult"></a>使用 IAsyncResult 呼叫非同步方法
 .NET Framework 和協力廠商類別程式庫中的型別提供的方法，可讓應用程式在主應用程式執行緒以外的執行緒中執行非同步作業時繼續執行。 下列各節說明並提供示範不同方式的程式碼範例，您可以呼叫使用 <xref:System.IAsyncResult> 設計模式的非同步方法。  
@@ -33,5 +33,5 @@ ms.locfileid: "50180071"
   
 ## <a name="see-also"></a>另請參閱
 
-- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
 - [事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

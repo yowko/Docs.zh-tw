@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdead5a54c6e8dbe6fd61f82fc3985913bd7d381
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec3f8fb16245318cab8706a2ed136e51f3dc31db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47202573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705793"
 ---
 # <a name="generic-collections-in-net"></a>.NET 中的泛型集合
 
@@ -52,8 +52,8 @@ ms.locfileid: "47202573"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Collections.Generic?displayProperty=nameWithType>  
-- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
-- [泛型](../../../docs/standard/generics/index.md)  
-- [管理陣列和清單的泛型委派](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- <xref:System.Collections.Generic?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
+- [泛型](../../../docs/standard/generics/index.md)
+- [管理陣列和清單的泛型委派](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
 - [泛型介面](../../../docs/standard/generics/interfaces.md)

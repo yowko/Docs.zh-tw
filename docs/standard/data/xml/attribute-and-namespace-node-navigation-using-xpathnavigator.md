@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7a0b632965306b7511a2abcf94d0c4c88ab850d4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fd3b1cacc73743622aaaad72bfd4edb26dc26390
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740472"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>使用 XPathNavigator 巡覽屬性及命名空間節點
 <xref:System.Xml.XPath.XPathNavigator> 類別提供兩組巡覽方法，第一組 (可在[使用 XPathNavigator 巡覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)主題中找到) 用於巡覽 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的*節點集*。 第二組 (在本主題中說明) 用於巡覽 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的「屬性及命名空間節點」。  
@@ -98,10 +98,10 @@ ms.locfileid: "44199358"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [使用 XPathNavigator 導覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
-- [使用 XPathNavigator 擷取 XML 資料](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [使用 XPathNavigator 導覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)
+- [使用 XPathNavigator 擷取 XML 資料](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)
 - [使用 XPathNavigator 存取強型別 XML 資料](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

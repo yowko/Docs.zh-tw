@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da8b623d3a73ca8791a0619c67b0ed3bd42447d3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 67fbacd24b888b9c45072bcb34031f38adc118e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202744"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728394"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>使用 XPath 資料模型處理 XML 資料
 <xref:System.Xml?displayProperty=nameWithType> 命名空間會使用 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 類別，以程式設計方式來表示 XML 文件、片段、節點或記憶體中的節點集。  
@@ -37,7 +37,7 @@ ms.locfileid: "50202744"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
 - [使用 DOM 模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)

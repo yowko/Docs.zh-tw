@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b26ebfa327d849f75b1ac5295b66600aeb377e1e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 78dff5dca159b3e714a027bd2d2ebe86d2b414dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082613"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626000"
 ---
 # <a name="including-or-importing-xml-schemas"></a>併入或匯入 XML 結構描述
 XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />` 項目。 這些結構描述項目會參考其他 XML 結構描述，其可用於補充併入或匯入它們之結構描述的結構。 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 及 <xref:System.Xml.Schema.XmlSchemaRedefine> 類別會對應至結構描述物件模型 (SOM) API 中的這些項目。  
@@ -52,8 +52,7 @@ XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />
         <xs:element name="FirstName" type="xs:string" />  
         <xs:element name="LastName" type="tns:LastNameType" />  
       </xs:sequence>  
-      <xs:attribute name="CustomerId" type="xs:positiveInteger" use="required" /  
->  
+      <xs:attribute name="CustomerId" type="xs:positiveInteger" use="required" />  
     </xs:complexType>  
   </xs:element>  
   <xs:simpleType name="LastNameType">  
@@ -102,9 +101,9 @@ XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

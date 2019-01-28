@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86642da8647d185d863607819bbb18de9e976e6b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f018ed182e6354bbc6e6873f0df1b35e023c9c17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512342"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET 中的類型轉換表
 將一種類型的值轉換成另一種大小相等或較大類型的值時，就會發生擴展轉換。 將一種類型的值轉換成另一種大小較小類型的值時，就會發生縮小轉換。 本主題中的表格將說明這兩種轉換類型的行為。  
@@ -35,7 +35,7 @@ ms.locfileid: "45664536"
 |<xref:System.UInt16>|<xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.Char>|<xref:System.UInt16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.Int32>|<xref:System.Int64>, <xref:System.Double>, <xref:System.Decimal>|  
-|<xref:System.UInt32>|<xref:System.Int64>、<xref:System.UInt64>、<xref:System.Double><xref:System.Decimal>|  
+|<xref:System.UInt32>|<xref:System.Int64>, <xref:System.UInt64>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.Int64>|<xref:System.Decimal>|  
 |<xref:System.UInt64>|<xref:System.Decimal>|  
 |<xref:System.Single>|<xref:System.Double>|  
@@ -46,9 +46,9 @@ ms.locfileid: "45664536"
 |----------|-------------------------|  
 |<xref:System.Int32>|<xref:System.Single>|  
 |<xref:System.UInt32>|<xref:System.Single>|  
-|<xref:System.Int64>|<xref:System.Single>, <xref:System.Double>|  
+|<xref:System.Int64>|<xref:System.Single>、 <xref:System.Double>|  
 |<xref:System.UInt64>|<xref:System.Single>, <xref:System.Double>|  
-|<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
+|<xref:System.Decimal>|<xref:System.Single>、 <xref:System.Double>|  
   
 ## <a name="narrowing-conversions"></a>縮小轉換  
  某些轉換成 <xref:System.Single> 或 <xref:System.Double> 的縮小轉換可能會導致資訊遺失。 如果目標類型無法正確表示來源的範圍，產生的類型會設定為常數 `PositiveInfinity` 或 `NegativeInfinity`。 `PositiveInfinity` 是正數除以零所得的結果；當 <xref:System.Single> 或 <xref:System.Double> 的值超過 `MaxValue` 欄位的值時，也會傳回此值。 `NegativeInfinity` 是負數除以零所得的結果；當 <xref:System.Single> 或 <xref:System.Double> 的值低於 `MinValue` 欄位的值時，也會傳回此值。 從 <xref:System.Double> 轉換為 <xref:System.Single> 可能會導致 `PositiveInfinity` 或 `NegativeInfinity`。  
@@ -60,7 +60,7 @@ ms.locfileid: "45664536"
 |類型|可轉換類型|  
 |----------|-------------------------|  
 |<xref:System.Byte>|<xref:System.SByte>|  
-|<xref:System.SByte>|<xref:System.Byte>、<xref:System.UInt16>、<xref:System.UInt32><xref:System.UInt64>|  
+|<xref:System.SByte>|<xref:System.Byte>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>|  
 |<xref:System.Int16>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.UInt16>|  
 |<xref:System.UInt16>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>|  
 |<xref:System.Int32>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.UInt32>|  
@@ -73,5 +73,5 @@ ms.locfileid: "45664536"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Convert?displayProperty=nameWithType>  
+- <xref:System.Convert?displayProperty=nameWithType>
 - [.NET 中的類型轉換](../../../docs/standard/base-types/type-conversion.md)

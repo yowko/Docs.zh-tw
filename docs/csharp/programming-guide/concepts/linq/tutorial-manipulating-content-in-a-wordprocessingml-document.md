@@ -2,12 +2,12 @@
 title: 教學課程：管理 WordprocessingML 文件中的內容 (C#)
 ms.date: 07/20/2015
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-ms.openlocfilehash: 2d906bb2310d4dd6c0ccd865a52ede441556dfda
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2d972f53b30ccd8ba8e1ffdaecb40cf7f76e7b6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583456"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>教學課程：管理 WordprocessingML 文件中的內容 (C#)
 本教學課程顯示如何應用功能性轉換方法與 LINQ to XML 來管理 XML 文件。 C# 範例會查詢並管理 Microsoft Word 所儲存之 Office Open XML WordprocessingML 文件中的資訊。  
@@ -29,7 +29,7 @@ ms.locfileid: "54145155"
 |[尋找 Word 文件中的文字 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)|使用上一個查詢來尋找文件中指定的文字字串。|  
 |[Office Open XML WordprocessingML 文件的詳細資料 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|提供 Office Open XML WordprocessingML 文件的一些詳細資料。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [XML 純功能性轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
+- [XML 純功能性轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
 - [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

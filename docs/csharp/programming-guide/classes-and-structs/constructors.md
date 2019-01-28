@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 79b000952ed03e5dc28d1c33bd2cba14708fb26a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e88cc9b36f64a559105620359f4c163978cf9d8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235328"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692255"
 ---
 # <a name="constructors-c-programming-guide"></a>建構函式 (C# 程式設計手冊)
 每當建立[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)時，都會呼叫其建構函式。 類別或結構可有使用不同引數的多個建構函式。 建構函式能讓程式設計師可以設定預設值、限制具現化，以及撰寫彈性且容易閱讀的程式碼。 如需詳細資訊和範例，請參閱[使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)和[執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)。  
@@ -56,10 +56,10 @@ ms.locfileid: "53235328"
   
  [如何：撰寫複製建構函式](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-- [static](../../../csharp/language-reference/keywords/static.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [static](../../../csharp/language-reference/keywords/static.md)
 - [為什麼初始設定式執行的順序與建構函式相反？第一部](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

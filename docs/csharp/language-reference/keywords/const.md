@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 63fb86ed24dd4e30d3783d70e3249b9f8e5e20bd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f0b2b3632e767710bd31f5f6edaccaf0c2ef8c85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526973"
 ---
 # <a name="const-c-reference"></a>const (C# 參考)
 
-您可以使用 `const` 關鍵字來宣告常數欄位或區域常數。 常數欄位和區域常數不是變數，可能無法修改。 常數可以是數值、布林值、字串或 null 參考。 請勿建立用來表示想隨時變更之資訊的常數。 例如，請勿使用常數欄位來儲存服務的價格、產品版本號碼或公司的品牌名稱。 這些值可能會隨時間變更；此外，由於編譯器會傳播常數，以您的程式庫編譯的其他程式碼必須經過重新編譯，才能看到變更。 另請參閱 [readonly](../../../csharp/language-reference/keywords/readonly.md) 關鍵字。 例如: 
+您可以使用 `const` 關鍵字來宣告常數欄位或區域常數。 常數欄位和區域常數不是變數，可能無法修改。 常數可以是數值、布林值、字串或 null 參考。 請勿建立用來表示想隨時變更之資訊的常數。 例如，請勿使用常數欄位來儲存服務的價格、產品版本號碼或公司的品牌名稱。 這些值可能會隨時間變更；此外，由於編譯器會傳播常數，以您的程式庫編譯的其他程式碼必須經過重新編譯，才能看到變更。 另請參閱 [readonly](../../../csharp/language-reference/keywords/readonly.md) 關鍵字。 例如：
 
 ```csharp
 const int x = 0;
@@ -65,8 +65,8 @@ public const int c2 = c1 + 100;
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
-- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
+- [C# 參考](../../../csharp/language-reference/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)
 - [readonly](../../../csharp/language-reference/keywords/readonly.md)

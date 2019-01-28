@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab33474fa8f3d62fb21c86a0699bbfcb75e7a270
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 907e85d2622ea07ddbb61092f439583ed72e0c50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560031"
 ---
 # <a name="managed-threading-best-practices"></a>受控執行緒處理最佳做法
 在為多執行緒功能設計程式時需要非常小心。 您可以藉由將要求排入佇列以供執行緒集區的執行緒執行，來降低大部分工作的複雜性。 本主題要解決的是更困難的情況，例如協調多個執行緒的工作，或處理封鎖起來的執行緒。  
@@ -179,5 +179,5 @@ else {
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行緒處理](../../../docs/standard/threading/index.md)  
+- [執行緒處理](../../../docs/standard/threading/index.md)
 - [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)

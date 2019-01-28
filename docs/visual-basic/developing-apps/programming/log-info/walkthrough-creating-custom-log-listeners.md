@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 6139a1fef2b2c37bc2c8a6167febd060d8d01fb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12943e449f825516d37079e7ddac2a6705879066
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591647"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710504"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>逐步解說：建立自訂的記錄檔接聽程式 (Visual Basic)
 本逐步解說示範如何建立自訂記錄檔接聽程式，並將它設定為接聽 `My.Application.Log` 物件的輸出。  
@@ -104,9 +104,9 @@ ms.locfileid: "33591647"
   
      將 `SimpleLogStrongName` 的值變更為接聽程式的強式名稱。  
   
-## <a name="see-also"></a>請參閱  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
- [如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615973"
 ---
 # <a name="backtracking-in-regular-expressions"></a>規則運算式中的回溯
 <a name="top"></a> 回溯 (Backtracking) 會在規則運算式模式包含選擇性的 [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)，且規則運算式引擎返回之前儲存的狀態繼續搜尋相符項目時發生。 回溯是規則運算式的核心能力，可讓運算式功能強大且靈活，並且比對非常複雜的模式。 但同時，這項強大功能需付出相當的代價。 回溯經常是影響規則運算式引擎之效能最重要的一項因素。 幸好開發人員能夠掌控規則運算式引擎的行為，以及其使用回溯的方式。 本主題將說明回溯運作的方式，以及如何進行控制。  
@@ -130,14 +130,14 @@ ms.locfileid: "53130087"
   
 <a name="Timeout"></a>   
 ### <a name="defining-a-time-out-interval"></a>定義逾時間隔  
- 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]開始，您可以設定逾時值，表示規則運算式引擎開始搜尋單一符合項目到放棄嘗試並擲回 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外狀況之前的最長間隔。 您可以提供執行個體規則運算式之 <xref:System.TimeSpan> 建構函式的 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 值，藉此指定逾時間隔。 此外，每一個靜態模式比對方法都有 <xref:System.TimeSpan> 參數的多載，可讓您指定逾時值。 根據預設，逾時間隔會設為 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>，表示規則運算式引擎不會逾時。  
+ 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]開始，您可以設定逾時值，表示規則運算式引擎開始搜尋單一符合項目到放棄嘗試並擲回 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外狀況之前的最長間隔。 您可以提供執行個體規則運算式之 <xref:System.TimeSpan> 建構函式的 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 值，藉此指定逾時間隔。 此外，每一個靜態模式比對方法都有 <xref:System.TimeSpan> 參數的多載，可讓您指定逾時值。 根據預設，逾時間隔會設為 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> ，表示規則運算式引擎不會逾時。  
   
 > [!IMPORTANT]
 >  如果您的規則運算式倚賴回溯，建議您一定要設定逾時間隔。  
   
  <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外狀況表示規則運算式引擎在指定的逾時間隔內找不到相符項目，但不會指出擲回例外狀況的原因。 這個原因可能是大量回溯，不過也有可能是對於擲回例外狀況當時的系統負載而言，設定的逾時間隔太低。 當您處理例外狀況時，可以選擇中放棄一步比對輸入字串，或增加逾時間隔並重試比對作業。  
   
- 例如，下列程式碼會呼叫 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 建構函式來具現化逾時值為一秒的 <xref:System.Text.RegularExpressions.Regex> 物件。 規則運算式模式 `(a+)+$` 會在行尾比對一個或多個 "a" 字元的一個或多個序列，並且受限於大量回溯。 如果擲回 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> ，則範例會將逾時值增加至最大間隔三秒。 在這個間隔之後，它就會放棄嘗試比對模式。  
+ 例如，下列程式碼會呼叫 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 建構函式來具現化逾時值為一秒的 <xref:System.Text.RegularExpressions.Regex> 物件。 規則運算式模式 `(a+)+$`會在行尾比對一個或多個 "a" 字元的一個或多個序列，並且受限於大量回溯。 如果擲回 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> ，則範例會將逾時值增加至最大間隔三秒。 在這個間隔之後，它就會放棄嘗試比對模式。  
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
@@ -219,8 +219,8 @@ ms.locfileid: "53130087"
   
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)  
-- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
-- [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
-- [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)
+- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
+- [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
 - [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

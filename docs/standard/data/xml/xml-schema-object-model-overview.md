@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab7f3075d46ef0e8b98af471ae3943f7500128e5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c63a21ed871bf967674d09230f897b7ab98dfa4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554942"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML 結構描述物件模型概觀
 Microsoft .NET Framework 中的結構描述物件模型 (SOM) 是一個豐富的 API，可讓您以程式設計的方式建立、編輯及驗證結構描述。 SOM 在 XML 結構描述文件上的運作方式，與文件物件模型 (DOM) 在 XML 文件上的運作方式相似。 XML 結構描述文件是有效的 XML 檔案，當它載入 SOM 後，便可傳達符合該結構描述之其他 XML 文件結構及有效性的意義。  
@@ -40,10 +40,10 @@ Microsoft .NET Framework 中的結構描述物件模型 (SOM) 是一個豐富的
   
 ## <a name="see-also"></a>另請參閱
 
-- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
-- [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [後結構描述編譯資訊集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

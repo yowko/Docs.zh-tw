@@ -9,12 +9,12 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: e753f10acd33234d7f5e0c1a4203125ab880e2ae
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce0321d91835fbdf6c37f4b7736f0de900e9f838
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666796"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>HOW TO：寫入文字檔 (C# 程式設計手冊)
 在下列這些範例中，會示範幾個將文字寫入檔案的方法。 前兩個範例會在 <xref:System.IO.File?displayProperty=nameWithType> 類別上使用靜態便利方法，將任何 `IEnumerable<string>` 和字串的每個項目和字串寫入文字檔。 範例 3 中會示範寫入檔案時，如何在需要分別處理每一行時，將文字加入至檔案。 範例 1-3 會覆寫檔案中所有現有的內容，但是範例 4 將示範如何將文字附加至現有的檔案。  
@@ -33,8 +33,8 @@ ms.locfileid: "53237138"
   
 -   磁碟可能已滿。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)
 - [範例：如何將集合儲存至應用程式儲存空間](https://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)

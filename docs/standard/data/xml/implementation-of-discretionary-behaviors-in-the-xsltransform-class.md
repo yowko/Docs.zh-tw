@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e8bd2eaa977c9e3546758e9fd0e9fa3b4527634
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1602479d4986109ffe89a87250297ee5687930ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087936"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609573"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform 類別中的 Discretionary 行為實作
 
@@ -82,10 +82,10 @@ W3C [XSL 轉換 (XSLT) 1.0 版規格錯誤](https://www.w3.org/1999/11/REC-xslt-
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Xsl.XslTransform>
-- [XslTransform 類別實作 XSLT 處理器](xsltransform-class-implements-the-xslt-processor.md)  
-- [使用 XslTransform 類別進行 XSLT 轉換](xslt-transformations-with-the-xsltransform-class.md)  
-- [轉換中的 XPathNavigator](xpathnavigator-in-transformations.md)  
-- [轉換中的 XPathNodeIterator](xpathnodeiterator-in-transformations.md)  
-- [XslTransform 的 XPathDocument 輸入](xpathdocument-input-to-xsltransform.md)  
-- [XslTransform 的 XmlDataDocument 輸入](xmldatadocument-input-to-xsltransform.md)  
-- [XslTransform 的 XmlDocument 輸入](xmldocument-input-to-xsltransform.md)  
+- [XslTransform 類別實作 XSLT 處理器](xsltransform-class-implements-the-xslt-processor.md)
+- [使用 XslTransform 類別進行 XSLT 轉換](xslt-transformations-with-the-xsltransform-class.md)
+- [轉換中的 XPathNavigator](xpathnavigator-in-transformations.md)
+- [轉換中的 XPathNodeIterator](xpathnodeiterator-in-transformations.md)
+- [XslTransform 的 XPathDocument 輸入](xpathdocument-input-to-xsltransform.md)
+- [XslTransform 的 XmlDataDocument 輸入](xmldatadocument-input-to-xsltransform.md)
+- [XslTransform 的 XmlDocument 輸入](xmldocument-input-to-xsltransform.md)

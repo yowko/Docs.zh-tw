@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: ddfe8f88763ee2db78d25d72e6c9cb3456ccd13f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62e9e68eafe55c4d4c3fb2bba05d54f55df74114
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671625"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>安全性和登錄 (Visual Basic)
 此頁面說明將資料儲存在登錄中的安全隱憂。  
@@ -38,6 +38,6 @@ ms.locfileid: "33583925"
 > [!IMPORTANT]
 >  從 Web 應用程式讀取登錄時，目前使用者的身分識別取決於 Web 應用程式中所實作的驗證和模擬。  
   
-## <a name="see-also"></a>請參閱  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- [讀取和寫入登錄](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
+- [讀取和寫入登錄](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - login names [Visual Basic]
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
-ms.openlocfilehash: 097006caf56072d5a6e9f2945f5969eed249849e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ff071aadb189cec839b9cb41d510764a9187363
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605485"
 ---
 # <a name="accessing-user-data-visual-basic"></a>存取使用者資料 (Visual Basic)
 本節包含處理 `My.User` 物件以及可使用它完成的工作等主題。  
@@ -31,5 +31,5 @@ ms.locfileid: "33582840"
 |如果應用程式使用 Windows 驗證即可取得使用者的網域名稱|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
 |判斷使用者的角色|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
-## <a name="see-also"></a>請參閱  
- <xref:Microsoft.VisualBasic.ApplicationServices.User>
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.ApplicationServices.User>

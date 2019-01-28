@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 569f2d59bb2abf013a87bdaa694a7fcf36c70042
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c13a00ddad974ebba8eea4fceddd6a9fe3ed942
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398829"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597576"
 ---
 # <a name="working-with-resx-files-programmatically"></a>以程式設計方式使用 .resx 檔案
 因為 XML 資源 (.resx) 檔必須由妥善定義的 XML 組成，而其中所包含的標頭，需遵循特定結構描述且後面接著名稱/值組的資料，可能您會認為以手動方式建立這些檔案容易出錯。 另一種方法是，您可以使用 .NET Framework Class Library 中的型別和成員，透過程式設計的方式建立 .resx 檔。 您也可以使用 .NET Framework Class Library 擷取儲存在 .resx 檔中的資源。 本主題說明如何使用 <xref:System.Resources> 命名空間中的型別和成員，來處理 .resx 檔。  
@@ -84,7 +84,7 @@ ms.locfileid: "33398829"
   
  **al** *resourcesFilename* **-out:** *assemblyFilename*  
   
-## <a name="see-also"></a>請參閱  
- [建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Resgen.exe (資源檔產生器)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
- [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>另請參閱
+- [建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Resgen.exe (資源檔產生器)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)

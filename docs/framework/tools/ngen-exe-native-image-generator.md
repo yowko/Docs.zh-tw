@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f086c5b6bf1d45f3f711112c618e2398c3a39ed
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 915ffcba4ad0dc361e3a3c392adc6215d2420a85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592623"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)
 原生映像產生器 (Ngen.exe) 是一種可以增進 Managed 應用程式效能的工具。 Ngen.exe 會建立原生映像，也就是包含已編譯之處理器特定機器碼的檔案，然後將原生映像安裝到本機電腦上的原生映像快取中。 執行階段就可以從快取中使用原生映像，而不是使用 Just-In-Time (JIT) 編譯器來編譯原始組件。  
@@ -584,10 +584,10 @@ ngen executeQueuedItems
 ### <a name="service-interaction-with-clients"></a>服務與用戶端互動  
  在 .NET Framework 2.0 版中，與原生映像服務的唯一互動，是透過命令列工具 Ngen.exe。 在安裝指令碼中使用命令列工具，將原生映像服務的動作加入佇列中，並與服務互動。  
   
-## <a name="see-also"></a>請參閱  
- [工具](../../../docs/framework/tools/index.md)  
- [Managed 執行程序](../../../docs/standard/managed-execution-process.md)  
- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>另請參閱
+- [工具](../../../docs/framework/tools/index.md)
+- [Managed 執行程序](../../../docs/standard/managed-execution-process.md)
+- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 
 [Native Image Service]: #native-image-service

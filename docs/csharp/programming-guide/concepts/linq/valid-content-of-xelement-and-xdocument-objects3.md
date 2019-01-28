@@ -2,12 +2,12 @@
 title: XElement 和 XDocument 物件的有效內容
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: afaeed7ba49891380982ec9c3cade43574ab8c16
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 064cd4a6a112a12e0af60732df376e72b294fabc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524036"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 和 XDocument 物件的有效內容
 本主題說明可以傳遞給用於將內容加入至項目和文件之建構函式 (Constructor) 和方法的有效引數。  
@@ -75,7 +75,7 @@ ms.locfileid: "47196248"
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>允許加入內容的建構函式與函式  
  下列方法可讓您將子內容加入到 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument>：  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.%23ctor%2A>|建構 <xref:System.Xml.Linq.XElement>。|  
 |<xref:System.Xml.Linq.XDocument.%23ctor%2A>|建構 <xref:System.Xml.Linq.XDocument>。|  
@@ -88,6 +88,6 @@ ms.locfileid: "47196248"
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|以新的內容取代子節點。|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|以新內容取代節點。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

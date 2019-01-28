@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 393d755276e281e923dfe3e52b5d3e9afdae38dd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7aa2bcdad9584ecf05dfee35e0887ed70737795d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183707"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492829"
 ---
 # <a name="async-in-depth"></a>深入了解非同步
 
@@ -146,7 +146,7 @@ public async Task<int> CalculateResult(InputData data)
 
 ## <a name="see-also"></a>另請參閱
 
-* [C# 中的非同步程式設計](~/docs/csharp/async.md)   
-* [使用 async 和 await 進行非同步程式設計 (C#)](../csharp/programming-guide/concepts/async/index.md)  
-* [F# 中的非同步程式設計](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
-* [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [C# 中的非同步程式設計](~/docs/csharp/async.md)
+- [使用 async 和 await 進行非同步程式設計 (C#)](../csharp/programming-guide/concepts/async/index.md)
+- [F# 中的非同步程式設計](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)

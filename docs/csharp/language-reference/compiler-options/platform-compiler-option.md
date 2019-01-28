@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: f52192087eb7b73ee930eea073e0c5716ad8c636
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1573e28f2a6f9dec7825d364debcdf1085ef7ff2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635659"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C# 編譯器選項)
 指定哪個 Common Language Runtime (CLR) 版本可以執行組件。  
@@ -66,7 +66,7 @@ ms.locfileid: "43507588"
   
  請注意，在 Visual C# Express 開發環境中無法使用 **-platform**。  
   
- 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用 **-platform** 選項，指定應用程式應該在 64 位元 Windows 作業系統上以 64 位元 CLR 執行。  
@@ -75,7 +75,7 @@ ms.locfileid: "43507588"
 csc -platform:anycpu filename.cs  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](index.md)  
+- [C# 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

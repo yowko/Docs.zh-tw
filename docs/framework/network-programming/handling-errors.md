@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: d199219b36e2cc06314b38303fb2296f9f3794ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599774"
 ---
 # <a name="handling-errors"></a>處理錯誤
 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別會擲回兩個系統例外狀況 (例如 <xref:System.ArgumentException>) 和 Web 特定例外狀況 (這些是 <xref:System.Net.WebRequest.GetResponse%2A> 方法所擲回的 <xref:System.Net.WebException>)。  
@@ -45,7 +45,7 @@ ms.locfileid: "50198337"
   
  下表描述 **Status** 屬性的可能值。  
   
-|狀態|描述|  
+|狀態|說明|  
 |------------|-----------------|  
 |ConnectFailure|無法在傳輸層級連絡遠端服務。|  
 |ConnectionClosed|連線過早關閉。|  
@@ -167,6 +167,6 @@ End Try
   
  擲回 **SocketException** 時，**SocketException** 類別會將 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 屬性設定為最後發生的作業系統通訊端錯誤。 如需通訊端錯誤碼的詳細資訊，請參閱 MSDN 中的 Winsock 2.0 API 錯誤碼文件。  
   
-## <a name="see-also"></a>請參閱  
- [例外狀況處理基本概念](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
- [要求資料](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>另請參閱
+- [例外狀況處理基本概念](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [要求資料](../../../docs/framework/network-programming/requesting-data.md)

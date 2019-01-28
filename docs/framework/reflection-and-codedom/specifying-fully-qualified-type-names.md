@@ -16,11 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 437bbb7a1645c0ab13da33e57c1e70b5ec98984c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9281906f5500d954f3a0c7abface4ee43adcb64d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628535"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>指定完整的類型名稱
 您必須指定具有各種反映作業有效輸入的類型名稱。 完整的類型名稱包括組件名稱規格、命名空間規格和類型名稱。 方法使用的類型名稱規格如 <xref:System.Type.GetType%2A?displayProperty=nameWithType>、<xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>、<xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>。  
@@ -133,7 +134,7 @@ AssemblyProperty
 ## <a name="specifying-assembly-names"></a>指定組件名稱  
  組件名稱規格中的基本資訊是組件的文字名稱 (IDENTIFIER)。 您可以按照逗號分隔的屬性/值組清單理解 IDENTIFIER，如下表所述。 IDENTIFIER 的命名應依照檔案命名的規則。 IDENTIFIER 不區分大小寫。  
   
-|屬性名稱|描述|允許的值|  
+|屬性名稱|說明|允許的值|  
 |-------------------|-----------------|----------------------|  
 |**版本**|組件版本號碼|在 *Major.Minor.Build.Revision* 中，*Major*、*Minor*、*Build* 和 *Revision* 是介於 0 到 65535 (含) 之間的整數。|  
 |**PublicKey**|完整公開金鑰|十六進位格式的完整公開金鑰字串值。 指定 null 參考 (Visual Basic 為**Nothing**) 以明確指出私用組件。|  
@@ -200,11 +201,11 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
   
  對 **ModuleBuilder.GetType** 而言，`MyArray[0..5]` 表示大小 6、下限 0 的一維陣列。 `MyArray[4…]` 表示大小不明、下限 4 的一維陣列。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Reflection.AssemblyName>  
- <xref:System.Reflection.Emit.ModuleBuilder>  
- <xref:System.Reflection.Emit.TypeBuilder>  
- <xref:System.Type.FullName%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>  
- [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Reflection.AssemblyName>
+- <xref:System.Reflection.Emit.ModuleBuilder>
+- <xref:System.Reflection.Emit.TypeBuilder>
+- <xref:System.Type.FullName%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
+- [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

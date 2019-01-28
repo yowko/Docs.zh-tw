@@ -16,12 +16,12 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 11b0082630fb41823173a87160344d2dfff5482e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 552fb69910d7186321d834e4bc36abc867a31658
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602906"
 ---
 # <a name="using-tcp-services"></a>使用 TCP 服務
 <xref:System.Net.Sockets.TcpClient> 類別會使用 TCP 向網際網路資源要求資料。 **TcpClient** 的屬性和方法取出的詳細資料，可用來建立 <xref:System.Net.Sockets.Socket> 以使用 TCP 要求和接收資料。 因為遠端裝置的連線是以資料流表示，所以可以使用 .NET Framework 資料流處理技術來讀取和寫入資料。  
@@ -194,5 +194,5 @@ public class TcpTimeServer {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- 
+## <a name="see-also"></a>另請參閱
+

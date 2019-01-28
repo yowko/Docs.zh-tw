@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d34e8139de9af0d2fdb1dce48fd7ba0dbf3858b4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: d20ce0f09309c84dcbeb016e0f17c37fe338dd9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45646791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504089"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>執行不區分文化特性的字串比較
 根據預設，<xref:System.String.Compare%2A?displayProperty=nameWithType> 方法會執行區分文化特性和區分大小寫的比較。 這個方法也包含幾個多載，這些多載會提供 `culture` 參數 (讓您指定要使用的文化特性) 及 `comparisonType` 參數 (讓您指定要使用的比較規則)。 呼叫這些方法 (而不是預設多載) 會消除有關特定方法呼叫中使用之規則的任何模稜兩可情況，而且可以釐清特定比較是否區分文化特性。  
@@ -43,7 +43,7 @@ ms.locfileid: "45646791"
 
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.String.Compare%2A?displayProperty=nameWithType>  
-- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>  
-- [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+- <xref:System.String.Compare%2A?displayProperty=nameWithType>
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
+- [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - [使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)

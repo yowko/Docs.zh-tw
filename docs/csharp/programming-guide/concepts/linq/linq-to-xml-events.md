@@ -2,12 +2,12 @@
 title: LINQ to XML 事件 (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-ms.openlocfilehash: 6308d81eac830e11b6d58f8e460dfa377663cd21
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: f7ce6ed99f7279d1dc774314cdc2dde345b6a84d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736860"
 ---
 # <a name="linq-to-xml-events-c"></a>LINQ to XML 事件 (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 事件可讓您在 XML 樹狀結構有所更改時收到通知。  
@@ -19,21 +19,21 @@ ms.locfileid: "49453303"
 ## <a name="types-and-events"></a>型別與事件  
  使用事件時，您可以使用下列型別：  
   
-|類型|描述|  
+|類型|說明|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|引發 <xref:System.Xml.Linq.XObject> 的事件時，指定事件型別。|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|提供 <xref:System.Xml.Linq.XObject.Changing> 和 <xref:System.Xml.Linq.XObject.Changed> 事件的資料。|  
   
  修改 XML 樹狀結構時，會引發下列事件：  
   
-|Event - 事件|描述|  
+|Event - 事件|說明|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|只會在此 <xref:System.Xml.Linq.XObject> 或其任何子代即將變更前發生。|  
 |<xref:System.Xml.Linq.XObject.Changed>|<xref:System.Xml.Linq.XObject> 已變更時或其任何子代已變更時發生。|  
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>說明  
  當您想要維護 XML 樹狀結構中的特定彙總資訊時，這些事件相當實用。 例如，您可能想要維護發票明細項目總計的發票總數。 此範例使用事件維護複雜項目 `Items` 下，所有子項目的總計。  
   
 ### <a name="code"></a>程式碼  
@@ -97,6 +97,6 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [進階 LINQ to XML 程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 37575ff080fca1514e4fd6e4e22243227c529dd2
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: bbffed49d0137f3babde8ba75e3f5d91db00751c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595195"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式的最佳作法
 事件架構非同步模式提供有效率的方式，讓您運用熟悉的事件和委派語意，公開類別中的非同步行為。 若要實作事件架構非同步模式，您需要遵循一些特定的行為需求。 下列各節說明在實作遵循事件架構非同步模式的類別時，所應考量的需求和方針。  
@@ -145,14 +145,14 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.ComponentModel.AsyncOperation>  
-- <xref:System.ComponentModel.AsyncOperationManager>  
-- <xref:System.ComponentModel.AsyncCompletedEventArgs>  
-- <xref:System.ComponentModel.ProgressChangedEventArgs>  
-- <xref:System.ComponentModel.BackgroundWorker>  
-- [實作事件架構非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
-- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
-- [決定何時實作事件架構非同步模式](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
-- [實作事件架構非同步模式的最佳作法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
-- [如何：使用支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+- <xref:System.ComponentModel.AsyncOperation>
+- <xref:System.ComponentModel.AsyncOperationManager>
+- <xref:System.ComponentModel.AsyncCompletedEventArgs>
+- <xref:System.ComponentModel.ProgressChangedEventArgs>
+- <xref:System.ComponentModel.BackgroundWorker>
+- [實作事件架構非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)
+- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [決定何時實作事件架構非同步模式](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+- [實作事件架構非同步模式的最佳作法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [如何：使用支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
 - [如何：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)

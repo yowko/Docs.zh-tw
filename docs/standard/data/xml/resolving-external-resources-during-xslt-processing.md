@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 958699b8e3a00cfe3f8fd8ac4bb96914dcd0598c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7f73edf5912f8158db51ed070da8816d5b988b8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44185122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555475"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>XSLT 處理期間解析外部資源
 在 XSLT 轉換期間，您可能需要進行數次外部資源解析。  
@@ -46,6 +46,6 @@ ms.locfileid: "44185122"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.Xsl.XslCompiledTransform>  
-- <xref:System.Xml.Xsl.XsltSettings>  
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- <xref:System.Xml.Xsl.XsltSettings>
 - [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-ms.openlocfilehash: 35244ce33902760c2a0d3d8bda3181097f7ca38e
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5b65ae794e99602fc84f674be5ec0502d4588a59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607698"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>泛型和屬性 (C# 程式設計手冊)
 屬性可以使用與非泛型型別相同的方式，套用至泛型型別。 如需套用屬性的詳細資訊，請參閱[屬性](../../../csharp/programming-guide/concepts/attributes/index.md)。  
@@ -44,8 +44,8 @@ ms.locfileid: "53245177"
   
  若要取得執行階段的泛型型別或型別參數的相關資訊，您可以使用 <xref:System.Reflection> 的方法。 如需詳細資訊，請參閱[泛型和反映](../../../csharp/programming-guide/generics/generics-and-reflection.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [泛型](../../../csharp/programming-guide/generics/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [泛型](../../../csharp/programming-guide/generics/index.md)
 - [屬性](../../../../docs/standard/attributes/index.md)

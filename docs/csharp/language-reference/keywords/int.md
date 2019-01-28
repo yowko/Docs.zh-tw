@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-ms.openlocfilehash: 3436d2ceeec9eed80f346c28231ba376cf6d5fb6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b1a621b7cce61ecd2c26c72adbdc3aa56749c914
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615646"
 ---
 # <a name="int-c-reference"></a>int (C# 參考)
 
@@ -80,13 +80,13 @@ int y = (int)3.0;    // OK: explicit conversion.
 
 如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[整數型別](~/_csharplang/spec/types.md#integral-types)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Int32>  
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
-- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- <xref:System.Int32>
+- [C# 參考](../../../csharp/language-reference/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

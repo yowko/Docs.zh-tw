@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4718dadddb2ad88ece05312b2f2b7232271d5b0e
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678261"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>規則運算式中的數量詞
 數量詞指定輸入中要有多少字元、群組或字元類別的執行個體，才能找到相符項目。  下表列出 .NET 支援的數量詞。  
@@ -273,5 +273,5 @@ ms.locfileid: "54221384"
   
 ## <a name="see-also"></a>另請參閱
 
-- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: ab0602f9ed353cf3959516e285086ab5af98c9f8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d44c0b7a2f6617a01416ccc5bd1eb857b1f782da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607890"
 ---
 # <a name="from-clause-c-reference"></a>from 子句 (C# 參考)
 
@@ -56,5 +56,5 @@ ms.locfileid: "53236800"
 
 ## <a name="see-also"></a>另請參閱
 
-- [查詢關鍵字 (LINQ)](query-keywords.md)  
-- [Language-Integrated Query (LINQ)](../../linq/index.md)  
+- [查詢關鍵字 (LINQ)](query-keywords.md)
+- [Language-Integrated Query (LINQ)](../../linq/index.md)

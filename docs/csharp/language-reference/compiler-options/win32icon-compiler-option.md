@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: 5014b1da714f8e29f869d4641da93796a607aa4d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: e4558084357c8ce07004a8ed71aef586a707f1a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591743"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (C# 編譯器選項)
 **-win32icon** 選項會在輸出檔案內插入一個 .ico 檔，讓輸出檔案在檔案總管中具有所需的外觀。  
@@ -50,7 +50,7 @@ ms.locfileid: "48027782"
 csc -win32icon:rf.ico in.cs  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

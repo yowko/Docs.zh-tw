@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 245e94cab61c0c60672476aadb417fc798b30362
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9ec1a003d981db99bec20778790fa4a3507ad0b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50181039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587956"
 ---
 # <a name="internet-authentication"></a>網際網路驗證
 <xref:System.Net> 類別支援各種不同的用戶端驗證機制，包括標準的網際網路驗證方法 (基本、摘要式、交涉式、NTLM 和 Kerberos 驗證) 以及您可以建立的自訂方法。  
@@ -39,7 +39,7 @@ ms.locfileid: "50181039"
   
  某些驗證配置可以驗證使用者，不需要先要求資源。 應用程式可以預先驗證使用者和資源，至少消除一次伺服器往返，進而節省時間。 或者，它可以在程式啟動期間執行驗證，以便稍後更能回應使用者。 可以使用預先驗證的驗證配置，將 <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> 屬性設為 **true**。  
   
-## <a name="see-also"></a>請參閱  
- [基本和摘要式驗證](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
- [NTLM 與 Kerberos 驗證](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
- [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)
+## <a name="see-also"></a>另請參閱
+- [基本和摘要式驗證](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
+- [NTLM 與 Kerberos 驗證](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
+- [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)

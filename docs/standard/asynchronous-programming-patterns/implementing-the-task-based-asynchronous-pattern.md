@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 639a7ae4eb20cfc95f4d01dd0c7035f17656e3e1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a218633ed607222fec3e46629a9bcd614c3d0610
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678209"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>實作以工作為基礎的非同步模式
 您可以採用三種方式實作工作式非同步模式 (TAP)：使用 Visual Studio 中的 C# 和 Visual Basic 編譯器、手動，或是透過編譯器和手動方法的組合。 下列章節詳細討論每一種方法。 您可以使用 TAP 方法實作計算繫結和 I/O 繫結的非同步作業。 [工作負載](#workloads)一節討論每種作業類型。
@@ -29,7 +29,7 @@ ms.locfileid: "45988565"
 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，屬性具有 `async` 關鍵字 (在 Visual Basic 中為 `Async`) 的任何方法都會視為非同步方法，而 C# 和 Visual Basic 編譯器會使用 TAP 執行必要的轉換，藉此透過非同步的方式實作這個方法。 非同步方法應該傳回 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 物件。 若是後者，函式主體應該會傳回 `TResult`，而編譯器會確保這個結果是透過產生的工作物件提供。 同樣地，方法主體內未處理的任何例外狀況會封送處理至輸出工作，並導致產生的工作在 <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 狀態結束。 例外狀況就是當 <xref:System.OperationCanceledException> (或衍生類型) 未處理時，此時產生的工作會在 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 狀態結束。
 
 ### <a name="generating-tap-methods-manually"></a>以手動方式產生 TAP 方法
-您可以手動實作 TAP 模式，以便更有效控制實作。 編譯器會依賴從 <xref:System.Threading.Tasks?displayProperty=nameWithType> 命名空間公開的公用表面區域，和 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中的支援類型。 若要自行實作 TAP，請建立 <xref:System.Threading.Tasks.TaskCompletionSource%601> 物件、執行非同步作業，並完成之後呼叫 <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>、<xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> 或 <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> 方法，或其中一個方法的 `Try` 版本。 當您以手動方式實作 TAP 方法時，您必須在代表的非同步作業完成時，完成產生的工作。 例如: 
+您可以手動實作 TAP 模式，以便更有效控制實作。 編譯器會依賴從 <xref:System.Threading.Tasks?displayProperty=nameWithType> 命名空間公開的公用表面區域，和 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中的支援類型。 若要自行實作 TAP，請建立 <xref:System.Threading.Tasks.TaskCompletionSource%601> 物件、執行非同步作業，並完成之後呼叫 <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>、<xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> 或 <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> 方法，或其中一個方法的 `Try` 版本。 當您以手動方式實作 TAP 方法時，您必須在代表的非同步作業完成時，完成產生的工作。 例如：
 
 [!code-csharp[Conceptual.TAP_Patterns#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#1)]
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]
@@ -103,6 +103,6 @@ ms.locfileid: "45988565"
 
 ## <a name="see-also"></a>另請參閱
 
-- [工作式非同步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
-- [使用以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)  
-- [與其他非同步模式和型別互通](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)  
+- [工作式非同步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
+- [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [與其他非同步模式和型別互通](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

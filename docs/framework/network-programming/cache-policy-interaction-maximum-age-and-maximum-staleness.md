@@ -9,12 +9,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: 7a066f403e526c50054b58a099bb7978ef57e74d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bb44aca802f6a0323e69fb33f64d8238406f8b48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653641"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>快取原則互動 — 最長使用期限和最長過時
 為了協助確保將最新內容傳回給用戶端應用程式，用戶端快取原則與伺服器重新驗證需求的互動一律會導致最保守的快取原則。 本主題中的所有範例都會說明在 1 月 1 日快取並在 1 月 4 日到期之資源的快取原則。  
@@ -35,10 +35,10 @@ ms.locfileid: "50181143"
   
 -   如果快取原則設定 `maxAge` = 1 天且 `maxStale` = 1 天，則會在 1 月 2 日重新驗證內容。  
   
-## <a name="see-also"></a>請參閱  
- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [快取原則](../../../docs/framework/network-programming/cache-policy.md)  
- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- [快取原則互動 - 最長使用期限和最小有效期限](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)
+## <a name="see-also"></a>另請參閱
+- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [快取原則](../../../docs/framework/network-programming/cache-policy.md)
+- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+- [快取原則互動 - 最長使用期限和最小有效期限](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)

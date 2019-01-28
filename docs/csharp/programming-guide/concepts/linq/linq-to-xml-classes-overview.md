@@ -2,12 +2,12 @@
 title: LINQ to XML 類別概觀 (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: d1454909591ff060f9d2a1d2484302e7112be149
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a50b58ad3e8f375d80701f454e74fef00e4d2203
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509658"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>LINQ to XML 類別概觀 (C#)
 本主題提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 命名空間 (Namespace) 中的 <xref:System.Xml.Linq> 類別 (Class) 清單，以及每個類別的簡短說明。  
@@ -86,6 +86,6 @@ ms.locfileid: "43502387"
 ### <a name="xtext-class"></a>XText 類別  
  <xref:System.Xml.Linq.XText> 代表文字節點。 在大部分的情況下，您不必使用這個類別。 這個類別主要用於混合的內容。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ to XML 程式設計概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

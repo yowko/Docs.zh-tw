@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef0d47ae18b8bdd3f1d49a20937b65e9872ab551
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f32a71ec04d791c83f711beee1086bcba283401c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44201747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625610"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>HOW TO：使用組件執行 XSLT 轉換
 XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後此組件可以直接傳遞到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。  
@@ -183,7 +183,7 @@ xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.Xsl.XslCompiledTransform>  
-- [XSLT 編譯器 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
-- [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- [XSLT 編譯器 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+- [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [使用 csc.exe 建置命令列](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

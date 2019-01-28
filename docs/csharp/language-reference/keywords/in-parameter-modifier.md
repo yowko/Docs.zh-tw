@@ -5,12 +5,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: d08b135c92cab176e402fec73999083fe4309362
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c3644b82a180fe6ed376938c9ff86db900db440e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631399"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 參數修飾詞 (C# 參考)
 
@@ -119,10 +119,10 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)  
-- [C# 程式設計指南](../../programming-guide/index.md)  
-- [C# 關鍵字](index.md)  
-- [方法參數](method-parameters.md)  
-- [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)  
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 關鍵字](index.md)
+- [方法參數](method-parameters.md)
+- [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcedd478ee1eb89c11dc9535b1d2ffe843d0f658
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c6605fa1923dc4fdaf4f12a7c8fc7c1e344673b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697489"
 ---
 # <a name="foreground-and-background-threads"></a>前景和背景執行緒
 受控執行緒可以是背景執行緒或前景執行緒。 背景執行緒與前景執行緒完全相同，但有一個例外：背景執行緒不會讓受控的執行環境保持執行狀態。 一旦受控處理序 (其中的 .exe 檔案為受控組件) 的所有前景執行緒都已停止之後，系統就會停止所有背景執行緒並關閉。  
@@ -34,6 +34,6 @@ ms.locfileid: "44081325"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
-- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>
+- <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadAbortException>

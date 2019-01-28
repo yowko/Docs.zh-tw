@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f33320603b175f04d0372fd5f2a2ee16d286d7b3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 23632a5df10c1ab2d1afa654d5438a4ebd903d5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603036"
 ---
 # <a name="node-sets-in-transformations"></a>轉換中的節點集
 節點集是 XML 路徑語言 (XPath) 運算式傳回的四種基本資料型別之一。 節點集是一個沒有順序、不重複的節點集合，它依據文件的順序建立，可以指定給樣式表中的變數。  
@@ -76,6 +76,6 @@ History of Trenton Vol 3
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.XPath.XPathNodeIterator>  
-- [使用 XslTransform 類別進行 XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
+- <xref:System.Xml.XPath.XPathNodeIterator>
+- [使用 XslTransform 類別進行 XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
 - [XslTransform 類別實作 XSLT 處理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

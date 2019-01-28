@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d838f3d9f4c9400fbbef0fb24f5275eff2038c49
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: f25fa9706d43dd69da233e474127543dfdf83fb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595626"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 擷取 XML 資料
 可採用幾種不同方式表示 Microsoft .NET Framework 中的 XML 文件。 包括使用 <xref:System.String>，或使用 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter>、<xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 類別。 為便於在 XML 文件的不同表示之間進行切換，<xref:System.Xml.XPath.XPathNavigator> 類別提供了一些方法及屬性，可將 XML 當做 <xref:System.String>、<xref:System.Xml.XmlReader> 物件或 <xref:System.Xml.XmlWriter> 物件擷取。  
@@ -164,10 +164,10 @@ book.Close();
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [使用 XPathNavigator 導覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
-- [使用 XPathNavigator 導覽屬性和命名空間節點](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [使用 XPathNavigator 導覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)
+- [使用 XPathNavigator 導覽屬性和命名空間節點](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)
 - [使用 XPathNavigator 存取強型別 XML 資料](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

@@ -13,12 +13,12 @@ ms.author: ronpet
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 854528670bbddbc2dc318bf4a5ecd12368a5e8d1
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 63ecff45e39f3d3813d3f817a2cc55c6c35f5b3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716061"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>以結束非同步作業的方式封鎖應用程式執行
 等待非同步作業的結果而無法繼續執行其他工作的應用程式必須封鎖，直到作業完成為止。 使用下列其中一個選項，在等候非同步作業完成時封鎖應用程式的主執行緒：  
@@ -37,5 +37,5 @@ ms.locfileid: "54361972"
   
 ## <a name="see-also"></a>另請參閱
 
-- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
 - [事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

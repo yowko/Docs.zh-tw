@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645895"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>規則運算式中的群組建構
 群組建構會描寫規則運算式的子運算式，以及擷取輸入字串的子字串。 您可以使用群組建構來執行下列作業：  
@@ -59,7 +59,7 @@ ms.locfileid: "44041596"
  其中 *subexpression* 是任何有效的規則運算式模式。 使用括號的擷取會依據規則運算式中的左括號順序，從一開始，由左至右自動編號。 編號零的擷取是整個規則運算式模式比對的文字。  
   
 > [!NOTE]
->  根據預設， `(`*子運算式*`)` 語言項目會擷取相符的子運算式。 但是如果規則運算式模式比對方法的 <xref:System.Text.RegularExpressions.RegexOptions> 參數包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 旗標，或這個子運算式套用了 `n` 選項 (請參閱本主題稍後的[群組選項](#group_options))，則不會擷取相符的子運算式。  
+>  根據預設， `(`*子運算式*`)` 語言項目會擷取相符的子運算式。 但是如果規則運算式模式比對方法的 <xref:System.Text.RegularExpressions.RegexOptions> 參數包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 旗標，或這個子運算式套用了 `n` 選項 (請參閱本主題稍後的 [群組選項](#group_options) )，則不會擷取相符子運算式。  
   
  您可以用四種方式來存取擷取群組：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "44041596"
   
 -   在規則運算式中使用具名的反向參考建構。 使用語法 `\k<`*name*`>`(其中 where *name* 是擷取群組的名稱) 或 `\k<`*number*`>`(其中 where *number* 是擷取群組的序號)，在相同的規則運算式中參考相符子運算式。 擷取群組的預設名稱與其序號相同。 如需詳細資訊，請參閱本主題稍後的 [具名的相符子運算式](#named_matched_subexpression) 。  
   
--   在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法呼叫中使用 `$`*number* 取代序列，其中 *number* 是所擷取子運算式的序號。  
+-   在 `$`*number* $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 取代順序，其中 *number* 是所擷取子運算式的序號)，在相同的規則運算式中參考相符子運算式。  
   
 -   以程式設計方式，使用 <xref:System.Text.RegularExpressions.GroupCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件。 集合中位置為零的成員代表整個規則運算式相符。 每個後續成員各代表一個相符子運算式。 如需詳細資訊，請參閱 [Grouping Constructs and Regular Expression Objects](#Objects) 一節。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "44041596"
   
  下表顯示規則運算式模式的解譯方式。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`(\w+)`|比對一個或多個文字字元。 這是第一個擷取群組。|  
 |`\s`|比對空白字元。|  
@@ -108,7 +108,7 @@ ms.locfileid: "44041596"
  其中 *name* 是有效的群組名稱，而 *subexpression* 是任何有效的規則運算式模式。 *name* 絕不能包含任何標點符號字元，而且不能以數字開頭。  
   
 > [!NOTE]
->  如果規則運算式模式比對方法的 <xref:System.Text.RegularExpressions.RegexOptions> 參數包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 旗標，或這個子運算式套用了 `n` 選項 (請參閱本主題稍後的[群組選項](#group_options))，則擷取子運算式的唯一方式就是明確地為擷取群組命名。  
+>  如果規則運算式模式比對方法的 <xref:System.Text.RegularExpressions.RegexOptions> 參數包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 旗標，或這個子運算式套用了 `n` 選項 (請參閱本主題稍後的 [群組選項](#group_options) )，則擷取子運算式的唯一方式，就是明確地為擷取群組命名。  
   
  您可以用下列方式來存取具名的擷取群組：  
   
@@ -116,7 +116,7 @@ ms.locfileid: "44041596"
   
 -   在規則運算式中使用反向參考建構。 使用語法 `\`*number*(其中 where *number* 是所擷取子運算式的序號)，在相同的規則運算式中參考相符子運算式。 具名的相符子運算式會在相符子運算式之後，由左至右連續編號。  
   
--   在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法呼叫中使用 `${`*name*`}` 取代序列，其中 *name* 是所擷取子運算式的名稱。  
+-   在 `${`*name*`}` $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 取代順序，其中 *name* 是所擷取子運算式的名稱)，在相同的規則運算式中參考相符子運算式。  
   
 -   在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法呼叫中使用 `$`*number* 取代序列，其中 *number* 是所擷取子運算式的序號。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "44041596"
   
  下表顯示規則運算式的解譯方式。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`(?<duplicateWord>\w+)`|比對一個或多個文字字元。 將此擷取群組命名為 `duplicateWord`。|  
 |`\s`|比對空白字元。|  
@@ -164,7 +164,7 @@ ms.locfileid: "44041596"
   
  下表顯示規則運算式的解譯方式。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\D+`|比對一個或更多非十進位數字字元。|  
 |`(?<digit>\d+)`|比對一個或更多十進位數字字元。 指派 `digit` 具名群組的比對。|  
@@ -205,7 +205,7 @@ ms.locfileid: "44041596"
   
  規則運算式解譯如下：  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`^`|從字串開頭開始。|  
 |`[^<>]*`|比對非左右角括號的零或多個字元。|  
@@ -270,7 +270,7 @@ ms.locfileid: "44041596"
   
  規則運算式 `(?:\b(?:\w+)\W*)+\.` 符合以句點終止的句子。 因為規則運算式著重在句子，而不是個別文字，所以群組建構只會用做數量詞。 規則運算式模式的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`(?:\w+)`|比對一個或多個文字字元。 請勿將相符的文字指派給擷取群組。|  
@@ -293,7 +293,7 @@ ms.locfileid: "44041596"
   
  例如，下列範例中的規則運算式 `\b(?ix: d \w+)\s` 在群組建構中使用內嵌選項，來啟用不區分大小寫的比對，並會在識別以字母 "d" 開頭的所有字組時，忽略模式空白字元。 規則運算式的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`(?ix: d \w+)`|使用不區分大小寫比對，並忽略此模式中的空格，比對後面接一或多個文字字元的 "d"。|  
@@ -319,7 +319,7 @@ ms.locfileid: "44041596"
   
  規則運算式 `\b\w+(?=\sis\b)` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`\w+`|比對一個或多個文字字元。|  
@@ -342,7 +342,7 @@ ms.locfileid: "44041596"
   
  規則運算式 `\b(?!un)\w+\b` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`(?!un)`|判斷下兩個字元是否為 "un"。 如果不是，才可能比對。|  
@@ -356,7 +356,7 @@ ms.locfileid: "44041596"
   
  規則運算式 `\b\w+\b(?!\p{P})` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`\w+`|比對一個或多個文字字元。|  
@@ -380,7 +380,7 @@ ms.locfileid: "44041596"
   
  規則運算式模式 `(?<=\b20)\d{2}\b` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\d{2}`|比對兩個十進位數字。|  
 |`(?<=\b20)`|如果字邊界上的兩個十進位數字前置十進位數字 "20"，則繼續比對。|  
@@ -405,7 +405,7 @@ ms.locfileid: "44041596"
   
  規則運算式模式 `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`\w+`|比對後接空格字元的一或多個文字字元。|  
@@ -434,7 +434,7 @@ ms.locfileid: "44041596"
   
  非回溯規則運算式 `(?>(\w)\1+).\b` 的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`(\w)`|比對單一文字字元，並將其指派給第一個擷取群組。|  
 |`\1+`|比對第一個擷取子字串的值一或數次。|  
@@ -452,7 +452,7 @@ ms.locfileid: "44041596"
   
 -   最後一個 <xref:System.Text.RegularExpressions.Group> 物件組合代表具名擷取群組。 其出現順序會依照規則運算式中定義的順序，由左至右。 第一個具名擷取群組的索引值比最後一個未具名擷取群組的索引值大一。 如果規則運算式中沒有未具名擷取群組，則第一個具名擷取群組的索引值為一。  
   
- 如果您將數量詞套用至擷取群組，對應之 <xref:System.Text.RegularExpressions.Group> 物件的 <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>、<xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> 屬性會反映擷取群組所擷取的最後一個子字串。 您可以擷取由群組所擷取的一組完整子字串，那些群組具有 <xref:System.Text.RegularExpressions.CaptureCollection> 屬性傳回之 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 物件中的數量詞。  
+ 如果您將數量詞套用至擷取群組，對應之 <xref:System.Text.RegularExpressions.Group> 物件的 <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>、 <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>和 <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> 屬性會反映擷取群組所擷取的最後一個子字串。 您可以擷取由群組所擷取的一組完整子字串，那些群組具有 <xref:System.Text.RegularExpressions.CaptureCollection> 屬性傳回之 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 物件中的數量詞。  
   
  下列範例說明 <xref:System.Text.RegularExpressions.Group> 與 <xref:System.Text.RegularExpressions.Capture> 物件之間的關聯性。  
   
@@ -461,7 +461,7 @@ ms.locfileid: "44041596"
   
  規則運算式模式 `\b(\w+)\W+)+` 會從字串擷取個別文字。 其定義方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`(\w+)`|比對一個或多個文字字元。 這些字元共同構成一個單字。 這是第二個擷取群組。|  
@@ -472,5 +472,5 @@ ms.locfileid: "44041596"
   
 ## <a name="see-also"></a>另請參閱
 
-- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

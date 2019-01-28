@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: f26d812d8f4da8fae73ebbaee15441cd88860d04
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7bc806cd5516666c86780bb53842725f0c0c1617
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600696"
 ---
 # <a name="decimal-c-reference"></a>decimal (C# 參考)
 
@@ -97,12 +97,12 @@ Console.WriteLine((double)dec + dub);
 
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Decimal>  
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
-- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- <xref:System.Decimal>
+- [C# 參考](../../../csharp/language-reference/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
 - [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)

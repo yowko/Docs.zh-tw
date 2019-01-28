@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: af30f0d09ce772f20f342ec0936d0ca63f5465d7
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: acc732f72e9dae0796da78cdbb8ef4666ae9791a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574426"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>決定何時實作事件架構非同步模式
 事件架構非同步模式提供的模式可公開類別的非同步行為。 引進此模式之後，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 定義兩種模式來公開非同步行為：以 <xref:System.IAsyncResult?displayProperty=nameWithType> 介面為基礎的非同步模式與事件架構模式。 本主題說明適合實作這兩種模式的時機。  
@@ -82,8 +82,8 @@ ms.locfileid: "46584210"
   
 ## <a name="see-also"></a>另請參閱
 
-- [操作說明：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
-- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
-- [實作事件架構非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
-- [實作事件架構非同步模式的最佳作法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+- [如何：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [實作事件架構非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)
+- [實作事件架構非同步模式的最佳作法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d039e591e1f61a7be18dc224845f82b107d918f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 04ed4dcaab8d39d8a34cadef8285ea8307f198c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659757"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework 中的類型轉換
 <a name="top"></a>每個值都有相關聯的類型，該類型定義屬性，例如配置給值的空間量、能夠擁有的可能值範圍，以及提供的成員。 許多值都可以表示成多種類型。 例如，數值 4 就可以表示成整數值或浮點 (Floating-Point) 值。 類型轉換會建立新類型的值，與舊類型的值相等，但是不一定會保留原始物件的識別 (或實際的值)。  
@@ -208,6 +208,6 @@ ms.locfileid: "45617926"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Convert?displayProperty=nameWithType>  
-- <xref:System.IConvertible>  
+- <xref:System.Convert?displayProperty=nameWithType>
+- <xref:System.IConvertible>
 - [類型轉換表](../../../docs/standard/base-types/conversion-tables.md)

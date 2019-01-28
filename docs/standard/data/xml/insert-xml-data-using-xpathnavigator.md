@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b9eedfab68dc6aeacf9ed51ffc7205b73c062ca
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 224e4f3db31e4818833eb8411f44f547538534fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "45698334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517249"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 插入 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供一組方式，可在 XML 文件中插入同層級節點、子節點及屬性節點。 為了使用這些方法，<xref:System.Xml.XPath.XPathNavigator> 物件必須是可編輯的，也就是說，它的 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 屬性必須為 `true`。  
@@ -256,7 +256,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  下表說明 <xref:System.Xml.XmlWriter> 類別不支援的 <xref:System.Xml.XPath.XPathNavigator> 類別方法。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Xml.XmlWriter.WriteEntityRef%2A>|會擲回 <xref:System.NotSupportedException> 例外狀況。|  
 |<xref:System.Xml.XmlWriter.WriteDocType%2A>|在根層級會被忽略，如果在 XML 文件的任何其他層級呼叫，則擲回 <xref:System.NotSupportedException> 例外狀況。|  
@@ -332,9 +332,9 @@ document.Save("book.xml");
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [使用 XPathNavigator 修改 XML 資料](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [使用 XPathNavigator 修改 XML 資料](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)
 - [使用 XPathNavigator 移除 XML 資料](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

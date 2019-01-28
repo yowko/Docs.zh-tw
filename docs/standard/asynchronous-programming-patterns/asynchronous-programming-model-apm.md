@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a1921f1a0f0e724bfc8d8289ac1b654cc8198d2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cff235fe45c75fda51e04d5b0b54bb3ee03051b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654304"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同步程式設計模型 (APM)
 使用 <xref:System.IAsyncResult> 設計模式的非同步作業會實作為兩種方法，一種名為 `BeginOperationName`，另一種名為 `EndOperationName`，這兩種方法分別負責開始和結束非同步作業 *OperationName*。 例如， <xref:System.IO.FileStream> 類別提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法，以非同步方式讀取檔案的位元組。 這些方法實作 <xref:System.IO.FileStream.Read%2A> 方法的非同步版本。  
@@ -38,7 +38,7 @@ ms.locfileid: "53152379"
 |<xref:System.IAsyncResult.CompletedSynchronously%2A>|這個值指出，非同步作業是否是在用來呼叫 `BeginOperationName` 的執行緒上完成的，而不是在個別 <xref:System.Threading.ThreadPool> 執行緒上完成。|  
 |<xref:System.IAsyncResult.IsCompleted%2A>|指出非同步作業是否完成的值。|  
   
- `BeginOperationName` 方法會使用任何方法同步版本簽章中所宣告，以傳值或傳址方式傳遞的參數。 任何 out 參數都不是 `BeginOperationName` 方法簽章的一部分。 `BeginOperationName` 方法簽章還包括另外兩個參數。 它們之中的第一個定義 <xref:System.AsyncCallback> 委派，參考非同步作業完成時呼叫的方法。 如果不想在作業完成時叫用方法，呼叫端可以指定 `null` (在 Visual Basic 中為 `Nothing`)。 第二個參數是使用者定義的物件。 這個物件可以用來將應用程式專屬的狀態資訊傳遞至非同步作業完成時叫用的方法。 如果 `BeginOperationName` 方法使用其他作業特定參數 (例如用來儲存從檔案讀取位元組的位元組陣列)，<xref:System.AsyncCallback> 和應用程式狀態物件就會是 `BeginOperationName` 方法簽章中最後的參數。  
+ `BeginOperationName` 方法會使用任何方法同步版本簽章中所宣告，以傳值或傳址方式傳遞的參數。 任何 out 參數都不是 `BeginOperationName` 方法簽章的一部分。 `BeginOperationName` 方法簽章還包括另外兩個參數。 它們之中的第一個定義 <xref:System.AsyncCallback> 委派，參考非同步作業完成時呼叫的方法。 如果不想在作業完成時叫用方法，呼叫端可以指定 `null` (在 Visual Basic 中為`Nothing` )。 第二個參數是使用者定義的物件。 這個物件可以用來將應用程式專屬的狀態資訊傳遞至非同步作業完成時叫用的方法。 如果 `BeginOperationName` 方法使用其他作業特定參數 (例如用來儲存從檔案讀取位元組的位元組陣列)，<xref:System.AsyncCallback> 和應用程式狀態物件就會是 `BeginOperationName` 方法簽章中最後的參數。  
   
  `BeginOperationName` 會立即將控制權傳回呼叫的執行緒。 如果 `BeginOperationName` 方法擲回例外狀況，則例外狀況會在非同步作業啟動之前擲回。 如果 `BeginOperationName` 方法擲回例外狀況，則不會叫用回呼方法。  
   
@@ -67,6 +67,6 @@ ms.locfileid: "53152379"
   
 ## <a name="see-also"></a>另請參閱
 
-- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
-- [非同步呼叫同步方法](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [非同步呼叫同步方法](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
 - [使用 AsyncCallback 委派和狀態物件](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)

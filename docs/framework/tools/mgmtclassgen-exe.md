@@ -13,11 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 282d6376b434121ed6d59297be2ce36ce361c589
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628847"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (管理強類型類別產生器)
 [管理強類型類別產生器] 工具可快速地為指定的 Windows Management Instrumentation (WMI) 類別產生早期繫結 Managed 類別。 產生的類別會將為存取 WMI 類別之執行個體所撰寫的程式碼加以簡化。  
@@ -29,11 +30,11 @@ mgmtclassgen
 WMIClass [options]   
 ```  
   
-|引數|描述|  
+|引數|說明|  
 |--------------|-----------------|  
 |*WMIClass*|要產生早期繫結 Managed 類別的 Windows Management Instrumentation 類別。|  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/l**  *language*|指定要用來產生早期繫結 Managed 類別的語言。 您可以指定 **CS** (C#，預設)、**VB** (Visual Basic)、**MC** (C++) 或 **JS** (JScript) 作為語言引數。|  
 |**/m**  <電腦>|指定要連接的電腦，其中內含 WMI 類別。 預設為本機電腦。|  
@@ -149,9 +150,9 @@ public class App
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Management>  
- <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>  
- <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>  
- [工具](../../../docs/framework/tools/index.md)  
- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Management>
+- <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
+- <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>
+- [工具](../../../docs/framework/tools/index.md)
+- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

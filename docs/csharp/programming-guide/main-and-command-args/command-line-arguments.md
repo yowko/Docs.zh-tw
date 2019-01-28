@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 5bc73ece0560abfde7966678518ff57a8af3733f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 32dcfc8da52fc623473a1cc234e710463f8d28be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722695"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令列引數 (C# 程式設計手冊)
 您可以使用下列其中一種方式，透過定義方法以將引數傳送給 `Main` 方法：  
@@ -74,12 +74,12 @@ long num = Convert.ToInt64(s);
   
  如需如何使用命令列引數的詳細資訊，請參閱[如何：使用命令列建立和使用組件](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Environment?displayProperty=nameWithType>  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [如何：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
-- [如何：使用 foreach 存取命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
-- [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
+- <xref:System.Environment?displayProperty=nameWithType>
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [如何：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [如何：使用 foreach 存取命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 - [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)

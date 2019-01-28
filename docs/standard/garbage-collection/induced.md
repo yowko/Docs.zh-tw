@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 149597f0e34448d9c275a2cb8cd4ffc250bec619
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492115"
 ---
 # <a name="induced-collections"></a>引發的集合
 大部分情況下，記憶體回收行程會判斷執行回收的最佳時間，請讓記憶體回收行程獨立執行。 在罕見的情況下，強制回收可能會改善您應用程式的效能。 在這些情況下，您可以使用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法強制進行記憶體回收，來引發記憶體回收。  
@@ -22,7 +22,7 @@ ms.locfileid: "46003051"
 ## <a name="gc-collection-mode"></a>GC 收集模式  
  您可以使用其中一個 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法多載，其包含 <xref:System.GCCollectionMode> 值來指定強制回收行為，如下所示。  
   
-|`GCCollectionMode` 值|描述|  
+|`GCCollectionMode` 值|說明|  
 |------------------------------|-----------------|  
 |<xref:System.GCCollectionMode.Default>|使用 .NET 執行版本的預設記憶體回收設定。|  
 |<xref:System.GCCollectionMode.Forced>|強制立即進行記憶體回收。 這等於呼叫 <xref:System.GC.Collect?displayProperty=nameWithType> 多載。 它會導致完整封鎖回收所有層代。<br /><br /> 您也可以在強制執行立即的完整區塊記憶體回收之前，透過將 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> 來壓縮大型物件。|  
@@ -38,5 +38,5 @@ ms.locfileid: "46003051"
   
 ## <a name="see-also"></a>另請參閱
 
-- [延遲模式](../../../docs/standard/garbage-collection/latency.md)  
+- [延遲模式](../../../docs/standard/garbage-collection/latency.md)
 - [記憶體回收](../../../docs/standard/garbage-collection/index.md)
