@@ -10,48 +10,48 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: 513e28debe5fdccc4cc7e4e41d212b976c4a4595
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ef7995c9f7737d29d7e9479c3b84a25b13943be3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681751"
 ---
-# <a name="base-c-reference"></a><span data-ttu-id="35170-103">base (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="35170-103">base (C# Reference)</span></span>
+# <a name="base-c-reference"></a><span data-ttu-id="e2f5f-103">base (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="e2f5f-103">base (C# Reference)</span></span>
 
-<span data-ttu-id="35170-104">`base` 關鍵字是用來存取衍生類別中基底類別的成員︰</span><span class="sxs-lookup"><span data-stu-id="35170-104">The `base` keyword is used to access members of the base class from within a derived class:</span></span>
+<span data-ttu-id="e2f5f-104">`base` 關鍵字是用來存取衍生類別中基底類別的成員︰</span><span class="sxs-lookup"><span data-stu-id="e2f5f-104">The `base` keyword is used to access members of the base class from within a derived class:</span></span>
 
-- <span data-ttu-id="35170-105">對已由另一個方法覆寫的基底類別來呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="35170-105">Call a method on the base class that has been overridden by another method.</span></span>
+- <span data-ttu-id="e2f5f-105">對已由另一個方法覆寫的基底類別來呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="e2f5f-105">Call a method on the base class that has been overridden by another method.</span></span>
 
-- <span data-ttu-id="35170-106">指定應該在建立衍生類別的執行個體時呼叫的基底類別建構函式。</span><span class="sxs-lookup"><span data-stu-id="35170-106">Specify which base-class constructor should be called when creating instances of the derived class.</span></span>
+- <span data-ttu-id="e2f5f-106">指定應該在建立衍生類別的執行個體時呼叫的基底類別建構函式。</span><span class="sxs-lookup"><span data-stu-id="e2f5f-106">Specify which base-class constructor should be called when creating instances of the derived class.</span></span>
 
-<span data-ttu-id="35170-107">僅允許在建構函式、執行個體方法或執行個體屬性存取子中進行基底類別存取。</span><span class="sxs-lookup"><span data-stu-id="35170-107">A base class access is permitted only in a constructor, an instance method, or an instance property accessor.</span></span>
+<span data-ttu-id="e2f5f-107">僅允許在建構函式、執行個體方法或執行個體屬性存取子中進行基底類別存取。</span><span class="sxs-lookup"><span data-stu-id="e2f5f-107">A base class access is permitted only in a constructor, an instance method, or an instance property accessor.</span></span>
 
-<span data-ttu-id="35170-108">從靜態方法使用 `base` 關鍵字是錯誤的。</span><span class="sxs-lookup"><span data-stu-id="35170-108">It is an error to use the `base` keyword from within a static method.</span></span>
+<span data-ttu-id="e2f5f-108">從靜態方法使用 `base` 關鍵字是錯誤的。</span><span class="sxs-lookup"><span data-stu-id="e2f5f-108">It is an error to use the `base` keyword from within a static method.</span></span>
 
-<span data-ttu-id="35170-109">所存取的基底類別是類別宣告中所指定的基底類別。</span><span class="sxs-lookup"><span data-stu-id="35170-109">The base class that is accessed is the base class specified in the class declaration.</span></span> <span data-ttu-id="35170-110">例如，如果您指定 `class ClassB : ClassA`，則不論 ClassA 的基底類別為何，都會從 ClassB 存取 ClassA 成員。</span><span class="sxs-lookup"><span data-stu-id="35170-110">For example, if you specify `class ClassB : ClassA`, the members of ClassA are accessed from ClassB, regardless of the base class of ClassA.</span></span>
+<span data-ttu-id="e2f5f-109">所存取的基底類別是類別宣告中所指定的基底類別。</span><span class="sxs-lookup"><span data-stu-id="e2f5f-109">The base class that is accessed is the base class specified in the class declaration.</span></span> <span data-ttu-id="e2f5f-110">例如，如果您指定 `class ClassB : ClassA`，則不論 ClassA 的基底類別為何，都會從 ClassB 存取 ClassA 成員。</span><span class="sxs-lookup"><span data-stu-id="e2f5f-110">For example, if you specify `class ClassB : ClassA`, the members of ClassA are accessed from ClassB, regardless of the base class of ClassA.</span></span>
 
-## <a name="example"></a><span data-ttu-id="35170-111">範例</span><span class="sxs-lookup"><span data-stu-id="35170-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="e2f5f-111">範例</span><span class="sxs-lookup"><span data-stu-id="e2f5f-111">Example</span></span>
 
-<span data-ttu-id="35170-112">在此範例中，基底類別 `Person` 和衍生類別 `Employee` 都會有名為 `Getinfo` 的方法。</span><span class="sxs-lookup"><span data-stu-id="35170-112">In this example, both the base class, `Person`, and the derived class, `Employee`, have a method named `Getinfo`.</span></span> <span data-ttu-id="35170-113">使用 `base` 關鍵字，即可從衍生類別對基底類別呼叫 `Getinfo` 方法。</span><span class="sxs-lookup"><span data-stu-id="35170-113">By using the `base` keyword, it is possible to call the `Getinfo` method on the base class, from within the derived class.</span></span>
+<span data-ttu-id="e2f5f-112">在此範例中，基底類別 `Person` 和衍生類別 `Employee` 都會有名為 `Getinfo` 的方法。</span><span class="sxs-lookup"><span data-stu-id="e2f5f-112">In this example, both the base class, `Person`, and the derived class, `Employee`, have a method named `Getinfo`.</span></span> <span data-ttu-id="e2f5f-113">使用 `base` 關鍵字，即可從衍生類別對基底類別呼叫 `Getinfo` 方法。</span><span class="sxs-lookup"><span data-stu-id="e2f5f-113">By using the `base` keyword, it is possible to call the `Getinfo` method on the base class, from within the derived class.</span></span>
 
 [!code-csharp[csrefKeywordsAccess#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#1)]
 
-<span data-ttu-id="35170-114">如需其他範例，請參閱 [new](../../../csharp/language-reference/keywords/new.md)、[virtual](../../../csharp/language-reference/keywords/virtual.md) 和 [override](../../../csharp/language-reference/keywords/override.md)。</span><span class="sxs-lookup"><span data-stu-id="35170-114">For additional examples, see [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md), and [override](../../../csharp/language-reference/keywords/override.md).</span></span>
+<span data-ttu-id="e2f5f-114">如需其他範例，請參閱 [new](../../../csharp/language-reference/keywords/new.md)、[virtual](../../../csharp/language-reference/keywords/virtual.md) 和 [override](../../../csharp/language-reference/keywords/override.md)。</span><span class="sxs-lookup"><span data-stu-id="e2f5f-114">For additional examples, see [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md), and [override](../../../csharp/language-reference/keywords/override.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="35170-115">範例</span><span class="sxs-lookup"><span data-stu-id="35170-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="e2f5f-115">範例</span><span class="sxs-lookup"><span data-stu-id="e2f5f-115">Example</span></span>
 
-<span data-ttu-id="35170-116">這個範例示範如何指定在建立衍生類別的執行個體時呼叫的基底類別建構函式。</span><span class="sxs-lookup"><span data-stu-id="35170-116">This example shows how to specify the base-class constructor called when creating instances of a derived class.</span></span>
+<span data-ttu-id="e2f5f-116">這個範例示範如何指定在建立衍生類別的執行個體時呼叫的基底類別建構函式。</span><span class="sxs-lookup"><span data-stu-id="e2f5f-116">This example shows how to specify the base-class constructor called when creating instances of a derived class.</span></span>
 
 [!code-csharp[csrefKeywordsAccess#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#2)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="35170-117">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="35170-117">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="e2f5f-117">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="e2f5f-117">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="35170-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="35170-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2f5f-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e2f5f-118">See also</span></span>
 
-- [<span data-ttu-id="35170-119">C# 參考</span><span class="sxs-lookup"><span data-stu-id="35170-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="35170-120">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="35170-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="35170-121">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="35170-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="35170-122">this</span><span class="sxs-lookup"><span data-stu-id="35170-122">this</span></span>](../../../csharp/language-reference/keywords/this.md)
+- [<span data-ttu-id="e2f5f-119">C# 參考</span><span class="sxs-lookup"><span data-stu-id="e2f5f-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="e2f5f-120">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="e2f5f-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="e2f5f-121">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="e2f5f-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="e2f5f-122">this</span><span class="sxs-lookup"><span data-stu-id="e2f5f-122">this</span></span>](../../../csharp/language-reference/keywords/this.md)

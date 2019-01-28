@@ -8,45 +8,45 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 101cd6fa044e181cf6f993fbea642c9dffe04008
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 94c90ed264c40c99b0c139948578c85e8c9855d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236852"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696343"
 ---
-# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a><span data-ttu-id="52360-102">HOW TO：使用平台叫用播放 WAV 檔 (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="52360-102">How to: Use Platform Invoke to Play a Wave File (C# Programming Guide)</span></span>
-<span data-ttu-id="52360-103">下列 C# 程式碼範例說明如何在 Windows 作業系統上使用平台叫用服務來播放 .wav 音效檔。</span><span class="sxs-lookup"><span data-stu-id="52360-103">The following C# code example illustrates how to use platform invoke services to play a wave sound file on the Windows operating system.</span></span>  
+# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a><span data-ttu-id="0b28a-102">HOW TO：使用平台叫用播放 WAV 檔 (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="0b28a-102">How to: Use Platform Invoke to Play a Wave File (C# Programming Guide)</span></span>
+<span data-ttu-id="0b28a-103">下列 C# 程式碼範例說明如何在 Windows 作業系統上使用平台叫用服務來播放 .wav 音效檔。</span><span class="sxs-lookup"><span data-stu-id="0b28a-103">The following C# code example illustrates how to use platform invoke services to play a wave sound file on the Windows operating system.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="52360-104">範例</span><span class="sxs-lookup"><span data-stu-id="52360-104">Example</span></span>  
- <span data-ttu-id="52360-105">這個範例程式碼會使用 `DllImport`，以將 `winmm.dll` 的 `PlaySound` 方法進入點匯入為 `Form1 PlaySound()`。</span><span class="sxs-lookup"><span data-stu-id="52360-105">This example code uses `DllImport` to import `winmm.dll`'s `PlaySound` method entry point as `Form1 PlaySound()`.</span></span> <span data-ttu-id="52360-106">這個範例包含具有按鈕的簡單 Windows Form。</span><span class="sxs-lookup"><span data-stu-id="52360-106">The example has a simple Windows Form with a button.</span></span> <span data-ttu-id="52360-107">按一下按鈕會開啟標準視窗 <xref:System.Windows.Forms.OpenFileDialog> 對話方塊，讓您可以開啟要播放的檔案。</span><span class="sxs-lookup"><span data-stu-id="52360-107">Clicking the button opens a standard windows <xref:System.Windows.Forms.OpenFileDialog> dialog box so that you can open a file to play.</span></span> <span data-ttu-id="52360-108">選取 WAV 檔時，會使用 `winmm.dll` 程式庫的 `PlaySound()` 方法播放。</span><span class="sxs-lookup"><span data-stu-id="52360-108">When a wave file is selected, it is played by using the `PlaySound()` method of the `winmm.dll` library.</span></span> <span data-ttu-id="52360-109">如需此方法的詳細資訊，請參閱 [Using the PlaySound function with Waveform-Audio Files](https://docs.microsoft.com/windows/desktop/multimedia/using-playsound-to-play-waveform-audio-files) (於波形音訊檔案使用 PlaySound 函式)。</span><span class="sxs-lookup"><span data-stu-id="52360-109">For more information about this method, see [Using the PlaySound function with Waveform-Audio Files](https://docs.microsoft.com/windows/desktop/multimedia/using-playsound-to-play-waveform-audio-files).</span></span> <span data-ttu-id="52360-110">瀏覽並選取副檔名為 .wav 的檔案，然後按一下 [開啟]，以使用平台叫用來播放音訊檔案。</span><span class="sxs-lookup"><span data-stu-id="52360-110">Browse and select a file that has a .wav extension, and then click **Open** to play the wave file by using platform invoke.</span></span> <span data-ttu-id="52360-111">文字方塊會顯示所選取檔案的完整路徑。</span><span class="sxs-lookup"><span data-stu-id="52360-111">A text box shows the full path of the file selected.</span></span>  
+## <a name="example"></a><span data-ttu-id="0b28a-104">範例</span><span class="sxs-lookup"><span data-stu-id="0b28a-104">Example</span></span>  
+ <span data-ttu-id="0b28a-105">這個範例程式碼會使用 `DllImport`，以將 `winmm.dll` 的 `PlaySound` 方法進入點匯入為 `Form1 PlaySound()`。</span><span class="sxs-lookup"><span data-stu-id="0b28a-105">This example code uses `DllImport` to import `winmm.dll`'s `PlaySound` method entry point as `Form1 PlaySound()`.</span></span> <span data-ttu-id="0b28a-106">這個範例包含具有按鈕的簡單 Windows Form。</span><span class="sxs-lookup"><span data-stu-id="0b28a-106">The example has a simple Windows Form with a button.</span></span> <span data-ttu-id="0b28a-107">按一下按鈕會開啟標準視窗 <xref:System.Windows.Forms.OpenFileDialog> 對話方塊，讓您可以開啟要播放的檔案。</span><span class="sxs-lookup"><span data-stu-id="0b28a-107">Clicking the button opens a standard windows <xref:System.Windows.Forms.OpenFileDialog> dialog box so that you can open a file to play.</span></span> <span data-ttu-id="0b28a-108">選取 WAV 檔時，會使用 `winmm.dll` 程式庫的 `PlaySound()` 方法播放。</span><span class="sxs-lookup"><span data-stu-id="0b28a-108">When a wave file is selected, it is played by using the `PlaySound()` method of the `winmm.dll` library.</span></span> <span data-ttu-id="0b28a-109">如需此方法的詳細資訊，請參閱 [Using the PlaySound function with Waveform-Audio Files](https://docs.microsoft.com/windows/desktop/multimedia/using-playsound-to-play-waveform-audio-files) (於波形音訊檔案使用 PlaySound 函式)。</span><span class="sxs-lookup"><span data-stu-id="0b28a-109">For more information about this method, see [Using the PlaySound function with Waveform-Audio Files](https://docs.microsoft.com/windows/desktop/multimedia/using-playsound-to-play-waveform-audio-files).</span></span> <span data-ttu-id="0b28a-110">瀏覽並選取副檔名為 .wav 的檔案，然後按一下 [開啟]，以使用平台叫用來播放音訊檔案。</span><span class="sxs-lookup"><span data-stu-id="0b28a-110">Browse and select a file that has a .wav extension, and then click **Open** to play the wave file by using platform invoke.</span></span> <span data-ttu-id="0b28a-111">文字方塊會顯示所選取檔案的完整路徑。</span><span class="sxs-lookup"><span data-stu-id="0b28a-111">A text box shows the full path of the file selected.</span></span>  
   
- <span data-ttu-id="52360-112">透過篩選設定來篩選 [開啟檔案] 對話方塊，使其只顯示副檔名為 .wav 的檔案︰</span><span class="sxs-lookup"><span data-stu-id="52360-112">The **Open Files** dialog box is filtered to show only files that have a .wav extension through the filter settings:</span></span>  
+ <span data-ttu-id="0b28a-112">透過篩選設定來篩選 [開啟檔案] 對話方塊，使其只顯示副檔名為 .wav 的檔案︰</span><span class="sxs-lookup"><span data-stu-id="0b28a-112">The **Open Files** dialog box is filtered to show only files that have a .wav extension through the filter settings:</span></span>  
   
  [!code-csharp[csProgGuideInterop#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_1.cs)]  
   
  [!code-csharp[csProgGuideInterop#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_2.cs)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="52360-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="52360-113">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="0b28a-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="0b28a-113">Compiling the Code</span></span>  
   
-### <a name="to-compile-the-code"></a><span data-ttu-id="52360-114">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="52360-114">To compile the code</span></span>  
+### <a name="to-compile-the-code"></a><span data-ttu-id="0b28a-114">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="0b28a-114">To compile the code</span></span>  
   
-1.  <span data-ttu-id="52360-115">在 Visual Studio 中建立新的 C# Windows 應用程式專案，並將它命名為 **WinSound**。</span><span class="sxs-lookup"><span data-stu-id="52360-115">Create a new C# Windows Application project in Visual Studio and name it **WinSound**.</span></span>  
+1.  <span data-ttu-id="0b28a-115">在 Visual Studio 中建立新的 C# Windows 應用程式專案，並將它命名為 **WinSound**。</span><span class="sxs-lookup"><span data-stu-id="0b28a-115">Create a new C# Windows Application project in Visual Studio and name it **WinSound**.</span></span>  
   
-2.  <span data-ttu-id="52360-116">複製上述程式碼，並將它貼至 `Form1.cs` 檔案的內容上。</span><span class="sxs-lookup"><span data-stu-id="52360-116">Copy the code above, and paste it over the contents of the `Form1.cs` file.</span></span>  
+2.  <span data-ttu-id="0b28a-116">複製上述程式碼，並將它貼至 `Form1.cs` 檔案的內容上。</span><span class="sxs-lookup"><span data-stu-id="0b28a-116">Copy the code above, and paste it over the contents of the `Form1.cs` file.</span></span>  
   
-3.  <span data-ttu-id="52360-117">複製下列程式碼，並將它貼入 `Form1.Designer.cs` 檔案之 `InitializeComponent()` 方法中的任何現有程式碼後面。</span><span class="sxs-lookup"><span data-stu-id="52360-117">Copy the following code, and paste it in the `Form1.Designer.cs` file, in the `InitializeComponent()` method, after any existing code.</span></span>  
+3.  <span data-ttu-id="0b28a-117">複製下列程式碼，並將它貼入 `Form1.Designer.cs` 檔案之 `InitializeComponent()` 方法中的任何現有程式碼後面。</span><span class="sxs-lookup"><span data-stu-id="0b28a-117">Copy the following code, and paste it in the `Form1.Designer.cs` file, in the `InitializeComponent()` method, after any existing code.</span></span>  
   
      [!code-csharp[csProgGuideInterop#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_3.cs)]  
   
-4.  <span data-ttu-id="52360-118">編譯並執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="52360-118">Compile and run the code.</span></span>  
+4.  <span data-ttu-id="0b28a-118">編譯並執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="0b28a-118">Compile and run the code.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="52360-119">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="52360-119">.NET Framework Security</span></span>  
- <span data-ttu-id="52360-120">如需詳細資訊，請參閱 [.NET 的安全性](../../../standard/security/index.md)。</span><span class="sxs-lookup"><span data-stu-id="52360-120">For more information, see [Security in .NET](../../../standard/security/index.md).</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="0b28a-119">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="0b28a-119">.NET Framework Security</span></span>  
+ <span data-ttu-id="0b28a-120">如需詳細資訊，請參閱 [.NET 的安全性](../../../standard/security/index.md)。</span><span class="sxs-lookup"><span data-stu-id="0b28a-120">For more information, see [Security in .NET](../../../standard/security/index.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="52360-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="52360-121">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b28a-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0b28a-121">See also</span></span>
 
-- [<span data-ttu-id="52360-122">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="52360-122">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="52360-123">互通性概觀</span><span class="sxs-lookup"><span data-stu-id="52360-123">Interoperability Overview</span></span>](../../../csharp/programming-guide/interop/interoperability-overview.md)  
-- [<span data-ttu-id="52360-124">詳述平台叫用</span><span class="sxs-lookup"><span data-stu-id="52360-124">A Closer Look at Platform Invoke</span></span>](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)  
-- [<span data-ttu-id="52360-125">使用平台叫用封送處理資料</span><span class="sxs-lookup"><span data-stu-id="52360-125">Marshaling Data with Platform Invoke</span></span>](../../../framework/interop/marshaling-data-with-platform-invoke.md)
+- [<span data-ttu-id="0b28a-122">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="0b28a-122">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="0b28a-123">互通性概觀</span><span class="sxs-lookup"><span data-stu-id="0b28a-123">Interoperability Overview</span></span>](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [<span data-ttu-id="0b28a-124">詳述平台叫用</span><span class="sxs-lookup"><span data-stu-id="0b28a-124">A Closer Look at Platform Invoke</span></span>](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
+- [<span data-ttu-id="0b28a-125">使用平台叫用封送處理資料</span><span class="sxs-lookup"><span data-stu-id="0b28a-125">Marshaling Data with Platform Invoke</span></span>](../../../framework/interop/marshaling-data-with-platform-invoke.md)

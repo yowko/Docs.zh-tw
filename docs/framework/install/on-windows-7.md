@@ -5,40 +5,40 @@ description: 了解如何在 Windows 7 SP1 上安裝 .NET Framework。
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 74b457eba9642eb4d54873769014a7db5d28003b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 22b5f128bd797fda23d14008e016dcdc2432b3f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645128"
 ---
-# <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a><span data-ttu-id="fe88a-103">在 Windows 7 SP1 和 Windows Server 2008 R2 上安裝 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="fe88a-103">Install the .NET Framework on Windows 7 SP1 and Windows Server 2008 R2</span></span>
+# <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a><span data-ttu-id="ea710-103">在 Windows 7 SP1 和 Windows Server 2008 R2 上安裝 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ea710-103">Install the .NET Framework on Windows 7 SP1 and Windows Server 2008 R2</span></span>
 
-<span data-ttu-id="fe88a-104">在 Windows 上執行許多應用程式時需要 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="fe88a-104">The .NET Framework is required to run many applications on Windows.</span></span> <span data-ttu-id="fe88a-105">您可以使用下列指令來安裝它。</span><span class="sxs-lookup"><span data-stu-id="fe88a-105">You can use the following instructions to install it.</span></span> <span data-ttu-id="fe88a-106">嘗試執行應用程式並在電腦上看到下列對話方塊之後，可能會進入此頁面。</span><span class="sxs-lookup"><span data-stu-id="fe88a-106">You may have arrived on this page after trying to run an application and seeing the following dialog on your machine.</span></span>
+<span data-ttu-id="ea710-104">在 Windows 上執行許多應用程式時需要 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="ea710-104">The .NET Framework is required to run many applications on Windows.</span></span> <span data-ttu-id="ea710-105">您可以使用下列指令來安裝它。</span><span class="sxs-lookup"><span data-stu-id="ea710-105">You can use the following instructions to install it.</span></span> <span data-ttu-id="ea710-106">嘗試執行應用程式並在電腦上看到下列對話方塊之後，可能會進入此頁面。</span><span class="sxs-lookup"><span data-stu-id="ea710-106">You may have arrived on this page after trying to run an application and seeing the following dialog on your machine.</span></span>
 
 ![無法啟動這個應用程式](./media/this-application-could-not-be-started.png)
 
-<span data-ttu-id="fe88a-108">這些指令將協助您安裝所需的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="fe88a-108">These instructions will help you install the .NET Framework versions you need.</span></span> <span data-ttu-id="fe88a-109">[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。</span><span class="sxs-lookup"><span data-stu-id="fe88a-109">The [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) is the latest version.</span></span> <span data-ttu-id="fe88a-110">其支援 Windows 7 SP1 和 Windows Server 2008 R2，並且隨附於 [Windows 10 2018 年 10 月更新](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update)和 [Windows 10 2018 年 4 月更新](https://www.microsoft.com/software-download/windows10)。</span><span class="sxs-lookup"><span data-stu-id="fe88a-110">It is supported on Windows 7 SP1 and Windows Server 2008 R2 and is included with [Windows 10 October 2018 Update](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) and the [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10).</span></span>
+<span data-ttu-id="ea710-108">這些指令將協助您安裝所需的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="ea710-108">These instructions will help you install the .NET Framework versions you need.</span></span> <span data-ttu-id="ea710-109">[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。</span><span class="sxs-lookup"><span data-stu-id="ea710-109">The [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) is the latest version.</span></span> <span data-ttu-id="ea710-110">其支援 Windows 7 SP1 和 Windows Server 2008 R2，並且隨附於 [Windows 10 2018 年 10 月更新](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update)和 [Windows 10 2018 年 4 月更新](https://www.microsoft.com/software-download/windows10)。</span><span class="sxs-lookup"><span data-stu-id="ea710-110">It is supported on Windows 7 SP1 and Windows Server 2008 R2 and is included with [Windows 10 October 2018 Update](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) and the [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10).</span></span>
 
-## <a name="net-framework-472"></a><span data-ttu-id="fe88a-111">.NET Framework 4.7.2</span><span class="sxs-lookup"><span data-stu-id="fe88a-111">.NET Framework 4.7.2</span></span>
+## <a name="net-framework-472"></a><span data-ttu-id="ea710-111">.NET Framework 4.7.2</span><span class="sxs-lookup"><span data-stu-id="ea710-111">.NET Framework 4.7.2</span></span>
 
 > [!div class="button"]
-> [<span data-ttu-id="fe88a-112">下載 .NET Framework 4.7.2</span><span class="sxs-lookup"><span data-stu-id="fe88a-112">Download .NET Framework 4.7.2</span></span>](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [<span data-ttu-id="ea710-112">下載 .NET Framework 4.7.2</span><span class="sxs-lookup"><span data-stu-id="ea710-112">Download .NET Framework 4.7.2</span></span>](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-<span data-ttu-id="fe88a-113">[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 可用來執行針對 .NET Framework 4.0 或更新版本建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="fe88a-113">The [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) can be used to run applications built for .NET Framework 4.0 or later.</span></span>
+<span data-ttu-id="ea710-113">[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 可用來執行針對 .NET Framework 4.0 或更新版本建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="ea710-113">The [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) can be used to run applications built for .NET Framework 4.0 or later.</span></span>
 
-## <a name="net-framework-35"></a><span data-ttu-id="fe88a-114">.NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="fe88a-114">.NET Framework 3.5</span></span>
+## <a name="net-framework-35"></a><span data-ttu-id="ea710-114">.NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="ea710-114">.NET Framework 3.5</span></span>
 
-<span data-ttu-id="fe88a-115">[.NET Framework 3.5](https://www.microsoft.com/en-us/download/details.aspx?id=21) 隨附於 Windows 7。</span><span class="sxs-lookup"><span data-stu-id="fe88a-115">The [.NET Framework 3.5](https://www.microsoft.com/en-us/download/details.aspx?id=21) is included with Windows 7.</span></span>
+<span data-ttu-id="ea710-115">[.NET Framework 3.5](https://www.microsoft.com/en-us/download/details.aspx?id=21) 隨附於 Windows 7。</span><span class="sxs-lookup"><span data-stu-id="ea710-115">The [.NET Framework 3.5](https://www.microsoft.com/en-us/download/details.aspx?id=21) is included with Windows 7.</span></span>
 
-<span data-ttu-id="fe88a-116">.NET Framework 3.5 支援針對 .NET Framework 1.0 到 3.5 建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="fe88a-116">The .NET Framework 3.5 supports apps built for .NET Framework 1.0 through 3.5.</span></span>
+<span data-ttu-id="ea710-116">.NET Framework 3.5 支援針對 .NET Framework 1.0 到 3.5 建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="ea710-116">The .NET Framework 3.5 supports apps built for .NET Framework 1.0 through 3.5.</span></span>
 
-## <a name="help"></a><span data-ttu-id="fe88a-117">說明</span><span class="sxs-lookup"><span data-stu-id="fe88a-117">Help</span></span>
+## <a name="help"></a><span data-ttu-id="ea710-117">說明</span><span class="sxs-lookup"><span data-stu-id="ea710-117">Help</span></span>
 
-<span data-ttu-id="fe88a-118">如果您無法安裝正確的 .NET Framework 版本，可以[連絡 Microsoft 以取得協助](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help)。</span><span class="sxs-lookup"><span data-stu-id="fe88a-118">You can [contact Microsoft for help](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) if you cannot get the correct version of the .NET Framework installed.</span></span>
+<span data-ttu-id="ea710-118">如果您無法安裝正確的 .NET Framework 版本，可以[連絡 Microsoft 以取得協助](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help)。</span><span class="sxs-lookup"><span data-stu-id="ea710-118">You can [contact Microsoft for help](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) if you cannot get the correct version of the .NET Framework installed.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="fe88a-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fe88a-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ea710-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ea710-119">See also</span></span>
 
-<span data-ttu-id="fe88a-120">[下載 .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral) </span><span class="sxs-lookup"><span data-stu-id="fe88a-120">[Download the .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral) </span></span>  
-<span data-ttu-id="fe88a-121">[疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md) </span><span class="sxs-lookup"><span data-stu-id="fe88a-121">[Troubleshoot blocked .NET Framework installations and uninstallations](troubleshoot-blocked-installations-and-uninstallations.md) </span></span>  
-[<span data-ttu-id="fe88a-122">安裝適用於開發人員的 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="fe88a-122">Install the .NET Framework for developers</span></span>](guide-for-developers.md)
+- [<span data-ttu-id="ea710-120">下載 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ea710-120">Download the .NET Framework</span></span>](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [<span data-ttu-id="ea710-121">疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題</span><span class="sxs-lookup"><span data-stu-id="ea710-121">Troubleshoot blocked .NET Framework installations and uninstallations</span></span>](troubleshoot-blocked-installations-and-uninstallations.md)
+- [<span data-ttu-id="ea710-122">安裝適用於開發人員的 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ea710-122">Install the .NET Framework for developers</span></span>](guide-for-developers.md)

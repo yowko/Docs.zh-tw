@@ -5,42 +5,42 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 00f9083fb9d0ef6c96e19e085a6cff0e0e36f2b0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 39ad5a7b97d3498fe4098faaecc8dc7fe2b43758
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688855"
 ---
-# <a name="how-to-use-the-my-namespace-c-programming-guide"></a><span data-ttu-id="dca2e-102">HOW TO：使用 My 命名空間 (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="dca2e-102">How to: Use the My Namespace (C# Programming Guide)</span></span>
-<span data-ttu-id="dca2e-103"><xref:Microsoft.VisualBasic.MyServices> 命名空間 (Visual Basic 中的 `My`) 允許您以輕鬆且直覺式的方式存取許多 .NET Framework 類別，讓您能夠撰寫程式碼以與電腦、應用程式、設定、資源等等互動。</span><span class="sxs-lookup"><span data-stu-id="dca2e-103">The <xref:Microsoft.VisualBasic.MyServices> namespace (`My` in Visual Basic) provides easy and intuitive access to a number of .NET Framework classes, enabling you to write code that interacts with the computer, application, settings, resources, and so on.</span></span> <span data-ttu-id="dca2e-104">雖然原本設計為搭配使用 Visual Basic，但 `MyServices` 命名空間可以在 C# 應用程式中使用。</span><span class="sxs-lookup"><span data-stu-id="dca2e-104">Although originally designed for use with Visual Basic, the `MyServices` namespace can be used in C# applications.</span></span>  
+# <a name="how-to-use-the-my-namespace-c-programming-guide"></a><span data-ttu-id="70ec8-102">HOW TO：使用 My 命名空間 (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="70ec8-102">How to: Use the My Namespace (C# Programming Guide)</span></span>
+<span data-ttu-id="70ec8-103"><xref:Microsoft.VisualBasic.MyServices> 命名空間 (Visual Basic 中的 `My`) 允許您以輕鬆且直覺式的方式存取許多 .NET Framework 類別，讓您能夠撰寫程式碼以與電腦、應用程式、設定、資源等等互動。</span><span class="sxs-lookup"><span data-stu-id="70ec8-103">The <xref:Microsoft.VisualBasic.MyServices> namespace (`My` in Visual Basic) provides easy and intuitive access to a number of .NET Framework classes, enabling you to write code that interacts with the computer, application, settings, resources, and so on.</span></span> <span data-ttu-id="70ec8-104">雖然原本設計為搭配使用 Visual Basic，但 `MyServices` 命名空間可以在 C# 應用程式中使用。</span><span class="sxs-lookup"><span data-stu-id="70ec8-104">Although originally designed for use with Visual Basic, the `MyServices` namespace can be used in C# applications.</span></span>  
   
- <span data-ttu-id="dca2e-105">如需從 Visual Basic 中使用 `MyServices` 命名空間的詳細資訊，請參閱[使用 My 開發](../../../visual-basic/developing-apps/development-with-my/index.md)。</span><span class="sxs-lookup"><span data-stu-id="dca2e-105">For more information about using the `MyServices` namespace from Visual Basic, see [Development with My](../../../visual-basic/developing-apps/development-with-my/index.md).</span></span>  
+ <span data-ttu-id="70ec8-105">如需從 Visual Basic 中使用 `MyServices` 命名空間的詳細資訊，請參閱[使用 My 開發](../../../visual-basic/developing-apps/development-with-my/index.md)。</span><span class="sxs-lookup"><span data-stu-id="70ec8-105">For more information about using the `MyServices` namespace from Visual Basic, see [Development with My](../../../visual-basic/developing-apps/development-with-my/index.md).</span></span>  
   
-## <a name="adding-a-reference"></a><span data-ttu-id="dca2e-106">新增參考</span><span class="sxs-lookup"><span data-stu-id="dca2e-106">Adding a Reference</span></span>  
- <span data-ttu-id="dca2e-107">您必須新增 Visual Basic 程式庫的參考，才能在您的方案中使用 `MyServices` 類別。</span><span class="sxs-lookup"><span data-stu-id="dca2e-107">Before you can use the `MyServices` classes in your solution, you must add a reference to the Visual Basic library.</span></span>  
+## <a name="adding-a-reference"></a><span data-ttu-id="70ec8-106">新增參考</span><span class="sxs-lookup"><span data-stu-id="70ec8-106">Adding a Reference</span></span>  
+ <span data-ttu-id="70ec8-107">您必須新增 Visual Basic 程式庫的參考，才能在您的方案中使用 `MyServices` 類別。</span><span class="sxs-lookup"><span data-stu-id="70ec8-107">Before you can use the `MyServices` classes in your solution, you must add a reference to the Visual Basic library.</span></span>  
   
-#### <a name="to-add-a-reference-to-the-visual-basic-library"></a><span data-ttu-id="dca2e-108">新增 Visual Basic 程式庫的參考</span><span class="sxs-lookup"><span data-stu-id="dca2e-108">To add a reference to the Visual Basic library</span></span>  
+#### <a name="to-add-a-reference-to-the-visual-basic-library"></a><span data-ttu-id="70ec8-108">新增 Visual Basic 程式庫的參考</span><span class="sxs-lookup"><span data-stu-id="70ec8-108">To add a reference to the Visual Basic library</span></span>  
   
-1.  <span data-ttu-id="dca2e-109">在方案總管 中，以滑鼠右鍵按一下 [參考] 節點，然後選取 [Add Reference] (新增參考)。</span><span class="sxs-lookup"><span data-stu-id="dca2e-109">In **Solution Explorer**, right-click the **References** node, and select **Add Reference**.</span></span>  
+1.  <span data-ttu-id="70ec8-109">在方案總管 中，以滑鼠右鍵按一下 [參考] 節點，然後選取 [Add Reference] (新增參考)。</span><span class="sxs-lookup"><span data-stu-id="70ec8-109">In **Solution Explorer**, right-click the **References** node, and select **Add Reference**.</span></span>  
   
-2.  <span data-ttu-id="dca2e-110">當 [參考] 對話方塊出現時，向下捲動清單，然後選取 Microsoft.VisualBasic.dll。</span><span class="sxs-lookup"><span data-stu-id="dca2e-110">When the **References** dialog box appears, scroll down the list, and select Microsoft.VisualBasic.dll.</span></span>  
+2.  <span data-ttu-id="70ec8-110">當 [參考] 對話方塊出現時，向下捲動清單，然後選取 Microsoft.VisualBasic.dll。</span><span class="sxs-lookup"><span data-stu-id="70ec8-110">When the **References** dialog box appears, scroll down the list, and select Microsoft.VisualBasic.dll.</span></span>  
   
-     <span data-ttu-id="dca2e-111">您也可以在程式開頭處的 `using` 區段中包含下列這行。</span><span class="sxs-lookup"><span data-stu-id="dca2e-111">You might also want to include the following line in the `using` section at the start of your program.</span></span>  
+     <span data-ttu-id="70ec8-111">您也可以在程式開頭處的 `using` 區段中包含下列這行。</span><span class="sxs-lookup"><span data-stu-id="70ec8-111">You might also want to include the following line in the `using` section at the start of your program.</span></span>  
   
      [!code-csharp[csProgGuideNamespaces#18](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_1.cs)]  
   
-## <a name="example"></a><span data-ttu-id="dca2e-112">範例</span><span class="sxs-lookup"><span data-stu-id="dca2e-112">Example</span></span>  
- <span data-ttu-id="dca2e-113">這個範例會呼叫 `MyServices` 命名空間中所包含的各種靜態方法。</span><span class="sxs-lookup"><span data-stu-id="dca2e-113">This example calls various static methods contained in the `MyServices` namespace.</span></span> <span data-ttu-id="dca2e-114">為了要編譯這個程式碼，必須將 Microsoft.VisualBasic.DLL 的參考新增至專案。</span><span class="sxs-lookup"><span data-stu-id="dca2e-114">For this code to compile, a reference to Microsoft.VisualBasic.DLL must be added to the project.</span></span>  
+## <a name="example"></a><span data-ttu-id="70ec8-112">範例</span><span class="sxs-lookup"><span data-stu-id="70ec8-112">Example</span></span>  
+ <span data-ttu-id="70ec8-113">這個範例會呼叫 `MyServices` 命名空間中所包含的各種靜態方法。</span><span class="sxs-lookup"><span data-stu-id="70ec8-113">This example calls various static methods contained in the `MyServices` namespace.</span></span> <span data-ttu-id="70ec8-114">為了要編譯這個程式碼，必須將 Microsoft.VisualBasic.DLL 的參考新增至專案。</span><span class="sxs-lookup"><span data-stu-id="70ec8-114">For this code to compile, a reference to Microsoft.VisualBasic.DLL must be added to the project.</span></span>  
   
  [!code-csharp[csProgGuideNamespaces#19](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_2.cs)]  
   
- <span data-ttu-id="dca2e-115">不是 `MyServices` 命名空間中的所有類別都可以從 C# 應用程式呼叫：例如，<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> 類別不相容。</span><span class="sxs-lookup"><span data-stu-id="dca2e-115">Not all the classes in the `MyServices` namespace can be called from a C# application: for example, the <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> class is not compatible.</span></span> <span data-ttu-id="dca2e-116">在此特殊情況下，可以改為使用屬於 <xref:Microsoft.VisualBasic.FileIO.FileSystem> 的靜態方法，這些靜態方法也包含於 VisualBasic.dll 中。</span><span class="sxs-lookup"><span data-stu-id="dca2e-116">In this particular case, the static methods that are part of <xref:Microsoft.VisualBasic.FileIO.FileSystem>, which are also contained in VisualBasic.dll, can be used instead.</span></span> <span data-ttu-id="dca2e-117">例如，以下是如何使用一個這類方法來複製目錄：</span><span class="sxs-lookup"><span data-stu-id="dca2e-117">For example, here is how to use one such method to duplicate a directory:</span></span>  
+ <span data-ttu-id="70ec8-115">不是 `MyServices` 命名空間中的所有類別都可以從 C# 應用程式呼叫：例如，<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> 類別不相容。</span><span class="sxs-lookup"><span data-stu-id="70ec8-115">Not all the classes in the `MyServices` namespace can be called from a C# application: for example, the <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> class is not compatible.</span></span> <span data-ttu-id="70ec8-116">在此特殊情況下，可以改為使用屬於 <xref:Microsoft.VisualBasic.FileIO.FileSystem> 的靜態方法，這些靜態方法也包含於 VisualBasic.dll 中。</span><span class="sxs-lookup"><span data-stu-id="70ec8-116">In this particular case, the static methods that are part of <xref:Microsoft.VisualBasic.FileIO.FileSystem>, which are also contained in VisualBasic.dll, can be used instead.</span></span> <span data-ttu-id="70ec8-117">例如，以下是如何使用一個這類方法來複製目錄：</span><span class="sxs-lookup"><span data-stu-id="70ec8-117">For example, here is how to use one such method to duplicate a directory:</span></span>  
   
  [!code-csharp[csProgGuideNamespaces#20](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_3.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="dca2e-118">請參閱</span><span class="sxs-lookup"><span data-stu-id="dca2e-118">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="70ec8-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="70ec8-118">See also</span></span>
 
-- [<span data-ttu-id="dca2e-119">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="dca2e-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="dca2e-120">命名空間</span><span class="sxs-lookup"><span data-stu-id="dca2e-120">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)  
-- [<span data-ttu-id="dca2e-121">使用命名空間</span><span class="sxs-lookup"><span data-stu-id="dca2e-121">Using Namespaces</span></span>](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [<span data-ttu-id="70ec8-119">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="70ec8-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="70ec8-120">命名空間</span><span class="sxs-lookup"><span data-stu-id="70ec8-120">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)
+- [<span data-ttu-id="70ec8-121">使用命名空間</span><span class="sxs-lookup"><span data-stu-id="70ec8-121">Using Namespaces</span></span>](../../../csharp/programming-guide/namespaces/using-namespaces.md)
