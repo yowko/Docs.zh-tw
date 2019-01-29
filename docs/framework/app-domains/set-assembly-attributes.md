@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1ed022193b4896f91f1096a0bb16c21f5374868
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e6c327aad129f685e44f7b456e4ceef8f99fe12b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712596"
 ---
 # <a name="setting-assembly-attributes"></a>設定組件屬性
 組件屬性是提供組件相關資訊的值。 屬性可分成下列幾組資訊：  
@@ -35,11 +35,11 @@ ms.locfileid: "50201422"
   
  下表說明版本與文化特性屬性。  
   
-|組件識別屬性|描述|  
+|組件識別屬性|說明|  
 |---------------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyCultureAttribute>|列舉的欄位，會指出組件所支援的文化特性。 組件也可以指定文化特性獨立性，表示其包含預設文化特性的資源。 **注意：** 執行階段會將任何未將文化特性屬性設為 null 的組件作為附屬組件。 這類組件會受限於附屬組件繫結規則。 如需詳細資訊，請參閱 [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|此值用以設定組件屬性，例如組件是否可並存執行。|  
-|<xref:System.Reflection.AssemblyVersionAttribute>|格式為 *major*.*minor*.*build*.*revision* 的數值 (例如 2.4.0.0)。 通用語言執行平台會使用此值來執行強式名稱組件中的繫結作業。 **注意：** 如果 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 屬性未套用到組件，則 <xref:System.Reflection.AssemblyVersionAttribute> 屬性所指定的版本號碼會由 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 與 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 屬性所使用。|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|格式為 *major*.*minor*.*build*.*revision* 的數值 (例如 2.4.0.0)。 通用語言執行平台會使用此值來執行強式名稱組件中的繫結作業。 **注意：** 如果 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 屬性未套用到組件，則 <xref:System.Reflection.AssemblyVersionAttribute> 屬性所指定的版本號碼會由 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>與 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 屬性所使用。|  
   
  下列程式碼範例顯示如何將版本與文化特性屬性套用至組件。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "50201422"
 ## <a name="informational-attributes"></a>資訊屬性  
  您可以使用資訊屬性，以提供組件其他的公司或產品資訊。 下表說明可套用至組件的資訊屬性。  
   
-|資訊屬性|描述|  
+|資訊屬性|說明|  
 |-----------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyCompanyAttribute>|此字串值指定公司名稱。|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|此字串值指定著作權資訊。|  
@@ -64,7 +64,7 @@ ms.locfileid: "50201422"
 ## <a name="assembly-manifest-attributes"></a>組件資訊清單屬性。  
  您可以使用組件資訊清單屬性，在組件資訊清單中提供資訊，包括標題、描述、預設別名以及設定。 下表說明組件資訊清單屬性。  
   
-|組件資訊清單屬性|描述|  
+|組件資訊清單屬性|說明|  
 |---------------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|此字串值表示組件的設定，例如 Retail 或 Debug。 執行階段不使用此值。|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|此字串值指定可供參考組件使用的預設別名。 此值會在組件本身的名稱不容易記時 (例如 GUID 值) 提供易記名稱。 也可以使用此值作為完整組件名稱的簡短形式。|  
@@ -74,7 +74,7 @@ ms.locfileid: "50201422"
 ## <a name="strong-name-attributes"></a>強式名稱屬性  
  您可以使用強式名稱屬性來設定組件的強式名稱。 下表說明強式名稱屬性。  
   
-|強式名稱屬性|描述|  
+|強式名稱屬性|說明|  
 |----------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyDelaySignAttribute>|此布林值表示正在使用延遲簽章。|  
 |<xref:System.Reflection.AssemblyKeyFileAttribute>|此字串值表示檔案名稱，該檔案包含公開金鑰 (如果使用延遲簽章) 或公開與私密金鑰，而金鑰以參數形式傳遞至該屬性的建構函式。 請注意檔案名稱是相對於輸出檔案路徑 (.exe 或 .dll)，而非來源檔案路徑。|  
@@ -86,6 +86,6 @@ ms.locfileid: "50201422"
  [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
-## <a name="see-also"></a>請參閱  
-- [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
+## <a name="see-also"></a>另請參閱
+- [建立組件](../../../docs/framework/app-domains/create-assemblies.md)
 - [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)

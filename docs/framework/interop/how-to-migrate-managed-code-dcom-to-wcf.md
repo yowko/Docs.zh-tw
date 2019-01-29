@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 202737692bae14ada229ee2c92a6630a3ed71344
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734512"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>HOW TO：將受控碼 DCOM 移轉至 WCF
 對於分散式環境中伺服器與用戶端之間的 Managed 程式碼呼叫，Windows Communication Foundation (WCF) 是比分散式元件物件模型 (DCOM) 更建議使用的安全選擇。 本文將說明如何在下列情節中將程式碼從 DCOM 移轉至 WCF。  
@@ -235,7 +235,7 @@ customerManager.StoreCustomer(customer);
 ## <a name="the-service-returns-an-object-by-reference"></a>服務以傳址方式傳回物件  
  在此情節中，用戶端應用程式會呼叫遠端服務，方法會以傳址方式從服務傳回物件到用戶端。  
   
- 如先前所述，WCF 服務一律會以傳值方式傳回物件。  不過，您可以使用 <xref:System.ServiceModel.EndpointAddress10> 類別達成類似的結果。   <xref:System.ServiceModel.EndpointAddress10> 是可序列化的傳值物件，可供用戶端用來取得伺服器上的工作階段傳址物件。  
+ 如先前所述，WCF 服務一律會以傳值方式傳回物件。  不過，您可以使用 <xref:System.ServiceModel.EndpointAddress10> 類別達成類似的結果。  <xref:System.ServiceModel.EndpointAddress10>是可序列化的傳值物件，可供用戶端用來取得伺服器上的工作階段傳址物件。  
   
  在此情節中所示的 WCF 中傳址物件行為與 DCOM 不同。  在 DCOM 中，伺服器可以直接以傳址方式將物件傳回給用戶端，而用戶端可以呼叫該物件的方法，這些方法會在伺服器上執行。  不過，在 WCF 中一律是以傳值方式傳回物件。  用戶端必須接受該傳值物件 (以 <xref:System.ServiceModel.EndpointAddress10> 表示)，並用來建立自己的工作階段傳址物件。  工作階段物件上的用戶端方法呼叫會在伺服器上執行。換句話說，WCF 中的這個傳址物件是正常的 WCF 服務，其已設定為可以有工作階段。  
   
@@ -421,8 +421,8 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [建置用戶端](../../../docs/framework/wcf/building-clients.md)  
- [雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>另請參閱
+- [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [建置用戶端](../../../docs/framework/wcf/building-clients.md)
+- [雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)
