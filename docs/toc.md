@@ -181,7 +181,7 @@
 ##### [dotnet add reference](core/tools/dotnet-add-reference.md)
 ##### [dotnet list reference](core/tools/dotnet-list-reference.md)
 ##### [dotnet remove reference](core/tools/dotnet-remove-reference.md)
-#### 套件
+#### 封裝
 ##### [dotnet add package](core/tools/dotnet-add-package.md)
 ##### [dotnet remove package](core/tools/dotnet-remove-package.md)
 ### [global.json](core/tools/global-json.md)
@@ -381,11 +381,12 @@
 ### [元組](fsharp/language-reference/tuples.md)
 ### [F# 集合類型](fsharp/language-reference/fsharp-collection-types.md)
 ### [清單](fsharp/language-reference/lists.md)
+### [陣列](fsharp/language-reference/arrays.md)
+### [序列](fsharp/language-reference/sequences.md)
+### [配量](fsharp/language-reference/slices.md)
 ### [選項](fsharp/language-reference/options.md)
 ### [值選項](fsharp/language-reference/value-options.md)
 ### [結果](fsharp/language-reference/results.md)
-### [序列](fsharp/language-reference/sequences.md)
-### [陣列](fsharp/language-reference/arrays.md)
 ### [泛型](fsharp/language-reference/generics/index.md)
 #### [自動一般化](fsharp/language-reference/generics/automatic-generalization.md)
 #### [條件約束](fsharp/language-reference/generics/constraints.md)
@@ -1182,7 +1183,7 @@
 
 <!-- ML.NET Content -->
 # [ML.NET 指南](machine-learning/index.md)
-## 概觀
+## 總覽
 ### [什麼是 ML.NET？](machine-learning/what-is-mldotnet.md)
 ### [模型定型概念](machine-learning/basic-concepts-model-training-in-mldotnet.md)
 ## [教學課程](machine-learning/tutorials/index.md)

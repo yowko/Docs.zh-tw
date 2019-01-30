@@ -2,12 +2,12 @@
 title: XML 文件 (F#)
 description: 了解支援F#從註解產生文件。
 ms.date: 05/16/2016
-ms.openlocfilehash: a1fb5eb682ff1188136b31b64e2d7c537d2c9a0e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c5305dea8832112644710b2863269ef00feddd10
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153640"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204674"
 ---
 # <a name="xml-documentation"></a>XML 文件
 
@@ -15,7 +15,7 @@ ms.locfileid: "53153640"
 
 ## <a name="generating-documentation-from-comments"></a>從註解產生文件
 
-中的支援F#從註解產生文件是以其他.NET Framework 語言相同。 如同其他.NET Framework 語言， [-doc 編譯器選項](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)可讓您產生 XML 檔案，其中包含您可以使用 Sandcastle 等工具來轉換文件的資訊。 通常以其他.NET Framework 語言撰寫的組件搭配使用所設計的工具所產生的文件時產生的 Api 為基礎的編譯形式檢視F#建構。 除非工具是專門為了支援F#，這些工具所產生的文件不符合F#檢視的 API。
+中的支援F#從註解產生文件是以其他.NET Framework 語言相同。 如同其他.NET Framework 語言， [-doc 編譯器選項](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)可讓您產生 XML 檔案，其中包含您可以使用一種工具，例如轉換文件的資訊[DocFX](https://dotnet.github.io/docfx/)或[Sandcastle](https://github.com/EWSoftware/SHFB)。 通常以其他.NET Framework 語言撰寫的組件搭配使用所設計的工具所產生的文件時產生的 Api 為基礎的編譯形式檢視F#建構。 除非工具是專門為了支援F#，這些工具所產生的文件不符合F#檢視的 API。
 
 如需如何從 XML 產生文件的詳細資訊，請參閱[XML 文件註解&#40;C&#35;程式設計指南&#41;](https://msdn.microsoft.com/library/b2s063f7)。
 
@@ -25,16 +25,16 @@ ms.locfileid: "53153640"
 
 |標記語法|描述|
 |----------|-----------|
-|**\<c\>**_文字_**\</c\>**|指定*文字*是程式碼。 這個標記可以供文件產生器，以適用於程式碼的字型顯示文字。|
-|**\<摘要\>**_文字_ **\< /摘要\>**|指定*文字*是簡短的程式項目。 描述通常是一或兩個句子。|
-|**\<備註\>**_文字_**\</\>**|指定*文字*包含的程式元素的增補資訊。|
-|**\<參數名稱 ="**_名稱_**」\>**_描述_**\</param\>**|指定的名稱和函式或方法參數的描述。|
-|**\<typeparam 名稱 ="**_名稱_**」\>**_描述_**\</typeparam\>**|指定的名稱和型別參數的描述。|
-|**\<會傳回\>**_文字_ **\< /returns>\>**|指定*文字*描述函式或方法的傳回值。|
-|**\<例外狀況 cref ="**_型別_**」\>**_描述_**\</exception\>**|指定可以產生的例外狀況的情況下它會擲回的類型。|
-|**\<cref ="**_參考_**」\>**_文字_ **\< /請參閱\>**|指定內嵌連結至另一個程式項目。 *參考*是它會出現在 XML 文件檔案的名稱。 *文字*是連結中所顯示的文字。|
-|**\<seealso cref ="**_參考_**"/\>**|指定另一種類型的文件的 < 另請參閱連結。 *參考*是它會出現在 XML 文件檔案的名稱。 另請參閱通常會出現在文件頁面底部的連結。|
-|**\<para\>**_文字_**\</para\>**|指定文字的段落。 這用來分隔文字內**備註**標記。|
+|**\<c\>**_text_**\</c\>**|指定*文字*是程式碼。 這個標記可以供文件產生器，以適用於程式碼的字型顯示文字。|
+|**\<summary\>**_text_**\</summary\>**|指定*文字*是簡短的程式項目。 描述通常是一或兩個句子。|
+|**\<remarks\>**_text_**\</remarks\>**|指定*文字*包含的程式元素的增補資訊。|
+|**\<param name="**_name_**"\>**_description_**\</param\>**|指定的名稱和函式或方法參數的描述。|
+|**\<typeparam name="**_name_**"\>**_description_**\</typeparam\>**|指定的名稱和型別參數的描述。|
+|**\<returns\>**_text_**\</returns\>**|指定*文字*描述函式或方法的傳回值。|
+|**\<exception cref="**_type_**"\>**_description_**\</exception\>**|指定可以產生的例外狀況的情況下它會擲回的類型。|
+|**\<see cref="**_reference_**"\>**_text_**\</see\>**|指定內嵌連結至另一個程式項目。 *參考*是它會出現在 XML 文件檔案的名稱。 *文字*是連結中所顯示的文字。|
+|**\<seealso cref="**_reference_**"/\>**|指定另一種類型的文件的 < 另請參閱連結。 *參考*是它會出現在 XML 文件檔案的名稱。 另請參閱通常會出現在文件頁面底部的連結。|
+|**\<para\>**_text_**\</para\>**|指定文字的段落。 這用來分隔文字內**備註**標記。|
 
 ## <a name="example"></a>範例
 

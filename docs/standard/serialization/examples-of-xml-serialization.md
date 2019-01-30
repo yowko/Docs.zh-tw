@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: ce8e4f0ebb086ca2f8335a0a5a625638e079fde2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c5731fcff3191c192a5e7884c4d5a9566400bc5
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638297"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204804"
 ---
 # <a name="examples-of-xml-serialization"></a>XML 序列化的範例
 XML 序列化的形式不只一種，從簡單到複雜都有。 例如，您可序列化僅包含公用欄位及屬性的類別，如 [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)中所示。 下列程式碼範例說明各種不同的進階案例，包括如何使用 XML 序列化以產生符合特定 XML 結構描述 (XSD) 文件的 XML 資料流。  
@@ -71,7 +71,7 @@ private void SerializeDataSet(string filename){
 ```  
   
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>序列化 XmlElement 與 XmlNode  
- 您也可序列化 <xref:System.Xml.XmlElement> 或 <xref:System.Xml.XmlNode> 類別的執行個體，如下列程式碼範例所示。  
+ 您也可以序列化的執行個體<xref:System.Xml.XmlElement>或<xref:System.Xml.XmlNode>類別，如下列程式碼範例所示。  
   
 ```vb  
 private Sub SerializeElement(filename As String)  
@@ -146,9 +146,9 @@ public class Address
   
 ```xml  
 <PurchaseOrder>  
-    <Address>  
+    <MyAddress>  
         <FirstName>George</FirstName>  
-    </Address>  
+    </MyAddress>  
 </PurchaseOrder>  
 ```  
   
@@ -169,13 +169,13 @@ End Class
 ```csharp  
 public class PurchaseOrder  
 {  
-    public Item [] ItemsOrders  
+    public Item [] ItemsOrders;  
 }  
   
 public class Item  
 {  
-    public string ItemID  
-    public decimal ItemPrice  
+    public string ItemID;  
+    public decimal ItemPrice;  
 }  
 ```  
   
@@ -183,7 +183,7 @@ public class Item
   
 ```xml  
 <PurchaseOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
-    <Items>  
+    <ItemsOrders>  
         <Item>  
             <ItemID>aaa111</ItemID>  
             <ItemPrice>34.22</ItemPrice>  
@@ -192,7 +192,7 @@ public class Item
             <ItemID>bbb222</ItemID>  
             <ItemPrice>2.89</ItemPrice>  
         <Item>  
-    </Items>  
+    </ItemsOrders>  
 </PurchaseOrder>  
 ```  
   
@@ -363,7 +363,7 @@ public class Employee {
   
  `CreatePO` 方法會建立 `PurchaseOrder`、`Address` 和 `OrderedItem` 類別物件，並且設定公用欄位的值。 該方法也建構用來序列化及還原序列化 <xref:System.Xml.Serialization.XmlSerializer>`PurchaseOrder`之  類別的執行個體。 請注意，程式碼把要序列化之類別的型別傳遞給建構函式。 程式碼也建立用來將 XML 資料流寫入 XML 文件的 `FileStream`。  
   
- `ReadPo` 方法比較簡單。 它只會建立要還原序列化的物件，並讀出它們的值。 如同 `CreatePo` 方法，您必須先建構 <xref:System.Xml.Serialization.XmlSerializer>，將要還原序列化之類別的型別傳遞給建構函式。 同時，需要有 <xref:System.IO.FileStream> 讀取 XML 文件。 若要還原序列化物件，以 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 做為引數呼叫 <xref:System.IO.FileStream> 方法。 還原序列化物件必須轉型為型別 `PurchaseOrder`的物件變數。 然後程式碼會讀取已還原序列化的 `PurchaseOrder`值。 請注意，您也可以讀取已建立的 PO.xml 檔案，檢視實際的 XML 輸出。  
+ `ReadPo` 方法比較簡單。 它只會建立要還原序列化的物件，並讀出它們的值。 如同`CreatePo`方法中，您必須先建構<xref:System.Xml.Serialization.XmlSerializer>，傳遞要還原序列化建構函式類別的型別。 同時，需要有 <xref:System.IO.FileStream> 讀取 XML 文件。 若要還原序列化物件，以 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 做為引數呼叫 <xref:System.IO.FileStream> 方法。 還原序列化物件必須轉型為型別 `PurchaseOrder`的物件變數。 然後程式碼會讀取已還原序列化的 `PurchaseOrder`值。 請注意，您也可以讀取已建立的 PO.xml 檔案，檢視實際的 XML 輸出。  
   
 ```vb  
 Imports System  
@@ -395,8 +395,8 @@ End Class
   
 Public Class Address  
     ' The XmlAttribute attribute instructs the XmlSerializer to serialize the   
-    ' Name field as an XML attribute instead of an XML element (the   
-    ' default behavior).   
+    ' Name field as an XML attribute instead of an XML element (XML element is  
+    ' the default behavior).     
     <XmlAttribute()> _  
     Public Name As String  
     Public Line1 As String  
@@ -575,8 +575,8 @@ public class PurchaseOrder
 public class Address  
 {  
     // The XmlAttribute attribute instructs the XmlSerializer to serialize the   
-    // Name field as an XML attribute instead of an XML element (the   
-    // default behavior).  
+    // Name field as an XML attribute instead of an XML element (XML element is  
+    // the default behavior).  
     [XmlAttribute]  
     public string Name;  
     public string Line1;  
