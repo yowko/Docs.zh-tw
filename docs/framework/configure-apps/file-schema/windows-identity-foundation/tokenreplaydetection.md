@@ -1,21 +1,21 @@
 ---
-title: '&lt;tokenReplayDetection&gt;'
+title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: bd2272cb83dc0183d5008cfa178e11783f51ca2d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 4deeb1d84f2621adb7ff1b649a505138b6856ec1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261051"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283071"
 ---
-# <a name="lttokenreplaydetectiongt"></a>&lt;tokenReplayDetection&gt;
+# <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
 啟用權杖重新執行偵測，並指定權杖的到期時間。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<tokenReplayDetection >  
+\<tokenReplayDetection>  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,8 +48,8 @@ ms.locfileid: "48261051"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
-|[\<Securitytokenhandlerconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
   
 ## <a name="remarks"></a>備註  
  A`<tokenReplayDetection>`項目可以指定服務層級底下`<identityConfiguration>`項目或之下的安全性權杖處理常式集合層級`<securityTokenHandlerConfiguration>`項目。 權杖處理常式集合上的設定會覆寫所指定的服務。  

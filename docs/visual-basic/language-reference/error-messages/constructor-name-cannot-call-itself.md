@@ -1,5 +1,5 @@
 ---
-title: 建構函式&#39;&lt;名稱&gt;&#39;不能呼叫自己本身
+title: 建構函式 '<name>' 不能呼叫自己本身
 ms.date: 07/20/2015
 f1_keywords:
 - bc30298
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: 4a02277893147716098a3dcc327e221e0775d476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67933e9365b1aa18063f0ccf3c2146a261e7eafc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662721"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276038"
 ---
-# <a name="constructor-39ltnamegt39-cannot-call-itself"></a>建構函式&#39;&lt;名稱&gt;&#39;不能呼叫自己本身
+# <a name="constructor-name-cannot-call-itself"></a>建構函式 '\<名稱 >' 不可呼叫其本身
 A`Sub New`類別或結構中的程序呼叫本身。  
   
  建構函式的目的是要初始化類別的執行個體，或建立結構時第一次。 類別或結構可以有數個建構函式，前提是它們都有不同的參數清單。 建構函式可以呼叫其他建構函式，以執行其功能，除了它自己。 但是這樣做沒有意義的建構函式呼叫本身，而且事實上這會導致無限遞迴如果允許。  

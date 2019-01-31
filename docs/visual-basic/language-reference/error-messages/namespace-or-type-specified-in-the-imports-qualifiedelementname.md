@@ -1,5 +1,5 @@
 ---
-title: 在匯入指定的命名空間或類型&#39;&lt;限定&gt;&#39;不&#39;t 包含任何 public 成員，或找不到
+title: Imports '<qualifiedelementname>' 中指定的命名空間或類型不包含任何 Public 成員，或是找不到該命名空間或類型
 ms.date: 07/20/2015
 f1_keywords:
 - bc40056
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 21c0794fb4ed6104204fba5d49e37394eff24865
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19a769b33b3b63b7f431b73841f49632e41f9e6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552134"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288271"
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>在匯入指定的命名空間或類型&#39;&lt;限定&gt;&#39;不&#39;t 包含任何 public 成員，或找不到
+# <a name="namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>中的匯入的命名空間或類型指定\<完整項目名稱 >' 不包含任何 public 成員，或是找不到
 中的匯入的命名空間或類型指定\<完整項目名稱 >' 不包含任何 public 成員，或是找不到。 請確定命名空間或類型定義，而且包含至少一個 public 成員。 請確定別名名稱不包含其他別名。  
   
  `Imports`陳述式會指定包含的項目不能找到，或未定義任何`Public`成員。  

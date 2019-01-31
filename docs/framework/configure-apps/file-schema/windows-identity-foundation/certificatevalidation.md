@@ -1,21 +1,21 @@
 ---
-title: '&lt;certificateValidation&gt;'
+title: <certificateValidation>
 ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
-ms.openlocfilehash: 29881be43f02d275ad135efd97dc8b25a7409beb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7b8823d792e3f15846a9483d670994be4b368980
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838327"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273893"
 ---
-# <a name="ltcertificatevalidationgt"></a>&lt;certificateValidation&gt;
+# <a name="certificatevalidation"></a>\<certificateValidation>
 控制權杖處理常式用來驗證憑證的設定。 如果特定的處理常式設定為使用自己的驗證程式，則會覆寫這些設定。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<certificateValidation >  
+\<certificateValidation>  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,14 +46,14 @@ ms.locfileid: "48838327"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<certificateValidator >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md)|指定自訂憑證驗證類型。 只有，會使用這個型別`certificateValidationMode`的屬性[ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)元素設定為"Custom"。|  
+|[\<certificateValidator>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md)|指定自訂憑證驗證類型。 只有，會使用這個型別`certificateValidationMode`的屬性[ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)元素設定為"Custom"。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
-|[\<Securitytokenhandlerconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
   
 ## <a name="remarks"></a>備註  
  A`<certificateValidation>`項目可以指定服務層級底下`<identityConfiguration>`項目或之下的安全性權杖處理常式集合層級`<securityTokenHandlerConfiguration>`項目。 權杖處理常式集合上的設定會覆寫所指定的服務。 某些權杖處理常式可讓您在組態中指定的憑證驗證設定。 服務層級和安全性權杖處理常式集合上設定個別的語彙基元處理常式覆寫所指定。  

@@ -1,5 +1,5 @@
 ---
-title: '&#39;自訂&#39;修飾詞宣告沒有以明確委派類型的事件無效'
+title: "'Custom' 修飾詞在沒有以明確委派類型宣告的事件中無效"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31122
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: c909973ef1c00cb01179b0e5527dfecd6f41e577
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1b57ccdaa9e04c837ecf7572bc164683a934b2d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574777"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273513"
 ---
-# <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39;自訂&#39;修飾詞宣告沒有以明確委派類型的事件無效
+# <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>'Custom' 修飾詞在沒有以明確委派類型宣告的事件中無效
 不同於非自訂事件`Custom Event`宣告需要`As`事件名稱，明確地指定事件的委派型別後面的子句。  
   
  非自訂事件可以是定義使用`As`子句和明確委派類型，或立即使用參數清單後面的事件名稱。  

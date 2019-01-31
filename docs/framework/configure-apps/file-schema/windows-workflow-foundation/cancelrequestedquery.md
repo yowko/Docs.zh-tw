@@ -1,16 +1,16 @@
 ---
-title: '&lt;cancelRequestedQuery&gt;'
+title: <cancelRequestedQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8da9b1c4-338a-4f23-9830-6d257772d340
-ms.openlocfilehash: a3d24536589288ce9585901f3d955075bc856c97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 049ca79355f13fd4ffacedbb7501d760361f0a81
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520304"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282018"
 ---
-# <a name="ltcancelrequestedquerygt"></a>&lt;cancelRequestedQuery&gt;
+# <a name="cancelrequestedquery"></a>\<cancelRequestedQuery>
 代表查詢，可用來追蹤由父活動取消子活動的要求。 追蹤參與者必須要具備這個查詢，才能訂閱取消要求記錄物件。  
   
  如需有關追蹤設定檔查詢的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  

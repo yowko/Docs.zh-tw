@@ -1,5 +1,5 @@
 ---
-title: 屬性&#39; &lt;propertyname&gt; &#39;不&#39;t 傳回有關所有程式碼路徑的值
+title: 屬性 '<propertyname>' 不會在所有程式碼路徑上傳回值
 ms.date: 07/20/2015
 f1_keywords:
 - bc42107
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: b8059ebc9b6c1de685f2f04c3ee362ab8cf6d05e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1788d06aa5236d4cfc33999df86ad72c420b41df
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611250"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268999"
 ---
-# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>屬性&#39; &lt;propertyname&gt; &#39;不&#39;t 傳回有關所有程式碼路徑的值
+# <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>屬性 '\<屬性名稱 >' 並未傳回有關所有程式碼路徑的值
 屬性 '\<屬性名稱 >' 並未傳回有關所有程式碼路徑的值。 使用結果時，Null 參考例外狀況可能在執行階段時發生。  
   
  屬性`Get`程序中的至少一個通過程式碼不會傳回值的可能的路徑。  

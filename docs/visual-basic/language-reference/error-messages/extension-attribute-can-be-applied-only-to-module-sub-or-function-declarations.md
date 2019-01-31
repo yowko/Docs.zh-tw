@@ -1,5 +1,5 @@
 ---
-title: '&#39;延伸模組&#39;屬性可以只套用到&#39;模組&#39;， &#39;Sub&#39;，或&#39;函式&#39;宣告'
+title: "'Extension' 屬性只能套用到 'Module'、'Sub' 或 'Function' 宣告"
 ms.date: 07/20/2015
 f1_keywords:
 - bc36550
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: fabd602f31a362fe33954253d565e86a065e0a83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2e2c41d713b0b04b8bc7208a83d059f0d16bf06
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718230"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278716"
 ---
-# <a name="39extension39-attribute-can-be-applied-only-to-39module39-39sub39-or-39function39-declarations"></a>&#39;延伸模組&#39;屬性可以只套用到&#39;模組&#39;， &#39;Sub&#39;，或&#39;函式&#39;宣告
+# <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>'Extension' 屬性只能套用到 'Module'、'Sub' 或 'Function' 宣告
 擴充 Visual Basic 中的資料類型的唯一方法是定義在標準模組內的擴充方法。 擴充方法可能`Sub`程序或`Function`程序。 所有擴充方法必須都標記為擴充屬性中， `<Extension()>`，從<xref:System.Runtime.CompilerServices?displayProperty=nameWithType>命名空間。 （選擇性） 包含擴充方法的模組，可能會標記為相同的方式。 延伸模組屬性的任何其他用途不是有效的。  
   
  **錯誤 ID:** BC36550  

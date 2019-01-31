@@ -1,28 +1,28 @@
 ---
-title: WCF 的 &lt;state&gt;、&lt;workflowInstanceQuery&gt;
+title: <state> WCF 的 <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 168a6980e955f602ee60bff26461f06cb16c836a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145922"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270842"
 ---
-# <a name="ltstategt-of-wcf-ltworkflowinstancequerygt"></a>WCF 的 &lt;state&gt;、&lt;workflowInstanceQuery&gt;
+# <a name="state-of-wcf-workflowinstancequery"></a>\<狀態 > 的 WCF， \<workflowInstanceQuery >
 表示建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。  
   
  如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<追蹤 >  
+\<tracking>  
 \<設定檔 >  
 \<trackingProfile>  
-\<工作流程 >  
+\<workflow>  
 \<workflowInstanceQueries>  
-\<workflowInstanceQuery >  
-\<狀態 >  
-\<狀態 >  
+\<workflowInstanceQuery>  
+\<states>  
+\<state>  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "54145922"
 
 |元素|描述|  
 |-------------|-----------------|  
-|[\<狀態 >](states-of-wcf-workflowinstancequery.md)|建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。|  
+|[\<states>](states-of-wcf-workflowinstancequery.md)|建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。|  
   
 ## <a name="remarks"></a>備註  
 

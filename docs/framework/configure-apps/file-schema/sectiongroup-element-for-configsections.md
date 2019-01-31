@@ -1,5 +1,5 @@
 ---
-title: '&lt;sectionGroup&gt;項目&lt;configSections&gt;'
+title: <sectionGroup> 的 <configSections> 項目
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/sectionGroup
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 82f89e74d6a09b2c157ff9a273f078e606222f63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce0fa5bd77a7b9012d69fd5afab1f4c332f213a7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523892"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276129"
 ---
 # <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup > 項目\<configSections >
 

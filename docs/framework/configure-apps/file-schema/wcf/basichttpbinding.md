@@ -1,17 +1,17 @@
 ---
-title: '&lt;basicHttpBinding&gt;'
+title: <basicHttpBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: 7d74ca7f4c44eafedaa95661797cce983967e846
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 861840f574c80f282198775272eff149b84c6fca
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631741"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289727"
 ---
-# <a name="ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;
+# <a name="basichttpbinding"></a>\<basicHttpBinding>
 代表繫結，Windows Communication Foundation (WCF) 服務可使用該繫結設定並公開能與 ASMX Web 服務和用戶端，以及其他符合 WS-I Basic Profile 1.1 的服務進行通訊的端點。  
   
  \<system.ServiceModel>  

@@ -1,5 +1,5 @@
 ---
-title: Lambda 運算式不是有效的第一個運算式中&#39;Select Case&#39;陳述式
+title: Lambda 運算式在 'Select Case' 陳述式的第一個運算式中無效
 ms.date: 07/20/2015
 f1_keywords:
 - bc36635
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: afefa821f9695dbbfe2a96aee5afd3171ae5b1db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d56515093020a4c987d132491957ce6db9e21683
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700217"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287790"
 ---
-# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>Lambda 運算式不是有效的第一個運算式中&#39;Select Case&#39;陳述式
+# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Lambda 運算式在 'Select Case' 陳述式的第一個運算式中無效
 您無法使用 lambda 運算式中的測試運算式`Select Case`陳述式。 Lambda 運算式定義傳回函式和測試運算式`Select Case`陳述式必須是基本資料類型。  
   
  下列程式碼會造成這個錯誤：  

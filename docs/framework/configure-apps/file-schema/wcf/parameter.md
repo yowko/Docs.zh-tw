@@ -1,15 +1,15 @@
 ---
-title: '&lt;parameter&gt;'
+title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: a68fdecaba6ad4e64e4d3a4161d9fef6c099d60a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b14dc1908ef3a06549154f70efb2d4e5cb10076
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690731"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289420"
 ---
-# <a name="ltparametergt"></a>&lt;parameter&gt;
+# <a name="parameter"></a>\<parameter>
 指定當宣告型別為泛型型別時的泛型參數。  
   
  \<system.runtime.serialization>  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;GCCpuGroup&gt;項目'
+title: <GCCpuGroup> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GCCpuGroup element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f4d135bc74a753b3968baaccf3e35633c8ba253
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a389403d58bb0b4fb4f98e25d2c9a6b2cf337281
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535797"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264623"
 ---
-# <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt;項目
+# <a name="gccpugroup-element"></a>\<GCCpuGroup > 項目
 指定記憶體回收是否支援多個 CPU 群組。  
   
  \<configuration>  

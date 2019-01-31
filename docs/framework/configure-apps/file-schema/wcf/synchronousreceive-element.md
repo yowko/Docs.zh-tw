@@ -1,15 +1,15 @@
 ---
-title: '&lt;synchronousReceive&gt; 項目'
+title: <synchronousReceive> 項目
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: dedbe156dea79c78f05acdb3a044c9080665675a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f4a8868304ebae9a7ed5e6afbfb14fb2116afc49
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598891"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278469"
 ---
-# <a name="ltsynchronousreceivegt-element"></a>&lt;synchronousReceive&gt; 項目
+# <a name="synchronousreceive-element"></a>\<synchronousReceive > 項目
 這個組態項目用於指定在服務或用戶端應用程式中接收訊息的執行階段行為。 它沒有任何屬性或子項目。  
   
  \<system.ServiceModel>  

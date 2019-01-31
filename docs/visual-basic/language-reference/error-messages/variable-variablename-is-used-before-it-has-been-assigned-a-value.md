@@ -1,5 +1,5 @@
 ---
-title: 變數&#39; &lt;variablename&gt; &#39;已在指派值之前使用
+title: 變數 '<variablename>' 已在指派值之前使用
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42104
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: f91343e850600c9e5f4b4b4eb2126798baf3d980
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23201b89f44f6384ae9f75d941d264e8d59bef80
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647019"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268830"
 ---
-# <a name="variable-39ltvariablenamegt39-is-used-before-it-has-been-assigned-a-value"></a>變數&#39; &lt;variablename&gt; &#39;已在指派值之前使用
+# <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>變數 '\<變數名稱 >' 已在指派值之前使用
 變數 '\<變數名稱 >' 已在指派值之前使用。 可能會在執行階段產生 null 參考例外狀況。  
   
  應用程式必須至少一個可能的路徑，透過其讀取變數之前的任何值指派給它, 的程式碼。  

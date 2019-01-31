@@ -1,15 +1,15 @@
 ---
-title: '&lt;servicePrincipalName&gt;'
+title: <servicePrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: 5d65b5956491e30066ece54a48374f1d7014552e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba1484644c57651fc0feadcc61d71d03eec1899b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657573"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254917"
 ---
-# <a name="ltserviceprincipalnamegt"></a>&lt;servicePrincipalName&gt;
+# <a name="serviceprincipalname"></a>\<servicePrincipalName>
 由其服務原則名稱 (SPN) 指定的服務身分識別。  
   
  如需有關如何設定 SPN 的詳細資訊，請參閱 <<c0> [ 服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  

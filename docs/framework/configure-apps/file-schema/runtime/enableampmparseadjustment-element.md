@@ -1,17 +1,17 @@
 ---
-title: '&lt;EnableAmPmParseAdjustment&gt;項目'
+title: <EnableAmPmParseAdjustment> 項目
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97bb5912ec4d384260e3809166efacded8e2b389
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3316184aaa624fffdd18f472a7f3a709b42045a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679093"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269207"
 ---
-# <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt;項目
+# <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment > 項目
 決定日期和時間剖析方法使用一組調整過的規則來剖析日期字串，包含日期、 月份、 小時和 AM/PM 指示項。  
   
  \<configuration>  

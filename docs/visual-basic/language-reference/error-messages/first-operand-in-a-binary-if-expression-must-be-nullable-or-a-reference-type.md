@@ -1,5 +1,5 @@
 ---
-title: 二進位檔中的第一個運算元&#39;如果&#39;運算式必須可為 null 或參考類型
+title: 二進位 'If' 運算式的第一個運算元必須可為 Null 或是參考類型
 ms.date: 07/20/2015
 f1_keywords:
 - bc33107
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: 85094ba6d6a44bf2e6cc4fba7946598c286a08a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb47670e8417e903b2886887394b972d1ac138b0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668264"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284631"
 ---
-# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>二進位檔中的第一個運算元&#39;如果&#39;運算式必須可為 null 或參考類型
+# <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>二進位 'If' 運算式的第一個運算元必須可為 Null 或是參考類型
 `If`運算式可以接受兩個或三個引數。 當您傳送僅兩個引數時，第一個引數必須是參考型別或可為 null 的型別。 如果第一個引數評估為任何項目以外的其他`Nothing`，其值會傳回。 如果第一個引數評估為`Nothing`，評估並傳回第二個引數。  
   
  例如，下列程式碼包含兩個`If`運算式、 一個具有三個引數和一個具有兩個引數。 運算式會計算並傳回相同的值。  

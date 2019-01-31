@@ -1,5 +1,5 @@
 ---
-title: '&lt;disableCachingBindingFailures&gt;項目'
+title: <disableCachingBindingFailures> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCachingBindingFailures
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20cc7e37b2ea66cae9f28367f97b69ed43f1a13e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c99eb6b77a969a1c5003743b0407821e2537b683
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543863"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289714"
 ---
-# <a name="ltdisablecachingbindingfailuresgt-element"></a>&lt;disableCachingBindingFailures&gt;項目
+# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > 項目
 指定是否要停用的繫結失敗發生因為藉由探查來找不到組件快取。  
   
  \<組態 > 項目  

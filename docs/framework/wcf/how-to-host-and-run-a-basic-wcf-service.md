@@ -1,5 +1,5 @@
 ---
-title: HOW TO：裝載和執行基本 Windows Communication Foundation 服務
+title: 如何裝載和執行基本的 Windows Communication Foundation 服務
 ms.date: 09/14/2018
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a029ef23ba3e9a0dd62e410739fa8734acc202a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129372"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277767"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>HOW TO：裝載和執行基本 Windows Communication Foundation 服務
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>如何裝載和執行基本的 Windows Communication Foundation 服務
 
-這是建立 Windows Communication Foundation (WCF) 應用程式所需之六個工作中的第三個工作。 如需這六個工作的概觀，請參閱[使用者入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。
+這是建立 Windows Communication Foundation (WCF) 應用程式所需之六個工作中的第三個工作。 如需這六個工作的概觀，請參閱[使用者入門教學課程](getting-started-tutorial.md)主題。
 
 本主題描述如何在主控台應用程式中裝載 Windows Communication Foundation (WCF) 服務。 這個程序包含下列步驟：
 
@@ -142,14 +142,14 @@ End Module
 
 **步驟 2** – 建立的執行個體<xref:System.ServiceModel.ServiceHost>來裝載服務的類別。 建構函式接受兩個參數：實作服務合約之類別的型別以及服務的基底位址。
 
-**步驟 3** – 建立<xref:System.ServiceModel.Description.ServiceEndpoint>執行個體。 服務端點是由位址、繫結和服務合約所組成。 因此 <xref:System.ServiceModel.Description.ServiceEndpoint> 建構函式會接受服務合約介面型別、繫結和位址。 服務合約是您在服務類型中所定義和實作的 `ICalculator`。 這個範例使用的繫結是 <xref:System.ServiceModel.WSHttpBinding>，這是用來連接至符合 WS-* 規格之端點的內建繫結。 如需 WCF 繫結的詳細資訊，請參閱 [WCF 繫結概觀](../../../docs/framework/wcf/bindings-overview.md)。 位址會附加至基底位址以識別端點。 此程式碼中指定的位址是"CalculatorService"，因此端點的完整的位址是`"http://localhost:8000/GettingStarted/CalculatorService"`。
+**步驟 3** – 建立<xref:System.ServiceModel.Description.ServiceEndpoint>執行個體。 服務端點是由位址、繫結和服務合約所組成。 因此 <xref:System.ServiceModel.Description.ServiceEndpoint> 建構函式會接受服務合約介面型別、繫結和位址。 服務合約是您在服務類型中所定義和實作的 `ICalculator`。 這個範例使用的繫結是 <xref:System.ServiceModel.WSHttpBinding>，這是用來連接至符合 WS-* 規格之端點的內建繫結。 如需 WCF 繫結的詳細資訊，請參閱 [WCF 繫結概觀](bindings-overview.md)。 位址會附加至基底位址以識別端點。 此程式碼中指定的位址是"CalculatorService"，因此端點的完整的位址是`"http://localhost:8000/GettingStarted/CalculatorService"`。
 
     > [!IMPORTANT]
-    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](simplified-configuration.md) and [Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md).
 
-**步驟 4** – 啟用中繼資料交換。 用戶端會使用中繼資料交換來產生用於呼叫服務作業的 Proxy。 若要啟用中繼資料交換，請建立 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 執行個體，將其 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 屬性設定為 `true`，並將行為新增至 <xref:System.ServiceModel.ServiceHost> 執行個體的 <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` 集合。
+**步驟 4** – 啟用中繼資料交換。 用戶端會使用中繼資料交換來產生用於呼叫服務作業的 Proxy。 若要啟用中繼資料交換，請建立 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 執行個體，將其 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 屬性設定為 `true`，並將行為加入至 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 執行個體的 <xref:System.ServiceModel.ServiceHost> 集合。
 
-**步驟 5** – 開啟<xref:System.ServiceModel.ServiceHost>來接聽內送訊息。 注意程式碼會等待使用者按下 Enter。 如果不這麼做，應用程式會立即關閉而服務也將關閉。另外也要注意使用的 try/catch 區塊。 在 <xref:System.ServiceModel.ServiceHost> 具現化之後，會將所有其他程式碼放置在 try/catch 區塊中。 如需安全攔截擲回例外狀況的詳細資訊<xref:System.ServiceModel.ServiceHost>，請參閱[使用關閉和中止發行 WCF 用戶端資源](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+**步驟 5** – 開啟<xref:System.ServiceModel.ServiceHost>來接聽內送訊息。 注意程式碼會等待使用者按下 Enter。 如果不這麼做，應用程式會立即關閉而服務也將關閉。另外也要注意使用的 try/catch 區塊。 在 <xref:System.ServiceModel.ServiceHost> 具現化之後，會將所有其他程式碼放置在 try/catch 區塊中。 如需安全攔截擲回例外狀況的詳細資訊<xref:System.ServiceModel.ServiceHost>，請參閱[使用關閉和中止發行 WCF 用戶端資源](samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > 編輯 App.config 以反映在程式碼中所做的變更 GettingStartedLib 中：
@@ -396,18 +396,18 @@ End Module
 ```
 
 > [!NOTE]
-> 此類服務需要權限才能將 HTTP 位址註冊到電腦上，以便接聽。 系統管理員帳戶具有此權限，但是非系統管理員帳戶則必須被授與 HTTP 命名空間的權限。 如需如何設定命名空間保留的詳細資訊，請參閱[設定 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 在 Visual Studio 下執行時，必須以系統管理員權限的身分執行 service.exe。
+> 此類服務需要權限才能將 HTTP 位址註冊到電腦上，以便接聽。 系統管理員帳戶具有此權限，但是非系統管理員帳戶則必須被授與 HTTP 命名空間的權限。 如需如何設定命名空間保留的詳細資訊，請參閱[設定 HTTP 和 HTTPS](feature-details/configuring-http-and-https.md)。 在 Visual Studio 下執行時，必須以系統管理員權限的身分執行 service.exe。
 
 ## <a name="next-steps"></a>後續步驟
 
 服務目前正在執行中。 在下一個工作中，您可以建立 WCF 用戶端。
 
 > [!div class="nextstepaction"]
-> [操作說明：建立 WCF 用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [如何：建立 WCF 用戶端](how-to-create-a-wcf-client.md)
 
-如需針對資訊進行疑難排解，請參閱[針對使用者入門教學課程進行疑難排解](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。
+如需針對資訊進行疑難排解，請參閱[針對使用者入門教學課程進行疑難排解](troubleshooting-the-getting-started-tutorial.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-- [快速入門](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [自我裝載](../../../docs/framework/wcf/samples/self-host.md)
+- [快速入門](samples/getting-started-sample.md)
+- [自我裝載](samples/self-host.md)

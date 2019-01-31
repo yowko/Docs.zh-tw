@@ -1,5 +1,5 @@
 ---
-title: '&lt;新增&gt;webRequestModules （網路設定） 的項目'
+title: webRequestModules 的 <add> 項目 (網路設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: d78405546d00797677134e038bbaa69bf088f88e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff564571f3f606ac526c5b9efdb904d237348ffe
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575706"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287127"
 ---
-# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;新增&gt;webRequestModules （網路設定） 的項目
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<新增 > webRequestModules （網路設定） 的項目
 將自訂的 Web 要求模組新增至應用程式。  
   
  \<configuration>  

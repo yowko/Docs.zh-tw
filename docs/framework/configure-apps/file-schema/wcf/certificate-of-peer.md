@@ -1,15 +1,15 @@
 ---
-title: '&lt;peer&gt; 的 &lt;certificate&gt;'
+title: <certificate> 的 <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: 785c0a6d8f009d8ab643dcc3c90e98b95c24a8f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c70355d35393132c283ba64714419d72792ceb5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707943"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262158"
 ---
-# <a name="ltcertificategt-of-ltpeergt"></a>&lt;peer&gt; 的 &lt;certificate&gt;
+# <a name="certificate-of-peer"></a>\<憑證 > 的\<對等電腦 >
 指定對等所使用的憑證。  
   
  \<system.ServiceModel>  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;udpAnnoucementEndpoint&gt;'
+title: <udpAnnoucementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: ab0e786ec4b21f25682c52fb7609d24e901f6eac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c7c92db479efa9f6fdf2dafc9a6d512df4254e3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582427"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265190"
 ---
-# <a name="ltudpannoucementendpointgt"></a>&lt;udpAnnoucementEndpoint&gt;
+# <a name="udpannoucementendpoint"></a>\<udpAnnoucementEndpoint>
 這個組態項目會定義標準端點，服務會使用此端點透過 UDP 繫結傳送公告訊息。 此端點具備固定合約，而且支援兩種探索版本。 此外，它擁有固定的 UDP 繫結和預設位址值，如 WS-Discovery 規格 (WS-Discovery 2005 年 4 月或 WS-Discovery 1.1 版) 中所指定。 您可以指定傳送及接收公告訊息時所使用的多點傳送位址。  
   
 \<system.ServiceModel>  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;Relativebindforresources>&gt;項目'
+title: <relativeBindForResources> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RelativeBindForResources element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3aa3ca9c9d0e64b2290b503f09b83140b4d029b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51129f9bb3a278d32a5da723dcc339f5e918c0f4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534786"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289805"
 ---
-# <a name="ltrelativebindforresourcesgt-element"></a>&lt;Relativebindforresources>&gt;項目
+# <a name="relativebindforresources-element"></a>\<Relativebindforresources> > 項目
 最佳化附屬組件的探查。  
   
  \<組態 > 項目  

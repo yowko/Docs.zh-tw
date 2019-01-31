@@ -1,5 +1,5 @@
 ---
-title: '&lt;接聽程式&gt;項目&lt;來源&gt;'
+title: <listeners> 的 <source> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 8378d34ffc2fea22fb5d16ed0b727da54ca74503
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 34085d06ec3f3b91e5efdba6220d79032baaea52
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083986"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266771"
 ---
-# <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;接聽程式&gt;項目&lt;來源&gt;
+# <a name="listeners-element-for-source"></a>\<接聽程式 > 項目\<來源 >
 新增或移除接聽程式中的<xref:System.Diagnostics.TraceSource.Listeners%2A>集合<xref:System.Diagnostics.TraceSource>。 接聽程式會將適當的目標，例如記錄檔、 視窗或文字檔追蹤輸出。  
   
  \<configuration>  

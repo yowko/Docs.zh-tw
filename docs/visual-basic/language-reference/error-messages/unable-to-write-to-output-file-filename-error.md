@@ -1,5 +1,5 @@
 ---
-title: 無法寫入輸出檔&#39;&lt;檔名&gt;&#39;:&lt;錯誤&gt;
+title: "無法寫入輸出檔案 '<filename>': <error>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: c82f1e6e4a01af87cc7dce49cfaa78f9be1631db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f7580c53535c28c97213a5a0488c3fc0365c4ac
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572691"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274101"
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>無法寫入輸出檔&#39;&lt;檔名&gt;&#39;:&lt;錯誤&gt;
+# <a name="unable-to-write-to-output-file-filename-error"></a>無法寫入輸出檔 '\<檔案名稱 >':\<錯誤 >
 建立檔案時發生問題。  
   
  無法開啟輸出檔案以供寫入。 檔案 (或包含檔案的資料夾) 可能已由另一個處理序以獨佔方式開啟使用，或是其可能設定了唯讀屬性。  

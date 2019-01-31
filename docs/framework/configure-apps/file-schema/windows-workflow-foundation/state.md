@@ -1,16 +1,16 @@
 ---
-title: '&lt;state&gt;'
+title: <state>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 619414f2-61c2-4427-9977-d05009e343db
-ms.openlocfilehash: 8e381671d9282218a4e5bf0ae979bec79c7cfe78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 38b0522b93c051473d7cdc28ae955cc3b7b58efe
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523047"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287231"
 ---
-# <a name="ltstategt"></a>&lt;state&gt;
+# <a name="state"></a>\<state>
 表示建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。  
   
  如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

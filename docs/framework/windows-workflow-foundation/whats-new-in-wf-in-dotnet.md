@@ -1,15 +1,15 @@
 ---
-title: 什麼&#39;在.NET 4.5 中 Windows Workflow Foundation 的新功能
+title: .NET 4.5 中 Windows Workflow Foundation 的新功能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: cfc8be396e9327ee38ea20e8757993aafe7e2151
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6afdca70dacb97cda4f72d7a6b4114c09d46bee1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513572"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279132"
 ---
-# <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>什麼&#39;在.NET 4.5 中 Windows Workflow Foundation 的新功能
+# <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 中 Windows Workflow Foundation 的新功能
 Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]導入了許多新功能的詳細資訊，例如新的活動、 設計工具的功能，以及工作流程開發模型。 然而，重新裝載之工作流程設計工具並不支援所有在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的新工作流程功能。 如需有關支援的新功能的詳細資訊，請參閱[的新 Workflow Foundation 4.5 功能，在重新裝載工作流程設計工具支援](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。 如需有關移轉.NET 3.0 和.NET 3.5 工作流程應用程式使用最新版本的詳細資訊，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進之新工作流程功能的概觀。  
   
 > [!WARNING]
@@ -23,11 +23,11 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 ##  <a name="BKMK_Versioning"></a> 工作流程版本控制  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引進了若干新版本控制功能，其以新的 <xref:System.Activities.WorkflowIdentity> 類別為根據。 <xref:System.Activities.WorkflowIdentity> 提供工作流程應用程式作者一個機制，用於對持續性的工作流程執行個體與其定義。  
   
--   使用 <xref:System.Activities.WorkflowApplication> 裝載的開發人員可以使用 <xref:System.Activities.WorkflowIdentity>，並存裝載多個版本的工作流程。 使用新的 <xref:System.Activities.WorkflowApplicationInstance> 類別即可載入持續性的工作流程執行個體，然後，主機可以在具現化 <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> 時使用 <xref:System.Activities.WorkflowApplication> 以提供正確的工作流程定義版本。 如需詳細資訊，請參閱 <<c0> [ 使用 WorkflowIdentity 與版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)並[How to： 主應用程式的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
+-   使用 <xref:System.Activities.WorkflowApplication> 裝載的開發人員可以使用 <xref:System.Activities.WorkflowIdentity>，並存裝載多個版本的工作流程。 使用新的 <xref:System.Activities.WorkflowApplicationInstance> 類別即可載入持續性的工作流程執行個體，然後，主機可以在具現化 <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> 時使用 <xref:System.Activities.WorkflowApplication> 以提供正確的工作流程定義版本。 如需詳細資訊，請參閱 <<c0> [ 使用 WorkflowIdentity 與版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)和[How to:裝載的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
   
 -   <xref:System.ServiceModel.WorkflowServiceHost> 現在是多版本主機。 當部署新的工作流程服務版本時，會使用新的服務建立新的執行個體，但現有的執行個體則會使用舊版本完成。 如需詳細資訊，請參閱 < [WorkflowServiceHost 中的並存版本控制](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)。  
   
--   引進動態更新，可提供用於更新持續性工作流程執行個體定義的機制。 如需詳細資訊，請參閱 <<c0> [ 動態更新](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)並[如何： 更新執行的工作流程執行個體的定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。  
+-   引進動態更新，可提供用於更新持續性工作流程執行個體定義的機制。 如需詳細資訊，請參閱 <<c0> [ 動態更新](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)和[How to:更新執行中工作流程執行個體的定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。  
   
 -   提供 SqlWorkflowInstanceStoreSchemaUpgrade.sql 資料庫指令碼，以升級使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 資料庫指令碼建立的持續性資料庫。 這個指令碼可更新 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 持續性資料庫，以支援 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引進的新版本控制功能。 資料庫中持續性的工作流程執行個體會提供版本控制預設值，並可以參與並存執行和動態更新。 如需詳細資訊，請參閱 <<c0> [ 升級.NET Framework 4 持續性資料庫以支援工作流程版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。  
   
@@ -172,7 +172,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
  在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，非活動項目不支援偵錯中斷點，因為它們不是執行單位。 此版本提供一種機制，可在 <xref:System.Activities.Statements.State> 物件中加入中斷點。 在 <xref:System.Activities.Statements.State> 中設定中斷點時，若在排定輸入活動或觸發程序前轉換狀態，就會中斷執行。  
   
 ###  <a name="BKMK_ActivityDelegates"></a> 定義並取用 ActivityDelegate 物件在設計工具  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中的活動使用 <xref:System.Activities.ActivityDelegate> 物件來公開執行點，其中工作流程的其他部分可與工作流程的執行互動，但使用這些執行點通常需要許多程式碼。 在這個版本中，開發人員可以使用工作流程設計工具來定義及取用活動委派。 如需詳細資訊，請參閱 <<c0> [ 如何： 定義和使用工作流程設計工具中的活動委派](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)。  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中的活動使用 <xref:System.Activities.ActivityDelegate> 物件來公開執行點，其中工作流程的其他部分可與工作流程的執行互動，但使用這些執行點通常需要許多程式碼。 在這個版本中，開發人員可以使用工作流程設計工具來定義及取用活動委派。 如需詳細資訊，請參閱[＜How to：定義和使用工作流程設計工具中的活動委派](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)。  
   
 ###  <a name="BKMK_BuildTimeValidation"></a> 建置階段驗證  
  在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，不會將工作流程驗證錯誤計為工作流程專案建置期間的建置錯誤。 這表示，即使有工作流程驗證錯誤，仍可能成功建置工作流程專案。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，工作流程驗證錯誤會導致建置失敗。  
@@ -203,11 +203,11 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
   
 4.  用來建立狀態機器工作流程的活動包括：<xref:System.Activities.Statements.StateMachine>、<xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition>  
   
- 下列螢幕擷取畫面會顯示已完成的狀態機器工作流程，從[入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)步驟[如何： 建立狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)。  
+ 下列螢幕擷取畫面會顯示已完成的狀態機器工作流程，從[入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)步驟[How to:建立狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)。  
   
  ![已完成狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
  如需有關如何建立狀態機器工作流程的詳細資訊，請參閱 <<c0> [ 狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。  
   
 ###  <a name="BKMK_ContractFirst"></a> 合約優先工作流程開發  
- 合約優先工作流程開發工具可讓開發人員應該設計優先，程式碼中的合約，然後按幾下滑鼠，在 Visual Studio 中，自動產生活動範本 」 表示每個作業的工具箱 中。 之後，這些活動可以用於建立工作流程，以實作合約所定義的作業。 工作流程設計工具將會驗證工作流程服務，以確保這些作業都有進行實作且工作流程的簽章與合約簽章相符。 開發人員也可以在工作流程服務與實作合約的集合之間建立關聯。 如需有關合約優先工作流程服務開發的詳細資訊，請參閱[如何： 建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。
+ 合約優先工作流程開發工具可讓開發人員應該設計優先，程式碼中的合約，然後按幾下滑鼠，在 Visual Studio 中，自動產生活動範本 」 表示每個作業的工具箱 中。 之後，這些活動可以用於建立工作流程，以實作合約所定義的作業。 工作流程設計工具將會驗證工作流程服務，以確保這些作業都有進行實作且工作流程的簽章與合約簽章相符。 開發人員也可以在工作流程服務與實作合約的集合之間建立關聯。 如需有關合約優先工作流程服務開發的詳細資訊，請參閱[How to:建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。

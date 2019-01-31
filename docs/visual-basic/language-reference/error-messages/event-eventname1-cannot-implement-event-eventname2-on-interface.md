@@ -1,5 +1,5 @@
 ---
-title: 事件&#39;&lt;事件名稱 1&gt&gt; &#39;無法實作事件&#39; &lt;eventname2&gt; &#39;介面上&#39;&lt;介面&gt;&#39;因為它們的委派類型&#39; &lt;delegate1&gt; &#39;和&#39; &lt;delegate2&gt; &#39;不相符
+title: 事件 '<eventname1>' 無法在介面 '<eventname2>' 上實作事件 '<interface>'，因為它們的委派類型 '<delegate1>' 和 '<delegate2>' 不相符
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31423
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31423
 ms.assetid: 2e754b66-5836-48ff-9697-b9c0d7085f18
-ms.openlocfilehash: 024e260f12d3497d64f26e59521f016ad439ebb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ec3e7bb2f28bf8c4dd38bc71e11193456860021
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638206"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272847"
 ---
-# <a name="event-39lteventname1gt39-cannot-implement-event-39lteventname2gt39-on-interface-39ltinterfacegt39-because-their-delegate-types-39ltdelegate1gt39-and-39ltdelegate2gt39-do-not-match"></a>事件&#39;&lt;事件名稱 1&gt&gt; &#39;無法實作事件&#39; &lt;eventname2&gt; &#39;介面上&#39;&lt;介面&gt;&#39;因為它們的委派類型&#39; &lt;delegate1&gt; &#39;和&#39; &lt;delegate2&gt; &#39;不相符
+# <a name="event-eventname1-cannot-implement-event-eventname2-on-interface-interface-because-their-delegate-types-delegate1-and-delegate2-do-not-match"></a>事件 '\<事件名稱 1&gt >' 無法實作事件'\<eventname2 >' 在介面 '\<介面 >' 因為其委派類型\<delegate1 >' 和'\<delegate2 >' 不相符
 Visual Basic 無法實作事件，因為事件的委派類型與介面中的事件的委派類型不相符。 如果您在介面中定義多個事件，然後嘗試將它們與相同的事件一起實作，則會發生這個錯誤。 只有在使用 `As` 語法宣告所有實作的事件並指定相同的委派類型時，事件才能實作兩個以上的事件。  
   
  **錯誤 ID:** BC31423  

@@ -1,15 +1,15 @@
 ---
-title: '&lt; (小於) (Entity SQL)'
+title: < (小於) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
-ms.openlocfilehash: 0c2185f824cfbe201b4138d0082e3edcf93e6a7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7762696405bbd9aa4637b4e3d91414ad38723e1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598312"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284774"
 ---
-# <a name="lt-less-than-entity-sql"></a>&lt; (小於) (Entity SQL)
+# <a name="-less-than-entity-sql"></a>\< (小於) (Entity SQL)
 比較兩個運算式來判斷左運算式的值是否小於右運算式。  
   
 ## <a name="syntax"></a>語法  

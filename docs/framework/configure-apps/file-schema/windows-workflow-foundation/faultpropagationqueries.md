@@ -1,16 +1,16 @@
 ---
-title: '&lt;faultPropagationQueries&gt;'
+title: <faultPropagationQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 00ff90ae-ebe0-4c85-a93f-61557288d0a3
-ms.openlocfilehash: 546b37279c8ba58f9dd9f07dabacb7af602ff232
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0424c01397a95803b9e8502d90a55d1bd4c3b5e6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610054"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269389"
 ---
-# <a name="ltfaultpropagationqueriesgt"></a>&lt;faultPropagationQueries&gt;
+# <a name="faultpropagationqueries"></a>\<faultPropagationQueries>
 代表查詢的集合，這些查詢可用來追蹤活動內發生之錯誤的處理。  每當 FaultHandler 處理錯誤時，都會發生這個事件。 您應該使用這種查詢來追蹤活動中發生的錯誤處理。 追蹤參與者必須要具備查詢，才能訂閱錯誤傳播記錄。  
   
  如需有關追蹤設定檔查詢的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  

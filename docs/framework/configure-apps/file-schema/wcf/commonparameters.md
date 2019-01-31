@@ -1,15 +1,15 @@
 ---
-title: '&lt;commonParameters&gt;'
+title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: 2b8a6e5ba670657afda6fd8c64024a330650a9b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39a9c5583e5d8972dc4051a6cad13249821d8fb9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626832"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278613"
 ---
-# <a name="ltcommonparametersgt"></a>&lt;commonParameters&gt;
+# <a name="commonparameters"></a>\<commonParameters>
 代表參數集合，這些參數可跨多項服務全域使用。 這個集合通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。  
   
  \<system.ServiceModel>  

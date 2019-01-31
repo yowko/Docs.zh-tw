@@ -1,5 +1,5 @@
 ---
-title: 類型的值&#39;類型 1&#39;無法轉換成&#39;type2&#39;
+title: 類型 'type1' 的值無法轉換成 'type2'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31194
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31194
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
-ms.openlocfilehash: 657e0feb675e15b9ece00d40c3d1ebe932a29099
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb30d63e83452e75f353c44a9d0445c7dbb1013a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568281"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287504"
 ---
-# <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a>類型的值&#39;類型 1&#39;無法轉換成&#39;type2&#39;
+# <a name="value-of-type-type1-cannot-be-converted-to-type2"></a>類型 'type1' 的值無法轉換成 'type2'
 類型 'type1' 的值無法轉換成 'type2'。 您可以使用 'Value' 屬性，若要取得的第一個元素的字串值 '\<parentElement >'。  
   
  已嘗試將 XML 常值隱含轉換成特定類型。 您無法將 XML 常值隱含轉換成指定的類型。  

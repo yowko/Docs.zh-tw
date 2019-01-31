@@ -1,5 +1,5 @@
 ---
-title: '&lt;providerOption&gt;項目'
+title: <providerOption> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - provideroption
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: da3dc807d3d30b6b45e34ccf7d328344ca580327
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 03ad235c17f4e777c974222f3423cc0e0bfaefa4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084168"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283292"
 ---
-# <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt;項目
+# <a name="provideroption-element"></a>\<providerOption > 項目
 指定的語言提供者的編譯器版本屬性。  
   
  \<組態項目 >  

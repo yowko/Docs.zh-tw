@@ -1,5 +1,5 @@
 ---
-title: '&lt;接聽程式&gt;項目&lt;追蹤&gt;'
+title: <listeners> 的 <trace> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: d98c286a49aa6439b6b82b5982a2ea4690c98b43
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: cc6ba06127703fbda5d9edf8211b4b206127cbda
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083817"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271666"
 ---
-# <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;接聽程式&gt;項目&lt;追蹤&gt;
+# <a name="listeners-element-for-trace"></a>\<接聽程式 > 項目\<追蹤 >
 指定的接聽程式會收集、 存放區，並將訊息路由。 接聽程式將追蹤輸出導向至適當的目標。  
   
  \<組態 > 項目  

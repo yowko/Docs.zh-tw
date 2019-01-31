@@ -1,19 +1,19 @@
 ---
-title: '&lt;schemaImporterExtensions&gt; 元素'
+title: <schemaImporterExtensions> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: dbe85ea817a597db84ddad530d67b1c2b7953f75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43f8439708c73e8e5241a923360caf549bf09d8b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535358"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265297"
 ---
-# <a name="ltschemaimporterextensionsgt-element"></a>&lt;schemaImporterExtensions&gt; 元素
+# <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions > 項目
 包含 <xref:System.Xml.Serialization.XmlSchemaImporter> 用來對應 XSD 型別至 .NET Framework 型別的型別。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)。  
   
 ## <a name="syntax"></a>語法  

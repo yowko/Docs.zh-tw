@@ -1,15 +1,15 @@
 ---
-title: '&lt;移除&gt;schemeSettings （Uri 設定） 的項目'
+title: schemeSettings 的 <remove> 項目 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: 2a2ef83ac57c1978a0022a9c989aa03eeae8a71f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd137c86d7373947f57364c13eb3875cba46b269
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552823"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262621"
 ---
-# <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>&lt;移除&gt;schemeSettings （Uri 設定） 的項目
+# <a name="remove-element-for-schemesettings-uri-settings"></a>\<移除 > schemeSettings （Uri 設定） 的項目
 移除結構描述設定的配置名稱。  
   
  \<configuration>  

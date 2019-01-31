@@ -1,15 +1,15 @@
 ---
-title: '&lt;idn&gt;項目 （Uri 設定）'
+title: <idn> 項目 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 21950beeefb23e81066623534774148e1f5d92ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6abbc70e16a6c9ff8e4a7b52df7a7c3d74c7498a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580731"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288908"
 ---
-# <a name="ltidngt-element-uri-settings"></a>&lt;idn&gt;項目 （Uri 設定）
+# <a name="idn-element-uri-settings"></a>\<idn > 項目 （Uri 設定）
 指定是否國際化網域名稱 (IDN) 剖析套用至網域名稱。  
   
 ## <a name="schema-hierarchy"></a>結構描述階層架構  

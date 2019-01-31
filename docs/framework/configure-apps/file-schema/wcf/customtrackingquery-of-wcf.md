@@ -1,27 +1,27 @@
 ---
-title: WCF 的 &lt;customTrackingQuery&gt;
+title: <customTrackingQuery> WCF 的
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: 234703e677f838dcdccdf857ba38b8729d25a488
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0a5e7c034ce1ef12a8d7d5b1753e2e441e48e293
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146377"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279483"
 ---
-# <a name="ltcustomtrackingquerygt-of-wcf"></a>WCF 的 &lt;customTrackingQuery&gt;
+# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery > 的 WCF
 
 表示用來追蹤您在程式碼活動中定義的事件的查詢。 追蹤參與者必須要具備查詢，才能訂閱自訂追蹤記錄。
 
 如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<追蹤 >  
+\<tracking>  
 \<設定檔 >  
 \<trackingProfile>  
-\<工作流程 >  
-\<customTrackingQueries >  
-\<customTrackingQuery >  
+\<workflow>  
+\<customTrackingQueries>  
+\<customTrackingQuery>  
   
 ## <a name="syntax"></a>語法  
   

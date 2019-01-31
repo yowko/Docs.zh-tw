@@ -1,15 +1,15 @@
 ---
-title: '&lt;resolver&gt;'
+title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: 2a3e0de2bb5d2ed022f53aa5e498f338eaf56ca8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57fa67c9536d35775694c56c9053cffa4dea29ea
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578594"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257448"
 ---
-# <a name="ltresolvergt"></a>&lt;resolver&gt;
+# <a name="resolver"></a>\<resolver>
 指定對等解析程式，用於將對等網狀結構 ID 解析成一組對等節點位址，這組位址可表示參與網狀結構的數個節點。  
   
  \<system.ServiceModel>  

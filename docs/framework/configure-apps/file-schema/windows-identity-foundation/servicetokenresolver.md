@@ -1,23 +1,23 @@
 ---
-title: '&lt;serviceTokenResolver&gt;'
+title: <serviceTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
-ms.openlocfilehash: d4b64e2c88e153834b7cf5a83bd6258b6dfd471f
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 1143717882652fc8a03947327b5f1ea89dde7373
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347499"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267426"
 ---
-# <a name="ltservicetokenresolvergt"></a>&lt;serviceTokenResolver&gt;
+# <a name="servicetokenresolver"></a>\<serviceTokenResolver>
 註冊的服務權杖解析程式由權杖處理常式集合中的處理常式。 服務權杖解析程式用來解析上傳入的權杖和訊息的加密語彙基元。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<Securitytokenhandlerconfiguration> >  
-\<serviceTokenResolver >  
+\<securityTokenHandlerConfiguration>  
+\<serviceTokenResolver>  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ ms.locfileid: "49347499"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|類型|指定服務權杖解析程式的類型。 任一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類型或衍生自類型<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類別。 如需有關如何指定`type`屬性，請參閱 [自訂型別參考]。 必要。|  
+|類型|指定服務權杖解析程式的類型。 任一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類型或衍生自類型<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類別。 如需有關如何指定`type`屬性，請參閱 [自訂型別參考]。 必要項。|  
   
 ### <a name="child-elements"></a>子元素  
  無  
@@ -50,7 +50,7 @@ ms.locfileid: "49347499"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Securitytokenhandlerconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
   
 ## <a name="remarks"></a>備註  
  若要解決上傳入的權杖和訊息的加密語彙基元可用服務權杖解析程式。 它用來擷取應該用來解密傳入權杖的金鑰。 您必須指定`type`屬性。 指定的型別可以是<xref:System.IdentityModel.Selectors.SecurityTokenResolver>或自訂的型別衍生自<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類別。  

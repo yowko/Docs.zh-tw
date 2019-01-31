@@ -1,15 +1,15 @@
 ---
-title: '&lt;baseAddresses&gt; 的 &lt;add&gt;'
+title: <add> 的 <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 1bd7426f-5f4f-43fc-b8e9-de842219aa32
-ms.openlocfilehash: 31edf570a7374a4b4fe31760d35ec196ecfcb3c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d66be51fa2626283063c250905efdb7d47babfb0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553564"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279938"
 ---
-# <a name="ltaddgt-of-ltbaseaddressesgt"></a>&lt;baseAddresses&gt; 的 &lt;add&gt;
+# <a name="add-of-baseaddresses"></a>\<add> of \<baseAddresses>
 表示組態項目，其中指定由服務主機使用的基底位址。  
   
  \<system.ServiceModel>  
