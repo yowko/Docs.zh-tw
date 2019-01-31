@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620080"
 ---
 # <a name="selecting-a-collection-class"></a>選取集合類別
 請務必謹慎選擇您的集合類別。 使用錯誤的類型可能會限制您使用集合。 一般而言，除非您特別以 .NET Framework 1.1 版為目標，否則請避免使用 <xref:System.Collections> 命名空間中的類型。 由於泛型和並行版本的集合類型較安全，並且提供其他增強功能，因此會優先使用這些版本。  
@@ -81,7 +81,7 @@ ms.locfileid: "48836507"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Collections>  
-- <xref:System.Collections.Specialized>  
-- <xref:System.Collections.Generic>  
+- <xref:System.Collections>
+- <xref:System.Collections.Specialized>
+- <xref:System.Collections.Generic>
 - [安全執行緒集合](../../../docs/standard/collections/thread-safe/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e60aae158d822a3cfba93f6d714d83bcd7aa0e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600761"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)
 <xref:System.IO> 命名空間中的類別是用來處理磁碟機、檔案和目錄。  
@@ -58,10 +58,10 @@ ms.locfileid: "53155021"
 |以|請參閱|
 |---|---|   
 |讀取和寫入資料檔案|[如何：讀取和寫入新建立的資料檔案](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|讀取檔案中的文字|[如何：從檔案讀取文字](../../../../standard/io/how-to-read-text-from-a-file.md)|  
+|讀取檔案中的文字|[如何：讀取檔案中的文字](../../../../standard/io/how-to-read-text-from-a-file.md)|  
 |將文字寫入檔案中|[如何：將文字寫入檔案](../../../../standard/io/how-to-write-text-to-a-file.md)|  
-|讀取字串中的字元|[如何：從字串中讀取字元](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
-|將字元寫入字串中|[如何：將字元寫入至字串](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
+|讀取字串中的字元|[如何：讀取字串中的字元](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
+|將字元寫入字串中|[如何：將字元寫入字串](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
 |加密資料|[加密資料](../../../../standard/security/encrypting-data.md)|  
 |解密資料|[解密資料](../../../../standard/security/decrypting-data.md)|  
   
@@ -87,19 +87,19 @@ ms.locfileid: "53155021"
   
 |以|請參閱|
 |---|---|  
-|建立隔離存放區|[操作說明：取得隔離儲存區的存放區](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
-|列舉隔離存放區|[操作說明：列舉隔離儲存區的存放區](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|建立隔離存放區|[如何：取得隔離儲存區的存放區](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|列舉隔離存放區|[如何：列舉隔離儲存區的存放區](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
 |刪除隔離存放區|[如何：刪除隔離儲存區中的存放區](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
-|在隔離儲存區中建立檔案或目錄|[操作說明：在隔離儲存區中建立檔案和目錄](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
-|在隔離儲存區中尋找檔案|[操作說明：尋找隔離儲存區中的現有檔案和目錄](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
-|讀取或寫入隔離儲存區中的檔案|[操作說明：讀取和寫入隔離儲存區中的檔案](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
-|刪除隔離儲存區中的檔案或目錄|[操作說明：刪除隔離儲存區中的檔案和目錄](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
+|在隔離儲存區中建立檔案或目錄|[如何：在隔離儲存區中建立檔案和目錄](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|在隔離儲存區中尋找檔案|[如何：尋找隔離儲存區中的現有檔案和目錄](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|讀取或寫入隔離儲存區中的檔案|[如何：讀取和寫入隔離儲存區中的檔案](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|刪除隔離儲存區中的檔案或目錄|[如何：刪除隔離儲存區中的檔案和目錄](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>檔案事件  
  <xref:System.IO.FileSystemWatcher> 元件可讓您監看系統或任何具有網路存取之電腦上的檔案和目錄變更。 例如，如果修改檔案，您可能要將已進行變更的警示傳送給使用者。 發生變更時，會引發一或多個事件、將其儲存在緩衝區中，並且交給 <xref:System.IO.FileSystemWatcher> 元件進行處理。  
   
-## <a name="see-also"></a>請參閱  
- [撰寫資料流](../../../../standard/io/composing-streams.md)  
- [檔案和資料流 I/O](../../../../standard/io/index.md)  
- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
- [用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>另請參閱
+- [撰寫資料流](../../../../standard/io/composing-streams.md)
+- [檔案和資料流 I/O](../../../../standard/io/index.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

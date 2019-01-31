@@ -1,15 +1,15 @@
 ---
-title: 如何：從 XML 檔案讀取物件資料 (C#)
+title: HOW TO：從 XML 檔案讀取物件資料 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 7c3bad56c6a0bee51262586aea4ce97ff0491f24
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33e4395c2be421385948d256a989d06ac215c9c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583479"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a>如何：從 XML 檔案讀取物件資料 (C#)
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a>HOW TO：從 XML 檔案讀取物件資料 (C#)
 此範例會讀取先前使用 <xref:System.Xml.Serialization.XmlSerializer> 類別來寫入 XML 檔案的物件資料。  
   
 ## <a name="example"></a>範例  
@@ -43,7 +43,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 以內含序列化資料之檔案的名稱取代檔案名稱 "c:\temp\SerializationOverview.xml"。 如需序列化資料的詳細資訊，請參閱[如何：將物件資料寫入 XML 檔案 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)。  
+ 以內含序列化資料之檔案的名稱取代檔案名稱 "c:\temp\SerializationOverview.xml"。 如需將資料序列化的詳細資訊，請參閱[如何：將物件資料寫入 XML 檔案 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)。  
   
  此類別必須有不具參數的公用建構函式。  
   
@@ -61,9 +61,9 @@ public void ReadXML()
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  永遠會驗證輸入，而且絕不會還原序列化來自未受信任來源的資料。 重新建立的物件會以還原序列化該物件之程式碼的權限，在本機電腦上執行。 在應用程式中使用這些資料之前，請先驗證所有輸入值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.IO.StreamWriter>  
-- [如何：將物件資料寫入到 XML 檔案 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
-- [序列化 (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+- <xref:System.IO.StreamWriter>
+- [如何：將物件資料寫入 XML 檔案 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [序列化 (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
 - [C# 程式設計指南](../../../../csharp/programming-guide/index.md)

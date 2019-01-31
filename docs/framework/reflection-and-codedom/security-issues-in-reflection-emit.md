@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57db77b64ddcbe282fed035b52bb122901383ca4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40db78b8b09b90ab5e11dcc61dc042af1981e827
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701400"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反映發出中的安全性問題
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供三種發出 Microsoft 中繼語言 (MSIL) 的方式，每種都有它自己的安全性問題：  
@@ -68,7 +68,7 @@ ms.locfileid: "33398868"
 > [!NOTE]
 >  就觀念上而言，會在方法建構期間提出要求。 也就是當發出每個 MSIL 指示時，可提出要求。 在目前的實作中，當 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> 方法被呼叫，或是當 Just-In-Time (JIT) 編譯器被叫用時，如果此方法被叫用卻沒有呼叫 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>，就會提出所有的要求。  
   
- 如果應用程式定義域允許，則匿名裝載的動態方法可以跳過 JIT 可見度檢查，且受下列限制：由匿名裝載的動態方法存取的非公用類型和成員必須位於組件中，且該組件的授權集與發出呼叫堆疊的授權集相等，或是為其子集。 如果應用程式定義域對 <xref:System.Security.Permissions.ReflectionPermission> 授與 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標，則會啟用這項跳過 JIT 可見度檢查的限制功能。  
+ 如果應用程式定義域允許，則匿名裝載的動態方法可以跳過 JIT 可見度檢查，且受下列限制：由匿名裝載動態方法存取的非公用類型和成員必須位於組件中，且該組件授權集與發出呼叫堆疊的授權集相等，或是為其子集。 如果應用程式定義域對 <xref:System.Security.Permissions.ReflectionPermission> 授與 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標，則會啟用這項跳過 JIT 可見度檢查的限制功能。  
   
 -   如果您的方法只使用公用類型和成員，則在建構期間不需要權限。  
   
@@ -153,6 +153,6 @@ ms.locfileid: "33398868"
 ### <a name="obtaining-information-on-types-and-members"></a>取得類型和成員資訊  
  從 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 開始，取得非公用類型和成員的相關資訊不需要權限。 反映會用來取得發出動態方法需要的資訊。 例如，<xref:System.Reflection.MethodInfo> 物件會用來發出方法呼叫。 舊版的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 如需詳細資訊，請參閱[反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)。  
   
-## <a name="see-also"></a>請參閱  
- [反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)  
- [發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)
+## <a name="see-also"></a>另請參閱
+- [反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+- [發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

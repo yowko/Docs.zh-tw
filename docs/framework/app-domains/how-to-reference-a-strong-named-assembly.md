@@ -1,5 +1,5 @@
 ---
-title: 如何：參考強式名稱簽署組件
+title: HOW TO：參考以強式名稱命名的組件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18844a9e8eff574d061b044bf88bc7857ce8033e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 520bce0dbc9f3e9ade9d9fbcb1529a5433b0d87c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596068"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>如何：參考強式名稱簽署組件
+# <a name="how-to-reference-a-strong-named-assembly"></a>HOW TO：參考以強式名稱命名的組件
 參考強式名稱組件中類型或資源的程序通常十分簡單。 您可以在編譯時間 (早期繫結) 或執行階段進行參考。  
   
  當您對編譯器指出您的組件明確參考另一個組件時，就會發生編譯時間參考。 當您使用編譯時間參考時，編譯器會自動取得目標強式名稱組件的公開金鑰，並將它放在所編譯組件的組件參考中。  
@@ -48,7 +48,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
      \<組件名稱>**,** \<版本號碼>**,** \<文化特性>**,** \<公開金鑰權杖>  
   
-     例如:   
+     例如：  
   
     ```  
     myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
@@ -70,5 +70,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  **sn -tp \<** *公開金鑰檔* **>**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 - [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

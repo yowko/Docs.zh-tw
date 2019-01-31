@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4d3bf7db928f926b802c08ee5e61edf86055b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 32b212f336e622719d9979d46ea885deb919c51c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635022"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中過時的類型
 <a name="introduction"></a> 本文中的表格列出 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中過時的類型，並依組件分組。 使用下列連結查看每個組件中過時的型別和建議的替代方案。 因為這些型別已經過時，其所有成員也已經過時。 如需 .NET Framework 類別庫中其他過時成員的清單，請參閱[過時的成員](../../../docs/framework/whats-new/obsolete-members.md)。
@@ -84,7 +84,7 @@ ms.locfileid: "47196745"
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|請改用 <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType>。|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|<xref:System.Configuration.Assemblies.AssemblyHash> 類別已被取代。|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。 改為在 System.Runtime.CompilerServices 命名空間中使用 <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> 類別。|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|有替代的 API 可用：請改為發出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自訂屬性。|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|有可用的替代 API ：請改為發出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自訂屬性。|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>。|
@@ -140,7 +140,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="Core"></a>
-### <a name="assembly-systemcoredll"></a>組件：System.Core.dll
+### <a name="assembly-systemcoredll"></a>組件︰System.Core.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -149,7 +149,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="data"></a>
-### <a name="assembly-systemdatadll"></a>組件：System.Data.dll
+### <a name="assembly-systemdatadll"></a>組件︰System.Data.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -161,7 +161,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="oracleclient"></a>
-### <a name="assembly-systemdataoracleclientdll"></a>組件：System.Data.OracleClient.dll
+### <a name="assembly-systemdataoracleclientdll"></a>組件︰System.Data.OracleClient.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -177,7 +177,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="design"></a>
-### <a name="assembly-systemdesigndll"></a>組件：System.Design.dll
+### <a name="assembly-systemdesigndll"></a>組件︰System.Design.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -199,7 +199,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="system"></a>
-### <a name="assembly-systemdll"></a>組件：System.dll
+### <a name="assembly-systemdll"></a>組件︰System.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -214,7 +214,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="enterpriseservices"></a>
-### <a name="assembly-systementerpriseservicesdll"></a>組件：System.EnterpriseServices.dll
+### <a name="assembly-systementerpriseservicesdll"></a>組件︰System.EnterpriseServices.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -223,7 +223,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="net"></a>
-### <a name="assembly-systemnetdll"></a>組件：System.Net.dll
+### <a name="assembly-systemnetdll"></a>組件︰System.Net.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -240,7 +240,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="servicemodel"></a>
-### <a name="assembly-systemservicemodeldll"></a>組件：System.ServiceModel.dll
+### <a name="assembly-systemservicemodeldll"></a>組件︰System.ServiceModel.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -256,7 +256,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="web"></a>
-### <a name="assembly-systemwebdll"></a>組件：System.Web.dll
+### <a name="assembly-systemwebdll"></a>組件︰System.Web.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -277,7 +277,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="mobile"></a>
-### <a name="assembly-systemwebmobiledll"></a>組件：System.Web.Mobile.dll
+### <a name="assembly-systemwebmobiledll"></a>組件︰System.Web.Mobile.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -477,7 +477,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="workflow_activities"></a>
-### <a name="assembly-systemworkflowactivitiesdll"></a>組件：System.Workflow.Activities.dll
+### <a name="assembly-systemworkflowactivitiesdll"></a>組件︰System.Workflow.Activities.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -490,7 +490,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="workflow_componentmodel"></a>
-### <a name="assembly-systemworkflowcomponentmodeldll"></a>組件：System.Workflow.ComponentModel.dll
+### <a name="assembly-systemworkflowcomponentmodeldll"></a>組件︰System.Workflow.ComponentModel.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -508,7 +508,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="workflow_runtime"></a>
-### <a name="assembly-systemworkflowruntimedll"></a>組件：System.Workflow.Runtime.dll
+### <a name="assembly-systemworkflowruntimedll"></a>組件︰System.Workflow.Runtime.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -523,7 +523,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="workflowservices"></a>
-### <a name="assembly-systemworkflowservicesdll"></a>組件：System.WorkflowServices.dll
+### <a name="assembly-systemworkflowservicesdll"></a>組件︰System.WorkflowServices.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -552,7 +552,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="xaml"></a>
-### <a name="assembly-systemxamldll"></a>組件：System.Xaml.dll
+### <a name="assembly-systemxamldll"></a>組件︰System.Xaml.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -561,7 +561,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="xml"></a>
-### <a name="assembly-systemxmldll"></a>組件：System.Xml.dll
+### <a name="assembly-systemxmldll"></a>組件︰System.Xml.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -574,7 +574,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="WindowsBase"></a>
-### <a name="assembly-windowsbasedll"></a>組件：WindowsBase.dll
+### <a name="assembly-windowsbasedll"></a>組件︰WindowsBase.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -587,13 +587,13 @@ ms.locfileid: "47196745"
  下列章節將列出 Microsoft 組件中的過時型別。 這些組件是特殊用途的組件，例如以個別語言 (例如 Microsoft.JScript.dll 或 Microsoft.VisualC.dll) 為目標的組件。
 
 <a name="IEHost"></a>
-### <a name="assembly-iehostdll-and-ieexecexe"></a>組件：IEHost.dll 和 IEExec.exe
+### <a name="assembly-iehostdll-and-ieexecexe"></a>組件︰IEHost.dll 和 IEExec.exe
  IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有型別和成員都已經過時，而且 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中不再支援。 這些組件之前是用來裝載 Windows Form 控制項以及在 Internet Explorer 中執行可執行檔。 建議的替代方案包括 ClickOnce、XAML 瀏覽器應用程式 (XBAP) 和 Microsoft Silverlight。
 
  [回到頁首](#introduction)
 
 <a name="Engine"></a>
-### <a name="assembly-microsoftbuildenginedll"></a>組件：Microsoft.Build.Engine.dll
+### <a name="assembly-microsoftbuildenginedll"></a>組件︰Microsoft.Build.Engine.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -603,7 +603,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="jscript"></a>
-### <a name="assembly-microsoftjscriptdll"></a>組件：Microsoft.JScript.dll
+### <a name="assembly-microsoftjscriptdll"></a>組件︰Microsoft.JScript.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -629,7 +629,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="VBCompat"></a>
-### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>組件：Microsoft.VisualBasic.Compatibility.dll
+### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>組件︰Microsoft.VisualBasic.Compatibility.dll
   如需從 Visual Basic 6 移轉的資訊，請參閱 [Visual Basic 6.0 資源中心](https://msdn.microsoft.com/library/windows/desktop/ms788229)。
 |類型|訊息|
 |----------|-------------|
@@ -704,7 +704,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="VBCompatData"></a>
-### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>組件：Microsoft.VisualBasic.Compatibility.Data.dll
+### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>組件︰Microsoft.VisualBasic.Compatibility.Data.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -761,7 +761,7 @@ ms.locfileid: "47196745"
  [回到頁首](#introduction)
 
 <a name="visualc"></a>
-### <a name="assembly-microsoftvisualcdll"></a>組件：Microsoft.VisualC.dll
+### <a name="assembly-microsoftvisualcdll"></a>組件︰Microsoft.VisualC.dll
 
 |類型|訊息|
 |----------|-------------|
@@ -776,5 +776,6 @@ ms.locfileid: "47196745"
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll 這個組件已經過時，其存在目的只是為了提供回溯相容性。|
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll 這個組件已經過時，其存在目的只是為了提供回溯相容性。|
 
-## <a name="see-also"></a>請參閱
- [類別庫中的過時功能](../../../docs/framework/whats-new/whats-obsolete.md) [過時的成員](../../../docs/framework/whats-new/obsolete-members.md)
+## <a name="see-also"></a>另請參閱
+- [類別庫中已淘汰的功能](../../../docs/framework/whats-new/whats-obsolete.md)
+- [過時的成員](../../../docs/framework/whats-new/obsolete-members.md)

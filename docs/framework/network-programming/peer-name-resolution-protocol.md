@@ -2,12 +2,12 @@
 title: 對等名稱解析通訊協定
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9f1850ff3a42526de988df032c39aaa916987d25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662656"
 ---
 # <a name="peer-name-resolution-protocol"></a>對等名稱解析通訊協定
 在對等環境中，對等使用特定名稱解析系統，才能從名稱或其他類型的識別碼解析彼此的網路位置 (位址、通訊協定和連接埠)。 過去，網域名稱系統 (DNS) 內本來就是暫時性連線以及其他缺點，而讓對等名稱解析變得複雜。  
@@ -42,12 +42,12 @@ ms.locfileid: "53129153"
   
 -   <xref:System.Net.PeerToPeer.PeerNameRecord>：定義 PNRP 雲端中包含對等註冊資訊的記錄，而對等包含可連絡對等的網路端點。  
   
--   <xref:System.Net.PeerToPeer.PeerNameRegistration>：定義對等名稱的註冊處理序，包含啟動和停止對等名稱註冊的方法。  
+-   <xref:System.Net.PeerToPeer.PeerNameRegistration>：定義對等名稱的註冊處理序，包括啟動和停止對等名稱註冊的方法。  
   
--   <xref:System.Net.PeerToPeer.PeerNameResolver>：定義將對等名稱解析成其網路端點的處理序，同時包含解析的同步和非同步方法。  
+-   <xref:System.Net.PeerToPeer.PeerNameResolver>：定義將對等名稱解析成其網路端點的處理序，包括用於解析的同步和非同步方法。  
   
-## <a name="see-also"></a>另請參閱  
-- <xref:System.ServiceModel.PeerResolvers>  
-- <xref:System.Net.PeerToPeer>  
+## <a name="see-also"></a>另請參閱
+- <xref:System.ServiceModel.PeerResolvers>
+- <xref:System.Net.PeerToPeer>
 - [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)
 - [PeerToPeer 技術範例](https://go.microsoft.com/fwlink/?LinkID=179571)

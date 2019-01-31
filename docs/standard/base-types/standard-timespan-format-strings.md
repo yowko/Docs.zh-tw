@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52da538ba9cf348062905b66a87d13db82a214a0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 15c357533c9f25a2f29da9a9b5cab185712f02f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634918"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 格式字串
 <a name="Top"></a> 標準 <xref:System.TimeSpan> 格式字串會使用單一格式規範，來定義從格式化作業所產生之 <xref:System.TimeSpan> 值的文字表示。 任何包含一個以上字元 (包含空格) 的格式字串，都會解譯為自訂 <xref:System.TimeSpan> 格式字串。 如需詳細資訊，請參閱[自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
@@ -41,7 +41,7 @@ ms.locfileid: "44085258"
   
 <a name="top"></a>下表列出標準時間間隔格式規範。  
   
-|格式規範|名稱|描述|範例|  
+|格式規範|名稱|說明|範例|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|常數 (非變異) 格式|這個規範不區分文化特性。 它採用 `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]` 格式<br /><br /> \ ("t" 與 "T" 格式字串會產生相同的結果)。<br /><br /> 詳細資訊：[常數 ("c") 格式規範](#Constant)。|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|一般短格式|這個規範只會輸出需要的內容。 它會區分文化特性，並採用 `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]` 格式。<br /><br /> 詳細資訊：[一般短 ("g") 格式規範](#GeneralShort)。|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:500.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:500.599 (fr-FR)|  
@@ -55,7 +55,7 @@ ms.locfileid: "44085258"
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 句號 (.) 和冒號 (:) 是常值的符號。 下表說明其餘項目。  
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
 |*d*|選擇性的天數，沒有前置的零。|  
@@ -64,7 +64,7 @@ ms.locfileid: "44085258"
 |*ss*|秒數，範圍從 "0" 到 "59"。|  
 |*fffffff*|秒的選擇性小數部分。  其值的範圍可從 "0000001" (一個刻度或一秒的千萬分之一) 到 "9999999" (一秒的千萬分之 9,999,999，也就是一秒減一個刻度)。|  
   
- 與 "g" 和 "G" 格式規範不同，"c" 的格式規範不區分文化特性。 它會產生 <xref:System.TimeSpan> 值的字串表示，而該值是非變異值，且對於 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 之前的所有舊版 .NET Framework 皆通用。 "c" 是預設的 <xref:System.TimeSpan> 格式字串；<xref:System.TimeSpan.ToString?displayProperty=nameWithType> 方法使用 "c" 格式字串來將時間間隔值格式化。  
+ 與 "g" 和 "G" 格式規範不同，"c" 格式規範不區分文化特性。 它會產生 <xref:System.TimeSpan> 值的字串表示，而該值是非變異值，且對於 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 之前的所有舊版 .NET Framework 皆通用。 "c" 是預設的 <xref:System.TimeSpan> 格式字串；<xref:System.TimeSpan.ToString?displayProperty=nameWithType> 方法使用 "c" 格式字串來將時間間隔值格式化。  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> 也支援 "t" 和 "T" 標準格式字串，它們的行為與 "c" 標準格式字串相同。  
@@ -84,7 +84,7 @@ ms.locfileid: "44085258"
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 冒號 (:) 是常值符號。 下表說明其餘項目。  
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
 |*d*|選擇性的天數，沒有前置的零。|  
@@ -94,7 +94,7 @@ ms.locfileid: "44085258"
 |*.*|小數的秒數分隔符號。 它相當於指定之文化特性的 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 屬性，且不會覆寫使用者。|  
 |*FFFFFFF*|小數的秒數。 盡可能顯示最少的數字。|  
   
- 如同 "G" 格式規範，"g" 格式規範已經過當地語系化。 它的小數秒數分隔符號取決於目前的文化特性或指定之文化特性的 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 屬性。  
+ 和 "G" 格式規範一樣，"g" 格式規範已經過當地語系化。 它的小數秒數分隔符號取決於目前的文化特性或指定之文化特性的 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 屬性。  
   
  下列範例會呈現兩個 <xref:System.TimeSpan> 物件，用以執行算術運算，並顯示結果。 在每個案例中，都會使用複合格式化，以 "g" 格式規範顯示 <xref:System.TimeSpan> 值。 此外，它會使用目前的系統文化特性 (在此案例中是英文-美國或 en-US) 和法文-法國 (fr-FR) 文化特性的格式化慣例，來格式化 <xref:System.TimeSpan> 值。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "44085258"
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 冒號 (:) 是常值符號。 下表說明其餘項目。  
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
 |*d*|天數，沒有前置的零。|  
@@ -132,6 +132,6 @@ ms.locfileid: "44085258"
   
 ## <a name="see-also"></a>另請參閱
 
-- [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
-- [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [格式化類型](../../../docs/standard/base-types/formatting-types.md)
+- [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [剖析字串](../../../docs/standard/base-types/parsing-strings.md)

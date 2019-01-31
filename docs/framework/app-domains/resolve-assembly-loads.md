@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdd610ade931bedc9ee387b65b18efd1909ef58b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a93052cba4693e63b3cb702a5ab8f6e15a8d8dec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684485"
 ---
 # <a name="resolving-assembly-loads"></a>解析組件載入
 .NET Framework 提供需要更能控制組件載入之應用程式的 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。 藉由處理這個事件，您的應用程式可以將組件從一般探查路徑外部載入到載入內容、選取要載入的數個組件版本、發出動態組件，並傳回它，以此類推。 本主題提供處理 <xref:System.AppDomain.AssemblyResolve> 事件的指引。  
@@ -72,7 +72,7 @@ ms.locfileid: "50202207"
  處理 <xref:System.AppDomain.AssemblyResolve> 事件的主要規則是您不應該嘗試傳回無法辨識的組件。 當您撰寫處理常式時，應該知道哪些組件可能會引發此事件。 針對其他組件，您的處理常式應該傳回 Null。  
   
 > [!IMPORTANT]
->  從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，會針對附屬組件引發 <xref:System.AppDomain.AssemblyResolve> 事件。 如果處理常式嘗試解析所有組件載入要求，則這項變更會影響針對舊版 .NET Framework 所撰寫的事件處理常式。 略過無法辨識之組件的事件處理常式不會受到這項變更的影響：它們會傳回 Null，並遵循正常後援機制。  
+>  從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，會針對附屬組件引發 <xref:System.AppDomain.AssemblyResolve> 事件。 如果處理常式嘗試解析所有組件載入要求，則這項變更會影響針對舊版 .NET Framework 所撰寫的事件處理常式。 略過無法辨識組件的事件處理常式不會受到這項變更影響：它們會傳回 Null，並遵循正常後援機制。  
   
  載入組件時，事件處理常式不得使用任何 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法多載，而此方法多載可以遞迴引發 <xref:System.AppDomain.AssemblyResolve> 事件，因為這可能會導致堆疊溢位。 (請參閱本主題稍早所提供的清單)。即使您提供載入要求的例外狀況處理，也會發生這種情況，因為在傳回所有事件處理常式之前不會擲回任何例外狀況。 因此，如果找不到 `MyAssembly`，則下列程式碼會導致堆疊溢位：  
   
@@ -80,6 +80,6 @@ ms.locfileid: "50202207"
  [!code-csharp[AssemblyResolveRecursive#1](../../../samples/snippets/csharp/VS_Snippets_CLR/assemblyresolverecursive/cs/example.cs#1)]
  [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
-- [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>另請參閱
+- [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [使用應用程式定義域](../../../docs/framework/app-domains/use.md)

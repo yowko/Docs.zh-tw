@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 63e1c55aa3aad1923ac34070784e8b4de7251a7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592753"
 ---
 # <a name="task-based-asynchronous-programming"></a>以工作為基礎的非同步程式設計
 工作平行程式庫 (TPL) 是以「工作」(Task) 的概念為基礎，工作表示非同步作業。 在某些方面，工作類似執行緒或 <xref:System.Threading.ThreadPool> 工作項目，但是抽象等級較高。 「工作平行處理原則」(Task Parallelism) 是指同時執行一個或多個獨立工作。 工作主要提供兩項優點：  
@@ -42,7 +42,7 @@ ms.locfileid: "47171370"
 > [!NOTE]
 >  <xref:System.Threading.Tasks.Task> 在幕後建立的 <xref:System.Threading.Tasks.Parallel.Invoke%2A> 執行個體數目，不一定會等於所提供的委派數目。 TPL 可採用各種不同的最佳化方式，尤其是有大量委派時。  
   
- 如需詳細資訊，請參閱[如何：使用 Parallel.Invoke 來執行平行作業](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。  
+ 如需詳細資訊，請參閱[＜How to：使用 Parallel.Invoke 執行平行作業](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。  
   
  若要進一步控制工作執行，或是從工作傳回值，您必須更明確地使用 <xref:System.Threading.Tasks.Task> 物件。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47171370"
  [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
  [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]  
   
- 如需詳細資訊，請參閱[如何：從工作傳回值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)。  
+ 如需詳細資訊，請參閱[＜How to：傳回工作的值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)。  
   
  當您使用 Lambda 運算式建立委派時，可以存取原始程式碼中該時間點可見的所有變數。 不過，在某些情況下 (特別是在迴圈內)，Lambda 擷取的變數不是預期的變數。 它只會擷取最後的值，而不是在每次反覆運算後變動的值。 下面範例會說明此問題。 它會將迴圈計數器傳遞給 Lambda 運算式，這個運算式會具現化 `CustomData` 物件並使用迴圈計數器做為物件的識別項。 如範例輸出所示，每個 `CustomData` 物件都具有相同的識別項。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "47171370"
 ## <a name="task-creation-options"></a>工作建立選項  
  大多數建立工作的 API 都會提供用來接受 <xref:System.Threading.Tasks.TaskCreationOptions> 參數的多載。 您可以指定其中一個選項，指示工作排程器要如何在執行緒集區上排定工作。 下表列出各種工作建立選項。  
   
-|<xref:System.Threading.Tasks.TaskCreationOptions> 參數值|描述|  
+|<xref:System.Threading.Tasks.TaskCreationOptions> 參數值|說明|  
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|未指定選項時的預設值。 排程器會使用其預設的啟發式來排定工作。|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|指定排定工作時，應該讓較早建立的工作較早執行，並讓較晚建立的工作較晚執行。|  
@@ -201,7 +201,7 @@ ms.locfileid: "47171370"
  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 方法會產生 <xref:System.Threading.Tasks.Task> 物件，這個物件會在指定的時間之後完成。 您可以使用這個方法建立執行下列動作的迴圈：偶爾輪詢資料，引入逾時，延遲使用者輸入處理長達一段預先定義的時間等等。  
   
 ### <a name="tasktfromresult"></a>Task(T).FromResult  
- 使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法，您可以建立裝載預先計算結果的 <xref:System.Threading.Tasks.Task%601> 物件。 當您執行會傳回 <xref:System.Threading.Tasks.Task%601> 物件的非同步作業，而且該 <xref:System.Threading.Tasks.Task%601> 物件的結果已計算時，這個方法很有用。 如需範例示範如何使用 <xref:System.Threading.Tasks.Task.FromResult%2A> 來擷取快取保留之非同步下載作業的結果，請參閱[如何：建立經過預先計算的工作](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)。  
+ 使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法，您可以建立裝載預先計算結果的 <xref:System.Threading.Tasks.Task%601> 物件。 當您執行會傳回 <xref:System.Threading.Tasks.Task%601> 物件的非同步作業，而且該 <xref:System.Threading.Tasks.Task%601> 物件的結果已計算時，這個方法很有用。 如需使用 <xref:System.Threading.Tasks.Task.FromResult%2A> 擷取保留在快取中非同步下載作業結果的範例，請參閱[如何：建立經過預先計算的工作](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)。  
   
 ## <a name="handling-exceptions-in-tasks"></a>處理工作中的例外狀況  
  當工作擲回一個或多個例外狀況時，這些例外狀況會包裝在 <xref:System.AggregateException> 例外狀況中。 接著該例外狀況就會回傳給與工作聯結的執行緒，這通常會是正在等候該工作完成的執行緒，或是存取 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性的執行緒。 這個行為有助於落實這樣的 .NET Framework 原則：即所有未處理的例外狀況預設都應該要終止處理序。 呼叫的程式碼可以在 `try`/`catch` 區塊中使用下列任何一個來處理例外狀況：  
@@ -252,22 +252,22 @@ ms.locfileid: "47171370"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-|-|  
 |[使用接續工作鏈結工作](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|說明接續的運作方式。|  
 |[附加與中斷連結的子工作](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|說明附加的與中斷連結的子工作之間的差異。|  
 |[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)|說明 <xref:System.Threading.Tasks.Task> 物件內建的取消支援。|  
 |[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|說明並行執行緒上發生例外狀況時的處理方式。|  
-|[操作說明：使用 Parallel.Invoke 執行平行作業](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.Invoke%2A>。|  
-|[操作說明：傳回工作的值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|說明如何從工作傳回值。|  
+|[如何：使用 Parallel.Invoke 執行平行作業](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.Invoke%2A>。|  
+|[如何：傳回工作的值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|說明如何從工作傳回值。|  
 |[如何：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|說明如何取消工作。|  
-|[操作說明：建立經過預先計算的工作](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|描述如何使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法擷取保留在快取中之非同步下載作業的結果。|  
-|[操作說明：使用平行工作周遊二進位樹狀](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|說明如何使用工作，在二進位樹狀目錄中周遊。|  
-|[操作說明：解除包裝巢狀工作](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|示範如何使用 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 擴充方法。|  
+|[如何：建立經過預先計算的工作](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|描述如何使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法擷取保留在快取中之非同步下載作業的結果。|  
+|[如何：使用平行工作周遊二進位樹狀目錄](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|說明如何使用工作，在二進位樹狀目錄中周遊。|  
+|[如何：解除包裝巢狀工作](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|示範如何使用 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 擴充方法。|  
 |[資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 建立資料的平行迴圈。|  
 |[平行程式設計](../../../docs/standard/parallel-programming/index.md)|.NET Framework 平行程式設計的最上層節點。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [平行程式設計](../../../docs/standard/parallel-programming/index.md)  
+- [平行程式設計](../../../docs/standard/parallel-programming/index.md)
 - [使用 .NET Framework 進行平行程式設計的範例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

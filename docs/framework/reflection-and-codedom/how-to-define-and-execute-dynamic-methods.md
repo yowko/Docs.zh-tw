@@ -1,5 +1,5 @@
 ---
-title: 如何：定義和執行動態方法
+title: HOW TO：定義和執行動態方法
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 865d9aa6806e00bb9cf7b3991b4f323d361cbb63
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1dd58cfe0eb448a4bf886eb11b1b2e6375835b05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43785296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709178"
 ---
-# <a name="how-to-define-and-execute-dynamic-methods"></a>如何：定義和執行動態方法
+# <a name="how-to-define-and-execute-dynamic-methods"></a>HOW TO：定義和執行動態方法
 下列程序顯示如何定義及執行簡單的動態方法及繫結至類別執行個體的動態方法。 如需動態方法的詳細資訊，請參閱 <xref:System.Reflection.Emit.DynamicMethod> 類別和[反映發出動態方法案例](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)。  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>定義和執行動態方法  
@@ -122,7 +122,7 @@ ms.locfileid: "43785296"
   
 -   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Reflection.Emit.DynamicMethod>  
- [使用反映發出](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [反映發出動態方法案例](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Reflection.Emit.DynamicMethod>
+- [使用反映發出](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)
+- [反映發出動態方法案例](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)

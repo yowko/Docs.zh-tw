@@ -1,5 +1,5 @@
 ---
-title: 如何：從類型程式庫產生 Interop 組件
+title: HOW TO：從型別程式庫產生 Interop 組件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62d9213e58aaabd0b4001d5c6a7fd6fd375eba2e
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 95e85578a4879a9af9f262a933150292a4f58ec2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874854"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668856"
 ---
-# <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>如何：從類型程式庫產生 Interop 組件
+# <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>HOW TO：從型別程式庫產生 Interop 組件
 [型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 是一種命令列工具，可將 COM 類型程式庫中包含的 Coclass 和介面轉換為中繼資料。 這個工具會自動為類型資訊建立 Interop 組件和命名空間。 當類別的中繼資料可供使用之後，Managed 用戶端就可以建立 COM 類型的執行個體並呼叫其方法，就如同它是 .NET 執行個體一樣。 Tlbimp.exe 會一次將整個型別程式庫轉換為中繼資料，而且不能為型別程式庫中定義的類型子集產生類型資訊。  
   
 ### <a name="to-generate-an-interop-assembly-from-a-type-library"></a>從型別程式庫產生 Interop 組件  
@@ -41,6 +41,6 @@ tlbimp Loanlib.tlb
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [匯入類型程式庫做為組件](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
- [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a>另請參閱
+- [匯入類型程式庫做為組件](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+- [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)

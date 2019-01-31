@@ -5,16 +5,16 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6db1a3f5fd2011a13a28551a38b319995039ab38
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3897b3acd06d4dbe8b61f4c12686a365bd17662a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153603"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066307"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>在 Windows 10 和 Windows Server 2016 上安裝 .NET Framework
 
-在 Windows 上執行許多應用程式時需要 .NET Framework。 本文中的指示可協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 是提供的最新版本。
+在 Windows 上執行許多應用程式時需要 .NET Framework。 本文中的指示可協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) 是提供的最新版本。
 
 嘗試執行應用程式之後可能會進入此頁面，並會於您的電腦上看到類似如下的對話方塊：
 
@@ -29,11 +29,11 @@ ms.locfileid: "53153603"
 * [Windows 10 2018 4 月更新](https://www.microsoft.com/software-download/windows10)
 
 > [!div class="button"]
-> [下載 .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [下載 .NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)
 
-[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 可用於執行專為 .NET Framework 4.0 到 4.7.1 建置的應用程式。
+[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) 可用於執行專為 .NET Framework 4.0 到 4.7.1 建置的應用程式。
 
-您可將 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 安裝於：
+您可將 [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) 安裝於：
 
 * Windows 10 Fall Creators Update (版本 1709)
 * Windows 10 Creators Update (版本 1703)
@@ -78,6 +78,6 @@ ms.locfileid: "53153603"
 
 ## <a name="see-also"></a>另請參閱
 
-[.NET 下載](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)   
-[疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)   
-[安裝適用於開發人員的 .NET Framework](guide-for-developers.md)
+- [NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) (.NET 下載)
+- [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)
+- [安裝適用於開發人員的 .NET Framework](guide-for-developers.md)

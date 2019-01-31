@@ -1,17 +1,17 @@
 ---
-title: 風險降低：WPF 版面配置
+title: 風險降低：WPF 配置
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a9bc9e14621b22cad6491f6f5132ef302e7ef06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d75911c2087370cb9313c6694ce2630b80e635a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686032"
 ---
-# <a name="mitigation-wpf-layout"></a>風險降低：WPF 版面配置
+# <a name="mitigation-wpf-layout"></a>風險降低：WPF 配置
 WPF 控制項的版面配置可能略有不同。  
   
 ## <a name="impact"></a>影響  
@@ -38,5 +38,5 @@ WPF 控制項的版面配置可能略有不同。
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a>另請參閱
+- [重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

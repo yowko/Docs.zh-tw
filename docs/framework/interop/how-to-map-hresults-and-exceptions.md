@@ -1,5 +1,5 @@
 ---
-title: 如何：對應 HRESULT 和例外狀況
+title: HOW TO：對應 HRESULT 和例外狀況
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d5728de1140df51b9c725db0c8c80d21ace6deb
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729232"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>如何：對應 HRESULT 和例外狀況
+# <a name="how-to-map-hresults-and-exceptions"></a>HOW TO：對應 HRESULT 和例外狀況
 COM 方法是藉由傳回 HRESULT 來報告錯誤；.NET 方法則是藉由擲回例外狀況來報告錯誤。 執行階段則負責處理兩者之間的轉換。 .NET Framework 的每一個例外狀況類別都會對應到一個 HRESULT。  
   
  使用者定義的例外狀況類別可以指定任何適當的 HRESULT。 當例外狀況是藉由設定例外狀況物件上的 **HResult** 欄位而產生時，這些例外狀況類別可以動態地變更要傳回的 HRESULT。 例外狀況的其他資訊會透過 **IErrorInfo** 介面提供給用戶端，而該介面是實作於 Unmanaged 處理序中的 .NET 物件上。  
@@ -142,6 +142,6 @@ CMyClass::MethodThatThrows
   
  如 **Message**、**Source** 和 **StackTrace** 之類的例外狀況欄位，並不適用於 **StackOverflowException**。  
   
-## <a name="see-also"></a>請參閱  
- [進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [例外狀況](../../standard/exceptions/index.md)
+## <a name="see-also"></a>另請參閱
+- [進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [例外狀況](../../standard/exceptions/index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: 1c6ca568cae45a54e781c30bf5774015ae09c98a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0f58759b02fb650c090267e13ec5de65c2c63d19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704455"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>透過 Proxy 存取網際網路
 如果您的網站使用 Proxy 來提供網際網路存取，則您必須設定 Proxy 執行個體，使您的應用程式能夠與 Web Proxy 進行通訊。  
@@ -32,6 +32,6 @@ ms.locfileid: "50201882"
   
 -   [如何：覆寫全域 Proxy 的選取範圍](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
-## <a name="see-also"></a>請參閱  
- [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)  
- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)
+## <a name="see-also"></a>另請參閱
+- [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)
+- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)

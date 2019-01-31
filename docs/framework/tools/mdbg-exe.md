@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202916"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066398"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework 命令列偵錯工具)
 .NET Framework 命令列偵錯工具可以協助工具廠商和應用程式開發人員尋找並修復以 .NET Framework 通用語言執行平台為目標之程式的 Bug。 這個工具使用執行階段偵錯 API 來提供偵錯服務。 目前您只能使用 MDbg.exe 偵錯 Managed 程式碼；不支援偵錯 Unmanaged 程式碼。  
@@ -34,7 +34,7 @@ MDbg [ProgramName[arguments]] [options]
   
  MDbg.exe 命令會區分大小寫。  
   
-|命令|描述|  
+|命令|說明|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*number*]|切換至另一個已偵錯的處理序，或列印可使用的處理序。 這些數字不是實際的處理序 ID (PID)，而是從 0 開始建立索引的清單。|  
 |**a**[**ttach**] [*pid*]|附加至處理序，或列印可使用的處理序。|  
@@ -57,7 +57,7 @@ MDbg [ProgramName[arguments]] [options]
 |**int**[**ercept**] *FrameNumber*|讓偵錯工具回復至指定的框架編號。<br /><br /> 如果偵錯工具遇到例外狀況，請使用這個命令，讓偵錯工具回復至指定的框架編號。 您可以使用 **set** 命令變更程式狀態，同時繼續使用 **go** 命令。|  
 |**k**[**ill**]|停止使用中處理序。|  
 |**l**[**ist**] [*modules* &#124; *appdomains* &#124; *assemblies*]|顯示載入的模組、應用程式定義域或組件。|  
-|**lo**[**ad**] *assemblyName*|以下列方式載入擴充功能：載入指定的組件，然後嘗試從 `LoadExtension` 類型執行靜態方法 `Microsoft.Tools.Mdbg.Extension.Extension`。|  
+|**lo**[**ad**] *assemblyName*|藉由以下方式載入延伸模組：載入指定的組件，然後嘗試從 `Microsoft.Tools.Mdbg.Extension.Extension` 類型執行靜態方法 `LoadExtension`。|  
 |**log** [*eventType*]|設定或顯示要記錄的事件。|  
 |**mo**[**de**] [*option on/off*]|設定不同的偵錯工具選項。 使用 `mode` 而不指定選項，以取得偵錯模式清單及其目前設定。|  
 |**mon**[**itorInfo**] *monitorReference*|顯示物件監視器鎖定資訊。|  
@@ -77,7 +77,7 @@ MDbg [ProgramName[arguments]] [options]
 |**sh**[**ow**] [*lines*]|指定要顯示的行數。|  
 |**s**[**tep**]|將執行作業移入目前程式碼行上的下一個函式，或是如果沒有函式可逐步執行，即移至下一行。|  
 |**su**[**spend**] [\* &#124; [~]*threadNumber*]|停止目前的執行緒，或由 *threadNumber* 參數指定的執行緒。  如果 *threadNumber* 是指定為 `*`，這個命令會套用至所有執行緒。 如果執行緒編號以 `~` 開頭，此命令可套用至所有執行緒，只有由 *threadNumber* 指定的執行緒除外。 在處理序由 **go** 或 **step** 命令執行時，會排除暫止的執行緒不加以執行。 如果處理序中沒有非暫止的執行緒，而您發出 **go** 命令，處理序將不會繼續。 在這種情況下，可按 CTRL-C 中斷處理序。|  
-|**sy**[**mbol**] *commandName* [*commandValue*]|指定下列任何一個命令：<br /><br /> -   `symbol path` [`"``value``"`]：顯示或設定目前的符號路徑。<br />-   `symbol addpath` `"` `value` `"`：新增至您目前的符號路徑。<br />-   `symbol reload` [`"``module``"`]：重新載入所有符號或指定模組的符號。<br />-   `symbol list` [`module`]：顯示所有模組或指定模組目前載入的符號。|  
+|**sy**[**mbol**] *commandName* [*commandValue*]|指定下列任何一個命令：<br /><br /> -   `symbol path` [`"value"`]：顯示或設定目前的符號路徑。<br />-   `symbol addpath` `"value"` - 新增至您目前的符號路徑。<br />-   `symbol reload` [`"module"`] - 重新載入所有符號或指定模組的符號。<br />-   `symbol list` [`module`]：顯示所有模組或指定模組目前載入的符號。|  
 |**t**[**hread**] [*newThread*] [-*nick nickname*`]`|不帶參數的執行緒命令會顯示目前處理序中的所有 Managed 執行緒。 執行緒通常是以其執行緒編號識別，但是如果執行緒有指定的暱稱，則改為顯示暱稱。 您可以使用 `-nick` 參數指派暱稱給執行緒。<br /><br /> -   **thread** `-nick` *threadName* 會指派暱稱給目前執行中的執行緒。<br /><br /> 暱稱不可為編號。 如果目前的執行緒已經指定暱稱，就會以新的暱稱取代舊的暱稱。 如果新暱稱是空字串 ("")，則刪除目前執行緒的暱稱，而不指定任何新暱稱給執行緒。|  
 |**u**[**p**]|將現用堆疊框架往上移。|  
 |**uwgc**[**handle**] [*var*] &#124; [*address*]|列印由控制代碼追蹤的變數。 控制代碼可以用名稱或位址加以指定。|  
@@ -88,7 +88,7 @@ MDbg [ProgramName[arguments]] [options]
 ## <a name="remarks"></a>備註  
  使用編譯器專用旗標編譯要偵錯的應用程式，會讓編譯器產生偵錯符號。 如需這些旗標的詳細資訊，請參閱編譯器的文件。 您可以偵錯最佳化的應用程式，但是有些偵錯資訊將會遺失。 例如，許多區域變數將不可見，而原始程式行也會不準確。  
   
- 編譯應用程式之後，請在命令提示字元輸入 **mdbg** 來啟動偵錯工作階段，如下列範例所示。  
+ 編譯應用程式之後，請在命令提示字元鍵入 **mdbg** 來啟動偵錯工作階段，如下列範例所示。  
   
 ```  
 C:\Program Files\Microsoft Visual Studio 8\VC>mdbg  
@@ -106,6 +106,6 @@ mdbg>
   
 ## <a name="examples"></a>範例  
   
-## <a name="see-also"></a>另請參閱  
- [工具](../../../docs/framework/tools/index.md)  
- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>另請參閱
+- [工具](../../../docs/framework/tools/index.md)
+- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

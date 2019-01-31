@@ -1,5 +1,5 @@
 ---
-title: 如何：在管線中使用封鎖集合的陣列
+title: HOW TO：在管線中使用封鎖集合的陣列
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a39c7ec3-3ad7-4f4d-8fe4-b3e9dbabe2ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e2e312668a7cf4fe39596ae018adaf62cd850e4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a4667d78fdf91a3e62c22d88c7cbe9effaae57d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44187542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627196"
 ---
-# <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>如何：在管線中使用封鎖集合的陣列
+# <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>HOW TO：在管線中使用封鎖集合的陣列
 下列範例示範如何搭配使用 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 物件的陣列與靜態方法 (例如 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A>)，來實作元件之間的快速且彈性資料傳輸。  
   
 ## <a name="example"></a>範例  
@@ -28,5 +28,5 @@ ms.locfileid: "44187542"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)

@@ -1,15 +1,15 @@
 ---
-title: 如何：尋找子項目 (XPath-LINQ to XML) (C#)
+title: HOW TO：尋找子項目 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: 3027914d87b8245af16b4864c0f558158ab253a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6ce31c803e1f0877a6029bda9de73e4bf8e79279
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737477"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>如何：尋找子項目 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>HOW TO：尋找子項目 (XPath-LINQ to XML) (C#)
 這個主題會比較 XPath 子元素座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 方法。  
   
  XPath 運算式為 `DeliveryNotes`。  
@@ -17,7 +17,7 @@ ms.locfileid: "43503763"
 ## <a name="example"></a>範例  
  這個範例會尋找子項目 `DeliveryNotes`。  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：多份採購訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[XML 範例檔：多個訂購單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  
@@ -45,6 +45,6 @@ Results are identical
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

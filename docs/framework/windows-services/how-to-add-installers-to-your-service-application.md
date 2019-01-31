@@ -1,5 +1,5 @@
 ---
-title: 如何：加入 Installer 至服務應用程式
+title: HOW TO：將安裝程式新增至服務應用程式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: b73d7cf694e7bce5d055f8a3c9f78c27bb8cd5b9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3316f3b292f6a9597b62a802b489459ee2f0a952
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743513"
 ---
-# <a name="how-to-add-installers-to-your-service-application"></a>如何：加入 Installer 至服務應用程式
+# <a name="how-to-add-installers-to-your-service-application"></a>HOW TO：將安裝程式新增至服務應用程式
 Visual Studio 隨附安裝元件，可安裝與您服務應用程式相關聯的資源。 安裝元件會在其安裝所在的系統上註冊個別服務，並讓服務控制管理員知道服務的存在。 當您使用服務應用程式時，可以選取 [屬性] 視窗中的連結，以便自動將適當的安裝程式加入您的專案。  
   
 > [!NOTE]
@@ -47,11 +47,11 @@ Visual Studio 隨附安裝元件，可安裝與您服務應用程式相關聯的
   
     |值|結果|  
     |-----------|------------|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|服務必須在安裝之後手動啟動。 如需詳細資訊，請參閱[如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)。|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|服務必須在安裝之後手動啟動。 如需詳細資訊，請參閱[＜How to：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)。|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|服務將在電腦重新開機時自行啟動。|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|無法啟動服務。|  
   
-6.  若要決定服務將在其中執行的安全性內容，按一下 <xref:System.ServiceProcess.ServiceProcessInstaller> 元件，並設定適當的屬性值。 如需詳細資訊，請參閱[如何：指定服務的安全性內容](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)。  
+6.  若要決定服務將在其中執行的安全性內容，按一下 <xref:System.ServiceProcess.ServiceProcessInstaller> 元件，並設定適當的屬性值。 如需詳細資訊，請參閱[＜How to：指定服務的資訊安全內容](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)。  
   
 7.  覆寫任何您需要為其執行自訂處理的方法。  
   
@@ -60,8 +60,8 @@ Visual Studio 隨附安裝元件，可安裝與您服務應用程式相關聯的
     > [!NOTE]
     >  針對專案中的每個額外服務，您必須在專案的 `ProjectInstaller` 類別中加入額外的 <xref:System.ServiceProcess.ServiceInstaller> 元件。 在步驟三加入的 <xref:System.ServiceProcess.ServiceProcessInstaller> 元件適用於專案中所有的個別服務安裝程式。  
   
-## <a name="see-also"></a>請參閱  
- [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)  
- [如何：指定服務的安全性內容](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+## <a name="see-also"></a>另請參閱
+- [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)
+- [如何：指定服務的資訊安全內容](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

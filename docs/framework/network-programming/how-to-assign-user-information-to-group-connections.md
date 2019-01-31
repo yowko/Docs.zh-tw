@@ -1,18 +1,18 @@
 ---
-title: 如何：將使用者資訊指派給群組連接
+title: HOW TO：將使用者資訊指派給群組連線
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 6d0be3ccfc0a0b4b032283b7ed34908f79774bb6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 927a87b250863c4d59e630264ee11286c30deb3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50049538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607994"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a>如何：將使用者資訊指派給群組連接
+# <a name="how-to-assign-user-information-to-group-connections"></a>HOW TO：將使用者資訊指派給群組連線
 
   
  下列範例示範如何將使用者資訊指派給群組連線，並假設應用程式會在呼叫這段程式碼之前設定 *UserName*、*SecurelyStoredPassword* 和 *Domain* 變數，且 *UserName* 為唯一。  
@@ -108,6 +108,6 @@ Dim myWebResponse As WebResponse = myWebRequest.GetResponse()
 MyWebResponse.Close()  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [管理連線](../../../docs/framework/network-programming/managing-connections.md)  
- [連線群組](../../../docs/framework/network-programming/connection-grouping.md)
+## <a name="see-also"></a>另請參閱
+- [管理連線](../../../docs/framework/network-programming/managing-connections.md)
+- [連線群組](../../../docs/framework/network-programming/connection-grouping.md)

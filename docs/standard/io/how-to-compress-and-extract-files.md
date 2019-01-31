@@ -1,5 +1,5 @@
 ---
-title: 操作說明：壓縮與解壓縮檔案
+title: HOW TO：壓縮與解壓縮檔案
 ms.date: 06/06/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 669936d15cfe1ea125ed36ffdfcfd093b6aacbe1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c35bf549dc4dcd5e12e3580c2357b64dcc42905b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650937"
 ---
-# <a name="how-to-compress-and-extract-files"></a>操作說明：壓縮與解壓縮檔案
+# <a name="how-to-compress-and-extract-files"></a>HOW TO：壓縮與解壓縮檔案
 
 <xref:System.IO.Compression> 命名空間包含壓縮及解壓縮檔案和資料流的下列類型。 您也可以使用這些類型讀取和修改壓縮檔案的內容：
 
@@ -70,9 +70,9 @@ ms.locfileid: "47424424"
 
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.IO.Compression.ZipArchive>  
-- <xref:System.IO.Compression.ZipFile>  
-- <xref:System.IO.Compression.ZipArchiveEntry>  
-- <xref:System.IO.Compression.DeflateStream>  
-- <xref:System.IO.Compression.GZipStream>  
+- <xref:System.IO.Compression.ZipArchive>
+- <xref:System.IO.Compression.ZipFile>
+- <xref:System.IO.Compression.ZipArchiveEntry>
+- <xref:System.IO.Compression.DeflateStream>
+- <xref:System.IO.Compression.GZipStream>
 - [檔案和資料流 I/O](../../../docs/standard/io/index.md)

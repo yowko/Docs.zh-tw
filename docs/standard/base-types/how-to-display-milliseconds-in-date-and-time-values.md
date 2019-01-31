@@ -1,5 +1,5 @@
 ---
-title: 如何：在日期與時間值中顯示毫秒
+title: HOW TO：在日期與時間值中顯示毫秒
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f39b079de1c97d0954ba013ba1c87a8bd606920
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a3678c687817c4c93508d95c3d4b7453eadee32e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643763"
 ---
-# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>如何：在日期與時間值中顯示毫秒
+# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>HOW TO：在日期與時間值中顯示毫秒
 預設的日期和時間格式化方法 (例如 <xref:System.DateTime.ToString?displayProperty=nameWithType>) 包括時間值的小時、分鐘和秒，但不包括它的毫秒元件。 本主題說明如何將日期和時間的毫秒部分加入格式化的日期和時間字串。  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>顯示 DateTime 值的毫秒部分  
@@ -56,5 +56,5 @@ ms.locfileid: "47113578"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Globalization.DateTimeFormatInfo>  
+- <xref:System.Globalization.DateTimeFormatInfo>
 - [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

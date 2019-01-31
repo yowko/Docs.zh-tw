@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599994"
 ---
 # <a name="observer-design-pattern-best-practices"></a>觀察器設計模式最佳作法
 在 .NET Framework 中，觀察者設計模式會實作為一組介面。 <xref:System.IObservable%601?displayProperty=nameWithType> 介面代表資料提供者，它也負責提供 <xref:System.IDisposable> 實作，讓觀察者可以取消訂閱通知。 <xref:System.IObserver%601?displayProperty=nameWithType> 介面代表觀察者。 本主題說明使用這些介面實作觀察者設計模式時，開發人員應該遵循的最佳作法。  
   
-## <a name="threading"></a>執行緒處理  
+## <a name="threading"></a>執行緒  
  一般來說，提供者會藉由將特定觀察者加入由某些集合物件所代表的訂閱者清單，而實作 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 方法，且其會藉由從訂閱者清單中移除特定觀察者而實作 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 方法。 觀察者可隨時呼叫這些方法。 此外，因為提供者/觀察者合約未指定負責在 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 回呼方法之後取消訂閱的人員，所以提供者和觀察者可能會同時嘗試從清單中移除相同的成員。 因為這種可能性，<xref:System.IObservable%601.Subscribe%2A> 和 <xref:System.IDisposable.Dispose%2A> 方法都應該是安全執行緒。 通常，這需要使用[平行集合](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)或鎖定。 不是安全執行緒的實作，應該要明確地記載它們不是安全執行緒。  
   
  除了提供者/觀察者合約之外，還必須在某一層級指定所有其他保證。 當實作者強制要求其他需求時，應該清楚地宣布，以避免使用者對觀察者合約感到困惑。  
@@ -55,6 +55,6 @@ ms.locfileid: "45664679"
   
 ## <a name="see-also"></a>另請參閱
 
-- [觀察者設計模式](../../../docs/standard/events/observer-design-pattern.md)  
-- [操作說明：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)  
-- [操作說明：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)
+- [觀察者設計模式](../../../docs/standard/events/observer-design-pattern.md)
+- [如何：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)
+- [如何：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)

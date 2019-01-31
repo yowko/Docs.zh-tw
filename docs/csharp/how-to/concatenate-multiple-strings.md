@@ -1,5 +1,5 @@
 ---
-title: 如何：串連多個字串 (C# 指南)
+title: HOW TO：串連多個字串 (C# 指南)
 description: 以下提供用 C# 串連字串的多種方式。 了解選項及做出不同選擇的原因。
 ms.date: 02/20/2018
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 355e56acf36b6212ee4563f34722b10b56a0fb47
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: da83a79f58c236692e284a7920c7b98c3520e5d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710413"
 ---
-# <a name="how-to-concatenate-multiple-strings-c-guide"></a>如何：串連多個字串 (C# 指南)
+# <a name="how-to-concatenate-multiple-strings-c-guide"></a>HOW TO：串連多個字串 (C# 指南)
 
 「串連」是將一個字串附加至另一個字串結尾的程序。 使用 `+` 運算子即可串連字串。 若是字串常值和字串常數，會在編譯時間進行串連；在非編譯時間不會發生串連。 若是字串變數，串連只會發生在執行階段。
 
@@ -53,9 +53,9 @@ ms.locfileid: "43855383"
 
 您可以查看 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.String>  
-- <xref:System.Text.StringBuilder>  
-- [C# 程式設計指南](../programming-guide/index.md)  
+- <xref:System.String>
+- <xref:System.Text.StringBuilder>
+- [C# 程式設計指南](../programming-guide/index.md)
 - [字串](../programming-guide/strings/index.md)

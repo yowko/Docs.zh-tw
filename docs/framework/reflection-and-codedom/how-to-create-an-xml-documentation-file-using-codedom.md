@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 CodeDOM 建立 XML 文件檔案
+title: HOW TO：使用 CodeDOM 建立 XML 文件檔案
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81d09188ade29b0cac8985da218494f5373980cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8086a512d117767127260bcf779fc11555cd67dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632825"
 ---
-# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>如何：使用 CodeDOM 建立 XML 文件檔案
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>HOW TO：使用 CodeDOM 建立 XML 文件檔案
 CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建立包含 XML 文件註解的 CodeDOM 圖表、產生程式碼，以及編譯可建立 XML 文件輸出的以編譯器選項產生的程式碼。  
   
 ### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>建立包含 XML 文件註解的 CodeDOM 圖表  
@@ -79,7 +79,7 @@ CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建
   
 -   此程式碼範例需要設定 `FullTrust` 權限，才能順利執行。  
   
-## <a name="see-also"></a>請參閱  
- [使用 XML 加入程式碼註解](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  
- [XML 文件註解](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
- [XML 文件](/cpp/ide/xml-documentation-visual-cpp)
+## <a name="see-also"></a>另請參閱
+- [使用 XML 加入程式碼註解](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [XML 文件註解](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML 文件](/cpp/ide/xml-documentation-visual-cpp)

@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：在部分信任案例中發出程式碼
+title: 逐步解說：在部分信任情節中發出程式碼
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8461e0a074e7bdf9e1e2631c3f65e16de7256fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712570"
 ---
-# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>逐步解說：在部分信任案例中發出程式碼
+# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>逐步解說：在部分信任情節中發出程式碼
 反映發出在完整或部分信任中使用相同的 API 集合，但在部分信任程式碼中，有些功能需要特殊權限。 此外，反映發出還有一項匿名裝載動態方法的功能，設計搭配部分信任使用並可供安全性透明組件使用。  
   
 > [!NOTE]
@@ -34,7 +34,7 @@ ms.locfileid: "33399752"
 -   [設定簡單沙箱以測試部分信任程式碼](#Setting_up)。  
   
     > [!IMPORTANT]
-    >  這是實驗部分信任程式碼的簡單方法。 若要執行實際來自不受信任位置的程式碼，請參閱[如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)。  
+    >  這是實驗部分信任程式碼的簡單方法。 若要執行實際來自未受信任位置的程式碼，請參閱[如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)。  
   
 -   [在部分信任的應用程式定義域中執行程式碼](#Running_code)。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "33399752"
 2.  建立 <xref:System.AppDomainSetup> 物件來初始化具有應用程式路徑的應用程式定義域。  
   
     > [!IMPORTANT]
-    >  為簡單起見，此程式碼範例會使用目前的資料夾。 若要執行實際來自網際網路的程式碼，不受信任的程式碼請使用另外的資料夾，依[如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。  
+    >  為簡單起見，此程式碼範例會使用目前的資料夾。 若要執行實際來自網際網路的程式碼，未受信任的程式碼請使用另外的資料夾，依[如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
@@ -184,7 +184,7 @@ ms.locfileid: "33399752"
 <a name="Example"></a>   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>說明  
  下列程式碼範例示範如何使用 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> 旗標允許匿名裝載動態方法略過 JIT 可見度檢查，但僅限於所在信任層級與發出程式碼的組件信任層級相同或較低的目標成員。  
   
  此範例會定義 `Worker` 類別，可跨應用程式定義域界限封送處理。 此類別有兩個 `AccessPrivateMethod` 方法多載，可以發出和執行動態方法。 第一個多載會發出動態方法，呼叫 `Worker` 類別的私用 `PrivateMethod`方法，而且可以發出包含或不含 JIT 可見度檢查的動態方法。 第二個多載會發出動態方法，存取 <xref:System.String> 類別的 `internal` 屬性 (Visual Basic 為 `Friend` 屬性)。  
@@ -211,6 +211,6 @@ ms.locfileid: "33399752"
   
 -   如果您在 Visual Studio 中建置此程式碼範例，則當您將它傳遞給 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法時，必須變更類別名稱以包含命名空間。 命名空間是專案的預設名稱。 例如，如果專案是 "PartialTrust"，則類別名稱必須是 "PartialTrust.Worker"。  
   
-## <a name="see-also"></a>請參閱  
- [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+## <a name="see-also"></a>另請參閱
+- [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

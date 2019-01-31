@@ -1,5 +1,5 @@
 ---
-title: 如何：使用反映檢視和執行個體化泛型類型
+title: HOW TO：使用反映檢查和具現化泛型型別
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0f964ac73f070b99cdfd06e9037d06ce7888938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69864e647a7cf4e6193f4eb76ce2b7bc93b09404
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622048"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>如何：使用反映檢視和執行個體化泛型類型
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>HOW TO：使用反映檢查和具現化泛型型別
 取得泛型型別相關資訊的方式和取得其他類型相關資訊的方式一樣：檢查代表泛型型別的 <xref:System.Type> 物件。 主要差異是泛型型別有代表其泛型型別參數的 <xref:System.Type> 物件清單。 本節的第一個程序是檢查泛型型別。  
   
  您可以將型別引數繫結至泛型型別定義的型別參數，建立代表建構類型的 <xref:System.Type> 物件。 第二個程序即示範此作業。  
@@ -123,9 +123,9 @@ ms.locfileid: "33397568"
   
 -   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Type>  
- <xref:System.Reflection.MethodInfo>  
- [反映和泛用類型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)  
- [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [泛型](../../../docs/standard/generics/index.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Type>
+- <xref:System.Reflection.MethodInfo>
+- [反映和泛用類型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+- [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [泛型](../../../docs/standard/generics/index.md)

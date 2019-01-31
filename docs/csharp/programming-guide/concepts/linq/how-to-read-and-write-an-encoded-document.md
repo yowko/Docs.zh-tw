@@ -1,15 +1,15 @@
 ---
-title: 如何：讀取和寫入編碼的文件 (C#)
+title: HOW TO：讀取和寫入編碼的文件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: a5e1d6f70d8ad2740e4d7daff8c78b49966bb7ee
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fdf3e05c705ca9caea32306616c79ade0aeb9be3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615451"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a>如何：讀取和寫入編碼的文件 (C#)
+# <a name="how-to-read-and-write-an-encoded-document-c"></a>HOW TO：讀取和寫入編碼的文件 (C#)
 若要建立編碼的 XML 文件，您可以將編碼設定為所需的字碼頁名稱，以便將 <xref:System.Xml.Linq.XDeclaration> 加入到 XML 樹狀結構中。  
   
  由 <xref:System.Text.Encoding.WebName%2A> 傳回的任何值都是有效的值。  
@@ -76,7 +76,7 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
 - [進階 LINQ to XML 程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

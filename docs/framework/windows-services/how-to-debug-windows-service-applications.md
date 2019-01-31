@@ -1,5 +1,5 @@
 ---
-title: 如何：偵錯 Windows 服務應用程式
+title: HOW TO：偵錯 Windows 服務應用程式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 3f8dfff59acaa10fa99874dde2eb6eb6ed04e8fb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 02ea82bf224349e6ea7a5afbfb3c38ba50df46f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720362"
 ---
-# <a name="how-to-debug-windows-service-applications"></a>如何：偵錯 Windows 服務應用程式
+# <a name="how-to-debug-windows-service-applications"></a>HOW TO：偵錯 Windows 服務應用程式
 服務必須從服務控制管理員內容之中執行，而不是從 Visual Studio 之中執行。 因此，對服務進行偵錯不像是對其他 Visual Studio 應用程式類型進行偵錯那樣簡單直接。 若要對服務進行偵錯，您必須啟動服務，然後將偵錯工具附加至執行中的處理序。 之後就可以使用 Visual Studio 所有的標準偵錯功能，對應用程式進行偵錯。  
   
 > [!CAUTION]
@@ -38,9 +38,9 @@ ms.locfileid: "48035944"
   
 1.  在偵錯組態中建置您的服務。  
   
-2.  安裝您的服務。 如需詳細資訊，請參閱 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
+2.  安裝您的服務。 如需詳細資訊，請參閱[＜How to：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
-3.  從 [服務控制管理員]、[伺服器總管] 或從程式碼啟動您的服務。 如需詳細資訊，請參閱[如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)。  
+3.  從 [服務控制管理員]、[伺服器總管] 或從程式碼啟動您的服務。 如需詳細資訊，請參閱[＜How to：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)。  
   
 4.  使用系統管理認證啟動 Visual Studio，以便能夠附加至系統處理程序。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48035944"
   
  嘗試將程式變更為一般主控台應用程式。 若要執行這項操作，請依照下列方式重寫 `Main` 方法，以根據程式的啟動方式，將程式當做 Windows 服務或主控台應用程式來執行。  
   
-#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>如何：將 Windows 服務當做主控台應用程式來執行  
+#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>HOW TO：將 Windows 服務當作主控台應用程式來執行  
   
 1.  將方法加入執行 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法的服務：  
   
@@ -113,8 +113,8 @@ ms.locfileid: "48035944"
   
  在某些情況下 (例如當您想要偵錯只在系統啟動時發生的問題時)，您必須使用 Windows 偵錯工具。 安裝[適用於 Windows 的偵錯工具](https://msdn.microsoft.com/windows/hardware/hh852365) \(英文\) 並參閱[如何對 Windows 服務進行偵錯](https://support.microsoft.com/kb/824344) \(機器翻譯\)。  
   
-## <a name="see-also"></a>請參閱  
- [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)  
- [對服務進行偵錯](/windows/desktop/Services/debugging-a-service) \(英文\)
+## <a name="see-also"></a>另請參閱
+- [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)
+- [對服務進行偵錯](/windows/desktop/Services/debugging-a-service) \(英文\)

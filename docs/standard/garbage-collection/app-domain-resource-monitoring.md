@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f5ab93ca5cf616bd4a29ab5d297af1f4550623b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48266641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606526"
 ---
 # <a name="application-domain-resource-monitoring"></a>應用程式定義域資源監視
 應用程式定義域資源監視 (ARM) 可讓主機依應用程式定義域來監視 CPU 和記憶體的使用情況。 對於在長時間執行的處理序中使用許多應用程式定義域的主機 (例如 ASP.NET) 來說，這相當有用。 主機可以將對整個處理序的效能造成負面影響之應用程式的應用程式定義域卸載，但前提是它必須能夠識別有問題的應用程式。 ARM 提供可用來協助做出此判斷的資訊。  
@@ -56,7 +56,7 @@ ms.locfileid: "48266641"
   
     -   ETW 事件：`AppDomainMemAllocated` 事件、`Allocated` 欄位。  
   
--   **應用程式定義域所參考並在最近的完整、阻斷式收集中未被回收的受控記憶體 (單位為位元組)**：此數字只有在進行完整、阻斷式收集後才會精確。 (這是相對於在背景中進行而不會阻斷應用程式的並行收集)。例如，<xref:System.GC.Collect?displayProperty=nameWithType> 方法多載就會造成完整、阻斷式收集。  
+-   **應用程式定義域所參考並在最近完整阻斷式收集中未被回收的受控記憶體 (單位為位元組)**：此數字只有在進行完整阻斷式收集後才會精確。 (這是相對於在背景中進行而不會阻斷應用程式的並行收集)。例如，<xref:System.GC.Collect?displayProperty=nameWithType> 方法多載就會造成完整、阻斷式收集。  
   
     -   受控 API：<xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 屬性。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48266641"
   
     -   ETW 事件：`AppDomainMemSurvived` 事件、`Survived` 欄位。  
   
--   **處理序所參考並在最近的完整、阻斷式收集中未被回收的受控記憶體總計 (單位為位元組)**：可以將個別應用程式定義域未被回收的記憶體與此數字做比較。  
+-   **處理序所參考並在最近完整阻斷式收集中未被回收的受控記憶體總計 (單位為位元組)**：可以將個別應用程式定義域未被回收的記憶體與此數字做比較。  
   
     -   受控 API：<xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType> 屬性。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48266641"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [ICLRAppDomainResourceMonitor 介面](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
-- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [ICLRAppDomainResourceMonitor 介面](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

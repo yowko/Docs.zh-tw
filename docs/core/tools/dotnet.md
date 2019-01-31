@@ -2,12 +2,12 @@
 title: dotnet 命令
 description: 了解 dotnet 命令 (.NET Core CLI 工具的通用驅動器) 和其用法。
 ms.date: 06/04/2018
-ms.openlocfilehash: 081f295cc71c3cd46de465efb12f131e7b2d36d9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170835"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066437"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -78,9 +78,14 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 顯示已安裝的 .NET Core SDK。
 
-`--roll-forward-on-no-candidate-fx`
+`--roll-forward-on-no-candidate-fx <N>`
 
- 如果設定為 `0`，將停用次要版本向前復原。 如需詳細資訊，請參閱[向前復原](../whats-new/dotnet-core-2-1.md#roll-forward)。
+在必要的共用架構無法使用時定義行為。 `N` 可以是：
+ * `0` - 對次要版本也停用向前復原。
+ * `1` - 對次要版本向前復原，主要版本則不。 這是預設行為。
+ * `2` - 對次要及主要版本向前復原。
+
+ 如需詳細資訊，請參閱[向前復原](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
 `-v|--verbosity <LEVEL>`
 

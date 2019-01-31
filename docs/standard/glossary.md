@@ -3,14 +3,14 @@ title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 author: tdykstra
 ms.author: tdykstra
-ms.date: 07/08/2017
+ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b9654bf7f6cbc1019d00db986ba883cbab0abbb5
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840267"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857967"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -21,6 +21,8 @@ ms.locfileid: "48840267"
 預先編譯器。
 
 此編譯器類似於 [JIT](#jit)，也會將 [IL](#il) 轉譯成機器碼。 相較於 JIT 編譯，AOT 編譯會在執行應用程式之前發生，而且通常會在不同的電腦上執行。 由於 AOT 工具鏈不在執行階段編譯，因此不需要縮短花在編譯的時間。 這表示它們可以花更多的時間在最佳化。 由於 AOT 的內容是整個應用程式，因此 AOT 編譯器也會執行跨模組連結和整個程式分析，這表示會追蹤所有參考並產生單一可執行檔。
+
+請參閱 [CoreRT](#corert) 及 [.NET Native](#net-native)。
 
 ## <a name="aspnet"></a>ASP.NET 
 
@@ -115,9 +117,9 @@ Just-in-Time 編譯器。
 
 .NET 實作包括：
 
-- 一或多個執行階段。 範例：CLR、CoreCLR、CoreRT。
+- 一或多個執行階段。 例如：CLR、CoreCLR、CoreRT。
 - 實作 .NET Standard 版本並可能包含其他 API 的類別庫。 範例：.NET Framework 基底類別庫、.NET Core 基底類別庫。
-- (選擇性) 一或多個應用程式架構。 範例：ASP.NET、Windows Forms 和 WPF 會包含在 .NET Framework 中。
+- (選擇性) 一或多個應用程式架構。 例如：ASP.NET、Windows Forms 和 WPF 會包含在 .NET Framework 中。
 - (選擇性) 開發工具。 某些開發工具可在多個實作之間共用。
 
 .NET 實作的範例：
@@ -202,7 +204,7 @@ UWP 是 .NET Native 第一個支援的應用程式架構。 現在，我們支�
 
 原生 (映像) 產生。
 
-您可以將此技術視為永續性 JIT 編譯器。 它通常會在執行程式碼的電腦上編譯程式碼，但編譯通常會發生在安裝期間。
+您可以將這項技術視為永續性 JIT 編譯器。 它通常會在執行程式碼的電腦上編譯程式碼，但編譯通常會發生在安裝期間。
 
 ## <a name="package"></a>套件
 
@@ -221,7 +223,7 @@ NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名�
 
 .NET 文件經常使用「.NET 平台」來表示 .NET 實作或包含所有實作的 .NET 堆疊。 這兩種用法通常會與主要 (OS/硬體) 意義混淆，因此我們計劃從文件中排除這些用法。
 
-## <a name="runtime"></a>執行階段
+## <a name="runtime"></a>runtime
 
 受管理程式的執行環境。
 
@@ -244,7 +246,7 @@ OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分�
 
 可搭配使用以建置及執行應用程式的一組程式設計技術。
 
-「.NET 堆疊」是指 .NET Standard 和所有 .NET 實作。 「一個 .NET 堆疊」一詞可能是指 .NET 的一個實作。 
+「.NET 堆疊」是指 .NET Standard 和所有 .NET 實作。 「一個 .NET 堆疊」一詞可能是指 .NET 的一項實作。 
 
 ## <a name="target-framework"></a>Target Framework - 目標 Framework
 
@@ -272,8 +274,8 @@ OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分�
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 指南](index.md)  
-- [.NET Framework 指南](../framework/index.md)  
-- [.NET Core](../core/index.md)  
-- [ASP.NET 概觀](/aspnet/index#pivot=aspnet)  
-- [ASP.NET Core 概觀](/aspnet/index#pivot=core)  
+- [.NET 指南](index.md)
+- [.NET Framework 指南](../framework/index.md)
+- [.NET Core](../core/index.md)
+- [ASP.NET 概觀](/aspnet/index#pivot=aspnet)
+- [ASP.NET Core 概觀](/aspnet/index#pivot=core)

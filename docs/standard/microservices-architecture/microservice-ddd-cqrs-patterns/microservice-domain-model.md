@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解設�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d98d0f0fee0692bb447779e7f62750931a9773ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143600"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066254"
 ---
 # <a name="design-a-microservice-domain-model"></a>設計微服務領域模型
 
@@ -82,16 +82,17 @@ EF Core 2.0 包含[擁有的實體](https://blogs.msdn.microsoft.com/dotnet/2017
 
 #### <a name="additional-resources"></a>其他資源
 
-- **Martin Fowler：Value Object pattern (值物件模式)**
+- **Martin Fowler：值物件模式** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **Value Object (值物件)**
+- **值物件** \
   [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
-- **Value Objects in Test-Driven Development (測試導向開發中的值物件)**
+- **測試驅動開發中的值物件** \
   [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans：Domain-Driven Design: Tackling Complexity in the Heart of Software.** (書籍；包括值物件的探討) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans：網域驅動設計：解決軟體核心的複雜度。** (書籍；包含值物件的探討) \
+  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>彙總模式
 
@@ -134,14 +135,14 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>其他資源
 
-- **Vaughn Vernon：Effective Aggregate Design - Part I: Modeling a Single Aggregate** \ (有效彙總設計 - 第一部分：建立單一彙總模型)
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Vaughn Vernon：Effective Aggregate Design - Part I: Modeling a Single Aggregate** (有效的彙總設計 - 第一節：將單一彙總模組化**) (來源 <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon：Effective Aggregate Design - Part II: Making Aggregates Work Together** \ (有效彙總設計 - 第二部分：使彙總共同作業)
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Vaughn Vernon：Effective Aggregate Design - Part II: Making Aggregates Work Together** (有效的彙總設計 - 第二節：讓彙總搭配運作**) (來源 <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon：Effective Aggregate Design - Part III: Gaining Insight Through Discovery** \ (有效彙總設計 - 第三部分：透過探索取得見解)
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Vaughn Vernon：Effective Aggregate Design - Part III: Gaining Insight Through Discovery** (有效的彙總設計 - 第三節：透過探索取得見解**) (來源 <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak：DDD Tactical Design Patterns** \ (DDD 戰術設計模式)
   [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)

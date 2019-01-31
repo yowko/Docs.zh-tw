@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79350178300dde2896f6b22c68d6062bbb57f700
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 84da3e1e896397b4e5dacec9d7dd0eeeed96d1c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690835"
 ---
 # <a name="task-cancellation"></a>工作取消
-<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 類別可使用 .NET Framework 中的取消語彙基元來支援取消作業。 如需詳細資訊，請參閱[受控執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)。 在 Task 類別中，取消作業包括使用者委派之間的合作，這是指可取消的作業和要求取消的程式碼。  成功的取消作業包括要求呼叫 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法的程式碼，以及適時終止作業的使用者委派。 您可以使用下列選項之一來終止作業：  
+<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 類別可使用 .NET Framework 中的取消語彙基元來支援取消作業。 如需詳細資訊，請參閱[受控執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)。 在 Task 類別中，取消作業包括使用者委派之間的合作，這是指可取消的作業和要求取消的程式碼。  成功的取消包括要求呼叫 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法的程式碼，以及適時終止作業的使用者委派。 您可以使用下列選項之一來終止作業：  
   
 -   藉由直接從委派傳回。 在許多情況下使用這個選項即已足夠，但以這種方式取消的工作執行個體將會轉換至 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> 狀態，而非 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 狀態。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "43865627"
  [!code-csharp[TPL_Cancellation#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/snippet02.cs#02)]
  [!code-vb[TPL_Cancellation#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/module1.vb#02)]  
   
- 如需更完整的範例，請參閱[如何： 取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。  
+ 如需更完整的範例，請參閱[如何：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。  
   
  工作執行個體在觀察到由使用者程式碼擲回的 <xref:System.OperationCanceledException> 時，會比較此例外狀況的語彙基元及與它自己相關聯的語彙基元 (即傳遞給建立工作之 API 的語彙基元)。 如果兩者相同，且此語彙基元的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性傳回 true，則工作會將此解譯成確認取消，並轉換至 Canceled 狀態。 如果未使用 <xref:System.Threading.Tasks.Task.Wait%2A> 或 <xref:System.Threading.Tasks.Task.WaitAll%2A> 方法等候工作，則工作只會將其狀態設為 <xref:System.Threading.Tasks.TaskStatus.Canceled>。  
   
@@ -42,5 +42,5 @@ ms.locfileid: "43865627"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
-- [操作說明：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+- [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+- [如何：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

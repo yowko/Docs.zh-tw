@@ -1,5 +1,5 @@
 ---
-title: 如何：以前置字元零來填補數字
+title: HOW TO：以前置字元零來填補數字
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cc6e4d96378cfd8c065a3b04aab865f9b787438
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b48462e79c3e8ef3fdd6e0a91f5abecffc022b5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086718"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673029"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>如何：以前置字元零來填補數字
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>HOW TO：以前置字元零來填補數字
 如果整數要加上前置零，您可以使用具有精確度規範的 "D" [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)。 如果整數和浮點數都要加上前置零，您可以使用[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。 此主題示範如何使用這兩種方法，以前置零填補數值。  
   
 ### <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>以前置零將整數填補至特定長度  
@@ -95,6 +95,6 @@ ms.locfileid: "44086718"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [複合格式](../../../docs/standard/base-types/composite-formatting.md)

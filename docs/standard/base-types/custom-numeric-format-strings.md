@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83f3abb2c77461b74e388dcb421fac6c19a43655
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631668"
 ---
 # <a name="custom-numeric-format-strings"></a>自訂數值格式字串
 
@@ -33,23 +33,23 @@ ms.locfileid: "47205051"
  所有數字類型的 `ToString` 方法的一些多載可支援自訂數值格式字串。 例如，您可以提供數值格式字串給 <xref:System.Int32.ToString%28System.String%29> 類型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 和 <xref:System.Int32> 方法。 .NET 的[複合格式功能](../../../docs/standard/base-types/composite-formatting.md)也支援自訂數值格式字串，此功能會由 <xref:System.Console> 與 <xref:System.IO.StreamWriter> 類別的一些 `Write` 和 `WriteLine` 方法，以及 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法所使用。 [字串內插補點](../../csharp/language-reference/tokens/interpolated.md)功能也支援自訂數值格式字串。  
   
 > [!TIP]
->  您可以下載[格式化公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，這個應用程式可讓您將格式字串套用至數值或日期和時間值，並且顯示結果字串。  
+>  您可以下載 [格式化公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，這個應用程式可讓您將格式字串套用至數值或日期和時間值，並且顯示結果字串。  
   
 <a name="table"></a> 下表說明自訂數值格式規範，並顯示每個格式範例所產生的範例輸出。 如需使用自訂數值格式字串的詳細資訊，請參閱 [注意](#NotesCustomFormatting) 一節，如需其用法的完整解說，請參閱 [範例](#example) 一節。  
   
-|格式規範|名稱|描述|範例|  
+|格式規範|名稱|說明|範例|  
 |----------------------|----------|-----------------|--------------|  
-|"0"|零值預留位置|以對應的數字 (如果有的話) 取代零，否則結果字串中會出現零。<br /><br /> 詳細資訊： ["0" 自訂規範](#Specifier0)。|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
-|"#"|數字預留位置|將 "#" 符號取代為對應的數字 (如果有的話)，否則結果字串中不會出現任何數字。<br /><br /> 請注意，如果輸入字串中對應的數字是不重要的 0，結果字串中就不會顯示任何數字。 例如，0003 ("####") -> 3。<br /><br /> 詳細資訊： ["#" 自訂規範](#SpecifierD)。|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
-|"."|小數點|決定結果字串中小數點的位置。<br /><br /> 詳細資訊：["." 自訂規範](#SpecifierPt)。|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
-|","|群組分隔符號和數值範圍|同時做為群組分隔符號和數值縮放規範。 如果做為群組分隔符號，則會在每個群組之間插入當地語系化群組分隔符號字元。 做為數值縮放規範時，每指定一個逗號就會將數字除以 1000。<br /><br /> 詳細資訊： ["," 自訂規範](#SpecifierTh)。|群組分隔符號規範：<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> 縮放規範：<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|  
-|"%"|百分比預留位置|將數字乘以 100，並在結果字串中插入當地語系化的百分比符號。<br /><br /> 詳細資訊： ["%" 自訂規範](#SpecifierPct)。|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|  
-|"‰"|千分之一符號預留位置|將數字乘以 1000，並在結果字串中插入當地語系化的千分比符號。<br /><br /> 詳細資訊： ["‰" 自訂規範](#SpecifierPerMille)。|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
-|"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|指數標記法|如果後面至少接著一個 0 (零)，則使用指數標記法來格式化結果。 大小寫 "E" 或 "e" 表示結果字串中指數符號的大小寫。 接在 "E" 或 "e" 字元後面的零個數決定指數中的最少位數。 加號 (+) 表示指數前面一律加上正負號字元。 減號 (-) 表示只在負指數前面才加上正負號字元。<br /><br /> 詳細資訊： ["E" 和 "e" 自訂規範](#SpecifierExponent)。|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
+|"0"|零值預留位置|以對應的數字 (如果有的話) 取代零，否則結果字串中會出現零。<br /><br /> 詳細資訊：["0" 自訂規範](#Specifier0)。|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
+|"#"|數字預留位置|將 "#" 符號取代為對應的數字 (如果有的話)，否則結果字串中不會出現任何數字。<br /><br /> 請注意，如果輸入字串中對應的數字是不重要的 0，結果字串中就不會顯示任何數字。 例如，0003 ("####") -> 3。<br /><br /> 詳細資訊：["#" 自訂規範](#SpecifierD)。|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
+|"."|小數點|決定結果字串中小數點的位置。<br /><br /> 詳細資訊：["."自訂規範](#SpecifierPt)。|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
+|","|群組分隔符號和數值範圍|同時做為群組分隔符號和數值縮放規範。 如果做為群組分隔符號，則會在每個群組之間插入當地語系化群組分隔符號字元。 做為數值縮放規範時，每指定一個逗號就會將數字除以 1000。<br /><br /> 詳細資訊：["," 自訂規範](#SpecifierTh)。|群組分隔符號規範：<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> 縮放規範：<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|  
+|"%"|百分比預留位置|將數字乘以 100，並在結果字串中插入當地語系化的百分比符號。<br /><br /> 詳細資訊：["%" 自訂規範](#SpecifierPct)。|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|  
+|"‰"|千分之一符號預留位置|將數字乘以 1000，並在結果字串中插入當地語系化的千分比符號。<br /><br /> 詳細資訊：["‰" 自訂規範](#SpecifierPerMille)。|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
+|"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|指數標記法|如果後面至少接著一個 0 (零)，則使用指數標記法來格式化結果。 大小寫 "E" 或 "e" 表示結果字串中指數符號的大小寫。 接在 "E" 或 "e" 字元後面的零個數決定指數中的最少位數。 加號 (+) 表示指數前面一律加上正負號字元。 減號 (-) 表示只在負指數前面才加上正負號字元。<br /><br /> 詳細資訊：["E" 和 "e" 自訂規範](#SpecifierExponent)。|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
 |"\\"|逸出字元|將下一個字元解譯為常值，而不是自訂格式規範。<br /><br /> 詳細資訊：["\\" 逸出字元](#SpecifierEscape)。|987654 ("\\###00\\#") -> #987654#|  
-|'*字串*'<br /><br /> "*字串*"|常值字串分隔符號|表示應該將所括住的字元原封不動地複製到結果字串。<br/><br/>詳細資訊︰[字元常值](#character-literals)。|68 ("# 'degrees'") -> 68 degrees<br /><br /> 68 ("# ' degrees'") -> 68  degrees|  
-|;|區段分隔符號|以個別格式字串來定義正數、負數和零值的區段。<br /><br /> 詳細資訊： [";" 區段分隔符號](#SectionSeparator)。|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
-|其他|所有其他字元|字元會原封不動地複製到結果字串。<br/><br/>詳細資訊︰[字元常值](#character-literals)。|68 ("# °") -> 68 °|  
+|'*string*'<br /><br /> "*字串*"|常值字串分隔符號|表示應該將所括住的字元原封不動地複製到結果字串。<br/><br/>詳細資訊：[字元常值](#character-literals)。|68 ("# 'degrees'") -> 68 degrees<br /><br /> 68 ("# ' degrees'") -> 68  degrees|  
+|;|區段分隔符號|以個別格式字串來定義正數、負數和零值的區段。<br /><br /> 詳細資訊：[";" 區段分隔符號](#SectionSeparator)。|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
+|其他|所有其他字元|字元會原封不動地複製到結果字串。<br/><br/>詳細資訊：[字元常值](#character-literals)。|68 ("# °") -> 68 °|  
   
  下列各節提供每個自訂數值格式規範的詳細資訊。  
 
@@ -109,11 +109,11 @@ ms.locfileid: "47205051"
 ## <a name="the--custom-specifier"></a>"," 自訂規範  
  "," 字元同時當做群組分隔符號和數值縮放規範。  
   
--   群組分隔符號：如果在用於格式化數字整數位數的兩個數字預留位置 (0 或 #) 之間指定一個或多個逗號，則會在輸出的整數部分中在每個數字群組之間插入群組分隔符號字元。  
+-   群組分隔符號：如果在用於格式化數字整數位數的兩個數字預留位置 (0 或 #) 之間指定一或多個逗號，則會在輸出的整數部分中在每個數字群組之間插入群組分隔符號字元。  
   
      目前 <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> 物件的 <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> 和 <xref:System.Globalization.NumberFormatInfo> 屬性會判斷當做數字群組分隔符號使用的字元，以及每個數字群組的大小。 例如，如果使用字串 "#,#" 和不變的文化特性來格式化數字 1000，則輸出為 "1,000"。  
   
--   數值縮放規範：如果在明確或隱含小數點的左側緊接著指定一個或多個逗號，則每指定一個逗號就會將要格式化的數字除以 1000。 例如，如果使用字串 "0,," 來格式化數字 1 億，則其輸出為 "100"。  
+-   數值縮放規範：如果在明確或隱含小數點的左側緊接著指定一或多個逗號，則每指定一個逗號就會將要格式化的數字除以 1000。 例如，如果使用字串 "0,," 來格式化數字 1 億，則其輸出為 "100"。  
   
  您可以在相同的格式字串內使用群組分隔符號和數值縮放規範。 例如，如果使用字串 "#,0,," 和不變的文化特性來格式化數字 10 億，則輸出為 "1,000"。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "47205051"
 ## <a name="the--section-separator"></a>";" 區段分隔符號  
  冒號 (;) 是條件式格式規範，這個規範會根據數字的值是正數、負數還是零，將不同的格式套用至數字。 若要產生這個行為，自訂格式字串可以包含多達三個以分號分隔的區段， 下表將說明這些區段。  
   
-|區段數|描述|  
+|區段數|說明|  
 |------------------------|-----------------|  
 |一個區段|此格式字串適用於所有的值。|  
 |兩個區段|第一個區段適用於正數值及零值，第二個區段適用於負數值。<br /><br /> 如果要格式化的數字為負數，但依照第二個區段的格式四捨五入之後成為零，則產生的零會依照第一個區段來格式化。|  
@@ -247,7 +247,7 @@ ms.locfileid: "47205051"
 ### <a name="control-panel-settings"></a>控制台設定  
  [控制台] 中 [ **地區及語言選項]** 項目的設定會影響格式化作業所產生的結果字串。 這些設定是用來初始化與目前執行緒文化特性相關聯的 <xref:System.Globalization.NumberFormatInfo> 物件，而且目前的執行緒文化特性會提供用來管理格式的值。 使用不同設定的電腦會產生不同的結果字串。  
   
- 此外，如果您使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 建構函式來將新的 <xref:System.Globalization.CultureInfo> 物件具現化，而此物件代表的文化特性與目前系統文化特性相同，則 [控制台] 中的 [地區及語言選項] 項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。  
+ 此外，如果您使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 建構函式來具現化新的 <xref:System.Globalization.CultureInfo> 物件，而此物件代表的文化特性與目前系統文化特性相同，則 [控制台] 中的 [ **地區及語言選項** ] 項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。  
   
 ### <a name="rounding-and-fixed-point-format-strings"></a>四捨五入和定點格式字串  
  如果是定點格式字串 (即不含科學標記法格式字元的格式字串)，則數字會四捨五入成與小數點右邊之數字預留位置一樣多的小數位數。 如果格式字串不包含小數點，數值四捨五入至最接近的整數。 如果數值有比小數點左邊的數字預留位置還要多的位數，額外位數會緊接第一個數字預留位置之前複製到輸出字串。  
@@ -266,8 +266,8 @@ ms.locfileid: "47205051"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
-- [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
-- [操作說明：以前置字元為零來填補數字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
+- [格式化類型](../../../docs/standard/base-types/formatting-types.md)
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [如何：以前置字元零來填補數字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
 - [範例：.NET Framework 4 格式化公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

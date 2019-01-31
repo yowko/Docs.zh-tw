@@ -1,5 +1,5 @@
 ---
-title: 如何：使用反映發出定義泛型類型
+title: HOW TO：使用反映發出定義泛型型別
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32e06790ffebe49c7917ba4fc7344f86f7a49762
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8109bfd590e5cb08e0031dcfcab5090160b2932b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645054"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>如何：使用反映發出定義泛型類型
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>HOW TO：使用反映發出定義泛型型別
 本主題示範如何建立具有兩個型別參數的簡單泛型類型、如何將類別條件約束、介面條件約束及特殊條件約束套用至型別參數，以及如何建立成員，以使用類別的型別參數作為參數類型及傳回類型。  
   
 > [!IMPORTANT]
->  方法不是只因為屬於泛型型別並使用該類型的型別參數，而成為泛型。 方法只有在有自己的型別參數清單時，才會是泛型。 泛型型別上的大部分方法不是泛型，如本例所示。 如需發出泛型方法的範例，請參閱[如何︰使用反映發出定義泛型方法](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)。  
+>  方法不是只因為屬於泛型型別並使用該類型的型別參數，而成為泛型。 方法只有在有自己的型別參數清單時，才會是泛型。 泛型型別上的大部分方法不是泛型，如本例所示。 如需發出泛型方法的範例，請參閱[如何：使用反映發出定義泛型方法](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)。  
   
 ### <a name="to-define-a-generic-type"></a>定義泛型型別  
   
@@ -135,7 +135,7 @@ ms.locfileid: "44085247"
   
 -   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [使用反映發出](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [反映發出動態組件案例](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
+- [使用反映發出](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)
+- [反映發出動態組件案例](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

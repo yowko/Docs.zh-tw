@@ -1,5 +1,5 @@
 ---
-title: 如何：取消 PLINQ 查詢
+title: HOW TO：取消 PLINQ 查詢
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5008ede5054e8e6970bcb6f804fa1888244238f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45973088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604297"
 ---
-# <a name="how-to-cancel-a-plinq-query"></a>如何：取消 PLINQ 查詢
+# <a name="how-to-cancel-a-plinq-query"></a>HOW TO：取消 PLINQ 查詢
 下列範例說明取消 PLINQ 查詢的兩種方式。 第一個範例示範如何取消大部分由資料周遊所組成的查詢。 第二個範例示範如何取消包含需要大量計算之使用者函式的查詢。  
   
 > [!NOTE]
@@ -52,6 +52,6 @@ ms.locfileid: "45973088"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Linq.ParallelEnumerable>  
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- <xref:System.Linq.ParallelEnumerable>
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)

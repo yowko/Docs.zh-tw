@@ -4,12 +4,12 @@ description: 本指南說明您在 .NET 中建置伺服器應用程式時應考�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fe6aa28b456d3a83b15dfcb3a65147e77b9d5f85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699502"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -85,13 +85,13 @@ ms.locfileid: "50202233"
 
 某些 .NET Framework 技術無法在 .NET Core 中使用。 這其中有一些技術可在更新的 .NET Core 版本中使用。 其他技術則不適用於由 .NET Core 設為目標的新應用程式模式，且可能永遠無法使用。 下列清單顯示 .NET Core 中找不到的最常見技術：
 
-* ASP.NET Web Forms 應用程式：ASP.NET Web Forms 只能在 .NET Framework 中使用。 ASP.NET Core 無法用於 ASP.NET Web Forms。 目前並未規劃將 ASP.NET Web Forms 帶入 .NET Core。
+* ASP.NET Web Forms 應用程式：ASP.NET Web Forms 僅適用於 .NET Framework。 ASP.NET Core 無法用於 ASP.NET Web Forms。 目前並未規劃將 ASP.NET Web Forms 帶入 .NET Core。
 
 * ASP.NET Web Pages 應用程式：ASP.NET Web Pages 未隨附於 ASP.NET Core 中。 
 
 * WCF 服務實作。 即使已有 [WCF 用戶端程式庫](https://github.com/dotnet/wcf) 可從 .NET Core 取用 WCF 服務，但 WCF 伺服器實作目前只能在 .NET Framework 中使用。 此案例不是 .NET Core 目前計劃的一部分，但未來會納入考慮。
 
-* 工作流程相關的服務︰Windows Workflow Foundation (WF)、工作流程服務 (WCF + 單一服務中的 WF) 和 WCF Data Services (先前稱為 "ADO.NET Data Services") 僅適用於 .NET Framework。  目前並未規劃將 WF/WCF+WF/WCF Data Services 帶入 .NET Core。
+* 工作流程相關服務：Windows Workflow Foundation (WF)、工作流程服務 (以單一服務提供 WCF + WF) 和 WCF Data Services (先前稱為 ADO.NET Data Services") 僅適用於 .NET Framework。  目前並未規劃將 WF/WCF+WF/WCF Data Services 帶入 .NET Core。
 
 * 語言支援：.NET Core 目前支援 Visual Basic 和 F#，但不是所有專案類型都提供支援。 如需支援的專案範本清單，請參閱 [dotnet new 的範本選項](../core/tools/dotnet-new.md#arguments)。
 
@@ -103,11 +103,11 @@ ms.locfileid: "50202233"
 
 ## <a name="see-also"></a>另請參閱
 
-* [在 ASP.NET 和 ASP.NET Core 之間進行選擇](/aspnet/core/choose-aspnet-framework)
-* [將目標指向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
-* [目標架構](frameworks.md)
-* [.NET Core 指南](../core/index.md)  
-* [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)  
-* [Docker 上的 .NET Framework 指南](../framework/docker/index.md)  
-* [.NET 偵錯概觀](components.md)  
-* [.NET 微服務：容器化 .NET 應用程式的架構](microservices-architecture/index.md)
+- [在 ASP.NET 和 ASP.NET Core 之間進行選擇](/aspnet/core/choose-aspnet-framework)
+- [將目標指向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
+- [目標架構](frameworks.md)
+- [.NET Core 指南](../core/index.md)
+- [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)
+- [Docker 上的 .NET Framework 指南](../framework/docker/index.md)
+- [.NET 偵錯概觀](components.md)
+- [.NET 微服務：容器化 .NET 應用程式的架構](microservices-architecture/index.md)

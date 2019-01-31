@@ -1,5 +1,5 @@
 ---
-title: 如何：撰寫含有分割區域變數的 Parallel.ForEach 迴圈
+title: HOW TO：撰寫含有磁碟分割區域變數的 Parallel.ForEach 迴圈
 ms.date: 06/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 2f27d1f11e4517653c9beb2d868d798c215741a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730980"
 ---
-# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>如何：撰寫含有分割區域變數的 Parallel.ForEach 迴圈
+# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>HOW TO：撰寫含有磁碟分割區域變數的 Parallel.ForEach 迴圈
 下列範例說明如何撰寫使用分割區域變數的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 方法。 當 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈執行時，它會將其來源集合分成多個分割。 每個分割會有自己的分割區域變數複本。 分割區域變數與[執行緒區域變數](xref:System.Threading.ThreadLocal%601)類似，不同之處在於多個分割可以在單一執行緒上執行。
   
- 這個範例中的程式碼和參數非常類似於對應的 <xref:System.Threading.Tasks.Parallel.For%2A> 方法。 如需詳細資訊，請參閱：[如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)。  
+ 這個範例中的程式碼和參數非常類似於對應的 <xref:System.Threading.Tasks.Parallel.For%2A> 方法。 如需詳細資訊，請參閱[＜How to：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)。  
   
  若要在 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈中使用分割區域變數，您必須呼叫使用兩個型別參數的其中一個方法多載。 第一個型別參數 `TSource` 指定來源項目的類型，而第二個型別參數 `TLocal` 則指定分割區域變數的類型。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "46562303"
   
 ## <a name="see-also"></a>另請參閱
 
-- [資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
-- [操作說明：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+- [資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
 - [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

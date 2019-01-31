@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633848"
 ---
 # <a name="ipv6-addressing"></a>IPv6 定址
 網際網路通訊協定第 6 版 (IPv6) 的位址長度為 128 個位元長。 使用這類大型位址空間的其中一個原因是，將可用的位址細分到路由網域的階層，反映網際網路的拓撲。 另一個原因是，將連線裝置之網路網路介面卡 (或介面) 的位址對應至網路。 IPv6 特有的固有功能，是在其最低層級解析位址，即網路介面層級，且也擁有自動組態功能。  
@@ -64,7 +64,7 @@ ms.locfileid: "50183408"
   
     -   **網站-本機位址**。 這些位址是用在單一網站，且具有下列格式：FEC0::*SubnetID*:*InterfaceID*。 網站-本機位址可用來在網站中定址，不需要全域前置詞。  
   
-    -   **全域 IPv6 單點傳播位址**。 這些位址可以用在整個網際網路上，而且具有下列格式：010(FP，3 位元) TLA ID (13 位元) 保留項目 (8 位元) NLA ID (24 位元) SLA ID (16 位元) *InterfaceID* (64 位元)。  
+    -   **全域 IPv6 單點傳播位址**。 這些位址可以用在整個網際網路上，且具有下列格式：010(FP，3 位元) TLA ID (13 位元) 保留項目 (8 位元) NLA ID (24 位元) SLA ID (16 位元) *InterfaceID* (64 位元)。  
   
 -   **多點傳送位址**。 一組介面 (通常屬於不同的節點) 的識別碼。 傳送到此位址的封包會被傳遞到該位址所識別的所有介面。 多點傳送位址類型取代 IPv4 廣播位址。  
   
@@ -72,6 +72,6 @@ ms.locfileid: "50183408"
   
  一般情況下，節點一律會有連結-本機位址。 它可能有網站-本機位址和一或多個全域位址。  
   
-## <a name="see-also"></a>請參閱  
- [網際網路通訊協定第 6 版](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [通訊端](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>另請參閱
+- [網際網路通訊協定第 6 版](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [通訊端](../../../docs/framework/network-programming/sockets.md)

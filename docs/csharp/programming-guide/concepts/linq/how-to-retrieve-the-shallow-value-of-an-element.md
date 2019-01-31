@@ -1,20 +1,20 @@
 ---
-title: 如何：擷取元素的表層值 (C#)
+title: HOW TO：擷取項目的表層值 (C#)
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 2555b2f17120e4dce670a9fef9fc6a126a47e935
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 593fe1c22664f1e4e8322cb8816e58f4721c5bf8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672825"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>如何：擷取元素的表層值 (C#)
-本主題說明如何取得元素的表層值。 表層值僅是特定元素的值。與深層值不同的是，深層值包含了由所有子代元素連結成單一字串的值。  
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>HOW TO：擷取項目的表層值 (C#)
+本主題說明如何取得項目的表層值。 表層值僅是特定項目的值。與深層值不同的是，深層值包含了由所有子代項目連結成單一字串的值。  
   
- 當您使用轉換或 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性，您擷取的是深層值。 若要擷取表層值，您可以使用 `ShallowValue` 擴充方法，如下列範例所示。 當您想要根據元素的內容進行選取時，擷取表層值就非常有用。  
+ 當您使用轉換或 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性，您擷取的是深層值。 若要擷取表層值，您可以使用 `ShallowValue` 擴充方法，如下列範例所示。 當您想要根據項目的內容進行選取時，擷取表層值就非常有用。  
   
- 下列範例會宣告擷取元素表層值的擴充方法。 接著會在查詢中使用此擴充方法，將所有包含計算值的元素列出。  
+ 下列範例會宣告擷取項目表層值的擴充方法。 接著會在查詢中使用此擴充方法，將所有包含計算值的項目列出。  
   
 ## <a name="example"></a>範例  
  下列文字檔 Report.xml 是此範例的原始檔。  

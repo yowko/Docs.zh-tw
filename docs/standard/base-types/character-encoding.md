@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 55eb1d713c25314877fffd8a683ce5a8d9516d92
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 16154ff6b2fcf6c537126b6ced03c45f6746b57a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149922"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649397"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字元編碼
 字元是可以用許多不同的方式來表示的抽象實體。 字元編碼是一套系統，可將所支援之字元集中的每個字元與代表該字元的特定值配對。 例如，摩斯密碼就是一種字元編碼，可將羅馬字母中的每個字元與適合透過電報線路傳輸的點和虛線圖樣配對。 電腦的字元編碼可將所支援之字元集中的每個字元與代表該字元的數值配對。 字元編碼包含兩個不同的元件：  
@@ -28,7 +28,7 @@ ms.locfileid: "53149922"
   
 -   解碼器，可將位元組序列轉譯成字元序列。  
   
- 字元編碼描述編碼器和解碼器運作時所依據的規則。 例如， <xref:System.Text.UTF8Encoding> 類別描述編碼和解碼 8 位元 Unicode 轉換格式 (UTF-8) 的規則，該格式使用一到四個位元組來表示單一 Unicode 字元。 編碼和解碼也可包含驗證。 例如，<xref:System.Text.UnicodeEncoding> 類別會檢查所有 Surrogate，確定它們是由有效的 Surrogate 字組所組成。 (Surrogate 字組是由包含範圍從 U+D800 到 U+DBFF 之字碼指標的字元，後面接著包含範圍從 U+DC00 到 U+DFFF 之字碼指標的字元所組成)。後援策略決定編碼器如何處理無效的字元，或解碼器如何處理無效的位元組。  
+ 字元編碼描述編碼器和解碼器運作時所依據的規則。 例如， <xref:System.Text.UTF8Encoding> 類別描述編碼和解碼 8 位元 Unicode 轉換格式 (UTF-8) 的規則，該格式使用一到四個位元組來表示單一 Unicode 字元。 編碼和解碼也可包含驗證。 例如， <xref:System.Text.UnicodeEncoding> 類別會檢查所有 Surrogate，確定它們是由有效的 Surrogate 字組所組成。 (Surrogate 字組是由包含範圍從 U+D800 到 U+DBFF 之字碼指標的字元，後面接著包含範圍從 U+DC00 到 U+DFFF 之字碼指標的字元所組成)。後援策略決定編碼器如何處理無效的字元，或解碼器如何處理無效的位元組。  
   
 > [!WARNING]
 >  .NET 編碼類別提供儲存和轉換字元資料的方法。 這些類別不應用來儲存字串格式的二進位資料。 根據使用的編碼方式，使用編碼類別將二進位資料轉換成字串格式可能會導致未預期的行為，並且產生不正確或損毀的資料。 若要將二進位資料轉換成字串格式，請使用 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 方法。  
@@ -74,7 +74,7 @@ ms.locfileid: "53149922"
 |UTF-16|<xref:System.Text.UnicodeEncoding>|以一個或兩個 16 位元整數的序列表示每個 Unicode 字碼指標。 雖然 Unicode 補充字元 (U+10000 及以上) 需要兩個 UTF-16 Surrogate 字碼指標，但最常用的 Unicode 字元只需要一個 UTF-16 字碼指標。 同時支援位元組由小到大和位元組由大到小的位元組順序。|Common Language Runtime 會使用 UTF-16 編碼表示 <xref:System.Char> 和 <xref:System.String> 值，而 Windows 作業系統會使用該編碼表示 `WCHAR` 值。|  
 |UTF-32|<xref:System.Text.UTF32Encoding>|以 32 位元整數表示每個 Unicode 字碼指標。 同時支援位元組由小到大和位元組由大到小的位元組順序。|當編碼空間對作業系統十分重要，而應用程式想要在作業系統上避免 UTF-16 編碼的 Surrogate 字碼指標行為時，可以使用 UTF-32 編碼。 畫面上呈現的單一字符仍然可以使用一個以上的 UTF-32 字元編碼。|  
 |ANSI/ISO 編碼||提供各種字碼頁的支援。 在 Windows 作業系統上，字碼頁是用來支援特定語言或語言群組。 如需列出 .NET 所支援之字碼頁的表格，請參閱 <xref:System.Text.Encoding> 類別。 您可以藉由呼叫 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法，為特定字碼頁擷取編碼物件。|字碼頁包含 256 個字碼指標，並且以零起始。 在大部分的字碼頁中，0 到 127 的字碼指標代表 ASCII 字元集，而各字碼頁的 128 到 255 字碼指標則有很大的差異。 例如，字碼頁 1252 提供拉丁書寫系統 (包括英文、德文和法文) 的字元。 字碼頁 1252 中的最後 128 個字碼指標含有強調文字字元。 字碼頁 1253 提供希臘文書寫系統所需的字元碼。 字碼頁 1253 中的最後 128 個字碼指標含有希臘文字元。 因此，採用 ANSI 字碼頁的應用程式無法將希臘文和德文儲存在相同的文字資料流中，除非它包含了表示參考字碼頁的識別項。|  
-|雙位元組字元集 (DBCS) 編碼||支援包含超過 256 個字元的語言，例如中文、日文和韓文。 在 DBCS 中，一組字碼指標 (一個雙位元組) 會代表一個字元。 <xref:System.Text.Encoding.IsSingleByte%2A?displayProperty=nameWithType> 屬性會針對 DBCS 編碼傳回 `false`。 您可以藉由呼叫 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法，為特定 DBCS 擷取編碼物件。|在 DBCS 中，一組字碼指標 (一個雙位元組) 會代表一個字元。 當應用程式處理 DBCS 資料時，DBCS 字元的第一個位元組 (前導位元組) 會與緊接在它後面的後隨位元組一起處理。 由於單獨一組雙位元組字碼指標可依據字碼頁表示不同的字元，因此這個配置仍然不允許在相同資料流中結合兩種語言，例如日文和中文。|  
+|雙位元組字元集 (DBCS) 編碼||支援包含超過 256 個字元的語言，例如中文、日文和韓文。 在 DBCS 中，一組字碼指標 (一個雙位元組) 會代表一個字元。 <xref:System.Text.Encoding.IsSingleByte%2A?displayProperty=nameWithType> 屬性會針對 DBCS 編碼傳回 `false` 。 您可以藉由呼叫 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法，為特定 DBCS 擷取編碼物件。|在 DBCS 中，一組字碼指標 (一個雙位元組) 會代表一個字元。 當應用程式處理 DBCS 資料時，DBCS 字元的第一個位元組 (前導位元組) 會與緊接在它後面的後隨位元組一起處理。 由於單獨一組雙位元組字碼指標可依據字碼頁表示不同的字元，因此這個配置仍然不允許在相同資料流中結合兩種語言，例如日文和中文。|  
   
  這些編碼可讓您處理 Unicode 字元，以及舊版應用程式中最常用的編碼。 此外，您可以藉由定義衍生自 <xref:System.Text.Encoding> 的類別及覆寫其成員，來建立自訂編碼。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "53149922"
   
  衍生自 <xref:System.Text.Encoding> 之類別的編碼和解碼方法設計成可處理一組完整的資料；也就是說，單一方法呼叫中會提供所有要編碼或解碼的資料。 不過，在某些情況下，資料是以資料流提供，因此只能從個別讀取作業取得要編碼或解碼的資料。 因此，編碼或解碼作業必須記住之前叫用時的任何儲存狀態。 衍生自 <xref:System.Text.Encoder> 和 <xref:System.Text.Decoder> 之類別的方法能夠處理橫跨多個方法呼叫的編碼和解碼作業。  
   
- 特定編碼的 <xref:System.Text.Encoder> 物件可從該編碼的 <xref:System.Text.Encoding.GetEncoder%2A?displayProperty=nameWithType> 屬性取得。 特定編碼的 <xref:System.Text.Decoder> 物件可從該編碼的 <xref:System.Text.Encoding.GetDecoder%2A?displayProperty=nameWithType> 屬性取得。 若為解碼作業，請注意衍生自 <xref:System.Text.Decoder> 的類別包含 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 方法，但是沒有對應至 <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType> 的方法。  
+ 特定編碼的 <xref:System.Text.Encoder> 物件可從該編碼的 <xref:System.Text.Encoding.GetEncoder%2A?displayProperty=nameWithType> 屬性取得。 特定編碼的 <xref:System.Text.Decoder> 物件可從該編碼的 <xref:System.Text.Encoding.GetDecoder%2A?displayProperty=nameWithType> 屬性取得。 若為解碼作業，請注意衍生自 <xref:System.Text.Decoder> 的類別包含 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 方法，但是沒有對應至 <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType>的方法。  
   
- 下列範例說明使用 <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> 和 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 方法解碼 Unicode 位元組陣列的差異。 這個範例會將包含某些 Unicode 字元的字串編碼為檔案，然後使用這兩種解碼方法進行解碼，且一次解碼十個位元組。 由於 Surrogate 字組會在第十個和第十一個位元組發生，因此會在不同的方法呼叫中另外解碼。 如輸出所示，<xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> 方法無法正確解碼位元組，而是將它們取代為 U+FFFD (REPLACEMENT CHARACTER)。 另一方面， <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 方法能夠成功解碼位元組陣列並取得原始字串。  
+ 下列範例說明使用 <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> 和 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 方法解碼 Unicode 位元組陣列的差異。 這個範例會將包含某些 Unicode 字元的字串編碼為檔案，然後使用這兩種解碼方法進行解碼，且一次解碼十個位元組。 由於 Surrogate 字組會在第十個和第十一個位元組發生，因此會在不同的方法呼叫中另外解碼。 如輸出所示， <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> 方法無法正確解碼位元組，而是將它們取代為 U+FFFD (REPLACEMENT CHARACTER)。 另一方面， <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 方法能夠成功解碼位元組陣列並取得原始字串。  
   
  [!code-csharp[Conceptual.Encoding#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/stream1.cs#10)]
  [!code-vb[Conceptual.Encoding#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/stream1.vb#10)]  
@@ -184,7 +184,7 @@ ms.locfileid: "53149922"
  除了 QUESTION MARK (U+003F) 之外，還常使用 Unicode REPLACEMENT CHARACTER (U+FFFD) 做為取代字串，特別是當解碼無法成功轉譯成 Unicode 字元的位元組序列時。 不過，您可以自由選擇任何取代字串，而且該字串可以包含多個字元。  
   
 <a name="Exception"></a>   
-### <a name="exception-fallback"></a>例外狀況後援  
+### <a name="exception-fallback"></a>Exception Fallback  
  編碼器可在無法編碼一組字元時擲回 <xref:System.Text.EncoderFallbackException> ，而解碼器可在無法解碼位元組陣列時擲回 <xref:System.Text.DecoderFallbackException> ，而不是提供自動調整後援或取代字串。 若要在編碼和解碼作業中擲回例外狀況，請將 <xref:System.Text.EncoderExceptionFallback> 物件和 <xref:System.Text.DecoderExceptionFallback> 物件分別提供給 <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 方法。 下列範例說明 <xref:System.Text.ASCIIEncoding> 類別的例外狀況後援。  
   
  [!code-csharp[Conceptual.Encoding#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/exceptionascii.cs#4)]
@@ -202,7 +202,7 @@ ms.locfileid: "53149922"
  雖然 <xref:System.Text.EncoderFallbackException> 和 <xref:System.Text.DecoderFallbackException> 物件提供了有關例外狀況的適當診斷資訊，但是並未提供編碼或解碼緩衝區的存取權。 因此，這兩個物件不允許在編碼或解碼方法內取代或更正無效的資料。  
   
 <a name="Custom"></a>   
-## <a name="implementing-a-custom-fallback-strategy"></a>實作自訂後援策略  
+## <a name="implementing-a-custom-fallback-strategy"></a>Implementing a Custom Fallback Strategy  
  除了字碼頁在內部實作的自動調整對應之外，.NET 還包括下列實作後援策略的類別：  
   
 -   使用 <xref:System.Text.EncoderReplacementFallback> 和 <xref:System.Text.EncoderReplacementFallbackBuffer> 取代編碼作業中的字元。  
@@ -250,7 +250,7 @@ ms.locfileid: "53149922"
 ### <a name="an-encoderfallback-example"></a>EncoderFallback 範例  
  之前的範例使用取代後援來取代未對應至包含星號 (*) 之 ASCII 字元的 Unicode 字元。 下列範例使用自訂自動調整後援實作，而不是提供較佳的非 ASCII 字元對應。  
   
- 下列程式碼會定義名為 `CustomMapper` 的類別，該類別衍生自 <xref:System.Text.EncoderFallback> ，會處理非 ASCII 字元的自動調整對應。 其 `CreateFallbackBuffer` 方法會傳回提供 `CustomMapperFallbackBuffer` 實作的 <xref:System.Text.EncoderFallbackBuffer> 物件。 `CustomMapper` 類別使用 <xref:System.Collections.Generic.Dictionary%602> 物件來儲存不支援的 Unicode 字元對應 (機碼值) 及其對應的 8 位元字元 (儲存在 64 位元整數的兩個連續的位元組中)。 為了讓後援緩衝區可以使用這項對應，`CustomMapper` 執行個體會當做參數傳遞給 `CustomMapperFallbackBuffer` 類別建構函式。 由於最長的對應是代表 Unicode 字元 U+221E 的字串 "INF"，因此 `MaxCharCount` 屬性會傳回 3。  
+ 下列程式碼會定義名為 `CustomMapper` 的類別，該類別衍生自 <xref:System.Text.EncoderFallback> ，會處理非 ASCII 字元的自動調整對應。 其 `CreateFallbackBuffer` 方法會傳回提供 `CustomMapperFallbackBuffer` 實作的 <xref:System.Text.EncoderFallbackBuffer> 物件。 `CustomMapper` 類別使用 <xref:System.Collections.Generic.Dictionary%602> 物件來儲存不支援的 Unicode 字元對應 (機碼值) 及其對應的 8 位元字元 (儲存在 64 位元整數的兩個連續的位元組中)。 為了讓後援緩衝區可以使用這項對應， `CustomMapper` 執行個體會當做參數傳遞給 `CustomMapperFallbackBuffer` 類別建構函式。 由於最長的對應是代表 Unicode 字元 U+221E 的字串 "INF"，因此 `MaxCharCount` 屬性會傳回 3。  
   
  [!code-csharp[Conceptual.Encoding#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/custom1.cs#5)]
  [!code-vb[Conceptual.Encoding#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/custom1.vb#5)]  
@@ -267,9 +267,9 @@ ms.locfileid: "53149922"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Text.Encoder>  
-- <xref:System.Text.Decoder>  
-- <xref:System.Text.DecoderFallback>  
-- <xref:System.Text.Encoding>  
-- <xref:System.Text.EncoderFallback>  
+- <xref:System.Text.Encoder>
+- <xref:System.Text.Decoder>
+- <xref:System.Text.DecoderFallback>
+- <xref:System.Text.Encoding>
+- <xref:System.Text.EncoderFallback>
 - [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)

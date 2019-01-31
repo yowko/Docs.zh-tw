@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a22f462bc425a9c9e8f1be700474e7326193674
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c75f9ffe17d04ad4b8e41a6e1402a3cf4be7e07f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46001060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722708"
 ---
 # <a name="custom-timespan-format-strings"></a>自訂 TimeSpan 格式字串
 
@@ -43,7 +43,7 @@ ms.locfileid: "46001060"
 
 <a name="table"></a> 下表描述自訂日期和時間的格式規範。
 
-| 格式規範 | 描述 | 範例 |
+| 格式規範 | 說明 | 範例 |
 |----------------------|-----------------|-------------|
 |"d"、"%d"|時間間隔中的完整天數。<br /><br /> 詳細資訊：["d" 自訂格式規範](#dSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
 |"dd"-"dddddddd"|時間間隔中的完整天數，視需要填補前置零。<br /><br /> 詳細資訊：["dd"-"dddddddd" 自訂格式規範](#ddSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|
@@ -60,14 +60,14 @@ ms.locfileid: "46001060"
 |"fffff"|時間間隔中的十萬分之一秒。<br /><br /> 詳細資訊：["fffff" 自訂格式規範](#f5Specifier)。|`TimeSpan.Parse("0:0:6.8954321")`：<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06.89543|
 |"ffffff"|時間間隔中的百萬分之一秒。<br /><br /> 詳細資訊：["ffffff" 自訂格式規範](#f6Specifier)。|`TimeSpan.Parse("0:0:6.8954321")`：<br /><br /> `ffffff` --> 895432<br /><br /> `ss\.ffffff` --> 06.895432|
 |"fffffff"|時間間隔中的千萬分之一秒 (或小數刻度)。<br /><br /> 詳細資訊：["fffffff" 自訂格式規範](#f7Specifier)。|`TimeSpan.Parse("0:0:6.8954321")`：<br /><br /> `fffffff` --> 8954321<br /><br /> `ss\.fffffff` --> 06.8954321|
-|"F"、"%F"|時間間隔中的十分之一秒。 如果數字為零，則不會顯示任何內容。<br /><br /> 詳細資訊：["F" 自訂格式規範](#F_Specifier)。|`TimeSpan.Parse("00:00:06.32")`：<br /><br /> `%F`: 3<br /><br /> `TimeSpan.Parse("0:0:3.091")`：<br /><br /> `ss\.F`: 03.|
-|"FF"|時間間隔中的百分之一秒。 不包含小數點後的零或兩位數都是零的數字。<br /><br /> 詳細資訊：["FF" 自訂格式規範](#FF_Specifier)。|`TimeSpan.Parse("00:00:06.329")`：<br /><br /> `FF`: 32<br /><br /> `TimeSpan.Parse("0:0:3.101")`：<br /><br /> `ss\.FF`: 03.1|
-|"FFF"|時間間隔中的毫秒。 不包含小數點後的零。<br /><br /> 詳細資訊：|`TimeSpan.Parse("00:00:06.3291")`：<br /><br /> `FFF`: 329<br /><br /> `TimeSpan.Parse("0:0:3.1009")`：<br /><br /> `ss\.FFF`: 03.1|
-|"FFFF"|時間間隔中的萬分之一秒。 不包含小數點後的零。<br /><br /> 詳細資訊：["FFFF" 自訂格式規範](#F4_Specifier)。|`TimeSpan.Parse("00:00:06.32917")`：<br /><br /> `FFFFF`: 3291<br /><br /> `TimeSpan.Parse("0:0:3.10009")`：<br /><br /> `ss\.FFFF`: 03.1|
-|"FFFFF"|時間間隔中的十萬分之一秒。 不包含小數點後的零。<br /><br /> 詳細資訊：["FFFFF" 自訂格式規範](#F5_Specifier)。|`TimeSpan.Parse("00:00:06.329179")`：<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`：<br /><br /> `ss\.FFFFF`: 03.1|
-|"FFFFFF"|時間間隔中的百萬分之一秒。 不顯示小數點後的零。<br /><br /> 詳細資訊：["FFFFFF" 自訂格式規範](#F6_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`：<br /><br /> `ss\.FFFFFF`: 03.1|
-|"FFFFFFF"|時間間隔中的千萬分之一秒。 不顯示小數點後的零或七位數都是零。<br /><br /> 詳細資訊：["FFFFFFF" 自訂格式規範](#F7_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`：<br /><br /> `ss\.FFFFFF`: 03.19|
-|'*字串*'|常值字串分隔符號。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|"F"、"%F"|時間間隔中的十分之一秒。 如果數字為零，則不會顯示任何內容。<br /><br /> 詳細資訊：["F" 自訂格式規範](#F_Specifier)。|`TimeSpan.Parse("00:00:06.32")`：<br /><br /> `%F`：3<br /><br /> `TimeSpan.Parse("0:0:3.091")`：<br /><br /> `ss\.F`：03.|
+|"FF"|時間間隔中的百分之一秒。 不包含小數點後的零或兩位數都是零的數字。<br /><br /> 詳細資訊：["FF" 自訂格式規範](#FF_Specifier)。|`TimeSpan.Parse("00:00:06.329")`：<br /><br /> `FF`：32<br /><br /> `TimeSpan.Parse("0:0:3.101")`：<br /><br /> `ss\.FF`：03.1|
+|"FFF"|時間間隔中的毫秒。 不包含小數點後的零。<br /><br /> 詳細資訊：|`TimeSpan.Parse("00:00:06.3291")`：<br /><br /> `FFF`：329<br /><br /> `TimeSpan.Parse("0:0:3.1009")`：<br /><br /> `ss\.FFF`：03.1|
+|"FFFF"|時間間隔中的萬分之一秒。 不包含小數點後的零。<br /><br /> 詳細資訊：["FFFF" 自訂格式規範](#F4_Specifier)。|`TimeSpan.Parse("00:00:06.32917")`：<br /><br /> `FFFFF`：3291<br /><br /> `TimeSpan.Parse("0:0:3.10009")`：<br /><br /> `ss\.FFFF`：03.1|
+|"FFFFF"|時間間隔中的十萬分之一秒。 不包含小數點後的零。<br /><br /> 詳細資訊：["FFFFF" 自訂格式規範](#F5_Specifier)。|`TimeSpan.Parse("00:00:06.329179")`：<br /><br /> `FFFFF`：32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`：<br /><br /> `ss\.FFFFF`：03.1|
+|"FFFFFF"|時間間隔中的百萬分之一秒。 不顯示小數點後的零。<br /><br /> 詳細資訊：["FFFFFF" 自訂格式規範](#F6_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`：329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`：<br /><br /> `ss\.FFFFFF`：03.1|
+|"FFFFFFF"|時間間隔中的千萬分之一秒。 不顯示小數點後的零或七位數都是零。<br /><br /> 詳細資訊：["FFFFFFF" 自訂格式規範](#F7_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`：3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`：<br /><br /> `ss\.FFFFFF`：03.19|
+|'*string*'|常值字串分隔符號。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
 |\\|逸出字元。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |任意字元|其他任何未逸出字元都會解譯為自訂格式規範。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
@@ -420,5 +420,5 @@ ms.locfileid: "46001060"
 
 ## <a name="see-also"></a>另請參閱
 
-- [格式化類型](formatting-types.md)  
-- [標準 TimeSpan 格式字串](standard-timespan-format-strings.md)  
+- [格式化類型](formatting-types.md)
+- [標準 TimeSpan 格式字串](standard-timespan-format-strings.md)

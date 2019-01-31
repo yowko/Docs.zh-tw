@@ -1,16 +1,16 @@
 ---
-title: 如何：修改字串內容 - C# 指南
+title: HOW TO：修改字串內容 - C# 指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 349269f8158f7d4db5e2058791087a258f504460
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664007"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>如何：在 C\# 中修改字串內容
+# <a name="how-to-modify-string-contents-in-c"></a>HOW TO：在 C\# 中修改字串內容
 
 本文示範多種技術，會藉由修改現有的 `string`來產生 `string`。 所有示範的技術均會傳回修改結果，作為新的 `string` 物件。 為明確示範此做法，所有的範例都會將結果儲存到新的變數。 接著，您可在執行各個範例時，對原本的 `string` 與修改後產生的 `string` 進行檢查。
 
@@ -65,7 +65,7 @@ ms.locfileid: "49453433"
 ## <a name="unsafe-modifications-to-string"></a>對字串進行不安全的修改
 
 您可在字串建立後，使用**不安全**的程式碼直接加以修改。 不安全的程式碼會略過許多 .NET 設計來減少程式碼中特定類型 Bug 的功能。 因為字串類別設計為**固定**類型，所以您必須使用不安全的程式碼才能直接修改字串。 建立後即無法變更其值。 不安全的程式碼會藉由存取及修改 `string` 使用的記憶體，而不使用一般 `string` 方式，以規避此屬性。
-下列範例專為特殊情況提供，例如您想要使用不安全的模式來直接修改字串。 此範例示範了如何使用 `fixed` 關鍵字。 `fixed` 關鍵字會在程式碼使用不安全的指標存取記憶體時，禁止記憶體回收行程 (GC) 移動記憶體中的字串物件。 它也示範因為 C# 編譯器在內部儲存 (實習生) 字串的方式，可能造成的字串不安全作業的一個副作用。 一般情況下，除非絕對必要，您不應該使用此技術。 您可從這邊文章深入了解 [unsafe](../language-reference/keywords/unsafe.md) 與 [fixed](../language-reference/keywords/fixed-statement.md)。 <xref:System.String.Intern%2A> 的 API 參考包含字串暫留的資訊。
+下列範例專為特殊情況提供，例如您想要使用不安全的模式來直接修改字串。 此範例示範了如何使用 `fixed` 關鍵字。 `fixed` 關鍵字會在程式碼使用不安全的指標存取記憶體時，禁止記憶體回收行程 (GC) 移動記憶體中的字串物件。 它也示範因為 C# 編譯器在內部儲存 (實習生) 字串的方式，可能造成的字串不安全作業的一個副作用。 一般情況下，除非絕對必要，您不應該使用這項技術。 您可從這邊文章深入了解 [unsafe](../language-reference/keywords/unsafe.md) 與 [fixed](../language-reference/keywords/fixed-statement.md)。 <xref:System.String.Intern%2A> 的 API 參考包含字串暫留的資訊。
 
 [!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
@@ -73,5 +73,5 @@ ms.locfileid: "49453433"
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Framework 規則運算式](../../standard/base-types/regular-expressions.md)  
-- [規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)  
+- [.NET Framework 規則運算式](../../standard/base-types/regular-expressions.md)
+- [規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)

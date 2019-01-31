@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: a51d87aeef8d39356af10d526db63b7b16b9ca58
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9849c64b30ed1021c12f34a7920104537292197a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628457"
 ---
 # <a name="using-streams-on-the-network"></a>在網路上使用資料流
 網路資源在 .NET Framework 中是以資料流的形式呈現。 因為對資料流沒有任何特殊待遇，.NET Framework 提供下列功能：  
@@ -102,6 +102,6 @@ Dim sr As _
 sr.Close()  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [如何：使用 WebRequest 類別要求資料](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
- [要求資料](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>另請參閱
+- [如何：使用 WebRequest 類別要求資料](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+- [要求資料](../../../docs/framework/network-programming/requesting-data.md)

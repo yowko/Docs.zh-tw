@@ -4,12 +4,12 @@ description: 針對 .NET 程式庫搭配 NuGet 進行封裝的最佳做法建議
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 6c3c7feb95f0ebe6b348f42cdd243ce1d14b9c50
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 2ad8d2ed77610a3acead69b7c864785261ea5e7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724300"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -112,11 +112,14 @@ NuGet.org 裝載自己的[符號伺服器存放庫](/nuget/create-packages/symbo
 </Project>
 ```
 
-**✔️ 請考慮**將符號檔內嵌在主要 NuGet 套件中。
+內嵌符號檔缺點是它們會讓使用 SDK 樣式專案編譯的 .NET 程式庫套件大小增加約 30%。 如果套件大小是個問題，您應該改為將符號發佈在符號套件中。
 
-> 在主要的 NuGet 套件內嵌符號檔讓開發人員有較佳的預設偵錯體驗。 他們不需要在其 IDE 中尋找並設定 NuGet 符號伺服器即可取得符號檔。
+**✔️ 請考慮**將符號以符號套件 (`*.snupkg`) 形式發佈至 NuGet.org
+
+> 符號套件 (`*.snupkg`) 提供開發人員良好的隨選偵錯體驗，不會讓主要套件大小過大，而對不想要偵錯 NuGet 套件的人在還原效能方面造成影響。
 >
-> 內嵌符號檔的缺點是它們會讓使用 SDK 樣式專案編譯的 .NET 程式庫套件大小增加約 30%。 如果套件大小是個問題，您應該改為將符號發佈在符號套件中。
+> 需要注意的是，他們必須在其 IDE 中尋找並設定 NuGet 符號伺服器 (只要設定一次)，才能取得符號檔。 Visual Studio 2019 計劃提供 NuGet.org 符號伺服器作為現成可用的選項之一。 
+
 
 >[!div class="step-by-step"]
 >[上一頁](strong-naming.md)

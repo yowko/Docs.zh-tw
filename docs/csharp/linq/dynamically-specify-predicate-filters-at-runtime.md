@@ -1,14 +1,14 @@
 ---
 title: 在執行階段動態指定述詞篩選條件 (C# 中的 LINQ)
 description: 了解如何使用 C# 中的 LINQ 在執行階段動態指定述詞篩選條件。
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: ece5940edd615f30acab06a429de300e27811a66
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 314be8f98b9ff014f14bef11a1f3581eff8574b4
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125791"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857732"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>在執行階段動態指定述詞篩選
 
@@ -36,11 +36,11 @@ ms.locfileid: "53125791"
 
 7. 主控台視窗會顯示下列輸出：
 
-     Garcia: 114
+     Garcia:114
 
-     O'Donnell: 112
+     O'Donnell:112
 
-     Omelchenko: 111
+     Omelchenko:111
 
 8. 下一步是再次執行專案，這次使用在執行階段輸入的輸入，而不是陣列 `ids`。 在 `Main` 方法中，將 `QueryByID(ids)` 變更為 `QueryByID(args)`。
 
@@ -48,13 +48,13 @@ ms.locfileid: "53125791"
 
 10. 主控台視窗會顯示下列輸出：
 
-     Adams: 120
+     Adams:120
 
-     Feng: 117
+     Feng:117
 
-     Garcia: 115
+     Garcia:115
 
-     Tucker: 122
+     Tucker:122
 
 ## <a name="to-filter-by-using-a-switch-statement"></a>使用 switch 陳述式來篩選
 

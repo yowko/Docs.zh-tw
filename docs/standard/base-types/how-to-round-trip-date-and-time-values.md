@@ -1,5 +1,5 @@
 ---
-title: 如何：反覆存取日期和時間值
+title: HOW TO：反覆存取日期和時間值
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628184"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>如何：反覆存取日期和時間值
+# <a name="how-to-round-trip-date-and-time-values"></a>HOW TO：反覆存取日期和時間值
 在許多應用程式中，日期和時間值的用途都是要明確地識別單一時間點。 本主題說明如何儲存並還原 <xref:System.DateTime> 值、<xref:System.DateTimeOffset> 值，以及具有時區資訊的日期和時間值，讓還原值能夠識別出與儲存值相同的時間。  
   
 ### <a name="to-round-trip-a-datetime-value"></a>若要反覆存取 DateTime 值  
@@ -101,6 +101,6 @@ ms.locfileid: "45668414"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之間選擇](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之間選擇](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

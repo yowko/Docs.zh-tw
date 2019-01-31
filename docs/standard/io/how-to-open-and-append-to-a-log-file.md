@@ -1,5 +1,5 @@
 ---
-title: 如何：開啟並附加至記錄檔
+title: HOW TO：開啟並附加至記錄檔
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35a7d481cf82818054a852f7c2e142f615022fcb
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 351daa2a13c4a8c4b1551ce74d2eaa6d032f1f17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48848149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622725"
 ---
-# <a name="how-to-open-and-append-to-a-log-file"></a>如何：開啟並附加至記錄檔
+# <a name="how-to-open-and-append-to-a-log-file"></a>HOW TO：開啟並附加至記錄檔
 <xref:System.IO.StreamWriter> 和 <xref:System.IO.StreamReader> 會在資料流中寫入字元和讀取字元。 下列程式碼範例會開啟用於輸入的 `log.txt` 檔案，如果該檔案還未存在，則會建立該檔案，並將資訊附加至檔案的結尾。 接著，檔案的內容會寫入標準輸出以供顯示。 此範例的替代方法是，將資訊儲存成單一字串或字串陣列，而且 <xref:System.IO.File.WriteAllText%2A> 或 <xref:System.IO.File.WriteAllLines%2A> 方法可以用來達成相同的功能。  
   
 > [!NOTE]
@@ -32,15 +32,15 @@ ms.locfileid: "48848149"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.IO.StreamWriter>  
-- <xref:System.IO.StreamReader>  
-- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>  
-- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
-- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
-- [操作說明：列舉目錄和檔案](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [如何：讀取和寫入新建立的資料檔案](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [如何：從檔案讀取文字](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [如何：將文字寫入檔案](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [如何：從字串中讀取字元](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [如何：將字元寫入至字串](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- <xref:System.IO.StreamWriter>
+- <xref:System.IO.StreamReader>
+- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>
+- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>
+- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>
+- [如何：列舉目錄和檔案](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [如何：讀取和寫入新建立的資料檔案](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [如何：讀取檔案中的文字](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [如何：將文字寫入檔案](../../../docs/standard/io/how-to-write-text-to-a-file.md)
+- [如何：讀取字串中的字元](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- [如何：將字元寫入字串](../../../docs/standard/io/how-to-write-characters-to-a-string.md)
 - [檔案和資料流 I/O](../../../docs/standard/io/index.md)

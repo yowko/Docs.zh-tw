@@ -1,18 +1,18 @@
 ---
-title: 如何：在 Visual Basic 中剖析檔案路徑
+title: HOW TO：在 Visual Basic 中剖析檔案路徑
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-ms.openlocfilehash: 7479f368558a8a8a07c1e6ed588bdfef21a0b1de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b31dedbdd33ddfb3c15863a45b93148fd722faa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707748"
 ---
-# <a name="how-to-parse-file-paths-in-visual-basic"></a>如何：在 Visual Basic 中剖析檔案路徑
+# <a name="how-to-parse-file-paths-in-visual-basic"></a>HOW TO：在 Visual Basic 中剖析檔案路徑
 <xref:Microsoft.VisualBasic.FileIO.FileSystem> 物件提供剖析檔案路徑時的數種有用方法。  
   
 -   <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> 方法會採用兩個路徑，並傳回格式正確的合併路徑。  
@@ -35,9 +35,9 @@ ms.locfileid: "33585940"
   
      [!code-vb[VbVbcnMyFileSystem#55](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_2.vb)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>  
- <xref:System.IO.FileInfo>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>  
- [如何：取得目錄的檔案集合](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>
+- <xref:System.IO.FileInfo>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>
+- [如何：取得目錄的檔案集合](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：登錄主要 Interop 組件
+title: HOW TO：登錄主要 Interop 組件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9017e8dc50914bbffbcea52192e6ec10fbc7a6df
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 08d10e0c1a38201a68d0a043b9f52d5f3eaf2ece
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596120"
 ---
-# <a name="how-to-register-primary-interop-assemblies"></a>如何：登錄主要 Interop 組件
+# <a name="how-to-register-primary-interop-assemblies"></a>HOW TO：登錄主要 Interop 組件
 
 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 如需以您選擇的介面來覆寫類別介面的資訊，請參閱 [COM 可呼叫包裝函式](../../../docs/framework/interop/com-callable-wrapper.md)。
 

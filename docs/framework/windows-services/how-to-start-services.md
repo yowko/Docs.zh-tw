@@ -1,19 +1,19 @@
 ---
-title: 如何：啟動服務
+title: HOW TO：啟動服務
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: b3f04deb11a23957198864c444b4872aef45b2e4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 979b9ea58f69f83829c364966a9edeb9e0644309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494355"
 ---
-# <a name="how-to-start-services"></a>如何：啟動服務
+# <a name="how-to-start-services"></a>HOW TO：啟動服務
 安裝服務之後，必須加以啟動。 從呼叫服務類別上的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法開始。 通常，<xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法會定義服務將執行的有用工作。 服務啟動之後，即會保持作用中，直到您以手動方式暫停或停止它為止。  
   
  服務可以設定為自動或手動啟動。 自動啟動的服務將在其安裝所在的電腦重新開機或第一次開啟時啟動。 使用者必須啟動以手動方式啟動的服務。  
@@ -27,7 +27,7 @@ ms.locfileid: "47176743"
   
 ### <a name="to-specify-how-a-service-should-start"></a>指定啟動服務的方式  
   
-1.  建立服務之後，為其加入必要的安裝程式。 如需詳細資訊，請參閱[如何：將安裝程式加入服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+1.  建立服務之後，為其加入必要的安裝程式。 如需詳細資訊，請參閱[＜How to：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
 2.  在設計工具中，按一下所要使用服務的服務安裝程式。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "47176743"
   
 2.  呼叫 <xref:System.ServiceProcess.ServiceController.Start%2A> 方法啟動服務。  
   
-## <a name="see-also"></a>請參閱  
- [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [如何：將 Installer 新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>另請參閱
+- [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

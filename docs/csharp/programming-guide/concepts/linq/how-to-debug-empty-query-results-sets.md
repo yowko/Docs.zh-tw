@@ -1,15 +1,15 @@
 ---
-title: 如何：偵錯空的查詢結果集 (C#)
+title: HOW TO：偵錯空的查詢結果集 (C#)
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 4760b1e5274634954bd5fe4b3880fd4415af2510
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0503c09bbdd28276ea4fdc1147e0bca5471fa6e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723179"
 ---
-# <a name="how-to-debug-empty-query-results-sets-c"></a>如何：偵錯空的查詢結果集 (C#)
+# <a name="how-to-debug-empty-query-results-sets-c"></a>HOW TO：偵錯空的查詢結果集 (C#)
 查詢 XML 時所遇到的其中一個最常見的問題是，如果 XML 樹狀結構有預設的命名空間，即使 XML 不在命名空間中，開發人員有時候還是會撰寫查詢。  
   
  本主題中的第一組範例會顯示將 XML 載入預設命名空間而且查詢錯誤的常見方式。  
@@ -82,6 +82,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

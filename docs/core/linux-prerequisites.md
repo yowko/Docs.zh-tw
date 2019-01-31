@@ -4,12 +4,12 @@ description: 支援的 Linux 版本和 .NET Core 的相依性，以在 Linux 電
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 7a2b0b3af97500ab0988e5de7a44713a8c05ccb9
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 5ef1737185ad41de7bd5e7a9b8db048ff577811f
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656046"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083882"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的必要條件
 
@@ -100,7 +100,8 @@ Alpine Linux                  | 3.8+                  | x64、ARM64
 Ubuntu 發行版本需要安裝下列程式庫：
 
 * liblttng-ust0
-* libcurl3
+* libcurl3 (適用於 14.x 及 16.x)
+* libcurl4 (適用於 18.x)
 * libssl1.0.0
 * libkrb5-3
 * zlib1g

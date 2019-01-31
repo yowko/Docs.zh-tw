@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解一�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 720c33fb4af197198f8ee1a21c5e1dc6dad24ce3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e0635d03e7d1b31642a6669aecefd2b0099e9c78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150859"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066281"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>使用 NoSQL 資料庫作為持續性基礎結構
 
@@ -151,7 +151,7 @@ Cosmos DB 資料庫支援 MongoDB API for .NET 以及原生 MongoDB 有線通訊
 
 如需進一步比較只在雲端中使用 MongoDB 與 Cosmos DB，請參閱[在此頁面中使用 Azure Cosmos DB 的優點](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)。 
 
-### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>分析生產應用程式的方法：MongoDB API 與Cosmos DB API
+### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>分析用於生產應用程式的方法：MongoDB API 與Cosmos DB API
 
 在 eShopOnContainers 中，我們將使用 MongoDB API，因為我們的優先順序本質上是擁有使用也可處理 Azure Cosmos DB 之 NoSQL 資料庫的一致開發/測試環境。
 
@@ -279,7 +279,7 @@ services:
 
 ```
 
-`ConnectionString` 環境變數是使用這種方式解決：如果 `ESHOP_AZURE_COSMOSDB` 全域變數定義於 Azure Cosmos DB 連接字串的 `.env` 檔案，則會使用它來存取雲端中的 Azure Cosmos DB 資料庫。 如果未定義，它會接受 mongodb://nosql.data 值，並使用開發 mongodb 容器。
+`ConnectionString` 環境變數以這種方式解析：如果在 `.env` 檔案中使用了 Azure Cosmos DB 連接字串來定義 `ESHOP_AZURE_COSMOSDB` 全域變數，則會用以在雲端中存取 Azure Cosmos DB 資料庫。 如果未定義，它會接受 mongodb://nosql.data 值，並使用開發 mongodb 容器。
 
 下列程式碼示範含 Azure Cosmos DB 連接字串全域環境變數的 `.env` 檔案，如 eShopOnContainers 中所實作：
 
@@ -317,12 +317,12 @@ services:
   [*https://docs.microsoft.com/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
 
 - **Vaughn Vernon：理想的領域驅動設計彙總存放區？** \
-  [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
+  <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
 - **Azure Cosmos DB 簡介：適用於 MongoDB 的 API**  \
   [*https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
 
-- **Azure Cosmos DB：透過 .NET 與 Azure 入口網站建置 MongoDB API Web 應用程式**  \
+- **Azure Cosmos DB：使用 .NET 與 Azure 入口網站建置 MongoDB API Web 應用程式**  \
   [*https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet*](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
 
 - **將 Azure Cosmos DB 模擬器用於本機開發及測試**  \
@@ -337,7 +337,7 @@ services:
 - **MongoDB Docker 映像 (Linux 與 Windows 容器)**  \
   [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
 
-- **搭配 Azure Cosmos DB 使用 MongoChef (Studio 3T)：適用於 MongoDB 帳戶的 API**  \
+- **搭配 Azure Cosmos DB 使用 MongoChef (Studio 3T)：適用於 MongoDB 的 API 帳戶**  \
   [*https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef)
 
 >[!div class="step-by-step"]

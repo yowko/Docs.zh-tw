@@ -1,21 +1,21 @@
 ---
-title: 風險降低︰WCF 服務和憑證驗證
+title: 風險降低：WCF 服務和憑證驗證
 ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f05dfab89fa5f811769687c467b2186745ecd5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc2e80a050e3b2e14663ba4bb67f650a16a6c619
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738309"
 ---
-# <a name="mitigation-wcf-services-and-certificate-authentication"></a>風險降低︰WCF 服務和憑證驗證
+# <a name="mitigation-wcf-services-and-certificate-authentication"></a>風險降低：WCF 服務和憑證驗證
 .NET Framework 4.6 新增了 TLS 1.1 和 TLS 1.2 至 WCF SSL 的通訊協定預設清單。 當用戶端和伺服器電腦安裝 .NET Framework 4.6 或更新版本時，會使用 TLS 1.2 進行交涉。  
   
 ## <a name="impact"></a>影響  
- TLS 1.2 不支援 MD5 憑證驗證。 因此，如果客戶使用的 SSL 憑證使用 MD5 執行雜湊演算法，WCF 用戶端就無法連線到 WCF 服務。 如需詳細資訊，請參閱[風險降低︰WCF 服務和憑證驗證](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md)。  
+ TLS 1.2 不支援 MD5 憑證驗證。 因此，如果客戶使用的 SSL 憑證使用 MD5 執行雜湊演算法，WCF 用戶端就無法連線到 WCF 服務。 如需詳細資訊，請參閱[風險降低：WCF 服務和憑證驗證](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md)。  
   
 ## <a name="mitigation"></a>緩和  
  您可以執行下列其中一項動作來解決這個問題，使 WCF 用戶端可以連線到 WCF 伺服器︰  
@@ -53,5 +53,5 @@ ms.locfileid: "33388933"
     > [!CAUTION]
     >  我們不建議採取這項因應措施，因為使用 MD5 雜湊演算法的憑證並不安全。  
   
-## <a name="see-also"></a>請參閱  
- [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a>另請參閱
+- [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

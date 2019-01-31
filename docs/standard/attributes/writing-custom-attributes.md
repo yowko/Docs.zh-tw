@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67a5ffe2075618020f3ab9f801852a1a97fc74d2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 70845b3e184e7e8e06002a308d574d4d084e25fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696213"
 ---
 # <a name="writing-custom-attributes"></a>撰寫自訂屬性
-若要設計您自己的自訂屬性，並不需要精通很多新概念。 假如您擅長物件導向的程式設計，且瞭解如何設計類別，那麼您就已經擁有大部分所需的知識。 自訂屬性基本上是一種直接或間接衍生自 <xref:System.Attribute?displayProperty=nameWithType> 的傳統類別。 自訂屬性就像傳統類別一樣，含有儲存和擷取資料的方法。  
+若要設計您自己的自訂屬性，並不需要精通很多新概念。 假如您擅長物件導向的程式設計，且瞭解如何設計類別，那麼您就已經擁有大部分所需的知識。 自訂屬性基本上是一種直接或間接衍生自 <xref:System.Attribute?displayProperty=nameWithType>的傳統類別。 自訂屬性就像傳統類別一樣，含有儲存和擷取資料的方法。  
   
  正確設計自訂屬性的主要步驟如下：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "44087387"
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- <xref:System.AttributeUsageAttribute> 有三個建立自訂屬性所需的重要成員：[AttributeTargets](#attributetargets-member)、[Inherited](#inherited-property) 及 [AllowMultiple](#allowmultiple-property)。  
+ <xref:System.AttributeUsageAttribute> 有三個建立自訂屬性所需的重要成員：[AttributeTargets](#attributetargets-member)、[Inherited](#inherited-property) 和 [AllowMultiple](#allowmultiple-property)。  
   
 ### <a name="attributetargets-member"></a>AttributeTargets 成員  
  在上述範例中，指定了 <xref:System.AttributeTargets.All?displayProperty=nameWithType> ，指出此屬性可以套用到所有程式元素。 或者，您也可以指定 <xref:System.AttributeTargets.Class?displayProperty=nameWithType>，指出您的屬性可以套用到類別，或指定 <xref:System.AttributeTargets.Method?displayProperty=nameWithType>，指出屬性只能套用至方法。 所有的程式項目都可以用這種方式透過自訂屬性標示為描述。  
@@ -150,6 +150,6 @@ ms.locfileid: "44087387"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Attribute?displayProperty=nameWithType>  
-- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
+- <xref:System.Attribute?displayProperty=nameWithType>
+- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>
 - [屬性](../../../docs/standard/attributes/index.md)

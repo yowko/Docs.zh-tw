@@ -1,15 +1,15 @@
 ---
-title: 如何：尋找同層級節點 (XPath-LINQ to XML) (C#)
+title: HOW TO：尋找同層級節點 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: e10b23c311e4e7debf228c01c898f3582e2ac8d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b71bf1123461e4b0c0db5024eac3330bcf666ecc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646759"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>如何：尋找同層級節點 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>HOW TO：尋找同層級節點 (XPath-LINQ to XML) (C#)
 您可能想要尋找具有特定名稱之節點的所有同層級。 如果內容節點也有特定的名稱，所產生的集合可能包含內容節點。  
   
  XPath 運算式為：  
@@ -19,7 +19,7 @@ ms.locfileid: "43865354"
 ## <a name="example"></a>範例  
  此範例會先尋找 `Book` 項目，然後尋找名稱為 `Book` 的所有同層級項目。 所產生的集合包含內容節點。  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：書籍 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[XML 範例檔：書籍 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -74,6 +74,6 @@ Results are identical
 </Book>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

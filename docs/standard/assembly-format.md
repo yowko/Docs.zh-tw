@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 219e2872ab58980ef7b4bce8e901341d8893a1a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f713c06fa6749c70bc3f87e8cda81114f153a095
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567246"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065891"
 ---
 # <a name="net-assembly-file-format"></a>.NET 組件檔格式
 
@@ -21,7 +21,7 @@ ms.locfileid: "33567246"
 
 格式會依 [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm) 來完整指定並標準化。 所有 .NET 編譯器和執行階段都會使用這種格式。 所記載且不常更新之二進位格式的目前狀態已是互通性的主要優點 (即需求)。 這種格式上次在 2005 年進行重大更新 (.NET 2.0)，可容納泛型和處理器架構。
 
-格式為 CPU 並且無作業系統無關。 它已用作將目標設為許多晶片和 CPU 之 .NET 實作的一部分。 雖然格式本身具有 Windows 傳承，但是可在任何作業系統上實作。 作業系統互通性的最重大選擇就是大部分值都是以位元組由小到大格式儲存。 它沒有電腦指標大小 (例如，32 位元、64 位元) 的特定同質性。
+格式為 CPU 並且無作業系統無關。 它已用作將目標設為許多晶片和 CPU 之 .NET 實作的一部分。 雖然格式本身具有 Windows 傳承，但是可在任何作業系統上實作。 為達 OS 互通性，大部分的值皆以位元組由小到大的格式儲存，這可說是最重大的選擇。 它沒有電腦指標大小 (例如，32 位元、64 位元) 的特定同質性。
 
 .NET 組件格式對於指定的程式或程式庫結構也具有相當的描述性。 它會特別描述組件的內部元件︰定義的組件參考和類型，以及其內部結構。 工具或 API 可以讀取和處理這項資訊以供顯示，或進行程式設計決策。
 

@@ -20,26 +20,26 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f3e67fe49fb6d8a4d56b3d36d78d86c6c517d2a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8ba1651583f4cd962f5038fbe0e3f55a5d8b42ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50181601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589671"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送處理類別、結構和等位
 在 .NET Framework 中，類別和結構相類似。 兩者都可以有欄位、屬性和事件。 也可以有靜態和非靜態方法。 一個值得注意的差異在於結構是實值類型，而類別是參考類型。  
   
  下表列出類別、結構和等位的封送處理選項，並描述其用法，以及提供對應平台的叫用範例連結。  
   
-|類型|描述|範例|  
+|類型|說明|範例|  
 |----------|-----------------|------------|  
 |傳值呼叫|做為 In/Out 參數，如 Managed 案例，會傳遞具有整數成員的類別。|SysTime 範例|  
 |結構傳值。|傳遞結構做為 In 參數。|結構範例|  
 |結構傳址。|傳遞結構做為 In/Out 參數。|OSInfo 範例|  
 |具有巢狀結構 (扁平化) 的結構。|傳遞類別，表示具有 Unmanaged 函式中巢狀結構的結構。 在 Managed 原型中，結構被扁平化為一個大的結構。|FindFile 範例|  
 |指標指向另一個結構的結構。|傳遞一個結構，其包含的指標指向第二個做為成員的結構。|結構範例|  
-|整數傳值的結構陣列。|傳遞僅包含整數做為 In/Out 參數的結構陣列。 可變更陣列的成員。|陣列範例|  
+|整數傳值的結構陣列。|將僅包含整數的結構陣列做為 In/Out 參數傳遞。 可變更陣列的成員。|陣列範例|  
 |整數結構和傳址字串的陣列。|傳遞包含整數和字串做為 Out 參數的結構陣列。 所呼叫的函式會配置此陣列的記憶體。|OutArrayOfStructs 範例|  
 |具有實值類型的等位。|傳遞具有實值類型的等位 (整數和雙精度浮點數)。|等位範例|  
 |具有混合類型的等位。|傳遞具有混合類型的等位 (整數和字串)。|等位範例|  
@@ -68,7 +68,7 @@ ms.locfileid: "50181601"
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) 是自訂的 Unmanaged 程式庫，其中包含先前所列出函式和四個結構的實作：**MYPERSON**、**MYPERSON2**、**MYPERSON3** 和 **MYARRAYSTRUCT**。 這些結構包含下列項目：  
+ [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) 是自訂的非受控程式庫，其中包含先前所列出函式和四個結構的實作：**MYPERSON**、**MYPERSON2**、**MYPERSON3** 和 **MYARRAYSTRUCT**。 這些結構包含下列項目：  
   
 ```  
 typedef struct _MYPERSON  
@@ -240,7 +240,7 @@ typedef struct _SYSTEMTIME {
 } SYSTEMTIME, *PSYSTEMTIME;  
 ```  
   
- 在此範例中，`SystemTime` 類別包含表示為類別成員原始結構的項目。 設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來確定此成員以其顯示的順序循序排列在記憶體中。  
+ 在此範例中，`SystemTime` 類別包含表示為類別成員原始結構的項目。 已設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來確定此成員以其顯示的順序循序排列在記憶體中。  
   
  `LibWrap` 類別包含 `GetSystemTime` 方法的 Managed 原型，根據預設會傳遞 `SystemTime` 類別做為 In/Out 參數。 參數必須以 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性宣告，因為根據預設，會傳遞參考類型的類別做為 In 參數。 若要讓呼叫端接收結果，則必須明確地套用這些[方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))。 `App` 類別建立 `SystemTime` 類別的新執行個體，並存取其資料欄位。  
   
@@ -288,8 +288,8 @@ typedef struct _MYSTRSTRUCT2
  [!code-csharp[Conceptual.Interop.Marshaling#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
-## <a name="see-also"></a>請參閱  
- [使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)  
- [平台叫用資料類型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
- [封送處理字串](marshaling-strings.md)  
- [封送處理類型的陣列](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
+## <a name="see-also"></a>另請參閱
+- [使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)
+- [平台叫用資料類型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
+- [封送處理字串](marshaling-strings.md)
+- [封送處理類型的陣列](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))

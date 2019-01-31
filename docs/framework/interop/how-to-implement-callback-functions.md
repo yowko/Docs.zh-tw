@@ -1,5 +1,5 @@
 ---
-title: 如何：實作回呼函式
+title: HOW TO：實作回呼函式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e081347129ce367cf6b46ca29c07a016bb64ab95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf972455aa54a7fe45ffd7858ac9e5da5eee6e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718672"
 ---
-# <a name="how-to-implement-callback-functions"></a>如何：實作回呼函式
+# <a name="how-to-implement-callback-functions"></a>HOW TO：實作回呼函式
 下列程序及範例示範 Managed 應用程式 (使用平台叫用) 如何將每個視窗的控制碼值列印到本機電腦上。 具體而言，程序和範例會使用 **EnumWindows** 函式以逐步執行視窗的清單，並使用 Managed 回呼函式 (具名回呼) 以列印視窗控制代碼的值。  
   
 ### <a name="to-implement-a-callback-function"></a>若要實作回撥函式  
@@ -129,6 +129,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [回呼函式](../../../docs/framework/interop/callback-functions.md)  
- [呼叫 DLL 函式](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>另請參閱
+- [回呼函式](../../../docs/framework/interop/callback-functions.md)
+- [呼叫 DLL 函式](../../../docs/framework/interop/calling-a-dll-function.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Visual Basic 中將文字寫入我的文件目錄中的檔案
+title: HOW TO：在 Visual Basic 中將文字寫入 [我的文件] 目錄中的檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-ms.openlocfilehash: 894458ad6d69b8bb2836518b90723703733208b6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6e1e53f6eb0e14afa82bde95637c1e4473391bd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595054"
 ---
-# <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>如何：在 Visual Basic 中將文字寫入我的文件目錄中的檔案
+# <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>HOW TO：在 Visual Basic 中將文字寫入 [我的文件] 目錄中的檔案
 `My.Computer.FileSystem.SpecialDirectories` 物件可讓您存取特殊目錄，例如 [我的文件] 目錄。  
   
 ## <a name="procedure"></a>程序  
@@ -43,9 +43,9 @@ ms.locfileid: "45617074"
   
  這個範例會建立新的檔案。 如果應用程式需要建立檔案，該應用程式就需要資料夾的 [建立] 權限。 您可以使用存取控制清單來設定權限。 如果檔案已經存在，則應用程式只需要 [寫入] 權限，這是較小的權限。 若有可能，更為安全的做法是在部署期間建立檔案，並且只授與單一檔案的 [讀取] 權限，而不授與資料夾的 [建立] 權限。 此外，將資料寫入使用者資料夾，而不是根資料夾或 **Program Files** 資料夾，也更加安全。 如需詳細資訊，請參閱 [ACL 技術概觀](https://msdn.microsoft.com/library/06fbf66d-6f02-4378-b863-b2f12e349045)。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Devices.Computer>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>
+## <a name="see-also"></a>另請參閱
+- <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Devices.Computer>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
+- <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>

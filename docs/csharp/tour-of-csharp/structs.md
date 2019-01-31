@@ -3,12 +3,12 @@ title: C# 結構 - C# 語言教學課程
 description: 了解 C# 實值型別 (稱為結構) 的基本概念
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d22cb23fe095874f24d7c002dfdb3eefdde66722
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142732"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065956"
 ---
 # <a name="structs"></a>結構
 
@@ -30,7 +30,7 @@ ms.locfileid: "53142732"
 
 [!code-csharp[PointUse](../../../samples/snippets/csharp/tour/structs/Program.cs#L19-L22)]
 
-如果 `Point` 是類別，輸出為 20，因為 a 和 b 參考相同的物件。 如果 Point 是結構，則輸出為 10，因為指派 `a` 至 `b` 會建立值的複本，而後續指派給 `a.x` 時此複本不受影響。
+如果 `Point` 是類別，則因為 `a` 和 `b` 參考相同的物件，所以輸出為 20。 如果 `Point` 是結構，則因為將 `a` 指派至 `b` 會建立值的複本，所以輸出為 10，而後續指派給 `a.x` 時，此複本不受影響。
 
 前一個範例會反白顯示結構的兩個限制。 首先，複製整個結構通常較複製物件參考沒有效率，因此，結構的指派和實值參數傳遞會比參考型別耗用更多資源。 再者，除了 `in`、`ref` 和 `out` 參數外，不可能建立結構的參考，因此在許多情況下無法使用它們。
 

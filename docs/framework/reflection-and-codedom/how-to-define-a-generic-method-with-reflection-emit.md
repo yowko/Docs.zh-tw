@@ -1,5 +1,5 @@
 ---
-title: 如何：使用反映發出定義泛型方法
+title: HOW TO：使用反映發出定義泛型方法
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49531945b073a909ba49b2b0865b96f9658fba50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c0b6ee6fc789b2586d76b5ec8f10815e543e1d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596849"
 ---
-# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>如何：使用反映發出定義泛型方法
+# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>HOW TO：使用反映發出定義泛型方法
 第一個程序示範如何建立有兩個類型參數的簡單泛型方法，以及如何將類別條件約束、介面條件約束和特殊條件約束套用至類型參數。  
   
  第二個程序示範如何發出方法主體，以及如何使用泛型方法的類型參數建立泛型型別的執行個體並呼叫其方法。  
@@ -26,7 +26,7 @@ ms.locfileid: "33396801"
  第三個程序示範如何叫用泛型方法。  
   
 > [!IMPORTANT]
->  方法不是只因為屬於泛型型別並使用該類型的類型參數，而成為泛型。 方法只有在有自己的類型參數清單時，才會是泛型。 泛型方法可以出現在非泛型型別中，如本例所示。 如需泛型型別的非泛型方法範例，請參閱[如何︰使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)。  
+>  方法不是只因為屬於泛型型別並使用該類型的類型參數，而成為泛型。 方法只有在有自己的類型參數清單時，才會是泛型。 泛型方法可以出現在非泛型型別中，如本例所示。 如需泛型型別的非泛型方法範例，請參閱[如何：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)。  
   
 ### <a name="to-define-a-generic-method"></a>定義泛型方法  
   
@@ -117,7 +117,7 @@ ms.locfileid: "33396801"
   
 6.  發出此迴圈的程式碼。 第一個步驟是呼叫有 `loopAgain` 標籤的 <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A>，來標記迴圈頂端。 使用標籤的分支陳述式現在會分支到程式碼的這個點。 下個步驟推送 `TOutput` 物件、投射到 `ICollection(Of TInput)`，再到堆疊。 它不是立即需要，但要就位以待呼叫 `Add` 方法。 接下來，將輸入陣列推送至堆疊，再將包含目前索引的 `index` 變數推送至陣列。 <xref:System.Reflection.Emit.OpCodes.Ldelem> 作業碼會從堆疊取出索引和陣列，並將索引的陣列項目推送至堆疊。 堆疊已就緒可呼叫 <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> 方法，它會從堆疊取出集合和新的項目，並將項目新增至集合。  
   
-     迴圈中其餘的程式碼會遞增索引，並測試看迴圈是否已結束︰索引和 32 位元整數 1 會推送到堆疊並相加，將總和留在堆疊上，總和會儲存在 `index` 中。 呼叫 <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> 以將此點設定為迴圈的進入點。 再次載入索引。 輸入陣列會推送到堆疊，並發出 <xref:System.Reflection.Emit.OpCodes.Ldlen> 取得其長度。 索引和長度現在都在堆疊上，而 <xref:System.Reflection.Emit.OpCodes.Clt> 會發出以比較兩者。 如果索引小於長度，<xref:System.Reflection.Emit.OpCodes.Brtrue_S> 就會分支回到迴圈的開頭。  
+     迴圈中其餘的程式碼會遞增索引，並測試看迴圈是否已結束：索引和 32 位元整數 1 會推送到堆疊並相加，將總和留在堆疊上，總和會儲存在 `index` 中。 呼叫 <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> 以將此點設定為迴圈的進入點。 再次載入索引。 輸入陣列會推送到堆疊，並發出 <xref:System.Reflection.Emit.OpCodes.Ldlen> 取得其長度。 索引和長度現在都在堆疊上，而 <xref:System.Reflection.Emit.OpCodes.Clt> 會發出以比較兩者。 如果索引小於長度，<xref:System.Reflection.Emit.OpCodes.Brtrue_S> 就會分支回到迴圈的開頭。  
   
      [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
      [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]  
@@ -170,6 +170,6 @@ ms.locfileid: "33396801"
   
 -   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Reflection.Emit.MethodBuilder>  
- [操作說明：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Reflection.Emit.MethodBuilder>
+- [如何：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

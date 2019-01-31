@@ -1,15 +1,15 @@
 ---
-title: 如何：尋找正前面的同層級項目 (XPath-LINQ to XML) (C#)
+title: HOW TO：尋找正前面的同層級項目 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
-ms.openlocfilehash: c610ce4884e0760a03ec77aae4f38cf9c84a797a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 00b74edd67df65522f9f95e7f48c66a9e17a937c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708476"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>如何：尋找正前面的同層級項目 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>HOW TO：尋找正前面的同層級項目 (XPath-LINQ to XML) (C#)
 有時候您會想要尋找節點正前面的同層級。 由於前面同層級座標軸的位置性述詞語意 (Semantics) 在 XPath 中與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 相反的這個差異，這是其中一個更有趣的比較。  
   
 ## <a name="example"></a>範例  
@@ -52,6 +52,6 @@ Results are identical
 <Child3 />  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

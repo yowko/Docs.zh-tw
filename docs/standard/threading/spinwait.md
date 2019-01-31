@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ff8b5b75d1d69d3d8c88810de1311540a239c52
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9b66ec913a6e8726710d90737f97c04335ae6e4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45743623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676428"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 是一個輕量型同步處理類型，您可以在低階案例中使用此類型，來避免核心事件所需且成本昂貴的環境切換和核心轉換。 在多核心電腦上，預期資源不會長時間保留時，若等待中的執行緒要在使用者模式中進行數十個或數百個週期的微調，然後進行重試以取得資源，此類型可能會更有效率。 如果資源在微調之後可供使用，則您節省了數千個週期。 如果資源仍然無法使用，則您只花費了數個週期，仍可進入以核心為基礎的等候。 這個微調然後等候的組合有時稱為「兩階段等候作業」。  
@@ -31,5 +31,5 @@ ms.locfileid: "45743623"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Threading.Thread.SpinWait%2A>  
+- <xref:System.Threading.Thread.SpinWait%2A>
 - [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)

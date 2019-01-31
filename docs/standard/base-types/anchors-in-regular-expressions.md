@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f0e42c0032dc6f9dac0895a29db9de79547c0a49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675344"
 ---
 # <a name="anchors-in-regular-expressions"></a>規則運算式中的錨點
 <a name="top"></a> 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。 當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。 例如， `^` 指定必須從行首或字串的開頭開始比對。 因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。 下表列出 .NET 中此規則運算式所支援的錨點。  
@@ -75,7 +75,7 @@ ms.locfileid: "53155034"
   
  如果您將 `$` 與 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項搭配使用，則該比對也會在行尾發生。 請注意， `$` 會比對 `\n` ，但不會比對 `\r\n` (歸位字元與新行字元的組合，亦即 CR/LF)。 若要比對 CR/LF 字元組合，請在規則運算式模式中包含 `\r?$` 。  
   
- 下列範例會將 `$` 錨點加入 [字串開頭或行首](#Start) 一節中範例所使用的規則運算式模式。 當與原始的輸入字串 (包括五行文字) 搭配使用時， <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法會找不到相符項目，因為第一行的結尾不符合 `$` 模式。 當原始的輸入字串分割成字串陣列時， <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法會成功地比對這五行。 當呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法且 `options` 參數設定為 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 時，會找不到相符項目，因為規則運算式模式並不考慮歸位字元項目 (\u+000D)。 不過，在將 `$` 取代為 `\r?$`來修改規則運算式模式時，將 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 參數再次設定為 `options` 來呼叫 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 方法，則會找出五個相符項目。  
+ 下列範例會將 `$` 錨點加入 [字串開頭或行首](#Start) 一節中範例所使用的規則運算式模式。 當與原始的輸入字串 (包括五行文字) 搭配使用時， <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法會找不到相符項目，因為第一行的結尾不符合 `$` 模式。 當原始的輸入字串分割成字串陣列時， <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法會成功地比對這五行。 當呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法且 `options` 參數設定為 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>時，會找不到相符項目，因為規則運算式模式並不考慮歸位字元項目 (\u+000D)。 不過，在將 `$` 取代為 `\r?$`來修改規則運算式模式時，將 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 參數再次設定為 `options` 來呼叫 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 方法，則會找出五個相符項目。  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]  
@@ -95,7 +95,7 @@ ms.locfileid: "53155034"
   
 <a name="EndOrNOnly"></a>   
 ## <a name="end-of-string-or-before-ending-newline-z"></a>字串結尾或結束新行之前：\Z  
- `\Z` 錨點指定比對必須發生在輸入字串的結尾，或在輸入字串結尾的 `\n` 之前。 它與 `$` 錨點相同，不同處在於 `\Z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。 因此在多行字串中，它只會比對最後一行的結尾，或 `\n` 前的上一行。  
+ `\Z` 錨點指定比對必須發生在輸入字串的結尾，或在輸入字串結尾的 `\n` 之前。 它與 `$` 錨點相同，不同處在於 `\Z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。 因此在多行字串中，它只會比對最後一行的結尾，或 `\n`前的上一行。  
   
  請注意， `\Z` 會比對 `\n` ，但不會比對 `\r\n` (CR/LF 字元組合)。 若要比對 CR/LF，請將 `\r?\Z` 包含在規則運算式模式中。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "53155034"
   
 <a name="EndOnly"></a>   
 ## <a name="end-of-string-only-z"></a>僅字串結尾：\z  
- `\z` 錨點指定比對必須發生在輸入字串的結尾。 與 `$` 語言項目相同，`\z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。 不像 `\Z` 語言項目，`\z` 不會比對字串結尾處的 `\n` 字元。 因此，它可以只比對輸入字串的最後一行。  
+ `\z` 錨點指定比對必須發生在輸入字串的結尾。 與 `$` 語言項目相同， `\z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。 不像 `\Z` 語言項目， `\z` 不會比對字串結尾處的 `\n` 字元。 因此，它可以只比對輸入字串的最後一行。  
   
  下列範例會在規則運算式中使用 `\z` 錨點，該規則運算式與上一節中的範例不同，它會擷取與某些職業棒球隊存在期間年份相關的資訊。 這個範例會將字串陣列中的五個項目與規則運算模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`進行比對。 有兩個字串以歸位字元與換行字元結尾，一個字串以換行字元結尾，以及兩個字串不以歸位字元也不以換行字元結尾。 如輸出所示，只有不含歸位字元或換行字元的字串會符合模式。  
   
@@ -178,5 +178,5 @@ ms.locfileid: "53155034"
   
 ## <a name="see-also"></a>另請參閱
 
-- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)

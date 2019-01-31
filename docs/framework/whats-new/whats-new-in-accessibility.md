@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fe7e15e482028b9988d7e560b98be19b6c07427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9b9d1c8a059a85f2b5137e568ec6ad562ca0eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680291"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 協助工具的新功能
 
@@ -213,37 +213,37 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.Expander> 控制項
 
-    現在會顯示 <xref:System.Windows.Controls.Expander> 控制項的焦點視覺效果。 現在也會顯示 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項的鍵盤視覺效果。 例如: 
+    現在會顯示 <xref:System.Windows.Controls.Expander> 控制項的焦點視覺效果。 現在也會顯示 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項的鍵盤視覺效果。 例如：
 
-    之前： 
+    之前： 
     
     ![協助工具改善之前的聚焦 Expander 控制項](media/expander-before.png)
 
-    之後： 
+    之後： 
 
     ![協助工具改善之後的聚焦 Expander 控制項](media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項
  
-    在高對比佈景主題中選取時，<xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項中的文字現在更容易出現。 例如: 
+    在高對比佈景主題中選取時，<xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項中的文字現在更容易出現。 例如：
 
-    之前： 
+    之前： 
 
     ![協助工具改善之前的聚焦高對比選項按鈕](media/radio-button-before.png)
     
-    之後： 
+    之後： 
 
     ![協助工具改善之後的聚焦高對比選項按鈕](media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> 控制項
  
-    從 .NET Framework 4.7.1 開始，已停用 <xref:System.Windows.Controls.ComboBox> 控制項的框線色彩與已停用文字的色彩相同。 例如: 
+    從 .NET Framework 4.7.1 開始，已停用 <xref:System.Windows.Controls.ComboBox> 控制項的框線色彩與已停用文字的色彩相同。 例如：
     
-    之前： 
+    之前： 
 
      ![協助工具改善之前的 ComboBox 已停用框線和文字](media/combo-disabled-before.png)
 
-    之後：   
+    之後：   
 
      ![協助工具改善之後的 ComboBox 已停用框線和文字](media/combo-disabled-after.png)
 
@@ -251,43 +251,43 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
     之前：
 
-    ![協助工具改善之前的按鈕佈景主題色彩](media/button-themes-before.png) 
+    ![協助工具改善之前的按鈕佈景主題色彩](media/button-themes-before.png) 
     
-    之後： 
+    之後： 
 
-    ![協助工具改善之後的按鈕佈景主題色彩](media/button-themes-after.png) 
+    ![協助工具改善之後的按鈕佈景主題色彩](media/button-themes-after.png) 
 
-    最後，在 .NET Framework 4.7 和舊版本中，將 <xref:System.Windows.Controls.ComboBox> 控制項的樣式設定為 `Toolbar.ComboBoxStyleKey` 已導致下拉式箭號不可見。 從 .NET Framework 4.7.1 開始，已修正此問題。 例如: 
+    最後，在 .NET Framework 4.7 和舊版本中，將 <xref:System.Windows.Controls.ComboBox> 控制項的樣式設定為 `Toolbar.ComboBoxStyleKey` 已導致下拉式箭號不可見。 從 .NET Framework 4.7.1 開始，已修正此問題。 例如：
 
-    之前： 
+    之前： 
 
-    ![協助工具改善之前的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-before.png) 
+    ![協助工具改善之前的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-before.png) 
     
-    之後： 
+    之後： 
 
-    ![協助工具改善之後的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-after.png) 
+    ![協助工具改善之後的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid> 控制項
 
-    從 .NET Framework 4.7.1 開始，<xref:System.Windows.Controls.DataGrid> 控制項中的排序指標箭號現在會使用正確的佈景主題色彩。 例如: 
+    從 .NET Framework 4.7.1 開始，<xref:System.Windows.Controls.DataGrid> 控制項中的排序指標箭號現在會使用正確的佈景主題色彩。 例如：
 
-    之前： 
+    之前： 
 
-    ![協助工具改善之前的排序指標箭號](media/sort-indicator-before.png) 
+    ![協助工具改善之前的排序指標箭號](media/sort-indicator-before.png) 
     
-    之後：   
+    之後：   
  
-    ![協助工具改善之後的排序指標箭號](media/sort-indicator-after.png) 
+    ![協助工具改善之後的排序指標箭號](media/sort-indicator-after.png) 
     
     此外，在 .NET Framework 4.7 和舊版本中，高對比模式中滑鼠移至上方的預設連結樣式已變更為不正確的色彩。 從 .NET Framework 4.7.1 開始，已解決此問題。 同樣地，從 .NET Framework 4.7.1 開始，<xref:System.Windows.Controls.DataGrid> 核取方塊資料行會使用鍵盤焦點回饋的預期色彩。
 
-    之前： 
+    之前： 
 
-    ![協助工具改善之前的 DataGrid 預設連結樣式](media/default-link-style-before.png) 
+    ![協助工具改善之前的 DataGrid 預設連結樣式](media/default-link-style-before.png) 
  
-    之後：    
+    之後：    
   
-    ![協助工具改善之後的 DataGrid 預設連結樣式](media/default-link-style-after.png)  
+    ![協助工具改善之後的 DataGrid 預設連結樣式](media/default-link-style-after.png)  
 
 如需 .NET Framework 4.7.1 中 WPF 協助工具改善的詳細資訊；請參閱 [WPF 中的協助工具改善](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)。
 
@@ -298,7 +298,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **高對比模式中改善的顯示**
 
-從 .NET Framework 4.7.1 開始，各種 WinForms 控制項都提供作業系統中所提供高對比模式的呈現改善。 Windows 10 已變更某些高對比系統色彩的值，而且 Windows Forms 是以 Windows 10 Win32 架構為基礎。 為獲得最佳體驗，在最新版的 Windows 上執行，並新增最新作業系統變更，方法是在測試應用程式中新增 app.manifest 檔案，並將 Windows 10 支援的作業系統列取消註解，使它看起來如下：
+從 .NET Framework 4.7.1 開始，各種 WinForms 控制項都提供作業系統中所提供高對比模式的呈現改善。 Windows 10 已變更某些高對比系統色彩的值，而且 Windows Forms 是以 Windows 10 Win32 架構為基礎。 為獲得最佳體驗，請在最新版的 Windows 上執行，並新增最新 OS 變更，方法是在測試應用程式中新增 app.manifest 檔案，並將 Windows 10 支援的 OS 列取消註解，使它看起來如下：
 
 ```xml
 <!-- Windows 10 -->
@@ -312,15 +312,15 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - 所選取 <xref:System.Windows.Forms.Button> 控制項中的文字會與選取色彩成對比。
 
-- 已停用的文字較容易閱讀。 例如: 
+- 已停用的文字較容易閱讀。 例如：
 
     之前：
 
-    ![協助工具改善之前的已停用文字](media/wf-disabled-before.png) 
+    ![協助工具改善之前的已停用文字](media/wf-disabled-before.png) 
 
     之後：
 
-    ![協助工具改善之後的已停用文字](media/wf-disabled-after.png) 
+    ![協助工具改善之後的已停用文字](media/wf-disabled-after.png) 
 
 - 執行緒例外狀況對話方塊中的高對比改善。
 
@@ -439,7 +439,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - 選擇高對比佈景主題的使用者會看到工作流程設計工具和其控制項在可見性方面的許多改善，例如項目之間的更佳對比比例以及用於焦點項目的更明顯選取方塊。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[.NET Framework 的新功能](whats-new.md)
- 
+- [.NET Framework 的新功能](whats-new.md)
+

@@ -1,5 +1,5 @@
 ---
-title: 如何：實作支援事件架構非同步模式的元件
+title: HOW TO：實作支援事件架構非同步模式的元件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 8213d3d980edc9c37b5f50545edbcd8959616963
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745463"
 ---
-# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>如何：實作支援事件架構非同步模式的元件
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>HOW TO：實作支援事件架構非同步模式的元件
 如果您正在撰寫的類別含有一些可能造成明顯延遲的作業，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)，來為它提供非同步功能。  
   
  本逐步解說說明如何建立實作「事件架構非同步模式」的元件。 其實作方式是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空間中的協助程式類別，以確保此元件在任何應用程式模型下都能正常運作，包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]、主控台應用程式及 Windows Forms 應用程式。 您也可以使用 <xref:System.Windows.Forms.PropertyGrid> 控制項和您自己的自訂設計工具來設計此元件。  
@@ -48,7 +48,7 @@ ms.locfileid: "46003811"
   
 -   實作開始和取消方法  
   
- 若要將本主題中的程式碼複製成單一清單，請參閱[如何：實作事件架構非同步模式的用戶端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
+ 若要將此主題中的程式碼複製為單一清單，請參閱[如何：實作事件架構非同步模式的用戶端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
 ## <a name="creating-the-component"></a>建立元件  
  第一步是建立將會實作「事件架構非同步模式」的元件。  
@@ -176,7 +176,7 @@ ms.locfileid: "46003811"
  `CalculateWorker` 方法會包裝在委派中，且叫用此方法時，會藉由對 `BeginInvoke` 的呼叫以非同步方式叫用。  
   
 > [!NOTE]
->  實作進度回報時，是在 `BuildPrimeNumberList` 方法中實作。 在執行速度快的電腦上，可以快速地連續引發 `ProgressChanged` 事件。 作為這些事件之引發位置的用戶端執行緒必須能夠處理此情況。 使用者介面程式碼可能會湧入大量訊息而來不及處理，導致產生當機行為。 如需可處理此情況的範例使用者介面，請參閱[如何：實作事件架構非同步模式的用戶端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
+>  實作進度回報時，是在 `BuildPrimeNumberList` 方法中實作。 在執行速度快的電腦上，可以快速地連續引發 `ProgressChanged` 事件。 作為這些事件之引發位置的用戶端執行緒必須能夠處理此情況。 使用者介面程式碼可能會湧入大量訊息而來不及處理，導致產生當機行為。 如需可處理此情形的使用者介面範例，請參閱[如何：實作事件架構非同步模式的用戶端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>以非同步方式執行質數計算：  
   
@@ -242,7 +242,7 @@ ms.locfileid: "46003811"
   
  `PrimeNumberCalculator` 元件現在已完整而可供使用。  
   
- 如需使用 `PrimeNumberCalculator` 元件的範例用戶端，請參閱[如何：實作事件架構非同步模式的用戶端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
+ 如需使用了 `PrimeNumberCalculator` 元件的用戶端範例，請參閱[如何：實作事件架構非同步模式的用戶端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
 ## <a name="next-steps"></a>後續步驟  
  您可以撰寫 `CalculatePrime` (`CalculatePrimeAsync` 方法的對等同步方法) 來填寫此範例。 這將可讓 `PrimeNumberCalculator` 元件完全符合「事件架構非同步模式」的規範。  
@@ -253,6 +253,6 @@ ms.locfileid: "46003811"
   
 ## <a name="see-also"></a>另請參閱
 
-- [操作說明：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
-- [事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
-- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [如何：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

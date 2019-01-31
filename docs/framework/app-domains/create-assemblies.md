@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8590b38ace0abcc370f94852a35569b95c4a2d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582446"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643607"
 ---
 # <a name="creating-assemblies"></a>建立組件
 
@@ -50,7 +50,7 @@ ms.locfileid: "48582446"
 
 - [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)
-- [操作說明：建置單一檔案組件](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)
-- [操作說明：建置多檔案組件](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [如何：建置單一檔案組件](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)
+- [如何：建置多檔案組件](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [多檔案組件](../../../docs/framework/app-domains/multifile-assemblies.md)

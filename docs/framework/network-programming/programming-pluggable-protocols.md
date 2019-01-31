@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 74dd44e704836b209366a7975d08a43375318e90
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1becdc227995064a3f34d712834ab358cc41754b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646590"
 ---
 # <a name="programming-pluggable-protocols"></a>可插式通訊協定程式設計
 抽象 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別提供可插式通訊協定的基底。 透過從 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 衍生通訊協定特定類別，應用程式可以要求來自網際網路資源的資料，並讀取回應，而不需要指定所要使用的通訊協定。  
@@ -31,8 +31,8 @@ ms.locfileid: "50190784"
   
  若要善用可插式通訊協定，<xref:System.Net.WebRequest> 子系必須提供不需要設定通訊協定特定屬性的預設要求和回應交易。 例如，實作 <xref:System.Net.WebRequest> 類別以進行 HTTP 的 <xref:System.Net.HttpWebRequest> 類別預設會提供 `GET` 要求，並傳回包含從網頁伺服器傳回之資料流的 <xref:System.Net.HttpWebResponse>。  
   
-## <a name="see-also"></a>請參閱  
- [衍生自 WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)  
- [衍生自 WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)  
- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
- [如何：轉換 WebRequest 類型以存取通訊協定特定屬性](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+## <a name="see-also"></a>另請參閱
+- [衍生自 WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+- [衍生自 WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)
+- [如何：轉換 WebRequest 類型以存取通訊協定特定屬性](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

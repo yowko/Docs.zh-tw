@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127546"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066346"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -91,28 +91,35 @@ dotnet tool install -g dotnetsay
 
 ## <a name="roll-forward"></a>向前復原
 
-從 .NET Core 2.0 開始，所有 .NET Core 應用程式都會自動向前復原至系統上安裝的最新*次要版本*。
+從 .NET Core 2.0 開始，所有 .NET Core 應用程式都會自動向前復原為系統上安裝的最新次要版本。
 
 從 .NET Core 2.0 開始，如果用來建置應用程式的 .NET Core 版本不存在於執行階段中，則應用程式會自動針對已安裝的最新 .NET Core *次要版本*執行。 換句話說，如果應用程式是使用 .NET Core 2.0 建置，而主機系統上不存在 .NET Core 2.0，但是有 .NET Core 2.1，則該應用程式會搭配 NET Core 2.1 執行。
 
 > [!IMPORTANT]
-> 此向前復原行為不適用於預覽版本。 也不適用於主要版本。 例如，.NET Core 1.0 應用程式不會向前復原至 .NET Core 2.0 或 .NET Core 2.1。
+> 此向前復原行為不適用於預覽版本。 根據預設，也不會套用至主要版本，但可透過以下設定進行變更。
 
-您也可以使用下列三種方式的其中一種，來停用次要版本向前復原：
+您可以透過變更無候選版共用架構的向前復原設定，來修改此行為。 可用的設定為：
+- `0` - 停用次要版本向前復原行為。 使用此設定，為 .NET Core 2.0.0 建置的應用程式會向前復原為 .NET Core 2.0.1，而不是 .NET Core 2.2.0 或 .NET Core 3.0.0。
+- `1` - 啟用次要版本向前復原行為。 這是設定的預設值。 使用此設定，為 .NET Core 2.0.0 建置的應用程式會依安裝的版本向前復原為 .NET Core 2.0.1 或 NET Core 2.2.0，但不會是 .NET Core 3.0.0。
+- `2` - 啟用次要與主要版本的向前復原行為。 若已設定，那麼即使是其他主要版本也會列入考量，因此為 .NET Core 2.0.0 建置的應用程式會向前復原為 .NET Core 3.0.0。
 
-- 將 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` 環境變數設為 0。
+您可用以下三種方式的任一種修改此設定：
 
-- 在 runtimeconfig.json 檔案中新增下列程式碼行：
+- 將 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` 環境變數設定為所需的值。
+
+- 將下列這一行新增至 `runtimeconfig.json` 檔案，並使用所需的值：
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- 使用 [.NET Core CLI 工具](../tools/index.md)時，使用 .NET Core 命令 (例如 `run`) 來包含下列選項：
+- 在使用 [.NET Core CLI 工具](../tools/index.md)時，將以下選項新增至 .NET Core 命令 (例如 `run`)，並使用所需的值：
 
    ```console
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
+
+修補版本向前復原與此設定無關，而且如有任何次要或主要版本向前復原，在套用之後就會完成。
 
 ## <a name="deployment"></a>部署
 
@@ -239,6 +246,6 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 ## <a name="see-also"></a>另請參閱
 
-* [.NET Core 的新功能](index.md)  
-* [EF Core 2.1 的新功能](/ef/core/what-is-new/ef-core-2.1)  
-* [ASP.NET Core 2.1 的新功能](/aspnet/core/aspnetcore-2.1)
+- [.NET Core 的新功能](index.md)
+- [EF Core 2.1 的新功能](/ef/core/what-is-new/ef-core-2.1)
+- [ASP.NET Core 2.1 的新功能](/aspnet/core/aspnetcore-2.1)

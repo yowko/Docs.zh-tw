@@ -1,5 +1,5 @@
 ---
-title: 如何：對 Web 使用者顯示當地語系化的日期和時間資訊
+title: HOW TO：對 Web 使用者顯示當地語系化的日期和時間資訊
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,19 +10,22 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085221"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857654"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>如何：對 Web 使用者顯示當地語系化的日期和時間資訊
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>HOW TO：對 Web 使用者顯示當地語系化的日期和時間資訊
 由於網頁可在世界的任何一個角落顯示，負責剖析及格式化日期和時間值的作業在與使用者互動時，並不應該仰賴單一的預設格式 (這通常是網頁伺服器當地文化特性的格式)。 相反地，處理來自使用者之日期和時間字串輸入的 Web 表單，應該使用該使用者慣用的文化特性對字串進行剖析。 同樣地，日期和時間資料應該以符合使用者文化特性的格式向該使用者顯示。 本主題顯示如何執行此動作。  
   
-### <a name="to-parse-date-and-time-strings-input-by-the-user"></a>剖析來自使用者的日期和時間字串  
+## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>剖析來自使用者的日期和時間字串  
   
 1.  判斷是否已填入由 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 屬性所傳回的字串陣列。 如果不要，請繼續進行步驟 6。  
   
@@ -40,7 +43,7 @@ ms.locfileid: "44085221"
   
 6.  如果轉換仍然失敗，或由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列是空的，請使用不因文化特性而異的方式來剖析字串，這是由 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 屬性所傳回。  
   
-### <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>剖析使用者要求的當地日期和時間  
+## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>剖析使用者要求的當地日期和時間  
   
 1.  新增 <xref:System.Web.UI.WebControls.HiddenField> 控制項至 Web 表單。  
   
@@ -110,7 +113,7 @@ ms.locfileid: "44085221"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [剖析日期和時間字串](../../../docs/standard/base-types/parsing-datetime.md)
