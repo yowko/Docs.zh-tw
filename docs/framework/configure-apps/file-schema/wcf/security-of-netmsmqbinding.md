@@ -1,15 +1,15 @@
 ---
-title: '&lt;netMsmqBinding&gt; 的 &lt;security&gt;'
+title: <security> 的 <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: 71f0c10c336a9682971bc774141cb0c3bd37c092
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb509bb0c4f7192aefbb51a98042f3f359969321
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696382"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272613"
 ---
-# <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; 的 &lt;security&gt;
+# <a name="security-of-netmsmqbinding"></a>\<安全性 > 的\<netMsmqBinding >
 定義 MSMQ 繫結的安全性設定。 它指定是否啟用傳輸或 SOAP 安全性，以及如果啟用，正在使用的驗證模式和保護層級。  
   
  \<system.ServiceModel>  

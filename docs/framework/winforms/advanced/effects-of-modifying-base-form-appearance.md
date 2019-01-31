@@ -8,14 +8,14 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: b942c160d7c4f89b1aad97c2dfdef1d060c18e55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc0edaa8ca115a09eb6d8382a12d9a7c0c0db7f6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639220"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260160"
 ---
-# <a name="effects-of-modifying-a-base-form39s-appearance"></a>修改基底表單外觀的效果
+# <a name="effects-of-modifying-a-base-forms-appearance"></a>修改基底表單外觀的效果
 在應用程式開發期間，您通常可能需要變更專案中 (或其他專案中) 的其他表單所繼承之基底表單的外觀。  
   
  在設計階段，建置包含基底表單的專案時，基底表單外觀的變更 (也就是設定屬性或增減控制項) 會反映在繼承的表單上。 只是儲存基底表單的變更並不足夠。 若要建置專案，請從 [建置] 功能表中選擇 [建置]。  

@@ -1,5 +1,5 @@
 ---
-title: 複製的值&#39;ByRef&#39;參數&#39; &lt;parametername&gt; &#39;回相符引數會從型別&#39; &lt;typename1&gt; &#39; &#39; &lt;2&gt&gt;&#39;
+title: 將 'ByRef' 參數 '<parametername>' 的值複製回相對應的引數，會從類型 '<typename1>' 減少到類型 '<typename2>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc32053
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: ec733ecd605d0a9db840ea3f0c3e0e3b5b698054
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5d427495e8eedae9dc0163c97401338fb6d0bbd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506264"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276610"
 ---
-# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>複製的值&#39;ByRef&#39;參數&#39; &lt;parametername&gt; &#39;回相符引數會從型別&#39; &lt;typename1&gt; &#39; &#39; &lt;2&gt&gt;&#39;
+# <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' 參數的值複製 '\<參數名稱 >' 回相符引數會從類型'\<typename1 >' 為類型 '\<2&gt >'
 可擴展為對應參數類型的引數呼叫的程序，並將參數轉換成引數會縮小。  
   
  當您定義類別或結構時，可以定義一個或多個轉換運算子，以將該類別或結構類型轉換成其他類型。 您也可以定義反向轉換運算子，以這些其他類型轉換回您的類別或結構類型。 當您使用類別或結構類型中的程序呼叫時，Visual Basic 就可以使用這些轉換運算子，來將引數的類型轉換成其對應參數的型別。  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;訊息&gt;此錯誤也可能是因為混用了檔案參考和組件的專案參考&#39;&lt;組件名稱&gt;&#39;'
+title: <message> 這項錯誤也可能是因為混用了檔案參考和組件 '<assemblyname>' 的專案參考
 ms.date: 07/20/2015
 f1_keywords:
 - bc30971
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: d4fb2a8985a21ecea5056b83d2766e8dc468180d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f28327b4df5b15f368f736e7402179227035a06e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528988"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272548"
 ---
-# <a name="ltmessagegt-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-39ltassemblynamegt39"></a>&lt;訊息&gt;此錯誤也可能是因為混用了檔案參考和組件的專案參考&#39;&lt;組件名稱&gt;&#39;
+# <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<訊息 > 這個錯誤也可能是因為混用了檔案參考和組件的專案參考 '\<組件名稱 >'
 \<訊息 > 這個錯誤也可能是因為混用了檔案參考和組件的專案參考 '\<組件名稱 >。 在此情況下，請嘗試更換的檔案參考 '\<assemblyfilename >' 在專案'\<projectname1 >' 的專案參考 '\<專案名稱 2> >'。  
   
  在您的專案中的程式碼存取的另一個專案，成員，但您的解決方案組態不允許 Visual Basic 編譯器解析參考。  

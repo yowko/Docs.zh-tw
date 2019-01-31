@@ -1,16 +1,16 @@
 ---
-title: '&lt;argument&gt;'
+title: <argument>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a7144d53-8023-4e90-971f-895e016fd58a
-ms.openlocfilehash: 3744781f844d4a1728ba1e9846b2b8c56c0ad8fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e386ad261422904d3f33385bb80bdb8c1ac029b9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554594"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267946"
 ---
-# <a name="ltargumentgt"></a>&lt;argument&gt;
+# <a name="argument"></a>\<引數 >
 表示與活動狀態查詢相關聯之引數的組態項目。  
   
  如需有關追蹤設定檔查詢的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;findCriteria&gt;'
+title: <findCriteria>
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: b90e6cab923075dbf750dc0d26a0eb1196cfde32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e82312cb17fbd3f76f781ea37f761e946319a0a0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741232"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284854"
 ---
-# <a name="ltfindcriteriagt"></a>&lt;findCriteria&gt;
+# <a name="findcriteria"></a>\<findCriteria>
 組態項目，該項目提供一組用戶端應用程式搜尋探索服務時所用的準則。 準則可以分組為搜尋準則 （指定您要尋找的服務），以及尋找終止準則 （搜尋應持續多久）。  
   
  \<system.ServiceModel>  

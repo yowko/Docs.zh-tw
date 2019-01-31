@@ -1,19 +1,19 @@
 ---
-title: '&lt;xmlSerializer&gt; 元素'
+title: <xmlSerializer> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <xmlSerializer> element
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: 4b511dc229c9e8321b91fbb0f9395627680e5d12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2919e8d4c1af858973ff3d2b58b4d3bc4f925527
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591951"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258249"
 ---
-# <a name="ltxmlserializergt-element"></a>&lt;xmlSerializer&gt; 元素
+# <a name="xmlserializer-element"></a>\<xmlSerializer > 項目
 指定是否已完成 <xref:System.Xml.Serialization.XmlSerializer> 進度的其他檢查。  
   
  \<configuration>  

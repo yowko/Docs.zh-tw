@@ -1,17 +1,17 @@
 ---
-title: 從字串轉換&quot;&lt;字串&gt;&quot;輸入 '&lt;typename&gt;' 無效
+title: 從字串轉換&quot; <string> &quot;輸入 '<typename>' 無效
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInvalidCast_FromStringTo
 ms.assetid: a7382c0a-e8a4-4125-9690-db3fa030a06a
-ms.openlocfilehash: 7454158f0b9f6a34af63560fde6438c7180daa02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13b1570f1d63e643c822161f13e8392d90e1b138
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704286"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268076"
 ---
-# <a name="cast-from-string-quotltstringgtquot-to-type-lttypenamegt-is-not-valid"></a>從字串轉換&quot;&lt;字串&gt;&quot;輸入 '&lt;typename&gt;' 無效
+# <a name="cast-from-string-quotstringquot-to-type-typename-is-not-valid"></a>從字串轉換&quot;\<字串 >&quot;輸入 '\<類型名稱 >' 無效
 嘗試將字串變數轉換成另一種類型不正確。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

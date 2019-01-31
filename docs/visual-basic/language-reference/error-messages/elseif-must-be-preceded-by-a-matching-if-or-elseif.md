@@ -1,5 +1,5 @@
 ---
-title: '&#39;#ElseIf&#39;之前必須搭配相對應的&#39;#If&#39;或&#39;#ElseIf&#39;'
+title: "'#ElseIf' 之前必須搭配相對應的 '#If' 或 '#ElseIf'"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30014
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30014
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
-ms.openlocfilehash: 1e63595ee573e9356f6870a02b2131897c725baf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6fa76b2aba45e3455cef6ceafc0f737ef56225d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505779"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271547"
 ---
-# <a name="39elseif39-must-be-preceded-by-a-matching-39if39-or-39elseif39"></a>&#39;#ElseIf&#39;之前必須搭配相對應的&#39;#If&#39;或&#39;#ElseIf&#39;
+# <a name="elseif-must-be-preceded-by-a-matching-if-or-elseif"></a>'#ElseIf' 之前必須搭配相對應的 '#If' 或 '#ElseIf'
 `#ElseIf` 是條件式編譯指示詞。 `#ElseIf`子句之前必須搭配相對應`#If`或`#ElseIf`子句。  
   
  **錯誤 ID:** BC30014  

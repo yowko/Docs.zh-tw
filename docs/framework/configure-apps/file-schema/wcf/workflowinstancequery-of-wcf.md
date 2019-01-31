@@ -1,27 +1,27 @@
 ---
-title: WCF 的 &lt;workflowInstanceQuery&gt;
+title: <workflowInstanceQuery> WCF 的
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: 01867171941db82260d28b0825bdf3453e46e66c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 726d4db3bad9f57663790e2bb4e081faba28f1ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148171"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278768"
 ---
-# <a name="ltworkflowinstancequerygt-of-wcf"></a>WCF 的 &lt;workflowInstanceQuery&gt;
+# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery > 的 WCF
 
 表示追蹤工作流程執行個體生命週期變更的查詢，例如已開始或已完成的事件。  
   
 如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<追蹤 >  
+\<tracking>  
 \<設定檔 >  
 \<trackingProfile>  
-\<工作流程 >  
+\<workflow>  
 \<workflowInstanceQueries>  
-\<workflowInstanceQuery >  
+\<workflowInstanceQuery>  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54148171"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<狀態 >](states-of-wcf-workflowinstancequery.md)|建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。|  
+|[\<states>](states-of-wcf-workflowinstancequery.md)|建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。|  
   
 ### <a name="parent-elements"></a>父元素  
   

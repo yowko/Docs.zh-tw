@@ -1,16 +1,16 @@
 ---
-title: '&lt;remove&gt;'
+title: <remove>
 ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
-ms.openlocfilehash: 410fef1a43f9202d56c4957b1162c53ee056ae3f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a54957458311e2d5941d1aa1c2486a2f66994d9b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198718"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288128"
 ---
-# <a name="ltremovegt"></a>&lt;remove&gt;
+# <a name="remove"></a>\<remove>
 從權杖處理常式集合中移除指定的安全性權杖處理常式。  
   
  \<system.identityModel>  
@@ -38,7 +38,7 @@ ms.locfileid: "47198718"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|類型|要移除的權杖處理常式的 CLR 型別名稱。 如需有關如何指定`type`屬性，請參閱[自訂型別參考](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24)。 必要。|  
+|類型|要移除的權杖處理常式的 CLR 型別名稱。 如需有關如何指定`type`屬性，請參閱[自訂型別參考](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24)。 必要項。|  
   
 ### <a name="child-elements"></a>子元素  
  無  

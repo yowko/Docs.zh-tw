@@ -1,16 +1,16 @@
 ---
-title: '&lt;activityStateQueries&gt;'
+title: <activityStateQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: bdd3c8ae-a13f-4df1-9b3c-a9d6c4bb1b5f
-ms.openlocfilehash: bfd19e00e79a95eb717ca9131e92b5ff5c600d5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad41c1afec0b46a404f8f24882587c1dfeb68a80
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511978"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267803"
 ---
-# <a name="ltactivitystatequeriesgt"></a>&lt;activityStateQueries&gt;
+# <a name="activitystatequeries"></a>\<activityStateQueries>
 代表查詢的集合，可用來追蹤活動的生命週期之變更，這些活動將構成工作流程執行個體。 例如，您可能要追蹤的每次在 「 傳送電子郵件 」 活動完成的工作流程執行個體內。 追蹤參與者必須要具備這個查詢，才能訂閱活動狀態記錄物件。 可供訂閱的狀態可於 ActivityStates 中指定。  
   
  如需有關追蹤設定檔查詢的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  

@@ -1,23 +1,23 @@
 ---
-title: '&lt;audienceUris&gt;'
+title: <audienceUris>
 ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
-ms.openlocfilehash: af138a4da49a48ed43e1bc8f2c2c81c56892feed
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 556c444d5e48e27036c4b49338f6e70de7ef5c5d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48034476"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267270"
 ---
-# <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
+# <a name="audienceuris"></a>\<audienceUris>
 指定是可接受的識別項的信賴憑證者的合作對象 (RP) 的 Uri 的集合。 除非其中一個允許的對象 Uri 的範圍，將不會接受權杖。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<Securitytokenhandlerconfiguration> >  
-\<audienceUris >  
+\<securityTokenHandlerConfiguration>  
+\<audienceUris>  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48034476"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Securitytokenhandlerconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
   
 ## <a name="remarks"></a>備註  
  根據預設，集合是空的。使用  `<add>`， `<clear>`，和`<remove>`來修改集合的項目。 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> 並<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>物件中設定任何的對象 URI 集合的值允許的對象 URI 限制的使用<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>物件。  

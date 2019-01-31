@@ -1,5 +1,5 @@
 ---
-title: 已建立內嵌 interop 組件參考&#39; &lt;assembly1&gt; &#39;因為該組件的間接參考來自組件&#39; &lt;assembly2&gt;&#39;
+title: 已建立內嵌 Interop 組件 '<assembly1>' 的參考，因為該組件的間接參考來自組件 '<assembly2>'。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40059
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - VBC40059
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-ms.openlocfilehash: fe04742e0a3be5e1d19ab4017e55f2293988a671
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 058aa4891d05147756290affd60ea5fb260c33ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560018"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262948"
 ---
-# <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>已建立內嵌 interop 組件參考&#39; &lt;assembly1&gt; &#39;因為該組件的間接參考來自組件&#39; &lt;assembly2&gt;&#39;
+# <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>已建立內嵌 interop 組件參考 '\<assembly1 >' 因為該組件的間接參考來自組件'\<assembly2 >'
 已建立內嵌 Interop 組件 '\<assembly1>' 的參考，因為該組件的間接參考來自組件 '\<assembly2>'。 請考慮變更其中任何一個組件上的 [內嵌 Interop 類型] 屬性。  
   
  您已新增組件 (assembly1) 的參考，該組件的 `Embed Interop Types` 屬性已設定為 `True`。 這會指示編譯器內嵌該組件中的 Interop 類型資訊。 不過，編譯器無法內嵌該組件中的 Interop 類型資訊，因為您所參考的另一個組件 (assembly2) 也在參考該組件 (assembly1)，而且其 `Embed Interop Types` 屬性已設定為 `False`。  

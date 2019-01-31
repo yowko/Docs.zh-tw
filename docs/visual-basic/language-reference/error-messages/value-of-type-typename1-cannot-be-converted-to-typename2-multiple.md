@@ -1,5 +1,5 @@
 ---
-title: 類型的值&#39; &lt;typename1&gt; &#39;無法轉換成&#39; &lt;2&gt&gt; &#39; （多重檔案參考）
+title: 類型 '<typename1>' 的值無法轉換成 '<typename2>' (多重檔案參考)
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30961
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 943b9612a9217b90c19f34285e812c4e1cccf81a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e394459e7d25d38e27e78f10dd547cb9ebd6230d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691364"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261343"
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>類型的值&#39; &lt;typename1&gt; &#39;無法轉換成&#39; &lt;2&gt&gt; &#39; （多重檔案參考）
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>類型的值 '\<typename1 >' 無法轉換成'\<2&gt >' （多重檔案參考）
 類型的值 '\<typename1 >' 無法轉換成'\<2&gt >'。 類型不相符可能是因為混用的檔案參考 '\<filepath1 >' 在專案'\<projectname1 >' 的檔案參考 '\<filepath2 >' 在專案'\<專案名稱 2> >'。 如果兩個組件相同，請嘗試更換這些參考，讓兩個參考都來自相同的位置。  
   
  其中一個專案可多個檔案參考的組件的情況下，編譯器無法保證一個類型可轉換成另一個。  

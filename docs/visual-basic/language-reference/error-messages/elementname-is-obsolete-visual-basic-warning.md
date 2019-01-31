@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;elementname&gt; &#39;已經過時 （Visual Basic 警告）'
+title: "'<elementname>' 已經過時 (Visual Basic 警告)"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40008
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-ms.openlocfilehash: eeeca3354592bfc6d657b435c42ad5644fd2b97d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6d927ef6681838d8a77a0c6018eb6bbe30913e8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552374"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255857"
 ---
-# <a name="39ltelementnamegt39-is-obsolete-visual-basic-warning"></a>&#39;&lt;elementname&gt; &#39;已經過時 （Visual Basic 警告）
+# <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<項目名稱 >' 已經過時 （Visual Basic 警告）
 陳述式嘗試存取已使用 <xref:System.ObsoleteAttribute> 屬性和指示詞標記以視為警告的程式設計項目。  
   
  您可以將任何程式設計項目標記為不再使用，方法是對其套用 <xref:System.ObsoleteAttribute> 。 如果您這麼做，則可以將屬性 (attribute) 的 <xref:System.ObsoleteAttribute.IsError%2A> 屬性 (property) 設定為 `True` 或 `False`。 如果您將它設定為 `True`，則編譯器會將使用這個項目的嘗試視為錯誤。 如果您將它設定為 `False`，或讓它預設為 `False`，則在嘗試使用該項目時，編譯器會發出警告。  

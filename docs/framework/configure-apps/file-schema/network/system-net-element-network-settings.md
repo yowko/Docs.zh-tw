@@ -1,5 +1,5 @@
 ---
-title: '&lt;system.Net&gt;項目 （網路設定）'
+title: < System.Net > 項目 （網路設定）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 2f387ecccac2c1c97d03e2c22a31ad2dd0577c77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9fbf48325c7cb5216d16041543bc53c00584ea3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567772"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257877"
 ---
-# <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt;項目 （網路設定）
+# <a name="systemnet-element-network-settings"></a>\<system.Net > 項目 （網路設定）
 包含會指定 .NET Framework 如何連接至網路的設定。  
   
  \<configuration>  

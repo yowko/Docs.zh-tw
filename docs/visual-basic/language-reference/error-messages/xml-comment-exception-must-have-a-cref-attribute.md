@@ -1,5 +1,5 @@
 ---
-title: XML 註解例外狀況必須有&#39;cref&#39;屬性
+title: XML 註解例外狀況必須有 'cref' 屬性
 ms.date: 07/20/2015
 f1_keywords:
 - bc42319
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: 0f276781165e80b2d869da2518dbe34b33085d5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a11bfe261ffb8ded95f2e513aaddf00aa00f702e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649943"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266633"
 ---
-# <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>XML 註解例外狀況必須有&#39;cref&#39;屬性
+# <a name="xml-comment-exception-must-have-a-cref-attribute"></a>XML 註解例外狀況必須有 'cref' 屬性
 \<例外狀況 > 標籤可用來記載方法可能擲回的例外狀況。 必要`cref`屬性可將指定的成員，會檢查文件產生器的名稱。 如果成員存在，則會將它轉譯成在文件檔案中的標準項目名稱。  
   
  **錯誤 ID:** BC42319  

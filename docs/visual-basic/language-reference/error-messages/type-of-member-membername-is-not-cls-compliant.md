@@ -1,5 +1,5 @@
 ---
-title: 成員的型別&#39; &lt;membername&gt; &#39;不符合 CLS 標準
+title: 成員 '<membername>' 的類型不符合 CLS 標準
 ms.date: 07/20/2015
 f1_keywords:
 - bc40025
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: b304b28aa7d43a33111c49507bf02f004fcdd9c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b23ebca955d961771b194df2c7316cb1b7f4a50
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603832"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254089"
 ---
-# <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>成員的型別&#39; &lt;membername&gt; &#39;不符合 CLS 標準
+# <a name="type-of-member-membername-is-not-cls-compliant"></a>成員的型別 '\<成員名稱 >' 不符合 CLS 標準
 指定不是這個成員的資料類型的一部分[Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) （cls） 標準。 這是不在您的元件中發生錯誤，因為[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]和 Visual Basic 支援這種資料類型。 不過，另一個以完全符合 CLS 標準的程式碼撰寫的元件可能不支援這種資料類型。 這類元件可能無法順利與您的元件互動。  
   
  下列 Visual Basic 資料類型不符合 CLS 標準：  

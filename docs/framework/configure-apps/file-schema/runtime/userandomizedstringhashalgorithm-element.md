@@ -1,5 +1,5 @@
 ---
-title: '&lt;UseRandomizedStringHashAlgorithm&gt;項目'
+title: <UseRandomizedStringHashAlgorithm> 項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bb4286ea6055d2df9111b2222b137f2668bfdfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3545938d8f9a59c8f3c6d03e5e67bb5f545a4981
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681036"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260589"
 ---
-# <a name="ltuserandomizedstringhashalgorithmgt-element"></a>&lt;UseRandomizedStringHashAlgorithm&gt;項目
+# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > 項目
 判斷 common language runtime 是否會計算字串的雜湊碼，在每個應用程式定義域為基準。  
   
  \<configuration>  

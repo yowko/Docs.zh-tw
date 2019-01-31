@@ -1,15 +1,15 @@
 ---
-title: '&lt;netNamedPipeBinding&gt; 的 &lt;security&gt;'
+title: <security> 的 <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: bef644094de06939c6948a50888f7f7f9d3e9a7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ee2c4161f70c01dc09ac36bbcf6a234f822682d0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524607"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265296"
 ---
-# <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; 的 &lt;security&gt;
+# <a name="security-of-netnamedpipebinding"></a>\<安全性 > 的\<netNamedPipeBinding >
 定義繫結的安全性設定。  
   
  \<system.ServiceModel>  

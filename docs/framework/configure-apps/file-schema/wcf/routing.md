@@ -1,15 +1,15 @@
 ---
-title: '&lt;routing&gt;'
+title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: 855faedfd2e9523e939174441b0cfa50e052b375
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc7c1a64f9481a7ab41cf35241ade04bd690dae0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565874"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275570"
 ---
-# <a name="ltroutinggt"></a>&lt;routing&gt;
+# <a name="routing"></a>\<路由 >
 
 代表定義一組路由篩選條件，判斷類型的 Windows Communication Foundation (WCF) 的組態區段<xref:System.ServiceModel.Dispatcher.MessageFilter>評估內送訊息，以及路由資料表定義目標端點時要使用將訊息傳送至篩選條件的比對。
 

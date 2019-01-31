@@ -1,5 +1,5 @@
 ---
-title: 函式的傳回型別&#39;&lt;程序名稱&gt;&#39;不符合 CLS 標準
+title: 函式 '<procedurename>' 的傳回類型不符合 CLS 標準
 ms.date: 07/20/2015
 f1_keywords:
 - bc40027
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: b7704ee63031c38f708a2243e84b880c25fcf819
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5e746981d10ba8e662aebf86f67f08856ba37199
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243777"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260511"
 ---
-# <a name="return-type-of-function-39ltprocedurenamegt39-is-not-cls-compliant"></a>函式的傳回型別&#39;&lt;程序名稱&gt;&#39;不符合 CLS 標準
+# <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>函式的傳回型別 '\<程序名稱 >' 不符合 CLS 標準
 A`Function`程序標示為`<CLSCompliant(True)>`但傳回類型標記為`<CLSCompliant(False)>`、 未標示，或因為它不符合規範的型別不符合資格。  
   
  程序必須只使用符合 CLS 規範的型別，才能夠符合[語言獨立性以及與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md) (CLS) 標準。 這適用於參數型別、傳回型別及其所有區域變數的型別。  

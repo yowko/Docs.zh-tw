@@ -1,5 +1,5 @@
 ---
-title: 晚期繫結多載解析無法套用至&#39;&lt;程序名稱&gt;&#39;因為進行存取的執行個體為介面類型
+title: 晚期繫結多載解析無法套用至 '<procedurename>'，因為進行存取的執行個體為介面類型
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30933
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: db0ce88f63be8d58cc1c1abf91eda6a0e56456c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7215be3f454f4a799124620fb5db520282988035
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651509"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272628"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>晚期繫結多載解析無法套用至&#39;&lt;程序名稱&gt;&#39;因為進行存取的執行個體為介面類型
+# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>晚期繫結多載解析無法套用至 '\<程序名稱 >' 因為進行存取的執行個體為介面類型
 編譯器嘗試解析其參考的多載的屬性或程序，但參考會失敗，因為引數的型別是`Object`和參考的物件具有介面的資料類型。 `Object`引數會強制編譯器解析為晚期繫結參考。  
   
  在這些情況下，編譯器會解析而不是透過基礎的介面實作的類別透過多載。 如果類別重新命名其中一個多載版本，編譯器不會將該版本是多載，因為它的名稱不同。 這也會導致編譯器忽略已重新命名的版本，當它可能已解析參考正確的選擇。  

@@ -1,17 +1,17 @@
 ---
-title: 沒有可存取的多載 '&lt;methodname&gt;' 可以擴展轉換這些引數呼叫：&lt;清單&gt;
+title: 沒有可存取的多載 '<methodname>' 可以擴展轉換這些引數呼叫： <list>
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall_WideningConversion2
 ms.assetid: 5e74f5cf-80bd-4b48-b58a-465f981ec694
-ms.openlocfilehash: 47d3fa8343ba514cd4d99d44e6c9ba792af9f4a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4395d379c289dc17504fa50d5f147e007fceef2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743383"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261642"
 ---
-# <a name="no-accessible-overloaded-ltmethodnamegt-can-be-called-with-these-arguments-without-a-widening-conversion-ltlistgt"></a>沒有可存取的多載 '&lt;methodname&gt;' 可以擴展轉換這些引數呼叫：&lt;清單&gt;
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-widening-conversion-list"></a>沒有可存取的多載 '\<方法名稱 >' 可以擴展轉換這些引數呼叫：\<清單 >
 已呼叫多載方法，但沒有任何方法可在未擴展轉換的情況下，符合所提供的引數清單。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

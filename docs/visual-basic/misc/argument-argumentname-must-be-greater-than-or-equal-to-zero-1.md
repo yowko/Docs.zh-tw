@@ -1,17 +1,17 @@
 ---
-title: 引數&lt;引數名稱&gt;必須大於或等於零
+title: 引數<argumentname>必須大於或等於零
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GEZero1
 ms.assetid: 6f54fdc6-e263-4b2f-a66f-f206f3a59818
-ms.openlocfilehash: ef130ce0cb3b7b65936dad3421dee101cfdca4c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2b892eeab80bf5bcd8741d8b651633364a8af39
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624752"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257638"
 ---
-# <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to-zero"></a>引數&lt;引數名稱&gt;必須大於或等於零
+# <a name="argument-argumentname-must-be-greater-than-or-equal-to-zero"></a>引數\<引數名稱 > 必須大於或等於零
 引數值小於零。 引數值必須大於或等於零。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

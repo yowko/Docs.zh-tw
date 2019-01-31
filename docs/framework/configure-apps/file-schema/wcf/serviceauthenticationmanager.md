@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceAuthenticationManager&gt;'
+title: <serviceAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: fd04b10c0ac0bef4087daa1012a1b8bd3a5880e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7708dd8a572dd24c2852410b1781fce2807efab9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493634"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263481"
 ---
-# <a name="ltserviceauthenticationmanagergt"></a>&lt;serviceAuthenticationManager&gt;
+# <a name="serviceauthenticationmanager"></a>\<serviceAuthenticationManager>
 提供工作流程組態項目，這個項目會在服務層級建立傳輸、訊息或建立者的有效性。  
   
 \<system.ServiceModel>  

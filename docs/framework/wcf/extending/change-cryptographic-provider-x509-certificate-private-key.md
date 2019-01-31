@@ -1,5 +1,5 @@
 ---
-title: HOW TO：變更 X.509 憑證的密碼編譯提供者&#39;s 私密金鑰
+title: HOW TO：變更 X.509 憑證之私密金鑰的密碼編譯提供者
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 40c98d17a52643f451ec01bc8b97c60f2b011b36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce2ce082f41700b1b86786abfa2dfe4a673fd6e0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498969"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265944"
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>HOW TO：變更 X.509 憑證的密碼編譯提供者&#39;s 私密金鑰
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>HOW TO：變更 X.509 憑證之私密金鑰的密碼編譯提供者
 本主題說明如何變更用來提供 X.509 憑證之私密金鑰的密碼編譯提供者，以及如何整合 Windows Communication Foundation (WCF) 安全性架構提供者。 如需使用憑證的詳細資訊，請參閱[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
  WCF 安全性架構可用來引進新的安全性權杖類型，如中所述[How to:建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。 也可以使用自訂權杖來取代現有由系統提供的權杖型別。  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;dynamicEndpoint&gt;'
+title: <dynamicEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
-ms.openlocfilehash: dcb52143c874b14c9241940f9b326a07b3fa6a82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 786a70e8c686497e91492938a4d0796db4f6dd91
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540245"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269792"
 ---
-# <a name="ltdynamicendpointgt"></a>&lt;dynamicEndpoint&gt;
+# <a name="dynamicendpoint"></a>\<dynamicEndpoint>
 這個組態項目定義標準端點，其中包含的資訊可讓您啟用應用程式做為用戶端程式，在執行階段時動態尋找端點位址。  
   
 \<system.ServiceModel>  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;identity&gt;'
+title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 03e73f64090e0851b06ee67fe70c157b6145966c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336e8c4a4aae3565b8af7adaa73def453107ea93
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677343"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274152"
 ---
-# <a name="ltidentitygt"></a>&lt;identity&gt;
+# <a name="identity"></a>\<identity>
 身分識別項目允許用戶端開發人員在設計階段指定服務的預期身分識別。 在用戶端與服務之間的信號交換過程中的 Windows Communication Foundation (WCF) 基礎結構可確保預期的服務符合這個元素的值的身分識別，且因此可進行驗證。 如需詳細資訊，請參閱 <<c0> [ 服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
  \<system.ServiceModel>  

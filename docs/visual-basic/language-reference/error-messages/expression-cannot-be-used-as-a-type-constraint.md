@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;運算式&gt;&#39;不能當做類型條件約束'
+title: "'<expression>' 不能當做類型條件約束使用"
 ms.date: 07/20/2015
 f1_keywords:
 - bc32061
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: b7f77c8113f8af113b4c8515994093958970864a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02d5035daa1ff3da4d7d3bac7c95ef8e8379b3f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742129"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264670"
 ---
-# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;運算式&gt;&#39;不能當做類型條件約束
+# <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<運算式 >' 無法當做類型條件約束
 條件約束清單包含運算式，此運算式不表示類型參數上有效的條件約束。  
   
  條件約束清單會對傳遞至類型參數的類型引數強制一些必要需求。 您可以利用任意組合指定下列需求：  

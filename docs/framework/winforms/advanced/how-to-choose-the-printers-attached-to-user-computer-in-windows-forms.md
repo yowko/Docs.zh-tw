@@ -1,5 +1,5 @@
 ---
-title: HOW TO：選擇 附加至使用者的印表機&#39;Windows Forms 中的 s 電腦
+title: HOW TO：選擇 附加至 Windows Forms 中的使用者的電腦的印表機
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 10f45fadab0f3480d4c475ff8ee448b8d1cddb13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b206030b87aad5df40e518dc36ee198838e51b9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572808"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276766"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>HOW TO：選擇 附加至使用者的印表機&#39;Windows Forms 中的 s 電腦
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>HOW TO：選擇 附加至 Windows Forms 中的使用者的電腦的印表機
 通常，使用者會想要選擇列印到非預設的印表機。 使用 <xref:System.Windows.Forms.PrintDialog> 元件，即可讓使用者從目前安裝的印表機中選擇印表機。 透過 <xref:System.Windows.Forms.PrintDialog> 元件，擷取 <xref:System.Windows.Forms.DialogResult> 元件的 <xref:System.Windows.Forms.PrintDialog> 並將其用來選取印表機。  
   
  在下列程序中，選取要列印至預設印表機的文字檔案。 然後具現化 <xref:System.Windows.Forms.PrintDialog> 類別。  

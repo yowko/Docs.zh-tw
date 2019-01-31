@@ -1,22 +1,22 @@
 ---
-title: '&lt;CertificateReference&gt;'
+title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: e04dc90134aadfb8af7b0800c7144963d267f513
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c9c77f96ff6032de43d9b5a257bc0796a19b858
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206887"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269337"
 ---
-# <a name="ltcertificatereferencegt"></a>&lt;CertificateReference&gt;
+# <a name="certificatereference"></a>\<certificateReference>
 指定用來尋找和驗證 X.509 憑證的憑證存放區中的設定。  
   
- \<system.identityModel.services >  
-\<Federationconfiguration> >  
-\<v >  
-\<certificateReference >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<serviceCertificate>  
+\<certificateReference>  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,7 +56,7 @@ ms.locfileid: "47206887"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<v >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|設定用來加密和解密權杖的憑證。|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|設定用來加密和解密權杖的憑證。|  
   
 ## <a name="remarks"></a>備註  
  `<certificateReference>`項目會指定用來尋找和驗證 X.509 憑證的憑證存放區中的設定。 指定的子項目為時`<serviceCertficate>`項目，它會指定用來加密和解密權杖的 X.509 憑證的位置和驗證設定。 `<certificateReference>`項目由<xref:System.ServiceModel.Configuration.CertificateReferenceElement>類別。

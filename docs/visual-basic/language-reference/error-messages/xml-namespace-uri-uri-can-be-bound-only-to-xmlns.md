@@ -1,5 +1,5 @@
 ---
-title: XML 命名空間 URI &#39; &lt;uri&gt; &#39;可以繫結至&#39;xmlns&#39;
+title: XML 命名空間 URI '<uri>' 至 'xmlns' 只可以繫結
 ms.date: 07/20/2015
 f1_keywords:
 - bc31183
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
-ms.openlocfilehash: 42d89530355a1372e83fbdcfe4c94bfe4db5fd3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd5e67d573176a6b1a011b3191fca9607af85538
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687514"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279873"
 ---
-# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-39xmlns39"></a>XML 命名空間 URI `http://www.w3.org/XML/1998/namespace`; 可以繫結至&#39;xmlns&#39;
+# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>XML 命名空間 URI `http://www.w3.org/XML/1998/namespace`; 可以繫結至 'xmlns'
 URI `http://www.w3.org/XML/1998/namespace` XML 命名空間宣告中使用。 此 URI 是保留的命名空間，並不能包含在 XML 命名空間宣告。  
   
  **錯誤 ID:** BC31183  

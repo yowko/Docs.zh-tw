@@ -1,5 +1,5 @@
 ---
-title: 類型的運算式&lt;型別&gt;不是可查詢
+title: 類型 <type> 的運算式無法查詢
 ms.date: 07/20/2015
 f1_keywords:
 - bc36593
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: ce0831e0770e5733759c072b8d7c6f20b56f771b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06b2a7f5c6bd838d09fd39f31778462c364fb8bd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521487"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261252"
 ---
-# <a name="expression-of-type-lttypegt-is-not-queryable"></a>類型的運算式&lt;型別&gt;不是可查詢
+# <a name="expression-of-type-type-is-not-queryable"></a>型別的運算式\<類型 > 不是可查詢
 型別的運算式\<類型 > 不是可供查詢。 請確定您未遺漏組件參考和/或命名空間匯入 LINQ 提供者。  
   
  中所定義的可查詢型別<xref:System.Linq>， <xref:System.Data.Linq>，和<xref:System.Xml.Linq>命名空間。 您必須匯入一或多個命名空間，以執行 LINQ 查詢。  

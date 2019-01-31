@@ -1,16 +1,16 @@
 ---
-title: '&lt;customTrackingQuery&gt;'
+title: <customTrackingQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4e108e89-1132-46b7-868a-c7f5c69dc89f
-ms.openlocfilehash: 9ee5a4a25d379eafb936098597df1ec61ff09f0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e525bc4c77649a6c6d70ddb2408b6ecce4a0f09
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725853"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263757"
 ---
-# <a name="ltcustomtrackingquerygt"></a>&lt;customTrackingQuery&gt;
+# <a name="customtrackingquery"></a>\<customTrackingQuery>
 代表查詢的集合，這個集合可用來追蹤程式碼活動中定義的事件。 追蹤參與者必須要具備查詢，才能訂閱自訂追蹤記錄。  
   
  如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;useRequestHeadersForMetadataAddress&gt;'
+title: <useRequestHeadersForMetadataAddress>
 ms.date: 03/30/2017
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
-ms.openlocfilehash: 6c03057fca23b037702c702b9a574045ebb302b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 842f989ab1f2f0b9e8fe08e8fd729f983e846ffc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656619"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261564"
 ---
-# <a name="ltuserequestheadersformetadataaddressgt"></a>&lt;useRequestHeadersForMetadataAddress&gt;
+# <a name="userequestheadersformetadataaddress"></a>\<useRequestHeadersForMetadataAddress>
 允許從要求訊息標題擷取中繼資料位址資訊。  
   
 \<system.ServiceModel>  

@@ -1,27 +1,27 @@
 ---
-title: WCF 的 &lt;bookmarkResumptionQuery&gt;
+title: <bookmarkResumptionQuery> WCF 的
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 6463404e17edff8eb1efe3f96e44b5b9997ffca3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 38c87cefc49821b03d119299ef60e3fbbad21d7e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147807"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255112"
 ---
-# <a name="ltbookmarkresumptionquerygt-of-wcf"></a>WCF 的 &lt;bookmarkResumptionQuery&gt;
+# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery > 的 WCF
 
 代表用來追蹤工作流程執行個體中之書籤繼續的查詢。 追蹤參與者必須要具備查詢，才能訂閱書籤繼續記錄。  
   
 如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
   
 \<system.serviceModel>  
-\<追蹤 >  
+\<tracking>  
 \<設定檔 >  
 \<trackingProfile>  
-\<工作流程 >  
-\<bookmarkResumptionQueries >  
-\<bookmarkResumptionQuery >  
+\<workflow>  
+\<bookmarkResumptionQueries>  
+\<bookmarkResumptionQuery>  
   
 ## <a name="syntax"></a>語法  
   

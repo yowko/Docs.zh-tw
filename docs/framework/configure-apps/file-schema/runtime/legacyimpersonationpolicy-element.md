@@ -1,5 +1,5 @@
 ---
-title: '&lt;legacyImpersonationPolicy&gt;項目'
+title: <legacyImpersonationPolicy> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 196aaa35561cba7925bcd005474cccb393494250
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a731a54771f3ac589031e856539ba0c21ca22778
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699879"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270484"
 ---
-# <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt;項目
+# <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > 項目
 指定 Windows 識別不會流經非同步點，而不論目前執行緒上執行內容的流程設定為何。  
   
  \<configuration>  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;&lt;= 運算子 (Visual Basic)'
+title: << = 運算子 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<<=
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - operator<<=
 - compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
-ms.openlocfilehash: 9d4f367506c847ddf2478dd1ea07e28332cc62a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c262da906a6033680b05f6a4099a6a1dc8bfab5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677767"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260628"
 ---
-# <a name="ltlt-operator-visual-basic"></a>&lt;&lt;= 運算子 (Visual Basic)
+# <a name="-operator-visual-basic"></a>\<\<= 運算子 (Visual Basic)
 執行算術左的移位的變數或屬性的值，並將結果指派給變數或屬性。  
   
 ## <a name="syntax"></a>語法  

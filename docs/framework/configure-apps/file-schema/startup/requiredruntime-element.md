@@ -1,5 +1,5 @@
 ---
-title: '&lt;Requiredruntime>&gt;項目'
+title: <requiredRuntime> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requiredRuntime
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: 66de3e30ce862cd317e80ea267bf22ce728aca82
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5e528a8b81fa3d9abc4f345d18f01e33f483a4a9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222125"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254726"
 ---
-# <a name="ltrequiredruntimegt-element"></a>&lt;Requiredruntime>&gt;項目
+# <a name="requiredruntime-element"></a>\<Requiredruntime> > 項目
 
 指定應用程式只支援 Common Language Runtime 1.0 版。 這個項目已被取代，無法再使用。 [ `supportedRuntime` ](supportedruntime-element.md)應該改為使用項目。
 
-\<設定 >\<啟動 > \<Requiredruntime> >
+\<configuration> \<startup> \<requiredRuntime>
 
 ## <a name="syntax"></a>語法
 
@@ -86,4 +86,4 @@ safemode="true|false"/>
 
 - [啟動設定結構描述](index.md)
 - [組態檔結構描述](../index.md)
-- [如何：設定應用程式，以支援.NET Framework 4 或更新版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [如何：設定應用程式以支援 .NET Framework 4 或更新版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

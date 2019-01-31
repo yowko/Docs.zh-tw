@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultProxy&gt;項目 （網路設定）'
+title: <defaultProxy> 項目 (網路設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 48c5f5a50563cdbea5fa806e7c7524e413ba3712
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d9e96296cb764d3fbb3cdcd561e036f9ad6aa2b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596172"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257209"
 ---
-# <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt;項目 （網路設定）
+# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 項目 （網路設定）
 設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。  
   
  \<configuration>  

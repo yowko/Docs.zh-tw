@@ -1,15 +1,15 @@
 ---
-title: '&lt;contractTypeNames&gt;'
+title: <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
-ms.openlocfilehash: 2c3f501f44d9e3c601e654041eb9d5a7de8a0a07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8f2b600b700a19cf587a6c8c4cc3f0e851edbd9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626767"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261274"
 ---
-# <a name="ltcontracttypenamesgt"></a>&lt;contractTypeNames&gt;
+# <a name="contracttypenames"></a>\<contractTypeNames>
 組態區段，這個區段會指定合約型別名稱清單 (要搜尋之服務的合約名稱)，以及通常用於搜尋服務的準則。 如果指定多個合約名稱，則只會回覆符合「所有」合約的服務端點。 請注意，在 Windows Communication Foundation (WCF) 端點僅支援一個合約。  
   
  \<system.ServiceModel>  

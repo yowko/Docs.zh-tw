@@ -1,5 +1,5 @@
 ---
-title: 變數的類型&#39; &lt;variablename&gt; &#39;不會推斷，因為它繫結至封閉範圍中的欄位
+title: 不會推斷變數 '<variablename>' 的類型，因為它繫結至封閉範圍中的欄位
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42110
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: 6adcc1c2a449c9192e488a5d714e1c3271568be0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7289b8ab0a141d6efdb0f4ca4b4547f15e0e182
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672379"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259237"
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>變數的類型&#39; &lt;variablename&gt; &#39;不會推斷，因為它繫結至封閉範圍中的欄位
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>變數的類型 '\<變數名稱 >' 將不會推斷，因為它繫結至封閉範圍中的欄位
 變數的類型 '\<變數名稱 >' 將不會推斷，因為它繫結至封閉範圍中的欄位。 請變更名稱 '\<變數名稱 >'，或使用完整格式的名稱 （例如 'Me.variablename' 或 'MyBase.variablename'）。  
   
  在您的程式碼中的迴圈控制變數與類別或其他封入範圍的欄位具有相同的名稱。 因為使用此控制項變數，而沒有`As`子句，它會繫結至封閉範圍中中的欄位和編譯器不會為它建立新的變數或推斷其型別。  

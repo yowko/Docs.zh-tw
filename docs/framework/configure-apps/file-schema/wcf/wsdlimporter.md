@@ -1,15 +1,15 @@
 ---
-title: '&lt;wsdlImporter&gt;'
+title: <wsdlImporter>
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
-ms.openlocfilehash: 5f3d53111c4d303146701b03d7e7b32833cd9edd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd6c8661f94610d932ffee631aee7ad060f04c6b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651041"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269311"
 ---
-# <a name="ltwsdlimportergt"></a>&lt;wsdlImporter&gt;
+# <a name="wsdlimporter"></a>\<wsdlImporter>
 指定所有 WSDL 匯入工具，此工具會使用 WS-Policy 附件匯入 Web 服務描述語言 (WSDL) 1.1 中繼資料。  
   
 \<system.ServiceModel>  

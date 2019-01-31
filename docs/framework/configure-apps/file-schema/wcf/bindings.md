@@ -1,15 +1,15 @@
 ---
-title: '&lt;bindings&gt;'
+title: <bindings>
 ms.date: 03/30/2017
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: b7ef15f768e3eb5484bbc75eeaf988fd36fc155b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a952ff5a8dd39a5615aa17f15229557bbd0f41f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690224"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257300"
 ---
-# <a name="ltbindingsgt"></a>&lt;bindings&gt;
+# <a name="bindings"></a>\<bindings>
 這個區段保存標準和自訂繫結的集合。 每個項目都是 `binding` 項目，可由其唯一的 `name` 所識別。 服務會使用 `name` 來連結繫結，以便利用繫結。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需有關預設組態和無名稱繫結和行為的詳細資訊，請參閱 < [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md)並[Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="system-provided-binding"></a>系統提供的繫結  

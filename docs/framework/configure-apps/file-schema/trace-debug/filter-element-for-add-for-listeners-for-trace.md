@@ -1,5 +1,5 @@
 ---
-title: '&lt;篩選條件&gt;項目&lt;新增&gt;如&lt;接聽程式&gt;如&lt;追蹤&gt;'
+title: <filter> 的 <add> 適用之 <listeners> 的 <trace> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-ms.openlocfilehash: b53c3e4cc2362a1f1dc0312d59aff403ca924b5e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: f364590a419c3f31af49ea2c3dd6fa5901bf0272
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084181"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283175"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a>&lt;篩選條件&gt;項目&lt;新增&gt;如&lt;接聽程式&gt;如&lt;追蹤&gt;
+# <a name="filter-element-for-add-for-listeners-for-trace"></a>\<篩選條件 > 項目\<新增 > for\<接聽程式 > 針對\<追蹤 >
 將篩選加入至中的接聽項`Listeners`追蹤的集合。  
   
  \<configuration>  

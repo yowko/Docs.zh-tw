@@ -1,5 +1,5 @@
 ---
-title: 委派類別&#39; &lt;classname&gt; &#39;有沒有 Invoke 方法，因此這個類型的運算式不可成為方法呼叫的目標
+title: 委派類別 '<classname>' 沒有 Invoke 方法，因此這個類型的運算式不可成為方法呼叫的目標
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30220
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
-ms.openlocfilehash: d5421ea05968a221bbbf8f52a575550d1bca3cb2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8339d038f845b8568f31f3068a98ccccf580aeae
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653153"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286646"
 ---
-# <a name="delegate-class-39ltclassnamegt39-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>委派類別&#39; &lt;classname&gt; &#39;有沒有 Invoke 方法，因此這個類型的運算式不可成為方法呼叫的目標
+# <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>委派類別\<類別名稱 >' 已經沒有 Invoke 方法，因此這個類型的運算式不可成為方法呼叫的目標
 呼叫`Invoke`透過委派失敗，因為`Invoke`上委派類別未實作。  
   
  **錯誤 ID:** BC30220  

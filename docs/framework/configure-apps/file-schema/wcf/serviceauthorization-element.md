@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceAuthorization&gt; 項目'
+title: <serviceAuthorization> 項目
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: 49b89c17f9858c111791276fe15e4a418845c8e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c967993c3a3f7276cd3a9076741de202e1f4c343
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622568"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257846"
 ---
-# <a name="ltserviceauthorizationgt-element"></a>&lt;serviceAuthorization&gt; 項目
+# <a name="serviceauthorization-element"></a>\<serviceAuthorization > 項目
 指定設定，這些設定會將存取權授權給服務作業。  
   
  \<system.ServiceModel>  

@@ -1,5 +1,5 @@
 ---
-title: 第一個陳述式，這個&#39;Sub New&#39;必須明確呼叫&#39;MyBase.New&#39;或&#39;MyClass.New&#39;因為&#39; &lt;constructorname&gt; &#39;基底類別中&#39;&lt;基&gt;&#39;的&#39;&lt;衍生類別名稱&gt;&#39;已標記為過時： &#39; &lt;errormessage&gt;&#39;
+title: "這個 'Sub New' 的第一個陳述式必須是對 'MyBase.New' 或 'MyClass.New' 的明確呼叫，因為 '<constructorname>' 的基底類別 '<baseclassname>' 中的 '<derivedclassname>' 標記為過時: '<errormessage>'"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30920
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 9d07a68fd8d9790178427c512375323f23f46772
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31f92d1e52e50b2a87fd6a6af6e3c87292f4437f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566766"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268788"
 ---
-# <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>第一個陳述式，這個&#39;Sub New&#39;必須明確呼叫&#39;MyBase.New&#39;或&#39;MyClass.New&#39;因為&#39; &lt;constructorname&gt; &#39;基底類別中&#39;&lt;基&gt;&#39;的&#39;&lt;衍生類別名稱&gt;&#39;已標記為過時： &#39; &lt;errormessage&gt;&#39;
+# <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>此 'Sub New' 的第一個陳述式必須明確呼叫 'MyBase.New' 或 'MyClass.New'，因為'\<constructorname >' 中的基底類別\<基 >' 的 '\<衍生類別名稱 >' 已標記為過時:'\<錯誤訊息 >'
 類別建構函式未明確地呼叫基底類別建構函式，而且隱含的基底類別建構函式已使用 <xref:System.ObsoleteAttribute> 屬性和指示詞標記，以將其視為錯誤。  
   
  當在衍生的類別建構函式未呼叫基底類別建構函式時，Visual Basic 會嘗試產生無參數的基底類別建構函式的隱含呼叫。 如果可以不使用引數呼叫的基底類別中沒有任何可存取建構函式，Visual Basic 無法產生隱含的呼叫。 在此情況下，需要的建構函式會以標記<xref:System.ObsoleteAttribute>屬性，讓 Visual Basic 無法呼叫它。  

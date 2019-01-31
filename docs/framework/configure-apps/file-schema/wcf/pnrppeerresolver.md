@@ -1,15 +1,15 @@
 ---
-title: '&lt;pnrpPeerResolver&gt;'
+title: <pnrpPeerResolver>
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: cefd46d7810149264f9c431a212da0f3f51f8186
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f98c358cc9891e9d7223d280fc8e50c19aad9759
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577642"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260643"
 ---
-# <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
+# <a name="pnrppeerresolver"></a>\<pnrpPeerResolver>
 指定對等名稱解析通訊協定 (Peer Name Resolution Protocol，PNRP) 解析程式做為解析程式使用。 這是一個選擇性的項目，因為 PNRP 是預設的解析程式。  
   
  \<system.serviceModel>  

@@ -1,5 +1,5 @@
 ---
-title: 無法嵌入資源檔&#39;&lt;檔名&gt;&#39;:&lt;錯誤訊息&gt;
+title: "無法嵌入資源檔 '<filename>': <error message>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30143
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30143
 ms.assetid: 319e95b5-5176-4fe1-bc04-90075594b397
-ms.openlocfilehash: 9e693cf4f1c7c23784a7e5be1a9b6ecbe0ced9b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 532c2a789fa366cc38056ebec6d1bd09eaa4c327
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737305"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276012"
 ---
-# <a name="unable-to-embed-resource-file-39ltfilenamegt39-lterror-messagegt"></a>無法嵌入資源檔&#39;&lt;檔名&gt;&#39;:&lt;錯誤訊息&gt;
+# <a name="unable-to-embed-resource-file-filename-error-message"></a>無法嵌入資源檔 '\<檔案名稱 >':\<錯誤訊息 >
 Visual Basic 編譯器呼叫組件連結器 (Al.exe，也稱為 Alink)，以產生資訊清單的組件。 連結器在將原生 COM+ 資源檔案直接內嵌到組件時回報了錯誤。  
   
  **錯誤 ID:** BC30143  

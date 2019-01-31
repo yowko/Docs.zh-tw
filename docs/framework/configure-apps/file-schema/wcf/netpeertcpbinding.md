@@ -1,17 +1,17 @@
 ---
-title: '&lt;netPeerTcpBinding&gt;'
+title: <netPeerTcpBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: 045d5649ae7f59087eacd035d7be09d0024b6fd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a039e805bc4378582d7a7bcf6ef84591ec3d2b6b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725658"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261434"
 ---
-# <a name="ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt;
+# <a name="netpeertcpbinding"></a>\<netPeerTcpBinding>
 為對等通道特定的 TCP 訊息定義繫結。  
   
  \<system.ServiceModel>  

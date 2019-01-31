@@ -1,5 +1,5 @@
 ---
-title: '&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt;項目'
+title: <NetFx45_CultureAwareComparerGetHashCode_LongStrings> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - NetFx45_CultureAwareComparerGetHashCode_LongStrings element
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67dae26733527a85f4fc13734da896193e53db8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11ae76a31480cf63a70738c6e416381fdfddbb78
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576885"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271157"
 ---
-# <a name="ltnetfx45cultureawarecomparergethashcodelongstringsgt-element"></a>&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt;項目
+# <a name="netfx45cultureawarecomparergethashcodelongstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings > 項目
 指定執行階段是否使用固定的記憶體數量計算 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法的雜湊碼。  
   
  \<configuration>  

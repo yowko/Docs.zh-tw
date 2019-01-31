@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;typename&gt; &#39;無法繼承自&lt;型別&gt; &#39;&lt;基&gt;&#39;因為它會展開基底存取&lt;類型&gt;外部組件'
+title: "'<typename>' 無法繼承自 <type> '<basetypename>'，因為它會在組件外展開基底 <type> 的存取"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30910
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: 108025132bdd0fa86df5ed142aaa39c7b7e18062
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226c85f887ecc706a5cb554c2163742f10896141
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556479"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269818"
 ---
-# <a name="39lttypenamegt39-cannot-inherit-from-lttypegt-39ltbasetypenamegt39-because-it-expands-the-access-of-the-base-lttypegt-outside-the-assembly"></a>&#39;&lt;typename&gt; &#39;無法繼承自&lt;型別&gt; &#39;&lt;基&gt;&#39;因為它會展開基底存取&lt;類型&gt;外部組件
+# <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<類型名稱 >' 無法繼承自\<類型 >'\<基 >' 因為它會展開基底存取\<類型 > 外部組件
 類別或介面繼承自基底類別或介面，但具有較不嚴格的存取層級。  
   
  例如，`Public`介面繼承自`Friend`介面，或有`Protected`類別繼承自`Private`類別。 這會公開基底類別或介面，以存取超過預期的層級。  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;type1&gt;&#39;&lt;typename&gt; &#39;必須實作&#39; &lt;methodname&gt; &#39;介面&#39;&lt;介面名稱&gt;&#39;'
+title: <type1>'<typename>' 必須針對介面 '<methodname>' 實作 '<interfacename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30149
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: ff9ffd50f7f21814d5e4c23fd8df50b12bf746f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5dd7c6889a3fb5344142ee9914f98e8922d748b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642435"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264426"
 ---
-# <a name="lttype1gt39lttypenamegt39-must-implement-39ltmethodnamegt39-for-interface-39ltinterfacenamegt39"></a>&lt;type1&gt;&#39;&lt;typename&gt; &#39;必須實作&#39; &lt;methodname&gt; &#39;介面&#39;&lt;介面名稱&gt;&#39;
+# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 >'\<類型名稱 >' 必須實作 '\<方法名稱 >' 的介面'\<介面名稱 >'
 類別或結構宣告實作介面，但不會實作該介面所定義的程序。 必須實作介面的每個成員。  
   
  **錯誤 ID:** BC30149  

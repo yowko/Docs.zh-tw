@@ -1,17 +1,17 @@
 ---
-title: 線條&lt;數字&gt;無法讀取，因為它超過最大線條大小。
+title: 行<number>無法讀取，因為它超過最大線條大小。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MaxLineSizeExceeded
 ms.assetid: c59116d9-9856-47af-b32d-616d8f2d10d3
-ms.openlocfilehash: 6288f50a28ed4edac876dd1ea08d9d09dbca90be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f9a784676777fa1419dc85f07ef26a614768ab8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671404"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256887"
 ---
-# <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>線條&lt;數字&gt;無法讀取，因為它超過最大線條大小。
+# <a name="line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>行\<數字 > 無法讀取，因為它超過最大線條大小。
 無法讀取這行，因為超過行數上限。 這通常表示檔案中有左引號，但沒有右引號。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

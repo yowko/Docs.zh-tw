@@ -1,5 +1,5 @@
 ---
-title: 無法載入類別的資訊&#39; &lt;classname&gt;&#39;
+title: 無法載入類別 '<classname>' 的資訊
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30712
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 368484d9138d1ae10efb8c63f6cfaa6bcefa6ed8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91f754366441cb984edf23f2c2dca4fa5c542a8e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528952"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279522"
 ---
-# <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>無法載入類別的資訊&#39; &lt;classname&gt;&#39;
+# <a name="unable-to-load-information-for-class-classname"></a>無法載入類別資訊\<類別名稱 >'
 參考了未提供的類別。  
   
  **錯誤 ID:** BC30712  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceActivations&gt; 的 &lt;add&gt;'
+title: <add> 的 <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: d0e1f45cc8ff5b544eff5ff5dae33d5989aaf405
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e87a79137641d2697452a4862c5449da166ecfda
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587631"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262672"
 ---
-# <a name="ltaddgt-of-ltserviceactivationsgt"></a>&lt;serviceActivations&gt; 的 &lt;add&gt;
+# <a name="add-of-serviceactivations"></a>\<add> of \<serviceActivations>
 可讓您定義虛擬服務啟用設定對應至您的 Windows Communication Foundation (WCF) 服務類型組態項目。 如此一來，不需 .svc 檔案也能啟動裝載於 WAS/IIS 中的服務。  
   
  \<system.ServiceModel>  

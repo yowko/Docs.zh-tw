@@ -1,5 +1,5 @@
 ---
-title: 函式&#39;&lt;程序名稱&gt;&#39;不&#39;t 傳回有關所有程式碼路徑的值
+title: 函式 '<procedurename>' 並未傳回有關所有程式碼路徑的值
 ms.date: 07/20/2015
 f1_keywords:
 - bc42105
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: b6cc5143aafb6c2554b183a1fc5fb3b1331ec5d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9782bb49a3327c6a8bd9938eca7cb3e899818784
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552186"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281056"
 ---
-# <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a>函式&#39;&lt;程序名稱&gt;&#39;不&#39;t 傳回有關所有程式碼路徑的值
+# <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>函式 '\<程序名稱 >' 並未傳回有關所有程式碼路徑的值
 函式 '\<程序名稱 >' 並未傳回有關所有程式碼路徑的值。 您是否遺漏了 'Return' 陳述式？  
   
  A`Function`程序中的至少一個通過程式碼不會傳回值的可能的路徑。  

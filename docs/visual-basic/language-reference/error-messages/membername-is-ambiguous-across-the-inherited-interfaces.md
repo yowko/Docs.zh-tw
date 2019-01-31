@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;membername&gt; &#39;模稜兩可，跨繼承的介面&#39;&lt;介面名稱 1>.<&gt; &#39;和&#39;&lt;介面名稱 2&gt&gt;&#39;'
+title: 跨繼承的介面 '<membername>' 和 '<interfacename1>' 的 '<interfacename2>' 是模稜兩可的
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30685
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: e6d6a82331185060d6f08c3375dc5a628b65df1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1548c9894d476cc4b92d6581362d309e7b4d00d4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506281"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264985"
 ---
-# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>&#39;&lt;membername&gt; &#39;模稜兩可，跨繼承的介面&#39;&lt;介面名稱 1>.<&gt; &#39;和&#39;&lt;介面名稱 2&gt&gt;&#39;
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>'\<成員名稱 >' 模稜兩可，跨繼承介面\<介面名稱 1>.< >' 和'\<介面名稱 2&gt >'
 此介面會繼承自多個介面的兩個或多個具有相同名稱的成員。  
   
  **錯誤 ID:** BC30685  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceCredentials&gt; 的 &lt;peer&gt;'
+title: <peer> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: 132c001de02e223375453c91832f461b96b57dfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2090e79e6affe8ade6e2e52b94d2c4e1dafe8fa1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741235"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266022"
 ---
-# <a name="ltpeergt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;peer&gt;
+# <a name="peer-of-servicecredentials"></a>\<peer> of \<serviceCredentials>
 指定對等節點的目前認證。  
   
  \<system.ServiceModel>  

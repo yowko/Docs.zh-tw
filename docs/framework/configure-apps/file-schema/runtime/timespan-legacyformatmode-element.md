@@ -1,5 +1,5 @@
 ---
-title: '&lt;TimeSpan_LegacyFormatMode&gt;項目'
+title: <TimeSpan_LegacyFormatMode> Element
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d167af6c9e4bbd919a4cfeb279a6d68a14139c33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3f18d5e62f4986f880b35825d8e0239dba8d4c6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535030"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277741"
 ---
-# <a name="lttimespanlegacyformatmodegt-element"></a>&lt;TimeSpan_LegacyFormatMode&gt;項目
+# <a name="timespanlegacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > 項目
 決定是否執行階段會保留舊版行為，在格式化作業與<xref:System.TimeSpan?displayProperty=nameWithType>值。  
   
  \<configuration>  

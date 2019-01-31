@@ -1,5 +1,5 @@
 ---
-title: '&lt;nameEntry&gt;項目'
+title: <nameEntry> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: 97d622b2480f7e4aad738c77350b1d99ecd2c1b0
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b5f92ca2956f32382b12c9a1dec4e5d41ea4ee2a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084428"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285919"
 ---
-# <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt;項目
+# <a name="nameentry-element"></a>\<nameEntry > 項目
 將類別名稱對應至易記的演算法名稱，允許一個類別有許多易記名稱。  
   
  \<configuration>  

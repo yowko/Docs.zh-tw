@@ -1,5 +1,5 @@
 ---
-title: 類型的值&#39; &lt;typename1&gt; &#39;無法轉換成&#39; &lt;2&gt&gt;&#39;
+title: 類型 '<typename1>' 的值無法轉換成 '<typename2>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30955
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 00ce143eecefbdf2f1b9e204ae2005be4bb81e39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd2f6e4b51bc327826301d3c7b39c97a4bed3793
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627596"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261239"
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>類型的值&#39; &lt;typename1&gt; &#39;無法轉換成&#39; &lt;2&gt&gt;&#39;
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>類型的值 '\<typename1 >' 無法轉換成'\<2&gt >'
 類型的值 '\<typename1 >' 無法轉換成'\<2&gt >'。 型別不相符可能是因為混用了檔案參考和組件的專案參考的 '\<組件名稱 >'。 請嘗試更換的檔案參考 '\<檔案路徑 >' 在專案'\<projectname1 >' 的專案參考 '\<專案名稱 2> >'。  
   
  其中一個專案可專案參考和檔案參考的情況下，編譯器無法保證一個類型可轉換成另一個。  

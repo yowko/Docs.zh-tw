@@ -1,5 +1,5 @@
 ---
-title: '&lt;sharedListeners&gt;項目'
+title: <sharedListeners> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 7eaeffb365dd2c9999d4faa6b28c6d50e8cd6a6e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 56a4111f2e0fd290321756c43c7f245e46044b02
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084324"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254930"
 ---
-# <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt;項目
+# <a name="sharedlisteners-element"></a>\<sharedListeners > 項目
 包含任何來源或追蹤項目可參考的接聽項。  根據預設，這些接聽程式沒有收到任何追蹤，則不可能在執行階段擷取這些接聽程式。 識別為共用接聽項可以依名稱加入到來源或追蹤接聽程式。  
   
  \<configuration>  

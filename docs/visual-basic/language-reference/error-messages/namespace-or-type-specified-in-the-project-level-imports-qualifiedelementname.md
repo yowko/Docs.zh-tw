@@ -1,5 +1,5 @@
 ---
-title: 在專案層級匯入指定的命名空間或類型&#39;&lt;限定&gt;&#39;不&#39;t 包含任何 public 成員，或找不到
+title: 專案層級 Imports '<qualifiedelementname>' 中指定的命名空間或類型不包含任何 Public 成員，或是找不到該命名空間或類型
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40057
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 215d8d301317f711aecb88167030e70ed01408aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12d20a88179a3d0c93c18f0aed65ca46b001059a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552459"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283305"
 ---
-# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>在專案層級匯入指定的命名空間或類型&#39;&lt;限定&gt;&#39;不&#39;t 包含任何 public 成員，或找不到
+# <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>在專案層級 Imports' 中指定的命名空間或類型\<完整項目名稱 >' 不包含任何 public 成員，或是找不到
 在專案層級 Imports' 中指定的命名空間或類型\<完整項目名稱 >' 不包含任何 public 成員，或是找不到。 請確定命名空間或類型定義，而且包含至少一個 public 成員。 請確定別名名稱不包含其他別名。  
   
  專案匯入屬性會指定包含的項目不能找到，或未定義任何`Public`成員。  

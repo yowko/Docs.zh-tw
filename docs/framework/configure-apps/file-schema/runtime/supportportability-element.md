@@ -1,5 +1,5 @@
 ---
-title: '&lt;Supportportability>&gt;項目'
+title: <supportPortability> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - supportPortability element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f1ceae32445fb350f6fcc98f3a1eec044fa7885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2295ebd919a91ae9942ec225f2bfe784e5ee151
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655500"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267790"
 ---
-# <a name="ltsupportportabilitygt-element"></a>&lt;Supportportability>&gt;項目
+# <a name="supportportability-element"></a>\<Supportportability> > 項目
 指定應用程式可以在兩個不同的 .NET Framework 實作中參考相同的組件，方法是停用將組件視為同等的預設行為 (此預設行為是基於應用程式可攜性的考量)。  
   
  \<組態 > 項目  

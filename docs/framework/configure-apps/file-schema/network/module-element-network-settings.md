@@ -1,5 +1,5 @@
 ---
-title: '&lt;模組&gt;項目 （網路設定）'
+title: <module> 項目 (網路設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#module
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 4daa0d133342d2bbbf4dd716246d8ba90e49ef9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4658af3f55bddb5f5a748db5366c53f1d2733983
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685035"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268193"
 ---
-# <a name="ltmodulegt-element-network-settings"></a>&lt;模組&gt;項目 （網路設定）
+# <a name="module-element-network-settings"></a>\<模組 > 項目 （網路設定）
 將新的 Proxy 模組加入至應用程式。  
   
  \<configuration>  

@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;關鍵字&gt;&#39;只能在執行個體方法'
+title: "'<keyword>' 只能出現在執行個體方法中"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30043
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-ms.openlocfilehash: a464a059aa2d13e3472b9770960384b6be398092
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af3bc95e2db88577c7c53e4b58fb60aed8a83453
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595938"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267637"
 ---
-# <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39;&lt;關鍵字&gt;&#39;只能在執行個體方法
+# <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<關鍵字 >' 只能在執行個體方法
 `Me`， `MyClass`，和`MyBase`關鍵字參考特定的類別執行個體。 您無法使用它們在共用`Function`或`Sub`程序。  
   
  **錯誤 ID:** BC30043  

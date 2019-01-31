@@ -1,21 +1,21 @@
 ---
-title: '&lt;快取&gt;'
+title: <caches>
 ms.date: 03/30/2017
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
 author: BrucePerlerMS
-ms.openlocfilehash: a91a389e53354e4f5b26e1510fc2f025300d65cc
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b1d04280ef993297102d446ba5a7db54e8404dd8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192676"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285658"
 ---
-# <a name="ltcachesgt"></a>&lt;快取&gt;
+# <a name="caches"></a>\<caches>
 註冊用於工作階段權杖和權杖重新執行偵測快取。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<快取 >  
+\<caches>  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,15 +38,15 @@ ms.locfileid: "47192676"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Sessionsecuritytokencache> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)|註冊工作階段權杖快取服務或安全性權杖處理常式集合。|  
-|[\<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)|註冊權杖重新執行快取服務或安全性權杖處理常式集合。|  
+|[\<sessionSecurityTokenCache>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)|註冊工作階段權杖快取服務或安全性權杖處理常式集合。|  
+|[\<tokenReplayCache>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)|註冊權杖重新執行快取服務或安全性權杖處理常式集合。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
-|[\<Securitytokenhandlerconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
   
 ## <a name="remarks"></a>備註  
  A`<caches>`項目可以指定服務層級底下`<identityConfiguration>`項目或之下的安全性權杖處理常式集合層級`<securityTokenHandlerConfiguration>`項目。 權杖處理常式集合上的設定會覆寫所指定的服務。  

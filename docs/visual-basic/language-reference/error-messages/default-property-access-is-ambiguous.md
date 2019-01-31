@@ -1,5 +1,5 @@
 ---
-title: 預設屬性存取模稜兩可繼承的介面成員&#39; &lt;defaultpropertyname&gt; &#39;介面的&#39;&lt;介面名稱 1>.<&gt; &#39;和&#39; &lt;defaultpropertyname&gt; &#39;介面的&#39;&lt;介面名稱 2&gt&gt;&#39;
+title: 在介面 '<defaultpropertyname>' 的繼承介面成員 '<interfacename1>' 和介面 '<defaultpropertyname>' 的 '<interfacename2>' 之間，Default 屬性存取是模稜兩可的
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30686
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7079ff3b56b94cb969a77707dbd79b1d7dd4bb1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518640"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270585"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>預設屬性存取模稜兩可繼承的介面成員&#39; &lt;defaultpropertyname&gt; &#39;介面的&#39;&lt;介面名稱 1>.<&gt; &#39;和&#39; &lt;defaultpropertyname&gt; &#39;介面的&#39;&lt;介面名稱 2&gt&gt;&#39;
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>預設屬性存取模稜兩可繼承的介面成員\<defaultpropertyname >' 的介面 '\<介面名稱 1>.< >' 和'\<defaultpropertyname >' 的介面 '\<介面名稱 2&gt >'
 介面繼承自兩個介面，其中每個宣告預設屬性具有相同名稱。 編譯器無法解析此預設屬性，但是不限定存取。 下列範例將說明這點。  
   
 ```  

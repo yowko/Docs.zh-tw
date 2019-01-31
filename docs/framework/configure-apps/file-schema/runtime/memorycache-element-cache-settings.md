@@ -1,19 +1,19 @@
 ---
-title: '&lt;memoryCache&gt;元素 （快取設定）'
+title: <memoryCache> 項目 (快取設定)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <memoryCache> element
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: cdf7d0e5605bde42d092492ea1b16d712984c182
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 25e87aa9fa4e56c5042eb25c41f6cfe1b65aea24
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083908"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266373"
 ---
-# <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt;元素 （快取設定）
+# <a name="memorycache-element-cache-settings"></a>\<memoryCache > 項目 （快取設定）
 定義項目，這個項目會用來設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取。 <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> 類別定義可用來設定快取的 [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) 項目。 多個 <xref:System.Runtime.Caching.MemoryCache> 類別執行個體可以用於單一應用程式。 組態檔中的每個 `memoryCache` 項目都可以包含具名 <xref:System.Runtime.Caching.MemoryCache> 執行個體的設定。  
   
  \<configuration>  

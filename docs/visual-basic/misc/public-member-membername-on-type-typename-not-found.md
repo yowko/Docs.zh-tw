@@ -1,17 +1,17 @@
 ---
-title: Public 成員 '&lt;membername&gt;'type' 上&lt;typename&gt;' 找不到
+title: Public 成員 '<membername>'type' 上<typename>' 找不到
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_MemberNotFoundOnType2
 ms.assetid: 6300feb8-78ac-4dd0-9653-1d03e1f5bc20
-ms.openlocfilehash: 36918c99b41ed9b31b3463e22294e7462732c5e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14bd5dac22a8bed6402363294237569cb2ba00ea
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625194"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258289"
 ---
-# <a name="public-member-ltmembernamegt-on-type-lttypenamegt-not-found"></a>Public 成員 '&lt;membername&gt;'type' 上&lt;typename&gt;' 找不到
+# <a name="public-member-membername-on-type-typename-not-found"></a>Public 成員 '\<成員名稱 >' 在類型'\<類型名稱 >' 找不到
 找不到您嘗試存取的成員。 存取晚期繫結物件的非公用成員時，就會發生這個錯誤。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

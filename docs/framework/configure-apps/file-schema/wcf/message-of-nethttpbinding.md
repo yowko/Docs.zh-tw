@@ -1,15 +1,15 @@
 ---
-title: '&lt;netHttpBinding&gt; 的 &lt;message&gt;'
+title: <message> 的 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 4a07989b0ffd19c62d3269924220382f56d92177
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66e854ca9dd33b608b93dae08376caaf590bd97f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600319"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277130"
 ---
-# <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; 的 &lt;message&gt;
+# <a name="message-of-nethttpbinding"></a>\<message> of \<netHttpBinding>
 定義訊息層級安全性的設定[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
   
  \<system.ServiceModel>  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;entries&gt; 的 &lt;add&gt;'
+title: <add> 的 <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 082b19cd4515deb19ee7190dfeb8ae04ab834830
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7267b8719987ecd25bcca78a7897a0d4172a42ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645362"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264566"
 ---
-# <a name="ltaddgt-of-ltentriesgt"></a>&lt;entries&gt; 的 &lt;add&gt;
+# <a name="add-of-entries"></a>\<新增 > 的\<項目 >
 代表將篩選條件對應至先前定義之用戶端端點的路由項目。 將符合此篩選條件的訊息傳送至這個目的地。  
   
  \<system.serviceModel>  

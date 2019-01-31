@@ -1,15 +1,15 @@
 ---
-title: '&lt;filterTables&gt;'
+title: <filterTables>
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
-ms.openlocfilehash: d73a3c25dbb4d2de41007149ef5864fcf37ad883
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a54386de369a11a1958e4d81ab01f053a0bc5b36
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573055"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55253973"
 ---
-# <a name="ltfiltertablesgt"></a>&lt;filterTables&gt;
+# <a name="filtertables"></a>\<filterTables>
 代表定義路由表的組態區段，該路由表包含當篩選條件符合時，路由篩選條件與訊息傳送目標端點之間的對應。  
   
  \<system.serviceModel>  

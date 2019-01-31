@@ -1,5 +1,5 @@
 ---
-title: '&lt;探查&gt;項目'
+title: <probing> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/probing
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711903656d8bcce3a2d213af68160707a55a48e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f66ba8307a33a0a0b80cd71dd027852f67c03f72
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699996"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257041"
 ---
-# <a name="ltprobinggt-element"></a>&lt;探查&gt;項目
+# <a name="probing-element"></a>\<探查 > 項目
 指定應用程式基底的 common language runtime 載入組件時所要搜尋的子目錄。  
   
  \<configuration>  

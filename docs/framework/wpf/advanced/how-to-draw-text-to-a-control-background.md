@@ -1,5 +1,5 @@
 ---
-title: HOW TO：繪製文字至控制項&#39;背景
+title: HOW TO：繪製文字至控制項的背景
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], drawing text to backgrounds
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - backgrounds [WPF], drawing text to
 - typography [WPF], drawing text to control backgrounds
 ms.assetid: 686d8fba-f61c-4974-a871-c635d67a7f69
-ms.openlocfilehash: d580330de5ef3841979fffc61db336064f1643f0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9be4eb92021a62baaf6b43198587616d00cc265e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740410"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259250"
 ---
-# <a name="how-to-draw-text-to-a-control39s-background"></a>HOW TO：繪製文字至控制項&#39;背景
+# <a name="how-to-draw-text-to-a-controls-background"></a>HOW TO：繪製文字至控制項的背景
 您也可以將文字字串轉換為直接至控制項背景繪製文字<xref:System.Windows.Media.FormattedText>物件，然後再將物件繪製至控制項的<xref:System.Windows.Media.DrawingContext>。 您也可以使用這項技術，繪製到背景工作的物件衍生自<xref:System.Windows.Controls.Panel>，這類<xref:System.Windows.Controls.Canvas>和<xref:System.Windows.Controls.StackPanel>。  
   
  ![文字顯示為背景的控制項](../../../../docs/framework/wpf/advanced/media/drawtext2background01.png "DrawText2Background01")  

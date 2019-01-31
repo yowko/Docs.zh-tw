@@ -1,17 +1,17 @@
 ---
-title: 具名引數 '&lt;引數名稱&gt;' 指定了多次
+title: 具名引數 '<argumentname>' 指定了多次
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNamedArgumentAlreadyUsed1
 ms.assetid: a5113d23-ca66-4961-909f-74f97a0eaf87
-ms.openlocfilehash: be7d6c3011cccb810867cc2da14328a5c8ceb765
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a69756f076b864ccb885b262f6114b00f4e563ce
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703233"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271443"
 ---
-# <a name="named-argument-ltargumentnamegt-specified-multiple-times"></a>具名引數 '&lt;引數名稱&gt;' 指定了多次
+# <a name="named-argument-argumentname-specified-multiple-times"></a>具名引數 '\<引數名稱 >' 已指定多次
 您已多次指定具名引數。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

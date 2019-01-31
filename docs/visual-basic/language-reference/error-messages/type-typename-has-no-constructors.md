@@ -1,5 +1,5 @@
 ---
-title: 類型&#39; &lt;typename&gt; &#39;沒有建構函式
+title: 類型 '<typename>' 沒有建構函式
 ms.date: 07/20/2015
 f1_keywords:
 - bc30251
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 8a13451956b8afb1bf733c6faa218eadf4255495
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a12bc35aeaa6e9e21835ce0a091ee89ea4c326d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511094"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260363"
 ---
-# <a name="type-39lttypenamegt39-has-no-constructors"></a>類型&#39; &lt;typename&gt; &#39;沒有建構函式
+# <a name="type-typename-has-no-constructors"></a>類型 '\<類型名稱 >' 沒有建構函式
 類型不支援呼叫 `Sub New()`。 一個可能原因是編譯器或二進位檔案損毀。  
   
  **錯誤 ID:** BC30251  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;alwaysFlowImpersonationPolicy&gt;項目'
+title: <alwaysFlowImpersonationPolicy> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/alwaysFlowImpersonationPolicy
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcad683ace327caf06a4a9a6ef5b7cf1d9a9334f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60c61e5b7c176f88e8f2c2e717e60ae40f43fbf6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596432"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255249"
 ---
-# <a name="ltalwaysflowimpersonationpolicygt-element"></a>&lt;alwaysFlowImpersonationPolicy&gt;項目
+# <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy > 項目
 指定 Windows 識別一律流經非同步點，而不論模擬的執行方式為何。  
   
  \<configuration>  

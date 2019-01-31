@@ -1,5 +1,5 @@
 ---
-title: '&lt;system.codedom&gt;項目'
+title: < System.codedom > 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 1a97b20ae1f4e5c85d678f559cf0f7d69cfff4e1
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: e2c65044b99e2d5fda7025f24d1d4c4082ded4ec
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083947"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268219"
 ---
-# <a name="ltsystemcodedomgt-element"></a>&lt;system.codedom&gt;項目
+# <a name="systemcodedom-element"></a>\<system.codedom > 項目
 指定可用語言提供者的編譯器組態設定。  
   
  \<組態 > 項目  

@@ -1,19 +1,19 @@
 ---
-title: '&lt;namedCaches&gt;元素 （快取設定）'
+title: <namedCaches> 項目 (快取設定)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - namedCaches element
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: f00d973a2faff1709a98842d1164d69c59027c53
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 1dedd3ca192b5fb0ee561ce138f0948c52581f89
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083609"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287478"
 ---
-# <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt;元素 （快取設定）
+# <a name="namedcaches-element-cache-settings"></a>\<namedCaches > 項目 （快取設定）
 指定的具名組態設定集合<xref:System.Runtime.Caching.MemoryCache>執行個體。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>屬性從一或多個參考的組態設定集合`namedCaches`組態檔的項目。  
   
  \<configuration>  

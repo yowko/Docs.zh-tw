@@ -1,15 +1,15 @@
 ---
-title: '&lt;webHttpBinding&gt;'
+title: <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: b75762fdef4f0c71c58542be9f674da291fcf23f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 330549de285d26283c17f22701941ace99d226ae
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656566"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264410"
 ---
-# <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
+# <a name="webhttpbinding"></a>\<webHttpBinding>
 定義用來設定回應 HTTP 要求，而非 SOAP 訊息的 Windows Communication Foundation (WCF) Web 服務端點的繫結項目。  
   
 \<system.ServiceModel>  

@@ -1,16 +1,16 @@
 ---
-title: '&lt;trustedIssuers&gt;'
+title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: 1459027ae22344d5b1abc917c490b8e98fa0f2c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb4cb5178885b90ef25ee827c2f11593ead6e73d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633884"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276675"
 ---
-# <a name="lttrustedissuersgt"></a>&lt;trustedIssuers&gt;
+# <a name="trustedissuers"></a>\<trustedIssuers>
 設定使用的組態為基礎的簽發者名稱登錄的受信任簽發者憑證的清單 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>)。  
   
  \<system.identityModel>  

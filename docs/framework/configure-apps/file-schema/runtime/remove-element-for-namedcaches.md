@@ -1,18 +1,18 @@
 ---
-title: '&lt;移除&gt;項目&lt;namedCaches&gt;'
+title: <remove> 的 <namedCaches> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: ceeef00cb688c725cc595582fb6845b9e3fa9b92
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 22d06ab1df0d5ed74073772302421a680f1665ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083388"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257015"
 ---
-# <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;移除&gt;項目&lt;namedCaches&gt;
+# <a name="remove-element-for-namedcaches"></a>\<移除 > 項目\<namedCaches >
 從記憶體快取的 `namedCaches` 集合移除具名快取項目。  
   
  \<system.runtime.caching>  

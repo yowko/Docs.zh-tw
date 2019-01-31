@@ -1,5 +1,5 @@
 ---
-title: '&lt;disableFusionUpdatesFromADManager&gt;項目'
+title: <disableFusionUpdatesFromADManager> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - disableFusionUpdatesFromADManager element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ceaf0b51677a17a2f2a8c0d9d9316cb5b9b34cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2734060c855b59e5ff47ae674862dc57b7ddb5e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547237"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270763"
 ---
-# <a name="ltdisablefusionupdatesfromadmanagergt-element"></a>&lt;disableFusionUpdatesFromADManager&gt;項目
+# <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > 項目
 指定是否停用預設行為 (亦即允許執行階段主機覆寫應用程式網域的組態設定)。  
   
  \<組態 > 項目  

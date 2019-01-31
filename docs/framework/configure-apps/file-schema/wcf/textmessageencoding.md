@@ -1,15 +1,15 @@
 ---
-title: '&lt;textMessageEncoding&gt;'
+title: <textMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: 68b5c9f1f158f7f78f4ea31dedb9b72eab409e05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9f8347b4ee5f8fdbcf5c65c9a38b171ea6309de
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540698"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289597"
 ---
-# <a name="lttextmessageencodinggt"></a>&lt;textMessageEncoding&gt;
+# <a name="textmessageencoding"></a>\<textMessageEncoding>
 指定字元編碼和訊息版本處理，用於文字 XML 訊息。  
   
  \<system.serviceModel>  
