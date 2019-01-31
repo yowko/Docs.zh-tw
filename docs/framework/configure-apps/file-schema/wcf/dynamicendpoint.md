@@ -1,21 +1,21 @@
 ---
-title: '&lt;dynamicEndpoint&gt;'
+title: <dynamicEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
-ms.openlocfilehash: dcb52143c874b14c9241940f9b326a07b3fa6a82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 786a70e8c686497e91492938a4d0796db4f6dd91
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540245"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269792"
 ---
-# <a name="ltdynamicendpointgt"></a><span data-ttu-id="5767f-102">&lt;dynamicEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="5767f-102">&lt;dynamicEndpoint&gt;</span></span>
-<span data-ttu-id="5767f-103">這個組態項目定義標準端點，其中包含的資訊可讓您啟用應用程式做為用戶端程式，在執行階段時動態尋找端點位址。</span><span class="sxs-lookup"><span data-stu-id="5767f-103">This configuration element defines a standard endpoint that contains information to enable an application to function as a client program that can find the endpoint address dynamically at runtime.</span></span>  
+# <a name="dynamicendpoint"></a><span data-ttu-id="f043b-101">\<dynamicEndpoint></span><span class="sxs-lookup"><span data-stu-id="f043b-101">\<dynamicEndpoint></span></span>
+<span data-ttu-id="f043b-102">這個組態項目定義標準端點，其中包含的資訊可讓您啟用應用程式做為用戶端程式，在執行階段時動態尋找端點位址。</span><span class="sxs-lookup"><span data-stu-id="f043b-102">This configuration element defines a standard endpoint that contains information to enable an application to function as a client program that can find the endpoint address dynamically at runtime.</span></span>  
   
-<span data-ttu-id="5767f-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="5767f-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="5767f-105">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="5767f-105">\<standardEndpoints></span></span>  
+<span data-ttu-id="f043b-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="f043b-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="f043b-104">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="f043b-104">\<standardEndpoints></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5767f-106">語法</span><span class="sxs-lookup"><span data-stu-id="5767f-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f043b-105">語法</span><span class="sxs-lookup"><span data-stu-id="f043b-105">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -42,24 +42,24 @@ ms.locfileid: "54540245"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="5767f-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="5767f-107">Attributes and Elements</span></span>  
- <span data-ttu-id="5767f-108">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="5767f-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f043b-106">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="f043b-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="f043b-107">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="f043b-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="5767f-109">屬性</span><span class="sxs-lookup"><span data-stu-id="5767f-109">Attributes</span></span>  
- <span data-ttu-id="5767f-110">無。</span><span class="sxs-lookup"><span data-stu-id="5767f-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f043b-108">屬性</span><span class="sxs-lookup"><span data-stu-id="f043b-108">Attributes</span></span>  
+ <span data-ttu-id="f043b-109">無。</span><span class="sxs-lookup"><span data-stu-id="f043b-109">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="5767f-111">子元素</span><span class="sxs-lookup"><span data-stu-id="5767f-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f043b-110">子元素</span><span class="sxs-lookup"><span data-stu-id="f043b-110">Child Elements</span></span>  
   
-|<span data-ttu-id="5767f-112">項目</span><span class="sxs-lookup"><span data-stu-id="5767f-112">Element</span></span>|<span data-ttu-id="5767f-113">描述</span><span class="sxs-lookup"><span data-stu-id="5767f-113">Description</span></span>|  
+|<span data-ttu-id="f043b-111">項目</span><span class="sxs-lookup"><span data-stu-id="f043b-111">Element</span></span>|<span data-ttu-id="f043b-112">描述</span><span class="sxs-lookup"><span data-stu-id="f043b-112">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="5767f-114">\<discoveryClientSettings></span><span class="sxs-lookup"><span data-stu-id="5767f-114">\<discoveryClientSettings></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryclientsettings.md)|<span data-ttu-id="5767f-115">包含應用程式參與服務探索處理序做為用戶端所需的設定。</span><span class="sxs-lookup"><span data-stu-id="5767f-115">Contains the settings needed by an application to participate in the service discovery process as a client.</span></span>|  
+|[<span data-ttu-id="f043b-113">\<discoveryClientSettings></span><span class="sxs-lookup"><span data-stu-id="f043b-113">\<discoveryClientSettings></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryclientsettings.md)|<span data-ttu-id="f043b-114">包含應用程式參與服務探索處理序做為用戶端所需的設定。</span><span class="sxs-lookup"><span data-stu-id="f043b-114">Contains the settings needed by an application to participate in the service discovery process as a client.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="5767f-116">父項目</span><span class="sxs-lookup"><span data-stu-id="5767f-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f043b-115">父項目</span><span class="sxs-lookup"><span data-stu-id="f043b-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="5767f-117">項目</span><span class="sxs-lookup"><span data-stu-id="5767f-117">Element</span></span>|<span data-ttu-id="5767f-118">描述</span><span class="sxs-lookup"><span data-stu-id="5767f-118">Description</span></span>|  
+|<span data-ttu-id="f043b-116">項目</span><span class="sxs-lookup"><span data-stu-id="f043b-116">Element</span></span>|<span data-ttu-id="f043b-117">描述</span><span class="sxs-lookup"><span data-stu-id="f043b-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="5767f-119">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="5767f-119">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="5767f-120">標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。</span><span class="sxs-lookup"><span data-stu-id="5767f-120">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[<span data-ttu-id="f043b-118">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="f043b-118">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="f043b-119">標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。</span><span class="sxs-lookup"><span data-stu-id="f043b-119">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="5767f-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5767f-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f043b-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f043b-120">See also</span></span>
 - <xref:System.ServiceModel.Discovery.DynamicEndpoint>
 - <xref:System.ServiceModel.Discovery.Configuration.DynamicEndpointElement>

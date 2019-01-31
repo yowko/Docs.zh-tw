@@ -1,56 +1,56 @@
 ---
-title: '&lt;xmlSerializer&gt; 元素'
+title: <xmlSerializer> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <xmlSerializer> element
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: 4b511dc229c9e8321b91fbb0f9395627680e5d12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2919e8d4c1af858973ff3d2b58b4d3bc4f925527
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591951"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258249"
 ---
-# <a name="ltxmlserializergt-element"></a><span data-ttu-id="aa0d3-102">&lt;xmlSerializer&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="aa0d3-102">&lt;xmlSerializer&gt; Element</span></span>
-<span data-ttu-id="aa0d3-103">指定是否已完成 <xref:System.Xml.Serialization.XmlSerializer> 進度的其他檢查。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-103">Specifies whether an additional check of progress of the <xref:System.Xml.Serialization.XmlSerializer> is done.</span></span>  
+# <a name="xmlserializer-element"></a><span data-ttu-id="d5088-102">\<xmlSerializer > 項目</span><span class="sxs-lookup"><span data-stu-id="d5088-102">\<xmlSerializer> Element</span></span>
+<span data-ttu-id="d5088-103">指定是否已完成 <xref:System.Xml.Serialization.XmlSerializer> 進度的其他檢查。</span><span class="sxs-lookup"><span data-stu-id="d5088-103">Specifies whether an additional check of progress of the <xref:System.Xml.Serialization.XmlSerializer> is done.</span></span>  
   
- <span data-ttu-id="aa0d3-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="aa0d3-104">\<configuration></span></span>  
-<span data-ttu-id="aa0d3-105">\<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="aa0d3-105">\<system.xml.serialization></span></span>  
+ <span data-ttu-id="d5088-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d5088-104">\<configuration></span></span>  
+<span data-ttu-id="d5088-105">\<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="d5088-105">\<system.xml.serialization></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa0d3-106">語法</span><span class="sxs-lookup"><span data-stu-id="aa0d3-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d5088-106">語法</span><span class="sxs-lookup"><span data-stu-id="d5088-106">Syntax</span></span>  
   
 ```xml  
 <xmlSerializer checkDeserializerAdvance = "true"|"false" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="aa0d3-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="aa0d3-107">Attributes and Elements</span></span>  
- <span data-ttu-id="aa0d3-108">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d5088-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="d5088-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="d5088-108">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="d5088-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="aa0d3-109">屬性</span><span class="sxs-lookup"><span data-stu-id="aa0d3-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d5088-109">屬性</span><span class="sxs-lookup"><span data-stu-id="d5088-109">Attributes</span></span>  
   
-|<span data-ttu-id="aa0d3-110">屬性</span><span class="sxs-lookup"><span data-stu-id="aa0d3-110">Attribute</span></span>|<span data-ttu-id="aa0d3-111">描述</span><span class="sxs-lookup"><span data-stu-id="aa0d3-111">Description</span></span>|  
+|<span data-ttu-id="d5088-110">屬性</span><span class="sxs-lookup"><span data-stu-id="d5088-110">Attribute</span></span>|<span data-ttu-id="d5088-111">描述</span><span class="sxs-lookup"><span data-stu-id="d5088-111">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="aa0d3-112">**checkDeserializeAdvances**</span><span class="sxs-lookup"><span data-stu-id="aa0d3-112">**checkDeserializeAdvances**</span></span>|<span data-ttu-id="aa0d3-113">指定是否已檢查 <xref:System.Xml.Serialization.XmlSerializer>的進度。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-113">Specifies whether the progress of the <xref:System.Xml.Serialization.XmlSerializer> is checked.</span></span> <span data-ttu-id="aa0d3-114">設定屬性為 "true" 或 "false"。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-114">Set the attribute to "true" or "false".</span></span> <span data-ttu-id="aa0d3-115">預設為 "true"。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-115">The default is "true".</span></span>|  
-|<span data-ttu-id="aa0d3-116">**useLegacySerializationGeneration**</span><span class="sxs-lookup"><span data-stu-id="aa0d3-116">**useLegacySerializationGeneration**</span></span>|<span data-ttu-id="aa0d3-117">指定 <xref:System.Xml.Serialization.XmlSerializer> 是否使用舊版序列化產生作業，此作業會將 C# 程式碼寫入至檔案並編譯成組件，藉此產成組件。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-117">Specifies whether the <xref:System.Xml.Serialization.XmlSerializer> uses legacy serialization generation which generates assemblies by writing C# code to a file and then compiling it to an assembly.</span></span> <span data-ttu-id="aa0d3-118">預設值為 **false**。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-118">The default is **false**.</span></span>|  
+|<span data-ttu-id="d5088-112">**checkDeserializeAdvances**</span><span class="sxs-lookup"><span data-stu-id="d5088-112">**checkDeserializeAdvances**</span></span>|<span data-ttu-id="d5088-113">指定是否已檢查 <xref:System.Xml.Serialization.XmlSerializer>的進度。</span><span class="sxs-lookup"><span data-stu-id="d5088-113">Specifies whether the progress of the <xref:System.Xml.Serialization.XmlSerializer> is checked.</span></span> <span data-ttu-id="d5088-114">設定屬性為 "true" 或 "false"。</span><span class="sxs-lookup"><span data-stu-id="d5088-114">Set the attribute to "true" or "false".</span></span> <span data-ttu-id="d5088-115">預設為 "true"。</span><span class="sxs-lookup"><span data-stu-id="d5088-115">The default is "true".</span></span>|  
+|<span data-ttu-id="d5088-116">**useLegacySerializationGeneration**</span><span class="sxs-lookup"><span data-stu-id="d5088-116">**useLegacySerializationGeneration**</span></span>|<span data-ttu-id="d5088-117">指定 <xref:System.Xml.Serialization.XmlSerializer> 是否使用舊版序列化產生作業，此作業會將 C# 程式碼寫入至檔案並編譯成組件，藉此產成組件。</span><span class="sxs-lookup"><span data-stu-id="d5088-117">Specifies whether the <xref:System.Xml.Serialization.XmlSerializer> uses legacy serialization generation which generates assemblies by writing C# code to a file and then compiling it to an assembly.</span></span> <span data-ttu-id="d5088-118">預設值為 **false**。</span><span class="sxs-lookup"><span data-stu-id="d5088-118">The default is **false**.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="aa0d3-119">子元素</span><span class="sxs-lookup"><span data-stu-id="aa0d3-119">Child Elements</span></span>  
- <span data-ttu-id="aa0d3-120">無。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-120">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d5088-119">子元素</span><span class="sxs-lookup"><span data-stu-id="d5088-119">Child Elements</span></span>  
+ <span data-ttu-id="d5088-120">無。</span><span class="sxs-lookup"><span data-stu-id="d5088-120">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="aa0d3-121">父項目</span><span class="sxs-lookup"><span data-stu-id="aa0d3-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d5088-121">父項目</span><span class="sxs-lookup"><span data-stu-id="d5088-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="aa0d3-122">項目</span><span class="sxs-lookup"><span data-stu-id="aa0d3-122">Element</span></span>|<span data-ttu-id="aa0d3-123">描述</span><span class="sxs-lookup"><span data-stu-id="aa0d3-123">Description</span></span>|  
+|<span data-ttu-id="d5088-122">項目</span><span class="sxs-lookup"><span data-stu-id="d5088-122">Element</span></span>|<span data-ttu-id="d5088-123">描述</span><span class="sxs-lookup"><span data-stu-id="d5088-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="aa0d3-124">\<system.xml.serialization> 項目</span><span class="sxs-lookup"><span data-stu-id="aa0d3-124">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)|<span data-ttu-id="aa0d3-125">包含 <xref:System.Xml.Serialization.XmlSerializer> 及 <xref:System.Xml.Serialization.XmlSchemaImporter> 類別的組態設定。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-125">Contains configuration settings for the <xref:System.Xml.Serialization.XmlSerializer> and <xref:System.Xml.Serialization.XmlSchemaImporter> classes.</span></span>|  
+|[<span data-ttu-id="d5088-124">\<system.xml.serialization> 項目</span><span class="sxs-lookup"><span data-stu-id="d5088-124">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)|<span data-ttu-id="d5088-125">包含 <xref:System.Xml.Serialization.XmlSerializer> 及 <xref:System.Xml.Serialization.XmlSchemaImporter> 類別的組態設定。</span><span class="sxs-lookup"><span data-stu-id="d5088-125">Contains configuration settings for the <xref:System.Xml.Serialization.XmlSerializer> and <xref:System.Xml.Serialization.XmlSchemaImporter> classes.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="aa0d3-126">備註</span><span class="sxs-lookup"><span data-stu-id="aa0d3-126">Remarks</span></span>  
- <span data-ttu-id="aa0d3-127">根據預設， <xref:System.Xml.Serialization.XmlSerializer> 提供額外層級的安全性，在還原序列化未受信任的資料時，避免潛在的拒絕服務攻擊。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-127">By default, the <xref:System.Xml.Serialization.XmlSerializer> provides an additional layer of security against potential denial of service attacks when deserializing untrusted data.</span></span> <span data-ttu-id="aa0d3-128">做法是嘗試在還原序列化期間，偵測無限迴圈。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-128">It does so by attempting to detect infinite loops during deserialization.</span></span> <span data-ttu-id="aa0d3-129">如果偵測到這種情況時，就會發生例外狀況並出現下列訊息：「 內部錯誤： 無法處理基礎資料流還原序列化。 」</span><span class="sxs-lookup"><span data-stu-id="aa0d3-129">If such a condition is detected, an exception is thrown with the following message: "Internal error: deserialization failed to advance over underlying stream."</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d5088-126">備註</span><span class="sxs-lookup"><span data-stu-id="d5088-126">Remarks</span></span>  
+ <span data-ttu-id="d5088-127">根據預設， <xref:System.Xml.Serialization.XmlSerializer> 提供額外層級的安全性，在還原序列化未受信任的資料時，避免潛在的拒絕服務攻擊。</span><span class="sxs-lookup"><span data-stu-id="d5088-127">By default, the <xref:System.Xml.Serialization.XmlSerializer> provides an additional layer of security against potential denial of service attacks when deserializing untrusted data.</span></span> <span data-ttu-id="d5088-128">做法是嘗試在還原序列化期間，偵測無限迴圈。</span><span class="sxs-lookup"><span data-stu-id="d5088-128">It does so by attempting to detect infinite loops during deserialization.</span></span> <span data-ttu-id="d5088-129">如果偵測到這種情況時，就會發生例外狀況並出現下列訊息：「 內部錯誤： 無法處理基礎資料流還原序列化。 」</span><span class="sxs-lookup"><span data-stu-id="d5088-129">If such a condition is detected, an exception is thrown with the following message: "Internal error: deserialization failed to advance over underlying stream."</span></span>  
   
- <span data-ttu-id="aa0d3-130">接收到此訊息並不表示正在進行阻絕服務攻擊。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-130">Receiving this message does not necessarily indicate that a denial of service attack is in progress.</span></span> <span data-ttu-id="aa0d3-131">在某些罕見的狀況下，無限迴圈偵測機制產生誤判，使得合法的傳入訊息導致擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-131">In some rare circumstances, the infinite loop detection mechanism produces a false positive and the exception is thrown for a legitimate incoming message.</span></span> <span data-ttu-id="aa0d3-132">如果您發現自己特定的應用程式合法訊息，遭到此額外的保護層級拒絕，請將 **checkDeserializeAdvances** 屬性設定為 "false"。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-132">If you find that in your particular application legitimate messages are being rejected by this extra layer of protection, set **checkDeserializeAdvances** attribute to "false".</span></span>  
+ <span data-ttu-id="d5088-130">接收到此訊息並不表示正在進行阻絕服務攻擊。</span><span class="sxs-lookup"><span data-stu-id="d5088-130">Receiving this message does not necessarily indicate that a denial of service attack is in progress.</span></span> <span data-ttu-id="d5088-131">在某些罕見的狀況下，無限迴圈偵測機制產生誤判，使得合法的傳入訊息導致擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="d5088-131">In some rare circumstances, the infinite loop detection mechanism produces a false positive and the exception is thrown for a legitimate incoming message.</span></span> <span data-ttu-id="d5088-132">如果您發現自己特定的應用程式合法訊息，遭到此額外的保護層級拒絕，請將 **checkDeserializeAdvances** 屬性設定為 "false"。</span><span class="sxs-lookup"><span data-stu-id="d5088-132">If you find that in your particular application legitimate messages are being rejected by this extra layer of protection, set **checkDeserializeAdvances** attribute to "false".</span></span>  
   
-## <a name="example"></a><span data-ttu-id="aa0d3-133">範例</span><span class="sxs-lookup"><span data-stu-id="aa0d3-133">Example</span></span>  
- <span data-ttu-id="aa0d3-134">下列程式碼範例將 **checkDeserializeAdvances** 屬性設為 "false"。</span><span class="sxs-lookup"><span data-stu-id="aa0d3-134">The following code example sets the **checkDeserializeAdvances** attribute to "false".</span></span>  
+## <a name="example"></a><span data-ttu-id="d5088-133">範例</span><span class="sxs-lookup"><span data-stu-id="d5088-133">Example</span></span>  
+ <span data-ttu-id="d5088-134">下列程式碼範例將 **checkDeserializeAdvances** 屬性設為 "false"。</span><span class="sxs-lookup"><span data-stu-id="d5088-134">The following code example sets the **checkDeserializeAdvances** attribute to "false".</span></span>  
   
 ```xml  
 <configuration>  
@@ -60,8 +60,8 @@ ms.locfileid: "54591951"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="aa0d3-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aa0d3-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5088-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d5088-135">See also</span></span>
 
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [<span data-ttu-id="aa0d3-136">\<system.xml.serialization> 項目</span><span class="sxs-lookup"><span data-stu-id="aa0d3-136">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [<span data-ttu-id="aa0d3-137">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="aa0d3-137">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [<span data-ttu-id="d5088-136">\<system.xml.serialization> 項目</span><span class="sxs-lookup"><span data-stu-id="d5088-136">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [<span data-ttu-id="d5088-137">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="d5088-137">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
