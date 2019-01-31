@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54601bc705a8684508563ecf0682d84bcac8713f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cf9b842243cd7b9ae244688b0da348f63b68f08a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492035"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 簡介
 ## <a name="what-is-a-parallel-query"></a>何謂平行查詢？  
@@ -37,7 +37,7 @@ ms.locfileid: "43879750"
   
  除了標準查詢運算子外，<xref:System.Linq.ParallelEnumerable> 類別還會包含一組方法，以供啟用平行執行特有的行為。 下表列出這些 PLINQ 特有的方法。  
   
-|ParallelEnumerable 運算子|描述|  
+|ParallelEnumerable 運算子|說明|  
 |---------------------------------|-----------------|  
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|PLINQ 的進入點。 指定系統應該在情況允許時平行處理其餘查詢。|  
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|指定系統應該將其餘查詢當作非平行 LINQ 查詢來循序執行。|  
@@ -59,7 +59,7 @@ ms.locfileid: "43879750"
  <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 擴充方法會將後續的查詢運算子 (此案例中為 `where` 和 `select`) 繫結至 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 實作。  
   
 ## <a name="execution-modes"></a>執行模式  
- 根據預設，PLINQ 會保守行事。 在執行階段，PLINQ 基礎結構會分析查詢的整體結構。 如果查詢可透過平行化作業來加快執行速度，PLINQ 會將來源序列分割成可同時執行的工作。 如果平行處理查詢的方式並不安全，PLINQ 就會循序執行查詢。 如果 PLINQ 可選擇是要使用成本可能較高的平行演算法，還是使用成本不高的循序演算法，則依預設它會選擇循序演算法。 您可以使用 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 方法和 <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> 列舉來指示 PLINQ 選取平行演算法。 當您在測試和測量後得知，某特定查詢在平行執行時速度會更快，便適合這麼做。 如需詳細資訊，請參閱[如何：在 PLINQ 中指定執行模式](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)。  
+ 根據預設，PLINQ 會保守行事。 在執行階段，PLINQ 基礎結構會分析查詢的整體結構。 如果查詢可透過平行化作業來加快執行速度，PLINQ 會將來源序列分割成可同時執行的工作。 如果平行處理查詢的方式並不安全，PLINQ 就會循序執行查詢。 如果 PLINQ 可選擇是要使用成本可能較高的平行演算法，還是使用成本不高的循序演算法，則依預設它會選擇循序演算法。 您可以使用 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 方法和 <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> 列舉來指示 PLINQ 選取平行演算法。 當您在測試和測量後得知，某特定查詢在平行執行時速度會更快，便適合這麼做。 如需詳細資訊，請參閱[＜How to：在 PLINQ 中指定執行模式](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)。  
   
 ## <a name="degree-of-parallelism"></a>平行處理原則的刻度  
  根據預設，PLINQ 會使用主機電腦上的所有處理器。 您可以使用 <xref:System.Linq.ParallelEnumerable.WithDegreeOfParallelism%2A> 方法來指示 PLINQ 使用不超過指定數目的處理器。 若您想要確保電腦上執行的其他處理序可獲得一定的 CPU 使用時間，您便可以這麼做。 下列程式碼片段會限制查詢最多只能使用兩個處理器。  
@@ -80,7 +80,7 @@ ms.locfileid: "43879750"
  如需詳細資訊，請參閱 [PLINQ 中的順序保留](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md)。  
   
 ## <a name="parallel-vs-sequential-queries"></a>比較平行與循序查詢  
- 某些作業會要求系統以循序方式傳遞來源資料。 <xref:System.Linq.ParallelEnumerable> 查詢運算子會在必要時自動還原為循序模式。 對於使用者定義的查詢運算子和需要循序執行的使用者委派，PLINQ 提供了 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 方法。 當您使用 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 時，查詢中的所有後續運算子會循序執行，直到再次呼叫 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 為止。 如需詳細資訊，請參閱[如何：結合平行和循序 LINQ 查詢](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md)。  
+ 某些作業會要求系統以循序方式傳遞來源資料。 <xref:System.Linq.ParallelEnumerable> 查詢運算子會在必要時自動還原為循序模式。 對於使用者定義的查詢運算子和需要循序執行的使用者委派，PLINQ 提供了 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 方法。 當您使用 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 時，查詢中的所有後續運算子會循序執行，直到再次呼叫 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 為止。 如需詳細資訊，請參閱[＜How to：結合平行和循序 LINQ 查詢](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md)。  
   
 ## <a name="options-for-merging-query-results"></a>可供合併查詢結果的選項  
  當 PLINQ 查詢以平行方式執行時，其來自每個背景工作執行緒的結果，必須合併回主要執行緒以供 `foreach` 迴圈 (在 Visual Basic 中是 `For Each`) 取用，或以供插入至清單或陣列。 在某些情況下，指定特定種類的合併作業可能會有幫助，例如，若您要更快速地開始產生結果的話。 基於此目的，PLINQ 支援 <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> 方法與 <xref:System.Linq.ParallelMergeOptions> 列舉。 如需詳細資訊，請參閱 [PLINQ 中的合併選項](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)。  
@@ -100,14 +100,14 @@ ms.locfileid: "43879750"
   
  在設定了取消權杖之後，PLINQ 查詢還是可能會繼續處理某些元素。  
   
- 若要提高回應速度，您也可以在長時間執行的使用者委派中回應取消要求。 如需詳細資訊，請參閱[如何：取消 PLINQ 查詢](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)。  
+ 若要提高回應速度，您也可以在長時間執行的使用者委派中回應取消要求。 如需詳細資訊，請參閱[＜How to：取消 PLINQ 查詢](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)。  
   
 ## <a name="exceptions"></a>例外狀況  
  PLINQ 查詢在執行時，不同的執行緒可能會同時擲回多個例外狀況。 此外，負責處理例外狀況之程式碼所在的執行緒，可能會不同於擲回例外狀況之程式碼所在的執行緒。 PLINQ 會使用 <xref:System.AggregateException> 型別將查詢擲回的所有例外狀況封裝起來，然後將這些例外狀況封送處理回呼叫端執行緒。 呼叫端執行緒只需要一個 try-catch 區塊。 不過，您可以逐一查看 <xref:System.AggregateException> 中封裝的所有例外狀況，並攔截您可以從中安全復原的任何例外狀況。 在少數情況下，某些例外狀況擲回時可能未包裝於 <xref:System.AggregateException> 中，<xref:System.Threading.ThreadAbortException> 也未包裝。  
   
  當系統允許例外狀況反昇至聯結的執行緒時，查詢可能就可以在引發例外狀況之後，繼續處理某些項目。  
   
- 如需詳細資訊，請參閱[如何：處理 PLINQ 查詢中的例外狀況](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)。  
+ 如需詳細資訊，請參閱[＜How to：處理 PLINQ 查詢中的例外狀況](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)。  
   
 ## <a name="custom-partitioners"></a>自訂 Partitioner  
  在某些情況下，您可以藉由撰寫自訂 Partitioner 來利用來源資料的某些特性，以改善查詢效能。 在查詢中，自訂 Partitioner 本身就是所查詢的可列舉物件。  
@@ -122,5 +122,5 @@ ms.locfileid: "43879750"
   
 ## <a name="see-also"></a>另請參閱
 
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [認識 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

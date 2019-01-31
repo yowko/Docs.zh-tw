@@ -1,15 +1,15 @@
 ---
-title: 如何：執行文字到 XML 的串流轉換 (C#)
+title: HOW TO：執行文字到 XML 的串流轉換 (C#)
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 98fa8bd9ae393e9c87b67ae3f2874a2c279415af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 906150483f7f76b4429ea390d083e9f18696ac9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555878"
 ---
-# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>如何：執行文字到 XML 的串流轉換 (C#)
+# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>HOW TO：執行文字到 XML 的串流轉換 (C#)
 處理文字檔的其中一個方法是撰寫擴充方法，該方法會使用 `yield return` 建構將文字檔一次串流一行。 然後您可以撰寫利用延後的方式處理文字檔的 LINQ 查詢。 如果您接著使用 <xref:System.Xml.Linq.XStreamingElement> 串流輸出，您就可以使用最少量的記憶體建立文字檔到 XML 的轉換，而不必在乎來源文字檔的大小。  
   
  關於串流轉換有一些警告。 在您可以處理一次整個檔案的情況下，以及您可以用行出現在來源文件中的順序處理這些行時，最適合使用串流轉換。 如果您必須多次處理檔案，或者，如果您必須在處理檔案前排序行，您將會失去使用串流技術的好處。  
@@ -86,7 +86,7 @@ class Program
 </Root>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Xml.Linq.XStreamingElement>  
+- <xref:System.Xml.Linq.XStreamingElement>
 - [進階查詢技術 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：設定要求的快取原則
+title: HOW TO：設定要求的快取原則
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: f2e3e7ccc16dc24cf79574f8607245b66ea53cb1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 11f36065c02c5ec513e66bff2541536e9290b5c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563557"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a>如何：設定要求的快取原則
+# <a name="how-to-set-cache-policy-for-a-request"></a>HOW TO：設定要求的快取原則
 下列範例示範如何設定要求的快取原則。 範例的輸入是如 `http://www.contoso.com/` 之類的 URI。  
   
 ## <a name="example"></a>範例  
@@ -105,9 +105,9 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [快取原則](../../../docs/framework/network-programming/cache-policy.md)  
- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>另請參閱
+- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [快取原則](../../../docs/framework/network-programming/cache-policy.md)
+- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

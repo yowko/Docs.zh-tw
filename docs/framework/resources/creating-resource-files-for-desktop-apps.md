@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8d5c151c728002ede0e29be77fa6e23aa2c1b3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8219888b7944a19b100f73aab3713c09fd93f45b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569936"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>建立桌面應用程式的資源檔
 您可以在資源檔中包括資源 (例如字串、影像或物件資料)，以讓應用程式輕鬆地使用它們。 .NET Framework 提供五種方式來建立資源檔：  
@@ -58,7 +58,7 @@ name2=value2
   
  .txt 和 .restext 檔案的資源檔格式完全相同。 .restext 副檔名只提供可立即將文字檔識別為文字資源檔。  
   
- 字串資源會以「名稱/值」配對的形式出現，其中「名稱」是識別資源的字串，「值」則是當您將「名稱」傳遞至資源擷取方法 (例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>) 時所傳回的資源字串。 「名稱」和「值」必須以等號 (=) 分隔。 例如:   
+ 字串資源會以「名稱/值」配對的形式出現，其中「名稱」是識別資源的字串，「值」則是當您將「名稱」傳遞至資源擷取方法 (例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>) 時所傳回的資源字串。 「名稱」和「值」必須以等號 (=) 分隔。 例如：  
   
 ```  
 FileMenuName=File  
@@ -70,7 +70,7 @@ HelpMenuName=Help
 > [!CAUTION]
 >  請勿使用資源檔儲存密碼、安全機密資訊或私用資料。  
   
- 文字檔中允許空字串 (即其值為 <xref:System.String.Empty?displayProperty=nameWithType> 的資源)。 例如:   
+ 文字檔中允許空字串 (即其值為 <xref:System.String.Empty?displayProperty=nameWithType> 的資源)。 例如：  
   
 ```  
 EmptyString=  
@@ -198,7 +198,7 @@ csc greeting.cs -resource:GreetingResources.resources
   
  在編譯時間，Visual Studio 先將專案中的 .resx 檔案轉換成二進位資源檔 (.resources)，並將它們儲存在專案之 obj 目錄的子目錄中。 Visual Studio 會將未包含當地語系化資源的任何資源檔內嵌在專案所產生的主要組件中。 如果任何資源檔包含當地語系化資源，Visual Studio 會將其內嵌在每個當地語系化文化特性的個別附屬組件中。 它接著會將每個附屬組件儲存在名稱對應至當地語系化文化特性的目錄中。 例如，當地語系化的英文 (美國) 資源會儲存在 en-US 子目錄的附屬組件中。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Resources>  
- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)  
- [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Resources>
+- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
+- [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

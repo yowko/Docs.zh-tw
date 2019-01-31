@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7bec2023e3ee0db9987e053dd54647ab2e94f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e3a4a2208f669dc4fc0589f08b32aeb2c5e4423
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398700"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509299"
 ---
 # <a name="security-considerations-for-reflection"></a>反映的安全性考量
 反映可讓您取得類型和成員的相關資訊，以及存取成員 (也就是呼叫方法和建構函式、取得和設定屬性值、加入和移除事件處理常式等等)。 不限制使用反映來取得類型和成員的相關資訊。 所有程式碼都可以使用反映來執行下列工作：  
@@ -82,7 +82,7 @@ ms.locfileid: "33398700"
     > [!NOTE]
     >  根據預設，安全性原則會拒絕將此權限授與源自網際網路的程式碼。 此權限絕不能授與源自網際網路的程式碼。  
   
--   若要允許程式碼叫用任何非公用成員，只要包含被叫用成員的組件授與集，與包含叫用程式碼的組件授與集相同，或是其授權集的子集：您的程式碼必須被授與具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的  <xref:System.Security.Permissions.ReflectionPermission>。  
+-   若要允許程式碼叫用任何非公用成員，只要包含被叫用成員的組件授權集，與包含叫用程式碼的組件授權集相同，或是其授權集的子集：您的程式碼必須被授與具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
  例如，假設您將網際網路權限，以及具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>，授與應用程式定義域，然後執行網際網路應用程式來搭配兩個組件 A 和 B。  
   
@@ -104,13 +104,13 @@ ms.locfileid: "33398700"
   
 -   從 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 開始，使用反映來取得非公用類型和成員的相關資訊時，不需要任何權限。 在舊版中，會需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Security.Permissions.ReflectionPermissionFlag>  
- <xref:System.Security.Permissions.ReflectionPermission>  
- <xref:System.Security.Permissions.SecurityPermission>  
- [安全性變更](../../../docs/framework/security/security-changes.md)  
- [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)  
- [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [套用屬性](../../../docs/standard/attributes/applying-attributes.md)  
- [存取自訂屬性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Security.Permissions.ReflectionPermissionFlag>
+- <xref:System.Security.Permissions.ReflectionPermission>
+- <xref:System.Security.Permissions.SecurityPermission>
+- [安全性變更](../../../docs/framework/security/security-changes.md)
+- [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)
+- [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [套用屬性](../../../docs/standard/attributes/applying-attributes.md)
+- [存取自訂屬性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

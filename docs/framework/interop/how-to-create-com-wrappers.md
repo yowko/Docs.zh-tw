@@ -1,5 +1,5 @@
 ---
-title: 如何：建立 COM 包裝函式
+title: HOW TO：建立 COM 包裝函式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14bf011c3711a267b8cf5a1fc0497a347468387d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540971"
 ---
-# <a name="how-to-create-com-wrappers"></a>如何：建立 COM 包裝函式
+# <a name="how-to-create-com-wrappers"></a>HOW TO：建立 COM 包裝函式
 
 您可以使用 Visual Studio 2005 功能或 .NET Framework 工具 Tlbimp.exe 和 Regasm.exe 來建立元件物件模型 (COM) 包裝函式。 這兩種方法會產生兩種類型的 COM 包裝函式：
 
@@ -47,7 +47,7 @@ ms.locfileid: "49121748"
   
 -   執行 [Tlbimp.exe (型別程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 工具。  
   
- 此工具所建立的組件，包含原始型別程式庫中所定義之類型的執行階段中繼資料。  
+ 這項工具所建立的組件，包含原始型別程式庫中所定義之類型的執行階段中繼資料。  
   
 ## <a name="wrap-managed-objects-in-a-native-application"></a>在原生應用程式中包裝受控物件  
   
@@ -69,11 +69,11 @@ ms.locfileid: "49121748"
   
 執行 [Regasm.exe (組件註冊工具)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) 工具。  
   
-此工具會讀取組件中繼資料，並將需要的項目新增至登錄。 因此，COM 用戶端便能明確地建立 .NET Framework 類別。 您可以使用與原生 COM 類別相同的方式來使用組件。  
+這項工具會讀取組件中繼資料，並將需要的項目新增至登錄。 因此，COM 用戶端便能明確地建立 .NET Framework 類別。 您可以使用與原生 COM 類別相同的方式來使用組件。  
   
 您可以對位於任何目錄中的組件執行 Regasm.exe，然後執行 [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 將它移到全域組件快取中。 移動組件並不會使位置登錄項目無效，因為只要在其他位置找不到組件，就一律會對全域組件快取進行檢查。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
 
-- [執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md)  
+- [執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md)
 - [COM 可呼叫包裝函式](../../../docs/framework/interop/com-callable-wrapper.md)

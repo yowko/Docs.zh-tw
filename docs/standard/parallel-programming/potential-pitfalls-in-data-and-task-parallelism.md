@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6910dfba0889b4eaf601960d13dfe87a3b8c2fa
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5613128950d53946d55050ba3fd77cf1f0bb048a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513421"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>資料和工作平行處理原則中可能出現的錯誤
 在許多情況下，相較於一般循序迴圈，<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 更能提供顯著的效能改良。 不過，平行處理迴圈的工作所帶來的複雜性可能會造成問題，而在循序程式碼中，這些問題不是不常見，就是完全不會發生。 本主題列出一些您在撰寫平行迴圈時應該避免的作法。  
@@ -24,7 +24,7 @@ ms.locfileid: "47087422"
  在某些情況下，平行迴圈的執行速度可能比循序迴圈更慢。 基本的經驗法則是，反覆項目不多且使用者委派速度很快的平行迴圈不太可能加快多少速度。 不過，因為效能牽涉到許多因素，我們建議您一律要測量實際的結果。  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>避免寫入共用的記憶體位置  
- 循序程式碼經常會讀取或寫入靜態變數或類別欄位。 不過，每當有多個執行緒同時存取這類變數時，就很可能產生競爭情形。 即便您可以使用鎖定來同步處理變數的存取，同步處理的成本也會減損效能。 因此，我們建議您盡可能避免在平行迴圈中存取共用狀態，或至少做出限制。 執行這項操作的最佳方式是使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 的多載，其在迴圈執行時會使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 變數來儲存執行緒區域狀態。 如需詳細資訊，請參閱[如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[如何：撰寫含有分割區域變數的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)。  
+ 循序程式碼經常會讀取或寫入靜態變數或類別欄位。 不過，每當有多個執行緒同時存取這類變數時，就很可能產生競爭情形。 即便您可以使用鎖定來同步處理變數的存取，同步處理的成本也會減損效能。 因此，我們建議您盡可能避免在平行迴圈中存取共用狀態，或至少做出限制。 執行這項操作的最佳方式是使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 的多載，其在迴圈執行時會使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 變數來儲存執行緒區域狀態。 如需詳細資訊，請參閱[＜How to：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[如何：撰寫含有磁碟分割區域變數的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)。  
   
 ## <a name="avoid-over-parallelization"></a>避免過度平行處理  
  在使用平行迴圈時，您會因為分割來源集合和同步處理背景工作執行緒而產生額外成本。 電腦上的處理器數目則會進一步限制平行處理的好處。 多個計算繫結執行緒若只在一個處理器上執行，系統並不會獲得任何加速效果。 因此，您必須注意不要過度平行處理迴圈。  
@@ -52,7 +52,7 @@ ms.locfileid: "47087422"
 >  您可以自行測試這一點，方法是在您的查詢中插入一些 <xref:System.Console.WriteLine%2A> 呼叫。 雖然本文件的範例使用這個方法來做示範，但除非必要，請勿將它用在平行迴圈中。  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>注意執行緒相似性問題  
- 有些技術 (例如，適用於單一執行緒 Apartment (STA) 元件、Windows Forms 和 Windows Presentation Foundation (WPF) 的 COM 互通性) 會施加執行緒相似性限制，以要求程式碼在特定執行緒上執行。 例如，在 Windows Forms 和 WPF 中，只有用來建立控制項的執行緒能夠存取該控制項。 這表示 (舉例來說) 除非您設定執行緒排程器，讓它排定只利用 UI 執行緒執行工作，否則您無法從平行迴圈更新清單控制項。 如需詳細資訊，請參閱[如何：排定利用使用者介面執行緒 (UI) 執行工作](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663)。  
+ 有些技術 (例如，適用於單一執行緒 Apartment (STA) 元件、Windows Forms 和 Windows Presentation Foundation (WPF) 的 COM 互通性) 會施加執行緒相似性限制，以要求程式碼在特定執行緒上執行。 例如，在 Windows Forms 和 WPF 中，只有用來建立控制項的執行緒能夠存取該控制項。 這表示 (舉例來說) 除非您設定執行緒排程器，讓它排定只利用 UI 執行緒執行工作，否則您無法從平行迴圈更新清單控制項。 如需詳細資訊，請參閱[＜How to：在使用者介面 (UI) 執行緒上排定工作](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663)。  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>在等候 Parallel.Invoke 所呼叫的委派時請小心  
  在某些情況下，工作平行程式庫會內嵌工作，這表示它會在目前執行中之執行緒的工作上執行  (如需詳細資訊，請參閱[工作排程器](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65))。在某些案例中，此效能最佳化作業可能會導致死結。 例如，兩項工作可能會執行相同的委派程式碼，此程式碼會在事件發生時發出信號，然後等候另一項工作發出信號。 如果第二項工作在相同的執行緒中內嵌為第一項工作，而原本的第一項工作進入等候狀態，則第二項工作將永遠無法針對其事件發出信號。 若要避免這類情況，您可以對等候作業指定逾時設定，或使用明確的執行緒建構函式以協助確保兩項工作不會互相封鎖對方。  
@@ -82,6 +82,6 @@ ms.locfileid: "47087422"
   
 ## <a name="see-also"></a>另請參閱
 
-- [平行程式設計](../../../docs/standard/parallel-programming/index.md)  
-- [使用 PLINQ 時可能出現的錯誤](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
-- [平行程式設計模式：了解及套用平行模式與 .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)
+- [平行程式設計](../../../docs/standard/parallel-programming/index.md)
+- [使用 PLINQ 時可能出現的錯誤](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)
+- [Patterns for Parallel Programming:Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) (平行程式設計模式：了解及套用使用 .NET Framework 4 的平行模式)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89479ca4a41f761d4aacaf6d8d962bfba62be811
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e346b326255ea46babc2e4c9101a1724671514d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517564"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>匯入類型程式庫做為組件
 COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯器則是在組件中產生型別中繼資料。 這兩種類型資訊的來源有相當大的差異。 本主題描述從型別程式庫產生中繼資料的技術。 產生的組件稱為 Interop 組件，其包含的類型資訊可讓 .NET Framework 應用程式使用 COM 類型。  
@@ -44,11 +44,11 @@ COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯�
   
 -   Visual Studio  
   
-     Visual Studio 會自動將型別程式庫中的 COM 類型轉換為組件中的中繼資料。 如需指示，請參閱[何：將參考加入至型別程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)和[逐步解說：從 Microsoft Office 組件內嵌類型資訊](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))。  
+     Visual Studio 會自動將型別程式庫中的 COM 類型轉換為組件中的中繼資料。 如需相關指示，請參閱[如何：將參考新增至型別程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)和[逐步解說：從 Microsoft Office 組件內嵌類型資訊](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))。  
   
 -   [型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
-     型別程式庫匯入工具提供命令列選項，可以調整產生的 Interop 檔案的中繼資料、從現有型別程式庫匯入型別，以及產生 Interop 組件和命名空間。 如需指示，請參閱[何：從型別程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)。  
+     型別程式庫匯入工具提供命令列選項，可以調整產生的 Interop 檔案的中繼資料、從現有型別程式庫匯入型別，以及產生 Interop 組件和命名空間。 如需相關指示，請參閱[如何：從型別程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)。  
   
 -   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> 類別  
   
@@ -70,15 +70,15 @@ COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯�
   
  如需 COM Interop 匯入處理序的詳細資訊，請參閱[型別程式庫至組件轉換的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Runtime.InteropServices.TypeLibConverter>  
- [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
- [型別程式庫至組件轉換的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Tlbimp.exe (類型程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [自訂標準包裝函式](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
- [在受控程式碼中使用 COM 類型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
- [編譯 Interop 專案](../../../docs/framework/interop/compiling-an-interop-project.md)  
- [部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)  
- [如何：將參考加入至類型程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  
- [如何：從類型程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)  
- [逐步解說：從 Microsoft Office 組件內嵌類型資訊](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))
+## <a name="see-also"></a>另請參閱
+- <xref:System.Runtime.InteropServices.TypeLibConverter>
+- [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+- [型別程式庫至組件轉換的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Tlbimp.exe (類型程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [自訂標準包裝函式](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))
+- [在受控程式碼中使用 COM 類型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))
+- [編譯 Interop 專案](../../../docs/framework/interop/compiling-an-interop-project.md)
+- [部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)
+- [如何：將參考新增至型別程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
+- [如何：從型別程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
+- [逐步解說：從 Microsoft Office 組件內嵌類型資訊](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 80aafccab9b9183a1dc4dc25d531ebe65f6905b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dfbd663384a76298390d216bb2488b00e2535d00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605129"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 查詢簡介 (C#)
 「查詢」是指從資料來源中擷取資料的運算式。 查詢通常以特定的查詢語言來表示。 針對各種資料來源類型開發不同的語言已有一段時間，例如用於關聯式資料庫的 SQL，以及用於 XML 的 XQuery。 因此，開發人員在過去必須針對所需支援的每種資料來源類型或資料格式，學習新的查詢語言。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供一致的模型來處理各種資料來源和格式的資料，從而簡化此情況。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，您所處理的一定是物件。 您會使用相同的基本編碼模式，來查詢及轉換 XML 文件、SQL 資料庫、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] 資料集、.NET 集合，以及可使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者的任何其他格式中的資料。  
@@ -56,7 +56,7 @@ IQueryable<Customer> custQuery =
  如需如何建立特定資料來源類型的詳細資訊，請參閱各種 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者的文件。 但基本的規則十分清楚：任何能夠支援泛型 <xref:System.Collections.Generic.IEnumerable%601>介面，或由其繼承而來之介面的物件，都可以是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 資料來源。  
   
 > [!NOTE]
->  這些類型 (例如 <xref:System.Collections.ArrayList>) 若支援非泛型 <xref:System.Collections.IEnumerable> 介面，也可用為 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 資料來源。 如需詳細資訊，請參閱[如何：使用 LINQ 查詢 ArrayList (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)。  
+>  這些類型 (例如 <xref:System.Collections.ArrayList>) 若支援非泛型 <xref:System.Collections.IEnumerable> 介面，也可用為 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 資料來源。 如需詳細資訊，請參閱[＜How to：使用 LINQ 查詢 ArrayList (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)。  
   
 ##  <a name="query"></a> 查詢  
  查詢可指定要從一或多個資料來源擷取的資訊。 查詢也可選擇性地指定該項資訊傳回之前應該如何排序、分組和成形。 查詢是儲存在查詢變數中，並以查詢運算式初始化。 為了簡化撰寫查詢的作業，C# 已引進新的查詢語法。  
@@ -88,11 +88,11 @@ IQueryable<Customer> custQuery =
   
  您也可以將 `foreach` 迴圈放在緊接著查詢運算式後方的位置，以強制執行查詢。 不過，藉由呼叫 `ToList` 或 `ToArray`，您也可以快取單一集合物件中的所有資料。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [逐步解說：在 C# 中撰寫查詢](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [逐步解說：在 C# 中撰寫查詢](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [LINQ 查詢運算式](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [foreach、in](../../../../csharp/language-reference/keywords/foreach-in.md)  
+- [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [逐步解說：在 C# 中撰寫查詢](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [逐步解說：在 C# 中撰寫查詢](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [LINQ 查詢運算式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [foreach、in](../../../../csharp/language-reference/keywords/foreach-in.md)
 - [查詢關鍵字 (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

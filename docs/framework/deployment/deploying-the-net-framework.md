@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac17993a4980e96cbd05fc2523567138e7b56262
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c2eb1898f03a52306a8a2763059cf198208b7b88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551835"
 ---
 # <a name="deploying-the-net-framework"></a>部署 .NET Framework
 本節 .NET Framework 文件為想要與應用程式一起安裝 .NET Framework 的開發人員，和想要在網路上部署 .NET Framework 系統管理員提供資訊。 它也討論與部署相關的啟用及重新啟動問題，以及如何監視 .NET Framework 安裝進度。  
@@ -33,8 +33,8 @@ ms.locfileid: "50196437"
  [.NET Framework 初始化錯誤：管理使用者體驗](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
  說明 .NET Framework 應用程式需要無效或未安裝在使用者電腦上的 CLR 版本時，會發生什麼事、如何解決這些錯誤，以及如何控制向使用者顯示的錯誤訊息。  
   
- [如何：偵錯 CLR 啟用問題](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
+ [如何：對 CLR 啟用問題進行偵錯](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
  說明如何檢視並偵錯 CLR 啟用記錄，解決讓您的應用程式搭配正確的 CLR 版本執行時時可能發生的問題。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 - [開發指南](../../../docs/framework/development-guide.md)

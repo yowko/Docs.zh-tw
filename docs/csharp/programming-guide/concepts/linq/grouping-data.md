@@ -2,12 +2,12 @@
 title: 分組資料 (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 42e93bf291b0921d7aafa07265d1193387d46aa6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 079f346435e2f21b7c46b528d68f917f5532db66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583216"
 ---
 # <a name="grouping-data-c"></a>分組資料 (C#)
 分組指的是將資料放在群組中，好讓每一個群組中的項目共用共同的屬性。  
@@ -20,7 +20,7 @@ ms.locfileid: "43500311"
   
 ## <a name="methods"></a>方法  
   
-|方法名稱|描述|C# 查詢運算式語法|更多資訊|  
+|方法名稱|說明|C# 查詢運算式語法|更多資訊|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |GroupBy|共用共同屬性的群組項目。 每個群組都由一個 <xref:System.Linq.IGrouping%602> 物件代表。|`group … by`<br /><br /> -或-<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|根據索引鍵選取器函式，將元素插入 <xref:System.Linq.Lookup%602> (一對多字典)。|不適用。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
@@ -59,13 +59,13 @@ foreach (var group in query)
 */  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Linq>  
-- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)  
-- [如何：建立巢狀群組](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
-- [如何：依副檔名分組檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
-- [如何：將查詢結果分組](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
-- [如何：在分組作業上執行子查詢](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)  
+- <xref:System.Linq>
+- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)
+- [如何：建立巢狀群組](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)
+- [如何：依副檔名分組檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [如何：將查詢結果分組](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)
+- [如何：在分組作業上執行子查詢](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
 - [如何：使用群組將檔案分割成許多檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

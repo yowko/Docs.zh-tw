@@ -16,12 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: ec789bcc5b675f3cde468f9464531a225e8c33db
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 42cea87576ca4c5cbca685c6d71272649eabb844
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562841"
 ---
 # <a name="using-client-sockets"></a>使用用戶端通訊端
 在透過 <xref:System.Net.Sockets.Socket> 起始交談之前，您必須先建立應用程式和遠端裝置之間的資料管道。 雖然有其他的網路位址系列和通訊協定存在，但此範例會示範如何建立遠端服務的 TCP/IP 連線。  
@@ -77,8 +77,8 @@ try {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [使用同步用戶端通訊端](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [使用非同步用戶端通訊端](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [如何：建立通訊端](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
- [通訊端](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>另請參閱
+- [使用同步用戶端通訊端](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
+- [使用非同步用戶端通訊端](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
+- [如何：建立通訊端](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [通訊端](../../../docs/framework/network-programming/sockets.md)

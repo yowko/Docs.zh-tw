@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126857"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517678"
 ---
 # <a name="composite-formatting"></a>複合格式
 
@@ -67,7 +67,7 @@ ms.locfileid: "53126857"
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- 多個格式項目可以藉由指定相同參數規範來參考物件清單中的相同項目。 例如，您可以指定複合格式字串 (例如："0x{0:X} {0:E} {0:N}") 來將同一個數值設定成十六進位、科學記號和數字格式，如下列範例所示。  
+ 多個格式項目可以藉由指定相同參數規範來參考物件清單中的相同項目。 例如，您可以格式化十六進位、科學記號和數字格式的相同數值，方法是指定複合格式字串 (例如："0x{0:X} {0:E} {0:N}")，如下列範例所示。  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -161,15 +161,15 @@ ms.locfileid: "53126857"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Console.WriteLine%2A>  
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- [字串內插補點 (C#)](../../csharp/language-reference/tokens/interpolated.md)  
-- [字串內插補點 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
-- [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
-- [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
-- [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
-- [標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
-- [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- <xref:System.Console.WriteLine%2A>
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- [字串內插補點 (C#)](../../csharp/language-reference/tokens/interpolated.md)
+- [字串內插補點 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+- [格式化類型](../../../docs/standard/base-types/formatting-types.md)
+- [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)
+- [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

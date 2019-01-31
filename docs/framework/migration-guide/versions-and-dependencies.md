@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c78a80b6d266f40aa8872f0411d74f10c45e4c68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f32b32a8eeeaae00084bd0a69a94beeb837036a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200936"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582165"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 每一版 .NET Framework 都包含通用語言執行平台 (CLR)、基底類別庫及其他 Managed 程式庫。 本主題將說明各版 .NET Framework 的主要功能、提供有關基礎 CLR 版本和相關聯開發環境的資訊，以及識別 Windows 作業系統所安裝的版本。  
@@ -53,7 +53,7 @@ ms.locfileid: "50200936"
  一般而言，您不應該解除安裝電腦上已安裝的任何 .NET Framework 版本，因為您使用的應用程式可能倚賴特定版本，如果移除該版本，可能使應用程式中斷。 您可以同時在單一電腦上載入多個 .NET Framework 版本。 這表示，您不需要解除安裝舊版，可以直接安裝新版 .NET Framework。 如需詳細資訊，請參閱[使用者入門](../../../docs/framework/get-started/index.md)。
 
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>鎖定執行 .NET Framework 4.5 及更新版本的應用程式  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 為就地更新，其會取代您電腦上的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]；同樣地，.NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 與 4.7.2 也是 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的就地更新，亦即其全都使用相同的執行階段版本，但組件版本會更新，並包含新的類型及成員。 安裝這些更新的其中一個之後，您的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] .NET Framework 4.6 或 .NET Framework 4.7 應用程式應無須重新編譯即可繼續執行。 不過，反向操作則不可行。 不建議您在舊版 .NET Framework 上執行目標為新版 .NET Framework 的應用程式。 比方說，我們不建議您在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 上執行以 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 為目標的應用程式。 以下是適用的方針：  
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 為就地更新，其會取代您電腦上的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]；同樣地，.NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 與 4.7.2 也是 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的就地更新，亦即其全都使用相同的執行階段版本，但組件版本會更新，並包含新的類型及成員。 安裝這些更新的其中一項之後，您的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] .NET Framework 4.6 或 .NET Framework 4.7 應用程式應無須重新編譯即可繼續執行。 不過，反向操作則不可行。 不建議您在舊版 .NET Framework 上執行目標為新版 .NET Framework 的應用程式。 比方說，我們不建議您在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 上執行以 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 為目標的應用程式。 以下是適用的方針：  
   
 -   在 Visual Studio 中，您可以選擇 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 做為專案的目標架構 (這會設定 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> 屬性) 來將專案編譯成 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 組件或可執行檔。 接著，此組件或可執行檔即可用於任何安裝有 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 的電腦上。  
   
@@ -76,10 +76,10 @@ ms.locfileid: "50200936"
   
 -   如需將應用程式從 .NET Framework 4 移轉至 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其點版本的資訊，請參閱[移轉手冊](../../../docs/framework/migration-guide/index.md)。  
   
--   如需判斷電腦上已安裝哪些版本或更新的資訊，請參閱 [如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)和[如何：判斷安裝的 .NET Framework 更新](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。  
+-   如需判斷電腦上已安裝哪些版本或更新的資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)和[如何：判斷安裝的 .NET Framework 更新](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [版本相容性](../../../docs/framework/migration-guide/version-compatibility.md)   - 
-- [Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/?LinkId=196607)   
+- [Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/?LinkId=196607)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

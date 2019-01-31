@@ -1,25 +1,25 @@
 ---
-title: 如何：執行大型 XML 文件的串流轉換 (C#)
+title: HOW TO：執行大型 XML 文件的資料流轉換 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: f837117bec2bac615e4cbd822c1110f648d32ce8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8ddd7e25cf160526b741db5769a78682970c3724
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514069"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524672"
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>如何：執行大型 XML 文件的串流轉換 (C#)
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>HOW TO：執行大型 XML 文件的資料流轉換 (C#)
 有時候您必須轉換大型 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。 如果您嘗試使用非常大的 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比 (也就是，變成過度)。 因此，您應該改用資料流技術。  
   
  在您僅需要處理一次來源文件的情況下，最適合使用資料流技術，而且您可以用文件的順序處理項目。 特定的標準查詢運算子 (例如，<xref:System.Linq.Enumerable.OrderBy%2A>) 會反覆查看其來源、收集所有資料、排序這些資料，最後產生順序中的第一個項目。 請注意，如果您在產生第一個項目前使用具體化其來源的查詢運算子，您將不會為應用程式保留小的記憶體使用量。  
   
- 即使您使用[如何：串流 XML 片段並存取標頭資訊 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 中所描述的技術，如果您嘗試組合包含已轉換之文件的 XML 樹狀結構，記憶體使用量將會太大。  
+ 即使您使用 [HOW TO：透過存取標頭資訊來串流 XML 片段 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 中所描述的技術，如果您嘗試組合包含已轉換文件的 XML 樹狀結構，記憶體使用量將會太大。  
   
  有兩個主要方法。 其中一個方法是使用 <xref:System.Xml.Linq.XStreamingElement> 的延緩處理特性。 另一個方法則是建立 <xref:System.Xml.XmlWriter>，然後使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。 這個主題會示範這兩種方法。  
   
 ## <a name="example"></a>範例  
- 下列範例是根據[如何：串流 XML 片段並存取標頭資訊 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 中的範例所建立。  
+ 下列範例會以下連結中的範例為基礎建置：[如何：透過存取標頭資訊來串流 XML 片段 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
   
  這個範例會使用 <xref:System.Xml.Linq.XStreamingElement> 的延後執行功能來串流輸出。 此範例可以轉換非常大的文件，同時維護小的記憶體使用量。  
   
@@ -189,7 +189,7 @@ static void Main(string[] args)
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例也是根據[如何：串流 XML 片段並存取標頭資訊 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 中的範例所建立。  
+ 下列範例也會以下連結中的範例為基礎建置：[如何：透過存取標頭資訊來串流 XML 片段 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
   
  此範例會使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。 此範例可以轉換非常大的文件，同時維護小的記憶體使用量。  
   
@@ -322,6 +322,6 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [進階 LINQ to XML 程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

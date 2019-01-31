@@ -2,12 +2,12 @@
 title: 串連作業 (C#)
 ms.date: 07/20/2015
 ms.assetid: 890ee104-c590-457e-8a7f-b2b5da0fb417
-ms.openlocfilehash: 5b6e18db7dc812c5d8fec635420abb8d806e704e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7b9ed736de44c92f927fd47105f72631b07af825
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530073"
 ---
 # <a name="concatenation-operations-c"></a>串連作業 (C#)
 串連指的是將某個序列附加到另一個序列的作業。  
@@ -20,12 +20,12 @@ ms.locfileid: "43508593"
   
 ## <a name="methods"></a>方法  
   
-|方法名稱|描述|C# 查詢運算式語法|更多資訊|  
+|方法名稱|說明|C# 查詢運算式語法|更多資訊|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Concat|將兩個序列串連成一個序列。|不適用。|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- <xref:System.Linq>  
-- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- <xref:System.Linq>
+- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [如何：合併和比較字串集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

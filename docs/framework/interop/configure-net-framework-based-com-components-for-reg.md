@@ -1,5 +1,5 @@
 ---
-title: 如何：設定免註冊啟用的 .NET Framework 架構 COM 元件
+title: HOW TO：設定 .NET Framework 架構 COM 元件進行免註冊啟用
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9df1aa781bd54468d2273a335b3fda7d701854d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 140af66c9ea08d16aa442824ff7333eeeadf5173
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530684"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：設定免註冊啟用的 .NET Framework 架構 COM 元件
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>HOW TO：設定 .NET Framework 架構 COM 元件進行免註冊啟用
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
   
 -   COM 應用程式必須有 Win32 樣式應用程式資訊清單，才能識別 Managed 元件。  
@@ -105,11 +105,11 @@ ms.locfileid: "43519404"
   
 4.  識別組件中的每個類別。 使用 `<clrClass>` 項目，唯一識別 Managed 組件中的每個類別。 項目 (即 `<assembly>` 項目的子項目) 具有下表所述的屬性。  
   
-    |屬性|描述|必要|  
+    |屬性|說明|必要|  
     |---------------|-----------------|--------------|  
-    |`clsid`|指定要啟用之類別的識別碼。|[是]|  
+    |`clsid`|指定要啟用之類別的識別碼。|是|  
     |`description`|通知使用者有關元件的字串。 空字串為預設值。|否|  
-    |`name`|代表 Managed 類別的字串。|[是]|  
+    |`name`|代表 Managed 類別的字串。|是|  
     |`progid`|要用於晚期繫結啟用的識別碼。|否|  
     |`threadingModel`|COM 執行緒模型。 「兩者」都是預設值。|否|  
     |`runtimeVersion`|指定要使用的 Common Language Runtime (CLR) 版本。 如果您未指定此屬性，而且尚未載入 CLR，則會載入具有 CLR 第 4 版前之最新已安裝 CLR 的元件。 如果您指定 v1.0.3705、v1.1.4322 或 v2.0.50727，版本會自動向前復原至 CLR 版本 4 之前的最新已安裝 CLR 版本 (通常是 v2.0.50727)。 如果已載入另一個版本的 CLR，並且可以透過並存同處理序方式載入指定的版本，則會載入指定的版本；否則，會使用載入的 CLR。 這可能會造成載入失敗。|否|  
@@ -172,8 +172,8 @@ ms.locfileid: "43519404"
   
      同樣地，`myresource.res` 是包含內嵌資源之資源檔的名稱。  
   
-## <a name="see-also"></a>請參閱  
- [免註冊的 COM Interop](registration-free-com-interop.md)  
- [免註冊的 COM Interop 需求](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))  
- [設定免註冊啟動的 COM 元件](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))  
- [免註冊啟用 .NET 元件：逐步解說](https://msdn.microsoft.com/library/ms973915.aspx)
+## <a name="see-also"></a>另請參閱
+- [免註冊的 COM Interop](registration-free-com-interop.md)
+- [免註冊的 COM Interop 需求](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))
+- [設定免註冊啟動的 COM 元件](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))
+- [免註冊啟用 .NET 架構元件：逐步解說](https://msdn.microsoft.com/library/ms973915.aspx)

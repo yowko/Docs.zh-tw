@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: fe1fbfbf76507f19905d1a9a3a836483a8dd3849
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5ad58e921b16498139abe403a45b21bb22ef895d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43748232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564314"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ 中的查詢語法及方法語法 (C#)
 介紹性 Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) 文件中的大多數查詢都是使用 LINQ 宣告式查詢語法所撰寫。 不過，編譯程式碼時，必須將查詢語法轉譯成 .NET Common Language Runtime (CLR) 的方法呼叫。 這些方法呼叫會叫用標準查詢運算子，而其具有 `Where`、`Select`、`GroupBy`、`Join`、`Max` 和 `Average` 這類名稱。 您可以使用方法語法來直接呼叫它們，而不是使用查詢語法。  
@@ -35,13 +35,13 @@ ms.locfileid: "43748232"
  如需擴充方法的詳細資訊，請參閱[擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。 如需標準查詢運算子的詳細資訊，請參閱[標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。 部分 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]) 會實作自己的標準查詢運算子以及 <xref:System.Collections.Generic.IEnumerable%601> 以外之其他類型的其他擴充方法。  
   
 ## <a name="lambda-expressions"></a>Lambda 運算式  
- 在上述範例中，請注意，條件運算式 (`num % 2 == 0`) 會傳遞為 `Where` 方法的內嵌引數︰`Where(num => num % 2 == 0).` 這個內嵌運算式稱為 Lambda 運算式。 它方便您撰寫程式碼，而這些程式碼之前必須以更難處理的形式撰寫為匿名方法、泛型委派或運算式樹狀結構。 在 C# 中，`=>` 是 Lambda 運算子，視為「到」。 運算子左側的 `num` 是對應到查詢運算式中 `num` 的輸入變數。 編譯器可以推斷 `num` 類型，因為它知道 `numbers` 是泛型 <xref:System.Collections.Generic.IEnumerable%601> 類型。 Lambda 的主體就與查詢語法或任何 C# 運算式或陳述式中的運算式相同，它可以包含方法呼叫和其他複雜邏輯。 「傳回值」就是運算式結果。  
+ 在上述範例中，請注意，條件運算式 (`num % 2 == 0`) 會傳遞為 `Where` 方法的內嵌引數：`Where(num => num % 2 == 0).`這個內嵌運算式稱為 Lambda 運算式。 它方便您撰寫程式碼，而這些程式碼之前必須以更難處理的形式撰寫為匿名方法、泛型委派或運算式樹狀結構。 在 C# 中，`=>` 是 Lambda 運算子，視為「到」。 運算子左側的 `num` 是對應到查詢運算式中 `num` 的輸入變數。 編譯器可以推斷 `num` 類型，因為它知道 `numbers` 是泛型 <xref:System.Collections.Generic.IEnumerable%601> 類型。 Lambda 的主體就與查詢語法或任何 C# 運算式或陳述式中的運算式相同，它可以包含方法呼叫和其他複雜邏輯。 「傳回值」就是運算式結果。  
   
  若要開始使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，您不需要廣泛使用 Lambda。 不過，只能在方法語法中表示特定查詢，而其中有一部分需要 Lambda 運算式。 更熟悉 Lambda 之後，您會發現它們是您 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 工具箱中功能強大且靈活的工具。 如需詳細資訊，請參閱 [Lambda 運算式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
 ## <a name="composability-of-queries"></a>查詢的編寫性  
  在上述程式碼範例，請注意，在 `Where` 呼叫上使用點運算子來叫用 `OrderBy` 方法。 `Where` 會產生已篩選的序列，而 `Orderby` 接著會透過排序來運作於該序列。 因為查詢會傳回 `IEnumerable`，所以您可以將方法呼叫鏈結在一起，以在方法語法中撰寫它們。 當您使用查詢語法來撰寫查詢時，這是編譯器在幕後執行的作業。 因為查詢變數不會儲存查詢的結果，所以您隨時都可以修改它，或使用它作為新查詢的基礎，即使已經執行之後也是一樣。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

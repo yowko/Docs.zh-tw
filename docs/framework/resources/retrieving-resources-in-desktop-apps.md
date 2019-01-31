@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be7120b9bff5c51141a1eac80051c4b464433aa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0c58fe8aeeb9acdb886cb224046c68af0577eae7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539749"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>擷取桌面應用程式中的資源
 當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如本文稍後的 [從 .resources 檔擷取資源](#from_file) 一節中所述。  若要擷取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中的資源，請參閱 Windows 開發人員中心的 [建立和擷取 Windows 市集應用程式中的資源](https://go.microsoft.com/fwlink/p/?LinkID=241674) 。  
@@ -40,7 +40,7 @@ ms.locfileid: "43801550"
   
  資源管理員使用資源後援處理序，來控制應用程式如何擷取文化特性專屬資源。 如需詳細資訊，請參閱 [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)中的＜Resource Fallback Process＞一節。 如需具現化 <xref:System.Resources.ResourceManager> 物件的資訊，請參閱 <xref:System.Resources.ResourceManager> 類別主題中的＜Instantiating a ResourceManager Object＞(具現化 ResourceManager 物件) 一節。  
   
-### <a name="retrieving-string-data-an-example"></a>擷取字串資料︰範例  
+### <a name="retrieving-string-data-an-example"></a>擷取字串資料：範例  
  下列範例會呼叫 <xref:System.Resources.ResourceManager.GetString%28System.String%29> 方法來擷取目前 UI 文化特性的字串資源。 其中包含英文 (美國) 文化特性的中性字串資源，以及法文 (法國) 和俄文 (俄羅斯) 文化特性的當地語系化資源。 下列英文 (美國) 資源是在名為 Strings.txt 的檔案中：  
   
 ```  
@@ -81,7 +81,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  當目前 UI 文化特性為西班牙文 (西班牙) 時，請注意，此範例會顯示英文語言資源，因為西班牙文語言資源無法使用，而英文是此範例的預設文化特性。  
   
-### <a name="retrieving-object-data-two-examples"></a>擷取物件資料︰兩個範例  
+### <a name="retrieving-object-data-two-examples"></a>擷取物件資料：兩個範例  
  您可以使用 <xref:System.Resources.ResourceManager.GetObject%2A> 和 <xref:System.Resources.ResourceManager.GetStream%2A> 方法來擷取物件資料。 包括基本資料類型、可序列化的物件，以及使用二進位格式儲存的物件 (例如影像)。  
   
  下列範例使用 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法來擷取應用程式開頭顯示畫面視窗中使用的點陣圖。 下列原始程式碼位於名為 CreateResources.cs (適用於 C#) 或 CreateResources.vb (適用於 Visual Basic) 的檔案中，會產生包含序列化影像的 .resx 檔。 在此情況下，會從名為 SplashScreen.jpg 的檔案載入影像；您可以修改檔案名稱以替代成您自己的影像。  
@@ -200,9 +200,9 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Resources.ResourceManager>  
- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)  
- [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [建立和擷取 Windows 市集應用程式中的資源](https://go.microsoft.com/fwlink/p/?LinkID=241674)
+## <a name="see-also"></a>另請參閱
+- <xref:System.Resources.ResourceManager>
+- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
+- [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [建立和擷取 Windows 市集應用程式中的資源](https://go.microsoft.com/fwlink/p/?LinkID=241674)

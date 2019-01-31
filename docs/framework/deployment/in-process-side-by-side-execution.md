@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebc41d4d59100b9e71bd6ed3abd2ff26937e7465
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554552"
 ---
 # <a name="in-process-side-by-side-execution"></a>同處理序並存執行
 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。 根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。  
@@ -50,13 +50,13 @@ ms.locfileid: "53143840"
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>常見並存裝載案例  
   
--   **情節 1：** 使用舊版 .NET Framework 所建置之 COM 元件的原生應用程式。  
+-   **情節 1：** 使用舊版 .NET Framework 所建置 COM 元件的原生應用程式。  
   
      已安裝的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以及 COM 元件所使用的所有其他 .NET Framework 版本。  
   
      處理方式：在此情節中，不執行任何動作。 COM 元件會與註冊它們的 .NET Framework 版本一起執行。  
   
--   **情節 2**：使用 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 所建置的 Managed 應用程式，您想要將它與 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] 一起執行，但要在 2.0 版不存在時於 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 上執行。  
+-   **情節 2**：使用 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 所建置的受控應用程式，您想要將它與 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] 一起執行，但要在 2.0 版不存在時於 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 上執行。  
   
      已安裝的 .NET Framework 版本：舊版 .NET Framework 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "53143840"
     </configuration>  
     ```  
   
--   **情節 3：** 使用舊版 .NET Framework 所建置之 COM 元件的原生應用程式，您想要將它與 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 一起執行。  
+-   **情節 3：** 使用舊版 .NET Framework 所建置 COM 元件的原生應用程式，您想要將它與 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 一起執行。  
   
      已安裝的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   
@@ -173,6 +173,6 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
-- [\<startup> 項目](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+## <a name="see-also"></a>另請參閱
+- [\<startup> 項目](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
 - [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

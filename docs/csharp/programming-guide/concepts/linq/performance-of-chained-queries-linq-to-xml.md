@@ -2,12 +2,12 @@
 title: 已鏈結之查詢的效能 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 9377c4e57eb19f133a1f973ea7f86c3bf72e4cf8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e099d4d725a0603df61f5e308ce9897feec0af29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43854576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677313"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>已鏈結之查詢的效能 (LINQ to XML) (C#)
 LINQ (和 LINQ to XML) 其中一個最重要的優點在於，鏈結查詢的執行效能就如同單一較大且更複雜的查詢。  
@@ -56,6 +56,6 @@ foreach (var i in query2)
   
  如需將查詢鏈結在一起的詳細教學課程，請參閱[教學課程：將查詢鏈結在一起](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [效能 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

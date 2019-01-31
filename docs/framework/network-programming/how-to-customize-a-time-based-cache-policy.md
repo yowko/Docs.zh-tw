@@ -1,5 +1,5 @@
 ---
-title: 如何：自訂以時間為基礎的快取原則
+title: HOW TO：自訂以時間為基礎的快取原則
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 1a9e0d3197dcba63ef5497613e216a96868a03da
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9d1eef073588f45e70170fcf46766b53f99bed8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182446"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505801"
 ---
-# <a name="how-to-customize-a-time-based-cache-policy"></a>如何：自訂以時間為基礎的快取原則
+# <a name="how-to-customize-a-time-based-cache-policy"></a>HOW TO：自訂以時間為基礎的快取原則
 在建立以時間為基礎的快取原則時，您可以藉由指定最長使用期限、最短有效期限、最長過時或快取同步處理日期的值來自訂快取行為。 <xref:System.Net.Cache.HttpRequestCachePolicy> 物件所提供的建構函式可讓您指定這些值的有效組合。  
   
 ### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>建立使用快取同步處理日期之以時間為基礎的快取原則  
@@ -114,9 +114,9 @@ CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));
 Level:Default MaxAge:36000 MinFresh:18000  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [快取原則](../../../docs/framework/network-programming/cache-policy.md)  
- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>另請參閱
+- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [快取原則](../../../docs/framework/network-programming/cache-policy.md)
+- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

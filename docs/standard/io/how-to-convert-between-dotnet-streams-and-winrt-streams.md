@@ -1,5 +1,5 @@
 ---
-title: 如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換
+title: HOW TO：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 6a006d739b6fa9a31ad238702dd0b2d26254deca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492756"
 ---
-# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換
+# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>HOW TO：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換
 
 適用 Windows 市集應用程式的 .NET Framework 是完整 .NET Framework 的子集。 基於 Windows 市集應用程式的安全性和其他要求，您無法使用整套 .NET Framework API 開啟和讀取檔案。 如需詳細資訊，請參閱[適用於 Windows 市集應用程式的 .NET 概觀](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))。 不過，您可能會想要使用 .NET Framework API 進行其他資料流管理作業。 若要管理這些資料流，您可能會發現需要在 .NET Framework 資料流類型 (例如 <xref:System.IO.MemoryStream> 或 <xref:System.IO.FileStream>) 和 Windows 執行階段資料流 (例如 <xref:Windows.Storage.Streams.IInputStream>、<xref:Windows.Storage.Streams.IOutputStream> 或 <xref:Windows.Storage.Streams.IRandomAccessStream>) 之間轉換。
 
@@ -79,6 +79,6 @@ Windows 執行階段提供了可支援唯讀、唯寫或讀寫的資料流類型
 
 ## <a name="see-also"></a>另請參閱
 
-- [快速入門：讀取和寫入檔案 (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-- [適用於 Windows 市集應用程式的 .NET 概觀](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-- [適用於 Windows 市集應用程式的 .NET - 所支援的應用程式開發介面](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [快速入門：讀取和寫入檔案 (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)
+- [適用於 Windows 市集應用程式的 .NET 概觀](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)
+- [適用於 Windows 市集應用程式的 .NET - 所支援的應用程式開發介面](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

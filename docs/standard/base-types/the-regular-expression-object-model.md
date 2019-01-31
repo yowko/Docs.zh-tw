@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1dc0570bedb1e7dbe02994b7df943609a42ca092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664731"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535304"
 ---
 # <a name="the-regular-expression-object-model"></a>規則運算式物件模型
 <a name="introduction"></a> 本主題說明用來處理 .NET 規則運算式的物件模型。 它包含以下各節：  
@@ -91,7 +91,7 @@ ms.locfileid: "45664731"
   
  規則運算式模式 `^\d{3}-\d{2}-\d{4}$` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`^`|比對輸入字串的開頭。|  
 |`\d{3}`|比對三個十進位數字。|  
@@ -109,7 +109,7 @@ ms.locfileid: "45664731"
   
  規則運算式模式 `\b(\w+)\W+(\1)\b` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字邊界比對。|  
 |`(\w+)`|比對一個或多個文字字元。 這是第一個擷取群組。|  
@@ -131,7 +131,7 @@ ms.locfileid: "45664731"
   
  規則運算式模式 `\b\d+\.\d{2}\b` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`\d+`|比對一個或多個十進位數字。|  
@@ -154,7 +154,7 @@ ms.locfileid: "45664731"
   
  規則運算式模式 `\b\d{1,2}\.\s` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`\d{1,2}`|比對一個或兩個十進位數字。|  
@@ -217,7 +217,7 @@ ms.locfileid: "45664731"
   
  規則運算式模式 `\b\d+(,\d{3})*\.\d{2}\b` 的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`\d+`|比對一個或多個十進位數字。|  
@@ -248,7 +248,7 @@ ms.locfileid: "45664731"
   
  規則運算式模式 `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` 的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`(\w+)`|比對一個或多個文字字元。 這是第一個擷取群組。|  
@@ -277,14 +277,14 @@ ms.locfileid: "45664731"
   
  規則運算式模式 `^(?<name>\w+):(?<value>\w+)` 的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`^`|在輸入字串的開頭開始比對。|  
 |`(?<name>\w+)`|比對一個或多個文字字元。 此擷取群組的名稱為 `name`。|  
 |`:`|比對冒號。|  
 |`(?<value>\w+)`|比對一個或多個文字字元。 此擷取群組的名稱為 `value`。|  
   
- <xref:System.Text.RegularExpressions.Group> 類別的屬性會提供擷取群組的相關資訊：`Group.Value` 屬性包含擷取的子字串，`Group.Index` 屬性會指出擷取群組在輸入文字中的開始位置，`Group.Length` 屬性包含擷取文字的長度，而 `Group.Success` 屬性會指出子字串是否符合擷取群組所定義的模式。  
+ <xref:System.Text.RegularExpressions.Group> 類別之屬性會提供已擷取群組的相關資訊：`Group.Value` 屬性包含擷取的子字串、`Group.Index` 屬性會指出已擷取群組在輸入文字中的開始位置、`Group.Length` 屬性包含已擷取文字的長度，而 `Group.Success` 屬性會指出子字串是否符合擷取群組所定義的模式。  
   
  將數量詞套用至群組 (如需詳細資訊，請參閱[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) 會以兩種方式來修改每個擷取群組各一個擷取的關聯性：  
   
@@ -301,7 +301,7 @@ ms.locfileid: "45664731"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
--   數量詞可以比對多次出現的擷取群組定義的模式。 在此情況下，`Value` 物件的 `Length` 和 <xref:System.Text.RegularExpressions.Group> 屬性只包含最後擷取之子字串的相關資訊。 例如，下列規則運算式會比對以句點結尾的單一句子。 其使用兩個群組建構：第一個群組建構會擷取個別文字和空格字元，第二個群組建構會擷取個別文字。 如範例輸出所示，雖然規則運算式成功擷取了整個句子，但是第二個擷取群組只擷取了最後一個字。  
+-   數量詞可以比對多次出現的擷取群組定義的模式。 在此情況下，`Value` 物件的 `Length` 和 <xref:System.Text.RegularExpressions.Group> 屬性只包含最後擷取之子字串的相關資訊。 例如，下列規則運算式會比對以句點結尾的單一句子。 其使用兩個群組建構：第一個群組建構會擷取個別文字和空格字元；第二個群組建構會擷取個別文字。 如範例輸出所示，雖然規則運算式成功擷取了整個句子，但是第二個擷取群組只擷取了最後一個字。  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -341,7 +341,7 @@ ms.locfileid: "45664731"
   
  規則運算式的定義如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\w+`|比對一個或多個文字字元。|  
 |`(\s\w+)*`|比對出現零或多次、後接一或多個文字字元的空格字元。 此模式會比對多字的城市名稱。 這是第三個擷取群組。|  
@@ -353,6 +353,6 @@ ms.locfileid: "45664731"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Text.RegularExpressions>  
-- [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)  
+- <xref:System.Text.RegularExpressions>
+- [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)
 - [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

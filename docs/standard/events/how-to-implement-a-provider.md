@@ -1,5 +1,5 @@
 ---
-title: 如何：實作提供者
+title: HOW TO：實作提供者
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34ad5b9cc0014db05bc6e7483e389488e145beb3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: eecf16625c20ad5ff89791e221a4a40b2777956b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543785"
 ---
-# <a name="how-to-implement-a-provider"></a>如何：實作提供者
-觀察者設計模式需要提供者和一個或多個觀察者之間的分區，其中提供者會監視資料並傳送通知，而觀察者會接收來自提供者的通知 (回呼)。 本主題討論如何建立提供者。 相關主題為[操作說明：實作觀察器](../../../docs/standard/events/how-to-implement-an-observer.md)，討論如何建立觀察者。  
+# <a name="how-to-implement-a-provider"></a>HOW TO：實作提供者
+觀察者設計模式需要提供者和一個或多個觀察者之間的分區，其中提供者會監視資料並傳送通知，而觀察者會接收來自提供者的通知 (回呼)。 本主題討論如何建立提供者。 相關主題為[如何：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)，討論如何建立觀察者。  
   
 ### <a name="to-create-a-provider"></a>建立提供者  
   
@@ -62,7 +62,7 @@ ms.locfileid: "44087322"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.IObservable%601>  
-- [觀察者設計模式](../../../docs/standard/events/observer-design-pattern.md)  
-- [操作說明：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- <xref:System.IObservable%601>
+- [觀察者設計模式](../../../docs/standard/events/observer-design-pattern.md)
+- [如何：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [觀察者設計模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)

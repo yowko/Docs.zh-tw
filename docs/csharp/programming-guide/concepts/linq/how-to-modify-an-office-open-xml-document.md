@@ -1,15 +1,15 @@
 ---
-title: 如何：修改 Office Open XML 文件 (C#)
+title: HOW TO：修改 Office Open XML 文件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 7a85341ee64c71a3f57b71b3db82889aee667040
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6770e661c90f9eee432933edafb28a615991775e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517624"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556021"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-c"></a>如何：修改 Office Open XML 文件 (C#)
+# <a name="how-to-modify-an-office-open-xml-document-c"></a>HOW TO：修改 Office Open XML 文件 (C#)
 這個主題顯示會開啟、修改以及儲存 Office Open XML 文件的範例。  
   
  如需 Office Open XML 的詳細資訊，請參閱 [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) \(英文\) 和 [www.ericwhite.com](http://ericwhite.com/) \(英文\)。  
@@ -147,6 +147,6 @@ class Program
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [進階查詢技術 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

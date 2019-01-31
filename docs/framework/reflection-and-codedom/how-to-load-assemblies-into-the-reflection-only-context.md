@@ -1,5 +1,5 @@
 ---
-title: 如何：將組件載入僅限反映的內容
+title: HOW TO：將組件載入僅限反映的內容
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aa7f8a158a851baf76455da685059f02c69cb6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7eeef33745ebc8209fc7f69a9337af4093c1e8a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567044"
 ---
-# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>如何：將組件載入僅限反映的內容
+# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>HOW TO：將組件載入僅限反映的內容
 僅限反映的載入內容可讓您檢查針對其他平台或其他 .NET Framework 版本所編譯的組件。 只能檢查載入至此內容的程式碼，而無法執行。 這表示無法建立物件，因為無法執行建構函式。 因為無法執行程式碼，所以不會自動載入相依性。 如果您需要檢查它們，則必須自行載入。  
   
 ### <a name="to-load-an-assembly-into-the-reflection-only-load-context"></a>將組件載入僅限反映的載入內容  
@@ -52,7 +52,7 @@ ms.locfileid: "33398722"
  [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
  [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
- <xref:System.Reflection.Assembly.ReflectionOnly%2A>  
- <xref:System.Reflection.CustomAttributeData>
+## <a name="see-also"></a>另請參閱
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
+- <xref:System.Reflection.Assembly.ReflectionOnly%2A>
+- <xref:System.Reflection.CustomAttributeData>

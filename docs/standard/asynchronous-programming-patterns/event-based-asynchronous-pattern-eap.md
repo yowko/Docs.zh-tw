@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be4935d74affa227386aa6c63dad13e7e2f7d3dd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 052773c615bcc4ddb5b735ae8164d44ed70bd935
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513486"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>事件架構非同步模式 (EAP)
 
@@ -37,13 +37,13 @@ ms.locfileid: "47207452"
  [決定何時實作事件架構非同步模式](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
  描述如何判斷何時應選擇實作事件架構非同步模式，而非由[非同步程式設計模型 (APM)](asynchronous-programming-model-apm.md) 所代表的 <xref:System.IAsyncResult> 模式
   
- [操作說明：實作支援事件架構非同步模式的元件](component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [如何：實作支援事件架構非同步模式的元件](component-that-supports-the-event-based-asynchronous-pattern.md)  
  描述如何建立實作事件架構非同步模式的元件。 其實作方式是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空間中的 Helper 類別，以確保此元件可在任何應用程式模型下正常運作。  
 
- [操作說明：實作事件架構非同步模式的用戶端](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
+ [如何：實作事件架構非同步模式的用戶端](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
  描述如何建立使用實作事件架構非同步模式之元件的用戶端。
   
- [操作說明：使用支援事件架構非同步模式的元件](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ [如何：使用支援事件架構非同步模式的元件](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
  描述如何使用可支援事件架構非同步模式的元件。  
   
 ## <a name="reference"></a>參考資料
@@ -67,6 +67,6 @@ ms.locfileid: "47207452"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Managed 執行緒處理的最佳實施方針](../threading/managed-threading-best-practices.md)  
-- [事件](../events/index.md)  
+- [Managed 執行緒處理的最佳實施方針](../threading/managed-threading-best-practices.md)
+- [事件](../events/index.md)
 - [非同步程式設計模式](index.md)

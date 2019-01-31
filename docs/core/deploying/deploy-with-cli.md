@@ -1,207 +1,168 @@
 ---
-title: 使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
-description: 了解使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
-author: rpetrusha
-ms.author: ronpet
-ms.date: 09/05/2018
+title: 使用 CLI 發佈 .NET Core 應用程式
+description: 了解如何使用 .NET Core SDK 命令列介面 (CLI) 工具發佈 .NET Core 應用程式。
+author: thraka
+ms.author: adegeo
+ms.date: 01/16/2019
 dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503998"
 ---
-# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
+# <a name="publish-net-core-apps-with-the-cli"></a>使用 CLI 發佈 .NET Core 應用程式
 
-您可以將 .NET Core 應用程式部署為「與 Framework 相依的部署」，其中包含您的應用程式二進位檔，但取決於目標系統上是否有 .NET Core 存在，也可以部署為「自封式部署」，其中包含您的應用程式和 .NET Core 二進位檔。 如需概觀，請參閱 [.NET Core 應用程式部署](index.md)。
+本文示範如何從命令列發佈 .NET Core 應用程式。 .NET Core 提供三種發佈應用程式的方式。 Framework 相依部署會產生跨平台的 .dll 檔案，以使用本機安裝的 .NET Core 執行階段。 Framework 相依可執行檔會產生平台特定的可執行檔，來使用本機安裝的 .NET Core 執行階段。 獨立式可執行檔則會產生平台特定的可執行檔，並包含 .NET Core 執行階段的本機複本。
 
-下列各節顯示如何使用 [.NET Core 命令列介面工具](../tools/index.md)來建立下列類型的部署：
+如需這些發佈模式的概觀，請參閱 [.NET Core 應用程式部署](index.md)。 
 
-- 與 Framework 相依的部署
-- 有協力廠商相依性的 Framework 相依部署
-- 自封式部署
-- 有協力廠商相依性的自封式部署
+需要一些使用 CLI 的快速說明嗎？ 下表顯示一些如何發佈應用程式的範例。 您可以使用 `-f <TFM>` 參數或藉由編輯專案檔來指定目標 Framework。 如需詳細資訊，請參閱[發佈基本概念](#publishing-basics)。
 
-在命令列工作時，您可以使用您選擇的程式編輯器。 如果您的程式編輯器是 [Visual Studio Code](https://code.visualstudio.com)，您也可以在 Visual Studio 程式碼環境內選取 [檢視]  >  [整合式終端機] 來開啟命令主控台。
+| 發佈模式 | SDK 版本 | 命令 |
+| ------------ | ----------- | ------- |
+| 與 Framework 相依的部署 | 2.x | `dotnet publish -c Release` |
+| Framework 相依可執行檔 | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0* | `dotnet publish -c Release` |
+| 自封式部署      | 2.1 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
+
+>[!IMPORTANT]
+>\*使用 SDK 3.0 版 Framework 相依可執行檔時，這是執行基本 `dotnet publish` 命令時的預設發佈模式。 這只適用於以 **.NET Core 2.1** 或 **.NET Core 3.0** 為目標的專案。
+
+## <a name="publishing-basics"></a>發佈基本概念
+
+專案檔的 `<TargetFramework>` 設定會指定發佈應用程式時的預設目標 Framework。 您可以將目標 Framework 變更為任何有效的[目標 Framework Moniker (TFM)](../../standard/frameworks.md)。 例如，如果您的專案使用 `<TargetFramework>netcoreapp2.2</TargetFramework>`，就會建立以 .NET Core 2.2 為目標的二進位檔。 此設定中所指定 TFM 是 [`dotnet publish`][dotnet-publish] 命令使用的預設目標。
+
+如果您想要以多個 Framework 為目標，則可以將 `<TargetFrameworks>` 設定設為以分號隔開的多個 TFM 值。 您可以使用 `dotnet publish -f <TFM>` 命令來發佈其中一個 Framework。 例如，如果您的專案具有 `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` 並執行 `dotnet publish -f netcoreapp2.1`，就會建立以 .NET Core 2.1 為目標的二進位檔。
+
+除非另行設定，否則 [`dotnet publish`][dotnet-publish] 命令的輸出目錄為 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`。 除非使用 `-c` 參數加以變更，否則預設的**組建組態**模式為 [偵錯]。 例如，`dotnet publish -c Release -f netcoreapp2.1` 會發佈至 `myfolder/bin/Release/netcoreapp2.1/publish/`。 
+
+如果您使用 .NET Core SDK 3.0，則以 .NET Core 2.1 版、2.2 版或 3.0 版為目標的應用程式其預設發佈模式為 Framework 相依可執行檔。
+
+如果您使用 .NET Core SDK 2.1，則以 .NET Core 2.1 版、2.2 版為目標的應用程式其預設發佈模式為 Framework 相依部署。
+
+### <a name="native-dependencies"></a>原生相依性
+
+如果您的應用程式具有原生相依性，它可能無法在不同的作業系統上執行。 例如，如果您的應用程式使用原生 Win32 API，它就不會在 macOS 或 Linux 上執行。 您必須提供平台特定程式碼，並為每個平台編譯可執行檔。 
+
+另外，請考慮如果您參考的程式庫具有原生相依性，您的應用程式可能無法在每個平台上執行。 不過，您參考的 NuGet 套件可能包含了平台特定版本，以便為您處理必要的原生相依性。
+
+散發具有原生相依性的應用程式時，您可能需要使用 `dotnet publish -r <RID>` 參數來指定想要為其發佈的目標平台。 如需執行階段識別碼清單，請參閱[執行階段識別碼 (RID) 目錄](../rid-catalog.md)。
+
+平台特定二進位檔的詳細資訊涵蓋在 [Framework 相依可執行檔](#framework-dependent-executable)和[獨立式部署](#self-contained-deployment)章節中。
+
+## <a name="sample-app"></a>範例應用程式
+
+您也可以使用下列應用程式來瀏覽發佈命令。 在終端機中執行下列命令即可建立此應用程式：
+
+```dotnetcli
+mkdir apptest1
+cd apptest1
+dotnet new console
+dotnet add package Figgle
+```
+
+主控台範本所產生的 `Program.cs` 或 `Program.vb` 檔案必須變更如下：
+
+```csharp
+using System;
+
+namespace apptest1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"));
+        }
+    }
+}
+```
+```vb
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"))
+    End Sub
+End Module
+```
+
+當您執行應用程式 ([`dotnet run`][dotnet-run]) 時，即會顯示下列輸出：
+
+```terminal
+  _   _      _ _         __        __         _     _ _
+ | | | | ___| | | ___    \ \      / /__  _ __| | __| | |
+ | |_| |/ _ \ | |/ _ \    \ \ /\ / / _ \| '__| |/ _` | |
+ |  _  |  __/ | | (_) |    \ V  V / (_) | |  | | (_| |_|
+ |_| |_|\___|_|_|\___( )    \_/\_/ \___/|_|  |_|\__,_(_)
+                     |/
+```
 
 ## <a name="framework-dependent-deployment"></a>與 Framework 相依的部署
 
-部署無任何協力廠商相依性的 Framework 相依部署，只涉及建置、測試和發行應用程式。 以 C# 撰寫的簡單範例會說明此程序。
+若為 .NET Core SDK 2.x CLI，Framework 相依部署 (FDD) 是基本 `dotnet publish` 命令的預設模式。
 
-1. 建立專案目錄。
+當您將應用程式發佈為 FDD 時，就會在 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` 資料夾中建立 `<PROJECT-NAME>.dll` 檔案。 若要執行您的應用程式，請巡覽至輸出資料夾，並使用 `dotnet <PROJECT-NAME>.dll` 命令。
 
-   建立專案的目錄，並將其設為您目前的目錄。
+您的應用程式會設定為以 .NET Core 特定版本為目標。 該目標 .NET Core 執行階段必須位於您想要用來執行應用程式的電腦上。 例如，如果您的應用程式以 .NET Core 2.2 為目標，則應用程式執行所在的任何電腦都必須已安裝 .NET Core 2.2 執行階段。 依照[發佈基本概念](#publishing-basics)一節中所述，您可以編輯專案檔來變更預設的目標 Framework，或以多個 Framework 為目標。
 
-1. 建立專案。
+發佈 FDD 會建立一個應用程式，以自動向前復原到應用程式執行所在系統上可用的最新 .NET Core 安全性修補程式。 如需編譯時期版本繫結的詳細資訊，請參閱[選取要使用的 .NET Core 版本](../versions/selection.md#framework-dependent-apps-roll-forward)。
 
-   從命令列鍵入 [dotnet new 主控台](../tools/dotnet-new.md)，以建立新的 C# 主控台專案，或鍵入 [dotnet new 主控台 -lang vb](../tools/dotnet-new.md)，以在該目錄中建立新的 Visual Basic 主控台專案。
+## <a name="framework-dependent-executable"></a>Framework 相依可執行檔
 
-1. 新增應用程式的原始程式碼。
+若為 .NET Core SDK 3.x CLI，Framework 相依可執行檔 (FDE) 是基本 `dotnet publish` 命令的預設模式。 只要您想要以目前的作業系統為目標，就不需要指定任何其他參數。
 
-   在編輯器中開啟 *Program.cs* 或 *Program.vb* 檔案，並用下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
+在此模式中，將會建立平台特定可執行檔主機來裝載您的跨平台應用程式。 此模式類似於 FDD，因為 FDD 需要 `dotnet` 命令形式的主機。 主機可執行檔的檔名因平台而異，且其名稱類似於 `<PROJECT-FILE>.exe`。 您可以直接執行這個可執行檔，而不是呼叫 `dotnet <PROJECT-FILE>.dll` (這仍然是可接受的應用程式執行方式)。
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+您的應用程式會設定為以 .NET Core 特定版本為目標。 該目標 .NET Core 執行階段必須位於您想要用來執行應用程式的電腦上。 例如，如果您的應用程式以 .NET Core 2.2 為目標，則應用程式執行所在的任何電腦都必須已安裝 .NET Core 2.2 執行階段。 依照[發佈基本概念](#publishing-basics)一節中所述，您可以編輯專案檔來變更預設的目標 Framework，或以多個 Framework 為目標。
 
-1. 更新專案的相依性和工具。
+發佈 FDE 會建立一個應用程式，以自動向前復原到應用程式執行所在系統上可用的最新 .NET Core 安全性修補程式。 如需編譯時期版本繫結的詳細資訊，請參閱[選取要使用的 .NET Core 版本](../versions/selection.md#framework-dependent-apps-roll-forward)。
 
-   執行 [dotnet restore](../tools/dotnet-restore.md) ([請參閱注意事項](#dotnet-restore-note)) 命令以還原專案中指定的相依性。
+您必須 (當您以目前平台為目標時，.NET Core 3.x 除外) 使用下列參數搭配 `dotnet publish` 命令來發佈 FDE：
 
-1. 建立應用程式的偵錯組建。
+- `-r <RID>`  
+  此參數會使用識別碼 (RID) 來指定目標平台。 如需執行階段識別碼清單，請參閱[執行階段識別碼 (RID) 目錄](../rid-catalog.md)。
 
-   使用 [dotnet build](../tools/dotnet-build.md) 命令來組建您的應用程式，或者使用 [dotnet run](../tools/dotnet-run.md) 命令來組建並執行它。
+- `--self-contained false`  
+  此參數會指示 .NET Core SDK 將可執行檔建立為 FDE。
 
-1. 部署應用程式。
+只要您使用 `-r` 參數，輸出資料夾路徑就會變更為： `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
-   在您偵錯並測試程式之後，請使用下列命令來建立部署：
+如果您使用[範例應用程式](#sample-app)，請執行 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`。 此命令會建立下列可執行檔： `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
-      ```console
-      dotnet publish -f netcoreapp2.1 -c Release
-      ```
-   這會建立應用程式的發行 (而非偵錯) 版本。 產生的檔案會放在名為 *publish* 的目錄中，而該目錄位於您專案之 *bin* 目錄的子目錄中。
+> [!Note]
+> 您可以啟用**全域無差異模式**來減少您部署的大小總計。 此模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的排序次序。 如需**全域無差異模式**和如何啟用的詳細資訊，請參閱 [.NET Core 全域無差異模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
-   隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起散發它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其保存。
+## <a name="self-contained-deployment"></a>自封式部署
 
-   您可以使用任何您想要的方式，部署整組應用程式檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 ZIP 檔案中，或與您選擇的任何安裝套件一起部署。
+當您發佈獨立式部署 (SCD) 時，.NET Core SDK 會建立平台特定的可執行檔。 發佈 SCD 包含執行應用程式所需的所有 .NET Core 檔案，但它不包含 [ 的原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)。 在執行應用程式之前，系統上必須具有這些相依性。 
 
-1. 執行應用程式
+發佈 SCD 會建立一個應用程式，該應用程式不會向前復原到最新可用的 .NET Core 安全性修補程式。 如需編譯時期版本繫結的詳細資訊，請參閱[選取要使用的 .NET Core 版本](../versions/selection.md#self-contained-deployments-include-the-selected-runtime)。
 
-   安裝之後，使用者可以使用 `dotnet` 命令並提供應用程式的檔名 (例如，`dotnet fdd.dll`)，來執行您的應用程式。
+您必須使用下列參數搭配 `dotnet publish` 命令來發佈 SCD：
 
-   除了應用程式二進位檔之外，安裝程式也應該配套共用的 Framework 安裝程式，或勾選為必要條件當成應用程式安裝的一部分。  共用的 Framwork 安裝需要系統管理員/根目錄存取權。
+- `-r <RID>`  
+  此參數會使用識別碼 (RID) 來指定目標平台。 如需執行階段識別碼清單，請參閱[執行階段識別碼 (RID) 目錄](../rid-catalog.md)。
 
-## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>有協力廠商相依性的 Framework 相依部署
+- `--self-contained true`  
+  此參數會指示 .NET Core SDK 將可執行檔建立為 SCD。
 
-部署具有一或多個協力廠商相依性的 Framework 相依部署時，需要這些相依性都可供專案使用。 在執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note)) 命令之前，需要執行兩個額外步驟：
+> [!Note]
+> 您可以啟用**全域無差異模式**來減少您部署的大小總計。 此模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的排序次序。 如需**全域無差異模式**和如何啟用的詳細資訊，請參閱 [.NET Core 全域無差異模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
-1. 將任何協力廠商程式庫參考新增至您 *csproj* 檔案的 `<ItemGroup>` 區段。 下列 `<ItemGroup>` 區段會包含對 [Json.NET](https://www.newtonsoft.com/json) 的相依性作為協力廠商程式庫：
-
-      ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-      ```
-
-1. 如果尚未如此做，請下載包含協力廠商相依性的 NuGet 封裝。 若要下載套件，請在新增相依性後執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note)) 命令。 因為相依性是在發行時於本機 NuGet 快取外解析，所以必須能在系統中取得。
-
-請注意，具有協力廠商相依性的 Framework 相依部署，可攜性只與其協力廠商相依性一致。 例如，如果協力廠商程式庫只支援 macOS，則應用程式就無法攜至 Windows 系統。 如果協力廠商相依性本身依賴於原生程式碼，就會發生這種情況。 其中一個絶佳範例是 [Kestrel 伺服器](/aspnet/core/fundamentals/servers/kestrel)，它需要對 [libuv](https://github.com/libuv/libuv) 的原生相依性。 當具有這類協力廠商相依性的應用程式建立了 FDD 時，已發行輸出就會包含原生相依性支援的每個[執行階段識別碼 (RID)](../rid-catalog.md) 資料夾 (存在於其 NuGet 套件中)。
-
-## <a name="simpleSelf"></a> 沒有協力廠商相依性的自封式部署
-
-部署沒有協力廠商相依性的自封式部署，涉及建立專案、修改 *csproj* 檔案、組建、測試以及發行應用程式。 以 C# 撰寫的簡單範例會說明此程序。 此範例示範如何從命令列使用 [dotnet 公用程式](../tools/dotnet.md)建立自封式部署。
-
-1. 建立專案的目錄。
-
-   建立專案的目錄，並將其設為您目前的目錄。
-
-1. 建立專案。
-
-   從命令列鍵入 [dotnet new console](../tools/dotnet-new.md)，以在該目錄中建立新的 C# 主控台專案。
-
-1. 新增應用程式的原始程式碼。
-
-   在您的編輯器中開啟 *Program.cs* 檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
-
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
-1. 定義您應用程式目標的平台。
-
-   在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 請注意，您也必須加上分號來分隔 RID。 如需執行階段識別碼清單，請參閱 [.NET Core RID 類別目錄](../rid-catalog.md)。
-
-   例如，下列 `<PropertyGroup>` 區段指出應用程式在 64 位元 Windows 10 作業系統和 64 位元 OS X 版本 10.11 作業系統上執行。
-
-     ```xml
-     <PropertyGroup>
-         <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-     </PropertyGroup>
-     ```
-
-   請注意，`<RuntimeIdentifiers>` 項目可以出現在 *csproj* 檔案的任何 `<PropertyGroup>` 中。 本節稍後會提供完整的 *csproj* 檔案範例。
-
-1. 更新專案的相依性和工具。
-
-   執行 [dotnet restore](../tools/dotnet-restore.md) ([請參閱注意事項](#dotnet-restore-note)) 命令以還原專案中指定的相依性。
-
-1. 決定您是否想使用全域無差異模式。
-
-   尤其當您的應用程式以 Linux 為目標時，使用全域無差異模式[能減少您部署的總大小](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)。 全域無差異模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有不因文化特性而異的[排列次序](xref:System.Globalization.CultureInfo.InvariantCulture)。
-
-   在您的專案 (而非解決方案) 點擊右鍵，進入 [方案總管]，然後選取 [Edit SCD.csproj] \(編輯 SCD.csproj\) 或 [Edit SCD.vbproj] \(編輯 SCD.vbproj\) 啟用非變異模式。 接著，將下列反白的幾行新增至檔案：
-
- [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
-
-1. 建立應用程式的偵錯組建。
-
-   從命令列中，使用 [dotnet build](../tools/dotnet-build.md) 命令。
-
-1. 在您偵錯並測試程式之後，請針對每個目標平台建立要隨應用程式一起部署的檔案。
-
-   針對這兩個目標平台使用 `dotnet publish` 命令，如下所示：
-
-      ```console
-      dotnet publish -c Release -r win10-x64
-      dotnet publish -c Release -r osx.10.11-x64
-      ```
-
-   這會建立每個目標平台的應用程式發行 (而非偵錯) 版本。 產生的檔案會放在名為 *publish* 的子目錄中，其位於您專案 *.\bin\Release\netcoreapp2.1\<runtime_identifier>* 子目錄的子目錄。 請注意，每個子目錄都包含啟動應用程式所需的一組完整檔案 (應用程式檔案和所有的 .NET Core 檔案)。
-
-隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
-
-請使用任何您想要的方式，部署已發行的檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 ZIP 檔案中，或與您選擇的任何安裝套件一起部署。
-
-下面是此專案的完整 *csproj* 檔案。
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-</Project>
-```
-
-## <a name="self-contained-deployment-with-third-party-dependencies"></a>有協力廠商相依性的自封式部署
-
-部署具有一或多個協力廠商相依性的自封式部署，涉及新增相依性。 在執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note)) 命令之前，需要執行兩個額外步驟：
-
-1. 將任何協力廠商程式庫參考新增至您 *csproj* 檔案的 `<ItemGroup>` 區段。 下列 `<ItemGroup>` 區段會使用 Json.NET 作為協力廠商程式庫。
-
-    ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-    ```
-
-1. 如果尚未如此做，請將包含協力廠商相依性的 NuGet 封裝下載至您的系統。 請在新增相依性後執行 `dotnet restore` ([請參閱注意](#dotnet-restore-note)) 命令，讓應用程式取得相依性。 因為相依性是在發行時於本機 NuGet 快取外解析，所以必須能在系統中取得。
-
-下面是此專案的完整 *csproj* 檔案：
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-  </ItemGroup>
-</Project>
-```
-
-當您部署應用程式時，應用程式中任何協力廠商相依性也包含在應用程式檔案中。 應用程式執行所在的系統上不需要協力廠商程式庫。
-
-請注意，您只能將具有協力廠商程式庫的自封式部署，部署到該程式庫支援的平台上。 這類似於在與 Framework 相依的部署中擁有仰賴原生相依性的協力廠商相依性；在其中，原生相依性必須與部署應用程式的平台相容。
-
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 ## <a name="see-also"></a>另請參閱
 
-* [.NET Core 應用程式部署](index.md)
-* [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)
+- [.NET Core 應用程式部署概觀](index.md)
+- [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)
+
+[dotnet-publish]: ../tools/dotnet-publish.md
+[dotnet-run]: ../tools/dotnet-run.md

@@ -1,5 +1,5 @@
 ---
-title: 如何：在 ConcurrentDictionary 中加入和移除項目
+title: HOW TO：在 ConcurrentDictionary 中新增和移除項目
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9d8b1c63f10d1d79c3fec6cad87c9a82f03716c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677834"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543418"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>如何：在 ConcurrentDictionary 中加入和移除項目
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>HOW TO：在 ConcurrentDictionary 中新增和移除項目
 這個範例示範如何新增、擷取、更新和移除 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 中的項目。 這個集合類別是安全執行緒實作。 只要多個執行緒可能嘗試同時存取元素，就建議您使用它。  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602>供幾種便利的方法，讓程式碼不需要在嘗試新增或移除資料之前，先檢查索引鍵存在與否。 下表列出這些便利方法，並描述其使用時機。  
@@ -50,5 +50,5 @@ ms.locfileid: "45677834"
   
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)

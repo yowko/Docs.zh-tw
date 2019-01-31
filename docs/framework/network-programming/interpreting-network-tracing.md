@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 94a64efcd7b4f354eaa22d1b646f36212f9c8fbb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8813bf68ee2b354ed7fc5e981904b8e4b807c1be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576521"
 ---
 # <a name="interpreting-network-tracing"></a>解譯網路追蹤
 啟用網路追蹤時，您可以使用追蹤來擷取應用程式對各種 <xref:System.Net> 類別成員的呼叫。 這些呼叫的輸出可能類似下列範例。  
@@ -44,7 +44,7 @@ ms.locfileid: "53152251"
   
  `Connection: Close`  
   
-## <a name="see-also"></a>請參閱  
- [啟用網路追蹤](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [如何：設定網路追蹤](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
- [以 .NET Framework 進行網路追蹤](../../../docs/framework/network-programming/network-tracing.md)
+## <a name="see-also"></a>另請參閱
+- [啟用網路追蹤](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [如何：設定網路追蹤](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
+- [以 .NET Framework 進行網路追蹤](../../../docs/framework/network-programming/network-tracing.md)

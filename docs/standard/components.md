@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570719"
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
@@ -28,9 +28,9 @@ ms.locfileid: "50189689"
 
 .NET 的每項實作包括下列元件：
 
-- 一或多個執行階段。 範例：適用於 .NET Framework 的 CLR、適用於 .NET Core 的 CoreCLR 和 CoreRT。
+- 一或多個執行階段。 例如：適用於 .NET Framework 的 CLR、適用於 .NET Core 的 CoreCLR 和 CoreRT。
 - 實作 .NET Standard 並可能實作其他 API 的類別庫。 範例：.NET Framework 基底類別庫、.NET Core 基底類別庫。
-- (選擇性) 一或多個應用程式架構。 範例：[ASP.NET](https://www.asp.net/)、[Windows Forms](../framework/winforms/windows-forms-overview.md) 和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 會包含在 .NET Framework 中。
+- (選擇性) 一或多個應用程式架構。 例如：[ASP.NET](https://www.asp.net/)、[Windows Forms](../framework/winforms/windows-forms-overview.md) 和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 會包含在 .NET Framework 中。
 - (選擇性) 開發工具。 某些開發工具可在多個實作之間共用。
 
 Microsoft 會主動開發和維護的主要 .NET 實作有四個︰.NET Core、.NET Framework、Mono 和 UWP。
@@ -86,10 +86,10 @@ UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用
 
 ## <a name="see-also"></a>另請參閱
 
-- [針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇](choosing-core-framework-server.md)   
-- [.NET Standard](net-standard.md)  
-- [.NET Core 指南](../core/index.md)  
-- [.NET Framework 指南](../framework/index.md)  
-- [C# 指南](../csharp/index.md)  
-- [F# 指南](../fsharp/index.md)  
-- [VB.NET 指南](../visual-basic/index.md)  
+- [針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇](choosing-core-framework-server.md)
+- [.NET Standard](net-standard.md)
+- [.NET Core 指南](../core/index.md)
+- [.NET Framework 指南](../framework/index.md)
+- [C# 指南](../csharp/index.md)
+- [F# 指南](../fsharp/index.md)
+- [VB.NET 指南](../visual-basic/index.md)
