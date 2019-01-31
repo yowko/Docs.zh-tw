@@ -3,10 +3,10 @@ title: 關鍵字參考
 description: 尋找所有的相關資訊的連結F#語言關鍵字。
 ms.date: 05/16/2016
 ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
+ms.lasthandoff: 01/31/2019
 ms.locfileid: "54857901"
 ---
 # <a name="keyword-reference"></a>關鍵字參考
@@ -64,7 +64,7 @@ ms.locfileid: "54857901"
 |`null`|[Null 值](values/null-values.md)<br /><br />[條件約束](generics/constraints.md)|表示物件不存在。<br /><br />也用於泛型參數條件約束。|
 |`of`|[差別聯集](discriminated-unions.md)<br /><br />[委派](delegates.md)<br /><br />[例外狀況類型](exception-handling/exception-types.md)|使用委派和例外狀況的宣告和差別聯集來表示的值，類別的型別中。|
 |`open`|[匯入宣告：`open` 關鍵字](import-declarations-the-open-keyword.md)|用來使命名空間或模組的內容可供使用。|
-|`or`|[符號和運算子參考](symbol-and-operator-reference/index.md)<br /><br />[條件約束](generics/constraints.md)|使用布林值條件做為布林值`or`運算子。 相當於 '||`.<br /><br />也用於成員條件約束。|
+|`or`|[符號和運算子參考](symbol-and-operator-reference/index.md)<br /><br />[條件約束](generics/constraints.md)|使用布林值條件做為布林值`or`運算子。 相當於 `||`。<br /><br />也用於成員條件約束。|
 |`override`|[成員](members/index.md)|用來實作的基底的版本不同抽象或虛擬方法的版本。|
 |`private`|[存取控制](access-control.md)|限制存取成員，才能在相同的類型或模組中的程式碼。|
 |`public`|[存取控制](access-control.md)|允許的成員型別之外存取。|

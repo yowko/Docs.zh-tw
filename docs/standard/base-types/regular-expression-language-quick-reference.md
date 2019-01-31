@@ -31,7 +31,7 @@ ms.locfileid: "55204882"
  [逸出字元](#character_escapes)  
  [字元類別](#character_classes)  
  [錨點](#anchors)  
- [群組建構](#grouping_constructs)  
+ [分組建構](#grouping_constructs)  
  [數量詞](#quantifiers)  
  [反向參考建構](#backreference_constructs)  
  [替代建構](#alternation_constructs)  
@@ -104,7 +104,7 @@ ms.locfileid: "55204882"
  [回到頁首](#top)  
   
 <a name="grouping_constructs"></a>   
-## <a name="grouping-constructs"></a>群組建構  
+## <a name="grouping-constructs"></a>分組建構  
  分組建構會描寫規則運算式的子運算式，而且通常會擷取輸入字串的子字串。 分組建構包含下表列出的語言元素。 如需詳細資訊，請參閱[分組建構](grouping-constructs-in-regular-expressions.md)。  
   
 |群組建構|說明|模式|符合|  

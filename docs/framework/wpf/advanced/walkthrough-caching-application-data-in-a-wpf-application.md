@@ -9,15 +9,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7083c4b15e2693c0c76e6ca7c9a00e4c4dab56c
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513720"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480058"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>逐步解說：快取中的 WPF 應用程式的應用程式資料
-快取可讓您將資料儲存在記憶體中，以進行快速存取。 一次存取資料時，應用程式可以從快取，而要擷取原始的來源取得資料。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。
+快取可讓您將資料儲存在記憶體中，以進行快速存取。 重新存取資料時，應用程式可以從快取中取得資料，而不是從原始來源進行擷取。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。
 
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供類別，可讓您使用中的快取[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]應用程式。 這些類別位於<xref:System.Runtime.Caching>命名空間。
 
@@ -73,7 +73,7 @@ ms.locfileid: "54513720"
 
 6.  選取 [為解決方案建立目錄] 核取方塊。
 
-7.  按一下 [確定 **Deploying Office Solutions**]。
+7.  按一下 [確定] 。
 
      WPF 設計工具中開啟**設計**檢視，並顯示 MainWindow.xaml 檔案。 Visual Studio 會建立**我的專案**資料夾、 Application.xaml 檔案，以及 MainWindow.xaml 檔案。
 
@@ -99,7 +99,7 @@ ms.locfileid: "54513720"
 
 4.  在 **目標 framework （所有組態）** 清單中，選取[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (請勿選取[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)
 
-5.  按一下 [確定 **Deploying Office Solutions**]。
+5.  按一下 [確定] 。
 
      [目標 Framework 變更] 對話方塊隨即出現。
 
@@ -218,7 +218,7 @@ ms.locfileid: "54513720"
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     如果未不提供任何收回或到期的資訊，則預設值是<xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>，這表示快取項目永遠不會過期型只在絕對時間。 相反地，快取項目過期時，才有記憶體不足的壓力。 最佳做法，您應該一律明確地提供絕對或逃脫到期。
+     如果未不提供任何收回或到期的資訊，則預設值是<xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>，這表示快取項目永遠不會過期型只在絕對時間。 相反地，快取項目過期時，才有記憶體不足的壓力。 最佳做法，您應該一律明確地提供絕對或滑動期限。
 
 7.  在`if/then`封鎖和您在上一個步驟中加入程式碼之後, 新增下列程式碼，建立您想要監視，並將文字檔的路徑新增至集合的檔案路徑的集合：
 
@@ -254,7 +254,7 @@ ms.locfileid: "54513720"
     ```
 
     ```csharp
-    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + + "\n" + DateTime.Now;
+    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
      日期和時間戳記將會加入，讓您將能夠快取項目到期時，請參閱。
@@ -296,7 +296,7 @@ ms.locfileid: "54513720"
 
      從文字檔案快取的內容會顯示在訊息方塊。 請注意上檔案的時間戳記。
 
-3.  關閉訊息方塊，然後按一下**取得快取**再次 **。**
+3.  關閉訊息方塊，然後按一下**取得快取**一次。
 
      時間戳記不變。 這表示會顯示快取的內容。
 
@@ -306,7 +306,7 @@ ms.locfileid: "54513720"
 
 5.  在文字編輯器中，開啟您所建立的文字檔案。 請勿進行任何變更。
 
-6.  關閉訊息方塊，然後按一下**取得快取**再次 **。**
+6.  關閉訊息方塊，然後按一下**取得快取**一次。
 
      請再次注意時間戳記。
 

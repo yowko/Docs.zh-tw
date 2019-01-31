@@ -1,5 +1,5 @@
 ---
-title: '&lt;proceduresignature1&gt;不符合 CLS 標準，因為它多載&lt;proceduresignature2&gt;的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範'
+title: <proceduresignature1> 不符合 CLS 標準，因為它多載 <proceduresignature2>，而此兩者的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40035
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
-ms.openlocfilehash: 0f4eaa09c3d04af350637fba0d672f55040a6466
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bda4ad6a4d5368d93e2ca603b78bf9db6aca858
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626845"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269558"
 ---
-# <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>&lt;proceduresignature1&gt;不符合 CLS 標準，因為它多載&lt;proceduresignature2&gt;的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範
+# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > 不符合 CLS 標準，因為它多載\<proceduresignature2 > 的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範
 程序或屬性會標示為`<CLSCompliant(True)>`時它會覆寫另一個程序或屬性和其參數清單之間唯一的差別是巢狀層級的不規則陣列陣序。  
   
  在下列宣告中，第二個和第三個宣告會產生這個錯誤。  

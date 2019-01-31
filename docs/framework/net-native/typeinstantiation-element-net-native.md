@@ -1,17 +1,17 @@
 ---
-title: '&lt;TypeInstantiation&gt; 項目 (.NET Native)'
+title: <TypeInstantiation> 項目 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 818a52ceb1428327c5bcb778f85015458990578f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 928d3c528bef6d319f50464a0648e61de2603eb2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612554"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256617"
 ---
-# <a name="lttypeinstantiationgt-element-net-native"></a>&lt;TypeInstantiation&gt; 項目 (.NET Native)
+# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation > 項目 (.NET Native)
 將執行階段反映原則套用至建構的泛型類型。  
   
 ## <a name="syntax"></a>語法  

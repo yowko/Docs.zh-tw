@@ -1,15 +1,15 @@
 ---
-title: '&lt;netNamedPipeBinding&gt;'
+title: <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 54f1ad4feefe15f4901d8e493cadc0842f55224f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 183ce624d22162c2d665b173d8c04e132457a3fb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606669"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257248"
 ---
-# <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
+# <a name="netnamedpipebinding"></a>\<netNamedPipeBinding>
 為電腦上跨處理序通訊定義安全、可靠且經過最佳化的繫結。 根據預設，這個繫結會產生一個執行階段通訊堆疊，並且具備 WS-ReliableMessaging (提供可靠性)、傳輸安全性、具名管道 (用於訊息傳遞) 和二進位訊息編碼。  
   
  \<system.ServiceModel>  

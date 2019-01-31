@@ -1,15 +1,15 @@
 ---
-title: '&lt;basicHttpBinding&gt; 的 &lt;security&gt;'
+title: <security> 的 <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: 9e6a0e864dcb83a529a5ac457e2fcffe0435376f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 964f2bf9571cd3c3b8668c7ab5306fab89de2ab0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701166"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261291"
 ---
-# <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; 的 &lt;security&gt;
+# <a name="security-of-basichttpbinding"></a>\<安全性 > 的\<basicHttpBinding >
 定義的安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
   
  \<system.ServiceModel>  

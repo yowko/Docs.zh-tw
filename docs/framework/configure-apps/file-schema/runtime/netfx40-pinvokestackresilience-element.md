@@ -1,5 +1,5 @@
 ---
-title: '&lt;NetFx40_PInvokeStackResilience&gt;項目'
+title: < NetFx40_PInvokeStackResilience > 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <NetFx40_PInvokeStackResilience> element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3742ab7c69b6c4870d00428ea7da9fee2a719925
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bc0d7c9222c31900cad9a8be05c79f7f8a04719
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684849"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289337"
 ---
-# <a name="ltnetfx40pinvokestackresiliencegt-element"></a>&lt;NetFx40_PInvokeStackResilience&gt;項目
+# <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 項目
 指定執行階段是否會在執行階段自動修復不正確的平台叫用宣告，即使這麼做會使 Managed 和 Unmanaged 程式碼之間的轉換變慢。  
   
  \<configuration>  

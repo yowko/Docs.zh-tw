@@ -1,5 +1,5 @@
 ---
-title: 參數的型別&#39; &lt;parametername&gt; &#39;不符合 CLS 標準
+title: 參數 '<parametername>' 的類型不符合 CLS 標準
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40028
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: 13a4e35cd27ed5aa135cec77c4415f223cba70f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e0852536a86dd415334f95a47ceb800ed2c591ad
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403032"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265918"
 ---
-# <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>參數的型別&#39; &lt;parametername&gt; &#39;不符合 CLS 標準
+# <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>參數的型別 '\<參數名稱 >' 不符合 CLS 標準
 程序標示為`<CLSCompliant(True)>`但宣告參數的類型會標示為`<CLSCompliant(False)>`、 未標示，或因為它不符合規範的型別不符合資格。  
   
  程序必須只使用符合 CLS 規範的型別，才能夠符合[語言獨立性以及與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md) (CLS) 標準。 這適用於參數型別、傳回型別及其所有區域變數的型別。  

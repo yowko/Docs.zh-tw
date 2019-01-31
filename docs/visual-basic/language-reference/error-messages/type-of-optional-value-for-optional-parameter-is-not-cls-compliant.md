@@ -1,5 +1,5 @@
 ---
-title: 選擇性參數的選擇性值型別&lt;parametername&gt;不符合 CLS 標準
+title: 選擇性參數 <parametername> 的選擇性值類型不符合 CLS 標準
 ms.date: 07/20/2015
 f1_keywords:
 - BC40042
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
-ms.openlocfilehash: dd77cd8cbd36f7681e2597d908dd8e55bf249392
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 39054fb6bf82a344cb38613164cb42968aa632f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960345"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261417"
 ---
-# <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>選擇性參數的選擇性值型別&lt;parametername&gt;不符合 CLS 標準
+# <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>選擇性參數的選擇性值型別\<參數名稱 > 不符合 CLS 標準
 程序已標記為 `<CLSCompliant(True)>`，但所宣告的 [Optional](../../../visual-basic/language-reference/modifiers/optional.md) 參數卻具有不符合標準之型別的預設值。  
   
  程序必須只使用符合 CLS 標準的型別，才能夠符合[語言獨立性以及與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md) (CLS) 標準。 這適用於參數型別、傳回型別及其所有區域變數的型別。 它也適用於選擇性參數的預設值。  
@@ -35,7 +35,7 @@ ms.locfileid: "37960345"
   
  根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的相關資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤識別碼：** BC40042  
+ **錯誤 ID:** BC40042  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   

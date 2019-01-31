@@ -1,15 +1,15 @@
 ---
-title: '&lt;issuerChannelBehaviors&gt; 的 &lt;add&gt;'
+title: <add> 的 <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: e0f49f71a3f9649492b3ad7ccf263114957ee4e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65c76cba696ae388d6184eaaa70a1f2f5a301e1c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729927"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271790"
 ---
-# <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a>&lt;issuerChannelBehaviors&gt; 的 &lt;add&gt;
+# <a name="add-of-issuerchannelbehaviors"></a>\<新增 > 的\<issuerChannelBehaviors >
 新增與 STS 通訊時要使用的端點行為。  
   
 > [!NOTE]

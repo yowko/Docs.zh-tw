@@ -2,12 +2,12 @@
 title: 使用資料合約解析程式
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: 8859a343c5dcc3b88edf4840a759fbed52bbf984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 844c4e0861c2cf4e6acb2b128ff1f5cefa0f7fa0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658828"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279145"
 ---
 # <a name="using-a-data-contract-resolver"></a>使用資料合約解析程式
 資料合約解析程式可讓您動態設定已知型別。 在序列化或還原序列化資料合約未預期的型別時，就會需要已知型別。 如需已知型別的詳細資訊，請參閱[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。 已知型別通常會以靜態方式指定。 這表示，實作作業時，您必須知道此作業可能會接收的所有可能型別。 不過，這項條件在某些情況中並不成立，此時，能夠以動態方式指定已知型別就很重要。  
@@ -55,7 +55,7 @@ public class MyCustomerResolver : DataContractResolver
 XmlObjectSerializer serializer = new DataContractSerializer(typeof(Customer), null, Int32.MaxValue, false, false, null, new MyCustomerResolver());  
 ```  
   
- 您可以在 <xref:System.Runtime.Serialization.DataContractSerializer> 或 <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A> 方法的呼叫中指定 <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A>，如下列範例所示。  
+ 您可以在 <xref:System.Runtime.Serialization.DataContractResolver> 或 <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A?displayProperty=nameWithType> 方法的呼叫中指定 <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A?displayProperty=nameWithType>，如下列範例所示。  
   
 ```  
 MemoryStream ms = new MemoryStream();  

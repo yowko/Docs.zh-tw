@@ -1,5 +1,5 @@
 ---
-title: '&lt;編譯器&gt;項目'
+title: <compiler> 項目
 ms.date: 08/14/2018
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#compiler
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: cc0cac18b46abd2c9738420ca635a5d81c2c4b83
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 704d9388a742b333efc3e888233bbf19b8e462c1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083804"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286763"
 ---
-# <a name="ltcompilergt-element"></a>&lt;編譯器&gt;項目
+# <a name="compiler-element"></a>\<編譯器 > 項目
 
 指定語言提供者的編譯器組態屬性。
 

@@ -1,15 +1,15 @@
 ---
-title: '&lt;httpDigest&gt; 項目'
+title: <httpDigest> 項目
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 146260a8f4b51ec51e749408b8351c7e71debab1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c930efbc2cd7a6dc12795d5ac1c26ea92fc36599
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510607"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259003"
 ---
-# <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt; 項目
+# <a name="httpdigest-element"></a>\<httpDigest > 項目
 指定對服務驗證用戶端時，所使用的摘要式類型認證。  
   
  \<system.ServiceModel>  

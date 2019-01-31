@@ -1,5 +1,5 @@
 ---
-title: 隱含的轉換，從&#39; &lt;typename1&gt; &#39;至&#39; &lt;2&gt&gt; &#39;的值複製&#39;ByRef&#39;參數&#39; &lt;parametername&gt; &#39;回相符引數。
+title: 在將 'ByRef' 參數 '<typename1>' 的值複製回相對應的引數時，將 '<typename2>' 隱含轉換至 '<parametername>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc41999
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 9f05a5fbcbef828b4ffa920d8cade475cedb64d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f875206b15ee048311e43624e197e78413de522e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537229"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279613"
 ---
-# <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>隱含的轉換，從&#39; &lt;typename1&gt; &#39;至&#39; &lt;2&gt&gt; &#39;的值複製&#39;ByRef&#39;參數&#39; &lt;parametername&gt; &#39;回相符引數。
+# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>隱含的轉換，從 '\<typename1 >' 到'\<2&gt >' 的 'ByRef' 參數的值複製 '\<參數名稱 >' 回相符引數。
 與呼叫的程序[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)比其對應參數的不同類型的引數。  
   
  如果您傳遞的引數`ByRef`，Visual Basic 有時會將引數值複製至區域變數，而不是傳遞參考程序中。 在此情況下，此程序傳回時，Visual Basic 必須接著將本機變數的值複製回呼叫端程式碼中的引數。  
