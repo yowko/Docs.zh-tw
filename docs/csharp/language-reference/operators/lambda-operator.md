@@ -1,107 +1,59 @@
 ---
 title: =&gt; 運算子 - C# 參考
 ms.custom: seodec18
-ms.date: 10/02/2017
+ms.date: 01/22/2019
 f1_keywords:
 - =>_CSharpKeyword
 helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 8641757d9252c88cf30595cec06d27b964e4d95c
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: fa2e149f5b19e80e3171d08519be3ae249d2a112
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540802"
 ---
-# <a name="gt-operator-c-reference"></a><span data-ttu-id="41b37-102">=&gt; 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="41b37-102">=&gt; Operator (C# Reference)</span></span>
+# <a name="gt-operator-c-reference"></a><span data-ttu-id="da36b-102">=&gt; 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="da36b-102">=&gt; operator (C# Reference)</span></span>
 
-<span data-ttu-id="41b37-103">`=>` 運算子在 C# 中有兩種用法：</span><span class="sxs-lookup"><span data-stu-id="41b37-103">The `=>` operator can be used in two ways in C#:</span></span>
+<span data-ttu-id="da36b-103">支援兩種形式的 `=>` 語彙基元：作為 Lambda 運算子，以及作為運算式主體定義中成員名稱和成員實作的分隔符號。</span><span class="sxs-lookup"><span data-stu-id="da36b-103">The `=>` token is supported in two forms: as the lambda operator and as a separator of a member name and the member implementation in an expression body definition.</span></span>
 
-- <span data-ttu-id="41b37-104">作為 [Lambda 運算式](../../lambda-expressions.md)中的 [Lambda 運算子](#lambda-operator)，它會分開輸入變數與 Lambda 主體。</span><span class="sxs-lookup"><span data-stu-id="41b37-104">As the [lambda operator](#lambda-operator) in a [lambda expression](../../lambda-expressions.md), it separates the input variables from the lambda body.</span></span>
- 
-- <span data-ttu-id="41b37-105">在[運算式主體定義](#expression-body-definition)中，它會分開成員名稱與成員實作。</span><span class="sxs-lookup"><span data-stu-id="41b37-105">In an [expression body definition](#expression-body-definition), it separates a member name from the member implementation.</span></span> 
+## <a name="lambda-operator"></a><span data-ttu-id="da36b-104">Lambda 運算子</span><span class="sxs-lookup"><span data-stu-id="da36b-104">Lambda operator</span></span>
 
-## <a name="lambda-operator"></a><span data-ttu-id="41b37-106">Lambda 運算子</span><span class="sxs-lookup"><span data-stu-id="41b37-106">Lambda operator</span></span>
+<span data-ttu-id="da36b-105">在 [Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)中，Lambda 運算子 `=>` 會分開右邊的 Lambda 主體和左邊的輸入變數。</span><span class="sxs-lookup"><span data-stu-id="da36b-105">In [lambda expressions](../../programming-guide/statements-expressions-operators/lambda-expressions.md), the lambda operator `=>` separates the input variables on the left side from the lambda body on the right side.</span></span>
 
-<span data-ttu-id="41b37-107">`=>` 語彙基元又稱為 Lambda 運算子。</span><span class="sxs-lookup"><span data-stu-id="41b37-107">The `=>` token is called the lambda operator.</span></span> <span data-ttu-id="41b37-108">它會在「Lambda 運算式」中使用，以分開右邊的 Lambda 主體和左邊的輸入變數。</span><span class="sxs-lookup"><span data-stu-id="41b37-108">It is used in *lambda expressions* to separate the input variables on the left side from the lambda body on the right side.</span></span> <span data-ttu-id="41b37-109">Lambda 運算式是類似匿名方法的內嵌運算式，但更有彈性；它會在以方法語法所表示的 LINQ 查詢中大量使用。</span><span class="sxs-lookup"><span data-stu-id="41b37-109">Lambda expressions are inline expressions similar to anonymous methods but more flexible; they are used extensively in LINQ queries that are expressed in method syntax.</span></span> <span data-ttu-id="41b37-110">如需詳細資訊，請參閱 [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="41b37-110">For more information, see [Lambda Expressions](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>  
-  
- <span data-ttu-id="41b37-111">下列範例顯示兩種方法來尋找及顯示字串陣列中最短字串的長度。</span><span class="sxs-lookup"><span data-stu-id="41b37-111">The following example shows two ways to find and display the length of the shortest string in an array of strings.</span></span> <span data-ttu-id="41b37-112">此範例的第一個部分會將 Lambda 運算式 (`w => w.Length`) 套用至 `words` 陣列的每個項目，然後使用 <xref:System.Linq.Enumerable.Min%2A> 方法來尋找最小長度。</span><span class="sxs-lookup"><span data-stu-id="41b37-112">The first part of the example applies a lambda expression (`w => w.Length`) to each element of the `words` array and then uses the <xref:System.Linq.Enumerable.Min%2A> method to find the smallest length.</span></span> <span data-ttu-id="41b37-113">相較之下，此範例的第二個部分會顯示使用查詢語法執行相同動作的較長方案。</span><span class="sxs-lookup"><span data-stu-id="41b37-113">For comparison, the second part of the example shows a longer solution that uses query syntax to do the same thing.</span></span>  
-  
-```csharp  
-string[] words = { "cherry", "apple", "blueberry" };  
-  
-// Use method syntax to apply a lambda expression to each element  
-// of the words array.   
-int shortestWordLength = words.Min(w => w.Length);  
-Console.WriteLine(shortestWordLength);  
-  
-// Compare the following code that uses query syntax.  
-// Get the lengths of each word in the words array.  
-var query = from w in words  
-            select w.Length;  
-// Apply the Min method to execute the query and get the shortest length.  
-int shortestWordLength2 = query.Min();  
-Console.WriteLine(shortestWordLength2);  
-  
-// Output:   
-// 5  
-// 5  
-```  
-  
-### <a name="remarks"></a><span data-ttu-id="41b37-114">備註</span><span class="sxs-lookup"><span data-stu-id="41b37-114">Remarks</span></span>  
- <span data-ttu-id="41b37-115">`=>` 運算子與指派運算子 (`=`) 具有相同的優先順序，而且為右向關聯。</span><span class="sxs-lookup"><span data-stu-id="41b37-115">The `=>` operator has the same precedence as the assignment operator (`=`) and is right-associative.</span></span>  
-  
- <span data-ttu-id="41b37-116">您可以明確指定輸入變數的類型，或讓編譯器推斷類型；不論是哪種情況，此變數在編譯時都屬於強型別。</span><span class="sxs-lookup"><span data-stu-id="41b37-116">You can specify the type of the input variable explicitly or let the compiler infer it; in either case, the variable is strongly typed at compile time.</span></span> <span data-ttu-id="41b37-117">當您指定類型時，您必須以括號括住類型名稱和變數名稱，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="41b37-117">When you specify a type, you must enclose the type name and the variable name in parentheses, as the following example shows.</span></span>  
-  
-```csharp  
-int shortestWordLength = words.Min((string w) => w.Length);  
-```  
-  
-### <a name="example"></a><span data-ttu-id="41b37-118">範例</span><span class="sxs-lookup"><span data-stu-id="41b37-118">Example</span></span>  
- <span data-ttu-id="41b37-119">下列範例示範如何為接受兩個引數之標準查詢運算子 <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> 的多載，撰寫 Lambda 運算式。</span><span class="sxs-lookup"><span data-stu-id="41b37-119">The following example shows how to write a lambda expression for the overload of the standard query operator <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> that takes two arguments.</span></span> <span data-ttu-id="41b37-120">因為 Lambda 運算式有多個參數，所以必須以括號括住這些參數。</span><span class="sxs-lookup"><span data-stu-id="41b37-120">Because the lambda expression has more than one parameter, the parameters must be enclosed in parentheses.</span></span> <span data-ttu-id="41b37-121">第二個參數 `index` 表示集合中目前項目的索引。</span><span class="sxs-lookup"><span data-stu-id="41b37-121">The second parameter, `index`, represents the index of the current element in the collection.</span></span> <span data-ttu-id="41b37-122">`Where` 運算式會傳回長度小於其陣列索引位置的所有字串。</span><span class="sxs-lookup"><span data-stu-id="41b37-122">The `Where` expression returns all the strings whose lengths are less than their index positions in the array.</span></span>  
-  
-```csharp  
-static void Main(string[] args)  
-{  
-    string[] digits = { "zero", "one", "two", "three", "four", "five",   
-            "six", "seven", "eight", "nine" };  
-  
-    Console.WriteLine("Example that uses a lambda expression:");  
-    var shortDigits = digits.Where((digit, index) => digit.Length < index);  
-    foreach (var sD in shortDigits)  
-    {  
-        Console.WriteLine(sD);  
-    }  
-  
-    // Output:  
-    // Example that uses a lambda expression:  
-    // five  
-    // six  
-    // seven  
-    // eight  
-    // nine  
-}  
-```  
-## <a name="expression-body-definition"></a><span data-ttu-id="41b37-123">運算式主體定義</span><span class="sxs-lookup"><span data-stu-id="41b37-123">Expression body definition</span></span>
+<span data-ttu-id="da36b-106">下列範例使用 [LINQ](../../programming-guide/concepts/linq/index.md) 功能並搭配方法語法來示範 Lambda 運算式的使用方式：</span><span class="sxs-lookup"><span data-stu-id="da36b-106">The following example uses the [LINQ](../../programming-guide/concepts/linq/index.md) feature with method syntax to demonstrate the usage of lambda expressions:</span></span>
 
-<span data-ttu-id="41b37-124">運算式主體定義以極為簡潔且可讀的形式提供成員的實作。</span><span class="sxs-lookup"><span data-stu-id="41b37-124">An expression body definition provides a member's implementation in a highly condensed, readable form.</span></span> <span data-ttu-id="41b37-125">它有下列一般語法：</span><span class="sxs-lookup"><span data-stu-id="41b37-125">It has the following general syntax:</span></span>
+[!code-csharp-interactive[infer types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#InferredTypes)]
+
+<span data-ttu-id="da36b-107">Lambda 運算式的輸入變數在編譯時間為強型別。</span><span class="sxs-lookup"><span data-stu-id="da36b-107">Input variables of lambda expressions are strongly typed at compile time.</span></span> <span data-ttu-id="da36b-108">當編譯器可以推斷輸入變數的類型時 (如上述範例所示)，您可以省略型別宣告。</span><span class="sxs-lookup"><span data-stu-id="da36b-108">When the compiler can infer the types of input variables, like in the preceding example, you may omit type declarations.</span></span> <span data-ttu-id="da36b-109">如果您需要指定輸入變數的類型，您必須針對每個變數執行，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="da36b-109">If you need to specify the type of input variables, you must do that for each variable, as the following example shows:</span></span>
+
+[!code-csharp-interactive[specify types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#ExplicitTypes)]
+
+<span data-ttu-id="da36b-110">下列範例示範如何定義 Lambda 運算式而不需要輸入變數：</span><span class="sxs-lookup"><span data-stu-id="da36b-110">The following example shows how to define a lambda expression without input variables:</span></span>
+
+[!code-csharp-interactive[without input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#WithoutInput)]
+
+<span data-ttu-id="da36b-111">如需詳細資訊，請參閱 [Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="da36b-111">For more information, see [Lambda expressions](../../programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>
+
+## <a name="expression-body-definition"></a><span data-ttu-id="da36b-112">運算式主體定義</span><span class="sxs-lookup"><span data-stu-id="da36b-112">Expression body definition</span></span>
+
+<span data-ttu-id="da36b-113">運算式主體定義的一般語法如下︰</span><span class="sxs-lookup"><span data-stu-id="da36b-113">An expression body definition has the following general syntax:</span></span>
 
 ```csharp
 member => expression;
 ```
-<span data-ttu-id="41b37-126">其中 *expression* 是有效的運算式。</span><span class="sxs-lookup"><span data-stu-id="41b37-126">where *expression* is a valid expression.</span></span> <span data-ttu-id="41b37-127">請注意，只有在成員的傳回型別為 `void` 時，或成員為建構函式或完成項時，*expression* 才可以是「陳述式運算式」。</span><span class="sxs-lookup"><span data-stu-id="41b37-127">Note that *expression* can be a *statement expression* only if the member's return type is `void`, or if the member is a constructor or a finalizer.</span></span>
 
-<span data-ttu-id="41b37-128">從 C# 6 開始支援方法和 property get 陳述式的運算式主體定義。</span><span class="sxs-lookup"><span data-stu-id="41b37-128">Expression body definitions for methods and property get statements are supported starting with C# 6.</span></span> <span data-ttu-id="41b37-129">從 C# 7 開始支援建構函式、完成項、property set 陳述式和索引子的運算式主體定義。</span><span class="sxs-lookup"><span data-stu-id="41b37-129">Expression body definitions for constructors, finalizers, property set statements, and indexers are supported starting with C# 7.</span></span>
+<span data-ttu-id="da36b-114">其中 *expression* 是有效的運算式。</span><span class="sxs-lookup"><span data-stu-id="da36b-114">where *expression* is a valid expression.</span></span> <span data-ttu-id="da36b-115">請注意，只有在成員的傳回型別為 `void` 時，或成員為建構函式、完成項或屬性 `set` 存取子時，*expression* 才可以是「陳述式運算式」。</span><span class="sxs-lookup"><span data-stu-id="da36b-115">Note that *expression* can be a *statement expression* only if the member's return type is `void`, or if the member is a constructor, a finalizer, or a property `set` accessor.</span></span>
 
-<span data-ttu-id="41b37-130">`Person.ToString` 方法的運算式主體定義如下︰</span><span class="sxs-lookup"><span data-stu-id="41b37-130">The following is an expression body definition for a `Person.ToString` method:</span></span>
+<span data-ttu-id="da36b-116">下列範例顯示 `Person.ToString` 方法的運算式主體定義：</span><span class="sxs-lookup"><span data-stu-id="da36b-116">The following example shows an expression body definition for a `Person.ToString` method:</span></span>
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-<span data-ttu-id="41b37-131">它是下列方法定義的簡短版：</span><span class="sxs-lookup"><span data-stu-id="41b37-131">It is a shorthand version of the following method definition:</span></span>
+<span data-ttu-id="da36b-117">它是下列方法定義的簡短版：</span><span class="sxs-lookup"><span data-stu-id="da36b-117">It's a shorthand version of the following method definition:</span></span>
 
 ```csharp
 public override string ToString()
@@ -109,11 +61,23 @@ public override string ToString()
    return $"{fname} {lname}".Trim();
 }
 ```
-<span data-ttu-id="41b37-132">如需運算式主體定義的詳細資訊，請參閱[運算式主體成員](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)。</span><span class="sxs-lookup"><span data-stu-id="41b37-132">For more detailed information on expression body definitions, see [Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="41b37-133">請參閱</span><span class="sxs-lookup"><span data-stu-id="41b37-133">See Also</span></span>
+<span data-ttu-id="da36b-118">從 C# 6 開始支援方法和唯讀屬性的運算式主體定義。</span><span class="sxs-lookup"><span data-stu-id="da36b-118">Expression body definitions for methods and read-only properties are supported starting with C# 6.</span></span> <span data-ttu-id="da36b-119">從 C# 7.0 開始支援建構函式、完成項、屬性存取子和索引子的運算式主體定義。</span><span class="sxs-lookup"><span data-stu-id="da36b-119">Expression body definitions for constructors, finalizers, property accessors, and indexers are supported starting with C# 7.0.</span></span>
 
-- [<span data-ttu-id="41b37-134">C# 參考</span><span class="sxs-lookup"><span data-stu-id="41b37-134">C# Reference</span></span>](../../../csharp/language-reference/index.md)   
-- [<span data-ttu-id="41b37-135">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="41b37-135">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)   
-- [<span data-ttu-id="41b37-136">Lambda 運算式</span><span class="sxs-lookup"><span data-stu-id="41b37-136">Lambda Expressions</span></span>](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-- <span data-ttu-id="41b37-137">[運算式主體成員](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)。</span><span class="sxs-lookup"><span data-stu-id="41b37-137">[Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).</span></span>
+<span data-ttu-id="da36b-120">如需詳細資訊，請參閱[運算式主體成員](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)。</span><span class="sxs-lookup"><span data-stu-id="da36b-120">For more information, see [Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="da36b-121">運算子是否可多載</span><span class="sxs-lookup"><span data-stu-id="da36b-121">Operator overloadability</span></span>
+
+<span data-ttu-id="da36b-122">無法多載 `=>` 運算子。</span><span class="sxs-lookup"><span data-stu-id="da36b-122">The `=>` operator cannot be overloaded.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="da36b-123">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="da36b-123">C# language specification</span></span>
+
+<span data-ttu-id="da36b-124">如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[匿名函式運算式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)一節。</span><span class="sxs-lookup"><span data-stu-id="da36b-124">For more information, see the [Anonymous function expressions](~/_csharplang/spec/expressions.md#anonymous-function-expressions) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="da36b-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="da36b-125">See also</span></span>
+
+- [<span data-ttu-id="da36b-126">C# 參考</span><span class="sxs-lookup"><span data-stu-id="da36b-126">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="da36b-127">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="da36b-127">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="da36b-128">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="da36b-128">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="da36b-129">Lambda 運算式</span><span class="sxs-lookup"><span data-stu-id="da36b-129">Lambda expressions</span></span>](../../programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [<span data-ttu-id="da36b-130">運算式主體成員</span><span class="sxs-lookup"><span data-stu-id="da36b-130">Expression-bodied members</span></span>](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)

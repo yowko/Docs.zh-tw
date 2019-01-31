@@ -1,18 +1,18 @@
 ---
-title: 如何：查詢具有指定之屬性或名稱的檔案 (C#)
+title: HOW TO：查詢具有指定屬性或名稱的檔案 (C#)
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: 2b353ec17284235a97135003bc07f7224082cb4a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e600899251fe08884088275307f4311f3b9787cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564155"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a><span data-ttu-id="1e0f1-102">如何：查詢具有指定之屬性或名稱的檔案 (C#)</span><span class="sxs-lookup"><span data-stu-id="1e0f1-102">How to: Query for Files with a Specified Attribute or Name (C#)</span></span>
-<span data-ttu-id="1e0f1-103">這個範例示範如何在指定的樹狀目錄中尋找所有具有指定副檔名 (例如 ".txt") 的檔案。</span><span class="sxs-lookup"><span data-stu-id="1e0f1-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="1e0f1-104">它也會示範如何根據建立時間來傳回樹狀結構中的最新或最舊檔案。</span><span class="sxs-lookup"><span data-stu-id="1e0f1-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a><span data-ttu-id="2e364-102">HOW TO：查詢具有指定屬性或名稱的檔案 (C#)</span><span class="sxs-lookup"><span data-stu-id="2e364-102">How to: Query for Files with a Specified Attribute or Name (C#)</span></span>
+<span data-ttu-id="2e364-103">這個範例示範如何在指定的樹狀目錄中尋找所有具有指定副檔名 (例如 ".txt") 的檔案。</span><span class="sxs-lookup"><span data-stu-id="2e364-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="2e364-104">它也會示範如何根據建立時間來傳回樹狀結構中的最新或最舊檔案。</span><span class="sxs-lookup"><span data-stu-id="2e364-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1e0f1-105">範例</span><span class="sxs-lookup"><span data-stu-id="1e0f1-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2e364-105">範例</span><span class="sxs-lookup"><span data-stu-id="2e364-105">Example</span></span>  
   
 ```csharp  
 class FindFileByExtension  
@@ -63,10 +63,10 @@ class FindFileByExtension
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="1e0f1-106">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="1e0f1-106">Compiling the Code</span></span>  
- <span data-ttu-id="1e0f1-107">建立以 .NET Framework 3.5 版或更高版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="1e0f1-107">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to   System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2e364-106">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="2e364-106">Compiling the Code</span></span>  
+ <span data-ttu-id="2e364-107">建立以 .NET Framework 3.5 版或更高版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="2e364-107">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to   System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e0f1-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="1e0f1-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e364-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2e364-108">See also</span></span>
 
-- [<span data-ttu-id="1e0f1-109">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="1e0f1-109">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
-- [<span data-ttu-id="1e0f1-110">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="1e0f1-110">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="2e364-109">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="2e364-109">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="2e364-110">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="2e364-110">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
