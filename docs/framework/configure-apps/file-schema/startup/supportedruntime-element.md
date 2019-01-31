@@ -1,5 +1,5 @@
 ---
-title: '&lt;Supportedruntime>&gt;項目'
+title: <supportedRuntime> 項目
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 3fdc3bae488fe47732fe91cbb2ac23aae3e33b81
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 93e69290062e1b82dddbb68f7a139763695a42fb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084389"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271768"
 ---
-# <a name="ltsupportedruntimegt-element"></a>&lt;Supportedruntime>&gt;項目
+# <a name="supportedruntime-element"></a>\<Supportedruntime> > 項目
 
 指定應用程式支援的通用語言執行平台版本。 所有以 .NET Framework 1.1 (含) 以後版本建置的應用程式都應使用這個項目。  
   

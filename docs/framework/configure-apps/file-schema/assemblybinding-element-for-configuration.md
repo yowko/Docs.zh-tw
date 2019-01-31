@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyBinding&gt;項目&lt;組態&gt;'
+title: <assemblyBinding> 的 <configuration> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-ms.openlocfilehash: 12065d8bc484f7bbf77ae18c67df1de0845167b2
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: f5992a6085c32d37f56319cf8b2c361542c441e7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083895"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257324"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<Assemblybinding> > 項目\<設定 >
 

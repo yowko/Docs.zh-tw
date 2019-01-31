@@ -1,5 +1,5 @@
 ---
-title: '&lt;啟動&gt;項目'
+title: <startup> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: 9fc5a555085369cdec249eb9b5b247f403bd12ed
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: cc261097593150583072ab796df9de8edea5ca6e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083713"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280198"
 ---
-# <a name="ltstartupgt-element"></a>&lt;啟動&gt;項目
+# <a name="startup-element"></a>\<啟動 > 項目
 
 指定 common language runtime 的啟動資訊。
 

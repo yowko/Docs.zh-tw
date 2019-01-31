@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b191a01995b7c36d733b225672a3d79f488a276
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cedabbfff10b89f9755b14b963fd1d1a143cb0f0
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531417"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204882"
 ---
 # <a name="regular-expression-language---quick-reference"></a>規則運算式語言 - 快速參考
 <a name="top"></a>規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。  如需簡介，請參閱 [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。  
@@ -58,10 +58,10 @@ ms.locfileid: "54531417"
 |`\f`|比對換頁字元 \u000C。|`[\f]{2,}`|"\f\f\f" 中的 "\f\f\f"|  
 |`\n`|比對新行字元 \u000A。|`\r\n(\w+)`|"\r\nThese are\ntwo lines." 中的 "\r\nThese"|  
 |`\e`|比對逸出字元 \u001B。|`\e`|"\x001B" 中的 "\x001B"|  
-|`\` *nnn*|使用八進位表示法指定字元 (*nnn* 由兩位數或三位數組成)。|`\w\040\w`|"a b", "c d" in<br /><br /> "a bc d"|  
-|`\x` *nn*|使用十六進位表示指定字元 (*nn* 由剛好兩位數組成)。|`\w\x20\w`|"a b", "c d" in<br /><br /> "a bc d"|  
+|`\` *nnn*|使用八進位表示法指定字元 (*nnn* 由兩位數或三位數組成)。|`\w\040\w`|"a bc d" 中的 "a b"、"c d"|  
+|`\x` *nn*|使用十六進位表示指定字元 (*nn* 由剛好兩位數組成)。|`\w\x20\w`|"a bc d" 中的 "a b"、"c d"|  
 |`\c` *X*<br /><br /> `\c` *x*|比對 *X* 或 *x*所指定的 ASCII 控制字元，其中 *X* 或 *x* 是控制字元的字母。|`\cC`|"\x0003" (Ctrl-C) 中的 "\x0003"|  
-|`\u` *nnnn*|使用十六進位表示比對 Unicode 字元 (剛好四位數，如 *nnnn*所表示)。|`\w\u0020\w`|"a b", "c d" in<br /><br /> "a bc d"|  
+|`\u` *nnnn*|使用十六進位表示比對 Unicode 字元 (剛好四位數，如 *nnnn*所表示)。|`\w\u0020\w`|"a bc d" 中的 "a b"、"c d"|  
 |`\`|當後面加上的字元不是這張表和本主題其他表格中指出的逸出字元時，則比對該字元。 例如， `\*` 與 `\x2A`相同，而 `\.` 與 `\x2E`相同。 這可讓規則運算式引擎釐清語言元素 (例如 \* 或 ?) 和字元常值 (以 `\*` 或 `\?` 表示)。|`\d+[\+-x\*]\d+`|"(2+2) \* 3\*9" 中的 "2+2" 和 "3\*9"|  
   
  [回到頁首](#top)  
@@ -92,11 +92,11 @@ ms.locfileid: "54531417"
   
 |判斷提示|說明|模式|符合|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|根據預設，比對必須在字串的開頭開始；在多行模式中，它必須在一行的開頭開始。|`^\d{3}`|"901-" 中的<br /><br /> "901-333-"|  
-|`$`|根據預設，比對必須發生在字串的結尾或字串結尾的 `\n` 之前；在多行模式中，它必須發生在一行的結尾之前，或一行結尾的 `\n` 之前。|`-\d{3}$`|"-333" 中的<br /><br /> "-901-333"|  
-|`\A`|比對必須發生在字串開頭。|`\A\d{3}`|"901-" 中的<br /><br /> "901-333-"|  
-|`\Z`|比對必須發生在字串結尾，或發生在字串結尾的 `\n` 之前。|`-\d{3}\Z`|"-333" 中的<br /><br /> "-901-333"|  
-|`\z`|比對必須發生在字串結尾。|`-\d{3}\z`|"-333" 中的<br /><br /> "-901-333"|  
+|`^`|根據預設，比對必須在字串的開頭開始；在多行模式中，它必須在一行的開頭開始。|`^\d{3}`|"901-333-" 中的 "901"|  
+|`$`|根據預設，比對必須發生在字串的結尾或字串結尾的 `\n` 之前；在多行模式中，它必須發生在一行的結尾之前，或一行結尾的 `\n` 之前。|`-\d{3}$`|"-901-333" 中的 "-333"|  
+|`\A`|比對必須發生在字串開頭。|`\A\d{3}`|"901-333-" 中的 "901"|  
+|`\Z`|比對必須發生在字串結尾，或發生在字串結尾的 `\n` 之前。|`-\d{3}\Z`|"-901-333" 中的 "-333"|  
+|`\z`|比對必須發生在字串結尾。|`-\d{3}\z`|"-901-333" 中的 "-333"|  
 |`\G`|比對必須發生在先前比對結束的位置。|`\G\(\d\)`|"(1)(3)(5)[7](9\)" 中的 "(1)"、"(3)"、"(5)"|  
 |`\b`|比對必須發生在 `\w` (英數) 和 `\W` (非英數) 字元之間的界限上。|`\b\w+\s\w+\b`|"them theme them them" 中的 "them theme"、"them them"|  
 |`\B`|比對不可以發生在 `\b` 界限上。|`\Bend\w*\b`|"end sends endure lender" 中的 "ends"、"ender"|  
@@ -218,7 +218,7 @@ ms.locfileid: "54531417"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
-- <xref:System.Text.RegularExpressions.Regex>
+- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [規則運算式](regular-expressions.md)
 - [規則運算式類別](the-regular-expression-object-model.md)
 - [規則運算式範例](regular-expression-examples.md)
