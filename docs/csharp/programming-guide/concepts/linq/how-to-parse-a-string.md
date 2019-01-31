@@ -1,19 +1,19 @@
 ---
-title: 如何：剖析字串 (C#)
+title: HOW TO：剖析字串 (C#)
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: b6b955d2cc9a3ea0c6e17e68639ad7fc677c3fc7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c4d26f534c718d69c84a30b11de22249b241e084
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43744796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629783"
 ---
-# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="023d3-102">如何：剖析字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="023d3-102">How to: Parse a String (C#)</span></span>
-<span data-ttu-id="023d3-103">本主題示範如何剖析字串以便在 C# 中建立 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="023d3-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="e9c22-102">HOW TO：剖析字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="e9c22-102">How to: Parse a String (C#)</span></span>
+<span data-ttu-id="e9c22-103">本主題示範如何剖析字串以便在 C# 中建立 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="e9c22-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="023d3-104">範例</span><span class="sxs-lookup"><span data-stu-id="023d3-104">Example</span></span>  
- <span data-ttu-id="023d3-105">下列 C# 程式碼顯示如何剖析字串。</span><span class="sxs-lookup"><span data-stu-id="023d3-105">The following C# code shows how to parse a string.</span></span>  
+## <a name="example"></a><span data-ttu-id="e9c22-104">範例</span><span class="sxs-lookup"><span data-stu-id="e9c22-104">Example</span></span>  
+ <span data-ttu-id="e9c22-105">下列 C# 程式碼顯示如何剖析字串。</span><span class="sxs-lookup"><span data-stu-id="e9c22-105">The following C# code shows how to parse a string.</span></span>  
   
 ```csharp  
 XElement contacts = XElement.Parse(  
@@ -45,6 +45,6 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="023d3-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="023d3-106">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9c22-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e9c22-106">See also</span></span>
 
-- [<span data-ttu-id="023d3-107">剖析 XML (C#)</span><span class="sxs-lookup"><span data-stu-id="023d3-107">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+- [<span data-ttu-id="e9c22-107">剖析 XML (C#)</span><span class="sxs-lookup"><span data-stu-id="e9c22-107">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

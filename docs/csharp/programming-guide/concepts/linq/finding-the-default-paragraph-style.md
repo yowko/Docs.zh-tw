@@ -2,26 +2,26 @@
 title: 尋找預設段落樣式 (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 77eb008ba6419e58541b60ac1ca7c1ef0344e316
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 052accf31007001c0fa0d46870ee6e4cd30f6bb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674072"
 ---
-# <a name="finding-the-default-paragraph-style-c"></a><span data-ttu-id="10e9a-102">尋找預設段落樣式 (C#)</span><span class="sxs-lookup"><span data-stu-id="10e9a-102">Finding the Default Paragraph Style (C#)</span></span>
-<span data-ttu-id="10e9a-103">＜管理 WordprocessingML 文件中的資訊＞教學課程中的第一個工作是，尋找文件中的預設段落樣式。</span><span class="sxs-lookup"><span data-stu-id="10e9a-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
+# <a name="finding-the-default-paragraph-style-c"></a><span data-ttu-id="5ca93-102">尋找預設段落樣式 (C#)</span><span class="sxs-lookup"><span data-stu-id="5ca93-102">Finding the Default Paragraph Style (C#)</span></span>
+<span data-ttu-id="5ca93-103">＜管理 WordprocessingML 文件中的資訊＞教學課程中的第一個工作是，尋找文件中的預設段落樣式。</span><span class="sxs-lookup"><span data-stu-id="5ca93-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="10e9a-104">範例</span><span class="sxs-lookup"><span data-stu-id="10e9a-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5ca93-104">範例</span><span class="sxs-lookup"><span data-stu-id="5ca93-104">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="10e9a-105">描述</span><span class="sxs-lookup"><span data-stu-id="10e9a-105">Description</span></span>  
- <span data-ttu-id="10e9a-106">下列範例會開啟 Office Open XML WordprocessingML 文件、尋找文件和封裝的樣式部分，然後執行尋找預設樣式名稱的查詢。</span><span class="sxs-lookup"><span data-stu-id="10e9a-106">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="10e9a-107">如需 Office Open XML 文件套件及其組成部分的詳細資訊，請參閱 [Office Open XML WordprocessingML 文件的詳細資料 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)。</span><span class="sxs-lookup"><span data-stu-id="10e9a-107">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span></span>  
+### <a name="description"></a><span data-ttu-id="5ca93-105">說明</span><span class="sxs-lookup"><span data-stu-id="5ca93-105">Description</span></span>  
+ <span data-ttu-id="5ca93-106">下列範例會開啟 Office Open XML WordprocessingML 文件、尋找文件和封裝的樣式部分，然後執行尋找預設樣式名稱的查詢。</span><span class="sxs-lookup"><span data-stu-id="5ca93-106">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="5ca93-107">如需 Office Open XML 文件套件及其組成部分的詳細資訊，請參閱 [Office Open XML WordprocessingML 文件的詳細資料 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)。</span><span class="sxs-lookup"><span data-stu-id="5ca93-107">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span></span>  
   
- <span data-ttu-id="10e9a-108">查詢會尋找名稱為 `w:style` 的節點，其中擁有名稱為 `w:type` 且值為 "paragraph" 的屬性，同時也擁有名稱為 `w:default` 且值為 "1" 的屬性。</span><span class="sxs-lookup"><span data-stu-id="10e9a-108">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="10e9a-109">由於這些屬性只有一個 XML 節點，查詢會使用 <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> 運算子，將集合轉換為單一子句。</span><span class="sxs-lookup"><span data-stu-id="10e9a-109">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="10e9a-110">接著，它會取得名稱為 `w:styleId` 之屬性的值。</span><span class="sxs-lookup"><span data-stu-id="10e9a-110">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
+ <span data-ttu-id="5ca93-108">查詢會尋找名稱為 `w:style` 的節點，其中擁有名稱為 `w:type` 且值為 "paragraph" 的屬性，同時也擁有名稱為 `w:default` 且值為 "1" 的屬性。</span><span class="sxs-lookup"><span data-stu-id="5ca93-108">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="5ca93-109">由於這些屬性只有一個 XML 節點，查詢會使用 <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> 運算子，將集合轉換為單一子句。</span><span class="sxs-lookup"><span data-stu-id="5ca93-109">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="5ca93-110">接著，它會取得名稱為 `w:styleId` 之屬性的值。</span><span class="sxs-lookup"><span data-stu-id="5ca93-110">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
   
- <span data-ttu-id="10e9a-111">這個範例會使用 WindowsBase 組件的類別。</span><span class="sxs-lookup"><span data-stu-id="10e9a-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="10e9a-112">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="10e9a-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="5ca93-111">這個範例會使用 WindowsBase 組件的類別。</span><span class="sxs-lookup"><span data-stu-id="5ca93-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="5ca93-112">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="5ca93-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="10e9a-113">程式碼</span><span class="sxs-lookup"><span data-stu-id="10e9a-113">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="5ca93-113">程式碼</span><span class="sxs-lookup"><span data-stu-id="5ca93-113">Code</span></span>  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -76,18 +76,18 @@ string defaultStyle =
 Console.WriteLine("The default style is: {0}", defaultStyle);  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="10e9a-114">註解</span><span class="sxs-lookup"><span data-stu-id="10e9a-114">Comments</span></span>  
- <span data-ttu-id="10e9a-115">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="10e9a-115">This example produces the following output:</span></span>  
+### <a name="comments"></a><span data-ttu-id="5ca93-114">註解</span><span class="sxs-lookup"><span data-stu-id="5ca93-114">Comments</span></span>  
+ <span data-ttu-id="5ca93-115">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="5ca93-115">This example produces the following output:</span></span>  
   
 ```  
 The default style is: Normal  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="10e9a-116">後續步驟</span><span class="sxs-lookup"><span data-stu-id="10e9a-116">Next Steps</span></span>  
- <span data-ttu-id="10e9a-117">在下一個範例中，您將建立可在文件中尋找所有段落及其樣式的類似查詢：</span><span class="sxs-lookup"><span data-stu-id="10e9a-117">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="5ca93-116">後續步驟</span><span class="sxs-lookup"><span data-stu-id="5ca93-116">Next Steps</span></span>  
+ <span data-ttu-id="5ca93-117">在下一個範例中，您將建立可在文件中尋找所有段落及其樣式的類似查詢：</span><span class="sxs-lookup"><span data-stu-id="5ca93-117">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
   
--   [<span data-ttu-id="10e9a-118">擷取段落及其樣式 (C#)</span><span class="sxs-lookup"><span data-stu-id="10e9a-118">Retrieving the Paragraphs and Their Styles (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+-   [<span data-ttu-id="5ca93-118">擷取段落及其樣式 (C#)</span><span class="sxs-lookup"><span data-stu-id="5ca93-118">Retrieving the Paragraphs and Their Styles (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a><span data-ttu-id="10e9a-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="10e9a-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ca93-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5ca93-119">See also</span></span>
 
-- [<span data-ttu-id="10e9a-120">教學課程：操作 WordprocessingML 文件中的內容</span><span class="sxs-lookup"><span data-stu-id="10e9a-120">Tutorial: Manipulating Content in a WordprocessingML Document</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="5ca93-120">教學課程：管理 WordprocessingML 文件中的內容</span><span class="sxs-lookup"><span data-stu-id="5ca93-120">Tutorial: Manipulating Content in a WordprocessingML Document</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

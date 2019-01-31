@@ -1,23 +1,23 @@
 ---
-title: 如何：針對命名空間中的 XML 撰寫查詢 (C#)
+title: HOW TO：針對命名空間中的 XML 撰寫查詢 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: 29c4b01bfce75ce71d5214fef0cc55cd82c4e776
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e6b966e90d1f7fc86efaa422ecd8afb030d97163
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722085"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a><span data-ttu-id="e14d1-102">如何：針對命名空間中的 XML 撰寫查詢 (C#)</span><span class="sxs-lookup"><span data-stu-id="e14d1-102">How to: Write Queries on XML in Namespaces (C#)</span></span>
-<span data-ttu-id="e14d1-103">若要撰寫命名空間 (Namespace) 中的 XML 查詢，您必須使用具有正確命名空間的 <xref:System.Xml.Linq.XName> 物件。</span><span class="sxs-lookup"><span data-stu-id="e14d1-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  
+# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a><span data-ttu-id="10b72-102">HOW TO：針對命名空間中的 XML 撰寫查詢 (C#)</span><span class="sxs-lookup"><span data-stu-id="10b72-102">How to: Write Queries on XML in Namespaces (C#)</span></span>
+<span data-ttu-id="10b72-103">若要撰寫命名空間 (Namespace) 中的 XML 查詢，您必須使用具有正確命名空間的 <xref:System.Xml.Linq.XName> 物件。</span><span class="sxs-lookup"><span data-stu-id="10b72-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  
   
- <span data-ttu-id="e14d1-104">若為 C#，最常見的方法是使用包含 URI 的字串初始化 <xref:System.Xml.Linq.XNamespace>，然後使用加法運算子多載結合命名空間與區域名稱。</span><span class="sxs-lookup"><span data-stu-id="e14d1-104">For C#, the most common approach is to initialize an <xref:System.Xml.Linq.XNamespace> using a string that contains the URI, then use the addition operator overload to combine the namespace with the local name.</span></span>  
+ <span data-ttu-id="10b72-104">若為 C#，最常見的方法是使用包含 URI 的字串初始化 <xref:System.Xml.Linq.XNamespace>，然後使用加法運算子多載結合命名空間與區域名稱。</span><span class="sxs-lookup"><span data-stu-id="10b72-104">For C#, the most common approach is to initialize an <xref:System.Xml.Linq.XNamespace> using a string that contains the URI, then use the addition operator overload to combine the namespace with the local name.</span></span>  
   
- <span data-ttu-id="e14d1-105">本主題中的第一組範例會示範如何在預設命名空間中建立 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="e14d1-105">The first set of examples in this topic shows how to create an XML tree in a default namespace.</span></span> <span data-ttu-id="e14d1-106">第二組範例則示範如何在具有前置詞的命名空間中建立 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="e14d1-106">The second set shows how to create an XML tree in a namespace with a prefix.</span></span>  
+ <span data-ttu-id="10b72-105">本主題中的第一組範例會示範如何在預設命名空間中建立 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="10b72-105">The first set of examples in this topic shows how to create an XML tree in a default namespace.</span></span> <span data-ttu-id="10b72-106">第二組範例則示範如何在具有前置詞的命名空間中建立 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="10b72-106">The second set shows how to create an XML tree in a namespace with a prefix.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e14d1-107">範例</span><span class="sxs-lookup"><span data-stu-id="e14d1-107">Example</span></span>  
- <span data-ttu-id="e14d1-108">下列範例會建立位於預設命名空間中的 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="e14d1-108">The following example creates an XML tree that is in a default namespace.</span></span> <span data-ttu-id="e14d1-109">接著，它會擷取項目的集合。</span><span class="sxs-lookup"><span data-stu-id="e14d1-109">It then retrieves a collection of elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="10b72-107">範例</span><span class="sxs-lookup"><span data-stu-id="10b72-107">Example</span></span>  
+ <span data-ttu-id="10b72-108">下列範例會建立位於預設命名空間中的 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="10b72-108">The following example creates an XML tree that is in a default namespace.</span></span> <span data-ttu-id="10b72-109">接著，它會擷取項目的集合。</span><span class="sxs-lookup"><span data-stu-id="10b72-109">It then retrieves a collection of elements.</span></span>  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -37,7 +37,7 @@ foreach (XElement el in c1)
     Console.WriteLine((int)el);  
 ```  
   
- <span data-ttu-id="e14d1-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="e14d1-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="10b72-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="10b72-110">This example produces the following output:</span></span>  
   
 ```  
 1  
@@ -45,10 +45,10 @@ foreach (XElement el in c1)
 3  
 ```  
   
-## <a name="example"></a><span data-ttu-id="e14d1-111">範例</span><span class="sxs-lookup"><span data-stu-id="e14d1-111">Example</span></span>  
- <span data-ttu-id="e14d1-112">在 C# 中，不論您要針對使用具有前置詞之命名空間的 XML 樹狀，還是針對具有預設命名空間的 XML 樹狀撰寫查詢，查詢的撰寫方式都相同。</span><span class="sxs-lookup"><span data-stu-id="e14d1-112">In C#, you write queries in the same way regardless of whether you are writing queries on an XML tree that uses a namespace with a prefix or on an XML tree with a default namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="10b72-111">範例</span><span class="sxs-lookup"><span data-stu-id="10b72-111">Example</span></span>  
+ <span data-ttu-id="10b72-112">在 C# 中，不論您要針對使用具有前置詞之命名空間的 XML 樹狀，還是針對具有預設命名空間的 XML 樹狀撰寫查詢，查詢的撰寫方式都相同。</span><span class="sxs-lookup"><span data-stu-id="10b72-112">In C#, you write queries in the same way regardless of whether you are writing queries on an XML tree that uses a namespace with a prefix or on an XML tree with a default namespace.</span></span>  
   
- <span data-ttu-id="e14d1-113">下列範例會建立位於命名空間中，具有前置詞的 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="e14d1-113">The following example creates an XML tree that is in a namespace with a prefix.</span></span> <span data-ttu-id="e14d1-114">接著，它會擷取項目的集合。</span><span class="sxs-lookup"><span data-stu-id="e14d1-114">It then retrieves a collection of elements.</span></span>  
+ <span data-ttu-id="10b72-113">下列範例會建立位於命名空間中，具有前置詞的 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="10b72-113">The following example creates an XML tree that is in a namespace with a prefix.</span></span> <span data-ttu-id="10b72-114">接著，它會擷取項目的集合。</span><span class="sxs-lookup"><span data-stu-id="10b72-114">It then retrieves a collection of elements.</span></span>  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -68,7 +68,7 @@ foreach (XElement el in c1)
     Console.WriteLine((int)el);  
 ```  
   
- <span data-ttu-id="e14d1-115">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="e14d1-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="10b72-115">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="10b72-115">This example produces the following output:</span></span>  
   
 ```  
 1  
@@ -76,6 +76,6 @@ foreach (XElement el in c1)
 3  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e14d1-116">請參閱</span><span class="sxs-lookup"><span data-stu-id="e14d1-116">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10b72-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="10b72-116">See also</span></span>
 
-- [<span data-ttu-id="e14d1-117">處理 XML 命名空間 (C#)</span><span class="sxs-lookup"><span data-stu-id="e14d1-117">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [<span data-ttu-id="10b72-117">處理 XML 命名空間 (C#)</span><span class="sxs-lookup"><span data-stu-id="10b72-117">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

@@ -1,20 +1,20 @@
 ---
-title: 如何：使用群組將檔案分割成許多檔案 (LINQ) (C#)
+title: HOW TO：使用群組將檔案分割成許多檔案 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: d0dd742f599a6acee4928239aab79cc7b1b66d4b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bba3cf5e1e6d4aa7b88ddbb7f3454be511982f74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626043"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="c6ad2-102">如何：使用群組將檔案分割成許多檔案 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c6ad2-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
-<span data-ttu-id="c6ad2-103">此範例示範如何合併兩個檔案的內容，然後建立一組以新方法組織資料的新檔案。</span><span class="sxs-lookup"><span data-stu-id="c6ad2-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="2bf86-102">HOW TO：使用群組將檔案分割成許多檔案 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="2bf86-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
+<span data-ttu-id="2bf86-103">此範例示範如何合併兩個檔案的內容，然後建立一組以新方法組織資料的新檔案。</span><span class="sxs-lookup"><span data-stu-id="2bf86-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="c6ad2-104">建立資料檔</span><span class="sxs-lookup"><span data-stu-id="c6ad2-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="2bf86-104">建立資料檔</span><span class="sxs-lookup"><span data-stu-id="2bf86-104">To create the data files</span></span>  
   
-1.  <span data-ttu-id="c6ad2-105">將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：</span><span class="sxs-lookup"><span data-stu-id="c6ad2-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1.  <span data-ttu-id="2bf86-105">將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：</span><span class="sxs-lookup"><span data-stu-id="2bf86-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "43512249"
     Garcia, Debra  
     ```  
   
-2.  <span data-ttu-id="c6ad2-106">將下列名稱複製到名為 names2.txt 的文字檔，並將它儲至專案資料夾：請注意，這兩個檔案中有些名稱是相同的。</span><span class="sxs-lookup"><span data-stu-id="c6ad2-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
+2.  <span data-ttu-id="2bf86-106">將下列名稱複製到名為 names2.txt 的文字檔，並將它儲存至專案資料夾：請注意兩個檔案有部分名稱相同。</span><span class="sxs-lookup"><span data-stu-id="2bf86-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -44,7 +44,7 @@ ms.locfileid: "43512249"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="c6ad2-107">範例</span><span class="sxs-lookup"><span data-stu-id="c6ad2-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2bf86-107">範例</span><span class="sxs-lookup"><span data-stu-id="2bf86-107">Example</span></span>  
   
 ```csharp  
 class SplitWithGroups  
@@ -122,13 +122,13 @@ class SplitWithGroups
  */  
 ```  
   
- <span data-ttu-id="c6ad2-108">此程式會在與資料檔相同的資料夾中，寫入每個群組的個別檔案。</span><span class="sxs-lookup"><span data-stu-id="c6ad2-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
+ <span data-ttu-id="2bf86-108">此程式會在與資料檔相同的資料夾中，寫入每個群組的個別檔案。</span><span class="sxs-lookup"><span data-stu-id="2bf86-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c6ad2-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="c6ad2-109">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="2bf86-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="2bf86-109">Compiling the Code</span></span>
 
- <span data-ttu-id="c6ad2-110">建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="c6ad2-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+ <span data-ttu-id="2bf86-110">建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="2bf86-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6ad2-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="c6ad2-111">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2bf86-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2bf86-111">See also</span></span>
 
-- [<span data-ttu-id="c6ad2-112">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="c6ad2-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [<span data-ttu-id="c6ad2-113">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="c6ad2-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="2bf86-112">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="2bf86-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="2bf86-113">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="2bf86-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

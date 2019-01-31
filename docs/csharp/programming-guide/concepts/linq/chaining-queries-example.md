@@ -2,18 +2,18 @@
 title: 鏈結查詢範例 (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 864d7ed34957defdedf21ccb1671d49c48913d88
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b77de6b1e5bd81ac70165640aecf0d4ce89be03d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739922"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677340"
 ---
-# <a name="chaining-queries-example-c"></a><span data-ttu-id="69f81-102">鏈結查詢範例 (C#)</span><span class="sxs-lookup"><span data-stu-id="69f81-102">Chaining Queries Example (C#)</span></span>
-<span data-ttu-id="69f81-103">這個範例會在先前的範例上建置，然後在將同時使用延後執行與延遲評估的兩個查詢鏈結在一起時，顯示發生什麼狀況。</span><span class="sxs-lookup"><span data-stu-id="69f81-103">This example builds on the previous example and shows what happens when you chain together two queries that both use deferred execution and lazy evaluation.</span></span>  
+# <a name="chaining-queries-example-c"></a><span data-ttu-id="32718-102">鏈結查詢範例 (C#)</span><span class="sxs-lookup"><span data-stu-id="32718-102">Chaining Queries Example (C#)</span></span>
+<span data-ttu-id="32718-103">這個範例會在先前的範例上建置，然後在將同時使用延後執行與延遲評估的兩個查詢鏈結在一起時，顯示發生什麼狀況。</span><span class="sxs-lookup"><span data-stu-id="32718-103">This example builds on the previous example and shows what happens when you chain together two queries that both use deferred execution and lazy evaluation.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="69f81-104">範例</span><span class="sxs-lookup"><span data-stu-id="69f81-104">Example</span></span>  
- <span data-ttu-id="69f81-105">在此範例中，會介紹另一個擴充方法 `AppendString`，這個擴充方法會將指定的字串附加到來源集合中的每個字串，然後產生新的字串。</span><span class="sxs-lookup"><span data-stu-id="69f81-105">In this example, another extension method is introduced, `AppendString`, which appends a specified string onto every string in the source collection, and then yields the new strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="32718-104">範例</span><span class="sxs-lookup"><span data-stu-id="32718-104">Example</span></span>  
+ <span data-ttu-id="32718-105">在此範例中，會介紹另一個擴充方法 `AppendString`，這個擴充方法會將指定的字串附加到來源集合中的每個字串，然後產生新的字串。</span><span class="sxs-lookup"><span data-stu-id="32718-105">In this example, another extension method is introduced, `AppendString`, which appends a specified string onto every string in the source collection, and then yields the new strings.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -62,7 +62,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="69f81-106">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="69f81-106">This example produces the following output:</span></span>  
+ <span data-ttu-id="32718-106">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="32718-106">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source >abc<  
@@ -78,14 +78,14 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- <span data-ttu-id="69f81-107">在此範例中，您可以看到每個擴充方法會針對來源集合中的每個項目，一次運算一個。</span><span class="sxs-lookup"><span data-stu-id="69f81-107">In this example, you can see that each extension method operates one at a time for each item in the source collection.</span></span>  
+ <span data-ttu-id="32718-107">在此範例中，您可以看到每個擴充方法會針對來源集合中的每個項目，一次運算一個。</span><span class="sxs-lookup"><span data-stu-id="32718-107">In this example, you can see that each extension method operates one at a time for each item in the source collection.</span></span>  
   
- <span data-ttu-id="69f81-108">從這個範例應該清楚知道的是，即使我們已經將產生集合的查詢鏈結在一起，還是不會具體化任何中繼集合。</span><span class="sxs-lookup"><span data-stu-id="69f81-108">What should be clear from this example is that even though we have chained together queries that yield collections, no intermediate collections are materialized.</span></span> <span data-ttu-id="69f81-109">但是，每個項目都會從一個延遲方法傳遞到下一個延遲方法。</span><span class="sxs-lookup"><span data-stu-id="69f81-109">Instead, each item is passed from one lazy method to the next.</span></span> <span data-ttu-id="69f81-110">這會使記憶體使用量比先取得一個字串陣列，然後建立已經轉換為大寫的另一個字串陣列，最後建立每個字串都已經附加驚嘆號的第三個字串陣列這種方法小很多。</span><span class="sxs-lookup"><span data-stu-id="69f81-110">This results in a much smaller memory footprint than an approach that would first take one array of strings, then create a second array of strings that have been converted to uppercase, and finally create a third array of strings where each string has the exclamation points appended to it.</span></span>  
+ <span data-ttu-id="32718-108">從這個範例應該清楚知道的是，即使我們已經將產生集合的查詢鏈結在一起，還是不會具體化任何中繼集合。</span><span class="sxs-lookup"><span data-stu-id="32718-108">What should be clear from this example is that even though we have chained together queries that yield collections, no intermediate collections are materialized.</span></span> <span data-ttu-id="32718-109">但是，每個項目都會從一個延遲方法傳遞到下一個延遲方法。</span><span class="sxs-lookup"><span data-stu-id="32718-109">Instead, each item is passed from one lazy method to the next.</span></span> <span data-ttu-id="32718-110">這會使記憶體使用量比先取得一個字串陣列，然後建立已經轉換為大寫的另一個字串陣列，最後建立每個字串都已經附加驚嘆號的第三個字串陣列這種方法小很多。</span><span class="sxs-lookup"><span data-stu-id="32718-110">This results in a much smaller memory footprint than an approach that would first take one array of strings, then create a second array of strings that have been converted to uppercase, and finally create a third array of strings where each string has the exclamation points appended to it.</span></span>  
   
- <span data-ttu-id="69f81-111">本教學課程中的下一個主題說明中繼具體化：</span><span class="sxs-lookup"><span data-stu-id="69f81-111">The next topic in this tutorial illustrates intermediate materialization:</span></span>  
+ <span data-ttu-id="32718-111">本教學課程中的下一個主題說明中繼具體化：</span><span class="sxs-lookup"><span data-stu-id="32718-111">The next topic in this tutorial illustrates intermediate materialization:</span></span>  
   
--   [<span data-ttu-id="69f81-112">中繼具體化 (C#)</span><span class="sxs-lookup"><span data-stu-id="69f81-112">Intermediate Materialization (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+-   [<span data-ttu-id="32718-112">中繼具體化 (C#)</span><span class="sxs-lookup"><span data-stu-id="32718-112">Intermediate Materialization (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
-## <a name="see-also"></a><span data-ttu-id="69f81-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="69f81-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32718-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="32718-113">See also</span></span>
 
-- [<span data-ttu-id="69f81-114">教學課程：將查詢鏈結在一起 (C#)</span><span class="sxs-lookup"><span data-stu-id="69f81-114">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [<span data-ttu-id="32718-114">教學課程：將查詢鏈結在一起 (C#)</span><span class="sxs-lookup"><span data-stu-id="32718-114">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
