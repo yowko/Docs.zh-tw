@@ -1,5 +1,5 @@
 ---
-title: 運算式遞迴呼叫包含的屬性&#39; &lt;propertyname&gt;&#39;
+title: 運算式會遞迴地呼叫包含的屬性 '<propertyname>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42026
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 88dbecfe6e63248e07b3fdb9102a5cbba4b1b628
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9382c6b6850036f3ca3795f0aa80f49b892c0a5e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553070"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259757"
 ---
-# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>運算式遞迴呼叫包含的屬性&#39; &lt;propertyname&gt;&#39;
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>運算式遞迴呼叫包含的屬性 '\<屬性名稱 >'
 中的陳述式`Set`屬性定義的程序會將值儲存至屬性的名稱。  
   
  保留的屬性值的建議的方法是定義`Private`屬性的容器中的變數，並用它在這兩`Get`和`Set`程序。 `Set`程序應該再儲存輸入的值，在這個`Private`變數。  

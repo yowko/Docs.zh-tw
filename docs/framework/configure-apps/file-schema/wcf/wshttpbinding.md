@@ -1,17 +1,17 @@
 ---
-title: '&lt;wsHttpBinding&gt;'
+title: <wsHttpBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: d60e8990dcc20e99409e5d55fdca11d2dce03c7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83cad6af4d00f04cd53e5e4b064fe768647956d1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583650"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277754"
 ---
-# <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
+# <a name="wshttpbinding"></a>\<wsHttpBinding>
 為非雙工服務合約定義安全、可靠且互通的繫結。 繫結會實作下列規格：Ws-reliable 訊息用於可靠性以及 Ws-security 用於訊息安全性和驗證。 傳輸是 HTTP，而訊息編碼是 Text/XML 編碼。  
   
  \<system.ServiceModel>  

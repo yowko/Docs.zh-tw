@@ -1,15 +1,15 @@
 ---
-title: '&lt;issuedTokenParameters&gt; 的 &lt;issuer&gt;'
+title: <issuer> 的 <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: d6a95f32-d58c-40fc-8658-dd92564d3c90
-ms.openlocfilehash: 58fdd93eb4f69e48783873df26bf1c35a2a849e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 411fd1addb41822043d72de1edffee9f8733bc08
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539151"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256637"
 ---
-# <a name="ltissuergt-of-ltissuedtokenparametersgt"></a>&lt;issuedTokenParameters&gt; 的 &lt;issuer&gt;
+# <a name="issuer-of-issuedtokenparameters"></a>\<issuer> of \<issuedTokenParameters>
 指定發行安全性權杖的安全性權杖服務 (STS)。  
   
  \<system.serviceModel>  

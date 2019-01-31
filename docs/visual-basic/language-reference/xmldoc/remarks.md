@@ -1,18 +1,18 @@
 ---
-title: '&lt;備註&gt;(Visual Basic)'
+title: <remarks> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: 137e2fcd36d5d7618e0193461ebf7ca70b24d19f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7125f6079811421bc5a7abdce2e13d591a299630
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737646"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269324"
 ---
-# <a name="ltremarksgt-visual-basic"></a>&lt;備註&gt;(Visual Basic)
+# <a name="remarks-visual-basic"></a>\<備註 > (Visual Basic)
 指定成員的 < 備註 > 一節。  
   
 ## <a name="syntax"></a>語法  

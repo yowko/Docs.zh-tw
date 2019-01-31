@@ -1,19 +1,19 @@
 ---
-title: '&lt;system.xml.serialization&gt; 元素'
+title: <system.xml.serialization> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - system.xml.serialization element
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: 8b85eef0f2c3bbb2d0d4a5548f5cbb4a66b0431d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f41e3811fc6bab8a354f75f46b0ac79c0ce42f99
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609560"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288687"
 ---
-# <a name="ltsystemxmlserializationgt-element"></a>&lt;system.xml.serialization&gt; 元素
+# <a name="systemxmlserialization-element"></a>\<system.xml.serialization > 項目
 用來控制 XML 序列化的最上層項目。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)。  
   
  \<configuration>  

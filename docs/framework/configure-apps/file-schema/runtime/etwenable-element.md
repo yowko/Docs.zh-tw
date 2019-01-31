@@ -1,5 +1,5 @@
 ---
-title: '&lt;etwEnable&gt;項目'
+title: <etwEnable> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - etwEnable element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 788eee71c718c003110ad8242505f2d7868e836c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd6d6d9e192fdf43ba9436cda54920bdeba9ab64
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506923"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279171"
 ---
-# <a name="ltetwenablegt-element"></a>&lt;etwEnable&gt;項目
+# <a name="etwenable-element"></a>\<etwEnable > 項目
 指定是否為通用語言執行平台事件啟用 Windows 事件追蹤 (ETW)。  
   
  \<組態 > 項目  

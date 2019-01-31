@@ -1,15 +1,15 @@
 ---
-title: '&lt;wsFederationHttpBinding&gt; 的 &lt;security&gt;'
+title: <security> 的 <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 288b907fbc72adea87fddf5d27623c004dbe8af9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5316060d4122a443dd0223ce1ee9cdd39efac0b8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642629"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282057"
 ---
-# <a name="ltsecuritygt-of-ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt; 的 &lt;security&gt;
+# <a name="security-of-wsfederationhttpbinding"></a>\<security> of \<wsFederationHttpBinding>
 定義的安全性設定[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
  \<system.ServiceModel>  

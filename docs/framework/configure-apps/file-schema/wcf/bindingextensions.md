@@ -1,15 +1,15 @@
 ---
-title: '&lt;bindingExtensions&gt;'
+title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: 2b0e3fe417d76a08b7dd3295b68a179c3d9acefc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6eed4e8c549bccb06d8d425b084554a2ec7a1183
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672885"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272756"
 ---
-# <a name="ltbindingextensionsgt"></a>&lt;bindingExtensions&gt;
+# <a name="bindingextensions"></a>\<bindingExtensions>
 這個區段會啟用電腦或應用程式組態檔中使用者定義繫結的使用。 您可以透過使用 `add` 關鍵字，將項目的 `type` 屬性設定為使用者定義繫結，並將 `name` 屬性設定為使用者定義繫結的名稱，來將使用者定義繫結加入至這個集合。  
   
  繫結延伸可讓使用者建立使用者定義繫結，做為端點組態的一部分。 就程式設計角度而言，繫結延伸是實作抽象類別 (Abstract Class) <xref:System.ServiceModel.Channels.Binding> 的型別。  

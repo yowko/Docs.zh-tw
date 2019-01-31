@@ -1,16 +1,16 @@
 ---
-title: '&lt;customCookieHandler&gt;'
+title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: a3d032279d0b568d7072dbbe020344365c341c1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 752b1188fccb6f09cdcab6a50653abf26e8e2a53
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724014"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288180"
 ---
-# <a name="ltcustomcookiehandlergt"></a>&lt;customCookieHandler&gt;
+# <a name="customcookiehandler"></a>\<customCookieHandler>
 設定自訂 cookie 處理常式型別。 這個項目只會出現如果`mode`屬性的`<cookieHandler>`項目是 「 自訂 」。 自訂型別必須衍生自<xref:System.IdentityModel.Services.CookieHandler>類別。  
   
  \<system.identityModel.services>  

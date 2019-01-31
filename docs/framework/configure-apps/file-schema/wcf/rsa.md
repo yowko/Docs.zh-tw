@@ -1,15 +1,15 @@
 ---
-title: '&lt;rsa&gt;'
+title: <rsa>
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-ms.openlocfilehash: 74da1e2ae02f151f928afec24d6af3adf703bdcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 126a6923469580d2d9481ab4b999560d9beda398
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612783"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273565"
 ---
-# <a name="ltrsagt"></a>&lt;rsa&gt;
+# <a name="rsa"></a>\<rsa>
 使用這個身分識別連接至端點的安全 WCF 用戶端，將確認伺服器提供的宣告是否包含用來建構這個身分識別之 RSA 公開金鑰的宣告。  
   
  \<identity>  

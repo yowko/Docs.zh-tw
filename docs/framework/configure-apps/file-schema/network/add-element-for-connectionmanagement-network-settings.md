@@ -1,5 +1,5 @@
 ---
-title: '&lt;新增&gt;connectionManagement （網路設定） 的項目'
+title: connectionManagement 的 <add> 項目 (網路設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 32b84412edf2d7c9943391909659dc91d8060cc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7a4cfe952a32c859a113f0903696fec3681f800
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625743"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267614"
 ---
-# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;新增&gt;connectionManagement （網路設定） 的項目
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<新增 > connectionManagement （網路設定） 的項目
 將 IP 位址或 DNS 名稱加入連線管理清單中。  
   
  \<configuration>  

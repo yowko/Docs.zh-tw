@@ -1,5 +1,5 @@
 ---
-title: '&lt;appDomainResourceMonitoring&gt;項目'
+title: <appDomainResourceMonitoring> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - appDomainResourceMonitoring element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc507d0cf81bf2bc11edfc0b5efb08c462726b88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d085fe8b9cf11e2f195468a93b3fa9b3f0817503
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727868"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286555"
 ---
-# <a name="ltappdomainresourcemonitoringgt-element"></a>&lt;appDomainResourceMonitoring&gt;項目
+# <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > 項目
 針對處理序存留期間，指示執行階段收集處理序中所有應用程式網域的統計資料。  
   
  \<configuration>  

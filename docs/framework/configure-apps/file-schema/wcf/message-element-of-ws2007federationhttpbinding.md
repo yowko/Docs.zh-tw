@@ -1,15 +1,15 @@
 ---
-title: '&lt;ws2007FederationHttpBinding&gt; 的 &lt;message&gt; 項目'
+title: <message> 的 <ws2007FederationHttpBinding> 項目
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: 280d92978dba44d3347699959fb2cab3b98faca1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9150b6f1ab821f7d062f389c3dbd7fa9119fd0db
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493803"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289701"
 ---
-# <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt; 的 &lt;message&gt; 項目
+# <a name="message-element-of-ws2007federationhttpbinding"></a>\<訊息 > 項目\<ws2007FederationHttpBinding >
 定義訊息層級安全性設定[ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)項目。  
   
  \<system.ServiceModel>  

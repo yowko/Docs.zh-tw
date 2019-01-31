@@ -1,15 +1,15 @@
 ---
-title: '&lt;netHttpsBinding&gt;'
+title: <netHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: ef3e77e610230ea29d1ba410d38bfa2dade601b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82d1d68a8d6c4954b47509db2adaf88f88ae625d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554253"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275778"
 ---
-# <a name="ltnethttpsbindinggt"></a>&lt;netHttpsBinding&gt;
+# <a name="nethttpsbinding"></a>\<netHttpsBinding>
 表示 Windows Communication Foundation (WCF) 服務可用來設定和公開能夠透過 HTTPS 進行通訊之端點的繫結。 與雙工合約搭配使用時，將會使用 Web 通訊端，否則使用 HTTPS。  
   
  根項目  

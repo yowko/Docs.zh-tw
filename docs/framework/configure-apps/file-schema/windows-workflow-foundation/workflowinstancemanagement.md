@@ -1,16 +1,16 @@
 ---
-title: '&lt;workflowInstanceManagement&gt;'
+title: <workflowInstanceManagement>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 63ac89ba-c844-4ae2-96ae-cd752a90a109
-ms.openlocfilehash: ba3d9415efc21012b470fd2e9a7f426ca8f3aad1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baa1ccbe0accd2db701fac9ef53cdc6357713c5d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662058"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257417"
 ---
-# <a name="ltworkflowinstancemanagementgt"></a>&lt;workflowInstanceManagement&gt;
+# <a name="workflowinstancemanagement"></a>\<workflowInstanceManagement>
 可讓您指定設定的服務行為，這些設定會控制工作流程執行個體的執行方式，包括持續性、未處理的例外狀況行為和閒置行為。  
   
 \<system.ServiceModel>  

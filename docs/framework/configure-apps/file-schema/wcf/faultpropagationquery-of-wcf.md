@@ -1,15 +1,15 @@
 ---
-title: WCF 的 &lt;faultPropagationQuery&gt;
+title: <faultPropagationQuery> WCF 的
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: 1da2a95d27756296aab5a205a90fb028508c4b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1670f8fdf72bc202a4a595034f3818ab43b11be6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601801"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276051"
 ---
-# <a name="ltfaultpropagationquerygt-of-wcf"></a>WCF 的 &lt;faultPropagationQuery&gt;
+# <a name="faultpropagationquery-of-wcf"></a>\<faultPropagationQuery > 的 WCF
 
 表示用來追蹤活動中發生之錯誤處理的查詢。  每當 FaultHandler 處理錯誤時，都會發生這個事件。 您應該使用這種查詢來追蹤活動中發生的錯誤處理。 追蹤參與者必須要具備查詢，才能訂閱錯誤傳播記錄。  
   

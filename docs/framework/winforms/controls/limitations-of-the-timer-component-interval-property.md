@@ -1,5 +1,5 @@
 ---
-title: Windows Form Timer 元件的限制&#39;s [間隔] 屬性
+title: Windows Form Timer 元件的 Interval 屬性限制
 ms.date: 03/30/2017
 helpviewer_keywords:
 - timers [Windows Forms], event intervals
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: 86cfcce65998d19aea8592ae33c5baf58e1ff0fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d8e25d9d27c0908f2d794a0c3c9646024984764
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516950"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269665"
 ---
-# <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>Windows Form Timer 元件的限制&#39;s [間隔] 屬性
+# <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Windows Form Timer 元件的 Interval 屬性限制
 Windows Forms<xref:System.Windows.Forms.Timer>元件有<xref:System.Windows.Forms.Timer.Interval%2A>屬性，指定一個計時器事件和下一步 之間傳遞的毫秒數。 除非已停用元件，計時器會繼續接收<xref:System.Windows.Forms.Timer.Tick>大致相等間隔的時間的事件。  
   
  這個元件是專為 Windows Form 環境所設計。 如果您需要適用於伺服器環境的計時器，請參閱[伺服器架構的計時器簡介](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。  

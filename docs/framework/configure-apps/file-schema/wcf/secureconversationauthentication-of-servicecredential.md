@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceCredential&gt; 的 &lt;secureConversationAuthentication&gt;'
+title: <secureConversationAuthentication> 的 <serviceCredential>
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
-ms.openlocfilehash: 11ce6dcd2f075606cf808992edb99328daec3fba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13e9312e4c4eade003fec77909a743009aa9bca7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696410"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278521"
 ---
-# <a name="ltsecureconversationauthenticationgt-of-ltservicecredentialgt"></a>&lt;serviceCredential&gt; 的 &lt;secureConversationAuthentication&gt;
+# <a name="secureconversationauthentication-of-servicecredential"></a>\<secureConversationAuthentication> of \<serviceCredential>
 指定安全對話服務的設定。  
   
  \<system.ServiceModel>  

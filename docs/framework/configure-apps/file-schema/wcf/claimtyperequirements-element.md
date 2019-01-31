@@ -1,15 +1,15 @@
 ---
-title: '&lt;claimTypeRequirements&gt; 項目'
+title: <claimTypeRequirements> 項目
 ms.date: 03/30/2017
 ms.assetid: a26efe73-4bad-4731-8cad-27f00d54354b
-ms.openlocfilehash: 32eafa3ce235b2087012bd5810a685ad5276e09d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95cc1adf7ab37475e8d3eeb01750531a7f8ab249
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632879"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279626"
 ---
-# <a name="ltclaimtyperequirementsgt-element"></a>&lt;claimTypeRequirements&gt; 項目
+# <a name="claimtyperequirements-element"></a>\<claimTypeRequirements > 項目
 指定必要宣告型別的集合。  
   
  在聯合案例中，服務會聲明對傳入認證的需求。 例如，傳入認證必須處理特定的一組宣告型別。 這個集合中的每一個子項目都會指定要顯示在聯合認證中的必要和選擇性宣告型別。  

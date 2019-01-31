@@ -1,21 +1,21 @@
 ---
-title: '&lt;claimsAuthenticationManager&gt;'
+title: <claimsAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
-ms.openlocfilehash: b0cee2fedb5f90ca2a1f7e379e199cfee66ee745
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ecf26263bf47e8b4609e7adc208f0a59a2fa795b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190966"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255181"
 ---
-# <a name="ltclaimsauthenticationmanagergt"></a>&lt;claimsAuthenticationManager&gt;
+# <a name="claimsauthenticationmanager"></a>\<claimsAuthenticationManager>
 註冊的連入宣告的宣告驗證管理員。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<claimsAuthenticationManager >  
+\<claimsAuthenticationManager>  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +45,7 @@ ms.locfileid: "50190966"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
   
 ## <a name="remarks"></a>備註  
  透過所提供的預設行為<xref:System.Security.Claims.ClaimsAuthenticationManager>類別回應連入宣告。 如果沒有`type`指定屬性或如果`type`屬性會指定<xref:System.Security.Claims.ClaimsAuthenticationManager>類別，`<claimsAuthenticationManager>`項目未採用子元素。 您可以指定`type`屬性來註冊型別衍生自<xref:System.Security.Claims.ClaimsAuthenticationManager>類別來實作自訂行為。 在衍生的類別可支援透過子項目的設定`<claimsAuthenticationManager>`藉由覆寫的項目<xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A>方法來處理這些項目。 子項目定義的結構描述是由設計工具的類別。  

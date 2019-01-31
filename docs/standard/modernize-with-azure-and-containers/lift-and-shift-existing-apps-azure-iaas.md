@@ -4,12 +4,12 @@ description: 現代化現有的.NET 應用程式與 Azure 雲端和 Windows 容�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a6c13ba5bfd28cec87df1c021ed1f303d7d1f4f5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2b987d43f476f261bfdbd1b2af6ca7f792178cf8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154381"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266620"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>撤銷並轉移現有的.NET 應用程式至 Azure IaaS （雲端基礎結構就緒）
 
@@ -83,13 +83,17 @@ Site Recovery 也會針對混合式環境的部分在內部部署和部分在 Az
 
 ### <a name="additional-resources"></a>其他資源
 
-- **Azure Migrate 資料工作表**
+- **Azure Migrate Datasheet**
 
     [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
 - **Azure Migrate**
 
-    [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
+    [https://aka.ms/azuremigrate](https://aka.ms/azuremigrate)
+
+- **Azure 移轉中心**
+
+    [https://azure.microsoft.com/migration/](https://azure.microsoft.com/migration/)
 
 - **使用 Site Recovery 移轉至 Azure**
 

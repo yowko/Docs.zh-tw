@@ -1,5 +1,5 @@
 ---
-title: 不能參考&#39;&lt;名稱&gt;&#39;因為它是實值類型欄位的成員&#39;&lt;名稱&gt;&#39;類別的&#39; &lt;classname&gt; &#39;具有&#39;System.MarshalByRefObject&#39;做為基底類別
+title: 無法參考至 '<name>'，因為它是類別 '<name>' 的實值類型欄位 '<classname>' 的成員，它把 'System.MarshalByRefObject' 當做基底類別
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30310
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30310
 ms.assetid: 2aeb8872-7c87-4f01-98ef-9714ba3eebbe
-ms.openlocfilehash: a6298c3e0f5102397d5cc3f237a186598c6b5ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c29d3def2299dc1d7e3b084b3408b3f919addc63
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739293"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279577"
 ---
-# <a name="cannot-refer-to-39ltnamegt39-because-it-is-a-member-of-the-value-typed-field-39ltnamegt39-of-class-39ltclassnamegt39-which-has-39systemmarshalbyrefobject39-as-a-base-class"></a>不能參考&#39;&lt;名稱&gt;&#39;因為它是實值類型欄位的成員&#39;&lt;名稱&gt;&#39;類別的&#39; &lt;classname&gt; &#39;具有&#39;System.MarshalByRefObject&#39;做為基底類別
+# <a name="cannot-refer-to-name-because-it-is-a-member-of-the-value-typed-field-name-of-class-classname-which-has-systemmarshalbyrefobject-as-a-base-class"></a>無法參考 '\<名稱 >' 因為它是實值類型欄位的成員'\<名稱 >' 的類別\<類別名稱 >' 'system.marshalbyrefobject' 當做基底類別
 `System.MarshalByRefObject`類別可讓您跨應用程式定義域界限支援遠端物件的存取權的應用程式。 類型必須繼承自`MarshalByRejectObject`類別，在跨應用程式定義域界限使用的型別。 因為物件的成員不是他們所建立的應用程式定義域外使用，必須不會複製物件的狀態。  
   
  **錯誤 ID:** BC30310  

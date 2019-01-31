@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceCredentials&gt; 的 &lt;clientCertificate&gt;'
+title: <clientCertificate> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
-ms.openlocfilehash: e1334e42149de29c4fc7534863f02ede93c638ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aceb30b6354bac5c327a5f4367344e5c9608b689
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536824"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286893"
 ---
-# <a name="ltclientcertificategt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;clientCertificate&gt;
+# <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate> of \<serviceCredentials>
 定義雙工通訊模式中，用來簽署與加密服務至用戶端之訊息的 X.509 憑證。  
   
  \<system.ServiceModel>  

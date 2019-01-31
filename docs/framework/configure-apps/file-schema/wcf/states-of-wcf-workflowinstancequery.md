@@ -1,15 +1,15 @@
 ---
-title: WCF 的 &lt;states&gt;、&lt;workflowInstanceQuery&gt;
+title: <states> WCF 的 <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: 56e3c6ce5c86e468c9a4dd63021264703ab75b02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fad6f9c8871f79e4a1e26c893eed86ba168f6d01
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540815"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281459"
 ---
-# <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a>WCF 的 &lt;states&gt;、&lt;workflowInstanceQuery&gt;
+# <a name="states-of-wcf-workflowinstancequery"></a>\<狀態 > 的 WCF， \<workflowInstanceQuery >
 
 表示建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。  
   

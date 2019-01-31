@@ -1,5 +1,5 @@
 ---
-title: '&lt;developmentMode&gt;項目'
+title: <developmentMode> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/developmentMode
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f6a48a055d98a2f0b379df612da4e8fd49f3987
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 323bc5d18860c00609a92e33f4a2bd2c832b05a9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669090"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290065"
 ---
-# <a name="ltdevelopmentmodegt-element"></a>&lt;developmentMode&gt;項目
+# <a name="developmentmode-element"></a>\<developmentMode > 項目
 指定執行階段是否要在 DEVPATH 環境變數所指定的目錄中搜尋組件。  
   
  \<configuration>  

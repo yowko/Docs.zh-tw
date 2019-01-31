@@ -1,25 +1,25 @@
 ---
-title: WCF 的 &lt;activityStateQuery&gt;
+title: <activityStateQuery> WCF 的
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: 6d55a53a6344922cee0d42c26102d5f0bbf46f67
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 97fce512415ad6ae165b29c7e8eff3394d5e675a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151784"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254791"
 ---
-# <a name="ltactivitystatequerygt-of-wcf"></a>WCF 的 &lt;activityStateQuery&gt;
+# <a name="activitystatequery-of-wcf"></a>\<activityStateQuery > 的 WCF
 
 代表查詢，可用來追蹤活動的生命週期之變更，這些活動將構成工作流程執行個體。 例如，您可能要追蹤的每次在 「 傳送電子郵件 」 活動完成的工作流程執行個體內。 追蹤參與者必須要具備這個查詢，才能訂閱活動狀態記錄物件。 可供訂閱的狀態可於 ActivityStates 中指定。  
   
 如需有關追蹤設定檔查詢的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。
 
-\<system.serviceModel >\<追蹤 >  
-\<設定檔 > \<trackingProfile >  
-\<工作流程 >  
-\<activityStateQueries >  
-\<activityStateQuery >  
+\<system.serviceModel> \<tracking>  
+\<profiles> \<trackingProfile>  
+\<workflow>  
+\<activityStateQueries>  
+\<activityStateQuery>  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,15 +61,15 @@ ms.locfileid: "54151784"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<引數 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|與此活動查詢相關聯之引數的集合。|  
-|[\<狀態 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|組態元素的集合，其中包含應該發出追蹤記錄之已訂閱活動的狀態。|  
-|[\<狀態 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|與此活動查詢相關聯之變數的集合。|  
+|[\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|與此活動查詢相關聯之引數的集合。|  
+|[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|組態元素的集合，其中包含應該發出追蹤記錄之已訂閱活動的狀態。|  
+|[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|與此活動查詢相關聯之變數的集合。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|代表組態項目的清單，這個清單可用來追蹤由父活動取消子活動的要求。 追蹤參與者必須要具備這個查詢，才能訂閱取消要求記錄物件。|  
+|[\<faultPropagationQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|代表組態項目的清單，這個清單可用來追蹤由父活動取消子活動的要求。 追蹤參與者必須要具備這個查詢，才能訂閱取消要求記錄物件。|  
   
 ## <a name="remarks"></a>備註
 

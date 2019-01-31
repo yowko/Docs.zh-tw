@@ -1,19 +1,19 @@
 ---
-title: 選項&lt;關鍵字&gt;陳述式 (Visual Basic)
+title: 選項<keyword>陳述式 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: 5c0323dac2f1f3faf5c6952d92014c4bfca35166
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29b2602664387ee233574686440691d2f4da830b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678222"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279158"
 ---
-# <a name="option-ltkeywordgt-statement"></a>選項&lt;關鍵字&gt;陳述式
+# <a name="option-keyword-statement"></a>選項\<關鍵字 > 陳述式
 引進指定套用至整個原始程式檔的編譯器選項的陳述式。  
   
 ## <a name="remarks"></a>備註  

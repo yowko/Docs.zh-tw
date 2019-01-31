@@ -1,17 +1,17 @@
 ---
-title: 方法 '&lt;methodname&gt;' 無法使用呼叫&lt;數目&gt;引數
+title: 方法 '<methodname>' 無法使用呼叫<number>引數
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
-ms.openlocfilehash: 1df83f96b81b1a8399b4b5ee57b378e94c3bfee9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06683cf73c2e01e353b20fe9fb585d2993f37337
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684901"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276519"
 ---
-# <a name="method-ltmethodnamegt-cannot-be-called-with-ltnumbergt-arguments"></a>方法 '&lt;methodname&gt;' 無法使用呼叫&lt;數目&gt;引數
+# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>方法 '\<方法名稱 >' 無法使用呼叫\<數字 > 引數
 方法呼叫包含錯誤的引數數目。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

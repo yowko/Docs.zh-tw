@@ -1,21 +1,21 @@
 ---
-title: '&lt;claimTypeRequired&gt;'
+title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: df4494de6b76943849db2bedef8f43ad894b6bd1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: eafaf253e27db632f17acfce4445a07d18b109aa
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837759"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277445"
 ---
-# <a name="ltclaimtyperequiredgt"></a>&lt;claimTypeRequired&gt;
+# <a name="claimtyperequired"></a>\<claimTypeRequired>
 指定必要的連入安全性權杖的宣告集。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<claimTypeRequired >  
+\<claimTypeRequired>  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,10 +38,10 @@ ms.locfileid: "48837759"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<claimType >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|指定連入安全性權杖的單一選用或必要宣告。|  
+|[\<claimType>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|指定連入安全性權杖的單一選用或必要宣告。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|

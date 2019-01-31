@@ -1,5 +1,5 @@
 ---
-title: '&lt;篩選條件&gt;項目&lt;新增&gt;如&lt;sharedListeners&gt;'
+title: <filter> 的 <add> 適用之 <sharedListeners> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: a811d2ae8112bb1ab9386510fc8435d00f454f85
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 739acedcc83cd207a7ef4c10c220d27695dd713d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083791"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269294"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;篩選條件&gt;項目&lt;新增&gt;如&lt;sharedListeners&gt;
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<篩選條件 > 項目\<新增 > 針對\<sharedListeners >
 將篩選新增至 `sharedListeners` 集合中的接聽項。  
   
  \<configuration>  

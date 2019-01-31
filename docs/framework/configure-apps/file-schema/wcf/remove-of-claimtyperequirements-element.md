@@ -1,15 +1,15 @@
 ---
-title: '&lt;claimTypeRequirements&gt; 項目的 &lt;remove&gt;'
+title: <remove> 項目的 <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: 8ef05bc4-1950-4ee4-95c5-1c6a394eff7e
-ms.openlocfilehash: 33c6b935bb8d39f05e26646d4731ce1459beba81
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8058a90d61d8f94944d98a26c59bfbe225f611d5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702141"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259495"
 ---
-# <a name="ltremovegt-of-ltclaimtyperequirementsgt-element"></a>&lt;claimTypeRequirements&gt; 項目的 &lt;remove&gt;
+# <a name="remove-of-claimtyperequirements-element"></a>\<移除 > 的\<claimTypeRequirements > 項目
 指定聯合認證中要移除的宣告型別。  
   
  \<system.ServiceModel>  

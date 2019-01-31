@@ -1,18 +1,18 @@
 ---
-title: '&lt;清除&gt;項目&lt;namedCaches&gt;'
+title: <clear> 的 <namedCaches> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: d71c5de42104961bc096b786dfe50bb4097bc4fc
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: aaf5c2360b53a1cd6e5775a195c89c96ed6440a3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083557"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288661"
 ---
-# <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;清除&gt;項目&lt;namedCaches&gt;
+# <a name="clear-element-for-namedcaches"></a>\<清除 > 項目\<namedCaches >
 清除所有`namedCache`中的項目`namedCaches`記憶體快取的集合。  
   
  \<system.runtime.caching>  

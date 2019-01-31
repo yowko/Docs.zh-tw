@@ -1,22 +1,22 @@
 ---
-title: '&lt;Securitytokenhandlerconfiguration>&gt;'
+title: <securityTokenHandlerConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
-ms.openlocfilehash: d66771ec7ed52ace52df6bb3bfafdcf9cce989b5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 29e18cdda9e18addef4f0f32fd30e9abf6af78fc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838470"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262883"
 ---
-# <a name="ltsecuritytokenhandlerconfigurationgt"></a>&lt;Securitytokenhandlerconfiguration>&gt;
+# <a name="securitytokenhandlerconfiguration"></a>\<securityTokenHandlerConfiguration>
 提供的權杖處理常式集合的組態。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<Securitytokenhandlerconfiguration> >  
+\<securityTokenHandlerConfiguration>  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,13 +46,13 @@ ms.locfileid: "48838470"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<audienceUris >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|指定是可接受的識別項，此信賴憑證者的合作對象的 Uri 的集合。 選擇性。|  
-|[\<快取 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|註冊用於工作階段權杖和權杖重新執行偵測快取。 可以在服務層級或上指定的安全性權杖處理常式集合。 選擇性。|  
-|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制權杖處理常式用來驗證憑證的設定。 可以在服務層級或上指定的安全性權杖處理常式集合。 如果特定的處理常式設定為使用自己的驗證程式，則會覆寫這些設定。 選擇性。|  
-|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|設定簽發者名稱登錄，可由權杖處理常式集合中的處理常式。 選擇性。|  
-|[\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|註冊由權杖處理常式集合中的處理常式的簽發者權杖解析程式。 簽發者權杖解析程式用來解析簽署的權杖上傳入的權杖和訊息。 選擇性。|  
-|[\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|註冊的服務權杖解析程式由權杖處理常式集合中的處理常式。 服務權杖解析程式用來解析上傳入的權杖和訊息的加密語彙基元。 選擇性。|  
-|[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|啟用權杖重新執行偵測，並指定權杖的到期時間。 可以在服務層級或上指定的安全性權杖處理常式集合。 選擇性。|  
+|[\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|指定是可接受的識別項，此信賴憑證者的合作對象的 Uri 的集合。 選擇性。|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|註冊用於工作階段權杖和權杖重新執行偵測快取。 可以在服務層級或上指定的安全性權杖處理常式集合。 選擇性。|  
+|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制權杖處理常式用來驗證憑證的設定。 可以在服務層級或上指定的安全性權杖處理常式集合。 如果特定的處理常式設定為使用自己的驗證程式，則會覆寫這些設定。 選擇性。|  
+|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|設定簽發者名稱登錄，可由權杖處理常式集合中的處理常式。 選擇性。|  
+|[\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|註冊由權杖處理常式集合中的處理常式的簽發者權杖解析程式。 簽發者權杖解析程式用來解析簽署的權杖上傳入的權杖和訊息。 選擇性。|  
+|[\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|註冊的服務權杖解析程式由權杖處理常式集合中的處理常式。 服務權杖解析程式用來解析上傳入的權杖和訊息的加密語彙基元。 選擇性。|  
+|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|啟用權杖重新執行偵測，並指定權杖的到期時間。 可以在服務層級或上指定的安全性權杖處理常式集合。 選擇性。|  
   
 ### <a name="parent-elements"></a>父項目  
   

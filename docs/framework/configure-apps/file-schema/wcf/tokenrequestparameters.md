@@ -1,15 +1,15 @@
 ---
-title: '&lt;tokenRequestParameters&gt;'
+title: <tokenRequestParameters>
 ms.date: 03/30/2017
 ms.assetid: 1fc2b90c-a61f-4337-ac4c-f341e596a781
-ms.openlocfilehash: fcc8d4123d7dfd8e2252a48e14129a5d84d34758
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69ed16a1ca7ea616867a441c466b7281c76969ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517925"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270897"
 ---
-# <a name="lttokenrequestparametersgt"></a>&lt;tokenRequestParameters&gt;
+# <a name="tokenrequestparameters"></a>\<tokenRequestParameters>
 這個組態項目包含用於指定額外 XML 項目的子項目，在要求權杖時，這些 XML 項目會在訊息本文中傳送給安全性權杖服務。  
   
 ## <a name="see-also"></a>另請參閱

@@ -1,15 +1,15 @@
 ---
-title: '&lt;headers&gt;'
+title: <headers>
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: f47462ba63b9bd8868420ee9d3a320ba18c83c65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c3c3a3d747a1338e2db3afa92c735af4a588642
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557821"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288024"
 ---
-# <a name="ltheadersgt"></a>&lt;headers&gt;
+# <a name="headers"></a>\<headers>
 端點除了可以由其基本 URI 定址之外，還可由一個或多個 SOAP 標頭定址。 有些情況適用這種方式，例如 SOAP 媒介，此時端點需要此端點的用戶端加入目標為媒介的 SOAP 標頭。 這個組態項目可用於定義此類自訂位址標題。 端點標頭集合中的項目是使用者定義的 XML 項目。 每個項目必須為格式正確的 XML。  
   
  \<system.ServiceModel>  

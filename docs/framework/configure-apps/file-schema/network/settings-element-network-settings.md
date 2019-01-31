@@ -1,5 +1,5 @@
 ---
-title: '&lt;設定&gt;項目 （網路設定）'
+title: <settings> 項目 (網路設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: 7db55dd9d2ca79342cadb2320d08ca9235223def
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 839907d9339d459070fff12dbca22d3c2df5b020
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671846"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260615"
 ---
-# <a name="ltsettingsgt-element-network-settings"></a>&lt;設定&gt;項目 （網路設定）
+# <a name="settings-element-network-settings"></a>\<設定 > 項目 （網路設定）
 為 <xref:System.Net?displayProperty=nameWithType> 命名空間設定基本的網路選項。  
   
  \<configuration>  

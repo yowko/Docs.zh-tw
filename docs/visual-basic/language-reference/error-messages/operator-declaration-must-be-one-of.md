@@ -1,5 +1,5 @@
 ---
-title: '運算子宣告必須是其中一個: +、-，*，-、-、 ^， &amp;，喜歡，Mod、 和，Or、 Xor、 沒有，請&lt; &lt;， &gt; &gt;，=， &lt; &gt;， &lt;， &lt;=、 &gt;&gt;=、 CType、 IsTrue、 IsFalse'
+title: '運算子宣告必須是其中一個: +、-，*，-、-、 ^， &amp;，喜歡，Mod、 和，Or、 Xor、 不是，<<>>、 =、 <>、 <、 < =、 >、 > =、 CType、 IsTrue、 IsFalse'
 ms.date: 07/20/2015
 f1_keywords:
 - bc33000
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: f32935dd4aaccd3040655b418badc13c1988c1b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7acec56be60f88147bac1ba4179ad0234ea1c6e1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622269"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270052"
 ---
-# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a>運算子宣告必須是其中一個: +、-，*，\,/、 ^， &amp;，例如，Mod、，Or、 Xor、 不是， &lt; &lt;， &gt; &gt;...
+# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>運算子宣告必須是其中一個: +、-，*，\,/、 ^， &amp;，例如，Mod、，Or、 Xor、 不是， \< \<，>>...
 您可以宣告適用於多載的運算子。 下表列出您可以宣告的運算子。  
   
 |類型|運算子|  

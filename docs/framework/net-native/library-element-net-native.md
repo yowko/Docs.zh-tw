@@ -1,17 +1,17 @@
 ---
-title: '&lt;Library&gt; 項目 (.NET Native)'
+title: <Library> 項目 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6615ab30fdc0d0ab65f135e1df4e206f5548dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f2de27152200ed07e5f82b5dc08613451c7aa25
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743775"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284904"
 ---
-# <a name="ltlibrarygt-element-net-native"></a>&lt;Library&gt; 項目 (.NET Native)
+# <a name="library-element-net-native"></a>\<文件庫 > 項目 (.NET Native)
 定義包含類型和類型成員的組件，該類型和類型成員的中繼資料會在執行階段用於反映。  
   
  \<Directives> 項目  
