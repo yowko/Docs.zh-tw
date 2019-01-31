@@ -1,5 +1,5 @@
 ---
-title: '&lt;appDomainResourceMonitoring&gt;項目'
+title: <appDomainResourceMonitoring> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - appDomainResourceMonitoring element
@@ -7,62 +7,62 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc507d0cf81bf2bc11edfc0b5efb08c462726b88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d085fe8b9cf11e2f195468a93b3fa9b3f0817503
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727868"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286555"
 ---
-# <a name="ltappdomainresourcemonitoringgt-element"></a><span data-ttu-id="cc66b-102">&lt;appDomainResourceMonitoring&gt;項目</span><span class="sxs-lookup"><span data-stu-id="cc66b-102">&lt;appDomainResourceMonitoring&gt; Element</span></span>
-<span data-ttu-id="cc66b-103">針對處理序存留期間，指示執行階段收集處理序中所有應用程式網域的統計資料。</span><span class="sxs-lookup"><span data-stu-id="cc66b-103">Instructs the runtime to collect statistics on all application domains in the process for the life of the process.</span></span>  
+# <a name="appdomainresourcemonitoring-element"></a><span data-ttu-id="d824f-102">\<appDomainResourceMonitoring > 項目</span><span class="sxs-lookup"><span data-stu-id="d824f-102">\<appDomainResourceMonitoring> Element</span></span>
+<span data-ttu-id="d824f-103">針對處理序存留期間，指示執行階段收集處理序中所有應用程式網域的統計資料。</span><span class="sxs-lookup"><span data-stu-id="d824f-103">Instructs the runtime to collect statistics on all application domains in the process for the life of the process.</span></span>  
   
- <span data-ttu-id="cc66b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="cc66b-104">\<configuration></span></span>  
-<span data-ttu-id="cc66b-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="cc66b-105">\<runtime></span></span>  
-<span data-ttu-id="cc66b-106">\<appDomainResourceMonitoring></span><span class="sxs-lookup"><span data-stu-id="cc66b-106">\<appDomainResourceMonitoring></span></span>  
+ <span data-ttu-id="d824f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d824f-104">\<configuration></span></span>  
+<span data-ttu-id="d824f-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="d824f-105">\<runtime></span></span>  
+<span data-ttu-id="d824f-106">\<appDomainResourceMonitoring></span><span class="sxs-lookup"><span data-stu-id="d824f-106">\<appDomainResourceMonitoring></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc66b-107">語法</span><span class="sxs-lookup"><span data-stu-id="cc66b-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d824f-107">語法</span><span class="sxs-lookup"><span data-stu-id="d824f-107">Syntax</span></span>  
   
 ```xml  
 <appDomainResourceMonitoring    
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="cc66b-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="cc66b-108">Attributes and Elements</span></span>  
- <span data-ttu-id="cc66b-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="cc66b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d824f-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="d824f-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="d824f-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="d824f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="cc66b-110">屬性</span><span class="sxs-lookup"><span data-stu-id="cc66b-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d824f-110">屬性</span><span class="sxs-lookup"><span data-stu-id="d824f-110">Attributes</span></span>  
   
-|<span data-ttu-id="cc66b-111">屬性</span><span class="sxs-lookup"><span data-stu-id="cc66b-111">Attribute</span></span>|<span data-ttu-id="cc66b-112">描述</span><span class="sxs-lookup"><span data-stu-id="cc66b-112">Description</span></span>|  
+|<span data-ttu-id="d824f-111">屬性</span><span class="sxs-lookup"><span data-stu-id="d824f-111">Attribute</span></span>|<span data-ttu-id="d824f-112">描述</span><span class="sxs-lookup"><span data-stu-id="d824f-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="cc66b-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="cc66b-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="cc66b-114">指定是否執行階段會收集應用程式定義域資源監視的統計資料。</span><span class="sxs-lookup"><span data-stu-id="cc66b-114">Specifies whether the runtime collects statistics for application domain resource monitoring.</span></span>|  
+|`enabled`|<span data-ttu-id="d824f-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="d824f-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="d824f-114">指定是否執行階段會收集應用程式定義域資源監視的統計資料。</span><span class="sxs-lookup"><span data-stu-id="d824f-114">Specifies whether the runtime collects statistics for application domain resource monitoring.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="cc66b-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="cc66b-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="d824f-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="d824f-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="cc66b-116">值</span><span class="sxs-lookup"><span data-stu-id="cc66b-116">Value</span></span>|<span data-ttu-id="cc66b-117">描述</span><span class="sxs-lookup"><span data-stu-id="cc66b-117">Description</span></span>|  
+|<span data-ttu-id="d824f-116">值</span><span class="sxs-lookup"><span data-stu-id="d824f-116">Value</span></span>|<span data-ttu-id="d824f-117">描述</span><span class="sxs-lookup"><span data-stu-id="d824f-117">Description</span></span>|  
 |-----------|-----------------|  
-|`true`|<span data-ttu-id="cc66b-118">會收集統計資料的應用程式定義域資源監視。</span><span class="sxs-lookup"><span data-stu-id="cc66b-118">Statistics for application domain resource monitoring are collected.</span></span>|  
-|`false`|<span data-ttu-id="cc66b-119">不會收集應用程式定義域資源監視的統計資料。</span><span class="sxs-lookup"><span data-stu-id="cc66b-119">Statistics for application domain resource monitoring are not collected.</span></span>|  
+|`true`|<span data-ttu-id="d824f-118">會收集統計資料的應用程式定義域資源監視。</span><span class="sxs-lookup"><span data-stu-id="d824f-118">Statistics for application domain resource monitoring are collected.</span></span>|  
+|`false`|<span data-ttu-id="d824f-119">不會收集應用程式定義域資源監視的統計資料。</span><span class="sxs-lookup"><span data-stu-id="d824f-119">Statistics for application domain resource monitoring are not collected.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="cc66b-120">子元素</span><span class="sxs-lookup"><span data-stu-id="cc66b-120">Child Elements</span></span>  
- <span data-ttu-id="cc66b-121">無。</span><span class="sxs-lookup"><span data-stu-id="cc66b-121">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d824f-120">子元素</span><span class="sxs-lookup"><span data-stu-id="d824f-120">Child Elements</span></span>  
+ <span data-ttu-id="d824f-121">無。</span><span class="sxs-lookup"><span data-stu-id="d824f-121">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="cc66b-122">父項目</span><span class="sxs-lookup"><span data-stu-id="cc66b-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d824f-122">父項目</span><span class="sxs-lookup"><span data-stu-id="d824f-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="cc66b-123">項目</span><span class="sxs-lookup"><span data-stu-id="cc66b-123">Element</span></span>|<span data-ttu-id="cc66b-124">描述</span><span class="sxs-lookup"><span data-stu-id="cc66b-124">Description</span></span>|  
+|<span data-ttu-id="d824f-123">項目</span><span class="sxs-lookup"><span data-stu-id="d824f-123">Element</span></span>|<span data-ttu-id="d824f-124">描述</span><span class="sxs-lookup"><span data-stu-id="d824f-124">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="cc66b-125">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="cc66b-125">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="cc66b-126">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="cc66b-126">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="d824f-125">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="d824f-125">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="d824f-126">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="d824f-126">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cc66b-127">備註</span><span class="sxs-lookup"><span data-stu-id="cc66b-127">Remarks</span></span>  
- <span data-ttu-id="cc66b-128">應用程式定義域資源監視是透過受控應用程式網域類別，裝載[ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)介面和事件追蹤的 Windows (ETW)。</span><span class="sxs-lookup"><span data-stu-id="cc66b-128">Application domain resource monitoring is available through the managed application domain class, the hosting [ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) interface, and event tracing for Windows (ETW).</span></span> <span data-ttu-id="cc66b-129">啟用監視時，會收集統計資料的生命週期的處理程序的程序中的所有應用程式定義域。</span><span class="sxs-lookup"><span data-stu-id="cc66b-129">When monitoring is enabled, statistics are collected for all application domains in the process for the life of the process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d824f-127">備註</span><span class="sxs-lookup"><span data-stu-id="d824f-127">Remarks</span></span>  
+ <span data-ttu-id="d824f-128">應用程式定義域資源監視是透過受控應用程式網域類別，裝載[ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)介面和事件追蹤的 Windows (ETW)。</span><span class="sxs-lookup"><span data-stu-id="d824f-128">Application domain resource monitoring is available through the managed application domain class, the hosting [ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) interface, and event tracing for Windows (ETW).</span></span> <span data-ttu-id="d824f-129">啟用監視時，會收集統計資料的生命週期的處理程序的程序中的所有應用程式定義域。</span><span class="sxs-lookup"><span data-stu-id="d824f-129">When monitoring is enabled, statistics are collected for all application domains in the process for the life of the process.</span></span>  
   
- <span data-ttu-id="cc66b-130">若要啟用監視從 managed 程式碼，請使用<xref:System.AppDomain.MonitoringIsEnabled%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="cc66b-130">To enable monitoring from managed code, use the <xref:System.AppDomain.MonitoringIsEnabled%2A> property.</span></span>  
+ <span data-ttu-id="d824f-130">若要啟用監視從 managed 程式碼，請使用<xref:System.AppDomain.MonitoringIsEnabled%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="d824f-130">To enable monitoring from managed code, use the <xref:System.AppDomain.MonitoringIsEnabled%2A> property.</span></span>  
   
- <span data-ttu-id="cc66b-131">這個組態項目是僅適用於[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]和更新版本。</span><span class="sxs-lookup"><span data-stu-id="cc66b-131">This configuration element is available only in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] and later.</span></span>  
+ <span data-ttu-id="d824f-131">這個組態項目是僅適用於[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]和更新版本。</span><span class="sxs-lookup"><span data-stu-id="d824f-131">This configuration element is available only in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] and later.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cc66b-132">範例</span><span class="sxs-lookup"><span data-stu-id="cc66b-132">Example</span></span>  
- <span data-ttu-id="cc66b-133">下列範例示範如何啟用應用程式定義域資源監視。</span><span class="sxs-lookup"><span data-stu-id="cc66b-133">The following example shows how to enable application domain resource monitoring.</span></span>  
+## <a name="example"></a><span data-ttu-id="d824f-132">範例</span><span class="sxs-lookup"><span data-stu-id="d824f-132">Example</span></span>  
+ <span data-ttu-id="d824f-133">下列範例示範如何啟用應用程式定義域資源監視。</span><span class="sxs-lookup"><span data-stu-id="d824f-133">The following example shows how to enable application domain resource monitoring.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ ms.locfileid: "54727868"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cc66b-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc66b-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d824f-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d824f-134">See also</span></span>
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="cc66b-135">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="cc66b-135">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="cc66b-136">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="cc66b-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="d824f-135">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="d824f-135">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="d824f-136">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="d824f-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
