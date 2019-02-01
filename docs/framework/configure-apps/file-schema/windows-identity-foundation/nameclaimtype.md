@@ -1,16 +1,16 @@
 ---
-title: '&lt;nameClaimType&gt;'
+title: <nameClaimType>
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: 502fc5dd14d7bc3d979153607e1eeeb9354031bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aab76949d9c31ac003b8afd519c2ad66529cbf26
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737425"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254853"
 ---
-# <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
+# <a name="nameclaimtype"></a>\<nameClaimType>
 設定指定的宣告型<xref:System.Security.Principal.IIdentity.Name%2A>屬性。 宣告類型用來搜尋<xref:System.Security.Claims.Claim>集合中的<xref:System.Security.Claims.ClaimsIdentity>所傳回的物件<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>此語彙基元處理常式的方法。 比對的宣告的值將做為名稱<xref:System.Security.Principal.IIdentity>產生從這個權杖處理常式。  
   
  \<system.identityModel>  

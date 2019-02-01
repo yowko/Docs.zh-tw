@@ -3,19 +3,19 @@ title: .NET 微服務。 容器化 .NET 應用程式的架構
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務是模組化的獨立可部署服務。 適用於 Linux 與 Windows 的 Docker 容器，可統合服務及其相依性到單一個單位，簡化部署及測試，然後即可於隔離的環境中執行。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 08/31/2018
-ms.openlocfilehash: 52435c31e77e7139b982829ae4ab33a5e0f9f045
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 6b75485d34b90b4807e82f629bbb05979add8eea
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030434"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479941"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務：容器化 .NET 應用程式的架構
 
 ![書籍封面](./media/cover-small.png)
 
-**版本 v2.1.03** - 更新至 ASP.NET Core 2.1
+**發行版本 2.2.00 版** - 更新至 ASP.NET Core 2.2
 
 本指南介紹如何開發微服務應用程式及使用容器進行管理， 並討論使用 .NET Core 和 Docker 容器的架構設計和實作方法。 
 
@@ -49,7 +49,7 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 ## <a name="version"></a>版本
 
-本指南已經過修訂，以涵蓋 **.NET Core 2.1** 版本加上與相同技術「浪潮」相關的許多其他更新 (也就是 Azure 和其他第三方技術)，與 .NET Core 2.1 的時機契合。 這就是為什麼書籍版本也已更新至版本 **2.1**。 
+本指南已經過修訂，涵蓋了 **.NET Core 2.2** 版，加上許多和 .NET Core 2.2 同時期， 同一波科技「浪潮」相關的更新 (亦即 Azure 加上其他第三方技術)。 這也是同步將書籍版本更新為 **2.2** 版的原因。 
 
 ## <a name="what-this-guide-does-not-cover"></a>本指南未涵蓋的內容
 
@@ -124,6 +124,8 @@ eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考
 >
 > **Scott Hunter**，Microsoft .NET 小組合夥人暨 PM 主管
 >
+> **Nish Anil**，Microsoft NET 小組資深方案經理
+>
 > **Dylan Reisenberger**，Polly 架構師暨開發部門主管
 >
 > **Steve Smith**，ASPSmith Ltd. 軟體工程師暨訓練員
@@ -147,7 +149,6 @@ eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考
 > **Charles Lowell**，Microsoft VS CAT 小組軟體工程師
 >
 > **Miguel Veloso**，Sr. 圖靈挑戰顧問
-
 
 ## <a name="copyright"></a>Copyright
 
