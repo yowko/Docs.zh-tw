@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 84e2d07275194683661a75e422847bbe0ebf1383
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198363"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674408"
 ---
 # <a name="additional-class-libraries-and-apis"></a>其他類別庫和 API
 
@@ -29,7 +29,7 @@ ms.locfileid: "50198363"
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | 提供具備執行緒安全且保證不會再變更其內容的集合。 |
 | <xref:System.Net.Http.WinHttpHandler> | 提供以 Windows 的 WinHTTP 介面為基礎之 <xref:System.Net.Http.HttpClient> 的訊息處理常式。 |
-| [System.Numerics.Vectors (英文)](https://msdn.microsoft.com/library/mt452176.aspx) | 提供可利用 SIMD 硬體加速的向量類型程式庫。| 
+| <xref:System.Numerics> | 提供可利用 SIMD 硬體加速的向量類型程式庫。| 
 | <xref:System.Threading.Tasks.Dataflow> | TPL 資料流程程式庫提供資料流程元件，來協助增加啟用並行的應用程式之穩定性。 |  
 
 ## <a name="platform-specific-libraries"></a>平台特定程式庫

@@ -2,12 +2,12 @@
 title: WCF 組態結構描述
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: 11123d30138e8e1e763af0a01245e774dfba14f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ae9e660ee5c4163487e953077df8782955f90ef5
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508898"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675357"
 ---
 # <a name="wcf-configuration-schema"></a>WCF 組態結構描述
 Windows Communication Foundation (WCF) 組態項目可讓您設定 WCF 服務和用戶端應用程式。 您可使用[組態編輯器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 來建立並修改用戶端與服務的組態檔。 由於組態檔採用 XML 格式，因此，如果要使用文字編輯器手動編輯這些檔案，則必須熟悉 XML。 否則，您可能會碰到 XML 項目標記或屬性找不到等問題， 因為 XML 項目標記與屬性有區分大小寫。  
@@ -36,5 +36,5 @@ Windows Communication Foundation (WCF) 組態項目可讓您設定 WCF 服務和
  使用 <xref:System.Runtime.Serialization.DataContractSerializer> 等序列化程式時，設定選項的最上層項目。  
   
 ## <a name="related-sections"></a>相關章節  
- [設定 Windows Communication Foundation 應用程式](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [設定 Windows Communication Foundation 應用程式](../../../wcf/configuring-services.md)  
  描述如何設定 WCF 服務和用戶端。

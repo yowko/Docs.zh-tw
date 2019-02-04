@@ -2,12 +2,12 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 336e8c4a4aae3565b8af7adaa73def453107ea93
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5b5248f4cb8bdcd15b553fa14351013e78d422d9
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274152"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675396"
 ---
 # <a name="identity"></a>\<identity>
 身分識別項目允許用戶端開發人員在設計階段指定服務的預期身分識別。 在用戶端與服務之間的信號交換過程中的 Windows Communication Foundation (WCF) 基礎結構可確保預期的服務符合這個元素的值的身分識別，且因此可進行驗證。 如需詳細資訊，請參閱 <<c0> [ 服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
@@ -55,7 +55,8 @@ ms.locfileid: "55274152"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|指定 netPeerTcpBinding 的自訂對等解析程式。|  
-|[\<endpoint>](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|設定不同類型的端點。|  
+|[\<endpoint>](endpoint-element.md)|設定服務端點。|  
+|[\<端點 > 的\<用戶端 >](endpoint-of-client.md)|設定通道端點。|  
 |[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|指定聯合服務的安全性權杖服務 (STS)。|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|為聯合服務的安全性權杖服務 (STS) 指定中繼資料端點。|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|定義自訂繫結中已發行權杖的參數。|  

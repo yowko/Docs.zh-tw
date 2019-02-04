@@ -2,12 +2,12 @@
 title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: b1215f864822de7c2df181ff92858cb73700c0d7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c8dfd6824877d6f9e5b089a538cce35ffe51320b
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286265"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674278"
 ---
 # <a name="bytestreammessageencoding"></a>\<byteStreamMessageEncoding>
 將訊息編碼指定為位元組資料流，且含有指定字元編碼的選項。  
@@ -37,7 +37,7 @@ ms.locfileid: "55286265"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   

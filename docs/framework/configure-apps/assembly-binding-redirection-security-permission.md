@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-ms.openlocfilehash: 25b74de66fbf053b4d9129ab6ca0bef1530bf228
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ba4e7e790860696f4489e9ef7b73bddcb8c4e399
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083752"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674434"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>組件繫結重新導向安全性使用權限
 在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。 這適用於 .NET Framework 組件和協力廠商組件的重新導向。 藉由設定授與權限<xref:System.Security.Permissions.SecurityPermissionFlag>加上旗標上<xref:System.Security.Permissions.SecurityPermission>。 Managed 組件預設會有任何權限。  
@@ -31,6 +31,7 @@ ms.locfileid: "55083752"
  系統管理員可以變更這些安全性設定，以支援或限制特定電腦的特定案例。 沒有變更工具**BindingRedirects**旗標設定預設值; 系統管理員必須手動編輯使用者的電腦上的 Security.config 檔。  
   
 ## <a name="see-also"></a>另請參閱
-- [發行者原則檔和並排顯示執行](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)
+
+- [發行者原則檔和並排顯示執行](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/06d2bae3(v=vs.100))
 - [如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
 - [並存執行](../../../docs/framework/deployment/side-by-side-execution.md)

@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: ea20569b207100886ddd4b40c8d4c86c55d5ddf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be5e1b5fff1feb8ef4cc2ff7fcbca193aafcd781
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743539"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674876"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>類型轉換函式 (Visual Basic)
 這些函式是編譯的內嵌，這表示，轉換程式碼評估運算式的程式碼的一部分。 有時是沒有呼叫程序來完成轉換，進而改善效能。 每個函式強制轉型為特定的資料類型的運算式。  
@@ -128,7 +128,7 @@ CUShort(expression)
 |`CDbl`|[Double 資料類型](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570 e + 308 到-4.94065645841246544-324 (負值）4.94065645841246544-324 到 1.79769313486231570 e + 308 的正值。|  
 |`CDec`|[Decimal 資料類型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+ /-零擴充的數字，也就是任何小數位數的數字 79228162514264337593543950335。 如 28 位小數的數字，範圍是 + /--7.9228162514264337593543950335。 最小可能的非零值是 0.0000000000000000000000000001 （+ /-1E-28)。|  
 |`CInt`|[Integer 資料類型](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2,147,483,648) 到<xref:System.Int32.MaxValue?displayProperty=nameWithType>(2147483647)，會捨去小數部分。<sup>1</sup> <br/><br/>從 Visual Basic 15.8 開始，Visual Basic 最佳化與整數轉換成浮點數的效能`CInt`函式; 請參閱 <<c2> [ 備註](#remarks)節的詳細資訊。 請參閱[CInt 範例](#cint-example)一節中的範例。 |  
-|`CLng`|[Long 資料類型](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MaxValue?displayProperty=nameWithType> (-9223372036854775808) 到<xref:System.Int64.MaxValue?displayProperty=nameWithType>(9223372036854775807)，會捨去小數部分。<sup>1</sup><br/><br/>從 Visual Basic 15.8 開始，Visual Basic 將效能最佳化浮點，以使用 64 位元的整數轉換`CLng`函式; 請參閱 <<c2> [ 備註](#remarks)節的詳細資訊。 請參閱[CInt 範例](#cint-example)一節中的範例。|  
+|`CLng`|[Long 資料類型](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9223372036854775808) 到<xref:System.Int64.MaxValue?displayProperty=nameWithType>(9223372036854775807)，會捨去小數部分。<sup>1</sup><br/><br/>從 Visual Basic 15.8 開始，Visual Basic 將效能最佳化浮點，以使用 64 位元的整數轉換`CLng`函式; 請參閱 <<c2> [ 備註](#remarks)節的詳細資訊。 請參閱[CInt 範例](#cint-example)一節中的範例。|  
 |`CObj`|[Object 資料類型](../../../visual-basic/language-reference/data-types/object-data-type.md)|任何有效的運算式。|  
 |`CSByte`|[SByte 資料類型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (-128) 透過<xref:System.SByte.MaxValue?displayProperty=nameWithType>(127)，會捨去小數部分。<sup>1</sup><br/><br/>從 Visual Basic 15.8 開始，Visual Basic 最佳化的效能與帶正負號的位元組轉換成浮點數`CSByte`函式; 請參閱 <<c2> [ 備註](#remarks)節的詳細資訊。 請參閱[CInt 範例](#cint-example)一節中的範例。|  
 |`CShort`|[Short 資料類型](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32,768) 到<xref:System.Int16.MaxValue?displayProperty=nameWithType>(32,767)，會捨去小數部分。<sup>1</sup><br/><br/>從 Visual Basic 15.8 開始，Visual Basic 最佳化的效能與 16 位元的整數轉換成浮點數`CShort`函式; 請參閱[備註](#remarks)節的詳細資訊。 請參閱[CInt 範例](#cint-example)一節中的範例。|  

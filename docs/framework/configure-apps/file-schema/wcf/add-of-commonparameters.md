@@ -2,12 +2,12 @@
 title: <add> 的 <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 63ff98d91db7c8c112b0b00e9bd37c3262bcad6d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e0ca00911577f9f210def9326df261f772f9c26d
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258615"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674421"
 ---
 # <a name="add-of-commonparameters"></a>\<add> of \<commonParameters>
 指定跨多項服務全域使用之名稱/值組的參數。 這個參數通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。  
@@ -47,7 +47,7 @@ ms.locfileid: "55258615"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<commonParameters>](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|服務所使用的一般參數集合。 這個集合通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。|  
+|[\<commonParameters>](commonparameters.md)|服務所使用的一般參數集合。 這個集合通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。|  
   
 ## <a name="remarks"></a>備註  
  `<commonParameters>` 項目定義全球多種服務間使用的所有參數，例如在使用 `ConnectionString` 時的 <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>。  
@@ -92,4 +92,4 @@ ms.locfileid: "55258615"
 - <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
 - <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
 - [工作流程組態檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
-- [\<commonParameters>](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)
+- [\<commonParameters>](commonparameters.md)

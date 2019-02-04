@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebb32a74f5413f9c927a84ababf2d60d20e0b024
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7568129f30267b212737ec8aa688cf882e19bbff
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269688"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675305"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 項目
 指定是否從遠端來源載入的組件，應該就會具有完全信任，在.NET Framework 4 和更新版本。
   
 > [!NOTE]
->  如果您已導向至本主題，因為 Visual Studio 專案的錯誤清單或建置錯誤中的錯誤訊息，請參閱[How to:使用 Visual Studio 中的 從 Web 組件](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)。  
+>  如果您因為 Visual Studio 專案的錯誤清單或建置錯誤中的錯誤訊息導向這篇文章，請參閱[How to:使用 Visual Studio 中的 從 Web 組件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))。  
   
  \<configuration>  
 \<執行階段 >  

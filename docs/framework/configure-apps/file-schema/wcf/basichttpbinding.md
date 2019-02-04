@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: 861840f574c80f282198775272eff149b84c6fca
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 52b874b12d93730716bb531cf02bbb7f64be0975
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289727"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674642"
 ---
 # <a name="basichttpbinding"></a>\<basicHttpBinding>
 代表繫結，Windows Communication Foundation (WCF) 服務可使用該繫結設定並公開能與 ASMX Web 服務和用戶端，以及其他符合 WS-I Basic Profile 1.1 的服務進行通訊的端點。  
@@ -86,7 +86,7 @@ ms.locfileid: "55289727"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定義繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>。|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   

@@ -2,12 +2,12 @@
 title: <binaryMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: faad93554954accd341a1fc2262251fbda61910c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b6914a195ba0e1934f7a586f5f6bae703a4bb1f9
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254531"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675318"
 ---
 # <a name="binarymessageencoding"></a>\<binaryMessageEncoding>
 定義二進位訊息編碼器，以二進位編碼網路上的 Windows Communication Foundation (WCF) 訊息。  
@@ -43,7 +43,7 @@ ms.locfileid: "55254531"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
