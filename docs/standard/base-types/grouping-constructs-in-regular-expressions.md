@@ -1,5 +1,5 @@
 ---
-title: 規則運算式中的群組建構
+title: 規則運算式中的分組建構
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -22,8 +22,8 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54645895"
 ---
-# <a name="grouping-constructs-in-regular-expressions"></a>規則運算式中的群組建構
-群組建構會描寫規則運算式的子運算式，以及擷取輸入字串的子字串。 您可以使用群組建構來執行下列作業：  
+# <a name="grouping-constructs-in-regular-expressions"></a>規則運算式中的分組建構
+分組建構會描寫規則運算式的子運算式，以及擷取輸入字串的子字串。 您可以使用分組建構來執行下列作業：  
   
 -   比對輸入字串中重複的子運算式。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "54645895"
   
 -   從 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 屬性擷取個別子運算式，再全部一起與相符文字分開處理。  
   
- 下表列出 .NET 規則運算式引擎支援的群組建構，並指出其為擷取或非擷取。  
+ 下表列出 .NET 規則運算式引擎支援的分組建構，並指出其為擷取或非擷取。  
   
-|群組建構|擷取或非擷取|  
+|分組建構|擷取或非擷取|  
 |------------------------|-------------------------------|  
 |[相符子運算式](#matched_subexpression)|擷取|  
 |[具名的相符子運算式](#named_matched_subexpression)|擷取|  
@@ -48,11 +48,11 @@ ms.locfileid: "54645895"
 |[零寬度左不合樣 (Negative Lookbehind) 判斷提示](#zerowidth_negative_lookbehind_assertion)|非擷取|  
 |[非回溯子運算式](#nonbacktracking_subexpression)|非擷取|  
   
- 如需群組和規則運算式物件模型的詳細資訊，請參閱 [群組建構和規則運算式物件](#Objects)。  
+ 如需群組和規則運算式物件模型的詳細資訊，請參閱 [分組建構和規則運算式物件](#Objects)。  
   
 <a name="matched_subexpression"></a>   
 ## <a name="matched-subexpressions"></a>相符子運算式  
- 下列群組建構會擷取相符子運算式：  
+ 下列分組建構會擷取相符子運算式：  
   
  `(` *子運算式* `)`  
   
@@ -93,7 +93,7 @@ ms.locfileid: "54645895"
   
 <a name="named_matched_subexpression"></a>   
 ## <a name="named-matched-subexpressions"></a>具名的相符子運算式  
- 下列群組建構會擷取相符子運算式，並可讓您依名稱或依號碼加以存取。  
+ 下列分組建構會擷取相符子運算式，並可讓您依名稱或依號碼加以存取。  
   
 ```  
 (?<name>subexpression)  
@@ -173,7 +173,7 @@ ms.locfileid: "54645895"
   
 <a name="balancing_group_definition"></a>   
 ## <a name="balancing-group-definitions"></a>平衡群組定義  
- 平衡群組定義會刪除先前定義之群組的定義，並且在目前群組中儲存先前定義的群組與目前群組之間的間隔。 此群組建構的格式如下：  
+ 平衡群組定義會刪除先前定義之群組的定義，並且在目前群組中儲存先前定義的群組與目前群組之間的間隔。 此分組建構的格式如下：  
   
 ```  
 (?<name1-name2>subexpression)  
@@ -252,23 +252,23 @@ ms.locfileid: "54645895"
   
 <a name="noncapturing_group"></a>   
 ## <a name="noncapturing-groups"></a>非擷取群組  
- 下列群組建構不會擷取由下列子運算式比對的子字串：  
+ 下列分組建構不會擷取由下列子運算式比對的子字串：  
   
 ```  
 (?:subexpression)  
 ```  
   
- 其中 *subexpression* 是任何有效的規則運算式模式。 將數量詞套用至群組時，通常會使用非擷取群組建構，但是群組擷取的子字串沒有用。  
+ 其中 *subexpression* 是任何有效的規則運算式模式。 將數量詞套用至群組時，通常會使用非擷取分組建構，但是群組擷取的子字串沒有用。  
   
 > [!NOTE]
->  如果規則運算式包含巢狀群組建構，則外部非擷取群組建構不會套用至內部巢狀群組建構。  
+>  如果規則運算式包含巢狀分組建構，則外部非擷取分組建構不會套用至內部巢狀分組建構。  
   
  下列範例說明包含非擷取群組的規則運算式。 請注意，輸出沒有包含任何擷取群組。  
   
  [!code-csharp[RegularExpressions.Language.Grouping#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/noncapture1.cs#5)]
  [!code-vb[RegularExpressions.Language.Grouping#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/noncapture1.vb#5)]  
   
- 規則運算式 `(?:\b(?:\w+)\W*)+\.` 符合以句點終止的句子。 因為規則運算式著重在句子，而不是個別文字，所以群組建構只會用做數量詞。 規則運算式模式的解譯方式如下表所示。  
+ 規則運算式 `(?:\b(?:\w+)\W*)+\.` 符合以句點終止的句子。 因為規則運算式著重在句子，而不是個別文字，所以分組建構只會用做數量詞。 規則運算式模式的解譯方式如下表所示。  
   
 |模式|說明|  
 |-------------|-----------------|  
@@ -280,7 +280,7 @@ ms.locfileid: "54645895"
   
 <a name="group_options"></a>   
 ## <a name="group-options"></a>群組選項  
- 下列群組建構會在子運算式中套用或停用指定的選項：  
+ 下列分組建構會在子運算式中套用或停用指定的選項：  
   
  `(?imnsx-imnsx:` *子運算式* `)`  
   
@@ -291,7 +291,7 @@ ms.locfileid: "54645895"
   
  群組選項建構不是擷取群組。 也就是說，雖然 *subexpression* 擷取之字串的任何部分都會包含在比對中，但不會包含在擷取群組中，也不會用來填入 <xref:System.Text.RegularExpressions.GroupCollection> 物件。  
   
- 例如，下列範例中的規則運算式 `\b(?ix: d \w+)\s` 在群組建構中使用內嵌選項，來啟用不區分大小寫的比對，並會在識別以字母 "d" 開頭的所有字組時，忽略模式空白字元。 規則運算式的定義如下表所示。  
+ 例如，下列範例中的規則運算式 `\b(?ix: d \w+)\s` 在分組建構中使用內嵌選項，來啟用不區分大小寫的比對，並會在識別以字母 "d" 開頭的所有字組時，忽略模式空白字元。 規則運算式的定義如下表所示。  
   
 |模式|說明|  
 |-------------|-----------------|  
@@ -304,7 +304,7 @@ ms.locfileid: "54645895"
   
 <a name="zerowidth_positive_lookahead_assertion"></a>   
 ## <a name="zero-width-positive-lookahead-assertions"></a>零寬度右合樣 (Positive Lookahead) 判斷提示  
- 下列群組建構可定義零寬度右合樣 (Positive Lookahead) 判斷提示：  
+ 下列分組建構可定義零寬度右合樣 (Positive Lookahead) 判斷提示：  
   
  `(?=` *子運算式* `)`  
   
@@ -327,7 +327,7 @@ ms.locfileid: "54645895"
   
 <a name="zerowidth_negative_lookahead_assertion"></a>   
 ## <a name="zero-width-negative-lookahead-assertions"></a>零寬度右不合樣 (Negative Lookahead) 判斷提示  
- 下列群組建構可定義零寬度右不合樣 (Negative Lookahead) 判斷提示：  
+ 下列分組建構可定義零寬度右不合樣 (Negative Lookahead) 判斷提示：  
   
  `(?!` *子運算式* `)`  
   
@@ -365,7 +365,7 @@ ms.locfileid: "54645895"
   
 <a name="zerowidth_positive_lookbehind_assertion"></a>   
 ## <a name="zero-width-positive-lookbehind-assertions"></a>零寬度左合樣 (Positive Lookbehind) 判斷提示  
- 下列群組建構可定義零寬度左合樣 (Positive Lookbehind) 判斷提示：  
+ 下列分組建構可定義零寬度左合樣 (Positive Lookbehind) 判斷提示：  
   
  `(?<=` *子運算式* `)`  
   
@@ -390,7 +390,7 @@ ms.locfileid: "54645895"
   
 <a name="zerowidth_negative_lookbehind_assertion"></a>   
 ## <a name="zero-width-negative-lookbehind-assertions"></a>零寬度左不合樣 (Negative Lookbehind) 判斷提示  
- 下列群組建構可定義零寬度左不合樣 (Negative Lookbehind) 判斷提示：  
+ 下列分組建構可定義零寬度左不合樣 (Negative Lookbehind) 判斷提示：  
   
  `(?<!` *子運算式* `)`  
   
@@ -415,7 +415,7 @@ ms.locfileid: "54645895"
   
 <a name="nonbacktracking_subexpression"></a>   
 ## <a name="nonbacktracking-subexpressions"></a>非回溯子運算式  
- 下列群組建構代表非回溯子運算式 (也稱為「窮盡」(Greedy) 子運算式)：  
+ 下列分組建構代表非回溯子運算式 (也稱為「窮盡」(Greedy) 子運算式)：  
   
  `(?>` *子運算式* `)`  
   
@@ -443,7 +443,7 @@ ms.locfileid: "54645895"
 |`(?>(\w)\1+)`|比對出現一或數次的重複文字字元，但不要回溯比對字邊界上的最後一個字元。|  
   
 <a name="Objects"></a>   
-## <a name="grouping-constructs-and-regular-expression-objects"></a>群組建構和規則運算式物件  
+## <a name="grouping-constructs-and-regular-expression-objects"></a>分組建構和規則運算式物件  
  規則運算式擷取群組所比對的子字串會以 <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> 物件來代表，此物件可從 <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> 屬性傳回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件來擷取。 <xref:System.Text.RegularExpressions.GroupCollection> 物件的填入方式如下：  
   
 -   集合中的第一個 <xref:System.Text.RegularExpressions.Group> 物件 (索引位置為零的物件) 代表整個比對。  
