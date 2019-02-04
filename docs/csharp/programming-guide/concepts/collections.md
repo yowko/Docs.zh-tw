@@ -2,12 +2,12 @@
 title: 集合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 1f73081cacbc08fdaaca3cbc57dfe731eddab7ee
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ddbbc60c497b324bdeb2614149569d5de5f4c114
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084116"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675409"
 ---
 # <a name="collections-c"></a>集合 (C#)
 在許多應用程式中，您想要建立和管理相關物件的群組。 有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。  
@@ -193,7 +193,7 @@ public class Galaxy
   
  下表列出 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間的一些常用類別：  
 
-|類別|說明| 
+|類別|描述| 
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|表示根據索引鍵所整理的索引鍵/值組集合。|  
 |<xref:System.Collections.Generic.List%601>|表示可以依照索引存取的物件清單。 提供搜尋、排序和修改清單的方法。|  
@@ -219,7 +219,7 @@ public class Galaxy
   
  下表列出 `System.Collections` 命名空間的一些常用類別：  
   
-|類別|說明|  
+|類別|描述|  
 |---|---|  
 |<xref:System.Collections.ArrayList>|代表會視需要動態增加大小的物件陣列。|  
 |<xref:System.Collections.Hashtable>|代表根據索引鍵的雜湊程式碼，所整理的索引鍵/值組集合。|  
@@ -583,7 +583,6 @@ private static IEnumerable<int> EvenSequence(
 - [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [平行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [集合和資料結構](../../../standard/collections/index.md)
-- [建立和操作集合](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
 - [選取集合類別](../../../standard/collections/selecting-a-collection-class.md)
 - [在集合內比較和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [何時使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9b9d1c8a059a85f2b5137e568ec6ad562ca0eb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 092b1cfc9350ea398eb18199f19a8eee7ea9f218
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680291"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675435"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 協助工具的新功能
 
@@ -292,7 +292,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 如需 .NET Framework 4.7.1 中 WPF 協助工具改善的詳細資訊；請參閱 [WPF 中的協助工具改善](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)。
 
 <a name="winforms471"></a>
-## <a name="windows-forms-accessibility-improvements"></a>Windows Forms 協助工具改善
+### <a name="windows-forms-accessibility-improvements"></a>Windows Forms 協助工具改善
 
 在 .NET Framework 4.7.1 中，Windows Forms (WinForms) 包含下列領域的協助工具變更。
 
@@ -358,7 +358,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - 改善的朗讀程式行為。
  
 <a name="aspnet471"></a>
-## <a name="aspnet-web-controls"></a>ASP.NET Web 控制項
+### <a name="aspnet-web-controls"></a>ASP.NET Web 控制項
 
 從 .NET Framework 4.7.1 和 Visual Studio 2017 15.3 開始，ASP.NET 已經改善 ASP.NET Web 控制項如何搭配 Visual Studio 中的協助工具技術。 變更包括下列項目：
 
@@ -369,14 +369,14 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - 改善控制項鍵盤瀏覽體驗的變更，例如 DataPager 控制項 [編輯頁面巡覽區欄位精靈] 的 [欄位] 對話方塊、[設定 ObjectContext] 對話方塊，或 [設定資料來源精靈] 的 [設定資料選取項目] 對話方塊。
 
 <a name="tools471"></a>
-## <a name="net-sdk-tools"></a>.NET SDK 工具
+### <a name="net-sdk-tools"></a>.NET SDK 工具
 
 [組態編輯器工具 (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) 和[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 藉由修正各種協助工具問題來改善。 其中大部分是小問題，例如未定義名稱，或未正確實作某些 UI 自動化模式。 雖然許多使用者並未注意到這些不正確的值，但使用螢幕助讀程式等輔助技術的客戶會發現這些 SDK 工具更易於存取。 
 
 這些增強功能變更一些先前的行為，例如鍵盤焦點的順序。
 
 <a name="wf471"></a>
-## <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) 工作流程設計工具
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) 工作流程設計工具
 
 在工作流程設計工具中的協助工具變更包括下列各項：
 

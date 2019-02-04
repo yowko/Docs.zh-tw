@@ -3,13 +3,13 @@ title: API 閘道模式與直接用戶端對微服務通訊
 description: 了解 API 閘道模式和直接用戶端對微服務通訊的差異與使用方式。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/20/2018
-ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 35bebd9429dabbe0e3ddc3549a504719321e47e1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030538"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675448"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 閘道模式與直接用戶端對微服務通訊
 
@@ -25,7 +25,7 @@ ms.locfileid: "54030538"
 
 在此方法中，每個微服務都會有公用端點，有時每個微服務會有不同的 TCP 連接埠。 在 Azure 中，特定服務的 URL 範例可以是下列 URL：
 
-<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
+`http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
 在根據叢集的生產環境中，該 URL 會對應至叢集中所使用的負載平衡器，而負載平衡器接著會將要求分散到微服務。 在生產環境中，您在微服務與網際網路之間可能會有 [Azure 應用程式閘道](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction)這類應用程式傳遞控制站 (ADC)。 這會作為透明層，不僅可執行負載平衡，也會透過提供 SSL 終止來保護您的服務。 這會改善主機的負載，方法是將 CPU 密集 SSL 終止和其他路由責任卸載給 Azure 應用程式閘道。 從邏輯應用程式架構觀點，在任何情況下，負載平衡器和 ADC 都是透明的。
 
@@ -134,7 +134,7 @@ API 閘道可以提供多個功能。 視產品而定，它可以提供更豐富
 
 **圖 4-14**. 將 Azure API 管理用於 API 閘道
 
-在此情況下，使用 Azure API 管理這類產品時，您可能會有單一 API 閘道的這個事實的風險不大，因為這類 API 閘道較「輕量」，表示您未實作可能朝向整合型元件發展的自訂 C# 程式碼。 這些產品的作用就像是連入通訊的反向 Proxy，您也可以篩選內部微服務的 API，以及在此單一階層中將授權套用至已發行的 API。
+在此情況下，使用 Azure API 管理這類產品時，您可能會有單一 API 閘道的這個事實的風險不大，因為這類 API 閘道較「輕量」，表示您未實作可能朝向整合型元件發展的自訂 C# 程式碼。 
 
 API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以篩選內部微服務的 API，以及在此單一階層中將授權套用至已發行的 API。
 

@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8af9d0f3c31e9178e815dc8fb00f192b8da3e5de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86928c734583cfc8cae0be53458a0d5c1769f292
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541257"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287816"
 ---
-# <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework 類別庫中的過時功能
+# <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 類別庫中的過時功能
 .NET Framework 會隨著時間改變。 每個新版本都會加入一些提供新功能的新類型和類型成員。 現有的類型及其成員也會隨著時間改變。 例如，當某些類型所支援的技術由新技術取代時，這些類型的重要性會降低，而且某些方法會由更方便或功能更完整的新方法取代。  
   
  .NET Framework 和 Common Language Runtime 致力於支援回溯相容性 (讓使用某個 .NET Framework 版本所開發的應用程式能夠在下一個 .NET Framework 版本上執行)。 這點會讓您難以單純地移除類型或類型成員。 相反地，.NET Framework 會將某個類型或類型成員標記為過時或已被取代，表示不應該再使用該類型或類型成員。 取代類型或成員時需要為其加上標記，以便讓開發人員了解該類型或成員即將消失，而且有時間來回應其移除。 不過，使用該類型或成員的現有程式碼仍然可繼續在新的 .NET Framework 版本中執行。  

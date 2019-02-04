@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066398"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282031"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework 命令列偵錯工具)
 .NET Framework 命令列偵錯工具可以協助工具廠商和應用程式開發人員尋找並修復以 .NET Framework 通用語言執行平台為目標之程式的 Bug。 這個工具使用執行階段偵錯 API 來提供偵錯服務。 目前您只能使用 MDbg.exe 偵錯 Managed 程式碼；不支援偵錯 Unmanaged 程式碼。  
@@ -34,7 +34,7 @@ MDbg [ProgramName[arguments]] [options]
   
  MDbg.exe 命令會區分大小寫。  
   
-|命令|說明|  
+|命令|描述|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*number*]|切換至另一個已偵錯的處理序，或列印可使用的處理序。 這些數字不是實際的處理序 ID (PID)，而是從 0 開始建立索引的清單。|  
 |**a**[**ttach**] [*pid*]|附加至處理序，或列印可使用的處理序。|  
@@ -103,8 +103,6 @@ mdbg>
  `mdbg>` 提示表示您正在使用偵錯工具。  
   
  進入偵錯工具後，請使用上一節使用的指令和引數。  
-  
-## <a name="examples"></a>範例  
   
 ## <a name="see-also"></a>另請參閱
 - [工具](../../../docs/framework/tools/index.md)

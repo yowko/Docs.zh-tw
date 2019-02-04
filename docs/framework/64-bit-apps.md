@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 940bd8b7fe0be79ea6448b1eab69359bdb92fdc9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fc90bedeee2d04c28a3860713ca5952a4564d3bd
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198168"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674733"
 ---
 # <a name="64-bit-applications"></a>64 位元應用程式
 您在編譯應用程式時，可以指定其應以原生應用程式在 Windows 64 位元作業系統上或在 WOW64 下 (Windows 64 位元上的 Windows 32 位元) 執行。 WOW64 是讓 32 位元應用程式可在 64 位元系統上執行的相容性環境。 所有 64 位元版本的 Windows 作業系統中都包含 WOW64。  
@@ -38,7 +38,7 @@ ms.locfileid: "50198168"
   
 -   將 `IntPtr` 轉換到 `Int32` 的程式碼。  
   
- 如需如何將 32 位元應用程式移植到 64 位元 CLR 上執行的詳細資訊，請參閱[將 32 位元受控碼移轉至 64 位元](https://msdn.microsoft.com/library/ms973190.aspx)。  
+ 如需如何將 32 位元應用程式移植到 64 位元 CLR 上執行的詳細資訊，請參閱[將 32 位元受控碼移轉至 64 位元](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10))。  
   
 ## <a name="general-64-bit-programming-information"></a>64 位元程式設計的一般資訊  
  如需 64 位元程式設計的一般資訊，請參閱下列文件：  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b346da9174d77fbc6a861a8b12f2cc5035b6c291
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517613"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479694"
 ---
 # <a name="data-structures-for-parallel-programming"></a>適用於平行程式設計的資料結構
 .NET Framework 4 版導入了數個適用於平行程式設計的新類型，包括一系列並行集合類別、輕量型同步處理原始物件，以及適用於延遲初始設定的類型。 您可以搭配任何多執行緒應用程式程式碼使用這些類型，其中包括工作平行程式庫和 PLINQ。  
@@ -22,7 +22,7 @@ ms.locfileid: "54517613"
   
  下表列出新的並行集合類別：  
   
-|類型|說明|  
+|類型|描述|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|提供安全執行緒集合適用的封鎖和界限容量，這個集合會實作 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>。 在沒有可用插槽或集合已滿的情況下封鎖產生者執行緒。 在集合為空的情況下封鎖取用者執行緒。 此類型也支援由取用者和產生者所進行的非封鎖存取。 <xref:System.Collections.Concurrent.BlockingCollection%601> 可以作為基底類別或備份存放區使用，以針對任何支援 <xref:System.Collections.Generic.IEnumerable%601>的集合類別提供封鎖和繫結。|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|能提供可調整之新增和取得作業的安全執行緒包實作。|  
@@ -37,11 +37,11 @@ ms.locfileid: "54517613"
   
  下表列出新的同步處理類型：  
   
-|類型|說明|  
+|類型|描述|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|透過提供一個點，可讓每個工作發出其抵達的訊號並在部分或所有工作皆已抵達之前持續封鎖，來使多執行緒能以平行方式處理演算法。 如需詳細資訊，請參閱[屏障](../../../docs/standard/threading/barrier.md)。|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|透過提供簡單的會合機制來簡化分岔和連結案例。 如需詳細資訊，請參閱 [CountdownEvent](../../../docs/standard/threading/countdownevent.md)。|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|與 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 類似的同步處理原始物件。 <xref:System.Threading.ManualResetEventSlim> 雖為輕量型，但只能用於內部處理序通訊。 如需詳細資訊，請參閱 [ManualResetEvent 和 ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)。|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|與 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 類似的同步處理原始物件。 <xref:System.Threading.ManualResetEventSlim> 雖為輕量型，但只能用於內部處理序通訊。|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|能限制可並行存取資源或資源集區之執行緒數目的同步處理原始物件。 如需詳細資訊，請參閱 [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)。|  
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|能使嘗試取得鎖定的執行緒在產生其配量之前，於迴圈中等候 (或*旋轉*) 一段時間的互斥鎖定原始物件。 在預期等候鎖定時間較短的案例中，<xref:System.Threading.SpinLock> 能提供比其他鎖定形式更佳的效能。 如需詳細資訊，請參閱 [SpinLock](../../../docs/standard/threading/spinlock.md)。|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|會旋轉一段特定的時間，並於最終超過旋轉計數時將執行緒置於等候狀態的小型輕量型類型。  如需詳細資訊，請參閱 [SpinWait](../../../docs/standard/threading/spinwait.md)。|  
@@ -57,7 +57,7 @@ ms.locfileid: "54517613"
   
  下表列出延遲初始設定類型：  
   
-|類型|說明|  
+|類型|描述|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|提供輕量型的安全執行緒延遲初始設定。|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|以針對每個執行緒的方式提供延遲初始化的值，其中每個執行緒都會延遲叫用初始化函式。|  
