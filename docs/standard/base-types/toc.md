@@ -35,7 +35,7 @@
 ##### [逸出字元](character-escapes-in-regular-expressions.md)
 ##### [字元類別](character-classes-in-regular-expressions.md)
 ##### [錨點](anchors-in-regular-expressions.md)
-##### [群組建構](grouping-constructs-in-regular-expressions.md)
+##### [分組建構](grouping-constructs-in-regular-expressions.md)
 ##### [數量詞](quantifiers-in-regular-expressions.md)
 ##### [反向參考建構](backreference-constructs-in-regular-expressions.md)
 ##### [交替建構](alternation-constructs-in-regular-expressions.md)
