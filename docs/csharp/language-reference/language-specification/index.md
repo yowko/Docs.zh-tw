@@ -1,13 +1,19 @@
 ---
-title: 'C# 6.0 草稿語言規格'
+title: C# 6.0 草稿語言規格
 ms.date: 05/22/2018
 ms.topic: language-reference
 helpviewer_keywords:
-  - 'C# language, specification'
-  - 'what''s new [C#], language specification'
-  - 'Visual C#, C# language specification'
-  - 'language specification [C#]'
+- C# language, specification
+- what's new [C#], language specification
+- Visual C#, C# language specification
+- language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
+ms.openlocfilehash: e20a468e71329609d459070382c05e04135e73f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539580"
 ---
 # <a name="c-60-draft-language-specification"></a><span data-ttu-id="223d1-102">C# 6.0 草稿語言規格</span><span class="sxs-lookup"><span data-stu-id="223d1-102">C# 6.0 draft language specification</span></span>
 
