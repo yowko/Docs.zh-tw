@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: fd1cfa8c3391861b87e8aec718b63287c1225263
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bb0e3ff0d021e9923f2e1bd8ced882c6a263d15
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733944"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738561"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>逐步解說：驗證密碼確實複雜 (Visual Basic)
 這個方法會檢查一些強式密碼的特性，並以了解哪種檢查密碼失敗的資訊更新字串參數。  
@@ -31,7 +31,7 @@ ms.locfileid: "54733944"
 -   <xref:System.Text.RegularExpressions> 命名空間成員的存取權。 新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
 ## <a name="security"></a>安全性  
- 如果您要透過網路移動的密碼，您需要將資料傳輸會使用安全的方法。 如需詳細資訊，請參閱 < [ASP.NET Web 應用程式安全性](https://msdn.microsoft.com/library/330a99hc)。  
+ 如果您要透過網路移動的密碼，您需要將資料傳輸會使用安全的方法。 如需詳細資訊，請參閱 < [ASP.NET Web 應用程式安全性](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))。
   
  您可以改善的精確度`ValidatePassword`加上額外的複雜性檢查函式：  
   
@@ -45,4 +45,4 @@ ms.locfileid: "54733944"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Text.RegularExpressions.Regex>
-- [ASP.NET Web 應用程式安全性](https://msdn.microsoft.com/library/330a99hc)
+- [ASP.NET Web 應用程式安全性](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

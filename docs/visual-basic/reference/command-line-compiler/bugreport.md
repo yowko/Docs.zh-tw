@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 7c393abe0e1ff9872de6bdf4d3bc3befa5cde0d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2a6b4893229115ed1bc1329d5e81939b92eab2e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746178"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738938"
 ---
 # <a name="-bugreport"></a>-bugreport
 建立您提出錯誤報告時，您可以使用的檔案。  
@@ -65,4 +65,4 @@ vbc -bugreport:problem.txt t2.vb
 - [-偵錯 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
 - [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [（ASP.NET 設定結構描述） securityPolicy 的 trustLevel 項目](https://msdn.microsoft.com/library/729ab04c-03da-4ee5-86b1-be9d08a09369)
+- [（ASP.NET 設定結構描述） securityPolicy 的 trustLevel 項目](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))

@@ -1,18 +1,18 @@
 ---
-title: HOW TO：建立開發時要使用的暫時憑證
+title: HOW TO：在開發期間，用於建立暫時憑證
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 2d0301b040d0fd9865eaf5c3f96fe320ccfd8488
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698580"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738626"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>HOW TO：建立開發時要使用的暫時憑證
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>HOW TO：在開發期間，用於建立暫時憑證
 
 開發安全的服務或使用 Windows Communication Foundation (WCF) 用戶端時，通常必須提供要用做為認證的 X.509 憑證。 憑證通常是憑證鏈結的一部分，在電腦的 [受信任的根憑證授權單位] 存放區中有根授權。 具有憑證鏈結可讓您設定一組憑證的範圍，其中根授權通常來自您的組織或企業單位。 如果要在開發期間進行模擬，您可以建立兩種憑證以滿足安全性需求。 第一種是放在 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，而第二種憑證是從第一種建立的，並放在個人存放區或本機位置，或目前使用者位置的個人存放區。 本主題逐步解說的步驟來建立這兩個憑證，使用 Powershell [New-selfsignedcertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet。
 
@@ -21,7 +21,7 @@ ms.locfileid: "46698580"
 >
 > 根據預設， [New-selfsignedcertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet 會建立自我簽署的憑證，以及這些憑證是不安全。 將自我簽署的憑證放在受信任的根憑證授權單位存放區可讓您建立更能夠模擬您的部署環境的開發環境。
 
- 如需有關建立及使用憑證的詳細資訊，請參閱 < [Working with Certificates](working-with-certificates.md)。 如需使用憑證做為認證的詳細資訊，請參閱[Securing Services and Clients](securing-services-and-clients.md)。 如需有關使用 Microsoft Authenticode 技術的教學課程，請參閱 < [Authenticode 概觀與教學課程](https://go.microsoft.com/fwlink/?LinkId=88919)。
+ 如需有關建立及使用憑證的詳細資訊，請參閱 < [Working with Certificates](working-with-certificates.md)。 如需使用憑證做為認證的詳細資訊，請參閱[Securing Services and Clients](securing-services-and-clients.md)。 如需有關使用 Microsoft Authenticode 技術的教學課程，請參閱 [Authenticode 概觀與教學課程 (英文)](https://go.microsoft.com/fwlink/?LinkId=88919)。
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>建立自我簽署根授權憑證及匯出私密金鑰
 
@@ -62,7 +62,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>在受信任的根憑證授權單位中安裝自我簽署憑證
 
-1. 請開啟憑證嵌入式管理單元。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理單元來檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)。
+1. 請開啟憑證嵌入式管理單元。 如需詳細資訊，請參閱[＜How to：使用 MMC 嵌入式管理單元檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)。
 
 2. 開啟資料夾以儲存憑證，可以是 [ **本機電腦** ] 或 [ **目前使用者**]。
 
@@ -70,7 +70,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 4. 用滑鼠右鍵依序按一下 [ **憑證** ] 資料夾、[ **所有工作**] 和 [ **匯入**]。
 
-5. 請依照螢幕上的精靈指示，將 TempCa.cer 匯入存放區中。
+5. 請遵循螢幕上的精靈指示 RootCA.pfx 匯入存放區。
 
 ## <a name="using-certificates-with-wcf"></a>使用憑證與 WCF
 
@@ -106,7 +106,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 </behaviors>
 ```
 
-如需在 WCF 中使用憑證的詳細資訊，請參閱[Working with Certificates](working-with-certificates.md)。
+如需在 WCF 中使用憑證的詳細資訊，請參閱 [Working with Certificates](working-with-certificates.md)。
 
 ## <a name="net-framework-security"></a>.NET Framework 安全性
 
@@ -115,5 +115,5 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ## <a name="see-also"></a>另請參閱
 
 - [使用憑證](working-with-certificates.md)
-- [如何：使用 MMC 嵌入式管理單元來檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [如何：使用 MMC 嵌入式管理單元檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [保護服務和用戶端的安全](securing-services-and-clients.md)

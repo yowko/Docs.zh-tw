@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: e31bc2f9a0b20ce168004fa3ea2210d39a23761e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065852"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738613"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>HOW TO：呼叫 Windows 函式採用不帶正負號的類型 (Visual Basic)
 如果您要使用類別、 模組或結構，具有不帶正負號的整數類型的成員，您可以存取這些成員與 Visual Basic。  
@@ -75,7 +75,7 @@ ms.locfileid: "55065852"
     >  呼叫 unmanaged 程式碼，例如 Windows 應用程式開發介面 (API)，公開您的程式碼有潛在的安全性風險。  
   
     > [!IMPORTANT]
-    >  呼叫 Windows API 需要 unmanaged 程式碼的權限，這可能會影響在部分信任情況下執行。 如需詳細資訊，請參閱 <<c0> <xref:System.Security.Permissions.SecurityPermission> 並[程式碼存取權限](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675)。  
+    >  呼叫 Windows API 需要 unmanaged 程式碼的權限，這可能會影響在部分信任情況下執行。 如需詳細資訊，請參閱 <<c0> <xref:System.Security.Permissions.SecurityPermission> 並[程式碼存取權限](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))。  
   
 ## <a name="see-also"></a>另請參閱
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)

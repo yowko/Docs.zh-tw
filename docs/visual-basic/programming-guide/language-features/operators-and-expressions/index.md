@@ -2,14 +2,20 @@
 title: Visual Basic 中的運算子和運算式
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'operators [Visual Basic], operands'
-  - 'operators [Visual Basic]'
-  - 'operands [Visual Basic], definition'
-  - 'Visual Basic code, operators'
-  - 'Visual Basic code, expressions'
-  - operands
-  - 'expressions [Visual Basic]'
+- operators [Visual Basic], operands
+- operators [Visual Basic]
+- operands [Visual Basic], definition
+- Visual Basic code, operators
+- Visual Basic code, expressions
+- operands
+- expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
+ms.openlocfilehash: 9d63a458ed747db0a63d2c648460a1a21f7cfbc8
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738990"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic 中的運算子和運算式
 「運算子」是一種程式碼項目，可對保留值的一或多個程式碼項目執行運算。 值項目包含 `Function` 與 `Operator` 程序和運算式的變數、常數、常值、屬性、傳回值。  
@@ -56,7 +62,6 @@ ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
   
  在上述範例中，Visual Basic，請執行指派運算子右邊的運算式中的作業 (`=`)，然後將產生的值指派給變數`x`左側。 可合併到運算式的運算子數目沒有實際限制，但需要了解 [Visual Basic 中的運算子優先順序](../../../../visual-basic/language-reference/operators/operator-precedence.md)，才能確保您取得所要的結果。  
   
- 如需詳細資訊和範例，請參閱 [Operator Overloading in Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx) (Visual Basic 2005 中的運算子多載)。  
   
 ## <a name="see-also"></a>另請參閱
 - [運算子](../../../../visual-basic/language-reference/operators/index.md)
