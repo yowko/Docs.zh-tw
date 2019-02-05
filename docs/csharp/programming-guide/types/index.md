@@ -1,17 +1,23 @@
 ---
-title: '類型 - C# 程式設計手冊'
+title: 類型 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'value types [C#]'
-  - 'reference types [C#]'
-  - 'types [C#]'
-  - 'C# language, data types'
-  - 'common type system [C#]'
-  - 'data types [C#]'
-  - 'C# language, types'
-  - 'strong typing [C#]'
+- value types [C#]
+- reference types [C#]
+- types [C#]
+- C# language, data types
+- common type system [C#]
+- data types [C#]
+- C# language, types
+- strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
+ms.openlocfilehash: 5d24e28b6a685cf4934c06c72ffbc8aa29748faa
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739311"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 ## <a name="types-variables-and-values"></a>型別、變數和值  
@@ -82,8 +88,8 @@ CTS 中的實值型別和參考型別
  內建的數字型別為結構，而您可以存取其屬性和方法︰  
   
 ```csharp  
-// Static method on type Byte.  
-byte b = Byte.MaxValue;  
+// Static method on type byte.  
+byte b = byte.MaxValue;
 ```  
   
  但您會將它們當做簡單的非彙總型別來宣告並將值指派給它們︰  
