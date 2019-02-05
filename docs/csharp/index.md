@@ -1,13 +1,19 @@
 ---
-title: 'C# 指南'
-description: '了解 C# 指南如何協助您擴充 C# 的相關知識，而不論您是新手開發人員或經驗豐富的專家。'
+title: C# 指南
+description: 了解 C# 指南如何協助您擴充 C# 的相關知識，而不論您是新手開發人員或經驗豐富的專家。
 ms.date: 01/30/2018
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 helpviewer_keywords:
-  - 'documentation [C#]'
-  - 'Help, Visual C# documentation'
-  - 'C# language'
-  - 'Visual C#'
+- documentation [C#]
+- Help, Visual C# documentation
+- C# language
+- Visual C#
+ms.openlocfilehash: 458b53c9a2f1ea9774a61bb3439fe041cc8c2861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709477"
 ---
 # <a name="c-guide"></a>C# 指南
 
