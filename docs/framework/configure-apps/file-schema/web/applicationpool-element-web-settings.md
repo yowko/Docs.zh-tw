@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: b1afd6227444828c58b6dbb44de24fe82af9f8b2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a9c81d98a5e531eaa547614c4d236b6c84526398
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271976"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758270"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > 項目 （Web 設定）
 指定 asp.net 用於 ASP.NET 應用程式上執行整合模式中時，管理整個處理序行為的組態設定[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本。  
@@ -61,7 +61,7 @@ ms.locfileid: "55271976"
   
  針對`maxConcurrentRequestsPerCPU`，預設設定為"5000 」 中設定[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]實際上會關閉要求節流也就控制 asp.net，除非您真的有 5000 個以上的要求，每個 CPU。 預設設定而定來自動管理每一 CPU 的並行存取 CLR 執行緒集區。 應用程式，讓使用大量的非同步要求處理，或已封鎖 I/O、 網路上的許多長時間執行要求將受益於提高的預設限制在[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]。 設定`maxConcurrentRequestsPerCPU`為零會關閉使用的 managed 執行緒來處理 ASP.NET 要求。 應用程式執行時的 IIS 應用程式集區中，要求停留在 IIS I/O 執行緒，因此並行由進行節流處理執行緒的 IIS 設定。  
   
- `requestQueueLimit`設定的運作方式一樣`requestQueueLimit`屬性[processModel](https://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d)項目，在 ASP.NET 應用程式的 Web.config 檔案中設定。 不過， `requestQueueLimit` aspnet.config 檔案中的設定會覆寫`requestQueueLimit`Web.config 檔中設定。 換句話說，如果設定了這兩個屬性 （根據預設，這是，則為 true）、 `requestQueueLimit` aspnet.config 檔中的設定的優先順序。  
+ `requestQueueLimit`設定的運作方式一樣`requestQueueLimit`屬性[processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100))項目，在 ASP.NET 應用程式的 Web.config 檔案中設定。 不過， `requestQueueLimit` aspnet.config 檔案中的設定會覆寫`requestQueueLimit`Web.config 檔中設定。 換句話說，如果設定了這兩個屬性 （根據預設，這是，則為 true）、 `requestQueueLimit` aspnet.config 檔中的設定的優先順序。  
   
 ## <a name="example"></a>範例  
  下列範例會示範如何在下列情況中 aspnet.config 檔案設定 ASP.NET 全處理序行為：  

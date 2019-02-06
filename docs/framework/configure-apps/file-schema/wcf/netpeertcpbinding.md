@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: a039e805bc4378582d7a7bcf6ef84591ec3d2b6b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3a41cb85ac2917f34bd7e5f33e241853777f045f
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261434"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759167"
 ---
 # <a name="netpeertcpbinding"></a>\<netPeerTcpBinding>
 為對等通道特定的 TCP 訊息定義繫結。  
@@ -59,7 +59,7 @@ ms.locfileid: "55261434"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
 |[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|指定這個繫結使用的對等解析程式，將對等網狀結構 ID 解析為對等網狀結構內節點的端點 IP 位址。|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|定義訊息的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.PeerSecurityElement>。|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "55261434"
  這個繫結使用透過 TCP 的對等傳輸，藉此支援對等或多方應用程式的建立。 每個對等節點都可以裝載多個以這個繫結類型所定義的對等通道。  
   
 ## <a name="example"></a>範例  
- 下列範例示範使用 NetPeerTcpBinding 繫結，此繫結會使用對等通道提供多方通訊。 使用這個繫結的詳細案例，請參閱[Net 的對等 TCP](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)。  
+ 下列範例示範使用 NetPeerTcpBinding 繫結，此繫結會使用對等通道提供多方通訊。 使用這個繫結的詳細案例，請參閱[Net 的對等 TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))。  
   
 ```xml  
 <configuration>
@@ -107,5 +107,5 @@ ms.locfileid: "55261434"
 - [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [網路對等 TCP](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)
+- [網路對等 TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))
 - [對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)

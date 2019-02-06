@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: f9c8d9fe4b8bea45e4b655415b044937f248deab
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 86c1fabe1116e5b5d7e81022777f861f6d57e3e6
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266477"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758361"
 ---
 # <a name="error-creating-assembly-manifest-error-message"></a>建立組件資訊清單時發生錯誤：\<錯誤訊息 >
 Visual Basic 編譯器呼叫組件連結器 (Al.exe，也稱為 Alink)，以產生資訊清單的組件。 連結器在建立組件的前置發出階段回報了錯誤。  
@@ -29,6 +29,6 @@ Visual Basic 編譯器呼叫組件連結器 (Al.exe，也稱為 Alink)，以產�
   
 ## <a name="see-also"></a>另請參閱
 - [如何：使用強式名稱簽署組件](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
-- [專案設計工具、 簽署頁](/visualstudio/ide/reference/signing-page-project-designer)
- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)。  
+- [專案設計工具、簽署頁面](/visualstudio/ide/reference/signing-page-project-designer)
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [告訴我們](/visualstudio/ide/talk-to-us)

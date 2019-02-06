@@ -12,12 +12,12 @@ api_location:
 ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8935a8c282bbe812ad76ac6d4228c38ab12626a4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d5dd2829a9a00f869af3d7f370f99361979b8106
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193584"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758790"
 ---
 # <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) 方法
 
@@ -25,7 +25,7 @@ ms.locfileid: "44193584"
 
 將指定的資料流轉換為隨機存取資料流。
 
-**命名空間：** <xref:System.IO?displayProperty=nameWithType> 
+**命名空間：**<xref:System.IO?displayProperty=nameWithType>
 **組件：** System.Runtime.WindowsRuntime （在 system.runtime.windowsruntime.dll 中）
 
 ## <a name="syntax"></a>語法
@@ -72,9 +72,8 @@ A[!INCLUDE[wrt](../../../includes/wrt-md.md)]隨機存取資料流，表示已�
 
 **適用於 Windows 市集應用程式的.NET**
 
-支援：Windows 8.1
+支援於：Windows 8.1
 
 ## <a name="see-also"></a>另請參閱
 
--[System.io.windowsruntimestreamextensions （英文)](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx)
--[How to:.NET Framework 資料流與 Windows 執行階段資料流之間轉換](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)
+- [如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)

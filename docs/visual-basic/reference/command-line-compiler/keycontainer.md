@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 1666c7743f1116f86bc4457af53711cb6f1a6b7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9ceb7b4351d2278835014235bc1f3b5f15b65c0
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579819"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758283"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 指定金鑰組的金鑰容器名稱，為組件提供強式名稱。  
@@ -29,7 +29,7 @@ ms.locfileid: "54579819"
 |`container`|必要項。 包含索引鍵的容器檔案。 將檔案名稱括在引號 ("") 如果名稱包含空格。|  
   
 ## <a name="remarks"></a>備註  
- 藉由將公開金鑰插入組件資訊清單，並使用私密金鑰簽署最終組件，編譯器會建立可共用的元件。 若要產生金鑰檔，請在命令列中輸入 `sn -k file`。 `-i`選項會安裝至容器的金鑰組。 如需詳細資訊，請參閱 [Sn.exe （強式名稱工具）][Sn.exe （強式名稱工具）](../../../framework/tools/sn-exe-strong-name-tool.md))。  
+ 藉由將公開金鑰插入組件資訊清單，並使用私密金鑰簽署最終組件，編譯器會建立可共用的元件。 若要產生金鑰檔，請在命令列中輸入 `sn -k file`。 `-i`選項會安裝至容器的金鑰組。 如需詳細資訊，請參閱 < [Sn.exe （強式名稱工具）](../../../framework/tools/sn-exe-strong-name-tool.md))。  
   
  如果您使用編譯`-target:module`，金鑰檔的名稱會保留在模組中並併入編譯的組件時所建立的組件[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)。  
   

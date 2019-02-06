@@ -2,12 +2,12 @@
 title: <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ad545e6f-f06e-4549-ac92-09d758d5c636
-ms.openlocfilehash: ff050a1abe11b85dc85cd844892886fc168e53a4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 424bc0f223dbdc6dbfc69a6623f86bcc2c71fa88
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257807"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758855"
 ---
 # <a name="peerauthentication"></a>\<peerAuthentication>
 指定等節點使用之對等憑證的驗證設定。  
@@ -61,6 +61,6 @@ ms.locfileid: "55257807"
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [對等通道訊息驗證](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
-- [對等通道自訂驗證](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [對等通道訊息驗證](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [對等通道自訂驗證](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [保護對等通道應用程式的安全](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

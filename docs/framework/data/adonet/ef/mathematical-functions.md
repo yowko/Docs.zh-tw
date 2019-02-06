@@ -2,12 +2,12 @@
 title: 數學函式
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: d8d766cb1416a9a07476175364fe568d81fd9b25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6f248382f069df59a55e85e9a764b0df700fb26
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652263"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759375"
 ---
 # <a name="mathematical-functions"></a>數學函式
 
@@ -382,10 +382,10 @@ ms.locfileid: "54652263"
   
 ## <a name="see-also"></a>另請參閱
 
-如需 SqlClient 支援之數學函式的詳細資訊，請參閱 SqlClient 提供者資訊清單中所指定之 SQL Server 版本的說明文件：  
+如需 SqlClient 支援之數學函式的詳細資訊，請參閱 SqlClient 提供者資訊清單中所指定之 SQL Server 版本的說明文件：
 
-**SQL Server 2005:**[數學函數 (transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
-**SQL Server 2008：**[數學函數 (transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
-**SQL Server 2012 和更新版本：**[數學函數 (transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+- **SQL Server 2005:**[數學函數 (transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))
+- **SQL Server 2008：**[數學函數 (transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))
+- **SQL Server 2012 和更新版本：**[數學函數 (transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)
 
 - [適用於 Entity Framework 的 SqlClient 函式](sqlclient-for-ef-functions.md)

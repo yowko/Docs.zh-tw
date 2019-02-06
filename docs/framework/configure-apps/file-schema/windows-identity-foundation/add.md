@@ -3,12 +3,12 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: cb88d2a37740cf439f4fd2aa0f7fe4c098da1cf2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 34643d10ef1ed2e87152e5013634e62859e0594e
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269753"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759479"
 ---
 # <a name="add"></a>\<add>
 將指定的安全性權杖處理常式加入至 權杖處理常式集合。  
@@ -40,7 +40,7 @@ ms.locfileid: "55269753"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|類型|要加入的權杖處理常式的 CLR 型別名稱。 如需有關如何指定`type`屬性，請參閱[自訂型別參考](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24)。|  
+|類型|要加入的權杖處理常式的 CLR 型別名稱。 如需有關如何指定`type`屬性，請參閱[自訂型別參考](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)。|  
   
 ### <a name="child-elements"></a>子元素  
   

@@ -2,12 +2,12 @@
 title: <peer> 項目的 <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 8970100b1ad3019ff4a639d835d1db1430968008
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8bdb52ccaaa8b41b3321447d2d68f9021a093481
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275137"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758348"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<對等個體 > 的\<clientCredentials > 項目
 指定驗證對等用戶端時所使用的認證。  
@@ -50,7 +50,7 @@ ms.locfileid: "55275137"
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用來對服務驗證用戶端的認證。|  
   
 ## <a name="remarks"></a>備註  
- 這個組態項目會指定對等節點用於向網狀結構中其他節點驗證其本身的認證，以及對等節點用來驗證其他對等節點的驗證設定。 如需詳細資訊，請參閱 <<c0> [ 對等通道訊息驗證](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)並[保護的對等通道應用程式](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)。  
+ 這個組態項目會指定對等節點用於向網狀結構中其他節點驗證其本身的認證，以及對等節點用來驗證其他對等節點的驗證設定。 如需詳細資訊，請參閱 <<c0> [ 對等通道訊息驗證](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))並[保護的對等通道應用程式](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
@@ -62,7 +62,7 @@ ms.locfileid: "55275137"
 - <xref:System.ServiceModel.Security.PeerCredential>
 - [對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
 - [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)
-- [對等通道訊息驗證](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
-- [對等通道自訂驗證](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [對等通道訊息驗證](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [對等通道自訂驗證](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [保護對等通道應用程式的安全](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
 - [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
