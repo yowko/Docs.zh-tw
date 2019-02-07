@@ -3,10 +3,10 @@ title: F#元件設計方針
 description: 了解進行寫入的指導方針F#是供取用，其他呼叫端的元件。
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
+ms.lasthandoff: 02/07/2019
 ms.locfileid: "55066021"
 ---
 # <a name="f-component-design-guidelines"></a>F#元件設計方針
@@ -74,7 +74,7 @@ type Point =
 |-----------|------|------|----------|-------|
 | 具象類型 | PascalCase | 名詞 / 形容詞 | 清單、 Double、 複雜 | 具象型別是結構、 類別、 列舉、 委派、 記錄、 和等位。 雖然傳統上在 OCaml，小寫類型名稱F#已採用類型的.NET 命名配置。
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| 等位標記     | PascalCase | 名詞 | 部分新增成功 | 請勿使用公用 Api 中的前置詞。 （選擇性） 使用的前置詞，當內部，例如 `輸入小組 = TAlpha | TBeta | TDelta` |
+| 等位標記     | PascalCase | 名詞 | 部分新增成功 | 請勿使用公用 Api 中的前置詞。 （選擇性） 使用的前置詞，當內部，例如 `type Teams = TAlpha | TBeta | TDelta.` |
 | Event - 事件          | PascalCase | 動詞命令 | ValueChanged / ValueChanging |  |
 | 例外狀況     | PascalCase |      | WebException | 名稱應該以"Exception"結尾。 |
 | 欄位          | PascalCase | 名詞 | CurrentName  | |
