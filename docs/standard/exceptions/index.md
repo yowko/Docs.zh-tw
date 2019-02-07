@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 648a4d9e2f9be2cd8a5912ebfe272331a70ee76e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a417e964c2f44c291892f9ddec6e32438fbff9a1
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707878"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758427"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中處理和擲回例外狀況
 
@@ -48,7 +48,7 @@ ms.locfileid: "54707878"
 
 下表列出一些常見的例外狀況，並提供可能造成這些例外狀況的原因範例。
 
-| 例外狀況類型 | 說明 | 範例 |
+| 例外狀況類型 | 描述 | 範例 |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | 適用於所有例外狀況的基底類別。 | 無 (使用這個例外狀況的衍生類別)。 |
 | <xref:System.IndexOutOfRangeException> | 只有當陣列索引不正確時，才由執行階段擲回。 | 在陣列有效範圍之外對它進行索引： <br /> `arr[arr.Length+1]` |
@@ -69,4 +69,4 @@ ms.locfileid: "54707878"
 - [如何：使用 Finally 區塊](how-to-use-finally-blocks.md)
 - [處理 COM Interop 例外狀況](handling-com-interop-exceptions.md)
 - [例外狀況的最佳做法](best-practices-for-exceptions.md)
-- [每個開發人員針對執行階段中例外狀況所需知道的概念](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) \(英文\)。
+- [每個開發人員針對執行階段中例外狀況所需知道的概念](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)
