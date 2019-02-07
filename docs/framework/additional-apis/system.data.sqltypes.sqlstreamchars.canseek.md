@@ -1,7 +1,7 @@
 ---
 title: SqlStreamChars.CanSeek 屬性 (System.Data.SqlTypes)
-author: douglaslMS
-ms.author: douglasl
+author: stevestein
+ms.author: sstein
 ms.date: 12/19/2018
 ms.technology:
 - dotnet-data
@@ -14,12 +14,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 8d7bd7fb90177932b413c379f618a6d36374de57
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: bde4764af9d0160997dc202f722a12393cfa59c1
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223139"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826846"
 ---
 # <a name="sqlstreamcharscanseek-property"></a>SqlStreamChars.CanSeek 屬性
 

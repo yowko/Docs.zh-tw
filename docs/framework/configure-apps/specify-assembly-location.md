@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: b76537a347cdf30c65bfd6e56f274108e796a315
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 328fe08872a2b57d0bdf87ea9be9224795ca9ad9
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258986"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825403"
 ---
 # <a name="specifying-an-assemblys-location"></a>指定組件的位置
 有兩種方式可指定組件的位置：  
@@ -20,7 +20,7 @@ ms.locfileid: "55258986"
   
 -   使用[\<探查 >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)項目。  
   
- 您也可以使用[.NET Framework 組態工具 (Mscorcfg.msc)](https://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764)來指定組件的位置，或指定通用語言執行平台，來探查組件的位置。  
+ 您也可以使用[.NET Framework 組態工具 (Mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100))來指定組件的位置，或指定通用語言執行平台，來探查組件的位置。  
   
 ## <a name="using-the-codebase-element"></a>使用\<程式碼基底 > 項目  
  您可以使用**\<程式碼基底 >** 只能在機器組態或發行者原則檔案，也將重新導向組件版本中的項目。 當執行階段判斷要使用的組件版本時，它適用於決定版本檔案的程式碼基底設定。 如果沒有程式碼基底指示，執行階段會以一般方式探查組件。 如需詳細資訊，請參閱 <<c0> [ 執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
@@ -69,4 +69,4 @@ ms.locfileid: "55258986"
 - [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [設定.NET Framework 應用程式](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [使用組態檔設定應用程式](index.md)

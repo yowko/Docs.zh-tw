@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 529b7094ad36861cacc4009ea8faf152f056c20e
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: c4b656d1ee7edcdc7e0e5cd41f7d57266ad5ad26
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066216"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828354"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 資料提供者
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者的用途是連接資料庫、執行命令和擷取結果。 這些結果會直接處理、放入 <xref:System.Data.DataSet> 中以便視需要而公開給使用者、與多個來源的資料結合，或在各層之間進行遠端控制。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者是輕量型的，可在資料來源與程式碼之間建立最小層，以提升效能而不會犧牲功能。  
@@ -24,7 +24,7 @@ ms.locfileid: "55066216"
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for ODBC|使用 ODBC 公開的資料來源。 使用 <xref:System.Data.Odbc> 命名空間。|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle|針對 Oracle 資料來源。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 支援 Oracle 用戶端軟體 8.1.7 (含) 以後版本，並使用 <xref:System.Data.OracleClient> 命名空間。|  
 |EntityClient 提供者|為實體資料模型 (EDM) 應用程式提供資料存取。 使用 <xref:System.Data.EntityClient> 命名空間。|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server Compact 4.0。|提供的 Microsoft SQL Server Compact 4.0 資料存取。 使用 [System.Data.SqlServerCe](https://msdn.microsoft.com/library/system.data.sqlserverce.aspx) 命名空間。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server Compact 4.0。|提供的 Microsoft SQL Server Compact 4.0 資料存取。 使用 [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) 命名空間。|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>.NET Framework 資料提供者的核心物件  
  下表列出構成 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者的四個核心物件。  

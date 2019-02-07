@@ -2,12 +2,12 @@
 title: 偵錯 LINQ to DataSet 查詢
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 6c7b8c6cec39adfd5b7456d94cfae5622649e5a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680503"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825504"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>偵錯 LINQ to DataSet 查詢
 
@@ -16,7 +16,7 @@ Visual Studio 支援的偵錯[!INCLUDE[linq_dataset](../../../../includes/linq-d
 ## <a name="viewing-results"></a>檢視結果  
  您可以檢視的結果[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]使用 DataTips、 監看式 視窗中和 [快速監看式] 對話方塊中的陳述式。 藉由使用來源視窗，您可以在來源視窗中暫停查詢的指標，而且 DataTip 將會出現。 您可以複製 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 變數，並將其貼入監看式視窗或快速監看式對話方塊中。 在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中建立或宣告查詢時，不會評估該查詢，只有在執行查詢時，才會進行評估。 這就叫做*延後執行*。 因此，查詢變數在接受評估前沒有值。 如需詳細資訊，請參閱 < [LINQ to DataSet 中的查詢](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)。  
   
- 偵錯工具必須評估查詢，才能顯示查詢結果。 當您檢視時，就會發生這個隱含評估[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]中偵錯工具，而且查詢結果有一些您應該考慮的效果。 每個查詢評估會耗費些許時間。 展開結果節點也會耗用時間。 對於某些查詢而言，重複的評估可能會造成明顯的效能影響。 評估查詢也可能造成變更資料值與程式狀態的副作用。 並不是所有的查詢都有副作用。 若要判斷是否可以沒有副作用安全地評估查詢，您必須了解實作查詢的程式碼。 如需詳細資訊，請參閱 <<c0> [ 副作用和運算式](https://msdn.microsoft.com/library/e1f8a6ea-9e19-481d-b6bd-df120ad3bf4e)。  
+ 偵錯工具必須評估查詢，才能顯示查詢結果。 當您檢視時，就會發生這個隱含評估[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]中偵錯工具，而且查詢結果有一些您應該考慮的效果。 每個查詢評估會耗費些許時間。 展開結果節點也會耗用時間。 對於某些查詢而言，重複的評估可能會造成明顯的效能影響。 評估查詢也可能造成變更資料值與程式狀態的副作用。 並不是所有的查詢都有副作用。 若要判斷是否可以沒有副作用安全地評估查詢，您必須了解實作查詢的程式碼。 如需詳細資訊，請參閱 <<c0> [ 副作用和運算式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120))。  
   
 ## <a name="edit-and-continue"></a>編輯後繼續  
  編輯後繼續不支援變更[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查詢。 如果您新增、 移除或變更[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]偵錯工作階段的陳述式，會出現一個對話方塊，告訴您的變更不支援編輯後繼續。 此時，您可以復原變更，或者是停止偵錯工作階段並使用編輯過的程式碼重新啟動新的工作階段。  

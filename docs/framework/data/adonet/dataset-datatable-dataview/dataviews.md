@@ -2,12 +2,12 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 4731b0c94f9ecd03dc3d1229f27cb8ede7e0e203
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcf370e30c50bf5d992279c7abe02bfc6262ea40
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592896"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825871"
 ---
 # <a name="dataviews"></a>DataView
 <xref:System.Data.DataView> 允許您為儲存在 <xref:System.Data.DataTable> 內的資料建立不同的檢視，這是資料繫結應用程式中常用的功能。 使用**DataView**可以公開資料表以不同排序順序中的資料，您可以依資料列狀態或根據篩選條件運算式來篩選資料。  
@@ -44,10 +44,10 @@ ms.locfileid: "54592896"
  描述如何使用**DataViewManager**來管理**DataView**設定中每個資料表**資料集**。  
   
 ## <a name="related-sections"></a>相關章節  
- [ASP.NET Web 應用程式](https://msdn.microsoft.com/library/a812d7b7-049e-4234-a4c2-6acf690301f6)  
+ [ASP.NET Web 應用程式](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
  提供 ASP.NET 應用程式、Web Form 和 Web 服務的建立概觀和詳細的步驟程序。  
   
- [Windows 應用程式](https://msdn.microsoft.com/library/a6bb2180-09b1-4738-b9fd-7fb05fc92f23)  
+ [Windows 應用程式](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
  提供有關使用 Windows Form 和主控台應用程式的詳細資訊。  
   
  [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  

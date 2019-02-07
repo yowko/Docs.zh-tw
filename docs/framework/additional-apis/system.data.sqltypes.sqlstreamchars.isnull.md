@@ -1,7 +1,7 @@
 ---
 title: SqlStreamChars.IsNull 屬性 (System.Data.SqlTypes)
-author: douglaslMS
-ms.author: douglasl
+author: stevestein
+ms.author: sstein
 ms.date: 12/19/2018
 ms.technology:
 - dotnet-data
@@ -14,12 +14,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7bef26119e31658b8495df402bbc07341cd84cf7
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 7d2a2cf66ce2a375b1e5989b2fb6ddc9e3d94411
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222554"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825442"
 ---
 # <a name="sqlstreamcharsisnull-property"></a>SqlStreamChars.IsNull 屬性
 
