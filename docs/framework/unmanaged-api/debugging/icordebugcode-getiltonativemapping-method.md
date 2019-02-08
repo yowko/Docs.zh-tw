@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8614dd612fff2886c4e44a977d05a575fce74eec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e49c24a4b98a5287ec27b1667f45055d9a94d53
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648939"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903408"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping 方法
 取得"COR_DEBUG_IL_TO_NATIVE_MAP 」 執行個體，表示對應從 Microsoft intermediate language (MSIL) 位移到原生位移陣列。  

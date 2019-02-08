@@ -2,12 +2,12 @@
 title: + （字串串連）(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 580130fa-6c7c-4f76-a47d-d22c27ccadf6
-ms.openlocfilehash: e53bd0a2607deb67d45edc44e51cf4ad283b21c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1416649681aed7ef730e9d17c3863a6616ab37f
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633911"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903638"
 ---
 # <a name="-string-concatenation-entity-sql"></a>+ (字串串連) (Entity SQL)
 串連兩個字串。  
@@ -36,4 +36,4 @@ expression + expression
   
 ## <a name="see-also"></a>另請參閱
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [概念模型類型 (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)
+- [概念模型類型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)

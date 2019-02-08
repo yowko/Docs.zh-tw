@@ -2,12 +2,12 @@
 title: 實體資料模型
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: c8b2f23a6ba5d6aea9f6d1458e8b7a6bf7bfc734
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6f3d02a27ce9df152753b7aeec9ceb251bca532
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688307"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904824"
 ---
 # <a name="entity-data-model"></a>實體資料模型
 實體資料模型 (EDM) 是描述資料結構的概念集，不論其預存形式為何。 EDM 借用 Peter Chen 於 1976 年描述的實體關聯模型 (Entity-Relationship Model)，但同時補強實體關聯模型並延伸其傳統用法。  
@@ -62,6 +62,6 @@ ms.locfileid: "54688307"
  [參考完整性條件約束](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>另請參閱
-- [ADO.NET 實體資料模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
-- [.edmx 檔案概觀](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
+- [ADO.NET 實體資料模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [.edmx 檔案概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [CSDL 規格](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

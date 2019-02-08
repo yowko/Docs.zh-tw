@@ -2,12 +2,12 @@
 title: 移轉考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 13f9b97435665138f78db6a481d27172d3253679
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d783bc79585740710e663d26ecd4110f64882b44
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827899"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903911"
 ---
 # <a name="migration-considerations-entity-framework"></a>移轉考量 (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework 可以為現有應用程式提供幾項優勢， 其中一項最重要的優勢，就是使用概念模型將應用程式所使用的資料結構從資料來源中的結構描述分隔。 這樣能方便您以後對儲存體模型或資料來源本身進行變更，而不必對應用程式進行補償變更。 針對使用的優點的詳細資訊[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，請參閱 < [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)並[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -58,42 +58,49 @@ ms.locfileid: "55827899"
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>適用於使用 ADO.NET 提供者的應用程式之考量  
  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供者，如 SqlClient，可讓您查詢資料來源，進而傳回表格式資料。 也將資料載入至[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]資料集。 下列清單說明適用於升級使用現有 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供者的應用程式之考量：  
   
- 使用資料讀取器 (Reader) 顯示表格式資料。  
- 您可以考慮執行[!INCLUDE[esql](../../../../../includes/esql-md.md)]查詢使用 EntityClient 提供者和列舉整個傳回<xref:System.Data.EntityClient.EntityDataReader>物件。 只有在應用程式使用資料讀取器顯示表格式資料，而且不需要 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 提供的功能進行將資料具體化為物件、追蹤變更和處理更新時才這麼做。 您可以繼續使用對資料來源進行更新的現有資料存取程式碼，不過您可以使用從 <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 屬性存取的現有連接。 如需詳細資訊，請參閱 < [Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。  
+- 使用資料讀取器 (Reader) 顯示表格式資料。  
+
+  您可以考慮執行[!INCLUDE[esql](../../../../../includes/esql-md.md)]查詢使用 EntityClient 提供者和列舉整個傳回<xref:System.Data.EntityClient.EntityDataReader>物件。 只有在應用程式使用資料讀取器顯示表格式資料，而且不需要 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 提供的功能進行將資料具體化為物件、追蹤變更和處理更新時才這麼做。 您可以繼續使用對資料來源進行更新的現有資料存取程式碼，不過您可以使用從 <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 屬性存取的現有連接。 如需詳細資訊，請參閱 < [Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。  
   
- 使用資料集。  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供的許多資料集，包括記憶體中的持續性，提供相同功能的變更追蹤、 資料繫結，以及將物件序列化為 XML 資料。 如需詳細資訊，請參閱 <<c0> [ 使用物件](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)。  
+- 使用資料集。  
+
+  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供的許多資料集，包括記憶體中的持續性，提供相同功能的變更追蹤、 資料繫結，以及將物件序列化為 XML 資料。 如需詳細資訊，請參閱 <<c0> [ 使用物件](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)。  
   
- 如果[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]未提供功能的應用程式所需的資料集，您可以仍然利用 LINQ 查詢的優勢使用[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]。 如需詳細資訊，請參閱 [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
+  如果[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]未提供功能的應用程式所需的資料集，您可以仍然利用 LINQ 查詢的優勢使用[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]。 如需詳細資訊，請參閱 [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>適用於將資料繫結至控制項的應用程式之考量  
  [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]可讓您封裝這類的資料來源中的資料集、[!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]資料來源控制項，並再將使用者介面項目繫結至那些資料控制項。 下列清單說明適用於將控制項繫結至 Entity Framework 資料的考量。  
   
- 將資料繫結至控制項。  
- 當您查詢概念模型中，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]傳回資料當做實體類型的執行個體的物件。 這些物件可以直接繫結控制項，此繫結支援更新。 所做的變更至控制項，例如中的資料列中的資料<xref:System.Windows.Forms.DataGridView>，會自動取得儲存至資料庫時<xref:System.Data.Objects.ObjectContext.SaveChanges%2A>呼叫方法。  
+- 將資料繫結至控制項。  
+
+  當您查詢概念模型中，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]傳回資料當做實體類型的執行個體的物件。 這些物件可以直接繫結控制項，此繫結支援更新。 所做的變更至控制項，例如中的資料列中的資料<xref:System.Windows.Forms.DataGridView>，會自動取得儲存至資料庫時<xref:System.Data.Objects.ObjectContext.SaveChanges%2A>呼叫方法。  
   
- 如果應用程式列舉查詢的結果，以在 <xref:System.Windows.Forms.DataGridView> 或其他支援資料繫結的控制項類型中顯示資料，您則可以把應用程式修改為將控制項繫結至 <xref:System.Data.Objects.ObjectQuery%601> 的結果。  
+  如果應用程式列舉查詢的結果，以在 <xref:System.Windows.Forms.DataGridView> 或其他支援資料繫結的控制項類型中顯示資料，您則可以把應用程式修改為將控制項繫結至 <xref:System.Data.Objects.ObjectQuery%601> 的結果。  
   
- 如需詳細資訊，請參閱 <<c0> [ 將物件繫結至控制項](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100))。  
+  如需詳細資訊，請參閱 <<c0> [ 將物件繫結至控制項](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100))。  
   
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 資料來源控制項。  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包含設計用來簡化資料繫結中的資料來源控制項[!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Web 應用程式。 如需詳細資訊，請參閱 < [EntityDataSource Web 伺服器控制項概觀](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100))。  
+- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 資料來源控制項。  
+
+  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包含設計用來簡化資料繫結中的資料來源控制項[!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Web 應用程式。 如需詳細資訊，請參閱 < [EntityDataSource Web 伺服器控制項概觀](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100))。  
   
 ## <a name="other-considerations"></a>其他考量  
  下列考量可適用於將特定應用程式類型移轉至 Entity Framework 的情況。  
   
- 公開資料服務的應用程式。  
- 以 Windows Communication Foundation (WCF) 為架構的 Web 服務和應用程式使用 XML 要求/回應訊息格式公開來自基礎資料來源的資料。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 使用二進位、XML 或 WCF 資料合約序列化 (Serialization) 支援實體物件的序列化。 二進位和 WCF 序列化都支援物件圖形的完整序列化。 如需詳細資訊，請參閱 <<c0> [ 建置多層式架構應用程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896304(v=vs.100))。  
+- 公開資料服務的應用程式。  
+
+  以 Windows Communication Foundation (WCF) 為架構的 Web 服務和應用程式使用 XML 要求/回應訊息格式公開來自基礎資料來源的資料。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 使用二進位、XML 或 WCF 資料合約序列化 (Serialization) 支援實體物件的序列化。 二進位和 WCF 序列化都支援物件圖形的完整序列化。 如需詳細資訊，請參閱 <<c0> [ 建置多層式架構應用程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896304(v=vs.100))。  
   
- 使用 XML 資料的應用程式。  
- 物件序列化能讓您建立 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 資料服務。 這些服務為使用 XML 資料的應用程式提供資料，例如以 AJAX 為基礎的網際網路應用程式。 在這些情況下，請考慮使用 [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]。 這些資料服務會以實體資料模型為基礎並提供使用標準具像狀態傳輸 (REST) HTTP 動作的實體資料的動態存取、 例如 GET、 PUT 和張貼的資料。 如需詳細資訊，請參閱 [WCF Data Services 4.5](../../../../../docs/framework/data/wcf/index.md)。  
+- 使用 XML 資料的應用程式。  
+
+  物件序列化能讓您建立 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 資料服務。 這些服務為使用 XML 資料的應用程式提供資料，例如以 AJAX 為基礎的網際網路應用程式。 在這些情況下，請考慮使用 [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]。 這些資料服務會以實體資料模型為基礎並提供使用標準具像狀態傳輸 (REST) HTTP 動作的實體資料的動態存取、 例如 GET、 PUT 和張貼的資料。 如需詳細資訊，請參閱 [WCF Data Services 4.5](../../../../../docs/framework/data/wcf/index.md)。  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不支援原生 XML 資料型別， 亦即將實體對應至具有 XML 資料行的資料表時，XML 資料行的對等實體屬性會是字串。 您可以中斷物件的連接，而且將其序列化為 XML。 如需詳細資訊，請參閱 <<c0> [ 序列化的物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))。  
+  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不支援原生 XML 資料型別， 亦即將實體對應至具有 XML 資料行的資料表時，XML 資料行的對等實體屬性會是字串。 您可以中斷物件的連接，而且將其序列化為 XML。 如需詳細資訊，請參閱 <<c0> [ 序列化的物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))。  
   
- 如果應用程式需要有查詢 XML 資料的功能，您還是可以使用 LINQ to XML 來善用 LINQ 查詢的優勢。 如需詳細資訊，請參閱 < [LINQ to XML](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb387098(v=vs.110))。  
+  如果應用程式需要有查詢 XML 資料的功能，您還是可以使用 LINQ to XML 來善用 LINQ 查詢的優勢。 如需詳細資訊，請參閱 < [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)或是[LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)。  
   
- 維護狀態的應用程式。  
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web 應用程式必須經常維護 Web 網頁或使用者工作階段的狀態。 中的物件<xref:System.Data.Objects.ObjectContext>執行個體可以儲存在用戶端檢視狀態，或在工作階段狀態，在伺服器上，並稍後再擷取和重新附加至新的物件內容。 如需詳細資訊，請參閱 <<c0> [ 附加和卸離物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100))。  
+- 維護狀態的應用程式。  
+
+  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web 應用程式必須經常維護 Web 網頁或使用者工作階段的狀態。 中的物件<xref:System.Data.Objects.ObjectContext>執行個體可以儲存在用戶端檢視狀態，或在工作階段狀態，在伺服器上，並稍後再擷取和重新附加至新的物件內容。 如需詳細資訊，請參閱 <<c0> [ 附加和卸離物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100))。  
   
 ## <a name="see-also"></a>另請參閱
 - [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)

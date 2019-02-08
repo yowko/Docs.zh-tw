@@ -2,12 +2,12 @@
 title: 提供者資訊清單規格
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 592d435dd0da3a66fb3bbd278a53facb6cf08cb7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 409653fa415e62ff0591e09ad4771c5951689b24
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734048"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904605"
 ---
 # <a name="provider-manifest-specification"></a>提供者資訊清單規格
 本節將討論資料存放區提供者如何支援資料存放區中的型別與函式。  
@@ -91,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>使用提供者資訊清單語彙基元  
- 在離線案例中，系統會從 SSDL 表示中挑選語彙基元。 SSDL 可讓您指定 ProviderManifestToken (請參閱[結構描述項目 (SSDL)](https://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222)如需詳細資訊)。 例如，如果無法開啟連接，SSDL 就會具有指定資訊清單之相關資訊的提供者資訊清單語彙基元。  
+ 在離線案例中，系統會從 SSDL 表示中挑選語彙基元。 SSDL 可讓您指定 ProviderManifestToken (請參閱[結構描述項目 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl)如需詳細資訊)。 例如，如果無法開啟連接，SSDL 就會具有指定資訊清單之相關資訊的提供者資訊清單語彙基元。  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  

@@ -2,12 +2,12 @@
 title: 參考資料
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 3edfbe7d650fead507946610de8e76d27e94136f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b474530cd9c45ef16d004bb2445c349fdd418394
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583058"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904705"
 ---
 # <a name="reference"></a>參考資料
 本節提供參考資訊給 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 開發人員。  
@@ -40,8 +40,9 @@ ms.locfileid: "48583058"
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  提供 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 主題的入口網站。  
   
- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- 提供 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 主題的入口網站。  
+ [Language Integrated Query (LINQ)C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [語言整合式的查詢 (LINQ)-Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ 提供用於入口網站[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]主題。  
   
  [LinqDataSource 技術概觀](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
  描述 <xref:System.Web.UI.WebControls.LinqDataSource> 控制項如何透過 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 資料來源控制項架構，將 [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] 公開給 Web 程式開發人員。

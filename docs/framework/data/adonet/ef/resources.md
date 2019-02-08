@@ -2,12 +2,12 @@
 title: Entity Framework 資源
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
-ms.openlocfilehash: 24ee9225b8e19eac93554d2243aac0cafd5e9ef0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2579a3b7108a6a0a4b5f86cfa02a25a825a160de
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522449"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903655"
 ---
 # <a name="entity-framework-resources"></a>Entity Framework 資源
 下列外部資源提供建立 Entity Framework 應用程式的資訊和支援。  
@@ -31,4 +31,4 @@ ms.locfileid: "54522449"
 - [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)
 - [快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)
 - [Entity Framework 詞彙](../../../../../docs/framework/data/adonet/ef/terminology.md)
-- [ADO.NET 實體資料模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [ADO.NET 實體資料模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

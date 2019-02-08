@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 6e3a88f7b34c64480d69df1a06a113e392d8fe53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97cae018f8cdf19da390b9586334f7c8b7f1c239
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619379"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903808"
 ---
 # <a name="establishing-the-connection"></a>建立連接
 若要連接至 Microsoft SQL Server，請使用 .NET Framework Data Provider for SQL Server 的 <xref:System.Data.SqlClient.SqlConnection> 物件。 若要連接至 OLE DB 資料來源，請使用 .NET Framework Data Provider for OLE DB 的 <xref:System.Data.OleDb.OleDbConnection> 物件。 若要連接至 ODBC 資料來源，請使用 ODBC 的 .NET Framework 資料提供者的 <xref:System.Data.Odbc.OdbcConnection> 物件。 若要連接至 Oracle 資料來源，請使用 Oracle 的 .NET Framework 資料提供者的 <xref:System.Data.OracleClient.OracleConnection> 物件。 安全地儲存及擷取連接字串，請參閱[保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
@@ -51,7 +51,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 ### <a name="integrated-security-and-aspnet"></a>整合安全性與 ASP.NET  
  SQL Server 整合安全性 (也稱為信任連接) 可在連接至 SQL Server 時，協助提供保護，因為它不會在連接字串中公開使用者 ID 及密碼，因此建議在驗證連接時使用。 整合安全性會使用執行中處理序的目前安全性識別或語彙基元。 對於桌面應用程式，這通常是目前已登入使用者的識別。  
   
- ASP.NET 應用程式的安全性識別可設為數個不同的選項之一。 若要進一步了解 ASP.NET 應用程式在連接到 SQL Server 時所用的安全性識別，請參閱[ASP.NET 模擬](https://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d)， [ASP.NET 驗證](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)，和[How to:存取 SQL Server 使用 Windows 整合式安全性](https://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5)。  
+ ASP.NET 應用程式的安全性識別可設為數個不同的選項之一。 若要進一步了解 ASP.NET 應用程式在連接到 SQL Server 時所用的安全性識別，請參閱[ASP.NET 模擬](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))， [ASP.NET 驗證](https://docs.microsoft.com/previous-versions/aspnet/eeyk640h(v=vs.100))，和[How to:存取 SQL Server 使用 Windows 整合式安全性](https://docs.microsoft.com/previous-versions/aspnet/bsz5788z(v=vs.100))。  
   
 ## <a name="connecting-to-an-ole-db-data-source"></a>連接至 OLE DB 資料來源  
  .NET Framework Data Provider for OLE DB 提供使用 OLE DB （透過 SQLOLEDB，OLE DB Provider for SQL Server)，公開的資料來源的連接使用**OleDbConnection**物件。  

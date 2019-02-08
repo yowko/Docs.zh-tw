@@ -4,16 +4,16 @@ description: 探勘的各種架構和支援的無伺服器架構，包括 web �
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150299"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904786"
 ---
 # <a name="serverless-architecture"></a>無伺服器架構
 
-有許多方法，可以使用無伺服器架構。 本章將探討整合無伺服器的一般架構的範例。 其中也涵蓋可能會造成額外的挑戰，或需要額外的考量，實作無伺服器時的考量。 最後，說明不同的無伺服器的使用案例提供了數個設計範例。
+若要使用的許多方式[無伺服器](http://azure.com/serverless)架構。 本章將探討整合無伺服器的一般架構的範例。 其中也涵蓋可能會造成額外的挑戰，或需要額外的考量，實作無伺服器時的考量。 最後，說明不同的無伺服器的使用案例提供了數個設計範例。
 
 無伺服器的主機通常使用現有的容器型或 PaaS 層，用於管理無伺服器執行個體。 例如，Azure Functions 會根據[Azure App Service](https://docs.microsoft.com/azure/app-service/)。 App Service 用來相應放大執行個體，並管理執行 Azure Functions 程式碼的執行階段。 對於以 Windows 為基礎的函式，做為 PaaS 和標尺的主控件執行 out.NET 執行階段。 針對以 Linux 為基礎的函式，主機會運用容器。
 

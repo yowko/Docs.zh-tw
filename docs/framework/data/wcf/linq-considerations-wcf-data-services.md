@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: b73f1063c83d61e02a01cb31932d93c468996598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d7ec8914fe83bb34e946fd5596f161e526038b1
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741492"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904626"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 考量 (WCF Data Services)
 本主題所提供的資訊是關於您要使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端時所撰寫和執行 LINQ 查詢的方式，以及使用 LINQ 查詢實作 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 之資料服務的限制。 如需有關撰寫和執行查詢，針對[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-型資料服務，請參閱 <<c2> [ 查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
@@ -36,7 +36,7 @@ ms.locfileid: "54741492"
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   
- 如需一般 LINQ 的詳細資訊，請參閱[LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。  
+ 如需一般 LINQ 的詳細資訊，請參閱[Language-Integrated Query (LINQ)- C# ](../../../csharp/programming-guide/concepts/linq/index.md)或是[Language-Integrated Query (LINQ)-Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)。  
   
  LINQ 可讓您同時使用語言專屬的宣告式查詢語法 (如以上範例所示)，以及所謂標準查詢運算子的一組查詢方法來撰寫查詢。 相當於以上範例的查詢僅能使用以方法為基礎的語法撰寫，如以下範例所示：  
   

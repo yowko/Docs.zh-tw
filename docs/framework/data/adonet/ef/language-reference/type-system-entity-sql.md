@@ -2,12 +2,12 @@
 title: 類型系統 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: 1831028f9e659dab90ca3c8689d7ff2d5c0ee36a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2748407703b90c60d3082b0e6c0b6aa2d3fb365
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554331"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904684"
 ---
 # <a name="type-system-entity-sql"></a>類型系統 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援數種類型：  
@@ -18,7 +18,7 @@ ms.locfileid: "54554331"
   
 -   沒有在結構描述中明確定義的匿名型別：<xref:System.Data.Metadata.Edm.CollectionType>、<xref:System.Data.Metadata.Edm.RowType> 和 <xref:System.Data.Metadata.Edm.RefType>。  
   
- 本章節將討論沒有在結構描述中明確定義但是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援的匿名型別。 如需基本和名義型別資訊，請參閱[概念模型型別 (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)。  
+ 本節將討論沒有結構描述中明確定義，但支援 Entity SQL 所支援的匿名型別。 如需基本和名義型別資訊，請參閱[概念模型型別 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)。  
   
 ## <a name="rows"></a>列  
  資料列的結構取決於此資料列所包含之具型別和具名成員的序列。 資料列型別沒有任何識別 (Identity)，而且無法從中繼承。 如果這些成員分別對等，相同資料列型別的執行個體 (Instance) 就會對等。 除了結構化對等以外，資料列沒有任何行為，而且在 Common Language Runtime 中沒有對等項目。 查詢可能會產生包含資料列或資料列集合的結構。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢與主應用程式 (Host) 語言之間的 API 繫結會定義如何在產生結果的查詢中實現資料列。 如需如何建構資料列執行個體的資訊，請參閱[建構類型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)。  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 25d7f49644996d87ddb5d191dc313916c0ca6fbb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9ca3732de5e4cfa07fe08dec78edc9de23a1a036
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45748627"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904367"
 ---
 # <a name="working-with-data-definition-language"></a>使用資料定義語言
 開頭[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]第 4 版，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援資料定義語言 (DDL)。 這可讓您根據連接字串和儲存體 (SSDL) 模型的中繼資料，建立或刪除資料庫執行個體。  
@@ -40,11 +40,11 @@ ms.locfileid: "45748627"
   
 2.  將現有的模型加入至應用程式。  
   
-    1.  新增名為空的模型`SchoolModel`。 若要建立空的模型，請參閱[如何： 建立新.edmx 檔案](https://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2)主題。  
+    1.  新增名為空的模型`SchoolModel`。 若要建立空的模型，請參閱[How to:建立新.edmx 檔案](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))主題。  
   
      SchoolModel.edmx 檔案就會加入至您的專案。  
   
-    1.  複製概念、 儲存體，並將對應從 School 模型的內容[School 模型](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)主題。  
+    1.  複製概念、 儲存體，並將對應從 School 模型的內容[School 模型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))主題。  
   
     2.  開啟 SchoolModel.edmx 檔案並在 `edmx:Runtime` 標記中貼上內容。  
   

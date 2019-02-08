@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: a17d0b2382f105bb6299386e45a6746e05c39feb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e60df2b576980ecd1ff92af78cef36f025b71417
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539060"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903783"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 中的效能計數器
 ADO.NET 2.0 導入了對效能計數器的擴充支援，其中包含對 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 的支援。 舊版 ADO.NET 中提供的 <xref:System.Data.SqlClient> 效能計數器已被本主題中討論的新效能計數器取代。 您可以使用 ADO.NET 效能計數器來監控應用程式的狀態及其使用的連接資源。 效能計數器可藉由「Windows 效能監視器」來進行監視，或可藉由 <xref:System.Diagnostics.PerformanceCounter> 命名空間 (Namespace) 中的 <xref:System.Diagnostics> 類別以程式設計的方式存取。  
@@ -202,27 +202,27 @@ Class Program
   
     Private Shared Function GetIntegratedSecurityConnectionString() As String  
         ' To avoid storing the connection string in your code,   
-        ' you can retrive it from a configuration file.   
+        ' you can retrieve it from a configuration file.   
         Return ("Data Source=.\SqlExpress;Integrated Security=True;" &   
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionString() As String  
         ' To avoid storing the connection string in your code,   
-        ' you can retrive it from a configuration file.   
+        ' you can retrieve it from a configuration file.   
         Return ("Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" &   
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionStringDifferent() As String  
         ' To avoid storing the connection string in your code,   
-        ' you can retrive it from a configuration file.   
+        ' you can retrieve it from a configuration file.   
         Return ("Initial Catalog=AdventureWorks;Data Source=.\SqlExpress;" & _  
           "User Id=LowPriv;Password=Data!05;")  
     End Function  
 End Class  
 ```  
-  
+
 ```csharp  
 using System;  
 using System.Data.SqlClient;  
@@ -372,32 +372,32 @@ class Program
     private static string GetIntegratedSecurityConnectionString()  
     {  
         // To avoid storing the connection string in your code,  
-        // you can retrive it from a configuration file.  
+        // you can retrieve it from a configuration file.  
         return @"Data Source=.\SqlExpress;Integrated Security=True;" +  
           "Initial Catalog=AdventureWorks";  
     }  
     private static string GetSqlConnectionString()  
     {  
         // To avoid storing the connection string in your code,  
-        // you can retrive it from a configuration file.  
+        // you can retrieve it from a configuration file.  
         return @"Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" +  
-        //  "Initial Catalog=AdventureWorks";  
+          "Initial Catalog=AdventureWorks";  
     }  
   
     private static string GetSqlConnectionStringDifferent()  
     {  
         // To avoid storing the connection string in your code,  
-        // you can retrive it from a configuration file.  
+        // you can retrieve it from a configuration file.  
         return @"Initial Catalog=AdventureWorks;Data Source=.\SqlExpress;" +  
           "User Id=LowPriv;Password=Data!05;";  
     }  
 }  
 ```  
-  
+
 ## <a name="see-also"></a>另請參閱
 - [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [OLE DB、ODBC 和 Oracle 連接共用](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
-- [適用於 ASP.NET 的效能計數器](https://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)
+- [適用於 ASP.NET 的效能計數器](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [執行階段分析](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)
-- [監視效能臨界值簡介](https://msdn.microsoft.com/library/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [監視效能臨界值簡介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [ADO.NET 概觀](ado-net-overview.md)

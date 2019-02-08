@@ -2,15 +2,15 @@
 title: LINQ to DataSet 範例
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 8e6cce8ba79cad42ade6ac373631094f9e2d4e04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae43111a5b56e1edf3e1b4089902a8ca1d822d0d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634528"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903804"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ to DataSet 範例
-本節提供[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]程式設計使用標準查詢運算子的範例。 <xref:System.Data.DataSet>這些範例中使用由使用擴展`FillDataSet`方法中指定[載入資料至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子概觀](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
+本節提供 LINQ to DataSet 使用標準查詢運算子的程式設計範例。 <xref:System.Data.DataSet>這些範例中使用由使用擴展`FillDataSet`方法中指定[載入資料至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子概觀 (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)或是[標準查詢運算子概觀 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。</c0>  
   
 ## <a name="in-this-section"></a>本節內容  
  [查詢運算式範例](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
