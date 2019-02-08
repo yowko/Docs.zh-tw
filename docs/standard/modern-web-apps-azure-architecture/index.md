@@ -3,13 +3,13 @@ title: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
 description: 本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web 應用程式的端對端指引。
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 0d59a07e01897400a53f48799383d1670a468d73
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 5e85126cbec23bdebd510b103478b3c362ef71fa
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148102"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827860"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
 
@@ -25,7 +25,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018 by Microsoft Corporation
+Copyright © 2019 by Microsoft Corporation
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製或傳送。
 
@@ -43,7 +43,7 @@ Docker 鯨魚標誌是 Docker, Inc. 的註冊商標。使用需要許可。
 
 作者: 
 
-> 軟體架構 Advisor **Steve Smith (@ardalis)**，[Ardalis.com](https://ardalis.com)
+> **Steve "ardalis" Smith** - 軟體架構設計人員和講師 - [Ardalis.com](https://ardalis.com)
 
 編輯者：
 
@@ -67,7 +67,7 @@ Docker 鯨魚標誌是 Docker, Inc. 的註冊商標。使用需要許可。
 
 越來越多的組織會選擇使用 Microsoft Azure 這類服務，以在雲端中裝載其 Web 應用程式。 如果下列對您的應用程式或組織十分重要，則您應該考慮將應用程式裝載在雲端中：
 
-- 降低對資料中心成本的投資 (硬體、軟體、空間、公用程式等等)
+- 降低對資料中心成本的投資 (硬體、軟體、空間、公用程式、伺服器管理等等)
 
 - 彈性定價 (根據使用量付費，而閒置容量不需付費)。
 
@@ -81,7 +81,7 @@ Docker 鯨魚標誌是 Docker, Inc. 的註冊商標。使用需要許可。
 
 ## <a name="purpose"></a>用途
 
-本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web 應用程式的端對端指引。
+本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web 應用程式的端對端指引。 此處的「整合型」是指這些應用程式會部署為單一單位，而不是互動服務和應用程式的集合。
 
 本指南是 ["_.NET Microservices.Architecture for Containerized .NET Applications_"](../microservices-architecture/index.md) 的補充說明，該書籍著重在 Docker、微服務及部署容器以裝載企業應用程式的部分。
 

@@ -2,14 +2,14 @@
 title: 將程式碼從 .NET Framework 移植到 .NET Core
 description: 了解移植程序，並探索可協助將 .NET Framework 移植到 .NET Core 的工具。
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266568"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903571"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>將您的程式碼從 .NET Framework 移植到 .NET Core
 
@@ -37,8 +37,6 @@ ms.locfileid: "55266568"
 
 5. 執行移轉計劃！
 
-## <a name="tools-to-help"></a>協助工具
-
 下列清單顯示您在移轉程序期間可能會發現有用的工具：
 
 * .NET 可攜性分析器：[命令列工具](https://github.com/Microsoft/dotnet-apiport/releases)或 [Visual Studio 擴充功能](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)，一種工具鏈，可以產生一份報表，說明程式碼在 .NET Framework 與 .NET Core 之間的可攜程度，以及逐一分析組件問題。 如需詳細資訊，請參閱 [.NET 可攜性分析器](../../standard/analyzers/portability-analyzer.md)。
@@ -51,4 +49,4 @@ ms.locfileid: "55266568"
 > CsprojToVs2017 是第三方工具。 不保證它可搭配您的所有專案運作，而且它可能會導致您所依賴的行為發生些微變更。 CsprojToVs2017 應該當作將可自動化之基本事項自動化的「起點」使用。 它不是可以用來移轉專案檔格式保證解決方案。
 
 >[!div class="step-by-step"]
->[下一步](third-party-deps.md)
+>[下一步](net-framework-tech-unavailable.md)

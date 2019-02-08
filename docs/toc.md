@@ -1189,7 +1189,7 @@
 ## [教學課程](machine-learning/tutorials/index.md)
 ### [情感分析 (二元分類)](machine-learning/tutorials/sentiment-analysis.md)
 ### [問題分類 (多元分類)](machine-learning/tutorials/github-issue-classification.md)
-### [計程車車資預測工具 (迴歸)](machine-learning/tutorials/taxi-fare.md)
+### [價格預測 (迴歸)](machine-learning/tutorials/taxi-fare.md)
 ### [鳶尾花 (叢集)](machine-learning/tutorials/iris-clustering.md)
 ## [操作指南](machine-learning/how-to-guides/index.md)
 ### 準備資料
@@ -1200,7 +1200,7 @@
 #### [從文字檔載入資料](machine-learning/how-to-guides/load-data-from-text-file-ml-net.MD)
 #### [使用正常化來前置處理資料](machine-learning/how-to-guides/normalizers-preprocess-data-ml-net.md)
 ### 訓練、評估和說明模型
-#### [使用不在文字檔中的資料將模型定型](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
+#### [使用即時資料來源將模型定型](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
 #### [使用交叉驗證將模型定型](machine-learning/how-to-guides/train-cross-validation-ml-net.md)
 #### [檢查中繼管線資料值](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [將迴歸模型定型](machine-learning/how-to-guides/train-regression-model-ml-net.md)
