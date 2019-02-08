@@ -2,12 +2,12 @@
 title: Entity Framework 的 EntityClient 提供者
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 33ad1e89260296f09426e335450d9d8ba3461d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b094f6d0fbd7c1dc8d56fc43a05fc4d22a80e981
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541192"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826443"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework 的 EntityClient 提供者
 EntityClient 提供者是 Entity Framework 應用程式用來存取概念模型中所描述之資料的資料提供者。 如需概念模型的資訊，請參閱[模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。 EntityClient 會使用其他 .NET Framework 資料提供者來存取資料來源。 例如，EntityClient 會在存取 SQL Server 資料庫時使用 .NET Framework Data Provider for SQL Server (SqlClient)。 SqlClient 提供者的相關資訊，請參閱[適用於 Entity Framework 的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)。 EntityClient 提供者是在 <xref:System.Data.EntityClient> 命名空間 (Namespace) 中實作的。  
@@ -40,7 +40,7 @@ EntityClient 提供者是 Entity Framework 應用程式用來存取概念模型�
 ## <a name="managing-transactions"></a>異動管理  
  Entity Framework 中有兩種使用交易的方式：自動與明確。 自動異動會使用 <xref:System.Transactions> 命名空間，而明確異動會使用 <xref:System.Data.EntityClient.EntityTransaction> 類別。  
   
- 若要更新透過概念模型; 公開的資料請參閱[How to:管理交易，在 Entity Framework](https://msdn.microsoft.com/library/4a55eb7f-f826-4a48-9df1-aebe2352ebef)。  
+ 若要更新透過概念模型公開的資料，請參閱[How to:管理交易，在 Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738523(v=vs.100))。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
@@ -64,6 +64,6 @@ EntityClient 提供者是 Entity Framework 應用程式用來存取概念模型�
  [如何：使用巡覽關聯性巡覽運算子](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>另請參閱
-- [管理連接和異動](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [管理連接和異動](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [語言參考](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

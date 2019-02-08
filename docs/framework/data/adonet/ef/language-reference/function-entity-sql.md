@@ -2,12 +2,12 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: 6da7c1c11cb6211764fac5ca7b210788784a7c21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0ace658de0cc6d1ee2d50c9e86d66dea1ac649a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697357"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827535"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 定義 Entity SQL 查詢命令範圍內的函式。  
@@ -61,7 +61,7 @@ FUNCTION function-name
   
  `A()`  
   
- 如需詳細資訊，請參閱[＜How to：呼叫使用者定義函式](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)。  
+ 如需詳細資訊，請參閱[＜How to：呼叫使用者定義函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))。  
   
  函式也可以在模型本身進行宣告。 在模型中宣告的函式，會與在命令中宣告為內嵌的函式一樣，以相同的方式執行。 如需詳細資訊，請參閱 <<c0> [ 使用者定義函式](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)。  
   

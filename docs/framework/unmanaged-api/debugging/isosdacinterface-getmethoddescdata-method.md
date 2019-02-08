@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e56f837c4d3362ec6e71030e4fb475df42b9fba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639941"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825949"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData 方法
 
-取得的資料指定[MethodDesc](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)。
+取得指定 MethodDesc 指標的資料。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -34,9 +34,9 @@ ms.locfileid: "54639941"
 HRESULT GetMethodDescData(
     CLRDATA_ADDRESS            methodDesc,
     CLRDATA_ADDRESS            ip,
-    void                       *data,
+    DacpMethodDescData *data,
     ULONG                      cRevertedRejitVersions,
-    void                      *rgRevertedRejitData,
+    DacpReJitData      *rgRevertedRejitData,
     void                      *pcNeededRevertedRejitData
 );
 ```
@@ -47,17 +47,17 @@ HRESULT GetMethodDescData(
 
 `ip` [in]方法的 IP 位址。
 
-`data` [out]傳回從內部 Api，與 MethodDesc 相關的資料。 結構必須至少 168 個位元組。
+`data` [out]傳回從內部 Api，與 MethodDesc 相關的資料。
 
 `cRevertedRejitVersions` [out]已還原的 rejit 版本數目。
 
-`rgRevertedRejitData` [out]傳回的內部 Api，以還原的 rejit 版本相關聯的資料。 結構必須至少在 24 個位元組。
+`rgRevertedRejitData` [out]傳回的內部 Api，以還原的 rejit 版本相關聯的資料。
 
 `pcNeededRevertedRejitData` [out]儲存與還原的 ReJit 版本相關聯的資料所需的位元組數目。
 
 ## <a name="remarks"></a>備註
 
-提供的方法是一部分`ISOSDacInterface`介面，並對應至 20 虛擬方法表的位置。 也`CLRDATA_ADDRESS`為 64 位元不帶正負號的整數。
+提供的方法是一部分`ISOSDacInterface`介面，並對應至 20 虛擬方法表的位置。 若要能夠使用它們[ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md)必須定義為 64 位元不帶正負號的整數。
 
 ## <a name="requirements"></a>需求
 

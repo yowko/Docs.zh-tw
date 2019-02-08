@@ -2,12 +2,12 @@
 title: ADO.NET 中的資料追蹤
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: ac9e290d4c9209cbf8ccf5eb3acdeceb68f9021b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f1191396c8e5a68d613c403d260d15d26fa929f
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721860"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826573"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET 中的資料追蹤
 ADO.NET 具備內建資料追蹤功能的.NET 資料提供者所支援的 SQL Server、 Oracle、 OLE DB 和 ODBC，以及 ADO.NET <xref:System.Data.DataSet>，和 SQL Server 網路通訊協定。  
@@ -26,10 +26,10 @@ ADO.NET 具備內建資料追蹤功能的.NET 資料提供者所支援的 SQL Se
   
  為了支援不同的追蹤技術，我們製作了可擴充的追蹤，讓開發人員追蹤任何應用程式堆疊層級的問題。 雖然追蹤不是 ADO.NET 的特有功能，但 Microsoft 提供者可利用通用的追蹤和檢測應用程式開發介面。  
   
- 如需有關設定和在 ADO.NET 中設定 managed 的追蹤的詳細資訊，請參閱[追蹤資料存取](https://msdn.microsoft.com/library/hh880086.aspx)。  
+ 如需有關設定和在 ADO.NET 中設定 managed 的追蹤的詳細資訊，請參閱[追蹤資料存取](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))。  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴充事件記錄中的診斷資訊  
- 在  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server，資料存取追蹤 ([資料存取追蹤](https://msdn.microsoft.com/library/hh880086.aspx)) 已經更新，以方便您更輕鬆地從相互關聯用戶端事件與診斷資訊，例如連線失敗伺服器連接信號緩衝區與應用程式效能資訊的擴充的事件記錄檔中。 如需有關讀取擴充的事件記錄檔的詳細資訊，請參閱[檢視事件工作階段資料](https://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx)。  
+ 在  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server，資料存取追蹤 ([資料存取追蹤](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) 已經更新，以方便您更輕鬆地從相互關聯用戶端事件與診斷資訊，例如連線失敗伺服器連接信號緩衝區與應用程式效能資訊的擴充的事件記錄檔中。 如需有關讀取擴充的事件記錄檔的詳細資訊，請參閱[檢視事件工作階段資料](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))。  
   
  ADO.NET 會傳送用戶端連接 ID 以進行連接作業。 如果連線失敗，您可以存取連接信號緩衝區 ([連線疑難排解 SQL Server 2008 中與連接信號緩衝區](https://go.microsoft.com/fwlink/?LinkId=207752))，並尋找`ClientConnectionID`欄位，並取得相關診斷資訊連接失敗。 只有在發生錯誤時，用戶端連接 ID 才會記錄在信號緩衝區中 (如果在傳送登入前封包之前連接失敗，就不會產生用戶端連接 ID)。用戶端連接 ID 是 16 個位元組的 GUID。 如果在擴充事件工作階段中將 `client_connection_id` 動作加入到事件中，您還可以在擴充事件目標輸出中尋找用戶端連接 ID。 如需進一步的用戶端驅動程式診斷協助，您可以啟用資料存取追蹤並傳回連接命令，同時觀察資料存取追蹤當中的 `ClientConnectionID` 欄位。  
   

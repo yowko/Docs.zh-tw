@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 5d3bc2b4e5fbb8cc36cf4688bd4fa5e4c0851dcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa91646a46807f26053b3d0df28c412bcc5a2f21
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597628"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825897"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 程式碼範例
 本主題的程式碼清單示範如何使用下列 ADO.NET 技術來擷取資料庫中的資料：
@@ -137,7 +137,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>具型別的 ObjectQuery
-這則範例中的程式碼會使用 <xref:System.Data.Objects.ObjectQuery%601> 來傳回資料當做 Categories 物件。 如需詳細資訊，請參閱 <<c0> [ 物件查詢](https://msdn.microsoft.com/0768033c-876f-471d-85d5-264884349276)。
+這則範例中的程式碼會使用 <xref:System.Data.Objects.ObjectQuery%601> 來傳回資料當做 Categories 物件。 如需詳細資訊，請參閱 <<c0> [ 物件查詢](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))。
 
 ```csharp
 using System;
@@ -346,7 +346,7 @@ End Class
 ## <a name="see-also"></a>另請參閱
 - [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [建立資料應用程式](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)
-- [查詢 Entity Data Model （Entity Framework 工作）](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)
-- [如何：執行可傳回匿名類型集合的查詢](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)
+- [建立資料應用程式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
+- [查詢 Entity Data Model （Entity Framework 工作）](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
+- [如何：執行可傳回匿名類型集合的查詢](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
