@@ -2,14 +2,14 @@
 title: 分析相依性以將程式碼移植到 .NET Core
 description: 了解如何分析外部相依性，以將您的專案從 .NET Framework 移植到 .NET Core。
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6451099bfc7f3afa5c9c1585862403a0a9fb2186
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415217"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904339"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>分析您的相依性以將程式碼移植到 .NET Core
 
@@ -93,13 +93,13 @@ portable-net45-win8-wpa8-wpa81
 
 如需如何在 Visual Studio 中隱藏編譯器警告的詳細資訊，請參閱[隱藏 NuGet 套件的警告](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages)。
 
-### <a name="port-your-packages-to-packagereference"></a>將您的套件移植到 `PackageReference`
+## <a name="port-your-packages-to-packagereference"></a>將您的套件移植到 `PackageReference`
 
 .NET Core 使用 [PackageReference](/nuget/consume-packages/package-references-in-project-files) 來指定套件相依性。 如果您使用 [packages.config](/nuget/reference/packages-config) 指定您的套件，則需要轉換成 `PackageReference`。
 
 您可以在[從 packages.config 移轉至 PackageReference](/nuget/reference/migrate-packages-config-to-package-reference) 深入了解。
 
-### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 封裝相依性在 .NET Core 上不執行時該怎麼辦
+## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 封裝相依性在 .NET Core 上不執行時該怎麼辦
 
 如果您依賴的 NuGet 套件在 .NET Core 上不執行，您可以做幾件事：
 
@@ -119,6 +119,5 @@ portable-net45-win8-wpa8-wpa81
 
 您可能有不是 NuGet 套件的相依性，例如檔案系統中的 DLL。 判斷該相依性可攜性的唯一方法，是執行 [.NET Portability Analyzer](https://github.com/Microsoft/dotnet-apiport) 工具。 此工具可以分析以 .NET Framework 為目標的組件，並識別不可移植到其他 .NET 平台 (例如 .NET Core) 的 API。 您可以將此工具當作主控台應用程式或 [Visual Studio 延伸模組](../../standard/analyzers/portability-analyzer.md)來執行。
 
-## <a name="next-steps"></a>後續步驟
-
-如要移轉程式庫，請參閱 [Porting to .NET Core - Libraries](libraries.md) (移轉至 .NET Core - 程式庫)。
+>[!div class="step-by-step"]
+>[下一步](libraries.md)
