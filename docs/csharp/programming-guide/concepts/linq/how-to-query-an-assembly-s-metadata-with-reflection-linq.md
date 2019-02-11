@@ -2,14 +2,14 @@
 title: HOW TO：使用反映查詢組件的中繼資料 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: c4e10001e4c4b84265147c43aa9a5557e68e2d54
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 849244f1345966dbe198686f4f9024fc321b6ded
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696057"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263494"
 ---
-# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-c"></a>HOW TO：使用反映查詢組件的中繼資料 (LINQ) (C#)
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>HOW TO：使用反映查詢組件的中繼資料 (LINQ) (C#)
 下列範例示範如何搭配使用 LINQ 與反射，來擷取符合所指定搜尋準則之方法的特定中繼資料。 在此情況下，查詢會尋找組件中所有方法的名稱，而這些方法會傳回陣列這類可列舉類型。  
   
 ## <a name="example"></a>範例  

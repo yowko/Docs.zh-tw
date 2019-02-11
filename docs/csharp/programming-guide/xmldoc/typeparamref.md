@@ -1,5 +1,5 @@
 ---
-title: '&lt;typeparamref&gt; - C# 程式設計指南'
+title: <typeparamref> - C# 程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: cfee16ad1cdc1e019a4133259c1603f5a0a09ac8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834aff6e4673a306559daa1b9517e11538e90ad0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536551"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273344"
 ---
-# <a name="lttypeparamrefgt-c-programming-guide"></a>&lt;typeparamref&gt; (C# 程式設計手冊)
+# <a name="typeparamref-c-programming-guide"></a>\<typeparamref> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -31,7 +31,7 @@ ms.locfileid: "54536551"
   
  使用這個標記，讓文件檔案的取用者以某種明顯方式格式化單字，例如斜體。  
   
- 編譯搭配 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。  
+ 使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 編譯，可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparamref_1.cs)]  

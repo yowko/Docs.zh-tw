@@ -1,5 +1,5 @@
 ---
-title: '&lt;seealso&gt; - C# 程式設計指南'
+title: <seealso> - C# 程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: e75480db9aebdeb2199694168abf4f774773b9c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42cc976a160f1ff9ce08fc4ab71ed03984034850
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543544"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267603"
 ---
-# <a name="ltseealsogt-c-programming-guide"></a>&lt;seealso&gt; (C# 程式設計手冊)
+# <a name="seealso-c-programming-guide"></a>\<seealso> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -36,7 +36,7 @@ ms.locfileid: "54543544"
 ## <a name="remarks"></a>備註  
  \<seealso> 標記可讓您指定要顯示在＜請參閱＞一節中的文字。 使用 [\<see>](../../../csharp/programming-guide/xmldoc/see.md)，以在文字內指定連結。  
   
- 編譯搭配 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。  
+ 使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 編譯，可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
  如需使用 \<seealso> 的範例，請參閱 [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md)。  

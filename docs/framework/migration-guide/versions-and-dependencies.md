@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f32b32a8eeeaae00084bd0a69a94beeb837036a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a327cdeb69c5143b1720ff67ea493b7a088f399
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582165"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204869"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 每一版 .NET Framework 都包含通用語言執行平台 (CLR)、基底類別庫及其他 Managed 程式庫。 本主題將說明各版 .NET Framework 的主要功能、提供有關基礎 CLR 版本和相關聯開發環境的資訊，以及識別 Windows 作業系統所安裝的版本。  
@@ -30,7 +30,7 @@ ms.locfileid: "54582165"
   
 |.NET Framework 版本|CLR 版本|包含在<br /> Visual Studio<br/>版本|✓ 隨附於<br />+ 可安裝於<br />Windows|✓ 隨附於<br />+ 可安裝於<br />Windows Server|判斷已安裝的 .NET 版本|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
-|4.7.2<br/><br/>[新功能](../whats-new/index.md#whats-new-in-the-net-framework-472)<br/><br/>[協助工具的新功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-the-net-framework-472)|4| | ✓ 10 2018 年 10 月更新 (版本 1809) <br/><br/> ✓ 10 2018 年 4 月更新 (版本 1803) <br/><br/> + 10 Fall Creators Update (版本 1709) <br/> <br/> + 10 Creators Update (版本 1703) <br/> + 10 Anniversary Update (版本 1607) <br/> + 8.1 <br/> +7 | ✓ Windows Server，版本 1803 <br/> + Windows Server，版本 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461814 (Windows 10 2018 年 10 月更新) <br/> - 461808 (Windows 10 2018 年 4 月更新及 Windows Server，版本 1803) <br/> - 461814 (所有其他作業系統版本) <br/><br/> (請參閱[相關指示](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|
+|4.7.2<br/><br/>[新功能](../whats-new/index.md#whats-new-in-the-net-framework-472)<br/><br/>[協助工具的新功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-the-net-framework-472)|4| | ✓ 10 2018 年 10 月更新 (版本 1809) <br/><br/> ✓ 10 2018 年 4 月更新 (版本 1803) <br/><br/> + 10 Fall Creators Update (版本 1709) <br/> <br/> + 10 Creators Update (版本 1703) <br/> + 10 Anniversary Update (版本 1607) <br/> + 8.1 <br/> +7 | ✓ Windows Server 2019<br/> ✓ Windows Server，版本 1809 <br/> ✓ Windows Server，版本 1803 <br/> + Windows Server，版本 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461814 (Windows 10 2018 年 10 月更新) <br/> - 461808 (Windows 10 2018 年 4 月更新及 Windows Server，版本 1803) <br/> - 461814 (所有其他作業系統版本) <br/><br/> (請參閱[相關指示](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|
 |4.7.1<br/><br/>[新功能](../whats-new/index.md#whats-new-in-the-net-framework-471)<br/><br/>[協助工具的新功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-the-net-framework-471)|4| | ✓ 10 Fall Creators Update (版本 1709) <br/> <br/> + 10 Creators Update (版本 1703) <br/> + 10 Anniversary Update (版本 1607) <br/> + 8.1 <br/> +7| + Windows Server，版本 1803 <br/> ✓ Windows Server，版本 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461308 (Windows 10 Creators Update 及 Windows Server，版本 1709) <br/> - 461310 (所有其他 OS 版本) <br/><br/> (請參閱[相關指示](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))| 
 |4.7<br/><br/>[新功能](../whats-new/index.md#whats-new-in-the-net-framework-47)|4| | ✓ 10 Creators Update (版本 1703) <br/> <br/> + 10 Anniversary Update (版本 1607) <br/> + 8.1 <br/> +7| + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 460798 (Windows 10 Creators Update) <br/> - 460805 (所有其他作業系統版本) <br/><br/> (請參閱[相關指示](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)) |  
 |4.6.2<br/><br/>[新功能](../whats-new/index.md#whats-new-in-the-net-framework-462)|4||✓ 10 年度更新 (版本 1607) <br /><br /> + 10 November Update (版本 1511) <br/> + 10 <br/> + 8.1<br />+ 7|✓ 2016<br /><br /> + 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|使用 `Release` DWORD：<br /><br /> - 394802 (Windows 10 年度更新版及 Windows Server 2016) <br />- 394806 (所有其他作業系統版本)<br /><br /> (請參閱[相關指示](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
@@ -82,4 +82,4 @@ ms.locfileid: "54582165"
 
 - [版本相容性](../../../docs/framework/migration-guide/version-compatibility.md)   - 
 - [Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/?LinkId=196607)
-- [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

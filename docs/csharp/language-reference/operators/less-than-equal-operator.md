@@ -1,5 +1,5 @@
 ---
-title: '&lt;= 運算子 - C# 參考'
+title: <= 運算子 - C# 參考
 ms.custom: seodec18
 ms.date: 12/18/2018
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - less than or equal to operator (<=) [C#]
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
-ms.openlocfilehash: 30f42de68667756a8233fef4241bfd74ed4eff2a
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: cb11a746d36cc22ab2341e28a7efba3c0b3510eb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656085"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257001"
 ---
-# <a name="lt-operator-c-reference"></a>&lt;= 運算子 (C# 參考)
+# <a name="-operator-c-reference"></a>\<= 運算子 (C# 參考)
 
 若「小於或等於」關係運算子的第一個運算元小於或等於其第二個運算元，其 `<=` 會傳回 `true`，否則為 `false`。 所有數值及列舉類型都支援 `<=` 運算子。 相同[列舉](../keywords/enum.md)類型的運算元會比較基礎整數型別的對應值。
 

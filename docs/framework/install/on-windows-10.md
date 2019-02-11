@@ -5,14 +5,14 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3897b3acd06d4dbe8b61f4c12686a365bd17662a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: db5c6a45db299d716b2fdd115086e0dbc5952a59
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066307"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204297"
 ---
-# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>在 Windows 10 和 Windows Server 2016 上安裝 .NET Framework
+# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>在 Windows 10 和 Windows Server 2016 以及更新版本上安裝 .NET Framework
 
 在 Windows 上執行許多應用程式時需要 .NET Framework。 本文中的指示可協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) 是提供的最新版本。
 
@@ -27,6 +27,12 @@ ms.locfileid: "55066307"
 * [Windows 10 2018 年 10 月更新](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 * [Windows 10 2018 4 月更新](https://www.microsoft.com/software-download/windows10)
+
+* Windows Server 2019
+
+* Windows Server，版本 1809
+
+* Windows Server，版本 1803
 
 > [!div class="button"]
 > [下載 .NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)
@@ -79,5 +85,5 @@ ms.locfileid: "55066307"
 ## <a name="see-also"></a>另請參閱
 
 - [NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) (.NET 下載)
-- [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)
+- [針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解](troubleshoot-blocked-installations-and-uninstallations.md)
 - [安裝適用於開發人員的 .NET Framework](guide-for-developers.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;include&gt; - C# 程式設計指南'
+title: <include> - C# 程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: a9e87e803bef38ceb91849b976e2019deed54471
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e933647487f966e9f8448cf60a2bdecdd29cdff
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541166"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286256"
 ---
-# <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt; (C# 程式設計手冊)
+# <a name="include-c-programming-guide"></a>\<include> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -67,7 +67,7 @@ The summary for this other type.
 ```  
   
 ## <a name="program-output"></a>程式輸出  
- 當您使用下列命令列編譯 Test 和 Test2 類別時，會產生下列輸出：`/doc:DocFileName.xml.` 在 Visual Studio 中，您會在 [專案設計工具] 的 [組建] 窗格中指定 XML 文件命令選項。 當 C# 編譯器看到 \<include> 標記時，會搜尋 xml_include_tag.doc 中的文件註解，而不是目前的原始程式檔。 編譯器接著會產生 DocFileName.xml，這是 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類文件工具用來產生最終文件的檔案。  
+ 當您使用下列命令列編譯 Test 和 Test2 類別時，會產生下列輸出：`/doc:DocFileName.xml.` 在 Visual Studio 中，您會在 [專案設計工具] 的 [組建] 窗格中指定 XML 文件命令選項。 當 C# 編譯器看到 \<include> 標記時，會搜尋 xml_include_tag.doc 中的文件註解，而不是目前的原始程式檔。 編譯器接著會產生 DocFileName.xml，這是 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類文件工具用來產生最終文件的檔案。  
   
 ```xml  
 <?xml version="1.0"?>   

@@ -1,5 +1,5 @@
 ---
-title: '&lt;list&gt; - C# 程式設計指南'
+title: <list> - C# 程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: a636fd35355dfa7320c2ca961ddada233c574dbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a127509d603ada952b3d48d4bbc417db64f607ea
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563154"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290169"
 ---
-# <a name="ltlistgt-c-programming-guide"></a>&lt;list&gt; (C# 程式設計手冊)
+# <a name="list-c-programming-guide"></a>\<list> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -50,7 +50,7 @@ ms.locfileid: "54563154"
   
  清單或資料表可以有所需的多個 \<item> 區塊。  
   
- 編譯搭配 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。  
+ 使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 編譯，可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]  

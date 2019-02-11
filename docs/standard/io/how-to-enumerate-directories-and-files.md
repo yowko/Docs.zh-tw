@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 463c751ab03875b6af89c325981c65b7bc69d0ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 863335cf080dbccd76b38c7222b74637b99ae2f0
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580456"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758660"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>HOW TO：列舉目錄和檔案
 當您使用目錄和檔案的大型集合時，相較於陣列，可列舉的集合會提供更佳的效能。 若要列舉目錄和檔案，請使用能夠傳回可列舉目錄或檔案名稱、或是其 <xref:System.IO.DirectoryInfo>、<xref:System.IO.FileInfo> 或 <xref:System.IO.FileSystemInfo> 物件集合的方法。  
@@ -65,4 +65,4 @@ ms.locfileid: "54580456"
   
 ## <a name="see-also"></a>另請參閱
 
-[檔案和資料流 I/O](../../../docs/standard/io/index.md)
+- [檔案和資料流 I/O](../../../docs/standard/io/index.md)

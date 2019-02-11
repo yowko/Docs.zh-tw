@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 915ffcba4ad0dc361e3a3c392adc6215d2420a85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d6550282f9a64912ec3306a3b898845e894d165
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592623"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827210"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)
 原生映像產生器 (Ngen.exe) 是一種可以增進 Managed 應用程式效能的工具。 Ngen.exe 會建立原生映像，也就是包含已編譯之處理器特定機器碼的檔案，然後將原生映像安裝到本機電腦上的原生映像快取中。 執行階段就可以從快取中使用原生映像，而不是使用 Just-In-Time (JIT) 編譯器來編譯原始組件。  
@@ -50,7 +50,7 @@ ms.locfileid: "54592623"
   
  在 Windows 8 上，請參閱[原生映像工作](#native-image-task)。  
   
- 如需使用 Ngen.exe 和原生映像服務的詳細資訊，請參閱[原生映像服務][Native Image Service]。  
+ 如需使用 Ngen.exe 和原生映像服務的詳細資訊，請參閱[原生映像服務](#native-image-service)。  
   
 > [!NOTE]
 >  您可以在[原生映像產生器 (Ngen.exe) 舊版語法](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324)中找到 .NET Framework 1.0 和 1.1 版的 Ngen.exe 語法。  
@@ -72,7 +72,7 @@ ngen /? | /help
 ## <a name="actions"></a>動作  
  下表顯示每個 `action` 的語法。 如需 `action` 個別部分的描述，請參閱[引數](#ArgumentTable)、[優先權層級](#PriorityTable)、[情節](#ScenarioTable)，以及[組態](#ConfigTable)表格。 [選項](#OptionTable)表格則描述 `options` 和說明參數。  
   
-|動作|說明|  
+|動作|描述|  
 |------------|-----------------|  
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|產生組件的原生映像及其相依性，並在原生映像快取中安裝映像。<br /><br /> 如果已指定 `/queue`，原生映像服務的動作就會排入佇列。 預設優先權為 3。 請參閱[優先權層級](#PriorityTable)表格。|  
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|從原生映像快取中刪除組件的原生映像和其相依性。<br /><br /> 若要解除安裝單一映像和其相依性，請使用安裝影像時所用的相同命令列引數。 **注意：** 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，不再支援 `uninstall` * 動作。|  
@@ -84,7 +84,7 @@ ngen /? | /help
 <a name="ArgumentTable"></a>   
 ## <a name="arguments"></a>引數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |`assemblyName`|組件的完整顯示名稱。 例如，`"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`。 **注意：** 您可以提供組件的部分名稱 (例如 `myAssembly`) 以進行 `display` 和 `uninstall` 動作。 <br /><br /> 每一個 Ngen.exe 命令列只能指定一個組件。|  
 |`assemblyPath`|組件的明確路徑。 您可以指定完整或相對路徑。<br /><br /> 如果指定檔案名稱但沒有指定路徑，則組件必須位於目前的目錄中。<br /><br /> 每一個 Ngen.exe 命令列只能指定一個組件。|  
@@ -92,16 +92,16 @@ ngen /? | /help
 <a name="PriorityTable"></a>   
 ## <a name="priority-levels"></a>優先權層級  
   
-|優先權|說明|  
+|優先權|描述|  
 |--------------|-----------------|  
 |`1`|立即產生並安裝原生映像，不等待閒置時間。|  
 |`2`|產生並安裝原生映像，不等待閒置時間，但在完成所有優先權為 1 的操作 (及其相依性) 之後。|  
-|`3`|當原生映像服務偵測到電腦閒置時安裝原生映像。 請參閱[原生映像服務][Native Image Service]。|  
+|`3`|當原生映像服務偵測到電腦閒置時安裝原生映像。 請參閱[原生映像服務](#native-image-service)。|  
   
 <a name="ScenarioTable"></a>   
 ## <a name="scenarios"></a>案例  
   
-|情節|說明|  
+|情節|描述|  
 |--------------|-----------------|  
 |`/Debug`|產生可以在偵錯工具下使用的原生映像。|  
 |`/Profile`|產生可以在分析工具下使用的原生映像。|  
@@ -110,7 +110,7 @@ ngen /? | /help
 <a name="ConfigTable"></a>   
 ## <a name="config"></a>組態  
   
-|組態|說明|  
+|組態|描述|  
 |-------------------|-----------------|  
 |`/ExeConfig:` `exePath`|使用指定之可執行組件的組態。<br /><br /> Ngen.exe 繫結至相依性時，必須做出與載入器一樣的決定。 在執行階段載入共用元件時，如果使用 <xref:System.Reflection.Assembly.Load%2A> 方法，應用程式的組態檔就會判斷為共用元件載入的相依性，例如，載入的相依性版本。 `/ExeConfig` 參數會對 Ngen.exe 提供在執行階段時載入的相依性指引。|  
 |`/AppBase:` `directoryPath`|在尋找相依性時，使用指定的目錄做為應用程式基底。|  
@@ -118,7 +118,7 @@ ngen /? | /help
 <a name="OptionTable"></a>   
 ## <a name="options"></a>選項  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |`/nologo`|隱藏 Microsoft 程式啟始資訊的顯示。|  
 |`/silent`|隱藏成功訊息的顯示。|  
@@ -313,7 +313,7 @@ using namespace System::Runtime::CompilerServices;
   
 <a name="Deferred"></a>   
 ## <a name="deferred-processing"></a>延後處理  
- 對極大型的應用程式產生原生映像會需要相當長的時間。 同樣地，變更共用元件或變更電腦設定可能都需要更新許多原生映像。 `install` 和 `update` 動作具有 `/queue` 選項，可將原生映像服務的延後執行作業加入佇列。 此外，Ngen.exe 具有提供部分服務控制權的 `queue` 和 `executeQueuedItems` 動作。 如需詳細資訊，請參閱[原生映像服務][Native Image Service]。  
+ 對極大型的應用程式產生原生映像會需要相當長的時間。 同樣地，變更共用元件或變更電腦設定可能都需要更新許多原生映像。 `install` 和 `update` 動作具有 `/queue` 選項，可將原生映像服務的延後執行作業加入佇列。 此外，Ngen.exe 具有提供部分服務控制權的 `queue` 和 `executeQueuedItems` 動作。 如需詳細資訊，請參閱[原生映像服務](#native-image-service)。  
   
 <a name="JITCompilation"></a>   
 ## <a name="native-images-and-jit-compilation"></a>原生映像和 JIT 編譯  
@@ -470,7 +470,7 @@ ngen display "myAssembly, version=1.0.0.0"
 ngen update  
 ```  
   
- 更新所有映像可能是耗時的處理。 您可以使用 `/queue` 選項，依原生映像服務將要執行的更新加入佇列。 如需 `/queue` 選項和安裝優先權的詳細資訊，請參閱[原生映像服務][Native Image Service]。  
+ 更新所有映像可能是耗時的處理。 您可以使用 `/queue` 選項，依原生映像服務將要執行的更新加入佇列。 如需 `/queue` 選項和安裝優先權的詳細資訊，請參閱[原生映像服務](#native-image-service)。  
   
 ```  
 ngen update /queue  
@@ -511,7 +511,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   
  搭配使用 `install` 動作時，提供副檔名需要從含有組件的目錄執行 Ngen.exe 或指定完整路徑。  
   
- 如需與原生映像服務相關的範例，請參閱[原生映像服務][Native Image Service]。  
+ 如需與原生映像服務相關的範例，請參閱[原生映像服務](#native-image-service)。  
   
 ## <a name="native-image-task"></a>原生映像工作  
  原生映像工作是產生及維護原生映像的 Windows 工作。 原生映像工作會自動為受支援的案例產生及回收原生映像。 (請參閱[建立原生映像](https://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418))。它也可以讓安裝程式使用 [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)，在延後的時間建立及更新原生映像。  
@@ -523,7 +523,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 |NET Framework NGEN v4.0.30319|是|是|  
 |NET Framework NGEN v4.0.30319 64|否|是|  
   
- 在 Windows 8 或更新版本上執行時，可在 .NET Framework 4.5 和更新版本中使用原生映像工作。 在舊版 Windows 中，.NET Framework 會使用 [原生映像服務][Native Image Service]。  
+ 在 Windows 8 或更新版本上執行時，可在 .NET Framework 4.5 和更新版本中使用原生映像工作。 在舊版 Windows 中，.NET Framework 會使用 [原生映像服務](#native-image-service)。  
   
 ### <a name="task-lifetime"></a>工作存留期  
  一般而言，Windows 工作排程器會在每天晚上電腦閒置時，開始原生映像工作。 此工作會檢查應用程式安裝程式佇列的任何延後工作、任何延後的原生映像更新要求，以及任何自動建立映像的工作。 此工作會完成未完成的工作項目，然後才關閉。 如果電腦在工作執行時停止閒置，該工作就會停止。  
@@ -589,5 +589,3 @@ ngen executeQueuedItems
 - [Managed 執行程序](../../../docs/standard/managed-execution-process.md)
 - [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
-[Native Image Service]: #native-image-service
