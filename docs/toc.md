@@ -191,9 +191,11 @@
 ### [dotnet-svcutil.xmlserializer](core/additional-tools/dotnet-svcutil.xmlserializer-guide.md)
 ### [XML 序列化程式產生器](core/additional-tools/xml-serializer-generator.md)
 ## [從 .NET Framework 移植](core/porting/index.md)
-### [針對 .NET Core 組織專案](core/porting/project-structure.md)
+### [.NET Core 無法使用 .NET Framework 技術](core/porting/net-framework-tech-unavailable.md)
 ### [分析協力廠商相依性](core/porting/third-party-deps.md)
 ### [移植程式庫](core/porting/libraries.md)
+### [針對 .NET Core 組織專案](core/porting/project-structure.md)
+### [協助移轉到 .NET Core 的工具](core/porting/tools.md)
 ### [使用 Windows 相容性套件](core/porting/windows-compat-pack.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [從原始檔建置 .NET Core](core/build/index.md)
