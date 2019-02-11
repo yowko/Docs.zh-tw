@@ -3,13 +3,13 @@ title: Docker 應用程式的開發工作流程
 description: 了解開發 Docker 應用程式的工作流程詳細資料。 一開始會逐步了解一些用以最佳化 Dockerfile 的詳細資料，最後將取得使用 Visual Studio 時可用的簡化工作流程。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/27/2018
-ms.openlocfilehash: 52053f270067ba0cc3ab8535560ec8145eda0758
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.date: 01/07/2019
+ms.openlocfilehash: c5c8cc34c70771d3f362f967cc99e76013291faa
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084975"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480097"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 應用程式的開發工作流程
 
@@ -97,14 +97,14 @@ Dockerfile 放在您應用程式或服務的根資料夾中。 它包含告訴 D
 
 您通常會在基底映像的基礎上，為您的容器建置自訂映像，此基底映像可從 [Docker Hub](https://hub.docker.com/) 登錄等官方存放庫取得。 這就是當您在 Visual Studio 中啟用 Docker 支援時，實際發生的狀況。 您的 Dockerfile 會使用現有 `aspnetcore` 映像。
 
-前文曾說明您可以使用的 Docker 映像和存放庫，視您選擇的架構和作業系統而定。 例如，如果您想要使用 ASP.NET Core (Linux 或 Windows)，則要使用的映像就是 `microsoft/dotnet:2.1-aspnetcore-runtime`。 因此，您只需要指定要為容器使用的基底 Docker 映像。 將 `FROM microsoft/dotnet:2.1-aspnetcore-runtime` 新增至您的 Dockerfile 即可完成此作業。 Visual Studio 會自動執行此作業，但如打算更新版本，則要更新此值。
+前文曾說明您可以使用的 Docker 映像和存放庫，視您選擇的架構和作業系統而定。 例如，如果您想要使用 ASP.NET Core (Linux 或 Windows)，則要使用的映像就是 `microsoft/dotnet:2.2-aspnetcore-runtime`。 因此，您只需要指定要為容器使用的基底 Docker 映像。 將 `FROM microsoft/dotnet:2.2-aspnetcore-runtime` 新增至您的 Dockerfile 即可完成此作業。 Visual Studio 會自動執行此作業，但如打算更新版本，則要更新此值。
 
 使用 Docker Hub 中有版本號碼的官方 .NET 映像存放庫，可確保所有電腦上都能使用相同的語言功能 (包括開發、測試和生產環境)。
 
 下例示範 ASP.NET Core 容器的範例 Dockerfile。
 
 ```Dockerfile
-FROM microsoft/aspnetcore:2.0
+FROM microsoft/dotnet:2.2-aspnetcore-runtime
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,7 +112,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-在本例中，映像是以 2.1 版的官方 ASP.NET Core Docker 映像為基礎 (適用於 Linux 和 Windows 的多架構)。 這是 `FROM microsoft/dotnet:2.1-aspnetcore-runtime` 設定。 (如需這個基底映像的詳細資訊，請參閱 [ASP.NET Core Docker 映像](https://hub.docker.com/r/microsoft/aspnetcore/)頁面及 [.NET Core Docker 映像](https://hub.docker.com/r/microsoft/dotnet/)頁面。)在 Dockerfile 中，您也需要指示 Docker 接聽您會在執行階段使用的 TCP 通訊埠 (本例中為通訊埠 80，如 EXPOSE 設定的設定)。
+在此情況下，映像是以 2.2 版的官方 ASP.NET Core Docker 映像為基礎 (適用於 Linux 和 Windows 的多架構)。 這是 `FROM microsoft/dotnet:2.2-aspnetcore-runtime` 設定。 (如需這個基底映像的詳細資訊，請參閱 [.NET Core Docker 映像](https://hub.docker.com/r/microsoft/dotnet/)頁面。)在 Dockerfile 中，您也需要指示 Docker 接聽您會在執行階段使用的 TCP 通訊埠 (本例中為通訊埠 80，如 EXPOSE 設定的設定)。
 
 您可在 Dockerfile 中指定其他的組態設定，視您使用的語言和架構而定。 例如，ENTRYPOINT 行中有 `["dotnet", "MySingleContainerWebApp.dll"]` 會指示 Docker 執行 .NET Core 應用程式。 如果您使用 SDK 和 .NET Core CLI (dotnet CLI) 建置及執行 .NET 應用程式，此設定會有所不同。 重點是 ENTRYPOINT 行與其他設定會不一樣，視您選擇的應用程式語言和平台而定。
 
@@ -132,20 +132,20 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 ### <a name="using-multi-arch-image-repositories"></a>使用多架構映像存放庫
 
-一個存放庫可以包含多種平台變化，例如 Linux 映像和 Windows 映像。 這項功能可讓像 Microsoft (基底映像建立者) 這樣的廠商建立單一存放庫以涵蓋多個平台 (即 Linux 和 Windows)。 例如，Docker Hub 登錄提供的 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) 存放庫，會使用相同的存放庫名稱提供 Linux 和 Windows Nano Server 支援。
+一個存放庫可以包含多種平台變化，例如 Linux 映像和 Windows 映像。 這項功能可讓像 Microsoft (基底映像建立者) 這樣的廠商建立單一存放庫以涵蓋多個平台 (即 Linux 和 Windows)。 例如，Docker Hub 登錄提供的 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) 存放庫，會使用相同的存放庫名稱提供 Linux 和 Windows Nano Server 支援。
 
 如果您指定標籤，如下列案例一樣明確鎖定平台：
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime-stretch-slim` \
-  目標：Linux 上的僅限 .NET Core 2.1 執行階段
+- `microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim` \
+  目標：Linux 上的僅限 .NET Core 2.2 執行階段
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1709` \
-  目標：Windows Nano Server 上的僅限 .NET Core 2.1 執行階段
+- `microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1809` \
+  目標：Windows Nano Server 上的僅限 .NET Core 2.2 執行階段
 
 但如果您指定相同的映像名稱，甚至是使用相同的標籤，多架構映像 (例如 `aspnetcore` 映像) 將會根據您目前部署的 Docker 主機 OS 使用 Linux 或 Windows 版本，如下列範例所示：
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime` \
-  多架構：Linux 或 Windows Nano Server 上的僅限 .NET Core 2.1 執行階段，視 Docker 主機 OS 而定
+- `microsoft/dotnet:2.2-aspnetcore-runtime` \
+  多架構：Linux 或 Windows Nano Server 上的僅限 .NET Core 2.2 執行階段，視 Docker 主機 OS 而定
 
 如此一來，當您從 Windows 主機提取映像時，它會提取 Windows variant，而從 Linux 主機提取相同的映像名稱則會提取 Linux variant。
 
@@ -174,11 +174,11 @@ Dockerfile 類似於批次指令碼。 類似於必須從命令列設定電腦�
 初始 Dockerfile 看起來可能像這樣：
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+ 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.1-sdk AS build
+ 5  FROM microsoft/dotnet:2.2-sdk AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
@@ -266,11 +266,11 @@ RUN dotnet restore
 產生的檔案如下：
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+ 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.1-sdk AS publish
+ 5  FROM microsoft/dotnet:2.2-sdk AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj

@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 深入了�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc71e661a5fd2de2a69da36df0fc60616b149802
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 84ab1a67aca30aa1967ef2fb11f930bf14ec45e3
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127845"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675474"
 ---
 # <a name="domain-events-design-and-implementation"></a>領域事件：設計和實作
 
@@ -31,7 +31,7 @@ ms.locfileid: "53127845"
 
 就像資料庫交易一樣，請務必確保與領域事件相關的所有作業都成功完成或全都未完成。
 
-領域事件類似傳訊樣式事件，但有一個重要的差異。 透過即時傳訊、訊息佇列、訊息代理程式或使用 AMPQ 的服務匯流排，訊息一律會以非同步方式傳送，並跨處理序與電腦通訊。 這有助於整合多個限定內容、微服務或甚至是不同的應用程式。 不過，使用領域事件時，您不只希望從目前正在執行的領域作業引發事件，也希望所有副作用都會出現在相同的領域中。
+領域事件類似傳訊樣式事件，但有一個重要的差異。 透過即時傳訊、訊息佇列、訊息代理程式或使用 AMQP 的服務匯流排，訊息一律會以非同步方式傳送，並跨處理序與電腦通訊。 這有助於整合多個限定內容、微服務或甚至是不同的應用程式。 不過，使用領域事件時，您不只希望從目前正在執行的領域作業引發事件，也希望所有副作用都會出現在相同的領域中。
 
 領域事件及其副作用 (之後會觸發並由事件處理常式管理的動作) 應該幾乎會在相同領域 (通常是同處理序) 中立即發生。 因此，領域事件可以為同步或非同步。 不過，整合事件應該一律為非同步。
 
@@ -132,7 +132,7 @@ public class OrderStartedDomainEvent : INotification
 
 下一個問題是如何引發領域事件，使它抵達其相關的事件處理常式。 您可以使用多個方法。
 
-Udi Dahan 原本建議使用靜態類別來管理及引發事件 (如數篇相關的文章所示，例如 [Domain Events - Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/) (領域事件 - 續篇))。 這可能包含名為 DomainEvents 的靜態類別，該類別會在呼叫時，使用 `DomainEvents.Raise(Event myEvent)` 等語法立即引發領域事件。 Jimmy Bogard 所撰寫的部落格文章 ([Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/) (增強您的領域：領域事件)) 建議類似的方法。
+Udi Dahan 原本建議使用靜態類別來管理及引發事件 (如數篇相關的文章所示，例如 [Domain Events - Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/) (領域事件 - 續篇))。 這可能包含名為 DomainEvents 的靜態類別，該類別會在呼叫時，使用 `DomainEvents.Raise(Event myEvent)` 等語法立即引發領域事件。 Jimmy Bogard 已撰寫一篇部落格文章 ([Strengthening your domain:Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/))，建議類似方法。
 
 不過，當領域事件類別為靜態時，它也會立即分派至處理常式。 這會使得測試和偵錯更加困難，因為在引發事件之後會立即執行具有副作用邏輯的事件處理常式。 當您進行測試和偵錯時，您只想要專注於目前彙總類別中正在發生的事件，而不想要因為與其他彙總或應用程式邏輯相關的副作用，而突然被重新導向至其他事件處理常式。 這就是其他方法進化的原因，如下一節中所述。
 
@@ -218,7 +218,7 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 > 任何跨彙總的規則不必總是處於最新狀態。 透過事件處理、批次處理或其他更新機制，即可解析一段特定時間內的其他相依性 (第 128 頁)。
 
-Vaughn Vernon 在 [Effective Aggregate DesignPart II: Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (有效彙總設計第二部分：讓彙總搭配運作) 中表示：
+Vaughn Vernon 在 [Effective Aggregate DesignPart II:Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (有效彙總設計第二部分：讓彙總搭配運作) 中表示下列看法：
 
 > 因此，如果在一個彙總執行個體上執行命令需要在一或多個彙總上執行其他商務規則，請使用最終一致性 \[...\]沒有支援 DDD 模型中最終一致性的可行方法。 彙總方法會發行領域事件，及時傳遞至一或多個非同步訂閱者。
 
@@ -355,10 +355,10 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 - **Jimmy Bogard：A better domain events pattern** \ (更佳的領域事件模式)
   [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
-- **Vaughn Vernon：Effective Aggregate Design - Part II: Making Aggregates Work Together** \ (有效彙總設計 - 第二部分：使彙總共同作業)
+- **Vaughn Vernon：Effective Aggregate Design Part II:Making Aggregates Work Together** \ (有效彙總設計第二部分：讓彙總搭配運作)
   [*https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard：Strengthening your domain: Domain Events** \ (加強您的領域：領域事件)
+- **Jimmy Bogard：Strengthening your domain:Domain Events** \ (加強您的領域：領域事件)
   [*https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/*](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
 
 - **Tony Truong：Domain Events Pattern Example** \ (領域事件模式範例)

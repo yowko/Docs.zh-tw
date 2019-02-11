@@ -2,12 +2,12 @@
 title: 安全性考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 114da13e9939131f4799dc8a3565167f516eb697
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612819"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904137"
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
 本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。 您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。 如需詳細資訊，請參閱 <<c0> [ 安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -38,7 +38,7 @@ ms.locfileid: "54612819"
   
 -   使用受保護的組態來加密組態檔區段。  
   
-     ASP.NET 提供了一項稱為受保護組態的功能，可讓您加密組態檔中的機密資訊。 雖然主要是針對 ASP.NET 所設計，不過您也可以使用受保護的組態來加密 Windows 應用程式中組態檔的區段。 新的受保護的組態功能的詳細說明，請參閱 <<c0> [ 組態加密組態資訊使用受保護的](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)。  
+     ASP.NET 提供了一項稱為受保護組態的功能，可讓您加密組態檔中的機密資訊。 雖然主要是針對 ASP.NET 所設計，不過您也可以使用受保護的組態來加密 Windows 應用程式中組態檔的區段。 新的受保護的組態功能的詳細說明，請參閱 <<c0> [ 組態加密組態資訊使用受保護的](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))。  
   
 -   將連接字串儲存在受保護的組態檔中。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "54612819"
   
      使用者可能會透過提供惡意輸入給查詢述詞 (Predicate) 和參數名稱所使用的值，在 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 中執行 SQL 插入式攻擊。 若要避免 SQL 插入式攻擊的風險，請勿結合使用者輸入與 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 命令文字。  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢會在可接受常值 (Literal) 的任何位置接受參數。 您應該使用參數型查詢，而非直接將外部代理程式的常值插入查詢中。 您也應該考慮使用查詢產生器方法安全地建構[Entity SQL](https://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0)。  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢會在可接受常值 (Literal) 的任何位置接受參數。 您應該使用參數型查詢，而非直接將外部代理程式的常值插入查詢中。 您也應該考慮使用[查詢產生器方法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100))來安全地建構 Entity SQL。  
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 插入式攻擊：  
   
@@ -132,7 +132,7 @@ ms.locfileid: "54612819"
  下列安全性考量會在產生和使用實體類型時適用。  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>請勿在應用程式定義域中共用 ObjectContext。  
- 與多個應用程式定義域共用 <xref:System.Data.Objects.ObjectContext> 可能會公開連接字串中的資訊。 您應該改為將序列化物件或物件圖形傳輸至其他應用程式定義域，然後將這些物件附加至該應用程式定義域中的 <xref:System.Data.Objects.ObjectContext>。 如需詳細資訊，請參閱 <<c0> [ 序列化的物件](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99)。  
+ 與多個應用程式定義域共用 <xref:System.Data.Objects.ObjectContext> 可能會公開連接字串中的資訊。 您應該改為將序列化物件或物件圖形傳輸至其他應用程式定義域，然後將這些物件附加至該應用程式定義域中的 <xref:System.Data.Objects.ObjectContext>。 如需詳細資訊，請參閱 <<c0> [ 序列化的物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))。  
   
 #### <a name="prevent-type-safety-violations"></a>避免型別安全 (Type Safety) 違規。  
  如果違反了型別安全，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 便無法保證物件中資料的完整性。 如果您允許未受信任的應用程式使用完全信任的程式碼存取安全性來執行，可能就會發生型別安全違規。  

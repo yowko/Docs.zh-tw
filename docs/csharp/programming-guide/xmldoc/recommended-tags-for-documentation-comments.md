@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: bdebe26c89f3c7e8d34d34f305d658cd481cd677
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6d07b6c288ebbe24c9cf5c531ef333946855f82
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723429"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204713"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>建議使用的文件註解標籤 (C# 程式設計手冊)
-C# 編譯器會處理程式碼中的文件註解，並將其在 **/doc** 命令列選項中指定其名稱的檔案中格式化為 XML。 若要依據編譯器產生的檔案來建立最終文件，您可以建立自訂工具，或者是使用 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類工具。  
+C# 編譯器會處理程式碼中的文件註解，並將其在 **/doc** 命令列選項中指定其名稱的檔案中格式化為 XML。 若要依據編譯器產生的檔案來建立最終文件，您可以建立自訂工具，或者是使用 [DocFX](https://dotnet.github.io/docfx/) 或 [Sandcastle](https://github.com/EWSoftware/SHFB)這類工具。  
   
  標記是在類型和類型成員這類程式碼建構上處理。  
   

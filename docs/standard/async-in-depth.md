@@ -6,18 +6,18 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 7aa2bcdad9584ecf05dfee35e0887ed70737795d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492829"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285021"
 ---
 # <a name="async-in-depth"></a>深入了解非同步
 
 撰寫 I/O-bound 和 CPU-bound 非同步程式碼的直接做法，就是使用以 .NET 工作為基礎的非同步模型。 在 C# 和 Visual Basic 中，此模型是由 `Task` 和 `Task<T>` 類型以及 `async` 和 `await` 關鍵字所公開。 (您可以在[另請參閱](#see-also)一節中找到特定語言資源)。本文說明如何使用 .NET 非同步，並深入解析幕後所使用的非同步架構。
 
-## <a name="task-and-tasklttgt"></a>Task 與 Task&lt;T&gt;
+## <a name="task-and-taskt"></a>Task 與 Task\<T>
 
 Task 是用來實作稱為 [Promise 並行存取模型](https://en.wikipedia.org/wiki/Futures_and_promises)的建構。  簡單地說，它們會對您「承諾」工作將於稍後完成，讓您以無障礙的 API 來協調此承諾。
 
@@ -114,7 +114,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 此外，使用 `async` 方法可輕鬆地將工作分派給 UI 執行緒 (例如更新 UI)，而且不需要額外的工作 (例如呼叫安全執行緒委派)。
 
-## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>更深入了解 CPU-Bound 作業的 Task 和 Task&lt;T&gt;
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>更深入了解 CPU-Bound 作業的 Task 與 Task\<T>
 
 CPU-bound `async` 程式碼與 I/O-bound `async` 程式碼稍微不同。  由於工作會在 CPU 上執行，因此必須指定專門用於計算的執行緒。  使用 `async` 和 `await` 可讓您無障礙地與背景執行緒互動，並確保非同步方法的呼叫端保持回應。  請注意，這不會對共用資料提供任何保護。  如果您要使用共用資料，您仍然需要套用適當的同步處理策略。
 

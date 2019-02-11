@@ -4,12 +4,12 @@ description: .NET 程式庫版本控制的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169595"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204739"
 ---
 # <a name="versioning"></a>版本控制
 
@@ -87,7 +87,7 @@ Windows.NET Framework CLR 會要求完全相符，以載入強式名稱組件。
 
 ### <a name="assembly-informational-version"></a>組件資訊版本
 
-組件資訊版本用於記錄其他版本資訊，對執行階段行為沒有影響。 是否設定此版本是選擇性的。 如果您正在使用 SourceLink，則此版本將在建置時使用 NuGet 套件版本加上原始檔控制版本進行設定。 例如，`1.0.0-beta1+204ff0a` 包括組件建置來源之原程式始碼的認可雜湊。 如需詳細資訊，請參閱 [SourceLink](./sourcelink.md)。
+組件資訊版本用於記錄其他版本資訊，對執行階段行為沒有影響。 是否設定此版本是選擇性的。 如果您正在使用來源連結，則此版本將在組建時使用 NuGet 套件版本加上原始檔控制版本進行設定。 例如，`1.0.0-beta1+204ff0a` 包括組件建置來源之原程式始碼的認可雜湊。 如需詳細資訊，請參閱[來源連結](./sourcelink.md)。
 
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>

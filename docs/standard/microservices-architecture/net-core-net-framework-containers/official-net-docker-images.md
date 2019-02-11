@@ -3,13 +3,13 @@ title: 官方 .NET Docker 映像
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 官方 .NET Docker 映像
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131374"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479603"
 ---
 # <a name="official-net-docker-images"></a>官方 .NET Docker 映像
 
@@ -31,13 +31,13 @@ ms.locfileid: "53131374"
 
 ### <a name="during-development-and-build"></a>開發與建置期間
 
-開發期間的重點是，您逐一查看變更的速度以及偵錯變更的能力。 映像大小的重要性，不如變更程式碼及快速查看變更的能力。 有些工具和「組建代理程式容器」會在開發與建置程序期間使用開發 .NET Core 映像 (microsoft/dotnet:2.1-sdk)。 在 Docker 容器內部建置時，重要的層面是為編譯應用程式所需要的項目。 這包括編譯器和任何其他 .NET 相依性。
+開發期間的重點是，您逐一查看變更的速度以及偵錯變更的能力。 映像大小的重要性，不如變更程式碼及快速查看變更的能力。 有些工具和「組建代理程式容器」會在開發與建置程序期間使用開發 .NET Core 映像 (*microsoft/dotnet:2.2-sdk*)。 在 Docker 容器內部建置時，重要的層面是為編譯應用程式所需要的項目。 這包括編譯器和任何其他 .NET 相依性。
 
 這種組建映像為何如此重要？ 您不會將此映像部署到生產環境。 此映像是您用來建置要放入生產環境映像的內容。 當您使用 Docker 多階段組建時，此映像會用於您的持續整合 (CI) 環境或建置環境。
 
 ### <a name="in-production"></a>生產環境
 
-生產環境的重點是部署和啟動以生產環境 .NET Core 映像為基礎之容器的速度。 因此，以 *microsoft/dotnet:2.1-aspnetcore-runtime* 為基礎的僅執行階段映像很小，方便它快速從您的 Docker 登錄跨越網路到 Docker 主機。 準備好執行的內容可用最短的時間完成啟動容器到處理結果的流程。 在 Docker 模型中不必編譯 C\# 程式碼，因為當您使用組建容器執行 Dotnet 組建或 Dotnet 發行時就有了。
+生產環境的重點是部署和啟動以生產環境 .NET Core 映像為基礎之容器的速度。 因此，以 *microsoft/dotnet:2.2-aspnetcore-runtime* 為基礎的僅執行階段映像很小，方便它快速從您的 Docker 登錄跨越網路到 Docker 主機。 準備好執行的內容可用最短的時間完成啟動容器到處理結果的流程。 在 Docker 模型中不必編譯 C\# 程式碼，因為當您使用組建容器執行 Dotnet 組建或 Dotnet 發行時就有了。
 
 在此最佳化的映像中，您只放入執行應用程式所需的二進位檔和其他內容。 例如，Dotnet 發佈所建立的內容只包含已編譯的 .NET 二進位檔、映像、.js 和 .css 檔案。 經過一段時間，您會看到映像包含預先以 jit 編譯 (在執行階段發生的從 IL 到原生編譯) 的套件。
 
@@ -47,8 +47,8 @@ ms.locfileid: "53131374"
 
 | Image                                       | 註解                                                                                          |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| microsoft/dotnet:**2.1-aspnetcore-runtime** | Linux 和 Windows 上的 ASP.NET Core，具有僅執行階段和 ASP.NET Core 最佳化 (多架構) |
-| microsoft/dotnet:**2.1-sdk**                | Linux 和 Windows 上的 .NET Core，包含 SDK (多架構)                                  |
+| microsoft/dotnet:**2.2-aspnetcore-runtime** | Linux 和 Windows 上的 ASP.NET Core，具有僅執行階段和 ASP.NET Core 最佳化 (多架構) |
+| microsoft/dotnet:**2.2-sdk**                | Linux 和 Windows 上的 .NET Core，包含 SDK (多架構)                                  |
 
 >[!div class="step-by-step"]
 >[上一頁](net-container-os-targets.md)

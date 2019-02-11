@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 24df4140e515483adb94fa542a7063bd2ae2120b
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146572"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479775"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步處理原始物件概觀
 
@@ -112,7 +112,7 @@ ms.locfileid: "53146572"
 
 在 Windows 上，您可以使用 <xref:System.Threading.EventWaitHandle> 以進行處理序間的同步處理。 若要這麼做，請使用其中一個能指定名稱的 [EventWaitHandle 建構函式](<xref:System.Threading.EventWaitHandle.%23ctor%2A>)或 <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType> 方法，建立代表具名系統同步處理事件的 <xref:System.Threading.EventWaitHandle> 執行個體。
 
-如需詳細資訊，請參閱 [EventWaitHandle](eventwaithandle.md)、[AutoResetEvent](autoresetevent.md) 與 [ManualResetEvent 與 ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md) 文章。 如需 API 參考，請參閱 <xref:System.Threading.EventWaitHandle>、<xref:System.Threading.AutoResetEvent>、<xref:System.Threading.ManualResetEvent> 與 <xref:System.Threading.ManualResetEventSlim>。
+如需詳細資訊，請參閱 [EventWaitHandle](eventwaithandle.md) 文章。 如需 API 參考，請參閱 <xref:System.Threading.EventWaitHandle>、<xref:System.Threading.AutoResetEvent>、<xref:System.Threading.ManualResetEvent> 與 <xref:System.Threading.ManualResetEventSlim>。
 
 ### <a name="countdownevent-class"></a>CountdownEvent 類別
 

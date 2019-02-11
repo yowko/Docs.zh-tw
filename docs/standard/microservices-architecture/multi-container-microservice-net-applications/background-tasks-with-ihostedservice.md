@@ -3,13 +3,13 @@ title: 在微服務中使用 IHostedService 和 BackgroundService 類別實作�
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解在微服務 .NET Core 使用 IHostedService 和 BackgroundService 實作背景工作的新選項。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/02/2018
-ms.openlocfilehash: 3fe1f4bdf80943394688941c17d3041ea90256da
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: 721a3129a00867279846bc44155b307f5e97ae39
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126078"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479774"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
 
@@ -27,11 +27,11 @@ ms.locfileid: "53126078"
 
 ASP.NET Core 2.0 中的 `WebHost` (實作 `IWebHost` 的基底類別) 是用來將 HTTP 伺服器功能提供給程序的基礎結構成品，就像您是實作 MVC Web 應用程式或 Web API 服務一樣。 它會提供 ASP.NET Core 中的所有新基礎結構優點，讓您可以使用相依性插入、在要求管道中插入中介軟體等等，以及精確地針對背景工作使用這些 `IHostedServices`。
 
-不過，`Host` (實作 `IHost` 的基底類別) 是 .NET Core 2.1 中的新功能。 基本上，`Host` 可讓您擁有與 `WebHost` 類似的基礎結構 (相依性插入、託管服務等等)，但在此情況下，您只想要有主機的簡單且輕量程序，而不想要有與 MVC、Web API 或 HTTP 伺服器功能有關的程序。
+.NET Core 2.1 中引進了 `Host` (實作 `IHost` 的基底類別)。 基本上，`Host` 可讓您擁有與 `WebHost` 類似的基礎結構 (相依性插入、託管服務等等)，但在此情況下，您只想要有主機的簡單且輕量程序，而不想要有與 MVC、Web API 或 HTTP 伺服器功能有關的程序。
 
 因此，您可以選擇並使用 IHost 建立特殊化託管程序以處理託管服務，但不處理其他項目 (例如其製作目的只是要裝載 `IHostedServices` 的微服務)，也可以擴充現有 ASP.NET Core `WebHost` (例如現有 ASP.NET Core Web API 或 MVC 應用程式)。 
 
-根據您的商務和延展性需求，每種方法都有其優缺點。 底線基本上是，如果您的背景工作與 HTTP (IWebHost) 無關，則您應該使用 IHost (搭配 .NET Core 2.1)。
+根據您的商務和延展性需求，每種方法都有其優缺點。 底線基本上是，如果您的背景工作與 HTTP (IWebHost) 無關，則您應該使用 IHost。
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>在 WebHost 或主機中註冊託管服務
 
@@ -47,7 +47,7 @@ SignalR 是使用託管服務之成品的一個範例，但您也可以將它用
 
 您基本上可以根據 IHostedService，將其中任何動作卸載至背景工作。
 
-將一或多個 `IHostedServices` 新增至 `WebHost` 或 `Host` 的方法是透過 ASP.NET Core `WebHost` (或 .NET Core 2.1 中的 `Host`) 中的標準 DI (相依性插入) 註冊它們。 基本上，您必須在 `Startup` 類別的熟悉 `ConfigureServices()` 方法內註冊託管服務，如典型 ASP.NET WebHost 中的下列程式碼所示。 
+將一或多個 `IHostedServices` 新增至 `WebHost` 或 `Host` 的方法是透過 ASP.NET Core `WebHost` (或 .NET Core 2.1 和更高版本中的 `Host`) 中的標準 DI (相依性插入) 註冊它們。 基本上，您必須在 `Startup` 類別的熟悉 `ConfigureServices()` 方法內註冊託管服務，如典型 ASP.NET WebHost 中的下列程式碼所示。 
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -101,11 +101,11 @@ namespace Microsoft.Extensions.Hosting
 
 您可以繼續並從頭開始建立自訂託管服務類別，並實作 `IHostedService`，就像使用 .NET Core 2.0 時所需執行的作業。 
 
-不過，因為大部分背景工作都會有與取消權杖管理和其他典型作業相關的類似需求，所以 .NET Core 2.1 將提供您可以從中衍生且名為 BackgroundService 的極便利抽象基底類別。
+不過，因為大部分背景工作都會有與取消權杖管理和其他典型作業相關的類似需求，所以有一個您可以從中衍生且名為 `BackgroundService` 的便利抽象基底類別 (自 .NET Core 2.1 起提供)。
 
 該類別提供設定背景工作所需的主要工作。
 
-下個程式碼是 .NET Core 2.1 中所實作的抽象 BackgroundService 基底類別。
+下個程式碼是 .NET Core 中所實作的抽象 BackgroundService 基底類別。
 
 ```csharp
 // Copyright (c) .NET Foundation. Licensed under the Apache License, Version 2.0. 
@@ -249,7 +249,7 @@ WebHost.CreateDefaultBuilder(args)
 -   **在 ASP.NET Core 2.0 中實作 IHostedService** <br/>
     [*https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice*](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
 
--   **ASP.NET Core 2.1 託管範例** <br/>
+-   **使用 ASP.NET Core 2.1 的 GenericHost 樣本** <br/>
     [*https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample*](https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample)
 
 >[!div class="step-by-step"]

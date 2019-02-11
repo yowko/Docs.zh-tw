@@ -1,5 +1,5 @@
 ---
-title: 使用 &lt;msxsl:script&gt; 的 XSLT 樣式表指令碼
+title: 使用 <msxsl:script> 加入 XSLT 樣式表指令碼
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c57f8964172d351ddae048ea36e63a13cf2578d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3abaa8115d2e52a98f0b42588860dece6361df5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563427"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267296"
 ---
-# <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>使用 &lt;msxsl:script&gt; 的 XSLT 樣式表指令碼
+# <a name="xslt-stylesheet-scripting-using-msxslscript"></a>使用 \<msxsl:script> 加入 XSLT 樣式表指令碼
 <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。  
   
 > [!NOTE]
@@ -49,7 +49,7 @@ ms.locfileid: "54563427"
   
  函式可在 `msxsl:script` 項目內進行宣告。 下表顯示根據預設所支援的命名空間。 您可以使用所列之命名空間以外的類別。 不過這些類別必須是完整限定。  
   
-|預設的命名空間|說明|  
+|預設的命名空間|描述|  
 |------------------------|-----------------|  
 |系統|系統類別。|  
 |System.Collection|集合類別。|  

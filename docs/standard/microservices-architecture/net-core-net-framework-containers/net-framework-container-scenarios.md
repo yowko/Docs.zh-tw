@@ -3,13 +3,13 @@ title: 針對 Docker 容器選擇 .NET Framework 的時機
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對 Docker 容器選擇 .NET Framework 的時機
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: 1a91f645aa6f9ce8652fb18243c2e2775abe87d1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: a4da138540d8a2b8c1ac322c00904cff2b329aea
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128748"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479902"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>針對 Docker 容器選擇 .NET Framework 的時機
 
@@ -31,7 +31,7 @@ ms.locfileid: "53128748"
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>使用不適用於 .NET Core 的 .NET 技術 
 
-部分 .NET Framework 技術在最新版本的 .NET Core (撰寫本文時為 2.1 版) 中未提供。 這其中有一些可在更新的 .NET Core 版本 (.NET Core 2.x) 中使用，但其他則不適用於 .NET Core 設為目標的新應用程式模式，而且可能永遠無法使用。
+部分 .NET Framework 技術在最新版本的 .NET Core (撰寫本文時為 2.2 版) 中未提供。 這其中有一些可在更新的 .NET Core 版本 (.NET Core 2.x) 中使用，但其他則不適用於 .NET Core 設為目標的新應用程式模式，而且可能永遠無法使用。
 
 下列清單顯示 .NET Core 2.x 中未提供的大部分技術：
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a327cdeb69c5143b1720ff67ea493b7a088f399
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 3cec103d72cf8bf714abfe5cb645802f92b7fc5d
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204869"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759778"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 每一版 .NET Framework 都包含通用語言執行平台 (CLR)、基底類別庫及其他 Managed 程式庫。 本主題將說明各版 .NET Framework 的主要功能、提供有關基礎 CLR 版本和相關聯開發環境的資訊，以及識別 Windows 作業系統所安裝的版本。  
@@ -80,6 +80,6 @@ ms.locfileid: "55204869"
   
 ## <a name="see-also"></a>另請參閱
 
-- [版本相容性](../../../docs/framework/migration-guide/version-compatibility.md)   - 
+- [版本相容性](../../../docs/framework/migration-guide/version-compatibility.md)
 - [Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/?LinkId=196607)
-- [針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

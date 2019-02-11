@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e1db5447be5f46873b6648fc6791426b2886a75
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bd6004bce42a3617c9b7de940336de0fb03c8cc9
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192612"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674577"
 ---
 # <a name="application-domains"></a>應用程式定義域
 
@@ -48,7 +48,7 @@ ms.locfileid: "50192612"
     > [!NOTE]
     >  您不能卸載個別組件或型別。 只有完整的定義域可以卸載。  
   
--   在某一應用程式中執行的程式碼不能直接從其他應用程式存取程式碼或資源。 Common Language Runtime 是藉由防止不同應用程式定義域中物件之間的呼叫來強制執行這種隔離。 在不同定義域之間傳遞的物件必須用複製方式傳遞或由 Proxy 存取。 如果物件是複製的，那麼對該物件的呼叫就是區域呼叫。 也就是說，呼叫端和被參考的物件是在同一個應用程式定義域中。 如果物件是透過 Proxy 存取，那麼對物件的呼叫便是遠端呼叫。 在這種情況下，呼叫端和被參考的物件是在不同的應用程式定義域中。 跨定義域呼叫是使用與兩個處理序或兩部電腦之間呼叫相同的遠端呼叫基礎結構。 因此，所參考之物件的中繼資料 (Metadata) 必須在這兩個應用程式定義域中都能使用，才能讓該方法呼叫被 JIT 適當地編譯。 如果呼叫定義域無權存取所呼叫的物件之中繼資料，則編譯可能會失敗，並擲回 **System.IO.FileNotFound** 類型的例外狀況。 如需詳細資訊，請參閱[遠端物件](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)。 決定如何跨定義域存取物件的機制是由該物件決定。 如需詳細資訊，請參閱<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
+-   在某一應用程式中執行的程式碼不能直接從其他應用程式存取程式碼或資源。 Common Language Runtime 是藉由防止不同應用程式定義域中物件之間的呼叫來強制執行這種隔離。 在不同定義域之間傳遞的物件必須用複製方式傳遞或由 Proxy 存取。 如果物件是複製的，那麼對該物件的呼叫就是區域呼叫。 也就是說，呼叫端和被參考的物件是在同一個應用程式定義域中。 如果物件是透過 Proxy 存取，那麼對物件的呼叫便是遠端呼叫。 在這種情況下，呼叫端和被參考的物件是在不同的應用程式定義域中。 跨定義域呼叫是使用與兩個處理序或兩部電腦之間呼叫相同的遠端呼叫基礎結構。 因此，所參考之物件的中繼資料 (Metadata) 必須在這兩個應用程式定義域中都能使用，才能讓該方法呼叫被 JIT 適當地編譯。 如果呼叫定義域無權存取所呼叫物件的中繼資料，則編譯可能會失敗，並擲回 <xref:System.IO.FileNotFoundException> 類型的例外狀況。 如需詳細資訊，請參閱 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 決定如何跨定義域存取物件的機制是由該物件決定。 如需詳細資訊，請參閱<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
   
 -   程式碼的行為範圍是由執行該程式碼的應用程式決定。 換言之，應用程式定義域會提供應用程式版本原則、它所取之任何遠端組件的位置，以及有關在哪裡尋找載入定義域中之組件等組態設定。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "50192612"
 
 - <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> 會將所有組件都以定義域中性方式載入。 處理序中有多個應用程式定義域，而且它們全部都執行相同的程式碼時，請使用這種設定。
 
-- 如果強式名稱組件及其所有相依性項目都已安裝在全域組件快取中，<xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType> 便會以定義域中性方式載入這些組件。 其他組件都會分別載入並針對載入組件的每個應用程式定義域進行 JIT 編譯，因此這些組件都可以從處理序中卸載。 在相同處理序中執行多個應用程式時，或是有許多應用程式定義域及組件 (需要從處理序卸載) 共用的混合組件時，請使用此設定。
+- 如果強式名稱組件及其所有相依性項目都已安裝在全域組件快取中，<xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType> 便會以定義域中性方式載入這些組件。 其他組件都會分別載入並針對載入組件的每個應用程式定義域進行 JIT 編譯，因此這些組件都可以從處理序中卸載。 在相同處理序中執行多個應用程式時，或是有許多應用程式定義域及組件 (需要從處理序卸載) 共用的混合組件時，請使用這項設定。
   
  對於使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 類別 (Class) 的 <xref:System.Reflection.Assembly> 方法將載入內容載入的組件，以及使用指定位元組陣列之 <xref:System.Reflection.Assembly.Load%2A> 方法的多載而自影像載入組件，都無法共用 JIT 編譯程式碼。  
   

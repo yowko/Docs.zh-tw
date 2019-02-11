@@ -3,13 +3,13 @@ title: 使用 HttpClientFactory 實作復原 HTTP 要求
 description: 了解如何使用 HttpClientFactory，自 .NET Core 2.1 開始提供，可用來建立 `HttpClient` 執行個體，方便您在應用程式中使用。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 6af30ae3b5111e026be6ec89d266338b88cf22b2
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: 73faa847dae2f844784ae5d85ce905b7e1e64cd0
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362637"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479811"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
@@ -25,7 +25,7 @@ ms.locfileid: "54362637"
 
 但是將 `HttpClient` 做為單一物件或靜態物件時會出現第二個問題。 在此案例中，單一或靜態 `HttpClient` 不會理會 DNS 變更，如 [.NET Core GitHub 存放庫提及的問題](https://github.com/dotnet/corefx/issues/11224)中所述。 
 
-為解決所述的那些問題並更輕鬆地管理 `HttpClient` 執行個體，.NET Core 2.1 提供一個新的 `HttpClientFactory`，它也可與 Polly 整合來實作復原 HTTP 呼叫。   
+為解決所述的那些問題並更輕鬆地管理 `HttpClient` 執行個體，.NET Core 2.1 引進了一個新的 `HttpClientFactory`，它也可與 Polly 整合來實作復原 HTTP 呼叫。   
 
 ## <a name="what-is-httpclientfactory"></a>什麼是 HttpClientFactory
 
@@ -157,7 +157,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
 ## <a name="additional-resources"></a>其他資源
 
-- **使用 .NET Core 2.1 中的 HttpClientFactory**\
+- **使用 .NET Core 中的 HttpClientFactory**\
   [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 - **HttpClientFactory GitHub 存放庫**\

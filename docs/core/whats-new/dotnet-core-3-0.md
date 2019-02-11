@@ -6,27 +6,154 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2018
-ms.openlocfilehash: 26fb7cb25b9bf7f00f87059fbe1848763f7f175d
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.date: 12/31/2018
+ms.openlocfilehash: baaa2676865c475e331ec889e7b10ae326b552fa
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415542"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675084"
 ---
-# <a name="whats-new-in-net-core-30-preview-1"></a>.NET Core 3.0 (Preview 1) 的新功能
+# <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0 (Preview 2) 的新功能
 
-本文描述 .NET Core 3.0 (Preview 1) 的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以運用名為「Windows 傳統型」的 .NET Core 3.0 元件來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援「Windows 傳統型」元件。 如需詳細資訊，請參閱下面的 [Windows 傳統型](#windows-desktop)一節。
+本文描述 .NET Core 3.0 (Preview 2) 的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以運用名為「Windows 傳統型」的 .NET Core 3.0 SDK 元件來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱下面的 [Windows 傳統型](#windows-desktop)一節。
 
 .NET Core 3.0 新增 C# 8.0 支援。
 
-請立即在 Windows、Mac 及 Linux 上[下載並開始使用 .NET Core 3 Preview 1](https://aka.ms/netcore3download)。 您可以在 [.NET Core 3 Preview 1 版本資訊](https://aka.ms/netcore3releasenotes) \(英文\) 中查看完整的版本詳細資料。
+請立即在 Windows、Mac 及 Linux 上[下載並開始使用 .NET Core 3 Preview 2](https://aka.ms/netcore3download)。 您可以在 [.NET Core 3 Preview 2 版本資訊](https://aka.ms/netcore3releasenotes) 中查看完整的版本詳細資料。
 
-如需詳細資訊，請參閱 [.NET Core 3.0 Preview 1 公告](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/) \(英文\)。
+如需 Preview 1 發佈內容的詳細資訊，請參閱 [.NET Core 3.0 Preview 1 公告](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)。
 
-## <a name="net-standard-21"></a>.NET Standard 2.1
+如需 Preview 1 發佈內容的詳細資訊，請參閱 [.NET Core 3.0 Preview 2 公告]()。
 
-.NET Core 3.0 實作 .NET Standard 2.1。
+## <a name="c-8"></a>C# 8
+
+.NET Core 3.0 支援 C#8，並從 .NET Core 3.0 Preview 2 開始，支援這些新功能。 如需 C# 8.0 功能的詳細資訊，請參閱下列部落格文章：
+
+- [Do more with patterns in C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/)
+- [Take C# 8.0 for a spin](https://blogs.msdn.microsoft.com/dotnet/2018/12/05/take-c-8-0-for-a-spin/)
+- [Building C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/)
+
+
+### <a name="ranges-and-indices"></a>範圍和索引
+
+新的 `Index` 類型可用於編製索引。 您可以從會從開頭算起的 `int` 或使用會從結尾算起的前置詞 `^` 運算子 (C#)，來建立一個索引：
+
+```csharp
+Index i1 = 3;  // number 3 from beginning
+Index i2 = ^4; // number 4 from end
+int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+Console.WriteLine($"{a[i1]}, {a[i2]}"); // "3, 6"
+```
+
+此外，還有 `Range` 類型，此類型由兩個 `Index` 值所組成 (一個代表開頭，一個代表結尾)，並可用 `x..y` 範圍運算式 (C#) 來撰寫。 您可以接著使用 `Range` 來編製索引以產生配量：
+
+```csharp
+var slice = a[i1..i2]; // { 3, 4, 5 }
+```
+
+### <a name="async-streams"></a>非同步資料流
+
+`IAsyncEnumerable<T>` 類型是 `IEnumerable<T>` 的新非同步版本。 此語言可讓您透過 `IAsyncEnumerable<T>` 執行 `await foreach` 以取用其元素，然後對它們使用 `yield return` 以產生元素。
+
+下列範例同時示範如何產生和取用非同步資料流。 `foreach` 是非同步陳述式，其本身會使用 `yield return` 來為呼叫端產生非同步資料流。 此模式 (使用 `yield return`) 是針對產生非同步資料流建議採用的模型。
+
+```csharp
+async IAsyncEnumerable<int> GetBigResultsAsync()
+{
+    await foreach (var result in GetResultsAsync())
+    {
+        if (result > 20) yield return result; 
+    }
+}
+```
+
+除了能夠執行 `await foreach` 之外，您也可以建立非同步迭代器，例如建立一個會傳回 `IAsyncEnumerable/IAsyncEnumerator` 以供您在其中執行 `await` 和 `yield` 的迭代器。 針對需要處置的物件，您可以使用各種 BCL 類型 (例如 `Stream` 和 `Timer`) 所實作的 `IAsyncDisposable`。
+
+>[!NOTE]
+>如果您想要使用 Visual Studio 2019 Preview 2 或最新預覽版的 [ C# 延伸模組 (適用於 Visual Studio Code)](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5) 進行開發，則需要 .NET Core 3.0 Preview 2，才能使用非同步資料流。 如果您是在命令列使用.NET Core 3.0 Preview 2，則一切將會如預期般運作。
+
+### <a name="using-declarations"></a>Using 宣告
+
+*Using 宣告*是確保適當處置您物件的新方式。 *using 宣告*可在物件仍在範圍內時保持其持續運作。 一旦物件超出範圍，就會自動處置它。 這會減少巢狀 *using 陳述式*，並讓您的程式碼更簡潔。
+
+```csharp
+static void Main(string[] args)
+{
+    using var options = Parse(args);
+    if (options["verbose"]) { WriteLine("Logging..."); }
+
+} // options disposed here
+```
+
+### <a name="switch-expressions"></a>Switch 運算式
+
+*Switch 運算式*是執行 *switch 陳述式*的更簡潔方式，但是，因為它是運算式，所以會傳回一值。 *Switch 運算式*也會與模式比對完全整合，並使用捨棄模式 `_` 來代表 `default` 值。
+
+您可在在下列範例中看到 *switch 運算式* 的語法：
+
+```csharp
+static string Display(object o) => o switch
+{
+    Point { X: 0, Y: 0 }         => "origin",
+    Point { X: var x, Y: var y } => $"({x}, {y})",
+    _                            => "unknown"
+};
+```
+
+在此範例中，播放時有兩種模式。 `o` 首先會與 `Point` *類型模式*比對，然後與 *{大括號}* 內的*屬性模式*比對。 `_` 描述 `discard pattern`，其與 *switch* 陳述式 的 `default` 相同。
+
+模式可讓您撰寫宣告式程式碼，擷取您的意圖，而不是為它實作測試的程序性程式碼。 編譯器會負責實作該無趣的程序性程式碼，並保證一律正確執行。
+
+仍有一些情況，*switch 陳述式*比起 *switch 運算式*將是更好的選擇，而且模式可與這兩種語法樣式搭配使用。
+
+如需詳細資訊，請參閱 [Do more with patterns in C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/)。
+
+## <a name="ieee-floating-point-improvements"></a>IEEE 浮點增強功能
+
+正在更新浮點 API，以遵守 [IEEE 754-2008 修訂](https://en.wikipedia.org/wiki/IEEE_754-2008_revision)。 這些變更的目標是公開所有的必要作業，並確定它們在行為上符合 IEEE 規格。
+
+剖析與格式化修正：
+
+* 正確地剖析並捨入任意長度的輸入。
+* 正確地剖析並格式化負零。
+* 正確地剖析無限大和 NaN，方法為執行不區分大小寫的檢查，並允許適當時在前面選擇性加上 `+`。
+
+新的數學 API 具有：
+
+* `BitIncrement/BitDecrement`\
+對應至 `nextUp` 和 `nextDown` IEEE 作業。 它們會傳回最小浮點數，比較大於或小於輸入 (分別)。 例如，`Math.BitIncrement(0.0)` 會傳回 `double.Epsilon`。
+
+* `MaxMagnitude/MinMagnitude`\
+對應至 `maxNumMag` 和 `minNumMag`IEEE 作業，它們傳回的值大於或小於兩個輸入的範圍 (分別)。 例如，`Math.MaxMagnitude(2.0, -3.0)` 會傳回 `-3.0`。
+
+* `ILogB`\
+對應至傳回整數值的 `logB` IEEE 作業，它會傳回輸入參數的對數，以整數 2 為底數。 這實際上與 `floor(log2(x))` 相同，但完成時發生最少捨入錯誤。
+
+* `ScaleB`\
+對應至採用整數值的 `scaleB` IEEE 作業，它會有效傳回 `x * pow(2, n)`，但完成時發生最少捨入錯誤。
+
+* `Log2`\
+對應至 `log2` IEEE 作業，它會傳回 2 為底數的對數。 它會將捨入錯誤減至最少。
+
+* `FusedMultiplyAdd`\
+對應至 `fma` IEEE 作業，它會執行融合的乘積和。 亦即，它會將 `(x * y) + z` 當作單一作業來執行，藉此將捨入錯誤減至最少。 範例將是傳回 `1e308` 的 `FusedMultiplyAdd(1e308, 2.0, -1e308)`。 一般 `(1e308 * 2.0) - 1e308` 會傳回 `double.PositiveInfinity`。
+
+* `CopySign`\
+對應至 `copySign` IEEE 作業，它會傳回 `x` 的值，但具有 `y` 的符號。
+
+## <a name="net-platform-dependent-intrinsics"></a>.NET 平台相依內建
+
+已新增 API，允許存取特定效能導向的 CPU 指令，例如 **SIMD** 或**位元操作指令**集合。 這些指令可協助您在某些情況 (例如有效率地平行處理資料) 下大幅提升效能。 除了公開 API 供您的程式使用外，.NET 程式庫也已開始使用這些指令來提升效能。
+
+下列 CoreCLR PR 透過實作或使用來示範一些指令：
+
+* [實作簡單 SSE2 硬體內建](https://github.com/dotnet/coreclr/pull/15585)
+* [實作 SSE 硬體內建](https://github.com/dotnet/coreclr/pull/15538)
+* [Arm64 基礎硬體內建](https://github.com/dotnet/coreclr/pull/16822)
+* [針對 Locate{First|Last}Found{Byte|Char} 使用 TZCNT 和 LZCNT](https://github.com/dotnet/coreclr/pull/21073)
+
+如需詳細資訊，請參閱 [.NET 平台相依內建](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md)，其會定義用於定義此硬體基礎結構的方法，允許 Microsoft、晶片廠商或任何其他公司或個體可以定義應該公開給 .NET 程式碼的硬體/晶片 API。
 
 ## <a name="default-executables"></a>預設可執行檔
 
@@ -46,11 +173,44 @@ ms.locfileid: "54415542"
 
 ## <a name="local-dotnet-tools"></a>本機 dotnet 工具
 
-.NET Core 2.1 支援全域工具，.NET Core 3.0 現在則具有本機工具。 本機工具與全域工具類似，但與磁碟上的某個特定位置相關聯。 這可針對個別專案和個別存放庫提供工具。 所有安裝在本機的工具都不是全域可用的工具。
+>[!WARNING]
+>在 .NET Core 3.0 Preview 1 與 .NET Core 3.0 Preview 2 之間，.NET Core 本機工具已發生變更。  如果您執行 `dotnet tool restore` 或 `dotnet tool install` 這類命令，嘗試 Preview 1 中的本機工具，則需要先刪除您的本機工具快取資料夾，然後本機工具才能在 Preview 2 中正常運作。 此資料夾位於：
+>
+>在 mac、Linux 上：`rm -r $HOME/.dotnet/toolResolverCache`
+>
+>在 Windows 上：`rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+>
+>如果您沒有刪除此資料夾，則會收到錯誤。
 
-本機工具會倚賴您目前目錄中名為 `dotnet-tools.json` 的資訊清單檔。 此資訊清單檔會定義將可供使用的工具。 藉由在存放庫的根目錄建立此資訊清單檔，您便可確保任何複製您程式碼的人員都可進行還原，以及使用成功運用您程式碼所需的工具。
+.NET Core 2.1 支援全域工具，.NET Core 3.0 現在則具有本機工具。 本機工具與全域工具類似，但與磁碟上的某個特定位置相關聯。 這可針對個別專案和個別存放庫提供工具。 所有安裝在本機的工具都不是全域可用的工具。 這些工具是以 NuGet 套件形式散發。
 
-當有本機工具資訊清單檔可用時，請使用下列命令在本機自動下載並安裝這些工具：
+本機工具會倚賴您目前目錄中名為 `dotnet-tools.json` 的資訊清單檔。 此資訊清單檔定義可在該資料夾和以下資料夾提供的工具。 藉由在存放庫的根目錄建立此資訊清單檔，您便可確保任何複製您程式碼的人員都可進行還原，以及使用成功運用您程式碼所需的工具。
+
+若要建立 `dotnet-tools.json` 資訊清單，請使用：
+
+```console
+dotnet new tool-manifest
+```
+
+使用下列方式將新工具加入至本機資訊清單：
+
+```console
+dotnet tool install <packageId>
+```
+
+您也可以使用下列方式，列出本機資訊清單中的工具：
+
+```console
+dotnet tool list
+```
+
+若要查看全域安裝的工具，請使用：
+
+```console
+dotnet tool list -g
+```
+
+當有本機工具資訊清單檔可用，但尚未安裝資訊清單中定義的工具時，請使用下列命令自動下載並安裝這些工具：
 
 ```console
 dotnet tool restore
@@ -62,31 +222,15 @@ dotnet tool restore
 dotnet tool run <tool-command-name>
 ```
 
-呼叫本機工具時，dotnet 會沿著目錄結構向上搜尋資訊清單。 找到工具資訊清單檔時，會在其中搜尋所要求的工具。 如果找到工具，它會包含在 NuGet 全域套件位置中尋找該工具所需的資訊。 
+執行本機工具時，dotnet 會沿著現行目錄結構向上搜尋資訊清單。 找到工具資訊清單檔時，會在其中搜尋所要求的工具。 如果在資訊清單中找到工具，但在快取中找不到，使用者就會收到錯誤，而且需要執行 `dotnet tool restore`。
 
-如果在資訊清單中找到工具，但在快取中找不到，使用者就會收到錯誤。 在 Preview 1 之後，此訊息將改進為要求使用者執行 `dotnet tool restore`。
-
-若要將本機工具新增至目錄，您必須先建立工具資訊清單檔。 在 Preview 1 之後，我們將提供一個建立工具資訊清單檔的機制，例如 dotnet 新範本。 針對 Preview 1，您必須建立一個名為 `dotnet-tools.json` 且含有下列內容的檔案：
-
-```json
-{
-  "version": 1,
-  "isRoot": true,
-  "tools": {}
-}
-```
-
-建立資訊清單之後，您可以使用下列命令在資訊清單中新增本機工具：
+若要從本機工具資訊清單檔中移除某個工具，請執行下列命令：
 
 ```console
-dotnet tool install <toolPackageId>
+dotnet tool uninstall <packageId>
 ```
 
-此命令會安裝最新的工具版本，除非已指定另一個版本。  即使已自動選擇最新版本，仍然會將工具的版本寫入至工具資訊清單檔，以允許還原或執行正確的工具版本。
-
-工具資訊清單檔的設計目的是要允許手動編輯 – 當您要更新與存放庫搭配運作所需的版本時，可能會這麼做。
-
-以下是一個範例 `dotnet-tools.json` 檔案：
+工具資訊清單檔的設計目的是要允許手動編輯 – 當您要更新與存放庫搭配運作所需的版本時，可能會這麼做。 以下是一個範例 `dotnet-tools.json` 檔案：
 
 ```json
 {
@@ -109,15 +253,7 @@ dotnet tool install <toolPackageId>
 }
 ```
 
-若要從工具資訊清單檔中移除某個工具，請執行下列命令：
-
-```console
-dotnet tool uninstall <toolPackageId>
-```
-
 不論是全域工具還是區域工具，都需要一個相容的執行階段版本。 NuGet.org 上目前許多工具都以 .NET Core 執行階段 2.1 為目標。 若要在全域或本機安裝這些工具，您仍然需要安裝 [NET Core 2.1 執行階段](https://dotnet.microsoft.com/download/dotnet-core/2.1)。
-
-如需詳細資訊，請參閱[本機工具早期預覽文件](https://github.com/dotnet/cli/issues/10288) \(工具\)。
 
 ## <a name="windows-desktop"></a>Windows 桌面
 
@@ -132,7 +268,9 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-您也可以在 Visual Studio 2019 Preview 1 中開啟、啟動 .NET Core 3.0 WPF 和 Windows Forms 專案，以及對這新專案進行偵錯。 目前您可以在 Visual Studio 2017 15.9 中開啟這些專案，不過，並不支援這樣的案例 (而且您必須[啟用預覽](https://blogs.msdn.microsoft.com/dotnet/2018/11/13/net-core-tooling-update-for-visual-studio-2017-version-15-9/))。
+Visual Studio 2019 Preview 2 會新增**專案**範本，供 .NET Core 3.0 Windows Forms 和 WPF 使用。 仍然尚未支援設計工具。 您可以在 Visual Studio 2019 中開啟、啟動和偵錯這些專案。
+
+Visual Studio 2017 15.9 新增了[啟用 .NET Core 預覽](https://blogs.msdn.microsoft.com/dotnet/2018/11/13/net-core-tooling-update-for-visual-studio-2017-version-15-9/)的功能，但您需要開啟該功能，而且它不是支援的情節。
 
 新專案與現有的 .NET Core 專案相同，但有新增一些項目。 以下是基本 .NET Core 主控台專案與基本 Windows Forms 和 WPF 專案的比較。
 
@@ -166,9 +304,26 @@ dotnet new winforms
 
 請在 [dotnet/winforms](https://github.com/dotnet/winforms/issues)、[dotnet/wpf](https://github.com/dotnet/wpf/issues) 及 [dotnet/core](https://github.com/dotnet/core/issues) 存放庫上分享您的意見反應。
 
+## <a name="msix-deployment-for-windows-desktop"></a>Windows 傳統型的 MSIX 部署
+
+[MSIX](https://docs.microsoft.com/windows/msix/) 是新的 Windows 應用程式套件格式。 它可以用來將 .NET Core 3.0 桌面應用程式部署至 Windows 10。
+
+Visual Studio 2019 Preview 2 中提供的 [Windows 應用程式套件專案](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)可讓您利用[自封式](../deploying/#self-contained-deployments-scd) .NET Core 應用程式建立 MSIX 套件。
+
+>注意:.NET Core 專案檔必須指定在 `<RuntimeIdentifiers>` 屬性中支援的執行階段：
+```xml
+<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+```
+
 ## <a name="fast-built-in-json-support"></a>快速的內建 JSON 支援
 
-`System.Text.Json.Utf8JsonReader` 是一個高效能、低配置、只能順向讀取的 UTF-8 編碼 JSON 文字讀取器，會從 `ReadOnlySpan<byte>` 開始讀取。 `Utf8JsonReader` 是一個基礎的低階類型，可用來建置自訂剖析器和還原序列化程式。 使用新的 `Utf8JsonReader` 來讀取 JSON 承載會比使用來自 [Json.NET](https://www.newtonsoft.com/json) 的讀取器快兩倍。 它會等到您需要將 JSON 權杖實現為 (UTF-16) 字串時，才進行配置。
+.NET 生態系統倚賴 [**Json.NET**](https://www.newtonsoft.com/json) 及其他熱門的 JSON 程式庫 (這些仍持續是絕佳的選擇)。 **Json.NET** 使用 .NET 字串作為其基底資料類型，實際上就是 UTF-16。
+
+新的內建 JSON 支援是高效能、低配置，並以 `Span<byte>` 為基礎。 三個新的主要 JSON 相關類型已新增到 .NET Core 3.0 `System.Text.Json` 命名空間。
+
+### <a name="utf8jsonreader"></a>Utf8JsonReader
+
+`System.Text.Json.Utf8JsonReader` 是一個高效能、低配置、只能順向讀取的 UTF-8 編碼 JSON 文字讀取器，會從 `ReadOnlySpan<byte>` 開始讀取。 `Utf8JsonReader` 是一個基礎的低階類型，可用來建置自訂剖析器和還原序列化程式。 使用新的 `Utf8JsonReader` 來讀取 JSON 承載會比使用來自 **Json.NET** 的讀取器快兩倍。 它會等到您需要將 JSON 權杖實現為 (UTF-16) 字串時，才進行配置。
 
 這個新 API 將包含下列元件：
 
@@ -223,53 +378,111 @@ public static void Utf8JsonReaderLoop(ReadOnlySpan<byte> dataUtf8)
 }
 ```
 
-.NET 生態系統倚賴 [Json.NET](https://www.newtonsoft.com/json) 及其他熱門的 JSON 程式庫 (這些仍持續是絕佳的選擇)。 JSON.NET 使用 .NET 字串作為其基底資料類型，實際上就是 UTF-16。 
+### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-在 .NET Core 2.1 和 3.0 中，我們新增了新的 API，可讓您根據使用 `Span<T>` 和 UTF-8 字串，撰寫所需記憶體少很多且更符合高輸送量應用程式 (例如 Kestrel、ASP.NET Core Web 伺服器) 需求的 JSON API (例如 `Utf8JsonReader`)。
+`System.Text.Json.Utf8JsonWriter` 提供高效能、非快取、僅轉接方式，從常見的 .NET 類型 (像是 `String`、`Int32` 和 `DateTime`) 撰寫 UTF-8 編碼的 JSON 文字。 如同讀取器，寫入器是一個基礎的低階類型，可用來組建自訂序列化程式。 使用新的 `Utf8JsonWriter` 撰寫 JSON 承載，其速度比從 **Json.NET** 使用寫入器還要快 30-80%，而且不會配置。
 
-## <a name="ranges-and-indices"></a>範圍和索引
-
-新的 `Index` 類型可用於編製索引。 您可以從會從開頭算起的 `int` 或使用會從結尾算起的前置詞 `^` 運算子 (C#)，來建立一個索引：
+以下是 `Utf8JsonWriter` 的使用方式樣本，其可作為起點：
 
 ```csharp
-Index i1 = 3;  // number 3 from beginning
-Index i2 = ^4; // number 4 from end
-int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-Console.WriteLine($"{a[i1]}, {a[i2]}"); // "3, 6"
-```
-
-此外，還有 `Range` 類型，此類型由兩個 `Index` 值所組成 (一個代表開頭，一個代表結尾)，並可用 `x..y` 範圍運算式 (C#) 來撰寫。 您可以接著使用 `Range` 來編製索引以產生配量：
-
-```csharp
-var slice = a[i1..i2]; // { 3, 4, 5 }
-```
-
-> [!NOTE]
-> 只有 [C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/) 才支援 `Range` 和 `Index` 的語法。
-
-## <a name="async-streams"></a>非同步資料流
-
-`IAsyncEnumerable<T>` 類型是 `IEnumerable<T>` 的新非同步版本。 此語言可讓您針對這些執行 `await foreach` 以取用其元素，然後對它們執行 `yield return` 以產生元素。
-
-下列範例同時示範如何產生和取用非同步資料流。 `foreach` 是非同步陳述式，其本身會使用 `yield return` 來為呼叫端產生非同步資料流。 此模式 (使用 `yield return`) 是針對產生非同步資料流建議採用的模型。
-
-```csharp
-async IAsyncEnumerable<int> GetBigResultsAsync()
+static int WriteJson(IBufferWriter<byte> output, long[] extraData)
 {
-    await foreach (var result in GetResultsAsync())
+    var json = new Utf8JsonWriter(output, state: default);
+
+    json.WriteStartObject();
+
+    json.WriteNumber("age", 15, escape: false);
+    json.WriteString("date", DateTime.Now);
+    json.WriteString("first", "John");
+    json.WriteString("last", "Smith");
+
+    json.WriteStartArray("phoneNumbers", escape: false);
+    json.WriteStringValue("425-000-1212", escape: false);
+    json.WriteStringValue("425-000-1213");
+    json.WriteEndArray();
+
+    json.WriteStartObject("address");
+    json.WriteString("street", "1 Microsoft Way");
+    json.WriteString("city", "Redmond");
+    json.WriteNumber("zip", 98052);
+    json.WriteEndObject();
+
+    json.WriteStartArray("ExtraArray");
+    for (var i = 0; i < extraData.Length; i++)
     {
-        if (result > 20) yield return result; 
+        json.WriteNumberValue(extraData[i]);
     }
+    json.WriteEndArray();
+
+    json.WriteEndObject();
+
+    json.Flush(isFinalBlock: true);
+
+    return (int)json.BytesWritten;
 }
 ```
 
-> [!WARNING]
-> .NET Core 3.0 Preview 1 目前有 `await foreach` 方面的 Bug。 請改用 `GetEnumerator` 和 `MoveNext` 來處理元素。 如需詳細資訊，請參閱 [roslyn/#31268](https://github.com/dotnet/roslyn/issues/31268)。
+`Utf8JsonWriter` 接受 `IBufferWriter<byte>` 作為輸出位置，以同步方式將 json 資料寫入其中，而且身為呼叫者的您需要提供具體實作。 平台目前不包含這個介面的實作。 如需 [ 的範例，請參閱 `IBufferWriter<byte>`https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35](https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35)
 
-除了能夠執行 `await foreach` 之外，您也可以建立非同步迭代器，例如建立一個會傳回 `IAsyncEnumerable/IAsyncEnumerator` 以供您在其中執行 `await` 和 `yield` 的迭代器。 針對需要處置的物件，您可以使用各種 BCL 類型 (例如 `Stream` 和 `Timer`) 所實作的 `IAsyncDisposable`。
+### <a name="jsondocument"></a>JsonDocument
 
-> [!NOTE]
-> 只有 [C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/) 才支援 `await foreach` 語法。
+`System.Text.Json.JsonDocument` 是組建在 `Utf8JsonReader` 之上。 `JsonDocument` 可讓您剖析 JSON 資料和組建唯讀文件物件模型 (DOM)，而您可以查詢此模型來支援隨機存取和列舉。 撰寫資料的 JSON 元素可以透過 `JsonElement` 類型來存取，而此類型被 `JsonDocument` 屬性公開為名為 `RootElement` 的屬性。 `JsonElement` 包含 JSON 陣列和物件列舉程式，以及將 JSON 文字轉換為一般.NET 類型的 API。 使用 `JsonDocument` 剖析一般 JSON 承載，並存取其所有成員，速度比 **Json.NET** 還要快 2-3 倍，而且極少配置合理大小 (亦即 < 1 MB) 的資料。
+
+以下是 `JsonDocument` 和 `JsonElement` 的使用方式樣本，其可作為起點：
+
+```csharp
+static double ParseJson()
+{
+    const string json = " [ { \"name\": \"John\" }, [ \"425-000-1212\", 15 ], { \"grades\": [ 90, 80, 100, 75 ] } ]";
+
+    double average = -1;
+
+    using (JsonDocument doc = JsonDocument.Parse(json))
+    {
+        JsonElement root = doc.RootElement;
+        JsonElement info = root[1];
+
+        string phoneNumber = info[0].GetString();
+        int age = info[1].GetInt32();
+
+        JsonElement grades = root[2].GetProperty("grades");
+
+        double sum = 0;
+        foreach (JsonElement grade in grades.EnumerateArray())
+        {
+            sum += grade.GetInt32();
+        }
+
+        int numberOfCourses = grades.GetArrayLength();
+        average = sum / numberOfCourses;
+    }
+
+    return average;
+}
+```
+
+## <a name="assembly-unloadability"></a>組件卸載功能
+
+組件卸載功能是 `AssemblyLoadContext` 的新功能。 從 API 觀點來看，這項新功能是透明的，僅對少數新的 API 公開。 它可讓您卸載載入器內容，釋放所有具現化類型、靜態欄位和組件本身的所有記憶體。 應用程式應該能夠永遠透過這項機制載入和卸載組件，而不會遇到記憶體流失。
+
+這項新功能可以用於如下情節：
+
+* 需要動態外掛程式載入和卸載的外掛程式情節。 
+* 動態編譯、執行，然後清除程式碼。 適用於網站、指令碼引擎等等。
+* 載入組件進行內部檢查 (例如 ReflectionOnlyLoad)，但在許多情況下，[MetadataLoadContext](#type-metadataloadcontext) (已在 Preview 1 中發佈) 將會是更好的選項。
+
+如需詳細資訊，請參閱[使用卸載功能](https://github.com/dotnet/coreclr/pull/22221)文件。
+
+組件卸載需要相當小心，以確保從載入器內容外參考受控物件時，一切了然並受到管理。 要求卸載載入器內容時，需要了解任何外部參考，以便載入器內容只會與自己一致。
+
+.NET Framework 透過應用程式定義域 (AppDomain) 提供了組件卸載功能，但不支援其與 .NET Core 搭配。 相較於這個新模型，AppDomain 既有優點也有限制。 相較於 AppDomain 時，若需要更多彈性和更高效能，請考慮這個新的載入器模型。
+
+## <a name="windows-native-interop"></a>Windows 原生 Interop
+
+Windows 提供了豐富的原生 API，其採用的形式為一般 C API、COM 和 WinRT。 自 .NET Core 1.0 起，已支援 **P/Invoke**。 現在 .NET Core 3.0 支援**共同建立 COM API**和**啟用 WinRT API** 的能力。
+
+您可以看到使用 COM 與 [Excel 示範原始程式碼](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)搭配的範例。
+
 
 ## <a name="type-sequencereader"></a>類型：SequenceReader
 
@@ -522,7 +735,7 @@ privateExponent:
 
 ## <a name="arm64-linux-support"></a>ARM64 Linux 支援
 
-我們正於此版本中新增適用於 Linux 的 ARM64 支援。 針對不同內容，我們藉由 .NET Core 2.1 新增了適用於 Linux 及藉由 .NET Core 2.2 新增了適用於 Windows 的 ARM32 支援。 ARM64 的主要使用案例目前是搭配 IoT 案例。
+已新增 ARM64 for Linux 的支援。 ARM64 的主要使用案例目前是搭配 IoT 案例。
 
 [針對適用於 ARM64 的 .NET Core 有提供 Docker 映像](https://hub.docker.com/r/microsoft/dotnet/) (Alpine、Debian 及 Ubuntu Docker 映像)。
 
@@ -530,3 +743,59 @@ privateExponent:
 
 >[!NOTE]
 > 目前尚未提供 **ARM64** Windows 支援。
+
+## <a name="install-net-core-30-previews-on-linux-with-snap"></a>在 Linux 上使用嵌入式管理單元安裝.NET Core 3.0 Preview
+
+嵌入式管理單元是慣用方法，用來在 [支援嵌入式管理單元的 Linux 散發套件](https://docs.snapcraft.io/installing-snapd/6735)上安裝和嘗試 .NET Core Preview。
+
+在您的系統上設定嵌入式管理單元之後，請執行下列命令來安裝 [.NET Core SDK 3.0 Preview SDK](https://snapcraft.io/dotnet-sdk)。
+
+```console
+sudo snap install dotnet-sdk --beta --classic
+```
+ 
+使用嵌入式管理單元套件安裝 .NET Core 時，預設 .NET Core 命令是 `dotnet-sdk.dotnet`，而非只是 `dotnet`。 命名空間命令的優點是，不會與您可能已全域安裝的 .NET Core 版本發生衝突。 可以使用下列方式，將這個命令的別名設為 `dotnet`：
+
+```console
+sudo snap alias dotnet-sdk.dotnet dotnet
+```
+
+某些散發套件需要額外的步驟來啟用 SSL 憑證的存取。 如需詳細資料，請參閱我們的 [Linux 安裝程式](https://github.com/dotnet/core/blob/master/Documentation/linux-setup.md)。
+
+## <a name="gpio-support-for-raspberry-pi"></a>Raspberry Pi 的 GPIO 支援
+
+兩個新的套件已發佈至您可以用於 GPIO 程式設計的 NuGet。
+
+* [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio/0.1.0-prerelease.19078.2)
+* [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings/0.1.0-prerelease.19078.2)
+
+GPIO 套件包含 GPIO、SPI、I2C 和 PWM 裝置的 API。 IoT 繫結套件包含各種晶片和感應器的[裝置繫結](https://github.com/dotnet/iot/blob/master/src/devices/README.md)，與 [dotnet/iot - src/devices](https://github.com/dotnet/iot/tree/master/src/devices) 中提供的裝置繫結相同。
+
+已宣佈為.NET Core 3.0 Preview 1 一部分的更新序列連接埠，不是這些套件的一部分，但可以作為 .NET Core 平台的一部分。
+
+
+## <a name="platform-support"></a>平台支援
+
+以下作業系統將支援 .NET Core 3：
+
+* Windows 用戶端：7、8.1、10 (1607+)
+* Windows Server：20012 R2 SP1+
+* macOS：10.12+
+* RHEL：6+
+* Fedora：26+
+* Ubuntu：16.04+
+* Debian：9+
+* SLES：12+
+* openSUSE：42.3+
+* Alpine：3.8+
+
+晶片支援如下：
+
+* Windows、macOS 及 Linux 上的 x64
+* Windows 上的 x86
+* Windows 和 Linux 上的 ARM32
+* Linux 上的 ARM64
+
+若為 Linux，Debian 9+ 和 Ubuntu 16.04+ 支援 ARM32。 若為 ARM64，與 ARM32 相同，但加上 Alpine 3.8。 這些與 X64 支援的散發套件版本相同。
+
+.NET Core 3.0 的 Docker 映像位於 [Docker Hub 上的 microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/)。 Microsoft 目前正在採用 [Microsoft Container Registry (MCR)](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/)，而且預期最終 .NET Core 3.0 映像只會發佈至 MCR。

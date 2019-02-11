@@ -5,22 +5,22 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: acbf45b5ccd4fcb9cb1c23b843072c2abdeeca25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2909040cc0cd38494ef0ffa16a4f361ca73925c
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685941"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204284"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 屬性 (C# 程式設計手冊)
-`cref` 屬性在 XML 文件標記中表示「程式碼參考」。 它會指定標記的內部文字是程式碼項目，例如類型、方法或屬性。 [Sandcastle](https://github.com/EWSoftware/SHFB) 等文件工具使用 `cref` 屬性自動產生記錄類型或成員的頁面超連結。  
+`cref` 屬性在 XML 文件標記中表示「程式碼參考」。 它會指定標記的內部文字是程式碼項目，例如類型、方法或屬性。 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類文件工具使用 `cref` 屬性自動產生記錄類型或成員的頁面超連結。  
   
 ## <a name="example"></a>範例  
  下例示範在 [\<see>](../../../csharp/programming-guide/xmldoc/see.md) 標記中使用的 `cref` 屬性。  
   
  [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
   
- 編譯時，此程式會產生下列 XML 檔案。 請注意，以 `GetZero` 方法的 `cref` 屬性為例，已被編譯器轉換成 `"M:TestNamespace.TestClass.GetZero"`。 "M:" 前置詞表示「方法」，而且是能為 Sandcastle 等文件工具識別的慣例。 如需前置詞的完整清單，請參閱[處理 XML 檔案](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)。  
+ 編譯時，此程式會產生下列 XML 檔案。 請注意，以 `GetZero` 方法的 `cref` 屬性為例，已被編譯器轉換成 `"M:TestNamespace.TestClass.GetZero"`。 "M:" 前置詞表示「方法」，而且是能為 DocFX 和 Sandcastle 這類文件工具識別的慣例。 如需前置詞的完整清單，請參閱[處理 XML 檔案](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)。  
   
 ```xml  
 <?xml version="1.0"?>  

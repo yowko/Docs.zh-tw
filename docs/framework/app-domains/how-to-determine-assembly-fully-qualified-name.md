@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7124271c0118800883d4beb68591f8591ac43dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32beb648bed37281e798f51e6b4a316197c23845
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520707"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283513"
 ---
-# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>HOW TO：決定組件的完整名稱
+# <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>HOW TO：決定組件的完整名稱
 若要在全域組件快取中找到組件的完整名稱，請使用全域組件快取工具 ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md))。 請參閱[如何：檢視全域組件快取的內容](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)。  
   
  對於不在全域組件快取的組件，您可以使用數種方式取得完整組件名稱：可以使用程式碼輸出資訊至主控台或至變數，或者您可使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 以檢查組件中繼資料，其中包含完整名稱。  

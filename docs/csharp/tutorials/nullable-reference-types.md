@@ -3,12 +3,12 @@ title: 使用可為 Null 的參考類型進行設計
 description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
 ms.date: 12/03/2018
 ms.custom: mvc
-ms.openlocfilehash: 7e4cb423658287e5260770a680f189c227b9cd01
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eec0c54c041db98595202ab982494df6ae3f743c
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156686"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204765"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教學課程：使用可為 Null 與不可為 Null 的參考類型更清楚地表達您的設計意圖
 
@@ -68,7 +68,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 
 這些類型將使用可為 Null 和不可為 Null 的參考類型，來表達哪些成員是必要的，而哪些成員是選擇性的。 可為 Null 的參考類型會清楚地傳達該設計意圖：
 
-- 屬於問卷一部分的問題絕對不能是 Null：詢問空白的問題並無任何意義。
+- 屬於問卷的問題絕不可以是 Null：回答空問題沒有意義。
 - 受訪者絕對不能是 Null。 您會想要追蹤連絡過的人員，甚至是拒絕參與的受訪者。
 - 對於問題的任何回應可能會是 Null。 受訪者可以拒絕回答部分或所有問題。
 
@@ -190,7 +190,7 @@ namespace NullableIntroduction
 1. 要求參與問卷。 如果該人員不同意，請傳回遺漏 (或 Null) 回應。
 1. 詢問每個問題並記錄答案。 每個答案也可能遺漏 (或 Null)。
 
-將下列程式碼新增至 `SurveyRespondent` 類別：
+將下列程式碼新增至 `SurveyResponse` 類別：
 
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
@@ -212,7 +212,7 @@ namespace NullableIntroduction
 
 [!code-csharp[ReportResponses](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
-由於 `surveyResponses` 是不可為 Null 的參考類型，所以在為它取值之前不需要進行任何檢查。 `Answer` 方法會傳回不可為 Null 的字串，因此，請選擇 `GetValueOrDefault` 的多載，以採用第二個引數作為預設值。
+由於 `surveyResponses` 是不可為 Null 的參考型別，所以在為它取值之前不需要進行任何檢查。 `Answer` 方法會傳回不可為 Null 的字串，因此，請選擇 `GetValueOrDefault` 的多載，以採用第二個引數作為預設值。
 
 接著，將這三個運算式主體成員新增到 `SurveyRun` 類別：
 
@@ -228,7 +228,7 @@ namespace NullableIntroduction
 
 ## <a name="get-the-code"></a>取得程式碼
 
-您可以從 [csharp/IntroToNullables](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) 資料夾的[範例](https://github.com/dotnet/samples) \(英文\) 存放庫中取得已完成之教學課程的程式碼。
+您可以從 [csharp/NullableIntroduction](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) 資料夾的[範例](https://github.com/dotnet/samples)存放庫中取得已完成教學課程的程式碼。
 
 藉由在可為 Null 與不可為 Null 的參考類型之間變更類型宣告來進行實驗。 請參閱如何產生不同的警告以確保您不會意外地為 `null` 取值。
 

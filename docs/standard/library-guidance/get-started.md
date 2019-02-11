@@ -4,12 +4,12 @@ description: 開始建置 .NET 程式庫。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e26c6632252257ab8cb5598f1b201559b760dc6b
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145721"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204637"
 ---
 # <a name="get-started"></a>開始使用
 
@@ -29,9 +29,9 @@ ms.locfileid: "53145721"
 
 NuGet 可讓您在建置 .NET 程式庫時輕鬆使用現有的套件。 了解 NuGet 相依性的常見摩擦原因，以及避免它們的方法。
 
-### <a name="sourcelinksourcelinkmd"></a>[SourceLink](./sourcelink.md)
+### <a name="source-linksourcelinkmd"></a>[來源連結](./sourcelink.md)
 
-SourceLink 是可讓您 .NET 程式庫的使用者在偵錯期間逐步執行其原始程式碼的絕佳工具。 此文章會提供 SourceLink 的概觀，以及您應該使用它的原因。
+來源連結是可讓您 .NET 程式庫的使用者在偵錯期間逐步執行其原始程式碼的絕佳工具。 此文章會提供來源連結的概觀，以及您應該使用它的原因。
 
 ### <a name="publishingpublish-nuget-packagemd"></a>[發佈](./publish-nuget-package.md)
 

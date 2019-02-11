@@ -3,13 +3,13 @@ title: 使用 Polly 以指數輪詢實作 HTTP 呼叫重試
 description: 了解如何使用 Polly 和 HttpClientFactory 處理 HTTP 失敗。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: d0c3042f2831e5f256f43e32e70645213054f247
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362752"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479642"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>使用 HttpClientFactory 和 Polly 原則以指數輪詢實作 HTTP 呼叫重試
 
@@ -21,9 +21,9 @@ Polly 是 .NET 程式庫，提供恢復功能和暫時性錯誤處理功能。 �
 
 下列步驟示範如何透過整合到 HttpClientFactory 中的 Polly 使用 Http 重試，如上一節所述。
 
-**參考 ASP.NET Core 2.1 套件**
+**參考 ASP.NET Core 2.2 套件**
 
-您的專案必須使用 NuGet 中的 ASP.NET Core 2.1 套件。 您通常需要 `AspNetCore` 中繼套件，以及延伸模組套件 `Microsoft.Extensions.Http.Polly`。
+自.NET Core 2.1 後提供 `HttpClientFactory`不過建議您在專案中使用 NuGet 中的最新 ASP.NET Core 2.2 套件。 您通常需要 `AspNetCore` 中繼套件，以及延伸模組套件 `Microsoft.Extensions.Http.Polly`。
 
 **在啟動時，使用 Polly 的重試原則來設定用戶端**
 
@@ -51,7 +51,7 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 }
 ```
 
-透過 Polly，您可以定義重試原則，其中包含重試次數、指數輪詢組態，以及發生 HTTP 例外狀況時所要採取的動作，例如記錄錯誤。 在此案例中，會設定原則，以便使用指數重試嘗試六次，一開始每隔兩秒。 
+透過 Polly，您可以定義重試原則，其中包含重試次數、指數輪詢組態，以及發生 HTTP 例外狀況時所要採取的動作，例如記錄錯誤。 在本例中，會設定原則，以便使用指數重試嘗試六次，一開始每隔兩秒。 
 
 因此，它會嘗試六次，而且每次重試的間隔秒數會是指數，一開始每隔兩秒。
 
