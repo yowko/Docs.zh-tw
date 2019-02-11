@@ -1,6 +1,6 @@
 ---
-title: 如何：新增或移除存取控制清單項目
-ms.date: 03/30/2017
+title: HOW TO：新增或移除存取控制清單項目 (僅限 .NET Framework)
+ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,36 +15,35 @@ helpviewer_keywords:
 ms.assetid: 53758b39-bd9b-4640-bb04-cad5ed8d0abf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 24c428a80f18b35d0aa3119a3c5fa1a6dcb2130e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea1059f541d2449a1a2d5dca1644ce8d9a553e40
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573419"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283344"
 ---
-# <a name="how-to-add-or-remove-access-control-list-entries"></a><span data-ttu-id="cf74e-102">如何：新增或移除存取控制清單項目</span><span class="sxs-lookup"><span data-stu-id="cf74e-102">How to: Add or Remove Access Control List Entries</span></span>
-<span data-ttu-id="cf74e-103">若要在檔案加入或移除存取控制清單 (ACL) 項目，必須從檔案或目錄取得 <xref:System.Security.AccessControl.FileSecurity> 或 <xref:System.Security.AccessControl.DirectorySecurity> 物件、修改，然後套用回到檔案或目錄。</span><span class="sxs-lookup"><span data-stu-id="cf74e-103">To add or remove Access Control List (ACL) entries to or from a file, the <xref:System.Security.AccessControl.FileSecurity> or <xref:System.Security.AccessControl.DirectorySecurity> object must be obtained from the file or directory, modified, and then applied back to the file or directory.</span></span>  
+# <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a><span data-ttu-id="72514-102">HOW TO：新增或移除存取控制清單項目 (僅限 .NET Framework)</span><span class="sxs-lookup"><span data-stu-id="72514-102">How to: Add or remove Access Control List entries (.NET Framework only)</span></span>
+<span data-ttu-id="72514-103">若要在檔案或目錄加入或移除存取控制清單 (ACL) 項目，請從檔案或目錄取得 <xref:System.Security.AccessControl.FileSecurity> 或 <xref:System.Security.AccessControl.DirectorySecurity> 物件。</span><span class="sxs-lookup"><span data-stu-id="72514-103">To add or remove Access Control List (ACL) entries to or from a file or directory, get the <xref:System.Security.AccessControl.FileSecurity> or <xref:System.Security.AccessControl.DirectorySecurity> object from the file or directory.</span></span> <span data-ttu-id="72514-104">修改物件，然後將其套回至檔案或目錄。</span><span class="sxs-lookup"><span data-stu-id="72514-104">Modify the object, and then apply it back to the file or directory.</span></span>  
   
-### <a name="to-add-or-remove-an-acl-entry-from-a-file"></a><span data-ttu-id="cf74e-104">加入或移除檔案的 ACL 項目</span><span class="sxs-lookup"><span data-stu-id="cf74e-104">To add or remove an ACL entry from a File</span></span>  
+## <a name="add-or-remove-an-acl-entry-from-a-file"></a><span data-ttu-id="72514-105">在檔案加入或移除 ACL 項目</span><span class="sxs-lookup"><span data-stu-id="72514-105">Add or remove an ACL entry from a file</span></span>  
   
-1.  <span data-ttu-id="cf74e-105">呼叫 <xref:System.IO.File.GetAccessControl%2A> 方法來取得 <xref:System.Security.AccessControl.FileSecurity> 物件，其中包含檔案的目前 ACL 項目。</span><span class="sxs-lookup"><span data-stu-id="cf74e-105">Call the <xref:System.IO.File.GetAccessControl%2A> method to get a <xref:System.Security.AccessControl.FileSecurity> object that contains the current ACL entries of a file.</span></span>  
+1.  <span data-ttu-id="72514-106">呼叫 <xref:System.IO.File.GetAccessControl%2A?displayProperty=nameWithType> 方法來取得 <xref:System.Security.AccessControl.FileSecurity> 物件，其中包含檔案的目前 ACL 項目。</span><span class="sxs-lookup"><span data-stu-id="72514-106">Call the <xref:System.IO.File.GetAccessControl%2A?displayProperty=nameWithType> method to get a <xref:System.Security.AccessControl.FileSecurity> object that contains the current ACL entries of a file.</span></span>  
   
-2.  <span data-ttu-id="cf74e-106">在 <xref:System.Security.AccessControl.FileSecurity> 步驟 1 中傳回的物件加入或移除 ACL 項目。</span><span class="sxs-lookup"><span data-stu-id="cf74e-106">Add or remove ACL entries from the <xref:System.Security.AccessControl.FileSecurity> object returned from step 1.</span></span>  
+2.  <span data-ttu-id="72514-107">在步驟 1 中傳回的 <xref:System.Security.AccessControl.FileSecurity> 物件加入或移除 ACL 項目。</span><span class="sxs-lookup"><span data-stu-id="72514-107">Add or remove ACL entries from the <xref:System.Security.AccessControl.FileSecurity> object returned from step 1.</span></span>  
   
-3.  <span data-ttu-id="cf74e-107">傳遞 <xref:System.Security.AccessControl.FileSecurity> 物件給 <xref:System.IO.File.SetAccessControl%2A> 方法，以套用所做的變更。</span><span class="sxs-lookup"><span data-stu-id="cf74e-107">Pass the <xref:System.Security.AccessControl.FileSecurity> object to the <xref:System.IO.File.SetAccessControl%2A> method to apply the changes.</span></span>  
+3. <span data-ttu-id="72514-108">若要套用變更，請將 <xref:System.Security.AccessControl.FileSecurity> 物件傳遞至 <xref:System.IO.File.SetAccessControl%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="72514-108">To apply the changes, pass the <xref:System.Security.AccessControl.FileSecurity> object to the <xref:System.IO.File.SetAccessControl%2A?displayProperty=nameWithType> method.</span></span>  
   
-### <a name="to-add-or-remove-an-acl-entry-from-a-directory"></a><span data-ttu-id="cf74e-108">加入或移除目錄的 ACL 項目</span><span class="sxs-lookup"><span data-stu-id="cf74e-108">To add or remove an ACL entry from a Directory</span></span>  
+## <a name="add-or-remove-an-acl-entry-from-a-directory"></a><span data-ttu-id="72514-109">在目錄加入或移除 ACL 項目</span><span class="sxs-lookup"><span data-stu-id="72514-109">Add or remove an ACL entry from a directory</span></span>  
   
-1.  <span data-ttu-id="cf74e-109">呼叫 <xref:System.IO.Directory.GetAccessControl%2A> 方法來取得 <xref:System.Security.AccessControl.DirectorySecurity> 物件，其中包含目錄的目前 ACL 項目。</span><span class="sxs-lookup"><span data-stu-id="cf74e-109">Call the <xref:System.IO.Directory.GetAccessControl%2A> method to get a <xref:System.Security.AccessControl.DirectorySecurity> object that contains the current ACL entries of a directory.</span></span>  
+1.  <span data-ttu-id="72514-110">呼叫 <xref:System.IO.Directory.GetAccessControl%2A?displayProperty=nameWithType> 方法來取得 <xref:System.Security.AccessControl.DirectorySecurity> 物件，其中包含目錄的目前 ACL 項目。</span><span class="sxs-lookup"><span data-stu-id="72514-110">Call the <xref:System.IO.Directory.GetAccessControl%2A?displayProperty=nameWithType> method to get a <xref:System.Security.AccessControl.DirectorySecurity> object that contains the current ACL entries of a directory.</span></span>  
   
-2.  <span data-ttu-id="cf74e-110">在步驟 1 中傳回的 <xref:System.Security.AccessControl.DirectorySecurity> 物件加入或移除 ACL 項目。</span><span class="sxs-lookup"><span data-stu-id="cf74e-110">Add or remove ACL entries from the <xref:System.Security.AccessControl.DirectorySecurity> object returned from step 1.</span></span>  
+2.  <span data-ttu-id="72514-111">在步驟 1 中傳回的 <xref:System.Security.AccessControl.DirectorySecurity> 物件加入或移除 ACL 項目。</span><span class="sxs-lookup"><span data-stu-id="72514-111">Add or remove ACL entries from the <xref:System.Security.AccessControl.DirectorySecurity> object returned from step 1.</span></span>  
   
-3.  <span data-ttu-id="cf74e-111">傳遞 <xref:System.Security.AccessControl.DirectorySecurity> 物件給 <xref:System.IO.Directory.SetAccessControl%2A> 方法，以套用所做的變更。</span><span class="sxs-lookup"><span data-stu-id="cf74e-111">Pass the <xref:System.Security.AccessControl.DirectorySecurity> object to the <xref:System.IO.Directory.SetAccessControl%2A> method to apply the changes.</span></span>  
+3.  <span data-ttu-id="72514-112">若要套用變更，請將 <xref:System.Security.AccessControl.DirectorySecurity> 物件傳遞至 <xref:System.IO.Directory.SetAccessControl%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="72514-112">To apply the changes, pass the <xref:System.Security.AccessControl.DirectorySecurity> object to the <xref:System.IO.Directory.SetAccessControl%2A?displayProperty=nameWithType> method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cf74e-112">範例</span><span class="sxs-lookup"><span data-stu-id="cf74e-112">Example</span></span>  
- [!code-cpp[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/cpp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/cpp/sample.cpp#1)]
+## <a name="example"></a><span data-ttu-id="72514-113">範例</span><span class="sxs-lookup"><span data-stu-id="72514-113">Example</span></span>  
+ <span data-ttu-id="72514-114">您必須使用有效的使用者或群組帳戶，才能執行這個範例。</span><span class="sxs-lookup"><span data-stu-id="72514-114">You must use a valid user or group account to run this example.</span></span> <span data-ttu-id="72514-115">此範例使用 <xref:System.IO.File> 物件。</span><span class="sxs-lookup"><span data-stu-id="72514-115">The example uses a <xref:System.IO.File> object.</span></span> <span data-ttu-id="72514-116">對 <xref:System.IO.FileInfo>、<xref:System.IO.Directory> 和 <xref:System.IO.DirectoryInfo> 類別使用相同程序。</span><span class="sxs-lookup"><span data-stu-id="72514-116">Use the same procedure for the <xref:System.IO.FileInfo>, <xref:System.IO.Directory>, and <xref:System.IO.DirectoryInfo> classes.</span></span>
+
  [!code-csharp[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
  [!code-vb[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="cf74e-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="cf74e-113">Compiling the Code</span></span>  
- <span data-ttu-id="cf74e-114">您必須提供有效的使用者或群組帳戶，才能執行這個範例。</span><span class="sxs-lookup"><span data-stu-id="cf74e-114">You must supply a valid user or group account to run this example.</span></span> <span data-ttu-id="cf74e-115">這個範例會使用 <xref:System.IO.File> 物件；不過，相同的程序也用於 <xref:System.IO.FileInfo>、<xref:System.IO.Directory> 和 <xref:System.IO.DirectoryInfo> 類別。</span><span class="sxs-lookup"><span data-stu-id="cf74e-115">This example uses a <xref:System.IO.File> object; however, the same procedure is used for the <xref:System.IO.FileInfo>, <xref:System.IO.Directory>, and <xref:System.IO.DirectoryInfo> classes.</span></span>
