@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: f96b450eea5f2b45d256bfe00a18aa616d501d69
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: e523f7b25e28b41030edd4dc86a1fa144e961950
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612175"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758296"
 ---
 # <a name="volatile-c-reference"></a>volatile (C# 參考)
 
@@ -56,4 +56,4 @@ ms.locfileid: "53612175"
 - [C# 關鍵字](index.md)
 - [修飾詞](modifiers.md)
 - [lock 陳述式](lock-statement.md)
-- <xref:System.Threading.Interlocked> 類別
+- <xref:System.Threading.Interlocked>
