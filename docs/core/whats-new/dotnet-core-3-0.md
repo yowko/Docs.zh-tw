@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: baaa2676865c475e331ec889e7b10ae326b552fa
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 9a43f9407d530224b5ad4775ef3a8c0ef2a9fe27
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675084"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828406"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0 (Preview 2) 的新功能
 
@@ -20,11 +20,12 @@ ms.locfileid: "55675084"
 
 .NET Core 3.0 新增 C# 8.0 支援。
 
-請立即在 Windows、Mac 及 Linux 上[下載並開始使用 .NET Core 3 Preview 2](https://aka.ms/netcore3download)。 您可以在 [.NET Core 3 Preview 2 版本資訊](https://aka.ms/netcore3releasenotes) 中查看完整的版本詳細資料。
+立即在 Windows、Mac 及 Linux 上[下載並開始使用 .NET Core 3.0 Preview 2](https://aka.ms/netcore3download)。 您可以在 [.NET Core 3.0 Preview 2 版本資訊](https://aka.ms/netcore3releasenotes)中查看完整的版本詳細資料。
 
-如需 Preview 1 發佈內容的詳細資訊，請參閱 [.NET Core 3.0 Preview 1 公告](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)。
+如需各版本發行內容的詳細資訊，請參閱下列公告：
 
-如需 Preview 1 發佈內容的詳細資訊，請參閱 [.NET Core 3.0 Preview 2 公告]()。
+- [.NET Core 3.0 Preview 1 公告](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [.NET Core 3.0 Preview 2 公告](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 
@@ -308,7 +309,7 @@ Visual Studio 2017 15.9 新增了[啟用 .NET Core 預覽](https://blogs.msdn.mi
 
 [MSIX](https://docs.microsoft.com/windows/msix/) 是新的 Windows 應用程式套件格式。 它可以用來將 .NET Core 3.0 桌面應用程式部署至 Windows 10。
 
-Visual Studio 2019 Preview 2 中提供的 [Windows 應用程式套件專案](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)可讓您利用[自封式](../deploying/#self-contained-deployments-scd) .NET Core 應用程式建立 MSIX 套件。
+Visual Studio 2019 Preview 2 中提供的 [Windows 應用程式套件專案](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)可讓您利用[自封式](../deploying/index.md#self-contained-deployments-scd) .NET Core 應用程式建立 MSIX 套件。
 
 >注意:.NET Core 專案檔必須指定在 `<RuntimeIdentifiers>` 屬性中支援的執行階段：
 ```xml
