@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588570"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093927"
 ---
 # <a name="standard-query-operator-translation"></a>標準查詢運算子轉譯
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將標準查詢運算子轉譯為 SQL 命令。 資料庫的查詢處理器會決定執行語意的 SQL 轉譯。  
   
- 標準查詢運算子中定義*序列*。 是一連串*排序*而且依賴序列的每個元素的參考識別。 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子概觀](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
+ 標準查詢運算子中定義*序列*。 是一連串*排序*而且依賴序列的每個元素的參考識別。 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子概觀 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)或是[標準查詢運算子概觀 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。</c0>  
   
  SQL 主要負責處理*未排序的一組值*。 排序通常是一項明確陳述的後置處理作業，會套用至最終查詢結果 (而非中繼結果)。 識別是以值來定義。 基於這個理由，SQL 查詢來了解處理用於多重集 (*包*) 而非*設定*。  
   

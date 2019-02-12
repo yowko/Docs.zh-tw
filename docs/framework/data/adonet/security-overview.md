@@ -2,12 +2,12 @@
 title: 安全性 Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 24da83af6876e9bbb23c7978db6b9413ec00d8ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570482"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091795"
 ---
 # <a name="security-overview"></a>安全性概觀
 保護應用程式是持續進行的工作。 開發人員無法絕對保證應用程式可避開所有攻擊，因為您無法預測未來的新科技會帶來哪些類型的攻擊。 反之，也不能因為至目前為止，沒有人察覺 (或公佈) 系統上的安全性漏洞，就表示安全性漏洞確實存在或確實不存在。 您需要在專案的設計階段就進行安全性的規劃，也必須規劃該如何在應用程式的存留期維護安全性。  
@@ -89,7 +89,7 @@ ms.locfileid: "54570482"
 |資源|描述|  
 |--------------|-----------------|  
 |[SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|使用應用程式案例提供 SQL Server 安全性概觀，可針對建立以 SQL Server 為目標的安全 ADO.NET 應用程式提供指引。|  
-|[資料存取策略的建議](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供存取資料及執行資料庫作業的建議。|  
+|[資料存取策略的建議](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|提供存取資料及執行資料庫作業的建議。|  
   
 ## <a name="security-policy-and-administration"></a>安全性原則和管理  
  如果程式碼存取安全性 (CAS) 原則管理不當，可能會造成安全上的弱點。 部署應用程式後，必須使用監視安全性的技術，並評估新威脅所帶來的風險。  
@@ -98,11 +98,11 @@ ms.locfileid: "54570482"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[NIB:安全性原則管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|提供建立和管理安全性原則的資訊。|  
-|[NIB:安全性原則的最佳作法](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|提供說明如何管理安全性原則的連結。|  
+|[安全性原則管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|提供建立和管理安全性原則的資訊。|  
+|[安全性原則的最佳作法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|提供說明如何管理安全性原則的連結。|  
   
 ## <a name="see-also"></a>另請參閱
 - [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [PAVE 機器碼和 .NET Framework 程式碼中的安全性](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [在.NET 中的安全性](../../../standard/security/index.md)
 - [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

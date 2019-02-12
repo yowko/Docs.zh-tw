@@ -2,15 +2,15 @@
 title: 在 SQL Server 中授與資料列層級權限
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 28e552e005cdfa0b4c69ff95927b938fa3898193
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 092520f04ba828c9589a16b4ffd6574d04170249
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553762"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092991"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>在 SQL Server 中授與資料列層級權限
-在某些案例中，相較於單純地授與、撤銷或拒絕權限，您需要以更細微的層級來控制資料存取。 例如，醫院資料庫應用程式可能需要限制個別醫生只能存取與其病患相關的資訊。 類似的需求存在許多環境中，包括財務、法律、政府和軍事應用程式中。 為了協助解決這些案例，SQL Server 2016 提供 [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx) 功能，以一個安全性原則來簡化並集中管理資料列層級存取邏輯。 針對舊版 SQL Server，您可以使用檢視來制定資料列層級篩選，以達到類似的功能。  
+在某些案例中，相較於單純地授與、撤銷或拒絕權限，您需要以更細微的層級來控制資料存取。 例如，醫院資料庫應用程式可能需要限制個別醫生只能存取與其病患相關的資訊。 類似的需求存在許多環境中，包括財務、法律、政府和軍事應用程式中。 為了協助解決這些案例，SQL Server 2016 提供 [資料列層級安全性](/sql/relational-databases/security/row-level-security) 功能，以一個安全性原則來簡化並集中管理資料列層級存取邏輯。 針對舊版 SQL Server，您可以使用檢視來制定資料列層級篩選，以達到類似的功能。  
   
 ## <a name="implementing-row-level-filtering"></a>實作資料列層級篩選  
  資料列層級會用於將資訊儲存在單一資料表中的應用程式，如上述醫院範例所示。 為了實作資料列層級篩選，每個資料列都具有一個定義區別參數的資料行，例如使用者名稱、標籤或其他識別碼。 您可以在資料表上建立安全性原則或檢視，篩選使用者可以存取的資料列。 然後，您可以建立參數化預存程序，控制使用者可以執行的查詢類型。  
@@ -60,7 +60,7 @@ ms.locfileid: "54553762"
 -   將預存程序的 EXECUTE 授與資料庫角色。 使用者只能透過提供的預存程序來存取資料。  
   
 ## <a name="see-also"></a>另請參閱
-- [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx)
+- [資料列層級安全性](/sql/relational-databases/security/row-level-security)
 - [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

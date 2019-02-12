@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 9b1db3b3628719eca178ababd0dc9728b491e7b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6f0e51319da8c2edcb914170aa14837229163c1
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658152"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093667"
 ---
 # <a name="wcf-data-services-resources"></a>WCF 資料服務資源
 下列位置可以找到 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的簡介主題。 這些主題中有許多也包含其中含有詳細資訊的相關主題連結。  
@@ -23,7 +23,7 @@ ms.locfileid: "54658152"
  [應用程式案例](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  提供以工作為基礎的方法，來建立[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]以及存取應用程式[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。  
   
- [Visual Studio 和.NET Framework 字彙表](https://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
+ [.NET 詞彙](../../../standard/glossary.md)  
  包含所用的詞彙[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]文件。  
   
 ## <a name="external-resources"></a>外部資源  

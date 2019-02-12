@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 2c722f0c4847f2403e9940ade6ee42e82be29c82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b7e078b2eb76191ba572a7d141b29f71d7d8a96
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614350"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092549"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>設定資料服務 (WCF 資料服務)
 具有[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以建立資料服務公開 （expose）[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 這些摘要中的資料可以來自各種不同的資料來源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會使用資料提供者公開此資料，做[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。 這些提供者包含 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者、反映提供者，以及一組自訂資料服務提供者介面。 提供者實作會針對此服務定義資料模型。 如需詳細資訊，請參閱 <<c0> [ 資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。  
@@ -69,7 +69,7 @@ ms.locfileid: "54614350"
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支援|不支援|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|不支援|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支援|不支援|不支援|不支援|  
   
- <sup>1</sup>在此範例中，`Address`表示複雜型別屬性`Customers`具有名為屬性的實體`StreetAddress`。 Northwind 資料服務所使用的模型不會明確定義這個複雜類型。 當此資料模型是使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者所定義時，您可以使用 [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] 工具來定義這類複雜類型。 如需詳細資訊，請參閱[＜How to：建立和修改複雜型別](https://msdn.microsoft.com/library/afb8e206-0ffe-4597-b6d4-6ab566897e1d)。  
+ <sup>1</sup>在此範例中，`Address`表示複雜型別屬性`Customers`具有名為屬性的實體`StreetAddress`。 Northwind 資料服務所使用的模型不會明確定義這個複雜類型。 當此資料模型是使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者所定義時，您可以使用 [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] 工具來定義這類複雜類型。 如需詳細資訊，請參閱[＜How to：建立和修改複雜型別](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))。  
   
  <sup>2</sup>傳回二進位大型物件 (BLOB) 的屬性定義與媒體資源屬於媒體連結項目，在此情況下，實體時，這個 URI 支援`Customers`。 如需詳細資訊，請參閱 <<c0> [ 資料流處理提供者](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。  
   

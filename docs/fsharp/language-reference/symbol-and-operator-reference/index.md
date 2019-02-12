@@ -1,13 +1,13 @@
 ---
 title: 符號和運算子參考
 description: 深入了解符號和運算子，可在F#程式設計語言。
-ms.date: 04/04/2018
-ms.openlocfilehash: 385ddbef2a3519d26dd7ad6abe90da1368f0a2a4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/11/2019
+ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613800"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092939"
 ---
 # <a name="symbol-and-operator-reference"></a>符號和運算子參考
 
@@ -133,7 +133,7 @@ ms.locfileid: "53613800"
 |`or`、 <code>&#124;&#124;</code>|左|
 |`&`、 `&&`|左|
 |`:>`、 `:?>`|右|
-|`!=`*op*， `<` *op*， `>` *op*， `=`， <code>&#124;</code> *op*， `&` *op*, `&`<br /><br />(包括 `<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&`)|左|
+|`<`*op*， `>` *op*， `=`， <code>&#124;</code> *op*， `&` *op*， `&`<br /><br />(包括 `<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&`)|左|
 |`^`*op*<br /><br />(包括 `^^^`)|右|
 |`::`|右|
 |`:?`|未關聯|

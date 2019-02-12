@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff2be73b2cea563066f70ea2fe6d53840f718e75
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 855a1329c9804e4b40d796c639bbe8768156dcc2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855279"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092497"
 ---
 # <a name="debugging-tracing-and-profiling"></a>偵錯、追蹤和程式碼剖析
 若要偵錯 .NET Framework 應用程式，必須設定編譯器和執行階段環境，讓偵錯工具能夠附加至應用程式，並針對應用程式及其相對應的 Microsoft 中繼語言 (MSIL) 產生符號和字行對應 (可能的話)。 在偵錯 Managed 應用程式後，可將其剖析以提高效能。 程式碼剖析會評估和描述產生最常執行之程式碼的原始程式碼字行，以及花費多少時間執行。  
@@ -47,7 +47,7 @@ ms.locfileid: "43855279"
  描述您可以用來追蹤應用程式效能的計數器。  
   
 ## <a name="related-sections"></a>相關章節  
- [偵錯 ASP.NET 和 AJAX 應用程式](https://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
+ [偵錯在 Visual Studio 中的 ASP.NET 或 ASP.NET Core 應用程式](/visualstudio/debugger/debugging-aspnet-and-ajax-applications)  
  提供如何在開發期間或部署之後偵錯 ASP.NET 應用程式的先決條件與指示。  
   
  [開發指南](../../../docs/framework/development-guide.md)  

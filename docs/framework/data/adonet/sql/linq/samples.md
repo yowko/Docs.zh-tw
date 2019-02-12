@@ -2,12 +2,12 @@
 title: 範例
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: 55d53642b1d98c798b164ca99d2a59d7ba299d22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 840aeaee70df02dc07033490db5bd081de5500cf
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729021"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092003"
 ---
 # <a name="samples"></a>範例
 本主題提供 Visual Basic 和 C# 解決方案，其中包含連結[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]範例程式碼。  
@@ -17,7 +17,7 @@ ms.locfileid: "54729021"
  [範例查詢 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
  SampleQueries 方案的 C# 版本  
- [LINQ C# 範例解決方案](https://msdn.microsoft.com/library/23852e6b-b9a9-4a06-aedb-b27a5930ed74)  
+ [查詢範例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb397972(v=vs.90))  
   
  請遵循這些步驟來尋找 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 程式碼和應用程式的其他範例：  
   
@@ -29,4 +29,4 @@ ms.locfileid: "54729021"
   
 ## <a name="see-also"></a>另請參閱
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [LINQ to SQL 逐步解說](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)
+- [LINQ to SQL 逐步解說](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))

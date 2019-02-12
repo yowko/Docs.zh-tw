@@ -2,12 +2,12 @@
 title: CLR 觸發程序
 ms.date: 03/30/2017
 ms.assetid: defe379c-30c7-487f-9abd-9c5e12ff49be
-ms.openlocfilehash: e73c8183e7ebad0818555929bb17c77ddd4ff0b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77f679cec00dced5e308d28d862f907a77f4f52a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548507"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093212"
 ---
 # <a name="clr-triggers"></a>CLR 觸發程序
 觸發程序是一種特殊型別的預存程序，它會在執行語言事件時自動執行。 因為 Microsoft SQL Server 已與 .NET Framework Common Language Runtime (CLR) 整合，所以您可以使用任何 .NET Framework 語言建立 CLR 觸發程序。  
@@ -19,5 +19,4 @@ ms.locfileid: "54548507"
 1. [CLR 觸發程序](/sql/database-engine/dev-guide/clr-triggers)
   
 ## <a name="see-also"></a>另請參閱
-- [在 Managed 程式碼中建立 SQL Server 2005 物件](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

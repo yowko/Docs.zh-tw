@@ -1,13 +1,13 @@
 ---
 title: 類型擴充
 description: 了解如何F#類型擴充功能可讓您將新成員加入先前定義的物件類型。
-ms.date: 01/23/2019
-ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.date: 02/08/2019
+ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066151"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092471"
 ---
 # <a name="type-extensions"></a>類型擴充功能
 
@@ -100,6 +100,8 @@ type IEnumerable<'T> with
 擴充的型別，當反映檢查上沒有出現選擇性擴充功能。 選擇性擴充功能必須在模組中，而且時，它們只能在範圍中包含的延伸模組的模組已開啟，或不在範圍內。
 
 選擇性擴充成員會編譯成靜態成員的物件執行個體隱含傳遞做為第一個參數。 不過，它們就像它們是執行個體成員或靜態成員，根據這些宣告的方式。
+
+選擇性擴充成員也看不到C#或 VB 取用者。 僅可以使用其他F#程式碼。
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>內建函式和選擇性類型擴充功能的一般限制
 

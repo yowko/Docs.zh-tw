@@ -1,13 +1,13 @@
 ---
 title: F#程式碼格式化方針
 description: 了解格式的指導方針F#程式碼。
-ms.date: 11/26/2018
-ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 02/08/2019
+ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254818"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093615"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#程式碼格式化方針
 
@@ -354,7 +354,7 @@ type PostalAddress =
     }
 ```
 
-在新行和結尾語彙基元，在新行上的放置的左語彙基元是下班時間，如果您在記錄上宣告的介面實作或成員：
+置於新行和新行上的結尾語彙基元的左語彙基元是如果您在記錄上宣告的介面實作或成員：
 
 ```fsharp
 // Declaring additional members on PostalAddress
@@ -389,7 +389,7 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-放置開頭索引標籤式的語彙基元的新行上，內容一段範圍內，，並在新的一行的結尾語彙基元是下班時間，如果您是：
+將放在開頭索引標籤式的語彙基元的新行上，內容一段範圍內，，並在新的一行的結尾語彙基元是如果您是：
 
 * 在不同的縮排的領域的程式碼中四處移動記錄
 * 將它們傳送到函式
@@ -423,6 +423,42 @@ let foo a =
 ```
 
 相同的規則適用於清單和陣列的項目。
+
+## <a name="formatting-copy-and-update-record-expressions"></a>複製和更新記錄運算式格式化
+
+複製和更新記錄運算式仍然是一筆記錄，以便套用類似的指導方針。
+
+簡短的運算式可以放在一行：
+
+```fsharp
+let point2 = { point with X = 1; Y = 2 }
+```
+
+較長的運算式應該使用新行：
+
+```fsharp
+let rainbow2 =
+    { rainbow with
+        Boss = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"] }
+```
+
+做為記錄的指引，建議您設定專用的大括號的不同行，並縮排運算式右邊的一個範圍。 請注意，某些特殊的情況下，例如換行的值具有一個選擇性沒有括號，您可能需要保留在同一行的大括號：
+
+```fsharp    
+type S = { F1: int; F2: string }
+type State = { F:  S option }
+
+let state = { F = Some { F1 = 1; F2 = "Hello" } }
+let newState = 
+    {
+        state with
+            F = Some {
+                    F1 = 0
+                    F2 = ""
+                }
+    }
+```
 
 ## <a name="formatting-lists-and-arrays"></a>格式化的清單和陣列
 
@@ -759,7 +795,7 @@ type MyRecord =
 
 ## <a name="formatting-literals"></a>格式化常值
 
-[F#常值](../language-reference/literals.md)使用`Literal`應該將屬性放在它自己的行並使用 camelCase 的命名屬性：
+[F#常值](../language-reference/literals.md)使用`Literal`屬性應該將屬性放在它自己的行，並使用 camelCase 命名：
 
 ```fsharp
 [<Literal>]

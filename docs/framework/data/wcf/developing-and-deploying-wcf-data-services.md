@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: bee0cf4a1fcd70274ff8c1107a35ec3501ef2249
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 826adbde9129a51f67636d51bd7714335a840525
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563635"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093082"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開發和部署 WCF 資料服務
 
@@ -55,7 +55,7 @@ ms.locfileid: "54563635"
 
     -   只能在本機電腦上存取這個伺服器。
 
-    -   此伺服器會接聽 `localhost` 和一個特定的連接埠 (而非連接埠 80)，此連接埠是用於 HTTP 訊息的預設連接埠。 如需詳細資訊，請參閱 [Visual Studio 中 ASP.NET Web 專案的 Web 伺服器](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328)。
+    -   此伺服器會接聽 `localhost` 和一個特定的連接埠 (而非連接埠 80)，此連接埠是用於 HTTP 訊息的預設連接埠。 如需詳細資訊，請參閱 [Visual Studio 中 ASP.NET Web 專案的 Web 伺服器](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))。
 
     -   此伺服器會在目前使用者帳戶的內容中執行資料服務。 比方說，如果您正在以系統管理員層級的使用者身分，在 Visual Studio 程式開發伺服器中執行的資料服務會有系統管理員層級權限。 這可能會使資料服務能夠存取在部署到 IIS 伺服器時沒有存取權限的資源。
 
@@ -82,7 +82,7 @@ ms.locfileid: "54563635"
 
 -   偵錯時的資料服務，您可能想要從資料服務取得錯誤的詳細資訊，在一般作業期間。 您可以從資料服務取得其他錯誤資訊，方法是，將 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 屬性 (Property) 設為 `true` ，然後在資料服務類別上，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 屬性 (Property) 設為 `true`。 如需詳細資訊，請參閱文章[偵錯 WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868)。 您也可以啟用追蹤，在 WCF 中，檢視在 HTTP 訊息層引發的例外狀況。 如需詳細資訊，請參閱 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。
 
--   資料服務通常會開發為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式專案，但您也可以建立資料服務當做[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Visual Studio 中的網站專案。 如需兩種專案類型之間的差異資訊，請參閱[NIB:Web 應用程式專案與 Visual Studio 中的網站專案](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5)。
+-   資料服務通常會開發為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式專案，但您也可以建立資料服務當做[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Visual Studio 中的網站專案。 如需兩種專案類型之間的差異資訊，請參閱[Web 應用程式專案與 Visual Studio 中的網站專案](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))。
 
 -   當您使用，會在建立資料服務時**加入新項目**對話方塊中，在 Visual Studio 中，資料服務由[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]在 IIS 中。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 IIS 是資料服務的預設主機，因此支援其他裝載選項。 如需詳細資訊，請參閱 <<c0> [ 裝載資料服務](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)。
 
@@ -96,19 +96,19 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 若要將�
 
     -   **用於 ASP.NET Web 應用程式的部署技術**
 
-        -   [Web 部署套件](https://msdn.microsoft.com/library/1f9713c8-9540-494c-b80d-9893b970ad6f)
+        -   [如何：在 Visual Studio 中建立 Web 部署套件](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
-        -   [單鍵發行](https://msdn.microsoft.com/library/59226246-99ad-4aec-975d-7c61e8a8911c)
+        -   [如何：部署 Web 專案使用單鍵發行 Visual Studio 中](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
     -   **用於 ASP.NET 網站的部署技術**
 
-        -   [複製網站工具](https://msdn.microsoft.com/library/b819aed4-014b-427e-be80-02317b1bb003)
+        -   [如何：複製網站的檔案，以複製網站工具](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
-        -   [發行網站工具](https://msdn.microsoft.com/library/d0a1a20f-15be-4940-9485-cb8e4aa8181b)
+        -   [如何：發行網站](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
-        -   [XCopy](https://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)
+        -   [逐步解說：使用 XCOPY 將 ASP.NET Web 應用程式部署](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
-     如需有關的部署選項[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式，請參閱 <<c2> [ 的 Visual Studio 及 ASP.NET Web 部署概觀](https://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3)。
+     如需有關的部署選項[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式，請參閱 <<c2> [ 的 Visual Studio 及 ASP.NET Web 部署概觀](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110))。
 
     > [!TIP]
     > 在您嘗試將資料服務部署到 IIS 之前，請確認您已經測試執行 IIS 之 Web 伺服器的部署。 如需詳細資訊，請參閱[＜How to：開發在 IIS 上執行的 WCF 資料服務](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。
@@ -121,7 +121,7 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 若要將�
 
 部署資料服務時，應該考慮下列事項：
 
--   當您部署使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者存取 SQL Server 資料庫的資料服務時，可能也需要使用資料服務部署傳播資料結構、資料或兩者。 Visual Studio 可以自動建立指令碼 （.sql 檔案），以在目的地資料庫中，執行這項操作，而且這些指令碼可以包含的 Web 部署套件中[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式。 如需詳細資訊，請參閱[＜How to：部署 Web 應用程式專案的資料庫](https://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b)。 針對[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]網站上，您可以藉由使用**Database Publishing Wizard** Visual Studio 中。 如需詳細資訊，請參閱 [部署資料庫使用資料庫發行精靈](https://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7)。
+-   當您部署使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者存取 SQL Server 資料庫的資料服務時，可能也需要使用資料服務部署傳播資料結構、資料或兩者。 Visual Studio 可以自動建立指令碼 （.sql 檔案），以在目的地資料庫中，執行這項操作，而且這些指令碼可以包含的 Web 部署套件中[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式。 如需詳細資訊，請參閱[＜How to：部署 Web 應用程式專案的資料庫](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))。 針對[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]網站上，您可以藉由使用**Database Publishing Wizard** Visual Studio 中。 如需詳細資訊，請參閱 <<c0> [ 發行 SQL Database](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
 
 -   因為 WCF Data Services 包含基本的 WCF 實作，您可以使用 Windows Server AppFabric 監視資料服務部署至 Windows Server 上執行的 IIS。 如需使用 Windows Server AppFabric 監視資料服務的詳細資訊，請參閱文章[使用 Windows Server AppFabric 追蹤 WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=202005)。
 

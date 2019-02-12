@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 7e24bf24785538863738fe2c006834a77f47e1ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ea8960b74cd44734eb68a07c6959727bf1ac797
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496084"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093966"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>實作商務邏輯 (LINQ to SQL)
 本主題中的「商務邏輯」一詞，指的是您套用到資料的任何自訂規則或驗證測試，待套用之後，資料才會在資料庫中插入、更新或刪除。 商務邏輯有時也稱為「商務規則」或「定義域邏輯」。 在 N-Tier 應用程式中，這通常會設計為邏輯層，以便與展示層或資料存取層分開修改。 資料存取層可在資料庫中的資料更新、插入或刪除之前或之後叫用 (Invoke) 商務邏輯。  
@@ -71,7 +71,8 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
   
  如果您在部分類別中實作 Insert、Update 和 Delete 方法，則當 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 被呼叫時，<xref:System.Data.Linq.DataContext.SubmitChanges%2A> 執行階段會呼叫這些方法，而不會呼叫自己的預設方法。 這可讓您覆寫建立/讀取/更新/刪除作業的預設行為。 如需詳細資訊，請參閱[逐步解說：自訂插入、 更新和刪除實體類別的行為](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)。  
   
- `OnCreated` 方法是在類別建構函式中呼叫的。  
+ 
+  `OnCreated` 方法是在類別建構函式中呼叫的。  
   
 ```vb  
 Public Sub New(ByVal connection As String)  
@@ -181,10 +182,10 @@ partial class Customer
   
  [逐步解說：自訂實體類別的插入、更新和刪除行為](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [逐步解說：將驗證新增至實體類別](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
+ [逐步解說：將驗證新增至實體類別](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   
 ## <a name="see-also"></a>另請參閱
-- [部分類別和方法](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
+- [部分類別和方法](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
 - [部分方法](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) (Visual Studio 中的 LINQ to SQL 工具)
 - [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

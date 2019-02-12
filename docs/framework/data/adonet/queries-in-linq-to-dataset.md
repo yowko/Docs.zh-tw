@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 8c5f94cb7f815e4aebef10d930843971219baef6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 461ff195ab4f147f98c7bc2ac83f5e8f12edc4c0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623114"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093264"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet 中的查詢
 查詢是指從資料來源中擷取資料的運算式。 查詢通常會以特定的查詢語言來表示，例如 SQL 用於關聯式資料庫，而 XQuery 用於 XML。 因此，開發人員必須針對他們所查詢的每種資料來源或資料格式，學習新的查詢語言。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 提供了一種較簡單且一致的模型，可處理各種資料來源和格式的資料。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查詢中，您一定會使用程式設計物件。  
@@ -29,7 +29,7 @@ ms.locfileid: "54623114"
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 在兩個不同的語法，即可制訂查詢： 查詢運算式語法和以方法為基礎的查詢語法。  
   
 ### <a name="query-expression-syntax"></a>查詢運算式語法  
- 查詢運算式是宣告式查詢語法。 這種語法可讓開發人員使用類似 SQL 的格式，在 C# 或 Visual Basic 中撰寫查詢。 透過使用查詢運算式語法，您就可以利用最少的程式碼，針對資料來源執行同樣複雜的篩選、排序和分組作業。 如需詳細資訊，請參閱 < [LINQ 查詢運算式](https://msdn.microsoft.com/library/40638f19-fb46-4d26-a2d9-a383b48f5ed4)並[基本查詢作業 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
+ 查詢運算式是宣告式查詢語法。 這種語法可讓開發人員使用類似 SQL 的格式，在 C# 或 Visual Basic 中撰寫查詢。 透過使用查詢運算式語法，您就可以利用最少的程式碼，針對資料來源執行同樣複雜的篩選、排序和分組作業。 如需詳細資訊，請參閱 < [LINQ 查詢運算式](../../../csharp/linq/index.md#query-expression-overview)並[基本查詢作業 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。
   
  查詢運算式語法是 C# 3.0 和 [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)] 中的新增功能。 不過，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 無法讀取查詢運算式語法本身。 因此，在編譯期間，查詢運算式會轉譯為 CLR 可以了解的項目：即方法呼叫。 這些方法指*標準查詢運算子*。 身為開發人員，您可以選擇使用方法語法來直接呼叫它們，而非使用查詢語法。 如需詳細資訊，請參閱 [LINQ 中的查詢語法及方法語法](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。 如需標準查詢運算子的詳細資訊，請參閱[標準查詢運算子概觀](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
@@ -54,7 +54,8 @@ ms.locfileid: "54623114"
   
  在您已經執行過查詢之後，便無法撰寫其他查詢，而且所有後續的查詢都將使用記憶體中 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 運算子。 當查詢執行時您逐一查看查詢變數中，就會發生`foreach`或`For Each`陳述式，或藉由呼叫其中一個[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]導致立即執行的轉換運算子。 這些運算子包括：<xref:System.Linq.Enumerable.ToList%2A>、<xref:System.Linq.Enumerable.ToArray%2A>、<xref:System.Linq.Enumerable.ToLookup%2A> 和 <xref:System.Linq.Enumerable.ToDictionary%2A>。  
   
- 在下列範例中，第一個查詢會傳回所有產品，並依照標價排序。 <xref:System.Linq.Enumerable.ToArray%2A> 方法是用來強制立即執行查詢：  
+ 在下列範例中，第一個查詢會傳回所有產品，並依照標價排序。 
+  <xref:System.Linq.Enumerable.ToArray%2A> 方法是用來強制立即執行查詢：  
   
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  

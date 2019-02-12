@@ -2,12 +2,12 @@
 title: 彙總查詢
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: 1c8f6191cfb832a71bd32c60db492eafb8ca22ca
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed8624c47ca8e68646f176ff91b63577d64b6d1f
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858688"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094122"
 ---
 # <a name="aggregate-queries"></a>彙總查詢
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援 `Average`、`Count`、`Max`、`Min` 和 `Sum` 彙總運算子。 請注意，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的彙總運算子有下列特性：  
@@ -18,7 +18,7 @@ ms.locfileid: "43858688"
   
 -   彙總查詢通常會傳回數字，而不是集合。  
   
-     如需詳細資訊，請參閱 <<c0> [ 彙總作業](https://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4)。  
+     如需詳細資訊，請參閱 <<c0> [ 彙總作業](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120))。  
   
 -   您不可以對匿名型別呼叫彙總。  
   

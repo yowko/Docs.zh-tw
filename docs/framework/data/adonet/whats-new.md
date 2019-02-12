@@ -2,12 +2,12 @@
 title: ADO.NET 的新功能
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: efba4d3f0822aa6654eb55bd0aff059dbf84d02e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2acbd6a766d91e31db71ce193bcc4081e5f32c9d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283695"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092510"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET 的新功能
 下列功能是 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 的新功能。  
@@ -43,16 +43,18 @@ ms.locfileid: "55283695"
   
 -   `Type System Version=SQL Server 2012;` 是傳遞至 `Type System Version` 連接屬性的新值。 `Type System Version=Latest;` 值現在已過時，並與 `Type System Version=SQL Server 2008;` 相等。 如需詳細資訊，請參閱<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
   
--   SqlClient 提供額外的疏鬆資料行支援，這是在 SQL Server 2008 中新增的功能。 如果您的應用程式已存取使用疏鬆資料行之資料表中的資料，效能應該會有所提高。 <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 IsColumnSet 資料行指出資料行是否為屬於資料行集的疏鬆資料行。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 指出資料行是否為疏鬆資料行 (請參閱[SQL Server 結構描述集合](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)如需詳細資訊)。 如需有關疏鬆資料行的詳細資訊，請參閱 <<c0> [ 使用疏鬆資料行](https://go.microsoft.com/fwlink/?LinkId=224244)。  
+-   SqlClient 提供額外的疏鬆資料行支援，這是在 SQL Server 2008 中新增的功能。 如果您的應用程式已存取使用疏鬆資料行之資料表中的資料，效能應該會有所提高。 
+  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 IsColumnSet 資料行指出資料行是否為屬於資料行集的疏鬆資料行。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 指出資料行是否為疏鬆資料行 (請參閱[SQL Server 結構描述集合](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)如需詳細資訊)。 如需有關疏鬆資料行的詳細資訊，請參閱 <<c0> [ 使用疏鬆資料行](https://go.microsoft.com/fwlink/?LinkId=224244)。  
   
 -   包含空間資料類型的 Microsoft.SqlServer.Types.dll 組件已從 10.0 版升級至 11.0 版。 參考此組件的應用程式可能會失敗。 如需詳細資訊，請參閱 < [Database Engine 功能的突破性變更](https://go.microsoft.com/fwlink/?LinkId=224367)。  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
- [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 新增應用程式開發介面，可在搭配使用 Entity Framework 5.0 時啟用新案例。 如需有關改善和已新增至 Entity Framework 5.0 的功能的詳細資訊，請參閱下列主題：[最新消息](https://go.microsoft.com/fwlink/?LinkID=251106)並[Entity Framework 版本與版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。  
+ 
+  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 新增應用程式開發介面，可在搭配使用 Entity Framework 5.0 時啟用新案例。 如需有關改善和已新增至 Entity Framework 5.0 的功能的詳細資訊，請參閱下列主題：[最新消息](https://go.microsoft.com/fwlink/?LinkID=251106)並[Entity Framework 版本與版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。  
   
 ## <a name="see-also"></a>另請參閱
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [WCF Data Services 的新功能](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
+- [WCF Data Services 5.0 中最新消息](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

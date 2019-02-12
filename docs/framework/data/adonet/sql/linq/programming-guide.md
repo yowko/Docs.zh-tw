@@ -2,12 +2,12 @@
 title: 程式設計手冊
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 3a6dad5237c149186a91637ec98efd6f7f315c4d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 32e62899c13be3f2f08bef7e882d5b9c4d11fda2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799654"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093435"
 ---
 # <a name="programming-guide"></a>程式設計手冊
 本節包含如何建立和使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件模型 (Object Model) 的相關資訊。 如果您使用 Visual Studio，您也可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來執行許多相同的工作。  
@@ -40,5 +40,8 @@ ms.locfileid: "43799654"
  [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
  包括說明如何使用預存程序 (Stored Procedure) 的主題連結。  
   
- [LINQ 簡介](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)  
- 提供協助您開始學習 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的資源。
+ [LINQ 簡介 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)  
+ 提供的資源可協助您開始學習 LINQ，若要使用 SQL C#。
+
+ [LINQ 簡介 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
+ 提供可協助您開始了解 LINQ to SQL，使用 Visual Basic 資源。

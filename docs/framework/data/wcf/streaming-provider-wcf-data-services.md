@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697344"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093836"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>資料流處理提供者 (WCF Data Services)
 資料服務可以公開大型物件二進位資料。 這項二進位資料可能代表視訊和音訊資料流、影像、文件檔案，或其他類型的二進位媒體。 當資料模型中的實體包含一個或多個二進位屬性時，資料服務會在回應摘要的項目內，傳回這個 base-64 編碼形式的二進位資料。 載入及序列化大型二進位資料，以這種方式可能會影響效能，因為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定義一個機制來獨立擷取二進位資料與其所屬的實體無關。 只要將實體中的二進位資料分成一個或多個資料流就可以完成這項處理。  
@@ -89,12 +89,13 @@ ms.locfileid: "54697344"
   
  如需詳細資訊，請參閱 < [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)並[傳輸配額](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。  
   
- 根據預設，Internet Information Services (IIS) 也會將要求的大小限制為 4MB。 若要啟用您的資料服務，以接收大於 4 MB 的資料流，在 IIS 上執行時，您也必須設定`maxRequestLength`的屬性[httpRuntime 項目 （ASP.NET 設定結構描述）](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369)在`<system.web />`組態 區段中，為下列範例所示：  
+ 根據預設，Internet Information Services (IIS) 也會將要求的大小限制為 4MB。 若要啟用您的資料服務，以接收大於 4 MB 的資料流，在 IIS 上執行時，您也必須設定`maxRequestLength`的屬性[httpRuntime 項目 （ASP.NET 設定結構描述）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))在`<system.web />`組態 區段中，為下列範例所示：  
   
   
   
 ## <a name="using-data-streams-in-a-client-application"></a>在用戶端應用程式中使用資料流  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可讓您將這些公開的資源當做用戶端的二進位資料流來擷取及更新。 如需詳細資訊，請參閱 <<c0> [ 使用二進位資料](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)。  
+ 
+  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可讓您將這些公開的資源當做用戶端的二進位資料流來擷取及更新。 如需詳細資訊，請參閱 <<c0> [ 使用二進位資料](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)。  
   
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>使用資料流處理提供者的考量  
  下列是當您實作資料流處理提供者以及從資料服務存取媒體資源時，所要考量的事項。  
@@ -119,7 +120,7 @@ ms.locfileid: "54697344"
   
 -   當您實作 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>、<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> 或 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 方法時，您必須使用當做方法參數提供的 eTag 和 Content-Type 值。 請勿在 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 提供者實作中設定 eTag 或 Content-Type 標頭。  
   
--   根據預設，用戶端會使用區塊式 HTTP Transfer-Encoding 來傳送大型二進位資料流。 因為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器不支援這種編碼方式，您無法使用此網頁伺服器來裝載必須接受大型二進位資料流的資料流資料服務。 如需詳細資訊[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器，請參閱 < [ASP.NET Web 專案的 Visual Studio 中的 Web 伺服器](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328)。  
+-   根據預設，用戶端會使用區塊式 HTTP Transfer-Encoding 來傳送大型二進位資料流。 因為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器不支援這種編碼方式，您無法使用此網頁伺服器來裝載必須接受大型二進位資料流的資料流資料服務。 如需詳細資訊[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器，請參閱 < [ASP.NET Web 專案的 Visual Studio 中的 Web 伺服器](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))。  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>版本控制需求  

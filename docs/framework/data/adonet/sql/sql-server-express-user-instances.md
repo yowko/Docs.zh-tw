@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: d7ab6694ec467f957228bfde0a044c577bc2f923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4546ce2a08fc2ac20717bbaa55d4688b43d34b47
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664079"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093810"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 使用者執行個體
 Microsoft SQL Server Express Edition (SQL Server Express) 支援使用者執行個體功能，只有在使用 .NET Framework Data Provider for SQL Server (`SqlClient`) 時才提供此功能。 使用者執行個體是 SQL Server Express Database Engine 的獨立執行個體，由父執行個體所產生。 不是系統管理員的使用者可以透過使用者執行個體，從本機電腦附加及連接至 SQL Server Express 資料庫。 每個執行個體都會依照「每個使用者一個執行個體」的基礎，在個別使用者的安全性內容下執行。  
@@ -41,7 +41,8 @@ sp_configure 'user instances enabled','0'
   
  請注意下列所示的範例連接字串：  
   
--   `Data Source` 關鍵字參考到產生使用者執行個體的 SQL Server Express 父執行個體。 預設執行個體是 \sqlexpress。  
+-   
+  `Data Source` 關鍵字參考到產生使用者執行個體的 SQL Server Express 父執行個體。 預設執行個體是 \sqlexpress。  
   
 -   `Integrated Security` 設定為 `true`。 若要連接至使用者執行個體，必須使用「Windows 驗證」；SQL Server 登入則不受支援。  
   
@@ -58,7 +59,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  您也可以使用<xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A>和<xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A>屬性，以建立連接字串，在執行階段。  
+>  您也可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> 和 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> 屬性，在執行階段建立連接字串。  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>使用&#124;DataDirectory&#124;替代字串  
  `AttachDbFileName` 在 ADO.NET 2.0 中已藉由引進 `|DataDirectory|` (放在垂直線符號內) 替代字串而擴充。 `DataDirectory` 可與 `AttachDbFileName` 搭配使用以表示資料檔案的相對路徑，開發人員因此能根據資料來源的相對路徑建立連接字串，而不需指定完整路徑。  
@@ -146,7 +147,7 @@ private static void OpenSqlConnection()
   
 -   任何不需共用資料的單一使用者應用程式。  
   
--   ClickOnce 佈署。 如果目標電腦上已安裝 .NET Framework 2.0 (或更新版本) 和 SQL Server Express，則非系統管理員的使用者也可以安裝及使用因採取 ClickOnce 動作而下載的安裝套件。 請注意，如果 SQL Server Express 是安裝的一部分，則系統管理員必須加以安裝。 如需詳細資訊，請參閱 < [ClickOnce 部署的 Windows Forms 應用程式](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)。  
+-   ClickOnce 佈署。 如果目標電腦上已安裝 .NET Framework 2.0 (或更新版本) 和 SQL Server Express，則非系統管理員的使用者也可以安裝及使用因採取 ClickOnce 動作而下載的安裝套件。 請注意，如果 SQL Server Express 是安裝的一部分，則系統管理員必須加以安裝。 如需詳細資訊，請參閱 <<c0> [ 適用於 Windows Form ClickOnce 部署](../../../winforms/clickonce-deployment-for-windows-forms.md)。
   
 -   使用「Windows 驗證」的專屬 ASP . NET 裝載。 單一的 SQL Server Express 執行個體可以裝載在內部網路上。 應用程式會使用 ASPNET Windows 帳戶連接，而不是使用模擬。 使用者執行個體不該用於協力廠商或共用裝載的案例，因為在這些情況下，所有的應用程式都會共用相同的使用者執行個體，而無法彼此保持隔離。  
   

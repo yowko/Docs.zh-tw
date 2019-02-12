@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: aef4c98390d1fda4828bea8b6b2e482cb0071c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 818495cd2f7100f416280ce019321fed3f26aee8
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558523"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092913"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>資料服務版本控制 (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可讓您建立資料服務，讓用戶端可以存取資料，為使用 Uri 以資料模型為基礎的資源。 OData 也支援服務作業的定義。 初始部署並在其存留期期間潛在進行數次之後，可能會因為各種原因而需要變更這些資料服務 (例如變更商務需要、資訊技術需求) 或處理其他問題。 當您針對現有的資料服務進行變更時，必須考慮是否要定義新的資料服務版本，以及如何妥善地將對於現有用戶端應用程式的影響降至最低。 本主題提供建立新資料服務版本時機和方式的指引。 它也會描述 WCF Data Services 的用戶端和支援的 OData 通訊協定的不同版本的資料服務之間交換的處理方式。
@@ -69,7 +69,7 @@ ms.locfileid: "54558523"
 |第 3 版|-您可以下載並安裝支援 OData 第 3 版的發行前版本[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=203885)。|
 
 ### <a name="metadata-versions"></a>中繼資料版本
- 根據預設，WCF Data Services 會使用 1.1 版的 CSDL 來代表資料模型。 這就是以反映提供者或自訂資料服務提供者為基礎之資料模型的情況。 但是，當使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 來定義資料模型時，傳回的 CSDL 版本會與 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 所使用的版本相同。 CSDL 的版本取決於命名空間[結構描述項目](https://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f)。 如需詳細資訊，請參閱規格[ \[MC-CSDL\]:概念結構定義檔案格式](https://go.microsoft.com/fwlink/?LinkId=159072)。
+ 根據預設，WCF Data Services 會使用 1.1 版的 CSDL 來代表資料模型。 這就是以反映提供者或自訂資料服務提供者為基礎之資料模型的情況。 但是，當使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 來定義資料模型時，傳回的 CSDL 版本會與 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 所使用的版本相同。 CSDL 的版本取決於命名空間[結構描述項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl)。
 
  傳回之中繼資料的 `DataServices` 項目還包含 `DataServiceVersion` 屬性，該值與回應訊息中 `DataServiceVersion` 標頭的值相同。 用戶端應用程式，例如**加入服務參考**對話方塊在 Visual Studio 中，使用此資訊來產生用戶端資料服務類別與裝載資料服務的 WCF Data Services 的版本正常運作。 如需詳細資訊，請參閱[OData:通訊協定版本控制](https://go.microsoft.com/fwlink/?LinkId=186071)。
 

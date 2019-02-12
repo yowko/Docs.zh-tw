@@ -2,12 +2,12 @@
 title: 資料類型與函式
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 0a60c5f680937816cd97b4ef44ee7fd1ad510f73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: deb8df0d64b4e8db24e5d611332e512781ef01b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711891"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091431"
 ---
 # <a name="data-types-and-functions"></a>資料類型與函式
 下表所列的主題將針對 Common Language Runtime (CLR) 的成員、建構和轉換描述 LINQ to SQL 支援。 支援的成員和建構可用於您的 LINQ to SQL 查詢中。  
@@ -34,4 +34,3 @@ ms.locfileid: "54711891"
 ## <a name="see-also"></a>另請參閱
 - [SQL-CLR 類型不符](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
 - [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [在 Visual Studio 中的.NET framework 類別庫](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

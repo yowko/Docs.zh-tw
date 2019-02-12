@@ -2,40 +2,40 @@
 title: 使用動作實作伺服器端行為
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: c478c09ada879bdb237cff1e3c914a5990aba765
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdff4f87e0c22baeb92ee844e0dae1fa9bef8302
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622607"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092120"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用動作實作伺服器端行為
 
 OData 動作可實作一種行為，以依據從 OData 服務擷取的資源而動作。 例如，將數位影片視為資源時，您可以對數位影片進行許多動作：簽出、評比/加註或簽入。 這些是管理數位影片之 WCF 資料服務可實作的所有動作範例。 動作描述於 OData 回應中，而這個回應包含可叫用動作的資源。 當使用者要求代表數位影片的資源時，從 WCF 資料服務傳回的回應就會包含可用於該項資源之動作的相關資訊。 動作的可用性可能會取決於資料服務或資源的狀態。 例如，一旦數位影片已簽出之後，就無法由其他使用者簽出。 用戶端只要指定 URL，就可以叫用動作。 例如，`http://MyServer/MovieService.svc/Movies(6)`會識別特定的數位影片和`http://MyServer/MovieService.svc/Movies(6)/Checkout`會叫用特定的影片中的動作。 動作可讓您公開服務模型，而不公開資料模型。 繼續處理影片服務範例時，您可能會想要讓使用者評比影片，但不直接以資源的形式公開評比資料。 此時，您可以實作評比動作，讓使用者評比影片，但不直接以資源的形式存取評比資料。
   
 ## <a name="implementing-an-action"></a>實作動作  
- 若要實作服務動作，您必須實作<xref:System.IServiceProvider>， [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)，以及[IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx)介面。 <xref:System.IServiceProvider> 可讓 WCF Data Services 取得您實作[IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)。 [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)可讓 WCF Data Services 建立、 尋找、 描述及叫用服務動作。 [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx)可讓您叫用實作服務動作之行為的程式碼，並取得結果，如果有的話。 請記住，WCF Data Services 是每次呼叫的 WCF 服務，亦即每次呼叫服務時，都會建立新的服務執行個體。  請確定建立服務時，不會進行任何不必要的工作。  
+ 若要實作服務動作，您必須實作<xref:System.IServiceProvider>， [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))，以及[IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103))介面。 <xref:System.IServiceProvider> 可讓 WCF Data Services 取得您實作[IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))。 [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))可讓 WCF Data Services 建立、 尋找、 描述及叫用服務動作。 [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103))可讓您叫用實作服務動作之行為的程式碼，並取得結果，如果有的話。 請記住，WCF Data Services 是每次呼叫的 WCF 服務，亦即每次呼叫服務時，都會建立新的服務執行個體。  請確定建立服務時，不會進行任何不必要的工作。  
   
 ### <a name="iserviceprovider"></a>IServiceProvider  
- <xref:System.IServiceProvider> 包含名為 <xref:System.IServiceProvider.GetService%2A> 的方法。 WCF Data Services 會呼叫此方法來擷取許多服務提供者，包括中繼資料服務提供者和資料服務動作提供者。 當要求資料服務動作提供者時，傳回您[IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)實作。  
+ <xref:System.IServiceProvider> 包含名為 <xref:System.IServiceProvider.GetService%2A> 的方法。 WCF Data Services 會呼叫此方法來擷取許多服務提供者，包括中繼資料服務提供者和資料服務動作提供者。 當要求資料服務動作提供者時，傳回您[IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))實作。  
   
 ### <a name="idataserviceactionprovider"></a>IDataServiceActionProvider  
- [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)包含方法，可讓您擷取可用動作的相關資訊。 當您實作[IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)您會為您的服務可定義您的服務實作的擴充中繼資料[IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)動作和處理分派這些適當的動作。  
+ [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))包含方法，可讓您擷取可用動作的相關資訊。 當您實作[IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))您會為您的服務可定義您的服務實作的擴充中繼資料[IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))動作和處理分派這些適當的動作。  
   
 #### <a name="advertiseserviceaction"></a>AdvertiseServiceAction  
- [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider.advertiseserviceaction(v=vs.113).aspx)呼叫以判斷哪些動作可供指定的資源。 這個方法只會針對非永遠可用的動作呼叫。 它是用來根據所要求之資源的狀態或服務的狀態，檢查動作是否應該包含在 OData 回應中。 這項檢查的完成方式完全由您自行決定。 如果計算可用性相當耗費資源，而且目前資源位於摘要中，則略過檢查並通告動作就是可接受的作法。 如果目前傳回的資源屬於摘要的一部分，`inFeed` 參數就會設定為 `true`。  
+ [AdvertiseServiceAction 方法](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859971(v=vs.103))呼叫以判斷哪些動作可供指定的資源。 這個方法只會針對非永遠可用的動作呼叫。 它是用來根據所要求之資源的狀態或服務的狀態，檢查動作是否應該包含在 OData 回應中。 這項檢查的完成方式完全由您自行決定。 如果計算可用性相當耗費資源，而且目前資源位於摘要中，則略過檢查並通告動作就是可接受的作法。 如果目前傳回的資源屬於摘要的一部分，`inFeed` 參數就會設定為 `true`。  
   
 #### <a name="createinvokable"></a>CreateInvokable  
- [CreateInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider.createinvokable(v=vs.113).aspx)呼叫來建立[IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) ，其中包含這個委派會封裝實作動作之行為的程式碼。 這會建立[IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx)執行個體，但是不會叫用動作。 WCF 資料服務動作有副作用，而且必須搭配更新提供者運作，才能將這些變更儲存至磁碟。 [IDataServiceInvokable.Invoke](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable.invoke(v=vs.113).aspx)更新提供者的 savechanges （） 呼叫方法時呼叫方法。  
+ [CreateInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859940(v=vs.103))呼叫來建立[IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) ，其中包含這個委派會封裝實作動作之行為的程式碼。 這會建立[IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103))執行個體，但是不會叫用動作。 WCF 資料服務動作有副作用，而且必須搭配更新提供者運作，才能將這些變更儲存至磁碟。 [IDataServiceInvokable.Invoke](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859924(v=vs.103))更新提供者的 savechanges （） 呼叫方法時呼叫方法。  
   
 #### <a name="getserviceactions"></a>GetServiceActions  
- 這個方法傳回的集合[ServiceAction](https://msdn.microsoft.com/library/system.data.services.providers.serviceaction(v=vs.113).aspx)代表 WCF 資料服務公開的動作的所有執行個體。 [ServiceAction](https://msdn.microsoft.com/library/system.data.services.providers.serviceaction(v=vs.113).aspx)的動作，包括類似的動作名稱、 其參數，以及其傳回型別資訊的中繼資料表示法。  
+ 這個方法傳回的集合[ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103))代表 WCF 資料服務公開的動作的所有執行個體。 [ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103))的動作，包括類似的動作名稱、 其參數，以及其傳回型別資訊的中繼資料表示法。  
   
 #### <a name="getserviceactionsbybindingparametertype"></a>GetServiceActionsByBindingParameterType  
- 這個方法會傳回所有集合[ServiceAction](https://msdn.microsoft.com/library/system.data.services.providers.serviceaction(v=vs.113).aspx)可以繫結至指定的繫結參數類型的執行個體。 換句話說，所有[ServiceAction](https://msdn.microsoft.com/library/system.data.services.providers.serviceaction(v=vs.113).aspx)，它可以處理指定的資源類型 （也稱為繫結參數類型）。服務傳回的資源，在其中加入可針對該項資源叫用動作的相關資訊時，會使用這項目。 這個方法應該只會傳回可繫結至確切繫結參數類型 (無衍生類型) 的動作。 這個方法是在遇到每種類型時，針對每個要求呼叫一次，而且結果由 WCF Data Services 進行快取。  
+ 這個方法會傳回所有集合[ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103))可以繫結至指定的繫結參數類型的執行個體。 換句話說，所有[ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103))，它可以處理指定的資源類型 （也稱為繫結參數類型）。服務傳回的資源，在其中加入可針對該項資源叫用動作的相關資訊時，會使用這項目。 這個方法應該只會傳回可繫結至確切繫結參數類型 (無衍生類型) 的動作。 這個方法是在遇到每種類型時，針對每個要求呼叫一次，而且結果由 WCF Data Services 進行快取。  
   
 #### <a name="tryresolveserviceaction"></a>TryResolveServiceAction  
- 這個方法會搜尋指定[ServiceAction](https://msdn.microsoft.com/library/system.data.services.providers.serviceaction(v=vs.113).aspx) ，然後傳回`true`如果[ServiceAction](https://msdn.microsoft.com/library/system.data.services.providers.serviceaction(v=vs.113).aspx)找到。 如果找不到， [ServiceAction](https://msdn.microsoft.com/library/system.data.services.providers.serviceaction(v=vs.113).aspx)會傳回`serviceAction``out`參數。  
+ 這個方法會搜尋指定[ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) ，然後傳回`true`如果[ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103))找到。 如果找不到， [ServiceAction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103))會傳回`serviceAction``out`參數。  
   
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
  這個介面會提供一種執行 WCF 資料服務動作的方式。 實作 IDataServiceInvokable 時，您必須負責處理 3 件事：  

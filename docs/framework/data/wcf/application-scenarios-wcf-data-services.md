@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 2efa46abf5a1fcedee4a4055331f7a59963be794
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380ebeaa4c6265cccfe0e264884f509292b31eab
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709152"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093290"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>應用程式案例 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援公開及取用資料的一組核心案例[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 本主題會為您指出與這些案例有關的主題。  
@@ -37,11 +37,11 @@ ms.locfileid: "54709152"
 -   [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  在以 Silverlight 為基礎的用戶端應用程式中，取用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。  
- -   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
 -   [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [如何：資料服務資料繫結至控制項 (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [如何：資料服務資料繫結至控制項 （Silverlight 用戶端）](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))  
   
  在以 AJAX 為基礎的用戶端應用程式中，取用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。  
  -   [在用戶端應用程式中使用資料服務](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "54709152"
   
 -   [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
  公開及取用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要，含有存取及變更資料流形式的二進位大型物件。  
  -   [資料流提供者](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  

@@ -1,13 +1,13 @@
 ---
 title: 常值
 description: 深入了解中的常值型別F#程式設計語言。
-ms.date: 05/16/2016
-ms.openlocfilehash: dfc02f0ff8ac3ad8600be5f3b6c9359f02bd25be
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/08/2019
+ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612448"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092159"
 ---
 # <a name="literals"></a>常值
 
@@ -33,15 +33,15 @@ ms.locfileid: "53612448"
 |uint64|不帶正負號的 64 位元自然數|UL|`86UL`|
 |single、float32|32 位元浮點數|F 或 f|`4.14F` 或 `4.14f`|
 |||lf|`0x00000000lf`|
-|浮點數;double|64 位元浮點數|無|`4.14`、`2.3E+32` 或 `2.3e+32`|
+|浮點數;double|64 位元浮點數|none|`4.14`、`2.3E+32` 或 `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|不限於 64 位元表示的整數|I|`9999999999999999999999999999I`|
 |decimal|以固定點或有理數表示的小數數字|M 或 m|`0.7833M` 或 `0.7833m`|
-|Char|Unicode 字元|無|`'a'`|
-|String|Unicode 字串|無|`"text\n"`<br /><br />或<br /><br />`@"c:\filename"`<br /><br />或<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />或<br /><br />`"string1" + "string2"`<br /><br />另請參閱[字串](Strings.md)。|
+|Char|Unicode 字元|none|`'a'`|
+|String|Unicode 字串|none|`"text\n"`<br /><br />或<br /><br />`@"c:\filename"`<br /><br />或<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />或<br /><br />`"string1" + "string2"`<br /><br />另請參閱[字串](Strings.md)。|
 |byte|ASCII 字元|B|`'a'B`|
 |byte[]|ASCII 字串|B|`"text"B`|
-|字串或 byte]|逐字字串|@ 前置詞|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
+|字串或 byte]|逐字字串|@ prefix|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>備註
 
@@ -51,16 +51,16 @@ Unicode 字串可以包含您可以使用指定的明確編碼`\u`後面的 16 �
 
 ```fsharp
 [<Literal>]
-let literal1 = "a" + "b"
+let Literal1 = "a" + "b"
 
 [<Literal>]
-let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let literal2 = 1 ||| 64
+let Literal2 = 1 ||| 64
 
 [<Literal>]
-let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 不允許使用其他位元運算子。
@@ -76,8 +76,8 @@ let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 帶正負號的 32 位元整數也 zadat 中使用十六進位、 八進位或二進位`0x`，`0o`或`0b`分別的前置詞。
 
 ```fsharp
-let Numbers = (0x9F, 0o77, 0b1010)
-// Result: Numbers : int * int * int = (159, 63, 10)
+let numbers = (0x9F, 0o77, 0b1010)
+// Result: numbers : int * int * int = (159, 63, 10)
 ```
 
 ## <a name="underscores-in-numeric-literals"></a>數值常值中的底線

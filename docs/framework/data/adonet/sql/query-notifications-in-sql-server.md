@@ -2,12 +2,12 @@
 title: SQL Server 中的查詢通知
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 87335b5c9ad626e998fdb7bf0e71cae2542386f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 166471658ccd1ef48db2ac1647f74ea696f3263d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636686"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092289"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server 中的查詢通知
 依據 Service Broker 基礎結構所建置的查詢通知可讓應用程式在資料變更時收到通知。 此功能對於從資料庫中提供資訊快取的應用程式 (如 Web 應用程式)，及需要在來源資料變更時收到通知的應用程式來說非常有用。  
@@ -26,17 +26,17 @@ ms.locfileid: "54636686"
   
  如果您正在開發應用程式的資料變更時，會需要可靠的次秒通知，請檢閱章節**規劃有效率的查詢通知策略**和**替代項目查詢通知**中[通知計畫](https://go.microsoft.com/fwlink/?LinkId=211984)SQL Server 線上叢書 》 中的主題。 如需查詢通知和 SQL Server Service Broker 的詳細資訊，請參閱下列《SQL Server 線上叢書》主題的連結。  
   
- **SQL Server 線上叢書**  
+ **SQL Server 文件**  
   
--   [使用查詢通知](https://msdn.microsoft.com/library/ms175110.aspx)  
+-   [使用查詢通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
--   [建立查詢通知](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [建立查詢通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Service Broker](https://msdn.microsoft.com/library/bb522889.aspx)  
+-   [開發 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
--   [Service Broker 開發人員資訊中心](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker 開發人員資訊中心](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [開發 (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [開發人員指南 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>本節內容  
  [啟用查詢通知](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  

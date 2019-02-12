@@ -2,12 +2,12 @@
 title: SQL Server 中的伺服器和資料庫角色
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 57570d1879efa91dc98e41203eac9464c547af77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7fdac92c2d980669a3cc3bf67119bdbb42509a4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643074"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091808"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的伺服器和資料庫角色
 所有的 SQL Server 版本都會使用角色架構的安全性，讓您可以將權限指派給角色或使用者群組，而不是個別的使用者。 固定伺服器角色和固定資料庫角色都指派有固定的權限組。  
@@ -27,8 +27,8 @@ ms.locfileid: "54643074"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[伺服器層級角色](/sql/relational-databases/security/authentication-access/server-level-roles)並[固定的伺服器角色的權限](https://msdn.microsoft.com/library/ms175892.aspx)中 SQL Server 線上叢書|說明固定的伺服器角色與 SQL Server 中與其相關聯的權限。|  
-|[資料庫層級角色](/sql/relational-databases/security/authentication-access/database-level-roles)並[固定的資料庫角色的權限](https://msdn.microsoft.com/library/ms189612.aspx)中 SQL Server 線上叢書|說明 SQL Server 2005 中的固定資料庫角色和與其相關的權限。|  
+|[伺服器層級角色](/sql/relational-databases/security/authentication-access/server-level-roles)|說明固定的伺服器角色與 SQL Server 中與其相關聯的權限。|  
+|[資料庫層級角色](/sql/relational-databases/security/authentication-access/database-level-roles)|說明 SQL Server 2005 中的固定資料庫角色和與其相關的權限。|  
   
 ## <a name="database-roles-and-users"></a>資料庫角色和使用者  
  登入必須對應至資料庫使用者帳戶，才能使用資料庫物件。 接著可以將資料庫使用者加入至資料庫角色、繼承任何與這些角色相關聯的權限集合。 所有權限都可授與。  
@@ -39,12 +39,14 @@ ms.locfileid: "54643074"
  `public` 角色包含在每個資料庫中，系統資料庫也不例外。 您無法加以卸除，也無法從其加入或移除使用者。 授與 `public` 角色的權限會由所有其他的使用者和角色繼承，因為這些權限依預設是屬於 `public` 角色。 請僅為 `public` 授與所有使用者都可擁有的權限。  
   
 ### <a name="the-dbo-user-account"></a>dbo 使用者帳戶  
- `dbo` (也稱為資料庫擁有者) 是使用者帳戶，擁有可在資料庫中執行所有活動的隱含權限。 `sysadmin` 固定伺服器角色的成員會自動對應至 `dbo`。  
+ `dbo` (也稱為資料庫擁有者) 是使用者帳戶，擁有可在資料庫中執行所有活動的隱含權限。 
+  `sysadmin` 固定伺服器角色的成員會自動對應至 `dbo`。  
   
 > [!NOTE]
 >  `dbo` 也是名稱的結構描述中所述[擁有權和 SQL Server 中的使用者結構描述分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)。  
   
- `dbo` 使用者帳戶經常會與 `db_owner` 固定資料庫角色混淆。 `db_owner` 的範圍是一個資料庫，而 `sysadmin` 的範圍是整個伺服器。 `db_owner` 角色中的成員資格不會授與 `dbo` 使用權限。  
+ 
+  `dbo` 使用者帳戶經常會與 `db_owner` 固定資料庫角色混淆。 `db_owner` 的範圍是一個資料庫，而 `sysadmin` 的範圍是整個伺服器。 `db_owner` 角色中的成員資格不會授與 `dbo` 使用權限。  
   
 ### <a name="the-guest-user-account"></a>guest 使用者帳戶  
  使用者經過驗證並獲准登入 SQL Server 執行個體之後，每個資料庫中都必須要有另外的使用者帳戶。 之所以要求每個資料庫中都必須有使用者帳戶的原因，是這樣可以避免使用者連接到 SQL Server 執行個體 (Instance) 而存取伺服器上的所有資料庫。 資料庫中如果有 `guest` 使用者帳戶，則可以規避這項需求，因為這樣可以允許沒有資料庫使用者帳戶的登入對資料庫進行存取。  
@@ -58,8 +60,8 @@ ms.locfileid: "54643074"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[識別和存取控制](https://msdn.microsoft.com/library/bb510418.aspx)中 SQL Server 線上叢書|包含說明主體、角色、認證、安全性實體和權限的主題連結。|  
-|[主體](/sql/relational-databases/security/authentication-access/principals-database-engine)中 SQL Server 線上叢書|說明主體並包含說明伺服器和資料庫角色的主題連結。|  
+|[開始使用 Database Engine 權限](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|包含說明主體、角色、認證、安全性實體和權限的主題連結。|  
+|[主體](/sql/relational-databases/security/authentication-access/principals-database-engine)|說明主體並包含說明伺服器和資料庫角色的主題連結。|  
   
 ## <a name="see-also"></a>另請參閱
 - [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 2d1b88d25c5c2e94d86c1fed53c472e2b0af493e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0cfb9273603850d2451245b81f1bb651f16d56
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643646"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094057"
 ---
 # <a name="retrieving-binary-data"></a>擷取二進位資料
 根據預設， **DataReader**內送資料載入的資料列，只要整列資料可用。 但是二進位大型物件 (BLOB) 需要不同的處理方式，因為它們所包含的資料可能高達數 GB，無法包含在單一資料列內。 **Command.ExecuteReader**方法有多載會採用<xref:System.Data.CommandBehavior>引數，以修改預設行為**DataReader**。 您可以傳遞<xref:System.Data.CommandBehavior.SequentialAccess>要**ExecuteReader**方法，以修改的預設行為**DataReader**以便而不是載入的資料列，它會載入資料以循序方式是在接收。 這種方式相當適於載入 BLOB 或其他大型資料結構。 請注意，這個行為取決於您的資料來源。 例如，從 Microsoft Access 傳回 BLOB 會將整個正在載入的 BLOB 載入記憶體，而不是在接收時循序載入。  
@@ -154,6 +154,5 @@ connection.Close();
 ```  
   
 ## <a name="see-also"></a>另請參閱
-- [使用 Datareader](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
 - [SQL Server 二進位和大量數值資料](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

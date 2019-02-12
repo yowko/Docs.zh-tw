@@ -2,12 +2,12 @@
 title: 計算運算式
 description: 了解如何建立方便的語法，以寫入計算的F#，可以是循序和合併使用控制流程建構和繫結。
 ms.date: 07/27/2018
-ms.openlocfilehash: 79159146e24dc50f851c29e3cf7fffe892c6d196
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7524a42f8efb951be255ca6cc285740ef1fa12c3
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610693"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093511"
 ---
 # <a name="computation-expressions"></a>計算運算式
 
@@ -218,6 +218,7 @@ F#核心程式庫會定義三個內建的計算運算式：[排序運算式](seq
 |`Yield`|`'T -> M<'T>`|針對呼叫`yield`計算運算式中的運算式。|
 |`YieldFrom`|`M<'T> -> M<'T>`|針對呼叫`yield!`計算運算式中的運算式。|
 |`Zero`|`unit -> M<'T>`|呼叫空`else`分支`if...then`計算運算式中的運算式。|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|表示 計算運算式會傳遞至`Run`為引號的成員。 它會轉譯成引號是計算的所有執行個體。|
 
 許多產生器類別中的方法使用，並傳回`M<'T>`建構，這通常是分開定義的類型特性的組合，計算種類，例如，`Async<'T>`非同步工作流程和`Seq<'T>`序列工作流程。 這些方法的簽章會啟用這些要結合並彼此巢狀，以便從一個建構傳回的工作流程物件可以傳遞至下一步。 剖析計算運算式時，編譯器會使用上表中的方法和計算運算式中的程式碼，將運算式轉換成一系列的巢狀函式呼叫。
 

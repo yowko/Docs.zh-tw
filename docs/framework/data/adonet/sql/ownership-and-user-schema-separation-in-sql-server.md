@@ -2,12 +2,12 @@
 title: SQL Server 中的擁有權和使用者結構描述分離
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: adeed5ff4961a33d8f7d330941a5680f11a88b96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68a65cb950c54be9a4f9354a6ca20cbeeaafb938
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694798"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092601"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server 中的擁有權和使用者結構描述分離
 SQL Server 安全性的核心概念是物件的擁有者具有不可撤銷的物件管理權限。 您無法移除物件擁有者的權限，而使用者只要擁有資料庫中的物件，就無法將其從資料庫卸除。  
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |資源|描述|  
 |--------------|-----------------|  
-|[707fe4226858"&gt;user-Schema Separation&lt](https://msdn.microsoft.com/library/ms190387.aspx)中 SQL Server 線上叢書|說明由使用者結構描述分隔引入的變更。 包括新增行為、對擁有權的影響、目錄檢視和權限。|  
+|[使用者結構描述分隔](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|說明由使用者結構描述分隔引入的變更。 包括新增行為、對擁有權的影響、目錄檢視和權限。|  
   
 ## <a name="see-also"></a>另請參閱
 - [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 0db71fd7e48515ad6be3641786fc180f62aacf33
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 86250d974a4f85e5ccbe2ac636dc252beff0d485
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198149"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091717"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework 中的資料與模型化
 本節將提供如何使用 ADO.NET、Language Integrated Query (LINQ)、WCF 資料服務和 XML 來存取資料的相關資訊。  
@@ -20,11 +20,14 @@ ms.locfileid: "44198149"
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  描述 ADO.NET 架構，以及如何使用 ADO.NET 類別來管理應用程式資料並與資料來源互動，包括 Microsoft SQL Server、OLE DB 資料來源和 XML。  
   
- [LINQ 入口網站](https://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
- 提供 Language Integrated Query (LINQ) 相關文件的連結。  
+ [Language-Integrated Query (LINQ)](../../csharp/programming-guide/concepts/linq/index.md)  
+ 提供使用 Language Integrated Query (LINQ) 的相關文件的連結C#。  
+  
+ [Language-Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)  
+ 提供相關文件的 Language Integrated Query (LINQ) 使用 Visual Basic 的連結。  
   
  [交易處理](../../../docs/framework/data/transactions/index.md)  
- 討論異動的 .NET Framework 支援。  
+ 討論交易的 .NET Framework 支援。  
   
  [WCF Data Services 4.5](../../../docs/framework/data/wcf/index.md)  
  提供如何使用 WCF 資料服務，在 Web 或內部網路上部署資料服務的相關資訊。  

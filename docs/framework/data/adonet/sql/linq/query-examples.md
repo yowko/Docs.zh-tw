@@ -2,12 +2,12 @@
 title: 查詢範例
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211862"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093758"
 ---
 # <a name="query-examples"></a>查詢範例
 本節提供典型的 Visual Basic 和 C# 範例[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查詢。 使用 Visual Studio 的開發人員可以找到更多的範例中提供的範例方案的範例區段中。 如需詳細資訊，請參閱 <<c0> [ 範例](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)。  
@@ -65,8 +65,11 @@ ms.locfileid: "44211862"
  提供的合併範例`select`與其他功能 (例如*匿名型別*) 以構成查詢投影。  
   
 ## <a name="related-sections"></a>相關章節  
- [標準查詢運算子概觀](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- 說明標準查詢運算子的概念。  
+ [標準查詢運算子概觀 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ 說明使用的標準查詢運算子的概念， C#。  
+  
+ [標準查詢運算子概觀 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ 說明使用 Visual Basic 的標準查詢運算子的概念。  
   
  [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何運用查詢的概念。  
