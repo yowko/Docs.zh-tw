@@ -155,8 +155,8 @@ ms.locfileid: "55204882"
  [回到頁首](#top)  
   
 <a name="alternation_constructs"></a>   
-## <a name="alternation-constructs"></a>交替建構  
- 替代建構會修改規則運算式來啟用二選一比對。 這些建構包含下表列出的語言元素。 如需詳細資訊，請參閱[替代](alternation-constructs-in-regular-expressions.md)。  
+## <a name="alternation-constructs"></a>替代建構  
+ 替代建構會修改規則運算式來啟用二選一比對。 這些建構包含下表列出的語言元素。 如需詳細資訊，請參閱[替代建構](alternation-constructs-in-regular-expressions.md)。  
   
 |交替建構|說明|模式|符合|  
 |---------------------------|-----------------|-------------|-------------|  
