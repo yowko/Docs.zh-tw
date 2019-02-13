@@ -3,13 +3,13 @@ title: 使用 ASP.NET Core 應用程式中的資料
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 使用 ASP.NET Core 應用程式中的資料
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: a30d6708b87687ee4d5cdb13452662e264a1b54c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 01/30/2019
+ms.openlocfilehash: 914a10724c416f453d93f6efc16f9ad192798264
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532678"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827171"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 應用程式中的資料
 
@@ -123,13 +123,82 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-您可以包含多個關聯性，也可以使用 ThenInclude 來包含子關聯性。 EF Core 會執行單一查詢來擷取產生的實體集。
+您可以包含多個關聯性，也可以使用 ThenInclude 來包含子關聯性。 EF Core 會執行單一查詢來擷取產生的實體集。 或者您可以藉由將以 '.' 分隔的字串傳遞至 `.Include()` 擴充方法，來包含導覽屬性的導覽屬性，如下所示：
+
+```csharp
+    .Include(“Items.Products”)
+```
+
+除了封裝篩選邏輯，規格還可以指定要傳回的資料形式，包括要填入的屬性。 eShopOnWeb 範例包括數個示範在規格中封裝積極式載入資訊的規格。 您可以在這裡了解規格如何作為查詢的一部份使用：
+
+```csharp
+// Includes all expression-based includes
+query = specification.Includes.Aggregate(query,
+            (current, include) => current.Include(include));
+
+// Include any string-based include statements
+query = specification.IncludeStrings.Aggregate(query,
+            (current, include) => current.Include(include));
+```
 
 另一個用來載入相關資料的選項是使用「明確式載入」。 明確式載入可讓您將其他資料載入已擷取的實體中。 由於這牽涉到資料庫的個別要求，因此不建議用於 Web 應用程式，而應該將每項要求的資料庫往返次數降至最低。
 
 「消極式載入」功能會自動載入應用程式參考的相關資料。 EF Core 已在 2.1 版中新增對消極式載入的支援。 消極式載入預設不會啟用，而且需要安裝 `Microsoft.EntityFrameworkCore.Proxies`。 如同明確式載入，通常應該為 Web 應用程式停用消極式載入，因為其使用會導致在每個 Web 要求中發出額外的資料庫查詢。 不幸的是，當延遲很小且用於測試的資料集通常很小時，消極式載入所產生的額外負荷往往在開發期間不易察覺。 不過，在生產環境中，由於使用者、資料和延遲更多，額外的資料庫要求通常會導致 Web 應用程式大量使用消極式載入而效能不佳。
 
 [避免在 Web 應用程式中消極載入實體](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
+
+### <a name="encapsulating-data"></a>封裝資料
+
+EF Core 支援多種功能，可讓您的模型正確封裝其狀態。 領域模型中的常見問題之一便是他們會將集合導覽屬性作為可公開存取的清單類型公開。 這可讓任何共同作業者操縱這些集合類型的內容，使其略過與集合相關的重要商務規則，並可能讓物件處於無效狀態。 其解決方案便是公開相關集合的唯讀存取，並明確提供定義用戶端可操縱他們之方式的方法，如下列範例所示：
+
+```csharp
+public class Basket : BaseEntity
+{
+    public string BuyerId { get; set; }
+    private readonly List<BasketItem> _items = new List<BasketItem>();
+    public IReadOnlyCollection<BasketItem> Items => _items.AsReadOnly();
+
+    public void AddItem(int catalogItemId, decimal unitPrice, int quantity = 1)
+    {
+        if (!Items.Any(i => i.CatalogItemId == catalogItemId))
+        {
+            _items.Add(new BasketItem()
+            {
+                CatalogItemId = catalogItemId,
+                Quantity = quantity,
+                UnitPrice = unitPrice
+            });
+            return;
+        }
+        var existingItem = Items.FirstOrDefault(i => i.CatalogItemId == catalogItemId);
+        existingItem.Quantity += quantity;
+    }
+}
+```
+
+請注意，這個實體類型不會公開公開的 `List` 或 `ICollection` 屬性，但是會公開包裝基礎 List 類型的 `IReadOnlyCollection` 類型。 在使用這個模式時，您可以透過 Entity Framework Core 來使用支援欄位，如下所示：
+
+```csharp
+private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
+{
+    var navigation = builder.Metadata.FindNavigation(nameof(Basket.Items));
+
+    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+}
+```
+
+另一種可供您改進領域模型的方式是使用缺少身分識別並只能由其屬性來辨別之類型的值物件。 使用這種類型作為您實體的屬性，可協助保持邏輯專屬於其所屬值物件，並可避免使用相同概念的多個實體間出現重複的邏輯。 在 Entity Framework Core 中，您可以藉由將類型設定為自有實體，來使值物件保留在與其專屬實體相同的資料表中，如下所示：
+
+```csharp
+private void ConfigureOrder(EntityTypeBuilder<Order> builder)
+{
+    builder.OwnsOne(o => o.ShipToAddress);
+}
+```
+
+在此範例中，`ShipToAddress` 屬性的類型為 `Address`。 `Address` 是擁有多個屬性 (例如 `Street` 及 `City`) 的值物件。 EF Core 以每個 `Order` 屬性一個資料行來將 `Address` 物件對應到其資料表，並以屬性名稱作為每個資料行名稱的開頭。 在這個範例中，`Order` 資料表會包含像是 `ShipToAddress_Street` 及 `ShipToAddress_City` 的資料行。
+
+[EF Core 2.2 推出了自有實體集合的支援](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
 
 ### <a name="resilient-connections"></a>具復原功能的連接
 

@@ -3,13 +3,13 @@ title: 現代化 Web 應用程式的特性
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 現代化 Web 應用程式的特性
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 6c416432f10bb93ff5012d716b2d92f13efdcd9b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: eacc66ff5d2c4bfb8d8645bc6bd319eab52437a3
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147332"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828120"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>現代化 Web 應用程式的特性
 
@@ -39,25 +39,25 @@ ASP.NET Core 十分適合雲端 (公用、私人、任何雲端)，因為記憶�
 
 ## <a name="cross-platform"></a>跨平台
 
-ASP.NET Core 為跨平台，可以在 Linux、MacOS 以及 Windows 上執行。 這為使用 ASP.NET Core 建置之應用程式的開發和部署開啟了許多新選項。 現今通常執行於 Linux 的 Docker 容器，可以裝載 ASP.NET Core 應用程式，使其能夠利用[容器和微服務](../microservices-architecture/index.md)的優勢。
+ASP.NET Core 可跨平台，能在 Linux、MacOS 及 Windows 上執行。 這為使用 ASP.NET Core 建置之應用程式的開發和部署開啟了許多新選項。 Linux 及 Windows 的 Docker 容器都可以裝載 ASP.NET Core 應用程式，使其能夠利用[容器和微服務](../microservices-architecture/index.md)的優勢。
 
 ## <a name="modular-and-loosely-coupled"></a>模組化且鬆散結合
 
 NuGet 套件是 .NET Core 中的頭等公民，而 ASP.NET Core 應用程式是透過 NuGet 的許多程式庫所組成。 此功能的細微性有助於確保應用程式僅依賴和部署實際所需的功能，從而減少其使用量和安全性弱點介面區。
 
-ASP.NET Core 也完全支援內部和應用程式層級的相依性插入。 介面能擁有多個實作，可以視需要交換。 相依性插入允許應用程式鬆散偶合至這些介面，使其更容易擴充、維護及測試。
+ASP.NET Core 也完全支援內部和應用程式層級的[相依性插入](https://deviq.com/dependency-injection/)。 介面能擁有多個實作，可以視需要交換。 相依性插入可讓應用程式與這些介面 (而非特定實作) 鬆散結合，使其更易於擴充、維護及測試。
 
 ## <a name="easily-tested-with-automated-tests"></a>以自動化測試輕鬆進行測試
 
-ASP.NET Core 應用程式支援單元測試；其鬆散結合和相依性插入使其可以輕鬆將基礎結構問題與假實作交換，以用於測試目的。 ASP.NET Core 也提供可用於在記憶體中裝載應用程式的 TestServer。 功能測試可以對此記憶體中的伺服器發出請求，執行完整的應用程式堆疊 (包含中介軟體、路由、模型繫結、篩選等) 與接收回應，只需要一小部分的時間來將應用程式裝載在實際伺服器上，並透過網路層級傳送要求。 這些測試對於在現代化 Web 應用程式中越來越重要的 API 來說，尤其易於撰寫且具有價值。
+ASP.NET Core 應用程式支援單元測試，其鬆散結合程度和相依性插入的支援使其可以輕鬆將基礎結構問題與假實作交換，以用於測試目的。 ASP.NET Core 也提供可用於在記憶體中裝載應用程式的 TestServer。 功能測試可以對此記憶體中的伺服器發出請求，執行完整的應用程式堆疊 (包含中介軟體、路由、模型繫結、篩選等) 與接收回應，只需要一小部分的時間來將應用程式裝載在實際伺服器上，並透過網路層級傳送要求。 這些測試對於在現代化 Web 應用程式中越來越重要的 API 來說，尤其易於撰寫且具有價值。
 
 ## <a name="traditional-and-spa-behaviors-supported"></a>支援傳統和 SPA 行為
 
-傳統 Web 應用程式很少涉及用戶端行為，而是依賴伺服器進行應用程式可能需要的所有瀏覽、查詢和更新。 使用者建立的每個新作業都會轉換成新 Web 要求，從而在終端使用者的瀏覽器中重新載入整個頁面。 傳統模型檢視控制器 (MVC) 架構通常會遵循這種方式，每個新的要求對應至不同的控制器動作，而這會使用模型並傳回檢視。 使用 AJAX (非同步 JavaScript 和 XML) 功能可以增強指定頁面上的某些個別作業，但該應用程式的整體架構使用許多不同 MVC 檢視和 URL 端點。
+傳統 Web 應用程式很少涉及用戶端行為，而是依賴伺服器進行應用程式可能需要的所有瀏覽、查詢和更新。 使用者建立的每個新作業都會轉換成新 Web 要求，從而在終端使用者的瀏覽器中重新載入整個頁面。 傳統模型檢視控制器 (MVC) 架構通常會遵循這種方式，每個新的要求對應至不同的控制器動作，而這會使用模型並傳回檢視。 使用 AJAX (非同步 JavaScript 和 XML) 功能可以增強指定頁面上的某些個別作業，但該應用程式的整體架構使用許多不同 MVC 檢視和 URL 端點。 此外，ASP.NET Core MVC 也支援 Razor Pages，這是組織 MVC 樣式頁面較簡單的方式。
 
-相較之下，單頁應用程式 (SPA) 只涉及極少數動態產生的伺服器端頁面載入 (如有)。 許多 SPA 都是在靜態的 HTML 檔案中初始化，該檔案會載入必要的 JavaScript 程式庫以啟動並執行應用程式。 這些應用程式大量使用 Web API 來滿足其資料要求，並且可以提供更豐富的使用者體驗。
+相較之下，單頁應用程式 (SPA) 只涉及極少數動態產生的伺服器端頁面載入 (如有)。 許多 SPA 都是在靜態的 HTML 檔案中初始化，該檔案會載入必要的 JavaScript 程式庫來啟動並執行應用程式。 這些應用程式大量使用 Web API 來滿足其資料需求，並且可以提供更豐富的使用者體驗。
 
-許多 Web 應用程式牽涉到傳統 Web 應用程式行為 (通常用於內容) 和 SPA (適用於互動功能) 的組合。 ASP.NET Core 在同一個應用程式中支援 MVC (檢視及/或 Razor Pages) 和 Web API，使用相同的工具組和基礎架構程式庫。
+許多 Web 應用程式牽涉到傳統 Web 應用程式行為 (通常用於內容) 和 SPA (適用於互動功能) 的組合。 ASP.NET Core 使用同一組工具和基礎架構程式庫，在同一個應用程式中同時支援 MVC (以檢視或頁面為基礎) 和 Web API。
 
 ## <a name="simple-development-and-deployment"></a>簡單開發與部署
 

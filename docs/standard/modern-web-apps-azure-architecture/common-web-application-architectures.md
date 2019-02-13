@@ -3,13 +3,13 @@ title: 一般 Web 應用程式架構
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 探索一般 Web 應用程式架構
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 3b0b109b0910eb5763ecab228115b7bc932d4a10
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129931"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826729"
 ---
 # <a name="common-web-application-architectures"></a>一般 Web 應用程式架構
 
@@ -87,7 +87,7 @@ ms.locfileid: "53129931"
 
 就內部而言，根據責任將此專案組織成多個專案，可以改善應用程式的可維護性。
 
-此單位可以相應增加或相應放大以充分利用雲端隨選延展性。 相應增加意思是新增額外的 CPU、記憶體、磁碟空間或其他資源到裝載應用程式的伺服器。 相應放大意思是新增這類伺服器的額外執行個體，不論這些是實體伺服器還是虛擬機器。 當您的應用程式裝載於多個執行個體時，負載平衡器會用於將要求指派給個別的應用程式執行個體。
+此單位可以相應增加或相應放大以充分利用雲端隨選延展性。 相應增加意思是新增額外的 CPU、記憶體、磁碟空間或其他資源到裝載應用程式的伺服器。 相應放大的意思是額外新增這類伺服器的執行個體，不論它們是實體伺服器、虛擬機器或容器。 當您的應用程式裝載於多個執行個體時，負載平衡器會用於將要求指派給個別的應用程式執行個體。
 
 在 Azure 中調整 Web 應用程式最簡單的方式，是在應用程式的 App Service 方案中手動設定調整。 圖 5-6 顯示適當的 Azure 儀表板畫面，以設定多少個執行個體正在服務應用程式。
 
@@ -212,7 +212,7 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 
 容器的設計原本就是不可變的，您永遠不需要擔心 VM 損毀，而更新指令碼可能會忘記處理部分特定設定或是檔案殘留在磁碟上。
 
-您可以使用 Docker 容器進行更簡單 Web 應用程式的整合型部署。_如此可改善持續整合與持續部署管線，並協助完成部署到生產的過程。不再產生「它可在我的電腦中運作，但為何無法在生產環境中運作？」的疑問_
+您可以使用 Docker 容器進行更簡單的 Web 應用程式整合型部署。 如此可改善持續整合與持續部署管線，並協助完成部署到生產的過程。 不再產生「它可在我的電腦中運作，但為何無法在生產環境中運作？」的疑問
 
 微服務架構有許多好處，但這些好處的代價是複雜度會增加。 在某些情況下，這些代價會遠大於所獲得的好處，因此在單一容器或幾個容器中執行整合型部署應用程式會是較佳的選擇。
 
@@ -224,7 +224,7 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 
 將應用程式分成許多不同的處理序也會引進額外負荷。 將功能分成不同處理序的複雜度更高。 通訊協定變得更複雜。 您必須在服務之間使用非同步通訊，而不是方法呼叫。 當您移至微服務架構時，您需要新增在 eShopOnContainers 應用程式的微服務版本中實作的許多建置組塊：事件匯流排處理、訊息復原與重試、最終一致性等等。
 
-更簡單的 [eShopOnWeb 參考應用程式](https://github.com/dotnet-architecture/eShopOnWeb)支援單一容器的整合型容器使用。 此應用程式包含兩個 Web 應用程式：一個使用傳統 MVC，另一個使用 Razor Pages。 這兩個應用程式可使用 `docker-compose build` 和 `docker-compose up` 命令從方案根目錄啟動。 此命令會使用在每個 Web 專案根目錄中找到的 `Dockerfile`，為每個 Web 執行個體設定不同的容器，並在個別連接埠上執行每個容器。 您可以從 GitHub 下載此應用程式的來源並在本機執行。 即使是此整合型應用程式也可以透過部署至容器環境獲利。
+更簡單的 [eShopOnWeb 參考應用程式](https://github.com/dotnet-architecture/eShopOnWeb)支援單一容器的整合型容器使用。 該應用程式包含一個 Web 應用程式，其中包括傳統 MVC 檢視、Web API 及 Razor Pages。 這個應用程式可使用 `docker-compose build` 和 `docker-compose up` 命令從解決方案根目錄啟動。 該命令會使用在 Web 專案根目錄中找到的 `Dockerfile` 來設定 Web 執行個體的容器，並在指定的連接埠上執行容器。 您可以從 GitHub 下載此應用程式的來源並在本機執行。 即使是此整合型應用程式也可以透過部署至容器環境獲利。
 
 其中一個優點是，容器化部署表示每個應用程式執行個體都會在相同的環境中執行。 這包括進行早期測試和開發的開發人員環境。 開發小組可以在與生產環境相符的容器化環境中執行應用程式。
 
@@ -236,24 +236,14 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 
 `eShopOnWeb` 專案是在 .NET Core 上執行。 因此，它可以在 Linux 或 Windows 容器中執行。 請注意，若是 Docker 部署，您想要針對 SQL Server 使用相同的主機類型。 Linux 容器允許較小的使用量，而且是偏好選項。
 
-您可以使用 Visual Studio 2017 將 Docker 支援新增至現有的應用程式，方法是以滑鼠右鍵按一下 [方案總管] 中的專案，然後選擇 [新增] > [Docker 支援]。 這會新增所需的檔案，並修改專案以使用這些檔案。 目前的 `eShopOnWeb` 範例已有這些檔案。
+您可以使用 Visual Studio 2017 或更新版本將 Docker 支援新增到現有的應用程式，方法是以滑鼠右鍵按一下 [方案總管] 中的專案，然後選擇 [新增] > [Docker 支援]。 這會新增所需的檔案，並修改專案以使用這些檔案。 目前的 `eShopOnWeb` 範例已有這些檔案。
 
-方案層級 `docker-compose.yml` 檔案包含要建置哪些映像及要啟動哪些容器的相關資訊。 該檔案可讓您使用 `docker-compose` 命令同時啟動兩個 Web 應用程式版本。 您也可以使用它來設定相依性，例如個別的資料庫容器。
+方案層級 `docker-compose.yml` 檔案包含要建置哪些映像及要啟動哪些容器的相關資訊。 該檔案可讓您使用 `docker-compose` 命令同時啟動多個應用程式。 在這個情況下，它只會啟動 Web 專案。 您也可以使用它來設定相依性，例如個別的資料庫容器。
 
 ```yml
 version: '3'
 
 services:
-  eshopwebrazor:
-    image: eshopwebrazor
-    build:
-      context: .
-      dockerfile: src/WebRazorPages/Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "5107:5107"
-
   eshopwebmvc:
     image: eshopwebmvc
     build:
@@ -270,28 +260,27 @@ networks:
       name: nat
 ```
 
-`docker-compose.yml` 檔案會參考 `Web` 和 `WebRazorPages` 專案中的 `Dockerfile`。 `Dockerfile` 是用來指定將使用的基底容器，以及如何在其上設定應用程式。 `WebRazorPages` 的 `Dockerfile`：
+`docker-compose.yml` 檔案參考了 `Web` 專案中的 `Dockerfile`。 `Dockerfile` 是用來指定將使用的基底容器，以及如何在其上設定應用程式。 `Web` 的 `Dockerfile`：
 
 ```
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /app
-EXPOSE 80
 
-FROM microsoft/aspnetcore-build:2.1.300-preview1 AS build
-RUN npm install -g bower@1.8.4
-WORKDIR /src
+COPY *.sln .
 COPY . .
-WORKDIR /src/src/WebRazorPages
-RUN dotnet restore -nowarn:msb3202,nu1503
-RUN dotnet build --no-restore -c Release -o /app
+WORKDIR /app/src/Web
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish --no-restore -c Release -o /app
+RUN dotnet publish -c Release -o out
 
-FROM base AS final
+FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "Microsoft.eShopWeb.RazorPages.dll"]
+COPY --from=build /app/src/Web/out ./
+
+# Optional: Set this here if not setting it from docker-compose.yml
+# ENV ASPNETCORE_ENVIRONMENT Development
+
+ENTRYPOINT ["dotnet", "Web.dll"]
 ```
 
 ### <a name="troubleshooting-docker-problems"></a>Docker 問題疑難排解
@@ -300,10 +289,9 @@ ENTRYPOINT ["dotnet", "Microsoft.eShopWeb.RazorPages.dll"]
 
 請注意，執行 Docker 容器可能會繫結至您嘗試在開發環境中使用的連接埠。 如果您嘗試使用與執行 Docker 容器相同的連接埠來執行或偵錯應用程式，您會收到錯誤，指出伺服器無法繫結至該連接埠。 同樣地，停止容器應能解決此問題。
 
-如果您想要使用 Visual Studio 將 Docker 支援新增至應用程式，請確定這樣做時，Docker 正在執行。 當您啟動精靈時，如果 Docker 未執行，精靈將無法正確執行。 此外，精靈會檢查您目前的容器選擇，以新增正確的 Docker 支援。 如果您想要新增 Windows 容器的支援，您需要在有執行中 Docker 並已設定 Windows 容器的同時執行精靈。 如果您想要新增 Linux 容器的支援，請在有執行中 Docker 並已設定 Linux 容器的同時執行精靈。
+如果您想要使用 Visual Studio 將 Docker 支援新增到應用程式，請確認這樣做時，Docker Desktop 正在執行。 如果 Docker Desktop 在您啟動精靈時並未執行，精靈將無法正確執行。 此外，精靈會檢查您目前的容器選擇，以新增正確的 Docker 支援。 如果您想要新增 Windows 容器的支援，您需要在有執行中 Docker 並已設定 Windows 容器的同時執行精靈。 如果您想要新增 Linux 容器的支援，請在有執行中 Docker 並已設定 Linux 容器的同時執行精靈。
 
-> ### <a name="references--common-web-architectures"></a>參考資料 - 一般 Web 架構
->
+### <a name="references--common-web-architectures"></a>參考資料 - 一般 Web 架構
 > - **Clean Architecture**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Onion Architecture**  

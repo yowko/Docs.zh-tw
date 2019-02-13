@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696880"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759128"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -55,7 +55,7 @@ ms.locfileid: "34696880"
 
 ### <a name="suppressing-warnings-locally"></a>在本機隱藏警告
 
-若要在本機隱藏警告，請在您想要隱藏警告的成員上按一下滑鼠右鍵，然後選取 [快速動作與重構] > [隱藏診斷識別碼 \<診斷識別碼>] > [在原始程式檔中]。 [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告前置處理器指示詞會新增到您原始程式碼的已定義範圍中：![「以 #pragma warning disable 為框架之程式碼的螢幕擷取畫面」](media/api-analyzer/suppress-in-source.jpg)
+若要在本機隱藏警告，請在您想要隱藏警告的成員上按一下滑鼠右鍵，然後選取 [快速動作與重構] > [隱藏診斷識別碼 \<診斷識別碼>] > [在原始程式檔中]。 [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告前置處理器指示詞會新增到您所定義範圍中的原始程式碼：![「以 #pragma warning disable 括住之程式碼的螢幕擷取畫面」](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>在全域隱藏警告
 
@@ -104,7 +104,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 所有這些診斷不僅在 IDE 中有提供，在組建專案過程中的命令列上也有提供，其中包括 CI 伺服器。
 
-## <a name="configuration"></a>組態
+## <a name="configuration"></a>Configuration
 
 使用者可決定診斷的處理方式：視為警告、錯誤、建議，或將其關閉。 例如，如果您是架構設計人員，就可以決定應將相容性問題視為錯誤，讓對一些已被取代之 API 的呼叫產生警告，而其他則只產生建議。 您可以依診斷識別碼及依專案分別進行此設定。 若要這樣做，請在 [方案總管] 中，瀏覽至您專案底下的 [相依性]節點。 展開 [相依性] > [分析器] > [Microsoft.DotNet.Analyzers.Compatibility] 節點。 在診斷識別碼上按一下滑鼠右鍵，選取 [設定規則集合嚴重性]，然後挑選想要的選項。
 
@@ -112,5 +112,5 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ## <a name="see-also"></a>另請參閱
 
-* [API 分析器簡介](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) \(英文\) 部落格文章。
-* YouTube 上的 [API 分析器](https://youtu.be/eeBEahYXGd0)示範影片。
+- [API 分析器簡介](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) \(英文\) 部落格文章。
+- YouTube 上的 [API 分析器](https://youtu.be/eeBEahYXGd0)示範影片。

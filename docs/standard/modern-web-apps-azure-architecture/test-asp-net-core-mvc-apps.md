@@ -3,20 +3,20 @@ title: 測試 ASP.NET Core MVC 應用程式
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 測試 ASP.NET Core MVC 應用程式
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 96a004cc49773346eeb8f88e2ba99beebf8598bf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: e3edec65fd10b0a7c05d1865703f2e0a591d8b03
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154199"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827548"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
 > *「如果您不喜歡為您的產品進行單元測試，您的客戶多半也不會喜歡測試它。」*
  > \_- 匿名-
 
-軟體複雜與否，都可能以意想不到的方式回應變更而失敗。 因此，除了最不重要的 (或最不關鍵的) 應用程式之外，對所有應用程式進行變更後都需要進行測試。 手動測試是最慢、最不可靠且最昂貴的測試軟體方式。 不幸的是，如果應用程式設計為不可測試，則手動可能是唯一可用的手段。 遵循第 X 章規定之架構原則所撰寫的應用程式，應可進行單元測試，ASP.NET Core 應用程式也支援自動化整合和功能測試。
+軟體複雜與否，都可能以意想不到的方式回應變更而失敗。 因此，除了最不重要的 (或最不關鍵的) 應用程式之外，對所有應用程式進行變更後都需要進行測試。 手動測試是最慢、最不可靠且最昂貴的測試軟體方式。 不幸的是，如果應用程式設計為不可測試，則手動可能是唯一可用的手段。 遵循[第 4 章](architectural-principles.md)規定之架構原則所撰寫的應用程式，應可進行單元測試，ASP.NET Core 應用程式也支援自動化整合和功能測試。
 
 ## <a name="kinds-of-automated-tests"></a>自動化測試的種類
 
@@ -66,7 +66,7 @@ public class LocalFileImageService : IImageService
 
 > 「很多時候，系統的開發就像是建造房屋。 雖然這個比喻不太正確，但我們可以將其延伸以便理解單元測試和功能測試之間的差異。 單元測試類似於造訪房屋建築工地的建築檢查員。 檢查員會專注於房屋的各種內部系統：地基、結構、電力、配管系統等等。 其會確保 (測試) 房屋的各部分都能正確且安全地運作，也就是符合建築規範。 在此案例中，功能測試類似於屋主造訪同一個建築工地。 屋主會假設內部系統能運作正常，因為建築檢查員正在執行工作。 屋主會著重於住在這個房子裡會是什麼樣子。 他會關心房子的外觀：房間大小是否舒適、房子是否符合家庭的需要、窗戶是否位於能迎接早晨陽光的位置。 這即為屋主對房屋進行功能測試。 他以使用者的角度來觀看。 而建築檢查員是對房屋進行單元測試。 其以建築者的角度來觀看。」
 
-來源：[Unit Testing versus Functional Tests](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (單元測試與功能測試)
+來源:[Unit Testing versus Functional Tests](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (單元測試與功能測試)
 
 我喜歡說：「身為開發人員，我們有兩種失敗方式：以錯誤的方式建置東西，或建置錯誤的東西。」 單元測試確保您以正確的方式建置東西，而功能測試確保您建置正確的東西。
 
@@ -147,7 +147,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-對此方法進行單元測試很困難，因為它直接相依於 System.IO.File，用來從檔案系統中進行讀取。 您可以測試此行為以確保其按預期運作，但對實際檔案執行此操作的是整合測試。 值得注意的是，您無法測試此方法的路由，但您很快就會了解如何透過功能測試來執行此作業。
+對此方法進行單元測試很困難，因為它直接相依於 System.IO.File，用來從檔案系統中進行讀取。 您可以測試此行為以確保其按預期運作，但對實際檔案執行此操作的是整合測試。 值得注意的是，您無法對此方法的路由進行單元測試，您很快就會了解如何透過功能測試來執行此作業。
 
 如果您不能直接對檔案系統行為進行單元測試，且無法測試路由，那麼需要測試哪些內容？ 在重構使單元測試成為可能之後，您可能會發現一些測試案例和遺失的行為，例如錯誤處理。 找不到檔案時，該方法會執行什麼操作？ 它應該做什麼？ 在此範例中，重構的方法如下所示：
 
@@ -171,53 +171,15 @@ public IActionResult GetImage(int id)
 
 \_記錄器和 \_imageService 會同時插入作為相依性。 現在您可以測試將傳遞給操作方法的相同識別碼傳遞給 \_imageService，且產生之位元組會作為 FileResult 的一部分傳回。 您也可以測試錯誤記錄是否按預期進行；假設這是重要的應用程式行為 (意即，不僅僅是開發人員用於診斷問題的臨時程式碼)，如果影像遺失，則傳回 NotFound 結果。 實際的檔案邏輯已移至另一個實作服務中，並且已擴大為針對遺失檔案情況來傳回應用程式特定的例外狀況。 您可以使用整合測試來獨立測試此實作。
 
+在多數情況下，建議您在控制器中使用全域例外處理常式，以便其使用最少邏輯數量，而可能用不著進行單元測試。 您應該使用功能測試及下方說明的 `TestServer` 類別來進行大部分的控制器動作測試。
+
 ## <a name="integration-testing-aspnet-core-apps"></a>對 ASP.NET Core 應用程式進行整合測試
 
-若要對 LocalFileImageService 使用整合測試確認 是否正常運作，您需要建立一個已知的測試影像檔，並驗證該服務會在指定特定輸入的情況下將其傳回。 請注意不要在您實際想要測試的行為上使用模擬物件 (在此情況下，從檔案系統讀取)。 但是，模擬物件可能仍然有助於設定整合測試。 在此情況下，您可以模擬 IHostingEnvironment，使其 ContentRootPath 指向您要用於測試影像的資料夾。 完整運作的整合測試類別如下所示：
-
-```csharp
-public class LocalFileImageServiceGetImageBytesById
-{
-    private byte[] _testBytes = new byte[] { 0x01, 0x02, 0x03 };
-    private readonly Mock<IHostingEnvironment> _mockEnvironment = new Mock<IHostingEnvironment>();
-    private int _testImageId = 123;
-    private string _testFileName = "123.png";
-
-    public LocalFileImageServiceGetImageBytesById()
-    {
-        // create folder if necessary
-        Directory.CreateDirectory(Path.Combine(GetFileDirectory(), "Pics"));
-        string filePath = GetFilePath(_testFileName);
-        System.IO.File.WriteAllBytes(filePath, _testBytes);
-        _mockEnvironment.SetupGet<string>(m => m.ContentRootPath).Returns(GetFileDirectory());
-    }
-
-    private string GetFilePath(string fileName)
-    {
-        return Path.Combine(GetFileDirectory(), "Pics", fileName);
-        }
-            private string GetFileDirectory()
-        {
-        var location = System.Reflection.Assembly.GetEntryAssembly().Location;
-        return Path.GetDirectoryName(location);
-    }
-
-    [Fact]
-    public void ReturnsFileContentResultGivenValidId()
-    {
-        var fileService = new LocalFileImageService(_mockEnvironment.Object);
-        var result = fileService.GetImageBytesById(_testImageId);
-        Assert.Equal(_testBytes, result);
-    }
-}
-```
-
-> [!NOTE]
-> 測試本身非常簡單，大部分程式碼對設定系統和建立測試基礎結構 (在此案例中，從磁碟讀取實際檔案) 是必需的。 這對整合測試來說很常見，通常需要比單元測試更複雜的設定工作。
+您 ASP.NET Core 應用程式中大部分的整合測試都應該用來測試在您基礎結構專案中定義的服務及其他實作類型。 建議使用功能測試來測試 ASP.NET Core MVC 專案正確運作，該測試會對在測試主機中執行的應用程式執行。 在本章前述的〈整合測試〉一節中，有資料存取類別的整合測試範例。
 
 ## <a name="functional-testing-aspnet-core-apps"></a>對 ASP.NET Core 應用程式進行功能測試
 
-對於 ASP.NET Core 應用程式，TestServer 類別可使功能測試很容易撰寫。 直接使用 WebHostBuilder 設定 TestServer (就像您平常設定應用程式一樣)，或使用 WebApplicationFactory 類型 (2.1 中有提供)。 您應該盡可能讓測試主機幾乎與生產主機完全一樣，如此一來，測試的執行行為會與應用程式實際在生產環境中的執行行為類似。 WebApplicationFactory 類別有助於設定 TestServer 的 ContentRoot，ASP.NET Core 用它來找到靜態資源 (如 Views)。
+對 ASP.NET Core 應用程式來說，`TestServer` 類別使功能測試變得相當易於撰寫。 您可以直接使用 `WebHostBuilder` 來設定 `TestServer` (如同您平常對應用程式進行的設定)，也可使用 `WebApplicationFactory` 類型來設定 (自版本 2.1 開始可使用)。 您應該盡可能讓測試主機幾乎與生產主機完全一樣，以便測試的執行行為與應用程式在生產環境中的執行行為類似。 `WebApplicationFactory` 類別有助於設定 TestServer 的 ContentRoot，ASP.NET Core 用它來尋找靜態資源 (如檢視)。
 
 建立簡單功能測試的方法是，建立實作 IClassFixture\<WebApplicationFactory\<TEntry>> 的測試類別，其中 TEntry 是 Web 應用程式的啟動類別。 準備好測試類別之後，測試固件可以使用處理站的 CreateClient 方法來建立用戶端：
 
@@ -238,19 +200,19 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 通常在每次測試執行之前，您會想要對網站執行一些額外的設定，例如，設定應用程式使用記憶體內資料存放區，然後將測試資料植入應用程式。 若要這樣做，您應該建立自己的 WebApplicationFactory<TEntry> 子類別並覆寫其 ConfigureWebHost 方法。 下列範例取自 eShopOnWeb FunctionalTests 專案，並做為主要 Web 應用程式測試的一部分。
 
 ```cs
-using Infrastructure.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.eShopWeb;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.eShopWeb.Infrastructure.Data;
+using Microsoft.eShopWeb.Infrastructure.Identity;
+using Microsoft.eShopWeb.Web;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
-using Microsoft.EntityFrameworkCore;
-using Infrastructure.Identity;
 
-namespace FunctionalTests.WebRazorPages
+namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
 {
-    public class CustomWebRazorPagesApplicationFactory<TStartup>
+    public class CustomWebApplicationFactory<TStartup>
     : WebApplicationFactory<Startup>
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
@@ -262,7 +224,7 @@ namespace FunctionalTests.WebRazorPages
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory
+                // Add a database context (ApplicationDbContext) using an in-memory 
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {
@@ -288,7 +250,7 @@ namespace FunctionalTests.WebRazorPages
                     var loggerFactory = scopedServices.GetRequiredService<ILoggerFactory>();
 
                     var logger = scopedServices
-                        .GetRequiredService<ILogger<CustomWebRazorPagesApplicationFactory<TStartup>>>();
+                        .GetRequiredService<ILogger<CustomWebApplicationFactory<TStartup>>>();
 
                     // Ensure the database is created.
                     db.Database.EnsureCreated();
@@ -310,19 +272,20 @@ namespace FunctionalTests.WebRazorPages
 }
 ```
 
-測試可以利用這個自訂的 WebApplicationFactory，使用它來建立用戶端，然後再使用此用戶端執行個體對應用程式提出要求。 應用程式內將會有植入的資料，測試的判斷提示會用到這些資料。 此測試會驗證 eShopOnWeb Razor Pages 應用程式的首頁已正確載入，而且其中包含做為植入資料新增到應用程式的產品清單。
+測試可以利用這個自訂的 WebApplicationFactory，使用它來建立用戶端，然後再使用此用戶端執行個體對應用程式提出要求。 應用程式內將會有植入的資料，測試的判斷提示會用到這些資料。 下列測試會確認 eShopOnWeb 應用程式的首頁可正確載入，並包含作為種子資料一部分新增到應用程式的產品清單。
 
 ```cs
-using Microsoft.eShopWeb.RazorPages;
+using Microsoft.eShopWeb.FunctionalTests.Web.Controllers;
+using Microsoft.eShopWeb.Web;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace FunctionalTests.WebRazorPages
+namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 {
-    public class HomePageOnGet : IClassFixture<CustomWebRazorPagesApplicationFactory<Startup>>
+    public class HomePageOnGet : IClassFixture<CustomWebApplicationFactory<Startup>>
     {
-        public HomePageOnGet(CustomWebRazorPagesApplicationFactory<Startup> factory)
+        public HomePageOnGet(CustomWebApplicationFactory<Startup> factory)
         {
             Client = factory.CreateClient();
         }
@@ -338,13 +301,13 @@ namespace FunctionalTests.WebRazorPages
             var stringResponse = await response.Content.ReadAsStringAsync();
 
             // Assert
-            Assert.Contains(".NET Bot Black Sweatshirt", stringResponse); // from seed data
+            Assert.Contains(".NET Bot Black Sweatshirt", stringResponse);
         }
     }
 }
 ```
 
-此功能測試將執行完整的 ASP.NET Core MVC / Razor Pages 應用程式堆疊，包括可能存在的所有中介軟體、篩選器、繫結器等等。 它會確認指定的路由 ("/") 會傳回預期的成功狀態碼和 HTML 輸出。 因並未設定真實的網頁伺服器，所以避免了使用真實的網頁伺服器進行測試之脆弱度 (例如防火牆設定的問題)。 針對 TestServer 執行的功能測試通常比整合與單元測試要慢，但比在網路上執行測試之網頁伺服器的測試要快得多。 您應該使用功能測試以確保應用程式的前端堆疊可如預期運作。 當您在控制器或頁面中找到重複項目並透過新增篩選器來處理這些項目時，這些測試會特別有用。 在理想情況下，這種重構並不會變更應用程式的行為，而一整套功能測試將驗證這種情況。
+此功能測試將執行完整的 ASP.NET Core MVC / Razor Pages 應用程式堆疊，包括可能存在的所有中介軟體、篩選器、繫結器等等。 它會確認指定的路由 ("/") 會傳回預期的成功狀態碼和 HTML 輸出。 因並未設定真實的網頁伺服器，所以避免了使用真實的網頁伺服器進行測試之脆弱度 (例如防火牆設定的問題)。 針對 TestServer 執行的功能測試通常比整合與單元測試要慢，但比在網路上執行測試之網頁伺服器的測試要快得多。 您應該使用功能測試確保應用程式的前端堆疊可如預期般運作。 當您在控制器或頁面中找到重複項目並透過新增篩選器來處理這些項目時，這些測試會特別有用。 在理想情況下，這種重構不會變更應用程式的行為，而一整套功能測試會確認合乎該情況。
 
 >[!div class="step-by-step"]
 >[上一頁](work-with-data-in-asp-net-core-apps.md)

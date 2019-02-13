@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086760"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739458"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 語言逐步解說
 逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。  
@@ -47,9 +47,6 @@ ms.locfileid: "44086760"
  [實作 COM 物件的繼承](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  示範如何使用 Visual Basic 6.0 以建立包含類別的 COM 物件，並將它作為 Visual Basic 中的基底類別。  
   
- [多執行緒](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
- 示範如何建立多執行緒的應用程式，以搜尋文字檔案中某個文字的出現次數。  
-  
  [判斷 My.Application.Log 寫入資訊的位置](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
  說明預設的 `My.Application.Log` 設定，以及如何判斷應用程式的設定。  
   
@@ -80,5 +77,5 @@ ms.locfileid: "44086760"
  [在 Visual Basic 中保存物件](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  示範如何建立簡單的物件，並將其資料保存至檔案。  
   
- [以使用時產生功能支援測試優先](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [逐步解說：具有使用時產生功能的測試優先支援](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  示範如何執行測試優先開發；在這類開發中，您會先撰寫單元測試，再撰寫原始程式碼，以讓測試成功。
