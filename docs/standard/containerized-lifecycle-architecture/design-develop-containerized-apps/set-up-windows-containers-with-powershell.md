@@ -1,15 +1,15 @@
 ---
 title: 在 DockerFile 中使用 Windows PowerShell 命令，來設定 Windows 容器 (Docker 標準為基礎)
-description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 了解如何使用 PowerShell，使用 Windows 容器中的 Docker 時
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/19/2017
-ms.openlocfilehash: 5e85beea0efbee6a2b6594e3a49d705505a36e1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: df9e98e3f963b6492e1008455251b61a8cb6e771
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149389"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219967"
 ---
 # <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>在 DockerFile 中使用 Windows PowerShell 命令，來設定 Windows 容器 (Docker 標準為基礎)
 
@@ -34,4 +34,4 @@ RUN powershell add-windowsfeature web-asp-net45
 
 >[!div class="step-by-step"]
 >[上一頁](visual-studio-tools-for-docker.md)
->[下一頁](../docker-devops-workflow/index.md)
+>[下一頁](build-aspnet-core-applications-linux-containers-aks-kubernetes.md)

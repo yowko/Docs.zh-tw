@@ -12,15 +12,16 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: 4da793b8836b2bbb5cadbfbe6f2652e965d1c444
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cfa0d374bf08ab1ea1753ed46e3e87ca177343b6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524152"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219850"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>HOW TO：錨定和停駐 TableLayoutPanel 控制項中的子控制項
-<xref:System.Windows.Forms.TableLayoutPanel> 控制項在其子控制項中支援 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 屬性。  
+
+  <xref:System.Windows.Forms.TableLayoutPanel> 控制項在其子控制項中支援 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 屬性。  
   
 ### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a>若要對齊 TableLayoutPanel 儲存格中的子控制項  
   
@@ -28,14 +29,17 @@ ms.locfileid: "54524152"
   
 2.  設定的值<xref:System.Windows.Forms.TableLayoutPanel>控制項的<xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>並<xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>屬性，以**1**。  
   
-3.  在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項中建立 <xref:System.Windows.Forms.Button> 控制項。 <xref:System.Windows.Forms.Button> 會佔用儲存格的左上角。  
+3.  在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項中建立 <xref:System.Windows.Forms.Button> 控制項。 
+  <xref:System.Windows.Forms.Button> 會佔用儲存格的左上角。  
   
-4.  變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值為 `Left`。 <xref:System.Windows.Forms.Button> 控制項移到與儲存格左框線對齊。  
+4.  變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值為 `Left`。 
+  <xref:System.Windows.Forms.Button> 控制項移到與儲存格左框線對齊。  
   
     > [!NOTE]
     >  此行為不同於其他容器控制項的行為。 在其他容器控制項中，當 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性被設定時，子控制項不會移動，而且當 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性被設定時，錨定的控制項與父容器界限之間的距離固定。  
   
-5.  變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值為 `Top, Left`。 <xref:System.Windows.Forms.Button> 控制項移到佔用儲存格左上角。  
+5.  變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值為 `Top, Left`。 
+  <xref:System.Windows.Forms.Button> 控制項移到佔用儲存格左上角。  
   
 6.  重複步驟 5 的值`Top, Right`移動<xref:System.Windows.Forms.Button>儲存格右上角的控制項。 使用 `Bottom, Left` 和 `Bottom, Right` 值重複進行。  
   
@@ -82,7 +86,7 @@ ms.locfileid: "54524152"
   
 -   System、System.Data、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
- 建置此範例從命令列 visual Basic 或 Visual C# 的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[How to:編譯並執行完整的 Windows Form 程式碼範例使用 Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.TableLayoutPanel>

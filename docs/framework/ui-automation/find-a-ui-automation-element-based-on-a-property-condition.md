@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: a80ca015a3bed202e80a93f487d37278ed03439d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08bf454ef5514af2c7c056ad90db247792a5d61c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740381"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221104"
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>根據屬性條件尋找 UI 自動化項目
 > [!NOTE]
@@ -33,6 +33,6 @@ ms.locfileid: "54740381"
  [!code-vb[InvokePatternApp#1100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1100)]  
   
 ## <a name="see-also"></a>另請參閱
-- [InvokePattern 和 ExpandCollapsePattern 功能表項目範例](https://msdn.microsoft.com/library/b7fa141c-e2d1-4da2-a27f-81a7d1172210)
+- [InvokePattern 和 ExpandCollapsePattern 功能表項目範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771636(v=vs.90))
 - [取得 UI 自動化項目](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)
 - [使用 AutomationID 屬性](../../../docs/framework/ui-automation/use-the-automationid-property.md)

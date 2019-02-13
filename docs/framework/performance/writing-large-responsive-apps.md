@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2f2bff0d86d3c3fed443628a5c437fe1ebdcc15
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540659"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219837"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 本文針對大型 .NET Framework 應用程式或處理大量資料 (例如檔案或資料庫) 的應用程式，提供可提升其效能的提示。 這些提示來自於以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，本文包含數個 C# 編譯器的實際範例。 
@@ -37,7 +37,7 @@ ms.locfileid: "54540659"
  您應該為應用程式中的關鍵客戶體驗或案例設定效能目標，並撰寫測試以測量效能。 應用科學方法來調查失敗的測試：使用程式碼剖析來引導您、假設可能的問題，以及透過實驗或變更程式碼來測試您的假設。 透過定期測試建立一段時間的基準效能測量資料，以便您隔離出導致效能降低的變更。 當您以嚴謹的方式來處理效能工作時，便可避免浪費時間在不必要的程式碼更新。 
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事實 3:好的工具可讓所有的差異  
- 良好工具可讓您快速鑽研最大的效能問題 (CPU、記憶體或磁碟)，並協助您找出導致這些瓶頸的程式碼。 Microsoft 提供各種效能工具，例如 [Visual Studio 程式碼剖析工具](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone 分析工具](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)和 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。 
+ 良好工具可讓您快速鑽研最大的效能問題 (CPU、記憶體或磁碟)，並協助您找出導致這些瓶頸的程式碼。 Microsoft 提供各種效能工具，例如[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)並[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。 
   
  PerfView 是非常強大的免費工具，可協助您專注於深入的問題，例如磁碟 I/O、GC 事件和記憶體。 您可以擷取與效能相關的 [Windows 事件追蹤](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) 事件，並輕鬆檢視每種應用程式、處理序、堆疊和執行緒的資訊。 PerfView 顯示您的應用程式配置的記憶體數量和類型，以及哪些函式或呼叫堆疊佔用了多少記憶體配置。 如需詳細資訊，請參閱工具隨附的豐富說明主題、示範和影片 (例如 Channel 9 上的 [PerfView Tutorial](https://channel9.msdn.com/Series/PerfView-Tutorial) (PerfView 教學課程)。 
   
@@ -195,7 +195,8 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- `WriteFormattedDocComment()` 的第一個版本已配置一個陣列、數個子字串、經修剪的子字串，以及空的 `params` 陣列。 它也會檢查"/ / 」。 修訂過的程式碼只會使用索引，而不會進行任何配置。 它會找到第一個字元不是空白字元，並接著會逐字元檢查以查看是否以"/ / 」 開頭的字串。 新的程式碼會使用`IndexOfFirstNonWhiteSpaceChar`而不是<xref:System.String.TrimStart%2A>後，傳回第一個索引 （指定的起始索引） 發生非空格字元。 此修正並不完整，不過您可以查看如何套用類似的修正以取得完整的解決方法。 您可以在整個程式碼中應用此方法，來移除 `WriteFormattedDocComment()` 中的所有配置。 
+ 
+  `WriteFormattedDocComment()` 的第一個版本已配置一個陣列、數個子字串、經修剪的子字串，以及空的 `params` 陣列。 它也會檢查"/ / 」。 修訂過的程式碼只會使用索引，而不會進行任何配置。 它會找到第一個字元不是空白字元，並接著會逐字元檢查以查看是否以"/ / 」 開頭的字串。 新的程式碼會使用`IndexOfFirstNonWhiteSpaceChar`而不是<xref:System.String.TrimStart%2A>後，傳回第一個索引 （指定的起始索引） 發生非空格字元。 此修正並不完整，不過您可以查看如何套用類似的修正以取得完整的解決方法。 您可以在整個程式碼中應用此方法，來移除 `WriteFormattedDocComment()` 中的所有配置。 
   
  **範例 4︰StringBuilder**  
   
@@ -466,9 +467,8 @@ class Compilation { /*...*/
 - [本主題的簡報影片](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [效能分析的初級開發人員指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [效能](../../../docs/framework/performance/index.md)
-- [.NET 效能祕訣](https://msdn.microsoft.com/library/ms973839.aspx)
+- [.NET 效能祕訣](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Windows Phone Performance Analysis tool 工具](https://msdn.microsoft.com/magazine/hh781024.aspx)
-- [尋找與 Visual Studio Profiler 的應用程式瓶頸](https://msdn.microsoft.com/magazine/cc337887.aspx)
 - [Channel 9 PerfView 教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET 編譯器平台 SDK](../../csharp/roslyn-sdk/index.md)
 - [在 GitHub 上的 dotnet/roslyn 存放庫](https://github.com/dotnet/roslyn)

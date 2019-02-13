@@ -1,15 +1,15 @@
 ---
 title: 容器化應用程式的 Microsoft 平台和工具簡介
-description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 了解 Microsoft 的供應項目，以支援 Docker 應用程式生命週期。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: fe65e9036c1e0bdf2afe05426c01e75d48f93439
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 0e883041624f99d51b49994f02f3a42fc945a96d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152330"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219577"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft 平台和容器化應用程式的工具簡介
 

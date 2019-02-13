@@ -1,16 +1,16 @@
 ---
 title: Visual Studio Tools for Windows 上的 Docker
-description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 了解 Visual Studio 2017 15.7 版及更新版本中可用的 Docker 工具。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/12/2018
+ms.date: 11/23/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: 79e9b5cc9bac317a368583013abbc5124ef2c9ac
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a373a8ebfef605b9845a684d3987355f8841aa1b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151209"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219538"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>使用 Visual Studio Tools for Docker (Windows 上的 Visual Studio)
 

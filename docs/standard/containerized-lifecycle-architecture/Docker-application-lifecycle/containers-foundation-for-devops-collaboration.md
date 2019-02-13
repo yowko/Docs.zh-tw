@@ -1,15 +1,15 @@
 ---
 title: 作為 DevOps 共同作業基礎的容器
-description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 了解容器，以簡化 DevOps 的重要角色。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: ccc8ef765cadfec31a2f714767d8e6eb76508093
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: d0339199092304dd6c91707d8cf4da213f110b58
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126623"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219280"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>作為 DevOps 共同作業基礎的容器
 

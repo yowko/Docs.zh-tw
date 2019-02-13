@@ -1,15 +1,15 @@
 ---
 title: 管理生產 Docker 環境
-description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 了解管理容器為基礎的生產環境的關鍵要點。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: f968b5199f838e35f336dfa8c7d15aa9e5298951
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 54e2b999f744600d3b6853442bb9ccca004f4e76
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147290"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219486"
 ---
 # <a name="manage-production-docker-environments"></a>管理生產 Docker 環境
 

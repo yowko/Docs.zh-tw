@@ -1,15 +1,15 @@
 ---
 title: 在生產環境中執行撰寫和以微服務為基礎的應用程式
-description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 了解在生產環境中執行容器化應用程式的主要元件
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 003bf794f5427e7b2f10d1e04fd27605b980cdfe
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: bd8b84f788ce013dfe25199dac34e3c59aa35284
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126298"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220960"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生產環境中執行撰寫和以微服務為基礎的應用程式
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 0f33fb559bb4bf47beebc836a093f4b784559609
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b71434fdc1b3b0b1f15928fe45edc02ee03da1ba
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674806"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221208"
 ---
 # <a name="accessibility-best-practices"></a>協助工具最佳作法
 > [!NOTE]
@@ -134,5 +134,5 @@ ms.locfileid: "54674806"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Automation.Peers>
-- [具有佈景主題和 UI 自動化支援範例的 NumericUpDown 自訂控制項](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)
+- [具有佈景主題和 UI 自動化支援範例的 NumericUpDown 自訂控制項](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
 - [鍵盤使用者介面設計指導方針](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

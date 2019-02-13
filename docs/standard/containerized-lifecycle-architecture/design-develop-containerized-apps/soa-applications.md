@@ -1,15 +1,15 @@
 ---
 title: SOA 應用程式
-description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 請記住容器也可以是 SOA 應用程式的實用的部署選項。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 7f88daaf0787cf780e7ab9602f35ae4e6ab8308c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 4fd39e075c5730cf7fddb0138cdb5267a914c91f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155310"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221260"
 ---
 # <a name="soa-applications"></a>SOA 應用程式
 

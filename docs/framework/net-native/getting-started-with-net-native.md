@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd46266286687881956e5de31963ac5957dede84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641573"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220948"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 使用者入門
 不論是為了 Windows 10 撰寫新的 Windows 應用程式，或是移轉現有的 Windows 市集應用程式，都可遵循一組相同的程序進行。 若要建立 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 應用程式，請遵循下列步驟：  
@@ -114,7 +114,7 @@ ms.locfileid: "54641573"
   
 ## <a name="see-also"></a>另請參閱
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [NIB:.NET Native 設定和組態](https://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)
+- [.NET native 設定和組態](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [.NET Native 和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [依賴反映的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)

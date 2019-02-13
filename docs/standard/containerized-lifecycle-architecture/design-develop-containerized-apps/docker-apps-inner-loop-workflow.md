@@ -1,15 +1,15 @@
 ---
 title: Docker 應用程式的內部迴圈開發工作流程
-description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 了解開發 Docker 應用程式的 「 內部迴圈 」 工作流程。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: f7acb60e6136c0250d18bdce23ac21fb6aa80b34
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 03eb4662e55551678105fa9ef25b42cc05c132a5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148851"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219084"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈開發工作流程
 
@@ -41,7 +41,7 @@ Docker 映像的執行個體的容器將會包含這些元件：
 
 圖 4-15:使用 Docker CLI 的容器化 Docker 應用程式的生命週期的高階工作流程
 
-### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>步驟 1:開始在 Visual Studio Code 中撰寫程式碼，並建立初始應用程式/服務基準
+### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>步驟 1：開始在 Visual Studio Code 中撰寫程式碼，並建立初始應用程式/服務基準
 
 開發您的應用程式的方式是未 Docker 的方式十分類似。 差別在於，在開發時，您部署和測試您的應用程式或服務放在您的本機環境 （例如 Linux VM 或 Windows） 中的 Docker 容器內執行。
 
@@ -132,7 +132,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 在此所述，您可以從頭建立您自己的 Docker 基礎映像[文章](https://docs.docker.com/engine/userguide/eng-image/baseimages/)從 Docker。 這是可能不是最適合您如果您剛開始使用 Docker 的案例，但如果您想要設定您自己的基底映像的特定位元，您可以執行。
 
-### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>步驟 3:建立自訂 Docker 映像嵌入您的服務
+### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>步驟 3：建立自訂 Docker 映像嵌入您的服務
 
 針對每個包含您的應用程式的自訂服務，您必須建立相關的映像。 如果您的應用程式組成的單一服務或 web 應用程式，您將需要一張圖片。
 
@@ -159,7 +159,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 圖 4 到 20:檢視現有的映像使用 docker 映像
 
-### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>步驟 4:（選擇性）建置具有多個服務的組成的 Docker 應用程式時，在 docker-compose.yml 中定義您的服務
+### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>步驟 4：（選擇性）建置具有多個服務的組成的 Docker 應用程式時，在 docker-compose.yml 中定義您的服務
 
 使用 docker-compose.yml 檔案中，您可以定義一組相關的服務一起部署為組成的應用程式的下一個步驟一節所述的部署命令。
 
@@ -192,7 +192,7 @@ services:
 
 Redis 服務會使用[最新的公用 redis 映像](https://hub.docker.com/_/redis/)從 Docker Hub 登錄提取。 [redis](https://redis.io/)是伺服器端應用程式的非常受歡迎的快取系統。
 
-### <a name="step-5-build-and-run-your-docker-app"></a>步驟 5:建置並執行您的 Docker 應用程式
+### <a name="step-5-build-and-run-your-docker-app"></a>步驟 5：建置並執行您的 Docker 應用程式
 
 如果您的應用程式有單一容器，您只需要藉由將它部署至您的 Docker 主機 （VM 或實體伺服器） 執行它。 不過，如果您的應用程式多個服務組成，您需要*組合*也。 讓我們看到不同的選項。
 
@@ -225,7 +225,7 @@ cesardl/netcore-webapi-microservice-docker:first
 
 針對[DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/)並[Kubernetes](https://kubernetes.io/docs/user-guide/deployments/#creating-a-deployment)您可以使用不同的部署命令和指令碼，以及。
 
-### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>步驟 6:測試 Docker 應用程式 （在本機，在您本機的 CD VM)
+### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>步驟 6：測試 Docker 應用程式 （在本機，在您本機的 CD VM)
 
 此步驟會因應用程式的執行。
 

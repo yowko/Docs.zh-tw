@@ -1,15 +1,15 @@
 ---
 title: Docker 應用程式生命週期簡介
-description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 從這裡開始的旅程圖的容器化應用程式開發。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: ea97631f1a5147129c8ac3b1a4b9fa18999d21b9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 4ce6ac42a9605da029eb71d404bcf182fc0d3b9e
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147563"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219281"
 ---
 # <a name="introduction-tothe-docker-application-life-cycle"></a>Docker 應用程式生命週期簡介
  

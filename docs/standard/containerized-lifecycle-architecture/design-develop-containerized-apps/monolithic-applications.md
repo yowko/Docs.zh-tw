@@ -1,15 +1,15 @@
 ---
 title: 整合型應用程式
-description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 了解容器化整合型應用程式的核心概念。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 11/23/2018
+ms.openlocfilehash: 056f4bd8abf5c482855f38e45435b67b487769fb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52743265"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221351"
 ---
 # <a name="monolithic-applications"></a>整合型應用程式
 
@@ -21,7 +21,7 @@ ms.locfileid: "52743265"
 
 ![](./media/image1.png)
 
-圖 4-1： 整合型應用程式架構的範例
+圖 4-1:整合型應用程式架構的範例
 
 這種方法的缺點是，如果或應用程式成長而需要擴充。 若整個應用程式都擴充，則不成問題。 不過，在大部分情況下，應用程式的一些組件會阻礙，需要調整，而不使用其他元件。
 
@@ -35,13 +35,13 @@ ms.locfileid: "52743265"
 
 ![](./media/image2.png)
 
-圖 4-2： 執行多個應用程式/容器的主機
+圖 4-2:執行多個應用程式/容器的主機
 
 您可以針對每個執行個體使用專用的 Vm 部署在 Azure 中的整合型應用程式。 使用[Azure VM 擴展集](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)，您可以輕鬆地調整 Vm。 [Azure App Service](https://azure.microsoft.com/services/app-service/) 可以執行整合型應用程式並輕鬆地調整執行個體，而不必管理 VM。 自 2016，Azure App Service 可以執行單一執行個體的 Docker 容器，以簡化部署。 而且，使用 Docker 時，您還可以部署單一 VM 作為 Docker 主機並執行多個執行個體。 使用 Azure 平衡器，如所示在圖 4-3，您可以管理調整。
 
 ![](./media/image3.png)
 
-圖 4-3： 多部主機向外擴充單一 Docker 應用程式的應用程式/容器
+圖 4-3:多部主機向外擴充單一 Docker 應用程式的應用程式/容器
 
 您可以管理不同主機透過傳統部署技術的部署。 您可以使用類似的命令來管理 Docker 主機`docker run`以手動的方式，透過我們稍後在本電子書中說明的持續傳遞 (CD) 管線等自動化。
 
@@ -65,7 +65,7 @@ ms.locfileid: "52743265"
 
 ![](./media/image4.png)
 
-圖 4-4： 從 Visual Studio 應用程式/容器將容器發佈至 Azure App Service
+圖 4-4:發佈至 Azure App Service 的容器，從 Visual Studio 應用程式/容器
 
 圖 4-4 也會顯示發行流程將透過容器登錄庫，它可以是 Azure Container Registry （登錄接近您在 Azure 中的部署和受保護的 Azure Active Directory 群組和帳戶） 或任何其他的 Docker 登錄的映像推送像是 Docker Hub 或內部部署的登錄。
 

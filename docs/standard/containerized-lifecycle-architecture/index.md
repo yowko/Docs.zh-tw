@@ -1,15 +1,15 @@
 ---
 title: 容器和 Docker 簡介
-description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 取得使用 Docker 的主要優點的高層級概觀。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: c2a6b9802bbb995939d33c5c40ef9c1afa1620e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 547a76b46a319cd1b8403505ce3da618123b490e
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148817"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218693"
 ---
 # <a name="introduction-to-containers-and-docker"></a>容器和 Docker 簡介
 

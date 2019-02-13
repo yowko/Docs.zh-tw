@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d3e26c835a96bba3c97e471075f5d02b5330461
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f5667d55b8a49ba7b32570ad6a230b220ac8953b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201565"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221169"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 效能
 如果您想建立高效能的應用程式，您應該以設計應用程式之其他任何功能的相同方式，來設計及規劃效能。 您可以使用 Microsoft 提供的工具來測量應用程式的效能，並在必要時改進記憶體使用量、程式碼輸送量和回應性。 本主題列出 Microsoft 提供的效能分析工具，並提供涵蓋應用程式開發之特定區域效能的其他主題連結。  
@@ -33,7 +33,7 @@ ms.locfileid: "50201565"
 |工具|描述|  
 |----------|-----------------|  
 |Visual Studio 效能分析|用來分析要部署至執行 Windows 作業系統的電腦之 .NET Framework 應用程式的 CPU 使用率。<br /><br /> 當您開啟專案之後，可從 Visual Studio 的 [偵錯] 功能表中取得這項工具。 如需詳細資訊，請參閱 [效能總管](/visualstudio/profiling/performance-explorer)。 **注意：** 以 Windows Phone 為目標時，請使用 Windows Phone 應用程式分析 (請參閱下一列)。|  
-|Windows Phone 應用程式分析|用來分析您的 Windows Phone 應用程式中的 CPU 和記憶體、網路資料傳輸速率、應用程式回應性和耗電量。<br /><br /> 當您安裝 [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) 之後，可針對 Windows Phone 專案，從 Visual Studio 的 [偵錯] 功能表中取得這項工具。 如需詳細資訊，請參閱 [Windows Phone 的應用程式分析](https://msdn.microsoft.com/library/windowsphone/develop/jj215908\(v=vs.105\).aspx)。|  
+|Windows Phone 應用程式分析|用來分析您的 Windows Phone 應用程式中的 CPU 和記憶體、網路資料傳輸速率、應用程式回應性和耗電量。<br /><br /> 當您安裝 [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) 之後，可針對 Windows Phone 專案，從 Visual Studio 的 [偵錯] 功能表中取得這項工具。 如需詳細資訊，請參閱 <<c0> [ 適用於 Windows Phone 8 的應用程式分析](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105))。|  
 |[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|用來識別 CPU 和記憶體相關的效能問題。 這項工具使用 Windows 事件追蹤 (ETW) 和 CLR 程式碼分析應用程式開發介面，提供進階的記憶體和 CPU 調查，以及有關記憶體回收和 JIT 編譯的資訊。 如需如何使用 PerfView 的詳細資訊，請參閱應用程式中隨附的教學課程和說明檔、[Channel 9 影片教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)和[部落格文章](https://blogs.msdn.com/b/vancem/archive/tags/perfview/)。<br /><br /> 若是記憶體特定問題，請參閱 [Using PerfView for Memory Investigations](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots) (使用 PerfView 進行記憶體調查)。|  
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|當多個應用程式在相同電腦上執行時，用來判斷整個系統效能，例如應用程式的記憶體和儲存體使用。 您可以從下載中心取得屬於 [!INCLUDE[win8](../../../includes/win8-md.md)] 的 Windows 評定及部署套件 (ADK) 一部分的這項工具。 如需詳細資訊，請參閱 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)。|  
   
@@ -47,10 +47,8 @@ ms.locfileid: "50201565"
 |--------------|---------|  
 |所有平台的 .NET 應用程式|[記憶體回收和效能](../../../docs/standard/garbage-collection/performance.md)<br /><br /> [效能秘訣](../../../docs/framework/performance/performance-tips.md)|  
 |以 C++、C# 和 Visual Basic 撰寫的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式|[使用 C++、C# 及 Visual Basic 的 Windows 市集應用程式的效能最佳做法](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
-|Windows Phone|[Windows Phone 的應用程式效能考量](https://msdn.microsoft.com/library/windowsphone/develop/ff967560\(v=vs.105\).aspx)<br /><br /> [Windows Phone 應用程式分析](https://msdn.microsoft.com/library/windowsphone/develop/hh202934\(v=vs.105\).aspx)<br /><br /> [使 Windows Phone 應用程式更快推出市集](https://msdn.microsoft.com/magazine/hh781024.aspx)|  
-|Windows Presentation Foundation (WPF)|[WPF 效能套件](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)|  
-|Silverlight|[效能祕訣](https://msdn.microsoft.com/library/cc189071\(v=vs.95\).aspx)|  
-|ASP.NET|[ASP.NET 效能概觀](https://msdn.microsoft.com/library/f882bf1b-a009-4312-ac06-74370ffabc0b)|  
+|Windows Presentation Foundation (WPF)|[WPF 效能套件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
+|ASP.NET|[ASP.NET 效能概觀](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
 |Windows Forms|[提升 Windows Forms 應用程式效能的實用祕訣](https://msdn.microsoft.com/magazine/cc163630.aspx)|  
   
 ## <a name="related-topics"></a>相關主題  

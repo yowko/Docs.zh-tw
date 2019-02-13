@@ -1,15 +1,15 @@
 ---
 title: 設計 Docker 應用程式
-description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 尋找以下微服務架構的深度指南的參考，因為這是主題，不在本指南詳細說明。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: d02cec0595024eb7bd7c0ac46df093359680da74
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: f31421cab7d2072441999231adfbe771a3f9a0f5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155375"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220201"
 ---
 # <a name="design-docker-applications"></a>設計 Docker 應用程式
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38894f57ec93fd44610b5c612326b399d477b723
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35dcabcf65af1634533edfba1e300a8746bc97ec
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531180"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221364"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET 原生反映 API 參考
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 包含三個新的例外狀況類型：[System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)， [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)，以及[System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). 請注意有關下列三個例外狀況類型的資訊：  
@@ -25,7 +25,7 @@ ms.locfileid: "54531180"
 -   針對方法的 [MissingMetadataException 疑難排解工具](https://dotnet.github.io/native/troubleshooter/method.html) 。  
   
 > [!NOTE]
->  此參考文件記載 [!INCLUDE[net_native](../../../includes/net-native-md.md)]特有的三個例外狀況類型。 如需 .NET Framework 核心反映 API 的參考文件，請參閱 [System.Reflection 命名空間](https://msdn.microsoft.com/library/gg145033.aspx)。 如需 .NET Framework 核心 interop API 的參考文件，請參閱 <xref:System.Runtime.InteropServices>。  
+>  此參考文件記載 [!INCLUDE[net_native](../../../includes/net-native-md.md)]特有的三個例外狀況類型。 如需.NET Framework 核心反映 API 參考文件，請參閱 < <xref:System.Reflection>，<xref:System.Reflection.Context>和<xref:System.Reflection.Emit>命名空間。 如需 .NET Framework 核心 interop API 的參考文件，請參閱 <xref:System.Runtime.InteropServices>。  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection 命名空間  
  <xref:System.Reflection> 命名空間包含用於在 .NET Framework 中反映的核心類型。 針對 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，它還包含兩個新的例外狀況類型：  

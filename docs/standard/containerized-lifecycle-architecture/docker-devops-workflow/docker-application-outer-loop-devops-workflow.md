@@ -1,15 +1,15 @@
 ---
 title: Docker 應用程式的外部迴圈 DevOps 工作流程中的步驟
-description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 了解 DevOps 工作流程的 「 外部迴圈 」 的步驟
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/10/2018
-ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: b75e9df1c31e8bcebcaa6d56336a6aa499d13e1d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143645"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220935"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 應用程式的外部迴圈 DevOps 工作流程中的步驟
 
@@ -21,7 +21,7 @@ ms.locfileid: "53143645"
 
 現在，讓我們檢查每個更新版本的詳細步驟。
 
-## <a name="step-1-inner-loop-development-workflow"></a>步驟 1:內部迴圈開發工作流程
+## <a name="step-1-inner-loop-development-workflow"></a>步驟 1：內部迴圈開發工作流程
 
 此步驟中會詳細說明第 4 章中，但總而言之，以下是外部迴圈開始的位置，開發人員將推送程式碼至原始檔控制管理系統 （例如 Git) 起始 CI 管線動作的時刻。
 
@@ -35,7 +35,7 @@ ms.locfileid: "53143645"
 
 Azure DevOps 服務和 Team Foundation Server 支援 Git 和 Team Foundation 版本控制。 您可以選擇它們，或使用端對端的 Microsoft 體驗。 不過，您也可以管理您的程式碼，在外部儲存機制 （例如 GitHub、 內部部署的 Git 存放庫或 Subversion），而且仍然能夠連線到它，並取得您的 DevOps 的 CI 管線做為起點的程式碼。
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>步驟 3:建置、 CI、 整合及測試與 Azure 的 DevOps 服務和 Docker
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>步驟 3：建置、 CI、 整合及測試與 Azure 的 DevOps 服務和 Docker
 
 CI 脫穎而出成為現代軟體測試及傳遞的標準。 Docker 解決方案會維持清楚的區隔開發和作業小組之間的問題。 Docker 映像的不變性可確保可重複的部署之間功能開發、 CI，透過測試和生產環境中執行。 開發人員的膝上型電腦上部署的 docker 引擎，並測試基礎結構可讓容器可攜式跨環境。
 
@@ -157,7 +157,7 @@ Docker 映像已測試並驗證之後，您會想要加上標籤，並將其發�
 
 **進一歩** 若要深入了解 Azure DevOps 服務的 Docker 擴充功能，請移至<https://aka.ms/vstsdockerextension>。 若要深入了解 Azure Container Registry，請移至<https://aka.ms/azurecontainerregistry>。
 
-## <a name="step-4-cd-deploy"></a>步驟 4:CD，部署
+## <a name="step-4-cd-deploy"></a>步驟 4：CD，部署
 
 Docker 映像的不變性可確保可重複使用什麼開發、 CI，透過測試和生產環境中執行的部署。 在您的 Docker 登錄 （私人或公用） 中發佈的應用程式 Docker 映像之後，您就可以將它們部署到您可能會有數個環境 (生產、 品管預備，等等) 從您的 CD 管線，透過使用 Azure DevOps 服務管線工作或 Azure DevOps 服務 Release Management。
 
@@ -223,11 +223,11 @@ Azure Container Service: <https://aka.ms/azurecontainerservice>
 
 Mesosphere DC/OS: <https://mesosphere.com/product/>
 
-## <a name="step-5-run-and-manage"></a>步驟 5:執行和管理
+## <a name="step-5-run-and-manage"></a>步驟 5：執行和管理
 
 因為執行及管理應用程式在生產環境的企業層級是主要的主旨在本身，並因為作業的類型和工作該層級 （IT 作業），以及此區域的大範圍的人，我們有專門提供整個下一步若要說明的章節。
 
-## <a name="step-6-monitor-and-diagnose"></a>步驟 6:監視和診斷
+## <a name="step-6-monitor-and-diagnose"></a>步驟 6：監視和診斷
 
 本主題也涵蓋在下一步] 一章中一部分的 IT 作業會對生產系統; 中執行的工作不過，請務必反白顯示 [在此步驟中取得的深入解析必須摘要回到開發小組，以便持續改善應用程式。 從該觀點來看，也是一部分的 DevOps，雖然工作和作業通常都是透過 IT。
 
@@ -235,4 +235,4 @@ Mesosphere DC/OS: <https://mesosphere.com/product/>
 
 >[!div class="step-by-step"]
 >[上一頁](index.md)
->[下一頁](../run-manage-monitor-docker-environments/index.md)
+>[下一頁](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
