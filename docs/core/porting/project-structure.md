@@ -2,20 +2,20 @@
 title: 組織適用於.NET Framework 和.NET Core 的專案
 description: 協助想要同時針對 .NET Framework 及 .NET Core 編譯解決方案的專案擁有者。
 author: conniey
-ms.date: 04/06/2017
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 52205a32af212dc74b000025c0e4fc8cde3ae134
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57bb766f1d91c502a508b6362dc642310009c8c4
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498657"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904016"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>組織專案以同時支援 .NET Framework 及 .NET Core
 
 了解如何建立一個並行編譯 .NET Framework 和 .NET Core 的解決方案。 請參閱數個選項，以組織專案來協助開發人員達成此目標。 以下是當您決定如何使用 .NET Core 設定專案配置時，要考量的一些典型案例。 此清單不一定涵蓋您想要的所有項目，根據專案需求決定優先順序。
 
-* [**將現有的專案和 .NET Core 專案合併成單一專案**][option-csproj]
+* [**將現有的專案和 .NET Core 專案合併成單一專案**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
 
   *適用於︰*
   * 藉由編譯單一專案而非編譯多個專案，每個都會以不同的 .NET Framework 版本或平台為目標，以簡化建置流程。
@@ -26,7 +26,7 @@ ms.locfileid: "54498657"
   *不支援的情節：*
   * 需要開發人員使用 Visual Studio 2017 開啟現有的專案。 若要支援舊版的 Visual Studio，[將專案檔放在不同的資料夾](#support-vs)是較好的選擇。
 
-* <a name="support-vs"></a>[**將現有的專案和新的 .NET Core 專案分開**][option-csproj-folder]
+* <a name="support-vs"></a>[**將現有的專案和新的 .NET Core 專案分開**](#keep-existing-projects-and-create-a-net-core-project)
 
   *適用於︰*
   * 繼續支援現有專案的開發，但不必升級可能沒有 Visual Studio 2017 的開發人員/參與者。
@@ -36,9 +36,9 @@ ms.locfileid: "54498657"
 
 請考慮以下的儲存機制︰
 
-![現有專案][example-initial-project]
+![現有專案](media/project-structure/project.png)
 
-[**原始程式碼**][example-initial-project-code]
+[**Source Code**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/) (原始程式碼)
 
 下列描述幾種方式以新增這個存放庫的 .NET Core 支援，視現有專案的條件約束和複雜性而定。
 
@@ -46,21 +46,21 @@ ms.locfileid: "54498657"
 
 重新組織存放庫，以便移除任何現有的 *\*.csproj* 檔案，並建立以多個架構為目標的單一 *\*.csproj* 檔案。 這是很不錯的選擇，因為單一專案能夠編譯不同的架構。 它也可以處理個別目標架構的不同編譯選項及相依性。
 
-![建立以多個架構為目標的 csproj][example-csproj]
+![建立以多個架構為目標的 csproj](media/project-structure/project.csproj.png)
 
-[**原始程式碼**][example-csproj-code]
+[**Source Code**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/) (原始程式碼)
 
 要注意的變更如下︰
 
-* 將 *packages.config* 和 *\*.csproj* 取代為新的 [.NET Core *\*.csproj*][example-csproj-netcore]。 NuGet 套件是使用 `<PackageReference> ItemGroup` 所指定。
+* 以新的 [.NET Core *\*.csproj*](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj) 取代 *packages.config* 和 *\*.csproj*。 NuGet 套件是使用 `<PackageReference> ItemGroup` 所指定。
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>保留現有的專案並建立 .NET Core 專案
 
 如果現有的專案以較舊的架構為目標，您可能想要保持這些專案不變，使用 .NET Core 專案以未來的架構為目標。
 
-![在不同資料夾中有現有專案的 .NET Core 專案][example-csproj-different-folder]
+![.NET Core 專案與現有專案位在不同的資料夾](media/project-structure/project.csproj.different.png)
 
-[**原始程式碼**][example-csproj-different-code]
+[**Source Code**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/) (原始程式碼)
 
 要注意的變更如下︰
 
@@ -69,18 +69,4 @@ ms.locfileid: "54498657"
 
 ## <a name="see-also"></a>另請參閱
 
-* 如需移轉至 .NET Core 的詳細指引，請參閱 [.NET Core 移植文件][porting-doc]。
-
-[porting-doc]: index.md
-[example-initial-project]: media/project-structure/project.png "現有專案"
-[example-initial-project-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/
-
-[example-csproj]: media/project-structure/project.csproj.png "建立以多個架構為目標的 csproj"
-[example-csproj-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/
-[example-csproj-netcore]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj
-
-[example-csproj-different-folder]: media/project-structure/project.csproj.different.png "在不同資料夾中有現有 PCL 的 .NET Core 專案"
-[example-csproj-different-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/
-
-[option-csproj]: #replace-existing-projects-with-a-multi-targeted-net-core-project
-[option-csproj-folder]: #keep-existing-projects-and-create-a-net-core-project
+如需移轉至 .NET Core 的詳細指導，請參閱 [.NET Core 移植文件](index.md)。

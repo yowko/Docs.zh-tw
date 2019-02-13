@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: af2ae5e1b0f9e6146975c6838cca8b22837bb012
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 556da93d6237836dc32fc3f6715909593907ba74
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168984"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738730"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 .NET Core 中的 C# 進行單元測試
 
@@ -66,7 +66,7 @@ dotnet sln add .\PrimeService\PrimeService.csproj
     /PrimeService.Tests
 ```
 
-將 *PrimeService.Tests* 目錄設為目前的目錄，然後使用 [`dotnet new xunit`](../tools/dotnet-new.md) 建立新的專案。 此命令會建立將 xUnit 作為測試程式庫使用的測試專案。 產生的範本會在 *PrimeServiceTests.csproj* 檔案中設定測試執行器，類似如下程式碼：
+將 *PrimeService.Tests* 目錄設為目前的目錄，然後使用 [`dotnet new xunit`](../tools/dotnet-new.md) 建立新的專案。 此命令會建立將 [xUnit](https://xunit.github.io/) 作為測試程式庫使用的測試專案。 產生的範本會在 *PrimeServiceTests.csproj* 檔案中設定測試執行器，類似如下程式碼：
 
 ```xml
 <ItemGroup>
@@ -172,4 +172,5 @@ if (candidate < 2)
 
 ### <a name="additional-resources"></a>其他資源
 
+- [xUnit.net 官方網站](https://xunit.github.io)
 - [測試 ASP.NET Core 中的控制器邏輯](/aspnet/core/mvc/controllers/testing)

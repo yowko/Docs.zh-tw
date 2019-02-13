@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503998"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826456"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>使用 CLI 發佈 .NET Core 應用程式
 
@@ -38,11 +38,11 @@ ms.locfileid: "54503998"
 
 ## <a name="publishing-basics"></a>發佈基本概念
 
-專案檔的 `<TargetFramework>` 設定會指定發佈應用程式時的預設目標 Framework。 您可以將目標 Framework 變更為任何有效的[目標 Framework Moniker (TFM)](../../standard/frameworks.md)。 例如，如果您的專案使用 `<TargetFramework>netcoreapp2.2</TargetFramework>`，就會建立以 .NET Core 2.2 為目標的二進位檔。 此設定中所指定 TFM 是 [`dotnet publish`][dotnet-publish] 命令使用的預設目標。
+專案檔的 `<TargetFramework>` 設定會指定發佈應用程式時的預設目標 Framework。 您可以將目標 Framework 變更為任何有效的[目標 Framework Moniker (TFM)](../../standard/frameworks.md)。 例如，如果您的專案使用 `<TargetFramework>netcoreapp2.2</TargetFramework>`，就會建立以 .NET Core 2.2 為目標的二進位檔。 此設定中所指定 TFM 是 [`dotnet publish`](../tools/dotnet-publish.md) 命令使用的預設目標。
 
 如果您想要以多個 Framework 為目標，則可以將 `<TargetFrameworks>` 設定設為以分號隔開的多個 TFM 值。 您可以使用 `dotnet publish -f <TFM>` 命令來發佈其中一個 Framework。 例如，如果您的專案具有 `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` 並執行 `dotnet publish -f netcoreapp2.1`，就會建立以 .NET Core 2.1 為目標的二進位檔。
 
-除非另行設定，否則 [`dotnet publish`][dotnet-publish] 命令的輸出目錄為 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`。 除非使用 `-c` 參數加以變更，否則預設的**組建組態**模式為 [偵錯]。 例如，`dotnet publish -c Release -f netcoreapp2.1` 會發佈至 `myfolder/bin/Release/netcoreapp2.1/publish/`。 
+除非另行設定，否則 [`dotnet publish`](../tools/dotnet-publish.md) 命令的輸出目錄為 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`。 除非使用 `-c` 參數加以變更，否則預設的**組建組態**模式為 [偵錯]。 例如，`dotnet publish -c Release -f netcoreapp2.1` 會發佈至 `myfolder/bin/Release/netcoreapp2.1/publish/`。 
 
 如果您使用 .NET Core SDK 3.0，則以 .NET Core 2.1 版、2.2 版或 3.0 版為目標的應用程式其預設發佈模式為 Framework 相依可執行檔。
 
@@ -95,7 +95,7 @@ Module Program
 End Module
 ```
 
-當您執行應用程式 ([`dotnet run`][dotnet-run]) 時，即會顯示下列輸出：
+當您執行應用程式 ([`dotnet run`](../tools/dotnet-run.md)) 時，即會顯示下列輸出：
 
 ```terminal
   _   _      _ _         __        __         _     _ _
@@ -163,6 +163,3 @@ End Module
 
 - [.NET Core 應用程式部署概觀](index.md)
 - [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)
-
-[dotnet-publish]: ../tools/dotnet-publish.md
-[dotnet-run]: ../tools/dotnet-run.md

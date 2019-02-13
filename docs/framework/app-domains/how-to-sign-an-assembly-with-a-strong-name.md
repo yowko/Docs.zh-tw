@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 963923951b3f3c288506cf339cd8a15f27792af3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599214"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826898"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>HOW TO：使用強式名稱簽署組件
 以下是幾種以強式名稱簽署組件的方式：  
@@ -42,6 +42,9 @@ ms.locfileid: "54599214"
 3.  選取 [簽署組件] 方塊。  
   
 4.  在 [選擇強式名稱金鑰檔] 方塊中，選擇 [\<瀏覽...>]，然後巡覽至金鑰檔。 若要建立新的金鑰檔，請選擇 [\<新增...>]，並且在 [建立強式名稱金鑰] 對話方塊中輸入其名稱。  
+  
+> [!NOTE]
+>  若要[延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)，請選擇公開金鑰檔案。  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>若要使用組件連結器建立組件並以強式名稱簽署組件  
   

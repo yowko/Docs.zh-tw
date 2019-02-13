@@ -1,24 +1,24 @@
 ---
-title: 透過 ML.NET 使用迴歸學習工具預測紐約計程車費用
-description: 透過 ML.NET 使用迴歸學習工具預測費用。
+title: 透過 ML.NET 使用迴歸學習工具預測價格
+description: 透過 ML.NET 使用迴歸學習工具預測價格。
 author: aditidugar
 ms.author: johalex
 ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b17b4e31a60d6eaf432577281004bcf2c7ca1da2
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333781"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828393"
 ---
-# <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>教學課程：透過 ML.NET 使用迴歸學習工具預測紐約計程車費用
+# <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>教學課程：透過 ML.NET 使用迴歸學習工具預測價格
 
 > [!NOTE]
 > 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) \(英文)。
 
-本教學課程說明如何使用 ML.NET 來建置用於預測紐約市計程車車資的 [迴歸模型](../resources/glossary.md#regression)。
+本教學課程說明如何使用 ML.NET 建置用於預測價格 (特別是紐約市計程車車資) 的[迴歸模型](../resources/glossary.md#regression)。
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]

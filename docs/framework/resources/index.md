@@ -2,24 +2,30 @@
 title: .NET 應用程式中的資源
 ms.date: 07/25/2018
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], resources'
-  - 'deploying applications [.NET Core], resources'
-  - application resources
-  - resource files
-  - satellite assemblies
-  - localization
-  - packaging application resources
-  - localizing resources
+- deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
+- application resources
+- resource files
+- satellite assemblies
+- localization
+- packaging application resources
+- localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: e42255378e4a2fdd50d9c1539e3bcee43012e56c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221039"
 ---
 # <a name="resources-in-net-apps"></a>.NET 應用程式中的資源
 幾乎每個實際執行品質應用程式都必須使用資源。 資源是任何使用應用程式以邏輯方式部署的非執行檔資料。 資源可能在應用程式中顯示作錯誤訊息，或做為使用者介面的一部分。 資源可以含有一些表單中的資料，包括字串、影像和永續性物件。 (若要將保留物件寫入資源檔，物件必須是可序列化的)。將資料儲存在資源檔中，可讓您不需要重新編譯整個應用程式即可變更資料。 也可讓您將資料儲存在單一位置，不需要依賴儲存在多個位置的硬式編碼資料。  
   
  .NET Framework 與 .NET Core 提供桌建立和當地語系化資源的完整支援。 此外，.NET 也支援簡單的模型以封裝及部署當地語系化資源。  
   
- 如需 ASP.NET 中資源的詳細資訊，請參閱 [ASP.NET 網頁資源概觀](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)。  
+ 如需 ASP.NET 中資源的詳細資訊，請參閱 [ASP.NET 網頁資源概觀](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))。  
   
  ## <a name="creating-and-localizing-resources"></a>建立和當地語系化資源  
  在非當地語系化的應用程式中，您可以使用資源檔做為應用程式資料的存放庫，特別是針對原始程式碼中多個位置的硬式編碼字串。 大多數情況下，您建立的資源是文字 (.txt) 或 XML (.resx) 檔案，並且使用 [Resgen.exe (資源檔產生器)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 將它們編譯成二進位 .resources 檔。 然後這些檔案會由語言編譯器內嵌在應用程式的可執行檔。 如需有關建立資源檔的詳細資訊，請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。  

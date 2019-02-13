@@ -4,12 +4,12 @@ description: 了解 C# 中屬性的運作方式。
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 38d22e707dd8c9877183feb8446407c20a21b416
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 254c408e854bdf6e923d64a4e8cca42b7a3b11cc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029823"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826820"
 ---
 # <a name="using-attributes-in-c"></a>在 C# 中使用屬性 #
 
@@ -137,7 +137,7 @@ ms.locfileid: "54029823"
 * `[Obsolete]`. 此屬性使用於上述範例中，且存在於 `System` 命名空間。 提供有關變更的程式碼基底的宣告式文件會很有用。 訊息可以字串的形式提供，使用另一個布林值參數可以從編譯器警告提升至編譯器錯誤。
 
 * `[Conditional]`. 此屬性位於 `System.Diagnostics` 命名空間。 這個屬性可以套用至方法 (或屬性類別)。 您必須傳遞字串給建構函式。
-如果該字串符合 `#define` 指示詞，C# 編譯器會移除對該方法的任何呼叫 (但非方法本身)。 這通常用於偵錯 (診斷) 用途。
+如果該字串不符合 `#define` 指示詞，C# 編譯器會移除對該方法的任何呼叫 (但非方法本身)。 這通常用於偵錯 (診斷) 用途。
 
 * `[CallerMemberName]`. 這個屬性可以用於參數，並存在 `System.Runtime.CompilerServices` 命名空間中。 這個屬性可用來插入呼叫另一個方法之方法的名稱。 在各種 UI 架構中實作 INotifyPropertyChanged 時，這通常做為消除 'magic strings' 的方法。 範例如下：
 

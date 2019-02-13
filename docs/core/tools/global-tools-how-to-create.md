@@ -4,16 +4,16 @@ description: 描述如何建立通用工具。 通用工具是透過 .NET Core C
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: e544ab51920015e0f1ea48ad83ba9b637d98aa0c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144574"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826417"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>使用 .NET Core CLI 建立 .NET Core 通用工具
 
-本文會教導您如何建立及封裝 .NET Core 通用工具。 .NET Core CLI 可讓您建立作為通用工具的主控台應用程式，其他人也可以輕鬆地安裝及執行該工具。 .NET Core 通用工具是從 .NET Core CLI 安裝的 NuGet 套件。 如需通用工具的詳細資訊，請參閱 [.NET Core 通用工具概觀][global-tool-info]。
+本文會教導您如何建立及封裝 .NET Core 通用工具。 .NET Core CLI 可讓您建立作為通用工具的主控台應用程式，其他人也可以輕鬆地安裝及執行該工具。 .NET Core 通用工具是從 .NET Core CLI 安裝的 NuGet 套件。 如需通用工具的詳細資訊，請參閱 [.NET Core 通用工具概觀](global-tools.md)。
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
@@ -170,7 +170,7 @@ dotnet pack
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
-`--add-source` 參數會告訴 .NET Core CLI 暫時使用 `./nupkg` 資料夾 (我們的 `<PackageOutputPath>` 資料夾) 作為 NuGet 套件的額外來源摘要。 如需安裝通用工具的詳細資訊，請參閱 [.NET Core 通用工具概觀][global-tool-info]。
+`--add-source` 參數會告訴 .NET Core CLI 暫時使用 `./nupkg` 資料夾 (我們的 `<PackageOutputPath>` 資料夾) 作為 NuGet 套件的額外來源摘要。 如需安裝通用工具的詳細資訊，請參閱 [.NET Core 通用工具概觀](global-tools.md)。
 
 如果安裝成功，則會顯示一則訊息，其中顯示用來呼叫此工具的命令以及安裝的版本，類似於下例範例：
 
@@ -191,5 +191,3 @@ Tool 'botsay' (version '1.0.0') was successfully installed.
 ```console
 dotnet tool uninstall -g botsay
 ```
-
-[global-tool-info]: global-tools.md
