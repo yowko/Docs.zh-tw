@@ -55,7 +55,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 您也可以藉由將下列元素新增到 .csproj 檔案，為整個專案開啟**可為 Null 的參考類型**，例如，緊接在啟用 C# 8.0 的 `LangVersion` 元素後面：
 
 ```xml
-<NullableReferenceTypes>true</NullableReferenceTypes>
+<NullableContextOptions>enable</NullableContextOptions>
 ```
 
 ### <a name="design-the-types-for-the-application"></a>設計適用於應用程式的類型
