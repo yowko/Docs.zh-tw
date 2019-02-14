@@ -10,12 +10,12 @@ helpviewer_keywords:
 - columns [Windows Forms], manipulating
 - data grids [Windows Forms], manipulating columns
 ms.assetid: d8cfe6b3-bbab-4182-bec2-0517d9f1eaf6
-ms.openlocfilehash: 6c740330946e1c509a1b8ea7ef7ed1a83aa67e2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9bda971ca6d8ab7c578695ad5984c1c81d61c065
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656865"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260669"
 ---
 # <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>HOW TO：管理 Windows Forms DataGridView 控制項中的資料行
 下列程式碼範例顯示使用 <xref:System.Windows.Forms.DataGridViewColumn> 類別屬性操作 <xref:System.Windows.Forms.DataGridView> 資料行的各種方式。  
@@ -30,8 +30,8 @@ ms.locfileid: "54656865"
   
 -   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[How to:編譯並執行完整的 Windows Form 程式碼範例使用 Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
-  
+ Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
+
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>

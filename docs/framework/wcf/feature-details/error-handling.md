@@ -2,12 +2,12 @@
 title: 錯誤處理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695552"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261147"
 ---
 # <a name="error-handling"></a>錯誤處理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation 的錯誤處理  
@@ -22,7 +22,7 @@ ms.locfileid: "54695552"
   
  應用程式區塊的目標是納入常用的最佳做法，並在您的應用程式中提供處理例外狀況的常見方法。 另一方面，自訂錯誤處理常式和自行開發錯誤合約也非常有用。 比方說，自訂錯誤處理常式提供絕佳的機會，可自動升級所有 FaultExceptions 的例外狀況以及將記錄功能新增至您的應用程式。  
   
- 如需詳細資訊，請參閱[Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx)。  
+ 如需詳細資訊，請參閱[Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10))。  
   
 ### <a name="dealing-with-expected-exceptions"></a>處理預期的例外狀況。  
  採取適當的動作是預期的例外狀況，每個作業或相關擴充點，決定是否可以復原，並傳回 FaultException 中適當的自訂錯誤\<T >  

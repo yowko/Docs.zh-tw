@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: a21c32547b1bd612196daf8be54cf85c373a7ff3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5688fbbe2c40e7cd30517fb53fe21ae3d0630f22
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681738"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261528"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>逐步解說：建立自訂用戶端和服務認證
 此主題顯示如何實作自訂用戶端和服務認證，以及如何使用來自應用程式碼的自訂認證。  
@@ -22,9 +22,8 @@ ms.locfileid: "54681738"
   
 -   執行當做 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 實作的處理站。  
   
- <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 類別都繼承自定義傳回 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 之合約的抽象 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別。  
-  
- 如需有關認證類別以及如何將它們結合到 WCF 安全性架構的詳細資訊，請參閱 <<c0> [ 安全性架構](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ 
+  <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 類別都繼承自定義傳回 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 之合約的抽象 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別。  
   
  WCF 中提供的預設實作會支援的系統提供的認證類型，並建立安全性權杖管理員，能夠處理那些認證類型。  
   

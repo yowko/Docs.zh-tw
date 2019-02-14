@@ -2,18 +2,18 @@
 title: HOW TO：可靠工作階段內交換訊息
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720050"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260682"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>HOW TO：可靠工作階段內交換訊息
 
 本主題概要說明透過其中一個系統提供的繫結啟用可靠工作階段 (此繫結支援此類工作階段，但非預設) 所需的步驟。 啟用可靠工作階段，命令式程式碼或是宣告式組態檔。 若要啟用可靠工作階段，並規定訊息依照傳送的相同順序送達，此程序會使用用戶端和服務組態檔。
 
-此程序的重要部分是端點組態項目包含`bindingConfiguration`參考名為繫結組態的屬性`Binding1`。 [ **\<繫結 >** ](../../../../docs/framework/misc/binding.md)組態項目會參考此名稱，藉此啟用可靠工作階段`enabled`屬性[ **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)項目`true`。 您可以將 `ordered` 屬性設為 `true`，為可靠工作階段指定依序傳遞保證。
+此程序的重要部分是端點組態項目包含`bindingConfiguration`參考名為繫結組態的屬性`Binding1`。 [ **\<繫結 >** ](../../../../docs/framework/misc/binding.md)組態項目會參考此名稱，藉此啟用可靠工作階段`enabled`屬性[ **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100))項目`true`。 您可以將 `ordered` 屬性設為 `true`，為可靠工作階段指定依序傳遞保證。
 
 如需此範例中的來源複本，請參閱[WS 可靠工作階段](../../../../docs/framework/wcf/samples/ws-reliable-session.md)。
 

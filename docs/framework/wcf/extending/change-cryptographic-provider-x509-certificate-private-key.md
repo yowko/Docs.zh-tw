@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: ce2ce082f41700b1b86786abfa2dfe4a673fd6e0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4e11dd90d1cc57f3f2f559c22e1548b8fbcedaea
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265944"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261908"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>HOW TO：變更 X.509 憑證之私密金鑰的密碼編譯提供者
 本主題說明如何變更用來提供 X.509 憑證之私密金鑰的密碼編譯提供者，以及如何整合 Windows Communication Foundation (WCF) 安全性架構提供者。 如需使用憑證的詳細資訊，請參閱[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
@@ -87,4 +87,3 @@ ms.locfileid: "55265944"
 - [如何：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
 - [如何：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
 - [如何：建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
-- [安全性架構](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

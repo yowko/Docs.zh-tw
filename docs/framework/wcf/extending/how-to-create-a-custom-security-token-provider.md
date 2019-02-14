@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: db492967dc6df882221f0547b609b3c7f700b118
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a81f6eac5648406f50d9600b030828551b21c56
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627699"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261337"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>HOW TO：建立自訂安全性權杖提供者
 這個主題會說明如何以自訂安全性權杖提供者建立新的權杖型別，以及如何整合提供者和自訂安全性權杖管理員。  
@@ -23,8 +23,6 @@ ms.locfileid: "54627699"
  安全性權杖提供者會根據用戶端或服務認證中的資訊，建立安全性權杖表示。 若要使用 Windows Communication Foundation (WCF) 安全性的自訂安全性權杖提供者，您必須建立自訂認證和安全性權杖管理員實作。  
   
  如需自訂認證和安全性權杖管理員的詳細資訊，請參閱[逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
-  
- 如需有關認證的詳細資訊，安全性權杖管理員、 提供者和驗證器類別，請參閱[安全性架構](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
   
 ### <a name="to-create-a-custom-security-token-provider"></a>建立自訂安全性權杖提供者  
   
@@ -61,4 +59,3 @@ ms.locfileid: "54627699"
 - <xref:System.IdentityModel.Tokens.X509SecurityToken>
 - [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
 - [如何：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [安全性架構](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

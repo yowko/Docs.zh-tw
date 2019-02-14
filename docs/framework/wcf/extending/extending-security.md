@@ -4,19 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-ms.openlocfilehash: 798a1d1cd21fd9a0bc21c6ccaa42c478379cc7a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 698d65d951ed7adad5aa32e874befb15a3b24d12
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511533"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261423"
 ---
 # <a name="extending-security"></a>擴充安全性
 若要容納新的宣告類型和自訂的權杖，您可以擴充的安全性基礎結構的 Windows Communication Foundation (WCF)。 本章節中的主題會示範如何做到這點。  
   
 ## <a name="in-this-section"></a>本節內容  
- [安全性架構](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- 逐步解說 WCF 安全性系統的架構。  
   
  [自訂認證與認證驗證](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
  說明如何在驗證自訂認證時使用身分識別模型。  

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 9257a16b1f15290a8b997e8d12d5570349d88dde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3954e90ed091d03656f25ce1a9b1ff35ffaa9ea
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720544"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260721"
 ---
 # <a name="custom-bindings"></a>自訂繫結
-當系統提供的其中一個繫結程序不符合服務的需求時，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別。 所有繫結都是根據已排序的繫結項目組所建構。 自訂的繫結可以從系統提供的繫結項目建置，或是可以包含使用者定義的自訂繫結項目。 例如，您可以使用自訂繫結項目，以便在服務端點使用新的傳輸或編碼器。 如需實用範例，請參閱[自訂繫結範例](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08)。 如需詳細資訊，請參閱 < [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+當系統提供的其中一個繫結不符合服務的需求時，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別。 所有繫結都是根據已排序的繫結項目組所建構。 自訂的繫結可以從系統提供的繫結項目建置，或是可以包含使用者定義的自訂繫結項目。 例如，您可以使用自訂繫結項目，以便在服務端點使用新的傳輸或編碼器。 如需實用範例，請參閱[自訂繫結範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))。 如需詳細資訊，請參閱 < [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
 ## <a name="construction-of-a-custom-binding"></a>建構自訂繫結  
  在建構自訂繫結時，會使用依特定順序堆疊的繫結項目集合中的 <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> 建構函式：  
   
--   在最上方為允許流動交易的選擇性 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 類別。  
+-   在最上方為允許流動異動的選擇性 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 類別。  
   
 -   接下來是選擇性 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> 類別，它會提供 WS-ReliableMessaging 規格中所定義的工作階段和排序機制。 工作階段可以跨 SOAP 和傳輸媒介。  
   

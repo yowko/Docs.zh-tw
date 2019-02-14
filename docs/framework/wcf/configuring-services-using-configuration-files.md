@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92c86980f3276054dbcd41c1cd796e2bc2c0df23
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717398"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261354"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
 使用組態檔中設定 Windows Communication Foundation (WCF) 服務可讓您彈性提供端點，並設計階段部署而不是在服務行為資料。 本主題概要說明可用的主要技巧。  
@@ -91,7 +91,7 @@ ms.locfileid: "54717398"
   
 -   `contract`. 指定可定義合約的介面。 這個介面是由 `name` 項目的 `service` 屬性所指定的 Common Language Runtime (CLR) 型別所實作。  
   
--   [\<結束點 > 項目參考](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
 ### <a name="the-bindings-element"></a>\<繫結 > 項目  
  `bindings` 項目包含所有繫結的規格，在任何服務中定義的任何端點都可以使用這些繫結。  
@@ -101,7 +101,7 @@ ms.locfileid: "54717398"
 ### <a name="the-binding-element"></a>\<繫結 > 項目  
  `binding`中所包含的項目`bindings`項目可以是其中一個系統提供繫結 (請參閱[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) 或自訂繫結 (請參閱[自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md))。 `binding` 項目具有的 `name` 屬性可將繫結與 `bindingConfiguration` 項目的 `endpoint` 屬性所指定的端點相互關聯。 如果未指定名稱，則該繫結會對應於該繫結型別的預設值。  
   
- 如需有關如何設定服務和用戶端的詳細資訊，請參閱 <<c0> [ 設定的 Windows Communication Foundation 應用程式](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
+如需有關如何設定服務和用戶端的詳細資訊，請參閱 <<c0> [ 設定的 WCF 服務](configuring-services.md)。
   
  [\<binding>](../../../docs/framework/misc/binding.md)  
   
@@ -264,6 +264,6 @@ ms.locfileid: "54717398"
   
 ## <a name="see-also"></a>另請參閱
 - [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)
-- [設定 Windows Communication Foundation 應用程式](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [設定 WCF 服務](configuring-services.md)
 - [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
 - [\<binding>](../../../docs/framework/misc/binding.md)
