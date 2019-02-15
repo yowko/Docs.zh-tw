@@ -1,15 +1,16 @@
 ---
-title: Binding1
+title: 繫結 WCF 範例
 ms.date: 03/30/2017
 ms.assetid: 324fa627-d012-465a-b266-95594a09dac2
-ms.openlocfilehash: 124a4bd252f838b737a06b76452619182bc9dea1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 260e8a957b76c0e00ac0adae8d2a032d0d0d598b
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48026817"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305827"
 ---
 # <a name="binding"></a>繫結
+
 本節包含示範使用端點項目之繫結屬性的範例。  
   
 ## <a name="in-this-section"></a>本節內容

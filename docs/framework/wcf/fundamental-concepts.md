@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664006"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305541"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 的主要概念
 本文件提供 Windows Communication Foundation (WCF) 架構的高階檢視。 以說明重要概念，以及如何搭配運用這些概念。 如需建立 WCF 服務和用戶端的最簡單版本的教學課程，請參閱 <<c0> [ 入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要深入了解 WCF 程式設計，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。  
@@ -75,10 +75,10 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ```  
   
  繫結  
- 定義端點如何與外界通訊。 它是由一組稱為繫結項目的元件所建構，這些元件會彼此「堆疊」，以建立通訊基礎結構。 繫結至少會定義傳輸 (例如 HTTP 或 TCP) 和使用的編碼方式 (例如文字或二進位)。 繫結可以包含用來指定像是安全性機制 (用來保護訊息) 等詳細資料的繫結項目，或端點所使用的訊息模式。 如需詳細資訊，請參閱 < [Configuring](../../../docs/framework/wcf/configuring-services.md)。  
+ 定義端點如何與外界通訊。 它是由一組稱為繫結項目的元件所建構，這些元件會彼此「堆疊」，以建立通訊基礎結構。 繫結至少會定義傳輸 (例如 HTTP 或 TCP) 和使用的編碼方式 (例如文字或二進位)。 繫結程序可以包含用來指定像是安全性機制 (用來保護訊息) 等詳細資料的繫結程序項目，或端點所使用的訊息模式。 如需詳細資訊，請參閱 < [Configuring](../../../docs/framework/wcf/configuring-services.md)。  
   
  Binding Element - 繫結項目  
- 表示一項特定的繫結，例如傳輸、編碼方式、基礎結構層級通訊協定的實作 (例如 WS-ReliableMessaging)，或通訊堆疊的任何其他元件。  
+ 表示一項特定的繫結程序，例如傳輸、編碼方式、基礎結構層級通訊協定的實作 (例如 WS-ReliableMessaging)，或通訊堆疊的任何其他元件。  
   
  行為  
  此元件可控制服務、端點、特定作業或用戶端的各種執行階段層面。 行為是根據範圍來分組：通用行為會影響全域所有的端點、服務行為只會影響服務相關的層面、端點行為只會影響端點相關的屬性，而作業層級行為會影響特定作業。 例如，其中一個服務行為是節流，這會在過多訊息威脅造成服務處理功能過度負荷時，指定服務的回應方式。 另一方面，端點行為只會控制與端點相關的層面，例如尋找安全性認證的方式和位置。  
@@ -155,4 +155,3 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>另請參閱
 - [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
 - [Windows Communication Foundation 架構](../../../docs/framework/wcf/architecture.md)
-- [安全性架構](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

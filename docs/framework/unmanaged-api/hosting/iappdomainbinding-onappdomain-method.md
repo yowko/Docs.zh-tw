@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dfd396568424c3a2300ed5d982e766afd5f925f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1c22ee61769fdcbb92a73ca0dd55299ebbcf934
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725489"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305762"
 ---
 # <a name="iappdomainbindingonappdomain-method"></a>IAppDomainBinding::OnAppDomain 方法
 由 common language runtime (CLR)，以通知主機已建立的應用程式定義域呼叫。  
@@ -37,7 +37,7 @@ HRESULT OnAppDomain (
   
 #### <a name="parameters"></a>參數  
  `pAppdomain`  
- [in]指標[IUnknown](https://msdn.microsoft.com/library/94as6ehy(v=vs.110).aspx)介面的物件，表示新的應用程式定義域。  
+ [in]指標[IUnknown](/cpp/atl/iunknown)介面的物件，表示新的應用程式定義域。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

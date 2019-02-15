@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], ArcSegment size
 - ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
-ms.openlocfilehash: 845db7fdeacaae77e25dd73ea0099b779975c186
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1ca86970b71f1d1449d3ef3fdfb2e96b5ce6175
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514514"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303331"
 ---
 # <a name="how-to-animate-the-size-of-an-arcsegment"></a>HOW TO：建立 ArcSegment 大小的動畫
 此範例示範如何建立動畫<xref:System.Windows.Media.ArcSegment.Size%2A>屬性<xref:System.Windows.Media.ArcSegment>。  
@@ -32,6 +32,5 @@ ms.locfileid: "54514514"
 - <xref:System.Windows.Media.ArcSegment>
 - [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
 - [幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
-- [動畫和計時](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
-- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [幾何 how to 主題](geometries-how-to-topics.md)
+- [動畫和計時 how to 主題](animation-and-timing-how-to-topics.md)

@@ -2,12 +2,12 @@
 title: 執行 Windows Communication Foundation 範例
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 3ae982b49a0d54d59d889166375938560c0d0d1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec7d7f9ce0a6db5d20bce47ab313f4248e86c88
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535876"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304670"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>執行 Windows Communication Foundation 範例
 可以在單一電腦或跨電腦組態中執行的 Windows Communication Foundation (WCF) 範例。 這些範例可依提供現狀直接執行於單一機器上。 在跨機器組態中，就需要修改範例的組態檔設定。 下列程序會說明如何在相同機器與跨機器組態中執行此範例。 請注意，透過網際網路資訊服務 (IIS) 裝載與自我裝載範例中的服務步驟會有所變化。 大部分的範例都是以 IIS 進行裝載；請參閱範例讀我資訊以決定其裝載方式。  
@@ -19,13 +19,13 @@ ms.locfileid: "54535876"
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   
-1.  如果服務由 IIS 裝載，請確定您可以使用瀏覽器中輸入下列位址的服務： `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。 如果未顯示 [確認] 頁面，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+1.  如果服務由 IIS 裝載，請確定您可以使用瀏覽器中輸入下列位址的服務： `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。 如果未顯示 [確認] 頁面，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 2.  如果服務是自我裝載，請從語言特定資料夾中的 \service\bin 執行 Service.exe。 服務活動會顯示在服務主控台視窗上。  
   
 3.  從 \client\bin 執行 Client.exe\\，從語言特定資料夾之下。 用戶端活動會顯示在用戶端主控台視窗上。  
   
-4.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
@@ -81,5 +81,4 @@ ms.locfileid: "54535876"
   
 ## <a name="see-also"></a>另請參閱
 - [建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)
-- [工作群組中與跨電腦執行範例](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)
-- [疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+- [WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

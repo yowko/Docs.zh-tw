@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 3fedf663a885ec0da8925ccb335dca7177a33fcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70e6e53c4aaa348c6cae2e677121f92367f33349
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530722"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305255"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>HOW TO：為所有 Windows Forms 設定格線選項
 您成為用來在 Visual Studio 開發環境中工作，您可以在 Windows Form 設計工具來設定喜好設定的所有表單和您使用的專案。  
@@ -31,7 +31,7 @@ ms.locfileid: "54530722"
   
 ## <a name="see-also"></a>另請參閱
 - [逐步解說：使用對齊線的 Windows Form 上排列控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [選項對話方塊、 Windows Form 設計工具、 一般](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
+- [選項對話方塊、 Windows Form 設計工具、 一般](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)
 - [如何：將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
 - [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], animation
 - animation [WPF], PointAnimation
 ms.assetid: 42310977-cc90-438a-8a47-0345898e01be
-ms.openlocfilehash: e359e712f533c861a694c53848ca0eaeb289eb21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0551ba7c22e6c13ef2875e5f4ba681fc6df14d
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495549"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304787"
 ---
 # <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>HOW TO：使用 PointAnimation 建立物件位置的動畫
 此範例示範如何使用<xref:System.Windows.Media.Animation.PointAnimation>類別以動畫顯示物件沿著<xref:System.Windows.Shapes.Path>。  
@@ -31,6 +31,5 @@ ms.locfileid: "54495549"
 - <xref:System.Windows.Media.EllipseGeometry.Center%2A>
 - [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
 - [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)
-- [動畫和計時](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
-- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [圖形 how to 主題](graphics-how-to-topics.md)
+- [動畫和計時 how to 主題](animation-and-timing-how-to-topics.md)

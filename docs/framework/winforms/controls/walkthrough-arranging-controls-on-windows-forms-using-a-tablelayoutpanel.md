@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: d058fd43649b8096ce2a65d8537cf4b663f58594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f337164043014ed14d42e219f26ee2ec8be06662
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585415"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305840"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項
 有些應用程式需要表單能在調整表單大小或變更內容大小時，自行適當排列配置。 當需要動態配置但不想用程式碼明確處理 <xref:System.Windows.Forms.Control.Layout> 事件時，請考慮使用配置面板。  
@@ -22,7 +22,7 @@ ms.locfileid: "54585415"
   
  <xref:System.Windows.Forms.TableLayoutPanel>排列其內容在方格中，提供功能類似於 HTML\<表格 > 項目。 <xref:System.Windows.Forms.TableLayoutPanel>控制項可讓您將控制項放在格線版面配置，而不需要精確指定每個個別控制項的位置。 其儲存格依資料列和資料行排列，大小可以各不相同。 跨越資料列和資料行，就可以合併資料格。 資料格可以包含任何項目可以包含一份表單，和在做為容器的大部分其他方面的行為。  
   
- <xref:System.Windows.Forms.TableLayoutPanel>控制項也提供依比例調整大小功能在執行階段，讓您的配置可以變更順暢地調整表單大小時。 這可讓<xref:System.Windows.Forms.TableLayoutPanel>控制項非常適合的用途，例如資料輸入表單和當地語系化應用程式。 如需詳細資訊，請參閱[逐步解說：建立適用於資料輸入且可調整大小的 Windows Form](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)和[逐步解說：建立可當地語系化的 Windows Form](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)。  
+ <xref:System.Windows.Forms.TableLayoutPanel>控制項也提供依比例調整大小功能在執行階段，讓您的配置可以變更順暢地調整表單大小時。 這可讓<xref:System.Windows.Forms.TableLayoutPanel>控制項非常適合的用途，例如資料輸入表單和當地語系化應用程式。 如需詳細資訊，請參閱[逐步解說：建立適用於資料輸入且可調整大小的 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))和[逐步解說：建立可當地語系化的 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))。  
   
  一般情況下，您不應該使用<xref:System.Windows.Forms.TableLayoutPanel>為整個版面配置容器的控制項。 使用<xref:System.Windows.Forms.TableLayoutPanel>控制項以提供版面配置的組件的按比例調整大小功能。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54585415"
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立名為"TableLayoutPanelExample 」 的 Windows 應用程式專案。 如需詳細資訊，請參閱[＜How to：建立 Windows 應用程式專案](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  建立名為"TableLayoutPanelExample 」 的 Windows 應用程式專案。 如需詳細資訊，請參閱[如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)。  
   
 2.  選取中的表單**Windows** **Form 設計工具**。  
   
@@ -184,8 +184,8 @@ ms.locfileid: "54585415"
 - [逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [逐步解說：使用對齊線的 Windows Form 上排列控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Microsoft Windows 使用者經驗, 使用者介面開發人員和設計人員的正式方針。Redmond，WA:Microsoft Press，1999年。(USBN:0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
-- [逐步解說：建立適用於資料輸入且可調整大小的 Windows Form](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)
-- [逐步解說：建立可當地語系化的 Windows Form](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)
+- [逐步解說：建立適用於資料輸入且可調整大小的 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
+- [逐步解說：建立可當地語系化的 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [TableLayoutPanel 控制項的最佳作法](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
 - [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
 - [如何：停駐在 Windows Forms 上控制項](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)

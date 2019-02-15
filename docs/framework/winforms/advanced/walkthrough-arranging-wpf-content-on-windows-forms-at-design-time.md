@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 66fb814bbf0a40ccaa9339eb24dcc49332861deb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 543546de4f9b93deb5fa70c98608246e9c06e4f7
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647658"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304553"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段排列 Windows Form 的 WPF 內容
 本逐步解說示範如何使用 Windows Form 的配置功能 (例如錨定和對齊線)，來排列 Windows Presentation Foundation (WPF) 控制項。
@@ -56,7 +56,7 @@ ms.locfileid: "54647658"
   
 1.  將新的 WPF <xref:System.Windows.Controls.UserControl> 加入專案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱[逐步解說：在設計階段建立 Windows Form 上的新 WPF 內容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
-2.  在 [設計] 檢視中，確定已選取 `UserControl1`。 如需詳細資訊，請參閱[＜How to：選取並移動設計介面上的項目](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)。  
+2.  在 [設計] 檢視中，確定已選取 `UserControl1`。 如需詳細資訊，請參閱[如何：選取並移動設計介面上的項目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。  
   
 3.  在 **屬性**視窗中，設定的值<xref:System.Windows.FrameworkElement.Width%2A>並<xref:System.Windows.FrameworkElement.Height%2A>屬性，以`200`。  
   
@@ -79,11 +79,12 @@ ms.locfileid: "54647658"
   
 5.  在 **工具箱**，按兩下`UserControl1`若要建立的執行個體`UserControl1`的第一個資料格中<xref:System.Windows.Forms.TableLayoutPanel>控制項。  
   
-     `UserControl1` 的執行個體會裝載到名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
+     
+  `UserControl1` 的執行個體會裝載到名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
   
 6.  在**工具箱**，按兩下`UserControl1`建立另一個執行個體中的第二個儲存格<xref:System.Windows.Forms.TableLayoutPanel>控制項。  
   
-7.  在 **文件大綱**視窗中，選取`tableLayoutPanel1`。 如需詳細資訊，請參閱 <<c0> [ 文件大綱 視窗](https://msdn.microsoft.com/library/9054f2bc-f6f8-4242-9fe0-be71089b12f8)。  
+7.  在 **文件大綱**視窗中，選取`tableLayoutPanel1`。 如需詳細資訊，請參閱 <<c0> [ 文件大綱 視窗](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/46xf4h0w(v=vs.100)#using-the-document-outline-window-for-silverlight-and-wpf)。  
   
 8.  在 **屬性**視窗中，設定的值<xref:System.Windows.Forms.Control.Padding%2A>屬性設`10, 10, 10, 10`。  
   
@@ -96,7 +97,8 @@ ms.locfileid: "54647658"
   
 1.  從**工具箱**，將拖曳的執行個體`UserControl1`拖曳至表單並將它放在下方的空間<xref:System.Windows.Forms.TableLayoutPanel>控制項。  
   
-     `UserControl1` 的執行個體會裝載到名為 `elementHost3` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
+     
+  `UserControl1` 的執行個體會裝載到名為 `elementHost3` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
   
 2.  使用對齊線，將 `elementHost3` 的左邊緣與 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的左邊緣對齊。  
   
@@ -129,7 +131,8 @@ ms.locfileid: "54647658"
   
 5.  在 **屬性**視窗中，設定的值<xref:System.Windows.Forms.Control.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Fill>。  
   
-     `elementHost2` 控制項會調整大小以填滿儲存格。  
+     
+  `elementHost2` 控制項會調整大小以填滿儲存格。  
   
 6.  選取 <xref:System.Windows.Forms.TableLayoutPanel> 控制項。  
   
@@ -145,7 +148,7 @@ ms.locfileid: "54647658"
   
      這三個 <xref:System.Windows.Forms.Integration.ElementHost> 控制項都會適當地調整大小。  
   
-     如需詳細資訊，請參閱[＜How to：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)。  
+     如需詳細資訊，請參閱[如何：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.Integration.ElementHost>
