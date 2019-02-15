@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508518"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303385"
 ---
 # <a name="unmanaged-api-reference"></a>Unmanaged API 參考
 本節包含與 Managed 程式碼相關之應用程式 (例如執行階段主機、編譯器、反組譯工具、模糊化工具、偵錯工具和分析工具) 可用的 Unmanaged API 的資訊。  
@@ -32,7 +32,7 @@ ms.locfileid: "43508518"
  [常數](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  描述定義於 CorSym.idl 中的常數。  
   
- [自訂介面屬性](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [自訂介面屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
  描述元件物件模型 (COM) 自訂介面屬性。  
   
  [偵錯](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -64,5 +64,3 @@ ms.locfileid: "43508518"
   
 ## <a name="related-sections"></a>相關章節  
  [開發指南](../../../docs/framework/development-guide.md)  
-  
- [.NET Framework 的進階閱讀](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

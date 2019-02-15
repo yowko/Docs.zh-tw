@@ -2,12 +2,18 @@
 title: 強式命名 (Unmanaged API 參考)
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'strong naming [.NET Framework], using the unmanaged API'
-  - 'native API reference [.NET Framework], strong naming'
-  - 'unmanaged API reference [.NET Framework], strong naming'
+- strong naming [.NET Framework], using the unmanaged API
+- native API reference [.NET Framework], strong naming
+- unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 230a5e3e3231ad6675d214d370f74eb37405c89c
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305633"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>強式命名 (Unmanaged API 參考)
 強式命名 API 可讓用戶端管理組件的強式命名簽署。  
@@ -15,8 +21,6 @@ ms.author: ronpet
  使用強式名稱簽署組件，就會將公開金鑰加密加入含有組件資訊清單的檔案中。 強式名稱簽署可協助驗證名稱唯一性，防止名稱冒用，並且在解析參考時為呼叫者提供唯一身分識別。 但是，並沒有任何信任等級與強式名稱關聯。  
   
 ## <a name="in-this-section"></a>本節內容  
- [強式命名全域靜態函式](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
- 說明強式命名 API 所使用的非受控全域靜態函式。  
   
 > [!NOTE]
 >  從 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 開始，所有這些函式都已過時。 如需建議的替代函式，請參閱 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) 介面。  
@@ -98,9 +102,6 @@ ms.author: ronpet
   
  [StrongNameTokenFromPublicKey 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  取得代表公開金鑰的權杖。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
-  
- [強式命名結構](https://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
- 說明非強式命名 API 用來管理組件之強式名稱簽署的非受控結構。  
   
  [PublicKeyBlob 結構](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  代表公開/私密金鑰組的公開金鑰 (二進位格式)。  
