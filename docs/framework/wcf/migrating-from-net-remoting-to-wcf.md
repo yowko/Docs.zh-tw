@@ -2,12 +2,12 @@
 title: 從 .NET 遠端處理移轉到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 38ec11b529c7b0444d47971938fb711fe40bee3d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415971"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333062"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>從 .NET 遠端處理移轉到 WCF
 此文章說明如何將使用 .NET 遠端處理的應用程式移轉為使用 Windows Communication Foundation (WCF)。 此文章會先比較這這些產品的類似概念，再說明如何在 WCF 中完成幾個常見的遠端處理案例。  
@@ -207,11 +207,7 @@ public class WCFCustomer
   
  [DataContract] 屬性將此類型識別為可在用戶端與伺服器之間序列化及還原序列化的類型。 [DataMember] 屬性識別要序列化的個別屬性或欄位。  
   
- 當 WCF 跨階層傳送物件時，它只會序列化值，並在另一個階層上建立新的物件執行個體。 與物件值的任何互動只會在本機進行，而不會和 .NET 遠端處理傳址物件一樣與另一個階層通訊。 如需詳細資訊，請參閱下列主題：  
-  
--   [序列化和還原序列化](./feature-details/serialization-and-deserialization.md)  
-  
--   [Windows Communication Foundation 序列化](https://msdn.microsoft.com/magazine/cc163569.aspx)  
+ 當 WCF 跨階層傳送物件時，它只會序列化值，並在另一個階層上建立新的物件執行個體。 與物件值的任何互動只會在本機進行，而不會和 .NET 遠端處理傳址物件一樣與另一個階層通訊。 如需詳細資訊，請參閱 <<c0> [ 序列化和還原序列化](./feature-details/serialization-and-deserialization.md)。  
   
 ### <a name="exception-handling-capabilities"></a>例外狀況處理功能  
   
@@ -288,7 +284,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>為什麼要從遠端處理移轉至 WCF？  
   
--   **.NET 遠端處理是舊版產品。** 中所述[.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)，它會被視為舊版產品，並不建議用於新的開發。 建議針對新的和現有的應用程式使用 WCF 或 ASP.NET Web 應用程式開發介面。  
+-   **.NET 遠端處理是舊版產品。** 中所述[.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)，它會被視為舊版產品，並不建議用於新的開發。 建議針對新的和現有的應用程式使用 WCF 或 ASP.NET Web API。  
   
 -   **WCF 會使用跨平台標準。** WCF 的設計將跨平台互通性納入考量，並支援許多業界標準 (SOAP、WS-Security、WS-Trust 等)。 WCF 服務可以與在非 Windows 作業系統上執行的用戶端互通。 遠端處理的設計主要是針對在 Windows 作業系統上使用 .NET Framework 執行伺服器和用戶端應用程式的環境。  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: b0abe7a6b127a254c2f5c72dc66fc128d35374fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd0b7e0d927e53f70515cfa124034a4cacc5ce7
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491359"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332243"
 ---
 # <a name="getting-started-tutorial"></a>快速入門教學課程
 在本節中所包含的主題旨在讓您快速獲得至 Windows Communication Foundation (WCF) 程式設計經驗。 每個主題已設計成依本主題結尾的清單順序完成。 循序完成本教學課程可讓您建立 WCF 服務和用戶端應用程式所需的步驟大致了解。 服務會公開一個或多個端點，而其中每個端點都會公開一項或多項服務作業。 *端點*服務的指定位置可以找到服務，包含的資訊，說明服務與合約定義的功能，用戶端必須之間的通訊的繫結位址服務提供給其用戶端。
@@ -22,7 +22,7 @@ ms.locfileid: "54491359"
 
 在本節中的主題會假設您使用 Visual Studio 作為開發環境。 如果您使用另一個開發環境，請略過 Visual Studio 特定指示。
 
-範例應用程式，可以下載到您的硬碟並執行，請參閱中的主題[Windows Communication Foundation 範例](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)。 本主題中，特別是，請參閱[開始使用](../../../docs/framework/wcf/samples/getting-started-sample.md)。
+範例應用程式，可以下載到您的硬碟並執行，請參閱中的主題[Windows Communication Foundation (WCF) 範例](./samples/index.md)。 本主題中，特別是，請參閱[開始使用](../../../docs/framework/wcf/samples/getting-started-sample.md)。
 
 如需建立服務和用戶端的詳細深入資訊，請參閱 <<c0> [ 基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。
 
@@ -58,7 +58,7 @@ ms.locfileid: "54491359"
 
 ## <a name="related-sections"></a>相關章節
 
-- [Windows Communication Foundation 範例](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Windows Communication Foundation (WCF) 範例](./samples/index.md)
 - [基本程式設計週期](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 
 ## <a name="see-also"></a>另請參閱

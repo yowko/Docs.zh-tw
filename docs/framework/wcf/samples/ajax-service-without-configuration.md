@@ -2,17 +2,17 @@
 title: 無組態的 AJAX 服務
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: f722eac27fadbd772b85a638c3c9171c2783a8b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ea5c61ea3f0f8adcce6dc14be11a8b098c7ca0f
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582180"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332919"
 ---
 # <a name="ajax-service-without-configuration"></a>無組態的 AJAX 服務
 這個範例會示範如何使用 Windows Communication Foundation (WCF) 建立基本 ASP.NET Asynchronous JavaScript 與 XML (AJAX) 服務 （您可以使用 Web 瀏覽器用戶端的 JavaScript 程式碼存取的服務） 不使用任何組態設定。 此服務會在 .svc 檔中使用特殊語法以自動啟用 AJAX 端點。  
   
- 在 WCF 中的 AJAX 支援最適合用於透過 ASP.NET AJAX`ScriptManager`控制項。 使用 WCF 與 ASP.NET AJAX 的範例，請參閱[Ajax 範例](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
+ 在 WCF 中的 AJAX 支援最適合用於透過 ASP.NET AJAX`ScriptManager`控制項。 使用 WCF 與 ASP.NET AJAX 的範例，請參閱[Ajax 範例](ajax.md)。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  

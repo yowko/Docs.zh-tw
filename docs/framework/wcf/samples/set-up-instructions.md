@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: b5c57b7b7fa2fe72d0fbad6d7fcf5aa17f2abad8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fc68759e3057b6a1fd2a2ca4e0bffe81cea5f095
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529574"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333426"
 ---
 # <a name="set-up-instructions"></a>設定指示
 這組主題描述如何設定執行 Windows Communication Foundation (WCF) 服務所需的服務。  
@@ -37,11 +37,8 @@ ms.locfileid: "43529574"
  [執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)  
  概述在相同電腦上，與跨電腦執行的 WCF 範例的步驟。  
   
- [啟用對等服務](https://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
- 概述安裝 Windows 對等元件 (即對等訊息服務的內建解析程式) 的步驟。  
-  
  [安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  概述安裝訊息佇列的步驟。  
   
 ## <a name="related-sections"></a>相關章節  
- [疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+ [WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

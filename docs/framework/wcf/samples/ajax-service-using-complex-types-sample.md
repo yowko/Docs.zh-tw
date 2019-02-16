@@ -2,17 +2,17 @@
 title: 使用複雜型別的 AJAX 服務範例
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: 338d7105180df94f85647da413fc682451b7c9d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17c760c8276799fed7e7a8366c17ef9f5cf7081c
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676662"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333478"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>使用複雜型別的 AJAX 服務範例
 此範例示範如何使用 Windows Communication Foundation (WCF) 來建立 ASP.NET Asynchronous JavaScript 與 XML (AJAX) 服務會建立複雜型別的執行個體，並將它們傳送服務和用戶端做為 JavaScript Object Notation (JSON) 之間。 您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取 AJAX 服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例。  
   
- 在 WCF 中的 AJAX 支援最適合用於透過 ASP.NET AJAX<xref:System.Web.UI.ScriptManager>控制項。 使用 WCF 與 ASP.NET AJAX 的範例，請參閱[AJAX 範例](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
+ 在 WCF 中的 AJAX 支援最適合用於透過 ASP.NET AJAX<xref:System.Web.UI.ScriptManager>控制項。 使用 WCF 與 ASP.NET AJAX 的範例，請參閱[AJAX 範例](ajax.md)。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  

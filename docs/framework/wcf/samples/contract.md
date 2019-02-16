@@ -1,26 +1,27 @@
 ---
-title: Contract2
+title: WCF 合約範例
 ms.date: 03/30/2017
 ms.assetid: 305eeb65-a52f-459e-9aa8-0ef071eade16
-ms.openlocfilehash: 1b751e3d4fd6eae01e3fcd7500f844427d46524c
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 051a6fc1af7483c5b7c512de6a47afe0b39ae3ad
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809361"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332477"
 ---
 # <a name="contract"></a>合約
-本節包含示範合約 Windows Communication Foundation (WCF) 的範例。  
+
+本節包含示範如何在 Windows Communication Foundation (WCF) 合約的範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [資料合約](../../../../docs/framework/wcf/samples/data-contracts.md)  
- 示範在 WCF 中的資料合約。  
+ 示範如何在 WCF 中的資料合約。  
   
  [訊息合約](../../../../docs/framework/wcf/samples/message-contracts.md)  
- 示範在 WCF 中的訊息合約。  
+ 示範如何在 WCF 中的訊息合約。  
   
  [服務合約](../../../../docs/framework/wcf/samples/service-contracts.md)  
- 示範在 WCF 中的服務合約。  
+ 示範中 WCF 服務合約。  
   
  [DataContractResolver](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
  示範如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 類別自訂序列化和還原序列化程序。  

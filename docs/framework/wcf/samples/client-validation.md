@@ -2,19 +2,19 @@
 title: 用戶端驗證
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 3a80121894ddbb753efbe047d14a14a57f8dddc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b033695065dfeb130f041563909704acb84bb3be
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640000"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333296"
 ---
 # <a name="client-validation"></a>用戶端驗證
 服務經常會發行中繼資料，以便自動產生和設定用戶端 Proxy 型別。 當服務不受信任時，用戶端應用程式應該根據安全性、交易和服務合約類型等條件，驗證中繼資料是否符合用戶端應用程式的原則。 下列範例會示範如何撰寫用戶端端點行為，此行為會驗證服務端點以確定能夠安全地使用服務端點。  
   
  服務會公開 (Expose) 四個服務端點。 第一個端點使用 WSDualHttpBinding，第二個端點會使用 NTLM 驗證，第三個端點會啟用交易流程，而第四個端點會使用憑證架構的驗證。  
   
- 用戶端會使用 <xref:System.ServiceModel.Description.MetadataResolver> 類別來擷取服務的中繼資料。 用戶端會使用驗證行為，強制禁止雙工繫結程序、NTLM 驗證與異動流程的原則。 每個<xref:System.ServiceModel.Description.ServiceEndpoint>執行個體會從服務的中繼資料，用戶端應用程式匯入將執行個體`InternetClientValidatorBehavior`端點行為<xref:System.ServiceModel.Description.ServiceEndpoint>再嘗試連線到使用 Windows Communication Foundation (WCF) 用戶端端點。 此行為的 `Validate` 方法會在呼叫服務的任何作業之前執行，並且擲回 `InvalidOperationExceptions` 以強制執行該用戶端的原則。  
+ 用戶端會使用 <xref:System.ServiceModel.Description.MetadataResolver> 類別來擷取服務的中繼資料。 用戶端會使用驗證行為，強制禁止雙工繫結、NTLM 驗證與交易流程的原則。 每個<xref:System.ServiceModel.Description.ServiceEndpoint>執行個體會從服務的中繼資料，用戶端應用程式匯入將執行個體`InternetClientValidatorBehavior`端點行為<xref:System.ServiceModel.Description.ServiceEndpoint>再嘗試連線到使用 Windows Communication Foundation (WCF) 用戶端端點。 此行為的 `Validate` 方法會在呼叫服務的任何作業之前執行，並且擲回 `InvalidOperationExceptions` 以強制執行該用戶端的原則。  
   
 ### <a name="to-build-the-sample"></a>若要建置範例  
   
@@ -28,7 +28,7 @@ ms.locfileid: "54640000"
   
 3.  從 \client\bin\Debug 執行用戶端應用程式。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 5.  當您完成範例時，請執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54640000"
   
 10. 在用戶端電腦上執行 client.exe。  
   
-    1.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+    1.  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

@@ -2,12 +2,12 @@
 title: 服務端點與佇列定址
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: b513dbf5bfde812c551335826813967272bfd708
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b4eca1519eeb1ed6357b625a3253105ece2b8ad
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613918"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332516"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服務端點與佇列定址
 本主題將討論用戶端如何針對從佇列讀取的服務進行定址，以及服務端點如何對應至佇列。 提醒您下, 圖顯示傳統 Windows Communication Foundation (WCF) 已排入佇列的應用程式部署。  
@@ -46,7 +46,7 @@ ms.locfileid: "54613918"
   
  接聽項會使用佇列位址來當成接聽 URI 以讀取訊息。 換句話說，佇列位址等於 TCP 通訊端的接聽連接埠。  
   
- 當端點要從佇列中讀取時，必須以先前開啟 ServiceHost 時所指定的相同配置來指定佇列位址。 如需範例，請參閱[Net MSMQ 繫結](../../../../docs/framework/wcf/samples/net-msmq-binding.md)並[訊息佇列整合繫結範例](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)。  
+ 當端點要從佇列中讀取時，必須以先前開啟 ServiceHost 時所指定的相同配置來指定佇列位址。 如需範例，請參閱[Net MSMQ 繫結](../../../../docs/framework/wcf/samples/net-msmq-binding.md)。  
   
 ### <a name="multiple-contracts-in-a-queue"></a>佇列中多個合約  
  佇列中的訊息可以實作不同的合約。 在此情況下，下列任何一項必須為真，以順利讀取並處理所有訊息：  
@@ -63,7 +63,8 @@ ms.locfileid: "54613918"
  指定 `QueueTransferProtocol` 屬性是一種僅限傳送的功能。 用戶端會使用這種方式來表示要使用哪種佇列傳輸通訊協定。  
   
 ### <a name="using-active-directory"></a>使用 Active Directory  
- MSMQ 預設支援 Active Directory 整合。 當 MSMQ 與 Active Directory 整合一併安裝時，電腦必須是 Windows 網域的一部分。 Active Directory 用來發行佇列，以供探索。這類佇列稱為*公用佇列*。 針對佇列進行定址時，可以使用 Active Directory 來解析佇列。 這與使用網域名稱系統 (DNS) 來解析網路名稱 IP 位址有異曲同工之妙。 `UseActiveDirectory` 中的 `NetMsmqBinding` 屬性是一項布林值，可表示佇列通道是否該使用 Active Directory 來解析佇列 URI。 根據預設，此屬性設定為 `false`。 如果 `UseActiveDirectory` 屬性設為 `true`，則佇列通道會使用 Active Directory 將 net.msmq:// URI 轉換為格式名稱。  
+ MSMQ 預設支援 Active Directory 整合。 當 MSMQ 與 Active Directory 整合一併安裝時，電腦必須是 Windows 網域的一部分。 Active Directory 用來發行佇列，以供探索。這類佇列稱為*公用佇列*。 針對佇列進行定址時，可以使用 Active Directory 來解析佇列。 這與使用網域名稱系統 (DNS) 來解析網路名稱 IP 位址有異曲同工之妙。 
+  `UseActiveDirectory` 中的 `NetMsmqBinding` 屬性是一項布林值，可表示佇列通道是否該使用 Active Directory 來解析佇列 URI。 根據預設，此屬性設定為 `false`。 如果 `UseActiveDirectory` 屬性設為 `true`，則佇列通道會使用 Active Directory 將 net.msmq:// URI 轉換為格式名稱。  
   
  只有當用戶端傳送訊息時，`UseActiveDirectory` 屬性才有意義，因為當傳送訊息時，會使用此屬性來解析佇列位址。  
   
@@ -92,7 +93,8 @@ ms.locfileid: "54613918"
  WCF 服務驗證，與其正在接聽的特定佇列完成定址所有收到的訊息。 如果訊息的目的地佇列不符合找到的佇列，則服務將無法處理訊息。 這是負責接聽寄不出的信件佇列的服務必須解決的問題，因為寄不出的信件佇列中任何訊息都是要傳送到其他地方的。 若要從寄不出的信件佇列或有害佇列中讀取訊息，必須使用包含 `ServiceBehavior` 參數的 <xref:System.ServiceModel.AddressFilterMode.Any>。 如需範例，請參閱[寄不出信件佇列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)。  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding 與服務定址  
- `MsmqIntegrationBinding` 是用來與傳統 MSMQ 應用程式進行通訊的。 為了簡化與現有的 MSMQ 應用程式的互通，WCF 會支援僅格式名稱定址。 因此，使用此繫結來傳送的訊息必須符合下列 URI 配置：  
+ 
+  `MsmqIntegrationBinding` 是用來與傳統 MSMQ 應用程式進行通訊的。 為了簡化與現有的 MSMQ 應用程式的互通，WCF 會支援僅格式名稱定址。 因此，使用此繫結來傳送的訊息必須符合下列 URI 配置：  
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   

@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: 56b82b44b56ab336ae9a460c328b76aa6974fcd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00cbea3ae4528016a736c639c07059c1d2cb6407
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559758"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332035"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>HOW TO：實作非同步服務作業
-在 Windows Communication Foundation (WCF) 應用程式中，實作服務作業可以非同步或同步不需規定用戶端如何呼叫它。 例如，非同步服務作業可以利用同步方式呼叫，而同步服務作業可以透過非同步方式呼叫。 如需示範如何在用戶端應用程式中以非同步方式呼叫作業的範例，請參閱[How to:以非同步方式呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。 如需有關同步和非同步作業的詳細資訊，請參閱 < [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)並[同步和非同步作業](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。 本主題描述非同步服務作業的基本結構，程式碼尚未完成。 如需服務和用戶端的側邊的完整範例[非同步](https://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)。  
+在 Windows Communication Foundation (WCF) 應用程式中，實作服務作業可以非同步或同步不需規定用戶端如何呼叫它。 例如，非同步服務作業可以利用同步方式呼叫，而同步服務作業可以透過非同步方式呼叫。 如需示範如何在用戶端應用程式中以非同步方式呼叫作業的範例，請參閱[How to:以非同步方式呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。 如需有關同步和非同步作業的詳細資訊，請參閱 < [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)並[同步和非同步作業](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。 本主題描述非同步服務作業的基本結構，程式碼尚未完成。 服務和用戶端的側邊的完整範例，請參閱 <<c0> [ 非同步](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100))。  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>以非同步方式實作服務作業  
   
-1.  在您的服務合約中，根據 .NET 非同步設計方針宣告一個非同步方法組。 `Begin` 方法可接受一個參數、回呼物件和狀態物件，並傳回 <xref:System.IAsyncResult?displayProperty=nameWithType> 和對應的 `End` 方法，該方法會接受 <xref:System.IAsyncResult?displayProperty=nameWithType> 並傳回其傳回值。 如需有關非同步呼叫的詳細資訊，請參閱[非同步程式設計模式](https://go.microsoft.com/fwlink/?LinkId=248221)。  
+1.  在您的服務合約中，根據 .NET 非同步設計方針宣告一個非同步方法組。 
+  `Begin` 方法可接受一個參數、回呼物件和狀態物件，並傳回 <xref:System.IAsyncResult?displayProperty=nameWithType> 和對應的 `End` 方法，該方法會接受 <xref:System.IAsyncResult?displayProperty=nameWithType> 並傳回其傳回值。 如需有關非同步呼叫的詳細資訊，請參閱[非同步程式設計模式](https://go.microsoft.com/fwlink/?LinkId=248221)。  
   
 2.  使用 `Begin` 屬性 (Attribute) 來標記非同步方法組中的 <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType> 方法，並將 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A?displayProperty=nameWithType> 屬性 (Property) 設定為 `true`。 例如，下列程式碼會執行步驟 1 和 2。  
   

@@ -2,12 +2,12 @@
 title: HOW TO：保護可靠工作階段內的訊息
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
-ms.openlocfilehash: 4d35f88e127bdd813a2f41a51e2aba69dc688ae6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ee35f2a36ca08814423b5a3d0b1432bacd28c2e5
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185348"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333049"
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>HOW TO：保護可靠工作階段內的訊息
 
@@ -21,7 +21,7 @@ ms.locfileid: "50185348"
 
 1. 指定要向服務驗證用戶端時，用戶端必須使用的用戶端認證類型。
 
-請務必在第一個工作中的端點組態項目包含`bindingConfiguration`參考 （在此範例中） 名為繫結組態的屬性`MessageSecurity`。 [ **\<繫結 >** ](../../../../docs/framework/misc/binding.md)組態項目接著會參考此名稱，藉此啟用可靠工作階段`enabled`屬性[  **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)項目`true`。 您可以將 `ordered` 屬性設為 `true`，要求在可靠工作階段中提供依順序遞送的保證。
+請務必在第一個工作中的端點組態項目包含`bindingConfiguration`參考 （在此範例中） 名為繫結組態的屬性`MessageSecurity`。 [ **\<繫結 >** ](../../../../docs/framework/misc/binding.md)組態項目接著會參考此名稱，藉此啟用可靠工作階段`enabled`屬性[  **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))項目`true`。 您可以將 `ordered` 屬性設為 `true`，要求在可靠工作階段中提供依順序遞送的保證。
 
 如需此組態程序為基礎的範例的原始檔複本，請參閱 < [WS 可靠工作階段](../../../../docs/framework/wcf/samples/ws-reliable-session.md)。
 
@@ -34,11 +34,11 @@ ms.locfileid: "50185348"
 
 ### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>透過 WSHttpBinding 使用可靠工作階段設定服務
 
-此程序所述[如何： Exchange 訊息在可靠工作階段](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)。
+此程序所述[How to:可靠工作階段內交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)。
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>透過 WSHttpBinding 使用可靠工作階段設定的用戶端
 
-此程序所述[如何： Exchange 訊息在可靠工作階段](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)。
+此程序所述[How to:可靠工作階段內交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)。
 
 ### <a name="set-the-mode-and-clientcredentialtype-in-configuration"></a>在組態中設定模式與 clientcredentialtype 屬性
 

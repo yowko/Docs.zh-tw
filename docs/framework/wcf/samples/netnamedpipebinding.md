@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: d35d5115f6005578164d13b94c9940152ddc1c56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f57a5df92b1e1dd20575c7930ac2a6eb546e1400
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734457"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332997"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 此範例示範 `netNamedPipeBinding` 繫結，這會在相同電腦上提供跨處理序通訊。 具名通道不會跨電腦作業。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)計算機服務。  
@@ -19,7 +19,7 @@ ms.locfileid: "54734457"
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 用戶端和服務的組態檔中會指定繫結。 中指定的繫結型別`binding`的屬性[\<端點 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目，如下列範例組態所示：  
+ 用戶端和服務的組態檔中會指定繫結。 中指定的繫結型別`binding`的屬性[\<端點 >](../../configure-apps/file-schema/wcf/endpoint-element.md)或是[\<端點 > 的\<用戶端 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)項目，如中所示下列範例組態：  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  

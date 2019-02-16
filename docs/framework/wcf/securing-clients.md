@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: d76b7db8a3c8f2dcdc8bdbc325a1bb14b87229ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb8d2161800b336cd7f605dda79f28dbb5b91848
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721106"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333465"
 ---
 # <a name="securing-clients"></a>確保用戶端的安全
 在 Windows Communication Foundation (WCF) 中，服務說明用戶端的安全性需求。 也就是說，服務會指定使用哪一個安全性模式，以及用戶端是否必須提供認證。 因此，保護用戶端安全的程序便十分簡單，只要使用從服務 (如果已發行) 取得的中繼資料並建立用戶端即可。 中繼資料指定如何設定用戶端。 如果服務要求用戶端提供認證，則您必須取得符合要求的認證。 本主題將進一步探討此程序。 如需建立安全服務的詳細資訊，請參閱[Securing Services](../../../docs/framework/wcf/securing-services.md)。  
@@ -38,10 +38,10 @@ ms.locfileid: "54721106"
 2.  指定實際的用戶端認證。 實際的用戶端認證稱為*用戶端認證值*以區分它與類型。 例如，如果用戶端認證類型指定憑證，您必須提供由服務信任的憑證授權單位核發的 X.509 憑證。  
   
 ### <a name="determining-the-client-credential-type"></a>判斷用戶端認證類型  
- 如果您有 Svcutil.exe 工具產生的檔案，請檢查組態[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)區段可決定哪些用戶端認證類型是必要項。 在該部分內有指定安全性需要的繫結程序項目。 具體來說，檢查\<安全性 > 的每個繫結項目。 該項目包括 `mode` 屬性，您可以將該屬性設定為三個可能值 (`Message`、`Transport` 或 `TransportWithMessageCredential`) 的其中之一。 屬性的值決定模式，而模式決定哪一個子項目是重要的。  
+ 如果您有 Svcutil.exe 工具產生的檔案，請檢查組態[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)區段可決定哪些用戶端認證類型是必要項。 在該部分內有指定安全性需要的繫結項目。 具體來說，檢查\<安全性 > 的每個繫結項目。 該項目包括 `mode` 屬性，您可以將該屬性設定為三個可能值 (`Message`、`Transport` 或 `TransportWithMessageCredential`) 的其中之一。 屬性的值決定模式，而模式決定哪一個子項目是重要的。  
   
  `<security>`項目可以包含`<transport>`或`<message>`項目，或兩者。 重要的項目就是符合安全性模式的項目。 例如，下列程式碼指定安全性模式為 `"Message"`，而且 `<message>` 項目的用戶端認證類型是 `"Certificate"`。 在這個情況中，可以忽略 `<transport>` 項目。 但 `<message>` 項目指定必須提供 X.509 憑證。  
-  
+
 ```xml  
 <wsHttpBinding>  
     <binding name="WSHttpBinding_ICalculator">  
@@ -56,7 +56,7 @@ ms.locfileid: "54721106"
     </binding>  
 </wsHttpBinding>  
 ```  
-  
+
  請注意，如果 `clientCredentialType` 屬性已設定為 `"Windows"`，如下列範例所示，您不需要提供實際的認證值。 這是因為 Windows 整合式安全性已提供執行用戶端之人員的實際認證 (Kerberos 權杖)。  
   
 ```xml  
@@ -107,29 +107,22 @@ ms.locfileid: "54721106"
 </configuration>  
 ```  
   
- 若要設定的用戶端認證組態中，新增[ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)至組態檔的項目。 此外，您必須將新增的行為項目連結至服務的端點使用`behaviorConfiguration`的屬性[\<端點 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目，如下列範例所示。 `behaviorConfiguration` 屬性的值必須與 `name` 屬性的值相符。  
-  
- `<configuration>`  
-  
- `<system.serviceModel>`  
-  
- `<client>`  
-  
- `<endpoint address="http://localhost/servicemodelsamples/service.svc"`  
-  
- `binding="wsHttpBinding"`  
-  
- `bindingConfiguration="Binding1"`  
-  
- `behaviorConfiguration="myEndpointBehavior"`  
-  
- `contract="Microsoft.ServiceModel.Samples.ICalculator" />`  
-  
- `</client>`  
-  
- `</system.serviceModel>`  
-  
- `</configuration>`  
+ 若要設定的用戶端認證組態中，新增[ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)至組態檔的項目。 此外，您必須將新增的行為項目連結至服務的端點使用`behaviorConfiguration`的屬性[\<端點 > 的\<用戶端 >](../configure-apps/file-schema/wcf/endpoint-of-client.md)項目，如下列範例所示。 
+  `behaviorConfiguration` 屬性的值必須與 `name` 屬性的值相符。  
+
+```xml
+<configuration>
+  <system.serviceModel>
+    <client>
+      <endpoint address="http://localhost/servicemodelsamples/service.svc"
+                binding="wsHttpBinding"
+                bindingConfiguration="Binding1"
+                behaviorConfiguration="myEndpointBehavior"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </client>
+  </system.serviceModel>
+</configuration>
+```
   
 > [!NOTE]
 >  使用應用程式組態檔無法設定某些用戶端認證值，例如使用者名稱和密碼，或者 Windows 使用者和密碼值。 這類認證值只能在程式碼中指定。  

@@ -2,17 +2,18 @@
 title: 自訂繫結安全性
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 49e14fd783fa89f25750aeb00efc105a850c0d3e
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7f4162b26dc64f3108ab77bf7f7587cfdc24339f
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066125"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333439"
 ---
 # <a name="custom-binding-security"></a>自訂繫結安全性
 這個範例會示範如何使用自訂繫結來設定安全性。 它會顯示如何使用自訂繫結同時啟用訊息層級安全性和安全傳輸。 當在用戶端和服務之間傳輸訊息需要安全傳輸，且同時必須保護訊息層級上訊息的安全時，這是相當有用的。 系統提供的繫結不支援這個組態。
 
- 這個範例是由用戶端主控台程式 (EXE) 與服務主控台程式 (EXE) 所組成。 服務會實作雙工合約。 合約是由 `ICalculatorDuplex` 介面所定義，這個介面會公開數學運算作業 (加、減、乘、除)。 `ICalculatorDuplex` 介面允許用戶端執行數學運算，計算整個工作階段的執行結果。 服務可能會獨立地傳回 `ICalculatorDuplexCallback` 介面上的結果。 雙工合約需要一個工作階段，因為必須建立內容，將用戶端與服務之間傳送的訊息關聯在一起。 自訂繫結已定義成支援雙工通訊，而且具備安全性。
+ 這個範例是由用戶端主控台程式 (EXE) 與服務主控台程式 (EXE) 所組成。 服務會實作雙工合約。 合約是由 `ICalculatorDuplex` 介面所定義，這個介面會公開數學運算作業 (加、減、乘、除)。 
+  `ICalculatorDuplex` 介面允許用戶端執行數學運算，計算整個工作階段的執行結果。 服務可能會獨立地傳回 `ICalculatorDuplexCallback` 介面上的結果。 雙工合約需要一個工作階段，因為必須建立內容，將用戶端與服務之間傳送的訊息關聯在一起。 自訂繫結已定義成支援雙工通訊，而且具備安全性。
 
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。
@@ -78,7 +79,8 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 -   建立伺服器憑證。
 
-     下列 Setup.bat 檔中的程式行會建立要使用的伺服器憑證。 `%SERVER_NAME%` 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 這個批次檔的名稱預設為伺服器名稱，localhost。
+     下列 Setup.bat 檔中的程式行會建立要使用的伺服器憑證。 
+  `%SERVER_NAME%` 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 這個批次檔的名稱預設為伺服器名稱，localhost。
 
      憑證會儲存在 Web 裝載服務的 CurrentUser 存放區中。
 
@@ -122,7 +124,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 3.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   

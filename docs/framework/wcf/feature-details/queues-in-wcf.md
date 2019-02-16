@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 13bc401647612c982eb13a3b607e41c6afa61716
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e28c91a8cc1798a4d0cd690f72e503b687af0108
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742743"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332607"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的佇列
 在本節中的主題將討論 Windows Communication Foundation (WCF) 支援佇列。 WCF 會提供支援藉由利用 Microsoft Message Queuing （先前稱為 MSMQ） 做為傳輸佇列，並適用於下列案例：  
@@ -41,7 +41,7 @@ ms.locfileid: "54742743"
  說明如何將佇列中的訊息分組，以協助單一接收應用程式處理相關訊息。  
   
  [批次處理異動中的訊息](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
- 說明如何批次處理異動中的訊息。  
+ 說明如何批次處理交易中的訊息。  
   
  [使用無效信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
  說明如何使用寄不出的信件佇列處理訊息傳送和傳遞失敗，以及如何處理來自寄不出的信件佇列的訊息。  
@@ -63,6 +63,3 @@ ms.locfileid: "54742743"
   
  [佇列通訊的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  說明使用 WCF 的最佳做法佇列通訊。  
-  
-## <a name="see-also"></a>另請參閱
-- [訊息佇列](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

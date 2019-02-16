@@ -2,12 +2,12 @@
 title: 使用傳輸安全性來確保訊息的安全
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 4a67cc8265254741a58c9b86bc45eff9c9366bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 354b014825b3282e494cf75637fb2434acdb2dbe
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747943"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332337"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用傳輸安全性來確保訊息的安全
 本節討論訊息佇列 (MSMQ) 的傳輸安全性，您可以使用這項傳輸安全性確保傳送至佇列之訊息的安全。  
@@ -45,7 +45,8 @@ ms.locfileid: "54747943"
  有了這些基礎之後，下列章節將詳述隨附於 <xref:System.ServiceModel.NetMsmqBinding> 與 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>的傳輸安全性屬性。  
   
 #### <a name="msmq-authentication-mode"></a>MSMQ 驗證模式  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 會要求使用 Windows 網域安全性或外部以憑證為基礎的安全性，藉此保障訊息的安全。 在這兩種驗證模式中，WCF 已排入佇列的傳輸通道會使用`CertificateValidationMode`服務組態中指定。 憑證驗證模式可指定用來檢查憑證效力的機制。  
+ 
+  <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 會要求使用 Windows 網域安全性或外部以憑證為基礎的安全性，藉此保障訊息的安全。 在這兩種驗證模式中，WCF 已排入佇列的傳輸通道會使用`CertificateValidationMode`服務組態中指定。 憑證驗證模式可指定用來檢查憑證效力的機制。  
   
  啟用傳輸安全性後，預設的設定值為 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>。  
   
@@ -97,6 +98,6 @@ ms.locfileid: "54747943"
  支援的演算法為 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 預設為 `SHA1`。  
   
 ## <a name="see-also"></a>另請參閱
-- [訊息佇列](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+- [佇列概觀](queues-overview.md)
 - [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

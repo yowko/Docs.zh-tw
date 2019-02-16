@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 範例的單次安裝程序
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 35eeab5daec6f63f4d3bed85442ffe6ca28dc38b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 705314c1eb0318fe7da53108d51f9dc985a3fdfa
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583389"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333452"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 範例的單次安裝程序
 大部分的 Windows Communication Foundation (WCF) 範例是裝載在網際網路資訊服務 (IIS)，然後執行常見的虛擬目錄中。 這個單次安裝程序會建立磁碟; 上的資料夾它也將虛擬目錄加入至名為 IIS **ServiceModelSamples**。
@@ -25,7 +25,7 @@ ms.locfileid: "54583389"
   
 3.  如果未安裝 Visual Studio 2012，而且您的作業系統不是 Windows Server 2008 SP2 或更新版本中，安裝[Hotfix 251798](https://go.microsoft.com/fwlink/?LinkId=184693)。  
   
-4.  執行下列命令。 如需有關為什麼必須執行這些命令的詳細資訊，請參閱[IIS 裝載的服務失敗](https://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8)。  
+4.  執行下列命令。 如需有關為什麼必須執行這些命令的詳細資訊，請參閱[IIS 裝載的服務失敗](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90))。  
   
     > [!WARNING]
     >  如果您重新安裝了 IIS，就必須再次執行下列命令。

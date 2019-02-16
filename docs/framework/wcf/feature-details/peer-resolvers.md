@@ -2,12 +2,12 @@
 title: 對等解析程式
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: b16358d05b9e457b4542e41297908e225885dad9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7d7b055312fe82bd628f8b07304dc9bb188fffb
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496841"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333374"
 ---
 # <a name="peer-resolvers"></a>對等解析程式
 為了連線至網狀結構，對等節點會需要其他節點的 IP 位址。 IP 位址是透過連絡解析程式服務取得，解析程式服務會取得網狀結構識別碼，並傳回其中位址會對應至以該特定網狀結構識別碼登錄之節點的位址清單。 解析程式會保留已登錄位址的清單，而透過服務登錄網狀結構中的每個節點就可建立此清單。  
@@ -32,7 +32,7 @@ ms.locfileid: "54496841"
 > [!NOTE]
 >  使用本機和即席網路搭配自訂解析程式時，強烈建議使用或支援連結-本機或即席網路的應用程式要包含一種邏輯，這個邏輯會在連線時選取要使用的單一連結-本機位址。 這樣可防止具有多個連結-本機位址的電腦所可能導致的混淆。 為了與此作業保持一致，對等通道每次只會支援使用單一的連結-本機位址。 您可以使用 `ListenIpAddress` 上的 <xref:System.ServiceModel.NetPeerTcpBinding> 屬性來指定這個位址。  
   
- 如需示範如何實作自訂解析程式，請參閱[對等通道自訂對等解析程式](https://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)。  
+ 如需示範如何實作自訂解析程式，請參閱[對等通道自訂對等解析程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Custompeerresolverservice:用戶端註冊](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
