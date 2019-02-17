@@ -4,12 +4,12 @@ description: 了解如何擴充命令列介面 (CLI) 工具。
 author: blackdwarf
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3aedd1d507fde1cd7402ef97fa00d0c7f13005e3
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e93c9c85383d7c541b8ef55a74045307810cbb05
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170232"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093004"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具擴充性模型
 
@@ -79,7 +79,7 @@ CLI 工具可以透過三種主要方式進行擴充：
 您可以在 [.NET Core CLI 存放庫](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects)中找到更多範例和這類不同的組合。
 您也可以在相同的存放庫中查看[所使用工具的實作](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages)。
 
-### <a name="custom-targets"></a>自訂目標
+## <a name="custom-targets"></a>自訂目標
 NuGet 可以[封裝自訂 MSBuild 目標及屬性檔案](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)。 隨著 .NET Core CLI 改為使用 MSBuild，相同的擴充機制現在也適用於 .NET Core 專案。 如果您想要擴充建置程序，或想要在建置程序中存取任何成品 (例如產生的檔案或檢查叫用建置的組態等)，可以使用這種類型的擴充性。
 
 在下列範例中，您可以使用 `csproj` 語法看到目標的專案檔。 這會指示 [`dotnet pack`](dotnet-pack.md) 命令要封裝的內容，並將目標檔案及組件放入套件內的 *build* 資料夾。 請注意，`<ItemGroup>` 項目的 `Label` 屬性設定為 `dotnet pack instructions`，並具有其下定義的 [目標]。
@@ -137,7 +137,7 @@ NuGet 可以[封裝自訂 MSBuild 目標及屬性檔案](/nuget/create-packages/
 
 不過，如果您要為使用者提供更好的使用者體驗，則可以結合個別專案工具和自訂目標。 在此案例中，個別專案工具基本上會只接受任何需要的參數，且會將參數轉譯為將執行目標的必要 [`dotnet msbuild`](dotnet-msbuild.md) 引動過程。 您可以在 [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) 專案中的 [MVP Summit 2016 Hackathon 範例](https://github.com/dotnet/MVPSummitHackathon2016)儲存機制，查看此類協同作用範例。
 
-### <a name="path-based-extensibility"></a>PATH 擴充性
+## <a name="path-based-extensibility"></a>PATH 擴充性
 PATH 擴充性通常用於開發電腦，而在開發電腦中，您需要有概念上涵蓋多個單一專案的工具。 這個延伸模組機制的主要缺點是繫結至工具所在的電腦。 如果您需要在另一部電腦上使用它，則必須部署它。
 
 這種模式的 CLI 工具組擴充性十分簡單。 如 [.NET Core CLI 概觀](index.md)中所涵蓋，`dotnet` 驅動程式可以執行任何在 `dotnet-<command>` 慣例後面命名的命令。 預設解析邏輯會先探查數個位置，最後回復到系統路徑。 如果要求的命令存在於系統 PATH 中，而且是可叫用的二進位檔，`dotnet` 驅動程式將會叫用它。
