@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6732eef46f87d9e2e3aeada138ea28853d3f0479
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663156"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221091"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows 資源當地語系化編輯器)
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>引數
 
-|引數|說明|
+|引數|描述|
 |--------------|-----------------|
 |`resourceFile`|要當地語系化的資源檔。 這個檔案必須是 Visual Studio 設計工具所產生的 Windows Form 表單 .resx 或 .resources 檔案。 Winres.exe 無法開啟泛型 .resx 或 .resources 檔案。|
 
-|選項|說明|
+|選項|描述|
 |------------|-----------------|
 |**/?**|顯示工具的命令語法和選項。|
 
@@ -53,7 +53,7 @@ Windows Form 專案中表單的 UI 項目狀態通常儲存在資源檔內，它
 
 - 文化特性資源檔可以儲存為另一個文化特性資源檔。 例如，英文 (美國) 資源檔可以儲存為波蘭文資源檔。 通常對新檔案會進行後續編輯，以便與新的文化特性相容。
 
-另請參閱[階層式組織當地語系化的資源](https://msdn.microsoft.com/library/756hydy4\(v=vs.110\))或[階層式組織當地語系化的資源](https://msdn.microsoft.com/library/756hydy4\(v=vs.120\))。
+另請參閱[階層式組織當地語系化的資源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110))或[階層式組織當地語系化的資源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120))。
 
 Winres.exe 無法將 .resx 檔案轉換成對應的 .resources 檔案，請改用 Resgen.exe 工具。 如需 Resgen.exe 的詳細資訊，請參閱 [Resgen.exe (資源檔產生器)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)。
 

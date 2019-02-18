@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c2ae67b79559b0966ba0b36bbf420febbcb1672
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74d2f9df5f9a9d34baa6a487730d5a1614d2d142
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693314"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219928"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (程式碼存取安全性原則工具)
 程式碼存取安全性 (CAS) 原則工具 (Caspol.exe) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  
@@ -45,7 +45,7 @@ caspol [options]
   
 #### <a name="parameters"></a>參數  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**-addfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-af** *assembly_file*|將實作自訂安全物件 (例如，自訂授權或自訂成員資格條件) 的組件加入至特定原則層級的完全信任組件清單。 *assembly_file* 引數會指定要新增的組件。 此檔案必須使用[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署。 您可以使用[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)，以強式名稱來簽署組件。<br /><br /> 只要將包含自訂權限的權限集合加入至原則，就必須將實作自訂權限的組件加入至該原則層級的完全信任清單。 實作安全性原則 (例如，電腦原則) 中所使用之自訂安全性物件 (例如自訂程式碼群組或成員資格條件) 的組件，應一律加入至完全信任組件清單。 **注意：** 如果實作自訂安全性物件的組件參考其他組件，您必須先將參考的組件加入至完全信任組件清單中。 使用 Visual Basic、C++ 和 JScript 建立的自訂安全性物件會分別參考 Microsoft.VisualBasic.dll、Microsoft.VisualC.dll 或 Microsoft.JScript.dll。 依預設，這些組件不在完全信任組件清單中。 您必須在加入自訂安全性物件之前，先將適當的組件加入至完全信任清單中， 否則將會破壞安全性系統，造成所有的組件都無法載入。 在這種情況下，Caspol.exe **-all -reset** 選項將不會修復安全性。 若要修復安全性，您必須手動編輯安全性檔案，以移除自訂安全性物件。|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> 或<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|將新的程式碼群組加入至程式碼群組階層架構。 您可以指定 *parent_label* 或 *parent_name*。 *parent_label* 引數會指定所新增程式碼群組之父代的程式碼群組標籤 (例如 1. 或 1.1.)。 *parent_name* 引數會指定要新增之程式碼群組父代的程式碼群組名稱。 由於 *parent_label* 和 *parent_name* 可以交替使用，所以 Caspol.exe 必須能夠區分這兩者。 因此，*parent_name* 不能以數字開頭。 此外，*parent_name* 只能包含 A-Z、0-9 以及底線字元。<br /><br /> *mship* 引數會指定新程式碼群組的成員資格條件。 如需詳細資訊，請參閱本節稍後的 *mship* 引數表。<br /><br /> *pset_name* 引數是權限集合的名稱，其會與新的程式碼群組產生關聯。 您也可以為新群組設定一個或多個 *flags*。 如需詳細資訊，請參閱本節稍後的 *flags* 引數表。|  
@@ -81,7 +81,7 @@ caspol [options]
   
  *mship* 引數可以搭配 **-addgroup** 和 **-chggroup** 選項使用，以指定程式碼群組的成員資格條件 。 系統會以 .NET Framework 類別的形式來實作每個 *mship* 引數。 若要指定 *mship,*，請使用下列其中一種方式。  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |**-allcode**|指定所有程式碼。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>。|  
 |**-appdir**|指定應用程式目錄。 如果您將 **–appdir** 指定為成員資格條件，系統會比較程式碼的 URL 辨識項與該程式碼的應用程式目錄辨識項。 如果兩個辨識項的值相同，表示符合這個成員條件。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>。|  
@@ -95,7 +95,7 @@ caspol [options]
   
  *flags* 引數是使用下列其中一種方式指定，並且可以搭配 **–addgroup** 和 **–chggroup** 選項使用。  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |**-description** "*description*"|如果搭配 **–addgroup** 選項使用，可指定要新增的程式碼群組描述。 如果搭配 **–chggroup** 選項使用，可指定要編輯的程式碼群組描述。 *description* 引數必須括在雙引號中。|  
 |**-exclusive** {**on**&#124;**off**}|設為 **on** 時，表示當部分程式碼符合程式碼群組的成員資格條件時，只會考慮與您要新增或修改的程式碼群組相關聯的權限集合。 這個選項設為 **off** 時，Caspol.exe 會考慮原則層級中所有相符程式碼群組的權限集合。|  
@@ -105,7 +105,7 @@ caspol [options]
 ## <a name="remarks"></a>備註  
  安全性原則是使用三個原則層級表示：電腦原則、使用者原則和企業原則。 組件收到的權限集合是由這三種原則層級允許的權限集合交集所決定。 每個原則層級是以程式碼群組的階層結構表示。 每個程式碼群組都具有成員資格條件，用以判斷哪一個程式碼是該群組的成員。 具名權限集合也會與每個程式碼群組相關聯。 這個權限集合會指定執行階段允許符合成員資格條件的程式碼具備的權限。 程式碼群組階層架構與相關聯的具名權限集合一起定義並維護每一個層級的安全性原則。 您可以使用 **–user**、**-customuser**、**–machine** 和 **-enterprise** 選項來設定安全性原則的層級。  
   
- 如需安全性原則以及執行階段如何決定要授與程式碼之權限的詳細資訊，請參閱[安全性原則管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
+ 如需安全性原則以及執行階段如何決定要授與程式碼之權限的詳細資訊，請參閱[安全性原則管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))。  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>參考程式碼群組和權限集合  
  為了簡化階層架構中程式碼群組的參考，**-list** 選項會以縮排方式顯示程式碼群組清單與其數字標籤 (1、1.1、1.1.1，以此類推)。 其他以程式碼群組為目標的命令列作業也會使用數字標籤參考特定程式碼群組。  

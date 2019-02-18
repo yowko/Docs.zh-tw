@@ -1,14 +1,14 @@
 ---
 title: 使用交叉驗證訓練機器學習模型 - ML.NET
 description: 探索如何使用具有 ML.NET 的交叉驗證訓練機器學習模型，讓模型的預測達到更高的正確性
-ms.date: 02/01/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9ed139aacb41e8f8529f30747486ab1b13183df0
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 8d74b69340895bcfe3cdc3d3a6121d7331a0a5e2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739328"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092276"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>使用交叉驗證訓練機器學習模型 - ML.NET
 
@@ -25,7 +25,7 @@ var mlContext = new MLContext();
 
 // Step one: read the data as an IDataView.
 // First, we define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
         // The four features of the Iris dataset will be grouped together as one Features column.

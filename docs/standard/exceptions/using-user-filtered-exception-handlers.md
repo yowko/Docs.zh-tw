@@ -8,25 +8,26 @@ helpviewer_keywords:
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1e771a95542153dfad0981d3198e6b4c31cdeb9
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 228bae8db833abfa3c8c906d57e2177cde644548
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261416"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304605"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>使用使用者篩選的例外狀況處理常式
+
 目前，Visual Basic 支援使用者篩選的例外狀況。 使用者篩選例外狀況處理常式會依據您定義的例外狀況需求，攔截和處理例外狀況。 這些處理常式會使用 **Catch** 陳述式搭配 **When** 關鍵字。  
   
  當特定例外狀況物件對應至多個錯誤時，這個技術非常有用。 在此情況下，物件通常會有一個屬性，其中包含與錯誤相關聯的特定錯誤碼。 您可以在運算式中使用錯誤碼屬性，只選取您想要在該 **Catch**子句中處理的特定錯誤。  
   
  下列 Visual Basic 範例示範 **Catch/When**陳述式。  
   
-```  
+```vb
 Try  
-      'Try statements.  
-   Catch When Err = VBErr_ClassLoadException  
-      'Catch statements.  
+    'Try statements.  
+    Catch When Err = VBErr_ClassLoadException
+    'Catch statements.
 End Try  
 ```  
   
@@ -37,11 +38,11 @@ End Try
   
  下列 Visual Basic 範例會顯示 **Catch** 陳述式中的特定例外狀況 `ClassLoadException`，以及使用 **When** 關鍵字的使用者篩選子句。  
   
-```  
+```vb
 Try  
-      'Try statements.  
-   Catch cle As ClassLoadException When cle.IsRecoverable()  
-      'Catch statements.  
+    'Try statements.
+    Catch cle As ClassLoadException When cle.IsRecoverable()  
+    'Catch statements.
 End Try  
 ```  
 

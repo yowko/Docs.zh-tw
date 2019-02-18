@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0832489d74abc3aec78218f87d2bce72e6e68f75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3abce6ef7cb1d3287d9c8b7ceb9333f209e75ad
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632786"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219516"
 ---
 # <a name="runtime-callable-wrapper"></a>執行階段可呼叫包裝函式
 Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) 的 Proxy 來公開 COM 物件。 雖然 RCW 對 .NET 用戶端似乎是個普通物件，但其主要功能是在 .NET 用戶端與 COM 物件之間封送處理呼叫。  
@@ -41,7 +41,7 @@ COM 介面與執行階段可呼叫包裝函式
   
  RCW 使用下表中列出的介面，其包裝的物件會公開這些介面。  
   
-|介面|說明|  
+|介面|描述|  
 |---------------|-----------------|  
 |**IDispatch**|適用於透過反映，晚期繫結至 COM 物件。|  
 |**IErrorInfo**|提供錯誤的文字描述、其來源、說明檔、說明內容，以及定義錯誤之介面的 GUID (.NET 類別一律為 **GUID_NULL**)。|  
@@ -50,7 +50,7 @@ COM 介面與執行階段可呼叫包裝函式
   
  RCW 會選擇性使用下表列出的介面，其包裝的物件會公開這些介面。  
   
-|介面|說明|  
+|介面|描述|  
 |---------------|-----------------|  
 |**IConnectionPoint** 和 **IConnectionPointContainer**|RCW 會將公開連接點事件樣式的物件，轉換成委派架構的事件。|  
 |**IDispatchEx**|如果類別實作 **IDispatchEx**，RCW 就會實作 **IExpando**。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫呼叫。|  
@@ -58,7 +58,6 @@ COM 介面與執行階段可呼叫包裝函式
   
 ## <a name="see-also"></a>另請參閱
 - [COM 包裝函式](com-wrappers.md)
-- [封送處理選取的介面](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))
 - [COM 可呼叫包裝函式](com-callable-wrapper.md)
-- [型別程式庫至組件轉換的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [型別程式庫至組件轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)

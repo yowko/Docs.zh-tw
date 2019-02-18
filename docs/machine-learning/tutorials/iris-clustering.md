@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: ab888a2cd9469d5ce0131ba2b17f7c134cf2855c
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249069"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093602"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>教學課程：ML.NET 的使用叢集學習工具建立鳶尾花叢集
 
@@ -129,7 +129,7 @@ ms.locfileid: "54249069"
 
 請注意，資料行名稱和索引會符合 `IrisData` 類別所定義的結構描述。 <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> 值指定 `float` 類型。
 
-使用具現化的 <xref:Microsoft.ML.Data.TextLoader> 執行個體來建立 <xref:Microsoft.ML.Data.IDataView> 執行個體，以表示定型資料集的資料來源：
+使用具現化的 <xref:Microsoft.ML.Data.TextLoader> 執行個體來建立 <xref:Microsoft.Data.DataView.IDataView> 執行個體，以表示定型資料集的資料來源：
 
 [!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 

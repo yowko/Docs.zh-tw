@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Tlbimp.exe 產生主要 Interop 組件
+title: 作法：使用 Tlbimp.exe 產生主要 Interop 組件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6ef2e11efe858c03d1cf4e7167ae856ec4d690a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1136dd3220b189d60b4972410ce0ce6657d07cd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596133"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218979"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>HOW TO：使用 Tlbimp.exe 產生主要 Interop 組件
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>作法：使用 Tlbimp.exe 產生主要 Interop 組件
 有兩種方式可產生主要 Interop 組件：  
   
 -   使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的[型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "54596133"
   
  安裝在目前的目錄時，無法探索與原始類型程式庫版本號碼不同的相依主要 Interop 組件。 您必須在 Windows 登錄中登錄相依的主要 Interop 組件，或使用 **/reference** 選項，以確定 Tlbimp.exe 能找到相依的 DLL。  
   
- 您也可以包裝類型程式庫的多個版本。 如需相關指示，請參閱[如何：包裝型別程式庫的多個版本](https://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f(v=vs.100))。  
+ 您也可以包裝類型程式庫的多個版本。 如需相關指示，請參閱[如何：包裝型別程式庫的多個版本](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100))。  
   
 ## <a name="example"></a>範例  
  下列範例會匯入 COM 類型程式庫  `LibUtil.tlb`，並使用金鑰檔案 `CompanyA.snk` 將組件 `LibUtil.dll` 簽署為強式名稱。 藉由略過特定命名空間名稱，此範例會產生預設的命名空間 `LibUtil`。  

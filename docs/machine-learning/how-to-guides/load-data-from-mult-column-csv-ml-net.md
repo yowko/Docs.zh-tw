@@ -1,14 +1,14 @@
 ---
 title: 從 CSV 檔案的許多資料行載入資料以進行機器學習處理 - ML.NET
 description: 了解如何從 CSV 檔案的許多資料行載入資料，以用於使用 ML.NET 進行機器學習模型建立、定型及評分
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a06d7edfb4746a39377116b15903b68f8723cb02
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: b295653d1bd3a955c2e6da929dc8f2d4d0a4c14d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479707"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091964"
 ---
 # <a name="load-data-with-many-columns-from-a-csv-file-for-machine-learning-processing---mlnet"></a>從 CSV 檔案的許多資料行載入資料以進行機器學習處理 - ML.NET
 
@@ -33,7 +33,7 @@ ms.locfileid: "55479707"
 var mlContext = new MLContext();
 
 // Create the reader: define the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
     // We read the first 10 values as a single float vector.

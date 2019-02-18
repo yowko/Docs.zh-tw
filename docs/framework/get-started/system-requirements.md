@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2655cf5d5fb211149bdbe09179707ec53c737d3
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 7cbc639c9fed90b25c034964b5a504e880876b54
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204557"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091834"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系統需求
 
@@ -98,7 +98,7 @@ ms.locfileid: "55204557"
 
 - [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 包含 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，因此，您不需要另外安裝。 同樣地，[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] 包含 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]。
 
-- Windows Server 2008 R2 SP1 (含) 更新版本的伺服器核心角色，對於 .NET Framework 的支援有限。 請參閱[伺服器核心 .NET 功能](https://msdn.microsoft.com/library/ee391632.aspx)，以取得不受支援的 API 清單。
+- Windows Server 2008 R2 SP1 (含) 更新版本的伺服器核心角色，對於 .NET Framework 的支援有限。 請參閱[伺服器核心 .NET 功能](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85))，以取得不受支援的 API 清單。
 
 - Itanium 型系統的 Windows Server 2008 R2 不支援.NET Framework。
 
@@ -112,4 +112,4 @@ ms.locfileid: "55204557"
 
 - [安裝指南](../../../docs/framework/install/index.md)
 - [快速入門](../../../docs/framework/get-started/index.md)
-- [針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

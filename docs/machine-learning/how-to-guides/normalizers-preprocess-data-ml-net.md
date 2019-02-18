@@ -1,14 +1,14 @@
 ---
 title: 使用正常化來前置處理訓練資料，以用於資料處理 - ML.NET
 description: 了解如何使用正常化工具來前置處理訓練資料，以用於使用 ML.NET 進行的機器學習模型建置、訓練及評分
-ms.date: 02/01/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4311307f5410a96bb4a30fcedd88bc43afd25c12
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 28d358cd381f71b4116e1dd25d847fc51835f09e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738574"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093043"
 ---
 # <a name="preprocess-training-data-with-normalizers-to-use-in-data-processing---mlnet"></a>使用正常化來前置處理訓練資料，以用於資料處理 - ML.NET
 
@@ -29,7 +29,7 @@ ML.NET 公開了許多[參數及非參數演算法](https://machinelearningmaste
 var mlContext = new MLContext();
 
 // Define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
         // The four features of the Iris dataset will be grouped together as one Features column.
@@ -49,9 +49,9 @@ var trainData = reader.Read(dataPath);
 // Apply all kinds of standard ML.NET normalization to the raw features.
 var pipeline =
     mlContext.Transforms.Normalize(
-        new NormalizingEstimator.MinMaxColumn("Features", "MinMaxNormalized", fixZero: true),
-        new NormalizingEstimator.MeanVarColumn("Features", "MeanVarNormalized", fixZero: true),
-        new NormalizingEstimator.BinningColumn("Features", "BinNormalized", numBins: 256));
+            new NormalizingEstimator.MinMaxColumn(inputColumnName:"Features", outputColumnName:"MinMaxNormalized", fixZero: true),
+            new NormalizingEstimator.MeanVarColumn(inputColumnName: "Features", outputColumnName: "MeanVarNormalized", fixZero: true),
+            new NormalizingEstimator.BinningColumn(inputColumnName: "Features", outputColumnName: "BinNormalized", numBins: 256));
 
 // Let's train our pipeline of normalizers, and then apply it to the same data.
 var normalizedData = pipeline.Fit(trainData).Transform(trainData);

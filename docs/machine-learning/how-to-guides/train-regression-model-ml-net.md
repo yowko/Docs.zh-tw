@@ -1,14 +1,14 @@
 ---
 title: 使用 ML.NET 將迴歸模型定型以預測值
 description: 探索如何使用 ML.NET 將機器學習迴歸模型定型以預測值
-ms.date: 02/01/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: febf12565b9ae5509efec9f350f413df99ba1c05
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739445"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092900"
 ---
 # <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a>使用 ML.NET 將迴歸模型定型以預測值
 
@@ -35,7 +35,7 @@ var mlContext = new MLContext();
 // Step one: read the data as an IDataView.
 
 // First, we define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
         columns: new TextLoader.Column[]
         {
             // We read the first 11 values as a single float vector.

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用反映發出定義泛型型別
+title: 作法：使用反映發出定義泛型型別
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8109bfd590e5cb08e0031dcfcab5090160b2932b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74ddda813d756fb5cb54cb600e3cbf1cf68b3f38
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645054"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221143"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>HOW TO：使用反映發出定義泛型型別
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>作法：使用反映發出定義泛型型別
 本主題示範如何建立具有兩個型別參數的簡單泛型類型、如何將類別條件約束、介面條件約束及特殊條件約束套用至型別參數，以及如何建立成員，以使用類別的型別參數作為參數類型及傳回類型。  
   
 > [!IMPORTANT]
@@ -137,5 +137,5 @@ ms.locfileid: "54645054"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
-- [使用反映發出](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)
-- [反映發出動態組件案例](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+- [使用反映發出](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [反映發出動態組件案例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

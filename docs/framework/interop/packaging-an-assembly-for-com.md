@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 453ace4af7ce07c8d81b6d7ece71140e04bfa9bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d51fcbdeeaa1fe30bbdeff5eb85a1c15fa9b4847
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531508"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221078"
 ---
 # <a name="packaging-an-assembly-for-com"></a>封裝 COM 的組件
 COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型的下列資訊：  
@@ -60,7 +60,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
   
      不論您選擇的機制為何，只有所提供組件中定義的公用類型才會包含在所產生的型別程式庫中。  
   
-     您可以將型別程式庫包裝為個別檔案，或將它當成 Win32 資源檔內嵌在 .NET 架構應用程式內。 Microsoft Visual Basic 6.0 已自動為您執行這項工作；不過，使用 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 時，您必須手動內嵌型別程式庫。 如需相關指示，請參閱[如何：將型別程式庫當作 Win32 資源內嵌在 .NET 架構應用程式中](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))。  
+     您可以將型別程式庫包裝為個別檔案，或將它當成 Win32 資源檔內嵌在 .NET 架構應用程式內。 Microsoft Visual Basic 6.0 已自動為您執行這項工作；不過，使用 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 時，您必須手動內嵌型別程式庫。 如需相關指示，請參閱[如何：將型別程式庫當作 Win32 資源內嵌在 .NET 架構應用程式中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))。  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>類型程式庫匯出工具  
@@ -89,4 +89,4 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 - [組件安全性考量](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (類型程式庫匯出工具)](../tools/tlbexp-exe-type-library-exporter.md)
 - [向 COM 註冊組件](registering-assemblies-with-com.md)
-- [如何：將型別程式庫當作 Win32 資源內嵌在應用程式中](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))
+- [如何：將型別程式庫當作 Win32 資源內嵌在應用程式中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))
