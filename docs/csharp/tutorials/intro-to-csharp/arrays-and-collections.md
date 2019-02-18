@@ -3,12 +3,12 @@ title: 使用集合 - C# 教學課程簡介
 description: 在此教學課程中探索 List 集合來了解 C#。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: eaf921be2bd50b6e346f57f42e17f151ff336821
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9a910ccd6265011fc0e5540b461ba089dbd3e7ba
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205278"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261267"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>了解如何使用一般清單類型管理資料收集
 
@@ -19,9 +19,6 @@ ms.locfileid: "50205278"
 ## <a name="a-basic-list-example"></a>基本的清單範例
 
 建立名為 **list-tutorial** 的目錄。 將該目錄設為目前的目錄，並執行 `dotnet new console`。
-
-> [!NOTE]
-> 如果您剛完成[只要 10 分鐘立即上手 .NET](https://www.microsoft.com/net) \(英文\)，則可以繼續使用剛才建立的 myApp 應用程式。
 
 在您最愛的編輯器中開啟 **Program.cs**，並以下列內容取代現有的程式碼：
 
