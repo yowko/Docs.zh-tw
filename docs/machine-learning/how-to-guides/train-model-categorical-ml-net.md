@@ -1,33 +1,33 @@
 ---
 title: 套用特徵工程以對類別目錄資料進行模型定型 - ML.NET
 description: 了解如何使用 ML.NET 在類別目錄資料上為機器學習模型套用特徵工程
-ms.date: 11/07/2018
+ms.date: 02/06/2018
 ms.custom: mvc,how-to
-ms.openlocfilehash: 10441ed4bfad4cccc51ebbf589ef313d1fe53f6e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c24840ee89917d270bcbacbcf36905b4ee82a4aa
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156606"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092081"
 ---
-# <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a><span data-ttu-id="553be-103">套用特徵工程以對類別目錄資料進行模型定型 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="553be-103">Apply feature engineering for model training on categorical data - ML.NET</span></span>
+# <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a><span data-ttu-id="aa992-103">套用特徵工程以對類別目錄資料進行模型定型 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="aa992-103">Apply feature engineering for model training on categorical data - ML.NET</span></span>
 
-<span data-ttu-id="553be-104">因為所有 ML.NET `learners` 都預期功能會是 `float vector`，所以您需要將所有非 float 資料轉換成 `float` 資料類型。</span><span class="sxs-lookup"><span data-stu-id="553be-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+<span data-ttu-id="aa992-104">因為所有 ML.NET `learners` 都預期功能會是 `float vector`，所以您需要將所有非 float 資料轉換成 `float` 資料類型。</span><span class="sxs-lookup"><span data-stu-id="aa992-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="553be-105">如果資料集包含 `categorical` 資料 (例如，'enum')，ML.NET 提供幾種方法將它轉換成特徵：</span><span class="sxs-lookup"><span data-stu-id="553be-105">If the dataset contains `categorical` data (for example, 'enum'), ML.NET offers several ways of converting it to features:</span></span>
+<span data-ttu-id="aa992-105">如果資料集包含 `categorical` 資料 (例如，'enum')，ML.NET 提供幾種方法將它轉換成特徵：</span><span class="sxs-lookup"><span data-stu-id="aa992-105">If the dataset contains `categorical` data (for example, 'enum'), ML.NET offers several ways of converting it to features:</span></span>
 
-- <span data-ttu-id="553be-106">One-Hot 編碼</span><span class="sxs-lookup"><span data-stu-id="553be-106">One-hot encoding</span></span>
-- <span data-ttu-id="553be-107">雜湊型 One-Hot 編碼</span><span class="sxs-lookup"><span data-stu-id="553be-107">Hash-based one-hot encoding</span></span>
-- <span data-ttu-id="553be-108">二進位編碼 (將類別索引轉換成位元序列，並使用位元作為特徵)</span><span class="sxs-lookup"><span data-stu-id="553be-108">Binary encoding (convert category index into a bit sequence and use bits as features)</span></span>
+- <span data-ttu-id="aa992-106">One-Hot 編碼</span><span class="sxs-lookup"><span data-stu-id="aa992-106">One-hot encoding</span></span>
+- <span data-ttu-id="aa992-107">雜湊型 One-Hot 編碼</span><span class="sxs-lookup"><span data-stu-id="aa992-107">Hash-based one-hot encoding</span></span>
+- <span data-ttu-id="aa992-108">二進位編碼 (將類別索引轉換成位元序列，並使用位元作為特徵)</span><span class="sxs-lookup"><span data-stu-id="aa992-108">Binary encoding (convert category index into a bit sequence and use bits as features)</span></span>
 
-<span data-ttu-id="553be-109">如果某些類別是非常高基數的 (有許多不同的值，經常出現的為小型集合)，則使用 `one-hot encoding` 可能會浪費資源。</span><span class="sxs-lookup"><span data-stu-id="553be-109">A `one-hot encoding` can be wasteful if some categories are very high-cardinality (lots of different values, with a small set commonly occurring.</span></span> <span data-ttu-id="553be-110">在此情況下，請減少使用計數型特徵選取來編碼之位置的數目。</span><span class="sxs-lookup"><span data-stu-id="553be-110">In that case, reduce the number of slots to encode with count-based feature selection.</span></span>
+<span data-ttu-id="aa992-109">如果某些類別是非常高基數的 (有許多不同的值，經常出現的為小型集合)，則使用 `one-hot encoding` 可能會浪費資源。</span><span class="sxs-lookup"><span data-stu-id="aa992-109">A `one-hot encoding` can be wasteful if some categories are very high-cardinality (lots of different values, with a small set commonly occurring.</span></span> <span data-ttu-id="aa992-110">在此情況下，請減少使用計數型特徵選取來編碼之位置的數目。</span><span class="sxs-lookup"><span data-stu-id="aa992-110">In that case, reduce the number of slots to encode with count-based feature selection.</span></span>
 
-<span data-ttu-id="553be-111">將類別目錄特徵化直接包含在 ML.NET 學習管線中，以確保類別目錄轉換：</span><span class="sxs-lookup"><span data-stu-id="553be-111">Include categorical featurization directly in the ML.NET learning pipeline to ensure that the categorical transformation:</span></span>
+<span data-ttu-id="aa992-111">將類別目錄特徵化直接包含在 ML.NET 學習管線中，以確保類別目錄轉換：</span><span class="sxs-lookup"><span data-stu-id="aa992-111">Include categorical featurization directly in the ML.NET learning pipeline to ensure that the categorical transformation:</span></span>
 
-- <span data-ttu-id="553be-112">只在定型資料 (而不在測試資料) 上接受「定型」、</span><span class="sxs-lookup"><span data-stu-id="553be-112">is only 'trained' on the training data, and not on your test data,</span></span>
-- <span data-ttu-id="553be-113">正確地套用至新的內送資料、在預測時間沒有額外的前置處理。</span><span class="sxs-lookup"><span data-stu-id="553be-113">is correctly applied to new incoming data, without extra pre-processing at prediction time.</span></span>
+- <span data-ttu-id="aa992-112">只在定型資料 (而不在測試資料) 上接受「定型」、</span><span class="sxs-lookup"><span data-stu-id="aa992-112">is only 'trained' on the training data, and not on your test data,</span></span>
+- <span data-ttu-id="aa992-113">正確地套用至新的內送資料、在預測時間沒有額外的前置處理。</span><span class="sxs-lookup"><span data-stu-id="aa992-113">is correctly applied to new incoming data, without extra pre-processing at prediction time.</span></span>
 
-<span data-ttu-id="553be-114">以下範例說明[成人人口普查資料集](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt)的類別目錄處理：</span><span class="sxs-lookup"><span data-stu-id="553be-114">The following example illustrates categorical handling for the [adult census dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="aa992-114">以下範例說明[成人人口普查資料集](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt)的類別目錄處理：</span><span class="sxs-lookup"><span data-stu-id="aa992-114">The following example illustrates categorical handling for the [adult census dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
 
 ```console
 Label   Workclass   education   marital-status  occupation  relationship    ethnicity   sex native-country-region   age fnlwgt  education-num   capital-gain    capital-loss    hours-per-week
@@ -43,9 +43,8 @@ Label   Workclass   education   marital-status  occupation  relationship    ethn
 var mlContext = new MLContext();
 
 // Define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.TextReader(new TextLoader.Arguments
-{
-    Column = new[] {
+var reader = mlContext.Data.CreateTextLoader(new[] 
+    {
         new TextLoader.Column("Label", DataKind.BL, 0),
         // We will load all the categorical features into one vector column of size 8.
         new TextLoader.Column("CategoricalFeatures", DataKind.TX, 1, 8),
@@ -54,8 +53,8 @@ var reader = mlContext.Data.TextReader(new TextLoader.Arguments
         // Let's also separately load the 'Workclass' column.
         new TextLoader.Column("Workclass", DataKind.TX, 1),
     },
-    HasHeader = true
-});
+    hasHeader: true
+);
 
 // Read the data.
 var data = reader.Read(dataPath);
@@ -64,17 +63,17 @@ var data = reader.Read(dataPath);
 var catColumns = data.GetColumn<string[]>(mlContext, "CategoricalFeatures").Take(10).ToArray();
 
 // Build several alternative featurization pipelines.
-var dynamicPipeline =
+var pipeline =
     // Convert each categorical feature into one-hot encoding independently.
     mlContext.Transforms.Categorical.OneHotEncoding("CategoricalFeatures", "CategoricalOneHot")
-    // Convert all categorical features into indices, and build a 'word bag' of these.
-    .Append(mlContext.Transforms.Categorical.OneHotEncoding("CategoricalFeatures", "CategoricalBag", CategoricalTransform.OutputKind.Bag))
-    // One-hot encode the workclass column, then drop all the categories that have fewer than 10 instances in the train set.
-    .Append(mlContext.Transforms.Categorical.OneHotEncoding("Workclass", "WorkclassOneHot"))
-    .Append(new CountFeatureSelector(mlContext, "WorkclassOneHot", "WorkclassOneHotTrimmed", count: 10));
+        // Convert all categorical features into indices, and build a 'word bag' of these.
+        .Append(mlContext.Transforms.Categorical.OneHotEncoding("CategoricalFeatures", "CategoricalBag",OneHotEncodingTransformer.OutputKind.Bag))
+        // One-hot encode the workclass column, then drop all the categories that have fewer than 10 instances in the train set.
+        .Append(mlContext.Transforms.Categorical.OneHotEncoding("Workclass", "WorkclassOneHot"))
+        .Append(mlContext.Transforms.FeatureSelection.SelectFeaturesBasedOnCount("WorkclassOneHot", "WorkclassOneHotTrimmed", count: 10));
 
 // Let's train our pipeline, and then apply it to the same data.
-var transformedData = dynamicPipeline.Fit(data).Transform(data);
+var transformedData = pipeline.Fit(data).Transform(data);
 
 // Inspect some columns of the resulting dataset.
 var categoricalBags = transformedData.GetColumn<float[]>(mlContext, "CategoricalBag").Take(10).ToArray();
@@ -83,9 +82,12 @@ var workclasses = transformedData.GetColumn<float[]>(mlContext, "WorkclassOneHot
 // Of course, if we want to train the model, we will need to compose a single float vector of all the features.
 // Here's how we could do this:
 
-var fullLearningPipeline = dynamicPipeline
+var fullLearningPipeline = pipeline
     // Concatenate two of the 3 categorical pipelines, and the numeric features.
     .Append(mlContext.Transforms.Concatenate("Features", "NumericalFeatures", "CategoricalBag", "WorkclassOneHotTrimmed"))
+    // Cache data in memory so that the following trainer will be able to access training examples without
+    // reading them from disk multiple times.
+    .AppendCacheCheckpoint(mlContext)
     // Now we're ready to train. We chose our FastTree trainer for this classification task.
     .Append(mlContext.BinaryClassification.Trainers.FastTree(numTrees: 50));
 
