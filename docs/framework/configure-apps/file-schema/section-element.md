@@ -53,7 +53,7 @@ ms.locfileid: "55259211"
 |                     | 描述 |
 | ------------------- | ----------- |
 | **allowDefinition** | 指定區段可以用在哪一個組態檔。 使用下列其中一個值：<br><br>**Everywhere**<br>允許使用任何組態檔中區段。 這是預設值。<br>**MachineOnly**<br>允許區段只能用在電腦組態檔 (*Machine.config*)。<br>**MachineToApplication**<br>允許可用於電腦組態檔或應用程式組態檔區段。 |
-| **allowLocation**   | 判斷是否可以使用區段內**\<位置 >** 項目。 使用下列其中一個值：<br><br>**true**<br>允許使用於區段**\<位置 >** 項目。 這是預設值。<br>**false**<br>不允許使用於區段**\<位置 >** 項目。 |
+| **allowLocation**   | 判斷是否可以使用區段內 **\<位置>** 項目。 使用下列其中一個值：<br><br>**true**<br>允許使用於區段 **\<位置>** 項目。 這是預設值。<br>**false**<br>不允許使用於區段 **\<位置>** 項目。 |
 
 ## <a name="parent-elements"></a>父元素
 

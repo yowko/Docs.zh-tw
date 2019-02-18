@@ -52,7 +52,7 @@ ms.locfileid: "55257324"
 [  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)項目可簡化管理的元件組件，允許應用程式組態檔，以包含組件中的設定檔已知的位置，而不是複製的組件組態設定。
 
 > [!NOTE]
->  **\<LinkedConfiguration >** 與 Windows 並排顯示的資訊清單的應用程式不支援項目。
+> **\<LinkedConfiguration >** 與 Windows 並排顯示的資訊清單的應用程式不支援項目。
 
 ## <a name="example"></a>範例
 
