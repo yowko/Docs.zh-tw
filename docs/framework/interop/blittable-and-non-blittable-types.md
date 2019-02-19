@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ce1c944257a1a11287b751d9a0f9eb5a88d744f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596887"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093030"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 和非 Blittable 類型
 大部分的資料類型是 Managed 和 Unmanaged 記憶體中的常見呈現，而且 Interop 封送處理器不需要特殊處理。 這些類型稱為「Blittable 類型」，因為它們在 Managed 與 Unmanaged 程式碼之間傳遞時不需要進行轉換。  
@@ -49,7 +49,7 @@ ms.locfileid: "54596887"
   
 -   Blittable 類型的一維陣列 (例如整數陣列)。 不過，包含 Blittable 類型之可變陣列的類型本身不是 Blittable。  
   
--   只包含 Blittable 類型 (將它們封送處理為格式化類型時也包含類別) 的格式化實值型別。 如需格式化實值型別的詳細資訊，請參閱[實值型別的預設封送處理](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100))。  
+-   只包含 Blittable 類型 (將它們封送處理為格式化類型時也包含類別) 的格式化實值型別。 如需格式化實值型別的詳細資訊，請參閱[實值型別的預設封送處理](default-marshaling-behavior.md#default-marshaling-for-value-types)。  
   
  物件參考不是 Blittable。 這包含自行 Blittable 之物件參考的陣列。 例如，您可以定義 Blittable 結構，但無法定義包含這些結構參考之陣列的 Blittable 類型。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "54596887"
   
  部分 Managed 資料類型需要 Unmanaged 環境中有不同的呈現。 這些非 Blittable 資料類型必須轉換成可封送處理的形式。 例如，Managed 字串是非 Blittable 類型，因為它們必須先轉換成字串物件，才能進行封送處理。  
   
- 下表列出 <xref:System> 命名空間中的非 Blittable 類型。 [委派](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100)) (這是參照靜態方法或類別執行個體的資料結構) 也是非 Blittable。  
+ 下表列出 <xref:System> 命名空間中的非 Blittable 類型。 [委派](default-marshaling-behavior.md#default-marshaling-for-delegates) (這是參照靜態方法或類別執行個體的資料結構) 也是非 Blittable。  
   
 |非 Blittable 類型|說明|  
 |-------------------------|-----------------|  

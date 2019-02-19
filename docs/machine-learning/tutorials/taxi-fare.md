@@ -3,15 +3,15 @@ title: 透過 ML.NET 使用迴歸學習工具預測價格
 description: 透過 ML.NET 使用迴歸學習工具預測價格。
 author: aditidugar
 ms.author: johalex
-ms.date: 01/15/2019
+ms.date: 02/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 10e0fa2cedff3e31575ad2b9c8bc2d9ecc81f3e8
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828393"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092536"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>教學課程：透過 ML.NET 使用迴歸學習工具預測價格
 
@@ -122,9 +122,9 @@ ms.locfileid: "55828393"
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
 
-接下來，為了設定資料載入，將 `_textLoader` 全域變數初始化以重複使用它。  請注意我們使用 `TextReader`。 當您使用 `TextReader` 建立 `TextLoader` 時，您要傳入需要的內容和可自訂的 <xref:Microsoft.ML.Data.TextLoader.Arguments> 類別。 透過將 <xref:Microsoft.ML.Data.TextLoader.Column> 物件的陣列傳遞至包含所有資料行名稱及其類別的 `TextReader`，來指定資料結構描述。 我們已在先前建立 `TaxiTrip` 類別時定義了結構描述。
+接下來，為了設定資料載入，將 `_textLoader` 全域變數初始化以重複使用它。 當您建立 `TextLoader` 時，您必須傳入所需的內容和啟用自訂功能的 <xref:Microsoft.ML.Data.TextLoader.Arguments> 類別。 透過將 <xref:Microsoft.ML.Data.TextLoader.Column> 物件的陣列傳遞至包含所有資料行名稱及其類別的 `TextLoader`，來指定資料結構描述。 我們已在先前建立 `TaxiTrip` 類別時定義了結構描述。
 
-`TextReader` 類別會傳回完整初始化的 <xref:Microsoft.ML.Data.TextLoader>  
+`TextLoader` 類別會傳回完整初始化的 <xref:Microsoft.ML.Data.TextLoader>  
 
 若要初始化 `_textLoader` 全域變數以針對需要的資料集重複使用它，請在 `mlContext` 初始化之後加入下列程式碼：
 
@@ -155,7 +155,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>載入並轉換資料
 
-我們將使用 `_textLoader` 全域變數搭配 `dataPath` 參數載入資料。 它會傳回 <xref:Microsoft.ML.Data.IDataView>。 作為轉換的輸入和輸出，`DataView` 是基本的資料管線類型，相當於 `LINQ` 的 `IEnumerable`。
+我們將使用 `_textLoader` 全域變數搭配 `dataPath` 參數載入資料。 它會傳回 <xref:Microsoft.Data.DataView.IDataView>。 作為轉換的輸入和輸出，`IDataView` 是基本的資料管線類型，相當於 `LINQ` 的 `IEnumerable`。
 
 在 ML.NET 中，資料相當於 SQL 檢視。 它是延遲評估、結構描述化且異質性的。 物件是管線的第一個部分，並且會載入資料。 在本教學課程中，它會載入具有計程車車程資訊的實用資料集來預測費用。 這會用來建立模型，並將模型定型。
 

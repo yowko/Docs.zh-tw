@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c75d0631b05e4db53308efde8fe4c70a0778ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540558"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220974"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dynamic Language Runtime 概觀
 
@@ -80,7 +80,7 @@ DLR 也可協助您建立支援動態作業的程式庫。 比方說，如果您
 
  DLR 新增一組服務給 CLR，以便更妥善支援動態語言。 這些服務包括下列各項：
 
--   運算式樹狀架構。 DLR 使用運算式樹狀架構來代表語言語意。 基於此目的，DLR 有擴充的 LINQ 運算式樹狀架構，包含控制流程、指派及其他語言模型節點。 如需詳細資訊，請參閱[運算式樹狀架構](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)。
+-   運算式樹狀架構。 DLR 使用運算式樹狀架構來代表語言語意。 基於此目的，DLR 有擴充的 LINQ 運算式樹狀架構，包含控制流程、指派及其他語言模型節點。 如需詳細資訊，請參閱 [Expression Trees (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) (運算式樹狀架構 (C#)) 或 [Expression Trees (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md) (運算式樹狀架構 (Visual Basic))。
 
 -   呼叫站台快取。 「動態呼叫站台」是程式碼中您用來對動態物件執行像是 `a + b` 或 `a.b()` 等作業的地方。 DLR 會快取 `a` 和 `b` 的特性 (通常是這些物件的類型) 和作業的相關資訊。 如果先前已執行此類作業，DLR 會從快取擷取所有必要資訊以便快速分派。
 
@@ -96,5 +96,6 @@ DLR 使用呼叫站台中的繫結器來進行通訊，不只是與 .NET Framewo
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [通用語言執行平台](../../../docs/standard/clr.md)
-- [運算式樹狀結構](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+- [運算式樹狀結構 (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [運算式樹狀結構 (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [逐步解說：建立和使用動態物件](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

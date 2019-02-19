@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123757"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092952"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 開發指南
 本節說明如何建立、設定、偵錯、保護和部署 .NET Framework 應用程式。 本節也提供有關技術領域的資訊，例如動態程式設計、互通性、擴充性、記憶體管理和執行緒。  
@@ -79,5 +79,5 @@ ms.locfileid: "49123757"
  [工具](../../docs/framework/tools/index.md)  
  說明如何應用 .NET Framework 技術，協助您開發、設定及部署應用程式的工具。  
   
- [.NET Framework 範例](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
- 提供 MSDN 程式碼範例庫中之範例應用程式的連結，以示範 .NET Framework 技術。
+ [.NET 範例與教學課程](../samples-and-tutorials/index.md)  
+ 提供前往範例與教學課程的連結，協助您了解 .NET。

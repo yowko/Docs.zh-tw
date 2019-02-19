@@ -1,15 +1,15 @@
 ---
 title: 在情感分析二元分類案例中使用 ML.NET
 description: 探索如何在二元分類案例中使用 ML.NET，以了解如何使用情感預測來採取適當的動作。
-ms.date: 01/15/2019
+ms.date: 02/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 47cf9deb9452d15aee8cf4c1ebc5e3d0f1aa10ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6d5cae107e25000add5c8430a35131a79696bc2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627994"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092757"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教學課程：在情感分析二元分類案例中使用 ML.NET
 
@@ -21,18 +21,19 @@ ms.locfileid: "54627994"
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 了解問題
-> * 選取適當的機器學習工作
+> * 選取適當的機器學習演算法
 > * 準備您的資料
-> * 建立學習管線
-> * 載入分類器
+> * 轉換資料
 > * 將模型定型
-> * 使用不同的資料集來評估模型
-> * 使用模型來預測測試資料結果的單一執行個體
-> * 使用載入模型預測測試資料結果
+> * 評估模型
+> * 使用訓練過的模型預測
+> * 使用已載入的模型部署和預測
 
 ## <a name="sentiment-analysis-sample-overview"></a>情感分析範例概觀
 
 範例是一個主控台應用程式，會使用 ML.NET 來定型模型，以將情感分類並預測為正面或負面。 它也會使用第二資料集來評估模型，以進行品質分析。 情感資料集來自 WikiDetox 專案。
+
+您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存放庫中找到本教學課程的原始程式碼。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -54,8 +55,8 @@ ms.locfileid: "54627994"
 3. **建置和定型** 
    * **將模型定型**
    * **評估模型**
-4. **執行**
-   * **模型取用**
+4. **部署模型**
+   * **使用模型預測**
 
 ### <a name="understand-the-problem"></a>了解問題
 
@@ -67,7 +68,7 @@ ms.locfileid: "54627994"
 
 接著，您需要**判斷**該情感，這可協助您選取機器學習工作。
 
-## <a name="select-the-appropriate-machine-learning-task"></a>選取適當的機器學習工作
+## <a name="select-the-appropriate-machine-learning-algorithm"></a>選取適當的機器學習演算法
 
 處理此問題時，您會知道下列事實：
 
@@ -77,18 +78,18 @@ ms.locfileid: "54627994"
 * 請避免在維基百科中新增毫無意義的內容。
 * 他是最棒的，而文章應該就那樣說。
 
-分類機器學習工作最適合用於此案例。
+分類機器學習演算法最適合用於此案例。
 
 ### <a name="about-the-classification-task"></a>關於分類工作
 
-分類是一項機器學習工作，會使用資料來**判斷**項目或資料列的分類、類型或類別。 例如，您可以使用分類來：
+分類是一項機器學習演算法，會使用資料來**判斷**項目或資料列的分類、類型或類別。 例如，您可以使用分類來：
 
 * 識別情感是正面還是負面。
 * 將電子郵件分類為垃圾郵件或正常郵件。
 * 判斷病患的實驗樣本是否有癌症病兆。
 * 依客戶回應銷售活動的傾向來分類客戶。
 
-分類工作通常是下列其中一個類型：
+分類演算法通常是下列其中一種：
 
 * 二元：不是 A 就是 B。
 * 多元分類：可使用單一模型來預測的多重分類。
@@ -107,7 +108,7 @@ ms.locfileid: "54627994"
 
 ### <a name="prepare-your-data"></a>準備您的資料
 
-1. 下載 [WikiPedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) 和 [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) 資料集，並將它們儲存至先前建立的 [Data] 資料夾。 第一個資料集會將機器學習模型定型，第二個資料集則可用來評估您模型的準確率。
+1. 下載 [WikiPedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) 和 [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) 資料集，並將它們儲存至先前建立的 *Data* 資料夾。 第一個資料集會將機器學習模型定型，第二個資料集則可用來評估您模型的準確率。
 
 2. 在 [方案總管] 中，於每個 \*.tsv 檔案上按一下滑鼠右鍵，然後選取 [屬性]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
 
@@ -152,14 +153,14 @@ ms.locfileid: "54627994"
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#3 "Create the ML Context")]
 
-接下來，為了設定資料載入，將 `_textLoader` 全域變數初始化以重複使用它。  請留意到您正在使用 `TextReader`。 當您使用 `TextReader` 建立 `TextLoader` 時，您要傳入需要的內容和啟用自訂功能的 <xref:Microsoft.ML.Data.TextLoader.Arguments> 類別。
+接下來，為了設定資料載入，將 `_textLoader` 全域變數初始化以重複使用它。  當您使用 `MLContext.Data.CreateTextLoader` 建立 `TextLoader` 時，您必須傳入所需的內容和啟用自訂功能的 <xref:Microsoft.ML.Data.TextLoader.Arguments> 類別。
 
  透過將 <xref:Microsoft.ML.Data.TextLoader.Column> 物件的陣列傳遞至包含所有資料行名稱及其類別的載入程式，來指定資料結構描述。 您先前建立 `SentimentData` 類別時已定義了資料結構描述。 對於我們的結構描述，第一個資料行 (Label) 是 <xref:System.Boolean> (預測)，第二個資料行 (SentimentText) 是用來預測情感的文字/字串類型特徵。
-`TextReader` 類別會傳回完整初始化的 <xref:Microsoft.ML.Data.TextLoader>  
+`TextLoader` 類別會傳回完整初始化的 <xref:Microsoft.ML.Data.TextLoader>  
 
 若要初始化 `_textLoader` 全域變數以針對需要的資料集重複使用它，請在 `mlContext` 初始化之後加入下列程式碼：
 
-[!code-csharp[initTextReader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#4 "Initialize the TextReader")]
+[!code-csharp[initTextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#4 "Initialize the TextLoader")]
 
 將下列程式碼加入為 `Main` 方法中的下一行程式碼：
 
@@ -186,7 +187,7 @@ ms.locfileid: "54627994"
 
 ## <a name="load-the-data"></a>載入資料
 
-您將使用 `_textLoader` 全域變數搭配 `dataPath` 參數來載入資料。 它會傳回 <xref:Microsoft.ML.Data.IDataView>。 作為 `Transforms` 的輸入和輸出，`DataView` 是基本的資料管線類型，相當於 `LINQ` 的 `IEnumerable`。
+您將使用 `_textLoader` 全域變數搭配 `dataPath` 參數來載入資料。 它會傳回 <xref:Microsoft.Data.DataView.IDataView>。 作為 `Transforms` 的輸入和輸出，`DataView` 是基本的資料管線類型，相當於 `LINQ` 的 `IEnumerable`。
 
 在 ML.NET 中，資料相當於 SQL 檢視。 它是延遲評估、結構描述化且異質性的。 物件是管線的第一個部分，並且會載入資料。 在本教學課程中，它會載入資料集，其中包含評論及所對應的有害的或無害的情感。 這用來建立模型並加以定型。
 
@@ -216,7 +217,7 @@ ML.NET 的轉換管線撰寫一組自訂的轉換，可在定型或測試之前�
 
 ## <a name="train-the-model"></a>將模型定型
 
-您會根據已載入和轉換的資料集將模型 <xref:Microsoft.ML.Data.TransformerChain%601>定型。 定義了評估工具之後，我們使用 <xref:Microsoft.ML.Data.EstimatorChain`1.Fit*> 定型模型，並提供已載入的定型資料。 這會傳回要用於預測的模型。 `pipeline.Fit()` 會定型管線，並根據傳入的 `DataView` 傳回 `Transformer`。 實驗會等到定型之後才會執行。
+您會根據已載入和轉換的資料集將模型 <xref:Microsoft.ML.Data.TransformerChain%601>定型。 定義了評估工具之後，我們使用 <xref:Microsoft.ML.Data.EstimatorChain%601.Fit*> 定型模型，並提供已載入的定型資料。 這會傳回要用於預測的模型。 `pipeline.Fit()` 會定型管線，並根據傳入的 `DataView` 傳回 `Transformer`。 實驗會等到定型之後才會執行。
 
 將下列程式碼加入 `Train` 方法：
 
@@ -290,14 +291,13 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 接下來，請建立儲存模型的方法，以便在其他應用程式中重複使用。 `ITransformer` 具有 <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> 方法，它會採用 `_modelPath` 全域欄位和 <xref:System.IO.Stream>。 為了將模型儲存為 zip 檔案，您會在呼叫 `SaveTo` 方法之前立即建立 `FileStream`。 將下列程式碼加入 `SaveModelAsFile` 方法中作為的下一行：
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#24 "Add the SaveTo Method")]
-
-您也可以透過使用下列程式碼，以 `_modelPath` 寫入主控台訊息來顯示檔案寫入的位置：
+使用已載入的模型部署及預測。您也可以透過使用下列程式碼，以 `_modelPath` 寫入主控台訊息來顯示檔案寫入的位置：
 
 ```csharp
 Console.WriteLine("The model is saved to {0}", _modelPath);
 ```
 
-## <a name="predict-the-test-data-outcome-with-the-model-and-a-single-comment"></a>使用模型和單一評論來預測測試資料輸出
+## <a name="predict-the-test-data-outcome-with-the-saved-model"></a>使用儲存的模型來預測測試資料結果
 
 請使用下列程式碼，在緊接著 `Evaluate` 方法之後，建立 `Predict` 方法：
 
@@ -321,7 +321,7 @@ private static void Predict(MLContext mlContext, ITransformer model)
 
 雖然 `model` 是可在多個資料列上運作的 `transformer`，但常見的生產環境案例需要根據個別範例進行預測。 <xref:Microsoft.ML.PredictionEngine%602> 是從 `CreatePredictionEngine` 方法傳回的包裝函式。 讓我們在 `Predict` 方法中的第一行加入下列程式碼，來建立 `PredictionEngine`：
 
-[!code-csharp[CreatePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
+[!code-csharp[CreatePredictionEngine](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionEngine")]
   
 透過建立 `SentimentData` 的執行個體，在 `Predict` 方法中新增評論，以測試定型模型的預測：
 
@@ -331,13 +331,13 @@ private static void Predict(MLContext mlContext, ITransformer model)
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create a prediction of sentiment")]
 
-### <a name="model-operationalization-prediction"></a>模型操作化：預測
+### <a name="using-the-model-prediction"></a>使用模型：預測
 
 顯示 `SentimentText` 和對應的情感預測，以便共用結果並根據結果相應地採取動作。 這稱為操作化，其中會使用傳回的資料作為操作原則的一部份。 請使用下列 <xref:System.Console.WriteLine?displayProperty=nameWithType> 程式碼來為結果建立顯示：
 
 [!code-csharp[OutputPrediction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#20 "Display prediction output")]
 
-## <a name="predict-the-test-data-outcomes-with-the-saved-model"></a>使用儲存的模型來預測測試資料結果
+## <a name="deploy-and-predict-with-a-loaded-model"></a>使用已載入的模型部署和預測
 
 請使用下列程式碼，緊接在 `SaveModelAsFile` 方法之前，建立 `PredictWithModelLoadedFromFile` 方法：
 
@@ -367,11 +367,11 @@ public static void PredictWithModelLoadedFromFile(MLContext mlContext)
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
 
-既然您已有模型，現在即可利用 <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Data.IDataView)> 方法，使用該模型來預測評論資料的 Toxic (有害的) 或 Non Toxic (無害的) 情感。 若要取得預測，請在新資料上使用 `Predict`。 請注意，輸入資料是一個字串，且模型包含特徵化。 在定型和預測期間，您的管線會同步。 您無須特別為預測撰寫前處理/特徵化程式碼，同一個 API 會同時負責批次和單次預測。 將下列程式碼加入預測的 `PredictWithModelLoadedFromFile` 方法：
+既然您已有模型，現在即可利用 <xref:Microsoft.ML.Core.Data.ITransformer.Transform%2A> 方法，使用該模型來預測評論資料的 Toxic (有害的) 或 Non Toxic (無害的) 情感。 若要取得預測，請在新資料上使用 `Predict`。 請注意，輸入資料是一個字串，且模型包含特徵化。 在定型和預測期間，您的管線會同步。 您無須特別為預測撰寫前處理/特徵化程式碼，同一個 API 會同時負責批次和單次預測。 將下列程式碼加入預測的 `PredictWithModelLoadedFromFile` 方法：
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#28 "Create predictions of sentiments")]
 
-### <a name="model-operationalization-prediction"></a>模型操作化：預測
+### <a name="using-the-loaded-model-for-prediction"></a>使用載入的模型來進行預測
 
 顯示 `SentimentText` 和對應的情感預測，以便共用結果並根據結果相應地採取動作。 這稱為操作化，其中會使用傳回的資料作為操作原則的一部份。 請使用下列 <xref:System.Console.WriteLine?displayProperty=nameWithType> 程式碼來為結果建立標頭：
 
@@ -410,12 +410,12 @@ Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.529704
 =============== End of training ===============
 
 
-The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.0\Data\Model.zip
+The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.1\Data\Model.zip
 
 =============== Prediction Test of loaded model with a multiple sample ===============
 
 Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.4585565
-Sentiment: He is the best, and the article should say that. | Prediction: Not Toxic | Probability: 0.9924279
+Sentiment: I love this article. | Prediction: Not Toxic | Probability: 0.09454837
 
 ```
 
@@ -426,13 +426,13 @@ Sentiment: He is the best, and the article should say that. | Prediction: Not To
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 了解問題
-> * 選取適當的機器學習工作
+> * 選取適當的機器學習演算法
 > * 準備您的資料
-> * 建立學習管線
-> * 載入分類器
+> * 轉換資料
 > * 將模型定型
-> * 使用不同的資料集來評估模型
-> * 使用模型來預測測試資料結果
+> * 評估模型
+> * 使用訓練過的模型預測
+> * 使用已載入的模型部署和預測
 
 前進到下一個教學課程來深入了解
 > [!div class="nextstepaction"]

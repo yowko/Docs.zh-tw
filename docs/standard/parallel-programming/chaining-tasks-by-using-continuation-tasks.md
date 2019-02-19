@@ -1,6 +1,6 @@
 ---
 title: 使用接續工作鏈結工作
-ms.date: 03/30/2017
+ms.date: 02/11/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77be620180f1e19c01f47d8ab5cabe3e7d021aca
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b924f281a2a543ff98e9ae681a6100150898f240
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129665"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219902"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用接續工作鏈結工作
-在非同步程式設計中，非同步作業完成時叫用第二個作業，並將資料傳遞給它，是非常普遍的。 傳統上，這項作業使用回呼方法完成。 在工作平行程式庫中，由 *「接續工作」*(continuation task) 提供相同的功能。 接續工作 (也只稱為接續) 是另一項稱為 *「前項」*(antecedent) 的工作所叫用的非同步工作，此時會完成前項。  
+在非同步程式設計中，非同步作業完成時叫用第二個作業，並將資料傳遞給它，是很普遍的。 傳統上，會使用回呼方法完成接續。 在工作平行程式庫中，由 *「接續工作」*(continuation task) 提供相同的功能。 接續工作 (也只稱為接續) 是另一項稱為 *「前項」*(antecedent) 的工作所叫用的非同步工作，此時會完成前項。  
   
  接續相對容易使用，但卻非常強大且有彈性。 例如，您可以：  
   
@@ -44,25 +44,28 @@ ms.locfileid: "53129665"
  接續本身是 <xref:System.Threading.Tasks.Task> ，啟動時並不會封鎖執行緒。 呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法來封鎖，直到完成接續工作。  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>建立單一前項的接續  
- 您可建立當前項藉由呼叫 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法完成時執行的接續。 下列範例顯示其基本模式 (為求清楚明瞭，省略例外狀況處理)。 它會執行前項工作 `taskA`，這會傳回表示今天是星期幾之名稱的 <xref:System.DayOfWeek> 物件。 當前項完成時，接續工作 `continuation` 由其前項傳遞，並顯示包含結果的字串。  
+ 您可建立當前項藉由呼叫 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法完成時執行的接續。 下列範例顯示其基本模式 (為求清楚明瞭，省略例外狀況處理)。 它會執行前項工作 `taskA`，這會傳回表示今天是星期幾之名稱的 <xref:System.DayOfWeek> 物件。 當前項完成時，接續工作 `continuation` 由其前項傳遞，並顯示包含結果的字串。 
+
+> [!NOTE]
+> 此發行項中的 C# 範例使用 `Main` 方法上的 `async` 修飾詞。 C# 7.1 及更新版本有提供該功能。 先前版本在編譯此範例程式碼時會產生 [`CS5001`](../../csharp/misc/cs5001.md)。 您必須將語言版本設定為 C# 7.1 或更新版本。 如需了解如何設定發行項中的語言版本，請參閱[設定語言版本](../../csharp/language-reference/configure-language-version.md)。
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  
   
 ## <a name="creating-a-continuation-for-multiple-antecedents"></a>建立多個前項的接續  
- 您也可以建立會在任何或所有群組工作完成時執行的接續。 當所有前項工作都完成後，若要執行接續，您可以呼叫靜態 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法 (在 Visual Basic 中為 `Shared`) 或執行個體 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> 方法。 當任何前項工作完成後，若要執行接續，您可以呼叫靜態`Shared` 方法 (在 Visual Basic 中為 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> ) 或執行個體 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> 方法。  
+ 您也可以建立會在任何或所有群組工作完成時執行的接續。 當所有前項工作都完成後，若要執行接續，您可以呼叫靜態`Shared` 方法 (在 Visual Basic 中為 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> ) 或執行個體 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> 方法。 當任何前項工作完成後，若要執行接續，您可以呼叫靜態`Shared` 方法 (在 Visual Basic 中為 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> ) 或執行個體 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> 方法。  
   
- 請注意，呼叫 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 多載並不會封鎖呼叫執行緒。  不過，一般都會呼叫除了 <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 和  <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> 以外的所有方法來擷取傳回的  <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性，而其會封鎖呼叫執行緒。  
+ 請注意，呼叫 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 多載並不會封鎖呼叫執行緒。  不過，一般都會呼叫 <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> 以外的所有方法，來擷取傳回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性，其會封鎖呼叫執行緒。  
   
- 下列範例會呼叫 <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 方法來建立接續工作，這會反映其十個前項工作的結果。 每個前項工作計算介於 1 到 10 的索引值平方。 如果順利完成前項 (其 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 屬性是 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>)，則接續的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性是每個前項所傳回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 值之陣列。 此範例會加入它們，以計算介於 1 到 10 之間的所有數字的平方和。  
+ 下列範例會呼叫 <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 方法來建立接續工作，這會反映其 10 個前項工作的結果。 每個前項工作計算介於 1 到 10 之間的索引值平方。 如果順利完成前項 (其 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 屬性是 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>)，則接續的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性是每個前項所傳回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 值之陣列。 此範例會加入它們，以計算介於 1 到 10 之間所有數字的平方和。  
   
  [!code-csharp[TPL_Continuations#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/whenall1.cs#5)]
  [!code-vb[TPL_Continuations#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/whenall1.vb#5)]  
   
 ## <a name="continuation-options"></a>接續選項  
- 當您建立單一工作接續時，您可以使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 多載，這會採用 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 列舉值，以指定啟動接續的條件。 例如，您可以指定只有當前項已順利完成，或只有當它在發生錯誤的狀態下完成時，才執行接續。 當前項已準備好叫用接續時，若此條件不成立，則此接續直接轉換至 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 狀態，並且不能在這之後啟動。  
+ 當您建立單一工作接續時，您可以使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 多載，這會採用 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 列舉值，以指定啟動接續的條件。 例如，您可以指定只有當前項已順利完成，或只有當它在發生錯誤的狀態下完成時，才執行接續。 當前項已準備好叫用接續時，若此條件不成立，則此接續會直接轉換成 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 狀態，而且無法啟動。  
   
- 一些多工接續方法，例如 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> 方法的多載，也包含 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 參數。 不過，只有所有 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 列舉類型成員的子集有效。 您可以指定 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 值，該值具有 <xref:System.Threading.Tasks.TaskCreationOptions?displayProperty=nameWithType> 列舉程式中的對應項目，例如 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>、<xref:System.Threading.Tasks.TaskContinuationOptions.LongRunning?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness?displayProperty=nameWithType>。 如果您指定具有多工接續的任何 `NotOn` 或 `OnlyOn` 選項，則會在執行階段擲回 <xref:System.ArgumentOutOfRangeException> 例外狀況。  
+ 一些多工接續方法，例如 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> 方法的多載，也包含 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 參數。 不過，只有所有 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 列舉類型成員的子集有效。 您可以指定 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 值，該值具有 <xref:System.Threading.Tasks.TaskCreationOptions?displayProperty=nameWithType> 列舉程式中的對應項目，例如 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>、 <xref:System.Threading.Tasks.TaskContinuationOptions.LongRunning?displayProperty=nameWithType>和 <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness?displayProperty=nameWithType>。 如果您指定具有多工接續的任何 `NotOn` 或 `OnlyOn` 選項，則會在執行階段擲回 <xref:System.ArgumentOutOfRangeException> 例外狀況。  
   
  如需有關工作接續選項的詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskContinuationOptions> 主題。  
   
@@ -80,15 +83,15 @@ ms.locfileid: "53129665"
  [!code-vb[TPL_Continuations#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/result2.vb#7)]  
   
 ## <a name="canceling-a-continuation"></a>取消接續  
- 在下列情況中，接續的 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 屬性會被設定為 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>：  
+ 在下列情況中，接續的 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 屬性會被設定為 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> ：  
   
--   它會擲回 <xref:System.OperationCanceledException> 例外狀況以回應取消要求。 就像任何工作，如果例外狀況包含傳遞給接續的相同語彙基元，則會把它視為合作式取消的認可。  
+-   它會擲回 <xref:System.OperationCanceledException> 例外狀況以回應取消要求。 如同任何工作，如果例外狀況包含傳遞給接續的相同語彙基元，則會把它視為合作式取消的認可。  
   
--   接續傳遞 <xref:System.Threading.CancellationToken?displayProperty=nameWithType>，其 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性是 `true`。 在此案例中，接續未啟動，而且會轉換為 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 狀態。  
+-   接續傳遞 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> ，其 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性是 `true`。 在此案例中，接續未啟動，而且會轉換為 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 狀態。  
   
 -   此接續絕不會執行，因為不符合 <xref:System.Threading.Tasks.TaskContinuationOptions> 引數設定的條件。 例如，如果前項進入 <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 狀態，則不會執行其已傳遞 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> 選項的接續，但會轉換成 <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態。  
   
- 如果工作及其接續代表相同的邏輯作業的兩個部分，則您可傳遞相同的取消語彙基元給這兩項工作，如下列範例所示。 這包含會產生可由 33 整除的整數清單之前項，這會傳遞給接續。 接續會輪流顯示此清單。 前項和接續會定期暫停隨機一段時間。 此外，在 5 秒的逾時時間間隔後，<xref:System.Threading.Timer?displayProperty=nameWithType> 物件會用來執行 `Elapsed` 方法。 這會呼叫 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法，導致目前正在執行的工作去呼叫 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> 方法。 當前項或其接續執行時，是否呼叫 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法取決於隨機產生的暫停持續期間。 如果取消前項，將不會啟動接續。 如果未取消前項，則語彙基元仍可用於取消接續。  
+ 如果工作及其接續代表相同的邏輯作業的兩個部分，則您可傳遞相同的取消語彙基元給這兩項工作，如下列範例所示。 這包含會產生可由 33 整除的整數清單之前項，這會傳遞給接續。 接續會輪流顯示此清單。 前項和接續會定期暫停隨機一段時間。 此外，在 5 秒的逾時時間間隔後， <xref:System.Threading.Timer?displayProperty=nameWithType> 物件會用來執行 `Elapsed` 方法。 此範例會呼叫 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法，導致目前正在執行的工作去呼叫 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> 方法。 當前項或其接續執行時，是否呼叫 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法取決於隨機產生的暫停持續期間。 如果取消前項，將不會啟動接續。 如果未取消前項，則語彙基元仍可用於取消接續。  
   
  [!code-csharp[TPL_Continuations#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/cancellation1.cs#3)]
  [!code-vb[TPL_Continuations#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/cancellation1.vb#3)]  
@@ -103,7 +106,7 @@ ms.locfileid: "53129665"
  已處置的接續將不會啟動。  
   
 ## <a name="continuations-and-child-tasks"></a>接續和子工作  
- 直到接續和所有附加的子工作完成後，前項才會執行。 接續不會等候中斷連結的子工作完成。 下列兩個範例說明會附加和卸離建立接續之前項的子工作。 在下列範例中，僅在所有子工作都已完成後，才會執行接續。且每次執行此範例多次都會產生相同的輸出。 請注意此範例會藉由呼叫 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法來啟動前項，因為依照預設， <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法會建立父工作，其預設工作建立選項是 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>。  
+ 直到接續和所有附加的子工作完成後，前項才會執行。 接續不會等候中斷連結的子工作完成。 下列兩個範例說明會附加和卸離建立接續之前項的子工作。 在下列範例中，僅在所有子工作都已完成後，才會執行接續。且每次執行此範例多次都會產生相同的輸出。 因為根據預設，<xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法會建立父工作，其預設工作建立選項是 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>，所以此範例會藉由呼叫 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法來啟動前項。  
   
  [!code-csharp[TPL_Continuations#9](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/attached1.cs#9)]
  [!code-vb[TPL_Continuations#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/attached1.vb#9)]  

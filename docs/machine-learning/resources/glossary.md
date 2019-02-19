@@ -3,12 +3,12 @@ title: 機器學習字彙 - ML.NET
 description: 對於您在 ML.NET 中建置自訂模型來說，相當實用的重要機器學習詞彙。
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415373"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092432"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機器學習詞彙的重要字詞
 
@@ -16,7 +16,7 @@ ms.locfileid: "54415373"
 
 ## <a name="accuracy"></a>準確率
 
-在[分類](#classification)中，準確率係指正確分類的項目數，除以測試集內的項目總數後，所得出的值。 範圍為 0 (最不準確) 到 1 (最準確)。 準確率是您模型效能的其中一個評估計量。 請將它與[精確率](#precision)、[召回率](#recall)及 [F 分數](#f-score)一起考量。
+在[分類](#classification)中，準確率係指正確分類的項目數，除以測試集內的項目總數後，所得出的值。 範圍為 0 (最不準確) 到 1 (最準確)。 準確率是模型效能的其中一個評估計量。 請將它與[精確率](#precision)、[召回率](#recall)及 [F 分數](#f-score)一起考量。
 
 ## <a name="area-under-the-curve-auc"></a>曲線下的面積 (AUC)
 
@@ -90,7 +90,7 @@ ms.locfileid: "54415373"
 
 在[分類](#classification)中，類別的召回率係指正確預測為屬於該類別的項目數，除以實際屬於該類別的項目總數後，所得出的值。
 
-## <a name="regression"></a>迴歸
+## <a name="regression"></a>回復
 
 輸出為實際值 (例如雙精度浮點數) 的[機器學習](#supervised-machine-learning)工作。 範例包括預測股價。 如需詳細資訊，請參閱[機器學習工作](tasks.md)主題的[迴歸](tasks.md#regression)一節。
 

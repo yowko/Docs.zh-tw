@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3e56faad9e65cff6037f11b332d7b0df52a79fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 147c22758c68bd3b48ab1c5cf8e26ed0afdbce09
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589541"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219460"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送處理不同類型的陣列
 陣列是 Managed 程式碼中的參考類型，它包含一或多個相同類型的項目。 雖然陣列是參考類型，它們會做為 In 參數傳遞至 Unmanaged 函式。 此行為與 Managed 陣列傳遞至 Managed 物件的方式 (做為 In/Out 參數) 不一致。 如需詳細資訊，請參閱 [複製和固定](copying-and-pinning.md)。  
   
  下表列出陣列的封送處理選項，並說明其用法。  
   
-|陣列|說明|  
+|陣列|描述|  
 |-----------|-----------------|  
 |傳值方式的整數。|將整數的陣列做為 In 參數傳遞。|  
 |傳址方式的整數。|將整數的陣列做為 In/Out 參數傳遞。|  
@@ -115,6 +115,5 @@ typedef struct _MYPERSON
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
 ## <a name="see-also"></a>另請參閱
-- [封送處理類型的陣列](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
-- [平台叫用資料類型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
+- [平台叫用資料類型](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [在 Managed 程式碼中建立原型](creating-prototypes-in-managed-code.md)

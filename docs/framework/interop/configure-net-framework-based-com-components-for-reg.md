@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定 .NET Framework 架構 COM 元件進行免註冊啟用
+title: 作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 140af66c9ea08d16aa442824ff7333eeeadf5173
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530684"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093537"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>HOW TO：設定 .NET Framework 架構 COM 元件進行免註冊啟用
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
   
 -   COM 應用程式必須有 Win32 樣式應用程式資訊清單，才能識別 Managed 元件。  
@@ -105,7 +105,7 @@ ms.locfileid: "54530684"
   
 4.  識別組件中的每個類別。 使用 `<clrClass>` 項目，唯一識別 Managed 組件中的每個類別。 項目 (即 `<assembly>` 項目的子項目) 具有下表所述的屬性。  
   
-    |屬性|說明|必要|  
+    |屬性|描述|必要|  
     |---------------|-----------------|--------------|  
     |`clsid`|指定要啟用之類別的識別碼。|是|  
     |`description`|通知使用者有關元件的字串。 空字串為預設值。|否|  
@@ -174,6 +174,6 @@ ms.locfileid: "54530684"
   
 ## <a name="see-also"></a>另請參閱
 - [免註冊的 COM Interop](registration-free-com-interop.md)
-- [免註冊的 COM Interop 需求](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))
-- [設定免註冊啟動的 COM 元件](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))
-- [免註冊啟用 .NET 架構元件：逐步解說](https://msdn.microsoft.com/library/ms973915.aspx)
+- [免註冊 COM Interop 的需求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [設定適用於免註冊啟用的 COM 元件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [免註冊啟用 .NET 架構元件：逐步解說](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

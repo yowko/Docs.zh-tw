@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24112edc3ac28124953974463233800c51da5cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ab4a31195a202929c8485349cbf43235faea8e2d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453079"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221234"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework 中的反映
-<xref:System.Reflection> 命名空間中的類別，連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)和其中所定義類型的資訊，例如[類別](../../../docs/standard/base-types/common-type-system.md#classes)、[介面](../../../docs/standard/base-types/common-type-system.md#interfaces)和[實值型別](https://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。  
+<xref:System.Reflection> 命名空間中的類別，連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[組件](../app-domains/assemblies-in-the-common-language-runtime.md)和其中所定義類型的資訊，例如[類別](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和[實值型別](../../csharp/language-reference/keywords/value-types.md)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
   
  [Common Language Runtime](../../../docs/standard/clr.md) 載入器會管理[應用程式定義域](../../../docs/framework/app-domains/application-domains.md)，這會在有相同應用程式範圍的物件周圍構成定義的界限。 這個管理包含載入每個組件至適當的應用程式定義域和控制每個組件內類型階層的記憶體配置。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "49453079"
 |[反映和泛用類型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|說明反映如何處理泛型類型和泛型方法的型別參數和型別引數。|  
 |[反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)|描述判斷可使用哪種程度的反映之規則，以探索類型資訊和存取類型。|  
 |[動態載入和使用類型](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)|描述支援晚期繫結的反映自訂繫結介面。|  
-|[操作說明：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|描述僅限反映的載入內容。 示範如何載入組件、如何測試內容，以及如何檢查套用至僅限反映的內容中組件的屬性。|  
+|[如何：將組件載入到僅限反映的內容將組件載入到僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|描述僅限反映的載入內容。 示範如何載入組件、如何測試內容，以及如何檢查套用至僅限反映的內容中組件的屬性。|  
 |[存取自訂屬性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|示範如何使用反映來查詢屬性是否存在和屬性的值。|  
 |[指定完整的類型名稱](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|描述完整的類型名稱之格式，根據巴克斯格式 (BNF)，以及指定特殊字元、組件名稱、指標、參考和陣列所需的語法來描述。|  
 |[如何：使用反映連結委派](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|說明如何建立方法的委派，以及連結委派到事件。 說明如何在執行階段使用 <xref:System.Reflection.Emit.DynamicMethod> 建立事件處理方法。|  
