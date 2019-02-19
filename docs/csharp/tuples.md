@@ -3,12 +3,12 @@ title: Tuple 型別 - C# 手冊
 description: 了解 C# 中的未具名和具名 Tuple 類型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155128"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332750"
 ---
 # <a name="c-tuple-types"></a>C# Tuple 型別 #
 
@@ -82,7 +82,7 @@ Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容�
 
 這些情況可避免語意模糊。 如果將這些名稱作為元組中的欄位名稱使用，就會造成語意模糊。 這兩種情況都不會造成編譯時期錯誤。 反之，沒有投影名稱的元素不會有語意名稱對其投影。  下列範例將示範這些情況：
 
-[!code-csharp[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
+[!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 這些情況不會造成編譯器錯誤，因為這使用 C# 7.0 撰寫的程式碼而言會是重大變更，而當時元組欄位名稱投影還無法使用。
 
@@ -90,29 +90,31 @@ Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容�
 
 從 C# 7.3 開始，Tuple 型別支援 `==` 和 `!=` 運算子。 這些運算子的運作方式，是透過依順序比較左側引數的每個成員與右側引數的每個成員。 這些比較會進行最少運算。 只要有一組不相等，它們就會停止評估成員。 下列程式碼範例使用 `==`，但比較規則均適用於 `!=`。 下列程式碼範例顯示了兩組整數的相等比較：
 
-[!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
+[!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
 有數個規則讓 tuple 相等測試更加方便。 如果其中一個 Tuple 是可為 null 的 Tuple，則 Tuple 相等會執行[提升轉換](~/_csharplang/spec/conversions.md#lifted-conversion-operators)，如下列程式碼所示：
 
-
-[!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
+[!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
 Tuple 相等也會對這兩個 Tuple 的每個成員執行隱含轉換。 其中包括提升轉換、擴展轉換或其他的隱含轉換。 下列範例顯示，由於從整數到長整數的隱含轉換，整數 2-tuple 可以與長整數 2-tuple 進行比較：
 
-[!code-csharp[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
+[!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
 Tuple 成員的名稱不會參與相等測試。 不過，如果其中一個運算元是具有明確名稱的 Tuple 常值，則編譯器會產生警告 CS8383，前提是這些名稱與另一個運算元的名稱不相符。
 在兩個運算元都是 Tuple 常值的情況下，警告會在右邊的運算元上，如下列範例所示：
 
-[!code-csharp[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
+[!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
 最後，Tuple 可能包含巢狀 Tuple。 Tuple 相等會透過巢狀 Tuple 比較每個運算元的「圖形」，如下列範例所示：
 
-[!code-csharp[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+[!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+
+它是當您有不同的圖形時，比較兩個 Tuple 是否相等 (或不相等) 的編譯時間錯誤。 編譯器將不會嘗試任何巢狀 Tuple 的解構以比較它們。
 
 ## <a name="assignment-and-tuples"></a>指派和 Tuple
 
-該語言支援具有相同元素數目之 Tuple 型別之間的指派，其中右側的每個元素可以隱含地轉換成其對應的左側元素。 不會考慮對指派進行其他轉換。 讓我們看看 Tuple 類型之間允許的指派類型。
+該語言支援具有相同元素數目之 Tuple 型別之間的指派，其中右側的每個元素可以隱含地轉換成其對應的左側元素。 不會考慮對指派進行其他轉換。 它是當 Tuple 有不同圖形時，將一個 Tuple 指派到另一個 Tuple 的編譯時間錯誤。 編譯器將不會嘗試任何巢狀 Tuple 的解構以指派它們。
+讓我們看看 Tuple 類型之間允許的指派類型。
 
 請考慮在下列範例中使用的這些參數：
 
@@ -146,7 +148,7 @@ named = differentShape;
 > 這些範例會計算未修正的樣本標準差。
 > 更正的範例標準差公式會將與平均值的平方差總和除以 (N-1)，而非 N，就像 `Average` 擴充方法一樣。 如需標準差的這些公式之差異的詳細資料，請參閱統計文字。
 
-上述程式碼會遵循標準差的文字方塊公式。 它會產生正確答案，但這是沒有效率的實作。 這個方法會列舉序列兩次︰一次是產生平均值，一次是產生平均值差之平方的平均值。
+上述程式碼會遵循標準差的文字方塊公式。 它會產生正確答案，但這是沒有效率的實作。 此方法會列舉序列兩次：一次是產生平均值，一次是產生平均值差之平方的平均值。
 (請記住，LINQ 查詢會變慢，因此，計算與平均值的差異以及這些差異的平均值只會建立一個列舉)。
 
 有替代公式可以只使用該序列的一個列舉來計算標準差。  此計算會產生兩個值，因為它會列舉序列︰序列中所有項目的總和，以及每個值平方的總和︰

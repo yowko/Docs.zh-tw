@@ -1,7 +1,7 @@
 ---
 title: '! 運算子 - C# 參考'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/14/2019
 f1_keywords:
 - '!_CSharpKeyword'
 helpviewer_keywords:
@@ -9,24 +9,26 @@ helpviewer_keywords:
 - logical negation operator (!) [C#]
 - NOT operator [C#]
 ms.assetid: f5ae133f-8f64-4560-b34f-cd9cd5eed4ad
-ms.openlocfilehash: 6b6d1796032f536aac0be49d4f101c1380b4e98f
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 464bd658c9bf430191d84d3d5ad8d57173ab87c5
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333222"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303708"
 ---
 # <a name="-operator-c-reference"></a>! operator (C# 參考)
 
-邏輯負運算子 (`!`) 是將運算元變成負值的一元運算子。 它是針對 `bool` 所定義，並且只有在其運算元為 `false` 時，才會傳回 `true`。
+邏輯負運算子 `!` 是一元運算子，它會計算其 [bool](../keywords/bool.md) 運算元的邏輯負值。 也就是說，它會產生 `true` (若運算元是 `false`) 與 `false` (若運算元是 `true`)：
 
-## <a name="remarks"></a>備註
+[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/LogicalNegationExamples.cs#Example)]
 
-使用者定義型別可以多載 `!` 運算子 (請參閱 [operator](../keywords/operator.md))。
+## <a name="operator-overloadability"></a>運算子是否可多載
 
-## <a name="example"></a>範例
+使用者定義型別可以[多載](../keywords/operator.md) `!` 運算子。
 
-[!code-csharp[csRefOperators#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#7)]
+## <a name="c-language-specification"></a>C# 語言規格
+
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[邏輯負值運算子](~/_csharplang/spec/expressions.md#logical-negation-operator)一節。
 
 ## <a name="see-also"></a>另請參閱
 

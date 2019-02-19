@@ -10,12 +10,12 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: 2f9580e018684f65762bc40e131a19215e9690c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e097b2208b69f21347c49e253e59a9c14f30e51
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544662"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219408"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>限制存取子的存取範圍 (C# 程式設計手冊)
 屬性或索引子的 [get](../../../csharp/language-reference/keywords/get.md) 和 [set](../../../csharp/language-reference/keywords/set.md) 部分稱為「存取子」。 根據預設，這些存取子具有其所屬屬性或索引子的相同可見度或存取層級。 如需詳細資訊，請參閱[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)。 不過，限制其中一個存取子的存取權時，這有時十分有用。 一般而言，這包含限制 `set` 存取子的存取範圍，同時保留可公開存取的 `get` 存取子。 例如：  
@@ -29,7 +29,7 @@ ms.locfileid: "54544662"
   
 -   您無法在介面或明確[介面](../../../csharp/language-reference/keywords/interface.md)成員實作上使用存取子修飾詞。  
   
--   只有在屬性或索引子同時具有 `set` 和 `get` 存取子時，才能使用存取修飾詞。 在此情況下，允許只在兩個存取子之一上使用修飾詞。  
+-   只有在屬性或索引子同時具有 `set` 和 `get` 存取子時，才能使用存取修飾詞。 在此情況下，允許只在兩個存取子的其中一個上使用修飾詞。  
   
 -   如果屬性或索引子具有 [override](../../../csharp/language-reference/keywords/override.md) 修飾詞，則存取子修飾詞必須符合已覆寫存取子的存取子 (如果有的話)。  
   

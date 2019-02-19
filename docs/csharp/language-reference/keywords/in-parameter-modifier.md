@@ -1,16 +1,16 @@
 ---
 title: in 參數修飾詞 - C# 參考
 ms.custom: seodec18
-ms.date: 03/06/2018
+ms.date: 02/12/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: c3644b82a180fe6ed376938c9ff86db900db440e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a765a330e4d9efe22943538503c0822e1c9dfdb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631399"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219551"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 參數修飾詞 (C# 參考)
 
@@ -20,11 +20,14 @@ ms.locfileid: "54631399"
 
 上述範例示範了 `in` 修飾詞在呼叫位置通常非必要。 而只有在宣告方法時才會需要該項目。
 
+
 > [!NOTE] 
 > `in` 關鍵字也可與泛型型別搭配使用，來指定類型參數是否為 Contravariant、屬於 `foreach` 陳述式的一部分，或是屬於 LINQ 查詢中的 `join` 子句。 如需如何在這些內容中使用 `in` 關鍵字的詳細資訊，請參閱 [in](in.md)，其提供所有這些使用的連結。
   
  傳遞為 `in` 引數的變數，必須先經過初始化，才能在方法呼叫中傳遞。 但是，呼叫方法可能不會指派值或修改引數。  
-  
+
+`in` 參數修飾詞在 C# 7.2 與更新版本中可用。 先前的版本會產生編譯器錯誤 `CS8107` (C# 7.0 中無法使用 '唯讀參考' 功能。 請使用語言版本 7.2 或更高的版本。」) 若要設定編譯器語言版本，請參閱[選取 C# 語言版本](../configure-language-version.md)。
+
  雖然 `in`、`ref` 和 `out` 關鍵字會導致不同的執行階段行為，但在編譯期間，不會將其視為方法簽章的一部分。 因此，如果唯一的差別是一種方法採用 `ref` 或 `in` 引數，而另一種方法採用 `out` 引數，則無法對方法進行多載。 例如，將不會編譯下列程式碼：  
   
 ```csharp
