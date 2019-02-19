@@ -235,9 +235,9 @@ command.Parameters.AddWithValue( _
   
 |主題|描述|  
 |-----------|-----------------|  
-|[日期和時間資料類型與函數 & Amp;#40;transact-SQL&AMP;#41;](https://go.microsoft.com/fwlink/?LinkId=98360)|提供所有 Transact-SQL 日期及時間資料型別與函式的概觀。|  
+|[日期和時間資料類型與函數 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|提供所有 Transact-SQL 日期及時間資料型別與函式的概觀。|  
 |[使用日期和時間資料](https://go.microsoft.com/fwlink/?LinkId=98361)|提供有關日期和時間資料型別與函式的詳細資訊，以及使用這些項目的範例。|  
-|[資料類型 & Amp;#40;transact-SQL&AMP;#41](https://go.microsoft.com/fwlink/?LinkId=98362)|說明 SQL Server 2008 中的系統資料型別。|  
+|[資料類型 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|說明 SQL Server 2008 中的系統資料型別。|  
   
 ## <a name="see-also"></a>另請參閱
 - [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)

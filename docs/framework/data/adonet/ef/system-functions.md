@@ -28,7 +28,7 @@ ms.locfileid: "54597407"
   
 |SQL Server 2000|SQL Server 2005|SQL Server 2008|  
 |---------------------|---------------------|---------------------|  
-|[系統函式 Transact-SQL&AMP;#41;](https://go.microsoft.com/fwlink/?LinkId=115918)|[系統函式 Transact-SQL&AMP;#41;](https://go.microsoft.com/fwlink/?LinkId=115917)|[系統函數 & Amp;#40;transact-SQL&AMP;#41](https://go.microsoft.com/fwlink/?LinkId=115919)|  
+|[系統函式 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115918)|[系統函式 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115917)|[系統函數 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115919)|  
   
 ## <a name="see-also"></a>另請參閱
 - [Entity SQL 語言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
