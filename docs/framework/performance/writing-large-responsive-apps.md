@@ -195,8 +195,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- 
-  `WriteFormattedDocComment()` 的第一個版本已配置一個陣列、數個子字串、經修剪的子字串，以及空的 `params` 陣列。 它也會檢查"/ / 」。 修訂過的程式碼只會使用索引，而不會進行任何配置。 它會找到第一個字元不是空白字元，並接著會逐字元檢查以查看是否以"/ / 」 開頭的字串。 新的程式碼會使用`IndexOfFirstNonWhiteSpaceChar`而不是<xref:System.String.TrimStart%2A>後，傳回第一個索引 （指定的起始索引） 發生非空格字元。 此修正並不完整，不過您可以查看如何套用類似的修正以取得完整的解決方法。 您可以在整個程式碼中應用此方法，來移除 `WriteFormattedDocComment()` 中的所有配置。 
+ `WriteFormattedDocComment()` 的第一個版本已配置一個陣列、數個子字串、經修剪的子字串，以及空的 `params` 陣列。 它也會檢查"/ / 」。 修訂過的程式碼只會使用索引，而不會進行任何配置。 它會找到第一個字元不是空白字元，並接著會逐字元檢查以查看是否以"/ / 」 開頭的字串。 新的程式碼會使用`IndexOfFirstNonWhiteSpaceChar`而不是<xref:System.String.TrimStart%2A>後，傳回第一個索引 （指定的起始索引） 發生非空格字元。 此修正並不完整，不過您可以查看如何套用類似的修正以取得完整的解決方法。 您可以在整個程式碼中應用此方法，來移除 `WriteFormattedDocComment()` 中的所有配置。 
   
  **範例 4︰StringBuilder**  
   
