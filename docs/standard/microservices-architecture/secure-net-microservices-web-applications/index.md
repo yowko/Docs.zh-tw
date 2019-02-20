@@ -4,12 +4,6 @@ description: .NET 微服務和 Web 應用程式中的安全性 - 了解 ASP.NET 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: e53e6a50c1fdfaff6839a0a1e328047562a47824
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333492"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>製作安全的 .NET 微服務和 Web 應用程式
 
@@ -247,8 +241,6 @@ public void ConfigureServices(IServiceCollection services)
     var identityUrl = Configuration.GetValue<string>("IdentityUrl");
 
     // Add Authentication services
-
-    var identityUrl = configuration.GetValue<string>("IdentityUrl");
 
     services.AddAuthentication(options =>
     {

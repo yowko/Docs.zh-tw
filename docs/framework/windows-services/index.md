@@ -2,21 +2,15 @@
 title: 開發 Windows 服務應用程式
 ms.date: 03/30/2017
 helpviewer_keywords:
-- ServiceInstaller class, Windows Service applications
-- Service class, Windows Service applications
-- Windows Service applications
-- Windows NT services
-- ServiceProcessInstaller class, Windows Service applications
-- services
-- .NET applications, Windows applications
+  - 'ServiceInstaller class, Windows Service applications'
+  - 'Service class, Windows Service applications'
+  - Windows Service applications
+  - Windows NT services
+  - 'ServiceProcessInstaller class, Windows Service applications'
+  - services
+  - '.NET applications, Windows applications'
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 79de8adbc0f994653f308882b335da2ffa5f7455
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035918"
 ---
 # <a name="develop-windows-service-apps"></a>開發 Windows 服務應用程式
 
@@ -51,4 +45,4 @@ ms.locfileid: "48035918"
 
 <xref:System.ServiceProcess.ServiceInstaller> - 描述 <xref:System.ServiceProcess.ServiceInstaller> 類別的功能，其可與 <xref:System.ServiceProcess.ServiceProcessInstaller> 類別搭配使用來安裝和解除安裝您的服務。
 
-[從範本建立專案](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2) - 描述本章所使用的專案類型，以及如何在兩者之間進行選擇。
+[從範本建立專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)) - 描述本章所使用的專案類型，以及如何在兩者之間進行選擇。
