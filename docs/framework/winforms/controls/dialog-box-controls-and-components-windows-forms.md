@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-ms.openlocfilehash: 5af2ce568b4c4bcb66de13f18a29b3f465672ffd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 8a2dcde82c4bdded05fe1d69578b6becb5c1175e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456408"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441992"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>對話方塊控制項和元件 (Windows Form)
 下列 Windows Form 控制項和元件提供標準的對話方塊。 如需每個對話方塊所提供之功能的詳細資訊，請參閱下列連結。  
@@ -67,4 +67,4 @@ ms.locfileid: "43456408"
  [SaveFileDialog 元件概觀](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
  選取要儲存的檔案和儲存位置。  
   
- 另請參閱 [Windows Forms 中的對話方塊](https://msdn.microsoft.com/library/2chz8edb\(v=vs.110\))。
+ 另請參閱 [Windows Forms 中的對話方塊](../dialog-boxes-in-windows-forms.md)。

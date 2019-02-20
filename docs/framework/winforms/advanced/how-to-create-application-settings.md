@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52687347707139ba583ef4dfdeebbb41d568e95c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558952"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441355"
 ---
 # <a name="how-to-create-application-settings"></a>HOW TO：建立應用程式設定
 您可以使用 Managed 程式碼來建立新的應用程式設定，並將設定繫結至表單或表單控制項的屬性，以便在執行階段自動載入及儲存這些設定。  
   
  在下列程序中，您將手動建立一個衍生自 <xref:System.Configuration.ApplicationSettingsBase> 的包裝函式類別。 針對這個類別，您會加入可公開存取的屬性，以代表要公開的每一個應用程式設定。  
   
- 您也可以在 Visual Studio 設計工具中，使用最少的程式碼來執行這個程序。  另請參閱[How to:建立使用設計工具的應用程式設定](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\))。  
+ 您也可以在 Visual Studio 設計工具中，使用最少的程式碼來執行這個程序。  另請參閱[How to:建立使用設計工具的應用程式設定](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/wabtadw6(v=vs.100))。  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>以程式設計方式建立新的應用程式設定  
   

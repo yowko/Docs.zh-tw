@@ -2,12 +2,12 @@
 title: 公司購買程序
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837178"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442239"
 ---
 # <a name="corporate-purchase-process"></a>公司購買程序
 這個範例示範如何建立一個具有自動最佳提案選取、非常基本的提案徵求書 (RFP) 架構採購程序。 它結合 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601> 和 <xref:System.Activities.Statements.ForEach%601>，以及自訂活動，建立代表此程序的工作流程。
@@ -16,7 +16,7 @@ ms.locfileid: "48837178"
 
 ## <a name="requirements"></a>需求
 
--   Visual Studio 2012。
+-   Visual Studio 2012.
 
 -   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
@@ -71,9 +71,9 @@ ms.locfileid: "48837178"
 4.  原始要求者可以看到所有提交的提案。 在報表的特殊區段中呈現最佳提案。  
   
 ## <a name="process-definition"></a>程序定義  
- 此範例的核心邏輯使用 <xref:System.Activities.Statements.ParallelForEach%601> 活動，等候每個供應商的供應項目 (使用可建立書籤的自訂活動)，而且將供應商提案註冊為 RFP (使用 <xref:System.Activities.Statements.InvokeMethod> 活動)。  
+ 此範例的核心邏輯使用 <xref:System.Activities.Statements.ParallelForEach%601> 活動，等候每個供應商的提案 (使用可建立書籤的自訂活動)，而且將供應商提案註冊為 RFP (使用 <xref:System.Activities.Statements.InvokeMethod> 活動)。  
   
- 範例接著逐一查看儲存在 `RfpRepository` 中所有收到的提案，計算調整值 (使用 <xref:System.Activities.Statements.Assign> 活動和 <xref:System.Activities.Expressions> 活動)，如果調整值優於上一個最佳供應項目，則會將新值指派為最佳供應項目 (使用 <xref:System.Activities.Statements.If> 和 <xref:System.Activities.Statements.Assign> 活動)。  
+ 範例接著逐一查看儲存在 `RfpRepository` 中所有收到的提案，計算調整值 (使用 <xref:System.Activities.Statements.Assign> 活動和 <xref:System.Activities.Expressions> 活動)，如果調整值優於上一個最佳提案，則會將新值指派為最佳提案 (使用 <xref:System.Activities.Statements.If> 和 <xref:System.Activities.Statements.Assign> 活動)。  
   
 ## <a name="projects-in-this-sample"></a>這個範例中的專案  
  這個範例包含下列專案。  
@@ -108,7 +108,7 @@ ms.locfileid: "48837178"
 |RequestForProposal|提案徵求書 (RFP) 是希望供應商對特定商品或服務提交提案的邀請。|  
 |VendorProposal|供應商提交到具象 RFP 的提案。|  
 |VendorRepository|供應商的儲存機制。 這個實作包含供應商執行個體的記憶體中集合以及公開這些執行個體的方法。|  
-|RfpRepository|提案徵求書的儲存機制。 這個實作包含使用 Linq to XML 查詢結構描述化的持續性所產生的提案徵求書 XML 檔案。 這個類別會實作[System.Runtime.Persistence.IDataViewMapper](https://msdn.microsoft.com/library/system.runtime.persistence.idataviewmapper(v=vs.110).aspx)。|  
+|RfpRepository|提案徵求書的儲存機制。 這個實作包含使用 Linq to XML 查詢結構描述化的持續性所產生的提案徵求書 XML 檔案。 |  
 |IOHelper|這個類別處理所有 I/O 相關問題 (資料夾、路徑等等)。|  
   
 ### <a name="web-client"></a>Web 用戶端  
@@ -127,7 +127,7 @@ ms.locfileid: "48837178"
 |表單|描述|  
 |-|-|  
 |NewRfp|建立及提交新的提案徵求書。|  
-|ShowProposals|顯示所有作用中和已完成的提案徵求書。 **注意︰** 您可能需要按一下**重新整理**UI 看到該畫面的變更之後您建立或修改提案徵求書, 中的按鈕。|  
+|ShowProposals|顯示所有作用中和已完成的提案徵求書。 **注意：** 您可能需要按一下**重新整理**UI 看到該畫面的變更之後您建立或修改提案徵求書, 中的按鈕。|  
 |SubmitProposal|在具象提案徵求書中取得供應商的提案。 此視窗僅由供應商使用。|  
 |ViewRfp|顯示提案徵求書的所有相關資訊 (收到的提案、日期、值和其他資訊)。 此視窗僅由提案徵求書建立者使用。|  
   
@@ -155,20 +155,20 @@ ms.locfileid: "48837178"
   
 ### <a name="web-client-options"></a>Web 用戶端選項  
   
--   **建立新的 RFP**： 建立新企劃書 (RFP) 並且啟動採購程序工作流程。  
+-   **建立新的 RFP**:建立新企劃書 (RFP) 並且啟動採購程序工作流程。  
   
--   **重新整理**： 重新整理的作用中和主視窗中完成的 Rfp 清單。  
+-   **重新整理**:重新整理作用中和主視窗中完成的 Rfp 的清單。  
   
--   **檢視**： 顯示現有 RFP 的內容。 供應商可以提交提案 (如果受邀或 RFP 未完成)。  
+-   **檢視**：顯示現有 RFP 的內容。 供應商可以提交提案 (如果受邀或 RFP 未完成)。  
   
--   View As： 使用者可以存取 RFP，方法是選取在所需的參與者使用不同的身分識別**視為**作用中 Rfp 方格中的下拉式方塊。  
+-   檢視為：使用者可以存取 RFP，方法是選取在所需的參與者使用不同的身分識別**視為**作用中 Rfp 方格中的下拉式方塊。  
   
 ### <a name="winforms-client-options"></a>WinForms 用戶端選項  
   
--   **Create RFP**： 建立新企劃書 (RFP) 並且啟動採購程序工作流程。  
+-   **Create RFP**:建立新企劃書 (RFP) 並且啟動採購程序工作流程。  
   
--   **重新整理**： 重新整理的作用中和主視窗中完成的 Rfp 清單。  
+-   **重新整理**:重新整理作用中和主視窗中完成的 Rfp 的清單。  
   
--   **View RFP**： 顯示現有 RFP 的內容。 供應商可以提交提案 (如果受邀或 RFP 未完成)。  
+-   **View RFP**:顯示現有 RFP 的內容。 供應商可以提交提案 (如果受邀或 RFP 未完成)。  
   
--   **連接身分**： 使用者可以存取 RFP，方法是選取在所需的參與者使用不同的身分識別**視為**作用中 Rfp 方格中的下拉式方塊。
+-   **連線身分**:使用者可以存取 RFP，方法是選取在所需的參與者使用不同的身分識別**視為**作用中 Rfp 方格中的下拉式方塊。

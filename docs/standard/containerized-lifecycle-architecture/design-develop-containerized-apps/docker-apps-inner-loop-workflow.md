@@ -4,12 +4,12 @@ description: 了解開發 Docker 應用程式的 「 內部迴圈 」 工作流�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: 03eb4662e55551678105fa9ef25b42cc05c132a5
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 2d592f92153040d910dcf529ec21770693f5973c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219084"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442317"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈開發工作流程
 
@@ -120,7 +120,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 有其他線讓 Docker 知道如何執行應用程式，您可以加入根據您使用的語言/架構 DockerFile 中的設定。 比方說，您需要 ENTRYPOINT 行中的有\["dotnet"，"MyCustomMicroservice.dll"\]執行.NET Core 應用程式，雖然您可以根據以建置並執行您的服務方法的多個變異。 如果您使用的 SDK 和 dotnet CLI 來建置和執行.NET 應用程式，它會稍有不同。 重點是 ENTRYPOINT 行，加上額外的線條將會根據您選擇您的應用程式的語言/平台而不同。
 
-**進一歩** 建置.NET Core 應用程式的 Docker 映像的相關資訊，請移至<https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>。
+**進一歩** 建置.NET Core 應用程式的 Docker 映像的相關資訊，請移至[ https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images ](../../../core/docker/building-net-docker-images.md)。
 
 若要深入了解如何建置自己的映像，請移至[https://docs.docker.com/engine/\教學課程/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)。
 

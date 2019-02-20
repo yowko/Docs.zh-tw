@@ -2,12 +2,12 @@
 title: 服務追蹤檢視器工具 (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: f5401129601f84a5575a544490244f81b1e759ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510594"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442889"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服務追蹤檢視器工具 (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您分析由 WCF 所產生的診斷追蹤。 服務追蹤檢視器可讓您輕鬆合併、 檢視及篩選記錄檔中的追蹤訊息，以便您可以診斷、 修復以及驗證 WCF 服務問題的辦法。  
@@ -259,7 +259,7 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
   
 3.  在隨即出現的對話方塊中，輸入篩選器名稱。 在此範例中，輸入`Thread ID`。 您也可以為自己的篩選器提供說明。  
   
-4.  左側的樹狀檢視顯示了您在步驟 1 所選取的追蹤記錄的結構。 請瀏覽至您要建立相關條件的項目。 在此範例中，瀏覽至位於 XPath ThreadID:/E2ETraceEvent/System/Execution/@ThreadID節點。 按兩下樹狀檢閱中的 [ThreadID] 屬性。 這樣可在對話方塊右側建立屬性的運算式。  
+4.  左側的樹狀檢閱顯示了您在步驟 1 所選取的追蹤記錄的結構。 請瀏覽至您要建立相關條件的項目。 在此範例中，瀏覽至位於 XPath ThreadID:/E2ETraceEvent/System/Execution/@ThreadID節點。 按兩下樹狀檢視中的 [ThreadID] 屬性。 這樣可在對話方塊右側建立屬性的運算式。  
   
 5.  從 None，以變更 [ThreadID] 條件的參數欄位 '{0}'。 此步驟會在套用篩選器時，讓您設定 [ThreadID] 值  (請參閱「如何套用篩選器」一節)。您最多可以定義四個參數。 所有條件將由 OR 運算子結合在一起。  
   
@@ -277,7 +277,7 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
   
 3.  請至少指定一個篩選器名稱與 XPath 運算式。  
   
-4.  按一下 [確定 **Deploying Office Solutions**]。  
+4.  按一下 [確定] 。  
   
 ###### <a name="applying-a-custom-filter"></a>套用自訂篩選器  
  建立自訂篩選器後，可透過篩選器工具列存取自訂篩選器。 選取您想要在套用的篩選條件**搜尋中**欄位的篩選器工具列。 針對先前的範例選取 [Thread ID]。  
@@ -452,4 +452,4 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
 ## <a name="see-also"></a>另請參閱
 - [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [設定追蹤](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [活動追蹤和散佈用於端對端追蹤相互關聯](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
+- [端對端追蹤](./diagnostics/tracing/end-to-end-tracing.md)

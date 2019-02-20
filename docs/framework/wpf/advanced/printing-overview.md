@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: e17a3888e3467d8d21506108e6599c8ae5da2fe2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef88c9c2a7569be518794ee9083d1bf5c266d975
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695604"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442057"
 ---
 # <a name="printing-overview"></a>列印概觀
 Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應用程式開發人員有了新豐富的列印和列印系統管理[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。 藉由 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，某些列印系統增強功能也可供建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式的開發人員和使用 Unmanaged 程式碼的開發人員使用。 這項新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 檔案格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 列印路徑。  
@@ -29,7 +29,7 @@ Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應�
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>關於 XPS  
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 是一種電子文件格式、多工緩衝檔案格式且為頁面描述語言。 它是一種 Open Document 格式，使用 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]、[!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] 和其他業界標準，以建立跨平台的文件。 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 簡化建立、共用、列印、檢視和封存數位文件的程序。 如需有關 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 的其他資訊，請參閱 [XPS 網站](https://www.microsoft.com/xps)。  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 是一種電子文件格式、多工緩衝檔案格式且為頁面描述語言。 它是一種 Open Document 格式，使用 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]、[!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] 和其他業界標準，以建立跨平台的文件。 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 簡化建立、共用、列印、檢視和封存數位文件的程序。 如需詳細資訊[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]，請參閱 < [XPS 文件](/windows/desktop/printdocs/documents)。  
   
  [以程式設計方式列印 XPS 檔](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)中示範數種使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 來列印以 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 為基礎之內容的技術。 在檢閱本主題所包含內容期間，您會發現參考這些範例相當有用。 (Unmanaged 程式碼開發人員應該會看到文件[MXDC_ESCAPE 函式](https://msdn.microsoft.com/library/windows/desktop/dd162739.aspx)。 Windows Form 開發人員必須使用[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]中<xref:System.Drawing.Printing>不支援完整的命名空間[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]列印路徑，但支援混合式 GDI-XPS 列印路徑。 請參閱下方的**列印路徑架構**)。  
   
@@ -72,7 +72,8 @@ Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應�
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 定義基本和進階的 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。 對於不需廣泛的列印自訂或存取完整 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能集的應用程式，基本的列印支援可供使用。 基本列印支援由需要最少組態的列印對話方塊控制項公開，並具有類似 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。 使用這個簡化的列印模型，許多 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能可供使用。  
   
 #### <a name="printdialog"></a>PrintDialog  
- <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 控制項提供 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 組態的單一進入點和 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 工作提交。 如需如何具現化及使用控制項的相關資訊，請參閱[叫用列印對話方塊](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)。  
+ 
+  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 控制項提供 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 組態的單一進入點和 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 工作提交。 如需如何具現化及使用控制項的相關資訊，請參閱[叫用列印對話方塊](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)。  
   
 ### <a name="advanced-xps-printing"></a>進階的 XPS 列印  
  若要存取一組完整的 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能，則必須使用進階的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 列印。 以下更加詳細地描述幾個相關的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]。 如需完整的清單[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]列印路徑[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，請參閱<xref:System.Windows.Xps>和<xref:System.Printing>命名空間的參考。  
@@ -102,7 +103,8 @@ Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應�
  [!code-csharp[XpsPrint#PrintQueueSnip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
  [!code-vb[XpsPrint#PrintQueueSnip](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
- <xref:System.Printing.PrintQueue.AddJob%2A> 方法也會提供列印的方式。 請參閱[以程式設計方式列印 XPS 檔](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)。 。  
+ 
+  <xref:System.Printing.PrintQueue.AddJob%2A> 方法也會提供列印的方式。 請參閱[以程式設計方式列印 XPS 檔](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)。 。  
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>GDI 列印路徑  
@@ -144,6 +146,6 @@ Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應�
 - <xref:System.Printing.PrintQueue>
 - [HOW-TO 主題](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)
 - [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [XPS](https://www.microsoft.com/xps)
+- [XPS 文件](/windows/desktop/printdocs/documents)
 - [文件序列化與儲存](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
 - [Microsoft XPS 文件轉換器 (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)

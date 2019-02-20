@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: d90c2d7f8be2448e1d4f10410b27bc5132cdb16a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e42a4f63245c16bddc219f6fff8205121f6d705c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653823"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443220"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>存取 Managed HTML 文件物件模型中的框架
 某些 HTML 文件包含*框架*，或可以保存自己的相異 HTML 文件的 windows。 使用框架可讓您輕鬆地建立 HTML 網頁，該 HTML 網頁的其中一個或多個頁面片段維持靜態，例如導覽列，而其他框架則不斷變更其內容。  
@@ -38,8 +38,6 @@ ms.locfileid: "54653823"
   
  此規則也適用於以 <xref:System.Windows.Forms.HtmlWindow.Open%2A> 和 <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> 方法開啟的視窗。 如果您開啟的視窗位於與 <xref:System.Windows.Forms.WebBrowser> 控制項中裝載頁面不同的網域，則您將無法移動該視窗，或檢查其內容。 如果您使用 <xref:System.Windows.Forms.WebBrowser> 控制項來顯示與用來部署 Windows Form 應用程式的網站不同的網站，也會強制這些限制。 如果您使用 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 部署技術，從網站 A 安裝應用程式，而且您使用 <xref:System.Windows.Forms.WebBrowser> 來顯示網站 B，則您將無法存取網站 B 的資料。  
   
- 如需有關跨網站指令碼的詳細資訊，請參閱[關於跨框架指令碼和安全性](https://msdn.microsoft.com/library/ms533028.aspx)。  
-  
 ## <a name="see-also"></a>另請參閱
-- [框架項目&#124;框架物件](https://msdn.microsoft.com/library/ms535250.aspx)
+- [\<框架 > 項目](https://developer.mozilla.org/docs/Web/HTML/Element/frame)
 - [使用 Managed HTML 文件物件模型](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

@@ -2,12 +2,12 @@
 title: WCF Visual Studio 範本
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: a7529b14c3c83f0df7b41581ef18e5192209bc5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72239f9e0e6d7882e6a29222c0b68f3bfd5d89d5
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624934"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443233"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 範本
 Windows Communication Foundation (WCF) Visual Studio 範本是預先定義的專案和項目範本，您可以使用 Visual Studio 中，快速建置 WCF 服務和相關的應用程式。  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) Visual Studio 範本是預先定義的專
  如果現有專案是 Web 專案，也會建立服務主機檔案 (service1.svc)。  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF 服務專案和項目範本。  
- 這些範本會建立 WCF 服務裝載工作流程服務，這是可以存取像是 web 服務工作流程。 XAML 或命令式程式撰寫模型各有不同的範本。 您可以使用這些範本來建立循序或狀態機器工作流程。 如需有關這些類型的工作流程的詳細資訊，請參閱 < [Windows Workflow Foundation 教學課程](https://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97)。 如需建立工作流程專案的詳細資訊，請參閱[建立舊版工作流程專案](/visualstudio/workflow-designer/creating-legacy-workflow-projects)。  
+ 這些範本會建立 WCF 服務裝載工作流程服務，這是可以存取像是 web 服務工作流程。 XAML 或命令式程式撰寫模型各有不同的範本。 您可以使用這些範本來建立循序或狀態機器工作流程。 如需有關這些類型的工作流程的詳細資訊，請參閱[How to:建立工作流程](../windows-workflow-foundation/how-to-create-a-workflow.md)。 如需建立工作流程專案的詳細資訊，請參閱[建立舊版工作流程專案](/visualstudio/workflow-designer/creating-legacy-workflow-projects)。  
   
  使用工作流程的 XOML 類型改為程式碼為主時，回應速度更快 visual Studio 設計工具。 XOML 工作流程是預設要建立的工作流程類型。  
   

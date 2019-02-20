@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 6290fdac63bb22b878035c0cc27bba97300899de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a268f645810d84d9f6fb722e4728842b04ee14
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611354"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443168"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>HOW TO：將控制項新增至 Windows Forms
 大部分的表單都設計成將控制項加入表單的介面，來定義使用者介面 (UI)。 A*控制*是用來顯示資訊，或接受使用者輸入表單上的元件。 如需控制項的詳細資訊，請參閱[Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)。  
@@ -24,7 +24,7 @@ ms.locfileid: "54611354"
   
 ### <a name="to-draw-a-control-on-a-form"></a>若要繪製在表單上控制項  
   
-1.  開啟表單。 如需詳細資訊，請參閱[＜How to：在設計工具中顯示 Windows Form](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
+1.  開啟表單。 如需詳細資訊，請參閱[如何：在設計工具中顯示 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
   
 2.  在 **工具箱**，按一下您想要新增至表單的控制項。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "54611354"
   
 ### <a name="to-drag-a-control-to-a-form"></a>若要將控制項拖曳至表單  
   
-1.  開啟表單。 如需詳細資訊，請參閱[＜How to：在設計工具中顯示 Windows Form](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
+1.  開啟表單。 如需詳細資訊，請參閱[如何：在設計工具中顯示 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
   
 2.  在 **工具箱**，按一下您想要並將它拖曳至表單的控制項。  
   

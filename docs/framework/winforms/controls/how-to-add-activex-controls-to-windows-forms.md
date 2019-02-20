@@ -6,12 +6,12 @@ helpviewer_keywords:
 - forms [Windows Forms], adding ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-ms.openlocfilehash: 2fa5d81c196e1730eafb177b20b5cba64b2daae1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52f914b1d6fe5d8a2707e1f4ab176036ebf62cf9
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721135"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441777"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>HOW TO：將 ActiveX 控制項新增至 Windows Forms
 雖然 Windows Forms 設計工具已最佳化來裝載 Windows Forms 控制項中，您也可以使 Windows Form 上的 ActiveX 控制項。  
@@ -19,7 +19,7 @@ ms.locfileid: "54721135"
 > [!CAUTION]
 >  ActiveX 控制項新增至它們時，則需要有 Windows Forms 的效能限制。  
   
- 您將 ActiveX 控制項新增至您的表單之前，您必須將它們加入 [工具箱] 中。 如需詳細資訊，請參閱 < [COM 元件、 自訂工具箱對話方塊](https://msdn.microsoft.com/library/171333f3-f207-4e02-bbdc-17862556212c)。  
+ 您將 ActiveX 控制項新增至您的表單之前，您必須將它們加入 [工具箱] 中。 如需詳細資訊，請參閱 < [COM 元件、 自訂工具箱對話方塊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cby6tzh5(v=vs.100))。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請在 [工具]  功能表上按一下 [匯入和匯出設定]  。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -35,7 +35,7 @@ ms.locfileid: "54721135"
   
 ## <a name="see-also"></a>另請參閱
 - [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)
-- [比較各種語言和程式庫的控制項與可以透過程式設計的物件](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)
+- [比較各種語言和程式庫的控制項與可以透過程式設計的物件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
 - [如何：將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
 - [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
 - [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

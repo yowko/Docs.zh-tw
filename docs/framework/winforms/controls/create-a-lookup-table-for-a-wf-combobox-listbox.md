@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 264a50cb2f9346ea164cedfbe5ced5e231e246ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f1a2b220c3fb5d348f8aa45fbf07140844c9adf
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516517"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441616"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>HOW TO：Windows form 的 ComboBox、 ListBox 或 CheckedListBox 控制項建立查閱資料表
 在 Windows Form 上以方便使用的格式來顯示資料，但以對程式更有意義的格式來存放資料，這樣的做法有時候相當實用。 例如，食品的訂單表單可能會在清單方塊中依名稱來顯示功能表項目。 但是，記錄訂單的資料表則會包含代表食品的唯一 ID 編號。 下表將顯示如何存放並顯示食品訂單表單資料的範例。  
@@ -50,7 +50,7 @@ ms.locfileid: "54516517"
   
 2.  連接到您的資料來源。  
   
-3.  在兩個資料表之間建立資料關聯。 請參閱[DataRelation 物件簡介](https://msdn.microsoft.com/library/89d8a881-8265-41f2-a88b-61311ab06192)。  
+3.  在兩個資料表之間建立資料關聯。 請參閱[DataRelation 物件簡介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120))。  
   
 4.  設定下列屬性。 您可以在程式碼或設計工具中設定這些屬性。  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 5031538c49da34d0fc89442c1170e30ff56a6eff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505688"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442291"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑難排解快速入門
 本主題列出客戶在開發 WCF 用戶端和服務時會碰到的幾個已知問題。 如果您遇到的問題不在此清單中，建議您為您的服務設定追蹤。 這會產生一個追蹤檔案，您可以使用追蹤檔案檢視器檢視這個檔案，並取得服務中可能會發生之例外狀況的詳細資訊。 如需有關如何設定追蹤的詳細資訊，請參閱：[設定追蹤](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 如需有關追蹤檔案檢視器的詳細資訊，請參閱：[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -102,7 +102,7 @@ public class MyServiceHost : ServiceHost
   
 -   您可能需要對應用程式開放連接埠。 如需詳細資料，請參閱 SDK 範例的 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 。  
   
--   有關其他可能的問題，請參閱範例主題 [Running the Samples in a Workgroup and Across Machines](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)。  
+-   如需其他可能的問題，請參閱範例主題[執行 Windows Communication Foundation 範例](./samples/running-the-samples.md)。  
   
 -   如果您的用戶端是使用 Windows 認證，且例外狀況為 <xref:System.ServiceModel.Security.SecurityNegotiationException>，請設定 Kerberos 如下。  
   

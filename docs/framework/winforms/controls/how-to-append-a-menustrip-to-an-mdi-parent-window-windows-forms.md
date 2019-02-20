@@ -1,5 +1,5 @@
 ---
-title: 如何：將 MenuStrip 附加至 MDI 父視窗 (Windows Form)
+title: HOW TO：將 MenuStrip 附加至 MDI 父視窗 (Windows Form)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: bfce2e5c787bd18321d1203286e98d8f75cbf173
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9c39b80c06cae91c43c7a79390cef71ae781489e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500634"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442740"
 ---
-# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>如何：將 MenuStrip 附加至 MDI 父視窗 (Windows Form)
+# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>HOW TO：將 MenuStrip 附加至 MDI 父視窗 (Windows Form)
 在某些應用程式中，多重文件介面 (MDI) 子視窗的類型可能與 MDI 父視窗不同。 例如，MDI 父視窗可能是試算表，而 MDI 子視窗可能是圖表。 在這種情況下，由於已啟動各種不同類型的 MDI 子視窗，因此您需要以 MDI 子視窗功能表的內容更新 MDI 父視窗功能表的內容。  
   
  下列程序使用 <xref:System.Windows.Forms.Form.IsMdiContainer%2A>、<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>、<xref:System.Windows.Forms.MergeAction> 和 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 屬性，將 MDI 子功能表附加至 MDI 父功能表。 關閉 MDI 子視窗會將附加的功能表從 MDI 父視窗中移除。  
   
- 另請參閱[多重文件介面 (MDI) 應用程式](https://msdn.microsoft.com/library/xyhh2e7e\(v=vs.110\))。  
+ 另請參閱[多重文件介面 (MDI) 應用程式](../advanced/multiple-document-interface-mdi-applications.md)。  
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>將功能表項目附加至 MDI 父視窗  
   

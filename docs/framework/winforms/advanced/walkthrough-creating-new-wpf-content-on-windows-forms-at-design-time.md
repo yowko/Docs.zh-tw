@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: 9414eb8edc839b109aafa0c98fa3ed74a34a7d62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc5e1acd26763e2dd4324497f5d9ecde216ea975
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500495"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441459"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段建立 Windows Form 上的新 WPF 內容
 
@@ -61,7 +61,7 @@ ms.locfileid: "54500495"
 
     - UserControl1.xaml 檔案會在 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 中開啟。
 
-2. 在 [設計] 檢視中，確定已選取 `UserControl1`。 如需詳細資訊，請參閱[＜How to：選取並移動設計介面上的項目](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)。
+2. 在 [設計] 檢視中，確定已選取 `UserControl1`。 如需詳細資訊，請參閱[如何：選取並移動設計介面上的項目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。
 
 3. 在 **屬性**視窗中，設定的值<xref:System.Windows.FrameworkElement.Width%2A>並<xref:System.Windows.FrameworkElement.Height%2A>屬性，以**200**。
 
@@ -86,13 +86,15 @@ ms.locfileid: "54500495"
 
 3. 將 `UserControl1` 的執行個體拖曳到表單上。
 
-    - <xref:System.Windows.Forms.Integration.ElementHost> 控制項會在表單上自動建立，以裝載 WPF 控制項。
+    - 
+  <xref:System.Windows.Forms.Integration.ElementHost> 控制項會在表單上自動建立，以裝載 WPF 控制項。
 
     - <xref:System.Windows.Forms.Integration.ElementHost>控制項的名稱為`elementHost1`然後在**屬性**視窗中，您可以看到其<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>屬性設為**UserControl1**。
 
     - WPF 組件的參考會加入專案中。
 
-    - `elementHost1` 控制項具有智慧標籤面板，這個面板會顯示可用的裝載選項。
+    - 
+  `elementHost1` 控制項具有智慧標籤面板，這個面板會顯示可用的裝載選項。
 
 4. 在  **ElementHost 工作**智慧標籤面板中，選取**停駐於父容器**。
 
@@ -104,7 +106,7 @@ Windows Form 和 WPF 是不同的技術，不過可以藉由設計密切地相�
 
 - 將 Windows Form 控制項裝載到 WPF 頁面中。 如需詳細資訊，請參閱[逐步解說：在 WPF 中裝載 Windows Forms 控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。
 
-- 將 Windows Form 視覺化樣式套用至 WPF 內容。 如需詳細資訊，請參閱[＜How to：啟用混合式應用程式中的視覺化樣式](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)。
+- 將 Windows Form 視覺化樣式套用至 WPF 內容。 如需詳細資訊，請參閱[如何：啟用混合式應用程式中的視覺化樣式](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)。
 
 - 變更 WPF 內容的樣式。 如需詳細資訊，請參閱[逐步解說：設定 WPF 內容的樣式](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)。
 
