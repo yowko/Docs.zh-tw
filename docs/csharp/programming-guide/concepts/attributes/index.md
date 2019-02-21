@@ -1,12 +1,6 @@
 ---
-title: 屬性 (C#)
+title: '屬性 (C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: f211e8af48bdfef0bb9bf4341c7a5911b5695101
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573330"
 ---
 # <a name="attributes-c"></a>屬性 (C#)
 
@@ -57,7 +51,7 @@ ms.locfileid: "54573330"
 
 ### <a name="attribute-targets"></a>屬性目標
 
-屬性的「目標」是要套用該屬性的實體。 例如，屬性可套用至類別、特定的方法或整個組件。 根據預設，屬性會套用到位於它正後方的元素。 但是，舉例來說，您也可以明確地識別是否要將屬性套用到方法、它的參數或它的傳回值。
+屬性的「目標」是要套用屬性的實體。 例如，屬性可套用至類別、特定的方法或整個組件。 根據預設，屬性會套用到位於它正後方的元素。 但是，舉例來說，您也可以明確地識別是否要將屬性套用到方法、它的參數或它的傳回值。
 
 若要明確地識別屬性目標，請使用下列語法：
 
