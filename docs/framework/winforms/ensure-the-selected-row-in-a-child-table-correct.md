@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: ef2c72fb941aa40eff85af4a83f6c76843dc2d6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ecac036bf081959b8ce2ba0afe8fdeed9ed9099
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547627"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664233"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>HOW TO：確認子資料表中選取的資料列保持在正確的位置
 有時候當您使用 Windows Form 中的資料繫結時，您會在所謂父/子或主要/詳細資料檢視中顯示資料。 這是指來自相同來源的資料顯示在兩個控制項中的資料繫結案例。 在一個控制項中變更選取範圍會造成第二個控制項中顯示的資料也變更。 比方說，第一個控制項可能包含客戶清單，而第二個控制項包含與第一個控制項中所選取客戶相關的訂單清單。  
@@ -81,7 +81,7 @@ ms.locfileid: "54547627"
   
 -   System、System.Data、System.Drawing、System.Windows.Forms 和 System.XML 組件的參考。  
   
- 如需如何針對 Visual Basic 或 Visual C# 建置此範例從命令列資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[How to:編譯並執行完整的 Windows Form 程式碼範例使用 Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ 如需如何針對 Visual Basic 或 Visual C# 建置此範例從命令列資訊，請參閱[從命令列建置](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 - [如何：請確定多個控制項繫結至相同的資料來源都能保持同步](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)

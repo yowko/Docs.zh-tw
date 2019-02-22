@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: fece6fda33ddb86e0aff0584af97ba085dfa9e1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06f2320648bd8fee3465ea1672be886293667879
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506364"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664415"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>HOW TO：測試 UserControl 的執行階段行為
 當您開發<xref:System.Windows.Forms.UserControl>，您要測試其執行階段行為。 您可以建立個別的 Windows 應用程式專案，並將您的控制項上測試表單中，但此程序是很不方便。 更快速且輕鬆的方式是使用**UserControl 測試容器**Visual Studio 所提供。 直接從您的 Windows 控制項程式庫專案，啟動這個測試容器。  
@@ -29,7 +29,7 @@ ms.locfileid: "54506364"
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>若要測試 UserControl 的執行階段行為  
   
-1.  建立 Windows 控制項程式庫專案，稱為**TestContainerExample**。 如需詳細資訊，請參閱 < [Windows 控制項程式庫範本](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4)。  
+1.  建立 Windows 控制項程式庫專案，稱為**TestContainerExample**。 如需詳細資訊，請參閱 < [Windows 控制項程式庫範本](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))。  
   
 2.  在  **Windows Form 設計工具**，拖曳<xref:System.Windows.Forms.Label>控制項從**工具箱**拖曳至控制項的設計介面。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "54506364"
   
 6.  關閉測試容器。  
   
-7.  將另一個使用者控制項加入**TestContainerExample**專案。 如需詳細資訊，請參閱[NIB： 操作說明：將現有的項目加入至專案](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。  
+7.  將另一個使用者控制項加入**TestContainerExample**專案。 如需詳細資訊，請參閱[如何：將現有的項目加入至專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))。  
   
 8.  在  **Windows Form 設計工具**，拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至控制項的設計介面。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54506364"
   
 #### <a name="to-test-user-controls-from-another-project"></a>若要測試另一個專案中的使用者控制項  
   
-1.  建立 Windows 控制項程式庫專案，稱為**TestContainerExample2**。 如需詳細資訊，請參閱 < [Windows 控制項程式庫範本](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4)。  
+1.  建立 Windows 控制項程式庫專案，稱為**TestContainerExample2**。 如需詳細資訊，請參閱 < [Windows 控制項程式庫範本](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))。  
   
 2.  在  **Windows Form 設計工具**，拖曳<xref:System.Windows.Forms.RadioButton>控制項從**工具箱**拖曳至控制項的設計介面。  
   
@@ -71,4 +71,4 @@ ms.locfileid: "54506364"
 - [如何：撰寫複合控制項](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
 - [逐步解說：撰寫使用 Visual Basic 複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [逐步解說：撰寫複合控制項具有視覺效果C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [使用者控制項設計工具](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+- [使用者控制項設計工具](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

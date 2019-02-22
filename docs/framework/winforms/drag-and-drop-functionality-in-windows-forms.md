@@ -5,15 +5,15 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 29ed138f80705539b96f82898e50e80dd0e3cb16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccc9fd615cda044c739793066901ebc512643970
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527025"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664763"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows Form 中的拖放功能
-Windows Form 包含一組實作拖放行為的方法、事件和類別。 本主題提供 Windows Form 中的拖放功能支援概觀。  另請參閱[拖放作業和剪貼簿支援](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\))。  
+Windows Form 包含一組實作拖放行為的方法、事件和類別。 本主題提供 Windows Form 中的拖放功能支援概觀。  另請參閱[拖放作業和剪貼簿支援](./advanced/drag-and-drop-operations-and-clipboard-support.md)。  
   
 ## <a name="performing-drag-and-drop-operations"></a>執行拖放作業  
  若要執行拖放作業時，請使用 <xref:System.Windows.Forms.Control> 類別的 <xref:System.Windows.Forms.Control.DoDragDrop%2A> 方法。 如需如何執行拖放作業的詳細資訊，請參閱 <xref:System.Windows.Forms.Control.DoDragDrop%2A>。 若要取得必須在開始拖放作業前先將滑鼠指標拖曳到其上的矩形，請使用 <xref:System.Windows.Forms.SystemInformation> 類別的 <xref:System.Windows.Forms.SystemInformation.DragSize%2A> 屬性。  
@@ -41,7 +41,8 @@ Windows Form 包含一組實作拖放行為的方法、事件和類別。 本主
 |<xref:System.Windows.Forms.Control.GiveFeedback>|這個事件會在拖曳作業期間發生。 它提供了一個可對正在發生拖放作業的使用者顯示視覺提示的機會，例如變更滑鼠指標。 這個事件的處理常式會接收 <xref:System.Windows.Forms.GiveFeedbackEventArgs> 類型的引數。|  
 |<xref:System.Windows.Forms.Control.QueryContinueDrag>|這個事件會在拖放作業期間引發，讓拖曳來源能夠決定是否應取消拖放作業。 這個事件的處理常式會接收 <xref:System.Windows.Forms.QueryContinueDragEventArgs> 類型的引數。|  
   
- <xref:System.Windows.Forms.QueryContinueDragEventArgs> 類別提供滑鼠按鈕和鍵盤輔助按鍵的目前狀態、指定是否已按下 ESC 鍵的值，以及可設定以指定是否應該繼續拖放作業的 <xref:System.Windows.Forms.DragAction> 值。  
+ 
+  <xref:System.Windows.Forms.QueryContinueDragEventArgs> 類別提供滑鼠按鈕和鍵盤輔助按鍵的目前狀態、指定是否已按下 ESC 鍵的值，以及可設定以指定是否應該繼續拖放作業的 <xref:System.Windows.Forms.DragAction> 值。  
   
 ## <a name="see-also"></a>另請參閱
 - [Windows Forms 應用程式中的滑鼠輸入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 9095946d52360c69fd6c4dd6285039fb3e1874d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c77a004d52afc67a3811ff98e9a62c788c001803
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197107"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664779"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>在 Windows Form 中建立事件處理常式
 事件處理常式是程式碼中的一項程序，可以決定發生事件時 (例如當使用者按一下按鈕，或訊息佇列收到訊息時) 所應執行的動作。 當事件引發時，收到事件的事件處理常式或處理常式會隨即執行。 事件可以指派給多個處理常式，而處理特定事件的方法也可隨機變更。 您也可以使用 Windows Forms 設計工具建立事件處理常式。  
@@ -25,16 +25,16 @@ ms.locfileid: "47197107"
  [事件處理常式概觀](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)  
  說明如何處理事件。  
   
- [如何：在執行階段建立 Windows Forms 的事件處理常式](../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)  
+ [如何：在執行階段建立 Windows Forms 事件處理常式](../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)  
  提供如何隨機回應系統或使用者事件的指引。  
   
- [如何：在 Windows Forms 中將多個事件連線至單一事件處理常式](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)  
+ [如何：將多個事件連線至 Windows Forms 中的單一事件處理常式](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)  
  提供如何透過事件指派相同功能給多個控制項的指引。  
   
  [Windows Forms 中的事件順序](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  說明事件在 Windows Forms 控制項中的引發順序。  
   
- [如何：使用設計工具建立事件處理常式](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [如何：建立事件處理常式使用設計工具](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))  
  說明如何使用 Windows Forms 設計工具建立事件處理常式。  
   
 ## <a name="related-sections"></a>相關章節  

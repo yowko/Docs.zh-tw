@@ -13,24 +13,24 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: 6d1149e6a0c8fdb04b37af15feabfd965b5cc993
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a5a30b77e19e316bdf08234767cab2c9b72b296
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642265"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663986"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>HOW TO：使用 Windows Form Timer 元件集間隔執行程序
 您有時可能會想要建立一個程序，依特定時間間隔執行，直到迴圈完成，或是在經過設定的時間間隔之後執行。 <xref:System.Windows.Forms.Timer> 元件可讓您建立這樣的程序。  
   
- 這個元件是專為 Windows Form 環境所設計。 如果您需要適用於伺服器環境的計時器，請參閱[伺服器架構的計時器簡介](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。  
+ 這個元件是專為 Windows Form 環境所設計。 如果您需要適用於伺服器環境的計時器，請參閱[伺服器架構的計時器簡介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))。  
   
 > [!NOTE]
 >  使用 <xref:System.Windows.Forms.Timer> 元件時，有一些限制。 如需詳細資訊，請參閱 < [Windows Form Timer 元件的 Interval 屬性限制](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)。  
   
-### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>若要使用計時器元件，依設定的間隔來執行程序  
+## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>若要使用計時器元件，依設定的間隔來執行程序  
   
-1.  將 <xref:System.Windows.Forms.Timer> 加入您的表單。 請參閱下面的＜範例＞一節，以取得以程式設計方式執行此動作的範例。 Visual Studio 也有將元件加入表單的支援。 另請參閱[How to:將沒有使用者介面的控制項新增至 Windows Forms](https://msdn.microsoft.com/library/becyw7bz\(v=vs.110\))。  
+1.  將 <xref:System.Windows.Forms.Timer> 加入您的表單。 請參閱下面的＜範例＞一節，以取得以程式設計方式執行此動作的範例。 Visual Studio 也有將元件加入表單的支援。 另請參閱[How to:將沒有使用者介面的控制項新增至 Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md)。  
   
 2.  設定計時器的 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性 (以毫秒為單位)。 此屬性可決定，經過多少時間之後，會再執行該程序。  
   

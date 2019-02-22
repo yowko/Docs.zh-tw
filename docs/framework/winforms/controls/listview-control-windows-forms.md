@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 4472d2a46b27c75d06c5e4cd6fbab18842ed111c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 207b5fcd8bb1242be180898a22ffacf6e5ac9ab1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591938"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664883"
 ---
 # <a name="listview-control-windows-forms"></a>ListView 控制項 (Windows Form)
 Windows Form `ListView` 控制項顯示具有圖示的項目清單。 若要建立像 Windows 檔案總管右窗格的使用者介面，您可以使用清單檢視。  
@@ -70,7 +70,7 @@ Windows Form `ListView` 控制項顯示具有圖示的項目清單。 若要建�
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ListView> 類別  
- 描述這個類別，並且提供其所有成員的連結。  
+ 說明這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
@@ -81,9 +81,6 @@ Windows Form `ListView` 控制項顯示具有圖示的項目清單。 若要建�
   
  [如何：利用 Windows Form 建立多窗格使用者介面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  提供配置具有多個窗格的 Windows Form 的指示。  
-  
- [Windows XP 功能和 Windows Forms 控制項](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- 說明如何利用適用於 <xref:System.Windows.Forms.ListView> 控制項的 Windows XP 特定功能。  
   
 ## <a name="see-also"></a>另請參閱
 - [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

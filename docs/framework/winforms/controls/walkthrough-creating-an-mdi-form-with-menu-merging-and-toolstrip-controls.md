@@ -14,15 +14,16 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-ms.openlocfilehash: 5924d37d946a8279297ecf479b621f6f827dd5a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f4e6bc0faf0dc088d919ee929a7bf320d6e169c4
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536228"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664948"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>逐步解說：使用功能表合併和 ToolStrip 控制項建立 MDI 表單
-<xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間支援多重文件介面 (MDI) 應用程式，而 <xref:System.Windows.Forms.MenuStrip> 控制項則支援功能表合併。 MDI 表單也可以由 <xref:System.Windows.Forms.ToolStrip> 控制項建立。  
+
+  <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間支援多重文件介面 (MDI) 應用程式，而 <xref:System.Windows.Forms.MenuStrip> 控制項則支援功能表合併。 MDI 表單也可以由 <xref:System.Windows.Forms.ToolStrip> 控制項建立。  
   
  本逐步解說示範如何使用<xref:System.Windows.Forms.ToolStripPanel>控制項搭配 MDI 表單。 這個表單也支援子功能表的功能表合併。 本逐步解說會說明下列工作：  
   
@@ -38,7 +39,7 @@ ms.locfileid: "54536228"
   
  當您完成時，您必須支援功能表合併和可移動的 MDI 表單<xref:System.Windows.Forms.ToolStrip>控制項。  
   
- 若要複製一份清單列出本主題中的程式碼，請參閱[How to:使用功能表合併和 ToolStrip 控制項建立 MDI 表單](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
+ 若要將此主題中的程式碼複製為單一清單，請參閱[如何：使用功能表合併和 ToolStrip 控制項建立 MDI 表單](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -107,7 +108,7 @@ ms.locfileid: "54536228"
   
 1.  加入新的表單名為`ChildForm`至專案。  
   
-     如需詳細資訊，請參閱[＜How to：將 Windows Form 加入專案](https://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
+     如需詳細資訊，請參閱[如何：將 Windows Form 加入專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y2xxdce3(v=vs.100))。  
   
 2.  從**工具箱**，拖曳<xref:System.Windows.Forms.MenuStrip>拖曳至子表單的控制項。  
   
@@ -115,7 +116,7 @@ ms.locfileid: "54536228"
   
 4.  在 **項目集合編輯器**對話方塊方塊中，加入新<xref:System.Windows.Forms.ToolStripMenuItem>名為**ChildMenuItem**子功能表。  
   
-     如需詳細資訊，請參閱 < [ToolStrip 項目集合編輯器](https://msdn.microsoft.com/library/e681f3ab-94ba-4b2b-ac64-1dfad46caa25)。  
+     如需詳細資訊，請參閱 < [ToolStrip 項目集合編輯器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))。  
   
 ## <a name="testing-the-form"></a>測試表單  
   
@@ -202,7 +203,7 @@ ms.locfileid: "54536228"
   
 -   使用自動填入的標準功能表中建立的表單。 如需詳細資訊，請參閱[逐步解說：對表單提供標準功能表項目](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)。  
   
--   提供您<xref:System.Windows.Forms.ToolStrip>控制項專業外觀。 如需詳細資訊，請參閱[＜How to：設定應用程式的 ToolStrip 產生器](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md)。  
+-   提供您<xref:System.Windows.Forms.ToolStrip>控制項專業外觀。 如需詳細資訊，請參閱[如何：設定應用程式的 ToolStrip 產生器](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.MenuStrip>

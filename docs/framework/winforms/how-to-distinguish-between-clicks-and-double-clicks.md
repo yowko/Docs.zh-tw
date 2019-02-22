@@ -10,12 +10,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], double-click
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-ms.openlocfilehash: 8717bde485c475624be6bceae6ce2ab0c6f377bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05c2e308693fe5e2f278f8d503ddf52beddbb092
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666532"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665195"
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>HOW TO：區分按一下和按兩下
 一般而言，單一「按一下」(click) 會啟始使用者介面 (UI) 動作，而「按兩下」(double-click) 會擴充此動作。 例如，按一下通常會選取項目，而按兩下可編輯選取的項目。 不過，Windows Form Click 事件並不輕易滿足按一下和按兩下會執行不相容動作的案例，因為會先執行與 <xref:System.Windows.Forms.Control.Click> 或 <xref:System.Windows.Forms.Control.MouseClick> 事件相關的動作，之後此動作才會與 <xref:System.Windows.Forms.Control.DoubleClick> 或 <xref:System.Windows.Forms.Control.MouseDoubleClick> 事件相關。 本主題會示範兩種解決這個問題的方案。 一個解決方案是處理按兩下事件，並復原處理 Click 事件的動作。 在罕見的情況下您可能需要處理 <xref:System.Windows.Forms.Control.MouseDown> 事件並使用 <xref:System.Windows.Forms.SystemInformation> 類別的 <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> 和 <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> 屬性來模擬按一下和按兩下行為。 您可測量點擊間隔時間，如果第二個點擊在達到 <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> 的值之前就先發生，且該點擊位於由 <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> 所定義的矩形內，則執行按兩下動作；否則執行按一下動作。  
@@ -40,7 +40,7 @@ ms.locfileid: "54666532"
   
 -   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
- Visual Basic 或 Visual C# 建置這些範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置 Visual Studio 中的這些範例。  另請參閱[How to:編譯並執行完整的 Windows Form 程式碼範例使用 Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 建置這些範例從命令列的相關資訊，請參閱[從命令列建置](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置 Visual Studio 中的這些範例。  
   
 ## <a name="see-also"></a>另請參閱
 - [Windows Forms 應用程式中的滑鼠輸入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: fa835663edc54a2e4fd70a038f8900f32b0effba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ee357e343c5e060393359f0666886bef6b87b50
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738543"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664350"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>使用視覺化樣式呈現控制項
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 會使用作業系統支援的視覺化樣式，來支援控制項和其他 Windows 使用者介面 (UI) 項目的呈現。 本主題說明在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中使用作業系統目前的視覺化樣式，來呈現控制項和其他 UI 項目的數種支援層級。  
@@ -56,7 +56,7 @@ ms.locfileid: "54738543"
   
  <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空間的主要類別是 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 和 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>。 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 是基礎類別，可供識別視覺化樣式支援的任何控制項或使用者介面項目。 除了 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 本身以外， <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空間還包含許多具有 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 屬性的 `static` 巢狀類別，該屬性會為視覺化樣式支援的控制項、控制項組件或其他 UI 項目的每個狀態，傳回 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 。  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 提供相關方法，可供繪製作業系統目前的視覺化樣式所定義的每一個 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> ，並取得其資訊。 系統可以擷取的項目資訊包括：其預設大小、背景類型和色彩定義。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 包裝了 Windows Platform SDK 之 Windows Shell 部分的視覺化樣式 (UxTheme) API 功能。 如需詳細資訊，請參閱 <<c0> [ 使用 Windows XP 視覺化樣式](https://msdn.microsoft.com/library/ms997649.aspx)。  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 提供相關方法，可供繪製作業系統目前的視覺化樣式所定義的每一個 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> ，並取得其資訊。 系統可以擷取的項目資訊包括：其預設大小、背景類型和色彩定義。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 包裝了 Windows Platform SDK 之 Windows Shell 部分的視覺化樣式 (UxTheme) API 功能。 如需詳細資訊，請參閱 <<c0> [ 啟用視覺化樣式](/windows/desktop/controls/cookbook-overview)。  
   
  如需使用詳細資訊<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>並<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>，請參閱[How to:呈現視覺化樣式項目](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md)。  
   

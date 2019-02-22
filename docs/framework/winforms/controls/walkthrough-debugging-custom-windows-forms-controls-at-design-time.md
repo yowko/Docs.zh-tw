@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: ceee83c9deb318f5912eb724cbd237c3d7b73152
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a251aabe7acdc8e59b31d9534e27f0afeab3633
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733333"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664220"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>逐步解說：在設計階段偵錯自訂的 Windows Form 控制項
 當您建立自訂控制項時，通常會發現它需要偵錯它的設計階段行為。 這是特別有用，如果您撰寫自訂的設計工具為您的自訂控制項。 如需詳細資訊，請參閱[逐步解說：建立 Windows Form 會充分利用 Visual Studio 設計階段功能的控制項](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
@@ -60,9 +60,9 @@ ms.locfileid: "54733333"
   
 1.  新增**Windows 控制項程式庫**專案加入方案。  
   
-2.  加入新**UserControl** DebugControlLibrary 專案項目。 如需詳細資訊，請參閱[NIB： 操作說明：加入新的專案項目](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 提供新的來源檔案的"DebugControl 」 的基底名稱。  
+2.  加入新**UserControl** DebugControlLibrary 專案項目。 如需詳細資訊，請參閱[如何：加入新的專案項目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))。 提供新的來源檔案的"DebugControl 」 的基底名稱。  
   
-3.  使用**方案總管**，刪除專案的預設控制項的基底名稱的程式碼檔案中刪除 「`UserControl1`"。 如需詳細資訊，請參閱[NIB： 操作說明：移除，請刪除，並排除項目](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+3.  使用**方案總管**，刪除專案的預設控制項的基底名稱的程式碼檔案中刪除 「`UserControl1`"。 如需詳細資訊，請參閱[如何：移除，請刪除，並排除項目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))。  
   
 4.  建置方案。  
   
@@ -174,5 +174,5 @@ ms.locfileid: "54733333"
   
 ## <a name="see-also"></a>另請參閱
 - [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)
-- [如何：存取設計階段服務](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)
-- [如何：在 Windows Forms 中存取設計階段支援](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+- [如何：存取設計階段服務](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
+- [如何：在 Windows Forms 中存取設計階段支援](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

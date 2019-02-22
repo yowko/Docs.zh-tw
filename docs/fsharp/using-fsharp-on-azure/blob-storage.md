@@ -1,20 +1,20 @@
 ---
-title: 開始使用 F# 的 Azure Blob 儲存體
+title: 開始使用 Azure Blob 儲存體使用F#
 description: 使用 Azure Blob 儲存體在雲端中儲存非結構化的資料。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: ea9dc334ec9c2bcd4a80cc501d4b6634da5f64e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44037278"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664987"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>開始使用 F# 的 Azure Blob 儲存體 #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>開始使用 Azure Blob 儲存體使用F# #
 
 Azure Blob 儲存體是可將非結構化的資料儲存在雲端作為物件/Blob 的服務。 Blob 儲存體可以儲存任何類型的文字或二進位資料，例如文件、媒體檔案或應用程式安裝程式。 Blob 儲存體也稱為物件儲存體。
 
-這篇文章會示範如何使用 Blob 儲存體執行一般工作。 範例會使用 F# 使用 Azure Storage Client Library for.NET 所撰寫的。 涵蓋的工作包括如何上傳、 列出、 下載及刪除 blob。
+這篇文章會示範如何使用 Blob 儲存體執行一般工作。 這些範例撰寫使用F#使用 Azure Storage Client Library for.NET。 涵蓋的工作包括如何上傳、 列出、 下載及刪除 blob。
 
 Blob 儲存體概念的概觀，請參閱 < [blob 儲存體的.NET 指南](/azure/storage/storage-dotnet-how-to-use-blobs)。
 
@@ -22,9 +22,9 @@ Blob 儲存體概念的概觀，請參閱 < [blob 儲存體的.NET 指南](/azur
 
 若要使用本指南，您必須先[建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)。 您也會需要此帳戶的儲存體存取金鑰。
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>建立 F# 指令碼，並開始 F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>建立F#指令碼，然後啟動F#互動
 
-這篇文章中的範例可以用於 F# 應用程式或 F# 指令碼。 若要建立 F# 指令碼，建立的檔案`.fsx`擴充功能，例如`blobs.fsx`，F# 開發環境中。
+這篇文章中的範例可以用於在F#應用程式或F#指令碼。 若要建立F#指令碼，建立的檔案`.fsx`擴充功能，例如`blobs.fsx`，請在您F#開發環境。
 
 接下來，使用[套件管理員](package-management.md)這類[Paket](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/)安裝`WindowsAzure.Storage`並`Microsoft.WindowsAzure.ConfigurationManager`套件和參考`WindowsAzure.Storage.dll`和`Microsoft.WindowsAzure.Configuration.dll`在指令碼中使用`#r`指示詞。
 
@@ -216,23 +216,24 @@ Azure 儲存體中的每個 blob 必須位於一個容器。 此容器會組成 
 
 根據預設，在儲存體帳戶的 blob 資料是只有儲存體帳戶擁有者可以存取。 根據預設，驗證對 Blob 儲存體的要求需要帳戶存取金鑰。 不過，您可能會想讓其他使用者使用特定的 blob 資料。
 
-如需如何控制對 blob 儲存體的詳細資訊，請參閱 <<c0> [ 存取控制的 blob 儲存體 區段的.NET 指南](/azure/storage/storage-dotnet-how-to-use-blobs#controlling-access-to-blob-data)。
-
-
 ### <a name="encrypting-blob-data"></a>加密 blob 資料
 
 Azure 儲存體支援加密在用戶端和伺服器上的 blob 資料。
-
-如需加密 blob 資料的詳細資訊，請參閱[加密的 blob 儲存體區段的.NET 指南](/azure/storage/storage-dotnet-how-to-use-blobs#encrypting-blob-data)。
 
 ## <a name="next-steps"></a>後續步驟
 
 既然您已了解 Blob 儲存體的基本概念，請遵循下列連結以了解更多。
 
 ### <a name="tools"></a>工具
-- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) F# 型別提供者可用來瀏覽 Blob、 資料表和佇列的 Azure 儲存體資產，並輕鬆地套用在其上的 CRUD 作業。
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) F# API 使用 Microsoft Azure 資料表儲存體服務
-- [Microsoft Azure 儲存體總管 (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)是免費的獨立應用程式，可讓您在 Windows、 OSX 和 Linux 上以視覺化方式處理 Azure 儲存體資料。
+
+- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+F#型別提供者可用來瀏覽 Blob、 資料表和佇列的 Azure 儲存體資產，並輕鬆地套用在其上的 CRUD 作業。
+
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+F#使用 Microsoft Azure 資料表儲存體服務 API
+
+- [Microsoft Azure 儲存體總管 (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
+可讓您以視覺化方式處理 Azure 儲存體的資料在 Windows、 OSX 和 Linux 上的 Microsoft 免費的獨立應用程式。
 
 ### <a name="blob-storage-reference"></a>Blob 儲存體參考
 
@@ -246,3 +247,4 @@ Azure 儲存體支援加密在用戶端和伺服器上的 blob 資料。
 - [使用 AzCopy 命令列公用程式 on Linux 傳送資料](/azure/storage/common/storage-use-azcopy-linux)
 - [設定 Azure 儲存體連接字串](/azure/storage/common/storage-configure-connection-string)
 - [Azure 儲存體團隊部落格](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [快速入門：使用.NET 來建立 blob 物件儲存體中](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

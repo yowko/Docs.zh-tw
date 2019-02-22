@@ -2,19 +2,13 @@
 title: Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Windows Forms
-- user interface
-- user interface [Windows Forms], forms
+  - Windows Forms
+  - user interface
+  - 'user interface [Windows Forms], forms'
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: bb785860ed3cccbd93273805e5f2bada2f5f9c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542245"
 ---
 # <a name="windows-forms"></a>Windows Forms
-由於表單是應用程式的基礎單位，因此在表單的功能和設計方面需要多加考量。 表單基本上就像是一個空白面板，身為開發人員的您可使用控制項建立使用者介面，並使用程式碼管理資料，來增強表單。 為此，Visual Studio 為您提供的整合式的開發環境 (IDE) 以協助您撰寫程式碼，以及設定與撰寫的豐富控制項[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。 您可以利用程式碼來補充這些控制項的功能，進而輕鬆快速地開發所需的方案。  
+由於表單是應用程式的基礎單位，因此在表單的功能和設計方面需要多加考量。 表單基本上就像是一個空白面板，身為開發人員的您可使用控制項建立使用者介面，並使用程式碼管理資料，來增強表單。 為此，Visual Studio 為您提供的整合式的開發環境 (IDE)，以協助撰寫程式碼，以及豐富的控制項集合以寫入[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。 您可以利用程式碼來補充這些控制項的功能，進而輕鬆快速地開發所需的方案。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
@@ -45,7 +39,7 @@ ms.locfileid: "33542245"
  [Windows Forms 應用程式](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
  討論針對 Windows 應用程式專案範本所建立的應用程式進行偵錯的程序，以及如何變更偵錯和發行組態。  
   
- [部署應用程式、服務和元件](https://msdn.microsoft.com/library/wtzawcsz)  
+ [初步了解在 Visual Studio 中的部署](/visualstudio/deployment/deploying-applications-services-and-components)  
  描述散發完成的應用程式或要安裝於其他電腦之元件的過程。  
   
  [建置主控台應用程式](../../../docs/standard/building-console-apps.md)  

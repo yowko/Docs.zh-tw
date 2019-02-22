@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], properties
 - properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-ms.openlocfilehash: 37db3f16a17acc7f3a6e594bd284ba368801e70a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b1f7e0f5c1c9a01e47d0d972c56db8da922d2d0b
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850162"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664571"
 ---
 # <a name="properties-in-windows-forms-controls"></a>Windows Form 控制項中的屬性
 將 Windows Forms 控制項繼承許多屬性，形成基底類別<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。 這包括屬性，例如<xref:System.Windows.Forms.Control.Font%2A>， <xref:System.Windows.Forms.Control.ForeColor%2A>， <xref:System.Windows.Forms.Control.BackColor%2A>， <xref:System.Windows.Forms.Control.Bounds%2A>， <xref:System.Windows.Forms.Control.ClientRectangle%2A>， <xref:System.Windows.Forms.Control.DisplayRectangle%2A>， <xref:System.Windows.Forms.Control.Enabled%2A>， <xref:System.Windows.Forms.Control.Focused%2A>， <xref:System.Windows.Forms.Control.Height%2A>， <xref:System.Windows.Forms.Control.Width%2A>， <xref:System.Windows.Forms.Control.Visible%2A>， <xref:System.Windows.Forms.Control.AutoSize%2A>，和許多其他因素。 如需繼承屬性的詳細資訊，請參閱<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
@@ -48,8 +48,8 @@ ms.locfileid: "48850162"
  [Windows Forms 控制項中的屬性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
  描述可以套用至屬性 (Property) 或您的自訂控制項和元件之其他成員的屬性 (Attribute)。  
   
- [元件的設計階段屬性](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ [元件的設計階段屬性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  
  列出要套用至元件和控制項的中繼資料屬性，以便在設計階段於視覺設計工具中正確顯示這些屬性。  
   
- [擴充設計階段支援](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [擴充設計階段支援](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))  
  描述如何實作類別，例如提供設計階段支援的編輯器和設計工具。

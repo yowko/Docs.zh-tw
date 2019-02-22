@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 3de554d4c8c3963948159bc6b8c2196f9ebc10ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88aacd77742baea5ebf04ddca311100bd44edb3e
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745879"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665143"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>逐步解說：在執行階段更新狀態列資訊
 > [!IMPORTANT]
@@ -30,16 +30,16 @@ ms.locfileid: "54745879"
   
 1.  建立新的 Windows Form。  
   
-2.  新增 <xref:System.Windows.Forms.StatusBar> 控制項至表單。 如需詳細資訊，請參閱[How to:將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+2.  新增 <xref:System.Windows.Forms.StatusBar> 控制項至表單。 如需詳細資訊，請參閱[如何：將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
-3.  加入至狀態列面板您<xref:System.Windows.Forms.StatusBar>控制項。 如需詳細資訊，請參閱[How to:將面板新增至 StatusBar 控制項](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)。  
+3.  加入至狀態列面板您<xref:System.Windows.Forms.StatusBar>控制項。 如需詳細資訊，請參閱[如何：將面板新增至 StatusBar 控制項](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)。  
   
 4.  針對<xref:System.Windows.Forms.StatusBar>控制項新增至表單，設定<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>屬性設`true`。  
   
 5.  加入 Windows Form<xref:System.Windows.Forms.Timer>元件至表單。  
   
     > [!NOTE]
-    >  Windows Form<xref:System.Windows.Forms.Timer?displayProperty=nameWithType>元件專為 Windows Form 環境。 如果您需要適用於伺服器環境的計時器，請參閱[伺服器架構的計時器簡介](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。  
+    >  Windows Form<xref:System.Windows.Forms.Timer?displayProperty=nameWithType>元件專為 Windows Form 環境。 如果您需要適用於伺服器環境的計時器，請參閱[伺服器架構的計時器簡介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))。  
   
 6.  將 <xref:System.Windows.Forms.Timer.Enabled%2A> 屬性設定為 `true`。  
   

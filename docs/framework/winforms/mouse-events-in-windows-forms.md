@@ -15,15 +15,15 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: ac44f58d5cf6edfc2010d8a878f22abcec0fe57f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 263ad4ccbee29b31c0b10a87de82dd3ecf650919
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507573"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664181"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Form 中的滑鼠事件
-當您處理滑鼠輸入時，您通常會要知道滑鼠指標的位置，以及滑鼠按鈕的狀態。 本主題提供如何從滑鼠事件取得此資訊的詳細說明，並說明在 Windows Form 控制項中引發滑鼠點按事件的順序。 如需清單和所有滑鼠事件的描述，請參閱 <<c0> [ 滑鼠輸入的運作方式在 Windows Form 中](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)。  另請參閱[事件處理常式概觀 (Windows Form)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))，[事件概觀 (Windows Form)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
+當您處理滑鼠輸入時，您通常會要知道滑鼠指標的位置，以及滑鼠按鈕的狀態。 本主題提供如何從滑鼠事件取得此資訊的詳細說明，並說明在 Windows Form 控制項中引發滑鼠點按事件的順序。 如需清單和所有滑鼠事件的描述，請參閱 <<c0> [ 滑鼠輸入的運作方式在 Windows Form 中](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)。  另請參閱[事件處理常式概觀 (Windows Form)](event-handlers-overview-windows-forms.md)並[事件概觀 (Windows Form)](events-overview-windows-forms.md)。  
   
 ## <a name="mouse-information"></a>滑鼠資訊  
  <xref:System.Windows.Forms.MouseEventArgs> 會傳送至有關點按滑鼠按鈕和追蹤滑鼠移動之滑鼠事件的處理常式。 <xref:System.Windows.Forms.MouseEventArgs> 提供滑鼠目前狀態的相關資訊，包括滑鼠指標在用戶端座標中的位置、按了哪個滑鼠按鈕，以及是否已捲動滑鼠滾輪。 有幾個滑鼠事件 (例如只是通知滑鼠指標何時進入或離開控制項界限的事件) 會傳送 <xref:System.EventArgs> 至事件處理常式，而沒有進一步的資訊。  

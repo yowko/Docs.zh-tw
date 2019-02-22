@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-ms.openlocfilehash: 02adffef32dcd58eedc11309ae272b72818a563f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4747eb4524a5fd36c27a9c40f16ef291e57bed28
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683199"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664025"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar 和 VScrollBar 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.ScrollBar>控制項可用來提供輕鬆瀏覽一長串，項目或大量的資訊，請水平或垂直方式捲動應用程式或控制項內。 捲軸是通用的項目，在 Windows 介面中，因此<xref:System.Windows.Forms.ScrollBar>控制項通常會搭配控制項不是衍生自<xref:System.Windows.Forms.ScrollableControl>類別。 同樣地，許多開發人員選擇納入<xref:System.Windows.Forms.ScrollBar>控制撰寫自己的使用者控制項時。  
@@ -38,5 +38,4 @@ Windows Form<xref:System.Windows.Forms.ScrollBar>控制項可用來提供輕鬆�
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>
-- [適用於.NET Framework 2.0 的新增功能至 Windows Forms](https://msdn.microsoft.com/library/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)
 - [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

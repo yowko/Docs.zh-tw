@@ -2,12 +2,12 @@
 title: ADO.NET 技術選項和方針
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: e43fa3ae893a8a18e35693cde364d227e7959398
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828471"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664792"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET 技術選項和方針
 ADO.NET 資料平台是一種多重發行策略，可讓開發人員針對概念實體資料模型進行程式設計，藉以減少所需程式碼和維護的工作量。 這個平台包含 ADO.NET Entity Framework 和相關的技術。  
@@ -28,7 +28,7 @@ ADO.NET 資料平台是一種多重發行策略，可讓開發人員針對概念
  Entity SQL 是設計成與實體資料模型互動之以文字為基礎的查詢語言。 Entity SQL 是一種 SQL Dialect，其中包含以較高層級模型概念進行查詢的建構，例如繼承 (Inheritance)、複雜類型和明確關聯性。 開發人員也可以直接使用 Entity SQL 搭配物件服務。 如需詳細資訊，請參閱 < [Entity SQL 語言](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)。  
   
 ### <a name="entityclient"></a>EntityClient  
- EntityClient 是用於與實體資料模型互動的新 .NET Framework 資料提供者 (Data Provider)。 EntityClient 會遵循公開 (Expose) 可傳回 <xref:System.Data.EntityClient.EntityConnection> 之 <xref:System.Data.EntityClient.EntityCommand> 和 <xref:System.Data.EntityClient.EntityDataReader> 物件的 .NET Framework 資料提供者模式。 EntityClient 會使用 Entity SQL 語言，並提供彈性的對應給儲存體特有的資料提供者。 如需詳細資訊，請參閱 [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527)。  
+ EntityClient 是用於與實體資料模型互動的新 .NET Framework 資料提供者 (Data Provider)。 EntityClient 會遵循公開 (Expose) 可傳回 <xref:System.Data.EntityClient.EntityConnection> 之 <xref:System.Data.EntityClient.EntityCommand> 和 <xref:System.Data.EntityClient.EntityDataReader> 物件的 .NET Framework 資料提供者模式。 EntityClient 會使用 Entity SQL 語言，並提供彈性的對應給儲存體特有的資料提供者。 如需詳細資訊，請參閱 < [Entity Framework 的 EntityClient 提供者](./ef/entityclient-provider-for-the-entity-framework.md)。  
   
 ### <a name="entity-data-model-tools"></a>實體資料模型工具  
  Entity Framework 會提供一些命令列工具、精靈和設計工具來協助您建立 EDM 應用程式。 EntityDataSource 控制項支援以 EDM 為基礎的資料繫結案例。 EntityDataSource 控制項的程式設計介面與 Visual Studio 中的其他資料來源控制項很相似。 如需詳細資訊，請參閱 < [ADO.NET 實體資料模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))。  
