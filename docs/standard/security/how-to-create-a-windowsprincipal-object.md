@@ -1,5 +1,5 @@
 ---
-title: 如何：建立 WindowsPrincipal 物件
+title: HOW TO：建立 WindowsPrincipal 物件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 016f19c7141ebaf9b5c1f03adc263b689489119b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3960a7f87f8ac9a09da7222bd0f7a4a01afc4154
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198032"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583442"
 ---
-# <a name="how-to-create-a-windowsprincipal-object"></a>如何：建立 WindowsPrincipal 物件
+# <a name="how-to-create-a-windowsprincipal-object"></a>HOW TO：建立 WindowsPrincipal 物件
 有兩種方式來建立 <xref:System.Security.Principal.WindowsPrincipal> 物件，視程式碼是否必須重複執行以角色為基礎的驗證，還是它只必須執行一次而定。  
   
  如果程式碼必須重複執行以角色為基礎的驗證，下列程序的第一個會產生較少負荷。 程式碼只需要進行一次以角色為基礎的驗證時，您可以使用下列程序的第二個來建立 <xref:System.Security.Principal.WindowsPrincipal> 物件。  
@@ -39,15 +39,15 @@ ms.locfileid: "44198032"
         PrincipalPolicy.WindowsPrincipal)  
     ```  
   
-2.  設定原則後，請使用靜態 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 屬性來擷取封裝目前 Windows 使用者的主體。 由於屬性傳回類型是 <xref:System.Security.Principal.IPrincipal>，您必須將結果轉換為 <xref:System.Security.Principal.WindowsPrincipal> 類型。 下列程式碼會將新的 <xref:System.Security.Principal.WindowsPrincipal> 物件初始化為與目前執行緒相關聯之主體的值。  
+2.  設定原則後，請使用靜態 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 屬性來擷取封裝目前 Windows 使用者的主體。 由於屬性傳回型別是 <xref:System.Security.Principal.IPrincipal>，您必須將結果轉換為 <xref:System.Security.Principal.WindowsPrincipal> 類型。 下列程式碼會將新的 <xref:System.Security.Principal.WindowsPrincipal> 物件初始化為與目前執行緒相關聯之主體的值。  
   
     ```csharp  
-    WindowsPrincipal MyPrincipal =   
+    WindowsPrincipal myPrincipal =   
         (WindowsPrincipal) Thread.CurrentPrincipal;  
     ```  
   
     ```vb  
-    Dim MyPrincipal As WindowsPrincipal = _  
+    Dim myPrincipal As WindowsPrincipal = _  
         CType(Thread.CurrentPrincipal, WindowsPrincipal)   
     ```  
   
@@ -58,21 +58,21 @@ ms.locfileid: "44198032"
 1.  藉由呼叫靜態 <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType> 方法初始化新的 <xref:System.Security.Principal.WindowsIdentity> 物件，此方法會查詢目前的 Windows 帳戶，將該帳戶的相關資訊放入新建立的身分識別物件。 下列程式碼會建立新的 <xref:System.Security.Principal.WindowsIdentity> 物件，並將其初始化為目前已驗證的使用者。  
   
     ```csharp  
-    WindowsIdentity MyIdentity = WindowsIdentity.GetCurrent();  
+    WindowsIdentity myIdentity = WindowsIdentity.GetCurrent();  
     ```  
   
     ```vb  
-    Dim MyIdentity As WindowsIdentity = WindowsIdentity.GetCurrent()  
+    Dim myIdentity As WindowsIdentity = WindowsIdentity.GetCurrent()  
     ```  
   
 2.  建立新的 <xref:System.Security.Principal.WindowsPrincipal> 物件，並傳遞在上一個步驟中建立之 <xref:System.Security.Principal.WindowsIdentity> 物件的值給它。  
   
     ```csharp  
-    WindowsPrincipal MyPrincipal = new WindowsPrincipal(MyIdentity);  
+    WindowsPrincipal myPrincipal = new WindowsPrincipal(myIdentity);  
     ```  
   
     ```vb  
-    Dim MyPrincipal As New WindowsPrincipal(MyIdentity)  
+    Dim myPrincipal As New WindowsPrincipal(myIdentity)  
     ```  
   
 3.  建立主體物件之後，您可以數種方法的其中一種來進行驗證。  

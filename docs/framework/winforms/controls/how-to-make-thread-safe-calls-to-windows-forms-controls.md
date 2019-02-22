@@ -16,12 +16,12 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: 60a71aefbf6d180ffe8d68f54d438e5b58a603fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c5792425bec8dce9a45f438f62c112aec21c360
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710465"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584235"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>HOW TO：Windows Form 控制項的安全執行緒呼叫
 
@@ -404,9 +404,6 @@ private:
 
 ## <a name="example"></a>範例
  下列程式碼範例是完整的 Windows Forms 應用程式，此應用程式由具有三個按鈕和一個文字方塊的表單所組成。 第一個按鈕示範不安全的跨執行緒存取，第二個按鈕示範使用 <xref:System.Windows.Forms.Control.Invoke%2A>的安全存取，第三個按鈕示範使用 <xref:System.ComponentModel.BackgroundWorker>的安全存取。
-
-> [!NOTE]
-> 如需有關如何執行範例的指示，請參閱[How to:編譯並執行完整的 Windows Form 程式碼範例使用 Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416)。 此範例必須參考 System.Drawing 和 System.Windows.Forms 組件。
 
 ```csharp
 using System;

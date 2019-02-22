@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f9d83a0edb6dc2261931e422b0ae4c735d2e0d1
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 314c8b7268549380143a608bb423f849ad0bb64c
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086092"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583263"
 ---
 # <a name="cryptographic-signatures"></a>密碼編譯簽章
 <a name="top"></a> 密碼編譯數位簽章會使用公開金鑰演算法來提供資料完整性。 當您使用數位簽章簽署資料時，其他人可以確認簽章，並可以證明資料是來自您，而且在您簽署它之後沒有遭到竄改。 如需有關數位簽章的詳細資訊，請參閱 [The signature is valid](../../../docs/standard/security/cryptographic-services.md)。  
@@ -49,24 +49,24 @@ Imports System.Security.Cryptography
 Module Module1  
     Sub Main()  
         'The hash value to sign.  
-        Dim HashValue As Byte() = {59, 4, 248, 102, 77, 97, 142, 201, 210, 12, 224, 93, 25, 41, 100, 197, 213, 134, 130, 135}  
+        Dim hashValue As Byte() = {59, 4, 248, 102, 77, 97, 142, 201, 210, 12, 224, 93, 25, 41, 100, 197, 213, 134, 130, 135}  
   
         'The value to hold the signed value.  
-        Dim SignedHashValue() As Byte  
+        Dim signedHashValue() As Byte  
   
         'Generate a public/private key pair.  
-        Dim RSA As New RSACryptoServiceProvider()  
+        Dim rsa As New RSACryptoServiceProvider()  
   
         'Create an RSAPKCS1SignatureFormatter object and pass it   
         'the RSACryptoServiceProvider to transfer the private key.  
-        Dim RSAFormatter As New RSAPKCS1SignatureFormatter(RSA)  
+        Dim rsaFormatter As New RSAPKCS1SignatureFormatter(rsa)  
   
         'Set the hash algorithm to SHA1.  
-        RSAFormatter.SetHashAlgorithm("SHA1")  
+        rsaFormatter.SetHashAlgorithm("SHA1")  
   
-        'Create a signature for HashValue and assign it to   
-        'SignedHashValue.  
-        SignedHashValue = RSAFormatter.CreateSignature(HashValue)  
+        'Create a signature for hashValue and assign it to   
+        'signedHashValue.  
+        signedHashValue = rsaFormatter.CreateSignature(hashValue)  
     End Sub  
 End Module  
   
@@ -80,24 +80,24 @@ class Class1
    static void Main()  
    {  
       //The hash value to sign.  
-      byte[] HashValue = {59,4,248,102,77,97,142,201,210,12,224,93,25,41,100,197,213,134,130,135};  
+      byte[] hashValue = {59,4,248,102,77,97,142,201,210,12,224,93,25,41,100,197,213,134,130,135};  
   
       //The value to hold the signed value.  
-      byte[] SignedHashValue;  
+      byte[] signedHashValue;  
   
       //Generate a public/private key pair.  
-      RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();  
+      RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();  
   
       //Create an RSAPKCS1SignatureFormatter object and pass it the   
       //RSACryptoServiceProvider to transfer the private key.  
-      RSAPKCS1SignatureFormatter RSAFormatter = new RSAPKCS1SignatureFormatter(RSA);  
+      RSAPKCS1SignatureFormatter rsaFormatter = new RSAPKCS1SignatureFormatter(rsa);  
   
       //Set the hash algorithm to SHA1.  
-      RSAFormatter.SetHashAlgorithm("SHA1");  
+      rsaFormatter.SetHashAlgorithm("SHA1");  
   
-      //Create a signature for HashValue and assign it to   
-      //SignedHashValue.  
-      SignedHashValue = RSAFormatter.CreateSignature(HashValue);  
+      //Create a signature for hashValue and assign it to   
+      //signedHashValue.  
+      signedHashValue = rsaFormatter.CreateSignature(hashValue);  
    }  
 }  
 ```  
@@ -121,34 +121,34 @@ class Class1
   
 -   簽署人使用的雜湊演算法。  
   
- 若要驗證 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 類別所簽署的簽章，請使用 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別。 必須提供 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別簽署者的公開金鑰。 您將需要模數和指數的值以指定公開金鑰。 (產生公開/私密金鑰組的合作對象應該提供這些值。)第一次建立<xref:System.Security.Cryptography.RSACryptoServiceProvider>物件來保存的公開金鑰，將會驗證簽章，然後初始化<xref:System.Security.Cryptography.RSAParameters>結構，以指定公開金鑰的模數和指數值。  
+ 若要驗證 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 類別所簽署的簽章，請使用 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別。 必須提供 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別簽署者的公開金鑰。 您將需要模數和指數的值以指定公開金鑰。 (產生公開/私密金鑰組的合作對象應該提供這些值。)先建立 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 物件來保存將會驗證簽章的公開金鑰，然後初始化 <xref:System.Security.Cryptography.RSAParameters> 結構，到指定公開金鑰的模數和指數值。  
   
- 下列程式碼顯示如何建立 <xref:System.Security.Cryptography.RSAParameters> 結構。 `Modulus` 屬性設定為 `ModulusData` 位元組陣列的值，而 `Exponent` 屬性設定為 `ExponentData`位元組陣列的值。  
+ 下列程式碼顯示如何建立 <xref:System.Security.Cryptography.RSAParameters> 結構。 `Modulus` 屬性設定為 `modulusData` 位元組陣列的值，而 `Exponent` 屬性設定為 `exponentData`位元組陣列的值。  
   
 ```vb  
-Dim RSAKeyInfo As RSAParameters  
-RSAKeyInfo.Modulus = ModulusData  
-RSAKeyInfo.Exponent = ExponentData  
+Dim rsaKeyInfo As RSAParameters  
+rsaKeyInfo.Modulus = modulusData  
+rsaKeyInfo.Exponent = exponentData  
 ```  
   
 ```csharp  
-RSAParameters RSAKeyInfo;  
-RSAKeyInfo.Modulus = ModulusData;  
-RSAKeyInfo.Exponent = ExponentData;  
+RSAParameters rsaKeyInfo;  
+rsaKeyInfo.Modulus = modulusData;  
+rsaKeyInfo.Exponent = exponentData;  
 ```  
   
  建立 <xref:System.Security.Cryptography.RSAParameters> 物件之後，您可以針對 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 類別的新執行個體，初始化至 <xref:System.Security.Cryptography.RSAParameters>中指定的值。 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 會接著傳遞給 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 的建構函式以傳送金鑰。  
   
- 下列範例將說明此程序。 在此範例中， `HashValue` 和 `SignedHashValue` 是遠端合作對象所提供的位元組陣列。 遠端合作對象已使用 SHA1 演算法簽署 `HashValue` ，產生數位簽章 `SignedHashValue`。 必須提供  
+ 下列範例將說明此程序。 在此範例中， `hashValue` 和 `signedHashValue` 是遠端合作對象所提供的位元組陣列。 遠端合作對象已使用 SHA1 演算法簽署 `hashValue` ，產生數位簽章 `signedHashValue`。 必須提供  
   
- <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> 方法會驗證數位簽章是否有效，且已用來簽署 `HashValue`。  
+ <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> 方法會驗證數位簽章是否有效，且已用來簽署 `hashValue`。  
   
 ```vb  
-Dim RSA As New RSACryptoServiceProvider()  
-RSA.ImportParameters(RSAKeyInfo)  
-Dim RSADeformatter As New RSAPKCS1SignatureDeformatter(RSA)  
-RSADeformatter.SetHashAlgorithm("SHA1")  
-If RSADeformatter.VerifySignature(HashValue, SignedHashValue) Then  
+Dim rsa As New RSACryptoServiceProvider()  
+rsa.ImportParameters(rsaKeyInfo)  
+Dim rsaDeformatter As New RSAPKCS1SignatureDeformatter(rsa)  
+rsaDeformatter.SetHashAlgorithm("SHA1")  
+If rsaDeformatter.VerifySignature(hashValue, signedHashValue) Then  
    Console.WriteLine("The signature is valid.")  
 Else  
    Console.WriteLine("The signture is not valid.")  
@@ -156,11 +156,11 @@ End If
 ```  
   
 ```csharp  
-RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();  
-RSA.ImportParameters(RSAKeyInfo);  
-RSAPKCS1SignatureDeformatter RSADeformatter = new RSAPKCS1SignatureDeformatter(RSA);  
-RSADeformatter.SetHashAlgorithm("SHA1");  
-if(RSADeformatter.VerifySignature(HashValue, SignedHashValue))  
+RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();  
+rsa.ImportParameters(rsaKeyInfo);  
+RSAPKCS1SignatureDeformatter rsaDeformatter = new RSAPKCS1SignatureDeformatter(rsa);  
+rsaDeformatter.SetHashAlgorithm("SHA1");  
+if(rsaDeformatter.VerifySignature(hashValue, signedHashValue))  
 {  
    Console.WriteLine("The signature is valid.");  
 }  

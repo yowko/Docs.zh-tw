@@ -6,18 +6,18 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: a6ea57dda8f034684e8590ce4c3b6d37ab01230e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbb14e30e3ed2bebdabcf9163291c647e05b1cc5
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579520"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584378"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>HOW TO：撰寫 Windows forms 的控制項
 控制項所代表使用者與程式之間的圖形化連結。 控制項可以提供或處理資料、接受使用者輸入、回應事件，或執行任意數目的其他功能來連接使用者與應用程式。 因為控制項本質上是具有圖形化介面的元件，所以可以提供元件所執行的任何功能，以及提供使用者互動。 建立控制項以提供特定用途，而編寫控制項只是另一個程式設計工作。 記住這點，下列步驟代表控制項撰寫處理序的概觀。 連結可提供各個步驟的其他資訊。  
   
 > [!NOTE]
->  如果您想要撰寫自訂控制項以在 Web Forms 上使用，請參閱[開發自訂 ASP.NET 伺服器控制項](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
+>  如果您想要撰寫自訂控制項以在 Web Forms 上使用，請參閱[開發自訂 ASP.NET 伺服器控制項](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))。  
 >   
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "54579520"
   
 5.  如果您需要自訂控制項的繪製，請為它新增程式碼。 如需詳細資訊，請參閱[自訂控制項繪製和轉譯](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)。  
   
-6.  如果您的控制項繼承自<xref:System.Windows.Forms.UserControl>，您可以藉由建置控制專案中執行測試及其執行階段行為**UserControl 測試容器**。 如需詳細資訊，請參閱[＜How to：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+6.  如果您的控制項繼承自<xref:System.Windows.Forms.UserControl>，您可以藉由建置控制專案中執行測試及其執行階段行為**UserControl 測試容器**。 如需詳細資訊，請參閱[如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
   
 7.  您也可以建立新專案 (例如 Windows 應用程式) 並將它放入容器中，來測試您的控制項並進行偵錯。 此程序會示範在[逐步解說：撰寫複合控制項使用 Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54579520"
   
 9. 重複執行，並調整設計。  
   
-10. 封裝並部署您的控制項。 如需詳細資訊，請參閱[部署應用程式、服務和元件](https://msdn.microsoft.com/library/wtzawcsz)。  
+10. 封裝並部署您的控制項。 如需詳細資訊，請參閱 <<c0> [ 初步了解在 Visual Studio 中的部署](/visualstudio/deployment/deploying-applications-services-and-components)。  
   
 ## <a name="see-also"></a>另請參閱
 - [逐步解說：撰寫使用 Visual Basic 複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)

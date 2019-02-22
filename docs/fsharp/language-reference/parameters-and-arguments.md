@@ -2,12 +2,12 @@
 title: 參數和引數
 description: 深入了解F#定義參數，以及將引數傳遞至函式、 方法和屬性的語言支援。
 ms.date: 05/16/2016
-ms.openlocfilehash: 08332ad9ab1c1a05f68ba27b2f1513ad0fe7c4d5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 65e3b4f8ffb03e81104c963c5e2da7aba2e2b220
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612474"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583494"
 ---
 # <a name="parameters-and-arguments"></a>參數和引數
 
@@ -140,7 +140,17 @@ type C =
         printfn "%s" message
 ```
 
-提供做為引數的值`DefaultParameterValue`必須符合的型別參數，也就是下列不允許的：
+您也可以指定新的物件做為預設參數值。 例如，`Foo`成員可能會有選擇性`CanceallationToken`輸入，而是：
+
+```fsharp
+open System.Threading
+open System.Runtime.InteropServices
+type C = 
+    static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
+        printfn "%A" ct
+```
+
+提供做為引數的值`DefaultParameterValue`必須符合參數的型別。 例如，下列不允許：
 
 ```fsharp
 type C =

@@ -1,13 +1,13 @@
 ---
 title: 序列
 description: 了解如何使用F#序列，當您使用較大，已排序的資料的集合，但不一定會預期要使用的所有項目。
-ms.date: 05/16/2016
-ms.openlocfilehash: a86d22c834b377d4e92cfa610cdd3b498dd86dfa
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/19/2019
+ms.openlocfilehash: a7791be5e8bd07d81fe9e890fc5896b181f0cb39
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611993"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583923"
 ---
 # <a name="sequences"></a>序列
 
@@ -98,7 +98,7 @@ A*序列運算式*是評估為一連串的運算式。 循序項運算式可以�
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)計算函式，以取得狀態，並將其轉換為產生序列中的每個後續項目從產生的序列。 狀態為只是用來計算每個項目，並可隨著每個項目會計算值。 第二個引數`Seq.unfold`是用來啟動順序的起始值。 `Seq.unfold` 使用選項類型的狀態，可讓您藉由傳回終止的序列`None`值。 下列程式碼顯示的順序，兩個範例`seq1`並`fib`，所產生`unfold`作業。 第一天， `seq1`，是只是簡單的順序顯示最多 100 的數字。 第二`fib`，使用`unfold`計算 Fibonacci 序列。 Fibonacci 序列中的每個項目是先前的兩個費式數列數字的總和，因為狀態值就會是序列中前兩個數字所組成的 tuple。 初始值是`(1,1)`，序列中的前兩個數字。
+[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)計算函式，以取得狀態，並將其轉換為產生序列中的每個後續項目從產生的序列。 狀態為只是用來計算每個項目，並可隨著每個項目會計算值。 第二個引數`Seq.unfold`是用來啟動順序的起始值。 `Seq.unfold` 使用選項類型的狀態，可讓您藉由傳回終止的序列`None`值。 下列程式碼顯示的順序，兩個範例`seq1`並`fib`，所產生`unfold`作業。 第一天， `seq1`，是只是簡單的順序顯示數字，最多 20 個。 第二`fib`，使用`unfold`計算 Fibonacci 序列。 Fibonacci 序列中的每個項目是先前的兩個費式數列數字的總和，因為狀態值就會是序列中前兩個數字所組成的 tuple。 初始值是`(1,1)`，序列中的前兩個數字。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 

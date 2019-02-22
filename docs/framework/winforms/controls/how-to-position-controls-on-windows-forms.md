@@ -15,12 +15,12 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 2baf311f04209e988f2f5dd562e247ee13ed59ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27a8a97b9fe10565303c4e91d00808940be46a4f
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607156"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583468"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>HOW TO：在 Windows Forms 上的位置控制項
 若要調整控制項的位置，使用 Windows Form 設計工具中，或指定<xref:System.Windows.Forms.Control.Location%2A>屬性。  
@@ -104,4 +104,4 @@ ms.locfileid: "54607156"
 - [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
 - [依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
-- [如何：設定 Windows Form 的畫面位置](https://msdn.microsoft.com/library/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)
+- [如何：設定 Windows Form 的畫面位置](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))

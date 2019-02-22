@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 52ed421ee92eed29bf16815d22e3ec7a8b718a84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a822167ae5b2758a889c61eed5270e5abb01f961
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632344"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583416"
 ---
 # <a name="packaging-fonts-with-applications"></a>將字型與應用程式一起封裝
 本主題提供的概觀與封裝字型您[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。  
@@ -31,7 +31,7 @@ ms.locfileid: "54632344"
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 和[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字型包含類型旗標 fsType，表示字型的字型內嵌授權權限。 不過，此類型旗標只會參考儲存於文件中的內嵌字型，而不會參考內嵌於應用程式中的字型。 您可以擷取內嵌字型的權限，藉由建立字型<xref:System.Windows.Media.GlyphTypeface>物件，並參考其<xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>屬性。 請參閱 「 OS/2 和 Windows 度量 」 一節[OpenType 規格](https://www.microsoft.com/typography/otspec/os2.htm)如需 fsType 旗標。  
   
- [Microsoft 印刷](https://www.microsoft.com/typography/links/)Web 站台都包含可協助您找出特定字型供應商，或尋找自訂工作的字型的供應商的連絡資訊。  
+ [Microsoft 印刷](https://docs.microsoft.com/typography/)Web 站台都包含可協助您找出特定字型供應商，或尋找自訂工作的字型的供應商的連絡資訊。  
   
 <a name="adding_fonts_as_content_items"></a>   
 ## <a name="adding-fonts-as-content-items"></a>將字型新增為內容項目  
@@ -175,7 +175,7 @@ ms.locfileid: "54632344"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Microsoft 印刷︰連結、 新聞和連絡人](https://www.microsoft.com/typography/links/)
+- [Microsoft 印刷︰連結、 新聞和連絡人](https://docs.microsoft.com/typography/)
 - [OpenType 規格](https://www.microsoft.com/typography/otspec/)
 - [OpenType 字型功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
 - [範例 OpenType 字型套件](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

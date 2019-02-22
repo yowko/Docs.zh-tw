@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 4afa4b9e2c92569df4c8023d7dbfdfb025bf94b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36891a5acbb2fe06b4ab61573e26612927587c01
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527623"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583832"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>HOW TO：開發簡單的 Windows Forms 控制項
 本節將逐步引導您完成撰寫自訂 Windows Forms 控制項的重要步驟。 在本逐步解說中開發的簡單控制項允許的對齊方式與其<xref:System.Windows.Forms.Control.Text%2A>来變更屬性。 它不會引發或處理事件。  
@@ -34,7 +34,7 @@ ms.locfileid: "54527623"
     public class FirstControl:Control {}  
     ```  
   
-2.  定義屬性。 (您不需要定義屬性，因為控制項繼承許多屬性，從<xref:System.Windows.Forms.Control>類別，但大部分的自訂控制項通常會定義其他屬性。)下列程式碼片段會定義名為的屬性`TextAlignment`所`FirstControl`使用的顯示格式<xref:System.Windows.Forms.Control.Text%2A>屬性繼承自<xref:System.Windows.Forms.Control>。 如需有關定義屬性的詳細資訊，請參閱[屬性概觀](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。  
+2.  定義屬性。 (您不需要定義屬性，因為控制項繼承許多屬性，從<xref:System.Windows.Forms.Control>類別，但大部分的自訂控制項通常會定義其他屬性。)下列程式碼片段會定義名為的屬性`TextAlignment`所`FirstControl`使用的顯示格式<xref:System.Windows.Forms.Control.Text%2A>屬性繼承自<xref:System.Windows.Forms.Control>。 如需有關定義屬性的詳細資訊，請參閱[屬性概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120))。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
@@ -46,7 +46,7 @@ ms.locfileid: "54527623"
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  為您的控制項提供屬性 (attribute)。 屬性可讓視覺化設計工具在設計階段適當地顯示您的控制項及其屬性與事件。 下列程式碼片段會將屬性 (attribute) 套用至 `TextAlignment` 屬性 (property)。 Visual Studio 中，例如設計工具中<xref:System.ComponentModel.CategoryAttribute.Category%2A>屬性 （如程式碼片段所示） 會造成屬性會顯示在邏輯類別之下。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>屬性會造成描述性字串顯示在底部**屬性** 視窗時`TextAlignment`選取屬性。 如需屬性的詳細資訊，請參閱[元件的設計階段屬性](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)。  
+4.  為您的控制項提供屬性 (attribute)。 屬性可讓視覺化設計工具在設計階段適當地顯示您的控制項及其屬性與事件。 下列程式碼片段會將屬性 (attribute) 套用至 `TextAlignment` 屬性 (property)。 Visual Studio 中，例如設計工具中<xref:System.ComponentModel.CategoryAttribute.Category%2A>屬性 （如程式碼片段所示） 會造成屬性會顯示在邏輯類別之下。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>屬性會造成描述性字串顯示在底部**屬性** 視窗時`TextAlignment`選取屬性。 如需屬性的詳細資訊，請參閱[元件的設計階段屬性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
