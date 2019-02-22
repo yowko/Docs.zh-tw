@@ -11,111 +11,111 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b37c57093662c94f5ad20bf9d01c63223b5901fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 354375d4758e4ab34d34571257f6414e6a8584f0
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581975"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664194"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a><span data-ttu-id="4efad-102">HOW TO：從命令列建立 Windows Forms 應用程式</span><span class="sxs-lookup"><span data-stu-id="4efad-102">How to: Create a Windows Forms application from the command line</span></span>
-<span data-ttu-id="4efad-103">下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。</span><span class="sxs-lookup"><span data-stu-id="4efad-103">The following procedures describe the basic steps that you must complete to create and run a Windows Forms application from the command line.</span></span> <span data-ttu-id="4efad-104">在 Visual Studio 中，對這些程序有廣泛的支援。</span><span class="sxs-lookup"><span data-stu-id="4efad-104">There is extensive support for these procedures in Visual Studio.</span></span>  <span data-ttu-id="4efad-105">另請參閱[逐步解說：建立簡單 Windows Form](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))。</span><span class="sxs-lookup"><span data-stu-id="4efad-105">Also see [Walkthrough: Creating a Simple Windows Form](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).</span></span>  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a><span data-ttu-id="e4fcc-102">HOW TO：從命令列建立 Windows Forms 應用程式</span><span class="sxs-lookup"><span data-stu-id="e4fcc-102">How to: Create a Windows Forms application from the command line</span></span>
+<span data-ttu-id="e4fcc-103">下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-103">The following procedures describe the basic steps that you must complete to create and run a Windows Forms application from the command line.</span></span> <span data-ttu-id="e4fcc-104">在 Visual Studio 中，對這些程序有廣泛的支援。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-104">There is extensive support for these procedures in Visual Studio.</span></span>  <span data-ttu-id="e4fcc-105">另請參閱[逐步解說：在 WPF 中裝載 Windows Forms 控制項](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-105">Also see [Walkthrough: Hosting a Windows Forms Control in WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).</span></span>  
   
-## <a name="procedure"></a><span data-ttu-id="4efad-106">程序</span><span class="sxs-lookup"><span data-stu-id="4efad-106">Procedure</span></span>  
+## <a name="procedure"></a><span data-ttu-id="e4fcc-106">程序</span><span class="sxs-lookup"><span data-stu-id="e4fcc-106">Procedure</span></span>  
   
-#### <a name="to-create-the-form"></a><span data-ttu-id="4efad-107">建立表單</span><span class="sxs-lookup"><span data-stu-id="4efad-107">To create the form</span></span>  
+#### <a name="to-create-the-form"></a><span data-ttu-id="e4fcc-107">建立表單</span><span class="sxs-lookup"><span data-stu-id="e4fcc-107">To create the form</span></span>  
   
-1.  <span data-ttu-id="4efad-108">在空的程式碼檔案中，輸入下列匯入或使用陳述式：</span><span class="sxs-lookup"><span data-stu-id="4efad-108">In an empty code file, type the following import or using statements:</span></span>  
+1.  <span data-ttu-id="e4fcc-108">在空的程式碼檔案中，輸入下列匯入或使用陳述式：</span><span class="sxs-lookup"><span data-stu-id="e4fcc-108">In an empty code file, type the following import or using statements:</span></span>  
   
      [!code-csharp[System.Windows.Forms.BasicForm#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BasicForm#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
   
-2.  <span data-ttu-id="4efad-109">宣告繼承自表單類別且名為 `Form1` 的類別。</span><span class="sxs-lookup"><span data-stu-id="4efad-109">Declare a class named `Form1` that inherits from the Form class.</span></span>  
+2.  <span data-ttu-id="e4fcc-109">宣告繼承自表單類別且名為 `Form1` 的類別。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-109">Declare a class named `Form1` that inherits from the Form class.</span></span>  
   
      [!code-csharp[System.Windows.Forms.BasicForm#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3.  <span data-ttu-id="4efad-110">建立 `Form1` 的預設建構函式。</span><span class="sxs-lookup"><span data-stu-id="4efad-110">Create a default constructor for `Form1`.</span></span>  
+3.  <span data-ttu-id="e4fcc-110">建立 `Form1` 的預設建構函式。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-110">Create a default constructor for `Form1`.</span></span>  
   
-     <span data-ttu-id="4efad-111">您在後續的程序中，會將更多程式碼加入建構函式中。</span><span class="sxs-lookup"><span data-stu-id="4efad-111">You will add more code to the constructor in a subsequent procedure.</span></span>  
+     <span data-ttu-id="e4fcc-111">您在後續的程序中，會將更多程式碼加入建構函式中。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-111">You will add more code to the constructor in a subsequent procedure.</span></span>  
   
      [!code-csharp[System.Windows.Forms.BasicForm#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.BasicForm#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
   
-4.  <span data-ttu-id="4efad-112">將 `Main` 方法加入類別中。</span><span class="sxs-lookup"><span data-stu-id="4efad-112">Add a `Main` method to the class.</span></span>  
+4.  <span data-ttu-id="e4fcc-112">將 `Main` 方法加入類別中。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-112">Add a `Main` method to the class.</span></span>  
   
-    1.  <span data-ttu-id="4efad-113">適用於<xref:System.STAThreadAttribute>C#`Main`方法，以指定 Windows Forms 應用程式是單一執行緒的 apartment。</span><span class="sxs-lookup"><span data-stu-id="4efad-113">Apply the <xref:System.STAThreadAttribute> to the C# `Main` method to specify your Windows Forms application is a single-threaded apartment.</span></span> <span data-ttu-id="4efad-114">（屬性不需要在 Visual Basic 中，因為 Windows forms 應用程式開發與 Visual Basic 使用單一執行緒 apartment 模型的預設值。）</span><span class="sxs-lookup"><span data-stu-id="4efad-114">(The attribute is not necessary in Visual Basic, since Windows forms applications developed with Visual Basic use a single-threaded apartment model by default.)</span></span>  
+    1.  <span data-ttu-id="e4fcc-113">適用於<xref:System.STAThreadAttribute>C#`Main`方法，以指定 Windows Forms 應用程式是單一執行緒的 apartment。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-113">Apply the <xref:System.STAThreadAttribute> to the C# `Main` method to specify your Windows Forms application is a single-threaded apartment.</span></span> <span data-ttu-id="e4fcc-114">（屬性不需要在 Visual Basic 中，因為 Windows forms 應用程式開發與 Visual Basic 使用單一執行緒 apartment 模型的預設值。）</span><span class="sxs-lookup"><span data-stu-id="e4fcc-114">(The attribute is not necessary in Visual Basic, since Windows forms applications developed with Visual Basic use a single-threaded apartment model by default.)</span></span>  
   
-    2.  <span data-ttu-id="4efad-115">呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>若要將作業系統樣式套用至您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="4efad-115">Call <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> to apply operating system styles to your application.</span></span>  
+    2.  <span data-ttu-id="e4fcc-115">呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>若要將作業系統樣式套用至您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-115">Call <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> to apply operating system styles to your application.</span></span>  
   
-    3.  <span data-ttu-id="4efad-116">建立表單的執行個體，並加以執行。</span><span class="sxs-lookup"><span data-stu-id="4efad-116">Create an instance of the form and run it.</span></span>  
+    3.  <span data-ttu-id="e4fcc-116">建立表單的執行個體，並加以執行。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-116">Create an instance of the form and run it.</span></span>  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
   
-#### <a name="to-compile-and-run-the-application"></a><span data-ttu-id="4efad-117">編譯和執行應用程式</span><span class="sxs-lookup"><span data-stu-id="4efad-117">To compile and run the application</span></span>  
+#### <a name="to-compile-and-run-the-application"></a><span data-ttu-id="e4fcc-117">編譯和執行應用程式</span><span class="sxs-lookup"><span data-stu-id="e4fcc-117">To compile and run the application</span></span>  
   
-1.  <span data-ttu-id="4efad-118">在 .NET Framework 命令提示字元中，巡覽至您建立 `Form1` 類別的目錄。</span><span class="sxs-lookup"><span data-stu-id="4efad-118">At the .NET Framework command prompt, navigate to the directory you created the `Form1` class.</span></span>  
+1.  <span data-ttu-id="e4fcc-118">在 .NET Framework 命令提示字元中，巡覽至您建立 `Form1` 類別的目錄。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-118">At the .NET Framework command prompt, navigate to the directory you created the `Form1` class.</span></span>  
   
-2.  <span data-ttu-id="4efad-119">編譯表單。</span><span class="sxs-lookup"><span data-stu-id="4efad-119">Compile the form.</span></span>  
+2.  <span data-ttu-id="e4fcc-119">編譯表單。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-119">Compile the form.</span></span>  
   
-    -   <span data-ttu-id="4efad-120">如果您使用的 C# 中，類型： `csc form1.cs`</span><span class="sxs-lookup"><span data-stu-id="4efad-120">If you are using C#, type: `csc form1.cs`</span></span>  
+    -   <span data-ttu-id="e4fcc-120">如果您使用的 C# 中，類型： `csc form1.cs`</span><span class="sxs-lookup"><span data-stu-id="e4fcc-120">If you are using C#, type: `csc form1.cs`</span></span>  
   
          `-or-`  
   
-    -   <span data-ttu-id="4efad-121">如果您使用 Visual Basic 中，類型： `vbc form1.vb`</span><span class="sxs-lookup"><span data-stu-id="4efad-121">If you are using Visual Basic, type: `vbc form1.vb`</span></span>  
+    -   <span data-ttu-id="e4fcc-121">如果您使用 Visual Basic 中，類型： `vbc form1.vb`</span><span class="sxs-lookup"><span data-stu-id="e4fcc-121">If you are using Visual Basic, type: `vbc form1.vb`</span></span>  
   
-3.  <span data-ttu-id="4efad-122">在命令提示字元中，輸入： `Form1.exe`</span><span class="sxs-lookup"><span data-stu-id="4efad-122">At the command prompt, type: `Form1.exe`</span></span>  
+3.  <span data-ttu-id="e4fcc-122">在命令提示字元中，輸入： `Form1.exe`</span><span class="sxs-lookup"><span data-stu-id="e4fcc-122">At the command prompt, type: `Form1.exe`</span></span>  
   
-## <a name="adding-a-control-and-handling-an-event"></a><span data-ttu-id="4efad-123">加入控制項和處理事件</span><span class="sxs-lookup"><span data-stu-id="4efad-123">Adding a Control and Handling an Event</span></span>  
- <span data-ttu-id="4efad-124">先前的程序步驟示範只是如何建立可編譯和執行的基本 Windows Form。</span><span class="sxs-lookup"><span data-stu-id="4efad-124">The previous procedure steps demonstrated how to just create a basic Windows Form that compiles and runs.</span></span> <span data-ttu-id="4efad-125">下一個程序將會說明如何建立控制項並將其加入表單，以及處理控制項的事件。</span><span class="sxs-lookup"><span data-stu-id="4efad-125">The next procedure will show you how to create and add a control to the form, and handle an event for the control.</span></span> <span data-ttu-id="4efad-126">如需您可以將它新增至 Windows Forms 控制項的相關資訊，請參閱 < [Windows Forms 控制項](../../../docs/framework/winforms/controls/index.md)。</span><span class="sxs-lookup"><span data-stu-id="4efad-126">For more information about the controls you can add to Windows Forms, see [Windows Forms Controls](../../../docs/framework/winforms/controls/index.md).</span></span>  
+## <a name="adding-a-control-and-handling-an-event"></a><span data-ttu-id="e4fcc-123">加入控制項和處理事件</span><span class="sxs-lookup"><span data-stu-id="e4fcc-123">Adding a Control and Handling an Event</span></span>  
+ <span data-ttu-id="e4fcc-124">先前的程序步驟示範只是如何建立可編譯和執行的基本 Windows Form。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-124">The previous procedure steps demonstrated how to just create a basic Windows Form that compiles and runs.</span></span> <span data-ttu-id="e4fcc-125">下一個程序將會說明如何建立控制項並將其加入表單，以及處理控制項的事件。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-125">The next procedure will show you how to create and add a control to the form, and handle an event for the control.</span></span> <span data-ttu-id="e4fcc-126">如需您可以將它新增至 Windows Forms 控制項的相關資訊，請參閱 < [Windows Forms 控制項](../../../docs/framework/winforms/controls/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-126">For more information about the controls you can add to Windows Forms, see [Windows Forms Controls](../../../docs/framework/winforms/controls/index.md).</span></span>  
   
- <span data-ttu-id="4efad-127">除了了解如何建立 Windows Forms 應用程式，您還應該了解以事件為基礎的程式設計，以及如何處理使用者輸入。</span><span class="sxs-lookup"><span data-stu-id="4efad-127">In addition to understanding how to create Windows Forms applications, you should understand event-based programming and how to handle user input.</span></span> <span data-ttu-id="4efad-128">如需詳細資訊，請參閱 <<c0> [ 在 Windows Forms 中建立事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)，和[處理使用者輸入](../../../docs/framework/winforms/controls/handling-user-input.md)</span><span class="sxs-lookup"><span data-stu-id="4efad-128">For more information, see [Creating Event Handlers in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), and [Handling User Input](../../../docs/framework/winforms/controls/handling-user-input.md)</span></span>  
+ <span data-ttu-id="e4fcc-127">除了了解如何建立 Windows Forms 應用程式，您還應該了解以事件為基礎的程式設計，以及如何處理使用者輸入。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-127">In addition to understanding how to create Windows Forms applications, you should understand event-based programming and how to handle user input.</span></span> <span data-ttu-id="e4fcc-128">如需詳細資訊，請參閱 <<c0> [ 在 Windows Forms 中建立事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)，和[處理使用者輸入](../../../docs/framework/winforms/controls/handling-user-input.md)</span><span class="sxs-lookup"><span data-stu-id="e4fcc-128">For more information, see [Creating Event Handlers in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), and [Handling User Input](../../../docs/framework/winforms/controls/handling-user-input.md)</span></span>  
   
-#### <a name="to-declare-a-button-control-and-handle-its-click-event"></a><span data-ttu-id="4efad-129">宣告按鈕控制項及處理其 Click 事件</span><span class="sxs-lookup"><span data-stu-id="4efad-129">To declare a button control and handle its click event</span></span>  
+#### <a name="to-declare-a-button-control-and-handle-its-click-event"></a><span data-ttu-id="e4fcc-129">宣告按鈕控制項及處理其 Click 事件</span><span class="sxs-lookup"><span data-stu-id="e4fcc-129">To declare a button control and handle its click event</span></span>  
   
-1.  <span data-ttu-id="4efad-130">宣告名為 `button1` 的按鈕控制項。</span><span class="sxs-lookup"><span data-stu-id="4efad-130">Declare a button control named `button1`.</span></span>  
+1.  <span data-ttu-id="e4fcc-130">宣告名為 `button1` 的按鈕控制項。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-130">Declare a button control named `button1`.</span></span>  
   
-2.  <span data-ttu-id="4efad-131">在建構函式中，建立按鈕，並設定其 <xref:System.Windows.Forms.Control.Size%2A>、<xref:System.Windows.Forms.Control.Location%2A> 和 <xref:System.Windows.Forms.Control.Text%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="4efad-131">In the constructor, create the button and set its <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> and <xref:System.Windows.Forms.Control.Text%2A> properties.</span></span>  
+2.  <span data-ttu-id="e4fcc-131">在建構函式中，建立按鈕，並設定其 <xref:System.Windows.Forms.Control.Size%2A>、<xref:System.Windows.Forms.Control.Location%2A> 和 <xref:System.Windows.Forms.Control.Text%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-131">In the constructor, create the button and set its <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> and <xref:System.Windows.Forms.Control.Text%2A> properties.</span></span>  
   
-3.  <span data-ttu-id="4efad-132">將按鈕加入表單中。</span><span class="sxs-lookup"><span data-stu-id="4efad-132">Add the button to the form.</span></span>  
+3.  <span data-ttu-id="e4fcc-132">將按鈕加入表單中。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-132">Add the button to the form.</span></span>  
   
-     <span data-ttu-id="4efad-133">下列程式碼範例會示範如何宣告按鈕控制項。</span><span class="sxs-lookup"><span data-stu-id="4efad-133">The following code example demonstrates how to declare the button control.</span></span>  
+     <span data-ttu-id="e4fcc-133">下列程式碼範例會示範如何宣告按鈕控制項。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-133">The following code example demonstrates how to declare the button control.</span></span>  
   
      [!code-csharp[System.Windows.Forms.FormWithButton#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.FormWithButton#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
   
-4.  <span data-ttu-id="4efad-134">建立方法來處理按鈕的 <xref:System.Windows.Forms.Control.Click> 事件。</span><span class="sxs-lookup"><span data-stu-id="4efad-134">Create a method to handle the <xref:System.Windows.Forms.Control.Click> event for the button.</span></span>  
+4.  <span data-ttu-id="e4fcc-134">建立方法來處理按鈕的 <xref:System.Windows.Forms.Control.Click> 事件。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-134">Create a method to handle the <xref:System.Windows.Forms.Control.Click> event for the button.</span></span>  
   
-5.  <span data-ttu-id="4efad-135">在 Click 事件處理常式中，顯示含有 "Hello World" 訊息的 <xref:System.Windows.Forms.MessageBox>。</span><span class="sxs-lookup"><span data-stu-id="4efad-135">In the click event handler, display a <xref:System.Windows.Forms.MessageBox> with the message, "Hello World".</span></span>  
+5.  <span data-ttu-id="e4fcc-135">在 Click 事件處理常式中，顯示含有 "Hello World" 訊息的 <xref:System.Windows.Forms.MessageBox>。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-135">In the click event handler, display a <xref:System.Windows.Forms.MessageBox> with the message, "Hello World".</span></span>  
   
-     <span data-ttu-id="4efad-136">下列程式碼範例會示範如何處理按鈕控制項的 Click 事件。</span><span class="sxs-lookup"><span data-stu-id="4efad-136">The following code example demonstrates how to handle the button control's click event.</span></span>  
+     <span data-ttu-id="e4fcc-136">下列程式碼範例會示範如何處理按鈕控制項的 Click 事件。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-136">The following code example demonstrates how to handle the button control's click event.</span></span>  
   
      [!code-csharp[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
   
-6.  <span data-ttu-id="4efad-137">使 <xref:System.Windows.Forms.Control.Click> 事件與您建立的方法產生關聯。</span><span class="sxs-lookup"><span data-stu-id="4efad-137">Associate the <xref:System.Windows.Forms.Control.Click> event with the method you created.</span></span>  
+6.  <span data-ttu-id="e4fcc-137">使 <xref:System.Windows.Forms.Control.Click> 事件與您建立的方法產生關聯。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-137">Associate the <xref:System.Windows.Forms.Control.Click> event with the method you created.</span></span>  
   
-     <span data-ttu-id="4efad-138">下列程式碼範例會示範如何將事件與方法產生關聯。</span><span class="sxs-lookup"><span data-stu-id="4efad-138">The following code example demonstrates how to associate the event with the method.</span></span>  
+     <span data-ttu-id="e4fcc-138">下列程式碼範例會示範如何將事件與方法產生關聯。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-138">The following code example demonstrates how to associate the event with the method.</span></span>  
   
      [!code-csharp[System.Windows.Forms.FormWithButton#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.FormWithButton#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#4)]  
   
-7.  <span data-ttu-id="4efad-139">依照先前程序的說明，編譯及執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="4efad-139">Compile and run the application as described in the previous procedure.</span></span>  
+7.  <span data-ttu-id="e4fcc-139">依照先前程序的說明，編譯及執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-139">Compile and run the application as described in the previous procedure.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4efad-140">範例</span><span class="sxs-lookup"><span data-stu-id="4efad-140">Example</span></span>  
- <span data-ttu-id="4efad-141">下列程式碼範例是先前程序的完整範例。</span><span class="sxs-lookup"><span data-stu-id="4efad-141">Following code example is the complete example from the previous procedures.</span></span>  
+## <a name="example"></a><span data-ttu-id="e4fcc-140">範例</span><span class="sxs-lookup"><span data-stu-id="e4fcc-140">Example</span></span>  
+ <span data-ttu-id="e4fcc-141">下列程式碼範例是先前程序的完整範例。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-141">Following code example is the complete example from the previous procedures.</span></span>  
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="4efad-142">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="4efad-142">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="e4fcc-142">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="e4fcc-142">Compiling the Code</span></span>  
   
--   <span data-ttu-id="4efad-143">若要編譯程式碼，請遵循前面說明如何編譯及執行應用程式之程序中的指示。</span><span class="sxs-lookup"><span data-stu-id="4efad-143">To compile the code, follow the instructions in the proceeding procedure that describe how to compile and run the application.</span></span>  
+-   <span data-ttu-id="e4fcc-143">若要編譯程式碼，請遵循前面說明如何編譯及執行應用程式之程序中的指示。</span><span class="sxs-lookup"><span data-stu-id="e4fcc-143">To compile the code, follow the instructions in the proceeding procedure that describe how to compile and run the application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4efad-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4efad-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e4fcc-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e4fcc-144">See also</span></span>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [<span data-ttu-id="4efad-145">變更 Windows Forms 的外觀</span><span class="sxs-lookup"><span data-stu-id="4efad-145">Changing the Appearance of Windows Forms</span></span>](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
-- [<span data-ttu-id="4efad-146">增強 Windows Forms 應用程式</span><span class="sxs-lookup"><span data-stu-id="4efad-146">Enhancing Windows Forms Applications</span></span>](../../../docs/framework/winforms/advanced/index.md)
-- [<span data-ttu-id="4efad-147">Windows Forms 使用者入門</span><span class="sxs-lookup"><span data-stu-id="4efad-147">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [<span data-ttu-id="e4fcc-145">變更 Windows Forms 的外觀</span><span class="sxs-lookup"><span data-stu-id="e4fcc-145">Changing the Appearance of Windows Forms</span></span>](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
+- [<span data-ttu-id="e4fcc-146">增強 Windows Forms 應用程式</span><span class="sxs-lookup"><span data-stu-id="e4fcc-146">Enhancing Windows Forms Applications</span></span>](../../../docs/framework/winforms/advanced/index.md)
+- [<span data-ttu-id="e4fcc-147">Windows Forms 使用者入門</span><span class="sxs-lookup"><span data-stu-id="e4fcc-147">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
