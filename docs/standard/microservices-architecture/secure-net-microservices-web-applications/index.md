@@ -19,7 +19,7 @@ ms.date: 10/19/2018
 
 **圖 9-1**. 使用 API 閘道的集中式驗證
 
-如果服務可供直接存取，則可以使用 Azure Active Directory 等驗證服務或作為 Security Token Service (STS) 的專用驗證微服務來驗證使用者。 信任決策會透過安全性權杖或 Cookie 在服務之間共用 (如有必要，可透過[資料保護服務](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)在 ASP.NET Core 應用程式之間共用這些權杖)。圖 9-2 說明的就是這種模式。
+如果服務可供直接存取，則可以使用 Azure Active Directory 等驗證服務或作為 Security Token Service (STS) 的專用驗證微服務來驗證使用者。 信任決策會透過安全性權杖或 Cookie 在服務之間共用 (如果有需要，可以透過實作 [Cookie 共用](/aspnet/core/security/cookie-sharing)以在 ASP.NET Core 應用程式之間共用這些權杖。)圖 9-2 說明的就是這種模式。
 
 ![有人直接存取微服務時，包含驗證和授權的信任將由專用微服務發行的安全性權杖處理，於微服務間共用。](./media/image2.png)
 
@@ -271,7 +271,7 @@ JWT 持有人驗證中介軟體也可以支援更進階的案例；例如，在�
 ## <a name="additional-resources"></a>其他資源
 
 - **在應用程式之間共用 Cookie** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+  [*https://docs.microsoft.com/aspnet/core/security/cookie-sharing*](/aspnet/core/security/cookie-sharing)
 
 - **身分識別簡介** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
@@ -285,7 +285,7 @@ JWT 持有人驗證中介軟體也可以支援更進階的案例；例如，在�
 - **Michell Anicas，OAuth 2 簡介** \
   [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
-- **AspNet.Security.OAuth.Providers** (ASP.NET OAuth 提供者的 GitHub 存放庫。 \
+- **AspNet.Security.OAuth.Providers** (ASP.NET OAuth 提供者的 GitHub 存放庫) \
   [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
 - **Danny Strockis，將 Azure AD 整合到 ASP.NET Core Web 應用程式** \
