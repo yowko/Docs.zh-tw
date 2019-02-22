@@ -22,25 +22,25 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f9d83a0edb6dc2261931e422b0ae4c735d2e0d1
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 314c8b7268549380143a608bb423f849ad0bb64c
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086092"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583263"
 ---
-# <a name="cryptographic-signatures"></a><span data-ttu-id="c2c37-102">密碼編譯簽章</span><span class="sxs-lookup"><span data-stu-id="c2c37-102">Cryptographic Signatures</span></span>
-<a name="top"></a> <span data-ttu-id="c2c37-103">密碼編譯數位簽章會使用公開金鑰演算法來提供資料完整性。</span><span class="sxs-lookup"><span data-stu-id="c2c37-103">Cryptographic digital signatures use public key algorithms to provide data integrity.</span></span> <span data-ttu-id="c2c37-104">當您使用數位簽章簽署資料時，其他人可以確認簽章，並可以證明資料是來自您，而且在您簽署它之後沒有遭到竄改。</span><span class="sxs-lookup"><span data-stu-id="c2c37-104">When you sign data with a digital signature, someone else can verify the signature, and can prove that the data originated from you and was not altered after you signed it.</span></span> <span data-ttu-id="c2c37-105">如需有關數位簽章的詳細資訊，請參閱 [The signature is valid](../../../docs/standard/security/cryptographic-services.md)。</span><span class="sxs-lookup"><span data-stu-id="c2c37-105">For more information about digital signatures, see [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).</span></span>  
+# <a name="cryptographic-signatures"></a><span data-ttu-id="62ccc-102">密碼編譯簽章</span><span class="sxs-lookup"><span data-stu-id="62ccc-102">Cryptographic Signatures</span></span>
+<a name="top"></a> <span data-ttu-id="62ccc-103">密碼編譯數位簽章會使用公開金鑰演算法來提供資料完整性。</span><span class="sxs-lookup"><span data-stu-id="62ccc-103">Cryptographic digital signatures use public key algorithms to provide data integrity.</span></span> <span data-ttu-id="62ccc-104">當您使用數位簽章簽署資料時，其他人可以確認簽章，並可以證明資料是來自您，而且在您簽署它之後沒有遭到竄改。</span><span class="sxs-lookup"><span data-stu-id="62ccc-104">When you sign data with a digital signature, someone else can verify the signature, and can prove that the data originated from you and was not altered after you signed it.</span></span> <span data-ttu-id="62ccc-105">如需有關數位簽章的詳細資訊，請參閱 [The signature is valid](../../../docs/standard/security/cryptographic-services.md)。</span><span class="sxs-lookup"><span data-stu-id="62ccc-105">For more information about digital signatures, see [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).</span></span>  
   
- <span data-ttu-id="c2c37-106">本主題說明如何使用 <xref:System.Security.Cryptography?displayProperty=nameWithType> 命名空間中的類別產生及驗證數位簽章。</span><span class="sxs-lookup"><span data-stu-id="c2c37-106">This topic explains how to generate and verify digital signatures using classes in the <xref:System.Security.Cryptography?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="62ccc-106">本主題說明如何使用 <xref:System.Security.Cryptography?displayProperty=nameWithType> 命名空間中的類別產生及驗證數位簽章。</span><span class="sxs-lookup"><span data-stu-id="62ccc-106">This topic explains how to generate and verify digital signatures using classes in the <xref:System.Security.Cryptography?displayProperty=nameWithType> namespace.</span></span>  
   
--   [<span data-ttu-id="c2c37-107">產生簽章</span><span class="sxs-lookup"><span data-stu-id="c2c37-107">Generating Signatures</span></span>](#generate)  
+-   [<span data-ttu-id="62ccc-107">產生簽章</span><span class="sxs-lookup"><span data-stu-id="62ccc-107">Generating Signatures</span></span>](#generate)  
   
--   [<span data-ttu-id="c2c37-108">驗證簽章</span><span class="sxs-lookup"><span data-stu-id="c2c37-108">Verifying Signatures</span></span>](#verify)  
+-   [<span data-ttu-id="62ccc-108">驗證簽章</span><span class="sxs-lookup"><span data-stu-id="62ccc-108">Verifying Signatures</span></span>](#verify)  
   
 <a name="generate"></a>   
-## <a name="generating-signatures"></a><span data-ttu-id="c2c37-109">產生簽章</span><span class="sxs-lookup"><span data-stu-id="c2c37-109">Generating Signatures</span></span>  
- <span data-ttu-id="c2c37-110">數位簽章通常適用於代表較大資料的雜湊值。</span><span class="sxs-lookup"><span data-stu-id="c2c37-110">Digital signatures are usually applied to hash values that represent larger data.</span></span> <span data-ttu-id="c2c37-111">下列範例會將數位簽章套用到雜湊值。</span><span class="sxs-lookup"><span data-stu-id="c2c37-111">The following example applies a digital signature to a hash value.</span></span> <span data-ttu-id="c2c37-112">首先，會建立 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 類別的新執行個體，來產生公開/私密金鑰組。</span><span class="sxs-lookup"><span data-stu-id="c2c37-112">First, a new instance of the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class is created to generate a public/private key pair.</span></span> <span data-ttu-id="c2c37-113">接著， <xref:System.Security.Cryptography.RSACryptoServiceProvider> 會傳遞至 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="c2c37-113">Next, the <xref:System.Security.Cryptography.RSACryptoServiceProvider> is passed to a new instance of the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> class.</span></span> <span data-ttu-id="c2c37-114">如此會將私密金鑰轉移給 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>，它會實際執行數位簽署。</span><span class="sxs-lookup"><span data-stu-id="c2c37-114">This transfers the private key to the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>, which actually performs the digital signing.</span></span> <span data-ttu-id="c2c37-115">在您可以簽署雜湊碼之前，必須先指定要使用的雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="c2c37-115">Before you can sign the hash code, you must specify a hash algorithm to use.</span></span> <span data-ttu-id="c2c37-116">此範例使用 SHA1 演算法。</span><span class="sxs-lookup"><span data-stu-id="c2c37-116">This example uses the SHA1 algorithm.</span></span> <span data-ttu-id="c2c37-117">最後，會呼叫 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> 方法來執行簽章。</span><span class="sxs-lookup"><span data-stu-id="c2c37-117">Finally, the <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> method is called to perform the signing.</span></span>  
+## <a name="generating-signatures"></a><span data-ttu-id="62ccc-109">產生簽章</span><span class="sxs-lookup"><span data-stu-id="62ccc-109">Generating Signatures</span></span>  
+ <span data-ttu-id="62ccc-110">數位簽章通常適用於代表較大資料的雜湊值。</span><span class="sxs-lookup"><span data-stu-id="62ccc-110">Digital signatures are usually applied to hash values that represent larger data.</span></span> <span data-ttu-id="62ccc-111">下列範例會將數位簽章套用到雜湊值。</span><span class="sxs-lookup"><span data-stu-id="62ccc-111">The following example applies a digital signature to a hash value.</span></span> <span data-ttu-id="62ccc-112">首先，會建立 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 類別的新執行個體，來產生公開/私密金鑰組。</span><span class="sxs-lookup"><span data-stu-id="62ccc-112">First, a new instance of the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class is created to generate a public/private key pair.</span></span> <span data-ttu-id="62ccc-113">接著， <xref:System.Security.Cryptography.RSACryptoServiceProvider> 會傳遞至 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="62ccc-113">Next, the <xref:System.Security.Cryptography.RSACryptoServiceProvider> is passed to a new instance of the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> class.</span></span> <span data-ttu-id="62ccc-114">如此會將私密金鑰轉移給 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>，它會實際執行數位簽署。</span><span class="sxs-lookup"><span data-stu-id="62ccc-114">This transfers the private key to the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>, which actually performs the digital signing.</span></span> <span data-ttu-id="62ccc-115">在您可以簽署雜湊碼之前，必須先指定要使用的雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="62ccc-115">Before you can sign the hash code, you must specify a hash algorithm to use.</span></span> <span data-ttu-id="62ccc-116">此範例使用 SHA1 演算法。</span><span class="sxs-lookup"><span data-stu-id="62ccc-116">This example uses the SHA1 algorithm.</span></span> <span data-ttu-id="62ccc-117">最後，會呼叫 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> 方法來執行簽章。</span><span class="sxs-lookup"><span data-stu-id="62ccc-117">Finally, the <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> method is called to perform the signing.</span></span>  
   
 ```vb  
 Imports System  
@@ -49,24 +49,24 @@ Imports System.Security.Cryptography
 Module Module1  
     Sub Main()  
         'The hash value to sign.  
-        Dim HashValue As Byte() = {59, 4, 248, 102, 77, 97, 142, 201, 210, 12, 224, 93, 25, 41, 100, 197, 213, 134, 130, 135}  
+        Dim hashValue As Byte() = {59, 4, 248, 102, 77, 97, 142, 201, 210, 12, 224, 93, 25, 41, 100, 197, 213, 134, 130, 135}  
   
         'The value to hold the signed value.  
-        Dim SignedHashValue() As Byte  
+        Dim signedHashValue() As Byte  
   
         'Generate a public/private key pair.  
-        Dim RSA As New RSACryptoServiceProvider()  
+        Dim rsa As New RSACryptoServiceProvider()  
   
         'Create an RSAPKCS1SignatureFormatter object and pass it   
         'the RSACryptoServiceProvider to transfer the private key.  
-        Dim RSAFormatter As New RSAPKCS1SignatureFormatter(RSA)  
+        Dim rsaFormatter As New RSAPKCS1SignatureFormatter(rsa)  
   
         'Set the hash algorithm to SHA1.  
-        RSAFormatter.SetHashAlgorithm("SHA1")  
+        rsaFormatter.SetHashAlgorithm("SHA1")  
   
-        'Create a signature for HashValue and assign it to   
-        'SignedHashValue.  
-        SignedHashValue = RSAFormatter.CreateSignature(HashValue)  
+        'Create a signature for hashValue and assign it to   
+        'signedHashValue.  
+        signedHashValue = rsaFormatter.CreateSignature(hashValue)  
     End Sub  
 End Module  
   
@@ -80,75 +80,75 @@ class Class1
    static void Main()  
    {  
       //The hash value to sign.  
-      byte[] HashValue = {59,4,248,102,77,97,142,201,210,12,224,93,25,41,100,197,213,134,130,135};  
+      byte[] hashValue = {59,4,248,102,77,97,142,201,210,12,224,93,25,41,100,197,213,134,130,135};  
   
       //The value to hold the signed value.  
-      byte[] SignedHashValue;  
+      byte[] signedHashValue;  
   
       //Generate a public/private key pair.  
-      RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();  
+      RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();  
   
       //Create an RSAPKCS1SignatureFormatter object and pass it the   
       //RSACryptoServiceProvider to transfer the private key.  
-      RSAPKCS1SignatureFormatter RSAFormatter = new RSAPKCS1SignatureFormatter(RSA);  
+      RSAPKCS1SignatureFormatter rsaFormatter = new RSAPKCS1SignatureFormatter(rsa);  
   
       //Set the hash algorithm to SHA1.  
-      RSAFormatter.SetHashAlgorithm("SHA1");  
+      rsaFormatter.SetHashAlgorithm("SHA1");  
   
-      //Create a signature for HashValue and assign it to   
-      //SignedHashValue.  
-      SignedHashValue = RSAFormatter.CreateSignature(HashValue);  
+      //Create a signature for hashValue and assign it to   
+      //signedHashValue.  
+      signedHashValue = rsaFormatter.CreateSignature(hashValue);  
    }  
 }  
 ```  
   
-### <a name="signing-xml-files"></a><span data-ttu-id="c2c37-118">簽署 XML 檔案</span><span class="sxs-lookup"><span data-stu-id="c2c37-118">Signing XML Files</span></span>  
- <span data-ttu-id="c2c37-119">.NET Framework 會提供 <xref:System.Security.Cryptography.Xml> 命名空間，可讓您簽署 XML。</span><span class="sxs-lookup"><span data-stu-id="c2c37-119">The .NET Framework provides the <xref:System.Security.Cryptography.Xml> namespace, which enables you sign XML.</span></span> <span data-ttu-id="c2c37-120">當您想要確認 XML 是來自特定來源時，簽署 XML 是很重要的。</span><span class="sxs-lookup"><span data-stu-id="c2c37-120">Signing XML is important when you want to verify that the XML originates from a certain source.</span></span> <span data-ttu-id="c2c37-121">例如，如果您使用會利用 XML 的股票報價服務，如果 XML 的來源已簽署，您便可以驗證它。</span><span class="sxs-lookup"><span data-stu-id="c2c37-121">For example, if you are using a stock quote service that uses XML, you can verify the source of the XML if it is signed.</span></span>  
+### <a name="signing-xml-files"></a><span data-ttu-id="62ccc-118">簽署 XML 檔案</span><span class="sxs-lookup"><span data-stu-id="62ccc-118">Signing XML Files</span></span>  
+ <span data-ttu-id="62ccc-119">.NET Framework 會提供 <xref:System.Security.Cryptography.Xml> 命名空間，可讓您簽署 XML。</span><span class="sxs-lookup"><span data-stu-id="62ccc-119">The .NET Framework provides the <xref:System.Security.Cryptography.Xml> namespace, which enables you sign XML.</span></span> <span data-ttu-id="62ccc-120">當您想要確認 XML 是來自特定來源時，簽署 XML 是很重要的。</span><span class="sxs-lookup"><span data-stu-id="62ccc-120">Signing XML is important when you want to verify that the XML originates from a certain source.</span></span> <span data-ttu-id="62ccc-121">例如，如果您使用會利用 XML 的股票報價服務，如果 XML 的來源已簽署，您便可以驗證它。</span><span class="sxs-lookup"><span data-stu-id="62ccc-121">For example, if you are using a stock quote service that uses XML, you can verify the source of the XML if it is signed.</span></span>  
   
- <span data-ttu-id="c2c37-122">這個命名空間中的類別遵照[XML 簽章語法和處理建議](https://www.w3.org/TR/xmldsig-core/)全球資訊網協會。</span><span class="sxs-lookup"><span data-stu-id="c2c37-122">The classes in this namespace follow the [XML-Signature Syntax and Processing recommendation](https://www.w3.org/TR/xmldsig-core/) from the World Wide Web Consortium.</span></span>  
+ <span data-ttu-id="62ccc-122">這個命名空間中的類別遵照[XML 簽章語法和處理建議](https://www.w3.org/TR/xmldsig-core/)全球資訊網協會。</span><span class="sxs-lookup"><span data-stu-id="62ccc-122">The classes in this namespace follow the [XML-Signature Syntax and Processing recommendation](https://www.w3.org/TR/xmldsig-core/) from the World Wide Web Consortium.</span></span>  
   
- [<span data-ttu-id="c2c37-123">回到頁首</span><span class="sxs-lookup"><span data-stu-id="c2c37-123">Back to top</span></span>](#top)  
+ [<span data-ttu-id="62ccc-123">回到頁首</span><span class="sxs-lookup"><span data-stu-id="62ccc-123">Back to top</span></span>](#top)  
   
 <a name="verify"></a>   
-## <a name="verifying-signatures"></a><span data-ttu-id="c2c37-124">驗證簽章</span><span class="sxs-lookup"><span data-stu-id="c2c37-124">Verifying Signatures</span></span>  
- <span data-ttu-id="c2c37-125">若要驗證資料是由特定合作對象簽署，您必須擁有下列資訊：</span><span class="sxs-lookup"><span data-stu-id="c2c37-125">To verify that data was signed by a particular party, you must have the following information:</span></span>  
+## <a name="verifying-signatures"></a><span data-ttu-id="62ccc-124">驗證簽章</span><span class="sxs-lookup"><span data-stu-id="62ccc-124">Verifying Signatures</span></span>  
+ <span data-ttu-id="62ccc-125">若要驗證資料是由特定合作對象簽署，您必須擁有下列資訊：</span><span class="sxs-lookup"><span data-stu-id="62ccc-125">To verify that data was signed by a particular party, you must have the following information:</span></span>  
   
--   <span data-ttu-id="c2c37-126">簽章資料之合作對象的公開金鑰。</span><span class="sxs-lookup"><span data-stu-id="c2c37-126">The public key of the party that signed the data.</span></span>  
+-   <span data-ttu-id="62ccc-126">簽章資料之合作對象的公開金鑰。</span><span class="sxs-lookup"><span data-stu-id="62ccc-126">The public key of the party that signed the data.</span></span>  
   
--   <span data-ttu-id="c2c37-127">數位簽章。</span><span class="sxs-lookup"><span data-stu-id="c2c37-127">The digital signature.</span></span>  
+-   <span data-ttu-id="62ccc-127">數位簽章。</span><span class="sxs-lookup"><span data-stu-id="62ccc-127">The digital signature.</span></span>  
   
--   <span data-ttu-id="c2c37-128">已簽署的資料。</span><span class="sxs-lookup"><span data-stu-id="c2c37-128">The data that was signed.</span></span>  
+-   <span data-ttu-id="62ccc-128">已簽署的資料。</span><span class="sxs-lookup"><span data-stu-id="62ccc-128">The data that was signed.</span></span>  
   
--   <span data-ttu-id="c2c37-129">簽署人使用的雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="c2c37-129">The hash algorithm used by the signer.</span></span>  
+-   <span data-ttu-id="62ccc-129">簽署人使用的雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="62ccc-129">The hash algorithm used by the signer.</span></span>  
   
- <span data-ttu-id="c2c37-130">若要驗證 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 類別所簽署的簽章，請使用 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別。</span><span class="sxs-lookup"><span data-stu-id="c2c37-130">To verify a signature signed by the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> class, use the <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> class.</span></span> <span data-ttu-id="c2c37-131">必須提供 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別簽署者的公開金鑰。</span><span class="sxs-lookup"><span data-stu-id="c2c37-131">The <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> class must be supplied the public key of the signer.</span></span> <span data-ttu-id="c2c37-132">您將需要模數和指數的值以指定公開金鑰。</span><span class="sxs-lookup"><span data-stu-id="c2c37-132">You will need the values of the modulus and the exponent to specify the public key.</span></span> <span data-ttu-id="c2c37-133">(產生公開/私密金鑰組的合作對象應該提供這些值。)第一次建立<xref:System.Security.Cryptography.RSACryptoServiceProvider>物件來保存的公開金鑰，將會驗證簽章，然後初始化<xref:System.Security.Cryptography.RSAParameters>結構，以指定公開金鑰的模數和指數值。</span><span class="sxs-lookup"><span data-stu-id="c2c37-133">(The party that generated the public/private key pair should provide these values.) First create an <xref:System.Security.Cryptography.RSACryptoServiceProvider> object to hold the public key that will verify the signature, and then initialize an <xref:System.Security.Cryptography.RSAParameters> structure to the modulus and exponent values that specify the public key.</span></span>  
+ <span data-ttu-id="62ccc-130">若要驗證 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 類別所簽署的簽章，請使用 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別。</span><span class="sxs-lookup"><span data-stu-id="62ccc-130">To verify a signature signed by the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> class, use the <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> class.</span></span> <span data-ttu-id="62ccc-131">必須提供 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別簽署者的公開金鑰。</span><span class="sxs-lookup"><span data-stu-id="62ccc-131">The <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> class must be supplied the public key of the signer.</span></span> <span data-ttu-id="62ccc-132">您將需要模數和指數的值以指定公開金鑰。</span><span class="sxs-lookup"><span data-stu-id="62ccc-132">You will need the values of the modulus and the exponent to specify the public key.</span></span> <span data-ttu-id="62ccc-133">(產生公開/私密金鑰組的合作對象應該提供這些值。)先建立 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 物件來保存將會驗證簽章的公開金鑰，然後初始化 <xref:System.Security.Cryptography.RSAParameters> 結構，到指定公開金鑰的模數和指數值。</span><span class="sxs-lookup"><span data-stu-id="62ccc-133">(The party that generated the public/private key pair should provide these values.) First create an <xref:System.Security.Cryptography.RSACryptoServiceProvider> object to hold the public key that will verify the signature, and then initialize an <xref:System.Security.Cryptography.RSAParameters> structure to the modulus and exponent values that specify the public key.</span></span>  
   
- <span data-ttu-id="c2c37-134">下列程式碼顯示如何建立 <xref:System.Security.Cryptography.RSAParameters> 結構。</span><span class="sxs-lookup"><span data-stu-id="c2c37-134">The following code shows the creation of an <xref:System.Security.Cryptography.RSAParameters> structure.</span></span> <span data-ttu-id="c2c37-135">`Modulus` 屬性設定為 `ModulusData` 位元組陣列的值，而 `Exponent` 屬性設定為 `ExponentData`位元組陣列的值。</span><span class="sxs-lookup"><span data-stu-id="c2c37-135">The `Modulus` property is set to the value of a byte array called `ModulusData` and the `Exponent` property is set to the value of a byte array called `ExponentData`.</span></span>  
+ <span data-ttu-id="62ccc-134">下列程式碼顯示如何建立 <xref:System.Security.Cryptography.RSAParameters> 結構。</span><span class="sxs-lookup"><span data-stu-id="62ccc-134">The following code shows the creation of an <xref:System.Security.Cryptography.RSAParameters> structure.</span></span> <span data-ttu-id="62ccc-135">`Modulus` 屬性設定為 `modulusData` 位元組陣列的值，而 `Exponent` 屬性設定為 `exponentData`位元組陣列的值。</span><span class="sxs-lookup"><span data-stu-id="62ccc-135">The `Modulus` property is set to the value of a byte array called `modulusData` and the `Exponent` property is set to the value of a byte array called `exponentData`.</span></span>  
   
 ```vb  
-Dim RSAKeyInfo As RSAParameters  
-RSAKeyInfo.Modulus = ModulusData  
-RSAKeyInfo.Exponent = ExponentData  
+Dim rsaKeyInfo As RSAParameters  
+rsaKeyInfo.Modulus = modulusData  
+rsaKeyInfo.Exponent = exponentData  
 ```  
   
 ```csharp  
-RSAParameters RSAKeyInfo;  
-RSAKeyInfo.Modulus = ModulusData;  
-RSAKeyInfo.Exponent = ExponentData;  
+RSAParameters rsaKeyInfo;  
+rsaKeyInfo.Modulus = modulusData;  
+rsaKeyInfo.Exponent = exponentData;  
 ```  
   
- <span data-ttu-id="c2c37-136">建立 <xref:System.Security.Cryptography.RSAParameters> 物件之後，您可以針對 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 類別的新執行個體，初始化至 <xref:System.Security.Cryptography.RSAParameters>中指定的值。</span><span class="sxs-lookup"><span data-stu-id="c2c37-136">After you have created the <xref:System.Security.Cryptography.RSAParameters> object, you can initialize a new instance of the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class to the values specified in <xref:System.Security.Cryptography.RSAParameters>.</span></span> <span data-ttu-id="c2c37-137"><xref:System.Security.Cryptography.RSACryptoServiceProvider> 會接著傳遞給 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 的建構函式以傳送金鑰。</span><span class="sxs-lookup"><span data-stu-id="c2c37-137">The <xref:System.Security.Cryptography.RSACryptoServiceProvider> is, in turn, passed to the constructor of an <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> to transfer the key.</span></span>  
+ <span data-ttu-id="62ccc-136">建立 <xref:System.Security.Cryptography.RSAParameters> 物件之後，您可以針對 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 類別的新執行個體，初始化至 <xref:System.Security.Cryptography.RSAParameters>中指定的值。</span><span class="sxs-lookup"><span data-stu-id="62ccc-136">After you have created the <xref:System.Security.Cryptography.RSAParameters> object, you can initialize a new instance of the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class to the values specified in <xref:System.Security.Cryptography.RSAParameters>.</span></span> <span data-ttu-id="62ccc-137"><xref:System.Security.Cryptography.RSACryptoServiceProvider> 會接著傳遞給 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 的建構函式以傳送金鑰。</span><span class="sxs-lookup"><span data-stu-id="62ccc-137">The <xref:System.Security.Cryptography.RSACryptoServiceProvider> is, in turn, passed to the constructor of an <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> to transfer the key.</span></span>  
   
- <span data-ttu-id="c2c37-138">下列範例將說明此程序。</span><span class="sxs-lookup"><span data-stu-id="c2c37-138">The following example illustrates this process.</span></span> <span data-ttu-id="c2c37-139">在此範例中， `HashValue` 和 `SignedHashValue` 是遠端合作對象所提供的位元組陣列。</span><span class="sxs-lookup"><span data-stu-id="c2c37-139">In this example, `HashValue` and `SignedHashValue` are arrays of bytes provided by a remote party.</span></span> <span data-ttu-id="c2c37-140">遠端合作對象已使用 SHA1 演算法簽署 `HashValue` ，產生數位簽章 `SignedHashValue`。</span><span class="sxs-lookup"><span data-stu-id="c2c37-140">The remote party has signed the `HashValue` using the SHA1 algorithm, producing the digital signature `SignedHashValue`.</span></span> <span data-ttu-id="c2c37-141">必須提供</span><span class="sxs-lookup"><span data-stu-id="c2c37-141">The</span></span>  
+ <span data-ttu-id="62ccc-138">下列範例將說明此程序。</span><span class="sxs-lookup"><span data-stu-id="62ccc-138">The following example illustrates this process.</span></span> <span data-ttu-id="62ccc-139">在此範例中， `hashValue` 和 `signedHashValue` 是遠端合作對象所提供的位元組陣列。</span><span class="sxs-lookup"><span data-stu-id="62ccc-139">In this example, `hashValue` and `signedHashValue` are arrays of bytes provided by a remote party.</span></span> <span data-ttu-id="62ccc-140">遠端合作對象已使用 SHA1 演算法簽署 `hashValue` ，產生數位簽章 `signedHashValue`。</span><span class="sxs-lookup"><span data-stu-id="62ccc-140">The remote party has signed the `hashValue` using the SHA1 algorithm, producing the digital signature `signedHashValue`.</span></span> <span data-ttu-id="62ccc-141">必須提供</span><span class="sxs-lookup"><span data-stu-id="62ccc-141">The</span></span>  
   
- <span data-ttu-id="c2c37-142"><xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> 方法會驗證數位簽章是否有效，且已用來簽署 `HashValue`。</span><span class="sxs-lookup"><span data-stu-id="c2c37-142"><xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> method verifies that the digital signature is valid and was used to sign the `HashValue`.</span></span>  
+ <span data-ttu-id="62ccc-142"><xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> 方法會驗證數位簽章是否有效，且已用來簽署 `hashValue`。</span><span class="sxs-lookup"><span data-stu-id="62ccc-142"><xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> method verifies that the digital signature is valid and was used to sign the `hashValue`.</span></span>  
   
 ```vb  
-Dim RSA As New RSACryptoServiceProvider()  
-RSA.ImportParameters(RSAKeyInfo)  
-Dim RSADeformatter As New RSAPKCS1SignatureDeformatter(RSA)  
-RSADeformatter.SetHashAlgorithm("SHA1")  
-If RSADeformatter.VerifySignature(HashValue, SignedHashValue) Then  
+Dim rsa As New RSACryptoServiceProvider()  
+rsa.ImportParameters(rsaKeyInfo)  
+Dim rsaDeformatter As New RSAPKCS1SignatureDeformatter(rsa)  
+rsaDeformatter.SetHashAlgorithm("SHA1")  
+If rsaDeformatter.VerifySignature(hashValue, signedHashValue) Then  
    Console.WriteLine("The signature is valid.")  
 Else  
    Console.WriteLine("The signture is not valid.")  
@@ -156,11 +156,11 @@ End If
 ```  
   
 ```csharp  
-RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();  
-RSA.ImportParameters(RSAKeyInfo);  
-RSAPKCS1SignatureDeformatter RSADeformatter = new RSAPKCS1SignatureDeformatter(RSA);  
-RSADeformatter.SetHashAlgorithm("SHA1");  
-if(RSADeformatter.VerifySignature(HashValue, SignedHashValue))  
+RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();  
+rsa.ImportParameters(rsaKeyInfo);  
+RSAPKCS1SignatureDeformatter rsaDeformatter = new RSAPKCS1SignatureDeformatter(rsa);  
+rsaDeformatter.SetHashAlgorithm("SHA1");  
+if(rsaDeformatter.VerifySignature(hashValue, signedHashValue))  
 {  
    Console.WriteLine("The signature is valid.");  
 }  
@@ -170,8 +170,8 @@ else
 }  
 ```  
   
- <span data-ttu-id="c2c37-143">如果簽章有效，此程式碼片段會顯示 "`The signature is valid`"，否則顯示 "`The signature is not valid`"。</span><span class="sxs-lookup"><span data-stu-id="c2c37-143">This code fragment will display "`The signature is valid`" if the signature is valid and "`The signature is not valid`" if it is not.</span></span>  
+ <span data-ttu-id="62ccc-143">如果簽章有效，此程式碼片段會顯示 "`The signature is valid`"，否則顯示 "`The signature is not valid`"。</span><span class="sxs-lookup"><span data-stu-id="62ccc-143">This code fragment will display "`The signature is valid`" if the signature is valid and "`The signature is not valid`" if it is not.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2c37-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c2c37-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62ccc-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62ccc-144">See also</span></span>
 
-- [<span data-ttu-id="c2c37-145">The signature is valid</span><span class="sxs-lookup"><span data-stu-id="c2c37-145">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="62ccc-145">The signature is valid</span><span class="sxs-lookup"><span data-stu-id="62ccc-145">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)
