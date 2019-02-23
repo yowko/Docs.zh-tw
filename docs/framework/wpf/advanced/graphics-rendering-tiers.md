@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 85631433534a2cd962e398fe435275aa293405a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea3c5d2c8d98f75bad164ff16c098401e41e4c5e
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543850"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748579"
 ---
 # <a name="graphics-rendering-tiers"></a>圖形轉譯層
 轉譯層定義執行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式之裝置的圖形硬體及效能層級。  
@@ -90,7 +90,7 @@ ms.locfileid: "54543850"
 |使用點陣化內容 <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|使用呈現任何內容<xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>方法的<xref:System.Windows.Media.Imaging.RenderTargetBitmap>。|  
 |使用並排顯示的內容 <xref:System.Windows.Media.TileBrush>|任何並排顯示內容所在<xref:System.Windows.Media.TileBrush.TileMode%2A>的屬性<xref:System.Windows.Media.TileBrush>設定為<xref:System.Windows.Media.TileMode.Tile>。|  
 |超過圖形硬體之最大紋理大小的介面|針對大部分圖形硬體，大型表面的大小是 2048x2048 或 4096x4096 像素。|  
-|視訊 RAM 需求超出圖形硬體記憶體的任何作業|您可以使用 Windows SDK 之 [WPF 效能套件](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)中所含的 Perforator 工具，來監視應用程式視訊 RAM 使用方式。|  
+|視訊 RAM 需求超出圖形硬體記憶體的任何作業|您可以使用 Windows SDK 之 [WPF 效能套件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))中所含的 Perforator 工具，來監視應用程式視訊 RAM 使用方式。|  
 |多層式視窗|多層式視窗允許 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式轉譯非矩形視窗中的畫面內容。 在支援 Windows 顯示驅動程式模型 (WDDM) 的 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../../includes/win7-md.md)] 這類作業系統上，多層式視窗會進行硬體加速。 在 [!INCLUDE[winxp](../../../../includes/winxp-md.md)] 這類其他系統上，沒有硬體加速的軟體會轉譯多層式視窗。<br /><br /> 您可以啟用中的多層式的視窗[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]藉由設定下列<xref:System.Windows.Window>屬性：<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
@@ -117,7 +117,7 @@ ms.locfileid: "54543850"
 |Perforator|用於分析轉譯行為。|  
 |Visual Profiler|用於剖析 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 服務的使用情形，例如視覺化樹狀結構中由項目處理的版面配置和事件。|  
   
- WPF 效能套件提供效能資料的豐富圖形檢視。 如需 WPF 效能工具的詳細資訊，請參閱 [WPF 效能套件](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)。  
+ WPF 效能套件提供效能資料的豐富圖形檢視。 如需 WPF 效能工具的詳細資訊，請參閱 [WPF 效能套件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))。  
   
 ### <a name="directx-diagnostic-tool"></a>DirectX       
  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 診斷工具 Dxdiag.exe 旨在協助您對 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 相關問題進行疑難排解。 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 診斷工具的預設安裝資料夾是︰  
@@ -133,6 +133,6 @@ DirectX 診斷工具主要視窗
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [WPF 效能套件](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)
+- [WPF 效能套件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
 - [圖形轉譯登錄設定](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)
 - [動畫祕訣和訣竅](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

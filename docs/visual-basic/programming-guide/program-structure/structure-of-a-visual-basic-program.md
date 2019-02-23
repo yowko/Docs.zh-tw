@@ -7,17 +7,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: daaafa4877e9fc5abd7e720c5a91aa61f24a686c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64ac6da99bf304639dfc0de5e24d6d6bdd3e9795
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686045"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746519"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程式的結構
 從標準建置組塊，已建立 Visual Basic 程式。 A*解決方案*可以包含一或多個專案。 A*專案*又可以包含一或多個組件。 每個*組件*編譯一或多個原始程式檔。 A*原始程式檔*提供定義和實作的類別、 結構、 模組和介面，最後會包含所有的程式碼。  
   
- 如需這些建置組塊的 Visual Basic 程式，請參閱[方案和專案](/visualstudio/ide/solutions-and-projects-in-visual-studio)並[組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)。  
+ Visual Basic 程式的這些建置組塊的相關資訊，請參閱[方案和專案](/visualstudio/ide/solutions-and-projects-in-visual-studio)並[.NET 組件](../../../standard/assembly/index.md)。  
   
 ## <a name="file-level-programming-elements"></a>檔案層級的程式設計項目  
  當您啟動專案或檔案，並開啟程式碼編輯器中時，您會看到一些程式碼已經位於正確位置，以及正確的順序。 您撰寫任何程式碼應該遵循下列順序：  

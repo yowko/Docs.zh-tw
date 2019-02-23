@@ -6,18 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 78fc56a49c92d17e6e4638573169bf43c3b77ce3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d96f754c9e28455b6494c17d4d295837c008f535
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497276"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747219"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 控制項概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.SplitContainer> 控制項可視為一個複合控制項，其中包含兩個可移動的分隔列所分隔的面板。 將滑鼠指標移到分隔列上時，指標會變更形狀，以顯示分隔列是可移動的。  
   
 > [!IMPORTANT]
->  在 **工具箱**，<xref:System.Windows.Forms.SplitContainer>控制項取代了<xref:System.Windows.Forms.Splitter>是否有舊版的 Visual Studio 中的控制項。 <xref:System.Windows.Forms.SplitContainer> 控制項會比 <xref:System.Windows.Forms.Splitter> 控制項合用。 <xref:System.Windows.Forms.Splitter>類別仍然包含在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]相容性與現有的應用程式，但強烈建議您將<xref:System.Windows.Forms.SplitContainer>針對新專案的控制項。  
+>  在 **工具箱**，<xref:System.Windows.Forms.SplitContainer>控制項取代了<xref:System.Windows.Forms.Splitter>是否有舊版的 Visual Studio 中的控制項。 
+  <xref:System.Windows.Forms.SplitContainer> 控制項會比 <xref:System.Windows.Forms.Splitter> 控制項合用。 <xref:System.Windows.Forms.Splitter>類別仍然包含在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]相容性與現有的應用程式，但強烈建議您將<xref:System.Windows.Forms.SplitContainer>針對新專案的控制項。  
   
  使用<xref:System.Windows.Forms.SplitContainer>控制項，您可以建立複雜的使用者介面; 通常，一個面板中的選取範圍會決定在其他窗格中所顯示的物件。 這種排列方式可有效地顯示及瀏覽資訊。 有兩個面板可讓您彙總資訊方面的情況下，，和列中或 「 分隔器 」 可以方便使用者調整面板的大小。  
   
@@ -52,4 +53,4 @@ Windows Form <xref:System.Windows.Forms.SplitContainer> 控制項可視為一個
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
-- [SplitContainer 控制項範例](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
+- [SplitContainer 控制項範例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/0ffz7d1b(v=vs.90))

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XDocument
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
-ms.openlocfilehash: 0d68eb40b60481709ff2852a643908025e2e43ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67d81c02ca7a207a48190a3bf09b6ab5dbec17de
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512329"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746399"
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>HOW TO：繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ
 此範例示範如何繫結至 XML 資料<xref:System.Windows.Controls.ItemsControl>使用<xref:System.Xml.Linq.XDocument>。  
@@ -29,7 +29,7 @@ ms.locfileid: "54512329"
  [!code-csharp[XLinqExample#LoadDCFromFile](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromfile)]
  [!code-vb[XLinqExample#LoadDCFromFile](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromfile)]  
   
- XML 資料可以儲存為 XAML 資源使用<xref:System.Windows.Data.ObjectDataProvider>。 如需完整的範例，請參閱 [L2DBForm.xaml 原始程式碼](https://msdn.microsoft.com/library/624e96d4-6d27-4195-8ac2-2f3835f6c57e)。 下列範例顯示程式碼如何將資料內容設定為物件資源。  
+ XML 資料可以儲存為 XAML 資源使用<xref:System.Windows.Data.ObjectDataProvider>。 如需完整範例，請參閱 < [L2DBForm.xaml 來源程式碼](/visualstudio/designers/l2dbform-xaml-source-code)。 下列範例顯示程式碼如何將資料內容設定為物件資源。  
   
  [!code-csharp[XLinqExample#LoadDCFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromxaml)]
  [!code-vb[XLinqExample#LoadDCFromXAML](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromxaml)]  

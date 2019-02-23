@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6ea5997906c0bf34de67a6a125552d2b2c4e1a43
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bfbe1bb413e0d9f46fe587d7a412af5303685b7a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150741"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748371"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>逐步解說：我第一個 WPF 桌面應用程式
 
@@ -66,7 +66,7 @@ ms.locfileid: "53150741"
       Visual Studio 會建立專案並開啟名為預設應用程式視窗的設計工具**MainWindow.xaml**。
 
    > [!NOTE]
-   > 本逐步解說使用<xref:System.Windows.Controls.DataGrid>可在.NET Framework 4 及更新版本的控制項。 為確定您的專案目標.NET Framework 4 或更新版本。 如需詳細資訊，請參閱[＜How to：以.NET framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
+   > 本逐步解說使用<xref:System.Windows.Controls.DataGrid>可在.NET Framework 4 及更新版本的控制項。 為確定您的專案目標.NET Framework 4 或更新版本。 如需詳細資訊，請參閱[如何：以一個 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
 
 2. 開啟*Application.xaml* (Visual Basic) 或*App.xaml* (C#)。
 
@@ -327,7 +327,7 @@ ms.locfileid: "53150741"
 
 1. 開啟 *`ExpenseItHome.xaml`* 。
 
-2. 新增<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式來<xref:System.Windows.Controls.Button>項目。 如需詳細資訊，請參閱[＜How to：建立簡單的事件處理常式](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)。
+2. 新增<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式來<xref:System.Windows.Controls.Button>項目。 如需詳細資訊，請參閱[如何：建立簡單的事件處理常式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))。
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -353,7 +353,7 @@ ms.locfileid: "53150741"
 3. 建置並執行應用程式。
 
     > [!NOTE]
-    > 如果您收到錯誤指出<xref:System.Windows.Controls.DataGrid>找不到或不存在，請確定您的專案目標.NET Framework 4 或更新版本。 如需詳細資訊，請參閱[＜How to：以.NET framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
+    > 如果您收到錯誤指出<xref:System.Windows.Controls.DataGrid>找不到或不存在，請確定您的專案目標.NET Framework 4 或更新版本。 如需詳細資訊，請參閱[如何：以一個 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
 
 4. 選取 [**檢視**] 按鈕。
 

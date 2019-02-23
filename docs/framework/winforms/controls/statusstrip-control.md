@@ -5,12 +5,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
-ms.openlocfilehash: 82eeda8ab3c0445c98a7ba7ad3b97c7b7ff21fcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a01960978f5fd4d17c7ae3e0f019efa5adfe050c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501654"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745903"
 ---
 # <a name="statusstrip-control"></a>StatusStrip 控制項
 Windows Form `StatusStrip` 控制項在表單裡被當做區域來使用，通常會顯示在視窗底部，在其中應用程式可以顯示各種狀態資訊。 `StatusStrip` 控制項的上方通常會有 `ToolStripStatusLabel` 控制項，它們顯示文字或圖示以表示狀態，或 <xref:System.Windows.Forms.ToolStripProgressBar> 以圖形方式顯示處理程序的完成狀態。  
@@ -22,7 +22,7 @@ Windows Form `StatusStrip` 控制項在表單裡被當做區域來使用，通�
  [如何：在 StatusStrip 中以互動方式使用 Spring 屬性](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)  
  示範如何使用 `Spring` 屬性以互動方式將 `StatusStrip` 的  `ToolStripStatusLabel`  置中。  
   
- 另請參閱[StatusStrip 項目集合編輯器](https://msdn.microsoft.com/library/ms233631\(v=vs.110\))， [StatusStrip 項目集合編輯器](https://msdn.microsoft.com/library/ms233642\(v=vs.110\))。  
+ 另請參閱[StatusStrip 項目集合編輯器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))並[StatusStrip 工作對話方塊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.StatusStrip>  

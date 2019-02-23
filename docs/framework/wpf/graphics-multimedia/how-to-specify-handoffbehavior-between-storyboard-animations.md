@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Storyboards [WPF], handoff behavior between animations
 - animation [WPF], handoff behavior between
 ms.assetid: 97bd6842-929b-49d9-813e-46553ae46472
-ms.openlocfilehash: 9a27c377e2993c1e67ada508071698a541cec660
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: a6da3f58fc6e999f5196cf5d8d3fd00f1098fc50
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305437"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745849"
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>HOW TO：指定腳本動畫之間的傳遞行為
 此範例示範如何指定分鏡腳本動畫之間的遞移式行為。 <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>屬性<xref:System.Windows.Media.Animation.BeginStoryboard>指定新動畫已套用至屬性的任何現有的互動。  
@@ -24,5 +24,4 @@ ms.locfileid: "56305437"
 - <xref:System.Windows.Media.Animation.BeginStoryboard>
 - <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>
 - [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [動畫和計時](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
 - [動畫和計時 how to 主題](animation-and-timing-how-to-topics.md)

@@ -1,15 +1,15 @@
 ---
-title: 逐步解說： 在 Visual Studio (Visual Basic) 中內嵌來自 Managed 組件的型別
+title: 逐步解說：在 Visual Studio (Visual Basic) 中內嵌來自 Managed 組件的型別
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f14a3e41c00ae307086a6d3745d4ec76b772721c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245464"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747540"
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>逐步解說： 在 Visual Studio (Visual Basic) 中內嵌來自 Managed 組件的型別
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>逐步解說：在 Visual Studio (Visual Basic) 中內嵌來自 Managed 組件的型別
 若要內嵌來自強式名稱 Managed 組件的類型資訊，您可以鬆散地結合應用程式中的類型以確保版本獨立。 也就是說，您可以撰寫程式來使用 Managed 程式庫多個版本的類型，而不需重新編譯每個版本。  
   
  內嵌型別時，通常會搭配使用 COM Interop (例如從 Microsoft Office 使用 Automation 物件的應用程式)。 當您內嵌類型資訊時，可讓相同組建的程式使用不同電腦上版本各異的 Microsoft Office。 不過，您也可以搭配使用類型內嵌功能與完全受管理的解決方案。  
@@ -60,7 +60,7 @@ ms.locfileid: "39245464"
   
 4.  以滑鼠右鍵按一下 TypeEquivalenceInterface 專案，然後按一下 [屬性]。 按一下 [編譯] 索引標籤。將輸出路徑設為開發電腦上的有效位置，例如 `C:\TypeEquivalenceSample`。 這個位置也會用於本逐步解說稍後的步驟。  
   
-5.  在編輯專案屬性期間，按一下 [簽署] 索引標籤。選取 [簽署組件] 選項。 在 [選擇強式名稱金鑰檔案] 清單中，按一下 [<新增...>]。 在 [金鑰檔案名稱] 方塊中，輸入 `key.snk`。 清除 [以密碼保護我的金鑰檔] 核取方塊。 按一下 [確定 **Deploying Office Solutions**]。  
+5.  在編輯專案屬性期間，按一下 [簽署] 索引標籤。選取 [簽署組件] 選項。 在 [選擇強式名稱金鑰檔案] 清單中，按一下 [<新增...>]。 在 [金鑰檔案名稱] 方塊中，輸入 `key.snk`。 清除 [以密碼保護我的金鑰檔] 核取方塊。 按一下 [確定] 。  
   
 6.  開啟 ISampleInterface.vb 檔案。 將下列程式碼加入 ISampleInterface 類別檔案，以建立 ISampleInterface 介面。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "39245464"
   
 4.  以滑鼠右鍵按一下 TypeEquivalenceRuntime 專案，然後按一下 [屬性]。 按一下 [編譯] 索引標籤。將輸出路徑設為您在 TypeEquivalenceInterface 專案中使用的相同位置，例如 `C:\TypeEquivalenceSample`。  
   
-5.  在編輯專案屬性期間，按一下 [簽署] 索引標籤。選取 [簽署組件] 選項。 在 [選擇強式名稱金鑰檔案] 清單中，按一下 [<新增...>]。 在 [金鑰檔案名稱] 方塊中，輸入 `key.snk`。 清除 [以密碼保護我的金鑰檔] 核取方塊。 按一下 [確定 **Deploying Office Solutions**]。  
+5.  在編輯專案屬性期間，按一下 [簽署] 索引標籤。選取 [簽署組件] 選項。 在 [選擇強式名稱金鑰檔案] 清單中，按一下 [<新增...>]。 在 [金鑰檔案名稱] 方塊中，輸入 `key.snk`。 清除 [以密碼保護我的金鑰檔] 核取方塊。 按一下 [確定] 。  
   
 6.  以滑鼠右鍵按一下 TypeEquivalenceRuntime 專案，然後按一下 [加入參考]。 按一下 [瀏覽] 索引標籤，並瀏覽至輸出路徑資料夾。 選取 TypeEquivalenceInterface.dll 檔案，然後按一下 [確定]。  
   
@@ -222,8 +222,8 @@ End Function
   
 6.  在檔案總管中，開啟輸出路徑資料夾 (例如 C:\TypeEquivalenceSample)。 按兩下 TypeEquivalenceClient.exe 以執行程式。 程式即會反映新版本的 TypeEquivalenceRuntime 組件，而不需重新編譯。  
   
-## <a name="see-also"></a>另請參閱  
- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)  
- [程式設計概念](../../../../visual-basic/programming-guide/concepts/index.md)  
- [使用組件設計程式](../../../../framework/app-domains/programming-with-assemblies.md)  
- [組件和全域組件快取 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>另請參閱
+- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
+- [程式設計概念](../../../../visual-basic/programming-guide/concepts/index.md)
+- [使用組件設計程式](../../../../framework/app-domains/programming-with-assemblies.md)
+- [在.NET 中的組件](../../../../standard/assembly/index.md)

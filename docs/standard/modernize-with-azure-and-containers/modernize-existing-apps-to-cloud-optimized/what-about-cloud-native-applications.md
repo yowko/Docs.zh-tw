@@ -4,16 +4,16 @@ description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 0e390fcc838fc745e5950a8adcaeee0e5aa6e434
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b84eb50c0d425447e3f78f1473608c27254523a7
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152562"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746412"
 ---
 # <a name="what-about-cloud-native-applications"></a>雲端原生應用程式如何呢？
 
-雖然[雲端原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)應用程式不是重點的本指南中，很有幫助，若要了解這個現代化成熟度等級中，並以區分它與雲端最佳化應用程式。
+雖然[雲端原生](https://azure.microsoft.com/overview/cloudnative/)應用程式不是重點的本指南中，很有幫助，若要了解這個現代化成熟度等級中，並以區分它與雲端最佳化應用程式。
 
 圖 4-3 將置於應用程式現代化成熟度等級的雲端原生應用程式：
 
@@ -23,7 +23,7 @@ ms.locfileid: "53152562"
 
 雲端原生現代化成熟度等級通常會需要新的開發投資。 通常將移至雲端原生層級是由所驅動商務需求將現代化的應用程式以大幅改善在大型應用程式中藉由建立可部署的自發子系統 （微服務） 和刻度最大的獨立從其他區域，同時降低成本，在很長的詞彙，並增加發展靈活度方面提供的這些自發性應用程式的組件的應用程式的重要競爭優勢。 
 
-主要支柱[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)應用程式為基礎的微服務架構方法，它可以靈活地發展並調整很難達到整合型架構部署到其中的限制在內部部署或雲端環境。
+雲端原生應用程式的主要支柱為基礎的微服務架構方法，它可以靈活地發展並調整很難達到整合型架構，部署至內部部署或雲端中的限制環境。
 
 圖 4-4 顯示雲端原生模式的主要特性。  
 
@@ -33,19 +33,19 @@ ms.locfileid: "53152562"
 
 此外，您可以藉由新增其他服務，人工智慧 (AI)、 機器學習 (ML) 和 IoT 等擴充基本的新式 web 應用程式和雲端原生應用程式。 您可以使用任一這些服務來擴充任何可能的雲端最佳化方法。
 
-雲端原生層級的應用程式的基本差異，是在應用程式架構。 [雲端原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)是應用程式，根據定義，微服務為基礎的應用程式。 雲端原生應用程式需要特殊的架構、 技術與平台，相較於單體式 web 應用程式或傳統的多層式架構應用程式。
+雲端原生層級的應用程式的基本差異，是在應用程式架構。 雲端原生應用程式是，根據定義，微服務為基礎的應用程式。 雲端原生應用程式需要特殊的架構、 技術與平台，相較於單體式 web 應用程式或傳統的多層式架構應用程式。
 
 ## <a name="cloud-native-applications-details"></a>雲端原生應用程式詳細資料
 
-[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)是一種更進階或成熟的狀態，針對大型和關鍵任務應用程式。 雲端原生應用程式通常需要架構和設計，而不是從頭建立的現代化現有的應用程式。 雲端原生應用程式和簡單的雲端最佳化的 web 應用程式之間的主要差異是建議使用的雲端原生方法中的微服務架構。 雲端最佳化應用程式時，也可以是整合型 web 應用程式或多層式架構應用程式。
+雲端原生是一種更進階或成熟的狀態，針對大型和關鍵任務應用程式。 雲端原生應用程式通常需要架構和設計，而不是從頭建立的現代化現有的應用程式。 雲端原生應用程式和簡單的雲端最佳化的 web 應用程式之間的主要差異是建議使用的雲端原生方法中的微服務架構。 雲端最佳化應用程式時，也可以是整合型 web 應用程式或多層式架構應用程式。
 
-[Twelve-factor App](https://12factor.net/) （密切相關微服務方法的模式的集合） 也會被視為需求[雲端原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)應用程式架構。
+[Twelve-factor App](https://12factor.net/) （密切相關微服務方法的模式的集合） 也會被視為雲端原生應用程式架構的需求。
 
 [雲端原生運算基礎 (CNCF)](https://www.cncf.io/)是主要的升級程式的雲端原生的原則。 Microsoft 一向[隸屬 CNCF](https://azure.microsoft.com/blog/announcing-cncf/)。
 
 如需範例定義和雲端原生應用程式的特性的詳細資訊，請參閱 Gartner 文章[如何架構和設計雲端原生應用程式](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)。 如需 microsoft 如何實作雲端原生應用程式的特定指引，請參閱[.NET 微服務：容器化.NET 應用程式架構](https://aka.ms/microservicesebook)。
 
-如果您移轉至完整的應用程式，請考慮最重要的因素[雲端原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)模型是您必須重新架構微服務為基礎的架構。 顯然，這會需要大量投資開發大型重構流程，因為。 選擇此選項通常會需要新的層級的延展性和長期靈活度的任務關鍵性應用程式。 但是，您可以開始邁向雲端原生，藉由新增少數新的情況下，微服務，並最終重構為微服務的完整應用程式。 這是累加的方式，是最佳的選項，在某些情況下。
+如果您移轉到雲端原生模式的完整應用程式，請考慮最重要的因素是您必須重新架構微服務為基礎的架構。 顯然，這會需要大量投資開發大型重構流程，因為。 選擇此選項通常會需要新的層級的延展性和長期靈活度的任務關鍵性應用程式。 但是，您可以開始邁向雲端原生，藉由新增少數新的情況下，微服務，並最終重構為微服務的完整應用程式。 這是累加的方式，是最佳的選項，在某些情況下。
 
 ## <a name="what-about-microservices"></a>微服務呢？ 
 

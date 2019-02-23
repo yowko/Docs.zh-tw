@@ -9,12 +9,12 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-ms.openlocfilehash: 75016e9e04cf47782add18c87f7c677931743a4e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1da8e2c6ed8091b5931e8b0a881b54329228e82a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865640"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746781"
 ---
 # <a name="windows-forms-security"></a>Windows Form 安全性
 Windows Form 的特色是程式碼為基礎 （安全性層級所設定的程式碼，不論執行的程式碼的使用者） 的安全性模型。 這是除了可能已在您的電腦系統上的位置中的任何安全性結構描述。 這些可能包括瀏覽器 （例如區域為基礎的安全性提供 Internet Explorer） 或作業系統 （例如 Windows NT 的認證為基礎的安全性） 中。  
@@ -33,10 +33,10 @@ Windows Form 的特色是程式碼為基礎 （安全性層級所設定的程式
  描述執行視窗操作、 使用剪貼簿，並在非完全信任環境中進行呼叫 unmanaged 程式碼。  
   
 ## <a name="related-sections"></a>相關章節  
- [NIB： 預設的安全性原則](https://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [預設的安全性原則](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
  列出在完全信任、 近端內部網路和網際網路權限集授與的預設權限。  
   
- [NIB： 一般安全性原則管理](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ [一般安全性原則管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))  
  提供.NET Framework 安全性原則管理和提高權限的相關資訊。  
   
  [危險的使用權限和原則管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
@@ -45,7 +45,7 @@ Windows Form 的特色是程式碼為基礎 （安全性層級所設定的程式
  [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)  
  說明安全地撰寫針對.NET Framework 的程式碼的最佳作法的主題連結。  
   
- [NIB： 要求權限](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ [要求權限](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))  
  討論使用的屬性，讓執行階段知道您的程式碼需要執行哪些權限。  
   
  [重要的安全性概念](../../../docs/standard/security/key-security-concepts.md)  
@@ -54,8 +54,8 @@ Windows Form 的特色是程式碼為基礎 （安全性層級所設定的程式
  [程式碼存取安全性的基本概念](../../../docs/framework/misc/code-access-security-basics.md)  
  討論使用.NET Framework 執行階段安全性原則的基本概念。  
   
- [NIB： 判斷何時要修改安全性原則](https://msdn.microsoft.com/library/af749b17-e461-409d-84b9-a3d44789db16)  
+ [判斷何時要修改安全性原則](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  
  說明如何判斷您的應用程式需要從預設的安全性原則會分離開來。  
   
- [NIB： 部署的安全性原則](https://msdn.microsoft.com/library/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ [部署安全性原則](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/13wcxx6y(v=vs.100))  
  討論部署的安全性原則變更的最佳方式。

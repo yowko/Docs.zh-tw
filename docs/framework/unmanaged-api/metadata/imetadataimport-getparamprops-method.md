@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 697a59d80e152fb78164491c2a0eaaa8707f8914
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685525"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745916"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps 方法
 取得指定 ParamDef 語彙基元所參考參數的中繼資料值。  
@@ -64,7 +64,7 @@ HRESULT GetParamProps (
  [out]寬字元在傳回的大小`szName`。  
   
  `pdwAttr`  
- [out]任何與參數相關聯的屬性旗標指標。  
+ [out]任何與參數相關聯的屬性旗標指標。 這是位元遮罩`CorParamAttr`值。  
   
  `pdwCPlusTypeFlag`  
  [out]參數是以旗標，指定指標<xref:System.ValueType>。  
@@ -75,6 +75,10 @@ HRESULT GetParamProps (
  `pcchValue`  
  [out]大小`ppValue`寬字元，或零，如果`ppValue`不會保留為字串。  
   
+## <a name="remarks"></a>備註
+
+中的值序列`pulSequence`參數 1 為開頭。 傳回值具有 0 的序號。
+
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   

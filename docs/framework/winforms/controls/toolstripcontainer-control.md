@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: 260d79b7c6432c3dede5b593eaa3f1e52ed35c5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 569fccfffe1d117d7ab404f72d0275e7391926da
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588297"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746794"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer 控制項
 <xref:System.Windows.Forms.ToolStrip> 控制項使用 <xref:System.Windows.Forms.ToolStripContainer> 來進行內建浮動定位 (共用停駐時工具區域內的水平或垂直空間)。  
@@ -35,7 +35,7 @@ ms.locfileid: "54588297"
  <xref:System.Windows.Forms.ToolStripContentPanel>  
  針對 <xref:System.Windows.Forms.ToolStripContainer> 控制項的 <xref:System.Windows.Forms.ToolStripContentPanel> 提供參考文件。  
   
- 另請參閱[ToolStripContainer 工作對話方塊](https://msdn.microsoft.com/library/ms233647\(v=vs.110\))。  
+ 另請參閱[ToolStripContainer 工作對話方塊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))。  
   
 ## <a name="related-sections"></a>相關章節  
  <xref:System.Windows.Forms.ToolStripPanel>  

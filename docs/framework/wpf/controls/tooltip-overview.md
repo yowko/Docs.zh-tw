@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: 9db511579e273a19c18800f2e0861ef4e9c00ab0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5378744ea43b72bafb77c9d58c1a8d848c3a8fc9
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700568"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745511"
 ---
 # <a name="tooltip-overview"></a>ToolTip 概觀
 工具提示是一個小型的快顯視窗出現時的使用者將滑鼠指標停留的項目，可能會透過<xref:System.Windows.Controls.Button>。 本主題將介紹工具提示，並說明如何建立及自訂工具提示內容。  
@@ -67,7 +67,7 @@ ms.locfileid: "54700568"
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>使用 ToolTipService 的時間間隔屬性  
  <xref:System.Windows.Controls.ToolTipService>類別提供下列的屬性，供您設定工具提示顯示時間： <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>， <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>，和<xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>。  
   
- 使用<xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>和<xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>屬性，以指定的延遲，通常簡短，之前<xref:System.Windows.Controls.ToolTip>隨即出現，並也指定時間長度<xref:System.Windows.Controls.ToolTip>保持可見狀態。 如需詳細資訊，請參閱[＜How to：延遲的工具提示顯示](https://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7)。  
+ 使用<xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>和<xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>屬性，以指定的延遲，通常簡短，之前<xref:System.Windows.Controls.ToolTip>隨即出現，並也指定時間長度<xref:System.Windows.Controls.ToolTip>保持可見狀態。 如需詳細資訊，請參閱[如何：延遲的工具提示顯示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms747264(v=vs.90))。  
   
  <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>屬性會決定是否不同的控制項的工具提示會出現沒有初始延遲時您將滑鼠指標之間快速移動它們。 如需詳細資訊<xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>屬性，請參閱 <<c2> [ 使用 BetweenShowDelay 屬性](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)。  
   

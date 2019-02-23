@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: cd78a0f2513d0e352efa1b1b866627586e6068bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 907355ca78b299b34b231b8b8d88353b0dde19c0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683920"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746600"
 ---
 # <a name="varieties-of-custom-controls"></a>各種自訂控制項
 使用 .NET Framework，您可以開發及實作新的控制項。 您可以擴充熟悉的使用者控制項的功能，以及透過繼承擴充現有的控制項。 您也可以撰寫自訂控制項來執行它們自己的繪製。  
@@ -24,7 +24,7 @@ ms.locfileid: "54683920"
  決定要建立的控制項類型可能會令人困擾。 本主題著重於您可以繼承之各種控制項之間的差異，並且提供如何為專案選擇特定種類控制項的相關資訊。  
   
 > [!NOTE]
->  如需撰寫控制項以在 Web Form 上使用的詳細資訊，請參閱[開發自訂 ASP.NET 伺服器控制項](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
+>  如需撰寫控制項以在 Web Form 上使用的詳細資訊，請參閱[開發自訂 ASP.NET 伺服器控制項](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))。  
   
 ## <a name="base-control-class"></a>基底控制項類別  
  <xref:System.Windows.Forms.Control>類別是基底類別，針對 Windows Form 控制項。 它提供視覺顯示 Windows Forms 應用程式所需的基礎結構。  
@@ -85,7 +85,7 @@ ms.locfileid: "54683920"
   
  若要實作自訂控制項，您必須撰寫程式碼<xref:System.Windows.Forms.Control.OnPaint%2A>控制項，以及任何您需要的功能特定程式碼的事件。 您也可以覆寫<xref:System.Windows.Forms.Control.WndProc%2A>方法及處理 windows 訊息直接。 這是建立控制項最強大的方式，但是若要有效使用這項技術，您必須先熟悉 Microsoft Win32® API。  
   
- 自訂控制項的範例是複製類比時鐘外觀和行為的時鐘控制項。 若要讓時鐘指針移動以回應叫用自訂繪製<xref:System.Windows.Forms.Timer.Tick>自內部事件<xref:System.Windows.Forms.Timer>元件。 如需詳細資訊，請參閱[＜How to：開發簡單的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)。  
+ 自訂控制項的範例是複製類比時鐘外觀和行為的時鐘控制項。 若要讓時鐘指針移動以回應叫用自訂繪製<xref:System.Windows.Forms.Timer.Tick>自內部事件<xref:System.Windows.Forms.Timer>元件。 如需詳細資訊，請參閱[如何：開發簡單的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)。  
   
  **建議**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "54683920"
 -   您需要實作無法透過標準控制項使用的自訂功能。  
   
 ### <a name="activex-controls"></a>ActiveX 控制項  
- 雖然 Windows Forms 基礎結構已進行最佳化來裝載 Windows Forms 控制項，但是您仍然可以使用 ActiveX 控制項。 在 Visual Studio 中會支援這項工作。 如需詳細資訊，請參閱[＜How to：將 ActiveX 控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)。  
+ 雖然 Windows Forms 基礎結構已進行最佳化來裝載 Windows Forms 控制項，但是您仍然可以使用 ActiveX 控制項。 在 Visual Studio 中會支援這項工作。 如需詳細資訊，請參閱[如何：將 ActiveX 控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)。  
   
 ### <a name="windowless-controls"></a>無視窗控制項  
  Microsoft Visual Basic® 6.0 和 ActiveX 技術支援「無視窗」控制項。 在 Windows Forms 中不支援無視窗控制項。  
@@ -104,11 +104,11 @@ ms.locfileid: "54683920"
 ## <a name="custom-design-experience"></a>自訂設計體驗  
  如果您需要實作自訂設計階段經驗，您可以撰寫自己的設計工具。 對於複合控制項，衍生的自訂設計工具類別<xref:System.Windows.Forms.Design.ParentControlDesigner>或<xref:System.Windows.Forms.Design.DocumentDesigner>類別。 擴充和自訂控制項衍生您的自訂設計工具類別從<xref:System.Windows.Forms.Design.ControlDesigner>類別。  
   
- 使用<xref:System.ComponentModel.DesignerAttribute>要與您的設計工具產生關聯您的控制項。 如需詳細資訊，請參閱 <<c0> [ 擴充設計階段支援](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)和[How to:建立採用設計階段功能的 Windows Form 控制項](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。  
+ 使用<xref:System.ComponentModel.DesignerAttribute>要與您的設計工具產生關聯您的控制項。 如需詳細資訊，請參閱 <<c0> [ 擴充設計階段支援](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))和[How to:建立採用設計階段功能的 Windows Form 控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))。  
   
 ## <a name="see-also"></a>另請參閱
 - [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [如何：開發簡單的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
 - [開發複合 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
-- [擴充設計階段支援](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
-- [如何：建立採用設計階段功能的 Windows Form 控制項](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)
+- [擴充設計階段支援](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [如何：建立採用設計階段功能的 Windows Form 控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

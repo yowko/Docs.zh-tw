@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662734"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746558"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 增益集概觀
 <a name="Introduction"></a> .NET Framework 包含開發人員可用來建立支援增益集擴充性的應用程式增益集模型。 此增益集模型可讓您建立增益集，整合並擴充應用程式的功能。 在某些情況下，應用程式也需要顯示增益集所提供的使用者介面。本主題說明 WPF 擴大.NET Framework 增益集模型以啟用這些案例、 架構、 其優點，以及其限制背後的方式。  
@@ -100,7 +100,7 @@ ms.locfileid: "54662734"
 -   具有<xref:System.SerializableAttribute>套用的屬性。  
   
 > [!NOTE]
->  如需建立可遠端處理.NET Framework 物件的詳細資訊，請參閱[讓物件變成可遠端處理](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)。  
+>  如需建立可遠端處理.NET Framework 物件的詳細資訊，請參閱[讓物件變成可遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))。  
   
  WPF UI 型別不是可遠端處理。 若要解決此問題，WPF 會擴充.NET Framework 增益集模型可讓 WPF UI 增益集所建立要顯示從主應用程式。 這項支援由兩種類型的 WPF 所提供：<xref:System.AddIn.Contract.INativeHandleContract>介面和實作的兩個靜態方法<xref:System.AddIn.Pipeline.FrameworkElementAdapters>類別：<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>和<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 概括而言，這些類型和方法的使用方式如下︰  
   
@@ -286,6 +286,6 @@ ms.locfileid: "54662734"
 - <xref:System.LoaderOptimizationAttribute>
 - [增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [應用程式定義域](../../../../docs/framework/app-domains/application-domains.md)
-- [.NET framework 遠端處理概觀](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
-- [讓物件變成可遠端處理](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [.NET framework 遠端處理概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [讓物件變成可遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [HOW-TO 主題](../../../../docs/framework/wpf/app-development/how-to-topics.md)

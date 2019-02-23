@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 2a2fd47c3ea2e675292c040f08b981a394e8221b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543220"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748030"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>逐步解說：使用對齊線的 Windows Form 上排列控制項
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 Windows Form 設計工具會提供您許多版面配置工具，來完成這項作業。 其中一個最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
@@ -154,7 +154,7 @@ ms.locfileid: "54543220"
   
 1.  從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至表單。  
   
-2.  調整大小<xref:System.Windows.Forms.Button>角調整大小控點，並拖曳抓取其中的控制項。 如需詳細資訊，請參閱[How to:調整 Windows Forms 上的控制項的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)。  
+2.  調整大小<xref:System.Windows.Forms.Button>角調整大小控點，並拖曳抓取其中的控制項。 如需詳細資訊，請參閱[如何：調整 Windows Forms 上的控制項的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)。  
   
 3.  拖曳調整大小控點，直到其中一個<xref:System.Windows.Forms.Button>與另一個控制項對齊控制項的框線。 請注意，對齊線隨即出現。 也請注意，調整大小控點會貼齊至對齊線所指定的位置。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "54543220"
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>若要停用在設計環境中的對齊線  
   
-1.  從**工具**功能表中，開啟**選項** 對話方塊。 開啟 [Windows Form 設計工具] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 一般]、 [Windows Form 設計工具、 [選項] 對話方塊中](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)。  
+1.  從**工具**功能表中，開啟**選項** 對話方塊。 開啟 [Windows Form 設計工具] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 一般]、 [Windows Form 設計工具、 [選項] 對話方塊中](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))。  
   
 2.  選取 **一般**節點。 在 **版面配置模式**區段中，變更選取範圍**對齊線**來**貼齊格線**。  
   

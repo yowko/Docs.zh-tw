@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98d7be5adc81cff09b121265e7d5b5f712122607
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40631a15bd07b5aa54488e5d3b99cee751e2e0bd
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611406"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748332"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps 方法
-取得中繼資料資訊，包括名稱、 二進位簽章和相對虛擬位址，<xref:System.Type>指定之中繼資料語彙基元所參考的成員。  
+取得儲存在指定的成員定義，包括名稱、 二進位簽章和相對虛擬位址的中繼資料中的資訊<xref:System.Type>指定之中繼資料語彙基元所參考的成員。 這是一個簡單的 helper 方法： 如果*mb*就的 MethodDef **GetMethodProps**呼叫; 如果*mb*就的 fielddef 語彙**GetFieldProps**會呼叫。 請參閱這些其他方法，如需詳細資訊。 
   
 ## <a name="syntax"></a>語法  
   
@@ -79,7 +79,7 @@ HRESULT GetMemberProps (
  [out]成員相關聯任何方法實作旗標。  
   
  `pdwCPlusTypeFlag`  
- [out]標示旗標<xref:System.ValueType>。  
+ [out]標示旗標<xref:System.ValueType>。 它是其中一個`ELEMENT_TYPE_*`值。
   
  `ppValue`  
  [out]常數字串值，這個成員所傳回。  

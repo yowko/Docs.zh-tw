@@ -8,18 +8,18 @@ helpviewer_keywords:
 - handwriting recognition [WPF]
 - recognition of handwriting [WPF]
 ms.assetid: f4e8576d-e731-4bac-9818-22e2ae636636
-ms.openlocfilehash: 8f520b80970bfeebdfea01a6c722634efd99ffe7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a93c1486f191df31213fc6c85254ecd8801799b8
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725385"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747297"
 ---
 # <a name="handwriting-recognition"></a>手寫辨識
 本節討論有關 WPF 平台中數位筆跡的辨識基本概念。  
   
 ## <a name="recognition-solutions"></a>辨識方案  
- 下列範例示範如何使用 [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/microsoft.ink.inkcollector\(v=vs.90\).aspx) 類別來辨識筆跡。  
+ 下列範例示範如何使用 [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90)) 類別來辨識筆跡。  
   
 > [!NOTE]
 >  此範例需要在系統上安裝手寫辨識器。  
@@ -34,4 +34,4 @@ ms.locfileid: "54725385"
  [!code-vb[InkRecognition#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkRecognition/VisualBasic/Window1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
-- [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/microsoft.ink.inkcollector\(v=vs.90\).aspx)
+- [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: c920aff295fd22cc7faa90c2f9421840f9b60b69
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 24899d8a2184c73b50902de4a30c39327576ded1
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441199"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747352"
 ---
 # <a name="printing-how-to-topics"></a>列印 HOW TO 主題
 在本節中的主題將示範如何使用列印和列印系統管理功能隨附[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以及新[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]列印路徑。  
@@ -30,9 +30,6 @@ ms.locfileid: "56441199"
   
  [列舉列印佇列的子集](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  產生具有特定特性的印表機清單的指示。  
-  
- [NOTINBUILD:HOW TO：擴充的列印結構描述，並建立新的列印系統類別](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
- 延伸的 managed 程式碼如何程式設計人員可以擴充到專業的列印裝置或使用新的或不常用功能的印表機列印結構描述的詳細討論。  
   
  [取得列印系統物件屬性但不使用反映](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
  說明如何在執行階段探索列印系統物件的屬性和其類型。  

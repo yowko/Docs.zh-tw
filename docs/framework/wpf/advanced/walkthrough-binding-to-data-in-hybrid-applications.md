@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: ba0d508881d6500d53e9e9781c3cce7185ed845d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a20dc95467df4baedce2f4acc63f0c029f178c6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724339"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748488"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>逐步解說：繫結至混合應用程式中的資料
 不論您使用繫結至控制項的資料來源是不可或缺的將基礎資料的存取權提供給使用者[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 本逐步解說示範如何在包含兩者的混合式應用程式使用資料繫結[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項。  
@@ -122,7 +122,7 @@ ms.locfileid: "54724339"
   
 1.  從**資料**功能表上，選取**加入新的資料來源**。  
   
-2.  在 **資料來源組態精靈**，使用的資料集建立 Northwind 資料庫的連接。 如需詳細資訊，請參閱[＜How to：連接到資料庫中的資料](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)。  
+2.  在 **資料來源組態精靈**，使用的資料集建立 Northwind 資料庫的連接。 如需詳細資訊，請參閱[如何：連接到資料庫中的資料](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))。  
   
 3.  當提示您**資料來源組態精靈**，儲存連接字串，做為`NorthwindConnectionString`。  
   

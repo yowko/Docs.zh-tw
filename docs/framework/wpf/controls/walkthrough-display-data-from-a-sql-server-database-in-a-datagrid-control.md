@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：在 DataGrid 控制項中顯示來自 SQL Server 資料庫的資料
+title: 逐步解說：DataGrid 控制項中顯示資料從 SQL Server 資料庫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: e3db65c91e53ee0ed7b5e520bbc4989cd7404816
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6cf56a853377a9c062009fb8a4082cd5380905c6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197132"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748410"
 ---
-# <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>逐步解說： 在 DataGrid 控制項中顯示資料從 SQL Server 資料庫
+# <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>逐步解說：DataGrid 控制項中顯示資料從 SQL Server 資料庫
 
 在本逐步解說中，方法，您可以從 SQL Server 資料庫擷取資料，並顯示該資料<xref:System.Windows.Controls.DataGrid>控制項。 您可以使用 ADO.NET Entity Framework 建立的實體類別，代表資料，並使用 LINQ 來撰寫查詢來擷取指定的資料從實體類別。
 
@@ -75,7 +75,7 @@ ms.locfileid: "47197132"
 
 4.  選取 <xref:System.Windows.Window>。
 
-5.  使用 [屬性] 視窗或 [XAML 編輯器] 中，建立事件處理常式<xref:System.Windows.Window>名為`Window_Loaded`如<xref:System.Windows.FrameworkElement.Loaded>事件。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立簡單的事件處理常式](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)。
+5.  使用 [屬性] 視窗或 [XAML 編輯器] 中，建立事件處理常式<xref:System.Windows.Window>名為`Window_Loaded`如<xref:System.Windows.FrameworkElement.Loaded>事件。 如需詳細資訊，請參閱[如何：建立簡單的事件處理常式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))。
 
      以下顯示 MainWindow.xaml 的 XAML。
 
@@ -100,4 +100,4 @@ ms.locfileid: "47197132"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Controls.DataGrid>
-- [如何 do i： 開始使用 WPF 應用程式中的 Entity Framework？](https://go.microsoft.com/fwlink/?LinkId=159868)
+- [How Do i:開始使用 WPF 應用程式中的 Entity Framework？](https://go.microsoft.com/fwlink/?LinkId=159868)

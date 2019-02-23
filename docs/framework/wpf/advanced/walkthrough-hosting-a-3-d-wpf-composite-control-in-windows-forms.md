@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: b4c5001e671db9d615f3bcbc0a35b7b36b45bb01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d32b98fce3cf5e4fe82745c3d0ba8992ee75339e
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506858"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746201"
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>逐步解說：裝載 Windows Forms 中的 3d WPF 複合控制項
 
@@ -51,7 +51,7 @@ ms.locfileid: "54506858"
 <a name="To_Create_the_Windows_Forms_Host_Project"></a>
 ## <a name="create-the-host-project"></a>建立主應用程式專案
 
-1.  新增**WPF 應用程式 (.NET Framework)** 專案，命名為`WpfUserControlHost`至方案。 如需詳細資訊，請參閱[＜How to：建立新的 WPF 應用程式專案](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。
+1.  新增**WPF 應用程式 (.NET Framework)** 專案，命名為`WpfUserControlHost`至方案。 如需詳細資訊，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 
 2.  在 [**方案總管] 中**，加入名為 WindowsFormsIntegration.dll 之 WindowsFormsIntegration 組件的參考。
 

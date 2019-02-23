@@ -15,14 +15,15 @@ helpviewer_keywords:
 - WPF [WPF], about Windows Presentation Foundation
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-ms.openlocfilehash: a2d88b9094a6168989360102a25ef7ce6e0a918a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2a0cdb7e49fb584d0824edcefe710313ba21d4a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747310"
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a>在 Visual Studio 中的 WPF 簡介
-Windows Presentation Foundation (WPF) 在 Visual Studio 中開發人員提供了統一的程式設計模型建置在 Windows 上的特定業務桌面應用程式。  
+Windows Presentation Foundation (WPF) 在 Visual Studio 提供開發人員統一的程式設計模型，建置在 Windows 上的特定業務桌面應用程式。  
   
  [使用 Windows Presentation Foundation 建立桌面應用程式](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
@@ -30,6 +31,6 @@ Windows Presentation Foundation (WPF) 在 Visual Studio 中開發人員提供了
   
  [WPF 簡介](/visualstudio/designers/introduction-to-wpf)  
   
- [.NET Framework 中的 WPF](https://msdn.microsoft.com/library/ms754130\(v=vs.100\).aspx)  
+ [.NET Framework 中的 WPF](../index.md)  
   
  [取得 Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

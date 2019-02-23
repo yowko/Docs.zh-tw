@@ -6,12 +6,12 @@ helpviewer_keywords:
 - timers
 - timers [Windows Forms], creating
 ms.assetid: 6700e534-6382-43d5-98ed-14205435fff7
-ms.openlocfilehash: 1a00bfa0772273f9374d292e27f5fba174172ca6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1c0ad0b644c0af6a4e0982b1437291e923ca79cc
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499870"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745401"
 ---
 # <a name="timer-component-windows-forms"></a>Timer 元件 (Windows Form)
 Windows Form <xref:System.Windows.Forms.Timer> 是定期引發事件的元件。 這個元件是專為 Windows Form 環境所設計。  
@@ -23,7 +23,7 @@ Windows Form <xref:System.Windows.Forms.Timer> 是定期引發事件的元件。
  [Windows Forms Timer 元件的 Interval 屬性限制](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)  
  描述可能會影響計時器用法的計時器間隔已知限制。  
   
- [操作說明：使用 Windows Forms Timer 元件以設定的間隔執行程序](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
+ [如何：使用 Windows Form Timer 元件集間隔執行程序](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
  描述如何回應 Windows 應用程式中的定時間隔。  
   
 ## <a name="reference"></a>參考資料  
@@ -36,6 +36,3 @@ Windows Form <xref:System.Windows.Forms.Timer> 是定期引發事件的元件。
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。  
-  
- [Visual Basic 6.0 使用者可用的 timer 控制項](https://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
- 描述與 Visual Basic 的舊版本相比，計時器功能的變更程度。

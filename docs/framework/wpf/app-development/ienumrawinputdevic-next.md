@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Next method [WPF]
 ms.assetid: 3698b44d-510e-4d18-b32b-85f17188ee26
-ms.openlocfilehash: 329a2cd96346e199ee834856dd6dbfac6175b722
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a1f76bf42da9a311633de39e42dee2055fac4a27
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515313"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745181"
 ---
 # <a name="ienumrawinputdevicnext"></a>IEnumRAWINPUTDEVIC:Next
-接下來`celt` [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp)在列舉值的清單中，將其傳回在結構`rgelt`中列舉項目的實際數目`pceltFetched`。  
+接下來`celt` [RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice)在列舉值的清單中，將其傳回在結構`rgelt`中列舉項目的實際數目`pceltFetched`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,7 +26,7 @@ HRESULT Next(
 #### <a name="parameters"></a>參數  
  `celt`  
   
- [in]數目[RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp)中傳回的結構`rgelt`。  
+ [in]數目[RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice)中傳回的結構`rgelt`。  
   
  `rgelt`  
   
@@ -34,7 +34,7 @@ HRESULT Next(
   
  `pceltFetched`  
   
- [out] 指向 `rgelt` 中實際提供項目數的指標。 如果 `NULL` 是 1，呼叫端就可以傳入 `rgelt`。  
+ [out] 指向 `rgelt` 中實際提供項目數的指標。 如果 `rgelt` 是 1，呼叫端就可以傳入 `NULL`。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- HRESULT: 如果提供的項目數是 `celt`，則為 S_OK；否則為 S_FALSE。
+ HRESULT:如果提供的項目數目，為 S_OK `celt`;否則為 S_FALSE。
