@@ -1,5 +1,5 @@
 ---
-title: 很抱歉，我們不&#39;t 這個 C# 錯誤的詳細資訊
+title: 抱歉，我們沒有這個 C# 錯誤的具體內容。
 ms.date: 07/20/2015
 f1_keywords:
 - CS1583
@@ -882,32 +882,33 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314066"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "56797972"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a><span data-ttu-id="9f6cc-102">很抱歉，我們不&#39;t 這個 C# 錯誤的詳細資訊</span><span class="sxs-lookup"><span data-stu-id="9f6cc-102">Sorry, we don&#39;t have specifics on this C# error</span></span>
-<span data-ttu-id="9f6cc-103">很抱歉，我們沒有任何有關此錯誤的特定資訊。</span><span class="sxs-lookup"><span data-stu-id="9f6cc-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="9f6cc-104">您可以搜尋錯誤號碼與訊息文字，以在網路上尋找資訊。</span><span class="sxs-lookup"><span data-stu-id="9f6cc-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="9f6cc-105">或者，您可以詢問其他開發人員使用其中一個論壇：</span><span class="sxs-lookup"><span data-stu-id="9f6cc-105">Or you can ask other developers using one of these forums:</span></span>  
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a><span data-ttu-id="aadfa-102">抱歉，我們沒有這個 C# 錯誤的具體內容。</span><span class="sxs-lookup"><span data-stu-id="aadfa-102">Sorry, we don't have specifics on this C# error</span></span>
+<span data-ttu-id="aadfa-103">很抱歉，我們沒有任何有關此錯誤的特定資訊。</span><span class="sxs-lookup"><span data-stu-id="aadfa-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="aadfa-104">您可以搜尋錯誤號碼與訊息文字，以在網路上尋找資訊。</span><span class="sxs-lookup"><span data-stu-id="aadfa-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="aadfa-105">或者，您可以要求其他開發人員使用這些論壇：</span><span class="sxs-lookup"><span data-stu-id="aadfa-105">Or you can ask other developers using one of these forums:</span></span>  
   
- [<span data-ttu-id="9f6cc-106">Visual C# 語言</span><span class="sxs-lookup"><span data-stu-id="9f6cc-106">Visual C# Language</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- <span data-ttu-id="9f6cc-107">如需有關的問題和 Visual C# 語言語法和編譯器的一般討論區中提供的論壇。</span><span class="sxs-lookup"><span data-stu-id="9f6cc-107">Provides a forum for questions about and general discussions of the Visual C# language syntax and compiler.</span></span>  
+ [<span data-ttu-id="aadfa-106">Visual C# 語言</span><span class="sxs-lookup"><span data-stu-id="aadfa-106">Visual C# Language</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
+ <span data-ttu-id="aadfa-107">提供問題的視覺效果的相關和一般討論的論壇C#語言語法和編譯器。</span><span class="sxs-lookup"><span data-stu-id="aadfa-107">Provides a forum for questions about and general discussions of the Visual C# language syntax and compiler.</span></span>  
   
- [<span data-ttu-id="9f6cc-108">Visual C# IDE</span><span class="sxs-lookup"><span data-stu-id="9f6cc-108">Visual C# IDE</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- <span data-ttu-id="9f6cc-109">提供有關如何在 Visual Studio 環境中運作的問題的論壇。</span><span class="sxs-lookup"><span data-stu-id="9f6cc-109">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
+ [<span data-ttu-id="aadfa-108">Visual C# IDE</span><span class="sxs-lookup"><span data-stu-id="aadfa-108">Visual C# IDE</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
+ <span data-ttu-id="aadfa-109">提供有關如何在 Visual Studio 環境中運作的問題的論壇。</span><span class="sxs-lookup"><span data-stu-id="aadfa-109">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
   
- [<span data-ttu-id="9f6cc-110">Visual C# 一般討論區</span><span class="sxs-lookup"><span data-stu-id="9f6cc-110">Visual C# General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- <span data-ttu-id="9f6cc-111">提供有關問題的論壇，並會發出 Visual C# 不討論其他論壇中。</span><span class="sxs-lookup"><span data-stu-id="9f6cc-111">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
+ [<span data-ttu-id="aadfa-110">Visual C# 一般討論區</span><span class="sxs-lookup"><span data-stu-id="aadfa-110">Visual C# General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
+ <span data-ttu-id="aadfa-111">提供有關問題的論壇和視覺效果會發出C#，將不會討論其他論壇中。</span><span class="sxs-lookup"><span data-stu-id="aadfa-111">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
   
- [<span data-ttu-id="9f6cc-112">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="9f6cc-112">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/c%23)  
- <span data-ttu-id="9f6cc-113">提供有關問題的論壇，並會發出 Visual C#。</span><span class="sxs-lookup"><span data-stu-id="9f6cc-113">Provides a forum for questions about and issues with Visual C#.</span></span>  
+ [<span data-ttu-id="aadfa-112">堆疊溢位</span><span class="sxs-lookup"><span data-stu-id="aadfa-112">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/c%23)  
+ <span data-ttu-id="aadfa-113">提供有關問題的論壇和視覺效果會發出C#。</span><span class="sxs-lookup"><span data-stu-id="aadfa-113">Provides a forum for questions about and issues with Visual C#.</span></span>  
   
- <span data-ttu-id="9f6cc-114">另請參閱：</span><span class="sxs-lookup"><span data-stu-id="9f6cc-114">Also see:</span></span>  
- [<span data-ttu-id="9f6cc-115">Visual C# 程式設計人員的其他資源</span><span class="sxs-lookup"><span data-stu-id="9f6cc-115">Additional Resources for Visual C# Programmers</span></span>](../../csharp/getting-started/additional-resources.md)  
+ <span data-ttu-id="aadfa-114">也請參閱：</span><span class="sxs-lookup"><span data-stu-id="aadfa-114">Also see:</span></span>  
+ [<span data-ttu-id="aadfa-115">Visual C# 程式設計人員的其他資源</span><span class="sxs-lookup"><span data-stu-id="aadfa-115">Additional Resources for Visual C# Programmers</span></span>](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9f6cc-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9f6cc-116">See Also</span></span>  
- [<span data-ttu-id="9f6cc-117">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="9f6cc-117">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="9f6cc-118">C# 參考</span><span class="sxs-lookup"><span data-stu-id="9f6cc-118">C# Reference</span></span>](../../csharp/language-reference/index.md)  
- [<span data-ttu-id="9f6cc-119">告訴我們</span><span class="sxs-lookup"><span data-stu-id="9f6cc-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)  
+## <a name="see-also"></a><span data-ttu-id="aadfa-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aadfa-116">See also</span></span>
+
+- [<span data-ttu-id="aadfa-117">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="aadfa-117">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="aadfa-118">C# 參考</span><span class="sxs-lookup"><span data-stu-id="aadfa-118">C# Reference</span></span>](../../csharp/language-reference/index.md)
+- [<span data-ttu-id="aadfa-119">告訴我們</span><span class="sxs-lookup"><span data-stu-id="aadfa-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
