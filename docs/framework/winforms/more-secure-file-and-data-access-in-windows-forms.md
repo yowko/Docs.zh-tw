@@ -13,15 +13,16 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 55e10a929be9c76bd8b33771945cf84f6228980f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c4aecb4c7c7a15a7a0aad668b697af3ca0b033f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679314"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664922"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Form 中更安全的檔案和資料存取
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用權限協助保護資源與資料。 您的應用程式可以讀取或寫入資料的位置取決於應用程式授與權限。 當您的應用程式在部分信任的環境中執行時，您可能無法存取您的資料，或者您可能要改變您存取資料的方式。  
+
+  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用權限協助保護資源與資料。 您的應用程式可以讀取或寫入資料的位置取決於應用程式授與權限。 當您的應用程式在部分信任的環境中執行時，您可能無法存取您的資料，或者您可能要改變您存取資料的方式。  
   
  當您遇到安全性限制時，您有兩個選項：判斷權限 (假設已授與您的應用程式)，或者使用被寫成具有在部分信任環境運作功能的版本。 下列章節將討論如何使用在部分信任環境執行的應用程式所產生的檔案、資料庫以及登錄存取。  
   
@@ -351,7 +352,7 @@ public void Write()
 ## <a name="database-access"></a>資料庫存取  
  存取資料庫所需的權限因資料庫提供者而異；不過，只有以適當權限來執行的應用程式可以透過資料連接存取資料庫。 如需有關存取資料庫所需的權限的詳細資訊，請參閱[程式碼存取安全性和 ADO.NET](../../../docs/framework/data/adonet/code-access-security.md)。  
   
- 如果您因為希望在部分信任中執行您的應用程式而無法直接存取資料庫，您可以使用 Web 服務做為替代方式來存取您的資料。 Web 服務是一種可透過網路以程式設計方式存取的軟體。 透過 Web 服務，應用程式可以在程式碼群組區域之間分享資料。 根據預設，近端內部網路和網際網路區域中的應用程式會被授與權限來存取他們的來源網站，讓他們能夠呼叫相同的伺服器上裝載的 Web 服務。 如需詳細資訊，請參閱[ASP.NET AJAX 中的 Web 服務](https://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b)或是[Windows Communication Foundation](https://msdn.microsoft.com/library/ms735119.aspx)。  
+ 如果您因為希望在部分信任中執行您的應用程式而無法直接存取資料庫，您可以使用 Web 服務做為替代方式來存取您的資料。 Web 服務是一種可透過網路以程式設計方式存取的軟體。 透過 Web 服務，應用程式可以在程式碼群組區域之間分享資料。 根據預設，近端內部網路和網際網路區域中的應用程式會被授與權限來存取他們的來源網站，讓他們能夠呼叫相同的伺服器上裝載的 Web 服務。 如需詳細資訊，請參閱[ASP.NET AJAX 中的 Web 服務](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100))或是[Windows Communication Foundation](../wcf/index.md)。  
   
 ## <a name="registry-access"></a>登錄存取  
   <xref:System.Security.Permissions.RegistryPermission> 類別控制作業系統登錄的存取權。 根據預設，只有在本機執行的應用程式可以存取登錄。  <xref:System.Security.Permissions.RegistryPermission> 只授與應用程式嘗試登錄存取；它並不保證存取將會成功，因為作業系統仍然會強制執行登錄上的安全性。  
