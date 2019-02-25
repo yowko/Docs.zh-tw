@@ -3,12 +3,12 @@ title: 使用 XML 註解記錄您的程式碼
 description: 了解如何使用 XML 文件註解記錄您的程式碼，並在編譯時期產生 XML 文件檔案。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4e5efacbb3dcc9121a5ef52ae437af263fd86cff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b52fba24750747772c36959324cd16e21067910e
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271352"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583702"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 註解記錄您的程式碼
 
@@ -194,9 +194,9 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 目前您已經準備好了：我們的程式碼又再次為可讀，而且未遺失文件資訊。
 
-`filename` 屬性代表包含文件的 XML 檔案名稱。
+`file` 屬性代表包含文件的 XML 檔案名稱。
 
-`path` 屬性代表存在於所指定 `filename` 中之 `tag name` 的 [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) 查詢。
+`path` 屬性代表存在於所指定 `file` 中之 `tag name` 的 [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) 查詢。
 
 `name` 屬性代表標記中位在註解前面的名稱規範。
 

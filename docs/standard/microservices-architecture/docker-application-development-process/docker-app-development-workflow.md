@@ -4,12 +4,12 @@ description: 了解開發 Docker 應用程式的工作流程詳細資料。 一�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: c5c8cc34c70771d3f362f967cc99e76013291faa
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c34d49307408520afc6223a43d1c347dd6cffb97
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480097"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584300"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 應用程式的開發工作流程
 
@@ -489,7 +489,7 @@ docker-compose.yml 檔案指定的不只是使用何種容器，還會指定它�
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>測試與部署協調器的注意事項
 
-docker-compose up 和 docker run 命令 (在 Visual Studio 中執行和偵錯容器) 適合在開發環境中測試容器。 但您不應該針對生產環境部署使用這種方法，在此部署中，您應該以 [Kubernetes](https://kubernetes.io/) 或 [Service Fabric](https://azure.microsoft.com/services/service-fabric/) 等協調器為目標。 如果您使用 Kubernetes，您必須使用 [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/) 來組織容器，並使用[服務](https://kubernetes.io/docs/concepts/services-networking/service/)來為其建立網路。 您也必須使用[部署](https://kubernetes.io/docs/tutorials/k8s201/#deployments)來組織 Pod 建立和修改作業。
+docker-compose up 和 docker run 命令 (在 Visual Studio 中執行和偵錯容器) 適合在開發環境中測試容器。 但您不應該針對生產環境部署使用這種方法，在此部署中，您應該以 [Kubernetes](https://kubernetes.io/) 或 [Service Fabric](https://azure.microsoft.com/services/service-fabric/) 等協調器為目標。 如果您使用 Kubernetes，您必須使用 [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/) 來組織容器，並使用[服務](https://kubernetes.io/docs/concepts/services-networking/service/)來為其建立網路。 您也必須使用[部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)來組織 Pod 建立和修改作業。
 
 ![6 - 測試應用程式或微服務](./media/image17.png)
 

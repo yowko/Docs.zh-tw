@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2fe85dc81d657cd897b8c326211c125f75a8e05
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: e6db80e4cb1f54ed58dabf84f4a88f1b3db616ea
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904719"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443110"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中過時的類型
 <a name="introduction"></a> 本文中的表格列出 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中過時的類型，並依組件分組。 使用下列連結查看每個組件中過時的型別和建議的替代方案。 因為這些型別已經過時，其所有成員也已經過時。 如需 .NET Framework 類別庫中其他過時成員的清單，請參閱[過時的成員](../../../docs/framework/whats-new/obsolete-members.md)。
@@ -630,7 +630,8 @@ ms.locfileid: "55904719"
 
 <a name="VBCompat"></a>
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>組件︰Microsoft.VisualBasic.Compatibility.dll
-  如需從 Visual Basic 6 移轉的資訊，請參閱 [Visual Basic 6.0 資源中心](https://msdn.microsoft.com/library/windows/desktop/ms788229)。
+
+如需從 Visual Basic 6 移轉的資訊，請參閱 [Visual Basic 6.0 資源中心](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation)。
   
 |類型|訊息|
 |----------|-------------|

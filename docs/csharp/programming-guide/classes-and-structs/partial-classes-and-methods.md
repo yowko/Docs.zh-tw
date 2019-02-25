@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: b960bbf0a35a917d9143a0f47ce3219b6cb10ab4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fdb3de03eaa60a4d29d5a0c7e4082a6806b0ec9
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713310"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441667"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分類別和方法 (C# 程式設計手冊)
 有可能將 [class](../../../csharp/language-reference/keywords/class.md)、[struct](../../../csharp/language-reference/keywords/struct.md)、[interface](../../../csharp/language-reference/keywords/interface.md) 或方法的定義，分割到兩個以上的來源檔案。 每一個來源檔案都包含型別或方法定義的一個區段，而當編譯應用程式時，就會將所有區段結合起來。  
@@ -110,15 +110,15 @@ ms.locfileid: "54713310"
   
 ## <a name="example-1"></a>範例 1  
   
-### <a name="description"></a>說明  
- 在下例中，類別的欄位和建構函式 `CoOrds`，已在一個部分類別定義中宣告，而成員 `PrintCoOrds`，則是在另一個部分類別定義中宣告。  
+### <a name="description"></a>描述  
+ 在下例中，類別的欄位和建構函式 `Coords`，已在一個部分類別定義中宣告，而成員 `PrintCoords`，則是在另一個部分類別定義中宣告。  
   
 ### <a name="code"></a>程式碼  
  [!code-csharp[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
   
 ## <a name="example-2"></a>範例 2  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下例範例示範您也可以開發部分結構和介面。  
   
 ### <a name="code"></a>程式碼  
