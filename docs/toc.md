@@ -31,7 +31,8 @@
 ### [可攜性分析器](standard/analyzers/portability-analyzer.md)
 ### [架構分析器](standard/analyzers/framework-analyzer.md)
 ## [處理和擲回例外狀況](standard/exceptions/)
-## [.NET 組件檔格式](standard/assembly-format.md)
+## [.NET 中的組件](standard/assembly/index.md)
+### [.NET 組件檔格式](standard/assembly/file-format.md) 
 ## [記憶體回收](standard/garbage-collection/)
 ## [泛型類型](standard/generics.md)
 ## [委派和 Lambda](standard/delegates-lambdas.md)
@@ -521,7 +522,7 @@
 #### [自訂 My 中可用的物件](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [程式設計概念](visual-basic/programming-guide/concepts/index.md)
-### [組件和全域組件快取](visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+### [.NET 中的組件](standard/assembly/index.md)
 ### [使用 Async 和 Await 進行非同步程式設計](visual-basic/programming-guide/concepts/async/index.md)
 ### [屬性](visual-basic/programming-guide/concepts/attributes/index.md)
 ### [運算式樹狀結構](visual-basic/programming-guide/concepts/expression-trees/index.md)
