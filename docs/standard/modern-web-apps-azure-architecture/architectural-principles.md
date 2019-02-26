@@ -3,13 +3,13 @@ title: 架構原則
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 架構原則
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: b7edfc8d0cb3460bb33fb4e54cc93dd18ce2f385
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.date: 02/16/2019
+ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828094"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442980"
 ---
 # <a name="architectural-principles"></a>架構原則
 
@@ -99,21 +99,10 @@ ms.locfileid: "55828094"
 
 至少，個別 Web 應用程式應該致力於成為自己的繫結內容，並且具有自己商務模型的持續性存放區，而不與其他應用程式共用一個資料庫。 繫結內容之間的通訊會透過程式設計介面進行，而不是透過共用的資料庫，這樣可讓商務邏輯和事件發生以回應發生的變更。 繫結內容與微服務密切對應，而微服務在理想的情況下也實作為自己的個別繫結內容。
 
-> ### <a name="references--modern-web-applications"></a>參考 – 現代化 Web 應用程式
-> - **關注點分離**  
-> <https://deviq.com/separation-of-concerns/>
-> - **封裝**  
-> <https://deviq.com/encapsulation/>
-> - **相依性反轉準則**  
-> <https://deviq.com/dependency-inversion-principle/>
-> - **明確相依性準則**  
-> <https://deviq.com/explicit-dependencies-principle/>
-> - **不重複原則**  
-> <https://deviq.com/don-t-repeat-yourself/>
-> - **持續性無知**  
-> <https://deviq.com/persistence-ignorance/>
-> - **繫結內容**  
-> <https://martinfowler.com/bliki/BoundedContext.html>
+## <a name="additional-resources"></a>其他資源
+
+* [JAVA 設計模式：準則](https://java-design-patterns.com/principles/)
+* [繫結內容](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[上一頁](choose-between-traditional-web-and-single-page-apps.md)

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 如何使用 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b00b0021f71097f2c6cedcb1ddea7861f1936f84
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145250"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442226"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式 
 
@@ -448,17 +448,17 @@ ENTRYPOINT ["dotnet", "run"]
 
 .NET 小組已執行重要工作，讓 .NET Core 和 ASP.NET Core 成為容器最佳化架構。 .NET Core 不僅已是磁碟使用量低的輕量型架構，從 2.1 版起，小組還將重點放在針對三大情境將 Docker 映像最佳化，以便於 <span class="underline">microsoft/dotnet</span>的 Docker Hub 登錄中加以發佈：
 
-1.  **開發**：最優先事項是能夠快速進行整合與偵錯，而大小則次之。
+1.  **開發**：最優先事項是能夠快速進行整合，及對變更進行偵錯，而大小則次之。
 
-2.  **建置**：最優先事項是編譯應用程式，以及包含二進位檔和其他相依性來將二進位檔最佳化。
+2.  **組建**：最優先事項是編譯應用程式，以及包含二進位檔和其他相依性來將二進位檔最佳化。
 
-3.  **生產**：因為重點在於能夠快速地部署和啟動容器，所以這些映像只限於二進位檔與執行應用程式所需的內容。
+3.  **生產**：因為重點在於快速地部署和啟動容器，所以這些映像只限於二進位檔及執行應用程式所需的內容。
 
 為達到這項目標，.NET 小組目前在 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (Docker Hub) 提供三種基本變體：
 
 1.  **sdk**：適用於開發與建置環節。
 2.  **runtime**：適用於生產環節和
-3.  **runtime-deps**：適用於[獨立式應用程式](https://docs.microsoft.com/dotnet/core/deploying/index#self-contained-deployments-scd)的生產環節。
+3.  **runtime-deps**：適用於[獨立式應用程式](../../../core/deploying/index.md#self-contained-deployments-scd)的生產環節。
 
 執行階段映像也會將 aspnetcore\_urls 自動設為連接埠 80，並且預先 ngend 快取組件讓啟動更快速。
 
@@ -468,7 +468,7 @@ ENTRYPOINT ["dotnet", "run"]
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 -   **建置 .NET Core 應用程式的 Docker 映像** <br/>
-    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
+    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 >[!div class="step-by-step"]
 >[上一頁](data-driven-crud-microservice.md)

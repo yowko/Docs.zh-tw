@@ -3,21 +3,15 @@ title: 檔案與資料流 I/O - .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- IO namespace
-- files, I/O
-- System.IO namespace
-- I/O [.NET Framework]
-- streams, I/O
-- data streams, I/O
+  - IO namespace
+  - 'files, I/O'
+  - System.IO namespace
+  - 'I/O [.NET Framework]'
+  - 'streams, I/O'
+  - 'data streams, I/O'
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07ea22fcd76a9f52fd9fd0b00c58d6d3b9b906d9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279470"
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
 
@@ -47,11 +41,12 @@ ms.locfileid: "55279470"
 
 除了使用這些類別之外，Visual Basic 使用者還可以使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> 類別針對檔案 I/O 提供的方法。
 
-請參閱[如何：複製目錄](how-to-copy-directories.md)，[如何：建立目錄清單](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)，及[如何：列舉目錄與檔案](how-to-enumerate-directories-and-files.md)。
+請參閱[如何：複製目錄](how-to-copy-directories.md)，[如何：建立目錄清單](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))，及[如何：列舉目錄與檔案](how-to-enumerate-directories-and-files.md)。
 
 ## <a name="streams"></a>資料流
 
-抽象基底類別 <xref:System.IO.Stream> 支援讀取和寫入位元組。 代表繼承自 <xref:System.IO.Stream> 類別之資料流的所有類別。 <xref:System.IO.Stream> 類別和它的衍生類別提供了資料來源和儲存機制的一般觀點，並且將程式設計人員與作業系統和基礎裝置的特有詳細資料加以隔離。
+抽象基底類別 <xref:System.IO.Stream> 支援讀取和寫入位元組。 代表繼承自 <xref:System.IO.Stream> 類別之資料流的所有類別。 
+  <xref:System.IO.Stream> 類別和它的衍生類別提供了資料來源和儲存機制的一般觀點，並且將程式設計人員與作業系統和基礎裝置的特有詳細資料加以隔離。
 
 資料流包含三項基本作業：
 
@@ -83,7 +78,8 @@ ms.locfileid: "55279470"
 
 ## <a name="readers-and-writers"></a>讀取器及寫入器
 
-<xref:System.IO?displayProperty=nameWithType> 命名空間提供從資料流讀取編碼字元以及將編碼字元寫入資料流的類型。 通常資料流是針對位元組輸入和輸出所設計。 讀取器和寫入器類型會處理編碼字元與位元組之間的轉換，讓資料流能夠完成作業。 每個讀取器和寫入器類別都會與資料流相關聯，可透過類別的 `BaseStream` 屬性擷取。
+
+  <xref:System.IO?displayProperty=nameWithType> 命名空間提供從資料流讀取編碼字元以及將編碼字元寫入資料流的類型。 通常資料流是針對位元組輸入和輸出所設計。 讀取器和寫入器類型會處理編碼字元與位元組之間的轉換，讓資料流能夠完成作業。 每個讀取器和寫入器類別都會與資料流相關聯，可透過類別的 `BaseStream` 屬性擷取。
 
 以下是常用的讀取器和寫入器類別：
 
@@ -107,7 +103,8 @@ ms.locfileid: "55279470"
 
 ## <a name="compression"></a>壓縮
 
-壓縮是指縮減檔案大小以便儲存的程序。 解壓縮則是指擷取壓縮檔的內容使其成為可使用格式的程序。 <xref:System.IO.Compression?displayProperty=nameWithType> 命名空間包含壓縮及解壓縮檔案和資料流的類型。
+壓縮是指縮減檔案大小以便儲存的程序。 解壓縮則是指擷取壓縮檔的內容使其成為可使用格式的程序。 
+  <xref:System.IO.Compression?displayProperty=nameWithType> 命名空間包含壓縮及解壓縮檔案和資料流的類型。
 
 以下是壓縮和解壓縮檔案和資料流時經常使用的類別：
 
@@ -147,7 +144,8 @@ ms.locfileid: "55279470"
 
 以下是在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中使用 I/O 作業時要注意的一些重要差異：
 
-- <xref:System.IO.File> 中未包含與檔案作業特別相關的類型，例如 <xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]。 您應該改為使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 之 <xref:Windows.Storage?displayProperty=nameWithType> 命名空間中的型別，例如 <xref:Windows.Storage.StorageFile> 與 <xref:Windows.Storage.StorageFolder>。
+- 
+  <xref:System.IO.File> 中未包含與檔案作業特別相關的類型，例如 <xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]。 您應該改為使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 之 <xref:Windows.Storage?displayProperty=nameWithType> 命名空間中的型別，例如 <xref:Windows.Storage.StorageFile> 與 <xref:Windows.Storage.StorageFolder>。
 
 - 無法使用隔離儲存區，請改用[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
 
@@ -155,13 +153,13 @@ ms.locfileid: "55279470"
 
 - 無法使用路徑壓縮類型 <xref:System.IO.Compression.ZipFile> 和 <xref:System.IO.Compression.ZipFileExtensions>。 您應該改為使用 <xref:Windows.Storage.Compression?displayProperty=nameWithType> 命名空間中的型別。
 
-如有需要，您可以在 .NET Framework 資料流和 Windows 執行階段資料流之間進行轉換。 如需詳細資訊，請參閱[＜How to：在 .NET Framework 資料流及 Windows 執行階段資料流之間](how-to-convert-between-dotnet-streams-and-winrt-streams.md)或 <xref:System.IO.WindowsRuntimeStreamExtensions> 之間轉換。
+如有需要，您可以在 .NET Framework 資料流和 Windows 執行階段資料流之間進行轉換。 如需詳細資訊，請參閱[如何：在 .NET Framework 資料流及 Windows 執行階段資料流之間](how-to-convert-between-dotnet-streams-and-winrt-streams.md)或 <xref:System.IO.WindowsRuntimeStreamExtensions> 之間轉換。
 
 如需有關在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中 I/O 作業的詳細資訊，請參閱[快速入門：讀取及寫入檔案](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))。
 
 ## <a name="io-and-security"></a>I/O 及安全性
 
-當您使用 <xref:System.IO?displayProperty=nameWithType> 命名空間中的類別時，必須遵循作業系統安全性需求，例如存取控制清單 (ACL)，以控制對檔案和目錄的存取。 任何 <xref:System.Security.Permissions.FileIOPermission> 需求上都會附加這個需求。 您可以用程式設計的方式管理 ACL。 如需詳細資訊，請參閱[＜How to：新增或移除存取控制清單項目](how-to-add-or-remove-access-control-list-entries.md)。
+當您使用 <xref:System.IO?displayProperty=nameWithType> 命名空間中的類別時，必須遵循作業系統安全性需求，例如存取控制清單 (ACL)，以控制對檔案和目錄的存取。 任何 <xref:System.Security.Permissions.FileIOPermission> 需求上都會附加這個需求。 您可以用程式設計的方式管理 ACL。 如需詳細資訊，請參閱[如何：新增或移除存取控制清單項目](how-to-add-or-remove-access-control-list-entries.md)。
 
 預設安全性原則可避免網際網路或內部網路應用程式存取使用者電腦上的檔案。 因此，撰寫將透過網際網路或內部網路下載的程式碼時，請不要使用需要實體檔案路徑的 I/O 類別。 對於傳統 .NET Framework 應用程式請改用[隔離儲存區](isolated-storage.md)，對於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式則改用[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
 
