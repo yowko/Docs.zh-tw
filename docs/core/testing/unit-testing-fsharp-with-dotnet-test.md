@@ -7,22 +7,22 @@ ms.date: 08/30/2017
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 08ebe39fd6e992fdcdc10e19d87d565e76d909a2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9765c463bb427f79dcd0308e7e4fc643fdc06968
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239195"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745942"
 ---
-# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a><span data-ttu-id="c74bb-103">使用 dotnet test 與 xUnit 為 .NET Core 中的 F# 程式庫進行單元測試</span><span class="sxs-lookup"><span data-stu-id="c74bb-103">Unit testing F# libraries in .NET Core using dotnet test and xUnit</span></span>
+# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a><span data-ttu-id="88d3c-103">使用 dotnet test 與 xUnit 為 .NET Core 中的 F# 程式庫進行單元測試</span><span class="sxs-lookup"><span data-stu-id="88d3c-103">Unit testing F# libraries in .NET Core using dotnet test and xUnit</span></span>
 
-<span data-ttu-id="c74bb-104">本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。</span><span class="sxs-lookup"><span data-stu-id="c74bb-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="c74bb-105">如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/)。</span><span class="sxs-lookup"><span data-stu-id="c74bb-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/) before you begin.</span></span> <span data-ttu-id="c74bb-106">如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。</span><span class="sxs-lookup"><span data-stu-id="c74bb-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
+<span data-ttu-id="88d3c-104">本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。</span><span class="sxs-lookup"><span data-stu-id="88d3c-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="88d3c-105">如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/)。</span><span class="sxs-lookup"><span data-stu-id="88d3c-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/) before you begin.</span></span> <span data-ttu-id="88d3c-106">如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。</span><span class="sxs-lookup"><span data-stu-id="88d3c-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-## <a name="creating-the-source-project"></a><span data-ttu-id="c74bb-107">建立來源專案</span><span class="sxs-lookup"><span data-stu-id="c74bb-107">Creating the source project</span></span>
+## <a name="creating-the-source-project"></a><span data-ttu-id="88d3c-107">建立來源專案</span><span class="sxs-lookup"><span data-stu-id="88d3c-107">Creating the source project</span></span>
 
-<span data-ttu-id="c74bb-108">開啟 Shell 視窗。</span><span class="sxs-lookup"><span data-stu-id="c74bb-108">Open a shell window.</span></span> <span data-ttu-id="c74bb-109">建立名為 *unit-testing-with-fsharp* 的目錄來放置方案。</span><span class="sxs-lookup"><span data-stu-id="c74bb-109">Create a directory called *unit-testing-with-fsharp* to hold the solution.</span></span>
-<span data-ttu-id="c74bb-110">在這個新目錄中，執行 [`dotnet new sln`](../tools/dotnet-new.md) 以建立新方案。</span><span class="sxs-lookup"><span data-stu-id="c74bb-110">Inside this new directory, run [`dotnet new sln`](../tools/dotnet-new.md) to create a new solution.</span></span> <span data-ttu-id="c74bb-111">這樣可讓您更輕鬆地管理類別庫與單元測試專案。</span><span class="sxs-lookup"><span data-stu-id="c74bb-111">This makes it easier to manage both the class library and the unit test project.</span></span>
-<span data-ttu-id="c74bb-112">在方案目錄中，建立 *MathService* 目錄。</span><span class="sxs-lookup"><span data-stu-id="c74bb-112">Inside the solution directory, create a *MathService* directory.</span></span> <span data-ttu-id="c74bb-113">到目前為止，目錄與檔案結構如下所示：</span><span class="sxs-lookup"><span data-stu-id="c74bb-113">The directory and file structure thus far is shown below:</span></span>
+<span data-ttu-id="88d3c-108">開啟 Shell 視窗。</span><span class="sxs-lookup"><span data-stu-id="88d3c-108">Open a shell window.</span></span> <span data-ttu-id="88d3c-109">建立名為 *unit-testing-with-fsharp* 的目錄來放置方案。</span><span class="sxs-lookup"><span data-stu-id="88d3c-109">Create a directory called *unit-testing-with-fsharp* to hold the solution.</span></span>
+<span data-ttu-id="88d3c-110">在這個新目錄中，執行 [`dotnet new sln`](../tools/dotnet-new.md) 以建立新方案。</span><span class="sxs-lookup"><span data-stu-id="88d3c-110">Inside this new directory, run [`dotnet new sln`](../tools/dotnet-new.md) to create a new solution.</span></span> <span data-ttu-id="88d3c-111">這樣可讓您更輕鬆地管理類別庫與單元測試專案。</span><span class="sxs-lookup"><span data-stu-id="88d3c-111">This makes it easier to manage both the class library and the unit test project.</span></span>
+<span data-ttu-id="88d3c-112">在方案目錄中，建立 *MathService* 目錄。</span><span class="sxs-lookup"><span data-stu-id="88d3c-112">Inside the solution directory, create a *MathService* directory.</span></span> <span data-ttu-id="88d3c-113">到目前為止，目錄與檔案結構如下所示：</span><span class="sxs-lookup"><span data-stu-id="88d3c-113">The directory and file structure thus far is shown below:</span></span>
 
 ```
 /unit-testing-with-fsharp
@@ -30,18 +30,18 @@ ms.locfileid: "53239195"
     /MathService
 ```
 
-<span data-ttu-id="c74bb-114">將 *MathService* 設定為目前的目錄，然後執行 [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) 以建立來源專案。</span><span class="sxs-lookup"><span data-stu-id="c74bb-114">Make *MathService* the current directory and run [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) to create the source project.</span></span>  <span data-ttu-id="c74bb-115">為了使用測試導向開發 (TDD)，您將必須建立 math 服務的失敗實作：</span><span class="sxs-lookup"><span data-stu-id="c74bb-115">To use test-driven development (TDD), you'll create a failing implementation of the math service:</span></span>
+<span data-ttu-id="88d3c-114">將 *MathService* 設定為目前的目錄，然後執行 [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) 以建立來源專案。</span><span class="sxs-lookup"><span data-stu-id="88d3c-114">Make *MathService* the current directory and run [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) to create the source project.</span></span>  <span data-ttu-id="88d3c-115">您會建立數學服務的失敗實作：</span><span class="sxs-lookup"><span data-stu-id="88d3c-115">You'll create a failing implementation of the math service:</span></span>
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-<span data-ttu-id="c74bb-116">將目錄變更回 *unit-testing-with-fsharp* 目錄。</span><span class="sxs-lookup"><span data-stu-id="c74bb-116">Change the directory back to the *unit-testing-with-fsharp* directory.</span></span> <span data-ttu-id="c74bb-117">執行 [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) 以將類別庫專案加入方案中。</span><span class="sxs-lookup"><span data-stu-id="c74bb-117">Run [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) to add the class library project to the solution.</span></span>
+<span data-ttu-id="88d3c-116">將目錄變更回 *unit-testing-with-fsharp* 目錄。</span><span class="sxs-lookup"><span data-stu-id="88d3c-116">Change the directory back to the *unit-testing-with-fsharp* directory.</span></span> <span data-ttu-id="88d3c-117">執行 [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) 以將類別庫專案加入方案中。</span><span class="sxs-lookup"><span data-stu-id="88d3c-117">Run [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) to add the class library project to the solution.</span></span>
 
-## <a name="creating-the-test-project"></a><span data-ttu-id="c74bb-118">建立測試專案</span><span class="sxs-lookup"><span data-stu-id="c74bb-118">Creating the test project</span></span>
+## <a name="creating-the-test-project"></a><span data-ttu-id="88d3c-118">建立測試專案</span><span class="sxs-lookup"><span data-stu-id="88d3c-118">Creating the test project</span></span>
 
-<span data-ttu-id="c74bb-119">接著，建立 *MathService.Tests* 目錄。</span><span class="sxs-lookup"><span data-stu-id="c74bb-119">Next, create the *MathService.Tests* directory.</span></span> <span data-ttu-id="c74bb-120">下列大綱顯示目錄結構：</span><span class="sxs-lookup"><span data-stu-id="c74bb-120">The following outline shows the directory structure:</span></span>
+<span data-ttu-id="88d3c-119">接著，建立 *MathService.Tests* 目錄。</span><span class="sxs-lookup"><span data-stu-id="88d3c-119">Next, create the *MathService.Tests* directory.</span></span> <span data-ttu-id="88d3c-120">下列大綱顯示目錄結構：</span><span class="sxs-lookup"><span data-stu-id="88d3c-120">The following outline shows the directory structure:</span></span>
 
 ```
 /unit-testing-with-fsharp
@@ -52,7 +52,7 @@ module MyMath =
     /MathService.Tests
 ```
 
-<span data-ttu-id="c74bb-121">將 *MathService.Tests* 目錄設定為目前的目錄，然後使用 [`dotnet new xunit -lang F#`](../tools/dotnet-new.md) 建立新專案。</span><span class="sxs-lookup"><span data-stu-id="c74bb-121">Make the *MathService.Tests* directory the current directory and create a new project using [`dotnet new xunit -lang F#`](../tools/dotnet-new.md).</span></span> <span data-ttu-id="c74bb-122">這樣會建立將 xUnit 作為測試程式庫的測試專案。</span><span class="sxs-lookup"><span data-stu-id="c74bb-122">This creates a test project that uses xUnit as the test library.</span></span> <span data-ttu-id="c74bb-123">產生的範本會在 *MathServiceTests.fsproj* 中設定測試執行器：</span><span class="sxs-lookup"><span data-stu-id="c74bb-123">The generated template configures the test runner in the *MathServiceTests.fsproj*:</span></span>
+<span data-ttu-id="88d3c-121">將 *MathService.Tests* 目錄設定為目前的目錄，然後使用 [`dotnet new xunit -lang F#`](../tools/dotnet-new.md) 建立新專案。</span><span class="sxs-lookup"><span data-stu-id="88d3c-121">Make the *MathService.Tests* directory the current directory and create a new project using [`dotnet new xunit -lang F#`](../tools/dotnet-new.md).</span></span> <span data-ttu-id="88d3c-122">這樣會建立將 xUnit 作為測試程式庫的測試專案。</span><span class="sxs-lookup"><span data-stu-id="88d3c-122">This creates a test project that uses xUnit as the test library.</span></span> <span data-ttu-id="88d3c-123">產生的範本會在 *MathServiceTests.fsproj* 中設定測試執行器：</span><span class="sxs-lookup"><span data-stu-id="88d3c-123">The generated template configures the test runner in the *MathServiceTests.fsproj*:</span></span>
 
 ```xml
 <ItemGroup>
@@ -62,15 +62,15 @@ module MyMath =
 </ItemGroup>
 ```
 
-<span data-ttu-id="c74bb-124">測試專案需要其他套件來建立和執行單元測試。</span><span class="sxs-lookup"><span data-stu-id="c74bb-124">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="c74bb-125">上一個步驟中的 `dotnet new` 已新增 xUnit 和 xUnit 執行器。</span><span class="sxs-lookup"><span data-stu-id="c74bb-125">`dotnet new` in the previous step added xUnit and the xUnit runner.</span></span> <span data-ttu-id="c74bb-126">現在，將 `MathService` 類別庫新增為專案的另一個相依性。</span><span class="sxs-lookup"><span data-stu-id="c74bb-126">Now, add the `MathService` class library as another dependency to the project.</span></span> <span data-ttu-id="c74bb-127">使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：</span><span class="sxs-lookup"><span data-stu-id="c74bb-127">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
+<span data-ttu-id="88d3c-124">測試專案需要其他套件來建立和執行單元測試。</span><span class="sxs-lookup"><span data-stu-id="88d3c-124">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="88d3c-125">上一個步驟中的 `dotnet new` 已新增 xUnit 和 xUnit 執行器。</span><span class="sxs-lookup"><span data-stu-id="88d3c-125">`dotnet new` in the previous step added xUnit and the xUnit runner.</span></span> <span data-ttu-id="88d3c-126">現在，將 `MathService` 類別庫新增為專案的另一個相依性。</span><span class="sxs-lookup"><span data-stu-id="88d3c-126">Now, add the `MathService` class library as another dependency to the project.</span></span> <span data-ttu-id="88d3c-127">使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：</span><span class="sxs-lookup"><span data-stu-id="88d3c-127">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
 
 ```
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
-<span data-ttu-id="c74bb-128">您可以在 GitHub 的[範例存放庫](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj)中看到完整檔案。</span><span class="sxs-lookup"><span data-stu-id="c74bb-128">You can see the entire file in the [samples repository](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) on GitHub.</span></span>
+<span data-ttu-id="88d3c-128">您可以在 GitHub 的[範例存放庫](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj)中看到完整檔案。</span><span class="sxs-lookup"><span data-stu-id="88d3c-128">You can see the entire file in the [samples repository](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) on GitHub.</span></span>
 
-<span data-ttu-id="c74bb-129">您有下列最終方案配置：</span><span class="sxs-lookup"><span data-stu-id="c74bb-129">You have the following final solution layout:</span></span>
+<span data-ttu-id="88d3c-129">您有下列最終方案配置：</span><span class="sxs-lookup"><span data-stu-id="88d3c-129">You have the following final solution layout:</span></span>
 
 ```
 /unit-testing-with-fsharp
@@ -83,11 +83,11 @@ dotnet add reference ../MathService/MathService.fsproj
         MathServiceTests.fsproj
 ```
 
-<span data-ttu-id="c74bb-130">執行 *unit-testing-with-fsharp* 目錄中的 [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md)。</span><span class="sxs-lookup"><span data-stu-id="c74bb-130">Execute [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md) in the *unit-testing-with-fsharp* directory.</span></span> 
+<span data-ttu-id="88d3c-130">執行 *unit-testing-with-fsharp* 目錄中的 [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md)。</span><span class="sxs-lookup"><span data-stu-id="88d3c-130">Execute [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md) in the *unit-testing-with-fsharp* directory.</span></span> 
 
-## <a name="creating-the-first-test"></a><span data-ttu-id="c74bb-131">建立第一個測試</span><span class="sxs-lookup"><span data-stu-id="c74bb-131">Creating the first test</span></span>
+## <a name="creating-the-first-test"></a><span data-ttu-id="88d3c-131">建立第一個測試</span><span class="sxs-lookup"><span data-stu-id="88d3c-131">Creating the first test</span></span>
 
-<span data-ttu-id="c74bb-132">TDD 方法需要寫入一個失敗的測試，使其通過，然後重複該程序。</span><span class="sxs-lookup"><span data-stu-id="c74bb-132">The TDD approach calls for writing one failing test, making it pass, then repeating the process.</span></span> <span data-ttu-id="c74bb-133">開啟 *Tests.fs* 並加入下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="c74bb-133">Open *Tests.fs* and add the following code:</span></span>
+<span data-ttu-id="88d3c-132">您會撰寫一個失敗測試，讓它通過，然後重複此程序。</span><span class="sxs-lookup"><span data-stu-id="88d3c-132">You write one failing test, make it pass, then repeat the process.</span></span> <span data-ttu-id="88d3c-133">開啟 *Tests.fs* 並加入下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="88d3c-133">Open *Tests.fs* and add the following code:</span></span>
 
 ```fsharp
 [<Fact>]
@@ -98,11 +98,11 @@ let ``My test`` () =
 let ``Fail every time`` () = Assert.True(false)
 ```
 
-<span data-ttu-id="c74bb-134">`[<Fact>]` 屬性表示由測試執行器執行的測試方法。</span><span class="sxs-lookup"><span data-stu-id="c74bb-134">The `[<Fact>]` attribute denotes a test method that is run by the test runner.</span></span> <span data-ttu-id="c74bb-135">從 *unit-testing-with-fsharp*，執行 [`dotnet test`](../tools/dotnet-test.md) 來建置測試和類別庫，然後執行測試。</span><span class="sxs-lookup"><span data-stu-id="c74bb-135">From the *unit-testing-with-fsharp*, execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="c74bb-136">xUnit 測試執行器包含執行測試的程式進入點。</span><span class="sxs-lookup"><span data-stu-id="c74bb-136">The xUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="c74bb-137">`dotnet test` 會使用您建立的單元測試專案來開始測試執行器。</span><span class="sxs-lookup"><span data-stu-id="c74bb-137">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
+<span data-ttu-id="88d3c-134">`[<Fact>]` 屬性表示由測試執行器執行的測試方法。</span><span class="sxs-lookup"><span data-stu-id="88d3c-134">The `[<Fact>]` attribute denotes a test method that is run by the test runner.</span></span> <span data-ttu-id="88d3c-135">從 *unit-testing-with-fsharp*，執行 [`dotnet test`](../tools/dotnet-test.md) 來建置測試和類別庫，然後執行測試。</span><span class="sxs-lookup"><span data-stu-id="88d3c-135">From the *unit-testing-with-fsharp*, execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="88d3c-136">xUnit 測試執行器包含執行測試的程式進入點。</span><span class="sxs-lookup"><span data-stu-id="88d3c-136">The xUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="88d3c-137">`dotnet test` 會使用您建立的單元測試專案來開始測試執行器。</span><span class="sxs-lookup"><span data-stu-id="88d3c-137">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
 
-<span data-ttu-id="c74bb-138">這兩個測試會顯示最基本的成功和失敗測試。</span><span class="sxs-lookup"><span data-stu-id="c74bb-138">These two tests show the most basic passing and failing tests.</span></span> <span data-ttu-id="c74bb-139">`My test` 成功，而 `Fail every time` 失敗。</span><span class="sxs-lookup"><span data-stu-id="c74bb-139">`My test` passes, and `Fail every time` fails.</span></span> <span data-ttu-id="c74bb-140">現在，針對 `squaresOfOdds` 方法建立測試。</span><span class="sxs-lookup"><span data-stu-id="c74bb-140">Now, create a test for the `squaresOfOdds` method.</span></span> <span data-ttu-id="c74bb-141">`squaresOfOdds` 方法會傳回屬於輸入序列一部分的所有奇數整數值平方序列。</span><span class="sxs-lookup"><span data-stu-id="c74bb-141">The `squaresOfOdds` method returns a sequence of the squares of all odd integer values that are part of the input sequence.</span></span> <span data-ttu-id="c74bb-142">您能以反覆方式建立會驗證功能的測試，而不需要嘗試一次撰寫所有那些函式。</span><span class="sxs-lookup"><span data-stu-id="c74bb-142">Rather than trying to write all of those functions at once, you can iteratively create tests that validate the functionality.</span></span> <span data-ttu-id="c74bb-143">將每個測試設定為通過表示為方法建立必要功能。</span><span class="sxs-lookup"><span data-stu-id="c74bb-143">Making each test pass means creating the necessary functionality for the method.</span></span>
+<span data-ttu-id="88d3c-138">這兩個測試會顯示最基本的成功和失敗測試。</span><span class="sxs-lookup"><span data-stu-id="88d3c-138">These two tests show the most basic passing and failing tests.</span></span> <span data-ttu-id="88d3c-139">`My test` 成功，而 `Fail every time` 失敗。</span><span class="sxs-lookup"><span data-stu-id="88d3c-139">`My test` passes, and `Fail every time` fails.</span></span> <span data-ttu-id="88d3c-140">現在，針對 `squaresOfOdds` 方法建立測試。</span><span class="sxs-lookup"><span data-stu-id="88d3c-140">Now, create a test for the `squaresOfOdds` method.</span></span> <span data-ttu-id="88d3c-141">`squaresOfOdds` 方法會傳回屬於輸入序列一部分的所有奇數整數值平方序列。</span><span class="sxs-lookup"><span data-stu-id="88d3c-141">The `squaresOfOdds` method returns a sequence of the squares of all odd integer values that are part of the input sequence.</span></span> <span data-ttu-id="88d3c-142">您能以反覆方式建立會驗證功能的測試，而不需要嘗試一次撰寫所有那些函式。</span><span class="sxs-lookup"><span data-stu-id="88d3c-142">Rather than trying to write all of those functions at once, you can iteratively create tests that validate the functionality.</span></span> <span data-ttu-id="88d3c-143">將每個測試設定為通過表示為方法建立必要功能。</span><span class="sxs-lookup"><span data-stu-id="88d3c-143">Making each test pass means creating the necessary functionality for the method.</span></span>
 
-<span data-ttu-id="c74bb-144">我們所能撰寫的最簡單測試是呼叫 `squaresOfOdds` 並傳遞所有偶數，其中結果應該是空整數序列。</span><span class="sxs-lookup"><span data-stu-id="c74bb-144">The simplest test we can write is to call `squaresOfOdds` with all even numbers, where the result should be an empty sequence of integers.</span></span>  <span data-ttu-id="c74bb-145">該測試如下：</span><span class="sxs-lookup"><span data-stu-id="c74bb-145">Here's that test:</span></span>
+<span data-ttu-id="88d3c-144">我們所能撰寫的最簡單測試是呼叫 `squaresOfOdds` 並傳遞所有偶數，其中結果應該是空整數序列。</span><span class="sxs-lookup"><span data-stu-id="88d3c-144">The simplest test we can write is to call `squaresOfOdds` with all even numbers, where the result should be an empty sequence of integers.</span></span>  <span data-ttu-id="88d3c-145">該測試如下：</span><span class="sxs-lookup"><span data-stu-id="88d3c-145">Here's that test:</span></span>
 
 ```fsharp
 [<Fact>]
@@ -112,18 +112,18 @@ let ``Sequence of Evens returns empty collection`` () =
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
-<span data-ttu-id="c74bb-146">您的測試失敗。</span><span class="sxs-lookup"><span data-stu-id="c74bb-146">Your test fails.</span></span> <span data-ttu-id="c74bb-147">您尚未建立實作。</span><span class="sxs-lookup"><span data-stu-id="c74bb-147">You haven't created the implementation yet.</span></span> <span data-ttu-id="c74bb-148">在可運作的 `MathService` 類別中撰寫最簡單的程式碼以進行此測試：</span><span class="sxs-lookup"><span data-stu-id="c74bb-148">Make this test by writing the simplest code in the `MathService` class that works:</span></span>
+<span data-ttu-id="88d3c-146">您的測試失敗。</span><span class="sxs-lookup"><span data-stu-id="88d3c-146">Your test fails.</span></span> <span data-ttu-id="88d3c-147">您尚未建立實作。</span><span class="sxs-lookup"><span data-stu-id="88d3c-147">You haven't created the implementation yet.</span></span> <span data-ttu-id="88d3c-148">在可運作的 `MathService` 類別中撰寫最簡單的程式碼以進行此測試：</span><span class="sxs-lookup"><span data-stu-id="88d3c-148">Make this test by writing the simplest code in the `MathService` class that works:</span></span>
 
 ```csharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-<span data-ttu-id="c74bb-149">在 *unit-testing-with-fsharp* 目錄中，重新執行 `dotnet test`。</span><span class="sxs-lookup"><span data-stu-id="c74bb-149">In the *unit-testing-with-fsharp* directory, run `dotnet test` again.</span></span> <span data-ttu-id="c74bb-150">`dotnet test` 命令會依序執行 `MathService` 專案和 `MathService.Tests` 專案的建置。</span><span class="sxs-lookup"><span data-stu-id="c74bb-150">The `dotnet test` command runs a build for the `MathService` project and then for the `MathService.Tests` project.</span></span> <span data-ttu-id="c74bb-151">建置這兩個專案之後，它將會執行此單一測試。</span><span class="sxs-lookup"><span data-stu-id="c74bb-151">After building both projects, it runs this single test.</span></span> <span data-ttu-id="c74bb-152">測試通過。</span><span class="sxs-lookup"><span data-stu-id="c74bb-152">It passes.</span></span>
+<span data-ttu-id="88d3c-149">在 *unit-testing-with-fsharp* 目錄中，重新執行 `dotnet test`。</span><span class="sxs-lookup"><span data-stu-id="88d3c-149">In the *unit-testing-with-fsharp* directory, run `dotnet test` again.</span></span> <span data-ttu-id="88d3c-150">`dotnet test` 命令會依序執行 `MathService` 專案和 `MathService.Tests` 專案的建置。</span><span class="sxs-lookup"><span data-stu-id="88d3c-150">The `dotnet test` command runs a build for the `MathService` project and then for the `MathService.Tests` project.</span></span> <span data-ttu-id="88d3c-151">建置這兩個專案之後，它將會執行此單一測試。</span><span class="sxs-lookup"><span data-stu-id="88d3c-151">After building both projects, it runs this single test.</span></span> <span data-ttu-id="88d3c-152">測試通過。</span><span class="sxs-lookup"><span data-stu-id="88d3c-152">It passes.</span></span>
 
-## <a name="completing-the-requirements"></a><span data-ttu-id="c74bb-153">完成需求</span><span class="sxs-lookup"><span data-stu-id="c74bb-153">Completing the requirements</span></span>
+## <a name="completing-the-requirements"></a><span data-ttu-id="88d3c-153">完成需求</span><span class="sxs-lookup"><span data-stu-id="88d3c-153">Completing the requirements</span></span>
 
-<span data-ttu-id="c74bb-154">現在，您已經讓一個測試順利通過，您可以撰寫更多測試。</span><span class="sxs-lookup"><span data-stu-id="c74bb-154">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="c74bb-155">下一個簡單案例可搭配所具有的唯一奇數是 `1` 的序列運作。</span><span class="sxs-lookup"><span data-stu-id="c74bb-155">The next simple case works with a sequence whose only odd number is `1`.</span></span> <span data-ttu-id="c74bb-156">數字 1 比較簡單，因為 1 的平方是 1。</span><span class="sxs-lookup"><span data-stu-id="c74bb-156">The number 1 is easier because the square of 1 is 1.</span></span> <span data-ttu-id="c74bb-157">該下一個測試如下：</span><span class="sxs-lookup"><span data-stu-id="c74bb-157">Here's that next test:</span></span>
+<span data-ttu-id="88d3c-154">現在，您已經讓一個測試順利通過，您可以撰寫更多測試。</span><span class="sxs-lookup"><span data-stu-id="88d3c-154">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="88d3c-155">下一個簡單案例可搭配所具有的唯一奇數是 `1` 的序列運作。</span><span class="sxs-lookup"><span data-stu-id="88d3c-155">The next simple case works with a sequence whose only odd number is `1`.</span></span> <span data-ttu-id="88d3c-156">數字 1 比較簡單，因為 1 的平方是 1。</span><span class="sxs-lookup"><span data-stu-id="88d3c-156">The number 1 is easier because the square of 1 is 1.</span></span> <span data-ttu-id="88d3c-157">該下一個測試如下：</span><span class="sxs-lookup"><span data-stu-id="88d3c-157">Here's that next test:</span></span>
 
 ```fsharp
 [<Fact>]
@@ -133,7 +133,7 @@ let ``Sequences of Ones and Evens returns Ones`` () =
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
-<span data-ttu-id="c74bb-158">執行 `dotnet test` 會執行您的測試並顯示新測試失敗。</span><span class="sxs-lookup"><span data-stu-id="c74bb-158">Executing `dotnet test` runs your tests and shows you that the new test fails.</span></span> <span data-ttu-id="c74bb-159">現在，更新 `squaresOfOdds` 方法以處理此新測試。</span><span class="sxs-lookup"><span data-stu-id="c74bb-159">Now, update the `squaresOfOdds` method to handle this new test.</span></span> <span data-ttu-id="c74bb-160">您會將所有偶數從序列中篩選出來，以使此測試通過。</span><span class="sxs-lookup"><span data-stu-id="c74bb-160">You filter all the even numbers out of the sequence to make this test pass.</span></span> <span data-ttu-id="c74bb-161">您可以透過撰寫小型篩選函式並使用 `Seq.filter` 來完成此動作：</span><span class="sxs-lookup"><span data-stu-id="c74bb-161">You can do that by writing a small filter function and using `Seq.filter`:</span></span>
+<span data-ttu-id="88d3c-158">執行 `dotnet test` 會執行您的測試並顯示新測試失敗。</span><span class="sxs-lookup"><span data-stu-id="88d3c-158">Executing `dotnet test` runs your tests and shows you that the new test fails.</span></span> <span data-ttu-id="88d3c-159">現在，更新 `squaresOfOdds` 方法以處理此新測試。</span><span class="sxs-lookup"><span data-stu-id="88d3c-159">Now, update the `squaresOfOdds` method to handle this new test.</span></span> <span data-ttu-id="88d3c-160">您會將所有偶數從序列中篩選出來，以使此測試通過。</span><span class="sxs-lookup"><span data-stu-id="88d3c-160">You filter all the even numbers out of the sequence to make this test pass.</span></span> <span data-ttu-id="88d3c-161">您可以透過撰寫小型篩選函式並使用 `Seq.filter` 來完成此動作：</span><span class="sxs-lookup"><span data-stu-id="88d3c-161">You can do that by writing a small filter function and using `Seq.filter`:</span></span>
 
 ```fsharp
 let private isOdd x = x % 2 <> 0
@@ -143,7 +143,7 @@ let squaresOfOdds xs =
     |> Seq.filter isOdd
 ```
 
-<span data-ttu-id="c74bb-162">還有一個步驟必須執行：計算每個奇數的平方。</span><span class="sxs-lookup"><span data-stu-id="c74bb-162">There's one more step to go: square each of the odd numbers.</span></span> <span data-ttu-id="c74bb-163">透過撰寫新測試以開始：</span><span class="sxs-lookup"><span data-stu-id="c74bb-163">Start by writing a new test:</span></span>
+<span data-ttu-id="88d3c-162">還有一個步驟必須執行：計算每個奇數的平方。</span><span class="sxs-lookup"><span data-stu-id="88d3c-162">There's one more step to go: square each of the odd numbers.</span></span> <span data-ttu-id="88d3c-163">透過撰寫新測試以開始：</span><span class="sxs-lookup"><span data-stu-id="88d3c-163">Start by writing a new test:</span></span>
 
 ```fsharp
 [<Fact>]
@@ -153,7 +153,7 @@ let ``SquaresOfOdds works`` () =
     Assert.Equal(expected, actual)
 ```
 
-<span data-ttu-id="c74bb-164">您可以透過將已篩選的序列以管線方式傳遞到對應作業，以計算每個奇數的平方，來修正測試：</span><span class="sxs-lookup"><span data-stu-id="c74bb-164">You can fix the test by piping the filtered sequence through a map operation to compute the square of each odd number:</span></span>
+<span data-ttu-id="88d3c-164">您可以透過將已篩選的序列以管線方式傳遞到對應作業，以計算每個奇數的平方，來修正測試：</span><span class="sxs-lookup"><span data-stu-id="88d3c-164">You can fix the test by piping the filtered sequence through a map operation to compute the square of each odd number:</span></span>
 
 ```fsharp
 let private square x = x * x
@@ -165,4 +165,4 @@ let squaresOfOdds xs =
     |> Seq.map square
 ```
 
-<span data-ttu-id="c74bb-165">您已建置好小型的程式庫和該程式庫的一組單元測試，</span><span class="sxs-lookup"><span data-stu-id="c74bb-165">You've built a small library and a set of unit tests for that library.</span></span> <span data-ttu-id="c74bb-166">您已建立方案結構，因此加入新套件與測試是一般工作流程的一部分。</span><span class="sxs-lookup"><span data-stu-id="c74bb-166">You've structured the solution so that adding new packages and tests is part of the normal workflow.</span></span> <span data-ttu-id="c74bb-167">您已集中大部分的時間與精力以解決應用程式目標。</span><span class="sxs-lookup"><span data-stu-id="c74bb-167">You've concentrated most of your time and effort on solving the goals of the application.</span></span>
+<span data-ttu-id="88d3c-165">您已建置好小型的程式庫和該程式庫的一組單元測試，</span><span class="sxs-lookup"><span data-stu-id="88d3c-165">You've built a small library and a set of unit tests for that library.</span></span> <span data-ttu-id="88d3c-166">您已建立方案結構，因此加入新套件與測試是一般工作流程的一部分。</span><span class="sxs-lookup"><span data-stu-id="88d3c-166">You've structured the solution so that adding new packages and tests is part of the normal workflow.</span></span> <span data-ttu-id="88d3c-167">您已集中大部分的時間與精力以解決應用程式目標。</span><span class="sxs-lookup"><span data-stu-id="88d3c-167">You've concentrated most of your time and effort on solving the goals of the application.</span></span>

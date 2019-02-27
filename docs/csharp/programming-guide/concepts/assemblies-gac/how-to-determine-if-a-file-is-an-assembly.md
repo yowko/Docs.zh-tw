@@ -1,33 +1,33 @@
 ---
-title: HOW TO：判斷檔案是否為組件 (C#)
+title: 作法：判斷檔案是否為組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: a147081d16a6b9f7252466a06ebd8fc204e47c2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 474cc4622e9444cab8e9d611dd9481d5358e10f0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681764"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745246"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a><span data-ttu-id="8cca6-102">HOW TO：判斷檔案是否為組件 (C#)</span><span class="sxs-lookup"><span data-stu-id="8cca6-102">How to: Determine If a File Is an Assembly (C#)</span></span>
-<span data-ttu-id="8cca6-103">檔案只有受管理時才是組件，而且其中繼資料會包含組件項目。</span><span class="sxs-lookup"><span data-stu-id="8cca6-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="8cca6-104">如需組件和中繼資料的詳細資訊，請參閱[組件資訊清單](../../../../../docs/framework/app-domains/assembly-manifest.md)主題。</span><span class="sxs-lookup"><span data-stu-id="8cca6-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](../../../../../docs/framework/app-domains/assembly-manifest.md).</span></span>  
+# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a><span data-ttu-id="deabd-102">作法：判斷檔案是否為組件 (C#)</span><span class="sxs-lookup"><span data-stu-id="deabd-102">How to: Determine If a File Is an Assembly (C#)</span></span>
+<span data-ttu-id="deabd-103">檔案只有受管理時才是組件，而且其中繼資料會包含組件項目。</span><span class="sxs-lookup"><span data-stu-id="deabd-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="deabd-104">如需組件和中繼資料的詳細資訊，請參閱[組件資訊清單](../../../../../docs/framework/app-domains/assembly-manifest.md)主題。</span><span class="sxs-lookup"><span data-stu-id="deabd-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](../../../../../docs/framework/app-domains/assembly-manifest.md).</span></span>  
   
-### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="8cca6-105">如何以手動方式判斷檔案是否為組件</span><span class="sxs-lookup"><span data-stu-id="8cca6-105">How to manually determine if a file is an assembly</span></span>  
+### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="deabd-105">如何以手動方式判斷檔案是否為組件</span><span class="sxs-lookup"><span data-stu-id="deabd-105">How to manually determine if a file is an assembly</span></span>  
   
-1.  <span data-ttu-id="8cca6-106">啟動 [Ildasm.exe (IL 反組譯工具)](../../../../framework/tools/ildasm-exe-il-disassembler.md)。</span><span class="sxs-lookup"><span data-stu-id="8cca6-106">Start the [Ildasm.exe (IL Disassembler)](../../../../framework/tools/ildasm-exe-il-disassembler.md).</span></span>  
+1.  <span data-ttu-id="deabd-106">啟動 [Ildasm.exe (IL 反組譯工具)](../../../../framework/tools/ildasm-exe-il-disassembler.md)。</span><span class="sxs-lookup"><span data-stu-id="deabd-106">Start the [Ildasm.exe (IL Disassembler)](../../../../framework/tools/ildasm-exe-il-disassembler.md).</span></span>  
   
-2.  <span data-ttu-id="8cca6-107">載入要測試的檔案。</span><span class="sxs-lookup"><span data-stu-id="8cca6-107">Load the file you wish to test.</span></span>  
+2.  <span data-ttu-id="deabd-107">載入要測試的檔案。</span><span class="sxs-lookup"><span data-stu-id="deabd-107">Load the file you wish to test.</span></span>  
   
-3.  <span data-ttu-id="8cca6-108">如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。</span><span class="sxs-lookup"><span data-stu-id="8cca6-108">If **ILDASM** reports that the file is not a portable executable (PE) file, then it is not an assembly.</span></span> <span data-ttu-id="8cca6-109">如需詳細資訊，請參閱主題[如何：檢視組件內容](../../../../framework/app-domains/how-to-view-assembly-contents.md)。</span><span class="sxs-lookup"><span data-stu-id="8cca6-109">For more information, see the topic [How to: View Assembly Contents](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span></span>  
+3.  <span data-ttu-id="deabd-108">如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。</span><span class="sxs-lookup"><span data-stu-id="deabd-108">If **ILDASM** reports that the file is not a portable executable (PE) file, then it is not an assembly.</span></span> <span data-ttu-id="deabd-109">如需詳細資訊，請參閱主題[如何：檢視組件內容](../../../../framework/app-domains/how-to-view-assembly-contents.md)。</span><span class="sxs-lookup"><span data-stu-id="deabd-109">For more information, see the topic [How to: View Assembly Contents](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span></span>  
   
-### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="8cca6-110">如何以程式設計方式判斷檔案是否為組件</span><span class="sxs-lookup"><span data-stu-id="8cca6-110">How to programmatically determine if a file is an assembly</span></span>  
+### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="deabd-110">如何以程式設計方式判斷檔案是否為組件</span><span class="sxs-lookup"><span data-stu-id="deabd-110">How to programmatically determine if a file is an assembly</span></span>  
   
-1.  <span data-ttu-id="8cca6-111">呼叫 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法，並傳遞您要測試之檔案的完整檔案路徑和名稱。</span><span class="sxs-lookup"><span data-stu-id="8cca6-111">Call the <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method, passing the full file path and name of the file you are testing.</span></span>  
+1.  <span data-ttu-id="deabd-111">呼叫 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法，並傳遞您要測試之檔案的完整檔案路徑和名稱。</span><span class="sxs-lookup"><span data-stu-id="deabd-111">Call the <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method, passing the full file path and name of the file you are testing.</span></span>  
   
-2.  <span data-ttu-id="8cca6-112">如果擲回 <xref:System.BadImageFormatException> 例外狀況，則檔案不是組件。</span><span class="sxs-lookup"><span data-stu-id="8cca6-112">If a <xref:System.BadImageFormatException> exception is thrown, the file is not an assembly.</span></span>  
+2.  <span data-ttu-id="deabd-112">如果擲回 <xref:System.BadImageFormatException> 例外狀況，則檔案不是組件。</span><span class="sxs-lookup"><span data-stu-id="deabd-112">If a <xref:System.BadImageFormatException> exception is thrown, the file is not an assembly.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8cca6-113">範例</span><span class="sxs-lookup"><span data-stu-id="8cca6-113">Example</span></span>  
- <span data-ttu-id="8cca6-114">此範例會測試一個 DLL 以查看其是否為組件。</span><span class="sxs-lookup"><span data-stu-id="8cca6-114">This example tests a DLL to see if it is an assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="deabd-113">範例</span><span class="sxs-lookup"><span data-stu-id="deabd-113">Example</span></span>  
+ <span data-ttu-id="deabd-114">此範例會測試一個 DLL 以查看其是否為組件。</span><span class="sxs-lookup"><span data-stu-id="deabd-114">This example tests a DLL to see if it is an assembly.</span></span>  
   
 ```csharp
 class TestAssembly  
@@ -64,10 +64,10 @@ class TestAssembly
 */  
 ```  
   
- <span data-ttu-id="8cca6-115"><xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法會載入測試檔案，然後在讀取資訊之後釋放它。</span><span class="sxs-lookup"><span data-stu-id="8cca6-115">The <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method loads the test file, and then releases it once the information is read.</span></span>  
+ <span data-ttu-id="deabd-115"><xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法會載入測試檔案，然後在讀取資訊之後釋放它。</span><span class="sxs-lookup"><span data-stu-id="deabd-115">The <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method loads the test file, and then releases it once the information is read.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8cca6-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8cca6-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="deabd-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="deabd-116">See also</span></span>
 
 - <xref:System.Reflection.AssemblyName>
-- [<span data-ttu-id="8cca6-117">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="8cca6-117">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="8cca6-118">組件和全域組件快取 (C#)</span><span class="sxs-lookup"><span data-stu-id="8cca6-118">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [<span data-ttu-id="deabd-117">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="deabd-117">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="deabd-118">.NET 中的組件</span><span class="sxs-lookup"><span data-stu-id="deabd-118">Assemblies in .NET</span></span>](../../../../standard/assembly/index.md)
