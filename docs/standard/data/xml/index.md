@@ -5,12 +5,6 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b5c774d566766936ebe043f264040ce26b8e9e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202955"
 ---
 # <a name="xml-documents-and-data"></a>XML 文件和資料
 .NET Framework 提供一組完整且整合的類別，好讓您輕鬆地建置可感知 XML 的應用程式。 下列命名空間中的類別支援 XML 的剖析與撰寫、記憶體中 XML 資料的編輯、資料驗證和 XSLT 轉換。  
@@ -25,21 +19,21 @@ ms.locfileid: "50202955"
   
 -   <xref:System.Xml.Linq>  
   
- 如需完整清單，請參閱 [System.Xml 命名空間](https://msdn.microsoft.com/library/gg145036.aspx)網頁。  
+ 如需完整清單，請在 [.NET API 瀏覽器](https://docs.microsoft.com/dotnet/api/?term=system.xml)搜尋 "System.Xml"。  
   
- 這些命名空間中的類別支援全球資訊網協會 (W3C) 的建議。 例如:   
+ 這些命名空間中的類別支援全球資訊網協會 (W3C) 的建議。 例如：  
   
 -   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 類別會實作 [W3C 文件物件模型 (DOM) 層級 1 核心](https://www.w3.org/TR/REC-DOM-Level-1/)和 [DOM 層級 2 核心](https://www.w3.org/TR/DOM-Level-2-Core/)的建議事項。  
   
 -   <xref:System.Xml.XmlReader?displayProperty=nameWithType> 和 <xref:System.Xml.XmlWriter?displayProperty=nameWithType> 類別支援 [W3C XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) 和 [XML 中的命名空間](https://www.w3.org/TR/REC-xml-names/)的建議事項。  
   
--   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 類別中的結構描述支援 [W3C XML 結構描述第一部分：結構](https://www.w3.org/TR/xmlschema-1/)和 [XML 結構描述第二部分：資料類型](https://www.w3.org/TR/xmlschema-2/)的建議事項。  
+-   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 類別中的結構描述支援 [W3C XML Schema Part 1:Structures](https://www.w3.org/TR/xmlschema-1/) (XML 結構描述第 1 部分：結構) 及 [XML Schema Part 2:Datatypes](https://www.w3.org/TR/xmlschema-2/) (資料類型) 建議。  
   
 -   <xref:System.Xml.Xsl?displayProperty=nameWithType> 命名空間中的類別支援符合 [W3C XSLT 1.0](https://www.w3.org/TR/xslt) 建議事項的 XSLT 轉換。  
   
  .NET Framework 中的 XML 類別提供以下優點：  
   
--   **生產力。** [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) 可輕鬆地透過 XML 編寫程式，並提供類似於 SQL 的查詢體驗。  
+-   **生產力。** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) 可輕鬆地透過 XML 編寫程式，並提供類似於 SQL 的查詢體驗。  
   
 -   **擴充性。** .NET Framework 中的 XML 類別可利用抽象基底類別和虛擬方法進行擴充。 例如，您可以建立將快取資料流儲存在本機磁碟之 <xref:System.Xml.XmlUrlResolver> 類別的衍生類別。  
   
@@ -55,14 +49,16 @@ ms.locfileid: "50202955"
   
      為了要在每次需要 XSLT 處理時都提高效能，您可以使用 <xref:System.Xml.XPath.XPathDocument> 類別，它是最佳化的唯讀 XPath 查詢存放區，其設計目的是要與 <xref:System.Xml.Xsl.XslCompiledTransform> 類別有效率地一起運作。  
   
--   **與 ADO.NET 整合。** XML 類別與 [ADO.NET](../../../../docs/framework/data/adonet/index.md) 緊密整合在一起，可讓關聯式資料和 XML 結合在一起。 <xref:System.Data.DataSet> 類別是一項擷取自資料庫的記憶體中資料快取。 <xref:System.Data.DataSet> 類別可使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別來讀取及寫入 XML，將其內部的關聯式結構描述結構保存為 XML 結構描述 (XSD)，還可以推斷 XML 文件的結構描述結構。  
+-   **與 ADO.NET 整合。** XML 類別與 [ADO.NET](../../../../docs/framework/data/adonet/index.md) 緊密整合在一起，可讓關聯式資料和 XML 結合在一起。 
+  <xref:System.Data.DataSet> 類別是一項擷取自資料庫的記憶體中資料快取。 
+  <xref:System.Data.DataSet> 類別可使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別來讀取及寫入 XML，將其內部的關聯式結構描述結構保存為 XML 結構描述 (XSD)，還可以推斷 XML 文件的結構描述結構。  
   
 ## <a name="in-this-section"></a>本節內容  
  [XML 處理選項](../../../../docs/standard/data/xml/xml-processing-options.md)  
  討論用來處理 XML 資料的選項。  
   
  [處理記憶體中的 XML 資料](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
- 討論用來處理記憶體中 XML 資料的三個模型。 [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)、<xref:System.Xml.XmlDocument> 類別 (根據 W3C 文件物件模型) 和 <xref:System.Xml.XPath.XPathDocument> 類別 (根據 XPath 資料模型)。  
+ 討論用來處理記憶體內 XML 資料的三個模型：[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)、<xref:System.Xml.XmlDocument> 類別 (根據 W3C 文件物件模型) 和 <xref:System.Xml.XPath.XPathDocument> 類別 (根據 XPath 資料模型)。  
   
  [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)  
  說明如何使用 XSLT 處理器。  

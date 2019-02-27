@@ -16,7 +16,7 @@ ms.author: ronpet
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>全球化與當地語系化 .NET 應用程式
 
-開發[世界通用的應用程式](https://msdn.microsoft.com/goglobal/bb978433.aspx)，包括可以當地語系化為一種或多種語言的應用程式，這項開發工作包含三個步驟：全球化、可當地語系化檢閱，以及當地語系化。
+開發世界通用的應用程式，包括可以當地語系化為一或多種語言的應用程式，這個開發過程包含三個步驟：全球化、檢閱是否可當地語系化，以及當地語系化。
 
 [全球化](globalization.md)
 

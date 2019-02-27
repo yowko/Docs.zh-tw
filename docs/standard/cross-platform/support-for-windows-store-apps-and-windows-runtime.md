@@ -11,17 +11,18 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0476fe7ed731dbb2c6b86cff3255673ecee6f98d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c2870e79d82d92bd0c853e6e042add3b4243f888
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198454"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835482"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 支援多個 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的軟體開發案例。 這些案例可分成三個類別︰
 
--   開發[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式與 XAML 控制項中所述[藍圖適用於 Windows 市集應用程式使用 C# 或 Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))，[如何主題 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))，和[適用於 Windows 市集應用程式的概觀](https://msdn.microsoft.com/library/windows/apps/br230302%28v=VS.110%29.aspx).
+  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 支援多個 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的軟體開發案例。 這些案例可分成三個類別︰
+
+-   開發[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式與 XAML 控制項中所述[藍圖適用於 Windows 市集應用程式使用 C# 或 Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))，[如何主題 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))，和[適用於 Windows 市集應用程式的概觀](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
 -   開發類別庫，在使用 .NET Framework 建立的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中使用。
 
@@ -32,7 +33,7 @@ ms.locfileid: "50198454"
 ## <a name="the-basics"></a>基本概念
  .NET Framework 藉由提供 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]以及支援 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 本身，進而支援先前所列的三種開發案例。
 
--   [適用於 Windows 市集應用程式](https://msdn.microsoft.com/library/windows/apps/br230232(v=vs.110).aspx)提供.NET Framework 類別庫的精簡的觀點，並只包含的類型和成員可用來建立[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式和[!INCLUDE[wrt](../../../includes/wrt-md.md)]元件。
+-   [.NET framework 和 Windows 執行階段命名空間](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces)提供.NET Framework 類別庫的精簡的觀點，並只包含的類型和成員可用來建立[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式和[!INCLUDE[wrt](../../../includes/wrt-md.md)]元件。
 
     -   當您使用 Visual Studio (Visual Studio 2012 或更新版本) 來開發[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式或[!INCLUDE[wrt](../../../includes/wrt-md.md)]元件，一組參考組件確保您會看到只有相關型別和成員。
 
@@ -40,7 +41,7 @@ ms.locfileid: "50198454"
 
     -   僅包裝作業系統 API 的功能也會移除，因為 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 很容易就可從 Managed 程式碼呼叫。
 
-     若要深入了解[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，請參閱 <<c2> [ 適用於 Windows 市集應用程式的概觀](https://msdn.microsoft.com/library/windows/apps/br230302(v=VS.110).aspx)。 若要深入了解 API 選擇程序，請參閱[適用於 Metro 樣式應用程式的.NET](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) .NET 部落格中的項目。
+     若要深入了解[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，請參閱 <<c2> [ 適用於 Windows 市集應用程式的概觀](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))。 若要深入了解 API 選擇程序，請參閱[適用於 Metro 樣式應用程式的.NET](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) .NET 部落格中的項目。
 
 -   [Windows 執行階段](/uwp/api/)提供使用者介面項目，用於建立[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式，並提供作業系統功能的存取權。 如同 .NET Framework，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 的中繼資料可讓 C# 和 Visual Basic 編譯器使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]，方式就如同使用 .NET Framework 類別庫一樣。 .NET Framework 可讓您更輕鬆地使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]，方法是隱藏一些差異︰
 
@@ -54,13 +55,13 @@ ms.locfileid: "50198454"
 ### <a name="the-net-framework-and-the-includewrtincludeswrt-mdmd-reference-documentation"></a>.NET Framework 及 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 參考文件
  Windows 執行階段和.NET Framework 文件集是分開的。 如果您按下 F1 鍵顯示類型或成員的 [說明]，則會顯示適當集合的參考文件。 不過，如果您瀏覽[Windows 執行階段參考](/uwp/api/)您可能會遇到令人感到困惑的範例：
 
--   主題，例如<xref:Windows.Foundation.Collections.IIterable%601>介面沒有宣告語法的 Visual Basic 或 C#。 相反地，語法區段上方出現一個附註 (在此情況下，「.NET： 此介面會顯示為 System.Collections.Generic.IEnumerable\<T >")。 這是因為 .NET Framework 和 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 使用不同的介面提供類似的功能。 此外，還有行為的差異︰`IIterable` 採用 `First` 方法，而不是 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法傳回列舉值。 .NET Framework 透過讓 Managed 程式碼使用您已熟悉的類型，進而支援 [!INCLUDE[wrt](../../../includes/wrt-md.md)]，讓您無須還得了解其他執行一般工作的方式。 您不會在 IDE 中看到 `IIterable` 介面，因此直接瀏覽 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 參考文件是在該文件看見上述介面的唯一方式。
+-   主題，例如<xref:Windows.Foundation.Collections.IIterable%601>介面沒有宣告語法的 Visual Basic 或 C#。 相反地，語法區段上方出現一個附註 (在此情況下，「.NET:這個介面會顯示為 System.Collections.Generic.IEnumerable\<T >")。 這是因為 .NET Framework 和 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 使用不同的介面提供類似的功能。 此外，還有行為的差異︰`IIterable` 採用 `First` 方法，而不是 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法傳回列舉值。 .NET Framework 透過讓 Managed 程式碼使用您已熟悉的類型，進而支援 [!INCLUDE[wrt](../../../includes/wrt-md.md)]，讓您無須還得了解其他執行一般工作的方式。 您不會在 IDE 中看到 `IIterable` 介面，因此直接瀏覽 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 參考文件是在該文件看見上述介面的唯一方式。
 
--   <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)>文件說明密切相關的問題： 其參數型別似乎是不同的語言不同。 若為 C# 和 Visual Basic，參數類型為 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Uri?displayProperty=nameWithType>。 同樣地，這是因為 .NET Framework 有自己的 `String` 和 `Uri` 類型，而針對這類常用類型，強制 .NET Framework 使用者了解其他執行工作的方式並不合理。 在 IDE 中，.NET Framework 會隱藏對應的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 類型。
+-   <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)>文件說明密切相關的問題：其參數型別會出現不同的語言不同。 若為 C# 和 Visual Basic，參數類型為 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Uri?displayProperty=nameWithType>。 同樣地，這是因為 .NET Framework 有自己的 `String` 和 `Uri` 類型，而針對這類常用類型，強制 .NET Framework 使用者了解其他執行工作的方式並不合理。 在 IDE 中，.NET Framework 會隱藏對應的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 類型。
 
 -   在少數情況下，例如<xref:Windows.UI.Xaml.GridLength>結構中，.NET Framework 提供的類型有相同名稱但更多的功能。 例如，建構函式和屬性的主題集與 `GridLength`相關聯，但它們只有適用於 Visual Basic 和 C# 的語法區塊，這是因為成員僅適用於 Managed 程式碼。 在 [!INCLUDE[wrt](../../../includes/wrt-md.md)]，結構僅具有欄位。 [!INCLUDE[wrt](../../../includes/wrt-md.md)]結構需要協助程式類別， <xref:Windows.UI.Xaml.GridLengthHelper>，以提供對等的功能。 您不會在撰寫 Managed 程式碼時，於 IDE 中看到該協助程式類別。
 
--   在 IDE 中，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 類型似乎衍生自 <xref:System.Object?displayProperty=nameWithType>。 它們似乎具有繼承自 <xref:System.Object>，例如 <xref:System.Object.ToString%2A?displayProperty=nameWithType>。 這些成員的運作方式就好似類型真的是繼承自 <xref:System.Object> [!INCLUDE[wrt](../../../includes/wrt-md.md)] 類型可以轉換成 <xref:System.Object>。 此功能是 .NET Framework 針對 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 提供的部分支援。 不過，如果您在 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 參考文件中檢視類型，並不會出現這類成員。 這些明顯繼承成員的文件由 <xref:System.Object?displayProperty=nameWithType> 參考文件提供。
+-   在 IDE 中，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 類型似乎衍生自 <xref:System.Object?displayProperty=nameWithType>。 它們似乎具有繼承自 <xref:System.Object>，例如 <xref:System.Object.ToString%2A?displayProperty=nameWithType>。 這些成員的運作方式就好似類型真的是繼承自 <xref:System.Object>[!INCLUDE[wrt](../../../includes/wrt-md.md)] 類型可以轉換成 <xref:System.Object>。 此功能是 .NET Framework 針對 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 提供的部分支援。 不過，如果您在 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 參考文件中檢視類型，並不會出現這類成員。 這些明顯繼承成員的文件由 <xref:System.Object?displayProperty=nameWithType> 參考文件提供。
 
 <a name="DifferencesVisibleInIDE"></a>
 ### <a name="differences-that-are-visible-in-the-ide"></a>IDE 中可見的差異
@@ -133,7 +134,8 @@ ms.locfileid: "50198454"
 
  下列各節提供常見案例的範例。
 
-### <a name="application-logic-for-a-includewin8appnamelongincludeswin8-appname-long-mdmd-app-with-javascript"></a>[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式的應用程式邏輯與 JavaScript
+### <a name="application-logic-for-a-includewin8appnamelongincludeswin8-appname-long-mdmd-app-with-javascript"></a>
+  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式的應用程式邏輯與 JavaScript
  當您使用 JavaScript 為 Windows 開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式時，您可能會發現應用程式邏輯的某些部分在 Managed 程式碼中，有較佳的效能或較容易開發。 JavaScript 不能直接使用 .NET Framework 類別庫，但是您可以將類別庫作為 .WinMD 檔案。 在此案例中，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件是應用程式中不可或缺的一部分，因此並不需要提供版本屬性。
 
 ### <a name="reusable-includewin8appnamelongincludeswin8-appname-long-mdmd-ui-controls"></a>可重複使用的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] UI 控制項
@@ -146,9 +148,10 @@ ms.locfileid: "50198454"
 
 |標題|描述|
 |-----------|-----------------|
-|[適用於 Windows 市集應用程式的 .NET 概觀](https://msdn.microsoft.com/library/windows/apps/br230302(v=VS.110).aspx)|描述您可以用來建立 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元件的 .NET Framework 類型和成員。 (在 Windows 開發人員中心中。)|
+|[適用於 Windows 市集應用程式的 .NET 概觀](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|描述您可以用來建立 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元件的 .NET Framework 類型和成員。 (在 Windows 開發人員中心中。)|
 |[使用 C# 或 Visual Basic 的 Windows 市集應用程式的藍圖](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|提供重要資源，協助您使用 C# 或 Visual Basic 開始開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，包括許多快速入門主題、指導方針和最佳做法。 (在 Windows 開發人員中心中。)|
 |[如何主題 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|提供重要資源，協助您使用 C# 或 Visual Basic 開始開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，包括許多快速入門主題、指導方針和最佳做法。 (在 Windows 開發人員中心中。)|
 |[在 C++ 和 Visual Basic 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|描述如何使用 .NET Framework 建立 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件、說明如何將其作為使用 JavaScript 為 Windows 建置的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式一部分，並說明如何使用 Visual Studio 為該組合偵錯。 (在 Windows 開發人員中心中。)|
-|[Windows 執行階段參考](/uwp/api/)|[!INCLUDE[wrt](../../../includes/wrt-md.md)] 的參考文件。 (在 Windows 開發人員中心中。)|
+|[Windows 執行階段參考](/uwp/api/)|
+  [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的參考文件。 (在 Windows 開發人員中心中。)|
 |[將 URI 傳遞給 Windows 執行階段](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|描述當您從 Managed 程式碼將 URI 傳遞至 [!INCLUDE[wrt](../../../includes/wrt-md.md)]時可能發生的問題，以及如何加以避免。|

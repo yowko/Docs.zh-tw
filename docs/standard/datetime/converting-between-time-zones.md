@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78f25b657e6cb103797e13e98c3dd61a80003dc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e08e90f61429f01f360808866fdc3d963323ba23
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701816"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835339"
 ---
 # <a name="converting-times-between-time-zones"></a>在各時區間轉換時間
 
@@ -27,7 +27,7 @@ ms.locfileid: "54701816"
 
 ## <a name="converting-to-coordinated-universal-time"></a>轉換為國際標準時間
 
-國際標準時間 (UTC) 是高精確度且不可部分完成的時間標準。 全世界的時區都會表示為與 UTC 的正或負位移。 因此，UTC 提供一種無時區或時區中性時間。 跨電腦的日期和時間可攜性十分重要時，建議使用 UTC 時間。 (如需詳細資料和其他使用日期和時間的最佳做法，請參閱[撰寫程式碼使用.NET Framework 中的日期時間的最佳做法](https://msdn.microsoft.com/library/ms973825.aspx)。)將個別時區轉換為 UTC 可輕鬆地比較時間。
+國際標準時間 (UTC) 是高精確度且不可部分完成的時間標準。 全世界的時區都會表示為與 UTC 的正或負位移。 因此，UTC 提供一種無時區或時區中性時間。 跨電腦的日期和時間可攜性十分重要時，建議使用 UTC 時間。 (如需詳細資料和其他使用日期和時間的最佳做法，請參閱[撰寫程式碼使用.NET Framework 中的日期時間的最佳做法](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10))。)將個別時區轉換為 UTC 可輕鬆地比較時間。
 
 > [!NOTE]
 > 您也可以序列化<xref:System.DateTimeOffset>結構來明確代表單一點的時間。 因為<xref:System.DateTimeOffset>物件會儲存日期和時間的值，以及其與 UTC 的時差，所以它們一律代表特定點的關聯性中的時間為 UTC。

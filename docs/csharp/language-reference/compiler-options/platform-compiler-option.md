@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 1573e28f2a6f9dec7825d364debcdf1085ef7ff2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4918407c68c7164db023b19cb170aef12fd203
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635659"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663895"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C# 編譯器選項)
 指定哪個 Common Language Runtime (CLR) 版本可以執行組件。  
@@ -36,6 +36,8 @@ ms.locfileid: "54635659"
   
 -   **ARM** 會將您的組件編譯為可在採用 Advanced RISC Machine (ARM) 處理器的電腦上執行。  
   
+-   **ARM64** 會編譯您的組件，使其可由具備支援 A64 指令集進階 RISC 機器 (ARM) 處理器電腦上的 64 位元 CLR 執行。  
+
 -   在支援 AMD64 或 EM64T 指令集的電腦上，**x64** 會將組件編譯成由 64 位元 CLR 執行。  
   
 -   **x86** 會將組件編譯為以 32 位元、與 x86 相容的 CLR 執行。  

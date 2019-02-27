@@ -1,13 +1,13 @@
 ---
 title: .NET Core 執行階段識別項 (RID) 目錄
 description: 了解執行階段識別碼 (RID) 以及 RID 在 .NET Core 中的使用方式。
-ms.date: 07/19/2018
-ms.openlocfilehash: 5a6dda260b4be85e54f4075f3edf12210b385289
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 02/22/2019
+ms.openlocfilehash: 0d03e39c755b43e145edf5efe48422cbae7abcab
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534536"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745738"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
 
@@ -35,7 +35,7 @@ RID 是*執行階段識別項*的縮寫。 RID 值是用來識別應用程式執
 
 - `[architecture]` 處理器架構。 例如：`x86`、`x64`、`arm` 或 `arm64`。
 
-- `[additional qualifiers]` 進一步區分不同平台。 例如：`aot` 或 `corert`。
+- `[additional qualifiers]` 進一步區分不同平台。 例如：`aot`。
 
 ## <a name="rid-graph"></a>RID 圖表
 
@@ -82,22 +82,22 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 若要使用 RID，必須先了解有哪些 RID 存在。 新的值會定期新增至平台。
 如需最新的完整版本，請查看 CoreFX 存放庫上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案。
 
-.NET Core 2.0 SDK 引進可攜式 RID 的概念。 它們是新增到 RID 圖形且未繫結到特定版本或 OS 發行版本的新值。 處理多個 Linux 散發時，它們特別實用。
+.NET Core 2.0 SDK 引進可攜式 RID 的概念。 它們是新增到 RID 圖形且未繫結到特定版本或 OS 發行版本的新值，適用於 .NET Core 2.0 和更新版本。 由於大部分發行版本的 RID 都會對應至可攜式 RID，因此在處理多個 Linux 發行版本時特別有用。
 
-下列清單顯示用於每個 OS 的最常見 RID。 它不涵蓋 `arm` 或 `corert` 值。
+下列清單顯示用於每個 OS 的一小部分最常見 RID。
 
 ## <a name="windows-rids"></a>Windows RID
 
-- 可攜式
-  - `win-x86`
+僅列出常見值。 如需最新的完整版本，請查看 CoreFX 存放庫上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案。
+
+- 可攜式 (.NET Core 2.0 或更新版本)
   - `win-x64`
+  - `win-x86`
+  - `win-arm`
+  - `win-arm64`
 - Windows 7/Windows Server 2008 R2
   - `win7-x64`
   - `win7-x86`
-- Windows 8/Windows Server 2012
-  - `win8-x64`
-  - `win8-x86`
-  - `win8-arm`
 - Windows 8.1/Windows Server 2012 R2
   - `win81-x64`
   - `win81-x86`
@@ -112,87 +112,40 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 ## <a name="linux-rids"></a>Linux RID
 
-- 可攜式
-  - `linux-x64`
-- CentOS
-  - `centos-x64`
-  - `centos.7-x64`
-- Debian
-  - `debian-x64`
-  - `debian.8-x64`
-  - `debian.9-x64` (.NET Core 1.1 或更新版本)
-- Fedora
-  - `fedora-x64`
-  - `fedora.27-x64`
-  - `fedora.28-x64` (.NET Core 1.1 或更新版本)
-- Gentoo (.NET Core 2.0 或更新版本)
-  - `gentoo-x64`
-- openSUSE
-  - `opensuse-x64`
-  - `opensuse.42.3-x64`
-- Oracle Linux
-  - `ol-x64`
-  - `ol.7-x64`
-  - `ol.7.0-x64`
-  - `ol.7.1-x64`
-  - `ol.7.2-x64`
-  - `ol.7.3-x64`
-  - `ol.7.4-x64`
+僅列出常見值。 如需最新的完整版本，請查看 CoreFX 存放庫上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案。 如果下方未列出裝置執行的發行版本，裝置可能可以使用其中一個可攜式 RID。 例如，如果 Raspberry Pi 裝置執行未列出的 Linux 發行版本，則可以 `linux-arm` 為目標。
+
+- 可攜式 (.NET Core 2.0 或更新版本)
+  - `linux-x64` (大部分的桌面發行版本，如 CentOS、Debian、Fedora、Ubuntu 和衍生版)
+  - `linux-musl-x64` (使用 [musl](https://wiki.musl-libc.org/projects-using-musl.html) 的輕量發行版本，如 Alpine Linux)
+  - `linux-arm` (在 ARM 上執行的 Linux 發行版本，如 Raspberry Pi)
 - Red Hat Enterprise Linux
-  - `rhel-x64`
+  - `rhel-x64` (RHEL 6 版以上已由 `linux-x64` 取代)
   - `rhel.6-x64` (.NET Core 2.0 或更新版本)
-  - `rhel.7-x64`
-  - `rhel.7.1-x64`
-  - `rhel.7.2-x64`
-  - `rhel.7.3-x64` (.NET Core 2.0 或更新版本)
-  - `rhel.7.4-x64` (.NET Core 2.0 或更新版本)
 - Tizen (.NET Core 2.0 或更新版本)
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
-- Ubuntu
-  - `ubuntu-x64`
-  - `ubuntu.14.04-x64`
-  - `ubuntu.16.04-x64`
-  - `ubuntu.17.10-x64`
-  - `ubuntu.18.04-x64`
-- Ubuntu 衍生版
-  - `linuxmint.17-x64`
-  - `linuxmint.17.1-x64`
-  - `linuxmint.17.2-x64`
-  - `linuxmint.17.3-x64`
-  - `linuxmint.18-x64` (.NET Core 2.0 或更新版本)
-  - `linuxmint.18.1-x64` (.NET Core 2.0 或更新版本)
-  - `linuxmint.18.2-x64` (.NET Core 2.0 或更新版本)
-  - `linuxmint.18.3-x64` (.NET Core 2.0 或更新版本)
-- SUSE Enterprise Linux (SLES) (.NET Core 2.0 或更新版本)
-  - `sles-x64`
-  - `sles.12-x64`
-  - `sles.12.1-x64`
-  - `sles.12.2-x64`
-  - `sles.12.3-x64`
-- Alpine Linux (.NET Core 2.1 或更新版本)
-  - `alpine-x64`
-  - `alpine.3.7-x64`
 
 如需詳細資訊，請參閱 [Linux 上 .NET Core 的必要條件](linux-prerequisites.md)。
 
 ## <a name="macos-rids"></a>macOS RID
 
-macOS RID 使用較舊的 "OSX" 商標。
+macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新的完整版本，請查看 CoreFX 存放庫上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案。
 
-- `osx-x64` (.NET Core 2.0 或更新版本，最小版本為 `osx.10.12-x64`)
-- `osx.10.10-x64`
-- `osx.10.11-x64`
-- `osx.10.12-x64` (.NET Core 1.1 或更新版本)
-- `osx.10.13-x64`
+- 可攜式 (.NET Core 2.0 或更新版本)
+  - `osx-x64` (最低 OS 版本為 macOS 10.12 Sierra)
+- macOS 10.10  Yosemite
+  - `osx.10.10-x64`
+- macOS 10.11 El Capitan
+  - `osx.10.11-x64`
+- macOS 10.12 Sierra (.NET Core 1.1 或更新版本)
+  - `osx.10.12-x64`
+- macOS 10.13 High Sierra (.NET Core 1.1 或更新版本)
+  - `osx.10.13-x64`
+- macOS 10.14 Mojave (.NET Core 1.1 或更新版本)
+  - `osx.10.14-x64`
 
 如需詳細資訊，請參閱 [macOS 上 .NET Core 的必要條件](macos-prerequisites.md)。
-
-## <a name="android-rids-net-core-20-or-later-versions"></a>Android RID (.NET Core 2.0 或更新版本)
-
-- `android`
-- `android.21`
 
 ## <a name="see-also"></a>另請參閱
 

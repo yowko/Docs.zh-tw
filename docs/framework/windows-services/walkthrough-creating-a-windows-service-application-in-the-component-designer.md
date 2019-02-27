@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123666"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665026"
 ---
 # <a name="walkthrough-create-a-windows-service-app"></a>逐步解說：建立 Windows 服務應用程式
 
@@ -86,7 +86,7 @@ ms.locfileid: "49123666"
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-服務應用程式設計為長時間執行，因此它通常會輪詢或監視系統中的一些項目。 監視工作是在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中設定的。 但是， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 實際上並不進行監視的工作。 服務的作業開始後， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法就必須傳回作業系統。 它不能永遠迴圈或阻斷。 若要設定簡單的輪詢機制，您可以如下述使用 <xref:System.Timers.Timer?displayProperty=nameWithType> 元件：在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中，在元件上設定參數，然後再將 <xref:System.Timers.Timer.Enabled%2A> 屬性設定為 `true`. 計時器會定期引發程式碼中的事件，這時候您的服務就可執行本身的監視工作。 您可以使用下列程式碼來執行這項操作：
+服務應用程式設計為長時間執行，因此它通常會輪詢或監視系統中的一些項目。 監視工作是在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中設定的。 但是， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 實際上並不進行監視的工作。 服務的作業開始後， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法就必須傳回作業系統。 它不能永遠迴圈或阻斷。 若要設定簡單的輪詢機制，您可以使用 <xref:System.Timers.Timer?displayProperty=nameWithType> 元件，如下所示：在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中，設定元件上的參數，然後將 <xref:System.Timers.Timer.Enabled%2A> 屬性設為 `true`。 計時器會定期引發程式碼中的事件，這時候您的服務就可執行本身的監視工作。 您可以使用下列程式碼來執行這項操作：
 
 ```csharp
 // Set up a timer that triggers every minute.
@@ -296,7 +296,7 @@ eventLog1.WriteEntry("In OnStop.");
     > [!IMPORTANT]
     > <xref:System.ServiceProcess.ServiceAccount.LocalSystem> 帳戶具有概括性的使用權限，包括寫入事件記錄檔的能力。 因此，請謹慎使用這個帳戶，因為它會增加您遭受惡意軟體攻擊的風險。 至於其他工作，建議使用 <xref:System.ServiceProcess.ServiceAccount.LocalService> 帳戶，可在本機電腦上做為沒有權限的使用者，並提供匿名認證給任何遠端伺服器。 如果您嘗試使用 <xref:System.ServiceProcess.ServiceAccount.LocalService> 帳戶，因為需要寫入事件記錄檔的權限，所以這個範例會失敗。
 
-如需安裝程式的詳細資訊，請參閱[操作說明：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。
+如需安裝程式的詳細資訊，請參閱[如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。
 
 ## <a name="optional-set-startup-parameters"></a>(選擇性) 設定啟動參數
 
@@ -431,7 +431,7 @@ Windows 服務就像任何其他可執行檔，可以接受命令列引數或啟
 
     如果 **installutil.exe** 程序回報失敗，請檢查安裝記錄以找出原因。 根據預設，記錄檔與服務可執行檔位於相同的資料夾。 若 `ProjectInstaller` 類別中沒有 <xref:System.ComponentModel.RunInstallerAttribute> 類別、屬性未設為 **true**，或 `ProjectInstaller` 類別未標記為**公用**，則安裝可能會失敗。
 
-如需詳細資訊，請參閱 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。
+如需詳細資訊，請參閱[如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。
 
 ## <a name="start-and-run-the-service"></a>啟動並執行服務
 
@@ -452,7 +452,7 @@ Windows 服務就像任何其他可執行檔，可以接受命令列引數或啟
 1. 藉由在 Windows 工作列上的搜尋方塊中輸入**事件檢視器**，然後從搜尋結果中選取 [事件檢視器]，以開啟 [事件檢視器]。
 
    > [!TIP]
-   > 在 Visual Studio 中，您可以開啟 [伺服器總管] (鍵盤：**Ctrl**+**Alt**+**S**)，然後展開本機電腦的 [事件記錄] 節點，以存取事件記錄。
+   > 在 Visual Studio 中，您可以開啟 [伺服器總管] 來存取事件記錄 (鍵盤：**Ctrl**+**Alt**+**S**)，並展開本機電腦的 [事件記錄]。
 
 2. 在 [事件檢視器] 中，展開 [應用程式及服務記錄]。
 
@@ -472,11 +472,11 @@ Windows 服務就像任何其他可執行檔，可以接受命令列引數或啟
     installutil.exe /u MyNewService.exe
     ```
 
-   如果服務已成功解除安裝，**installutil.exe** 會回報已成功移除您的服務。 如需詳細資訊，請參閱 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。
+   如果服務已成功解除安裝，**installutil.exe** 會回報已成功移除您的服務。 如需詳細資訊，請參閱[如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
-您已建立服務，現在您可以建立獨立安裝程式，讓其他人用來安裝您的 Windows 服務。 ClickOnce 不支援 Windows 服務，但您可以使用 [WiX 工具組](http://wixtoolset.org/)來建立 Windows 服務的安裝程式。 如需相關資訊，請參閱[建立安裝程式套件](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client)。
+您已建立服務，現在您可以建立獨立安裝程式，讓其他人用來安裝您的 Windows 服務。 ClickOnce 不支援 Windows 服務，但您可以使用 [WiX 工具組](http://wixtoolset.org/)來建立 Windows 服務的安裝程式。 如需相關資訊，請參閱[建立安裝程式套件](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)。
 
 您可以瀏覽 <xref:System.ServiceProcess.ServiceController> 元件的用法，這可讓您將命令傳送至已安裝的服務。
 
@@ -486,5 +486,5 @@ Windows 服務就像任何其他可執行檔，可以接受命令列引數或啟
 
 - [Windows 服務應用程式](../../../docs/framework/windows-services/index.md)
 - [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [操作方式：偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [服務 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx) \(英文\)
+- [如何：針對 Windows 服務應用程式進行偵錯](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [服務 (Windows)](/windows/desktop/Services/services) \(英文\)

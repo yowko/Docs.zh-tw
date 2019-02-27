@@ -3,13 +3,13 @@ title: Docker 應用程式的外部迴圈 DevOps 工作流程中的步驟
 description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 7a98c34bfdbbdc9b34a04c891ca031f454ac4396
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221473"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834962"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>在.NET Core 2.0 上的應用程式容器和部署至 Kubernetes 叢集的 Azure DevOps 服務中建立 CI/CD 管線
 
@@ -23,20 +23,20 @@ ms.locfileid: "56221473"
 
 如所示的圖 5-13，第一個階段是組建/CI 管線。 Azure DevOps 服務中，您可以建立會編譯程式碼、 建立 Docker 映像，並將其推送到 Docker Hub 或 Azure Container Registry 的 Docker 登錄的建置/CD 管線。
 
-![](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
+![Azure DevOps，建置程序工作定義的瀏覽器檢視。](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 
 **圖 5-13**。 Azure DevOps 建置 Docker 映像，並將映像推送到 Docker 登錄中的組建/CI 管線
 
 第二個階段是建立的部署/發行管線。 在 Azure DevOps 服務中，您可以輕鬆建立使用 Azure DevOps 服務，Kubernetes 工作目標的 Kubernetes 叢集，如所示的圖 5-14 部署管線。
 
-![部署 MVC](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
+![Azure DevOps 的瀏覽器檢視部署至 Kubernetes 工作定義。](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
 
 **圖 5-14**。 Azure DevOps 服務部署到 Kubernetes 叢集的發行/CD 管線
 
 > [!逐步解說] eShopModernized 部署至 Kubernetes:
 >
 > Azure DevOps 的 CI/CD 管線的詳細逐步解說將部署至 Kubernetes，請參閱這篇文章: \
->[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+><https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 >[!div class="step-by-step"]
 >[上一頁](docker-application-outer-loop-devops-workflow.md)

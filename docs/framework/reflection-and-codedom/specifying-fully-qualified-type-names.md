@@ -1,6 +1,6 @@
 ---
 title: 指定完整的類型名稱
-ms.date: 03/14/2018
+ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
 - reflection, fully qualified type names
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9281906f5500d954f3a0c7abface4ee43adcb64d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d73cad94e0e4343c5dd09a3b12131afeabef873
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628535"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747245"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>指定完整的類型名稱
 您必須指定具有各種反映作業有效輸入的類型名稱。 完整的類型名稱包括組件名稱規格、命名空間規格和類型名稱。 方法使用的類型名稱規格如 <xref:System.Type.GetType%2A?displayProperty=nameWithType>、<xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>、<xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>。  
@@ -41,9 +41,12 @@ ReferenceTypeSpec
 
 SimpleTypeSpec
     : PointerTypeSpec
-    | ArrayTypeSpec
+    | GenericTypeSpec
     | TypeName
     ;
+
+GenericTypeSpec
+   : SimpleTypeSpec ` NUMBER
 
 PointerTypeSpec
     : SimpleTypeSpec '*'
@@ -134,7 +137,7 @@ AssemblyProperty
 ## <a name="specifying-assembly-names"></a>指定組件名稱  
  組件名稱規格中的基本資訊是組件的文字名稱 (IDENTIFIER)。 您可以按照逗號分隔的屬性/值組清單理解 IDENTIFIER，如下表所述。 IDENTIFIER 的命名應依照檔案命名的規則。 IDENTIFIER 不區分大小寫。  
   
-|屬性名稱|說明|允許的值|  
+|屬性名稱|描述|允許的值|  
 |-------------------|-----------------|----------------------|  
 |**版本**|組件版本號碼|在 *Major.Minor.Build.Revision* 中，*Major*、*Minor*、*Build* 和 *Revision* 是介於 0 到 65535 (含) 之間的整數。|  
 |**PublicKey**|完整公開金鑰|十六進位格式的完整公開金鑰字串值。 指定 null 參考 (Visual Basic 為**Nothing**) 以明確指出私用組件。|  
@@ -177,7 +180,10 @@ com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012
 com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,  
     Version=1.0.0.0  
 ```  
-  
+## <a name="specifying-generic-types"></a>指定泛型型別
+
+SimpleTypeSpec\`NUMBER 代表含有 1 到 *n* 泛型型別參數的開放式泛型型別。 例如，若要取得開放式泛型型別 List\<T> 或封閉式泛型型別 List\<String> 的參考，請使用``Type.GetType("System.Collections.Generic.List`1")``。若要取得泛型型別 Dictionary\<TKey,TValue> 的參考，請使用 ``Type.GetType("System.Collections.Generic.Dictionary`2")``。 
+
 ## <a name="specifying-pointers"></a>指定指標  
  SimpleTypeSpec* 表示 Unmanaged 指標。 例如，若要取得類型 MyType 的指標，請使用 `Type.GetType("MyType*")`。 若要取得類型 MyType 指標的指標，請使用 `Type.GetType("MyType**")`。  
   
@@ -192,7 +198,6 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 -   `Type.GetType("MyArray[]")` 會取得下限為 0 的一維陣列。  
   
 -   `Type.GetType("MyArray[*]")` 會取得下限不明的一維陣列。  
-  
 -   `Type.GetType("MyArray[][]")` 會取得二維陣列的陣列。  
   
 -   `Type.GetType("MyArray[*,*]")` 和 `Type.GetType("MyArray[,]")` 會取得下限不明的矩形二維陣列。  

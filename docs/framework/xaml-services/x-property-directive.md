@@ -2,12 +2,12 @@
 title: x:Property 指示詞
 ms.date: 03/30/2017
 ms.assetid: 618555a8-c893-455c-810f-ac54cd24ef10
-ms.openlocfilehash: 34f982c30a345f95c7a1c7e70de8c5cc4de62cbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ab25381769e7001f7f48d73e717b5f495da90dfa
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508182"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836288"
 ---
 # <a name="xproperty-directive"></a>x:Property 指示詞
 在標記中宣告 XAML 屬性。  
@@ -39,4 +39,4 @@ ms.locfileid: "43508182"
  若要支援實際使用 `x:Members` 做為在標記中指定成員定義的方法，這些成員必須與可修改的類別相關聯。 預期的模型是 `x:Members` 做為可指定 `x:Class` 之類型成員的形式存在。 不過，.NET Framework XAML 服務層級不支援關聯類型與成員或產生動態成員定義的機制。 這會保留給具有支援 XAML 成員定義之應用程式模型的個別架構。 通常需要 MSBUILD 建置動作以標記編譯 XAML，然後與程式碼後置整合，或是從 XAML 產生純組件，才能支援該功能。  
   
 ## <a name="xproperty-for-windows-workflow-foundation"></a>Windows Workflow Foundation 的 x:Property  
- 針對 Windows Workflow Foundation，`x:Property` 會定義完全以 XAML 撰寫之自訂活動的成員，或程式碼後置活動設計工具的 XAML 定義動態成員。 `x:Class` 也必須在 XAML 生產的根項目上指定。 這不是 .NET Framework XAML 服務層級的需求，但是當 XAML 生產是由支援自訂活動和 Windows Workflow Foundation XAML 的 MSBUILD 建置動作載入時，通常會變成需求。 Windows Workflow Foundation 不會使用純 XAML 類型名稱做為其預定的值，如`x:Property``Type`屬性，然後改為使用此處未記載的慣例。 如需詳細資訊，請參閱 <<c0> [ 動態活動建立](https://msdn.microsoft.com/library/dd807392.aspx)。
+ 針對 Windows Workflow Foundation，`x:Property` 會定義完全以 XAML 撰寫之自訂活動的成員，或程式碼後置活動設計工具的 XAML 定義動態成員。 `x:Class` 也必須在 XAML 生產的根項目上指定。 這不是 .NET Framework XAML 服務層級的需求，但是當 XAML 生產是由支援自訂活動和 Windows Workflow Foundation XAML 的 MSBUILD 建置動作載入時，通常會變成需求。 Windows Workflow Foundation 不會使用純 XAML 類型名稱做為其預定的值，如`x:Property``Type`屬性，然後改為使用此處未記載的慣例。 如需詳細資訊，請參閱 < [DynamicActivity 建立](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd807392(v=vs.100))。

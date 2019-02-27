@@ -7,12 +7,12 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: cc4f84551d28ad531713e31a27df723a78b338cb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b6036b10e87560a45880f41f30fabc7a348241d0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242460"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747475"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>使用 dotnet test 與 MStest 為 Visual Basic .NET Core 程式庫進行單元測試
 
@@ -30,7 +30,7 @@ ms.locfileid: "53242460"
     /PrimeService
 ```
 
-將 *PrimeService* 設為目前的目錄，然後執行 [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) 以建立來源專案。 將 *Class1.VB* 重新命名為 *PrimeService.VB*。 為了使用測試導向開發 (TDD)，您會建立 `PrimeService` 類別的失敗實作：
+將 *PrimeService* 設為目前的目錄，然後執行 [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) 以建立來源專案。 將 *Class1.VB* 重新命名為 *PrimeService.VB*。 建立會失敗的 `PrimeService` 類別實作：
 
 ```vb
 Imports System
@@ -94,7 +94,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
 
 ## <a name="creating-the-first-test"></a>建立第一個測試
 
-TDD 方法需要寫入一個失敗的測試，使其通過，然後重複該程序。 將 *UnitTest1.vb* 從 *PrimeService.Tests* 目錄移除，並建立名為 *PrimeService_IsPrimeShould.VB* 的新 Visual Basic 檔案。 加入下列程式碼：
+撰寫一個會失敗的測試，再使其通過，然後重複這個過程。 將 *UnitTest1.vb* 從 *PrimeService.Tests* 目錄移除，並建立名為 *PrimeService_IsPrimeShould.VB* 的新 Visual Basic 檔案。 加入下列程式碼：
 
 ```vb
 Imports Microsoft.VisualStudio.TestTools.UnitTesting

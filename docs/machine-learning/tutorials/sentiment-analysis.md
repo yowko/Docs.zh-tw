@@ -4,12 +4,12 @@ description: 探索如何在二元分類案例中使用 ML.NET，以了解如何
 ms.date: 02/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d6d5cae107e25000add5c8430a35131a79696bc2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9afdf1d8369e71f9614ebc2bf327e98d31b988ff
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092757"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748384"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教學課程：在情感分析二元分類案例中使用 ML.NET
 
@@ -204,6 +204,9 @@ ML.NET 的轉換管線撰寫一組自訂的轉換，可在定型或測試之前�
 接下來，呼叫 `mlContext.Transforms.Text.FeaturizeText` 將文字資料行 (`SentimentText`) 轉換成名為 `Features` 的數值向量，機器學習演算法會使用此數值向量。 此包裝函式呼叫會傳回 <xref:Microsoft.ML.Data.EstimatorChain%601>，可作為有效的管線。 照一般作法為此 `pipeline` 命名，然後將定型程式附加至 `EstimatorChain`。 將下列程式碼加入為下一行：
 
 [!code-csharp[TextFeaturizingEstimator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizingEstimator")]
+
+>[!WARNING]
+> ML.NET 0.10 版變更了 Transform 參數的順序。 在您執行應用程式及建置模型之前，這個順序不會亂掉。 請使用先前程式碼片段中的 Transforms 參數名稱。
 
 這就是前處理/特徵化步驟。 使用 ML.NET 中可用的額外元件可讓您的模型產生更佳的結果。
 

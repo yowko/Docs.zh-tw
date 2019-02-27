@@ -3,12 +3,12 @@ title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: 74cde39a0bbba65d252d64bcedb91c3949dcf6f2
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222060"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748006"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -97,26 +97,26 @@ ms.locfileid: "54222060"
 您必須在 `<Project>` 項目中將 `Sdk` 屬性設定為上述其中一個識別碼，才能使用 .NET Core 工具並建置您的程式碼。 
 
 ### <a name="packagereference"></a>PackageReference
-在專案中指定 NuGet 相依性的 `<PackageReference>` 項目元素。 `Include` 屬性會指定套件識別碼。 
+`<PackageReference>` 項目元素會[在專案中指定 NuGet 相依性](/nuget/consume-packages/package-references-in-project-files)。 `Include` 屬性會指定套件識別碼。 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
 #### <a name="version"></a>版本
-`Version` 指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
+必要的 `Version` 屬性會指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/reference/package-versioning#version-ranges-and-wildcards)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets 和 PrivateAssets
-`IncludeAssets` 屬性指定應取用哪些資產 (屬於由 `<PackageReference>` 所指定的套件)。 
+`IncludeAssets` 屬性指定應取用哪些資產 (屬於由 `<PackageReference>` 所指定的套件)。 根據預設，所有套件資產均包含在內。
 
 `ExcludeAssets` 屬性指定不應取用哪些資產 (屬於由 `<PackageReference>` 所指定的套件)。
 
-`PrivateAssets` 屬性指定應取用哪些資產 (屬於由 `<PackageReference>` 所指定但未流向下一個專案的套件)。 
+`PrivateAssets` 屬性指定應取用哪些資產 (屬於由 `<PackageReference>` 所指定但未流向下一個專案的套件)。 根據預設，當此屬性不存在時，`Analyzers`、`Build` 和 `ContentFiles` 會是私人資產。
 
 > [!NOTE]
 > `PrivateAssets` 相當於 *project.json*/*xproj* `SuppressParent` 項目。
 
-這些屬性可包含下列一或多個項目：
+這些屬性可包含下列一或多個項目，若列出不只一個，則以分號 `;` 字元分隔：
 
 * `Compile` – lib 資料夾的內容可供編譯。
 * `Runtime` – 會散發 runtime 資料夾的內容。
@@ -197,7 +197,7 @@ ms.locfileid: "54222060"
 
 UI 顯示中的套件詳細描述。
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 組件的完整描述。 如果未指定 `PackageDescription`，則此屬性也會用來作為套件的描述。
 
 ### <a name="copyright"></a>Copyright
@@ -206,12 +206,64 @@ UI 顯示中的套件詳細描述。
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 布林值，指定在安裝套件時，用戶端是否必須提示取用者接受套件授權。 預設為 `false`。
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+SPDX 授權運算式或套件內授權檔案的路徑，通常出現在 UI 顯示及 nuget.org 中。
+
+此處有 [SPDX 授權識別碼](https://spdx.org/licenses/)的完整清單。 在使用授權類型運算式時，NuGet.org 只接受 OSI 或 FSF 核准的授權。
+
+授權運算式的確切語法使用 [ABNF](https://tools.ietf.org/html/rfc5234)，如下所述。
+```cli
+license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
+
+license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
+
+simple-expression = license-id / license-id”+”
+
+compound-expression =  1*1(simple-expression /
+                simple-expression "WITH" license-exception-id /
+                compound-expression "AND" compound-expression /
+                compound-expression "OR" compound-expression ) /                
+                "(" compound-expression ")" )
+
+license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
+```
+
+> [!NOTE]
+> 一次只能指定 `PackageLicenseExpression`、`PackageLicenseFile` 和 `PackageLicenseUrl` 其中之一。
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+若您使用未獲指派 SPDX 識別碼的授權，或授權是自訂授權，這會是套件內授權檔案的路徑 (否則會優先使用 `PackageLicenseExpression`)
+
+> [!NOTE]
+> 一次只能指定 `PackageLicenseExpression`、`PackageLicenseFile` 和 `PackageLicenseUrl` 其中之一。
+
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
-適用於套件的授權 URL。
 
-### <a name="packageprojecturl"></a>PackageProjectUrl
-套件首頁的 URL，通常會顯示在 UI 顯示及 nuget.org 中。
+適用於套件的授權 URL。 (_自 Visual Studio 15.9.4、.NET SDK 2.1.502 及 2.2.101 起淘汰_)
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+[SPDX 授權識別碼](https://spdx.org/licenses/)或運算式，例如 `Apache-2.0`。
+
+這會取代 `PackageLicenseUrl`，不能與 `PackageLicenseFile` 合併，並需要 Visual Studio 15.9.4、.NET SDK 2.1.502 或 2.2.101 或更新版本。
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+磁碟上的授權檔案路徑，相對於專案檔，例如 `LICENSE.txt`。
+
+這會取代 `PackageLicenseUrl`，不能與 `PackageLicenseExpression` 合併，並需要 Visual Studio 15.9.4、.NET SDK 2.1.502 或 2.2.101 或更新版本。
+
+您必須明確地將授權檔案新增到專案，以確保其封裝妥當，使用範例：
+```xml
+<PropertyGroup>
+  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+</PropertyGroup>
+<ItemGroup>
+  <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+</ItemGroup>
+```
 ### <a name="packageiconurl"></a>PackageIconUrl
 具有透明背景之 64x64 映像的 URL，該映像會用作套件在 UI 顯示中的圖示。
 

@@ -2,12 +2,12 @@
 title: 逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的類型 (C#)
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 39452702a3e757456ff00ee22e6eb1f90160ef38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd03154f9f4defdedd0694fe10398c6f62d920df
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500625"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746924"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的類型 (C#)
 若要內嵌來自強式名稱 Managed 組件的類型資訊，您可以鬆散地結合應用程式中的類型以確保版本獨立。 也就是說，您可以撰寫程式來使用 Managed 程式庫多個版本的類型，而不需重新編譯每個版本。  
@@ -237,4 +237,4 @@ ms.locfileid: "54500625"
 - [/link (C# 編譯器選項)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
 - [使用組件設計程式](../../../../framework/app-domains/programming-with-assemblies.md)
-- [組件和全域組件快取 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET 中的組件](../../../../standard/assembly/index.md)

@@ -4,12 +4,12 @@ description: 查看 project.json 與 csproj 項目的對應。
 author: natemcmaster
 ms.date: 03/13/2017
 ms.custom: seodec18
-ms.openlocfilehash: dc78a6fc43eeb2a9e556bc5a4d8e27db9067ce94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682848"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747407"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 與 csproj 屬性的對應
 
@@ -39,7 +39,7 @@ ms.locfileid: "54682848"
 }
 ```
 
-不再支援此屬性。 在 csproj 中，這是由目錄名稱所定義的專案檔名所決定。 例如，`MyProjectName.csproj`。
+不再支援此屬性。 在 csproj 中，這會依專案檔名來判斷，而該名稱通常與目錄名稱相符。 例如，`MyProjectName.csproj`。
 
 根據預設，專案檔名也會指定 `<AssemblyName>` 和 `<PackageId>` 屬性的值。
 

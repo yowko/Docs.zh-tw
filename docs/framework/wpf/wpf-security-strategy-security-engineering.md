@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 6006024f29c37545ce95e579c7b93727d8c6bc67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ab6981b85d5b0663fd8e464a840bfbe55f6d3b0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547744"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836587"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF 安全性策略 – 安全性工程
 高可信度電腦運算是一項 Microsoft 開發案，用於確保生產安全的程式碼。 高可信度電腦運算開發案的一個重要項目是 [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 是可用來搭配標準工程程序協助安全的程式碼傳遞之工程實務。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 包含 10 個階段，結合正規化、可衡量性與其他結構到最佳做法，包括：  
@@ -94,5 +94,4 @@ ms.locfileid: "54547744"
 - [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)
 - [WPF 安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
 - [高可信度電腦運算](https://www.microsoft.com/mscorp/twc/default.mspx)
-- [應用程式的威脅分析模型](https://msdn.microsoft.com/security/securecode/threatmodeling/acetm/)
-- [安全性方針：.NET Framework 2.0](https://msdn.microsoft.com/library/default.asp?url=/library/dnpag2/html/PAGGuidelines0003.asp)
+- [在.NET 中的安全性](../../standard/security/index.md)

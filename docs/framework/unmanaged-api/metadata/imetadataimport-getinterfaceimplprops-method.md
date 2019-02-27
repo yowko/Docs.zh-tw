@@ -1,6 +1,6 @@
 ---
 title: IMetaDataImport::GetInterfaceImplProps 方法
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 api_name:
 - IMetaDataImport.GetInterfaceImplProps
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91cb42a5bf1115de82b5fe28693cb77b66915c9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc16d01d45364d1a17f281f859b27c3e48342ff0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600553"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835716"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps 方法
-取得中繼資料語彙基元的指標<xref:System.Type>實作指定的方法和介面宣告該方法。  
+取得中繼資料語彙基元的指標<xref:System.Type>實作指定的方法和介面宣告該方法。
   
 ## <a name="syntax"></a>語法  
   
@@ -46,6 +46,33 @@ HRESULT GetInterfaceImplProps (
   
  `ptkIface`  
  [out]中繼資料語彙基元，代表定義的實作的方法的介面。  
+
+## <a name="remarks"></a>備註
+
+ 取得值，如`iImpl`藉由呼叫[EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md)方法。
+ 
+ 例如，假設 的類別有`mdTypeDef`k 0x02000007 的值，它會實作它的型別具有權杖的三個介面： 
+
+- 0x02000003 (TypeDef)
+- 0x0100000A (TypeRef)
+- 0x0200001C (TypeDef)
+
+就概念而言，這項資訊會儲存至介面實作資料表為：
+
+| 資料列數目 | 類別的語彙基元 | 介面的語彙基元 |
+|------------|-------------|-----------------|
+| 4          |             |                 |
+| 5          | 02000007    | 02000003        |
+| 6          | 02000007    | 0100000A        |
+| 7          |             |                 |
+| 8          | 02000007    | 0200001C        |
+
+請記住，此語彙基元是 4 位元組值：
+
+- 較低的 3 個位元組會保存資料列數目，或 RID。
+- 上方的位元組會保存語彙基元的型別 – 為 0x09 `mdtInterfaceImpl`。
+
+`GetInterfaceImplProps` 傳回的資訊保留在資料列中提供的語彙基元`iImpl`引數。 
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

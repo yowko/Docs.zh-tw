@@ -3,12 +3,12 @@ title: dotnet vstest 命令
 description: dotnet vstest 命令會建置專案和其所有相依性。
 author: guardrex
 ms.date: 05/30/2018
-ms.openlocfilehash: cafd862f6107be9173aad6d610cf6f8fd62e1489
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: d41e901f70b4a3d0647c693fdd8076f771466073
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169012"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747725"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -41,9 +41,9 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 ```
 ---
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
-`dotnet-vstest` 命令會執行 `VSTest.Console` 命令列應用程式，以執行自動化單元以及自動程式化 UI 應用程式測試。
+`dotnet-vstest` 命令會執行 `VSTest.Console` 命令列應用程式，以執行自動化的單元測試。
 
 ## <a name="arguments"></a>引數
 
@@ -73,11 +73,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Framework|/Framework:<Framework Version>`
 
-用於測試執行的目標 .NET Framework 版本。 有效值的範例包括 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支援的值為 `Framework35`、`Framework40`、`Framework45`、`FrameworkCore10` 和 `FrameworkUap10`。
+用於測試執行的目標 .NET Framework 版本。 有效值的範例包括 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支援的值為 `Framework40`、`Framework45`、`FrameworkCore10` 和 `FrameworkUap10`。
 
 `--Parallel|/Parallel`
 
-以平行方式執行測試。 根據預設，電腦上所有的可用核心都可供使用。 以設定檔設定明確的核心數目。
+以平行方式執行測試。 根據預設，電腦上所有的可用核心都可供使用。 在 runsettings 檔案中的 RunConfiguration 節點下設定 MaxCpuCount 屬性，以指定明確的核心數目。
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -162,11 +162,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Framework|/Framework:<Framework Version>`
 
-用於測試執行的目標 .NET Framework 版本。 有效值的範例包括 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支援的值為 `Framework35`、`Framework40`、`Framework45` 和 `FrameworkCore10`。
+用於測試執行的目標 .NET Framework 版本。 有效值的範例包括 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支援的值為 `Framework40`、`Framework45` 和 `FrameworkCore10`。
 
 `--Parallel|/Parallel`
 
-以平行方式執行測試。 根據預設，電腦上所有的可用核心都可供使用。 以設定檔設定明確的核心數目。
+以平行方式執行測試。 根據預設，電腦上所有的可用核心都可供使用。 在 runsettings 檔案中的 RunConfiguration 節點下設定 MaxCpuCount 屬性，以指定明確的核心數目。
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -238,11 +238,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Framework|/Framework:<Framework Version>`
 
-用於測試執行的目標 .NET Framework 版本。 有效值的範例包括 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支援的值為 `Framework35`、`Framework40`、`Framework45` 和 `FrameworkCore10`。
+用於測試執行的目標 .NET Framework 版本。 有效值的範例包括 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支援的值為 `Framework40`、`Framework45` 和 `FrameworkCore10`。
 
 `--Parallel|/Parallel`
 
-以平行方式執行測試。 根據預設，電腦上所有的可用核心都可供使用。 以設定檔設定明確的核心數目。
+以平行方式執行測試。 根據預設，電腦上所有的可用核心都可供使用。 在 runsettings 檔案中的 RunConfiguration 節點下設定 MaxCpuCount 屬性，以指定明確的核心數目。
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 

@@ -3,13 +3,13 @@ title: 管理生產 Docker 環境
 description: 了解管理容器為基礎的生產環境的關鍵要點。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 54e2b999f744600d3b6853442bb9ccca004f4e76
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219486"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836613"
 ---
 # <a name="manage-production-docker-environments"></a>管理生產 Docker 環境
 
@@ -23,26 +23,24 @@ Container Service 提供快速部署常用的開放原始碼容器叢集和協�
 
 表 6-1 會列出其協調器、 排程器和叢集平台相關的一般管理工具。
 
-表 6-1:Docker 管理工具
+**表 6-1**。 Docker 管理工具
 
-
-| 管理工具      | 描述           | 相關的協調器 |
-|-----------------------|-----------------------|-----------------------|
-| Container Service\(UI 管理 Azure 入口網站中的) | [Container Service](https://azure.microsoft.com/services/container-service/)提供能夠輕鬆地啟動辦法[部署在 Azure 中的容器叢集](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment)根據受歡迎的協調器，例如 Mesosphere DC/OS、 Kubernetes 和 Docker Swarm。 <br /><br /> Container Service 最佳化這些平台的設定。 您只需要選取大小、 主機數量及選擇的協調工具，Container Service 會處理所有其他項目。 | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
-| Docker 通用控制平面\(內部部署或雲端) | [Docker 通用控制平面](https://docs.docker.com/v1.11/ucp/overview/)是企業級的叢集管理解決方案，從 Docker。 它可協助您從單一位置管理整個叢集。 <br /><br /> Docker 通用控制平面是名為提供 Docker Swarm、 Docker 通用控制平面與 Docker Trusted Registry 的 Docker Datacenter 商業產品的一部分。 <br /><br /> Docker Datacenter 可安裝在內部，或從類似 Azure 的公用雲端佈建。 | Docker Swarm\(Container Service 所支援) |
-| Docker Cloud\(也稱為 Tutum; 雲端 SaaS) | [Docker 雲端](https://docs.docker.com/docker-cloud/)是裝載的管理服務 (SaaS) 提供協調流程功能和的 Docker 登錄，建置和測試 docker 化應用程式映像，可協助您設定和管理您的主機基礎結構，工具功能可協助您自動化您的映像部署到您具體的基礎結構的部署功能。 您可以連接您的 SaaS Docker 雲端帳戶在 Container Service 中執行的 Docker Swarm 叢集基礎結構。 | Docker Swarm\(Container Service 所支援) |
-| Mesosphere Marathon\(內部部署或雲端) | [Marathon](https://mesosphere.github.io/marathon/docs/marathon-ui.html) Mesosphere 的 DC/OS 和 Apache Mesos 是生產等級容器協調流程與排程器平台。 <br /><br /> 它使用 Mesos （DC/OS 根據 Apache Mesos） 來控制長時間執行服務，並提供[程序和容器管理 web UI](https://mesosphere.github.io/marathon/docs/marathon-ui.html)。 它可提供 web UI 管理工具 | Mesosphere DC/OS\(根據 Apache Mesos，Container Service 所支援) |
-| Google Kubernetes | [Kubernetes](https://kubernetes.io/docs/user-guide/ui/#dashboard-access)跨越協調、 排程和叢集基礎結構。 它是開放原始碼平台，到叢集中的主機，提供以容器為中心的基礎結構自動化部署、 調整及應用程式容器的作業。 | Google Kubernetes\(Container Service 所支援) |
+| 管理工具 | 描述 | 相關的協調器 |
+|------------------|-------------|-----------------------|
+| [適用於容器的 azure 監視器](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Azure 的專用的 Kubernetes 管理工具 | Azure Kubernetes 服務 (AKS) |
+| [Kubernetes Web UI （儀表板）](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes 的管理工具，可以監視及管理本機的 Kubernetes 叢集 | Azure Kubernetes Service (AKS)<br/>本機 Kubernetes |
+| [適用於 Service Fabric 的 azure 入口網站](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | 如需管理 Service Fabric 叢集，在 Azure 上、 在內部部署、 本機開發，以及其他雲端的線上和桌面版本 | Azure Service Fabric |
+| [容器監視 (Log Analytics)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | 一般的容器監視解決方案的管理 y。 可以管理 Kubernetes 叢集，透過[適用於容器的 Azure 監視器](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview)。 | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS 和其他項目。 |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 
-叢集中部署和管理的另一個選擇是 Azure Service Fabric。 [Service Fabric](https://azure.microsoft.com/services/service-fabric/) Microsoft 的微服務平台，其中包含容器協調流程，以及開發人員的程式設計模型，以建置可靈活調整的微服務應用程式。 Service Fabric 支援在目前的 Linux 預覽版本中，Docker，如同[在 Linux 上的 Service Fabric 預覽](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere)，和適用於 Windows 容器[中的下一個版本](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview)。
+叢集中部署和管理的另一個選擇是 Azure Service Fabric。 [Service Fabric](https://azure.microsoft.com/services/service-fabric/) Microsoft 的微服務平台，其中包含容器協調流程，以及開發人員的程式設計模型，以建置可高度擴充的微服務應用程式。 Service Fabric 支援 Linux 和 Windows 容器中的 Docker，並可以在 Windows 和 Linux 伺服器中執行。
 
 以下是 Service Fabric 管理工具：
 
--   [適用於 Service Fabric 的 azure 入口網站](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)叢集相關的作業 （建立/更新/刪除） 的叢集，或設定其基礎結構 (Vm、 負載平衡器、 網路功能等。)
+- [適用於 Service Fabric 的 azure 入口網站](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)叢集相關的作業 （建立/更新/刪除） 的叢集，或設定其基礎結構 (Vm、 負載平衡器、 網路功能等。)
 
--   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster)是特製化的 web UI 工具，提供深入解析和某些從節點 /vm 觀點來看，並從應用程式和服務的觀點來看，在 Service Fabric 叢集上的作業。
+- [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster)是特製化 web UI 和桌面提供深入解析和在 Service Fabric 叢集上，從節點 /vm 觀點來看，並從應用程式和服務的觀點來看的特定作業的多平台工具。
 
 >[!div class="step-by-step"]
 >[上一頁](run-microservices-based-applications-in-production.md)

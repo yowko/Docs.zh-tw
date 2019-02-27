@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88b8f874400d68110fa5e8fb66ca910b8e7231e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4bf2cf647682062fbacb4484ffae905d1b7995
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645960"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835365"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers 方法
 列舉代表指定類型成員的 MemberDef 語彙基元。  
@@ -39,7 +39,7 @@ HRESULT EnumMembers (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `phEnum`  
  [in、 out]列舉值的指標。  
   
@@ -63,7 +63,9 @@ HRESULT EnumMembers (
 |`S_FALSE`|沒有列舉 MemberDef 語彙基元。 在此情況下，`pcTokens`為零。|  
   
 ## <a name="remarks"></a>備註  
- 列舉集合之成員的類別，當`EnumMembers`傳回直接在類別上定義的成員。 它不會傳回此類別繼承，任何成員即使類別會提供實作這些繼承的成員。 若要列舉繼承的成員，呼叫者必須明確地逐步繼承鏈結。 請注意，規則的繼承鏈結可能會不同的語言或編譯器發出的原始中繼資料而定。  
+ 列舉集合之成員的類別，當`EnumMembers`只傳回成員 (欄位和方法，但**不**屬性或事件) 直接在類別上定義。 它不會傳回此類別繼承，任何成員即使類別會提供實作這些繼承的成員。 若要列舉繼承的成員，呼叫者必須明確地逐步繼承鏈結。 請注意，規則的繼承鏈結可能會不同的語言或編譯器發出的原始中繼資料而定。
+ 
+ 屬性和事件不會列舉`EnumMembers`。 若要列舉的請使用[EnumProperties](imetadataimport-enumproperties-method.md)或是[EnumEvents](imetadataimport-enumevents-method.md)。
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

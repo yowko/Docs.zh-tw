@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7be62b3a97614faea14eb874be58c79246754903
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653745"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583650"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>依字母順序列出 C# 編譯器選項
 
@@ -36,6 +36,10 @@ ms.locfileid: "54653745"
 |[-delaysign](delaysign-compiler-option.md)|只使用強式名稱金鑰的公開部分來延遲簽署組件。|
 |[-deterministic](deterministic-compiler-option.md)|可讓編譯器輸出在輸入相同時編譯之間二進位內容相同的組件。|
 |[-doc](doc-compiler-option.md)|指定要產生的 XML 文件檔案。|
+|-embed|在 PDB 中內嵌所有來源檔案。|
+|-embed:\<檔案清單>|在 PDB 中內嵌特定檔案。|
+|-errorendlocation|輸出每個錯誤結束位置的行與列。|
+|-errorlog:\<檔案>|指定檔案，記錄所有編譯器和分析器的診斷資料。|
 |[-errorreport](errorreport-compiler-option.md)|指定如何處理內部編譯器錯誤：prompt、send 或 none。 預設值是 [none]。|
 |[-filealign](filealign-compiler-option.md)|指定用來輸出檔案區段的對齊。|
 |[-fullpaths](fullpaths-compiler-option.md)|會導致編譯器產生完整的路徑。|
@@ -68,12 +72,14 @@ ms.locfileid: "54653745"
 |[-reference](reference-compiler-option.md)|從指定的組件檔案參考中繼資料。|
 |[-refout](refout-compiler-option.md)|除了主要組件，再另外產生參考組件。|
 |[-refonly](refonly-compiler-option.md)|產生參考組件，而非主要組件。|
+|-reportanalyzer|回報其他分析器資訊，例如執行時間。|
 |[-resource](resource-compiler-option.md)|嵌入指定的資源。|
 |-ruleset:\<檔案>|指定停用特定診斷的規則集檔案。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|指定可執行檔能夠使用的最低子系統版本。|
 |[-target](target-compiler-option.md)|使用下列四個選項之一來指定輸出檔案的格式：[-target:appcontainerexe](target-appcontainerexe-compiler-option.md)、[-target:exe](target-exe-compiler-option.md)、[-target:library](target-library-compiler-option.md)、[-target:module](target-module-compiler-option.md)、[-target:winexe](target-winexe-compiler-option.md)、[-target:winmdobj](target-winmdobj-compiler-option.md)。|
 |[-unsafe](unsafe-compiler-option.md)|允許 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 程式碼。|
 |[-utf8output](utf8output-compiler-option.md)|在 UTF-8 編碼中輸出編譯器訊息。|
+|-version|顯示編譯器版本號碼並結束。|
 |[-warn](warn-compiler-option.md)|設定警告層級 (0-4)。|
 |[-warnaserror](warnaserror-compiler-option.md)|將特定警告報告為錯誤。|
 |[-win32icon](win32icon-compiler-option.md)|在輸出使用此圖示。|

@@ -3,12 +3,12 @@ title: C# 型別和變數 - C# 語言教學課程
 description: 了解如何在 C# 中定義類型和宣告變數
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129515"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583949"
 ---
 # <a name="types-and-variables"></a>型別與變數
 
@@ -60,7 +60,7 @@ C# 中的字元和字串處理使用 Unicode 編碼方式。 `char` 型別代表
     - `sbyte`：8 位元，-128 到 127 之間
     - `short`：16 位元，-32,768 到 32,767 之間
     - `int`：32 位元，-2,147,483,648 到 2,147,483,647 之間
-    - `long`：64 位元，––9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 之間
+    - `long`：64 位元，-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 之間
 * 不帶正負號的整數
     - `byte`：8 位元，0 到 255 之間
     - `ushort`：16 位元，0 到 65,535 之間
@@ -70,7 +70,7 @@ C# 中的字元和字串處理使用 Unicode 編碼方式。 `char` 型別代表
     - `float`：32 位元，1.5 × 10<sup>-45</sup> 到 3.4 × 10<sup>38</sup> 之間，7 位數精確度
     - `double`：64 位元，5.0 × 10<sup>−324</sup> 到 1.7 × 10<sup>308</sup> 之間，15 位數精確度
 * Decimal
-    - `decimal`：128 位元，至少在 –7.9 × 10<sup>−28</sup> 到 7.9 × 10<sup>28</sup> 之間，至少 28 位數精確度
+    - `decimal`：128 位元，至少在 -7.9 × 10<sup>-28</sup> 到 7.9 × 10<sup>28</sup> 之間，至少 28 位數精確度
     
 C# 程式使用*型別宣告*來建立新型別。 型別宣告指定新型別的名稱成員。 可由使用者定義的五種 C# 型別類型︰類別型別、結構型別、介面型別、列舉型別及委派型別。
 

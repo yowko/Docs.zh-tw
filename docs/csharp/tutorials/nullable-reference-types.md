@@ -1,14 +1,14 @@
 ---
 title: 使用可為 Null 的參考類型進行設計
 description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
-ms.date: 12/03/2018
+ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 535efcdc303c17a55f6a4054ea3f5e5ed87e5f28
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 1c0df9b129e9c434eb3b5e6e50144013c2c0462e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092198"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442096"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教學課程：使用可為 Null 與不可為 Null 的參考類型更清楚地表達您的設計意圖
 
@@ -24,7 +24,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 
 ## <a name="prerequisites"></a>必要條件
 
-您將必須設定電腦來執行 .NET Core，包括 C# 8.0 搶鮮版 (Beta) 編譯器。 C# 8 搶鮮版 (Beta) 編譯器隨附於 [Visual Studio 2019 Preview 1](https://visualstudio.microsoft.com/vs/preview/) \(英文\) 或 [.NET Core 3.0 Preview 1](https://dotnet.microsoft.com/download/dotnet-core/3.0) \(英文\)。
+您將需要設定您的機器，以執行 .NET Core (包括 C# 8.0 搶鮮版 (Beta) 編譯器)。 C# 8 搶鮮版 (Beta) 編譯器可在 [Visual Studio 2019 preview 2](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview)，或 [.NET Core 3.0 preview 2](https://dotnet.microsoft.com/download/dotnet-core/3.0) 中取得。
 
 本教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
@@ -36,27 +36,16 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>建立應用程式並啟用可為 Null 的參考類型
 
-在 Visual Studio 中或從命令列中使用 `dotnet new console` 來建立新的主控台應用程式。 為應用程式 `NullableIntroduction` 命名。 一旦建立應用程式之後，您將必須啟用 C# 8 搶鮮版 (Beta) 功能。 開啟 `csproj` 檔案，並將 `LangVersion` 元素新增到 `PropertyGroup` 元素：
+在 Visual Studio 中或從命令列中使用 `dotnet new console` 來建立新的主控台應用程式。 為應用程式 `NullableIntroduction` 命名。 一旦建立應用程式之後，您將必須啟用 C# 8 搶鮮版 (Beta) 功能。 開啟 `csproj` 檔案，並將 `LangVersion` 項目新增到 `PropertyGroup` 項目。 您必須選擇參與**可為 Null 的參考類型**功能，甚至是在 C# 8 專案中。 這是因為一旦開啟此功能之後，現有的參考變數宣告就會變成**不可為 Null 的參考類型**。 儘管該決策將可協助您找出現有程式碼可能不具適當 Null 檢查的問題，但它可能不會正確地反映您的原始設計意圖。 您已透過將 `NullableContextOptions` 項目設為 `enable` 來開啟功能：
 
 ```xml
 <LangVersion>8.0</LangVersion>
-```
-
-或者，您可以使用 Visual Studio 專案屬性來啟用 C# 8。 在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後選取 [屬性]。 接著，選取 [建置] 索引標籤，然後按一下 [進階...]。在語言版本的下拉式清單中，選取 [C# 8.0 搶鮮版 (Beta)]。
-
-您必須選擇參與**可為 Null 的參考類型**功能，甚至是在 C# 8 專案中。 這是因為一旦開啟此功能之後，現有的參考變數宣告就會變成**不可為 Null 的參考類型**。 儘管該決策將可協助您找出現有程式碼可能不具適當 Null 檢查的問題，但它可能不會正確地反映您的原始設計意圖。 您要使用新的 pragma 來開啟此功能：
-
-```csharp
-#nullable enable
-```
-
-您可以在原始程式檔中的任一處新增上述 pragma，並從該點開啟可為 Null 的參考類型功能。 此 pragma 也支援使用 `disable` 引數來關閉該功能。
-
-您也可以藉由將下列元素新增到 .csproj 檔案，為整個專案開啟**可為 Null 的參考類型**，例如，緊接在啟用 C# 8.0 的 `LangVersion` 元素後面：
-
-```xml
 <NullableContextOptions>enable</NullableContextOptions>
 ```
+
+> [!NOTE]
+> 當 C# 8 發行時 (並非處於預覽模式時)，新的專案範本會新增 `NullableContextOptions` 項目。 在那之前，您必須手動新增它。
+
 
 ### <a name="design-the-types-for-the-application"></a>設計適用於應用程式的類型
 
@@ -88,10 +77,9 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 
 ## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>使用可為 Null 與不可為 Null 的類型建置問卷
 
-您將撰寫的第一個程式碼會建立問卷。 您會撰寫類別來將問卷問題和問卷執行模型化。 您的問卷具有三種類型的問題，其會依答案的格式來區別：是/否的答案、數字答案，以及文字答案。 建立 `public` `SurveyQuestion` 類別。 緊接在 `using` 陳述式後面包含 `#nullable enable` pragma：
+您將撰寫的第一個程式碼會建立問卷。 您會撰寫類別來將問卷問題和問卷執行模型化。 您的問卷具有三種類型的問題，其會依答案的格式來區別：是/否的答案、數字答案，以及文字答案。 建立 `public` `SurveyQuestion` 類別：
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyQuestion
@@ -100,10 +88,9 @@ namespace NullableIntroduction
 }
 ```
 
-新增 `#nullable enable` pragma，表示編譯器會將每個參考類型變數宣告解譯為**不可為 Null 的**參考類型。 您可以藉由新增問題文字的屬性和問題的類型來查看第一個警告，如下列程式碼所示：
+針對啟用可為 Null 內容中的程式碼，編譯器會將每個參考型別變數宣告解譯為**不可為 Null** 參考型別。 您可以藉由新增問題文字的屬性和問題的類型來查看第一個警告，如下列程式碼所示：
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public enum QuestionType
@@ -127,12 +114,11 @@ namespace NullableIntroduction
 
 新增建構函式會移除警告。 建構函式引數也是不可為 Null 的參考類型，因次，編譯器不會發出任何警告。
 
-接著，建立名為 `SurveyRun` 的 `public` 類別。 在 `using` 陳述式後面包含 `#nullable enable` pragma。 這個類別包含 `SurveyQuestion` 物件和方法的清單，可在問卷中新增問題，如下列程式碼所示：
+接著，建立名為 `SurveyRun` 的 `public` 類別。 這個類別包含 `SurveyQuestion` 物件和方法的清單，可在問卷中新增問題，如下列程式碼所示：
 
 ```csharp
 using System.Collections.Generic;
 
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyRun
@@ -152,7 +138,7 @@ namespace NullableIntroduction
 
 [!code-csharp[AddQuestions](../../../samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-如果檔案頂端沒有 `#nullable enable` pragma，則當您傳遞 `null` 作為 `AddQuestion` 引數的文字時，編譯器不會發出警告。 在 `using` 陳述式後面新增 `#nullable enable` 來修正該問題。 將下列這一行新增到 `Main` 來試用它：
+因為整個專案都處於啟用可為 Null 的內容中，您會在將 `null` 傳遞給任何預期接受不可為 Null 參考型別的方法時收到警告。 將下列這一行新增到 `Main` 來試用它：
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);
@@ -160,7 +146,7 @@ surveyRun.AddQuestion(QuestionType.Text, default);
 
 ## <a name="create-respondents-and-get-answers-to-the-survey"></a>建立受訪者並取得問卷的答案
 
-接著，撰寫程式碼來產生問卷的答案。 這牽涉到數個小型工作：
+接著，撰寫程式碼來產生問卷的答案。 這項過程涉及幾項小型工作：
 
 1. 建置方法來產生受訪者物件。 這些物件代表系統要求您填寫問卷的人員。
 1. 建置邏輯來模擬向受訪者詢問問題，然後收集答案，或記下受訪者沒有回答。
@@ -169,7 +155,6 @@ surveyRun.AddQuestion(QuestionType.Text, default);
 您需要一個類型來代表問卷回應，所以現在要新增該類別。 啟用可為 Null 的支援。 新增 `Id` 屬性和建構函式來將它初始化，如下列程式碼所示：
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyResponse
@@ -195,6 +180,8 @@ namespace NullableIntroduction
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
 問卷答案的儲存體是 `Dictionary<int, string>?`，指出它可能是 Null。 您正在使用新的語言功能，來向編譯器和稍後要讀取您程式碼的任何人宣告您的設計意圖。 如果您總是在未先檢查 Null 值的情況下為 `surveyResponses` 取值，將收到編譯器警告。 您不會在 `AnswerSurvey` 方法中收到警告，因為編譯器可判斷並未將 `surveyResponses` 變數設定為上述的非 Null 值。
+
+針對遺漏的問題使用 `null`，醒目提示使用可為 Null 參考型別時的一項關鍵點：您的目標不是從程式中移除所有 `null` 值。 您的目標是確保您所撰寫程式碼能夠表達出設計意圖。 遺漏值是在您程式碼中進行表達的必要概念。 `null` 值是表達那些遺漏值的清楚方式。 嘗試移除所有 `null` 值只會導向定義其他方式，在不使用 `null` 的情況下表達那些遺漏值。
 
 接著，您需要在 `SurveyRun` 類別中撰寫 `PerformSurvey` 方法。 在 `SurveyRun` 類別中新增下列程式碼：
 
@@ -234,6 +221,6 @@ namespace NullableIntroduction
 
 ## <a name="next-steps"></a>後續步驟
 
-請參閱＜可為 Null 的參考類型概觀＞進行深入了解。
+請透過將現有的應用程式遷移至使用可為 Null 參考型別，來深入了解：
 > [!div class="nextstepaction"]
-> [可為 Null 的參考概觀](../nullable-references.md)
+> [升級應用程式以使用可為 Null 參考型別](upgrade-to-nullable-references.md)

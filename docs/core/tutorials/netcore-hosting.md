@@ -4,12 +4,12 @@ description: 了解如何從原生程式碼裝載 .NET Core 執行階段，以�
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: deeda8b166d8a22aac88be313d2555e4b9fa5a1c
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 994cc82745d2c473f1126eae9a889c899f5e741a
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415516"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583845"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>撰寫自訂 .NET Core 主機以從原生程式碼控制 .NET 執行階段
 
@@ -29,7 +29,7 @@ ms.locfileid: "54415516"
 有兩個不同的 API 可用來裝載 .NET Core。 本文件 (及其相關聯的[範例](https://github.com/dotnet/samples/tree/master/core/hosting)) 涵蓋這兩個選項。
 
 * 裝載 .NET Core 執行階段的慣用方法是使用 [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h) API。 此 API 會公開函式，以便輕鬆地啟動和停止執行階段，以及叫用受控碼 (無論是透過啟動受控 exe 或藉由呼叫靜態受控方法)。
-* .NET Core 也可以使用 [mscoree.h](https://github.com/dotnet/coreclr/blob/master/src/pal/prebuilt/inc/mscoree.h) 中的 `ICLRRuntimeHost2` 介面進行裝載。 此 API 的運行時間長於 CoreClrHost.h，因此您可能會看到舊版主機使用它。 它仍可運作，且比起 CoreClrHost 更能控制裝載處理序。 不過，在大部分情況下，CoreClrHost.h 目前仍然是慣用方法，因為其 API 更為簡單。
+* .NET Core 也可以使用 [mscoree.h](https://github.com/dotnet/coreclr/blob/master/src/pal/prebuilt/inc/mscoree.h) 中的 `ICLRRuntimeHost4` 介面進行裝載。 此 API 的運行時間長於 CoreClrHost.h，因此您可能會看到舊版主機使用它。 它仍可運作，且比起 CoreClrHost 更能控制裝載處理序。 不過，在大部分情況下，CoreClrHost.h 目前仍然是慣用方法，因為其 API 更為簡單。
 
 ## <a name="sample-hosts"></a>範例主機
 dotnet/samples GitHub 存放庫中提供下列示範教學課程所述步驟的[範例主機](https://github.com/dotnet/samples/tree/master/core/hosting)。 範例中註解清楚地將這些教學課程中的編號步驟與範例中的執行位置建立關聯。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
@@ -64,7 +64,7 @@ CoreClrHost 有幾個可用於裝載 .NET Core 的重要方法：
 
 ### <a name="step-3---prepare-runtime-properties"></a>步驟 3 - 準備執行階段屬性
 
-啟動執行階段之前，必須準備一些屬性來指定行為 (尤其是關於組件載入器)。 
+啟動執行階段之前，必須準備一些屬性來指定行為 (尤其是關於組件載入器)。
 
 常用屬性包括：
 
@@ -96,7 +96,7 @@ CoreClrHost 有幾個可用於裝載 .NET Core 的重要方法：
 
 在此範例中，主機現在可以呼叫 `managedDelegate` 來執行 `ManagedWorker.DoWork` 方法。
 
-或者，`coreclr_execute_assembly` 函式可用來啟動受控可執行檔。 此 API 會採用組件路徑和引數陣列作為輸入參數。 它會載入該路徑中的組件，並叫用其 Main 方法。 
+或者，`coreclr_execute_assembly` 函式可用來啟動受控可執行檔。 此 API 會採用組件路徑和引數陣列作為輸入參數。 它會載入該路徑中的組件，並叫用其 Main 方法。
 
 ```C++
 int hr = executeAssembly(
@@ -116,12 +116,12 @@ int hr = executeAssembly(
 
 請記得使用 `FreeLibrary` (在 Windows 上) 或 `dlclose` (在 Linux/Mac 上) 來卸載 CoreCLR 程式庫。
 
-## <a name="creating-a-host-using-mscoreeh"></a>使用 Mscoree.h 建立主機
+## <a name="create-a-host-using-mscoreeh"></a>使用 Mscoree.h 建立主機
 
-如先前所述，CoreClrHost.h 現在是裝載 .NET Core 執行階段的慣用方法。 不過，如果 CoreClrHost.h 介面不足 (比方說，如果需要非標準啟動旗標，或如果預設定義域需要 AppDomainManager)，您仍然可以使用 `ICLRRuntimeHost2` 介面。 這些指示會引導您使用 mscoree.h 來裝載 .NET Core。
+如先前所述，CoreClrHost.h 現在是裝載 .NET Core 執行階段的慣用方法。 不過，如果 CoreClrHost.h 介面不足 (比方說，如果需要非標準啟動旗標，或如果預設定義域需要 AppDomainManager)，您仍然可以使用 `ICLRRuntimeHost4` 介面。 這些指示會引導您使用 mscoree.h 來裝載 .NET Core。
 
 ### <a name="a-note-about-mscoreeh"></a>mscoree.h 的相關注意事項
-`ICLRRuntimeHost2` .NET Core 裝載介面定義於 [MSCOREE.IDL](https://github.com/dotnet/coreclr/blob/master/src/inc/MSCOREE.IDL)。 您的主機必須參考此檔案的標頭版本 (mscoree.h)，該檔案會在建置 [.NET Core 執行階段](https://github.com/dotnet/coreclr/)時透過 MIDL 產生。 如果不想建置 .NET Core 執行階段，mscoree.h 也會當作 dotnet/coreclr 存放庫中[預先建立的標頭](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc)使用。 您可以在 GitHub 存放庫中找到[建置 .NET Core 執行階段的指示](https://github.com/dotnet/coreclr#building-the-repository)。 
+`ICLRRuntimeHost4` .NET Core 裝載介面定義於 [MSCOREE.IDL](https://github.com/dotnet/coreclr/blob/master/src/inc/MSCOREE.IDL)。 您的主機必須參考此檔案的標頭版本 (mscoree.h)，該檔案會在建置 [.NET Core 執行階段](https://github.com/dotnet/coreclr/)時透過 MIDL 產生。 如果不想建置 .NET Core 執行階段，mscoree.h 也會當作 dotnet/coreclr 存放庫中[預先建立的標頭](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc)使用。 您可以在 GitHub 存放庫中找到[建置 .NET Core 執行階段的指示](https://github.com/dotnet/coreclr#building-the-repository)。
 
 ### <a name="step-1---identify-the-managed-entry-point"></a>步驟 1 - 識別 Managed 進入點
 參考必要的標頭 (例如 [mscoree.h](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc/mscoree.h) 和 stdio.h) 之後，.NET Core 主機必須先找出所要使用的 Managed 進入點。 在我們的範例主機中，只要將第一個命令列引數傳遞至主機作為 Managed 二進位檔 (將執行其 `main` 方法) 的路徑，即可完成此作業。
@@ -129,7 +129,7 @@ int hr = executeAssembly(
 [!code-cpp[NetCoreHost#1](~/samples/core/hosting/HostWithMscoree/host.cpp#1)]
 
 ### <a name="step-2---find-and-load-coreclr"></a>步驟 2 - 找到並載入 CoreCLR
-.NET Core 執行階段 API 位於 *CoreCLR.dll* (Windows 上)。 若要取得我們的裝載介面 (`ICLRRuntimeHost2`)，您必須找到並載入 *CoreCLR.dll*。 主機會定義尋找 *CoreCLR.dll* 的方式慣例。 某些主機預期此檔案會出現在已知的全機器位置 (例如 *%programfiles%\dotnet\shared\Microsoft.NETCore.App\2.1.6*)。 其他主機則預期會從主機本身或所要裝載之應用程式旁的位置載入 *CoreCLR.dll*。 不過，其他主機還是可以參考環境變數以尋找程式庫。
+.NET Core 執行階段 API 位於 *CoreCLR.dll* (Windows 上)。 若要取得我們的裝載介面 (`ICLRRuntimeHost4`)，您必須找到並載入 *CoreCLR.dll*。 主機會定義尋找 *CoreCLR.dll* 的方式慣例。 某些主機預期此檔案會出現在已知的全機器位置 (例如 *%programfiles%\dotnet\shared\Microsoft.NETCore.App\2.1.6*)。 其他主機則預期會從主機本身或所要裝載之應用程式旁的位置載入 *CoreCLR.dll*。 不過，其他主機還是可以參考環境變數以尋找程式庫。
 
 在 Linux 或 Mac 上，Core 執行階段程式庫分別是 *libcoreclr.so* 或 *libcoreclr.dylib*。
 
@@ -137,13 +137,13 @@ int hr = executeAssembly(
 
 [!code-cpp[NetCoreHost#2](~/samples/core/hosting/HostWithMscoree/host.cpp#2)]
 
-### <a name="step-3---get-an-iclrruntimehost2-instance"></a>步驟 3 - 取得 ICLRRuntimeHost2 執行個體
-若要擷取 `ICLRRuntimeHost2` 裝載介面，請在 `GetCLRRuntimeHost` 上呼叫 `GetProcAddress` (若是 Linux/Mac 則為 `dlsym`)，然後叫用該函式。 
+### <a name="step-3---get-an-iclrruntimehost4-instance"></a>步驟 3 - 取得 ICLRRuntimeHost4 執行個體
+若要擷取 `ICLRRuntimeHost4` 裝載介面，請在 `GetCLRRuntimeHost` 上呼叫 `GetProcAddress` (若是 Linux/Mac 則為 `dlsym`)，然後叫用該函式。
 
 [!code-cpp[NetCoreHost#3](~/samples/core/hosting/HostWithMscoree/host.cpp#3)]
 
-### <a name="step-4---setting-startup-flags-and-starting-the-runtime"></a>步驟 4 - 設定啟動旗標並啟動執行階段
-準備好 `ICLRRuntimeHost2` 之後，現在可以指定全執行階段啟動旗標並啟動執行階段。 啟動旗標會決定所要使用的記憶體回收行程 (GC) (並行或伺服器)，而不論使用的是單一 AppDomain 或多個 AppDomain；它也會決定 (為了以定義域中性方式載入組件) 所要使用的載入器最佳化原則。
+### <a name="step-4---set-startup-flags-and-start-the-runtime"></a>步驟 4 - 設定啟動旗標並啟動執行階段
+準備好 `ICLRRuntimeHost4` 之後，現在可以指定全執行階段啟動旗標並啟動執行階段。 啟動旗標會決定所要使用的記憶體回收行程 (GC) (並行或伺服器)，而不論使用的是單一 AppDomain 或多個 AppDomain；它也會決定 (為了以定義域中性方式載入組件) 所要使用的載入器最佳化原則。
 
 [!code-cpp[NetCoreHost#4](~/samples/core/hosting/HostWithMscoree/host.cpp#4)]
 
@@ -175,12 +175,12 @@ AppDomain 旗標會指定與安全性和 Interop 相關的 AppDomain 行為。 �
 [!code-cpp[NetCoreHost#6](~/samples/core/hosting/HostWithMscoree/host.cpp#6)]
 
 ### <a name="step-6---create-the-appdomain"></a>步驟 6 - 建立 AppDomain
-準備好所有 AppDomain 旗標和屬性之後，即可使用 `ICLRRuntimeHost2::CreateAppDomainWithManager` 來設定 AppDomain。 此函式會選擇性地接受完整組件名稱和類型名稱，以用作定義域的 AppDomain 管理員。 AppDomain 管理員可讓主機控制 AppDomain 行為的某些層面，並可在主機不想直接叫用使用者程式碼時，提供進入點以啟動 Managed 程式碼。   
+準備好所有 AppDomain 旗標和屬性之後，即可使用 `ICLRRuntimeHost4::CreateAppDomainWithManager` 來設定 AppDomain。 此函式會選擇性地接受完整組件名稱和類型名稱，以用作定義域的 AppDomain 管理員。 AppDomain 管理員可讓主機控制 AppDomain 行為的某些層面，並可在主機不想直接叫用使用者程式碼時，提供進入點以啟動 Managed 程式碼。
 
 [!code-cpp[NetCoreHost#7](~/samples/core/hosting/HostWithMscoree/host.cpp#7)]
 
 ### <a name="step-7---run-managed-code"></a>步驟 7 - 執行 Managed 程式碼！
-在 AppDomain 啟動並執行之後，主機現在可以開始執行 Managed 程式碼。 最簡單的做法是使用 `ICLRRuntimeHost2::ExecuteAssembly` 叫用 Managed 組件的進入點方法。 請注意，此函式僅適用於單一定義域案例。
+在 AppDomain 啟動並執行之後，主機現在可以開始執行 Managed 程式碼。 最簡單的做法是使用 `ICLRRuntimeHost4::ExecuteAssembly` 叫用 Managed 組件的進入點方法。 請注意，此函式僅適用於單一定義域案例。
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
@@ -189,23 +189,23 @@ AppDomain 旗標會指定與安全性和 Interop 相關的 AppDomain 行為。 �
 ```C++
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
-  domainId,
-  L"HW, Version=1.0.0.0, Culture=neutral",  // Target managed assembly
-  L"ConsoleApplication.Program",            // Target managed type
-  L"Main",                                  // Target entry point (static method)
-  (INT_PTR*)&pfnDelegate);
+    domainId,
+    L"HW, Version=1.0.0.0, Culture=neutral", // Target managed assembly
+    L"ConsoleApplication.Program",           // Target managed type
+    L"Main",                                 // Target entry point (static method)
+    (INT_PTR*)&pfnDelegate);
 
 ((MainMethodFp*)pfnDelegate)(NULL);
 ```
 
 ### <a name="step-8---clean-up"></a>步驟 8 - 清除
-最後，主機應該藉由卸載 AppDomain、停止執行階段並釋放 `ICLRRuntimeHost2` 參考來清除自身。
+最後，主機應該藉由卸載 AppDomain、停止執行階段並釋放 `ICLRRuntimeHost4` 參考來清除自身。
 
 [!code-cpp[NetCoreHost#9](~/samples/core/hosting/HostWithMscoree/host.cpp#9)]
 
 ## <a name="conclusion"></a>結論
-建置主機之後，您可以從命令列執行主機，並傳遞主機預期的任何引數 (例如要針對 mscoree 範例主機執行的受控應用程式)，藉以進行測試。 指定主機要執行的 .NET Core 應用程式時，請務必使用 `dotnet build` 所產生的 .dll。 `dotnet publish` 為獨立式應用程式所產生的可執行檔 (.exe 檔案)，其實就是預設 .NET Core 主機 (因此應用程式可在主要情況下從命令列直接啟動)；使用者程式碼會編譯成同名的 DLL。 
+建置主機之後，您可以從命令列執行主機，並傳遞主機預期的任何引數 (例如要針對 mscoree 範例主機執行的受控應用程式)，藉以進行測試。 指定主機要執行的 .NET Core 應用程式時，請務必使用 `dotnet build` 所產生的 .dll。 `dotnet publish` 為獨立式應用程式所產生的可執行檔 (.exe 檔案)，其實就是預設 .NET Core 主機 (因此應用程式可在主要情況下從命令列直接啟動)；使用者程式碼會編譯成同名的 DLL。
 
 如果一開始未正常運作，請再確認一次主機預期的位置中有 *coreclr.dll*、所有必要的 Framework 程式庫都在 TPA 清單中，而且 CoreCLR 的位元 (32 或 64 位元) 符合主機的建立方式。
 
-裝載 .NET Core 執行階段是進階案例，許多開發人員並不需要，但對於需要從原生處理序啟動 Managed 程式碼的人員，或需要更能掌控 .NET Core 執行階段行為的人員而言，這項作業可能很實用。 由於 .NET Core 能夠與本身並存執行，因此您甚至可以建立主機，以初始化並啟動多個版本的 .NET Core 執行階段，並在相同處理序的這些執行階段上執行應用程式。 
+裝載 .NET Core 執行階段是進階案例，許多開發人員並不需要，但對於需要從原生處理序啟動 Managed 程式碼的人員，或需要更能掌控 .NET Core 執行階段行為的人員而言，這項作業可能很實用。 由於 .NET Core 能夠與本身並存執行，因此您甚至可以建立主機，以初始化並啟動多個版本的 .NET Core 執行階段，並在相同處理序的這些執行階段上執行應用程式。

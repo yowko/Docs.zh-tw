@@ -3,21 +3,21 @@ title: 在生產環境中執行撰寫和以微服務為基礎的應用程式
 description: 了解在生產環境中執行容器化應用程式的主要元件
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: bd8b84f788ce013dfe25199dac34e3c59aa35284
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 52cf273194bff10192b06d236bda7c1cbea1abd8
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220960"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835209"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生產環境中執行撰寫和以微服務為基礎的應用程式
 
-由多個微服務組成的應用程式需要部署到 orchestrator 叢集，以簡化部署的複雜性，並使其從 IT 觀點來看變為可用。 協調器叢集，不會很難部署和向外延展的複雜的微服務應用程式。
+由多個微服務組成的應用程式需要部署到 orchestrator 叢集，以簡化部署的複雜性，並使其從 IT 觀點來看變為可用。 協調器叢集，不會很難部署和複雜的微服務應用程式相應放大。
 
 ## <a name="introduction-to-orchestrators-schedulers-and-container-clusters"></a>Orchestrator、 排程器及容器叢集簡介
 
-稍早在本電子書，我們引進了*叢集*並*排程器*，討論的軟體架構設計和開發的一部分。 Docker Swarm 和 Mesosphere Datacenter Operating System (DC/OS)，就會是 Docker 叢集的範例。 這兩種都可以執行 Microsoft Azure Container Service 所提供的基礎結構的一部分。
+稍早在本電子書，*叢集*並*排程器*引進，討論的軟體架構設計和開發的一部分。 Kubernetes 和 Service Fabric 是 Docker 叢集的範例。 這兩個這些協調器可以執行 Microsoft Azure Kubernetes 服務所提供的基礎結構的一部分。
 
 當應用程式會向外延展跨多個主機系統時，能夠管理每個主機系統，並抽離基礎平台的複雜性會成為吸引人。 這就是精確地協調器和排程器提供的內容。 以下讓我們簡短看：
 
@@ -25,13 +25,13 @@ ms.locfileid: "56220960"
 
    叢集排程器有多個目標： 有效率地使用叢集的資源，請使用使用者提供的放置條件約束，排程應用程式快速不將它們保留在擱置狀態，需要某種程度的 「 公平起見，「 正在強固的錯誤，以及可使用。
 
-- **協調流程**。 平台擴充為複雜、 多容器的主機叢集上部署的工作負載的生命週期管理功能。 藉由抽象化主機基礎結構，協調流程工具可讓使用者將在整個叢集中視為單一部署目標。
+- **Orchestrator**。 平台擴充為複雜、 多個容器的主機叢集上部署的工作負載的生命週期管理功能。 藉由抽象化主機基礎結構，協調流程工具可讓使用者將在整個叢集中視為單一部署目標。
 
    協調流程程序包含工具和可以自動化初始放置或每個容器; 部署的應用程式管理的各個層面的平台將容器移至不同的主控件，取決於其主機的健康狀態或效能;版本控制和輪流更新，以及健全狀況監視支援縮放比例和容錯移轉，函式更多選擇。
 
    協調流程是一個廣義的詞彙，指的是容器排程、 叢集管理，以及可能在佈建其他主機。
 
-協調器和排程器所提供的功能會很複雜，開發並從頭建立，並因此您通常會想要讓廠商所提供的協調流程解決方案的使用。
+協調器和排程器所提供的功能很複雜開發並從頭開始建立，因此您通常會想要使用廠商所提供的協調流程解決方案。
 
 >[!div class="step-by-step"]
 >[上一頁](index.md)

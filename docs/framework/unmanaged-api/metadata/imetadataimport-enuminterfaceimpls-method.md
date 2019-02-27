@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c94960478e6b2eb4e7b8f1e9592b0831af3ec686
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21d70b2702a754b554f06de5dad776ae98ae918d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603764"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836262"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls 方法
-列舉代表介面實作的 MethodDef 語彙基元。  
+列舉所指定實作的所有介面`TypeDef`。 
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ HRESULT EnumInterfaceImpls (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `phEnum`  
  [in、 out]列舉值的指標。  
   
@@ -61,6 +61,10 @@ HRESULT EnumInterfaceImpls (
 |-------------|-----------------|  
 |`S_OK`|`EnumInterfaceImpls` 已成功傳回。|  
 |`S_FALSE`|沒有列舉 MethodDef 語彙基元。 在此情況下，`pcImpls`設為零。|  
+
+## <a name="remarks"></a>備註
+
+此列舉會傳回的集合`mdInterfaceImpl`每個介面實作所指定的語彙基元`TypeDef`。 介面權杖會傳回指定之介面的順序 (透過`DefineTypeDef`或`SetTypeDefProps`)。 屬性傳回之`mdInterfaceImpl`您可以使用查詢語彙基元[GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)。
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

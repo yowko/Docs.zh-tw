@@ -3,15 +3,15 @@ title: 使用叢集學習工具建立鳶尾花叢集 - ML.NET
 description: 了解如何在群集案例中使用 ML.NET
 author: pkulikov
 ms.author: johalex
-ms.date: 01/11/2019
+ms.date: 02/19/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: fcbd75597d6fdce8dceffc9d47d06cc13dd11570
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093602"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664467"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>教學課程：ML.NET 的使用叢集學習工具建立鳶尾花叢集
 
@@ -84,7 +84,7 @@ ms.locfileid: "56093602"
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` 是輸入資料類別，它含有資料集中每個特徵的定義。 請使用 [Column](xref:Microsoft.ML.Data.ColumnAttribute) 屬性來指定資料集檔案中來源資料行的索引。
+`IrisData` 是輸入資料類別，它含有資料集中每個特徵的定義。 請使用 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) 屬性來指定資料集檔案中來源資料行的索引。
 
 `ClusterPrediction` 類別代表套用至 `IrisData` 執行個體的群集模型結果。 使用 [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) 屬性分別將 `PredictedClusterId` 和 `Distances` 欄位繫結至 **PredictedLabel** 和 **Score** 資料行。 群集這些資料行的工作具有下列意義：
 
@@ -127,7 +127,7 @@ ms.locfileid: "56093602"
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-請注意，資料行名稱和索引會符合 `IrisData` 類別所定義的結構描述。 <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> 值指定 `float` 類型。
+使用[泛型 `CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%60%601(Microsoft.ML.DataOperationsCatalog,System.Boolean,System.Char,System.Boolean,System.Boolean,System.Boolean)) 方法來從 `IrisData` 類別定義推斷資料集的結構描述。
 
 使用具現化的 <xref:Microsoft.ML.Data.TextLoader> 執行個體來建立 <xref:Microsoft.Data.DataView.IDataView> 執行個體，以表示定型資料集的資料來源：
 

@@ -1,15 +1,15 @@
 ---
-title: HOW TO：使用命令列建立和使用組件 (C#)
+title: 作法：使用命令列建立和使用組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 3b582f3959ed4c703123fab99e98bedda0a0a3a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df22d52ad71b2a98d7e85f4c2002091b97d87b21
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623832"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746885"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>HOW TO：使用命令列建立和使用組件 (C#)
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>作法：使用命令列建立和使用組件 (C#)
 組件又稱為動態連結程式庫 (DLL)，會在執行階段連結到您的程式。 為了示範如何建立和使用 DLL，請考慮下列案例：  
   
 -   `MathLibrary.DLL`：程式庫檔案，其中包含要在執行階段呼叫的方法。 在此範例中，DLL 包含兩個方法︰`Add` 和 `Multiply`。  
@@ -125,5 +125,5 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
 ## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
-- [組件和全域組件快取 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET 中的組件](../../../../standard/assembly/index.md)
 - [建立類別以包裝 DLL 函式](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

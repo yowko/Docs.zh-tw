@@ -45,5 +45,4 @@ author: KrzysztofCwalina
 ## <a name="see-also"></a>另請參閱
 
 - [概觀](../../../docs/framework/get-started/overview.md)
-- [.NET Framework 藍圖](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)
 - [開發指南](../../../docs/framework/development-guide.md)

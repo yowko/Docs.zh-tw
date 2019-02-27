@@ -3,21 +3,15 @@ title: 集合和資料結構
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- grouping data in collections
-- objects [.NET Framework], grouping in collections
-- Array class, grouping data in collections
-- threading [.NET Framework], safety
-- Collections classes
-- collections [.NET Framework]
+  - grouping data in collections
+  - 'objects [.NET Framework], grouping in collections'
+  - 'Array class, grouping data in collections'
+  - 'threading [.NET Framework], safety'
+  - Collections classes
+  - 'collections [.NET Framework]'
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af76322cac08d7cf4e7e30e503c7fa2c97414898
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154904"
 ---
 # <a name="collections-and-data-structures"></a>集合和資料結構
 使用集合進行儲存與管理時，通常可以更有效率地處理類似的資料。 您可以使用 <xref:System.Array?displayProperty=nameWithType> 類別或 <xref:System.Collections>、<xref:System.Collections.Generic>、<xref:System.Collections.Concurrent> 和 System.Collections.Immutable 命名空間中的類別，來新增、移除和修改集合中的個別項目或某個範圍項目。  
@@ -33,7 +27,7 @@ ms.locfileid: "53154904"
   
 -   **列舉集合的能力**  
   
-     .NET Framework 集合實作 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>，可重複查看集合。 列舉程式可視為集合中任何元素可移動的指標。 [foreach, in](~/docs/csharp/language-reference/keywords/foreach-in.md) 陳述式和 [For Each...Next 陳述式](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md)，會使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法所公開的列舉程式，並會隱藏管理列舉程式的複雜程度。 此外，實作 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 的任何集合，會視為「可查詢類型」，且可使用 LINQ 進行查詢。 LINQ 查詢提供存取資料的常見模式。 且通常比標準 `foreach` 迴圈更簡潔易懂，並提供篩選、排序和分組的功能。 LINQ 查詢也可以提升效能。 如需詳細資訊，請參閱 [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)、[平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) 和 [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
+     .NET Framework 集合實作 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>，可重複查看集合。 列舉程式可視為集合中任何元素可移動的指標。 [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) 陳述式和 [For Each...Next 陳述式](../../visual-basic/language-reference/statements/for-each-next-statement.md)，會使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法所公開的列舉程式，並會隱藏管理列舉程式的複雜程度。 此外，實作 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 的任何集合，會視為「可查詢類型」，且可使用 LINQ 進行查詢。 LINQ 查詢提供存取資料的常見模式。 且通常比標準 `foreach` 迴圈更簡潔易懂，並提供篩選、排序和分組的功能。 LINQ 查詢也可以提升效能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)、[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)、[LINQ 查詢簡介 (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) 及[基本查詢作業 (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
   
 -   **將集合內容複製到陣列的能力**  
   
@@ -63,7 +57,7 @@ ms.locfileid: "53154904"
  
 |我想要…|泛型集合的選項|非泛型集合的選項|安全執行緒或固定集合的選項|  
 |-|-|-|-|  
-|儲存項目為成對的機碼/值，以供依據機碼快速查詢|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (成對的機碼/值之集合，依據機碼的雜湊碼加以組織)。|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
+|儲存項目為成對的索引鍵/值，以供依據索引鍵快速查詢|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (成對的機碼/值之集合，依據機碼的雜湊碼加以組織)。|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
 |依索引存取項目|<xref:System.Collections.Generic.List%601>|<xref:System.Array><br /><br /> <xref:System.Collections.ArrayList>|<xref:System.Collections.Immutable.ImmutableList%601><br /><br /> <xref:System.Collections.Immutable.ImmutableArray>|  
 |先進先出 (FIFO) 地使用項目|<xref:System.Collections.Generic.Queue%601>|<xref:System.Collections.Queue>|<xref:System.Collections.Concurrent.ConcurrentQueue%601><br /><br /> <xref:System.Collections.Immutable.ImmutableQueue%601>|  
 |後進先出 (LIFO) 地使用資料|<xref:System.Collections.Generic.Stack%601>|<xref:System.Collections.Stack>|<xref:System.Collections.Concurrent.ConcurrentStack%601><br /><br /> <xref:System.Collections.Immutable.ImmutableStack%601>|  

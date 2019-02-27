@@ -1,5 +1,5 @@
 ---
-title: HOW TO：偵錯 Windows 服務應用程式
+title: 作法：偵錯 Windows 服務應用程式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 02ea82bf224349e6ea7a5afbfb3c38ba50df46f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15b790f4a4d3348e2bef3e7e929d72c09da8690c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720362"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441875"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>HOW TO：偵錯 Windows 服務應用程式
 服務必須從服務控制管理員內容之中執行，而不是從 Visual Studio 之中執行。 因此，對服務進行偵錯不像是對其他 Visual Studio 應用程式類型進行偵錯那樣簡單直接。 若要對服務進行偵錯，您必須啟動服務，然後將偵錯工具附加至執行中的處理序。 之後就可以使用 Visual Studio 所有的標準偵錯功能，對應用程式進行偵錯。  
@@ -32,15 +32,15 @@ ms.locfileid: "54720362"
 >  對 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法進行偵錯可能是項困難的工作，因為服務控制管理員對於啟動服務的所有嘗試都強加上 30 秒的限制。 如需詳細資訊，請參閱[疑難排解：對 Windows 服務進行偵錯](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)。  
   
 > [!WARNING]
->  若要取得有關偵錯的有意義資訊，Visual Studio 偵錯工具必須在符號檔中找到正在進行偵錯的二進位檔案。 如果您想要對建置於 Visual Studio 中的服務進行偵錯，符號檔 (.pdb 檔) 會與可執行檔或程式庫位於同一個資料夾中，並且偵錯工具會自動載入檔案。 如果您想要對非您所建置的服務進行偵錯，則應該先找到服務的符號，並確定偵錯工具可以找到這些符號。 請參閱[指定符號 (.pdb) 和原始程式檔](https://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b)。 如果您想要對系統處理序進行偵錯，或想要在您的服務中有系統呼叫的符號，則應該加入 Microsoft 符號伺服器。 請參閱[偵錯符號](/windows/desktop/DxTechArts/debugging-with-symbols) \(英文\)。  
+>  若要取得有關偵錯的有意義資訊，Visual Studio 偵錯工具必須在符號檔中找到正在進行偵錯的二進位檔案。 如果您想要對建置於 Visual Studio 中的服務進行偵錯，符號檔 (.pdb 檔) 會與可執行檔或程式庫位於同一個資料夾中，並且偵錯工具會自動載入檔案。 如果您想要對非您所建置的服務進行偵錯，則應該先找到服務的符號，並確定偵錯工具可以找到這些符號。 請參閱[在 Visual Studio 偵錯工具中指定符號 (.pdb) 和來源檔案](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)。 如果您想要對系統處理序進行偵錯，或想要在您的服務中有系統呼叫的符號，則應該加入 Microsoft 符號伺服器。 請參閱[偵錯符號](/windows/desktop/DxTechArts/debugging-with-symbols) \(英文\)。  
   
 ### <a name="to-debug-a-service"></a>偵錯服務  
   
 1.  在偵錯組態中建置您的服務。  
   
-2.  安裝您的服務。 如需詳細資訊，請參閱[＜How to：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
+2.  安裝您的服務。 如需詳細資訊，請參閱[如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
-3.  從 [服務控制管理員]、[伺服器總管] 或從程式碼啟動您的服務。 如需詳細資訊，請參閱[＜How to：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)。  
+3.  從 [服務控制管理員]、[伺服器總管] 或從程式碼啟動您的服務。 如需詳細資訊，請參閱[如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)。  
   
 4.  使用系統管理認證啟動 Visual Studio，以便能夠附加至系統處理程序。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "54720362"
   
  嘗試將程式變更為一般主控台應用程式。 若要執行這項操作，請依照下列方式重寫 `Main` 方法，以根據程式的啟動方式，將程式當做 Windows 服務或主控台應用程式來執行。  
   
-#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>HOW TO：將 Windows 服務當作主控台應用程式來執行  
+#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>作法：將 Windows 服務當作主控台應用程式來執行  
   
 1.  將方法加入執行 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法的服務：  
   
@@ -111,7 +111,7 @@ ms.locfileid: "54720362"
   
 5.  若要再次將程式當做 Windows 服務來執行，請以適用於 Windows 服務的方式來安裝及啟動程式。 您不需要回復這些變更。  
   
- 在某些情況下 (例如當您想要偵錯只在系統啟動時發生的問題時)，您必須使用 Windows 偵錯工具。 安裝[適用於 Windows 的偵錯工具](https://msdn.microsoft.com/windows/hardware/hh852365) \(英文\) 並參閱[如何對 Windows 服務進行偵錯](https://support.microsoft.com/kb/824344) \(機器翻譯\)。  
+ 在某些情況下 (例如當您想要偵錯只在系統啟動時發生的問題時)，您必須使用 Windows 偵錯工具。 [下載 Windows 驅動程式套件 (WDK)](/windows-hardware/drivers/download-the-wdk)，並參閱[如何偵錯 Windows 服務](https://support.microsoft.com/kb/824344)。  
   
 ## <a name="see-also"></a>另請參閱
 - [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
