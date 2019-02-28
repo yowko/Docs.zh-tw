@@ -1,19 +1,13 @@
 ---
-title: C# 教學課程
-description: 探索這些 C# 教學課程以了解如何建置 C# 程式，並了解 C# 語言功能。
+title: 'C# 教學課程'
+description: '探索這些 C# 教學課程以了解如何建置 C# 程式，並了解 C# 語言功能。'
 ms.date: 10/25/2018
-ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084663"
 ---
 # <a name="c-tutorials"></a>C# 教學課程
 
 歡迎使用 C# 教學課程。 這些快速入門會以可在瀏覽器中執行的互動式課程開始。 此教學課程稍後與更多進階教學課程將協助您在您的電腦上使用 .NET 開發工具來建立 C# 程式。
 
-## <a name="introduction-to-c-interactive-tutorials"></a>C# 簡介互動式教學課程 #
+## <a name="introduction-to-c-interactive-tutorials"></a>C# 簡介互動式教學課程
 
 第一個課程會使用簡短的程式碼片段解釋 C# 概念。 您將能學習 C# 語法的基本概念，以及如何處理字串、數字和布林值等資料類型。 課程內容都是可互動的，因此您很快就能上手並開始撰寫和執行程式碼。 這些入門課程會假設您是首次接觸程式設計或 C# 語言。
 
@@ -47,7 +41,7 @@ ms.locfileid: "54084663"
 
 在您自己的本機開發環境中，即可使用 Hello World 課程後的所有簡介教學課程。 在每個教學課程結束時，您可以決定要在線上還是在自己的電腦上繼續進行下一個課程。 有些連結可幫助您設定環境，並在您的電腦上繼續進行下一個教學課程。
 
-## <a name="explore-new-features-in-c"></a>探索 C# 中的新功能 #
+## <a name="explore-new-features-in-c"></a>探索 C\# 中的新功能
 
 在此[互動式探索](exploration/csharp-6.yml)中嘗試 [C# 6](../whats-new/csharp-6.md) 中的新功能。
 

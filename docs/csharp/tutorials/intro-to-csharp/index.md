@@ -1,16 +1,10 @@
 ---
-title: C# 簡介 - 互動式教學課程
-description: 在您的瀏覽器中學習 C#，並開始使用您自己的開發環境
+title: 'C# 簡介 - 互動式教學課程'
+description: '在您的瀏覽器中學習 C#，並開始使用您自己的開發環境'
 ms.date: 01/30/2018
 ms.custom: mvc
-ms.openlocfilehash: bfd08c0885351cebb0b2d7a45e93de20fa1bc97f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186164"
 ---
-# <a name="introduction-to-c"></a>C# 簡介 #
+# <a name="introduction-to-c"></a>C\# 簡介
 
 歡迎使用 C# 簡介教學課程。 這些快速入門會以可在瀏覽器中執行的互動式課程開始。
 
