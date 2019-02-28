@@ -27,12 +27,12 @@
 ### [基底類型](standard/base-types/)
 ## [.NET 類別庫](standard/class-libraries.md)
 ## [分析器](standard/analyzers/index.md)
-### [API 分析器](standard/analyzers/api-analyzer.md) 
+### [API 分析器](standard/analyzers/api-analyzer.md)
 ### [可攜性分析器](standard/analyzers/portability-analyzer.md)
 ### [架構分析器](standard/analyzers/framework-analyzer.md)
 ## [處理和擲回例外狀況](standard/exceptions/)
 ## [.NET 中的組件](standard/assembly/index.md)
-### [.NET 組件檔格式](standard/assembly/file-format.md) 
+### [.NET 組件檔格式](standard/assembly/file-format.md)
 ## [記憶體回收](standard/garbage-collection/)
 ## [泛型類型](standard/generics.md)
 ## [委派和 Lambda](standard/delegates-lambdas.md)
@@ -84,16 +84,15 @@
 ### [在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置 .NET Standard 程式庫](core/tutorials/vb-library-with-visual-studio.md)
 ### [在 Visual Studio 2017 中使用 .NET Core 測試 .NET Standard 程式庫](core/tutorials/testing-library-with-visual-studio.md)
 ### [在 Visual Studio 2017 中取用 .NET Standard 程式庫](core/tutorials/consuming-library-with-visual-studio.md)
-## [Windows 必要條件](core/windows-prerequisites.md)
+## [Windows 先決條件](core/windows-prerequisites.md)
 ## [macOS 先決條件](core/macos-prerequisites.md)
-## [Linux 必要條件](core/linux-prerequisites.md)
+## [Linux 先決條件](core/linux-prerequisites.md)
 ## [.NET Core 的新功能](core/whats-new/index.md)
 ### [.NET Core 3.0 的新功能](core/whats-new/dotnet-core-3-0.md)
 ### [.NET Core 2.2 的新功能](core/whats-new/dotnet-core-2-2.md)
 ### [.NET Core 2.1 的新功能](core/whats-new/dotnet-core-2-1.md)
 ### [.NET Core 2.0 的新功能](core/whats-new/dotnet-core-2-0.md)
 ## [教學課程](core/tutorials/index.md)
-### [使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案](core/tutorials/using-on-windows-full-solution.md)
 ### [在 macOS 上開始使用 .NET Core](core/tutorials/using-on-macos.md)
 ### [使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core](core/tutorials/using-on-mac-vs.md)
 ### [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 方案](core/tutorials/using-on-mac-vs-full-solution.md)
@@ -101,7 +100,6 @@
 ### [使用 .NET Core 命令列組織和測試專案](core/tutorials/testing-with-cli.md)
 ### [使用跨平台工具開發程式庫](core/tutorials/libraries.md)
 ### [開發 ASP.NET Core 應用程式](core/tutorials/aspnet-core.md)
-### [如何管理 .NET Core 1.0 的套件相依性版本](core/tutorials/managing-package-dependency-versions.md)
 ### [從機器碼裝載 .NET Core](core/tutorials/netcore-hosting.md)
 ### [建立適用於 dotnet new 的自訂範本](core/tutorials/create-custom-template.md)
 ## [套件、中繼套件和架構](core/packages.md)
@@ -270,7 +268,9 @@
 ## [C# 的教學課程](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
+<!-- markdownlint-disable MD003 -->
 ## C# 的新功能
+<!-- markdownlint-enable MD003 -->
 ### [C# 8.0 - Preview 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
@@ -522,9 +522,11 @@
 #### [自訂 My 中可用的物件](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [程式設計概念](visual-basic/programming-guide/concepts/index.md)
-### [.NET 中的組件](standard/assembly/index.md)
 ### [使用 Async 和 Await 進行非同步程式設計](visual-basic/programming-guide/concepts/async/index.md)
 ### [屬性](visual-basic/programming-guide/concepts/attributes/index.md)
+### [呼叫端資訊](visual-basic/programming-guide/concepts/caller-information.md)
+### [集合](visual-basic/programming-guide/concepts/collections.md)
+### [共變數和反變數](visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 ### [運算式樹狀結構](visual-basic/programming-guide/concepts/expression-trees/index.md)
 ### [迭代器](visual-basic/programming-guide/concepts/iterators.md)
 ### [Language-Integrated Query (LINQ)](visual-basic/programming-guide/concepts/linq/index.md)
@@ -1199,8 +1201,8 @@
 ### [鳶尾花 (叢集)](machine-learning/tutorials/iris-clustering.md)
 ## [操作指南](machine-learning/how-to-guides/index.md)
 ### 準備資料
-#### [套用明確功能工程設計 ](machine-learning/how-to-guides/train-model-categorical-ml-net.md)
-#### [套用材質功能工程設計 ](machine-learning/how-to-guides/train-model-textual-ml-net.md)
+#### [套用明確功能工程設計](machine-learning/how-to-guides/train-model-categorical-ml-net.md)
+#### [套用材質功能工程設計](machine-learning/how-to-guides/train-model-textual-ml-net.md)
 #### [使用許多欄載入資料](machine-learning/how-to-guides/load-data-from-mult-column-csv-ml-net.md)
 #### [從多個檔案載入資料](machine-learning/how-to-guides/load-data-from-multiple-files-ml-net.md)
 #### [從文字檔載入資料](machine-learning/how-to-guides/load-data-from-text-file-ml-net.MD)
@@ -1211,7 +1213,7 @@
 #### [檢查中繼管線資料值](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [將迴歸模型定型](machine-learning/how-to-guides/train-regression-model-ml-net.md)
 #### [使用 PFI 判斷模型功能重要性](machine-learning/how-to-guides/determine-global-feature-importance-in-model.md)
-### 使用已定型模型  
+### 使用已定型模型
 #### [使用 PredictionEngine 一次進行一個預測](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [讓已定型模型運作](machine-learning/how-to-guides/consuming-model-ml-net.md)
 ### Infer.NET

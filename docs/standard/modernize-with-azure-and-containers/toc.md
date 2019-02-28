@@ -13,7 +13,7 @@
 ### [將 Windows 容器部署至 Service Fabric 的時機](./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md)
 ### [將 Windows 容器部署至 Azure Container Service (ACS-Kubernetes) 的時機](./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
 ### [選擇容器應用程式的 Azure 運算平台](./modernize-existing-apps-to-cloud-optimized/choosing-azure-compute-options-for-container-based-applications.md)
-### [建置可用於雲端的復原服務：包含雲端中的暫時性失敗](./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+### [建置準備好在雲端執行的彈性服務：接受雲端中的暫時性失敗](./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
 ### [使用監視和遙測將應用程式現代化](./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md)
 ### [在雲端中使用 CI/CD 管線和 DevOps 工具將應用程式生命週期現代化](./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
 ### [移轉至混合式雲端案例](./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)
