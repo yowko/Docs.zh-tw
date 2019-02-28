@@ -3,16 +3,10 @@ title: .NET 的平行程式設計
 ms.date: 09/12/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- parallel programming
+  - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d1cd0b797373da4cab59484e3e6302927d821ed
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112716"
 ---
 # <a name="parallel-programming-in-net"></a>.NET 的平行程式設計
 
@@ -26,14 +20,14 @@ ms.locfileid: "47112716"
 
 ## <a name="related-topics"></a>相關主題
 
-|技術|描述|
+|技術|說明|
 |----------------|-----------------|
 |[工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|提供 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 類別 (包含平行版本的 `For` 和 `ForEach` 迴圈) 及 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別 (表示表達非同步作業較好的方式) 的文件。|
 |[平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|平行實作的 LINQ to Objects，在許多情節中可大幅改善效能。|
 |[適用於平行程式設計的資料結構](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|提供安全執行緒集合類別、輕量型同步處理類型和延遲初始設定類型的文件連結。|
 |[平行診斷工具](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|提供工作與平行堆疊的 Visual Studio 偵錯工具視窗文件連結，以及[並行視覺化工具](/visualstudio/profiling/concurrency-visualizer)的連結。|
 |[PLINQ 和 TPL 的自訂 Partitioner](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|說明 Partitioner 的運作方式，以及如何設定預設 Partitioner 或建立新的 Partitioner。|
-|[工作排程器](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|說明排程器的運作方式以及如何設定預設排程器。|
+|[工作排程器](xref:System.Threading.Tasks.TaskScheduler)|說明排程器的運作方式以及如何設定預設排程器。|
 |[PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|提供 C# 和 Visual Basic 中之 Lambda 運算式的簡短概觀，並且顯示如何在 PLINQ 和工作平行程式庫中使用這些運算式。|
 |[進一步閱讀](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|提供以 .NET 進行平行程式設計的額外資訊和範例資源連結。|
 

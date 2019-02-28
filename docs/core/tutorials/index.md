@@ -5,12 +5,6 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: d7d4685295c17fb4029ee077f5985f2b4152bbb4
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168738"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>透過探索這些教學課程來學習 .NET Core 與 .NET Core SDK 工具
 
@@ -25,7 +19,6 @@ ms.locfileid: "53168738"
 - [使用 Visual Basic 建立類別庫](vb-library-with-visual-studio.md)
 - [測試類別庫](testing-library-with-visual-studio.md)
 - [使用類別庫](consuming-library-with-visual-studio.md)
-- [在 Windows 上建置完整的 C# .NET Core 方案](using-on-windows-full-solution.md)
 - [Azure Cosmos DB：Azure Cosmos DB：開始使用 SQL API 和 .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>使用 Visual Studio Code 建置應用程式
@@ -48,7 +41,6 @@ ms.locfileid: "53168738"
 - [使用 dotnet test 的 .NET Core 單元測試](../testing/unit-testing-with-dotnet-test.md)
 - [使用 MSTest 和 .NET Core 執行單元測試](../testing/unit-testing-with-mstest.md)
 - [使用跨平台工具開發程式庫](libraries.md)
-- [如何管理 .NET Core 1.0 的套件相依性版本](managing-package-dependency-versions.md)
 - [從機器碼裝載 .NET Core](netcore-hosting.md)
 - [建立適用於 dotnet new 的自訂範本](create-custom-template.md)
 

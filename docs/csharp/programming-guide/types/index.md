@@ -1,23 +1,17 @@
 ---
-title: 類型 - C# 程式設計手冊
+title: '類型 - C# 程式設計手冊'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- value types [C#]
-- reference types [C#]
-- types [C#]
-- C# language, data types
-- common type system [C#]
-- data types [C#]
-- C# language, types
-- strong typing [C#]
+  - 'value types [C#]'
+  - 'reference types [C#]'
+  - 'types [C#]'
+  - 'C# language, data types'
+  - 'common type system [C#]'
+  - 'data types [C#]'
+  - 'C# language, types'
+  - 'strong typing [C#]'
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5d24e28b6a685cf4934c06c72ffbc8aa29748faa
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739311"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 ## <a name="types-variables-and-values"></a>型別、變數和值  
@@ -39,7 +33,7 @@ ms.locfileid: "55739311"
   
  編譯器會使用型別資訊，來確認在您的程式碼中執行的全部都是「型別安全」的作業。 例如，如果您宣告型別 [int](../../../csharp/language-reference/keywords/int.md) 的變數，編譯器會允許您使用額外的變數和減法運算。 如果您嘗試針對型別 [bool](../../../csharp/language-reference/keywords/bool.md) 的變數執行相同作業，編譯器會產生錯誤，如下列範例所示︰  
   
- [!code-csharp[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]  
   
 > [!NOTE]
 >  C 和 C++ 開發人員要注意在 C# 中，[bool](../../../csharp/language-reference/keywords/bool.md) 不能轉換為 [int](../../../csharp/language-reference/keywords/int.md)。  
@@ -49,11 +43,11 @@ ms.locfileid: "55739311"
 ### <a name="specifying-types-in-variable-declarations"></a>在變數宣告中指定型別  
  當您在程式中宣告變數或常數時，您必須指定其型別，或使用 [var](../../../csharp/language-reference/keywords/var.md) 關鍵字以讓編譯器推斷其型別。 下列範例示範一些變數宣告，使用內建的數字型別和複雜的使用者定義型別︰  
   
- [!code-csharp[csProgGuideTypes#36](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]  
   
  在方法簽章中指定方法參數和傳回值的型別。 下列簽章顯示的方法要求 [int](../../../csharp/language-reference/keywords/int.md) 做為輸入引數且會傳回字串︰  
   
- [!code-csharp[csProgGuideTypes#35](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]  
   
  宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您無法宣告 [int](../../../csharp/language-reference/keywords/int.md) 並將為 [true](../../../csharp/language-reference/keywords/true-literal.md) 的布林值指派給它。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」作業。 而可能導致資料遺失的轉換在原始程式碼中需要有 *cast*。  
   
@@ -104,13 +98,13 @@ char c = 'Z';
   
  您使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字來建立您自己自訂的實值型別。 一般來說，會使用結構做為一小組相關變數的容器，如下列範例所示︰  
   
- [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]  
+ [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
  如需結構的詳細資訊，請參閱[結構](../../../csharp/programming-guide/classes-and-structs/structs.md)。 如需 .NET 中實值型別的詳細資訊，請參閱[實值型別](../../../csharp/language-reference/keywords/value-types.md)。  
   
  實值型別的另一種類別是 [enum](../../../csharp/language-reference/keywords/enum.md)。 列舉會定義一組具名的整數常數。 例如，.NET 類別庫中的 <xref:System.IO.FileMode?displayProperty=nameWithType> 列舉包含一組指定該如何開啟檔案的具名常數整數。 其定義方式如下列範例所示：  
  
- [!code-csharp[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]  
+ [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]  
   
  `System.IO.FileMode.Create` 常數的值為 2。 不過，使用者在讀取原始程式碼時，名稱會更有意義，也因此最好使用列舉，而不要使用常數常值數字。 如需詳細資訊，請參閱<xref:System.IO.FileMode?displayProperty=nameWithType>。  
   
@@ -133,7 +127,7 @@ IMyInterface iface = new MyClass();
   
  所有陣列都是參考型別，即使其元素都是實值型別。 陣列隱含衍生自 <xref:System.Array?displayProperty=nameWithType> 類別，但您會利用 C# 所提供的簡化語法來宣告及使用陣列，如下列範例所示：  
   
- [!code-csharp[csProgGuideTypes#45](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_6.cs)]  
+ [!code-csharp[csProgGuideTypes#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#45)]  
   
  參考型別完全支援繼承。 當您建立類別時，您可以繼承自任何未定義為 [sealed](../../../csharp/language-reference/keywords/sealed.md) 的介面或類別，而其他類別可以繼承自您的類別並覆寫您的虛擬方法。 如需如何為您自己建立類別的詳細資訊，請參閱[類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)。 如有關繼承和虛擬方法的詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
   
@@ -142,7 +136,7 @@ IMyInterface iface = new MyClass();
   
  因為輸入的是常值且所有類型最終都衍生自 <xref:System.Object?displayProperty=nameWithType>，所以您可以如下所示來撰寫和編譯程式碼：  
   
- [!code-csharp[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideTypes#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#37)]  
   
 ## <a name="generic-types"></a>泛型型別  
  可使用一或多個「型別參數」宣告的型別，做為預留位置 (具象型別)，以供用戶端程式碼在其建立該型別的執行個體時提供實際型別。 這類的類型稱為「泛型型別」。 例如，.NET 型別 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 有一個型別參數，依慣例命名為 *T*。當您建立該型別的執行個體時，您會指定該清單將包含的物件型別，例如 string：  

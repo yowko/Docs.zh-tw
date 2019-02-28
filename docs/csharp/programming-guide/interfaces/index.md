@@ -15,7 +15,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
   
 您會使用 [interface](../../language-reference/keywords/interface.md) 關鍵字來定義介面， 如下列範例所示。  
   
-[!code-csharp[csProgGuideInheritance#47](../classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
 結構的名稱必須是有效的 C# [識別碼名稱](../inside-a-program/identifier-names.md)。 依慣例，介面名稱的開頭是大寫的|capital `I`。
 
@@ -78,7 +78,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
   
 ## <a name="featured-book-chapter"></a>精選書籍章節
 
-[了解 C# 3.0：掌握 C# 3.0 的基本概念](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)中的[介面](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29)
+[了解 C# 3.0：掌握 C# 3.0 的基本概念](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)中的介面
 
 ## <a name="see-also"></a>另請參閱
 
