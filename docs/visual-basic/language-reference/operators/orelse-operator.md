@@ -11,12 +11,12 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 70bbfef54d3f716e0e7463a39ee15e8480066695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5a0a3420d86df67e38df390ce98fbbe43c69459
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603010"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981346"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse 運算子 (Visual Basic)
 執行最少運算的兩個運算式上的內含邏輯分離。  
@@ -57,14 +57,14 @@ result = expression1 OrElse expression2
 ## <a name="example"></a>範例  
  下列範例會使用`OrElse`上兩個運算式執行邏輯分離的運算子。 結果是`Boolean`值，表示其中兩個運算式是否為 true。 如果第一個運算式為`True`，則不會評估第二個。  
   
- [!code-vb[VbVbalrOperators#37](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#37)]  
   
  上述範例產生的結果`True`， `True`，和`False`分別。 計算`firstCheck`，因為已經是第一，不會評估第二個運算式`True`。 不過，第二個運算式評估的計算`secondCheck`。  
   
 ## <a name="example"></a>範例  
  下列範例所示`If`...`Then`包含兩個程序呼叫陳述式。 如果第一次呼叫傳回`True`，不會呼叫第二個程序。 如果第二個程序執行的重要工作，應該一律在這段程式碼執行時才執行，這可能產生非預期的結果。  
   
- [!code-vb[VbVbalrOperators#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#38)]  
   
 ## <a name="see-also"></a>另請參閱
 - [邏輯/位元運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)

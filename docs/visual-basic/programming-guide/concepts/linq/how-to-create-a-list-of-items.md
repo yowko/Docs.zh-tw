@@ -5,12 +5,12 @@ helpviewer_keywords:
 - list [LINQ in Visual Basic]
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
-ms.openlocfilehash: 9b491d7bf5bf7dd0f15aa43f8721c245a97cc093
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69c20ac07a1e21371edae333d6ccbd7364995767
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717086"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971802"
 ---
 # <a name="how-to-create-a-list-of-items"></a>HOW TO：建立項目清單
 本主題中的程式碼定義 `Student` 類別並建立此類別的執行個體清單。 清單設計來支援主題[逐步解說：在 Visual Basic 中撰寫查詢](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)。 也可以用於任何需要物件清單的應用程式。 程式碼會使用物件初始設定式來定義學員清單中的項目。  
@@ -18,7 +18,7 @@ ms.locfileid: "54717086"
 ## <a name="example"></a>範例  
  如果您正在執行本逐步解說，可將此程式碼使用於在其中建立之專案的 Module1.vb 檔案。 使用本逐步解說中所提供的查詢和查詢執行，取代 `Main` 中標示 **** 的程式行。  
   
- [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/how-to-create-a-list-of-items_1.vb)]  
+ [!code-vb[VbLINQHowToCreateList#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowToCreateList/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
 - [逐步解說：在 Visual Basic 中撰寫查詢](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)

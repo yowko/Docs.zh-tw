@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: f558c61d2e81471e167e97816ff47bc4465c5f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 646d7d217891dc8ea5b78f7ce30fce19fab08316
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638115"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977574"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub 程序 (Visual Basic)
 A`Sub`程序是一系列的 Visual Basic 陳述式加上`Sub`和`End Sub`陳述式。 `Sub`程序執行的工作，然後將控制權傳回呼叫的程式碼，但它不會傳回呼叫程式碼的值。  
@@ -66,11 +66,11 @@ A`Sub`程序是一系列的 Visual Basic 陳述式加上`Sub`和`End Sub`陳述�
 ### <a name="illustration-of-declaration-and-call"></a>宣告和呼叫的圖例  
  下列`Sub`程序會告訴電腦運算子的應用程式即將執行的工作，也會顯示時間戳記。 而不必重複此程式碼開頭的每項工作，應用程式只會呼叫`tellOperator`從各種不同的位置。 每個呼叫會傳遞的字串`task`識別啟動之工作的引數。  
   
- [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
  下列範例示範的典型呼叫`tellOperator`。  
   
- [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>另請參閱
 - [程序](./index.md)

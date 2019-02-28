@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 9a716a767563ab2721b3f01663d7566f141fc8e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11ea31ae245d34525ea33d5d2a53a72f1c415b16
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612017"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981448"
 ---
 # <a name="string-functions-visual-basic"></a>字串函式 (Visual Basic)
 下表列出 Visual Basic 提供用來搜尋和操作字串的函式。  
@@ -51,27 +51,27 @@ ms.locfileid: "54612017"
 ## <a name="example"></a>範例  
  這個範例會使用`UCase`函數來傳回字串的大寫版本。  
   
- [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
+ [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>範例  
  這個範例會使用`LTrim`函式刪除前置空格和`RTrim`函式來移除尾端空格的字串變數中。 它會使用`Trim`函式刪除這兩種類型的空格。  
   
- [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
+ [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>範例  
  這個範例會使用`Mid`函式以從字串傳回指定的字元數。  
   
- [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
+ [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
   
 ## <a name="example"></a>範例  
  這個範例會使用`Len`字串中傳回的字元數。  
   
- [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
+ [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
 ## <a name="example"></a>範例  
  這個範例會使用`InStr`函式傳回一個字串在另一個字串的第一次出現的位置。  
   
- [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
+ [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>範例  
  此範例示範的各種用法`Format`函式來使用這兩個格式值`String`格式及使用者定義的格式。 對於日期分隔符號 (`/`)，時間分隔符號 (`:`)，和 AM/PM 指示器 (`t`和`tt`)，系統顯示的實際格式化的輸出取決於程式碼使用的地區設定。 當時間和日期會顯示在開發環境中，會使用簡短時間格式和程式碼地區設定的簡短日期格式。  
@@ -79,7 +79,7 @@ ms.locfileid: "54612017"
 > [!NOTE]
 >  針對使用 24 小時制，AM/PM 指示器的地區設定 (`t`和`tt`) 會顯示任何內容。  
   
- [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
+ [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>另請參閱
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

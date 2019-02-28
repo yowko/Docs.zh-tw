@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: 9833b562fc0b4115448ebefb8631f0d73eb15f6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2831333008844c959c3625698fce6c485450683
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618918"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967551"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>HOW TO：在 Visual Basic 中的字串中的存取字元
 此範例示範如何使用<xref:System.String.Chars%2A>屬性來存取字串中指定的位置處的字元。  
@@ -18,7 +18,7 @@ ms.locfileid: "54618918"
 ## <a name="example"></a>範例  
  有時候最好擁有您的字串與這些字元在字串中的位置中的字元資料。 您可以將字串視為字元陣列 (`Char`執行個體)，您可以藉由參考到該字元的索引來擷取特定字元<xref:System.String.Chars%2A>屬性。  
   
- [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-access-characters-in-strings_1.vb)]  
+ [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
   
  `index`參數<xref:System.String.Chars%2A>屬性是以零為起始。  
   

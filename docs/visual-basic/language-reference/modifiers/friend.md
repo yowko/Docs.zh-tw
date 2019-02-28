@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 9be3200300de308a70559536905d1e118a4a5fe4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52fdbfa3b0cd79cc9714a13a75716829163e45f6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616195"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967369"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 指定一或多個宣告的程式設計元素，只能從包含其宣告的組件內加以存取。  
@@ -40,7 +40,7 @@ ms.locfileid: "54616195"
 ## <a name="example"></a>範例  
  下列類別使用`Friend`修飾詞，以允許存取特定成員相同的組件中的其他程式設計項目。  
   
- [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
+ [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>使用量  
  您可以使用`Friend`修飾詞，在這些內容中：  

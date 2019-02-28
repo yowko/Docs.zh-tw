@@ -4,12 +4,12 @@ description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 16228321cc788b381603513213130415eb73a95c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128852"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971828"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>建置開始使用雲端的復原服務：利用在雲端中的暫時性失敗
 
@@ -35,7 +35,7 @@ ms.locfileid: "53128852"
 
 在 HTTP 資源和資料庫資源，您可以使用這些技術。 在 圖 4-9、 應用程式根據 3 層式架構，因此您必須在服務層級 (HTTP) 和資料層級 (TCP)，這些技術。 使用只單一應用程式層除了資料庫 （不含其他服務或微服務） 的整合型應用程式，在處理暫時性失敗，資料庫層級的連線可能就足夠了。 在此情況下，只是資料庫連接的特定組態則是必要項目。
 
-實作具有恢復功能存取資料庫時，根據您使用的.NET 版本的通訊時可能很簡單 (例如[Entity Framework 6 或更新版本](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)，就只需設定資料庫連接）。 或者，您可能需要使用額外的程式庫，例如[暫時性錯誤處理應用程式區塊](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)（適用於舊版的.NET），或甚至是實作您自己的程式庫。
+實作具有恢復功能存取資料庫時，根據您使用的.NET 版本的通訊時可能很簡單 (例如[Entity Framework 6 或更新版本](/ef/ef6/fundamentals/connection-resiliency/retry-logic)。 它是只需設定資料庫連接）。 或者，您可能需要使用額外的程式庫，例如[暫時性錯誤處理應用程式區塊](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50))（適用於舊版的.NET），或甚至是實作您自己的程式庫。
 
 實作 HTTP 重試與斷路器時，適用於.NET 的建議是使用[Polly](https://github.com/App-vNext/Polly)目標.NET Framework 4.0，.NET Framework 4.5 和.NET Standard 1.1 中，其中包含.NET Core 支援程式庫。
 
@@ -49,11 +49,11 @@ ms.locfileid: "53128852"
 
 -   **Entity Framework 連接恢復功能和重試邏輯 （6 或更新版本）**
 
-    [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
+    [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
 -   **暫時性錯誤處理應用程式區塊**
 
--   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
+-   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
 -   **Polly 程式庫，適用於具有恢復功能的 HTTP 通訊**
 

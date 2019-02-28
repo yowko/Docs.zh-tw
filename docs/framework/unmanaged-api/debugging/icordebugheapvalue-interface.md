@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue 介面 1
+title: ICorDebugHeapValue 介面
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a87790647ed8896f072aa8e943e31fa1980e3f62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5263474b7b5001d561652291c23220da0a942bd1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622854"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980564"
 ---
-# <a name="icordebugheapvalue-interface1"></a>ICorDebugHeapValue 介面 1
+# <a name="icordebugheapvalue-interface"></a>ICorDebugHeapValue 介面
+
 「 ICorDebugValue"，表示已由 common language runtime (CLR) 記憶體回收行程回收物件的子類別。  
   
 ## <a name="methods"></a>方法  

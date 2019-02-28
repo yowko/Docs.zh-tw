@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: 366a4a42ff0bf968e51e11a66fa81566a47c86ea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d9dc68d8e7eced031af404aaec20784573c9930a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179425"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965614"
 ---
 # <a name="xml-and-soap-serialization"></a>XML 和 SOAP 序列化
 
@@ -31,7 +31,7 @@ XML 序列化也可用來將物件序列化為與 SOAP 規格相符的 XML 資�
 [XML 序列化簡介](introducing-xml-serialization.md)  
 提供序列化的一般定義，特別是 XML 序列化。
 
-[如何：序列化物件](how-to-serialize-an-object.md)  
+[如何：將物件序列化](how-to-serialize-an-object.md)  
 提供序列化物件的逐步指示。
 
 [如何：還原序列化物件](how-to-deserialize-an-object.md)  
@@ -49,10 +49,10 @@ XML 序列化也可用來將物件序列化為與 SOAP 規格相符的 XML 資�
 [可控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)  
 列出用來控制 XML 序列化的屬性。
 
-[如何：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+[如何：指定 XML Stream 的替代項目名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
 提供進階案例展示如何藉由覆寫序列化產生多個 XML 資料流。
 
-[如何：控制衍生類別的序列化](how-to-control-serialization-of-derived-classes.md)  
+[如何：控制序列化的衍生類別的](how-to-control-serialization-of-derived-classes.md)  
 提供如何控制衍生類別序列化的範例。
 
 [如何：限定 XML 元素和 XML 屬性名稱](how-to-qualify-xml-element-and-xml-attribute-names.md)  
@@ -61,10 +61,10 @@ XML 序列化也可用來將物件序列化為與 SOAP 規格相符的 XML 資�
 [以 XML Web 服務進行 XML 序列化](xml-serialization-with-xml-web-services.md)  
 說明 XML 序列化如何用於 XML Web 服務當中。
 
-[如何：將物件序列化為 SOAP 編碼的 XML 資料流](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+[如何：將物件序列化為 SOAP 編碼的 XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
 描述如何使用<xref:System.Xml.Serialization.XmlSerializer>類別來建立符合第 5 節的 World Wide Web Consortium (W3C) 文件的編碼的 SOAP XML 資料流[簡易物件存取通訊協定 (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)。
 
-[如何：覆寫已編碼的 SOAP XML 序列化](how-to-override-encoded-soap-xml-serialization.md)  
+[如何：覆寫編碼的 SOAP XML 序列化](how-to-override-encoded-soap-xml-serialization.md)  
 說明將物件的 XML 序列化覆寫為 SOAP 訊息的程序。
 
 [可控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)  
@@ -84,10 +84,7 @@ XML 序列化也可用來將物件序列化為與 SOAP 規格相符的 XML 資�
 
 ## <a name="related-sections"></a>相關章節
 
-[進階開發技術](https://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
-提供與 .NET Framework 中精密的開發工作和技巧有關的詳細資訊之連結。
-
-[使用 ASP.NET 和 XML Web Service 用戶端建立的 XML Web Service](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
+[使用 ASP.NET 和 XML Web Service 用戶端建立的 XML Web Service](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))  
 提供一個主題，說明並解釋如何設計使用 ASP.NET 的 XML Web 服務。
 
 ## <a name="see-also"></a>另請參閱

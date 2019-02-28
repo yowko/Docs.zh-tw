@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: 355267331eda73ab4c32ec27dbba1d82d729420f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1e636da1d277f80f58268b24b69802006eb8315
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638778"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966277"
 ---
 # <a name="-main"></a>-主要
 指定包含 `Sub Main` 程序的類別或模組。  
@@ -33,7 +33,7 @@ ms.locfileid: "54638778"
   
  當`location`是一個類別，繼承自<xref:System.Windows.Forms.Form>，編譯器會提供預設值`Main`程序，啟動應用程式，如果類別沒有`Main`程序。 這可讓您在命令列建立開發環境中的程式碼編譯。  
   
- [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
+ [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>若要設定-主要 Visual Studio 整合式的開發環境  
   

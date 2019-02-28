@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: fd11d00ebfa42eda272db39965d25b905bd5c841
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67f395069c98d8b60eca8c3663fb180a8dd5a2be
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678781"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978159"
 ---
 # <a name="from-clause-visual-basic"></a>From 子句 (Visual Basic)
 指定一或多個範圍變數和要查詢的集合。  
@@ -40,11 +40,11 @@ From element [ As type ] In collection [ _ ]
   
  您可以指定多個`From`查詢中，以識別要聯結多個集合的子句。 當指定多個集合時，他們會各自獨立地反覆或您可以將它們聯結如果它們相關。 您可以使用隱含聯結集合`Select`子句，或明確地利用`Join`或`Group Join`子句。 或者，您可以指定多個範圍變數和集合在單一`From`子句中，與每個相關的範圍變數和與其他以逗號分隔的集合。 下列程式碼範例顯示這兩種語法選項`From`子句。  
   
- [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
  `From`子句定義的範圍與類似查詢的範圍`For`迴圈。 因此，每個`element`查詢範圍中的範圍變數必須有唯一的名稱。 因為您可以指定多個`From`子句的查詢後續`From`子句可以參考中的範圍變數`From`子句，或它們可以參考範圍變數在過去`From`子句。 例如，下列範例顯示巢狀`From`子句中的第二個子句的集合以第一個子句中的範圍變數的屬性。  
   
- [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
  每個`From`子句後面可以接著以精簡查詢的其他查詢子句的任何組合。 您可以透過下列方式來精簡查詢：  
   
@@ -67,7 +67,7 @@ From element [ As type ] In collection [ _ ]
 ## <a name="example"></a>範例  
  下列查詢的運算式用法`From`子句來宣告範圍變數`cust`每個`Customer`物件中`customers`集合。 `Where`子句來限制輸出給客戶，從指定的區域中使用的範圍變數。 `For Each`迴圈會顯示查詢結果中的每個客戶的公司名稱。  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="see-also"></a>另請參閱
 - [查詢](../../../visual-basic/language-reference/queries/index.md)

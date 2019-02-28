@@ -6,12 +6,12 @@ helpviewer_keywords:
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
-ms.openlocfilehash: e1fed68f4abffb0e20230f55b0ddeffc63f7c78d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe8775a15ce5149cf307879ab31e2ec0a8ba8f47
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691537"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965172"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>HOW TO：宣告自訂事件以避免封鎖 (Visual Basic)
 有幾種情況時很重要的一個事件處理常式不會封鎖後續的事件處理常式。 自訂事件可讓要以非同步方式呼叫其事件處理常式的事件。  
@@ -25,7 +25,7 @@ ms.locfileid: "54691537"
   
  當程式碼會引發`Click`事件，`RaiseEvent`存取子會以非同步方式使用的所有事件處理常式委派叫都用<xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>方法。 該方法會叫用背景工作執行緒上的每個處理常式，並會立即傳回，讓處理常式無法封鎖彼此。  
   
- [!code-vb[VbVbalrEvents#27](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-avoid-blocking_1.vb)]  
+ [!code-vb[VbVbalrEvents#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Collections.ArrayList>

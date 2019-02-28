@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 9916c7197b260436a447a84b22df9b76dc5af4cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654878"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976482"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 陳述式 (Visual Basic)
 啟用錯誤處理常式，並指定位置的程序; 中的常式也可以用來停用錯誤處理常式。  
@@ -76,7 +76,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="throw-statement"></a>Throw 陳述式  
  引發的錯誤`Err.Raise`方法會設定`Exception`新建立的執行個體的內容<xref:System.Exception>類別。 若要支援引發的例外狀況衍生的例外狀況類型，`Throw`語言支援陳述式。 這會是擲回的例外狀況執行個體的單一參數。 下列範例顯示如何使用這些功能，與現有的例外狀況處理支援：  
   
- [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#17)]  
   
  請注意，`On Error GoTo`陳述式的設陷不論例外狀況類別的所有錯誤。  
   
@@ -94,7 +94,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  若要防止錯誤處理程式碼執行時沒有發生任何錯誤，請將`Exit Sub`， `Exit Function`，或`Exit Property`陳述式之前的錯誤處理常式，如下列片段所示：  
   
- [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
+ [!code-vb[VbVbalrErrorHandling#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#18)]  
   
  在這裡，錯誤處理程式碼會遵循`Exit Sub`陳述式，而且前面出現`End Sub`將資料流程的程序的陳述式。 您可以在程序的任意位置放置錯誤處理程式碼。  
   
@@ -103,7 +103,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  如果您建立存取其他物件的物件時，您應該嘗試處理它們將傳回的任何未處理的錯誤。 如果您不能對應中的錯誤碼`Err.Number`其中一個您自己的錯誤，然後傳遞送回呼叫端的物件。 您應該藉由加入您的錯誤程式碼，以指定您的錯誤`VbObjectError`常數。 例如，如果您的錯誤碼是 1052年，將它指派，如下所示：  
   
- [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
+ [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]  
   
 > [!CAUTION]
 >  在 Windows 動態連結程式庫 (Dll) 的呼叫期間的系統錯誤不會引發例外狀況，並不能與 Visual Basic 錯誤截取截取。 在呼叫 DLL 函式時，您應該檢查每個傳回的值為成功或失敗 （根據 API 規格中），並發生問題時，請檢查值`Err`物件的`LastDLLError`屬性。  

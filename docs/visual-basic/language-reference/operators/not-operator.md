@@ -14,12 +14,12 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: cd93316ada1fcf0997922f71a8efc5a3cf411d09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db88b61518a52a70553c037fdd95f9a135dcb268
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614560"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981214"
 ---
 # <a name="not-operator-visual-basic"></a>Not 運算子 (Visual Basic)
 上執行邏輯否定`Boolean`運算式或數值運算式上的位元否定。  
@@ -64,14 +64,14 @@ result = Not expression
 ## <a name="example"></a>範例  
  下列範例會使用`Not`上執行邏輯否定運算子`Boolean`運算式。 結果是`Boolean`值，表示運算式的值相反。  
   
- [!code-vb[VbVbalrOperators#33](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#33)]  
   
  上述範例產生的結果`False`和`True`分別。  
   
 ## <a name="example"></a>範例  
  下列範例會使用`Not`運算子執行邏輯否定的數值運算式的個別位元。 結果模式中的位元會設定為在運算元模式中，包括正負號位元的對應位元的反向。  
   
- [!code-vb[VbVbalrOperators#34](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#34)]  
   
  上述範例中會分別產生結果-11-9，-7。  
   

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 9cb03eab00033c3d08b51de7524e9489198d6d76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e74b4c7298a80f724031cc4ac1feb49ebae8f7cb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678393"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975611"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>匿名類型定義 (Visual Basic)
 為了回應執行個體的匿名型別宣告，編譯器會建立新的類別定義，其中包含指定的屬性類型。  
@@ -17,7 +17,7 @@ ms.locfileid: "54678393"
 ## <a name="compiler-generated-code"></a>編譯器產生的程式碼  
  下列定義`product`，編譯器會建立新的類別定義，其中包含屬性`Name`， `Price`，和`OnHand`。  
   
- [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]  
   
  類別定義包含屬性定義如下所示。 請注意，有沒有`Set`索引鍵屬性的方法。 索引鍵屬性的值是唯讀的。  
   
@@ -66,13 +66,13 @@ End Class
   
      例如，在下列範例中，`Equals`會傳回`True`僅適用於`employee01`和`employee08`。 之前每一行指定為什麼不相符的新執行個體的原因的註解`employee01`。  
   
-     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]  
   
 -   `GetHashcode` 提供適當的唯一的 GetHashCode 演算法。 此演算法會使用索引鍵的屬性，來計算雜湊碼。  
   
 -   `ToString` 傳回串連的屬性值的字串，如下列範例所示。 會包含索引鍵和非索引鍵屬性。  
   
-     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]  
   
  明確命名的匿名型別屬性不能與這些產生的方法衝突。 也就是說，您無法使用`.Equals`， `.GetHashCode`，或`.ToString`命名屬性。  
   

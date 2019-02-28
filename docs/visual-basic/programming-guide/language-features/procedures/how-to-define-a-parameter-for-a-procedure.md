@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 3893b87f50b37116b596b35b32c61ca81e47b3e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660797"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971789"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>HOW TO：將參數定義程序 (Visual Basic)
 A*參數*可讓呼叫端的程式碼呼叫它時，將值傳遞至程序。 宣告程序的每個參數相同的方式，您宣告一個變數，指定其名稱和資料型別。 您也可以指定傳遞機制，以及參數是否為選擇性。  
@@ -36,7 +36,7 @@ A*參數*可讓呼叫端的程式碼呼叫它時，將值傳遞至程序。 宣�
   
      下列範例會定義外框的`Sub`使用三個參數的程序。 前兩個所需，且選擇性第三個。 參數宣告會以逗號分隔的參數清單中。  
   
-     [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
      第一個參數會接受`customer`物件，並`updateCustomer`可以直接更新變數傳遞給`c`因為引數傳遞[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)。 此程序無法變更的最後兩個引數的值，因為它們會傳遞[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。  
   

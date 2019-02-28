@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 3d2cab1c40b1a84e9a3b6bed885b2a0020e53f01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529472"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974805"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda 運算式 (Visual Basic)
 A *lambda 運算式*函式或副程式沒有可用於委派是有效的名稱。 Lambda 運算式可以是函式或副程式，它可以是單行或多行。 您可以從目前的範圍將值傳遞至 lambda 運算式中。  
@@ -26,19 +26,19 @@ A *lambda 運算式*函式或副程式沒有可用於委派是有效的名稱。
   
  下列範例是遞增其引數和傳回值的 lambda 運算式。 此範例會顯示函式的這兩個單行和多行 lambda 運算式語法。  
   
- [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_1.vb)]  
+ [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
  下列範例會將值寫入主控台的 lambda 運算式。 此範例顯示一個副程式的這兩個單行和多行 lambda 運算式的語法。  
   
- [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_2.vb)]  
+ [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
  請注意，上述範例中的 lambda 運算式會指派給變數的名稱。 每當您參考變數，您就會叫用 lambda 運算式。 您也可以宣告，並叫用 lambda 運算式，在此同時，如下列範例所示。  
   
- [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_3.vb)]  
+ [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
  Lambda 運算式可傳回做為函式呼叫的值 (在此範例中所示[內容](#context)本主題稍後的章節)，或傳遞做為引數給參數接受委派類型，如下列所示範例。  
   
- [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_4.vb)]  
+ [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]  
   
 ## <a name="lambda-expression-syntax"></a>Lambda 運算式語法  
  Lambda 運算式的語法類似於標準函式或副程式。 差異如下所示：  
@@ -114,7 +114,7 @@ End Class
   
  存取區域變數和參數中包含的範圍可以擴充到超出該範圍的存留期間。 只要參考 lambda 運算式的委派不適用於記憶體回收，則會保留在原始環境變數的存取權。 在下列範例中，變數`target`本機`makeTheGame`，此方法用於 lambda 運算式`playTheGame`定義。 請注意，傳回的 lambda 運算式中，指派給`takeAGuess`中`Main`，仍然可以存取區域變數`target`。  
   
- [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_5.vb)]  
+ [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]  
   
  下列範例會示範各種巢狀的 lambda 運算式的存取權限。 從執行傳回的 lambda 運算式時`Main`做為`aDel`，它會存取這些項目：  
   
@@ -128,16 +128,16 @@ End Class
   
 -   在它巢狀 lambda 運算式的參數： `level2`  
   
- [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
+ [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
 ## <a name="converting-to-a-delegate-type"></a>轉換成委派類型  
  Lambda 運算式可以隱含地轉換成相容的委派型別。 如需相容性的一般需求的資訊，請參閱[寬鬆委派轉換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。 例如，下列程式碼範例顯示的 lambda 運算式，會隱含轉換成`Func(Of Integer, Boolean)`或相符的委派簽章。  
   
- [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_7.vb)]  
+ [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]  
   
  下列程式碼範例示範 lambda 運算式，會隱含轉換成`Sub(Of Double, String, Double)`或相符的委派簽章。  
   
- [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_8.vb)]  
+ [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]  
   
  當您將 lambda 運算式指派給委派，或將它們做為引數傳遞至程序時，您可以指定參數名稱，但省略其資料型別，以便進行委派的類型。  
   
@@ -145,11 +145,11 @@ End Class
   
 -   下列範例會定義可傳回的 lambda 運算式`True`可為 null 的引數是否為指派的值，並`False`如果其值為`Nothing`。  
   
-     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_9.vb)]  
+     [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
 -   下列範例會定義 lambda 運算式的傳回陣列中的最後一個項目的索引。  
   
-     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
+     [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>另請參閱
 - [程序](./index.md)

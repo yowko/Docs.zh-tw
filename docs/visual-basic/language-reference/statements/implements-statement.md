@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: cdcbe20157b9647040e3610d0632bd8e3fb9df65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75776e0d78bc1d8a834333ea4c3cc0a9291d1ed1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681062"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965006"
 ---
 # <a name="implements-statement"></a>Implements 陳述式
 指定一個或多個介面，或介面成員必須實作在類別中出現的結構定義。  
@@ -46,14 +46,14 @@ Implements interfacename.interfacemember [, ...]
 ## <a name="example"></a>範例  
  下列範例示範如何使用`Implements`陳述式來實作介面的成員。 它會定義名為的介面`ICustomerInfo`事件、 屬性，與程序。 此類別`customerInfo`實作介面中定義的所有成員。  
   
- [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
  請注意，類別`customerInfo`會使用`Implements`陳述式來指示此類別會實作的所有成員的個別的原始程式碼行上`ICustomerInfo`介面。 接著會使用類別中的每個成員`Implements`關鍵字做為其成員宣告，以表示它會實作該介面成員的一部分。  
   
 ## <a name="example"></a>範例  
  下列兩個程序顯示如何使用在上述範例中實作的介面。 若要測試實作，將這些程序新增到專案，並呼叫`testImplements`程序。  
   
- [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>另請參閱
 - [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)

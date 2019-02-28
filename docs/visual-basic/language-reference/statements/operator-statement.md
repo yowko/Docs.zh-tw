@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 9da2fc05824fa7e412c1c4802852fd00ba2709e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44b0a2513f504c8fecec74868130463581b597af
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658190"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981695"
 ---
 # <a name="operator-statement"></a>Operator Statement
 宣告運算子符號、 運算元與類別或結構定義的運算子程序的程式碼。  
@@ -168,7 +168,7 @@ End Operator
 ## <a name="example"></a>範例  
  下列程式碼範例會使用`Operator`陳述式來定義結構，其中包含的運算子程序的外框`And`， `Or`， `IsFalse`，和`IsTrue`運算子。 `And` 並`Or`各自採用兩個運算元的型別`abc`並傳回型別`abc`。 `IsFalse` 並`IsTrue`各自採用單一類型的運算元`abc`，並傳回`Boolean`。 這些定義允許呼叫的程式碼，以使用`And`， `AndAlso`， `Or`，以及`OrElse`類型的運算元使用`abc`。  
   
- [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]  
   
 ## <a name="see-also"></a>另請參閱
 - [IsFalse 運算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)

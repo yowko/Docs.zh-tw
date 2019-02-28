@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaebf06c63d7022c9798824097cd722a2ffadde5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c6e39c1bc4c2860e400e2708e588416eb5769bd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584606"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971880"
 ---
 # <a name="next-function"></a>下一個函式
 擷取開頭呼叫列舉中的下一個屬性[BeginEnumeration](beginenumeration.md)。  
@@ -92,8 +92,8 @@ HRESULT Next (
 |常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 屬性是標準的系統屬性。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 類別：屬性被繼承自父類別。 </br> 執行個體：屬性，而繼承自父類別中，有尚未修改的執行個體。  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 類別：屬性屬於衍生的類別。 </br> 執行個體：執行個體; 所修改的屬性也就是所提供的值，或加入或修改限定詞。 |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 類別：屬性被繼承自父類別。 <br> 執行個體：屬性，而繼承自父類別中，有尚未修改的執行個體。  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 類別：屬性屬於衍生的類別。 <br> 執行個體：執行個體; 所修改的屬性也就是所提供的值，或加入或修改限定詞。 |
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

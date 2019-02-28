@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: 3d8134b43320003a6425cf284162d3d627b177c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb99213287cda5ce7f9c3afe2998efb02ec68a03
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623551"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979069"
 ---
 # <a name="const-statement-visual-basic"></a>Const 陳述式 (Visual Basic)
 宣告並定義一或多個常數。  
@@ -90,12 +90,12 @@ Const constantlist
 ## <a name="example"></a>範例  
  下列範例會使用`Const`陳述式來宣告常數，用來取代常值。  
   
- [!code-vb[VbVbalrStatements#13](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#13)]  
   
 ## <a name="example"></a>範例  
  如果您定義資料類型的常數`Object`，Visual Basic 編譯器會產生它的型別`initializer`，而不是`Object`。 在下列範例中，常數`naturalLogBase`執行階段類型`Decimal`。  
   
- [!code-vb[VbVbalrStatements#87](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#87)]  
   
  上述範例會使用<xref:System.Type.ToString%2A>方法<xref:System.Type>所傳回的物件[GetType 運算子](../../../visual-basic/language-reference/operators/gettype-operator.md)，因為<xref:System.Type>無法轉換成`String`使用`CStr`。  
   

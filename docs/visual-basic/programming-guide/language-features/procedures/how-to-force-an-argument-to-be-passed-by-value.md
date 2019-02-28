@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 9c4d6397d9a9ab1b95c4708c1e98741c01e9302e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bd78772b35e3f336f49c1d39b5f56a3a2076c30
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706637"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970281"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>HOW TO：強制以傳值 (Visual Basic) 的引數
 程序宣告判斷傳遞機制。 如果參數宣告[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 需要以傳址方式傳遞相對應的引數。 這可讓程序來變更基礎呼叫程式碼中的引數的程式設計項目值。 如果您想要保護對這類變更的基礎項目，您可以覆寫`ByRef`程序中的傳遞機制來呼叫以括弧括住的引數名稱。 這些括號是以呼叫括住的引數清單的括號。  
@@ -35,9 +35,9 @@ ms.locfileid: "54706637"
 ## <a name="example"></a>範例  
  下列範例會覆寫`ByRef`參數宣告。 會強制呼叫中`ByVal`，請注意括號內的兩個層級。  
   
- [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#39)]  
   
- [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#40)]  
   
  當`str`額外引數清單中中的括號括住`setNewString`程序不能變更呼叫程式碼，其值和`MsgBox`顯示如果傳遞 ByVal 無法取代 「 」。 當`str`未隨附在額外的括號中的程序可以將它變更，和`MsgBox`顯示"This is inString 引數的新值"。  
   

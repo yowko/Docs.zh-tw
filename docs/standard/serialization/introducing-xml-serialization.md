@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 5de13fc4da371220f46a107ca9b620e1313e75d4
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307522"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981565"
 ---
 # <a name="introducing-xml-serialization"></a>XML 序列化簡介
 
@@ -28,7 +28,8 @@ ms.locfileid: "54307522"
 > [!NOTE]
 > XML 序列化不會轉換方法、索引子、私用欄位或唯讀屬性 (唯讀集合除外)。 若要序列化物件的所有欄位與屬性，無論是公用或私用，請使用 <xref:System.Runtime.Serialization.DataContractSerializer>，而非 XML 序列化。
 
- XML 序列化的核心類別為 <xref:System.Xml.Serialization.XmlSerializer> 類別，此類別中最重要的方法為**序列化**和**還原序列化**方法。 <xref:System.Xml.Serialization.XmlSerializer> 建立 C# 檔案並將它們編譯成為 .dll 檔案以執行此序列化。 在 .NET Framework 2.0 中，[XML 序列化程式產生器工具 (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) 的設計是用來預先產生要與您應用程式一起部署的這些序列化組件，並改善啟動效能。 產生的 XML 資料流**XmlSerializer** World Wide Web Consortium (W3C) 符合[XML 結構描述定義語言 (XSD) 1.0 建議](https://www.w3.org/TR/xslt)。 此外，產生的資料型別是符合規範與文件標題為 「 XML 結構描述第 2 部分：資料類型。 」
+ XML 序列化的核心類別為 <xref:System.Xml.Serialization.XmlSerializer> 類別，此類別中最重要的方法為**序列化**和**還原序列化**方法。 
+  <xref:System.Xml.Serialization.XmlSerializer> 建立 C# 檔案並將它們編譯成為 .dll 檔案以執行此序列化。 在 .NET Framework 2.0 中，[XML 序列化程式產生器工具 (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) 的設計是用來預先產生要與您應用程式一起部署的這些序列化組件，並改善啟動效能。 產生的 XML 資料流**XmlSerializer** World Wide Web Consortium (W3C) 符合[XML 結構描述定義語言 (XSD) 1.0 建議](https://www.w3.org/TR/xslt)。 此外，產生的資料型別是符合規範與文件標題為 「 XML 結構描述第 2 部分：資料類型。 」
 
  您物件中的資料是用程式語言來描述的，該程式語言會建構如類別、欄位、屬性、基本類型、陣列，甚至是以 **XmlElement** 或 **XmlAttribute** 物件為格式的內嵌 XML。 您可以選擇以屬性註解建立自己的類別，或使用 XML 結構描述定義工具來依據現有 XML 結構描述產生類別。
 
@@ -38,7 +39,7 @@ ms.locfileid: "54307522"
 
  **XmlSerializer** 類別可更進一步序列化物件並且產生編碼的 SOAP XML 資料流。 產生的 XML 符合全球資訊網協會之＜Simple Object Access Protocol (SOAP) 1.1＞文件中的第 5 節。 如需有關此程序的詳細資訊，請參閱[How to:物件序列化為 SOAP 編碼的 XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)。 如需控制產生之 XML 的屬性資料表，請參閱[控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)。
 
- **XmlSerializer** 類別產生 XML Web 服務所建立以及傳遞的 SOAP 訊息。 若要控制 SOAP 訊息，可套用屬性至類別、傳回值、參數以及 XML Web 服務檔案 (.asmx) 中的欄位。 您可使用列在＜控制 XML 序列化的屬性＞和＜控制編碼 SOAP 序列化的屬性＞中的屬性，因為 XML Web 服務可使用常值或編碼的 SOAP 樣式。 如需使用屬性控制 XML Web 服務產生之 XML 的詳細資訊，請參閱[以 XML Web 服務進行 XML 序列化](xml-serialization-with-xml-web-services.md)。 如需 SOAP 與 XML Web 服務的詳細資訊，請參閱[自訂 SOAP 訊息](https://msdn.microsoft.com/subscriptions/index/dkwy2d72\(v=vs.71\).aspx)。
+ **XmlSerializer** 類別產生 XML Web 服務所建立以及傳遞的 SOAP 訊息。 若要控制 SOAP 訊息，可套用屬性至類別、傳回值、參數以及 XML Web 服務檔案 (.asmx) 中的欄位。 您可使用列在＜控制 XML 序列化的屬性＞和＜控制編碼 SOAP 序列化的屬性＞中的屬性，因為 XML Web 服務可使用常值或編碼的 SOAP 樣式。 如需使用屬性控制 XML Web 服務產生之 XML 的詳細資訊，請參閱[以 XML Web 服務進行 XML 序列化](xml-serialization-with-xml-web-services.md)。 如需有關 SOAP 與 XML Web 服務的詳細資訊，請參閱[自訂 SOAP 訊息格式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))。
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>XmlSerializer 應用程式的安全性考量
 

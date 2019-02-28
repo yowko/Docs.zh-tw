@@ -13,12 +13,12 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-ms.openlocfilehash: 2cdc272c07f3b30f61716f0c5ae72f0655c3f46b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 090ae67c1e5f04c5d9c4f6aed7f8131d8f830166
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597316"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968851"
 ---
 # <a name="and-operator-visual-basic"></a>And 運算子 (Visual Basic)
 對兩個執行邏輯結合`Boolean`運算式或兩個數值運算式的位元結合。  
@@ -75,14 +75,14 @@ result = expression1 And expression2
 ## <a name="example"></a>範例  
  下列範例會使用`And`運算子執行邏輯結合兩個運算式上。 結果是`Boolean`值，表示兩個運算式是否`True`。  
   
- [!code-vb[VbVbalrOperators#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#22)]  
   
  上述範例產生的結果`True`和`False`分別。  
   
 ## <a name="example"></a>範例  
  下列範例會使用`And`運算子執行邏輯結合的兩個數值運算式的個別位元。 如果運算元的對應位元均設定為 1，則會設定結果模式中的位元。  
   
- [!code-vb[VbVbalrOperators#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#23)]  
   
  上述範例中會分別產生 8，2，0，的結果。  
   

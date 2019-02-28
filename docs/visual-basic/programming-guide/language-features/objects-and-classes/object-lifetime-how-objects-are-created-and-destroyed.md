@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: dc05b3acda5183ddc9a7c0bdddf08a3934c298f6
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: e6274f470e042fa5d581a574d13bd67ae8e8d6e9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738912"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979459"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>物件存留期：物件如何建立和終結 (Visual Basic)
 您可以使用 `New` 關鍵字來建立類別的執行個體，即物件。 在使用新物件之前，經常必須在新物件上執行初始設定工作。 常見的初始設定工作包括開啟檔案、連線到資料庫，以及讀取登錄機碼的值。 Visual Basic 控制項的使用程序呼叫的新物件初始化*建構函式*（允許控制初始化的特殊方法）。  
@@ -42,11 +42,11 @@ ms.locfileid: "55738912"
   
  若要建立類別的建構函式，請在類別定義中的任何地方建立名為 `Sub New` 的程序。 若要建立參數化建構函式，請指定 `Sub New` 之引數的名稱和資料類型，就像您會為任何其他程序指定引數一樣，如下列程式碼所示：  
   
- [!code-vb[VbVbalrOOP#42](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_1.vb)]  
+ [!code-vb[VbVbalrOOP#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#42)]  
   
  建構函式經常會多載，如下列程式碼所示：  
   
- [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
+ [!code-vb[VbVbalrOOP#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#116)]  
   
  當您定義衍生自另一個類別的類別時，建構函式的第一行必須是基底類別建構函式的呼叫，除非基底類別具有不帶任何參數的可存取建構函式。 例如，包含上述建構函式的基底類別呼叫就是 `MyBase.New(s)`。 否則，`MyBase.New`是選擇性的與 Visual Basic 執行階段會隱含呼叫它。  
   
@@ -72,7 +72,8 @@ ms.locfileid: "55738912"
   
  ![建構函式和繼承](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance.gif "vaConstructorsInheritance")  
   
- 當不再需要某物件時，CLR 就會針對該物件呼叫 <xref:System.Object.Finalize%2A> 方法，然後再釋放其記憶體。 <xref:System.Object.Finalize%2A> 方法會呼叫 `destructor`、因為它會執行清理工作 (例如儲存狀態資訊、關閉檔案和連接至資料庫) 以及在釋放物件之前必須完成的其他工作。  
+ 當不再需要某物件時，CLR 就會針對該物件呼叫 <xref:System.Object.Finalize%2A> 方法，然後再釋放其記憶體。 
+  <xref:System.Object.Finalize%2A> 方法會呼叫 `destructor`、因為它會執行清理工作 (例如儲存狀態資訊、關閉檔案和連接至資料庫) 以及在釋放物件之前必須完成的其他工作。  
   
  ![建構函式和繼承 2](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance_2.gif "vaConstructorsInheritance_2")  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9e9b4e199e4504e21b365706ea60d63c9d5fb87
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543444"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980941"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>在 Visual Basic 中文化特性如何影響字串
 此說明頁面討論 Visual Basic 來執行字串轉換及比較所使用的文化特性資訊。  
@@ -44,7 +44,7 @@ ms.locfileid: "54543444"
   
  若要將日期轉換成文化特性的字串，傳遞<xref:System.Globalization.CultureInfo>日期物件的物件<xref:System.DateTime.ToString%28System.IFormatProvider%29>方法。 例如，下列程式碼會顯示 「 07/04/2005年 00:00:00"，而不論應用程式的文化特性設定。  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  日期常值一律會根據英文的文化特性的方式解譯。  
@@ -60,11 +60,11 @@ ms.locfileid: "54543444"
   
  `StrComp`函式會傳回一個整數，表示排序順序為基礎的比較兩個字串之間的關聯性。 結果為正值表示第一個字串大於第二個字串。 否定的結果指出的第一個字串為較小，而零表示字串之間的等號比較。  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
  您也可以使用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]夥伴`StrComp`函式，<xref:System.String.Compare%2A?displayProperty=nameWithType>方法。 這是靜態的多載方法的基底的 string 類別。 下列範例說明如何使用這個方法：  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
  更精細地控制如何執行比較的詳細資訊，您可以使用其他多載<xref:System.String.Compare%2A>方法。 具有<xref:System.String.Compare%2A?displayProperty=nameWithType>方法，您可以使用`comparisonType`引數來指定要使用的比較類型。  
   

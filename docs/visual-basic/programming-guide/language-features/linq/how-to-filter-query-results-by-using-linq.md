@@ -11,12 +11,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: d0260e53be421d36cdc8d351d30d7f8a4ac4fa84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9aa3219cb613082545c0a417ed6972bb51c8815f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684167"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975403"
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>HOW TO：使用 LINQ (Visual Basic) 來篩選查詢結果
 Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並執行查詢。  
@@ -69,13 +69,13 @@ Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並�
   
      將下列程式碼加入`Load`事件來查詢公開為屬性的資料內容的資料表。 查詢會篩選結果，並傳回位於的客戶`London`。  
   
-     [!code-vb[VbLINQToSQLHowTos#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#11)]  
   
 4.  按 F5 執行您的專案，並檢視結果。  
   
 5.  以下是一些您可以嘗試的其他篩選。  
   
-     [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#12)]  
   
 ## <a name="see-also"></a>另請參閱
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

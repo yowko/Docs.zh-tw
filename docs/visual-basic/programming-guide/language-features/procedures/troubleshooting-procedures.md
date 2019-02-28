@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 5ef0a485a0b114f465aac694970ec3350b26f35a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648543"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971997"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>疑難排解程序 (Visual Basic)
 此頁面會列出處理程序時所發生的一些常見問題。  
@@ -41,7 +41,7 @@ ms.locfileid: "54648543"
   
  **正確的方法：** 若要能夠修改要傳回之陣列的項目，定義內部陣列做為本機變數。 下列範例會編譯無誤。  
   
- [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]  
   
 ## <a name="argument-not-being-modified-by-procedure-call"></a>引數不修改程序呼叫  
  如果您想要允許的程序來變更基礎呼叫程式碼中的引數的程式設計項目，您必須將它傳遞的參考。 但一個程序可以存取的參考型別引數的項目，即使您傳值方式傳遞。  
@@ -52,13 +52,13 @@ ms.locfileid: "54648543"
   
  下列範例會定義兩個程序，以傳值方式取得陣列變數和操作其項目上。 程序`increase`直接新增至每個項目。 程序`replace`將新的陣列指派給參數`a()`，然後新增一個每個項目。 不過，重新指派不會影響呼叫端程式碼中的陣列變數因為`a()`宣告`ByVal`。  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
   
  下列範例會呼叫`increase`和`replace`。  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  第一個`MsgBox`呼叫會顯示 「 increase(n) 之後：11, 21, 31, 41". 因為`n`是參考型別`increase`可以變更其成員，即使它傳遞`ByVal`。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54648543"
   
  **正確的方法：** 若要能夠修改對應的變數項目本身，傳址方式傳遞。 下列範例顯示的宣告中的變更`replace`可取代呼叫的程式碼中的另一個陣列。  
   
- [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]  
   
 ## <a name="unable-to-define-an-overload"></a>無法定義多載  
  如果您想要定義的程序的多載的版本，您必須使用相同名稱但不同的簽章。 如果編譯器無法區分您的宣告，從相同的簽章的多載，它會產生錯誤。  
@@ -108,9 +108,9 @@ ms.locfileid: "54648543"
   
  下列範例說明多載解析程序。  
   
- [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
  在第一個呼叫中，編譯器會排除第一個多載因為第一個引數的類型 (`Short`) 的範圍縮小，對應參數的型別 (`Byte`)。 它然後排除第三個多載，因為每個引數類型中的第二個多載 (`Short`並`Single`) 可擴展為對應的型別中的第三個多載 (`Integer`和`Single`)。 第二個多載都需要較少的擴展，因此編譯器會將它用於呼叫。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "54648543"
   
  **正確的方法：** 若要能夠呼叫沒有模稜兩可的多載程序，使用[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)來比對引數資料類型與參數類型。 下列範例示範呼叫`z`，強制第二個多載解析。  
   
- [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]  
   
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>多載使用選擇性的解析度和 ParamArray 引數  
  如果程序的兩個多載具有相同簽章，不同之處在於最後一個參數宣告[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)其中一並[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)在另一個，編譯器會解析該程序的呼叫根據最接近的相符項目。 如需詳細資訊，請參閱 [Overload Resolution](./overload-resolution.md)。  

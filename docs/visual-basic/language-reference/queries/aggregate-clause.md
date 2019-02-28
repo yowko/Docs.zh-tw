@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: a26ea220a807d3158d6874e2127db9a2f280a10c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21781db637c71abbbe9366bc95b6ee4c89ac2246
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547088"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981955"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate 子句 (Visual Basic)
 適用於一或多個彙總函式集合。  
@@ -54,25 +54,25 @@ Aggregate element [As type] In collection _
 
 會傳回`true`如果在集合中的所有項目符合指定的條件; 否則會傳回`false`。 以下是一個範例：
 
-[!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_1.vb)]
+ [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
 ### <a name="any"></a>任何
 
 會傳回`true`如果在集合中的任何項目符合指定的條件; 否則會傳回`false`。 以下是一個範例：
 
-[!code-vb[VbSimpleQuerySamples#6](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_2.vb)]
+ [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
 ### <a name="average"></a>平均
 
 計算集合中的所有項目的平均值，或計算提供的運算式，針對集合中的所有項目。 以下是一個範例：
 
-[!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_3.vb)]
+ [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>計數
 
 計算集合中的項目數。 您可以提供選擇性`Boolean`運算式來計算只在集合中符合條件的項目數目。 以下是一個範例：
 
-[!code-vb[VbSimpleQuerySamples#8](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_4.vb)]
+ [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
 ### <a name="group"></a>群組
 
@@ -86,25 +86,25 @@ Aggregate element [As type] In collection _
 
 從集合中的最大值或是計算集合中的所有項目的而提供的運算式。 以下是一個範例：
 
-[!code-vb[VbSimpleQuerySamples#9](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_5.vb)]
+ [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
 ### <a name="min"></a>最小
 
 計算集合的最小值或計算提供的運算式，針對集合中的所有項目。 以下是一個範例：
 
-[!code-vb[VbSimpleQuerySamples#10](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_6.vb)]
+ [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
 ### <a name="sum"></a>Sum
 
 集合中的所有項目的總和或是計算集合中的所有項目的而提供的運算式。 以下是一個範例：
 
-[!code-vb[VbSimpleQuerySamples#15](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_7.vb)]
+ [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
 ## <a name="example"></a>範例  
 
 下列範例示範如何使用`Aggregate`子句，以套用彙總函式，將查詢結果。  
   
- [!code-vb[VbSimpleQuerySamples#4](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_8.vb)]  
+ [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
 ## <a name="creating-user-defined-aggregate-functions"></a>建立使用者定義彙總函式
 
@@ -112,11 +112,11 @@ Aggregate element [As type] In collection _
   
  例如，下列範例顯示自訂的彙總函式會計算數字集合的中間值。 有兩個多載`Median`擴充方法。 第一個多載接受，做為輸入，型別集合`IEnumerable(Of Double)`。 如果`Median`彙總函式會呼叫類型的查詢欄位`Double`，會呼叫這個方法。 第二個多載`Median`方法可以傳遞任何泛型型別。 泛型多載`Median`方法會採用第二個參數會參考`Func(Of T, Double)`投影的類型 （集合） 的值類型的對應值的 lambda 運算式`Double`。 然後它會委派其他多載的中間值的計算`Median`方法。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
- [!code-vb[VbSimpleQuerySamples#18](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_9.vb)]  
+ [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
  下列範例顯示範例查詢來呼叫`Median`彙總類型的集合上的函式`Integer`，和型別集合`Double`。 查詢會呼叫`Median`彙總類型的集合上的函式`Double`呼叫的多載`Median`做為輸入，接受型別集合的方式來`Double`。 查詢會呼叫`Median`彙總類型的集合上的函式`Integer`呼叫的泛型多載`Median`方法。  
   
- [!code-vb[VbSimpleQuerySamples#19](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_10.vb)]  
+ [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
 ## <a name="see-also"></a>另請參閱
 

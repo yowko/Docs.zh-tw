@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: ae6b53db3a2cdcefa2b05d68ed953c5e17b279dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551783"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970294"
 ---
 # <a name="inheritance-basics-visual-basic"></a>繼承基本概念 (Visual Basic)
 `Inherits`陳述式用來宣告新的類別，叫做*衍生類別*根據現有的類別，稱為*基底類別*。 在衍生的類別繼承，且可以擴充，屬性、 方法、 事件、 欄位和基底類別中定義的常數。 下節描述一些繼承規則，以及修飾詞，可用來變更方法的類別繼承，或會繼承：  
@@ -62,14 +62,14 @@ ms.locfileid: "54551783"
   
  下列範例會定義基底類別`Payroll,`和衍生的類別中， `BonusPayroll`，這會覆寫繼承的方法， `PayEmployee`。 程序中， `RunPayroll`、 建立，並接著傳遞`Payroll`物件並`BonusPayroll`函式物件`Pay`，執行`PayEmployee`這兩個物件的方法。  
   
- [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_1.vb)]  
+ [!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]  
   
 ## <a name="the-mybase-keyword"></a>MyBase 關鍵字  
  `MyBase`關鍵字的行為就像類別的目前執行個體的基底類別是指的物件變數。 `MyBase` 經常用來存取所覆寫或遮蔽衍生類別中的基底類別成員。 特別是，`MyBase.New`用來明確地從衍生的類別建構函式呼叫的基底類別建構函式。  
   
  例如，假設您正在設計衍生的類別會覆寫繼承自基底類別方法。 覆寫的方法可以呼叫基底類別中的方法，並修改的傳回值，如下列程式碼片段所示：  
   
- [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_2.vb)]  
+ [!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]  
   
  下列清單描述限制使用`MyBase`:  
   

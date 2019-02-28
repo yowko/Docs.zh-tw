@@ -1,16 +1,16 @@
 ---
-title: 程式設計概念 (Visual Basic)
-ms.date: 07/20/2015
+title: 程式設計概念-Visual Basic
+ms.date: 02/27/2017
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
 ---
 # <a name="programming-concepts-visual-basic"></a>程式設計概念 (Visual Basic)
+
 本節說明 Visual Basic 語言的程式設計概念。  
   
 ## <a name="in-this-section"></a>本節內容  
   
 |標題|描述|  
 |-----------|-----------------|  
-|[在.NET 中的組件](../../../standard/assembly/index.md)|說明如何建立及使用組件。|  
 |[使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|說明如何使用 [Async](../../../visual-basic/language-reference/modifiers/async.md) 和 [Await](../../../visual-basic/language-reference/operators/await-operator.md) 關鍵字撰寫非同步解決方案。 其中包含逐步解說。|  
 |[屬性概觀 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|討論如何使用屬性提供關於程式設計元素的其他資訊，例如型別、欄位、方法及屬性。|  
 |[呼叫端資訊 (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|說明如何取得方法呼叫端的相關資訊。 此資訊包括原始程式碼的檔案路徑和行號，以及呼叫端的成員名稱。|  
@@ -27,4 +27,5 @@ ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
   
 |||  
 |---|---|  
+|[.NET 中的組件](../../../standard/assembly/index.md)|說明如何建立及使用組件。|  
 |[效能秘訣](../../../framework/performance/performance-tips.md) | 討論數個可能協助您提升應用程式效能的基本規則。|

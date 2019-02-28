@@ -5,12 +5,12 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 476b3f4f6b85908897e15f73bc23d2b060e337c3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c556b68ea99650f96ec16c220d1e2367f3e5cfde
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283643"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966485"
 ---
 # <a name="param-visual-basic"></a>\<param > (Visual Basic)
 定義的參數名稱和描述。  
@@ -42,7 +42,7 @@ ms.locfileid: "55283643"
 ## <a name="example"></a>範例  
  這個範例會使用`<param>`標記來描述`id`參數。  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>另請參閱
 - [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)

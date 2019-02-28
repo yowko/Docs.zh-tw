@@ -17,18 +17,18 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: 52e0314b32c72934396e6be391b2bc656f518598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79cc53be0f099151db1b64190c844b1d57205a44
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642707"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976859"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>以 XML Web 服務進行 XML 序列化
-XML 序列化為 XML Web 服務架構中使用的基礎傳輸機制，由 <xref:System.Xml.Serialization.XmlSerializer> 類別執行。 若要控制 XML Web Service 產生的 XML，可將列在[控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)和[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)中的屬性，套用至用來建立 XML Web Service (.asmx) 之檔案的類別、傳回值、參數以及欄位。 如需建立 XML Web Service 的詳細資訊，請參閱[使用 ASP.NET 建置 XML Web Service](https://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c)。  
+XML 序列化為 XML Web 服務架構中使用的基礎傳輸機制，由 <xref:System.Xml.Serialization.XmlSerializer> 類別執行。 若要控制 XML Web Service 產生的 XML，可將列在[控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)和[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)中的屬性，套用至用來建立 XML Web Service (.asmx) 之檔案的類別、傳回值、參數以及欄位。 如需建立 XML Web service 的詳細資訊，請參閱 < [ASP.NET XML Web Service 使用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100))。  
   
 ## <a name="literal-and-encoded-styles"></a>常值與編碼樣式  
- XML Web Service 產生的 XML 可使用常值或編碼的其中一種方式格式化，如[自訂 SOAP 訊息](https://msdn.microsoft.com/library/1d777288-c0d9-4e6a-b638-f010da031952)中所述。 因此有兩組屬性控制 XML 序列化。 列在[控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)中的屬性設計用來控制常值樣式 XML。 列在[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)中的屬性則可控制編碼樣式。 您可選擇性地套用這些屬性，自訂應用程式傳回其中一種或同時兩種樣式。 除此之外，可將這些屬性套用至傳回值和參數 (如果適合的話)。  
+ XML Web service 所產生的 XML 可以是其中一種方式，常值格式或編碼中所述[自訂 SOAP 訊息格式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))。 因此有兩組屬性控制 XML 序列化。 列在[控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)中的屬性設計用來控制常值樣式 XML。 列在[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)中的屬性則可控制編碼樣式。 您可選擇性地套用這些屬性，自訂應用程式傳回其中一種或同時兩種樣式。 除此之外，可將這些屬性套用至傳回值和參數 (如果適合的話)。  
   
 ### <a name="example-of-using-both-styles"></a>同時使用兩種樣式的範例  
  當您建立 XML Web 服務，可同時使用方法上的兩組屬性。 在下列程式碼範例中，名為 `MyService``MyLiteralMethod`的類別包含兩個 XML Web 服務方法：`MyEncodedMethod` 及 。 兩種方法都執行相同功能：傳回 `Order` 類別的執行個體。 在 `Order` 類別中，<xref:System.Xml.Serialization.XmlTypeAttribute> 以及 <xref:System.Xml.Serialization.SoapTypeAttribute> 屬性 (attribute) 都套用至 `OrderID` 欄位，而且兩個屬性 (attribute) 的 `ElementName` 屬性 (property) 都設為不同值。  
@@ -248,7 +248,8 @@ public class Order {
     </s:schema>  
 ```  
   
- `XmlRootAttribute` 的效果也可以在 HTTP GET 與 HTTP POST 結果中看到，如下所示。  
+ 
+  `XmlRootAttribute` 的效果也可以在 HTTP GET 與 HTTP POST 結果中看到，如下所示。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

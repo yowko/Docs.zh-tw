@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: d74e1f7aaaa22d68c49f4e40ca557511a48e0554
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bb34eb810f6e2d0b0d631f5891e3e65aa0b170f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525023"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981396"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 運算子 (Visual Basic)
 兩個數目相除，然後只傳回餘數。  
@@ -36,7 +36,7 @@ number1 Mod number2
  必要項。 任何數值運算式。  
   
 ## <a name="supported-types"></a>支援的類型  
- 所有的數字類型。 這包括的不帶正負號和浮點類型和`Decimal`。  
+ 所有數值類型。 這包括的不帶正負號和浮點類型和`Decimal`。  
   
 ## <a name="result"></a>結果
 
@@ -93,12 +93,12 @@ End Module
 ## <a name="example"></a>範例  
  下列範例會使用`Mod`運算子將兩個數字，並只傳回餘數。 如果任一個數字是浮點數，結果會是浮點數表示餘數。  
   
- [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>範例  
  下列範例示範可能會不精確的浮點運算元。 第一個陳述式中，運算元都是`Double`，0.2，無限地重複的二進位分數 0.20000000000000001 預存值。 在第二個陳述式中，常值類型字元`D`強制兩個運算元`Decimal`，0.2 且精確的表示法。  
   
- [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>

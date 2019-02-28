@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAppDomainEnum 介面 1
+title: ICorDebugAppDomainEnum 介面
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomainEnum
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3759be77cd6e6265eb8328669c88225067b99bfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c340eb76f3c1c570aa0c9ffa1d461f33d330175
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509710"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981500"
 ---
-# <a name="icordebugappdomainenum-interface1"></a>ICorDebugAppDomainEnum 介面 1
+# <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum 介面
+
 提供`Next`方法，以傳回指定的數目的`ICorDebugAppDomainEnum`列舉中的下一個位置開始的值。 這個介面是 「 ICorDebugEnum"的子類別。  
   
 ## <a name="methods"></a>方法  

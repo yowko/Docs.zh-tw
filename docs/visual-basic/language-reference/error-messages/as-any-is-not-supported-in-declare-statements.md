@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30828
 ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
-ms.openlocfilehash: bdf339e0d91106a6d6527e085608a06b0439951c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b3fb3f208f3396f454388ec0c10406815fa957d8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274076"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974792"
 ---
 # <a name="as-any-is-not-supported-in-declare-statements"></a>'Declare' 陳述式中不支援 'As Any'
 `Any`資料類型用於`Declare`允許無法包含任何資料類型的引數使用的 Visual Basic 6.0 和更早版本中的陳述式。 Visual Basic 支援多載，不過，並因此會`Any`資料型別已經過時。  
@@ -23,11 +23,11 @@ ms.locfileid: "55274076"
   
 1.  宣告您想要使用的特定型別參數比方說。  
   
-     [!code-vb[VbVbalrStatements#95](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_1.vb)]  
+     [!code-vb[VbVbalrStatements#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class5.vb#95)]  
   
 2.  使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>屬性來指定`As Any`當`Void*`預期的被呼叫程序。  
   
-     [!code-vb[VbVbalrStatements#96](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_2.vb)]  
+     [!code-vb[VbVbalrStatements#96](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class5.vb#96)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>

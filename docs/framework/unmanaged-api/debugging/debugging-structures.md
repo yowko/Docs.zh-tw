@@ -8,14 +8,15 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18bf03fee1a95c898e8273fa839e41a86b2d1c32
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f50db519410b9513725c3dc10637421ba8bb37ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828367"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965224"
 ---
 # <a name="debugging-structures"></a>偵錯結構
+
 本節說明偵錯 API 所使用的 Unmanaged 結構。
 
 ## <a name="in-this-section"></a>本節內容
@@ -25,7 +26,7 @@ ms.locfileid: "55828367"
 
  [CLR_DEBUGGING_VERSION 結構](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)定義以進行偵錯的 common language runtime (CLR) 的產品版本。
 
- [CodeChunkInfo 結構 1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)代表單一的記憶體中的程式碼區塊。
+ [CodeChunkInfo 結構](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)代表單一的記憶體中的程式碼區塊。
 
  [COR_ACTIVE_FUNCTION](cor-active-function-structure.md)包含目前使用中執行緒的框架的函式的相關資訊。
 
@@ -71,9 +72,8 @@ ms.locfileid: "55828367"
 
  [StackTrace_SimpleContext 結構](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)提供的簡單的內容，可用來代替完整`CONTEXT`結構。
 
-
-
 ## <a name="related-sections"></a>相關章節
+
  [偵錯 Coclass](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
 
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

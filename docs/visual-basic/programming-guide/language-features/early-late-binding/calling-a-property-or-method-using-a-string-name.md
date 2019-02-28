@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 865270cfc8089d0bf229d9de7a7775dd2a3361d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb9d214d7bb226a4e14cb42e78bffd940049838d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731515"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967525"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>使用字串名稱呼叫屬性或方法 (Visual Basic)
 在大部分情況下，您可以在設計階段探索的屬性和方法的物件和撰寫程式碼來處理它們。 不過，在某些情況下您可能不知道物件的屬性和方法事先，或者您可能只想讓使用者指定的屬性，或在執行階段執行方法的彈性。  
@@ -35,11 +35,11 @@ ms.locfileid: "54731515"
   
  假設您將加入包含類別，名為組件的參考`MathClass`，其中包含新的函式，名為`SquareRoot`，如下列程式碼所示：  
   
- [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_1.vb)]  
+ [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
  您的應用程式可以使用文字方塊控制項，以將呼叫哪一種方法的控制項和其引數。 比方說，如果`TextBox1`包含要評估的運算式並`TextBox2`是用來輸入函式的名稱，您可以使用下列程式碼來叫用`SquareRoot`函式中的運算式上`TextBox1`:  
   
- [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_2.vb)]  
+ [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
  如果您在中輸入"64 」 `TextBox1`，「 SquareRoot 」 中的`TextBox2`，然後呼叫`CallMath`程序、 數字的平方根`TextBox1`評估。 此範例中的程式碼會叫用`SquareRoot`函式 （其採用字串，包含評估為必要的引數的運算式），並傳回"8"中`TextBox1`（64 平方根）。 當然，如果使用者輸入無效的字串中`TextBox2`，如果字串包含名稱的屬性，而不是方法，或如果此方法會有其他必要的引數，就會發生執行階段錯誤。 您必須加入強固的錯誤處理程式碼，當您使用`CallByName`預期會發生這些或其他任何錯誤。  
   

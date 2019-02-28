@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: e67339beac42fe6dc32925c8733bec2889739733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e7190f3ba63b6af9f7f402fbc23b4268c329856
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728066"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974740"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>疑難排解資料類型 (Visual Basic)
 此頁面會列出您的內建資料型別上執行作業時所發生的一些常見問題。  
@@ -40,7 +40,7 @@ ms.locfileid: "54728066"
   
  下列範例示範兩個不正確的和正確比較`Double`值。  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#10)]  
   
  先前的範例使用<xref:System.Double.ToString%2A>方法<xref:System.Double>結構，讓它可以指定更好的精確度卻高於`CStr`關鍵字使用。 預設值是 15 位數，但是"G17"格式將它擴充到 17 個位數。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54728066"
   
  下列範例示範可能會不精確的浮點運算元。  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#11)]  
   
  先前的範例使用<xref:System.Double.ToString%2A>方法<xref:System.Double>結構，讓它可以指定更好的精確度卻高於`CStr`關鍵字使用。 預設值是 15 位數，但是"G17"格式將它擴充到 17 個位數。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "54728066"
   
  下列範例示範不成功，並成功指派到常值`Char`變數。  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#12)]  
   
  中一律會有風險使用縮小轉換，因為它們可以在執行階段失敗。 例如，從轉換`String`要`Char`就會失敗`String`值包含多個字元。 因此，它更好的程式設計使用`C`輸入字元。  
   

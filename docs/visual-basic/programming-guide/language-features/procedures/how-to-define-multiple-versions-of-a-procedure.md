@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: a3f4657b22fe0a9186e339d00cd9341e55405244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528871"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980772"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>HOW TO：定義多個版本的程序 (Visual Basic)
 您可以在多個版本中所定義的程序*多載*它針對每個版本使用相同名稱但不同的參數清單。 多載的用途是定義程序的數個密切相關的版本，而不需要依名稱加以區隔。  
@@ -33,7 +33,7 @@ ms.locfileid: "54528871"
 ## <a name="example"></a>範例  
  下列範例會定義`Sub`張貼對客戶的餘額交易的程序。 它會使用`Overloads`關鍵字來定義兩個版本的程序，可接受由名稱和其他客戶的帳戶號碼。  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
  呼叫端程式碼可以取得客戶識別為`String`或`Integer`，然後在任一情況下使用相同的呼叫陳述式。  
   

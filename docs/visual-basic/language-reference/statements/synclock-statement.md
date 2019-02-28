@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: 5a931199ff8d09412d536a173f3cd12e451def64
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845976"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979810"
 ---
 # <a name="synclock-statement"></a>SyncLock 陳述式
 執行區塊之前會取得獨佔鎖定陳述式區塊。  
@@ -29,7 +29,7 @@ End SyncLock
   
 ## <a name="parts"></a>組件  
  `lockobject`  
- 必要。 評估為物件參考的運算式。  
+ 必要項。 評估為物件參考的運算式。  
   
  `block`  
  選擇性。 屬於已取得鎖定時要執行的陳述式區塊。  
@@ -81,13 +81,13 @@ End SyncLock
  如果`simpleMessageList`類別共用在所有執行個體，變數之間的訊息的一份`messagesList`並`messagesLast`會宣告為`Shared`。 在此案例中，變數`messagesLock`也應該`Shared`，如此一來，會有每個執行個體所使用的單一鎖定物件。  
   
 ### <a name="code"></a>程式碼  
- [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
+ [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>描述  
  下列範例會使用執行緒和`SyncLock`。 只要`SyncLock`陳述式存在，陳述式區塊就是關鍵區段和`balance`絕對不會是負數。 您可以標記為註解`SyncLock`並`End SyncLock`陳述式，以查看效果留下`SyncLock`關鍵字。  
   
 ### <a name="code"></a>程式碼  
- [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
+ [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  
   
 ### <a name="comments"></a>註解  
   

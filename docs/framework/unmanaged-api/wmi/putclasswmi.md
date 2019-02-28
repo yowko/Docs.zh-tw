@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 995c697497876969edc1021350b7bfe28e4018bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc2b90ebf73e23aeee6407eb6cb3551b9672d29
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614506"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972803"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi 函式
 建立新類別或更新現有類別。  
@@ -49,7 +49,7 @@ HRESULT PutClassWmi (
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果設定，WMI 不會儲存任何限定詞以修改過的類別。 </br> 如果未設定，系統會假設此物件不會進行當地語系化，，而且所有的限定詞是 storedwith 這個執行個體。 |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果設定，WMI 不會儲存任何限定詞以修改過的類別。 <br> 如果未設定，系統會假設此物件不會進行當地語系化，，而且所有的限定詞是 storedwith 這個執行個體。 |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | 如果不存在，或是如果它已經存在，覆寫它，請建立的類別。 |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | 更新類別。 此類別必須存在，呼叫才會成功。 |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | 建立的類別。 如果類別已存在，則呼叫會失敗。 |

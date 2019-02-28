@@ -7,12 +7,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 1ed2dc91d1a2ea9bade11902aac553e24c0607ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0fb524961cd04b73a8b83094880d5eaa206fe9c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583657"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965796"
 ---
 # <a name="delegate-statement"></a>Delegate 陳述式
 用來宣告委派。 委派是參考型別參考`Shared`方法的型別或物件的執行個體方法。 任何具有相符的參數和傳回型別程序可用來建立這個委派類別的執行個體。 此程序可以接著會叫用透過委派執行個體。  
@@ -57,12 +57,12 @@ ms.locfileid: "54583657"
   
  函式的簽章必須符合委派型別的簽章。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
- 如需有關委派的詳細資訊，請參閱 <<c0> [ 委派](../../../visual-basic/programming-guide/language-features/delegates/index.md)。  
+ 如需委派的詳細資訊，請參閱[委派](../../../visual-basic/programming-guide/language-features/delegates/index.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會使用`Delegate`陳述式來宣告委派，以便作用於兩個數字並傳回數字。 `DelegateTest`方法會採用此類型的委派的執行個體，並使用它來操作的編號組。  
   
- [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
+ [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>另請參閱
 - [AddressOf 運算子](../../../visual-basic/language-reference/operators/addressof-operator.md)

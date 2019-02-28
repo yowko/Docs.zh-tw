@@ -3,14 +3,14 @@ title: 開始使用 Azure 資料表儲存體使用F#
 description: 使用 Azure 資料表儲存體或 Azure Cosmos DB 在雲端中儲存結構化的資料。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2b74a33023065ea809c2d7eb6202b1a254018422
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152069"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966004"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和 Azure Cosmos DB 資料表 API 使用F# # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和 Azure Cosmos DB 資料表 API 使用 F\#
 
 Azure 資料表儲存體是一項服務，將結構化的 NoSQL 資料儲存在雲端中。 資料表儲存體是具有無結構描述設計的索引鍵/屬性存放區。 資料表儲存體沒有結構描述，因為很容易就能隨著應用程式發展需求改寫資料。 快速且符合成本效益的所有類型的應用程式資料的存取。 資料表儲存體通常是大幅降低成本比傳統 SQL 類似的磁碟區的資料。
 

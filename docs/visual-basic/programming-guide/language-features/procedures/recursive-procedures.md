@@ -10,19 +10,19 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: b5cbe0dfa8053a93cde9c92ffe87f0eae15d3efd
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 97cceb833da0ef6f9ee4e3dab5abb1f2ba73a94e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739289"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969319"
 ---
 # <a name="recursive-procedures-visual-basic"></a>遞迴程序 (Visual Basic)
 A*遞迴*程序會呼叫其本身。 一般情況下，這不是撰寫 Visual Basic 程式碼的最有效方式。  
   
  下列程序會使用遞迴來計算其原始的引數的階乘。  
   
- [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
 ## <a name="considerations-with-recursive-procedures"></a>遞迴程序的考量  
  **限制條件**。 您必須設計的遞迴程序，以測試可終止遞迴時，至少一個條件，而且您也必須處理在合理的遞迴呼叫數內中成立到任何這類條件的情況。 缺少至少一個可以在不失敗的情況下符合的條件，您的程序會執行無限迴圈中執行的較高的風險。  

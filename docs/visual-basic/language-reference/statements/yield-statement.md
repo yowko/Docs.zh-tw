@@ -8,12 +8,12 @@ helpviewer_keywords:
 - iterators [Visual Basic]
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
-ms.openlocfilehash: da01d3f1bdfa3e76afcc28e7b70240beb06f74f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e417e13f1617f3ad8064c9e1b0eec835938b6200
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506481"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978905"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield 陳述式 (Visual Basic)
 傳送至集合的下一個項目`For Each...Next`陳述式。  
@@ -84,12 +84,12 @@ Next
   
  迭代器方法的傳回型別是<xref:System.Collections.Generic.IEnumerable%601>，迭代器介面類型。 呼叫 Iterator 方法時，它會傳回包含數字乘冪的可列舉物件。  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>範例  
  下列範例將示範本身為迭代器的 `Get` 存取子。 屬性宣告包含`Iterator`修飾詞。  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
  如需其他範例，請參閱 <<c0> [ 迭代器](../../programming-guide/concepts/iterators.md)。  
   

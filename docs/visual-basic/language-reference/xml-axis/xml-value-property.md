@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 54bd18b050ca58c286bfca3972b242348c61fe45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cf1dbb1d9dafa9c690b4043da5a6f36469e8d7a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737607"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965341"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Value 屬性 (Visual Basic)
 提供存取權的第一個元素的集合值<xref:System.Xml.Linq.XElement>物件。  
@@ -50,7 +50,7 @@ object.Value
 ## <a name="example"></a>範例  
  下列範例示範如何使用<xref:System.Xml.Linq.XElement.Value%2A>屬性來存取集合中的第一個節點<xref:System.Xml.Linq.XElement>物件。 此範例會使用子軸屬性，以取得名為的所有子節點的集合`phone`處於`contact`物件。  
   
- [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
+ [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]  
   
  此程式碼顯示下列文字：  
   
@@ -59,7 +59,7 @@ object.Value
 ## <a name="example"></a>範例  
  下列範例示範如何從集合取得 XML 屬性的值<xref:System.Xml.Linq.XAttribute>物件。 此範例會使用屬性軸屬性，若要顯示的值`type`屬性的所有`phone`項目。  
   
- [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
+ [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]  
   
  此程式碼顯示下列文字：  
   

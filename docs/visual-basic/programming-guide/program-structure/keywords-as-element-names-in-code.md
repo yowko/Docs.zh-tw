@@ -7,17 +7,17 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 0d52df42b00abfa364762d97c162eb143e511f06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 053149334118d69e5e85bdbd0f9a45e855e3d4dd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649475"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980096"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>程式碼中以關鍵字做為項目名稱 (Visual Basic)
 任何程式項目，例如變數、 類別或成員，可以有相同名稱做為受限制的關鍵字。 例如，您可以建立名為的變數`Loop`。 不過，來參考它的版本，具有相同名稱的限制`Loop`關鍵字，您必須前面使用完整限定性條件字串，或將它括在方括號 (`[ ]`)，如下列範例所示。  
   
- [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/keywords-as-element-names-in-code_1.vb)]  
+ [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
  如果你未執行任一種，則 Visual Basic 會假設使用內建函式`Loop`關鍵字，並產生錯誤，如下列範例所示：  
   

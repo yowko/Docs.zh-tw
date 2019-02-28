@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2af8fe5557e452db1ef3a72de35582b18117cc30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0757c3ce0528f76eab5607e20ebca2e66a903900
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553733"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974142"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>逐步解說：處理事件 (Visual Basic)
 這是示範如何使用事件的兩個主題的第二個。 第一個主題中，[逐步解說：宣告和引發事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，示範如何宣告及引發事件。 本節會使用表單和類別，從該逐步解說示範如何處理它們發生的事件。  
@@ -25,7 +25,7 @@ ms.locfileid: "54553733"
   
 1.  將下列程式碼中的`Form1`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
      `WithEvents`關鍵字指定變數`mWidget`用來處理物件的事件。 您可以提供將從中建立物件的類別名稱指定物件的類型。  
   
@@ -47,13 +47,13 @@ ms.locfileid: "54553733"
   
 3.  將下列程式碼加入至 `mWidget_PercentDone` 事件處理常式：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      每當`PercentDone`就會引發事件時，將事件程序會顯示完成百分比`Label`控制項。 `DoEvents`方法可讓標籤以重新繪製，並提供使用者有機會按一下 [**取消**] 按鈕。  
   
 4.  新增下列程式碼`Button2_Click`事件處理常式：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
  如果使用者按一下**取消**按鈕時`LongTask`正在執行，`Button2_Click`執行事件，只要`DoEvents`陳述式可讓發生的事件處理。 類別層級變數`mblnCancel`設定為`True`，而`mWidget_PercentDone`事件然後測試它，並設定`ByRef Cancel`引數`True`。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "54553733"
   
 3.  新增下列程式碼`Form1_Load`事件的程序來建立`Widget`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
  此程式碼執行時，Visual Basic 建立`Widget`物件，並將其事件連接至相關聯的事件程序`mWidget`。 從該點上，每當`Widget`引發其`PercentDone`事件，`mWidget_PercentDone`事件程序執行。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "54553733"
   
 -   將下列程式碼加入至 `Button1_Click` 事件處理常式：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
  再`LongTask`呼叫方法時，標籤必須初始化完成的百分比，顯示項目，以及類別層級`Boolean`旗標的取消方法必須設為`False`。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "54553733"
   
 -   新增下列一行程式碼`Button1_Click`程序中，緊接在之前讀取一行`mWidget.LongTask(12.2, 0.33)`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_6.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   
  上述程式碼會建立新`Widget`每當按一下按鈕時。 一旦`LongTask`方法完成時，若要參考`Widget`已釋放，而`Widget`終結。  
   

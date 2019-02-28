@@ -13,12 +13,12 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: e61cf907ac2c5c04aa86c03a73bda7fcfcb8122d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0a0003409f0abc277d92f4e68981d9ffd901a41
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710478"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971529"
 ---
 # <a name="property-procedures-visual-basic"></a>屬性程序 (Visual Basic)
 屬性程序是一系列的 Visual Basic 陳述式，以操作上的模組、 類別或結構的自訂屬性。 屬性程序是也稱為*屬性存取子*。  
@@ -65,7 +65,7 @@ End Property
  屬性的資料類型和主體的存取層級會定義在`Property`陳述式，不在屬性程序。 屬性可以有只有一個資料型別。 例如，您不能定義屬性，以便存放`Decimal`值，但擷取`Double`值。  
   
 ### <a name="access-level"></a>存取層級  
- 不過，您可以定義主體的存取層級的屬性，並進一步限制存取層級，在其中一個屬性程序。 例如，您可以定義`Public`屬性，然後定義`Private Set`程序。 `Get`程序會維持`Public`。 您可以變更其中一個屬性的程序中的存取層級，您可以只讓它更具限制性的主體的存取層級。 如需詳細資訊，請參閱[＜How to：宣告混合的存取層級的屬性](./how-to-declare-a-property-with-mixed-access-levels.md)。  
+ 不過，您可以定義主體的存取層級的屬性，並進一步限制存取層級，在其中一個屬性程序。 例如，您可以定義`Public`屬性，然後定義`Private Set`程序。 `Get`程序會維持`Public`。 您可以變更其中一個屬性的程序中的存取層級，您可以只讓它更具限制性的主體的存取層級。 如需詳細資訊，請參閱[如何：宣告混合的存取層級的屬性](./how-to-declare-a-property-with-mixed-access-levels.md)。  
   
 ## <a name="parameter-declaration"></a>參數宣告  
  您所進行的相同方式宣告的每個參數[Sub 程序](./sub-procedures.md)，但必須是傳遞機制`ByVal`。  
@@ -99,11 +99,11 @@ End Property
 ### <a name="illustration-of-declaration-and-call"></a>宣告和呼叫的圖例  
  下列屬性會將完整的名稱儲存為兩個組成的名稱、 名字和姓氏。 當呼叫端程式碼的讀取`fullName`，則`Get`程序結合了兩個組成的名稱，並傳回的完整名稱。 當呼叫端程式碼會指派新的完整名稱，`Set`程序會嘗試將它分成兩個組成的名稱。 如果找不到一個空格，它會儲存它做為第一個名稱。  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  下列範例示範一般呼叫屬性程序的`fullName`。  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>另請參閱
 - [程序](./index.md)

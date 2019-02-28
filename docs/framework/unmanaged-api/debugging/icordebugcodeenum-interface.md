@@ -1,5 +1,5 @@
 ---
-title: ICorDebugCodeEnum 介面 1
+title: ICorDebugCodeEnum 介面
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCodeEnum
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c503defaee9137cb95e01181831a470a99eb0b1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed18f969d4ee857aee72668cf7230aa385586bde
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722539"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965237"
 ---
-# <a name="icordebugcodeenum-interface1"></a>ICorDebugCodeEnum 介面 1
+# <a name="icordebugcodeenum-interface"></a>ICorDebugCodeEnum 介面
+
 實作 「 ICorDebugEnum 」 方法，並列舉"ICorDebugCode"陣列。  
   
 ## <a name="methods"></a>方法  

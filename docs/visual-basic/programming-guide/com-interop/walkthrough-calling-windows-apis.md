@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f57b5ae35bf97a04ff235d213ffad27bd015e711
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657970"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981461"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>逐步解說：呼叫 Windows Api (Visual Basic)
 Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您可以使用它們來執行工作時很難撰寫您自己的對等的程序。 比方說，Windows 會提供名為函式`FlashWindowEx`，可讓您的應用程式的標題列淺色與深色陰影之間。  
@@ -45,7 +45,7 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
   
 4.  新增下列`Declare`函式至類別或您要使用 DLL 的模組：  
   
-     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_1.vb)]  
+     [!code-vb[VbVbalrInterop#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#9)]  
   
 ### <a name="parts-of-the-declare-statement"></a>組件的 Declare 陳述式  
  `Declare`陳述式包含下列項目。  
@@ -79,7 +79,7 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
   
 3.  新增對等項目`Const`至您的類別或模組，讓您的應用程式可使用這些常數的陳述式。 例如:   
   
-     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_2.vb)]  
+     [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
 ###### <a name="to-call-the-dll-procedure"></a>若要呼叫的 DLL 程序  
   
@@ -87,7 +87,7 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
   
 2.  將程式碼加入`Click`加入呼叫程序，並提供適當的引數的按鈕事件處理常式：  
   
-     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_3.vb)]  
+     [!code-vb[VbVbalrInterop#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#12)]  
   
 3.  按 F5 執行專案。 訊息方塊會顯示這兩 **[是]** 並**No**回應按鈕。 按一下其中一個。  
   
@@ -100,11 +100,11 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
   
 2.  若要簡化存取權`MarshalAs`屬性，請將`Imports`陳述式的類別或模組，如下列範例所示的程式碼：  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
+     [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
 3.  將函式原型匯入的函式新增至類別或模組，您使用，並套用`MarshalAs`屬性至參數或傳回值。 在下列範例中，預期類型的 API 呼叫`void*`封送處理為`AsAny`:  
   
-     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
+     [!code-vb[VbVbalrInterop#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#14)]  
   
 ## <a name="api-calls-using-dllimport"></a>API 呼叫使用 DllImport  
  `DllImport`屬性會提供 Dll 中呼叫函式，而不需要型別程式庫的第二種方式。 `DllImport` 大致上相當於使用`Declare`陳述式但可提供更充分掌控如何呼叫的函式。  
@@ -123,23 +123,23 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
   
 5.  若要簡化存取權`DllImport`，新增`Imports`陳述式來啟動表單類別的程式碼頂端：  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
+     [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
 6.  宣告空函式前面`End Class`表單，和名稱的函式的陳述式`MoveFile`。  
   
 7.  適用於`Public`並`Shared`的函式宣告和設定參數的修飾詞`MoveFile`根據 Windows API 函式會使用的引數：  
   
-     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_6.vb)]  
+     [!code-vb[VbVbalrInterop#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#16)]  
   
      您的函式可以使用任何有效的程序名稱;`DllImport`屬性會指定在 DLL 中的名稱。 它也會處理參數封送處理的互通性和 API 所使用的傳回值，因此您可以選擇 Visual Studio 的資料類型，它們類似於的資料類型。  
   
 8.  套用`DllImport`屬性為空白的函式。 第一個參數是包含您要呼叫的函式的 dll 的位置與名稱。 您不需要指定位於 Windows 系統目錄中檔案的路徑。 第二個參數是在 Windows API 中指定的函式名稱的具名引數。 在此範例中，`DllImport`屬性會強制執行呼叫`MoveFile`轉送至`MoveFileW`KERNEL32 中。DLL。 `MoveFileW`方法會將檔案複製從路徑`src`路徑`dst`。  
   
-     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_7.vb)]  
+     [!code-vb[VbVbalrInterop#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#17)]  
   
 9. 將程式碼加入`Button2_Click`事件處理常式呼叫的函式：  
   
-     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_8.vb)]  
+     [!code-vb[VbVbalrInterop#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#18)]  
   
 10. 建立名為 Test.txt 的檔案，並將它放在硬碟機 C:\Tmp 目錄中。 如有必要，請建立 Tmp 目錄。  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: c6d2600b590e01fff062828f8e0f48d9cfad0190
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f0e50de6217e01a7bcb68ab27a9595d91981dd4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681387"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968818"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML 常值概觀 (Visual Basic)
 *XML 常值*可讓您將 XML 直接併入您的 Visual Basic 程式碼。 XML 常值語法表示[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件，而且這是類似 XML 1.0 語法。 這可讓您更輕鬆地以程式設計方式建立 XML 項目和文件，因為您的程式碼有相同的結構，為最後的 XML。  
@@ -26,11 +26,11 @@ ms.locfileid: "54681387"
 ## <a name="simple-literals"></a>簡單的常值  
  您可以建立[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]輸入或貼上有效的 XML 中的 Visual Basic 程式碼中的物件。 常值的 XML 項目傳回<xref:System.Xml.Linq.XElement>物件。 如需詳細資訊，請參閱 < [XML 元素常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)並[XML 常值和 XML 1.0 規格](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。 下列範例會建立數個項目子系的 XML 項目。  
   
- [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_1.vb)]  
+ [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
  您可以建立 XML 文件從 XML 常值與`<?xml version="1.0"?>`，如下列範例所示。 XML 文件常值傳回<xref:System.Xml.Linq.XDocument>物件。 如需詳細資訊，請參閱 < [XML 文件常值](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)。  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 > [!NOTE]
 >  在 Visual Basic 中的 XML 常值語法不等同於 XML 1.0 規格中的語法。 如需詳細資訊，請參閱 < [XML 常值和 XML 1.0 規格](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。  
@@ -47,12 +47,12 @@ ms.locfileid: "54681387"
   
  例如，下列的程式碼會使用內嵌的查詢來建立 XML 元素的成員`phoneNumbers2`陣列，然後將這些項目新增為子系`contact2`。  
   
- [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_3.vb)]  
+ [!code-vb[VbXMLSamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#7)]  
   
 ## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>編譯器從 XML 常值所建立的物件  
  Visual Basic 編譯器會將 XML 常值轉譯成呼叫對等[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]建構函式來建置[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。 例如，Visual Basic 編譯器會轉譯為下列程式碼範例呼叫<xref:System.Xml.Linq.XProcessingInstruction>建構函式 XML 版本指令時，呼叫<xref:System.Xml.Linq.XElement>建構函式`<contact>`， `<name>`，和`<phone>`項目，以及呼叫<xref:System.Xml.Linq.XAttribute>建構函式`type`屬性。 具體來說，假設屬性有下列的範例中，Visual Basic 編譯器會呼叫<xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29>建構函式兩次。 第一個會將值傳遞`type`for`name`參數和值`home`如`value`參數。 第二個也會將值傳遞`type`for`name`參數，但值`work`如`value`參數。  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Xml.Linq.XElement>

@@ -1,15 +1,9 @@
 ---
-title: F# Interactive (fsi.exe) 參考
-description: 了解如何F#Interactive (fsi.exe) 用來執行F#程式碼以互動方式在主控台上或執行F#指令碼。
+title: 'F# Interactive (fsi.exe) 參考'
+description: '了解如何F#Interactive (fsi.exe) 用來執行F#程式碼以互動方式在主控台上或執行F#指令碼。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0fccc818f0a4b3d6d09a69e91da1f5c337c53a44
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611057"
 ---
-# <a name="interactive-programming-with-f"></a>F# 互動式程式設計 #
+# <a name="interactive-programming-with-f"></a>F # 互動式程式設計\#
 
 > [!NOTE]
 > 本文目前僅描述 Windows 的體驗。  將會加以重新撰寫。
@@ -44,7 +38,7 @@ F# Interactive 會嘗試編譯程式碼，如果成功的話，它會執行程�
 您可以調整設定來控制 F# Interactive 命令列引數 (選項)。 在 [工具] 功能表上，選取 [選項...]，然後展開 [F# 工具]。 您只能變更 F# Interactive 選項和 [64 位元 F# Interactive] 這兩項設定，而且只有在 64 位元電腦上執行 F# Interactive 時才相關。 這項設定會判斷您要執行專用的 64 位元版 fsi.exe 或 fsianycpu.exe，它會使用電腦架構判斷要以 32 位元或 64 位元處理序執行。
 
 
-## <a name="scripting-with-f"></a>F# 指令碼作業 #
+## <a name="scripting-with-f"></a>使用 f # 指令碼\#
 指令碼使用副檔名 **.fsx** 或 **.fsscript**。 您只要執行 **fsi.exe**，並指定 F# 原始程式碼的指令碼檔名，F# Interactive 就會即時讀取程式碼並執行程式碼，而不是編譯原始程式碼，然後稍後再執行已編譯的組件。
 
 

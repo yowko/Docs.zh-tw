@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 6dd71a01aeb56a6805689b6e898ab9c2c404959b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94d43b7bea48d85e612b5c995e20e286f14b024a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640754"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976495"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic 中的邏輯運算子和位元運算子
 邏輯運算子會比較`Boolean`運算式，並傳回`Boolean`結果。 `And`， `Or`， `AndAlso`， `OrElse`，並`Xor`運算子*二進位*因為它們會使用兩個運算元，而`Not`運算子是*一元*因為這會在單一運算元。 其中有些運算子也可以執行位元整數值上的邏輯作業。  
@@ -34,7 +34,7 @@ ms.locfileid: "54640754"
 ## <a name="unary-logical-operator"></a>一元邏輯運算子  
  [Not 運算子](../../../../visual-basic/language-reference/operators/not-operator.md)會執行邏輯*否定*上`Boolean`運算式。 它會產生其運算元的相反邏輯。 如果運算式評估為`True`，然後`Not`會傳回`False`; 如果運算式評估為`False`，然後`Not`傳回`True`。 下列範例將說明這點。  
   
- [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#77)]  
   
 ## <a name="binary-logical-operators"></a>二元邏輯運算子  
  [與運算子](../../../../visual-basic/language-reference/operators/and-operator.md)會執行邏輯*搭配*對兩個`Boolean`運算式。 如果這兩個運算式都評估為`True`，然後`And`傳回`True`。 如果至少一個運算式評估為`False`，然後`And`傳回`False`。  
@@ -45,7 +45,7 @@ ms.locfileid: "54640754"
   
  下列範例說明`And`， `Or`，和`Xor`運算子。  
   
- [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
 ## <a name="short-circuiting-logical-operations"></a>最少運算邏輯作業  
  [AndAlso 運算子](../../../../visual-basic/language-reference/operators/andalso-operator.md)非常類似於`And`運算子，在於它也會執行邏輯結合兩個`Boolean`運算式。 兩者之間的主要差異在於`AndAlso`表現*最少運算*行為。 如果中的第一個運算式`AndAlso`運算式會評估為`False`，然後第二個運算式不會評估，因為它無法改變的最終結果，並`AndAlso`傳回`False`。  
@@ -57,18 +57,18 @@ ms.locfileid: "54640754"
   
  下列範例說明之間的差異`And`， `Or`，與其最少運算。  
   
- [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#81)]  
   
- [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#80](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#80)]  
   
- [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#79)]  
   
  在上述範例中，請注意，某些重要的程式碼內`checkIfValid()`呼叫就不需要再度時未執行。 第一個`If`陳述式會呼叫`checkIfValid()`即使`12 > 45`會傳回`False`，因為`And`不會最少運算。 第二個`If`陳述式不會呼叫`checkIfValid()`，因為當`12 > 45`會傳回`False`，`AndAlso`縮短第二個運算式。 第三個`If`陳述式會呼叫`checkIfValid()`即使`12 < 45`會傳回`True`，因為`Or`不會最少運算。 第四個`If`陳述式不會呼叫`checkIfValid()`，因為當`12 < 45`會傳回`True`，`OrElse`縮短第二個運算式。  
   
 ## <a name="bitwise-operations"></a>位元運算  
  位元運算的評估結果 (基底 2) 的二進位檔格式的兩個整數值。 這些比較在對應位置的位元，然後指派 根據比較結果的值。 下列範例說明`And`運算子。  
   
- [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/logical-and-bitwise-operators_6.vb)]  
+ [!code-vb[VbVbalrConcepts#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#2)]  
   
  上述範例中設定的值`x`為 1。 發生這種情況，原因如下：  
   

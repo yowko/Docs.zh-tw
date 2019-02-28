@@ -7,12 +7,12 @@ helpviewer_keywords:
 - AndAlso operator [Visual Basic]
 - IsFalse operator [Visual Basic]
 ms.assetid: 37fc9dbf-e5cc-4570-b93f-7213447974df
-ms.openlocfilehash: ec8d7bcd2f4ca3fb1c74f4edcf6ec8af78fd144d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85fd6b9264fa80c3636f2cb839c8fc5ed855ddc8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740411"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965653"
 ---
 # <a name="isfalse-operator-visual-basic"></a>IsFalse 運算子 (Visual Basic)
 判斷運算式是否為`False`。  
@@ -27,7 +27,7 @@ ms.locfileid: "54740411"
 ## <a name="example"></a>範例  
  下列程式碼範例會定義結構，其中包含定義的外框`IsFalse`和`IsTrue`運算子。  
   
- [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/isfalse-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>另請參閱
 - [IsTrue 運算子](../../../visual-basic/language-reference/operators/istrue-operator.md)

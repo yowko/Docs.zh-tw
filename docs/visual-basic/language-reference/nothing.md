@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b4a9acb5a43898ef616bbc6bb97f2f4f96d206b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496945"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981422"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 代表任何資料類型的預設值。 若是參考類型，預設值是`null`參考。 實值型別，預設值取決於實值型別是否可為 null。  
@@ -30,11 +30,11 @@ ms.locfileid: "54496945"
   
  如果變數屬於實值型別不是可為 null，指派`Nothing`要它將它設定為預設值為其宣告的型別。 如果該類型包含變數的成員，它們會都設為其預設值。 下列範例會說明這點的純量類型。  
   
- [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
+ [!code-vb[VbVbalrKeywords#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class2.vb#7)]  
   
  如果變數屬於參考類型，將指派`Nothing`變數將它設定為`null`參考變數的類型。 此變數會設為`null`參考不是任何物件相關聯。 下列範例為其示範。  
   
- [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
+ [!code-vb[VbVbalrKeywords#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class3.vb#8)]  
   
  檢查變數是否參照 （或可為 null 的實值類型） 時`null`，請勿使用`= Nothing`或`<> Nothing`。 一律使用`Is Nothing`或`IsNot Nothing`。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54496945"
   
  下列範例示範使用的比較`Is`和`IsNot`運算子。  
   
- [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
+ [!code-vb[VbVbalrKeywords#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class4.vb#9)]  
   
  如果您宣告變數時不用`As`子句並將它設定為`Nothing`，該變數具有一種`Object`。 這個範例是`Dim something = Nothing`。 在此情況下發生編譯時期錯誤時`Option Strict`位於和`Option Infer`已關閉。  
   

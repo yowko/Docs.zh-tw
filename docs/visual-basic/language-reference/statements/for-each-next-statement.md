@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: a44aff8407a29ef7f3712e116301cfce0aa984ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 269d905ad59a162af4e790e29d3753f090f511bd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700425"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975000"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 陳述式 (Visual Basic)
 每個項目集合中，會重複一組陳述式。  
@@ -64,7 +64,7 @@ Next [ element ]
   
  在下列範例中， `For Each`...`Next` 陳述式逐一查看清單集合中的所有項目。  
   
- [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]  
   
  如需其他範例，請參閱 <<c0> [ 集合](../../../standard/collections/index.md)並[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
@@ -73,7 +73,7 @@ Next [ element ]
   
  下列範例會示範巢狀`For Each`...`Next` 結構。  
   
- [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#122](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#122)]  
   
  當您使用巢狀迴圈時，每個迴圈必須具有唯一`element`變數。  
   
@@ -86,7 +86,7 @@ Next [ element ]
   
  下列範例示範如何使用`Continue For`和`Exit For`陳述式。  
   
- [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#123](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#123)]  
   
  您可以將任意數目的放`Exit For`中的陳述式`For Each`迴圈。 使用時內巢狀`For Each`迴圈，`Exit For`導致執行動作的巢狀下一個較高的等級結束最內層的迴圈和傳輸控制項。  
   
@@ -105,7 +105,7 @@ Next [ element ]
   
  下列範例會使用迭代器函式。 迭代器函式具有`Yield`內的陳述式[For...下一步](../../../visual-basic/language-reference/statements/for-next-statement.md)迴圈。 在 `ListEvenNumbers`方法中，每次反覆運算`For Each`陳述式主體會建立迭代器，才能繼續進行下一個呼叫`Yield`陳述式。  
   
- [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]  
   
  如需詳細資訊，請參閱 <<c0> [ 迭代器](../../programming-guide/concepts/iterators.md)， [Yield 陳述式](../../../visual-basic/language-reference/statements/yield-statement.md)，並[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。  
   
@@ -133,7 +133,7 @@ Next [ element ]
   
  在下列範例中，指派`m`做為初始的值`n`不會進行編譯時`Option Strict`是上，因為轉換`Long`到`Integer`是縮小轉換。 在`For Each`陳述式，不過，沒有編譯器錯誤會報告，即使指派給`number`需要從相同的轉換`Long`至`Integer`。 在 `For Each`包含大量的陳述式，執行階段錯誤發生時<xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A>套用大的數字。  
   
- [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class3.vb#89)]  
   
 ### <a name="ienumerator-calls"></a>IEnumerator 呼叫  
  當執行`For Each`...`Next`迴圈開始，Visual Basic 會確認`group`指的是有效的集合物件。 如果沒有，就會擲回例外狀況。 否則，它會呼叫<xref:System.Collections.IEnumerator.MoveNext%2A>方法和<xref:System.Collections.IEnumerator.Current%2A>要傳回的第一個元素的列舉值物件的屬性。 如果`MoveNext`指出，沒有下一個項目，也就是這個集合是空的如果`For Each`迴圈停駐點，並控制傳遞到之後的陳述式`Next`陳述式。 否則，Visual Basic 會將設定`element`第一個項目並執行陳述式區塊。  
@@ -161,7 +161,7 @@ End Sub
 ## <a name="example"></a>範例  
  下列範例會列出在 C:\ 目錄中的所有資料夾使用<xref:System.IO.DirectoryInfo>類別。  
   
- [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#124](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#124)]  
   
 ## <a name="example"></a>範例  
  下列範例說明排序集合的程序。 此範例排序的執行個體`Car`類別，會儲存在<xref:System.Collections.Generic.List%601>。 `Car` 類別實作 <xref:System.IComparable%601> 介面，而這個介面要求實作 <xref:System.IComparable%601.CompareTo%2A> 方法。  
@@ -170,7 +170,7 @@ End Sub
   
  在 `ListCars` 方法中，`cars.Sort()` 陳述式會排序清單。 對 <xref:System.Collections.Generic.List%601> 之 <xref:System.Collections.Generic.List%601.Sort%2A> 方法的這個呼叫，會導致 `CompareTo` 方法對 `List` 的 `Car` 物件自動呼叫。  
   
- [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]  
   
 ## <a name="see-also"></a>另請參閱
 - [集合](../../../standard/collections/index.md)

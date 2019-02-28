@@ -12,16 +12,16 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 08c686349acc5777343e8e6f2e6084be44a20fe1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f2fe865019b24263f76595654455df7b597c1d8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517392"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968526"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>HOW TO：指定 XML Stream 的替代項目名稱
   
-透過 [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)，可使用相同的類別集產生一個以上的 XML 資料流。 當兩個不同的 XML Web 服務要求相同的基本資訊以及些微差異時，您也許會想這麼做。 例如，試想有兩家處理書本訂單的 XML Web 服務，而且都需要 ISBN 號碼。 一個服務使用標記 \<ISBN>，另一個則使用標記 \<BookID>。 您有名為 `Book` 的類別，其中包含名為 `ISBN`的欄位。 當 `Book` 類別的執行個體序列化時，它會根據預設使用成員名稱 (ISBN) 做為標記項目名稱。 對於第一個 XML Web 服務，這正如預期。 不過要想要傳送 XML 資料流至第二個 XML Web 服務，您必須覆寫序列化，讓標記的項目名稱為 `BookID`。  
+使用 <xref:System.Xml.Serialization.XmlSerializer>，以相同類別集，可產生一個以上的 XML 資料流。 當兩個不同的 XML Web 服務要求相同的基本資訊以及些微差異時，您也許會想這麼做。 例如，試想有兩家處理書本訂單的 XML Web 服務，而且都需要 ISBN 號碼。 一個服務使用標記 \<ISBN>，另一個則使用標記 \<BookID>。 您有名為 `Book` 的類別，其中包含名為 `ISBN`的欄位。 當 `Book` 類別的執行個體序列化時，它會根據預設使用成員名稱 (ISBN) 做為標記項目名稱。 對於第一個 XML Web 服務，這正如預期。 不過要想要傳送 XML 資料流至第二個 XML Web 服務，您必須覆寫序列化，讓標記的項目名稱為 `BookID`。  
   
 ## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>以其他項目名稱建立 XML 資料流  
   
@@ -97,7 +97,7 @@ public class SerializeOverride()
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
 - [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- <xref:System.Xml.Serialization.XmlSerializer>
 - [如何：將物件序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 - [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
