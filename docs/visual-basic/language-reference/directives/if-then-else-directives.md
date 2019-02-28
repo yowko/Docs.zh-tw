@@ -18,17 +18,17 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: 8930e0e5c6bf9bd713b5601c91e6d1a5cbfd7a51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23e45d00e63c1f50ad2f6d3f08d16adbd13ae2b6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568216"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968813"
 ---
-# <a name="ifthenelse-directives"></a><span data-ttu-id="4fa5d-102">#If...Then...#Else 指示詞</span><span class="sxs-lookup"><span data-stu-id="4fa5d-102">#If...Then...#Else Directives</span></span>
-<span data-ttu-id="4fa5d-103">有條件地編譯選取的 Visual Basic 程式碼區塊。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-103">Conditionally compiles selected blocks of Visual Basic code.</span></span>  
+# <a name="ifthenelse-directives"></a><span data-ttu-id="66e91-102">#If...Then...#Else 指示詞</span><span class="sxs-lookup"><span data-stu-id="66e91-102">#If...Then...#Else Directives</span></span>
+<span data-ttu-id="66e91-103">有條件地編譯選取的 Visual Basic 程式碼區塊。</span><span class="sxs-lookup"><span data-stu-id="66e91-103">Conditionally compiles selected blocks of Visual Basic code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4fa5d-104">語法</span><span class="sxs-lookup"><span data-stu-id="4fa5d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66e91-104">語法</span><span class="sxs-lookup"><span data-stu-id="66e91-104">Syntax</span></span>  
   
 ```  
 #If expression Then  
@@ -43,27 +43,27 @@ ms.locfileid: "54568216"
 #End If  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="4fa5d-105">組件</span><span class="sxs-lookup"><span data-stu-id="4fa5d-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="66e91-105">組件</span><span class="sxs-lookup"><span data-stu-id="66e91-105">Parts</span></span>  
  `expression`  
- <span data-ttu-id="4fa5d-106">所需`#If`和`#ElseIf`陳述式，選擇性在其他地方。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-106">Required for `#If` and `#ElseIf` statements, optional elsewhere.</span></span> <span data-ttu-id="4fa5d-107">任何運算式，以獨佔方式組成一或多個條件式編譯器常數、 常值和運算子，評估`True`或`False`。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-107">Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.</span></span>  
+ <span data-ttu-id="66e91-106">所需`#If`和`#ElseIf`陳述式，選擇性在其他地方。</span><span class="sxs-lookup"><span data-stu-id="66e91-106">Required for `#If` and `#ElseIf` statements, optional elsewhere.</span></span> <span data-ttu-id="66e91-107">任何運算式，以獨佔方式組成一或多個條件式編譯器常數、 常值和運算子，評估`True`或`False`。</span><span class="sxs-lookup"><span data-stu-id="66e91-107">Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.</span></span>  
   
  `statements`  
- <span data-ttu-id="4fa5d-108">所需的`#If`陳述式區塊，選擇性在其他地方。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-108">Required for `#If` statement block, optional elsewhere.</span></span> <span data-ttu-id="4fa5d-109">Visual Basic 程式行或如果相關聯的運算式評估為編譯的編譯器指示詞`True`。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-109">Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.</span></span>  
+ <span data-ttu-id="66e91-108">所需的`#If`陳述式區塊，選擇性在其他地方。</span><span class="sxs-lookup"><span data-stu-id="66e91-108">Required for `#If` statement block, optional elsewhere.</span></span> <span data-ttu-id="66e91-109">Visual Basic 程式行或如果相關聯的運算式評估為編譯的編譯器指示詞`True`。</span><span class="sxs-lookup"><span data-stu-id="66e91-109">Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.</span></span>  
   
  `#End If`  
- <span data-ttu-id="4fa5d-110">終止`#If`陳述式區塊。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-110">Terminates the `#If` statement block.</span></span>  
+ <span data-ttu-id="66e91-110">終止`#If`陳述式區塊。</span><span class="sxs-lookup"><span data-stu-id="66e91-110">Terminates the `#If` statement block.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4fa5d-111">備註</span><span class="sxs-lookup"><span data-stu-id="4fa5d-111">Remarks</span></span>  
- <span data-ttu-id="4fa5d-112">在介面中，行為`#If...Then...#Else`指示詞會出現相同的`If...Then...Else`陳述式。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-112">On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements.</span></span> <span data-ttu-id="4fa5d-113">不過，`#If...Then...#Else`指示詞評估功能由編譯器編譯而`If...Then...Else`陳述式在執行階段評估的條件。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-113">However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="66e91-111">備註</span><span class="sxs-lookup"><span data-stu-id="66e91-111">Remarks</span></span>  
+ <span data-ttu-id="66e91-112">在介面中，行為`#If...Then...#Else`指示詞會出現相同的`If...Then...Else`陳述式。</span><span class="sxs-lookup"><span data-stu-id="66e91-112">On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements.</span></span> <span data-ttu-id="66e91-113">不過，`#If...Then...#Else`指示詞評估功能由編譯器編譯而`If...Then...Else`陳述式在執行階段評估的條件。</span><span class="sxs-lookup"><span data-stu-id="66e91-113">However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.</span></span>  
   
- <span data-ttu-id="4fa5d-114">條件式編譯通常會用來編譯不同的平台的相同程式中。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-114">Conditional compilation is typically used to compile the same program for different platforms.</span></span> <span data-ttu-id="4fa5d-115">它也會用來防止偵錯不會出現在可執行檔的程式碼。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-115">It is also used to prevent debugging code from appearing in an executable file.</span></span> <span data-ttu-id="4fa5d-116">條件式編譯期間排除的程式碼完全中會省略最終的可執行檔，所以其大小或效能沒有影響。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-116">Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.</span></span>  
+ <span data-ttu-id="66e91-114">條件式編譯通常會用來編譯不同的平台的相同程式中。</span><span class="sxs-lookup"><span data-stu-id="66e91-114">Conditional compilation is typically used to compile the same program for different platforms.</span></span> <span data-ttu-id="66e91-115">它也會用來防止偵錯不會出現在可執行檔的程式碼。</span><span class="sxs-lookup"><span data-stu-id="66e91-115">It is also used to prevent debugging code from appearing in an executable file.</span></span> <span data-ttu-id="66e91-116">條件式編譯期間排除的程式碼完全中會省略最終的可執行檔，所以其大小或效能沒有影響。</span><span class="sxs-lookup"><span data-stu-id="66e91-116">Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.</span></span>  
   
- <span data-ttu-id="4fa5d-117">不論任何評估結果，評估所有運算式都使用`Option Compare Binary`。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-117">Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`.</span></span> <span data-ttu-id="4fa5d-118">`Option Compare`陳述式不會影響運算式中的`#If`和`#ElseIf`陳述式。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-118">The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.</span></span>  
+ <span data-ttu-id="66e91-117">不論任何評估結果，評估所有運算式都使用`Option Compare Binary`。</span><span class="sxs-lookup"><span data-stu-id="66e91-117">Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`.</span></span> <span data-ttu-id="66e91-118">`Option Compare`陳述式不會影響運算式中的`#If`和`#ElseIf`陳述式。</span><span class="sxs-lookup"><span data-stu-id="66e91-118">The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4fa5d-119">沒有單一線條形式`#If`， `#Else`， `#ElseIf`，和`#End If`指示詞存在。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-119">No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists.</span></span> <span data-ttu-id="4fa5d-120">沒有其他程式碼可以出現在任何指示詞的同一行。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-120">No other code can appear on the same line as any of the directives.</span></span> 
+>  <span data-ttu-id="66e91-119">沒有單一線條形式`#If`， `#Else`， `#ElseIf`，和`#End If`指示詞存在。</span><span class="sxs-lookup"><span data-stu-id="66e91-119">No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists.</span></span> <span data-ttu-id="66e91-120">沒有其他程式碼可以出現在任何指示詞的同一行。</span><span class="sxs-lookup"><span data-stu-id="66e91-120">No other code can appear on the same line as any of the directives.</span></span> 
 
-<span data-ttu-id="4fa5d-121">條件式編譯區塊內的陳述式必須是完整的邏輯陳述式。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-121">The statements within a conditional compilation block must be complete logical statements.</span></span> <span data-ttu-id="4fa5d-122">例如，您不能有條件地編譯函式的屬性，但您可以有條件地宣告的函式和其屬性：</span><span class="sxs-lookup"><span data-stu-id="4fa5d-122">For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:</span></span>
+<span data-ttu-id="66e91-121">條件式編譯區塊內的陳述式必須是完整的邏輯陳述式。</span><span class="sxs-lookup"><span data-stu-id="66e91-121">The statements within a conditional compilation block must be complete logical statements.</span></span> <span data-ttu-id="66e91-122">例如，您不能有條件地編譯函式的屬性，但您可以有條件地宣告的函式和其屬性：</span><span class="sxs-lookup"><span data-stu-id="66e91-122">For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:</span></span>
 
 ```vb
    #If DEBUG Then
@@ -75,15 +75,15 @@ ms.locfileid: "54568216"
    #End If
 ```
 
-## <a name="example"></a><span data-ttu-id="4fa5d-123">範例</span><span class="sxs-lookup"><span data-stu-id="4fa5d-123">Example</span></span>
- <span data-ttu-id="4fa5d-124">這個範例會使用`#If...Then...#Else`建構函式來判斷是否要編譯特定陳述式。</span><span class="sxs-lookup"><span data-stu-id="4fa5d-124">This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.</span></span>  
+## <a name="example"></a><span data-ttu-id="66e91-123">範例</span><span class="sxs-lookup"><span data-stu-id="66e91-123">Example</span></span>
+ <span data-ttu-id="66e91-124">這個範例會使用`#If...Then...#Else`建構函式來判斷是否要編譯特定陳述式。</span><span class="sxs-lookup"><span data-stu-id="66e91-124">This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.</span></span>  
   
- [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="4fa5d-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4fa5d-125">See also</span></span>
-- [<span data-ttu-id="4fa5d-126">#Const 指示詞</span><span class="sxs-lookup"><span data-stu-id="4fa5d-126">#Const Directive</span></span>](../../../visual-basic/language-reference/directives/const-directive.md)
-- [<span data-ttu-id="4fa5d-127">If...Then...Else 陳述式</span><span class="sxs-lookup"><span data-stu-id="4fa5d-127">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [<span data-ttu-id="4fa5d-128">條件式編譯</span><span class="sxs-lookup"><span data-stu-id="4fa5d-128">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a><span data-ttu-id="66e91-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="66e91-125">See also</span></span>
+- [<span data-ttu-id="66e91-126">#Const 指示詞</span><span class="sxs-lookup"><span data-stu-id="66e91-126">#Const Directive</span></span>](../../../visual-basic/language-reference/directives/const-directive.md)
+- [<span data-ttu-id="66e91-127">If...Then...Else 陳述式</span><span class="sxs-lookup"><span data-stu-id="66e91-127">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [<span data-ttu-id="66e91-128">條件式編譯</span><span class="sxs-lookup"><span data-stu-id="66e91-128">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - <xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>
 
 
