@@ -4,12 +4,12 @@ description: 了解如何在 .NET 中透過 P/Invoke 呼叫原生函式。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: f243fee2b246afff36732d469c6295d7e4b2fd87
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 51026eab92ae4fd47ccdd78321be21bdbb5ecf49
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411380"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981253"
 ---
 # <a name="platform-invoke-pinvoke"></a>平台叫用 (P/Invoke)
 
@@ -242,5 +242,5 @@ namespace PInvokeSamples {
 ## <a name="more-resources"></a>更多資源
 
 *   [PInvoke.net wiki](https://www.pinvoke.net/) 是一個絕佳的 Wiki 網頁，具有通用的 Win32 API，以及如何呼叫它們的相關資訊。
-*   [P/Invoke on MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
+*   [P/Invoke on MSDN](/cpp/dotnet/native-and-dotnet-interoperability)
 *   [P/Invoke 上的 Mono 文件](https://www.mono-project.com/docs/advanced/pinvoke/)
