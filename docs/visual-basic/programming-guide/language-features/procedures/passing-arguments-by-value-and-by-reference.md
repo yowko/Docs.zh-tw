@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: 86dc813c264f45e4f9c2cdf8d2dc7e7e6603c4d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2c778afea90a90b2b5f83300c2d174db39f3c15
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725359"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978471"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>以傳值和傳址方式傳遞引數 (Visual Basic)
 在 Visual Basic 中，您可以將引數傳遞至程序*值所*或是*傳址*。 這就所謂*傳遞機制*，它決定程序是否可以修改基礎呼叫程式碼中的引數的程式設計項目。 程序宣告會決定每個參數的傳遞機制，藉由指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或是[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字。  
@@ -44,7 +44,7 @@ ms.locfileid: "54725359"
 ## <a name="determination-of-the-passing-mechanism"></a>判斷的傳遞機制  
  程序宣告會指定每個參數的傳遞機制。 呼叫端程式碼無法覆寫`ByVal`機制。  
   
- 如果參數以宣告`ByRef`，呼叫程式碼可以強制機制`ByVal`方法中呼叫中的括號括住引數名稱。 如需詳細資訊，請參閱[＜How to：強制以傳值方式傳遞的引數](./how-to-force-an-argument-to-be-passed-by-value.md)。  
+ 如果參數以宣告`ByRef`，呼叫程式碼可以強制機制`ByVal`方法中呼叫中的括號括住引數名稱。 如需詳細資訊，請參閱[如何：強制以傳值方式傳遞的引數](./how-to-force-an-argument-to-be-passed-by-value.md)。  
   
  在 Visual Basic 中的預設值是以傳值方式傳遞引數。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54725359"
  下列範例會說明何時以傳值方式傳遞引數，以及何時傳址方式傳遞它們。 程序`Calculate`同時具有`ByVal`和`ByRef`參數。 指定的利率， `rate`，和總金額， `debt`，程序的工作是計算的新值`debt`結果的原始值上套用利率的`debt`。 因為`debt`已`ByRef`參數，對應至呼叫端程式碼中的引數的值會反映新的總數`debt`。 參數`rate`已`ByVal`參數因為`Calculate`不應該變更其值。  
   
 ### <a name="code"></a>程式碼  
- [!code-vb[VbVbcnProcedures#74](./codesnippet/VisualBasic/passing-arguments-by-value-and-by-reference_1.vb)]  
+ [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  
   
 ## <a name="see-also"></a>另請參閱
 - [程序](./index.md)

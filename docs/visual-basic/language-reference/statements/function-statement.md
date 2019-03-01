@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 5018aebb0401ce5a1c46ecf04a7c65ca676271e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 947507cb813437facc2b2343ff6f1a5d50f4dd98
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565900"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971633"
 ---
 # <a name="function-statement-visual-basic"></a>Function 陳述式 (Visual Basic)
 宣告名稱、 參數和定義的程式碼`Function`程序。  
@@ -193,11 +193,11 @@ End Function
   
  `Return`陳述式同時指派傳回值，並結束函式，如下列範例所示。  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
   
  下列範例會將傳回的值指派給函式名稱`myFunction`，然後使用`Exit Function`陳述式來傳回。  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
   
  `Exit Function`並`Return`陳述式會導致立即結束`Function`程序。 任意數目的`Exit Function`並`Return`陳述式可以出現在任何位置的程序中，您可以混合`Exit Function`和`Return`陳述式。  
   
@@ -240,19 +240,19 @@ End Function
 ## <a name="example"></a>範例  
  下列範例會使用`Function`陳述式來宣告名稱、 參數和構成的主體的程式碼`Function`程序。 `ParamArray`修飾詞可讓要接受可變數目的引數的函式。  
   
- [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>範例  
  下列範例會叫用在上述範例中宣告的函式。  
   
- [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
 ## <a name="example"></a>範例  
  在下列範例中，`DelayAsync`已`Async``Function`具有傳回型別<xref:System.Threading.Tasks.Task%601>。 `DelayAsync` 具有傳回整數的 `Return` 陳述式。 因此函式的宣告`DelayAsync`必須有傳回型別`Task(Of Integer)`。 因為傳回類型是`Task(Of Integer)`，評估`Await`中的運算式`DoSomethingAsync`會產生整數。 此陳述式所示： `Dim result As Integer = Await delayTask`。  
   
  `startButton_Click`程序是範例`Async Sub`程序。 因為`DoSomethingAsync`已`Async`函式，呼叫工作`DoSomethingAsync`必須等候，如下列陳述式所示： `Await DoSomethingAsync()`。 `startButton_Click` `Sub`程序都必須定義`Async`修飾詞因為它有`Await`運算式。  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
+ [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
 - [Sub 陳述式](sub-statement.md)

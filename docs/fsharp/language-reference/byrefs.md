@@ -2,12 +2,12 @@
 title: Byref
 description: 了解 byref 和中的類似 byref 類型F#，用來進行低層級的程式設計。
 ms.date: 09/02/2018
-ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611577"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976547"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -105,7 +105,7 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 目的`outref<'T>`是指出只應該從讀取指標。 意外`outref<'T>`讀取基礎的允許值，儘管其名稱。 這是基於相容性。 語意上來說，`outref<'T>`沒什麼兩樣`byref<'T>`。
 
-### <a name="interop-with-c"></a>使用 C# 的 interop #
+### <a name="interop-with-c"></a>使用 c# 的 interop\#
 
 C# 支援`in ref`並`out ref`關鍵字，除了`ref`傳回。 下表顯示F#會解譯項目C#發出：
 

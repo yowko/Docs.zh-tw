@@ -16,12 +16,12 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: ecb75e71225d2b6705d6235a941ecd83b3aab75b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93b299ffd8d2be1b1fabfd752e75d18ef87714b2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699801"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974376"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports 陳述式 (.NET 命名空間和類型)
 可讓類型參考而不需要命名空間限定性條件的名稱。  
@@ -56,7 +56,7 @@ Imports [ aliasname = ] namespace.element
  請注意，`Imports`陳述式不會從其他專案和組件的項目提供至您的專案。 匯入不會設定參考。 此外，它只會移除已可供專案的名稱進行限定的需求。 如需詳細資訊，請參閱 < 匯入包含項目 」 中[References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
 > [!NOTE]
->  您可以定義隱含`Imports`陳述式，利用[參考 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)。 如需詳細資訊，請參閱[＜How to：新增或移除匯入的命名空間 (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)。  
+>  您可以定義隱含`Imports`陳述式，利用[參考 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)。 如需詳細資訊，請參閱[如何：新增或移除匯入的命名空間 (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)。  
   
 ## <a name="import-aliases"></a>匯入別名  
  *匯入別名*定義命名空間或類型的別名。 當您需要使用一或多個命名空間中宣告的同名的項目，則匯入別名會非常有用。 如需詳細資訊和範例，請參閱 「 合格的項目名稱 」 中[References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
@@ -75,28 +75,28 @@ Imports [ aliasname = ] namespace.element
   
  程式碼沒有`Imports`陳述式在檔案頂端。 因此， `DirectoryInfo`， <xref:System.Text.StringBuilder>，和<xref:Microsoft.VisualBasic.ControlChars.CrLf>是命名空間與所有完整的參考。  
   
- [!code-vb[VbVbalrStatements#152](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_1.vb)]  
+ [!code-vb[VbVbalrStatements#152](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#152)]  
   
 ## <a name="example"></a>範例  
  下列範例會加入`Imports`參考的命名空間的陳述式。 因此，型別不必完整限定的命名空間。  
   
- [!code-vb[VbVbalrStatements#153](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_2.vb)]  
+ [!code-vb[VbVbalrStatements#153](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#153)]  
   
- [!code-vb[VbVbalrStatements#154](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_3.vb)]  
+ [!code-vb[VbVbalrStatements#154](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#154)]  
   
 ## <a name="example"></a>範例  
  下列範例會加入`Imports`為參考的命名空間建立別名的陳述式。 類型是以別名限定。  
   
- [!code-vb[VbVbalrStatements#155](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_4.vb)]  
+ [!code-vb[VbVbalrStatements#155](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#155)]  
   
- [!code-vb[VbVbalrStatements#156](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_5.vb)]  
+ [!code-vb[VbVbalrStatements#156](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#156)]  
   
 ## <a name="example"></a>範例  
  下列範例會加入`Imports`陳述式建立參考類型的別名。 別名用來指定的類型。  
   
- [!code-vb[VbVbalrStatements#157](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_6.vb)]  
+ [!code-vb[VbVbalrStatements#157](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#157)]  
   
- [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_7.vb)]  
+ [!code-vb[VbVbalrStatements#158](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#158)]  
   
 ## <a name="see-also"></a>另請參閱
 - [Namespace 陳述式](../../../visual-basic/language-reference/statements/namespace-statement.md)

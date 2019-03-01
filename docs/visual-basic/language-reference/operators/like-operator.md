@@ -22,12 +22,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: 67325ef434d00368c71e7f789fcd2e4ecb4b5938
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f26cadc4f64626f2a79eb37352f4906cea9092bb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748293"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979917"
 ---
 # <a name="like-operator-visual-basic"></a>Like 運算子 (Visual Basic)
 比較字串和模式。  
@@ -103,7 +103,7 @@ result = string Like pattern
 ## <a name="example"></a>範例  
  這個範例會使用`Like`運算子來比較各種模式的字串。 結果將會進入`Boolean`變數，表示每個字串是否符合模式。  
   
- [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#30)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>

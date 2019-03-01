@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 0c5731fcff3191c192a5e7884c4d5a9566400bc5
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: fd01842bdb3a3b168c00e0366dd6fe4c2daf7121
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204804"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974363"
 ---
 # <a name="examples-of-xml-serialization"></a>XML 序列化的範例
 XML 序列化的形式不只一種，從簡單到複雜都有。 例如，您可序列化僅包含公用欄位及屬性的類別，如 [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)中所示。 下列程式碼範例說明各種不同的進階案例，包括如何使用 XML 序列化以產生符合特定 XML 結構描述 (XSD) 文件的 XML 資料流。  
@@ -119,7 +119,7 @@ private void SerializeNode(string filename){
 ```  
   
 ## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a>序列化包含傳回複雜物件之欄位的類別  
- 如果屬性或欄位傳回複雜物件 (例如陣列或類別執行個體)，[XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) 會將它轉換為主要 XML 文件中的巢狀項目。 例如，下列程式碼範例中的第一個類別，會傳回第二個類別的執行個體。  
+ 如果屬性或欄位傳回複雜物件 (例如陣列或類別執行個體)，<xref:System.Xml.Serialization.XmlSerializer> 會將它轉換為主要 XML 文件中的巢狀項目。 例如，下列程式碼範例中的第一個類別，會傳回第二個類別的執行個體。  
   
 ```vb  
 Public Class PurchaseOrder  
@@ -363,7 +363,8 @@ public class Employee {
   
  `CreatePO` 方法會建立 `PurchaseOrder`、`Address` 和 `OrderedItem` 類別物件，並且設定公用欄位的值。 該方法也建構用來序列化及還原序列化 <xref:System.Xml.Serialization.XmlSerializer>`PurchaseOrder`之  類別的執行個體。 請注意，程式碼把要序列化之類別的型別傳遞給建構函式。 程式碼也建立用來將 XML 資料流寫入 XML 文件的 `FileStream`。  
   
- `ReadPo` 方法比較簡單。 它只會建立要還原序列化的物件，並讀出它們的值。 如同`CreatePo`方法中，您必須先建構<xref:System.Xml.Serialization.XmlSerializer>，傳遞要還原序列化建構函式類別的型別。 同時，需要有 <xref:System.IO.FileStream> 讀取 XML 文件。 若要還原序列化物件，以 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 做為引數呼叫 <xref:System.IO.FileStream> 方法。 還原序列化物件必須轉型為型別 `PurchaseOrder`的物件變數。 然後程式碼會讀取已還原序列化的 `PurchaseOrder`值。 請注意，您也可以讀取已建立的 PO.xml 檔案，檢視實際的 XML 輸出。  
+ 
+  `ReadPo` 方法比較簡單。 它只會建立要還原序列化的物件，並讀出它們的值。 如同`CreatePo`方法中，您必須先建構<xref:System.Xml.Serialization.XmlSerializer>，傳遞要還原序列化建構函式類別的型別。 同時，需要有 <xref:System.IO.FileStream> 讀取 XML 文件。 若要還原序列化物件，以 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 做為引數呼叫 <xref:System.IO.FileStream> 方法。 還原序列化物件必須轉型為型別 `PurchaseOrder`的物件變數。 然後程式碼會讀取已還原序列化的 `PurchaseOrder`值。 請注意，您也可以讀取已建立的 PO.xml 檔案，檢視實際的 XML 輸出。  
   
 ```vb  
 Imports System  
@@ -767,6 +768,6 @@ public class Test
 - [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
 - [可控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
-- [XmlSerializer 類別](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- [XmlSerializer 類別](xref:System.Xml.Serialization.XmlSerializer)
 - [如何：將物件序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

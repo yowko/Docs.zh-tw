@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAppDomain2 介面 1
+title: ICorDebugAppDomain2 介面
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomain2
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4549b0fe6379979a7b9bd6344d65ff465f33f17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82b58780472443874f2dae93c2d8568006db2e8a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506130"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978562"
 ---
-# <a name="icordebugappdomain2-interface1"></a>ICorDebugAppDomain2 介面 1
+# <a name="icordebugappdomain2-interface"></a>ICorDebugAppDomain2 介面
+
 提供方法來使用陣列、 指標、 函式指標和參考型別。 這個介面是 ICorDebugAppDomain 介面的延伸模組。  
   
 ## <a name="methods"></a>方法  

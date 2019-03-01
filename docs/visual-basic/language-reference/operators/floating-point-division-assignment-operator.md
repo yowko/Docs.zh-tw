@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator /=
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
-ms.openlocfilehash: 8507d81d3060192640bf9a84e67ad39111c455b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8fb990533d9db90eacf76aff424ea3cf96b0875
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537565"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970515"
 ---
 # <a name="-operator-visual-basic"></a>/= 運算子 (Visual Basic)
 將運算式的值的變數或屬性的值除以並指派浮點結果給變數或屬性。  
@@ -46,7 +46,7 @@ variableorproperty /= expression
 ## <a name="example"></a>範例  
  下列範例會使用`/=`運算子，將其中一個`Integer`變數的第二個和指派給第一個變數的商數。  
   
- [!code-vb[VbVbalrOperators#17](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>另請參閱
 - [/ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)

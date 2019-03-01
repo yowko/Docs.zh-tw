@@ -17,12 +17,12 @@ ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
 ## <a name="assigning-values"></a>指派值  
  您可以使用指派陳述式來執行計算，並將結果指派給變數，如下列範例所示。  
   
- [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrVariables#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  在此範例中，等號 (`=`) 是指派運算子，不是等號比較運算子。 值將會指派給 `applesSold` 變數。  
   
- 如需詳細資訊，請參閱[＜How to：移入和移出變數資料](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)。  
+ 如需詳細資訊，請參閱[如何：移入和移出變數資料](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)。  
   
 ## <a name="variables-and-properties"></a>變數和屬性  
  與變數類似，「屬性」代表您可存取的值。 不過，它比變數更為複雜。 屬性會使用程式碼區塊來控制如何設定和擷取其值。 如需詳細資訊，請參閱 [Visual Basic 中屬性和變數的差異](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 4c52d426fe5194a6eb61b232b8f17669b4477f16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667384"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976040"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic 中的存留期
 *存留期*的宣告的項目是一段時間期間它是可供使用。 變數是其唯一項目具有存留期。 基於此目的，編譯器會將程序參數並函式以傳回特殊的變數。 變數的存留期表示的時間期間中，它可保存的值。 其值可以變更存留期內，但它一律會保留一些值。  
@@ -58,7 +58,7 @@ ms.locfileid: "54667384"
  下列範例宣告的變數[靜態](../../../../visual-basic/language-reference/modifiers/static.md)關鍵字。 (請注意，您不需要`Dim`關鍵字時[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)使用修飾詞，例如`Static`。)  
   
 ### <a name="code"></a>程式碼  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
 ### <a name="comments"></a>註解  
  在上述範例中，變數`applesSold`就會繼續存在的程序之後`runningTotal`傳回給呼叫程式碼。 在下一次`runningTotal`呼叫時，`applesSold`會保留其先前計算的值。  

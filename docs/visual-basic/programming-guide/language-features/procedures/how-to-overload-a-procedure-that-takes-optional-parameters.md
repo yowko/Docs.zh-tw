@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 343ede485a0486567710a8bf34d85ea356c139fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52e31ba2f9d2f5cf87a5597a3c8d639816a75535
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694122"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972660"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>HOW TO：多載的程序會接受選擇性參數 (Visual Basic)
 如果程序中的一或多個[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)參數，您不能定義比對任何其隱含的多載的多載的版本。 如需詳細資訊，請參閱 < 隱含多載的選擇性參數 」 中[多載化程序中的考量](./considerations-in-overloading-procedures.md)。  
@@ -38,11 +38,11 @@ ms.locfileid: "54694122"
   
      下列範例顯示具有選擇性參數，對等設定兩個多載程序，以及最後的範例不正確且有效的多載版本定義的程序。  
   
-     [!code-vb[VbVbcnProcedures#59](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_1.vb)]  
+     [!code-vb[VbVbcnProcedures#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#59)]  
   
-     [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_2.vb)]  
+     [!code-vb[VbVbcnProcedures#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#60)]  
   
-     [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_3.vb)]  
+     [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
 ## <a name="multiple-optional-parameters"></a>多個選用參數  
  一個以上的選擇性參數的程序，您通常需要兩個以上的多載的版本。 例如，如果有兩個選擇性參數，而且呼叫程式碼可以提供或省略每個彼此獨立，您會需要四個多載的版本，一個用於每個可能的組合，提供的引數。  

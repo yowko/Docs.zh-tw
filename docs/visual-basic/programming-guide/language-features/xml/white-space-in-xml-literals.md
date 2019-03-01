@@ -5,12 +5,12 @@ helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: 56466856bc70f4bde428f7087efdf4e71a50021f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef371a984d03485ccaf1ee5d61aa3cf39d80ef32
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689139"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979056"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML 常值中的空白字元 (Visual Basic)
 Visual Basic 編譯器會在建立時，包含只有顯著泛空白字元字元從 XML 常值[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。 不會納入不顯著泛空白字元。  
@@ -34,7 +34,7 @@ Visual Basic 編譯器會在建立時，包含只有顯著泛空白字元字元�
 ## <a name="examples"></a>範例  
  下列範例包含兩個外部和內部的 XML 項目。 這兩個項目會包含其文字內容中的泛空白字元。 外部的項目中的泛空白字元不重要，因為它只包含泛空白字元和 XML 項目。 內部項目中的泛空白字元是顯著，因為它包含泛空白字元和文字。  
   
- [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/white-space-in-xml-literals_1.vb)]  
+ [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
  當執行時，此程式碼就會顯示下列文字。  
   

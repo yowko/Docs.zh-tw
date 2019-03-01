@@ -1,15 +1,9 @@
 ---
-title: 開始使用F#
-description: 了解如何開始使用F#程式設計語言。
+title: '開始使用F#'
+description: '了解如何開始使用F#程式設計語言。'
 ms.date: 12/08/2018
-ms.openlocfilehash: df0e98b4d001ceaeca2ebe3d154c6bad57a8a30d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170817"
 ---
-# <a name="get-started-with-f"></a>開始使用F# #
+# <a name="get-started-with-f"></a>開始使用 f #\#
 
 您可以開始使用F#您的電腦上或在線上。
 

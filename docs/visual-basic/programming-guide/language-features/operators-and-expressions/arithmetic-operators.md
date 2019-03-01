@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: ff0532c87e03e4b502367313e33ddb9bd12ad8cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730733"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981266"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic 的算術運算子
 算術運算子用來執行許多熟悉的算術作業牽涉到數字常值、 變數、 其他運算式、 函式和屬性呼叫和常數所代表的值計算。 搭配算術運算子也分類為位元移位運算子，運算元的個別位元層級處理，並向左或向右移位其位元模式。  
@@ -26,29 +26,29 @@ ms.locfileid: "54730733"
 ## <a name="arithmetic-operations"></a>算術運算  
  您可以新增兩個值中搭配使用的運算式[+ 運算子](../../../../visual-basic/language-reference/operators/addition-operator.md)，或從另一個具有減去[-運算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)，如下列範例示範。  
   
- [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#57)]  
   
  也會使用否定[-運算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)，但只有一個運算元，如下列範例示範。  
   
- [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#58)]  
   
  使用乘法和除法[* 運算子](../../../../visual-basic/language-reference/operators/multiplication-operator.md)並[/ 運算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)分別，如下列範例所示。  
   
- [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#59)]  
   
  使用乘冪[^ 運算子](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)，如下列範例所示。  
   
- [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#60)]  
   
  整數除法運算會執行使用[\ 運算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)。 整數除法傳回商數，也就是代表次數的整數除數分成數個而不考慮任何餘數被除數。 被除數和除數必須是整數類資料類型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`，以及`ULong`) 這個運算子。 所有其他型別必須先轉換成整數類資料類型。 下列範例示範了整數除法。  
   
- [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#61)]  
   
  使用執行算術模數[Mod 運算子](../../../../visual-basic/language-reference/operators/mod-operator.md)。 這個運算子會傳回其餘部分對被除數除以除數之後的次數的整數。 如果除數與被除數是整數類資料類型，傳回的值是整數。 如果除數與被除數是浮點類型，傳回的值也是浮點數。 下列範例示範此行為。  
   
- [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
+ [!code-vb[VbVbalrOperators#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
+ [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>嘗試的除以零  
  除數為零會有不同的結果，根據相關的資料類型。 中不可或缺的部門 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`， `ULong`)，則[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]會擲回<xref:System.DivideByZeroException>例外狀況。 在除法運算`Decimal`或`Single`資料類型[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]也會擲回<xref:System.DivideByZeroException>例外狀況。  
@@ -80,7 +80,7 @@ ms.locfileid: "54730733"
   
  下列範例會轉移`Integer`左和右值。  
   
- [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
+ [!code-vb[VbVbalrOperators#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#64)]  
   
  算術移位絕不會產生溢位例外狀況。  
   

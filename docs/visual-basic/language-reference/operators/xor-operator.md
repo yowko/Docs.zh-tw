@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: af6589206232f01b572cd2b965ba1a0f36d462e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc3df1fdee5405445b4534a6982383c49b369b01
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527116"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980434"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor 運算子 (Visual Basic)
 對兩個執行邏輯排除`Boolean`運算式或兩個數值運算式的位元互斥。  
@@ -78,14 +78,14 @@ result = expression1 Xor expression2
 ## <a name="example"></a>範例  
  下列範例會使用`Xor`運算子上兩個運算式執行邏輯互斥 （獨佔邏輯分離）。 結果是`Boolean`值，表示只有其中一個運算式是否`True`。  
   
- [!code-vb[VbVbalrOperators#40](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#40)]  
   
  前一個範例產生的結果`False`， `True`，和`False`分別。  
   
 ## <a name="example"></a>範例  
  下列範例會使用`Xor`運算子的兩個數值運算式的個別位元執行邏輯互斥 （獨佔邏輯分離）。 如果只有其中一個運算元的對應位元設為 1，會設定結果模式中的位元。  
   
- [!code-vb[VbVbalrOperators#41](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#41)]  
   
  前一個範例會分別產生的 2、 第 12 和 14 的結果。  
   

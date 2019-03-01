@@ -16,26 +16,26 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: e48d28535b9e8cd022f7a4f14e620a4db93ff69f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 6a93124789d629b1d1a953345d4b0b02a8c6ffa6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748075"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977249"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic 中的命名空間
 命名空間可組織組件中定義的物件。 組件可包含多個命名空間，而命名空間也可包含其他命名空間。 在使用類別庫等大型物件群組時，命名空間可避免語意模糊並簡化參考。  
   
  例如， [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 會在 <xref:System.Windows.Forms.ListBox> 命名空間中定義 <xref:System.Windows.Forms?displayProperty=nameWithType> 類別。 下列程式碼片段示範如何使用這個類別的完整名稱來宣告變數：  
   
- [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
+ [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>避免名稱衝突  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 命名空間會解決有時稱為 *「命名空間干擾」*(namespace pollution) 的問題，也就是類別庫的開發人員因為使用與另一個程式庫類似的名稱而受到阻礙的情況。 這些與現有元件的衝突有時稱為 *「名稱衝突」*(name collision)。  
   
  例如，如果您建立了一個名為 `ListBox`的新類別，您不需提供完整名稱就可以在專案內使用它。 不過，如果您想在同一個專案中使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> 類別，則必須使用完整參考使其成為唯一的參考。 如果參考不是唯一的 Visual Basic 會產生錯誤訊息指出名稱模稜兩可。 下列程式碼範例示範如何宣告這些物件：  
   
- [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
+ [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
  下圖顯示兩個命名空間階層，兩者都包含一個名為 `ListBox`的物件。  
   
@@ -48,17 +48,17 @@ ms.locfileid: "56748075"
 ## <a name="fully-qualified-names"></a>完整名稱  
  完整名稱是物件參考，前面會加上定義物件之命名空間的名稱。 如果您建立類別的參考 (在 [專案]  功能表中選擇 [加入參考]  )，就可以使用其他專案中所定義的物件，並且在程式碼中使用該物件的完整名稱。 下列程式碼片段示範如何使用另一個專案命名空間之物件的完整名稱：  
   
- [!code-vb[VbVbalrApplication#8](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_3.vb)]  
+ [!code-vb[VbVbalrApplication#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#8)]  
   
  完整名稱可防止命名衝突，因為完整名稱讓編譯器能夠判斷正在使用哪一個物件。 不過，名稱本身可能既長又累贅。 若要解決這個問題，您可以使用 `Imports` 陳述式定義一個 *「別名」*(alias)，也就是可用於取代完整名稱的縮寫名稱。 例如，下列程式碼範例會建立兩個完整名稱的別名，並使用這些別名定義兩個物件。  
   
- [!code-vb[VbVbalrApplication#9](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_4.vb)]  
+ [!code-vb[VbVbalrApplication#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#9)]  
   
- [!code-vb[VbVbalrApplication#10](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_5.vb)]  
+ [!code-vb[VbVbalrApplication#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#10)]  
   
  如果您使用沒有別名的 `Imports` 陳述式，則不需要提供完整名稱就可以使用該命名空間中的所有名稱，但前提是這些名稱對於專案而言是唯一的。 如果您的專案所包含的 `Imports` 陳述式與命名空間內的項目有相同名稱，您必須在使用時提供完整名稱。 例如，假設您的專案含有下列兩個 `Imports` 陳述式：  
   
- [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
+ [!code-vb[VbVbalrApplication#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#11)]  
   
  如果您嘗試使用`Class1`而不必完整限定它，Visual Basic 會產生錯誤訊息，指出名稱`Class1`模稜兩可。  
   
@@ -105,7 +105,7 @@ End Namespace
   
  下列範例使用 `Global` 關鍵字，從專案的根命名空間宣告一個命名空間。  
   
- [!code-vb[VbVbalrApplication#22](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_7.vb)]  
+ [!code-vb[VbVbalrApplication#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/module1.vb#22)]  
   
  在命名空間宣告中， `Global` 不能以巢狀方式放在另一個命名空間中。  
   
@@ -117,13 +117,13 @@ End Namespace
   
  如果 `Global` 關鍵字不在命名空間宣告中，則必須指定 <xref:System.Text.StringBuilder> 才能存取 `Global.System.Text.StringBuilder`。 針對名為 `ConsoleApplication1`的專案，如果未使用 `System.Text` 關鍵字， `ConsoleApplication1.System.Text` 的參考會存取 `Global` 。  
   
- [!code-vb[VbVbalrApplication#21](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_8.vb)]  
+ [!code-vb[VbVbalrApplication#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/module1.vb#21)]  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms?displayProperty=nameWithType>
-- [在.NET 中的組件](../../../standard/assembly/index.md)
+- [.NET 中的組件](../../../standard/assembly/index.md)
 - [如何：使用命令列建立和使用組件](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
 - [參考和 Imports 陳述式](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
 - [Imports 陳述式 (.NET 命名空間和類型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

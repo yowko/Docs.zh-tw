@@ -3,14 +3,14 @@ title: 開始使用 Azure Blob 儲存體使用F#
 description: 使用 Azure Blob 儲存體在雲端中儲存非結構化的資料。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664987"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981903"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>開始使用 Azure Blob 儲存體使用F# #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>開始使用 Azure Blob 儲存體使用 F\#
 
 Azure Blob 儲存體是可將非結構化的資料儲存在雲端作為物件/Blob 的服務。 Blob 儲存體可以儲存任何類型的文字或二進位資料，例如文件、媒體檔案或應用程式安裝程式。 Blob 儲存體也稱為物件儲存體。
 

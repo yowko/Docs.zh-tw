@@ -2,12 +2,12 @@
 title: 輸入字元集 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: dce967ea8853f81fedaa53ea706fab4839b9f474
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bed10f6e4a9fb01abe825e5eb798da2d866ca84
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641196"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976755"
 ---
 # <a name="input-character-set-entity-sql"></a>輸入字元集 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 接受以 UTF-16 編碼的 UNICODE 字元。  
@@ -24,9 +24,9 @@ ms.locfileid: "54641196"
   
  關鍵字、運算式和標點符號可以是任何標準化成拉丁文的 UTF-16 字元。 例如，SELECT 在日文字碼頁中是一個有效的關鍵字。  
   
- 關鍵字、運算式和標點符號只能是拉丁文字元。 `SELECT` 在日文字碼頁中不是關鍵字。 這裡未以括號括住的 +、-、*、/、=、(、)、‘、[、] 和任何其他語言建構只能是拉丁字元。  
+ 關鍵字、運算式和標點符號只能是拉丁文字元。 `SELECT` 在日文字碼頁中不是關鍵字。 +，-， \*、 /、 =、 （、）、 '，[、] 這裡不加引號的任何其他語言建構只能是拉丁字元。  
   
- 簡單識別碼只能是拉丁字元。 如此可避免比較期間的模稜兩可 (Ambiguity)，因為會比較原始值。 例如，ABC 在日文字碼頁和拉丁文字碼頁中是不同的。  
+ 簡單識別碼只能是拉丁字元。 如此可避免比較期間的模稜兩可 (Ambiguity)，因為會比較原始值。 例如，ABC 會在日文和拉丁文字碼頁不同。  
   
 ## <a name="see-also"></a>另請參閱
 - [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
