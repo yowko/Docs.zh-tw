@@ -16,7 +16,7 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ## <a name="declaring-and-initializing-strings"></a>宣告並初始化字串  
  您可以透過多種方式宣告並初始化字串，如下列範例所示：  
   
- [!code-csharp[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
  請注意，除了使用字元陣列初始化字串以外，您不能使用 [new](../../../csharp/language-reference/keywords/new-operator.md) 運算子建立字串物件。  
   
@@ -84,16 +84,16 @@ C# 6.0 與更新版本中提供的[*插補字串*](../../language-reference/toke
 ## <a name="substrings"></a>子字串  
  子字串是包含在字串中的任何字元序列。 使用 <xref:System.String.Substring%2A> 方法，來從原始字串的一部分建立新的字串。 您可以使用 <xref:System.String.IndexOf%2A> 方法，來搜尋子字串的一或多個出現位置。 使用 <xref:System.String.Replace%2A> 方法，以新字串取代所有指定的子字串。 與 <xref:System.String.Substring%2A> 方法類似，<xref:System.String.Replace%2A> 實際上會傳回新字串，並不會修改原始字串。 如需詳細資訊，請參閱[如何︰搜尋字串](../../how-to/search-strings.md)與[如何︰修改字串內容](../../how-to/modify-string-contents.md)。  
   
- [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
 ## <a name="accessing-individual-characters"></a>存取個別字元  
  您可以搭配索引值使用陣列標記法來取得個別字元的唯讀存取權，如下列範例所示：  
   
- [!code-csharp[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
+ [!code-csharp[csProgGuideStrings#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#8)]  
   
  如果 <xref:System.String> 方法不提供修改字串中個別字元的必要功能，您可以使用 <xref:System.Text.StringBuilder> 物件「就地」修改個別字元，然後使用 <xref:System.Text.StringBuilder> 方法建立新的字串來儲存結果。 在下列範例中，假設您必須以特定方式修改原始字串，並儲存結果以供日後使用︰  
   
- [!code-csharp[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
+ [!code-csharp[csProgGuideStrings#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#27)]  
   
 ## <a name="null-strings-and-empty-strings"></a>Null 字串和空字串  
  空字串是 <xref:System.String?displayProperty=nameWithType> 物件的執行個體，其中包含零個字元。 空字串經常用於各種程式設計案例中，來表示空白的文字欄位。 您可以對空字串呼叫方法，因為它們是有效的 <xref:System.String?displayProperty=nameWithType> 物件。 空字串會以下列方式初始化︰  
@@ -104,12 +104,12 @@ string s = String.Empty;
   
  相較之下，Null 字串指的不是 <xref:System.String?displayProperty=nameWithType> 物件執行個體，而且對 Null 字串呼叫方法的任何嘗試都會導致 <xref:System.NullReferenceException>。 不過，您可以在搭配其他字串的串連和比較作業中使用 Null 字串。 下列範例說明對 Null 字串的參考會造成 (以及不會造成) 擲回例外狀況的一些情況︰  
   
- [!code-csharp[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
+ [!code-csharp[csProgGuideStrings#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#20)]  
   
 ## <a name="using-stringbuilder-for-fast-string-creation"></a>使用 StringBuilder 進行快速字串建立  
  .NET 中的字串作業已高度最佳化，在大部分的情況下不會大幅影響效能。 不過，在部分案例中 (例如執行數百或數千次的緊密迴圈)，字串作業可能會影響效能。 <xref:System.Text.StringBuilder> 類別會建立一個字串緩衝區，能在您的程式執行許多字串操作的情況下提供較佳的效能。 <xref:System.Text.StringBuilder> 字串也可讓您重新指派內建字串資料類型所不支援的個別字元。 例如，下列程式碼能在不建立新字串的情況下變更字串內容：  
   
- [!code-csharp[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
+ [!code-csharp[csProgGuideStrings#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#15)]  
   
  在下列範例中，將使用 <xref:System.Text.StringBuilder> 物件從一組數字類型建立字串：  
   

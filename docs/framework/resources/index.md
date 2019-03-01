@@ -2,23 +2,17 @@
 title: .NET 應用程式中的資源
 ms.date: 07/25/2018
 helpviewer_keywords:
-- deploying applications [.NET Framework], resources
-- deploying applications [.NET Core], resources
-- application resources
-- resource files
-- satellite assemblies
-- localization
-- packaging application resources
-- localizing resources
+  - 'deploying applications [.NET Framework], resources'
+  - 'deploying applications [.NET Core], resources'
+  - application resources
+  - resource files
+  - satellite assemblies
+  - localization
+  - packaging application resources
+  - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e42255378e4a2fdd50d9c1539e3bcee43012e56c
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221039"
 ---
 # <a name="resources-in-net-apps"></a>.NET 應用程式中的資源
 幾乎每個實際執行品質應用程式都必須使用資源。 資源是任何使用應用程式以邏輯方式部署的非執行檔資料。 資源可能在應用程式中顯示作錯誤訊息，或做為使用者介面的一部分。 資源可以含有一些表單中的資料，包括字串、影像和永續性物件。 (若要將保留物件寫入資源檔，物件必須是可序列化的)。將資料儲存在資源檔中，可讓您不需要重新編譯整個應用程式即可變更資料。 也可讓您將資料儲存在單一位置，不需要依賴儲存在多個位置的硬式編碼資料。  
@@ -27,10 +21,11 @@ ms.locfileid: "56221039"
   
  如需 ASP.NET 中資源的詳細資訊，請參閱 [ASP.NET 網頁資源概觀](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))。  
   
- ## <a name="creating-and-localizing-resources"></a>建立和當地語系化資源  
- 在非當地語系化的應用程式中，您可以使用資源檔做為應用程式資料的存放庫，特別是針對原始程式碼中多個位置的硬式編碼字串。 大多數情況下，您建立的資源是文字 (.txt) 或 XML (.resx) 檔案，並且使用 [Resgen.exe (資源檔產生器)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 將它們編譯成二進位 .resources 檔。 然後這些檔案會由語言編譯器內嵌在應用程式的可執行檔。 如需有關建立資源檔的詳細資訊，請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。  
-  
- 您也可以針對特定文化特性當地語系化應用程式的資源。 這可讓您建置應用程式的當地語系化 (轉譯) 版本。 當您開發使用當地語系化資源的應用程式時，如果沒有適當的資源可供使用，您會指定文化特性做為其資源使用的中性或後援文化特性。 一般而言，中性文化特性的資源是儲存在應用程式的可執行檔中。 個別當地語系化文化特性的其餘資源會儲存在獨立的附屬組件。 如需詳細資訊，請參閱[建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。  
+## <a name="creating-and-localizing-resources"></a>建立和當地語系化資源  
+
+在非當地語系化的應用程式中，您可以使用資源檔做為應用程式資料的存放庫，特別是針對原始程式碼中多個位置的硬式編碼字串。 大多數情況下，您建立的資源是文字 (.txt) 或 XML (.resx) 檔案，並且使用 [Resgen.exe (資源檔產生器)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 將它們編譯成二進位 .resources 檔。 然後這些檔案會由語言編譯器內嵌在應用程式的可執行檔。 如需有關建立資源檔的詳細資訊，請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。  
+
+您也可以針對特定文化特性當地語系化應用程式的資源。 這可讓您建置應用程式的當地語系化 (轉譯) 版本。 當您開發使用當地語系化資源的應用程式時，如果沒有適當的資源可供使用，您會指定文化特性做為其資源使用的中性或後援文化特性。 一般而言，中性文化特性的資源是儲存在應用程式的可執行檔中。 個別當地語系化文化特性的其餘資源會儲存在獨立的附屬組件。 如需詳細資訊，請參閱[建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。  
   
 ## <a name="packaging-and-deploying-resources"></a>封裝和部署資源  
  您在[附屬組件](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)中部署當地語系化應用程式資源。 附屬組件包含單一文化特性的資源。它不包含任何應用程式程式碼。 在附屬組件部署模型中，您會建立應用程式，具有一個預設組件 (通常是主要組件) 和應用程式支援之每個文化特性的一個附屬組件。 因為附屬組件不是主要組件的一部分，您可以輕鬆地取代或更新對應至特定文化特性的資源，而不需要取代應用程式的主要組件。  

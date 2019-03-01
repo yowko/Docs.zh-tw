@@ -15,7 +15,7 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
   
  在此範例中，方法會測試除數為零，並攔截錯誤。 如果沒有例外狀況處理，此程式就會終止並產生 **DivideByZeroException 未處理**的錯誤。  
   
- [!code-csharp[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#18)]  
   
 ## <a name="exceptions-overview"></a>例外狀況概觀  
  例外狀況具有下列屬性：  
