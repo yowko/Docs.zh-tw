@@ -10,17 +10,17 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: cfc18df4487488bd90d7b0250a9053f55305d8a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 081359f32438c6474fe5c229634b60969e25a24e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631489"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965380"
 ---
-# <a name="xml-attribute-axis-property-visual-basic"></a><span data-ttu-id="b4503-102">XML 屬性軸屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b4503-102">XML Attribute Axis Property (Visual Basic)</span></span>
-<span data-ttu-id="b4503-103">提供的屬性值存取權<xref:System.Xml.Linq.XElement>物件或集合中的第一個項目<xref:System.Xml.Linq.XElement>物件。</span><span class="sxs-lookup"><span data-stu-id="b4503-103">Provides access to the value of an attribute for an <xref:System.Xml.Linq.XElement> object or to the first element in a collection of <xref:System.Xml.Linq.XElement> objects.</span></span>  
+# <a name="xml-attribute-axis-property-visual-basic"></a><span data-ttu-id="a252f-102">XML 屬性軸屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a252f-102">XML Attribute Axis Property (Visual Basic)</span></span>
+<span data-ttu-id="a252f-103">提供的屬性值存取權<xref:System.Xml.Linq.XElement>物件或集合中的第一個項目<xref:System.Xml.Linq.XElement>物件。</span><span class="sxs-lookup"><span data-stu-id="a252f-103">Provides access to the value of an attribute for an <xref:System.Xml.Linq.XElement> object or to the first element in a collection of <xref:System.Xml.Linq.XElement> objects.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b4503-104">語法</span><span class="sxs-lookup"><span data-stu-id="b4503-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a252f-104">語法</span><span class="sxs-lookup"><span data-stu-id="a252f-104">Syntax</span></span>  
   
 ```  
       object.@attribute  
@@ -28,46 +28,46 @@ ms.locfileid: "54631489"
 object.@<attribute>  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="b4503-105">組件</span><span class="sxs-lookup"><span data-stu-id="b4503-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="a252f-105">組件</span><span class="sxs-lookup"><span data-stu-id="a252f-105">Parts</span></span>  
  `object`  
- <span data-ttu-id="b4503-106">必要項。</span><span class="sxs-lookup"><span data-stu-id="b4503-106">Required.</span></span> <span data-ttu-id="b4503-107"><xref:System.Xml.Linq.XElement>物件或集合<xref:System.Xml.Linq.XElement>物件。</span><span class="sxs-lookup"><span data-stu-id="b4503-107">An <xref:System.Xml.Linq.XElement> object or a collection of <xref:System.Xml.Linq.XElement> objects.</span></span>  
+ <span data-ttu-id="a252f-106">必要項。</span><span class="sxs-lookup"><span data-stu-id="a252f-106">Required.</span></span> <span data-ttu-id="a252f-107"><xref:System.Xml.Linq.XElement>物件或集合<xref:System.Xml.Linq.XElement>物件。</span><span class="sxs-lookup"><span data-stu-id="a252f-107">An <xref:System.Xml.Linq.XElement> object or a collection of <xref:System.Xml.Linq.XElement> objects.</span></span>  
   
- <span data-ttu-id="b4503-108">.@</span><span class="sxs-lookup"><span data-stu-id="b4503-108">.@</span></span>  
- <span data-ttu-id="b4503-109">必要項。</span><span class="sxs-lookup"><span data-stu-id="b4503-109">Required.</span></span> <span data-ttu-id="b4503-110">表示屬性軸屬性的開頭。</span><span class="sxs-lookup"><span data-stu-id="b4503-110">Denotes the start of an attribute axis property.</span></span>  
+ <span data-ttu-id="a252f-108">.@</span><span class="sxs-lookup"><span data-stu-id="a252f-108">.@</span></span>  
+ <span data-ttu-id="a252f-109">必要項。</span><span class="sxs-lookup"><span data-stu-id="a252f-109">Required.</span></span> <span data-ttu-id="a252f-110">表示屬性軸屬性的開頭。</span><span class="sxs-lookup"><span data-stu-id="a252f-110">Denotes the start of an attribute axis property.</span></span>  
   
  <  
- <span data-ttu-id="b4503-111">選擇性。</span><span class="sxs-lookup"><span data-stu-id="b4503-111">Optional.</span></span> <span data-ttu-id="b4503-112">表示屬性名稱的開頭時`attribute`不在 Visual Basic 中是有效的識別項。</span><span class="sxs-lookup"><span data-stu-id="b4503-112">Denotes the beginning of the name of the attribute when `attribute` is not a valid identifier in Visual Basic.</span></span>  
+ <span data-ttu-id="a252f-111">選擇性。</span><span class="sxs-lookup"><span data-stu-id="a252f-111">Optional.</span></span> <span data-ttu-id="a252f-112">表示屬性名稱的開頭時`attribute`不在 Visual Basic 中是有效的識別項。</span><span class="sxs-lookup"><span data-stu-id="a252f-112">Denotes the beginning of the name of the attribute when `attribute` is not a valid identifier in Visual Basic.</span></span>  
   
  `attribute`  
- <span data-ttu-id="b4503-113">必要項。</span><span class="sxs-lookup"><span data-stu-id="b4503-113">Required.</span></span> <span data-ttu-id="b4503-114">若要存取，在表單的屬性名稱的 [`prefix`:]`name`。</span><span class="sxs-lookup"><span data-stu-id="b4503-114">Name of the attribute to access, of the form [`prefix`:]`name`.</span></span>  
+ <span data-ttu-id="a252f-113">必要項。</span><span class="sxs-lookup"><span data-stu-id="a252f-113">Required.</span></span> <span data-ttu-id="a252f-114">若要存取，在表單的屬性名稱的 [`prefix`:]`name`。</span><span class="sxs-lookup"><span data-stu-id="a252f-114">Name of the attribute to access, of the form [`prefix`:]`name`.</span></span>  
   
-|<span data-ttu-id="b4503-115">組件</span><span class="sxs-lookup"><span data-stu-id="b4503-115">Part</span></span>|<span data-ttu-id="b4503-116">描述</span><span class="sxs-lookup"><span data-stu-id="b4503-116">Description</span></span>|  
+|<span data-ttu-id="a252f-115">組件</span><span class="sxs-lookup"><span data-stu-id="a252f-115">Part</span></span>|<span data-ttu-id="a252f-116">描述</span><span class="sxs-lookup"><span data-stu-id="a252f-116">Description</span></span>|  
 |----------|-----------------|  
-|`prefix`|<span data-ttu-id="b4503-117">選擇性。</span><span class="sxs-lookup"><span data-stu-id="b4503-117">Optional.</span></span> <span data-ttu-id="b4503-118">XML 屬性的命名空間前置詞。</span><span class="sxs-lookup"><span data-stu-id="b4503-118">XML namespace prefix for the attribute.</span></span> <span data-ttu-id="b4503-119">必須是以 `Imports` 陳述式定義的全域 XML 命名空間。</span><span class="sxs-lookup"><span data-stu-id="b4503-119">Must be a global XML namespace defined with an `Imports` statement.</span></span>|  
-|`name`|<span data-ttu-id="b4503-120">必要項。</span><span class="sxs-lookup"><span data-stu-id="b4503-120">Required.</span></span> <span data-ttu-id="b4503-121">本機屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="b4503-121">Local attribute name.</span></span> <span data-ttu-id="b4503-122">請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。</span><span class="sxs-lookup"><span data-stu-id="b4503-122">See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span></span>|  
+|`prefix`|<span data-ttu-id="a252f-117">選擇性。</span><span class="sxs-lookup"><span data-stu-id="a252f-117">Optional.</span></span> <span data-ttu-id="a252f-118">XML 屬性的命名空間前置詞。</span><span class="sxs-lookup"><span data-stu-id="a252f-118">XML namespace prefix for the attribute.</span></span> <span data-ttu-id="a252f-119">必須是以 `Imports` 陳述式定義的全域 XML 命名空間。</span><span class="sxs-lookup"><span data-stu-id="a252f-119">Must be a global XML namespace defined with an `Imports` statement.</span></span>|  
+|`name`|<span data-ttu-id="a252f-120">必要項。</span><span class="sxs-lookup"><span data-stu-id="a252f-120">Required.</span></span> <span data-ttu-id="a252f-121">本機屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="a252f-121">Local attribute name.</span></span> <span data-ttu-id="a252f-122">請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。</span><span class="sxs-lookup"><span data-stu-id="a252f-122">See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span></span>|  
   
  \>  
- <span data-ttu-id="b4503-123">選擇性。</span><span class="sxs-lookup"><span data-stu-id="b4503-123">Optional.</span></span> <span data-ttu-id="b4503-124">代表屬性名稱的結尾時`attribute`不在 Visual Basic 中是有效的識別項。</span><span class="sxs-lookup"><span data-stu-id="b4503-124">Denotes the end of the name of the attribute when `attribute` is not a valid identifier in Visual Basic.</span></span>  
+ <span data-ttu-id="a252f-123">選擇性。</span><span class="sxs-lookup"><span data-stu-id="a252f-123">Optional.</span></span> <span data-ttu-id="a252f-124">代表屬性名稱的結尾時`attribute`不在 Visual Basic 中是有效的識別項。</span><span class="sxs-lookup"><span data-stu-id="a252f-124">Denotes the end of the name of the attribute when `attribute` is not a valid identifier in Visual Basic.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b4503-125">傳回值</span><span class="sxs-lookup"><span data-stu-id="b4503-125">Return Value</span></span>  
- <span data-ttu-id="b4503-126">字串，包含的值`attribute`。</span><span class="sxs-lookup"><span data-stu-id="b4503-126">A string that contains the value of `attribute`.</span></span> <span data-ttu-id="b4503-127">如果屬性名稱不存在，`Nothing`會傳回。</span><span class="sxs-lookup"><span data-stu-id="b4503-127">If the attribute name does not exist, `Nothing` is returned.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a252f-125">傳回值</span><span class="sxs-lookup"><span data-stu-id="a252f-125">Return Value</span></span>  
+ <span data-ttu-id="a252f-126">字串，包含的值`attribute`。</span><span class="sxs-lookup"><span data-stu-id="a252f-126">A string that contains the value of `attribute`.</span></span> <span data-ttu-id="a252f-127">如果屬性名稱不存在，`Nothing`會傳回。</span><span class="sxs-lookup"><span data-stu-id="a252f-127">If the attribute name does not exist, `Nothing` is returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b4503-128">備註</span><span class="sxs-lookup"><span data-stu-id="b4503-128">Remarks</span></span>  
- <span data-ttu-id="b4503-129">您可以使用 XML 屬性軸屬性來存取屬性的值，依名稱從<xref:System.Xml.Linq.XElement>物件或從集合中的第一個項目<xref:System.Xml.Linq.XElement>物件。</span><span class="sxs-lookup"><span data-stu-id="b4503-129">You can use an XML attribute axis property to access the value of an attribute by name from an <xref:System.Xml.Linq.XElement> object or from the first element in a collection of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="b4503-130">您可以依名稱擷取屬性值，或加入新屬性的項目，藉由指定新名稱，前面加上 @ 識別項。</span><span class="sxs-lookup"><span data-stu-id="b4503-130">You can retrieve an attribute value by name, or add a new attribute to an element by specifying a new name preceded by the @ identifier.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a252f-128">備註</span><span class="sxs-lookup"><span data-stu-id="a252f-128">Remarks</span></span>  
+ <span data-ttu-id="a252f-129">您可以使用 XML 屬性軸屬性來存取屬性的值，依名稱從<xref:System.Xml.Linq.XElement>物件或從集合中的第一個項目<xref:System.Xml.Linq.XElement>物件。</span><span class="sxs-lookup"><span data-stu-id="a252f-129">You can use an XML attribute axis property to access the value of an attribute by name from an <xref:System.Xml.Linq.XElement> object or from the first element in a collection of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="a252f-130">您可以依名稱擷取屬性值，或加入新屬性的項目，藉由指定新名稱，前面加上 @ 識別項。</span><span class="sxs-lookup"><span data-stu-id="a252f-130">You can retrieve an attribute value by name, or add a new attribute to an element by specifying a new name preceded by the @ identifier.</span></span>  
   
- <span data-ttu-id="b4503-131">當您參考 XML 屬性使用 @ 識別項，則屬性會傳回值為字串，並不需要明確指定<xref:System.Xml.Linq.XAttribute.Value%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="b4503-131">When you refer to an XML attribute using the @ identifier, the attribute value is returned as a string and you do not need to explicitly specify the <xref:System.Xml.Linq.XAttribute.Value%2A> property.</span></span>  
+ <span data-ttu-id="a252f-131">當您參考 XML 屬性使用 @ 識別項，則屬性會傳回值為字串，並不需要明確指定<xref:System.Xml.Linq.XAttribute.Value%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="a252f-131">When you refer to an XML attribute using the @ identifier, the attribute value is returned as a string and you do not need to explicitly specify the <xref:System.Xml.Linq.XAttribute.Value%2A> property.</span></span>  
   
- <span data-ttu-id="b4503-132">與 Visual Basic 識別項的命名規則，不同的 XML 屬性的命名規則。</span><span class="sxs-lookup"><span data-stu-id="b4503-132">The naming rules for XML attributes differ from the naming rules for Visual Basic identifiers.</span></span> <span data-ttu-id="b4503-133">若要存取 XML 屬性具有不是有效的 Visual Basic 識別項的名稱，將名稱括在括弧 (\<和 >)。</span><span class="sxs-lookup"><span data-stu-id="b4503-133">To access an XML attribute that has a name that is not a valid Visual Basic identifier, enclose the name in angle brackets (\< and >).</span></span>  
+ <span data-ttu-id="a252f-132">與 Visual Basic 識別項的命名規則，不同的 XML 屬性的命名規則。</span><span class="sxs-lookup"><span data-stu-id="a252f-132">The naming rules for XML attributes differ from the naming rules for Visual Basic identifiers.</span></span> <span data-ttu-id="a252f-133">若要存取 XML 屬性具有不是有效的 Visual Basic 識別項的名稱，將名稱括在括弧 (\<和 >)。</span><span class="sxs-lookup"><span data-stu-id="a252f-133">To access an XML attribute that has a name that is not a valid Visual Basic identifier, enclose the name in angle brackets (\< and >).</span></span>  
   
-## <a name="xml-namespaces"></a><span data-ttu-id="b4503-134">XML 命名空間</span><span class="sxs-lookup"><span data-stu-id="b4503-134">XML Namespaces</span></span>  
- <span data-ttu-id="b4503-135">屬性軸屬性 中的名稱可以使用只有 XML 命名空間前置詞使用全域宣告`Imports`陳述式。</span><span class="sxs-lookup"><span data-stu-id="b4503-135">The name in an attribute axis property can use only XML namespace prefixes declared globally by using the `Imports` statement.</span></span> <span data-ttu-id="b4503-136">它不能使用在 XML 項目常值內本機宣告的 XML 命名空間前置詞。</span><span class="sxs-lookup"><span data-stu-id="b4503-136">It cannot use XML namespace prefixes declared locally within XML element literals.</span></span> <span data-ttu-id="b4503-137">如需詳細資訊，請參閱 < [Imports 陳述式 （XML 命名空間）](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="b4503-137">For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span></span>  
+## <a name="xml-namespaces"></a><span data-ttu-id="a252f-134">XML 命名空間</span><span class="sxs-lookup"><span data-stu-id="a252f-134">XML Namespaces</span></span>  
+ <span data-ttu-id="a252f-135">屬性軸屬性 中的名稱可以使用只有 XML 命名空間前置詞使用全域宣告`Imports`陳述式。</span><span class="sxs-lookup"><span data-stu-id="a252f-135">The name in an attribute axis property can use only XML namespace prefixes declared globally by using the `Imports` statement.</span></span> <span data-ttu-id="a252f-136">它不能使用在 XML 項目常值內本機宣告的 XML 命名空間前置詞。</span><span class="sxs-lookup"><span data-stu-id="a252f-136">It cannot use XML namespace prefixes declared locally within XML element literals.</span></span> <span data-ttu-id="a252f-137">如需詳細資訊，請參閱 < [Imports 陳述式 （XML 命名空間）](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="a252f-137">For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b4503-138">範例</span><span class="sxs-lookup"><span data-stu-id="b4503-138">Example</span></span>  
- <span data-ttu-id="b4503-139">下列範例示範如何取得名為 XML 屬性的值`type`集合中的 XML 項目會在名為`phone`。</span><span class="sxs-lookup"><span data-stu-id="b4503-139">The following example shows how to get the values of the XML attributes named `type` from a collection of XML elements that are named `phone`.</span></span>  
+## <a name="example"></a><span data-ttu-id="a252f-138">範例</span><span class="sxs-lookup"><span data-stu-id="a252f-138">Example</span></span>  
+ <span data-ttu-id="a252f-139">下列範例示範如何取得名為 XML 屬性的值`type`集合中的 XML 項目會在名為`phone`。</span><span class="sxs-lookup"><span data-stu-id="a252f-139">The following example shows how to get the values of the XML attributes named `type` from a collection of XML elements that are named `phone`.</span></span>  
   
- [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_1.vb)]  
+ [!code-vb[VbXMLSamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#12)]  
   
- <span data-ttu-id="b4503-140">此程式碼顯示下列文字：</span><span class="sxs-lookup"><span data-stu-id="b4503-140">This code displays the following text:</span></span>  
+ <span data-ttu-id="a252f-140">此程式碼顯示下列文字：</span><span class="sxs-lookup"><span data-stu-id="a252f-140">This code displays the following text:</span></span>  
   
  `<phoneTypes>`  
   
@@ -77,38 +77,38 @@ object.@<attribute>
   
  `</phoneTypes>`  
   
-## <a name="example"></a><span data-ttu-id="b4503-141">範例</span><span class="sxs-lookup"><span data-stu-id="b4503-141">Example</span></span>  
- <span data-ttu-id="b4503-142">下列範例示範如何以宣告方式，XML 中，而且以動態方式加入的執行個體的屬性建立屬性的 XML 項目這兩個<xref:System.Xml.Linq.XElement>物件。</span><span class="sxs-lookup"><span data-stu-id="b4503-142">The following example shows how to create attributes for an XML element both declaratively, as part of the XML, and dynamically by adding an attribute to an instance of an <xref:System.Xml.Linq.XElement> object.</span></span> <span data-ttu-id="b4503-143">`type`屬性會以宣告方式建立和`owner`屬性會動態建立。</span><span class="sxs-lookup"><span data-stu-id="b4503-143">The `type` attribute is created declaratively and the `owner` attribute is created dynamically.</span></span>  
+## <a name="example"></a><span data-ttu-id="a252f-141">範例</span><span class="sxs-lookup"><span data-stu-id="a252f-141">Example</span></span>  
+ <span data-ttu-id="a252f-142">下列範例示範如何以宣告方式，XML 中，而且以動態方式加入的執行個體的屬性建立屬性的 XML 項目這兩個<xref:System.Xml.Linq.XElement>物件。</span><span class="sxs-lookup"><span data-stu-id="a252f-142">The following example shows how to create attributes for an XML element both declaratively, as part of the XML, and dynamically by adding an attribute to an instance of an <xref:System.Xml.Linq.XElement> object.</span></span> <span data-ttu-id="a252f-143">`type`屬性會以宣告方式建立和`owner`屬性會動態建立。</span><span class="sxs-lookup"><span data-stu-id="a252f-143">The `type` attribute is created declaratively and the `owner` attribute is created dynamically.</span></span>  
   
- [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_2.vb)]  
+ [!code-vb[VbXMLSamples#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#44)]  
   
- <span data-ttu-id="b4503-144">此程式碼顯示下列文字：</span><span class="sxs-lookup"><span data-stu-id="b4503-144">This code displays the following text:</span></span>  
+ <span data-ttu-id="a252f-144">此程式碼顯示下列文字：</span><span class="sxs-lookup"><span data-stu-id="a252f-144">This code displays the following text:</span></span>  
   
 ```xml  
 <phone type="home" owner="Harris, Phyllis">206-555-0144</phone>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="b4503-145">範例</span><span class="sxs-lookup"><span data-stu-id="b4503-145">Example</span></span>  
- <span data-ttu-id="b4503-146">下列範例使用角括號語法來取得名為 XML 屬性的值`number-type`，這不是在 Visual Basic 中是有效的識別碼。</span><span class="sxs-lookup"><span data-stu-id="b4503-146">The following example uses the angle bracket syntax to get the value of the XML attribute named `number-type`, which is not a valid identifier in Visual Basic.</span></span>  
+## <a name="example"></a><span data-ttu-id="a252f-145">範例</span><span class="sxs-lookup"><span data-stu-id="a252f-145">Example</span></span>  
+ <span data-ttu-id="a252f-146">下列範例使用角括號語法來取得名為 XML 屬性的值`number-type`，這不是在 Visual Basic 中是有效的識別碼。</span><span class="sxs-lookup"><span data-stu-id="a252f-146">The following example uses the angle bracket syntax to get the value of the XML attribute named `number-type`, which is not a valid identifier in Visual Basic.</span></span>  
   
- [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
+ [!code-vb[VbXMLSamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#13)]  
   
- <span data-ttu-id="b4503-147">此程式碼顯示下列文字：</span><span class="sxs-lookup"><span data-stu-id="b4503-147">This code displays the following text:</span></span>  
+ <span data-ttu-id="a252f-147">此程式碼顯示下列文字：</span><span class="sxs-lookup"><span data-stu-id="a252f-147">This code displays the following text:</span></span>  
   
  `Phone type: work`  
   
-## <a name="example"></a><span data-ttu-id="b4503-148">範例</span><span class="sxs-lookup"><span data-stu-id="b4503-148">Example</span></span>  
- <span data-ttu-id="b4503-149">下列範例會宣告 `ns` 作為 XML 命名空間前置詞。</span><span class="sxs-lookup"><span data-stu-id="b4503-149">The following example declares `ns` as an XML namespace prefix.</span></span> <span data-ttu-id="b4503-150">然後它會使用命名空間的前置詞來建立 XML 常值，並存取具有限定名稱的第一個子節點 」`ns:name`"。</span><span class="sxs-lookup"><span data-stu-id="b4503-150">It then uses the prefix of the namespace to create an XML literal and access the first child node with the qualified name "`ns:name`".</span></span>  
+## <a name="example"></a><span data-ttu-id="a252f-148">範例</span><span class="sxs-lookup"><span data-stu-id="a252f-148">Example</span></span>  
+ <span data-ttu-id="a252f-149">下列範例會宣告 `ns` 作為 XML 命名空間前置詞。</span><span class="sxs-lookup"><span data-stu-id="a252f-149">The following example declares `ns` as an XML namespace prefix.</span></span> <span data-ttu-id="a252f-150">然後它會使用命名空間的前置詞來建立 XML 常值，並存取具有限定名稱的第一個子節點 」`ns:name`"。</span><span class="sxs-lookup"><span data-stu-id="a252f-150">It then uses the prefix of the namespace to create an XML literal and access the first child node with the qualified name "`ns:name`".</span></span>  
   
- [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_4.vb)]  
+ [!code-vb[VbXMLSamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples6.vb#14)]  
   
- <span data-ttu-id="b4503-151">此程式碼顯示下列文字：</span><span class="sxs-lookup"><span data-stu-id="b4503-151">This code displays the following text:</span></span>  
+ <span data-ttu-id="a252f-151">此程式碼顯示下列文字：</span><span class="sxs-lookup"><span data-stu-id="a252f-151">This code displays the following text:</span></span>  
   
  `Phone type: home`  
   
-## <a name="see-also"></a><span data-ttu-id="b4503-152">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b4503-152">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a252f-152">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a252f-152">See also</span></span>
 - <xref:System.Xml.Linq.XElement>
-- [<span data-ttu-id="b4503-153">XML 軸屬性</span><span class="sxs-lookup"><span data-stu-id="b4503-153">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)
-- [<span data-ttu-id="b4503-154">XML 常值</span><span class="sxs-lookup"><span data-stu-id="b4503-154">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)
-- [<span data-ttu-id="b4503-155">在 Visual Basic 中建立 XML</span><span class="sxs-lookup"><span data-stu-id="b4503-155">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [<span data-ttu-id="b4503-156">宣告的 XML 項目和屬性的名稱</span><span class="sxs-lookup"><span data-stu-id="b4503-156">Names of Declared XML Elements and Attributes</span></span>](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [<span data-ttu-id="a252f-153">XML 軸屬性</span><span class="sxs-lookup"><span data-stu-id="a252f-153">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)
+- [<span data-ttu-id="a252f-154">XML 常值</span><span class="sxs-lookup"><span data-stu-id="a252f-154">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)
+- [<span data-ttu-id="a252f-155">在 Visual Basic 中建立 XML</span><span class="sxs-lookup"><span data-stu-id="a252f-155">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [<span data-ttu-id="a252f-156">宣告的 XML 項目和屬性的名稱</span><span class="sxs-lookup"><span data-stu-id="a252f-156">Names of Declared XML Elements and Attributes</span></span>](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
