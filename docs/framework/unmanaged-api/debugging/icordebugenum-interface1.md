@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEnum 介面 1
+title: ICorDebugEnum 介面
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEnum
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97080f7d850e67d635f9a65ee85ad3ddddbb244d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 38aaa21b655136c63a45a7d36c097769882d8c37
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732748"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969306"
 ---
-# <a name="icordebugenum-interface1"></a>ICorDebugEnum 介面 1
+# <a name="icordebugenum-interface"></a>ICorDebugEnum 介面
+
 做為 偵錯的應用程式所使用的列舉值的抽象基底介面。  
   
 ## <a name="methods"></a>方法  

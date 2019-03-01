@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: 6ed6f3d4fd77d714ab554d641c0c0fc4f403bbf8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd57f63b5741822de7b11c1fafe90452a767aa34
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715097"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965640"
 ---
 # <a name="addhandler-statement"></a>AddHandler 陳述式
 將事件與事件處理常式在執行階段。  
@@ -36,13 +36,15 @@ AddHandler event, AddressOf eventhandler
   
  簽章`eventhandler`程序必須符合的事件簽章`event`。  
   
- `Handles` 關鍵字和 `AddHandler` 陳述式都可以讓您指定由特定程序處理特定事件，但兩者存有差異。 `AddHandler` 陳述式會在執行階段將程序連接到事件。 當定義程序以指定它處理特定事件時，使用 `Handles` 關鍵字。 如需詳細資訊，請參閱 <<c0> [ 處理](../../../visual-basic/language-reference/statements/handles-clause.md)。  
+ 
+  `Handles` 關鍵字和 `AddHandler` 陳述式都可以讓您指定由特定程序處理特定事件，但兩者存有差異。 
+  `AddHandler` 陳述式會在執行階段將程序連接到事件。 當定義程序以指定它處理特定事件時，使用 `Handles` 關鍵字。 如需詳細資訊，請參閱 <<c0> [ 處理](../../../visual-basic/language-reference/statements/handles-clause.md)。  
   
 > [!NOTE]
 >  自訂事件，如`AddHandler`陳述式會叫用事件的`AddHandler`存取子。 如需有關自訂事件的詳細資訊，請參閱 < [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)。  
   
 ## <a name="example"></a>範例  
- [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/addhandler-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>另請參閱
 - [RemoveHandler 陳述式](../../../visual-basic/language-reference/statements/removehandler-statement.md)

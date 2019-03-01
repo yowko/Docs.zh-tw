@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 9f6faf7b9ba2338784fda2cec2efc2b3991d415e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e40890835ddd50d25106e318ee05a874ce355d9b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667475"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977795"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>HOW TO：定義的類別，可提供完全相同的功能上不同的資料類型 (Visual Basic)
 您可以定義一個類別，以從中建立可在不同資料類型上提供相同功能的物件。 若要這樣做，請在定義中指定一個或多個 *「類型參數」* (type parameter)。 類別之後可以作為使用各種資料類型之物件的範本。 使用這種方法所定義的類別稱為 *「泛型類別」*(generic class)。  
@@ -64,7 +64,7 @@ ms.locfileid: "54667475"
   
      下列範例定義可管理極簡單清單的類別。 它會將清單保留在內部陣列 `items`中，而 using 程式碼可以宣告清單項目的資料類型。 參數化建構函式可讓 using 程式碼設定 `items`上限，而預設建構函式會將此項目設為 9 (共 10 個項目)。  
   
-     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
      您可以從 `simpleList` 宣告一個類別來保留 `Integer` 值清單、另一個類別來保留 `String` 值清單，以及另一個類別來保留 `Date` 值。 除了清單成員的資料類型之外，從所有這些類別建立之物件的行為都相同。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "54667475"
   
      您可以使用下列程式碼測試 `simpleList` 類別。  
   
-     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
+     [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
 ## <a name="see-also"></a>另請參閱
 - [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

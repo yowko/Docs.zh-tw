@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 703a30a558067b386c6bb5288012094418d61ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b12a1b1b8d116cc906459407240fca4302460e4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746269"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968721"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 陳述式 (Visual Basic)
 一組陳述式會重複指定的次數。  
@@ -67,11 +67,11 @@ Next [ counter ]
   
  在下列範例中，`index`變數的值為 1 以開頭，且會隨著每次反覆運算迴圈時，結束之後的值`index`達到 5。  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]  
   
  在下列範例中，`number`變數開始 2，並在每次反覆運算迴圈時，結束之後的值 0.25 可降低`number`到達 0。 `Step`引數`-.25`減少 0.25 迴圈的每個反覆運算上的值。  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]  
   
 > [!TIP]
 >  A[時...While 陳述式結束](../../../visual-basic/language-reference/statements/while-end-while-statement.md)或[執行...迴圈陳述式](../../../visual-basic/language-reference/statements/do-loop-statement.md)非常適合在不知道事先多少次，在迴圈中執行的陳述式。 不過，當您預期要執行迴圈以特定次數， `For`...`Next`迴圈是較好的選擇。 當您第一次輸入迴圈時，您可以判斷反覆項目的數目。  
@@ -79,7 +79,7 @@ Next [ counter ]
 ## <a name="nesting-loops"></a>巢狀迴圈  
  您可以巢狀`For`放在另一個迴圈的迴圈。 下列範例會示範巢狀`For`...`Next`具有不同步驟值的結構。 外部迴圈會建立迴圈的每個反覆項目的字串。 「 內部迴圈遞減迴圈計數器變數的迴圈的每個反覆項目。  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]  
   
  當建立巢狀迴圈，每個迴圈必須具有唯一`counter`變數。  
   
@@ -160,17 +160,17 @@ Next [ counter ]
 ## <a name="example"></a>範例  
  下列範例會移除的泛型清單中的所有項目。 而不是[每個...下一個陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)，此範例將示範`For`...`Next`以遞減順序反覆運算的陳述式。 此範例會使用這項技術，因為`removeAt`方法導致項目後面移除的項目具有較低的索引值。  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]  
   
 ## <a name="example"></a>範例  
  下列範例會逐一宣告可透過列舉[Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)。  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]  
   
 ## <a name="example"></a>範例  
  在下列範例中，陳述式參數使用類別，具有的運算子多載`+`， `-`， `>=`，和`<=`運算子。  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Collections.Generic.List%601>

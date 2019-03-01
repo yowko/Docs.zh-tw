@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f2288e02c01a40877abbd6a5ce5b2696c0944ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8268aca920c0b9fc8ea3390d80b9164c22c1ad9c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719972"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977852"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi 函式
 建立或更新現有類別的執行個體。 執行個體是寫入到 WMI 存放庫。 
@@ -49,7 +49,7 @@ HRESULT PutInstanceWmi (
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果設定，WMI 不會儲存與任何限定詞**Amended**類別。 </br> 如果未設定，系統會假設此物件不會進行當地語系化，，而且所有的限定詞是 storedwith 這個執行個體。 |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果設定，WMI 不會儲存與任何限定詞**Amended**類別。 <br> 如果未設定，系統會假設此物件不會進行當地語系化，，而且所有的限定詞是 storedwith 這個執行個體。 |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | 如果不存在，或是如果它已經存在，覆寫它，請建立執行個體。 |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | 更新執行個體。 執行個體必須存在，呼叫才會成功。 |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | 建立執行個體。 如果執行個體已經存在，則呼叫會失敗。 |

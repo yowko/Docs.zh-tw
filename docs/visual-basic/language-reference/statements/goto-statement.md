@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 729ff2a9cbeacaefdf0452a6c5868c229a8d05b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d2cec7f9cd2cc9d8985c9add103748583c25dc9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582522"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968929"
 ---
 # <a name="goto-statement"></a>GoTo 陳述式
 無條件分支到程序中指定的行。  
@@ -34,7 +34,7 @@ GoTo line
  必要項。 任何行標籤。  
   
 ## <a name="remarks"></a>備註  
- `GoTo`陳述式只可以分支在程序中出現的行。 列必須有標籤的列`GoTo`可以參考。 如需詳細資訊，請參閱[＜How to：標記陳述式](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
+ `GoTo`陳述式只可以分支在程序中出現的行。 列必須有標籤的列`GoTo`可以參考。 如需詳細資訊，請參閱[如何：標記陳述式](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
   
 > [!NOTE]
 >  `GoTo` 陳述式可以讓程式碼難以閱讀和維護。 可能的話，請改為使用控制結構。 如需詳細資訊，請參閱 <<c0> [ 控制流程](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
@@ -60,7 +60,7 @@ Try 語法結構的有效和無效的分支
 ## <a name="example"></a>範例  
  下列範例會使用`GoTo`分支到程序中的線條標籤的陳述式。  
   
- [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>另請參閱
 - [Do...Loop 陳述式](../../../visual-basic/language-reference/statements/do-loop-statement.md)

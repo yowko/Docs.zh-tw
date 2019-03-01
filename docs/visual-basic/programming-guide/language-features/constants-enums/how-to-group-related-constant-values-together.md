@@ -5,25 +5,25 @@ helpviewer_keywords:
 - enumerations [Visual Basic], constants
 - constants [Visual Basic], grouping together
 ms.assetid: 09d61da5-c940-4126-a79f-ba93c36653dc
-ms.openlocfilehash: 04697092534daa6f83a29e69dcdc509644fa6147
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63475487c8a35f5b306b28d4e7097324bef00d85
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558679"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977821"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>HOW TO：群組相關聯的常值放在一起 (Visual Basic)
-列舉是相關的常數群組在一起的最佳方式。 您建立的列舉`Enum`「 宣告 」 區段中的類別或模組的陳述式。 如需詳細資訊，請參閱[＜How to：宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)。  
+列舉是相關的常數群組在一起的最佳方式。 您建立的列舉`Enum`「 宣告 」 區段中的類別或模組的陳述式。 如需詳細資訊，請參閱[如何：宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)。  
   
 ### <a name="to-group-related-constant-values"></a>群組關聯的常數值  
   
 1.  撰寫包含程式碼存取層級中，宣告`Enum`關鍵字，且有效的名稱。 這個範例會建立`Private`列舉型別， `temperatureValues`。  
   
-     [!code-vb[VbEnumsTask#21](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_1.vb)]  
+     [!code-vb[VbEnumsTask#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#21)]  
   
 2.  列舉中定義的常數。 這個範例會建立`Public`列舉型別`temperatureValues`並指派其值。  
   
-     [!code-vb[VbEnumsTask#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_2.vb)]  
+     [!code-vb[VbEnumsTask#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
 - [列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)

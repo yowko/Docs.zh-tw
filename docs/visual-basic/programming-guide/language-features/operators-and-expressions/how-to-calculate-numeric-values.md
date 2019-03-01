@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 7bbc3bcadb318203688a3b8ecae18e723e82c8ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036985a7b60afedc1e8ef0854c619ea8515e5ffe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560725"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974298"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>HOW TO：計算數值 (Visual Basic)
 您可以計算數字的值，透過使用數值運算式。 A*數值運算式*運算式包含常值、 常數和變數表示數字的值，並處理那些值的運算子。  
@@ -43,7 +43,7 @@ ms.locfileid: "54560725"
   
 -   若要指派給變數，數值運算式所表示的值，如下列範例所示，您可以使用指派陳述式。  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
      在上述範例中，「 等於 」 運算子的運算式右邊的值 (`=`) 指派給變數`j`運算子，左邊讓`j`276 評估結果。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54560725"
   
 -   您可以使用括號來括住您想要優先執行的作業。 下列範例顯示兩個不同的結果，以相同的運算元和運算子。  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
      在上述範例中，計算`j`會執行加法運算子 (`+`) 第一個因為前後的括號`(67 + i)`一般優先順序，以及指派給的值會覆寫`j`是 276 (4 次 69)。 計算`k`執行其一般優先順序的運算子 (`*`之前`+`)，並指派給值`k`為 270 （268 加上 2）。  
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678833"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964914"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>HOW TO：宣告常數 (Visual Basic)
 您使用`Const`陳述式來宣告常數，並將其值設定。 藉由宣告為常數，您可以指派有意義的名稱的值。 一旦宣告為常數，它無法修改或指派新值。  
@@ -43,7 +43,7 @@ ms.locfileid: "54678833"
   
 -   撰寫包含存取規範，宣告`Const`關鍵字，且運算式，如下列範例所示：  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
+     [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
      當[Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)是`Off`並[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)是`On`，您必須明確宣告為常數，藉由指定的資料類型 (`Boolean`， `Byte`， `Char`， `DateTime`， `Decimal`， `Double`， `Integer`， `Long`， `Short`， `Single`，或`String`)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54678833"
   
 -   撰寫包含宣告`As`關鍵字和明確的資料類型，如下列範例所示：  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
+     [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
      雖然您的程式碼更容易閱讀如果您宣告僅每行一個常數，您可以在單一行中宣告多個常數。 如果您在單一行宣告多個常數，則必須有相同的存取層級 (`Public`， `Private`， `Friend`， `Protected`，或`Protected Friend`)。  
   

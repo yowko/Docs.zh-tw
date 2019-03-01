@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 2017e8edbb4d1bd25a3669b92553f2905b567594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a2ec42adb4c41c33cb9e1c09822795c81e3a728
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514678"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971295"
 ---
 # <a name="join-clause-visual-basic"></a>Join 子句 (Visual Basic)
 將兩個集合合併成單一集合。 根據相符的索引鍵的聯結作業，並使用`Equals`運算子。  
@@ -59,12 +59,12 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## <a name="example"></a>範例  
  下列程式碼範例會執行隱含聯結結合其訂單的客戶清單。  
   
- [!code-vb[VbSimpleQuerySamples#13](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]  
   
 ## <a name="example"></a>範例  
  下列程式碼範例以使用聯結兩個集合`Join`子句。  
   
- [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]  
   
  此範例會產生類似下列的輸出：  
   
@@ -77,7 +77,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## <a name="example"></a>範例  
  下列程式碼範例以使用聯結兩個集合`Join`子句搭配兩個索引鍵資料行。  
   
- [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]  
   
  此範例會產生如下所示的輸出：  
   

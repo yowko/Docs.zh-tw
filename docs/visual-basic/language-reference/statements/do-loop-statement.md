@@ -20,12 +20,12 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: 8c965dc89794654127e4b872c6aebf55c8902468
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7c7987508260a0181904feacf3782f66066309f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525142"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968201"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop 陳述式 (Visual Basic)
 重複出現時的陳述式區塊`Boolean`條件`True`或直到條件變成`True`。  
@@ -89,22 +89,22 @@ Loop { While | Until } condition
 ## <a name="example"></a>範例  
  下列範例中，在迴圈中的陳述式會繼續執行，直到`index`變數是否大於 10。 `Until`子句是在迴圈的結尾。  
   
- [!code-vb[VbVbalrStatements#131](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#131](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#131)]  
   
 ## <a name="example"></a>範例  
  下列範例會使用`While`子句，而不是`Until`子句，和`condition`測試的迴圈，而不是結尾開頭。  
   
- [!code-vb[VbVbalrStatements#132](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#132](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#132)]  
   
 ## <a name="example"></a>範例  
  在下列範例中，`condition`停止迴圈時`index`變數是否大於 100。 `If`陳述式在迴圈中，不過，會導致`Exit Do`索引變數大於 10 時停止迴圈的陳述式。  
   
- [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>範例  
  下列範例會讀取文字檔案中的所有行。 <xref:System.IO.File.OpenText%2A>方法會開啟檔案，並傳回<xref:System.IO.StreamReader>讀取字元。 在 `Do...Loop`條件<xref:System.IO.StreamReader.Peek%2A>方法`StreamReader`判斷是否有任何額外的字元。  
   
- [!code-vb[VbVbalrStatements#134](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   
 ## <a name="see-also"></a>另請參閱
 - [迴圈結構](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

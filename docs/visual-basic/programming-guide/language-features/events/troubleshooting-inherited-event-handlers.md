@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handling, troubleshooting
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
-ms.openlocfilehash: e7c56757d18a22a65b4ef8e81d2a05e5f4f4dffc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91bded2f1249bfcbeeca28419ee9bcec819babf6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680185"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965420"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Visual Basic 中的繼承事件處理常式疑難排解
 本主題列出常見的問題所引發的繼承元件中的事件處理常式。  
@@ -24,7 +24,7 @@ ms.locfileid: "54680185"
   
 -   不能包含繼承的事件處理常式[處理](../../../../visual-basic/language-reference/statements/handles-clause.md)子句。 基底類別中的方法已與事件相關聯，並據此將會引發。 移除`Handles`子句從繼承的方法。  
   
-     [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/troubleshooting-inherited-event-handlers_1.vb)]  
+     [!code-vb[VbVbalrEvents#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#32)]  
   
 -   如果繼承的方法沒有`Handles`關鍵字，確認您的程式碼不包含額外[AddHandler 陳述式](../../../../visual-basic/language-reference/statements/addhandler-statement.md)或任何其他方法處理相同的事件。  
   

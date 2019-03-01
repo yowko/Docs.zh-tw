@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 413c9331611d3406c13df58f25db1ef0255339b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc5262d62d32ad3f79c4f4e2c4d9f862dbce3727
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517665"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976885"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>疑難排解互通性 (Visual Basic)
 當您 COM 和 managed 程式碼之間的交互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，您可能會遇到一或多個下列常見的問題。  
@@ -57,11 +57,11 @@ ms.locfileid: "54517665"
 ##  <a name="vbconinteroperabilitymarshalinganchor6"></a> 建立.NET Framework 類別的執行個體  
  一般而言，您建立的執行個體[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]類別使用`New`陳述式的類別名稱。 Interop 組件所表示的 COM 類別是一種情況，您可以使用`New`陳述式的介面。 除非您使用 COM 類別`Inherits`陳述式中，您可以使用介面，就像您一樣的類別。 下列程式碼示範如何建立`Command`具有 Microsoft ActiveX 資料物件 2.8 程式庫 COM 物件的參考的專案中的物件：  
   
- [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_1.vb)]  
+ [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
  不過，如果您使用 COM 類別作為基底之衍生類別，您必須使用 interop 的類別，表示 COM 類別，如下列程式碼所示：  
   
- [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_2.vb)]  
+ [!code-vb[VbVbalrInterop#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#21)]  
   
 > [!NOTE]
 >  Interop 組件會以隱含方式實作代表 COM 類別的介面。 您不應該嘗試使用`Implements`會實作這些介面或錯誤的陳述式。  
@@ -81,19 +81,19 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  Visual Basic.NET，您必須一律建立 COM 物件的執行個體才能使用它們的方法。 若要在 Visual Basic 中使用這些方法，將變數宣告為所需的類別，並使用新的關鍵字來將物件指派給物件變數。 `Shared`可以使用關鍵字，當您想要確定在建立類別，只有一個執行個體。  
   
- [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_3.vb)]  
+ [!code-vb[VbVbalrInterop#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#23)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor9"></a> 事件處理常式中的未處理的錯誤  
  一個常見的 interop 問題牽涉到處理 COM 物件所引發的事件的事件處理常式中的錯誤。 這類錯誤都會被忽略，除非您特別檢查使用的錯誤`On Error`或`Try...Catch...Finally`陳述式。 例如，下列範例是從 Visual Basic.NET 專案具有 Microsoft ActiveX 資料物件 2.8 程式庫 COM 物件的參考。  
   
- [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_4.vb)]  
+ [!code-vb[VbVbalrInterop#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#24)]  
   
  此範例會引發錯誤，如預期般運作。 不過，如果您嘗試相同的範例，而不需要`Try...Catch...Finally`區塊中，錯誤會被忽略，方式就如同您使用`OnError Resume Next`陳述式。 沒有錯誤處理，除數為零以無訊息模式失敗。 因為這類錯誤永遠不會引發未處理的例外狀況的錯誤，很重要，您會使用某種形式的例外狀況處理在處理從 COM 物件的事件的事件處理常式。  
   
 ### <a name="understanding-com-interop-errors"></a>了解 COM interop 的錯誤  
  沒有錯誤處理，interop 呼叫通常會產生錯誤，提供一些資訊。 可能的話，使用結構化的錯誤處理發生時，請提供問題的相關資訊。 當您偵錯應用程式時，這可能特別有用。 例如:   
   
- [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
+ [!code-vb[VbVbalrInterop#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#25)]  
   
  您可以藉由檢查例外狀況物件的內容中找到的錯誤描述、 HRESULT，等的 COM 錯誤來源的資訊。  
   
@@ -113,11 +113,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  如果您有存取權所呼叫的程序，您可以使用來避免此錯誤`ByVal`關鍵字來宣告可接受的參數`ReadOnly`屬性。 例如:   
   
- [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
+ [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   
  如果您沒有原始程式碼的存取權，被呼叫程序，您可以強制以傳值加上一組額外的括號括住呼叫程序的屬性。 例如，在有 Microsoft ActiveX 資料物件 2.8 程式庫 COM 物件的參考專案中，您可以使用：  
   
- [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_7.vb)]  
+ [!code-vb[VbVbalrInterop#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#27)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor12"></a> 部署 Interop 公開 （expose） 的組件  
  部署公開 COM 介面的組件提供一些獨特的挑戰。 例如，當個別的應用程式參考相同的 COM 組件時，就會發生潛在的問題。 安裝新版的組件和另一個應用程式仍在使用舊版本的組件時，常會使用這種情況。 如果您解除安裝共用 DLL 的組件，您會無意間造成它無法使用其他組件。  

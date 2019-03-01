@@ -1,5 +1,5 @@
 ---
-title: ICorDebugObjectEnum 介面 1
+title: ICorDebugObjectEnum 介面
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectEnum
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a9f10301db488e4ca68ce5fdaf0ba767053d7d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 452216a2ba4e8013d107977d82eae1508b2aba78
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546997"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967759"
 ---
-# <a name="icordebugobjectenum-interface1"></a>ICorDebugObjectEnum 介面 1
+# <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum 介面
+
 實作 ICorDebugEnum 方法，並列舉物件的陣列的相對虛擬位址 (Rva)。  
   
 ## <a name="methods"></a>方法  

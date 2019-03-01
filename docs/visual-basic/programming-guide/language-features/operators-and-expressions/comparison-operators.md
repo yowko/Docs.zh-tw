@@ -15,12 +15,12 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-ms.openlocfilehash: db9eef215b16c95a40dfc622bb29443dd1736943
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd7ee90e749be76012cf7143787bc6f1d096da03
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552030"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969371"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
 比較運算子比較兩個運算式，並傳回`Boolean`值，表示其值的關聯性。 有數字值、 運算子來比較字串和運算子來比較物件比較的運算子。 本文件討論所有的三種類型的運算子。  
@@ -61,17 +61,17 @@ ms.locfileid: "54552030"
 ## <a name="comparing-objects"></a>比較物件  
  Visual Basic 比較兩個物件參考變數[Is 運算子](../../../../visual-basic/language-reference/operators/is-operator.md)並[IsNot 運算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)。 您可以使用這些運算子來判斷兩個參考變數參考相同的物件執行個體。 下列範例將說明這點。  
   
- [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#65)]  
   
  在上述範例中，`x Is y`評估為`True`，因為這兩個變數都參考相同的執行個體。 比較這個結果與以下的範例。  
   
- [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#66)]  
   
  在上述範例中，`x Is y`評估為`False`，因為它們雖然變數都參考相同類型的物件，參考該類型的不同執行個體。  
   
  當您想要測試兩個物件未指向相同的執行個體，`IsNot`運算子可讓您避免文法笨拙的組合`Not`和`Is`。 下列範例將說明這點。  
   
- [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#67)]  
   
  在上述範例中，`If a IsNot b`相當於`If Not a Is b`。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "54552030"
   
  當`typename`指定介面型別，則`TypeOf`...`Is`運算式傳回`True`如果物件實作的介面型別。 當`typename`是類別類型，則運算式會傳回`True`的物件是否為指定的類別或衍生自指定類別的類別執行個體。 下列範例將說明這點。  
   
- [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#68)]  
   
  在上述範例中，`TypeOf x Is Control`運算式會評估`True`因為的型別`x`是`Button`，該項則繼承自`Control`。  
   

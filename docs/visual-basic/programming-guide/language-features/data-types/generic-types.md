@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: b69fc668a63d1b4f834d5aa65ae8e27854d73e63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d990d0167152c2a97315c0540361ba8b537f1946
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595574"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978497"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic 中的泛型類型 (Visual Basic)
 *「泛型類型」* (generic type) 是單一程式設計項目，適用於為各種資料類型執行相同的功能。 當您定義泛型類別或程序時，不需要為想要執行該功能的每種資料類型定義不同的版本。  
@@ -55,7 +55,7 @@ ms.locfileid: "54595574"
   
  例如，您可能想要建立和使用佇列類別，而這些佇列類別作用於特定資料類型 (如 `String`)。 如下列範例所示，您可以從 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>宣告這類類別。  
   
- [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#1)]  
   
  您現在可以使用 `stringQ` ，以獨佔方式使用 `String` 值。 因為 `stringQ` 是 `String` 特有的，而不是通用於 `Object` 值，所以您沒有晚期繫結或類型轉換。 這可以節省執行時間，並減少執行階段錯誤。  
   
@@ -64,17 +64,17 @@ ms.locfileid: "54595574"
 ## <a name="example-of-a-generic-class"></a>泛型類別範例  
  下列範例顯示泛型類別的基本架構定義。  
   
- [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
   
  在上述的基本架構中， `t` 是 *「類型參數」*(type parameter)，即宣告類別時所提供資料類型的預留位置。 您可以在程式碼的其他位置，提供 `classHolder` 的各種資料類型來宣告各種版本的 `t`。 下列範例顯示兩個這類宣告。  
   
- [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
  先前的陳述式宣告 *「已建構類別」*(constructed class)，其中，特定類型會取代類型參數。 這項取代遍及已建構類別內的程式碼。 下列範例顯示 `processNewItem` 程序在 `integerClass`中的外觀。  
   
- [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- 如需更完整的範例，請參閱[How to:定義可以在不同的資料類型上提供完全相同的功能類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)。  
+ 如需更完整的範例，請參閱[如何：定義可以在不同的資料類型上提供完全相同的功能類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)。  
   
 ## <a name="eligible-programming-elements"></a>合格的程式設計項目  
  您可以定義和使用泛型類別、結構、介面、程序和委派。 請注意， [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 定義數個泛型類別、結構和介面來代表常用的泛型項目。 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間提供字典、清單、佇列和堆疊。 定義您自己的泛型項目之前，請查看它是否已在 <xref:System.Collections.Generic?displayProperty=nameWithType>中。  
@@ -110,7 +110,7 @@ ms.locfileid: "54595574"
 ### <a name="example-of-a-constraint"></a>條件約束範例  
  下列範例顯示條件約束需要有類型引數才能實作 <xref:System.IComparable>之類別的基本架構定義。  
   
- [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_5.vb)]  
+ [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
   
  如果後續程式碼嘗試從提供未實作 `itemManager` 之類型的 <xref:System.IComparable>來建構類別，則編譯器會發出發生錯誤訊號。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "54595574"
 ### <a name="example-of-multiple-constraints"></a>多個條件約束範例  
  下列範例顯示類型參數上具有條件約束清單之泛型類別的基本架構定義。 在建立這個類別之執行個體的程式碼中，類型引數必須同時實作 <xref:System.IComparable> 和 <xref:System.IDisposable> 介面、為參考類型，並且公開可存取的無參數建構函式。  
   
- [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_6.vb)]  
+ [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
 ## <a name="important-terms"></a>重要詞彙  
  泛型類型引進並使用下列詞彙：  

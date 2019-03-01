@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: d40ca98f94f410bb20c8df0e7f1a3f216cf53bf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34348d57db0875d9c2c6192ac754b4f83f515ac4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589161"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965459"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>HOW TO：將值放在屬性 (Visual Basic)
 您將屬性名稱放在指派陳述式左邊值儲存在屬性中。  
@@ -26,7 +26,7 @@ ms.locfileid: "54589161"
   
      下列範例會設定值的 Visual Basic`TimeOfDay`屬性到中午，隱含地呼叫其`Set`程序。  
   
-     [!code-vb[VbVbcnProcedures#11](./codesnippet/VisualBasic/how-to-put-a-value-in-a-property_1.vb)]  
+     [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
 2.  如果此屬性會接受引數，請遵循使用括號來括住的引數清單的屬性名稱。 如果不有任何引數，您可以選擇性地省略括號。  
   

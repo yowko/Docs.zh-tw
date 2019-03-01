@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: dd50435b7cbb5d3d25c0e30618e8733b4eddfe91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655071"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968266"
 ---
 # <a name="type-list-visual-basic"></a>類型清單 (Visual Basic)
 指定*型別參數*for*泛型*程式設計項目。 以逗號分隔多個參數。 以下是一種型別參數的語法。  
@@ -80,17 +80,17 @@ ms.locfileid: "54655071"
 ## <a name="example"></a>範例  
  下列範例示範泛型字典類別，包括將新的項目新增至字典的基本架構函數的基本架構定義。  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>範例  
  因為`dictionary`是泛型，使用它的程式碼可以建立各種不同的物件，每個具有相同的功能，但根據不同的資料類型。 下列範例顯示建立的程式碼行`dictionary`物件`String`項目和`Integer`索引鍵。  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]  
   
 ## <a name="example"></a>範例  
  下列範例顯示對等的基本架構定義，上述範例中所產生。  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>另請參閱
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)

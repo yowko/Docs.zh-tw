@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: 8c9787d52667dc026d3fe62ac7f4b3de7e838a93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 217778a21fb9f231f448436ca5a68c42e5837566
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519784"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977522"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte 資料類型 (Visual Basic)
 保留範圍從 0 到 255 的不帶正負號的 8 位元 （1 個位元組） 整數。
@@ -21,7 +21,8 @@ ms.locfileid: "54519784"
 
 使用`Byte`包含二進位資料的資料類型。  
   
-`Byte` 的預設值為 0。
+
+  `Byte` 的預設值為 0。
 
 ## <a name="literal-assignments"></a>常值的指派
 
@@ -62,7 +63,7 @@ Dim number As Byte = &H_6A
 
  在下列範例中，`b`是`Byte`變數。 陳述式示範變數的範圍和應用程式的位元移位運算子。
 
-[!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#16)]  
 
 ## <a name="see-also"></a>另請參閱
 

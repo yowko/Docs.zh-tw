@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedure declarations
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-ms.openlocfilehash: 06fed04a0ebe7a0b3111a94308d15d01bcf47c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f3b0a793b2751b0ec9bb2b7cd6fedc12ae19e18
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636530"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970801"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>HOW TO：建立程序 (Visual Basic)
 您將開始的宣告陳述式之間的程序 (`Sub`或是`Function`) 和結束的宣告陳述式 (`End Sub`或`End Function`)。 這些陳述式之間，位於所有程序的程式碼。  
@@ -51,7 +51,7 @@ ms.locfileid: "54636530"
 ## <a name="example"></a>範例  
  下列`Function`程序會計算已知值的其他兩個邊直角三角形斜邊的最長的側邊。  
   
- [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
 

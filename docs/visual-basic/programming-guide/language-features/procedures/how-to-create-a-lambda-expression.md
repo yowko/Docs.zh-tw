@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: e7302304fe6c44b0143d7f12ec272d597b313fdd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35df64848c0506a1c0a97bd8cd34f158f9febcd7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492401"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970164"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>HOW TO：建立 Lambda 運算式 (Visual Basic)
 A *lambda 運算式*函式或副程式，並沒有名稱。 只要委派型別有效，則可以使用 lambda 運算式。  
@@ -27,15 +27,15 @@ A *lambda 運算式*函式或副程式，並沒有名稱。 只要委派型別�
   
 3.  下列參數清單中，輸入單一運算式做為函式的主體。 運算式評估為值是函式所傳回的值。 您不使用`As`子句，以指定的傳回型別。  
   
-     [!code-vb[VbVbalrLambdas#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_1.vb)]  
+     [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
      Lambda 運算式可以呼叫傳入整數引數。  
   
-     [!code-vb[VbVbalrLambdas#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_2.vb)]  
+     [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
 4.  或者，是由下列的範例來完成相同的結果：  
   
-     [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_3.vb)]  
+     [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>若要建立副程式，單行 lambda 運算式  
   
@@ -49,11 +49,11 @@ A *lambda 運算式*函式或副程式，並沒有名稱。 只要委派型別�
   
 3.  下列參數清單中，輸入單一陳述式為副程式的內文。  
   
-     [!code-vb[VbVbalrLambdas#17](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_4.vb)]  
+     [!code-vb[VbVbalrLambdas#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#17)]  
   
      Lambda 運算式可以呼叫傳入的字串引數。  
   
-     [!code-vb[VbVbalrLambdas#18](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_5.vb)]  
+     [!code-vb[VbVbalrLambdas#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#18)]  
   
 ### <a name="to-create-a-multiline-lambda-expression-function"></a>若要建立多行 lambda 運算式函式  
   
@@ -69,11 +69,11 @@ A *lambda 運算式*函式或副程式，並沒有名稱。 只要委派型別�
   
 4.  在函式主體中，新增下列程式碼，以建立運算式，並傳回值。 您不使用`As`子句，以指定的傳回型別。  
   
-     [!code-vb[VbVbalrLambdas#19](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_6.vb)]  
+     [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
      Lambda 運算式可以呼叫傳入整數引數。  
   
-     [!code-vb[VbVbalrLambdas#20](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_7.vb)]  
+     [!code-vb[VbVbalrLambdas#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#20)]  
   
 ### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>若要建立多行 lambda 運算式副程式  
   
@@ -89,20 +89,20 @@ A *lambda 運算式*函式或副程式，並沒有名稱。 只要委派型別�
   
 4.  在函式主體中，新增下列程式碼執行時叫用副程式。  
   
-     [!code-vb[VbVbalrLambdas#21](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_8.vb)]  
+     [!code-vb[VbVbalrLambdas#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#21)]  
   
      Lambda 運算式可以呼叫傳入的字串引數。  
   
-     [!code-vb[VbVbalrLambdas#22](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_9.vb)]  
+     [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>範例  
  Lambda 運算式的常見用法是定義的函式，可以做為參數的型別引數傳入`Delegate`。 在下列範例中，<xref:System.Diagnostics.Process.GetProcesses%2A>方法會傳回陣列的本機電腦上執行的處理程序。 <xref:System.Linq.Enumerable.Where%2A>方法，從<xref:System.Linq.Enumerable>類別需要`Boolean`委派作為其引數。 在範例中的 lambda 運算式用於該目的。 它會傳回`True`每個處理序具有只有一個執行緒，且在已選取這些`filteredList`。  
   
- [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_10.vb)]  
+ [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
  上述範例相當於下列程式碼，以撰寫[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]語法：  
   
- [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
+ [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Linq.Enumerable>

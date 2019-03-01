@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: 23733741a79506730187d5735a20f3848e43da1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50054b9e32f4d49a34c1bb1a5c79129662019aee
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724810"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965893"
 ---
 # <a name="value-comparisons-visual-basic"></a>數值比較 (Visual Basic)
 比較運算子可用來建構比較數值變數的值的運算式。 這些運算式會傳回`Boolean`值根據比較為 true 或 false。 這類運算式的範例如下所示。  
@@ -34,15 +34,15 @@ ms.locfileid: "54724810"
   
  最常用於比較值的運算式`If...Then`建構，如下列範例所示。  
   
- [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
+ [!code-vb[VbVbalrOperators#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#84)]  
   
  `=`符號是比較運算子，以及指派運算子。 當做比較運算子使用時，它會評估在左邊的值是否等於右邊的值，如下列範例所示。  
   
- [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
+ [!code-vb[VbVbalrOperators#85](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#85)]  
   
  您也可以隨處使用比較運算式`Boolean`值是所需的例如，在`If`， `While`， `Loop`，或`ElseIf`陳述式，或是當您將指派給，或將值傳遞至`Boolean`變數。 在下列範例中，比較運算式所傳回的值指派給`Boolean`變數。  
   
- [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
+ [!code-vb[VbVbalrOperators#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#86)]  
   
 ## <a name="see-also"></a>另請參閱
 - [布林運算式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)

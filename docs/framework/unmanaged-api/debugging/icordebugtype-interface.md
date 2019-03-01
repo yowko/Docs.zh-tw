@@ -1,5 +1,5 @@
 ---
-title: ICorDebugType 介面 1
+title: ICorDebugType 介面
 ms.date: 03/30/2017
 api_name:
 - ICorDebugType
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d29ab3c67e0788b15850b7dfb8b55914c1d1e369
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e3d1173ac6fb14a380cdbc99882fd9baee6552a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694525"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966026"
 ---
-# <a name="icordebugtype-interface1"></a>ICorDebugType 介面 1
+# <a name="icordebugtype-interface"></a>ICorDebugType 介面
 表示型別，基本或複雜 （也就是，使用者定義）。 如果是泛型類型，則 `ICorDebugType` 表示具現化的泛型類型。  
   
 ## <a name="methods"></a>方法  

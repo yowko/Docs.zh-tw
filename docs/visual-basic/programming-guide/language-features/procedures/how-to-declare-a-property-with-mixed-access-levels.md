@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: b10f679d735d21ba0002c8a3f4e230836298d4e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514253"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972578"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>HOW TO：宣告混合的存取層級 (Visual Basic) 的屬性
 如果您想`Get`並`Set`有不同的存取層級屬性的程序，您可以使用中的更寬鬆的層級`Property`陳述式並在更嚴格的層級`Get`或`Set`陳述式。 當您想要能夠取得屬性的值，程式碼的特定組件和其他部分的程式碼能夠將值變更時，您可以使用在屬性上的混合的存取層級。  
@@ -30,7 +30,7 @@ ms.locfileid: "54514253"
   
 3.  未指定存取層級上的其他屬性程序。 它會假設中宣告的存取層級`Property`陳述式。 您可以限制只有其中一個屬性程序的存取。  
   
-     [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
+     [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
      在上述範例中，`Get`程序中的相同`Protected`屬性本身的存取權時`Set`程序中的`Private`存取。 類別衍生自`employee`可以讀取`salary`值，但僅限`employee`類別也可以設定它。  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cc3b806043daea9247741b1816c9055378f45cf
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 92e4f416e26e5af9124593f2bef8d8042fcfc953
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443032"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966784"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>將您的 Windows 市集應用程式移轉至 .NET Native
 .NET 原生提供靜態編譯的應用程式在 Windows 市集或開發人員的電腦上。 這不同於 just-in-time (JIT) 編譯器或裝置上的 [原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 為 Windows 市集應用程式執行的動態編譯。 儘管有所差異，.NET Native 會嘗試維持與相容性[適用於 Windows 市集應用程式](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)。 大部分的情況下，在適用於 Windows 市集應用程式運作的項目也適用於.NET 原生。  不過，在某些情況下，您可能會遇到行為上的變更。 本文將探討這些差異適用於 Windows 市集應用程式的標準和.NET Native 在下列區域：  
@@ -622,10 +622,8 @@ ms.locfileid: "56443032"
   
 -   <xref:System.Xml.Serialization.XmlSerializer> 不接受 <xref:System.Xml.Serialization.IXmlSerializable> 自訂序列化介面。 如果您有實作這個介面的類別， <xref:System.Xml.Serialization.XmlSerializer> 會將該類型視為簡單的 CLR 物件 (POCO) 類型，並且只將其公開屬性序列化。  
   
--   使用 <xref:System.Exception> 和 <xref:System.Runtime.Serialization.DataContractSerializer> 來將純 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>物件 (例如下列物件) 序列化的效果不佳：  
-  
-  
-  
+-   序列化純<xref:System.Exception>不適用於物件<xref:System.Runtime.Serialization.DataContractSerializer>和<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。
+
 <a name="VS"></a>   
 ## <a name="visual-studio-differences"></a>Visual Studio 的差異  
  **例外狀況和偵錯**  

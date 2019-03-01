@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: b19c36018a0938b9b6546e5baefbbc3de1e5dd30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a43d09be53eb5a04d154e482f9388e2ca480118a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619911"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967174"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>HOW TO：中斷和合併陳述式中的程式碼 (Visual Basic)
 當撰寫程式碼，您有時可能會建立冗長的陳述式也許水平捲軸在程式碼編輯器。 雖然這不會影響的方式執行程式碼，它很難對您或其他人讀取的程式碼，此監視器上顯示的方式。 在此情況下，您應該考慮單一長的陳述式分成數行。  
@@ -40,7 +40,7 @@ ms.locfileid: "54619911"
   
      在下列範例中，陳述式會分成四行程式碼，以終止所有的行接續字元，但最後一行。  
   
-     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
+     [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]  
   
      使用此順序可讓您的程式碼更方便閱讀，列印線上和時。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54619911"
   
 -   將陳述式以冒號分隔 (`:`)，如下列範例所示。  
   
-     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
+     [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>另請參閱
 - [程式結構和程式碼慣例](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

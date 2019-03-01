@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: b40ed11747e057d620a9a45dd1361081f38acec8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 46bc87c653742c8469ffaff1decb9549a29feaeb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260498"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972070"
 ---
 # <a name="-operator-visual-basic"></a>>> 運算子 (Visual Basic)
 位元模式中執行算術右移位。  
@@ -60,7 +60,7 @@ result = pattern >> amount
 ## <a name="example"></a>範例  
  下列範例會使用`>>`整數值上執行算術右移位運算子。 結果會有相同的資料類型的已移位的運算式。  
   
- [!code-vb[VbVbalrOperators#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#14)]  
   
  上述範例的結果如下所示：  
   
@@ -78,7 +78,7 @@ result = pattern >> amount
   
  下列範例會顯示在負值上算術移位。  
   
- [!code-vb[VbVbalrOperators#55](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#55)]  
   
  上述範例的結果如下所示：  
   

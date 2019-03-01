@@ -1,5 +1,5 @@
 ---
-title: ICorDebugController 介面 1
+title: ICorDebugController 介面
 ms.date: 03/30/2017
 api_name:
 - ICorDebugController
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0651f8cd63f2ebdc6b81e92c0b55d94fe51316b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81b671721e1416ab9717442d4d7fc727b938ee2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645297"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980486"
 ---
-# <a name="icordebugcontroller-interface1"></a>ICorDebugController 介面 1
+# <a name="icordebugcontroller-interface"></a>ICorDebugController 介面
+
 表示可以控制程式碼執行內容的範圍 (<xref:System.Diagnostics.Process> 或 <xref:System.AppDomain> 其中一項)。  
   
 ## <a name="methods"></a>方法  

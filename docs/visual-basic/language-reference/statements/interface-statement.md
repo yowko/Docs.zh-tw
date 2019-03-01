@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 7bbce77034ce334b7c2b7f58a224fca38736385a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f65875caa16bfe00866cc3cd6fd0c0b22b034576
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532759"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970528"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface 陳述式 (Visual Basic)
 宣告介面的名稱，並引進組成介面成員的定義。  
@@ -95,7 +95,7 @@ End Interface
   
      如果您將類別執行個體指派給變數時，其成員的存取層級取決於該變數的資料型別是否基礎介面實作的類別。 下列範例將說明這點。  
   
-     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
      如果您在存取類別成員透過`varAsInterface`，它們都有公用存取。 不過，如果您在存取透過成員`varAsClass`，則`Sub`程序`doSomething`具有私用存取。  
   
@@ -108,7 +108,7 @@ End Interface
 ## <a name="example"></a>範例  
  下列範例會使用`Interface`陳述式來定義名為的介面`thisInterface`，它必須用來實作`Property`陳述式和`Function`陳述式。  
   
- [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
  請注意，`Property`並`Function`陳述式不會導入區塊結尾`End Property`和`End Function`在介面中。 介面會定義只其成員的簽章。 完整`Property`並`Function`區塊會出現在類別若實作`thisInterface`。  
   

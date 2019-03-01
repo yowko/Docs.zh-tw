@@ -15,12 +15,12 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: ef6a2e22c1394065ba6127aa3dd388b47238dea8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcb50a9c7e36bab046be25d7f82f91cfe0f9be8e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624791"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966914"
 ---
 # <a name="resume-statement"></a>Resume 陳述式
 錯誤處理常式完成之後，請繼續執行。  
@@ -55,7 +55,7 @@ Resume [ Next | line ]
 ## <a name="example"></a>範例  
  這個範例會使用`Resume`陳述式來結束處理程序中的錯誤，然後以造成錯誤的陳述式繼續執行。 會產生錯誤數字 55，來說明使用`Resume`陳述式。  
   
- [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#16)]  
   
 ## <a name="requirements"></a>需求  
  **命名空間：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

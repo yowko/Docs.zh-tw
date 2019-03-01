@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 5980549dd063b2c7d5c60ebd4e9762284c072009
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: becbbef008e8a474db198748d45f260fcb90c758
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586614"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966767"
 ---
 # <a name="determining-object-type-visual-basic"></a>決定物件類型 (Visual Basic)
 泛型的物件變數 (也就是變數宣告為`Object`) 可以保留任何類別的物件。 使用型別的變數時`Object`，您可能需要採取不同的物件類別為基礎的動作; 例如，某些物件可能不支援的特定屬性或方法。 Visual Basic 提供兩種決定物件變數中儲存的物件類型：`TypeName`函式和`TypeOf...Is`運算子。  
@@ -22,15 +22,15 @@ ms.locfileid: "54586614"
 ## <a name="typename-and-typeofis"></a>類型名稱，TypeOf...是  
  `TypeName`函式傳回字串，是最佳選擇，當您需要儲存或顯示類別物件的名稱，如下列程式碼片段所示：  
   
- [!code-vb[VbVbalrOOP#92](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_1.vb)]  
+ [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
   
  `TypeOf...Is`運算子會測試物件的類型的最佳選擇，因為它的速度比對等字串比較使用`TypeName`。 下列程式碼片段會使用`TypeOf...Is`內`If...Then...Else`陳述式：  
   
- [!code-vb[VbVbalrOOP#93](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_2.vb)]  
+ [!code-vb[VbVbalrOOP#93](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#93)]  
   
  注意這裡會到期。 `TypeOf...Is`運算子會傳回`True`如果物件是特定的類型，或衍生自特定的型別。 幾乎所有項目中所做的 Visual Basic 牽涉到物件，其中包含一些通常不會視為物件，例如字串和整數的項目。 這些物件衍生自和繼承方法<xref:System.Object>。 當傳遞`Integer`和評估與`Object`，則`TypeOf...Is`運算子會傳回`True`。 下列範例會報告的參數`InParam`兼具`Object`和`Integer`:  
   
- [!code-vb[VbVbalrOOP#94](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_3.vb)]  
+ [!code-vb[VbVbalrOOP#94](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#94)]  
   
  下列範例會使用這兩者`TypeOf...Is`並`TypeName`來判斷物件傳遞至該型別`Ctrl`引數。 `TestObject`程序呼叫`ShowType`使用三種不同的控制項。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54586614"
   
 3.  將下列程式碼新增至您的表單：  
   
-     [!code-vb[VbVbalrOOP#95](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_4.vb)]  
+     [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>

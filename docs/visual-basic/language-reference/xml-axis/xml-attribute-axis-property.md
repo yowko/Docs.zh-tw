@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: cfc18df4487488bd90d7b0250a9053f55305d8a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 081359f32438c6474fe5c229634b60969e25a24e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631489"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965380"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 屬性軸屬性 (Visual Basic)
 提供的屬性值存取權<xref:System.Xml.Linq.XElement>物件或集合中的第一個項目<xref:System.Xml.Linq.XElement>物件。  
@@ -65,7 +65,7 @@ object.@<attribute>
 ## <a name="example"></a>範例  
  下列範例示範如何取得名為 XML 屬性的值`type`集合中的 XML 項目會在名為`phone`。  
   
- [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_1.vb)]  
+ [!code-vb[VbXMLSamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#12)]  
   
  此程式碼顯示下列文字：  
   
@@ -80,7 +80,7 @@ object.@<attribute>
 ## <a name="example"></a>範例  
  下列範例示範如何以宣告方式，XML 中，而且以動態方式加入的執行個體的屬性建立屬性的 XML 項目這兩個<xref:System.Xml.Linq.XElement>物件。 `type`屬性會以宣告方式建立和`owner`屬性會動態建立。  
   
- [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_2.vb)]  
+ [!code-vb[VbXMLSamples#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#44)]  
   
  此程式碼顯示下列文字：  
   
@@ -91,7 +91,7 @@ object.@<attribute>
 ## <a name="example"></a>範例  
  下列範例使用角括號語法來取得名為 XML 屬性的值`number-type`，這不是在 Visual Basic 中是有效的識別碼。  
   
- [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
+ [!code-vb[VbXMLSamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#13)]  
   
  此程式碼顯示下列文字：  
   
@@ -100,7 +100,7 @@ object.@<attribute>
 ## <a name="example"></a>範例  
  下列範例會宣告 `ns` 作為 XML 命名空間前置詞。 然後它會使用命名空間的前置詞來建立 XML 常值，並存取具有限定名稱的第一個子節點 」`ns:name`"。  
   
- [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_4.vb)]  
+ [!code-vb[VbXMLSamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples6.vb#14)]  
   
  此程式碼顯示下列文字：  
   

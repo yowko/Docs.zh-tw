@@ -5,12 +5,12 @@ helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: fba33bc177641f3fc9f67b1a82919a44d28a11cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ecb6a5d684badba68f4c224d5359ea428cfbbf2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681777"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968708"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>HOW TO：將運算式內嵌在 XML 常值 (Visual Basic)
 您可以使用內嵌的運算式，來建立 XML 文件、 片段中或包含在執行階段建立的內容項目結合 XML 常值。 下列範例示範如何使用內嵌的運算式在執行階段填入項目內容、 屬性和項目名稱。  
@@ -25,7 +25,7 @@ ms.locfileid: "54681777"
   
 -   下列範例示範如何插入文字中包含`contactName`變數之間的開頭和結尾的名稱項目。  
   
-     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
      這個範例會產生下列輸出：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54681777"
   
 -   下列範例示範如何插入文字中包含`phoneType`變數的值設定為`type`屬性。  
   
-     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
      這個範例會產生下列輸出：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54681777"
   
      在建立項目時使用這項技術，您必須先關閉它們與\</ > 標記。  
   
-     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_3.vb)]  
+     [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   
      這個範例會產生下列輸出：  
   

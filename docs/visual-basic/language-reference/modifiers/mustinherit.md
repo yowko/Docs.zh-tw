@@ -10,12 +10,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 7a246e2565ec6d96e828654fef74500c4cf896b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124262695f9333ce31c4097662688e0fe30f300d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627664"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969527"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 指定可用來只當做基底類別的類別，您無法直接從它建立物件。  
@@ -36,7 +36,7 @@ ms.locfileid: "54627664"
 ## <a name="example"></a>範例  
  下列範例說明強制的繼承和強制覆寫。 基底類別`shape`定義的變數， `acrossLine`。 類別`circle`並`square`衍生自`shape`。 它們繼承的定義`acrossLine`，但它們必須定義函式`area`由於該計算各有不同的每一種圖形。  
   
- [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/VisualBasic/mustinherit_1.vb)]  
+ [!code-vb[VbVbalrKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#2)]  
   
  您可以宣告`shape1`並`shape2`是類型`shape`。 不過，您無法建立物件的`shape`因為其欠缺函式的功能`area`，並標示`MustInherit`。  
   

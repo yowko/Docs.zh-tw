@@ -9,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: 8b67a6953e7788827ef1ec268f54bddf2f1392c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1e2c707b3caa8c7cc49a6f33840ebdfd0c89f4e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662253"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968643"
 ---
 # <a name="function-procedures-visual-basic"></a>函式程序 (Visual Basic)
 A`Function`程序是一系列的 Visual Basic 陳述式加上`Function`和`End Function`陳述式。 `Function`程序執行的工作，然後將控制權傳回呼叫程式碼。 當它傳回控制項時，它也會傳回值，呼叫程式碼。  
@@ -92,11 +92,11 @@ End Function
 ### <a name="illustration-of-declaration-and-call"></a>宣告和呼叫的圖例  
  下列`Function`程序會計算已知值的其他兩個邊直角三角形斜邊的最長的側邊。  
   
- [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/function-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
  下列範例示範的典型呼叫`hypotenuse`。  
   
- [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/function-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>另請參閱
 - [程序](./index.md)

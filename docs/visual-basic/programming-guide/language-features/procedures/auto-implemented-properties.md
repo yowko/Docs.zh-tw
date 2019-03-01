@@ -9,27 +9,27 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: fdf5b8bcc53a49b31fa0fb2b71dc2702a4900503
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ea9bac1326ebab7ef44fb5541c05be8bc855e7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495457"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967200"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>自動實作的屬性 (Visual Basic)
 *自動實作的屬性*可讓您快速指定類別的屬性，而不需要撰寫程式碼來`Get`和`Set`屬性。 當您撰寫自動實作屬性之程式碼時，Visual Basic 編譯器會自動建立私用欄位，來存放建立關聯的 `Get` 和 `Set` 程序外，另外存放屬性變數。  
   
  使用自動實作屬性、屬性 (包括預設值)，可以在單行中宣告。 下列範例顯示三個屬性宣告。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#1](./codesnippet/VisualBasic/auto-implemented-properties_1.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#1)]  
   
  自動實作屬性相當於屬性值儲存在私用欄位的屬性。 下列程式碼範例顯示自動實作屬性。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#5](./codesnippet/VisualBasic/auto-implemented-properties_2.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#5)]  
   
  下列程式碼範例顯示先前的自動實作屬性範例的對等程式碼。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#2](./codesnippet/VisualBasic/auto-implemented-properties_3.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#2)]  
   
  下列程式碼會示範唯讀屬性實作：  
   
@@ -63,7 +63,7 @@ End Class
 ## <a name="initializing-an-auto-implemented-property"></a>初始化自動實作屬性  
  任何可以用來初始化欄位的運算式，對初始化自動實作屬性都是有效的。 當您初始化自動實作屬性時，會評估運算式，並傳遞給屬性的 `Set` 程序。 下列程式碼範例會顯示一些包括起始值的自動實作屬性。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#3](./codesnippet/VisualBasic/auto-implemented-properties_4.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#3)]  
   
  無法初始化 `Interface`，或標示為 `MustOverride` 的自動實作屬性。  
   
@@ -71,7 +71,7 @@ End Class
   
  當您將自動實作屬性宣告為陣列時，您無法指定明確的陣列界限。 不過，您可以使用陣列初始設定式來提供值，如下列範例所示。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>需要標準語法的屬性定義  
  自動實作屬性很方便，並且支援許多程式設計案例。 不過，有很多情況下您不能使用自動實作的屬性並必須改為使用標準，或*展開*，屬性語法。  

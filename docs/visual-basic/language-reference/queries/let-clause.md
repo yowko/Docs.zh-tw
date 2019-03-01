@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: de7ef8aa456235b4fd3003230645db4f5a813a9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 545eefc67d52428470c19b62085fd87927505c7e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634060"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972699"
 ---
 # <a name="let-clause-visual-basic"></a>Let 子句 (Visual Basic)
 計算值，並將它指派給在查詢中的新變數。  
@@ -39,7 +39,7 @@ Let variable = expression [, ...]
 ## <a name="example"></a>範例  
  下列程式碼範例使用`Let`子句來計算產品的 10%折扣。  
   
- [!code-vb[VbSimpleQuerySamples#16](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/let-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
 ## <a name="see-also"></a>另請參閱
 - [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

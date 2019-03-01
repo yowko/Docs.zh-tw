@@ -14,26 +14,26 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 42015e2a024ece75a920deb414d326c88f31249e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2548d7a686f3557d154fc4cc15f6fc8026ac46bf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528884"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968370"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>HOW TO：防止程序引數的值變更 (Visual Basic)
 如果程序宣告做為參數[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 提供的程序程式碼基礎中呼叫的程式碼的引數的程式設計項目直接參考。 這可讓程序來變更基礎呼叫程式碼中的引數的值。 在某些情況下呼叫程式碼可能會想要防止這類變更。  
   
- 您一律可以保護變更引數，藉由宣告對應的參數[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)程序中。 如果您想要能夠變更在某些情況下，而不是其他指定的引數，您可以將它宣告`ByRef`並讓呼叫的程式碼，判斷每個呼叫中的傳遞機制。 它會藉由以傳值的括號括住相對應的引數，或不以傳址方式傳遞它的括號括住它。 如需詳細資訊，請參閱[＜How to：強制以傳值方式傳遞的引數](./how-to-force-an-argument-to-be-passed-by-value.md)。  
+ 您一律可以保護變更引數，藉由宣告對應的參數[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)程序中。 如果您想要能夠變更在某些情況下，而不是其他指定的引數，您可以將它宣告`ByRef`並讓呼叫的程式碼，判斷每個呼叫中的傳遞機制。 它會藉由以傳值的括號括住相對應的引數，或不以傳址方式傳遞它的括號括住它。 如需詳細資訊，請參閱[如何：強制以傳值方式傳遞的引數](./how-to-force-an-argument-to-be-passed-by-value.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會顯示取得陣列變數和操作的兩個程序，其項目上。 `increase`程序只需新增至每個項目。 `replace`程序會將新的陣列指派給參數`a()`，然後新增一個每個項目。 不過，重新指派不會影響呼叫端程式碼中的陣列變數。  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_2.vb)]  
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  第一個`MsgBox`呼叫會顯示 「 increase(n) 之後：11, 21, 31, 41". 因為陣列`n`是參考型別`increase`即使的傳遞機制，可以變更其成員， `ByVal`。  
   

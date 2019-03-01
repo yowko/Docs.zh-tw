@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: c9f4d9c880e189eb0ad4834736bdc664eb5b4376
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ba8be5051d0723fd2654b9733933cd434ac3ac5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703558"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965185"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 運算子 (Visual Basic)
 執行最少運算邏輯結合兩個運算式上。  
@@ -55,14 +55,14 @@ result = expression1 AndAlso expression2
 ## <a name="example"></a>範例  
  下列範例會使用`AndAlso`運算子執行邏輯結合兩個運算式上。 結果是`Boolean`表示整個優先運算式的值為 true。 如果第一個運算式為`False`，則不會評估第二個。  
   
- [!code-vb[VbVbalrOperators#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#24)]  
   
  上述範例產生的結果`True`， `False`，和`False`分別。 計算`secondCheck`，因為已經是第一，不會評估第二個運算式`False`。 不過，第二個運算式評估的計算`thirdCheck`。  
   
 ## <a name="example"></a>範例  
  下列範例所示`Function`搜尋指定的值陣列的項目之間的程序。 如果陣列是空的或如果已超過陣列長度，`While`陳述式不會測試針對搜尋值的陣列項目。  
   
- [!code-vb[VbVbalrOperators#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#25)]  
   
 ## <a name="see-also"></a>另請參閱
 - [邏輯/位元運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)

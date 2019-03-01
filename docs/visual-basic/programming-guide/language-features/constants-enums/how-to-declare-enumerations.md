@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: d309e4fb09bc0b8af87422bc84427528deb29e7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2654860269bc57cf6aed814760414c6ccb6383da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710309"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968760"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>HOW TO：宣告列舉 (Visual Basic)
 您建立的列舉`Enum`「 宣告 」 區段中的類別或模組的陳述式。 您無法宣告列舉型別方法內。 若要指定適當的存取等級，請使用`Private`， `Protected`， `Friend`，或`Public`。  
@@ -26,21 +26,21 @@ ms.locfileid: "54710309"
   
 1.  撰寫包含程式碼存取層級中，宣告`Enum`關鍵字，且有效的名稱，如下列範例中，其中每個宣告不同`Enum`。  
   
-     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
+     [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
 2.  列舉中定義的常數。 根據預設，第一個常數，列舉型別會初始化為`0`，且後續的常數會初始化為值大於先前的常數。 比方說，下列的列舉， `Days`，包含名為的常數`Sunday`具有值`0`，名為常數`Monday`值`1`，名為常數`Tuesday`值`2`等等。  
   
-     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
+     [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
 3.  您可以使用指派陳述式明確地指派常數列舉中的值。 您可以指派任何整數值，包括負數的數字。 比方說，您可以使用值小於零，表示錯誤狀況的常數。 在下列的列舉常數`Invalid`被明確指派的值`–1`，和常數`Sunday`的值會指派給`0`。 因為它是在列舉中，第一個常數`Saturday`也會初始化為值`0`。 值`Monday`是`1`(其中的值超過`Sunday`); 的值`Tuesday`是`2`，依此類推。  
   
-     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
+     [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>若要宣告明確的型別為列舉型別  
   
 -   使用指定的列舉型別`As`子句，如下列範例所示。  
   
-     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
+     [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="see-also"></a>另請參閱
 - [列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)

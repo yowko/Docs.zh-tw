@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: a52900f36ee20e827518598a97c7b7f867bd0d43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfedda6dba7f21efa8e808e85869e6f96710e11b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586822"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965874"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 陳述式 (Visual Basic)
 會強制明確宣告在檔案中，所有變數，或允許隱含宣告的變數。  
@@ -62,9 +62,9 @@ Option Explicit { On | Off }
 ## <a name="example"></a>範例  
  下列範例會使用`Option Explicit`強制明確宣告所有變數的陳述式。 嘗試使用未宣告的變數在編譯時期產生錯誤。  
   
- [!code-vb[VbVbalrStatements#47](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   
- [!code-vb[VbVbalrStatements#48](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#48)]  
   
 ## <a name="see-also"></a>另請參閱
 - [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)

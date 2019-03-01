@@ -1,5 +1,5 @@
 ---
-title: ICorDebugClass2 介面 1
+title: ICorDebugClass2 介面
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass2
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb70016560f453caf7a7a3eed3e1aa6b5fc9f0ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46358a66d79030aeea42c75827f05cf07fa925ea
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557356"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967746"
 ---
-# <a name="icordebugclass2-interface1"></a>ICorDebugClass2 介面 1
+# <a name="icordebugclass2-interface"></a>ICorDebugClass2 介面
+
 表示泛型類別，或是具有 <xref:System.Type> 類型之方法參數的類別。 這個介面會擴充[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)。  
   
 ## <a name="methods"></a>方法  
@@ -48,5 +49,5 @@ ms.locfileid: "54557356"
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
-- [ICorDebugClass 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
+- [ICorDebugClass 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

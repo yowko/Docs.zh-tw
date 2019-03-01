@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Alias keyword [Visual Basic]
 ms.assetid: 58c06b11-465d-4d87-906a-73200a3d7f19
-ms.openlocfilehash: 9cf97402d0b0a6cd16dd75a970c1d29a2fcc30a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b1a66ecfd3c023a12ac62191ca3671a195b45a6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498566"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978224"
 ---
 # <a name="alias-clause-visual-basic"></a>Alias 子句 (Visual Basic)
 表示外部程序在其 DLL 中有另一個名稱。  
@@ -23,7 +23,7 @@ ms.locfileid: "54498566"
   
  在下列範例中，`Alias`關鍵字用以提供位在 advapi32.dll，函式名稱`GetUserNameA`，、 該`getUserName`此範例中使用的位置。 函式`getUserName`稱為子`getUser`，其中顯示目前使用者的名稱。  
   
- [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/alias-clause_1.vb)]  
+ [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]  
   
 ## <a name="see-also"></a>另請參閱
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

@@ -2,12 +2,12 @@
 title: 配量 (F#)
 description: 深入了解如何使用現有的配量F#資料類型以及如何定義您自己的配量的其他資料型別。
 ms.date: 01/22/2019
-ms.openlocfilehash: c204c6cbb195b33998b92dd940313a132ecc321d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746703"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970101"
 ---
 # <a name="slices"></a>配量
 
@@ -95,7 +95,7 @@ F#核心程式庫不會定義`GetSlice`的 3D 的陣列。 如果您想要配量
 
 F#核心程式庫定義配量的一組有限的類型。 如果您想要定義配量更多的資料類型，則可以本身型別定義中或在類型擴充功能。
 
-例如，以下是如何定義配量<xref:System.ArraySegment`1>以供方便存取的資料操作的類別：
+例如，以下是如何定義配量<xref:System.ArraySegment%601>以供方便存取的資料操作的類別：
 
 ```fsharp
 open System
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>使用內嵌，以避免 boxing，如有必要
 
-如果您正在定義的類型，實際上是結構的配量，我們建議您`inline``GetSlice`成員。 F#編譯器會最佳化選擇性引數，避免任何堆積配置，因為配量。 這點非常重要的配量建構這類<xref:System.Span`1>，不能配置在堆積上。
+如果您正在定義的類型，實際上是結構的配量，我們建議您`inline``GetSlice`成員。 F#編譯器會最佳化選擇性引數，避免任何堆積配置，因為配量。 這點非常重要的配量建構這類<xref:System.Span%601>，無法配置在堆積上。
 
 ```fsharp
 open System

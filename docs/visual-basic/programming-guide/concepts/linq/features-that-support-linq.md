@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: 557e3607443066a863946ff08958197a14662a88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e76fcb891e0b258d261208f7cb9173c49899ba11
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519363"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974259"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>支援 LINQ 的 Visual Basic 功能
 名稱[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]指的是支援的查詢語法，並直接在語言中的其他語言建構的 Visual Basic 中的技術。 使用[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，您不必學習新語言來查詢外部資料來源。 您可以使用 Visual Basic，就可查詢對關聯式資料庫、 XML 存放區或物件中的資料。 這項整合到語言的查詢功能可讓您編譯時間檢查有語法錯誤和型別安全。 這項整合也可確保您已經知道大部分的您必須知道要在 Visual Basic 中撰寫內容豐富且各種查詢。  
@@ -20,7 +20,7 @@ ms.locfileid: "54519363"
 ## <a name="query-expressions"></a>查詢運算式  
  在 Visual Basic 中的查詢運算式可以是以類似於 SQL 或 XQuery 的宣告式語法來表示。 在編譯時期，查詢語法會轉換成方法呼叫的標準查詢運算子擴充方法的 LINQ 提供者的實作。 藉由指定適當的命名空間與標準查詢運算子是在範圍內的應用程式控制項`Imports`陳述式。 Visual Basic 查詢運算式語法看起來像這樣：  
   
- [!code-vb[VbLINQVbFeatures#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_1.vb)]  
+ [!code-vb[VbLINQVbFeatures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#1)]  
   
  如需詳細資訊，請參閱 <<c0> [ 在 Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。  
   
@@ -31,18 +31,18 @@ ms.locfileid: "54519363"
   
  下列範例會說明區域類型推斷。 若要使用此範例中，您必須設定`Option Infer`至`On`。  
   
- [!code-vb[VbLINQVbFeatures#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_2.vb)]  
+ [!code-vb[VbLINQVbFeatures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#2)]  
   
  區域類型推斷也讓您能夠建立匿名型別，而且在這一節稍後說明所需的 LINQ 查詢。  
   
  在下列 LINQ 範例中，型別推斷如果就會發生`Option Infer`可能`On`或`Off`。 如果，就會發生編譯時期錯誤`Option Infer`已`Off`並`Option Strict`是`On`。  
   
- [!code-vb[VbLINQVbFeatures#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_3.vb)]  
+ [!code-vb[VbLINQVbFeatures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#3)]  
   
 ## <a name="object-initializers"></a>物件初始設定式  
  當您必須建立匿名型別來保存查詢的結果查詢運算式中使用物件初始設定式。 它們也可用來初始化查詢之外的具名類型的物件。 藉由使用物件初始設定式，您可以初始化單一行中的物件，而不需要明確呼叫建構函式。 假設您有一個名為類別`Customer`具有公用`Name`和`Phone`屬性，以及其他屬性，可以使用物件初始設定式以這種方式：  
   
- [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
+ [!code-vb[VbLINQVbFeatures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#4)]  
   
  如需詳細資訊，請參閱[物件初始設定式：具名和匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "54519363"
   
  *匿名型別*由編譯器所動態建構。 由編譯器指派型別的名稱，它可能會變更與每個新的編譯。 因此，名稱不能直接使用。 匿名型別會以下列方式初始化：  
   
- [!code-vb[VbLINQVbFeatures#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_5.vb)]  
+ [!code-vb[VbLINQVbFeatures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#5)]  
   
  如需詳細資訊，請參閱[匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
   
@@ -60,36 +60,36 @@ ms.locfileid: "54519363"
   
  下列擴充方法新增至列印方法<xref:System.String>類別。  
   
- [!code-vb[VbLINQVbFeatures#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_6.vb)]  
+ [!code-vb[VbLINQVbFeatures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#6)]  
   
  類似的一般執行個體方法呼叫的方法<xref:System.String>:  
   
- [!code-vb[VbLINQVbFeatures#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_7.vb)]  
+ [!code-vb[VbLINQVbFeatures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#7)]  
   
  如需詳細資訊，請參閱[擴充方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。  
   
 ## <a name="lambda-expressions"></a>Lambda 運算式  
  Lambda 運算式是函式不會計算並傳回單一值的名稱。 不同於具名函式，lambda 運算式可定義並執行一次。 下列範例會顯示 4。  
   
- [!code-vb[VbLINQVbFeatures#8](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_8.vb)]  
+ [!code-vb[VbLINQVbFeatures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#8)]  
   
  您可以將 lambda 運算式定義指派給變數的名稱，並接著使用名稱來呼叫函式。 下列範例也會顯示 4。  
   
- [!code-vb[VbLINQVbFeatures#12](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_9.vb)]  
+ [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
  在  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，lambda 運算式，構成許多標準查詢運算子。 編譯器會建立 lambda 運算式來擷取這類定義基本的查詢方法中的計算`Where`， `Select`， `Order By`， `Take While`，和其他人。  
   
  例如，下列程式碼定義的查詢會傳回所有的資深學生從學生的清單。  
   
- [!code-vb[VbLINQVbFeatures#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_10.vb)]  
+ [!code-vb[VbLINQVbFeatures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#9)]  
   
  查詢定義會編譯成類似於下列的範例中，使用指定的引數的兩個 lambda 運算式的程式碼`Where`和`Select`。  
   
- [!code-vb[VbLINQVbFeatures#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_11.vb)]  
+ [!code-vb[VbLINQVbFeatures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#10)]  
   
  其中一個版本可以執行使用`For Each`迴圈：  
   
- [!code-vb[VbLINQVbFeatures#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_12.vb)]  
+ [!code-vb[VbLINQVbFeatures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#11)]  
   
  如需詳細資訊，請參閱 [Lambda 運算式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: cfb54858286ed31d566b5aeb46faed9070f110bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3b4ee9a1bfcc2132d3e9e1239ff2c8f7158e513
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612836"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966758"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 運算子 (Visual Basic)
 傳回<xref:System.Type>指定之類型的物件。 <xref:System.Type>物件提供類型，例如其屬性、 方法和事件的相關資訊。  
@@ -55,7 +55,7 @@ GetType(typename)
 ## <a name="example"></a>範例  
  下列範例會顯示`GetType`中使用的運算子。  
   
- [!code-vb[VbVbalrOperators#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/gettype-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   
 ## <a name="see-also"></a>另請參閱
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunctionBreakpoint 介面 1
+title: ICorDebugFunctionBreakpoint 介面
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunctionBreakpoint
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8403873fb7bc15e3109821bf738d7b68e20f878
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c3c11d3b6a6daec7b35377ef24557dd5077af21
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662682"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977717"
 ---
-# <a name="icordebugfunctionbreakpoint-interface1"></a>ICorDebugFunctionBreakpoint 介面 1
+# <a name="icordebugfunctionbreakpoint-interface"></a>ICorDebugFunctionBreakpoint 介面
+
 擴充 ICorDebugBreakpoint 介面，以支援在函式內的中斷點。  
   
 ## <a name="methods"></a>方法  

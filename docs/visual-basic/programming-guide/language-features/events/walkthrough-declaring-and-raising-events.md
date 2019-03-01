@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: f792109f1d1117b5b112e06da1510938e4b8a5ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04f3cab43f7f7f7fc73e0b209b1bacee136513b5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580485"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975390"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>逐步解說：宣告和引發事件 (Visual Basic)
 本逐步解說示範如何宣告及引發事件的類別，名為`Widget`。 完成步驟後，您可能想要閱讀系列主題中，[逐步解說：處理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)，但會示範如何使用事件`Widget`來提供應用程式中的狀態資訊的物件。  
@@ -46,7 +46,7 @@ ms.locfileid: "54580485"
   
 -   使用`Event`關鍵字來宣告中的事件`Widget`類別。 請注意，事件可以有`ByVal`並`ByRef`引數，做為`Widget`的`PercentDone`事件示範：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
  當呼叫物件收到`PercentDone`事件，`Percent`引數包含工作已完成的百分比。 `Cancel`引數可以設定為`True`取消引發事件的方法。  
   
@@ -59,11 +59,11 @@ ms.locfileid: "54580485"
   
 1.  若要簡化對存取`Timer`這個類別中，使用的屬性加入`Imports`陳述式的類別模組中，「 宣告 」 區段的上面`Class Widget`陳述式。  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
 2.  將下列程式碼加入 `Widget` 類別：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
  當您的應用程式呼叫`LongTask`方法中，`Widget`類別會引發`PercentDone`事件每`MinimumInterval`秒。 事件會傳回`LongTask`檢查是否`Cancel`引數設定為`True`。  
   

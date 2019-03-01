@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 42f85ed98f399c96f89879129b085f25ab117096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731734"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972535"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>程序參數和引數 (Visual Basic)
 在大部分情況下，程序會需要一些資訊在其中呼叫的情況。 執行重複或共用工作的程序會針對每個呼叫中使用不同的資訊。 這項資訊是由變數、 常數和您傳遞至程序時呼叫它的運算式所組成。  
@@ -44,7 +44,7 @@ ms.locfileid: "54731734"
 ## <a name="parameter-data-type"></a>參數資料類型  
  您定義資料類型的參數使用`As`在其宣告中的子句。 例如，下列函式會接受字串和整數。  
   
- [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
+ [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
   
  如果類型檢查參數 ([Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`Off,``As`子句是選擇性的不同之處在於任何一個參數會使用它，如果所有參數必須都使用它。 如果型別檢查`On`，則`As`子句是必要的所有程序參數。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54731734"
   
 -   您可以使用轉換關鍵字，明確轉換成資料類型。  
   
-### <a name="type-parameters"></a>型別參數  
+### <a name="type-parameters"></a>類型參數  
  A*泛型程序*也會定義一或多個*型別參數*除了其一般的參數。 泛型程序可讓呼叫端的程式碼，來傳遞不同的資料類型每次呼叫此程序，讓它可以調整資料類型需求的每個個別的呼叫。 請參閱 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
   
 ## <a name="see-also"></a>另請參閱

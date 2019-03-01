@@ -8,18 +8,19 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], contexts
 - ByVal keyword [Visual Basic]
 ms.assetid: 1eaf4e58-b305-4785-9e3d-e416b9c75598
-ms.openlocfilehash: 6fa87db4fbab961dd1aa526e2ac8ff15b031005b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edee47e41ca78175a6fb24ed5eac255c03de0901
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650076"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972554"
 ---
 # <a name="byval-visual-basic"></a>ByVal (Visual Basic)
 指定呼叫的程序或屬性無法變更基礎呼叫程式碼中的引數的變數值的方式傳遞引數。  
   
 ## <a name="remarks"></a>備註  
- `ByVal` 修飾詞可用於以下內容：  
+ 
+  `ByVal` 修飾詞可用於以下內容：  
   
  [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
@@ -34,7 +35,7 @@ ms.locfileid: "54650076"
 ## <a name="example"></a>範例  
  下列範例示範如何使用`ByVal`參數傳遞參考型別引數的機制。 在此範例中，引數是`c1`，類別的執行個體`Class1`。 `ByVal` 防止程序中的程式碼變更基礎值的參考引數`c1`，但不會保護的可存取的欄位和屬性`c1`。  
   
- [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/VisualBasic/byval_1.vb)]  
+ [!code-vb[VbVbalrKeywords#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class5.vb#10)]  
   
 ## <a name="see-also"></a>另請參閱
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

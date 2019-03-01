@@ -1,16 +1,16 @@
 ---
-title: 開始使用 Azure 佇列儲存體使用 F#
+title: 開始使用 Azure 佇列儲存體使用F#
 description: Azure 佇列提供可靠、 非同步傳訊應用程式元件之間。 雲端傳訊可讓您能夠單獨調整規模的應用程式元件。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 14bbc657f965fc262d2a83b1fdf982fe5e75d55e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 58a46dfe905a32be77a13d11df8f0544546ea0ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33569410"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974272"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>開始使用 Azure 佇列儲存體使用 F# #
+# <a name="get-started-with-azure-queue-storage-using-f"></a>開始使用 Azure 佇列儲存體使用 F\#
 
 Azure 佇列儲存體提供雲端應用程式元件之間通訊。 設計應用程式進行調整，應用程式元件會經常分離，以便它們可以獨立調整。 佇列儲存體提供非同步傳訊的應用程式元件之間的通訊是否在雲端、 桌面、 在內部部署伺服器上，或在行動裝置上執行。 佇列儲存體也支援管理非同步工作並建置處理工作流程。
 
@@ -25,9 +25,9 @@ Azure 佇列儲存體提供雲端應用程式元件之間通訊。 設計應用�
 若要使用本指南，您必須先[建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)。
 儲存體存取金鑰也需要此帳戶。
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>建立 F# 指令碼，並開始 F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>建立F#指令碼，然後啟動F#互動
 
-這篇文章中的範例可以用於 F# 應用程式或 F# 指令碼。 若要建立 F# 指令碼，建立的檔案`.fsx`擴充功能，例如`queues.fsx`，F# 開發環境中。
+這篇文章中的範例可以用於在F#應用程式或F#指令碼。 若要建立F#指令碼，建立的檔案`.fsx`擴充功能，例如`queues.fsx`，請在您F#開發環境。
 
 接下來，使用[套件管理員](package-management.md)這類[Paket](https://fsprojects.github.io/Paket/)或是[NuGet](https://www.nuget.org/)安裝`WindowsAzure.Storage`封裝和參考`WindowsAzure.Storage.dll`使用指令碼中`#r`指示詞。
 

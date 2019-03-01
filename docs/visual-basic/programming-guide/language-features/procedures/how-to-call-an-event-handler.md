@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 6fc08e9f16753dc853daff0120661603571d9db4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58a96ccd06b70d481de335af5c3cd2be565cbd92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717965"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973518"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>HOW TO：在 Visual Basic 中呼叫事件處理常式
 *事件*是動作或狀況，例如滑鼠按一下或一種信用限制超過 — 可以辨認某些程式的元件，以及您可以撰寫程式碼來回應。 *事件處理常式*是您撰寫來回應事件的程式碼。  
@@ -36,7 +36,7 @@ ms.locfileid: "54717965"
   
      下列範例會定義事件和`WithEvents`引發事件的類別是指的變數。 事件處理`Sub`程序會使用`Handles`子句，以指定的類別和它所處理的事件。  
   
-     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
+     [!code-vb[VbVbcnProcedures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#4)]  
   
 ### <a name="to-call-an-event-handler-using-addhandler"></a>若要呼叫事件處理常式使用 AddHandler  
   
@@ -48,7 +48,7 @@ ms.locfileid: "54717965"
   
      下列範例會定義`Sub`程序來處理<xref:System.Windows.Forms.Form.Closing>型態的事件。 然後它會使用[AddHandler 陳述式](../../../../visual-basic/language-reference/statements/addhandler-statement.md)建立關聯`catchClose`做為事件處理常式的程序<xref:System.Windows.Forms.Form.Closing>。  
   
-     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
+     [!code-vb[VbVbcnProcedures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#5)]  
   
      您可以藉由執行中斷事件的事件處理常式[RemoveHandler 陳述式](../../../../visual-basic/language-reference/statements/removehandler-statement.md)。  
   

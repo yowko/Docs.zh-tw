@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 7bb0e3ff0d021e9923f2e1bd8ced882c6a263d15
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: fb95871f347bf1093701a428a8b925f884d17a56
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738561"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979693"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>逐步解說：驗證密碼確實複雜 (Visual Basic)
 這個方法會檢查一些強式密碼的特性，並以了解哪種檢查密碼失敗的資訊更新字串參數。  
@@ -21,7 +21,7 @@ ms.locfileid: "55738561"
 ## <a name="example"></a>範例  
   
 ### <a name="code"></a>程式碼  
- [!code-vb[VbVbcnRegEx#1](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/walkthrough-validating-that-passwords-are-complex_1.vb)]  
+ [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  呼叫這個方法，傳遞包含該密碼的字串。  

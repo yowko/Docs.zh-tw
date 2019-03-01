@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: e99deb2ea5e8acd5e1e07adffe29d35e2624b27e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3814dddb0e39bf986e8d6ee88b3c7b4ec759748
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648202"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980447"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>逐步解說：實作 COM 物件 (Visual Basic) 的繼承
 您可以衍生從 Visual Basic 類別`Public`中 COM 物件，即使在舊版的 Visual Basic 中建立的類別。 屬性和方法，從 COM 物件繼承的類別可以覆寫或多載，就如同屬性和任何其他基底類別的方法可以覆寫或多載。 當您有現有的類別程式庫，您不希望重新編譯時，適合使用 COM 物件的繼承。  
@@ -94,15 +94,15 @@ ms.locfileid: "54648202"
   
 6.  將下列程式碼加入至頂端`MathClass`從 COM 類別繼承。  
   
-     [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
+     [!code-vb[VbVbalrInterop#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#31)]  
   
 7.  多載基底類別的公用方法，藉由新增下列程式碼`MathClass`:  
   
-     [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
+     [!code-vb[VbVbalrInterop#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#32)]  
   
 8.  新增下列程式碼來擴充繼承的類別`MathClass`:  
   
-     [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_3.vb)]  
+     [!code-vb[VbVbalrInterop#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#33)]  
   
  新的類別會繼承基底類別中的 COM 物件的屬性、 多載方法，並定義新方法來擴充類別。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54648202"
   
 2.  在按鈕的`Click`事件處理常式的程序，新增下列程式碼，建立的執行個體`MathClass`呼叫多載的方法：  
   
-     [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
+     [!code-vb[VbVbalrInterop#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#34)]  
   
 3.  按 F5 執行專案。  
   

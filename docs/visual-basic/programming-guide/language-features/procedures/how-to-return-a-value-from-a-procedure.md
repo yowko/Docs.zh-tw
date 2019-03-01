@@ -6,12 +6,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 38b0673f5725077eec9253021eec4216e66504a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f175de647887a406f8ae87dae492a5fe58cca9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615235"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976729"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>HOW TO：傳回值，從程序 (Visual Basic)
 A`Function`程序傳回值給呼叫程式碼藉由執行`Return`陳述式或遇到`Exit Function`或`End Function`陳述式。  
@@ -26,11 +26,11 @@ A`Function`程序傳回值給呼叫程式碼藉由執行`Return`陳述式或遇�
   
      下列`Function`程序會計算直角三角形斜邊的最長的側邊，並將它傳回呼叫程式碼。  
   
-     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
      下列範例示範的典型呼叫`hypotenuse`，它會儲存傳回的值。  
   
-     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ### <a name="to-return-a-value-using-exit-function-or-end-function"></a>傳回值，使用 Exit 函式或結束函式  
   

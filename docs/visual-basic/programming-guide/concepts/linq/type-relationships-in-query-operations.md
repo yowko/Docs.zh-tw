@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 519b10cfa374290a2d924cce2bd3e39683ca080f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d72a55cadce287979fad25396327680e1f0e0aaf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731123"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979095"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>查詢作業中的類型關聯性 (Visual Basic)
 在中使用變數[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查詢作業強型別，且必須彼此相容。 資料來源、 查詢本身，及執行查詢，則會使用強型別。 下圖識別用來描述[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢。 如需查詢的組件的詳細資訊，請參閱[基本查詢作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
@@ -28,7 +28,7 @@ LINQ 查詢的各個部分
   
  Visual Basic 就可以輸入強式方便也就實作區域型別推斷*隱含型別*。 功能可在上述範例中，而且您會看到它用在整個[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]範例與文件。 在 Visual Basic 中的區域型別推斷透過來完成只要`Dim`陳述式不含`As`子句。 在下列範例中，`city`強型別為字串。  
   
- [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  區域類型推斷運作時，才`Option Infer`設為`On`。 如需詳細資訊，請參閱 < [Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。  
@@ -37,16 +37,16 @@ LINQ 查詢的各個部分
   
  若要指定明確的類型不符合資料來源傳回的型別之範圍變數。 您可以使用，以指定範圍變數的型別`As`子句。 不過，這會導致錯誤轉換是否[的縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)並`Option Strict`設定為`On`。 因此，我們建議您執行轉換，從資料來源擷取的值。 您可以將值轉換從資料來源為明確的範圍變數的型別使用<xref:System.Linq.Enumerable.Cast%2A>方法。 您也可以轉型的值中選取`Select`子句來明確的類型不同的範圍變數的型別。 這些點是以下列程式碼所示。  
   
- [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#4)]  
   
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>傳回整個項目之來源資料的查詢  
  下列範例所示[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢傳回的資料來源選取的項目序列的作業。 來源、 `names`，包含陣列的字串，並將查詢輸出是序列，其中包含以字母 M 為開頭的字串。  
   
- [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]  
   
  這相當於下列程式碼，但較短，而且更容易撰寫。 依賴在查詢中的區域類型推斷是慣用的樣式，在 Visual Basic 中。  
   
- [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#3)]  
   
  下列關聯性會存在於這兩個先前的程式碼範例中，是否決定類型的隱含或明確的範圍。  
   

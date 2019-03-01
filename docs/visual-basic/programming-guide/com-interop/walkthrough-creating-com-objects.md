@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: caf0a071d65746f1027052e648ade538d62dc4bb
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 6b079db3ccc07494bdfdf7dba49c27fe14dca4e5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245683"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973934"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>逐步解說：使用 Visual Basic 建立 COM 物件
 建立新的應用程式或元件時，最好是建立.NET Framework 組件。 不過，Visual Basic 也容易公開給 COM 的.NET Framework 元件 這可讓您針對需要 COM 元件的舊版應用程式套件中提供新元件。 本逐步解說示範如何使用 Visual Basic 來公開 （expose）[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]為 COM 物件，使用和不使用 COM 類別範本的物件。  
@@ -48,7 +48,7 @@ ms.locfileid: "39245683"
   
 2.  在 **新的專案**下方的對話方塊中**專案類型**欄位中，確認已選取 Windows。 選取 **類別庫**從**範本**清單，然後再按**確定**。 新的專案會顯示。  
   
-3.  在 **方案總管**，以滑鼠右鍵按一下您的專案，然後按一下**屬性**。 **專案設計工具**隨即出現。  
+3.  在 [方案總管] 中，以滑鼠右鍵按一下專案，然後按一下 [屬性]。 **專案設計工具**隨即出現。  
   
 4.  按一下 [編譯] 索引標籤。  
   
@@ -62,38 +62,38 @@ ms.locfileid: "39245683"
   
 3.  下列將常數新增到`ComClass1`。 它們會儲存 COM 物件時需要有全域唯一識別碼 (GUID) 常數。  
   
-     [!code-vb[VbVbalrInterop#2](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_1.vb)]  
+     [!code-vb[VbVbalrInterop#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#2)]  
   
 4.  在 [工具] 功能表上，按一下 [建立 GUID]。 在 [建立 GUID] 對話方塊中，依序按一下 [登錄格式] 和 [複製]。 按一下 [結束] 。  
   
 5.  取代為空字串`ClassId`guid，移除前置和尾端括號。 例如，如果 Guidgen 所提供的 GUID 是`"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"`則您的程式碼應該會出現，如下所示。  
   
-     [!code-vb[VbVbalrInterop#3](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_2.vb)]  
+     [!code-vb[VbVbalrInterop#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#3)]  
   
 6.  重複上一個步驟`InterfaceId`和`EventsId`常數，如下列範例所示。  
   
-     [!code-vb[VbVbalrInterop#4](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_3.vb)]  
+     [!code-vb[VbVbalrInterop#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#4)]  
   
     > [!NOTE]
     >  請確定 Guid 的新的且唯一的;否則，您的 COM 元件可能發生衝突，與其他 COM 元件。  
   
 7.  新增`ComClass`屬性設定為`ComClass1`，指定類別識別碼、 介面 ID 和事件識別碼的 Guid，如下列範例所示：  
   
-     [!code-vb[VbVbalrInterop#5](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_4.vb)]  
+     [!code-vb[VbVbalrInterop#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#5)]  
   
 8.  COM 類別必須具有無參數`Public Sub New()`建構函式或類別不會註冊正確。 加入類別中的無參數建構函式：  
   
-     [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
+     [!code-vb[VbVbalrInterop#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#6)]  
   
 9. 將屬性、 方法和事件新增至類別，並結束它與`End Class`陳述式。 選取 **建置方案**從**建置**功能表。 Visual Basic 建置的組件，並向作業系統註冊的 COM 物件。  
   
     > [!NOTE]
     >  其他 Visual Basic 應用程式無法使用您產生與 Visual Basic 的 COM 物件，因為它們不是，則為 true 的 COM 物件。 嘗試將參考加入至這類 COM 物件會引發錯誤。 如需詳細資訊，請參閱 < [.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.ComClassAttribute>  
- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
- [逐步解說：實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [#Region 指示詞](../../../visual-basic/language-reference/directives/region-directive.md)  
- [.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [互通性的疑難排解](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+## <a name="see-also"></a>另請參閱
+- <xref:Microsoft.VisualBasic.ComClassAttribute>
+- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
+- [逐步解說：實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [#Region 指示詞](../../../visual-basic/language-reference/directives/region-directive.md)
+- [.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+- [互通性的疑難排解](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

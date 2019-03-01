@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: c34108b9eb53da77a48afb5d270dce9a32289c99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0c1721027307243fbad587afe996cc5f07a6928
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731110"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970541"
 ---
 # <a name="extension-methods-visual-basic"></a>擴充方法 (Visual Basic)
 擴充方法可讓開發人員將自訂功能加入至已定義而不需要建立新的衍生的類型的資料類型。 擴充方法可使您能夠撰寫可視為現有類型的執行個體方法呼叫的方法。  
@@ -27,17 +27,17 @@ ms.locfileid: "54731110"
 ### <a name="description"></a>描述  
  下列範例會定義`Print`延伸模組<xref:System.String>資料型別。 此方法會使用`Console.WriteLine`顯示字串。 參數`Print`方法中， `aString`，建立方法所擴充<xref:System.String>類別。  
   
- [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]  
   
  請注意此擴充方法定義標記為以擴充屬性`<Extension()>`。 標記的方法已定義的模組是選擇性的但必須標示每個擴充方法。 <xref:System.Runtime.CompilerServices> 必須先匯入，才能存取此延伸模組屬性。  
   
  擴充方法只能在模組內宣告。 一般而言，在其中定義擴充方法的模組不是呼叫它的一個相同的模組。 相反地，包含擴充方法的模組匯入，如果它必須是，將它帶入範圍內。 包含的模組後`Print`是在範圍內，可以呼叫方法，就像是一般的執行個體方法不接受引數，例如好像`ToUpper`:  
   
- [!code-vb[VbVbalrExtensionMethods#2](./codesnippet/VisualBasic/extension-methods_2.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class1.vb#2)]  
   
  下一個範例中， `PrintAndPunctuate`，也是延伸<xref:System.String>，這次定義具有兩個參數。 第一個參數， `aString`，會建立擴充方法擴充<xref:System.String>。 第二個參數， `punc`，旨在為標點符號字串時呼叫的方法中傳遞做為引數。 此方法會顯示標點符號之前的字串。  
   
- [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]  
   
  方法會呼叫中的字串引數傳送`punc`: `example.PrintAndPunctuate(".")`  
   
@@ -111,7 +111,7 @@ End Module
   
  擴充方法不會考慮晚期繫結。 在下列範例中，陳述式`anObject.PrintMe()`引發<xref:System.MissingMemberException>例外狀況，如果您會看到相同的例外狀況，第二個`PrintMe`擴充方法定義已刪除。  
   
- [!code-vb[VbVbalrExtensionMethods#9](./codesnippet/VisualBasic/extension-methods_4.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class6.vb#9)]  
   
 ## <a name="best-practices"></a>最佳作法  
  擴充方法會提供方便且功能強大的方式，來擴充現有的類型。 不過，若要成功使用它們，有一些需要考慮的事項。 這些考量主要適用於類別庫的作者，但它們可能會影響使用擴充方法的任何應用程式。  
@@ -131,23 +131,23 @@ End Module
 ## <a name="extension-methods-instance-methods-and-properties"></a>擴充方法、 執行個體方法和屬性  
  當範圍內執行個體方法具有與呼叫的陳述式的引數相容的簽章時，執行個體方法會選擇任何擴充方法。 執行個體方法具有優先順序，即使擴充方法是較佳的相符項目。 在下列範例中，`ExampleClass`包含名為執行個體方法`ExampleMethod`具有一個參數的型別`Integer`。 擴充方法`ExampleMethod`擴充`ExampleClass`，而且有一個參數的型別`Long`。  
   
- [!code-vb[VbVbalrExtensionMethods#4](./codesnippet/VisualBasic/extension-methods_5.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#4)]  
   
  第一次呼叫`ExampleMethod`下列程式碼會呼叫擴充方法，因為`arg1`是`Long`僅與相容和`Long`中擴充方法的參數。 第二次呼叫`ExampleMethod`已經`Integer`引數， `arg2`，而且它會呼叫執行個體方法。  
   
- [!code-vb[VbVbalrExtensionMethods#5](./codesnippet/VisualBasic/extension-methods_6.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#5)]  
   
  現在反轉兩個方法中參數的資料類型：  
   
- [!code-vb[VbVbalrExtensionMethods#6](./codesnippet/VisualBasic/extension-methods_7.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#6)]  
   
  這次中的程式碼`Main`呼叫的執行個體方法兩次。 這是因為兩者`arg1`並`arg2`要能夠擴展轉換成`Long`，和執行個體方法優先於延伸方法，這兩種情況。  
   
- [!code-vb[VbVbalrExtensionMethods#7](./codesnippet/VisualBasic/extension-methods_8.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#7)]  
   
  因此，擴充方法無法取代現有的執行個體方法。 不過，當擴充方法具有相同名稱的執行個體方法，但不是會衝突簽章，就可以存取這兩種方法。 例如，如果類別`ExampleClass`包含一個名為方法`ExampleMethod`採用任何引數，具有相同名稱的擴充方法，但允許不同的簽章，如下列程式碼所示。  
   
- [!code-vb[VbVbalrExtensionMethods#8](./codesnippet/VisualBasic/extension-methods_9.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Module3.vb#8)]  
   
  此程式碼的輸出如下所示：  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-ms.openlocfilehash: 7a01fdc9d0541b5d277c2f283e25e9a1cef3b862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e11c1ed4cfe4edc1c88dbbff2e9f555b1a028c4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636335"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974714"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>HOW TO：修改 XML 常值 (Visual Basic)
 Visual Basic 提供便利的方式來修改 XML 常值。 您可以新增或刪除項目和屬性，您也可以使用新的 XML 項目取代現有的項目。 本主題提供如何修改現有的 XML 常值的數個範例。  
@@ -22,7 +22,7 @@ Visual Basic 提供便利的方式來修改 XML 常值。 您可以新增或刪�
   
      下列程式碼範例會更新所有的值\<價格 > 在 XML 文件中的項目。  
   
-     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_1.vb)]  
+     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]  
   
      下列示範範例來源 XML，並修改此程式碼範例中的 XML。  
   
@@ -65,7 +65,7 @@ Visual Basic 提供便利的方式來修改 XML 常值。 您可以新增或刪�
   
 1.  若要加入 XML 常值中的屬性，請先取得 XML 常值的參考。 然後，您就可以藉由新增新的 XML 屬性軸屬性加入屬性。 您也可以加入新<xref:System.Xml.Linq.XAttribute>要使用常值 XML 物件<xref:System.Xml.Linq.XContainer.Add%2A>方法。 下列範例會示範這兩個選項。  
   
-     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_2.vb)]  
+     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]  
   
      下列示範範例來源 XML，並修改此程式碼範例中的 XML。  
   
@@ -111,7 +111,7 @@ Visual Basic 提供便利的方式來修改 XML 常值。 您可以新增或刪�
   
      下列範例顯示的每一個技巧的範例。  
   
-     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_3.vb)]  
+     [!code-vb[VbXmlSamples2#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#6)]  
   
      下列示範範例來源 XML，並修改此程式碼範例中的 XML。  
   
@@ -155,7 +155,7 @@ Visual Basic 提供便利的方式來修改 XML 常值。 您可以新增或刪�
   
 1.  若要移除 XML 常值的元素或屬性，取得參考的項目或屬性和呼叫`Remove`方法，如下列範例所示。  
   
-     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_4.vb)]  
+     [!code-vb[VbXmlSamples2#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#7)]  
   
      下列示範範例來源 XML，並修改此程式碼範例中的 XML。  
   
@@ -203,7 +203,7 @@ Visual Basic 提供便利的方式來修改 XML 常值。 您可以新增或刪�
   
      下列程式碼範例會取代所有\<描述 > 項目\<抽象 > 項目。 內容\<描述 > 項目會保留在新\<抽象 > 所使用的項目<xref:System.Xml.Linq.XContainer.Nodes%2A>屬性\<描述 ><xref:System.Xml.Linq.XElement>物件。  
   
-     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_5.vb)]  
+     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]  
   
      下列示範範例來源 XML，並修改此程式碼範例中的 XML。  
   

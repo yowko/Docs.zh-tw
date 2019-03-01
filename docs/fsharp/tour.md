@@ -2,14 +2,14 @@
 title: F# 的教學課程
 description: 檢查一些 F# 程式設計語言，在此教學課程利用程式碼範例的主要功能。
 ms.date: 11/06/2018
-ms.openlocfilehash: 72ecb9e71e5d039f5a62f74ad594fac82269f304
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145519"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968292"
 ---
-# <a name="tour-of-f"></a>F# 的教學課程 #
+# <a name="tour-of-f"></a>F 的教學課程\#
 
 若要了解 F# 的最佳方式是讀取和寫入 F# 程式碼。 這篇文章會做為某些 F# 語言的重要功能的逐步教學課程，並提供您一些您可以在您的電腦執行的程式碼片段。 若要了解如何設定開發環境，請參閱[開始使用](tutorials/getting-started/index.md)。
 

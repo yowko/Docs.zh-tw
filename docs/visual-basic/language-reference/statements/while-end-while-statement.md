@@ -9,12 +9,12 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: 72263ddb7930373ab2a4843ea08974cb08d1b42f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 269a4c0f069b3837959b04f8463f96e7c5d5fdf7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617312"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970138"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While 陳述式 (Visual Basic)
 在執行一系列的陳述式，只要指定的條件是`True`。  
@@ -69,17 +69,17 @@ End While
 ## <a name="example"></a>範例  
  下列範例中，在迴圈中的陳述式會繼續執行，直到`index`變數是否大於 10。  
   
- [!code-vb[VbVbalrStatements#171](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#171](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#171)]  
   
 ## <a name="example"></a>範例  
  下列範例示範如何將`Continue While`和`Exit While`陳述式。  
   
- [!code-vb[VbVbalrStatements#172](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#172](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#172)]  
   
 ## <a name="example"></a>範例  
  下列範例會讀取文字檔案中的所有行。 <xref:System.IO.File.OpenText%2A>方法會開啟檔案，並傳回<xref:System.IO.StreamReader>讀取字元。 在 `While`條件<xref:System.IO.StreamReader.Peek%2A>方法`StreamReader`判斷檔案是否包含額外的字元。  
   
- [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#173](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#173)]  
   
 ## <a name="see-also"></a>另請參閱
 - [迴圈結構](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

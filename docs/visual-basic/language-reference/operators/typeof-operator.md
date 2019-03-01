@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 2695f517c42fb944d21f57aec829bbf8a864af17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27fdef4012d4724d45b4e990ce449bdfe09feaa6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596731"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965055"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 運算子 (Visual Basic)
 比較物件參考變數與資料類型。  
@@ -43,9 +43,11 @@ result = TypeOf objectexpression IsNot typename
  必要項。 任何資料類型名稱。  
   
 ## <a name="remarks"></a>備註  
- `TypeOf` 運算子會判定 `objectexpression` 的執行階段類型是否相容 `typename`。 相容性取決 `typename` 的類型分類。 下表顯示如何判斷相容性。  
+ 
+  `TypeOf` 運算子會判定 `objectexpression` 的執行階段類型是否相容 `typename`。 相容性取決 `typename` 的類型分類。 下表顯示如何判斷相容性。  
   
-|`typename` 的類型分類|相容性準則|  
+|
+  `typename` 的類型分類|相容性準則|  
 |---------------------------------|-----------------------------|  
 |類別|`objectexpression` 屬於類型 `typename` 或繼承自 `typename`|  
 |結構|`objectexpression` 屬於類型 `typename`|  
@@ -58,7 +60,7 @@ result = TypeOf objectexpression IsNot typename
 ## <a name="example"></a>範例  
  下列範例會使用 `TypeOf`...`Is` 運算式，測試兩個包含各種資料類型的物件參考變數的類型相容性。  
   
- [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/typeof-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  
   
  變數 `refInteger` 具有執行階段類型 `Integer`。 它相容 `Integer`，但不相容 `Double`。 變數 `refForm` 具有執行階段類型 <xref:System.Windows.Forms.Form>。 它相容 <xref:System.Windows.Forms.Form> (因為那是其類型)、相容 <xref:System.Windows.Forms.Control> (因為 <xref:System.Windows.Forms.Form> 繼承自 <xref:System.Windows.Forms.Control>)，且具有 <xref:System.ComponentModel.IComponent> (因為 <xref:System.Windows.Forms.Form> 繼承自 <xref:System.ComponentModel.Component>，它會實作 <xref:System.ComponentModel.IComponent>)。 不過，`refForm` 不相容 <xref:System.Windows.Forms.Label>。  
   

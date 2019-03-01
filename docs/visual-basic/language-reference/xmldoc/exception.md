@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: b2475bd5eaeadc12e4c8c9b0fb77a2fa5cb88911
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 157287ce5c85ec51f1711934cf9a5e4f568957ef
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283930"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977174"
 ---
 # <a name="exception-visual-basic"></a>\<例外狀況 > (Visual Basic)
 指定可以擲回的例外狀況。  
@@ -36,7 +36,7 @@ ms.locfileid: "55283930"
 ## <a name="example"></a>範例  
  這個範例會使用`<exception>`標記來描述例外狀況，`IntDivide`函式可能會擲回。  
   
- [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/exception_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>另請參閱
 - [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)

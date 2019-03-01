@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 20676b53d21931987139288e29c009c8348ce6ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abe593e9c132f4fc151983d6c4dc04bd13627120
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690887"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978406"
 ---
 # <a name="serialization-guidelines"></a>序列化方針
 本文件列出在設計要序列化的 API 時所要考量的指導方針。  
@@ -69,8 +69,9 @@ ms.locfileid: "54690887"
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     <xref:System.Runtime.Serialization.OnDeserializedAttribute> 屬性是最常用的回呼屬性。 此系列中的其他屬性為 <xref:System.Runtime.Serialization.OnDeserializingAttribute>、    
-    <xref:System.Runtime.Serialization.OnSerializingAttribute> 和 <xref:System.Runtime.Serialization.OnSerializedAttribute>。 這些屬性可用來分別標記在還原序列化之前、序列化之前以及最後在序列化之後所執行的回呼。  
+     
+      <xref:System.Runtime.Serialization.OnDeserializedAttribute> 屬性是最常用的回呼屬性。 此系列中的其他屬性為 <xref:System.Runtime.Serialization.OnDeserializingAttribute>、    
+<xref:System.Runtime.Serialization.OnSerializingAttribute> 和 <xref:System.Runtime.Serialization.OnSerializedAttribute>。 這些屬性可用來分別標記在還原序列化之前、序列化之前以及最後在序列化之後所執行的回呼。  
   
 4.  當您還原序列化複雜物件圖形時，請考慮使用 <xref:System.Runtime.Serialization.KnownTypeAttribute> 來指示應該使用的具象型別。  
   
@@ -87,7 +88,8 @@ ms.locfileid: "54690887"
   
 6.  請考慮實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面來允許在型別的不同版本之間往返。  
   
-     此介面可讓序列化程式確保往返期間不會有任何資料遺失。 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 屬性會儲存來自目前版本未知之型別的未來版本中的任何資料。 當目前版本接著序列化並還原序列化成未來版本時，其他資料將會透過 **ExtensionData** 屬性值在序列化資料流中提供。  
+     此介面可讓序列化程式確保往返期間不會有任何資料遺失。 
+  <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 屬性會儲存來自目前版本未知之型別的未來版本中的任何資料。 當目前版本接著序列化並還原序列化成未來版本時，其他資料將會透過 **ExtensionData** 屬性值在序列化資料流中提供。  
   
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
@@ -144,6 +146,6 @@ ms.locfileid: "54690887"
 - [資料合約序列化程式](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
 - [資料合約序列化程式支援的類型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [二進位序列化](binary-serialization.md)
-- [遠端物件](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+- [.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
 - [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)

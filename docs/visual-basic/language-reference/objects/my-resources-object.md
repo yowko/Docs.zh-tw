@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 758d3334fd9d3b01e088246cf2fe28c5b03576d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065865"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973726"
 ---
 # <a name="myresources-object"></a>My.Resources 物件
 提供屬性和類別來存取應用程式的資源。  
@@ -53,29 +53,29 @@ ms.locfileid: "55065865"
 ## <a name="example"></a>範例  
  本範例會將表單的標題為指定的字串資源`Form1Title`應用程式資源檔中。 針對此範例才能運作，應用程式必須具備名為一個字串`Form1Title`其資源檔中。  
   
- [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
+ [!code-vb[VbVbalrMyResources#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#1)]  
   
 ## <a name="example"></a>範例  
  此範例會將名為圖示表單的圖示`Form1Icon`均會儲存在應用程式的資源檔中。 針對此範例才能運作，應用程式必須具有名為圖示`Form1Icon`其資源檔中。  
   
- [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
+ [!code-vb[VbVbalrMyResources#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#2)]  
   
 ## <a name="example"></a>範例  
  此範例中設定的背景影像的表單名為映像資源`Form1Background`，這是應用程式資源檔中。 針對此範例正常運作，應用程式必須具有名為的映像資源`Form1Background`其資源檔中。  
   
- [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
+ [!code-vb[VbVbalrMyResources#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>範例  
  此範例會播放聲音儲存為音訊的資源，名為`Form1Greeting`應用程式的資源檔中。 針對此範例才能運作，應用程式必須具有名為的音訊資源`Form1Greeting`其資源檔中。 `My.Computer.Audio.Play`方法是僅適用於 Windows Forms 應用程式。  
   
- [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
+ [!code-vb[VbVbalrMyResources#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>範例  
  此範例會擷取字串資源的應用程式的法文文化特性版本。 資源名為`Message`。 若要變更文化特性所`My.Resources`物件使用，此範例會使用<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>。  
   
  針對此範例正常運作，應用程式必須具備名為一個字串`Message`中其資源檔和應用程式應有的資源檔案，Resources.fr-FR.resx 法文文化特性版本。 如果應用程式並沒有法文文化特性的資源檔案版本，`My.Resource`物件會擷取預設文化特性資源檔中的資源。  
   
- [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
+ [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   
 ## <a name="see-also"></a>另請參閱
 - [管理應用程式資源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)

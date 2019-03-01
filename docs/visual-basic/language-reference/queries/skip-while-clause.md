@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: 7da5f50a9d0fa867244a569e03685cc637bf3ce6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380372d6aaf8df3050e0ba8606b74eb3834dec67
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692515"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972595"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While 子句 (Visual Basic)
 只要指定的條件為 `true`，即略過集合中的項目，然後傳回其餘項目。  
@@ -40,7 +40,7 @@ Skip While expression
 ## <a name="example"></a>範例  
  下列程式碼範例使用`Skip While`子句來略過的結果，直到找到第一個客戶，從美國傳為止。  
   
- [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-while-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#3)]  
   
 ## <a name="see-also"></a>另請參閱
 - [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

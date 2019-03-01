@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: cc1222feed338f88142c4a6a7d6520fa458b5c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4afcd57a9133515cecc72da856f67e4e3d5ff717
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734035"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970957"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>HOW TO：建立屬性 (Visual Basic)
 您將屬性定義之間`Property`陳述式和`End Property`陳述式。 您在此定義中定義`Get`程序，`Set`程序，或兩者。 所有屬性的程式碼位於內這些程序。  
@@ -54,11 +54,11 @@ ms.locfileid: "54734035"
 ## <a name="example"></a>範例  
  下列範例會建立將完整的名稱儲存為兩個組成的名稱、 名字和姓氏的讀取/寫入屬性。 當呼叫端程式碼的讀取`fullName`，則`Get`程序結合了兩個組成的名稱，並傳回的完整名稱。 當呼叫端程式碼會指派新的完整名稱，`Set`程序會嘗試將它分成兩個組成的名稱。 如果找不到一個空格，它會儲存它做為第一個名稱。  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  下列範例示範一般呼叫屬性程序的`fullName`。 第一次呼叫設定屬性值，第二個呼叫會擷取它。  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>另請參閱
 - [程序](./index.md)

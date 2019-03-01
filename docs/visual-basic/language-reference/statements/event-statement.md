@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 3a13b1a3d3e44f2c309e031e23972a5326ed3faa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13b1d18592379d7a08e68e84ffba62f1cc977caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653615"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966069"
 ---
 # <a name="event-statement"></a>Event 陳述式
 宣告使用者定義的事件。  
@@ -82,7 +82,7 @@ End Event
 ## <a name="remarks"></a>備註  
  一旦已經宣告事件，使用 `RaiseEvent` 陳述式來引發事件。 一般事件可能會如下列片段所示宣告和引發：  
   
- [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#13)]  
   
 > [!NOTE]
 >  您可以宣告事件引數，就像宣告程序的引數一樣，但下列情況除外：事件不可擁有具名引數、`ParamArray` 引數或 `Optional` 引數。 事件沒有傳回值。  
@@ -100,22 +100,24 @@ End Event
   
  此範例也會使用表單 (`Form1`) 與按鈕 (`Button1`) 和文字方塊 (`TextBox1`)。 當您按一下按鈕時時，第一個文字方塊會顯示從 10 秒到 0 秒的倒數計時。 在經過完整時間 (10 秒) 之後，第一個文字方塊會顯示 [完成]。  
   
- `Form1` 的程式碼會指定表單的初始和終止狀態。 它也包含引發事件時執行的程式碼。  
+ 
+  `Form1` 的程式碼會指定表單的初始和終止狀態。 它也包含引發事件時執行的程式碼。  
   
  若要使用此範例，請建立新的 Windows Form 專案。 然後新增一個名為 `Button1` 的按鈕，和名為 `TextBox1` 的文字方塊到名為 `Form1` 的主表單中。 然後以滑鼠右鍵按一下表單，並按一下**檢視程式碼**程式碼編輯器開啟。  
   
  將 `WithEvents` 變數加入至 `Form1` 類別的宣告區段：  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
  將下列程式碼加入至 `Form1` 的程式碼。 取代可能存在的任何重複程序，例如 `Form_Load` 或 `Button_Click`。  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  按 F5 以執行上述範例中，並按一下 [] 按鈕**啟動**。 第一個文字方塊會開始倒數計時。 在經過完整時間 (10 秒) 之後，第一個文字方塊會顯示 [完成]。  
   
 > [!NOTE]
->  `My.Application.DoEvents` 方法不會以與表單相同的方式處理事件。 若要啟用表單以直接處理事件，您可以使用多執行緒。 如需詳細資訊，請參閱 < [Managed 執行緒處理](../../../standard/threading/index.md)。  
+>  
+  `My.Application.DoEvents` 方法不會以與表單相同的方式處理事件。 若要啟用表單以直接處理事件，您可以使用多執行緒。 如需詳細資訊，請參閱 < [Managed 執行緒處理](../../../standard/threading/index.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - [RaiseEvent 陳述式](../../../visual-basic/language-reference/statements/raiseevent-statement.md)

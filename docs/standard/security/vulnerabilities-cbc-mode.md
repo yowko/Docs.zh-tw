@@ -4,12 +4,12 @@ description: 了解如何偵測及降低計時弱點與 Cipher Block Chaining (C
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066167"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974285"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>使用 CBC 模式的對稱式解密使用邊框間距的計時弱點
 
@@ -92,7 +92,7 @@ Oracle 指的是 「 告訴 」 讓它們執行的動作是否為正確的攻擊
   - 這也不會阻止在其中，攻擊者可以強制轉型會以不同的訊息位移加密多次相同的純文字的情況下的純文字復原。
 - 閘道評估的解密呼叫水輥計時訊號：
   - 等候時間的計算必須解密作業會針對包含填補的任何資料 」 區段所需的時間的最大數量超過最小值。
-  - 時間計算應該根據中的指導方針[取得高解析度的時間戳記](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx)，不是使用<xref:System.Environment.TickCount?displayProperty=nameWithType>（受限於向前復原移轉/溢位） 上或減去兩個系統的時間戳記，（受限於 NTP 調整錯誤）。
+  - 時間計算應該根據中的指導方針[取得高解析度的時間戳記](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps)，不是使用<xref:System.Environment.TickCount?displayProperty=nameWithType>（受限於向前復原移轉/溢位） 上或減去兩個系統的時間戳記，（受限於 NTP 調整錯誤）。
   - 時間計算必須包括在所有可能的例外狀況解密作業包含管理或 c + + 應用程式，不只是加在尾端填補。
   - 如果已尚未決定成功或失敗，計時閘道需要它過期時傳回失敗。
 - 監視機制來偵測已通過的 「 無效 」 訊息時，應該執行未經驗證的解密的服務。
@@ -103,7 +103,7 @@ Oracle 指的是 「 告訴 」 讓它們執行的動作是否為正確的攻擊
 建置 Windows 密碼編譯的程式：下一步 的新一代 (CNG) 程式庫：
 
 - 解密呼叫是對[BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt)，並指定`BCRYPT_BLOCK_PADDING`旗標。
-- 藉由呼叫已經初始化的金鑰控制代碼[BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty)具有[BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE)設定為`BCRYPT_CHAIN_MODE_CBC`。
+- 藉由呼叫已經初始化的金鑰控制代碼[BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty)具有[BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE)設定為`BCRYPT_CHAIN_MODE_CBC`。
   - 由於`BCRYPT_CHAIN_MODE_CBC`是預設設定，受影響的程式碼可能未指派任何值`BCRYPT_CHAINING_MODE`。
 
 針對較舊的 Windows 密碼編譯 API 建置的程式：

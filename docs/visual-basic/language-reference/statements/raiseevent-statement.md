@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ccefe07c847c7a356e9ff8da301257bf6a90d1ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffe08dc8aeef9498d2e9f4c973c5ccbc31fec0b9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655004"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973297"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 陳述式
 觸發程序在類別、 表單或文件中的模組層級宣告的事件。  
@@ -38,7 +38,7 @@ RaiseEvent eventname[( argumentlist )]
   
  如果事件尚未宣告就會引發在模組內，就會發生錯誤。 下列程式碼片段說明事件宣告和引發事件的程序。  
   
- [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
  您無法使用`RaiseEvent`引發模組中未明確宣告的事件。 例如，所有的表單繼承<xref:System.Windows.Forms.Control.Click>從事件<xref:System.Windows.Forms.Form?displayProperty=nameWithType>，無法升級使用`RaiseEvent`衍生表單中。 如果您宣告`Click`事件在表單的模組中，它會遮蔽表單的自己<xref:System.Windows.Forms.Control.Click>事件。 您仍然可以叫用的表單<xref:System.Windows.Forms.Control.Click>藉由呼叫的事件<xref:System.Windows.Forms.Control.OnClick%2A>方法。  
   
@@ -57,18 +57,19 @@ RaiseEvent eventname[( argumentlist )]
   
  此範例也會使用表單 (`Form1`) 與按鈕 (`Button1`) 和文字方塊 (`TextBox1`)。 當您按一下按鈕時時，第一個文字方塊會顯示從 10 秒到 0 秒的倒數計時。 在經過完整時間 (10 秒) 之後，第一個文字方塊會顯示 [完成]。  
   
- `Form1` 的程式碼會指定表單的初始和終止狀態。 它也包含引發事件時執行的程式碼。  
+ 
+  `Form1` 的程式碼會指定表單的初始和終止狀態。 它也包含引發事件時執行的程式碼。  
   
  若要使用此範例中，開啟新的 Windows 應用程式專案中，加入名為按鈕`Button1`和名為文字方塊`TextBox1`主要表單名為`Form1`。 然後以滑鼠右鍵按一下表單，並按一下**檢視程式碼**程式碼編輯器開啟。  
   
  新增`WithEvents`變數的宣告區段`Form1`類別。  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>範例  
  將下列程式碼加入至 `Form1` 的程式碼。 取代任何重複的程序可能會存在，這類`Form_Load`，或`Button_Click`。  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  按 F5 以執行上述範例中，並按一下 [] 按鈕**啟動**。 第一個文字方塊會開始倒數計時。 在經過完整時間 (10 秒) 之後，第一個文字方塊會顯示 [完成]。  
   

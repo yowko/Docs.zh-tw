@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 0f7f7910b5e19c3e1a22598c1a987aa2b02e256e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d128e4647930044e24eb544ec92213b481417cb0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552225"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965757"
 ---
 # <a name="optional-parameters-visual-basic"></a>選擇性參數 (Visual Basic)
 您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *選擇性參數*由`Optional`程序定義中的關鍵字。 可套用下列規則：  
@@ -47,12 +47,12 @@ Sub name(argument 1, , , argument 4)
   
  第一個對 `MsgBox` 的呼叫會依照 `MsgBox` 定義的引數順序提供這三個引數。 第二個呼叫只會提供必要引數。 第三個和第四個呼叫會提供第一個和第三個引數。 第三個呼叫會依位置執行這個動作，第四個呼叫則會依名稱執行。  
   
- [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
+ [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>判斷是否有選擇性引數  
  程序在執行階段時無法偵測指定的引數是否已省略，或者呼叫程式碼已明確提供預設值。 如果您需要有所區別，可以將一個不常用的值設定為預設值。 下列程序定義選擇性參數`office`，並為其預設值的測試`QJZ`，以查看是否在呼叫中將其省略：  
   
- [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
+ [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   
  如果選擇性參數是 `String` 之類的參考類型，您就可以用 `Nothing` 做為預設值，只要不是引數需要的值即可。  
   

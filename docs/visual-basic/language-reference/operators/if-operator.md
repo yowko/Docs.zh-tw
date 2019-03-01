@@ -11,12 +11,12 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 82dc3e851f1f98ca689acc21f03cbbe68a4e974e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25b0d7e85fe1c1e0d0589b4b9a9db2d85ca71526
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686669"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965892"
 ---
 # <a name="if-operator-visual-basic"></a>If 運算子 (Visual Basic)
 使用最少運算評估，有條件地傳回兩個值之一。 `If`與三個引數或兩個引數，就可以呼叫運算子。  
@@ -40,11 +40,11 @@ If( [argument1,] argument2, argument3 )
   
  `If`運算子，會使用三個引數呼叫的運作方式類似`IIf`函式不同之處在於它會使用最少運算評估。 `IIf`函式一律會評估其引數，這三個，而`If`有三個引數的運算子會評估只有兩個。 第一個`If`引數會評估和結果轉換成`Boolean`的值，`True`或`False`。 如果值為`True`，`argument2`會評估並傳回其值，但`argument3`不會評估。 如果的值`Boolean`運算式`False`，`argument3`會評估並傳回其值，但`argument2`不會評估。 下列範例說明使用`If`三個引數使用時：  
   
- [!code-vb[VbVbalrOperators#100](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#100)]  
   
  下列範例說明值的最少運算評估。 此範例示範兩次嘗試將變數`number`變數所`divisor`除非`divisor`為零。 在此情況下，應該會傳回 「 0 」，並不應該嘗試執行除法運算，因為會造成執行階段錯誤。 因為`If`運算式會使用最少運算的評估，它會評估第二個或第三個引數，第一個引數的值而定。 如果第一個引數為 true，除數為零並不安全地評估第二個引數，並執行除法。 如果第一個引數為 false，會評估第三個引數，就會傳回 0。 因此，除數為 0 時，不會嘗試執行除法並不會產生錯誤。 不過，因為`IIf`不會使用最少運算評估，即使在第一個引數為 false 時，才評估第二個引數。 這會導致執行階段除以零錯誤。  
   
- [!code-vb[VbVbalrOperators#101](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#101)]  
   
 ## <a name="if-operator-called-with-two-arguments"></a>如果兩個引數呼叫運算子  
  第一個引數`If`可以省略。 這可讓操作員使用只有兩個引數來呼叫。 下列清單時，才適用`If`使用兩個引數呼叫運算子。  
@@ -58,7 +58,7 @@ If( [argument1,] argument2, argument3 )
   
  當`Boolean`省略引數，第一個引數必須是參考或可為 null 的型別。 如果第一個引數評估為`Nothing`，會傳回第二個引數的值。 在其他情況下，會傳回第一個引數的值。 下列範例說明這項評估的運作方式。  
   
- [!code-vb[VbVbalrOperators#102](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_3.vb)]  
+ [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:Microsoft.VisualBasic.Interaction.IIf%2A>

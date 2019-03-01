@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: a23d16d4ef4e90041e320c52381fa34b8b33d2d4
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: fc531bb619ed54cf35d2e89b8e6df3ec7175f3f9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738743"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973544"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic 中的變數宣告
 您宣告變數，以指定其名稱和特性。 變數的宣告陳述式是[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)。 其位置及內容會決定變數的特性。  
@@ -66,7 +66,7 @@ Dim l, m As Long, x, y As Single
 ## <a name="local-type-inference"></a>區域類型推斷  
  *型別推斷*用來判斷資料型別，而不需要宣告之區域變數的`As`子句。 編譯器會推斷變數的初始化運算式的類型的類型。 這可讓您宣告變數而不用明確陳述的類型。 在下列範例中，同時`num1`和`num2`強型別為整數。  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
   
  如果您想要使用區域型別推斷`Option Infer`必須設為`On`。 如需詳細資訊，請參閱[區域型別推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)和 [Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。  
   

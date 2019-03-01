@@ -2,14 +2,14 @@
 title: HOW TO：在 Visual Basic 中產生物件模型或C#
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-ms.openlocfilehash: 79b2656ec72e2b93592742ddd39e7bfe4dcd7c43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e60905cc7bf30421a48288378b136bad5f7ee83
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510568"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974598"
 ---
-# <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>HOW TO：在 Visual Basic 中產生物件模型或C# #
+# <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>HOW TO：在 Visual Basic 或 C 中產生物件模型\#
 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，採用您自己之程式語言的物件模型 (Object Model) 會對應至關聯式資料庫。 這兩種工具可供自動產生 Visual Basic 或C#從現有資料庫的中繼資料模型。  
   
 -   如果您使用 Visual Studio，您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來產生物件模型。 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]提供豐富的使用者介面，可協助您產生[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]物件模型。 如需詳細資訊，請參閱[Linq to SQL 工具，在 Visual Studio 中](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。
@@ -17,7 +17,7 @@ ms.locfileid: "54510568"
 -   SQLMetal 命令列工具。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
     > [!NOTE]
-    >  如果您沒有現有的資料庫而想要從物件模型建立一個資料庫，可以使用程式碼編輯器和 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 建立物件模型。 如需詳細資訊，請參閱[＜How to：動態建立資料庫](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)。  
+    >  如果您沒有現有的資料庫而想要從物件模型建立一個資料庫，可以使用程式碼編輯器和 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 建立物件模型。 如需詳細資訊，請參閱[如何：動態建立資料庫](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)。  
   
  文件[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]提供範例，示範如何產生 Visual Basic 或C#使用的物件模型[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]。 下列資訊提供了如何使用 SQLMetal 命令列工具的範例。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   

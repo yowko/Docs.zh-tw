@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: d066b282604a53e2cf973ce0425af729fba6a118
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ca92324dec1d4fa8885a610a6e246640f4a5752
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585613"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973024"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查詢作業 (Visual Basic)
 本主題提供簡介[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]運算式在 Visual Basic 中，以及一些典型的一種您在查詢中執行的作業。 如需詳細資訊，請參閱下列主題：  
@@ -34,7 +34,7 @@ ms.locfileid: "54585613"
 ## <a name="specifying-the-data-source-from"></a>指定資料來源 （來源）  
  在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢中，第一個步驟是指定您想要查詢的資料來源。 因此，`From`在查詢中的子句一律會先出現。 查詢運算子來選取和塑造結果取決於來源的類型。  
   
- [!code-vb[VbLINQBasicOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_1.vb)]  
+ [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
  `From`子句會指定資料來源`customers`，以及*範圍變數*， `cust`。 範圍變數是迴圈的反覆項目變數，例如，不同之處在於查詢運算式中，在沒有實際反覆項目，就會發生。 查詢執行時，通常使用`For Each`迴圈中，範圍變數做為在每個後續項目的參考`customers`。 因為編譯器可以推斷 `cust` 的類型，所以您不需要明確予以指定。 如需撰寫使用，而不需要明確的輸入查詢的範例，請參閱[查詢作業 (Visual Basic) 中的型別關聯性](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "54585613"
 ## <a name="filtering-data-where"></a>篩選資料 （位置）  
  可能最常見的查詢作業套用篩選的布林運算式的形式。 然後查詢會傳回只在運算式為 true 的元素。 A`Where`子句用來執行篩選。 篩選會指定要包含在產生的序列中的資料來源中的哪些項目。 在下列範例中，僅有的地址在倫敦的客戶則會包含項目。  
   
- [!code-vb[VbLINQBasicOps#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_2.vb)]  
+ [!code-vb[VbLINQBasicOps#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#2)]  
   
  您可以使用邏輯運算子，例如`And`並`Or`結合篩選條件運算式中的`Where`子句。 比方說，如果要傳回的只有這些客戶來自 London 你是誰，且其名稱是 Devon，使用下列程式碼：  
   
@@ -62,7 +62,7 @@ Where cust.City = "London" Or cust.City = "Paris"
 ## <a name="ordering-data-order-by"></a>排序資料 (Order By)  
  通常很方便就可以放到特定的順序排序傳回的資料。 `Order By`子句會造成指定的欄位或欄位排序傳回的序列的項目。 例如，下列查詢會排序結果根據`Name`屬性。 因為`Name`是字串，會依字母順序，排序傳回的資料，從 A 到 Z。  
   
- [!code-vb[VbLINQBasicOps#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_3.vb)]  
+ [!code-vb[VbLINQBasicOps#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#3)]  
   
  若要以相反順序排序結果 (從 Z 到 A)，請使用 `Order By...Descending` 子句。 預設值是`Ascending`時都`Ascending`也`Descending`指定。  
   
@@ -73,11 +73,11 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  若要擷取集合，其中包含完整`Customer`物件選取範圍變數本身：  
   
- [!code-vb[VbLINQBasicOps#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_4.vb)]  
+ [!code-vb[VbLINQBasicOps#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#4)]  
   
  如果`Customer`執行個體的大型物件，都有許多欄位，以及所有您想要擷取是名稱，您可以選取`cust.Name`，如下列範例所示。 區域類型推斷會辨識此集合中的變更的結果型別`Customer`字串集合的物件。  
   
- [!code-vb[VbLINQBasicOps#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_5.vb)]  
+ [!code-vb[VbLINQBasicOps#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#5)]  
   
  若要選取多個欄位從資料來源，您會有兩個選擇：  
   
@@ -91,30 +91,30 @@ Where cust.City = "London" Or cust.City = "Paris"
   
 -   定義具名型別，其中包含您想要包含在結果中，以及建立和初始化中的型別之執行個體的特定欄位`Select`子句。 只有當您必須使用個別的結果，會傳回這些，集合之外，或如果您必須將它們傳遞為方法呼叫中的參數，請使用此選項。 型別`londonCusts5`在下列範例中是 IEnumerable (Of NamePhone)。  
   
-     [!code-vb[VbLINQBasicOps#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_7.vb)]  
+     [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   
-     [!code-vb[VbLINQBasicOps#8](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_8.vb)]  
+     [!code-vb[VbLINQBasicOps#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#8)]  
   
  如需有關如何使用`Select`子句，在 Visual Basic 中，請參閱[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)。  
   
 ## <a name="joining-data-join-and-group-join"></a>（聯結及群組聯結） 聯結的資料  
  您可以結合多個資料來源中的`From`子句以數種方式。 比方說，下列程式碼會使用兩個資料來源，並隱含地結合來自這兩個結果中的屬性。 查詢會選取最後一個名稱以母音開頭的學生。  
   
- [!code-vb[VbLINQBasicOps#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_9.vb)]  
+ [!code-vb[VbLINQBasicOps#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#9)]  
   
 > [!NOTE]
 >  您可以執行此程式碼中建立的學生清單[How to:建立項目清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。  
   
  `Join`關鍵字相當於`INNER JOIN`SQL 中。 它結合了兩個集合中的項目之間的比對索引鍵值為基礎的兩個集合。 查詢會傳回所有或部分具有相符索引鍵值的集合項目。 例如，下列程式碼重複先前的隱含聯結的動作。  
   
- [!code-vb[VbLINQBasicOps#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_10.vb)]  
+ [!code-vb[VbLINQBasicOps#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#10)]  
   
  `Group Join` 將集合合併成單一的階層式集合，就像`LEFT JOIN`SQL 中。 如需詳細資訊，請參閱 < [Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)並[Group Join 子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)。  
   
 ## <a name="grouping-data-group-by"></a>分組資料 （依群組）  
  您可以新增`Group By`子句分組查詢結果，根據一個或多個欄位的項目中的項目。 例如，下列程式碼會將學生分組類別年。  
   
- [!code-vb[VbLINQBasicOps#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_11.vb)]  
+ [!code-vb[VbLINQBasicOps#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#11)]  
   
  如果您執行此程式碼使用的中建立的學生清單[How to:建立清單的項目](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)，從輸出`For Each`陳述式：  
   
@@ -148,7 +148,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  下列程式碼所示的變化年級，並依姓氏然後排列每年的學生。  
   
- [!code-vb[VbLINQBasicOps#12](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_12.vb)]  
+ [!code-vb[VbLINQBasicOps#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#12)]  
   
  如需詳細資訊`Group By`，請參閱 <<c2> [ 群組的子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
   

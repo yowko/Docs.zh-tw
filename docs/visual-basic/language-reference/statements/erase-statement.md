@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: cab3da4465b4671d203036c2d9bcd40662dc234a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5828e28b84ec62c7ed674757090806d73c61caea
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522436"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966732"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase 陳述式 (Visual Basic)
 用以釋放陣列變數，並解除配置其元素所使用的記憶體。  
@@ -35,7 +35,7 @@ Erase arraylist
 ## <a name="example"></a>範例  
  下列範例會使用`Erase`陳述式來清除這兩個陣列，並釋放其記憶體 (1000年和 100 個儲存體項目，分別)。 `ReDim`陳述式，然後將新的陣列執行個體指派給三維陣列。  
   
- [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/erase-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   
 ## <a name="see-also"></a>另請參閱
 - [Nothing](../../../visual-basic/language-reference/nothing.md)

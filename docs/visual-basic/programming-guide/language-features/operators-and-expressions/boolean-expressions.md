@@ -14,22 +14,22 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: a86df2734d315e5fed0784b0394bb305b15562a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562748"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965536"
 ---
 # <a name="boolean-expressions-visual-basic"></a>布林運算式 (Visual Basic)
 A*布林運算式*是評估為值的運算式[布林資料型別](../../../../visual-basic/language-reference/data-types/boolean-data-type.md):`True`或`False`。 `Boolean` 運算式可以有數種形式。 最簡單的是直接比較的值`Boolean`變數設為`Boolean`常值，如下列範例所示。  
   
- [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
+ [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
 ## <a name="two-meanings-of-the--operator"></a>兩個意義的 = 運算子  
  請注意，指派陳述式`newCustomer = True`看起來一樣，上述範例中中的運算式，但它會執行不同的函式，並以不同的方式使用。 在上述範例中，運算式`newCustomer = True`代表布林值，而`=`號會解譯為比較運算子。 在獨立的陳述式，`=`符號會解譯為指派運算子和指派的變數，在左側的權限的值。 下列範例將說明這點。  
   
- [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_2.vb)]  
+ [!code-vb[VbVbalrOperators#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#88)]  
   
  如需詳細資訊，請參閱 <<c0> [ 值比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)並[陳述式](../../../../visual-basic/language-reference/statements/index.md)。  
   
@@ -50,7 +50,7 @@ A*布林運算式*是評估為值的運算式[布林資料型別](../../../../vi
 ## <a name="short-circuiting-operators"></a>最少運算運算子  
  邏輯運算子`AndAlso`並`OrElse`表現所謂*最少運算*。 最少運算運算子會先評估，如果左的運算元。 如果左的運算元判斷整個運算式的值，則程式執行會繼續而不需要評估右運算式。 下列範例將說明這點。  
   
- [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
+ [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
  在上述範例中，運算子會評估左邊的運算式， `45 < 12`。 因為左邊的運算式會評估為`False`，在整個邏輯運算式必須評估為`False`。 執行程式因此會略過的執行中的程式碼`If`區塊，而不需要評估右運算式， `testFunction(3)`。 此範例不會呼叫`testFunction()`因為左的運算式證明整個運算式。  
   
@@ -59,7 +59,7 @@ A*布林運算式*是評估為值的運算式[布林資料型別](../../../../vi
 ### <a name="comparison-with-non-short-circuiting-operators"></a>非最少運算運算子與比較  
  邏輯運算子的兩側的評估相較之下，當邏輯運算子`And`和`Or`習慣。 下列範例將說明這點。  
   
- [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_4.vb)]  
+ [!code-vb[VbVbalrOperators#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#90)]  
   
  上述範例會呼叫`testFunction()`即使左邊的運算式評估為`False`。  
   

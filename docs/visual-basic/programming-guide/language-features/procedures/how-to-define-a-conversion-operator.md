@@ -9,12 +9,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: 76d0769456e30766b830023c1f27381ceca59cbb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe5c314fe4e39c8a06803037da29b51148188e14
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521526"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974636"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>HOW TO：定義轉換運算子 (Visual Basic)
 如果您已定義類別或結構，您可以定義您自己的類別或結構的類型與另一個資料類型之間的型別轉換運算子 (例如`Integer`， `Double`，或`String`)。  
@@ -26,11 +26,11 @@ ms.locfileid: "54521526"
 ## <a name="example"></a>範例  
  下列範例會定義結構，稱為之間的轉換運算子`digit`和`Byte`。  
   
- [!code-vb[VbVbcnProcedures#27](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_1.vb)]  
+ [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
   
  您可以測試結構`digit`為下列程式碼。  
   
- [!code-vb[VbVbcnProcedures#28](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_2.vb)]  
+ [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>另請參閱
 - [運算子程序](./operator-procedures.md)

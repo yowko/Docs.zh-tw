@@ -5,17 +5,17 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 160d4a9f560479b3a66b2cf4d7712b24551fabee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c936adb6d4d80032b862994c21178a505da6789b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558694"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964240"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>如何：在設計階段建立新的設定
 您可以使用設定設計工具，在設計階段建立新的設定。 設定設計工具是可讓您建立新的設定，並指定這些設定的屬性方格樣式介面。 您必須指定名稱、 值、 類型和您的新設定的範圍。 一旦建立一項設定時，就可在程式碼中存取。  
   
-### <a name="to-create-a-new-setting-at-design-time-in-c"></a>若要在設計階段中建立新的設定C#  
+### <a name="to-create-a-new-setting-at-design-time-in-c"></a>若要在 C 中的設計階段建立新的設定\#
   
 1.  在 **方案總管**，展開**屬性**在專案的節點。  
   

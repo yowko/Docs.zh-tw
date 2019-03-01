@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: fd1025d056dfb11d2253a39defb384c1d05efa32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66255a9bfa2a4f9acb33073bae755efbab61042e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553694"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977969"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>HOW TO：以 LINQ 合併資料使用聯結 (Visual Basic)
 Visual Basic 提供`Join`和`Group Join`查詢子句可讓您結合多個集合之間的一般值為基礎的集合的內容。 這些值稱為*金鑰*值。 開發人員熟悉關聯式資料庫概念會辨識`Join`INNER JOIN 子句和`Group Join`做為有效，LEFT OUTER JOIN 子句。  
@@ -29,8 +29,8 @@ Visual Basic 提供`Join`和`Group Join`查詢子句可讓您結合多個集合�
   
 2.  在本主題使用範例`Person`和`Pet`類型和下列程式碼範例中的資料。 此程式碼複製到預設`Module1`Visual Basic 所建立的模組。  
   
-     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_1.vb)]  
-    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_2.vb)]  
+     [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
+    [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
 ## <a name="perform-an-inner-join-by-using-the-join-clause"></a>使用 Join 子句執行內部聯結  
  INNER JOIN 結合來自兩個集合的資料。 會包含符合指定的索引鍵值的項目。 會排除任何兩個集合的項目，在另一個集合中沒有相符的項目。  
@@ -45,7 +45,7 @@ Visual Basic 提供`Join`和`Group Join`查詢子句可讓您結合多個集合�
   
 1.  將下列程式碼加入`Module1`若要查看這兩個隱含和明確內部聯結的範例專案中的模組。  
   
-     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_3.vb)]  
+     [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
 ## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>使用 Group Join 子句來執行左方外部聯結  
  左外部聯結中包含的所有項目左側集合的聯結，以及僅比對從聯結的右方集合的值。 從查詢結果會排除任何從聯結的右方集合的項目左邊的集合中沒有相符的項目。  
@@ -58,7 +58,7 @@ Visual Basic 提供`Join`和`Group Join`查詢子句可讓您結合多個集合�
   
 1.  將下列程式碼加入`Module1`以查看群組的左方外部聯結和已取消群組的左方外部聯結的範例專案中的模組。  
   
-     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_4.vb)]  
+     [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
 ## <a name="perform-a-join-by-using-a-composite-key"></a>使用複合索引鍵執行聯結  
  您可以使用`And`中的關鍵字`Join`或`Group Join`子句來識別比對時所要使用的多個索引鍵欄位值所聯結之集合中。 `And`關鍵字會指定所有指定的索引鍵欄位必須符合要加入的項目。  
@@ -67,7 +67,7 @@ Visual Basic 提供`Join`和`Group Join`查詢子句可讓您結合多個集合�
   
 1.  將下列程式碼加入`Module1`即可查看使用複合索引鍵的聯結的範例專案中的模組。  
   
-     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_5.vb)]  
+     [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
 ## <a name="run-the-code"></a>執行程式碼  
   
@@ -75,7 +75,7 @@ Visual Basic 提供`Join`和`Group Join`查詢子句可讓您結合多個集合�
   
 1.  取代`Sub Main`在`Module1`下列的程式碼，以執行本主題中的範例專案中的模組。  
   
-     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_6.vb)]  
+     [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
 2.  按 F5 執行範例。  
   

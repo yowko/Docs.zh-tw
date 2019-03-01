@@ -2,14 +2,14 @@
 title: 非同步程式設計
 description: 了解如何F#非同步程式設計透過語言層級的程式設計模型，而且容易使用自然語言來完成。
 ms.date: 06/20/2016
-ms.openlocfilehash: e18697708741eef066a76bbffe35882f3639bb68
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614476"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980083"
 ---
-# <a name="async-programming-in-f"></a>非同步程式設計F# #
+# <a name="async-programming-in-f"></a>在 F 中的非同步程式設計\#
 
 > [!NOTE]
 > 已在這篇文章探索一些不準確。  它是正在重寫。  請參閱[問題 #666](https://github.com/dotnet/docs/issues/666)若要了解所做的變更。
@@ -53,7 +53,7 @@ printfn "%s" html
 
 此外，正常`let`， `use`，和`do`可以與非同步版本一起使用的關鍵字，就如同一般函式中。
 
-## <a name="how-to-start-async-code-in-f"></a>如何在啟動非同步程式碼F# #
+## <a name="how-to-start-async-code-in-f"></a>如何開始在 F 中的非同步程式碼\#
 
 如先前所述，非同步程式碼會是工作的要在需要明確地啟動另一個內容中完成規格。 以下是為了達成此目的的兩種主要方式：
 
@@ -152,7 +152,7 @@ for html in htmlList do
 
  F#編譯器是非常嚴格，因此幾乎不可能進行像是麻煩以同步方式執行"async"程式碼。 如果您遇到警告時，這是登，程式碼不會認為它將如何執行。 如果您可以讓編譯器滿意，您的程式碼將很有可能會執行，如預期般運作。
 
-## <a name="for-the-cvb-programmer-looking-into-f"></a>針對C#/VB 程式設計人員想要F# #
+## <a name="for-the-cvb-programmer-looking-into-f"></a>針對C#/VB 程式設計人員想成 F\#
 
 本節假設您已熟悉使用中的非同步模型C#/VB. 如果您不是[中的非同步程式設計C#](../../../csharp/async.md)是起始點。
 

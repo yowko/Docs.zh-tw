@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: a974a68010fe80a07e83ac31e109bbf1c2b955e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b35985aa67cea7b58ddf05611cf4e0813a2d442
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568773"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977457"
 ---
 # <a name="partial-methods-visual-basic"></a>部分方法 (Visual Basic)
 部分方法可讓開發人員程式碼中插入自訂邏輯。 一般而言，程式碼會是類別的一部分的設計工具所產生。 部分方法中所建立的程式碼產生器中，部分類別定義，它們通常用來提供的項目已變更的通知。 它們可讓開發人員指定自訂的行為變更的回應。  
@@ -56,15 +56,15 @@ End Sub
 ## <a name="example"></a>範例  
  在檔案中名為 Product.Designer.vb，定義`Product`類別具有`Quantity`屬性。  
   
- [!code-vb[VbVbalrPartialMeths#4](./codesnippet/VisualBasic/partial-methods_1.vb)]  
+ [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  
   
  在檔案中名為 Product.vb，提供實作`QuantityChanged`。  
   
- [!code-vb[VbVbalrPartialMeths#5](./codesnippet/VisualBasic/partial-methods_2.vb)]  
+ [!code-vb[VbVbalrPartialMeths#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#5)]  
   
  最後，在專案的 Main 方法中，宣告`Product`執行個體，並提供初始值其`Quantity`屬性。  
   
- [!code-vb[VbVbalrPartialMeths#6](./codesnippet/VisualBasic/partial-methods_3.vb)]  
+ [!code-vb[VbVbalrPartialMeths#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#6)]  
   
  應該會出現訊息方塊，會顯示下列訊息：  
   

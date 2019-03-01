@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 8d9c7f3eadfa0095e0ed49b3a7a207fd3f7f8769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10167075e903693df804cba044301e1f1bc6306e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525452"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974454"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>HOW TO：呼叫程序傳回值 (Visual Basic)
 A`Function`程序傳回給呼叫程式碼的值。 您可以呼叫它藉由包含其名稱和引數在指派陳述式或運算式的右側。  
@@ -42,7 +42,7 @@ A`Function`程序傳回給呼叫程式碼的值。 您可以呼叫它藉由包�
 ## <a name="example"></a>範例  
  下列範例會呼叫 Visual Basic<xref:Microsoft.VisualBasic.Interaction.Environ%2A>擷取的作業系統環境變數的值。 第一個明細項目呼叫`Environ`內使用運算式中，且第二個列中呼叫它的指派陳述式。 `Environ` 使用變數名稱做為其唯一引數。 呼叫程式碼，它就會傳回變數的值。  
   
- [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
 ## <a name="see-also"></a>另請參閱
 - [函式程序](./function-procedures.md)

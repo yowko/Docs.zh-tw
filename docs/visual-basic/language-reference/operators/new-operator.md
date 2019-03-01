@@ -11,12 +11,12 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 0e8ec5877cba5f5cf97e1677460da06fd87cce1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dda23ef3ff49bd32474f39f5ae1807e57bdc2a62
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587550"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980460"
 ---
 # <a name="new-operator-visual-basic"></a>New 運算子 (Visual Basic)
 導入了`New`子句，以建立新的物件執行個體，指定型別參數的建構函式條件約束，或識別`Sub`類別建構函式與程序。  
@@ -26,11 +26,11 @@ ms.locfileid: "54587550"
   
  您可以使用`New`宣告陳述式或指派陳述式中的子句。 陳述式執行時，它會呼叫指定的類別，將您提供任何引數傳遞的適當建構函式。 下列範例所示範的是這所建立的執行個體`Customer`有兩個建構函式的類別，其中一個不接受任何參數，另一個會採用字串參數。  
   
- [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]  
   
  由於陣列是類別，`New`可以建立新的陣列執行個體，如下列範例所示。  
   
- [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
+ [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]  
   
  Common language runtime (CLR) 會擲回<xref:System.OutOfMemoryException>錯誤，如果沒有記憶體不足，無法建立新的執行個體。  
   
@@ -39,7 +39,8 @@ ms.locfileid: "54587550"
   
  若要建立類別的建構函式程序，將名稱設定`Sub`程序`New`關鍵字。 如需詳細資訊，請參閱[物件存留期：如何建立和終結物件](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
   
- `New` 關鍵字可用於以下內容：  
+ 
+  `New` 關鍵字可用於以下內容：  
   
  [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

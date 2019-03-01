@@ -2,12 +2,12 @@
 title: 查詢運算式
 description: 深入了解中的 LINQ 查詢運算式支援F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: e4a36305b607f573c29744f50a841be078c8061f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: e3ad2d4ebf09fff17aba80fcb3fc9853ec06af47
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611369"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977968"
 ---
 # <a name="query-expressions"></a>查詢運算式
 
@@ -511,7 +511,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
     <th>F#查詢運算式 （區分大小寫）</th>
   </tr>
 <tr><td>
-從資料表選取所有的欄位。</br>
+從資料表選取所有的欄位。<br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>
