@@ -2,15 +2,9 @@
 title: 事件 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- events [Visual Basic], about events
-- events [Visual Basic]
+  - 'events [Visual Basic], about events'
+  - 'events [Visual Basic]'
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 08bd3b3c7ff5608193de0cdc1a869e0918c9e96e
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065787"
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
 雖然您可能會以視覺化方式檢視 Visual Studio 專案以一系列的程序，依序執行，事實上，大部分程式都是事件驅動，這表示執行流程取決於呼叫的外部發生項目*事件*。  
@@ -23,12 +17,12 @@ ms.locfileid: "55065787"
 ### <a name="declaring-events"></a>宣告事件  
  您可以在類別、結構、模組和介面內，使用 `Event` 關鍵字宣告事件，如下列範例所示：  
   
- [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
+ [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>引發事件  
  事件就像是訊息，會告知發生了重要事件。 廣播訊息的動作稱為「引發」事件。 您可以在 Visual Basic 中引發事件`RaiseEvent`陳述式，如下列範例所示：  
   
- [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
+ [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
  事件必須在其宣告所在的類別、模組或結構範圍內引發。 例如，衍生的類別無法引發繼承自基底類別的事件。  
   
@@ -49,7 +43,7 @@ ms.locfileid: "55065787"
 ### <a name="withevents-and-the-handles-clause"></a>WithEvents 和 Handles 子句  
  `WithEvents` 陳述式和 `Handles` 子句提供一種宣告式方式來指定事件處理常式。 使用 `WithEvents` 關鍵字宣告之物件所引發的事件可以透過任何具有 `Handles` 陳述式的程序來處理，如下列範例所示：  
   
- [!code-vb[VbVbalrEvents#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_3.vb)]  
+ [!code-vb[VbVbalrEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#1)]  
   
  `WithEvents` 陳述式和 `Handles` 子句通常是事件處理常式的最佳選擇，因為它們使用的宣告式語法讓事件能夠更容易處理程式碼、讀取及偵錯。 不過，請注意下列有關使用 `WithEvents` 變數的限制：  
   
@@ -65,18 +59,18 @@ ms.locfileid: "55065787"
   
  在某些情況下，例如，表單或控制項，與相關聯的事件 Visual Basic 自動 stub 出空的事件處理常式，並將它與事件相關聯。 例如，當您按兩下設計模式中的表單上的命令按鈕時，Visual Basic 建立空白的事件處理常式和`WithEvents`變數的命令按鈕，如下列程式碼所示：  
   
- [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
+ [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   
 ### <a name="addhandler-and-removehandler"></a>AddHandler 和 RemoveHandler  
  `AddHandler` 陳述式類似 `Handles` 子句，這兩者都能讓您指定事件處理常式。 不過，與 `RemoveHandler` 搭配使用的 `AddHandler` 所提供的彈性比 `Handles` 子句更大，可讓您以動態方式加入、移除及變更與事件相關聯的事件處理常式。 如果您想要處理共用的事件或來自結構的事件，就必須使用 `AddHandler`。  
   
  `AddHandler` 會採用兩個引數︰來自事件傳送者的事件名稱 (例如控制項)，以及評估委派的運算式。 使用 `AddHandler` 時，您不需明確指定委派類別，因為 `AddressOf` 陳述式一律會傳回對委派的參考。 下列範例會建立事件處理常式與物件所引發之事件的關聯：  
   
- [!code-vb[VbVbalrEvents#28](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_5.vb)]  
+ [!code-vb[VbVbalrEvents#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#28)]  
   
  `RemoveHandler` (其會中斷事件與事件處理常式的關聯) 會使用與 `AddHandler` 相同的語法。 例如:   
   
- [!code-vb[VbVbalrEvents#29](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_6.vb)]  
+ [!code-vb[VbVbalrEvents#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#29)]  
   
  在下列範例中，事件處理常式會與事件相關聯，並引發事件。 事件處理常式會攔截事件，並顯示一則訊息。  
   
@@ -84,16 +78,16 @@ ms.locfileid: "55065787"
   
  最後，移除第二個事件處理常式，然後第三次引發事件。 由於不再有與事件相關聯的事件處理常式，因此不會採取任何動作。  
   
- [!code-vb[VbVbalrEvents#38](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_7.vb)]  
+ [!code-vb[VbVbalrEvents#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class2.vb#38)]  
   
 ## <a name="handling-events-inherited-from-a-base-class"></a>處理繼承自基底類別的事件  
  「衍生類別」(繼承基底類別特性的類別) 可以使用 `Handles MyBase` 陳述式，來處理其基底類別所引發的事件。  
   
-#### <a name="to-handle-events-from-a-base-class"></a>處理來自基底類別的事件  
+### <a name="to-handle-events-from-a-base-class"></a>處理來自基底類別的事件  
   
 -   在衍生類別中宣告事件處理常式，方法是將 `Handles MyBase.`*eventname* 陳述式加入至事件處理常式程序的宣告行中，其中 *eventname* 為您要處理之基底類別中的事件名稱。 例如:   
   
-     [!code-vb[VbVbalrEvents#12](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_8.vb)]  
+     [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   
 ## <a name="related-sections"></a>相關章節  
   

@@ -4,12 +4,12 @@ description: Azure Event Grid 是可靠的事件傳遞和路由事件支付每�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145865"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212179"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -124,7 +124,7 @@ Event Grid 會使用標準的結構描述，來包裝自訂事件。 結構描�
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Application Insights 分析](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
 * [Azure:將應用程式帶至雲端，無伺服器 Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Azure 事件格線](https://docs.microsoft.com/azure/azure-event-grid/overview)
+* [Azure 事件格線](https://docs.microsoft.com/azure/event-grid/overview)
 * [Azure Event Grid 事件結構描述](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Azure 事件中樞](https://docs.microsoft.com/azure/event-hubs)
 * [Azure Functions 文件](https://docs.microsoft.com/azure/azure-functions)

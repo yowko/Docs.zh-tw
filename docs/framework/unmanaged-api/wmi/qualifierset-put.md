@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf3d422bbcec2754601f6dd07d7b45bab2a716e3
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694135"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201155"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 函式
 寫入具名限定詞與值。 新限定詞會覆寫先前的相同名稱的值。 如果不存在的辨識符號，它會建立它。 
@@ -60,8 +60,8 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | 限定詞可以覆寫於衍生的類別或執行個體。 **這是預設值。** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | 限定詞會傳播到執行個體。 |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | 限定詞會傳播到衍生類別中。 |
-| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | 無法在衍生類別或執行個體中覆寫限定詞。 |
-| `WBEM_FLAVOR_AMENDED | 0x80 | 限定詞會進行當地語系化。 |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | 無法在衍生類別或執行個體中覆寫限定詞。 |
+| `WBEM_FLAVOR_AMENDED` | 0x80 | 限定詞會進行當地語系化。 |
 
 ## <a name="return-value"></a>傳回值
 

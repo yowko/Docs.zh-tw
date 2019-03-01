@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7185802a3857fcd73c63d097090a2a7809f65279
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 03be79e6300afa6d25a005b0a21b8c2bf15d27be
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825923"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202271"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>IXCLRDataMethodInstance 介面
 
@@ -33,7 +33,7 @@ ms.locfileid: "55825923"
 | 方法                                                                                                                  | 描述                                 |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
 | [GetILAddressMap](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getiladdressmap-method.md) | 取得地址對應資訊的 IL。 |
-| [GetRepresentativeEntryAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | 取得原生編譯之方法的所有可能的進入點的最具代表性的項目點地址... |
+| [GetRepresentativeEntryAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | 取得所有可能的進入點之方法的原生編譯的最具代表性的進入點位址。 |
 
 
 ## <a name="remarks"></a>備註

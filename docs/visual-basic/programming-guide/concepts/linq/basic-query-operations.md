@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: 5ca92324dec1d4fa8885a610a6e246640f4a5752
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 141040a715487b3cbcfff1c3b9969a0869c8a3d8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973024"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201701"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查詢作業 (Visual Basic)
 本主題提供簡介[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]運算式在 Visual Basic 中，以及一些典型的一種您在查詢中執行的作業。 如需詳細資訊，請參閱下列主題：  
@@ -85,7 +85,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      因為傳回的項目，在下列範例中是匿名型別執行個體，您無法為型別依名稱參考其他位置中您的程式碼。 編譯器指定類型名稱包含在一般的 Visual Basic 程式碼中無效的字元。 在下列範例中，在集合中的查詢所傳回的項目`londonCusts4`匿名類型的執行個體  
   
-     [!code-vb[VbLINQBasicOps#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_6.vb)]  
+     [!code-vb[VbLINQBasicOps#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#6)]  
   
      -或-  
   

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: bf7ff1870a523903babd7140e0d8271f9946064b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a816b1097c0a9628bb2889d39be5c029beaa3c63
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628054"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200984"
 ---
 # <a name="comparison-operators-visual-basic"></a>比較運算子 (Visual Basic)
 以下是定義在 Visual Basic 中的比較運算子。  
@@ -146,7 +146,7 @@ result = string Like pattern
 ## <a name="example"></a>範例  
  下列範例顯示各種關係比較運算子，用來比較運算式的用法。 關係比較運算子會傳回`Boolean`結果，表示是否在指定的運算式評估為`True`。 當您套用`>`和`<`運算子為字串，則會進行比較之字串的一般依字母順序排序的順序，使用。 此順序可能會取決於您的地區設定的。 排序是否會區分大小寫取決於[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)設定。  
   
- [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#1)]  
   
  在上述範例中，第一個比較會傳回`False`以及剩餘的比較都會傳回`True`。  
   

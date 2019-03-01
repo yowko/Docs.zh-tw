@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: def49bc4264f2cae8e17d5f00ff12ad41674da2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540607"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212517"
 ---
 # <a name="service-identity-and-authentication"></a>服務身分識別和驗證
 服務的*端點身分識別*是從服務 Web 服務描述語言 (WSDL) 產生的值。 這個值會傳播至任何用戶端上，用來驗證服務。 在用戶端初始化對某個端點的通訊，且服務也向用戶端進行自我驗證之後，用戶端就會比較端點身分識別值與端點驗證處理序傳回的實際值。 如果兩者相符，則可確定用戶端已聯繫所需的服務端點。 這可當作防範*網路釣魚*藉由防止用戶端重新導向至惡意服務所裝載的端點。  
@@ -32,10 +32,11 @@ ms.locfileid: "54540607"
   
  用戶端上的身分識別處理與服務上的用戶端驗證很類似。 安全服務會等到用戶端認證經過驗證之後，才會執行程式碼。 同理，用戶端會等到服務認證根據事先從服務中繼資料得知的內容經過驗證之後，才會將訊息傳送至服務。  
   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A> 類別的 <xref:System.ServiceModel.EndpointAddress> 屬性代表用戶端所呼叫之服務的身分識別。 服務會在其中繼資料內發行 <xref:System.ServiceModel.EndpointAddress.Identity%2A>。 當用戶端開發人員執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)對服務端點，產生的組態會包含服務的價值<xref:System.ServiceModel.EndpointAddress.Identity%2A>屬性。 （是否使用安全性設定），WCF 基礎結構會確認服務具有指定的身分識別。  
+ 
+  <xref:System.ServiceModel.EndpointAddress.Identity%2A> 類別的 <xref:System.ServiceModel.EndpointAddress> 屬性代表用戶端所呼叫之服務的身分識別。 服務會在其中繼資料內發行 <xref:System.ServiceModel.EndpointAddress.Identity%2A>。 當用戶端開發人員執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)對服務端點，產生的組態會包含服務的價值<xref:System.ServiceModel.EndpointAddress.Identity%2A>屬性。 （是否使用安全性設定），WCF 基礎結構會確認服務具有指定的身分識別。  
   
 > [!IMPORTANT]
->  中繼資料包含所需的服務身分識別，因此建議您透過安全方式來公開服務中繼資料，例如為服務建立 HTTPS 端點。 如需詳細資訊，請參閱[＜How to：確保中繼資料端點的安全](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
+>  中繼資料包含所需的服務身分識別，因此建議您透過安全方式來公開服務中繼資料，例如為服務建立 HTTPS 端點。 如需詳細資訊，請參閱[如何：確保中繼資料端點的安全](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
   
 ## <a name="identity-types"></a>身分識別類型  
  服務可以提供六種身分識別。 每種身分識別類型都會對應至可包含在組態 `<identity>` 項目中的某個項目。 所使用的類型會隨情況和服務的安全性需求而有所不同， 下表說明每種身分識別類型。  
@@ -72,7 +73,7 @@ ms.locfileid: "54540607"
   
   
   
- 如果，服務 (而不是 Windows) 將憑證指定為用戶端認證類型，則憑證的 DNS 屬性應該會是 `contoso.com`  (或者，如果 DNS 屬性為 `null`，則憑證的主體名稱必須是 `contoso.com`)。  
+ 如果，服務 (而不是 Windows) 將憑證指定為用戶端認證類型，則憑證的 DNS 屬性應該會是 `contoso.com` (或者，如果 DNS 屬性為 `null`，則憑證的主體名稱必須是 `contoso.com`)。  
   
 #### <a name="using-a-specific-value-for-identity"></a>使用特定的身分識別值  
  下列用戶端組態檔說明服務的身分識別值如何成為所需的特定值。 在下列範例中，用戶端可與兩個端點進行通訊。 第一個端點是使用憑證指紋進行識別，而第二個則是使用憑證 RSA 金鑰。 也就是說，這個憑證只包含公用金鑰/私用金鑰組，不是由受信任的授權單位發行。  
