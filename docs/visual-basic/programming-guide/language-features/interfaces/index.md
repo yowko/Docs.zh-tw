@@ -2,17 +2,11 @@
 title: 介面 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Visual Basic code, interfaces
-- interfaces [Visual Basic], Visual Basic
-- interfaces
-- interfaces [Visual Basic]
+  - 'Visual Basic code, interfaces'
+  - 'interfaces [Visual Basic], Visual Basic'
+  - interfaces
+  - 'interfaces [Visual Basic]'
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 8380778398495fe9948e6a0eb19b535656a575f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654418"
 ---
 # <a name="interfaces-visual-basic"></a>介面 (Visual Basic)
 「介面」可定義類別可實作的屬性、方法和事件。 介面可讓您將功能定義為一小組緊密相關的屬性、方法和事件；這會降低相容性問題，因為您可以為您的介面開發增強的實作，而不會危及現有程式碼。 只要開發額外的介面和實作，您就可以隨時加入新功能。  
@@ -37,20 +31,20 @@ ms.locfileid: "33654418"
   
  例如，下列程式碼會定義一個介面，其包含一個函式、一個屬性與一個事件。  
   
- [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>實作介面  
- Visual Basic 保留字`Implements`使用兩種方式。 `Implements` 陳述式表示類別或結構實作介面。 `Implements` 關鍵字表示類別成員或結構成員實作特定介面成員。  
+ Visual Basic 保留字`Implements`用於兩種方式。 `Implements` 陳述式表示類別或結構實作介面。 `Implements` 關鍵字表示類別成員或結構成員實作特定介面成員。  
   
 ### <a name="implements-statement"></a>Implements 陳述式  
  如果類別或結構實作一或多個介面，它在 `Class` 或 `Structure` 陳述式後面必須緊接著 `Implements` 陳述式。 `Implements` 陳述式需要由類別實作的介面清單 (以逗號分隔)。 類別或結構必須使用 `Implements` 關鍵字實作所有介面成員。  
   
 ### <a name="implements-keyword"></a>Implements 關鍵字  
- `Implements` 關鍵字需要實作介面成員之逗號分隔清單。 一般而言，只會指定單一介面成員，但您可以指定多個成員。 介面成員的規格包含介面名稱 (必須在類別內的實作陳述式中指定)、句號，以及要實作的成員函式、屬性或事件的名稱。 實作介面成員的成員名稱可以使用任何合法的識別項，並不限於`InterfaceName_MethodName`舊版的 Visual Basic 中使用的慣例。  
+  `Implements` 關鍵字需要實作介面成員之逗號分隔清單。 一般而言，只會指定單一介面成員，但您可以指定多個成員。 介面成員的規格包含介面名稱 (必須在類別內的實作陳述式中指定)、句號，以及要實作的成員函式、屬性或事件的名稱。 實作介面成員的成員名稱可以使用任何合法的識別項，並不限於`InterfaceName_MethodName`舊版的 Visual Basic 中使用的慣例。  
   
  例如，下列程式碼顯示如何宣告實作介面的方法、且名為 `Sub1` 的副程式：  
   
- [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/VisualBasic/index_2.vb)]  
+ [!code-vb[VbVbalrOOP#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#69)]  
   
  實作成員的參數類型和傳回型別，必須符合介面中的介面屬性或成員宣告。 最常見的實作介面項目的方式是使用與介面同名的成員，如上述範例所示。  
   
@@ -58,7 +52,7 @@ ms.locfileid: "33654418"
   
  使用 `Implements`，您也可以撰寫單一方法來實作一個介面中定義的多個方法，如下列範例所示：  
   
- [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/VisualBasic/index_3.vb)]  
+ [!code-vb[VbVbalrOOP#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#70)]  
   
  您可以使用私用成員來實作介面成員。 當私用成員實作介面的成員時，該成員會經由介面成為可用，即使不是直接在類別的物件變數上使用亦然。  
   
@@ -67,15 +61,15 @@ ms.locfileid: "33654418"
   
  下列範例會定義兩個介面。 第二個介面 `Interface2` 繼承 `Interface1`，並定義額外的屬性和方法。  
   
- [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/VisualBasic/index_4.vb)]  
+ [!code-vb[VbVbalrOOP#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#39)]  
   
  下一個範例會實作 `Interface1`，即上述範例中定義的介面：  
   
- [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/VisualBasic/index_5.vb)]  
+ [!code-vb[VbVbalrOOP#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#40)]  
   
  最後一個範例會實作 `Interface2`，包括繼承自 `Interface1` 的方法：  
   
- [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/VisualBasic/index_6.vb)]  
+ [!code-vb[VbVbalrOOP#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#41)]  
   
  您可以使用 readwrite 屬性來實作 readonly 屬性 (也就是您不需要在實作類別中將它宣告為 readonly)。  實作介面保證至少會實作此介面所宣告的成員，但是您可以提供更多功能，例如可讓您使用可寫入的屬性。  
   
