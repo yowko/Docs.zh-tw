@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 5ff3b12e85b9ab7fb8341bb8665a057165e78816
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 824481c9c73d496998d5810c620b2317c1ec252a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968014"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203437"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名類型 (Visual Basic)
 Visual Basic 支援可讓您建立物件，而不需要撰寫的資料類型的類別定義的匿名型別。 編譯器 (Compiler) 會自動幫您建立類別 (Class)。 類別沒有可使用的名稱、 直接繼承自<xref:System.Object>，並包含您指定在宣告物件的屬性。 未指定資料類型的名稱，因為它指*匿名型別*。  
@@ -81,7 +81,7 @@ Visual Basic 支援可讓您建立物件，而不需要撰寫的資料類型的�
 ### <a name="read-only-values"></a>唯讀的值  
  無法變更索引鍵屬性的值。 例如，在`prod8`在前一個範例中，`Name`並`Price`欄位`read-only`，但`OnHand`可以變更。  
   
- [!code-vb[VbVbalrAnonymousTypes#8](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_8.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
 ## <a name="anonymous-types-from-query-expressions"></a>從查詢運算式的匿名型別  
  查詢運算式不一定需要建立匿名型別。 如果可能的話，它們會使用現有的型別來保存資料行的資料。 會發生這種情況是當查詢傳回整筆記錄，從資料來源或從每一筆記錄只能有一個欄位。 在下列程式碼範例中，`customers`是物件的集合`Customer`類別。 類別具有許多屬性，而且您可以在查詢結果中，依任何順序包含一或多個。 在前兩個範例中，任何匿名型別不是必要的因為查詢選取的具名類型的項目：  

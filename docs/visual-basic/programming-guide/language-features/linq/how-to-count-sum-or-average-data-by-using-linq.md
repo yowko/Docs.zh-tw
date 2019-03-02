@@ -15,12 +15,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: e95f9d75ab9db07b55257bbf6ca951a898b2fb2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ff57029768c89e584fd2d7381fd79e38fbed14f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735087"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203450"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>HOW TO：計數、 加總或平均的資料，使用 LINQ (Visual Basic)
 Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並執行查詢。  
@@ -73,7 +73,7 @@ Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並�
   
      將下列程式碼加入`Load`來查詢公開為屬性的資料表事件您<xref:System.Data.Linq.DataContext>和計數、 加總和結果的平均值。 此範例會使用`Aggregate`子句，以單一的結果，查詢和`Group By`子句，以顯示平均值分組結果。  
   
-     [!code-vb[VbLINQToSQLHowTos#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-count-sum-or-average-data-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form6.vb#13)]  
   
 4.  按 F5 執行您的專案，並檢視結果。  
   

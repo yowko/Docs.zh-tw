@@ -8,6 +8,7 @@ api_location:
 - clr.dll
 - mscorwks.dll
 - mscoreei.dll
+- mscorsvr.dll
 api_type:
 - DLLExport
 f1_keywords:
@@ -19,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 755ff827300dd9fef5944924f6373415f6d8fa6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d990d63a007240ab0bd0240f7b45fed52e2a2129
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568578"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212244"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 函式
 強制 common language runtime (CLR) 版本所有的介面指標，它就會保存於執行階段可呼叫包裝函式 (RCW)。 這有釋放 RCW 的所有快取的效果。 此全域函式已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 相反地，針對特定執行階段使用的進入點。  

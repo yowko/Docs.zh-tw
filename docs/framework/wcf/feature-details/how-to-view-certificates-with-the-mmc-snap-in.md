@@ -1,61 +1,86 @@
 ---
 title: HOW TO：使用 MMC 嵌入式管理單元檢視憑證
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 72fd6a1be2f33e1bfeb08fd43f3436627ee842e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521578"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200282"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>HOW TO：使用 MMC 嵌入式管理單元檢視憑證
-常見的認證類型是 X.509 憑證。 當建立安全服務或用戶端時，您可以藉由使用像是 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 方法，指定用來當做用戶端或服務認證的憑證。 方法需要各種參數，例如儲存憑證的存放區，以及當搜尋憑證時要使用的值。 下列程序示範如何檢視電腦上的存放區，以尋找適當的憑證。 如需尋找憑證指紋的範例，請參閱[How to:擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
+當您建立安全的用戶端或服務時，您可以使用[憑證](working-with-certificates.md)身分的認證。 例如，常見的認證類型是 X.509 憑證，您建立與<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>方法。 
+
+有三種不同的類型，您可以檢查與 Microsoft Management Console (MMC) 在 Windows 系統上的憑證存放區：
+
+- 本機電腦：本機裝置和裝置上的所有使用者通用存放區。
+
+- 目前的使用者：存放區是目前的使用者帳戶，在裝置上的本機。
+
+- 服務帳戶：存放區是在裝置上的特定服務的本機。
+
   
-### <a name="to-view-certificates-in-the-mmc-snap-in"></a>在 MMC 嵌入式管理單元中檢視憑證  
+## <a name="view-certificates-in-the-mmc-snap-in"></a>在 MMC 嵌入式管理單元檢視憑證 
+
+下列程序示範如何檢查在您的本機裝置，以尋找適當的憑證存放區： 
   
-1.  開啟 [命令提示字元] 視窗。  
+1. 選取 **執行**從**開始**功能表，然後輸入*mmc*。 
+
+    MMC 隨即出現。 
   
-2.  型別`mmc`按下 ENTER 鍵。 請注意，若要檢視本機電腦存放區中的憑證，您必須是系統管理員的角色。  
+2. 從**檔案**功能表上，選取**新增/移除嵌入式管理單元**。 
+    
+    **新增或移除嵌入式管理單元** 視窗隨即出現。
   
-3.  在 **檔案**功能表上，按一下**新增/移除嵌入式管理單元**。  
+3. 從**可用的嵌入式管理單元**清單中，選擇**憑證**，然後選取**新增**。  
+
+    ![新增憑證嵌入式管理單元](./media/mmc-add-certificate-snap-in.png)
   
-4.  按一下 [加入] 。  
+4. 在 [**憑證嵌入式管理單元**視窗中，選取**電腦帳戶**，然後選取**下一步]**。 
   
-5.  在 **新增獨立嵌入式管理單元**對話方塊中，選取**憑證**。  
+    或者，您可以選取**我的使用者帳戶**目前的使用者或**服務帳戶**針對特定服務。 
+
+    > [!NOTE]
+    > 如果您不是為您的裝置系統管理員，您可以只針對您的使用者帳戶來管理憑證。
   
-6.  按一下 [加入] 。  
+5. 在 [**選取電腦**] 視窗中，保持**本機電腦**選取，然後按**完成**。  
   
-7.  在 **憑證嵌入式管理單元**對話方塊中，選取**電腦帳戶**，按一下 **下一步**。 或者，您可以選取**我的使用者帳戶**或是**服務帳戶**。 如果您不是電腦的系統管理員，就只能夠管理您使用者帳戶的憑證。  
+6. 在 **新增或移除嵌入式管理單元**視窗中，選取**確定**。  
   
-8.  在 [**選取的電腦**] 對話方塊中，按一下**完成**。  
+    ![新增憑證嵌入式管理單元](./media/mmc-certificate-snap-in-selected.png)
+
+7. 選擇項：從**檔案**功能表上，選取**儲存**或是**另存新檔**儲存 MMC 主控台檔案供稍後使用。  
+
+8. 若要檢視您的憑證 MMC 嵌入式管理單元中，選取**主控台根目錄**的左窗格中，然後展開**Certificates (Local Computer)**。
+
+    每種類型的憑證的目錄清單隨即出現。 從每個憑證目錄中，您可以檢視、 匯出、 匯入，並刪除其憑證。
   
-9. 在 [**新增獨立嵌入式管理單元**] 對話方塊中，按一下**關閉**。  
+
+## <a name="view-certificates-with-the-certificate-manager-tool"></a>使用憑證管理員工具檢視憑證
+
+您也可以檢視、 匯出、 匯入，並使用憑證管理員工具來刪除憑證。
+
+### <a name="to-view-certificates-for-the-local-device"></a>若要檢視本機裝置的憑證
+
+1. 選取 **執行**從**開始**功能表，然後輸入*certlm.msc*。 
+
+    憑證管理員工具的本機裝置會出現。 
   
-10. 在 [**新增/移除嵌入式管理單元**] 對話方塊中，按一下**確定**。  
+2. 若要檢視您的憑證，在**憑證-本機電腦**在左窗格中，依序展開您想要檢視的憑證類型的目錄。
+
+### <a name="to-view-certificates-for-the-current-user"></a>若要檢視目前的使用者憑證
+
+1. 選取 **執行**從**開始**功能表，然後輸入*certmgr.msc*。 
+
+    目前使用者的憑證管理員工具隨即出現。 
   
-11. 在 [**主控台根目錄**] 視窗中，按一下**Certificates (Local Computer)** 以檢視憑證存放區的電腦。  
-  
-12. 選擇性。 若要檢視您帳戶的憑證，請重複步驟 3 到 6。 在步驟 7，而不是選取**電腦帳戶**，按一下**我的使用者帳戶**並重複步驟 8 到 10。  
-  
-13. 選擇性。 在上**檔案**功能表上，按一下**儲存**或是**另存新檔**。 儲存主控台檔案供稍後使用。  
-  
-## <a name="viewing-certificates-with-internet-explorer"></a>使用 Internet Explorer 檢視憑證  
- 您也可以使用 Internet Explorer 檢視、匯出、匯入和刪除憑證。  
-  
-#### <a name="to-view-certificates-with-internet-explorer"></a>使用 Internet Explorer 檢視憑證  
-  
-1.  在 Internet Explorer 中，按一下**工具**，然後按一下**網際網路選項**以顯示**網際網路選項** 對話方塊。  
-  
-2.  按一下 [**內容**] 索引標籤。  
-  
-3.  底下**憑證**，按一下**憑證**。  
-  
-4.  若要檢視任何憑證的詳細資料，選取憑證然後按一下**檢視**。  
+2. 若要檢視您的憑證，在**憑證-目前使用者**在左窗格中，依序展開您想要檢視的憑證類型的目錄。
+
   
 ## <a name="see-also"></a>另請參閱
-- [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [如何：在開發期間，用於建立暫時憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
-- [如何：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [使用憑證](working-with-certificates.md)
+- [如何：建立開發時要使用的暫時憑證](how-to-create-temporary-certificates-for-use-during-development.md)
+- [如何：擷取憑證的指紋](how-to-retrieve-the-thumbprint-of-a-certificate.md)

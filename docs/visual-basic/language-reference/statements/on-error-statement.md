@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5dc432f8e62430d48954b2c049cab3ebae4d442e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976482"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203739"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 陳述式 (Visual Basic)
 啟用錯誤處理常式，並指定位置的程序; 中的常式也可以用來停用錯誤處理常式。  
@@ -111,7 +111,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="example"></a>範例  
  此範例會先使用`On Error GoTo`陳述式來指定錯誤處理常式的程序內的位置。 在範例中，嘗試除以零會產生錯誤代碼 6。 在錯誤處理常式中，已處理此錯誤，然後將控制項傳回給造成錯誤的陳述式。 `On Error GoTo 0`陳述式會關閉錯誤捕捉。 則`On Error Resume Next`陳述式用來延遲錯誤捕捉，以便可以針對特定已知的內容下一個陳述式所產生的錯誤。 請注意，`Err.Clear`用來清除`Err`之後已處理此錯誤的物件的屬性。  
   
- [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
+ [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]  
   
 ## <a name="requirements"></a>需求  
  **命名空間：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

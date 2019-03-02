@@ -17,12 +17,12 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 8526f632b7e54c03bd16c3af70375179cd7cf277
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c10fc3998469e19d5be744ea8fb4faed25f1a2a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724469"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201218"
 ---
 # <a name="--operator-visual-basic"></a>- 運算子 (Visual Basic)
 傳回兩個數值運算式或負數值運算式的值之間的差異。  
@@ -48,7 +48,7 @@ ms.locfileid: "54724469"
  將結果資料類型是數值類型適合的資料型別`expression1`和`expression2`。 請參閱中的 「 整數算術 」 表格[資料類型的運算子結果](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)。  
   
 ## <a name="supported-types"></a>支援的型別  
- 所有的數字類型。 這包括的不帶正負號和浮點類型和`Decimal`。  
+ 所有數值類型。 這包括的不帶正負號和浮點類型和`Decimal`。  
   
 ## <a name="remarks"></a>備註  
  在先前所示的語法中顯示的第一個使用方式`–`操作員*二進位*算術減法運算子的兩個數值運算式之間的差異。  
@@ -63,7 +63,7 @@ ms.locfileid: "54724469"
 ## <a name="example"></a>範例  
  下列範例會使用`–`運算子來計算並傳回兩個數字，之間的差異，然後要變換正負號數字。  
   
- [!code-vb[VbVbalrOperators#10](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
  遵循這些陳述式中，執行`binaryResult`包含 124.45 和`unaryResult`包含 –334.90。  
   

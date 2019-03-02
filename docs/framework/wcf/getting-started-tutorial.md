@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 2bd0b7e0d927e53f70515cfa124034a4cacc5ce7
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b7ba25795dd69e5bd978c77928f9b9797f4d4e19
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332243"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200880"
 ---
 # <a name="getting-started-tutorial"></a>快速入門教學課程
 在本節中所包含的主題旨在讓您快速獲得至 Windows Communication Foundation (WCF) 程式設計經驗。 每個主題已設計成依本主題結尾的清單順序完成。 循序完成本教學課程可讓您建立 WCF 服務和用戶端應用程式所需的步驟大致了解。 服務會公開一個或多個端點，而其中每個端點都會公開一項或多項服務作業。 *端點*服務的指定位置可以找到服務，包含的資訊，說明服務與合約定義的功能，用戶端必須之間的通訊的繫結位址服務提供給其用戶端。
@@ -33,7 +33,7 @@ ms.locfileid: "56332243"
 
  [如何：實作服務合約](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 
- 說明如何實作服務合約。 一旦定義了合約，就必須透過服務類別加以實作。
+ 說明如何實作服務合約。 合約定義之後，必須使用服務類別來實作。
 
  [如何：裝載和執行基本的服務](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
 

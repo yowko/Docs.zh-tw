@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704650"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203622"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic 中的存取層級
 *存取層級*的宣告的項目能夠存取它的範圍，也就是哪些程式碼具有讀取或寫入其中的權限。 這決定不只您宣告的方式的項目本身，還包括的項目容器的存取層級。 無法存取包含的項目中的程式碼無法存取任何其包含的項目，即使是宣告為`Public`。 例如，`Public`變數中`Private`可以從存取結構，包含結構的類別內，而不是從該類別以外。  
@@ -101,8 +101,9 @@ Private Protected internalValue As Integer
 
 如需詳細資訊，請參閱[設定的 Visual Basic 語言版本](../../../language-reference/configure-language-version.md)。
 
- ## <a name="access-modifiers"></a>存取修飾詞  
- 指定存取層級的關鍵字稱為*存取修飾詞*。 下表比較存取修飾詞。  
+## <a name="access-modifiers"></a>存取修飾詞  
+
+指定存取層級的關鍵字稱為*存取修飾詞*。 下表比較存取修飾詞。  
   
 |存取修飾詞|授與存取層級|您可以使用此存取層級宣告的項目|在其中您可以使用這個修飾詞宣告內容|  
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  

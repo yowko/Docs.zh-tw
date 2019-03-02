@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e90f551b94e16fc7cecf768feff43e4d084c04a6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b11452e34a802e84a12eb1832234ae5ab60aa992
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966147"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203544"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<Appcontextswitchoverrides> > 項目
 定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。  
@@ -88,6 +88,7 @@ ms.locfileid: "56966147"
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|停用 SslStream TLS 伺服器端的警示。|.NET Framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |控制項是否[DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer)序列化某些於 ECMAScript V6 及 V8 標準為基礎的控制字元。 如需詳細資訊，請參閱[風險降低：序列化使用 DataContractJsonSerializer 控制字元](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|控制項是否<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>支援多個調整或只有單一調整時區。 如果`true`，它會使用<xref:System.TimeZoneInfo>類型來序列化和還原序列化日期和時間資料; 否則它會使用<xref:System.TimeZone>型別，不支援多個調整規則。|.NET Framework 4.6.2|
+|`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|控制項是否<xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType>物件序列化和還原序列化期間使用較大的陣列。 此參數設定為`true`例如改善效能的序列化和還原序列化的類型的大型物件圖形<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>。 |.NET Framework 4.7.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|控制項是否<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType>建構函式會設定新的物件<xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType>與現有的物件參考的屬性。 如需詳細資訊，請參閱[風險降低：ClaimsIdentity 建構函式](../../../migration-guide/mitigation-claimsidentity-constructor.md)。|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|控制是否要重複使用嘗試<xref:System.Security.Cryptography.AesCryptoServiceProvider>解密程式會擲回<xref:System.Security.Cryptography.CryptographicException>。 如需詳細資訊，請參閱 < [AesCryptoServiceProvider 解密程式提供可重複使用的轉換](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)。|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|控制項是否的值[cspparameters.parentwindowhandle 應該](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)屬性是[IntPtr](xref:System.IntPtr)代表視窗的記憶體位置處理，或它是否視窗控制代碼 (HWND)。 如需詳細資訊，請參閱[風險降低：Cspparameters.parentwindowhandle 應該有 HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)。 |.NET Framework 4.7|   

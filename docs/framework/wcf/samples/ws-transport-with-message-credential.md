@@ -2,12 +2,12 @@
 title: 使用訊息認證的 WS 傳輸
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: 9495dea69e489321360b1f4e24fea7d1e84fa038
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb923fd4d7271f7f364d24743c3f9f6393ef8f9f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690211"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200581"
 ---
 # <a name="ws-transport-with-message-credential"></a>使用訊息認證的 WS 傳輸
 這個範例會示範結合訊息中傳遞的用戶端認證來使用 SSL 傳輸安全性。 這個範例會使用 `wsHttpBinding` 繫結。  
@@ -16,7 +16,8 @@ ms.locfileid: "54690211"
   
  在這個範例中，`UserName` 認證類型會用來驗證服務的用戶端。  
   
- 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。 `wsHttpBinding` 繫結會指定並設定在用戶端和服務的應用程式組態檔中。  
+ 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。 
+  `wsHttpBinding` 繫結會指定並設定在用戶端和服務的應用程式組態檔中。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -61,7 +62,7 @@ public string GetCallerIdentity()
   
  指定的位址會使用 https:// 配置。 繫結組態會將安全性模式設定為 `TransportWithMessageCredential`。 相同的安全性模式必須指定在服務的 Web.config 檔中。  
   
- 當您嘗試存取 https 時，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示： 位址，例如`https://localhost/servicemodelsamples/service.svc `，從您的瀏覽器。 若要允許 WCF 用戶端，才能使用測試憑證中的位置，已新增一些額外的程式碼用戶端以隱藏安全性警示。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
+ 當您嘗試存取 https 時，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示： 位址，例如`https://localhost/servicemodelsamples/service.svc`，從您的瀏覽器。 若要允許 WCF 用戶端，才能使用測試憑證中的位置，已新增一些額外的程式碼用戶端以隱藏安全性警示。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   

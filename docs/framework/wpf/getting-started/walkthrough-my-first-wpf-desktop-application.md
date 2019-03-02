@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: bfbe1bb413e0d9f46fe587d7a412af5303685b7a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ace9e339a65c14e69e1a672880e392c7e09d36e8
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748371"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212374"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>逐步解說：我第一個 WPF 桌面應用程式
 
@@ -205,9 +205,9 @@ ms.locfileid: "56748371"
 
 10. 加入名為影像*watermark.png*至專案。 您可以建立自己的映像、 將檔案複製範例程式碼，或取得它[此處](https://github.com/dotnet/docs/blob/master/docs/framework/wpf/getting-started/media/watermark.png)。
 
-   1. 以滑鼠右鍵按一下專案節點，然後選取**新增** > **現有項目**，或按**Shift**+**Alt**+ **A**。
+    1. 以滑鼠右鍵按一下專案節點，然後選取**新增** > **現有項目**，或按**Shift**+**Alt**+ **A**。
 
-   2. 在 **加入現有項目** 對話方塊中，瀏覽至您想要使用此項目，然後選取 映像檔案**新增**。
+    2. 在 **加入現有項目** 對話方塊中，瀏覽至您想要使用此項目，然後選取 映像檔案**新增**。
 
 ## <a name="build-and-run-the-application"></a>建立和執行應用程式
 
