@@ -1,61 +1,86 @@
 ---
 title: HOW TO：使用 MMC 嵌入式管理單元檢視憑證
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 72fd6a1be2f33e1bfeb08fd43f3436627ee842e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521578"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200282"
 ---
-# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a><span data-ttu-id="c61c8-102">HOW TO：使用 MMC 嵌入式管理單元檢視憑證</span><span class="sxs-lookup"><span data-stu-id="c61c8-102">How to: View Certificates with the MMC Snap-in</span></span>
-<span data-ttu-id="c61c8-103">常見的認證類型是 X.509 憑證。</span><span class="sxs-lookup"><span data-stu-id="c61c8-103">A common type of credential is the X.509 certificate.</span></span> <span data-ttu-id="c61c8-104">當建立安全服務或用戶端時，您可以藉由使用像是 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 方法，指定用來當做用戶端或服務認證的憑證。</span><span class="sxs-lookup"><span data-stu-id="c61c8-104">When creating secure services or clients, you can specify a certificate be used as the client or service credential by using methods such as the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> method.</span></span> <span data-ttu-id="c61c8-105">方法需要各種參數，例如儲存憑證的存放區，以及當搜尋憑證時要使用的值。</span><span class="sxs-lookup"><span data-stu-id="c61c8-105">The method requires various parameters, such as the store where the certificate is stored and a value to use when searching for the certificate.</span></span> <span data-ttu-id="c61c8-106">下列程序示範如何檢視電腦上的存放區，以尋找適當的憑證。</span><span class="sxs-lookup"><span data-stu-id="c61c8-106">The following procedure demonstrates how to examine the stores on a computer to find an appropriate certificate.</span></span> <span data-ttu-id="c61c8-107">如需尋找憑證指紋的範例，請參閱[How to:擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。</span><span class="sxs-lookup"><span data-stu-id="c61c8-107">For an example of finding the certificate thumbprint, see [How to: Retrieve the Thumbprint of a Certificate](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).</span></span>  
+# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a><span data-ttu-id="e51d9-102">HOW TO：使用 MMC 嵌入式管理單元檢視憑證</span><span class="sxs-lookup"><span data-stu-id="e51d9-102">How to: View certificates with the MMC snap-in</span></span>
+<span data-ttu-id="e51d9-103">當您建立安全的用戶端或服務時，您可以使用[憑證](working-with-certificates.md)身分的認證。</span><span class="sxs-lookup"><span data-stu-id="e51d9-103">When you create a secure client or service, you can use a [certificate](working-with-certificates.md) as the credential.</span></span> <span data-ttu-id="e51d9-104">例如，常見的認證類型是 X.509 憑證，您建立與<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="e51d9-104">For example, a common type of credential is the X.509 certificate, which you create with the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> method.</span></span> 
+
+<span data-ttu-id="e51d9-105">有三種不同的類型，您可以檢查與 Microsoft Management Console (MMC) 在 Windows 系統上的憑證存放區：</span><span class="sxs-lookup"><span data-stu-id="e51d9-105">There are three different types of certificate stores that you can examine with the Microsoft Management Console (MMC) on Windows systems:</span></span>
+
+- <span data-ttu-id="e51d9-106">本機電腦：本機裝置和裝置上的所有使用者通用存放區。</span><span class="sxs-lookup"><span data-stu-id="e51d9-106">Local computer: The store is local to the device and global to all users on the device.</span></span>
+
+- <span data-ttu-id="e51d9-107">目前的使用者：存放區是目前的使用者帳戶，在裝置上的本機。</span><span class="sxs-lookup"><span data-stu-id="e51d9-107">Current user: The store is local to the current user account on the device.</span></span>
+
+- <span data-ttu-id="e51d9-108">服務帳戶：存放區是在裝置上的特定服務的本機。</span><span class="sxs-lookup"><span data-stu-id="e51d9-108">Service account: The store is local to a particular service on the device.</span></span>
+
   
-### <a name="to-view-certificates-in-the-mmc-snap-in"></a><span data-ttu-id="c61c8-108">在 MMC 嵌入式管理單元中檢視憑證</span><span class="sxs-lookup"><span data-stu-id="c61c8-108">To view certificates in the MMC snap-in</span></span>  
+## <a name="view-certificates-in-the-mmc-snap-in"></a><span data-ttu-id="e51d9-109">在 MMC 嵌入式管理單元檢視憑證</span><span class="sxs-lookup"><span data-stu-id="e51d9-109">View certificates in the MMC snap-in</span></span> 
+
+<span data-ttu-id="e51d9-110">下列程序示範如何檢查在您的本機裝置，以尋找適當的憑證存放區：</span><span class="sxs-lookup"><span data-stu-id="e51d9-110">The following procedure demonstrates how to examine the stores on your local device to find an appropriate certificate:</span></span> 
   
-1.  <span data-ttu-id="c61c8-109">開啟 [命令提示字元] 視窗。</span><span class="sxs-lookup"><span data-stu-id="c61c8-109">Open a Command Prompt window.</span></span>  
+1. <span data-ttu-id="e51d9-111">選取 **執行**從**開始**功能表，然後輸入*mmc*。</span><span class="sxs-lookup"><span data-stu-id="e51d9-111">Select **Run** from the **Start** menu, and then enter *mmc*.</span></span> 
+
+    <span data-ttu-id="e51d9-112">MMC 隨即出現。</span><span class="sxs-lookup"><span data-stu-id="e51d9-112">The MMC appears.</span></span> 
   
-2.  <span data-ttu-id="c61c8-110">型別`mmc`按下 ENTER 鍵。</span><span class="sxs-lookup"><span data-stu-id="c61c8-110">Type `mmc` and press the ENTER key.</span></span> <span data-ttu-id="c61c8-111">請注意，若要檢視本機電腦存放區中的憑證，您必須是系統管理員的角色。</span><span class="sxs-lookup"><span data-stu-id="c61c8-111">Note that to view certificates in the local machine store, you must be in the Administrator role.</span></span>  
+2. <span data-ttu-id="e51d9-113">從**檔案**功能表上，選取**新增/移除嵌入式管理單元**。</span><span class="sxs-lookup"><span data-stu-id="e51d9-113">From the **File** menu, select **Add/Remove Snap In**.</span></span> 
+    
+    <span data-ttu-id="e51d9-114">**新增或移除嵌入式管理單元** 視窗隨即出現。</span><span class="sxs-lookup"><span data-stu-id="e51d9-114">The **Add or Remove Snap-ins** window appears.</span></span>
   
-3.  <span data-ttu-id="c61c8-112">在 **檔案**功能表上，按一下**新增/移除嵌入式管理單元**。</span><span class="sxs-lookup"><span data-stu-id="c61c8-112">On the **File** menu, click **Add/Remove Snap In**.</span></span>  
+3. <span data-ttu-id="e51d9-115">從**可用的嵌入式管理單元**清單中，選擇**憑證**，然後選取**新增**。</span><span class="sxs-lookup"><span data-stu-id="e51d9-115">From the **Available snap-ins** list, choose **Certificates**, then select **Add**.</span></span>  
+
+    ![新增憑證嵌入式管理單元](./media/mmc-add-certificate-snap-in.png)
   
-4.  <span data-ttu-id="c61c8-113">按一下 [加入] 。</span><span class="sxs-lookup"><span data-stu-id="c61c8-113">Click **Add**.</span></span>  
+4. <span data-ttu-id="e51d9-117">在 [**憑證嵌入式管理單元**視窗中，選取**電腦帳戶**，然後選取**下一步]**。</span><span class="sxs-lookup"><span data-stu-id="e51d9-117">In the **Certificates snap-in** window, select **Computer account**, and then select **Next**.</span></span> 
   
-5.  <span data-ttu-id="c61c8-114">在 **新增獨立嵌入式管理單元**對話方塊中，選取**憑證**。</span><span class="sxs-lookup"><span data-stu-id="c61c8-114">In the **Add Standalone Snap-in** dialog box, select **Certificates**.</span></span>  
+    <span data-ttu-id="e51d9-118">或者，您可以選取**我的使用者帳戶**目前的使用者或**服務帳戶**針對特定服務。</span><span class="sxs-lookup"><span data-stu-id="e51d9-118">Optionally, you can select **My user account** for the current user or **Service account** for a particular service.</span></span> 
+
+    > [!NOTE]
+    > <span data-ttu-id="e51d9-119">如果您不是為您的裝置系統管理員，您可以只針對您的使用者帳戶來管理憑證。</span><span class="sxs-lookup"><span data-stu-id="e51d9-119">If you're not an administrator for your device, you can manage certificates only for your user account.</span></span>
   
-6.  <span data-ttu-id="c61c8-115">按一下 [加入] 。</span><span class="sxs-lookup"><span data-stu-id="c61c8-115">Click **Add**.</span></span>  
+5. <span data-ttu-id="e51d9-120">在 [**選取電腦**] 視窗中，保持**本機電腦**選取，然後按**完成**。</span><span class="sxs-lookup"><span data-stu-id="e51d9-120">In the **Select Computer** window, leave **Local computer** selected, and then select **Finish**.</span></span>  
   
-7.  <span data-ttu-id="c61c8-116">在 **憑證嵌入式管理單元**對話方塊中，選取**電腦帳戶**，按一下 **下一步**。</span><span class="sxs-lookup"><span data-stu-id="c61c8-116">In the **Certificates snap-in** dialog box, select **Computer account** and click **Next**.</span></span> <span data-ttu-id="c61c8-117">或者，您可以選取**我的使用者帳戶**或是**服務帳戶**。</span><span class="sxs-lookup"><span data-stu-id="c61c8-117">Optionally, you can select **My User account** or **Service account**.</span></span> <span data-ttu-id="c61c8-118">如果您不是電腦的系統管理員，就只能夠管理您使用者帳戶的憑證。</span><span class="sxs-lookup"><span data-stu-id="c61c8-118">If you are not an administrator of the computer, you can manage certificates only for your user account.</span></span>  
+6. <span data-ttu-id="e51d9-121">在 **新增或移除嵌入式管理單元**視窗中，選取**確定**。</span><span class="sxs-lookup"><span data-stu-id="e51d9-121">In the **Add or Remove Snap-in** window, select **OK**.</span></span>  
   
-8.  <span data-ttu-id="c61c8-119">在 [**選取的電腦**] 對話方塊中，按一下**完成**。</span><span class="sxs-lookup"><span data-stu-id="c61c8-119">In the **Select Computer** dialog box, click **Finish**.</span></span>  
+    ![新增憑證嵌入式管理單元](./media/mmc-certificate-snap-in-selected.png)
+
+7. <span data-ttu-id="e51d9-123">選擇項：從**檔案**功能表上，選取**儲存**或是**另存新檔**儲存 MMC 主控台檔案供稍後使用。</span><span class="sxs-lookup"><span data-stu-id="e51d9-123">Optional: From the **File** menu, select **Save** or **Save As** to save the MMC console file for later use.</span></span>  
+
+8. <span data-ttu-id="e51d9-124">若要檢視您的憑證 MMC 嵌入式管理單元中，選取**主控台根目錄**的左窗格中，然後展開**Certificates (Local Computer)**。</span><span class="sxs-lookup"><span data-stu-id="e51d9-124">To view your certificates in the MMC snap-in, select **Console Root** in the left pane, then expand **Certificates (Local Computer)**.</span></span>
+
+    <span data-ttu-id="e51d9-125">每種類型的憑證的目錄清單隨即出現。</span><span class="sxs-lookup"><span data-stu-id="e51d9-125">A list of directories for each type of certificate appears.</span></span> <span data-ttu-id="e51d9-126">從每個憑證目錄中，您可以檢視、 匯出、 匯入，並刪除其憑證。</span><span class="sxs-lookup"><span data-stu-id="e51d9-126">From each certificate directory, you can view, export, import, and delete its certificates.</span></span>
   
-9. <span data-ttu-id="c61c8-120">在 [**新增獨立嵌入式管理單元**] 對話方塊中，按一下**關閉**。</span><span class="sxs-lookup"><span data-stu-id="c61c8-120">In the **Add Standalone Snap-in** dialog box, click **Close**.</span></span>  
+
+## <a name="view-certificates-with-the-certificate-manager-tool"></a><span data-ttu-id="e51d9-127">使用憑證管理員工具檢視憑證</span><span class="sxs-lookup"><span data-stu-id="e51d9-127">View certificates with the Certificate Manager tool</span></span>
+
+<span data-ttu-id="e51d9-128">您也可以檢視、 匯出、 匯入，並使用憑證管理員工具來刪除憑證。</span><span class="sxs-lookup"><span data-stu-id="e51d9-128">You can also view, export, import, and delete certificates by using the Certificate Manager tool.</span></span>
+
+### <a name="to-view-certificates-for-the-local-device"></a><span data-ttu-id="e51d9-129">若要檢視本機裝置的憑證</span><span class="sxs-lookup"><span data-stu-id="e51d9-129">To view certificates for the local device</span></span>
+
+1. <span data-ttu-id="e51d9-130">選取 **執行**從**開始**功能表，然後輸入*certlm.msc*。</span><span class="sxs-lookup"><span data-stu-id="e51d9-130">Select **Run** from the **Start** menu, and then enter *certlm.msc*.</span></span> 
+
+    <span data-ttu-id="e51d9-131">憑證管理員工具的本機裝置會出現。</span><span class="sxs-lookup"><span data-stu-id="e51d9-131">The Certificate Manager tool for the local device appears.</span></span> 
   
-10. <span data-ttu-id="c61c8-121">在 [**新增/移除嵌入式管理單元**] 對話方塊中，按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="c61c8-121">On the **Add/Remove Snap-in** dialog box, click **OK**.</span></span>  
+2. <span data-ttu-id="e51d9-132">若要檢視您的憑證，在**憑證-本機電腦**在左窗格中，依序展開您想要檢視的憑證類型的目錄。</span><span class="sxs-lookup"><span data-stu-id="e51d9-132">To view your certificates, under **Certificates - Local Computer** in the left pane, expand the directory for the type of certificate you want to view.</span></span>
+
+### <a name="to-view-certificates-for-the-current-user"></a><span data-ttu-id="e51d9-133">若要檢視目前的使用者憑證</span><span class="sxs-lookup"><span data-stu-id="e51d9-133">To view certificates for the current user</span></span>
+
+1. <span data-ttu-id="e51d9-134">選取 **執行**從**開始**功能表，然後輸入*certmgr.msc*。</span><span class="sxs-lookup"><span data-stu-id="e51d9-134">Select **Run** from the **Start** menu, and then enter *certmgr.msc*.</span></span> 
+
+    <span data-ttu-id="e51d9-135">目前使用者的憑證管理員工具隨即出現。</span><span class="sxs-lookup"><span data-stu-id="e51d9-135">The Certificate Manager tool for the current user appears.</span></span> 
   
-11. <span data-ttu-id="c61c8-122">在 [**主控台根目錄**] 視窗中，按一下**Certificates (Local Computer)** 以檢視憑證存放區的電腦。</span><span class="sxs-lookup"><span data-stu-id="c61c8-122">In the **Console Root** window, click **Certificates (Local Computer)** to view the certificate stores for the computer.</span></span>  
+2. <span data-ttu-id="e51d9-136">若要檢視您的憑證，在**憑證-目前使用者**在左窗格中，依序展開您想要檢視的憑證類型的目錄。</span><span class="sxs-lookup"><span data-stu-id="e51d9-136">To view your certificates, under **Certificates - Current User** in the left pane, expand the directory for the type of certificate you want to view.</span></span>
+
   
-12. <span data-ttu-id="c61c8-123">選擇性。</span><span class="sxs-lookup"><span data-stu-id="c61c8-123">Optional.</span></span> <span data-ttu-id="c61c8-124">若要檢視您帳戶的憑證，請重複步驟 3 到 6。</span><span class="sxs-lookup"><span data-stu-id="c61c8-124">To view certificates for your account, repeat steps 3 to 6.</span></span> <span data-ttu-id="c61c8-125">在步驟 7，而不是選取**電腦帳戶**，按一下**我的使用者帳戶**並重複步驟 8 到 10。</span><span class="sxs-lookup"><span data-stu-id="c61c8-125">In step 7, instead of selecting **Computer account**, click **My User account** and repeat steps 8 to 10.</span></span>  
-  
-13. <span data-ttu-id="c61c8-126">選擇性。</span><span class="sxs-lookup"><span data-stu-id="c61c8-126">Optional.</span></span> <span data-ttu-id="c61c8-127">在上**檔案**功能表上，按一下**儲存**或是**另存新檔**。</span><span class="sxs-lookup"><span data-stu-id="c61c8-127">On the **File** menu, click **Save** or **Save As**.</span></span> <span data-ttu-id="c61c8-128">儲存主控台檔案供稍後使用。</span><span class="sxs-lookup"><span data-stu-id="c61c8-128">Save the console file for later reuse.</span></span>  
-  
-## <a name="viewing-certificates-with-internet-explorer"></a><span data-ttu-id="c61c8-129">使用 Internet Explorer 檢視憑證</span><span class="sxs-lookup"><span data-stu-id="c61c8-129">Viewing Certificates with Internet Explorer</span></span>  
- <span data-ttu-id="c61c8-130">您也可以使用 Internet Explorer 檢視、匯出、匯入和刪除憑證。</span><span class="sxs-lookup"><span data-stu-id="c61c8-130">You can also view, export, import, and delete certificates by using Internet Explorer.</span></span>  
-  
-#### <a name="to-view-certificates-with-internet-explorer"></a><span data-ttu-id="c61c8-131">使用 Internet Explorer 檢視憑證</span><span class="sxs-lookup"><span data-stu-id="c61c8-131">To view certificates with Internet Explorer</span></span>  
-  
-1.  <span data-ttu-id="c61c8-132">在 Internet Explorer 中，按一下**工具**，然後按一下**網際網路選項**以顯示**網際網路選項** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="c61c8-132">In Internet Explorer, click **Tools**, then click **Internet Options** to display the **Internet Options** dialog box.</span></span>  
-  
-2.  <span data-ttu-id="c61c8-133">按一下 [**內容**] 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="c61c8-133">Click the **Content** tab.</span></span>  
-  
-3.  <span data-ttu-id="c61c8-134">底下**憑證**，按一下**憑證**。</span><span class="sxs-lookup"><span data-stu-id="c61c8-134">Under **Certificates**, click **Certificates**.</span></span>  
-  
-4.  <span data-ttu-id="c61c8-135">若要檢視任何憑證的詳細資料，選取憑證然後按一下**檢視**。</span><span class="sxs-lookup"><span data-stu-id="c61c8-135">To view details of any certificate, select the certificate and click **View**.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="c61c8-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c61c8-136">See also</span></span>
-- [<span data-ttu-id="c61c8-137">使用憑證</span><span class="sxs-lookup"><span data-stu-id="c61c8-137">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [<span data-ttu-id="c61c8-138">如何：在開發期間，用於建立暫時憑證</span><span class="sxs-lookup"><span data-stu-id="c61c8-138">How to: Create Temporary Certificates for Use During Development</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
-- [<span data-ttu-id="c61c8-139">如何：擷取憑證的指紋</span><span class="sxs-lookup"><span data-stu-id="c61c8-139">How to: Retrieve the Thumbprint of a Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+## <a name="see-also"></a><span data-ttu-id="e51d9-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e51d9-137">See also</span></span>
+- [<span data-ttu-id="e51d9-138">使用憑證</span><span class="sxs-lookup"><span data-stu-id="e51d9-138">Working with certificates</span></span>](working-with-certificates.md)
+- [<span data-ttu-id="e51d9-139">如何：建立開發時要使用的暫時憑證</span><span class="sxs-lookup"><span data-stu-id="e51d9-139">How to: Create temporary certificates for use during development</span></span>](how-to-create-temporary-certificates-for-use-during-development.md)
+- [<span data-ttu-id="e51d9-140">如何：擷取憑證的指紋</span><span class="sxs-lookup"><span data-stu-id="e51d9-140">How to: Retrieve the thumbprint of a certificate</span></span>](how-to-retrieve-the-thumbprint-of-a-certificate.md)
