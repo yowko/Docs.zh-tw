@@ -4,12 +4,12 @@ description: 了解如何使用 .NET Core CLI 工具來建立 .NET Core 程式�
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169361"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212062"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>使用跨平台工具開發程式庫
 
@@ -58,9 +58,9 @@ ms.locfileid: "53169361"
     ```
 
 2. 您可以修改專案檔之 `TargetFramework` 節點中的值，以使用更低或更高的 .NET Standard 版本。
-    
+
     .NET Standard 版本具備回溯相容。 這表示 `netstandard1.0` 程式庫是在 `netstandard1.1` 平台和更高版本上執行。 不過，沒有往後相容性 - 較低的 .NET Standard 平台無法參考較高的平台。 這表示 `netstandard1.0` 程式庫無法參考目標設為 `netstandard1.1` 或更高版本的程式庫。 針對您的需求，選取正確混合使用 API 與平台支援的標準版本。 現在建議使用 `netstandard1.4`。
-    
+
 3. 如果您想要將目標設為 .NET Framework 4.0 或以下版本，或者想要使用位在 .NET Framework 中但不在 .NET Standard 中的 API (例如，`System.Drawing`)，請閱讀下列各節，並了解如何使用多目標。
 
 ## <a name="how-to-target-the-net-framework"></a>如何將目標設為 .NET Framework
@@ -131,7 +131,7 @@ ms.locfileid: "53169361"
 您可在這裡發現三個主要變更︰
 
 1. `TargetFramework` 節點已取代為 `TargetFrameworks`，而且其內表示三個 TFM。
-1. 提取至一個 .NET Framework 參考的 `net40 ` 目標有一個 `<ItemGroup>` 節點。
+1. 提取至一個 .NET Framework 參考的 `net40` 目標有一個 `<ItemGroup>` 節點。
 1. 提取至兩個 .NET Framework 參考的 `net45` 目標有一個 `<ItemGroup>` 節點。
 
 建置系統會得知 `#if` 指示詞中所使用的下列前置處理器符號︰
@@ -256,7 +256,7 @@ netstandard1.4/
    [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. 執行 `dotnet test` 命令，確認已執行 xUnit。 如果您選擇使用 MSTest，則應該會改為執行 MSTest 主控台執行器。
-    
+
 就是這麼容易！ 您現在可以使用命令列工具跨所有平台來測試程式庫。 若要在設定好所有項目之後立即繼續測試，測試程式庫就會非常簡單︰
 
 1. 對程式庫進行變更。
@@ -321,7 +321,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 參考專案的最佳方式是使用 .NET Core CLI 來新增專案參考。 從 **AwesomeLibrary.CSharp** 及 **AwesomeLibrary.FSharp** 專案目錄中，您可以執行下列命令︰
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 **AwesomeLibrary.CSharp** 及 **AwesomeLibrary.FSharp** 的專案檔現在參考 **AwesomeLibrary.Core** 作為 `ProjectReference` 目標。  檢查專案檔並查看其中的下列內容，即可確認這項作業︰

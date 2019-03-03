@@ -4,12 +4,12 @@ description: 尋找資源以了解如何在 Windows、Linux 和 macOS 上建置 
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 3fff7884082c46477d37b08560a2c71e7ee345e5
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2ec7f57250db8779552305b2ee69cbcf1db55d0c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121250"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977160"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
 
@@ -84,4 +84,4 @@ Hello World!
 
 如需支援的 OS X/macOS 版本清單，請參閱 [macOS 開發的必要條件](macos-prerequisites.md)一文。
 
-***
+---

@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 14e3dc265991634b4ef4814fb149f0aaebbcfab6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1add3470799b75ebb92c67eed3509523e510ab6c
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170050"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211789"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>如何使用 .NET Core 命令列介面 (CLI) 工具建立 NuGet 套件
 
@@ -28,13 +28,13 @@ ms.locfileid: "53170050"
 在確定封裝還原後，您可以瀏覽至程式庫所在的目錄︰
 
 ```console
-$ cd src/SuperAwesomeLibrary`
+cd src/SuperAwesomeLibrary
 ```
 
 然後，只要從命令列發出單一命令︰
 
 ```console
-$ dotnet pack
+dotnet pack
 ```
 
 您的 `/bin/Debug` 資料夾現在看起來像這樣︰
@@ -50,7 +50,7 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 請注意，這會產生能夠被偵錯的封裝。 如果想要建置具有版本二進位檔案的 NuGet 套件，您只需要新增 `--configuration` (或 `-c`) 參數，並使用 `release` 作為引數。
 
 ```console
-$ dotnet pack --configuration release
+dotnet pack --configuration release
 ```
 
 您的 `/bin` 資料夾就會有 `release` 資料夾，包含二進位版的 NuGet 封裝︰

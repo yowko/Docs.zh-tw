@@ -107,7 +107,7 @@
 
 如需詳細資訊，請參閱[範例讀我檔案](https://github.com/dotnet/samples/blob/master/README.md) \(英文\)。
 
-## <a name="the-c-interactive-experience"></a>C# 互動式體驗 #
+## <a name="the-c-interactive-experience"></a>C# 互動式體驗
 
 以 C# 撰寫的簡短程式碼範例可以使用 `csharp-interactive` 語言標記來指定在瀏覽器中執行的 C# 範例。 (內嵌程式碼範例使用 `csharp-interactive` 標記，針對從來源包含的程式碼片段，則使用 `code-csharp-interactive` 標記)。這些程式碼範例會在文章中顯示一個程式碼視窗和一個輸出視窗。 在使用者執行範例之後，輸出視窗會顯示來自執行互動式程式碼的所有輸出。 
 
