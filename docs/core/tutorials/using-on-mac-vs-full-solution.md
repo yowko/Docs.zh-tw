@@ -4,12 +4,12 @@ description: 本主題會逐步引導您建置一個包含可重複使用之程�
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 7f06a0b9ae9eeb9ff9020641c6f12744725f30f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c515c3771f8204bbc7b6944f81fed463c309bc3
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727751"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203398"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案
 
@@ -126,7 +126,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
    藉由將 `inputString` "Jack jack" 傳入 `GetWordCount`，您預期 `searchWord` "Jack" 會傳回兩個實例。 按一下螢幕底部 [單元測試] 面板中的 [執行測試] 按鈕或 [測試結果] 面板中的 [重新執行測試] 按鈕來重新執行測試。 測試就會成功。 字串 "Jack jack" 中有兩個 "Jack" 實例 (忽略大小寫)，且測試判斷提示為 `true`。
 
-   ![isual Studio for Mac 測試成功顯示畫面](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
+   ![Visual Studio for Mac 測試成功顯示畫面](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
 
 1. 使用 `Fact` 測試個別的傳回值，只是單元測試的初步用途。 另一個強大的技術，是使用 `Theory` 一次測試數個值。 將下列方法加入至 `TextUtils_GetWordCountShould` 類別。 在您加入此方法後，您在類別中會有兩個方法：
 
@@ -144,7 +144,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
    }
    ```
 
-   `CountInstancesCorrectly` 會檢查 `GetWordCount` 方法是否能正確計數。 `InlineData` 提供要檢查的計數、搜尋文字，以及輸入字串。 測試方法會針對每一行資料各執行一次。 請注意，即使您知道資料中的計數是正確的，且值符合 `GetWordCount` 方法所傳回的計數，仍然要再次先使用 `Assert.NotEqual` 來判斷提示出錯誤。 執行刻意讓測試失敗的步驟，起初看起來似乎有點浪費時間，但是先透過讓測試失敗以檢查測試的邏輯，是一項對測試邏輯很重要的檢查。 當您遇到預期會失敗卻成功的測試方法時，代表測試邏輯中有錯誤。 每次當您建立測試方法時，都值得採取此步驟。
+   `CountInstancesCorrectly` 會檢查 `GetWordCount` 方法是否能正確計數。 `InlineData` 提供要檢查的計數、搜尋文字，以及輸入字串。 測試方法會針對每一行資料各執行一次。 請注意，即使您知道資料中的計數是正確的，且值符合 `GetWordCount` 方法所傳回的計數，仍然要再次先使用 `Assert.NotEqual` 來判斷提示出錯誤。 執行刻意讓測試失敗的步驟，起初看起來似乎有點浪費時間，但是先透過讓測試失敗以檢查測試的邏輯，是一個對測試邏輯很重要的檢查。 當您遇到預期會失敗卻成功的測試方法時，代表測試邏輯中有錯誤。 每次當您建立測試方法時，都值得採取此步驟。
 
 1. 儲存檔案，然後再次執行測試。 大小寫的測試會通過，但是三個計數測試會失敗。 這正是您預期會發生的情況。
 

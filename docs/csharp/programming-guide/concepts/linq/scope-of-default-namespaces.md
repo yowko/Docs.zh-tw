@@ -2,14 +2,14 @@
 title: C#1 中的預設命名空間範圍
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 77345bfb2a4814c8cd38405c4481bea86fa84823
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfc86e2e58eb936106807aba21b2953f52101cbc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613853"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979706"
 ---
-# <a name="scope-of-default-namespaces-in-c"></a>C# 中的預設命名空間範圍
+# <a name="scope-of-default-namespaces-in-c"></a>C\# 中的預設命名空間範圍
 在 XML 樹狀結構中表示的預設命名空間不在查詢的範圍內。 如果您擁有的 XML 位於預設命名空間中，您仍然必須宣告 <xref:System.Xml.Linq.XNamespace> 變數，然後將它與區域名稱結合，讓限定名稱 (Qualified Name) 得以用於查詢中。  
   
  查詢 XML 時所遇到的其中一個最常見的問題是，如果 XML 樹狀結構有預設的命名空間，即使 XML 不在命名空間中，開發人員有時候還是會撰寫查詢。  

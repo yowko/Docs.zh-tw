@@ -3,12 +3,12 @@ title: C# 運算式 - C# 語言教學課程
 description: 運算式、運算元及運算子是 C# 語言的構成要素
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 28e1d6952975c6932dc9ae40af28c7201d61d778
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 682f98d51bf4eb3c1641297972afb86956e06d3e
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154930"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212088"
 ---
 # <a name="expressions"></a>運算式
 
@@ -38,22 +38,22 @@ ms.locfileid: "53154930"
     - `new {...}`：匿名物件初始設定式
     - `new T[...]`：建立陣列
     - `typeof(T)`：取得 `T` 的 <xref:System.Type> 物件
-    - `checked(x)`：在進行檢查 (checked) 的情境下評估運算式
-    - `unchecked(x)`：在不進行檢查 (unchecked) 的情境下評估的運算式
-    - `default(T)`：取得型別 `T` 的預設值
+    - `checked(x)`：在核取的內容中評估運算式
+    - `unchecked(x)`：在未核取的內容中評估運算式
+    - `default(T)`：取得類型 `T` 的預設值
     - `delegate {...}`：匿名函式 (匿名方法)
 * 一元
-    - `+x`：識別
+    - `+x`：身分識別
     - `-x`：否定
     - `!x`：邏輯否定
     - `~x`：位元否定
     - `++x`：前置遞增
     - `--x`：前置遞減
-    - `(T)x`：將 `x` 明確轉換成型別 `T`
+    - `(T)x`：將 `x` 明確轉換成類型 `T`
     - `await x`：以非同步方式等候 `x` 完成
 * 乘法類 (Multiplicative)
     - `x * y`：乘法
-    - `x / y`：除法
+    - `x / y`：除號
     - `x % y`：餘數
 * 加法類 (Additive)
     - `x + y`：加法、字串串連、委派組合
@@ -67,7 +67,7 @@ ms.locfileid: "53154930"
     - `x <= y`：小於或等於
     - `x >= y`：大於或等於
     - `x is T`：如果 `x` 是 `T`，便傳回 `true`，否則傳回 `false`
-    - `x as T`：傳回歸類為 `T` 型別的 `x`，或如果 `x` 不是 `T`，則傳回 `null`
+    - `x as T`：傳回歸類為 `T` 類型的 `x`，或在 `x` 不是 `T` 的情況下傳回 `null`
 * 相等
     - `x == y`：等於
     - `x != y`：不等於
@@ -84,13 +84,13 @@ ms.locfileid: "53154930"
 * Null 聯合
     - `x ?? y`：如果 `x` 是 null，便評估為 `y`，否則評估為 `x`
 * 條件式
-    - `x ? y : z`；如果 `x` 是 `true`，便評估 `y`，如果 `x` 是 `false`，則評估 `z`
+    - `x ? y : z`：如果 `x` 是 `true`，便評估 `y`，如果 `x` 是 `false`，則評估 `z`
 * 指派或匿名函式
     - `x = y`：指派
     - `x op= y`：複合指派；支援的運算子包括
         - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
     - `(T x) => y`：匿名函式 (Lambda 運算式)
 
->[!div class="step-by-step"]
->[上一頁](types-and-variables.md)
->[下一頁](statements.md)
+> [!div class="step-by-step"]
+> [上一頁](types-and-variables.md)
+> [下一頁](statements.md)

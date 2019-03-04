@@ -1,13 +1,13 @@
 ---
 title: C# 8.0 的新功能 - C# 指南
-description: 大致了解 C# 8.0 中可用的新功能。 本文為適用於預覽 2 的最新資訊。
+description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 2 的最新資訊。
 ms.date: 02/12/2019
-ms.openlocfilehash: 874420775215502ebdacb8420b3fe0e027d6660f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 1aa5a200f84b35fda3c33a900655249d07000e8e
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747618"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835430"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -29,9 +29,9 @@ ms.locfileid: "56747618"
 - [索引和範圍](#indices-and-ranges)
 
 > [!NOTE]
-> 本文內容為 C# 8.0 預覽 2 的最新更新。
+> 此文章內容為 C# 8.0 預覽 2 的最新更新。
 
-本文的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。
+此文章的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。
 
 ## <a name="more-patterns-in-more-places"></a>在更多位置使用更多的模式
 
@@ -119,13 +119,13 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
         // other cases removed for brevity...
         _ => 0M
     };
-    ```
+```
 
-Pattern matching creates a concise syntax for expressing this algorithm.
+模式比對會建立簡潔的語法以表示此演算法。
 
-### Tuple patterns
+### <a name="tuple-patterns"></a>Tuple 模式
 
-Some algorithms depend on multiple inputs. **Tuple patterns** allow you to switch based on multiple values expressed as a [tuple](../tuples.md).  The following code shows a switch expression for the game *rock, paper, scissors*:
+某些演算法需仰賴數個輸入。 **Tuple 模式**可讓您根據以 [tuple](../tuples.md) 形式表示的多個值進行切換。  下列範例示範「剪刀、石頭、布」遊戲的 switch 運算式：
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -139,13 +139,13 @@ public static string RockPaperScissors(string first, string second)
         ("scissors", "paper") => "scissors cuts paper. Scissors wins.",
         (_, _) => "tie"
     };
-    ```
+```
 
-The messages indicate the winner. The discard case represents the three combinations for ties, or other text inputs.
+訊息會指出優勝者。 捨棄案例代表平手的三個組合，或其他文字輸入。
 
-### Positional patterns
+### <a name="positional-patterns"></a>位置模式
 
-Some types include a `Deconstruct` method that deconstructs its properties into discrete variables. When a `Deconstruct` method is accessible, you can use **positional patterns** to inspect properties of the object and use those properties for a pattern.  Consider the following `Point` class that includes a `Deconstruct` method to create discrete variables for `X` and `Y`:
+某些類型會包含 `Deconstruct` 方法，其能將自己的屬性解構成離散變數。 可存取 `Deconstruct` 方法時，您可以使用**位置模式**來檢查物件的屬性，然後將那些屬性用於某個模式。  請考慮下列 `Point` 類別，其包含 `Deconstruct` 方法來針對 `X` 和 `Y` 建立離散變數：
 
 ```csharp
 public class Point

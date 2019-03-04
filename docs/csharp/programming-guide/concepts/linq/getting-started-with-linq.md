@@ -7,14 +7,14 @@ helpviewer_keywords:
 - LINQ, C#
 - queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
-ms.openlocfilehash: 843126d86df36b2aeaa8f57248afb930b92a9ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 585bbd9a9fbc78029911dac8af4c1ad3eebe35b0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339315"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970697"
 ---
-# <a name="getting-started-with-linq-in-c"></a>開始使用 C# 中的 LINQ
+# <a name="getting-started-with-linq-in-c"></a>開始使用以 C\# 撰寫的 LINQ
 本節包含基本的背景資訊可協助您了解其餘 LINQ 文件和範例。  
   
 ## <a name="in-this-section"></a>本節內容  
@@ -39,7 +39,7 @@ ms.locfileid: "33339315"
  [支援 LINQ 的 C# 功能](../../../../csharp/programming-guide/concepts/linq/features-that-support-linq.md)  
  說明 C# 3.0 中新增以支援 LINQ 的語言建構。  
   
- [逐步解說：在 C# 中撰寫查詢](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [逐步解說：用 C# 撰寫查詢](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  建立 C# LINQ 專案、新增簡單資料來源及執行一些基本查詢作業的逐步指示。  
   
 ## <a name="related-sections"></a>相關章節  

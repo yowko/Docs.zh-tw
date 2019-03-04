@@ -1,14 +1,14 @@
 ---
 title: 逐步解說：使用 C# 保存物件
 ms.date: 04/26/2018
-ms.openlocfilehash: 61e7496b39bcbc42b0ebb2642fcb1ad1d32696af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512446"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975819"
 ---
-# <a name="walkthrough-persisting-an-object-using-c"></a>逐步解說：使用 C# 保存物件 #
+# <a name="walkthrough-persisting-an-object-using-c"></a>逐步解說：使用 C\# 保存物件
 
 您可以使用序列化來保存執行個體之間的物件資料，藉此儲存值，並在下次將物件具現化時加以擷取。
 

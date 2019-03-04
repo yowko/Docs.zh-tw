@@ -3,14 +3,14 @@ title: 模式比對 - C# 手冊
 description: 了解 C# 中的模式比對運算式
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522022"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969970"
 ---
-# <a name="pattern-matching"></a>模式比對 #
+# <a name="pattern-matching"></a>模式比對
 
 模式可測試某值是否具有特定的「圖形」，而且當該值有符合的圖形時，可從該值「擷取」資訊。 模式比對會提供更簡潔的語法提供目前所用的演算法使用。 您已使用現有的語法建立模式比對演算法。 您撰寫 `if` 或 `switch` 陳述式測試值。 然後，當這些陳述式符合時，使用從該值擷取的資訊。 新的語法項目是您已熟悉的陳述式延伸模組︰`is` 和 `switch`。 這些新的延伸模組結合測試值及擷取該資訊。
 
@@ -36,7 +36,7 @@ ms.locfileid: "43522022"
 
 [!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
-上述程式碼是「型別模式」的傳統運算式︰您要測試變數，以判斷其型別並根據該型別採取不同的動作。
+上述程式碼為「類型模式」的傳統運算式：您會測試變數以判斷其類型，並根據該類型採取不同的動作。
 
 如果測試成功，使用 `is` 運算式的延伸模組來指派變數，此程式碼會變得更簡單：
 
@@ -111,9 +111,9 @@ ms.locfileid: "43522022"
 
 導入 `var` 作為比對運算式之一，為模式比對導入了一些新規則。
 
-第一個規則是 `var` 宣告遵循正常的類型推斷規則：該類型被推斷為 switch 運算式的靜態類型。 根據該規則，類型永遠符合。
+第一個規則是 `var` 宣告會遵循正常的類型推斷規則：類型被推斷為 switch 運算式的靜態類型。 根據該規則，類型永遠符合。
 
-第二個規則是 `var` 宣告不具有其他類型模式運算式所包含的 null 檢查。 這表示變數可能是 null，並且在這種情況下需要 null 檢查。
+第二個規則是 `var` 宣告不具有其他類型模式運算式所包含的 null 檢查。 這表示變數可能是 Null，並且在這種情況下需要 Null 檢查。
 
 這兩個規則表示在許多情況下，`case` 運算式中的 `var` 宣告與 `default` 運算式的條件相同。
 因為任何非預設的案例優先於 `default` 案例，所以 `default` 案例將永遠不會執行。

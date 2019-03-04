@@ -1,7 +1,7 @@
 ---
-title: 。 運算子 - C# 參考
+title: . 運算子 - C# 參考
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/25/2019
 f1_keywords:
 - ._CSharpKeyword
 helpviewer_keywords:
@@ -9,47 +9,46 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-ms.openlocfilehash: a59f69d0349a054c8c2a5b701b8f63df113a6580
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 2661676d53deb874c5e5a90b4443b301730e09df
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333716"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836457"
 ---
-# <a name="-operator-c-reference"></a>。 operator (C# 參考)
+# <a name="-operator-c-reference"></a>. operator (C# 參考)
 
-點運算子 (`.`) 是用於成員存取。 點運算子可指定型別或命名空間的成員。 例如，點運算子可用來存取 .NET Framework 類別庫中的特定方法：
+點 (`.`) 通常是用於成員存取。
 
-[!code-csharp[csRefOperators#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#16)]
+您會使用 `.` 語彙基元來存取命名空間或類型的成員，如下列範例所示：
 
-例如，請參考下列類別：
+- 使用 `.` 來存取命名空間內的巢狀命名空間，如下列 [`using` 指示詞](../keywords/using-directive.md)的範例所示：
 
-[!code-csharp[csRefOperators#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#17)]
+  [!code-csharp[nested namespaces](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#NestedNamespace)]
 
-[!code-csharp[csRefOperators#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#18)]
+- 使用 `.` 來形成「限定名稱」以存取命名空間內的類型，如下列程式碼所示：
 
-變數 `s` 擁有 `a` 和 `b` 兩個成員；若要存取它們，請使用點運算子：
+  [!code-csharp[qualified name](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#QualifiedName)]
 
-[!code-csharp[csRefOperators#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#19)]
+  使用 [`using` 指示詞](../keywords/using-directive.md)來使限定名稱的使用為選擇性。
 
-點也可用來形成限定名稱，例如指定其所屬命名空間或介面的名稱。
+- 使用 `.` 來存取[類型成員](../../programming-guide/classes-and-structs/index.md#members) (靜態及非靜態)，如下列程式碼所示：
 
-[!code-csharp[csRefOperators#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#20)]
+  [!code-csharp-interactive[type members](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#TypeMemberAccess)]
 
-using 指示詞可讓某些名稱限定成為選擇性項目：
+您也可以使用 `.` 來叫用[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)。
 
-[!code-csharp[csRefOperators#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#21)]
+## <a name="operator-overloadability"></a>運算子是否可多載
 
-但若是模稜兩可的識別項，就必須加以限定：
-
-[!code-csharp[csRefOperators#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#22)]
+無法多載 `.` 運算子。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[成員存取](~/_csharplang/spec/expressions.md#member-access)一節。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 運算子](index.md)
+- [?. 和 ?[] 運算子](null-conditional-operators.md)

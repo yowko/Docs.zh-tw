@@ -3,16 +3,16 @@ title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 792ec6e5570afd5ecfad483d2a0551df10c61a95
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748006"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981526"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
-本文件概述從 *project.json* 改為使用 *csproj* 和 [MSBuild](https://github.com/Microsoft/MSBuild) 時，新增至專案檔的變更。 如需一般專案檔語法以及參考的詳細資訊，請參閱 [MSBuild 專案檔](/visualstudio/msbuild/msbuild-project-file-schema-reference)文件。  
+此文件ˋ概述從 *project.json* 改為使用 *csproj* 和 [MSBuild](https://github.com/Microsoft/MSBuild) 時，新增至專案檔的變更。 如需一般專案檔語法以及參考的詳細資訊，請參閱 [MSBuild 專案檔](/visualstudio/msbuild/msbuild-project-file-schema-reference)文件。  
 
 ## <a name="implicit-package-references"></a>隱含套件參考
 會根據您專案檔之 `<TargetFramework>` 或 `<TargetFrameworks>` 屬性中指定的目標架構來隱含參考中繼套件。 如果指定了 `<TargetFramework>`，則會忽略 `<TargetFrameworks>`，與順序無關。
@@ -45,11 +45,14 @@ ms.locfileid: "56748006"
 
 下表顯示 SDK 中會同時包含及排除的元素與 [Glob (英文)](https://en.wikipedia.org/wiki/Glob_(programming))： 
 
-| 元素           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob                |
+| 元素           | 包含 Glob                                | 排除 Glob                                                    | 移除 Glob                |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                        |
 | 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                        |
-| 無              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
+| 無              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs、\*\*/\*.resx   |
+
+> [!NOTE]
+> **排除 Glob** 一律會排除 `./bin` 和 `./obj` 資料夾，其分別由 `$(BaseOutputPath)` 和 `$(BaseIntermediateOutputPath)` MSBuild 屬性所代表。 整體而言，所有排除都是由 `$(DefaultItemExcludes)` 所代表。
 
 如果您的專案有 Glob，而且您嘗試使用最新的 SDK 建置專案，您會收到下列錯誤：
 
@@ -197,7 +200,7 @@ ms.locfileid: "56748006"
 
 UI 顯示中的套件詳細描述。
 
-### <a name="description"></a>描述
+### <a name="description"></a>說明
 組件的完整描述。 如果未指定 `PackageDescription`，則此屬性也會用來作為套件的描述。
 
 ### <a name="copyright"></a>Copyright
@@ -208,7 +211,7 @@ UI 顯示中的套件詳細描述。
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-SPDX 授權運算式或套件內授權檔案的路徑，通常出現在 UI 顯示及 nuget.org 中。
+[SPDX 授權識別碼](https://spdx.org/licenses/) \(英文\) 或運算式。 例如，`Apache-2.0`。
 
 此處有 [SPDX 授權識別碼](https://spdx.org/licenses/)的完整清單。 在使用授權類型運算式時，NuGet.org 只接受 OSI 或 FSF 核准的授權。
 
@@ -236,23 +239,6 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 若您使用未獲指派 SPDX 識別碼的授權，或授權是自訂授權，這會是套件內授權檔案的路徑 (否則會優先使用 `PackageLicenseExpression`)
 
-> [!NOTE]
-> 一次只能指定 `PackageLicenseExpression`、`PackageLicenseFile` 和 `PackageLicenseUrl` 其中之一。
-
-### <a name="packagelicenseurl"></a>PackageLicenseUrl
-
-適用於套件的授權 URL。 (_自 Visual Studio 15.9.4、.NET SDK 2.1.502 及 2.2.101 起淘汰_)
-
-### <a name="packagelicenseexpression"></a>PackageLicenseExpression
-
-[SPDX 授權識別碼](https://spdx.org/licenses/)或運算式，例如 `Apache-2.0`。
-
-這會取代 `PackageLicenseUrl`，不能與 `PackageLicenseFile` 合併，並需要 Visual Studio 15.9.4、.NET SDK 2.1.502 或 2.2.101 或更新版本。
-
-### <a name="packagelicensefile"></a>PackageLicenseFile
-
-磁碟上的授權檔案路徑，相對於專案檔，例如 `LICENSE.txt`。
-
 這會取代 `PackageLicenseUrl`，不能與 `PackageLicenseExpression` 合併，並需要 Visual Studio 15.9.4、.NET SDK 2.1.502 或 2.2.101 或更新版本。
 
 您必須明確地將授權檔案新增到專案，以確保其封裝妥當，使用範例：
@@ -264,6 +250,12 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
   <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
 </ItemGroup>
 ```
+
+### <a name="packagelicenseurl"></a>PackageLicenseUrl
+
+適用於套件的授權 URL。 (_自 Visual Studio 15.9.4、.NET SDK 2.1.502 及 2.2.101 起淘汰_)
+
+
 ### <a name="packageiconurl"></a>PackageIconUrl
 具有透明背景之 64x64 映像的 URL，該映像會用作套件在 UI 顯示中的圖示。
 

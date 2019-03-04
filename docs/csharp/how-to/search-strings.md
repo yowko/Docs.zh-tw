@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 030d71f95947e98d9f269095908b0431c2192430
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623387"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202869"
 ---
 # <a name="how-to-search-strings"></a>如何：搜尋字串
 
@@ -19,7 +19,7 @@ ms.locfileid: "54623387"
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-[字串](../language-reference/keywords/string.md)類型，這是 <xref:System.String?displayProperty=nameWithType> 類別的別名，提供一些有用的方法來搜尋字串的內容。 它們是 <xref:System.String.Contains%2A>、<xref:System.String.StartsWith%2A><xref:System.String.EndsWith%2A>、<xref:System.String.IndexOf%2A>、<xref:System.String.LastIndexOf%2A>。 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別提供豐富的詞彙來搜尋文字中的模式。 在本文中，您了解這些技術，以及如何選擇您需求的最佳方法。
+[字串](../language-reference/keywords/string.md)類型，這是 <xref:System.String?displayProperty=nameWithType> 類別的別名，提供一些有用的方法來搜尋字串的內容。 它們是 <xref:System.String.Contains%2A>、<xref:System.String.StartsWith%2A><xref:System.String.EndsWith%2A>、<xref:System.String.IndexOf%2A>、<xref:System.String.LastIndexOf%2A>。 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別提供豐富的詞彙來搜尋文字中的模式。 在此文章中，您了解這些技術，以及如何選擇您需求的最佳方法。
 
 ## <a name="does-a-string-contain-text"></a>字串是否包含文字？
 
@@ -46,7 +46,7 @@ ms.locfileid: "54623387"
 | pattern  | 意義     |
 | -------- |-------------|
 | the      | 比對文字 "the" |
-| (eir)?   | 比對 "eir" 的 0 或 1 個出現項目 |
+| (eir)?   | 比對 "eir" 的 0 或 1 個出現次數 |
 | \s       | 比對空白字元    |
   
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]

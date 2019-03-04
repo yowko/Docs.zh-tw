@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: e28ff83d673951a978e24d9c89621fbbe950f50e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066346"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975208"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -140,7 +140,7 @@ dotnet tool install -g dotnetsay
 
 .NET Core 併入新的 JIT 編譯器技術，稱為「階層式編譯」(也稱為「調適型最佳化」)，可大幅地提升效能。 階層式編譯是可選擇加入的設定。
 
-由 JIT 編譯器所執行的其中一項重要工作，是將程式碼的執行最佳化。 不過，針對很少使用的程式碼路徑，編譯器將程式碼最佳化的時間，可能會比執行階段執行未最佳化程式碼的時間還要久。 階層式編譯會在 JIT 編譯中引入兩個階段：
+由 JIT 編譯器所執行的其中一個重要工作，是將程式碼的執行最佳化。 不過，針對很少使用的程式碼路徑，編譯器將程式碼最佳化的時間，可能會比執行階段執行未最佳化程式碼的時間還要久。 階層式編譯會在 JIT 編譯中引入兩個階段：
 
 - **第一層**：盡快產生程式碼。
 

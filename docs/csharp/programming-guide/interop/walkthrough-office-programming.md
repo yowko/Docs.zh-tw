@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：Office 程式設計 (C# 和 Visual Basic)
+title: 逐步解說：Office 程式設計 (C# 與 Visual Basic)
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 4b20b45ee18c22ed864972dc20cd72247ed3db2c
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 3dce7e4bce0b056437445b92f52f6c6360844289
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219369"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966134"
 ---
-# <a name="walkthrough-office-programming-c-and-visual-basic"></a>逐步解說：Office 程式設計 (C# 和 Visual Basic)
+# <a name="walkthrough-office-programming-c-and-visual-basic"></a>逐步解說：Office 程式設計 (C# 與 Visual Basic)
 Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式設計的功能。 有助益的 C# 功能包括具名和選擇性引數以及類型為 `dynamic` 的傳回值。 在 COM 程式設計中，您可以省略 `ref` 關鍵字並存取索引的屬性。 Visual Basic 中的功能包含自動實作的屬性、Lambda 運算式中的陳述式，以及集合初始設定式。
 
 這兩種語言都會啟用類型資訊的內嵌，以允許部署與 COM 元件互動的組件，而不需要將主要 Interop 組件 (PIA) 部署至使用者電腦。 如需詳細資訊，請參閱[逐步解說：從 Managed 組件內嵌類型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。  
@@ -63,9 +63,9 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
 2.  將下列 `Imports` 陳述式 (Visual Basic) 或 `using` 指示詞 (C#) 加入還沒有這兩者的程式碼檔案頂端。  
   
-     [!code-csharp[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
+     [!code-csharp[csOfficeWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#1)]
 
-     [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]
+     [!code-vb[csOfficeWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#1)]
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>建立銀行帳戶清單  
   
@@ -73,23 +73,23 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
 2.  將 `Account` 類別的定義取代為下列程式碼。 類別定義使用「自動實作屬性」。 如需詳細資訊，請參閱[自動實作的屬性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)。  
   
-     [!code-csharp[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
+     [!code-csharp[csOfficeWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/account.cs#2)]
 
-     [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
+     [!code-vb[csOfficeWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/account.vb#2)]  
   
 3.  若要建立含有兩個帳戶的 `bankAccounts` 清單，請將下列程式碼新增至 *ThisAddIn.vb* 或 *ThisAddIn.cs* 中的 `ThisAddIn_Startup` 方法。 清單宣告使用「集合初始設定式」。 如需詳細資訊，請參閱[集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。  
   
-     [!code-csharp[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
+     [!code-csharp[csOfficeWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#3)]
 
-     [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
+     [!code-vb[csOfficeWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#3)]  
   
 ### <a name="to-export-data-to-excel"></a>將資料匯出至 Excel  
   
 1.  在相同的檔案中，將下列方法加入 `ThisAddIn` 類別。 這個方法會設定 Excel 活頁簿，並將資料匯出到 Excel 活頁簿。  
   
-     [!code-csharp[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
+     [!code-csharp[csOfficeWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#4)]
 
-     [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
+     [!code-vb[csOfficeWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#4)]  
   
      在這個方法中，使用了兩個新的 C# 功能。 這兩個功能已存在於 Visual Basic 中。  
   
@@ -99,11 +99,11 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
     -   [Range](<xref:Microsoft.Office.Interop.Excel.Range>) 物件的 `Range` 和 `Offset` 屬性會使用「編製過索引的屬性」功能。 您可利用這項功能使用下列一般 C# 語法，來使用 COM 類型的這些屬性。 您可利用編製過索引的屬性，使用 `Value` 物件的 `Range` 屬性，而不需要使用 `Value2` 屬性。 `Value` 屬性編製過索引，但您可選擇是否要編製索引。 在下列範例中，同時使用了選擇性引數與編製過索引的屬性。  
   
-         [!code-csharp[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
+         [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]  
   
          在舊版語言中，需要下列特殊語法。  
   
-         [!code-csharp[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]  
+         [!code-csharp[csOfficeWalkthrough#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#6)]  
   
          您無法建立自己本身的編製過索引的屬性。 這個功能僅支援使用現有已編製過索引的屬性。  
   
@@ -111,15 +111,15 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
 2.  在 `DisplayInExcel` 結尾加入下列程式碼，以調整資料行寬度以容納內容。  
   
-     [!code-csharp[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
+     [!code-csharp[csOfficeWalkthrough#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#7)]
 
-     [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
+     [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]  
   
-     這些新增內容可示範 C# 中的另一項功能：將 COM 主機 (例如 Office) 傳回的 `Object` 值，視為具有 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 類型。 如果已將 [內嵌 Interop 類型] 設定為其預設值 `True`，則會自動發生這種情況；同樣地，當 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考了組件時也會如此。 `dynamic` 類型可以進行晚期繫結 (Visual Basic 中已有這個功能)，並避免在 Visual C# 2008 和語言舊版本中需要明確轉型。  
+     這些新增內容可示範 C# 中的另一個功能：將 COM 主機 (例如 Office) 傳回的 `Object` 值，視為具有 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 類型。 如果已將 [內嵌 Interop 類型] 設定為其預設值 `True`，則會自動發生這種情況；同樣地，當 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考了組件時也會如此。 `dynamic` 類型可以進行晚期繫結 (Visual Basic 中已有這個功能)，並避免在 Visual C# 2008 和語言舊版本中需要明確轉型。  
   
      例如，`excelApp.Columns[1]` 會傳回 `Object`；而 `AutoFit` 則為 Excel [Range](<xref:Microsoft.Office.Interop.Excel.Range>) 方法。 如果沒有 `dynamic`，則在呼叫 `excelApp.Columns[1]` 方法之前，必須將 `Range` 所傳回的物件，轉型為 `AutoFit` 執行個體。  
   
-     [!code-csharp[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
+     [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]  
   
      如需內嵌 Interop 類型的詳細資訊，請參閱本主題稍後的＜尋找 PIA 參考＞和＜還原 PIA 相依性＞程序。 如需 `dynamic` 的詳細資訊，請參閱 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 或[使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)。  
   
@@ -127,9 +127,9 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
 1.  在 `ThisAddIn_StartUp` 方法的結尾，加入下列程式碼。 `DisplayInExcel` 呼叫包含兩個引數。 第一個引數是要處理的帳戶清單名稱。 第二個引數則是多行的 Lambda 運算式，定義如何處理資料。 每個帳戶的 `ID` 和 `balance` 值都會顯示在相鄰的儲存格中，而且如果餘額小於零，則會以紅色顯示資料列。 如需詳細資訊，請參閱 [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
-     [!code-csharp[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
+     [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
-     [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
+     [!code-vb[csOfficeWalkthrough#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#9)]  
   
 2.  若要執行程式，請按 F5 鍵。 隨即會出現內含帳戶資料的 Excel 工作表。  
   
@@ -137,9 +137,9 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
 1.  在 `ThisAddIn_StartUp` 方法的結尾加入下列程式碼，可以建立內含 Excel 活頁簿連結的 Word 文件。  
   
-     [!code-csharp[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
+     [!code-csharp[csOfficeWalkthrough#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#10)]
 
-     [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
+     [!code-vb[csOfficeWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#10)]  
   
      這個程式碼將會示範 C# 中的數個新功能：省略 COM 程式設計中 `ref` 關鍵字、具名引數和選擇性引數的能力。 Visual Basic 中已有這些功能。 [PasteSpecial](<xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>) 方法有七個參數，全部都定義為選擇性參考參數。 您可利用具名引數和選擇性引數，指定想要依名稱存取的參數，以及將引數只傳送給那些參數。 在這個範例中會傳送引數，表示應建立剪貼簿上的活頁簿連結 (參數 `Link`)，且連結會以圖示形式顯示在 Word 文件中 (參數 `DisplayAsIcon`)。 在 Visual C# 中也可省略這些引數的 `ref` 關鍵字。
   
@@ -205,7 +205,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 - [Lambda 運算式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Lambda 運算式 (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [如何：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
-- [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊 (C#)](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+- [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120)) \(英文\)
 - [逐步解說：從受控組件內嵌類型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [逐步解說：建立 Excel 的第一個 VSTO 增益集](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)

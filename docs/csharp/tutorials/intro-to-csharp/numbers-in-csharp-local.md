@@ -3,14 +3,14 @@ title: C# 中的數字 - C# 教學課程簡介
 description: 透過探索數值類型及其屬性和方法來了解 C#。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 52feb91fc011902f1e30f6b747512a7e0908bfbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197453"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978614"
 ---
-# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>在 C# 中操作整數和浮點數數字 #
+# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>在 C\# 中操作整數和浮點數數字
 
 此教學課程會以互動方式教導您有關 C# 中的數字型別。 您將會撰寫少量程式碼，然後編譯並執行該程式碼。 教學課程包含一系列探索 C# 中數字和數學運算的課程。 這些課程會教導您 C# 語言的基本概念。
 

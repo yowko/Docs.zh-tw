@@ -4,14 +4,14 @@ description: 了解 C# 中屬性的運作方式。
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 254c408e854bdf6e923d64a4e8cca42b7a3b11cc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e744f3585fe7be02fb8bdd25f559a12a88b61730
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826820"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975598"
 ---
-# <a name="using-attributes-in-c"></a>在 C# 中使用屬性 #
+# <a name="using-attributes-in-c"></a>在 C\# 中使用屬性
 
 屬性提供以宣告方式將資訊與程式碼相關聯的方法。 它們也可提供可重複使用的元素，以套用至各種不同的目標。
 

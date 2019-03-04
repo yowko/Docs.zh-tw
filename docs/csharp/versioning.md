@@ -3,14 +3,14 @@ title: C# 版本控制 - C# 手冊
 description: 了解 C# 和 .NET 的版本控制運作方式
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: a0c75e2f1397f43fadf91d145e8b63de1d4d90eb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ba18f82ad83749d5333628bf4431a0282b0964f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243487"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965666"
 ---
-# <a name="versioning-in-c"></a>C# 中的版本控制 #
+# <a name="versioning-in-c"></a>C\# 中的版本控制
 
 在本教學課程中，您會了解版本控制在 .NET 中的意義。 您也會了解進行程式庫版本控制以及升級成新版程式庫時要考量的因素。
 
@@ -38,7 +38,7 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
 以下是嘗試維持與舊版文件庫的相容性時要考慮的一些事項︰
 
-* 虛擬方法：當您在新版本中將虛擬方法變成非虛擬，表示必須更新覆寫該方法的專案。 這是一項極重大的變更，強烈建議您不要這麼做。
+* 虛擬方法：當您在新版本中將虛擬方法變成非虛擬，表示必須更新覆寫該方法的專案。 這是一個極重大的變更，強烈建議您不要這麼做。
 * 方法簽章：更新方法行為時也會要求您變更其簽章，您應該改建立多載，讓呼叫該方法的程式碼仍然可以運作。
 您可以一直使用舊的方法簽章呼叫新方法簽章，讓實作保持一致。
 * [Obsolete 屬性](programming-guide/concepts/attributes/common-attributes.md#Obsolete)：您可以在程式碼中使用這個屬性，指定未來版本中要淘汰及可能移除的類別或類別成員。

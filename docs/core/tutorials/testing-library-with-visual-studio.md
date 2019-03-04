@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: c099bde5a90e7e95eb5d9da6aacf763054a865ae
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362687"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201322"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 測試 .NET Standard 程式庫
 
@@ -155,7 +155,7 @@ Assert 方法 | 功能
                       "1234", ".", ";", " " }
 
    ```
-1. 從功能表列中，選取 [測試]  >  [執行]  >  [所有測試] 來執行測試。 [測試總管] 視窗表示兩個測試成功，而且有一項失敗。
+1. 從功能表列中，選取 [測試]  >  [執行]  >  [所有測試] 來執行測試。 [測試總管] 視窗表示兩個測試成功，而且有一個失敗。
 
    ![測試總管視窗，其中包含失敗的測試](./media/testing-library-with-visual-studio/failed-test-window.png)
 
@@ -163,7 +163,7 @@ Assert 方法 | 功能
 
    ![[測試總管] 視窗顯示「為 False」的判斷提示失敗](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
-1. 移除已新增的程式碼 (`"Error", `)，然後重新執行測試。 測試將通過。
+1. 復原您在步驟 1 中所做的修改，並移除字串 "Error"。 重新執行該測試，測試將會通過。
 
 ## <a name="testing-the-release-version-of-the-library"></a>測試程式庫的發行版本
 

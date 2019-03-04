@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 6db3db3ebe3e1934a8e74212692f07158b88b1d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717515"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836639"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
 
@@ -81,7 +81,7 @@ public class B : A
 }
 ```
 
-在某些情況下，衍生類別「必須」覆寫基底類別實作。 標示有 [abstract](../language-reference/keywords/abstract.md) 關鍵字的基底類別成員都需要以衍生類別覆寫。 嘗試編譯下列範例會產生編譯器錯誤 CS0534：「<class> 未實作繼承的抽象成員 <member>」，因為類別 `B` 不會為 `A.Method1` 提供任何實作 。
+在某些情況下，衍生類別「必須」覆寫基底類別實作。 標示有 [abstract](../language-reference/keywords/abstract.md) 關鍵字的基底類別成員都需要以衍生類別覆寫。 嘗試編譯下列範例會產生編譯器錯誤 CS0534：「&lt;class&gt; 未實作繼承的抽象成員 &lt;member&gt;」，因為類別 `B` 不會為 `A.Method1` 提供任何實作。
 
 ```csharp
 public abstract class A
@@ -176,7 +176,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
   在此情況下，`Publication` 類別會提供方法實作。 [設計抽象基底類別和其衍生類別](#abstract)一節中所包含的範例，會使用抽象基底類別來定義衍生類別必須覆寫的方法。 衍生類別可隨意提供適用於衍生型別的任何實作。
 
-  能夠重複使用程式碼 (也就是，多個衍生類別共用基底類別方法的宣告和實作，而不需要加以覆寫) 是非抽象基底類別的一項優點。 因此，如果 `Publication` 的程式碼可能會和一些或大部分特殊 `Publication` 類型共用，您就應該將成員加入其中。 如果您無法有效率地提供基底類別實作，您就不得不在衍生類別中大量提供相同的成員實作，而不是在基底類別中提供單一實作。 在多個位置中有重複的程式碼需要維護，是造成錯誤的潛在來源。
+  能夠重複使用程式碼 (也就是，多個衍生類別共用基底類別方法的宣告和實作，而不需要加以覆寫) 是非抽象基底類別的一個優點。 因此，如果 `Publication` 的程式碼可能會和一些或大部分特殊 `Publication` 類型共用，您就應該將成員加入其中。 如果您無法有效率地提供基底類別實作，您就不得不在衍生類別中大量提供相同的成員實作，而不是在基底類別中提供單一實作。 在多個位置中有重複的程式碼需要維護，是造成錯誤的潛在來源。
 
   為了能盡可能重複使用程式碼和建立邏輯與直覺式繼承階層，您希望只將所有或大部分發行物通用的資料與功能納入 `Publication` 類別中。 衍生類別接著實作其所代表特定發行物類型的唯一成員。
 

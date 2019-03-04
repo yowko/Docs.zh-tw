@@ -3,12 +3,12 @@ title: 解譯運算式
 description: 了解如何撰寫程式碼來查看運算式樹狀架構的結構。
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 95fbb021aeeb9f2f4eb36f664f9fe904d1d52453
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506415"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201972"
 ---
 # <a name="interpreting-expressions"></a>解譯運算式
 
@@ -263,7 +263,7 @@ Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 
 如果您透過造訪者執行此運算式，您會看到下列輸出，確認此簡單的加法運算式為「左向關聯」。 
 
-為了執行此範例，並查看完整的運算式樹狀架構，我必須對來源運算式樹狀架構進行一項變更。 當運算式樹狀架構包含所有常數時，所產生的樹狀只會包含常數值 `10`。 編譯器會執行所有加法，並將運算式縮減為最簡單的形式。 只要在運算式中新增一個變數，便足以查看原始樹狀：
+為了執行此範例，並查看完整的運算式樹狀架構，我必須對來源運算式樹狀架構進行一個變更。 當運算式樹狀架構包含所有常數時，所產生的樹狀只會包含常數值 `10`。 編譯器會執行所有加法，並將運算式縮減為最簡單的形式。 只要在運算式中新增一個變數，便足以查看原始樹狀：
 
 ```csharp
 Expression<Func<int, int>> sum = (a) => 1 + a + 3 + 4;
@@ -353,7 +353,7 @@ Expression<Func<int, int>> factorial = (n) =>
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
-此程式碼代表數學「階乘」函式的一個可能實作。 我撰寫此程式碼的方式強調將 Lambda 運算式指派給 Expressions 以建立運算式樹狀架構，會有兩項限制。 首先，不允許陳述式 Lambda。 這表示我無法使用迴圈、區塊、if/else 陳述式，以及 C# 中常見的其他控制結構。 僅限使用運算式。 其次，我無法以遞迴方式呼叫相同的運算式。
+此程式碼代表數學「階乘」函式的一個可能實作。 我撰寫此程式碼的方式，會強調透過將 Lambda 運算式指派給 Expressions 以建立運算式樹狀架構的兩個限制。 首先，不允許陳述式 Lambda。 這表示我無法使用迴圈、區塊、if/else 陳述式，以及 C# 中常見的其他控制結構。 僅限使用運算式。 其次，我無法以遞迴方式呼叫相同的運算式。
 如果運算式已是委派，則可以這樣做，但我無法在其運算式樹狀架構形式中呼叫運算式。 在[建立運算式樹狀架構](expression-trees-building.md)一節中，您將學習如何克服這些限制的技術。
 
 
@@ -516,7 +516,7 @@ The expression body is:
 您仍可將許多會造成失敗的運算式提供給它。
 完整的實作包含在 .NET Standard 的名稱 <xref:System.Linq.Expressions.ExpressionVisitor> 之下，並可處理所有可能的節點類型。
 
-最後，我在本文中使用的程式庫是為了示範和學習所建立。 它不會經過最佳化。 我的撰寫目的是為了讓所使用的結構相當清楚，並強調用來瀏覽節點和分析其內容的技術。 生產環境的實作會比我更注重效能。
+最後，我在此文章中使用的程式庫是為了示範和學習所建立。 它不會經過最佳化。 我的撰寫目的是為了讓所使用的結構相當清楚，並強調用來瀏覽節點和分析其內容的技術。 生產環境的實作會比我更注重效能。
 
 即使有這些限制，您也應該可以適當地撰寫容易閱讀和了解運算式樹狀架構的演算法。
 

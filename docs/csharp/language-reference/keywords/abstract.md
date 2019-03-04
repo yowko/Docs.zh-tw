@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 325be8851b63a252c381d943943937332ec91e6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a85cf00a8dd1b406c7e5185fd332a507a3ca7c83
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638037"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203518"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# 參考)
 `abstract` 修飾詞表示要修改的項目具有遺失或不完整的實作。 抽象修飾詞可以與類別、方法、屬性、索引子和事件搭配使用。 在類別宣告中使用 `abstract` 修飾詞，來表示某一類別只是要作為其他類別的基底類別。 標記為抽象或包括在抽象類別中的成員，必須由衍生自抽象類別的類別所實作。  

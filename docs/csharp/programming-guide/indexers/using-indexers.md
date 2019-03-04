@@ -5,16 +5,16 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: a6e2ea41c463d5e6959ce7f05a3547ef24f08765
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b129177e6eb916982a27ba76aca517b0642344c
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601931"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203294"
 ---
 # <a name="using-indexers-c-programming-guide"></a>使用索引子 (C# 程式設計手冊)
 
-索引子是語法便利性，可讓您建立用戶端應用程式可以就像陣列一樣地存取的 [class](../../../csharp/language-reference/keywords/class.md)、[struct](../../../csharp/language-reference/keywords/struct.md) 或 [interface](../../../csharp/language-reference/keywords/interface.md)。 索引子最常實作於類型中，而類型的主要用途是封裝內部集合或陣列。 例如，假設您的 `TempRecord` 類別代表在 24 小時期間內於 10 個不同時間記錄的華氏溫度。 此類別包含型別為 `float[]` 的陣列 `temps` 以儲存溫度值。 透過在此類別中實作索引子，用戶端能以 `TempRecord` 執行個體中 `float temp = tr[4]` 的形式 (而非 `float temp = tr.temps[4]`) 來存取溫度。 索引子標記法不僅可簡化用戶端應用程式的語法，還可以讓其他開發人員更直覺地了解類別其用途。  
+索引子是語法便利性，可讓您建立用戶端應用程式可以就像陣列一樣地存取的 [class](../../../csharp/language-reference/keywords/class.md)、[struct](../../../csharp/language-reference/keywords/struct.md) 或 [interface](../../../csharp/language-reference/keywords/interface.md)。 索引子最常實作於類型中，而類型的主要用途是封裝內部集合或陣列。 例如，假設您有一個 `TempRecord` 類別，其代表在 24 小時期間內於 10 個不同時間記錄的華氏溫度。 此類別包含型別為 `float[]` 的陣列 `temps` 以儲存溫度值。 透過在此類別中實作索引子，用戶端能以 `TempRecord` 執行個體中 `float temp = tr[4]` 的形式 (而非 `float temp = tr.temps[4]`) 來存取溫度。 索引子標記法不僅可簡化用戶端應用程式的語法，還可以讓其他開發人員更直覺地了解類別其用途。  
   
 若要在類別或結構上宣告索引子，請使用 [this](../../../csharp/language-reference/keywords/this.md) 關鍵字，如下列範例所示：
 
@@ -53,7 +53,7 @@ public int this[int index]   // Indexer declaration
   
  請注意，評估索引子的存取時 (例如，在 `Console.Write` 陳述式中)，會叫用 [get](../../../csharp/language-reference/keywords/get.md) 存取子。 因此，如果沒有 `get` 存取子，就會發生編譯時間錯誤。  
   
-[!code-csharp[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#1)]  
   
 ## <a name="indexing-using-other-values"></a>使用其他值編製索引
 
@@ -63,7 +63,7 @@ C# 不會將索引子參數類型限制為整數。 例如，搭配使用字串�
   
 下列範例宣告的類別會儲存週中的日。 `get` 存取子接受字串 (日的名稱)，並傳回對應的整數。 例如，"Sunday" 會傳回 0，"Monday" 會傳回 1，依此類推。  
   
-[!code-csharp[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#2)]  
   
 ## <a name="robust-programming"></a>穩固程式設計
 

@@ -3,12 +3,12 @@ title: 教學課程：撰寫您的第一個分析器和程式碼修正
 description: 本教學課程提供 使用 .NET Compiler SDK (Roslyn API) 來建置分析器和程式碼修正的逐步指示。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 2959fe3008bfca972d3a164ed27d05c2a8b0e69a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 727e1deb859cf0f719f47b71129407b683978681
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397994"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201894"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教學課程：撰寫您的第一個分析器和程式碼修正
 
@@ -67,7 +67,7 @@ Console.WriteLine(x);
 
 範本也會提供程式碼修正，以將任何包含小寫字元的類型名稱全部變更為大寫。 您可以按一下隨警告顯示的燈泡，以查看建議的變更。 若接受建議的變更，即會在解決方案中將類型名稱和所有參考更新為該類型。 您已了解作用中的初始分析器，現在請關閉第二個 Visual Studio 執行個體，並返回分析器專案。
 
-您不需要啟動 Visual Studio 的第二個複本，並建立新的程式碼來測試分析器中的每一項變更。 範本也會為您建立單元測試專案。 該專案包含兩項測試。 `TestMethod1` 顯示會分析程式碼而不觸發診斷的一般測試格式。 `TestMethod2` 顯示會觸發程序然後套用建議程式碼修正的測試格式。 當您建置分析器和程式碼修正時，您會為不同的程式碼結構撰寫測試，以確認您的工作。 分析器的單元測試會比使用 Visual Studio 以互動方式測試快得多。
+您不需要啟動 Visual Studio 的第二個複本，並建立新的程式碼來測試分析器中的每一個變更。 範本也會為您建立單元測試專案。 該專案包含兩項測試。 `TestMethod1` 顯示會分析程式碼而不觸發診斷的一般測試格式。 `TestMethod2` 顯示會觸發程序然後套用建議程式碼修正的測試格式。 當您建置分析器和程式碼修正時，您會為不同的程式碼結構撰寫測試，以確認您的工作。 分析器的單元測試會比使用 Visual Studio 以互動方式測試快得多。
 
 > [!TIP]
 > 當您知道哪些程式碼建構應該和不應觸發分析器時，分析器單元測試會是很棒的工具。 在 Visual Studio 的另一個複本中載入您的分析器，可極有效地瀏覽和尋找您可能未考量到的建構。
@@ -282,7 +282,7 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 ```csharp
 [DataTestMethod]
 [DataRow(LocalIntCouldBeConstant, LocalIntCouldBeConstantFixed, 10, 13)]
-public void WhenDiagosticIsRaisedFixUpdatesCode(
+public void WhenDiagnosticIsRaisedFixUpdatesCode(
     string test,
     string fixTest,
     int line,
@@ -519,7 +519,7 @@ int k = i + j;
 
 完成這些變更後，將只有前兩個變數上會有紅色波浪線。 將 `const` 新增至 `i` 和 `j` 後，將會出現新的 `k` 警告，因為它現在已可為 `const`。
 
-恭喜您！ 您已建立第一個 .NET Compiler Platform 延伸模組，可執行即時程式碼分析以偵測問題，並提供快速修正加以更正。 在本文中，您已認識 .NET Compiler Platform SDK (Roslyn API) 所包含的多種程式碼 API。 您可以根據範例 GitHub 存放庫中[已完成的範例](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst)檢查您的工作。 或者，您可以下載[已完成專案的 ZIP 檔案](https://github.com/dotnet/samples/blob/master/csharp/roslyn-sdk/Tutorials/MakeConst.zip)
+恭喜您！ 您已建立第一個 .NET Compiler Platform 延伸模組，可執行即時程式碼分析以偵測問題，並提供快速修正加以更正。 在此文章中，您已認識 .NET Compiler Platform SDK (Roslyn API) 所包含的多種程式碼 API。 您可以根據範例 GitHub 存放庫中[已完成的範例](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst)檢查您的工作。 或者，您可以下載[已完成專案的 ZIP 檔案](https://github.com/dotnet/samples/blob/master/csharp/roslyn-sdk/Tutorials/MakeConst.zip)
 
 ## <a name="other-resources"></a>其他資源
 

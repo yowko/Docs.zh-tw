@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 8ad6b5767c349379121352930341be5b916131e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 499efae13a0805ba161cd9db160d697b496183c0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502062"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974701"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  
@@ -30,7 +30,7 @@ ms.locfileid: "54502062"
 ## <a name="c-interop"></a>C++ Interop  
  您可以使用 C++ Interop (也稱為 It Just Works (IJW)) 包裝原生 C++ 類別，以供使用 C# 或其他 .NET Framework 語言撰寫的程式碼取用。 若要這樣做，您可以撰寫 C++ 程式碼來包裝原生 DLL 或 COM 元件。 不同於其他 .NET Framework 語言，[!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] 提供互通性支援，因此可將 Managed 和 Unmanaged 程式碼放置在相同的應用程式，甚至是相同的檔案中。 您接著可使用 **/clr** 編譯器參數建立 C++ 程式碼，以產生 Managed 組件。 最後，您可以在 C# 專案中新增組件的參考，並使用包裝的物件，就像是使用其他 Managed 類別一樣。  
   
-## <a name="exposing-com-components-to-c"></a>將 COM 元件公開給 C#  
+## <a name="exposing-com-components-to-c"></a>將 COM 元件公開給 C\#
  您可以從 C# 專案取用 COM 元件。 一般步驟如下所示：  
   
 1.  找出並註冊所要使用的 COM 元件。 使用 regsvr32.exe 註冊或取消註冊 COM DLL。  
