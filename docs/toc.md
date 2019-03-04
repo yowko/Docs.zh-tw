@@ -33,6 +33,7 @@
 ## [處理和擲回例外狀況](standard/exceptions/)
 ## [.NET 中的組件](standard/assembly/index.md)
 ### [.NET 組件檔格式](standard/assembly/file-format.md)
+### [如何：在 .NET Core 中使用組件解除載入性及進行偵錯](standard/assembly/unloadability-howto.md)
 ## [記憶體回收](standard/garbage-collection/)
 ## [泛型類型](standard/generics.md)
 ## [委派和 Lambda](standard/delegates-lambdas.md)
@@ -84,9 +85,9 @@
 ### [在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置 .NET Standard 程式庫](core/tutorials/vb-library-with-visual-studio.md)
 ### [在 Visual Studio 2017 中使用 .NET Core 測試 .NET Standard 程式庫](core/tutorials/testing-library-with-visual-studio.md)
 ### [在 Visual Studio 2017 中取用 .NET Standard 程式庫](core/tutorials/consuming-library-with-visual-studio.md)
-## [Windows 先決條件](core/windows-prerequisites.md)
+## [Windows 必要條件](core/windows-prerequisites.md)
 ## [macOS 先決條件](core/macos-prerequisites.md)
-## [Linux 先決條件](core/linux-prerequisites.md)
+## [Linux 必要條件](core/linux-prerequisites.md)
 ## [.NET Core 的新功能](core/whats-new/index.md)
 ### [.NET Core 3.0 的新功能](core/whats-new/dotnet-core-3-0.md)
 ### [.NET Core 2.2 的新功能](core/whats-new/dotnet-core-2-2.md)
@@ -268,9 +269,9 @@
 ## [C# 的教學課程](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-<!-- markdownlint-disable MD003 -->
+<!-- markdownlint-disable MD003 MD020 -->
 ## C# 的新功能
-<!-- markdownlint-enable MD003 -->
+<!-- markdownlint-enable MD003 MD020 -->
 ### [C# 8.0 - Preview 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
