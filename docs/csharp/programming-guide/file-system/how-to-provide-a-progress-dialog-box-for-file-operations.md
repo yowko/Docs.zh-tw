@@ -5,14 +5,14 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: ab268c30af6b5eefe84ade852c679535c1e48068
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 462da68313fea19e5b89a9e2f5221f6659338e98
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597264"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975039"
 ---
-# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>HOW TO：提供檔案作業的進度對話方塊 (C# 程式設計手冊)
+# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>作法：提供檔案作業的進度對話方塊 (C# 程式設計手冊)
 如果您在 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空間中使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> 方法，則可以提供標準對話方塊，以在 Windows 中顯示檔案作業進度。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -30,7 +30,7 @@ ms.locfileid: "54597264"
 ## <a name="example"></a>範例  
  下列程式碼會將 `sourcePath` 指定的目錄複製到 `destinationPath` 指定的目錄。 此程式碼也會提供標準對話方塊，來顯示作業完成前的預估剩餘時間量。  
   
- [!code-csharp[csFilesandFolders#11](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-provide-a-progress-dialog-box-for-file-operations_1.cs)]  
+ [!code-csharp[csFilesandFolders#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#11)]  
   
 ## <a name="see-also"></a>另請參閱
 

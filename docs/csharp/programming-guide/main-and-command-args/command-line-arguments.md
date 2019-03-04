@@ -5,26 +5,26 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 32dcfc8da52fc623473a1cc234e710463f8d28be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c1416566ca59a44b36457c710955de863013417
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722695"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980710"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令列引數 (C# 程式設計手冊)
 您可以使用下列其中一種方式，透過定義方法以將引數傳送給 `Main` 方法：  
   
- [!code-csharp[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
+ [!code-csharp[csProgGuideMain#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#2)]  
   
- [!code-csharp[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
+ [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]  
   
 > [!NOTE]
 >  若要在 Windows Forms 應用程式的 `Main` 方法中啟用命令列引數，您必須手動修改 program.cs 中 `Main` 的簽章。 Windows Forms 設計工具所產生的程式碼會建立沒有輸入參數的 `Main`。 您也可以使用 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 或 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType>，以從主控台或 Windows 應用程式的任何點存取命令列引數。  
   
  `Main` 方法的參數是代表命令列引數的 <xref:System.String> 陣列。 您通常會透過測試 `Length` 屬性來決定引數是否存在，例如：  
   
- [!code-csharp[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
+ [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]  
   
  您也可以使用 <xref:System.Convert> 類別或 `Parse` 方法，將字串引數轉換為數字類型。 例如，下列陳述式將使用 <xref:System.Int64.Parse%2A> 方法，以將 `string` 轉換為 `long` 數字：  
   
@@ -53,7 +53,7 @@ long num = Convert.ToInt64(s);
   
 1.  將下列程式碼貼入任何文字編輯器，然後將檔案儲存為名稱為 `Factorial.cs` 的文字檔案。  
   
-     [!code-csharp[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
+     [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
 2.  從 [開始] 畫面或 [開始] 功能表中，開啟 Visual Studio [開發人員命令提示字元] 視窗，然後巡覽至包含剛剛建立之檔案的資料夾。  
   

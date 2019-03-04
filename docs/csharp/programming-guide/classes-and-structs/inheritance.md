@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 4ba5c28f6d4842846c55f47b3b40628ec57c9702
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607013"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202349"
 ---
 # <a name="inheritance-c-programming-guide"></a>繼承 (C# 程式設計手冊)
 
@@ -35,7 +35,7 @@ ms.locfileid: "54607013"
   
  下列範例示範如何以 C# 表示上圖所示範的類別關聯性。 此範例也會示範 `WorkItem` 如何覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 虛擬方法，以及 `ChangeRequest` 類別如何繼承方法的 `WorkItem` 實作。  
   
- [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#49)]  
   
 ## <a name="abstract-and-virtual-methods"></a>抽象和虛擬方法  
  當基底類別將方法宣告為[虛擬](../../../csharp/language-reference/keywords/virtual.md)時，衍生類別可以使用自己的實作來[覆寫](../../../csharp/language-reference/keywords/override.md)該方法。 如果基底類別將成員宣告為[抽象](../../../csharp/language-reference/keywords/abstract.md)，則在所有直接繼承自該類別的非抽象類別中，都必須覆寫該方法。 如果衍生類別本身就是抽象的，則會繼承抽象成員而不需要進行實作。 抽象和虛擬成員是多型的基礎，而多型是物件導向程式設計的第二個主要特性。 如需詳細資訊，請參閱[多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  

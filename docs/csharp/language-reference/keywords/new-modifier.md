@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 07986ac0c49387422aa334711b6997b159151e79
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d5fd244ea22fd48bf5b81d2cdf55127f745c145b
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244957"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835014"
 ---
 # <a name="new-modifier-c-reference"></a>new 修飾詞 (C# 參考)
 
@@ -24,11 +24,11 @@ ms.locfileid: "53244957"
 
 經由繼承隱藏的名稱會採用下列其中一種格式：
 
-一般而言，在類別或結構中引入的常數、欄位、屬性或類型會隱藏共用其名稱的所有基底類別成員。  不過有一些特殊案例。  例如，如果您宣告名為 `N` 的新欄位採用不可叫用的類型，而且基底類型將 `N` 宣告為方法，則新欄位不會隱藏引動過程語法中的基底宣告。  如需詳細資料，請參閱 [C# Language Specification 5.0](https://www.microsoft.com/download/details.aspx?id=7029) (C# 語言規格 5.0 ) (＜運算式＞一節中的＜成員查詢＞)。
+- 一般而言，在類別或結構中引入的常數、欄位、屬性或類型會隱藏共用其名稱的所有基底類別成員。  不過有一些特殊案例。  例如，如果您宣告名為 `N` 的新欄位採用不可叫用的類型，而且基底類型將 `N` 宣告為方法，則新欄位不會隱藏引動過程語法中的基底宣告。  如需詳細資料，請參閱 [C# Language Specification 5.0](https://www.microsoft.com/download/details.aspx?id=7029) (C# 語言規格 5.0 ) (＜運算式＞一節中的＜成員查詢＞)。
 
-類別或結構中引入的方法會隱藏在基底類別中共用該名稱的屬性、欄位和類型。 它也會隱藏所有具有相同簽章的基底類別方法。
+- 類別或結構中引入的方法會隱藏在基底類別中共用該名稱的屬性、欄位和類型。 它也會隱藏所有具有相同簽章的基底類別方法。
 
-類別或結構中引入的索引子會隱藏所有具有相同簽章的基底類別索引子。
+- 類別或結構中引入的索引子會隱藏所有具有相同簽章的基底類別索引子。
 
 在相同的成員上同時使用 `new` 和 [override](override.md) 是不正確的，因為這兩個修飾詞在意義上互斥。 `new` 修飾詞會以相同名稱建立新成員，並使原始成員隱藏。 `override` 修飾詞會擴充繼承成員的實作。
 

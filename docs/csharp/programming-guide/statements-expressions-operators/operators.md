@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 55b1829537224118de9870fa696ec2b1689d5066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603062"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981578"
 ---
 # <a name="operators-c-programming-guide"></a>運算子 (C# 程式設計手冊)
 
@@ -20,11 +20,11 @@ ms.locfileid: "54603062"
   
  下列 C# 陳述式包含一個一元運算子和一個運算元。 遞增運算子 `++`會修改運算元 `y`的值。  
   
- [!code-csharp[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#5)]  
   
  下列 C# 陳述式包含兩個二元運算子，這兩個運算子各有兩個運算元。 指派運算子 `=`的運算元為整數變數 `y` 和運算式 `2 + 3` 。 運算式 `2 + 3` 本身包含加法運算子和兩個運算元 `2` 和 `3`。  
   
- [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#6)]  
   
 ## <a name="operators-evaluation-and-operator-precedence"></a>運算子、評估和運算子優先順序
 

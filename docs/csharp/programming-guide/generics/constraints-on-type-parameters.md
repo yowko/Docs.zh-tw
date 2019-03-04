@@ -7,16 +7,16 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 38b8a0fc8c89975318b42380ca936869544af601
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08863e677413c27461d621c7126c64f2b76c33a8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694967"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202596"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型別參數的條件約束 (C# 程式設計手冊)
 
-條件約束會通知編譯器有關型別引數必須要有的功能。 如果沒有任何條件約束，則型別引數可以是任何型別。 編譯器只能採用 <xref:System.Object?displayPropety=nameWithType> 成員，這是任何 .NET 型別的最終基底類別。 如需詳細資訊，請參閱[為什麼使用條件約束](#why-use-constraints)。 如果用戶端程式碼嘗試使用條件約束不允許的類型來具現化類別，則結果是編譯時間錯誤。 條件約束是使用 `where` 內容關鍵字所指定。 下表列出七種類型的條件約束：
+條件約束會通知編譯器有關型別引數必須要有的功能。 如果沒有任何條件約束，則型別引數可以是任何型別。 編譯器只能採用 <xref:System.Object?displayProperty=nameWithType> 成員，這是任何 .NET 型別的最終基底類別。 如需詳細資訊，請參閱[為什麼使用條件約束](#why-use-constraints)。 如果用戶端程式碼嘗試使用條件約束不允許的類型來具現化類別，則結果是編譯時間錯誤。 條件約束是使用 `where` 內容關鍵字所指定。 下表列出七種類型的條件約束：
 
 |條件約束|說明|
 |----------------|-----------------|

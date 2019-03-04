@@ -3,14 +3,14 @@ title: Tuple 型別 - C# 手冊
 description: 了解 C# 中的未具名和具名 Tuple 類型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332750"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971400"
 ---
-# <a name="c-tuple-types"></a>C# Tuple 型別 #
+# <a name="c-tuple-types"></a>C# Tuple 型別
 
 C# Tuple 是您使用輕量型語法所定義的型別。 優點包括更簡單的語法、以元素數目 (稱為基數) 與型別為依據的轉換規則，以及複本、相等測試與指派的一致性規則。 折衷方式是，Tuple 不支援與繼承建立關聯的一些物件導向慣用語。 您可以在 [C# 7.0 新功能中的 Tuple](whats-new/csharp-7.md#tuples) 文章的一節中取得概觀。
 

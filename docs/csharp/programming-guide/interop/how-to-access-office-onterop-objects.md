@@ -10,14 +10,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 5868d8782d093a4d3d566708684d3adeb39020ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b928be1c4e291918b0d75d6efc40bb11cff91088
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695110"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203531"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>HOW TO：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>作法：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
 Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名引數和選擇性引數、稱為 `dynamic` 的新類型，以及傳遞引數以像是實值參數的形式，參考 COM 方法中參數的能力。  
   
  在本主題中，您將使用新的功能撰寫可建立及顯示 Microsoft Office Excel 工作表的程式碼。 接著，您將要撰寫可加入 Office Word 文件的程式碼，而該文件包含連結至 Excel 工作表的圖示。  
@@ -60,17 +60,17 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
 2.  將下列 `using` 指示詞加入程式碼檔案頂端。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_1.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]  
   
 ## <a name="to-create-a-list-of-bank-accounts"></a>建立銀行帳戶清單  
   
 1.  將下列類別定義貼入 `Program` 類別下的 **Program.cs**。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_2.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#2)]  
   
 2.  將下列程式碼加入 `Main` 方法，以建立含有兩個帳戶的 `bankAccounts` 清單。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_3.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#3)]  
   
 ## <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>宣告將帳戶資訊匯出至 Excel 的方法  
   
@@ -78,23 +78,23 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
      <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> 方法有用以指定特定範本的選擇性參數。 如果您想要使用參數的預設值，則可利用選擇性參數 ([!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中的新功能) 省略該參數的引數。 因為下列程式碼中未傳送引數，所以 `Add` 使用預設範本並建立新的活頁簿。 舊版 C# 中對等的陳述式需要有預留位置引數：`ExcelApp.Workbooks.Add(Type.Missing)`。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]  
   
 2.  在 `DisplayInExcel` 結尾，加入下列程式碼。 程式碼會將值插入工作表第一個資料列的前兩個資料行。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_5.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#5)]  
   
 3.  在 `DisplayInExcel` 結尾，加入下列程式碼。 `foreach` 迴圈會將帳戶清單中的資訊，放入工作表連續資料列的前兩個資料行。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_6.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#7)]  
   
 4.  在 `DisplayInExcel` 結尾加入下列程式碼，以調整資料行寬度以容納內容。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#13)]  
   
      因為 `ExcelApp.Columns[1]` 會傳回 `Object`，所以舊版 C# 需要明確轉換這些作業，而 `AutoFit` 是 Excel <xref:Microsoft.Office.Interop.Excel.Range> 方法。 下列各行會顯示轉型。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
      如果 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考組件；或者，同樣地，如果 Excel **內嵌 Interop 類型**屬性設定為 true，則 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 和更新版本會自動將傳回的 `Object` 轉換為 `dynamic`。 這個屬性的預設值為 True。  
   
@@ -102,7 +102,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
 1.  在 `Main` 結尾，加入下行。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_9.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#8)]  
   
 2.  按下 CTRL+F5。  
   
@@ -118,19 +118,19 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
      `PasteSpecial` 方法會將內容插入剪貼簿。 此方法有七個參考參數，且都是選擇性參數。 下列程式碼指定其中兩個的引數：`Link` 可建立剪貼簿的內容的來源連結，以及 `DisplayAsIcon` 可將連結顯示為圖示。 在 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中，可以為這兩者使用具名引數，並省略其他引數。 雖然這些是參考參數，但是您不需要使用 `ref` 關鍵字，或建立傳送為引數的變數。 可以直接傳送值。 在 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 和舊版本中，必須為每個參考參數傳送變數引數。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_10.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]  
   
      在 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 或舊版語言中，需要有下列更為複雜的程式碼。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_11.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#10)]  
   
 2.  在 `Main` 結尾，加入下列陳述式。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_12.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#11)]  
   
 3.  在 `DisplayInExcel` 結尾，加入下列陳述式。 `Copy` 方法會將工作表加入剪貼簿。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#12](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_13.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#12)]  
   
 4.  按下 CTRL+F5。  
   
@@ -144,7 +144,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
      在 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中，預設行為是內嵌類型資訊，而非使用 PIA。 因為使用該預設值，已簡化了數個先前的範例，因為明確轉型已非必要。 例如，`worksheet` 中的 `DisplayInExcel` 宣告，撰寫為 `Excel._Worksheet workSheet = excelApp.ActiveSheet`，而非 `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`。 如果沒有預設值，則相同方法中的 `AutoFit` 呼叫也需要明確轉型，因為 `ExcelApp.Columns[1]` 會傳回 `Object`，而 `AutoFit` 是 Excel 方法。 下列程式碼會顯示轉型。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
 2.  若要變更預設值，並使用 PIA 而非內嵌類型資訊，請展開方案總管中的 [參考] 節點，然後選取 **Microsoft.Office.Interop.Excel** 或 **Microsoft.Office.Interop.Word**。  
   
@@ -156,22 +156,22 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
 1.  將 `AutoFit` 中對兩個 `DisplayInExcel` 的呼叫，取代為下列陳述式。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#15)]  
   
      這個方法 <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> 有七個值參數，全部都是選擇性參數。 您可利用具名引數和選擇性引數，提供零個引數、數個引數或所有引數。 在前述陳述式中，只為其中一個參數 (`Format`) 提供引數。 因為 `Format` 是參數清單中的第一個參數，所以無須提供參數名稱。 但如果包含參數名稱，則可能較容易了解該陳述式，如下列程式碼所示。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#16)]  
   
 2.  按 CTRL + F5 鍵查看結果。 其他格式會列在 <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat> 列舉中。  
   
 3.  請比較步驟 1 中的陳述式與下列程式碼，這樣會顯示 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 或舊版本中所需的引數。  
   
-     [!code-csharp[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_16.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#17)]  
   
 ## <a name="example"></a>範例  
  下列程式碼顯示完整範例。  
   
- [!code-csharp[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
+ [!code-csharp[csProgGuideOfficeHowTo#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/walkthrough.cs#18)]  
   
 ## <a name="see-also"></a>另請參閱
 

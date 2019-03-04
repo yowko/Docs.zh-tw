@@ -3,12 +3,12 @@ title: C# 型別和變數 - C# 語言教學課程
 description: 了解如何在 C# 中定義類型和宣告變數
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 6880fa51ca30dadac901d2b86de189b59658d164
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583949"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211997"
 ---
 # <a name="types-and-variables"></a>型別與變數
 
@@ -71,7 +71,7 @@ C# 中的字元和字串處理使用 Unicode 編碼方式。 `char` 型別代表
     - `double`：64 位元，5.0 × 10<sup>−324</sup> 到 1.7 × 10<sup>308</sup> 之間，15 位數精確度
 * Decimal
     - `decimal`：128 位元，至少在 -7.9 × 10<sup>-28</sup> 到 7.9 × 10<sup>28</sup> 之間，至少 28 位數精確度
-    
+
 C# 程式使用*型別宣告*來建立新型別。 型別宣告指定新型別的名稱成員。 可由使用者定義的五種 C# 型別類型︰類別型別、結構型別、介面型別、列舉型別及委派型別。
 
 `class` 型別定義資料結構，其中包含資料成員 (欄位) 和函式成員 (方法、屬性及其他)。 類別型別支援單一繼承和多型，這些是可供衍生類別將基底類別延伸及特製化的機制。
@@ -115,6 +115,6 @@ C# 中有數種*變數*，包括欄位、陣列元素、區域變數和參數。
 * 委派類型
     - `null` 參考或相容的委派類型之執行個體的參考
 
->[!div class="step-by-step"]
->[上一頁](program-structure.md)
->[下一頁](expressions.md)
+> [!div class="step-by-step"]
+> [上一頁](program-structure.md)
+> [下一頁](expressions.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: c231533604b4ebadfb709295b5a8b877f87bba1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35ab91279c9ed8703f29d8cbb8df3d7d4bf2a6b8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493414"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202219"
 ---
 # <a name="extension-methods-c-programming-guide"></a>擴充方法 (C# 程式設計手冊)
 擴充方法可讓您在現有類型中「加入」方法，而不需要建立新的衍生類型、重新編譯，或是修改原始類型。 擴充方法是一種特殊的靜態方法，但是會將它們當成擴充類型上的執行個體方法來呼叫。 對於以 C#、F# 和 Visual Basic 撰寫的用戶端程式碼，呼叫擴充方法或是在類型中實際定義的方法，兩者之間並沒有明顯的差別。  
@@ -21,13 +21,13 @@ ms.locfileid: "54493414"
   
  下列範例將示範如何在整數陣列上呼叫標準查詢運算子 `OrderBy` 方法。 括號括住的運算式就是 Lambda 運算式。 許多標準查詢運算子會將 Lambda 運算式當成參數，但是擴充方法不會強制這樣做。 如需詳細資訊，請參閱 [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
- [!code-csharp[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]  
   
  擴充方法會定義為靜態方法，但透過執行個體方法語法呼叫。 擴充方法的第一個參數會指定方法作業所在的類型，而且參數前面會加上 [this](../../../csharp/language-reference/keywords/this.md) 修飾詞。 您必須使用 `using` 指示詞將命名空間明確匯入至原始程式碼，擴充方法才會進入範圍中。  
   
  下列範例將示範針對 <xref:System.String?displayProperty=nameWithType> 類別定義的擴充方法。 請注意，擴充方法是定義在非巢狀且非泛型的靜態類別內：  
   
- [!code-csharp[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#4)]  
   
  使用這個 `WordCount` 指示詞就可以將 `using` 擴充方法帶入範圍中：  
   
@@ -44,7 +44,7 @@ int i = s.WordCount();
   
  在您的程式碼中，可以利用執行個體方法語法來叫用擴充方法。 不過，編譯器所產生的中繼語言 (IL) 會將您的程式碼轉譯為靜態方法上的呼叫。 因此，實際上並未違反封裝 (Encapsulation) 的準則。 事實上，擴充方法無法存取它們所擴充之類型中的私用變數。  
   
- 如需詳細資訊，請參閱[＜How to：實作和呼叫自訂擴充方法](../../../csharp/programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。  
+ 如需詳細資訊，請參閱[如何：實作和呼叫自訂擴充方法](../../../csharp/programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。  
   
  一般而言，您呼叫擴充方法的頻率將遠高於實作自己的方法。 因為擴充方法是使用執行個體方法語法進行呼叫，所以不需要任何特殊知識就可以從用戶端程式碼使用它們。 若要啟用特定類型的擴充方法，只要針對定義這些方法所在的命名空間加入 `using` 指示詞即可。 例如，若要使用標準查詢運算子，請將下面這個 `using` 指示詞加入至程式碼：  
   
@@ -64,7 +64,7 @@ using System.Linq;
   
  當編譯器找不到具有相符簽章的執行個體方法時，就會繫結至相符的擴充方法 (如果有的話)。  
   
- [!code-csharp[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#5)]  
   
 ## <a name="general-guidelines"></a>一般方針  
  一般而言，建議您應謹慎地實作擴充方法，而且只有在必要時才實作。 當用戶端程式碼必須擴充現有的類型時，應該盡可能以建立衍生自現有類型的新類型來達成此目的。 如需詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  

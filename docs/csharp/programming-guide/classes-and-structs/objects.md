@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 12c31db32b2b3ff3da7ed0972ea2cf090701f3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e028ecd6e448237d192894c4a02233c1e0dd4c0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491738"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201491"
 ---
 # <a name="objects-c-programming-guide"></a>物件 (C# 程式設計手冊)
 類別或結構定義就像是指定型別可以做什麼的藍圖。 物件基本上是根據藍圖配置和設定的記憶體區塊。 程式可建立許多同類別的物件。 物件也稱為執行個體，可儲存在具名變數或陣列或集合中。 用戶端程式碼是使用這些變數呼叫方法，並存取物件公用屬性的程式碼。 在 C# 之類的物件導向語言中，一般程式包含多個動態互動的物件。  
@@ -24,11 +24,11 @@ ms.locfileid: "54491738"
   
  使用 [new 運算子](../../../csharp/language-reference/keywords/new-operator.md) 建立類別的執行個體。 在下例中，`Person` 是型別，而 `person1` 和 `person 2` 則是該型別的執行個體或物件。  
   
- [!code-csharp[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
+ [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
  因為結構是實值型別，所以結構物件的變數會保留完整物件的複本。 結構的執行個體也可以使用 `new` 運算子建立，但這不是必要項目，如下例所示︰  
   
- [!code-csharp[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
+ [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
  `p1` 和 `p2` 的記憶體都配置在執行緒堆疊上。 該記憶體會和其宣告所在的型別或方法一起回收。 這是在指派時複製結構的原因之一。 相較之下，當物件的所有參考都超出範圍時，通用語言執行平台會自動回收為類別執行個體配置的記憶體 (記憶體回收)。 您不可能像在 C++ 中一樣決定性終結類別物件。 如需 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 記憶體回收的詳細資訊，請參閱[記憶體回收](../../../standard/garbage-collection/index.md)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54491738"
   
 -   若要判斷兩個結構執行個體中的執行個體欄位是否有相同的值，請使用 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 方法。 因為所有結構都是隱含繼承 <xref:System.ValueType?displayProperty=nameWithType>，所以您可以直接在物件上呼叫方法，如以下範例︰  
   
- [!code-csharp[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
+ [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
  由於 `Equals` 的 <xref:System.ValueType?displayProperty=nameWithType> 實作必須能夠判斷結構中有哪些欄位，因此會使用反映。 建立您自己的結構時，請覆寫 `Equals` 方法以提供型別專屬的有效相等演算法。  
   

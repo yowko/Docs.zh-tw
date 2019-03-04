@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: 3f1099da6a43ed7f48389a16e3be6a3b6b98a148
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 08b5257cedfcaf6fe34b8218dda93163d4c0d98b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271573"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976677"
 ---
 # <a name="param-c-programming-guide"></a>\<param> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
@@ -25,7 +25,7 @@ ms.locfileid: "55271573"
   
 #### <a name="parameters"></a>參數  
  `name`  
- 方法參數的名稱。 以雙引號 (" ") 括住名稱。  
+ 方法參數的名稱。 以雙引號 (" ") 將名稱括起來。  
   
  `description`  
  參數的描述。  
@@ -35,10 +35,10 @@ ms.locfileid: "55271573"
   
  \<param> 標記的文字將會顯示於 IntelliSense (即物件瀏覽器) 以及程式碼結構 Web 報告中。  
   
- 使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 編譯，可處理檔案的文件註解。  
+ 編譯搭配 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
- [!code-csharp[csProgGuideDocComments#1](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/param_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#1)]  
   
 ## <a name="see-also"></a>另請參閱
 

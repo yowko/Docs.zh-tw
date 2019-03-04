@@ -1,5 +1,5 @@
 ---
-title: HOW TO：定義類型的實值相等 - C# 程式設計指南
+title: 作法：定義類型的實值相等 - C# 程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 456555a34347771c9918341d7d1a797e611f5577
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589307"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203106"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>HOW TO：定義類型的實值相等 (C# 程式設計指南)
+# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>作法：定義類型的實值相等 (C# 程式設計指南)
 當您定義類別或結構時，需判斷是否有必要為類型建立實值相等 (或等價) 的自訂定義。 通常，當該類型的物件必須新增至某種集合，或物件的主要目的是為了儲存一組欄位或屬性時，就會實作實值相等。 您可以根據對該類型中所有欄位和屬性的比較來定義實值相等，也可以根據子集來進行定義。 不論使用哪種方法，在類別和結構中，您的實作都必須遵循下列五項等價保證：  
   
 1.  `x.Equals(x)` 會傳回 `true`。 這稱為自反屬性。  
@@ -48,7 +48,7 @@ ms.locfileid: "54589307"
 ## <a name="example"></a>範例  
  下列範例示範如何在類別 (參考型別) 中實作實值相等。  
   
- [!code-csharp[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
+ [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
   
  在類別 (參考型別) 上，<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法的預設實作都是執行參考相等比較，而不是實值相等檢查。 當實作器覆寫虛擬方法時，其目的是為了提供實值相等語意。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "54589307"
 ## <a name="example"></a>範例  
  下列範例示範如何在結構 (實值型別) 中實作實值相等：  
   
- [!code-csharp[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
+ [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
   
  若為結構，預設實作 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (這是 <xref:System.ValueType?displayProperty=nameWithType> 中的覆寫版本) 會使用反映執行實值相等檢查，比較類型中的每個欄位值。 當實作器覆寫結構中的虛擬 `Equals` 方法時，其目的是為了提供更有效率的方法來執行實值相等檢查，以及選擇性地根據結構的一部分欄位或屬性進行比較。  
   

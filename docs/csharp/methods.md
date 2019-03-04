@@ -5,14 +5,14 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 97f30838d6bd61654daa800e891e3a79dd3f1297
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3eb19d151140f29e81376d64ecf9976e87459ce1
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617196"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202674"
 ---
-# <a name="methods"></a>方法 #
+# <a name="methods"></a>方法
 
 方法是包含一系列陳述式的程式碼區塊。 程式會造成呼叫方法並指定任何所需的方法引數來執行陳述式。 在 C# 中，每個執行的指示是在方法的內容中執行。 `Main` 方法是每個 C# 應用程式的進入點，而且它是由通用語言執行平台 (CLR) 啟動程式時呼叫。
 
@@ -36,7 +36,8 @@ ms.locfileid: "54617196"
 - [迭代器](#iterators)
 
 <a name="signatures"></a>
-## <a name="method-signatures"></a>方法簽章 ##
+
+## <a name="method-signatures"></a>方法簽章
 
 指定下列項目以 `class` 或 `struct` 宣告方法：
 
@@ -58,7 +59,8 @@ ms.locfileid: "54617196"
 請注意，`Motorcycle` 類別包含多載方法 `Drive`。 兩種方法有相同的名稱，但是必須依其參數型別區別。
 
 <a name="invocation"></a>
-## <a name="method-invocation"></a>方法引動過程 ##
+
+## <a name="method-invocation"></a>方法引動過程
 
 方法可以是「執行個體」或「靜態」。 叫用執行個體方法需要您具現化物件並針對該物件呼叫方法，執行個體方法會在該執行個體及資料上運作。 您可以參考方法所屬型別的名稱來叫用靜態方法，靜態方法運作不會在執行個體資料上操作。 嘗試透過物件執行個體呼叫靜態方法會產生編譯器錯誤。
 
@@ -80,8 +82,9 @@ ms.locfileid: "54617196"
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
- <a name="inherited"></a>
- ## <a name="inherited-and-overridden-methods"></a>繼承和覆寫方法 ##
+<a name="inherited"></a>
+
+## <a name="inherited-and-overridden-methods"></a>繼承和覆寫方法
 
 除了在型別中明確定義的成員外，型別會繼承在其基底類別中定義的成員。 因為受管理的類型系統中之所有類型，都是直接或間接繼承自 <xref:System.Object> 類別，所以所有的類型都會繼承其成員，例如 <xref:System.Object.Equals(System.Object)>、<xref:System.Object.GetType> 及 <xref:System.Object.ToString>。 下例定義 `Person` 類別、具現化兩個 `Person` 物件，並呼叫 `Person.Equals` 方法以判斷兩個物件是否相等。 但是 `Equals` 方法不是在 `Person` 類別中定義，它繼承自 <xref:System.Object>。
 
@@ -92,12 +95,14 @@ ms.locfileid: "54617196"
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
 <a name="passing"></a>
-## <a name="passing-parameters"></a>傳遞參數 ##
+
+## <a name="passing-parameters"></a>傳遞參數
 
 C# 中的類型為「實值型別」「參考型別」。 如需內建實值型別的清單，請參閱[類型與變數](./tour-of-csharp/types-and-variables.md)。 根據預設，實值型別和參考型別都會以傳值方式傳遞至方法。
 
 <a name="byval"></a>
-### <a name="passing-parameters-by-value"></a>以傳值方式傳遞參數 ###
+
+### <a name="passing-parameters-by-value"></a>以傳值方式傳遞參數
 
 以傳值方式將實值型別傳遞至方法時，會將物件複本而不是物件本身傳遞至方法。 因此，當控制回到呼叫端時，呼叫的方法中的物件變更不會影響原始物件。
 
@@ -112,7 +117,8 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 [!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
 
 <a name="byref"></a>
-### <a name="passing-parameters-by-reference"></a>以傳址方式傳遞參數 ###
+
+### <a name="passing-parameters-by-reference"></a>以傳址方式傳遞參數
 
 當您想要變更方法中的引數值，且想要在控制回到呼叫方法時反映該變更時，您必須以傳址方式傳遞參數。 若要以傳址方式傳遞參數，請使用 [`ref`](language-reference/keywords/ref.md) 或 [`out`](language-reference/keywords/out-parameter-modifier.md) 關鍵字。 您也可以傳址方式傳遞值，以避免發生複製的情況，但仍會無法使用 [`in`](language-reference/keywords/in-parameter-modifier.md) 關鍵字進行修改。
 
@@ -127,7 +133,8 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 傳遞參考型別參數可讓您變更參考本身的值，而不是其個別項目或欄位的值。
 
 <a name="paramarray"></a>
-### <a name="parameter-arrays"></a>參數陣列 ###
+
+### <a name="parameter-arrays"></a>參數陣列
 
 有時候，指定方法之引數確切數目的需求會有限制。 使用 `params` 關鍵字指出某參數是參數陣列，可使用數目可變的引數來呼叫方法。 以 `params` 關鍵字標記的參數必須是陣列型別，而且必須是方法參數清單中的最後一個參數。
 
@@ -142,7 +149,8 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 [!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
 
 <a name="optional"></a>
-## <a name="optional-parameters-and-arguments"></a>選擇性參數和引數 ##
+
+## <a name="optional-parameters-and-arguments"></a>選擇性參數和引數
 
 方法定義可以指定其參數為必要項目或選擇項目。 根據預設，參數為必要項目。 在方法定義中包含參數的預設值即可指定選擇性參數。 呼叫此方法時，如不為選擇性參數提供任何引數，則改用預設值。
 
@@ -172,8 +180,9 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 - 如果找到多個候選項目，則慣用轉換的多載解析規則會套用至明確指定的引數。 會忽略選擇性參數的省略引數。
 - 如果兩個候選項目的評斷結果一樣好，則偏向沒有選擇性參數的候選項目，其會在呼叫中省略引數。 這是多載解析一般偏好參數較少之候選項目的結果。
 
- <a name="return"></a>
- ## <a name="return-values"></a>傳回值 ##
+<a name="return"></a>
+
+## <a name="return-values"></a>傳回值
 
 方法可以傳回值給呼叫者。 針對傳回型別，如果列在方法名稱前面的型別不是 `void`，則方法可以使用 `return` 關鍵字傳回值。 在 `return` 關鍵字後面接著符合傳回型別的變數、常數或運算式的陳述式，會將該值傳回給方法呼叫端。 具有非 void 傳回類型的方法需要使用 `return` 關鍵字以傳回值。 `return` 關鍵字也會停止執行方法。
 
@@ -229,8 +238,9 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 
 [!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
 
- <a name="extension"></a>
- ## <a name="extension-methods"></a>擴充方法 ##
+<a name="extension"></a>
+
+## <a name="extension-methods"></a>擴充方法
 
 一般來說，有兩種方式可將方法加入至現有的型別︰
 
@@ -242,7 +252,8 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 如需詳細資訊，請參閱[擴充方法](programming-guide/classes-and-structs/extension-methods.md)。
 
 <a name="async"></a>
-## <a name="async-methods"></a>非同步方法 ##
+
+## <a name="async-methods"></a>非同步方法
 
 使用非同步功能，您就可以呼叫非同步方法，而不需要使用明確回呼或手動將您的程式碼分散到多種方法或 lambda 運算式上。
 
@@ -262,7 +273,8 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
  如需非同步方法的詳細資訊，請參閱 [Asynchronous Programming with async and await (C#)](async.md) (使用 Async 和 Await 進行非同步程式設計 (C#))、[Control Flow in Async Programs (C#)](programming-guide/concepts/async/control-flow-in-async-programs.md) (非同步程式中的控制流程 (C#)) 和 [Async Return Types (C#)](programming-guide/concepts/async/async-return-types.md) (非同步傳回型別 (C#))。
 
 <a name="expr"></a>
-## <a name="expression-bodied-members"></a>運算式主體成員 ##
+
+## <a name="expression-bodied-members"></a>運算式主體成員
 
 方法定義只是立即傳回運算式的結果，或是具有單一陳述式做為方法的主體是很常見的。  使用 `=>`定義這類方法有個語法捷徑：
 
@@ -278,7 +290,8 @@ public Customer this[long id] => store.LookupCustomer(id);
 如果方法傳回 `void` 或為非同步方法，則方法的主體必須是陳述式運算式 (如同 Lambda)。  針對屬性和索引子，它們必須是唯讀，而且您不會使用 `get` 存取子關鍵字。
 
 <a name="iterators"></a>
-## <a name="iterators"></a>迭代器 ##
+
+## <a name="iterators"></a>迭代器
 
 迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](language-reference/keywords/yield.md) 陳述式一次傳回一個項目。 達到 `yield return` 陳述式時，即會記住目前的位置，讓呼叫端可以要求序列中的下一個項目。
 
@@ -286,7 +299,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 如需詳細資訊，請參閱 [Iterator](programming-guide/concepts/iterators.md)。
 
-## <a name="see-also"></a>另請參閱 ##
+## <a name="see-also"></a>另請參閱
 
 - [存取修飾詞](language-reference/keywords/access-modifiers.md)
 - [靜態類別和靜態類別成員](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

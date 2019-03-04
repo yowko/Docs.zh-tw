@@ -6,20 +6,20 @@ helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: 252e66229b75c545c85aa175267ea267c138a087
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 169bdfc53d0c30ffc14e5a9525920679a94fbf23
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573120"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56982137"
 ---
-# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>HOW TO：撰寫複製建構函式 (C# 程式設計手冊)
+# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>作法：撰寫複製建構函式 (C# 程式設計手冊)
 C# 未提供物件的複製建構函式，但您可以自行撰寫一個。  
   
 ## <a name="example"></a>範例  
  在下列範例中，`Person`[類別](../../../csharp/language-reference/keywords/class.md)定義接受 `Person` 執行個體作為其引數的複製建構函式。 引數的屬性值會指派給新 `Person` 執行個體的屬性。 這個程式碼包含替代的複製建構函式，可將您想要複製之執行個體的 `Name` 和 `Age` 屬性傳送給類別的執行個體建構函式。  
   
- [!code-csharp[csProgGuideObjects#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-write-a-copy-constructor_1.cs)]  
+ [!code-csharp[csProgGuideObjects#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#16)]  
   
 ## <a name="see-also"></a>另請參閱
 

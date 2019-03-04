@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8856dfd1c6c8e35399c20b630c0d44493e42b6a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600488"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972192"
 ---
 # <a name="expressions-c-programming-guide"></a>運算式 (C# 程式設計手冊)
 「運算式」是一連串的一或多個運算元以及兩或多個運算子，可以評估為單一值、物件、方法或命名空間。 運算式可以包含常值、方法呼叫、運算子和其運算元，或「簡單名稱」。 簡單名稱可以是變數、型別成員、方法參數、命名空間或型別的名稱。  
@@ -40,13 +40,13 @@ System.Convert.ToInt32("35");
 ## <a name="literals-and-simple-names"></a>常值和簡單名稱  
  兩個最簡單類型的運算式是常值和簡單名稱。 常值是沒有名稱的常數值。 例如，在下列程式碼範例中，`5` 和 `"Hello World"` 都是常值︰  
   
- [!code-csharp[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
+ [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
  如需常值的詳細資訊，請參閱[類型](../../../csharp/language-reference/keywords/types.md)。  
   
  在上述範例中，`i` 和 `s` 是識別區域變數的簡單名稱。 在運算式中使用這些變數時，變數名稱會評估為目前儲存在記憶體中變數位置的值。 下列範例會顯示這一點：  
   
- [!code-csharp[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
+ [!code-csharp[csProgGuideStatements#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#3)]  
 ## <a name="invocation-expressions"></a>叫用運算式  
  在下列程式碼範例中，`DoWork` 呼叫是叫用運算式。  
   

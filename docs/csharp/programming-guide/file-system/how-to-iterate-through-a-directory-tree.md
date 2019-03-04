@@ -1,19 +1,19 @@
 ---
-title: HOW TO：逐一查看目錄樹狀 - C# 程式設計手冊
+title: 作法：逐一查看目錄樹狀 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613840"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976326"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>HOW TO：逐一查看目錄樹狀 (C# 程式設計手冊)
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>作法：逐一查看目錄樹狀 (C# 程式設計手冊)
 「逐一查看樹狀目錄」一詞，代表存取指定根資料夾下每個巢狀子目錄中任意深度的每個檔案。 您不需要開啟每個檔案。 您可以只擷取的檔案名稱或子目錄當成 `string`，或者可以擷取格式為 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 物件的其他資訊。  
   
 > [!NOTE]
@@ -41,14 +41,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  這裡所處理的特定例外狀況，以及對每個檔案或資料夾所執行的特定動作，僅供示範之用。 您應該修改此程式碼，以符合特定需求。 如需詳細資訊，請參閱程式碼中的註解。  
   
- [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>範例  
  下列範例示範如何在不使用遞迴的情況下，逐一查看樹狀目錄中的所有檔案和資料夾。 這項技術使用泛型 <xref:System.Collections.Generic.Stack%601> 集合類型，也就是後進先出 (LIFO) 堆疊。  
   
  這裡所處理的特定例外狀況，以及對每個檔案或資料夾所執行的特定動作，僅供示範之用。 您應該修改此程式碼，以符合特定需求。 如需詳細資訊，請參閱程式碼中的註解。  
   
- [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#2)]  
   
  測試每個資料夾來判斷應用程式是否有權開啟資料夾，通常非常耗時。 因此，程式碼範例只會將該部分的作業封入 `try/catch` 區塊中。 您可以修改 `catch` 區塊，以便您在存取資料夾遭拒時，可以嘗試評估權限，然後重新進行存取。 一般而言，您只會攔截可處理的例外狀況，而不會讓應用程式處於未知狀態。  
   

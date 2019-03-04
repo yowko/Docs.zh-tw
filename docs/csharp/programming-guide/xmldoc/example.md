@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 5a3d9fa6314b9b97f7231ddd21318654468ce026
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e7a829596d167e470790294f19e2d5b5aa86cfcf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287907"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972816"
 ---
 # <a name="example-c-programming-guide"></a>\<example> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
@@ -30,10 +30,10 @@ ms.locfileid: "55287907"
 ## <a name="remarks"></a>備註  
  \<example> 標記可讓您指定如何使用方法或其他程式庫成員的範例。 這通常需要使用 [\<code>](../../../csharp/programming-guide/xmldoc/code.md) 標記。  
   
- 使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 編譯，可處理檔案的文件註解。  
+ 編譯搭配 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
- [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/example_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 31806ad06cc97fa27f1944f2500f0f9cbb29f561
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1816aeb0ddf783c8ad0baa7f5d460f0fc60747e1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262097"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974818"
 ---
 # <a name="see-c-programming-guide"></a>\<see> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
@@ -32,11 +32,11 @@ ms.locfileid: "55262097"
 ## <a name="remarks"></a>備註  
  \<see> 標記可讓您在文字內指定連結。 使用 [\<seealso>](../../../csharp/programming-guide/xmldoc/seealso.md) 指出文字應該放置於＜請參閱＞一節中。 使用 [cref 屬性](../../../csharp/programming-guide/xmldoc/cref-attribute.md)，建立程式碼項目之文件頁面的內部超連結。  
   
- 使用 [-doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 編譯，可處理檔案的文件註解。  
+ 使用 [-doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 編譯可處理檔案的文件註解。  
   
  下列範例示範摘要區段內的 \<see> 標記。  
   
- [!code-csharp[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/see_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]  
   
 ## <a name="see-also"></a>另請參閱
 

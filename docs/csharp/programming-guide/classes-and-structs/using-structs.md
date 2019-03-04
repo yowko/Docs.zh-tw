@@ -5,17 +5,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 16a8c1c9534e121c24289fbbfff14485b0338f63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe7cf3cf1982060d22f648c5e17d002b1a695ac0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743942"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978523"
 ---
 # <a name="using-structs-c-programming-guide"></a>使用結構 (C# 程式設計手冊)
 `struct` 類型很適合用於代表輕量型物件，例如 `Point`、 `Rectangle`和 `Color`。 雖然使用 [自動實作的屬性](../../../csharp/language-reference/keywords/class.md) 可以輕鬆地將一個點表示為一個 [類別](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)，但是在某些情節中 [結構](../../../csharp/language-reference/keywords/struct.md) 可能會更有效率。 例如，如果您宣告含有 1000 個 `Point` 物件的陣列，您會配置額外的記憶體來參考每個物件；在此案例下，結構所耗用的記憶體會較少。 因為 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 含有名為 <xref:System.Drawing.Point> 的物件，所以本範例中的結構會改稱為 "CoOrds"。  
   
- [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
+ [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
  為結構定義預設 (無參數) 的建構函式時會發生錯誤。 初始化結構主體中的執行個體欄位時也會發生錯誤。 您只能透過使用參數化建構函式、隱含的預設建構函式、[物件初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)，或在宣告結構後個別存取成員，來將可外部存取的結構成員初始化。 任何私用或無法以其他方式存取的成員都需要建構函式的專屬使用。
   
@@ -37,9 +37,9 @@ ms.locfileid: "54743942"
  此範例示範如何使用預設和參數化建構函式進行 `struct` 初始化。  
   
 ### <a name="code"></a>程式碼  
- [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
+ [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
- [!code-csharp[csProgGuideObjects#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_2.cs)]  
+ [!code-csharp[csProgGuideObjects#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#2)]  
   
 ## <a name="example-2"></a>範例 2  
   
@@ -47,9 +47,9 @@ ms.locfileid: "54743942"
  此範例示範結構特有的功能。 其無須使用 `new` 運算子就能建立 Coords 物件。 如果您以 `class` 一字取代 `struct` 一字，將不會編譯程式。  
   
 ### <a name="code"></a>程式碼  
- [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
+ [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
- [!code-csharp[csProgGuideObjects#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_3.cs)]  
+ [!code-csharp[csProgGuideObjects#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#3)]  
   
 ## <a name="see-also"></a>另請參閱
 

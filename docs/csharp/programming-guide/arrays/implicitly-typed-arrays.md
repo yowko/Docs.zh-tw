@@ -7,12 +7,12 @@ helpviewer_keywords:
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 2b52bca57bde2fd198fd1621cb8a8f7dfc73ec9e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de47d4a4b588b4e051450976ea91c813210eda1e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740758"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202011"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>隱含類型陣列 (C# 程式設計手冊)
 
@@ -22,7 +22,7 @@ ms.locfileid: "54740758"
   
  下列範例示範如何建立隱含型別陣列：  
   
- [!code-csharp[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#37)]  
   
  在上述範例中，請注意，使用隱含型別陣列時，在初始化陳述式左邊未使用方括弧。 也請注意不規則陣列是使用 `new []` 進行初始化，就像一維陣列一樣。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "54740758"
 
  當您建立包含陣列的匿名型別時，在類型的物件初始設定式中，陣列必須是隱含型別。 在下列範例中，`contacts` 是隱含型別的匿名型別陣列，且每個都會包含名為 `PhoneNumbers` 的陣列。 請注意，`var` 關鍵字未用於物件初始設定式內。  
   
- [!code-csharp[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#38)]  
   
 ## <a name="see-also"></a>另請參閱
 

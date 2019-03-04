@@ -1,5 +1,5 @@
 ---
-title: HOW TO：從文字檔讀取 - C# 程式設計手冊
+title: 作法：從文字檔讀取 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: f7ddfbec13fad073272c75c3e68a4f5c9c3eef9e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 560453a81124a3ee52a2ffd794ddac026c7394a5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672236"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978016"
 ---
-# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>HOW TO：從文字檔讀取 (C# 程式設計手冊)
+# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>作法：從文字檔讀取 (C# 程式設計手冊)
 這個範例會使用 <xref:System.IO.File?displayProperty=nameWithType> 類別中的靜態方法 <xref:System.IO.File.ReadAllText%2A> 和 <xref:System.IO.File.ReadAllLines%2A>，來讀取文字檔的內容。  
   
  如需使用 <xref:System.IO.StreamReader> 的範例，請參閱[如何：一次一行讀取文字檔](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "54672236"
 >  此範例中所用的檔案是在[如何︰寫入文字檔](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md)主題中建立。  
   
 ## <a name="example"></a>範例  
- [!code-csharp[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-read-from-a-text-file_1.cs)]  
+ [!code-csharp[csFilesandFolders#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#4)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  將程式碼複製並貼到 C# 主控台應用程式中。  

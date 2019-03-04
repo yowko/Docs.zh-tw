@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a36f4a6f01c4e11429fda3a3022b4092e98db6cf
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612123"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212205"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
@@ -20,7 +20,7 @@ C# 具有語言層級非同步程式設計模型，可輕鬆撰寫非同步程�
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>非同步模型的基本概觀
 
-非同步程式設計的核心是建立非同步作業模型的 `Task` 和 `Task<T>` 物件。  它們是受 `async` 和 `await` 關鍵字所支援。  在大部分情況下，模型都相當簡單︰ 
+非同步程式設計的核心是建立非同步作業模型的 `Task` 和 `Task<T>` 物件。  它們是受 `async` 和 `await` 關鍵字所支援。  在大部分情況下，模型都相當簡單︰
 
 針對 I/O 繫結程式碼，您可以 `await` 作業，這項作業會在 `async` 方法內傳回 `Task` 或 `Task<T>`。
 
@@ -87,11 +87,11 @@ calculateButton.Clicked += async (o, e) =>
 
 ## <a name="key-pieces-to-understand"></a>要了解的重要部分
 
-*   非同步程式碼可以用於 I/O 繫結和 CPU 繫結程式碼，但每個案例都不同。
-*   非同步程式碼會使用 `Task<T>` 和 `Task`，這是用來在背景中完成建立工作模型的建構。
+* 非同步程式碼可以用於 I/O 繫結和 CPU 繫結程式碼，但每個案例都不同。
+* 非同步程式碼會使用 `Task<T>` 和 `Task`，這是用來在背景中完成建立工作模型的建構。
 * `async` 關鍵字會將方法轉換為非同步方法，讓您可以在其主體中使用 `await` 關鍵字。
-*   套用 `await` 關鍵字時，除非等候的工作完成，否則會暫止呼叫的方法，並將控制權返回其呼叫端。
-*   `await` 只能在非同步方法內使用。
+* 套用 `await` 關鍵字時，除非等候的工作完成，否則會暫止呼叫的方法，並將控制權返回其呼叫端。
+* `await` 只能在非同步方法內使用。
 
 ## <a name="recognize-cpu-bound-and-io-bound-work"></a>辨識 CPU 繫結和 I/O 繫結工作
 
@@ -106,7 +106,7 @@ calculateButton.Clicked += async (o, e) =>
 2. 程式碼要執行極耗費資源的計算嗎？
 
     如果您的答案為「是」，則工作是 **CPU 繫結**。
-    
+
 如果您的工作是「I/O 繫結」，請使用「沒有」`Task.Run` 的 `async` 和 `await`。  您「不應該」使用 Task Parallel Library。  [深入了解非同步](../standard/async-in-depth.md)一文中描述這個問題的原因。
 
 如果您的工作是「CPU 繫結」，而且您關心回應性，請使用 `async` 和 `await`，但在「含」`Task.Run` 的其他執行緒上繁衍工作。  如果工作適用於並行和平行處理原則，您應該也考慮使用 [工作平行程式庫](../standard/parallel-programming/task-parallel-library-tpl.md)。
@@ -185,12 +185,12 @@ public async Task<User> GetUserAsync(int userId)
 public static async Task<IEnumerable<User>> GetUsersAsync(IEnumerable<int> userIds)
 {
     var getUserTasks = new List<Task<User>>();
-    
+
     foreach (int userId in userIds)
     {
         getUserTasks.Add(GetUserAsync(userId));
     }
-    
+
     return await Task.WhenAll(getUserTasks);
 }
 ```
@@ -212,33 +212,34 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
     return await Task.WhenAll(getUserTasks);
 }
 ```
+
 雖然程式碼較少，但是混合使用 LINQ 與非同步程式碼時請小心。  因為 LINQ 使用延後 (延遲) 執行，所以除非使用 `.ToList()` 或 `.ToArray()` 呼叫強制逐一查看產生的序列，否則不會像在 `foreach()` 迴圈中一樣立即進行非同步呼叫。
 
 ## <a name="important-info-and-advice"></a>重要資訊和建議
 
 雖然非同步程式設計相當簡單，但是需要牢記一些詳細資料，以避免非預期的行為。
 
-*  `async` **方法需要其主體中有** `await` **關鍵字，或永遠不會產生它們！**
+* `async` **方法需要其主體中有** `await` **關鍵字，或永遠不會產生它們！**
 
 這是需要記住的重要事項。  如果 `await` 未用於 `async` 方法的主體中，C# 編譯器將會產生警告，但程式碼的編譯和執行就像一般方法一樣。  請注意，因為 C# 編譯器針對非同步方法所產生的狀態機器不會完成任何作業，所以這也非常沒有效率。
 
-*   **您應該新增 “Async” 作為所撰寫之每個非同步方法名稱的尾碼。**
+* **您應該新增 “Async” 作為所撰寫之每個非同步方法名稱的尾碼。**
 
 這是 .NET 中所使用的慣例，可更容易區分同步與非同步方法。 請注意，不一定會套用程式碼未明確呼叫的特定方法 (例如事件處理常式或 Web 控制器方法)。 因為您的程式碼未明確呼叫這些方法，則明確命名並不重要。
 
-*   `async void` **應該只用於事件處理常式。**
+* `async void` **應該只用於事件處理常式。**
 
 因為事件沒有傳回型別 (因此無法利用 `Task` 和 `Task<T>`)，所以 `async void` 是允許非同步事件處理常式運作的唯一方式。 `async void` 的任何其他使用都未遵循 TAP 模型，而且不容易使用，例如：
 
-  *   `async void` 方法中所擲回的例外狀況無法在該方法外部進行攔截。
-  *   `async void` 方法很難進行測試。
-  *   如果呼叫端未預期 `async void` 方法非同步執行，則這些方法可能會造成不好的副作用。
+* `async void` 方法中所擲回的例外狀況無法在該方法外部進行攔截。
+* `async void` 方法很難進行測試。
+* 如果呼叫端未預期 `async void` 方法非同步執行，則這些方法可能會造成不好的副作用。
 
-*   **在 LINQ 運算式中使用非同步 Lambda 時，請小心處理**
+* **在 LINQ 運算式中使用非同步 Lambda 時，請小心處理**
 
 LINQ 中的 Lambda 運算式會使用延後執行，這表示程式碼可以在未預期它執行時結束執行。 如果未正確撰寫，則將封鎖工作導入這個作業很容易會造成死結。 此外，這類非同步程式碼的巢狀結構也更難分析程式碼的執行。 非同步和 LINQ 功能強大，但應該盡可能小心且清楚地一起使用。
 
-*   **以非封鎖方式撰寫等候工作的程式碼**
+* **以非封鎖方式撰寫等候工作的程式碼**
 
 將封鎖目前執行緒作為等候工作完成的方式可能會造成死結和封鎖的內容執行緒，而且可能需要更為複雜的錯誤處理。 下表提供如何處理以非封鎖方式等候工作的指引︰
 
@@ -249,16 +250,16 @@ LINQ 中的 Lambda 運算式會使用延後執行，這表示程式碼可以在�
 | `await Task.WhenAll` | `Task.WaitAll` | 等候所有工作完成 |
 | `await Task.Delay` | `Thread.Sleep` | 等候一段時間 |
 
-*   **撰寫較不具狀態的程式碼**
+* **撰寫較不具狀態的程式碼**
 
 請不要取決於全域物件的狀態或特定方法的執行。 相反地，請只取決於方法的傳回值。 為什麼？
 
-  *   程式碼會比較容易理解。
-  *   程式碼會比較容易測試。
-  *   混合使用非同步與同步程式碼則相當簡單。
-  *   一般可以避免追蹤條件。
-  *   根據傳回值，讓非同步程式碼的協調更為簡單。
-  *   (紅利) 它可實際與相依性插入良好搭配。
+  * 程式碼會比較容易理解。
+  * 程式碼會比較容易測試。
+  * 混合使用非同步與同步程式碼則相當簡單。
+  * 一般可以避免追蹤條件。
+  * 根據傳回值，讓非同步程式碼的協調更為簡單。
+  * (紅利) 它可實際與相依性插入良好搭配。
 
 建議的目標是在程式碼中達到完全或幾乎完全的 [Referential Transparency](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29) (參考透明度)。 這樣做會導致極容易預測、測試和維護的程式碼基底。
 

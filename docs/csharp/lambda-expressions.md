@@ -5,14 +5,14 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 74ad1c5ddae69864b85099535e8b83a4504275a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 642422a4cc077ffebb5ee6db9d7ffb937fc1e173
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183123"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212348"
 ---
-# <a name="lambda-expressions"></a>Lambda 運算式 #
+# <a name="lambda-expressions"></a>Lambda 運算式
 
 「Lambda 運算式」是當做物件處理的程式碼區塊 (運算式或陳述式區塊)。 它可當做方法的引數傳遞，也可由方法呼叫傳回。 Lambda 運算式可大量用於：
 
@@ -32,7 +32,7 @@ Lambda 運算式使用 [Lambda 宣告運算子](language-reference/operators/lam
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda2.cs#2)]
 
-## <a name="expression-lambdas"></a>運算式 Lambda ##
+## <a name="expression-lambdas"></a>運算式 Lambda
 
  在 => 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」。 運算式 Lambda 會在[運算式樹狀架構](expression-trees.md)的建構過程中大量使用。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：
 
@@ -54,7 +54,7 @@ Lambda 運算式使用 [Lambda 宣告運算子](language-reference/operators/lam
 
 請注意，在上面的範例中，運算式 Lambda 的主體可以包含方法呼叫。 不過，如果您要建立在 .NET Framework 外部 (例如在 SQL Server 或 Entity Framework (EF) 中) 評估的運算式樹狀架構，則不應在 Lambda 運算式中使用方法呼叫，因為這些方法在 .NET 實作內容之外可能不具任何意義。 如果您在此情況下確實選擇使用方法呼叫，請務必徹底測試，以確保可成功解析方法呼叫。
 
-## <a name="statement-lambdas"></a>陳述式 Lambda ##
+## <a name="statement-lambdas"></a>陳述式 Lambda
 
 陳述式 Lambda 看起來就像是運算式 Lambda，不同之處在於，陳述式會包含於大括號內：
 
@@ -68,7 +68,7 @@ Lambda 運算式使用 [Lambda 宣告運算子](language-reference/operators/lam
 
 陳述式 Lambda 就像匿名方法，它不能用來建立運算式樹狀架構。
 
-## <a name="async-lambdas"></a>非同步 Lambda ##
+## <a name="async-lambdas"></a>非同步 Lambda
 
 您可以使用 [async](language-reference/keywords/async.md) 和 [await](language-reference/keywords/await.md) 關鍵字，輕鬆建立結合非同步處理的 Lambda 運算式和陳述式。 例如，下列範例會呼叫以非同步方式執行的 `ShowSquares` 方法。
 
@@ -76,7 +76,7 @@ Lambda 運算式使用 [Lambda 宣告運算子](language-reference/operators/lam
 
 如需如何建立和使用非同步方法的詳細資訊，請參閱[使用 Async 和 Await 進行非同步程式設計](programming-guide/concepts/async/index.md)。
 
-## <a name="lambda-expressions-and-tuples"></a>Lambda 運算式和元組 ##
+## <a name="lambda-expressions-and-tuples"></a>Lambda 運算式和元組
 
 從 C# 7.0 開始，C# 語言提供元組的內建支援。 您可以將元組當做引數提供給 Lambda 運算式，而您的 Lambda 運算式也可以傳回元組。 在某些情況下，C# 編譯器會使用型別推斷來判斷元組元件的類型。
 
@@ -90,7 +90,7 @@ Lambda 運算式使用 [Lambda 宣告運算子](language-reference/operators/lam
 
 如需 C# 中元組支援的詳細資訊，請參閱 [C# 元組類型](tuples.md)。
 
-## <a name="lambdas-with-the-standard-query-operators"></a>具有標準查詢運算子的 Lambda ##
+## <a name="lambdas-with-the-standard-query-operators"></a>具有標準查詢運算子的 Lambda
 
 其他實作中的 LINQ to Objects 具有輸入參數，其類型是其中一種 <xref:System.Func%601> 系列的泛型委派。 這些委派使用型別參數定義輸入參數的數目和類型，以及委派的傳回型別。 對於封裝套用至一組來源資料中每個項目的使用者定義運算式而言，`Func` 委派非常實用。 例如，若是 <xref:System.Func%601>，其語法如下：
 
@@ -118,9 +118,9 @@ Lambda 運算式使用 [Lambda 宣告運算子](language-reference/operators/lam
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#6)]
 
-## <a name="type-inference-in-lambda-expressions"></a>Lambda 運算式中的型別推斷 ##
+## <a name="type-inference-in-lambda-expressions"></a>Lambda 運算式中的型別推斷
 
-撰寫 Lambda 時，您通常不需要指定輸入參數的類型，這是因為編譯器可以根據 Lambda 主體、參數類型，以及 C# 語言規格中所述的其他因素來推斷類型。 對於大多數的標準查詢運算子而言，第一個輸入是來源序列中項目的類型。 如果您要查詢 `IEnumerable<Customer>`，則輸入變數就會推斷為 `Customer` 物件，這表示您可以存取其方法和屬性：
+撰寫 Lambda 時，您通常不需要指定輸入參數的類型，這是因為編譯器可以根據 Lambda 主體、參數類型，以及 C# 語言規格中所述的其他因素來推斷類型。 對於大多數的標準查詢運算子而言，第一項輸入是來源序列中項目的類型。 如果您要查詢 `IEnumerable<Customer>`，則輸入變數就會推斷為 `Customer` 物件，這表示您可以存取其方法和屬性：
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/infer1.cs#1)]
 
@@ -134,7 +134,7 @@ Lambda 運算式使用 [Lambda 宣告運算子](language-reference/operators/lam
 
 請注意，Lambda 運算式本身並沒有類型，因為一般類型系統沒有內建的「Lambda 運算式」概念。 不過，有時候一般所稱的 Lambda 運算式「類型」會很實用。 在這類情況下，類型是指委派類型或是 Lambda 運算式轉換成的 <xref:System.Linq.Expressions.Expression> 類型。
 
-## <a name="variable-scope-in-lambda-expressions"></a>Lambda 運算式中的變數範圍 ##
+## <a name="variable-scope-in-lambda-expressions"></a>Lambda 運算式中的變數範圍
 
 Lambda 可以參考「外部變數」(請參閱[匿名方法](programming-guide/statements-expressions-operators/anonymous-methods.md))，這些變數必須包含在定義 Lambda 函式的方法範圍內，或是在包含 Lambda 運算式的類型範圍內。 以這種方式擷取的變數會加以儲存，以便在 Lambda 運算式中使用，即使這些變數可能會超出範圍而遭到記憶體回收。 外部變數必須確實指派，才能用於 Lambda 運算式。 下列範例將示範這些規則。
 
@@ -152,7 +152,7 @@ Lambda 可以參考「外部變數」(請參閱[匿名方法](programming-guide/
 
 - 如果跳躍陳述式的目標不在區塊內，則 Lambda 運算式不可包含 Lambda 函式內的 `goto` 陳述式、 `break` 陳述式或 `continue` 陳述式。 即使目標位於區塊內，跳躍陳述式出現在 Lambda 函式區塊外部也一樣是錯誤。
 
-## <a name="see-also"></a>另請參閱 ##
+## <a name="see-also"></a>另請參閱
 
 - [LINQ (Language-Integrated Query)](../standard/using-linq.md)
 - [匿名方法](programming-guide/statements-expressions-operators/anonymous-methods.md)

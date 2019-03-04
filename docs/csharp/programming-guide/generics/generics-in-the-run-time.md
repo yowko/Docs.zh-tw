@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: f68dbec16a82b6504d2fb93581d9d52ddf614c0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d45d64d608c117ef5f1477ac55a39c192374d7ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587264"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981474"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>執行階段中的泛型 (C# 程式設計手冊)
 當泛型型別或方法編譯到 Microsoft intermediate language (MSIL) 時，會包含可將其識別為具有型別參數的中繼資料。 泛型型別 MSIL 的使用方法，因提供的型別參數為實值型別或參考型別而異。  
@@ -19,11 +19,11 @@ ms.locfileid: "54587264"
   
  例如，假設程式碼宣告以整數建構的堆疊：  
   
- [!code-csharp[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#42)]  
   
  此時，執行階段會產生 <xref:System.Collections.Generic.Stack%601> 類別的特定版本，以整數適當取代其參數。 現在，每當程式碼使用整數堆疊時，執行階段都會重複使用所產生的特定 <xref:System.Collections.Generic.Stack%601> 類別。 在下例中，會建立兩個整數堆疊的執行個體，它們共用一個 `Stack<int>` 程式碼的單一執行個體：  
   
- [!code-csharp[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#43](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#43)]  
   
  不過，假設在程式碼的另一個點建立了另一個 <xref:System.Collections.Generic.Stack%601> 類別，以不同的實值型別 (如 `long`) 或使用者定義的結構做為其參數。 結果，執行階段會產生另一個版本的泛型型別，替代 MSIL 適當位置的 `long`。 因為每個特定的泛型類別原本就包含實值型別，所以不再需要轉換。  
   
@@ -31,17 +31,17 @@ ms.locfileid: "54587264"
   
  例如，假設您有兩個參考型別，`Customer` 類別和 `Order` 類別，也假設您建立了 `Customer` 類型的堆疊：  
   
- [!code-csharp[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#47)]  
   
- [!code-csharp[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#44)]  
   
  此時，執行階段會產生特定版本的 <xref:System.Collections.Generic.Stack%601> 類別，儲存稍後要填入的物件參考，而不是儲存資料。 假設下一行程式碼建立另一個參考型別的堆疊，名為 `Order`：  
   
- [!code-csharp[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#45)]  
   
  與實值型別不同，另一個特定版本的 <xref:System.Collections.Generic.Stack%601> 類別並非針對 `Order` 類型而建立。 改建立特定版本的 <xref:System.Collections.Generic.Stack%601> 類別執行個體，設定 `orders` 變數參考它。 假設您接下來遇到一行程式碼，建立 `Customer` 類型的堆疊：  
   
- [!code-csharp[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#46)]  
   
  如同先前使用以 `Order` 類型建立的 <xref:System.Collections.Generic.Stack%601> 類別一樣，建立另一個特定 <xref:System.Collections.Generic.Stack%601> 類別的執行個體。 其中包含的指標會設定為參考大小為 `Customer` 類型的記憶體區域。 因為程式與程式之間的參考型別數目大不相同，所以泛型的 C# 實作會將編譯器所建立的參考型別泛型類別的特定類別數目降低到一，大幅減少程式碼數量。  
   

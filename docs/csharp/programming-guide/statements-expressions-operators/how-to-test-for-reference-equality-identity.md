@@ -1,19 +1,19 @@
 ---
-title: HOW TO：參考相等 (識別) 的測試 - C# 程式設計指南
+title: 作法：參考相等 (識別) 的測試 - C# 程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 5bb97d9d46ae179e825f4615de902391640a14d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 057532cae42d7a0b6d11750ae0e33e43108cfda9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589200"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203583"
 ---
-# <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>HOW TO：參考相等 (識別) 的測試 (C# 程式設計指南)
+# <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>作法：參考相等 (識別) 的測試 (C# 程式設計指南)
 不必實作任何自訂邏輯，就能支援您類型中的參考相等比較。 此功能是透過靜態 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 方法提供給所有類型。  
   
  下列範例示範如何判斷兩個變數是否具有「參考相等」，這表示它們會參考記憶體中的相同物件。  
@@ -21,7 +21,7 @@ ms.locfileid: "54589200"
  範例中同時顯示為何 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 一律對實值類型傳回 `false`，以及為何不應使用 <xref:System.Object.ReferenceEquals%2A> 來判斷字串是否相等。  
   
 ## <a name="example"></a>範例  
- [!code-csharp[csProgGuideObjects#90](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-test-for-reference-equality-identity_1.cs)]  
+ [!code-csharp[csProgGuideObjects#90](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#90)]  
   
  實作 <xref:System.Object?displayProperty=nameWithType> 通用基底類別中的 `Equals` 也會執行參考相等檢查，但最好不要使用此功能，原因是如果類別恰好覆寫方法，結果可能不如預期。 `==` 和 `!=` 運算子也同樣如此。 當它們對參考型別進行操作時，`==` 和 `!=` 的預設行為是執行參考相等檢查。 然而，衍生的類別可以多載運算子，以執行值相等檢查。 為了將錯誤的可能性降到最低，建議您在需要判斷兩個物件是否具有參考相等時，最好一律使用 <xref:System.Object.ReferenceEquals%2A>。  
   

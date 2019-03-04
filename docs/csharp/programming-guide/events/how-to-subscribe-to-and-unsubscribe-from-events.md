@@ -1,5 +1,5 @@
 ---
-title: HOW TO：訂閱及取消訂閱事件 - C# 程式設計手冊
+title: 作法：訂閱及取消訂閱事件 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 646ff22aed68cc3c37a7d581ffa078a2e06df5b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d06899303110d0b06729f2a02c47b9096bec724
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661616"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981799"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>HOW TO：訂閱及取消訂閱事件 (C# 程式設計手冊)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>作法：訂閱及取消訂閱事件 (C# 程式設計手冊)
 如果您想要撰寫在引發事件時所呼叫的自訂程式碼，您可以訂閱由其他類別發行的事件。 例如，您可以訂閱某個按鈕的 `click` 事件，讓應用程式在使用者按下該按鈕時執行某項動作。  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>使用 Visual Studio IDE 訂閱事件  
@@ -27,7 +27,7 @@ ms.locfileid: "54661616"
   
      Visual C# 會建立空的事件處理常式方法，並將其新增至您的程式碼。 您也可以在 [程式碼] 檢視中手動新增程式碼。 例如，下列程式碼行會宣告一個事件處理常式方法，該方法將會在 `Form` 類別引發 `Load` 事件時呼叫。  
   
-     [!code-csharp[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
+     [!code-csharp[csProgGuideEvents#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#11)]  
   
      訂閱事件所需的程式碼行也會在專案之 Form1.Designer.cs 檔案的 `InitializeComponent` 方法中自動產生。 看起來像這樣：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "54661616"
     }  
     ```  
   
-     如需詳細資訊，請參閱[＜How to：在 LINQ 之外使用 Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)。  
+     如需詳細資訊，請參閱[如何：在 LINQ 之外使用 Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)。  
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>使用匿名方法訂閱事件  
   

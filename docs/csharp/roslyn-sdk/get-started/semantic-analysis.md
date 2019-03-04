@@ -3,12 +3,12 @@ title: 開始使用語意分析
 description: 本教學課程概述如何使用 .NET Compiler SDK 來處理語意分析。
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 669f11377edfa707133f7ad8df72117942d504fa
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484614"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202570"
 ---
 # <a name="get-started-with-semantic-analysis"></a>開始使用語意分析
 
@@ -117,7 +117,7 @@ Press any key to continue . . .
 
 [!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
-該來源序列包含所有成員 (包含屬性和欄位)，因此使用 <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> 方法進行篩選來尋找本身為 <xref:Microsoft.CodeAnalysis.IMethodSymbol?diplayProperty=nameWithType> 物件的項目：
+該來源序列包含所有成員 (包含屬性和欄位)，因此使用 <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> 方法進行篩選來尋找本身為 <xref:Microsoft.CodeAnalysis.IMethodSymbol?displayProperty=nameWithType> 物件的項目：
 
 [!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 

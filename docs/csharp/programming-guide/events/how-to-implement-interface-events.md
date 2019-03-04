@@ -1,19 +1,19 @@
 ---
-title: HOW TO：實作介面事件 - C# 程式設計手冊
+title: 作法：實作介面事件 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 47bd7184e26a643aa8ff17b3e0a0507ab7978216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfd0602ef92f9b0f84a8e1434ef834a328d60f03
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540272"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200269"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>HOW TO：實作介面事件 (C# 程式設計手冊)
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>作法：實作介面事件 (C# 程式設計手冊)
 [介面](../../../csharp/language-reference/keywords/interface.md)可以宣告[事件](../../../csharp/language-reference/keywords/event.md)。 下列範例示範如何在類別中實作介面事件。 基本上，規則與您在實作任何介面方法或屬性時相同。  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>在類別中實作介面事件  
@@ -56,7 +56,7 @@ namespace ImplementInterfaceEvents
   
 您可以提供自己的存取子，來指定是否要透過類別中的相同事件或透過不同的事件來表示這兩個事件。 例如，如果根據介面規格應該在不同時間引發事件，則可以將每個事件與類別中的個別實作產生關聯。 在下列範例中，訂閱者會藉由將圖形參考轉換為 `IShape` 或 `IDrawingObject`，來判斷他們將接收哪些 `OnDraw` 事件。  
   
- [!code-csharp[WrapTwoInterfaceEvents](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs#everything)]
+ [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
 ## <a name="see-also"></a>另請參閱
 

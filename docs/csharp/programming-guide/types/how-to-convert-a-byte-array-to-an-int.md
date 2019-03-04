@@ -1,19 +1,19 @@
 ---
-title: HOW TO：將位元組陣列轉換成整數 - C# 程式設計指南
+title: 作法：將位元組陣列轉換成整數 - C# 程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 39a34539fbd9623d4ae3c6bddf55e50e3502db61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3563b0ffd5360c575404ead81e0e847ccab46f0c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692346"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972426"
 ---
-# <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>HOW TO：將位元組陣列轉換成整數 (C# 程式設計指南)
+# <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>作法：將位元組陣列轉換成整數 (C# 程式設計指南)
 本例示範如何使用 <xref:System.BitConverter> 類別將位元組陣列轉換成 [int](../../../csharp/language-reference/keywords/int.md)，再回復成位元組陣列。 例如，在讀取網路位元組後，您可能必須從位元組轉換成內建資料類型。 除了範例中的 [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) 方法外，下表會列出 <xref:System.BitConverter> 類別中可將位元組轉換成其他內建類型的方法。  
   
 |傳回的類型|方法|  
@@ -35,7 +35,7 @@ ms.locfileid: "54692346"
 > [!NOTE]
 >  輸出會隨電腦架構位元組由大到小或由小到大而有所不同。  
   
- [!code-csharp[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
+ [!code-csharp[csProgGuideTypes#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#22)]  
   
 ## <a name="example"></a>範例  
  在此範例中，會呼叫 <xref:System.BitConverter> 類別的 <xref:System.BitConverter.GetBytes%28System.Int32%29> 方法，將 `int` 轉換成位元組陣列。  
@@ -43,7 +43,7 @@ ms.locfileid: "54692346"
 > [!NOTE]
 >  輸出會隨電腦架構位元組由大到小或由小到大而有所不同。  
   
- [!code-csharp[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
+ [!code-csharp[csProgGuideTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#23)]  
   
 ## <a name="see-also"></a>另請參閱
 

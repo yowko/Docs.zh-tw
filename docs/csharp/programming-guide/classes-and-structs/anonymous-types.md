@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 179e49f44b2dbf711dae2ce81a1ef14815b7d18a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 165793155aabac23245b352959be3188b0a5a6e5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729755"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971165"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名類型 (C# 程式設計手冊)
 匿名類型提供一個便利的方法，將一組唯讀屬性封裝成一個物件，而不需要事先明確定義類型。 類型名稱會由編譯器產生，並且無法在原始程式碼層級使用。 每個屬性的類型會由編譯器推斷。  
@@ -36,7 +36,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  如果未在匿名類型中指定成員名稱，編譯器會為匿名類型成員指定與用於初始化類型之屬性相同的名稱。 您必須為以運算式初始化的屬性提供一個名稱，如上述範例所示。 在下列範例中，匿名類型的屬性名稱是 `Color` 和 `Price`。  
   
- [!code-csharp[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
+ [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
  一般而言，當您使用匿名型別初始化變數時，您可以使用 [var](../../../csharp/language-reference/keywords/var.md) 將變數宣告為隱含型別區域變數。 由於只有編譯器可以存取匿名類型的基本名稱，因此無法在變數宣告中指定類型名稱。 如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   

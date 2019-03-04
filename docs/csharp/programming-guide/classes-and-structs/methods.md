@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: fa863a5606c7526ae32bc28a0cfeaa91f8c7b539
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b97ce10cfb2e35beecf2c96acbac9c4ac8462c1d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712151"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201157"
 ---
 # <a name="methods-c-programming-guide"></a>方法 (C# 程式設計手冊)
 方法是包含一系列陳述式的程式碼區塊。 程式會造成呼叫方法並指定任何所需的方法引數來執行陳述式。 在 C# 中，每個執行的指示是在方法的內容中執行。 Main 方法是每個 C# 應用程式的進入點，而且它是由 Common Language Runtime (CLR) 啟動程式時呼叫。  
@@ -27,17 +27,17 @@ ms.locfileid: "54712151"
   
  方法參數會放在括號中，並以逗號分隔。 空括號表示方法不需要任何參數。 這個類別包含四個方法：  
   
- [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#40)]  
   
 ## <a name="method-access"></a>方法存取  
  在物件上呼叫方法，就像是存取欄位。 在物件名稱後面加上句點、方法的名稱與括號。 引數會在括號中列出，並以逗號分隔。 因此可以如下列範例所示呼叫 `Motorcycle` 類別的方法：  
   
- [!code-csharp[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#41)]  
   
 ## <a name="method-parameters-vs-arguments"></a>方法參數與引數  
  方法定義會指定所需的任何參數的名稱和類型。 在呼叫程式碼呼叫此方法時，它會提供對每個參數呼叫的引數的具體值。 引數都必須與參數類型相容，呼叫程式碼中使用的引數名稱 (如果有的話) 不需要與方法中定義的具名參數相同。 例如：  
   
- [!code-csharp[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]  
   
 ## <a name="passing-by-reference-vs-passing-by-value"></a>以傳址方式傳遞與以傳值方式傳遞  
  根據預設，傳遞實值類型至方法時，會傳遞複本，而不是物件本身。 因此，對引數的變更對於呼叫方法中的原始複本不會有影響。 您可以使用 ref 關鍵字依參考傳遞實值類型。 如需詳細資訊，請參閱[傳遞實值型別參數](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md)。 如需內建實值型別的清單，請參閱[實值型別表](../../../csharp/language-reference/keywords/value-types-table.md)。  
@@ -46,11 +46,11 @@ ms.locfileid: "54712151"
   
  您會使用 `class` 關鍵字建立參考類型，如下列範例所示。  
   
- [!code-csharp[csProgGuideObjects#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#42)]  
   
  現在，如果您將此類型為基礎的物件傳遞至方法，即會傳遞物件的參考。 下列範例會將類型 `SampleRefType` 的物件傳遞至方法 `ModifyObject`。  
   
- [!code-csharp[csProgGuideObjects#75](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#75](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#75)]  
   
  此範例會執行與上一個範例基本上相同的動作，依傳值方式將引數傳遞至方法。 但是，由於使用參考類型，結果會不同。 `ModifyObject` 中對參數 `value` 的 `obj`欄位做的修改，也會變更 `value` 方法中引數 `rt`的 `TestRefType` 欄位。 `TestRefType` 方法會顯示 33 做為輸出。  
   
@@ -70,13 +70,13 @@ public ref double GetEstimatedDistance()
 
 `return` 關鍵字也會停止執行方法。 如果傳回類型為 `void`，不含值的 `return` 陳述式對於停止方法的執行仍很有用。 若沒有 `return` 關鍵字，在方法到達程式碼區塊的結尾時，方法將會停止執行。 具有非 void 傳回類型的方法需要使用 `return` 關鍵字以傳回值。 例如，這兩種方法使用 `return` 關鍵字傳回整數：  
   
- [!code-csharp[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#44)]  
   
  若要使用從方法傳回的值，呼叫方法可以在使用相同類型值的任意位置使用方法呼叫本身即已足夠。 您也可以指派傳回值給變數。 例如，下列兩個程式碼範例會達到相同的目標：  
   
- [!code-csharp[csProgGuideObjects#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_7.cs)]  
+ [!code-csharp[csProgGuideObjects#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#45)]  
   
- [!code-csharp[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
+ [!code-csharp[csProgGuideObjects#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#46)]  
   
  使用區域變數，在此情況下的 `result`來儲存值是選擇性的。 它有助於程式碼的可讀性，或如果您需要儲存方法的整個範圍引數的原始值，則可能為必要。  
 
@@ -124,7 +124,7 @@ public static void FillMatrix(int[,] matrix)
   
  `startButton_Click` 方法是傳回類型為 void 的非同步方法的範例。 因為 `DoSomethingAsync` 是非同步方法，對 `DoSomethingAsync` 的呼叫工作必須等候，如下列陳述式所示： `await DoSomethingAsync();`。 `startButton_Click` 方法都必須定義 `async` 修飾詞，因為方法有 `await` 運算式。  
   
- [!code-csharp[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
+ [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]  
   
  非同步方法不可以宣告任何 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 參數，但是可以呼叫具有這類參數的方法。  
   

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立列舉類型的新方法 - C# 程式設計手冊
+title: 作法：建立列舉類型的新方法 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 411606b6d86f8781be0cb2db19474d563c09a610
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebd0433efda43c65ea6d9494a8ec25e8263f5b43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725125"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968118"
 ---
-# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>HOW TO：建立列舉類型的新方法 (C# 程式設計手冊)
+# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>作法：建立列舉類型的新方法 (C# 程式設計手冊)
 您可以使用擴充方法來新增專屬於特定列舉類型的功能。  
   
 ## <a name="example"></a>範例  
  在下例中，`Grades` 列舉代表班上學生可能得到的字母分級成績。 已將名為 `Passing` 的擴充方法新增至 `Grades` 類型，以便該類型的每個執行個體現在都「知道」它是否代表傳遞等級。  
   
- [!code-csharp[csProgGuideExtensionMethods#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-create-a-new-method-for-an-enumeration_1.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#2)]  
   
  請注意，`Extensions` 類別也包含動態更新的靜態變數，以及反映該變數目前值的擴充方法傳回值。 本例示範，在幕後直接對定義所在的靜態類別叫用擴充方法。  
   

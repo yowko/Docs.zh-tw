@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 5fdb3de03eaa60a4d29d5a0c7e4082a6806b0ec9
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 7e91d77393c4d2980cce73a92589b752124e8077
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441667"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965198"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分類別和方法 (C# 程式設計手冊)
 有可能將 [class](../../../csharp/language-reference/keywords/class.md)、[struct](../../../csharp/language-reference/keywords/struct.md)、[interface](../../../csharp/language-reference/keywords/interface.md) 或方法的定義，分割到兩個以上的來源檔案。 每一個來源檔案都包含型別或方法定義的一個區段，而當編譯應用程式時，就會將所有區段結合起來。  
@@ -26,7 +26,7 @@ ms.locfileid: "56441667"
   
 -   若要分割類別定義，請使用 [partial](../../../csharp/language-reference/keywords/partial-type.md) 關鍵字修飾詞，如下所示︰  
   
- [!code-csharp[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]  
   
  `partial` 關鍵字表示可在命名空間中定義類別、結構或介面的其他組件。 所有組件都必須使用 `partial` 關鍵字。 所有組件都必須可在編譯時間取得，以形成最後的型別。 所有組件必須有相同的存取範圍，例如 `public`、`private` 等等。  
   
@@ -39,15 +39,15 @@ ms.locfileid: "56441667"
   
  下例會顯示可為部分的巢狀型別，即使巢狀型別所在的型別不是部分本身。  
   
- [!code-csharp[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#25)]  
   
  在編譯時期會合併部分型別定義的屬性。 例如，請考慮下列宣告：  
   
- [!code-csharp[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#23)]  
   
  它們與下列宣告相同：  
   
- [!code-csharp[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#24)]  
   
  以下是合併自所有部分型別定義︰  
   
@@ -63,24 +63,24 @@ ms.locfileid: "56441667"
   
  例如，請考慮下列宣告：  
   
- [!code-csharp[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#21)]  
   
  它們與下列宣告相同：  
   
- [!code-csharp[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#22)]  
   
 ### <a name="restrictions"></a>限制  
  當您處理部分類別定義時要遵循數項規則︰  
   
 -   表示同型別組件的所有部分型別定義都必須使用 `partial` 來修改。 例如，下列類別宣告會產生錯誤︰  
   
-     [!code-csharp[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
+     [!code-csharp[csProgGuideObjects#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#20)]  
   
 -   `partial` 修飾詞只能緊貼在關鍵字 `class`、`struct` 或 `interface` 之前。  
   
 -   部分型別定義中允許巢狀部分型別，如下例所示︰  
   
-     [!code-csharp[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
+     [!code-csharp[csProgGuideObjects#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#19)]  
   
 -   表示同型別組件的所有部分型別定義都必須在相同的組件和相同的模組 (.exe 或 .dll 檔案) 中定義。 部分定義不能跨越多個模組。  
   
@@ -110,19 +110,19 @@ ms.locfileid: "56441667"
   
 ## <a name="example-1"></a>範例 1  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>說明  
  在下例中，類別的欄位和建構函式 `Coords`，已在一個部分類別定義中宣告，而成員 `PrintCoords`，則是在另一個部分類別定義中宣告。  
   
 ### <a name="code"></a>程式碼  
- [!code-csharp[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
+ [!code-csharp[csProgGuideObjects#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#17)]  
   
 ## <a name="example-2"></a>範例 2  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>說明  
  下例範例示範您也可以開發部分結構和介面。  
   
 ### <a name="code"></a>程式碼  
- [!code-csharp[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
+ [!code-csharp[csProgGuideObjects#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#18)]  
   
 ## <a name="partial-methods"></a>部分方法  
  部分類別或結構可包含部分方法。 類別的一個組件包含方法簽章。 選擇性實作可在相同組件或另一個組件中定義。 如未提供實作，則會在編譯時期移除方法和方法的所有呼叫。  

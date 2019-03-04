@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 25ac904b848311639dda1ecf231f0d6565799733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2572599071fdddd15be620e1322d2e38614182c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620171"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972920"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>相等比較 (C# 程式設計手冊)
 有時候需要比較兩個值是否相等。 在某些情況下，您要測試「值是否相等」 (也稱為「等價」，表示兩個變數所含的值相等。 在其他情況下，您必須判斷兩個變數是否參照記憶體中的相同基礎物件。 這類型的相等稱為「參考相等」或「識別」。 本主題描述這兩種相等，並提供其他主題的連結以取得詳細資訊。  
@@ -18,11 +18,11 @@ ms.locfileid: "54620171"
 ## <a name="reference-equality"></a>參考相等  
  參考相等表示兩個物件參考都指向相同的基礎物件。 這可能是透過簡單指派所發生，如下列範例所示。  
   
- [!code-csharp[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
+ [!code-csharp[csProgGuideStatements#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#18)]  
   
  在這個程式碼中，建立兩個物件，但在指派陳述式之後，這兩個參考都指向相同的物件。 因此，它們具有參考相等。 使用 <xref:System.Object.ReferenceEquals%2A> 方法，以判斷兩個參考是否指向相同的物件。  
   
- 參考相等的概念只適用於參考類型。 因為將實值型別的執行個體指派給變數時會建立實值的複本，所以實值型別物件不能具有參考相等。 因此，您絕不會有兩個參照記憶體中相同位置的 Unboxed 結構。 此外，如果您使用 <xref:System.Object.ReferenceEquals%2A> 來比較兩個實值型別，則結果一律為 `false`，即使物件中所包含的值完全相同也是一樣。 這是因為每個變數都會對個別物件執行個體進行 Boxed 處理。 如需詳細資訊，請參閱[＜How to：參考相等 (識別) 的測試](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)。  
+ 參考相等的概念只適用於參考類型。 因為將實值型別的執行個體指派給變數時會建立實值的複本，所以實值型別物件不能具有參考相等。 因此，您絕不會有兩個參照記憶體中相同位置的 Unboxed 結構。 此外，如果您使用 <xref:System.Object.ReferenceEquals%2A> 來比較兩個實值型別，則結果一律為 `false`，即使物件中所包含的值完全相同也是一樣。 這是因為每個變數都會對個別物件執行個體進行 Boxed 處理。 如需詳細資訊，請參閱[如何：參考相等 (識別) 的測試](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)。  
   
 ## <a name="value-equality"></a>實值相等  
  實值相等表示兩個物件包含相同的值。 對於 [int](../../../csharp/language-reference/keywords/int.md) 或 [bool](../../../csharp/language-reference/keywords/bool.md) 這類基本實值型別，測試實值相等十分簡單。 您可以使用 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 運算子，如下列範例所示。  
