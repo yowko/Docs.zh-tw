@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中從文字檔讀取
+title: 作法：在 Visual Basic 中從文字檔讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extended characters [Visual Basic], reading
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: ad581d00a2499a94b9737ac69e724ea06a57ae59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45c96973f8092f8ac1f1588f70e1f4b9e1049af7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582574"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979043"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>HOW TO：在 Visual Basic 中從文字檔讀取
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> 物件的 `My.Computer.FileSystem` 方法允許您從文字檔讀取。 如果檔案的內容是使用 ASCII 或 UTF-8 之類的編碼方式，則可以指定檔案編碼方式。  
@@ -27,13 +27,13 @@ ms.locfileid: "54582574"
   
 -   使用 `ReadAllText` 物件的 `My.Computer.FileSystem` 方法並提供路徑，將文字檔的內容讀取到字串中。 下列範例會將 test.txt 的內容讀取到字串中，然後顯示於訊息方塊中。  
   
-     [!code-vb[VbFileIORead#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files_1.vb)]  
+     [!code-vb[VbFileIORead#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#2)]  
   
 ### <a name="to-read-from-a-text-file-that-is-encoded"></a>若要從已編碼的文字檔讀取  
   
 -   使用 `ReadAllText` 物件的 `My.Computer.FileSystem` 方法，並且提供路徑和檔案編碼類型，將文字檔的內容讀取到字串中。 下列範例會將 UTF32 檔案 test.txt 的內容讀取到字串中，然後顯示於訊息方塊中。  
   
-     [!code-vb[VbFileIORead#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files_2.vb)]  
+     [!code-vb[VbFileIORead#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#3)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  

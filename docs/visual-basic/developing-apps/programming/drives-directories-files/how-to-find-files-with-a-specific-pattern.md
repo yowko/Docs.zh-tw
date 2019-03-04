@@ -1,17 +1,17 @@
 ---
-title: HOW TO：在 Visual Basic 中尋找具有特定模式的檔案
+title: 作法：在 Visual Basic 中尋找具有特定模式的檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], finding
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: 6010aa263b734f5bf57eaa3082a794cb1019645e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 879f7a2335e3c4c31b0a7ddd3d303486d8b95a22
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498540"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970463"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>HOW TO：在 Visual Basic 中尋找具有特定模式的檔案
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> 方法會傳回代表檔案路徑名稱的唯讀字串集合。 您可以使用 `wildCards` 參數指定特定模式。 如果您想要在搜尋中包含子目錄，請將 `searchType` 參數設定為 `SearchOption.SearchAllSubDirectories`。  
@@ -25,7 +25,7 @@ ms.locfileid: "54498540"
   
 -   使用 `GetFiles` 方法，並提供您想要搜尋之目錄的名稱和路徑，並指定模式。 下列範例會傳回目錄中副檔名為 `.dll` 的所有檔案，並將它們新增到 `ListBox1`。  
   
-     [!code-vb[VbFileIOMisc#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-find-files-with-a-specific-pattern_1.vb)]  
+     [!code-vb[VbFileIOMisc#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#4)]  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  以下條件可能會造成例外狀況：  

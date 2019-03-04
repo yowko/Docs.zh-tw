@@ -1,5 +1,5 @@
 ---
-title: HOW TO：讀取字串中的字元
+title: 作法：讀取字串中的字元
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 01d5fb2e4f785a4a510715b58e95d310a6ffa4e2
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: e890e4172e645e9919ea88ec5835aaed7432c0c6
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675344"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835196"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>HOW TO：讀取字串中的字元
 下列程式碼範例會示範如何以同步或非同步的方式，從字串讀取字元。  
@@ -42,7 +42,7 @@ ms.locfileid: "55675344"
 - <xref:System.IO.StringReader>  
 - <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
 - [非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [如何：建立目錄清單](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+- [如何：建立目錄清單](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
 - [如何：讀取和寫入新建立的資料檔案](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
 - [如何：開啟並附加至記錄檔](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
 - [如何：讀取檔案中的文字](../../../docs/standard/io/how-to-read-text-from-a-file.md)  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 12943e449f825516d37079e7ddac2a6705879066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bd950b1648bdf0b0c4673f2a90d67086b338ecd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710504"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974766"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>逐步解說：建立自訂的記錄檔接聽程式 (Visual Basic)
 本逐步解說示範如何建立自訂記錄檔接聽程式，並將它設定為接聽 `My.Application.Log` 物件的輸出。  
@@ -22,7 +22,7 @@ ms.locfileid: "54710504"
   
 -   在應用程式中，建立一個繼承自 <xref:System.Diagnostics.TraceListener>，且命名為 `SimpleListener` 的類別。  
   
-     [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_1.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
      基底類別所需的 <xref:System.Diagnostics.TraceListener.Write%2A> 和 <xref:System.Diagnostics.TraceListener.WriteLine%2A> 方法會呼叫 `MsgBox` 來顯示其輸入。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54710504"
   
 -   下列程式碼示範如何決定以強式名稱命名 `SimpleListener` 的類型名稱。  
   
-     [!code-vb[VbVbalrMyApplicationLog#17](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_2.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
      強式名稱的類型取決於您的專案而定。  
   

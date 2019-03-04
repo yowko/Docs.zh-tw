@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: f199cc8c58dbcbb0fce17dbf3c7b8e198daf0305
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb7fda617118c01e6ee54339bcc3ff8f8b342450
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709718"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202440"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>逐步解說：在 Visual Basic 中管理檔案和目錄
 本逐步解說提供 Visual Basic 中檔案 I/O 的基本概念簡介。 其中說明如何建立一個小型應用程式，以提列並檢查目錄中的文字檔案。 針對每個選取的文字檔案，應用程式會提供檔案屬性和第一行內容。 您也可以選擇將資訊寫入記錄檔。  
@@ -57,13 +57,13 @@ ms.locfileid: "54709718"
   
 2.  將下列程式碼加入至 `Click` 事件處理常式。  
   
-     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
      `FolderBrowserDialog1.ShowDialog` 呼叫會開啟 [瀏覽資料夾] 對話方塊。 使用者按一下 [確定] 之後，系統會以引數形式將 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 屬性傳送給 `ListFiles` 方法，以在下一個步驟中加入。  
   
 3.  新增下列 `ListFiles` 方法。  
   
-     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#104)]  
   
      此程式碼會先清除 **ListBox**。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "54709718"
   
 2.  將下列程式碼加入至 `Click` 事件處理常式。  
   
-     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#105)]  
   
      程式碼會驗證 `ListBox` 中已選取項目。 接著，它會從 `ListBox` 取得檔案路徑的項目。 <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> 方法用來檢查檔案是否仍然存在。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "54709718"
   
 3.  新增下列 `GetTextForOutput` 方法。  
   
-     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#107)]  
   
      程式碼使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 方法來取得檔案參數。 檔案參數會新增至 <xref:System.Text.StringBuilder>。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "54709718"
   
 1.  將下列程式碼加入 `examineButton_Click` 事件處理常式的結尾。  
   
-     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#106)]  
   
      程式碼會將記錄檔路徑設為將記錄檔放入所選檔案的相同目錄中。 記錄項目的文字則會設為目前的日期和時間，後面接著檔案資訊。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "54709718"
   
 2.  將下列程式碼加入事件處理常式。  
   
-     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#102)]  
   
      此程式碼會將資料夾瀏覽器的預設目錄設為目前的目錄。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "54709718"
   
 1.  新增下列 `SetEnabled` 方法。  
   
-     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#108)]  
   
      `SetEnabled` 方法會依據 `ListBox` 中是否選取項目，來啟用或停用控制項。  
   
@@ -152,12 +152,12 @@ ms.locfileid: "54709718"
 ## <a name="full-example-using-mycomputerfilesystem"></a>使用 My.Computer.FileSystem 的完整範例  
  下列是完整範例。  
   
- [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
 ## <a name="full-example-using-systemio"></a>使用 System.IO 的完整範例  
  下列對等範例使用來自 <xref:System.IO> 命名空間的類別，而不是使用 `My.Computer.FileSystem` 物件。  
   
- [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.IO>

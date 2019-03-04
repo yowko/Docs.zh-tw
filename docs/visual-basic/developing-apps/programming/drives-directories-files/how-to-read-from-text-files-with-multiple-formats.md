@@ -11,14 +11,14 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: fd48f77a299c5d29a32f96e4e063e262ad20fd18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 589b5f94358cf9ce58e47a8a0eaec187aface98d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678495"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964743"
 ---
-# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>HOW TO：在 Visual Basic 中以多種格式從文字檔讀取
+# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>作法：在 Visual Basic 中以多種格式從文字檔讀取
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 物件可讓您輕鬆有效率地剖析結構化文字檔，例如記錄檔。 您可以使用 `PeekChars` 方法來處理具有多種格式的檔案，以在剖析整個檔案時判斷每行格式。  
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>剖析具有多種格式的文字檔  
@@ -36,24 +36,24 @@ ms.locfileid: "54678495"
   
 2.  定義預期的格式，以及回報錯誤時所使用的格式。 每個陣列中的最後一個項目為 -1，因此將最後一個欄位假設為可變寬度。 陣列中的最後一個項目小於或等於 0 時會發生這種情況。  
   
-     [!code-vb[VbFileIORead#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_1.vb)]  
+     [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]  
   
 3.  建立新的 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 物件，並定義寬度和格式。  
   
-     [!code-vb[VbFileIORead#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_2.vb)]  
+     [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]  
   
 4.  反覆執行資料列，並在讀取之前測試格式。  
   
-     [!code-vb[VbFileIORead#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_3.vb)]  
+     [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]  
   
 5.  將錯誤寫入主控台。  
   
-     [!code-vb[VbFileIORead#7](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_4.vb)]  
+     [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]  
   
 ## <a name="example"></a>範例  
  下列是從 `testfile.txt` 檔案進行讀取的完整範例。  
   
- [!code-vb[VbFileIORead#8](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_5.vb)]  
+ [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  

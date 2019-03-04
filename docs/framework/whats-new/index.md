@@ -13,7 +13,7 @@ ms.author: ronpet
 ---
 # .NET Framework 的新功能<a name="introduction"></a>
 
-本文摘要說明下列 .NET Framework 版本中重要的新功能和增強功能：
+此文章摘要說明下列 .NET Framework 版本中重要的新功能和增強功能：
 
 - [.NET Framework 4.7.2](#v472)
 - [.NET Framework 4.7.1](#v471)
@@ -781,7 +781,7 @@ End Function
 
  為了在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 解決這個問題，下列三種方法已加入 <xref:System.Security.Cryptography.ECDiffieHellman> 基底類別，以便更清楚地表示這些 KDF 常式和其輸入︰
 
-|ECDiffieHellman 方法|描述|
+|ECDiffieHellman 方法|說明|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用公式衍生金鑰內容<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 演算法的計算結果。|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用公式衍生金鑰內容<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 演算法的計算結果。|
@@ -1042,8 +1042,9 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 - 流程圖活動設計工具或其他工作流程活動設計工具可能會在預設位置顯示所有物件，而不是根據附加的屬性值。
 
+<a name="clickonce-1" />
 
-### <a name="clickonce"></a>ClickOnce
+### <a name="clickonce"></a>Clickonce
 
 ClickOnce 已更新為除了已經支援的 TLS 1.0 通訊協定之外，還支援 TLS 1.1 和 TLS 1.2。 ClickOnce 會自動偵測需要哪個通訊協定。若要啟用 TLS 1.1 和 1.2 支援，並不需要在 ClickOnce 應用程式中執行額外的步驟。
 

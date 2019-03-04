@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解整�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 844d4bd8ac18bc31b5abeff5882df1f9a4acaab5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147252"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967967"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>實作微服務之間的事件通訊 (整合事件)
 
@@ -78,7 +78,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>發佈/訂閱 (Pub/Sub) 模式 
 
-[發佈/訂閱模式](https://msdn.microsoft.com/library/ff649664.aspx)的目的與觀察者模式相同：您想要在特定事件發生時通知其他服務。 但觀察者和 Pub/Sub 模式之間有一項重要的差異。 在觀察者模式中，廣播是直接從可預見物件對觀察者執行，讓他們「知道」彼此。 但在使用 Pub/Sub 模式時，有一個稱為代理程式或訊息代理程式或事件匯流排的第三個元件，發行者和訂閱者都知道它。 因此，在使用 Pub/Sub 模式時，發行者和訂閱者會因為提及的事件匯流排或訊息代理程式而精確地分離。
+[發佈/訂閱模式](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10))的目的與觀察者模式相同：您想要在特定事件發生時通知其他服務。 但觀察者和 Pub/Sub 模式之間有一項重要的差異。 在觀察者模式中，廣播是直接從可預見物件對觀察者執行，讓他們「知道」彼此。 但在使用 Pub/Sub 模式時，有一個稱為代理程式或訊息代理程式或事件匯流排的第三個元件，發行者和訂閱者都知道它。 因此，在使用 Pub/Sub 模式時，發行者和訂閱者會因為提及的事件匯流排或訊息代理程式而精確地分離。
 
 ### <a name="the-middleman-or-event-bus"></a>中間人或事件匯流排 
 

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中讀取登錄機碼的值
+title: 作法：在 Visual Basic 中讀取登錄機碼的值
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: f731492ba794cffebe97b93fc6b9c9f5fd8eacdf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35fa839f80f422f334e96d7c5bf0bbd5f12484ad
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748086"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966927"
 ---
-# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>HOW TO：在 Visual Basic 中讀取登錄機碼的值
+# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>作法：在 Visual Basic 中讀取登錄機碼的值
 您可以使用 `My.Computer.Registry` 物件的 `GetValue` 方法來讀取 Windows 登錄中的值。  
   
  如果下列範例中的機碼 "Software\MyApp" 不存在，則會擲回例外狀況。 如果下列範例中的 `ValueName` (也就是 "Name") 不存在，則會傳回 `Nothing`。  
@@ -28,7 +28,7 @@ ms.locfileid: "54748086"
   
 -   使用 `GetValue` 方法，並指定路徑和名稱來讀取登錄機碼的值。 下列範例會從 `HKEY_CURRENT_USER\Software\MyApp` 讀取 `Name` 值，並顯示於訊息方塊中。  
   
-     [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]  
+     [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
  這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [Windows 作業系統] > [登錄] 中。 如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54748086"
   
 -   使用 `GetValue` 方法來擷取此值。 下列程式碼會檢查此值是否存在；如果不存在，則傳回訊息。  
   
-     [!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_2.vb)]  
+     [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  登錄包含可用來儲存資料的最上層或根目錄機碼。 例如，HKEY_LOCAL_MACHINE 根目錄機碼可用於儲存所有使用者所使用的電腦層級設定，而 HKEY_CURRENT_USER 可用於儲存個別使用者的特定資料。  

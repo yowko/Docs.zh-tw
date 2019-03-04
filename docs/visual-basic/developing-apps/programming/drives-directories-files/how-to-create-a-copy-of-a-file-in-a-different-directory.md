@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中於不同資料夾內建立檔案複本
+title: 作法：在 Visual Basic 中於不同資料夾內建立檔案複本
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: 88e2145c-d414-45a5-ad03-6f5d58ecca26
-ms.openlocfilehash: f14658cedd18aa22f354c0b7d9cca08960cd7690
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9177d321eaabf396ca847dc20a494df88a2e081c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722113"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968838"
 ---
-# <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>HOW TO：在 Visual Basic 中於不同資料夾內建立檔案複本
+# <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>作法：在 Visual Basic 中於不同資料夾內建立檔案複本
 `My.Computer.FileSystem.CopyFile` 方法可讓您複製檔案。 它的參數可以覆寫現有檔案、重新命名檔案、顯示作業進度，並讓使用者取消作業。  
   
 ### <a name="to-copy-a-text-file-to-another-folder"></a>將文字檔複製到另一個資料夾  
   
 -   使用 `CopyFile` 方法來複製檔案，並指定來源檔案和目標目錄。 `overwrite` 參數可讓您指定是否要覆寫現有檔案。 下列程式碼範例示範如何使用 `CopyFile`。  
   
-     [!code-vb[VbFileIOMisc#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-a-different-directory_1.vb)]  
+     [!code-vb[VbFileIOMisc#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#24)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  下列條件可能會造成擲回例外狀況：  

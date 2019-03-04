@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cb23eb652cd769a0f3387833a9ece507479c464
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 9b9f0cd44e5ab9a33db4dd2ef52681f40ca54080
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218966"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835157"
 ---
 # <a name="compiling-an-interop-project"></a>編譯 Interop 專案
 
@@ -30,7 +30,7 @@ ms.locfileid: "56218966"
 
  [在 Managed 程式碼中使用 COM 類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))會更詳細討論這兩種技術之間的差異。
 
- 如需使用 Visual Studio 內嵌 Interop 類型的示範，請參閱 [逐步解說：從 Microsoft Office 組件內嵌類型資訊 (C# 和 Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee317478(v=vs.100))、[逐步解說：在 Visual Studio 中內嵌來自受控組件的類型 (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)，以及[逐步解說：在 Visual Studio 中內嵌來自受控組件的類型 (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)。
+ 如需使用 Visual Studio 內嵌 Interop 類型的示範，請參閱 [逐步解說：在 Visual Studio 中內嵌來自受控組件的類型 (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)，以及[逐步解說：在 Visual Studio 中內嵌來自受控組件的類型 (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)。
 
  若要參考具有命令列編譯器的 Interop 組件，以及在可執行檔中內嵌類型資訊，請使用 [/link (C# 編譯器選項)](../../csharp/language-reference/compiler-options/link-compiler-option.md) 或 [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 編譯器參數，並指定 Interop 組件的名稱。
 
@@ -44,8 +44,6 @@ ms.locfileid: "56218966"
 - [將 COM 元件公開給 .NET Framework](exposing-com-components.md)
 - [語言獨立性以及與語言無關的元件](../../standard/language-independence-and-language-independent-components.md)
 - [在受控程式碼中使用 COM 類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md) 
-- [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
 - [逐步解說：在 Visual Studio 中內嵌來自受控組件的類型 (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [逐步解說：在 Visual Studio 中內嵌來自組件的類型 (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)

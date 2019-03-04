@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 268ffe9c5cbbc9490ed91f2b4c28f8f876b8ff5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87be8c94c3d356a81f447f7b9542315783eea10d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574539"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836275"
 ---
 # <a name="what-is-managed-code"></a>什麼是 Managed 程式碼？
 
@@ -39,6 +39,6 @@ Managed 程式碼是以其中一種高階語言撰寫而成 (例如 C#、Visual 
 
 ## <a name="more-resources"></a>更多資源
 
-*   [.NET Framework 的概觀](https://msdn.microsoft.com/library/zw4w595w.aspx)
-*   [Unsafe 程式碼和指標](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
-*   [互通性 (C# 程式設計手冊)](https://msdn.microsoft.com/library/ms173184.aspx)
+* [.NET Framework 概觀](../framework/get-started/overview.md)
+* [Unsafe 程式碼和指標](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
+* [原生互通性](./native-interop/index.md)

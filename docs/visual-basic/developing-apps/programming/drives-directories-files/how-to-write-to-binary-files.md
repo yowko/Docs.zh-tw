@@ -1,19 +1,19 @@
 ---
-title: HOW TO：在 Visual Basic 中寫入二進位檔案
+title: 作法：在 Visual Basic 中寫入二進位檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], binary access
 - WriteAllBytes method [Visual Basic]
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-ms.openlocfilehash: 283c1c59d4bfa73f12ee0c9b772bf71c15a3b541
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e83029b7b5fd635ff08e608760b6c64c7945da0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676701"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965926"
 ---
-# <a name="how-to-write-to-binary-files-in-visual-basic"></a>HOW TO：在 Visual Basic 中寫入二進位檔案
+# <a name="how-to-write-to-binary-files-in-visual-basic"></a>作法：在 Visual Basic 中寫入二進位檔案
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> 方法會將資料寫入二進位檔案。 如果 `append` 參數為 `True`，它會將資料附加至檔案；若否，則會覆寫檔案中的資料。  
   
  如果指定路徑 (不含檔案名稱) 無效，則會擲回 <xref:System.IO.DirectoryNotFoundException> 例外狀況。 如果此路徑有效，但檔案不存在，則系統會建立檔案。  
@@ -22,7 +22,7 @@ ms.locfileid: "54676701"
   
 -   使用 `WriteAllBytes` 方法，同時提供檔案路徑、檔案名稱以及要寫入的位元組。 這個範例會將資料陣列 `CustomerData` 附加至名為 `CollectedData.dat` 的檔案。  
   
-     [!code-vb[VbVbcnMyFileSystem#27](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-to-binary-files_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#27)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  

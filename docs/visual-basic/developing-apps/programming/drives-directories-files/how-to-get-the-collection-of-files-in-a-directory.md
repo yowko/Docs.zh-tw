@@ -1,18 +1,18 @@
 ---
-title: HOW TO：在 Visual Basic 中取得目錄的檔案集合
+title: 作法：在 Visual Basic 中取得目錄的檔案集合
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders, working with
 - files [Visual Basic], accessing
 ms.assetid: 6c8ba7e8-dd37-4853-92bf-762b67c98160
-ms.openlocfilehash: a708d9cfd7b1a5ded3088ee567660bd0b3a5423f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0190bfdff74814c1d537c9cad6a5cb2c8dd751e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731929"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971426"
 ---
-# <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>HOW TO：在 Visual Basic 中取得目錄的檔案集合
+# <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>作法：在 Visual Basic 中取得目錄的檔案集合
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> 方法的多載會傳回唯讀的字串集合，代表了目錄內的檔案名稱：  
   
 -   使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%28System.String%29> 多載在指定目錄中進行簡單的檔案搜尋，而不搜尋子目錄。  
@@ -25,7 +25,7 @@ ms.locfileid: "54731929"
   
 -   使用其中一個 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> 方法多載，並在 `directory` 參數中提供要搜尋的目錄名稱和路徑。 下列範例會傳回目錄中的所有檔案，並將它們新增到 `ListBox1`。  
   
-     [!code-vb[VbVbcnMyFileSystem#32](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-get-the-collection-of-files-in-a-directory_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#32)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  

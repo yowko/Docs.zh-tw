@@ -9,16 +9,16 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 092b1cfc9350ea398eb18199f19a8eee7ea9f218
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 2bdb1bf5d7e32c2e05eb779eed16c311cbd3eae7
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675435"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212504"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 協助工具的新功能
 
-.NET Framework 的目標在於讓使用者更容易存取應用程式。 協助工具功能可讓應用程式提供適當的輔助技術使用者體驗。 從 .NET Framework 4.7.1 開始，.NET Framework 包含大量協助工具改善，可讓開發人員建立可存取的應用程式。 
+.NET Framework 的目標在於讓使用者更容易存取應用程式。 協助工具功能可讓應用程式提供適當的輔助技術使用者體驗。 從 .NET Framework 4.7.1 開始，.NET Framework 包含大量協助工具改善，可讓開發人員建立可存取的應用程式。
 
 ## <a name="accessibility-switches"></a>協助工具參數
 
@@ -51,7 +51,7 @@ ms.locfileid: "55675435"
 
 ### <a name="restoring-legacy-behavior"></a>還原舊版行為
 
-以從 4.7.1 開始的 .NET Framework 版本為目標的應用程式，可以停用協助工具功能，方法是新增參數至應用程式組態檔之 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 區段中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 項目，並將其值設定為 `true`。 例如，下列組態會選擇退出 .NET Framework 4.7.2 中引進的協助工具功能：  
+以從 4.7.1 開始的 .NET Framework 版本為目標的應用程式，可以停用協助工具功能，方法是新增參數至應用程式組態檔之 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 區段中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 項目，並將其值設定為 `true`。 例如，下列組態會選擇退出 .NET Framework 4.7.2 中引進的協助工具功能：
 
 ```xml
 <runtime>
@@ -69,6 +69,7 @@ ms.locfileid: "55675435"
 - [Windows Presentation Foundation (WPF)](#wpf472)
 
 <a name="winforms472"></a>
+
 ### <a name="windows-forms"></a>Windows Forms
 
 **高對比佈景主題中的作業系統定義色彩**
@@ -80,7 +81,7 @@ ms.locfileid: "55675435"
 - <xref:System.Windows.Forms.ButtonBase.FlatStyle> 設成 <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> 或 <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType> 的 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.RadioButton> 和 <xref:System.Windows.Forms.CheckBox>。 以往，選取的文字和背景色彩不會呈現對比，因此難以閱讀。
 
 - 包含在 <xref:System.Windows.Forms.GroupBox> 內的控制項，且其 <xref:System.Windows.Forms.Control.Enabled> 屬性設定為 `false`。
- 
+
 - <xref:System.Windows.Forms.ToolStripButton>、<xref:System.Windows.Forms.ToolStripComboBox> 和 <xref:System.Windows.Forms.ToolStripDropDownButton> 控制項，它們在高對比模式下有更高的亮度對比率。
 
 - <xref:System.Windows.Forms.DataGridViewLinkCell> 的 <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> 屬性。
@@ -89,7 +90,7 @@ ms.locfileid: "55675435"
 
 從 .NET Framework 4.7.2 開始，朗讀程式的支援增強功能如下：
 
-- 在播報 <xref:System.Windows.Forms.ToolStripMenuItem> 的文字時，現已會播報 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> 屬性的值。 
+- 在播報 <xref:System.Windows.Forms.ToolStripMenuItem> 的文字時，現已會播報 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> 屬性的值。
 
 - 當 <xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Enabled> 屬性設定為 `false` 時，會指明該情況。
 
@@ -122,6 +123,7 @@ ms.locfileid: "55675435"
 - <xref:System.Windows.Forms.ToolStripPanel.TabStop> 屬性設定為 `true` 的 <xref:System.Windows.Forms.ToolStripPanel> 內含焦點時，<xref:System.Windows.Forms.ToolStripButton> 控制項允許焦點
 
 <a name="wpf472"></a>
+
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
 **CheckBox 和 RadioButton 控制項的變更**
@@ -151,6 +153,7 @@ ms.locfileid: "55675435"
 - [Windows Workflow Foundation (WF) 工作流程設計工具](#wf471)
 
 <a name="wpf471"></a>
+
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
 **螢幕助讀程式改善**
@@ -160,14 +163,14 @@ ms.locfileid: "55675435"
 - 在 .NET Framework 4.7 和舊版本中，螢幕助讀程式已將 <xref:System.Windows.Controls.Expander> 控制項公告為按鈕。 從 .NET Framework 4.7.1 開始，已將它們正確地宣告為可展開/可摺疊的群組。
 
 - 在 .NET Framework 4.7 和舊版本中，螢幕助讀程式已將 <xref:System.Windows.Controls.DataGridCell> 控制項宣告為「自訂」。 從 .NET Framework 4.7.1 開始，現在已將它們正確地宣告為資料格 (已當地語系化)。
- 
+
 - 從 .NET Framework 4.7.1 開始，螢幕助讀程式會宣告可編輯 <xref:System.Windows.Controls.ComboBox> 的名稱。
 
 - 在 .NET Framework 4.7 和舊版本中，<xref:System.Windows.Controls.PasswordBox> 控制項已宣告為「檢視中沒有項目」或具有不正確的行為。 從 .NET Framework 4.7.1 開始，已修正此問題。
 
 **UIAutomation LiveRegion 支援**
 
-朗讀程式這類螢幕助讀程式可協助人員讀取應用程式 UI 內容，通常是透過具有焦點之 UI 內容的文字轉換語音輸出。 不過，如果 UI 項目變更，而且沒有焦點，則使用者可能不會收到通知，並可能遺失重要資訊。 即時區域的目標在解決這個問題。 開發人員可以使用它們來通知螢幕助讀程式或任何其他 UIAutomation 用戶端，已對 UI 項目進行重要變更。 螢幕助讀程式接著可以決定如何和何時通知使用者已進行這項變更。 
+朗讀程式這類螢幕助讀程式可協助人員讀取應用程式 UI 內容，通常是透過具有焦點之 UI 內容的文字轉換語音輸出。 不過，如果 UI 項目變更，而且沒有焦點，則使用者可能不會收到通知，並可能遺失重要資訊。 即時區域的目標在解決這個問題。 開發人員可以使用它們來通知螢幕助讀程式或任何其他 UIAutomation 用戶端，已對 UI 項目進行重要變更。 螢幕助讀程式接著可以決定如何和何時通知使用者已進行這項變更。
 
 為了支援即時區域，已將下列 API 新增至 WPF：
 
@@ -176,19 +179,19 @@ ms.locfileid: "55675435"
 - **AutomationProperties.LiveSetting** 附加屬性，可通知螢幕助讀程式有關 UI 變更對使用者的重要性。
 
 - <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType> 屬性，可識別 **AutomationProperties.LiveSetting** 附加屬性。
- 
+
 - <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore%2A?displayProperty=nameWithType> 方法，可以覆寫以提供 **LiveSetting** 值。
 
 - <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType> 方法，可以取得和設定 **LiveSetting** 值。
- 
+
 - <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> 列舉，可以定義下列可能的 **LiveSetting** 值：
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. 如果即時區域的內容變更，項目不會傳送通知。   
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. 如果即時區域的內容變更，項目會傳送不中斷通知。   
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. 如果即時區域的內容變更，項目不會傳送通知。
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. 如果即時區域的內容變更，項目會傳送不中斷通知。
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. 如果即時區域的內容變更，項目會傳送中斷通知。   
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. 如果即時區域的內容變更，項目會傳送中斷通知。
 
-您可以在感興趣的項目上設定 **AutomationProperties.LiveSetting** 屬性，以建立 LiveRegion，如下列範例所示：   
+您可以在感興趣的項目上設定 **AutomationProperties.LiveSetting** 屬性，以建立 LiveRegion，如下列範例所示：
 
 ```xaml
 <TextBlock Name="myTextBlock" AutomationProperties.LiveSetting="Assertive">announcement</TextBlock>
@@ -216,7 +219,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     現在會顯示 <xref:System.Windows.Controls.Expander> 控制項的焦點視覺效果。 現在也會顯示 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項的鍵盤視覺效果。 例如：
 
     之前： 
-    
+
     ![協助工具改善之前的聚焦 Expander 控制項](media/expander-before.png)
 
     之後： 
@@ -224,21 +227,21 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     ![協助工具改善之後的聚焦 Expander 控制項](media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項
- 
+
     在高對比佈景主題中選取時，<xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項中的文字現在更容易出現。 例如：
 
     之前： 
 
     ![協助工具改善之前的聚焦高對比選項按鈕](media/radio-button-before.png)
-    
+
     之後： 
 
     ![協助工具改善之後的聚焦高對比選項按鈕](media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> 控制項
- 
+
     從 .NET Framework 4.7.1 開始，已停用 <xref:System.Windows.Controls.ComboBox> 控制項的框線色彩與已停用文字的色彩相同。 例如：
-    
+
     之前： 
 
      ![協助工具改善之前的 ComboBox 已停用框線和文字](media/combo-disabled-before.png)
@@ -252,7 +255,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     之前：
 
     ![協助工具改善之前的按鈕佈景主題色彩](media/button-themes-before.png) 
-    
+
     之後： 
 
     ![協助工具改善之後的按鈕佈景主題色彩](media/button-themes-after.png) 
@@ -262,7 +265,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     之前： 
 
     ![協助工具改善之前的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-before.png) 
-    
+
     之後： 
 
     ![協助工具改善之後的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-after.png) 
@@ -274,24 +277,25 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     之前： 
 
     ![協助工具改善之前的排序指標箭號](media/sort-indicator-before.png) 
-    
+
     之後：   
- 
+
     ![協助工具改善之後的排序指標箭號](media/sort-indicator-after.png) 
-    
+
     此外，在 .NET Framework 4.7 和舊版本中，高對比模式中滑鼠移至上方的預設連結樣式已變更為不正確的色彩。 從 .NET Framework 4.7.1 開始，已解決此問題。 同樣地，從 .NET Framework 4.7.1 開始，<xref:System.Windows.Controls.DataGrid> 核取方塊資料行會使用鍵盤焦點回饋的預期色彩。
 
     之前： 
 
     ![協助工具改善之前的 DataGrid 預設連結樣式](media/default-link-style-before.png) 
- 
+
     之後：    
-  
-    ![協助工具改善之後的 DataGrid 預設連結樣式](media/default-link-style-after.png)  
+
+    ![協助工具改善之後的 DataGrid 預設連結樣式](media/default-link-style-after.png) 
 
 如需 .NET Framework 4.7.1 中 WPF 協助工具改善的詳細資訊；請參閱 [WPF 中的協助工具改善](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)。
 
 <a name="winforms471"></a>
+
 ### <a name="windows-forms-accessibility-improvements"></a>Windows Forms 協助工具改善
 
 在 .NET Framework 4.7.1 中，Windows Forms (WinForms) 包含下列領域的協助工具變更。
@@ -304,6 +308,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 <!-- Windows 10 -->
 <supportedOS Id=”{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}” />
 ```
+
 一些高對比變更範例包含：
 
 - <xref:System.Windows.Forms.MenuStrip> 項目中的核取記號較容易檢視。
@@ -331,9 +336,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - 朗讀程式和其他 UI 自動化工具可以存取 <xref:System.Windows.Forms.MonthCalendar> 控制項。
 
 - <xref:System.Windows.Forms.CheckedListBox> 控制項會在項目的核取狀態已經變更，因而通知使用者它們已變更清單項目值時通知 [朗讀程式]。
- 
+
 - <xref:System.Windows.Forms.DataGridViewCell> 控制項會向朗讀程式報告正確的唯讀狀態。
- 
+
 - 朗讀程式現在可以讀取已停用 <xref:System.Windows.Forms.ToolStripMenuItem> 文字，而之前它會略過已停用的功能表項目。
 
 **UIAutomation 協助工具模式的增強支援**
@@ -341,9 +346,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 從 .NET Framework 4.7.1 開始，協助工具技術工具開發人員可以利用數個 WinForms 控制項的一般 API 協助工具模式和屬性。 這些協助工具改善包含：
 
 - <xref:System.Windows.Forms.ComboBox> 和 <xref:System.Windows.Forms.ToolStripSplitButton> 現在支援[展開/摺疊模式](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)。
- 
+
 - <xref:System.Windows.Forms.DataGridViewCheckBoxCell> 現在支援[切換模式](../ui-automation/implementing-the-ui-automation-toggle-control-pattern.md)。
- 
+
 - <xref:System.Windows.Forms.ToolStripItem> 控制項支援 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> 屬性和[展開/摺疊模式](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)。
 
 - <xref:System.Windows.Forms.NumericUpDown> 和 <xref:System.Windows.Forms.DomainUpDown> 控制項支援 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> 屬性。
@@ -356,8 +361,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - 減少不必要的定位停駐點。
 - 更適當地報告控制項類型。
 - 改善的朗讀程式行為。
- 
+
 <a name="aspnet471"></a>
+
 ### <a name="aspnet-web-controls"></a>ASP.NET Web 控制項
 
 從 .NET Framework 4.7.1 和 Visual Studio 2017 15.3 開始，ASP.NET 已經改善 ASP.NET Web 控制項如何搭配 Visual Studio 中的協助工具技術。 變更包括下列項目：
@@ -369,13 +375,15 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - 改善控制項鍵盤瀏覽體驗的變更，例如 DataPager 控制項 [編輯頁面巡覽區欄位精靈] 的 [欄位] 對話方塊、[設定 ObjectContext] 對話方塊，或 [設定資料來源精靈] 的 [設定資料選取項目] 對話方塊。
 
 <a name="tools471"></a>
+
 ### <a name="net-sdk-tools"></a>.NET SDK 工具
 
-[組態編輯器工具 (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) 和[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 藉由修正各種協助工具問題來改善。 其中大部分是小問題，例如未定義名稱，或未正確實作某些 UI 自動化模式。 雖然許多使用者並未注意到這些不正確的值，但使用螢幕助讀程式等輔助技術的客戶會發現這些 SDK 工具更易於存取。 
+[組態編輯器工具 (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) 和[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 藉由修正各種協助工具問題來改善。 其中大部分是小問題，例如未定義名稱，或未正確實作某些 UI 自動化模式。 雖然許多使用者並未注意到這些不正確的值，但使用螢幕助讀程式等輔助技術的客戶會發現這些 SDK 工具更易於存取。
 
 這些增強功能變更一些先前的行為，例如鍵盤焦點的順序。
 
 <a name="wf471"></a>
+
 ### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) 工作流程設計工具
 
 在工作流程設計工具中的協助工具變更包括下列各項：
@@ -442,4 +450,3 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 ## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 的新功能](whats-new.md)
-

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: cab25e5a87345c69484f386584688a2efc8459d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c95b903ae03ea261674885262b24a33efa9e2db
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579533"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973739"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式
 如果您正在撰寫某項類別，其擁有的一些作業可能會造成明顯延遲，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)以賦予它非同步功能。  
@@ -131,7 +131,7 @@ ms.locfileid: "54579533"
 |整個類別只有一個非同步作業|`Sub MethodNameAsyncCancel(ByVal userState As Object)`|`Sub MethodNameAsyncCancel()`|  
 |類別中有多個非同步作業|`Sub CancelAsync(ByVal userState As Object)`|`Sub CancelAsync()`|  
   
-### <a name="c"></a>C#  
+### <a name="c"></a>C\#
   
 ||支援多個同時作業|一次只有一個作業|  
 |------|------------------------------------------------|----------------------------------|  

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中將文字寫入檔案
+title: 作法：在 Visual Basic 中將文字寫入檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
-ms.openlocfilehash: 0ff220bd8a790d9f5480581b847527fb5fbae449
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7862e9b471808c2d01771acacefef15bdb31dda5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634385"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975065"
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>HOW TO：在 Visual Basic 中將文字寫入檔案
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法可用來將文字寫入檔案。 如果指定的檔案不存在，則會建立該檔案。  
@@ -23,7 +23,7 @@ ms.locfileid: "54634385"
   
 -   使用 `WriteAllText` 方法，將文字寫入檔案中，並指定要寫入的檔案和文字。 這個範例會將 `"This is new text."` 行寫入名為 `test.txt` 的檔案，並將文字附加至檔案中的任何現有文字。  
   
-     [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_1.vb)]  
+     [!code-vb[VbFileIOWrite#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#3)]  
   
 #### <a name="to-write-a-series-of-strings-to-a-file"></a>將一連串的字串寫入檔案  
   
@@ -31,7 +31,7 @@ ms.locfileid: "54634385"
   
      這個範例會將 `Documents and Settings` 目錄中的檔案名稱寫入 `FileList.txt`，並在每個之間插入換行符號，以增加可讀性。  
   
-     [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_2.vb)]  
+     [!code-vb[VbFileIOWrite#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#4)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  

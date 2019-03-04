@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中將具有特定模式的檔案複製到目錄
+title: 作法：在 Visual Basic 中將具有特定模式的檔案複製到目錄
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 9c2ed926d21bf73b9b93863e5c3a3ed9ccc950aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19d607b1a132cd84aa2763b8e7b4c642f868abcd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634073"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968773"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>HOW TO：在 Visual Basic 中將具有特定模式的檔案複製到目錄
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> 方法會傳回代表檔案路徑名稱的唯讀字串集合。 您可以使用 `wildCards` 參數指定特定模式。  
@@ -25,20 +25,20 @@ ms.locfileid: "54634073"
   
 1.  使用 `GetFiles` 方法來傳回檔案清單。 這個範例會傳回所指定目錄中的所有 .rtf 檔案。  
   
-     [!code-vb[VbFileIOMisc#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_1.vb)]  
+     [!code-vb[VbFileIOMisc#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#36)]  
   
 2.  使用 `CopyFile` 方法來複製檔案。 這個範例會將檔案複製至名稱為 `testdirectory`的目錄中。  
   
-     [!code-vb[VbVbcnMyFileSystem#88](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#88)]  
   
 3.  使用 `For` 陳述式來關閉 `Next` 陳述式。  
   
-     [!code-vb[VbVbcnMyFileSystem#89](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#89)]  
   
 ## <a name="example"></a>範例  
  下列範例 (以完整形式呈現上述程式碼片段) 會將所指定目錄中的所有 .rtf 檔案複製至名稱為 `testdirectory`的目錄中。  
   
- [!code-vb[VbFileIOMisc#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_4.vb)]  
+ [!code-vb[VbFileIOMisc#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#37)]  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  以下條件可能會造成例外狀況：  

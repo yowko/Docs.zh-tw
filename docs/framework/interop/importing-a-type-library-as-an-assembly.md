@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 133d70058cc8151b22d31a3211d48188095e5f07
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 043fe74f66635c30f12555efb9ccc9415e200ec3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218903"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835235"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>匯入類型程式庫做為組件
 COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯器則是在組件中產生型別中繼資料。 這兩種類型資訊的來源有相當大的差異。 本主題描述從型別程式庫產生中繼資料的技術。 產生的組件稱為 Interop 組件，其包含的類型資訊可讓 .NET Framework 應用程式使用 COM 類型。  
@@ -44,7 +44,7 @@ COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯�
   
 -   Visual Studio  
   
-     Visual Studio 會自動將型別程式庫中的 COM 類型轉換為組件中的中繼資料。 如需相關指示，請參閱[如何：將參考新增到型別程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)和[逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md) 和[逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)。  
+     Visual Studio 會自動將型別程式庫中的 COM 類型轉換為組件中的中繼資料。 如需相關指示，請參閱[如何：將參考新增至類型程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)。  
   
 -   [型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -81,5 +81,3 @@ COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯�
 - [部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)
 - [如何：將參考新增至型別程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
 - [如何：從型別程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
-- [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-- [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

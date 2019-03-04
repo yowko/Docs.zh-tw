@@ -1,5 +1,5 @@
 ---
-title: HOW TO：讀取檔案中的文字
+title: 作法：讀取檔案中的文字
 ms.date: 01/03/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa6787e018b540dbf19b6da3473b699096cc4ae3
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 7330c209ce6514459d3ab1dd58dc1c80b1978a56
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674395"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834949"
 ---
-# <a name="how-to-read-text-from-a-file"></a>HOW TO：讀取檔案中的文字
+# <a name="how-to-read-text-from-a-file"></a>作法：讀取檔案中的文字
 下列範例將示範如何以同步和非同步方式，從使用適用於桌面應用程式的 .NET 之文字檔讀取文字。 在這兩個範例中，當您建立 <xref:System.IO.StreamReader> 類別的執行個體時，會提供檔案的相對路徑或絕對路徑。 
   
 > [!NOTE]
@@ -51,7 +51,7 @@ ms.locfileid: "55674395"
 - <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
 - <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
 - [非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [如何：建立目錄清單](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+- [如何：建立目錄清單](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
 - [快速入門：讀取和寫入檔案](https://docs.microsoft.com/previous-versions/windows/apps/hh758325%28v=win.10%29)  
 - [如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
 - [如何：讀取和寫入新建立的資料檔案](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  

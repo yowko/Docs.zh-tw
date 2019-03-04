@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1074abf9784bc26086c85f78047baa98e9c6dee7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506715"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979953"
 ---
 # <a name="standard-numeric-format-strings"></a>標準數值格式字串
 
@@ -62,7 +62,7 @@ ms.locfileid: "54506715"
 |"G" 或 "g"|一般|結果：固定點和科學記號標記法兩者中最精簡的一個。<br /><br /> 支援下列項目：所有數值類型。<br /><br /> 有效位數規範：有效位數。<br /><br /> 預設的有效位數規範：取決於數值類型。<br /><br /> 詳細資訊：[一般 ("G") 格式規範](#GFormatString)。|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
 |"N" 或 "n"|number|結果：帶選擇性負號的整數和小數位數、群組分隔符號，以及小數分隔符號。<br /><br /> 支援下列項目：所有數值類型。<br /><br /> 有效位數規範：想要的小數位數。<br /><br /> 預設的有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[數值 ("N") 格式規範](#NFormatString)。|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
 |"P" 或 "p"|百分比|結果：乘以 100 並加上百分比符號來顯示的數字。<br /><br /> 支援下列項目：所有數值類型。<br /><br /> 有效位數規範：想要的小數位數。<br /><br /> 預設的有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[百分比 ("P") 格式規範](#PFormatString)。|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
-|"R" 或 "r"|來回|結果：可以來回轉換為相同數字的字串。<br /><br /> 支援的類型：<xref:System.Single>、<xref:System.Double> 和 <xref:System.Numerics.BigInteger>。<br /><br /> 注意:建議僅用於 <xref:System.Numerics.BigInteger> 類型。 針對 <xref:System.Double> 類型，使用 "G17"；針對 <xref:System.Single> 類型，使用 "G9"。 </br> 有效位數規範：忽略。<br /><br /> 詳細資訊：[來回 ("R") 格式規範](#RFormatString)。|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|"R" 或 "r"|來回|結果：可以來回轉換為相同數字的字串。<br /><br /> 支援的類型：<xref:System.Single>、<xref:System.Double> 和 <xref:System.Numerics.BigInteger>。<br /><br /> 注意:建議僅用於 <xref:System.Numerics.BigInteger> 類型。 針對 <xref:System.Double> 類型，使用 "G17"；針對 <xref:System.Single> 類型，使用 "G9"。 <br> 有效位數規範：忽略。<br /><br /> 詳細資訊：[來回 ("R") 格式規範](#RFormatString)。|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
 |"X" 或 "x"|十六進位|結果：十六進位字串。<br /><br /> 支援下列項目：僅限整數類型。<br /><br /> 有效位數規範：結果字串中的位數。<br /><br /> 詳細資訊：[十六進位 ("X") 格式規範](#XFormatString)。|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
 |任何其他單一字元|未知的規範|結果：在執行階段擲回 <xref:System.FormatException>。||  
   

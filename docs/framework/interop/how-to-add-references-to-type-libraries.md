@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71c2a6b183890aa9625dcffbef59d14c27ebe754
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c12096739e66a47fadd89eb27e30ba3de43c7da3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219392"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836431"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>作法：將參考新增至型別程式庫
 Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資料的 interop 組件。 如有提供主要的 Interop 組件，Visual Studio 便會先使用現有的組件，然後再產生新的 Interop 組件。  
@@ -47,8 +47,6 @@ Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資
 ## <a name="see-also"></a>另請參閱
 - [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)
 - [將 COM 元件公開給 .NET Framework](exposing-com-components.md)
-- [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-- [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
 - [逐步解說：在 Visual Studio 中內嵌來自受控組件的類型 (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
 - [逐步解說：在 Visual Studio 中內嵌來自組件的類型 (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [/link (C# 編譯器選項)](../../csharp/language-reference/compiler-options/link-compiler-option.md)

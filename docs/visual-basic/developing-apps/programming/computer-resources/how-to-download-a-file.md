@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [Visual Basic], downloading
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-ms.openlocfilehash: 435dfe497cde5a08bce8825eaf6fa73daab4348b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 927f2598e064ddcda30a13d811bc4a986207b23d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671183"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969007"
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>HOW TO：在 Visual Basic 中下載檔案
 <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> 方法可以用來下載遠端檔案，並將它儲存到特定位置。 如果 `ShowUI` 參數設定為 `True`，則會顯示對話方塊以顯示下載進度，並允許使用者取消作業。 根據預設，不會覆寫具有相同名稱的現有檔案；如果您想要覆寫現有檔案，請將 `overwrite` 參數設定為 `True`。  
@@ -37,19 +37,19 @@ ms.locfileid: "54671183"
   
 -   使用 `DownloadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置，以及指定要儲存檔案的位置。 此範例會從 `http://www.cohowinery.com/downloads` 下載 `WineList.txt` 檔案，然後將它儲存至 `C:\Documents and Settings\All Users\Documents`：  
   
-     [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_1.vb)]  
+     [!code-vb[VbResourceTasks#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#9)]  
   
 ### <a name="to-download-a-file-specifying-a-time-out-interval"></a>下載檔案並指定逾時間隔  
   
 -   使用 `DownloadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置、指定要儲存檔案的位置，以及指定以毫秒為單位的逾時間隔 (預設值為 1000)。 此範例會從 `http://www.cohowinery.com/downloads` 下載 `WineList.txt` 檔案，然後將它儲存至 `C:\Documents and Settings\All Users\Documents`，並指定 500 毫秒的逾時間隔：  
   
-     [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_2.vb)]  
+     [!code-vb[VbResourceTasks#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#10)]  
   
 ### <a name="to-download-a-file-supplying-a-user-name-and-password"></a>下載檔案並提供使用者名稱和密碼  
   
 -   使用 `DownLoadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置，以及指定要儲存檔案、使用者名稱和密碼的位置。 此範例會從 `http://www.cohowinery.com/downloads` 下載 `WineList.txt` 檔案，然後將它儲存至具有使用者名稱 `anonymous` 和空白密碼的 `C:\Documents and Settings\All Users\Documents`。  
   
-     [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_3.vb)]  
+     [!code-vb[VbResourceTasks#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#11)]  
   
     > [!IMPORTANT]
     >  `DownLoadFile` 方法所使用的 FTP 通訊協定會以純文字傳送資訊 (包括密碼)，不應用於傳輸機密資訊。  

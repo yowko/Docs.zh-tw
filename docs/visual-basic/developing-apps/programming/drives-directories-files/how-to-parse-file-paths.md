@@ -1,16 +1,16 @@
 ---
-title: HOW TO：在 Visual Basic 中剖析檔案路徑
+title: 作法：在 Visual Basic 中剖析檔案路徑
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-ms.openlocfilehash: 2b31dedbdd33ddfb3c15863a45b93148fd722faa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e3cfca9a84ef56ceb9ac0785af039f9b24603e2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707748"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971984"
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>HOW TO：在 Visual Basic 中剖析檔案路徑
 <xref:Microsoft.VisualBasic.FileIO.FileSystem> 物件提供剖析檔案路徑時的數種有用方法。  
@@ -27,13 +27,13 @@ ms.locfileid: "54707748"
   
 -   使用 <xref:System.IO.FileInfo.DirectoryName%2A> 物件的 <xref:System.IO.FileInfo.Name%2A> 和 <xref:System.IO.FileInfo> 屬性來判斷檔案的名稱和路徑。 這個範例會判斷名稱和路徑，並予以顯示。  
   
-     [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#54)]  
   
 ### <a name="to-combine-a-files-name-and-directory-to-create-the-full-path"></a>合併檔案的名稱和目錄以建立完整路徑  
   
 -   使用 `CombinePath` 方法，並提供目錄和名稱。 這個範例會採用前一個範例中所建立的字串 `folderPath` 和 `fileName` 、合併它們，並顯示結果。  
   
-     [!code-vb[VbVbcnMyFileSystem#55](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#55)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

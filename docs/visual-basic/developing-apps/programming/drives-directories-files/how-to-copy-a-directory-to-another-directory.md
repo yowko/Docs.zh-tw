@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中將目錄複製到另一個目錄
+title: 作法：在 Visual Basic 中將目錄複製到另一個目錄
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: 25919e0256b967f59bd98d20e75d159e018ac954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 873defb025ff02e6af2572d8d2587f86e5228ca0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594742"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968786"
 ---
-# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>HOW TO：在 Visual Basic 中將目錄複製到另一個目錄
+# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>作法：在 Visual Basic 中將目錄複製到另一個目錄
 使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> 方法可將目錄複製到另一個目錄。 這個方法會複製目錄內容以及目錄本身。 如果目標目錄不存在，則會予以建立。 如果目標位置存在同名的目錄且 `overwrite` 設為 `False`，即合併兩個目錄的內容。 您可以在作業期間指定目錄的新名稱。  
   
  複製目錄內的檔案時，可能會因為特定的檔案而擲回例外狀況，例如合併期間存在檔案，而 `overwrite` 設為 `False`。 當這類例外狀況被擲回時，它們會合併成單一例外狀況，其 `Data` 屬性保留項目中的檔案或目錄路徑是索引鍵，而特定的例外狀況訊息則包含在對應值中。  
@@ -23,7 +23,7 @@ ms.locfileid: "54594742"
   
 -   使用 `CopyDirectory` 方法指定來源和目的地目錄名稱。 下例會將名為 `TestDirectory1` 的目錄複製到 `TestDirectory2`，覆寫現有的檔案。  
   
-     [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-a-directory-to-another-directory_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]  
   
      這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [檔案系統 - 處理磁碟、資料夾和檔案] 中。 如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。  
   

@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 02/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 10e0fa2cedff3e31575ad2b9c8bc2d9ecc81f3e8
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: d9c87c4f4a81c02979259a47e8c4167d80f06377
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092536"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251088"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>教學課程：透過 ML.NET 使用迴歸學習工具預測價格
 
@@ -307,11 +307,11 @@ private static void TestSinglePrediction(MLContext mlContext)
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#21 "Load the model")]
 
-雖然 `model` 是可在多個資料列上運作的 `transformer`，但常見的生產環境案例需要根據個別範例進行預測。 <xref:Microsoft.ML.PredictionEngine%602> 是從 `CreatePredictionEngine` 方法傳回的包裝函式。 讓我們在 `Predict` 方法中的第一行加入下列程式碼，來建立 `PredictionEngine`：
+雖然 `model` 是可在多個資料列上運作的 `transformer`，但常見的生產環境案例需要根據個別範例進行預測。 <xref:Microsoft.ML.PredictionEngine%602> 是從 `CreatePredictionEngine` 方法傳回的包裝函式。 讓我們在 `TestSinglePrediction` 方法中的第二行新增下列程式碼，來建立 `PredictionEngine`：
 
 [!code-csharp[MakePredictionEngine](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
   
-本教學課程會使用此類別內的一個測試行程。 您可以稍後新增其他案例來對此方法進行實驗。 透過建立 `TaxiTrip` 的執行個體，在 `Predict` 方法中新增車程，以測試定型模型的費用預測：
+本教學課程會使用此類別內的一個測試行程。 您可以稍後新增其他案例來對此方法進行實驗。 透過建立 `TaxiTrip` 的執行個體，在 `TestSinglePrediction` 方法中新增車程，以測試定型模型的費用預測：
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
@@ -319,7 +319,7 @@ private static void TestSinglePrediction(MLContext mlContext)
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 
-若要顯示指定之車程的預測費用，請將下列程式碼加入到 `Main` 方法：
+若要顯示指定之車程的預測費用，請將下列程式碼加入到 `TestSinglePrediction` 方法：
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#25 "Display the prediction.")]
 

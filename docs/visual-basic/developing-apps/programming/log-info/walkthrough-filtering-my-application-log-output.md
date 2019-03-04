@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: e17f332365aeeb26601763f9459dccc8d6a078af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f1f0efd6190ac0ced0f83db747e3c4eb81c4975
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572509"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978315"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>逐步解說：篩選 My.Application.Log 輸出 (Visual Basic)
 本逐步解說示範如何變更 `My.Application.Log` 物件的預設記錄檔篩選，以控制哪些資訊會從 `Log` 物件傳遞至接聽程式，而哪些資訊會由接聽程式寫入。 由於組態資訊是儲存在應用程式的組態檔中，因此即使在建置應用程式之後，您仍可以變更記錄行為。  
@@ -27,7 +27,7 @@ ms.locfileid: "54572509"
   
 3.  在 Button1 的 <xref:System.Windows.Forms.Control.Click> 事件處理常式中新增下列程式碼：  
   
-     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
+     [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
 4.  在偵錯工具中執行應用程式。  
   

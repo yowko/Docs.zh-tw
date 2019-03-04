@@ -6,14 +6,14 @@ helpviewer_keywords:
 - I/O [Visual Basic], My.Computer.FileSystem.WriteAllText method
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
-ms.openlocfilehash: 5fabd0b6894fc5ab7d4bab1979d71b171d2b21c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7518493cca62018ccda9659e977333184888ea7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498212"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968682"
 ---
-# <a name="how-to-append-to-text-files-in-visual-basic"></a>HOW TO：在 Visual Basic 中附加至文字檔
+# <a name="how-to-append-to-text-files-in-visual-basic"></a>作法：在 Visual Basic 中附加至文字檔
 您可以使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法來附加至文字檔，方法是指定將 `append` 參數設定為 `True`。  
   
 ### <a name="to-append-to-a-text-file"></a>附加至文字檔  
@@ -22,7 +22,7 @@ ms.locfileid: "54498212"
   
      這個範例會將 `"This is a test string."` 字串寫入名為 `Testfile.txt` 的檔案中。  
   
-     [!code-vb[VbFileIOWrite#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-append-to-text-files_1.vb)]  
+     [!code-vb[VbFileIOWrite#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#6)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  

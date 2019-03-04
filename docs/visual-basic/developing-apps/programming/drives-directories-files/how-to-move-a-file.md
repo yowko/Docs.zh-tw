@@ -1,30 +1,30 @@
 ---
-title: HOW TO：在 Visual Basic 中移動檔案
+title: 作法：在 Visual Basic 中移動檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: 6888531918dd932ba5acb3ec967303568606d5df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90f315bc9153fd79f12e3dcbbfe0f238f4090b25
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721916"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976872"
 ---
-# <a name="how-to-move-a-file-in-visual-basic"></a>HOW TO：在 Visual Basic 中移動檔案
+# <a name="how-to-move-a-file-in-visual-basic"></a>作法：在 Visual Basic 中移動檔案
 `My.Computer.FileSystem.MoveFile` 方法可以用來將檔案移至另一個資料夾。 如果目標結構不存在，則會予以建立。  
   
 ### <a name="to-move-a-file"></a>移動檔案  
   
 -   使用 `MoveFile` 方法移動檔案，並指定來源檔案和目標檔案的檔案名稱和位置。 這個範例會將名稱為 `test.txt` 的檔案從 `TestDir1` 移至 `TestDir2`。 請注意，即使目標檔案名稱與來源檔案名稱相同，還是要指定目標檔案名稱。  
   
-     [!code-vb[VbVbcnMyFileSystem#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#24)]  
   
 ### <a name="to-move-a-file-and-rename-it"></a>移動檔案並將它重新命名  
   
 -   使用 `MoveFile` 方法移動檔案，並指定來源檔案名稱和位置、目標位置以及目標位置上的新名稱。 這個範例會將名稱為 `test.txt` 的檔案從 `TestDir1` 移至 `TestDir2` ，並將它重新命名為 `nexttest.txt`。  
   
-     [!code-vb[VbVbcnMyFileSystem#25](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#25)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  

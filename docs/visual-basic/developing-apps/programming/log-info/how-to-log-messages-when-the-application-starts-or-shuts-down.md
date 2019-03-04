@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Shutdown event [Visual Basic]
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
-ms.openlocfilehash: 20eabd08db0763ec08bb28add41ff63fa3196dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40236a1ab5daea0003fce0ad6e35e258a42cc405
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585626"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973921"
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>HOW TO：在應用程式啟動或關閉時記錄訊息 (Visual Basic)
 您可以使用 `My.Application.Log` 和 `My.Log` 物件來記錄應用程式中發生之事件的相關資訊。 此範例示範如何使用 `My.Application.Log.WriteEntry` 方法 `Startup` 和 `Shutdown` 事件寫入追蹤資訊。  
@@ -39,7 +39,7 @@ ms.locfileid: "54585626"
   
 3.  將 `My.Application.Log.WriteEntry` 方法加入 `Startup` 事件處理常式。  
   
-     [!code-vb[VbVbalrMyApplicationLog#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_1.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#1)]  
   
 ### <a name="to-log-messages-when-the-application-shuts-down"></a>在應用程式關閉時記錄訊息  
   
@@ -51,12 +51,12 @@ ms.locfileid: "54585626"
   
 3.  將 `My.Application.Log.WriteEntry` 方法加入 `Shutdown` 事件處理常式。  
   
-     [!code-vb[VbVbalrMyApplicationLog#2](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_2.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#2)]  
   
 ## <a name="example"></a>範例  
  您可以使用 [專案設計工具] 在 [程式碼編輯器] 中存取應用程式事件。 如需詳細資訊，請參閱[專案設計工具、應用程式頁 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)。  
   
- [!code-vb[VbVbalrMyApplicationLog#3](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_3.vb)]  
+ [!code-vb[VbVbalrMyApplicationLog#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#3)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中從二進位檔案讀取
+title: 作法：在 Visual Basic 中從二進位檔案讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - binary files [Visual Basic], reading from
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: 6594bd8180688ae453534207170a4befc96c5c37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9b30d119a404396e2bf37aa445a420f7823c57b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647617"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980382"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>HOW TO：在 Visual Basic 中從二進位檔案讀取
 `My.Computer.FileSystem` 物件提供用來讀取二進位檔案的 `ReadAllBytes` 方法。  
@@ -21,11 +21,11 @@ ms.locfileid: "54647617"
   
 -   使用 `ReadAllBytes` 方法，以將檔案內容傳回為位元組陣列。 此範例會從檔案 `C:/Documents and Settings/selfportrait.jpg` 讀取。  
   
-     [!code-vb[VbVbcnMyFileSystem#78](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-binary-files_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#78)]  
   
 -   對於大型二進位檔案，您可以使用 <xref:System.IO.FileStream> 物件的 <xref:System.IO.FileStream.Read%2A> 方法，同時只讀取指定數量的檔案。 您接著可以限制每次讀取作業時將檔案的多少內容載入至記憶體。 下列程式碼範例會複製檔案，並可讓呼叫端指定在每次讀取作業時將檔案的多少內容讀入記憶體。  
   
-     [!code-vb[VbVbcnMyFileSystem#91](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-binary-files_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  下列條件可能會造成擲回例外狀況：  

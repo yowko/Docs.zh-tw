@@ -7,14 +7,14 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], changing user settings
 - examples [Visual Basic], changing user settings
 ms.assetid: 41250181-c594-4854-9988-8183b9eb03cf
-ms.openlocfilehash: 3cf50f838124539dc774574cd1ad0b629d01a9ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e93dbf453b831bb28707250466ea928bfe9a716
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688181"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976378"
 ---
-# <a name="how-to-change-user-settings-in-visual-basic"></a>HOW TO：在 Visual Basic 中變更使用者設定
+# <a name="how-to-change-user-settings-in-visual-basic"></a>作法：在 Visual Basic 中變更使用者設定
 您可以將新值指派給 `My.Settings` 物件的設定屬性，來變更使用者設定。  
   
  `My.Settings` 物件會將每項設定公開為屬性。 屬性名稱與設定名稱相同，而屬性類型與設定類型相同。 設定的 [範圍] 可判斷屬性是否為唯讀：[應用程式] 範圍設定的屬性為唯讀，而 [使用者] 範圍設定的屬性為讀寫。 如需詳細資訊，請參閱 [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
@@ -25,11 +25,11 @@ ms.locfileid: "54688181"
 ## <a name="example"></a>範例  
  這個範例會變更 `Nickname` 使用者設定的值。  
   
- [!code-vb[VbVbalrMyResources#7](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-change-user-settings_1.vb)]  
+ [!code-vb[VbVbalrMyResources#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#7)]  
   
  為了確保此範例正常運作，您的應用程式必須具有 `String` 類型的 `Nickname` 使用者設定。  
   
- 應用程式關閉時，會儲存使用者設定。 若要立即儲存設定，請呼叫 `My.Settings.Save` 方法。 如需詳細資訊，請參閱[＜How to：保存 Visual Basic 中的使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)。  
+ 應用程式關閉時，會儲存使用者設定。 若要立即儲存設定，請呼叫 `My.Settings.Save` 方法。 如需詳細資訊，請參閱[如何：保存 Visual Basic 中的使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)

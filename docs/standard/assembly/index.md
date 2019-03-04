@@ -48,11 +48,12 @@ ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 
 ## <a name="see-also"></a>另請參閱
 
- - [.NET 組件檔格式](file-format.md)  
+ - [.NET 組件檔格式](file-format.md)
  - [Common Language Runtime 中的組件](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  - [Friend 組件 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  - [Friend 組件 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  - [如何：載入和卸載組件 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [如何：載入和卸載組件 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
+ - [如何：在 .NET Core 中使用組件解除載入性及進行偵錯](unloadability-howto.md)
  - [如何：判斷檔案是否為組件 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  
  - [如何：判斷檔案是否為組件 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  

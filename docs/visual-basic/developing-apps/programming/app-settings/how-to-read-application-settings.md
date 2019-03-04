@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], reading application settings
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-ms.openlocfilehash: 032e06e674f2298d68f879f3ad474c79e3ff02db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abee69d9959e899259aff8b8a49caea6bcd997fb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659488"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975234"
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>HOW TO：在 Visual Basic 中讀取應用程式設定
 您可以藉由存取 `My.Settings` 物件上的設定屬性，來讀取使用者設定。  
@@ -21,7 +21,7 @@ ms.locfileid: "54659488"
 ## <a name="example"></a>範例  
  此範例會顯示 `Nickname` 設定的值。  
   
- [!code-vb[VbVbalrMyResources#14](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-read-application-settings_1.vb)]  
+ [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
  為了確保此範例正常運作，您的應用程式必須具有 `String` 類型的 `Nickname` 設定。 如需詳細資訊，請參閱[管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
   

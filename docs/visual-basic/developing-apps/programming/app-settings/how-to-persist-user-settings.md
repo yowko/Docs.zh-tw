@@ -1,17 +1,17 @@
 ---
-title: HOW TO：保存 Visual Basic 中的使用者設定
+title: 作法：保存 Visual Basic 中的使用者設定
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], persisting user settings
 - persistence [Visual Basic], persisting user settings [Visual Basic]
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
-ms.openlocfilehash: dab285f175838fb71e4218cbafdd4f7593c9e786
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45d5fbf6fda34407d8b7eb3f959f215e7621f1c5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611289"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966940"
 ---
 # <a name="how-to-persist-user-settings-in-visual-basic"></a>HOW TO：保存 Visual Basic 中的使用者設定
 您可以使用 `My.Settings.Save` 方法來保存使用者設定的變更。  
@@ -26,7 +26,7 @@ ms.locfileid: "54611289"
 ## <a name="example"></a>範例  
  此範例會變更 `LastChanged` 使用者設定的值，然後呼叫 `My.Settings.Save` 方法儲存該變更。  
   
- [!code-vb[VbVbalrMyResources#5](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-persist-user-settings_1.vb)]  
+ [!code-vb[VbVbalrMyResources#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#5)]  
   
  為了確保此範例正常運作，您的應用程式必須具有 `Date` 類型的 `LastChanged` 使用者設定。 如需詳細資訊，請參閱[管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
   

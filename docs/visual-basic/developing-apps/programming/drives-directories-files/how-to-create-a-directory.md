@@ -5,12 +5,12 @@ helpviewer_keywords:
 - directories [Visual Basic], creating
 - folders [Visual Basic], creating
 ms.assetid: 0351a2ca-24d8-43b5-bb39-9b99e6401cff
-ms.openlocfilehash: 878ba0b8f62c067101a73182a377f5cfcb84ebc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7ba9ea1e7762b0a4a6660339c331fa6cdeb7858
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527428"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976898"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>HOW TO：在 Visual Basic 中建立目錄
 使用 `My.Computer.FileSystem` 物件的 `CreateDirectory` 方法來建立目錄。  
@@ -21,7 +21,7 @@ ms.locfileid: "54527428"
   
 -   指定應該建立目錄之位置的完整路徑，以使用 `CreateDirectory` 方法。 這個範例會在 `C:\Documents and Settings\All Users\Documents` 中建立 `NewDirectory` 目錄。  
   
-     [!code-vb[VbVbcnMyFileSystem#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-directory_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#2)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  

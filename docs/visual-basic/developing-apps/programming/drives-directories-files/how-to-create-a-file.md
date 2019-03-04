@@ -1,22 +1,22 @@
 ---
-title: HOW TO：在 Visual Basic 中建立檔案
+title: 作法：在 Visual Basic 中建立檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: e9eedb6dafdd181b254610331899b5df7ac0823f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 397db70cc8f5977bd861e9e6d6df2f0c8f884db2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661369"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967006"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>HOW TO：在 Visual Basic 中建立檔案
 這個範例會在 <xref:System.IO.File> 類別中使用 <xref:System.IO.File.Create%2A> 方法，以在指定的路徑中建立空白文字檔。  
   
 ## <a name="example"></a>範例  
- [!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]  
+ [!code-vb[VbFileIOMisc#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/class2.vb#1)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  使用 `file` 變數，以寫入檔案。  

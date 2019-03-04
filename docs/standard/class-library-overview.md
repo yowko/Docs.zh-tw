@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab7d64a9c7f0b1a080fdf82ed2662c7256f16132
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555176"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970567"
 ---
 # <a name="net-class-library-overview"></a>.NET 類別庫概觀
 
@@ -96,8 +96,8 @@ ms.locfileid: "54555176"
 ||<xref:System.UInt16>|16 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**UShort**|**ushort**|**unsigned short**|**uint16**|  
 ||<xref:System.UInt32>|32 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**UInteger**|**uint**|**unsigned int**<br /> -或-<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
-|浮點|<xref:System.Single>|單精確度 (32 位元) 浮點數。|**Single**|**float**|**float**|**float32**</br> 或</br>**single**|  
-||<xref:System.Double>|雙精度 (64 位元) 浮點數。|**Double**|**double**|**double**|**float**</br> 或 </br> **double**|  
+|浮點|<xref:System.Single>|單精確度 (32 位元) 浮點數。|**Single**|**float**|**float**|**float32**<br> 或<br>**single**|  
+||<xref:System.Double>|雙精度 (64 位元) 浮點數。|**Double**|**double**|**double**|**float**<br> 或 <br> **double**|  
 |邏輯|<xref:System.Boolean>|布林值 (true 或 false)。|**布林值**|**bool**|**bool**|**bool**|  
 |其他|<xref:System.Char>|Unicode (16 位元) 字元。|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|這是一個 128 位元的十進位值。|**Decimal**|**decimal**|**Decimal**|**decimal**|  
@@ -106,7 +106,8 @@ ms.locfileid: "54555176"
 ||<xref:System.Object>|物件階層架構的根。|**物件**|**object**|**Object^**|**obj**|  
 ||<xref:System.String>|Unicode 字元，為不變且長度固定的字串。|**String**|**string**|**String^**|**string**|  
   
- 除了基底資料型別，<xref:System> 命名空間還包含 100 多個類別，涵蓋的範圍從處理例外狀況的類別到處理核心執行階段概念的類別，像是應用程式定義域和記憶體回收行程。 <xref:System> 命名空間也包含許多第二層命名空間。  
+ 除了基底資料型別，<xref:System> 命名空間還包含 100 多個類別，涵蓋的範圍從處理例外狀況的類別到處理核心執行階段概念的類別，像是應用程式定義域和記憶體回收行程。 
+  <xref:System> 命名空間也包含許多第二層命名空間。  
   
  如需命名空間的詳細資訊，請使用 [.NET API 瀏覽器](https://docs.microsoft.com/dotnet/api)來瀏覽 .NET 類別庫。 API 參考文件提供每個命名空間、其類型及其每個成員的相關文件。  
   

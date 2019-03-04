@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 8ce7f39d78006765a49bbd4e3d46c611761a4bd1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181731"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968030"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -49,7 +49,7 @@ foreach (var pet in pets)
 }
 ```
 
-程式碼背後的目的不是用來建立新的 `Dictionary<int, Pet>` 並透過迴圈將其加入程式碼中，而是將現有的清單轉換為字典！ LINQ 會保留此目的，而命令式程式碼不會。
+程式碼背後的目的不是用來建立新的 `Dictionary<int, Pet>` 並透過迴圈將其加入程式碼中，而是將現有的清單轉換為字典！ LINQ 會保留這項目的，而命令式程式碼不會。
 
 對等的 LINQ 運算式︰
 
@@ -77,7 +77,7 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 
 撰寫程式碼以手動周遊 XML 文件來執行此工作會是更大的挑戰。
 
-與 XML 互動不是您可以使用 LINQ 提供者來執行的唯一工作。 [Linq to SQL](../../docs/framework/data/adonet/sql/linq/index.md) 是相當基本的 MSSQL 伺服器資料庫物件關聯式對應程式 (ORM)。 [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 程式庫提供透過 LINQ 的具效率 JSON 文件周遊。 此外，如果沒有您所需的程式庫，您也可以[撰寫你自己的 LINQ 提供者](https://msdn.microsoft.com/library/Bb546158.aspx)！
+與 XML 互動不是您可以使用 LINQ 提供者來執行的唯一工作。 [Linq to SQL](../../docs/framework/data/adonet/sql/linq/index.md) 是相當基本的 MSSQL 伺服器資料庫物件關聯式對應程式 (ORM)。 [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 程式庫提供透過 LINQ 的具效率 JSON 文件周遊。 此外，如果沒有您所需的程式庫，您也可以[撰寫你自己的 LINQ 提供者](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))！
 
 ## <a name="why-use-the-query-syntax"></a>為何要使用查詢語法？
 
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   最後是一個更進階的範例︰判斷兩個相同類型執行個體的屬性值是否相等 (從 [此 StackOverflow 文章](https://stackoverflow.com/a/844855)中借用並經過修改)：
+*   最後是一項更進階的範例︰判斷兩個相同類型執行個體的屬性值是否相等 (從 [此 StackOverflow 文章](https://stackoverflow.com/a/844855)中借用並經過修改)：
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
