@@ -13,15 +13,15 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: a127509d603ada952b3d48d4bbc417db64f607ea
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 888f6c823313c137be4b89e82f0c4cd1c50cf771
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290169"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977470"
 ---
-# <a name="list-c-programming-guide"></a><span data-ttu-id="9e868-102">\<list> (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="9e868-102">\<list> (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="9e868-103">語法</span><span class="sxs-lookup"><span data-stu-id="9e868-103">Syntax</span></span>  
+# <a name="list-c-programming-guide"></a><span data-ttu-id="2729a-102">\<list> (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="2729a-102">\<list> (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="2729a-103">語法</span><span class="sxs-lookup"><span data-stu-id="2729a-103">Syntax</span></span>  
   
 ```xml  
 <list type="bullet" | "number" | "table">  
@@ -36,26 +36,26 @@ ms.locfileid: "55290169"
 </list>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9e868-104">參數</span><span class="sxs-lookup"><span data-stu-id="9e868-104">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2729a-104">參數</span><span class="sxs-lookup"><span data-stu-id="2729a-104">Parameters</span></span>  
  `term`  
- <span data-ttu-id="9e868-105">要定義的詞彙，可定義於 `description` 中。</span><span class="sxs-lookup"><span data-stu-id="9e868-105">A term to define, which will be defined in `description`.</span></span>  
+ <span data-ttu-id="2729a-105">要定義的詞彙，可定義於 `description` 中。</span><span class="sxs-lookup"><span data-stu-id="2729a-105">A term to define, which will be defined in `description`.</span></span>  
   
  `description`  
- <span data-ttu-id="9e868-106">項目符號或編號清單中的項目或者 `term` 的定義。</span><span class="sxs-lookup"><span data-stu-id="9e868-106">Either an item in a bullet or numbered list or the definition of a `term`.</span></span>  
+ <span data-ttu-id="2729a-106">項目符號或編號清單中的項目或者 `term` 的定義。</span><span class="sxs-lookup"><span data-stu-id="2729a-106">Either an item in a bullet or numbered list or the definition of a `term`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9e868-107">備註</span><span class="sxs-lookup"><span data-stu-id="9e868-107">Remarks</span></span>  
- <span data-ttu-id="9e868-108">\<listheader> 區塊用來定義資料表或定義清單的標題資料列。</span><span class="sxs-lookup"><span data-stu-id="9e868-108">The \<listheader> block is used to define the heading row of either a table or definition list.</span></span> <span data-ttu-id="9e868-109">定義資料表時，您只需要提供標題中詞彙的項目。</span><span class="sxs-lookup"><span data-stu-id="9e868-109">When defining a table, you only need to supply an entry for term in the heading.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2729a-107">備註</span><span class="sxs-lookup"><span data-stu-id="2729a-107">Remarks</span></span>  
+ <span data-ttu-id="2729a-108">\<listheader> 區塊用來定義資料表或定義清單的標題資料列。</span><span class="sxs-lookup"><span data-stu-id="2729a-108">The \<listheader> block is used to define the heading row of either a table or definition list.</span></span> <span data-ttu-id="2729a-109">定義資料表時，您只需要提供標題中詞彙的項目。</span><span class="sxs-lookup"><span data-stu-id="2729a-109">When defining a table, you only need to supply an entry for term in the heading.</span></span>  
   
- <span data-ttu-id="9e868-110">清單中的每個項目都是使用 \<item> 區塊所指定。</span><span class="sxs-lookup"><span data-stu-id="9e868-110">Each item in the list is specified with an \<item> block.</span></span> <span data-ttu-id="9e868-111">建立定義清單時，您需要同時指定 `term` 和 `description`。</span><span class="sxs-lookup"><span data-stu-id="9e868-111">When creating a definition list, you will need to specify both `term` and `description`.</span></span> <span data-ttu-id="9e868-112">不過，針對資料表、項目符號清單或編號清單，您只需要提供 `description` 的項目。</span><span class="sxs-lookup"><span data-stu-id="9e868-112">However, for a table, bulleted list, or numbered list, you only need to supply an entry for `description`.</span></span>  
+ <span data-ttu-id="2729a-110">清單中的每個項目都是使用 \<item> 區塊所指定。</span><span class="sxs-lookup"><span data-stu-id="2729a-110">Each item in the list is specified with an \<item> block.</span></span> <span data-ttu-id="2729a-111">建立定義清單時，您需要同時指定 `term` 和 `description`。</span><span class="sxs-lookup"><span data-stu-id="2729a-111">When creating a definition list, you will need to specify both `term` and `description`.</span></span> <span data-ttu-id="2729a-112">不過，針對資料表、項目符號清單或編號清單，您只需要提供 `description` 的項目。</span><span class="sxs-lookup"><span data-stu-id="2729a-112">However, for a table, bulleted list, or numbered list, you only need to supply an entry for `description`.</span></span>  
   
- <span data-ttu-id="9e868-113">清單或資料表可以有所需的多個 \<item> 區塊。</span><span class="sxs-lookup"><span data-stu-id="9e868-113">A list or table can have as many \<item> blocks as needed.</span></span>  
+ <span data-ttu-id="2729a-113">清單或資料表可以有所需的多個 \<item> 區塊。</span><span class="sxs-lookup"><span data-stu-id="2729a-113">A list or table can have as many \<item> blocks as needed.</span></span>  
   
- <span data-ttu-id="9e868-114">使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 編譯，可處理檔案的文件註解。</span><span class="sxs-lookup"><span data-stu-id="9e868-114">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="2729a-114">編譯搭配 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。</span><span class="sxs-lookup"><span data-stu-id="2729a-114">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9e868-115">範例</span><span class="sxs-lookup"><span data-stu-id="9e868-115">Example</span></span>  
- [!code-csharp[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]  
+## <a name="example"></a><span data-ttu-id="2729a-115">範例</span><span class="sxs-lookup"><span data-stu-id="2729a-115">Example</span></span>  
+ [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]  
   
-## <a name="see-also"></a><span data-ttu-id="9e868-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9e868-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2729a-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2729a-116">See also</span></span>
 
-- [<span data-ttu-id="9e868-117">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="9e868-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="9e868-118">建議使用的文件註解標籤</span><span class="sxs-lookup"><span data-stu-id="9e868-118">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="2729a-117">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="2729a-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="2729a-118">建議使用的文件註解標籤</span><span class="sxs-lookup"><span data-stu-id="2729a-118">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
