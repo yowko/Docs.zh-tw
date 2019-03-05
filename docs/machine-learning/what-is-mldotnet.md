@@ -4,13 +4,13 @@ description: 深入了解 ML.NET ，其為免費的跨平台開放原始碼機�
 author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
-ms.date: 11/06/2018
-ms.openlocfilehash: fb0ece94d77c76fddc667070a8aaef154fd2053a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 03/01/2019
+ms.openlocfilehash: 08e5f31502555ed1a04a6a4afa70bc98e8fd015a
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55252417"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57250958"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>什麼是 ML.NET 以及如何了解機器學習服務的基本概念？
 

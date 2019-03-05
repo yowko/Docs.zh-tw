@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd40e35c001318f7e5e685a68fd591b253cbf051
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620080"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836366"
 ---
 # <a name="selecting-a-collection-class"></a>選取集合類別
 請務必謹慎選擇您的集合類別。 使用錯誤的類型可能會限制您使用集合。 一般而言，除非您特別以 .NET Framework 1.1 版為目標，否則請避免使用 <xref:System.Collections> 命名空間中的類型。 由於泛型和並行版本的集合類型較安全，並且提供其他增強功能，因此會優先使用這些版本。  
@@ -60,7 +60,8 @@ ms.locfileid: "54620080"
   
     -   <xref:System.Collections.Hashtable> 類別會依其雜湊碼來排序其項目。  
   
-    -   <xref:System.Collections.SortedList> 類別以及 <xref:System.Collections.Generic.SortedDictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型類別會根據 <xref:System.Collections.IComparer> 介面和 <xref:System.Collections.Generic.IComparer%601> 泛型介面的實作，依索引鍵來排序其項目。  
+    -   
+  <xref:System.Collections.SortedList> 類別以及 <xref:System.Collections.Generic.SortedDictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型類別會根據 <xref:System.Collections.IComparer> 介面和 <xref:System.Collections.Generic.IComparer%601> 泛型介面的實作，依索引鍵來排序其項目。  
   
     -   <xref:System.Collections.ArrayList> 提供 <xref:System.Collections.ArrayList.Sort%2A> 方法，這個方法接受 <xref:System.Collections.IComparer> 實作做為參數。 其對應的泛型版本 (<xref:System.Collections.Generic.List%601> 泛型類別) 會提供 <xref:System.Collections.Generic.List%601.Sort%2A> 方法，這個方法接受 <xref:System.Collections.Generic.IComparer%601> 泛型介面的實作做為參數。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "54620080"
     -   此外，您可以使用 <xref:System.Collections.Generic> 命名空間中的任何泛型集合類別做為強類型字串集合，方法是指定其泛型類型引數的 <xref:System.String> 類別。  
   
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects 和 PLINQ  
- 只要物件類型實作 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>，LINQ to Objects 就可讓開發人員使用 LINQ 查詢以存取記憶體內的物件。 LINQ 查詢提供一般模式以存取資料，比標準的 `foreach` 迴圈更精簡、可讀性更高，並提供篩選、排序和群組功能。 如需詳細資訊，請參閱 [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)。  
+ 只要物件類型實作 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>，LINQ to Objects 就可讓開發人員使用 LINQ 查詢以存取記憶體內的物件。 LINQ 查詢提供一般模式以存取資料，比標準的 `foreach` 迴圈更精簡、可讀性更高，並提供篩選、排序和群組功能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) 和 [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)。  
   
  PLINQ 提供 LINQ to Objects 的平行實作，這項實作透過更有效率地使用多核心電腦，在許多情況下會提供更快的查詢執行速度。 如需詳細資訊，請參閱 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
   

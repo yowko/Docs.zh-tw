@@ -4,12 +4,12 @@ description: 探索協調微服務和多容器應用程式之高延展性和可�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 0a3ecbb8d186adf3fdc492654e23111ee4c508b1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307431"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980226"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
 
@@ -137,9 +137,11 @@ Azure Dev Spaces 可協助開發小組在 Kubernetes 上更具生產力，因為
 
 基本上，您可以在 Azure 中設定共用的開發空間。 每位開發人員可以只專注於他們的應用程式部分，並可以在已包含其案例所依存之所有其他服務和雲端資源的開發空間中，反覆開發預先認可程式碼。 相依性一律保持最新狀態，而開發人員會以鏡像處理生產環境的方式工作。
 
-Azure Dev Spaces 提供空間概念，讓您能夠在隔離的狀況下工作，不用擔心中斷您小組成員的工作。 這項功能是以 URL 首碼為依據，因此如果在 URL 中使用任何開發空間首碼，則針對每個容器的要求，它會執行部署給其存在空間的特殊容器版本。 否則，它會執行全域/合併版本。
+Azure Dev Spaces 提供空間概念，讓您能夠在相對隔離的狀況下工作，不用擔心中斷您小組的工作。 每個開發空間都是階層式結構的一部分，可讓您從最上層的主開發空間，使用您自己的微服務半成品覆寫一個 (或多個) 微服務。
 
-您可以查看 [Azure Dev Spaces 上的 eShopOnContainers Wiki 頁面](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS)，以取得具體範例的實用觀點。
+這項功能是以 URL 前置詞作為基礎，因此在 URL 中使用任何開發空間前置詞時，如果該前置詞存在於開發空間中，目標微服務就會提供要求，否則便會往上轉送到階層中所能找到的第一個目標微服務執行個體，最終則會送到最上層的主開發空間。
+
+您可以查看 [Azure Dev Spaces 上的 eShopOnContainers Wiki 頁面](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS)，以取得具體範例的實用觀點。
 
 如需進一步資訊，請參閱[使用 Azure Dev Spaces 進行小組開發](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)一文。
 

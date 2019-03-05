@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 非同步�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5346e5f3e780961e8353c9dec0860bebd4fc6657
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 10e2a05e8fa33ecbf2aec2432c0cf51204fc35c1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148895"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969358"
 ---
 # <a name="asynchronous-message-based-communication"></a>非同步訊息通訊
 
@@ -77,7 +77,7 @@ ms.locfileid: "53148895"
 
 - 使用[交易記錄採礦](https://www.scoop.it/t/sql-server-transaction-log-mining)。
 
-- 使用完整的[事件溯源模式](https://msdn.microsoft.com/library/dn589792.aspx)。
+- 使用完整的[事件溯源模式](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)。
 
 - 使用[寄件匣模式](http://gistlabs.com/2014/05/the-outbox/)：交易式資料庫資料表作為訊息佇列，而訊息佇列將是事件建立者元件的基礎，會建立事件加以發行。
 

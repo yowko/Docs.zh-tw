@@ -11,16 +11,16 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144854"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835820"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
-<xref:System.IO> 命名空間中許多類型的成員都包含 `path` 參數，這可讓您指定檔案系統資源的絕對或相對路徑。 接著這個路徑會傳遞給 [Windows 檔案系統 API](https://msdn.microsoft.com/library/windows/desktop/aa364407(v=vs.85).aspx)。 本主題討論您可以在 Windows 系統上使用的檔案路徑格式。
+<xref:System.IO> 命名空間中許多類型的成員都包含 `path` 參數，這可讓您指定檔案系統資源的絕對或相對路徑。 接著這個路徑會傳遞給 [Windows 檔案系統 API](/windows/desktop/fileio/file-systems)。 本主題討論您可以在 Windows 系統上使用的檔案路徑格式。
 
 ## <a name="traditional-dos-paths"></a>傳統 DOS 路徑
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692960"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836418"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的共變數和反變數
 <a name="top"></a> 共變數和反變數這兩個詞，是指使用比原本所指定更多 (較明確) 或更少 (較不明確) 衍生類型的能力。 泛型類型參數支援共變數和反變數，可在指派和使用泛型類型時提供更大的彈性。 當您參考類型系統時，共變數、反變數和不可變數的定義如下。 範例中會假設名為 `Base` 的基底類別，以及名為 `Derived`的衍生類別。  
@@ -135,7 +135,7 @@ ms.locfileid: "54692960"
 ### <a name="variance-in-generic-and-non-generic-delegates"></a>泛型和非泛型委派中的變異數  
  在上述的程式碼中，`MyMethod` 的簽章與建構的泛型委派 `Func<Base, Derived>` (在 Visual Basic 中則為 `Func(Of Base, Derived)`) 之簽章完全相符。 這個範例顯示，只要所有委派類型都是從泛型委派類型 <xref:System.Func%602>建構的，即可將這個泛型委派儲存在具有衍生程度較大參數類型及衍生程度較小傳回類型的變數或方法參數中。  
   
- 這一點很重要。 泛型委派參數類型中的共變數和反變數效果類似於一般委派繫結中的共變數和反變數效果 (請參閱[委派中的變異數](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca))。 不過，委派繫結中的變異數可以使用所有的委派類型，而不只是具有 Variant 型別參數的泛型委派類型。 此外，委派繫結中的變異數可讓方法繫結至任何具有較嚴格參數類型及較不嚴格傳回類型的委派，而泛型委派的指派只適用於這兩種委派類型都是從相同泛型類型定義建構的情況。  
+ 這一點很重要。 泛型委派參數類型中的共變數和反變數效果類似於一般委派繫結中的共變數和反變數效果 (請參閱[委派中的變異數 (C# )](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) 和[委派中的變異數 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md))。 不過，委派繫結中的變異數可以使用所有的委派類型，而不只是具有 Variant 類型參數的泛型委派類型。 此外，委派繫結中的變異數可讓方法繫結至任何具有較嚴格參數類型及較不嚴格傳回類型的委派，而泛型委派的指派只適用於這兩種委派類型都是從相同泛型類型定義建構的情況。  
   
  在下列範例中，會說明委派繫結中的變異數與泛型類型參數中的變異數合併之效果。 範例中定義包含三個類型的類型階層，其中衍生程度最小的是`Type1`，而最大的是`Type3`。 在一般委派繫結中，會使用變異數以將參數類型為 `Type1` 且傳回類型為 `Type3` 的方法繫結至參數類型為 `Type2` 且傳回類型為 `Type2`的泛型委派。 然後，範例會使用泛型類型參數的共變數和反變數，將產生的泛型委派指派給另一個參數類型為 `Type3` 且傳回類型為 `Type1` 的泛型委派類型變數。 在第二項指派中，變數類型和委派類型都必須是從相同的泛型類型定義 (在本範例中為 <xref:System.Func%602>) 建構的。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "54692960"
   
  Visual Basic 和 C# 不允許您違反使用 Covariant 和 Contravariant 類型參數的規則，也不允許您將 Covariant 和 Contravariant 附註加入至介面及委派以外類型的類型參數。 [MSIL 組合語言](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 不會執行這類檢查，如果您嘗試載入違反規則的類型，便會擲回 <xref:System.TypeLoadException> 。  
   
- 如需詳細資訊與範例程式碼，請參閱[泛型介面中的變異數](https://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)。  
+ 如需詳細資訊與範例程式碼，請參閱[泛型介面中的變異數 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 和[泛型介面中的變異數 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
   
  [回到頁首](#top)  
   
@@ -192,4 +192,5 @@ ms.locfileid: "54692960"
 
 - [共變數和反變數 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [共變數和反變數 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
-- [委派中的變異數](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+- [委派中的差異 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [委派中的變異數 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

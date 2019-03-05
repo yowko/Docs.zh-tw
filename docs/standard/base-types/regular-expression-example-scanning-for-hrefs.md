@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582836"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975962"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>規則運算式範例：掃描 HREF
 下列範例將搜尋輸入字串，並顯示所有 href="..." 值和它們在字串中的位置。  
@@ -38,13 +38,13 @@ ms.locfileid: "48582836"
   
  規則運算式模式 `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` 的解譯方式如下表所示。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`href`|比對常值字串 "href"。 該比對不區分大小寫。|  
 |`\s*`|比對零個以上的空白字元。|  
 |`=`|比對等號。|  
 |`\s*`|比對零個以上的空白字元。|  
-|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|比對下列其中一項，而不將結果指派給擷取的群組：<br /> <ul><li><p>引號 (或單引號)，後面加上零個或多個引號 (或單引號) 以外的任何字元，再加上引號 (或單引號)。 此模式中包含名為 `1` 的群組。</p></li><li><p>一個或多個非空白字元。 此模式中包含名為 `1` 的群組。</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|比對下列其中一項，而不將結果指派給擷取的群組：<br /> <ul><li><p>引號 (或單引號)，後面加上零個或多個引號 (或單引號) 以外的任何字元，再加上引號 (或單引號)。 此模式中包含名為 `1` 的群組。</p></li><li><p>一個或多個非空白字元。 此模式中包含名為 `1` 的群組。</p></li></ul>|  
 |`(?<1>[^"']*)`|將零個或多個引號 (或單引號) 以外的任何字元指派給名為 `1` 的擷取端群組。|  
 |`(?<1>\S+)`|將一或多個非空白字元指派給名為 `1` 的擷取群組。|  
   

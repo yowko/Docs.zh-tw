@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35cac6c93594847f5118849a14c4c5f991601367
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d861aa59b31871d20d21d88d9587239f76ae386d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221312"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203635"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 移轉問題
 
@@ -95,7 +95,7 @@ ms.locfileid: "56221312"
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
-| **文化特性名稱** | 下列名稱變更會影響德文、迪維西文和非洲文文化特性：<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>：德文 (瑞士) (de-CH) 文化特性的貨幣名稱已從 "sFr." 變更 為 "Fr."。<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>：迪維西文 (馬爾地夫) (dv-MV) 文化特性的完整日期模式已從 "dd/MMMM/yyyy" 變更為 "dd/MM/yyyy"。<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>：南非荷蘭文  (南非) (af-ZA) 文化特性的 P.M. 指示項已從 "nm" 變更為 "PM"。 | 請注意文化特性名稱的變更。 |
+| **文化特性名稱** | 下列名稱變更會影響德文、迪維西文和非洲文文化特性：<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>：德文 (瑞士) (de-CH) 文化特性的貨幣名稱已從 "sFr." 變更 為 "Fr."。<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>：迪維西文 (馬爾地夫) (dv-MV) 文化特性的完整日期模式已從 "dd/MMMM/yyyy" 變更為 "dd/MM/yyyy"。<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>：南非荷蘭文  南非荷蘭文 (南非) (af-ZA) 文化特性的 P.M. 指示項已從 "nm" 變更為 "PM"。 | 請注意文化特性名稱的變更。 |
 | **LCID 參數** | 為了與自動化伺服器設定中的預期行為一致，CLR 不再將 `LCID` 參數的目前文化特性 (Culture) 傳遞給未受管理的 COM 應用程式。 相反地，它會傳遞文化特性的 1033 (en-us)。 | 不需要進行任何修改，但需要所指定文化特性的原生應用程式除外。 |
 | **過時的文化特性類型** | <xref:System.Globalization.CultureTypes> 和 <xref:System.Globalization.CultureTypes> 文化特性類型現在已過時。<br><br>基於回溯相容性，<xref:System.Globalization.CultureTypes> 現在會傳回舊版 .NET Framework 所含的中性和特定文化特性，<xref:System.Globalization.CultureTypes> 現在則會傳回空清單。 | 使用 <xref:System.Globalization.CultureTypes> 列舉的其他值。 |
 | **擷取文化特性** | 從 Windows 7 開始，.NET Framework 4 會從作業系統擷取文化特性資訊，而不是儲存資料本身。 此外，.NET Framework 會與 Windows 同步，以排序資料以及設定資料大小寫。 | 無。 |

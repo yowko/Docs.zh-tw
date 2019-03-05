@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2d7555d39b3aa92ca49368ca5ad59750e3603606
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b08d119c0c7edb71ceab5c763c1359bf4c90cfec
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415893"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212530"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 的傳輸層安全性 (TLS) 最佳做法
 
@@ -237,7 +237,7 @@ Windows Registry Editor Version 5.00
 
 請從 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` 登錄機碼開始。 在該機碼底下，您可以在 `SSL 2.0`、`SSL 3.0`、`TLS 1.0`、`TLS 1.1` 及 `TLS 1.2` 集合中建立任何子機碼。 在那些子機碼底下，您可以建立子機碼 `Client` 和/或 `Server`。 在 `Client` 和 `Server` 底下，您可以建立 DWORD 值 `DisabledByDefault` (0 或 1) 和 `Enabled` (0 或 0xFFFFFFFF)。
 
-## <a name="the-schusestrongcrypto-flag"></a>SCH_USE_STRONG_CRYPTO 旗標
+## <a name="the-sch_use_strong_crypto-flag"></a>The SCH_USE_STRONG_CRYPTO 旗標
 
 啟用 `SCH_USE_STRONG_CRYPTO` 旗標時 (預設會由 `AppContext` 參數或 Windows 登錄啟用)，.NET Framework 會在您的應用程式要求 TLS 安全性通訊協定時使用此旗標。 `SCH_USE_STRONG_CRYPTO` 旗標可以依預設啟用、搭配 `AppContext` 參數啟用，或是搭配登錄啟用。 OS 會將旗標傳遞至 `Schannel`，以指示它停用已知的弱式加密演算法、加密套件，以及 TLS/SSL 通訊協定版本；若不這樣做，系統可能會為了取得更佳的互通性而啟用這些項目。 如需詳細資訊，請參閱:
 
@@ -270,10 +270,10 @@ Windows Registry Editor Version 5.00
 
 | **作業系統** | **TLS 1.2 支援** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | 支援且預設會啟用。 |
-| Windows 8.1</br>Windows Server 2012 R2 | 支援且預設會啟用。 |
-| Windows 8.0</br>Windows Server 2012 | 支援且預設會啟用。 |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | 支援但預設不會啟用。 如需如何啟用 TLS 1.2 的詳細資訊，請參閱[傳輸層安全性 (TLS) 登錄設定](/windows-server/security/tls/tls-registry-settings)網頁。 |
+| Windows 10<br>Windows Server 2016 | 支援且預設會啟用。 |
+| Windows 8.1<br>Windows Server 2012 R2 | 支援且預設會啟用。 |
+| Windows 8.0<br>Windows Server 2012 | 支援且預設會啟用。 |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | 支援但預設不會啟用。 如需如何啟用 TLS 1.2 的詳細資訊，請參閱[傳輸層安全性 (TLS) 登錄設定](/windows-server/security/tls/tls-registry-settings)網頁。 |
 | Windows Server 2008 | 支援 TLS 1.2 和 TLS 1.1 需要更新。 請參閱[在 Windows Server 2008 SP2 中加入 TLS 1.1 和 TLS 1.2 支援的更新](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s)。 |
 | Windows Vista | 不支援。 |
 
@@ -285,10 +285,10 @@ Windows Registry Editor Version 5.00
 
 | **作業系統** | **使用 .NET Framework 3.5 支援 TLS 1.2 所需的最低更新** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | [適用於 Windows 10 1511 版和 Windows Server 2016 Technical Preview 4 的累積更新：2016 年 5 月 10 日](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
-| Windows 8.1</br>Windows Server 2012 R2 | [支援 Windows 8.1 和 Windows Server 2012 R2 上 .NET Framework 3.5 所包含的 TLS 系統預設版本](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) \(機器翻譯\) |
-| Windows 8.0</br>Windows Server 2012 | [支援 Windows Server 2012 上 .NET Framework 3.5 所包含的 TLS 系統預設版本](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) \(機器翻譯\) |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | [支援 Windows 7 SP1 和 Server 2008 R2 SP1 上 .NET Framework 3.5.1 所包含的 TLS 系統預設版本](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) \(機器翻譯\) |
+| Windows 10<br>Windows Server 2016 | [適用於 Windows 10 1511 版和 Windows Server 2016 Technical Preview 4 的累積更新：2016 年 5 月 10 日](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
+| Windows 8.1<br>Windows Server 2012 R2 | [支援 Windows 8.1 和 Windows Server 2012 R2 上 .NET Framework 3.5 所包含的 TLS 系統預設版本](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) \(機器翻譯\) |
+| Windows 8.0<br>Windows Server 2012 | [支援 Windows Server 2012 上 .NET Framework 3.5 所包含的 TLS 系統預設版本](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) \(機器翻譯\) |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | [支援 Windows 7 SP1 和 Server 2008 R2 SP1 上 .NET Framework 3.5.1 所包含的 TLS 系統預設版本](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) \(機器翻譯\) |
 | Windows Server 2008 | [支援 Windows Vista SP2 和 Server 2008 SP2 上 .NET Framework 2.0 SP2 所包含的 TLS 系統預設版本](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) \(機器翻譯\) |
 | Windows Vista | 不支援 |
 

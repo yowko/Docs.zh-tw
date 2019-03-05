@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 9ee6e9a06d590d9d8452dcdaea11219070e613c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9e63b16106f69ec35b7713ffc1a28e2cfb19d2d9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188179"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203648"
 ---
 # <a name="language-independence-and-language-independent-components"></a>語言獨立性以及與語言無關的元件
 
@@ -21,7 +21,7 @@ ms.locfileid: "50188179"
 > [!NOTE]
 > 本文第一個部分將討論如何建立與語言無關的元件，也就是以任何語言撰寫的應用程式都可以使用的元件。 您也可以從以多種語言撰寫的原始程式碼建立單一元件或應用程式。請參閱本文第二部分的[跨語言互通性](#cross-language-interoperability)。 
 
-若要充分與其他以任何語言撰寫的物件互動，這些物件必須只向呼叫端公開所有語言通用的功能。 這一組通用的功能是由 Common Language Specification (CLS) 所定義，CLS 是套用至所產生之組件的一組規則。 Common Language Specification 是定義在 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) 的第一篇條款 7 到 11。 
+若要充分與其他以任何語言撰寫的物件互動，這些物件必須只向呼叫端公開所有語言通用的功能。 這一組通用的功能是由 Common Language Specification (CLS) 所定義，CLS 是套用至所產生之組件的一組規則。 Common Language Specification 是定義在 [ECMA-335 Standard:Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) 的第一篇條款 7 到 11。 
 
 如果您的元件符合 Common Language Specification，則保證其符合 CLS 標準，而且可以從支援 CLS 之任何程式語言所撰寫的組件中的程式碼來加以存取。 您可以在編譯時期將 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 屬性套用至您的原始程式碼，判斷您的元件是否符合 Common Language Specification。 如需詳細資訊，請參閱 [CLSCompliantAttribute 屬性](#the-clscompliantattribute-attribute)。
 
@@ -65,7 +65,7 @@ ms.locfileid: "50188179"
 
 ## <a name="cls-compliance-rules"></a>CLS 符合性規則
 
-本節討論建立符合 CLS 標準的元件的規則。 如需規則的完整清單，請參閱 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) 的第一篇條款 11。
+本節討論建立符合 CLS 標準的元件的規則。 如需規則的完整清單，請參閱 [ECMA-335 Standard:Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) 的第一篇條款 7 到 11。
 
 > [!NOTE]
 > Common Language Specification 所討論的是適用於下列各項的 CLS 符合性的每個規則：消費者 (以程式設計方式存取符合 CLS 標準之元件的開發人員)、架構 (使用語言編譯器建立符合 CLS 標準之程式庫的開發人員) 和擴充項 (建立工具 (例如可建立符合 CLS 標準之元件的語言編譯器或程式碼剖析器) 的開發人員)。 本文旨在討論適用於架構的規則。 請注意，話雖如此，適用於擴充項的某些規則可能也適用於使用 [Reflection.Emit](xref:System.Reflection.Emit) 建立的組件。 
@@ -150,7 +150,7 @@ End Class
 
 * 公用類別之公用方法的參數和傳回類型，以及衍生類別可存取之方法的參數和傳回類型。 
 
-下表列出 CLS 符合性的規則。 這些規則的英文是一字不差地擷取自 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (Copyright 2012 by Ecma International)，然後再翻譯成繁體中文。 這些規則的其他詳細資訊可在下列章節中找到。 
+下表列出 CLS 符合性的規則。 這些規則的英文是一字不差地擷取自 [ECMA-335 Standard:Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (Copyright 2012 by Ecma International)，然後再翻譯。 這些規則的其他詳細資訊可在下列章節中找到。 
 
 分類 | 請參閱 | 規則 | 規則編號
 -------- | --- | ---- | -----------
@@ -158,7 +158,7 @@ End Class
 協助工具選項 | [成員存取範圍](#member-accessibility) | 類型和成員應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中的類型也應該是可見和可存取的。 例如，在組件外部是可見的公用方法不得有引數，其類型只有在組件內可見。 構成類型應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中所用的具現化泛型類型也應該是可見和可存取的。 例如，存在於組件外部可見成員的簽章中的具現化泛型類型，不得有類型只能在組件內可見的泛型引數。 | 12
 陣列 | [陣列](#arrays) | 陣列必須有符合 CLS 標準之類型的項目，而且陣列所有維度的下限必須為零。 只有項目是陣列以及陣列的項目類型是需要在多載之間區別的事實。 當多載根據兩個或多個陣列類型時，項目類型應該是具名類型。 | 16
 屬性 | [屬性](#attributes) | 屬性的類型必須為 [System.Attribute](xref:System.Attribute) 或繼承自它的類型。 | 41
-屬性 | [屬性](#attributes) | CLS 只允許自訂屬性編碼的子集。 只有以下這些類型允許出現在這些編碼中 (請參閱第四篇)：[System.Type](xref:System.Type)、[System.String](xref:System.String)、[System.Char](xref:System.Char)、[System.Boolean](xref:System.Boolean)、[System.Byte](xref:System.Byte)、[System.Int16](xref:System.Int16)、[System.Int32](xref:System.Int32)、[System.Int64](xref:System.Int64)、[System.Single](xref:System.Single)、[System.Double](xref:System.Double)，以及以符合 CLS 標準之基底整數類型為基礎的所有列舉類型。 | 34
+屬性 | [屬性](#attributes) | CLS 只允許自訂屬性編碼的子集。 只有以下這些類型允許出現在這些編碼方式中 (請參閱第四篇)：[System.Type](xref:System.Type)、[System.String](xref:System.String)、[System.Char](xref:System.Char)、[System.Boolean](xref:System.Boolean)、[System.Byte](xref:System.Byte)、[System.Int16](xref:System.Int16)、[System.Int32](xref:System.Int32)、[System.Int64](xref:System.Int64)、[System.Single](xref:System.Single)、[System.Double](xref:System.Double)，以及以符合 CLS 標準之基底整數類型為基礎的所有列舉類型。 | 34
 屬性 | [屬性](#attributes) | CLS 不允許公開可見的必要修飾詞 (`modreq`，請參閱第二篇)，不過，允許它不了解的選擇性修飾詞 (`modopt`，請參閱第二篇)。 | 35
 建構函式 | [建構函式](#constructors) | 物件建構函式必須先呼叫基底類別的某個執行個體建構函式，才能對繼承的執行個體資料進行任何存取  (這不適用於不需要具有建構函式的實值類型)。  | 21
 建構函式 | [建構函式](#constructors) | 除非是做為物件建立程序的一部分，否則是不能呼叫物件建構函式的，而且也不能初始化物件兩次。 | 22
@@ -195,12 +195,12 @@ End Class
 屬性 | [屬性](#properties) | 屬性的類型應是 getter 的傳回型別和 setter 最後一個引數的類型。 屬性參數的類型必須是 getter 參數的類型和 setter 除了最後一個參數之外的所有參數類型。 所有這些類型都必須符合 CLS 規範，而且不能是 Managed 指標 (也就是，不能以傳址方式傳遞)。 | 27
 屬性 | [屬性](#properties) | 屬性必須遵守特定的命名模式。 在適當的名稱比較中應忽略 CLS 第 24 條規則中所提及的 `SpecialName` 屬性，並且應遵循識別項規則。 屬性必須有 getter 方法、setter 方法或兩者皆有。 | 28
 類型轉換 | [類型轉換](#type-conversion) | 如果有提供 op_Implicit 或 op_Explicit，則必須提供替代方式來提供強制型轉。 | 39
-類型 | [類型及類型成員簽章](#types-and-type-member-signatures) | Boxed 實值類型不符合 CLS 標準。 | 3
-類型 | [類型及類型成員簽章](#types-and-type-member-signatures) | 簽章中出現的所有類型都必須符合 CLS 標準。 構成具現化泛型類型的所有類型都必須符合 CLS 標準。 | 11
-類型 | [類型及類型成員簽章](#types-and-type-member-signatures) | 具型別的參考不符合 CLS 標準 | 14
-類型 | [類型及類型成員簽章](#types-and-type-member-signatures) | Unmanaged 指標類型不符合 CLS 標準。 | 17
-類型 | [類型及類型成員簽章](#types-and-type-member-signatures) | 符合 CLS 標準的類別、實值型別和介面不能要求不符合 CLS 標準的成員實作 | 20
-類型 | [類型及類型成員簽章](#types-and-type-member-signatures) | [System.Object](xref:System.Object) 符合 CLS 標準。 任何其他符合 CLS 標準的類別也都必須繼承自符合 CLS 標準的類別。 | 23
+型別 | [類型及類型成員簽章](#types-and-type-member-signatures) | Boxed 實值類型不符合 CLS 標準。 | 3
+型別 | [類型及類型成員簽章](#types-and-type-member-signatures) | 簽章中出現的所有類型都必須符合 CLS 標準。 構成具現化泛型類型的所有類型都必須符合 CLS 標準。 | 11
+型別 | [類型及類型成員簽章](#types-and-type-member-signatures) | 具型別的參考不符合 CLS 標準 | 14
+型別 | [類型及類型成員簽章](#types-and-type-member-signatures) | Unmanaged 指標類型不符合 CLS 標準。 | 17
+型別 | [類型及類型成員簽章](#types-and-type-member-signatures) | 符合 CLS 標準的類別、實值型別和介面不能要求不符合 CLS 標準的成員實作 | 20
+型別 | [類型及類型成員簽章](#types-and-type-member-signatures) | [System.Object](xref:System.Object) 符合 CLS 標準。 任何其他符合 CLS 標準的類別也都必須繼承自符合 CLS 標準的類別。 | 23
 
 ### <a name="types-and-type-member-signatures"></a>類型和類型成員簽章
 
@@ -316,7 +316,7 @@ End Class
 .NET 的[一般型別系統](common-type-system.md)包含了幾個內建類型，這些內建類型直接受到 Common Language Runtime 的支援，並且在組譯碼的中繼資料中以特殊方式進行編碼。 在這些內建類型中，下表所列的類型符合 CLS 標準。 
 
 
-符合 CLS 標準的類型 | 描述
+符合 CLS 標準的類型 | 說明
 ------------------ | -----------
 [Byte](xref:System.Byte) | 8 位元不帶正負號的整數 
 [Int16](xref:System.Int16) | 16 位元帶正負號的整數 
@@ -333,7 +333,7 @@ End Class
 下表所列的內建類型不符合 CLS 標準。
 
 
-不符合標準的類型 | 描述 | 符合 CLS 標準的替代項目
+不符合標準的類型 | 說明 | 符合 CLS 標準的替代項目
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | 8 位元帶正負號的整數資料類型 | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | 16 位元不帶正負號的整數 | [Int32](xref:System.Int32)
@@ -2058,7 +2058,7 @@ End Class
 
 符合 CLS 標準的類型中的屬性必須遵守下列規則：
 
-* 屬性必須有 setter、getter 或兩者皆有。 在組件中，這些會實作為特殊方法，亦即在組件的中繼資料中，會以個別的方法出現 (getter 會命名為 `get`\_*propertyname*，setter 會命名為 `set*\_*propertyname*) marked as `SpecialName'。 C# 編譯器會自動強制執行這項規則，而不需要套用 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 屬性。 
+* 屬性必須有 setter、getter 或兩者皆有。 在組件中，這些會實作為特殊方法，也就是，會顯示為不同的方法 (getter 命名為 `get`\_propertyname，而 setter 則為 `set`\_propertyname)，並在組件的中繼資料中標記為 `SpecialName`。 C# 編譯器會自動強制執行這項規則，而不需要套用 <xref:System.CLSCompliantAttribute> 屬性。 
 
 * 屬性的類型是屬性 getter 的傳回型別和 setter 的最後一個引數。 這些類型必須符合 CLS 標準，而且引數不能以傳址方式指派給屬性 (也就是它們不能是 Managed 指標)。 
 

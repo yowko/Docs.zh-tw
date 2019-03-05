@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e9375386360c94f959f638e1227cb847b783b994
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b0ace73d81783852242a52bec006b0ad2edaadd
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676168"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836132"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>管理 XML 文件中的命名空間
 XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和預定的 URI。 若要建立這些關聯，請為命名空間 URI 定義前置詞，並使用這些前置詞來限定 XML 資料中的元素與屬性名稱。 命名空間可用來避免元素和屬性名稱發生衝突，並讓相同名稱的元素和屬性以不同方式處理和驗證。  
@@ -58,12 +58,13 @@ XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和�
 ```  
   
 ## <a name="managing-namespaces"></a>管理命名空間  
- <xref:System.Xml.XmlNamespaceManager> 類別會保存命名空間 URI 和其前置詞的集合，並讓您從這個集合查詢、加入及移除命名空間。 某些內容中需要使用這個類別，才能改善 XML 處理效能。 例如，<xref:System.Xml.Xsl.XsltContext> 類別會使用 <xref:System.Xml.XmlNamespaceManager>，以提供 XPath 支援。  
+ 
+  <xref:System.Xml.XmlNamespaceManager> 類別會保存命名空間 URI 和其前置詞的集合，並讓您從這個集合查詢、加入及移除命名空間。 某些內容中需要使用這個類別，才能改善 XML 處理效能。 例如，<xref:System.Xml.Xsl.XsltContext> 類別會使用 <xref:System.Xml.XmlNamespaceManager>，以提供 XPath 支援。  
   
  命名空間管理員不會在命名空間上執行任何驗證，而是會假設前置詞和命名空間已經過驗證並且符合 [W3C 命名空間](https://www.w3.org/TR/REC-xml-names/)規格。  
   
 > [!NOTE]
->  [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) 不會使用 <xref:System.Xml.XmlNamespaceManager> 來管理命名空間。 如需在使用 LINQ to XML 時管理命名空間的資訊，請參閱 LINQ 文件中的[處理 XML 命名空間](https://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430)。  
+> [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) 不會使用 <xref:System.Xml.XmlNamespaceManager> 來管理命名空間。 如需在使用 LINQ to XML 時管理命名空間的資訊，請參閱 LINQ 文件中的[處理 XML 命名空間 (C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) 和[處理 XML 命名空間 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
   
  以下是您可以使用 <xref:System.Xml.XmlNamespaceManager> 類別執行的一些管理和查詢工作。 如需詳細資訊和範例，請追蹤每個方法或屬性的參考頁面連結。  
   
