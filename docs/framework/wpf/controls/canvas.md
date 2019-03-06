@@ -8,17 +8,18 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF]
 ms.assetid: fdb390e9-1bba-4b5f-87fe-c3bc246fa7e9
-ms.openlocfilehash: 41b1315f03c55c290959e8871df2630802882a75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3e1c942308aa90887b6370ed402a1a87364415
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351037"
 ---
 # <a name="canvas"></a>Canvas
-<xref:System.Windows.Controls.Canvas> 是可讓絕對定位的項目子系的版面配置控制項。  
+<xref:System.Windows.Controls.Canvas> 是可讓絕對位置的項目子系的版面配置控制項。  
   
 ## <a name="in-this-section"></a>本節內容  
- [HOW-TO 主題](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+ [HOW-TO 主題](canvas-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Panel>  
@@ -36,8 +37,8 @@ ms.lasthandoff: 05/04/2018
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>相關章節  
- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)  
+ [版面配置](../advanced/layout.md)  
   
- [逐步解說：我的第一個 WPF 傳統型應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 概觀](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 概觀](scrollviewer-overview.md)

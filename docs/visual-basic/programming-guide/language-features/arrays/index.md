@@ -2,18 +2,13 @@
 title: Visual Basic 中的陣列
 ms.date: 12/06/2017
 f1_keywords:
-- vb.Array
+  - vb.Array
 helpviewer_keywords:
-- arrays [Visual Basic]
-- Visual Basic, arrays
+  - 'arrays [Visual Basic]'
+  - 'Visual Basic, arrays'
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149896"
 ---
+
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的陣列
 
 陣列是一組值，都稱為*項目*，以邏輯方式彼此相關。 例如，陣列可能包含中含有文法學校中; 每一年級學生數目陣列的每個項目是單一的年級的學生數目。 同樣地，陣列可能包含學生的成績類別;陣列的每個項目是一個單一的等級。
@@ -87,7 +82,7 @@ Dim sales()() As Double = New Double(11)() {}
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-如果您有現有的陣列，您可以重新定義其大小所使用[ `Redim` ](../../../language-reference/statements/redim-statement.md)陳述式。 您可以指定`Redim`陳述式保留陣列中的值，或您可以指定它建立的空陣列。 下列範例顯示 `Redim` 陳述式的不同使用方法，以修改現有陣列的大小。
+如果您有現有的陣列，您可以重新定義其大小所使用[ `ReDim` ](../../../language-reference/statements/redim-statement.md)陳述式。 您可以指定`ReDim`陳述式保留陣列中的值，或您可以指定它建立的空陣列。 下列範例顯示 `ReDim` 陳述式的不同使用方法，以修改現有陣列的大小。
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
@@ -209,7 +204,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-前一個範例會將值指派不規則陣列元素的元素為基礎來使用`For...Next`迴圈。 您也可以使用巢狀的陣列常值，來指派的不規則陣列元素的值。 不過，嘗試使用巢狀陣列常值 (例如```Dim valuesjagged = {{1, 2}, {2, 3, 4}}```) 會產生編譯器錯誤[BC30568](../../../,,/../misc/bc30568.md)。 若要更正錯誤，請先括號括住內部陣列常值的物件。 括號會強制要評估陣列常值運算式，產生的值搭配外部陣列常值，如下列範例所示。
+前一個範例會將值指派不規則陣列元素的元素為基礎來使用`For...Next`迴圈。 您也可以使用巢狀的陣列常值，來指派的不規則陣列元素的值。 不過，嘗試使用巢狀陣列常值 (例如`Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) 會產生編譯器錯誤[BC30568](../../../,,/../misc/bc30568.md)。 若要更正錯誤，請先括號括住內部陣列常值的物件。 括號會強制要評估陣列常值運算式，產生的值搭配外部陣列常值，如下列範例所示。
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
@@ -269,7 +264,7 @@ Dim arrZ(-1) As String
 > [!NOTE]
 > 本節將不會討論聯結成單一字串的字串陣列。 如需有關聯結的字串陣列，請參閱<xref:System.String.Join%2A?displayProperty=nameWithType>方法。
 
-之前每個陣列項目複製到新的陣列，您必須先確定，您就已初始化陣列，使其足以 accompodate 新陣列。 您可以使用下列其中一種做法：
+之前每個陣列項目複製到新的陣列，您必須先確定，您就已初始化陣列，使它足夠大以容納新的陣列。 您可以使用下列其中一種做法：
 
 - 使用[ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md)陳述式，以動態方式加入新項目之前展開的陣列。 這是最簡單的技巧，但它可能會導致效能降低，過多的記憶體耗用量當您複製大型陣列。
 - 計算新的大型陣列所需的項目總數，然後將每個來源陣列的項目加入至它。
@@ -299,9 +294,9 @@ Dim arrZ(-1) As String
 |詞彙|定義|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|說明陣列中的順位和維度。|
-|[操作說明：初始化陣列變數在 Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|描述如何在陣列中填入初始值。|
-|[操作說明：在 Visual Basic 中排序陣列](../../language-features/arrays/how-to-sort-an-array.md)|示範如何依字母順序排列陣列中的項目。|
-|[操作說明：指派一個陣列至另一個陣列](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|描述將陣列指派給另一個陣列變數的規則和步驟。|
+|[如何：初始化陣列變數在 Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|描述如何在陣列中填入初始值。|
+|[如何：在 Visual Basic 中排序陣列](../../language-features/arrays/how-to-sort-an-array.md)|示範如何依字母順序排列陣列中的項目。|
+|[如何：指派一個陣列至另一個陣列](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|描述將陣列指派給另一個陣列變數的規則和步驟。|
 |[陣列的疑難排解](../../language-features/arrays/troubleshooting-arrays.md)|討論在使用陣列時會引發的一些常見問題。|
 
 ## <a name="see-also"></a>另請參閱

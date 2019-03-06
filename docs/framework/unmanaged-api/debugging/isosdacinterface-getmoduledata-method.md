@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 80b15f076dfe7a7bbbe7e28d9d68f01255e47202
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b0edd459deaf68040e05209c6ecf2cb7cae12e8d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828591"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369951"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>ISOSDacInterface::GetModuleData 方法
 
@@ -39,9 +39,11 @@ HRESULT GetModuleData(
 
 ### <a name="parameters"></a>參數
 
-`moduleAddr` [in]要擷取的資訊之模組的位址。
+`moduleAddr`\
+[in]要擷取的資訊之模組的位址。
 
-`data` [out][DacpModuleData 結構](dacpmoduledata-structure.md)來保存載入模組的資訊。
+`data`\
+[out][DacpModuleData 結構](dacpmoduledata-structure.md)來保存載入模組的資訊。
 
 
 ## <a name="remarks"></a>備註
@@ -57,5 +59,5 @@ HRESULT GetModuleData(
 
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ISOSDacInterface 介面](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [偵錯](index.md)
+- [ISOSDacInterface 介面](isosdacinterface-interface.md)

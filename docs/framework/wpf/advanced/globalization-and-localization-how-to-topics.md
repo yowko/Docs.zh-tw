@@ -7,22 +7,22 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: 14ec1bb9ca6e6d6702818cf316e100e5bbe97e6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544468"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369145"
 ---
 # <a name="globalization-and-localization-how-to-topics"></a>全球化和當地語系化 HOW TO 主題
-本節中的主題描述如何開發世界性的應用程式。  
+在本節中的主題描述如何開發世界性的應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
- [將應用程式當地語系化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  
- [使用自動版面配置建立按鈕](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [針對自動版面配置使用方格](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [使用 ResourceDictionary 管理可當地語系化的字串資源](../../../../docs/framework/wpf/advanced/how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
- [在可當地語系化的應用程式中使用資源](../../../../docs/framework/wpf/advanced/how-to-use-resources-in-localizable-applications.md)  
+ [將應用程式當地語系化](how-to-localize-an-application.md)  
+ [使用自動版面配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)  
+ [針對自動版面配置使用方格](how-to-use-a-grid-for-automatic-layout.md)  
+ [使用 ResourceDictionary 管理可當地語系化的字串資源](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
+ [在可當地語系化的應用程式中使用資源](how-to-use-resources-in-localizable-applications.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Globalization>  
@@ -31,6 +31,6 @@ ms.locfileid: "33544468"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML 中的 xml:lang 處理](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML 中的 xml:lang 處理](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
 ## <a name="related-sections"></a>相關章節

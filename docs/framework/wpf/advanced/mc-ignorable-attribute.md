@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 25f5fb254ec6f952d7cafa2cb893e35daa0e9029
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432df80fca58311d1c0931d9ba3b224fc9e271ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573932"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375385"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 屬性
 指定哪些[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]標記檔案中遇到的命名空間前置詞可能會忽略[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器。 `mc:Ignorable`屬性支援標記相容性，以及自訂的命名空間對應性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]版本控制。  
@@ -59,7 +59,7 @@ ms.locfileid: "54573932"
   
  如果您要實作[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器，處理器實作必須引發剖析或處理的任何項目或屬性，以識別為前置詞來限定的型別解析錯誤`mc:Ignorable`。 但您的處理器實作仍會引發例外狀況是次要的項目，無法載入或處理，如稍早指定的其中一個子元素範例的結果。  
   
- 根據預設，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器將會忽略已忽略的項目內的內容。 不過，您可以指定一個額外的屬性[mc: processcontent 屬性](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md)，需要繼續的處理下一個可用的父元素所忽略的元素內的內容。  
+ 根據預設，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器將會忽略已忽略的項目內的內容。 不過，您可以指定一個額外的屬性[mc: processcontent 屬性](mc-processcontent-attribute.md)，需要繼續的處理下一個可用的父元素所忽略的元素內的內容。  
   
  可以指定多個前置詞，在屬性中，使用一或多個空格字元作為分隔符號，例如： `mc:Ignorable="ignore1 ignore2"`。  
 
@@ -67,6 +67,6 @@ ms.locfileid: "54573932"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Markup.XamlReader>
-- [PresentationOptions:Freeze 屬性](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
-- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [PresentationOptions:Freeze 屬性](presentationoptions-freeze-attribute.md)
+- [XAML 概觀 (WPF)](xaml-overview-wpf.md)
+- [WPF 中的文件](documents-in-wpf.md)

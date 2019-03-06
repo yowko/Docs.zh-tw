@@ -7,21 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Slider
 - Slider control [WPF]
 ms.assetid: fb037e2a-0002-458b-9e6b-321623fe72a7
-ms.openlocfilehash: 7c50ae717bc8ae4016883965f83a34047ffad271
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d8836bc91283f83c95e63a8b948eed46fc94bca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353981"
 ---
 # <a name="slider"></a>滑桿
-<xref:System.Windows.Controls.Slider>可讓您選取的值範圍從移動<xref:System.Windows.Controls.Primitives.Thumb>沿著<xref:System.Windows.Controls.Primitives.Track>。  
+<xref:System.Windows.Controls.Slider>可讓您選取的值範圍從藉由移動<xref:System.Windows.Controls.Primitives.Thumb>沿著<xref:System.Windows.Controls.Primitives.Track>。  
   
- 下圖顯示在水平的範例<xref:System.Windows.Controls.Slider>控制項。  
+ 下圖顯示的水平範例<xref:System.Windows.Controls.Slider>控制項。  
   
- ![具有刻度記號的水平滑桿](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")  
+ ![具有刻度記號的水平滑桿](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")  
   
 ## <a name="in-this-section"></a>本節內容  
- [自訂滑桿上的刻度](../../../../docs/framework/wpf/controls/how-to-customize-the-ticks-on-a-slider.md)  
+ [自訂滑桿上的刻度](how-to-customize-the-ticks-on-a-slider.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Slider>  

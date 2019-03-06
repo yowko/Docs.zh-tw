@@ -7,21 +7,21 @@ helpviewer_keywords:
 - documents [WPF], flow content reference
 - flow content reference [WPF]
 ms.assetid: d32501af-0bac-4b80-8a20-61a6996753fe
-ms.openlocfilehash: c41270bc09dfefb282a3c0e0ee0308e22e1af446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47bdc48eb6f2fcb0ffd73f06a58bd01d716e56fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542333"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373539"
 ---
 # <a name="flow-content"></a>非固定格式內容
-動態內容項目提供用於建立適用於裝載在非固定格式內容的建置組塊<xref:System.Windows.Documents.FlowDocument>。  
+非固定格式內容項目提供了建置組塊來建立非固定格式內容適用於裝載在<xref:System.Windows.Documents.FlowDocument>。  
   
 ## <a name="in-this-section"></a>本節內容  
- [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [TextElement 內容模型概觀](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [非固定格式文件概觀](flow-document-overview.md)  
+ [TextElement 內容模型概觀](textelement-content-model-overview.md)  
+ [資料表概觀](table-overview.md)  
+ [HOW-TO 主題](flow-content-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Documents.FlowDocument>  
@@ -39,4 +39,4 @@ ms.locfileid: "33542333"
   <xref:System.Windows.Documents.ListItem>  
   
 ## <a name="related-sections"></a>相關章節  
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [WPF 中的文件](documents-in-wpf.md)

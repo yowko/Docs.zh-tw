@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF]
 ms.assetid: 1f4ed3d9-a171-4623-bc4f-3314e3576271
-ms.openlocfilehash: e7e73523f9c7038fdcec64f66567dc41a75d5e2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 811a29f6575681504a8dcf72257c82d288558a12
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550835"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358921"
 ---
 # <a name="groupbox"></a>GroupBox
 <xref:System.Windows.Controls.GroupBox>控制項是<xref:System.Windows.Controls.HeaderedContentControl>提供的標題為的容器[!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)]內容。  
   
- 下圖顯示<xref:System.Windows.Controls.GroupBox>包含<xref:System.Windows.Controls.TabControl>和<xref:System.Windows.Controls.Button>，括住<xref:System.Windows.Controls.StackPanel>。  
+ 如下圖所示<xref:System.Windows.Controls.GroupBox>，其中包含<xref:System.Windows.Controls.TabControl>並<xref:System.Windows.Controls.Button>，括住<xref:System.Windows.Controls.StackPanel>。  
   
- ![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")  
+ ![GroupBoxImage](./media/groupboximage.JPG "GroupBoxImage")  
   
 ## <a name="in-this-section"></a>本節內容  
- [定義 GroupBox 範本](../../../../docs/framework/wpf/controls/how-to-define-a-groupbox-template.md)  
+ [定義 GroupBox 範本](how-to-define-a-groupbox-template.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.GroupBox>  

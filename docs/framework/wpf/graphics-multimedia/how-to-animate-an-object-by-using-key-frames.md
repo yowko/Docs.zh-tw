@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: eb9de4098c5fb9bde74fa93dda6dd5a878ed0339
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e0e464adf70aeeaecb522d328d3087ca66a530c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697526"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368554"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>HOW TO：使用主要畫面格建立物件的動畫
 此範例示範如何以動畫顯示物件，這在此範例中是<xref:System.Windows.Controls.Page.Background%2A>屬性<xref:System.Windows.Controls.Page>控制項，使用主要畫面格。  
@@ -29,7 +29,7 @@ ms.locfileid: "54697526"
 > [!NOTE]
 >  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> 是唯一的類型，您可以搭配使用的主要畫面格<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>類別。 主要畫面格像<xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>也就是在值中，建立突然的變更，在此範例中的色彩變更會突然發生。  
   
- [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
   
  如需完整的範例，請參閱[主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
@@ -41,5 +41,5 @@ ms.locfileid: "54697526"
 - <xref:System.Windows.Media.LinearGradientBrush>
 - <xref:System.Windows.Media.RadialGradientBrush>
 - <xref:System.Windows.Media.DrawingBrush>
-- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [主要畫面格操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [主要畫面格動畫概觀](key-frame-animations-overview.md)
+- [主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)

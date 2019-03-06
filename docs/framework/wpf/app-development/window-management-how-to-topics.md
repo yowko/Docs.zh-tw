@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - windows [WPF], managing
 ms.assetid: 3090b408-94e4-446a-92ca-50f1fd36e5d8
-ms.openlocfilehash: df22dcbc64bff95e2263ba11195146622b9d58cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8de810843ea7de9bb7f27c6582a0254661dbf643
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550133"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351654"
 ---
 # <a name="window-management-how-to-topics"></a>視窗管理的如何主題
 下列主題示範如何管理[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]windows。  
   
 ## <a name="in-this-section"></a>本節內容  
- [自動調整視窗大小以符合其內容](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [取得應用程式中的所有視窗](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
-  [取得與設定主應用程式視窗](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
-  [開啟對話方塊](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
-  [開啟訊息方塊](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
-  [開啟視窗](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
-  [傳回對話方塊結果](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
+ [自動調整視窗大小以符合其內容](how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [取得應用程式中的所有視窗](how-to-get-all-windows-in-an-application.md)  
+  [取得與設定主應用程式視窗](how-to-get-and-set-the-main-application-window.md)  
+  [開啟對話方塊](how-to-open-a-dialog-box.md)  
+  [開啟訊息方塊](how-to-open-a-message-box.md)  
+  [開啟視窗](how-to-open-a-window.md)  
+  [傳回對話方塊結果](how-to-return-a-dialog-box-result.md)  
   
 ## <a name="related-sections"></a>相關章節  
- [應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+ [應用程式管理概觀](application-management-overview.md)  
   
- [瀏覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [瀏覽概觀](navigation-overview.md)  
   
- [裝載](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
+ [裝載](hosting-wpf-applications.md)  
   
- [建置和部署](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [建置和部署](building-and-deploying-wpf-applications.md)

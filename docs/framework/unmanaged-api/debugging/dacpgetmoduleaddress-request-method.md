@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1b69a3385743e948dd52dee75be2f975066c5f85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc3b0258381b10c27dd58bee66dbb6b2cf5b2c8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542596"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351082"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Request Method
 
@@ -36,9 +36,10 @@ HRESULT Request(
 );
 ```
 
-### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
-`pDataModule` [in]種子資料模組指標。
+`pDataModule`\
+[in]種子資料模組指標。
 
 ## <a name="remarks"></a>備註
 
@@ -56,5 +57,5 @@ HRESULT Request(
 
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [DacpGetModuleAddress Interface](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md)
+- [偵錯](index.md)
+- [DacpGetModuleAddress Interface](dacpgetmoduleaddress-structure.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: 505f4d6998b54f5b3af7613184d2cbac90cb8548
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94d362767b92799fa54f46e71724284a92b5bf7e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656452"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358817"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>HOW TO：設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務
 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 網際網路區域集合的權限僅限於在部分信任安全性沙箱內執行。 此權限集合會限制只有 web 服務，是位在 Web 服務呼叫[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]應用程式的來源網站。 當[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]進行偵錯從 Visual Studio 2005，不過，它不是擁有相同來源網站上的 Web 服務的方法參考。 此會導致安全性例外狀況，當引發[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]嘗試呼叫 Web 服務。 不過，Visual Studio 2005[!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]專案可以設定為模擬擁有為其偵錯時所呼叫的 Web 服務相同的來源站台。 這可讓[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]來安全地呼叫 Web 服務，而不會造成安全性例外狀況。
@@ -63,4 +63,4 @@ ms.locfileid: "54656452"
  `-debugSecurityZoneURL http://services.msdn.microsoft.com`
 
 ## <a name="see-also"></a>另請參閱
-- [WPF 主應用程式 (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)
+- [WPF 主應用程式 (PresentationHost.exe)](wpf-host-presentationhost-exe.md)

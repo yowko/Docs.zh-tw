@@ -8,28 +8,28 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: 392e59ca7bfa4c0fe8eb85b085a27b7c03df1c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d041c287fe88a2d44920848bc14cae97a70b3f0d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556249"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355112"
 ---
 # <a name="treeview"></a>TreeView
-<xref:System.Windows.Controls.TreeView>控制項可以顯示階層式結構中使用可摺疊的節點。  
+<xref:System.Windows.Controls.TreeView>控制項會顯示階層式結構中使用可摺疊的節點資訊。  
   
- 下圖是範例<xref:System.Windows.Controls.TreeView>包含巢狀控制項<xref:System.Windows.Controls.TreeViewItem>控制項。  
+ 下圖是舉例<xref:System.Windows.Controls.TreeView>控制項包含巢狀<xref:System.Windows.Controls.TreeViewItem>控制項。  
   
- ![TreeView 圖例](../../../../docs/framework/wpf/controls/media/treeviewillustration.JPG "TreeViewIllustration")  
+ ![TreeView 圖例](./media/treeviewillustration.JPG "TreeViewIllustration")  
   
 ## <a name="in-this-section"></a>本節內容  
- [TreeView 概觀](../../../../docs/framework/wpf/controls/treeview-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
+ [TreeView 概觀](treeview-overview.md)  
+ [HOW-TO 主題](treeview-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>相關章節  
- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
-  [資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)
+ [資料繫結概觀](../data/data-binding-overview.md)  
+  [資料範本化概觀](../data/data-templating-overview.md)

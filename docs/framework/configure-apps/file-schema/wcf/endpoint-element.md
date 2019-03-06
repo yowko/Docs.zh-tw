@@ -3,11 +3,11 @@ title: <endpoint> 項目
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
 ms.openlocfilehash: 94b6cc6225171d90164e6d6880e1095513f16ece
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254453"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354725"
 ---
 # <a name="endpoint-element"></a>\<結束點 > 項目
 指定服務端點的繫結、合約和位址屬性，以用於公開服務。  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: fecb16592f3b3af78e329e095684b9c726f056f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703675"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358934"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>最佳化效能：其他建議
-<a name="introduction"></a> 本主題提供[最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)一節中主題所涵蓋內容以外的效能建議。  
+<a name="introduction"></a> 本主題提供[最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)一節中主題所涵蓋內容以外的效能建議。  
   
  此主題包括下列章節：  
   
@@ -43,8 +43,8 @@ ms.locfileid: "54703675"
 ## <a name="navigation-to-object"></a>物件瀏覽  
  <xref:System.Windows.Navigation.NavigationWindow>物件衍生自<xref:System.Windows.Window>並使用內容瀏覽支援加以擴充，主要是由彙總<xref:System.Windows.Navigation.NavigationService>和日誌。 您可以更新的工作區<xref:System.Windows.Navigation.NavigationWindow>由指定[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]或物件。 下列範例將顯示這兩種方法：  
   
- [!code-csharp[Performance#PerformanceSnippet14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
- [!code-vb[Performance#PerformanceSnippet14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
+ [!code-csharp[Performance#PerformanceSnippet14](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
+ [!code-vb[Performance#PerformanceSnippet14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
   
  每個<xref:System.Windows.Navigation.NavigationWindow>物件有一份日誌，在該視窗中會記錄使用者的瀏覽歷程記錄。 日誌的用途之一，就是讓使用者能夠追溯其步驟。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54703675"
   
  當您使用物件進行瀏覽時，日誌會儲存該物件的整個視覺化樹狀結構。 這表示在您每次重新瀏覽頁面時，它都會立即呈現而不需重新建構。 在此情況下，日誌儲存成本較高，但重新建構頁面所需的時間較短。  
   
- 當您使用<xref:System.Windows.Navigation.NavigationWindow>物件時，您必須謹記在心的日誌支援對您的應用程式效能的影響。 如需詳細資訊，請參閱[覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
+ 當您使用<xref:System.Windows.Navigation.NavigationWindow>物件時，您必須謹記在心的日誌支援對您的應用程式效能的影響。 如需詳細資訊，請參閱[覽概觀](../app-development/navigation-overview.md)。  
   
 <a name="Hit_Testing"></a>   
 ## <a name="hit-testing-on-large-3d-surfaces"></a>大型立體表面的點擊測試  
@@ -73,12 +73,12 @@ ms.locfileid: "54703675"
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 字型快取服務可在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式之間共用字型資料。 您所執行的第一個 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式會啟動此服務 (若尚未執行)。 如果您使用[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，您可以從 「 手動 」 （預設值） 設定 「 Windows Presentation Foundation (WPF) Font Cache 3.0.0.0"服務，為 [自動 （延遲開始）]，以減少初始啟動時間[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式。  
   
 ## <a name="see-also"></a>另請參閱
-- [應用程式效能規劃](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [運用硬體](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [版面配置與設計](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [物件行為](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [應用程式資源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [動畫祕訣和訣竅](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [應用程式效能規劃](planning-for-application-performance.md)
+- [運用硬體](optimizing-performance-taking-advantage-of-hardware.md)
+- [版面配置與設計](optimizing-performance-layout-and-design.md)
+- [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
+- [物件行為](optimizing-performance-object-behavior.md)
+- [應用程式資源](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
+- [資料繫結](optimizing-performance-data-binding.md)
+- [動畫祕訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)

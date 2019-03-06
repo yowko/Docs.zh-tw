@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d43467a0f3ff94eb7903b808e192230e6c0ff1e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 763e698c7149de0fee61770e601032a4160b839f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561060"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378570"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute 方法
 取得自訂屬性，根據其名稱。 不同於中繼資料的自訂屬性，這些自訂屬性會保存在符號存放區。  
@@ -56,7 +56,7 @@ HRESULT GetSymAttribute (
  [out]此變數會接收屬性的資料指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼...  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** 於 CorSym.idl CorSym.h  

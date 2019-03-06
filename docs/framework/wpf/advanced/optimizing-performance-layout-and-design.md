@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: c5dd567fa9f5db69c52072a1cc67b5c574f8e1f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623868"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367933"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>最佳化效能：配置與設計
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的設計可能會因為在計算版面配置和驗證物件參考而產生不必要的額外負荷，進而影響其效能。 物件的建構，特別是在執行階段，可能會影響應用程式的效能特性。  
@@ -49,7 +49,7 @@ ms.locfileid: "54623868"
 ### <a name="use-the-most-efficient-panel-where-possible"></a>請盡可能使用最有效率的面板  
  版面配置程序的複雜性直接根據版面配置行為<xref:System.Windows.Controls.Panel>-衍生您所使用的項目。 例如，<xref:System.Windows.Controls.Grid>或是<xref:System.Windows.Controls.StackPanel>控制項提供更多的功能比<xref:System.Windows.Controls.Canvas>控制項。 這種功能增加的代價是較高的效能成本。 不過，如果您不需要的功能，<xref:System.Windows.Controls.Grid>控制項提供，您應該使用成本更低的替代項目，例如<xref:System.Windows.Controls.Canvas>或自訂的面板。  
   
- 如需詳細資訊，請參閱[面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)。  
+ 如需詳細資訊，請參閱[面板概觀](../controls/panels-overview.md)。  
   
 ### <a name="update-rather-than-replace-a-rendertransform"></a>更新，而不是取代 RenderTransform  
  您可以更新<xref:System.Windows.Media.Transform>而不是取代的值為<xref:System.Windows.UIElement.RenderTransform%2A>屬性。 特別是在包含動畫的案例。 藉由更新現有<xref:System.Windows.Media.Transform>，您可避免起始不必要的版面配置計算。  
@@ -64,19 +64,19 @@ ms.locfileid: "54623868"
   
  下列程式碼範例示範如何由上而下建立樹狀結構。  
   
- [!code-csharp[Performance#PerformanceSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
- [!code-vb[Performance#PerformanceSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
+ [!code-csharp[Performance#PerformanceSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
+ [!code-vb[Performance#PerformanceSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
   
- 如需有關邏輯樹狀結構的詳細資訊，請參閱 [WPF 中的樹狀結構](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)。  
+ 如需有關邏輯樹狀結構的詳細資訊，請參閱 [WPF 中的樹狀結構](trees-in-wpf.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [應用程式效能規劃](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [運用硬體](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [物件行為](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [應用程式資源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [其他效能建議](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)
+- [最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)
+- [應用程式效能規劃](planning-for-application-performance.md)
+- [運用硬體](optimizing-performance-taking-advantage-of-hardware.md)
+- [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
+- [物件行為](optimizing-performance-object-behavior.md)
+- [應用程式資源](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
+- [資料繫結](optimizing-performance-data-binding.md)
+- [其他效能建議](optimizing-performance-other-recommendations.md)
+- [版面配置](layout.md)

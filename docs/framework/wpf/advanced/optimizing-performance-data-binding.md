@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 156d248921499aa78c3638e45af113c5698bdacd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfc58036bc39879009b31d29dc41247a914bcd59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668011"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352018"
 ---
 # <a name="optimizing-performance-data-binding"></a>最佳化效能：資料繫結
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。  
@@ -74,14 +74,14 @@ ms.locfileid: "54668011"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您資料繫結至 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 內容。不過，資料繫結至 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 內容會比資料繫結至 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件來得慢。 如果唯一的目的是資料繫結，請不要將 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件轉換成 XML。  
   
 ## <a name="see-also"></a>另請參閱
-- [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [應用程式效能規劃](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [運用硬體](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [版面配置與設計](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [物件行為](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [應用程式資源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [其他效能建議](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [逐步解說：快取中的 WPF 應用程式的應用程式資料](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)
+- [應用程式效能規劃](planning-for-application-performance.md)
+- [運用硬體](optimizing-performance-taking-advantage-of-hardware.md)
+- [版面配置與設計](optimizing-performance-layout-and-design.md)
+- [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
+- [物件行為](optimizing-performance-object-behavior.md)
+- [應用程式資源](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
+- [其他效能建議](optimizing-performance-other-recommendations.md)
+- [資料繫結概觀](../data/data-binding-overview.md)
+- [逐步解說：快取中的 WPF 應用程式的應用程式資料](walkthrough-caching-application-data-in-a-wpf-application.md)

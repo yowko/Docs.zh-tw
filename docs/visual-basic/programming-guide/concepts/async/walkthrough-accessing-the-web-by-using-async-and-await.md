@@ -2,12 +2,12 @@
 title: 逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 51fb2a90a7398da5334e2fd4508f90d4594e5dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9eb9f53b456b309997ef9e6fdb83b770478889b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709490"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379116"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)
 您可以使用 async/await 功能，以更容易且直觀的方式撰寫非同步程式。 您可以撰寫非同步程式碼，使其看起來像是同步程式碼，讓編譯器處理困難的回呼函式和非同步程式碼通常需要的接續。  
@@ -47,7 +47,7 @@ ms.locfileid: "54709490"
 ## <a name="prerequisites"></a>必要條件  
  您的電腦上必須安裝 Visual Studio 2012 或更新版本。 如需詳細資訊，請參閱 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkId=235233)。  
   
-###  <a name="CreateWPFApp"></a> 建立 WPF 應用程式  
+### <a name="CreateWPFApp"></a> 建立 WPF 應用程式  
   
 1.  啟動 Visual Studio。  
   
@@ -61,8 +61,8 @@ ms.locfileid: "54709490"
   
      新的專案隨即會出現在方案總管中。  
   
-##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <a name="MainWindow"></a> 設計簡單的 WPF MainWindow  
+## <a name="BKMK_DesignWPFMainWin"></a>   
+### <a name="MainWindow"></a> 設計簡單的 WPF MainWindow  
   
 1.  在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。  
   
@@ -90,8 +90,8 @@ ms.locfileid: "54709490"
   
      如需 WPF XAML 設計工具的詳細資訊，請參閱[使用 XAML 設計工具建立 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。  
   
-##  <a name="BKMK_AddReference"></a>   
-###  <a name="AddRef"></a> 加入參考  
+## <a name="BKMK_AddReference"></a>   
+### <a name="AddRef"></a> 加入參考  
   
 1.  在方案總管中，反白顯示您的專案名稱。  
   
@@ -107,8 +107,8 @@ ms.locfileid: "54709490"
   
 6.  選擇 [確定] 按鈕以關閉對話方塊。  
   
-##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a> 若要加入必要的 Imports 陳述式  
+## <a name="BKMK_AddStatesandDirs"></a>   
+### <a name="ImportsState"></a> 若要加入必要的 Imports 陳述式  
   
 1.  在 **方案總管**，開啟 MainWindow.xaml.vb，捷徑功能表，然後選擇**檢視程式碼**。  
   
@@ -120,8 +120,8 @@ ms.locfileid: "54709490"
     Imports System.IO  
     ```  
   
-##  <a name="BKMK_CreatSynchApp"></a>   
-###  <a name="synchronous"></a> 建立同步應用程式  
+## <a name="BKMK_CreatSynchApp"></a>   
+### <a name="synchronous"></a> 建立同步應用程式  
   
 1.  在設計視窗 MainWindow.xaml 中，按兩下**開始**按鈕以建立`startButton_Click`MainWindow.xaml.vb 中的事件處理常式。  
   
@@ -221,8 +221,8 @@ ms.locfileid: "54709490"
     End Sub  
     ```  
   
-##  <a name="BKMK_TestSynchSol"></a>   
-###  <a name="testSynch"></a> 測試同步方案  
+## <a name="BKMK_TestSynchSol"></a>   
+### <a name="testSynch"></a> 測試同步方案  
   
 1.  選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。  
   
@@ -247,8 +247,8 @@ ms.locfileid: "54709490"
   
      請注意，需要花費幾秒鐘以顯示計數。 在這段期間，在等候下載要求資源的同時，會封鎖 UI 執行緒。 如此一來，您就無法在選擇 [開始] 按鈕之後，移動、最大化、最小化，或甚至關閉顯示視窗。 這些努力會失敗，直到位元組計數開始出現為止。 如果網站沒有回應，也不會指出失敗的站台。 甚至難以停止等候以及關閉程式。  
   
-##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <a name="GetURLContents"></a> 將 GetURLContents 轉換為非同步方法  
+## <a name="BKMK_ConvertGtBtArr"></a>   
+### <a name="GetURLContents"></a> 將 GetURLContents 轉換為非同步方法  
   
 1.  若要將同步方案轉換成非同步方案，最佳的起點是在 `GetURLContents`，因為呼叫 <xref:System.Net.HttpWebRequest> 方法 <xref:System.Net.HttpWebRequest.GetResponse%2A> 及 <xref:System.IO.Stream> 方法 <xref:System.IO.Stream.CopyTo%2A> 是應用程式存取 Web 的位置。 .NET Framework 會讓轉換變得簡單，方法是提供這兩種方法的非同步版本。  
   
@@ -329,8 +329,8 @@ ms.locfileid: "54709490"
   
      只要這幾個變更，`GetURLContents` 至非同步方法的轉換就能完成。  
   
-##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <a name="SumPageSizes"></a> 將 SumPageSizes 轉換為非同步方法  
+## <a name="BKMK_ConvertSumPagSzs"></a>   
+### <a name="SumPageSizes"></a> 將 SumPageSizes 轉換為非同步方法  
   
 1.  針對 `SumPageSizes` 重複上述程序的步驟。 首先，將對 `GetURLContents` 的呼叫變更為非同步呼叫。  
   
@@ -359,7 +359,7 @@ ms.locfileid: "54709490"
   
     -   將 "Async" 加入至方法名稱。  
   
-    -   這次沒有任何工作傳回變數，T，因為 `SumPageSizesAsync` 並未傳回 T 的值。(這個方法沒有任何 `Return` 陳述式)。不過，方法必須傳回 `Task` 才可以等候。 因此，變更方法類型從`Sub`至`Function`。 函式的傳回型別是 `Task`。  
+    -   這次沒有任何工作傳回變數，T，因為 `SumPageSizesAsync` 並未傳回 T 的值。(這個方法沒有任何 `Return` 陳述式)。不過，方法必須傳回 `Task` 才可以等候。 因此，變更方法類型從`Sub`至`Function`。 函式的傳回類型是 `Task`。  
   
      下列程式碼會顯示這些變更。  
   
@@ -369,8 +369,8 @@ ms.locfileid: "54709490"
   
      `SumPageSizes` 至 `SumPageSizesAsync` 的轉換完成。  
   
-##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <a name="startButton"></a> 將 startButton_Click 轉換為非同步方法  
+## <a name="BKMK_Cnvrtbttn1"></a>   
+### <a name="startButton"></a> 將 startButton_Click 轉換為非同步方法  
   
 1.  如果您尚未這麼做，請在事件處理常式中，將呼叫方法的名稱從 `SumPageSizes` 變更為 `SumPageSizesAsync`。  
   
@@ -415,8 +415,8 @@ ms.locfileid: "54709490"
   
      專案從同步到非同步處理的轉換已完成。  
   
-##  <a name="BKMK_testAsynchSolution"></a>   
-###  <a name="testAsynch"></a> 測試非同步方案  
+## <a name="BKMK_testAsynchSolution"></a>   
+### <a name="testAsynch"></a> 測試非同步方案  
   
 1.  選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。  
   
@@ -426,8 +426,8 @@ ms.locfileid: "54709490"
   
     -   最重要的是，不會在下載期間封鎖 UI 執行緒。 您可以移動視窗或調整其大小，同時下載、計算及顯示 Web 資源。 如果其中一個網站變慢或沒有回應，您可以選擇 [關閉] 按鈕 (右上角紅色欄位中的 x)，取消作業。  
   
-##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <a name="GetURLContentsAsync"></a> 將方法 GetURLContentsAsync 取代為 .NET Framework 方法  
+## <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
+### <a name="GetURLContentsAsync"></a> 將方法 GetURLContentsAsync 取代為 .NET Framework 方法  
   
 1.  .NET Framework 4.5 提供許多您可以使用的非同步方法。 其中一個方法 (<xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>) 會執行這個逐步解說所需的工作。 您可以使用這個方法，而不是 `GetURLContentsAsync` 方法，這是您在先前的程序中建立的方法。  
   
@@ -452,7 +452,7 @@ ms.locfileid: "54709490"
   
      此版本之專案的行為應該符合「測試非同步方案」程序描述的行為，而且您只需要投入較少的精力。  
   
-##  <a name="BKMK_CompleteCodeExamples"></a> 範例  
+## <a name="BKMK_CompleteCodeExamples"></a> 範例  
  下列程式碼包含使用您撰寫的 `GetURLContentsAsync` 方法，從同步轉換為非同步方案的完整範例。 請注意，它極為類似原始的同步方案。  
   
 ```vb  

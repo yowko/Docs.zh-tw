@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Timelines [WPF], description
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
-ms.openlocfilehash: 7a2edbd953f648d5555e5dc50469211a6da066de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83f87e911d9d5412eaba1eb88aea74b9325bc899
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497927"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351622"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>HOW TO：設定動畫的持續時間
 A<xref:System.Windows.Media.Animation.Timeline>代表一段時間和該區段的長度由時間軸的<xref:System.Windows.Duration>。 當<xref:System.Windows.Media.Animation.Timeline>結束其持續時間，它就會停止播放。 如果<xref:System.Windows.Media.Animation.Timeline>有子時間軸，它們也會停止播放。 如果動畫，<xref:System.Windows.Duration>指定花多少時間動畫轉換從其起始值到結束值。  
@@ -21,8 +21,8 @@ A<xref:System.Windows.Media.Animation.Timeline>代表一段時間和該區段的
  在下列的範例、 寬度、 高度和填滿色彩的<xref:System.Windows.Shapes.Rectangle>以動畫顯示。 持續時間會設定導致包括控制動畫的認知的速度，並覆寫子時間軸與容器時間軸的持續時間的持續時間的動畫效果的動畫和容器時間軸上。  
   
 ## <a name="example"></a>範例  
- [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
+ [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Duration>
-- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [動畫概觀](animation-overview.md)

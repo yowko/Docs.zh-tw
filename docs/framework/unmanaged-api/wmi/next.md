@@ -1,6 +1,6 @@
 ---
 title: 下一個函式 （Unmanaged API 參考）
-description: 下一個函式 retireves 列舉中的下一個屬性。
+description: 下一個函式擷取列舉中的下一個屬性。
 ms.date: 11/06/2017
 api_name:
 - Next
@@ -16,54 +16,54 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c6e39c1bc4c2860e400e2708e588416eb5769bd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 240544330fa352cbfdc01944e4be6bcad28dc96f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971880"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373190"
 ---
 # <a name="next-function"></a>下一個函式
-擷取開頭呼叫列舉中的下一個屬性[BeginEnumeration](beginenumeration.md)。  
+擷取開頭呼叫列舉中的下一個屬性[BeginEnumeration](beginenumeration.md)。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>語法  
-  
-```  
+
+## <a name="syntax"></a>語法
+
+```cpp
 HRESULT Next (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LONG              lFlags,
    [out] BSTR*            pstrName,
    [out] VARIANT*         pVal,
    [out] CIMTYPE*         pvtType,
-   [out] LONG*            plFlavor     
-); 
-```  
+   [out] LONG*            plFlavor
+);
+```
 
 ## <a name="parameters"></a>參數
 
-`vFunc`  
+`vFunc`\
 [in]未使用此參數。
 
-`ptr`  
+`ptr`\
 [in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
 
-`lFlags`  
+`lFlags`\
 [in] 保留。 這個參數必須是 0。
 
-`pstrName`  
+`pstrName`\
 [out]新`BSTR`含有屬性名稱。 您可以將此參數設定為`null`如果名稱不需要。
 
-`pVal`  
-[out]A`VARIANT`填滿屬性的值。 您可以將此參數設定為`null`如果不需要值。 如果函數傳回的錯誤碼`VARIANT`傳遞至`pVal`左未經修改。 
+`pVal`\
+[out]A`VARIANT`填滿屬性的值。 您可以將此參數設定為`null`如果不需要值。 如果函數傳回的錯誤碼`VARIANT`傳遞至`pVal`左未經修改。
 
-`pvtType`  
-[out]指標`CIMTYPE`變數 (`LONG`到置於屬性的型別)。 這個屬性的值可以是`VT_NULL_VARIANT`，在此情況下就必須判斷屬性的實際型別。 這個參數也可以是`null`。 
+`pvtType`\
+[out]指標`CIMTYPE`變數 (`LONG`到置於屬性的型別)。 這個屬性的值可以是`VT_NULL_VARIANT`，在此情況下就必須判斷屬性的實際型別。 這個參數也可以是`null`。
 
-`plFlavor`  
-[out]`null`，或接收的原始伺服器上的資訊屬性的值。 請參閱 [備註] 區段，如需可能值。 
+`plFlavor`\
+[out]`null`，或接收的原始伺服器上的資訊屬性的值。 請參閱 [備註] 區段，如需可能值。
 
 ## <a name="return-value"></a>傳回值
 
@@ -75,10 +75,10 @@ HRESULT Next (
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數無效。 |
 | `WBEM_E_UNEXPECTED` | 0x8004101d | 沒有不需要呼叫[ `BeginEnumeration` ](beginenumeration.md)函式。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可供開始新的列舉型別。 |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 遠端程序會呼叫之失敗的 Windows 管理與目前的處理序。 |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 遠端程序之間的呼叫失敗的 Windows 管理與目前的處理序。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | 列舉中沒有更多的屬性。 |
-  
+
 ## <a name="remarks"></a>備註
 
 此函式會包裝在呼叫[IWbemClassObject::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-next)方法。
@@ -95,12 +95,14 @@ HRESULT Next (
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 類別：屬性被繼承自父類別。 <br> 執行個體：屬性，而繼承自父類別中，有尚未修改的執行個體。  |
 | `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 類別：屬性屬於衍生的類別。 <br> 執行個體：執行個體; 所修改的屬性也就是所提供的值，或加入或修改限定詞。 |
 
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **標頭：** WMINet_Utils.idl  
-  
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>需求
+
+**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+**標頭：** WMINet_Utils.idl
+
+**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>另請參閱
+
 - [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

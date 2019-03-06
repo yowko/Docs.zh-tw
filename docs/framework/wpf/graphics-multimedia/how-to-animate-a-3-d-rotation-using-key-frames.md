@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], Rotation3DAnimation
 - 3-D translations [WPF], animating [WPF], with key frames (Rotation3DAnimation)
 ms.assetid: 6f671b95-7f30-4836-9a4f-aeb7dc30121f
-ms.openlocfilehash: 129b672411edf03dc5b98d1568c49704e66bea25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90e982838cb5d5b4488185c041e946c15d1e61e8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663631"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369132"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a>HOW TO：3d 旋轉的動畫使用主要畫面格
 在下列範例中，<xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames>用來製作 3D 物件旋轉時其旋轉軸以動畫顯示導致"搖晃"。 這個動畫會使用下列的主要畫面格：  
@@ -23,12 +23,12 @@ ms.locfileid: "54663631"
 3.  <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame> 用來建立變數轉換取決於值之間<xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A>屬性。 在下列範例中，動畫的這個部分很緩慢，但接近時間區段結尾開始，以指數方式加速。  
   
 ## <a name="example"></a>範例  
- [!code-xaml[Animation3DGallery_snip#Rotation3DAnimationUsingKeyFramesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotation3DAnimationUsingKeyFramesExample.xaml#rotation3danimationusingkeyframesexamplewholepage)]  
+ [!code-xaml[Animation3DGallery_snip#Rotation3DAnimationUsingKeyFramesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotation3DAnimationUsingKeyFramesExample.xaml#rotation3danimationusingkeyframesexamplewholepage)]  
   
 ## <a name="see-also"></a>另請參閱
-- [立體圖形概觀](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
-- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [使用分鏡腳本建立立體旋轉的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)
-- [使用 Rotation3DAnimation 建立立體旋轉的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
-- [使用四元數建立立體旋轉的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)
-- [使用主要畫面格建立立體旋轉的動畫 (QuaternionAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)
+- [立體圖形概觀](3-d-graphics-overview.md)
+- [主要畫面格動畫概觀](key-frame-animations-overview.md)
+- [使用分鏡腳本建立立體旋轉的動畫](how-to-animate-a-3-d-rotation-using-storyboards.md)
+- [使用 Rotation3DAnimation 建立立體旋轉的動畫](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
+- [使用四元數建立立體旋轉的動畫](how-to-animate-a-3-d-rotation-using-quaternions.md)
+- [使用主要畫面格建立立體旋轉的動畫 (QuaternionAnimationUsingKeyFrames)](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)

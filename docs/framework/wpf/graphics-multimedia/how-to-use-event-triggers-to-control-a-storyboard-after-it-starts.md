@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-ms.openlocfilehash: e4cfaf2352c3cca2b67a8e6a5d4c933399583e5a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0b25f56caf3f25b6e649c05ecf1cbe50046dd93
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663644"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362366"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>HOW TO：在腳本開始後使用事件觸發程式進行控制
 此範例示範如何控制<xref:System.Windows.Media.Animation.Storyboard>啟動之後。 若要啟動<xref:System.Windows.Media.Animation.Storyboard>利用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，使用<xref:System.Windows.Media.Animation.BeginStoryboard>，這會對物件和屬性，它們建立動畫，然後啟動 分鏡腳本將動畫的散發。 如果您賦予<xref:System.Windows.Media.Animation.BeginStoryboard>藉由指定的名稱及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>屬性，讓它可控制的分鏡腳本。 然後您可以以互動方式控制分鏡腳本開始後。  
@@ -33,9 +33,9 @@ ms.locfileid: "54663644"
 ## <a name="example"></a>範例  
  下列範例會使用可控制的分鏡腳本動作以互動方式控制分鏡腳本。  
   
- **注意：** 若要查看使用程式碼來控制分鏡腳本的範例，請參閱[控制分鏡腳本之後它會開始使用其互動方法](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)。  
+ **注意：** 若要查看使用程式碼來控制分鏡腳本的範例，請參閱[控制分鏡腳本之後它會開始使用其互動方法](how-to-control-a-storyboard-after-it-starts.md)。  
   
- [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
+ [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
   
  如需其他範例，請參閱 <<c0> [ 動畫範例圖庫](https://go.microsoft.com/fwlink/?LinkID=159969)。  
   
@@ -46,6 +46,6 @@ ms.locfileid: "54663644"
 - <xref:System.Windows.Media.Animation.PauseStoryboard>
 - <xref:System.Windows.Media.Animation.StopStoryboard>
 - <xref:System.Windows.Media.Animation.SeekStoryboard>
-- [在分鏡腳本開始後，使用其互動方法來進行控制](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)
-- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [在分鏡腳本開始後，使用其互動方法來進行控制](how-to-control-a-storyboard-after-it-starts.md)
+- [動畫概觀](animation-overview.md)
+- [分鏡腳本概觀](storyboards-overview.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Popup control [WPF], animating
 - animation [WPF], Popup controls
 ms.assetid: acaa2a0a-6137-4efd-9cd1-75ece222e390
-ms.openlocfilehash: 47555e5468c731d274707f0367122beb26e80c30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed5edf298e59d6a9adddc03fc21de1900c7ee8e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590025"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372837"
 ---
 # <a name="how-to-animate-a-popup"></a>HOW TO：建立快顯功能表的動畫
 此範例示範兩種方式來以動畫顯示<xref:System.Windows.Controls.Primitives.Popup>控制項。  
@@ -22,11 +22,11 @@ ms.locfileid: "54590025"
   
  必須設定才能正確轉換範例<xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A>屬性設`true`。 颾魤 ㄛ<xref:System.Windows.FrameworkElement.Margin%2A>上<xref:System.Windows.Controls.Canvas>內容必須指定足夠的空間<xref:System.Windows.Controls.Primitives.Popup>旋轉。  
   
- [!code-xaml[AnimatedPopup#RotateTransform2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform2)]  
+ [!code-xaml[AnimatedPopup#RotateTransform2](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform2)]  
   
  下列範例示範如何<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件，就會發生這個事件時<xref:System.Windows.Controls.Button>按一下時，觸發程序<xref:System.Windows.Media.Animation.Storyboard>開始動畫。  
   
- [!code-xaml[AnimatedPopup#RotateTransform1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform1)]  
+ [!code-xaml[AnimatedPopup#RotateTransform1](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform1)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.UIElement.RenderTransform%2A>
@@ -34,5 +34,5 @@ ms.locfileid: "54590025"
 - <xref:System.Windows.Media.RotateTransform>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - <xref:System.Windows.Controls.Primitives.Popup>
-- [HOW-TO 主題](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
-- [快顯功能表概觀](../../../../docs/framework/wpf/controls/popup-overview.md)
+- [HOW-TO 主題](popup-how-to-topics.md)
+- [快顯功能表概觀](popup-overview.md)

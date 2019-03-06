@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: 4aa646ab27044bc26f3787d3edb5f0f15a15bd2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce4c2bd48e819541d942c795307df36629ec05b9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635582"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362626"
 ---
 # <a name="custom-rendering-ink"></a>自訂呈現筆墨
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>筆劃的屬性可讓您指定的筆劃，其大小、 色彩和形狀，例如外觀，但會有您想来自訂項目外觀<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>允許。 您可能想要自訂筆跡外觀，轉譯具噴槍、油畫及許多其他效果的外觀。 Windows Presentation Foundation (WPF) 可讓您自訂實作自訂呈現筆墨<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>和<xref:System.Windows.Ink.Stroke>物件。  
@@ -37,7 +37,7 @@ ms.locfileid: "54635582"
   
  動態轉譯筆跡時有三個類別要實作。  
   
-1.  **DynamicRenderer**:實作衍生自 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 的類別。 這個類別是特製化<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>，轉譯筆劃繪製。 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>執行個別的執行緒中，轉譯，所以筆跡介面也會出現收集筆跡，即使應用程式使用者介面 (UI) 執行緒遭到封鎖。 如需執行緒模型的詳細資訊，請參閱[筆跡執行緒模型](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)。 若要自訂動態轉譯筆劃，覆寫<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A>方法。  
+1.  **DynamicRenderer**:實作衍生自 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 的類別。 這個類別是特製化<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>，轉譯筆劃繪製。 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>執行個別的執行緒中，轉譯，所以筆跡介面也會出現收集筆跡，即使應用程式使用者介面 (UI) 執行緒遭到封鎖。 如需執行緒模型的詳細資訊，請參閱[筆跡執行緒模型](the-ink-threading-model.md)。 若要自訂動態轉譯筆劃，覆寫<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A>方法。  
   
 2.  **筆劃**:實作衍生自 <xref:System.Windows.Ink.Stroke> 的類別。 這個類別是負責靜態轉譯<xref:System.Windows.Input.StylusPoint>後轉換成資料<xref:System.Windows.Ink.Stroke>物件。 覆寫<xref:System.Windows.Ink.Stroke.DrawCore%2A>方法，以確保該靜態轉譯筆劃是與動態轉譯一致。  
   
@@ -49,10 +49,10 @@ ms.locfileid: "54635582"
   
  下列範例示範自訂<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>繪製筆跡的線性漸層筆刷效果。  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
-[!code-vb[AdvancedInkTopicsSamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
+[!code-vb[AdvancedInkTopicsSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
   
 <a name="ImplementingCustomStrokes"></a>   
 ## <a name="implementing-custom-strokes"></a>實作自訂筆劃  
@@ -64,10 +64,10 @@ ms.locfileid: "54635582"
   
  下列C#程式碼會示範自訂<xref:System.Windows.Ink.Stroke>類別呈現<xref:System.Windows.Input.StylusPoint>為 3-D 筆劃的資料。  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
-[!code-vb[AdvancedInkTopicsSamples#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
+[!code-vb[AdvancedInkTopicsSamples#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
   
 <a name="ImplementingACustomInkCanvas"></a>   
 ## <a name="implementing-a-custom-inkcanvas"></a>實作自訂 InkCanvas  
@@ -83,7 +83,7 @@ ms.locfileid: "54635582"
   
  下列C#程式碼會示範自訂<xref:System.Windows.Controls.InkCanvas>類別，以使用自訂<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>並收集自訂筆劃。  
   
- [!code-csharp[AdvancedInkTopicsSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
+ [!code-csharp[AdvancedInkTopicsSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
   
  <xref:System.Windows.Controls.InkCanvas>可以有一個以上<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>。 您可以加入多個<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>物件至<xref:System.Windows.Controls.InkCanvas>加入至<xref:System.Windows.UIElement.StylusPlugIns%2A>屬性。  
   
@@ -92,4 +92,4 @@ ms.locfileid: "54635582"
  您可以藉由衍生您自己自訂的筆墨外觀<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>， <xref:System.Windows.Ink.Stroke>，和<xref:System.Windows.Controls.InkCanvas>類別。 當使用者繪製並收集筆劃後，這些類別可合力確保筆劃外觀的一致。  
   
 ## <a name="see-also"></a>另請參閱
-- [筆跡進階處理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [筆跡進階處理](advanced-ink-handling.md)

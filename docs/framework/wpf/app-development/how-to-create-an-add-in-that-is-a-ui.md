@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510803"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366383"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>HOW TO：建立本身為 UI 的增益集
 此範例示範如何建立增益集是 Windows Presentation Foundation (WPF) 所裝載的 WPF 獨立應用程式。  
@@ -27,7 +27,7 @@ ms.locfileid: "54510803"
   
 -   .NET Framework 增益集模型，包括管線、 增益集和主應用程式開發的知識。 如果您不熟悉這些概念，請參閱[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。 如需示範管線、 增益集，和主應用程式的實作的教學課程，請參閱[逐步解說：建立可延伸應用程式](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))。  
   
--   .NET Framework 增益集模型的 WPF 延伸模組的知識。 請參閱[WPF 增益集概觀](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
+-   .NET Framework 增益集模型的 WPF 延伸模組的知識。 請參閱[WPF 增益集概觀](wpf-add-ins-overview.md)。  
   
 ## <a name="example"></a>範例  
  若要建立為 WPF UI 的增益集需要特定的程式碼的每個管線區段、 增益集，和主應用程式。  
@@ -37,13 +37,13 @@ ms.locfileid: "54510803"
 ## <a name="implementing-the-contract-pipeline-segment"></a>實作合約管線區段  
  當增益集 UI，增益集的合約必須實作<xref:System.AddIn.Contract.INativeHandleContract>。 在範例中，`IWPFAddInContract`實作<xref:System.AddIn.Contract.INativeHandleContract>，如下列程式碼所示。  
   
- [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
   
 <a name="AddInViewPipeline"></a>   
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>實作增益集檢視管線區段  
  因為增益集實作為的子類別<xref:System.Windows.FrameworkElement>類型，[增益集] 檢視也必須子類別化<xref:System.Windows.FrameworkElement>。 下列程式碼顯示的增益集檢視的合約，實作為`WPFAddInView`類別。  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
   
  在這裡，增益集檢視衍生自<xref:System.Windows.Controls.UserControl>。 因此，增益集 UI 也應該衍生自<xref:System.Windows.Controls.UserControl>。  
   
@@ -51,12 +51,12 @@ ms.locfileid: "54510803"
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>實作增益集端配接器管線區段  
  雖然合約是<xref:System.AddIn.Contract.INativeHandleContract>，增益集是<xref:System.Windows.FrameworkElement>（如同增益集檢視管線區段所指定）。 因此，<xref:System.Windows.FrameworkElement>必須轉換成<xref:System.AddIn.Contract.INativeHandleContract>跨越隔離界限之前。 這項工作藉由呼叫增益集端配接器執行<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>，如下列程式碼所示。  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- 其中的增益集傳回 UI 的增益集模型中 (請參閱[建立增益集，傳回 UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md))，增益集配接器轉換<xref:System.Windows.FrameworkElement>要<xref:System.AddIn.Contract.INativeHandleContract>藉由呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 也必須呼叫在此模型中，雖然您需要實作要撰寫程式碼呼叫它的方法。 您可以覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>和實作程式碼呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>如果正在呼叫的程式碼<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>之所以<xref:System.AddIn.Contract.INativeHandleContract>。 在此情況下，呼叫端會是主應用程式端配接器，後續小節將進行說明。  
+ 其中的增益集傳回 UI 的增益集模型中 (請參閱[建立增益集，傳回 UI](how-to-create-an-add-in-that-returns-a-ui.md))，增益集配接器轉換<xref:System.Windows.FrameworkElement>要<xref:System.AddIn.Contract.INativeHandleContract>藉由呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 也必須呼叫在此模型中，雖然您需要實作要撰寫程式碼呼叫它的方法。 您可以覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>和實作程式碼呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>如果正在呼叫的程式碼<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>之所以<xref:System.AddIn.Contract.INativeHandleContract>。 在此情況下，呼叫端會是主應用程式端配接器，後續小節將進行說明。  
   
 > [!NOTE]
->  您也需要覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>主應用程式 UI 間啟用定位處理和增益集 UI 此模型中。 如需詳細資訊，請參閱 < WPF 增益集限制 > 中[WPF 增益集概觀](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
+>  您也需要覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>主應用程式 UI 間啟用定位處理和增益集 UI 此模型中。 如需詳細資訊，請參閱 < WPF 增益集限制 > 中[WPF 增益集概觀](wpf-add-ins-overview.md)。  
   
  因為增益集端配接器實作的介面，衍生自<xref:System.AddIn.Contract.INativeHandleContract>，您也需要實作<xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>，但會忽略此項時<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>會覆寫。  
   
@@ -106,4 +106,4 @@ ms.locfileid: "54510803"
   
 ## <a name="see-also"></a>另請參閱
 - [增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [WPF 增益集概觀](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+- [WPF 增益集概觀](wpf-add-ins-overview.md)

@@ -2,15 +2,9 @@
 title: 參考 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- language reference
-- Visual Basic code, language reference
+  - language reference
+  - 'Visual Basic code, language reference'
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 615421afe522770bfcff38ffdb23917d7925150d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083904"
 ---
 # <a name="reference-visual-basic"></a>參考 (Visual Basic)
 本節提供有關各個層面的參考資訊，Visual Basic 程式設計的連結。  
@@ -27,13 +21,6 @@ ms.locfileid: "44083904"
   
  [Visual Basic 語言規格](../../visual-basic/reference/language-specification/index.md)  
  提供完整的 Visual Basic 語言規格，其中包含所有層面語言的詳細的資訊連結。  
-  
-## <a name="reference"></a>參考資料  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
- 這個命名空間包含 Visual Basic Power Packs 控制項的類別。 Visual Basic Power Packs 控制項是附加的 Windows Form 控制項。  
-  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
- 這個命名空間提供一種元件，可讓您以表單出現在螢幕上的樣子列印表單的傳真。  
   
 ## <a name="related-sections"></a>相關章節  
  [一般使用者介面項目 (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  

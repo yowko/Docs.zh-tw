@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 8a298bdd9a78279f177b5891bf69d0197ec7c040
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e588118e995694ea899b73d238e00f63e92feea4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746703"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352044"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>逐步解說：在 WPF 中裝載 Direct3D9 內容
 本逐步解說示範如何裝載 Windows Presentation Foundation (WPF) 應用程式中的 Direct3D9 內容。  
@@ -32,7 +32,7 @@ ms.locfileid: "56746703"
   
 -   DirectX 9 或更新版本的 SDK。  
   
--   包含與 WPF 相容的格式中的 Direct3D9 內容的 DLL。 如需詳細資訊，請參閱 < [WPF 和 Direct3D9 互通](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)和[逐步解說：建立裝載在 WPF 中的 Direct3D9 內容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。  
+-   包含與 WPF 相容的格式中的 Direct3D9 內容的 DLL。 如需詳細資訊，請參閱 < [WPF 和 Direct3D9 互通](wpf-and-direct3d9-interoperation.md)和[逐步解說：建立裝載在 WPF 中的 Direct3D9 內容](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。  
   
 ## <a name="creating-the-wpf-project"></a>建立 WPF 專案  
  第一個步驟是建立 WPF 應用程式的專案。  
@@ -52,7 +52,7 @@ ms.locfileid: "56746703"
   
 2.  下列程式碼取代自動產生的程式碼。  
   
-     [!code-csharp[System.Windows.Interop.D3DImage#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml.cs#1)]  
+     [!code-csharp[System.Windows.Interop.D3DImage#1](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml.cs#1)]  
   
 ## <a name="hosting-the-direct3d9-content"></a>裝載 Direct3D9 內容  
  最後，使用<xref:System.Windows.Interop.D3DImage>類別，以裝載 Direct3D9 內容。  
@@ -61,7 +61,7 @@ ms.locfileid: "56746703"
   
 1.  在 MainWindow.xaml 中，自動產生的 XAML 取代為下列 XAML。  
   
-     [!code-xaml[System.Windows.Interop.D3DImage#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]  
+     [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]  
   
 2.  建置專案。  
   
@@ -73,4 +73,4 @@ ms.locfileid: "56746703"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Interop.D3DImage>
-- [Direct3D9 和 WPF 互通性的效能考量](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+- [Direct3D9 和 WPF 互通性的效能考量](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

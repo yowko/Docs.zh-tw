@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: c6e81ee119e82c7b07c5c3b92d35f0e0c184685d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545814"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372200"
 ---
 # <a name="resources-wpf"></a>資源 (WPF)
-資源是可在應用程式中不同位置重複使用的物件。 WPF 支援不同類型的資源。 這些資源是主要兩種資源類型： XAML 資源和資源資料檔。 XAML 資源的範例包括筆刷和樣式。 資源資料檔案是應用程式所需的非可執行檔的資料檔案。  
+資源是可在應用程式中不同位置重複使用的物件。 WPF 支援不同類型的資源。 這些資源會有主要兩種類型的資源：XAML 資源和資源資料檔案。 XAML 資源的範例包括筆刷和樣式。 資源資料檔案是應用程式所需的非可執行資料檔案。  
   
 ## <a name="in-this-section"></a>本節內容  
- [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [WPF 應用程式資源、內容和資料檔案](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [XAML 資源](xaml-resources.md)  
+ [WPF 應用程式資源、內容和資料檔案](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [WPF 中的 Pack URI](../app-development/pack-uris-in-wpf.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.ResourceDictionary>  
   
- [StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [StaticResource 標記延伸](staticresource-markup-extension.md)  
   
- [DynamicResource 標記延伸](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [DynamicResource 標記延伸](dynamicresource-markup-extension.md)  
   
- [x:Key 指示詞](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [x:Key 指示詞](../../xaml-services/x-key-directive.md)  
   
 ## <a name="related-sections"></a>相關章節  
- [WPF 中的 XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)
+ [WPF 中的 XAML](xaml-in-wpf.md)

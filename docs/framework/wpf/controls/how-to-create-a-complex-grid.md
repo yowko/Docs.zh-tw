@@ -7,12 +7,12 @@ helpviewer_keywords:
 - monthly calendar [WPF], creating
 - Grid control [WPF], creating [WPF], complex grid
 ms.assetid: 4ce3040a-a156-4364-9596-98ca1eca5550
-ms.openlocfilehash: e2356113457e8c9a6737132e9779e49c05a23d77
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd17dfeea85e2b404f7a284f93faceec63145b1f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149779"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355009"
 ---
 # <a name="how-to-create-a-complex-grid"></a>如何建立複雜格線
 
@@ -24,11 +24,11 @@ ms.locfileid: "53149779"
 
 此範例會使用垂直的漸層來<xref:System.Windows.Shapes.Shape.Fill%2A>的資料行和資料列來改善的視覺呈現方式和行事曆的可讀性。 樣式<xref:System.Windows.Controls.TextBlock>項目代表的日期和星期幾。 <xref:System.Windows.Controls.TextBlock> 項目絕對定位在其儲存格使用<xref:System.Windows.FrameworkElement.Margin%2A>屬性和樣式的應用程式中所定義的對齊屬性。
 
-[!code-xaml[GridComplex#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]
+[!code-xaml[GridComplex#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]
 
 下圖顯示產生的控制項，可自訂的行事曆：
 
-![產生的控制項的螢幕擷取畫面](./media/how-to-create-a-complex-grid/wpf-manual-calendar.png)
+![產生的控制項的螢幕擷取畫面](././media/how-to-create-a-complex-grid/wpf-manual-calendar.png)
 
 ## <a name="see-also"></a>另請參閱
 

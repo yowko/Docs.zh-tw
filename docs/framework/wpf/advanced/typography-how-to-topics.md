@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: 0f7fdea1aa399e6f967bdfad1cd19067a7f5761b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4f4297fdc5c49270ac97513295fc5aa2e0f2213
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543574"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353708"
 ---
 # <a name="typography-how-to-topics"></a>印刷樣式 HOW TO 主題
 在本節中的主題描述如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]支援豐富的呈現您的應用程式中的文字。  
   
 ## <a name="in-this-section"></a>本節內容  
- [建立文字裝飾](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
- [指定超連結是否要加上底線](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
- [對文字套用轉換](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
- [對文字套用動畫](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
- [建立含陰影的文字](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
- [建立外框文字](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [繪製文字至控制項的背景](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
- [繪製文字至視覺效果](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
- [在 XAML 中使用特殊字元](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
+ [建立文字裝飾](how-to-create-a-text-decoration.md)  
+ [指定超連結是否要加上底線](how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [對文字套用轉換](how-to-apply-transforms-to-text.md)  
+ [對文字套用動畫](how-to-apply-animations-to-text.md)  
+ [建立含陰影的文字](how-to-create-text-with-a-shadow.md)  
+ [建立外框文字](how-to-create-outlined-text.md)  
+ [繪製文字至控制項的背景](how-to-draw-text-to-a-control-background.md)  
+ [繪製文字至視覺效果](how-to-draw-text-to-a-visual.md)  
+ [在 XAML 中使用特殊字元](how-to-use-special-characters-in-xaml.md)  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Documents.Typography>
-- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [OpenType 字型功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [WPF 中的文件](documents-in-wpf.md)
+- [OpenType 字型功能](opentype-font-features.md)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbed07ac08005e801b56b9538f46361df723bcb0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671976"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367104"
 ---
 # <a name="scrollviewer"></a>ScrollViewer
 <xref:System.Windows.Controls.ScrollViewer>控制項會建立其中內容可以捲動水平或垂直捲動區域。  
   
 ## <a name="in-this-section"></a>本節內容  
- [ScrollViewer 概觀](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+ [ScrollViewer 概觀](scrollviewer-overview.md)  
+ [HOW-TO 主題](scrollviewer-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
@@ -29,5 +29,5 @@ ms.locfileid: "54671976"
  <xref:System.Windows.Controls.ScrollViewer>  
   
 ## <a name="see-also"></a>另請參閱
-- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)
+- [面板概觀](panels-overview.md)
+- [版面配置](../advanced/layout.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: d7b544fcb308960ff86b83655d60cb1453b6571a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee1df1e122e47ea67618da5a1e4349e28d90447
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543811"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377361"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主題將介紹您應留意撰寫時的問題[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]全球市場的應用程式。 全球化的程式設計項目中定義[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]在`System.Globalization`。
@@ -47,7 +47,7 @@ ms.locfileid: "54543811"
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>語言屬性
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 會使用[xml: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)來代表項目的 language 屬性。  若要善用<xref:System.Globalization.CultureInfo>類別，語言屬性值必須是其中一個預先定義的文化特性名稱<xref:System.Globalization.CultureInfo>。 [xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) 在項目樹狀結構中為可繼承 (依 XML 規則，不一定是因為相依性屬性繼承)，如未明確指派，其預設值為空字串。
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 會使用[xml: lang](../../xaml-services/xml-lang-handling-in-xaml.md)來代表項目的 language 屬性。  若要善用<xref:System.Globalization.CultureInfo>類別，語言屬性值必須是其中一個預先定義的文化特性名稱<xref:System.Globalization.CultureInfo>。 [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) 在項目樹狀結構中為可繼承 (依 XML 規則，不一定是因為相依性屬性繼承)，如未明確指派，其預設值為空字串。
 
  語言屬性在指定方言方面非常有用。 例如，法國、魁北克、比利時和瑞士的法文拼字、字彙和發音不同。 也中文、 日文和韓文共用中的字碼指標[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]，但表意圖形不同，他們使用完全不同的字型。
 
@@ -151,7 +151,7 @@ ms.locfileid: "54543811"
 ### <a name="localizable-user-interface"></a>可當地語系化的使用者介面
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式會使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]來定義其[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 可讓開發人員使用一組屬性和邏輯指定物件的階層。 主要用法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]是開發[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式，但它可以用來指定任何階層[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件。 大部分的開發人員使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]來指定其應用程式的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]並使用 C# 之類的程式設計語言回應使用者互動。
 
- 從資源觀點而言[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]主要用來描述語言相依檔案[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]是資源項目，因此其最終發佈格式必須進行當地語系化，以支援國際語言。 因為[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]無法處理事件許多[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]應用程式包含執行這項操作的程式碼區塊。 如需詳細資訊，請參閱 < [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。 程式碼會被清除並編譯成不同的二進位檔時[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案語彙基元化成 BAML 形式的 XAML。 BAML 格式的 XAML 檔案、映像和其他類型的 Managed 資源物件會內嵌到附屬資源組件中，以當地語系化為其他語言，或在不需要當地語系化時內嵌到主要組件中。
+ 從資源觀點而言[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]主要用來描述語言相依檔案[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]是資源項目，因此其最終發佈格式必須進行當地語系化，以支援國際語言。 因為[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]無法處理事件許多[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]應用程式包含執行這項操作的程式碼區塊。 如需詳細資訊，請參閱 < [XAML 概觀 (WPF)](xaml-overview-wpf.md)。 程式碼會被清除並編譯成不同的二進位檔時[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案語彙基元化成 BAML 形式的 XAML。 BAML 格式的 XAML 檔案、映像和其他類型的 Managed 資源物件會內嵌到附屬資源組件中，以當地語系化為其他語言，或在不需要當地語系化時內嵌到主要組件中。
 
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式支援所有[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)][!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]資源，包括字串資料表、 影像和其他等等。
@@ -167,7 +167,7 @@ ms.locfileid: "54543811"
 
  若要使用的資源，在您的應用程式中具現化<xref:System.Resources.ResourceManager>並載入您想要使用的資源。 下列範例示範如何進行這項操作。
 
- [!code-csharp[LocalizationResources#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
+ [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
 
 <a name="using_clickonce"></a>
 ## <a name="using-clickonce-with-localized-applications"></a>使用 ClickOnce 與當地語系化的應用程式
@@ -181,4 +181,4 @@ ms.locfileid: "54543811"
 ```
 
 ## <a name="see-also"></a>另請參閱
-- [WPF 全球化和當地語系化概觀](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
+- [WPF 全球化和當地語系化概觀](wpf-globalization-and-localization-overview.md)

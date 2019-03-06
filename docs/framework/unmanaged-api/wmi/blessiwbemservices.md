@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b127c48a300af01c8e7b32d422e42fbc4796420d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23b72856015d028e50c1e3bfd4a12e0f220291c3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716074"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354605"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices 函式
 表示使用者認證是否允許指定的存取[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)類別。   
@@ -43,20 +43,23 @@ HRESULT BlessIWbemServices (
 
 ## <a name="parameters"></a>參數
 
-`pIWbemServices`  
+`pIWbemServices`\
 [in]指標[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)權限所需的物件。
 
-`strUser`  
+`strUser`\
 [in]使用者名稱。
 
-`strPassword`  
+`strPassword`\
 [in]與相關聯的密碼`strUser`。
 
-`strAuthority` [in]使用者的網域名稱。 請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。
+`strAuthority`\
+[in]使用者的網域名稱。 請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。
 
-`impLevel` [in]模擬等級。
+`impLevel`\
+[in]模擬等級。
 
-`authnLevel` [in]授權層級。
+`authnLevel`\
+[in]授權層級。
 
 ## <a name="return-value"></a>傳回值
 
@@ -71,6 +74,7 @@ HRESULT BlessIWbemServices (
 | `S_OK` | 0 | 函式呼叫成功。 | 
 
 ## <a name="requirements"></a>需求  
+
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
@@ -78,4 +82,5 @@ HRESULT BlessIWbemServices (
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

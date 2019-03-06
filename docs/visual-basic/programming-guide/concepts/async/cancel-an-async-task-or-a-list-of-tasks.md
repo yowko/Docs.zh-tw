@@ -2,12 +2,12 @@
 title: 取消一項非同步工作或一份工作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: e4e0fcb1d706fef09233543487aebdeb01cdfbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81676324145bcf8f6d9a13e757865fa86e6d2e23
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695889"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374449"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>取消一項非同步工作或一份工作 (Visual Basic)
 如果您不想要等候非同步應用程式完成，則可以設定可用來取消非同步應用程式的按鈕。 遵循本主題中的範例，即可將取消按鈕新增至下載某個網站內容或網站清單的應用程式。  
@@ -17,11 +17,11 @@ ms.locfileid: "54695889"
 > [!NOTE]
 >  若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。  
   
-##  <a name="BKMK_CancelaTask"></a> 取消工作  
+## <a name="BKMK_CancelaTask"></a> 取消工作  
  第一個範例會建立 [取消] 按鈕與單一下載工作的關聯。 如果您在應用程式下載內容時選擇該按鈕，則會取消下載。  
   
 ### <a name="downloading-the-example"></a>下載範例  
- 您可以下載完整 Windows Presentation Foundation (WPF) 專案從[非同步範例：精確微調應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)然後遵循這些步驟。  
+ 您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。  
   
 1.  解壓縮您下載的檔案，然後啟動 Visual Studio。  
   
@@ -135,11 +135,11 @@ ms.locfileid: "54695889"
     Download canceled.  
     ```  
   
-##  <a name="BKMK_CancelaListofTasks"></a> 取消工作清單  
+## <a name="BKMK_CancelaListofTasks"></a> 取消工作清單  
  您可以將相同 `CancellationTokenSource` 執行個體與每項工作建立關聯，以擴充先前的範例來取消許多工作。 如果您選擇 [取消] 按鈕，即會取消所有尚未完成的工作。  
   
 ### <a name="downloading-the-example"></a>下載範例  
- 您可以下載完整 Windows Presentation Foundation (WPF) 專案從[非同步範例：精確微調應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)然後遵循這些步驟。  
+ 您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。  
   
 1.  解壓縮您下載的檔案，然後啟動 Visual Studio。  
   
@@ -247,10 +247,10 @@ ms.locfileid: "54695889"
     Downloads canceled.  
     ```  
   
-##  <a name="BKMK_CompleteExamples"></a> 完整範例  
+## <a name="BKMK_CompleteExamples"></a> 完整範例  
  下列各節包含每個先前範例的程式碼。 請注意，您必須新增 <xref:System.Net.Http> 的參考。  
   
- 您可以下載的專案[非同步範例：順利微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)。  
+ 您可以下載的專案[非同步範例：Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。  
   
 ### <a name="cancel-a-task-example"></a>取消工作範例  
  下列程式碼是取消單一工作之範例的完整 MainWindow.xaml.vb 檔案。  

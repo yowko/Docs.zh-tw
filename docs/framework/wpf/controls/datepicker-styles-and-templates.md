@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: c8adab452fdb8c5de364fc80f13db780b7a067fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 685eb9478f1ff2da9047546648320a94305fff57
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591469"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365278"
 ---
 # <a name="datepicker-styles-and-templates"></a>DatePicker 樣式和範本
-本主題描述的樣式和範本<xref:System.Windows.Controls.DatePicker>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述的樣式和範本<xref:System.Windows.Controls.DatePicker>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
   
 ## <a name="datepicker-parts"></a>日期選擇器組件  
  下表列出的具名組件<xref:System.Windows.Controls.DatePicker>控制項。  
@@ -68,18 +68,18 @@ ms.locfileid: "54591469"
 ## <a name="datepicker-controltemplate-example"></a>DatePicker ControlTemplate 範例  
  下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>針對<xref:System.Windows.Controls.DatePicker>控制項。  
   
- [!code-xaml[ControlTemplateExamples#DatePicker](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datepicker.xaml#datepicker)]  
+ [!code-xaml[ControlTemplateExamples#DatePicker](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datepicker.xaml#datepicker)]  
   
  上述範例使用下列一或多項資源。  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)
-- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [控制項的樣式和範本](control-styles-and-templates.md)
+- [控制項自訂](control-customization.md)
+- [樣式設定和範本化](styling-and-templating.md)
+- [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)

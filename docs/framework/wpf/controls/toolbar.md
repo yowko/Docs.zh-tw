@@ -7,26 +7,27 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
-ms.openlocfilehash: a1216a4aa8c2872eef33eb29a74ec4c1913dc671
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361924"
 ---
 # <a name="toolbar"></a>ToolBar
-<xref:System.Windows.Controls.ToolBar>控制項是一組命令或通常與在其函式中的控制項的容器。  
+<xref:System.Windows.Controls.ToolBar>控制項是一組命令或控制項，其功能通常彼此相關的容器。  
   
- 下圖顯示水平及垂直<xref:System.Windows.Controls.ToolBar>控制項。  
+ 下列圖例顯示水平和垂直<xref:System.Windows.Controls.ToolBar>控制項。  
   
- ![水平工具列](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
+ ![水平工具列](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
 水平工具列  
   
- ![垂直工具列](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
+ ![垂直工具列](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
 垂直工具列  
   
 ## <a name="in-this-section"></a>本節內容  
- [ToolBar 概觀](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [ToolBar 上的樣式控制項](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+ [ToolBar 概觀](toolbar-overview.md)  
+  [ToolBar 上的樣式控制項](how-to-style-controls-on-a-toolbar.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.ToolBar>  

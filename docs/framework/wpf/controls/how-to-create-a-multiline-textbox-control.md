@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - TextBox control [WPF], multiple lines of text
 ms.assetid: 05914a93-d0ea-4a9a-b693-09df7d4e2ac2
-ms.openlocfilehash: ca1b499b2acdfd9fd2ff0f57f2b0c07d7da10789
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75bbee806b2b7039656d6c8e7c9a64359e77d16f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517821"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352343"
 ---
 # <a name="how-to-create-a-multiline-textbox-control"></a>HOW TO：建立多行 TextBox 控制項
 此範例示範如何使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]來定義<xref:System.Windows.Controls.TextBox>會自動擴展以容納多行文字的控制項。  
@@ -21,9 +21,9 @@ ms.locfileid: "54517821"
   
  <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A>屬性新增至的捲軸<xref:System.Windows.Controls.TextBox>，如此的內容<xref:System.Windows.Controls.TextBox>捲動如果<xref:System.Windows.Controls.TextBox>擴充框架或視窗的大小超過。  
   
- [!code-xaml[TextBox_MiscCode#_MultilineTextBoxXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
+ [!code-xaml[TextBox_MiscCode#_MultilineTextBoxXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.TextWrapping>
-- [TextBox 概觀](../../../../docs/framework/wpf/controls/textbox-overview.md)
-- [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+- [TextBox 概觀](textbox-overview.md)
+- [RichTextBox 概觀](richtextbox-overview.md)

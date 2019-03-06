@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Button controls [WPF], creating with automatic layout
 - automatic layout [WPF], creating buttons
 ms.assetid: 96c206d0-9e77-4784-9d2d-5045aed2021c
-ms.openlocfilehash: 501341f0e71e6e5a224c51e4ae01c68ce6b845cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2172aba80fe963be33036a7245f228e8d5bfedda
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543483"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370341"
 ---
 # <a name="how-to-use-automatic-layout-to-create-a-button"></a>HOW TO：使用自動配置建立按鈕
 此範例說明如何使用自動版面配置方法，以建立可當地語系化之應用程式中的按鈕。  
@@ -20,15 +20,15 @@ ms.locfileid: "54543483"
  下列兩個[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]範例會建立按鈕，一個用於英文字，一個使用西班牙文的文字，具現化的應用程式。 請注意，除了文字之外，其餘程式碼都相同；按鈕會配合文字進行調整。  
   
 ## <a name="example"></a>範例  
- [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
- [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
  下圖顯示程式碼範例的輸出。  
   
- ![按鈕相同，但以不同語言的文字](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")  
+ ![按鈕相同，但以不同語言的文字](./media/globalizationbutton.png "GlobalizationButton")  
 可自動調整大小的按鈕  
   
 ## <a name="see-also"></a>另請參閱
-- [使用自動配置概觀](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
-- [針對自動版面配置使用方格](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+- [使用自動配置概觀](use-automatic-layout-overview.md)
+- [針對自動版面配置使用方格](how-to-use-a-grid-for-automatic-layout.md)

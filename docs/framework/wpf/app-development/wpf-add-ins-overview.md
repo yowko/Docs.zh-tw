@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746558"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365837"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 增益集概觀
 <a name="Introduction"></a> .NET Framework 包含開發人員可用來建立支援增益集擴充性的應用程式增益集模型。 此增益集模型可讓您建立增益集，整合並擴充應用程式的功能。 在某些情況下，應用程式也需要顯示增益集所提供的使用者介面。本主題說明 WPF 擴大.NET Framework 增益集模型以啟用這些案例、 架構、 其優點，以及其限制背後的方式。  
@@ -56,7 +56,7 @@ ms.locfileid: "56746558"
   
 -   **通訊**:讓增益集和主應用程式之間的通訊方式跨越隔離界限呼叫方法，並將資料傳送。  
   
--   **存留期管理**:載入和卸載應用程式定義域和處理程序簡潔、 可預測的方式 (請參閱[應用程式定義域](../../../../docs/framework/app-domains/application-domains.md))。  
+-   **存留期管理**:載入和卸載應用程式定義域和處理程序簡潔、 可預測的方式 (請參閱[應用程式定義域](../../app-domains/application-domains.md))。  
   
 -   **版本控制**:確保，主應用程式和增益集仍可進行通訊時，會建立為新版本。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "56746558"
   
 6.  主應用程式會顯示傳回<xref:System.Windows.FrameworkElement>。  
   
- 如需示範如何實作傳回 UI 的增益集的範例，請參閱 <<c0> [ 建立增益集傳回 UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)。  
+ 如需示範如何實作傳回 UI 的增益集的範例，請參閱 <<c0> [ 建立增益集傳回 UI](how-to-create-an-add-in-that-returns-a-ui.md)。  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>增益集是使用者介面  
@@ -148,7 +148,7 @@ ms.locfileid: "56746558"
   
 6.  主應用程式會顯示傳回<xref:System.Windows.FrameworkElement>。  
   
- 如需示範如何實作本身為 UI 的增益集的範例，請參閱 <<c0> [ 增益集也就是建立 UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)。  
+ 如需示範如何實作本身為 UI 的增益集的範例，請參閱 <<c0> [ 增益集也就是建立 UI](how-to-create-an-add-in-that-is-a-ui.md)。  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>從增益集傳回多個 UI  
@@ -219,7 +219,7 @@ ms.locfileid: "56746558"
   
 -   在主機應用程式端，WPF repackages<xref:System.Windows.Interop.HwndSource>做為內部的 WPF 類別衍生自<xref:System.Windows.Interop.HwndHost>，並取用<xref:System.AddIn.Contract.INativeHandleContract>。 此類別的執行個體由<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>主應用程式。  
   
- <xref:System.Windows.Interop.HwndHost> 用以顯示視窗控制代碼，WPF 使用者介面中所識別的使用者介面。 如需詳細資訊，請參閱 [WPF 和 Win32 互通](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)。  
+ <xref:System.Windows.Interop.HwndHost> 用以顯示視窗控制代碼，WPF 使用者介面中所識別的使用者介面。 如需詳細資訊，請參閱 [WPF 和 Win32 互通](../advanced/wpf-and-win32-interoperation.md)。  
   
  在 [摘要] <xref:System.AddIn.Contract.INativeHandleContract>， <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>，並<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>存在以允許從傳遞的增益集主應用程式，它會封裝由 WPF UI 的視窗控制代碼<xref:System.Windows.Interop.HwndHost>並顯示主應用程式的 UI。  
   
@@ -252,11 +252,11 @@ ms.locfileid: "56746558"
   
 -   從主應用程式中顯示的增益集使用者介面不遵守主應用程式的裁剪行為。  
   
--   互通性案例中的「空間」概念也適用於增益集 (請參閱[技術領域概觀](../../../../docs/framework/wpf/advanced/technology-regions-overview.md))。  
+-   互通性案例中的「空間」概念也適用於增益集 (請參閱[技術領域概觀](../advanced/technology-regions-overview.md))。  
   
 -   主應用程式的 UI 服務，例如資源繼承、 資料繫結和命令，不會自動提供給增益集使用者介面。 若要向增益集提供這些服務，您需要更新管線。  
   
--   增益集 UI 無法旋轉、 縮放、 扭曲，或會受到轉換 (請參閱[轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md))。  
+-   增益集 UI 無法旋轉、 縮放、 扭曲，或會受到轉換 (請參閱[轉換概觀](../graphics-multimedia/transforms-overview.md))。  
   
 -   藉由繪製作業轉譯的增益集使用者介面內的內容<xref:System.Drawing>命名空間可以包含 alpha 混色。 不過，增益集 UI 和主應用程式 UI，其中包含它必須是 100%透明的。換句話說，`Opacity`屬性都必須設定為 1。  
   
@@ -280,12 +280,12 @@ ms.locfileid: "56746558"
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>效能最佳化  
- 根據預設，當使用多個應用程式定義域時，每個應用程式所需的各種.NET Framework 組件全部載入該應用程式定義域。 如此一來，建立新應用程式定義域以及從其中啟動應用程式所需的時間，可能會影響效能。 不過，.NET Framework 可讓您降低啟動時間，指示應用程式定義域間共用組件，如果已載入的應用程式。 您可以使用<xref:System.LoaderOptimizationAttribute>屬性，它必須套用至進入點方法 (`Main`)。 在此情況下，您必須只使用程式碼實作您的應用程式定義 (請參閱[應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md))。  
+ 根據預設，當使用多個應用程式定義域時，每個應用程式所需的各種.NET Framework 組件全部載入該應用程式定義域。 如此一來，建立新應用程式定義域以及從其中啟動應用程式所需的時間，可能會影響效能。 不過，.NET Framework 可讓您降低啟動時間，指示應用程式定義域間共用組件，如果已載入的應用程式。 您可以使用<xref:System.LoaderOptimizationAttribute>屬性，它必須套用至進入點方法 (`Main`)。 在此情況下，您必須只使用程式碼實作您的應用程式定義 (請參閱[應用程式管理概觀](application-management-overview.md))。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.LoaderOptimizationAttribute>
 - [增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [應用程式定義域](../../../../docs/framework/app-domains/application-domains.md)
+- [應用程式定義域](../../app-domains/application-domains.md)
 - [.NET framework 遠端處理概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [讓物件變成可遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [HOW-TO 主題](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+- [HOW-TO 主題](how-to-topics.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 04bfc2df15829b63e6f2541eb95a4dd14836744c
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 6229e7fff4171f04d35bbc5be0596526f513191a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747015"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370185"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>
@@ -37,10 +37,10 @@ ms.locfileid: "56747015"
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>建立新的 XAML 瀏覽器應用程式 (XBAP)  
  若要建立新的 XBAP 專案最簡單的方式是使用 Microsoft Visual Studio。 建立新專案時，從範本清單選取 [WPF 瀏覽器應用程式]。 如需詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。  
   
- 當您執行 XBAP 專案時，它會在瀏覽器視窗中開啟，而不是在獨立視窗中開啟。 當您偵錯 XBAP 從 Visual Studio 時，應用程式會使用網際網路區域權限執行，並因此如果會擲回安全性例外狀況會在超過這些權限。 如需詳細資訊，請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md)和 [WPF 部分信任安全性](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
+ 當您執行 XBAP 專案時，它會在瀏覽器視窗中開啟，而不是在獨立視窗中開啟。 當您偵錯 XBAP 從 Visual Studio 時，應用程式會使用網際網路區域權限執行，並因此如果會擲回安全性例外狀況會在超過這些權限。 如需詳細資訊，請參閱[安全性](../security-wpf.md)和 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
   
 > [!NOTE]
->  如果您使用 Visual Studio 或您想来深入了解專案檔不進行開發，請參閱[建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)。  
+>  如果您使用 Visual Studio 或您想来深入了解專案檔不進行開發，請參閱[建置 WPF 應用程式](building-a-wpf-application-wpf.md)。  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>部署 XBAP  
@@ -52,7 +52,7 @@ ms.locfileid: "56747015"
 |應用程式資訊清單 (.manifest)|它包含與應用程式相關聯的中繼資料，副檔名為 .manifest。|  
 |部署資訊清單 (.xbap)|此檔案包含 ClickOnce 部署應用程式會使用與副檔名為.xbap 的資訊。|  
   
- 您將 XBAP 部署至 Web 伺服器，例如，[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或更新版本。 您不必安裝.NET Framework 的 Web 伺服器上，但您必須註冊[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]類型和副檔名。 如需詳細資訊，請參閱[設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。  
+ 您將 XBAP 部署至 Web 伺服器，例如，[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或更新版本。 您不必安裝.NET Framework 的 Web 伺服器上，但您必須註冊[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]類型和副檔名。 如需詳細資訊，請參閱[設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。  
   
  若要準備您的 XBAP 以進行部署，將 .exe 和相關聯的資訊清單複製到 Web 伺服器。 建立 HTML 網頁，其中包含可開啟部署資訊清單 (它是副檔名為 .xbap 的檔案) 的超連結。 當使用者按一下.xbap 檔案的連結時，ClickOnce 會自動處理下載和啟動應用程式的機制。 下列範例程式碼顯示包含指向 XBAP 之超連結的 HTML 網頁。  
   
@@ -88,14 +88,14 @@ ms.locfileid: "56747015"
  Mage.exe -cc
  ```
   
- 此命令可確保啟動最新版本的 XBAP。 當您偵錯您的應用程式，在 Visual Studio 中時，應該會啟動最新版本的 XBAP。 一般而言，您應該以每個組建更新您的部署版本號碼。 如需 Mage 的詳細資訊，請參閱 [Mage.exe (資訊清單產生和編輯工具)](../../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
+ 此命令可確保啟動最新版本的 XBAP。 當您偵錯您的應用程式，在 Visual Studio 中時，應該會啟動最新版本的 XBAP。 一般而言，您應該以每個組建更新您的部署版本號碼。 如需 Mage 的詳細資訊，請參閱 [Mage.exe (資訊清單產生和編輯工具)](../../tools/mage-exe-manifest-generation-and-editing-tool.md)。  
   
 <a name="communicating_with_the_host_web_page"></a>   
 ## <a name="communicating-with-the-host-web-page"></a>與主機網頁通訊  
  當應用程式裝載在 HTML 框架中時，您可以與包含 XBAP 的網頁進行通訊。 您可以擷取<xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A>屬性<xref:System.Windows.Interop.BrowserInteropHelper>。 這個屬性會傳回代表 HTML 視窗的指令碼物件。 您接著可以使用一般 dot 語法，在[視窗物件](https://go.microsoft.com/fwlink/?LinkId=160274)上存取屬性、方法和事件。 您也可以存取指令碼方法和全域變數。 下列範例示範如何擷取指令碼物件，並且關閉瀏覽器。  
   
- [!code-csharp[XbapBrowserInterop#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
- [!code-vb[XbapBrowserInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
+ [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
+ [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
   
 ### <a name="debugging-xbaps-that-use-hostscript"></a>針對使用 HostScript 的 XBAP 進行偵錯  
  如果您的 XBAP 使用<xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A>通訊 [HTML] 視窗中，有兩個設定，您必須指定執行和偵錯 Visual Studio 中的應用程式的物件。 應用程式必須能夠存取它的來源網站，而且您必須使用包含 XBAP 的 HTML 網頁來啟動應用程式。 下列步驟說明如何檢查這兩項設定︰  
@@ -127,11 +127,11 @@ ms.locfileid: "56747015"
   
 <a name="xbap_security_considerations"></a>   
 ## <a name="xbap-security-considerations"></a>XBAP 安全性考量  
- XBAP 通常會在部分信任安全性沙箱中執行，它限制為網際網路區域權限集合。 因此，您的實作必須支援的支援在網際網路區域中的 WPF 項目子集，或您必須提高您的應用程式的權限。 如需詳細資訊，請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md)。  
+ XBAP 通常會在部分信任安全性沙箱中執行，它限制為網際網路區域權限集合。 因此，您的實作必須支援的支援在網際網路區域中的 WPF 項目子集，或您必須提高您的應用程式的權限。 如需詳細資訊，請參閱[安全性](../security-wpf.md)。  
   
  當您使用<xref:System.Windows.Controls.WebBrowser>應用程式中，WPF 控制項在內部具現化原生 WebBrowser ActiveX 控制項。 當您的應用程式是在 Internet Explorer 中執行的部分信任 XBAP 時，ActiveX 控制項會在 Internet Explorer 流程的專用執行緒中執行。 因此，會套用下列限制：  
   
--   <xref:System.Windows.Controls.WebBrowser>控制項應該提供類似主機瀏覽器，包括安全性限制的行為。 其中一些安全性限制可以透過 Internet Explorer 安全性設定來控制。 如需詳細資訊，請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md)。  
+-   <xref:System.Windows.Controls.WebBrowser>控制項應該提供類似主機瀏覽器，包括安全性限制的行為。 其中一些安全性限制可以透過 Internet Explorer 安全性設定來控制。 如需詳細資訊，請參閱[安全性](../security-wpf.md)。  
   
 -   當 XBAP 在 HTML 網頁跨網域載入時，則會擲回例外狀況。  
   
@@ -187,5 +187,5 @@ ms.locfileid: "56747015"
  此外，ClickOnce 下載順序的改善的並行會改善最多 10%的開始時間。 ClickOnce 下載和驗證之後資訊清單、 應用程式的下載會啟動，而進度列開始更新。  
   
 ## <a name="see-also"></a>另請參閱
-- [設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
-- [部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [部署 WPF 應用程式](deploying-a-wpf-application-wpf.md)

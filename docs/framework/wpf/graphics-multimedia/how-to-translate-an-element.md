@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: 75b8f72647b1597396fde5d21f8378d3ce586a25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ff606e495eb37e0e74150bb5ad20f11744b74ec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672869"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354904"
 ---
 # <a name="how-to-translate-an-element"></a>HOW TO：轉譯項目
 此範例示範如何平移 （移動） 項目使用<xref:System.Windows.Media.TranslateTransform>。  
@@ -21,9 +21,9 @@ ms.locfileid: "54672869"
  下列範例會使用<xref:System.Windows.Media.TranslateTransform>向下移元素 50 像素為右到 50 個像素。  
   
 ## <a name="example"></a>範例  
- [!code-xaml[transformsSample#53](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
+ [!code-xaml[transformsSample#53](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
  如需完整範例，請參閱 [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
 ## <a name="see-also"></a>另請參閱
-- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [轉換概觀](transforms-overview.md)

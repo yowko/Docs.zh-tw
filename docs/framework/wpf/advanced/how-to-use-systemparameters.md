@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-ms.openlocfilehash: 00afc5c12ea9b83759361e9a3f175e91b4cbb10d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a05e2d08c989da70dd7763ad2df238aac03fded4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541660"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375151"
 ---
 # <a name="how-to-use-systemparameters"></a>HOW TO：使用 SystemParameters
 此範例示範如何存取和使用的屬性<xref:System.Windows.SystemParameters>以便設定或自訂按鈕的樣式。  
@@ -24,16 +24,16 @@ ms.locfileid: "54541660"
   
  下列範例示範如何存取和使用的靜態值<xref:System.Windows.SystemParameters>以設定或自訂按鈕的樣式。 此標記範例按鈕大小套用<xref:System.Windows.SystemParameters>至按鈕的值。  
   
- [!code-xaml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
+ [!code-xaml[SystemRes_snip#ParameterStaticResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
   
  若要使用的值<xref:System.Windows.SystemParameters>程式碼中，您不需要使用靜態參考或動態資源參考。 相反地，使用的值<xref:System.Windows.SystemParameters>類別。 雖然非索引鍵屬性已明顯定義為靜態屬性，執行階段行為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]託管系統會重新評估即時中的屬性，並適當地將使用者導向的系統值變更的帳戶。 下列範例示範如何使用設定按鈕的高度與寬度<xref:System.Windows.SystemParameters>值。  
   
- [!code-csharp[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
- [!code-vb[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
+ [!code-csharp[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
+ [!code-vb[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.SystemParameters>
-- [使用系統筆刷繪製區域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [使用 SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)
-- [使用系統參數索引鍵](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+- [使用系統筆刷繪製區域](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [使用 SystemFonts](how-to-use-systemfonts.md)
+- [使用系統參數索引鍵](how-to-use-system-parameters-keys.md)
+- [HOW-TO 主題](resources-how-to-topics.md)

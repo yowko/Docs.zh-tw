@@ -8,23 +8,23 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550120"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354631"
 ---
 # <a name="contextmenu"></a>ContextMenu
-<xref:System.Windows.Controls.ContextMenu>可讓控制項以顯示<xref:System.Windows.Controls.Menu>專屬於控制項的內容。 一般而言，<xref:System.Windows.Controls.ContextMenu>中公開[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]透過滑鼠按鈕或鍵盤的功能表按鈕。  
+<xref:System.Windows.Controls.ContextMenu>可讓您控制来顯示<xref:System.Windows.Controls.Menu>專屬於控制項的內容。 通常<xref:System.Windows.Controls.ContextMenu>會在[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]透過滑鼠或鍵盤的功能表按鈕。  
   
- 下圖說明<xref:System.Windows.Controls.ContextMenu>處於兩種不同的狀態： 預設狀態及開啟狀態。 在預設狀態下，會摺疊控制項。 功能表的父透過按下滑鼠右按鈕時，控制項就會展開，並會顯示功能表項目。  
+ 下圖說明<xref:System.Windows.Controls.ContextMenu>處於兩種不同的狀態： 預設狀態，並 [開啟] 狀態。 在預設狀態下，會摺疊控制項。 透過功能表的父代，按下滑鼠右按鈕時，控制項就會展開，並會顯示功能表項目。  
   
- ![ContextMenu 狀態](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
+ ![ContextMenu 狀態](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
 ContextMenu 不同狀態  
   
 ## <a name="in-this-section"></a>本節內容  
- [ContextMenu 概觀](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [ContextMenu 概觀](contextmenu-overview.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.ContextMenu>  

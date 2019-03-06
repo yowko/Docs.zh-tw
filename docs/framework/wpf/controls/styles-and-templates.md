@@ -7,18 +7,19 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: e310d9800f4ee2274221e8461838ed8ee3d66ac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372070"
 ---
 # <a name="styles-and-templates"></a>樣式和範本
-Windows Presentation Foundation (WPF) 設定樣式和範本是指一套功能 （樣式、 範本、 觸發程序和分鏡腳本） 可讓應用程式、 文件或使用者介面 (UI) 設計工具來建立美觀的應用程式，並標準化其產品的特定外觀。  
+Windows Presentation Foundation (WPF) 設定樣式和範本指一套功能 （樣式、 範本、 觸發程序和分鏡腳本），讓應用程式、 文件或使用者介面 (UI) 設計工具建立引人注目的應用程式，標準化其產品的特定外觀。  
   
 ## <a name="in-this-section"></a>本節內容  
- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [操作說明：尋找 ControlTemplate 產生的元素](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+ [樣式設定和範本化](styling-and-templating.md)  
+  [如何：尋找 ControlTemplate 產生的項目](how-to-find-controltemplate-generated-elements.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Style>  
@@ -26,6 +27,6 @@ Windows Presentation Foundation (WPF) 設定樣式和範本是指一套功能 �
   <xref:System.Windows.DataTemplate>  
   
 ## <a name="related-sections"></a>相關章節  
- [進階](../../../../docs/framework/wpf/advanced/index.md)  
-  [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)  
-  [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [進階](../advanced/index.md)  
+  [控制項自訂](control-customization.md)  
+  [圖形和多媒體](../graphics-multimedia/index.md)

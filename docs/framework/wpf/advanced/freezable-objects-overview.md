@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 281c1c9556773446808f7bd4b4ef558805503cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9331c892b0c0abccf2ea8700d46fa4180a7225ed
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499310"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375840"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 物件概觀
 本主題說明如何有效地使用，並建立<xref:System.Windows.Freezable>提供特殊功能，可協助您改善應用程式效能的物件。 Freezable 物件的範例包括筆刷、 畫筆、 轉換、 幾何和動畫。  
@@ -31,8 +31,8 @@ ms.locfileid: "54499310"
   
  例如，假設您建立<xref:System.Windows.Media.SolidColorBrush>筆刷，並使用它來繪製按鈕的背景。  
   
- [!code-csharp[freezablesample_procedural#FrozenExamplePart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart1)]
- [!code-vb[freezablesample_procedural#FrozenExamplePart1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart1)]  
+ [!code-csharp[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart1)]
+ [!code-vb[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart1)]  
   
  轉譯按鈕時，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]圖形子系統會使用您提供給繪製的像素為單位來建立 按鈕的外觀群組的資訊。 雖然您可以使用單色筆刷來描述要繪製按鈕的方式，但您的單色筆刷實際上並不進行繪製。 圖形系統會產生按鈕的筆刷，快速、 低層級物件，而且是實際在螢幕顯示這些物件。  
   
@@ -43,8 +43,8 @@ ms.locfileid: "54499310"
 > [!NOTE]
 >  可以凍結 Freezable 的不是每個物件。 若要避免擲回<xref:System.InvalidOperationException>，檢查 Freezable 物件的值<xref:System.Windows.Freezable.CanFreeze%2A>屬性來判斷是否可以凍結再嘗試將它凍結。  
   
- [!code-csharp[freezablesample_procedural#FrozenExamplePart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart2)]
- [!code-vb[freezablesample_procedural#FrozenExamplePart2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart2)]  
+ [!code-csharp[freezablesample_procedural#FrozenExamplePart2](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart2)]
+ [!code-vb[freezablesample_procedural#FrozenExamplePart2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart2)]  
   
  當您不再需要修改以 freezable 時，凍結提供效能優勢。 如果您要凍結的筆刷，在此範例中，圖形系統將不再需要監視有變更。 圖形系統也可以讓其他最佳化，因為它知道筆刷並不會變更。  
   
@@ -55,8 +55,8 @@ ms.locfileid: "54499310"
 ## <a name="using-freezables"></a>使用 Freezable  
  使用解除凍結 freezable 就像是使用任何其他類型的物件。 在下列範例中，色彩<xref:System.Windows.Media.SolidColorBrush>已從黃色變成紅色之後它用來繪製按鈕的背景。 圖形系統會在幕後自動變更按鈕從黃色到紅色下次重新整理畫面。  
   
- [!code-csharp[freezablesample_procedural#UnFrozenExampleShort](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#unfrozenexampleshort)]
- [!code-vb[freezablesample_procedural#UnFrozenExampleShort](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#unfrozenexampleshort)]  
+ [!code-csharp[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#unfrozenexampleshort)]
+ [!code-vb[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#unfrozenexampleshort)]  
   
 ### <a name="freezing-a-freezable"></a>凍結的 Freezable  
  若要讓<xref:System.Windows.Freezable>不可呼叫其<xref:System.Windows.Freezable.Freeze%2A>方法。 當您凍結物件，包含 freezable 物件時，這些物件也會凍結。 例如，如果您凍結<xref:System.Windows.Media.PathGeometry>，會太凍結數據和它所包含的區段。  
@@ -65,7 +65,7 @@ ms.locfileid: "54499310"
   
 -   它具有動畫，或資料繫結屬性。  
   
--   它的動態資源所設定的屬性。 (請參閱[XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)的動態資源的詳細資訊。)  
+-   它的動態資源所設定的屬性。 (請參閱[XAML 資源](xaml-resources.md)的動態資源的詳細資訊。)  
   
 -   它包含<xref:System.Windows.Freezable>無法凍結的子物件。  
   
@@ -73,22 +73,22 @@ ms.locfileid: "54499310"
   
  一旦您呼叫以 freezable 的<xref:System.Windows.Freezable.Freeze%2A>方法中，您可以不會再進行修改。 嘗試修改凍結物件原因<xref:System.InvalidOperationException>擲回。 下列程式碼擲回例外狀況，因為我們嘗試修改後已凍結的筆刷。  
   
- [!code-csharp[freezablesample_procedural#ExceptionExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#exceptionexample)]
- [!code-vb[freezablesample_procedural#ExceptionExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#exceptionexample)]  
+ [!code-csharp[freezablesample_procedural#ExceptionExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#exceptionexample)]
+ [!code-vb[freezablesample_procedural#ExceptionExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#exceptionexample)]  
   
  若要避免擲回這個例外狀況，您可以使用<xref:System.Windows.Freezable.IsFrozen%2A>方法，以判斷是否<xref:System.Windows.Freezable>已凍結。  
   
- [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
- [!code-vb[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
+ [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
+ [!code-vb[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
   
  在上述程式碼範例中，可修改複本已凍結的物件使用的<xref:System.Windows.Freezable.Clone%2A>方法。 下節會討論更多詳細資料複製。  
   
- **附註**因為已凍結 freezable 無法變成動畫，動畫系統會自動建立的可修改複製品凍結<xref:System.Windows.Freezable>當您嘗試以動畫顯示物件<xref:System.Windows.Media.Animation.Storyboard>。 若要消除造成的效能負荷藉由複製，讓未凍結，如果您想要以動畫顯示它的物件。 如需使用分鏡腳本以動畫顯示的詳細資訊，請參閱[分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
+ **附註**因為已凍結 freezable 無法變成動畫，動畫系統會自動建立的可修改複製品凍結<xref:System.Windows.Freezable>當您嘗試以動畫顯示物件<xref:System.Windows.Media.Animation.Storyboard>。 若要消除造成的效能負荷藉由複製，讓未凍結，如果您想要以動畫顯示它的物件。 如需使用分鏡腳本以動畫顯示的詳細資訊，請參閱[分鏡腳本概觀](../graphics-multimedia/storyboards-overview.md)。  
   
 ### <a name="freezing-from-markup"></a>從標記凍結  
  若要凍結<xref:System.Windows.Freezable>物件的宣告是在標記中，而您使用`PresentationOptions:Freeze`屬性。 在下列範例中，<xref:System.Windows.Media.SolidColorBrush>是宣告為頁面資源和已凍結。 它接著會用來設定按鈕的背景。  
   
- [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
+ [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
   
  若要使用`Freeze`屬性，您必須將對應的呈現方式選項命名空間： `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`。 `PresentationOptions` 是建議的前置詞對應此命名空間：  
   
@@ -96,22 +96,22 @@ ms.locfileid: "54499310"
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   
 ```  
   
- 因為並非所有的 XAML 讀取器辨識這個屬性時，建議您改用[mc: Ignorable 屬性](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)標示`Presentation:Freeze`為 ignorable 屬性：  
+ 因為並非所有的 XAML 讀取器辨識這個屬性時，建議您改用[mc: Ignorable 屬性](mc-ignorable-attribute.md)標示`Presentation:Freeze`為 ignorable 屬性：  
   
 ```  
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
 mc:Ignorable="PresentationOptions"  
 ```  
   
- 如需詳細資訊，請參閱 < [mc: Ignorable 屬性](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)頁面。  
+ 如需詳細資訊，請參閱 < [mc: Ignorable 屬性](mc-ignorable-attribute.md)頁面。  
   
 ### <a name="unfreezing-a-freezable"></a>「 取消凍結 」 Freezable  
  一次凍結<xref:System.Windows.Freezable>永遠不會修改或解除凍結; 不過，您可以建立使用的凍結的複製品<xref:System.Windows.Freezable.Clone%2A>或<xref:System.Windows.Freezable.CloneCurrentValue%2A>方法。  
   
  在下列範例中，設定按鈕的背景筆刷和筆刷然後已凍結。 凍結的複本組成筆刷使用<xref:System.Windows.Freezable.Clone%2A>方法。 會修改複製品，並將它用來從黃色的按鈕的背景變更為紅色。  
   
- [!code-csharp[freezablesample_procedural#CloneExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
- [!code-vb[freezablesample_procedural#CloneExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
+ [!code-csharp[freezablesample_procedural#CloneExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
+ [!code-vb[freezablesample_procedural#CloneExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
   
 > [!NOTE]
 >  不論使用何種複製方法，動畫會永遠不會複製到新<xref:System.Windows.Freezable>。  
@@ -130,7 +130,7 @@ mc:Ignorable="PresentationOptions"
   
 -   輕鬆複製： Freezable 的類別已實作數種方法，產生深層複製品。  
   
- A<xref:System.Windows.Freezable>是一種<xref:System.Windows.DependencyObject>，並因此會使用相依性屬性系統。 您的類別屬性不必是相依性屬性，但使用相依性屬性，則會減少您必須撰寫，因為程式碼數量<xref:System.Windows.Freezable>類別的設計在心的相依性屬性。 如需有關相依性屬性系統的詳細資訊，請參閱[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+ A<xref:System.Windows.Freezable>是一種<xref:System.Windows.DependencyObject>，並因此會使用相依性屬性系統。 您的類別屬性不必是相依性屬性，但使用相依性屬性，則會減少您必須撰寫，因為程式碼數量<xref:System.Windows.Freezable>類別的設計在心的相依性屬性。 如需有關相依性屬性系統的詳細資訊，請參閱[相依性屬性概觀](dependency-properties-overview.md)。  
   
  每隔<xref:System.Windows.Freezable>子類別必須覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法。 如果您的類別會使用相依性屬性的所有資料，您就完成。  
   
@@ -164,5 +164,5 @@ mc:Ignorable="PresentationOptions"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Freezable>
 - [自訂動畫範例](https://go.microsoft.com/fwlink/?LinkID=159981)
-- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [相依性屬性概觀](dependency-properties-overview.md)
+- [自訂相依性屬性](custom-dependency-properties.md)

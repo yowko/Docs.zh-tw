@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738822"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369847"
 ---
 # <a name="layout"></a>配置
 本主題描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 配置系統。 了解如何和何時進行版面配置計算對於在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中建立使用者介面十分重要。  
@@ -41,22 +41,22 @@ ms.locfileid: "54738822"
   
  下圖顯示簡單的版面配置。  
   
- ![典型的格線，沒有週框方塊疊加於其上。](../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boundingbox1")  
+ ![典型的格線，沒有週框方塊疊加於其上。](./media/boundingbox1.png "boundingbox1")  
   
  使用下列 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 可達成這個版面配置。  
   
- [!code-xaml[LayoutInformation#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
+ [!code-xaml[LayoutInformation#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
  單一<xref:System.Windows.Controls.TextBlock>項目裝載在<xref:System.Windows.Controls.Grid>。 雖然文字填滿只有第一欄，已配置空間左上角<xref:System.Windows.Controls.TextBlock>實際上會較大。 週框方塊的任何<xref:System.Windows.FrameworkElement>可以使用擷取<xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A>方法。 下圖顯示週框方塊<xref:System.Windows.Controls.TextBlock>項目。  
   
- ![現在可以看得到 TextBlock 的週框方塊。](../../../../docs/framework/wpf/advanced/media/boundingbox2.png "boundingbox2")  
+ ![現在可以看得到 TextBlock 的週框方塊。](./media/boundingbox2.png "boundingbox2")  
   
  如黃色矩形中，配置的空間，如所示<xref:System.Windows.Controls.TextBlock>項目是實際上會遠大於其顯示。 其他項目新增至<xref:System.Windows.Controls.Grid>，此配置可以壓縮或展開時，會新增的項目大小和類型。  
   
  版面配置位置<xref:System.Windows.Controls.TextBlock>轉譯成<xref:System.Windows.Shapes.Path>使用<xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A>方法。 這種方式可用於顯示項目的週框方塊。  
   
- [!code-csharp[LayoutInformation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
- [!code-vb[LayoutInformation#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[LayoutInformation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[LayoutInformation#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="LayoutSystem_Overview"></a>   
 ## <a name="the-layout-system"></a>配置系統  
@@ -122,7 +122,7 @@ ms.locfileid: "54738822"
   
 -   請注意哪些屬性值變更將會由配置系統強制遞迴更新。  
   
-     使用公用旗標，可標記其值可以初始化配置系統的相依性屬性。 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 和<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>提供有用的線索有關哪些屬性值變更將會強制遞迴更新由配置系統。 一般情況下，可能會影響項目的週框方塊的大小的任何屬性應有<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>旗標設為 true。 如需詳細資訊，請參閱[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+     使用公用旗標，可標記其值可以初始化配置系統的相依性屬性。 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 和<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>提供有用的線索有關哪些屬性值變更將會強制遞迴更新由配置系統。 一般情況下，可能會影響項目的週框方塊的大小的任何屬性應有<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>旗標設為 true。 如需詳細資訊，請參閱[相依性屬性概觀](dependency-properties-overview.md)。  
   
 -   可能的話，請使用<xref:System.Windows.UIElement.RenderTransform%2A>而不是<xref:System.Windows.FrameworkElement.LayoutTransform%2A>。  
   
@@ -146,11 +146,11 @@ ms.locfileid: "54738822"
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>後續步驟  
- 了解如何測量和排列項目是了解版面配置的第一個步驟。 如需有關可用<xref:System.Windows.Controls.Panel>項目，請參閱[面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)。 若要進一步了解會影響版面配置的各種定位屬性，請參閱[對齊、邊界和填補概觀](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)。 如需自訂的範例<xref:System.Windows.Controls.Panel>項目，請參閱 <<c2> [ 自訂放射狀面板範例](https://go.microsoft.com/fwlink/?LinkID=159982)。 當您準備好要組合在一起的輕量應用程式中時，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
+ 了解如何測量和排列項目是了解版面配置的第一個步驟。 如需有關可用<xref:System.Windows.Controls.Panel>項目，請參閱[面板概觀](../controls/panels-overview.md)。 若要進一步了解會影響版面配置的各種定位屬性，請參閱[對齊、邊界和填補概觀](alignment-margins-and-padding-overview.md)。 如需自訂的範例<xref:System.Windows.Controls.Panel>項目，請參閱 <<c2> [ 自訂放射狀面板範例](https://go.microsoft.com/fwlink/?LinkID=159982)。 當您準備好要組合在一起的輕量應用程式中時，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [對齊、邊界和填補概觀](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
-- [版面配置與設計](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [面板概觀](../controls/panels-overview.md)
+- [對齊、邊界和填補概觀](alignment-margins-and-padding-overview.md)
+- [版面配置與設計](optimizing-performance-layout-and-design.md)

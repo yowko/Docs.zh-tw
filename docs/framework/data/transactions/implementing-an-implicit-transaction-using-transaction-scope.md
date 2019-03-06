@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645843"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375242"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用交易範圍實作隱含交易
-<xref:System.Transactions.TransactionScope> 類別提供一個簡單的方式，讓您不用與交易互動，即可將一段程式碼標記為參與交易。 交易範圍可以自動選取並管理環境交易。 由於 <xref:System.Transactions.TransactionScope> 類別非常容易使用且很有效率，在您開發交易應用程式時，建議您善加利用。  
+
+  <xref:System.Transactions.TransactionScope> 類別提供一個簡單的方式，讓您不用與交易互動，即可將一段程式碼標記為參與交易。 交易範圍可以自動選取並管理環境交易。 由於 <xref:System.Transactions.TransactionScope> 類別非常容易使用且很有效率，在您開發交易應用程式時，建議您善加利用。  
   
  此外，您不需要特別針對交易登記資源。 任何的 <xref:System.Transactions> 資源管理員 (例如 SQL Server 2005) 都可以偵測到範圍所建立的環境交易並自動加以登記。  
   
@@ -25,7 +26,7 @@ ms.locfileid: "54645843"
   
  一旦您建立新啟動的交易範圍<xref:System.Transactions.TransactionScope>物件。  程式碼範例所示，建議您建立使用範圍**使用**陳述式。 **使用**陳述式，在C#，並在 Visual Basic 和運作方式像**try...最後**區塊以確保該範圍內妥善處理。  
   
- 當具現化 <xref:System.Transactions.TransactionScope> 時，交易管理員會決定要參與哪個交易。 一旦決定後，範圍永遠會參與該異動。 決定根據兩個因素： 是否存在環境交易，而**TransactionScopeOption**建構函式的參數。 環境交易就是要在其中執行程式碼的交易。 您可以呼叫 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> 類別的靜態 <xref:System.Transactions.Transaction> 屬性，取得環境異動的參考。 如需有關如何使用此參數的詳細資訊，請參閱 <<c0> [ 管理交易流程使用 TransactionScopeOption](#ManageTxFlow)本主題一節。  
+ 當具現化 <xref:System.Transactions.TransactionScope> 時，交易管理員會決定要參與哪個交易。 一旦決定後，範圍永遠會參與該異動。 決定根據兩個因素： 是否存在環境交易，而**TransactionScopeOption**建構函式的參數。 環境交易就是要在其中執行程式碼的交易。 您可以呼叫 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> 類別的靜態 <xref:System.Transactions.Transaction> 屬性，取得環境交易的參考。 如需有關如何使用此參數的詳細資訊，請參閱 <<c0> [ 管理交易流程使用 TransactionScopeOption](#ManageTxFlow)本主題一節。  
   
 ## <a name="completing-a-transaction-scope"></a>完成交易範圍  
  當您的應用程式完成所有要在交易中執行的工作後，您應該只呼叫 <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> 方法一次，以通知交易管理員可以接受認可交易。 它是很好的作法，以呼叫放<xref:System.Transactions.TransactionScope.Complete%2A>中的最後一個陳述式**使用**區塊。  
@@ -34,14 +35,15 @@ ms.locfileid: "54645843"
   
  如果<xref:System.Transactions.TransactionScope>物件一開始，建立交易認可此交易由交易管理員的實際工作中的程式碼的最後一行之後，就會發生**使用**區塊。 如果該物件沒有建立交易，則每當 <xref:System.Transactions.CommittableTransaction.Commit%2A> 物件的擁有者呼叫 <xref:System.Transactions.CommittableTransaction> 時，便會發生認可。 此時，交易管理員呼叫資源管理員，並說明認可或回復，根據是否<xref:System.Transactions.TransactionScope.Complete%2A>上呼叫方法<xref:System.Transactions.TransactionScope>物件。  
   
- **使用**陳述式可確保<xref:System.Transactions.TransactionScope.Dispose%2A>方法<xref:System.Transactions.TransactionScope>即使發生例外狀況，會呼叫物件。 <xref:System.Transactions.TransactionScope.Dispose%2A> 方法會標記交易範圍的結尾。 在呼叫這個方法後發生的例外狀況不太可能會影響交易。 這個方法也會將環境交易還原至其先前狀態。  
+ **使用**陳述式可確保<xref:System.Transactions.TransactionScope.Dispose%2A>方法<xref:System.Transactions.TransactionScope>即使發生例外狀況，會呼叫物件。 
+  <xref:System.Transactions.TransactionScope.Dispose%2A> 方法會標記交易範圍的結尾。 在呼叫這個方法後發生的例外狀況不太可能會影響交易。 這個方法也會將環境交易還原至其先前狀態。  
   
  如果範圍建立了交易，而且交易中止，則會擲回 <xref:System.Transactions.TransactionAbortedException>。 如果交易管理員無法做出認可決定，則會擲回 <xref:System.Transactions.TransactionInDoubtException>。 如果認可交易，則不會擲回例外狀況。  
   
 ## <a name="rolling-back-a-transaction"></a>復原交易  
  如果您想復原交易，就不應該呼叫交易範圍內的 <xref:System.Transactions.TransactionScope.Complete%2A> 方法。 例如，您可以擲回範圍內的例外狀況。 這樣可復原在範圍內參與的交易。  
   
-##  <a name="ManageTxFlow"></a> 使用 TransactionScopeOption 管理交易流程  
+## <a name="ManageTxFlow"></a> 使用 TransactionScopeOption 管理交易流程  
  您可以從使用本身範圍的方法中，呼叫使用 <xref:System.Transactions.TransactionScope> 的方法來巢狀化交易範圍，如下列範例中的 `RootMethod` 方法所示：  
   
 ```csharp  

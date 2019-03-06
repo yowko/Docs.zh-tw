@@ -2,12 +2,6 @@
 title: 使用 Async 和 Await 進行非同步程式設計 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 731657e0834eb8fc2b724cda40ee721c98111c14
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739029"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>使用 Async 和 Await 進行非同步程式設計 (Visual Basic)
 您可以使用非同步程式設計，避免發生效能瓶頸並增強應用程式的整體回應性。 不過，撰寫非同步應用程式的傳統技術可能很複雜，因而難以撰寫、偵錯和維護。  
@@ -16,7 +10,7 @@ ms.locfileid: "55739029"
   
  本主題提供使用非同步程式設計的時機和使用方式的概觀，並加入包含詳細資料及範例的支援主題連結。  
   
-##  <a name="BKMK_WhentoUseAsynchrony"></a> 非同步可改善回應性  
+## <a name="BKMK_WhentoUseAsynchrony"></a> 非同步可改善回應性  
  非同步對於可能在像是應用程式存取 Web 時會進行封鎖的活動而言相當重要。 存取 Web 資源的速度有時會變慢或延遲。 如果這類活動在同步處理序中遭到封鎖，整個應用程式就必須等候。 在非同步處理序中，應用程式可以繼續處理其他與 Web 資源不相關的工作，直到可能的封鎖工作完成。  
   
  下表顯示非同步程式設計一般會改善回應速度的部分。 從 .NET Framework 4.5 和 Windows 執行階段列出的 API 包含支援非同步程式設計的方法。  
@@ -35,7 +29,7 @@ ms.locfileid: "55739029"
   
  非同步方法會在設計非同步作業時，於選項清單中加入自動傳輸的對等項目讓您選擇。 也就是說，除了擁有傳統非同步程式設計的所有優點之外，開發人員所需投入的時間也大為減少。  
   
-##  <a name="BKMK_HowtoWriteanAsyncMethod"></a> 非同步方法比較容易撰寫  
+## <a name="BKMK_HowtoWriteanAsyncMethod"></a> 非同步方法比較容易撰寫  
  Visual Basic 中的 [Async](../../../../visual-basic/language-reference/modifiers/async.md) 和 [Await](../../../../visual-basic/language-reference/modifiers/async.md) 關鍵字都是非同步程式設計的核心。 您可以使用這兩個關鍵字，使用 .NET Framework 或 Windows 執行階段中的資源來建立非同步方法，幾乎就像建立同步方法一樣容易。 使用 `Async` 和 `Await` 定義的非同步方法就稱為非同步方法。  
   
  下列範例將示範非同步方法。 程式碼中的一切對您而言應該幾乎完全熟悉。 註解會標註您加入以建立非同步的功能。  
@@ -101,7 +95,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  如需舊版 .NET Framework 中非同步的詳細資訊，請參閱 [TPL 和傳統 .NET Framework 非同步程式設計](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md)。  
   
-##  <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> 非同步方法中執行了哪些工作  
+## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> 非同步方法中執行了哪些工作  
  在非同步程式設計中要了解的最重要事情，就是控制流程如何在方法之間移動。 下圖將引導您了解整個程序。  
   
  ![追蹤非同步程式](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
@@ -137,19 +131,19 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  如需控制流程的詳細資訊，請參閱[非同步程式中的控制流程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)。  
   
-##  <a name="BKMK_APIAsyncMethods"></a> API 非同步方法  
+## <a name="BKMK_APIAsyncMethods"></a> API 非同步方法  
  您可能會想知道哪裡可以找到支援非同步程式設計的方法，例如 `GetStringAsync`。 .NET Framework 4.5 或更新版本包含許多使用 `Async` 和 `Await` 的成員。 您也可以藉由附加至成員名稱的 "Async" 後置字元和傳回類型 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 辨認這些成員。 例如，相對於同步方法 <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A> 和 <xref:System.IO.Stream.Write%2A>，`System.IO.Stream` 類別也包含一些方法，例如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>。  
   
  Windows 執行階段也包含許多您可以在 Windows 應用程式中與 `Async` 和 `Await` 搭配使用的方法。 如需詳細資訊和範例方法，請參閱 <<c0> [ 呼叫中的非同步 ApiC#或 Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)，[非同步程式設計 （Windows 執行階段應用程式）](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10))，和[WhenAny:</c0>.NET Framework 和 Windows 執行階段之間進行橋接](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))。  
   
-##  <a name="BKMK_Threads"></a> 執行緒  
+## <a name="BKMK_Threads"></a> 執行緒  
  非同步方法主要做為非封鎖作業使用。 當等候的工作正在執行時，非同步方法的 `Await` 運算式不會封鎖目前的執行緒。 運算式會改為註冊方法的其餘部分做為接續，並將控制權交還給非同步方法的呼叫端。  
   
  `Async` 和 `Await` 關鍵字不會導致建立其他執行緒。 由於非同步方法不會在本身的執行緒上執行，因此非同步方法不需要多執行緒。 方法會在目前的同步處理內容執行，而且只有在方法為作用中時才會在執行緒上花費時間。 您可以使用 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 將受限於 CPU 的工作移到背景執行緒，但是背景執行緒無法協助處理正在等待結果產生的處理序。  
   
  非同步程式設計的非同步方法幾乎是所有案例的現有方法當中較好的方法。 特別是，這種方法是優於<xref:System.ComponentModel.BackgroundWorker>為 I/O 繫結作業因為程式碼較簡單，而且您不需要防範競爭情況。 與 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 結合時，非同步程式設計會比受限於 CPU 之作業的 <xref:System.ComponentModel.BackgroundWorker> 還要好，因為非同步程式設計會將執行程式碼的協調工作細節，從 `Task.Run` 傳輸至執行緒集區的工作中分出來。  
   
-##  <a name="BKMK_AsyncandAwait"></a> Async 和 Await  
+## <a name="BKMK_AsyncandAwait"></a> Async 和 Await  
  如果您使用 [Async](../../../../visual-basic/language-reference/modifiers/async.md) 修飾詞來將方法指定為非同步方法，就會啟用下列兩項功能。  
   
 -   標記的非同步方法可以使用 [Await](../../../../visual-basic/language-reference/operators/await-operator.md) 來指定暫停點。 await 運算子會告知編譯器，非同步方法只有在等候的非同步處理序完成後，才能繼續通過該點。 同時，控制權會返回非同步方法的呼叫端。  
@@ -166,7 +160,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
 -   [Await 運算子](../../../../visual-basic/language-reference/operators/await-operator.md)  
   
-##  <a name="BKMK_ReturnTypesandParameters"></a> 傳回型別和參數  
+## <a name="BKMK_ReturnTypesandParameters"></a> 傳回型別和參數  
  在 .NET Framework 程式設計中，非同步方法通常會傳回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。 在非同步方法內，會將 `Await` 運算子套用到呼叫另一個非同步方法所傳回的工作。  
   
  如果方法包含指定 `TResult` 類型運算元的 [Return](../../../../visual-basic/language-reference/statements/return-statement.md) 陳述式，請指定 <xref:System.Threading.Tasks.Task%601> 作為傳回型別。  
@@ -227,12 +221,12 @@ Await Task_MethodAsync()
   
  如需詳細資訊和範例，請參閱 <<c0> [ 呼叫 C# 或 Visual Basic 中的非同步 Api](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)。  
   
-##  <a name="BKMK_NamingConvention"></a> 命名慣例  
+## <a name="BKMK_NamingConvention"></a> 命名慣例  
  依照慣例，您會將 "Async" 附加至具有 `Async` 修飾詞的方法名稱。  
   
  當事件、基底類別或介面合約採用不同的名稱時，您可以忽略慣例。 例如，您不應該重新命名通用事件處理常式，像是 `Button1_Click`。  
   
-##  <a name="BKMK_RelatedTopics"></a> 相關主題和範例 (Visual Studio)  
+## <a name="BKMK_RelatedTopics"></a> 相關主題和範例 (Visual Studio)  
   
 |標題|說明|範例|  
 |-----------|-----------------|------------|  
@@ -249,7 +243,7 @@ Await Task_MethodAsync()
 |[工作式非同步模式 (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|描述 .NET Framework 中非同步的新模式。 這個模式是根據 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類型。||  
 |[Channel 9 上的非同步影片](https://channel9.msdn.com/search?term=async+&type=All)|提供有關非同步程式設計的各種不同視訊連結。||  
   
-##  <a name="BKMK_CompleteExample"></a> 完整範例  
+## <a name="BKMK_CompleteExample"></a> 完整範例  
  下列程式碼是本主題討論之 Windows Presentation Foundation (WPF) 應用程式中的 MainWindow.xaml.vb 檔案。 您可以從[非同步範例：＜使用 Async 和 Await 進行非同步程式設計＞中的範例](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c) \(英文\) 下載範例。  
   
 ```vb  

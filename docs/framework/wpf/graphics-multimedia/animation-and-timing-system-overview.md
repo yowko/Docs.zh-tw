@@ -5,23 +5,23 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-ms.openlocfilehash: e50714e8cf50f42aad41ffa77fda34c55f9adb4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36a71213b2c96d2ea1aa7597216f420f47493f43
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502972"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360507"
 ---
 # <a name="animation-and-timing-system-overview"></a>動畫和計時系統概觀
 本主題描述計時系統如何使用動畫<xref:System.Windows.Media.Animation.Timeline>，和<xref:System.Windows.Media.Animation.Clock>類別以動畫顯示屬性。  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
- 若要了解本主題，您可以如[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)中所述，使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫來以動畫顯示屬性。 這也有助於熟悉相依性屬性。如需詳細資訊，請參閱[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+ 若要了解本主題，您可以如[動畫概觀](animation-overview.md)中所述，使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫來以動畫顯示屬性。 這也有助於熟悉相依性屬性。如需詳細資訊，請參閱[相依性屬性概觀](../advanced/dependency-properties-overview.md)。  
   
 <a name="timelinesandclocks"></a>   
 ## <a name="timelines-and-clocks"></a>時間軸和時鐘  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)所述方式<xref:System.Windows.Media.Animation.Timeline>代表一段時間，以及動畫是一種<xref:System.Windows.Media.Animation.Timeline>，會產生輸出值。 本身<xref:System.Windows.Media.Animation.Timeline>，不會執行任何以外單純描述一段時間。 它是時間軸的<xref:System.Windows.Media.Animation.Clock>實際執行工作的物件。 同樣地，動畫不會實際以動畫顯示屬性︰ 動畫類別描述如何應該計算輸出值，但它是<xref:System.Windows.Media.Animation.Clock>所建立的驅使動畫輸出並將其套用至屬性的動畫。  
+ [動畫概觀](animation-overview.md)所述方式<xref:System.Windows.Media.Animation.Timeline>代表一段時間，以及動畫是一種<xref:System.Windows.Media.Animation.Timeline>，會產生輸出值。 本身<xref:System.Windows.Media.Animation.Timeline>，不會執行任何以外單純描述一段時間。 它是時間軸的<xref:System.Windows.Media.Animation.Clock>實際執行工作的物件。 同樣地，動畫不會實際以動畫顯示屬性︰ 動畫類別描述如何應該計算輸出值，但它是<xref:System.Windows.Media.Animation.Clock>所建立的驅使動畫輸出並將其套用至屬性的動畫。  
   
  A<xref:System.Windows.Media.Animation.Clock>是一種特殊類型的物件，維護的計時相關執行階段狀態<xref:System.Windows.Media.Animation.Timeline>。 它會提供資訊的三個動畫和計時系統不可或缺的位元： <xref:System.Windows.Media.Animation.Clock.CurrentTime%2A>， <xref:System.Windows.Media.Animation.Clock.CurrentProgress%2A>，和<xref:System.Windows.Media.Animation.Clock.CurrentState%2A>。 A<xref:System.Windows.Media.Animation.Clock>判斷其目前的時間、 進度和狀態使用所描述的計時行為及其<xref:System.Windows.Media.Animation.Timeline>: <xref:System.Windows.Media.Animation.Timeline.Duration%2A>， <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>， <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>，依此類推。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "54502972"
   
  下圖顯示時間管理員之間的關聯性和<xref:System.Windows.Media.Animation.AnimationClock>，和動畫的相依性屬性。  
   
- ![計時系統元件](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
+ ![計時系統元件](./media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
 以動畫顯示屬性  
   
  當時間管理員滴答時，它會更新的時間每隔<xref:System.Windows.Media.Animation.ClockState.Active><xref:System.Windows.Media.Animation.Clock>應用程式中。 如果<xref:System.Windows.Media.Animation.Clock>已<xref:System.Windows.Media.Animation.AnimationClock>，它會使用<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>方法<xref:System.Windows.Media.Animation.AnimationTimeline>從它建立的 若要計算其目前的輸出值。 <xref:System.Windows.Media.Animation.AnimationClock>提供<xref:System.Windows.Media.Animation.AnimationTimeline>使用目前的當地時間、 輸入的值，通常是屬性的基底值和預設目的值。 當您擷取值的動畫屬性使用<xref:System.Windows.DependencyObject.GetValue%2A>方法或其 CLR 存取子，您會得到的輸出其<xref:System.Windows.Media.Animation.AnimationClock>。  
@@ -54,13 +54,13 @@ ms.locfileid: "54502972"
 #### <a name="clock-groups"></a>時鐘群組  
  上一節所述方式有不同類型的<xref:System.Windows.Media.Animation.Clock>的時間軸的不同類型的物件。 下圖顯示時間管理員之間的關聯性<xref:System.Windows.Media.Animation.ClockGroup>、 <xref:System.Windows.Media.Animation.AnimationClock>，和動畫的相依性屬性。 A<xref:System.Windows.Media.Animation.ClockGroup>分組其他時間軸，例如建立<xref:System.Windows.Media.Animation.Storyboard>動畫與其他時間軸分組的類別。  
   
- ![計時系統元件](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
+ ![計時系統元件](./media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
 ClockGroup  
   
 #### <a name="composition"></a>組合  
  您可以將多個時鐘與單一屬性進行關聯，此時每個時鐘都使用上述時鐘的輸出值做為其基底值。 下圖顯示三個<xref:System.Windows.Media.Animation.AnimationClock>套用至相同屬性的物件。 Clock1 使用動畫屬性的基底值做為輸入，並使用它來產生輸出。 Clock2 會採用從 Clock1 的輸出做為輸入，並使用它來產生輸出。 Clock3 會採用從 Clock2 的輸出做為輸入，並使用它來產生輸出。 當多個時鐘同時影響同一個屬性時，就可以說是形成一個組合鏈結。  
   
- ![計時系統元件](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
+ ![計時系統元件](./media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
 組合鏈結  
   
  請注意，雖然在輸入和輸出之間建立關聯性<xref:System.Windows.Media.Animation.AnimationClock>組合鏈結中的物件其計時行為不受影響;<xref:System.Windows.Media.Animation.Clock>物件 (包括<xref:System.Windows.Media.Animation.AnimationClock>物件) 在其父代上有階層式相依性<xref:System.Windows.Media.Animation.Clock>物件。  
@@ -74,7 +74,7 @@ ClockGroup
   
  當<xref:System.Windows.Media.Animation.Clock>切換狀態並回到其原始狀態傳回滴答之間 (例如從<xref:System.Windows.Media.Animation.ClockState.Active>來<xref:System.Windows.Media.Animation.ClockState.Stopped>，再回到<xref:System.Windows.Media.Animation.ClockState.Active>)，相關聯的事件還是會發生。  
   
- 如需計時事件的詳細資訊，請參閱[計時事件概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)。  
+ 如需計時事件的詳細資訊，請參閱[計時事件概觀](timing-events-overview.md)。  
   
 <a name="currentvaluesbasevaluesofproperties"></a>   
 ## <a name="current-values-and-base-values-of-properties"></a>屬性的目前值和基底值  
@@ -83,6 +83,6 @@ ClockGroup
  當您建立屬性，動畫<xref:System.Windows.Media.Animation.AnimationClock>設定的屬性*目前*值。 擷取透過的 CLR 存取子屬性的值或<xref:System.Windows.DependencyObject.GetValue%2A>方法傳回的輸出<xref:System.Windows.Media.Animation.AnimationClock>當<xref:System.Windows.Media.Animation.AnimationClock>是<xref:System.Windows.Media.Animation.ClockState.Active>或<xref:System.Windows.Media.Animation.ClockState.Filling>。 您可以使用，以擷取屬性的基底值<xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A>方法。  
   
 ## <a name="see-also"></a>另請參閱
-- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [計時事件概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
-- [計時行為概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+- [動畫概觀](animation-overview.md)
+- [計時事件概觀](timing-events-overview.md)
+- [計時行為概觀](timing-behaviors-overview.md)

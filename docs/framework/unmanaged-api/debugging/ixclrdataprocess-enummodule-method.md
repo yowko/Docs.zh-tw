@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1648e53df5f36f7615831b425d2b5d764731c5c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0398d18f9568754231082d63b4c6a2c865d8c6f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738127"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363302"
 ---
 # <a name="ixclrdataprocessenummodule-method"></a>IXCLRDataProcess::EnumModule 方法
 
@@ -37,11 +37,13 @@ HRESULT EnumModule(
 );
 ```
 
-### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
-`handle` [in、 out]列舉模組控制代碼。
+`handle`\
+[in、 out]列舉模組控制代碼。
 
-`mod` [out]列舉的模組中。
+`mod`\
+[out]列舉的模組中。
 
 ## <a name="remarks"></a>備註
 
@@ -56,7 +58,7 @@ HRESULT EnumModule(
 
 ## <a name="see-also"></a>另請參閱
 
-- [CLRDataSourceType 列舉](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataModule 介面](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
-- [IXCLRDataProcess 介面](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [CLRDataSourceType 列舉](clrdatasourcetype-enumeration.md)
+- [偵錯](index.md)
+- [IXCLRDataModule 介面](ixclrdatamodule-interface.md)
+- [IXCLRDataProcess 介面](ixclrdataprocess-interface.md)

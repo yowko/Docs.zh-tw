@@ -1,18 +1,18 @@
 ---
-title: HOW TO：裝載工作流程並存的多個版本
+title: HOW TO：裝載工作流程-並存的多個的版本
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181614"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366697"
 ---
-# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>HOW TO：裝載工作流程並存的多個版本
+# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>HOW TO：裝載工作流程-並存的多個的版本
 `WorkflowIdentity` 提供一種方法，讓工作流程應用程式開發人員能夠將名稱和版本與工作流程定義產生關聯性，並為這項資訊與持續性工作流程執行個體建立關聯性。 此身分識別資訊可由工作流程應用程式開發人員使用以啟用案例 (例如並存執行多個版本的工作流程定義)，以及提供動態更新等其他功能的基礎。 教學課程中的此步驟示範如何使用 `WorkflowIdentity` 同時裝載工作流程的多個版本。
 
 > [!NOTE]
@@ -36,12 +36,12 @@ ms.locfileid: "50181614"
 -   [若要建置並執行應用程式](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  依照本主題中的步驟進行之前，請執行應用程式、啟動每種型別的數個工作流程，然後針對每個工作流程進行一或兩次猜測。 在此步驟和下一個步驟，使用這些保存的工作流程[如何： 更新執行的工作流程執行個體的定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。
+>  依照本主題中的步驟進行之前，請執行應用程式、啟動每種型別的數個工作流程，然後針對每個工作流程進行一或兩次猜測。 在此步驟和下一個步驟，使用這些保存的工作流程[How to:更新執行中工作流程執行個體的定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。
 
 > [!NOTE]
 >  「快速入門教學課程」中的每個步驟都與之前的步驟息息相關。 如果您未完成上述步驟，您就可以下載完整的版的教學課程[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
-###  <a name="BKMK_BackupCopy"></a> 製作 NumberGuessWorkflowActivities 專案的複本  
+### <a name="BKMK_BackupCopy"></a> 製作 NumberGuessWorkflowActivities 專案的複本  
   
 1.  開啟**WF45GettingStartedTutorial**如果不是開啟的 Visual Studio 2012 中的方案。  
   
@@ -60,14 +60,14 @@ ms.locfileid: "50181614"
     > [!NOTE]
     >  本主題中的步驟示範管理組件的方法，這些組件用於包含多個工作流程版本。 您也可以使用其他方法，例如強式命名組件以及在全域組件快取中登錄這些組件。
 
-8.  建立新的資料夾，名為**NumberGuessWorkflowActivities_du**相同的資料夾中**NumberGuessWorkflowHost**， **NumberGuessWorkflowActivities**，而新新增**PreviousVersions**資料夾，並複製所有檔案和子**NumberGuessWorkflowActivities**到新的資料夾**NumberGuessWorkflowActivities_du**資料夾。 此活動的初始版本之專案的備份副本會在[如何： 更新執行的工作流程執行個體的定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。
+8.  建立新的資料夾，名為**NumberGuessWorkflowActivities_du**相同的資料夾中**NumberGuessWorkflowHost**， **NumberGuessWorkflowActivities**，而新新增**PreviousVersions**資料夾，並複製所有檔案和子**NumberGuessWorkflowActivities**到新的資料夾**NumberGuessWorkflowActivities_du**資料夾。 此活動的初始版本之專案的備份副本會在[How to:更新執行中工作流程執行個體的定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。
 
 9. 重新開啟**WF45GettingStartedTutorial** Visual Studio 2012 中的方案。
 
-###  <a name="BKMK_UpdateWorkflows"></a> 更新工作流程
+### <a name="BKMK_UpdateWorkflows"></a> 更新工作流程
  本節已更新工作流程定義。 已更新回應使用者猜測的兩個 `WriteLine` 活動，並新增可在猜測數字後提供遊戲其他相關資訊的 `WriteLine` 活動。
 
-####  <a name="BKMK_UpdateStateMachine"></a> 若要更新的狀態機器工作流程
+#### <a name="BKMK_UpdateStateMachine"></a> 若要更新的狀態機器工作流程
 
 1.  在 **方案總管**下方**NumberGuessWorkflowActivities**專案中，按兩下**StateMachineNumberGuessWorkflow.xaml**。
 
@@ -109,7 +109,7 @@ ms.locfileid: "50181614"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-####  <a name="BKMK_UpdateFlowchart"></a> 更新流程圖工作流程
+#### <a name="BKMK_UpdateFlowchart"></a> 更新流程圖工作流程
 
 1.  在 **方案總管**下方**NumberGuessWorkflowActivities**專案中，按兩下**FlowchartNumberGuessWorkflow.xaml**。
 
@@ -133,7 +133,8 @@ ms.locfileid: "50181614"
     Guess + " is too high."
     ```
 
-4.  拖曳**WriteLine**活動，從**基本型別**一節**工具箱**拖放上的置放點`True`動作的最上方`FlowDecision`. `WriteLine` 活動會加入到流程圖中，並連結至 `True` 動作的 `FlowDecision`。
+4.  拖曳**WriteLine**活動，從**基本型別**一節**工具箱**拖放上的置放點`True`動作的最上方`FlowDecision`. 
+  `WriteLine` 活動會加入到流程圖中，並連結至 `True` 動作的 `FlowDecision`。
 
 5.  在 `Text` 屬性方塊中輸入下列運算式。
 
@@ -145,7 +146,7 @@ ms.locfileid: "50181614"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-####  <a name="BKMK_UpdateSequential"></a> 若要更新循序工作流程
+#### <a name="BKMK_UpdateSequential"></a> 若要更新循序工作流程
 
 1.  在 **方案總管**下方**NumberGuessWorkflowActivities**專案中，按兩下**SequentialNumberGuessWorkflow.xaml**。
 
@@ -181,7 +182,7 @@ ms.locfileid: "50181614"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a> 若要更新 WorkflowVersionMap 以包含舊版的工作流程
+### <a name="BKMK_UpdateWorkflowVersionMap"></a> 若要更新 WorkflowVersionMap 以包含舊版的工作流程
 
 1.  按兩下**Numberguessworkflowhost** (或**Workflowversionmap.cs**) 底下**NumberGuessWorkflowHost**專案加以開啟。
 
@@ -549,7 +550,7 @@ ms.locfileid: "50181614"
     }
     ```
 
-###  <a name="BKMK_BuildAndRun"></a> 若要建置及執行應用程式
+### <a name="BKMK_BuildAndRun"></a> 若要建置及執行應用程式
 
 1.  按下 CTRL+SHIFT+B 建置應用程式，然後按下 CTRL+F5 啟動。
 
@@ -580,4 +581,4 @@ ms.locfileid: "50181614"
 
 4.  切換回猜數字應用程式，並選取其中一個在更新之前啟動的工作流程。 您可以查看顯示在狀態視窗下方的版本資訊，找出目前選取之工作流程的版本。 輸入一些猜測，請注意，狀態更新會比對 `WriteLine` 活動輸出與舊版的輸出，而且不包含使用者的猜測。 這是因為這些工作流程使用的舊版工作流程定義不含 `WriteLine` 更新。
 
-     在下一個步驟中，[如何： 更新執行的工作流程執行個體的定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)，執行`v1`使其包含與新的功能，會更新工作流程執行個體`v2`執行個體。
+     在下一個步驟中， [How to:更新執行的工作流程執行個體的定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)，執行`v1`使其包含與新的功能，會更新工作流程執行個體`v2`執行個體。

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: e6b16bc3fc482e0f640f8b2d083392e6f94de618
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520578"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359872"
 ---
 # <a name="property-value-inheritance"></a>屬性值繼承
 屬性值繼承是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的功能。 屬性值繼承可讓元素樹狀結構中的子元素，在將它設定於最接近之父元素中的任一處時，可從父元素中取得特殊屬性的值，並繼承該值。 父元素可能也會透過屬性值繼承來取得它的值，因此，系統有可能會不停地遞迴到頁面根元素。 屬性值繼承不是預設的屬性系統行為；屬性必須使用特殊的中繼資料值來建立，才能讓該屬性起始子元素上的屬性值繼承。  
@@ -30,7 +30,7 @@ ms.locfileid: "54520578"
 ## <a name="making-a-custom-property-inheritable"></a>讓自訂屬性成為可繼承  
  藉由變更自訂屬性的中繼資料，您也可以讓自己的自訂屬性成為可繼承。 但請注意，將屬性指定為可繼承有一些效能考量。 假如該屬性沒有已建立的本機值，或是透過樣式、範本或資料繫結取得的值，可繼承的屬性就會為邏輯樹狀結構中的所有子元素提供其指派的屬性值。  
   
- 若要讓參與值的屬性成為可繼承，請建立自訂的附加屬性，如[註冊附加屬性](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)中所述。 註冊屬性與中繼資料 (<xref:System.Windows.FrameworkPropertyMetadata>)，並在該中繼資料內的 [選項] 設定中指定"Inherits"選項。 也請確定屬性具有已建立的預設值，因為該值現在將會繼承。 儘管您已將屬性註冊為附加，但您可能也想要針對擁有者類型上的 get/set 存取建立屬性「包裝函式」，就像您針對「非附加的」相依性屬性所做的一樣。 完成後，可繼承的屬性可以設定使用的直接屬性包裝函式上的擁有者型別或衍生型別，或是可以設定任何使用附加的屬性語法<xref:System.Windows.DependencyObject>。  
+ 若要讓參與值的屬性成為可繼承，請建立自訂的附加屬性，如[註冊附加屬性](how-to-register-an-attached-property.md)中所述。 註冊屬性與中繼資料 (<xref:System.Windows.FrameworkPropertyMetadata>)，並在該中繼資料內的 [選項] 設定中指定"Inherits"選項。 也請確定屬性具有已建立的預設值，因為該值現在將會繼承。 儘管您已將屬性註冊為附加，但您可能也想要針對擁有者類型上的 get/set 存取建立屬性「包裝函式」，就像您針對「非附加的」相依性屬性所做的一樣。 完成後，可繼承的屬性可以設定使用的直接屬性包裝函式上的擁有者型別或衍生型別，或是可以設定任何使用附加的屬性語法<xref:System.Windows.DependencyObject>。  
   
  附加的屬性是概念上類似於全域屬性;您可以檢查任何值<xref:System.Windows.DependencyObject>並取得有效的結果。 附加屬性的典型範例是在子項目上設定屬性值，這種情況下是所討論的屬性是附加的屬性，一律會以隱含方式出現在每個項目上的附加屬性的更有效率 (<xref:System.Windows.DependencyObject>) 在樹狀目錄中。  
   
@@ -42,6 +42,6 @@ ms.locfileid: "54520578"
  屬性繼承的運作方式是周遊元素的樹狀結構。 此樹狀結構通常會與邏輯樹狀結構平行。 不過，每當您納入 WPF 核心層級物件的標記來定義元素樹狀結構，例如<xref:System.Windows.Media.Brush>，您已建立的不連續的邏輯樹狀結構。 則為 true 的邏輯樹狀結構不會在概念上延伸透過<xref:System.Windows.Media.Brush>，因為邏輯樹狀結構是 WPF 架構層級概念。 您可以看到這反映在結果中的方法時<xref:System.Windows.LogicalTreeHelper>。 不過，屬性值繼承可以填補此鴻溝邏輯樹狀結構，而且只要可繼承的屬性註冊為附加的屬性和任何特意封鎖繼承的界限，則仍可傳遞繼承的值 (例如<xref:System.Windows.Controls.Frame>) 為止。  
   
 ## <a name="see-also"></a>另請參閱
-- [相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [附加屬性概觀](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [相依性屬性中繼資料](dependency-property-metadata.md)
+- [附加屬性概觀](attached-properties-overview.md)
+- [相依性屬性值優先順序](dependency-property-value-precedence.md)

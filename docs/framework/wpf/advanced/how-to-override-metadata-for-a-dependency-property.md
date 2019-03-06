@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: ba2f98d262f5c43dbd0c07d356556cdc3ec4b8dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d2d692984bef34569b2c4bb80c3fb072e4c3f79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589749"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365876"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>HOW TO：覆寫相依性屬性的中繼資料
 此範例示範如何覆寫預設相依性屬性中繼資料來自繼承的類別，藉由呼叫<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>方法，並提供特定類型的中繼資料。  
@@ -26,13 +26,13 @@ ms.locfileid: "54589749"
   
  在下列範例中，自訂類別 `MyAdvancedStateControl` 會將 `MyAdvancedStateControl` 針對 `StateProperty` 所提供的中繼資料覆寫為新的屬性中繼資料。 例如，在新建構之 `MyAdvancedStateControl` 執行個體上查詢屬性時，`StateProperty` 的預設值現在會是 `true`。  
   
- [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
- [!code-vb[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
-[!code-csharp[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#myadvancedstatecontrol)]
-[!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
+ [!code-csharp[PropertySystemEsoterics#MyStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
+ [!code-vb[PropertySystemEsoterics#MyStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
+[!code-csharp[PropertySystemEsoterics#MyAdvancedStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#myadvancedstatecontrol)]
+[!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.DependencyProperty>
-- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+- [相依性屬性概觀](dependency-properties-overview.md)
+- [自訂相依性屬性](custom-dependency-properties.md)
+- [HOW-TO 主題](properties-how-to-topics.md)

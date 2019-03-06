@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: 3fadba2fe8036fc558e18f80bd7cb1ffc977b762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fda5330ff75c1744f3ed9d4394e51b5efb737071
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632110"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374423"
 ---
 # <a name="planning-for-application-performance"></a>應用程式效能規劃
 達成效能目標的成功取決於您開發效能策略的程度。 規劃是在開發任何產品的第一個階段。 本主題描述一些非常簡單的規則開發良好的效能策略。  
@@ -33,12 +33,12 @@ ms.locfileid: "54632110"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項是繼承可擴充讓普遍自訂其外觀，而不改變其控制項行為。 藉由運用樣式、 資料範本和控制項範本，您可以建立，並以累加方式發展可自訂[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]，適應您的效能需求。  
   
 ## <a name="see-also"></a>另請參閱
-- [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [運用硬體](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [版面配置與設計](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [物件行為](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [應用程式資源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [其他效能建議](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)
+- [運用硬體](optimizing-performance-taking-advantage-of-hardware.md)
+- [版面配置與設計](optimizing-performance-layout-and-design.md)
+- [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
+- [物件行為](optimizing-performance-object-behavior.md)
+- [應用程式資源](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
+- [資料繫結](optimizing-performance-data-binding.md)
+- [其他效能建議](optimizing-performance-other-recommendations.md)

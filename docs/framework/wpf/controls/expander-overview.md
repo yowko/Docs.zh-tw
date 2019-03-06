@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 63fa061211e846a6b4d9c88cdf3c7c24e4aac3ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693752"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369925"
 ---
 # <a name="expander-overview"></a>Expander 概觀
 <xref:System.Windows.Controls.Expander>控制項提供一個可展開區域類似於視窗並且包含標頭中提供內容的方式。  
@@ -23,7 +23,7 @@ ms.locfileid: "54693752"
 ## <a name="creating-a-simple-expander"></a>建立簡單的展開器  
  下列範例示範如何建立簡單<xref:System.Windows.Controls.Expander>控制項。 這個範例會建立<xref:System.Windows.Controls.Expander>看起來像上圖。  
   
- [!code-xaml[ExpanderExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
+ [!code-xaml[ExpanderExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
   
  <xref:System.Windows.Controls.ContentControl.Content%2A>並<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>的<xref:System.Windows.Controls.Expander>可以也包含複雜內容，例如<xref:System.Windows.Controls.RadioButton>和<xref:System.Windows.Controls.Image>物件。  
   
@@ -45,15 +45,15 @@ ms.locfileid: "54693752"
   
  **ScrollViewer 中的展開器**  
   
- ![具有 ScrollBar 的展開器](../../../../docs/framework/wpf/controls/media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![具有 ScrollBar 的展開器](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
   
  當您將<xref:System.Windows.Controls.Expander>在中控制可<xref:System.Windows.Controls.ScrollViewer>，將<xref:System.Windows.Controls.ScrollViewer>維度屬性對應至的方向<xref:System.Windows.Controls.Expander>內容的大小將會開啟<xref:System.Windows.Controls.Expander>內容區域。 比方說，如果您設定<xref:System.Windows.Controls.Expander.ExpandDirection%2A>上的屬性<xref:System.Windows.Controls.Expander>要<xref:System.Windows.Controls.ExpandDirection.Down>（內容區域向下開啟），設定<xref:System.Windows.FrameworkElement.Height%2A>屬性<xref:System.Windows.Controls.ScrollViewer>控制項內容區域所需的高度。 如果您在內容本身，改為設定高度維度<xref:System.Windows.Controls.ScrollViewer>無法辨識此設定，因此，無法提供可捲動的內容。  
   
  下列範例示範如何建立<xref:System.Windows.Controls.Expander>控制項具有複雜內容，且其中包含<xref:System.Windows.Controls.ScrollViewer>控制項。 這個範例會建立<xref:System.Windows.Controls.Expander>，就像是本節開頭圖例。  
   
- [!code-csharp[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ExpanderRichContent#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
- [!code-xaml[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
+ [!code-csharp[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ExpanderRichContent#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
+ [!code-xaml[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
   
 <a name="UsingtheAlignmentProperties"></a>   
 ## <a name="using-the-alignment-properties"></a>使用對齊屬性  
@@ -62,4 +62,4 @@ ms.locfileid: "54693752"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [HOW-TO 主題](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+- [HOW-TO 主題](expander-how-to-topics.md)

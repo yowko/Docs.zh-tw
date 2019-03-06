@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-ms.openlocfilehash: 702a86f049635423a31e554d205dcc3cf4aa799d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c0361674c4f6f740784a7657e018d5257c6edac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605363"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377232"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>HOW TO：將樹狀檢視繫結至未知深度的資料
 當您想要繫結的時候<xref:System.Windows.Controls.TreeView>深度不知道資料來源。  這可能是資料是遞迴的本質，例如檔案系統，其中的資料夾可以包含資料夾或公司的組織結構，其中的員工有其他直屬員工。  
@@ -23,8 +23,8 @@ ms.locfileid: "54605363"
 ## <a name="example"></a>範例  
  下列範例示範如何將繫結<xref:System.Windows.Controls.TreeView>階層式資料，並使用<xref:System.Windows.HierarchicalDataTemplate>來指定<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>每個<xref:System.Windows.Controls.TreeViewItem>。  <xref:System.Windows.Controls.TreeView>繫結至代表公司中的員工的 XML 資料。  每個`Employee`元素可包含其他`Employee`表示人員報告對象的項目。 因為資料是遞迴的<xref:System.Windows.HierarchicalDataTemplate>可以套用至每個層級。  
   
- [!code-xaml[TreeViewWithUnknownDepth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
+ [!code-xaml[TreeViewWithUnknownDepth#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
 ## <a name="see-also"></a>另請參閱
-- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)
+- [資料繫結概觀](../data/data-binding-overview.md)
+- [資料範本化概觀](../data/data-templating-overview.md)

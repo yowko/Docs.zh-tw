@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: c235381af36fd6c99d10f27a8a543f836d7af108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba034dfceb4a42e1f88d15379b482e47a0700b8d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551963"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371936"
 ---
 # <a name="expander"></a>展開工具
-<xref:System.Windows.Controls.Expander>允許使用者檢視標頭，然後展開該標頭可查看進一步的詳細資訊，或若要摺疊至標頭區段。  
+<xref:System.Windows.Controls.Expander> ，讓使用者能夠檢視標頭，然後展開該標頭，可查看進一步的詳細資訊，或若要摺疊到標頭區段。  
   
  下圖提供此控制項中展開位置的範例。  
   
- ![Expander 範例](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")  
+ ![Expander 範例](./media/expanderexample.JPG "ExpanderExample")  
 Expander 控制項  
   
 ## <a name="in-this-section"></a>本節內容  
- [Expander 概觀](../../../../docs/framework/wpf/controls/expander-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
+ [Expander 概觀](expander-overview.md)  
+ [HOW-TO 主題](expander-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Expander>  

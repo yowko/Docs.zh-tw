@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 9e2cd55d0d5eb453ad5d29b707a14b9894d40089
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493699"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358557"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows Form 和 WPF 屬性對應
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]技術有兩個類似但不同屬性的模型。 *屬性對應*支援的兩個架構之間的互通性，並提供下列功能：  
@@ -49,7 +49,7 @@ ms.locfileid: "54493699"
   
  容器項目上的附加的屬性完全受到<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目。  
   
- 如需詳細資訊，請參閱[逐步解說：使用 WindowsFormsHost 元素對應屬性](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)。  
+ 如需詳細資訊，請參閱[逐步解說：使用 WindowsFormsHost 元素對應屬性](walkthrough-mapping-properties-using-the-windowsformshost-element.md)。  
   
 ## <a name="updates-to-parent-properties"></a>更新父屬性  
  大部分的父屬性的變更會造成裝載的子控制項的通知。 下列清單描述當其值變更時不會導致通知的屬性。  
@@ -113,11 +113,11 @@ ms.locfileid: "54493699"
   
 -   文字  
   
--   可見  
+-   Visible  
   
  <xref:System.Windows.Forms.Integration.ElementHost>控制項將轉譯的預設[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]屬性，以其[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]對等項目使用下列的轉譯表。  
   
- 如需詳細資訊，請參閱[逐步解說：使用 ElementHost 控制項對應屬性](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)。  
+ 如需詳細資訊，請參閱[逐步解說：使用 ElementHost 控制項對應屬性](walkthrough-mapping-properties-using-the-elementhost-control.md)。  
   
 |裝載 Windows Form|Windows Presentation Foundation|交互操作行為|  
 |---------------------------|-------------------------------------|-----------------------------|  
@@ -137,7 +137,7 @@ ms.locfileid: "54493699"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [WPF 和 Windows Forms 互通](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)
-- [逐步解說：使用 WindowsFormsHost 元素對應屬性](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [逐步解說：使用 ElementHost 控制項對應屬性](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)
+- [WPF 和 Windows Forms 互通](wpf-and-windows-forms-interoperation.md)
+- [逐步解說：使用 WindowsFormsHost 元素對應屬性](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [逐步解說：使用 ElementHost 控制項對應屬性](walkthrough-mapping-properties-using-the-elementhost-control.md)

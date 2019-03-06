@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: eaaa8ad5273331941bc6915231460100e8ac24b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646236"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365564"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>開始使用 WPF 中的筆墨
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) 具有筆跡功能，可讓您輕鬆地將
 
 ## <a name="prerequisites"></a>必要條件
 
-若要使用下列範例中，第一次[安裝 Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 它也有助於了解如何撰寫基本的 WPF 應用程式。 開始使用 WPF 的協助，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。
+若要使用下列範例中，第一次[安裝 Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 它也有助於了解如何撰寫基本的 WPF 應用程式。 開始使用 WPF 的協助，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 
 ## <a name="quick-start"></a>快速入門
 
@@ -42,7 +42,7 @@ Windows Presentation Foundation (WPF) 具有筆跡功能，可讓您輕鬆地將
 
 3. 型別`<InkCanvas/>`之間`<Grid>`標記。
 
-   ![InkCanvas 標記的 XAML 設計工具](media/getting-started-with-ink/inkcanvas-xaml.png)
+   ![InkCanvas 標記的 XAML 設計工具](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
 4. 按下**F5**來啟動您的應用程式偵錯工具。
 
@@ -70,7 +70,7 @@ Windows Presentation Foundation (WPF) 具有筆跡功能，可讓您輕鬆地將
 
 此 XAML 會建立漸層筆刷背景筆跡的介面上。
 
-![在筆跡介面在 WPF 應用程式中的漸層色彩](media/getting-started-with-ink/gradient-colors.png)
+![在筆跡介面在 WPF 應用程式中的漸層色彩](./media/getting-started-with-ink/gradient-colors.png)
 
 ### <a name="add-some-code-behind-the-xaml"></a>加入一些程式碼背後的 XAML
 
@@ -78,12 +78,12 @@ XAML 可以很容易就能設計使用者介面，而任何實際的應用程式
 
 1. 設定`MouseRightButtonUp`在您的 XAML 中的處理常式：
 
-   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+   [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
 1. 在 [**方案總管] 中**、 展開 MainWindow.xaml 並開啟程式碼後置檔案 （MainWindow.xaml.cs 或 MainWindow.xaml.vb）。 新增下列事件處理常式程式碼：
 
-   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
-   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+   [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
 1. 執行應用程式。 新增一些墨水，然後以滑鼠右鍵按一下滑鼠或手寫筆使用中執行按保留對等項目。
 
@@ -99,18 +99,18 @@ XAML 可以很容易就能設計使用者介面，而任何實際的應用程式
 
 1. 將下列程式碼貼到 Program.cs 或 Program.vb 檔案中：
 
-   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
-   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+   [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
 1. 新增 PresentationCore、 PresentationFramework、 與 WindowsBase 組件的參考，以滑鼠右鍵按一下**參考**中**方案總管**，然後選擇**加入參考**.
 
-   ![顯示 PresentationCore 與 PresentationFramework 參考管理員](media/getting-started-with-ink/references.png)
+   ![顯示 PresentationCore 與 PresentationFramework 參考管理員](./media/getting-started-with-ink/references.png)
 
 1. 建置應用程式藉由按下**F5**。
 
 ## <a name="see-also"></a>另請參閱
 
-- [數位筆跡](../../../../docs/framework/wpf/advanced/digital-ink.md)
-- [收集筆墨](../../../../docs/framework/wpf/advanced/collecting-ink.md)
-- [手寫辨識](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
-- [儲存筆墨](../../../../docs/framework/wpf/advanced/storing-ink.md)
+- [數位筆跡](digital-ink.md)
+- [收集筆墨](collecting-ink.md)
+- [手寫辨識](handwriting-recognition.md)
+- [儲存筆墨](storing-ink.md)

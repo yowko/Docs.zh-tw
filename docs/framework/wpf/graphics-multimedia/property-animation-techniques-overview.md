@@ -9,19 +9,19 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: 641fe7aa752e9c1a4e4fb10d2a454b1d977a0c7e
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: b03c450b84a376de5c5c7d3582c01a31bc417a11
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746305"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366773"
 ---
 # <a name="property-animation-techniques-overview"></a>屬性動畫技術概觀
 本主題說明建立屬性動畫的不同方法︰分鏡腳本、本機動畫、時鐘與每一畫面格動畫。  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
- 若要了解本主題，您應該要熟悉[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)中所述的基本動畫功能。  
+ 若要了解本主題，您應該要熟悉[動畫概觀](animation-overview.md)中所述的基本動畫功能。  
   
 <a name="summary"></a>   
 ## <a name="different-ways-to-animate"></a>建立動畫的不同方式  
@@ -38,13 +38,13 @@ ms.locfileid: "56746305"
   
 <a name="storyboard_animations"></a>   
 ## <a name="storyboard-animations"></a>分鏡腳本動畫  
- 使用<xref:System.Windows.Media.Animation.Storyboard>當您想要定義並套用您在中的動畫[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、 以互動方式控制您的動畫之後啟動，建立複雜的動畫樹狀結構，或在中建立動畫, <xref:System.Windows.Style>，<xref:System.Windows.Controls.ControlTemplate>或<xref:System.Windows.DataTemplate>。 若要建立動畫之物件<xref:System.Windows.Media.Animation.Storyboard>，它必須是<xref:System.Windows.FrameworkElement>或是<xref:System.Windows.FrameworkContentElement>，或者它必須用來設定<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 如需詳細資訊，請參閱[分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
+ 使用<xref:System.Windows.Media.Animation.Storyboard>當您想要定義並套用您在中的動畫[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、 以互動方式控制您的動畫之後啟動，建立複雜的動畫樹狀結構，或在中建立動畫, <xref:System.Windows.Style>，<xref:System.Windows.Controls.ControlTemplate>或<xref:System.Windows.DataTemplate>。 若要建立動畫之物件<xref:System.Windows.Media.Animation.Storyboard>，它必須是<xref:System.Windows.FrameworkElement>或是<xref:System.Windows.FrameworkContentElement>，或者它必須用來設定<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 如需詳細資訊，請參閱[分鏡腳本概觀](storyboards-overview.md)。  
   
  A<xref:System.Windows.Media.Animation.Storyboard>是一種特殊的容器<xref:System.Windows.Media.Animation.Timeline>，提供其包含之動畫的目標資訊。 若要以動畫顯示<xref:System.Windows.Media.Animation.Storyboard>，完成下列三個步驟。  
   
 1.  宣告<xref:System.Windows.Media.Animation.Storyboard>和一或多個動畫。  
   
-2.  使用<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A>附加屬性來指定目標物件以及每個動畫的屬性。  
+2.  使用<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>附加屬性來指定目標物件以及每個動畫的屬性。  
   
 3.  （僅限程式碼）定義<xref:System.Windows.NameScope>for<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 註冊以動畫顯示與該物件的名稱<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。  
   
@@ -56,12 +56,12 @@ ms.locfileid: "56746305"
   
 |開始分鏡腳本的方法…|每個執行個體|樣式|控制項範本|資料範本|範例|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.EventTrigger>|是|是|是|是|[使用分鏡腳本建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 和屬性 <xref:System.Windows.Trigger>|否|是|是|是|[在屬性值變更時觸發動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.EventTrigger>|是|是|是|是|[使用分鏡腳本建立屬性的動畫](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 和屬性 <xref:System.Windows.Trigger>|否|是|是|是|[在屬性值變更時觸發動畫](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.DataTrigger>|否|是|是|是|[如何：當資料變更時觸發動畫](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法|是|否|否|否|[使用分鏡腳本建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法|是|否|否|否|[使用分鏡腳本建立屬性的動畫](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
- 如需詳細資訊<xref:System.Windows.Media.Animation.Storyboard>物件，請參閱[分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
+ 如需詳細資訊<xref:System.Windows.Media.Animation.Storyboard>物件，請參閱[分鏡腳本概觀](storyboards-overview.md)。  
   
 ## <a name="local-animations"></a>本機動畫  
  本機動畫提供便利的方式，以動畫顯示相依性屬性的任何<xref:System.Windows.Media.Animation.Animatable>物件。 當您想要將單一動畫套用至屬性，且您不需要在動畫啟動後以互動方式控制動畫時，請使用本機動畫。 不同於<xref:System.Windows.Media.Animation.Storyboard>動畫、 本機動畫可以建立不相關聯的物件<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 您也不需要定義<xref:System.Windows.NameScope>這種類型的動畫。  
@@ -76,14 +76,14 @@ ms.locfileid: "56746305"
   
  下列範例示範如何以動畫顯示的寬度和背景色彩<xref:System.Windows.Controls.Button>。  
   
- [!code-cpp[animateproperty#11](../../../../samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/LocalAnimationExample.cpp#11)]
- [!code-csharp[animateproperty#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animateproperty/CSharp/LocalAnimationExample.cs#11)]
- [!code-vb[animateproperty#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animateproperty/VisualBasic/LocalAnimationExample.vb#11)]  
+ [!code-cpp[animateproperty#11](~/samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/LocalAnimationExample.cpp#11)]
+ [!code-csharp[animateproperty#11](~/samples/snippets/csharp/VS_Snippets_Wpf/animateproperty/CSharp/LocalAnimationExample.cs#11)]
+ [!code-vb[animateproperty#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animateproperty/VisualBasic/LocalAnimationExample.vb#11)]  
   
 ## <a name="clock-animations"></a>時鐘動畫  
  使用<xref:System.Windows.Media.MediaPlayer.Clock%2A>物件，當您想要以動畫顯示，而不需使用<xref:System.Windows.Media.Animation.Storyboard>和您想要建立複雜的計時樹狀結構，或啟動之後，以互動方式控制動畫。 您可以使用時鐘物件以動畫顯示相依性屬性的任何<xref:System.Windows.Media.Animation.Animatable>物件。  
   
- 您無法使用<xref:System.Windows.Media.Animation.Clock>物件直接以動畫顯示在樣式中，控制項範本或資料範本。 (動畫和計時系統實際上確實會使用<xref:System.Windows.Media.Animation.Clock>物件來以動畫顯示在樣式、 控制項範本以及資料範本，但它必須建立那些<xref:System.Windows.Media.Animation.Clock>物件，讓您從<xref:System.Windows.Media.Animation.Storyboard>。 如需有關之間的關聯性<xref:System.Windows.Media.Animation.Storyboard>物件和<xref:System.Windows.Media.Animation.Clock>物件，請參閱[動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。)  
+ 您無法使用<xref:System.Windows.Media.Animation.Clock>物件直接以動畫顯示在樣式中，控制項範本或資料範本。 (動畫和計時系統實際上確實會使用<xref:System.Windows.Media.Animation.Clock>物件來以動畫顯示在樣式、 控制項範本以及資料範本，但它必須建立那些<xref:System.Windows.Media.Animation.Clock>物件，讓您從<xref:System.Windows.Media.Animation.Storyboard>。 如需有關之間的關聯性<xref:System.Windows.Media.Animation.Storyboard>物件和<xref:System.Windows.Media.Animation.Clock>物件，請參閱[動畫和計時系統概觀](animation-and-timing-system-overview.md)。)  
   
  若要將單一套用<xref:System.Windows.Media.Animation.Clock>屬性，您會完成下列步驟。  
   
@@ -95,8 +95,8 @@ ms.locfileid: "56746305"
   
  下列範例示範如何建立<xref:System.Windows.Media.Animation.AnimationClock>並將它套用至兩個類似的屬性。  
   
- [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
- [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
+ [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
+ [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
   
  若要建立計時樹狀結構並使用它來建立屬性的動畫，請完成下列步驟。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "56746305"
   
 3.  逐一查看<xref:System.Windows.Media.Animation.ClockGroup.Children%2A>的<xref:System.Windows.Media.Animation.ClockGroup>並套用其子系<xref:System.Windows.Media.Animation.Clock>物件。 每個<xref:System.Windows.Media.Animation.AnimationClock>子系，使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A>物件，您想要建立動畫套用方法<xref:System.Windows.Media.Animation.AnimationClock>至您指定的屬性  
   
- 如需時鐘物件的詳細資訊，請參閱[動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。  
+ 如需時鐘物件的詳細資訊，請參閱[動畫和計時系統概觀](animation-and-timing-system-overview.md)。  
   
 ## <a name="per-frame-animation-bypass-the-animation-and-timing-system"></a>每個畫面格動畫：略過動畫和計時系統  
  當您需要完全略過 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統時，使用此方法。 此方法的一個案例為物理動畫，其中動畫的每個步驟需要根據最後一組物件互動來重新計算物件。  
@@ -122,7 +122,7 @@ ms.locfileid: "56746305"
  如需詳細資訊，請參閱<xref:System.Windows.Media.CompositionTarget.Rendering>頁面。  
   
 ## <a name="see-also"></a>另請參閱
-- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
-- [動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
-- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [動畫概觀](animation-overview.md)
+- [分鏡腳本概觀](storyboards-overview.md)
+- [動畫和計時系統概觀](animation-and-timing-system-overview.md)
+- [相依性屬性概觀](../advanced/dependency-properties-overview.md)

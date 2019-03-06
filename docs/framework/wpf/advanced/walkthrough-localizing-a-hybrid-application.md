@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: b2f771f124cee6ad52ea841006a6749408540048
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 116a847d4f7b0591e823416cf5744e68d689c6ee
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746068"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378076"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>逐步解說：當地語系化混合應用程式
 
@@ -48,7 +48,7 @@ ms.locfileid: "56746068"
 
 2.  新增[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl>項目稱為`SimpleControl`至專案。
 
-3.  使用<xref:System.Windows.Forms.Integration.ElementHost>放置控制項`SimpleControl`表單上的項目。 如需詳細資訊，請參閱[逐步解說：裝載 Windows Forms 中的 3d WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)。
+3.  使用<xref:System.Windows.Forms.Integration.ElementHost>放置控制項`SimpleControl`表單上的項目。 如需詳細資訊，請參閱[逐步解說：裝載 Windows Forms 中的 3d WPF 複合控制項](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)。
 
 ## <a name="adding-localizable-content"></a>新增可當地語系化的內容
 
@@ -60,7 +60,7 @@ ms.locfileid: "56746068"
 
 2.  設定的內容<xref:System.Windows.Controls.Button>控制使用下列程式碼。
 
-     [!code-xaml[LocalizingWpfInWf#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
+     [!code-xaml[LocalizingWpfInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
 
 3.  在 [**方案總管] 中**，按兩下**Form1**在 Windows Form 設計工具中開啟它。
 
@@ -92,7 +92,7 @@ Windows Forms 設計工具提供在附屬組件中啟用當地語系化的設定
 
 7.  下列程式碼複製到`Form1`建構函式之前呼叫`InitializeComponent`。
 
-     [!code-csharp[LocalizingWpfInWf#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
+     [!code-csharp[LocalizingWpfInWf#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
 
 8.  在 **方案總管**，以滑鼠右鍵按一下**LocalizingWpfInWf** ，按一下 **卸載專案**。
 
@@ -128,7 +128,7 @@ Windows Forms 設計工具提供在附屬組件中啟用當地語系化的設定
 
 3.  在 [**方案總管] 中**，按兩下**SimpleControl.xaml**到程式碼編輯器中開啟它。 您會看到`msbuild`已新增命令`Uid`屬性的所有項目。 這有助於透過資源識別碼指派進行當地語系化。
 
-     [!code-xaml[LocalizingWpfInWf#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
+     [!code-xaml[LocalizingWpfInWf#20](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
 
 4.  按下**F6**建置方案。
 
@@ -138,7 +138,7 @@ Windows Forms 設計工具提供在附屬組件中啟用當地語系化的設定
 
 ### <a name="to-produce-a-satellite-assembly"></a>產生附屬組件
 
-1.  將 LocBaml.exe 複製至專案的 obj\Debug 資料夾。 如需詳細資訊，請參閱 <<c0> [ 將應用程式當地語系化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)。
+1.  將 LocBaml.exe 複製至專案的 obj\Debug 資料夾。 如需詳細資訊，請參閱 <<c0> [ 將應用程式當地語系化](how-to-localize-an-application.md)。
 
 2.  在 [命令提示字元] 視窗中，使用下列命令來將資源字串擷取至暫存檔。
 
@@ -176,6 +176,6 @@ Windows Forms 設計工具提供在附屬組件中啟用當地語系化的設定
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [將應用程式當地語系化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+- [將應用程式當地語系化](how-to-localize-an-application.md)
 - [逐步解說：將 Windows Form 當地語系化](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

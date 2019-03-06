@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - TreeView control [WPF], how-to topics
 ms.assetid: b9e9790e-7bfd-45d1-8b7a-1e0d125182a8
-ms.openlocfilehash: 902478763a214b96c3d0565fe38f0e9cd4c2acc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa7ef39083eb192c6ea675568b955fc78608ba88
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555396"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357751"
 ---
 # <a name="treeview-how-to-topics"></a>TreeView HOW TO 主題
-本節中的主題描述如何使用<xref:System.Windows.Controls.TreeView>控制項來顯示階層式結構的資訊。  
+在本節中的主題描述如何使用<xref:System.Windows.Controls.TreeView>控制項來顯示階層式結構中的資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
- [建立簡單或複雜的 TreeView](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [使用 SelectedValue、SelectedValuePath 和 SelectedItem](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [將 TreeView 繫結至未知深度的資料](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [改善 TreeView 的效能](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [在 TreeView 中尋找 TreeViewItem](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+ [建立簡單或複雜的 TreeView](how-to-create-simple-or-complex-treeviews.md)  
+  [使用 SelectedValue、SelectedValuePath 和 SelectedItem](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [將 TreeView 繫結至未知深度的資料](how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [改善 TreeView 的效能](how-to-improve-the-performance-of-a-treeview.md)  
+  [在 TreeView 中尋找 TreeViewItem](how-to-find-a-treeviewitem-in-a-treeview.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.TreeView>  

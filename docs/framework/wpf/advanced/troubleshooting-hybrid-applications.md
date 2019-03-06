@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: 005cd017ae7702169aefb61a746c8adaba8118db
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: dbc70f58fddfad6e7e7271802b8b01d2b52ab25a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748696"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370094"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>混合應用程式疑難排解
 <a name="introduction"></a> 本主題列出一些會在撰寫混合式應用程式時發生的常見問題，這類應用程式同時使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 技術。  
@@ -35,7 +35,7 @@ ms.locfileid: "56748696"
   
 <a name="scaling"></a>   
 ## <a name="scaling"></a>縮放  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 具有不同的縮放比例模型。 某些 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 縮放比例轉換對 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項深具意義，但其他則沒有。 例如，將 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項的縮放比例設為 0 是可行的，但如果您嘗試將同一個控制項的縮放比例調回非零的值，則控制項的大小會保持 0。 如需詳細資訊，請參閱 [WindowsFormsHost 元素的配置考量](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 具有不同的縮放比例模型。 某些 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 縮放比例轉換對 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項深具意義，但其他則沒有。 例如，將 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項的縮放比例設為 0 是可行的，但如果您嘗試將同一個控制項的縮放比例調回非零的值，則控制項的大小會保持 0。 如需詳細資訊，請參閱 [WindowsFormsHost 元素的配置考量](layout-considerations-for-the-windowsformshost-element.md)。  
   
 <a name="adapter"></a>   
 ## <a name="adapter"></a>配接器  
@@ -53,7 +53,7 @@ ms.locfileid: "56748696"
   
 <a name="property_mapping"></a>   
 ## <a name="property-mapping"></a>屬性對應  
- 某些屬性對應需要大量解譯，以橋接 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 技術之間的不同實作。 屬性對應可讓您的程式碼回應字型、色彩和其他屬性的變更。 通常，屬性對應是透過接聽 *Property*Changed 事件或 On*Property*Changed 呼叫，並在子控制項或其介面卡上設定適當的屬性來運作。 如需詳細資訊，請參閱 [Windows Form 和 WPF 屬性對應](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)。  
+ 某些屬性對應需要大量解譯，以橋接 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 技術之間的不同實作。 屬性對應可讓您的程式碼回應字型、色彩和其他屬性的變更。 通常，屬性對應是透過接聽 *Property*Changed 事件或 On*Property*Changed 呼叫，並在子控制項或其介面卡上設定適當的屬性來運作。 如需詳細資訊，請參閱 [Windows Form 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)。  
   
 <a name="layoutrelated_properties_on_hosted_content"></a>   
 ## <a name="layout-related-properties-on-hosted-content"></a>裝載內容上配置相關的屬性  
@@ -66,7 +66,7 @@ ms.locfileid: "56748696"
 |<xref:System.Windows.Forms.Integration.ElementHost>|<xref:System.Windows.FrameworkElement.Height%2A><br /><br /> <xref:System.Windows.FrameworkElement.Width%2A><br /><br /> <xref:System.Windows.FrameworkElement.Margin%2A><br /><br /> <xref:System.Windows.FrameworkElement.VerticalAlignment%2A><br /><br /> <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>|  
 |<xref:System.Windows.Forms.Integration.WindowsFormsHost>|<xref:System.Windows.Forms.Control.Margin%2A><br /><br /> <xref:System.Windows.Forms.Control.Dock%2A><br /><br /> <xref:System.Windows.Forms.Control.AutoSize%2A><br /><br /> <xref:System.Windows.Forms.Control.Location%2A><br /><br /> <xref:System.Windows.Forms.Control.MaximumSize%2A>|  
   
- 請勿直接在裝載的內容上設定這些屬性。 如需詳細資訊，請參閱 [WindowsFormsHost 元素的配置考量](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)。  
+ 請勿直接在裝載的內容上設定這些屬性。 如需詳細資訊，請參閱 [WindowsFormsHost 元素的配置考量](layout-considerations-for-the-windowsformshost-element.md)。  
   
 <a name="navigation_applications"></a>   
 ## <a name="navigation-applications"></a>瀏覽應用程式  
@@ -76,7 +76,7 @@ ms.locfileid: "56748696"
 ## <a name="message-loop-interoperation"></a>訊息迴圈交互操作  
  使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 訊息迴圈時，可能無法如預期般處理訊息。 <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>方法會呼叫<xref:System.Windows.Forms.Integration.WindowsFormsHost>建構函式。 這個方法會將訊息篩選器加入至 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 訊息迴圈。 此篩選器會呼叫<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>方法如果<xref:System.Windows.Forms.Control?displayProperty=nameWithType>訊息的目標和轉譯/分派訊息。  
   
- 如果您顯示<xref:System.Windows.Window>中[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]使用的訊息迴圈<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>，您無法輸入任何項目除非您呼叫<xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>方法。 <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>方法會採用<xref:System.Windows.Window>，並將<xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>，其中 device-mapper 金鑰相關訊息[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]訊息迴圈。 如需詳細資訊，請參閱 [Windows Form 和 WPF 互通性輸入架構](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)。  
+ 如果您顯示<xref:System.Windows.Window>中[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]使用的訊息迴圈<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>，您無法輸入任何項目除非您呼叫<xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>方法。 <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>方法會採用<xref:System.Windows.Window>，並將<xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>，其中 device-mapper 金鑰相關訊息[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]訊息迴圈。 如需詳細資訊，請參閱 [Windows Form 和 WPF 互通性輸入架構](windows-forms-and-wpf-interoperability-input-architecture.md)。  
   
 <a name="opacity_and_layering"></a>   
 ## <a name="opacity-and-layering"></a>不透明度與分層  
@@ -88,7 +88,7 @@ ms.locfileid: "56748696"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>啟用視覺化樣式  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項上的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 視覺化樣式可能不會啟用。 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法呼叫中的範本[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式。 雖然預設不會呼叫此方法，但如果您使用 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 來建立專案，您將會取得控制項的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 視覺化樣式 (前提是可使用 Comctl32.dll 版本 6.0)。 您必須呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法之前執行緒上建立控制代碼。 如需詳細資訊，請參閱[如何：啟用混合式應用程式中的視覺化樣式](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)。  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項上的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 視覺化樣式可能不會啟用。 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法呼叫中的範本[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式。 雖然預設不會呼叫此方法，但如果您使用 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 來建立專案，您將會取得控制項的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 視覺化樣式 (前提是可使用 Comctl32.dll 版本 6.0)。 您必須呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法之前執行緒上建立控制代碼。 如需詳細資訊，請參閱[如何：啟用混合式應用程式中的視覺化樣式](how-to-enable-visual-styles-in-a-hybrid-application.md)。  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>授權的控制項  
@@ -108,7 +108,7 @@ ms.locfileid: "56748696"
 ### <a name="design-time-error-list-appears-when-the-obj-folder-is-deleted"></a>刪除 obj 資料夾時，出現設計階段錯誤清單  
  如果刪除了 obj 資料夾，就會出現設計階段錯誤清單。  
   
- 當您設計使用<xref:System.Windows.Forms.Integration.ElementHost>，Windows Form 設計工具專案的 obj 資料夾內的 [偵錯或發行] 資料夾中使用產生的檔案。 如果您刪除這些檔案，就會出現設計階段錯誤清單。 若要修正此問題，請重建專案。 如需詳細資訊，請參閱 [Windows Forms 設計工具的設計階段錯誤](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)。  
+ 當您設計使用<xref:System.Windows.Forms.Integration.ElementHost>，Windows Form 設計工具專案的 obj 資料夾內的 [偵錯或發行] 資料夾中使用產生的檔案。 如果您刪除這些檔案，就會出現設計階段錯誤清單。 若要修正此問題，請重建專案。 如需詳細資訊，請參閱 [Windows Forms 設計工具的設計階段錯誤](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)。  
   
 <a name="elementhost_and_ime"></a>   
 ## <a name="elementhost-and-ime"></a>ElementHost 和 IME  
@@ -118,9 +118,9 @@ ms.locfileid: "56748696"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [WPF 設計工具中的互通性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
-- [Windows Forms 和 WPF 互通性輸入架構](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)
-- [如何：啟用混合式應用程式中的視覺化樣式](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)
-- [WindowsFormsHost 元素的配置考量](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
-- [Windows Forms 和 WPF 屬性對應](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [Windows Forms 設計工具的設計階段錯誤](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
-- [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Windows Forms 和 WPF 互通性輸入架構](windows-forms-and-wpf-interoperability-input-architecture.md)
+- [如何：啟用混合式應用程式中的視覺化樣式](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [WindowsFormsHost 元素的配置考量](layout-considerations-for-the-windowsformshost-element.md)
+- [Windows Forms 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
+- [Windows Forms 設計工具的設計階段錯誤](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [移轉和互通性](migration-and-interoperability.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 9afbf0665b114169661a74b60c744203d160fed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0494e53705493de814ed4d4caa869e1e8a700f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662617"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374566"
 ---
 # <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::StartEnumMethodInstancesByAddress 方法
 
@@ -40,11 +40,14 @@ HRESULT StartEnumMethodInstancesByAddress(
 
 ### <a name="parameters"></a>參數
 
-`address` [in]第一個方法執行個體的位址。
+`address`\
+[in]第一個方法執行個體的位址。
 
-`appDomain` [in]方法執行個體的 AppDomain。
+`appDomain`\
+[in]方法執行個體的 AppDomain。
 
-`handle` [out]列舉的方法執行個體控制代碼。
+`handle`\
+[out]列舉的方法執行個體控制代碼。
 
 ## <a name="remarks"></a>備註
 
@@ -59,6 +62,6 @@ HRESULT StartEnumMethodInstancesByAddress(
 
 ## <a name="see-also"></a>另請參閱
 
-- [CLRDataSourceType 列舉](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataProcess 介面](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [CLRDataSourceType 列舉](clrdatasourcetype-enumeration.md)
+- [偵錯](index.md)
+- [IXCLRDataProcess 介面](ixclrdataprocess-interface.md)

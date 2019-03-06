@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: e609c2b1a24ba01bf23226187b6d87e56395ff99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a5836c60d5f0ea21b1373b2d9bbbb29e0b6cb9f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530398"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360020"
 ---
 # <a name="how-to-run-a-workflow"></a>HOW TO：執行工作流程
 本主題將延續 Windows Workflow Foundation 快速入門教學課程，並討論如何建立工作流程主機和執行在先前定義的工作流程[How to:建立工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)主題。
@@ -137,7 +137,7 @@ ms.locfileid: "54530398"
      [!code-csharp[CFX_WF_GettingStarted#11](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]
 
-##  <a name="BKMK_ToRunTheApplication"></a> 若要建置及執行應用程式
+## <a name="BKMK_ToRunTheApplication"></a> 若要建置及執行應用程式
 
 1.  在 [ **方案總管** ] 中，以滑鼠右鍵按一下 [ **NumberGuessWorkflowHost** ]，並選取 [ **設定為啟始專案**]。
 

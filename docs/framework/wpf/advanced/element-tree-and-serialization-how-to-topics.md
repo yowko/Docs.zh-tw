@@ -7,19 +7,19 @@ helpviewer_keywords:
 - element tree [WPF]
 - serialization [WPF]
 ms.assetid: 2d8ef436-d559-4c3e-86de-5a160d5f87d2
-ms.openlocfilehash: df643dbbf1c873841f035dcfd2c0cf11878e2e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7227e61dd8140ec9b1560fbc12e4ba4dd3e0d843
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543370"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372434"
 ---
 # <a name="element-tree-and-serialization-how-to-topics"></a>項目樹狀結構和序列化 HOW TO 主題
-本節中的主題描述如何使用 WPF 項目樹狀結構。  
+在本節中的主題描述如何使用 WPF 元素樹狀結構。  
   
 ## <a name="in-this-section"></a>本節內容  
- [依名稱尋找元素](../../../../docs/framework/wpf/advanced/how-to-find-an-element-by-its-name.md)  
- [覆寫邏輯樹狀結構](../../../../docs/framework/wpf/advanced/how-to-override-the-logical-tree.md)  
+ [依名稱尋找元素](how-to-find-an-element-by-its-name.md)  
+ [覆寫邏輯樹狀結構](how-to-override-the-logical-tree.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.LogicalTreeHelper>  

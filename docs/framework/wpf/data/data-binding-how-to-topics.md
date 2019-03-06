@@ -7,52 +7,52 @@ helpviewer_keywords:
 - data binding [WPF], how-to topics
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
-ms.openlocfilehash: ae69481a884610d6253ee9a45bc3139cabac7e0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49929dc5afaa9bc1e97589d244c2bdbbd14cdb00
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557689"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360572"
 ---
 # <a name="data-binding-how-to-topics"></a>資料繫結 HOW TO 主題
-本節中的主題描述如何使用資料繫結至資料繫結元素，從各種資料來源的 common language runtime (CLR) 物件和 XML 格式。  
+在本節中的主題描述如何使用資料繫結至資料繫結元素，從各種不同的 common language runtime (CLR) 物件和 XML 格式的資料來源。  
   
 ## <a name="in-this-section"></a>本節內容  
- [建立簡單繫結](../../../../docs/framework/wpf/data/how-to-create-a-simple-binding.md)  
- [指定繫結來源](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
- [讓資料可於 XAML 中繫結](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
- [控制 TextBox 文字更新來源的時機](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
- [指定繫結的方向](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md)  
- [繫結至集合並根據選取項目顯示資訊](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [繫結至列舉](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)  
- [繫結兩個控制項的屬性](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)  
- [實作繫結驗證](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [對自訂物件實作驗證邏輯](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)  
- [從繫結的目標屬性取得繫結物件](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
- [實作 CompositeCollection](../../../../docs/framework/wpf/data/how-to-implement-a-compositecollection.md)  
- [轉換繫結的資料](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)  
- [使用程式碼建立繫結](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)  
- [取得資料集合的預設檢視](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)  
- [透過資料 CollectionView 中的物件巡覽](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
- [篩選檢視中的資料](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [排序檢視中的資料](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [使用 XAML 中的檢視排序和群組資料](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [使用含階層式資料的主從式模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
- [使用含階層式 XML 資料的主從式模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [根據繫結項目的清單產生值](../../../../docs/framework/wpf/data/how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
- [實作屬性變更通知](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)  
- [建立和繫結至 ObservableCollection](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
- [實作 PriorityBinding](../../../../docs/framework/wpf/data/how-to-implement-prioritybinding.md)  
- [使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
- [繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
- [在資料繫結中使用 XML 命名空間](../../../../docs/framework/wpf/data/how-to-use-xml-namespaces-in-data-binding.md)  
- [繫結至 ADO.NET 資料來源](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)  
- [繫結至方法](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
- [設定繫結更新的通知](../../../../docs/framework/wpf/data/how-to-set-up-notification-of-binding-updates.md)  
- [清除繫結](../../../../docs/framework/wpf/data/how-to-clear-bindings.md)  
- [尋找 DataTemplate 產生的元素](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
- [繫結至 Web 服務](../../../../docs/framework/wpf/data/how-to-bind-to-a-web-service.md)  
- [繫結至 LINQ 查詢的結果](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
+ [建立簡單繫結](how-to-create-a-simple-binding.md)  
+ [指定繫結來源](how-to-specify-the-binding-source.md)  
+ [讓資料可於 XAML 中繫結](how-to-make-data-available-for-binding-in-xaml.md)  
+ [控制 TextBox 文字更新來源的時機](how-to-control-when-the-textbox-text-updates-the-source.md)  
+ [指定繫結的方向](how-to-specify-the-direction-of-the-binding.md)  
+ [繫結至集合並根據選取項目顯示資訊](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [繫結至列舉](how-to-bind-to-an-enumeration.md)  
+ [繫結兩個控制項的屬性](how-to-bind-the-properties-of-two-controls.md)  
+ [實作繫結驗證](how-to-implement-binding-validation.md)  
+ [對自訂物件實作驗證邏輯](how-to-implement-validation-logic-on-custom-objects.md)  
+ [從繫結的目標屬性取得繫結物件](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+ [實作 CompositeCollection](how-to-implement-a-compositecollection.md)  
+ [轉換繫結的資料](how-to-convert-bound-data.md)  
+ [使用程式碼建立繫結](how-to-create-a-binding-in-code.md)  
+ [取得資料集合的預設檢視](how-to-get-the-default-view-of-a-data-collection.md)  
+ [透過資料 CollectionView 中的物件巡覽](how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
+ [篩選檢視中的資料](how-to-filter-data-in-a-view.md)  
+ [排序檢視中的資料](how-to-sort-data-in-a-view.md)  
+ [使用 XAML 中的檢視排序和群組資料](how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+ [使用含階層式資料的主從式模式](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [使用含階層式 XML 資料的主從式模式](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [根據繫結項目的清單產生值](how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
+ [實作屬性變更通知](how-to-implement-property-change-notification.md)  
+ [建立和繫結至 ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md)  
+ [實作 PriorityBinding](how-to-implement-prioritybinding.md)  
+ [使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
+ [在資料繫結中使用 XML 命名空間](how-to-use-xml-namespaces-in-data-binding.md)  
+ [繫結至 ADO.NET 資料來源](how-to-bind-to-an-ado-net-data-source.md)  
+ [繫結至方法](how-to-bind-to-a-method.md)  
+ [設定繫結更新的通知](how-to-set-up-notification-of-binding-updates.md)  
+ [清除繫結](how-to-clear-bindings.md)  
+ [尋找 DataTemplate 產生的元素](how-to-find-datatemplate-generated-elements.md)  
+ [繫結至 Web 服務](how-to-bind-to-a-web-service.md)  
+ [繫結至 LINQ 查詢的結果](how-to-bind-to-the-results-of-a-linq-query.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Data>  
@@ -64,6 +64,6 @@ ms.locfileid: "33557689"
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>相關章節  
- [資料繫結](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
+ [資料繫結](data-binding-wpf.md)  
   
- [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+ [資料繫結](../advanced/optimizing-performance-data-binding.md)

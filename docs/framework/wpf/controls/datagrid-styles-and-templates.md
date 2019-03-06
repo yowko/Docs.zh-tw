@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: 1a8eb1acf1143c31197ef12e4be3bd4451d98eaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 582179d8469cabc3551e1bed53c87e045f26e7cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685434"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366071"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid 樣式和範本
-本主題描述的樣式和範本<xref:System.Windows.Controls.DataGrid>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述的樣式和範本<xref:System.Windows.Controls.DataGrid>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
   
 ## <a name="datagrid-parts"></a>DataGrid 的組件  
  下表列出的具名組件<xref:System.Windows.Controls.DataGrid>控制項。  
@@ -28,7 +28,7 @@ ms.locfileid: "54685434"
   
  當您建立<xref:System.Windows.Controls.ControlTemplate>for <xref:System.Windows.Controls.DataGrid>，您的範本可能會包含<xref:System.Windows.Controls.ItemsPresenter>內<xref:System.Windows.Controls.ScrollViewer>。 (<xref:System.Windows.Controls.ItemsPresenter>會顯示在每個項目<xref:System.Windows.Controls.DataGrid>;<xref:System.Windows.Controls.ScrollViewer>可在控制項內捲動)。  如果<xref:System.Windows.Controls.ItemsPresenter>不是直接子系<xref:System.Windows.Controls.ScrollViewer>，您必須給予<xref:System.Windows.Controls.ItemsPresenter>名稱， `ItemsPresenter`。  
   
- 預設樣板<xref:System.Windows.Controls.DataGrid>包含<xref:System.Windows.Controls.ScrollViewer>控制項。 如需有關所定義的組件<xref:System.Windows.Controls.ScrollViewer>，請參閱 < [ScrollViewer 樣式和範本](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)。  
+ 預設樣板<xref:System.Windows.Controls.DataGrid>包含<xref:System.Windows.Controls.ScrollViewer>控制項。 如需有關所定義的組件<xref:System.Windows.Controls.ScrollViewer>，請參閱 < [ScrollViewer 樣式和範本](scrollviewer-styles-and-templates.md)。  
   
 ## <a name="datagrid-states"></a>DataGrid 狀態  
  下表列出的視覺狀態<xref:System.Windows.Controls.DataGrid>控制項。  
@@ -161,18 +161,18 @@ ms.locfileid: "54685434"
 ## <a name="datagrid-controltemplate-example"></a>DataGrid ControlTemplate 範例  
  下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>針對<xref:System.Windows.Controls.DataGrid>控制項和其相關聯的類型。  
   
- [!code-xaml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
+ [!code-xaml[ControlTemplateExamples#DataGrid](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
  上述範例使用下列一或多項資源。  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)
-- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [控制項的樣式和範本](control-styles-and-templates.md)
+- [控制項自訂](control-customization.md)
+- [樣式設定和範本化](styling-and-templating.md)
+- [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)

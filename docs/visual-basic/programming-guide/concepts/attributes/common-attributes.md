@@ -2,12 +2,12 @@
 title: 通用屬性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690900"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375398"
 ---
 # <a name="common-attributes-visual-basic"></a>通用屬性 (Visual Basic)
 本主題說明在 Visual Basic 程式中最常用的屬性。  
@@ -22,7 +22,7 @@ ms.locfileid: "54690900"
   
 -   [Visual Basic 屬性](#VB)  
   
-##  <a name="Global"></a> 全域屬性  
+## <a name="Global"></a> 全域屬性  
  大部分屬性會套用至特定語言項目 (例如類別或方法)；不過，有些屬性是全域屬性，其套用至整個組件或模組。 例如，<xref:System.Reflection.AssemblyVersionAttribute> 屬性可以用來將版本資訊內嵌到組件，與下面類似：  
   
 ```vb  
@@ -74,7 +74,7 @@ ms.locfileid: "54690900"
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|定義自訂屬性，以指定組件資訊清單的組件設定 (例如零售或偵錯)。|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|定義組件資訊清單的易記預設別名。|  
   
-##  <a name="Obsolete"></a> Obsolete 屬性  
+## <a name="Obsolete"></a> Obsolete 屬性  
  `Obsolete` 屬性會將程式實體標記為不再建議使用的標記。 每次使用標記為已淘汰的實體都會接著產生警告或錯誤 (視屬性的設定方式而定)。 例如:   
   
 ```vb  
@@ -116,7 +116,7 @@ b.NewMethod()
   
  `Obsolete` 屬性是單次使用屬性，並且可以套用至任何允許屬性的實體。 `Obsolete` 是 <xref:System.ObsoleteAttribute> 的別名。  
   
-##  <a name="Conditional"></a> 條件式屬性  
+## <a name="Conditional"></a> 條件式屬性  
  `Conditional` 屬性會根據前置處理識別碼來執行方法。 `Conditional` 屬性是 <xref:System.Diagnostics.ConditionalAttribute> 的別名，而且可以套用至方法或屬性類別。  
   
  在此範例中，`Conditional` 會套用至方法，以啟用或停用程式特定診斷資訊的顯示︰  
@@ -209,7 +209,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a> 呼叫端資訊屬性  
+## <a name="CallerInfo"></a> 呼叫端資訊屬性  
  使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。  
   
  若要取得成員呼叫端資訊，請使用套用至選擇性參數的屬性。 每個選擇性參數都會指定預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中定義的 Caller Info 屬性：  
@@ -222,7 +222,7 @@ End Class
   
  如需有關 Caller Info 屬性的詳細資訊，請參閱[呼叫端資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)。  
   
-##  <a name="VB"></a> Visual Basic 屬性  
+## <a name="VB"></a> Visual Basic 屬性  
  下表列出 Visual Basic 特有的屬性。  
   
 |屬性|用途|  

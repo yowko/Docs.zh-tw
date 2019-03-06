@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 028f7e8f2be2aa0718eebc133ebd9d35717c824d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbdd04f40c1d4a29ff1807b8a2760802b0338cb3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630849"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379688"
 ---
 # <a name="document-serialization-and-storage"></a>文件序列化與儲存
 Microsoft.NET Framework 會提供功能強大的環境來建立和顯示高品質的文件。  增強的功能，可支援固定文件和非固定格式文件、 進階檢視控制項，結合功能強大的 2D 和 3D 圖形功能，可將新的層級的高品質和使用者經驗的.NET Framework 應用程式。  能夠彈性地管理記憶體中表示的文件是.NET Framework 的重要功能，並能夠有效率地儲存和載入文件從資料存放區是幾乎所有應用程式的需求。  將文件從記憶體內部表示轉換成外部資料存放區的程序，稱為序列化。  讀取資料存放區並重新建立原始記憶體內部執行個體的反向程序，則稱為還原序列化。  
@@ -41,7 +41,7 @@ Microsoft.NET Framework 會提供功能強大的環境來建立和顯示高品�
     -   可支援自訂執行階段設定和選項的使用者介面。  
   
 ### <a name="xps-print-path"></a>XPS 列印路徑  
- Microsoft.NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]列印路徑也提供可擴充機制，來撰寫文件，透過列印輸出。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 可同時作為文件檔案格式，以及 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的原生列印多工緩衝處理格式。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件可以直接傳送至 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 相容的印表機，而不需要轉換成中繼格式。  如需列印路徑輸出選項和功能的其他資訊，請參閱[列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)。  
+ Microsoft.NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]列印路徑也提供可擴充機制，來撰寫文件，透過列印輸出。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 可同時作為文件檔案格式，以及 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的原生列印多工緩衝處理格式。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件可以直接傳送至 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 相容的印表機，而不需要轉換成中繼格式。  如需列印路徑輸出選項和功能的其他資訊，請參閱[列印概觀](printing-overview.md)。  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>外掛程式序列化程式  
@@ -54,11 +54,11 @@ Microsoft.NET Framework 會提供功能強大的環境來建立和顯示高品�
   
  下列範例說明使用的應用程式<xref:System.Windows.Documents.Serialization.SerializerProvider>"PlugInFileFilter"屬性中的方法。  Pluginfilefilter 會列舉已安裝的外掛程式，並建立與可用檔案選項，來篩選字串<xref:Microsoft.Win32.SaveFileDialog>。  
   
- [!code-csharp[DocumentSerialize#DocSerializeFileFilter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
+ [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
   
  已由使用者選取輸出檔案名稱之後，下列範例說明如何使用<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>方法，以指定的文件儲存在指定的格式。  
   
- [!code-csharp[DocumentSerialize#DocSerializePlugIn](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
   
 <a name="InstallingPluginSerializers"></a>   
 ### <a name="installing-plug-in-serializers"></a>安裝外掛程式序列化程式  
@@ -77,6 +77,6 @@ Microsoft.NET Framework 會提供功能強大的環境來建立和顯示高品�
 - <xref:System.Windows.Documents.Serialization>
 - <xref:System.Windows.Xps.XpsDocumentWriter>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
-- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [WPF 中的文件](documents-in-wpf.md)
+- [列印概觀](printing-overview.md)
 - [XML 文件規格：概觀](https://go.microsoft.com/fwlink?LinkID=106246)

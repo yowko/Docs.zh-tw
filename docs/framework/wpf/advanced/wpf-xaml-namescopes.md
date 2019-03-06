@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: 52fc542996f2fe691b62aeff5296e045643fcc7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5a49198d6f55c9a3aa3c7557a96ab791d54351b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498342"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366747"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 名稱範圍
 XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍中的名稱可以用來建立物件的 XAML 定義名稱與其在物件樹狀結構中的執行個體對等項目之間的關聯性。 一般而言，載入 XAML 應用程式的個別 XAML 頁面根時，會建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Managed 程式碼中的 XAML 名稱範圍。 作為程式設計物件的 XAML 名稱範圍由<xref:System.Windows.Markup.INameScope>介面，並由實際的類別也會實作<xref:System.Windows.NameScope>。  
@@ -36,7 +36,7 @@ XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍
 ### <a name="adding-objects-to-runtime-object-trees"></a>將物件新增至執行階段物件樹狀結構  
  剖析 XAML 的時間點代表建立和定義 WPF XAML 名稱範圍的時間點。 如果您在剖析已產生該樹狀結構的 XAML 之後的某個時間點，將物件新增至物件樹狀結構，則新物件上的 `Name` 或 `x:Name` 值不會自動更新 XAML 名稱範圍中的資訊。 載入 XAML 之後，請將物件的名稱新增至 WPF XAML 名稱範圍，您必須呼叫的適當實作<xref:System.Windows.Markup.INameScope.RegisterName%2A>上定義的 XAML 名稱範圍的物件，通常是 XAML 頁面根。 如果未註冊名稱，加入的物件無法依名稱來參考方法透過例如<xref:System.Windows.FrameworkElement.FindName%2A>，而且您無法使用該名稱作為動畫目標。  
   
- 應用程式開發人員最常見的案例是，您將使用<xref:System.Windows.FrameworkElement.RegisterName%2A>將名稱註冊到目前頁面根目錄上的 XAML 名稱範圍。 <xref:System.Windows.FrameworkElement.RegisterName%2A> 該動畫的目標物件是分鏡腳本的重要案例的一部分。 如需詳細資訊，請參閱[分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
+ 應用程式開發人員最常見的案例是，您將使用<xref:System.Windows.FrameworkElement.RegisterName%2A>將名稱註冊到目前頁面根目錄上的 XAML 名稱範圍。 <xref:System.Windows.FrameworkElement.RegisterName%2A> 該動畫的目標物件是分鏡腳本的重要案例的一部分。 如需詳細資訊，請參閱[分鏡腳本概觀](../graphics-multimedia/storyboards-overview.md)。  
   
  如果您呼叫<xref:System.Windows.FrameworkElement.RegisterName%2A>以外的物件，定義 XAML 名稱範圍的物件，在名稱仍註冊內，保存呼叫物件的 XAML 名稱範圍視為已呼叫<xref:System.Windows.FrameworkElement.RegisterName%2A>上定義物件的 XAML 名稱範圍。  
   
@@ -49,7 +49,7 @@ XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍
   
  如果物件提供作為`dependencyObject`for<xref:System.Windows.NameScope.SetNameScope%2A>不是<xref:System.Windows.Markup.INameScope>實作中，<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>，則呼叫<xref:System.Windows.FrameworkElement.RegisterName%2A>上任何子系項目會有任何作用。 如果您無法明確地建立新的 XAML 名稱範圍，然後呼叫<xref:System.Windows.FrameworkElement.RegisterName%2A>會引發例外狀況。  
   
- 如需在程式碼中使用 XAML 名稱範圍 API 的範例，請參閱[定義名稱範圍](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)。  
+ 如需在程式碼中使用 XAML 名稱範圍 API 的範例，請參閱[定義名稱範圍](../graphics-multimedia/how-to-define-a-name-scope.md)。  
   
 <a name="Namescopes_in_Styles_and_Templates"></a>   
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>樣式和範本中的 XAML 名稱範圍  
@@ -57,7 +57,7 @@ XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍
   
  參考下列範例：  
   
- [!code-xaml[XamlOvwSupport#NameScopeTemplates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
+ [!code-xaml[XamlOvwSupport#NameScopeTemplates](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
   
  在這裡，相同的範本會套用至兩個不同的按鈕。 如果範本沒有離散 XAML 名稱範圍，則範本中所使用的 `TheBorder` 名稱會導致 XAML 名稱範圍中的名稱衝突。 範本的每個具現化都有其專屬的 XAML 名稱範圍；因此，在此範例中，每個具現化範本的 XAML 名稱範圍都只會包含一個名稱。  
   
@@ -97,5 +97,5 @@ XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍
 -   <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>另請參閱
-- [WPF XAML 的 XAML 命名空間和命名空間對應](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
-- [x:Name 指示詞](../../../../docs/framework/xaml-services/x-name-directive.md)
+- [WPF XAML 的 XAML 命名空間和命名空間對應](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
+- [x:Name 指示詞](../../xaml-services/x-name-directive.md)

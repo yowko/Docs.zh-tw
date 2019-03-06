@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - resource keys [WPF], SystemFonts class
 ms.assetid: 036ebea7-5677-4f60-8ba4-56c9f9d9b8bd
-ms.openlocfilehash: aec3ba8b84836d068b7efcfe53b34b126334b8de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d354bb598da6912bfa34f611cb55d4dcd7920a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628704"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352837"
 ---
 # <a name="how-to-use-system-fonts-keys"></a>HOW TO：使用系統字型索引鍵
 系統資源會將數個系統度量資訊公開為資源，協助開發人員建立與系統設定一致的視覺效果。 <xref:System.Windows.SystemFonts> 是包含系統字型值以及繫結至值的系統字型資源的類別，例如<xref:System.Windows.SystemFonts.CaptionFontFamily%2A>和<xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>。  
@@ -22,9 +22,9 @@ ms.locfileid: "54628704"
  下列範例示範如何存取及使用系統字型動態資源，以設定或自訂按鈕的樣式。 這[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]範例會建立將指派的按鈕樣式<xref:System.Windows.SystemFonts>至按鈕的值。  
   
 ## <a name="example"></a>範例  
- [!code-xaml[SystemRes_snip#FontDynamicResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#fontdynamicresources)]  
+ [!code-xaml[SystemRes_snip#FontDynamicResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#fontdynamicresources)]  
   
 ## <a name="see-also"></a>另請參閱
-- [使用系統筆刷繪製區域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [使用 SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)
-- [使用 SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)
+- [使用系統筆刷繪製區域](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [使用 SystemParameters](how-to-use-systemparameters.md)
+- [使用 SystemFonts](how-to-use-systemfonts.md)

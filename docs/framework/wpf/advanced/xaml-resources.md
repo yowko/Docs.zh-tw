@@ -7,41 +7,41 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: 04d1a72d70d6fd0753677f2e9635a05a60d33fec
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f5d6ae2d21058e7e6dd9fa9736800237082766d1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748267"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364745"
 ---
 # <a name="xaml-resources"></a>XAML 資源
-資源是可在應用程式中不同位置重複使用的物件。 資源的範例包括筆刷和樣式。 本概觀說明如何使用中的資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 您也可以建立及存取資源，使用程式碼，或是交換使用程式碼之間和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 資源和程式碼](../../../../docs/framework/wpf/advanced/resources-and-code.md)。  
+資源是可在應用程式中不同位置重複使用的物件。 資源的範例包括筆刷和樣式。 本概觀說明如何使用中的資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 您也可以建立及存取資源，使用程式碼，或是交換使用程式碼之間和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 資源和程式碼](resources-and-code.md)。  
   
 > [!NOTE]
->  本主題中所述的資源檔案為不同的資源檔中所述[WPF 應用程式資源、 內容和資料檔案](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)也不同於中所述的內嵌或連結資源[管理應用程式資源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)。  
+>  本主題中所述的資源檔案為不同的資源檔中所述[WPF 應用程式資源、 內容和資料檔案](../app-development/wpf-application-resource-content-and-data-files.md)也不同於中所述的內嵌或連結資源[管理應用程式資源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)。  
   
   
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>在 XAML 中使用資源  
  下列範例會定義<xref:System.Windows.Media.SolidColorBrush>頁面的根項目上的資源。 此範例會參考資源，並使用它來設定屬性的數個子項目，包括<xref:System.Windows.Shapes.Ellipse>，則<xref:System.Windows.Controls.TextBlock>，和<xref:System.Windows.Controls.Button>。  
   
- [!code-xaml[FEResourceSH_snip#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xaml)]  
+ [!code-xaml[FEResourceSH_snip#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xaml)]  
   
  每個架構層級項目 (<xref:System.Windows.FrameworkElement>或是<xref:System.Windows.FrameworkContentElement>) 已<xref:System.Windows.FrameworkElement.Resources%2A>屬性，這是包含資源的屬性 (作為<xref:System.Windows.ResourceDictionary>) 資源定義。 您可以在任何項目上定義資源。 不過，資源最常定義於根項目，也就是<xref:System.Windows.Controls.Page>在範例中。  
   
- 資源字典中的每個資源都必須有唯一索引鍵。 當您在標記中定義的資源時，您將指派到唯一的索引鍵[X:key 指示詞](../../../../docs/framework/xaml-services/x-key-directive.md)。 索引鍵通常是字串；不過，您也可以使用適當的標記延伸，將它設定為其他物件類型。 特定的功能區中所使用資源非字串索引鍵[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，特別是代表樣式、 元件資源和資料樣式。  
+ 資源字典中的每個資源都必須有唯一索引鍵。 當您在標記中定義的資源時，您將指派到唯一的索引鍵[X:key 指示詞](../../xaml-services/x-key-directive.md)。 索引鍵通常是字串；不過，您也可以使用適當的標記延伸，將它設定為其他物件類型。 特定的功能區中所使用資源非字串索引鍵[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，特別是代表樣式、 元件資源和資料樣式。  
   
  定義資源之後，您可以使用指定索引鍵名稱的資源標記延伸語法，參考要用於屬性值的資源，例如：  
   
- [!code-xaml[FEResourceSH_snip#KeyNameUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#keynameusage)]  
+ [!code-xaml[FEResourceSH_snip#KeyNameUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#keynameusage)]  
   
  在上述範例中，當[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]載入器處理值`{StaticResource MyBrush}`for<xref:System.Windows.Controls.Control.Background%2A>屬性<xref:System.Windows.Controls.Button>，資源查閱邏輯會先檢查資源字典中的<xref:System.Windows.Controls.Button>項目。 如果<xref:System.Windows.Controls.Button>沒有定義資源索引鍵`MyBrush`（它沒有; 其資源集合是空的），查閱會接著檢查的父項目<xref:System.Windows.Controls.Button>，也就是<xref:System.Windows.Controls.Page>。 因此，當您定義的資源上<xref:System.Windows.Controls.Page>根項目，邏輯樹狀結構中的所有項目<xref:System.Windows.Controls.Page>可以存取它，並設定任何屬性的值可接受的您可以重複使用相同的資源<xref:System.Type>的資源表示。 在上述範例中，相同`MyBrush`資源設定兩個不同的屬性：<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>，而<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>。  
   
 <a name="staticdynamic"></a>   
 ## <a name="static-and-dynamic-resources"></a>靜態和動態資源  
- 資源可以當做靜態資源或動態資源參考。 這是藉由使用[StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)或[DynamicResource 標記延伸](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)。 標記延伸是一項功能[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您可以讓標記延伸處理屬性字串，並傳回物件，以指定的物件參考[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]載入器。 如需標記延伸行為的詳細資訊，請參閱[標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
+ 資源可以當做靜態資源或動態資源參考。 這是藉由使用[StaticResource 標記延伸](staticresource-markup-extension.md)或[DynamicResource 標記延伸](dynamicresource-markup-extension.md)。 標記延伸是一項功能[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您可以讓標記延伸處理屬性字串，並傳回物件，以指定的物件參考[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]載入器。 如需標記延伸行為的詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
- 當您使用標記延伸時，您通常會提供一或多個字串形式的參數，以供該特定標記延伸處理，而不是在所設定的屬性內容中進行評估。 [StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)處理按鍵，藉由查閱在所有可用的資源字典中該索引鍵的值。 這會在載入期間發生，也就是載入程序需要指派接受靜態資源參考的屬性值時。 [DynamicResource 標記延伸](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)改為處理程序藉由建立運算式和該運算式的索引鍵會保持未評估直到實際執行應用程式時，此時運算式會評估並提供值。  
+ 當您使用標記延伸時，您通常會提供一或多個字串形式的參數，以供該特定標記延伸處理，而不是在所設定的屬性內容中進行評估。 [StaticResource 標記延伸](staticresource-markup-extension.md)處理按鍵，藉由查閱在所有可用的資源字典中該索引鍵的值。 這會在載入期間發生，也就是載入程序需要指派接受靜態資源參考的屬性值時。 [DynamicResource 標記延伸](dynamicresource-markup-extension.md)改為處理程序藉由建立運算式和該運算式的索引鍵會保持未評估直到實際執行應用程式時，此時運算式會評估並提供值。  
   
  當您參考資源時，下列考量可能會影響您使用靜態資源參考或動態資源參考：  
   
@@ -66,7 +66,7 @@ ms.locfileid: "56748267"
   
 -   您要使用資源來設定大量相依性屬性。 相依性屬性具有屬性系統已啟用的有效值快取，因此如果您將值提供給可在載入時評估的相依性屬性，相依性屬性不必檢查是否有重新評估的運算式，而且可能傳回最後一個有效值。 這項技術可能會提升效能。  
   
--   您想要變更的基礎資源的所有取用者，或您想要使用不同的可寫入執行個體維護每個取用者[x： 共用屬性](../../../../docs/framework/xaml-services/x-shared-attribute.md)。  
+-   您想要變更的基礎資源的所有取用者，或您想要使用不同的可寫入執行個體維護每個取用者[x： 共用屬性](../../xaml-services/x-shared-attribute.md)。  
   
 #### <a name="static-resource-lookup-behavior"></a>靜態資源查閱行為  
   
@@ -133,32 +133,32 @@ ms.locfileid: "56748267"
   
 -   所設定的屬性必須是屬性上<xref:System.Windows.Freezable>提供的值為<xref:System.Windows.FrameworkElement>或是<xref:System.Windows.FrameworkContentElement>屬性，或<xref:System.Windows.Setter>值。  
   
- 由於所設定的屬性必須是<xref:System.Windows.DependencyProperty>或<xref:System.Windows.Freezable>屬性，大部分的屬性變更可以傳播至 UI，因為屬性變更 （變更的動態資源值） 由屬性系統認可。 大多數控制項所包含邏輯，會強制另一個控制項的配置，如果<xref:System.Windows.DependencyProperty>變更和屬性可能會影響版面配置。 然而，並非所有的屬性具有[DynamicResource 標記延伸](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)做為其值會保證提供的方式，更新在 UI 中的即時值。 該功能仍然可能會依屬性、擁有屬性的類型，甚至是應用程式的邏輯結構而有所不同。  
+ 由於所設定的屬性必須是<xref:System.Windows.DependencyProperty>或<xref:System.Windows.Freezable>屬性，大部分的屬性變更可以傳播至 UI，因為屬性變更 （變更的動態資源值） 由屬性系統認可。 大多數控制項所包含邏輯，會強制另一個控制項的配置，如果<xref:System.Windows.DependencyProperty>變更和屬性可能會影響版面配置。 然而，並非所有的屬性具有[DynamicResource 標記延伸](dynamicresource-markup-extension.md)做為其值會保證提供的方式，更新在 UI 中的即時值。 該功能仍然可能會依屬性、擁有屬性的類型，甚至是應用程式的邏輯結構而有所不同。  
   
 <a name="stylesimplicitkeys"></a>   
 ## <a name="styles-datatemplates-and-implicit-keys"></a>樣式、DataTemplate 和隱含索引鍵  
  更早版本，說明所有項目中<xref:System.Windows.ResourceDictionary>必須有索引鍵。 不過，這不表示所有資源都必須都有明確`x:Key`。 有幾種物件類型會在定義為資源時支援隱含索引鍵，其中索引鍵值會繫結至另一個屬性的值。 這就所謂的隱含索引鍵，而`x:Key`屬性是明確的索引鍵。 您可以藉由指定明確索引鍵，來覆寫任何隱含索引鍵。  
   
- 資源的其中一個非常重要的案例是當您定義<xref:System.Windows.Style>。 事實上，<xref:System.Windows.Style>幾乎都定義為資源字典中的項目因為樣式原本就是僅供重複使用。 如需有關樣式的詳細資訊，請參閱 <<c0> [ 設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+ 資源的其中一個非常重要的案例是當您定義<xref:System.Windows.Style>。 事實上，<xref:System.Windows.Style>幾乎都定義為資源字典中的項目因為樣式原本就是僅供重複使用。 如需有關樣式的詳細資訊，請參閱 <<c0> [ 設定樣式和範本](../controls/styling-and-templating.md)。  
   
- 控制項的樣式可以透過隱含索引鍵來建立及參考。 定義預設控制項外觀的佈景主題樣式會依賴此隱含索引鍵。 從要求它的觀點來看，隱含索引鍵是<xref:System.Type>控制項本身。 從定義資源的觀點來看，隱含索引鍵是<xref:System.Windows.Style.TargetType%2A>的樣式。 因此，如果您要建立自訂控制項的佈景主題，建立互動的樣式與現有佈景主題樣式，您不需要指定[X:key 指示詞](../../../../docs/framework/xaml-services/x-key-directive.md)該<xref:System.Windows.Style>。 此外，如果您想要使用佈景主題樣式，則完全不需要指定任何樣式。 比方說，下列樣式定義的運作方式，即使<xref:System.Windows.Style>有索引鍵，似乎不到資源：  
+ 控制項的樣式可以透過隱含索引鍵來建立及參考。 定義預設控制項外觀的佈景主題樣式會依賴此隱含索引鍵。 從要求它的觀點來看，隱含索引鍵是<xref:System.Type>控制項本身。 從定義資源的觀點來看，隱含索引鍵是<xref:System.Windows.Style.TargetType%2A>的樣式。 因此，如果您要建立自訂控制項的佈景主題，建立互動的樣式與現有佈景主題樣式，您不需要指定[X:key 指示詞](../../xaml-services/x-key-directive.md)該<xref:System.Windows.Style>。 此外，如果您想要使用佈景主題樣式，則完全不需要指定任何樣式。 比方說，下列樣式定義的運作方式，即使<xref:System.Windows.Style>有索引鍵，似乎不到資源：  
   
- [!code-xaml[FEResourceSH_snip#ImplicitStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
+ [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- 該樣式其實有索引鍵： 隱含索引鍵`typeof(` <xref:System.Windows.Controls.Button> `)`。 在標記中，您可以指定<xref:System.Windows.Style.TargetType%2A>直接做為類型名稱 (或您可以選擇性地使用[{x: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md) 要傳回<xref:System.Type>。  
+ 該樣式其實有索引鍵： 隱含索引鍵`typeof(` <xref:System.Windows.Controls.Button> `)`。 在標記中，您可以指定<xref:System.Windows.Style.TargetType%2A>直接做為類型名稱 (或您可以選擇性地使用[{x: Type...}](../../xaml-services/x-type-markup-extension.md) 要傳回<xref:System.Type>。  
   
  透過所使用的預設佈景主題樣式機制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，樣式會套用作為執行階段樣式<xref:System.Windows.Controls.Button>在頁面上，即使<xref:System.Windows.Controls.Button>本身不會嘗試指定其<xref:System.Windows.FrameworkElement.Style%2A>屬性或特定的資源參考的樣式。 稍早在比使用佈景主題字典樣式所具有的相同金鑰的佈景主題字典樣式的查閱序列中找到您頁面中定義的樣式。 您可以指定`<Button>Hello</Button>`頁面，並以您定義的樣式中的任何地方<xref:System.Windows.Style.TargetType%2A>的`Button`會套用至該按鈕。 如果您想，您可以仍然明確樣式的索引鍵具有相同的型別值<xref:System.Windows.Style.TargetType%2A>、 清楚的標記，但為選用。  
   
- 樣式的隱含索引鍵不會套用在控制項上如果<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>已`true`(另請注意，<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>可能設定為 control 類別，而不是明確的控制項執行個體上的原生行為的一部分)。 此外，為了支援衍生的類別情節的隱含索引鍵，控制項必須覆寫<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(提供做為一部分的所有現有控制項[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]這麼做)。 如需樣式、 佈景主題和控制設計的詳細資訊，請參閱[設計可設定樣式控制項的方針](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)。  
+ 樣式的隱含索引鍵不會套用在控制項上如果<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>已`true`(另請注意，<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>可能設定為 control 類別，而不是明確的控制項執行個體上的原生行為的一部分)。 此外，為了支援衍生的類別情節的隱含索引鍵，控制項必須覆寫<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(提供做為一部分的所有現有控制項[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]這麼做)。 如需樣式、 佈景主題和控制設計的詳細資訊，請參閱[設計可設定樣式控制項的方針](../controls/guidelines-for-designing-stylable-controls.md)。  
   
- <xref:System.Windows.DataTemplate> 也有隱含索引鍵。 隱含索引鍵<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>屬性值。 <xref:System.Windows.DataTemplate.DataType%2A> 也可以指定為型別名稱，而不是使用明確[{x: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md). 如需詳細資訊，請參閱 <<c0> [ 資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)。  
+ <xref:System.Windows.DataTemplate> 也有隱含索引鍵。 隱含索引鍵<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>屬性值。 <xref:System.Windows.DataTemplate.DataType%2A> 也可以指定為型別名稱，而不是使用明確[{x: Type...}](../../xaml-services/x-type-markup-extension.md). 如需詳細資訊，請參閱 <<c0> [ 資料範本化概觀](../data/data-templating-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.ResourceDictionary>
-- [應用程式資源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [資源和程式碼](../../../../docs/framework/wpf/advanced/resources-and-code.md)
-- [定義和參考資源](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)
-- [應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)
-- [x:Type 標記延伸模組](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
-- [DynamicResource 標記延伸](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+- [應用程式資源](optimizing-performance-application-resources.md)
+- [資源和程式碼](resources-and-code.md)
+- [定義和參考資源](how-to-define-and-reference-a-resource.md)
+- [應用程式管理概觀](../app-development/application-management-overview.md)
+- [x:Type 標記延伸模組](../../xaml-services/x-type-markup-extension.md)
+- [StaticResource 標記延伸](staticresource-markup-extension.md)
+- [DynamicResource 標記延伸](dynamicresource-markup-extension.md)

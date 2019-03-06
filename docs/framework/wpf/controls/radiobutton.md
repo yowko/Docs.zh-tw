@@ -7,19 +7,19 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553919"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365265"
 ---
 # <a name="radiobutton"></a>RadioButton
-<xref:System.Windows.Controls.RadioButton> 控制項通常分組為使用者提供單一選擇多個選項。選取一次只能有一個按鈕。  
+<xref:System.Windows.Controls.RadioButton> 控制項是通常群組在一起以提供使用者在數個選項之間的單一選項您可以選取一次只能有一個按鈕。  
   
  下圖顯示的範例<xref:System.Windows.Controls.RadioButton>控制項。  
   
- ![選項按鈕狀態](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
+ ![選項按鈕狀態](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
 典型的 RadioButton  
   
 ## <a name="reference"></a>參考資料  

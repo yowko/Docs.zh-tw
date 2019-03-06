@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], creating simple bindings
 - binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
-ms.openlocfilehash: 3e38fa5fd1c7d0a635efd93de6ebe551f1eb1b82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 157060e784e4169ac8e31c6028ed65f0a9568e0f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594833"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373578"
 ---
 # <a name="how-to-create-a-simple-binding"></a>HOW TO：建立簡單繫結
 此範例將示範如何建立簡單<xref:System.Windows.Data.Binding>。  
@@ -21,10 +21,10 @@ ms.locfileid: "54594833"
   
  反白顯示包含的那一行`<src>`項目，在下列範例會具現化`Person`物件`PersonName`屬性值為`Joe`。 這在完成`Resources`區段，然後指派`x:Key`。  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
+ [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
  包含反白顯示的列`<TextBlock>`項目再將繫結<xref:System.Windows.Controls.TextBlock>若要控制`PersonName`屬性。 如此一來， <xref:System.Windows.Controls.TextBlock> "Joe"的值會出現。  
   
 ## <a name="see-also"></a>另請參閱
-- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [資料繫結概觀](data-binding-overview.md)
+- [HOW-TO 主題](data-binding-how-to-topics.md)

@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: aa0c07c092b6a1e9e37d9c3695107b845055a981
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 8e65e89fb0406d9d2849e0a1be4b1aa764b935ab
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745569"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352603"
 ---
 # <a name="properties-wpf"></a>屬性 (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一組可用來擴充 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性功能的服務。 整體而言，這些服務通常稱為 WPF 屬性系統。 受到 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 屬性系統支援的屬性則稱為相依性屬性。  
   
 ## <a name="in-this-section"></a>本節內容  
-- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [附加屬性概觀](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [相依性屬性回呼和驗證](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
-- [架構屬性中繼資料](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
-- [相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [唯讀相依性屬性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
-- [屬性值繼承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
-- [相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
-- [DependencyObject 的安全建構函式模式](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
-- [集合類型的相依性屬性](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
-- [XAML 載入和相依性屬性](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+- [相依性屬性概觀](dependency-properties-overview.md)
+- [附加屬性概觀](attached-properties-overview.md)
+- [自訂相依性屬性](custom-dependency-properties.md)
+- [相依性屬性中繼資料](dependency-property-metadata.md)
+- [相依性屬性回呼和驗證](dependency-property-callbacks-and-validation.md)
+- [架構屬性中繼資料](framework-property-metadata.md)
+- [相依性屬性值優先順序](dependency-property-value-precedence.md)
+- [唯讀相依性屬性](read-only-dependency-properties.md)
+- [屬性值繼承](property-value-inheritance.md)
+- [相依性屬性的安全性](dependency-property-security.md)
+- [DependencyObject 的安全建構函式模式](safe-constructor-patterns-for-dependencyobjects.md)
+- [集合類型的相依性屬性](collection-type-dependency-properties.md)
+- [XAML 載入和相依性屬性](xaml-loading-and-dependency-properties.md)
+- [HOW-TO 主題](properties-how-to-topics.md)
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.DependencyProperty>  
@@ -45,12 +45,12 @@ ms.locfileid: "56745569"
  <xref:System.Windows.DependencyObject>  
   
 ## <a name="related-sections"></a>相關章節  
- [WPF 架構](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [WPF 中的 XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [基底項目](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [元素樹狀結構和序列化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [事件](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [輸入](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [資源](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [WPF 內容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [執行緒模型](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF 架構](wpf-architecture.md)  
+  [WPF 中的 XAML](xaml-in-wpf.md)  
+  [基底項目](base-elements.md)  
+  [元素樹狀結構和序列化](element-tree-and-serialization.md)  
+  [事件](events-wpf.md)  
+  [輸入](input-wpf.md)  
+  [資源](resources-wpf.md)  
+  [WPF 內容模型](../controls/wpf-content-model.md)  
+  [執行緒模型](threading-model.md)

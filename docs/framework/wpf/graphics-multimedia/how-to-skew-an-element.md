@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: 0ba5f3645156459a711d88b7330b221a5d083e7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fec3ec38a19b552e988d26ea57c6f9beed6ce06e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611328"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359364"
 ---
 # <a name="how-to-skew-an-element"></a>HOW TO：傾斜項目
 此範例示範如何使用<xref:System.Windows.Media.SkewTransform>來扭曲元素。 扭曲也稱為傾斜，這種轉換會以非一致的方式延伸座標空間。 一般用途<xref:System.Windows.Media.SkewTransform>會模擬[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]深度[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]物件。  
@@ -25,19 +25,19 @@ ms.locfileid: "54611328"
  下列範例會套用至 45 度的水平扭曲<xref:System.Windows.Shapes.Rectangle>從中心點 (0，0)。  
   
 ## <a name="example"></a>範例  
- [!code-xaml[transformsSample#41](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
+ [!code-xaml[transformsSample#41](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
   
  下列範例會套用至 45 度的水平扭曲<xref:System.Windows.Shapes.Rectangle>從中心點 (25，25)。  
   
- [!code-xaml[transformsSample#42](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#42)]  
+ [!code-xaml[transformsSample#42](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#42)]  
   
  下列範例會以 45 度的垂直扭曲套用<xref:System.Windows.Shapes.Rectangle>從中心點 (25，25)。  
   
- [!code-xaml[transformsSample#43](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#43)]  
+ [!code-xaml[transformsSample#43](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#43)]  
   
  下圖顯示本範例所使用的不同扭曲。  
   
- ![SkewTransform 範例](../../../../docs/framework/wpf/graphics-multimedia/media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
+ ![SkewTransform 範例](./media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
 三個 SkewTransform 範例的示意圖  
   
  如需完整範例，請參閱 [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)。  
@@ -45,5 +45,5 @@ ms.locfileid: "54611328"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.SkewTransform>
-- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [轉換概觀](transforms-overview.md)
+- [HOW-TO 主題](transformations-how-to-topics.md)

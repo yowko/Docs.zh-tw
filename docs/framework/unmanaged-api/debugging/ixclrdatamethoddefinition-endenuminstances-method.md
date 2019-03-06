@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4a7cd8850778e9bbbc7d8d67f464c7787e40bc13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28cd15a793d303e1d6e64c52c1d0095e8d619c7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566087"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378926"
 ---
 # <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>IXCLRDataMethodDefinition::EndEnumInstances 方法
 
@@ -36,9 +36,10 @@ HRESULT EndEnumInstances(
 );
 ```
 
-### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
-`handle` [out]列舉的執行個體控制代碼。
+`handle`\
+[out]列舉的執行個體控制代碼。
 
 ## <a name="remarks"></a>備註
 

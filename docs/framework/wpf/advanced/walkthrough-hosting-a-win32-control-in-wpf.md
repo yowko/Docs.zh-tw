@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 047ccd4ea4ba83c8d7427559f3ee76cc3547a430
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 1bb5def111aad850a5f74afaba352394ac2587e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747527"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377400"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>逐步解說：裝載在 WPF 中的 Win32 控制項
 Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程式。 不過，當您已長期開發 Win32 程式碼中，它可能會重複使用至少一些更有效率的 WPF 應用程式中的程式碼而不是完全重寫程式。 WPF 提供簡單的機制，以裝載 Win32 視窗中，WPF 頁面上。  
@@ -23,7 +23,7 @@ Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>需求  
- 本主題假設基本的熟悉 WPF 和 Win32 程式設計。 如需基本 WPF 程式設計簡介，請參閱 <<c0> [ 開始使用](../../../../docs/framework/wpf/getting-started/index.md)。 Win32 程式設計的簡介，您應參考有關該主旨，書籍的任何特別*程式設計 Windows* Charles petzold 的。  
+ 本主題假設基本的熟悉 WPF 和 Win32 程式設計。 如需基本 WPF 程式設計簡介，請參閱 <<c0> [ 開始使用](../getting-started/index.md)。 Win32 程式設計的簡介，您應參考有關該主旨，書籍的任何特別*程式設計 Windows* Charles petzold 的。  
   
  因為隨附本主題的範例中實作C#，它會使用平台引動服務 (PInvoke) 來存取 Win32 API。 PInvoke 疐裾是很有幫助，但並非必要。  
   
@@ -64,19 +64,19 @@ Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程
   
  若要實作此版面配置的程式碼都非常簡單。 根項目是<xref:System.Windows.Controls.DockPanel>具有兩個子項目。 第一個是<xref:System.Windows.Controls.Border>裝載 ListBox 控制項項目。 它會佔用頁面右上角的 200x200 方形。 第二個是<xref:System.Windows.Controls.StackPanel>元素，其中包含一組 WPF 控制項來顯示資訊，以及可讓您藉由設定操控 ListBox 控制項公開的交互操作屬性。 每個項目子系的<xref:System.Windows.Controls.StackPanel>，看到用於這些項目是什麼，或其功用的詳細資料的各種元素的參考資料，這些會列在下列範例程式碼，但是無法在這裡說明 （基本交互操作的模型不需要任何一個，他們會提供加入此範例中的某些互動性）。  
   
- [!code-xaml[WPFHostingWin32Control#WPFUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
+ [!code-xaml[WPFHostingWin32Control#WPFUI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   
 <a name="host_class"></a>   
 ## <a name="implement-a-class-to-host-the-microsoft-win32-control"></a>實作類別以裝載 Microsoft Win32 控制項  
  此範例的核心是實際裝載 ControlHost.cs 控制項的類別。 它繼承自<xref:System.Windows.Interop.HwndHost>。 建構函式會採用兩個參數、 高度和寬度，這會對應到的高度和寬度<xref:System.Windows.Controls.Border>裝載 ListBox 控制項項目。 這些值將稍後用來確保控制相符的項目大小<xref:System.Windows.Controls.Border>項目。  
   
- [!code-csharp[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostclass)]
- [!code-vb[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostclass)]  
+ [!code-csharp[WPFHostingWin32Control#ControlHostClass](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostclass)]
+ [!code-vb[WPFHostingWin32Control#ControlHostClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostclass)]  
   
  還有一組常數。 這些常數主要取自 Winuser.h，並可讓您呼叫 Win32 函式時，使用傳統的名稱。  
   
- [!code-csharp[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostconstants)]
- [!code-vb[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostconstants)]  
+ [!code-csharp[WPFHostingWin32Control#ControlHostConstants](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostconstants)]
+ [!code-vb[WPFHostingWin32Control#ControlHostConstants](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostconstants)]  
   
 <a name="buildwindowcore"></a>   
 ### <a name="override-buildwindowcore-to-create-the-microsoft-win32-window"></a>覆寫 BuildWindowCore 以建立 Microsoft Win32 視窗  
@@ -90,26 +90,26 @@ Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程
   
  控制項的 HWND 是透過唯讀屬性所公開；因此，主頁面可以使用它，以將訊息傳送至控制項。  
   
- [!code-csharp[WPFHostingWin32Control#IntPtrProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#intptrproperty)]
- [!code-vb[WPFHostingWin32Control#IntPtrProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#intptrproperty)]  
+ [!code-csharp[WPFHostingWin32Control#IntPtrProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#intptrproperty)]
+ [!code-vb[WPFHostingWin32Control#IntPtrProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#intptrproperty)]  
   
  ListBox 控制項會建立為主視窗的子系。 如上面所討論，這兩個視窗的高度和寬度都會設定為傳遞至建構函式的值。 這確保主視窗和控制項的大小與頁面上的保留區域相同。  建立之後，此範例會傳回<xref:System.Runtime.InteropServices.HandleRef>物件，其中包含的主視窗的 HWND。  
   
- [!code-csharp[WPFHostingWin32Control#BuildWindowCore](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcore)]
- [!code-vb[WPFHostingWin32Control#BuildWindowCore](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcore)]  
+ [!code-csharp[WPFHostingWin32Control#BuildWindowCore](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcore)]
+ [!code-vb[WPFHostingWin32Control#BuildWindowCore](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcore)]  
   
- [!code-csharp[WPFHostingWin32Control#BuildWindowCoreHelper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcorehelper)]
- [!code-vb[WPFHostingWin32Control#BuildWindowCoreHelper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcorehelper)]  
+ [!code-csharp[WPFHostingWin32Control#BuildWindowCoreHelper](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcorehelper)]
+ [!code-vb[WPFHostingWin32Control#BuildWindowCoreHelper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcorehelper)]  
   
 <a name="destroywindow_wndproc"></a>   
 ### <a name="implement-destroywindow-and-wndproc"></a>實作 DestroyWindow 和 WndProc  
  除了<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>，您也必須覆寫<xref:System.Windows.Interop.HwndHost.WndProc%2A>並<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>方法<xref:System.Windows.Interop.HwndHost>。 在此範例中，控制項的訊息會由<xref:System.Windows.Interop.HwndHost.MessageHook>處理常式，因此實作<xref:System.Windows.Interop.HwndHost.WndProc%2A>和<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>非常少。 情況<xref:System.Windows.Interop.HwndHost.WndProc%2A>，將`handled`到`false`指出 不處理訊息，並傳回 0。 針對<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>，只會終結視窗。  
   
- [!code-csharp[WPFHostingWin32Control#WndProcDestroy](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroy)]
- [!code-vb[WPFHostingWin32Control#WndProcDestroy](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroy)]  
+ [!code-csharp[WPFHostingWin32Control#WndProcDestroy](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroy)]
+ [!code-vb[WPFHostingWin32Control#WndProcDestroy](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroy)]  
   
- [!code-csharp[WPFHostingWin32Control#WndProcDestroyHelper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroyhelper)]
- [!code-vb[WPFHostingWin32Control#WndProcDestroyHelper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroyhelper)]  
+ [!code-csharp[WPFHostingWin32Control#WndProcDestroyHelper](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroyhelper)]
+ [!code-vb[WPFHostingWin32Control#WndProcDestroyHelper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroyhelper)]  
   
 <a name="host_the_control"></a>   
 ## <a name="host-the-control-on-the-page"></a>在頁面上裝載控制項  
@@ -120,11 +120,11 @@ Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程
 > [!NOTE]
 >  請注意，sendmessage 的兩個 PInvoke 宣告。 這是必要的因為其中一個使用`wParam`傳遞字串和其他的參數會使用它來傳遞整數。 每個簽章都必須要有不同的宣告，確保正確地封送處理資料。  
   
- [!code-csharp[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
- [!code-vb[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
+ [!code-csharp[WPFHostingWin32Control#HostWindowClass](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
+ [!code-vb[WPFHostingWin32Control#HostWindowClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
   
- [!code-csharp[WPFHostingWin32Control#ControlMsgFilterSendMessage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#controlmsgfiltersendmessage)]
- [!code-vb[WPFHostingWin32Control#ControlMsgFilterSendMessage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#controlmsgfiltersendmessage)]  
+ [!code-csharp[WPFHostingWin32Control#ControlMsgFilterSendMessage](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#controlmsgfiltersendmessage)]
+ [!code-vb[WPFHostingWin32Control#ControlMsgFilterSendMessage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#controlmsgfiltersendmessage)]  
   
 <a name="communication"></a>   
 ## <a name="implement-communication-between-the-control-and-the-page"></a>實作控制項與頁面之間的通訊  
@@ -142,18 +142,18 @@ Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程
   
  若要附加項目，傳送給清單方塊[`LB_ADDSTRING`訊息](/windows/desktop/Controls/lb-addstring)。 若要刪除的項目，請傳送[ `LB_GETCURSEL` ](/windows/desktop/Controls/lb-getcursel)取得目前的選取範圍的索引，然後[ `LB_DELETESTRING` ](/windows/desktop/Controls/lb-deletestring)刪除項目。 此範例也會傳送[ `LB_GETCOUNT` ](/windows/desktop/Controls/lb-getcount)，並使用傳回的值來更新顯示的項目數的顯示。 兩個的這些執行個體[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)使用上一節所述的 PInvoke 宣告的其中一個。  
   
- [!code-csharp[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
- [!code-vb[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
+ [!code-csharp[WPFHostingWin32Control#AppendDeleteText](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
+ [!code-vb[WPFHostingWin32Control#AppendDeleteText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
  當使用者選取的項目，或變更其選取項目時，控制項就會通知主視窗傳送[`WM_COMMAND`訊息](/windows/desktop/menurc/wm-command)，這會引發<xref:System.Windows.Interop.HwndHost.MessageHook>頁面的事件。 處理常式會接收與主視窗的主要視窗程序相同的資訊。 它也會傳遞布林值，參考`handled`。 您設定`handled`至`true`以指出已經處理過訊息，且需要進行任何處理。  
   
  [`WM_COMMAND`](/windows/desktop/menurc/wm-command) 會傳送不同的原因，因此您必須檢查通知識別碼來判斷它是否為您想要處理的事件。 此識別碼包含在的高位文字`wParam`參數。 此範例會使用位元運算子，擷取的識別碼。 如果使用者已經進行，或變更其選取項目，則識別碼會是[ `LBN_SELCHANGE` ](/windows/desktop/Controls/lbn-selchange)。  
   
- 當[ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx)已收到，範例會取得所選項目的索引傳送控制項[`LB_GETCURSEL`訊息](/windows/desktop/Controls/lb-getcursel)。 若要取得文字，您先建立<xref:System.Text.StringBuilder>。 您接著將控制項傳送[`LB_GETTEXT`訊息](/windows/desktop/Controls/lb-gettext)。 傳遞空<xref:System.Text.StringBuilder>物件做為`wParam`參數。 當[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)會傳回<xref:System.Text.StringBuilder>會包含所選項目的文字。 這種使用[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)需要另一個 PInvoke 宣告。  
+ 當[ `LBN_SELCHANGE` ](/windows/desktop/Controls/lbn-selchange)已收到，範例會取得所選項目的索引傳送控制項[`LB_GETCURSEL`訊息](/windows/desktop/Controls/lb-getcursel)。 若要取得文字，您先建立<xref:System.Text.StringBuilder>。 您接著將控制項傳送[`LB_GETTEXT`訊息](/windows/desktop/Controls/lb-gettext)。 傳遞空<xref:System.Text.StringBuilder>物件做為`wParam`參數。 當[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)會傳回<xref:System.Text.StringBuilder>會包含所選項目的文字。 這種使用[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)需要另一個 PInvoke 宣告。  
   
  最後，設定`handled`至`true`表示已處理訊息。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Interop.HwndHost>
-- [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [逐步解說：我的第一個 WPF 傳統型應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)
+- [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

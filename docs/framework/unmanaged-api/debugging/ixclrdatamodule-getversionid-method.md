@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 5184db00b10b53011f24c5096b470608e84546b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e863f14676acc84f4d9f59d0898dee5b291bd30f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567421"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366032"
 ---
 # <a name="ixclrdatamodulegetversionid-method"></a>IXCLRDataModule::GetVersionId 方法
 
@@ -36,9 +36,10 @@ HRESULT GetVersionId(
 );
 ```
 
-### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
-`vid` [out]模組的版本識別碼。
+`vid`\
+[out]模組的版本識別碼。
 
 ## <a name="remarks"></a>備註
 
@@ -53,5 +54,5 @@ HRESULT GetVersionId(
 
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataModule 介面](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
+- [偵錯](index.md)
+- [IXCLRDataModule 介面](ixclrdatamodule-interface.md)
