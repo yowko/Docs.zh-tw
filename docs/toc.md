@@ -505,15 +505,6 @@
 ### [存取資料](visual-basic/developing-apps/accessing-data.md)
 ### [建立和使用元件](visual-basic/developing-apps/creating-and-using-components.md)
 
-### [列印和報告](visual-basic/developing-apps/printing/index.md)
-#### [PrintForm 元件](visual-basic/developing-apps/printing/printform-component.md)
-#### [如何：列印可捲動的表單](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
-#### [如何：列印表單的工作區和非工作區](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
-#### [如何：列印表單的工作區](visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
-#### [如何：使用 PrintForm 元件列印表單](visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)
-#### [部署參考 PrintForm 元件的應用程式](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
-#### [將可列印的報表加入至 Visual Studio 應用程式](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
-
 ### [Windows Form 應用程式的基本概念](visual-basic/developing-apps/windows-forms/index.md)
 
 ### [使用 Visual Basic 自訂專案和擴充 My](visual-basic/developing-apps/customizing-extending-my/index.md)
