@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: 0eb14b3f3859983ba4ba0436ab5a0fab9fda5006
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: cf21041a7f3d5b75803378cf05768ee6f1008fdd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745301"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354592"
 ---
 # <a name="how-to-implement-prioritybinding"></a>HOW TO：實作 PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> 在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的運作方式是指定繫結的清單。 繫結清單的順序是從最高優先順序到最低優先順序。 如果最高的優先權繫結傳回值已成功處理時就永遠不需要處理清單中的其他繫結。 它可能是最高的優先權繫結需要很長的時間，要評估的情況下，優先順序較高的繫結成功地傳回值之前，都會使用下一個最高優先順序成功地傳回值。  
@@ -29,12 +29,12 @@ ms.locfileid: "56745301"
 > [!NOTE]
 >  此範例僅供示範之用。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]指導方針，建議您不要定義速度較慢的欄位集合會比的屬性。 如需詳細資訊，請參閱 <<c0> [ 選擇之間的屬性和方法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100))。  
   
- [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
- [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
+ [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
   
  <xref:System.Windows.Controls.TextBlock.Text%2A>屬性繫結至上述`AsyncDS`使用<xref:System.Windows.Data.PriorityBinding>:  
   
- [!code-xaml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
+ [!code-xaml[PriorityBinding#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
   
  當繫結引擎會處理<xref:System.Windows.Data.Binding>物件，它的第一個開頭<xref:System.Windows.Data.Binding>，它繫結至`SlowestDP`屬性。 當這<xref:System.Windows.Data.Binding>是處理，它不會傳回值已成功因為它正在睡眠中 5 秒，因此下一步<xref:System.Windows.Data.Binding>處理項目。 下一步<xref:System.Windows.Data.Binding>不會傳回值已成功因為睡眠 3 秒。 然後，繫結引擎會移到下一步<xref:System.Windows.Data.Binding>項目，繫結至`FastDP`屬性。 這<xref:System.Windows.Data.Binding>傳回值 「 快速值 」。 <xref:System.Windows.Controls.TextBlock>現在會顯示 「 快速值 」 的值。  
   
@@ -46,5 +46,5 @@ ms.locfileid: "56745301"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
-- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [資料繫結概觀](data-binding-overview.md)
+- [HOW-TO 主題](data-binding-how-to-topics.md)

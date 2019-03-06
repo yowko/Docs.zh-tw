@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
-ms.openlocfilehash: d853ecbe7722772b243fec13842388f158ad4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550949"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359389"
 ---
 # <a name="canvas-how-to-topics"></a>Canvas HOW TO 主題
-本節中的主題描述如何使用<xref:System.Windows.Controls.Canvas>絕對定位項目子系的項目。  
+在本節中的主題描述如何使用<xref:System.Windows.Controls.Canvas>以絕對方式置放項目子系的項目。  
   
 ## <a name="in-this-section"></a>本節內容  
- [在畫布內容周圍加上框線](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [取得或設定 Canvas 定位屬性](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [建立和使用 Canvas](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [使用 Canvas 的附加屬性置放子元素](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [使用縮圖調整畫布大小](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+ [在畫布內容周圍加上框線](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [取得或設定 Canvas 定位屬性](how-to-get-or-set-canvas-positioning-properties.md)  
+ [建立和使用 Canvas](how-to-create-and-use-a-canvas.md)  
+ [使用 Canvas 的附加屬性置放子元素](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [使用縮圖調整畫布大小](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Panel>  
@@ -40,8 +40,8 @@ ms.locfileid: "33550949"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>相關章節  
- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)  
+ [版面配置](../advanced/layout.md)  
   
- [逐步解說：我的第一個 WPF 傳統型應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 概觀](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 概觀](scrollviewer-overview.md)

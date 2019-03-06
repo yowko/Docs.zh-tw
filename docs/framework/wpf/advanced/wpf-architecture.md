@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 7214304d8575fb6ef8774d55eaf29ad714235123
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee88ceb82528955d8809214bff474b92233d28c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634580"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362004"
 ---
 # <a name="wpf-architecture"></a>WPF 架構
 本主題提供 Windows Presentation Foundation (WPF) 的類別階層架構的導覽。 它涵蓋大部分的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主要子系統，並描述其互動方式。 它也會詳述 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架構設計人員所進行的一些選擇。  
@@ -33,7 +33,7 @@ ms.locfileid: "54634580"
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要元件如下圖所示。 圖表的紅色區段 (PresentationFramework、PresentationCore 和 milcore) 是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要程式碼部分。 其中只有一種是 Unmanaged 元件：milcore。 milcore 是使用 Unmanaged 程式碼所撰寫，以啟用與 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 的緊密整合。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有顯示都是透過 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 引擎所完成，以允許有效率的硬體和軟體轉譯。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 也需要記憶體和執行的良好控制。 milcore 中的組合引擎對於效能異常敏感，而且需要犧牲許多 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 優點才能獲得效能。  
   
- ![WPF 在 .NET Framework 中的位置。](../../../../docs/framework/wpf/advanced/media/wpf-architect1.PNG "wpf_architect1")  
+ ![WPF 在 .NET Framework 中的位置。](./media/wpf-architect1.PNG "wpf_architect1")  
   
  本主題稍後會討論 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的 Managed 與 Unmanaged 部分之間的通訊。 Managed 程式設計模型的其餘部分說明如下。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "54634580"
   
  當程式設計[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，您建立<xref:System.Windows.Media.Visual>項目，並在內部與複合樹狀結構，透過此傳訊通訊協定進行通訊的衍生型別。 每個<xref:System.Windows.Media.Visual>在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可能會建立一個、 none、 或數個組合節點。  
   
- ![Windows Presentation Foundation 視覺化樹狀結構。](../../../../docs/framework/wpf/advanced/media/wpf-architecture2.PNG "wpf_architecture2")  
+ ![Windows Presentation Foundation 視覺化樹狀結構。](./media/wpf-architecture2.PNG "wpf_architecture2")  
   
  這裡需要注意一個極為重要的架構詳細資料：會快取視覺效果的整個樹狀結構以及繪圖指示。 就圖形來說，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會使用保留轉譯系統。 這可讓系統以高重新整理速率重繪，而組合系統不會封鎖使用者程式碼的回呼。 這有助於防止出現沒有回應的應用程式。  
   
@@ -149,6 +149,6 @@ ms.locfileid: "54634580"
 - <xref:System.Windows.Threading.DispatcherObject>
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Controls.Control>
-- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)
-- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [資料繫結概觀](../data/data-binding-overview.md)
+- [版面配置](layout.md)
+- [動畫概觀](../graphics-multimedia/animation-overview.md)

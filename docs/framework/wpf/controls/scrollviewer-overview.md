@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: 1bee47ed5294af66bcaa45254105c00d825042ad
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 2685be197d6b47cf174c5fbd062bd3c37a19f5eb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746055"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356906"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer 概觀
 使用者介面內的內容常常會大於電腦螢幕的顯示區域。 <xref:System.Windows.Controls.ScrollViewer>控制項提供便利的方式來啟用中的內容捲動[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。 本主題將介紹<xref:System.Windows.Controls.ScrollViewer>項目，並提供數個使用方式範例。  
@@ -38,33 +38,33 @@ ms.locfileid: "56746055"
   
  下列程式碼範例示範如何將轉換的執行個體<xref:System.Windows.Controls.Primitives.IScrollInfo>要<xref:System.Windows.Controls.StackPanel>，並使用內容捲動方法 (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A>和<xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) 由介面定義。  
   
- [!code-csharp[IScrollInfoMethods#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
- [!code-vb[IScrollInfoMethods#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
+ [!code-csharp[IScrollInfoMethods#3](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[IScrollInfoMethods#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
   
 <a name="scrollviewer_markup_syntax_and_sample"></a>   
 ## <a name="defining-and-using-a-scrollviewer-element"></a>定義和使用 ScrollViewer 元素  
  下列範例會建立<xref:System.Windows.Controls.ScrollViewer>在視窗中，其中包含一些文字和矩形。 <xref:System.Windows.Controls.Primitives.ScrollBar> 項目會出現僅當需要這些項目。 當您調整視窗中，<xref:System.Windows.Controls.Primitives.ScrollBar>項目會出現和消失，因為更新值<xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A>和<xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A>屬性。  
   
- [!code-cpp[ScrollViewer#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
- [!code-csharp[ScrollViewer#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
- [!code-vb[ScrollViewer#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewer/VisualBasic/ScrollViewer.vb#1)]
- [!code-xaml[ScrollViewer#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
+ [!code-cpp[ScrollViewer#1](~/samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
+ [!code-csharp[ScrollViewer#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
+ [!code-vb[ScrollViewer#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewer/VisualBasic/ScrollViewer.vb#1)]
+ [!code-xaml[ScrollViewer#1](~/samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
   
 <a name="scrollviewer_styling_scrollviewer"></a>   
 ## <a name="styling-a-scrollviewer"></a>設定 ScrollViewer 的樣式  
- 像是 Windows Presentation Foundation 中的所有控制項<xref:System.Windows.Controls.ScrollViewer>一種可自訂樣式，若要變更控制項的預設轉譯行為。 如需有關控制項樣式設定的其他資訊，請參閱[樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+ 像是 Windows Presentation Foundation 中的所有控制項<xref:System.Windows.Controls.ScrollViewer>一種可自訂樣式，若要變更控制項的預設轉譯行為。 如需有關控制項樣式設定的其他資訊，請參閱[樣式設定和範本化](styling-and-templating.md)。  
   
 <a name="scrollviewer_scroll_vs_paginate"></a>   
 ## <a name="paginating-documents"></a>文件分頁  
  就文件內容而言，捲動的替代方案是選擇一個支援分頁的文件容器。 <xref:System.Windows.Documents.FlowDocument> 是設計用來裝載內檢視控制項，例如文件<xref:System.Windows.Controls.FlowDocumentPageViewer>，支援將內容分成多頁，這樣就不需要捲動。 <xref:System.Windows.Controls.DocumentViewer> 提供的檢視解決方案<xref:System.Windows.Documents.FixedDocument>顯示外的顯示區域內容會使用傳統捲動的內容。  
   
- 如需有關文件格式和呈現方式選項的其他資訊，請參閱 [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。  
+ 如需有關文件格式和呈現方式選項的其他資訊，請參閱 [WPF 中的文件](../advanced/documents-in-wpf.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
 - [如何：建立捲動檢視器](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
-- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [ScrollBar 樣式和範本](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)
-- [控制項](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+- [WPF 中的文件](../advanced/documents-in-wpf.md)
+- [ScrollBar 樣式和範本](scrollbar-styles-and-templates.md)
+- [控制項](../advanced/optimizing-performance-controls.md)

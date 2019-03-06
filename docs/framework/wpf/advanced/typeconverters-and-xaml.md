@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 29286328c960707151fd5b6f2804346373000ad4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748073"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352707"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter 和 XAML
 本主題介紹將字串的類型轉換當成一般 XAML 語言功能的目的。 在.NET Framework 中，<xref:System.ComponentModel.TypeConverter>類別具有特殊用途的實作可用作 XAML 屬性使用方式中的屬性值的 managed 自訂類別的一部分。 如果您撰寫自訂類別，而且您想要您的類別可用來做為 XAML 可設定的屬性值的執行個體，您可能需要套用<xref:System.ComponentModel.TypeConverterAttribute>至您的類別撰寫自訂<xref:System.ComponentModel.TypeConverter>類別，或兩者。  
@@ -24,27 +24,22 @@ ms.locfileid: "54748073"
  XAML 處理器需要兩項資訊才能處理屬性值。 第一項資訊是正在設定之屬性的實值類型。 任何定義屬性值並在 XAML 中處理的字串最後必須轉換或解析成該類型的值。 如果值是 XAML 剖析器可理解的基本類型 (例如數值)，則會嘗試直接轉換字串。 如果值是一個列舉，則用來檢查名稱的字串會符合該列舉中的具名常數。 如果值不是剖析器所辨識的基本類型，也不是列舉，則上述類型必須能夠根據已轉換的字串提供類型的執行個體或值。 您可以藉由指定類型轉換器類別來完成此動作。 類型轉換子實際上是一個 Helper 類別，可用於提供另一個類別的值，這兩者均適用於 XAML 案例，可能也適用於利用 .NET 程式碼進行程式碼呼叫。  
   
 ### <a name="using-existing-type-conversion-behavior-in-xaml"></a>在 XAML 中使用現有的類型轉換行為  
- 根據您對基礎 XAML 概念的熟悉程度而定，您可能已經在基本應用程式 XAML 中使用類型轉換行為而不自知。 比方說，WPF 會定義數百個採用型別值的屬性<xref:System.Windows.Point>。 A<xref:System.Windows.Point>是描述二維座標空間中的座標值，而它其實只是有兩個重要屬性：<xref:System.Windows.Point.X%2A>和<xref:System.Windows.Point.Y%2A>。 當您在 XAML 中指定某個點時，您指定它為含有分隔符號 （通常為逗號） 的字串之間<xref:System.Windows.Point.X%2A>和<xref:System.Windows.Point.Y%2A>您提供的值。 例如：`<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">`。  
+ 根據您對基礎 XAML 概念的熟悉程度而定，您可能已經在基本應用程式 XAML 中使用類型轉換行為而不自知。 比方說，WPF 會定義數百個採用型別值的屬性<xref:System.Windows.Point>。 A<xref:System.Windows.Point>是描述二維座標空間中的座標值，而它其實只是有兩個重要屬性：<xref:System.Windows.Point.X%2A>和<xref:System.Windows.Point.Y%2A>。 當您在 XAML 中指定某個點時，您指定它為含有分隔符號 （通常為逗號） 的字串之間<xref:System.Windows.Point.X%2A>和<xref:System.Windows.Point.Y%2A>您提供的值。 例如：`<LinearGradientBrush StartPoint="0,0" EndPoint="1,1"/>`。  
   
  即使這個簡單類型的<xref:System.Windows.Point>，而且其簡單的使用方式，在 XAML 中包含的型別轉換子。 在此情況下，是類別<xref:System.Windows.PointConverter>。  
   
  類型轉換器<xref:System.Windows.Point>在類別層級可簡化定義採用的所有屬性的標記使用方式<xref:System.Windows.Point>。 若未在此處使用類型轉換器，您就需要針對先前所示的同一個範例使用下列更多較為詳細的標記：  
-  
- `<LinearGradientBrush>`  
-  
- `<LinearGradientBrush.StartPoint>`  
-  
- `<Point X="0" Y="0"/>`  
-  
- `</LinearGradientBrush.StartPoint>`  
-  
- `<LinearGradientBrush.EndPoint>`  
-  
- `<Point X="1" Y="1"/>`  
-  
- `</LinearGradientBrush.EndPoint>`  
-  
- `<LinearGradientBrush>`  
+
+```xaml
+<LinearGradientBrush>
+  <LinearGradientBrush.StartPoint>
+    <Point X="0" Y="0"/>
+  </LinearGradientBrush.StartPoint>
+  <LinearGradientBrush.EndPoint>
+    <Point X="1" Y="1"/>
+  </LinearGradientBrush.EndPoint>
+</LinearGradientBrush>
+ ```
   
  是否要使用類型轉換字串或較為詳細的對等語法，通常是編碼樣式的選擇。 您的 XAML 工具工作流程可能也會影響值的設定方式。 一些 XAML 工具傾向於發出最詳細格式的標記，因為較容易反覆存取設計工具檢視或它自己的序列化機制。  
   
@@ -53,7 +48,7 @@ ms.locfileid: "54748073"
 ### <a name="type-converters-and-markup-extensions"></a>類型轉換器和標記延伸  
  標記延伸和類型轉換器會根據 XAML 處理器行為和套用它們的案例來填滿正交角色。 儘管有適合標記延伸使用的內容，但標記延伸負責提供值的屬性類型轉換行為在標記延伸實作中通常不會遭到檢查。 換句話說，即使標記延伸傳回文字字串做為其 `ProvideValue` 輸出，也不會在該字串上叫用套用至特定屬性或屬性值類型的類型轉換行為。一般來說，標記延伸的目的是在未涉及任何類型轉換器的情況下，處理字串並傳回物件。  
   
- 需要標記延伸而不是類型轉換器的一個常見情況是參考現有的物件。 無狀態類型轉換器充其量只能產生新的執行個體，但這可能不是令人滿意的情況。 如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
+ 需要標記延伸而不是類型轉換器的一個常見情況是參考現有的物件。 無狀態類型轉換器充其量只能產生新的執行個體，但這可能不是令人滿意的情況。 如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
 ### <a name="native-type-converters"></a>原生類型轉換器  
  在 XAML 剖析器中的 WPF 和 .NET Framework 實作中，有些特定類型具有原生類型轉換處理，但卻不是依慣例會被視為基本類型的類型。 這類類型的範例是 <xref:System.DateTime>。 這根據.NET Framework 架構的運作方式： 類型<xref:System.DateTime>定義於 mscorlib，在.NET 中的最基本程式庫。 <xref:System.DateTime> 不允許來自另一個引進相依性的組件的屬性化 (<xref:System.ComponentModel.TypeConverterAttribute>來自系統) 因此無法支援透過屬性設定的一般類型轉換器探索機制。 而是 XAML 剖析器會有一份需要這類原生處理的類型清單，這些類型的處理方式會與真正基本類型的處理方式類似 (若是<xref:System.DateTime>這項作業包括呼叫<xref:System.DateTime.Parse%2A>。)  
@@ -116,6 +111,6 @@ ms.locfileid: "54748073"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.ComponentModel.TypeConverter>
-- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [XAML 概觀 (WPF)](xaml-overview-wpf.md)
+- [標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [XAML 語法詳細資料](xaml-syntax-in-detail.md)

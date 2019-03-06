@@ -8,18 +8,19 @@ helpviewer_keywords:
 - layout [WPF], Panel control
 - Panel control [WPF]
 ms.assetid: 792943c5-335d-49dd-aa5b-ec1582a10088
-ms.openlocfilehash: 0d76883621b07a3049895e4577516e9362720896
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6471aebf4a510c63084f8da733fb3dfe2300c1aa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367592"
 ---
 # <a name="panel"></a>面板
-<xref:System.Windows.Controls.Panel> 支援應用程式配置中的所有元素的基底類別[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  
+<xref:System.Windows.Controls.Panel> 支援應用程式版面配置中的所有元素的基底類別[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  
   
 ## <a name="in-this-section"></a>本節內容  
- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)  
+ [面板概觀](panels-overview.md)  
+ [HOW-TO 主題](panel-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +38,8 @@ ms.lasthandoff: 05/04/2018
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>相關章節  
- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)  
+ [版面配置](../advanced/layout.md)  
   
- [逐步解說：我的第一個 WPF 傳統型應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 概觀](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 概觀](scrollviewer-overview.md)
