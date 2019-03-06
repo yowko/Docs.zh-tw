@@ -7,37 +7,37 @@ helpviewer_keywords:
 - graphics [WPF], brushes
 - brushes [WPF]
 ms.assetid: 43e7f798-9558-4498-b5b6-4a4c6baf956b
-ms.openlocfilehash: b62830da6f48e07c60df731a8ba29998d6145217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bf49449cd51753e7dc59c169fe51f13dcc67a81
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557533"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373253"
 ---
-# <a name="brushes-how-to-topics"></a><span data-ttu-id="18c0f-102">筆刷 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="18c0f-102">Brushes How-to Topics</span></span>
-<span data-ttu-id="18c0f-103">下列主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]才能繪製到螢幕內容的筆刷。</span><span class="sxs-lookup"><span data-stu-id="18c0f-103">The following topics demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.</span></span>  
+# <a name="brushes-how-to-topics"></a><span data-ttu-id="51f56-102">筆刷 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="51f56-102">Brushes How-to Topics</span></span>
+<span data-ttu-id="51f56-103">下列主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以便繪製到螢幕內容的筆刷。</span><span class="sxs-lookup"><span data-stu-id="51f56-103">The following topics demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="18c0f-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="18c0f-104">In This Section</span></span>  
- [<span data-ttu-id="18c0f-105">建立 SolidColorBrush 色彩或不透明效果的動畫</span><span class="sxs-lookup"><span data-stu-id="18c0f-105">Animate the Color or Opacity of a SolidColorBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
- [<span data-ttu-id="18c0f-106">建立漸層停駐點位置或色彩的動畫</span><span class="sxs-lookup"><span data-stu-id="18c0f-106">Animate the Position or Color of a Gradient Stop</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
- [<span data-ttu-id="18c0f-107">建立反映</span><span class="sxs-lookup"><span data-stu-id="18c0f-107">Create a Reflection</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-reflection.md)  
- [<span data-ttu-id="18c0f-108">使用 TileBrush 建立不同的並排顯示模式</span><span class="sxs-lookup"><span data-stu-id="18c0f-108">Create Different Tile Patterns with a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)  
- [<span data-ttu-id="18c0f-109">定義畫筆</span><span class="sxs-lookup"><span data-stu-id="18c0f-109">Define a Pen</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-pen.md)  
- [<span data-ttu-id="18c0f-110">使用繪圖繪製區域</span><span class="sxs-lookup"><span data-stu-id="18c0f-110">Paint an Area with a Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-drawing.md)  
- [<span data-ttu-id="18c0f-111">使用影像繪製區域</span><span class="sxs-lookup"><span data-stu-id="18c0f-111">Paint an Area with an Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-an-image.md)  
- [<span data-ttu-id="18c0f-112">使用線形漸層繪製區域</span><span class="sxs-lookup"><span data-stu-id="18c0f-112">Paint an Area with a Linear Gradient</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-linear-gradient.md)  
- [<span data-ttu-id="18c0f-113">使用放射狀漸層繪製區域</span><span class="sxs-lookup"><span data-stu-id="18c0f-113">Paint an Area with a Radial Gradient</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-radial-gradient.md)  
- [<span data-ttu-id="18c0f-114">使用純色繪製區域</span><span class="sxs-lookup"><span data-stu-id="18c0f-114">Paint an Area with a Solid Color</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)  
- [<span data-ttu-id="18c0f-115">使用系統筆刷繪製區域</span><span class="sxs-lookup"><span data-stu-id="18c0f-115">Paint an Area with a System Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [<span data-ttu-id="18c0f-116">繪製含有視訊的區域</span><span class="sxs-lookup"><span data-stu-id="18c0f-116">Paint an Area with a Video</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-video.md)  
- [<span data-ttu-id="18c0f-117">使用 Visual 繪製區域</span><span class="sxs-lookup"><span data-stu-id="18c0f-117">Paint an Area with a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-visual.md)  
- [<span data-ttu-id="18c0f-118">保留當做背景之影像的外觀比例</span><span class="sxs-lookup"><span data-stu-id="18c0f-118">Preserve the Aspect Ratio of an Image Used as a Background</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
- [<span data-ttu-id="18c0f-119">設定 TileBrush 的水平和垂直對齊</span><span class="sxs-lookup"><span data-stu-id="18c0f-119">Set the Horizontal and Vertical Alignment of a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
- [<span data-ttu-id="18c0f-120">設定 TileBrush 的並排顯示大小</span><span class="sxs-lookup"><span data-stu-id="18c0f-120">Set the Tile Size for a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
- [<span data-ttu-id="18c0f-121">轉換筆刷</span><span class="sxs-lookup"><span data-stu-id="18c0f-121">Transform a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-a-brush.md)  
- [<span data-ttu-id="18c0f-122">在漸層中使用系統色彩</span><span class="sxs-lookup"><span data-stu-id="18c0f-122">Use System Colors in a Gradient</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
+## <a name="in-this-section"></a><span data-ttu-id="51f56-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="51f56-104">In This Section</span></span>  
+ [<span data-ttu-id="51f56-105">建立 SolidColorBrush 色彩或不透明效果的動畫</span><span class="sxs-lookup"><span data-stu-id="51f56-105">Animate the Color or Opacity of a SolidColorBrush</span></span>](how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
+ [<span data-ttu-id="51f56-106">建立漸層停駐點位置或色彩的動畫</span><span class="sxs-lookup"><span data-stu-id="51f56-106">Animate the Position or Color of a Gradient Stop</span></span>](how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
+ [<span data-ttu-id="51f56-107">建立反映</span><span class="sxs-lookup"><span data-stu-id="51f56-107">Create a Reflection</span></span>](how-to-create-a-reflection.md)  
+ [<span data-ttu-id="51f56-108">使用 TileBrush 建立不同的並排顯示模式</span><span class="sxs-lookup"><span data-stu-id="51f56-108">Create Different Tile Patterns with a TileBrush</span></span>](how-to-create-different-tile-patterns-with-a-tilebrush.md)  
+ [<span data-ttu-id="51f56-109">定義畫筆</span><span class="sxs-lookup"><span data-stu-id="51f56-109">Define a Pen</span></span>](how-to-define-a-pen.md)  
+ [<span data-ttu-id="51f56-110">使用繪圖繪製區域</span><span class="sxs-lookup"><span data-stu-id="51f56-110">Paint an Area with a Drawing</span></span>](how-to-paint-an-area-with-a-drawing.md)  
+ [<span data-ttu-id="51f56-111">使用影像繪製區域</span><span class="sxs-lookup"><span data-stu-id="51f56-111">Paint an Area with an Image</span></span>](how-to-paint-an-area-with-an-image.md)  
+ [<span data-ttu-id="51f56-112">使用線形漸層繪製區域</span><span class="sxs-lookup"><span data-stu-id="51f56-112">Paint an Area with a Linear Gradient</span></span>](how-to-paint-an-area-with-a-linear-gradient.md)  
+ [<span data-ttu-id="51f56-113">使用放射狀漸層繪製區域</span><span class="sxs-lookup"><span data-stu-id="51f56-113">Paint an Area with a Radial Gradient</span></span>](how-to-paint-an-area-with-a-radial-gradient.md)  
+ [<span data-ttu-id="51f56-114">使用純色繪製區域</span><span class="sxs-lookup"><span data-stu-id="51f56-114">Paint an Area with a Solid Color</span></span>](how-to-paint-an-area-with-a-solid-color.md)  
+ [<span data-ttu-id="51f56-115">使用系統筆刷繪製區域</span><span class="sxs-lookup"><span data-stu-id="51f56-115">Paint an Area with a System Brush</span></span>](how-to-paint-an-area-with-a-system-brush.md)  
+ [<span data-ttu-id="51f56-116">繪製含有視訊的區域</span><span class="sxs-lookup"><span data-stu-id="51f56-116">Paint an Area with a Video</span></span>](how-to-paint-an-area-with-a-video.md)  
+ [<span data-ttu-id="51f56-117">使用 Visual 繪製區域</span><span class="sxs-lookup"><span data-stu-id="51f56-117">Paint an Area with a Visual</span></span>](how-to-paint-an-area-with-a-visual.md)  
+ [<span data-ttu-id="51f56-118">保留當做背景之影像的外觀比例</span><span class="sxs-lookup"><span data-stu-id="51f56-118">Preserve the Aspect Ratio of an Image Used as a Background</span></span>](how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
+ [<span data-ttu-id="51f56-119">設定 TileBrush 的水平和垂直對齊</span><span class="sxs-lookup"><span data-stu-id="51f56-119">Set the Horizontal and Vertical Alignment of a TileBrush</span></span>](how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
+ [<span data-ttu-id="51f56-120">設定 TileBrush 的並排顯示大小</span><span class="sxs-lookup"><span data-stu-id="51f56-120">Set the Tile Size for a TileBrush</span></span>](how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [<span data-ttu-id="51f56-121">轉換筆刷</span><span class="sxs-lookup"><span data-stu-id="51f56-121">Transform a Brush</span></span>](how-to-transform-a-brush.md)  
+ [<span data-ttu-id="51f56-122">在漸層中使用系統色彩</span><span class="sxs-lookup"><span data-stu-id="51f56-122">Use System Colors in a Gradient</span></span>](how-to-use-system-colors-in-a-gradient.md)  
   
-## <a name="reference"></a><span data-ttu-id="18c0f-123">參考資料</span><span class="sxs-lookup"><span data-stu-id="18c0f-123">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="51f56-123">參考資料</span><span class="sxs-lookup"><span data-stu-id="51f56-123">Reference</span></span>  
  <xref:System.Windows.Media.Brush>  
   
  <xref:System.Windows.Media.SolidColorBrush>  
@@ -50,7 +50,7 @@ ms.locfileid: "33557533"
   
  <xref:System.Windows.Media.VisualBrush>  
   
-## <a name="related-sections"></a><span data-ttu-id="18c0f-124">相關章節</span><span class="sxs-lookup"><span data-stu-id="18c0f-124">Related Sections</span></span>  
- [<span data-ttu-id="18c0f-125">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="18c0f-125">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="51f56-124">相關章節</span><span class="sxs-lookup"><span data-stu-id="51f56-124">Related Sections</span></span>  
+ [<span data-ttu-id="51f56-125">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="51f56-125">Graphics and Multimedia</span></span>](index.md)  
   
- [<span data-ttu-id="18c0f-126">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="18c0f-126">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="51f56-126">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="51f56-126">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

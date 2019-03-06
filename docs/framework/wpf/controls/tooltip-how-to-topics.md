@@ -7,26 +7,26 @@ helpviewer_keywords:
 - ToolTip control [WPF], how-to topics
 - controls [WPF], ToolTip
 ms.assetid: 2aa88347-c4cb-48d3-951d-a7072643283b
-ms.openlocfilehash: d00085d3aec5e7337162f9e9d073653b6356c625
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb2450d13b7a247e9eb0cc0b802b2d758482c466
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552853"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377777"
 ---
-# <a name="tooltip-how-to-topics"></a><span data-ttu-id="41e37-102">ToolTip HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="41e37-102">ToolTip How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="41e37-103">本節內容</span><span class="sxs-lookup"><span data-stu-id="41e37-103">In This Section</span></span>  
- [<span data-ttu-id="41e37-104">置放工具提示</span><span class="sxs-lookup"><span data-stu-id="41e37-104">Position a ToolTip</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md)  
-  [<span data-ttu-id="41e37-105">使用 BetweenShowDelay 屬性</span><span class="sxs-lookup"><span data-stu-id="41e37-105">Use the BetweenShowDelay Property</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)  
+# <a name="tooltip-how-to-topics"></a><span data-ttu-id="e2353-102">ToolTip HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="e2353-102">ToolTip How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="e2353-103">本節內容</span><span class="sxs-lookup"><span data-stu-id="e2353-103">In This Section</span></span>  
+ [<span data-ttu-id="e2353-104">置放工具提示</span><span class="sxs-lookup"><span data-stu-id="e2353-104">Position a ToolTip</span></span>](how-to-position-a-tooltip.md)  
+  [<span data-ttu-id="e2353-105">使用 BetweenShowDelay 屬性</span><span class="sxs-lookup"><span data-stu-id="e2353-105">Use the BetweenShowDelay Property</span></span>](how-to-use-the-betweenshowdelay-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="41e37-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="41e37-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e2353-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="e2353-106">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   
  <xref:System.Windows.Controls.ToolTipService>  
   
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="41e37-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="41e37-107">Related Sections</span></span>  
- [<span data-ttu-id="41e37-108">快顯功能表概觀</span><span class="sxs-lookup"><span data-stu-id="41e37-108">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="e2353-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="e2353-107">Related Sections</span></span>  
+ [<span data-ttu-id="e2353-108">快顯功能表概觀</span><span class="sxs-lookup"><span data-stu-id="e2353-108">Popup Overview</span></span>](popup-overview.md)  
   
- [<span data-ttu-id="41e37-109">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="41e37-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [<span data-ttu-id="e2353-109">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="e2353-109">How-to Topics</span></span>](popup-how-to-topics.md)

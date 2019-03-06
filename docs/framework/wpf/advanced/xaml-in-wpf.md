@@ -7,39 +7,39 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 0d04b656492dd934199164920e35bdaaa0663032
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710760"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362899"
 ---
-# <a name="xaml-in-wpf"></a><span data-ttu-id="828bb-102">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="828bb-102">XAML in WPF</span></span>
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]<span data-ttu-id="828bb-103"> 一種宣告式應用程式標記語言撰寫。</span><span class="sxs-lookup"><span data-stu-id="828bb-103"> is a markup language for declarative application programming.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="828bb-104"> 實作 aXAML 處理器實作中，並提供 XAML 語言支援。</span><span class="sxs-lookup"><span data-stu-id="828bb-104"> implements aXAML processor implementation, and provides XAML language support.</span></span> <span data-ttu-id="828bb-105">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]類型會實作，因此它們可以提供所需的類型支援的 XAML 表示法。</span><span class="sxs-lookup"><span data-stu-id="828bb-105">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types are implemented such that they can provide the required type backing for a XAML representation.</span></span> <span data-ttu-id="828bb-106">一般情況下，您可以在其中建立大部分的程式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]XAML 標記中的應用程式 UI。</span><span class="sxs-lookup"><span data-stu-id="828bb-106">In general, you can create the majority of your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application UI in XAML markup.</span></span>  
+# <a name="xaml-in-wpf"></a><span data-ttu-id="b621d-102">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="b621d-102">XAML in WPF</span></span>
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] <span data-ttu-id="b621d-103">一種宣告式應用程式標記語言撰寫。</span><span class="sxs-lookup"><span data-stu-id="b621d-103">is a markup language for declarative application programming.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="b621d-104">實作 aXAML 處理器實作中，並提供 XAML 語言支援。</span><span class="sxs-lookup"><span data-stu-id="b621d-104">implements aXAML processor implementation, and provides XAML language support.</span></span> <span data-ttu-id="b621d-105">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]類型會實作，因此它們可以提供所需的類型支援的 XAML 表示法。</span><span class="sxs-lookup"><span data-stu-id="b621d-105">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types are implemented such that they can provide the required type backing for a XAML representation.</span></span> <span data-ttu-id="b621d-106">一般情況下，您可以在其中建立大部分的程式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]XAML 標記中的應用程式 UI。</span><span class="sxs-lookup"><span data-stu-id="b621d-106">In general, you can create the majority of your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application UI in XAML markup.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="828bb-107">本節內容</span><span class="sxs-lookup"><span data-stu-id="828bb-107">In This Section</span></span>  
- [<span data-ttu-id="828bb-108">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="828bb-108">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [<span data-ttu-id="828bb-109">XAML 語法詳細資料</span><span class="sxs-lookup"><span data-stu-id="828bb-109">XAML Syntax In Detail</span></span>](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [<span data-ttu-id="828bb-110">WPF 中的程式碼後置和 XAML</span><span class="sxs-lookup"><span data-stu-id="828bb-110">Code-Behind and XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [<span data-ttu-id="828bb-111">WPF 的 XAML 和自訂類別</span><span class="sxs-lookup"><span data-stu-id="828bb-111">XAML and Custom Classes for WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [<span data-ttu-id="828bb-112">標記延伸和 WPF XAML</span><span class="sxs-lookup"><span data-stu-id="828bb-112">Markup Extensions and WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [<span data-ttu-id="828bb-113">WPF XAML 的 XAML 命名空間和命名空間對應</span><span class="sxs-lookup"><span data-stu-id="828bb-113">XAML Namespaces and Namespace Mapping for WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
- [<span data-ttu-id="828bb-114">WPF XAML 名稱範圍</span><span class="sxs-lookup"><span data-stu-id="828bb-114">WPF XAML Namescopes</span></span>](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)  
- [<span data-ttu-id="828bb-115">內嵌樣式和範本</span><span class="sxs-lookup"><span data-stu-id="828bb-115">Inline Styles and Templates</span></span>](../../../../docs/framework/wpf/advanced/inline-styles-and-templates.md)  
- [<span data-ttu-id="828bb-116">在 XAML 中處理泛空白字元</span><span class="sxs-lookup"><span data-stu-id="828bb-116">White-space Processing in XAML</span></span>](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
- [<span data-ttu-id="828bb-117">TypeConverter 和 XAML</span><span class="sxs-lookup"><span data-stu-id="828bb-117">TypeConverters and XAML</span></span>](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [<span data-ttu-id="828bb-118">XML 字元實體和 XAML</span><span class="sxs-lookup"><span data-stu-id="828bb-118">XML Character Entities and XAML</span></span>](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [<span data-ttu-id="828bb-119">XAML 命名空間 (x:) 語言功能</span><span class="sxs-lookup"><span data-stu-id="828bb-119">XAML Namespace (x:) Language Features</span></span>](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [<span data-ttu-id="828bb-120">WPF XAML 延伸</span><span class="sxs-lookup"><span data-stu-id="828bb-120">WPF XAML Extensions</span></span>](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [<span data-ttu-id="828bb-121">標記相容性 (mc:) 語言功能</span><span class="sxs-lookup"><span data-stu-id="828bb-121">Markup Compatibility (mc:) Language Features</span></span>](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b621d-107">本節內容</span><span class="sxs-lookup"><span data-stu-id="b621d-107">In This Section</span></span>  
+ [<span data-ttu-id="b621d-108">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="b621d-108">XAML Overview (WPF)</span></span>](xaml-overview-wpf.md)  
+ [<span data-ttu-id="b621d-109">XAML 語法詳細資料</span><span class="sxs-lookup"><span data-stu-id="b621d-109">XAML Syntax In Detail</span></span>](xaml-syntax-in-detail.md)  
+ [<span data-ttu-id="b621d-110">WPF 中的程式碼後置和 XAML</span><span class="sxs-lookup"><span data-stu-id="b621d-110">Code-Behind and XAML in WPF</span></span>](code-behind-and-xaml-in-wpf.md)  
+ [<span data-ttu-id="b621d-111">WPF 的 XAML 和自訂類別</span><span class="sxs-lookup"><span data-stu-id="b621d-111">XAML and Custom Classes for WPF</span></span>](xaml-and-custom-classes-for-wpf.md)  
+ [<span data-ttu-id="b621d-112">標記延伸和 WPF XAML</span><span class="sxs-lookup"><span data-stu-id="b621d-112">Markup Extensions and WPF XAML</span></span>](markup-extensions-and-wpf-xaml.md)  
+ [<span data-ttu-id="b621d-113">WPF XAML 的 XAML 命名空間和命名空間對應</span><span class="sxs-lookup"><span data-stu-id="b621d-113">XAML Namespaces and Namespace Mapping for WPF XAML</span></span>](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+ [<span data-ttu-id="b621d-114">WPF XAML 名稱範圍</span><span class="sxs-lookup"><span data-stu-id="b621d-114">WPF XAML Namescopes</span></span>](wpf-xaml-namescopes.md)  
+ [<span data-ttu-id="b621d-115">內嵌樣式和範本</span><span class="sxs-lookup"><span data-stu-id="b621d-115">Inline Styles and Templates</span></span>](inline-styles-and-templates.md)  
+ [<span data-ttu-id="b621d-116">在 XAML 中處理泛空白字元</span><span class="sxs-lookup"><span data-stu-id="b621d-116">White-space Processing in XAML</span></span>](../../xaml-services/whitespace-processing-in-xaml.md)  
+ [<span data-ttu-id="b621d-117">TypeConverter 和 XAML</span><span class="sxs-lookup"><span data-stu-id="b621d-117">TypeConverters and XAML</span></span>](typeconverters-and-xaml.md)  
+ [<span data-ttu-id="b621d-118">XML 字元實體和 XAML</span><span class="sxs-lookup"><span data-stu-id="b621d-118">XML Character Entities and XAML</span></span>](../../xaml-services/xml-character-entities-and-xaml.md)  
+ [<span data-ttu-id="b621d-119">XAML 命名空間 （x:）語言功能</span><span class="sxs-lookup"><span data-stu-id="b621d-119">XAML Namespace (x:) Language Features</span></span>](../../xaml-services/xaml-namespace-x-language-features.md)  
+ [<span data-ttu-id="b621d-120">WPF XAML 延伸</span><span class="sxs-lookup"><span data-stu-id="b621d-120">WPF XAML Extensions</span></span>](wpf-xaml-extensions.md)  
+ [<span data-ttu-id="b621d-121">標記相容性 (mc:)語言功能</span><span class="sxs-lookup"><span data-stu-id="b621d-121">Markup Compatibility (mc:) Language Features</span></span>](markup-compatibility-mc-language-features.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="828bb-122">相關章節</span><span class="sxs-lookup"><span data-stu-id="828bb-122">Related Sections</span></span>  
- [<span data-ttu-id="828bb-123">WPF 架構</span><span class="sxs-lookup"><span data-stu-id="828bb-123">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="828bb-124">基底項目</span><span class="sxs-lookup"><span data-stu-id="828bb-124">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="828bb-125">項目樹狀結構和序列化</span><span class="sxs-lookup"><span data-stu-id="828bb-125">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [<span data-ttu-id="828bb-126">屬性</span><span class="sxs-lookup"><span data-stu-id="828bb-126">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [<span data-ttu-id="828bb-127">事件</span><span class="sxs-lookup"><span data-stu-id="828bb-127">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [<span data-ttu-id="828bb-128">輸入</span><span class="sxs-lookup"><span data-stu-id="828bb-128">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="828bb-129">資源</span><span class="sxs-lookup"><span data-stu-id="828bb-129">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="828bb-130">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="828bb-130">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="828bb-131">執行緒模型</span><span class="sxs-lookup"><span data-stu-id="828bb-131">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="b621d-122">相關章節</span><span class="sxs-lookup"><span data-stu-id="b621d-122">Related Sections</span></span>  
+ [<span data-ttu-id="b621d-123">WPF 架構</span><span class="sxs-lookup"><span data-stu-id="b621d-123">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="b621d-124">基底項目</span><span class="sxs-lookup"><span data-stu-id="b621d-124">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="b621d-125">項目樹狀結構和序列化</span><span class="sxs-lookup"><span data-stu-id="b621d-125">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="b621d-126">屬性</span><span class="sxs-lookup"><span data-stu-id="b621d-126">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="b621d-127">事件</span><span class="sxs-lookup"><span data-stu-id="b621d-127">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="b621d-128">輸入</span><span class="sxs-lookup"><span data-stu-id="b621d-128">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="b621d-129">資源</span><span class="sxs-lookup"><span data-stu-id="b621d-129">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="b621d-130">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="b621d-130">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+  [<span data-ttu-id="b621d-131">執行緒模型</span><span class="sxs-lookup"><span data-stu-id="b621d-131">Threading Model</span></span>](threading-model.md)

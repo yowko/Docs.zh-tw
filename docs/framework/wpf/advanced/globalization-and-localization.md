@@ -11,31 +11,31 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: b1931b17c0902eec590c3c998c52f6e9d84133dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543451"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375177"
 ---
-# <a name="globalization-and-localization"></a><span data-ttu-id="d3cf7-102">全球化和當地語系化</span><span class="sxs-lookup"><span data-stu-id="d3cf7-102">Globalization and Localization</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="d3cf7-103"> 開發世界性的應用程式提供更詳盡的支援。</span><span class="sxs-lookup"><span data-stu-id="d3cf7-103"> provides extensive support for the development of world-ready applications.</span></span>  
+# <a name="globalization-and-localization"></a><span data-ttu-id="a3ab6-102">全球化和當地語系化</span><span class="sxs-lookup"><span data-stu-id="a3ab6-102">Globalization and Localization</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="a3ab6-103">開發世界性的應用程式提供廣泛的支援。</span><span class="sxs-lookup"><span data-stu-id="a3ab6-103">provides extensive support for the development of world-ready applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d3cf7-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="d3cf7-104">In This Section</span></span>  
- [<span data-ttu-id="d3cf7-105">WPF 全球化和當地語系化概觀</span><span class="sxs-lookup"><span data-stu-id="d3cf7-105">WPF Globalization and Localization Overview</span></span>](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
- [<span data-ttu-id="d3cf7-106">WPF 的全球化</span><span class="sxs-lookup"><span data-stu-id="d3cf7-106">Globalization for WPF</span></span>](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [<span data-ttu-id="d3cf7-107">使用自動配置概觀</span><span class="sxs-lookup"><span data-stu-id="d3cf7-107">Use Automatic Layout Overview</span></span>](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [<span data-ttu-id="d3cf7-108">當地語系化屬性和註解</span><span class="sxs-lookup"><span data-stu-id="d3cf7-108">Localization Attributes and Comments</span></span>](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
- [<span data-ttu-id="d3cf7-109">WPF 中的雙向功能概觀</span><span class="sxs-lookup"><span data-stu-id="d3cf7-109">Bidirectional Features in WPF Overview</span></span>](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [<span data-ttu-id="d3cf7-110">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="d3cf7-110">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a3ab6-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="a3ab6-104">In This Section</span></span>  
+ [<span data-ttu-id="a3ab6-105">WPF 全球化和當地語系化概觀</span><span class="sxs-lookup"><span data-stu-id="a3ab6-105">WPF Globalization and Localization Overview</span></span>](wpf-globalization-and-localization-overview.md)  
+ [<span data-ttu-id="a3ab6-106">WPF 的全球化</span><span class="sxs-lookup"><span data-stu-id="a3ab6-106">Globalization for WPF</span></span>](globalization-for-wpf.md)  
+ [<span data-ttu-id="a3ab6-107">使用自動配置概觀</span><span class="sxs-lookup"><span data-stu-id="a3ab6-107">Use Automatic Layout Overview</span></span>](use-automatic-layout-overview.md)  
+ [<span data-ttu-id="a3ab6-108">當地語系化屬性和註解</span><span class="sxs-lookup"><span data-stu-id="a3ab6-108">Localization Attributes and Comments</span></span>](localization-attributes-and-comments.md)  
+ [<span data-ttu-id="a3ab6-109">WPF 中的雙向功能概觀</span><span class="sxs-lookup"><span data-stu-id="a3ab6-109">Bidirectional Features in WPF Overview</span></span>](bidirectional-features-in-wpf-overview.md)  
+ [<span data-ttu-id="a3ab6-110">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="a3ab6-110">How-to Topics</span></span>](globalization-and-localization-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d3cf7-111">參考資料</span><span class="sxs-lookup"><span data-stu-id="d3cf7-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a3ab6-111">參考資料</span><span class="sxs-lookup"><span data-stu-id="a3ab6-111">Reference</span></span>  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [<span data-ttu-id="d3cf7-112">XAML 中的 xml:lang 處理</span><span class="sxs-lookup"><span data-stu-id="d3cf7-112">xml:lang Handling in XAML</span></span>](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [<span data-ttu-id="a3ab6-112">XAML 中的 xml:lang 處理</span><span class="sxs-lookup"><span data-stu-id="a3ab6-112">xml:lang Handling in XAML</span></span>](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="d3cf7-113">相關章節</span><span class="sxs-lookup"><span data-stu-id="d3cf7-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="a3ab6-113">相關章節</span><span class="sxs-lookup"><span data-stu-id="a3ab6-113">Related Sections</span></span>

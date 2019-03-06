@@ -8,36 +8,36 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 9fcaf10bbed23a6c8b8cdc8355a2575574d2207a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542857"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355801"
 ---
-# <a name="element-tree-and-serialization"></a><span data-ttu-id="c284b-102">項目樹狀結構和序列化</span><span class="sxs-lookup"><span data-stu-id="c284b-102">Element Tree and Serialization</span></span>
-<span data-ttu-id="c284b-103">WPF 的程式設計項目通常存在於彼此間某種形式的樹狀結構關聯性。</span><span class="sxs-lookup"><span data-stu-id="c284b-103">WPF programming elements often exist in some form of tree relationship to each other.</span></span> <span data-ttu-id="c284b-104">例如，以 XAML 建立的應用程式 UI 可以概念化為物件樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="c284b-104">For instance, an application UI created in XAML can be conceptualized as an object tree.</span></span> <span data-ttu-id="c284b-105">項目樹狀結構可以進一步細分為兩個不連續但有時平行的樹狀結構︰邏輯樹狀結構和視覺化樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="c284b-105">The element tree can be further divided into two discrete yet sometimes parallel trees: the logical tree and the visual tree.</span></span> <span data-ttu-id="c284b-106">WPF 中的序列化牽涉到儲存這兩種樹狀結構的狀態和應用程式狀態，並可能以 XAML 寫入至檔案。</span><span class="sxs-lookup"><span data-stu-id="c284b-106">Serialization in WPF involves saving the state of these two trees as well as application state and writing it to a file, potentially as XAML.</span></span>  
+# <a name="element-tree-and-serialization"></a><span data-ttu-id="6ca42-102">項目樹狀結構和序列化</span><span class="sxs-lookup"><span data-stu-id="6ca42-102">Element Tree and Serialization</span></span>
+<span data-ttu-id="6ca42-103">WPF 的程式設計項目通常存在於彼此間某種形式的樹狀結構關聯性。</span><span class="sxs-lookup"><span data-stu-id="6ca42-103">WPF programming elements often exist in some form of tree relationship to each other.</span></span> <span data-ttu-id="6ca42-104">例如，以 XAML 建立的應用程式 UI 可以概念化為物件樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="6ca42-104">For instance, an application UI created in XAML can be conceptualized as an object tree.</span></span> <span data-ttu-id="6ca42-105">項目樹狀結構可以進一步細分為兩個不連續但有時平行的樹狀結構︰邏輯樹狀結構和視覺化樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="6ca42-105">The element tree can be further divided into two discrete yet sometimes parallel trees: the logical tree and the visual tree.</span></span> <span data-ttu-id="6ca42-106">WPF 中的序列化牽涉到儲存這兩種樹狀結構的狀態和應用程式狀態，並可能以 XAML 寫入至檔案。</span><span class="sxs-lookup"><span data-stu-id="6ca42-106">Serialization in WPF involves saving the state of these two trees as well as application state and writing it to a file, potentially as XAML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c284b-107">本節內容</span><span class="sxs-lookup"><span data-stu-id="c284b-107">In This Section</span></span>  
- [<span data-ttu-id="c284b-108">WPF 中的樹狀結構</span><span class="sxs-lookup"><span data-stu-id="c284b-108">Trees in WPF</span></span>](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [<span data-ttu-id="c284b-109">XamlWriter.Save 的序列化限制</span><span class="sxs-lookup"><span data-stu-id="c284b-109">Serialization Limitations of XamlWriter.Save</span></span>](../../../../docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md)  
- [<span data-ttu-id="c284b-110">初始化物件樹狀結構以外的物件項目</span><span class="sxs-lookup"><span data-stu-id="c284b-110">Initialization for Object Elements Not in an Object Tree</span></span>](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [<span data-ttu-id="c284b-111">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="c284b-111">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6ca42-107">本節內容</span><span class="sxs-lookup"><span data-stu-id="6ca42-107">In This Section</span></span>  
+ [<span data-ttu-id="6ca42-108">WPF 中的樹狀結構</span><span class="sxs-lookup"><span data-stu-id="6ca42-108">Trees in WPF</span></span>](trees-in-wpf.md)  
+ [<span data-ttu-id="6ca42-109">XamlWriter.Save 的序列化限制</span><span class="sxs-lookup"><span data-stu-id="6ca42-109">Serialization Limitations of XamlWriter.Save</span></span>](serialization-limitations-of-xamlwriter-save.md)  
+ [<span data-ttu-id="6ca42-110">初始化物件樹狀結構以外的物件項目</span><span class="sxs-lookup"><span data-stu-id="6ca42-110">Initialization for Object Elements Not in an Object Tree</span></span>](initialization-for-object-elements-not-in-an-object-tree.md)  
+ [<span data-ttu-id="6ca42-111">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="6ca42-111">How-to Topics</span></span>](element-tree-and-serialization-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="c284b-112">參考資料</span><span class="sxs-lookup"><span data-stu-id="c284b-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6ca42-112">參考資料</span><span class="sxs-lookup"><span data-stu-id="6ca42-112">Reference</span></span>  
  <xref:System.Windows.Markup>  
   
  <xref:System.Windows.LogicalTreeHelper>  
   
  <xref:System.Windows.Media.VisualTreeHelper>  
   
-## <a name="related-sections"></a><span data-ttu-id="c284b-113">相關章節</span><span class="sxs-lookup"><span data-stu-id="c284b-113">Related Sections</span></span>  
- [<span data-ttu-id="c284b-114">WPF 架構</span><span class="sxs-lookup"><span data-stu-id="c284b-114">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="c284b-115">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="c284b-115">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [<span data-ttu-id="c284b-116">基底項目</span><span class="sxs-lookup"><span data-stu-id="c284b-116">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="c284b-117">屬性</span><span class="sxs-lookup"><span data-stu-id="c284b-117">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [<span data-ttu-id="c284b-118">事件</span><span class="sxs-lookup"><span data-stu-id="c284b-118">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [<span data-ttu-id="c284b-119">輸入</span><span class="sxs-lookup"><span data-stu-id="c284b-119">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="c284b-120">資源</span><span class="sxs-lookup"><span data-stu-id="c284b-120">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="c284b-121">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="c284b-121">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="c284b-122">執行緒模型</span><span class="sxs-lookup"><span data-stu-id="c284b-122">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="6ca42-113">相關章節</span><span class="sxs-lookup"><span data-stu-id="6ca42-113">Related Sections</span></span>  
+ [<span data-ttu-id="6ca42-114">WPF 架構</span><span class="sxs-lookup"><span data-stu-id="6ca42-114">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="6ca42-115">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="6ca42-115">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="6ca42-116">基底項目</span><span class="sxs-lookup"><span data-stu-id="6ca42-116">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="6ca42-117">屬性</span><span class="sxs-lookup"><span data-stu-id="6ca42-117">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="6ca42-118">事件</span><span class="sxs-lookup"><span data-stu-id="6ca42-118">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="6ca42-119">輸入</span><span class="sxs-lookup"><span data-stu-id="6ca42-119">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="6ca42-120">資源</span><span class="sxs-lookup"><span data-stu-id="6ca42-120">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="6ca42-121">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="6ca42-121">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+  [<span data-ttu-id="6ca42-122">執行緒模型</span><span class="sxs-lookup"><span data-stu-id="6ca42-122">Threading Model</span></span>](threading-model.md)
