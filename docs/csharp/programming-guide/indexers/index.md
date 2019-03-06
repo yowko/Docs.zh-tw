@@ -48,7 +48,7 @@ ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
   
 -   索引子可具有一個以上的型式參數，例如，存取二維陣列時。  
   
-##  <a name="BKMK_RelatedSections"></a> 相關章節  
+## <a name="BKMK_RelatedSections"></a> 相關章節  
   
 -   [使用索引子](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

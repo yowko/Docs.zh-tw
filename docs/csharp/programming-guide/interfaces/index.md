@@ -62,7 +62,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
  [如何：明確實作兩個介面的成員](how-to-explicitly-implement-members-of-two-interfaces.md)  
  提供如何透過繼承明確實作介面成員的範例。  
   
-##  <a name="BKMK_RelatedSections"></a> 相關章節
+## <a name="BKMK_RelatedSections"></a> 相關章節
 
 - [介面屬性](../classes-and-structs/interface-properties.md)  
 - [介面中的索引子](../indexers/indexers-in-interfaces.md)  

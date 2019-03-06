@@ -113,7 +113,7 @@ string s = String.Empty;
   
  在下列範例中，將使用 <xref:System.Text.StringBuilder> 物件從一組數字類型建立字串：  
   
- [!code-csharp[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
+ [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>字串、擴充方法和 LINQ  
  因為 <xref:System.String> 類型會實作 <xref:System.Collections.Generic.IEnumerable%601>，所以您可以對字串使用 <xref:System.Linq.Enumerable> 類別中所定義的擴充方法。 為了避免視覺雜亂，這些方法會從 <xref:System.String> 類型的 IntelliSense 中排除，不過您還是可以使用它們。 您也可以在字串上使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式。 如需詳細資訊，請參閱 [LINQ 和字串](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)。  
