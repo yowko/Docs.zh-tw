@@ -16,57 +16,59 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f80503277d6a5d748dffa7783a19c6353b2e7f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65904da9efea90d31960d71ae0da8c81dffeccf1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505116"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351394"
 ---
-# <a name="endenumeration-function"></a><span data-ttu-id="78b59-103">EndEnumeration 函式</span><span class="sxs-lookup"><span data-stu-id="78b59-103">EndEnumeration function</span></span>
-<span data-ttu-id="78b59-104">結束藉由呼叫啟動列舉順序[BeginEnumeration 函式](beginenumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="78b59-104">Terminates an enumeration sequence started with a call to the [BeginEnumeration function](beginenumeration.md).</span></span>  
+# <a name="endenumeration-function"></a><span data-ttu-id="017fc-103">EndEnumeration 函式</span><span class="sxs-lookup"><span data-stu-id="017fc-103">EndEnumeration function</span></span>
+
+<span data-ttu-id="017fc-104">結束藉由呼叫啟動列舉順序[BeginEnumeration 函式](beginenumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="017fc-104">Terminates an enumeration sequence started with a call to the [BeginEnumeration function](beginenumeration.md).</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a><span data-ttu-id="78b59-105">語法</span><span class="sxs-lookup"><span data-stu-id="78b59-105">Syntax</span></span>  
-  
-```  
+
+## <a name="syntax"></a><span data-ttu-id="017fc-105">語法</span><span class="sxs-lookup"><span data-stu-id="017fc-105">Syntax</span></span>
+
+```cpp
 HRESULT EndEnumeration (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr 
-); 
-```  
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr
+);
+```
 
-## <a name="parameters"></a><span data-ttu-id="78b59-106">參數</span><span class="sxs-lookup"><span data-stu-id="78b59-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="017fc-106">參數</span><span class="sxs-lookup"><span data-stu-id="017fc-106">Parameters</span></span>
 
-`vFunc`  
-<span data-ttu-id="78b59-107">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="78b59-107">[in] This parameter is unused.</span></span>
+`vFunc`\
+<span data-ttu-id="017fc-107">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="017fc-107">[in] This parameter is unused.</span></span>
 
-`ptr`  
-<span data-ttu-id="78b59-108">[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。</span><span class="sxs-lookup"><span data-stu-id="78b59-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+`ptr`\
+<span data-ttu-id="017fc-108">[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。</span><span class="sxs-lookup"><span data-stu-id="017fc-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
+## <a name="return-value"></a><span data-ttu-id="017fc-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="017fc-109">Return value</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="78b59-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="78b59-109">Return value</span></span>
+<span data-ttu-id="017fc-110">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="017fc-110">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-<span data-ttu-id="78b59-110">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="78b59-110">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
-
-|<span data-ttu-id="78b59-111">常數</span><span class="sxs-lookup"><span data-stu-id="78b59-111">Constant</span></span>  |<span data-ttu-id="78b59-112">值</span><span class="sxs-lookup"><span data-stu-id="78b59-112">Value</span></span>  |<span data-ttu-id="78b59-113">描述</span><span class="sxs-lookup"><span data-stu-id="78b59-113">Description</span></span>  |
+|<span data-ttu-id="017fc-111">常數</span><span class="sxs-lookup"><span data-stu-id="017fc-111">Constant</span></span>  |<span data-ttu-id="017fc-112">值</span><span class="sxs-lookup"><span data-stu-id="017fc-112">Value</span></span>  |<span data-ttu-id="017fc-113">描述</span><span class="sxs-lookup"><span data-stu-id="017fc-113">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | <span data-ttu-id="78b59-114">0x80041001</span><span class="sxs-lookup"><span data-stu-id="78b59-114">0x80041001</span></span> | <span data-ttu-id="78b59-115">已有一般失敗。</span><span class="sxs-lookup"><span data-stu-id="78b59-115">There has been a general failure.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="78b59-116">0</span><span class="sxs-lookup"><span data-stu-id="78b59-116">0</span></span> | <span data-ttu-id="78b59-117">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="78b59-117">The function call was successful.</span></span>  |
-  
-## <a name="remarks"></a><span data-ttu-id="78b59-118">備註</span><span class="sxs-lookup"><span data-stu-id="78b59-118">Remarks</span></span>
+|`WBEM_E_FAILED` | <span data-ttu-id="017fc-114">0x80041001</span><span class="sxs-lookup"><span data-stu-id="017fc-114">0x80041001</span></span> | <span data-ttu-id="017fc-115">已有一般失敗。</span><span class="sxs-lookup"><span data-stu-id="017fc-115">There has been a general failure.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="017fc-116">0</span><span class="sxs-lookup"><span data-stu-id="017fc-116">0</span></span> | <span data-ttu-id="017fc-117">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="017fc-117">The function call was successful.</span></span>  |
 
-<span data-ttu-id="78b59-119">此函式會包裝在呼叫[IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)方法。</span><span class="sxs-lookup"><span data-stu-id="78b59-119">This function wraps a call to the [IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) method.</span></span>
+## <a name="remarks"></a><span data-ttu-id="017fc-118">備註</span><span class="sxs-lookup"><span data-stu-id="017fc-118">Remarks</span></span>
 
-<span data-ttu-id="78b59-120">呼叫`EndEnumeration`函式不是必要項，但它建議，因為它會釋放與列舉相關聯的資源。</span><span class="sxs-lookup"><span data-stu-id="78b59-120">A call to the `EndEnumeration` function is not required, but it is recommended because it releases resources associated with the enumeration.</span></span> <span data-ttu-id="78b59-121">不過，資源會自動解除配置時啟動下一次列舉或釋放物件。</span><span class="sxs-lookup"><span data-stu-id="78b59-121">However, the resoruces are deallocated automatically when the next enumeration is started or the object is released.</span></span>
+<span data-ttu-id="017fc-119">此函式會包裝在呼叫[IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)方法。</span><span class="sxs-lookup"><span data-stu-id="017fc-119">This function wraps a call to the [IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="78b59-122">需求</span><span class="sxs-lookup"><span data-stu-id="78b59-122">Requirements</span></span>  
- <span data-ttu-id="78b59-123">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="78b59-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="78b59-124">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="78b59-124">**Header:** WMINet_Utils.idl</span></span>  
-  
- <span data-ttu-id="78b59-125">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="78b59-125">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="78b59-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="78b59-126">See also</span></span>
-- [<span data-ttu-id="78b59-127">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="78b59-127">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+<span data-ttu-id="017fc-120">呼叫`EndEnumeration`函式不是必要項，但它建議，因為它會釋放與列舉相關聯的資源。</span><span class="sxs-lookup"><span data-stu-id="017fc-120">A call to the `EndEnumeration` function is not required, but it is recommended because it releases resources associated with the enumeration.</span></span> <span data-ttu-id="017fc-121">不過，資源會自動解除配置時啟動下一次列舉或釋放物件。</span><span class="sxs-lookup"><span data-stu-id="017fc-121">However, the resources are deallocated automatically when the next enumeration is started or the object is released.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="017fc-122">需求</span><span class="sxs-lookup"><span data-stu-id="017fc-122">Requirements</span></span>
+
+<span data-ttu-id="017fc-123">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="017fc-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="017fc-124">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="017fc-124">**Header:** WMINet_Utils.idl</span></span>
+
+<span data-ttu-id="017fc-125">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="017fc-125">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="017fc-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="017fc-126">See also</span></span>
+
+- [<span data-ttu-id="017fc-127">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="017fc-127">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

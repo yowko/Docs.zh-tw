@@ -8,23 +8,23 @@ helpviewer_keywords:
 - drag and drop [WPF]
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
-ms.openlocfilehash: 084354f2c567716c2ca083dddb4cd6628334d603
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542570"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367462"
 ---
-# <a name="drag-and-drop"></a><span data-ttu-id="e73f1-102">拖放</span><span class="sxs-lookup"><span data-stu-id="e73f1-102">Drag and Drop</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="e73f1-103"> 提供靈活自如拖曳和卸除基礎結構可支援拖曳和卸除的資料中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式，以及其他[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="e73f1-103"> provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
+# <a name="drag-and-drop"></a><span data-ttu-id="0f392-102">拖放</span><span class="sxs-lookup"><span data-stu-id="0f392-102">Drag and Drop</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="0f392-103">提供高彈性的拖曳和卸除基礎結構可支援拖曳和卸除的資料都[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式，以及其他[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="0f392-103">provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e73f1-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="e73f1-104">In This Section</span></span>  
- [<span data-ttu-id="e73f1-105">拖放概觀</span><span class="sxs-lookup"><span data-stu-id="e73f1-105">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
- [<span data-ttu-id="e73f1-106">資料與資料物件</span><span class="sxs-lookup"><span data-stu-id="e73f1-106">Data and Data Objects</span></span>](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
- [<span data-ttu-id="e73f1-107">逐步解說：在使用者控制項上啟用拖放功能</span><span class="sxs-lookup"><span data-stu-id="e73f1-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [<span data-ttu-id="e73f1-108">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="e73f1-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0f392-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="0f392-104">In This Section</span></span>  
+ [<span data-ttu-id="0f392-105">拖放概觀</span><span class="sxs-lookup"><span data-stu-id="0f392-105">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)  
+ [<span data-ttu-id="0f392-106">資料與資料物件</span><span class="sxs-lookup"><span data-stu-id="0f392-106">Data and Data Objects</span></span>](data-and-data-objects.md)  
+ [<span data-ttu-id="0f392-107">逐步解說：啟用拖曳並放在使用者控制項</span><span class="sxs-lookup"><span data-stu-id="0f392-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [<span data-ttu-id="0f392-108">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="0f392-108">How-to Topics</span></span>](drag-and-drop-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="e73f1-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="e73f1-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0f392-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="0f392-109">Reference</span></span>  
  <xref:System.Windows.DataFormat>  
   <xref:System.Windows.DataObject>  
   <xref:System.Windows.DragDrop>  
@@ -32,4 +32,4 @@ ms.locfileid: "33542570"
   <xref:System.Windows.DragEventHandler>  
   <xref:System.Windows.TextDataFormat>  
   
-## <a name="related-sections"></a><span data-ttu-id="e73f1-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="e73f1-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="0f392-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="0f392-110">Related Sections</span></span>

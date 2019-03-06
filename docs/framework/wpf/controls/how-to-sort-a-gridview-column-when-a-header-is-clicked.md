@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b636842b1d41e17b09f02b7b9a6f7aa47eb4cdd1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694083"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365408"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a><span data-ttu-id="ae608-102">HOW TO：在按一下行首時排序 GridView 資料行</span><span class="sxs-lookup"><span data-stu-id="ae608-102">How to: Sort a GridView Column When a Header Is Clicked</span></span>
-<span data-ttu-id="ae608-103">此範例示範如何建立<xref:System.Windows.Controls.ListView>實作控制項<xref:System.Windows.Controls.GridView>檢視模式和排序資料內容，當使用者按一下資料行標頭。</span><span class="sxs-lookup"><span data-stu-id="ae608-103">This example shows how to create a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> view mode and sorts the data content when a user clicks a column header.</span></span>  
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a><span data-ttu-id="f0f7a-102">HOW TO：在按一下行首時排序 GridView 資料行</span><span class="sxs-lookup"><span data-stu-id="f0f7a-102">How to: Sort a GridView Column When a Header Is Clicked</span></span>
+<span data-ttu-id="f0f7a-103">此範例示範如何建立<xref:System.Windows.Controls.ListView>實作控制項<xref:System.Windows.Controls.GridView>檢視模式和排序資料內容，當使用者按一下資料行標頭。</span><span class="sxs-lookup"><span data-stu-id="f0f7a-103">This example shows how to create a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> view mode and sorts the data content when a user clicks a column header.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ae608-104">範例</span><span class="sxs-lookup"><span data-stu-id="ae608-104">Example</span></span>  
- <span data-ttu-id="ae608-105">下列範例會定義<xref:System.Windows.Controls.GridView>繫結至的三個資料行<xref:System.DateTime.Year%2A>， <xref:System.DateTime.Month%2A>，以及<xref:System.DateTime.Day%2A>，屬性<xref:System.DateTime>結構。</span><span class="sxs-lookup"><span data-stu-id="ae608-105">The following example defines a <xref:System.Windows.Controls.GridView> with three columns that bind to the <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, and <xref:System.DateTime.Day%2A>, properties of the <xref:System.DateTime> structure.</span></span>  
+## <a name="example"></a><span data-ttu-id="f0f7a-104">範例</span><span class="sxs-lookup"><span data-stu-id="f0f7a-104">Example</span></span>  
+ <span data-ttu-id="f0f7a-105">下列範例會定義<xref:System.Windows.Controls.GridView>繫結至的三個資料行<xref:System.DateTime.Year%2A>， <xref:System.DateTime.Month%2A>，以及<xref:System.DateTime.Day%2A>，屬性<xref:System.DateTime>結構。</span><span class="sxs-lookup"><span data-stu-id="f0f7a-105">The following example defines a <xref:System.Windows.Controls.GridView> with three columns that bind to the <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, and <xref:System.DateTime.Day%2A>, properties of the <xref:System.DateTime> structure.</span></span>  
   
 ```xaml  
 <GridView>  
@@ -37,7 +37,7 @@ ms.locfileid: "54694083"
 </GridView>  
 ```  
   
- <span data-ttu-id="ae608-106">下列範例顯示定義為資料項目<xref:System.Collections.ArrayList>的<xref:System.DateTime>物件。</span><span class="sxs-lookup"><span data-stu-id="ae608-106">The following example shows the data items that are defined as an <xref:System.Collections.ArrayList> of <xref:System.DateTime> objects.</span></span> <span data-ttu-id="ae608-107"><xref:System.Collections.ArrayList>指<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>如<xref:System.Windows.Controls.ListView>控制項。</span><span class="sxs-lookup"><span data-stu-id="ae608-107">The <xref:System.Collections.ArrayList> is defined as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for the <xref:System.Windows.Controls.ListView> control.</span></span>  
+ <span data-ttu-id="f0f7a-106">下列範例顯示定義為資料項目<xref:System.Collections.ArrayList>的<xref:System.DateTime>物件。</span><span class="sxs-lookup"><span data-stu-id="f0f7a-106">The following example shows the data items that are defined as an <xref:System.Collections.ArrayList> of <xref:System.DateTime> objects.</span></span> <span data-ttu-id="f0f7a-107"><xref:System.Collections.ArrayList>指<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>如<xref:System.Windows.Controls.ListView>控制項。</span><span class="sxs-lookup"><span data-stu-id="f0f7a-107">The <xref:System.Collections.ArrayList> is defined as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for the <xref:System.Windows.Controls.ListView> control.</span></span>  
   
 ```xaml  
 <ListView.ItemsSource>  
@@ -58,7 +58,7 @@ ms.locfileid: "54694083"
 </ListView.ItemsSource>  
 ```  
   
- <span data-ttu-id="ae608-108">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記中的 `s` 和 `p` 識別碼會參考 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面之中繼資料中定義的命名空間對應。</span><span class="sxs-lookup"><span data-stu-id="ae608-108">The `s` and `p` identifiers in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tags refer to namespace mappings that are defined in the metadata of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="ae608-109">下列範例示範中繼資料定義。</span><span class="sxs-lookup"><span data-stu-id="ae608-109">The following example shows the metadata definition.</span></span>  
+ <span data-ttu-id="f0f7a-108">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記中的 `s` 和 `p` 識別碼會參考 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面之中繼資料中定義的命名空間對應。</span><span class="sxs-lookup"><span data-stu-id="f0f7a-108">The `s` and `p` identifiers in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tags refer to namespace mappings that are defined in the metadata of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="f0f7a-109">下列範例示範中繼資料定義。</span><span class="sxs-lookup"><span data-stu-id="f0f7a-109">The following example shows the metadata definition.</span></span>  
   
 ```xaml  
 <Window        
@@ -69,7 +69,7 @@ ms.locfileid: "54694083"
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- <span data-ttu-id="ae608-110">若要排序的資料，根據資料行的內容，此範例會定義事件處理常式來處理<xref:System.Windows.Controls.Primitives.ButtonBase.Click>您按下資料行標頭按鈕時所發生的事件。</span><span class="sxs-lookup"><span data-stu-id="ae608-110">To sort the data according to the contents of a column, the example defines an event handler to handle the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event that occurs when you press the column header button.</span></span> <span data-ttu-id="ae608-111">下列範例示範如何指定的事件處理常式<xref:System.Windows.Controls.GridViewColumnHeader>控制項。</span><span class="sxs-lookup"><span data-stu-id="ae608-111">The following example shows how to specify an event handler for the <xref:System.Windows.Controls.GridViewColumnHeader> control.</span></span>  
+ <span data-ttu-id="f0f7a-110">若要排序的資料，根據資料行的內容，此範例會定義事件處理常式來處理<xref:System.Windows.Controls.Primitives.ButtonBase.Click>您按下資料行標頭按鈕時所發生的事件。</span><span class="sxs-lookup"><span data-stu-id="f0f7a-110">To sort the data according to the contents of a column, the example defines an event handler to handle the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event that occurs when you press the column header button.</span></span> <span data-ttu-id="f0f7a-111">下列範例示範如何指定的事件處理常式<xref:System.Windows.Controls.GridViewColumnHeader>控制項。</span><span class="sxs-lookup"><span data-stu-id="f0f7a-111">The following example shows how to specify an event handler for the <xref:System.Windows.Controls.GridViewColumnHeader> control.</span></span>  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -78,7 +78,7 @@ ms.locfileid: "54694083"
  >  
 ```  
   
- <span data-ttu-id="ae608-112">此範例會定義事件處理常式，讓排序方向在每次您按下資料行標頭按鈕時，在遞增順序與遞減順序之間做變更。</span><span class="sxs-lookup"><span data-stu-id="ae608-112">The example defines the event handler so that the sort direction changes between ascending order and descending order each time you press the column header button.</span></span> <span data-ttu-id="ae608-113">下列範例示範事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="ae608-113">The following example shows the event handler.</span></span>  
+ <span data-ttu-id="f0f7a-112">此範例會定義事件處理常式，讓排序方向在每次您按下資料行標頭按鈕時，在遞增順序與遞減順序之間做變更。</span><span class="sxs-lookup"><span data-stu-id="f0f7a-112">The example defines the event handler so that the sort direction changes between ascending order and descending order each time you press the column header button.</span></span> <span data-ttu-id="f0f7a-113">下列範例示範事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="f0f7a-113">The following example shows the event handler.</span></span>  
   
 ```csharp  
 public partial class Window1 : Window  
@@ -197,7 +197,7 @@ Partial Public Class Window1
 End Class
 ```  
   
- <span data-ttu-id="ae608-114">下列範例示範事件處理常式所呼叫來排序資料的排序演算法。</span><span class="sxs-lookup"><span data-stu-id="ae608-114">The following example shows the sorting algorithm that is called by the event handler to sort the data.</span></span> <span data-ttu-id="ae608-115">藉由建立新的執行排序<xref:System.ComponentModel.SortDescription>結構。</span><span class="sxs-lookup"><span data-stu-id="ae608-115">The sort is performed by creating a new <xref:System.ComponentModel.SortDescription> structure.</span></span>  
+ <span data-ttu-id="f0f7a-114">下列範例示範事件處理常式所呼叫來排序資料的排序演算法。</span><span class="sxs-lookup"><span data-stu-id="f0f7a-114">The following example shows the sorting algorithm that is called by the event handler to sort the data.</span></span> <span data-ttu-id="f0f7a-115">藉由建立新的執行排序<xref:System.ComponentModel.SortDescription>結構。</span><span class="sxs-lookup"><span data-stu-id="f0f7a-115">The sort is performed by creating a new <xref:System.ComponentModel.SortDescription> structure.</span></span>  
   
 ```csharp  
 private void Sort(string sortBy, ListSortDirection direction)  
@@ -223,9 +223,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ae608-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ae608-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0f7a-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f0f7a-116">See also</span></span>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [<span data-ttu-id="ae608-117">ListView 概觀</span><span class="sxs-lookup"><span data-stu-id="ae608-117">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [<span data-ttu-id="ae608-118">GridView 概觀</span><span class="sxs-lookup"><span data-stu-id="ae608-118">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)
-- [<span data-ttu-id="ae608-119">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="ae608-119">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [<span data-ttu-id="f0f7a-117">ListView 概觀</span><span class="sxs-lookup"><span data-stu-id="f0f7a-117">ListView Overview</span></span>](listview-overview.md)
+- [<span data-ttu-id="f0f7a-118">GridView 概觀</span><span class="sxs-lookup"><span data-stu-id="f0f7a-118">GridView Overview</span></span>](gridview-overview.md)
+- [<span data-ttu-id="f0f7a-119">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="f0f7a-119">How-to Topics</span></span>](listview-how-to-topics.md)

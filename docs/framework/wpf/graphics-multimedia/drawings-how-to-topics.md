@@ -11,26 +11,26 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b812c78783b2d9ccf6c6e231d5e2a632ccb095f4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670312"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352330"
 ---
-# <a name="drawings-how-to-topics"></a><span data-ttu-id="fb808-102">繪圖 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="fb808-102">Drawings How-to Topics</span></span>
-<span data-ttu-id="fb808-103">在本節中的主題描述如何使用<xref:System.Windows.Media.Drawing>來繪製圖形、 影像或文字的物件。</span><span class="sxs-lookup"><span data-stu-id="fb808-103">The topics in this section describe how to use <xref:System.Windows.Media.Drawing> objects to draw shapes, images, or text.</span></span>  
+# <a name="drawings-how-to-topics"></a><span data-ttu-id="e5b0e-102">繪圖 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="e5b0e-102">Drawings How-to Topics</span></span>
+<span data-ttu-id="e5b0e-103">在本節中的主題描述如何使用<xref:System.Windows.Media.Drawing>來繪製圖形、 影像或文字的物件。</span><span class="sxs-lookup"><span data-stu-id="e5b0e-103">The topics in this section describe how to use <xref:System.Windows.Media.Drawing> objects to draw shapes, images, or text.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fb808-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="fb808-104">In This Section</span></span>  
- [<span data-ttu-id="fb808-105">對圖形套用 GuidelineSet</span><span class="sxs-lookup"><span data-stu-id="fb808-105">Apply a GuidelineSet to a Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [<span data-ttu-id="fb808-106">建立複合圖形</span><span class="sxs-lookup"><span data-stu-id="fb808-106">Create a Composite Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
-  [<span data-ttu-id="fb808-107">建立 GeometryDrawing</span><span class="sxs-lookup"><span data-stu-id="fb808-107">Create a GeometryDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
-  [<span data-ttu-id="fb808-108">使用 ImageDrawing 繪製影像</span><span class="sxs-lookup"><span data-stu-id="fb808-108">Draw an Image Using ImageDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
-  [<span data-ttu-id="fb808-109">使用 VideoDrawing 播放媒體</span><span class="sxs-lookup"><span data-stu-id="fb808-109">Play Media using a VideoDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
-  [<span data-ttu-id="fb808-110">將圖形當做影像來源使用</span><span class="sxs-lookup"><span data-stu-id="fb808-110">Use a Drawing as an Image Source</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e5b0e-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="e5b0e-104">In This Section</span></span>  
+ [<span data-ttu-id="e5b0e-105">對圖形套用 GuidelineSet</span><span class="sxs-lookup"><span data-stu-id="e5b0e-105">Apply a GuidelineSet to a Drawing</span></span>](how-to-apply-a-guidelineset-to-a-drawing.md)  
+  [<span data-ttu-id="e5b0e-106">建立複合圖形</span><span class="sxs-lookup"><span data-stu-id="e5b0e-106">Create a Composite Drawing</span></span>](how-to-create-a-composite-drawing.md)  
+  [<span data-ttu-id="e5b0e-107">建立 GeometryDrawing</span><span class="sxs-lookup"><span data-stu-id="e5b0e-107">Create a GeometryDrawing</span></span>](how-to-create-a-geometrydrawing.md)  
+  [<span data-ttu-id="e5b0e-108">使用 ImageDrawing 繪製影像</span><span class="sxs-lookup"><span data-stu-id="e5b0e-108">Draw an Image Using ImageDrawing</span></span>](how-to-draw-an-image-using-imagedrawing.md)  
+  [<span data-ttu-id="e5b0e-109">使用 VideoDrawing 播放媒體</span><span class="sxs-lookup"><span data-stu-id="e5b0e-109">Play Media using a VideoDrawing</span></span>](how-to-play-media-using-a-videodrawing.md)  
+  [<span data-ttu-id="e5b0e-110">將圖形當做影像來源使用</span><span class="sxs-lookup"><span data-stu-id="e5b0e-110">Use a Drawing as an Image Source</span></span>](how-to-use-a-drawing-as-an-image-source.md)  
   
-## <a name="see-also"></a><span data-ttu-id="fb808-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fb808-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5b0e-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e5b0e-111">See also</span></span>
 - <xref:System.Windows.Media.Drawing>
-- [<span data-ttu-id="fb808-112">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="fb808-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="fb808-113">WPF 中圖案和基本繪圖概觀</span><span class="sxs-lookup"><span data-stu-id="fb808-113">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [<span data-ttu-id="fb808-114">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="fb808-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="e5b0e-112">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="e5b0e-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="e5b0e-113">WPF 中圖案和基本繪圖概觀</span><span class="sxs-lookup"><span data-stu-id="e5b0e-113">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="e5b0e-114">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="e5b0e-114">Graphics and Multimedia</span></span>](index.md)
