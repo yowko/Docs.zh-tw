@@ -5,12 +5,12 @@ helpviewer_keywords:
 - TickBar [WPF]
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
-ms.openlocfilehash: 0317668bf4f6721af698e1a8b966493b2c127012
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 438bd8aca4b44bc449415dc2b9a0ff2036d14eb5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746645"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368102"
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>HOW TO：自訂滑桿上的刻度
 此範例示範如何建立<xref:System.Windows.Controls.Slider>具有刻度標記的控制項。  
@@ -22,7 +22,7 @@ ms.locfileid: "56746645"
   
  下列範例示範如何使用<xref:System.Windows.Controls.Slider.Ticks%2A>屬性，以建立刻度標記沿著<xref:System.Windows.Controls.Slider>以不規則的間隔。  
   
- [!code-xaml[Slider#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
+ [!code-xaml[Slider#4](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Controls.Slider>

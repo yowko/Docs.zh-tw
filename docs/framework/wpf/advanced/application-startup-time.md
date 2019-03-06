@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bd7875f1e819497ea3a4d846a2876084a54ab80
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527324"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379103"
 ---
 # <a name="application-startup-time"></a>應用程式啟動時間
 WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明各種技術來縮短 Windows Presentation Foundation (WPF) 應用程式的認知和實際啟動時間。  
@@ -24,7 +24,7 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
  暖啟動發生於主要通用語言執行平台 (CLR) 元件的大部分頁面已經載入記憶體中，可節省寶貴的磁碟存取時間。 這就是為什麼 Managed 應用程式第二次執行時較快啟動。  
   
 ## <a name="implement-a-splash-screen"></a>實作啟動顯示畫面  
- 如果從啟動應用程式到顯示第一個 UI 之間，有很明顯、無可避免的延遲時間，請使用「啟動顯示畫面」最佳化感知的啟動時間。 這種方法會在使用者啟動應用程式時，幾乎立即顯示影像。 當應用程式準備好顯示第一個 UI 時，啟動顯示畫面會消失。 從開始[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]，您可以使用<xref:System.Windows.SplashScreen>類別來實作啟動顯示畫面。 如需詳細資訊，請參閱[將啟動顯示畫面新增至 WPF 應用程式](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)。  
+ 如果從啟動應用程式到顯示第一個 UI 之間，有很明顯、無可避免的延遲時間，請使用「啟動顯示畫面」最佳化感知的啟動時間。 這種方法會在使用者啟動應用程式時，幾乎立即顯示影像。 當應用程式準備好顯示第一個 UI 時，啟動顯示畫面會消失。 從開始[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]，您可以使用<xref:System.Windows.SplashScreen>類別來實作啟動顯示畫面。 如需詳細資訊，請參閱[將啟動顯示畫面新增至 WPF 應用程式](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)。  
   
  您也可以使用原生 Win32 圖形，以實作您自己的啟動顯示畫面。 顯示您之前的實作<xref:System.Windows.Application.Run%2A>呼叫方法。  
   
@@ -53,7 +53,7 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
  請考慮避免應用程式組態。 例如，如果應用程式有簡單的組態需求及嚴格的啟動時間目標，則登錄項目或簡單的 INI 檔案可能是較快的啟動替代方法。  
   
 ## <a name="utilize-the-gac"></a>利用 GAC  
- 如果組件未安裝在全域組件快取 (GAC) 中，則強式命名組件的雜湊驗證和 Ngen 映像驗證 (如果電腦上有該組件的原生映像) 會造成延遲。 安裝在 GAC 中的所有組件會跳過強式名稱驗證。 如需詳細資訊，請參閱 [Gacutil.exe (全域組件快取工具)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md)。  
+ 如果組件未安裝在全域組件快取 (GAC) 中，則強式命名組件的雜湊驗證和 Ngen 映像驗證 (如果電腦上有該組件的原生映像) 會造成延遲。 安裝在 GAC 中的所有組件會跳過強式名稱驗證。 如需詳細資訊，請參閱 [Gacutil.exe (全域組件快取工具)](../../tools/gacutil-exe-gac-tool.md)。  
   
 ## <a name="use-ngenexe"></a>使用 Ngen.exe  
  請考慮在您的應用程式上使用原生映像產生器 (Ngen.exe)。 使用 Ngen.exe 表示以 CPU 消耗換取更多磁碟存取，因為由 Ngen.exe 產生的原生映像可能大於 MSIL 映像。  
@@ -67,14 +67,14 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
 ### <a name="ngen-and-clickonce"></a>Ngen 和 ClickOnce  
  您打算部署應用程式的方式也會造成載入時間不同。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 應用程式部署不支援 Ngen。 如果您決定對應用程式使用 Ngen.exe，您必須使用其他部署機制，例如 Windows Installer。  
   
- 如需詳細資訊，請參閱 [Ngen.exe (原生映像產生器)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)。  
+ 如需詳細資訊，請參閱 [Ngen.exe (原生映像產生器)](../../tools/ngen-exe-native-image-generator.md)。  
   
 ### <a name="rebasing-and-dll-address-collisions"></a>重設基底和 DLL 位址衝突  
  如果您使用 Ngen.exe，請注意，當原生映像載入記憶體中時，可能會發生重定基底。 如果因為位址範圍已配置而未於慣用基底位址載入 DLL，Windows 載入器會將其載入其他位址，作業會很耗時。  
   
  您可以使用虛擬位址傾印 (Vadump.exe) 工具，檢查是否有所有頁面都是私用的模組。 如果是這樣，模組可能已重定基底到不同的位址。 因此，無法共用其頁面。  
   
- 如需有關如何設定基底位址的詳細資訊，請參閱 [Ngen.exe (原生映像產生器)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)。  
+ 如需有關如何設定基底位址的詳細資訊，請參閱 [Ngen.exe (原生映像產生器)](../../tools/ngen-exe-native-image-generator.md)。  
   
 ## <a name="optimize-authenticode"></a>最佳化 Authenticode  
  Authenticode 驗證會增加啟動時間。 Authenticode 簽署的組件必須經過憑證授權單位 (CA) 驗證。 這項驗證可能耗費時間，因為需要連線至網路許多次來下載目前的憑證撤銷清單。 這也可確保受信任根的路徑上存在完整的有效憑證鏈結。 這意味著載入組件時會延遲幾秒鐘。  
@@ -91,7 +91,7 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
 </configuration>  
 ```  
   
- 如需詳細資訊，請參閱 [\<generatePublisherEvidence> 元素](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)。  
+ 如需詳細資訊，請參閱 [\<generatePublisherEvidence> 元素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)。  
   
 ## <a name="compare-performance-on-windows-vista"></a>在 Windows Vista 上比較效能  
  Windows Vista 的記憶體管理員有一項稱為 SuperFetch 的技術。 SuperFetch 會分析一段時間的使用模式，以判斷特定使用者的最佳記憶體內容。 它會持續運作來隨時維護該內容。  
@@ -127,6 +127,6 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
-- [在 WPF 應用程式中加入啟動顯示畫面](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
-- [Ngen.exe (原生映像產生器)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence> 元素](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [在 WPF 應用程式中加入啟動顯示畫面](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (原生映像產生器)](../../tools/ngen-exe-native-image-generator.md)
+- [\<generatePublisherEvidence> 元素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

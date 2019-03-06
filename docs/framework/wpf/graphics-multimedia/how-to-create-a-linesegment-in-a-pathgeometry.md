@@ -8,12 +8,12 @@ helpviewer_keywords:
 - line segments [WPF], creating
 - graphics [WPF], line segments
 ms.assetid: 0155ed47-a20d-49a7-a306-186d8e07fbc4
-ms.openlocfilehash: 9aa17a361e8e0ca5b43b2646c38926e0123818c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6862ab02c288f9cfd1fac4a8c22079b0cf91016
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712125"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356178"
 ---
 # <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>HOW TO：在 PathGeometry 中建立 LineSegment
 這個範例會示範如何建立線段 。 若要建立線段，使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.LineSegment>類別。  
@@ -21,7 +21,7 @@ ms.locfileid: "54712125"
 ## <a name="example"></a>範例  
  下列範例繪製<xref:System.Windows.Media.LineSegment>從 （10，50） 到 （200，70）。 下圖顯示產生<xref:System.Windows.Media.LineSegment>; 已加入格線背景以顯示座標系統。  
   
- ![PathFigure 中的 LineSegment](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment")  
+ ![PathFigure 中的 LineSegment](./media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment")  
 從 (10,50) 到 (200,70) 繪製的 LineSegment  
   
  [xaml]  
@@ -35,7 +35,7 @@ ms.locfileid: "54712125"
   
  [xaml]  
   
- (請注意，此屬性語法實際上會建立<xref:System.Windows.Media.StreamGeometry>，輕量版<xref:System.Windows.Media.PathGeometry>。 如需詳細資訊，請參閱[路徑標記語法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)頁面。)  
+ (請注意，此屬性語法實際上會建立<xref:System.Windows.Media.StreamGeometry>，輕量版<xref:System.Windows.Media.PathGeometry>。 如需詳細資訊，請參閱[路徑標記語法](path-markup-syntax.md)頁面。)  
   
  在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，您也可以使用物件元素語法來繪製線段。 下列範例相當於先前的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 範例。  
   
@@ -106,4 +106,4 @@ Dim myPathFigure As New PathFigure()
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.GeometryDrawing>
 - <xref:System.Windows.Shapes.Path>
-- [幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [幾何概觀](geometry-overview.md)

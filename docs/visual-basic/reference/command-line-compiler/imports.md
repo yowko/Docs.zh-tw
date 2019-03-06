@@ -6,12 +6,12 @@ helpviewer_keywords:
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 9e5adcce85c4ca4863d28784a7d7f61c441a06c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce59cbc834d84d19ec7f8d6d3d32b545c537173c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588440"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364667"
 ---
 # <a name="-imports-visual-basic"></a>-匯入 (Visual Basic)
 從指定的組件，匯入命名空間。  
@@ -38,10 +38,16 @@ ms.locfileid: "54588440"
 |1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [參考] 節點。<br />3.輸入命名空間名稱旁的方塊**新增使用者匯入** 按鈕。<br />4.按一下 [**新增使用者匯入**] 按鈕。|  
   
 ## <a name="example"></a>範例  
- 下列程式碼會編譯時`/imports:system.globalization`指定。 未安裝，成功編譯需要任一`Imports System.Globalization`陳述式是包含在開頭的原始程式碼檔，或為完整限定屬性`System.Globalization.CultureInfo.CurrentCulture.Name`。 
-  
- [!code-vb[imports example](codesnippet/VisualBasic/imports_2.vb)]  
-  
+ 下列程式碼會編譯時`/imports:system.globalization`指定。 未安裝，成功編譯需要任一`Imports System.Globalization`陳述式是包含在開頭的原始程式碼檔，或為完整限定屬性`System.Globalization.CultureInfo.CurrentCulture.Name`。
+
+```vb
+Module Example
+   Public Sub Main()
+      Console.WriteLine($"The current culture is {CultureInfo.CurrentCulture.Name}")
+   End Sub
+End Module
+```
+
 ## <a name="see-also"></a>另請參閱
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [參考和 Imports 陳述式](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)

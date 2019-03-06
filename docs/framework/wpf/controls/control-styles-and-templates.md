@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079723"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373191"
 ---
 # <a name="control-styles-and-templates"></a>控制項的樣式和範本
 在 Windows Presentation Foundation (WPF) 控制項有<xref:System.Windows.Controls.ControlTemplate>包含該控制項的視覺化樹狀結構。 您可以變更的結構和外觀的控制項，藉由修改<xref:System.Windows.Controls.ControlTemplate>該控制項。 沒有任何方法來取代一部分控制項之視覺化樹狀結構若要變更，您必須設定的控制項的視覺化樹狀結構<xref:System.Windows.Controls.Control.Template%2A>至其新且完整的控制項屬性<xref:System.Windows.Controls.ControlTemplate>。  
@@ -34,38 +34,38 @@ ms.locfileid: "47079723"
 |Aero.NormalColor.xaml|Windows Vista 作業系統上的預設佈景主題。|  
   
 ## <a name="in-this-section"></a>本節內容  
- [Button 樣式和範本](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
- [Calendar 樣式和範本](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
- [CheckBox 樣式和範本](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  
- [ComboBox 樣式和範本](../../../../docs/framework/wpf/controls/combobox-styles-and-templates.md)  
- [ContextMenu 樣式和範本](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
- [DataGrid 樣式和範本](../../../../docs/framework/wpf/controls/datagrid-styles-and-templates.md)  
- [DatePicker 樣式和範本](../../../../docs/framework/wpf/controls/datepicker-styles-and-templates.md)  
- [DocumentViewer 樣式和範本](../../../../docs/framework/wpf/controls/documentviewer-styles-and-templates.md)  
- [Expander 樣式和範本](../../../../docs/framework/wpf/controls/expander-styles-and-templates.md)  
- [Frame 樣式和範本](../../../../docs/framework/wpf/controls/frame-styles-and-templates.md)  
- [GroupBox 樣式和範本](../../../../docs/framework/wpf/controls/groupbox-styles-and-templates.md)  
- [Label 樣式和範本](../../../../docs/framework/wpf/controls/label-styles-and-templates.md)  
- [ListBox 樣式和範本](../../../../docs/framework/wpf/controls/listbox-styles-and-templates.md)  
- [ListView 樣式和範本](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
- [Menu 樣式和範本](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
- [NavigationWindow 樣式和範本](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [PasswordBox 樣式和範本](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
- [ProgressBar 樣式和範本](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
- [RadioButton 樣式和範本](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [RepeatButton 樣式和範本](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
- [ScrollBar 樣式和範本](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [ScrollViewer 樣式和範本](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
- [Slider 樣式和範本](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
- [StatusBar 樣式和範本](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
- [TabControl 樣式和範本](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
- [TextBox 樣式和範本](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Thumb 樣式和範本](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [ToggleButton 樣式和範本](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
- [ToolBar 樣式和範本](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
- [ToolTip 樣式和範本](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
- [TreeView 樣式和範本](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  
- [Window 樣式和範本](../../../../docs/framework/wpf/controls/window-styles-and-templates.md)  
+ [Button 樣式和範本](button-styles-and-templates.md)  
+ [Calendar 樣式和範本](calendar-styles-and-templates.md)  
+ [CheckBox 樣式和範本](checkbox-styles-and-templates.md)  
+ [ComboBox 樣式和範本](combobox-styles-and-templates.md)  
+ [ContextMenu 樣式和範本](contextmenu-styles-and-templates.md)  
+ [DataGrid 樣式和範本](datagrid-styles-and-templates.md)  
+ [DatePicker 樣式和範本](datepicker-styles-and-templates.md)  
+ [DocumentViewer 樣式和範本](documentviewer-styles-and-templates.md)  
+ [Expander 樣式和範本](expander-styles-and-templates.md)  
+ [Frame 樣式和範本](frame-styles-and-templates.md)  
+ [GroupBox 樣式和範本](groupbox-styles-and-templates.md)  
+ [Label 樣式和範本](label-styles-and-templates.md)  
+ [ListBox 樣式和範本](listbox-styles-and-templates.md)  
+ [ListView 樣式和範本](listview-styles-and-templates.md)  
+ [Menu 樣式和範本](menu-styles-and-templates.md)  
+ [NavigationWindow 樣式和範本](navigationwindow-styles-and-templates.md)  
+ [PasswordBox 樣式和範本](passwordbox-syles-and-templates.md)  
+ [ProgressBar 樣式和範本](progressbar-styles-and-templates.md)  
+ [RadioButton 樣式和範本](radiobutton-styles-and-templates.md)  
+ [RepeatButton 樣式和範本](repeatbutton-syles-and-templates.md)  
+ [ScrollBar 樣式和範本](scrollbar-styles-and-templates.md)  
+ [ScrollViewer 樣式和範本](scrollviewer-styles-and-templates.md)  
+ [Slider 樣式和範本](slider-styles-and-templates.md)  
+ [StatusBar 樣式和範本](statusbar-styles-and-templates.md)  
+ [TabControl 樣式和範本](tabcontrol-styles-and-templates.md)  
+ [TextBox 樣式和範本](textbox-styles-and-templates.md)  
+ [Thumb 樣式和範本](thumb-syles-and-templates.md)  
+ [ToggleButton 樣式和範本](togglebutton-syles-and-templates.md)  
+ [ToolBar 樣式和範本](toolbar-styles-and-templates.md)  
+ [ToolTip 樣式和範本](tooltip-styles-and-templates.md)  
+ [TreeView 樣式和範本](treeview-styles-and-templates.md)  
+ [Window 樣式和範本](window-styles-and-templates.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls>  
@@ -73,6 +73,6 @@ ms.locfileid: "47079723"
  <xref:System.Windows.Controls.ControlTemplate>  
   
 ## <a name="related-sections"></a>相關章節  
- [控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [控制項撰寫概觀](control-authoring-overview.md)  
   
- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [樣式設定和範本化](styling-and-templating.md)

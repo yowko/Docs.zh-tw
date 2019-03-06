@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 6d79d3330154fff33abe5a401a70c6b9a20aad72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8b2a6b5386ec33ad8aa5281d808bb7089149764
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660420"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362431"
 ---
 # <a name="animation-tips-and-tricks"></a>動畫秘訣和訣竅
 使用中的動畫時[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、 有一些秘訣和技巧，讓動畫有較佳，並減少您的挫折。  
@@ -28,13 +28,13 @@ ms.locfileid: "54660420"
 ## <a name="general-issues"></a>一般問題  
   
 ### <a name="animating-the-position-of-a-scroll-bar-or-slider-freezes-it"></a>以動畫顯示捲軸或滑桿位置會凍結  
- 如果您以動畫顯示捲軸或使用的動畫會有滑桿的位置<xref:System.Windows.Media.Animation.FillBehavior>的<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>（預設值），使用者將再也無法移動捲軸或滑桿。 這是因為即使動畫結束，仍然在覆寫目標屬性的基底值。 若要停止從覆寫屬性的目前值的動畫，將它移除，或為它提供<xref:System.Windows.Media.Animation.FillBehavior>的<xref:System.Windows.Media.Animation.FillBehavior.Stop>。 如需詳細資訊和範例，請參閱 <<c0> [ 設定屬性之後以動畫顯示使用分鏡腳本](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)。  
+ 如果您以動畫顯示捲軸或使用的動畫會有滑桿的位置<xref:System.Windows.Media.Animation.FillBehavior>的<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>（預設值），使用者將再也無法移動捲軸或滑桿。 這是因為即使動畫結束，仍然在覆寫目標屬性的基底值。 若要停止從覆寫屬性的目前值的動畫，將它移除，或為它提供<xref:System.Windows.Media.Animation.FillBehavior>的<xref:System.Windows.Media.Animation.FillBehavior.Stop>。 如需詳細資訊和範例，請參閱 <<c0> [ 設定屬性之後以動畫顯示使用分鏡腳本](how-to-set-a-property-after-animating-it-with-a-storyboard.md)。  
   
 ### <a name="animating-the-output-of-an-animation-has-no-effect"></a>以動畫顯示動畫的輸出沒有任何效果  
  您無法以動畫顯示已是另一個動畫輸出的物件。 比方說，如果您使用<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>來建立動畫<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>從<xref:System.Windows.Media.RadialGradientBrush>來<xref:System.Windows.Media.SolidColorBrush>，您無法以動畫顯示的任何屬性<xref:System.Windows.Media.RadialGradientBrush>或<xref:System.Windows.Media.SolidColorBrush>。  
   
 ### <a name="cant-change-the-value-of-a-property-after-animating-it"></a>無法在以動畫顯示屬性之後變更該屬性的值  
- 在某些情況下，即使動畫已結束，您可能無法變更已經以動畫顯示的屬性值。 這是因為即使動畫結束，仍然在覆寫屬性的基底值。 若要停止從覆寫屬性的目前值的動畫，將它移除，或為它提供<xref:System.Windows.Media.Animation.FillBehavior>的<xref:System.Windows.Media.Animation.FillBehavior.Stop>。 如需詳細資訊和範例，請參閱 <<c0> [ 設定屬性之後以動畫顯示使用分鏡腳本](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)。  
+ 在某些情況下，即使動畫已結束，您可能無法變更已經以動畫顯示的屬性值。 這是因為即使動畫結束，仍然在覆寫屬性的基底值。 若要停止從覆寫屬性的目前值的動畫，將它移除，或為它提供<xref:System.Windows.Media.Animation.FillBehavior>的<xref:System.Windows.Media.Animation.FillBehavior.Stop>。 如需詳細資訊和範例，請參閱 <<c0> [ 設定屬性之後以動畫顯示使用分鏡腳本](how-to-set-a-property-after-animating-it-with-a-storyboard.md)。  
   
 ### <a name="changing-a-timeline-has-no-effect"></a>變更時間軸沒有任何作用  
  雖然大部分<xref:System.Windows.Media.Animation.Timeline>屬性都可顯示動畫，並可進行資料繫結，變更使用中的屬性值<xref:System.Windows.Media.Animation.Timeline>似乎沒有任何作用。 這是因為，當<xref:System.Windows.Media.Animation.Timeline>是開始時，計時系統會建立一份<xref:System.Windows.Media.Animation.Timeline>並使用它來建立<xref:System.Windows.Media.Animation.Clock>物件。 修改原始內容不會影響系統的複本。  
@@ -47,14 +47,14 @@ ms.locfileid: "54660420"
   
 -   如果您直接在時鐘層級運作，請建立並套用一組新的時鐘，並使用它們來取代前一組產生的時鐘。  
   
- 如需有關時間軸和時鐘的詳細資訊，請參閱[動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。  
+ 如需有關時間軸和時鐘的詳細資訊，請參閱[動畫和計時系統概觀](animation-and-timing-system-overview.md)。  
   
 ### <a name="fillbehaviorstop-doesnt-work-as-expected"></a>FillBehavior.Stop 未如預期運作  
  有些時候設定時<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>屬性，以<xref:System.Windows.Media.Animation.FillBehavior.Stop>似乎沒有任何作用，例如當一個動畫 「 遞交到 」 另一個因為它有<xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>設定<xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>。  
   
  下列範例會建立<xref:System.Windows.Controls.Canvas>，則<xref:System.Windows.Shapes.Rectangle>和<xref:System.Windows.Media.TranslateTransform>。 <xref:System.Windows.Media.TranslateTransform>會將動畫<xref:System.Windows.Shapes.Rectangle>周圍<xref:System.Windows.Controls.Canvas>。  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipAnimatedObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipanimatedobject)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipAnimatedObject](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipanimatedobject)]  
   
  在本節中的範例來示範幾種情況下使用上述物件所在<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>屬性行為不如您預期。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "54660420"
   
  第一個<xref:System.Windows.Media.Animation.Storyboard>， `B1`，以動畫顯示<xref:System.Windows.Media.TranslateTransform.X%2A>屬性<xref:System.Windows.Media.TranslateTransform>從 0 到 350，其中矩形 350 像素為單位向右移動。 當動畫到達其持續時間結尾，並停止播放，<xref:System.Windows.Media.TranslateTransform.X%2A>屬性還原成其原始值為 0。 結果，矩形會向右移動 350 像素，然後再跳回其原始位置。  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB1Button](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb1button)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB1Button](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb1button)]  
   
  第二個<xref:System.Windows.Media.Animation.Storyboard>， `B2`，也以動畫顯示<xref:System.Windows.Media.TranslateTransform.X%2A>屬性的相同<xref:System.Windows.Media.TranslateTransform>。 因為只有<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>在此動畫的屬性<xref:System.Windows.Media.Animation.Storyboard>設定動畫建立動畫之屬性的目前值做為其起始值。  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB2Button](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb2button)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB2Button](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb2button)]  
   
  如果您按一下第二個按鈕，在第一個<xref:System.Windows.Media.Animation.Storyboard>是正在播放，您可能預期下列行為：  
   
@@ -80,16 +80,16 @@ ms.locfileid: "54660420"
 #### <a name="fillbehavior-and-the-completed-event"></a>FillBehavior 和已完成的事件  
  下面的範例示範另一個案例，其中<xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>似乎沒有任何作用。 同樣地，此範例會使用分鏡腳本以動畫顯示<xref:System.Windows.Media.TranslateTransform.X%2A>屬性<xref:System.Windows.Media.TranslateTransform>從 0 到 350。 不過，這次範例會註冊<xref:System.Windows.Media.Animation.Timeline.Completed>事件。  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
   
  <xref:System.Windows.Media.Animation.Timeline.Completed>事件處理常式會啟動另一個<xref:System.Windows.Media.Animation.Storyboard>，以動畫顯示相同屬性從其目前的值設為 500。  
   
- [!code-csharp[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml.cs#fillbehaviortipstoryboardc1completedhandler)]
- [!code-vb[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/VisualBasic/FillBehaviorTip.xaml.vb#fillbehaviortipstoryboardc1completedhandler)]  
+ [!code-csharp[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml.cs#fillbehaviortipstoryboardc1completedhandler)]
+ [!code-vb[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/VisualBasic/FillBehaviorTip.xaml.vb#fillbehaviortipstoryboardc1completedhandler)]  
   
  以下是定義第二個標記<xref:System.Windows.Media.Animation.Storyboard>做為資源。  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipresources)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipResources](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipresources)]  
   
  當您執行<xref:System.Windows.Media.Animation.Storyboard>，您所料<xref:System.Windows.Media.TranslateTransform.X%2A>屬性<xref:System.Windows.Media.TranslateTransform>動畫從 0 到 350，然後還原為 0 完成後 (因為它有<xref:System.Windows.Media.Animation.FillBehavior>設定<xref:System.Windows.Media.Animation.FillBehavior.Stop>)，並再建立動畫從 0 到 500。 相反地，<xref:System.Windows.Media.TranslateTransform>從以動畫顯示 0 到 350，然後到 500。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "54660420"
   
 -   若要移除的特定屬性的動畫，請使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29>方法。 指定的第一個參數，要繪製之屬性和`null`作為第二個。 這將會從屬性移除所有動畫時鐘。  
   
- 如需以動畫顯示屬性的不同方式的詳細資訊，請參閱[屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。  
+ 如需以動畫顯示屬性的不同方式的詳細資訊，請參閱[屬性動畫技術概觀](property-animation-techniques-overview.md)。  
   
 ### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>使用 Compose HandoffBehavior 會耗用系統資源  
  當您套用<xref:System.Windows.Media.Animation.Storyboard>， <xref:System.Windows.Media.Animation.AnimationTimeline>，或<xref:System.Windows.Media.Animation.AnimationClock>屬性，使用<xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>、 任何<xref:System.Windows.Media.Animation.Clock>先前該屬性相關聯的物件會繼續耗用系統資源，計時系統不會自動移除這些時鐘。  
@@ -126,7 +126,7 @@ ms.locfileid: "54660420"
   
  這主要是在存留期較長的物件才會發生的動畫問題。  記憶體回收物件時，也會中斷連接並記憶體回收其時鐘。  
   
- 如需時鐘物件的詳細資訊，請參閱[動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。  
+ 如需時鐘物件的詳細資訊，請參閱[動畫和計時系統概觀](animation-and-timing-system-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [動畫概觀](animation-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: a399cc9742ff9b19aabd6dcee558f94147c88356
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625623"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366539"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 項目的配置考量
 本主題描述如何<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目互動[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]版面配置系統。  
@@ -30,9 +30,9 @@ ms.locfileid: "54625623"
   
 |版面配置功能|描述|  
 |--------------------|-----------------|  
-|自動調整大小|某些[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項調整大小本身無法正確顯示其內容。 如需詳細資訊，請參閱 < [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)。|  
+|自動調整大小|某些[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項調整大小本身無法正確顯示其內容。 如需詳細資訊，請參閱 < [AutoSize 屬性概觀](../../winforms/controls/autosize-property-overview.md)。|  
 |錨定和停駐|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項支援定位和調整大小為基礎的父容器。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> 與 <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>。|  
-|自動調整|容器控制項調整大小本身與其子系根據解析度的輸出裝置或大小，單位為像素的預設容器的字型。 如需詳細資訊，請參閱 <<c0> [ 在 Windows Form 中的自動調整](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)。|  
+|自動調整|容器控制項調整大小本身與其子系根據解析度的輸出裝置或大小，單位為像素的預設容器的字型。 如需詳細資訊，請參閱 <<c0> [ 在 Windows Form 中的自動調整](../../winforms/automatic-scaling-in-windows-forms.md)。|  
 |版面配置容器|<xref:System.Windows.Forms.FlowLayoutPanel>和<xref:System.Windows.Forms.TableLayoutPanel>控制項排列其子控制項，並根據其內容調整本身的大小。|  
   
 ## <a name="layout-limitations"></a>版面配置限制  
@@ -73,7 +73,7 @@ ms.locfileid: "54625623"
 |溢位|當<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目將從轉換`double`值來`int`值，可能會溢位。 值大於<xref:System.Int32.MaxValue>設定為<xref:System.Int32.MaxValue>。|  
   
 ### <a name="layout-related-properties"></a>配置相關的屬性  
- 控制項中的版面配置行為的屬性[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]項目會適當地藉由對應<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目。 如需詳細資訊，請參閱 [Windows Form 和 WPF 屬性對應](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)。  
+ 控制項中的版面配置行為的屬性[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]項目會適當地藉由對應<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目。 如需詳細資訊，請參閱 [Windows Form 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)。  
   
 ### <a name="layout-changes-in-the-hosted-control"></a>裝載控制項中的配置變更  
  中所裝載的版面配置變更[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項都會傳播到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]觸發版面配置更新。 <xref:System.Windows.UIElement.InvalidateMeasure%2A>方法<xref:System.Windows.Forms.Integration.WindowsFormsHost>可確保裝載控制項中的配置變更會造成[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]版面配置引擎來執行。  
@@ -101,7 +101,7 @@ ms.locfileid: "54625623"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [逐步解說：在 WPF 中排列 Windows Forms 控制項](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [逐步解說：在 WPF 中排列 Windows Forms 控制項](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [排列 Windows Form 控制項，在 WPF 範例](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Windows Forms 和 WPF 屬性對應](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Windows Forms 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
+- [移轉和互通性](migration-and-interoperability.md)

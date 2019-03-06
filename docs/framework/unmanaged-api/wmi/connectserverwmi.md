@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8968ab7c3b6fee1e29a7389020c26232e34c1e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 548c6007d4ed685c521676de87c5a98f56a222a4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567005"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376984"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 函式
-在指定的電腦上建立從 DCOM 到 WMI 命名空間的連線。  
-  
+在指定的電腦上建立從 DCOM 到 WMI 命名空間的連線。
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>語法  
-  
-```  
+
+## <a name="syntax"></a>語法
+
+```
 HRESULT ConnectServerWmi (
    [in] BSTR               strNetworkResource,
    [in] BSTR               strUser,
@@ -43,25 +43,31 @@ HRESULT ConnectServerWmi (
    [in] DWORD              impLevel, 
    [in] DWORD              authLevel
 );
-```  
+```
 ## <a name="parameters"></a>參數
 
-`strNetworkResource` [in]為有效的指標`BSTR`包含正確的 WMI 命名空間的物件路徑。 請參閱[備註](#remarks)節的詳細資訊。
+`strNetworkResource`\
+[in]為有效的指標`BSTR`包含正確的 WMI 命名空間的物件路徑。 請參閱[備註](#remarks)節的詳細資訊。
 
-`strUser` [in]有效的指標`BSTR`，其中包含使用者名稱。 A`null`值表示目前的安全性內容。 如果使用者是從不同的網域，目前於`strUser`也可以包含反斜線分隔的網域和使用者名稱。 `strUser` 也可以在 使用者主體名稱 (UPN) 格式，例如`userName@domainName`。 請參閱[備註](#remarks)節的詳細資訊。
+`strUser`\
+[in]有效的指標`BSTR`，其中包含使用者名稱。 A`null`值表示目前的安全性內容。 如果使用者是從不同的網域，目前於`strUser`也可以包含反斜線分隔的網域和使用者名稱。 `strUser` 也可以在 使用者主體名稱 (UPN) 格式，例如`userName@domainName`。 請參閱[備註](#remarks)節的詳細資訊。
 
-`strPassword` [in]有效的指標`BSTR`其中包含的密碼。 A`null`指出目前的安全性內容。 空字串 ("") 表示有效的長度為零的密碼。
+`strPassword`\
+[in]有效的指標`BSTR`其中包含的密碼。 A`null`指出目前的安全性內容。 空字串 ("") 表示有效的長度為零的密碼。
 
-`strLocale` [in]有效的指標`BSTR`指出正確的地區設定的資訊擷取。 Microsoft 地區設定識別項、 字串的格式是 「 MS\_*xxx*"，其中*xxx*是十六進位格式表示的地區設定識別碼 (LCID) 的字串。 如果未指定無效的地區設定，則方法會傳回`WBEM_E_INVALID_PARAMETER`在 Windows 7，改為使用伺服器的預設地區設定是除外。 如果 ' null1，目前的地區設定使用。 
+`strLocale`\
+[in]有效的指標`BSTR`指出正確的地區設定的資訊擷取。 Microsoft 地區設定識別項、 字串的格式是 「 MS\_*xxx*"，其中*xxx*是十六進位格式表示的地區設定識別碼 (LCID) 的字串。 如果未指定無效的地區設定，則方法會傳回`WBEM_E_INVALID_PARAMETER`在 Windows 7，改為使用伺服器的預設地區設定是除外。 如果 ' null1，目前的地區設定使用。 
  
-`lSecurityFlags` [in]旗標傳遞至`ConnectServerWmi`方法。 零 (0) 這個參數的值會導致呼叫`ConnectServerWmi`建立連接到伺服器之後，才傳回。 這可能導致應用程式沒有回應無限期地如果伺服器將會中斷。 其他有效值為：
+`lSecurityFlags`\
+[in]旗標傳遞至`ConnectServerWmi`方法。 零 (0) 這個參數的值會導致呼叫`ConnectServerWmi`建立連接到伺服器之後，才傳回。 這可能導致應用程式沒有回應無限期地如果伺服器將會中斷。 其他有效值為：
 
 | 常數  | 值  | 描述  |
 |---------|---------|---------|
 | `CONNECT_REPOSITORY_ONLY` | 0x40 | 保留供內部使用。 請勿使用。 |
 | `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` 傳回在兩分鐘或更短。 |
 
-`strAuthority` [in]使用者的網域名稱。 它可以包含下列值：
+`strAuthority`\
+[in]使用者的網域名稱。 它可以包含下列值：
 
 | 值 | 描述 |
 |---------|---------|
@@ -69,16 +75,16 @@ HRESULT ConnectServerWmi (
 | Kerberos:*主體名稱* | 使用 Kerberos 驗證，且此參數包含 Kerberos 主體名稱。 |
 | NTLMDOMAIN:*網域名稱* | 使用 NT LAN Manager 驗證，且此參數包含的 NTLM 網域名稱。 |
 
-`pCtx`   
+`pCtx`\
 [in]一般而言，這個參數是`null`。 否則，它是指標[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)所需的一或多個動態類別提供者的物件。 
 
-`ppNamespace`  
+`ppNamespace`\
 [out]當函式傳回時，收到的指標[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)物件繫結至指定的命名空間。 它會設定為指向`null`時卻發生錯誤。
 
-`impLevel`  
+`impLevel`\
 [in]模擬等級。
 
-`authLevel`  
+`authLevel`\
 [in]授權層級。
 
 ## <a name="return-value"></a>傳回值
@@ -91,22 +97,24 @@ HRESULT ConnectServerWmi (
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
-  
+
 ## <a name="remarks"></a>備註
 
 此函式會包裝在呼叫[IWbemLocator::ConnectServer](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemlocator-connectserver)方法。
 
- 在預設命名空間中，本機存取`strNetworkResource`可以是簡單的物件路徑:"root\default"或"\\.\root\default"。 存取遠端電腦上的預設命名空間使用 COM 或 Microsoft 相容的網路功能，包含電腦名稱:"\\myserver\root\default"。 電腦名稱也可以是 DNS 名稱或 IP 位址。 `ConnectServerWmi`函式也可以執行 IPv6 的電腦連線使用 IPv6 位址。
+在預設命名空間中，本機存取`strNetworkResource`可以是簡單的物件路徑:"root\default"或"\\.\root\default"。 存取遠端電腦上的預設命名空間使用 COM 或 Microsoft 相容的網路功能，包含電腦名稱:"\\myserver\root\default"。 電腦名稱也可以是 DNS 名稱或 IP 位址。 `ConnectServerWmi`函式也可以執行 IPv6 的電腦連線使用 IPv6 位址。
 
 `strUser` 不可以是空的字串。 如果在指定網域`strAuthority`，它不也必須包含在`strUser`，或函式會傳回`WBEM_E_INVALID_PARAMETER`。
 
 
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **標頭：** WMINet_Utils.idl  
-  
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>需求
+
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+ **標頭：** WMINet_Utils.idl
+
+ **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>另請參閱
+
 - [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

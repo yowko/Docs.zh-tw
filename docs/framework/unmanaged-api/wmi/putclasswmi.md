@@ -16,40 +16,41 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: edc2b90ebf73e23aeee6407eb6cb3551b9672d29
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f9d537f7713233d363f7d408b1cef0485d99d981
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972803"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365694"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi 函式
-建立新類別或更新現有類別。  
+
+建立新類別或更新現有類別。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>語法  
-  
-```  
+
+## <a name="syntax"></a>語法
+
+```cpp
 HRESULT PutClassWmi (
    [in] IWbemClassObject*    pObject,
    [in] long                 lFlags,
    [in] IWbemContext*        pCtx,
    [out] IWbemCallResult**   ppCallResult
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>參數
 
-`pObject`    
+`pObject`\
 [in]有效的類別定義的指標。 它必須具有所有必要的屬性值正確初始化。
 
-`lFlags`   
-[in]旗標的組合會影響此函式的行為。 下列的值會定義於*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼： 
+`lFlags`\
+[in]旗標的組合會影響此函式的行為。 下列的值會定義於*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果設定，WMI 不會儲存任何限定詞以修改過的類別。 <br> 如果未設定，系統會假設此物件不會進行當地語系化，，而且所有的限定詞是 storedwith 這個執行個體。 |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果設定，WMI 不會儲存任何限定詞以修改過的類別。 <br> 如果沒有設定，系統會假設此物件不會進行當地語系化，，而且所有的限定詞會儲存與這個執行個體。 |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | 如果不存在，或是如果它已經存在，覆寫它，請建立的類別。 |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | 更新類別。 此類別必須存在，呼叫才會成功。 |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | 建立的類別。 如果類別已存在，則呼叫會失敗。 |
@@ -57,12 +58,12 @@ HRESULT PutClassWmi (
 | `WBEM_FLAG_OWNER_UPDATE` | 0x10000 | 推入提供者在呼叫時，必須指定這個旗標`PutClassWmi`表示此類別已變更。 |
 | `WBEM_FLAG_UPDATE_COMPATIBLE` | 0 | 允許類別如果有任何衍生的類別和該類別的執行個體不會更新。 它也可讓更新在所有情況下如果只是變更並不重要的辨識符號，例如描述限定詞。 如果類別具有執行個體或變更重要的限定詞，則更新失敗。 |
 | `WBEM_FLAG_UPDATE_SAFE_MODE` | 0x20 | 即使有子類別，只要變更不會發生任何衝突造成與子類別，可讓更新的類別。 比方說，這個旗標可讓新的屬性，可以加入至先前未提及的任何子類別的基底類別。 如果該類別的執行個體，則更新失敗。 |
-| `WBEM_FLAG_UPDATE_FORCE_MODE` | 0x40 | 衝突的子類別存在時，會強制更新類別。 比方說，這個旗標強制更新，如果類別限定詞定義在子類別，而基底類別會嘗試將相同的辨識符號與修改現有的其中一個成員互相衝突。 在強制模式中，本衝突的解決方式刪除衝突的辨識符號中的子類別。 |
+| `WBEM_FLAG_UPDATE_FORCE_MODE` | 0x40 | 衝突的子類別存在時，會強制更新類別。 比方說，這個旗標會強制更新如果類別限定詞定義在子類別，而基底類別會嘗試將相同的辨識符號與現有的衝突。 在強制模式中，本衝突的解決方式刪除衝突的辨識符號中的子類別。 |
 
-`pCtx`  
-[in]一般而言，這個值是`null`。 否則，它是指標[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)可用的提供者所提供的要求的類別的執行個體。 
+`pCtx`\
+[in]一般而言，這個值是`null`。 否則，它是指標[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)可用的提供者所提供的要求的類別的執行個體。
 
-`ppCallResult`  
+`ppCallResult`\
 [out]如果`null`，不使用這個參數。 如果`lFlags`包含`WBEM_FLAG_RETURN_IMMEDIATELY`，此函式會立即傳回並`WBEM_S_NO_ERROR`。 `ppCallResult`參數會接收到新的指標[IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult)物件。
 
 ## <a name="return-value"></a>傳回值
@@ -84,21 +85,23 @@ HRESULT PutClassWmi (
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI 是可能已停止和重新啟動。 呼叫[ConnectServerWmi](connectserverwmi.md)一次。 |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 目前的處理序與 WMI 的遠端程序呼叫 (RPC) 連結失敗。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
-  
+
 ## <a name="remarks"></a>備註
 
 此函式會包裝在呼叫[IWbemServices::PutClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putclass)方法。
 
-使用者不能建立類別名稱的開頭或結尾底線 chacater
+使用者可能無法建立類別開頭或結尾底線字元的名稱。
 
 如果函式呼叫失敗，您可以藉由呼叫來取得其他錯誤資訊[GetErrorInfo](geterrorinfo.md)函式。
 
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **標頭：** WMINet_Utils.idl  
-  
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>需求
+
+**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+**標頭：** WMINet_Utils.idl
+
+**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>另請參閱
+
 - [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

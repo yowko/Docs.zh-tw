@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f25eaaa17d4c4bd2e9522591bb0fd66445cdb6f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036022"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362005"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>使您更輕鬆地在.NET 中偵錯映像
 
@@ -34,7 +34,7 @@ JIT 組態有兩個層面：
 
 比方說，如果您想要偵錯的組件稱為*MyApp.exe*，然後您可以建立名為文字檔*MyApp.ini*，在相同的資料夾*MyApp.exe*，其中包含這三行：
 
-```txt
+```ini
 [.NET Framework Debugging Control]
 GenerateTrackingInfo=1
 AllowOptimize=0
@@ -51,7 +51,7 @@ AllowOptimize=0
 **DebuggableAttribute** 是一次套用至整個組件，不是一一套用到組件中的個別模組。 因此，開發工具必須將自訂屬性附加至組件中繼資料權杖 (如已建立組件)，或附加至稱為 **System.Runtime.CompilerServices.AssemblyAttributesGoHere** 的類別。 ALink 工具然後升級這些**DebuggableAttribute**從每個模組至組件的屬性成為的一部分。 如果沒有衝突，ALink 作業失敗。
 
 > [!NOTE]
-> 在 .NET Framework 1.0 版中，當指定 **/clr** 和 **/Zi** 編譯器選項時，Microsoft Visual C++ 編譯器會新增 **DebuggableAttribute**。 在 .NET Framework 1.1 版中，您必須在程式碼中手動新增 **DebugabbleAttribute**，或使用 **/ASSEMBLYDEBUG** 連結器選項。
+> 在 .NET Framework 1.0 版中，當指定 **/clr** 和 **/Zi** 編譯器選項時，Microsoft Visual C++ 編譯器會新增 **DebuggableAttribute**。 在版本 1.1 中的.NET framework，您必須加入**DebuggableAttribute**在您的程式碼或使用中手動 **/ASSEMBLYDEBUG**連結器選項。
 
 ## <a name="see-also"></a>另請參閱
 

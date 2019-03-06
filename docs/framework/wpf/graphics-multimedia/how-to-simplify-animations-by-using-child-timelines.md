@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], simplifying by child timelines
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
-ms.openlocfilehash: b5af20ce791c442eada0774cd46f52205e5b93e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 933ba2dff86b99bddd8d8f75bafcd94833b2e066
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648189"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370354"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>HOW TO：使用子時刻表簡化動畫
 此範例示範如何使用子簡化動畫<xref:System.Windows.Media.Animation.ParallelTimeline>物件。 A<xref:System.Windows.Media.Animation.Storyboard>是一種<xref:System.Windows.Media.Animation.Timeline>，提供它所包含的時間軸目標資訊。 使用<xref:System.Windows.Media.Animation.Storyboard>提供時間軸目標資訊，包括物件和屬性的資訊。  
@@ -23,8 +23,8 @@ ms.locfileid: "54648189"
  **效能提示：** 雖然您可以巢狀<xref:System.Windows.Media.Animation.Storyboard>時間軸內彼此<xref:System.Windows.Media.Animation.ParallelTimeline>s 會更適合進行巢狀，因為它們需要較少額外負荷。 (<xref:System.Windows.Media.Animation.Storyboard>類別繼承自<xref:System.Windows.Media.Animation.ParallelTimeline>類別。)  
   
 ## <a name="example"></a>範例  
- [!code-xaml[Timelines_snip#ParallelTimelineWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
+ [!code-xaml[Timelines_snip#ParallelTimelineWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
 ## <a name="see-also"></a>另請參閱
-- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [指定分鏡腳本動畫之間的 HandoffBehavior](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)
+- [動畫概觀](animation-overview.md)
+- [指定分鏡腳本動畫之間的 HandoffBehavior](how-to-specify-handoffbehavior-between-storyboard-animations.md)

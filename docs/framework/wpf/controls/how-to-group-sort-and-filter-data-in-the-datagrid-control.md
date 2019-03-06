@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], group
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-ms.openlocfilehash: f0f80afd982092248bc52590e072c92784dbcbce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81fdb0a6d5602f612c55d7e790ca9a0fe56c144e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650453"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365044"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>HOW TO：群組、 排序和 DataGrid 控制項中的篩選資料
 
@@ -24,7 +24,7 @@ ms.locfileid: "54650453"
 
 在此範例中，一堆`Task`物件的繫結至<xref:System.Windows.Data.CollectionViewSource>。 <xref:System.Windows.Data.CollectionViewSource>做為<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>如<xref:System.Windows.Controls.DataGrid>。 分組、 排序和篩選會對<xref:System.Windows.Data.CollectionViewSource>而且會顯示在<xref:System.Windows.Controls.DataGrid>UI。
 
-![分組資料格中](./media/wpf-datagridgroups.png "WPF_DataGridGroups") DataGrid 中的群組資料
+![分組資料格中](././media/wpf-datagridgroups.png "WPF_DataGridGroups") DataGrid 中的群組資料
 
 ## <a name="using-a-collectionviewsource-as-an-itemssource"></a>使用 CollectionViewSource ItemsSource
 
@@ -42,9 +42,9 @@ ms.locfileid: "54650453"
     [!code-csharp[DataGrid_GroupSortFilter#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#101)]
     [!code-vb[DataGrid_GroupSortFilter#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#101)]
 
-2. 在 XAML，請在建立集合類別的執行個體，並設定[X:key 指示詞](../../../../docs/framework/xaml-services/x-key-directive.md)。
+2. 在 XAML，請在建立集合類別的執行個體，並設定[X:key 指示詞](../../xaml-services/x-key-directive.md)。
 
-3. 在 XAML 中，建立的執行個體<xref:System.Windows.Data.CollectionViewSource>類別中，將[X:key 指示詞](../../../../docs/framework/xaml-services/x-key-directive.md)，並設定您的集合類別做為執行個體<xref:System.Windows.Data.CollectionViewSource.Source%2A>。
+3. 在 XAML 中，建立的執行個體<xref:System.Windows.Data.CollectionViewSource>類別中，將[X:key 指示詞](../../xaml-services/x-key-directive.md)，並設定您的集合類別做為執行個體<xref:System.Windows.Data.CollectionViewSource.Source%2A>。
 
     [!code-xaml[DataGrid_GroupSortFilter#201](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/WindowSnips1.xaml#201)]
 

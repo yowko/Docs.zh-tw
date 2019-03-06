@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 1400329c-b598-465f-80f2-e3dabf044811
-ms.openlocfilehash: 4e79b74dc8bb7d57125c27e17e8f52d607fffcf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6410b05a1b858a7b75c9bff3220d47505beabd7c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721927"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357270"
 ---
 # <a name="activate-function-wpf-unmanaged-api-reference"></a>啟用函式 (WPF Unmanaged API 參考)
 此 API 支援 Windows Presentation Foundation (WPF) 基礎結構，並不是直接從您的程式碼使用。  
@@ -37,7 +37,7 @@ void Activate(
  包含一個指向單一項目緩衝區的位址指標<xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument>物件。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[.NET Framework 系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[.NET Framework 系統需求](../../get-started/system-requirements.md)。  
   
  **DLL:**  
   
@@ -48,4 +48,4 @@ void Activate(
  **.NET framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
-- [WPF Unmanaged API 參考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [WPF Unmanaged API 參考](wpf-unmanaged-api-reference.md)

@@ -16,56 +16,62 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecd52fce8033876f0599fa0ba25fae0850c0e01f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b3fc69b2edf611383402b13555cf33be10dbad3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508479"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366578"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall 函式
-將公開/私密金鑰組匯入到容器中。  
-  
- 此函式已被取代。 使用[iclrstrongname:: Strongnamekeyinstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)方法改為。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-BOOLEAN StrongNameKeyInstall (  
-    [in]  LPCWSTR   wszKeyContainer,  
-    [in]  BYTE      *pbKeyBlob,  
-    [in]  ULONG     cbKeyBlob  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `wszKeyContainer`  
- [in]金鑰容器的名稱。 `wszKeyContainer` 必須是非空白字串。  
-  
- `pbKeyBlob`  
- [in]二進位金鑰組。  
-  
- `cbKeyBlob`  
- [in]大小，以位元組為單位的`pbKeyBlob`。  
-  
-## <a name="return-value"></a>傳回值  
- `true` 如果成功地完成;否則， `false`。  
-  
-## <a name="remarks"></a>備註  
- 使用[StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md)函式來刪除金鑰容器。  
-  
- 如果`StrongNameKeyInstall`函式未順利完成，請呼叫[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函式來擷取最後一個產生的錯誤。  
-  
-## <a name="requirements"></a>需求  
- **平台：** WindSee[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **標頭：** StrongName.h  
-  
- **程式庫：** 包含做為 MsCorEE.dll 中的資源  
-  
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+
+將公開/私密金鑰組匯入到容器中。
+
+此函式已被取代。 使用[iclrstrongname:: Strongnamekeyinstall](../hosting/iclrstrongname-strongnamekeyinstall-method.md)方法改為。
+
+## <a name="syntax"></a>語法
+
+```cpp
+BOOLEAN StrongNameKeyInstall (
+    [in]  LPCWSTR   wszKeyContainer,
+    [in]  BYTE      *pbKeyBlob,
+    [in]  ULONG     cbKeyBlob
+);
+```
+
+## <a name="parameters"></a>參數
+
+`wszKeyContainer`\
+[in]金鑰容器的名稱。 `wszKeyContainer` 必須是非空白字串。
+
+`pbKeyBlob`\
+[in]二進位金鑰組。
+
+`cbKeyBlob`\
+[in]大小，以位元組為單位的`pbKeyBlob`。
+
+## <a name="return-value"></a>傳回值
+
+`true` 如果成功地完成;否則， `false`。
+
+## <a name="remarks"></a>備註
+
+使用[StrongNameKeyDelete](strongnamekeydelete-function.md)函式來刪除金鑰容器。
+
+如果`StrongNameKeyInstall`函式未順利完成，請呼叫[StrongNameErrorInfo](strongnameerrorinfo-function.md)函式來擷取最後一個產生的錯誤。
+
+## <a name="requirements"></a>需求
+
+**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+**標頭：** StrongName.h
+
+**程式庫：** 包含做為 MsCorEE.dll 中的資源
+
+**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
 ## <a name="see-also"></a>另請參閱
-- [StrongNameKeyInstall 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)
-- [StrongNameKeyDelete 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)
-- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+
+- [StrongNameKeyInstall 方法](../hosting/iclrstrongname-strongnamekeyinstall-method.md)
+- [StrongNameKeyDelete 方法](../hosting/iclrstrongname-strongnamekeydelete-method.md)
+- [ICLRStrongName 介面](../hosting/iclrstrongname-interface.md)

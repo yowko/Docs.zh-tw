@@ -11,12 +11,12 @@ helpviewer_keywords:
 - retrieving ink [WPF]
 - Ink Serialized Format (ISF)
 ms.assetid: a3f6d16b-d682-4680-9965-907332b4d2b8
-ms.openlocfilehash: c115e31b73afc1532973be3db8e3e184e9a4253b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec89286cfac9b0a315dc2d00135543511b2d1ac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492884"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353955"
 ---
 # <a name="storing-ink"></a>儲存筆墨
 <xref:System.Windows.Ink.StrokeCollection.Save%2A>方法儲存筆墨為 Ink Serialized Format (ISF) 提供支援。 建構函式<xref:System.Windows.Ink.StrokeCollection>類別提供讀取筆墨資料的支援。  
@@ -26,14 +26,14 @@ ms.locfileid: "54492884"
   
  下列範例會顯示 [儲存檔案] 對話方塊中，並將儲存筆墨的按鈕 click 事件處理常式<xref:System.Windows.Controls.InkCanvas>外的檔案。  
   
- [!code-csharp[DigitalInkTopics#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#12)]
- [!code-vb[DigitalInkTopics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#12)]  
+ [!code-csharp[DigitalInkTopics#12](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#12)]
+ [!code-vb[DigitalInkTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#12)]  
   
  下列範例會顯示 [開啟舊檔] 對話方塊，並從檔案讀取筆墨的按鈕 click 事件處理常式<xref:System.Windows.Controls.InkCanvas>項目。  
   
- [!code-csharp[DigitalInkTopics#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#13)]
- [!code-vb[DigitalInkTopics#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#13)]  
+ [!code-csharp[DigitalInkTopics#13](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#13)]
+ [!code-vb[DigitalInkTopics#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#13)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Controls.InkCanvas>
-- [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md)
+- [Windows Presentation Foundation](../index.md)

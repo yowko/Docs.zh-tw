@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], CheckBox
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
-ms.openlocfilehash: a3f59ce8632a56f363f6ea029fc328655fece930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550747"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377069"
 ---
 # <a name="checkbox"></a>核取方塊
-您可以使用<xref:System.Windows.Controls.CheckBox>中[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]應用程式代表使用者可以選取或清除的選項。 您可以使用單一的核取方塊，或您可以將群組兩個或多個核取方塊。  
+您可以使用<xref:System.Windows.Controls.CheckBox>在[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]應用程式，以代表使用者可以選取或清除的選項。 您可以使用單一的核取方塊，或者您可以將群組兩個或多個核取方塊。  
   
- 下圖顯示之不同狀態的<xref:System.Windows.Controls.CheckBox>。  
+ 下圖顯示的不同狀態<xref:System.Windows.Controls.CheckBox>。  
   
- ![核取方塊狀態](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
+ ![核取方塊狀態](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
 在不同狀態的核取方塊控制項  
   
 ## <a name="reference"></a>參考資料  

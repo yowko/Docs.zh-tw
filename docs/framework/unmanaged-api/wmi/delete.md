@@ -16,37 +16,38 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0590c639e7cc6622c2283bfa609ccb31d7ce7e2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1a26db7785a8a378fa541308ecc6aee30fa87ec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720570"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367116"
 ---
 # <a name="delete-function"></a>刪除函式
+
 刪除指定的屬性和其限定詞的所有從 CIM 類別定義。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>語法  
-  
-```  
+
+## <a name="syntax"></a>語法
+
+```cpp
 HRESULT Delete (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
-   [in] LPCWSTR           wszName 
-); 
-```  
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
+   [in] LPCWSTR           wszName
+);
+```
 
 ## <a name="parameters"></a>參數
 
-`vFunc`  
+`vFunc`\
 [in]未使用此參數。
 
-`ptr`  
+`ptr`\
 [in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
 
-`wszName`  
+`wszName`\
 [in]要刪除之屬性的名稱。 `wszName` 必須是有效的指標`LPCWSTR`。
 
 ## <a name="return-value"></a>傳回值
@@ -57,24 +58,26 @@ HRESULT Delete (
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 發生未指定的錯誤。 |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | 無法刪除屬性。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszzName` 無效。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` 無效。 |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | 指定的屬性不存在。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體來完成此作業。 |
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | 屬性被繼承自基底類別。 |
 | `WBEM_E_SYSTEM_PROPERTY` | | 系統屬性的屬性。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | 函式會刪除目前的類別覆寫預設值。 父類別中的這個屬性的預設值已 reactiviated。 | 
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | 函式會刪除目前的類別覆寫預設值。 已重新啟動此父類別中屬性的預設值。 |
 
 ## <a name="remarks"></a>備註
 
 此函式會包裝在呼叫[IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete)方法。
 
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **標頭：** WMINet_Utils.idl  
-  
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>需求
+
+**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+**標頭：** WMINet_Utils.idl
+
+**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>另請參閱
+
 - [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

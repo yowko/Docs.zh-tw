@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - navigation [WPF]
 ms.assetid: f804648e-558c-4f60-8e48-d11f4a23c436
-ms.openlocfilehash: d6b767e68f8d3217ffacd787137a2d4b91c3761d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d1cfd1388e68ff6a5f8c6a6b209dc38dd2f80d3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550107"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379740"
 ---
 # <a name="navigation-how-to-topics"></a>巡覽 HOW TO 主題
 下列主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]瀏覽。  
   
 ## <a name="in-this-section"></a>本節內容  
- [呼叫頁面函式](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
-  [取得頁面函式的傳回值](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
-  [在巡覽記錄中前移或後移](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  
-  [從頁面函式傳回](../../../../docs/framework/wpf/app-development/how-to-return-from-a-page-function.md)  
+ [呼叫頁面函式](how-to-call-a-page-function.md)  
+  [取得頁面函式的傳回值](how-to-get-the-return-value-of-a-page-function.md)  
+  [在巡覽記錄中前移或後移](how-to-navigate-forward-or-back-through-navigation-history.md)  
+  [從頁面函式傳回](how-to-return-from-a-page-function.md)  
   
 ## <a name="related-sections"></a>相關章節  
- [瀏覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [瀏覽概觀](navigation-overview.md)  
   
- [結構化巡覽概觀](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+ [結構化巡覽概觀](structured-navigation-overview.md)

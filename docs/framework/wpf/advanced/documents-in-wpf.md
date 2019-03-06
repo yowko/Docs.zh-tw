@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 00e983c907c0376b45d2342f393569d045cbf98b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20d90f96647989be35bf2c9cdf6243e8e868cd1e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517730"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361365"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 所提供的各種文件功能可以建立高精確度的內容，此種內容的設計會比在舊版 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 中更加容易存取與閱讀。 除了增強功能和品質，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也針對文件顯示、封裝和安全性提供整合式服務。 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件類型和文件封裝的簡介。  
@@ -27,7 +27,7 @@ ms.locfileid: "54517730"
   
  固定格式文件適用於需要精確 [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] 呈現方式的應用程式，與所使用的顯示器或印表機硬體無關。 固定格式文件一般用於桌上出版、文書處理和表單配置，必須嚴格遵循原始頁面設計。 固定格式文件會在其配置中維持內容項目的精確位置，不受使用中的顯示器或列印裝置影響。 例如，在 96 dpi 顯示器上檢視的固定格式文件頁面，不論是輸出到 600 dpi 雷射印表機或輸出到 4800 dpi 相紙輸出機，看起來都完全一樣。 文件品質會充分發揮各裝置的性能，但頁面配置永遠相同。  
   
- 相較之下，非固定格式文件的設計用意是為了將檢視及可讀性最佳化；如果容易閱讀是主要的文件使用考量，則最適合使用非固定格式文件。 非固定格式文件並不會設為某種預先定義的配置，而是會根據執行階段變數 (例如視窗大小、裝置解析度和選擇性的使用者喜好設定)，動態調整及自動重排其內容。 網頁即是一個簡單的非固定格式文件範例，其中的頁面內容會動態進行格式化，以符合目前視窗大小。 非固定格式文件會根據執行階段環境，讓使用者擁有最佳的檢視和閱讀體驗。 例如，同一份非固定格式文件在高解析度 19 吋顯示器或小型 2x3 吋 PDA 螢幕上都會動態重新格式化，以獲得最佳可讀性。 此外，非固定格式文件具備許多內建功能，包括搜尋、將可讀性最佳化的檢視模式，以及變更字型大小與外觀的能力。  如需非固定格式文件的說明、範例和深入資訊，請參閱[非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
+ 相較之下，非固定格式文件的設計用意是為了將檢視及可讀性最佳化；如果容易閱讀是主要的文件使用考量，則最適合使用非固定格式文件。 非固定格式文件並不會設為某種預先定義的配置，而是會根據執行階段變數 (例如視窗大小、裝置解析度和選擇性的使用者喜好設定)，動態調整及自動重排其內容。 網頁即是一個簡單的非固定格式文件範例，其中的頁面內容會動態進行格式化，以符合目前視窗大小。 非固定格式文件會根據執行階段環境，讓使用者擁有最佳的檢視和閱讀體驗。 例如，同一份非固定格式文件在高解析度 19 吋顯示器或小型 2x3 吋 PDA 螢幕上都會動態重新格式化，以獲得最佳可讀性。 此外，非固定格式文件具備許多內建功能，包括搜尋、將可讀性最佳化的檢視模式，以及變更字型大小與外觀的能力。  如需非固定格式文件的說明、範例和深入資訊，請參閱[非固定格式文件概觀](flow-document-overview.md)。  
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>文件控制項和文字配置  
@@ -40,7 +40,7 @@ ms.locfileid: "54517730"
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>非固定格式文件控制項  
- **注意：** 如需詳細的非固定格式文件功能及如何建立這些資訊，請參閱 <<c0> [ 非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
+ **注意：** 如需詳細的非固定格式文件功能及如何建立這些資訊，請參閱 <<c0> [ 非固定格式文件概觀](flow-document-overview.md)。  
   
  顯示非固定格式文件內容由三個控制項支援： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54517730"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>使用者介面中的文字  
- 除了將文字新增至文件，您顯然也能在表單等應用程式 UI 中使用文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。 一般情況下，<xref:System.Windows.Controls.TextBlock>必要項目，例如一個簡短的句子，在有限的文字支援時，就應該使用項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文字支援時，可以使用。 如需詳細資訊，請參閱 [TextBlock 概觀](../../../../docs/framework/wpf/controls/textblock-overview.md)。  
+ 除了將文字新增至文件，您顯然也能在表單等應用程式 UI 中使用文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。 一般情況下，<xref:System.Windows.Controls.TextBlock>必要項目，例如一個簡短的句子，在有限的文字支援時，就應該使用項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文字支援時，可以使用。 如需詳細資訊，請參閱 [TextBlock 概觀](../controls/textblock-overview.md)。  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>文件封裝  
@@ -142,7 +142,7 @@ ms.locfileid: "54517730"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)
-- [文件序列化與儲存](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [Text](optimizing-performance-text.md)
+- [非固定格式文件概觀](flow-document-overview.md)
+- [列印概觀](printing-overview.md)
+- [文件序列化與儲存](document-serialization-and-storage.md)

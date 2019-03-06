@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: f31a13096d8bd3a788e530b480fece448bfe1e6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704013"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363406"
 ---
 # <a name="binding-declarations-overview"></a>繫結宣告概觀
 本主題討論可以用來宣告繫結的不同方法。  
@@ -26,9 +26,9 @@ ms.locfileid: "54704013"
   
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>必要條件  
- 在閱讀本主題之前，請務必先熟悉標記延伸的概念和使用方式。 如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
+ 在閱讀本主題之前，請務必先熟悉標記延伸的概念和使用方式。 如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md)。  
   
- 這個主題並未涵蓋資料繫結的概念。 如需資料繫結概念的相關討論，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
+ 這個主題並未涵蓋資料繫結的概念。 如需資料繫結概念的相關討論，請參閱[資料繫結概觀](data-binding-overview.md)。  
   
 <a name="BindinginXAML"></a>   
 ## <a name="declaring-a-binding-in-xaml"></a>在 XAML 中宣告繫結  
@@ -40,9 +40,9 @@ ms.locfileid: "54704013"
   
  在標記中建立繫結宣告字串時，必須將這些字串附加至目標物件的特定相依性屬性。 下列範例示範如何繫結<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>屬性使用的繫結延伸模組，指定<xref:System.Windows.Data.Binding.Source%2A>和<xref:System.Windows.Data.Binding.Path%2A>屬性。  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
+ [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
- 您可以指定之屬性的大部分<xref:System.Windows.Data.Binding>類別這種方式。 如需有關繫結延伸模組也與一份<xref:System.Windows.Data.Binding>屬性無法使用繫結延伸模組設定，請參閱[繫結標記延伸](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)概觀。  
+ 您可以指定之屬性的大部分<xref:System.Windows.Data.Binding>類別這種方式。 如需有關繫結延伸模組也與一份<xref:System.Windows.Data.Binding>屬性無法使用繫結延伸模組設定，請參閱[繫結標記延伸](../advanced/binding-markup-extension.md)概觀。  
   
 <a name="ObjectElementSyntax"></a>   
 ### <a name="object-element-syntax"></a>物件元素語法  
@@ -50,11 +50,11 @@ ms.locfileid: "54704013"
   
  以下為物件元素語法和標記延伸的使用方式範例：  
   
- [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
+ [!code-xaml[BindConversionMarkup#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
  此範例會將繫結<xref:System.Windows.Controls.TextBlock.Foreground%2A>藉由宣告使用延伸語法的繫結的屬性。 繫結宣告<xref:System.Windows.Controls.TextBlock.Text%2A>屬性使用物件元素語法。  
   
- 如需不同詞彙的詳細資訊，請參閱 [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
+ 如需不同詞彙的詳細資訊，請參閱 [XAML 語法詳細資料](../advanced/xaml-syntax-in-detail.md)。  
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding 和 PriorityBinding  
@@ -64,10 +64,10 @@ ms.locfileid: "54704013"
 ## <a name="creating-a-binding-in-code"></a>在程式碼中建立繫結  
  指定的繫結的另一個方法是直接設定屬性<xref:System.Windows.Data.Binding>在程式碼中的物件。 下列範例示範如何建立<xref:System.Windows.Data.Binding>物件，並在程式碼中指定的屬性。  在此範例中，`TheConverter`是實作物件<xref:System.Windows.Data.IValueConverter>介面。  
   
- [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
- [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
+ [!code-csharp[BindConversion#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[BindConversion#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
   
- 您要繫結的物件是否<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>您可以呼叫`SetBinding`不用直接在物件上的方法<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>。 如需範例，請參閱[使用程式碼建立繫結](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)。  
+ 您要繫結的物件是否<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>您可以呼叫`SetBinding`不用直接在物件上的方法<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>。 如需範例，請參閱[使用程式碼建立繫結](how-to-create-a-binding-in-code.md)。  
   
 <a name="Path_Syntax"></a>   
 ## <a name="binding-path-syntax"></a>繫結路徑語法  
@@ -119,14 +119,14 @@ ms.locfileid: "54704013"
   
 -   如果您未設定<xref:System.Windows.Data.Binding.ConverterCulture%2A>，則繫結引擎會使用`Language`繫結目標物件的屬性。 在 XAML 中，這個值預設為 "en-US"，但如果已明確設定，則會繼承頁面之根元素 (或任何元素) 的值。  
   
--   只要繫結已經有資料內容 （例如，繼承的資料內容來自父項目），且任何項目或集合所傳回的內容適用於繫結而不需要進一步修改路徑繫結宣告可以完全沒有子句：`{Binding}` 這通常是資料樣式設定，其中繫結會作用在集合指定的繫結的方式。 如需詳細資訊，請參閱[繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)中的＜使用整個物件做為繫結來源＞一節。  
+-   只要繫結已經有資料內容 （例如，繼承的資料內容來自父項目），且任何項目或集合所傳回的內容適用於繫結而不需要進一步修改路徑繫結宣告可以完全沒有子句：`{Binding}` 這通常是資料樣式設定，其中繫結會作用在集合指定的繫結的方式。 如需詳細資訊，請參閱[繫結來源概觀](binding-sources-overview.md)中的＜使用整個物件做為繫結來源＞一節。  
   
 -   預設值<xref:System.Windows.Data.Binding.Mode%2A>單向和雙向的不同繫結的相依性屬性而異。 您永遠都可以明確宣告繫結模式，以確保繫結具有所需的行為。 一般來說，使用者可編輯的控制項屬性，例如<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>和<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>，預設為雙向繫結，而其他屬性大多預設為單向繫結。  
   
 -   預設值<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值而異<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>和<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>依據的繫結的相依性屬性。 大多數相依性屬性的預設值為 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>，而 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 屬性具有 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> 的預設值。  
   
 ## <a name="see-also"></a>另請參閱
-- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
-- [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [PropertyPath XAML 語法](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+- [資料繫結概觀](data-binding-overview.md)
+- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [資料繫結](../advanced/optimizing-performance-data-binding.md)
+- [PropertyPath XAML 語法](../advanced/propertypath-xaml-syntax.md)

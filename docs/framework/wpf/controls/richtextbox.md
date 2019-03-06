@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
-ms.openlocfilehash: c521c5c5d4ecb2b20954b5b6e303bbbda0a26418
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3f2bf274db3a7b14f817dd2dbfffc39d2957ec4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508635"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374540"
 ---
 # <a name="richtextbox"></a>RichTextBox
 <xref:System.Windows.Controls.RichTextBox>項目會定義編輯控制項的功能，例如剪下和貼上、 豐富的文件展示及內容選取範圍的內建支援。  
   
 ## <a name="in-this-section"></a>本節內容  
- [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+ [RichTextBox 概觀](richtextbox-overview.md)  
+ [HOW-TO 主題](richtextbox-how-to-topics.md)  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Controls.TextBox>
-- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [WPF 中的文件](../advanced/documents-in-wpf.md)
+- [非固定格式文件概觀](../advanced/flow-document-overview.md)

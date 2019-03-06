@@ -8,17 +8,17 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 0a9aabdb4ddb508e9d53523192db27708c5b7713
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5853c48ad77131d33cd0ab767c4a58ba56aaa39f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582141"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369912"
 ---
 # <a name="focus-overview"></a>焦點概觀
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中有兩個關於焦點的主要概念︰鍵盤焦點和邏輯焦點。  鍵盤焦點是指接收鍵盤輸入的項目，邏輯焦點是指焦點範圍中具有焦點的項目。  本概觀會詳細討論這些概念。  了解這些概念的差異對建立複雜的應用程式很重要，這些應用程式有多個可取得焦點的區域。  
   
- 參與焦點管理的主要類別皆<xref:System.Windows.Input.Keyboard>類別，<xref:System.Windows.Input.FocusManager>類別和基底的項目，這類類別<xref:System.Windows.UIElement>和<xref:System.Windows.ContentElement>。  如需基底項目的詳細資訊，請參閱[基底項目概觀](../../../../docs/framework/wpf/advanced/base-elements-overview.md)。  
+ 參與焦點管理的主要類別皆<xref:System.Windows.Input.Keyboard>類別，<xref:System.Windows.Input.FocusManager>類別和基底的項目，這類類別<xref:System.Windows.UIElement>和<xref:System.Windows.ContentElement>。  如需基底項目的詳細資訊，請參閱[基底項目概觀](base-elements-overview.md)。  
   
  <xref:System.Windows.Input.Keyboard>類別有關主要與鍵盤焦點和<xref:System.Windows.Input.FocusManager>是著重於邏輯焦點，但這不是絕對的區別。  具有鍵盤焦點的項目也會有邏輯焦點，但具有邏輯焦點的項目不一定有鍵盤焦點。  當您使用很明顯<xref:System.Windows.Input.Keyboard>類別來設定它具有鍵盤焦點的項目也會設定邏輯焦點的項目上。  
   
@@ -34,8 +34,8 @@ ms.locfileid: "54582141"
   
  下列範例會使用<xref:System.Windows.Input.Keyboard.Focus%2A>方法上設定鍵盤焦點<xref:System.Windows.Controls.Button>。  
   
- [!code-csharp[focussample#FocusSampleSetFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
- [!code-vb[focussample#FocusSampleSetFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]  
+ [!code-csharp[focussample#FocusSampleSetFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
+ [!code-vb[focussample#FocusSampleSetFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]  
   
  <xref:System.Windows.UIElement.IsKeyboardFocused%2A>基底的項目類別的屬性會取得值，指出項目是否有鍵盤焦點。  <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>基底的項目類別的屬性會取得值，指出項目，或任何一種 visual 其子項目是否具有鍵盤焦點。  
   
@@ -53,10 +53,10 @@ ms.locfileid: "54582141"
   
  下列範例會使<xref:System.Windows.Controls.StackPanel>成焦點範圍，藉由設定<xref:System.Windows.Input.FocusManager.IsFocusScope%2A>附加屬性。  
   
- [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]  
+ [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]  
   
- [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
- [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
+ [!code-csharp[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
+ [!code-vb[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
   
  <xref:System.Windows.Input.FocusManager.GetFocusScope%2A> 傳回指定之項目的焦點範圍。  
   
@@ -66,8 +66,8 @@ ms.locfileid: "54582141"
   
  下例在焦點範圍中設定焦點項目，並取得焦點範圍的焦點項目。  
   
- [!code-csharp[FocusSnippets#FocusGetSetFocusedElement](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focusgetsetfocusedelement)]
- [!code-vb[FocusSnippets#FocusGetSetFocusedElement](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focusgetsetfocusedelement)]  
+ [!code-csharp[FocusSnippets#FocusGetSetFocusedElement](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focusgetsetfocusedelement)]
+ [!code-vb[FocusSnippets#FocusGetSetFocusedElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focusgetsetfocusedelement)]  
   
 <a name="Keyboard_Navigation"></a>   
 ## <a name="keyboard-navigation"></a>鍵盤導覽  
@@ -77,10 +77,10 @@ ms.locfileid: "54582141"
   
  下列範例會建立<xref:System.Windows.Controls.Menu>數目的<xref:System.Windows.Controls.MenuItem>物件。  <xref:System.Windows.Input.KeyboardNavigation.TabNavigation%2A>附加的屬性設定為<xref:System.Windows.Input.KeyboardNavigationMode.Cycle>上<xref:System.Windows.Controls.Menu>。  使用 tab 鍵在變更焦點時<xref:System.Windows.Controls.Menu>、 焦點會移動每個項目和最後一個項目到達時就會回到第一個項目。  
   
- [!code-xaml[MarkupSnippets#MarkupKeyboardNavigationTabNavigationXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupkeyboardnavigationtabnavigationxaml)]  
+ [!code-xaml[MarkupSnippets#MarkupKeyboardNavigationTabNavigationXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupkeyboardnavigationtabnavigationxaml)]  
   
- [!code-csharp[MarkupSnippets#MarkupKeyboardNavigationTabNavigationCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml.cs#markupkeyboardnavigationtabnavigationcode)]
- [!code-vb[MarkupSnippets#MarkupKeyboardNavigationTabNavigationCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarkupSnippets/visualbasic/window1.xaml.vb#markupkeyboardnavigationtabnavigationcode)]  
+ [!code-csharp[MarkupSnippets#MarkupKeyboardNavigationTabNavigationCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml.cs#markupkeyboardnavigationtabnavigationcode)]
+ [!code-vb[MarkupSnippets#MarkupKeyboardNavigationTabNavigationCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MarkupSnippets/visualbasic/window1.xaml.vb#markupkeyboardnavigationtabnavigationcode)]  
   
 <a name="Manipulating_Focus_Programmatically"></a>   
 ## <a name="navigating-focus-programmatically"></a>以程式設計方式巡覽焦點  
@@ -90,30 +90,30 @@ ms.locfileid: "54582141"
   
  下列範例會使用<xref:System.Windows.FrameworkElement.MoveFocus%2A>變更焦點的項目。  
   
- [!code-csharp[focussample#FocusSampleMoveFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
- [!code-vb[focussample#FocusSampleMoveFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
+ [!code-csharp[focussample#FocusSampleMoveFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
+ [!code-vb[focussample#FocusSampleMoveFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
   
  <xref:System.Windows.FrameworkElement.PredictFocus%2A> 傳回變更焦點時接收焦點的物件。  目前，只有<xref:System.Windows.Input.FocusNavigationDirection.Up>， <xref:System.Windows.Input.FocusNavigationDirection.Down>， <xref:System.Windows.Input.FocusNavigationDirection.Left>，和<xref:System.Windows.Input.FocusNavigationDirection.Right>受到<xref:System.Windows.FrameworkElement.PredictFocus%2A>。  
   
 <a name="Focus_Events"></a>   
 ## <a name="focus-events"></a>焦點事件  
- 與鍵盤焦點相關的事件<xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>，<xref:System.Windows.Input.Keyboard.GotKeyboardFocus>並<xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>， <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>。  事件上定義為附加事件<xref:System.Windows.Input.Keyboard>類別，但更容易存取做為基底的項目類別的對等路由事件。  如需事件的詳細資訊，請參閱[路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
+ 與鍵盤焦點相關的事件<xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>，<xref:System.Windows.Input.Keyboard.GotKeyboardFocus>並<xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>， <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>。  事件上定義為附加事件<xref:System.Windows.Input.Keyboard>類別，但更容易存取做為基底的項目類別的對等路由事件。  如需事件的詳細資訊，請參閱[路由事件概觀](routed-events-overview.md)。  
   
  <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> 項目取得鍵盤焦點時引發。  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus> 項目失去鍵盤焦點時引發。  如果<xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>事件或<xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent>處理事件並<xref:System.Windows.RoutedEventArgs.Handled%2A>設定為`true`，則不會變更焦點。  
   
  下列範例會將附加<xref:System.Windows.UIElement.GotKeyboardFocus>並<xref:System.Windows.UIElement.LostKeyboardFocus>事件處理常式<xref:System.Windows.Controls.TextBox>。  
   
- [!code-xaml[keyboardsample#KeyboardSampleXAMLHandlerHookup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml#keyboardsamplexamlhandlerhookup)]  
+ [!code-xaml[keyboardsample#KeyboardSampleXAMLHandlerHookup](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml#keyboardsamplexamlhandlerhookup)]  
   
  當<xref:System.Windows.Controls.TextBox>取得鍵盤焦點<xref:System.Windows.Controls.Control.Background%2A>屬性<xref:System.Windows.Controls.TextBox>變更為<xref:System.Windows.Media.Brushes.LightBlue%2A>。  
   
- [!code-csharp[keyboardsample#KeyboardSampleGotFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplegotfocus)]
- [!code-vb[keyboardsample#KeyboardSampleGotFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplegotfocus)]  
+ [!code-csharp[keyboardsample#KeyboardSampleGotFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplegotfocus)]
+ [!code-vb[keyboardsample#KeyboardSampleGotFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplegotfocus)]  
   
  當<xref:System.Windows.Controls.TextBox>失去鍵盤焦點<xref:System.Windows.Controls.Control.Background%2A>屬性<xref:System.Windows.Controls.TextBox>變更回白色。  
   
- [!code-csharp[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplelostfocus)]
- [!code-vb[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplelostfocus)]  
+ [!code-csharp[keyboardsample#KeyboardSampleLostFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplelostfocus)]
+ [!code-vb[keyboardsample#KeyboardSampleLostFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplelostfocus)]  
   
  與邏輯焦點相關的事件<xref:System.Windows.UIElement.GotFocus>和<xref:System.Windows.UIElement.LostFocus>。  這些事件上定義<xref:System.Windows.Input.FocusManager>為附加事件，但<xref:System.Windows.Input.FocusManager>不會公開 CLR 事件包裝函式。  <xref:System.Windows.UIElement> 和<xref:System.Windows.ContentElement>更方便地公開 （expose) 這些事件。  
   
@@ -121,5 +121,5 @@ ms.locfileid: "54582141"
 - <xref:System.Windows.Input.FocusManager>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.ContentElement>
-- [輸入概觀](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [基底項目概觀](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [輸入概觀](input-overview.md)
+- [基底項目概觀](base-elements-overview.md)

@@ -7,28 +7,28 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: a5c266b6-969c-4049-a471-ddca7b10fb89
-ms.openlocfilehash: 2fb3472456e709c0f9f395789fd42ed38a3d2ed7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3cd3bd0861ef2e2896d33e52594b0712e984149
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544284"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352382"
 ---
 # <a name="input-and-commands-how-to-topics"></a>輸入和命令 HOW TO 主題
-本節中的主題描述如何使用 Windows Presentation Foundation (WPF) 中的輸入和命令的基礎結構。  
+在本節中的主題描述如何使用輸入和命令的基礎結構在 Windows Presentation Foundation (WPF)。  
   
 ## <a name="in-this-section"></a>本節內容  
- [啟用命令](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [變更游標類型](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
- [使用焦點事件變更元素的色彩](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
- [對控制項套用 FocusVisualStyle](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [偵測何時按下 Enter 鍵](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
- [使用事件建立變化效果](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
- [設定物件隨滑鼠指標移動](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
- [建立 RoutedCommand](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
- [實作 ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [將命令與沒有命令支援的控制項連結](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [將命令與含有命令支援的控制項連結](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+ [啟用命令](how-to-enable-a-command.md)  
+ [變更游標類型](how-to-change-the-cursor-type.md)  
+ [使用焦點事件變更元素的色彩](how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [對控制項套用 FocusVisualStyle](how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [偵測何時按下 Enter 鍵](how-to-detect-when-the-enter-key-pressed.md)  
+ [使用事件建立變化效果](how-to-create-a-rollover-effect-using-events.md)  
+ [設定物件隨滑鼠指標移動](how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [建立 RoutedCommand](how-to-create-a-routedcommand.md)  
+ [實作 ICommandSource](how-to-implement-icommandsource.md)  
+ [將命令與沒有命令支援的控制項連結](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [將命令與含有命令支援的控制項連結](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.UIElement>  

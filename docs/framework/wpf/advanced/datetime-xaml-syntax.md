@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-ms.openlocfilehash: c443451a0fd9fffec97377efc611e0ccfe534f06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8180064d1a500ea17568f6790e13398524eb5f36
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606721"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365681"
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML 語法
 某些控制項，例如<xref:System.Windows.Controls.Calendar>並<xref:System.Windows.Controls.DatePicker>，其屬性可使用<xref:System.DateTime>型別。 雖然您通常會在執行階段時，於程式碼後置中指定這些控制項的初始日期或時間，但仍可在 XAML 中指定初始的日期或時間。 WPF XAML 剖析器會處理剖析<xref:System.DateTime>值 使用內建的 XAML 文字語法。 本主題描述的細節<xref:System.DateTime>XAML 文字語法。  
@@ -75,4 +75,4 @@ ms.locfileid: "54606721"
  如先前所述<xref:System.DateTime>XAML 中可以指定為可接受的任何字串作為輸入的<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>。 這包括其他正規的格式 (例如<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>)，並不會正規化為特定的格式<xref:System.Globalization.DateTimeFormatInfo>表單。 例如，在表單`YYYY/mm/dd`是可接受作為輸入的<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>。 本主題不會嘗試說明所有可能作用的格式，而是建議使用簡短日期模式為標準做法。  
   
 ## <a name="see-also"></a>另請參閱
-- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XAML 概觀 (WPF)](xaml-overview-wpf.md)

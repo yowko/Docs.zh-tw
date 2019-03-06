@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text change [WPF], detecting
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
-ms.openlocfilehash: 23bf0a88b3dc16491fbd520683385c65a58a7f6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72441e53d21df47d34a0600dafdf0b4b04c11cad
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696551"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352369"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>HOW TO：偵測 TextBox 中的文字何時變更
 此範例示範使用一種方式<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>事件，以執行方法，每次中的文字<xref:System.Windows.Controls.TextBox>控制項已變更。  
@@ -28,13 +28,13 @@ ms.locfileid: "54696551"
 ## <a name="example"></a>範例  
  在  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ，定義您<xref:System.Windows.Controls.TextBox>控制項，指定<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>屬性值符合事件處理常式方法名稱。  
   
- [!code-xaml[TextBox_MiscCode#_TextChangedXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textchangedxaml)]  
+ [!code-xaml[TextBox_MiscCode#_TextChangedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textchangedxaml)]  
   
 ## <a name="example"></a>範例  
  中的程式碼後置類別[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，其中包含<xref:System.Windows.Controls.TextBox>控制項，您想要監視的變更，插入要每次呼叫的方法<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>引發事件。  這個方法必須不符合預期的簽章<xref:System.Windows.Controls.TextChangedEventHandler>委派。  
   
- [!code-csharp[TextBox_MiscCode#_TextChangedEventHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textchangedeventhandler)]
- [!code-vb[TextBox_MiscCode#_TextChangedEventHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textchangedeventhandler)]  
+ [!code-csharp[TextBox_MiscCode#_TextChangedEventHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textchangedeventhandler)]
+ [!code-vb[TextBox_MiscCode#_TextChangedEventHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textchangedeventhandler)]  
   
  會呼叫事件處理常式時的內容<xref:System.Windows.Controls.TextBox>控制項已變更，可能是由使用者或以程式設計的方式。  
   
@@ -44,5 +44,5 @@ ms.locfileid: "54696551"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Controls.TextChangedEventArgs>
-- [TextBox 概觀](../../../../docs/framework/wpf/controls/textbox-overview.md)
-- [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+- [TextBox 概觀](textbox-overview.md)
+- [RichTextBox 概觀](richtextbox-overview.md)

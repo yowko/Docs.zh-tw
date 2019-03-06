@@ -16,32 +16,34 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b3e8ddb34849611daae4dfa1d2762a25ac5cf82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7200e3a19fcadabb5e149c38b620b3f60907c392
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721133"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377413"
 ---
 # <a name="setsecurity-function"></a>SetSecurity 函式
-擷取與目前執行緒關聯的模擬權杖。   
-  
+
+擷取與目前執行緒關聯的模擬權杖。 
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>語法  
-  
-```  
+
+## <a name="syntax"></a>語法
+
+```
 HRESULT SetSecurity (
    [out] boolean* pNeedToReset, 
    [out] HANDLE* pCurrentThreadToken
 ); 
-```  
+```
 
 ## <a name="parameters"></a>參數
 
-`pNeedToReset` [out]此函式傳回時，包含指標`boolean`，指出是否應藉由呼叫重設語彙基元[ResetSecurity](resetsecurity.md)函式。  
+`pNeedToReset`\
+[out]此函式傳回時，包含指標`boolean`，指出是否應藉由呼叫重設語彙基元[ResetSecurity](resetsecurity.md)函式。
 
-`token`  
+`token`\
 [out]此函式傳回時，包含目前執行緒相關聯的模擬語彙基元的控制代碼的指標。 其值可以是`null`是否與目前執行緒相關聯的語彙基元。 
 
 ## <a name="return-value"></a>傳回值
@@ -49,13 +51,15 @@ HRESULT SetSecurity (
 如果此函數成功，傳回的值是`S_OK`(0)。
 
 如果函式失敗，傳回的值就會為非零的錯誤碼。 若要取得延伸錯誤資訊，請呼叫[GetErrorInfo](geterrorinfo.md)函式。
-  
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **標頭：** WMINet_Utils.idl  
-  
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+
+## <a name="requirements"></a>需求
+
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+ **標頭：** WMINet_Utils.idl
+
+ **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>另請參閱
+
 - [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

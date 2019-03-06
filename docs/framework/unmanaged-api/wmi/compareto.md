@@ -16,43 +16,43 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa46cf1fde4306af562248b4c12b048e3d8e2a51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb5a26fccf7ceb56089aae4bd4f0732b8a405ba0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717645"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376230"
 ---
 # <a name="compareto-function"></a>CompareTo 函式
-將物件與另一個 Windows 管理物件比較。  
+
+將物件與另一個 Windows 管理物件比較。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>語法  
-  
-```
+
+## <a name="syntax"></a>語法
+
+```cpp
 HRESULT CompareTo (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LONG              flags,
-   [in] IWbemClassObject* pCompareTo 
-); 
-```  
+   [in] IWbemClassObject* pCompareTo
+);
+```
 
 ## <a name="parameters"></a>參數
 
-`vFunc`  
+`vFunc`\
 [in]未使用此參數。
 
-`ptr`  
+`ptr`\
 [in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
 
-`flags`  
+`flags`\
 [in]指定物件特性時應考量的比較旗標的位元組合。 請參閱[備註](#remarks)節的詳細資訊。
 
-`pCompareTo`  
-
-[in]比較的物件。 `pcompareTo` 必須是有效[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體，它不能是`null`。
+`pCompareTo`\
+[in]比較的物件。 `pCompareTo` 必須是有效[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體，它不能是`null`。
 
 ## <a name="return-value"></a>傳回值
 
@@ -66,7 +66,7 @@ HRESULT CompareTo (
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
 | `WBEM_S_DIFFERENT` | 0x40003 | 物件不相同。 |
 | `WBEM_S_SAME` | 0 | 物件是相同的比較旗標為基礎。 |
-  
+
 ## <a name="remarks"></a>備註
 
 此函式會包裝在呼叫[IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto)方法。
@@ -80,7 +80,7 @@ HRESULT CompareTo (
 | `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | 忽略屬性的預設值。 這個旗標僅適用於比較的類別。 |
 | `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | 忽略限定詞標註。 這個旗標仍限定詞納入考量，但會忽略類型差異，例如傳用規則並覆寫限制。 |
 | `WBEM_FLAG_IGNORE_CASE` | 0x10 | 忽略大小寫比較字串值。 這適用於字串和限定詞的值。 屬性和限定詞的名稱比較一律會區分大小寫，不論是否設定此旗標的。 |
-| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | 假設正在比較的物件都是相同類別的執行個體的序列。 因此，這個旗標會比較執行個體相關資訊僅供參考。 您可以使用這個旗標來最佳化效能。 如果物件不在相同類別中，則結果為未定義。 |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | 假設正在比較的物件都是相同類別的執行個體。 因此，這個旗標會比較執行個體相關資訊僅供參考。 您可以使用這個旗標來最佳化效能。 如果物件不在相同類別中，則結果為未定義。 |
 
 或者，您也可以指定單一複合旗標，如下所示：
 
@@ -88,12 +88,14 @@ HRESULT CompareTo (
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | 請考慮在比較中的所有功能。 |
 
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **標頭：** WMINet_Utils.idl  
-  
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>需求
+
+**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+**標頭：** WMINet_Utils.idl
+
+**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>另請參閱
+
 - [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

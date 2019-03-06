@@ -9,12 +9,12 @@ helpviewer_keywords:
 - content alignment [WPF]
 - aligning [WPF], content
 ms.assetid: c1e8f962-72c8-4e7a-8670-7a2d7e021791
-ms.openlocfilehash: 80a0c6534e15a7a9f30976c739bade2043e96734
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6605a6a56fba587678227f5826982ec3266b153c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733099"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356286"
 ---
 # <a name="how-to-horizontally-or-vertically-align-content-in-a-stackpanel"></a>HOW TO：水平或垂直對齊 StackPanel 中的內容
 此範例示範如何調整<xref:System.Windows.Controls.StackPanel.Orientation%2A>內的內容<xref:System.Windows.Controls.StackPanel>項目，以及如何調整<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>子內容。  
@@ -22,16 +22,16 @@ ms.locfileid: "54733099"
 ## <a name="example"></a>範例  
  下列範例會建立三個<xref:System.Windows.Controls.ListBox>中的項目[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 每個<xref:System.Windows.Controls.ListBox>代表的可能值<xref:System.Windows.Controls.StackPanel.Orientation%2A>， <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>，以及<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>的屬性<xref:System.Windows.Controls.StackPanel>。 當使用者選取的值中的任何<xref:System.Windows.Controls.ListBox>項目、 相關聯的屬性<xref:System.Windows.Controls.StackPanel>及其子<xref:System.Windows.Controls.Button>項目變更。  
   
- [!code-xaml[StackPanelIntroSamp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanelIntroSamp/CSharp/Window1.xaml#1)]  
+ [!code-xaml[StackPanelIntroSamp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/StackPanelIntroSamp/CSharp/Window1.xaml#1)]  
   
  下列程式碼後置檔案會定義所做的變更相關聯的事件<xref:System.Windows.Controls.ListBox>選擇項目的變更。 <xref:System.Windows.Controls.StackPanel> 由<xref:System.Windows.FrameworkElement.Name%2A> `sp1`。  
   
- [!code-csharp[StackPanelIntroSamp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanelIntroSamp/CSharp/Window1.xaml.cs#2)]
- [!code-vb[StackPanelIntroSamp#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelIntroSamp/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[StackPanelIntroSamp#2](~/samples/snippets/csharp/VS_Snippets_Wpf/StackPanelIntroSamp/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[StackPanelIntroSamp#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelIntroSamp/VisualBasic/Window1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Controls.StackPanel>
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
-- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [面板概觀](panels-overview.md)

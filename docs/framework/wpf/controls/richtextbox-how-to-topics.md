@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
-ms.openlocfilehash: def502855168b8e10f57e1426191f4e0c26e9f67
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: fbf40aa8dded4e676828c600ecb634732803dbdb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745725"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377010"
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox HOW TO 主題
 本節提供範例，示範如何完成一般工作，使用<xref:System.Windows.Controls.RichTextBox>控制項。  
   
 ## <a name="in-this-section"></a>本節內容  
- [擷取 RichTextBox 的文字內容](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
- [以程式設計方式變更 RichTextBox 中的選項](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
- [儲存、載入和列印 RichTextBox 內容](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
- [在 RichTextBox 中放置自訂內容功能表](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
+ [擷取 RichTextBox 的文字內容](how-to-extract-the-text-content-from-a-richtextbox.md)  
+ [以程式設計方式變更 RichTextBox 中的選項](change-selection-in-a-richtextbox-programmatically.md)  
+ [儲存、載入和列印 RichTextBox 內容](how-to-save-load-and-print-richtextbox-content.md)  
+ [在 RichTextBox 中放置自訂內容功能表](how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Controls.TextBox>
-- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [WPF 中的文件](../advanced/documents-in-wpf.md)
+- [非固定格式文件概觀](../advanced/flow-document-overview.md)

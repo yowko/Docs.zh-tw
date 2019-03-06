@@ -7,22 +7,23 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
-ms.openlocfilehash: e01a0264b86e052d9def7f3657f96d238a67afb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370757"
 ---
 # <a name="menu"></a>功能表
-A<xref:System.Windows.Controls.Menu>是控制項可讓命令或事件處理常式相關聯的項目階層式組織。 每個<xref:System.Windows.Controls.Menu>可以包含多個<xref:System.Windows.Controls.MenuItem>控制項。 每個<xref:System.Windows.Controls.MenuItem>可以叫用命令，或叫用`Click`事件處理常式。 A<xref:System.Windows.Controls.MenuItem>也可以有多個<xref:System.Windows.Controls.MenuItem>做為子系，形成子功能表項目。  
+A<xref:System.Windows.Controls.Menu>是允許的命令或事件處理常式相關聯的項目階層式組織的控制項。 每個<xref:System.Windows.Controls.Menu>可以包含多個<xref:System.Windows.Controls.MenuItem>控制項。 每個<xref:System.Windows.Controls.MenuItem>可以叫用命令，或叫用`Click`事件處理常式。 A<xref:System.Windows.Controls.MenuItem>也可以有多個<xref:System.Windows.Controls.MenuItem>做為子系，形成子功能表項目。  
   
- 下圖顯示的功能表控制項的三種不同狀態。 預設狀態是任何裝置，例如滑鼠指標位於上時<xref:System.Windows.Controls.Menu>。 焦點狀態發生於滑鼠指標停留<xref:System.Windows.Controls.Menu>和透過按下滑鼠按鈕時，就會發生狀態為 pressed <xref:System.Windows.Controls.Menu>。  
+ 下圖顯示的功能表控制項的三個不同的狀態。 沒有裝置，例如滑鼠指標將滑鼠放上時的預設狀態<xref:System.Windows.Controls.Menu>。 焦點狀態發生於滑鼠指標停留<xref:System.Windows.Controls.Menu>上按一下滑鼠按鈕時，就會發生已按下的狀態和<xref:System.Windows.Controls.Menu>。  
   
- ![功能表狀態](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")  
-功能表中的不同狀態  
+ ![功能表狀態](./media/ss-ctl-menu.gif "SS_CTL_menu")  
+在不同的狀態中的功能表  
   
 ## <a name="in-this-section"></a>本節內容  
- [功能表概觀](../../../../docs/framework/wpf/controls/menu-overview.md)  
+ [功能表概觀](menu-overview.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Menu>  

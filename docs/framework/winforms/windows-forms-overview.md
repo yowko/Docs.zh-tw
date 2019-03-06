@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5ad12c9227f089f579ff204dec1ab7026e3d2bcd
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 4c4d3c2f323492cafaa2dc4d52ab994323eba69b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007334"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375320"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms 概觀
 
@@ -45,15 +45,16 @@ ms.locfileid: "46007334"
 
 |描述|說明主題|
 |-----------------|----------------|
-|在表單上使用控制項|[操作說明：將控制項新增至 Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|使用 <xref:System.Windows.Forms.ToolStrip> 控制項|[操作說明：使用設計工具建立具有標準項目的基本 ToolStrip](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|在表單上使用控制項|[如何：將控制項新增至 Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
+|使用 <xref:System.Windows.Forms.ToolStrip> 控制項|[如何：建立具有使用設計工具的標準項目的基本 ToolStrip](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
 |使用 <xref:System.Drawing> 建立圖形|[圖形程式設計入門](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|建立自訂控制項|[操作說明：繼承自 UserControl 類別](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|建立自訂控制項|[如何：繼承自 UserControl 類別](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>顯示和操作資料
  許多應用程式必須顯示來自資料庫、XML 檔案、XML Web 服務或其他資料來源的資料。 Windows Form 提供名為 <xref:System.Windows.Forms.DataGridView> 控制項的彈性控制項，以傳統的資料列和資料行格式，來顯示這類表格式資料，讓每項資料佔有自己的儲存格。 當您使用 <xref:System.Windows.Forms.DataGridView> 時，您可以自訂個別儲存格的外觀、將任意資料列和資料行鎖定位置，以及顯示儲存格中的複雜控制項，還有其他功能。
 
- 利用 Windows Form 智慧型用戶端，透過網路連接到資料來源是一項簡單的工作。 <xref:System.Windows.Forms.BindingSource>元件提供連線到資料來源，並公開方法，將資料繫結至控制項，巡覽至上一頁和下一頁記錄、 編輯記錄，以及將變更儲存回原始的來源。 <xref:System.Windows.Forms.BindingNavigator> 控制項透過 <xref:System.Windows.Forms.BindingSource> 元件提供一個簡單的介面，可讓使用者在記錄之間巡覽。
+ 利用 Windows Form 智慧型用戶端，透過網路連接到資料來源是一項簡單的工作。 <xref:System.Windows.Forms.BindingSource>元件提供連線到資料來源，並公開方法，將資料繫結至控制項，巡覽至上一頁和下一頁記錄、 編輯記錄，以及將變更儲存回原始的來源。 
+  <xref:System.Windows.Forms.BindingNavigator> 控制項透過 <xref:System.Windows.Forms.BindingSource> 元件提供一個簡單的介面，可讓使用者在記錄之間巡覽。
 
  您可以使用 [資料來源] 視窗，輕鬆地建立資料繫結控制項。 此視窗會顯示您專案中的資料來源，例如資料庫、Web 服務和物件。 將項目從這個視窗拖曳到專案中的表單上，即可建立資料繫結控制項。 您也可以將物件從 [資料來源] 視窗拖曳至現有的控制項，以將現有的控制項繫結至資料。
 
@@ -65,9 +66,9 @@ ms.locfileid: "46007334"
 
 |描述|說明主題|
 |-----------------|----------------|
-|使用 <xref:System.Windows.Forms.BindingSource> 元件|[操作說明：使用設計工具將 Windows Forms 控制項和 BindingSource 元件加以繫結](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 資料來源|[操作說明：使用 Windows Forms BindingSource 元件排序和篩選 ADO.NET 資料](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|使用資料來源視窗|[逐步解說：顯示 Windows Form 上的資料](https://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|
+|使用 <xref:System.Windows.Forms.BindingSource> 元件|[如何：繫結 Windows Form 控制項和 BindingSource 元件加以使用設計工具](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 資料來源|[如何：排序和篩選 ADO.NET 資料，使用 Windows Form BindingSource 元件](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|使用資料來源視窗|[將 Windows Forms 控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |使用應用程式設定|[如何：建立應用程式設定](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>將應用程式部署至用戶端電腦
@@ -84,7 +85,7 @@ ms.locfileid: "46007334"
 
 |描述|說明主題|
 |-----------------|----------------|
-|使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 來部署應用程式|[如何：使用發行精靈發行 ClickOnce 應用程式](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 來部署應用程式|[如何：使用 [發佈精靈] 發佈 ClickOnce 應用程式](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
 |更新 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署|[如何：管理 ClickOnce 應用程式的更新](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
 |使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 來管理安全性|[如何：啟用 ClickOnce 安全性設定](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
@@ -98,7 +99,7 @@ Windows Form 中還有許多其他功能，可讓您快速、輕鬆地實作一�
 
 |描述|說明主題|
 |-----------------|----------------|
-|列印表單的內容|[如何：列印 Windows Forms 中的圖形](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：在 Windows Forms 中列印多頁文字檔](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|列印表單的內容|[如何：列印 Windows Form 中的圖形](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：列印 Windows Form 中的多頁文字檔](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |深入了解 Windows Form 安全性|[Windows Forms 中的安全性概觀](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|
 
 ## <a name="see-also"></a>另請參閱

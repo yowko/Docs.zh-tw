@@ -7,23 +7,23 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
-ms.openlocfilehash: afc39b0d079bf273170a649f03a3756953c29eea
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2f46a548f28cffb1824ffbdc51f8d4d79c4c9d02
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836392"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363692"
 ---
 # <a name="audio-and-video-how-to-topics"></a>音訊和視訊 HOW TO 主題
 下列主題示範如何使用<xref:System.Windows.Controls.MediaElement>地整合在應用程式中的音訊和視訊內容。  
   
 ## <a name="in-this-section"></a>本節內容  
- [控制 MediaElement (播放、暫停、停止、音量和速度)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [使用分鏡腳本控制 MediaElement](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [以使用者事件觸發媒體播放](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
- [重複播放媒體](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
- [以動畫播放媒體](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
- [對 MediaElement 使用轉換](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
+ [控制 MediaElement (播放、暫停、停止、音量和速度)](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [使用分鏡腳本控制 MediaElement](how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [以使用者事件觸發媒體播放](how-to-trigger-media-playback-with-a-user-event.md)  
+ [重複播放媒體](how-to-repeat-media-playback.md)  
+ [以動畫播放媒體](how-to-play-media-with-animations.md)  
+ [對 MediaElement 使用轉換](how-to-use-transforms-on-a-mediaelement.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.MediaElement>  
@@ -33,4 +33,4 @@ ms.locfileid: "56836392"
  <xref:System.Windows.Media.MediaTimeline>  
   
 ## <a name="related-sections"></a>相關章節  
- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [圖形和多媒體](index.md)

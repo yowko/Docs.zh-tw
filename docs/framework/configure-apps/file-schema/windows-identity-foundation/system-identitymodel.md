@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
 ms.openlocfilehash: fd17c0318480f5e157c8c9114116735b82bbfcef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257495"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351290"
 ---
 # <a name="systemidentitymodel"></a>\<system.identityModel>
 提供啟用應用程式中的 Windows Identity Foundation (WIF) 選項的設定。  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: ad5bd74388ab1d4a20e496271fd992b1562587d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22ac109c06659741c673681ad9bfcf3e1dcc5b2e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711271"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367932"
 ---
 # <a name="dependency-property-value-precedence"></a>相依性屬性值優先順序
 <a name="introduction"></a> 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的運作方式如何影響相依性屬性的值，並描述屬性系統套用到屬性有效值的優先順序。  
@@ -20,7 +20,7 @@ ms.locfileid: "54711271"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
- 本主題假設您已從 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 類別的現有相依性屬性消費者角度了解相依性屬性，並已閱讀[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。 為遵循本主題中的範例，您也應該了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 並知道如何撰寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。  
+ 本主題假設您已從 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 類別的現有相依性屬性消費者角度了解相依性屬性，並已閱讀[相依性屬性概觀](dependency-properties-overview.md)。 為遵循本主題中的範例，您也應該了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 並知道如何撰寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。  
   
 <a name="intro"></a>   
 ## <a name="the-wpf-property-system"></a>WPF 屬性系統  
@@ -30,7 +30,7 @@ ms.locfileid: "54711271"
 ## <a name="dependency-properties-might-be-set-in-multiple-places"></a>相依性屬性可能在多處「設定」  
  以下是範例[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]所在的相同屬性 (<xref:System.Windows.Controls.Control.Background%2A>) 有三種不同 「 設定 」 可能會影響值的作業。  
   
- [!code-xaml[PropertiesOvwSupport#DPPrecedence](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#dpprecedence)]  
+ [!code-xaml[PropertiesOvwSupport#DPPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#dpprecedence)]  
   
  在此，您預期會套用哪個色彩 - 紅色、綠色，還是藍色？  
   
@@ -38,7 +38,7 @@ ms.locfileid: "54711271"
   
 <a name="listing"></a>   
 ## <a name="dependency-property-setting-precedence-list"></a>相依性屬性設定優先順序清單  
- 以下是屬性系統在指派相依性屬性的執行階段值時，所使用的決定順序。 最高優先順序會先列出。 此清單更進一步說明了[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)中所述的部分概要。  
+ 以下是屬性系統在指派相依性屬性的執行階段值時，所使用的決定順序。 最高優先順序會先列出。 此清單更進一步說明了[相依性屬性概觀](dependency-properties-overview.md)中所述的部分概要。  
   
 1.  **屬性系統強制型轉**： 如需強制型轉的詳細資訊，請參閱本主題稍後的[強制型轉、動畫和基底值](#animations)。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "54711271"
   
     2.  主題樣式中的 setter。  
   
-10. **繼承**： 有幾個相依性屬性會從父項目繼承值到子項目，因此無須在整個應用程式的每一個項目上特別設定。 如需詳細資訊，請參閱[屬性值繼承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)。  
+10. **繼承**： 有幾個相依性屬性會從父項目繼承值到子項目，因此無須在整個應用程式的每一個項目上特別設定。 如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。  
   
-11. **來自相依性屬性中繼資料的預設值**： 任何指定的相依性屬性都可能會有屬性系統註冊為該特定屬性建立的預設值。 此外，繼承相依性屬性的衍生類別可選擇根據類型覆寫該中繼資料 (包括預設值)。 如需詳細資訊，請參閱[相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。 因為會在預設值之前檢查繼承，所以對繼承的屬性而言，父項目的預設值會優先於子項目。  因此，如果未在任何位置設定可繼承的屬性，就會使用在根項目或父項目上指定的預設值，而不是子項目的預設值。  
+11. **來自相依性屬性中繼資料的預設值**： 任何指定的相依性屬性都可能會有屬性系統註冊為該特定屬性建立的預設值。 此外，繼承相依性屬性的衍生類別可選擇根據類型覆寫該中繼資料 (包括預設值)。 如需詳細資訊，請參閱[相依性屬性中繼資料](dependency-property-metadata.md)。 因為會在預設值之前檢查繼承，所以對繼承的屬性而言，父項目的預設值會優先於子項目。  因此，如果未在任何位置設定可繼承的屬性，就會使用在根項目或父項目上指定的預設值，而不是子項目的預設值。  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
@@ -92,15 +92,15 @@ ms.locfileid: "54711271"
   
  最重要的資訊的控制項是控制項範本，為的 setter 存在佈景主題樣式中的預設樣式內找到其<xref:System.Windows.Controls.Control.Template%2A>屬性。 如果預設樣式沒有範本，則沒有自訂範本作為自訂樣式一部分的控制項將完全沒有視覺外觀。 預設樣式中的範本會為每個控制項的視覺外觀提供基本結構，而且也會定義在範本視覺化樹狀結構中定義的屬性與相對應控制項類別之間的連接。 每個控制項會公開一組屬性，這些屬性可影響控制項的視覺外觀，但不會完全取代範本。 例如，假設的預設視覺外觀<xref:System.Windows.Controls.Primitives.Thumb>控制項，也就是元件的<xref:System.Windows.Controls.Primitives.ScrollBar>。  
   
- A<xref:System.Windows.Controls.Primitives.Thumb>有特定的自訂屬性。 預設範本<xref:System.Windows.Controls.Primitives.Thumb>會建立一個基本結構 / 視覺化樹狀結構與數個巢狀<xref:System.Windows.Controls.Border>元件，以產生斜面外觀。 如果此屬性是範本的一部分，要進行自訂的公開<xref:System.Windows.Controls.Primitives.Thumb>類別，則該屬性必須公開[TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)，範本內。 若是<xref:System.Windows.Controls.Primitives.Thumb>，這些框線的各種屬性會共用這類屬性的範本繫結<xref:System.Windows.Controls.Border.Background%2A>或<xref:System.Windows.Controls.Border.BorderThickness%2A>。 但特定其他屬性或視覺化排列方式是用硬式編碼加入控制項範本，或繫結至直接來自於主題的值，除了取代整個範本之外，無法以其他方式變更。 一般而言，如果屬性來自於樣板化父項目且不由範本繫結公開，就無法使用樣式調整，因為沒有簡單的方式可將它設為目標。 但該屬性仍會受到所套用範本中的屬性值繼承所影響，或受到預設值所影響。  
+ A<xref:System.Windows.Controls.Primitives.Thumb>有特定的自訂屬性。 預設範本<xref:System.Windows.Controls.Primitives.Thumb>會建立一個基本結構 / 視覺化樹狀結構與數個巢狀<xref:System.Windows.Controls.Border>元件，以產生斜面外觀。 如果此屬性是範本的一部分，要進行自訂的公開<xref:System.Windows.Controls.Primitives.Thumb>類別，則該屬性必須公開[TemplateBinding](templatebinding-markup-extension.md)，範本內。 若是<xref:System.Windows.Controls.Primitives.Thumb>，這些框線的各種屬性會共用這類屬性的範本繫結<xref:System.Windows.Controls.Border.Background%2A>或<xref:System.Windows.Controls.Border.BorderThickness%2A>。 但特定其他屬性或視覺化排列方式是用硬式編碼加入控制項範本，或繫結至直接來自於主題的值，除了取代整個範本之外，無法以其他方式變更。 一般而言，如果屬性來自於樣板化父項目且不由範本繫結公開，就無法使用樣式調整，因為沒有簡單的方式可將它設為目標。 但該屬性仍會受到所套用範本中的屬性值繼承所影響，或受到預設值所影響。  
   
- 主題樣式在其定義中使用類型作為索引鍵。 不過，當佈景主題套用至指定的項目執行個體時，則這種類型的主題查閱會藉由檢查執行<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>控制項上的屬性。 這與隱含樣式使用常值 Type 的方式相反。 值<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>會繼承給衍生類別中，即使實作器並未變更它 （變更屬性的預期的方式是不覆寫它在屬性層級，但若要改為其預設值屬性中繼資料中的變更）。 這種間接方式可讓基底類別為沒有樣式 (或者更重要的是，在該樣式內沒有範本，因此完全沒有預設視覺外觀) 的衍生項目定義主題樣式。 因此，您可以衍生`MyButton`從<xref:System.Windows.Controls.Button>而仍然取得<xref:System.Windows.Controls.Button>預設範本。 如果您的控制項作者`MyButton`而且您想要不同的行為，您可以覆寫的相依性屬性中繼資料<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>上`MyButton`傳回不同的金鑰，並接著定義相關的主題樣式，包括範本針對`MyButton`，您必須封裝與您`MyButton`控制項。 如需主題、樣式和控制項撰寫的詳細資訊，請參閱[控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)。  
+ 主題樣式在其定義中使用類型作為索引鍵。 不過，當佈景主題套用至指定的項目執行個體時，則這種類型的主題查閱會藉由檢查執行<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>控制項上的屬性。 這與隱含樣式使用常值 Type 的方式相反。 值<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>會繼承給衍生類別中，即使實作器並未變更它 （變更屬性的預期的方式是不覆寫它在屬性層級，但若要改為其預設值屬性中繼資料中的變更）。 這種間接方式可讓基底類別為沒有樣式 (或者更重要的是，在該樣式內沒有範本，因此完全沒有預設視覺外觀) 的衍生項目定義主題樣式。 因此，您可以衍生`MyButton`從<xref:System.Windows.Controls.Button>而仍然取得<xref:System.Windows.Controls.Button>預設範本。 如果您的控制項作者`MyButton`而且您想要不同的行為，您可以覆寫的相依性屬性中繼資料<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>上`MyButton`傳回不同的金鑰，並接著定義相關的主題樣式，包括範本針對`MyButton`，您必須封裝與您`MyButton`控制項。 如需主題、樣式和控制項撰寫的詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。  
   
 <a name="resources"></a>   
 ## <a name="dynamic-resource-references-and-binding"></a>動態資源參考和繫結  
  動態資源參考和繫結作業會採用其設定位置的優先順序。 例如，套用到區域數值的動態資源會依優先順序項目 3 作用，主題樣式內屬性 setter 的繫結會依優先順序項目 9 套用，依此類推。 由於動態資源參考和繫結必須能夠從應用程式的執行階段狀態取得值，因此決定任何指定屬性之屬性值優先順序的實際程序也會延伸至執行階段。  
   
- 嚴格來說，動態資源參考不是屬性系統的一部分，但它們有自己的查閱順序，會與上面所列的順序互動。 該優先順序在 [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)中有更詳細的說明。 基本上來說，該優先順序就是：項目優先於頁面根項目、應用程式、主題和系統。  
+ 嚴格來說，動態資源參考不是屬性系統的一部分，但它們有自己的查閱順序，會與上面所列的順序互動。 該優先順序在 [XAML 資源](xaml-resources.md)中有更詳細的說明。 基本上來說，該優先順序就是：項目優先於頁面根項目、應用程式、主題和系統。  
   
  動態資源和繫結具有其設定位置的優先順序，但會受到其值影響。 因此，如果您將動態資源或繫結設定為區域數值，區域數值的任何變更都會取代整個動態資源或繫結。 即使您呼叫<xref:System.Windows.DependencyObject.ClearValue%2A>方法，以清除本機設定值，動態資源或繫結不會還原。 事實上，如果您呼叫<xref:System.Windows.DependencyObject.ClearValue%2A>上有動態資源或繫結 （使用任何常值的區域數值） 的屬性，會清除這些<xref:System.Windows.DependencyObject.ClearValue%2A>太呼叫。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "54711271"
   
  對動畫而言，如果動畫未同時指定特定行為的 "From" 和 "To"，或是動畫刻意在完成後還原成基底值，則基底值可能會對動畫值造成影響。 若要了解實際的情形，請執行 [From、To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)。 請試著設定此範例中矩形高度的區域數值，讓初始區域數值與動畫中的任何 "From" 不同。 您會發現，動畫會立即使用 "From" 值啟動，並在啟動後取代基底值。 動畫可能會傳回由指定 Stop 完成後，動畫之前找到的值指定<xref:System.Windows.Media.Animation.FillBehavior>。 在此之後，就會使用正常優先順序來決定基底值。  
   
- 您可將多個動畫套用到單一屬性，每個動畫可能已透過值優先順序的不同點定義。 不過，這些動畫可能會將值結合起來，而不是只從較高的優先順序套用動畫。 這完全取決於動畫的定義方式，以及要顯示為動畫之值的類型。 如需將屬性顯示為動畫的詳細資訊，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+ 您可將多個動畫套用到單一屬性，每個動畫可能已透過值優先順序的不同點定義。 不過，這些動畫可能會將值結合起來，而不是只從較高的優先順序套用動畫。 這完全取決於動畫的定義方式，以及要顯示為動畫之值的類型。 如需將屬性顯示為動畫的詳細資訊，請參閱[動畫概觀](../graphics-multimedia/animation-overview.md)。  
   
- 強制型轉的套用層級最高。 即使是已在執行中的應用程式也受值強制型轉的限制。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的某些現有相依性屬性有內建強制型轉。 您可以自訂的相依性屬性，定義自訂相依性屬性的強制型轉行為來撰寫<xref:System.Windows.CoerceValueCallback>和中繼資料的一部分傳遞回呼，當您建立屬性。 您也可以覆寫現有屬性的強制型轉行為，方式是在衍生類別中覆寫該屬性上的中繼資料。 強制型轉與基底值互動的方式是，強制型轉上的條件約束會以當時存在的條件約束套用，但仍保留基底值。 因此，如果強制型轉中的條件約束稍後放寬，強制型轉就會傳回最接近該基底值的值，而且強制型轉對屬性的影響有可能會在所有條件約束都放寬之後停止。 如需強制型轉行為的詳細資訊，請參閱[相依性屬性回呼和驗證](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)。  
+ 強制型轉的套用層級最高。 即使是已在執行中的應用程式也受值強制型轉的限制。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的某些現有相依性屬性有內建強制型轉。 您可以自訂的相依性屬性，定義自訂相依性屬性的強制型轉行為來撰寫<xref:System.Windows.CoerceValueCallback>和中繼資料的一部分傳遞回呼，當您建立屬性。 您也可以覆寫現有屬性的強制型轉行為，方式是在衍生類別中覆寫該屬性上的中繼資料。 強制型轉與基底值互動的方式是，強制型轉上的條件約束會以當時存在的條件約束套用，但仍保留基底值。 因此，如果強制型轉中的條件約束稍後放寬，強制型轉就會傳回最接近該基底值的值，而且強制型轉對屬性的影響有可能會在所有條件約束都放寬之後停止。 如需強制型轉行為的詳細資訊，請參閱[相依性屬性回呼和驗證](dependency-property-callbacks-and-validation.md)。  
   
 <a name="triggers"></a>   
 ## <a name="trigger-behaviors"></a>觸發程序行為  
@@ -129,6 +129,6 @@ ms.locfileid: "54711271"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
-- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [相依性屬性回呼和驗證](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+- [相依性屬性概觀](dependency-properties-overview.md)
+- [自訂相依性屬性](custom-dependency-properties.md)
+- [相依性屬性回呼和驗證](dependency-property-callbacks-and-validation.md)

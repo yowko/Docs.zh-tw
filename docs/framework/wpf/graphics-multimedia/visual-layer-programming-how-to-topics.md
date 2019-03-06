@@ -8,27 +8,27 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: b53b5666985305362d093e2e579abe83ce619fc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0328b5da837fa11a6c2b7dba9ae761a1e88729bb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655851"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376929"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>視覺分層程式設計 HOW TO 主題
 在本節中的主題示範如何使用點擊測試和低層級組合的視覺分層。  
   
 ## <a name="in-this-section"></a>本節內容  
- [取得 Visual 的位移](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
- [列舉 Visual 的繪圖內容](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
- [對 Visual 中的幾何進行點擊測試](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [使用幾何做為參數進行點擊測試](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
- [使用 Win32 裝載容器進行點擊測試](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
- [使用 CompositionTarget 在單格間隔轉譯](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+ [取得 Visual 的位移](how-to-get-the-offset-of-a-visual.md)  
+ [列舉 Visual 的繪圖內容](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [對 Visual 中的幾何進行點擊測試](how-to-hit-test-geometry-in-a-visual.md)  
+ [使用幾何做為參數進行點擊測試](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [使用 Win32 裝載容器進行點擊測試](how-to-hit-test-using-a-win32-host-container.md)  
+ [使用 CompositionTarget 在單格間隔轉譯](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)
+- [圖形和多媒體](index.md)

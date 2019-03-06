@@ -7,32 +7,32 @@ helpviewer_keywords:
 - flow content elements [WPF], how-to topics
 - documents [WPF], flow content reference
 ms.assetid: ef5175df-6ab9-4096-be0c-804003b44c64
-ms.openlocfilehash: e5be189ed6bf5cf2baf676825dffca49e57a3dec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241f3736eef55fcca13d4cb9994bb04aaf4eda66
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546370"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354423"
 ---
 # <a name="flow-content-elements-how-to-topics"></a>非固定格式內容項目 HOW TO 主題
-本節中的主題描述如何使用各種動態內容項目和相關的功能的一般工作。  
+在本節中的主題描述如何完成一般工作使用不同的非固定格式內容項目和相關的功能。  
   
 ## <a name="in-this-section"></a>本節內容  
- [調整段落之間的間距](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
- [以程式設計的方式建置資料表](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
- [以程式設計方式變更內容的 FlowDirection](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
- [以程式設計方式變更 TextWrapping 屬性](../../../../docs/framework/wpf/advanced/how-to-change-the-textwrapping-property-programmatically.md)  
- [使用 XAML 定義表格](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
- [修改文字的印刷樣式](../../../../docs/framework/wpf/advanced/how-to-alter-the-typography-of-text.md)  
- [啟用文字修剪](../../../../docs/framework/wpf/advanced/how-to-enable-text-trimming.md)  
- [以程式設計的方式將元素插入文字](../../../../docs/framework/wpf/advanced/how-to-insert-an-element-into-text-programmatically.md)  
- [透過 Blocks 屬性管理非固定格式內容元素](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [透過 Inlines 屬性管理非固定格式內容元素](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
- [透過 Blocks 屬性管理 FlowDocument](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [透過 Columns 屬性管理表格的資料行](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [透過 RowGroups 屬性管理表格的資料列群組](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [使用非固定格式元素](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
- [使用 FlowDocument 資料行分隔屬性](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
+ [調整段落之間的間距](how-to-adjust-spacing-between-paragraphs.md)  
+ [以程式設計的方式建置資料表](how-to-build-a-table-programmatically.md)  
+ [以程式設計方式變更內容的 FlowDirection](how-to-change-the-flowdirection-of-content-programmatically.md)  
+ [以程式設計方式變更 TextWrapping 屬性](how-to-change-the-textwrapping-property-programmatically.md)  
+ [使用 XAML 定義表格](how-to-define-a-table-with-xaml.md)  
+ [修改文字的印刷樣式](how-to-alter-the-typography-of-text.md)  
+ [啟用文字修剪](how-to-enable-text-trimming.md)  
+ [以程式設計的方式將元素插入文字](how-to-insert-an-element-into-text-programmatically.md)  
+ [透過 Blocks 屬性管理非固定格式內容元素](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [透過 Inlines 屬性管理非固定格式內容元素](how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
+ [透過 Blocks 屬性管理 FlowDocument](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [透過 Columns 屬性管理表格的資料行](how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [透過 RowGroups 屬性管理表格的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [使用非固定格式元素](how-to-use-flow-content-elements.md)  
+ [使用 FlowDocument 資料行分隔屬性](how-to-use-flowdocument-column-separating-attributes.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Documents.FlowDocument>  
@@ -40,4 +40,4 @@ ms.locfileid: "33546370"
   <xref:System.Windows.Documents.Inline>  
   
 ## <a name="related-sections"></a>相關章節  
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [WPF 中的文件](documents-in-wpf.md)

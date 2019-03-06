@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: c0c5019eb122f30ad25fa86164b4ead6db8c83c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e82a9596778a3c71aca6bdb8efcb9b3aa227cadb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715812"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368216"
 ---
 # <a name="bitmap-effects-overview"></a>點陣圖效果概觀
 點陣圖效果可讓設計人員和開發人員来套用至視覺效果呈現 Windows Presentation Foundation (WPF) 內容。 例如，點陣圖效果可讓您輕鬆地套用<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>效果或模糊效果影像或按鈕。  
@@ -47,11 +47,11 @@ ms.locfileid: "54715812"
   
  下列範例示範如何套用<xref:System.Windows.Media.Effects.BitmapEffect>在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
   
- [!code-xaml[EffectsGallery_snip#BlurSimpleExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blursimpleexample.xaml#blursimpleexampleinline)]  
+ [!code-xaml[EffectsGallery_snip#BlurSimpleExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blursimpleexample.xaml#blursimpleexampleinline)]  
   
  下列範例示範如何套用<xref:System.Windows.Media.Effects.BitmapEffect>在程式碼中。  
   
- [!code-csharp[EffectsGallery_snip#CodeBehindBlurCodeBehindExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blurcodebehindexample.xaml.cs#codebehindblurcodebehindexampleinline)]  
+ [!code-csharp[EffectsGallery_snip#CodeBehindBlurCodeBehindExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blurcodebehindexample.xaml.cs#codebehindblurcodebehindexampleinline)]  
   
 > [!NOTE]
 >  當<xref:System.Windows.Media.Effects.BitmapEffect>套用至版面配置容器，例如<xref:System.Windows.Controls.DockPanel>或<xref:System.Windows.Controls.Canvas>，效果會套用至元素或視覺效果，包括其所有子元素的視覺化樹狀結構。  
@@ -65,7 +65,7 @@ ms.locfileid: "54715812"
 - <xref:System.Windows.Media.Effects.BitmapEffectInput>
 - <xref:System.Windows.Media.Effects.BitmapEffectCollection>
 - [Unmanaged 的 WPF 點陣圖效果](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)
-- [影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
-- [安全性](../../../../docs/framework/wpf/security-wpf.md)
-- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [影像處理概觀](imaging-overview.md)
+- [安全性](../security-wpf.md)
+- [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)
+- [2D 圖形和影像處理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)

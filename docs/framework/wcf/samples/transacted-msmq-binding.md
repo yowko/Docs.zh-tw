@@ -2,26 +2,27 @@
 title: 交易 MSMQ 繫結
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-ms.openlocfilehash: 9574320478741f71c7c98d7e21a24c80a31b72a2
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 259ca8059ac1c4f62636a2320d5eb64daa7f56cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066047"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359873"
 ---
 # <a name="transacted-msmq-binding"></a>交易 MSMQ 繫結
+
 這個範例會示範如何使用訊息佇列 (MSMQ) 執行交易佇列通訊。
 
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。
+> 此範例的安裝程序與建置指示位於本主題的結尾。
 
- 在佇列通訊中，用戶端會使用佇列與服務通訊。 更精確地說，用戶端會傳送訊息至佇列。 服務會接收來自佇列的訊息。 因此，服務與用戶端不需同時執行，就能使用佇列通訊。
+在佇列通訊中，用戶端會使用佇列與服務通訊。 更精確地說，用戶端會傳送訊息至佇列。 服務會接收來自佇列的訊息。 因此，服務與用戶端不需同時執行，就能使用佇列通訊。
 
- 當交易是用於傳送與接收訊息時，實際上會出現兩個不同的交易。 當用戶端在異動範圍內傳送訊息時，對用戶端與用戶端佇列管理員來說，異動屬於本機範圍。 當服務在交易範圍內接收訊息時，對服務與接收佇列管理員來說，交易屬於本機範圍。 您一定要記住，用戶端與服務並未參與相同的異動，而是在配合佇列執行其作業時 (例如傳送與接收) 使用不同的異動。
+當異動是用於傳送與接收訊息時，實際上會出現兩個不同的異動。 當用戶端在交易範圍內傳送訊息時，對用戶端與用戶端佇列管理員來說，交易屬於本機範圍。 當服務在交易範圍內接收訊息時，對服務與接收佇列管理員來說，交易屬於本機範圍。 您一定要記住，用戶端與服務並未參與相同的異動，而是在配合佇列執行其作業時 (例如傳送與接收) 使用不同的異動。
 
- 在這個範例中，用戶端會從交易範圍內將訊息批次傳送至服務。 接著，服務會在所定義的交易範圍內接收傳送至佇列的訊息。
+在這個範例中，用戶端會從異動範圍內將訊息批次傳送至服務。 接著，服務會在所定義的異動範圍內接收傳送至佇列的訊息。
 
- 服務合約是 `IOrderProcessor`，如下列範例程式碼所示。 介面會定義適合與佇列搭配使用的單向服務。
+服務合約是 `IOrderProcessor`，如下列範例程式碼所示。 介面會定義適合與佇列搭配使用的單向服務。
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -32,7 +33,7 @@ public interface IOrderProcessor
 }
 ```
 
- 服務行為會定義 `TransactionScopeRequired` 已設為 `true` 的作業行為， 這樣會確定此方法存取的任何資源管理員都使用從佇列擷取訊息時所使用的相同異動範圍。 這種行為也會確保當方法擲回例外狀況時，訊息會傳回至佇列。 如果未設定這個作業行為，已佇列通道所建立的交易就會從佇列讀取訊息、並且在分派前就自動進行認可，因此，如果此作業失敗，訊息就會遺失。 最常見的案例，就是登記於用來從佇列讀取訊息之異動的服務作業，如下列程式碼所示範。
+服務行為會定義 `TransactionScopeRequired` 已設為 `true` 的作業行為， 這樣會確定此方法存取的任何資源管理員都使用從佇列擷取訊息時所使用的相同異動範圍。 這種行為也會確保當方法擲回例外狀況時，訊息會傳回至佇列。 如果未設定這個作業行為，已佇列通道所建立的交易就會從佇列讀取訊息、並且在分派前就自動進行認可，因此，如果此作業失敗，訊息就會遺失。 最常見的案例，就是登記於用來從佇列讀取訊息之異動的服務作業，如下列程式碼所示範。
 
 ```csharp
  // This service class that implements the service contract.
@@ -49,7 +50,7 @@ public interface IOrderProcessor
 }
 ```
 
- 服務會自我裝載。 使用 MSMQ 傳輸時，必須事先建立使用的佇列。 這個動作可手動或透過程式碼完成。 在這個範例中，該服務包含的程式碼會檢查佇列的存在，並在佇列不存在時建立佇列。 佇列名稱會從組態檔中讀取。 使用基底位址[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生服務 proxy。
+服務會自我裝載。 使用 MSMQ 傳輸時，必須事先建立使用的佇列。 這個動作可手動或透過程式碼完成。 在這個範例中，該服務包含的程式碼會檢查佇列的存在，並在佇列不存在時建立佇列。 佇列名稱會從組態檔中讀取。 使用基底位址[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生服務 proxy。
 
 ```csharp
 // Host the service within this EXE console application.
@@ -80,7 +81,7 @@ public static void Main()
 }
 ```
 
- MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中，如下面的範例組態所示。
+MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中，如下面的範例組態所示。
 
 ```xml
 <appSettings>
@@ -89,9 +90,9 @@ public static void Main()
 ```
 
 > [!NOTE]
->  使用 <xref:System.Messaging> 來建立佇列時，佇列會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 Windows Communication Foundation (WCF) 端點會使用包含 net.msmq 配置的佇列位址、 使用"localhost"代表本機電腦，並在其路徑中使用正斜線。
+> 使用 <xref:System.Messaging> 來建立佇列時，佇列會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 Windows Communication Foundation (WCF) 端點會使用包含 net.msmq 配置的佇列位址、 使用"localhost"代表本機電腦，並在其路徑中使用正斜線。
 
- 用戶端會建立一個異動範圍。 與佇列的通訊會發生在交易範圍內，導致其被視為原子單位 (Atomic Unit)，其中會將所有訊息都傳送至佇列，或是不傳送任何訊息至佇列。 呼叫交易範圍上的 <xref:System.Transactions.TransactionScope.Complete%2A>，即可認可交易。
+用戶端會建立一個交易範圍。 與佇列的通訊會發生在交易範圍內，導致其被視為原子單位 (Atomic Unit)，其中會將所有訊息都傳送至佇列，或是不傳送任何訊息至佇列。 呼叫異動範圍上的 <xref:System.Transactions.TransactionScope.Complete%2A>，即可認可異動。
 
 ```csharp
 // Create a client.
@@ -133,15 +134,15 @@ Console.WriteLine("Press <ENTER> to terminate client.");
 Console.ReadLine();
 ```
 
- 若要檢查交易是否正常運作，請將交易範例標記為註解來修改用戶端 (如下列範例程式碼所示方式)，並重建方案，然後執行用戶端。
+若要檢查異動是否正常運作，請將異動範例標記為註解來修改用戶端 (如下列範例程式碼所示方式)，並重建方案，然後執行用戶端。
 
 ```csharp
 //scope.Complete();
 ```
 
- 因為交易尚未完成，所以這些訊息不會傳送至佇列。
+因為交易尚未完成，所以這些訊息不會傳送至佇列。
 
- 當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。
+當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。
 
 ```
 The service is ready.
@@ -158,29 +159,29 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2.  如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
+2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
-    1.  開啟 Visual Studio 2012 中的 伺服器管理員。
+    1. 開啟 Visual Studio 2012 中的 伺服器管理員。
 
-    2.  依序展開**功能** 索引標籤。
+    2. 依序展開**功能** 索引標籤。
 
-    3.  以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。
+    3. 以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。
 
-    4.  請檢查**Transactional**  方塊中。
+    4. 請檢查**Transactional**  方塊中。
 
-    5.  輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
+    5. 輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
 
-3.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
+3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+4. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
 
- 根據預設，傳輸安全性會透過 <xref:System.ServiceModel.NetMsmqBinding> 啟用。 MSMQ 傳輸安全性有兩個相關屬性：<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 和 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證及簽署功能，MSMQ 必須是網域的一部分，而且必須安裝 MSMQ 的 Active Directory 整合選項。 如果您在不符合這些條件的電腦上執行這個範例，就會收到錯誤。
+根據預設，傳輸安全性會透過 <xref:System.ServiceModel.NetMsmqBinding> 啟用。 MSMQ 傳輸安全性有兩個相關屬性：<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 和 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證及簽署功能，MSMQ 必須是網域的一部分，而且必須安裝 MSMQ 的 Active Directory 整合選項。 如果您在不符合這些條件的電腦上執行這個範例，就會收到錯誤。
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>若要在加入工作群組，或是沒有 Active Directory 整合的電腦上執行這個範例
 
-1.  如果您的電腦不是網域的一部分，或是沒有安裝 Active Directory 整合，請將驗證模式和保護層級設定為 `None`，以關閉傳輸安全性，如下列的範例組態程式碼所示。
+1. 如果您的電腦不是網域的一部分，或是沒有安裝 Active Directory 整合，請將驗證模式和保護層級設定為 `None`，以關閉傳輸安全性，如下列的範例組態程式碼所示。
 
     ```xml
     <system.serviceModel>
@@ -198,7 +199,7 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
               binding="netMsmqBinding"
               bindingConfiguration="Binding1"
            contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />
-          <!-- The mex endpoint is explosed at http://localhost:8000/ServiceModelSamples/service/mex. -->
+          <!-- The mex endpoint is exposed at http://localhost:8000/ServiceModelSamples/service/mex. -->
           <endpoint address="mex"
                     binding="mexHttpBinding"
                     contract="IMetadataExchange" />
@@ -224,18 +225,16 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
       </system.serviceModel>
     ```
 
-2.  請務必先變更伺服器與用戶端上的組態，再執行範例。
+2. 請務必先變更伺服器與用戶端上的組態，再執行範例。
 
     > [!NOTE]
-    >  將 `security mode` 設定為 `None`，相當於將 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 和 `Message` 安全性設定為 `None`。
+    > 將 `security mode` 設定為 `None`，相當於將 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 和 `Message` 安全性設定為 `None`。
 
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`  
-  
-## <a name="see-also"></a>另請參閱
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> 如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`

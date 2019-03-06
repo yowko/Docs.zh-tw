@@ -2,12 +2,12 @@
 title: 參數和引數
 description: 深入了解F#定義參數，以及將引數傳遞至函式、 方法和屬性的語言支援。
 ms.date: 05/16/2016
-ms.openlocfilehash: 65e3b4f8ffb03e81104c963c5e2da7aba2e2b220
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: b68b3fdd14a66a7312efa5adb709adaeceaae282
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583494"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352279"
 ---
 # <a name="parameters-and-arguments"></a>參數和引數
 
@@ -135,17 +135,17 @@ Baud Rate: 4800 Duplex: Half Parity: false
 ```fsharp
 open System
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
         printfn "%s" message
 ```
 
-您也可以指定新的物件做為預設參數值。 例如，`Foo`成員可能會有選擇性`CanceallationToken`輸入，而是：
+您也可以指定新的物件做為預設參數值。 例如，`Foo`成員可能會有選擇性`CancellationToken`輸入，而是：
 
 ```fsharp
 open System.Threading
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
         printfn "%A" ct
 ```

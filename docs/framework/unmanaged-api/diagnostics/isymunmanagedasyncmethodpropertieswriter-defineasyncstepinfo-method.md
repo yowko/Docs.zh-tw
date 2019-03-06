@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b165501b3e090cf309f3b4053649644b87b47f22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: defd38798453c8b82ec23605d12d41e5b90aaabc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555566"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352902"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo 方法
 定義一組非同步等候目前的方法中的作業。  
   
- 每個 yield 位移符合 await 傳回指示，用來識別潛在的暫止。 每個`breakpointMethod` / `breakpointOffset`組告訴我們，非同步作業會繼續，（可能位於不同的方法。  
+ 每個 yield 位移符合 await 傳回指示，用來識別潛在的暫止。 每個`breakpointMethod` / `breakpointOffset`組告訴我們非同步作業會繼續這可能位於不同的方法。  
   
 ## <a name="syntax"></a>語法  
   

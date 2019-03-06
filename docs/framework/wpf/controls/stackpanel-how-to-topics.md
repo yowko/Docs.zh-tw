@@ -7,19 +7,20 @@ helpviewer_keywords:
 - StackPanel control [WPF], how-to topics
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
-ms.openlocfilehash: c70fba3cd07d6ec88160783c3e922e2f1bafe934
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351264"
 ---
 # <a name="stackpanel-how-to-topics"></a>StackPanel HOW TO 主題
-本節中的主題描述如何使用<xref:System.Windows.Controls.StackPanel>水平或垂直堆疊內容的項目。  
+在本節中的主題描述如何使用<xref:System.Windows.Controls.StackPanel>水平或垂直堆疊內容的項目。  
   
 ## <a name="in-this-section"></a>本節內容  
- [在 StackPanel 和 DockPanel 之間選擇](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
- [建立 StackPanel](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [水平或垂直對齊 StackPanel 中的內容](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+ [在 StackPanel 和 DockPanel 之間選擇](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [建立 StackPanel](how-to-create-a-stackpanel.md)  
+ [水平或垂直對齊 StackPanel 中的內容](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +38,8 @@ ms.lasthandoff: 05/04/2018
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>相關章節  
- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)  
+ [版面配置](../advanced/layout.md)  
   
- [逐步解說：我的第一個 WPF 傳統型應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 概觀](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 概觀](scrollviewer-overview.md)

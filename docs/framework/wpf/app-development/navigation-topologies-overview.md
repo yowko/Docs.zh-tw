@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: f7aa47d8613cb206273410626ef0c38d226a9365
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16ce791c300c431b7349293d00648c881f97c372
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498433"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356776"
 ---
 # <a name="navigation-topologies-overview"></a>巡覽拓撲概觀
 <a name="introduction"></a> 本概觀介紹中的巡覽拓撲[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 並接著說明三種常見的巡覽拓撲及其範例。  
   
 > [!NOTE]
->  閱讀本主題之前，您應該熟悉的概念中的結構化巡覽[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用頁面函式。 如需這些主題的詳細資訊，請參閱[結構化巡覽概觀](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)。  
+>  閱讀本主題之前，您應該熟悉的概念中的結構化巡覽[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用頁面函式。 如需這些主題的詳細資訊，請參閱[結構化巡覽概觀](structured-navigation-overview.md)。  
   
  此主題包括下列章節：  
   
@@ -36,17 +36,17 @@ ms.locfileid: "54498433"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>巡覽拓撲  
- 在  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，通常包含頁面導覽 (<xref:System.Windows.Controls.Page>) 的超連結 (<xref:System.Windows.Documents.Hyperlink>) 瀏覽至其他頁面時按下。 巡覽至的頁面均[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)](請參閱 < [WPF 中的 Pack Uri](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md))。 請考慮下列簡單的範例，顯示頁面、 超連結和[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:  
+ 在  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，通常包含頁面導覽 (<xref:System.Windows.Controls.Page>) 的超連結 (<xref:System.Windows.Documents.Hyperlink>) 瀏覽至其他頁面時按下。 巡覽至的頁面均[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)](請參閱 < [WPF 中的 Pack Uri](pack-uris-in-wpf.md))。 請考慮下列簡單的範例，顯示頁面、 超連結和[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:  
   
- [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
+ [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
- [!code-xaml[NavigationTopologiesOverviewSnippets#Page2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page2.xaml#page2)]  
+ [!code-xaml[NavigationTopologiesOverviewSnippets#Page2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page2.xaml#page2)]  
   
  這些頁面會排列在*巡覽拓撲*其結構取決於如何您在頁面之間巡覽。 這種特定巡覽拓撲適合簡單的案例，不過巡覽可能需要更複雜的拓撲，其中有些只能在應用程式執行時定義。  
   
  本主題涵蓋三種常見的巡覽拓撲︰*固定線性*，*修正階層式*，並*動態產生*。 每個巡覽拓撲都會示範的範例，具有[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]類似下圖所示：  
   
- ![具有資料項目的工作頁面](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
+ ![具有資料項目的工作頁面](./media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
   
 <a name="Structured_Navigation_Topologies"></a>   
 ## <a name="structured-navigation-topologies"></a>結構化巡覽拓撲  
@@ -62,7 +62,7 @@ ms.locfileid: "54498433"
 ## <a name="navigation-over-a-fixed-linear-topology"></a>透過固定線性拓撲進行巡覽  
  固定線性拓撲類似於含有一個或多個精靈頁面，並以固定順序巡覽的精靈結構。 下圖顯示具有固定線性拓撲的精靈的高階結構與流程。  
   
- ![巡覽拓撲圖表](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
+ ![巡覽拓撲圖表](./media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
   
  透過固定線性拓撲進行巡覽的一般行為包括以下：  
   
@@ -86,11 +86,11 @@ ms.locfileid: "54498433"
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>透過固定的階層式拓撲進行動態巡覽  
  在某些應用程式中，頁面可以巡覽至兩個以上的其他頁面，如下圖所示。  
   
- ![可巡覽至多個頁面的頁面](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
+ ![可巡覽至多個頁面的頁面](./media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
   
  這個結構稱為固定的階層式拓撲，而周遊階層的順序通常是在執行階段由應用程式或使用者決定。 階層中每個可巡覽至兩個以上其他頁面的頁面，皆會在執行階段收集必要資料以判斷可巡覽至哪些頁面。 下圖擇一說明上圖可能的巡覽順序。  
   
- ![巡覽拓撲圖表](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
+ ![巡覽拓撲圖表](./media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
   
  雖然固定階層式結構中的頁面巡覽順序是在執行階段決定，但使用者體驗仍和固定線性拓撲的使用者體驗相同：  
   
@@ -116,11 +116,11 @@ ms.locfileid: "54498433"
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>透過動態產生的拓撲進行巡覽  
  在某些應用程式中，兩個以上頁面的巡覽順序只能在執行階段由使用者、應用程式或外部資料決定。 下圖說明尚未決定巡覽順序的一組頁面。  
   
- ![巡覽拓撲圖表](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
+ ![巡覽拓撲圖表](./media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
   
  下圖說明已在執行階段由使用者選擇的巡覽順序。  
   
- ![巡覽圖表](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
+ ![巡覽圖表](./media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
   
  巡覽順序也稱為動態產生的拓撲。 對使用者來說，即使使用另一種巡覽拓撲，其使用者體驗和上一個拓撲是一樣的：  
   
@@ -144,4 +144,4 @@ ms.locfileid: "54498433"
 - <xref:System.Windows.Controls.Page>
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>
-- [結構化巡覽概觀](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+- [結構化巡覽概觀](structured-navigation-overview.md)

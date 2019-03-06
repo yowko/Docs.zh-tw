@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 256790880e6fcf3bd2492d3f3f00b532f6a31eea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568125"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379000"
 ---
 # <a name="read-only-dependency-properties"></a>唯讀相依性屬性
 本主題說明唯讀相依性屬性，包括現有的唯讀相依性屬性，以及用於建立自訂唯讀相依性屬性的案例和技術。  
@@ -19,7 +19,7 @@ ms.locfileid: "54568125"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
- 本主題假設您已了解實作相依性屬性的基本案例，以及如何將中繼資料套用到自訂相依性屬性。 如需相關內容，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。  
+ 本主題假設您已了解實作相依性屬性的基本案例，以及如何將中繼資料套用到自訂相依性屬性。 如需相關內容，請參閱[自訂相依性屬性](custom-dependency-properties.md)和[相依性屬性中繼資料](dependency-property-metadata.md)。  
   
 <a name="existing"></a>   
 ## <a name="existing-read-only-dependency-properties"></a>現有的唯讀相依性屬性  
@@ -31,7 +31,7 @@ ms.locfileid: "54568125"
 ## <a name="creating-custom-read-only-dependency-properties"></a>建立自訂唯讀相依性屬性  
  請務必閱讀前一節，以了解為什麼唯讀相依性屬性不適用許多一般的相依性屬性案例。 但是，如果您有適當的案例，您可能想要建立自己的唯讀相依性屬性。  
   
- 在建立唯讀相依性屬性的處理序中，許多部分與[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[實作相依性屬性](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)主題中所述的相同。 有三個重大差異：  
+ 在建立唯讀相依性屬性的處理序中，許多部分與[自訂相依性屬性](custom-dependency-properties.md)和[實作相依性屬性](how-to-implement-a-dependency-property.md)主題中所述的相同。 有三個重大差異：  
   
 -   當註冊您的屬性，呼叫<xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>方法，而非標準<xref:System.Windows.DependencyProperty.Register%2A>屬性註冊的方法。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "54568125"
   
  不論您必須支援的私用欄位或值為何，當然都能使用您決定的任何邏輯完整寫入您的唯讀相依性屬性。 不過，設定屬性 (不論是一開始就設定或設為執行階段邏輯一部分) 的最簡單方式是使用屬性系統的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，而不是規避屬性系統來直接設定私用支援欄位。 特別是，沒有簽章<xref:System.Windows.DependencyObject.SetValue%2A>它會接受類型參數的<xref:System.Windows.DependencyPropertyKey>。 方式和位置您設定此值以程式設計方式在應用程式邏輯，會影響您可能想要如何設定存取<xref:System.Windows.DependencyPropertyKey>您第一次註冊相依性屬性時所建立。 如果您全都在類別內處理此邏輯，您可能會讓它成為私用，或者如果您需要從組件的其他部分設定它，則可能會將它設為內部。 其中一個方法是呼叫<xref:System.Windows.DependencyObject.SetValue%2A>相關的事件，以通知類別執行個體的預存的屬性值變更時所需的類別事件處理常式內。 另一種方法是將相依性屬性在一起的繫結使用配對<xref:System.Windows.PropertyChangedCallback>和<xref:System.Windows.CoerceValueCallback>回呼，註冊期間的那些屬性中繼資料的一部分。  
   
- 因為<xref:System.Windows.DependencyPropertyKey>屬私人性質，並且不會傳播屬性系統，您的程式碼之外，唯讀相依性屬性有更好設定安全性會比讀寫相依性屬性。 針對讀寫相依性屬性，識別欄位是明確或隱含公開的，因此該屬性是可廣泛設定的。 如需詳細資訊，請參閱[相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)。  
+ 因為<xref:System.Windows.DependencyPropertyKey>屬私人性質，並且不會傳播屬性系統，您的程式碼之外，唯讀相依性屬性有更好設定安全性會比讀寫相依性屬性。 針對讀寫相依性屬性，識別欄位是明確或隱含公開的，因此該屬性是可廣泛設定的。 如需詳細資訊，請參閱[相依性屬性的安全性](dependency-property-security.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [相依性屬性概觀](dependency-properties-overview.md)
+- [自訂相依性屬性](custom-dependency-properties.md)
+- [樣式設定和範本化](../controls/styling-and-templating.md)

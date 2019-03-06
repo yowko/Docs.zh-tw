@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: 27e5e8c939cf95b6406c810c25940cc04420b22c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8846c673e36fe64dd13c7acb600b93dedac5f3e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692411"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355073"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>視覺分層中的點擊測試
 本主題提供視覺分層所提供點擊測試功能的概觀。 點擊測試支援可讓您判斷幾何或點的值是否落在呈現的內容<xref:System.Windows.Media.Visual>，可讓您實作使用者介面行為，例如選取矩形來選取多個物件。  
@@ -41,7 +41,7 @@ ms.locfileid: "54692411"
   
  下圖說明非矩形物件的區域和其週框之間的關聯性。  
   
- ![有效點擊的測試區域的圖表](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-1.png "wcpsdk_mmgraphics_visuals_hittest_1")  
+ ![有效點擊的測試區域的圖表](./media/wcpsdk-mmgraphics-visuals-hittest-1.png "wcpsdk_mmgraphics_visuals_hittest_1")  
 有效點擊測試區域的圖表  
   
 <a name="hit_testing_and_z-order"></a>   
@@ -50,7 +50,7 @@ ms.locfileid: "54692411"
   
  在下圖中，圓形物件位於正方形和三角形物件上方。 如果您只想要進行點擊測試的疊置順序值是最上層的視覺物件，您可以設定要傳回的視覺點擊的測試列舉型別<xref:System.Windows.Media.HitTestResultBehavior.Stop>從<xref:System.Windows.Media.HitTestResultCallback>第一個項目之後停止點擊的測試周遊。  
   
- ![圖表的 z&#45;的視覺化樹狀結構的順序](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
+ ![圖表的 z&#45;的視覺化樹狀結構的順序](./media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
 視覺化樹狀之疊置順序的圖表  
   
  如果您想要列舉特定點或幾何底下的所有視覺物件，傳回<xref:System.Windows.Media.HitTestResultBehavior.Continue>從<xref:System.Windows.Media.HitTestResultCallback>。 這表示您可以對其他物件底下的視覺物件進行點擊測試，即使它們完全遭到遮蔽。 如需詳細資訊，請參閱「使用點擊測試結果回呼 」一節中的範例程式碼。  
@@ -69,13 +69,13 @@ ms.locfileid: "54692411"
   
  下列程式碼示範如何設定滑鼠事件處理常式，如<xref:System.Windows.UIElement>用來擷取用於事件的物件進行點擊測試。  
   
- [!code-csharp[HitTestingOverview#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#100)]
- [!code-vb[HitTestingOverview#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#100)]  
+ [!code-csharp[HitTestingOverview#100](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#100)]
+ [!code-vb[HitTestingOverview#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#100)]  
   
 ### <a name="how-the-visual-tree-affects-hit-testing"></a>視覺化樹狀結構如何影響點擊測試  
  視覺化樹狀結構中的起點可決定在物件的點擊測試列舉期間會傳回哪些物件。 如果您有多個想要進行點擊測試的物件，在視覺化樹狀結構中做為起點的視覺物件必須是所有相關物件的通用上階。 例如，如果您想要對下圖中的按鈕元素和繪圖視覺物件進行點擊測試，您必須將視覺樹狀結構中的起點設定為兩者的通用上階。 在此情況下，畫布元素是按鈕元素和繪製視覺物件兩者的通用上階。  
   
- ![視覺化樹狀結構階層架構的圖表](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-overview-01.gif "wcpsdk_mmgraphics_visuals_overview_01")  
+ ![視覺化樹狀結構階層架構的圖表](./media/wcpsdk-mmgraphics-visuals-overview-01.gif "wcpsdk_mmgraphics_visuals_overview_01")  
 視覺化樹狀階層架構的圖表  
   
 > [!NOTE]
@@ -87,41 +87,41 @@ ms.locfileid: "54692411"
   
  在點擊測試結果列舉期間，您不應該執行任何修改視覺化樹狀結構的作業。 在周遊時新增或移除視覺化樹狀結構的物件，可能會導致無法預期的行為。 您可以安全地修改視覺化樹狀結構之後<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>方法會傳回。 您可能想要提供資料結構，例如<xref:System.Collections.ArrayList>，以儲存在點擊的測驗結果列舉期間的值。  
   
- [!code-csharp[HitTestingOverview#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#101)]
- [!code-vb[HitTestingOverview#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#101)]  
+ [!code-csharp[HitTestingOverview#101](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#101)]
+ [!code-vb[HitTestingOverview#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#101)]  
   
  點擊測試回呼方法定義您在視覺化樹狀結構中的特定視覺物件上，識別出點擊測試時執行的動作。 您執行此動作之後，傳回<xref:System.Windows.Media.HitTestResultBehavior>決定是否要繼續的任何其他視覺物件列舉的值。  
   
- [!code-csharp[HitTestingOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#102)]
- [!code-vb[HitTestingOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#102)]  
+ [!code-csharp[HitTestingOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#102)]
+ [!code-vb[HitTestingOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#102)]  
   
 > [!NOTE]
 >  點擊視覺物件列舉順序是依照疊置順序。 在最上層疊置順序層級的視覺物件是第一個列舉的物件。 任何其他視覺物件都會以遞減的疊置順序層級列舉。 此列舉類型順序對應至視覺效果的轉譯順序。  
   
  您可以停止列舉視覺物件點擊的測試回呼函式中隨時藉由傳回<xref:System.Windows.Media.HitTestResultBehavior.Stop>。  
   
- [!code-csharp[HitTestingOverview#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#103)]
- [!code-vb[HitTestingOverview#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#103)]  
+ [!code-csharp[HitTestingOverview#103](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#103)]
+ [!code-vb[HitTestingOverview#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#103)]  
   
 <a name="using_a_hit_test_filter_callback"></a>   
 ## <a name="using-a-hit-test-filter-callback"></a>使用點擊測試篩選回呼  
  您可以使用選用的點擊測試篩選來限制傳遞至點擊測試結果的物件。 這可讓您忽略點擊測試結果中處理時不感興趣的視覺化樹狀結構組件。 若要實作點擊的測試篩選，方法，您可以定義點擊的測試篩選回呼函式，並將它傳遞做為參數值，當您呼叫<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>方法。  
   
- [!code-csharp[HitTestingOverview#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#104)]
- [!code-vb[HitTestingOverview#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#104)]  
+ [!code-csharp[HitTestingOverview#104](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#104)]
+ [!code-vb[HitTestingOverview#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#104)]  
   
  如果您不想提供選用的點擊的測試篩選回呼函式，傳遞`null`做為其參數的值<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>方法。  
   
- [!code-csharp[HitTestingOverview#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#105)]
- [!code-vb[HitTestingOverview#105](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#105)]  
+ [!code-csharp[HitTestingOverview#105](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#105)]
+ [!code-vb[HitTestingOverview#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#105)]  
   
- ![剪除視覺化樹狀，使用點擊的測試篩選](../../../../docs/framework/wpf/graphics-multimedia/media/filteredvisualtree-01.png "FilteredVisualTree_01")  
+ ![剪除視覺化樹狀，使用點擊的測試篩選](./media/filteredvisualtree-01.png "FilteredVisualTree_01")  
 剪除視覺化樹狀結構  
   
  點擊測試篩選回呼函式可讓您列舉呈現內容中包含指定座標的所有視覺效果。 不過，您可能想要忽略點擊測試結果回呼函式中處理時不感興趣的視覺化樹狀結構特定分支。 點擊測試篩選回呼函式的傳回值會決定列舉視覺物件時應採取的動作類型。 例如，如果您傳回值， <xref:System.Windows.Media.HitTestFilterBehavior.ContinueSkipSelfAndChildren>，您可以從點擊的測試結果列舉型別移除目前的視覺物件和其子系。 這表示點擊測試結果回呼函式不會在其列舉中看到這些物件。 剪除物件的視覺化樹狀結構會減少在點擊測試結果列舉通過期間的處理量。 在下列程式碼範例中，篩選會略過標籤和其下階並點擊測試所有其他項目。  
   
- [!code-csharp[HitTestingOverview#106](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#106)]
- [!code-vb[HitTestingOverview#106](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#106)]  
+ [!code-csharp[HitTestingOverview#106](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#106)]
+ [!code-vb[HitTestingOverview#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#106)]  
   
 > [!NOTE]
 >  有時候會呼叫點擊測試篩選回呼，以免未呼叫點擊測試結果回呼。  
@@ -130,13 +130,13 @@ ms.locfileid: "54692411"
 ## <a name="overriding-default-hit-testing"></a>覆寫預設點擊測試  
  您可以覆寫視覺物件的預設點擊測試支援，藉由覆寫<xref:System.Windows.Media.Visual.HitTestCore%2A>方法。 這表示，當您叫用<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>方法中的覆寫實的作<xref:System.Windows.Media.Visual.HitTestCore%2A>呼叫。 即使座標落在視覺物件的呈現內容外部，還是會在點擊測試落在視覺物件的週框內時呼叫覆寫方法。  
   
- [!code-csharp[HitTestingOverview#107](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#107)]
- [!code-vb[HitTestingOverview#107](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#107)]  
+ [!code-csharp[HitTestingOverview#107](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#107)]
+ [!code-vb[HitTestingOverview#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#107)]  
   
  有時候您可能想要對週框和視覺物件的呈現內容進行點擊測試。 藉由使用`PointHitTestParameters`參數值中覆寫<xref:System.Windows.Media.Visual.HitTestCore%2A>方法做為基底方法的參數<xref:System.Windows.Media.Visual.HitTestCore%2A>，您可以根據在點擊視覺物件的週框矩形執行動作，然後再執行第二個點擊的測試轉譯在視覺物件的內容。  
   
- [!code-csharp[HitTestingOverview#108](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
- [!code-vb[HitTestingOverview#108](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
+ [!code-csharp[HitTestingOverview#108](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
+ [!code-vb[HitTestingOverview#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
@@ -146,5 +146,5 @@ ms.locfileid: "54692411"
 - <xref:System.Windows.UIElement.IsHitTestVisible%2A>
 - [使用 DrawingVisuals 範例進行點擊測試](https://go.microsoft.com/fwlink/?LinkID=159994)
 - [點擊測試使用 Win32 交互操作範例](https://go.microsoft.com/fwlink/?LinkID=159995)
-- [對 Visual 中的幾何進行點擊測試](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)
-- [使用 Win32 裝載容器進行點擊測試](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)
+- [對 Visual 中的幾何進行點擊測試](how-to-hit-test-geometry-in-a-visual.md)
+- [使用 Win32 裝載容器進行點擊測試](how-to-hit-test-using-a-win32-host-container.md)

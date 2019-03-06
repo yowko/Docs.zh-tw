@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ListBox control [WPF], how-to topics
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
-ms.openlocfilehash: f4d6b8d9ac3b092e18b87dbf9e8965bfdb064ae0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 0895b80f230d2c67ab0723c7935ae20443327a41
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746976"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363423"
 ---
 # <a name="listbox-how-to-topics"></a>ListBox HOW TO 主題
 在本節中的主題描述如何使用<xref:System.Windows.Controls.ListBox>控制項來顯示項目可選取清單中的。  
   
 ## <a name="in-this-section"></a>本節內容  
- [將 ListBox 繫結至資料](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
- [取得 ListBoxItem](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
+ [將 ListBox 繫結至資料](how-to-bind-a-listbox-to-data.md)  
+ [取得 ListBoxItem](how-to-get-a-listboxitem.md)  
  [如何：將資料加入至一個 ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))  
- [改善 ListBox 的捲動效能](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
+ [改善 ListBox 的捲動效能](how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.ListBox>  

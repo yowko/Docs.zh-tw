@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: 309a5df174a2366fda411678d95a9701dcebb9cc
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a0cb1e0b569fb69adf1e474ca3666d5e387274ce
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747914"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366240"
 ---
 # <a name="panel-how-to-topics"></a>Panel HOW TO 主題
 在本節中的主題描述如何使用<xref:System.Windows.Controls.Panel>項目和相關[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。  
   
 ## <a name="in-this-section"></a>本節內容  
- [建立自訂面板元素](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
- [覆寫 Panel 的 OnRender 方法](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
- [設定元素的高度屬性](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [設定元素的寬度屬性](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+ [建立自訂面板元素](how-to-create-a-custom-panel-element.md)  
+ [覆寫 Panel 的 OnRender 方法](how-to-override-the-panel-onrender-method.md)  
+ [設定元素的高度屬性](how-to-set-the-height-properties-of-an-element.md)  
+ [設定元素的寬度屬性](how-to-set-the-width-properties-of-an-element.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Panel>  
@@ -39,8 +39,8 @@ ms.locfileid: "56747914"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>相關章節  
- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)  
+ [版面配置](../advanced/layout.md)  
   
- [逐步解說：我的第一個 WPF 傳統型應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 概觀](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 概觀](scrollviewer-overview.md)

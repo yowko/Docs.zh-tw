@@ -7,22 +7,23 @@ helpviewer_keywords:
 - controls [WPF], TextBlock
 - TextBlock control [WPF]
 ms.assetid: ea5f7826-7a92-4de9-9eee-10ef700ce7b6
-ms.openlocfilehash: f032476326ac96edbfb7532f30dedd72b78f76fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31ef66ba7e584b88a38185a4d3ad02ca413fad34
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358908"
 ---
 # <a name="textblock"></a>TextBlock
-<xref:System.Windows.Controls.TextBlock>控制項提供有彈性的文字支援[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 這個元素的主要目標是不需要超過一個段落文字的基本 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例。  
+<xref:System.Windows.Controls.TextBlock>控制項提供的彈性文字支援[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 這個元素的主要目標是不需要超過一個段落文字的基本 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例。  
   
 ## <a name="in-this-section"></a>本節內容  
- [TextBlock 概觀](../../../../docs/framework/wpf/controls/textblock-overview.md)  
+ [TextBlock 概觀](textblock-overview.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Label>  
   
 ## <a name="related-sections"></a>相關章節  
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [WPF 中的文件](../advanced/documents-in-wpf.md)  
   
- [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [非固定格式文件概觀](../advanced/flow-document-overview.md)

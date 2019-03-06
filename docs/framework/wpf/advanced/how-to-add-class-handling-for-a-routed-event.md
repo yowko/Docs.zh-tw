@@ -9,12 +9,12 @@ helpviewer_keywords:
 - task_core_add_class_handling_routed_properties [WPF]
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-ms.openlocfilehash: 10ef6354a426bc43731ca3711a533f26a4bd27b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c973871336c3389161ce25ae52d2dfaef9c53a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619512"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361768"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>HOW TO：加入路由事件的類別處理
 藉由類別處理常式或路由中任何指定節點上的執行個體處理常式可以處理路由的事件。 類別處理常式會先叫用，而且可以由類別實作來隱藏執行個體處理的事件，或引進其他事件的特定行為的基底類別所擁有的事件。 此範例說明兩種密切相關的技術，實作類別處理常式。  
@@ -24,16 +24,16 @@ ms.locfileid: "54619512"
   
  <xref:System.Windows.UIElement>類別會公開虛擬方法，以允許的類別處理<xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>事件，只覆寫事件。 這是最簡單的方式來實作類別處理，如果您的類別階層中某處的虛擬方法可用。 下列程式碼示範<xref:System.Windows.UIElement.OnPreviewMouseLeftButtonDown%2A>"MyEditContainer"衍生自的類別中實作<xref:System.Windows.Controls.Canvas>。 實作會將事件標記為已處理的引數中，然後將 指定來源項目基本的可見變更一些程式碼。  
   
- [!code-csharp[ClassHandling#OnStarClassHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#onstarclasshandler)]
- [!code-vb[ClassHandling#OnStarClassHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#onstarclasshandler)]  
+ [!code-csharp[ClassHandling#OnStarClassHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#onstarclasshandler)]
+ [!code-vb[ClassHandling#OnStarClassHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#onstarclasshandler)]  
   
  如果沒有虛擬基底類別或該特定的方法，可以直接使用的公用程式方法加入類別處理<xref:System.Windows.EventManager>類別， <xref:System.Windows.EventManager.RegisterClassHandler%2A>。 中的加入類別處理的類別的靜態初始設定時，應該只呼叫這個方法。 這個範例會將另一個處理常式<xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>，並在此情況下已註冊的類別是自訂類別。 相反地，當使用虛擬函式時，已註冊的類別其實不過是<xref:System.Windows.UIElement>基底類別。 在基底類別和子類別中每個註冊類別處理的情況下，子類別處理常式會最先叫用。 這個處理常式會先顯示它的訊息方塊，則會顯示虛擬方法的處理常式中的視覺化變更是在應用程式的行為。  
   
- [!code-csharp[ClassHandling#StaticAndRegisterClassHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#staticandregisterclasshandler)]
- [!code-vb[ClassHandling#StaticAndRegisterClassHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
+ [!code-csharp[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#staticandregisterclasshandler)]
+ [!code-vb[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.EventManager>
-- [將路由事件標記為已處理以及類別處理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)
-- [處理路由事件](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)
-- [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [將路由事件標記為已處理以及類別處理](marking-routed-events-as-handled-and-class-handling.md)
+- [處理路由事件](how-to-handle-a-routed-event.md)
+- [路由事件概觀](routed-events-overview.md)

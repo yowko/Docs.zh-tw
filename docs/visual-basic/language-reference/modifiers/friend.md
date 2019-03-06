@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 52fdbfa3b0cd79cc9714a13a75716829163e45f6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e6dbaa9201d5c9cd902412797b2427ec488d014
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967369"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371407"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 指定一或多個宣告的程式設計元素，只能從包含其宣告的組件內加以存取。  
@@ -35,7 +35,7 @@ ms.locfileid: "56967369"
  如需的比較`Friend`和其他存取修飾詞，請參閱 <<c2> [ 存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 > [!NOTE]
->  您可以指定另一個組件是 friend 組件，可讓它以存取所有類型和成員標記為`Friend`。 如需詳細資訊，請參閱 [Friend Assemblies](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md) (Friend 組件)。  
+>  您可以指定另一個組件是 friend 組件，可讓它以存取所有類型和成員標記為`Friend`。 如需詳細資訊，請參閱 [Friend Assemblies](../../../standard/assembly/friend-assemblies.md) (Friend 組件)。  
   
 ## <a name="example"></a>範例  
  下列類別使用`Friend`修飾詞，以允許存取特定成員相同的組件中的其他程式設計項目。  

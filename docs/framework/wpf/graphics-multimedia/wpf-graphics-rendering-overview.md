@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: 6323d27158855e5ded1698401835b35632bedebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1d7654dc190b00363fa6cc47c362b5f9e90d8f9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603830"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375528"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 圖形轉譯概觀
 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視覺圖層的概觀。 它著重於所扮演的角色<xref:System.Windows.Media.Visual>類別來呈現中的支援[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型。  
@@ -49,14 +49,14 @@ ms.locfileid: "54603830"
   
  <xref:System.Windows.Media.Visual> 會公開為公用抽象類別必須從中衍生子類別。 下圖顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中公開之視覺物件的階層。  
   
- ![圖表的類別衍生自 Visual 物件](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
+ ![圖表的類別衍生自 Visual 物件](./media/visualclass01.png "VisualClass01")  
 Visual 類別階層  
   
 ### <a name="drawingvisual-class"></a>DrawingVisual 類別  
- <xref:System.Windows.Media.DrawingVisual>的輕量型繪圖類別，用來呈現圖形、 影像或文字。 此類別之所以被視為輕量型，是因為它不提供版面配置或事件處理，而這會改善其執行階段效能。 基於此原因，繪圖適合背景或美工圖案。 <xref:System.Windows.Media.DrawingVisual>可用來建立自訂的視覺物件。 如需詳細資訊，請參閱[使用 DrawingVisual 物件](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)。  
+ <xref:System.Windows.Media.DrawingVisual>的輕量型繪圖類別，用來呈現圖形、 影像或文字。 此類別之所以被視為輕量型，是因為它不提供版面配置或事件處理，而這會改善其執行階段效能。 基於此原因，繪圖適合背景或美工圖案。 <xref:System.Windows.Media.DrawingVisual>可用來建立自訂的視覺物件。 如需詳細資訊，請參閱[使用 DrawingVisual 物件](using-drawingvisual-objects.md)。  
   
 ### <a name="viewport3dvisual-class"></a>Viewport3DVisual 類別  
- <xref:System.Windows.Media.Media3D.Viewport3DVisual>提供 2D 之間的橋樑<xref:System.Windows.Media.Visual>和<xref:System.Windows.Media.Media3D.Visual3D>物件。 <xref:System.Windows.Media.Media3D.Visual3D>類別是所有 3D 視覺元素的基底類別。 <xref:System.Windows.Media.Media3D.Viewport3DVisual>會要求您定義<xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A>值並<xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A>值。 相機可讓您檢視場景。 檢視區會建立投影到 2D 平面上的對應位置。 如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 3D 的詳細資訊，請參閱 [3D 圖形概觀](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)。  
+ <xref:System.Windows.Media.Media3D.Viewport3DVisual>提供 2D 之間的橋樑<xref:System.Windows.Media.Visual>和<xref:System.Windows.Media.Media3D.Visual3D>物件。 <xref:System.Windows.Media.Media3D.Visual3D>類別是所有 3D 視覺元素的基底類別。 <xref:System.Windows.Media.Media3D.Viewport3DVisual>會要求您定義<xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A>值並<xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A>值。 相機可讓您檢視場景。 檢視區會建立投影到 2D 平面上的對應位置。 如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 3D 的詳細資訊，請參閱 [3D 圖形概觀](3-d-graphics-overview.md)。  
   
 ### <a name="containervisual-class"></a>ContainerVisual 類別  
  <xref:System.Windows.Media.ContainerVisual>類別的集合時，可做為容器<xref:System.Windows.Media.Visual>物件。 <xref:System.Windows.Media.DrawingVisual>類別衍生自<xref:System.Windows.Media.ContainerVisual>類別，使其可包含視覺物件的集合。  
@@ -79,16 +79,16 @@ Visual 類別階層
   
  下圖中顯示的順序<xref:System.Windows.Media.DrawingGroup>轉譯序列期間套用作業。  
   
- ![DrawingGroup 作業的順序](../../../../docs/framework/wpf/graphics-multimedia/media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
+ ![DrawingGroup 作業的順序](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
 DrawingGroup 作業的順序  
   
- 如需詳細資訊，請參閱[繪製物件概觀](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)。  
+ 如需詳細資訊，請參閱[繪製物件概觀](drawing-objects-overview.md)。  
   
 #### <a name="drawing-content-at-the-visual-layer"></a>視覺圖層的繪圖內容  
  您永遠不會直接具現化<xref:System.Windows.Media.DrawingContext>; 您也可以不過，向繪製的內容從特定的方法，例如<xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType>和<xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>。 下列範例會擷取<xref:System.Windows.Media.DrawingContext>從<xref:System.Windows.Media.DrawingVisual>並使用它來繪製矩形。  
   
- [!code-csharp[drawingvisualsample#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#101)]
- [!code-vb[drawingvisualsample#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
+ [!code-csharp[drawingvisualsample#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#101)]
+ [!code-vb[drawingvisualsample#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
   
 #### <a name="enumerating-drawing-content-at-the-visual-layer"></a>列舉視覺圖層的繪圖內容  
  其他用途，除了<xref:System.Windows.Media.Drawing>物件也會提供物件模型來列舉內容<xref:System.Windows.Media.Visual>。  
@@ -98,7 +98,7 @@ DrawingGroup 作業的順序
   
  下列範例會使用<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>方法來擷取<xref:System.Windows.Media.DrawingGroup>的值<xref:System.Windows.Media.Visual>並列舉它。  
   
- [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
+ [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 <a name="how_visual_objects_are_used_to_build_controls"></a>   
 ## <a name="how-visual-objects-are-used-to-build-controls"></a>視覺物件如何用來建置控制項  
@@ -106,25 +106,25 @@ DrawingGroup 作業的順序
   
  下列程式碼示範<xref:System.Windows.Controls.Button>標記中定義的控制項。  
   
- [!code-xaml[VisualsOverview#VisualsOverviewSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet1)]  
+ [!code-xaml[VisualsOverview#VisualsOverviewSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet1)]  
   
  如果您是要列舉組成預設值的視覺物件<xref:System.Windows.Controls.Button>控制項，您會發現下面說明的視覺物件的階層：  
   
- ![視覺化樹狀結構階層架構的圖表](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview03.gif "VisualLayerOverview03")  
+ ![視覺化樹狀結構階層架構的圖表](./media/visuallayeroverview03.gif "VisualLayerOverview03")  
 視覺化樹狀階層架構的圖表  
   
  <xref:System.Windows.Controls.Button>控制項包含<xref:Microsoft.Windows.Themes.ClassicBorderDecorator>項目，依序包含<xref:System.Windows.Controls.ContentPresenter>項目。 <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>項目會負責繪製框線和背景<xref:System.Windows.Controls.Button>。 <xref:System.Windows.Controls.ContentPresenter>項目會負責顯示的內容<xref:System.Windows.Controls.Button>。 在此情況下，因為您要顯示文字<xref:System.Windows.Controls.ContentPresenter>項目包含<xref:System.Windows.Controls.TextBlock>項目。 事實上，<xref:System.Windows.Controls.Button>控制項會使用<xref:System.Windows.Controls.ContentPresenter>表示無法被其他項目，表示內容，例如<xref:System.Windows.Controls.Image>或幾何，例如<xref:System.Windows.Media.EllipseGeometry>。  
   
 ### <a name="control-templates"></a>控制項範本  
- 展開為控制項的控制項階層的關鍵在於<xref:System.Windows.Controls.ControlTemplate>。 控制項範本會指定控制項的預設視覺階層。 當您明確地參考控制項時，您會以隱含方式參考其視覺階層。 您可以覆寫控制項範本的預設值，以針對控制項建立自訂視覺外觀。 例如，您可以修改的背景色彩值<xref:System.Windows.Controls.Button>控制項，讓它使用線性漸層色彩值，而不是純色值。 如需詳細資訊，請參閱[按鈕樣式和範本](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)。  
+ 展開為控制項的控制項階層的關鍵在於<xref:System.Windows.Controls.ControlTemplate>。 控制項範本會指定控制項的預設視覺階層。 當您明確地參考控制項時，您會以隱含方式參考其視覺階層。 您可以覆寫控制項範本的預設值，以針對控制項建立自訂視覺外觀。 例如，您可以修改的背景色彩值<xref:System.Windows.Controls.Button>控制項，讓它使用線性漸層色彩值，而不是純色值。 如需詳細資訊，請參閱[按鈕樣式和範本](../controls/button-styles-and-templates.md)。  
   
  使用者介面項目，例如<xref:System.Windows.Controls.Button>控制項，包含數個向量圖形指示清單描述控制項的整個轉譯定義。 下列程式碼示範<xref:System.Windows.Controls.Button>標記中定義的控制項。  
   
- [!code-xaml[VisualsOverview#VisualsOverviewSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet2)]  
+ [!code-xaml[VisualsOverview#VisualsOverviewSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet2)]  
   
  如果您要列舉視覺物件和向量圖形指示清單構成<xref:System.Windows.Controls.Button>控制項，您會發現下面說明的物件的階層：  
   
- ![視覺化樹狀結構和轉譯資料的圖表](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview04.png "VisualLayerOverview04")  
+ ![視覺化樹狀結構和轉譯資料的圖表](./media/visuallayeroverview04.png "VisualLayerOverview04")  
 視覺化樹狀結構和轉譯資料的圖表  
   
  <xref:System.Windows.Controls.Button>控制項包含<xref:Microsoft.Windows.Themes.ClassicBorderDecorator>項目，依序包含<xref:System.Windows.Controls.ContentPresenter>項目。 <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>元素負責繪製所有離散圖形元素組成的框線和按鈕的背景。 <xref:System.Windows.Controls.ContentPresenter>項目會負責顯示的內容<xref:System.Windows.Controls.Button>。 在此情況下，因為您顯示影像時才<xref:System.Windows.Controls.ContentPresenter>項目包含<xref:System.Windows.Controls.Image>項目。  
@@ -145,40 +145,40 @@ DrawingGroup 作業的順序
   
  下列程式碼示範<xref:System.Windows.Controls.StackPanel>標記中定義的項目。  
   
- [!code-xaml[VisualsOverview#VisualsOverviewSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet3)]  
+ [!code-xaml[VisualsOverview#VisualsOverviewSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet3)]  
   
  如果您是要列舉組成的視覺物件<xref:System.Windows.Controls.StackPanel>標記範例中的項目，您會發現下面說明的視覺物件的階層：  
   
- ![視覺化樹狀結構階層架構的圖表](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview05.gif "VisualLayerOverview05")  
+ ![視覺化樹狀結構階層架構的圖表](./media/visuallayeroverview05.gif "VisualLayerOverview05")  
 視覺化樹狀階層架構的圖表  
   
 ### <a name="rendering-order"></a>轉譯順序  
  視覺化樹狀結構會決定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視覺物件和繪圖物件的轉譯順序。 周遊順序會從根視覺物件開始，這是視覺化樹狀結構的最上層節點。 然後，會由左至右周遊根視覺物件的子系。 如果視覺物件具有子系，則會在該視覺物件的同層級項目之前周遊其子系。 這表示子視覺物件的內容會在視覺物件本身的內容前面轉譯。  
   
- ![視覺化樹狀結構轉譯順序的圖表](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview06.gif "VisualLayerOverview06")  
+ ![視覺化樹狀結構轉譯順序的圖表](./media/visuallayeroverview06.gif "VisualLayerOverview06")  
 視覺化樹狀結構轉譯順序的圖表  
   
 ### <a name="root-visual"></a>根視覺物件  
- 「根視覺物件」是視覺化樹狀結構階層中最上層的元素。 在大部分的應用程式，根視覺的基底類別是<xref:System.Windows.Window>或<xref:System.Windows.Navigation.NavigationWindow>。 不過，如果您已在 Win32 應用程式中裝載視覺物件，根視覺物件是您在 Win32 視窗中裝載的最上層視覺物件。 如需詳細資訊，請參閱[教學課程：裝載在 Win32 應用程式中的視覺物件](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)。  
+ 「根視覺物件」是視覺化樹狀結構階層中最上層的元素。 在大部分的應用程式，根視覺的基底類別是<xref:System.Windows.Window>或<xref:System.Windows.Navigation.NavigationWindow>。 不過，如果您已在 Win32 應用程式中裝載視覺物件，根視覺物件是您在 Win32 視窗中裝載的最上層視覺物件。 如需詳細資訊，請參閱[教學課程：裝載在 Win32 應用程式中的視覺物件](tutorial-hosting-visual-objects-in-a-win32-application.md)。  
   
 ### <a name="relationship-to-the-logical-tree"></a>邏輯樹狀結構的關聯性  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的邏輯樹狀結構代表執行階段應用程式的元素。 雖然您不會直接操作此樹狀結構，但應用程式的這個檢視適合用來了解屬性繼承和事件路由。 不同於視覺化樹狀結構中，邏輯樹狀結構可以代表非視覺化資料物件，例如<xref:System.Windows.Documents.ListItem>。 在許多案例中，邏輯樹狀結構會非常密切地對應至應用程式的標記定義。 下列程式碼示範<xref:System.Windows.Controls.DockPanel>標記中定義的項目。  
   
- [!code-xaml[VisualsOverview#VisualsOverviewSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet5)]  
+ [!code-xaml[VisualsOverview#VisualsOverviewSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet5)]  
   
  如果您是要列舉組成的邏輯物件<xref:System.Windows.Controls.DockPanel>標記範例中的項目，您會發現下面說明的邏輯物件的階層：  
   
- ![樹狀結構圖](../../../../docs/framework/wpf/graphics-multimedia/media/tree1-wcp.gif "Tree1_wcp")  
+ ![樹狀結構圖](./media/tree1-wcp.gif "Tree1_wcp")  
 邏輯樹狀結構的圖表  
   
  視覺化樹狀結構和邏輯樹狀結構會與目前的應用程式元素集合同步處理，以反映元素的任何新增、刪除或修改。 不過，樹狀結構會呈現不同的應用程式檢視。 不同於視覺化樹狀結構中，邏輯樹狀結構不會展開控制項的<xref:System.Windows.Controls.ContentPresenter>項目。 這表示針對相同的物件集合，邏輯樹狀結構和視覺化樹狀結構之間沒有直接的一對一對應。 事實上，叫用**LogicalTreeHelper**物件的<xref:System.Windows.LogicalTreeHelper.GetChildren%2A>方法和**VisualTreeHelper**物件的<xref:System.Windows.Media.VisualTreeHelper.GetChild%2A>方法使用相同的項目，因為參數會產生不同的結果.  
   
- 如需有關邏輯樹狀結構的詳細資訊，請參閱 [WPF 中的樹狀結構](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)。  
+ 如需有關邏輯樹狀結構的詳細資訊，請參閱 [WPF 中的樹狀結構](../advanced/trees-in-wpf.md)。  
   
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>使用 XamlPad 檢視視覺化樹狀結構  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 工具 XamlPad 提供了選項，可讓您檢視及探索對應至目前定義之 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 內容的視覺化樹狀結構。 按一下功能表列上的 [顯示視覺化樹狀結構] 按鈕以顯示視覺化樹狀結構。 下圖說明在 XamlPad 的 [視覺化樹狀結構總管] 面板中，[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 內容展開為視覺化樹狀結構節點：  
   
- ![XamlPad 中的視覺化樹狀結構總管面板](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview08.png "VisualLayerOverview08")  
+ ![XamlPad 中的視覺化樹狀結構總管面板](./media/visuallayeroverview08.png "VisualLayerOverview08")  
 XamlPad 中的視覺化樹狀結構總管面板  
   
  請注意如何<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.TextBox>，並<xref:System.Windows.Controls.Button>每個控制項會顯示在個別的視覺物件階層**視覺化樹狀結構總管**XamlPad 的面板。 這是因為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項有<xref:System.Windows.Controls.ControlTemplate>包含該控制項的視覺化樹狀結構。 當您明確地參考控制項時，您會以隱含方式參考其視覺階層。  
@@ -186,7 +186,7 @@ XamlPad 中的視覺化樹狀結構總管面板
 ### <a name="profiling-visual-performance"></a>分析視覺效能  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一套效能分析工具，可讓您分析應用程式的執行階段行為，並判斷您可以套用的效能最佳化類型。 Visual Profiler 工具透過直接對應至應用程式的視覺化樹狀結構，提供豐富的效能資料的圖形化檢視。 在這個螢幕擷取畫面中，Visual Profiler 的 [CPU 使用量] 區段可提供您物件使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 服務的精確分析，例如轉譯和版面配置。  
   
- ![Visual Profiler 顯示輸出](../../../../docs/framework/wpf/graphics-multimedia/media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
+ ![Visual Profiler 顯示輸出](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Visual Profiler 顯示輸出  
   
 <a name="visual_rendering_behavior"></a>   
@@ -196,12 +196,12 @@ Visual Profiler 顯示輸出
 ### <a name="retained-mode-graphics"></a>保留模式圖形  
  了解視覺物件角色的其中一個關鍵就是要了解「直接模式」和「保留模式」圖形系統之間的差異。 以 GDI 或 GDI+ 為基礎的標準 Win32 應用程式使用直接模式圖形系統。 這表示應用程式負責重新繪製因為像是重新調整視窗大小或者物件正在變更其視覺外觀等動作而無效的用戶端區域部分。  
   
- ![Win32 轉譯序列的圖表](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview01.png "VisualLayerOverview01")  
+ ![Win32 轉譯序列的圖表](./media/visuallayeroverview01.png "VisualLayerOverview01")  
 Win32 轉譯序列的圖表  
   
  相反地，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用保留模式系統。 這表示具有視覺外觀的應用程式物件會定義一組序列化繪圖資料。 一旦定義繪圖資料，系統此後就會負責回應轉譯應用程式物件的所有重新繪製要求。 即使在執行階段，您也可以修改或建立應用程式物件，並仍需依賴系統以回應繪製要求。 保留模式圖形系統的能力在於繪製資訊一律由應用程式以序列化狀態持續保存，但是轉譯的責任屬於系統。 下圖顯示應用程式如何依賴 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 來回應繪製要求。  
   
- ![WPF 轉譯序列的圖表](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview02.png "VisualLayerOverview02")  
+ ![WPF 轉譯序列的圖表](./media/visuallayeroverview02.png "VisualLayerOverview02")  
 WPF 轉譯序列的圖表  
   
 #### <a name="intelligent-redrawing"></a>智慧型重新繪製  
@@ -214,12 +214,12 @@ WPF 轉譯序列的圖表
   
  下圖顯示已將大小調整為 300% 的來源影像。 請注意，當來源影像是以點陣圖圖形影像伸展而非以向量圖形影像縮放時，會出現扭曲。  
   
- ![點陣和向量圖形之間的差異](../../../../docs/framework/wpf/graphics-multimedia/media/vectorgraphics01.png "VectorGraphics01")  
+ ![點陣和向量圖形之間的差異](./media/vectorgraphics01.png "VectorGraphics01")  
 點陣圖形和向量圖形之間的差異  
   
  下列標記會顯示兩個<xref:System.Windows.Shapes.Path>定義的項目。 第二個項目使用<xref:System.Windows.Media.ScaleTransform>到第一個元素的繪製指示調整 300%。 請注意，中的繪製指示<xref:System.Windows.Shapes.Path>項目會保持不變。  
   
- [!code-xaml[VectorGraphicsSnippets#VectorGraphicsSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VectorGraphicsSnippets/CS/PageOne.xaml#vectorgraphicssnippet1)]  
+ [!code-xaml[VectorGraphicsSnippets#VectorGraphicsSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/VectorGraphicsSnippets/CS/PageOne.xaml#vectorgraphicssnippet1)]  
   
 ### <a name="about-resolution-and-device-independent-graphics"></a>有關解析度和裝置獨立圖形  
  決定螢幕上文字和圖形大小的系統因素有兩個：解析度和 DPI。 解析度描述螢幕上顯示的像素數目。 解析度越高，像素越小，使得圖形和文字看起來比較小。 顯示在設定為 1024 x 768 的監視器上的圖形，當解析度變更為 1600 x 1200 時，看起來會更小。  
@@ -230,7 +230,7 @@ WPF 轉譯序列的圖表
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援自動縮放，方法是使用裝置獨立像素作為其主要度量單位，而非硬體像素；圖形和文字會適當地縮放，應用程式開發人員不需要執行任何額外工作。 下圖顯示以不同 DPI 設定顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文字和圖形之方式的範例。  
   
- ![圖形和文字不同 DPI 設定時](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
+ ![圖形和文字不同 DPI 設定時](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
 不同 DPI 設定時的圖形和文字  
   
 <a name="visualtreehelper_class"></a>   
@@ -240,29 +240,29 @@ WPF 轉譯序列的圖表
 ### <a name="hit-testing"></a>點擊測試  
  <xref:System.Windows.Media.VisualTreeHelper>類別提供方法的點擊測試的視覺物件上，當預設點擊測試支援不符合您的需求。 您可以使用<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>中的方法<xref:System.Windows.Media.VisualTreeHelper>類別，以判斷幾何或點的座標值是否在指定的物件，例如控制項或圖形元素的界限內。 例如，您可以使用點擊測試來判斷物件的週框矩形內的滑鼠點擊是否落於圓形的幾何內。您也可以選擇覆寫預設點擊測試實作，以執行您的自訂點擊測試計算。  
   
- 如需點擊測試的詳細資訊，請參閱[視覺分層中的點擊測試](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)。  
+ 如需點擊測試的詳細資訊，請參閱[視覺分層中的點擊測試](hit-testing-in-the-visual-layer.md)。  
   
 ### <a name="enumerating-the-visual-tree"></a>列舉視覺化樹狀結構  
  <xref:System.Windows.Media.VisualTreeHelper>類別會提供功能來列舉視覺化樹狀結構的成員。 若要擷取父代，請呼叫<xref:System.Windows.Media.VisualTreeHelper.GetParent%2A>方法。 若要擷取的子系或直接子系，視覺物件，呼叫<xref:System.Windows.Media.VisualTreeHelper.GetChild%2A>方法。 這個方法會傳回子系<xref:System.Windows.Media.Visual>的指定索引處的父系。  
   
  下列範例示範如何列舉視覺物件的所有子系，如果您對將視覺物件階層的所有轉譯資訊序列化感興趣，這也會是您想要使用的技術。  
   
- [!code-csharp[VisualsOverview#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#101)]
- [!code-vb[VisualsOverview#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#101)]  
+ [!code-csharp[VisualsOverview#101](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#101)]
+ [!code-vb[VisualsOverview#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#101)]  
   
- 在大部分案例中，邏輯樹狀結構是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中更有用的元素表示法。 雖然您不會直接修改邏輯樹狀結構，但應用程式的這個檢視適合用來了解屬性繼承和事件路由。 不同於視覺化樹狀結構中，邏輯樹狀結構可以代表非視覺化資料物件，例如<xref:System.Windows.Documents.ListItem>。 如需有關邏輯樹狀結構的詳細資訊，請參閱 [WPF 中的樹狀結構](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)。  
+ 在大部分案例中，邏輯樹狀結構是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中更有用的元素表示法。 雖然您不會直接修改邏輯樹狀結構，但應用程式的這個檢視適合用來了解屬性繼承和事件路由。 不同於視覺化樹狀結構中，邏輯樹狀結構可以代表非視覺化資料物件，例如<xref:System.Windows.Documents.ListItem>。 如需有關邏輯樹狀結構的詳細資訊，請參閱 [WPF 中的樹狀結構](../advanced/trees-in-wpf.md)。  
   
  <xref:System.Windows.Media.VisualTreeHelper>類別提供方法來傳回視覺物件的週框矩形。 您可以藉由呼叫傳回的視覺物件的週框矩形<xref:System.Windows.Media.VisualTreeHelper.GetContentBounds%2A>。 您可以傳回視覺物件，包括視覺物件本身，藉由呼叫的所有子系的週框矩形<xref:System.Windows.Media.VisualTreeHelper.GetDescendantBounds%2A>。 下列程式碼示範如何計算視覺物件及其所有子系的週框矩形。  
   
- [!code-csharp[VisualsOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
- [!code-vb[VisualsOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
+ [!code-csharp[VisualsOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
+ [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [視覺分層中的點擊測試](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
-- [使用 DrawingVisual 物件](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
-- [教學課程：在 Win32 應用程式中裝載視覺物件](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)
-- [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [2D 圖形和影像處理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [視覺分層中的點擊測試](hit-testing-in-the-visual-layer.md)
+- [使用 DrawingVisual 物件](using-drawingvisual-objects.md)
+- [教學課程：在 Win32 應用程式中裝載視覺物件](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [最佳化 WPF 應用程式效能](../advanced/optimizing-wpf-application-performance.md)

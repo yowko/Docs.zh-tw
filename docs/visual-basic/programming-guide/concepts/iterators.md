@@ -2,12 +2,12 @@
 title: 迭代器 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 6c03292155057ad9e202fb728cebab9e8a373640
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e090106dbedbeb9fb0d6c272deb0299ca5fac56
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587748"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359116"
 ---
 # <a name="iterators-visual-basic"></a>迭代器 (Visual Basic)
 「迭代器」可用來逐步執行集合，例如清單和陣列。  
@@ -63,7 +63,7 @@ End Function
 > [!NOTE]
 >  如需主題中的簡易迭代器範例以外的所有範例，包括[匯入](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)陳述式`System.Collections`和`System.Collections.Generic`命名空間。  
   
-##  <a name="BKMK_SimpleIterator"></a> 簡易迭代器  
+## <a name="BKMK_SimpleIterator"></a> 簡易迭代器  
  下列範例具有單一`Yield`內的陳述式[For...下一步](../../../visual-basic/language-reference/statements/for-next-statement.md)迴圈。 在 `Main` 中，每次反覆運算 `For Each` 陳述式主體都會建立迭代器函式的呼叫，以繼續進行下一個 `Yield` 陳述式。  
   
 ```vb  
@@ -88,7 +88,7 @@ As System.Collections.Generic.IEnumerable(Of Integer)
 End Function  
 ```  
   
-##  <a name="BKMK_CollectionClass"></a> 建立集合類別  
+## <a name="BKMK_CollectionClass"></a> 建立集合類別  
  在以下範例中，`DaysOfTheWeek` 類別會實作 <xref:System.Collections.IEnumerable> 介面，而這個介面需使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。 編譯器會隱含呼叫 `GetEnumerator` 方法，以傳回 <xref:System.Collections.IEnumerator>。  
   
  `GetEnumerator`方法一次傳回一個字串，使用`Yield`陳述式，和`Iterator`修飾詞是函式宣告中。  
@@ -213,7 +213,7 @@ Public Class Zoo
 End Class  
 ```  
   
-##  <a name="BKMK_TryBlocks"></a> Try 區塊  
+## <a name="BKMK_TryBlocks"></a> Try 區塊  
  Visual Basic 可讓`Yield`中的陳述式`Try`區塊[試...Catch...Try...catch...finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。 A`Try`具有區塊`Yield`陳述式可以有`Catch`區塊中使用，而且可以有`Finally`區塊。  
   
  下列範例會加入`Try`， `Catch`，和`Finally`封鎖在迭代器函式。 `Finally`區塊中的迭代器函式執行之前`For Each`反覆項目完成。  
@@ -253,7 +253,7 @@ End Function
   
  如果`For Each`主體 （而不是迭代器方法中） 會擲回的例外狀況，`Catch`迭代器函式中的區塊不會執行，但`Finally`執行迭代器函式中的區塊。 A`Catch`迭代器函式內的區塊會攔截在迭代器函式內所發生的例外狀況。  
   
-##  <a name="BKMK_AnonymousMethods"></a> 匿名方法  
+## <a name="BKMK_AnonymousMethods"></a> 匿名方法  
  在 Visual Basic 中的匿名函式可以是迭代器函式。 下列範例將說明這點。  
   
 ```vb  
@@ -303,7 +303,7 @@ End Function
   
  如果驗證在迭代器函式內，則改為驗證前，無法執行的第一個反覆項目開頭`For Each`主體。  
   
-##  <a name="BKMK_GenericList"></a> 搭配泛型清單使用迭代器  
+## <a name="BKMK_GenericList"></a> 搭配泛型清單使用迭代器  
  在以下範例中，`Stack(Of T)` 泛型類別會實作 <xref:System.Collections.Generic.IEnumerable%601> 泛型介面。 `Push` 方法會將值指派給 `T` 類型的陣列。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法會使用 `Yield` 陳述式以傳回陣列值。  
   
  除了泛型 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法，您也必須實作非泛型 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。 這是因為 <xref:System.Collections.Generic.IEnumerable%601> 繼承自 <xref:System.Collections.IEnumerable>。 非泛型實作會延後到泛型實作。  
@@ -413,7 +413,7 @@ Public Class Stack(Of T)
 End Class  
 ```  
   
-##  <a name="BKMK_SyntaxInformation"></a> 語法資訊  
+## <a name="BKMK_SyntaxInformation"></a> 語法資訊  
  出現的迭代器可以是方法或 `get` 存取子。 迭代器不能出現在事件、執行個體建構函式、靜態建構函式或靜態解構函式中。  
   
  `Yield` 陳述式中的運算式類型必須隱含轉換成迭代器的傳回型別。  
@@ -422,7 +422,7 @@ End Class
   
  在 Visual Basic 中，"Yield"不是保留的字和具有特殊意義，只在使用中時，才`Iterator`方法或`get`存取子。  
   
-##  <a name="BKMK_Technical"></a> 技術實作  
+## <a name="BKMK_Technical"></a> 技術實作  
  雖然您將迭代器撰寫成方法，但編譯器會將其轉譯成巢狀類別，其實也就是狀態機器。 此類別會在用戶端程式碼中的 `For Each...Next` 迴圈繼續期間追蹤迭代器的位置。  
   
  若要查看編譯器的功能，您可以使用 Ildasm.exe 工具來檢視為迭代器方法產生的 Microsoft 中繼語言程式碼。  
@@ -435,7 +435,7 @@ End Class
   
  如需詳細資訊，請參閱[Visual Basic 語言規格](../../../visual-basic/reference/language-specification/index.md)。  
   
-##  <a name="BKMK_UseOfIterators"></a> 迭代器的使用  
+## <a name="BKMK_UseOfIterators"></a> 迭代器的使用  
  當您需要使用複雜的程式碼來填入清單序列時，迭代器可讓您維持 `For Each` 迴圈的簡潔性。 當您想要執行下列作業時，這會很有用：  
   
 -   在第一次反覆運算 `For Each` 迴圈之後修改清單序列。  

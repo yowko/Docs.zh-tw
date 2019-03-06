@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ProgressBar
 - ProgressBar control [WPF]
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
-ms.openlocfilehash: eb446cf47bcfc3d97a6435c00ef24ab3d112c8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552892"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371329"
 ---
 # <a name="progressbar"></a>進度列
-A<xref:System.Windows.Controls.ProgressBar>指出作業的進度。 <xref:System.Windows.Controls.ProgressBar>控制項所組成的視窗，隨著作業的進度填滿系統的醒目提示色彩。  
+A<xref:System.Windows.Controls.ProgressBar>指出作業的進度。 <xref:System.Windows.Controls.ProgressBar>控制項所組成的視窗會填滿系統的醒目提示色彩隨著作業的進度。  
   
  下圖顯示典型<xref:System.Windows.Controls.ProgressBar>。  
   
- ![進度列](../../../../docs/framework/wpf/controls/media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")  
+ ![進度列](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")  
   
 ## <a name="in-this-section"></a>本節內容  
   

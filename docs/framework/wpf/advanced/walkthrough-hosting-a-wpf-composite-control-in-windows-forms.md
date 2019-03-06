@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: f0fad58d269c89079237969fc03cf5edb6cf0358
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 257462cea4d4926ce5ad22a9d97a3a56e1d6c2a1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569660"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368268"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：裝載 Windows Forms 中的 WPF 複合控制項
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]程式碼，它可以更有效率地將現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式與[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不從頭重寫程式。 常見的案例是當您想要內嵌一個或多個控制項實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows Forms 應用程式內。 如需有關自訂 WPF 控制項的詳細資訊，請參閱 <<c0> [ 控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]程式碼，它可以更有效率地將現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式與[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不從頭重寫程式。 常見的案例是當您想要內嵌一個或多個控制項實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows Forms 應用程式內。 如需有關自訂 WPF 控制項的詳細資訊，請參閱 <<c0> [ 控制項自訂](../controls/control-customization.md)。  
   
- 本逐步解說引導您完成應用程式以裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項，以在 Windows Forms 應用程式中執行資料輸入。 複合控制項會封裝在 DLL 中。 這個一般程序可以延伸到更複雜的應用程式和控制項。 本逐步解說設計成幾乎完全相同的外觀和功能[逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)。 主要差異在於裝載案例相反。  
+ 本逐步解說引導您完成應用程式以裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項，以在 Windows Forms 應用程式中執行資料輸入。 複合控制項會封裝在 DLL 中。 這個一般程序可以延伸到更複雜的應用程式和控制項。 本逐步解說設計成幾乎完全相同的外觀和功能[逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)。 主要差異在於裝載案例相反。  
   
  本逐步解說分為兩節。 第一節簡要說明的實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。 第二節詳細討論如何裝載 Windows Forms 應用程式中的複合控制項、 接收來自控制項的事件以及存取某些控制項的屬性。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "54569660"
 ## <a name="implementing-the-wpf-composite-control"></a>實作 WPF 複合控制項  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]此範例中使用的複合控制項是接受使用者的名稱和地址的簡單資料輸入表單。 使用者按一下兩個按鈕中的其中一個來表示工作已完成時，控制項會引發自訂事件，以將該資訊傳回給主應用程式。 下圖顯示轉譯的控制項。  
   
- ![簡單的 WPF 控制項](../../../../docs/framework/wpf/advanced/media/avaloncontrol.png "AvalonControl")  
+ ![簡單的 WPF 控制項](./media/avaloncontrol.png "AvalonControl")  
 WPF 複合控制項  
   
 ### <a name="creating-the-project"></a>建立專案  
@@ -71,35 +71,35 @@ WPF 複合控制項
   
  在 MyControl1.xaml 中，將現有的 XAML 取代為下列 XAML。  
   
- [!code-xaml[WindowsFormsHostingWpfControl#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#101)]  
-[!code-xaml[WindowsFormsHostingWpfControl#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#102)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#101](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#101)]  
+[!code-xaml[WindowsFormsHostingWpfControl#102](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#102)]  
   
 #### <a name="adding-textblock-and-textbox-elements-to-the-grid"></a>將 TextBlock 和 TextBox 項目新增至格線  
- 您放置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]藉由設定此項目的方格中的項目<xref:System.Windows.Controls.Grid.RowProperty>和<xref:System.Windows.Controls.Grid.ColumnProperty>屬性加入適當的資料列和資料行數目。 請記住，資料列和資料行編號是以零起始。 您可以藉由設定跨越多個資料行的項目及其<xref:System.Windows.Controls.Grid.ColumnSpanProperty>屬性。 如需詳細資訊<xref:System.Windows.Controls.Grid>項目，請參閱[建立 Grid 項目](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)。  
+ 您放置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]藉由設定此項目的方格中的項目<xref:System.Windows.Controls.Grid.RowProperty>和<xref:System.Windows.Controls.Grid.ColumnProperty>屬性加入適當的資料列和資料行數目。 請記住，資料列和資料行編號是以零起始。 您可以藉由設定跨越多個資料行的項目及其<xref:System.Windows.Controls.Grid.ColumnSpanProperty>屬性。 如需詳細資訊<xref:System.Windows.Controls.Grid>項目，請參閱[建立 Grid 項目](../controls/how-to-create-a-grid-element.md)。  
   
  下列 XAML 示範複合控制項的<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.TextBlock>項目及其<xref:System.Windows.Controls.Grid.RowProperty>和<xref:System.Windows.Controls.Grid.ColumnProperty>設定為將項目正確放在方格中的屬性。  
   
  在 MyControl1.xaml 中，加入下列 XAML 內<xref:System.Windows.Controls.Grid>項目。  
   
- [!code-xaml[WindowsFormsHostingWpfControl#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#103)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#103](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#103)]  
   
 #### <a name="styling-the-ui-elements"></a>設定 UI 項目的樣式  
  資料輸入表單上的許多項目都會有類似的外觀，表示它們具有數個屬性的相同設定。 而不是分別設定每個項目的屬性，使用先前的 XAML<xref:System.Windows.Style>項目來定義項目類別的標準屬性設定。 此方法會減少控制項的複雜度，並可讓您透過單一樣式屬性來變更多個項目的外觀。  
   
- <xref:System.Windows.Style>元素都包含在<xref:System.Windows.Controls.Grid>項目的<xref:System.Windows.FrameworkElement.Resources%2A>屬性，因此可供在控制項中的所有項目。 如果命名樣式，您將它套用至項目加上<xref:System.Windows.Style>項目設定樣式的名稱。 未命名的樣式會成為項目的預設樣式。 如需詳細資訊[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]樣式，請參閱[樣式和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+ <xref:System.Windows.Style>元素都包含在<xref:System.Windows.Controls.Grid>項目的<xref:System.Windows.FrameworkElement.Resources%2A>屬性，因此可供在控制項中的所有項目。 如果命名樣式，您將它套用至項目加上<xref:System.Windows.Style>項目設定樣式的名稱。 未命名的樣式會成為項目的預設樣式。 如需詳細資訊[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]樣式，請參閱[樣式和範本化](../controls/styling-and-templating.md)。  
   
  下列 XAML 顯示<xref:System.Windows.Style>複合控制項的項目。 若要查看如何將樣式套用至項目，請參閱先前的 XAML。 例如，上次<xref:System.Windows.Controls.TextBlock>項目具有`inlineText`樣式，而最後<xref:System.Windows.Controls.TextBox>項目使用的預設樣式。  
   
  在 MyControl1.xaml 中，加入下列 XAML 後方<xref:System.Windows.Controls.Grid>啟動項目。  
   
- [!code-xaml[WindowsFormsHostingWpfControl#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#104)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#104](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#104)]  
   
 #### <a name="adding-the-ok-and-cancel-buttons"></a>新增 OK 和 Cancel 按鈕  
  複合控制項上的最後一個項目 **[確定]** 並**取消**<xref:System.Windows.Controls.Button>項目，所佔用的最後一個資料列的前兩個資料行<xref:System.Windows.Controls.Grid>。 這些項目使用一般的事件處理常式中， `ButtonClicked`，且預設<xref:System.Windows.Controls.Button>先前的 XAML 中定義的樣式。  
   
  在 MyControl1.xaml 中，加入下列 XAML 最後一個之後<xref:System.Windows.Controls.TextBox>項目。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]屬於複合控制項現在已完成。  
   
- [!code-xaml[WindowsFormsHostingWpfControl#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#105)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#105](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#105)]  
   
 ### <a name="implementing-the-code-behind-file"></a>實作程式碼後置檔案  
  程式碼後置檔案 MyControl1.xaml.cs 會實作三項重要工作：
@@ -110,7 +110,7 @@ WPF 複合控制項
   
 3.  引發自訂`OnButtonClick`事件，就會通知使用者已完成，並將資料傳遞回主應用程式的主應用程式。  
   
- 此控制項也會公開一些可讓您變更外觀的色彩和字型屬性。 不同於<xref:System.Windows.Forms.Integration.WindowsFormsHost>類別，用來裝載 Windows Form 控制項，這<xref:System.Windows.Forms.Integration.ElementHost>類別會公開控制項的<xref:System.Windows.Controls.Panel.Background%2A>只有屬性。 若要維護這個程式碼範例和中所討論的範例之間的相似度[逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)，控制項會直接公開其餘屬性。  
+ 此控制項也會公開一些可讓您變更外觀的色彩和字型屬性。 不同於<xref:System.Windows.Forms.Integration.WindowsFormsHost>類別，用來裝載 Windows Form 控制項，這<xref:System.Windows.Forms.Integration.ElementHost>類別會公開控制項的<xref:System.Windows.Controls.Panel.Background%2A>只有屬性。 若要維護這個程式碼範例和中所討論的範例之間的相似度[逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)，控制項會直接公開其餘屬性。  
   
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>程式碼後置檔案的基本結構  
  此程式碼後置檔案包含單一的命名空間中， `MyControls`，其中會包含兩個類別：`MyControl1`和`MyControlEventArgs`。  
@@ -133,7 +133,7 @@ namespace MyControls
   
  開啟 MyControl1.xaml.cs。 變更現有的類別宣告，使其具有下列名稱，並繼承自<xref:System.Windows.Controls.Grid>。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#21)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#21](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#21)]  
   
 #### <a name="initializing-the-control"></a>初始化控制項  
  下例程式碼實作數個基本工作︰  
@@ -146,7 +146,7 @@ namespace MyControls
   
  刪除現有的建構函式，並新增下列程式碼，以您`MyControl1`類別。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#11)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#11)]  
   
 #### <a name="handling-the-buttons-click-events"></a>處理 Buttons 的 Click 事件  
  使用者會指出資料輸入工作已完成按一下**確定**  按鈕或**取消** 按鈕。 這兩個按鈕都使用相同<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式， `ButtonClicked`。 這兩個按鈕都有名稱，`btnOK`或是`btnCancel`，可讓處理常式來判斷所按的按鈕，藉由檢查的值`sender`引數。 此處理常式會執行下列動作︰  
@@ -159,21 +159,21 @@ namespace MyControls
   
  將下列程式碼加入您`MyControl1`類別，之後`Init`方法。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#12)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#12)]  
   
 #### <a name="creating-properties"></a>建立屬性  
  類別的其餘部分只會公開對應至先前所討論之全域變數的屬性。 屬性變更時，set 存取子會變更對應的項目屬性以及更新基礎全域變數來修改控制項的外觀。  
   
  將下列程式碼加入您`MyControl1`類別。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#13)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#13)]  
   
 #### <a name="sending-the-data-back-to-the-host"></a>將資料傳回主應用程式  
  在檔案中的最後一個元件是`MyControlEventArgs`類別，用來將收集的資料傳送回主應用程式。  
   
  將下列程式碼加入您`MyControls`命名空間。 此實作十分簡單，未來不會進行討論。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#14)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#14)]  
   
  建置方案。 組置將會產生名為 MyControls.dll 的 DLL。  
   
@@ -181,7 +181,7 @@ namespace MyControls
 ## <a name="implementing-the-windows-forms-host-application"></a>實作 Windows Forms 主應用程式  
  Windows Form 裝載應用程式會使用<xref:System.Windows.Forms.Integration.ElementHost>物件來裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。 應用程式會處理`OnButtonClick`事件，以接收來自複合控制項的資料。 應用程式也會有一組選項按鈕，可用來修改控制項的外觀。 下圖顯示應用程式。  
   
- ![Windows Form 裝載 Avalon 控制項](../../../../docs/framework/wpf/advanced/media/wfhost.png "WFHost")  
+ ![Windows Form 裝載 Avalon 控制項](./media/wfhost.png "WFHost")  
 Windows Forms 應用程式中裝載的 WPF 複合控制項  
   
 ### <a name="creating-the-project"></a>建立專案  
@@ -274,11 +274,11 @@ Windows Forms 應用程式中裝載的 WPF 複合控制項
   
  在 Windows Form 設計工具中，按兩下表單，以建立<xref:System.Windows.Forms.Form.Load>事件處理常式。 在 Form1.cs 頂端，新增下列`using`陳述式。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#10)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#10](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#10)]  
   
  取代的現有內容`Form1`為下列程式碼的類別。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#2)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#2](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#2)]  
   
  `Form1_Load`前面的程式碼的方法會顯示一般的程序來裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項：  
   
@@ -307,7 +307,7 @@ Windows Forms 應用程式中裝載的 WPF 複合控制項
   
  新增下面的按鈕按一下事件處理常式程式碼，使`Form1`類別。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#3)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#3)]  
   
  建置並執行應用程式。 在 WPF 複合控制項中新增一些文字，然後按一下**確定**。 文字會顯示在標籤中。 此時，尚未新增程式碼來處理選項按鈕。  
   
@@ -316,7 +316,7 @@ Windows Forms 應用程式中裝載的 WPF 複合控制項
   
  依序按兩下<xref:System.Windows.Forms.RadioButton>來建立表單上的控制項<xref:System.Windows.Forms.RadioButton.CheckedChanged>事件處理常式。 取代<xref:System.Windows.Forms.RadioButton.CheckedChanged>為下列程式碼的事件處理常式。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#4)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#4)]  
   
  建置並執行應用程式。 按一下不同的選項按鈕，以查看在 WPF 複合控制項上的效果。  
   
@@ -324,5 +324,5 @@ Windows Forms 應用程式中裝載的 WPF 複合控制項
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [逐步解說：裝載 Windows Forms 中的 3d WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+- [逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [逐步解說：裝載 Windows Forms 中的 3d WPF 複合控制項](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

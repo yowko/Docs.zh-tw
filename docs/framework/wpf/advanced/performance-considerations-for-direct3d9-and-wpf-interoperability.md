@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: f595e75c90ebef480200e9210a57087eb4d20e87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c99f22a1d097c82494ba6eff344820162ed87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608858"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356711"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Direct3D9 和 WPF 互通性的效能考量
 您可以使用來裝載 Direct3D9 內容<xref:System.Windows.Interop.D3DImage>類別。 裝載 Direct3D9 內容可能會影響您的應用程式的效能。 本主題說明裝載在 Windows Presentation Foundation (WPF) 應用程式中的 Direct3D9 內容時將效能最佳化的最佳作法。 這些最佳作法包括如何使用<xref:System.Windows.Interop.D3DImage>和最佳作法，當您使用 Windows Vista、 Windows XP 和多重監視器 」 會顯示。  
   
 > [!NOTE]
->  如需程式碼範例示範這些最佳作法，請參閱[WPF 和 Direct3D9 互通](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)。  
+>  如需程式碼範例示範這些最佳作法，請參閱[WPF 和 Direct3D9 互通](wpf-and-direct3d9-interoperation.md)。  
   
 ## <a name="use-d3dimage-sparingly"></a>盡量不要使用 D3DImage  
  在中裝載 Direct3D9 內容<xref:System.Windows.Interop.D3DImage>執行個體不會轉譯為純虛擬的 Direct3D 應用程式那樣快。 複製在介面和排清命令緩衝區可耗費資源的作業。 為數個<xref:System.Windows.Interop.D3DImage>執行個體增加更多的排清會進行，而且效能降低。 因此，您應該使用<xref:System.Windows.Interop.D3DImage>謹慎使用。  
@@ -47,7 +47,7 @@ ms.locfileid: "54608858"
 ## <a name="best-practices-for-multi-monitor-displays"></a>多重監視器的顯示畫面的最佳作法  
  如果您使用的有多個監視器的電腦，您應該遵循先前所述的最佳作法。 另外還有多監視器組態的一些額外的效能考量。  
   
- 當您建立背景緩衝區時，建立特定裝置和配接器，但 WPF 可能會顯示任何配接器為前景緩衝區。 複製到更新前緩衝的介面卡可以是非常耗費資源。 在已設定為搭配多個視訊卡與使用 WDDM 的 Windows Vista 上`IDirect3DDevice9Ex`裝置，前景緩衝區是否位於不同的介面卡，但仍然相同的視訊卡上，沒有任何效能產生負面影響。 不過，在 Windows XP 和具有多個視訊卡 XDDM，沒有顯著的效能負面影響時前景緩衝區會顯示在不同的介面卡比背景緩衝區。 如需詳細資訊，請參閱 < [WPF 和 Direct3D9 互通](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)。  
+ 當您建立背景緩衝區時，建立特定裝置和配接器，但 WPF 可能會顯示任何配接器為前景緩衝區。 複製到更新前緩衝的介面卡可以是非常耗費資源。 在已設定為搭配多個視訊卡與使用 WDDM 的 Windows Vista 上`IDirect3DDevice9Ex`裝置，前景緩衝區是否位於不同的介面卡，但仍然相同的視訊卡上，沒有任何效能產生負面影響。 不過，在 Windows XP 和具有多個視訊卡 XDDM，沒有顯著的效能負面影響時前景緩衝區會顯示在不同的介面卡比背景緩衝區。 如需詳細資訊，請參閱 < [WPF 和 Direct3D9 互通](wpf-and-direct3d9-interoperation.md)。  
   
 ## <a name="performance-summary"></a>效能摘要  
  下表做為作業系統、 像素格式和介面的前景緩衝區更新的效能。 背景緩衝區與前景緩衝區會假設為相同的介面卡上。 根據配接器組態中，硬體更新是一般速度也比軟體更新。  
@@ -61,6 +61,6 @@ ms.locfileid: "54608858"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Interop.D3DImage>
-- [WPF 和 Direct3D9 互通](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)
-- [逐步解說：建立裝載在 WPF 中的 Direct3D9 內容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [逐步解說：在 WPF 中裝載 Direct3D9 內容](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [WPF 和 Direct3D9 互通](wpf-and-direct3d9-interoperation.md)
+- [逐步解說：建立裝載在 WPF 中的 Direct3D9 內容](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [逐步解說：在 WPF 中裝載 Direct3D9 內容](walkthrough-hosting-direct3d9-content-in-wpf.md)

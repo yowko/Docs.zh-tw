@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-ms.openlocfilehash: b8434a8935a8e2f79aff17b96d20c8798f96e9fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2734d5e808e8bc1f78c281e3fd6ab3c6ff12c58f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674673"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363744"
 ---
 # <a name="how-to-draw-a-rectangle"></a>HOW TO：繪製矩形
 此範例示範如何藉由繪製矩形<xref:System.Windows.Shapes.Rectangle>項目。  
@@ -23,14 +23,14 @@ ms.locfileid: "54674673"
  在下列範例中，兩個<xref:System.Windows.Shapes.Rectangle>項目會繪製<xref:System.Windows.Controls.Canvas>。 第一個矩形具有<xref:System.Windows.Media.Brushes.Blue%2A>內部。 第二個矩形<xref:System.Windows.Media.Brushes.Blue%2A>內部，<xref:System.Windows.Media.Brushes.Black%2A>大綱和圓的角。  
   
 ## <a name="example"></a>範例  
- [!code-xaml[drawingwithshapeelements#Rectangle1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
+ [!code-xaml[drawingwithshapeelements#Rectangle1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
   
- 雖然此範例會使用<xref:System.Windows.Controls.Canvas>要包含的矩形，您可以使用矩形元素 （和其他圖形元素） 與任何<xref:System.Windows.Controls.Panel>或<xref:System.Windows.Controls.Control>支援非文字內容。 事實上，矩形會特別有用的部分位置提供背景<xref:System.Windows.Controls.Grid>面板。 如需範例，請參閱[資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)。  
+ 雖然此範例會使用<xref:System.Windows.Controls.Canvas>要包含的矩形，您可以使用矩形元素 （和其他圖形元素） 與任何<xref:System.Windows.Controls.Panel>或<xref:System.Windows.Controls.Control>支援非文字內容。 事實上，矩形會特別有用的部分位置提供背景<xref:System.Windows.Controls.Grid>面板。 如需範例，請參閱[資料表概觀](../advanced/table-overview.md)。  
   
  這個範例屬於較大型的範例;如需完整的範例，請參閱[圖形元素範例](https://go.microsoft.com/fwlink/?LinkID=160037)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Shapes.Rectangle>
 - [圖形元素範例](https://go.microsoft.com/fwlink/?LinkID=160037)
-- [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)
+- [WPF 中圖案和基本繪圖概觀](shapes-and-basic-drawing-in-wpf-overview.md)
+- [資料表概觀](../advanced/table-overview.md)

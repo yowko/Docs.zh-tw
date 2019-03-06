@@ -8,23 +8,24 @@ helpviewer_keywords:
 - painting [WPF]
 - brushes [WPF]
 ms.assetid: 26710879-12ad-4c63-9bc6-a1834bb4243b
-ms.openlocfilehash: 2ebb4553ed55e89cb0b7acf6336f21b422d4753f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f52834a652f3f88a526f359a558e192c5f34839c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366721"
 ---
 # <a name="brushes"></a>筆刷
-下列主題描述如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]"繪製 「 螢幕內容的筆刷  
+下列主題說明如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]上面 「 畫 」 的畫面內容的筆刷  
   
 ## <a name="in-this-section"></a>本節內容  
- [WPF 筆刷概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [筆刷轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [不透明度遮罩概觀](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [TileBrush 概觀](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [WPF 筆刷概觀](wpf-brushes-overview.md)  
+ [筆刷轉換概觀](brush-transformation-overview.md)  
+ [不透明度遮罩概觀](opacity-masks-overview.md)  
+ [使用純色和漸層繪製的概觀](painting-with-solid-colors-and-gradients-overview.md)  
+ [使用影像、繪圖和視覺效果繪製](painting-with-images-drawings-and-visuals.md)  
+ [TileBrush 概觀](tilebrush-overview.md)  
+ [HOW-TO 主題](brushes-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Media.Brush>  
@@ -40,6 +41,6 @@ ms.lasthandoff: 05/04/2018
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>相關章節  
- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [圖形和多媒體](index.md)  
   
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)

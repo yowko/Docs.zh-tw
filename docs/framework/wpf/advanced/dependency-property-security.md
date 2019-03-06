@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: eb27f3c902a0fb783d26d14d1ce494eebcffb999
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532145"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364810"
 ---
 # <a name="dependency-property-security"></a>相依性屬性的安全性
 相依性屬性通常應該視為公用屬性。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統在本質上會防止進行相依性屬性值的安全性保證。  
@@ -27,7 +27,7 @@ ms.locfileid: "54532145"
   
  如果您正在撰寫自己的相依性屬性，您應該宣告包裝函式和<xref:System.Windows.DependencyProperty>識別碼欄位，為公用成員，讓呼叫端執行不誤會該屬性，則為 true 的存取層級 （因為其存放區正在實作為相依性屬性。）  
   
- 自訂相依性屬性，您可以將屬性註冊為唯讀相依性屬性，因此這提供有效的方法，防止未持有的參考的任何人所設定的屬性<xref:System.Windows.DependencyPropertyKey>該屬性。 如需詳細資訊，請參閱[唯讀相依性屬性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)。  
+ 自訂相依性屬性，您可以將屬性註冊為唯讀相依性屬性，因此這提供有效的方法，防止未持有的參考的任何人所設定的屬性<xref:System.Windows.DependencyPropertyKey>該屬性。 如需詳細資訊，請參閱[唯讀相依性屬性](read-only-dependency-properties.md)。  
   
 > [!NOTE]
 >  宣告<xref:System.Windows.DependencyProperty>識別項欄位為私用不會受到禁止，理論上可以用來協助降低直接公開的命名空間的自訂類別，而這類屬性不應視為 「 私用 」 同樣[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]語言定義會定義該存取層級下, 一節中所述的原因。  
@@ -40,4 +40,4 @@ ms.locfileid: "54532145"
  藉由套用至<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>和預期要求失敗，以防止屬性所設定的驗證失敗不是足夠的安全性機制。 透過強制執行設定值失效<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>也可以隱藏被惡意呼叫端，如果這些呼叫端應用程式定義域內操作。  
   
 ## <a name="see-also"></a>另請參閱
-- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [自訂相依性屬性](custom-dependency-properties.md)

@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 495ce5f6-bb4d-4b30-807a-c3c35f1ca95c
-ms.openlocfilehash: 73480f7cd8be7bcb5296782a8503eb689442a14c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3997415c19483a69e66d8fe68c6ec9241f7ad0d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578636"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356198"
 ---
 # <a name="processunhandledexception-function-wpf-unmanaged-api-reference"></a>ProcessUnhandledException 函式 (WPF Unmanaged API 參考)
 此 API 支援 Windows Presentation Foundation (WPF) 基礎結構，並不是直接從您的程式碼使用。  
@@ -33,7 +33,7 @@ void __stdcall ProcessUnhandledException(
  錯誤訊息。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[.NET Framework 系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[.NET Framework 系統需求](../../get-started/system-requirements.md)。  
   
  **DLL:**  
   
@@ -44,4 +44,4 @@ void __stdcall ProcessUnhandledException(
  **.NET framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
-- [WPF Unmanaged API 參考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [WPF Unmanaged API 參考](wpf-unmanaged-api-reference.md)

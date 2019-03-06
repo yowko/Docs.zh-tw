@@ -13,29 +13,29 @@ helpviewer_keywords:
 - WPF [WPF], interoperability
 - migration [WPF]
 ms.assetid: d655de05-bf63-4814-bc64-6b3be01c70a2
-ms.openlocfilehash: a94d855a88fafd0f8faf98c98601142802701dd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7576c8631a39a6dcf234f15b93fd5714f493276e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544849"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366617"
 ---
 # <a name="migration-and-interoperability"></a>移轉和互通性
-此頁面包含討論如何實作之間的互通性的文件的連結[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式和其他類型的[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]應用程式。  
+此頁面包含連結至文件會討論如何實作之間的互通性[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式和其他類型的[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
- [WPF 和 Windows Forms 互通](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)  
- [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [WPF 和 Direct3D9 互通](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)  
+ [WPF 和 Windows Forms 互通](wpf-and-windows-forms-interoperation.md)  
+ [WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)  
+ [WPF 和 Direct3D9 互通](wpf-and-direct3d9-interoperation.md)  
   
 ## <a name="reference"></a>參考資料  
   
 |詞彙|定義|  
 |----------|----------------|  
-|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|您可以使用的項目到主機[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項的項目為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。|  
-|<xref:System.Windows.Forms.Integration.ElementHost>|A[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項，您可以使用主機[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控制項。|  
-|<xref:System.Windows.Interop.HwndSource>|主機[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內區域[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]應用程式。|  
-|<xref:System.Windows.Interop.HwndHost>|基底類別<xref:System.Windows.Forms.Integration.WindowsFormsHost>，定義所有以 HWND 為基礎的技術時，使用由一些基本功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 子類別來裝載這[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗內[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。|  
-|<xref:System.Windows.Interop.BrowserInteropHelper>|報告的瀏覽器環境的條件之 helper 類別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]由瀏覽器裝載應用程式。|  
+|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|您可以使用的項目到主機[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項的項目[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。|  
+|<xref:System.Windows.Forms.Integration.ElementHost>|A[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]您可以使用的控制項來裝載[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控制項。|  
+|<xref:System.Windows.Interop.HwndSource>|主機[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內的區域[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]應用程式。|  
+|<xref:System.Windows.Interop.HwndHost>|基底類別<xref:System.Windows.Forms.Integration.WindowsFormsHost>，定義時由所有 HWND 型技術所都使用的一些基本功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 子類別來裝載這[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗內[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。|  
+|<xref:System.Windows.Interop.BrowserInteropHelper>|協助程式類別，可報告的瀏覽器環境的狀況[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]瀏覽器裝載應用程式。|  
   
 ## <a name="related-sections"></a>相關章節

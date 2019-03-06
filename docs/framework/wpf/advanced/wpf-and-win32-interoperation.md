@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: a242f60324f2342f3dd96edc3ccbd663ecc9807a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5a044166023069cdb6e1091339044cd7f964825
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680477"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377222"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF 和 Win32 互通
 本主題概述如何交互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式碼。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，則重複使用該程式碼的一部分可能會更有效率。  
@@ -27,7 +27,7 @@ ms.locfileid: "54680477"
   
 -   在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容中裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗。 使用此技術，您可以在其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的內容中使用現有的自訂 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 控制項，並跨界限傳遞資料。  
   
- 本主題會在概念上介紹所有這些技術。 如需其他程式碼導向圖例裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]，請參閱[逐步解說：WPF 內容裝載在 Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)。 如需其他程式碼導向圖例裝載[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，請參閱[逐步解說：Win32 控制項裝載在 WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)。  
+ 本主題會在概念上介紹所有這些技術。 如需其他程式碼導向圖例裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]，請參閱[逐步解說：WPF 內容裝載在 Win32](walkthrough-hosting-wpf-content-in-win32.md)。 如需其他程式碼導向圖例裝載[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，請參閱[逐步解說：Win32 控制項裝載在 WPF](walkthrough-hosting-a-win32-control-in-wpf.md)。  
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF 交互操作專案  
@@ -50,11 +50,11 @@ ms.locfileid: "54680477"
   
 <a name="hwnds"></a>   
 ## <a name="how-wpf-uses-hwnds"></a>WPF 如何使用 Hwnd  
- 若要將大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 設為 "HWND interop"，您需要了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 如何使用 HWND。 針對任何 HWND，您都無法混合使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 轉譯與 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 轉譯或 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] / [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] 轉譯。 這有幾個隱含意義。 主要，若要完全混合使用這些轉譯模型，您必須建立交互操作方案，並使用您選擇使用之每個轉譯模型的指定區段交互操作。 此外，轉譯行為還會建立交互操作方案可完成之作業的「空間」限制。 [技術領域概觀](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)主題會更詳細地說明「空間」概念。  
+ 若要將大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 設為 "HWND interop"，您需要了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 如何使用 HWND。 針對任何 HWND，您都無法混合使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 轉譯與 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 轉譯或 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] / [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] 轉譯。 這有幾個隱含意義。 主要，若要完全混合使用這些轉譯模型，您必須建立交互操作方案，並使用您選擇使用之每個轉譯模型的指定區段交互操作。 此外，轉譯行為還會建立交互操作方案可完成之作業的「空間」限制。 [技術領域概觀](technology-regions-overview.md)主題會更詳細地說明「空間」概念。  
   
  HWND 最後會支援畫面上的所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 項目。 當您建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window>，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]會建立最上層 HWND，並使用<xref:System.Windows.Interop.HwndSource>把<xref:System.Windows.Window>及其[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容放在 HWND 內。  應用程式中 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的其餘部分會共用該單一 HWND。 例外狀況是功能表、下拉式方塊下拉式清單和其他快顯視窗。 這些項目會建立自己的最上層視窗，這就是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能表為什麼可以通過包含它的視窗 HWND 邊緣。 當您使用<xref:System.Windows.Interop.HwndHost>放在 HWND [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]通知[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]如何放置到新的子 HWND 相對[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> HWND。  
   
- 在每個 HWND 之內和之間，相關的 HWND 概念都十分清楚。 [技術領域概觀](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)主題也會討論這點。  
+ 在每個 HWND 之內和之間，相關的 HWND 概念都十分清楚。 [技術領域概觀](technology-regions-overview.md)主題也會討論這點。  
   
 <a name="hosting_a_wpf_page"></a>   
 ## <a name="hosting-wpf-content-in-a-microsoft-win32-window"></a>將 WPF 內容裝載在 Microsoft Win32 視窗中  
@@ -87,7 +87,7 @@ ms.locfileid: "54680477"
 > [!NOTE]
 >  如果您產生不同的組件，然後參考它，則可以針對使用內容類別之預設部分類別的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的步驟一，執行部分或所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容類別定義。 雖然您通常會包含<xref:System.Windows.Application>編譯的物件[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]組件中，您未抵達用<xref:System.Windows.Application>交互操作的一部分，您只使用一或多個根類別，如[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]參考的檔案若要由應用程式，並參考其部分類別。 此程序的其餘部分基本上與上述類似。  
 >   
->  每個步驟說明主題中的程式碼透過[逐步解說：WPF 內容裝載在 Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)。  
+>  每個步驟說明主題中的程式碼透過[逐步解說：WPF 內容裝載在 Win32](walkthrough-hosting-wpf-content-in-win32.md)。  
   
 <a name="hosting_an_hwnd"></a>   
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>在 WPF 中裝載 Microsoft Win32 視窗  
@@ -115,7 +115,7 @@ ms.locfileid: "54680477"
   
  遵循下列步驟會建立可使用滑鼠輸入的應用程式。 您可以為您裝載的視窗新增定位處理支援，藉由實作<xref:System.Windows.Interop.IKeyboardInputSink>介面。  
   
- 每個步驟說明主題中的程式碼透過[逐步解說：Win32 控制項裝載在 WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)。  
+ 每個步驟說明主題中的程式碼透過[逐步解說：Win32 控制項裝載在 WPF](walkthrough-hosting-a-win32-control-in-wpf.md)。  
   
 ### <a name="hwnds-inside-wpf"></a>WPF 內的 Hwnd  
  您可以將<xref:System.Windows.Interop.HwndHost>視為特殊控制項。 (技術上來說，<xref:System.Windows.Interop.HwndHost>已<xref:System.Windows.FrameworkElement>衍生類別，不<xref:System.Windows.Controls.Control>衍生類別，但它可以視為進行交互操作的控制項。)<xref:System.Windows.Interop.HwndHost>抽象化基礎[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]裝載內容的本質如此的其餘部分[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]會考慮裝載另一個類似控制項的物件，其應該轉譯和處理輸入的內容。 <xref:System.Windows.Interop.HwndHost> 行為通常類似任何其他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement>，不過有一些重要差異 （繪圖和圖形） 的輸出和輸入 （滑鼠和鍵盤） 以限制哪些基礎 Hwnd 可支援。  
@@ -160,5 +160,5 @@ ms.locfileid: "54680477"
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>
 - <xref:System.Windows.Interop>
-- [逐步解說：裝載在 WPF 中的 Win32 控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)
-- [逐步解說：在 Win32 中裝載 WPF 內容](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)
+- [逐步解說：裝載在 WPF 中的 Win32 控制項](walkthrough-hosting-a-win32-control-in-wpf.md)
+- [逐步解說：在 Win32 中裝載 WPF 內容](walkthrough-hosting-wpf-content-in-win32.md)

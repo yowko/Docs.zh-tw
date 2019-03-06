@@ -5,12 +5,12 @@ helpviewer_keywords:
 - flipping UIElements [WPF]
 - UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
-ms.openlocfilehash: 024d447eb8abdbdaed3b3a08d19a873a529d2040
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3dd9a8e2a94acf62973701094e8966c8ebff15c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693223"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356347"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>HOW TO：水平或垂直翻轉 UIElement
 此範例示範如何使用<xref:System.Windows.Media.ScaleTransform>翻轉<xref:System.Windows.UIElement>水平或垂直。 在此範例中，<xref:System.Windows.Controls.Button>控制項 (一種<xref:System.Windows.UIElement>) 已藉由套用翻轉<xref:System.Windows.Media.ScaleTransform>至其<xref:System.Windows.UIElement.RenderTransform%2A>屬性。  
@@ -18,36 +18,36 @@ ms.locfileid: "54693223"
 ## <a name="example"></a>範例  
  下圖顯示翻轉的按鈕。  
   
- ![不含轉換的按鈕](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipbeforeflip.gif "graphicsmm_buttonflipbeforeflip")  
+ ![不含轉換的按鈕](./media/graphicsmm-buttonflipbeforeflip.gif "graphicsmm_buttonflipbeforeflip")  
 若要翻轉 UIElement  
   
  下面顯示建立按鈕的程式碼。  
   
- [!code-xaml[Transforms_snip#GraphicsMMButtonWithoutFlip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmbuttonwithoutflip)]  
+ [!code-xaml[Transforms_snip#GraphicsMMButtonWithoutFlip](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmbuttonwithoutflip)]  
   
 ## <a name="example"></a>範例  
  若要水平翻轉的按鈕，建立<xref:System.Windows.Media.ScaleTransform>並設定其<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>屬性為-1。 適用於<xref:System.Windows.Media.ScaleTransform>至按鈕的<xref:System.Windows.UIElement.RenderTransform%2A>屬性。  
   
- [!code-xaml[Transforms_snip#GraphicsMMFlipButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMFlipButtonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample1)]  
   
- ![翻轉的按鈕水平&#40;0，0&#41;](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-displaced.gif "graphicsmm_buttonfliphorizontalflip_displaced")  
+ ![翻轉的按鈕水平&#40;0，0&#41;](./media/graphicsmm-buttonfliphorizontalflip-displaced.gif "graphicsmm_buttonfliphorizontalflip_displaced")  
 套用 ScaleTransform 後按鈕  
   
 ## <a name="example"></a>範例  
  您可以看到從上圖中，已翻轉的按鈕，但它也已移動。 這是因為從其左上角已翻轉的按鈕。 若要就地翻轉的按鈕，您要套用<xref:System.Windows.Media.ScaleTransform>到其中心，而不是其邊角。 輕鬆地套用<xref:System.Windows.Media.ScaleTransform>中心 」 是設定按鈕的按鈕<xref:System.Windows.UIElement.RenderTransformOrigin%2A>屬性為 0.5，0.5。  
   
- [!code-xaml[Transforms_snip#GraphicsMMFlipButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMFlipButtonExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample2)]  
   
- ![對其中心水平翻轉的按鈕](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-inplace.gif "graphicsmm_buttonfliphorizontalflip_inplace")  
+ ![對其中心水平翻轉的按鈕](./media/graphicsmm-buttonfliphorizontalflip-inplace.gif "graphicsmm_buttonfliphorizontalflip_inplace")  
 按鈕的 RenderTransformOrigin 0.5，0.5  
   
 ## <a name="example"></a>範例  
  若要垂直翻轉的按鈕，將<xref:System.Windows.Media.ScaleTransform>物件的<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>屬性，而不是其<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>屬性。  
   
- [!code-xaml[Transforms_snip#GraphicsMMVerticalFlipButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmverticalflipbuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMVerticalFlipButtonExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmverticalflipbuttonexample2)]  
   
- ![對其中心垂直翻轉的按鈕](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipverticalflip-inplace.gif "graphicsmm_buttonflipverticalflip_inplace")  
+ ![對其中心垂直翻轉的按鈕](./media/graphicsmm-buttonflipverticalflip-inplace.gif "graphicsmm_buttonflipverticalflip_inplace")  
 垂直翻轉的按鈕  
   
 ## <a name="see-also"></a>另請參閱
-- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [轉換概觀](../graphics-multimedia/transforms-overview.md)

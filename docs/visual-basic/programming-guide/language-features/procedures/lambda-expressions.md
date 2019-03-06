@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 02377b0765144064df8d51fa63768412ca4b606a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974805"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363472"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda 運算式 (Visual Basic)
 A *lambda 運算式*函式或副程式沒有可用於委派是有效的名稱。 Lambda 運算式可以是函式或副程式，它可以是單行或多行。 您可以從目前的範圍將值傳遞至 lambda 運算式中。  
@@ -109,7 +109,7 @@ End Class
   
  如需如何建立和使用非同步方法的詳細資訊，請參閱[使用 Async 和 Await 進行非同步程式設計](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
   
-##  <a name="context"></a> 內容  
+## <a name="context"></a> 內容  
  Lambda 運算式與在其中定義之範圍共用及其內容。 其包含的範圍中撰寫程式碼的相同存取權限。 這包括存取成員變數、 函式和子函式， `Me`，包含範圍中的本機變數和參數。  
   
  存取區域變數和參數中包含的範圍可以擴充到超出該範圍的存留期間。 只要參考 lambda 運算式的委派不適用於記憶體回收，則會保留在原始環境變數的存取權。 在下列範例中，變數`target`本機`makeTheGame`，此方法用於 lambda 運算式`playTheGame`定義。 請注意，傳回的 lambda 運算式中，指派給`takeAGuess`中`Main`，仍然可以存取區域變數`target`。  

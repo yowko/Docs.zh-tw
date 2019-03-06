@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 6e34347212a3dc9d8a64b48360af70366bab2083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595106"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378825"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>將路由事件標記為已處理以及類別處理
 路由事件的處理常式可以將事件資料內的事件標記為已處理。 處理事件時，即可有效地縮短路由。 類別處理是一種程式設計概念，此概念與路由事件相輔相成。 類別處理常式有機會在類別層級上使用處理常式來處理特定的路由事件 (此處理常式會優先叫用，之後才輪到在該類別任何執行個體上的任何執行個體處理常式)。  
@@ -31,7 +31,7 @@ ms.locfileid: "54595106"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
- 本主題將詳細說明[路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)中介紹的概念。  
+ 本主題將詳細說明[路由事件概觀](routed-events-overview.md)中介紹的概念。  
   
 <a name="When_to_Mark_Events_as_Handled"></a>   
 ## <a name="when-to-mark-events-as-handled"></a>標示已處理事件的時機  
@@ -47,7 +47,7 @@ ms.locfileid: "54595106"
   
  通道路由事件和事件反昇路由事件之間的連線方式如下：透過內部實作任何特定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 類別引發本身的宣告路由事件方式來完成；而成對的輸入路由事件的情況也是如此。 但除非此類別層級實作已存在，否則通道路由事件和事件反昇路由事件之間不會有任何共用命名配置的連線：若沒有上述實作，它們就是兩個完全不同的路由事件，既不會循序引發，也不會共用事件資料。  
   
- 如需如何在自訂類別中實作通道/事件反昇輸入路由事件組的詳細資訊，請參閱[建立自訂路由事件](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)。  
+ 如需如何在自訂類別中實作通道/事件反昇輸入路由事件組的詳細資訊，請參閱[建立自訂路由事件](how-to-create-a-custom-routed-event.md)。  
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>類別處理常式和執行個體處理常式  
@@ -100,6 +100,6 @@ ms.locfileid: "54595106"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.EventManager>
-- [預覽事件](../../../../docs/framework/wpf/advanced/preview-events.md)
-- [建立自訂路由事件](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)
-- [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [預覽事件](preview-events.md)
+- [建立自訂路由事件](how-to-create-a-custom-routed-event.md)
+- [路由事件概觀](routed-events-overview.md)

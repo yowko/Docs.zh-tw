@@ -4,6 +4,7 @@ description: '若要使用 Azure 服務與指南F#'
 author: sylvanc
 ms.date: 09/22/2016
 ---
+
 # <a name="using-f-on-azure"></a>在 Azure 上使用 F#
 
 F# 是一種優秀的雲端程式設計語言，經常用來撰寫 Web 應用程式、雲端服務、雲端託管微服務，並用於可調整的資料處理。
@@ -87,7 +88,7 @@ Azure 通知中樞可以透過下列兩種方式與 F# 搭配使用︰
 
 ## <a name="implementing-webhooks-on-azure-with-f"></a>使用 f # 在 Azure 上實作 Webhook\#
 
-[Webhook](https://en.wikipedia.org/wiki/Webhook) 是透過 Web 要求觸發的回呼。 GitHub 等網站會使用 Webhook 以訊號通知事件。 
+[Webhook](https://en.wikipedia.org/wiki/Webhook) 是透過 Web 要求觸發的回呼。 GitHub 等網站會使用 Webhook 以訊號通知事件。
 
 您可以使用 F# 實作 Webhook，並透過[含有 Webhook 繫結的 F# Azure Function](/azure/azure-functions/functions-bindings-http-webhook) 在 Azure 上裝載 Webhook。
 
@@ -109,7 +110,7 @@ Azure VM 可能會使用 Microsoft.Azure.Management 套件和 API，透過 F# �
 
 同樣地，其他 Azure 資源也可以使用相同的元件，透過 F# 指令碼進行部署和管理。 比方說，您可以建立儲存體帳戶、 部署 Azure 雲端服務、 建立 Azure Cosmos DB 執行個體和管理 Azure 通知中樞，以程式設計方式從F#指令碼。
 
-通常不需要使用 F# 指令碼來部署和管理資源。 例如，Azure 資源也能夠透過可進行參數化的 JSON 範本描述加以部署。 請參閱包含 [Azure 快速入門範本](https://azure.microsoft.com/resources/templates/)等範例的 [Azure 資源管理員範本](/azure/azure-resource-manager/resource-manager-template-best-practices)。
+通常不需要使用 F# 指令碼來部署和管理資源。 例如，Azure 資源也可能會直接從 JSON 範本描述，可進行參數化部署。 請參閱包含 [Azure 快速入門範本](https://azure.microsoft.com/resources/templates/)等範例的 [Azure 資源管理員範本](/azure/azure-resource-manager/resource-manager-template-best-practices)。
 
 ## <a name="other-resources"></a>其他資源
 

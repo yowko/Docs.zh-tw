@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 4cb351b0db83bd83c17aa4aca004b310dc957437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af564c4ca865c47c7efdda6ed86732581f677218
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609599"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353591"
 ---
 # <a name="use-automatic-layout-overview"></a>使用自動配置概觀
 本主題將介紹如何撰寫的開發人員的指導方針[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]含有可當地語系化的應用程式[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。 在過去，當地語系化的 UI 會是耗時的程序。 針對調整 UI，是每一種語言所需的像素的像素調整。 使用正確的設計和正確的編碼標準，今日[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可以建構，讓當地語系化人員擁有較少的調整大小和重新調整位置作業執行。 撰寫應用程式都可以更輕鬆地調整大小和重新置放方法稱為自動版面配置，並可藉由使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式的設計。  
@@ -33,15 +33,15 @@ ms.locfileid: "54609599"
 ## <a name="automatic-layout-and-controls"></a>自動版面配置和控制項  
  自動版面配置可讓應用程式自動調整控制項的大小。 例如，控制項可變更以容納字串的長度。 此功能可讓當地語系化工具翻譯該字串；它們不再需要調整控制項的大小來符合翻譯的文字。 下列範例會建立一個含有英文內容的按鈕。  
   
- [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
  在範例中，您唯一需要對西班牙文按鈕做的是變更文字。 例如，套用至物件的  
   
- [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
  下圖顯示程式碼範例的輸出。  
   
- ![按鈕相同，但以不同語言的文字](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")  
+ ![按鈕相同，但以不同語言的文字](./media/globalizationbutton.png "GlobalizationButton")  
 可自動調整大小的按鈕  
   
 <a name="autolayout_coding"></a>   
@@ -54,13 +54,13 @@ ms.locfileid: "54609599"
 
 - 使用<xref:System.Windows.Controls.DockPanel>， <xref:System.Windows.Controls.StackPanel>，和<xref:System.Windows.Controls.Grid>來定位控制項。
 
-如需各種面板類型的說明，請參閱[面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)。
+如需各種面板類型的說明，請參閱[面板概觀](../controls/panels-overview.md)。
 
 **未設定視窗的固定的大小**
 
 - 使用 <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>。 例如: 
 
-   [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
+   [!code-xaml[LocalizationGrid#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
 
 **新增 <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
 
@@ -92,22 +92,22 @@ ms.locfileid: "54609599"
 ## <a name="automatic-layout-and-grids"></a>自動版面配置和方格  
  <xref:System.Windows.Controls.Grid>項目，可用於自動版面配置，因為它可讓開發人員定位項目。 A<xref:System.Windows.Controls.Grid>控制項可以分散在其子元素之間，使用資料行和資料列的排列方式的可用空間。 UI 項目可以跨越多個資料格，您也可以將方格內部含有方格。 方格非常有用，因為它們可讓您建立並放置複雜的 UI。 下列範例示範如何使用方格來定位部分按鈕和文字。 請注意，儲存格的寬度與高度設為<xref:System.Windows.GridUnitType.Auto>; 因此，包含與映像按鈕的資料格會調整，以符合影像大小。  
 
- [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  下圖顯示由先前程式碼所產生的方格。  
   
- ![格線範例](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob_grid")  
+ ![格線範例](./media/glob-grid.png "glob_grid")  
 Grid  
   
 <a name="autolay_grids_issharedsizescope"></a>   
 ## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a>使用 IsSharedSizeScope 屬性的自動版面配置和方格  
  A<xref:System.Windows.Controls.Grid>項目是用於可當地語系化的應用程式，以配合內容調整的控制項。 不過，有時您想要讓控制項不論內容為何，都會維持特定的大小。 例如，如果您擁有 [確定]、[取消] 和 [瀏覽] 按鈕，您可能不想調整按鈕的大小以符合內容。 在此情況下<xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType>附加的屬性可用於共用相同的調整大小，在多個方格元素之間。 下列範例示範如何在共用資料行和調整大小的倍數之間的資料的資料列<xref:System.Windows.Controls.Grid>項目。  
   
- [!code-xaml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
+ [!code-xaml[gridIssharedsizescopeProp#2](~/samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
   
- **附註**如需完整的程式碼範例，請參閱[共用調整大小屬性方格之間](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ **附註**如需完整的程式碼範例，請參閱[共用調整大小屬性方格之間](../controls/how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="see-also"></a>另請參閱
-- [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [使用自動版面配置建立按鈕](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
-- [針對自動版面配置使用方格](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+- [WPF 的全球化](globalization-for-wpf.md)
+- [使用自動版面配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)
+- [針對自動版面配置使用方格](how-to-use-a-grid-for-automatic-layout.md)

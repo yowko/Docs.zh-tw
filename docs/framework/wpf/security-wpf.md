@@ -13,19 +13,19 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 699c03d379d105806292a23b09a63d0634a7a2e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be9f1916722b493490541046906a38b9fac63a4e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592678"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371979"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
-<a name="introduction"></a> 在開發 Windows Presentation Foundation (WPF) 獨立和瀏覽器裝載的應用程式時，您必須考量的安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式使用不受限制的權限執行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**權限集合)，不論部署使用 Windows Installer (.msi)、 XCopy 或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過，完全信任主應用程式可以建立部分信任<xref:System.AppDomain>使用.NET Framework 增益集模型。 如需詳細資訊，請參閱 < [WPF 增益集概觀](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
+<a name="introduction"></a> 在開發 Windows Presentation Foundation (WPF) 獨立和瀏覽器裝載的應用程式時，您必須考量的安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式使用不受限制的權限執行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**權限集合)，不論部署使用 Windows Installer (.msi)、 XCopy 或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過，完全信任主應用程式可以建立部分信任<xref:System.AppDomain>使用.NET Framework 增益集模型。 如需詳細資訊，請參閱 < [WPF 增益集概觀](./app-development/wpf-add-ins-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 瀏覽器裝載的應用程式所裝載的[!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]或 Firefox，而且可以是[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]或鬆散[!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)]文件，如需詳細資訊，請參閱[WPF XAML 瀏覽器應用程式概觀](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 瀏覽器裝載的應用程式所裝載的[!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]或 Firefox，而且可以是[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]或鬆散[!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)]文件，如需詳細資訊，請參閱[WPF XAML 瀏覽器應用程式概觀](./app-development/wpf-xaml-browser-applications-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 瀏覽器裝載的應用程式執行部分信任安全性沙箱內，根據預設，預設值僅限於[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]**網際網路**區域的權限集。 這會有效地隔離[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]瀏覽器裝載的應用程式從用戶端電腦，您會預期隔離一般 Web 應用程式的方式相同。 XBAP 可以根據部署 URL 的安全性區域以及用戶端的安全性組態來提高權限，而最高為「完全信任」。 如需詳細資訊，請參閱 [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 瀏覽器裝載的應用程式執行部分信任安全性沙箱內，根據預設，預設值僅限於[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]**網際網路**區域的權限集。 這會有效地隔離[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]瀏覽器裝載的應用程式從用戶端電腦，您會預期隔離一般 Web 應用程式的方式相同。 XBAP 可以根據部署 URL 的安全性區域以及用戶端的安全性組態來提高權限，而最高為「完全信任」。 如需詳細資訊，請參閱 [WPF 部分信任安全性](wpf-partial-trust-security.md)。  
   
  本主題討論 Windows Presentation Foundation (WPF) 獨立和瀏覽器裝載的應用程式的安全性模型。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54592678"
   
  「應用程式巡覽」是瀏覽器所裝載之應用程式的內容項目間的巡覽。 「瀏覽器巡覽」是變更瀏覽器本身的內容和位置 URL 的巡覽。 應用程式巡覽 (通常是 XAML) 與瀏覽器巡覽 (通常是 HTML) 之間的關聯性是由下列圖所示：
   
- ![巡覽圖表](../../../docs/framework/wpf/media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
+ ![巡覽圖表](./media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
   
  會被視為安全的內容類型[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]瀏覽至主要取決於是否使用應用程式巡覽還是瀏覽器瀏覽。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54592678"
 |應用程式程式碼|具有已編譯程式碼後置的 XAML 資源。<br /><br /> -或-<br /><br /> 新增至組建類型為專案的 XAML 檔案**網頁**。|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
->  如需應用程式資料檔案和組件的詳細資訊[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]，請參閱 < [WPF 應用程式資源、 內容和資料檔案](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。  
+>  如需應用程式資料檔案和組件的詳細資訊[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]，請參閱 < [WPF 應用程式資源、 內容和資料檔案](./app-development/wpf-application-resource-content-and-data-files.md)。  
   
  使用者或透過程式設計方式可以巡覽到這些內容類型的檔案︰  
   
@@ -115,7 +115,7 @@ ms.locfileid: "54592678"
   
      **安全性設定** 對話方塊隨即出現，而且您可以設定所選區域的安全性設定。  
   
-     ![安全性設定對話方塊](../../../docs/framework/wpf/media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
+     ![安全性設定對話方塊](./media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
   
 > [!NOTE]
 >  您也可以從 Internet Explorer 到達 [網際網路選項] 對話方塊。 按一下 **工具**，然後按一下**網際網路選項**。  
@@ -153,7 +153,7 @@ ms.locfileid: "54592678"
 > [!NOTE]
 >  本節也適用於<xref:System.Windows.Controls.Frame>控制，因為它會使用<xref:System.Windows.Controls.WebBrowser>來巡覽至 HTML 內容。  
   
- 如果 WPF<xref:System.Windows.Controls.WebBrowser>控制項用來裝載不受信任的 Web 內容，您的應用程式應該使用部分信任<xref:System.AppDomain>來協助隔離您的應用程式程式碼，從可能是惡意的 HTML 指令碼。 這是特別有用，如果您的應用程式，會使用互動使用裝載的指令碼<xref:System.Windows.Controls.WebBrowser.InvokeScript%2A>方法和<xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>屬性。 如需詳細資訊，請參閱 < [WPF 增益集概觀](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
+ 如果 WPF<xref:System.Windows.Controls.WebBrowser>控制項用來裝載不受信任的 Web 內容，您的應用程式應該使用部分信任<xref:System.AppDomain>來協助隔離您的應用程式程式碼，從可能是惡意的 HTML 指令碼。 這是特別有用，如果您的應用程式，會使用互動使用裝載的指令碼<xref:System.Windows.Controls.WebBrowser.InvokeScript%2A>方法和<xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>屬性。 如需詳細資訊，請參閱 < [WPF 增益集概觀](./app-development/wpf-add-ins-overview.md)。  
   
  如果您的應用程式使用 WPF<xref:System.Windows.Controls.WebBrowser>控制項，以提高安全性並降低攻擊的另一個方法是啟用 Internet Explorer 功能控制項。 功能控制項是 Internet Explorer 可讓系統管理員和開發人員設定 Internet Explorer 和 WebBrowser ActiveX 控制項中，裝載的應用程式功能的新增功能的 WPF<xref:System.Windows.Controls.WebBrowser>控制包裝。 可以使用設定功能控制項[CoInternetSetFeatureEnabled](https://go.microsoft.com/fwlink/?LinkId=179394)函式，或變更登錄中的值。 如需功能控制項的詳細資訊，請參閱[功能控制項簡介](https://go.microsoft.com/fwlink/?LinkId=179390)並[網際網路功能控制項](https://go.microsoft.com/fwlink/?LinkId=179392)。  
   
@@ -251,9 +251,9 @@ ms.locfileid: "54592678"
   
  在這兩種情況下，鬆散[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]巡覽到的檔案會繼承其主應用程式的權限。 不過，這種行為可能不想要從安全性觀點來看，尤其是鬆散[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]檔案由受信任或未知的實體。 這種類型的內容稱為*外部內容*，並同時<xref:System.Windows.Controls.Frame>和<xref:System.Windows.Navigation.NavigationWindow>可以設定為巡覽時予以隔離。 隔離的方式設定**SandboxExternalContent**屬性設定為 true，如下列範例所示<xref:System.Windows.Controls.Frame>和<xref:System.Windows.Navigation.NavigationWindow>:  
   
- [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
   
- [!code-xaml[SecurityOverviewSnippets#NavigationWindowMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#NavigationWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
   
  使用此設定，會將外部內容載入與裝載應用程式的程序不同的程序。 此程序僅限於預設網際網路區域權限集，可有效地隔離它與裝載應用程式和用戶端電腦。  
   
@@ -267,15 +267,15 @@ ms.locfileid: "54592678"
 |區域圖|資源|  
 |----------|--------------|  
 |Managed 程式碼|[Patterns and Practices Security Guidance for Applications](https://go.microsoft.com/fwlink/?LinkId=117426) (應用程式的模式和實務安全性指南)|  
-|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)|  
+|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[程式碼存取安全性](../misc/code-access-security.md)|  
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
+|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信任安全性](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>另請參閱
-- [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)
-- [WPF 安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
-- [WPF 安全性策略 – 安全性工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [WPF 部分信任安全性](wpf-partial-trust-security.md)
+- [WPF 安全性策略 – 平台安全性](wpf-security-strategy-platform-security.md)
+- [WPF 安全性策略 – 安全性工程](wpf-security-strategy-security-engineering.md)
 - [Patterns and Practices Security Guidance for Applications](https://go.microsoft.com/fwlink/?LinkId=117426) (應用程式的模式和實務安全性指南)
-- [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)
+- [程式碼存取安全性](../misc/code-access-security.md)
 - [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)
-- [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XAML 概觀 (WPF)](./advanced/xaml-overview-wpf.md)

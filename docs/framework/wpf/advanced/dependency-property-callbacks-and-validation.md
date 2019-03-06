@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: acc8fdeb495bf7a490752a91ec6943346efcb712
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576456"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363926"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>相依性屬性回呼和驗證
 本主題說明如何針對屬性相關的功能建立使用替代自訂實作的相依性屬性，例如：驗證判斷、每當屬性有效值變更時叫用的回撥，以及覆寫值決策的可能外在影響。 本主題也會討論適合使用這些技術在展開預設屬性系統行為的案例。  
@@ -25,14 +25,14 @@ ms.locfileid: "54576456"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
- 本主題假設您已了解實作相依性屬性的基本案例，以及如何將中繼資料套用到自訂相依性屬性。 如需相關內容，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。  
+ 本主題假設您已了解實作相依性屬性的基本案例，以及如何將中繼資料套用到自訂相依性屬性。 如需相關內容，請參閱[自訂相依性屬性](custom-dependency-properties.md)和[相依性屬性中繼資料](dependency-property-metadata.md)。  
   
 <a name="Validation_Callbacks"></a>   
 ## <a name="validation-callbacks"></a>驗證回撥  
  第一次登錄驗證回撥時，可以將它指派給相依性屬性。 驗證回撥不屬於屬性中繼資料;它是直接輸入<xref:System.Windows.DependencyProperty.Register%2A>方法。 因此，一旦針對相依性屬性建立驗證回撥，就不能以新的實作覆寫。  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  實作回撥以提供物件值。 如果提供的值對屬性有效，它們會傳回 `true`；否則傳回 `false`。 因為假設屬性是依照屬性系統登錄類型的正確類型，所以通常不會在回撥內檢查類型。 屬性系統在各種不同的作業中使用回撥。 這包括初始型別初始設定的預設值，以程式設計方式變更藉由叫用<xref:System.Windows.DependencyObject.SetValue%2A>，或嘗試使用提供的新預設值來覆寫中繼資料。 如果這些作業的任何一項叫用了驗證回撥，並傳回 `false`，則會引發例外狀況。 應用程式撰寫者必須準備好處理這些例外狀況。 驗證回撥的常見用法是驗證列舉值，或屬性設定必須為零或大於零的度量時，限制整數或雙精度浮點數。  
   
@@ -40,8 +40,8 @@ ms.locfileid: "54576456"
   
  以下是非常簡單之驗證回撥案例的範例程式碼： 驗證屬性的類型是<xref:System.Double>基本不<xref:System.Double.PositiveInfinity>或<xref:System.Double.NegativeInfinity>。  
   
- [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
- [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
+ [!code-csharp[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
+ [!code-vb[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
 ## <a name="coerce-value-callbacks-and-property-changed-events"></a>強制轉型值回撥和屬性變更事件  
@@ -51,18 +51,18 @@ ms.locfileid: "54576456"
   
  以下是示範這種關係之三種相依性屬性其一的極短範例程式碼。 本例示範如何登錄相關 *Reading 屬性的最小值/最大值/目前值集合的 `CurrentReading` 屬性。 它使用上一節中示範的驗證。  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  目前值的屬性變更回撥藉由明確叫用已為其他屬性登錄的強制轉型值回撥，用來將變更轉送至其他相依的屬性：  
   
- [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
- [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
+ [!code-csharp[DPCallbackOverride#OnPCCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
+ [!code-vb[DPCallbackOverride#OnPCCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
  強制轉型值回撥會檢查目前屬性可能相依的屬性值，如有必要會強制轉型目前的值︰  
   
- [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
- [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
+ [!code-csharp[DPCallbackOverride#CoerceCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
+ [!code-vb[DPCallbackOverride#CoerceCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
 >  不會強制轉型屬性的預設值。 如果屬性值仍有其初始的預設值，或清除與其他值，可能會發生屬性值等於預設值<xref:System.Windows.DependencyObject.ClearValue%2A>。  
@@ -81,6 +81,6 @@ ms.locfileid: "54576456"
  屬性系統會將任何<xref:System.Windows.CoerceValueCallback>的傳回值<xref:System.Windows.DependencyProperty.UnsetValue>視為特殊案例。 表示屬性變更，導致這種特殊案例<xref:System.Windows.CoerceValueCallback>呼叫應該由屬性系統，遭到拒絕，且屬性系統應該改為回報屬性有任何先前的值。 這項機制很有用，可用來檢查過去以非同步方式初始化的屬性變更，現在是否對目前的物件狀態仍然有效，如果無效，則隱藏這些變更。 另一個可能的情況是，您可以看哪一個屬性值決定元件負責要回報的值，選擇性地隱藏值。 若要這樣做，您可以使用<xref:System.Windows.DependencyProperty>做為輸入傳遞回撥和屬性的識別項<xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>，然後再處理<xref:System.Windows.ValueSource>。  
   
 ## <a name="see-also"></a>另請參閱
-- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [相依性屬性概觀](dependency-properties-overview.md)
+- [相依性屬性中繼資料](dependency-property-metadata.md)
+- [自訂相依性屬性](custom-dependency-properties.md)

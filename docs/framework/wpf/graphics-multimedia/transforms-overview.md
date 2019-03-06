@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 9e28f95b58481a5cb7b2fbf92fd20545a3f0fdc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3169a34f676d65a3af50bfc9177095c9996c1a2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503114"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355645"
 ---
 # <a name="transforms-overview"></a>轉換概觀
 本主題描述如何使用[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>類別來旋轉、 縮放、 移動 （平移） 及扭曲<xref:System.Windows.FrameworkElement>物件。  
@@ -50,17 +50,17 @@ ms.locfileid: "54503114"
   
 |類別|描述|範例|圖例|  
 |-----------|-----------------|-------------|------------------|  
-|<xref:System.Windows.Media.RotateTransform>|指定旋轉元素<xref:System.Windows.Media.RotateTransform.Angle%2A>。|[旋轉物件](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)|![旋轉圖例](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
-|<xref:System.Windows.Media.ScaleTransform>|指定縮放元素<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>和<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>數量。|[縮放元素](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)|![縮放圖例](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
-|<xref:System.Windows.Media.SkewTransform>|藉由指定扭曲元素<xref:System.Windows.Media.SkewTransform.AngleX%2A>和<xref:System.Windows.Media.SkewTransform.AngleY%2A>數量。|[扭曲元素](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)|![扭曲圖例](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
-|<xref:System.Windows.Media.TranslateTransform>|移動 （平移） 所指定的項目<xref:System.Windows.Media.TranslateTransform.X%2A>和<xref:System.Windows.Media.TranslateTransform.Y%2A>數量。|[平移元素](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)|![平移圖例](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
+|<xref:System.Windows.Media.RotateTransform>|指定旋轉元素<xref:System.Windows.Media.RotateTransform.Angle%2A>。|[旋轉物件](how-to-rotate-an-object.md)|![旋轉圖例](./media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
+|<xref:System.Windows.Media.ScaleTransform>|指定縮放元素<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>和<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>數量。|[縮放元素](how-to-scale-an-element.md)|![縮放圖例](./media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
+|<xref:System.Windows.Media.SkewTransform>|藉由指定扭曲元素<xref:System.Windows.Media.SkewTransform.AngleX%2A>和<xref:System.Windows.Media.SkewTransform.AngleY%2A>數量。|[扭曲元素](how-to-skew-an-element.md)|![扭曲圖例](./media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
+|<xref:System.Windows.Media.TranslateTransform>|移動 （平移） 所指定的項目<xref:System.Windows.Media.TranslateTransform.X%2A>和<xref:System.Windows.Media.TranslateTransform.Y%2A>數量。|[平移元素](how-to-translate-an-element.md)|![平移圖例](./media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
   
  如需建立更複雜的轉換，Windows Presentation Foundation (WPF) 提供下列兩個類別：  
   
 |類別|描述|範例|  
 |-----------|-----------------|-------------|  
-|<xref:System.Windows.Media.TransformGroup>|群組多個<xref:System.Windows.Media.TransformGroup>成單一物件<xref:System.Windows.Media.Transform>您可以接著套用以轉換屬性。|[將多個轉換套用至物件](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
-|<xref:System.Windows.Media.MatrixTransform>|建立自訂的轉換不會提供其他<xref:System.Windows.Media.Transform>類別。 當您使用<xref:System.Windows.Media.MatrixTransform>，您會直接操作矩陣。|[使用 MatrixTransform 建立自訂轉換](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
+|<xref:System.Windows.Media.TransformGroup>|群組多個<xref:System.Windows.Media.TransformGroup>成單一物件<xref:System.Windows.Media.Transform>您可以接著套用以轉換屬性。|[將多個轉換套用至物件](how-to-apply-multiple-transforms-to-an-object.md)|  
+|<xref:System.Windows.Media.MatrixTransform>|建立自訂的轉換不會提供其他<xref:System.Windows.Media.Transform>類別。 當您使用<xref:System.Windows.Media.MatrixTransform>，您會直接操作矩陣。|[使用 MatrixTransform 建立自訂轉換](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
  Windows Presentation Foundation (WPF) 也會提供[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]轉換。 如需詳細資訊，請參閱 <xref:System.Windows.Media.Media3D.Transform3D> 類別。  
   
@@ -84,19 +84,19 @@ ms.locfileid: "54503114"
   
  下列範例會使用<xref:System.Windows.Media.RotateTransform>旋轉<xref:System.Windows.Shapes.Rectangle>元素中，一種<xref:System.Windows.FrameworkElement>，旋轉 45 度預設中心 （0，0）。 下圖顯示旋轉的效果。  
   
- ![FrameworkElement 旋轉 45 度&#40;0，0&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
+ ![FrameworkElement 旋轉 45 度&#40;0，0&#41;](./media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
 以點 (0,0) 為中心旋轉 45 度的矩形元素  
   
- [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
+ [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
   
  根據預設，元素會以其左上角 (0, 0) 為中心旋轉。 <xref:System.Windows.Media.RotateTransform>， <xref:System.Windows.Media.ScaleTransform>，和<xref:System.Windows.Media.SkewTransform>類別提供 CenterX 和 CenterY 屬性，可讓您指定套用轉換的點。  
   
  下一個範例也會使用<xref:System.Windows.Media.RotateTransform>旋轉<xref:System.Windows.Shapes.Rectangle>元素旋轉 45 度; 不過，這次<xref:System.Windows.Media.RotateTransform.CenterX%2A>和<xref:System.Windows.Media.RotateTransform.CenterY%2A>屬性會設定讓<xref:System.Windows.Media.RotateTransform>的中心為 （25，25）。 下圖顯示旋轉的效果。  
   
- ![關於旋轉 45 度的幾何&#40;25，25&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
+ ![關於旋轉 45 度的幾何&#40;25，25&#41;](./media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
 以點 (25, 25) 為中心旋轉 45 度的矩形元素  
   
- [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
+ [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
   
 <a name="layoutTransformsAndRenderTransformsSection"></a>   
 ## <a name="transforming-a-frameworkelement"></a>轉換 FrameworkElement  
@@ -108,7 +108,7 @@ ms.locfileid: "54503114"
   
  您應該使用哪個屬性？ 它提供的效能優勢，因為使用<xref:System.Windows.UIElement.RenderTransform%2A>屬性，只要可能，特別是當您使用以動畫顯示<xref:System.Windows.Media.Transform>物件。 使用<xref:System.Windows.FrameworkElement.LayoutTransform%2A>時調整、 旋轉，或傾斜的屬性，而您需要之項目的父代調整已轉換之項目的大小。 請注意，搭配使用時<xref:System.Windows.FrameworkElement.LayoutTransform%2A>屬性，<xref:System.Windows.Media.TranslateTransform>物件看起來不影響項目。 這是因為版面配置系統會在其處理期間將已平移元素移回到其原始位置。  
   
- 如需有關 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中版面配置的詳細資訊，請參閱[版面配置](../../../../docs/framework/wpf/advanced/layout.md)概觀。  
+ 如需有關 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中版面配置的詳細資訊，請參閱[版面配置](../advanced/layout.md)概觀。  
   
 <a name="exampleRotateAnElement45degSection"></a>   
 ## <a name="example-rotate-a-frameworkelement-45-degrees"></a>範例：將 FrameworkElement 旋轉 45 度  
@@ -116,24 +116,24 @@ ms.locfileid: "54503114"
   
  根據預設，<xref:System.Windows.Media.RotateTransform>以點 （0，0） 旋轉。 因為範例沒有指定中心值，所以按鈕會以點 (0, 0) (也就是左上角) 為中心旋轉。 <xref:System.Windows.Media.RotateTransform>套用至<xref:System.Windows.UIElement.RenderTransform%2A>屬性。 下圖顯示轉換的結果。  
   
- ![使用 rendertransform 經過轉換的按鈕](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
+ ![使用 rendertransform 經過轉換的按鈕](./media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
 以左上角為中心順時針旋轉 45 度  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
  下一個範例也會使用<xref:System.Windows.Media.RotateTransform>旋轉 45 度順時針旋轉，按鈕，但它也會設定<xref:System.Windows.UIElement.RenderTransformOrigin%2A>的按鈕 （0.5，0.5）。 值<xref:System.Windows.UIElement.RenderTransformOrigin%2A>屬性是相對於按鈕的大小。 因此，旋轉會套用到按鈕的中心，而非其左上角。 下圖顯示轉換的結果。  
   
- ![繞著中心轉換的按鈕](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
+ ![繞著中心轉換的按鈕](./media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
 圍繞中心順時針旋轉 45 度  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
  下列範例會使用<xref:System.Windows.FrameworkElement.LayoutTransform%2A>屬性而非<xref:System.Windows.UIElement.RenderTransform%2A>來旋轉按鈕的屬性。  這會使轉換影響按鈕的版面配置，這會觸發版面配置系統的完整作業。 因此，按鈕會旋轉並重新調整位置，因為它的大小已變更。 下圖顯示轉換的結果。  
   
- ![使用 layouttransform 經過轉換的按鈕](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-layouttransform.png "graphicsmm_LayoutTransform")  
+ ![使用 layouttransform 經過轉換的按鈕](./media/graphicsmm-layouttransform.png "graphicsmm_LayoutTransform")  
 用來旋轉按鈕的 LayoutTransform  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample3)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample3](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample3)]  
   
 <a name="animate_transforms"></a>   
 ## <a name="animating-transformations"></a>建立轉換的動畫  
@@ -141,16 +141,16 @@ ms.locfileid: "54503114"
   
  下列範例會使用<xref:System.Windows.Media.Animation.Storyboard>並<xref:System.Windows.Media.Animation.DoubleAnimation>具有<xref:System.Windows.Media.RotateTransform>進行<xref:System.Windows.Controls.Button>按下時就地旋轉。  
   
- [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
+ [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
   
- 如需完整範例，請參閱 [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)。 如需動畫的詳細資訊，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+ 如需完整範例，請參閱 [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)。 如需動畫的詳細資訊，請參閱[動畫概觀](animation-overview.md)。  
   
 <a name="freezable_features"></a>   
 ## <a name="freezable-features"></a>Freezable 功能  
- 因為它繼承自<xref:System.Windows.Freezable>類別，<xref:System.Windows.Media.Transform>類別提供數個特殊功能︰<xref:System.Windows.Media.Transform>物件可以宣告為[資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)、 多個物件，成為唯讀，以改善在共用效能、 複製，並變更為安全執行緒。 如需不同功能所提供的詳細資訊<xref:System.Windows.Freezable>物件，請參閱[Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ 因為它繼承自<xref:System.Windows.Freezable>類別，<xref:System.Windows.Media.Transform>類別提供數個特殊功能︰<xref:System.Windows.Media.Transform>物件可以宣告為[資源](../advanced/xaml-resources.md)、 多個物件，成為唯讀，以改善在共用效能、 複製，並變更為安全執行緒。 如需不同功能所提供的詳細資訊<xref:System.Windows.Freezable>物件，請參閱[Freezable 物件概觀](../advanced/freezable-objects-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
-- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [HOW-TO 主題](transformations-how-to-topics.md)
 - [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)

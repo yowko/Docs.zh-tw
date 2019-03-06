@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], within styles
 - styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-ms.openlocfilehash: a455bbfb9defbcf83f7e490f60031917a3b41779
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5fb18a2d927746c3437ec01d2a19327be373cae3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079391"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373955"
 ---
 # <a name="how-to-animate-in-a-style"></a>如何在樣式中建立動畫
 
@@ -20,8 +20,8 @@ ms.locfileid: "47079391"
 
 ## <a name="example"></a>範例
 
-[!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
+[!code-xaml[timingbehaviors_snip#21](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
 
 請注意，當動畫樣式內，它可能不存在的目標物件。 例如，假設會使用您的風格<xref:System.Windows.Media.SolidColorBrush>來設定按鈕的 background 屬性，但在某處的樣式會覆寫，並設定按鈕的背景<xref:System.Windows.Media.LinearGradientBrush>。  嘗試以動畫顯示<xref:System.Windows.Media.SolidColorBrush>不會擲回例外狀況; 動畫將會以無訊息模式失敗。
 
-如需有關分鏡腳本目標語法的詳細資訊，請參閱 <<c0> [ 分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。 如需動畫的詳細資訊，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。 如需有關樣式的詳細資訊，請參閱 <<c0> [ 設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。
+如需有關分鏡腳本目標語法的詳細資訊，請參閱 <<c0> [ 分鏡腳本概觀](storyboards-overview.md)。 如需動畫的詳細資訊，請參閱[動畫概觀](animation-overview.md)。 如需有關樣式的詳細資訊，請參閱 <<c0> [ 設定樣式和範本](../controls/styling-and-templating.md)。

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 784dcb88e92169ff8698234e59899cc4d58dd52c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc5e60b1a8059e58ce6d23801eb51d8b2eb414d6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563752"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379233"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概觀 (WPF)
 本主題說明 XAML 語言的功能，並示範如何使用 XAML 撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式。 本主題特別針對以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作的 XAML 進行描述。 就語言概念而言，XAML 本身涵蓋的範圍比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 還要廣。  
@@ -39,11 +39,11 @@ ms.locfileid: "54563752"
   
  下列範例示範如何建立按鈕作為 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的一部分。 這個範例只是讓您一窺 XAML 如何呈現常用的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 程式設計共通法則，並不是完整的範例。  
   
- [!code-xaml[XAMLOvwSupport#DirtSimple](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#dirtsimple)]  
+ [!code-xaml[XAMLOvwSupport#DirtSimple](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#dirtsimple)]  
   
 <a name="xaml_syntax_in_brief"></a>   
 ## <a name="xaml-syntax-in-brief"></a>XAML 語法簡介  
- 下列各節說明 XAML 語法的基本形式，並提供簡短的標記範例。 這些章節的目的並不在於提供每一種語法格式的相關完整資訊，例如在支援型別系統中的呈現方式。 如需這個主題所涵蓋每一種語法格式之特定 XAML 語法特點的詳細資訊，請參閱 [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
+ 下列各節說明 XAML 語法的基本形式，並提供簡短的標記範例。 這些章節的目的並不在於提供每一種語法格式的相關完整資訊，例如在支援型別系統中的呈現方式。 如需這個主題所涵蓋每一種語法格式之特定 XAML 語法特點的詳細資訊，請參閱 [XAML 語法詳細資料](xaml-syntax-in-detail.md)。  
   
  若您之前已經熟悉 XML 語言，則下面幾節中的大部分內容對您而言都很簡單。 這是因為 XAML 的其中一個基本設計原則所致。  XAML 語言定義自己的概念，但 XML 語言和標記形式內運作的這些概念。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54563752"
   
  物件元素語法一定是以左角括弧 (\<) 開始。 之後接著您要用於建立執行個體之型別的名稱  (這個名稱可能會包含前置詞；前置詞的概念將於稍後說明)。接著，可以選擇性地在物件元素上宣告屬性。 然後，以右角括弧 (>) 結束，即可完成物件元素標記。 您也可以透過正斜線加上右角括弧 (/ >) 的組合完成標記，改為使用不含任何內容的自我結尾格式。 例如，請回顧先前示範的標記程式碼片段：  
   
- [!code-xaml[XAMLOvwSupport#DirtSimple](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#dirtsimple)]  
+ [!code-xaml[XAMLOvwSupport#DirtSimple](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#dirtsimple)]  
   
  此範例指定兩個物件元素：`<StackPanel>` (含內容且其後接著結束標記) 以及 `<Button .../>` (自我結尾格式，具有數個屬性)。 物件元素 `StackPanel` 和 `Button` 會個別對應到的類別名稱，是由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所定義的，並會作為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 組件的一部分。 當您指定物件元素標記時，您會建立 XAML 處理指示以建立新的執行個體。 在剖析和載入 XAML 時，即會呼叫基礎型別的預設建構函式來建立每個執行個體。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "54563752"
   
  對於過去曾經使用標記語言的開發人員而言，屬性 (Attribute) 語法是最有效率的屬性 (Property) 設定語法，也是最為直覺化的使用語法。 舉例來說，下列標記建立的按鈕會以藍底紅字顯示 `Content` 所指定的文字。  
   
- [!code-xaml[XAMLOvwSupport#BlueRedButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#blueredbutton)]  
+ [!code-xaml[XAMLOvwSupport#BlueRedButton](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#blueredbutton)]  
   
 ### <a name="property-element-syntax"></a>屬性元素語法  
  對於物件元素的某些屬性 (Property) 而言，屬性 (Attribute) 語法並不適用，這是因為在屬性 (Attribute) 語法的引號與字串限制下，無法適當表達提供屬性 (Property) 值所需的物件和資訊。 對於這種情況，可以使用另一種稱為屬性 (Property) 元素語法的語法。  
@@ -70,7 +70,7 @@ ms.locfileid: "54563752"
   
  若可以使用屬性 (Attribute) 語法，則使用屬性 (Attribute) 語法通常比較方便，並且可以讓標記 (Markup) 更為精簡，不過這通常只是樣式上的問題，而非技術上的限制。 下列範例顯示的屬性 (Property) 會設定成跟上述屬性 (Attribute) 語法範例相同，但這次會對 `Button` 的所有屬性 (Property) 使用屬性 (Property) 元素語法。  
   
- [!code-xaml[XAMLOvwSupport#BlueRedButtonPE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#blueredbuttonpe)]  
+ [!code-xaml[XAMLOvwSupport#BlueRedButtonPE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#blueredbuttonpe)]  
   
 ### <a name="collection-syntax"></a>集合語法  
  XAML 語言包含一些最佳化特色，能夠產生可讀性更高的標記。 其中一項最佳化特點就是，如果特定屬性 (Property) 採用集合型別，那麼您於標記中宣告為該屬性值之子元素的項目，就會變成該集合的一部分。 在此情況下，子物件元素的集合會成為要設定給該集合屬性的值。  
@@ -112,7 +112,7 @@ ms.locfileid: "54563752"
   blue button</Button>  
 ```  
   
- 如需 XAML 內容屬性這項限制的詳細資訊，請參閱 [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
+ 如需 XAML 內容屬性這項限制的詳細資訊，請參閱 [XAML 語法詳細資料](xaml-syntax-in-detail.md)。  
   
 ### <a name="text-content"></a>文字內容  
  少數 XAML 元素可以直接將文字作為其內容加以處理。 若要啟用這項功能，必須符合下列其中一種情況：  
@@ -153,53 +153,53 @@ ms.locfileid: "54563752"
 ### <a name="attribute-syntax-events"></a>屬性語法 （事件）  
  屬性 (Attribute) 語法也可以供屬於事件而非屬性 (Property) 的成員使用。 在此情況下，屬性 (Attribute) 名稱就是事件名稱。 在 WPF 的 XAML 事件實作中，屬性 (Attribute) 值會是實作該事件委派之事件處理常式的名稱。 例如，下列標記會指派的處理常式<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件，以<xref:System.Windows.Controls.Button>標記中建立：  
   
- [!code-xaml[XAMLOvwSupport#ButtonWithCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml#buttonwithcodebehind)]  
+ [!code-xaml[XAMLOvwSupport#ButtonWithCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml#buttonwithcodebehind)]  
   
- 除了這個屬性 (Attribute) 語法的範例，WPF 中還有更多事件與 XAML 的應用內容。 例如，您也許好奇在此所參照的 `ClickHandler` 究竟代表什麼以及它是如何定義的。 本主題接下來的[事件和 XAML 程式碼後置](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md#events_and_xaml_codebehind)章節中便會詳加說明。  
+ 除了這個屬性 (Attribute) 語法的範例，WPF 中還有更多事件與 XAML 的應用內容。 例如，您也許好奇在此所參照的 `ClickHandler` 究竟代表什麼以及它是如何定義的。 本主題接下來的[事件和 XAML 程式碼後置](xaml-overview-wpf.md#events_and_xaml_codebehind)章節中便會詳加說明。  
   
 <a name="case_and_white space_in_xaml"></a>   
 ## <a name="case-and-white-space-in-xaml"></a>案例和 XAML 中的泛空白字元  
  XAML 通常會區分大小寫。 為了能夠解析支援型別，WPF XAML 會和 CLR 同樣遵守區分大小寫的規則。 在依名稱與組件的基礎型別或與型別的成員進行比較時，物件元素、屬性 (Property) 元素和屬性 (Attribute) 名稱都必須以區分大小寫的方式指定。 XAML 語言關鍵字和基本型別也區分大小寫。 值則不一定區分大小寫。 值是否會區分大小寫的決定因素，在於採用該值的屬性 (Property) 或屬性 (Property) 值型別的相關型別轉換子行為。 比方說，採用的屬性<xref:System.Boolean>類型可採用任一`true`或是`True`相等的值，但僅限於，因為原生 WPF XAML 剖析器類型的字串轉換為<xref:System.Boolean>已經允許使用這些對等用法。  
   
- WPF XAML 處理器和序列化程式會將忽略或卸除所有不重要的泛空白字元，並會將任何顯著的泛空白字元正規化。 這是與 XAML 規格的預設空白字元行為建議一致。 這個行為通常只不過是您在 XAML 內容屬性 (Property) 內指定字串的必然結果。 簡單地說，XAML 會將空白、換行字元和定位字元轉換成為空白，然後在連續字串兩端發現空白時保留一個空白。 本主題並未涵蓋 XAML 空白字元處理的完整說明。 如需詳細資訊，請參閱 <<c0> [ 處理在 XAML 中的泛空白字元](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。  
+ WPF XAML 處理器和序列化程式會將忽略或卸除所有不重要的泛空白字元，並會將任何顯著的泛空白字元正規化。 這是與 XAML 規格的預設空白字元行為建議一致。 這個行為通常只不過是您在 XAML 內容屬性 (Property) 內指定字串的必然結果。 簡單地說，XAML 會將空白、換行字元和定位字元轉換成為空白，然後在連續字串兩端發現空白時保留一個空白。 本主題並未涵蓋 XAML 空白字元處理的完整說明。 如需詳細資訊，請參閱 <<c0> [ 處理在 XAML 中的泛空白字元](../../xaml-services/whitespace-processing-in-xaml.md)。  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>標記延伸  
  標記延伸是一種 XAML 語言的概念。 大括號 (`{` 和 `}`) 用於提供屬性 (Attribute) 語法的值時，表示的是一種標記延伸用法。 這項使用會指引 XAML 處理跳脫一般的屬性 (Attribute) 值處理方式 (即視為常值字串或字串可轉換值)。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式設計中最常使用的標記延伸是 [Binding](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) (用於資料繫結運算式) 以及資源參考 [StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) 和 [DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)。 使用標記延伸就可以使用屬性 (Attribute) 語法為屬性 (Property) 提供值，即使該屬性 (Property) 通常不支援屬性 (Attribute) 語法也一樣。 標記延伸經常使用中繼運算式型別啟用延後值或參考其他物件這類僅出現在執行階段的功能。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式設計中最常使用的標記延伸是 [Binding](binding-markup-extension.md) (用於資料繫結運算式) 以及資源參考 [StaticResource](staticresource-markup-extension.md) 和 [DynamicResource](dynamicresource-markup-extension.md)。 使用標記延伸就可以使用屬性 (Attribute) 語法為屬性 (Property) 提供值，即使該屬性 (Property) 通常不支援屬性 (Attribute) 語法也一樣。 標記延伸經常使用中繼運算式型別啟用延後值或參考其他物件這類僅出現在執行階段的功能。  
   
- 例如，下列標記設定的值<xref:System.Windows.FrameworkElement.Style%2A>使用屬性語法的屬性。 <xref:System.Windows.FrameworkElement.Style%2A>屬性可接受的執行個體<xref:System.Windows.Style>類別，其預設值未具現化的屬性語法的字串。 但在此情況下，屬性 (Attribute) 會參考特定的標記延伸 [StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)。 當處理該標記延伸時，所傳回的樣式參考先前是以資源字典中的調整資源來執行個體化。  
+ 例如，下列標記設定的值<xref:System.Windows.FrameworkElement.Style%2A>使用屬性語法的屬性。 <xref:System.Windows.FrameworkElement.Style%2A>屬性可接受的執行個體<xref:System.Windows.Style>類別，其預設值未具現化的屬性語法的字串。 但在此情況下，屬性 (Attribute) 會參考特定的標記延伸 [StaticResource](staticresource-markup-extension.md)。 當處理該標記延伸時，所傳回的樣式參考先前是以資源字典中的調整資源來執行個體化。  
   
- [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources)]  
-[!code-xaml[FEResourceSH_snip#XAMLOvwShortResources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources2)]  
-[!code-xaml[FEResourceSH_snip#XAMLOvwShortResources3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources3)]  
+ [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources)]  
+[!code-xaml[FEResourceSH_snip#XAMLOvwShortResources2](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources2)]  
+[!code-xaml[FEResourceSH_snip#XAMLOvwShortResources3](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources3)]  
   
- 如需 WPF 中特別實作之所有 XAML 標記延伸的參考清單，請參閱 [WPF XAML 擴充功能](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)。 如需由 System.Xaml 及更廣泛地適用於.NET Framework XAML 實作所定義的標記延伸參考清單，請參閱[XAML 命名空間 （x:）語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)。 如需標記延伸概念的詳細資訊，請參閱[標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
+ 如需 WPF 中特別實作之所有 XAML 標記延伸的參考清單，請參閱 [WPF XAML 擴充功能](wpf-xaml-extensions.md)。 如需由 System.Xaml 及更廣泛地適用於.NET Framework XAML 實作所定義的標記延伸參考清單，請參閱[XAML 命名空間 （x:）語言功能](../../xaml-services/xaml-namespace-x-language-features.md)。 如需標記延伸概念的詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>型別轉換子  
- [XAML 語法簡介](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md#xaml_syntax_in_brief)一節中說明了屬性 (Attribute) 值必須要能夠由字串進行設定。 如何將字串轉換成其他物件類型或基本值基本原始處理根據<xref:System.String>型別本身除了原生處理特定類型，例如<xref:System.DateTime>或<xref:System.Uri>。 但是，這些型別的許多 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 型別或成員會擴充基本字串屬性處理行為，使得更多複雜物件型別的執行個體能夠指定為字串與屬性。  
+ [XAML 語法簡介](xaml-overview-wpf.md#xaml_syntax_in_brief)一節中說明了屬性 (Attribute) 值必須要能夠由字串進行設定。 如何將字串轉換成其他物件類型或基本值基本原始處理根據<xref:System.String>型別本身除了原生處理特定類型，例如<xref:System.DateTime>或<xref:System.Uri>。 但是，這些型別的許多 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 型別或成員會擴充基本字串屬性處理行為，使得更多複雜物件型別的執行個體能夠指定為字串與屬性。  
   
  <xref:System.Windows.Thickness>結構是具有啟用 XAML 用法型別轉換之型別的範例。 <xref:System.Windows.Thickness> 表示巢狀矩形內的度量，做為值的屬性例如<xref:System.Windows.FrameworkElement.Margin%2A>。 加上類型轉換器<xref:System.Windows.Thickness>，使用的所有屬性<xref:System.Windows.Thickness>指定在 XAML 中，因為它們可以做為屬性指定的工作變得更容易。 下列範例會使用型別轉換和屬性語法來提供值給<xref:System.Windows.FrameworkElement.Margin%2A>:  
   
- [!code-xaml[XAMLOvwSupport#MarginTCE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]  
+ [!code-xaml[XAMLOvwSupport#MarginTCE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]  
   
  上述的屬性語法範例相當於下列更詳細的語法範例中，其中<xref:System.Windows.FrameworkElement.Margin%2A>改為設定透過屬性元素語法包含<xref:System.Windows.Thickness>物件項目。 四個索引鍵的屬性<xref:System.Windows.Thickness>設為屬性的新執行個體上：  
   
- [!code-xaml[XAMLOvwSupport#MarginVerbose](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
+ [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
 >  對於少部分的物件而言，因為型別本身並沒有預設建構函式，所以型別轉換是唯一可以將屬性 (Property) 設定為該型別而不需動用子類別的公用方式。 例如， <xref:System.Windows.Input.Cursor>。  
   
- 如需如何支援型別轉換及其屬性 (Attribute) 語法用法的詳細資訊，請參閱 [TypeConverters 和 XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)。  
+ 如需如何支援型別轉換及其屬性 (Attribute) 語法用法的詳細資訊，請參閱 [TypeConverters 和 XAML](typeconverters-and-xaml.md)。  
   
 <a name="xaml_root_elements_and_xaml_namespaces"></a>   
 ## <a name="xaml-root-elements-and-xaml-namespaces"></a>XAML 根項目和 XAML 命名空間  
  XAML 檔案只能有一個根元素，這樣才能同時成為語式正確的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 檔案以及有效的 XAML 檔案。 對於典型的 WPF 情節中，您會使用 WPF 應用程式模型中具有特殊意義的根項目 (例如<xref:System.Windows.Window>或<xref:System.Windows.Controls.Page>頁面，<xref:System.Windows.ResourceDictionary>外部的字典，或<xref:System.Windows.Application>應用程式定義)。 下列範例示範的典型 XAML 檔案的根項目[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面上，使用的根項目<xref:System.Windows.Controls.Page>。  
   
- [!code-xaml[XAMLOvwSupport#RootOnly](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly)]  
-[!code-xaml[XAMLOvwSupport#RootOnly2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly2)]  
+ [!code-xaml[XAMLOvwSupport#RootOnly](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly)]  
+[!code-xaml[XAMLOvwSupport#RootOnly2](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly2)]  
   
  根元素也包含屬性 (Attribute) `xmlns` 和 `xmlns:x`。 這些屬性會向 XAML 處理器指出哪些 XAML 命名空間包含支援型別 (標記會將這些型別參考為元素) 的型別定義。 `xmlns` 屬性會特別指出預設的 XAML 命名空間。 在預設的 XAML 命名空間內，標記中的物件元素可以不使用前置詞指定。 對於大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式案例，以及 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 章節中提供的幾乎所有範例而言，預設 XAML 命名空間都會對應至 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 命名空間 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]。 `xmlns:x` 屬性會指定另一個對應 XAML 語言命名空間 [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)] 的命名空間。  
   
@@ -212,17 +212,17 @@ ms.locfileid: "54563752"
 ### <a name="the-x-prefix"></a>X： 前置詞  
  在先前的根元素範例中，前置詞 `x:` 會用於對應 XAML 命名空間 [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]，它是支援 XAML 語言建構的專屬 XAML 命名空間。 這個 `x:` 前置詞會用於對應範例中專案範本的這個 XAML 命名空間，同時整份 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 說明文件中也會使用這個前置詞。 XAML 語言的 XAML 命名空間包含數種您在 XAML 中會經常使用的程式設計建構。 下列清單是您最常使用的 `x:` 前置詞程式設計建構：  
   
--   [X:key](../../../../docs/framework/xaml-services/x-key-directive.md):設定中每個資源的唯一索引鍵<xref:System.Windows.ResourceDictionary>（或其他架構中類似字典的概念）。 您通常在 WPF 應用程式標記中看到的 `x:`，大概有 90% 都是 `x:Key`。  
+-   [X:key](../../xaml-services/x-key-directive.md):設定中每個資源的唯一索引鍵<xref:System.Windows.ResourceDictionary>（或其他架構中類似字典的概念）。 您通常在 WPF 應用程式標記中看到的 `x:`，大概有 90% 都是 `x:Key`。  
   
--   [X:class](../../../../docs/framework/xaml-services/x-class-directive.md):指定[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]提供 XAML 頁面程式碼後置類別的命名空間和類別名稱。 依據 WPF 程式撰寫模型，您必須有這類支援程式碼後置的類別，因此您幾乎都會看到 `x:` 對應，即使沒有資源也一樣。  
+-   [X:class](../../xaml-services/x-class-directive.md):指定[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]提供 XAML 頁面程式碼後置類別的命名空間和類別名稱。 依據 WPF 程式撰寫模型，您必須有這類支援程式碼後置的類別，因此您幾乎都會看到 `x:` 對應，即使沒有資源也一樣。  
   
--   [X:name](../../../../docs/framework/xaml-services/x-name-directive.md):處理物件項目之後，請在執行階段程式碼中指定存在於執行個體的執行階段物件名稱。 一般而言，您經常會使用 WPF 針對 [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md) 所定義的對等屬性。 這類屬性專門對應至 CLR 支援屬性，因此對於您經常會使用執行階段程式碼來尋找已初始化 XAML 中的具名元素的應用程式設計情境而言，會更方便。 最常見這種屬性是<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>。 您仍可使用[X:name](../../../../docs/framework/xaml-services/x-name-directive.md)當對等 WPF 架構層級<xref:System.Windows.FrameworkElement.Name%2A>特定型別中不支援屬性。 這會發生在某些動畫案例中。  
+-   [X:name](../../xaml-services/x-name-directive.md):處理物件項目之後，請在執行階段程式碼中指定存在於執行個體的執行階段物件名稱。 一般而言，您經常會使用 WPF 針對 [x:Name](../../xaml-services/x-name-directive.md) 所定義的對等屬性。 這類屬性專門對應至 CLR 支援屬性，因此對於您經常會使用執行階段程式碼來尋找已初始化 XAML 中的具名元素的應用程式設計情境而言，會更方便。 最常見這種屬性是<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>。 您仍可使用[X:name](../../xaml-services/x-name-directive.md)當對等 WPF 架構層級<xref:System.Windows.FrameworkElement.Name%2A>特定型別中不支援屬性。 這會發生在某些動畫案例中。  
   
--   [x:Static](../../../../docs/framework/xaml-services/x-static-markup-extension.md):啟用會傳回靜態值，否則不是相容的 XAML 屬性的參考。  
+-   [x:Static](../../xaml-services/x-static-markup-extension.md):啟用會傳回靜態值，否則不是相容的 XAML 屬性的參考。  
   
--   [X:type](../../../../docs/framework/xaml-services/x-type-markup-extension.md):建構<xref:System.Type>參考根據型別名稱。 這用來指定需要的屬性<xref:System.Type>，這類<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>，雖然屬性經常具有原生字串-至-<xref:System.Type>轉換的方式， [X:type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)是標記延伸使用方式選擇性的。  
+-   [X:type](../../xaml-services/x-type-markup-extension.md):建構<xref:System.Type>參考根據型別名稱。 這用來指定需要的屬性<xref:System.Type>，這類<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>，雖然屬性經常具有原生字串-至-<xref:System.Type>轉換的方式， [X:type](../../xaml-services/x-type-markup-extension.md)是標記延伸使用方式選擇性的。  
   
- `x:` 前置詞/XAML 命名空間中還有其他的程式設計建構，但並不常用。 如需詳細資訊，請參閱[XAML 命名空間 （x:）語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)。  
+ `x:` 前置詞/XAML 命名空間中還有其他的程式設計建構，但並不常用。 如需詳細資訊，請參閱[XAML 命名空間 （x:）語言功能](../../xaml-services/xaml-namespace-x-language-features.md)。  
   
 <a name="custom_prefixes_and_custom_types_in_xaml"></a>   
 ## <a name="custom-prefixes-and-custom-types-in-xaml"></a>自訂的前置詞和 XAML 中的自訂型別  
@@ -243,9 +243,9 @@ ms.locfileid: "54563752"
 </Page>  
 ```  
   
- 如需 XAML 中自訂型別的詳細資訊，請參閱 [WPF 的 XAML 和自訂類別](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)。  
+ 如需 XAML 中自訂型別的詳細資訊，請參閱 [WPF 的 XAML 和自訂類別](xaml-and-custom-classes-for-wpf.md)。  
   
- 如需 XML 命名空間和組件中支援程式碼之命名空間的關聯方式的詳細資訊，請參閱 [WPF XAML 的 XAML 命名空間和命名空間對應](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+ 如需 XML 命名空間和組件中支援程式碼之命名空間的關聯方式的詳細資訊，請參閱 [WPF XAML 的 XAML 命名空間和命名空間對應](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 <a name="events_and_xaml_codebehind"></a>   
 ## <a name="events-and-xaml-code-behind"></a>事件和 XAML 程式碼後置  
@@ -253,35 +253,35 @@ ms.locfileid: "54563752"
   
  在目前的範例中，您已經看過幾種按鈕，但沒有一個按鈕具有任何相關聯的邏輯行為。 用於新增物件元素行為的主要應用程式層級機制，是使用元素類別的現有事件，並為該事件撰寫在執行階段引發該事件時所叫用的特定處理常式。 要使用的事件名稱和處理常式名稱是在標記中指定的，而實作處理常式的程式碼則是在程式碼後置中定義。  
   
- [!code-xaml[XAMLOvwSupport#ButtonWithCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml#buttonwithcodebehind)]  
+ [!code-xaml[XAMLOvwSupport#ButtonWithCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml#buttonwithcodebehind)]  
   
- [!code-csharp[XAMLOvwSupport#ButtonWithCodeBehindHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml.cs#buttonwithcodebehindhandler)]
- [!code-vb[XAMLOvwSupport#ButtonWithCodeBehindHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#buttonwithcodebehindhandler)]  
+ [!code-csharp[XAMLOvwSupport#ButtonWithCodeBehindHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml.cs#buttonwithcodebehindhandler)]
+ [!code-vb[XAMLOvwSupport#ButtonWithCodeBehindHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#buttonwithcodebehindhandler)]  
   
  請注意，程式碼後置檔案會使用 CLR 命名空間 `ExampleNamespace`，並宣告 `ExamplePage` 作為該命名空間內的部分類別。 此平行`x:Class`屬性值`ExampleNamespace`。`ExamplePage` 標記根中所提供。 WPF 標記編譯器會藉由從根元素型別衍生類別，為任何編譯的 XAML 檔案建立部分類別。 當您提供的程式碼後置也會定義相同的部分類別時，產生的程式碼會結合在已編譯應用程式的相同命名空間和類別內。  
   
- 如需 WPF 中程式碼後置程式設計之需求的詳細資訊，請參閱 [WPF 中的程式碼後置和 XAML](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md) 的＜程式碼後置、事件處理常式和部分類別需求＞一節。  
+ 如需 WPF 中程式碼後置程式設計之需求的詳細資訊，請參閱 [WPF 中的程式碼後置和 XAML](code-behind-and-xaml-in-wpf.md) 的＜程式碼後置、事件處理常式和部分類別需求＞一節。  
   
- 如果不想要建立獨立的程式碼後置檔案，您也可以在 XAML 檔案中內嵌程式碼。 然而，內嵌程式碼具有基本的限制，是一個用途較少的技術。 如需詳細資訊，請參閱 [WPF 中的程式碼後置和 XAML](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)。  
+ 如果不想要建立獨立的程式碼後置檔案，您也可以在 XAML 檔案中內嵌程式碼。 然而，內嵌程式碼具有基本的限制，是一個用途較少的技術。 如需詳細資訊，請參閱 [WPF 中的程式碼後置和 XAML](code-behind-and-xaml-in-wpf.md)。  
   
 ### <a name="routed-events"></a>路由的事件  
- 對 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 來說有一個基本的特別事件功能，即為路由事件。 路由事件可以讓元素處理由其他元素引發的事件，只要元素可以透過樹狀結構關係來連接即可。 在使用 XAML 屬性 (Attribute) 指定事件處理時，路由事件可以由任何元素接聽和處理，包括類別成員表中沒有列出該特定事件的元素。 這可以藉由使用主控類別名稱來限定事件名稱屬性而達成。 比方說，父代`StackPanel`在持續`StackPanel`  /  `Button`範例可以註冊子元素按鈕的處理常式<xref:System.Windows.Controls.Primitives.ButtonBase.Click>藉由指定屬性的事件`Button.Click`上`StackPanel`物件項目，以您的處理常式名稱，做為屬性值。 如需路由事件運作方式的詳細資訊，請參閱[路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
+ 對 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 來說有一個基本的特別事件功能，即為路由事件。 路由事件可以讓元素處理由其他元素引發的事件，只要元素可以透過樹狀結構關係來連接即可。 在使用 XAML 屬性 (Attribute) 指定事件處理時，路由事件可以由任何元素接聽和處理，包括類別成員表中沒有列出該特定事件的元素。 這可以藉由使用主控類別名稱來限定事件名稱屬性而達成。 比方說，父代`StackPanel`在持續`StackPanel`  /  `Button`範例可以註冊子元素按鈕的處理常式<xref:System.Windows.Controls.Primitives.ButtonBase.Click>藉由指定屬性的事件`Button.Click`上`StackPanel`物件項目，以您的處理常式名稱，做為屬性值。 如需路由事件運作方式的詳細資訊，請參閱[路由事件概觀](routed-events-overview.md)。  
   
 <a name="x_name_and_xaml_named_elements"></a>   
 ## <a name="xaml-named-elements"></a>XAML 具名項目  
- 根據預設，藉由處理 XAML 物件元素而建立於物件圖形中的物件執行個體，並不會擁有唯一識別項或物件參考。 相反地，如果在程式碼中呼叫建構函式，您幾乎都是使用建構函式結果來設定所建構執行個體的變數，這樣您可於稍後在程式碼中參考執行個體。 為了要對透過標記定義建立的物件提供標準化存取，XAML 定義了 [x:Name 屬性](../../../../docs/framework/xaml-services/x-name-directive.md)。 您可以對任何物件元素設定 `x:Name` 屬性值。 在程式碼後置中，您選擇的識別項等同於代表所建構執行個體的執行個體變數。 就各方面來說，具名元素的運作方式就如同它們是物件執行個體一樣 (名稱會參考該執行個體)，而您的程式碼後置可以參考具名元素來處理應用程式內的執行階段互動。 這個執行個體與變數之間的連線由 WPF XAML 標記編譯器來完成，而且多個特別包含功能和模式例如<xref:System.Windows.Markup.IComponentConnector.InitializeComponent%2A>，不會在本主題中詳細討論。  
+ 根據預設，藉由處理 XAML 物件元素而建立於物件圖形中的物件執行個體，並不會擁有唯一識別項或物件參考。 相反地，如果在程式碼中呼叫建構函式，您幾乎都是使用建構函式結果來設定所建構執行個體的變數，這樣您可於稍後在程式碼中參考執行個體。 為了要對透過標記定義建立的物件提供標準化存取，XAML 定義了 [x:Name 屬性](../../xaml-services/x-name-directive.md)。 您可以對任何物件元素設定 `x:Name` 屬性值。 在程式碼後置中，您選擇的識別項等同於代表所建構執行個體的執行個體變數。 就各方面來說，具名元素的運作方式就如同它們是物件執行個體一樣 (名稱會參考該執行個體)，而您的程式碼後置可以參考具名元素來處理應用程式內的執行階段互動。 這個執行個體與變數之間的連線由 WPF XAML 標記編譯器來完成，而且多個特別包含功能和模式例如<xref:System.Windows.Markup.IComponentConnector.InitializeComponent%2A>，不會在本主題中詳細討論。  
   
  WPF 架構層級的 XAML 項目會繼承<xref:System.Windows.FrameworkElement.Name%2A>屬性，它就相當於定義 XAML`x:Name`屬性。 某些其他類別也會提供 `x:Name` 的屬性 (Property) 層級對等用法，通常也會定義為 `Name` 屬性 (Property)。 一般來說，如果在成員表中找不到您所選元素/型別的 `Name` 屬性 (Property)，請改用 `x:Name`。 `x:Name`值會提供可用在執行階段，供特定子系統或公用程式方法這類的 XAML 項目識別碼<xref:System.Windows.FrameworkElement.FindName%2A>。  
   
  下列範例會設定<xref:System.Windows.FrameworkElement.Name%2A>上<xref:System.Windows.Controls.StackPanel>項目。 然後，在處理常式<xref:System.Windows.Controls.Button>內，<xref:System.Windows.Controls.StackPanel>參考<xref:System.Windows.Controls.StackPanel>透過其執行個體參考`buttonContainer`所設定的<xref:System.Windows.FrameworkElement.Name%2A>。  
   
- [!code-xaml[XAMLOvwSupport#NamedE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#namede)]  
-[!code-xaml[XAMLOvwSupport#NamedE2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#namede2)]  
+ [!code-xaml[XAMLOvwSupport#NamedE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#namede)]  
+[!code-xaml[XAMLOvwSupport#NamedE2](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#namede2)]  
   
- [!code-csharp[XAMLOvwSupport#NameCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml.cs#namecode)]
- [!code-vb[XAMLOvwSupport#NameCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#namecode)]  
+ [!code-csharp[XAMLOvwSupport#NameCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml.cs#namecode)]
+ [!code-vb[XAMLOvwSupport#NameCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#namecode)]  
   
- 就如同變數一樣，執行個體的 XAML 名稱是由範圍的概念所控制，所以可以強制名稱在可預測的部分範圍內是唯一的。 定義頁面的主要標記，表示一個唯一的 XAML 名稱範圍，而 XAML 名稱範圍的界限則是該頁面的根元素。 然而，其他的標記來源可以於執行階段與頁面互動，例如樣式或樣式內的範本，而這類標記來源通常具有自己的 XAML 名稱範圍，其名稱範圍並不一定與頁面的 XAML 名稱範圍有所連接。 如需詳細資訊`x:Name`與 XAML 名稱範圍，請參閱<xref:System.Windows.FrameworkElement.Name%2A>， [X:name 指示詞](../../../../docs/framework/xaml-services/x-name-directive.md)，或[WPF XAML Namescopes](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)。  
+ 就如同變數一樣，執行個體的 XAML 名稱是由範圍的概念所控制，所以可以強制名稱在可預測的部分範圍內是唯一的。 定義頁面的主要標記，表示一個唯一的 XAML 名稱範圍，而 XAML 名稱範圍的界限則是該頁面的根元素。 然而，其他的標記來源可以於執行階段與頁面互動，例如樣式或樣式內的範本，而這類標記來源通常具有自己的 XAML 名稱範圍，其名稱範圍並不一定與頁面的 XAML 名稱範圍有所連接。 如需詳細資訊`x:Name`與 XAML 名稱範圍，請參閱<xref:System.Windows.FrameworkElement.Name%2A>， [X:name 指示詞](../../xaml-services/x-name-directive.md)，或[WPF XAML Namescopes](wpf-xaml-namescopes.md)。  
   
 <a name="attached_properties_and_attached_events"></a>   
 ## <a name="attached-properties-and-attached-events"></a>附加的屬性和附加的事件  
@@ -295,11 +295,11 @@ ms.locfileid: "54563752"
   
  下列範例說明<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>附加屬性。 <xref:System.Windows.Controls.DockPanel>類別會定義存取子<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>因而擁有附加的屬性。 <xref:System.Windows.Controls.DockPanel>類別也包含邏輯，會逐一查看其子項目，並特別檢查每個項目設定值的<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>。 若有找到值，就會在配置期間使用該值來放置子元素。 利用<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>附加的屬性和這個放置功能實際上激勵案例是否適合<xref:System.Windows.Controls.DockPanel>類別。  
   
- [!code-xaml[XAMLOvwSupport#DockAP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#dockap)]  
+ [!code-xaml[XAMLOvwSupport#DockAP](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#dockap)]  
   
- 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，大多數或所有的附加屬性也會以相依性屬性的方式實作。 如需詳細資訊，請參閱[附加屬性概觀](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。  
+ 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，大多數或所有的附加屬性也會以相依性屬性的方式實作。 如需詳細資訊，請參閱[附加屬性概觀](attached-properties-overview.md)。  
   
- 附加事件使用類似的屬性 (Attribute) 語法 *ownerType*.*eventName* 型式。 就像非附加事件一樣，XAML 中附加事件的屬性 (Attribute) 值會指定在元素上處理事件時叫用的處理常式方法名稱。 WPF XAML 中的附加事件用法較不常見。 如需詳細資訊，請參閱 [附加事件概觀](../../../../docs/framework/wpf/advanced/attached-events-overview.md)。  
+ 附加事件使用類似的屬性 (Attribute) 語法 *ownerType*.*eventName* 型式。 就像非附加事件一樣，XAML 中附加事件的屬性 (Attribute) 值會指定在元素上處理事件時叫用的處理常式方法名稱。 WPF XAML 中的附加事件用法較不常見。 如需詳細資訊，請參閱 [附加事件概觀](attached-events-overview.md)。  
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>基底型別和 XAML  
@@ -309,7 +309,7 @@ ms.locfileid: "54563752"
 ## <a name="xaml-security"></a>XAML 安全性  
  XAML 是直接表示物件執行個體化和執行的標記語言。 因此，XAML 中建立的元素在與系統資源互動方面 (例如網路存取、檔案系統 IO)，跟對等的產生程式碼具有一樣的能力。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 安全性架構 [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]。 這表示在網際網路區域中執行的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的執行權限會降低。 「鬆散的 XAML」(於載入時間由 XAML 檢視器解譯的未編譯 XAML 的頁面) 和 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 通常是在這個網際網路區域中執行，並具有相同的權限設定。  然而，完全信任應用程式中載入的 XAML，具有與裝載應用程式相同的系統資源存取權限。 如需詳細資訊，請參閱 [WPF 部分信任安全性](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 安全性架構 [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]。 這表示在網際網路區域中執行的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的執行權限會降低。 「鬆散的 XAML」(於載入時間由 XAML 檢視器解譯的未編譯 XAML 的頁面) 和 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 通常是在這個網際網路區域中執行，並具有相同的權限設定。  然而，完全信任應用程式中載入的 XAML，具有與裝載應用程式相同的系統資源存取權限。 如需詳細資訊，請參閱 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>從程式碼載入 XAML  
@@ -317,20 +317,20 @@ ms.locfileid: "54563752"
   
 <a name="whats_next"></a>   
 ## <a name="whats-next"></a>後續步驟  
- 本主題提供適用於 WPF 的 XAML 語法概念和用語基本簡介。 如需這裡使用的詞彙的詳細資訊，請參閱 [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
+ 本主題提供適用於 WPF 的 XAML 語法概念和用語基本簡介。 如需這裡使用的詞彙的詳細資訊，請參閱 [XAML 語法詳細資料](xaml-syntax-in-detail.md)。  
   
- 如果您尚未這樣做，請嘗試教學課程主題中的練習[逐步解說：我第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。 當您建立教學課程中所涵蓋以標記為重點的應用程式時，練習可以幫助您強化本主題說明的許多概念。  
+ 如果您尚未這樣做，請嘗試教學課程主題中的練習[逐步解說：我第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。 當您建立教學課程中所涵蓋以標記為重點的應用程式時，練習可以幫助您強化本主題說明的許多概念。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用特定的應用程式模型為基礎的<xref:System.Windows.Application>類別。 如需詳細資訊，請參閱 [應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用特定的應用程式模型為基礎的<xref:System.Windows.Application>類別。 如需詳細資訊，請參閱 [應用程式管理概觀](../app-development/application-management-overview.md)。  
   
- 關於如何從命令列和使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 建置 XAML 內含的應用程式，[建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md) 將提供您更為詳細的資訊。  
+ 關於如何從命令列和使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 建置 XAML 內含的應用程式，[建置 WPF 應用程式](../app-development/building-a-wpf-application-wpf.md) 將提供您更為詳細的資訊。  
   
- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) 提供您有關 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中多樣化屬性的詳細資訊，並介紹相依性屬性的概念。  
+ [相依性屬性概觀](dependency-properties-overview.md) 提供您有關 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中多樣化屬性的詳細資訊，並介紹相依性屬性的概念。  
   
 ## <a name="see-also"></a>另請參閱
-- [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [WPF 的 XAML 和自訂類別](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
-- [XAML 命名空間 （x:）語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)
-- [WPF XAML 延伸](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)
-- [基底項目概觀](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
-- [WPF 中的樹狀結構](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+- [XAML 語法詳細資料](xaml-syntax-in-detail.md)
+- [WPF 的 XAML 和自訂類別](xaml-and-custom-classes-for-wpf.md)
+- [XAML 命名空間 （x:）語言功能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [WPF XAML 延伸](wpf-xaml-extensions.md)
+- [基底項目概觀](base-elements-overview.md)
+- [WPF 中的樹狀結構](trees-in-wpf.md)

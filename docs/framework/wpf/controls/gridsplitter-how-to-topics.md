@@ -7,20 +7,20 @@ helpviewer_keywords:
 - GridSplitter control [WPF], how-to topics
 - controls [WPF], GridSplitter
 ms.assetid: db0da67a-954f-42e6-bbf7-4e16b8cbb210
-ms.openlocfilehash: 5f9616f92d6b2dcaf2d8681572c45e379069a26c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 800898a4b6fc655785c7db0d9463c34e5eeaa0b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552814"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354410"
 ---
 # <a name="gridsplitter-how-to-topics"></a>GridSplitter HOW TO 主題
-本節中的主題描述如何使用<xref:System.Windows.Controls.GridSplitter>控制項。  
+在本節中的主題描述如何使用<xref:System.Windows.Controls.GridSplitter>控制項。  
   
 ## <a name="in-this-section"></a>本節內容  
- [使用 GridSplitter 調整資料列的大小](../../../../docs/framework/wpf/controls/how-to-resize-rows-with-a-gridsplitter.md)  
- [使用 GridSplitter 調整資料行的大小](../../../../docs/framework/wpf/controls/how-to-resize-columns-with-a-gridsplitter.md)  
- [確保 GridSplitter 是可見的](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)  
+ [使用 GridSplitter 調整資料列的大小](how-to-resize-rows-with-a-gridsplitter.md)  
+ [使用 GridSplitter 調整資料行的大小](how-to-resize-columns-with-a-gridsplitter.md)  
+ [確保 GridSplitter 是可見的](how-to-make-sure-that-a-gridsplitter-is-visible.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.GridSplitter>  

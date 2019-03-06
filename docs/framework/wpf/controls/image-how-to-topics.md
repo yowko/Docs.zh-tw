@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
-ms.openlocfilehash: a4fe896214a4513bf5c7e38fcc1fcbd001933481
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f55036d4fdf4576faab50be7b42cf7a4077e6a3b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530784"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376269"
 ---
 # <a name="image-how-to-topics"></a>影像 HOW TO 主題
 在本節中的主題描述如何使用<xref:System.Windows.Controls.Image>項目。  
   
 ## <a name="in-this-section"></a>本節內容  
- [使用 Image 元素](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
-  [將影像轉換為灰階](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
-  [裁剪影像](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
-  [旋轉影像](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
+ [使用 Image 元素](how-to-use-the-image-element.md)  
+  [將影像轉換為灰階](how-to-convert-an-image-to-greyscale.md)  
+  [裁剪影像](how-to-crop-an-image.md)  
+  [旋轉影像](how-to-rotate-an-image.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Image>  
@@ -31,5 +31,5 @@ ms.locfileid: "54530784"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>另請參閱
-- [影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+- [影像處理概觀](../graphics-multimedia/imaging-overview.md)
+- [HOW-TO 主題](../graphics-multimedia/imaging-how-to-topics.md)

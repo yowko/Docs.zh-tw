@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a7cc2018-2b79-44f1-825a-bb7ca08690a3
 ms.openlocfilehash: 97664518f7c7c0078cef1c81035724a02c9857c0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257729"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368008"
 ---
 # <a name="states-of-activitystatequery"></a>\<狀態 > 的\<activityStateQuery >
 組態元素的集合，其中包含應該發出追蹤記錄之已訂閱活動的狀態。  

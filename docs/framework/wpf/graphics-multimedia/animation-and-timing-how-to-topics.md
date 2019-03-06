@@ -7,41 +7,41 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
-ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4936ba7bcd78c4867dae99df8bad11776cf655db
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994269"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358492"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>動畫和計時 HOW TO 主題
 下列主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]動畫和計時系統在您的應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
- [動畫加速或減速](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
- [在重複循環期間累加動畫值](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [將動畫輸出值加入至動畫啟動值](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [使用分鏡腳本建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
- [不使用分鏡腳本而建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
- [在 ControlTemplate 中建立動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)  
- [在樣式中建立動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)  
- [建立元素或筆刷不透明效果的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [變更時鐘的速度而不變更其時刻表的速度](../../../../docs/framework/wpf/graphics-multimedia/change-the-speed-of-a-clock.md)  
- [在分鏡腳本開始後，使用其互動方法來進行控制](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
- [使用 From、To 和 By 控制動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
- [定義名稱範圍](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
- [時鐘的狀態變更時接收通知](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [重複動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
- [尋找分鏡腳本](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
- [同步搜尋分鏡腳本](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  
- [設定動畫的持續時間](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-duration-for-an-animation.md)  
- [使用分鏡腳本建立屬性的動畫後進行設定](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [使用子時刻表簡化動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-simplify-animations-by-using-child-timelines.md)  
- [指定分鏡腳本動畫之間的 HandoffBehavior](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [操作說明：針對已達到作用時段結尾的時刻表指定 FillBehavior](../../../../docs/framework/wpf/graphics-multimedia/specify-the-fillbehavior-for-a-timeline.md)  
- [指定時刻表是否會自動反轉](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [在屬性值變更時觸發動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [在分鏡腳本開始後使用事件觸發程式進行控制](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+ [動畫加速或減速](how-to-accelerate-or-decelerate-an-animation.md)  
+ [在重複循環期間累加動畫值](how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [將動畫輸出值加入至動畫啟動值](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [使用分鏡腳本建立屬性的動畫](how-to-animate-a-property-by-using-a-storyboard.md)  
+ [不使用分鏡腳本而建立屬性的動畫](how-to-animate-a-property-without-using-a-storyboard.md)  
+ [在 ControlTemplate 中建立動畫](how-to-animate-in-a-controltemplate.md)  
+ [在樣式中建立動畫](how-to-animate-in-a-style.md)  
+ [建立元素或筆刷不透明效果的動畫](how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [變更時鐘的速度而不變更其時刻表的速度](change-the-speed-of-a-clock.md)  
+ [在分鏡腳本開始後，使用其互動方法來進行控制](how-to-control-a-storyboard-after-it-starts.md)  
+ [使用 From、To 和 By 控制動畫](how-to-control-an-animation-using-from-to-and-by.md)  
+ [定義名稱範圍](how-to-define-a-name-scope.md)  
+ [時鐘的狀態變更時接收通知](how-to-receive-notification-when-clock-state-changes.md)  
+ [重複動畫](how-to-repeat-an-animation.md)  
+ [尋找分鏡腳本](how-to-seek-a-storyboard.md)  
+ [同步搜尋分鏡腳本](how-to-seek-a-storyboard-synchronously.md)  
+ [設定動畫的持續時間](how-to-set-a-duration-for-an-animation.md)  
+ [使用分鏡腳本建立屬性的動畫後進行設定](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [使用子時刻表簡化動畫](how-to-simplify-animations-by-using-child-timelines.md)  
+ [指定分鏡腳本動畫之間的 HandoffBehavior](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [操作說明：針對已達到作用時段結尾的時刻表指定 FillBehavior](specify-the-fillbehavior-for-a-timeline.md)  
+ [指定時刻表是否會自動反轉](how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [在屬性值變更時觸發動畫](how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [在分鏡腳本開始後使用事件觸發程式進行控制](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Media.Animation.Timeline>  
@@ -55,4 +55,4 @@ ms.locfileid: "45994269"
  <xref:System.Windows.Media.Animation>  
   
 ## <a name="related-sections"></a>相關章節  
- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [圖形和多媒體](index.md)

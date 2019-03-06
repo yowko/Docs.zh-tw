@@ -3,14 +3,14 @@ title: <transactionFlow>
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
 ms.openlocfilehash: ef3d92e07aaf4d4ba9d90e381017db104f2cc8fe
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276987"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356581"
 ---
 # <a name="transactionflow"></a>\<transactionFlow>
-指定自訂繫結程序的異動流程支援。  
+指定自訂繫結的交易流程支援。  
   
  \<system.serviceModel>  
 \<bindings>  
@@ -43,10 +43,10 @@ ms.locfileid: "55276987"
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
- 這個項目可以讓您啟用或停用端點繫結程序設定的傳入異動流程，以及指定傳入異動的所需通訊協定格式。 如需有關使用這個組態項的詳細資訊，請參閱[ServiceModel 異動組態](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)並[啟用交易流程](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)。  
+ 這個項目可以讓您啟用或停用端點繫結設定的傳入交易流程，以及指定傳入交易的所需通訊協定格式。 如需有關使用這個組態項的詳細資訊，請參閱[ServiceModel 異動組態](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)並[啟用交易流程](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)。  
   
 > [!CAUTION]
->  當使用 `OleTransactions` 通訊協定在端點之間流動異動時，如果目的端點嘗試使用任何 `OleTransactions` 以外的通訊協定再次流動時，異動逾時可能會遺失。 這會導致 OleTransactions 躍點後的所有下層節點比預期的時間更晚發生逾時。  
+>  當使用 `OleTransactions` 通訊協定在端點之間流動交易時，如果目的端點嘗試使用任何 `OleTransactions` 以外的通訊協定再次流動時，交易逾時可能會遺失。 這會導致 OleTransactions 躍點後的所有下層節點比預期的時間更晚發生逾時。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.ServiceModel.Configuration.TransactionFlowElement>

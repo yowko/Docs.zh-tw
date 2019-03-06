@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 4cce0d56a629ca01e0174235b1e84291e9fa2f57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad86577aa4a66d9296c3c1844c9f8fa8c2b89d24
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503205"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364823"
 ---
 # <a name="data-binding-overview"></a>資料繫結概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>這類的 s<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.ItemsControl>這類的 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>有內建的功能，可讓彈性的樣式，單一資料項目的集合。 您可以在資料上方產生排序、篩選和群組檢視。  
@@ -33,7 +33,7 @@ ms.locfileid: "54503205"
   
  如需資料繫結的範例，請參考下列來自[資料繫結示範](https://go.microsoft.com/fwlink/?LinkID=163703) 的應用程式 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]：  
   
- ![資料繫結範例螢幕擷取畫面](../../../../docs/framework/wpf/data/media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
+ ![資料繫結範例螢幕擷取畫面](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
   
  上面的應用程式 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 會顯示拍賣項目的清單。 應用程式會示範下列資料繫結功能：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54503205"
   
  當使用者按一下 [Add Product (加入產品)] 按鈕時，會出現下列表單：  
   
- ![加入產品清單頁面](../../../../docs/framework/wpf/data/media/databinding-demo-addproductlisting.png "DataBinding_Demo_AddProductListing")  
+ ![加入產品清單頁面](./media/databinding-demo-addproductlisting.png "DataBinding_Demo_AddProductListing")  
   
  使用者可以編輯表單中的欄位、使用簡短預覽和更為詳盡的預覽窗格來預覽產品清單，然後再按一下 [Submit (提交)] 以加入新產品清單。 任何現有的群組、篩選和排序功能會套用到新項目上。 在這種特定情形下，輸入上圖的項目會在 [Computer (電腦)] 分類內顯示為第二個項目。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "54503205"
   
  不管您的繫結元素是什麼，也不論資料來源的本質，每個繫結一定會遵循下圖所說明的模型：  
   
- ![基本資料繫結圖](../../../../docs/framework/wpf/data/media/databindingmostbasic.png "DataBindingMostBasic")  
+ ![基本資料繫結圖](./media/databindingmostbasic.png "DataBindingMostBasic")  
   
  如上圖所說明，資料繫結基本上是繫結目標和繫結來源間的橋樑。 該圖示範下列基本 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資料繫結概念：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "54503205"
   
 -   目標屬性必須是相依性屬性。 大部分<xref:System.Windows.UIElement>屬性是相依性屬性，而大部分的相依性屬性，唯讀的除了預設支援資料繫結。 (僅<xref:System.Windows.DependencyObject>類型可以定義相依性屬性以及所有<xref:System.Windows.UIElement>均衍生自<xref:System.Windows.DependencyObject>。)  
   
--   雖然圖中未指出，但應該注意的是，繫結來源物件不限於自訂的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資料繫結支援 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件和 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 格式的資料。 若要提供一些範例，可能會繫結來源<xref:System.Windows.UIElement>，任何清單物件、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]相關聯的物件[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]資料或 Web 服務或 XmlNode，其中包含您[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。 如需詳細資訊，請參閱[繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)。  
+-   雖然圖中未指出，但應該注意的是，繫結來源物件不限於自訂的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資料繫結支援 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件和 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 格式的資料。 若要提供一些範例，可能會繫結來源<xref:System.Windows.UIElement>，任何清單物件、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]相關聯的物件[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]資料或 Web 服務或 XmlNode，其中包含您[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。 如需詳細資訊，請參閱[繫結來源概觀](binding-sources-overview.md)。  
   
  當您閱讀其他[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 主題時有一點很重要，請記住在建立繫結時，是將繫結目標「繫結到」繫結來源。 例如，如果您要顯示一些基本[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]中的資料<xref:System.Windows.Controls.ListBox>使用資料繫結，您要繫結您<xref:System.Windows.Controls.ListBox>到[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "54503205"
   
  您可能會想讓使用者透過應用程式變更資料，並將變更散佈回來源物件。 或者您可能不希望使用者更新來源資料。 您可以設定來控制這<xref:System.Windows.Data.Binding.Mode%2A>屬性的程式<xref:System.Windows.Data.Binding>物件。 下圖說明不同類型的資料流程：  
   
- ![資料繫結資料流程](../../../../docs/framework/wpf/data/media/databinding-dataflow.png "DataBinding_DataFlow")  
+ ![資料繫結資料流程](./media/databinding-dataflow.png "DataBinding_DataFlow")  
   
 -   <xref:System.Windows.Data.BindingMode.OneWay> 繫結會自動更新目標屬性中，[來源] 屬性的變更，但目標屬性的變更不會傳播回來源屬性。 如果要繫結的控制項是隱含唯讀的，這種類型的繫結很適當。 例如，您可以繫結到股票行情即時看板這類的來源，或者目標屬性沒有可供進行變更的控制項介面，例如資料表的資料繫結背景色彩。 如果不需要監視目標屬性的變更，使用 <xref:System.Windows.Data.BindingMode.OneWay> 繫結模式可以避免 <xref:System.Windows.Data.BindingMode.TwoWay> 繫結模式的額外負荷。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "54503205"
   
 -   圖中未說明為<xref:System.Windows.Data.BindingMode.OneTime>繫結，這會讓來源屬性，來初始化目標屬性，但並不會傳播後續變更。 這代表如果資料內容發生變更或資料內容中的物件有變更，則變更不會反映在目標屬性中。 如果您使用的資料適合使用目前狀態的快照集或資料是真正的靜態，則此類型的繫結很適當。 如果您想要以來源屬性的某些值初始化目標屬性，但無法預先得知資料內容，則此類型的繫結也很有用。 這是 <xref:System.Windows.Data.BindingMode.OneWay> 繫結的基本簡易形式，萬一來源值不變更，可提供較佳的效能。  
   
- 請注意，若要偵測來源變更 (適用於<xref:System.Windows.Data.BindingMode.OneWay>並<xref:System.Windows.Data.BindingMode.TwoWay>繫結)，來源必須實作適合的屬性變更通知機制，例如<xref:System.ComponentModel.INotifyPropertyChanged>。 請參閱[實作屬性變更通知](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)如需範例的<xref:System.ComponentModel.INotifyPropertyChanged>實作。  
+ 請注意，若要偵測來源變更 (適用於<xref:System.Windows.Data.BindingMode.OneWay>並<xref:System.Windows.Data.BindingMode.TwoWay>繫結)，來源必須實作適合的屬性變更通知機制，例如<xref:System.ComponentModel.INotifyPropertyChanged>。 請參閱[實作屬性變更通知](how-to-implement-property-change-notification.md)如需範例的<xref:System.ComponentModel.INotifyPropertyChanged>實作。  
   
  <xref:System.Windows.Data.Binding.Mode%2A>屬性頁面提供有關繫結模式和如何指定繫結方向的範例的詳細資訊。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "54503205"
   
  然而，當您編輯文字時，或者是在完成文字編輯且將滑鼠指標帶離 TextBox 後，來源值是否有更新？ <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>繫結的屬性會決定觸發來源更新。 下圖中右箭頭的點說明所扮演的角色<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性：  
   
- ![UpdateSourceTrigger 圖表](../../../../docs/framework/wpf/data/media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
+ ![UpdateSourceTrigger 圖表](./media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
   
  如果<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值是<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>，然後值所指向的向右鍵<xref:System.Windows.Data.BindingMode.TwoWay>或<xref:System.Windows.Data.BindingMode.OneWayToSource>取得盡在目標屬性變更更新繫結。 不過，如果<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值是<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>，則該值時，才取得更新為新值的目標屬性失去焦點。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "54503205"
 |PropertyChanged|當您輸入 <xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox> 聊天室視窗中的控制項|  
 |明確|當應用程式呼叫 <xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox> 控制項中可編輯的表單 （僅當使用者按一下 [提交] 按鈕時，才會更新來源值）|  
   
- 如需範例，請參閱[控制 TextBox 文字更新來源的時機](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)。  
+ 如需範例，請參閱[控制 TextBox 文字更新來源的時機](how-to-control-when-the-textbox-text-updates-the-source.md)。  
   
 <a name="creating_a_binding"></a>   
 ## <a name="creating-a-binding"></a>建立繫結。  
@@ -126,13 +126,13 @@ ms.locfileid: "54503205"
   
  請考慮下列範例，其中的繫結來源物件是名為 *MyData* 的類別，定義於 *SDKSample* 命名空間中。 為了便於示範，*MyData* 類別的字串屬性名為 *ColorName*，其值設為 "Red"。 因此，本範例會產生具有紅色背景的按鈕。  
   
- [!code-xaml[BindNonTextProperty#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindNonTextProperty/CS/Page1.xaml#1)]  
+ [!code-xaml[BindNonTextProperty#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindNonTextProperty/CS/Page1.xaml#1)]  
   
- 如需繫結宣告語法的詳細資訊，以及如何在程式碼中設定繫結的範例，請參閱[繫結宣告概觀](../../../../docs/framework/wpf/data/binding-declarations-overview.md)。  
+ 如需繫結宣告語法的詳細資訊，以及如何在程式碼中設定繫結的範例，請參閱[繫結宣告概觀](binding-declarations-overview.md)。  
   
  如果將這個範例套用到我們的基本圖表，結果會類似下圖。 這是<xref:System.Windows.Data.BindingMode.OneWay>繫結，因為 Background 屬性支援<xref:System.Windows.Data.BindingMode.OneWay>預設繫結。  
   
- ![資料繫結圖表](../../../../docs/framework/wpf/data/media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
+ ![資料繫結圖表](./media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
   
  您可能納悶，為什麼看起來雖然*ColorName*屬性是字串類型時<xref:System.Windows.Controls.Control.Background%2A>屬性的類型是<xref:System.Windows.Media.Brush>。 這是因為預設型別轉換的作用，在[資料轉換](#data_conversion)一節中會討論到。  
   
@@ -142,9 +142,9 @@ ms.locfileid: "54503205"
   
  有數種方式可以指定繫結來源物件。 使用<xref:System.Windows.FrameworkElement.DataContext%2A>父項目上的屬性時，您會將多個屬性繫結至相同的來源。 然而，有時候在個別的繫結宣告上指定繫結來源可能比較恰當。 如上述範例中，而不是使用<xref:System.Windows.FrameworkElement.DataContext%2A>屬性，您可以藉由設定指定繫結來源<xref:System.Windows.Data.Binding.Source%2A>屬性直接在繫結宣告上的按鈕，如下列範例所示：  
   
- [!code-xaml[BindNonTextProperty#BackgroundBindingCompact](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindNonTextProperty/CS/Page2.xaml#backgroundbindingcompact)]  
+ [!code-xaml[BindNonTextProperty#BackgroundBindingCompact](~/samples/snippets/csharp/VS_Snippets_Wpf/BindNonTextProperty/CS/Page2.xaml#backgroundbindingcompact)]  
   
- 以外的其他設定<xref:System.Windows.FrameworkElement.DataContext%2A>屬性的項目直接繼承<xref:System.Windows.FrameworkElement.DataContext%2A>值從祖系 （例如在第一個範例中按鈕），並明確指定設定的 繫結來源<xref:System.Windows.Data.Binding.Source%2A>上的屬性<xref:System.Windows.Data.Binding>（例如按鈕的最後一個範例），您也可以使用<xref:System.Windows.Data.Binding.ElementName%2A>屬性或<xref:System.Windows.Data.Binding.RelativeSource%2A>屬性來指定繫結來源。 <xref:System.Windows.Data.Binding.ElementName%2A>屬性是很有用，當您在您的應用程式，例如當您使用滑桿調整按鈕的寬度的繫結至其他項目。 <xref:System.Windows.Data.Binding.RelativeSource%2A>屬性時，在指定的繫結<xref:System.Windows.Controls.ControlTemplate>或<xref:System.Windows.Style>。 如需詳細資訊，請參閱[指定繫結來源](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)。  
+ 以外的其他設定<xref:System.Windows.FrameworkElement.DataContext%2A>屬性的項目直接繼承<xref:System.Windows.FrameworkElement.DataContext%2A>值從祖系 （例如在第一個範例中按鈕），並明確指定設定的 繫結來源<xref:System.Windows.Data.Binding.Source%2A>上的屬性<xref:System.Windows.Data.Binding>（例如按鈕的最後一個範例），您也可以使用<xref:System.Windows.Data.Binding.ElementName%2A>屬性或<xref:System.Windows.Data.Binding.RelativeSource%2A>屬性來指定繫結來源。 <xref:System.Windows.Data.Binding.ElementName%2A>屬性是很有用，當您在您的應用程式，例如當您使用滑桿調整按鈕的寬度的繫結至其他項目。 <xref:System.Windows.Data.Binding.RelativeSource%2A>屬性時，在指定的繫結<xref:System.Windows.Controls.ControlTemplate>或<xref:System.Windows.Style>。 如需詳細資訊，請參閱[指定繫結來源](how-to-specify-the-binding-source.md)。  
   
 <a name="specifying_the_path_to_the_value"></a>   
 ### <a name="specifying-the-path-to-the-value"></a>指定值的路徑  
@@ -154,7 +154,7 @@ ms.locfileid: "54503205"
   
  請注意，雖然這裡強調，<xref:System.Windows.Data.Binding.Path%2A>来使用的值為其中一個繫結，在您想要繫結至整個物件的案例中的四個必要元件，要使用的值會繫結來源物件相同。 在這些情況下，它會指定適用於<xref:System.Windows.Data.Binding.Path%2A>。 參考下列範例：  
   
- [!code-xaml[MasterDetail#EmptyBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MasterDetail/CSharp/Page1.xaml#emptybinding)]  
+ [!code-xaml[MasterDetail#EmptyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/MasterDetail/CSharp/Page1.xaml#emptybinding)]  
   
  上述範例使用空白繫結語法：{Binding}。 在此情況下，<xref:System.Windows.Controls.ListBox>繼承 DataContext，從父 DockPanel 元素 （在此範例中未顯示）。 沒有指定路徑時，預設會繫結到整個物件。 換句話說，在此範例中，路徑已經省略因為我們要繫結<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>到整個物件的屬性。 (如需深入討論，請參閱[繫結至集合](#binding_to_collections)一節)。  
   
@@ -168,16 +168,16 @@ ms.locfileid: "54503205"
   
  例如，請考慮下列項目，其中*myDataObject*的執行個體*MyData*類別*myBinding*來源<xref:System.Windows.Data.Binding>物件，而*MyData*類別是定義的類別，其中包含字串屬性，名為*MyDataProperty*。 此範例會繫結的文字內容*mytext*，執行個體<xref:System.Windows.Controls.TextBlock>至*MyDataProperty*。  
   
- [!code-csharp[CodeOnlyBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
- [!code-vb[CodeOnlyBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
+ [!code-csharp[CodeOnlyBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
+ [!code-vb[CodeOnlyBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
  您可以使用相同的 *myBinding* 物件建立其他繫結。 舉例來說，您可以使用 *myBinding* 物件將核取方塊的文字內容繫結到 *MyDataProperty*。 在此情況下，會有兩個執行個體<xref:System.Windows.Data.BindingExpression>共用*myBinding*物件。  
   
  A<xref:System.Windows.Data.BindingExpression>物件可以透過呼叫的傳回值取得<xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A>資料繫結物件上。 下列主題會示範一些使用方式<xref:System.Windows.Data.BindingExpression>類別：  
   
--   [從繫結的目標屬性取得繫結物件](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
+-   [從繫結的目標屬性取得繫結物件](how-to-get-the-binding-object-from-a-bound-target-property.md)  
   
--   [控制 TextBox 文字更新來源的時機](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
+-   [控制 TextBox 文字更新來源的時機](how-to-control-when-the-textbox-text-updates-the-source.md)  
   
 <a name="data_conversion"></a>   
 ## <a name="data-conversion"></a>資料轉換  
@@ -185,18 +185,18 @@ ms.locfileid: "54503205"
   
  若要將這項資訊加入到[建立繫結](#creating_a_binding)一節的圖中，則圖表看起來會像這樣：  
   
- ![資料繫結圖表](../../../../docs/framework/wpf/data/media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
+ ![資料繫結圖表](./media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
   
  然而，如果而不需要將繫結來源物件的字串類型的屬性*色彩*型別的屬性<xref:System.Windows.Media.Color>嗎？ 在此情況下，為了讓繫結，搭配您必須先將*色彩*成屬性值，<xref:System.Windows.Controls.Control.Background%2A>屬性可以接受。 您必須建立自訂轉換子實作<xref:System.Windows.Data.IValueConverter>介面，如下列範例所示：  
   
- [!code-csharp[ColorPicker_snip#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_snip/CSharp/ColorPickerLib/ColorPicker.cs#16)]
- [!code-vb[ColorPicker_snip#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ColorPicker_snip/visualbasic/colorpickerlib/colorpicker.vb#16)]  
+ [!code-csharp[ColorPicker_snip#16](~/samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_snip/CSharp/ColorPickerLib/ColorPicker.cs#16)]
+ [!code-vb[ColorPicker_snip#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ColorPicker_snip/visualbasic/colorpickerlib/colorpicker.vb#16)]  
   
  <xref:System.Windows.Data.IValueConverter>參考頁面會提供詳細的資訊。  
   
  現在是使用自訂轉換器來代替預設轉換，圖表如下圖所示：  
   
- ![資料繫結圖表](../../../../docs/framework/wpf/data/media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
+ ![資料繫結圖表](./media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
   
  再重複聲明一次，預設轉換也可以使用，因為要繫結的型別中存在型別轉換器。 這個行為會取決於目標中提供的型別轉換器。 如果有疑問，請建立自己的轉換器。  
   
@@ -217,7 +217,7 @@ ms.locfileid: "54503205"
   
  所幸，我們的基本圖表仍然適用。 如果您要繫結<xref:System.Windows.Controls.ItemsControl>至集合中，圖表看起來像這樣：  
   
- ![資料繫結 ItemsControl 圖表](../../../../docs/framework/wpf/data/media/databindingitemscontrol.png "DataBindingItemsControl")  
+ ![資料繫結 ItemsControl 圖表](./media/databindingitemscontrol.png "DataBindingItemsControl")  
   
  如圖表所示，要繫結<xref:System.Windows.Controls.ItemsControl>給集合的物件，<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性是要使用的屬性。 您可以想像<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性的內容當做<xref:System.Windows.Controls.ItemsControl>。 請注意，繫結<xref:System.Windows.Data.BindingMode.OneWay>因為<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性支援<xref:System.Windows.Data.BindingMode.OneWay>預設繫結。  
   
@@ -225,7 +225,7 @@ ms.locfileid: "54503205"
 ### <a name="how-to-implement-collections"></a>如何實作集合  
  您可以列舉實作任何集合<xref:System.Collections.IEnumerable>介面。 不過，若要設定動態繫結，以便插入或刪除集合中的更新[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]自動執行，則集合必須實作<xref:System.Collections.Specialized.INotifyCollectionChanged>介面。 這個介面會公開每次基礎集合變更時必須引發的事件。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供<xref:System.Collections.ObjectModel.ObservableCollection%601>類別，這是公開的資料集合的內建實作<xref:System.Collections.Specialized.INotifyCollectionChanged>介面。 請注意，若要完全支援從來源物件傳輸的資料值，對目標，您的支援可繫結的屬性集合中每個物件必須也實作<xref:System.ComponentModel.INotifyPropertyChanged>介面。 如需詳細資訊，請參閱[繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供<xref:System.Collections.ObjectModel.ObservableCollection%601>類別，這是公開的資料集合的內建實作<xref:System.Collections.Specialized.INotifyCollectionChanged>介面。 請注意，若要完全支援從來源物件傳輸的資料值，對目標，您的支援可繫結的屬性集合中每個物件必須也實作<xref:System.ComponentModel.INotifyPropertyChanged>介面。 如需詳細資訊，請參閱[繫結來源概觀](binding-sources-overview.md)。  
   
  在之前實作您自己的集合，請考慮使用<xref:System.Collections.ObjectModel.ObservableCollection%601>或其中一個現有的集合類別，例如<xref:System.Collections.Generic.List%601>， <xref:System.Collections.ObjectModel.Collection%601>，和<xref:System.ComponentModel.BindingList%601>，還有其他更多。 如果您在進階案例，並想要實作您自己的集合，請考慮使用<xref:System.Collections.IList>，它提供非泛型集合的索引，因此最佳的效能可個別存取的物件。  
   
@@ -243,14 +243,14 @@ ms.locfileid: "54503205"
 #### <a name="how-to-create-a-view"></a>如何建立檢視  
  建立和使用檢視的方法之一，是直接具現化檢視物件，然後將它做為繫結來源使用。 例如，以[資料繫結是什麼](#what_is_data_binding)一節中顯示的[資料繫結示範](https://go.microsoft.com/fwlink/?LinkID=163703)應用程式為例。 在實作應用程式使得<xref:System.Windows.Controls.ListBox>繫結至檢視資料收集，而不是資料集合透過直接。 下列範例擷取自[資料繫結示範](https://go.microsoft.com/fwlink/?LinkID=163703)應用程式。 <xref:System.Windows.Data.CollectionViewSource>類別是[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]類別繼承自 proxy <xref:System.Windows.Data.CollectionView>。 在此範例中，<xref:System.Windows.Data.CollectionViewSource.Source%2A>檢視會繫結至*AuctionItems*集合 (型別<xref:System.Collections.ObjectModel.ObservableCollection%601>) 目前的應用程式物件。  
   
- [!code-xaml[DataBindingLab#WindowResources1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#windowresources1)]  
-[!code-xaml[DataBindingLab#CollectionViewSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#collectionviewsource)]  
-[!code-xaml[DataBindingLab#WindowResources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#windowresources2)]  
+ [!code-xaml[DataBindingLab#WindowResources1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#windowresources1)]  
+[!code-xaml[DataBindingLab#CollectionViewSource](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#collectionviewsource)]  
+[!code-xaml[DataBindingLab#WindowResources2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#windowresources2)]  
   
  資源*listingDataView*接著會做為繫結來源的項目，在應用程式，例如<xref:System.Windows.Controls.ListBox>:  
   
- [!code-xaml[DataBindingLab#Master1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master1)]  
-[!code-xaml[DataBindingLab#Master2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master2)]  
+ [!code-xaml[DataBindingLab#Master1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master1)]  
+[!code-xaml[DataBindingLab#Master2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master2)]  
   
  若要建立另一個檢視相同的集合，您可以建立另一個<xref:System.Windows.Data.CollectionViewSource>執行個體，並為它提供不同`x:Key`名稱。  
   
@@ -265,44 +265,44 @@ ms.locfileid: "54503205"
 ##### <a name="using-a-default-view"></a>使用預設檢視  
  指定集合檢視做為繫結來源是建立和使用集合檢視的方式之一。 WPF 也會為做為繫結來源使用的每個集合建立預設集合檢視。 如果您直接繫結至集合，WPF 會繫結至它的預設檢視。 請注意，此預設檢視是由相同集合的所有繫結所共用，因此若其中一個繫結控制項或程式碼 (例如排序或變更目前的項目指標，這會在稍後討論) 變更預設檢視，此變更會反映在相同集合的所有其他繫結中。  
   
- 若要取得的預設檢視，您使用<xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A>方法。 如需範例，請參閱[取得資料集合的預設檢視](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)。  
+ 若要取得的預設檢視，您使用<xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A>方法。 如需範例，請參閱[取得資料集合的預設檢視](how-to-get-the-default-view-of-a-data-collection.md)。  
   
 ##### <a name="collection-views-with-adonet-datatables"></a>包含 ADO.NET DataTables 的集合檢視  
  為了改善效能，集合檢視 ado.net<xref:System.Data.DataTable>或是<xref:System.Data.DataView>排序和篩選，將委派物件<xref:System.Data.DataView>。 這會使得資料來源的所有集合檢視共用排序和篩選。 若要啟用獨立排序和篩選每個集合檢視，初始化每個集合檢視自己<xref:System.Data.DataView>物件。  
   
 #### <a name="sorting"></a>排序  
- 如先前所述，檢視可以將排序順序套用到集合上。 當資料存在於基礎集合中時，資料本身可能有也可能沒有相關的順序。 對集合的檢視可以讓您依據所提供的比較準則，安排順序或變更預設順序。 因為是資料的用戶端檢視，常見的案例是使用者會想要針對資料行對應的值，而排序表格式資料的資料行。 藉由使用檢視，就可以套用這個使用者驅動的排序，同樣不需要對基礎集合進行任何變更，或甚至不需要重新查詢集合內容。 如需範例，請參閱[在按一下標頭時排序 GridView 資料行](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)。  
+ 如先前所述，檢視可以將排序順序套用到集合上。 當資料存在於基礎集合中時，資料本身可能有也可能沒有相關的順序。 對集合的檢視可以讓您依據所提供的比較準則，安排順序或變更預設順序。 因為是資料的用戶端檢視，常見的案例是使用者會想要針對資料行對應的值，而排序表格式資料的資料行。 藉由使用檢視，就可以套用這個使用者驅動的排序，同樣不需要對基礎集合進行任何變更，或甚至不需要重新查詢集合內容。 如需範例，請參閱[在按一下標頭時排序 GridView 資料行](../controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)。  
   
  下列範例顯示"Sort by category and date"的排序邏輯<xref:System.Windows.Controls.CheckBox>應用程式[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中[的資料繫結是什麼？](#what_is_data_binding)區段：  
   
- [!code-csharp[DataBindingLab#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#8)]
- [!code-vb[DataBindingLab#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#8)]  
+ [!code-csharp[DataBindingLab#8](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#8)]
+ [!code-vb[DataBindingLab#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#8)]  
   
 #### <a name="filtering"></a>篩選  
  檢視也可以對集合套用篩選。 這代表雖然項目是存在於集合中的，這個特別的檢視可以只顯示完整集合的部分子集。 您可以對資料篩選條件。 比方說，在應用程式完成一樣[資料繫結是什麼？](#what_is_data_binding)區段中，"Show only bargains"<xref:System.Windows.Controls.CheckBox>包含邏輯來篩選出成本 $25 以上的項目。 若要設定執行下列程式碼*ShowOnlyBargainsFilter*作為<xref:System.Windows.Data.CollectionViewSource.Filter>事件處理常式時，<xref:System.Windows.Controls.CheckBox>選取：  
   
- [!code-csharp[DataBindingLab#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
- [!code-vb[DataBindingLab#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
+ [!code-csharp[DataBindingLab#10](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
+ [!code-vb[DataBindingLab#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
   
  *ShowOnlyBargainsFilter* 事件處理常式實作如下：  
   
- [!code-csharp[DataBindingLab#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
- [!code-vb[DataBindingLab#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
+ [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
+ [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
- 如果您使用其中一個<xref:System.Windows.Data.CollectionView>直接而不是類別<xref:System.Windows.Data.CollectionViewSource>，您會使用<xref:System.Windows.Data.CollectionView.Filter%2A>屬性，以指定的回呼。 如需範例，請參閱[篩選檢視中的資料](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)。  
+ 如果您使用其中一個<xref:System.Windows.Data.CollectionView>直接而不是類別<xref:System.Windows.Data.CollectionViewSource>，您會使用<xref:System.Windows.Data.CollectionView.Filter%2A>屬性，以指定的回呼。 如需範例，請參閱[篩選檢視中的資料](how-to-filter-data-in-a-view.md)。  
   
 #### <a name="grouping"></a>群組  
  除了內部類別，以檢視<xref:System.Collections.IEnumerable>集合，所有集合檢視都支援分組，可讓使用者能夠為邏輯群組的 [集合] 檢視中的集合分割的功能。 群組可以是明確的，由使用者提供群組清單，或者是隱含的，讓群組依據資料動態產生。  
   
  下列範例顯示"Group by category"的邏輯<xref:System.Windows.Controls.CheckBox>:  
   
- [!code-csharp[DataBindingLab#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#6)]
- [!code-vb[DataBindingLab#6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#6)]  
+ [!code-csharp[DataBindingLab#6](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#6)]
+ [!code-vb[DataBindingLab#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#6)]  
   
- 如需另一個群組範例，請參閱[實作 GridView 的 ListView 中的群組項目](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)。  
+ 如需另一個群組範例，請參閱[實作 GridView 的 ListView 中的群組項目](../controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)。  
   
 #### <a name="current-item-pointers"></a>目前項目指標  
- 檢視也支援目前項目的概念。 您可以在集合檢視中逐一巡覽物件。 當您巡覽時，移動項目指標可以讓您擷取集合中存在該特定位置的物件。 如需範例，請參閱[透過資料 CollectionView 中的物件巡覽](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)。  
+ 檢視也支援目前項目的概念。 您可以在集合檢視中逐一巡覽物件。 當您巡覽時，移動項目指標可以讓您擷取集合中存在該特定位置的物件。 如需範例，請參閱[透過資料 CollectionView 中的物件巡覽](how-to-navigate-through-the-objects-in-a-data-collectionview.md)。  
   
  由於 WPF 只使用檢視 (可能是您指定的檢視或集合的預設檢視) 繫結至集合，因此集合的所有繫結都有目前項目指標。 當繫結至檢視時，`Path` 值中的斜線 ("/") 字元會指定檢視的目前項目。 在下列範例中，資料內容是集合檢視。 第一行繫結至集合。 第二行繫結至集合中的目前項目。 第三行繫結至集合中目前項目的 `Description` 屬性。  
   
@@ -326,13 +326,13 @@ ms.locfileid: "54503205"
   
  您可以實作主從式案例，只要藉由讓兩或多個控制項繫結到相同檢視即可。 下列範例中的[資料繫結示範](https://go.microsoft.com/fwlink/?LinkID=163703)顯示的標記<xref:System.Windows.Controls.ListBox>而<xref:System.Windows.Controls.ContentControl>您的應用程式，請參閱[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中[資料繫結是什麼？](#what_is_data_binding)區段：  
   
- [!code-xaml[DataBindingLab#Master1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master1)]  
-[!code-xaml[DataBindingLab#Master2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master2)]  
-[!code-xaml[DataBindingLab#Detail](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#detail)]  
+ [!code-xaml[DataBindingLab#Master1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master1)]  
+[!code-xaml[DataBindingLab#Master2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master2)]  
+[!code-xaml[DataBindingLab#Detail](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#detail)]  
   
  請注意，這兩個控制項都繫結到相同來源：*listingDataView* 靜態資源 (請參閱[如何建立檢視](#how_to_create_a_view)一節中這個資源的定義)。 這是因為當單一物件 (<xref:System.Windows.Controls.ContentControl>在此情況下) 會繫結到集合檢視，它會自動繫結至<xref:System.Windows.Data.CollectionView.CurrentItem%2A>的檢視。 請注意，<xref:System.Windows.Data.CollectionViewSource>物件會自動同步化貨幣和選取項目。 如果您的清單控制項未繫結至<xref:System.Windows.Data.CollectionViewSource>如同此範例中，物件，則您必須設定其<xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A>屬性設`true`才能運作。  
   
- 如需其他範例，請參閱[繫結至集合並根據選取項目顯示資訊](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)和[使用含階層式資料的主從式模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)。  
+ 如需其他範例，請參閱[繫結至集合並根據選取項目顯示資訊](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)和[使用含階層式資料的主從式模式](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)。  
   
  您可能已經注意到上述範例有使用範本。 事實上，資料可能不會顯示我們想要不使用範本的方式 (所使用的明確<xref:System.Windows.Controls.ContentControl>及所使用的隱含<xref:System.Windows.Controls.ListBox>)。 現在，下節中要說明資料範本化。  
   
@@ -340,17 +340,17 @@ ms.locfileid: "54503205"
 ## <a name="data-templating"></a>資料範本化  
  沒有使用資料範本的話，[資料繫結是什麼](#what_is_data_binding)一節中的應用程式 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 看起來會類似下圖：  
   
- ![不含資料範本的資料繫結示範](../../../../docs/framework/wpf/data/media/databindingdemotemplates.png "DataBindingDemoTemplates")  
+ ![不含資料範本的資料繫結示範](./media/databindingdemotemplates.png "DataBindingDemoTemplates")  
   
  上一節中的範例所示同時<xref:System.Windows.Controls.ListBox>控制項和<xref:System.Windows.Controls.ContentControl>繫結至整個集合物件 （或更具體來說，集合物件的檢視） 的*AuctionItem*s。 如何顯示資料收集的特定指示沒有<xref:System.Windows.Controls.ListBox>顯示基礎集合中每個物件的字串表示，<xref:System.Windows.Controls.ContentControl>顯示繫結至物件的字串表示。  
   
  若要解決這個問題，該應用程式定義<xref:System.Windows.DataTemplate>s。 上一節中的範例所示<xref:System.Windows.Controls.ContentControl>明確地使用*detailsProductListingTemplate*<xref:System.Windows.DataTemplate>。 <xref:System.Windows.Controls.ListBox>控制項會隱含使用下列<xref:System.Windows.DataTemplate>顯示時*AuctionItem*集合中的物件：  
   
- [!code-xaml[DataBindingLab#AuctionItemDataTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#auctionitemdatatemplate)]  
+ [!code-xaml[DataBindingLab#AuctionItemDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#auctionitemdatatemplate)]  
   
  藉由使用這兩個<xref:System.Windows.DataTemplate>s，產生的 UI 是中所示[資料繫結是什麼？](#what_is_data_binding)一節。 您可以看到該螢幕擷取畫面中，除了讓您將資料放在您的控制項， <xref:System.Windows.DataTemplate>s 可讓您定義引人注目的視覺效果，為您的資料。 比方說，<xref:System.Windows.DataTrigger>使用上述<xref:System.Windows.DataTemplate>以便*AuctionItem*向*Auctionitem*的值*反白顯示*會顯示與橘色框線和星號。  
   
- 如需資料範本的詳細資訊，請參閱[資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)。  
+ 如需資料範本的詳細資訊，請參閱[資料範本化概觀](data-templating-overview.md)。  
   
 <a name="data_validation"></a>   
 ## <a name="data-validation"></a>資料驗證  
@@ -360,7 +360,7 @@ ms.locfileid: "54503205"
 ### <a name="associating-validation-rules-with-a-binding"></a>建立驗證規則與繫結的關聯  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]資料繫結模型可讓您將建立關聯<xref:System.Windows.Data.Binding.ValidationRules%2A>與您<xref:System.Windows.Data.Binding>物件。 例如，下列範例會繫結<xref:System.Windows.Controls.TextBox>屬性，名為`StartPrice`，並將<xref:System.Windows.Controls.ExceptionValidationRule>物件<xref:System.Windows.Data.Binding.ValidationRules%2A?displayProperty=nameWithType>屬性。  
   
- [!code-xaml[DataBindingLab#DefaultValidation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#defaultvalidation)]  
+ [!code-xaml[DataBindingLab#DefaultValidation](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#defaultvalidation)]  
   
  A<xref:System.Windows.Controls.ValidationRule>物件會檢查屬性的值是否有效。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 有下列兩種內建類型<xref:System.Windows.Controls.ValidationRule>物件：  
   
@@ -370,12 +370,12 @@ ms.locfileid: "54503205"
   
  您也可以建立您自己的驗證規則，藉由衍生自<xref:System.Windows.Controls.ValidationRule>類別，並實作<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法。 下列範例示範所使用的規則*Add Product Listing* "Start Date"<xref:System.Windows.Controls.TextBox>從[資料繫結是什麼？](#what_is_data_binding)區段：  
   
- [!code-csharp[DataBindingLab#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/FutureDateRule.cs#2)]
- [!code-vb[DataBindingLab#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/FutureDateRule.vb#2)]  
+ [!code-csharp[DataBindingLab#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/FutureDateRule.cs#2)]
+ [!code-vb[DataBindingLab#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/FutureDateRule.vb#2)]  
   
  *StartDateEntryForm* <xref:System.Windows.Controls.TextBox>會使用此*FutureDateRule*，如下列範例所示：  
   
- [!code-xaml[DataBindingLab#CustomValidation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#customvalidation)]  
+ [!code-xaml[DataBindingLab#CustomValidation](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#customvalidation)]  
   
  請注意，因為<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值是<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>，繫結引擎會更新每個按鍵動作，這表示它也檢查的來源值中的每個規則<xref:System.Windows.Data.Binding.ValidationRules%2A>上每個按鍵動作的集合。 我們將在＜驗證程序＞一節進一步討論這個部分。  
   
@@ -383,23 +383,23 @@ ms.locfileid: "54503205"
 ### <a name="providing-visual-feedback"></a>提供視覺化回應  
  如果使用者輸入無效值，您可能會想要在應用程式 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中提供一些關於錯誤的回應。 其中一種方式來提供這類回應是將<xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType>附加屬性設定為自訂<xref:System.Windows.Controls.ControlTemplate>。 如先前小節中，所示*StartDateEntryForm* <xref:System.Windows.Controls.TextBox>會使用<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>呼叫*validationTemplate*。 下列範例顯示 *validationTemplate* 的定義：  
   
- [!code-xaml[DataBindingLab#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#1)]  
+ [!code-xaml[DataBindingLab#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#1)]  
   
  <xref:System.Windows.Controls.AdornedElementPlaceholder>項目會指定應放置要裝飾的控制項。  
   
  此外，您也可以使用<xref:System.Windows.Controls.ToolTip>以顯示錯誤訊息。 這兩個*StartDateEntryForm*並*StartPriceEntryForm*<xref:System.Windows.Controls.TextBox>使用樣式*textStyleTextBox*，這會建立<xref:System.Windows.Controls.ToolTip>，顯示錯誤訊息。 下列範例顯示 *textStyleTextBox* 的定義。 附加的屬性<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>是`true`一或多個繫結的繫結項目屬性何時發生錯誤。  
   
- [!code-xaml[DataBindingLab#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#14)]  
+ [!code-xaml[DataBindingLab#14](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#14)]  
   
  以自訂<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>而<xref:System.Windows.Controls.ToolTip>，則*StartDateEntryForm* <xref:System.Windows.Controls.TextBox>驗證錯誤時，看起來會如下所示：  
   
- ![資料繫結驗證錯誤](../../../../docs/framework/wpf/data/media/databindingdemo-validation.PNG "DataBindingDemo_Validation")  
+ ![資料繫結驗證錯誤](./media/databindingdemo-validation.PNG "DataBindingDemo_Validation")  
   
  如果您<xref:System.Windows.Data.Binding>有相關聯的驗證規則，但您不指定<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>繫結控制項，也就是預設值上<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>將用來驗證錯誤時，通知使用者。 預設值<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>是控制項範本定義的裝飾項層的紅色外框。 預設值<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>和<xref:System.Windows.Controls.ToolTip>，則[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的*StartPriceEntryForm* <xref:System.Windows.Controls.TextBox>驗證錯誤時，看起來會如下所示：  
   
- ![資料繫結驗證錯誤](../../../../docs/framework/wpf/data/media/databindingdemo-validationdefault.PNG "DataBindingDemo_ValidationDefault")  
+ ![資料繫結驗證錯誤](./media/databindingdemo-validationdefault.PNG "DataBindingDemo_ValidationDefault")  
   
- 如需如何提供邏輯以驗證對話方塊中所有控制項的範例，請參閱[對話方塊概觀](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)中的＜自訂對話方塊＞一節。  
+ 如需如何提供邏輯以驗證對話方塊中所有控制項的範例，請參閱[對話方塊概觀](../app-development/dialog-boxes-overview.md)中的＜自訂對話方塊＞一節。  
   
 ### <a name="validation-process"></a>驗證程序  
  通常驗證發生的時機，是將目標的值傳輸到繫結來源屬性的時候。 這會發生<xref:System.Windows.Data.BindingMode.TwoWay>和<xref:System.Windows.Data.BindingMode.OneWayToSource>繫結。 再次提醒您，造成來源更新的原因而定的值<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性中所述[觸發來源更新](#what_triggers_source_updates)一節。  
@@ -431,9 +431,9 @@ ms.locfileid: "54503205"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Controls.DataErrorValidationRule>
-- [WPF 第 4.5 版的新功能](../../../../docs/framework/wpf/getting-started/whats-new.md)
-- [繫結至 LINQ 查詢的結果](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
-- [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [WPF 第 4.5 版的新功能](../getting-started/whats-new.md)
+- [繫結至 LINQ 查詢的結果](how-to-bind-to-the-results-of-a-linq-query.md)
+- [資料繫結](../advanced/optimizing-performance-data-binding.md)
 - [資料繫結示範](https://go.microsoft.com/fwlink/?LinkID=163703)
-- [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
-- [繫結至 ADO.NET 資料來源](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [繫結至 ADO.NET 資料來源](how-to-bind-to-an-ado-net-data-source.md)

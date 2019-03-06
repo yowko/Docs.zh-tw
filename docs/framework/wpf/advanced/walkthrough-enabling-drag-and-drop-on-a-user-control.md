@@ -8,12 +8,12 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: a2aa1d09b922809f42fe14bd674c2a87b9e5a3f8
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 7009f56c25ff63729f0b0170503c2f356dc91301
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747791"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352915"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>逐步解說：啟用拖曳並放在使用者控制項
 
@@ -46,7 +46,7 @@ ms.locfileid: "56747791"
 
      此標記會建立測試應用程式的使用者介面。
 
-     [!code-xaml[DragDropWalkthrough#PanelsStep1XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep1xaml)]
+     [!code-xaml[DragDropWalkthrough#PanelsStep1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep1xaml)]
 
 ## <a name="add-a-new-user-control-to-the-project"></a>將新的使用者控制項加入至專案
  在本節中，您會將新的使用者控制項新增至專案。
@@ -63,7 +63,7 @@ ms.locfileid: "56747791"
 
 4.  將下列標記新增至根<xref:System.Windows.Controls.Grid>建立將藍色圓形作為其 UI 的簡單使用者控制項。
 
-     [!code-xaml[DragDropWalkthrough#EllipseXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]
+     [!code-xaml[DragDropWalkthrough#EllipseXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]
 
 5.  開啟 Circle.xaml.cs 或 Circle.xaml.vb。
 
@@ -71,8 +71,8 @@ ms.locfileid: "56747791"
 
      若要允許複製使用者控制項，您可以在程式碼後置檔案中新增複製建構函式方法。 在簡化 Circle 使用者控制項中，您只會複製使用者控制項的填滿和大小。
 
-     [!code-csharp[DragDropWalkthrough#CopyCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#copyctor)]
-     [!code-vb[DragDropWalkthrough#CopyCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#copyctor)]
+     [!code-csharp[DragDropWalkthrough#CopyCtor](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#copyctor)]
+     [!code-vb[DragDropWalkthrough#CopyCtor](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#copyctor)]
 
 ## <a name="add-the-user-control-to-the-main-window"></a>將使用者控制項新增至主視窗
 
@@ -86,11 +86,11 @@ ms.locfileid: "56747791"
 
 3.  在第一個<xref:System.Windows.Controls.StackPanel>，加入下列 XAML 來建立 Circle 使用者控制項的兩個執行個體中第一個面板。
 
-     [!code-xaml[DragDropWalkthrough#CirclesXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]
+     [!code-xaml[DragDropWalkthrough#CirclesXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]
 
      面板的完整 XAML 如下。
 
-     [!code-xaml[DragDropWalkthrough#PanelsStep2XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]
+     [!code-xaml[DragDropWalkthrough#PanelsStep2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]
 
 ## <a name="implement-drag-source-events-in-the-user-control"></a>在 使用者控制項中實作拖曳來源事件
  在本節中，您將會覆寫<xref:System.Windows.UIElement.OnMouseMove%2A>方法並起始拖放作業。
@@ -103,8 +103,8 @@ ms.locfileid: "56747791"
 
 2.  新增下列<xref:System.Windows.UIElement.OnMouseMove%2A>覆寫，以提供類別處理<xref:System.Windows.UIElement.MouseMove>事件。
 
-     [!code-csharp[DragDropWalkthrough#OnMouseMove](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
-     [!code-vb[DragDropWalkthrough#OnMouseMove](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]
+     [!code-csharp[DragDropWalkthrough#OnMouseMove](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
+     [!code-vb[DragDropWalkthrough#OnMouseMove](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]
 
      這<xref:System.Windows.UIElement.OnMouseMove%2A>覆寫會執行下列工作：
 
@@ -128,7 +128,7 @@ ms.locfileid: "56747791"
 
 6.  將拖放至 Circle <xref:System.Windows.Controls.TextBox>。 Circle 之填滿色彩的字串表示附加至<xref:System.Windows.Controls.TextBox>。
 
-     ![Circle 之填滿色彩的字串表示](../../../../docs/framework/wpf/advanced/media/dragdrop-colorstring.png "DragDrop_ColorString")
+     ![Circle 之填滿色彩的字串表示](./media/dragdrop-colorstring.png "DragDrop_ColorString")
 
 根據預設，游標會在拖放作業期間變更，表示置放資料的效果。 您可以自訂處理所提供給使用者的意見反應<xref:System.Windows.UIElement.GiveFeedback>事件，並設定不同的資料指標。
 
@@ -138,8 +138,8 @@ ms.locfileid: "56747791"
 
 2.  新增下列<xref:System.Windows.UIElement.OnGiveFeedback%2A>覆寫，以提供類別處理<xref:System.Windows.UIElement.GiveFeedback>事件。
 
-     [!code-csharp[DragDropWalkthrough#OnGiveFeedback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
-     [!code-vb[DragDropWalkthrough#OnGiveFeedback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]
+     [!code-csharp[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
+     [!code-vb[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]
 
      這<xref:System.Windows.UIElement.OnGiveFeedback%2A>覆寫會執行下列工作：
 
@@ -151,7 +151,7 @@ ms.locfileid: "56747791"
 
 4.  拖曳 Circle 的其中一個控制面板，圓形，而<xref:System.Windows.Controls.TextBox>。 請注意，游標現在是您在中指定的自訂游標<xref:System.Windows.UIElement.OnGiveFeedback%2A>覆寫。
 
-     ![以自訂游標執行拖放作業](../../../../docs/framework/wpf/advanced/media/dragdrop-customcursor.png "DragDrop_CustomCursor")
+     ![以自訂游標執行拖放作業](./media/dragdrop-customcursor.png "DragDrop_CustomCursor")
 
 5.  選取的文字`green`從<xref:System.Windows.Controls.TextBox>。
 
@@ -166,7 +166,7 @@ ms.locfileid: "56747791"
 
 2.  在開頭<xref:System.Windows.Controls.UserControl>標記中加入<xref:System.Windows.UIElement.AllowDrop%2A>屬性並將它設定為`true`。
 
-     [!code-xaml[DragDropWalkthrough#UCTagXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]
+     [!code-xaml[DragDropWalkthrough#UCTagXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]
 
 <xref:System.Windows.UIElement.OnDrop%2A>方法時，會呼叫<xref:System.Windows.UIElement.AllowDrop%2A>屬性設定為`true`和從拖曳來源的資料放在 Circle 使用者控制項上。 在此方法中，您將處理置放的資料，並將資料套用至 Circle。
 
@@ -176,8 +176,8 @@ ms.locfileid: "56747791"
 
 2.  新增下列<xref:System.Windows.UIElement.OnDrop%2A>覆寫，以提供類別處理<xref:System.Windows.UIElement.Drop>事件。
 
-     [!code-csharp[DragDropWalkthrough#OnDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
-     [!code-vb[DragDropWalkthrough#OnDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]
+     [!code-csharp[DragDropWalkthrough#OnDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
+     [!code-vb[DragDropWalkthrough#OnDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]
 
      這<xref:System.Windows.UIElement.OnDrop%2A>覆寫會執行下列工作：
 
@@ -197,7 +197,7 @@ ms.locfileid: "56747791"
 
 5.  將文字拖放至 Circle 控制項。 Circle 會從藍色變成綠色。
 
-     ![將字串轉換成筆刷](../../../../docs/framework/wpf/advanced/media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
+     ![將字串轉換成筆刷](./media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
 
 6.  輸入文字`green`在<xref:System.Windows.Controls.TextBox>。
 
@@ -217,8 +217,8 @@ ms.locfileid: "56747791"
 
 2.  新增下列<xref:System.Windows.UIElement.OnDragOver%2A>覆寫，以提供類別處理<xref:System.Windows.UIElement.DragOver>事件。
 
-     [!code-csharp[DragDropWalkthrough#OnDragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
-     [!code-vb[DragDropWalkthrough#OnDragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]
+     [!code-csharp[DragDropWalkthrough#OnDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
+     [!code-vb[DragDropWalkthrough#OnDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]
 
      這<xref:System.Windows.UIElement.OnDragOver%2A>覆寫會執行下列工作：
 
@@ -242,13 +242,13 @@ ms.locfileid: "56747791"
 
 2.  在 Circle 類別中，宣告私用<xref:System.Windows.Media.Brush>名`_previousFill`並將它初始化為`null`。
 
-     [!code-csharp[DragDropWalkthrough#Brush](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
-     [!code-vb[DragDropWalkthrough#Brush](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]
+     [!code-csharp[DragDropWalkthrough#Brush](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
+     [!code-vb[DragDropWalkthrough#Brush](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]
 
 3.  新增下列<xref:System.Windows.UIElement.OnDragEnter%2A>覆寫，以提供類別處理<xref:System.Windows.UIElement.DragEnter>事件。
 
-     [!code-csharp[DragDropWalkthrough#OnDragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
-     [!code-vb[DragDropWalkthrough#OnDragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]
+     [!code-csharp[DragDropWalkthrough#OnDragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
+     [!code-vb[DragDropWalkthrough#OnDragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]
 
      這<xref:System.Windows.UIElement.OnDragEnter%2A>覆寫會執行下列工作：
 
@@ -260,8 +260,8 @@ ms.locfileid: "56747791"
 
 4.  新增下列<xref:System.Windows.UIElement.OnDragLeave%2A>覆寫，以提供類別處理<xref:System.Windows.UIElement.DragLeave>事件。
 
-     [!code-csharp[DragDropWalkthrough#OnDragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
-     [!code-vb[DragDropWalkthrough#OnDragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]
+     [!code-csharp[DragDropWalkthrough#OnDragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
+     [!code-vb[DragDropWalkthrough#OnDragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]
 
      這<xref:System.Windows.UIElement.OnDragLeave%2A>覆寫會執行下列工作：
 
@@ -273,7 +273,7 @@ ms.locfileid: "56747791"
 
 7.  將文字拖曳至 Circle 控制項上方，但不置放文字。 Circle 會從藍色變成綠色。
 
-     ![預覽拖放作業的效果](../../../../docs/framework/wpf/advanced/media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
+     ![預覽拖放作業的效果](./media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
 
 8.  從 Circle 控制項拖離文字。 Circle 會從綠色變回藍色。
 
@@ -285,14 +285,14 @@ ms.locfileid: "56747791"
 
 2.  下列 XAML，在每個所示<xref:System.Windows.Controls.StackPanel>控制項，加入處理常式<xref:System.Windows.UIElement.DragOver>和<xref:System.Windows.UIElement.Drop>事件。 名稱<xref:System.Windows.UIElement.DragOver>事件處理常式`panel_DragOver`，並命名<xref:System.Windows.UIElement.Drop>事件處理常式， `panel_Drop`。
 
-     [!code-xaml[DragDropWalkthrough#PanelsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]
+     [!code-xaml[DragDropWalkthrough#PanelsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]
 
 3.  開啟 MainWindows.xaml.cs 或 MainWindow.xaml.vb。
 
 4.  新增下列程式碼<xref:System.Windows.UIElement.DragOver>事件處理常式。
 
-     [!code-csharp[DragDropWalkthrough#PanelDragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldragover)]
-     [!code-vb[DragDropWalkthrough#PanelDragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldragover)]
+     [!code-csharp[DragDropWalkthrough#PanelDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldragover)]
+     [!code-vb[DragDropWalkthrough#PanelDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldragover)]
 
      這<xref:System.Windows.UIElement.DragOver>事件處理常式會執行下列工作：
 
@@ -304,8 +304,8 @@ ms.locfileid: "56747791"
 
 5.  新增下列程式碼<xref:System.Windows.UIElement.Drop>事件處理常式。
 
-     [!code-csharp[DragDropWalkthrough#PanelDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldrop)]
-     [!code-vb[DragDropWalkthrough#PanelDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldrop)]
+     [!code-csharp[DragDropWalkthrough#PanelDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldrop)]
+     [!code-vb[DragDropWalkthrough#PanelDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldrop)]
 
      這<xref:System.Windows.UIElement.Drop>事件處理常式會執行下列工作：
 
@@ -329,8 +329,8 @@ ms.locfileid: "56747791"
 
 10. 將 Circle 控制項從另一個面板為面板拖放時按下**Ctrl**索引鍵。 會複製 Circle，並將複本新增至<xref:System.Windows.Controls.Panel.Children%2A>接收面板的集合。
 
-     ![拖曳 Circle 時按住 CTRL 鍵](../../../../docs/framework/wpf/advanced/media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
+     ![拖曳 Circle 時按住 CTRL 鍵](./media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
 
 ## <a name="see-also"></a>另請參閱
 
-- [拖放概觀](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+- [拖放概觀](drag-and-drop-overview.md)
