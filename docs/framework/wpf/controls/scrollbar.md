@@ -7,20 +7,20 @@ helpviewer_keywords:
 - ScrollBar control [WPF]
 - controls [WPF], ScrollBar
 ms.assetid: 60f27d35-8f7b-4285-89d2-28336a4c073a
-ms.openlocfilehash: 9ae7334172b5cbc4ea7fb6be3caebcf2c47589ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 242dbdeeed5408815878aa30ef276019e1ccc2c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555999"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358843"
 ---
-# <a name="scrollbar"></a><span data-ttu-id="76bcd-102">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="76bcd-102">ScrollBar</span></span>
-<span data-ttu-id="76bcd-103">A<xref:System.Windows.Controls.Primitives.ScrollBar>可讓您檢視的內容在目前的檢視區之外滑動<xref:System.Windows.Controls.Primitives.Thumb>來顯示內容。</span><span class="sxs-lookup"><span data-stu-id="76bcd-103">A <xref:System.Windows.Controls.Primitives.ScrollBar> allows you to view content that is outside of the current viewing area by sliding the <xref:System.Windows.Controls.Primitives.Thumb> to make the content visible.</span></span>  
+# <a name="scrollbar"></a><span data-ttu-id="e37e2-102">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="e37e2-102">ScrollBar</span></span>
+<span data-ttu-id="e37e2-103">A<xref:System.Windows.Controls.Primitives.ScrollBar>可讓您檢視滑動超出目前的檢視區域的內容<xref:System.Windows.Controls.Primitives.Thumb>來顯示內容。</span><span class="sxs-lookup"><span data-stu-id="e37e2-103">A <xref:System.Windows.Controls.Primitives.ScrollBar> allows you to view content that is outside of the current viewing area by sliding the <xref:System.Windows.Controls.Primitives.Thumb> to make the content visible.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="76bcd-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="76bcd-104">In This Section</span></span>  
- [<span data-ttu-id="76bcd-105">自訂 ScrollBar 上捲動方塊的大小</span><span class="sxs-lookup"><span data-stu-id="76bcd-105">Customize the Thumb Size on a ScrollBar</span></span>](../../../../docs/framework/wpf/controls/how-to-customize-the-thumb-size-on-a-scrollbar.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e37e2-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="e37e2-104">In This Section</span></span>  
+ [<span data-ttu-id="e37e2-105">自訂 ScrollBar 上捲動方塊的大小</span><span class="sxs-lookup"><span data-stu-id="e37e2-105">Customize the Thumb Size on a ScrollBar</span></span>](how-to-customize-the-thumb-size-on-a-scrollbar.md)  
   
-## <a name="reference"></a><span data-ttu-id="76bcd-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="76bcd-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e37e2-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="e37e2-106">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   <xref:System.Windows.Controls.Primitives.Track>  
   <xref:System.Windows.Controls.Primitives.Thumb>  

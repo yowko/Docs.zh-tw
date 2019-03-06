@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], how-to topics
 ms.assetid: c31e85e3-963f-4693-b463-a29adc433fcd
-ms.openlocfilehash: 772f5cdc4f9f1b33e040d252a1308b9ce646611e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ab53f0164c5623c93132d29045498ccffaf9712
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550159"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357543"
 ---
-# <a name="expander-how-to-topics"></a><span data-ttu-id="b9963-102">Expander HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="b9963-102">Expander How-to Topics</span></span>
-<span data-ttu-id="b9963-103">本節中的主題描述如何使用<xref:System.Windows.Controls.Expander>控制項。</span><span class="sxs-lookup"><span data-stu-id="b9963-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Expander> control.</span></span>  
+# <a name="expander-how-to-topics"></a><span data-ttu-id="d33a4-102">Expander HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="d33a4-102">Expander How-to Topics</span></span>
+<span data-ttu-id="d33a4-103">在本節中的主題描述如何使用<xref:System.Windows.Controls.Expander>控制項。</span><span class="sxs-lookup"><span data-stu-id="d33a4-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Expander> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b9963-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="b9963-104">In This Section</span></span>  
- [<span data-ttu-id="b9963-105">使用 ScrollViewer 建立 Expander</span><span class="sxs-lookup"><span data-stu-id="b9963-105">Create an Expander with a ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/how-to-create-an-expander-with-a-scrollviewer.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d33a4-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="d33a4-104">In This Section</span></span>  
+ [<span data-ttu-id="d33a4-105">使用 ScrollViewer 建立 Expander</span><span class="sxs-lookup"><span data-stu-id="d33a4-105">Create an Expander with a ScrollViewer</span></span>](how-to-create-an-expander-with-a-scrollviewer.md)  
   
-## <a name="reference"></a><span data-ttu-id="b9963-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="b9963-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d33a4-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="d33a4-106">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="b9963-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="b9963-107">Related Sections</span></span>  
- [<span data-ttu-id="b9963-108">Expander 概觀</span><span class="sxs-lookup"><span data-stu-id="b9963-108">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="d33a4-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="d33a4-107">Related Sections</span></span>  
+ [<span data-ttu-id="d33a4-108">Expander 概觀</span><span class="sxs-lookup"><span data-stu-id="d33a4-108">Expander Overview</span></span>](expander-overview.md)

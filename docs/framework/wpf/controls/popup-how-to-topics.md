@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Popup control [WPF], how-to topics
 - controls [WPF], Popup
 ms.assetid: 9488a245-0168-4650-b9ab-d075a108cc8f
-ms.openlocfilehash: 4b7bd1398e2630c7f2496c9cc78fe1d20c27c941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80f0d8bb3f78e80868d5294b5893ef409fdf478c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553711"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362522"
 ---
-# <a name="popup-how-to-topics"></a><span data-ttu-id="eb810-102">Popup HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="eb810-102">Popup How-to Topics</span></span>
-<span data-ttu-id="eb810-103">本節中的主題描述如何使用<xref:System.Windows.Controls.Primitives.Popup>漂浮在目前的應用程式視窗的另一個視窗中顯示內容控制項。</span><span class="sxs-lookup"><span data-stu-id="eb810-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup-how-to-topics"></a><span data-ttu-id="2fbbb-102">Popup HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="2fbbb-102">Popup How-to Topics</span></span>
+<span data-ttu-id="2fbbb-103">在本節中的主題描述如何使用<xref:System.Windows.Controls.Primitives.Popup>漂浮在目前的應用程式視窗的另一個視窗中顯示內容的控制項。</span><span class="sxs-lookup"><span data-stu-id="2fbbb-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="eb810-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="eb810-104">In This Section</span></span>  
- [<span data-ttu-id="eb810-105">建立快顯功能表的動畫</span><span class="sxs-lookup"><span data-stu-id="eb810-105">Animate a Popup</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
- [<span data-ttu-id="eb810-106">指定自訂 Popup 的位置</span><span class="sxs-lookup"><span data-stu-id="eb810-106">Specify a Custom Popup Position</span></span>](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2fbbb-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="2fbbb-104">In This Section</span></span>  
+ [<span data-ttu-id="2fbbb-105">建立快顯功能表的動畫</span><span class="sxs-lookup"><span data-stu-id="2fbbb-105">Animate a Popup</span></span>](how-to-animate-a-popup.md)  
+ [<span data-ttu-id="2fbbb-106">指定自訂 Popup 的位置</span><span class="sxs-lookup"><span data-stu-id="2fbbb-106">Specify a Custom Popup Position</span></span>](how-to-specify-a-custom-popup-position.md)  
   
-## <a name="reference"></a><span data-ttu-id="eb810-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="eb810-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2fbbb-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="2fbbb-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="eb810-108">相關章節</span><span class="sxs-lookup"><span data-stu-id="eb810-108">Related Sections</span></span>  
- [<span data-ttu-id="eb810-109">快顯功能表概觀</span><span class="sxs-lookup"><span data-stu-id="eb810-109">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="2fbbb-108">相關章節</span><span class="sxs-lookup"><span data-stu-id="2fbbb-108">Related Sections</span></span>  
+ [<span data-ttu-id="2fbbb-109">快顯功能表概觀</span><span class="sxs-lookup"><span data-stu-id="2fbbb-109">Popup Overview</span></span>](popup-overview.md)

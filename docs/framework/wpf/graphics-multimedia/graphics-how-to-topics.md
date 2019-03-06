@@ -8,25 +8,25 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 63f268692924db94710d4aa21ff6f03b00989f67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688200"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358781"
 ---
-# <a name="graphics-how-to-topics"></a><span data-ttu-id="43a18-102">圖形 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="43a18-102">Graphics How-to Topics</span></span>
-<span data-ttu-id="43a18-103">下列主題示範如何使用的圖形功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="43a18-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="graphics-how-to-topics"></a><span data-ttu-id="ad1cb-102">圖形 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="ad1cb-102">Graphics How-to Topics</span></span>
+<span data-ttu-id="ad1cb-103">下列主題示範如何使用的圖形功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="ad1cb-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="43a18-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="43a18-104">In This Section</span></span>  
- [<span data-ttu-id="43a18-105">建立矩形動畫</span><span class="sxs-lookup"><span data-stu-id="43a18-105">Animate a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [<span data-ttu-id="43a18-106">使用 PointAnimation 建立物件位置的動畫</span><span class="sxs-lookup"><span data-stu-id="43a18-106">Animate the Position of an Object by Using PointAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [<span data-ttu-id="43a18-107">轉換點和向量</span><span class="sxs-lookup"><span data-stu-id="43a18-107">Transform Points and Vectors</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [<span data-ttu-id="43a18-108">將玻璃框架擴充至 WPF 應用程式中</span><span class="sxs-lookup"><span data-stu-id="43a18-108">Extend Glass Frame Into a WPF Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [<span data-ttu-id="43a18-109">如何：透過快取元素改善轉譯效能</span><span class="sxs-lookup"><span data-stu-id="43a18-109">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [<span data-ttu-id="43a18-110">如何：使用快取項目當做筆刷</span><span class="sxs-lookup"><span data-stu-id="43a18-110">How to: Use a Cached Element as a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ad1cb-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="ad1cb-104">In This Section</span></span>  
+ [<span data-ttu-id="ad1cb-105">建立矩形動畫</span><span class="sxs-lookup"><span data-stu-id="ad1cb-105">Animate a Rectangle</span></span>](how-to-animate-a-rectangle.md)  
+ [<span data-ttu-id="ad1cb-106">使用 PointAnimation 建立物件位置的動畫</span><span class="sxs-lookup"><span data-stu-id="ad1cb-106">Animate the Position of an Object by Using PointAnimation</span></span>](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [<span data-ttu-id="ad1cb-107">轉換點和向量</span><span class="sxs-lookup"><span data-stu-id="ad1cb-107">Transform Points and Vectors</span></span>](how-to-transform-points-and-vectors.md)  
+ [<span data-ttu-id="ad1cb-108">將玻璃框架擴充至 WPF 應用程式中</span><span class="sxs-lookup"><span data-stu-id="ad1cb-108">Extend Glass Frame Into a WPF Application</span></span>](extend-glass-frame-into-a-wpf-application.md)  
+ [<span data-ttu-id="ad1cb-109">如何：透過快取元素改善轉譯效能</span><span class="sxs-lookup"><span data-stu-id="ad1cb-109">How to: Improve Rendering Performance by Caching an Element</span></span>](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [<span data-ttu-id="ad1cb-110">如何：使用快取項目當做筆刷</span><span class="sxs-lookup"><span data-stu-id="ad1cb-110">How to: Use a Cached Element as a Brush</span></span>](how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a><span data-ttu-id="43a18-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="43a18-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad1cb-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ad1cb-111">See also</span></span>
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
@@ -34,5 +34,5 @@ ms.locfileid: "54688200"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [<span data-ttu-id="43a18-112">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="43a18-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [<span data-ttu-id="43a18-113">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="43a18-113">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="ad1cb-112">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="ad1cb-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="ad1cb-113">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="ad1cb-113">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

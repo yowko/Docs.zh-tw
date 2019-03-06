@@ -3,22 +3,22 @@ title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
 ms.openlocfilehash: effceee30abdaa1725b8c8718df22632961871e8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266412"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358570"
 ---
-# <a name="endpointdiscovery"></a><span data-ttu-id="cd8fd-101">\<endpointDiscovery></span><span class="sxs-lookup"><span data-stu-id="cd8fd-101">\<endpointDiscovery></span></span>
-<span data-ttu-id="cd8fd-102">指定端點的各種探索設定，例如其探索能力、範圍以及中繼資料的任何自訂延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-102">Specifies the various discovery settings for an endpoint, such as its discoverability, scopes, and any custom extensions to its metadata.</span></span>  
+# <a name="endpointdiscovery"></a><span data-ttu-id="33671-101">\<endpointDiscovery></span><span class="sxs-lookup"><span data-stu-id="33671-101">\<endpointDiscovery></span></span>
+<span data-ttu-id="33671-102">指定端點的各種探索設定，例如其探索能力、範圍以及中繼資料的任何自訂延伸模組。</span><span class="sxs-lookup"><span data-stu-id="33671-102">Specifies the various discovery settings for an endpoint, such as its discoverability, scopes, and any custom extensions to its metadata.</span></span>  
   
-<span data-ttu-id="cd8fd-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="cd8fd-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="cd8fd-104">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="cd8fd-104">\<behaviors></span></span>  
-<span data-ttu-id="cd8fd-105">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="cd8fd-105">\<endpointBehaviors></span></span>  
-<span data-ttu-id="cd8fd-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="cd8fd-106">\<behavior></span></span>  
-<span data-ttu-id="cd8fd-107">\<endpointDiscovery></span><span class="sxs-lookup"><span data-stu-id="cd8fd-107">\<endpointDiscovery></span></span>  
+<span data-ttu-id="33671-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="33671-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="33671-104">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="33671-104">\<behaviors></span></span>  
+<span data-ttu-id="33671-105">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="33671-105">\<endpointBehaviors></span></span>  
+<span data-ttu-id="33671-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="33671-106">\<behavior></span></span>  
+<span data-ttu-id="33671-107">\<endpointDiscovery></span><span class="sxs-lookup"><span data-stu-id="33671-107">\<endpointDiscovery></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cd8fd-108">語法</span><span class="sxs-lookup"><span data-stu-id="cd8fd-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33671-108">語法</span><span class="sxs-lookup"><span data-stu-id="33671-108">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -35,37 +35,37 @@ ms.locfileid: "55266412"
 </behaviors>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="cd8fd-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="cd8fd-109">Attributes and Elements</span></span>  
- <span data-ttu-id="cd8fd-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="33671-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="33671-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="33671-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="33671-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="cd8fd-111">屬性</span><span class="sxs-lookup"><span data-stu-id="cd8fd-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="33671-111">屬性</span><span class="sxs-lookup"><span data-stu-id="33671-111">Attributes</span></span>  
   
-|<span data-ttu-id="cd8fd-112">屬性</span><span class="sxs-lookup"><span data-stu-id="cd8fd-112">Attribute</span></span>|<span data-ttu-id="cd8fd-113">描述</span><span class="sxs-lookup"><span data-stu-id="cd8fd-113">Description</span></span>|  
+|<span data-ttu-id="33671-112">屬性</span><span class="sxs-lookup"><span data-stu-id="33671-112">Attribute</span></span>|<span data-ttu-id="33671-113">描述</span><span class="sxs-lookup"><span data-stu-id="33671-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="cd8fd-114">enabled</span><span class="sxs-lookup"><span data-stu-id="cd8fd-114">enabled</span></span>|<span data-ttu-id="cd8fd-115">布林值，指定是否在此端點上啟用探索能力。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-115">A Boolean value that specifies whether discoverability is enabled on this endpoint.</span></span> <span data-ttu-id="cd8fd-116">預設為 `false`。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-116">The default is `false`.</span></span>|  
+|<span data-ttu-id="33671-114">enabled</span><span class="sxs-lookup"><span data-stu-id="33671-114">enabled</span></span>|<span data-ttu-id="33671-115">布林值，指定是否在此端點上啟用探索能力。</span><span class="sxs-lookup"><span data-stu-id="33671-115">A Boolean value that specifies whether discoverability is enabled on this endpoint.</span></span> <span data-ttu-id="33671-116">預設為 `false`。</span><span class="sxs-lookup"><span data-stu-id="33671-116">The default is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="cd8fd-117">子元素</span><span class="sxs-lookup"><span data-stu-id="cd8fd-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="33671-117">子元素</span><span class="sxs-lookup"><span data-stu-id="33671-117">Child Elements</span></span>  
   
-|<span data-ttu-id="cd8fd-118">項目</span><span class="sxs-lookup"><span data-stu-id="cd8fd-118">Element</span></span>|<span data-ttu-id="cd8fd-119">描述</span><span class="sxs-lookup"><span data-stu-id="cd8fd-119">Description</span></span>|  
+|<span data-ttu-id="33671-118">項目</span><span class="sxs-lookup"><span data-stu-id="33671-118">Element</span></span>|<span data-ttu-id="33671-119">描述</span><span class="sxs-lookup"><span data-stu-id="33671-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="cd8fd-120">\<scopes></span><span class="sxs-lookup"><span data-stu-id="cd8fd-120">\<scopes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|<span data-ttu-id="cd8fd-121">端點之範圍 URI 的集合。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-121">A collection of scope URIs for the endpoint.</span></span> <span data-ttu-id="cd8fd-122">有一個以上的範圍 URI 與單一端點產生關聯。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-122">More than one scope Uris can be associated with a single endpoint.</span></span>|  
-|<span data-ttu-id="cd8fd-123">[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]</span><span class="sxs-lookup"><span data-stu-id="cd8fd-123">[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]</span></span>|<span data-ttu-id="cd8fd-124">XML 項目的集合，這個集合可讓您指定端點要發行的自訂中繼資料。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-124">A collection of XML elements that allows you to specify custom metadata to be published for an endpoint.</span></span>|  
-|<span data-ttu-id="cd8fd-125">\<types></span><span class="sxs-lookup"><span data-stu-id="cd8fd-125">\<types></span></span>|<span data-ttu-id="cd8fd-126">要搜尋之介面的集合。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-126">A collection of interfaces to search for.</span></span>|  
+|[<span data-ttu-id="33671-120">\<scopes></span><span class="sxs-lookup"><span data-stu-id="33671-120">\<scopes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|<span data-ttu-id="33671-121">端點之範圍 URI 的集合。</span><span class="sxs-lookup"><span data-stu-id="33671-121">A collection of scope URIs for the endpoint.</span></span> <span data-ttu-id="33671-122">有一個以上的範圍 URI 與單一端點產生關聯。</span><span class="sxs-lookup"><span data-stu-id="33671-122">More than one scope Uris can be associated with a single endpoint.</span></span>|  
+|<span data-ttu-id="33671-123">[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]</span><span class="sxs-lookup"><span data-stu-id="33671-123">[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]</span></span>|<span data-ttu-id="33671-124">XML 項目的集合，這個集合可讓您指定端點要發行的自訂中繼資料。</span><span class="sxs-lookup"><span data-stu-id="33671-124">A collection of XML elements that allows you to specify custom metadata to be published for an endpoint.</span></span>|  
+|<span data-ttu-id="33671-125">\<types></span><span class="sxs-lookup"><span data-stu-id="33671-125">\<types></span></span>|<span data-ttu-id="33671-126">要搜尋之介面的集合。</span><span class="sxs-lookup"><span data-stu-id="33671-126">A collection of interfaces to search for.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="cd8fd-127">父項目</span><span class="sxs-lookup"><span data-stu-id="cd8fd-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="33671-127">父項目</span><span class="sxs-lookup"><span data-stu-id="33671-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="cd8fd-128">項目</span><span class="sxs-lookup"><span data-stu-id="cd8fd-128">Element</span></span>|<span data-ttu-id="cd8fd-129">描述</span><span class="sxs-lookup"><span data-stu-id="cd8fd-129">Description</span></span>|  
+|<span data-ttu-id="33671-128">項目</span><span class="sxs-lookup"><span data-stu-id="33671-128">Element</span></span>|<span data-ttu-id="33671-129">描述</span><span class="sxs-lookup"><span data-stu-id="33671-129">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="cd8fd-130">\<behavior></span><span class="sxs-lookup"><span data-stu-id="cd8fd-130">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="cd8fd-131">指定行為項目。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-131">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="33671-130">\<behavior></span><span class="sxs-lookup"><span data-stu-id="33671-130">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="33671-131">指定行為項目。</span><span class="sxs-lookup"><span data-stu-id="33671-131">Specifies a behavior element.</span></span>|  
 |||  
   
-## <a name="remarks"></a><span data-ttu-id="cd8fd-132">備註</span><span class="sxs-lookup"><span data-stu-id="cd8fd-132">Remarks</span></span>  
- <span data-ttu-id="cd8fd-133">加入至端點的行為組態 (且 `enabled` 屬性設為 `true`) 時，這個組態項目會啟用其探索能力。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-133">When added to the endpoint’s behavior configuration and with the `enabled` attribute set to `true`, this configuration element enables its discoverability.</span></span> <span data-ttu-id="cd8fd-134">此外，您可以使用[\<範圍 >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)子項目，若要指定自訂範圍可用來在查詢期間篩選服務端點的 Uri，以及[\<擴充功能 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md)子項目，指定應與標準的可探索中繼資料 （EPR、 ContractTypeName、 BindingName、 範圍及 ListenURI） 一起發行的自訂中繼資料。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-134">In addition, you can use the [\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)child element to specifying custom scope Uris that can be used to filter service endpoints during query, as well as the [\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) child element to specify custom metadata that should be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="33671-132">備註</span><span class="sxs-lookup"><span data-stu-id="33671-132">Remarks</span></span>  
+ <span data-ttu-id="33671-133">加入至端點的行為組態 (且 `enabled` 屬性設為 `true`) 時，這個組態項目會啟用其探索能力。</span><span class="sxs-lookup"><span data-stu-id="33671-133">When added to the endpoint’s behavior configuration and with the `enabled` attribute set to `true`, this configuration element enables its discoverability.</span></span> <span data-ttu-id="33671-134">此外，您可以使用[\<範圍 >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)子項目，若要指定自訂範圍可用來在查詢期間篩選服務端點的 Uri，以及[\<擴充功能 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md)子項目，指定應與標準的可探索中繼資料 （EPR、 ContractTypeName、 BindingName、 範圍及 ListenURI） 一起發行的自訂中繼資料。</span><span class="sxs-lookup"><span data-stu-id="33671-134">In addition, you can use the [\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)child element to specifying custom scope Uris that can be used to filter service endpoints during query, as well as the [\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) child element to specify custom metadata that should be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span>  
   
- <span data-ttu-id="cd8fd-135">這個組態項目是取決於[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)提供探索能力服務層級控制項的項目。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-135">This configuration element is dependent on the [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element that provides the service level control of discoverability.</span></span> <span data-ttu-id="cd8fd-136">這表示，如果，則會忽略這個項目設定[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)不存在於組態中。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-136">This means that this element’s settings are ignored if [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) is not present in the configuration.</span></span>  
+ <span data-ttu-id="33671-135">這個組態項目是取決於[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)提供探索能力服務層級控制項的項目。</span><span class="sxs-lookup"><span data-stu-id="33671-135">This configuration element is dependent on the [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element that provides the service level control of discoverability.</span></span> <span data-ttu-id="33671-136">這表示，如果，則會忽略這個項目設定[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)不存在於組態中。</span><span class="sxs-lookup"><span data-stu-id="33671-136">This means that this element’s settings are ignored if [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) is not present in the configuration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cd8fd-137">範例</span><span class="sxs-lookup"><span data-stu-id="cd8fd-137">Example</span></span>  
- <span data-ttu-id="cd8fd-138">下列組態範例指定用於要針對端點發行的篩選範圍及擴充中繼資料。</span><span class="sxs-lookup"><span data-stu-id="cd8fd-138">The following configuration example specifies filtering scopes and extension metadata to be published for an endpoint.</span></span>  
+## <a name="example"></a><span data-ttu-id="33671-137">範例</span><span class="sxs-lookup"><span data-stu-id="33671-137">Example</span></span>  
+ <span data-ttu-id="33671-138">下列組態範例指定用於要針對端點發行的篩選範圍及擴充中繼資料。</span><span class="sxs-lookup"><span data-stu-id="33671-138">The following configuration example specifies filtering scopes and extension metadata to be published for an endpoint.</span></span>  
   
 ```xml  
 <services>
@@ -104,5 +104,5 @@ ms.locfileid: "55266412"
 </behaviors>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cd8fd-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd8fd-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33671-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="33671-139">See also</span></span>
 - <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

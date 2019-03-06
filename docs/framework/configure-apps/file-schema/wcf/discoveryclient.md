@@ -3,22 +3,22 @@ title: <discoveryClient>
 ms.date: 03/30/2017
 ms.assetid: a78f74c3-1152-4149-ab29-3f12d316caeb
 ms.openlocfilehash: 512a91bf25180606213eb9eb3b4f7c6a0cb4cbbf
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284801"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366227"
 ---
-# <a name="discoveryclient"></a><span data-ttu-id="6541c-101">\<discoveryClient></span><span class="sxs-lookup"><span data-stu-id="6541c-101">\<discoveryClient></span></span>
-<span data-ttu-id="6541c-102">組態項目，用於建立自訂繫結，該繫結可讓用戶端應用程式自動搜尋可探索的服務，並且在執行階段時尋找其位址。</span><span class="sxs-lookup"><span data-stu-id="6541c-102">A configuration element for creating a custom binding that enables a client application to automatically search for a discoverable service and find its address at runtime.</span></span>  
+# <a name="discoveryclient"></a><span data-ttu-id="62df1-101">\<discoveryClient></span><span class="sxs-lookup"><span data-stu-id="62df1-101">\<discoveryClient></span></span>
+<span data-ttu-id="62df1-102">組態項目，用於建立自訂繫結，該繫結可讓用戶端應用程式自動搜尋可探索的服務，並且在執行階段時尋找其位址。</span><span class="sxs-lookup"><span data-stu-id="62df1-102">A configuration element for creating a custom binding that enables a client application to automatically search for a discoverable service and find its address at runtime.</span></span>  
   
-<span data-ttu-id="6541c-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="6541c-103">\<system.serviceModel></span></span>  
-<span data-ttu-id="6541c-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="6541c-104">\<bindings></span></span>  
-<span data-ttu-id="6541c-105">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="6541c-105">\<customBinding></span></span>  
-<span data-ttu-id="6541c-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="6541c-106">\<binding></span></span>  
-<span data-ttu-id="6541c-107">\<discoveryClient></span><span class="sxs-lookup"><span data-stu-id="6541c-107">\<discoveryClient></span></span>  
+<span data-ttu-id="62df1-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="62df1-103">\<system.serviceModel></span></span>  
+<span data-ttu-id="62df1-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="62df1-104">\<bindings></span></span>  
+<span data-ttu-id="62df1-105">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="62df1-105">\<customBinding></span></span>  
+<span data-ttu-id="62df1-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="62df1-106">\<binding></span></span>  
+<span data-ttu-id="62df1-107">\<discoveryClient></span><span class="sxs-lookup"><span data-stu-id="62df1-107">\<discoveryClient></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6541c-108">語法</span><span class="sxs-lookup"><span data-stu-id="6541c-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="62df1-108">語法</span><span class="sxs-lookup"><span data-stu-id="62df1-108">Syntax</span></span>  
   
 ```xml  
 <discoveryClient discoveryEndpoint="String">
@@ -37,27 +37,27 @@ ms.locfileid: "55284801"
 </discoveryClient>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6541c-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="6541c-109">Attributes and Elements</span></span>  
- <span data-ttu-id="6541c-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="6541c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="62df1-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="62df1-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="62df1-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="62df1-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6541c-111">屬性</span><span class="sxs-lookup"><span data-stu-id="6541c-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="62df1-111">屬性</span><span class="sxs-lookup"><span data-stu-id="62df1-111">Attributes</span></span>  
   
-|<span data-ttu-id="6541c-112">屬性</span><span class="sxs-lookup"><span data-stu-id="6541c-112">Attribute</span></span>|<span data-ttu-id="6541c-113">描述</span><span class="sxs-lookup"><span data-stu-id="6541c-113">Description</span></span>|  
+|<span data-ttu-id="62df1-112">屬性</span><span class="sxs-lookup"><span data-stu-id="62df1-112">Attribute</span></span>|<span data-ttu-id="62df1-113">描述</span><span class="sxs-lookup"><span data-stu-id="62df1-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="6541c-114">discoveryEndpoint</span><span class="sxs-lookup"><span data-stu-id="6541c-114">discoveryEndpoint</span></span>|<span data-ttu-id="6541c-115">字串，其中包含探索端點的名稱，該探索端點可讓用戶端應用程式自動搜尋可探索的服務，並且在執行階段時尋找其位址。</span><span class="sxs-lookup"><span data-stu-id="6541c-115">A string that contains the name of the Discovery Endpoint that enables a client application to automatically search for a discoverable service and find its address at runtime.</span></span>|  
+|<span data-ttu-id="62df1-114">discoveryEndpoint</span><span class="sxs-lookup"><span data-stu-id="62df1-114">discoveryEndpoint</span></span>|<span data-ttu-id="62df1-115">字串，其中包含探索端點的名稱，該探索端點可讓用戶端應用程式自動搜尋可探索的服務，並且在執行階段時尋找其位址。</span><span class="sxs-lookup"><span data-stu-id="62df1-115">A string that contains the name of the Discovery Endpoint that enables a client application to automatically search for a discoverable service and find its address at runtime.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="6541c-116">子元素</span><span class="sxs-lookup"><span data-stu-id="6541c-116">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="62df1-116">子元素</span><span class="sxs-lookup"><span data-stu-id="62df1-116">Child Elements</span></span>  
   
-|<span data-ttu-id="6541c-117">項目</span><span class="sxs-lookup"><span data-stu-id="6541c-117">Element</span></span>|<span data-ttu-id="6541c-118">描述</span><span class="sxs-lookup"><span data-stu-id="6541c-118">Description</span></span>|  
+|<span data-ttu-id="62df1-117">項目</span><span class="sxs-lookup"><span data-stu-id="62df1-117">Element</span></span>|<span data-ttu-id="62df1-118">描述</span><span class="sxs-lookup"><span data-stu-id="62df1-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6541c-119">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="6541c-119">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="6541c-120">組態項目，該項目提供一組用戶端應用程式搜尋探索服務時所用的準則。</span><span class="sxs-lookup"><span data-stu-id="6541c-120">A configuration element that supplies a set of criteria used by a client application to search for a discovery service.</span></span> <span data-ttu-id="6541c-121">準則可以分組為搜尋準則 （指定您要尋找的服務），以及尋找終止準則 （搜尋應持續多久）。</span><span class="sxs-lookup"><span data-stu-id="6541c-121">Criteria can be grouped into search criteria (specifying what services you’re looking for) and find termination criteria (how long the search should last).</span></span>|  
+|[<span data-ttu-id="62df1-119">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="62df1-119">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="62df1-120">組態項目，該項目提供一組用戶端應用程式搜尋探索服務時所用的準則。</span><span class="sxs-lookup"><span data-stu-id="62df1-120">A configuration element that supplies a set of criteria used by a client application to search for a discovery service.</span></span> <span data-ttu-id="62df1-121">準則可以分組為搜尋準則 （指定您要尋找的服務），以及尋找終止準則 （搜尋應持續多久）。</span><span class="sxs-lookup"><span data-stu-id="62df1-121">Criteria can be grouped into search criteria (specifying what services you’re looking for) and find termination criteria (how long the search should last).</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="6541c-122">父項目</span><span class="sxs-lookup"><span data-stu-id="6541c-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="62df1-122">父項目</span><span class="sxs-lookup"><span data-stu-id="62df1-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="6541c-123">項目</span><span class="sxs-lookup"><span data-stu-id="6541c-123">Element</span></span>|<span data-ttu-id="6541c-124">描述</span><span class="sxs-lookup"><span data-stu-id="6541c-124">Description</span></span>|  
+|<span data-ttu-id="62df1-123">項目</span><span class="sxs-lookup"><span data-stu-id="62df1-123">Element</span></span>|<span data-ttu-id="62df1-124">描述</span><span class="sxs-lookup"><span data-stu-id="62df1-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6541c-125">\<binding></span><span class="sxs-lookup"><span data-stu-id="6541c-125">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="6541c-126">定義自訂繫結的所有繫結功能。</span><span class="sxs-lookup"><span data-stu-id="6541c-126">Defines all binding capabilities of the custom binding.</span></span>|  
+|[<span data-ttu-id="62df1-125">\<binding></span><span class="sxs-lookup"><span data-stu-id="62df1-125">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="62df1-126">定義自訂繫結的所有繫結功能。</span><span class="sxs-lookup"><span data-stu-id="62df1-126">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="6541c-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6541c-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62df1-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62df1-127">See also</span></span>
 - <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>
 - <xref:System.ServiceModel.Discovery.Configuration.DiscoveryClientElement>

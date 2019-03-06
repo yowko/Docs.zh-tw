@@ -16,75 +16,80 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf3d422bbcec2754601f6dd07d7b45bab2a716e3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 0e42cf3440bef030f5c7bec71ed1b4b875b79a61
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201155"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378818"
 ---
-# <a name="qualifiersetput-function"></a><span data-ttu-id="8d9a7-103">QualifierSet_Put 函式</span><span class="sxs-lookup"><span data-stu-id="8d9a7-103">QualifierSet_Put function</span></span>
-<span data-ttu-id="8d9a7-104">寫入具名限定詞與值。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-104">Writes the named qualifier and value.</span></span> <span data-ttu-id="8d9a7-105">新限定詞會覆寫先前的相同名稱的值。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-105">The new qualifier overwrites the previous value of the same name.</span></span> <span data-ttu-id="8d9a7-106">如果不存在的辨識符號，它會建立它。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-106">If the qualifier does not exist, it is created.</span></span> 
+# <a name="qualifiersetput-function"></a><span data-ttu-id="66a1a-103">QualifierSet_Put 函式</span><span class="sxs-lookup"><span data-stu-id="66a1a-103">QualifierSet_Put function</span></span>
+
+<span data-ttu-id="66a1a-104">寫入具名限定詞與值。</span><span class="sxs-lookup"><span data-stu-id="66a1a-104">Writes the named qualifier and value.</span></span> <span data-ttu-id="66a1a-105">新限定詞會覆寫先前的相同名稱的值。</span><span class="sxs-lookup"><span data-stu-id="66a1a-105">The new qualifier overwrites the previous value of the same name.</span></span> <span data-ttu-id="66a1a-106">如果不存在的辨識符號，它會建立它。</span><span class="sxs-lookup"><span data-stu-id="66a1a-106">If the qualifier does not exist, it is created.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a><span data-ttu-id="8d9a7-107">語法</span><span class="sxs-lookup"><span data-stu-id="8d9a7-107">Syntax</span></span>  
-  
-```  
+
+## <a name="syntax"></a><span data-ttu-id="66a1a-107">語法</span><span class="sxs-lookup"><span data-stu-id="66a1a-107">Syntax</span></span>
+
+```cpp
 HRESULT QualifierSet_Put (
-   [in] int                  vFunc, 
-   [in] IWbemQualifierSet*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemQualifierSet*   ptr,
    [in] LPCWSTR              wszName,
    [in] VARIANT*             pVal,
    [in] LONG                 lFlavor
-); 
-```  
+);
+```
 
-## <a name="parameters"></a><span data-ttu-id="8d9a7-108">參數</span><span class="sxs-lookup"><span data-stu-id="8d9a7-108">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="66a1a-108">參數</span><span class="sxs-lookup"><span data-stu-id="66a1a-108">Parameters</span></span>
 
-`vFunc`   
-<span data-ttu-id="8d9a7-109">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-109">[in] This parameter is unused.</span></span>
+`vFunc`\
+<span data-ttu-id="66a1a-109">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="66a1a-109">[in] This parameter is unused.</span></span>
 
-`ptr`   
-<span data-ttu-id="8d9a7-110">[in]指標[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)執行個體。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-110">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
+`ptr`\
+<span data-ttu-id="66a1a-110">[in]指標[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)執行個體。</span><span class="sxs-lookup"><span data-stu-id="66a1a-110">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
 
-`wszName`   
-<span data-ttu-id="8d9a7-111">[in]要寫入的限定詞名稱。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-111">[in] The name of the qualifier to write.</span></span>
+`wszName`\
+<span data-ttu-id="66a1a-111">[in]要寫入的限定詞名稱。</span><span class="sxs-lookup"><span data-stu-id="66a1a-111">[in] The name of the qualifier to write.</span></span>
 
-<span data-ttu-id="8d9a7-112">`pVal` [in]有效的指標`VARIANT`，其中包含要寫入的限定詞。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-112">`pVal` [in] A pointer to a valid `VARIANT` that contains the qualifier to write.</span></span> <span data-ttu-id="8d9a7-113">這個參數不可以是 `null`。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-113">This parameter cannot be `null`.</span></span>
+`pVal`\
+<span data-ttu-id="66a1a-112">[in]有效的指標`VARIANT`，其中包含要寫入的限定詞。</span><span class="sxs-lookup"><span data-stu-id="66a1a-112">[in] A pointer to a valid `VARIANT` that contains the qualifier to write.</span></span> <span data-ttu-id="66a1a-113">這個參數不可以是 `null`。</span><span class="sxs-lookup"><span data-stu-id="66a1a-113">This parameter cannot be `null`.</span></span>
 
-<span data-ttu-id="8d9a7-114">`lFlavor` [in]其中一個的所需的限定詞標註，這個辨識符號會定義下列常數。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-114">`lFlavor` [in] One of the following constants that defines the desired qualifier flavors for this qualifier.</span></span> <span data-ttu-id="8d9a7-115">預設值是`WBEM_FLAVOR_OVERRIDABLE`(0)。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-115">The default value is `WBEM_FLAVOR_OVERRIDABLE` (0).</span></span>
+`lFlavor`\
+<span data-ttu-id="66a1a-114">[in]其中一個的所需的限定詞標註，這個辨識符號會定義下列常數。</span><span class="sxs-lookup"><span data-stu-id="66a1a-114">[in] One of the following constants that defines the desired qualifier flavors for this qualifier.</span></span> <span data-ttu-id="66a1a-115">預設值是`WBEM_FLAVOR_OVERRIDABLE`(0)。</span><span class="sxs-lookup"><span data-stu-id="66a1a-115">The default value is `WBEM_FLAVOR_OVERRIDABLE` (0).</span></span>
 
-|<span data-ttu-id="8d9a7-116">常數</span><span class="sxs-lookup"><span data-stu-id="8d9a7-116">Constant</span></span>  |<span data-ttu-id="8d9a7-117">值</span><span class="sxs-lookup"><span data-stu-id="8d9a7-117">Value</span></span>  |<span data-ttu-id="8d9a7-118">描述</span><span class="sxs-lookup"><span data-stu-id="8d9a7-118">Description</span></span>  |
+|<span data-ttu-id="66a1a-116">常數</span><span class="sxs-lookup"><span data-stu-id="66a1a-116">Constant</span></span>  |<span data-ttu-id="66a1a-117">值</span><span class="sxs-lookup"><span data-stu-id="66a1a-117">Value</span></span>  |<span data-ttu-id="66a1a-118">描述</span><span class="sxs-lookup"><span data-stu-id="66a1a-118">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_OVERRIDABLE` | <span data-ttu-id="8d9a7-119">0</span><span class="sxs-lookup"><span data-stu-id="8d9a7-119">0</span></span> | <span data-ttu-id="8d9a7-120">限定詞可以覆寫於衍生的類別或執行個體。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-120">The qualifier can be overridden in a derived class or instance.</span></span> <span data-ttu-id="8d9a7-121">**這是預設值。**</span><span class="sxs-lookup"><span data-stu-id="8d9a7-121">**This is the default value.**</span></span> |
-| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | <span data-ttu-id="8d9a7-122">1</span><span class="sxs-lookup"><span data-stu-id="8d9a7-122">1</span></span> | <span data-ttu-id="8d9a7-123">限定詞會傳播到執行個體。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-123">The qualifier is propagated to instances.</span></span> |
-| `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | <span data-ttu-id="8d9a7-124">2</span><span class="sxs-lookup"><span data-stu-id="8d9a7-124">2</span></span> | <span data-ttu-id="8d9a7-125">限定詞會傳播到衍生類別中。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-125">The qualifier is propagated to derived classes.</span></span> |
-| `WBEM_FLAVOR_NOT_OVERRIDABLE` | <span data-ttu-id="8d9a7-126">0x10</span><span class="sxs-lookup"><span data-stu-id="8d9a7-126">0x10</span></span> | <span data-ttu-id="8d9a7-127">無法在衍生類別或執行個體中覆寫限定詞。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-127">The qualifier cannot be overridden in a derived class or instance.</span></span> |
-| `WBEM_FLAVOR_AMENDED` | <span data-ttu-id="8d9a7-128">0x80</span><span class="sxs-lookup"><span data-stu-id="8d9a7-128">0x80</span></span> | <span data-ttu-id="8d9a7-129">限定詞會進行當地語系化。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-129">The qualifier is localized.</span></span> |
+| `WBEM_FLAVOR_OVERRIDABLE` | <span data-ttu-id="66a1a-119">0</span><span class="sxs-lookup"><span data-stu-id="66a1a-119">0</span></span> | <span data-ttu-id="66a1a-120">限定詞可以覆寫於衍生的類別或執行個體。</span><span class="sxs-lookup"><span data-stu-id="66a1a-120">The qualifier can be overridden in a derived class or instance.</span></span> <span data-ttu-id="66a1a-121">**這是預設值。**</span><span class="sxs-lookup"><span data-stu-id="66a1a-121">**This is the default value.**</span></span> |
+| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | <span data-ttu-id="66a1a-122">1</span><span class="sxs-lookup"><span data-stu-id="66a1a-122">1</span></span> | <span data-ttu-id="66a1a-123">限定詞會傳播到執行個體。</span><span class="sxs-lookup"><span data-stu-id="66a1a-123">The qualifier is propagated to instances.</span></span> |
+| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | <span data-ttu-id="66a1a-124">2</span><span class="sxs-lookup"><span data-stu-id="66a1a-124">2</span></span> | <span data-ttu-id="66a1a-125">限定詞會傳播到衍生類別中。</span><span class="sxs-lookup"><span data-stu-id="66a1a-125">The qualifier is propagated to derived classes.</span></span> |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE` | <span data-ttu-id="66a1a-126">0x10</span><span class="sxs-lookup"><span data-stu-id="66a1a-126">0x10</span></span> | <span data-ttu-id="66a1a-127">無法在衍生類別或執行個體中覆寫限定詞。</span><span class="sxs-lookup"><span data-stu-id="66a1a-127">The qualifier cannot be overridden in a derived class or instance.</span></span> |
+| `WBEM_FLAVOR_AMENDED` | <span data-ttu-id="66a1a-128">0x80</span><span class="sxs-lookup"><span data-stu-id="66a1a-128">0x80</span></span> | <span data-ttu-id="66a1a-129">限定詞會進行當地語系化。</span><span class="sxs-lookup"><span data-stu-id="66a1a-129">The qualifier is localized.</span></span> |
 
-## <a name="return-value"></a><span data-ttu-id="8d9a7-130">傳回值</span><span class="sxs-lookup"><span data-stu-id="8d9a7-130">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="66a1a-130">傳回值</span><span class="sxs-lookup"><span data-stu-id="66a1a-130">Return value</span></span>
 
-<span data-ttu-id="8d9a7-131">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="8d9a7-131">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="66a1a-131">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="66a1a-131">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="8d9a7-132">常數</span><span class="sxs-lookup"><span data-stu-id="8d9a7-132">Constant</span></span>  |<span data-ttu-id="8d9a7-133">值</span><span class="sxs-lookup"><span data-stu-id="8d9a7-133">Value</span></span>  |<span data-ttu-id="8d9a7-134">描述</span><span class="sxs-lookup"><span data-stu-id="8d9a7-134">Description</span></span>  |
+|<span data-ttu-id="66a1a-132">常數</span><span class="sxs-lookup"><span data-stu-id="66a1a-132">Constant</span></span>  |<span data-ttu-id="66a1a-133">值</span><span class="sxs-lookup"><span data-stu-id="66a1a-133">Value</span></span>  |<span data-ttu-id="66a1a-134">描述</span><span class="sxs-lookup"><span data-stu-id="66a1a-134">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | <span data-ttu-id="8d9a7-135">0x8004101f</span><span class="sxs-lookup"><span data-stu-id="8d9a7-135">0x8004101f</span></span> | <span data-ttu-id="8d9a7-136">發生不合法嘗試指定**金鑰**不得為索引鍵屬性上的限定詞。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-136">There was an illegal attempt to specify the **Key** qualifier on a property that cannot be a key.</span></span> <span data-ttu-id="8d9a7-137">指定索引鍵 om c; as 物件的定義，無法變更每個執行個體為基礎。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-137">The keys are specified om tje c;ass definition for an object and cannot be altered on a per-instance basis.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="8d9a7-138">0x80041008</span><span class="sxs-lookup"><span data-stu-id="8d9a7-138">0x80041008</span></span> | <span data-ttu-id="8d9a7-139">參數不是有效的。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-139">A parameter is not valid.</span></span> |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | <span data-ttu-id="8d9a7-140">0x80041029</span><span class="sxs-lookup"><span data-stu-id="8d9a7-140">0x80041029</span></span> | <span data-ttu-id="8d9a7-141">`pVal`參數不是合法的限定詞型別。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-141">The `pVal` parameter is not of a legal qualifier type.</span></span> |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | <span data-ttu-id="8d9a7-142">0x8004101a</span><span class="sxs-lookup"><span data-stu-id="8d9a7-142">0x8004101a</span></span> | <span data-ttu-id="8d9a7-143">不可能呼叫`QualifierSet_Put`方法在限定詞上的因為主控物件不允許覆寫。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-143">It is not possible to call the `QualifierSet_Put` method on the qualifier because the owning object does not permit overrides.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="8d9a7-144">0</span><span class="sxs-lookup"><span data-stu-id="8d9a7-144">0</span></span> | <span data-ttu-id="8d9a7-145">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-145">The function call was successful.</span></span>  |
-  
-## <a name="remarks"></a><span data-ttu-id="8d9a7-146">備註</span><span class="sxs-lookup"><span data-stu-id="8d9a7-146">Remarks</span></span>
+| `WBEM_E_CANNOT_BE_KEY` | <span data-ttu-id="66a1a-135">0x8004101f</span><span class="sxs-lookup"><span data-stu-id="66a1a-135">0x8004101f</span></span> | <span data-ttu-id="66a1a-136">發生不合法嘗試指定**金鑰**不得為索引鍵屬性上的限定詞。</span><span class="sxs-lookup"><span data-stu-id="66a1a-136">There was an illegal attempt to specify the **Key** qualifier on a property that cannot be a key.</span></span> <span data-ttu-id="66a1a-137">指定索引鍵 om c; as 物件的定義，無法變更每個執行個體為基礎。</span><span class="sxs-lookup"><span data-stu-id="66a1a-137">The keys are specified om tje c;ass definition for an object and cannot be altered on a per-instance basis.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="66a1a-138">0x80041008</span><span class="sxs-lookup"><span data-stu-id="66a1a-138">0x80041008</span></span> | <span data-ttu-id="66a1a-139">參數不是有效的。</span><span class="sxs-lookup"><span data-stu-id="66a1a-139">A parameter is not valid.</span></span> |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | <span data-ttu-id="66a1a-140">0x80041029</span><span class="sxs-lookup"><span data-stu-id="66a1a-140">0x80041029</span></span> | <span data-ttu-id="66a1a-141">`pVal`參數不是合法的限定詞型別。</span><span class="sxs-lookup"><span data-stu-id="66a1a-141">The `pVal` parameter is not of a legal qualifier type.</span></span> |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | <span data-ttu-id="66a1a-142">0x8004101a</span><span class="sxs-lookup"><span data-stu-id="66a1a-142">0x8004101a</span></span> | <span data-ttu-id="66a1a-143">不可能呼叫`QualifierSet_Put`方法在限定詞上的因為主控物件不允許覆寫。</span><span class="sxs-lookup"><span data-stu-id="66a1a-143">It is not possible to call the `QualifierSet_Put` method on the qualifier because the owning object does not permit overrides.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="66a1a-144">0</span><span class="sxs-lookup"><span data-stu-id="66a1a-144">0</span></span> | <span data-ttu-id="66a1a-145">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="66a1a-145">The function call was successful.</span></span>  |
 
-<span data-ttu-id="8d9a7-147">此函式會包裝在呼叫[IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put)方法。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-147">This function wraps a call to the [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) method.</span></span>
+## <a name="remarks"></a><span data-ttu-id="66a1a-146">備註</span><span class="sxs-lookup"><span data-stu-id="66a1a-146">Remarks</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="8d9a7-148">需求</span><span class="sxs-lookup"><span data-stu-id="8d9a7-148">Requirements</span></span>  
- <span data-ttu-id="8d9a7-149">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8d9a7-149">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="8d9a7-150">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="8d9a7-150">**Header:** WMINet_Utils.idl</span></span>  
-  
- <span data-ttu-id="8d9a7-151">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="8d9a7-151">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="8d9a7-152">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8d9a7-152">See also</span></span>
-- [<span data-ttu-id="8d9a7-153">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="8d9a7-153">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+<span data-ttu-id="66a1a-147">此函式會包裝在呼叫[IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put)方法。</span><span class="sxs-lookup"><span data-stu-id="66a1a-147">This function wraps a call to the [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) method.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="66a1a-148">需求</span><span class="sxs-lookup"><span data-stu-id="66a1a-148">Requirements</span></span>
+
+<span data-ttu-id="66a1a-149">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="66a1a-149">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="66a1a-150">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="66a1a-150">**Header:** WMINet_Utils.idl</span></span>
+
+<span data-ttu-id="66a1a-151">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="66a1a-151">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="66a1a-152">另請參閱</span><span class="sxs-lookup"><span data-stu-id="66a1a-152">See also</span></span>
+
+- [<span data-ttu-id="66a1a-153">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="66a1a-153">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

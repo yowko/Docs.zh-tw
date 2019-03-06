@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Slider
 - Slider control [WPF]
 ms.assetid: fb037e2a-0002-458b-9e6b-321623fe72a7
-ms.openlocfilehash: 7c50ae717bc8ae4016883965f83a34047ffad271
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d8836bc91283f83c95e63a8b948eed46fc94bca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554404"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353981"
 ---
-# <a name="slider"></a><span data-ttu-id="d7aae-102">滑桿</span><span class="sxs-lookup"><span data-stu-id="d7aae-102">Slider</span></span>
-<span data-ttu-id="d7aae-103"><xref:System.Windows.Controls.Slider>可讓您選取的值範圍從移動<xref:System.Windows.Controls.Primitives.Thumb>沿著<xref:System.Windows.Controls.Primitives.Track>。</span><span class="sxs-lookup"><span data-stu-id="d7aae-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
+# <a name="slider"></a><span data-ttu-id="0e522-102">滑桿</span><span class="sxs-lookup"><span data-stu-id="0e522-102">Slider</span></span>
+<span data-ttu-id="0e522-103"><xref:System.Windows.Controls.Slider>可讓您選取的值範圍從藉由移動<xref:System.Windows.Controls.Primitives.Thumb>沿著<xref:System.Windows.Controls.Primitives.Track>。</span><span class="sxs-lookup"><span data-stu-id="0e522-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
   
- <span data-ttu-id="d7aae-104">下圖顯示在水平的範例<xref:System.Windows.Controls.Slider>控制項。</span><span class="sxs-lookup"><span data-stu-id="d7aae-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
+ <span data-ttu-id="0e522-104">下圖顯示的水平範例<xref:System.Windows.Controls.Slider>控制項。</span><span class="sxs-lookup"><span data-stu-id="0e522-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
   
- <span data-ttu-id="d7aae-105">![具有刻度記號的水平滑桿](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="d7aae-105">![Horizontal slider with tick marks](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
+ <span data-ttu-id="0e522-105">![具有刻度記號的水平滑桿](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="0e522-105">![Horizontal slider with tick marks](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d7aae-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="d7aae-106">In This Section</span></span>  
- [<span data-ttu-id="d7aae-107">自訂滑桿上的刻度</span><span class="sxs-lookup"><span data-stu-id="d7aae-107">Customize the Ticks on a Slider</span></span>](../../../../docs/framework/wpf/controls/how-to-customize-the-ticks-on-a-slider.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0e522-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="0e522-106">In This Section</span></span>  
+ [<span data-ttu-id="0e522-107">自訂滑桿上的刻度</span><span class="sxs-lookup"><span data-stu-id="0e522-107">Customize the Ticks on a Slider</span></span>](how-to-customize-the-ticks-on-a-slider.md)  
   
-## <a name="reference"></a><span data-ttu-id="d7aae-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="d7aae-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0e522-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="0e522-108">Reference</span></span>  
  <xref:System.Windows.Controls.Slider>  
   <xref:System.Windows.Controls.Primitives.Track>  
   <xref:System.Windows.Controls.Primitives.Thumb>

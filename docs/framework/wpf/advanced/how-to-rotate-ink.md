@@ -1,5 +1,5 @@
 ---
-title: 如何：旋轉筆墨
+title: HOW TO：旋轉筆墨
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - ink [WPF], rotating
 - rotating ink [WPF]
 ms.assetid: fac36cc9-dd01-41ca-9bde-9d33e3790bbe
-ms.openlocfilehash: 51b06ec98b916a9f2f90a84b42007ef4c596ac60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31f5d0ffb6f0fdcdaef13bc44653f8c7938ac7f3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545473"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378791"
 ---
-# <a name="how-to-rotate-ink"></a><span data-ttu-id="a6a50-102">如何：旋轉筆墨</span><span class="sxs-lookup"><span data-stu-id="a6a50-102">How to: Rotate Ink</span></span>
-## <a name="example"></a><span data-ttu-id="a6a50-103">範例</span><span class="sxs-lookup"><span data-stu-id="a6a50-103">Example</span></span>  
- <span data-ttu-id="a6a50-104">下列範例會將複製的筆墨<xref:System.Windows.Controls.InkCanvas>至<xref:System.Windows.Controls.Canvas>包含<xref:System.Windows.Controls.InkPresenter>。</span><span class="sxs-lookup"><span data-stu-id="a6a50-104">The following example copies the ink from an <xref:System.Windows.Controls.InkCanvas> to a <xref:System.Windows.Controls.Canvas> that contains an <xref:System.Windows.Controls.InkPresenter>.</span></span>  <span data-ttu-id="a6a50-105">當應用程式複製筆墨時，它也會旋轉筆跡順時針旋轉 90 度。</span><span class="sxs-lookup"><span data-stu-id="a6a50-105">When the application copies the ink, it also rotates the ink 90 degrees clockwise.</span></span>  
+# <a name="how-to-rotate-ink"></a><span data-ttu-id="63c4b-102">HOW TO：旋轉筆墨</span><span class="sxs-lookup"><span data-stu-id="63c4b-102">How to: Rotate Ink</span></span>
+## <a name="example"></a><span data-ttu-id="63c4b-103">範例</span><span class="sxs-lookup"><span data-stu-id="63c4b-103">Example</span></span>  
+ <span data-ttu-id="63c4b-104">下列範例會將複製的筆墨<xref:System.Windows.Controls.InkCanvas>要<xref:System.Windows.Controls.Canvas>包含<xref:System.Windows.Controls.InkPresenter>。</span><span class="sxs-lookup"><span data-stu-id="63c4b-104">The following example copies the ink from an <xref:System.Windows.Controls.InkCanvas> to a <xref:System.Windows.Controls.Canvas> that contains an <xref:System.Windows.Controls.InkPresenter>.</span></span>  <span data-ttu-id="63c4b-105">當應用程式複製的筆墨時，它也會旋轉筆墨順時針旋轉 90 度。</span><span class="sxs-lookup"><span data-stu-id="63c4b-105">When the application copies the ink, it also rotates the ink 90 degrees clockwise.</span></span>  
   
- [!code-xaml[HowToRotateInk#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToRotateInk/CSharp/Window1.xaml#1)]  
+ [!code-xaml[HowToRotateInk#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToRotateInk/CSharp/Window1.xaml#1)]  
   
- [!code-csharp[HowToRotateInk#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToRotateInk/CSharp/Window1.xaml.cs#2)]  
+ [!code-csharp[HowToRotateInk#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToRotateInk/CSharp/Window1.xaml.cs#2)]  
   
-## <a name="example"></a><span data-ttu-id="a6a50-106">範例</span><span class="sxs-lookup"><span data-stu-id="a6a50-106">Example</span></span>  
- <span data-ttu-id="a6a50-107">下列範例為自訂<xref:System.Windows.Documents.Adorner>的上一個圖示旋轉筆劃<xref:System.Windows.Controls.InkPresenter>。</span><span class="sxs-lookup"><span data-stu-id="a6a50-107">The following example is a custom <xref:System.Windows.Documents.Adorner> that rotates the strokes on an <xref:System.Windows.Controls.InkPresenter>.</span></span>  
+## <a name="example"></a><span data-ttu-id="63c4b-106">範例</span><span class="sxs-lookup"><span data-stu-id="63c4b-106">Example</span></span>  
+ <span data-ttu-id="63c4b-107">下列範例是自訂<xref:System.Windows.Documents.Adorner>，在旋轉筆劃<xref:System.Windows.Controls.InkPresenter>。</span><span class="sxs-lookup"><span data-stu-id="63c4b-107">The following example is a custom <xref:System.Windows.Documents.Adorner> that rotates the strokes on an <xref:System.Windows.Controls.InkPresenter>.</span></span>  
   
- [!code-csharp[AdornerForStrokes#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornerForStrokes/CSharp/RotatingAdornerForStrokes.cs#1)]
- [!code-vb[AdornerForStrokes#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornerForStrokes/VisualBasic/RotatingAdornerForStrokes.vb#1)]  
+ [!code-csharp[AdornerForStrokes#1](~/samples/snippets/csharp/VS_Snippets_Wpf/AdornerForStrokes/CSharp/RotatingAdornerForStrokes.cs#1)]
+ [!code-vb[AdornerForStrokes#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdornerForStrokes/VisualBasic/RotatingAdornerForStrokes.vb#1)]  
   
- <span data-ttu-id="a6a50-108">下列範例是[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案，可定義<xref:System.Windows.Controls.InkPresenter>並填入筆墨。</span><span class="sxs-lookup"><span data-stu-id="a6a50-108">The following example is a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file that defines an <xref:System.Windows.Controls.InkPresenter> and populates it with ink.</span></span> <span data-ttu-id="a6a50-109">`Window_Loaded`事件處理常式會將自訂的裝飾項<xref:System.Windows.Controls.InkPresenter>。</span><span class="sxs-lookup"><span data-stu-id="a6a50-109">The `Window_Loaded` event handler adds the custom adorner to the <xref:System.Windows.Controls.InkPresenter>.</span></span>  
+ <span data-ttu-id="63c4b-108">下例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案，可定義<xref:System.Windows.Controls.InkPresenter>並填入筆墨。</span><span class="sxs-lookup"><span data-stu-id="63c4b-108">The following example is a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file that defines an <xref:System.Windows.Controls.InkPresenter> and populates it with ink.</span></span> <span data-ttu-id="63c4b-109">`Window_Loaded`事件處理常式會將自訂裝飾項<xref:System.Windows.Controls.InkPresenter>。</span><span class="sxs-lookup"><span data-stu-id="63c4b-109">The `Window_Loaded` event handler adds the custom adorner to the <xref:System.Windows.Controls.InkPresenter>.</span></span>  
   
- [!code-xaml[AdornerForStrokes#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornerForStrokes/CSharp/Window1.xaml#2)]  
+ [!code-xaml[AdornerForStrokes#2](~/samples/snippets/csharp/VS_Snippets_Wpf/AdornerForStrokes/CSharp/Window1.xaml#2)]  
   
- [!code-csharp[AdornerForStrokes#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornerForStrokes/CSharp/Window1.xaml.cs#3)]
- [!code-vb[AdornerForStrokes#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornerForStrokes/VisualBasic/Window1.xaml.vb#3)]
+ [!code-csharp[AdornerForStrokes#3](~/samples/snippets/csharp/VS_Snippets_Wpf/AdornerForStrokes/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[AdornerForStrokes#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdornerForStrokes/VisualBasic/Window1.xaml.vb#3)]
